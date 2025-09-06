@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
@@ -15,3 +16,6 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 import React from \'react\'; import { Helmet } from \'react-helmet-async\'; import { Link } from \'react-router-dom\'; import { motion } from \'framer-motion\'; import { ArrowRight,CheckCircle,Star,Clock,Users,Shield,Zap,TrendingUp,Award,Globe,Brain,Cloud,Cpu,Lock,Rocket,Heart,Code,Network,Database,Target } from \'lucide-react\';
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+import React from \'react\'; import { Helmet } from \'react-helmet-async\'; import { Link } from \'react-router-dom\'; import { motion } from \'framer-motion\'; import { ArrowRight,CheckCircle,Star,Clock,Users,Shield,Zap,TrendingUp,Award,Globe,Brain,Cloud,Cpu,Lock,Rocket,Heart,Code,Network,Database,Target } from \'lucide-react\';
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

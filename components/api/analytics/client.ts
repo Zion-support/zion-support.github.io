@@ -1,5 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
     const talentViewed = 12; // Placeholder
@@ -225,12 +226,21 @@ function handler() {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+    const talentViewed = 12; // Placeholder
+    const shortlisted = 5; // Placeholder
+    const funnel = [
+      },
+      { label: 'Hire', value: filled && filled.length },
+    ];
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       timeToHireDays,
       talent_viewed,
       shortlisted,
       funnel,
     });
   } catch (e) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -264,6 +274,8 @@ function handler() {
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       funnel: [
         { label: 'Post', value: 3 }
         { label: 'Invite', value: 2 }
@@ -271,10 +283,13 @@ function handler() {
         { label: 'Hire', value: 2 }]})
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 }
 
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     res.status (200).json ({
       jobs_posted: 3,
       quotes_received: 2,
@@ -298,7 +313,10 @@ function handler() {
         { label: 'Hire', value: 2 }]});
   }
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -26,6 +27,8 @@ class ErrorBoundary extends React.Component {
 import React from 'react';
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {useState} from "react";
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
@@ -41,6 +44,7 @@ import {ChatAssistant} from "@/components/ChatAssistant";
 import {Mail, MessageSquare, MapPin, Phone} from "lucide-react";
 import {AppLayout} from "@/layout/AppLayout";
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default function Contact() {;
   const [formData, setFormData] = useState({;
     name: "",;
@@ -55,6 +59,8 @@ export default function Contact() {;
 
 
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useState } from "react",
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
@@ -74,16 +80,31 @@ import { AppLayout } from "@/layout/AppLayout",
 export default function Contact() {
   const [formData, setFormData] = useState({
 
+<<<<<<< HEAD
     name: ""
     email: ""
     subject: ""
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+export default function Contact() {;
+  const [formData, setFormData] = useState({;
+    name: "",;
+    email: "",;
+    subject: "",;
+    message: "";
+
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isChatOpen, setIsChatOpen] = useState(false);
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 export default function Contact() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     subject: "",
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -93,10 +114,13 @@ export default function Contact() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isChatOpen, setIsChatOpen] = useState(false);
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     message: ""
   }),
   const [isSubmitting, setIsSubmitting] = useState(false),
   const [isChatOpen, setIsChatOpen] = useState(false),
+<<<<<<< HEAD
 
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -113,11 +137,14 @@ export default function Contact() {
   },
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
     try {
       // Basic validation with Zod
       const schema = z.object({
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -125,10 +152,13 @@ export default function Contact() {
         name: z.string().min(2, "Name must be at least 2 characters");
         email: z.string().email("Invalid email address")
         subject: z.string().min(2, "Subject must be at least 2 characters");
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         message: z.string().min(10, "Message must be at least 10 characters")
       });
       schema.parse(formData);
       // Simulate form submission
+<<<<<<< HEAD
       setIsSubmitting(true);
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         name: z.string().min(2, "Name must be at least 2 characters"),
@@ -151,6 +181,10 @@ export default function Contact() {
       setTimeout(() => {
         setIsSubmitting(false),
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+      setTimeout(() => {
+        setIsSubmitting(false),
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         toast({
           title: "Message Sent"
           description: "We've received your message and will get back to you soon."})
@@ -177,6 +211,7 @@ export default function Contact() {
         })
       }
     }
+<<<<<<< HEAD
 
 
   },
@@ -189,12 +224,15 @@ export default function Contact() {
   },
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   // Handle sending messages to the AI chat assistant
   const handleSendMessage = async (message: string): Promise<void> => {
     try {
       const response = await fetch("https://ziontechgroup.functions.supabase.co/functions/v1/ai-chat", {
         method: "POST"
         headers: {
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -214,20 +252,27 @@ export default function Contact() {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       if (!response.ok) {
         throw new Error("Failed to get response from AI assistant")
       }
       return Promise.resolve()
     } catch (error) {
 <<<<<<< HEAD
+<<<<<<< HEAD
       console.error("Error in AI chat:", error);
 =======
       console.error("Error in AI chat:", error),
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+      console.error("Error in AI chat:", error),
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       toast({
         title: "Chat Error"
         description: "There was an error communicating with our AI assistant. Please try again."
         variant: "destructive"
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -318,6 +363,9 @@ export default function Contact() {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useState } from './react';
 import { Header } from '@/components / Header';
 import { Footer } from '@/components / Footer';
@@ -430,10 +478,17 @@ if ( {) {
 ;
   const offices = [;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
+      });
+      return Promise && Promise.resolve();
+    }
     {
       name: "Headquarters"
       address: "123 Tech Avenue, San Francisco, CA 94105";
+<<<<<<< HEAD
 
 =======
     {
@@ -480,6 +535,8 @@ if ( {) {
     }
   ];
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   },
 
   const offices = [
@@ -497,6 +554,7 @@ if ( {) {
     }
   ],
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -675,10 +733,14 @@ export default function Contact() {;
                     <label htmlFor="name" className="block text-white mb-2">Your Name</label>;
 <<<<<<< HEAD
 
+=======
+  return (
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     <Input
                       id="name"
                       name="name"
                       value={formData && formData.name}
+<<<<<<< HEAD
 =======
   return (
     <AppLayout>
@@ -712,10 +774,13 @@ export default function Contact() {;
                       name="name"
                       value={formData.name}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       onChange={handleChange}
                       className="bg-zion-blue-dark border-zion-blue-light text-white"
                       placeholder="John Doe"
                       required
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -740,16 +805,22 @@ export default function Contact() {;
                   <div>
                     <label htmlFor="email" className="block text-white mb-2">Email Address</label>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     <Input
                       id="email"
                       name="email"
                       type="email"
 <<<<<<< HEAD
+<<<<<<< HEAD
                       value={formData && formData.email}
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       onChange={handleChange}
                       className="bg-zion-blue-dark border-zion-blue-light text-white"
                       placeholder="john@example && example.com"
                       required
+<<<<<<< HEAD
 
                     />;
                   </div>;
@@ -765,10 +836,13 @@ export default function Contact() {;
                 <div>;
                   <label htmlFor="subject" className="block text-white mb-2">Subject</label>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   <Input
                     id="subject"
                     name="subject"
                     value={formData && formData.subject}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
                       value={formData.email}
@@ -786,10 +860,13 @@ export default function Contact() {;
                     name="subject"
                     value={formData.subject}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     onChange={handleChange}
                     className="bg-zion-blue-dark border-zion-blue-light text-white"
                     placeholder="How can we help you?"
                     required
+<<<<<<< HEAD
 <<<<<<< HEAD
 
                   />;
@@ -804,10 +881,13 @@ export default function Contact() {;
                 <div>;
                   <label htmlFor="message" className="block text-white mb-2">Message</label>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   <Textarea
                     id="message"
                     name="message"
                     value={formData && formData.message}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
                   />
@@ -819,11 +899,16 @@ export default function Contact() {;
                     name="message"
                     value={formData.message}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     onChange={handleChange}
                     className="bg-zion-blue-dark border-zion-blue-light text-white min-h-[150px]"
                     placeholder="Tell us what you'd like to know..."
                     required
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
                   />;
                 </div>;
@@ -831,6 +916,7 @@ export default function Contact() {;
                 <Button
                   type="submit" 
 
+<<<<<<< HEAD
 =======
 
                 <Button 
@@ -850,6 +936,8 @@ export default function Contact() {;
                 </div>;
                 <Button
                   type="submit" 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
                 <Button 
                   type="submit" 
@@ -857,109 +945,14 @@ export default function Contact() {;
                   className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple"
                   disabled={isSubmitting}>;
                   {isSubmitting ? "Sending..." : "Send Message"}
-                  />
-                </div>
-                <Button
-                  type="submit"
-                <Button 
-                  type="submit" 
-                  className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple"
-                  disabled={isSubmitting}
-                >
-                  {isSubmitting ? "Sending..." : "Send Message"}
-                </Button>
-              </form>
-            </div>
-            <div>
-              <h2 className="text-3xl font-bold text-white mb-6">Our Offices</h2>
-              <div className="grid grid-cols-1 gap-6">
-                {offices.map((office, index) => (
-                  <Card key={index} className="bg-zion-blue-dark border border-zion-blue-light p-6">
-                    <h3 className="text-xl font-bold text-white mb-3">{office.name}</h3>
-                    <div className="space-y-3">
-                      <div className="flex items-start">
-                        <MapPin className="w-5 h-5 text-zion-cyan mr-3 mt-1 flex-shrink-0" />
-                        <span className="text-zion-slate-light">{office.address}</span>
-                      </div>
-                      <div className="flex items-center">
-                        <Phone className="w-5 h-5 text-zion-cyan mr-3 flex-shrink-0" />
-                        <span className="text-zion-slate-light">{office.phone}</span>
-                      </div>
-                      <div className="flex items-center">
-                        <Mail className="w-5 h-5 text-zion-cyan mr-3 flex-shrink-0" />
-                        <a href={`mailto:${office.email}`} className="text-zion-cyan hover:underline">
-                          {office.email}
-                        </Link>
-                      </div>
-                    </div>
-                  </Card>
-                ))}
-              </div>
-              <div className="mt-8 bg-zion-blue-dark border border-zion-blue-light rounded-lg overflow-hidden">
-                <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12615.297199052566!2d-122.41941455!3d37.7749295!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80858080b9b0a169%3A0x1ac94fe0532d9e81!2sSan%20Francisco%2C%20CA%2C%20USA!5e0!3m2!1sen!2suk!4v1651234567890!5m2!1sen!2suk"
-                  width="100%"
-                  height="300"
-                  style={{ border: 0 }}
-                  allowFullScreen={true}
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                  title="Zion Office Locations"
-                ></iframe>
-              </div>
-              <div className="mt-8">
-                <Card className="bg-gradient-to-r from-zion-blue-dark to-zion-blue-light border border-zion-purple/30 p-6">
-                  <div className="flex items-center">
-                    <div className="bg-zion-purple/20 p-3 rounded-full mr-4">
-                      <MessageSquare className="h-6 w-6 text-zion-purple" />
-                    </div>
-                    <div>
-                      <h3 className="text-white text-lg font-bold">Live AI Support</h3>
-                      <p className="text-zion-slate-light">Get instant answers to your questions</p>
-                    </div>
-                  </div>
-                  <Button
-                    onClick={() => setIsChatOpen(true)}
-                    className="w-full mt-4 bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple"
-                  >
-                    Chat With Our AI Assistant
-                  </Button>
-                </Card>
-              </div>
-            </div>
-          </div>
-          <div className="bg-gradient-to-r from-zion-blue-dark to-zion-blue-light border border-zion-purple/30 rounded-xl p-8 md:p-12 text-center">
-            <h2 className="text-3xl font-bold text-white mb-6">Need immediate assistance?</h2>
-            <p className="text-zion-slate-light text-lg mb-8 max-w-3xl mx-auto">
-              Our customer support team is available 24/7 to help you with any questions.
-            </p>
-            <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <Button
-                onClick={() => setIsChatOpen(true)}
-                className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple"
-              >
-                <MessageSquare className="mr-2 h-5 w-5" />
-                Chat With AI
-              </Button>
-              <Button
-                variant="outline"
-                className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10"
-                asChild
-              >
-                <a href="mailto:support@ziontechgroup.com">
-                  <Mail className="mr-2 h-5 w-5" />
-                  Email Support
-                </Link>
-              </Button>
-            </div>
-          </div>
-        </div>
-      </main>
 
 
 
+<<<<<<< HEAD
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useState } from "react",;
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
@@ -1150,12 +1143,16 @@ export default function Contact() {;
                 >;
                   {isSubmitting ? "Sending..." : "Send Message"}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
                   className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple"
                   disabled={isSubmitting}>;
                   {isSubmitting ? "Sending..." : "Send Message"}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 </Button>;
               </form>;
             </div>;
@@ -1164,6 +1161,9 @@ export default function Contact() {;
               <h2 className="text-3xl font-bold text-white mb-6">Our Offices</h2>;
               <div className="grid grid-cols-1 gap-6">;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 {offices && offices.map((office, index) => (;
                   <Card key={index} className="bg-zion-blue-dark border border-zion-blue-light p-6">;
                     <h3 className="text-xl font-bold text-white mb-3">{office && office.name}</h3>;
@@ -1199,6 +1199,7 @@ export default function Contact() {;
                   title="Zion Office Locations"></iframe>;
               </div>;
 
+<<<<<<< HEAD
 =======
                     <Input ;
                       id="email";
@@ -1296,6 +1297,8 @@ export default function Contact() {;
                 ></iframe>;
               </div>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <div className="mt-8">;
                 <Card className="bg-gradient-to-r from-zion-blue-dark to-zion-blue-light border border-zion-purple/30 p-6">;
                   <div className="flex items-center">;
@@ -1308,10 +1311,12 @@ export default function Contact() {;
                     </div>;
                   </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   <Button
                     onClick={() => setIsChatOpen(true)}
                     className="w-full mt-4 bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple";
-=======
       phone: "+1 302 464 0950",
       email: "commercial@ziontechgroup.com";
     }
@@ -1457,6 +1462,7 @@ export default function Contact() {;
                   <Button;
                     on_click={() => setIsChatOpen (true)}
                     className="w - full mt - 4 bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple";
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
                   <Button;
@@ -1466,6 +1472,11 @@ export default function Contact() {;
                     onClick={() => setIsChatOpen(true)}
                     className="w-full mt-4 bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple";
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+                  className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple"
+                  disabled={isSubmitting}>;
+                  {isSubmitting ? "Sending..." : "Send Message"}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   >;
                     Chat With Our AI Assistant;
                   </Button>;
@@ -1473,6 +1484,7 @@ export default function Contact() {;
               </div>;
             </div>;
           </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
           <div className="bg - gradient - to - r from - zion - blue - dark to - zion - blue - light border border - zion - purple / 30 rounded - xl p - 8 md:p - 12 text - center">;
@@ -1518,6 +1530,8 @@ export default function Contact() {;
                 <a href="mailto:support@ziontechgroup.com">;
                   <Mail className="mr-2 h-5 w-5" />;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   Email Support;
                 </a>;
               </Button>;
@@ -1526,15 +1540,19 @@ export default function Contact() {;
         </div>;
       </main>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {/* Chat Assistant Modal */}
       {isChatOpen && (;
         <ChatAssistant
           isOpen={isChatOpen}
           onClose={() => setIsChatOpen(false)}
+<<<<<<< HEAD
 
           recipient={{;
             id: 'ai-assistant',;
@@ -1544,11 +1562,14 @@ export default function Contact() {;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           }}
           onSendMessage={handleSendMessage}
         />;
       )}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -1562,6 +1583,8 @@ export default function Contact() {;
   );
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {/* Chat Assistant Modal */}
       {isChatOpen && (
         <ChatAssistant;
@@ -1576,6 +1599,7 @@ export default function Contact() {;
           onSendMessage={handleSendMessage}
         />)}
     </AppLayout>);
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 =======
@@ -1657,3 +1681,5 @@ return (<AppLayout> <SEO /> <main className="min-h-screen bg-zion-blue pt-24 pb-
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

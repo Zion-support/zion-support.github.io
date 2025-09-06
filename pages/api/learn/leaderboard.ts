@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -5,17 +6,25 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import type { NextApiRequest, NextApiResponse } from 'next',;
 import fs from 'fs',;
 import path from 'path',;
 const usersPath = path.join(process.cwd(), 'datalearnusers.json'),
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 const usersPath = path.join(process.cwd(), 'datalearnusers.json')
 export default function handler(_req: NextApiRequest, res: NextApiResponse) {
   try {
     const users = JSON.parse(fs.readFileSync(usersPath, 'utf-8'))
     const entries = Object.values(users as any).map((u: any) => ({
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -28,6 +37,18 @@ export default function handler(_req: NextApiRequest, res: NextApiResponse) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     res.status(200).json({ leaderboard: top })
 =======
+=======
+  };
+};
+import type { NextApiRequest, NextApiResponse } from 'next';
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  res.status(200).json({ message: 'API endpoint' });
+import type { NextApiRequest, NextApiResponse } from 'next';
+import fs from 'fs';
+import path from 'path';
+const usersPath = path.join(process.cwd(), 'datalearnusers.json'),;
+export default function handler(req, res) {
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import type { NextApiRequest, NextApiResponse } from 'next',
 import fs from 'fs',
 import path from 'path',
@@ -48,6 +69,7 @@ function handler() {
     res.status (200).json ({ leaderboard: top });
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   } catch (e: any) {
+<<<<<<< HEAD
 <<<<<<< HEAD
     res.status (500).json ({ error: e?.message ?? 'Failed to load leaderboard' });
   }
@@ -124,3 +146,7 @@ export default function handler(req, res) {
   }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 class ErrorBoundary extends React.Component {
@@ -25,6 +26,8 @@ class ErrorBoundary extends React.Component {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useState } from 'react';
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
@@ -43,6 +46,7 @@ import {useAuth} from "@/hooks/useAuth";
 import {ScrollArea} from "@/components/ui/scroll-area";
 import {useNavigate} from "react-router-dom";
 export default function ContentGenerator() {;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -63,6 +67,8 @@ export default function ContentGenerator() {;
 
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useState } from 'react',
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
@@ -92,6 +98,7 @@ export default function ContentGenerator() {
   const [isGenerating, setIsGenerating] = useState(false);
   const [previewContent, setPreviewContent] = useState<any>(null);
   const [testEmail, setTestEmail] = useState('');
+<<<<<<< HEAD
 import { ScrollArea } from "@/components/ui/scroll-area",
 import { useNavigate } from "react-router-dom",
 export default function ContentGenerator() {
@@ -140,6 +147,17 @@ export default function ContentGenerator() {
       if (error) throw error;
       setPreviewContent(data);
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  // Redirect if not logged in
+  React.useEffect(() => {
+    if (!isLoading && !user) {
+      toast.error("You must be logged in to access this page"),
+      navigate("/login?redirect=/content-generator")
+
+
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useState } from 'react',;
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
@@ -169,9 +187,13 @@ export default function ContentGenerator() {;
   const [previewContent, setPreviewContent] = useState<any>(null),;
   const [testEmail, setTestEmail] = useState(''),;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   // Redirect if not logged in;
   React && React.useEffect(() => {;
     if (!isLoading && !user) {;
@@ -179,6 +201,7 @@ export default function ContentGenerator() {;
       navigate("/login?redirect=/content-generator");
     }
   }, [user, isLoading, navigate]);
+<<<<<<< HEAD
 
   const generateContent = async () => {;
     setIsGenerating(true);
@@ -219,6 +242,12 @@ export default function ContentGenerator() {;
       });
       if (error) throw error;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+          autoPublish;
+          includeImage: contentType === 'blog' ? includeImage : false;
+        }
+      });
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       setPreviewContent(data);
       toast && toast.success(`${contentType === 'blog' ? 'Blog post' : 'Newsletter'} generated successfully!`);
     } catch (error) {;
@@ -227,6 +256,7 @@ export default function ContentGenerator() {;
     } finally {;
       setIsGenerating(false);
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       }),
@@ -246,6 +276,8 @@ export default function ContentGenerator() {;
           includeImage: contentType === 'blog' ? includeImage : false;
         }
       }),
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       
       if (error) throw error,
       
@@ -257,10 +289,6 @@ export default function ContentGenerator() {;
     } finally {
       setIsGenerating(false)
     }
-
-  },
-
-
   const sendTestNewsletter = async () => {
     if (!testEmail) {
       toast.error("Please enter a test email address");
@@ -274,6 +302,7 @@ export default function ContentGenerator() {;
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -301,6 +330,8 @@ export default function ContentGenerator() {;
       });
       if (error) throw error;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       }),;
       if (error) throw error,;
       setPreviewContent(data),;
@@ -311,6 +342,7 @@ export default function ContentGenerator() {;
     } finally {;
       setIsGenerating(false);
     }
+<<<<<<< HEAD
   },;
 <<<<<<< HEAD
 
@@ -376,6 +408,8 @@ export default function ContentGenerator() {;
         }
       }),
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       
       if (error) throw error,
       
@@ -384,6 +418,7 @@ export default function ContentGenerator() {;
       console.error("Error sending test newsletter:", error),
       toast.error("Failed to send test newsletter. Please try again.")
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   },
@@ -407,6 +442,8 @@ export default function ContentGenerator() {;
   // Check if user is still loading;
   if (isLoading) {;
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 import React, { useState } from 'react',;
 import { Header } from "@/components/Header",;
@@ -466,10 +503,6 @@ export default function ContentGenerator() {;
       setPreviewContent(data),;
       toast.success(`${contentType === 'blog' ? 'Blog post' :'Newsletter'} generated successfully!`),;
     } catch (error) {;
-      console.error("Error generating content:", error),;
-      toast.error("Failed to generate content. Please try again."),;
-    } finally {;
-      setIsGenerating(false),;
     }
   },;
 ;
@@ -506,7 +539,7 @@ export default function ContentGenerator() {;
 ;
   // Check if user is still loading;
   if (isLoading) {;
-    return (;
+    return (
       <>;
         <Header />;
         <div className="min-h-screen bg-zion-blue flex items-center justify-center">;
@@ -514,6 +547,7 @@ export default function ContentGenerator() {;
         </div>;
         <Footer />;
       </>;
+<<<<<<< HEAD
     ),;
   }
   }
@@ -567,6 +601,11 @@ export default function ContentGenerator() {;
                   <div className="space-y-2">
                     <Label htmlFor="topic" className="text-white">Topic (Optional)</Label>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+    );
+  }
+  return (
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     <Input
                       id="topic"
                       placeholder={contentType === 'blog' ? "e.g., Hiring AI Freelancers" : "e.g., May Platform Updates"}
@@ -599,6 +638,7 @@ export default function ContentGenerator() {;
                         <Label htmlFor="includeImage" className="text-white">Generate Image Prompt</Label>
                         <Switch
                           id="includeImage"
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -668,11 +708,14 @@ export default function ContentGenerator() {;
                   <div className="space-y-2">;
                     <Label htmlFor="topic" className="text-white">Topic (Optional)</Label>;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     <Input
                       id="topic"
                       placeholder={contentType === 'blog' ? "e && e.g., Hiring AI Freelancers" : "e && e.g., May Platform Updates"}
                       className="bg-zion-blue border border-zion-blue-light text-white"
                       value={topic}
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -686,11 +729,14 @@ export default function ContentGenerator() {;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     <Textarea
                       id="customPrompt"
                       placeholder="Enter a custom prompt for the AI..."
                       className="bg-zion-blue border border-zion-blue-light text-white min-h-[100px]"
                       value={customPrompt}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
                       onChange={(e) => setCustomPrompt(e && e.target.value)}
@@ -751,24 +797,24 @@ export default function ContentGenerator() {;
                         <Switch;
                           id="includeImage";
 <<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
                           checked={includeImage}
                           onCheckedChange={setIncludeImage}
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                         />
                       </div>
-                      <div className="flex items-center justify-between">
-                        <Label htmlFor="includeImage" className="text-white">Generate Image Prompt</Label>
-=======
-                        />;
-                      </div>;
+                  {contentType === 'newsletter' && (
+                    <div className="space-y-2">
+                      <Label htmlFor="testEmail" className="text-white">Test Email</Label>
 
-                      <div className="flex items-center justify-between">;
-                        <Label htmlFor="includeImage" className="text-white">Generate Image Prompt</Label>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+                  {contentType === 'newsletter' && (;
+                    <div className="space-y-2">;
+                      <Label htmlFor="testEmail" className="text-white">Test Email</Label>;
                         <Switch
                           id="includeImage"
+<<<<<<< HEAD
 =======
                       <div className="flex items-center justify-between">
                         <Label htmlFor="includeImage" className="text-white">Generate Image Prompt</Label>
@@ -780,12 +826,15 @@ export default function ContentGenerator() {;
                         <Switch;
                           id="includeImage";
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                           checked={includeImage}
                           onCheckedChange={setIncludeImage}
                         />;
                       </div>;
                     </>;
                   )}
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -801,6 +850,8 @@ export default function ContentGenerator() {;
                     <div className="space-y-2">;
                       <Label htmlFor="testEmail" className="text-white">Test Email</Label>;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       <Input
                         id="testEmail"
                         type="email"
@@ -808,6 +859,7 @@ export default function ContentGenerator() {;
                         className="bg-zion-blue border border-zion-blue-light text-white"
                         value={testEmail}
                         onChange={(e) => setTestEmail(e && e.target.value)}
+<<<<<<< HEAD
 =======
                   ;
                   {contentType === 'newsletter' && (;
@@ -821,16 +873,22 @@ export default function ContentGenerator() {;
                         value={testEmail}
                         onChange={(e) => setTestEmail(e.target.value)}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       />;
                     </div>;
                   )}
                 </CardContent>;
                 <CardFooter>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   <Button
                     onClick={generateContent}
                     disabled={isGenerating}
                     className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple">;
+<<<<<<< HEAD
 =======
                   <Button;
                     onClick={generateContent}
@@ -838,11 +896,14 @@ export default function ContentGenerator() {;
                     className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple";
                   >;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     {isGenerating ? (;
                       <>;
                         <Loader2 className="mr-2 h-4 w-4 animate-spin" />;
                         Generating...;
                       </>;
+<<<<<<< HEAD
 <<<<<<< HEAD
                     ) : (;
                       <>Generate {contentType === 'blog' ? 'Blog Post' : 'Newsletter'}</>;
@@ -963,10 +1024,16 @@ export default function ContentGenerator() {;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+                    ) : (;
+                      <>Generate {contentType === 'blog' ? 'Blog Post' : 'Newsletter'}</>;
+                    )}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                                     <span
                                       key={index}
                                       className="bg-zion-blue-light px-2 py-1 rounded-md text-xs text-zion-cyan">;
                                       {tag}
+<<<<<<< HEAD
 <<<<<<< HEAD
                                     </span>;
                                   ))}
@@ -1292,6 +1359,12 @@ export default function ContentGenerator() {;
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+                                    </span>;
+                                  ))}
+                        <svg
+                          xmlns="http://www && www.w3.org/2000/svg"
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                           width="24"
                           height="24"
                           viewBox="0 0 24 24"
@@ -1300,6 +1373,7 @@ export default function ContentGenerator() {;
                           strokeWidth="2"
                           strokeLinecap="round"
                           strokeLinejoin="round"
+<<<<<<< HEAD
 <<<<<<< HEAD
                           className="h-8 w-8 text-zion-purple">;
                           <path d="M14 && M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7 && 2V7.5L14.5 2z" />;
@@ -1321,6 +1395,8 @@ export default function ContentGenerator() {;
                         >;
                           <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z" />;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                           <polyline points="14 2 14 8 20 8" />;
                           <path d="M12 18v-6" />;
                           <path d="M8 15h8" />;
@@ -1330,6 +1406,7 @@ export default function ContentGenerator() {;
                       <p className="text-zion-slate-light max-w-md">;
                         Use the settings panel to configure your content and click "Generate" to create AI-powered content.;
                       </p>;
+<<<<<<< HEAD
                     </div>;
                   )}
 
@@ -1736,6 +1813,8 @@ if ( {) {
   )
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 </CardContent>;
               </Card>;
             </div>;
@@ -1743,6 +1822,7 @@ if ( {) {
         </div>;
       </div>;
       <Footer />;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     </>);
@@ -1848,3 +1928,5 @@ return (<> <Header /> <div className="min-h-screen bg-zion-blue flex items-cente
 }
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

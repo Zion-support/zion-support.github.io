@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -87,6 +88,8 @@ export function DateDivider({ date } DateDividerProps) {;
 import React from "react";
 import { format } from "date-fns";
 interface DateDividerProps {
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   date: Date;
 }
 
@@ -106,11 +109,23 @@ export function DateDivider({ date }: DateDividerProps) {
     </div>;
   );
   date: Date;
+
+
+import React from 'react';
+import { format } from 'date-fns';
+
 }
 interface DateDividerProps {;
   date: Date;
 }
 
+import React from './react';
+import { format  } from './date - fns';
+interface DateDividerProps {
+  date: Date;
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

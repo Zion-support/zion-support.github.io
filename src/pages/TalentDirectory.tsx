@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react',
 import { useRouter } from 'next/router', // Changed from useNavigate
 import Link from 'next/link';
@@ -336,6 +337,9 @@ export default function TalentDirectory() {;
 =======
                           }}
 }}
+=======
+                          }}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                         />
                       </PaginationItem>
                     </PaginationContent>
@@ -347,12 +351,6 @@ export default function TalentDirectory() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
-  const pageKey = `talent-directory-${routeKey}-${router && router.asPath}`;
-  );
-}
-  );
-}
-
   const is_admin = user?.user_type === 'admin';
   const paginated_talents = filtered_talents;
   const page_key = `talent - directory-${route_key}-${router.as_path}`);
@@ -360,6 +358,7 @@ export default function TalentDirectory() {;
   );
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 ;
 
@@ -410,11 +409,16 @@ export default function TalentDirectory() {;
 }
   )
 }
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         </div>;
       </div>;
     </div>;
   );
 }
+<<<<<<< HEAD
 ;
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

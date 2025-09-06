@@ -1,5 +1,6 @@
 import { Star } from 'lucide-react'
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { Star } from 'lucide-react';
 
@@ -18,21 +19,29 @@ import React from "react";
 import React from "react",
 import { Star } from 'lucide-react'
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 export const CommunityTrust: React.FC = () => {
   // Stats display with social proof
   const stats = [
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 import { Star } from 'lucide-react';
 import { Star } from 'lucide-react';
 
+<<<<<<< HEAD
 =======
     { value: '4.8', label: 'App Store Rating' }
     { value: '50K+', label: 'Downloads' }
     { value: '96%', label: 'User Satisfaction' }
     { value: '12M+', label: 'Matches Made' }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { Star } from 'lucide-react';
 export const CommunityTrust: React.FC = () => {;
   // Stats display with social proof;
@@ -50,26 +59,20 @@ export const CommunityTrust: React.FC = () => {;
         <div className='text-center mb-12'>;
           <h2 className='text-3xl md:text-4xl font-bold text-white'>;
             Trusted by the{' '}
-
-            <span className='text-zion-cyan'>Tech Community</span>;
-          </h2>;
-          <p className='mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto'>;
-import React from 'react'; import { Star } from 'lucide-react';
-import React from './react';
-import { Star } from 'lucide-react';
-export const CommunityTrust: React.FC = () => {
-  // Stats display with social proof;
-  const stats = [;
-
-
-    { value: '4.8', label: 'App Store Rating' },
-    { value: '50K+', label: 'Downloads' },
-    { value: '96%', label: 'User Satisfaction' },
-    { value: '12M+', label: 'Matches Made' },
-
         </div>;
 
-
+        {/* Stats Grid */}
+        <div className='grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-16'>;
+          {stats && stats.map((stat, index) => (;
+            <div
+              key={index}
+              className='bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 text-center'>;
+              <div className='text-3xl md:text-4xl font-bold text-zion-cyan mb-2'>;
+                {stat && stat.value}
+              </div>;
+              <div className='text-zion-slate-light'>{stat && stat.label}</div>            </div>;
+          ))}
+        </div>
         {/* Rating display */}
         <div className='max-w-3xl mx-auto bg-zion-blue-dark border border-zion-purple/30 rounded-lg p-6'>;
           <div className='flex justify-center mb-4'>;
@@ -98,7 +101,6 @@ export const CommunityTrust: React.FC = () => {
               />            ))}
 
 
-
   ]
     { value: "4.8", label: "App Store Rating" },
     { value: "50K+", label: "Downloads" },
@@ -107,9 +109,12 @@ export const CommunityTrust: React.FC = () => {
   ],
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 
@@ -128,6 +133,7 @@ ursor/fix-website-loading-errors-and-merge-6662
             Join thousands of professionals who are already using the Zion mobile app to connect, hire, and work
           </p>
         </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -154,6 +160,8 @@ ursor/fix-website-loading-errors-and-merge-6662
                 fill='currentColor'
               />            ))}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           </div>;
           <blockquote className='text-center text-lg text-white italic mb-4'>;
             "The Zion app has completely changed how I find tech talent. The AI;
@@ -168,6 +176,7 @@ ursor/fix-website-loading-errors-and-merge-6662
           <div className="text-center">;
             <div className="font-semibold text-zion-cyan">Sarah Johnson</div>;
             <div className="text-sm text-zion-slate-light">CTO at TechFlow</div>;
+<<<<<<< HEAD
 
         
         {/* Stats Grid */}
@@ -193,6 +202,8 @@ export const CommunityTrust: React.FC = () => {;
   ];
 
   return (
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <section className="py-16 bg-zion-blue">;
       <div className="container mx-auto px-4">;
         <div className="text-center mb-12">;
@@ -213,6 +224,7 @@ export const CommunityTrust: React.FC = () => {;
             </div>;
           ))}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
         </div>;
 
@@ -231,6 +243,8 @@ export const CommunityTrust: React.FC = () => {;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           </div>
           <blockquote className="text-center text-lg text-white italic mb-4">
             "The Zion app has completely changed how I find tech talent. The AI matching is spot on and I can manage everything from anywhere."
@@ -242,6 +256,7 @@ export const CommunityTrust: React.FC = () => {;
         </div>
       </div>
     </section>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -333,6 +348,9 @@ export const CommunityTrust: React.FC = () => {;
 '"  );
 };
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
           </div>;
           <blockquote className="text-center text-lg text-white italic mb-4">;
@@ -347,21 +365,12 @@ export const CommunityTrust: React.FC = () => {;
     </section>;
   );
 }</div>) ) ;
-
-  )
-},
-
-  )
-},
-  )
-},
-  )
-},
 }</div>) ) 
 }</div> <blockquote className="text-center text-lg text-white italic mb-4" > "The Zion app has completely changed how I find tech talent. The AI matching is spot on and I can manage everything from anywhere." </blockquote> <div className="text-center" > <div className="font-semibold text-zion-cyan" >Sarah Johnson</div> <div className="text-sm text-zion-slate-light" >CTO at TechFlow</div> </div> </div> </div> </section>) ;
 };
 '"  );
 };
+<<<<<<< HEAD
 
 
 
@@ -426,3 +435,7 @@ export const CommunityTrust: React.FC = () => {;
 =======
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  )
+},
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

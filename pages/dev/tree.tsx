@@ -1,20 +1,32 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useEffect, useState } from "react";
 import Tree, { TreeNode } from "../../components/ui/Tree";
-interface ApiResponse {
 
   nodes: TreeNode[]
 status: {
   gitConnected: boolean, gitBranch?: string
 import React, { useEffect, useState } from 'react';
 import Tree, { TreeNode } from '../../components/ui/Tree';
+
+
+import React, { useEffect, useState } from 'react';
+
+
+
+
+
+import Tree, { TreeNode } from '../../components / ui / Tree';
+interface ApiResponse {
 interface ApiResponse {
   nodes: TreeNode[],
-status: {
-  gitConnected: boolean, gitBranch?: string 
-export default function DevTreePage() {;
+  status: { gitConnected: boolean, gitBranch?: string }
+}
+
   const [nodes, setNodes] = useState<TreeNode[] | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [git, setGit] = useState<ApiResponse['status'] | null>(null);
@@ -42,29 +54,6 @@ export default function DevTreePage() {
   const fetchTree = async (token?: string) => {
     try {
       const resp = await fetch('/api/dev/source-map', {
-        headers: token ? { 'x-admin-token': token } : undefined
-      });
-      if (!resp.ok) {
-        const j = await resp.json().catch(() => ({}));
-        throw new Error(j.error |`HTTP ${resp.status}`);
-      }
-      const data: ApiResponse = await resp.json();
-      setNodes(data.nodes);
-      setGit(data.status);
-    } catch (e: any) {
-      setError(e.message |'Failed to load');    }
-  }
-  useEffect(() => {
-    const stored = localStorage.getItem('ADMIN_TOKEN') |'';
-    setAdminToken(stored);
-    fetchTree(stored);
-  }, []);
-  const handleSaveToken = () => {
-    localStorage.setItem('ADMIN_TOKEN', adminToken);
-    fetchTree(adminToken);  }
-  const onDeploy = async (p: string) => {
-    try {
-      const resp = await fetch('/api/dev/source-map', {
         method: 'POST'
         headers: {
           'Content-Type': 'application/json'
@@ -78,19 +67,13 @@ export default function DevTreePage() {
       }
       await fetchTree(adminToken);
     } catch (e: any) {
-      setError(e.message |'Deploy failed');    }
-  }
 
-      const resp = await fetch("/api/dev/source-map", {
-        headers: token ? { "x-admin-token": token } : undefined}),
-      if (!resp.ok) {
-        const j = await resp.json().catch(() => ({})),
-        throw new Error(j.error || `HTTP ${resp.status}`)
-        } catch (error) {
+      {error && <div className="mb-3 text-sm text-red-600">{error}</div>  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
       const data: ApiResponse = await resp.json(),
       setNodes(data.nodes),
       setGit(data.status)
@@ -291,6 +274,8 @@ export default function DevTreePage() {
     } catch (e: any) {
 <<<<<<< HEAD
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const fetchTree = async (token?: string) => {;
     try {;
       const resp = await fetch('/api/dev/source-map', {;
@@ -338,12 +323,14 @@ export default function DevTreePage() {
       {nodes ? (
         <div className="rounded border p-3 bg-white">
           <Tree nodes={nodes} onDeploy={onDeploy} />
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
         </div>
       ) : (
         <div>Loading...</div>
+<<<<<<< HEAD
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
             onClick={handleSaveToken}>            Save Token;
@@ -352,7 +339,6 @@ export default function DevTreePage() {
 }
 }
 }
-
 import React, { useEffect, useState } from "react";
 import Tree, { TreeNode } from "../../components/ui/Tree";
 interface ApiResponse {;
@@ -465,6 +451,7 @@ export default function DevTreePage(req, res) {
           />;
           <button className="px-3 py-1 text-sm bg-blue-600 text-white rounded" onClick={handleSaveToken}>;
             Save Token;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           </button>;
@@ -580,26 +567,33 @@ export default function DevTreePage(req, res) {
           </button>
         </div>
       </div>
+=======
+          </button>;
+        </div>;
+      </div>;
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {error && <div className='mb-3 text-sm text-red-600'>{error}</div>}
 
-      {error && <div className="mb-3 text-sm text-red-600">{error}</div>  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-      {nodes ? (
-        <div className="rounded border p-3 bg-white">
-          <Tree nodes={nodes} onDeploy={onDeploy} />
-        </div>
-      ) : (
-        <div>Loading...</div>
+      {nodes ? (;
+        <div className='rounded border p-3 bg-white'>          <Tree nodes={nodes} onDeploy={onDeploy} />;
+        </div>;
+      ) : (;
+        <div>Loading...</div>;
       )}
+<<<<<<< HEAD
     </div>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   )
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
+=======
+    </div>;
+  );
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       set_error (e.message || 'Failed to load');    }
   }
 ;
@@ -668,6 +662,7 @@ if ( {) {
     </div>);
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
@@ -686,11 +681,14 @@ interface ApiResponse {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 ;
 export default function DevTreePage(req, res) {
   try {
@@ -824,3 +822,5 @@ export default function DevTreePage(req, res) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

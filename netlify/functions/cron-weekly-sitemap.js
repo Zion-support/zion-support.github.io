@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -6,6 +7,9 @@ exports && exports.handler = async function () {
   try {
     const baseUrl = process && process.env.URL || process && process.env.DEPLOY_URL || '';
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+    const baseUrl = process && process.env.URL || process && process.env.DEPLOY_URL || '';
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     const pages = [
       '/'
       '/about'
@@ -21,6 +25,7 @@ exports && exports.handler = async function () {
       `<urlset xmlns="http://www && www.sitemaps.org/schemas/sitemap/0 && 0.9">` +
       pages && pages.map(p => `<url><loc>${baseUrl}${p}</loc></url>`).join('') +
       `</urlset>`;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -73,6 +78,8 @@ if ( {) {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         content: xml,
         message: 'chore (automation): weekly sitemap refresh',
         token,
@@ -80,6 +87,7 @@ if ( {) {
       });
     }
     return {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -108,14 +116,19 @@ exports.handler = async function() {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       `</urlset>`,
     const owner = process.env.GITHUB_OWNER,
     const repo = process.env.GITHUB_REPO,
     const token = process.env.GITHUB_TOKEN,
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     // Check condition
 if ( {) {
   $2
@@ -123,6 +136,7 @@ if ( {) {
       await upsert_file ({ owner, repo, path: 'public / sitemap - autogen.xml', content: xml, message: 'chore (automation): weekly sitemap refresh', token });
     }
     return { status_code: 200, body: JSON.stringify ({ ok: true, pages: pages.length }) }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   } catch (e) {
@@ -179,3 +193,9 @@ if ( {) {
 =======
 },
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+  } catch (e) {
+    return { status_code: 500, body: JSON.stringify ({ error: e.message }) }
+  }
+},
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

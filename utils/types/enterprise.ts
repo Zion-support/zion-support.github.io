@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 export type EnterpriseRole = 'admin' | 'manager' | 'recruiter' | 'viewer';
 
@@ -89,6 +90,8 @@ export interface CompanyActivityEvent {;
 export interface InvoiceRecord {;
   id: string;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   companyId: string;
   number: string;
   amountUsd: number;
@@ -96,9 +99,23 @@ export interface InvoiceRecord {;
   periodEndIso: string;
   status: 'paid' | 'open' | 'void' | 'past_due';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+}
+export interface CompanyRecord {id: string;
+  name: string;
+  slug: string, // e.g. acme;
+  logoUrl?: string;
+  brandColor?: string;
+  plan: CompanyPlan;
+  members: CompanyMember[];
+  activity: CompanyActivityEvent[];
+  invoices: InvoiceRecord[];
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export type EnterpriseRole = 'admin' | 'manager' | 'recruiter' | 'viewer',
 export interface CompanyUsageLimits {
   monthlyJobPosts: number,
@@ -106,18 +123,24 @@ export interface CompanyUsageLimits {
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 export interface CompanyPlan {
   tier: 'teams' | 'business' | 'enterprise - custom',
@@ -151,6 +174,7 @@ export interface CompanyRecord {
   id: string,
   name: string,
   slug: string, // e.g. acme;
+<<<<<<< HEAD
 
 
   logoUrl?: string,;
@@ -194,6 +218,8 @@ export interface CompanyRecord {;
   members: CompanyMember[];
   activity: CompanyActivityEvent[];
   invoices: InvoiceRecord[];
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   logoUrl?: string,;
   brandColor?: string,;
   plan: CompanyPlan,;
@@ -204,6 +230,11 @@ export interface CompanyRecord {;
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+  activity: CompanyActivityEvent[];
+  invoices: InvoiceRecord[];
 }
+<<<<<<< HEAD
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

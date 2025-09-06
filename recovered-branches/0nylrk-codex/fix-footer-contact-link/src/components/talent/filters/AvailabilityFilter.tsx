@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -7,13 +8,15 @@
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 const AVAILABILITY_OPTIONS = [
   { id: "full_time", label: "Full-time" }
   { id: "part_time", label: "Part-time" }
-=======
 import {ChevronDown, ChevronUp} from "lucide-react";
 import {Checkbox} from "@/components/ui/checkbox";
 import {AvailabilityFilterProps} from "@/types/filters";
+<<<<<<< HEAD
 <<<<<<< HEAD
 const AVAILABILITY_OPTIONS = [;
   { id: "full_time", label: "Full-time" },;
@@ -30,34 +33,21 @@ export function AvailabilityFilter(): any ({ selectedAvailability, toggleAvailab
 
 
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { ChevronDown, ChevronUp } from "lucide-react",
 import { Checkbox } from "@/components/ui/checkbox";
 import { AvailabilityFilterProps } from "@/types/filters";
 
 import { Checkbox } from "@/components/ui/checkbox",
 import { AvailabilityFilterProps } from "@/types/filters",
+
+
+
 const AVAILABILITY_OPTIONS = [
   { id: "full_time", label: "Full-time" }
   { id: "part_time", label: "Part-time" }
   { id: "project", label: "Project-based" }
-
-
-
-const AVAILABILITY_OPTIONS = [
-  { id: "full_time", label: "Full-time" }
-  { id: "part_time", label: "Part-time" }
-
-],
-=======
-import { ChevronDown, ChevronUp } from "lucide-react";
-import { Checkbox } from "@/components/ui/checkbox";
-import { AvailabilityFilterProps } from "@/types/filters";
-const AVAILABILITY_OPTIONS = [
-  { id: "full_time", label: "Full-time" },
-  { id: "part_time", label: "Part-time" },
-  { id: "project", label: "Project-based" },
-];
->>>>>>> main
 
 export function AvailabilityFilter({
   selectedAvailability,
@@ -66,7 +56,10 @@ export function AvailabilityFilter({
   toggleSection,
   isMobileFilterOpen,
 }: AvailabilityFilterProps) {
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <div className="mb-6 border-b border-zion-blue-light pb-6">
       <button
@@ -81,12 +74,15 @@ export function AvailabilityFilter({
         )}
       </button>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 
 >>>>>>> main
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {expanded && (
         <div className="mt-4 space-y-2">
           {AVAILABILITY_OPTIONS.map((option) => (
@@ -102,9 +98,12 @@ export function AvailabilityFilter({
                 className="ml-2 text-sm text-zion-slate-light cursor-pointer"
               >
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { ChevronDown, ChevronUp } from "lucide-react",;
 import { Checkbox } from "@/components/ui/checkbox",;
 import { AvailabilityFilterProps } from "@/types/filters",;
@@ -112,19 +111,6 @@ const AVAILABILITY_OPTIONS = [;
   { id: "full_time", label: "Full-time" },;
   { id: "part_time", label: "Part-time" },;
   { id: "project", label: "Project-based" }
-];
-export function AvailabilityFilter({ selectedAvailability, toggleAvailability, expanded, toggleSection, isMobileFilterOpen }: AvailabilityFilterProps) {;
-  return (;
-];
-export function AvailabilityFilter({
-  selectedAvailability
-  toggleAvailability
-  expanded
-  toggleSection
-  isMobileFilterOpen
-}: AvailabilityFilterProps) {
-export function AvailabilityFilter(): any ({ selectedAvailability, toggleAvailability, expanded, toggleSection, isMobileFilterOpen }: AvailabilityFilterProps) {;
-  return (
     <div className="mb-6 border-b border-zion-blue-light pb-6">;
       <button
         onClick={toggleSection}
@@ -135,6 +121,7 @@ export function AvailabilityFilter(): any ({ selectedAvailability, toggleAvailab
         ) : (;
           <ChevronDown className="h-4 w-4 text-zion-slate-light" />;
         )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -149,6 +136,8 @@ export function AvailabilityFilter(): any ({ selectedAvailability, toggleAvailab
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <Checkbox
                 id={`availability-${option && option.id}`}
                 checked={selectedAvailability && selectedAvailability.includes(option && option.id)}
@@ -156,26 +145,14 @@ export function AvailabilityFilter(): any ({ selectedAvailability, toggleAvailab
                 className="border-zion-slate-light data-[state=checked]:bg-zion-purple data-[state=checked]:border-zion-purple";
               />;
               <label
-
-                htmlFor={`availability-${option.id}`}
-                className="ml-2 text-sm text-zion-slate-light cursor-pointer"
-              >
-
-
                 {option.label}
               </label>
             </div>
           ))}
         </div>;
       )}
-
-    </div>;
-  );
-    </div>
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 import { ChevronDown, ChevronUp  } from './lucide-react';
 import { Checkbox  } from '@/components / ui / checkbox';
 import { AvailabilityFilterProps  } from '@/types / filters';
@@ -185,6 +162,7 @@ const AVAILABILITY_OPTIONS = [;
   { id: "project", label: "Project - based" },
 ];
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -278,3 +256,5 @@ export function AvailabilityFilter({ selectedAvailability, toggleAvailability, e
 }
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

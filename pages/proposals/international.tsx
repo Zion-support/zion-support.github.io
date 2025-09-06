@@ -1,9 +1,23 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+import React, { useEffect, useState } from 'react';
+import EnhancedLayout from '../../components/layout/EnhancedLayout';
+
+import React, { useEffect, useState } from 'react',
+import EnhancedLayout from '../../components/layout/EnhancedLayout'
+import React, { useEffect, useState } from 'react',;
+import EnhancedLayout from '../../components/layout/EnhancedLayout',;
+import React, { useEffect, useState } from 'react',
+import EnhancedLayout from '../../components/layout/EnhancedLayout'
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 type ProposalListItem = {
   id: string
   title: string
@@ -12,6 +26,7 @@ type ProposalListItem = {
   type: string
   status: 'Draft' | 'Submitted' | 'Under Review' | 'Accepted'
   createdAt: string
+<<<<<<< HEAD
 
 import React, { useEffect, useState } from 'react',
 import EnhancedLayout from '../../components / layout / EnhancedLayout',
@@ -27,18 +42,19 @@ type ProposalListItem = {
   status: 'Draft' | 'Submitted' | 'Under Review' | 'Accepted',
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 },
 export default function InternationalProposalsPage() {
   const [items, setItems] = useState<ProposalListItem[]>([]),
   const [filter, setFilter] = useState('All'),
 
   useEffect__(() => {
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     fetch('/api/proposals')
       .then((r) => r.json())
       .then((d) => setItems(d.items |[]))
       .catch(() => setItems([]))
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -47,6 +63,8 @@ export default function InternationalProposalsPage() {
   const filtered = items.filter((i) => (filter === 'All' ? true : i.regionalScope === filter))
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <EnhancedLayout>
       <div className="space-y-4">
@@ -72,37 +90,25 @@ export default function InternationalProposalsPage() {
               </div>
               <div className="flex items-center gap-4 text-sm">
                 <span className="px-2 py-1 rounded bg-gray-100 dark:bg-gray-800">{i.status}</span>
-
-
-                <a className="text-blue-600 underline" href={`/api/proposals?id=${i.id}`} target="_blank" rel="noreferrer">JSON</Link>
-                <a className="text-blue-600 underline" href={`/proposals/${i.id}.md`} target="_blank" rel="noreferrer">Markdown</Link>
-                <a className="text-blue-600 underline" href={`/proposals/${i.id}.pdf`} target="_blank" rel="noreferrer">PDF</Link>
-              </div>
-            </div>
-          ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-          {filtered.length === 0 && <div className="p-4 text-sm text-gray-600">No proposals yet.</div>  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
-
         </div>
         <div className="text-sm text-gray-600">Community commentary per region coming next. For now, proposals expose a comments API endpoint.</div>
       </div>
     </EnhancedLayout>
-
+  )
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 =======
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   created_at: string;
 },
 export default /**
@@ -163,13 +169,8 @@ function InternationalProposalsPage() {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 
-  useEffect__(() => {
-    fetch('/api/proposals')
-      .then((r) => r.json())
-      .then((d) => setItems(d.items || []))
-      .catch(() => setItems([]))
-  }, []),
 
+<<<<<<< HEAD
 import React, { useEffect, useState } from 'react';
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
 
@@ -269,3 +270,5 @@ export default function InternationalProposalsPage() {
 }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

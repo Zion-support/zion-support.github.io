@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 class ErrorBoundary extends React.Component {
@@ -29,6 +30,8 @@ import React from 'react';
 =======
           <div className="h-12 w-12 rounded bg-gray-200" />)}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <h3 className="text-lg font-semibold text-gray-900">{title}</h3>;
       </div>;
       <p className="text-sm text-gray-600 mb-4">{description}</p>;
@@ -36,6 +39,7 @@ import React from 'react';
         {price && <span className="text-sm font-medium text-blue-600">{price}</span>}
 import Link from 'next/link';
 import Image from 'next/image';
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -54,11 +58,16 @@ import Image from 'next / image';
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface EnhancedMarketplaceCardProps {
   title: string, description: string
   price?: string;
   href: string, image?: string
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 interface EnhancedMarketplaceCardProps {;
   title: string, description: string,;
@@ -71,6 +80,7 @@ interface EnhancedMarketplaceCardProps {;
   featured?: boolean;
   class_name?: string;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -92,6 +102,9 @@ const EnhancedMarketplaceCard: React.FC < EnhancedMarketplaceCardProps> = ({
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 }) => {
 =======
+=======
+}) => {
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 const EnhancedMarketplaceCard: React.FC<EnhancedMarketplaceCardProps> = ({;
   title,;
@@ -108,6 +121,7 @@ const EnhancedMarketplaceCard: React.FC<EnhancedMarketplaceCardProps> = ({;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -119,6 +133,8 @@ const EnhancedMarketplaceCard: React.FC<EnhancedMarketplaceCardProps> = ({;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               alt={title}
               width={48}
               height={48}
@@ -137,6 +153,7 @@ const EnhancedMarketplaceCard: React.FC<EnhancedMarketplaceCardProps> = ({;
               </span>;
             )}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -150,6 +167,8 @@ const EnhancedMarketplaceCard: React.FC<EnhancedMarketplaceCardProps> = ({;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         {/* Rating */}
         {rating && reviews && (;
           <div className="flex items-center space-x-1 mb-4">;
@@ -178,6 +197,7 @@ const EnhancedMarketplaceCard: React.FC<EnhancedMarketplaceCardProps> = ({;
               {price}
             </span>;
           )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -245,6 +265,8 @@ const EnhancedMarketplaceCard: React.FC<EnhancedMarketplaceCardProps> = ({;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface MarketplaceCardProps {
   title: string
   description: string
@@ -272,18 +294,22 @@ interface MarketplaceCardProps {;
   on_favorite?: () => void;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 const EnhancedMarketplaceCard: React.FC < MarketplaceCardProps> = ({
 
 =======
 const EnhancedMarketplaceCard: React.FC < MarketplaceCardProps> = ({
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   title;
   description;
   price;
   rating;
   image;
   onAddToCart;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -364,3 +390,9 @@ export default EnhancedMarketplaceCard;
 =======
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  );
+
+}
+export default EnhancedMarketplaceCard;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

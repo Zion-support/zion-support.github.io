@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -26,6 +27,8 @@ function APIPage() {
 export default function APIPage() {return (;
 export default function APIPage() {;
   return (;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <div className="min-h-screen py-20 px-4 sm:px-6 lg:px-8">;
       <div className="max-w-6xl mx-auto">;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -229,6 +232,7 @@ export default function APIPage() {;
           <h2 className="text - 3xl font - bold mb - 8 text - center">Code Examples</h2>;
           <div className="space - y-6">;
             <div className="card">;
+<<<<<<< HEAD
 
               <h3 className="text - xl font - semibold mb - 4">Create a Digital Economy</h3>;
               <div className="bg - gray - 900 / 50 rounded - lg p - 4">;
@@ -266,6 +270,8 @@ const economy = await client.economies.create({;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   blockchain: 'ethereum';
 });
 // // // console.log ('Economy created:', economy.id), `}

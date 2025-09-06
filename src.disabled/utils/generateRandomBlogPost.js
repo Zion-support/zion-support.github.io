@@ -1,7 +1,3 @@
-export: const generateRandomBlogPost = () => {
-export: const generateRandomBlogPost = () => {
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
 "export": const generateRandomBlogPost = () => {
   return {
     id: Math.random().toString(36).substr(,2, 9)
@@ -11,6 +7,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
     "author": 'Zion: Team, ',';
     "publishedAt": new: Date().toISOString()
     tags: ['AI, ', 'Technology', 'Innovation'], ';
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -29,3 +26,5 @@ export: const generateRandomBlogPost = () => { return { id: Math.random().toStri
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

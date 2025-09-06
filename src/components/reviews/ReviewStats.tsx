@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   const formattedRating = null;
 import { Star } from 'lucide-react'
@@ -8,43 +9,10 @@ interface ReviewStatsProps {
   totalReviews: number,
   ratingDistribution?: Record<number number>
 }
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
-export function ReviewStats({ averageRating, totalReviews, ratingDistribution }: ReviewStatsProps) {
-  // Format the average rating to one decimal place
-  const formattedRating = averageRating.toFixed(1),
-  
-  // Calculate percentages for distribution if available
-  const getPercentage = (count: number) => {
-    if (totalReviews === 0) return 0,
-    return (count / totalReviews) * 100
-  },
-import { Star } from 'lucide-react'
-import { Progress } from "@/components/ui/progress";
-interface ReviewStatsProps {
-  averageRating: number;
-  totalReviews: number;
-  ratingDistribution?: Record<number, number>
-export function ReviewStats({
-  averageRating
-  totalReviews
-  ratingDistribution
-}: ReviewStatsProps) {
-  // Format the average rating to one decimal place
-  const formattedRating = null;
-  const formattedRating = averageRating.toFixed(1)
-  // Calculate percentages for distribution if available
-  const getPercentage = (count: number) => {
-    if (totalReviews === 0) return 0
-    return (count / totalReviews) * 100
-  }
 
-import { Star } from 'lucide-react'
-import { Progress } from "@/components/ui/progress",
-interface ReviewStatsProps {
-  averageRating: number,
-  totalReviews: number,
-  ratingDistribution?: Record<number number>
-}
 
 export function ReviewStats({ averageRating, totalReviews, ratingDistribution }: ReviewStatsProps) {
   // Format the average rating to one decimal place
@@ -60,6 +28,7 @@ export function ReviewStats({ averageRating, totalReviews, ratingDistribution }:
     <div className="bg-card border rounded-lg p-4">
       <div className="flex items-center justify-between mb-4">
         <div>
+<<<<<<< HEAD
   
     <div className="bg-card border rounded-lg p-4">
       <div className="flex items-center justify-between mb-4">
@@ -95,11 +64,14 @@ export function ReviewStats({ averageRating, totalReviews, ratingDistribution }:
 
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   }`}
                 />
               ))}
             </div>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
             <span className="text-sm text-muted-foreground">
@@ -112,12 +84,16 @@ export function ReviewStats({ averageRating, totalReviews, ratingDistribution }:
               {totalReviews} {totalReviews === 1 ? 'review' : 'reviews'}            <span className="text-sm text-muted-foreground">
             <span className="text-sm text-muted-foreground">
               {totalReviews} {totalReviews === 1 ? "review" : "reviews"}
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               {totalReviews} {totalReviews === 1 ? "review" : "reviews"}
             </span>
           </div>
         </div>
       </div>
       {ratingDistribution && (
+<<<<<<< HEAD
         <div className='space-y-2'>
           {[5, 4, 3, 2, 1].map(rating => (
             <div key={rating} className='flex items-center gap-2'>
@@ -127,6 +103,8 @@ export function ReviewStats({ averageRating, totalReviews, ratingDistribution }:
                 value={getPercentage(ratingDistribution[rating] |0)}
                 className='h-2'        <div className="space-y-2">
           {[5, 4, 3, 2, 1].map((rating,) => (
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <div key={rating} className="flex items-center gap-2">
               <div className="w-6 text-sm text-right">{rating}</div>
               <Star className="h-3 w-3 text-yellow-400" />
@@ -187,36 +165,10 @@ if (return 0) {
         </div>;
       </div>;
 
-
-              <div className='w-8 text-xs text-muted-foreground'>                {ratingDistribution[rating] |0}              <div className="w-8 text-xs text-muted-foreground">
-                {ratingDistribution[rating] |0}
-              </div>
-            </div>
-
-
       
       {ratingDistribution && (
         <div className="space-y-2">
           {[5, 4, 3, 2, 1].map((rating) => (
-                value = {getPercentage(ratingDistribution[rating] || 0),}
-                className="h-2" 
-              />
-              <div className='w-8 text-xs text-muted-foreground'>                {ratingDistribution[rating] || 0}              <div className="w-8 text-xs text-muted-foreground">
-                {ratingDistribution[rating] || 0}
-              </div>
-            </div>
-                value={getPercentage(ratingDistribution[rating] || 0)} 
-                className="h-2" 
-              />
-              <div className="w-8 text-xs text-muted-foreground">
-                {ratingDistribution[rating] || 0}
-              </div>;
-            </div>;
-        </div>
-      )}
-}</div>)
-}</div>)
-}"}
 
 
             <div key={rating} className="flex items-center gap-2">
@@ -228,12 +180,6 @@ if (return 0) {
           ))}
         </div>;
       )}
-
-    </div>;
-  );
-
-}</div>) ;
-}</div>) ;
 }"}
 
       {rating_distribution && (
@@ -262,21 +208,18 @@ if (return 0) {
 }</div>);
 }</div>);
 }"}
-          ))}
-        </div>
-      )}
-    </div>
-  )
-}</div>)
-}</div>)
-}"}
+
 }</div>) ;
 }</div>) ;
 }"};
+          ))}
+        </div>
+      )}
     </div>;
   );
 }
 ;
+<<<<<<< HEAD
 
 }</div>) ;
 }</div>) ;
@@ -287,3 +230,5 @@ if (return 0) {
 }
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

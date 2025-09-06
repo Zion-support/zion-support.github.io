@@ -1,12 +1,16 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import { createClient } from "@supabase/supabase-js";
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 const url = process && process.env.NEXT_PUBLIC_SUPABASE_URL || "";
 const key = process && process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || "";
@@ -41,13 +45,19 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { createClient } from '@supabase/supabase-js';
 const url = process.env.NEXT_PUBLIC_SUPABASE_URL;
 const key = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
 =======
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     const { projectId, roomName, inviterName } = req && req.body || {};
     if (!projectId || !roomName)
       return res && res.status(400).json({ error: "Missing required fields" });
@@ -75,6 +85,7 @@ if ( {) {
     return res.status (405).json ({ error: "Method not allowed" });
   }
   try {
+<<<<<<< HEAD
     const { project_id, room_name, inviter_name } = req.body || {}
     if (
       return res.status (400).json ({ error: "Missing required fields" })) {
@@ -128,6 +139,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(405).json({ error: 'Method not allowed' });
   }
   try {
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     const { projectId, roomName, inviterName } = req.body || {};
     if (!projectId || !roomName) return res.status(400).json({ error: 'Missing projectId or roomName' });
     if (!url || !key) return res.status(500).json({ error: 'Supabase configuration missing' });
@@ -135,6 +148,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     await supabase.channel(`project_${projectId}_calls`).send({ type: 'broadcast', event: 'call_invite', payload: { projectId, roomName, inviterName } });
     return res.status(200).json({ ok: true });
   } catch (e) {
+<<<<<<< HEAD
     console.error(e);
     return res.status(200).json({ ok: true, skipped: true });
   }
@@ -146,6 +160,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  }
+}
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -158,6 +177,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   }
 }
@@ -169,3 +189,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  }
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

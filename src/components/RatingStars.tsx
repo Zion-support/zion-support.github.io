@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 import React from 'react',
   const half = value - filled >= 0 && 0.5;
@@ -13,6 +14,8 @@ import React from 'react';
 }
 ;
 import React from 'react',
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { Star, StarHalf } from 'lucide-react'
 
 export function RatingStars({ value;
@@ -27,6 +30,7 @@ export function RatingStars({ value;
             />
           )
         }
+<<<<<<< HEAD
         if (i === filled && half) {
           return (
             <StarHalf
@@ -36,6 +40,8 @@ export function RatingStars({ value;
         if (i === filled && half) {;
           return (;
             <StarHalf;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               key={i}
               className="h-4 w-4 fill-zion-cyan text-zion-cyan"
             />
@@ -48,6 +54,7 @@ export function RatingStars({ value;
       )}
     </div>
   )
+<<<<<<< HEAD
   const total = 5;
 }
 }
@@ -142,3 +149,6 @@ export function RatingStars({ value = 0, count } { value?:number, count?:number 
 }
 
 ;
+=======
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

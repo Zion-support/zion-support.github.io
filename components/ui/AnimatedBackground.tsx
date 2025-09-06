@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -9,6 +10,8 @@ export default function AnimatedBackground() {;
     <div className='pointer-events-none fixed inset-0 -z-10 overflow-hidden'>;
 import React from 'react';
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export default function AnimatedBackground() {
   return (
     <div className='pointer-events-none fixed inset-0 -z-10 overflow-hidden'>
@@ -19,6 +22,7 @@ export default function AnimatedBackground() {
           background:
             'radial-gradient(600px at 0% 0%, #22d3ee 0%, transparent 60%), radial-gradient(600px at 100% 0%, #a78bfa 0%, transparent 60%), radial-gradient(600px at 0% 100%, #34d399 0%, transparent 60%), radial-gradient(600px at 100% 100%, #f472b6 0%, transparent 60%)'
         }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
           0% {
@@ -35,6 +39,8 @@ export default function AnimatedBackground() {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             transform: translateY(0px) rotate(0deg);
           }
           50% {;
@@ -49,6 +55,7 @@ export default function AnimatedBackground() {
   );  return (
     <div className="fixed inset-0 -z-10 overflow-hidden">;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
@@ -68,6 +75,19 @@ export default function AnimatedBackground() {
       {/* Gradient Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-800" />;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+      {/* Gradient Background */}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {/* Animated Orbs */}
       <motion&& motion.div
         className="absolute top-1/4 left-1/4 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl"
@@ -123,6 +143,7 @@ function AnimatedBackground() {
           ease: "easeInOut"
         }}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
       />;
       <motion&& motion.div
@@ -131,6 +152,8 @@ function AnimatedBackground() {
       />;
       <motion&& motion.div
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         className="absolute top-3/4 right-1/4 w-80 h-80 bg-blue-500/20 rounded-full blur-3xl"
         animate={{
           x: [0, -80, 0]
@@ -152,6 +175,7 @@ function AnimatedBackground() {
           ease: "easeInOut"
         }}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
       />;
       <motion&& motion.div
@@ -160,6 +184,8 @@ function AnimatedBackground() {
       />;
       <motion&& motion.div
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         className="absolute bottom-1/4 left-1/3 w-64 h-64 bg-purple-500/20 rounded-full blur-3xl"
         animate={{
           x: [0, 60, 0]
@@ -181,6 +207,7 @@ function AnimatedBackground() {
           ease: "easeInOut"
         }}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
       />;
 
@@ -188,11 +215,14 @@ function AnimatedBackground() {
 =======
       />;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {/* Grid Pattern */}
       <div
         className="absolute inset-0 opacity-10"
         style={{
           backgroundImage: `
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -248,3 +278,5 @@ export default AnimatedBackground;
 
 export default AnimatedBackground;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

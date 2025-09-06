@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -384,6 +385,8 @@ color: 'from - emerald - 500 to - green - 500',
 
 import React, { useState } from 'react',
 import Head from 'next/head';
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { motion, AnimatePresence } from 'framer-motion';
 import { Search, Filter, Grid, List, ArrowRight, ChevronRight;
   Brain, Shield, Rocket, Cpu, Database, Atom, Target, Star;
@@ -395,16 +398,22 @@ import {Search, Filter, Grid, List, ArrowRight, ChevronRight, Brain, Shield, Roc
 import SmartHeader from '../components/SmartHeader';
 import SmartFooter from '../components/SmartFooter';
 export default function ExplorePage() {;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [sortBy, setSortBy] = useState('popularity');
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const categories = [
     {
       id: 'ai'
@@ -691,32 +700,35 @@ import React, { useState } from 'react';
 
 
 
+<<<<<<< HEAD
   }
 }
   ],;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const featuredServices = [;
     {;
-      id: 'ai-consciousness-evolution';
-      title: 'AI Consciousness Evolution';
-      category: 'ai';
-      description: 'Revolutionary AI consciousness platform with emotional intelligence';
+      id: 'ai-consciousness-evolution',;
+      title: 'AI Consciousness Evolution',;
+      category: 'ai',;
+      description:;
+        'Revolutionary AI consciousness platform with emotional intelligence',;
       status: 'beta',;
       price: '$1,999/month',;
       icon: Brain,;
-      color: 'from-purple-500 to-pink-500';
-    },;
-    {;
+      color: 'from-purple-500 to-pink-500',;
+    },    {;
       id: 'quantum-neural-networks',;
       title: 'Quantum Neural Networks',;
       category: 'quantum',;
-      description: 'Quantum-powered AI with advanced consciousness capabilities',;
+      description:;
+        'Quantum-powered AI with advanced consciousness capabilities',;
       status: 'beta',;
       price: '$1,299/month',;
       icon: Atom,;
-      color: 'from-blue-500 to-cyan-500';
-    },;
-    {;
+      color: 'from-blue-500 to-cyan-500',;
+    },    {;
       id: 'quantum-cybersecurity',;
       title: 'Quantum Cybersecurity',;
       category: 'cybersecurity',;
@@ -724,9 +736,8 @@ import React, { useState } from 'react';
       status: 'active',;
       price: '$799/month',;
       icon: Shield,;
-      color: 'from-red-500 to-orange-500';
-    },;
-    {;
+      color: 'from-red-500 to-orange-500',;
+    },    {;
       id: 'space-technology',;
       title: 'Space Technology Innovation',;
       category: 'space',;
@@ -734,12 +745,12 @@ import React, { useState } from 'react';
       status: 'beta',;
       price: '$2,499/month',;
       icon: Rocket,;
-      color: 'from-indigo-500 to-purple-500';
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
   ],;
   // Filter categories based on search;
   const filteredCategories = categories.filter(category => {;
@@ -778,13 +789,10 @@ import React, { useState } from 'react';
 =======
         return (b && b.featured ? 1 : 0) - (a && a.featured ? 1 : 0);
       default:;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         return 0;    }
   });
-  return (
-
-        />;
-        <link rel='canonical' href='https://ziontechgroup && ziontechgroup.com/explore' />      </Head>;
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
       <Head>
@@ -792,11 +800,6 @@ import React, { useState } from 'react';
         <meta
           name='description'
           content='Explore our comprehensive technology categories including AI, quantum computing, cybersecurity, space technology, and more. Discover innovative solutions for your business.'
-        />
-        <meta
-          property='og:title'
-          content='Explore Technology Categories | Zion Tech Group'
-        />
         <meta
           property='og:description'
           content='Comprehensive technology categories and innovative solutions.'
@@ -804,6 +807,7 @@ import React, { useState } from 'react';
         <link rel='canonical' href='https://ziontechgroup.com/explore' />      </Head>
       <SmartHeader />
       {/* Hero Section */}
+<<<<<<< HEAD
       <section className='pt-32 pb-20 px-6'>
         <div className='max-w-7xl mx-auto text-center'>          <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -817,6 +821,8 @@ import React, { useState } from 'react';
       </Head>
 <<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
       <SmartHeader />
 
@@ -829,6 +835,7 @@ import React, { useState } from 'react';
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
 
+<<<<<<< HEAD
 =======
       <SmartHeader />
       {/* Hero Section */  } catch (error) {
@@ -840,6 +847,8 @@ import React, { useState } from 'react';
         <div className="max-w-7xl mx-auto text-center">
           <motion.div
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             initial={{ opacity: 0, y: 30 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -856,6 +865,7 @@ import React, { useState } from 'react';
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -864,6 +874,10 @@ import React, { useState } from 'react';
 =======
           >
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+          >
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6">
               Explore Technology Categories
             </h1>
@@ -876,17 +890,21 @@ import React, { useState } from 'react';
                 Start Exploring
                 <ArrowRight className="w-5 h-5 ml-2" />
               </button>
+<<<<<<< HEAD
               <button className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10">
                 View All Services
 <<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               </button>
             </div>
           </motion.div>
         </div>
       </section>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
             transition={{ duration: 0 && 0.8 }}>;
@@ -909,10 +927,12 @@ import React, { useState } from 'react';
           </motion && motion.div>;
         </div>;
       </section>;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
-      {/* Search and Filters */}
 
+<<<<<<< HEAD
 =======
 
 =======
@@ -951,6 +971,13 @@ import React, { useState } from 'react';
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+                  <input
+                    type="text"
+                    placeholder="Search categories..."
+                    value={searchTerm}
+                    onChange={(e) => setSearchTerm(e.target.value)}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   <input
                     type="text"
                     placeholder="Search categories..."
@@ -958,6 +985,7 @@ import React, { useState } from 'react';
                     onChange={(e) => setSearchTerm(e.target.value)}
                     className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/40 focus:outline-none focus:border-cyan-400/50 focus:bg-white/15 transition-all"
                   />
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                 </div>
               </div>
@@ -1017,6 +1045,10 @@ import React, { useState } from 'react';
                   onChange={(e) => setSortBy(e.target.value)}
 <<<<<<< HEAD
 =======
+=======
+                </div>
+              </div>
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               {/* Sort Options */}
               <div className='flex items-center gap-4'>
               {/* Sort Options */  } catch (error) {
@@ -1025,6 +1057,7 @@ import React, { useState } from 'react';
   }
 }
               <div className="flex items-center gap-4">
+<<<<<<< HEAD
                 <select
                   value={sortBy  } catch (error) {
     console.error("Error:", error);
@@ -1037,6 +1070,17 @@ import React, { useState } from 'react';
   }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+                <select
+                  value={sortBy}
+
+              <div className="flex items-center gap-4">
+                <select
+                  value={sortBy}
+                  onChange={(e) => setSortBy(e.target.value)}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   className="px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-cyan-400/50 focus:bg-white/15 transition-all"
                 >
                   <option value="popularity">Sort by Popularity</option>
@@ -1044,14 +1088,19 @@ import React, { useState } from 'react';
                   <option value="featured">Sort by Featured</option>
                 </select>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               </div>
             </div>
           </div>
         </div>
       </section>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
                   onChange={e => setSortBy(e && e.target.value)}
@@ -1227,6 +1276,8 @@ className="mb-12"
 }
             className="mb-12"
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           >
             <h2 className="text-3xl font-bold text-white mb-4">
               Featured Services
@@ -1235,6 +1286,7 @@ className="mb-12"
               Explore our most innovative and cutting-edge technology solutions
             </p>
           </motion.div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -1251,6 +1303,10 @@ className="mb-12"
               <motion.div
                 key={service.id}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+              <motion.div
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             transition={{ duration: 0 && 0.6 }}
             className='mb-12'>;
             <h2 className='text-3xl font-bold text-white mb-4'>;
@@ -1263,6 +1319,7 @@ className="mb-12"
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>            {featuredServices && featuredServices.map((service, index) => (;
               <motion&& motion.div
                 key={service && service.id}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
                 initial={{ opacity: 0, y: 20 }}
@@ -1280,6 +1337,8 @@ className="mb-12"
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     <span
                       className={`px-2 py-1 rounded-full text-xs font-medium ${
                         service && service.status === 'active'
@@ -1287,6 +1346,7 @@ className="mb-12"
                           : service && service.status === 'beta'
                             ? 'bg-yellow-500/20 text-yellow-300'
                             : 'bg-blue-500/20 text-blue-300'
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1332,12 +1392,15 @@ className="mb-12"
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       }`}
                     >;
                       {service.status}
                     </span>;
                     <span className='text - xs text - white / 40'>;
                       {service.category}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
                     </span>;
@@ -1432,12 +1495,17 @@ className="mb-12"
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               >
                 <div className="absolute inset-0 bg-gradient-to-br from-white/0 via-cyan-400/5 to-white/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl" />
                 <div className="relative z-10">
                   <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${service.color} p-4 mb-4 flex items-center justify-center`}>
                     <service.icon className="w-8 h-8 text-white" />
                   </div>
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -1458,6 +1526,8 @@ className="mb-12"
                     <span className='text-xs text-white/40'>
                       {service.category}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   <div className="flex items-center justify-between mb-3">
                     <span className={`px-2 py-1 rounded-full text-xs font-medium ${
                       service.status === 'active' ? 'bg-green-500/20 text-green-300' :
@@ -1465,14 +1535,19 @@ className="mb-12"
                       'bg-blue-500/20 text-blue-300'
                     }`}>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       {service.status  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -1482,6 +1557,8 @@ className="mb-12"
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     </span>
                     <span className="text-xs text-white/40">{service.category}</span>
                   </div>
@@ -1495,21 +1572,27 @@ className="mb-12"
                     <span className='text-xl font-bold text-cyan-400'>
                       {service.price}
                     </span>
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   <h3 className="text-lg font-bold mb-2 text-white">{service.title}</h3>
                   <p className="text-sm text-white/70 mb-4 leading-relaxed">{service.description}</p>
                   
                   <div className="mb-4">
                     <span className="text-xl font-bold text-cyan-400">{service.price}</span>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   </div>
                   
                   <a
                     href={`/services#${service.id}`}
+<<<<<<< HEAD
 =======
                   </div>
                   <a
@@ -1519,10 +1602,13 @@ className="mb-12"
   }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     className="inline-flex items-center text-cyan-400 group-hover:text-cyan-300 transition-colors duration-300 text-sm font-medium"
                   >
                     Learn More
                     <ChevronRight className="w-4 h-4 ml-1" />
+<<<<<<< HEAD
 <<<<<<< HEAD
                   </a>
                 </div>
@@ -1544,6 +1630,8 @@ className="mb-12"
       </section>;
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {/* Categories Grid */}
       <section className='px-6 pb-20'>;
         <div className='max-w-7xl mx-auto'>          <motion&& motion.div
@@ -1551,12 +1639,15 @@ className="mb-12"
             animate={{ opacity: 1, y: 0 }}
 
 
+<<<<<<< HEAD
 =======
                   </Link>
                 </div>
               </motion.div>
             ))}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {/* Categories Grid */}
       <section className="px-6 pb-20">
         <div className="max-w-7xl mx-auto">
@@ -1564,6 +1655,7 @@ className="mb-12"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
             className="mb-12"
 
@@ -1612,6 +1704,9 @@ className="mb-12"
 }
             className="mb-12"
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+            className="mb-12"
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           >
             <h2 className="text-3xl font-bold text-white mb-4">
               Technology Categories
@@ -1620,6 +1715,7 @@ className="mb-12"
               {sortedCategories.length} categories available for exploration
             </p>
           </motion.div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1631,6 +1727,8 @@ className="mb-12"
 
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <motion.div
 =======
             transition={{ duration: 0 && 0.6 }}
@@ -1649,8 +1747,11 @@ className="mb-12"
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
 
+<<<<<<< HEAD
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   </p>;
                   <div className='mb - 4'>;
                     <span className='text - xl font - bold text - cyan - 400'>;
@@ -1702,27 +1803,19 @@ className="mb-12"
                   className='px - 6 py - 3 bg - cyan - 500 hover:bg - cyan - 600 rounded - lg font - medium transition - colors'                >;
                   Clear Search;
                 </button>;
-              </motion.div>) : (
-              <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8'>                {sorted_categories.map ((category, index) => (
-                  <motion.div;
-                    key={category.id}
-                    initial={{ opacity: 0, coordinate_y: 20 }}
-                    animate={{ opacity: 1, coordinate_y: 0 }}
-                    transition={{ duration: 0.5, delay: index * 0.1 }}
-                    className='group relative p - 8 rounded - 2xl border border - white / 10 bg - gradient - to - br from - white / 5 to - white / 10 backdrop - blur - xl hover:border - cyan - 400 / 30 transition - all duration - 300 transform hover:scale - 105 hover:shadow - 2xl cursor - pointer';
-                    on_click={() =>;
-                      (window.location.href = `/category/${category.id}`);
                     }
                   >;
-                    <div className='absolute inset - 0 bg - gradient - to - br from - white / 0 via - cyan - 400 / 5 to - white / 0 opacity - 0 group - hover:opacity - 100 transition - opacity duration - 300 rounded - 2xl' />;
-                    <div className='relative z - 10'>;
+                    <div className='absolute inset-0 bg-gradient-to-br from-white/0 via-cyan-400/5 to-white/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl' />;
+                    <div className='relative z-10'>;
                       {/* Featured Badge */}
-                      {category.featured && (
-                        <div className='absolute top - 4 right - 4'>;
-                          <span className='px - 3 py - 1 rounded - full text - xs font - medium bg - gradient - to - r from - yellow - 500 to - orange - 500 text - white'>                            ⭐ Featured;
+                      {category && category.featured && (;
+                        <div className='absolute top-4 right-4'>;
+                          <span className='px-3 py-1 rounded-full text-xs font-medium bg-gradient-to-r from-yellow-500 to-orange-500 text-white'>                             Featured;
                           </span>;
-                        </div>)}
+                        </div>;
+                      )}
                       {/* Category Icon */}
+<<<<<<< HEAD
                       <div;
                         className={`w - 20 h - 20 rounded - 2xl bg - gradient - to - br ${category.color} p - 5 mb - 6 flex items - center justify - center group - hover:scale - 110 transition - transform duration - 300`}
                       >;
@@ -1732,6 +1825,8 @@ className="mb-12"
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       {/* Category Info */}
                       <h3 className='text - 2xl font - bold mb - 3 text - white group - hover:text - cyan - 300 transition - colors duration - 300'>;
                         {category.name}
@@ -1739,12 +1834,15 @@ className="mb-12"
                       <p className='text - white / 70 leading - relaxed mb - 6'>;
                         {category.description}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
                       </p>;
 
 =======
                       </p>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       {/* Stats */}
                       <div className='flex items - center justify - between mb - 6'>;
                         <div className='text - center'>;
@@ -1755,6 +1853,7 @@ className="mb-12"
                         </div>;
                         <div className='text - center'>;
                           <div className='text - 2xl font - bold text - purple - 400'>;
+<<<<<<< HEAD
                             {category.featured ? '⭐' : '🚀'}
 <<<<<<< HEAD
 
@@ -1793,6 +1892,8 @@ className="mb-12"
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       {/* CTA */}
                       <div className='flex items-center justify-between'>;
                         <span className='text-cyan-400 group-hover:text-cyan-300 transition-colors duration-300 text-sm font-medium'>;
@@ -1801,6 +1902,7 @@ className="mb-12"
                         <ChevronRight className='w-5 h-5 text-cyan-400 group-hover:text-cyan-300 transition-colors duration-300 group-hover:translate-x-1' />                      </div>;
                     </div>;
                   </motion && motion.div>;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -1808,6 +1910,8 @@ className="mb-12"
           <AnimatePresence mode='wait'>            {sortedCategories.length === 0 ? (
           <AnimatePresence mode="wait">
             {sortedCategories.length === 0 ? (
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <motion.div
                 initial={{ opacity: 0 }  } catch (error) {
     console.error("Error:", error);
@@ -1836,6 +1940,7 @@ className="mb-12"
                 </p>
                 <button
 <<<<<<< HEAD
+<<<<<<< HEAD
                   onClick={() => setSearchTerm('')}
 =======
                   onClick={() => setSearchTerm('')  } catch (error) {
@@ -1845,14 +1950,16 @@ className="mb-12"
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                   className="px-6 py-3 bg-cyan-500 hover:bg-cyan-600 rounded-lg font-medium transition-colors"
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 >
                   Clear Search
                 </button>
               </motion.div>
             ) : (
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {sortedCategories.map((category, index) => (
                   <motion.div
+<<<<<<< HEAD
 <<<<<<< HEAD
 
                   >
@@ -1864,6 +1971,8 @@ className="mb-12"
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: index * 0.1 }}
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     className='group relative p-8 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl cursor-pointer'
                     onClick={() =>
                       (window.location.href = `/category/${category.id}`)
@@ -1894,6 +2003,7 @@ className="mb-12"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
                   >
                     <div className="absolute inset-0 bg-gradient-to-br from-white/0 via-cyan-400/5 to-white/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl" />
                     <div className="relative z-10">
@@ -1903,6 +2013,13 @@ className="mb-12"
   }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+                  >
+                    <div className="absolute inset-0 bg-gradient-to-br from-white/0 via-cyan-400/5 to-white/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl" />
+                    <div className="relative z-10">
+                      {/* Featured Badge */}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       {category.featured && (
                         <div className="absolute top-4 right-4">
                           <span className="px-3 py-1 rounded-full text-xs font-medium bg-gradient-to-r from-yellow-500 to-orange-500 text-white">
@@ -1910,10 +2027,13 @@ className="mb-12"
                           </span>
                         </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1925,6 +2045,7 @@ className="mb-12"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
                       <div className={`w-20 h-20 rounded-2xl bg-gradient-to-br ${category.color} p-5 mb-6 flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
@@ -2001,23 +2122,26 @@ className="mb-12"
   }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       <div className="flex items-center justify-between mb-6">
                         <div className="text-center">
                           <div className="text-2xl font-bold text-cyan-400">{category.serviceCount}</div>
                           <div className="text-xs text-white/60">Services</div>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                         </div>
                         <div className="text-center">
                           <div className="text-2xl font-bold text-purple-400">
                             {category.featured ? '⭐' : '🚀'}
                           </div>
-
-
                           <div className="text-xs text-white/60">
+<<<<<<< HEAD
 =======
 
                           <div className="text-xs text-white/60">
@@ -2046,6 +2170,8 @@ className="mb-12"
                         <span className='text-cyan-400 group-hover:text-cyan-300 transition-colors duration-300 text-sm font-medium'>
                           <div className="text-xs text-white/60">
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                             {category.featured ? 'Featured' : 'Active'  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -2062,11 +2188,14 @@ className="mb-12"
                       <div className="flex items-center justify-between">
                         <span className="text-cyan-400 group-hover:text-cyan-300 transition-colors duration-300 text-sm font-medium">
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                           Explore Category
                         </span>
                         <ChevronRight className="w-5 h-5 text-cyan-400 group-hover:text-cyan-300 transition-colors duration-300 group-hover:translate-x-1" />
@@ -2074,17 +2203,21 @@ className="mb-12"
                     </div>
                   </motion.div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
               </div>;
+<<<<<<< HEAD
             )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -2097,22 +2230,27 @@ className="mb-12"
       </section>;
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {/* Technology Trends */}
       <section className='py-20 px-6 bg-gradient-to-r from-white/5 to-white/10'>;
         <div className='max-w-7xl mx-auto'>          <motion&& motion.div
 
-=======
 
+<<<<<<< HEAD
 =======
                 ))}
 </div>;
             )}
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {/* Technology Trends */}
       <section className="py-20 px-6 bg-gradient-to-r from-white/5 to-white/10">
         <div className="max-w-7xl mx-auto">
           <motion.div
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -2123,10 +2261,14 @@ className="mb-12"
       <section className='py-20 px-6 bg-gradient-to-r from-white/5 to-white/10'>
         <div className='max-w-7xl mx-auto'>          <motion.div
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -2200,6 +2342,10 @@ className="mb-12"
   }
 }
             className="text-center mb-16"
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
               Emerging Technology Trends
@@ -2208,13 +2354,13 @@ className="mb-12"
               Stay ahead of the curve with our insights into the latest technology developments
             </p>
           </motion.div>
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            {[
               {
                 icon: Brain
                 title: 'AI Consciousness'
                 description:
                   'The evolution of AI towards true consciousness and emotional intelligence'
                 trend: 'Rising'
+<<<<<<< HEAD
             className="text-center mb-16"
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           >
@@ -2230,37 +2376,44 @@ className="mb-12"
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
 
+=======
+                color: 'from-purple-500 to-pink-500'
+              }
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               {
-            ].map((trend, index) => (
                 icon: Atom
                 title: 'Quantum Supremacy'
                 description:
                   'Breakthroughs in quantum computing and quantum AI applications'
                 trend: 'Breakthrough'
                 color: 'from-blue-500 to-cyan-500'
-              },
+              }
               {
-                icon: Shield,
-                title: 'Quantum Security',
-                description: 'Quantum-resistant cryptography and AI-powered threat detection',
-                trend: 'Critical',
+                icon: Shield
+                title: 'Quantum Security'
+                description:
+                  'Quantum-resistant cryptography and AI-powered threat detection'
+                trend: 'Critical'
                 color: 'from-red-500 to-orange-500'
-              },
+              }
               {
-                icon: Rocket,
-                title: 'Space Innovation',
-                description: 'AI-powered space exploration and resource optimization',
-                trend: 'Emerging',
+                icon: Rocket
+                title: 'Space Innovation'
+                description:
+                  'AI-powered space exploration and resource optimization'
+                trend: 'Emerging'
                 color: 'from-indigo-500 to-purple-500'
-              },
+              }
               {
-                icon: ZapIcon,
-                title: 'Neural Interfaces',
-                description: 'Brain-computer interfaces and neural augmentation',
-                trend: 'Experimental',
+                icon: ZapIcon
+                title: 'Neural Interfaces'
+                description:
+                  'Brain-computer interfaces and neural augmentation'
+                trend: 'Experimental'
                 color: 'from-pink-500 to-rose-500'
-              },
+              }
               {
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
             ].map((trend, index) => (
@@ -2271,6 +2424,8 @@ className="mb-12"
 =======
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 icon: TrendingUp
                 title: 'Autonomous Systems'
                 description:
@@ -2281,7 +2436,10 @@ className="mb-12"
 
               <motion.div
                 key={trend.title}
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             className='text-center mb-16'>;
             <h2 className='text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent'>;
               Emerging Technology Trends;
@@ -2344,15 +2502,19 @@ className="mb-12"
               <motion&& motion.div
                 key={trend && trend.title}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -2446,6 +2608,8 @@ className="mb-12"
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className='group p-6 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300'
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
@@ -2541,31 +2705,44 @@ className="mb-12"
                   </h3>
                   <span
                     className={`px-3 py-1 rounded-full text-xs font-medium ${
-                      trend.trend === 'Rising'
-                        ? 'bg-green-500/20 text-green-300'
-                        : trend.trend === 'Breakthrough'
-                          ? 'bg-blue-500/20 text-blue-300'
-                          : trend.trend === 'Critical'
-                            ? 'bg-red-500/20 text-red-300'
-                            : trend.trend === 'Emerging'
-                              ? 'bg-yellow-500/20 text-yellow-300'
-                              : trend.trend === 'Experimental'
-                                ? 'bg-purple-500/20 text-purple-300'
-                                : 'bg-cyan-500/20 text-cyan-300'
-                    }`}
-                  >
                     {trend.trend}
                   </span>
                 </div>
                 <p className='text-white/70 leading-relaxed'>
                   {trend.description}
                 </p>              </motion.div>
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             ))}
           </div>
         </div>
       </section>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+                <div className="flex items-center justify-between mb-3">
+                  <h3 className="text-xl font-bold text-white">{trend.title}</h3>
+                  <span className={`px-3 py-1 rounded-full text-xs font-medium ${
+                    trend.trend === 'Rising' ? 'bg-green-500/20 text-green-300' :
+                    trend.trend === 'Breakthrough' ? 'bg-blue-500/20 text-blue-300' :
+                    trend.trend === 'Critical' ? 'bg-red-500/20 text-red-300' :
+                    trend.trend === 'Emerging' ? 'bg-yellow-500/20 text-yellow-300' :
+                    trend.trend === 'Experimental' ? 'bg-purple-500/20 text-purple-300' :
+                    'bg-cyan-500/20 text-cyan-300'
+                  }`}>
+                    {trend.trend}
+                  </span>
+                </div>
+                
+                <p className="text-white/70 leading-relaxed">{trend.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
                     }`}>;
                     {trend && trend.trend}
@@ -2607,6 +2784,7 @@ className="mb-12"
 
 
 
+<<<<<<< HEAD
 =======
       {/* CTA Section */}
       <section className="py-20 px-6">
@@ -2675,6 +2853,8 @@ className="mb-12"
   }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           >
             <h2 className="text-4xl md: text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
               Ready to Explore?
@@ -2690,14 +2870,18 @@ className="mb-12"
                 View All Services
                 <ArrowRight className="w-5 h-5 ml-2" />
 <<<<<<< HEAD
+<<<<<<< HEAD
               </a>
 =======
               </Link>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <a
                 href="mailto:kleber@ziontechgroup.com"
                 className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10"
               >
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                 Get Expert Guidance
@@ -2706,13 +2890,19 @@ className="mb-12"
                 Get Expert Guidance
               </Link>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+                Get Expert Guidance
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             </div>
           </motion.div>
         </div>
       </section>
 <<<<<<< HEAD
+<<<<<<< HEAD
       <SmartFooter />
     </div>
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
                 href='mailto:kleber@ziontechgroup && ziontechgroup.com'
                 className='px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10'>;
@@ -2727,18 +2917,24 @@ className="mb-12"
     </div>;
   );
 
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   )
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
@@ -2778,6 +2974,7 @@ className="mb-12"
                 href='mailto:kleber@ziontechgroup.com';
                 className='px - 8 py - 4 border border - white / 20 hover:border - white / 40 rounded - full font - semibold text - lg transition - all duration - 300 backdrop - blur - sm bg - white / 5 hover:bg - white / 10'              >;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
       <SmartFooter />
     </div>
@@ -2805,6 +3002,8 @@ className="mb-12"
                 className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10";
               >;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 Get Expert Guidance;
               </a>;
             </div>;
@@ -2813,9 +3012,12 @@ className="mb-12"
       </section>;
       <SmartFooter />;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     </div>;
   );
   } catch (error) {
@@ -2823,6 +3025,7 @@ className="mb-12"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -2830,3 +3033,5 @@ className="mb-12"
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

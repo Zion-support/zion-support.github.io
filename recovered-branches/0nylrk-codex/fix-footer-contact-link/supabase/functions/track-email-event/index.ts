@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server && server.ts",
 import {createClient} from "https: //esm && esm.sh/@supabase/supabase-js@2 ;
 =======
@@ -9,19 +10,25 @@ import {createClient} from "https: //esm && esm.sh/@supabase/supabase-js@2 ;
 
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {serve} from "https: //deno.land/std@0.190.0/http/server.ts"
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.45.0";
 // Initialize Supabase client
 const supabaseUrl = Deno.env.get("SUPABASE_URL")!;
 const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!
 const supabase = createClient(supabaseUrl, supabaseServiceKey);
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0",
 import {serve} from "https: //deno.land/std@0.190.0/http/server.ts",;
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.45.0";
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0",
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -52,13 +59,22 @@ serve(async (req) => {
   const url = new URL(req.url),
   const type = url.searchParams.get("type"), // "open" or "click"
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 // Initialize Supabase client
 const supabaseUrl = Deno.env.get("SUPABASE_URL")!,
 const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!,
 const supabase = createClient(supabaseUrl, supabaseServiceKey),
 
+
+
+// Initialize Supabase client
+const supabaseUrl = Deno && Deno.env.get("SUPABASE_URL")!;
+const supabaseServiceKey = Deno && Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!,
+const supabase = createClient(supabaseUrl, supabaseServiceKey);
 serve(async (req) => {
   // Parse the URL to get the tracking parameters
+<<<<<<< HEAD
   const url = new URL(req.url),
   const type = url.searchParams.get("type"), // "open" or "click"
   const campaignId = url.searchParams.get("cid");
@@ -74,6 +90,8 @@ serve(async (req) => {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   // Validate required parameters
   if (!type |!campaignId |!userId) {
     return new Response("Missing required parameters", { status: 400 })
@@ -85,16 +103,9 @@ serve(async (req) => {
         .from("email_campaigns")
         .update({ opened_at: new Date().toISOString() })
         .eq("id", campaignId)
-
-
-        .eq("user_id", userId),
-
-
-
       // Return a 1x1 transparent GIF
       return new Response(
         new Uint8Array([
-=======
 import { serve } from 'https: //deno.land / std@0.190.0 / http / server.ts';,
 import { create_client } from 'https: //esm.sh/@supabase / supabase - js@2.45.0';
 // Initialize Supabase client;
@@ -132,13 +143,13 @@ if ( {) {
       // Return a 1x1 transparent GIF;
       return new Response (
         new Uint8Array ([;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           0x47, 0x49, 0x46, 0x38, 0x39, 0x61, 0x01, 0x00, 0x01, 0x00, 0x80, 0x00;
           0x00, 0xFF, 0xFF, 0xFF, 0x00, 0x00, 0x00, 0x21, 0xF9, 0x04, 0x01, 0x00;
           0x00, 0x00, 0x00, 0x2C, 0x00, 0x00, 0x00, 0x00, 0x01, 0x00, 0x01, 0x00;
           0x00, 0x02, 0x02, 0x44, 0x01, 0x00, 0x3B]);
         {
           headers: {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -170,6 +181,8 @@ if ( {) {
             "Cache-Control": "no-store, no-cache, must-revalidate, proxy-revalidate",
             "Pragma": "no-cache",
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             "Expires": "0"}}
       )
     } else if (type === "click") {
@@ -177,6 +190,7 @@ if ( {) {
         .from("email_campaigns")
         .update({ clicked_at: new Date().toISOString() })
         .eq("id", campaignId)
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -256,10 +270,16 @@ if ( {) {
     console.error("Error tracking email event:", error),
     
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+        headers: {
+          Location: destination}})
+    }
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     // If it was a click event, still try to redirect the user
     if (type === "click" && redirectUrl) {
       return new Response(null, {
         status: 302
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -284,11 +304,14 @@ if ( {) {
           Location: redirect_url}});
     }
 <<<<<<< HEAD
+=======
+        headers: {
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
     return new Response ("Error processing event", { status: 500 });
-=======
 
 
+<<<<<<< HEAD
 =======
 =======
 
@@ -297,6 +320,8 @@ if ( {) {
 });
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",;
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0",;
 // Initialize Supabase client;
@@ -363,6 +388,7 @@ serve(async (req) => {;
     }
 ;
     return new Response("Error processing event", { status: 500 });
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -481,3 +507,7 @@ headers: {
   }
 });
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  }
+});
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

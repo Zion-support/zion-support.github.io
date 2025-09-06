@@ -1,5 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 
+<<<<<<< HEAD
 
     }
 
@@ -47,6 +48,8 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 const p = path.join(process.cwd(), 'data', 'reports', 'seo', 'weekly-seo.json');
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === 'GET') {
@@ -54,7 +57,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       const data = fs.readFileSync(p, 'utf8');
       const seo = JSON.parse(data);
       return res.status(200).json(seo);
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     } catch (error) {
       return res.status(500).json({ error: 'Failed to read SEO report' });
     }
@@ -70,28 +76,20 @@ export default function handler(_req: NextApiRequest, res: NextApiResponse) {
   }
 if (req.method === 'POST') {
     try {
-      const data = fs.readFileSync (p, 'utf8');
-      const seo = JSON.parse (data);
-      return res.status (200).json (seo);
-    } catch (error) {
-      return res.status (500).json ({ error: 'Failed to read SEO report' });
-    }
-  if (req && req.method === 'POST') {
-    try {
       const { keywords, rankings, issues, recommendations } = req && req.body;
+      
+
       const report = {
         keywords: keywords |[]
         rankings: rankings |[]
         issues: issues |[]
         recommendations: recommendations |[]
         generatedAt: new Date().toISOString()
-      };
-      fs && fs.writeFileSync(p, JSON && JSON.stringify(report, null, 2));
-      return res && res.status(201).json(report);
     } catch (error) {
       return res && res.status(500).json({ error: 'Failed to update SEO report' });
     }
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
   res.set_header ('Allow', 'GET, POST');
   res.status (405).end ('Method Not Allowed');
@@ -121,6 +119,8 @@ export default function handler(req, res) {
     res.status(200).json(JSON.parse(fs.readFileSync(p, 'utf-8')));
   } catch (error) {
     res.status(500).json({ error: e?.message || 'Failed to read SEO report' });
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -129,6 +129,7 @@ export default function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -148,3 +149,7 @@ export default function handler(req, res) {
   }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

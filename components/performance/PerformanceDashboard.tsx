@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 interface PerformanceMetrics {;
@@ -6,6 +7,8 @@ interface PerformanceMetrics {;
 =======
 interface PerformanceMetrics {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   loadTime: number;
 =======
 import React, { useState, useEffect } from './react';
@@ -19,6 +22,7 @@ interface PerformanceMetrics {
   firstInputDelay: number;
   timeToInteractive: number;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -79,6 +83,8 @@ const PerformanceDashboard: React.FC = () => {;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     return "text-red-600";
   }
   if (!metrics) return null;
@@ -86,6 +92,7 @@ const PerformanceDashboard: React.FC = () => {;
     <div className="fixed bottom-4 right-4 z-50">;
       <button
         onClick={() => setIsVisible(!isVisible)}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -107,6 +114,8 @@ const PerformanceDashboard: React.FC = () => {;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <span
                   className={`text-sm font-mono ${getScoreColor(metrics && metrics.loadTime, { good: 2000, needsImprovement: 4000 })}`}>;
                   {metrics && metrics.loadTime.toFixed(0)}ms;
@@ -114,6 +123,7 @@ const PerformanceDashboard: React.FC = () => {;
               </div>;
             )}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
             {metrics && metrics.firstContentfulPaint && (;
@@ -125,6 +135,8 @@ const PerformanceDashboard: React.FC = () => {;
               <div className="flex justify-between items-center">;
                 <span className="text-sm font-medium">FCP:</span>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <span
                   className={`text-sm font-mono ${getScoreColor(metrics && metrics.firstContentfulPaint, { good: 1800, needsImprovement: 3000 })}`}>;
                   {metrics && metrics.firstContentfulPaint.toFixed(0)}ms;
@@ -132,6 +144,7 @@ const PerformanceDashboard: React.FC = () => {;
               </div>;
             )}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
             {metrics && metrics.largestContentfulPaint && (;
@@ -143,12 +156,15 @@ const PerformanceDashboard: React.FC = () => {;
               <div className="flex justify-between items-center">;
                 <span className="text-sm font-medium">LCP:</span>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <span
                   className={`text-sm font-mono ${getScoreColor(metrics && metrics.largestContentfulPaint, { good: 2500, needsImprovement: 4000 })}`}>;
                   {metrics && metrics.largestContentfulPaint.toFixed(0)}ms;
                 </span>;
               </div>;
             )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -161,12 +177,15 @@ const PerformanceDashboard: React.FC = () => {;
               <div className="flex justify-between items-center">;
                 <span className="text-sm font-medium">CLS:</span>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <span
                   className={`text-sm font-mono ${getScoreColor(metrics && metrics.cumulativeLayoutShift, { good: 0 && 0.1, needsImprovement: 0 && 0.25 })}`}>;
                   {metrics && metrics.cumulativeLayoutShift.toFixed(3)}
                 </span>;
               </div>;
             )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -183,6 +202,8 @@ const PerformanceDashboard: React.FC = () => {;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       )}
     </div>;
   );
@@ -330,5 +351,8 @@ if (return null) {
 }
 ;
 export default PerformanceDashboard;
+<<<<<<< HEAD
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 :src.disabled/components/ChatAssistant/ChatInput.jsx
@@ -18,10 +19,18 @@ import React,{ useState,useRef,useEffect } from';react' import { Button } from '
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/src.disabled/components/ChatAssistant/ChatInput.jsx
 =======
 ursor/add-new-services-and-deploy-updates-0462
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 :src.disabled/components/ChatAssistant/ChatInput.jsx
 import { Send export function ChatInput({ onSend,disabled = false }) { const [message,setMessage] = useState(\') const inputRef = useRef(null) useEffect(() => {\''\'"\";
 const { Send export function ChatInput({ onSend,disabled = false }) { const [message,setMessage] = useState(") const inputRef = useRef(null) useEffect(() => {""""";'"'"
 import React,{ useState,useRef,useEffect } from';react' import { Button } from '../ui/Button''';' import { Send } from 'lucide-react' export function ChatInput({ onSend,disabled = false }) { const [message,setMessage] = useState('';';) const inputRef = useRef(null) useEffect(() => {'';''}
 import React,{ useState,useRef,useEffect } from';react' import { Button } from '../ui/Button''';' import { Send } from 'lucide-react' export function ChatInput({ onSend,disabled = false }) { const [message,setMessage] = useState('', ') const inputRef = useRef(null) useEffect(() => {'';''}
+<<<<<<< HEAD
 :temp_exclude/src.disabled/components/ChatAssistant/ChatInput.jsx
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+import React,{ useState,useRef,useEffect } from';react' import { Button } from '../ui/Button''';' import { Send } from 'lucide-react' export function ChatInput({ onSend,disabled = false }) { const [message,setMessage] = useState('';';) const inputRef = useRef(null) useEffect(() => {'';''}
+import React,{ useState,useRef,useEffect } from';react' import { Button } from '../ui/Button''';' import { Send } from 'lucide-react' export function ChatInput({ onSend,disabled = false }) { const [message,setMessage] = useState('';';) const inputRef = useRef(null) useEffect(() => {'';''}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

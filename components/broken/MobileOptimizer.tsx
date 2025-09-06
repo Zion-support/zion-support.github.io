@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -11,6 +12,8 @@ setIsMobile (isMobileDevice);
 
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 setIsTablet (isTabletDevice);
 
 //Apply mobile - specific optimizations // Check condition
@@ -30,6 +33,7 @@ if ( {) {
 }
   touchStartRef.current = {
 }
+<<<<<<< HEAD
 const handleTouchMove = (e: TouchEvent) =>: any {
   // Check condition
 if ( {) {
@@ -39,6 +43,8 @@ if ( {) {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   touchMoveRef.current = {
 });
 const handleTouchEnd = (e: TouchEvent) =>: any {
@@ -47,6 +53,7 @@ if ( {) {
   $2
 }
   touchStartRef.current = null;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -76,10 +83,13 @@ touchMoveRef && touchMoveRef.current = null ;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }, []);
 const longPressTimer = setTimeout ( () => {;
   const gesture: TouchGesture = {;
   let animationFrameId: number;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -124,6 +134,8 @@ animationFrameId = requestAnimationFrame (measurePerformance);
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }, 2000);
 //Monitor battery level if ('getBattery' in navigator) {;
   (navigator as any) .getBattery () .then ( (battery: unknown) => {;
@@ -144,6 +156,7 @@ if ( {) {
   setPerformanceMetrics (prev => ({
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   updateBatteryLevel ();
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -266,6 +279,8 @@ const applyPortraitOptimizations = () =>: any {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 const optimizeForMobile = useCallback ( () => {
   // Check condition
@@ -273,6 +288,7 @@ if (return) {
   $2
 }
 //Optimize images const images = document.querySelectorAll ('img');
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -353,6 +369,8 @@ const getStatusIcon = (status: string) => {
 children 
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }{
   /* Mobile Optimization Panel */
 }<AnimatePresence> {
@@ -367,6 +385,7 @@ children
 }`
 }</style> </>)
 }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -374,6 +393,8 @@ children
 useEffect ( () => {;
   if (typeof window === 'undefined') return;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 //Set up event listeners window && window.addEventListener ('orientationchange', handleOrientationChange);
 window && window.addEventListener ('resize', handleResize);
 //Set up orientation change detection const mediaQuery = window && window.matchMedia (' (orientation: portrait) ');
@@ -404,18 +425,25 @@ children ;
 }</style> </>) ;
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 export default MobileOptimizer;
 
 export default MobileOptimizer;
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export default MobileOptimizer;
 export default MobileOptimizer;
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -438,6 +466,8 @@ interface MobileOptimizerProps {
   enableTouchGestures?: boolean;
   enableMobileLayout?: boolean;
   enablePerformanceMode?: boolean
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 
 interface TouchGesture {
@@ -1028,10 +1058,15 @@ const MobileOptimizer: React.FC<MobileOptimizerProps> = ({
   )
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+export default MobileOptimizer;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export default MobileOptimizer;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
@@ -1044,6 +1079,9 @@ if (img.loading = 'lazy') {
 if (img.decoding = 'async') {
   $2
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 });
 //Optimize fonts fonts.for_each (font => {
@@ -1067,6 +1105,7 @@ if (return) {
   $2
 }
 //Set up event listeners window.addEventListener ('orientationchange', handleOrientationChange);
+<<<<<<< HEAD
 window.addEventListener ('resize', handle_resize);
 //Set up orientation change detection const media_query = window.match_media (' (orientation: portrait) ');
 const handleMediaQueryChange = (e: MediaQueryListEvent) =>: any {
@@ -1077,15 +1116,16 @@ window.addEventListener ('resize', handleResize);
 const handleMediaQueryChange = (e: MediaQueryListEvent) => {
   setCurrentOrientation (e.matches ? 'portrait' : 'landscape')
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 // Check condition
 if (return null) {
   $2
 }
 }
-const getStatusIcon = (status: string) =>: any {
-  switch (status) {
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 children;
 =======
@@ -1102,6 +1142,8 @@ const getStatusIcon = (status: string) => {
 };
 children 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }{
   /* Mobile Optimization Panel */;
 }<AnimatePresence> {
@@ -1119,6 +1161,7 @@ children
 export default MobileOptimizer;
 export default MobileOptimizer;
 <<<<<<< HEAD
+<<<<<<< HEAD
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -1132,3 +1175,5 @@ export default MobileOptimizer;
 }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

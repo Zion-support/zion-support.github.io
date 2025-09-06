@@ -1,6 +1,7 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 v1 && v1.sections.forEach((section) => {
@@ -45,6 +46,8 @@ export default function handler(_req: NextApiRequest, res: NextApiResponse) {
   res.status(200).send(toSDL())
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import type { NextApiRequest, NextApiResponse } from './next';
 import v1 from "../../../data / api - docs / v1";
 /**
@@ -66,6 +69,7 @@ function toSDL() {
   return typedefs.join ("\n");
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default /**
  * handler - Function description
  */
@@ -76,17 +80,14 @@ function handler() {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 =======
-
-<<<<<<< HEAD
-export default function handler(_req: NextApiRequest, res: NextApiResponse) {;
-res.setHeader("Content-Type", "text/plain");
 =======
-export default function handler(_req: NextApiRequest, res: NextApiResponse) {
-  res.setHeader("Content-Type", "text/plain");
->>>>>>> main
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
   res.status(200).send(toSDL());
 }
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

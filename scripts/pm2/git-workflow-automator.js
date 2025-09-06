@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -823,6 +824,8 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 origin/main
 origin/automation-improvements-final
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 #!/usr/bin/env node;
 /**;
  * Git Workflow Automator Script;
@@ -1001,6 +1004,7 @@ async function main() {const automator = new GitWorkflowAutomator();
     process.exit(0);
   } catch (error) {automator.log(`Git workflow automation:failed:${error.message}`, 'ERROR');
     process.exit(1);
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -1029,6 +1033,8 @@ module.exports = GitWorkflowAutomator;#!/usr/bin/env node;
 #!/usr/bin/env node;
 /**; * Git Workflow Automator Script; * Automates git operations and workflow management; */;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 #!/usr/bin/env node;
 /**;
  * Git Workflow Automator Script;
@@ -1042,12 +1048,15 @@ const fs = require('fs');
 const path = require('path');
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 ;
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 class GitWorkflowAutomator {; constructor() {; this && this.logFile = './logs/pm2/git-workflow && workflow.log'; this && this.errorFile = './logs/pm2/git-workflow-error && error.log'; this && this.workflowReport = './logs/git-workflow-report && report.json'; this && this.ensureLogDirectory()};
 ; ensureLogDirectory() {; const logDir = path && path.dirname(this && this.logFile); if (!fs && fs.existsSync(logDir)) {; fs && fs.mkdirSync(logDir, { recursive: true })}};
@@ -1101,6 +1110,7 @@ class GitWorkflowAutomator {; constructor() {; this && this.logFile = './logs/pm
 ; if (branchCleanup && branchCleanup.branchesToDelete > 10) {; recommendations && recommendations.push('Many old branches detected - consider regular cleanup')};
 ; if (recommendations && recommendations.length = = = 0) {; recommendations && recommendations.push('Git workflow is in good state')};
 ; return recommendations}};
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -1555,6 +1565,8 @@ if (require.main = = = module) {; main()};
 ;
 module.exports = GitWorkflowAutomator;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 class GitWorkflowAutomator {;
   constructor() {;
     this.logFile = './logs/pm2/git-workflow.log';
@@ -1785,12 +1797,16 @@ async function main() {;
     automator.log(`Git workflow automation failed: ${error.message}`, 'ERROR');
     process.exit(1);
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
 =======
 #!/usr/bin/env node,
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+// Run git workflow automation;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 };
 };
 ;
@@ -2058,17 +2074,24 @@ async function main() {,
 ,
 if (require.main === module) {,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 
 
 
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   main(),
 };
 ,
 module.exports = GitWorkflowAutomator,
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -2099,6 +2122,8 @@ origin/cursor/integrate-build-improve-and-re-verify-242d
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   }
 }
 if (require.main === module) {main();
@@ -2132,6 +2157,7 @@ class GitWorkflowAutomator {constructor() {; this.logFile = './logs/pm2/git-work
 async function main() {const automator = new GitWorkflowAutomator(); try {; await automator.automateGitWorkflow(); process.exit(0)} catch (error) {automator.log(`Git workflow automation failed: ${error.message}`, 'ERROR'); process.exit(1)}}
 if (require.main = = = module) {main()}
 module.exports = GitWorkflowAutomator;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -2177,6 +2203,8 @@ module.exports = GitWorkflowAutomator;
 module.exports = GitWorkflowAutomator;
 origin/main
 origin/automation-improvements-final
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 async function main() {const automator = new GitWorkflowAutomator(); try {; await automator.automateGitWorkflow(); process.exit(0)} catch (error) {automator.log(`Git workflow automation failed: ${error.message}`, 'ERROR'); process.exit(1)}}
 if (require.main = = = module) {main()}
 module.exports = GitWorkflowAutomator;
@@ -2189,7 +2217,10 @@ if (require.main === module) {,;
 },;
 ,;
 module.exports = GitWorkflowAutomator,;
+<<<<<<< HEAD
 
 
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

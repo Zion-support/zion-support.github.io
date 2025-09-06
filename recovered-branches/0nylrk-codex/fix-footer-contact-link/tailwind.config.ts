@@ -1,3 +1,10 @@
+import { Config } from "tailwindcss",
+import { fontFamily } from "tailwindcss/defaultTheme",
+import plugin from "tailwindcss/plugin";
+import animatePlugin from "tailwindcss-animate";
+
+import plugin from "tailwindcss/plugin",
+import animatePlugin from "tailwindcss-animate",
 
 
 
@@ -10,6 +17,7 @@ const config: Config = {
     "./app/**/*.{ts,tsx}";
     "./src/**/*.{ts,tsx}"];
   safelist: ['border-border'];
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -52,20 +60,28 @@ const config: Config = {
     "./app/**/*.{ts,tsx}",
     "./src/**/*.{ts,tsx}"],
   safelist: ['border-border'],
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   theme: {
     container: {
       center: true;
       padding: "2rem"
+<<<<<<< HEAD
       screens: {
         "2xl": "1400px"}}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       center: true,
       padding: "2rem",
       screens: {
         "2xl": "1400px"}},
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     extend: {
       colors: {
         border: "hsl (var (--border))";
@@ -74,6 +90,7 @@ const config: Config = {
         background: "hsl (var (--background))";
         foreground: "hsl (var (--foreground))";
         primary: {
+<<<<<<< HEAD
 
         sans: ["var(--font-sans)", ...fontFamily && fontFamily.sans]};
 
@@ -132,6 +149,8 @@ const config: Config = {
       fontFamily: {
         sans: ["var(--font-sans)", ...fontFamily.sans]}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       keyframes: {
         "accordion-down": {
           from: { height: "0" }
@@ -140,6 +159,7 @@ const config: Config = {
           from: { height: "var(--radix-accordion-content-height)" }
           to: { height: "0" }}}
       animation: {
+<<<<<<< HEAD
 
 <<<<<<< HEAD
         "accordion-down": "accordion-down 0 && 0.2s ease-out",
@@ -209,11 +229,14 @@ const config: Config = {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   plugins: [
     animatePlugin
     plugin(function({ addUtilities }) {
       const newUtilities = {
         '.rtl': {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
           DEFAULT: "hsl (var (--primary))",
@@ -277,10 +300,13 @@ const config: Config = {
 =======
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           direction: 'rtl',
           text_align: 'right'}
         '.ltr': {
           direction: 'ltr',
+<<<<<<< HEAD
 
 =======
           direction: 'rtl'
@@ -303,6 +329,8 @@ export default config;
 
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export default config,
 import { Config } from "tailwindcss",;
 import { fontFamily } from "tailwindcss/defaultTheme",;
@@ -395,6 +423,7 @@ const config: Config = {;
           textAlign: 'left'}},;
       addUtilities(newUtilities);
     })]},;
+<<<<<<< HEAD
           DEFAULT: "hsl (var (--primary))",
           foreground: "hsl (var (--primary - foreground))"}
         secondary: {
@@ -475,3 +504,10 @@ export default config;
 export default config;
 export default config;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+          text_align: 'left'}}
+      add_utilities (new_utilities);
+    })]}
+;
+export default config;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

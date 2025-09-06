@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 /** @type {import ('next').NextConfig} */;
 const next_config = {
@@ -22,10 +23,13 @@ module.exports = next_config;
     domains: ["localhost", "ziontechgroup.com"],
   },
   output: 'standalone',
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   trailingSlash: false,
   distDir: '.next',
 };
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
   pageExtensions: ["tsx", "ts", "jsx", "js"],
@@ -142,3 +146,8 @@ module.exports = nextConfig;
 module.exports = nextConfig;
 module.exports = nextConfig;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+module.exports = nextConfig;
+module.exports = nextConfig;
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

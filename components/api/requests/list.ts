@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -7,10 +8,15 @@ export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   try {
     const raw = null;
+
+
     res.status(200).json({ items })
   } catch {
+<<<<<<< HEAD
     res.status(200).json({ items: [] });
   }
   try {
@@ -35,11 +41,14 @@ const raw = fs.readFileSync(REQUESTS_PATH, 'utf-8');
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     res.status(200).json({ items })
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     const raw = fs && fs.readFileSync(REQUESTS_PATH, "utf-8");
     const items = JSON && JSON.parse(raw);
     res && res.status(200).json({ items });
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   } catch {
+<<<<<<< HEAD
     res && res.status(200).json({ items: [] });
   }
 <<<<<<< HEAD
@@ -58,18 +67,17 @@ function handler() {
     const raw = fs.readFileSync(REQUESTS_PATH, "utf-8");
     const items = JSON.parse(raw);
     res.status(200).json({ items });
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   } catch {
     res.status (200).json ({ items: [] });
   }
   try {
+    const raw = fs.readFileSync(REQUESTS_PATH, "utf-8");
+    const items = JSON.parse(raw);
+    res.status(200).json({ items });
     const raw = fs.readFileSync (REQUESTS_PATH, "utf - 8");
     const items = JSON.parse (raw);
     res.status (200).json ({ items });
   } catch {
     res.status (200).json ({ items: [] });
-
-  }
-}
-=======
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

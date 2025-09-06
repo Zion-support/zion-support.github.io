@@ -5,6 +5,7 @@ import Link from 'next / link';
 ;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -51,6 +52,13 @@ const UltimateRedundancyBlueprint: React.FC = () => {
       description: 'Advanced redundancy patterns with quantum-inspired algorithms'
       status: 'active'
       priority: 'critical'
+=======
+
+
+const UltimateRedundancyBlueprint: React.FC = () => {
+  const system_features = [;
+    {
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       health: 'excellent'
     }
     {
@@ -75,6 +83,7 @@ const UltimateRedundancyBlueprint: React.FC = () => {
       health: 'excellent'
     }
     {
+<<<<<<< HEAD
       name: 'Self-Healing Systems'
       description: 'Automated recovery and repair mechanisms'
       status: 'active'
@@ -188,6 +197,8 @@ const UltimateRedundancyBlueprint: React.FC = () => {
       status: 'active',
       priority: 'critical',
       health: 'excellent'
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     }
   ];
 
@@ -197,24 +208,38 @@ const UltimateRedundancyBlueprint: React.FC = () => {
   }
 }
   ];
+<<<<<<< HEAD
+=======
+
+      health: 'excellent'
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const advancedCapabilities = [
+
     {
       capability: 'Neural Network Monitoring',
-      description: 'Deep learning-based anomaly detection',
+      description: 'Deep learning - based anomaly detection',
       benefit: 'Early threat detection and prevention',
-      status: 'implemented'
+      status: 'implemented';
     },
     {
       capability: 'Quantum Encryption',
+<<<<<<< HEAD
       description: 'Post-quantum cryptography for data security',
       benefit: 'Future-proof security standards',
       status: 'implemented'
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+      description: 'Post - quantum cryptography for data security',
+      benefit: 'Future - proof security standards',
+      status: 'implemented';
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     },
     {
       capability: 'Adaptive Scaling',
       description: 'Dynamic resource allocation based on AI predictions',
       benefit: 'Optimal performance and cost efficiency',
+<<<<<<< HEAD
 <<<<<<< HEAD
       status: 'implemented';
     },
@@ -225,24 +250,43 @@ const UltimateRedundancyBlueprint: React.FC = () => {
       status: 'implemented';
 =======
       status: 'implemented'
+=======
+      status: 'implemented';
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     },
     {
-      capability: 'Cross-Region Synchronization',
-      description: 'Real-time data synchronization across continents',
+      capability: 'Cross - Region Synchronization',
+      description: 'Real - time data synchronization across continents',
       benefit: 'Global consistency and availability',
+<<<<<<< HEAD
       status: 'implemented'
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+      status: 'implemented';
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     },
     {
       capability: 'Automated Disaster Recovery',
       description: 'Intelligent disaster recovery orchestration',
       benefit: 'Minimal downtime during major incidents',
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
       status: 'implemented';
     }
   ];
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+    }
+  ];
+
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  ];
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
       status: 'implemented'
 
@@ -254,6 +298,7 @@ const UltimateRedundancyBlueprint: React.FC = () => {
     { metric: 'Throughput', value: '5.2k req / s', target: '2k req / s', status: 'exceeded' },
     { metric: 'Failover Time', value: '0.8s', target: '2s', status: 'exceeded' },
     { metric: 'Recovery Time', value: '5.2s', target: '15s', status: 'exceeded' },
+<<<<<<< HEAD
 
 
 
@@ -899,12 +944,21 @@ const UltimateRedundancyBlueprint: React.FC = () => {
     { metric: 'Prediction Accuracy', value: '98.7%', target: '95%', status: 'exceeded' }
   ];
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     { metric: 'Prediction Accuracy', value: '98.7%', target: '95%', status: 'exceeded'   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
   ];
+
+
+
+  ];
+
+
+
   const getStatusColor = (status: string) => {
     switch (status) {
       case 'active': return 'text-green-400';
@@ -912,9 +966,9 @@ const UltimateRedundancyBlueprint: React.FC = () => {
       case 'exceeded': return 'text-green-400';
       case 'excellent': return 'text-green-400';
       default: return 'text-gray-400';
-    }
-  }
+
   };
+
 
       } catch (error) {
     console.error("Error:", error);
@@ -923,15 +977,18 @@ const UltimateRedundancyBlueprint: React.FC = () => {
 }
   };
   const getPriorityColor = (priority: string) => {
+;
+  const getPriorityColor = (priority: string) =>: any {
     switch (priority) {
+
       case 'critical': return 'bg-red-500/20 text-red-400';
       case 'high': return 'bg-orange-500/20 text-orange-400';
       case 'medium': return 'bg-yellow-500/20 text-yellow-400';
       case 'low': return 'bg-green-500/20 text-green-400';
       default: return 'bg-gray-500/20 text-gray-400';
-    }
-  }
+
   };
+
 
       } catch (error) {
     console.error("Error:", error);
@@ -947,12 +1004,6 @@ const UltimateRedundancyBlueprint: React.FC = () => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <div className="container mx-auto px-4 py-8">
-        {/* Header */}
-        {/* Header */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
         <div className="mb-8">
           <Link href="/reports/blueprints" className="text-cyan-400 hover:text-cyan-300 transition-colors">
             ← Back to Blueprints
@@ -964,12 +1015,6 @@ const UltimateRedundancyBlueprint: React.FC = () => {
             Advanced redundancy architecture with AI-powered failover and quantum-level reliability
           </p>
         </div>
-        {/* Blueprint Overview */}
-        {/* Blueprint Overview */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-6 mb-8">
           <div className="bg-white/10 rounded-xl p-6 border border-white/20">
             <h3 className="text-xl font-semibold mb-4 text-red-400">Status</h3>
@@ -992,12 +1037,6 @@ const UltimateRedundancyBlueprint: React.FC = () => {
             <p className="text-gray-300 text-sm mt-2">Recently enhanced</p>
           </div>
         </div>
-        {/* System Features */}
-        {/* System Features */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
         <div className="mb-8">
           <h2 className="text-2xl font-bold mb-6 text-white">Advanced System Features</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -1006,7 +1045,6 @@ const UltimateRedundancyBlueprint: React.FC = () => {
                 <div className="flex justify-between items-start mb-4">
                   <h3 className="text-lg font-semibold text-white">{feature.name}</h3>
                   <span className={`px-2 py-1 text-xs rounded-full ${getPriorityColor(feature.priority)}`}>
-                    {feature.priority}
                     {feature.priority  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1017,7 +1055,6 @@ const UltimateRedundancyBlueprint: React.FC = () => {
                 <p className="text-gray-300 text-sm mb-4">{feature.description}</p>
                 <div className="flex justify-between items-center">
                   <span className={`text-xs ${getStatusColor(feature.status)}`}>
-                    ● {feature.status}
                     ● {feature.status  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1027,22 +1064,6 @@ const UltimateRedundancyBlueprint: React.FC = () => {
                   <span className="text-xs text-green-400">● {feature.health}</span>
                 </div>
               </div>
-            ))}
-          </div>
-        </div>
-        {/* Advanced Capabilities */}
-            ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-          </div>
-        </div>
-        {/* Advanced Capabilities */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
         <div className="mb-8">
           <h2 className="text-2xl font-bold mb-6 text-white">Advanced Capabilities</h2>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
@@ -1051,7 +1072,6 @@ const UltimateRedundancyBlueprint: React.FC = () => {
                 <div className="flex justify-between items-start mb-4">
                   <h3 className="text-lg font-semibold text-white">{capability.capability}</h3>
                   <span className={`px-2 py-1 text-xs rounded-full ${getStatusColor(capability.status)}`}>
-                    {capability.status}
                     {capability.status  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1062,22 +1082,6 @@ const UltimateRedundancyBlueprint: React.FC = () => {
                 <p className="text-gray-300 text-sm mb-2">{capability.description}</p>
                 <p className="text-red-400 text-sm font-medium">Benefit: {capability.benefit}</p>
               </div>
-            ))}
-          </div>
-        </div>
-        {/* Performance Metrics */}
-            ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-          </div>
-        </div>
-        {/* Performance Metrics */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
         <div className="mb-8">
           <h2 className="text-2xl font-bold mb-6 text-white">Performance Metrics</h2>
           <div className="bg-white/10 rounded-xl p-6 border border-white/20">
@@ -1099,11 +1103,6 @@ const UltimateRedundancyBlueprint: React.FC = () => {
                       <td className="py-3 px-4 text-gray-300">{metric.target}</td>
                       <td className="py-3 px-4">
                         <span className={`px-2 py-1 text-xs rounded-full ${getStatusColor(metric.status)}`}>
-                          {metric.status}
-                        </span>
-                      </td>
-                    </tr>
-                  ))}
                           {metric.status  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1122,12 +1121,6 @@ const UltimateRedundancyBlueprint: React.FC = () => {
             </div>
           </div>
         </div>
-        {/* AI-Powered Architecture */}
-        {/* AI-Powered Architecture */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
         <div className="mb-8">
           <h2 className="text-2xl font-bold mb-6 text-white">AI-Powered Architecture</h2>
           <div className="bg-white/10 rounded-xl p-8 border border-white/20">
@@ -1135,12 +1128,14 @@ const UltimateRedundancyBlueprint: React.FC = () => {
               <div className="text-6xl font-bold text-red-400 mb-4">🤖</div>
               <h3 className="text-xl font-semibold mb-2 text-white">Intelligent Redundancy</h3>
               <p className="text-gray-300 mb-6">
-                Our ultimate redundancy system leverages artificial intelligence and machine learning
-                to provide predictive failover, intelligent load balancing, and automated recovery
                 Our ultimate redundancy system leverages artificial intelligence and machine learning 
                 to provide predictive failover, intelligent load balancing, and automated recovery 
                 Our ultimate redundancy system leverages artificial intelligence and machine learning
                 to provide predictive failover, intelligent load balancing, and automated recovery
+
+
+
+
                 mechanisms that exceed traditional redundancy approaches.
               </p>
               <div className="grid grid-cols-1 md:grid-cols-5 gap-4 text-center">
@@ -1168,12 +1163,6 @@ const UltimateRedundancyBlueprint: React.FC = () => {
             </div>
           </div>
         </div>
-        {/* Technology Stack */}
-        {/* Technology Stack */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
         <div className="mb-8">
           <h2 className="text-2xl font-bold mb-6 text-white">Technology Stack</h2>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
@@ -1201,32 +1190,34 @@ const UltimateRedundancyBlueprint: React.FC = () => {
             </div>
           </div>
         </div>
-        {/* Navigation */}
+
+
         <div className="flex flex-wrap gap-4 justify-center">
           <Link 
+
         {/* Navigation */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-        <div className="flex flex-wrap gap-4 justify-center">
-          <Link
             href="/reports/blueprints"
             className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-red-400/50"
           >
             All Blueprints
           </Link>
-          <Link
-          <Link 
-          <Link
+
+
+
+
             href="/reports/blueprints/comprehensive-redundancy"
             className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-indigo-400/50"
           >
             Comprehensive Redundancy
           </Link>
-          <Link
-          <Link 
-          <Link
+
+
+
+
             href="/reports/performance"
             className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-cyan-400/50"
           >
@@ -1236,8 +1227,13 @@ const UltimateRedundancyBlueprint: React.FC = () => {
       </div>
     </div>
   );
-}
+;
+
+
 };
 
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export default UltimateRedundancyBlueprint;

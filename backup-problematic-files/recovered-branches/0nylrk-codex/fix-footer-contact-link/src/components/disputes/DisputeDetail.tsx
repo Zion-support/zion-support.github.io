@@ -233,6 +233,7 @@ export function DisputeDetail() {;
                           <span>Under review</span>;
                         </li>;
 <<<<<<< HEAD
+<<<<<<< HEAD
                       )}
                       ;
                       {dispute.resolved_at && (;
@@ -254,6 +255,8 @@ export function DisputeDetail() {;
                           <span>Resolved on {format(new Date(dispute.resolved_at), "MMM d, yyyy 'at' h:mm a")}</span>;
                         </li>;
                       )}
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     </ul>;
                   </div>;
                 </CardContent>;

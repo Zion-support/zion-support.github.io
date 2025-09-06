@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 import {z} from 'zod';
@@ -7,6 +8,8 @@ export const certificationSchema = z.object({;
 
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { z } from 'zod';
 // Define schema for form validation
 
@@ -14,7 +17,16 @@ export const certificationSchema = z.object({
 import {z} from 'zod';
 // Define schema for form validation
 export const certificationSchema = z.object({;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+import {z} from 'zod';
+// Define schema for form validation
+export const certificationSchema = z.object({;
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   name: z.string().min(1, 'Certification name is required');
   issuing_organization: z.string().min(1, 'Issuing organization is required');
   issue_date: z.string().optional();
@@ -24,10 +36,23 @@ export const certificationSchema = z.object({;
 export type CertificationFormValues = z.infer<typeof certificationSchema>;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
+=======
+import { z } from 'zod',;
+// Define schema for form validation;
+export const certificationSchema = z.object({;
+  name: z.string().min(1, 'Certification name is required'),;
+  issuing_organization: z.string().min(1, 'Issuing organization is required'),;
+  issue_date: z.string().optional(),;
+  expiration_date: z.string().optional(),;
+  credential_id: z.string().optional(),;
+  credential_url: z.string().optional()});
+export type CertificationFormValues = z.infer<typeof certificationSchema>;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {z} from 'zod';
 // Define schema for form validation;
 export const certification_schema = z.object ({
@@ -40,6 +65,7 @@ export const certification_schema = z.object ({
 ;
 export type CertificationFormValues = z.infer < typeof certification_schema>;
 ;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -66,3 +92,5 @@ export type CertificationFormValues = z.infer<typeof certificationSchema>;
 export type CertificationFormValues = z.infer<typeof certificationSchema>;
 export type CertificationFormValues = z.infer<typeof certificationSchema>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

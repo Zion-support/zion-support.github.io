@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -30,6 +31,8 @@ import {Phone, Mail, MapPin, Check, ArrowRight, Eye} from 'lucide-react';
 
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export default function WCAGScannerPage() {;
   const service = extraServices && extraServices.find(s =>;
     s && s.link.endsWith('/wcag-accessibility-scanner');
@@ -223,6 +226,7 @@ if (return null) {
         </div>;
       </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 }
@@ -247,6 +251,8 @@ export default function WCAGScannerPage() {
   );  if (!service) return null;import { Star } from 'lucide-react';
 export default function WCAGScannerPage() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const service = extraServices.find(s => s.link.endsWith('/wcag-accessibility-scanner'));
   if (!service) return null;
 
@@ -254,6 +260,7 @@ export default function WCAGScannerPage() {;
     <UltraAdvancedFuturisticBackground>
       <Head>
         <title>{service.name} - Zion Tech Group</title>
+<<<<<<< HEAD
 <<<<<<< HEAD
         <meta name="description" content={service.description} />
         <link rel="canonical" href="https://ziontechgroup.com/wcag-accessibility-scanner" />
@@ -355,27 +362,39 @@ export default function WCAGScannerPage() {;
                   <span className='text-xs'>{service.contactInfo.address}</span>
                 </div>              </div>              <Button href="/contact" variant="quantum" size="lg" className="w-full">Start Trial<ArrowRight className="w-5 h-5 ml-2" /></Button>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <div className="mt-6 space-y-3 text-sm text-slate-300">
                 <div className="flex items-center space-x-2"><Phone className="w-4 h-4 text-cyan-400" /><span>{service.contactInfo.mobile}</span></div>
                 <div className="flex items-center space-x-2"><Mail className="w-4 h-4 text-purple-400" /><span>{service.contactInfo.email}</span></div>
                 <div className="flex items-center space-x-2"><MapPin className="w-4 h-4 text-green-400" /><span className="text-xs">{service.contactInfo.address}</span></div>
 <<<<<<< HEAD
+<<<<<<< HEAD
               </div>
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             </div>
           </div>
         </div>
       </div>
     </UltraAdvancedFuturisticBackground>
 <<<<<<< HEAD
+<<<<<<< HEAD
   );
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+}
+}
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
     </UltraAdvancedFuturisticBackground>);
 }
 ;
+<<<<<<< HEAD
 
 
 }
@@ -391,3 +410,5 @@ export default function WCAGScannerPage() {;
 ;
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

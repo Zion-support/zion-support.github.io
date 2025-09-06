@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
       } catch {}
@@ -41,6 +42,8 @@ function parse_lines (start_iso?: string, end_iso?: string): EventRow[] {
       } catch {}
     }
     return rows
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
@@ -48,8 +51,30 @@ import { ensureAdminFromApi } from '../../../../utils/auth';
 
 type EventRow = {
 
-    }
-    return rows;
+  name: string
+  page?: string
+  userType?: string
+  properties?: Record<string, any>
+  at: string
+}
+const LOG_FILE = path.join(process.cwd(), 'dataanalyticsevents.log.jsonl')
+function parseLines(startIso?: string, endIso?: string): EventRow[] {
+  try {
+    if (!fs.existsSync(LOG_FILE)) return []
+    const raw = fs.readFileSync(LOG_FILE, 'utf8')
+    const lines = raw.split('\n').filter(Boolean)
+    const start = startIso ? new Date(startIso) : null
+    const end = endIso ? new Date(endIso) : null
+    const rows: EventRow[] = []
+    for (const line of lines) {
+      try {
+        const obj = JSON.parse(line)
+        if (!obj.at) continue
+        const t = new Date(obj.at)
+        if (start && t < start) continue
+        if (end && t > end) continue
+        rows.push(obj)
+      } catch {}
 
   name: string;
   page?: string;
@@ -58,37 +83,25 @@ type EventRow = {
   at: string;
 };
 
-
-
 const LOG_FILE = path.join(process.cwd(), 'dataanalyticsevents.log.jsonl');
 
 function parseLines(startIso?: string, endIso?: string): EventRow[] {
   try {
     if (!fs.existsSync(LOG_FILE)) return [];
     const raw = fs.readFileSync(LOG_FILE, 'utf8');
-    const lines = raw.trim().split('\n').filter(Boolean);
-    const rows: EventRow[] = [];
-    
-    for (const line of lines) {
-      try {
-        const obj = JSON.parse(line);
-        const t = new Date(obj.at).getTime();
-        const start = startIso ? new Date(startIso).getTime() : 0;
-        const end = endIso ? new Date(endIso).getTime() : Infinity;
-        
-        if (t < start) continue;
-        if (end && t > end) continue;
-        rows.push(obj);
-      } catch {
-        // Skip invalid JSON lines
-      }
     }
     return rows;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   } catch {
     return [];
   }
 }
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -123,23 +136,36 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     byDay[day] = (byDay[day] || 0) + 1;
   }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const pagesMostUsed = Object.entries(byFeature)
     .map(([label, value]) => ({ label, value }))
 .sort((a, b) => b.value - a.value)
   const events = Object.entries(byEvent)
     .map(([label, value]) => ({ label, value }))
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     .sort((a, b) => b.value - a.value);
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+    .sort((a, b) => b.value - a.value),
+
+
+
+    .sort((a, b) => b.value - a.value);
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
     .sort((a, b) => b.value - a.value),
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const days = Object.keys(byDay).sort();
   const line = days.map((d) => ({ date: d, value: byDay[d] }));
 
@@ -157,10 +183,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   res.status(200).json({ pagesMostUsed, events, line, funnel });
 
 
+<<<<<<< HEAD
 =======
 =======
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 function featureFromPath (page?: string): string {
 // Check condition
 if (return 'other', ) {
@@ -212,6 +241,7 @@ function handler() {
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
@@ -240,6 +270,9 @@ function handler() {
   res.status(200).json({ pagesMostUsed, events, line, funnel });
 };
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+};
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
     await ensureAdminFromApi(req);
@@ -258,6 +291,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -265,3 +299,5 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

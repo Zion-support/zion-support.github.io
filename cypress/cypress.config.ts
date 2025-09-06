@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -11,6 +12,8 @@ export default define_config ({
     supportFile: 'cypress/support/e2e && e2e.ts',
 
 <<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     experimentalModifyObstructiveThirdPartyCode: true,    // Disable IPv6 in Chromium-based browsers to avoid socket errors
     setupNodeEvents(on, config) {
       on('before:browser:launch', (browser = {}, launchOptions) => {
@@ -33,6 +36,7 @@ if ( {) {
       });export default define_config ({
   e2e: {
 
+<<<<<<< HEAD
 
 =======
 import { defineConfig } from 'cypress';
@@ -83,6 +87,12 @@ export default defineConfig({;
     baseUrl: 'http://localhost:3000', // Standard Next.js port
 
     baseUrl: 'http://localhost:3000', // Standard Next.js port;
+=======
+    baseUrl: 'http://localhost:3000', // Standard Next.js port;
+
+
+    baseUrl: 'http://localhost:3000', // Standard Next.js port;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     supportFile: 'cypress/support/e2e.ts';
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     experimentalModifyObstructiveThirdPartyCode: true;
@@ -97,6 +107,7 @@ export default defineConfig({;
     }
     env: {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -108,10 +119,13 @@ export default defineConfig({;
       TEST_USER_NAME: process && process.env.TEST_USER_NAME || 'Test User',
       STRIPE_TEST_CARD: process && process.env.STRIPE_TEST_CARD || '4242424242424242'};
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     defaultCommandTimeout: 10000
   }
   reporter: 'junit'
   reporterOptions: {
+<<<<<<< HEAD
 
     mochaFile: 'cypress/results/junit-[hash].xml'
     toConsole: true
@@ -143,6 +157,8 @@ export default defineConfig({;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   reporterOptions: {
     mochaFile: 'cypress/results/junit-[hash].xml'
     toConsole: true
@@ -171,14 +187,18 @@ export default defineConfig({;
   reporter: 'junit',
   reporterOptions: {
     mochaFile: 'cypress/results/junit-[hash].xml',
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     toConsole: true
   }
 });
 
+<<<<<<< HEAD
 
     base_url: 'http://localhost:3000', // Standard Next.js port;
     support_file: 'cypress / support / e2e.ts';
@@ -198,6 +218,8 @@ if ( {) {
   }
 });
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { defineConfig } from 'cypress',;
 export default defineConfig({;
   e2e: {;
@@ -212,7 +234,18 @@ export default defineConfig({;
         }
         return launchOptions;
 
-
+    base_url: 'http://localhost:3000', // Standard Next.js port;
+    support_file: 'cypress / support / e2e.ts';
+    experimentalModifyObstructiveThirdPartyCode: true;
+    // Disable IPv6 in Chromium - based browsers to avoid socket errors;
+    setupNodeEvents (on, config) {
+      on ('before:browser:launch', (browser = {}, launch_options) => {
+        // Check condition
+if ( {) {
+  $2
+}
+          launch_options.args.push ('--disable - ipv6');        }
+        return launch_options;
       });
     }
     env: {
@@ -259,6 +292,7 @@ export default defineConfig({;
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
@@ -296,3 +330,6 @@ export default defineConfig({;
   }
 });
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

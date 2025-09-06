@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -13,6 +14,8 @@ import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from "@/
 import {useForm} from "react-hook-form";
 import z from "zod";
 import {zodResolver} from "@hookform/resolvers/zod";
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useState } from "react",
 import { useToast } from "@/hooks/use-toast",
 import { Button } from "@/components/ui/button",
@@ -23,7 +26,20 @@ import { Loader, Sparkles } from "lucide-react",
 import { supabase } from "@/integrations/supabase/client",
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form",
 import { useForm } from "react-hook-form",
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+import z from "zod";
+
+import {zodResolver} from "@hookform/resolvers/zod";
+const formSchema = z.object({
+  title: z.string().min(3, "Title must be at least 3 characters");
+  keyFeatures: z.string()
+  targetAudience: z.string()})
+type FormData = z.infer<typeof formSchema>;
+import z from "zod",
+import { zodResolver } from "@hookform/resolvers/zod",
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useState } from './react';
 import { use_toast } from '@/hooks / use - toast';
 import { Button } from '@/components / ui / button';
@@ -43,6 +59,7 @@ const form_schema = z.object ({
 type FormData = z.infer < typeof form_schema>;
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -61,6 +78,9 @@ type FormData = z.infer<typeof formSchema>;
 import z from "zod",
 import { zodResolver } from "@hookform/resolvers/zod",
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 const formSchema = z.object({
   title: z.string().min(3, "Title must be at least 3 characters"),
   keyFeatures: z.string(),
@@ -69,14 +89,18 @@ const formSchema = z.object({
 type FormData = z.infer<typeof formSchema>,
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface ServiceDescriptionFormProps {
   onDescriptionGenerated: (description: string) => void;
 }
 
+<<<<<<< HEAD
 
 
 
@@ -87,6 +111,8 @@ interface ServiceDescriptionFormProps {
   onDescriptionGenerated: (description: string) => void
 }
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export function ServiceDescriptionForm({ onDescriptionGenerated }: ServiceDescriptionFormProps) {;
   const { toast } = useToast();
   const [isLoading, setIsLoading] = useState(false);
@@ -96,7 +122,15 @@ export function ServiceDescriptionForm({ onDescriptionGenerated }: ServiceDescri
   const { toast } = useToast(),
   const [isLoading, setIsLoading] = useState(false),
   
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const form = useForm<FormData>({
     resolver: zodResolver(formSchema)
     defaultValues: {
@@ -107,6 +141,7 @@ export function ServiceDescriptionForm({ onDescriptionGenerated }: ServiceDescri
     setIsLoading(true)
     try {
       const { data: response, error } = await supabase.functions.invoke('generate-service-description', {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -131,6 +166,8 @@ export function ServiceDescriptionForm({ onDescriptionGenerated }: ServiceDescri
 
       if (error) {
         throw new Error(error.message)
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useState } from "react",;
 import { useToast } from "@/hooks/use-toast",;
 import { Button } from "@/components/ui/button",;
@@ -173,6 +210,7 @@ export function ServiceDescriptionForm({ onDescriptionGenerated }: ServiceDescri
       }),;
       if (error) {;
         throw new Error(error.message);
+<<<<<<< HEAD
 
 
         body: { 
@@ -182,21 +220,12 @@ export function ServiceDescriptionForm({ onDescriptionGenerated }: ServiceDescri
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       }
       if (response.error) {
         throw new Error(response.error)
       }
-
-
-
-      onDescriptionGenerated(response.description),
-      
-
-
-      onDescriptionGenerated(response.description);
-
-      onDescriptionGenerated(response.description),
-      
       toast({
         title: "Description Generated"
         description: "Your professional service description has been created."
@@ -210,6 +239,7 @@ export function ServiceDescriptionForm({ onDescriptionGenerated }: ServiceDescri
       })
     } finally {
       setIsLoading(false)
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -513,6 +543,8 @@ if ( {) {
     }
   };
   return (;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <Card className="border border-zion-blue-light bg-zion-blue-dark">;
       <CardHeader>;
         <CardTitle className="flex items-center text-white">;
@@ -529,15 +561,20 @@ if ( {) {
             <FormField;
               control={form.control}
               name="title";
+<<<<<<< HEAD
           <form onSubmit={form.handleSubmit(handleSubmit)} className="space-y-4">;
             <FormField;
               control={form.control}
               name="title";
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               render={({ field }) => (;
                 <FormItem>;
                   <FormLabel className="text-zion-slate-light">Service Title</FormLabel>;
                   <FormControl>;
+<<<<<<< HEAD
 <<<<<<< HEAD
                     <Input
                       {...field} 
@@ -555,21 +592,30 @@ if ( {) {
                       placeholder="e.g. Professional Web Design Services";
                       className="bg-zion-blue border border-zion-blue-light text-white";
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+                      className="bg-zion-blue border border-zion-blue-light text-white"
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       disabled={isLoading}
                     />;
                   </FormControl>;
                   <FormMessage />;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 </FormItem>;
               )}
-
             />;
+<<<<<<< HEAD
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
             <FormField
               control={form && form.control}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -605,6 +651,15 @@ if ( {) {
 =======
                     <Textarea ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+              control={form.control}
+            <FormField
+              control={form && form.control}
+              name="keyFeatures"
+                    <Textarea
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       {...field}
                       placeholder="Enter key features, separated by commas"
                       className="bg-zion-blue border border-zion-blue-light text-white min-h-20"
@@ -614,6 +669,7 @@ if ( {) {
                   <FormMessage />;
                 </FormItem>;
               )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
             />;
@@ -671,10 +727,13 @@ if ( {) {
               control={form.control}
               name="targetAudience";
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               render={({ field }) => (;
                 <FormItem>;
                   <FormLabel className="text-zion-slate-light">Target Audience</FormLabel>;
                   <FormControl>;
+<<<<<<< HEAD
 <<<<<<< HEAD
                     <Input
                       {...field} 
@@ -687,12 +746,16 @@ if ( {) {
                       placeholder="e.g. Small businesses, Startups, E-commerce brands";
                       className="bg-zion-blue border border-zion-blue-light text-white";
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+                      className="bg-zion-blue border border-zion-blue-light text-white"
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       disabled={isLoading}
                     />;
                   </FormControl>;
                   <FormMessage />;
                 </FormItem>;
               )}
+<<<<<<< HEAD
 
             />;
 
@@ -720,11 +783,17 @@ if ( {) {
               className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white";
             >;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+              type="submit"
+              disabled={isLoading}
+              className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white">;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               {isLoading ? (;
                 <>;
                   <Loader className="mr-2 h-4 w-4 animate-spin" />;
                   Generating Description...;
                 </>;
+<<<<<<< HEAD
 <<<<<<< HEAD
               ) : (;
 =======
@@ -851,10 +920,17 @@ if ( {) {
   )
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+              ) : (;
+                <>;
+                  <Sparkles className="h-4 w-4 mr-2" />;
+                  Generate Description;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             </Button>;
           </form>;
         </Form>;
       </CardContent>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     </Card>);
@@ -906,3 +982,5 @@ if (error) {
 }
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

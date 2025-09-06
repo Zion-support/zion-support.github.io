@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 =======
 import React, { useState } from 'react';
@@ -247,3 +248,5 @@ const Contact: React.FC = () => {
 };
 
 export default Contact;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 import React, { useState } from 'react';
@@ -45,6 +46,8 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   BookOpen,
   Brain,
   Building,
@@ -79,6 +82,7 @@ origin/automation-improvements-final
   Star,
   Target,
   TrendingUp,
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -144,6 +148,8 @@ ursor/integrate-build-improve-and-re-verify-8f7d
   X,
   Zap
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   Clock,
   DollarSign,
   Cpu,
@@ -183,6 +189,7 @@ ursor/integrate-build-improve-and-re-verify-8f7d
   DollarSign as Money;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 } from 'lucide-react';
 >>>>>>> origin/automation-improvements-final
 
@@ -191,10 +198,15 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 } from 'lucide-react';
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -213,6 +225,10 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   ArrowRight
   Award
   BarChart3
@@ -254,6 +270,7 @@ import {
   Users
   X
   Zap
+<<<<<<< HEAD
 } from "lucide-react";
 
 
@@ -264,6 +281,8 @@ import {
 =======
 origin/main
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 const navigationItems = [
   {
     title: "Services"
@@ -331,6 +350,7 @@ const navigation_items = [;
       }
       {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -340,6 +360,8 @@ const navigation_items = [;
         description: "Scalable cloud infrastructure",
         popular: false,
       },
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {
         title: "Data Analytics",
         href: "/data - analytics",
@@ -424,6 +446,7 @@ const navigation_items = [;
     ],
   },
   {
+<<<<<<< HEAD
     title: "Resources",
     href: "/resources",
     icon: FileText,
@@ -432,6 +455,8 @@ const navigation_items = [;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {
         title: "Blog"
         href: "/blog"
@@ -439,6 +464,7 @@ const navigation_items = [;
         description: "Latest insights and trends"
       }
       {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -448,6 +474,8 @@ const navigation_items = [;
         icon: BarChart3,
         description: "Success stories and results",
       },
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {
         title: "White Papers",
         href: "/white - papers",
@@ -455,6 +483,7 @@ const navigation_items = [;
         description: "In - depth research reports",
       },
       {
+<<<<<<< HEAD
         title: "Tutorials",
         href: "/tutorials",
         icon: BookOpen,
@@ -464,6 +493,8 @@ const navigation_items = [;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {
         title: "FileTextation"
         href: "/docs"
@@ -473,6 +504,7 @@ const navigation_items = [;
     ]
   }
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -485,6 +517,8 @@ const navigation_items = [;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {
         title: "About Us"
         href: "/about"
@@ -524,6 +558,7 @@ const navigation_items = [;
     ]
   }
 ];
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -749,6 +784,8 @@ export default function Navigation() {
 
 export default function Navigation() {;
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const [isOpen, setIsOpen] = useState(false);
   const [activeSubmenu, setActiveSubmenu] = useState<string | null>(null);
 
@@ -760,6 +797,7 @@ export default function Navigation() {;
 
 
 const Navigation: React.FC<NavigationProps> = ({ className }) => {
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -770,6 +808,8 @@ export default function Navigation() {;
 
 const Navigation: React.FC<NavigationProps> = ({ className }) => {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <nav className="bg-white shadow-lg sticky top-0 z-50">;
       {/* Top Bar */}
@@ -794,6 +834,7 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
               </Link>;
               <Link
                 href="/pricing"
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -848,12 +889,15 @@ function Navigation() {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 View Pricing;
               </Link>;
             </div>;
           </div>;
         </div>;
       </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -868,10 +912,13 @@ function Navigation() {
               </div>;
               <div className="text-sm text-gray-500">;
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {/* Main Navigation */}
       <div className="container mx - auto px - 4">;
         <div className="flex justify - between items - center py - 4">;
           {/* Logo */}
+<<<<<<< HEAD
           <Link href="/" className="flex items - center space - x-2">;
             <div className="w - 10 h - 10 bg - blue - 600 rounded - lg flex items - center justify - center">;
               <span className="text - white font - bold text - xl">Z</span>;
@@ -885,10 +932,13 @@ function Navigation() {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 AI & Technology Solutions;
               </div>;
             </div>;
           </Link>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -904,6 +954,8 @@ function Navigation() {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 {/* Submenu */}
                 {activeSubmenu === item && item.title && (;
                   <motion&& motion.div
@@ -953,6 +1005,7 @@ function Navigation() {
                 </Link>;
               ))}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
             </div>;
           </div>;
@@ -962,12 +1015,15 @@ function Navigation() {
             </div>;
           </div>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
             className="lg:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors";
           >;
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
           </button>;
@@ -978,6 +1034,8 @@ function Navigation() {
           </button>;
         </div>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         {/* Mobile Navigation */}
         {isOpen && (;
           <motion&& motion.div
@@ -1167,5 +1225,9 @@ function Navigation() {
           </motion.div>)}
       </div>;
     </nav>);
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
+=======
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

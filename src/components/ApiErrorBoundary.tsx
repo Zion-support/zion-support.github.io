@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import React, { Component, ReactNode } from 'react';
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -300,6 +301,11 @@ export class ApiErrorBoundary extends Component<ApiErrorBoundaryProps ApiErrorBo
             </Alert>;
 <<<<<<< HEAD
 =======
+=======
+      }
+
+      return (
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <div className="flex min-h-screen items-center justify-center p-4">
           <div className="w-full max-w-md space-y-4">
             <Alert variant="destructive">
@@ -307,6 +313,7 @@ export class ApiErrorBoundary extends Component<ApiErrorBoundaryProps ApiErrorBo
                 {isNetworkError ? (
                   <WifiOff className="h-4 w-4" />
                 ) : (
+<<<<<<< HEAD
                   <RefreshCw className='h-4 w-4' />
                 )}
                 <AlertTitle>
@@ -317,6 +324,8 @@ export class ApiErrorBoundary extends Component<ApiErrorBoundaryProps ApiErrorBo
                 )}
                 <AlertTitle>;
                   {isNetworkError ? 'Connection Problem' : 'Something went wrong'}
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 </AlertTitle>
               </div>
               <AlertDescription className="mt-2">
@@ -331,6 +340,7 @@ export class ApiErrorBoundary extends Component<ApiErrorBoundaryProps ApiErrorBo
                 )}
               </AlertDescription>
             </Alert>
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
             <div className='flex flex-col gap-2'>
               <Button
@@ -346,6 +356,8 @@ export class ApiErrorBoundary extends Component<ApiErrorBoundaryProps ApiErrorBo
 
             <div className="flex flex-col gap-2">
               <Button
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 onClick={this.handleRetry}
                 disabled={this.state.isRetrying}
                 className="w-full"
@@ -360,6 +372,7 @@ export class ApiErrorBoundary extends Component<ApiErrorBoundaryProps ApiErrorBo
                     <RefreshCw className="mr-2 h-4 w-4" />
                     Try Again
                   </>
+<<<<<<< HEAD
                 )}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                 )}
@@ -385,6 +398,11 @@ export class ApiErrorBoundary extends Component<ApiErrorBoundaryProps ApiErrorBo
                 onClick={() => window.location.reload()}
                 className='w-full'              >
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+                )}
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 Reload Page
             </div>
             {!this.state.isOnline && (
@@ -393,42 +411,8 @@ ursor/fix-website-loading-errors-and-merge-6662
                 <span>Offline</span>
               </div>
             )}
-              <AlertDescription className='mt - 2'>;
-                {isNetworkError;
-                  ? !this.state.is_online;
-                    ? 'You appear to be offline. Please check your internet connection.';
-                    : 'Unable to connect to our servers. This might be a temporary network issue.';
-                  : 'An unexpected error occurred while loading the page.'}
-              </AlertDescription>;
-            </Alert>;
-            <div className='flex flex - col gap - 2'>;
-              <Button;
-                on_click={this.handle_retry}
-                disabled={this.state.is_retrying}
-                className='w - full'              >;
-                {this.state.is_retrying ? (
-                  <>;
-                    <RefreshCw className='mr - 2 h - 4 w - 4 animate - spin' />;
-                    Retrying...;
-                  </>) : (
-                  <>;
-                    <RefreshCw className='mr - 2 h - 4 w - 4' />;
-                    Try Again;
-                  </>)}
-              </Button>;
-              <Button;
-                variant='outline';
-                on_click={() => window.location.reload ()}
-                className='w - full'              >;
-                Reload Page;
-              </Button>;
-            </div>;
-            {!this.state.is_online && (
-              <div className='flex items - center justify - center gap - 2 text - sm text - muted - foreground'>;
-                <WifiOff className='h - 4 w - 4' />;
-                <span > Offline</span>;
-              </div>)}
             {process.env.NODE_ENV === 'development' && this.state.error && (
+<<<<<<< HEAD
 
     return this.props.children;
   }
@@ -491,18 +475,24 @@ export const useApiErrorHandler = () =>: any {
               </div>
             )}
             {process.env.NODE_ENV === 'development' && this.state.error && (
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <details className="mt-4 rounded border p-2 text-xs">
                 <summary className="cursor-pointer font-medium">
                   Debug Info (Development Only)
                 </summary>
+<<<<<<< HEAD
                 <pre className='mt-2 whitespace-pre-wrap break-all'>
                 <pre className='mt-2 whitespace-pre-wrap break-all'>
                 <pre className="mt-2 whitespace-pre-wrap break-all">
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   {this.state.error.toString()}
                   {this.state.errorInfo?.componentStack}
                 </pre>
               </details>
             )}
+<<<<<<< HEAD
 }, ;
   return { handleApiError };
 
@@ -531,10 +521,17 @@ export const useApiErrorHandler = () => {
 
 }, ;
   return { handleApiError };
+=======
+
+}, ;
+  return { handleApiError };
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           </div>;
         </div>;
       );
     }
+<<<<<<< HEAD
 ;
     return this.props.children;
   }
@@ -557,6 +554,8 @@ export const useApiErrorHandler = () => {;
 };
 };
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 

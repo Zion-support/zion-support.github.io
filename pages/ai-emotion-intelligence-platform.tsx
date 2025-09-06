@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 
@@ -15,6 +16,8 @@ import UltraFuturisticNavigation2030 from '../components/layout/UltraFuturisticN
 import UltraFuturisticBackground2030 from '../components/ui/UltraFuturisticBackground2030';
 import UltraFuturisticFooter2030 from '../components/layout/UltraFuturisticFooter2030';
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from 'react',;
 import Head from 'next/head',;
 import Link from 'next/link',;
@@ -34,16 +37,20 @@ const contactInfo = {
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
 <<<<<<< HEAD
+<<<<<<< HEAD
 },
 
 =======
 };
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 const features = [
   {
     icon: Eye,
     title: 'Real-time Emotion Detection',
     description: 'Analyze 27 different emotions across voice, video, and text interactions in real-time'
+<<<<<<< HEAD
 <<<<<<< HEAD
   },
   {
@@ -101,10 +108,14 @@ const features = [
     title: 'Real-time Alerts'
     description: 'Get instant notifications for negative emotions requiring immediate attention'
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+    description: 'Get instant notifications for negative emotions requiring immediate attention'
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -116,10 +127,13 @@ import {
   MessageCircle, BarChart3, Globe, Smartphone
 } from 'lucide-react'
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import UltraFuturisticNavigation2030 from '../components/layout/UltraFuturisticNavigation2030';
 import UltraFuturisticBackground2030 from '../components/ui/UltraFuturisticBackground2030';
 import UltraFuturisticFooter2030 from '../components/layout/UltraFuturisticFooter2030';
 const contactInfo = {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   mobile: '+1 302 464 0950',
@@ -144,6 +158,8 @@ const features = [
     icon: Eye
     title: 'Real-time Emotion Detection'
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     description: 'Analyze 27 different emotions across voice, video, and text interactions in real-time'
   }
   {
@@ -172,6 +188,7 @@ const features = [
     description: 'Get instant notifications for negative emotions requiring immediate attention'
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -181,6 +198,8 @@ const useCases = [
     title: 'Customer Service Optimization'
     description: 'Improve customer satisfaction by understanding emotional states and responding appropriately'
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     icon: Users
   }
   {
@@ -199,11 +218,14 @@ const useCases = [
     icon: Heart
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
 ]
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 const pricing = [
   {
     name: 'Starter'
@@ -216,6 +238,7 @@ const pricing = [
     popular: false
     cta: 'Get Started'
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -226,11 +249,14 @@ const pricing = [
     period: '/month'
     description: 'Advanced emotion intelligence for growing businesses'
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     features: [
       'Up to 10,000 emotion analyses per monthFull emotion detection (27 emotions)Priority supportAdvanced API accessCustom emotion trainingReal-time alertsAdvanced analyticsMulti-language support'
     ]
     popular: true
     cta: 'Start Free Trial'
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -242,6 +268,8 @@ const pricing = [
     period: ''
     description: 'Custom solutions for large organizations'
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     features: [
       'Unlimited emotion analysesCustom emotion modelsDedicated support teamWhite-label solutionsAdvanced integrationsCustom reportingSLA guaranteesOn-premise deployment'
     ]
@@ -249,6 +277,7 @@ const pricing = [
     cta: 'Contact Sales'
   }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -309,6 +338,8 @@ const features = [;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   }
 }
 ],;
@@ -378,10 +409,13 @@ const pricing = [;
 }
 ],
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export default function AIEmotionIntelligencePlatform() {
   return (
     <>
@@ -394,6 +428,7 @@ export default function AIEmotionIntelligencePlatform() {
       </Head>
       <UltraFuturisticBackground2030>
         <UltraFuturisticNavigation2030 />
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 import React from 'react',
@@ -522,6 +557,8 @@ function AIEmotionIntelligencePlatform() {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         {/* Hero Section */}
         <section className="relative min - h-screen flex items - center justify - center overflow - hidden pt - 20">;
           <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 text - center">;
@@ -532,6 +569,7 @@ function AIEmotionIntelligencePlatform() {
               <motion.div;
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -568,15 +606,20 @@ function AIEmotionIntelligencePlatform() {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 transition={{ duration: 0.8, delay: 0.2 }} className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-pink-500/20 to-purple-500/20 border border-pink-500/30 text-pink-300 text-sm font-medium mb-6">
                 <Sparkles className="w-4 h-4 mr-2" />
                 AI & Customer Experience
               </motion.div>
               <motion.h1
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 initial={{ opacity: 0, y: 30 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -587,16 +630,12 @@ function AIEmotionIntelligencePlatform() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
                 transition={{ duration: 0.8, delay: 0.4 }} className="text-5xl md:text-7xl font-bold mb-6">
                 <span className="bg-gradient-to-r from-pink-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent">
                   AI Emotion Intelligence Platform
                 </span>
               </motion.h1>
               <motion.p
-
-
                 initial={{ opacity: 0, y: 30 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -607,14 +646,10 @@ function AIEmotionIntelligencePlatform() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
                 transition={{ duration: 0.8, delay: 0.6 }} className="text-2xl md:text-3xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
                 Real-time emotion analysis and response for customer interactions
               </motion.p>
               <motion.p
-
-
                 initial={{ opacity: 0, y: 30 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -625,14 +660,10 @@ function AIEmotionIntelligencePlatform() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
                 transition={{ duration: 0.8, delay: 0.8 }} className="text-lg md:text-xl text-gray-400 mb-12 max-w-3xl mx-auto">
                 Advanced AI platform that analyzes customer emotions in real-time across voice, video, and text interactions, providing intelligent responses and sentiment-driven insights for better customer experience.
               </motion.p>
             </motion.div>
-
-
             {/* CTA Buttons */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -649,8 +680,6 @@ function AIEmotionIntelligencePlatform() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
               transition={{ duration: 0.8, delay: 1.0 }} className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-16">
               <Link
                 href="/contact" className="group relative px-8 py-4 bg-gradient-to-r from-pink-500 to-purple-500 text-white font-semibold rounded-2xl text-lg hover:from-pink-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105 shadow-2xl hover:shadow-pink-500/25">
@@ -668,26 +697,6 @@ function AIEmotionIntelligencePlatform() {
                 </span>
               </Link>
             </motion.div>
-
-
-            {/* Key Stats */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            <motion.div;
-              initial={{ opacity: 0, y: 30 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              animate={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              transition={{ duration: 0.8, delay: 1.2 }} className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
-
               <div className="text-center">
                 <div className="text-3xl md:text-4xl font-bold text-pink-400 mb-2">27</div>
                 <div className="text-gray-400 text-sm">Emotions Detected</div>
@@ -697,19 +706,13 @@ function AIEmotionIntelligencePlatform() {
                 <div className="text-gray-400 text-sm">Accuracy Rate</div>
               </div>
               <div className="text-center">
-
-                <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2"><100ms</div>
-                <div className="text-gray-400 text-sm">Response Time</div>
-              </div>
-              <div className="text-center">
-
-
                 <div className="text-3xl md:text-4xl font-bold text-emerald-400 mb-2">35%</div>
                 <div className="text-gray-400 text-sm">Satisfaction Increase</div>
               </div>
             </motion.div>
           </div>
         </section>
+<<<<<<< HEAD
 
                 transition={{ duration: 0.8, delay: 0.2 }} className="inline - flex items - center px - 4 py - 2 rounded - full bg - gradient - to - r from - pink - 500 / 20 to - purple - 500 / 20 border border - pink - 500 / 30 text - pink - 300 text - sm font - medium mb - 6">;
                 <Sparkles className="w - 4 h - 4 mr - 2" />;
@@ -797,6 +800,8 @@ function AIEmotionIntelligencePlatform() {
 <<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               viewport={{ once: true }} className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Powerful Features for Emotion Intelligence
@@ -808,12 +813,15 @@ function AIEmotionIntelligencePlatform() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
                 <motion.div
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
               viewport={{ once: true }} className="text - center mb - 16">;
               <h2 className="text - 4xl md:text - 5xl font - bold text - white mb - 6">;
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               transition={{ duration: 0.8, delay: 1.2 }} className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">;
               <div className="text-center">;
                 <div className="text-3xl md:text-4xl font-bold text-pink-400 mb-2">27</div>;
@@ -870,9 +878,11 @@ function AIEmotionIntelligencePlatform() {
               {features.map ((feature, index) => (
                 <motion.div;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   viewport={{ once: true }} className="group p-8 rounded-2xl bg-gradient-to-br from-white/5 to-white/10 border border-white/10 hover:border-pink-500/30 transition-all duration-300 transform hover:scale-105 hover:bg-white/10">
                   <div className="w-16 h-16 bg-gradient-to-r from-pink-500 to-purple-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                     <feature.icon className="w-8 h-8 text-white" />
@@ -881,6 +891,7 @@ function AIEmotionIntelligencePlatform() {
                   <p className="text-gray-400">{feature.description}</p>
                 </motion.div>
 
+<<<<<<< HEAD
 =======
                   key={index}
                   initial={{ opacity: 0, coordinate_y: 30 }}
@@ -904,6 +915,10 @@ function AIEmotionIntelligencePlatform() {
 =======
         {/* Use Cases Section */}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+        {/* Use Cases Section */}
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <section className="py - 20 bg - gradient - to - r from - pink - 500 / 5 to - purple - 500 / 5">;
           <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8">;
             <motion.div;
@@ -911,8 +926,10 @@ function AIEmotionIntelligencePlatform() {
               whileInView={{ opacity: 1, coordinate_y: 0 }}
               transition={{ duration: 0.8 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               viewport={{ once: true }} className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Transform Your Business with Emotion AI
@@ -924,6 +941,7 @@ function AIEmotionIntelligencePlatform() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {useCases.map((useCase, index) => (
                 <motion.div
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -942,14 +960,19 @@ function AIEmotionIntelligencePlatform() {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   key={index}
                   initial={{ opacity: 0, coordinate_y: 30 }}
                   whileInView={{ opacity: 1, coordinate_y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   viewport={{ once: true }} className="p-8 rounded-2xl bg-gradient-to-br from-white/5 to-white/10 border border-white/10 hover:border-pink-500/30 transition-all duration-300">
                   <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-2xl flex items-center justify-center mb-6">
                     <useCase.icon className="w-8 h-8 text-white" />
@@ -958,6 +981,7 @@ function AIEmotionIntelligencePlatform() {
                   <p className="text-gray-400 text-lg">{useCase.description}</p>
                 </motion.div>
 
+<<<<<<< HEAD
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                   viewport={{ once: true }} className="p - 8 rounded - 2xl bg - gradient - to - br from - white / 5 to - white / 10 border border - white / 10 hover:border - pink - 500 / 30 transition - all duration - 300">;
@@ -977,6 +1001,10 @@ function AIEmotionIntelligencePlatform() {
 =======
         {/* Pricing Section */}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+        {/* Pricing Section */}
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <section id="pricing" className="py - 20">;
           <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8">;
             <motion.div;
@@ -984,8 +1012,10 @@ function AIEmotionIntelligencePlatform() {
               whileInView={{ opacity: 1, coordinate_y: 0 }}
               transition={{ duration: 0.8 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               viewport={{ once: true }} className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Choose Your Plan
@@ -995,9 +1025,12 @@ function AIEmotionIntelligencePlatform() {
               </p>
             </motion.div>
 
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {pricing.map((plan, index) => (
                 <motion.div
@@ -1027,6 +1060,7 @@ function AIEmotionIntelligencePlatform() {
                 >;
                   {plan.popular && (
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -1037,11 +1071,14 @@ function AIEmotionIntelligencePlatform() {
 
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -1049,6 +1086,8 @@ function AIEmotionIntelligencePlatform() {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   <div className="text-center mb-8">
                     <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                     <div className="mb-4">
@@ -1063,6 +1102,7 @@ function AIEmotionIntelligencePlatform() {
                         <CheckCircle className="w-5 h-5 text-pink-400 flex-shrink-0" />
                         <span className="text-gray-300">{feature}</span>
                       </li>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1095,6 +1135,8 @@ function AIEmotionIntelligencePlatform() {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     href={plan.name === 'Enterprise' ? '/contact' : '/contact'}
                     className={`block w - full text - center py - 3 px - 6 rounded - xl font - semibold transition - all duration - 300 ${
                       plan.popular;
@@ -1103,6 +1145,7 @@ function AIEmotionIntelligencePlatform() {
                     }`}
                   >;
                     {plan.cta}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -1835,6 +1878,8 @@ export default function AIEmotionIntelligencePlatform() {_return (_<>
           </div>
         </section>
         {/* Contact Section */}
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1880,6 +1925,7 @@ export default function AIEmotionIntelligencePlatform() {_return (_<>
         <section className="py-20 bg-gradient-to-r from-pink-500/5 to-purple-500/5">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <motion.div
+<<<<<<< HEAD
               initial={{ opacity: 0, y: 30 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1925,11 +1971,33 @@ export default function AIEmotionIntelligencePlatform() {_return (_<>
                 </Link>
               </div>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+                  </Link>;
+                </motion.div>))}
+            </div>;
+          </div>;
+        </section>;
+        {/* Contact Section */}
+        <section className="py - 20 bg - gradient - to - r from - pink - 500 / 5 to - purple - 500 / 5">;
+          <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 text - center">;
+            <motion.div;
+              initial={{ opacity: 0, coordinate_y: 30 }}
+              whileInView={{ opacity: 1, coordinate_y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div className="flex flex-col items-center">
                   <Phone className="w-8 h-8 text-pink-400 mb-4" />
                   <span className="text-gray-300 text-sm">Call Us</span>
                   <a href={`tel:${contactInfo.mobile}`} className="text-white font-semibold hover:text-pink-400 transition-colors">
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -1949,11 +2017,14 @@ export default function AIEmotionIntelligencePlatform() {_return (_<>
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 </div>
                 <div className="flex flex-col items-center">
                   <Mail className="w-8 h-8 text-purple-400 mb-4" />
                   <span className="text-gray-300 text-sm">Email Us</span>
                   <a href={`mailto:${contactInfo.email}`} className="text-white font-semibold hover:text-purple-400 transition-colors">
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -1973,11 +2044,14 @@ export default function AIEmotionIntelligencePlatform() {_return (_<>
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 </div>
                 <div className="flex flex-col items-center">
                   <Globe className="w-8 h-8 text-cyan-400 mb-4" />
                   <span className="text-gray-300 text-sm">Visit Us</span>
                   <a href={contactInfo.website} className="text-white font-semibold hover:text-cyan-400 transition-colors">
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -1997,6 +2071,8 @@ export default function AIEmotionIntelligencePlatform() {_return (_<>
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 </div>
               </div>
             </motion.div>
@@ -2005,6 +2081,7 @@ export default function AIEmotionIntelligencePlatform() {_return (_<>
         <UltraFuturisticFooter2030 />
       </UltraFuturisticBackground2030>
     </>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 }
@@ -2017,6 +2094,17 @@ export default function AIEmotionIntelligencePlatform() {_return (_<>
 
 <<<<<<< HEAD
 =======
+=======
+  )
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+}
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             >;
               <h2 className="text - 4xl md:text - 5xl font - bold text - white mb - 6">;
                 Ready to Get Started?;
@@ -2071,11 +2159,9 @@ export default function AIEmotionIntelligencePlatform() {_return (_<>
       </UltraFuturisticBackground2030>;
     </>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
   } catch (error) {
@@ -2085,3 +2171,5 @@ export default function AIEmotionIntelligencePlatform() {_return (_<>
 }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

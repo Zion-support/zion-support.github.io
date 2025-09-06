@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -11,10 +12,13 @@ import React, { useState, useEffect } from 'react';
 import React, { useState, useEffect } from 'react',
 import React, { useState, useEffect } from 'react';
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 
 import {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -46,6 +50,8 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 =======
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   Menu
   X
   ChevronDown
@@ -106,6 +112,7 @@ import { motion, AnimatePresence } from 'framer-motion';
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield
   Microscope, DollarSign, Home, Users, Briefcase
 
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import {
 
@@ -113,6 +120,9 @@ import {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+import {
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   Menu,
   X,
   ChevronDown,
@@ -168,25 +178,33 @@ import {
   Eye,
   Infinity,
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   Hexagon,;
   Network,;} from 'lucide-react';import {
   Menu, X, ChevronDown, Search, Phone, Mail, MapPin, 
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, 
   Microscope, DollarSign, Home, Users, Briefcase, ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   BookOpen, MessageCircle, Star, TrendingUp, Target;
   Layers, Cpu, Database, Cloud, Lock, ShieldCheck;
   Earth, Factory, Car, Building, GraduationCap, Scale;
   Palette, Camera, Video, Music, Gamepad2, Heart;
   Leaf, Sun, Moon, Wind, Droplets, Mountain;
   Code, Wrench, Smartphone, BarChart3, Eye;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -275,14 +293,22 @@ const serviceCategories = [
       { name: 'AI HR Management Suite 2030', href: '/ai-hr-management-suite-2030', description: 'Intelligent human resources management powered by AI', price: '$149/month' }
     ]
   }
+=======
+
+];
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 const mainNavigation = [
   { name: 'Home', href: '/', icon: Home }
   { name: 'Services', href: '/services', icon: Briefcase }
@@ -291,6 +317,7 @@ const mainNavigation = [
   { name: 'Resources', href: '/resources', icon: BookOpen }
   { name: 'Case Studies', href: '/case-studies', icon: BarChart3 }
   { name: 'Blog', href: '/blog', icon: MessageCircle }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 ];
@@ -332,49 +359,183 @@ const mainNavigation = [
       { name: 'Metaverse Digital Reality Platform', href: '/metaverse - digital - reality - platform', description: 'Immersive virtual worlds', price: '$2, 499 / month' }
       { name: 'Quantum Research Platform', href: '/quantum - research - platform', description: 'Quantum computing research', price: '$3, 999 / month' }
       { name: 'AI Research Assistant', href: '/ai - research - assistant', description: 'Intelligent research support', price: '$899 / month' }
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     ];
-  }
+  };
+    title: '🧬 2030 Biotech & DNA Computing',;
+    icon: Microscope,;
+    color: 'from-green-600 via-emerald-600 to-teal-600',;
+    description: 'Biological computing and genetic engineering',;
+    services: [;
+      {;
+        name: 'Biotech DNA Computing Platform',;
+        href: '/biotech-dna-computing-platform',;
+        description: 'DNA-based computation',;
+        price: '$5,999/month',;
+      },;
+      {;
+        name: 'Biotech Personalized Nutrition',;
+        href: '/biotech-personalized-nutrition',;
+        description: 'DNA-based nutrition plans',;
+        price: '$599/month',;
+      },;
+      {;
+        name: 'AI Predictive Health Analytics',;
+        href: '/ai-predictive-health-analytics',;
+        description: 'Predictive health outcomes',;
+        price: '$1,599/month',;
+      },;
+      {;
+        name: 'Advanced Research Automation',;
+        href: '/advanced-research-automation',;
+        description: 'Automated research workflows',;
+        price: '$1,999/month',;
+      },;
+    ],;
+  },  {      { name: 'Biotech DNA Computing Platform', href: '/biotech-dna-computing-platform', description: 'DNA-based computation', price: '$5,999/month' };
+      { name: 'Biotech Personalized Nutrition', href: '/biotech-personalized-nutrition', description: 'DNA-based nutrition plans', price: '$599/month' },;
+    title: '🧬 2030 Biotech & DNA Computing',
+    icon: Microscope,
+    color: 'from - green - 600 via - emerald - 600 to - teal - 600',
+    description: 'Biological computing and genetic engineering',
+      { name: 'AI Predictive Health Analytics', href: '/ai-predictive-health-analytics', description: 'Predictive health outcomes', price: '$1,599/month' };
+      { name: 'Advanced Research Automation', href: '/advanced-research-automation', description: 'Automated research workflows', price: '$1,999/month' }
+    ];
+  };
+    title: '🏙️ 2030 Enterprise IT Solutions',;
+    icon: Cpu,;
+    color: 'from-blue-600 via-cyan-600 to-teal-600',;
+    description: 'Autonomous enterprise infrastructure',;
+    services: [;
+      {;
+        name: 'Autonomous DevOps Platform',;
+        href: '/autonomous-devops-platform',;
+        description: 'Fully autonomous DevOps',;
+        price: '$2,999/month',;
+      },;
+      {;
+        name: 'Autonomous IT Operations Center',;
+        href: '/autonomous-it-operations-center',;
+        description: 'Self-managing IT infrastructure',;
+        price: '$6,999/month',;
+      },;
+      {;
+        name: 'AI-Powered Enterprise Security',;
+        href: '/ai-powered-enterprise-security',;
+        description: 'AI-driven threat detection',;
+        price: '$2,999/month',;
+      },;
+      {;
+        name: 'Intelligent Data Governance',;
+        href: '/intelligent-data-governance',;
+        description: 'AI-powered data management',;
+        price: '$7,999/month',;
+      },;
+    ],;
+  },  {      { name: 'Autonomous DevOps Platform', href: '/autonomous-devops-platform', description: 'Fully autonomous DevOps', price: '$2,999/month' };
+    title: '🏙️ 2030 Enterprise IT Solutions',
+    icon: Cpu,
+    color: 'from - blue - 600 via - cyan - 600 to - teal - 600',
+    description: 'Autonomous enterprise infrastructure',
+      { name: 'Autonomous IT Operations Center', href: '/autonomous-it-operations-center', description: 'Self-managing IT infrastructure', price: '$6,999/month' };
+      { name: 'AI-Powered Enterprise Security', href: '/ai-powered-enterprise-security', description: 'AI-driven threat detection', price: '$2,999/month' };
+      { name: 'Intelligent Data Governance', href: '/intelligent-data-governance', description: 'AI-powered data management', price: '$7,999/month' }
+    ];
+  };
+    title: '🌌 2030 Space & Metaverse Tech',;
+    icon: Rocket,;
+    color: 'from-teal-600 via-emerald-600 to-green-600',;
+    description: 'Space exploration and digital reality',;
+    services: [;
+      {;
+        name: 'Space Mining Automation Platform',;
+        href: '/space-mining-automation-platform',;
+        description: 'Automated asteroid mining',;
+        price: '$8,999/month',;
+      },;
+      {;
+        name: 'Metaverse Digital Reality Platform',;
+        href: '/metaverse-digital-reality-platform',;
+        description: 'Immersive virtual worlds',;
+        price: '$2,499/month',;
+      },;
+      {;
+        name: 'Quantum Research Platform',;
+        href: '/quantum-research-platform',;
+        description: 'Quantum computing research',;
+        price: '$3,999/month',;
+      },;
+      {;
+        name: 'AI Research Assistant',;
+        href: '/ai-research-assistant',;
+        description: 'Intelligent research support',;
+        price: '$899/month',;
+      },;
+    ],;
+  },  {      { name: 'Space Mining Automation Platform', href: '/space-mining-automation-platform', description: 'Automated asteroid mining', price: '$8,999/month' };
+    title: '🌌 2030 Space & Metaverse Tech',
+    icon: Rocket,
+    color: 'from - teal - 600 via - emerald - 600 to - green - 600',
+    description: 'Space exploration and digital reality',
+      { name: 'Metaverse Digital Reality Platform', href: '/metaverse-digital-reality-platform', description: 'Immersive virtual worlds', price: '$2,499/month' };
+      { name: 'Quantum Research Platform', href: '/quantum-research-platform', description: 'Quantum computing research', price: '$3,999/month' };
+      { name: 'AI Research Assistant', href: '/ai-research-assistant', description: 'Intelligent research support', price: '$899/month' }
+    ];
+  };
+    title: '🎯 2030 Innovative Micro SAAS',;
+    icon: Target,;
+    color: 'from-green-600 via-yellow-600 to-orange-600',;
+    description: 'Cutting-edge micro solutions',;
+    services: [;
+      {;
+        name: 'AI Business Intelligence Suite 2030',;
+        href: '/ai-business-intelligence-suite-2030',;
+        description: 'AI-powered business analytics and insights',;
+        price: '$299/month',;
+      },;
+      {;
+        name: 'AI Customer Experience Platform 2030',;
+        href: '/ai-customer-experience-platform-2030',;
+        description: 'AI-powered customer experience management',;
+        price: '$199/month',;
+      },;
+      {;
+        name: 'AI Marketing Automation Suite 2030',;
+        href: '/ai-marketing-automation-2030',;
+        description: 'Intelligent marketing automation powered by AI',;
+        price: '$179/month',;
+      },;
+      {;
+        name: 'AI HR Management Suite 2030',;
+        href: '/ai-hr-management-suite-2030',;
+        description: 'Intelligent human resources management powered by AI',;
+        price: '$149/month',;
+      },;
+    ],;
+  },];      { name: 'AI Business Intelligence Suite 2030', href: '/ai-business-intelligence-suite-2030', description: 'AI-powered business analytics and insights', price: '$299/month' },;
+      { name: 'AI Customer Experience Platform 2030', href: '/ai-customer-experience-platform-2030', description: 'AI-powered customer experience management', price: '$199/month' },;
+      { name: 'AI Marketing Automation Suite 2030', href: '/ai-marketing-automation-2030', description: 'Intelligent marketing automation powered by AI', price: '$179/month' },;
+  {
     title: '🎯 2030 Innovative Micro SAAS',
     icon: Target,
-    color: 'from - green - 600 via - yellow - 600 to - orange - 600',
-    description: 'Cutting - edge micro solutions',
-    services: [;
-      {
-        name: 'AI Business Intelligence Suite 2030',
-        href: '/ai - business - intelligence - suite - 2030',
-        description: 'AI - powered business analytics and insights',
-        price: '$299 / month',
-      },
-      {
-        name: 'AI Customer Experience Platform 2030',
-        href: '/ai - customer - experience - platform - 2030',
-        description: 'AI - powered customer experience management',
-        price: '$199 / month',
-      },
-      {
-        name: 'AI Marketing Automation Suite 2030',
-        href: '/ai - marketing - automation - 2030',
-        description: 'Intelligent marketing automation powered by AI',
-        price: '$179 / month',
-      },
-      {
-        name: 'AI HR Management Suite 2030',
-        href: '/ai - hr - management - suite - 2030',
-        description: 'Intelligent human resources management powered by AI',
-        price: '$149 / month',
-      },
-    ],
-  }, ];      { name: 'AI Business Intelligence Suite 2030', href: '/ai - business - intelligence - suite - 2030', description: 'AI - powered business analytics and insights', price: '$299 / month' },
-      { name: 'AI Customer Experience Platform 2030', href: '/ai - customer - experience - platform - 2030', description: 'AI - powered customer experience management', price: '$199 / month' },
-      { name: 'AI Marketing Automation Suite 2030', href: '/ai - marketing - automation - 2030', description: 'Intelligent marketing automation powered by AI', price: '$179 / month' },
-      { name: 'AI HR Management Suite 2030', href: '/ai - hr - management - suite - 2030', description: 'Intelligent human resources management powered by AI', price: '$149 / month' }
+    color: 'from-green-600 via-yellow-600 to-orange-600',
+    description: 'Cutting-edge micro solutions',
+    services: [
+      { name: 'AI Business Intelligence Suite 2030', href: '/ai-business-intelligence-suite-2030', description: 'AI-powered business analytics and insights', price: '$299/month' },
+      { name: 'AI Customer Experience Platform 2030', href: '/ai-customer-experience-platform-2030', description: 'AI-powered customer experience management', price: '$199/month' },
+      { name: 'AI Marketing Automation Suite 2030', href: '/ai-marketing-automation-2030', description: 'Intelligent marketing automation powered by AI', price: '$179/month' },
+      { name: 'AI HR Management Suite 2030', href: '/ai-hr-management-suite-2030', description: 'Intelligent human resources management powered by AI', price: '$149/month' }
     ];
   }
+<<<<<<< HEAD
 const main_navigation = [;
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   { name: 'Home', href: '/', icon: Home },
   { name: 'Services', href: '/services', icon: Briefcase },
   { name: 'Solutions', href: '/solutions', icon: Layers },
@@ -382,6 +543,7 @@ const main_navigation = [;
   { name: 'Resources', href: '/resources', icon: BookOpen },
   { name: 'Case Studies', href: '/case - studies', icon: BarChart3 },
   { name: 'Blog', href: '/blog', icon: MessageCircle },
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   { name: 'Contact', href: '/contact', icon: MessageCircle }
@@ -436,23 +598,38 @@ const quickLinks = [
 ];
 
 
+=======
+  { name: 'Contact', href: '/contact', icon: MessageCircle }
+];
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export default function UltraFuturisticNavigation2030() {
 
 
 export default function UltraFuturisticNavigation2030() {;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export default function UltraFuturisticNavigation2030() {
 
+
+
 export default function UltraFuturisticNavigation2030() {;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+export default function UltraFuturisticNavigation2030() {
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const [isOpen, setIsOpen] = useState(false);
   const [activeCategory, setActiveCategory] = useState<number | null>(null);
   const [isScrolled, setIsScrolled] = useState(false);
   useEffect(() => {
     const handleScroll = () => {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -469,6 +646,8 @@ export default function UltraFuturisticNavigation2030() {;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 const mainNavigation = [;
   { name: 'Home', href: '/', icon: Home },;
   { name: 'Services', href: '/services', icon: Briefcase },;
@@ -546,6 +725,7 @@ export default function UltraFuturisticNavigation2030() {;
     <>;
       {/* Top Contact Bar */}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -598,6 +778,11 @@ export default function UltraFuturisticNavigation2030() {;
               >                {contactInfo.website.replace('https://', '')}              <span>{contactInfo.mobile}</span>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
             </div>
+=======
+
+              <span>{contactInfo.mobile}</span>
+            </div>
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <div className="flex items-center space-x-2">
               <Mail className="w-4 h-4 text-cyan-400" />
               <span>{contactInfo.email}</span>
@@ -617,6 +802,7 @@ export default function UltraFuturisticNavigation2030() {;
           </div>
         </div>
       </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
                 href={contactInfo && contactInfo.website}
@@ -750,6 +936,8 @@ function UltraFuturisticNavigation2030() {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled 
           ? 'bg-black/90 backdrop-blur-xl border-b border-purple-500/20 shadow-2xl' 
@@ -758,15 +946,19 @@ function UltraFuturisticNavigation2030() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-20">
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         }`}
       >
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <div className='flex items-center justify-between h-20'>
 
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -774,6 +966,8 @@ function UltraFuturisticNavigation2030() {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             {/* Logo */}
             <div className='flex items-center space-x-4'>;
               <Link href='/' className='flex items-center space-x-3 group'>;
@@ -790,6 +984,7 @@ function UltraFuturisticNavigation2030() {
                   <span className='text-xs text-gray-400 font-mono'>;
                     2030 Future Technology;
                   </span>                </div>            {/* Logo */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -829,6 +1024,8 @@ function UltraFuturisticNavigation2030() {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 {/* Mega Menu */}
                 <div className='absolute top-full left-0 w-screen max-w-6xl bg-black/95 backdrop-blur-xl border border-purple-500/20 rounded-2xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform group-hover:translate-y-0 translate-y-4'>;
                   <div className='p-8'>;
@@ -866,6 +1063,7 @@ function UltraFuturisticNavigation2030() {
                 <Link
                   key={item.name}
                   href={item.href}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200 group"
@@ -960,6 +1158,8 @@ className="flex items-center space-x-2 text-gray-300 hover:text-white transition
                   key={item.name}
                   href={item.href}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200 group"
                 >
                   <item.icon className="w-4 h-4 group-hover:text-purple-400 transition-colors" />
@@ -967,6 +1167,7 @@ className="flex items-center space-x-2 text-gray-300 hover:text-white transition
                 </Link>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
               ))}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -1041,15 +1242,22 @@ className="flex items-center space-x-2 text-gray-300 hover:text-white transition
 
                               </Link>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+                              </Link>
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                             ))}
                           </div>;
                         </div>;
                       ))}
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {/* Main Navigation */}
       <nav;
         className={`fixed top - 0 left - 0 right - 0 z - 50 transition - all duration - 300 ${
@@ -1197,14 +1405,19 @@ className="flex items-center space-x-2 text-gray-300 hover:text-white transition
                           </div>;
                         </div>))}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     </div>;
                   </div>;
                 </div>;
               </div>;
             </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -1256,6 +1469,11 @@ className="flex items-center space-x-2 text-gray-300 hover:text-white transition
             {/* Mobile Menu Button */}
             <div className="lg:hidden">
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+            {/* CTA Buttons */}
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <button
                 onClick={toggleMenu}
                 className='p-2 rounded-lg text-gray-400 hover:text-white hover:bg-purple-500/20 transition-colors duration-200'>;
@@ -1268,13 +1486,17 @@ className="flex items-center space-x-2 text-gray-300 hover:text-white transition
                 className="p-2 rounded-lg text-gray-400 hover:text-white hover:bg-purple-500/20 transition-colors duration-200">;
                 {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               </button>;
             </div>;
           </div>;
         </div>;
 
+<<<<<<< HEAD
 
 =======
 =======
@@ -1288,6 +1510,8 @@ className="flex items-center space-x-2 text-gray-300 hover:text-white transition
 
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         {/* Mobile Menu */}
         <AnimatePresence>;
           {isOpen && (;
@@ -1295,7 +1519,6 @@ className="flex items-center space-x-2 text-gray-300 hover:text-white transition
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
-
 
             >
               <div className='px-4 py-6 space-y-6'>
@@ -1321,6 +1544,7 @@ className="flex items-center space-x-2 text-gray-300 hover:text-white transition
                       <item && item.icon className="w-5 h-5" />;
                       <span>{item && item.name}</span>;
                     </Link>;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -1397,6 +1621,36 @@ className="flex items-center space-x-2 text-gray-300 hover:text-white transition
 =======
                 </div>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+                {/* Mobile Services */}
+                <div className='space-y-4'>
+                  <h3 className='text-lg font-semibold text-white px-3'>
+                    Our Services
+                  </h3>
+                  <div className='grid grid-cols-2 gap-3'>
+                    {quickLinks.map(link => (                      <Link                <div className="space-y-4">
+                  <h3 className="text-lg font-semibold text-white px-3">Our Services</h3>
+                  <div className="grid grid-cols-2 gap-3">
+                    {quickLinks.map((link) => (
+
+
+                        key={link.name}
+                        href={link.href}
+                        onClick={closeMenu}
+                        className={`p-3 rounded-lg text-center transition-all duration-200 transform hover:shadow-xl hover:shadow-cyan-500/30 ${
+                          link.color.includes('from-')
+                            ? `bg-gradient-to-r ${link.color} text-white`
+                            : 'bg-gray-800 text-gray-300 hover:bg-gray-700'
+                        }`}
+                      >
+                        <link.icon className='w-6 h-6 mx-auto mb-2' />
+
+                        <span className='text-sm font-medium'>{link.name}</span>                      </Link>                          link.color.includes('from-') 
+                            ? `bg-gradient-to-r ${link.color} text-white` 
+
+
+                            : 'bg-gray-800 text-gray-300 hover:bg-gray-700'
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 {/* Mobile Services */}
                 <div className='space-y-4'>;
                   <h3 className='text-lg font-semibold text-white px-3'>;
@@ -1415,6 +1669,7 @@ className="flex items-center space-x-2 text-gray-300 hover:text-white transition
                             ? `bg-gradient-to-r ${link && link.color} text-white`;
                             : 'bg-gray-800 text-gray-300 hover:bg-gray-700';
                         }`}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
                 <div className="space-y-4">
@@ -1482,11 +1737,14 @@ className="flex items-center space-x-2 text-gray-300 hover:text-white transition
                             ? `bg-gradient-to-r ${link.color} text-white` 
                             : 'bg-gray-800 text-gray-300 hover:bg-gray-700'
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       >;
                         <link && link.icon className='w-6 h-6 mx-auto mb-2' />;
                         <span className='text-sm font-medium'>{link && link.name}</span>                      </Link>                          link && link.color.includes('from-') ;
                             ? `bg-gradient-to-r ${link && link.color} text-white` ;
                             : 'bg-gray-800 text-gray-300 hover:bg-gray-700';
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -1499,15 +1757,11 @@ className="flex items-center space-x-2 text-gray-300 hover:text-white transition
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                       </Link>
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     ))}
-
-                  </div>;
-                </div>;
-
-
                 {/* Mobile CTA */}
-
-
+                <div className='space-y-3 pt-4 border-t border-purple-500/20'>;
                   <Link
                     href='/contact'
                     onClick={closeMenu}
@@ -1526,6 +1780,7 @@ className="flex items-center space-x-2 text-gray-300 hover:text-white transition
                     className='block w-full px-6 py-3 border border-purple-500/30 text-purple-400 text-center rounded-lg hover:bg-purple-500/10 transition-all duration-200'                    href="/pricing"
                     onClick={closeMenu}
                     className="block w-full px-6 py-3 border border-purple-500/30 text-purple-400 text-center rounded-lg hover:bg-purple-500/10 transition-all duration-200">;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
                       on_click={close_menu}
@@ -1556,6 +1811,8 @@ className="flex items-center space-x-2 text-gray-300 hover:text-white transition
                             : 'bg - gray - 800 text - gray - 300 hover:bg - gray - 700';
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                         }`}
                       >
                         <link.icon className="w-6 h-6 mx-auto mb-2" />
@@ -1565,6 +1822,7 @@ className="flex items-center space-x-2 text-gray-300 hover:text-white transition
                   </div>;
                 </div>;
                 {/* Mobile CTA */}
+<<<<<<< HEAD
 <<<<<<< HEAD
                 <div className='space - y-3 pt - 4 border - t border - purple - 500 / 20'>;
                   <Link;
@@ -1638,6 +1896,8 @@ className="flex items-center space-x-2 text-gray-300 hover:text-white transition
 
 
 <<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {/* Spacer for fixed navigation */}
       <div className='h-20'></div>;
     </>;
@@ -1645,8 +1905,8 @@ className="flex items-center space-x-2 text-gray-300 hover:text-white transition
     </>;
   );
 }
-=======
 
+<<<<<<< HEAD
 ;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -1658,12 +1918,17 @@ className="flex items-center space-x-2 text-gray-300 hover:text-white transition
         </AnimatePresence>
       </nav>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {/* Spacer for fixed navigation */}
       <div className="h-20"></div>
     </>
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             </motion.div>)}
         </AnimatePresence>;
       </nav>;
@@ -1672,6 +1937,7 @@ className="flex items-center space-x-2 text-gray-300 hover:text-white transition
     </>);      <div className="h - 20"></div>;
     </>);
 }
+<<<<<<< HEAD
 
 =======
 
@@ -1689,3 +1955,5 @@ className="flex items-center space-x-2 text-gray-300 hover:text-white transition
     </>
   );
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

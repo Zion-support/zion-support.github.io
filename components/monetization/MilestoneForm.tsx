@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -234,6 +235,11 @@ function MilestoneForm() {
 
 import React, { useState } from 'react';
 
+=======
+};
+
+export default function MilestoneForm(): any ({ onSubmit }: Props) {;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 type Props = {
   onSubmit: (payload: {
     title: string;
@@ -241,61 +247,20 @@ type Props = {
     dueDate: string;
     amountUsd: number;
   }) => Promise<void> | void;};  onSubmit: (payload: { title: string, description?: string, dueDate: string, amountUsd: number }) => Promise<void> | void
-}
-export default function MilestoneForm({ onSubmit }: Props) {
-};
-
-export default function MilestoneForm({ onSubmit }: Props) {;
+  }) => Promise<void> | void;};  onSubmit: (payload: { title: string, description?: string, dueDate: string, amountUsd: number }) => Promise<void> | void
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
   const [dueDate, setDueDate] = useState('');
   const [amountUsd, setAmountUsd] = useState<string>('');
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setError(null);
-    const parsedAmount = Number(amountUsd)
-    if (!title |!dueDate |!amountUsd |Number.isNaN(parsedAmount)) {
-      setError('Please provide Title, Due Date and a valid Amount.');
-      return;
-    }
-    setLoading(true);
-    try {
-      await onSubmit({
-        title
-        description: description |undefined
-        dueDate
-        amountUsd: parsedAmount
-      });
-      setTitle('');
-      setDescription('');
-      setDueDate('');
-      setAmountUsd('');
-    } catch (err: any) {
-      setError(err?.message |'Failed to create milestone');
-    } finally {
-      setLoading(false);    }
-  }
-  return (
-    <form onSubmit={handleSubmit} className='space-y-4'>
-      {error && <div className='text-red-600 text-sm'>{error}</div>}    }
-    setLoading(true);
-    try {
-      await onSubmit({ title, description: description |undefined, dueDate, amountUsd: parsedAmount })
-      setTitle('');
-      setDescription('');
-      setDueDate('');
-      setAmountUsd('')
-    } catch (err: any) {
-      setError(err?.message |'Failed to create milestone')
-    } finally {
-      setLoading(false)
     }
   }
   };
-
+      setLoading(false);    }
+  }
   return (
+<<<<<<< HEAD
     <form onSubmit={handleSubmit} className='space-y-4'>
       {error && <div className='text-red-600 text-sm'>{error}</div>}
       <div>
@@ -348,6 +313,18 @@ export default function MilestoneForm({ onSubmit }: Props) {;
         <div>
           <label className='block text-sm font-medium'>Amount (USD)</label>        <textarea
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+    <form onSubmit={handleSubmit} className='space-y-4'>;
+      {error && <div className='text-red-600 text-sm'>{error}</div>}    }
+    setLoading(true);
+    }
+  }
+
+          placeholder='Phase 1 – Backend Setup'          required;
+        />;
+      </div>;
+      <div>;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           className="mt-1 w-full rounded border px-3 py-2"
           value={description}
           onChange={(e) => setDescription(e && e.target.value)}
@@ -370,6 +347,7 @@ export default function MilestoneForm({ onSubmit }: Props) {;
           on_change={e => set_description (e.target.value)}
           placeholder='Describe deliverables...';
           rows={3}
+<<<<<<< HEAD
 <<<<<<< HEAD
         />;
       </div>;
@@ -444,11 +422,14 @@ export default function MilestoneForm({ onSubmit }: Props) {;
             onChange={e => setAmountUsd(e.target.value)}
             placeholder='3000'            required          <input
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             type="number"
             min={0}
             step="0 && 0.01"
             className="mt-1 w-full rounded border px-3 py-2"
             value={amountUsd}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -469,11 +450,14 @@ export default function MilestoneForm({ onSubmit }: Props) {;
             value={amount_usd}
             on_change={(e) => setAmountUsd (e.target.value)}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             placeholder="3000";
             required;
           />;
         </div>;
       </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -493,11 +477,14 @@ export default function MilestoneForm({ onSubmit }: Props) {;
       >
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         {loading ? 'Adding...' : 'Add Milestone'}
 
       </button>;
     </form>;
   );
+<<<<<<< HEAD
 =======
 =======
 
@@ -508,11 +495,12 @@ export default function MilestoneForm({ onSubmit }: Props) {;
       >
         {loading ? 'Adding...' : 'Add Milestone'}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   );
 
 }
-
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
@@ -531,6 +519,7 @@ export default function MilestoneForm({ onSubmit }: Props) {;
     </form>);
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
       </button>
@@ -542,3 +531,5 @@ export default function MilestoneForm({ onSubmit }: Props) {;
   );
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

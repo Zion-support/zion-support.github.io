@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -40,6 +41,8 @@ export default function JobsListPage() {
       description: 'Design pipelines for training/inference at scale.',;
     },;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import Link from 'next / link';
 import EnhancedMarketplaceCard from '../../components / ui / EnhancedMarketplaceCard';
 import EnhancedLoading from '../../components / ui / EnhancedLoading';
@@ -54,6 +57,19 @@ function JobsListPage() {
     const t = set_timeout (() => set_loading (false), 500);
     return () => clear_timeout (t);
   }, []);
+import Link from 'next/link',
+import EnhancedMarketplaceCard from '../../components/ui/EnhancedMarketplaceCard',
+import EnhancedLoading from '../../components/ui/EnhancedLoading';
+import { useEffect, useState  } from 'react';
+import InteractiveSearch from '../../components/ui/InteractiveSearch';
+export default function JobsListPage() {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const t = setTimeout(() => setLoading(false), 500);
+    return () => clearTimeout(t);
+  }, []);
+  const jobs = [
 ;
   const jobs = [;
     {
@@ -70,6 +86,7 @@ function JobsListPage() {
     },
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   ];
+<<<<<<< HEAD
 <<<<<<< HEAD
 ;
   return (
@@ -95,6 +112,11 @@ export default function JobsListPage() {
 <<<<<<< HEAD
 =======
 
+=======
+;
+  return (
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import EnhancedLoading from '../../components/ui/EnhancedLoading',
 import { useEffect, useState } from 'react',
 import InteractiveSearch from '../../components/ui/InteractiveSearch',
@@ -115,6 +137,7 @@ export default function JobsListPage() {
           {jobs.map((j) => (
             <Link key={j.slug} href={`/jobs/${j.slug}`}>
               <a>
+<<<<<<< HEAD
                 <EnhancedMarketplaceCard title={j.title} subtitle={j.subtitle} description={j.description} footer={<span className="text-blue-600">View Job →</span>} />
 <<<<<<< HEAD
               </a>
@@ -135,6 +158,8 @@ export default function JobsListPage() {
   );
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     </div>
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   )
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
@@ -158,15 +183,19 @@ export default function JobsListPage() {
     </div>);
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -180,6 +209,8 @@ export default function JobsListPage() {
 
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -198,6 +229,7 @@ export default function JobsListPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -205,3 +237,5 @@ export default function JobsListPage() {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

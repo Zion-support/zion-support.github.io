@@ -1,5 +1,6 @@
 // Polyfill fetch and enable fetch mocks;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import 'whatwg - fetch',
 import fetch_mock from 'jest - fetch - mock',
@@ -35,10 +36,13 @@ global.TextEncoder = TextEncoder,;
 // @ts-expect-error - Node's TextDecoder might not perfectly match DOM's, but it's usually sufficient for tests;
 global.TextDecoder = TextDecoder,;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 // Set up a mock for Vite environment variables accessed via import.meta.env;
 // This assumes that Babel (via babel - plugin - transform - import - meta or similar);
 // will transform import.meta.env.VITE_SOME_VAR to something like process.env.VITE_SOME_VAR;
 // or that import.meta itself is transformed into an object where 'env' can be populated.;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 process.env.VITE_REOWN_PROJECT_ID = 'test_project_id_from_jest_setup',
@@ -1056,3 +1060,5 @@ getItem: jest.fn ()
 //@ts-ignore if (!global.vi.runAllTimers) global.vi.runAllTimers = jest.runAllTimers.bind (jest);
 // @ts-ignore 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

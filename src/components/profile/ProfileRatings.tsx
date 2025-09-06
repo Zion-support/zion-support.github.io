@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import { useState, useEffect } from 'react'
 import { useState, useEffect } from 'react'
@@ -25,6 +26,8 @@ import { ReviewsList } from "@/components/reviews/ReviewsList",
 import { useReviews } from "@/hooks/useReviews",
 import { Button } from "@/components/ui/button",
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 interface ProfileRatingsProps {
   userId: string,
@@ -62,13 +65,12 @@ export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: P
 
 
   return (
-    <div className='space-y-6'>;
-      <div className='flex flex-col md:flex-row gap-6'>;
         <div className='md:w-1/3'>          <ReviewStats
 
 
 
   return (
+<<<<<<< HEAD
     <div className="space-y-6">;
       <div className="flex flex-col md:flex-row gap-6">;
         <div className="md:w-1/3">;
@@ -175,6 +177,8 @@ export function ProfileRatings({
 
   return (
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { Button } from "@/components/ui/button",
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
 
@@ -224,6 +228,7 @@ export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: P
             averageRating={averageRating}
             totalReviews={ratingCount}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
             ratingDistribution={ratingDistribution}
@@ -245,6 +250,8 @@ export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: P
             <TabsContent value='all'>              <ReviewsList
             <TabsContent value='all'>              <ReviewsList        
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <div className="md:w-2/3">
           <Tabs defaultValue="all">
             <TabsList className="mb-4">
@@ -253,6 +260,7 @@ export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: P
               <TabsTrigger value="critical">Critical</TabsTrigger>
             </TabsList>
             <TabsContent value="all">
+<<<<<<< HEAD
 <<<<<<< HEAD
 
               <ReviewsList
@@ -297,34 +305,47 @@ export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: P
 
                 reviews={reviews.filter((r) => r.rating >= 4)}
 =======
+=======
+            <TabsContent value="positive">
+              <ReviewsList
+            ratingDistribution={ratingDistribution}
+          />
+        </div>
+        
+        <div className="md:w-2/3">
+          <Tabs defaultValue="all">
+            <TabsList className="mb-4">
+              <TabsTrigger value="all">All Reviews ({reviews.length})</TabsTrigger>
+              <TabsTrigger value="positive">Positive</TabsTrigger>
+              <TabsTrigger value="critical">Critical</TabsTrigger>
+            </TabsList>
+            
+            <TabsContent value="all">
+              <ReviewsList
+                reviews={reviews}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 isLoading={isLoading}
                 onReportReview={reportReview}
               />
             </TabsContent>
-            <TabsContent value='critical'>
+            
+            <TabsContent value="positive">
               <ReviewsList
+<<<<<<< HEAD
                 reviews={reviews.filter(r => r.rating < 4)}                reviews={reviews.filter((r) => r.rating < 4)}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+                reviews={reviews.filter((r) => r.rating >= 4)}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 isLoading={isLoading}
-                onReportReview={reportReview}              />;
-            </TabsContent>;
-
-            <TabsContent value='positive'>;
-
-
-              <ReviewsList
-                reviews={reviews && reviews.filter(r => r && r.rating >= 4)}                isLoading={isLoading}
                 onReportReview={reportReview}
-
-
-              />;
-            </TabsContent>;
-
-            <TabsContent value='critical'>;
+              />
+            </TabsContent>
               <ReviewsList
                 reviews={reviews && reviews.filter(r => r && r.rating < 4)}                isLoading={isLoading}                reviews={reviews && reviews.filter((r) => r && r.rating >= 4)}
 
             <TabsContent value="positive">;
+<<<<<<< HEAD
 
 
               <ReviewsList
@@ -387,6 +408,8 @@ export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: P
             <TabsContent value='critical'>
               <ReviewsList
                 reviews={reviews.filter(r => r.rating < 4)}                reviews={reviews.filter((r) => r.rating < 4)}
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             
             <TabsContent value="critical">
               <ReviewsList
@@ -399,16 +422,11 @@ export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: P
 
             <TabsContent value='critical'>;
               <ReviewsList
-                reviews={reviews && reviews.filter(r => r && r.rating < 4)}                reviews={reviews && reviews.filter((r) => r && r.rating < 4)}
-
-            <TabsContent value="critical">;
-
+            <TabsContent value="critical">
               <ReviewsList
-                reviews={reviews && reviews.filter((r) => r && r.rating < 4)}
+                reviews={reviews.filter((r) => r.rating < 4)}
                 isLoading={isLoading}
                 onReportReview={reportReview}
-
-
   reportReview ;
 }/> </TabsContent> </Tabs> </div> </div> </div>) ;
 }"};
@@ -556,6 +574,7 @@ if ( {) {
           </Tabs>;
         </div>;
       </div>;
+<<<<<<< HEAD
     </div>;
   );
 }
@@ -563,3 +582,5 @@ if ( {) {
 }
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

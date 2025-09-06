@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 export async /**
  * fetch_milestones - Function description
@@ -48,14 +49,22 @@ export async function fetchMilestones() {
     credentials: 'include'});
   if (!res.ok) throw new Error('Failed to load milestones');
   return res.json();
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
-export async function createMilestone() {
-  const res = await fetch(`/api/projects/${projectId}/milestones`, {method: 'POST';
-    headers: { 'Content-Type': 'application/json' }
-    credentials: 'include';
-    body: JSON.stringify(payload)});
-  if (!res.ok) throw new Error(await res.text());
+;
+export async function createMilestone(projectId: string, payload: any) {;
+  const res = await fetch(`/api/projects/${projectId}/milestones`, {;
+    method: 'POST',;
+    headers: { 'Content-Type': 'application/json' },;
+    credentials: 'include',;
+    body: JSON.stringify(payload)}),;
+  if (!res.ok) throw new Error(await res.text()),;
   return res.json();
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
 export async function updateMilestoneStatus() {
   const res = await fetch(`/api/projects/${projectId}/milestones/${milestoneId}`, {method: 'PATCH';
@@ -91,6 +100,7 @@ export async function createMilestone(projectId: string, payload: any) {;
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
@@ -110,6 +120,8 @@ export async function createMilestone(projectId: string, payload: any) {;
   return res.json();
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 ;
 export async function updateMilestoneStatus(projectId: string, milestoneId: string, body: any) {;
@@ -121,17 +133,23 @@ export async function updateMilestoneStatus(projectId: string, milestoneId: stri
   if (!res.ok) throw new Error(await res.text());
   return res.json();
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
 
 }
 }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

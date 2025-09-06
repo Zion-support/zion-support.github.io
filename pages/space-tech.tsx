@@ -1,7 +1,10 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 import React from "react";
 import Head from "next/head";
@@ -13,6 +16,7 @@ return (
       <meta
         name="description"
         content="Space mission control, satellite operations, and secure communications consulting."
+<<<<<<< HEAD
 
       />;
 <<<<<<< HEAD
@@ -50,6 +54,8 @@ return (
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <div
                 key={f}
                 className="flex items-start gap-3 p-4 rounded-xl bg-black/40 border border-gray-700/60">;
@@ -57,6 +63,7 @@ return (
                 <span className="text-gray-200">{f}</span>{" "}
               </div>;
             ))}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
           </div>;
@@ -68,14 +75,19 @@ return (
         </section>;
         <section className="text-center">;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <a
             href="/space-technology"
             className="inline-flex items-center gap-2 text-cyan-300 hover: text-cyan-200">;
             <Globe2 className="w-4 h-4" />{" "}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
             <span>Explore detailed Space Technology offerings</span>;
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <span>Explore detailed Space Technology offerings</span>
           </a>
         </section>
@@ -83,6 +95,7 @@ return (
     </div>
   </Layout>
 );
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 import React from './react';
@@ -245,6 +258,8 @@ export default function SpaceTechPage() {
     'Mission control dashboards and telemetry pipelinesSatellite operations playbooks and anomaly responseGround station integrations and data delivery SLAsSecure communications and zero-trust segmentation'],
   return (_<Layout>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <Head>
         <title>Space Technology | Zion Tech Group</title>
         <meta name="description" content="Space mission control, satellite operations, and secure communications consulting." />
@@ -260,6 +275,7 @@ export default function SpaceTechPage() {
             <p className="text-gray-300 text-lg max-w-3xl mx-auto">Secure, reliable operations for space and earth observation missions.</p>
             <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
 <<<<<<< HEAD
+<<<<<<< HEAD
               <a href="/contact" className="px-8 py-4">Discuss a Mission</a>
               <a href="/market-pricing" className="px-8 py-4">See Market Pricing</a>
 =======
@@ -269,6 +285,8 @@ export default function SpaceTechPage() {
             </div>
           </header>
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <section>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 text-center">Capabilities</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -276,6 +294,7 @@ export default function SpaceTechPage() {
                 <div key={f} className="flex items-start gap-3 p-4 rounded-xl bg-black/40 border border-gray-700/60">
                   <CheckCircle className="w-5 h-5 text-emerald-400 mt-0.5" />
                   <span className="text-gray-200">{f}</span>
+<<<<<<< HEAD
                 </div>
 <<<<<<< HEAD
               ))}
@@ -291,19 +310,25 @@ export default function SpaceTechPage() {
             </div>
           </section>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <section className="text-center">
             <a href="/space-technology" className="inline-flex items-center gap-2 text-cyan-300 hover: text-cyan-200">
               <Globe2 className="w-4 h-4" />
               <span>Explore detailed Space Technology offerings</span>
 <<<<<<< HEAD
+<<<<<<< HEAD
             </a>
 =======
             </Link>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           </section>
         </div>
       </div>
     </Layout>
+<<<<<<< HEAD
   )
 <<<<<<< HEAD
 }
@@ -358,6 +383,8 @@ export default function SpaceTechPage(req, res) {
   }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             </div>;
           </section>;
           <section className="text-center">;
@@ -375,6 +402,7 @@ export default function SpaceTechPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -382,3 +410,5 @@ export default function SpaceTechPage(req, res) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

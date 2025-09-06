@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 /** @type {import ('next').NextConfig} */;
 const next_config = {
 <<<<<<< HEAD
@@ -27,6 +28,8 @@ const next_config = {
   pageExtensions: ["tsx", "ts", "jsx", "js"],
 
 >>>>>>> main
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   // Image optimization
   images: {
     domains: [
@@ -37,6 +40,7 @@ const next_config = {
     ],
     formats: ["image/webp", "image/avif"],
   },
+<<<<<<< HEAD
 <<<<<<< HEAD
   // Output configuration
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -74,6 +78,8 @@ const next_config = {
   generateEtags: true,
 
 >>>>>>> main
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   // Dist directory
   distDir: ".next",
 };
@@ -81,7 +87,12 @@ const next_config = {
 module.exports = nextConfig;
 
 module.exports = nextConfig;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 module.exports = nextConfig;
 module.exports = nextConfig;
+
+

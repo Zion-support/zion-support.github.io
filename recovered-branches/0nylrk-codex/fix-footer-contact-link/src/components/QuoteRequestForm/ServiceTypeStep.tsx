@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -17,39 +18,41 @@ import {Card} from "@/components/ui/card";
 import {Search} from "lucide-react";
 import {ListingScoreCard} from "@/components/ListingScoreCard";
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useState } from "react",
 import { QuoteFormData, ListingItem, ServiceType } from "@/types/quotes",
 import { Input } from "@/components/ui/input",
 import { Card } from "@/components/ui/card",
-import { Search } from "lucide-react",
-import { ListingScoreCard } from "@/components/ListingScoreCard",
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-=======
 import { useState } from "react";
 import { QuoteFormData, ListingItem, ServiceType } from "@/types/quotes";
 import { Input } from "@/components/ui/input";
 import { Card } from "@/components/ui/card";
 import { Search } from "lucide-react";
 import { ListingScoreCard } from "@/components/ListingScoreCard";
->>>>>>> main
 interface ServiceTypeStepProps {
   formData: QuoteFormData;
   updateFormData: (data: Partial<QuoteFormData>) => void;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
-
 // Sample data - would come from an API in a real application
 const SAMPLE_LISTINGS: ListingItem[] = [
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepProps) {;
   const [searchQuery, setSearchQuery] = useState("");
 
-=======
 export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepProps) {
   const [searchQuery, setSearchQuery] = useState(""),
+<<<<<<< HEAD
 
 =======
   {
@@ -105,11 +108,14 @@ export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepPro
   const [searchQuery, setSearchQuery] = useState(""),
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   
   const handleTypeSelect = (type: ServiceType) => {
     updateFormData({ serviceType: type })
   },
   
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -224,10 +230,13 @@ export function ServiceTypeStep({
   };
 
 >>>>>>> main
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const handleItemSelect = (item: ListingItem) => {
     updateFormData({
       specificItem: item,
       serviceCategory: item.category,
+<<<<<<< HEAD
 <<<<<<< HEAD
       serviceType: item.category.toLowerCase() as ServiceType
     })
@@ -248,6 +257,8 @@ export function ServiceTypeStep({
 <<<<<<< HEAD
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   return (
     <div className="space - y-6">;
@@ -262,6 +273,7 @@ export function ServiceTypeStep({
                 ? "bg - zion - purple / 20 border - zion - purple";
                 : "bg - zion - blue - light / 20 border - zion - blue - light hover:border - zion - purple / 50";
             }`}
+<<<<<<< HEAD
 
 
           <Card 
@@ -316,6 +328,8 @@ export function ServiceTypeStep({
           <Card
 >>>>>>> main
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             className={`p-4 cursor-pointer border-2 transition-colors ${
               formData.serviceType === "talent"
                 ? "bg-zion-purple/20 border-zion-purple"
@@ -328,6 +342,7 @@ export function ServiceTypeStep({
               AI specialists, developers, consultants
             </p>
           </Card>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -342,6 +357,8 @@ export function ServiceTypeStep({
           <Card
 >>>>>>> main
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             className={`p-4 cursor-pointer border-2 transition-colors ${
               formData.serviceType === "equipment"
                 ? "bg-zion-purple/20 border-zion-purple"
@@ -356,6 +373,7 @@ export function ServiceTypeStep({
           </Card>
         </div>
       </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
       {formData.serviceType && (
         <div className="space-y-4">
@@ -385,12 +403,17 @@ import {ListingScoreCard} from "@/components/ListingScoreCard";
 
 >>>>>>> main
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <div className="relative">
             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light h-4 w-4" />
             <Input
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <h3 className="text-xl font-semibold text-white">
             Select a specific {formData.serviceType}
           </h3>
@@ -398,7 +421,10 @@ import {ListingScoreCard} from "@/components/ListingScoreCard";
           <div className="relative">
             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light h-4 w-4" />
             <Input
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useState } from "react",;
 import { QuoteFormData, ListingItem, ServiceType } from "@/types/quotes",;
 import { Input } from "@/components/ui/input",;
@@ -434,6 +460,7 @@ export function ServiceTypeStep(): any ({ formData, updateFormData }: ServiceTyp
       serviceType: item && item.category.toLowerCase() as ServiceType;
     });
   };
+<<<<<<< HEAD
 
   const filteredListings = SAMPLE_LISTINGS && SAMPLE_LISTINGS.filter(item => {;
     // Filter by category only when a service type has been selected;
@@ -500,10 +527,13 @@ export function ServiceTypeStep({ formData, updateFormData } ServiceTypeStepProp
 ;
   return (;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <div className="space-y-6">;
       <div>;
         <h3 className="text-xl font-semibold text-white mb-4">What are you looking for?</h3>;
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">;
+<<<<<<< HEAD
 <<<<<<< HEAD
           <Card
             className={`p-4 cursor-pointer border-2 transition-colors ${
@@ -517,12 +547,15 @@ export function ServiceTypeStep({ formData, updateFormData } ServiceTypeStepProp
                 ? "bg-zion-purple/20 border-zion-purple" ;
                 :"bg-zion-blue-light/20 border-zion-blue-light hover:border-zion-purple/50";
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             }`}
             onClick={() => handleTypeSelect("service")}
           >;
             <h4 className="font-medium text-white">Services</h4>;
             <p className="text-sm text-zion-slate-light">AI solutions, consulting, development</p>;
           </Card>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
           <Card
@@ -538,12 +571,15 @@ export function ServiceTypeStep({ formData, updateFormData } ServiceTypeStepProp
                 ? "bg-zion-purple/20 border-zion-purple" ;
                 :"bg-zion-blue-light/20 border-zion-blue-light hover:border-zion-purple/50";
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             }`}
             onClick={() => handleTypeSelect("talent")}
           >;
             <h4 className="font-medium text-white">Talent</h4>;
             <p className="text-sm text-zion-slate-light">AI specialists, developers, consultants</p>;
           </Card>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
           <Card
@@ -559,6 +595,8 @@ export function ServiceTypeStep({ formData, updateFormData } ServiceTypeStepProp
                 ? "bg-zion-purple/20 border-zion-purple" ;
                 :"bg-zion-blue-light/20 border-zion-blue-light hover:border-zion-purple/50";
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             }`}
             onClick={() => handleTypeSelect("equipment")}
           >;
@@ -567,6 +605,7 @@ export function ServiceTypeStep({ formData, updateFormData } ServiceTypeStepProp
           </Card>;
         </div>;
       </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       {formData && formData.serviceType && (;
@@ -578,10 +617,12 @@ export function ServiceTypeStep({ formData, updateFormData } ServiceTypeStepProp
 
             <Input;
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
               placeholder={`Search ${formData.serviceType}...`}
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               value={searchQuery}
+<<<<<<< HEAD
 
               onChange={(e) => setSearchQuery(e && e.target.value)}
               className="pl-10 bg-zion-blue border border-zion-blue-light focus:border-zion-purple";
@@ -614,6 +655,8 @@ export function ServiceTypeStep({ formData, updateFormData } ServiceTypeStepProp
 =======
 
 >>>>>>> main
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <div className="grid grid-cols-1 gap-4 mt-4">
             {filteredListings.length > 0 ? (
               filteredListings.map((item) => (
@@ -624,7 +667,10 @@ export function ServiceTypeStep({ formData, updateFormData } ServiceTypeStepProp
                     formData.specificItem?.id === item.id
                       ? "ring-2 ring-zion-purple rounded-lg"
                       : ""
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   }`}
                 >;
                   <ListingScoreCard
@@ -647,6 +693,7 @@ export function ServiceTypeStep({ formData, updateFormData } ServiceTypeStepProp
         </div>;
       )}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     </div>;
 
@@ -655,6 +702,8 @@ export function ServiceTypeStep({ formData, updateFormData } ServiceTypeStepProp
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   );
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             on_click={() => handleTypeSelect ("service")}
           >;
             <h4 className="font - medium text - white">Services</h4>;
@@ -724,6 +773,7 @@ export function ServiceTypeStep({ formData, updateFormData } ServiceTypeStepProp
                     review_count={Math.floor (Math.random () * 50) + 10}
                     image={item.image}
 <<<<<<< HEAD
+<<<<<<< HEAD
                     description="Sample listing description";
                   />;
                 </div>))) : (
@@ -752,3 +802,5 @@ export function ServiceTypeStep({ formData, updateFormData } ServiceTypeStepProp
   );
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

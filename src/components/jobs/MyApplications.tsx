@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import { useState } from "react"
 import { useJobApplications } from "@/hooks/useJobApplications"
@@ -53,6 +54,8 @@ export function MyApplications() {
         return <Badge className="bg-green-100 text-green-800">Hired</Badge>,
       case "rejected":
         return <Badge className="bg-red-100 text-red-800">Rejected</Badge>,
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       default:
         return <Badge variant="outline">{status}</Badge>
     }
@@ -88,12 +91,16 @@ export function MyApplications() {
   }
   return (
     <div className="grid gap-4 md:grid-cols-2">
+<<<<<<< HEAD
       {applications.map((application,) => (
       {applications.map((application) => (
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <Card key={application.id}>
           <CardHeader className="pb-2">
             <div className="flex justify-between items-start">
               <CardTitle className="text-lg">
+<<<<<<< HEAD
       {applications.map((application,) => (
           <CardHeader className="pb-2">
             <div className="flex justify-between items-start">
@@ -101,6 +108,8 @@ export function MyApplications() {
                 {application.job?.title |"Unknown Job"}
                 {application.job?.title |"Unknown Job"}
                 {application.job?.title || "Unknown Job"}
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               </CardTitle>
               {getStatusBadge(application.status)}
             </div>
@@ -126,6 +135,7 @@ export function MyApplications() {;
   const getStatusBadge = (status: ApplicationStatus,) => {;
     switch (status) {;
       case "new": return <Badge variant="secondary">New</Badge>;
+<<<<<<< HEAD
         return <Badge className="bg-red-100 text-red-800">Rejected</Badge>;
       default:;
         return <Badge variant="outline">{status}</Badge>;
@@ -133,19 +143,27 @@ export function MyApplications() {;
   },;
   if (isLoading) {;
     return (
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <div className="flex justify-center items-center p-8">;
         <Loader2 className="h-8 w-8 animate-spin text-primary" />;
       </div>;
     );
   }
+<<<<<<< HEAD
   if (error) {;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     return (
       <div className="text-center p-6 border rounded-md bg-red-50 text-red-800">;
         <p>{error}</p>;
       </div>;
     );
   }
+<<<<<<< HEAD
   if (applications && applications.length === 0) {;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     return (
       <Card className="bg-muted/30">;
         <CardContent className="pt-6 text-center">;
@@ -159,6 +177,7 @@ export function MyApplications() {;
       </Card>;
     );
   }
+<<<<<<< HEAD
   return (;
     <div className="grid gap-4 md:grid-cols-2">;
       {applications.map((application) => (;
@@ -180,12 +199,13 @@ export function MyApplications() {;
                 <p className="text-sm text-muted-foreground line-clamp-2 mb-2">;
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   {application.cover_letter}
                 </p>
               )}
-
-              
               <div className="flex justify-between items-center">
+<<<<<<< HEAD
                 <Button 
                   variant="outline" 
                   size="sm" 
@@ -309,6 +329,8 @@ export function MyApplications() {;
                 </p>
               )}
               <div className="flex justify-between items-center">
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <Button
                   variant="outline"
                   size="sm"
@@ -317,6 +339,13 @@ export function MyApplications() {;
                 <Button 
                   variant="outline" 
                   size="sm" 
+<<<<<<< HEAD
+=======
+
+                  {application.cover_letter}
+                </p>
+              )}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   className="text-xs"
                   asChild
                 >
@@ -326,6 +355,7 @@ export function MyApplications() {;
                 </Button>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                 <Button
+<<<<<<< HEAD
                   variant="default"
                 <Button 
 
@@ -386,6 +416,37 @@ export function MyApplications() {;
 }
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+                  variant="outline" 
+                  size="sm" 
+                  className="text-xs"
+                  asChild>;
+                  <Link href={`/jobs/${application && application.job_id}`}>;
+                    <ExternalLink className="h-3 w-3 mr-1" /> View Job;
+                  </Link>;
+                </Button>;
+
+                <Button
+
+                
+
+                <Button 
+                  variant="default" 
+                  size="sm"
+                  className="text-xs"
+                  asChild
+                >
+                  <Link href={`/messages?jobId=${application.job_id}`}>
+                    <MessageSquare className="h-3 w-3 mr-1" /> Contact Client
+                  </Link>
+                </Button>
+              </div>
+            </div>
+          </CardContent>
+        </Card>
+      ))}
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   },
   // Check condition
@@ -471,6 +532,7 @@ if ( {) {
     </div>);
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 ;
 
@@ -523,6 +585,8 @@ default: return <Badge variant="outline"> {;
     </div>
   )
 }
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
     </div>;
   );
@@ -533,5 +597,8 @@ default: return <Badge variant="outline"> {;
   );
 };
 }
+<<<<<<< HEAD
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

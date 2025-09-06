@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -26,11 +27,12 @@ import { Label } from "@/components/ui/label",
 import { Textarea } from "@/components/ui/textarea",
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { QuoteFormData } from "@/types/quotes";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
->>>>>>> main
 interface ProjectDetailsStepProps {
   formData: QuoteFormData;
   updateFormData: (data: Partial<QuoteFormData>) => void;
@@ -39,11 +41,15 @@ interface ProjectDetailsStepProps {
 export function ProjectDetailsStep({
   formData,
   updateFormData,
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }: ProjectDetailsStepProps) {
   return (
     <div className="space-y-6">
       <div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -60,6 +66,8 @@ export function ProjectDetailsStep({
 
 >>>>>>> main
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <div className="space-y-4">
           <div>
             <Label htmlFor="projectName" className="text-zion-slate-light">
@@ -74,12 +82,15 @@ export function ProjectDetailsStep({
             />
           </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 
 >>>>>>> main
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <div>
             <Label
               htmlFor="projectDescription"
@@ -99,6 +110,7 @@ export function ProjectDetailsStep({
           </div>
         </div>
       </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -127,6 +139,8 @@ export function ProjectDetailsStep({
 
 >>>>>>> main
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
             <Label htmlFor="name" className="text-zion-slate-light">
@@ -135,10 +149,6 @@ export function ProjectDetailsStep({
             <Input
               id="name"
               placeholder="Your name"
-
-
-
-=======
 import { QuoteFormData } from "@/types/quotes",;
 import { Input } from "@/components/ui/input",;
 import { Label } from "@/components/ui/label",;
@@ -184,6 +194,7 @@ export function ProjectDetailsStep({ formData, updateFormData }: ProjectDetailsS
             <Input;
               id="name";
               placeholder="Your name";
+<<<<<<< HEAD
 
 
 value={formData.contactInfo.name}
@@ -224,6 +235,9 @@ value={formData.contactInfo.name}
 
 >>>>>>> main
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+              value={formData.contactInfo.name}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <div>
             <Label htmlFor="company" className="text-zion-slate-light">
               Company
@@ -232,6 +246,7 @@ value={formData.contactInfo.name}
               id="company"
               placeholder="Your company name"
               value={formData.contactInfo.company}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -260,10 +275,13 @@ value={formData.contactInfo.name}
 
 >>>>>>> main
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <div>
             <Label htmlFor="email" className="text-zion-slate-light">
               Email
             </Label>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 import {QuoteFormData} from "@/types/quotes";
@@ -341,10 +359,13 @@ export function ProjectDetailsStep(): any ({ formData, updateFormData }: Project
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <Input
               id="email"
               type="email"
               placeholder="Your email address"
+<<<<<<< HEAD
 <<<<<<< HEAD
 
               value={formData.contactInfo.email}
@@ -378,6 +399,8 @@ export function ProjectDetailsStep(): any ({ formData, updateFormData }: Project
 
 >>>>>>> main
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <div>
             <Label htmlFor="phone" className="text-zion-slate-light">
               Phone
@@ -386,6 +409,7 @@ export function ProjectDetailsStep(): any ({ formData, updateFormData }: Project
               id="phone"
               placeholder="Your phone number"
               value={formData.contactInfo.phone}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -404,12 +428,15 @@ export function ProjectDetailsStep(): any ({ formData, updateFormData }: Project
                 })
               }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               className="bg-zion-blue border border-zion-blue-light focus: border-zion-purple text-white"
             />
           </div>
         </div>
       </div>
     </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
               value={formData && formData.contactInfo.email}
@@ -435,8 +462,9 @@ export function ProjectDetailsStep(): any ({ formData, updateFormData }: Project
 <<<<<<< HEAD
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-              className="bg-zion-blue border border-zion-blue-light focus: border-zion-purple text-white";
 =======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+              className="bg-zion-blue border border-zion-blue-light focus: border-zion-purple text-white";
 import { QuoteFormData  } from '@/types / quotes';
 import { Input  } from '@/components / ui / input';
 import { Label  } from '@/components / ui / label';
@@ -445,48 +473,11 @@ interface ProjectDetailsStepProps {
   form_data: QuoteFormData;
   updateFormData: (data: Partial < QuoteFormData>) => void;
 }
-export /**
- * ProjectDetailsStep - Function description
- */
-function ProjectDetailsStep() {
-  return (
-    <div className="space - y-6">;
-      <div>;
-        <h3 className="text - xl font - semibold text - white mb - 4">;
-          Tell us about your project;
-        </h3>;
-        <div className="space - y-4">;
-          <div>;
-            <Label html_for="project_name" className="text - zion - slate - light">;
-              Project Name;
-            </Label>;
-            <Input;
-              id="project_name";
-              placeholder="Enter a name for your project";
-              value={form_data.project_name}
-              on_change={(e) => updateFormData ({ project_name: e.target.value })}
-              className="bg - zion - blue border border - zion - blue - light focus:border - zion - purple text - white";
-            />;
-          </div>;
-          <div>;
-            <Label;
-              html_for="project_description";
-              className="text - zion - slate - light";
-            >;
-              Project Description;
-            </Label>;
-            <Textarea;
-              id="project_description";
-              placeholder="Describe your project in detail...";
-              value={form_data.project_description}
-              on_change={(e) =>;
-                updateFormData ({ project_description: e.target.value });
-              }
-              className="min - h-32 bg - zion - blue border border - zion - blue - light focus:border - zion - purple text - white";
             />;
           </div>;
         </div>;
       </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
       <div>;
         <h3 className="text - xl font - semibold text - white mb - 4">;
@@ -575,12 +566,15 @@ function ProjectDetailsStep() {
       </div>;
 
     </div>);
+=======
+  );
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 
-=======
 
   )
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
     </div>;
@@ -625,3 +619,5 @@ updateFormData: (data: Partial<QuoteFormData>) => void
 }
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

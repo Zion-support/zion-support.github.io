@@ -2,7 +2,6 @@
 
 
 
-
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
 import {TrustedBySection} from "@/components/TrustedBySection";
@@ -25,9 +24,16 @@ import {useLanguage} from "@/context/LanguageContext";
 import {ArrowRight, Users, Zap, Settings, Search, MessageSquare, Sparkles, BarChart3, Smartphone} from "lucide-react";
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 export default function Index() {
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export default function Index() {;
+
+
   const { t } = useTranslation();
   const { isRTL } = useLanguage();
 import { Header } from "@/components/Header",
@@ -65,7 +71,6 @@ export default function Index() {
   const { t } = useTranslation(),
   const { isRTL } = useLanguage(),
   
-  
   // Tools and features showcase
 
   const toolsFeatures = [
@@ -74,6 +79,7 @@ export default function Index() {
       description: t("home.tool_ai_matcher_desc")
       icon: <Sparkles className="h-6 w-6 text-zion-cyan" />
       link: "/match"
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
@@ -92,11 +98,16 @@ export default function Index() {;
     }
     },
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+    }
+    },
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     {
       title: t("home.tool_talent")
       description: t("home.tool_talent_desc")
       icon: <Users className="h-6 w-6 text-zion-purple" />
       link: "/talent"
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -110,11 +121,14 @@ export default function Index() {;
     }
     },
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     {
       title: t("home.tool_services")
       description: t("home.tool_services_desc")
       icon: <Zap className="h-6 w-6 text-zion-cyan" />
       link: "/services"
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -128,11 +142,14 @@ export default function Index() {;
     }
     },
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     {
       title: t("home.tool_equipment")
       description: t("home.tool_equipment_desc")
       icon: <Settings className="h-6 w-6 text-zion-purple" />
       link: "/equipment"
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -146,11 +163,14 @@ export default function Index() {;
     }
     },
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     {
       title: t("home.tool_analytics")
       description: t("home.tool_analytics_desc")
       icon: <BarChart3 className="h-6 w-6 text-zion-cyan" />
       link: "/analytics"
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -164,11 +184,14 @@ export default function Index() {;
     }
     },
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     {
       title: "Mobile App"
       description: "Take Zion with you on the go with our mobile app for iOS and Android"
       icon: <Smartphone className="h-6 w-6 text-zion-purple" />
       link: "/mobile-launch"
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -332,6 +355,8 @@ function Index() {
                 </div>
               </Link>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
 import { TrustedBySection } from "@/components/TrustedBySection",;
@@ -423,17 +448,6 @@ export default function Index() {;
             </h2>
             <p className="text-zion-slate-light text-xl max-w-3xl mx-auto">
               {t("home.tools_description")}
-            </p>;
-          </div>;
-          <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto ${isRTL ? 'rtl' : ''}`}>;
-            {toolsFeatures.map((feature, index) => (;
-              <Link;
-                key={index} ;
-                to={feature.link} ;
-                className="bg-zion-blue border border-zion-blue-light hover:border-zion-purple/50 rounded-lg p-6 transition-all duration-300";
-              >;
-                <div className="bg-zion-blue-dark rounded-full w-12 h-12 flex items-center justify-center mb-4">;
-                  {feature.icon}
                 </div>;
                 <h3 className="text-xl font-bold text-white mb-2">{feature.title}</h3>;
                 <p className="text-zion-slate-light mb-4">{feature.description}</p>;
@@ -443,11 +457,14 @@ export default function Index() {;
                 </div>;
               </Link>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             ))}
           </div>
         </div>
@@ -468,6 +485,7 @@ export default function Index() {;
       <Footer />
     </div>
   )
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 =======
@@ -515,51 +533,77 @@ import { ;
   BarChart3,;
   Smartphone;
 } from "lucide-react",;
+=======
+import { Header } from '@/components / Header';
+import { Footer } from '@/components / Footer';
+import { TrustedBySection } from '@/components / TrustedBySection';
+import { TestimonialCarousel } from '@/components / TestimonialCarousel';
+import { FloatingCTA } from '@/components / FloatingCTA';
+import { HeroSection } from '@/components / HeroSection';
+import { CategoriesSection } from '@/components / CategoriesSection';
+import { BenefitsSection } from '@/components / BenefitsSection';
+import { HowItWorksSection } from '@/components / HowItWorksSection';
+import { WaitlistSection } from '@/components / WaitlistSection';
+import { BlogSection } from '@/components / BlogSection';
+import { SEO } from '@/components / SEO';
+import { Button } from '@/components / ui / button';
+import { Link } from './react-router-dom';
+import { FeaturedListingsSection } from '@/components / FeaturedListingsSection';
+import { FeaturesGuideSection } from '@/components / FeaturesGuideSection';
+import { SocialShareSection } from '@/components / SocialShareSection';
+import { use_translation } from './react - i18next';
+import { use_language } from '@/context / LanguageContext';
+import { ArrowRight, Users, Zap, Settings, Search, MessageSquare, Sparkles, BarChart3, Smartphone } from './lucide-react';
 ;
-export default function Index() {;
-  const { t } = useTranslation(),;
-  const { isRTL } = useLanguage(),;
-  ;
+export default /**
+ * Index - Function description
+ */
+function Index() {
+  const { t } = use_translation ();
+  const { isRTL } = use_language ();
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+;
   // Tools and features showcase;
-  const toolsFeatures = [;
-    {;
-      title:t("home.tool_ai_matcher"),;
-      description:t("home.tool_ai_matcher_desc"),;
-      icon:<Sparkles className="h-6 w-6 text-zion-cyan" />,;
-      link:"/match";
-    },;
-    {;
-      title:t("home.tool_talent"),;
-      description:t("home.tool_talent_desc"),;
-      icon:<Users className="h-6 w-6 text-zion-purple" />,;
-      link:"/talent";
-    },;
-    {;
-      title:t("home.tool_services"),;
-      description:t("home.tool_services_desc"),;
-      icon:<Zap className="h-6 w-6 text-zion-cyan" />,;
-      link:"/services";
-    },;
-    {;
-      title:t("home.tool_equipment"),;
-      description:t("home.tool_equipment_desc"),;
-      icon:<Settings className="h-6 w-6 text-zion-purple" />,;
-      link:"/equipment";
-    },;
-    {;
-      title:t("home.tool_analytics"),;
-      description:t("home.tool_analytics_desc"),;
-      icon:<BarChart3 className="h-6 w-6 text-zion-cyan" />,;
-      link:"/analytics";
-    },;
-    {;
-      title:"Mobile App",;
-      description:"Take Zion with you on the go with our mobile app for iOS and Android",;
-      icon:<Smartphone className="h-6 w-6 text-zion-purple" />,;
-      link:"/mobile-launch";
+  const tools_features = [;
+    {
+      title: t ("home.tool_ai_matcher"),
+      description: t ("home.tool_ai_matcher_desc"),
+      icon: <Sparkles className="h - 6 w - 6 text - zion - cyan" />,
+      link: "/match";
     }
-  ],;
+    {
+      title: t ("home.tool_talent"),
+      description: t ("home.tool_talent_desc"),
+      icon: <Users className="h - 6 w - 6 text - zion - purple" />,
+      link: "/talent";
+    }
+    {
+      title: t ("home.tool_services"),
+      description: t ("home.tool_services_desc"),
+      icon: <Zap className="h - 6 w - 6 text - zion - cyan" />,
+      link: "/services";
+    }
+    {
+      title: t ("home.tool_equipment"),
+      description: t ("home.tool_equipment_desc"),
+      icon: <Settings className="h - 6 w - 6 text - zion - purple" />,
+      link: "/equipment";
+    }
+    {
+      title: t ("home.tool_analytics"),
+      description: t ("home.tool_analytics_desc"),
+      icon: <BarChart3 className="h - 6 w - 6 text - zion - cyan" />,
+      link: "/analytics";
+    }
+    {
+      title: "Mobile App",
+      description: "Take Zion with you on the go with our mobile app for iOS and Android",
+      icon: <Smartphone className="h - 6 w - 6 text - zion - purple" />,
+      link: "/mobile - launch";
+    }
+  ];
 ;
+<<<<<<< HEAD
   return (;
     <div className="min-h-screen bg-zion-blue text-white">;
       <SEO ;
@@ -654,6 +698,9 @@ export default function Index() {;
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
+=======
+  return (
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <div className="min - h-screen bg - zion - blue text - white">;
       <SEO;
         title={t ("home.seo_title")}
@@ -663,6 +710,7 @@ export default function Index() {;
       />;
       <Header />;
       <HeroSection />;
+<<<<<<< HEAD
       {/* Quick Access Tools Section */}
       <section className="py - 16 bg - zion - blue - dark">;
         <div className="container mx - auto px - 4">;
@@ -707,11 +755,14 @@ export default function Index() {;
       <FeaturesGuideSection />;
       ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <HowItWorksSection />;
       <FeaturedListingsSection />;
       <TestimonialCarousel />;
       <TrustedBySection />;
       <BlogSection />;
+<<<<<<< HEAD
 <<<<<<< HEAD
       {/* Add social share section to encourage users to spread the word */}
       <SocialShareSection />;
@@ -799,3 +850,6 @@ min-h-screen bg-zion-blue text-white" > <SEO /> <Header /> <HeroSection /> </p> 
 }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

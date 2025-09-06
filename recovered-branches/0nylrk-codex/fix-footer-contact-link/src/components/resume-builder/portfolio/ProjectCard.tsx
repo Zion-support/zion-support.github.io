@@ -1,8 +1,11 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useState  } from './react';
 import { Card, CardContent, CardFooter  } from '@/components / ui / card';
 import { Button  } from '@/components / ui / button';
@@ -48,11 +51,6 @@ if ( {) {
           <img;
             src={project.image_url}
             alt={project.title}
-
-=======
-
-
-
 import {useState} from 'react';
 import {Card, CardContent, CardFooter} from '@/components/ui/card';
 import {Button} from '@/components/ui/button';
@@ -60,6 +58,7 @@ import {Badge} from '@/components/ui/badge';
 import {AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle} from '@/components/ui/alert-dialog';
 import {Edit, Trash2, Github, Link, FileText} from 'lucide-react';
 import {PortfolioProject} from '@/types/resume';
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -83,16 +82,22 @@ import { Edit, Trash2, Github, Link, FileText } from "lucide-react";
 import { PortfolioProject } from "@/types/resume";
 >>>>>>> main
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface ProjectCardProps {
   project: PortfolioProject;
   onEdit: (project: PortfolioProject) => void;
   onDelete: (projectId: string) => void;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {;
 
+<<<<<<< HEAD
 =======
 export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
 
@@ -100,11 +105,14 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
 export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {;
 export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const [deleteDialogOpen, setDeleteDialogOpen] = useState(false);
 
   const handleDelete = () => {
     if (project.id) {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
       onDelete(project.id)
 
@@ -113,6 +121,8 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
 <<<<<<< HEAD
       onDelete(project.id)
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useState } from 'react',;
 import { Card, CardContent, CardFooter } from '@/components/ui/card',;
 import { Button } from '@/components/ui/button',;
@@ -126,10 +136,8 @@ interface ProjectCardProps {;
   onEdit: (project: PortfolioProject) => void,;
   onDelete: (projectId: string) => void;
 }
-
 export function ProjectCard(): any ({ project, onEdit, onDelete }: ProjectCardProps) {;
   const [deleteDialogOpen, setDeleteDialogOpen] = useState(false);
-
   const handleDelete = () => {;
 
     if (project.id) {;
@@ -137,15 +145,10 @@ export function ProjectCard(): any ({ project, onEdit, onDelete }: ProjectCardPr
 
 
     }
-    setDeleteDialogOpen(false)
-  },
-  
-=======
-      onDelete(project.id);
-    }
     setDeleteDialogOpen(false);
   };
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> main
@@ -194,20 +197,26 @@ export function ProjectCard({ project, onEdit, onDelete } ProjectCardProps) {;
   },;
   ;
   return (;
+=======
+  return (
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <Card className="h-full flex flex-col">;
       <div className="relative h-48 overflow-hidden rounded-t-lg bg-muted">;
-        {project.image_url ? (;
-          <img ;
-            src={project.image_url} ;
-            alt={project.title} ;
-            className="w-full h-full object-cover";
+        {project && project.image_url ? (;
+          <img
+            className="w-full h-full object-cover"
           />;
+<<<<<<< HEAD
         ) :(;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+        ) : (;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <div className="w-full h-full flex items-center justify-center bg-muted">;
             <FileText className="h-12 w-12 text-muted-foreground/50" />;
           </div>;
         )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
             className="w - full h - full object - cover";
@@ -257,6 +266,8 @@ export function ProjectCard({ project, onEdit, onDelete } ProjectCardProps) {;
           <h3 className="font-semibold text-lg">{project.title}</h3>
 
 >>>>>>> main
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           {project.description && (
             <p className="text-sm text-muted-foreground line-clamp-3">
               {project.description}
@@ -264,14 +275,18 @@ export function ProjectCard({ project, onEdit, onDelete } ProjectCardProps) {;
           )}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
             </p>)}
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           {project.technologies && project.technologies.length > 0 && (
             <div className="flex flex-wrap gap-1 mt-2">
               {project.technologies.map((tech, index) => (
                 <Badge key={index} variant="secondary" className="text-xs">
                   {tech}
+<<<<<<< HEAD
 <<<<<<< HEAD
                 </Badge>))}
             </div>)}
@@ -401,6 +416,8 @@ export function ProjectCard({ project, onEdit, onDelete } ProjectCardProps) {;
 =======
 
 >>>>>>> main
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <CardFooter className="flex justify-between border-t bg-muted/40 p-4">
         <div className="flex gap-2">
           {project.github_url && (
@@ -427,10 +444,6 @@ export function ProjectCard({ project, onEdit, onDelete } ProjectCardProps) {;
             </Link>
           )}
         </div>
-<<<<<<< HEAD
-=======
-
->>>>>>> main
         <div className="flex gap-2">
           <Button variant="ghost" size="icon" onClick={() => onEdit(project)}>
             <Edit className="h-4 w-4" />
@@ -444,10 +457,6 @@ export function ProjectCard({ project, onEdit, onDelete } ProjectCardProps) {;
           </Button>
         </div>
       </CardFooter>
-<<<<<<< HEAD
-=======
-
->>>>>>> main
       <AlertDialog open={deleteDialogOpen} onOpenChange={setDeleteDialogOpen}>
         <AlertDialogContent>
           <AlertDialogHeader>
@@ -489,17 +498,26 @@ export function ProjectCard({ project, onEdit, onDelete } ProjectCardProps) {;
 }> <AlertDialogContent> <AlertDialogHeader> <AlertDialogTitle>Delete Project</AlertDialogTitle> <AlertDialogDescription> Are you sure you want to delete this project? This action cannot be undone. </AlertDialogDescription> </AlertDialogHeader> <AlertDialogFooter> <AlertDialogCancel>Cancel</AlertDialogCancel> Delete </AlertDialogAction> </AlertDialogFooter> </AlertDialogContent> </AlertDialog> </Card>) 
 }
   );
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 }
 ;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   );
 }
   )
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

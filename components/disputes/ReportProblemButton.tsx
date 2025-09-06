@@ -1,12 +1,3 @@
-
-
-
-
-
-import Link from "next/link";
-
-import Link from "next/link";
-export default function ReportProblemButton({
   projectId
   entityType
   entityId
@@ -16,10 +7,13 @@ export default function ReportProblemButton({
   entityId,
 }: {;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   projectId: string;
   entityType?: "milestone" | "contract" | "thread";
   entityId?: string;
@@ -28,6 +22,7 @@ export default function ReportProblemButton({
     projectId
     ...(entityType ? { entityType } : {})
     ...(entityId ? { entityId } : {})
+<<<<<<< HEAD
 
 export default function ReportProblemButton(): any ({;
   projectId,;
@@ -49,19 +44,17 @@ export default function ReportProblemButton(): any ({;
   });
 
   return (
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <Link href={`/disputes/new?${query && query.toString()}`}>;
       <a className="inline-flex items-center gap-2 px-3 py-2 rounded-md bg-red-600 text-white hover:bg-red-700 text-sm">;
         {" "}
-        Report a Problem
-      </a>
-    </Link>
-<<<<<<< HEAD
-<<<<<<< HEAD
-);
-=======
+        Report a Problem;
+      </a>;
+    </Link>;
   );
->>>>>>> main
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -83,12 +76,15 @@ export default function ReportProblemButton(): any ({;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   });
   return (
     <Link href={`/disputes/new?${query && query.toString()}`}>;
       <a className="inline-flex items-center gap-2 px-3 py-2 rounded-md bg-red-600 text-white hover: bg-red-700 text-sm"></a>;
     </Link>;
 
+<<<<<<< HEAD
   );
 }
 =======
@@ -115,6 +111,8 @@ export default function ReportProblemButton({ projectId, entityType, entityId }:
       </a>
     </Link>
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import Link from './next / link';
 ;
 export default /**
@@ -127,12 +125,10 @@ function ReportProblemButton() {
     ...(entity_id ? { entity_id } : {}),
   });
   return (
-    <Link href={`/disputes / new?${query.to_string ()}`}>;
-      <a className="inline - flex items - center gap - 2 px - 3 py - 2 rounded - md bg - red - 600 text - white hover:bg - red - 700 text - sm">;
-        {" "}
-        Report a Problem;
-      </a>;
-    </Link>);
+    <Link href={`/disputes/new?${query.toString()}`}>
+      <a className="inline-flex items-center gap-2 px-3 py-2 rounded-md bg-red-600 text-white hover: bg-red-700 text-sm"></a>
+    </Link>
+  );
 }
 export default /**
  * ReportProblemButton - Function description
@@ -147,6 +143,7 @@ function ReportProblemButton() {
     <Link href={`/disputes / new?${query.to_string ()}`}>;
       <a className="inline - flex items - center gap - 2 px - 3 py - 2 rounded - md bg - red - 600 text - white hover: bg - red - 700 text - sm"></a>;
     </Link>);
+<<<<<<< HEAD
 }
 
 <<<<<<< HEAD
@@ -162,3 +159,7 @@ function ReportProblemButton() {
 }
   );
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

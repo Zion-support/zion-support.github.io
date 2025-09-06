@@ -1,8 +1,53 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+  Star
+  Clock
+  Users
+  TrendingUp
+  CheckCircle
+  ExternalLink
+  ChevronRight
+  Shield
+  Zap
+  Globe
+  Rocket
+  Brain
+  Atom
+  Search
+  Filter
+  Grid
+  List
+  ArrowRight
+  Award
+  Target;
+} from 'lucide-react';
+import { comprehensiveMicroSaasServices } from '../data/comprehensive-2025-micro-saas-expansion';
+import { specializedEmergingTechServices } from '../data/specialized-emerging-tech-services-2025';import {
+  Star, Clock, Users, TrendingUp, CheckCircle, ExternalLink
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+  Star,
+  Clock,
+  Users,
+  TrendingUp,
+  CheckCircle,
+  ExternalLink,
+  ChevronRight,
+  Shield,
+  Zap,
+  Globe,
+  Rocket,
+  Brain,
+  Atom,
+  Search,
+  Filter,
+  Grid,
+  List,
+  ArrowRight,
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {;
   Star,;
   Clock,;
@@ -26,6 +71,7 @@ import {;
   Target,;
 } from 'lucide-react';
 import { comprehensiveMicroSaasServices } from '../data/comprehensive-2025-micro-saas-expansion';
+<<<<<<< HEAD
 import { specializedEmergingTechServices } from '../data/specialized-emerging-tech-services-2025';import {
   Star, Clock, Users, TrendingUp, CheckCircle, ExternalLink, ;
 
@@ -91,18 +137,18 @@ import {
   Star, Clock, Users, TrendingUp, CheckCircle, ExternalLink, 
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   ChevronRight, Shield, Zap, Globe, Rocket, Brain, Atom;
   Search, Filter, Grid, List, ArrowRight, Award, Target;
 } from 'lucide-react';
 import { comprehensiveMicroSaasServices } from '../data/comprehensive-2025-micro-saas-expansion';
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 import { specializedEmergingTechServices } from '../data/specialized-emerging-tech-services-2025';
-
-export default function ComprehensiveServicesShowcase() {
-
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedService, setSelectedService] = useState<string | null>(null),
   const [searchTerm, setSearchTerm] = useState('');
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
@@ -283,11 +329,14 @@ export default function ComprehensiveServicesShowcase() {
                            service.tagline.toLowerCase().includes(searchTerm.toLowerCase());
       return matchesCategory && matchesSearch
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     .sort((a, b) => {
       switch (sortBy) {
         case 'popularity':
           return b.popular ? 1 : -1;
         case 'price':
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
@@ -641,11 +690,15 @@ export default function ComprehensiveServicesShowcase() {
       <div className="max-w-7xl mx-auto">
         {/* Header */}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <section className='py-20 px-6 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950'>
       <div className='max-w-7xl mx-auto'>        {/* Header */}
 
         {/* Header */}
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
         <motion.div
@@ -653,11 +706,23 @@ export default function ComprehensiveServicesShowcase() {
 =======
         <motion.div
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+        <motion.div
+  const formatPrice = (price: string) => {;
+    return price && price.replace('$', '').replace(, '');
+  };
+
+  return (
+        {/* Header */}
+        <motion&& motion.div
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0 && 0.8 }}
           viewport={{ once: true }}
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -704,6 +769,8 @@ export default function ComprehensiveServicesShowcase() {
           className='text-center mb-16'
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         >
           <h2 className='text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent'>
             Revolutionary Micro SAAS Services 2025
@@ -790,13 +857,14 @@ export default function ComprehensiveServicesShowcase() {
             </div>
           </div>
         </motion.div>
-
-
           className='text-center mb-16'>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 className='text-center mb-16'>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <h2 className='text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent'>;
             Revolutionary Micro SAAS Services 2025;
           </h2>;
@@ -880,6 +948,7 @@ className='text-center mb-16'>;
         </motion && motion.div>;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 
@@ -900,14 +969,21 @@ className='text-center mb-16'>;
         {/* Search and Filters */}
         <motion.div
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+
+        {/* Search and Filters */}
+        <motion&& motion.div
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0 && 0.6 }}
           viewport={{ once: true }}
 
-
         >
           <div className='flex flex-col lg:flex-row gap-6 items-center justify-between'>
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
@@ -924,6 +1000,8 @@ className='text-center mb-16'>;
         >
           <div className='flex flex-col lg:flex-row gap-6 items-center justify-between'>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             {/* Search */}
             <div className='relative flex-1 max-w-md'>;
               <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 text-white/40 w-5 h-5' />;
@@ -931,6 +1009,7 @@ className='text-center mb-16'>;
                 type='text'
                 placeholder='Search services...'
                 value={searchTerm}
+<<<<<<< HEAD
 
           className="mb-12"
         >
@@ -946,6 +1025,8 @@ className='text-center mb-16'>;
             <div className='flex items-center gap-4'>        >
           <div className="flex flex-col lg:flex-row gap-6 items-center justify-between">
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             {/* Search */}
             <div className="relative flex-1 max-w-md">;
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-white/40 w-5 h-5" />;
@@ -953,6 +1034,7 @@ className='text-center mb-16'>;
                 type="text"
                 placeholder="Search services..."
                 value={searchTerm}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -1315,12 +1397,15 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               >;
                 <option value='popularity'>Most Popular</option>;
                 <option value='price'>Price: Low to High</option>;
                 <option value='rating'>Highest Rated</option>;
                 <option value='newest'>Newest First</option>;
               </select>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1343,6 +1428,8 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
               <div className='flex bg-white/10 rounded-xl p-1'>;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <button
                   onClick={() => setViewMode('grid')}
                   className={`p-2 rounded-lg transition-all ${;
@@ -1350,6 +1437,7 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
                       ? 'bg-blue-600 text-white';
                       : 'text-white/60 hover:text-white';
                   }`}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1363,10 +1451,13 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
             {/* Sort and View Controls */}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 </button>
                 <button
                   onClick={() => setViewMode('list')}
                   className={`p-2 rounded-lg transition-all ${
+<<<<<<< HEAD
 
 
                 </button>
@@ -1394,23 +1485,27 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
                 </button>
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               </div>
             </div>
           </div>
         </motion.div>
-
-
                 >;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   <List className="w-5 h-5" />;
               </div>;
             </div>;
           </div>;
         </motion && motion.div>;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
@@ -1432,10 +1527,18 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
         {/* Category Filter */}
         <motion.div
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+
+        {/* Category Filter */}
+        <motion&& motion.div
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0 && 0.6 }}
           viewport={{ once: true }}
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -1504,6 +1607,8 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
               <button
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 key={category.id}
                 on_click={() => setSelectedCategory (category.id)}
                 className={`px - 6 py - 3 rounded - full font - medium transition - all duration - 300 flex items - center gap - 2 ${
@@ -1514,14 +1619,8 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
               >;
                 <span>{category.icon}</span>;
                 {category.name}
-
-          </div>;
-        </motion && motion.div>;
-
-
-
-
             ))}
+<<<<<<< HEAD
           </div>
         </motion.div>
 
@@ -1533,6 +1632,8 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
           </div>;
         </motion && motion.div>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         {/* Services Display */}
         {viewMode === 'grid' ? (;
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            <AnimatePresence>          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
@@ -1540,6 +1641,7 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
               {filteredServices && filteredServices.map((service, index) => (;
                 <motion&& motion.div
                   key={service && service.id}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
                 <span className='text-xs bg-white/20 px-2 py-1 rounded-full'>
@@ -1562,12 +1664,15 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
                 <motion.div
                   key={service.id}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -30 }}
                   transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                   className='group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl'>;
                   {/* Popular Badge */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -1582,6 +1687,8 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
                       <Star className="w-3 h-3" />;
                     </div>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         {/* Services Display */}
         {viewMode === 'grid' ? (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -1602,14 +1709,18 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
               {filtered_services.map ((service, index) => (
                 <motion.div;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   key={service.id}
                   initial={{ opacity: 0, coordinate_y: 30 }}
                   animate={{ opacity: 1, coordinate_y: 0 }}
                   exit={{ opacity: 0, coordinate_y: -30 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
+<<<<<<< HEAD
 
                       <Star className='w-3 h-3' />                      Popular
 
@@ -1656,6 +1767,8 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
                       <Star className="w-3 h-3" />
                     </div>
                   )}
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       <Star className='w-3 h-3' />                      Popular
 
                       Popular
@@ -1669,11 +1782,15 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
                       <div className='text-4xl'>{service.icon}</div>
                       <div className='text-right'>
                         <div className='text-2xl font-bold text-white'>
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                           {service.price}
-                        </div>;
-                        <div className='text - xs text - white / 60'>;
+                        </div>
+                        <div className='text-xs text-white/60'>
                           {service.period}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -1681,18 +1798,23 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       </div>
                     </div>
                     <h3 className='text-xl font-bold text-white mb-2'>
-=======
                         </div>;
                       </div>;
                     </div>;
                     <h3 className='text - xl font - bold text - white mb - 2'>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
                         </div>
 
+=======
+                        </div>
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       </div>
                     </div>
                     <h3 className='text-xl font-bold text-white mb-2'>
@@ -1701,6 +1823,7 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
                     </h3>;
                     <p className='text - white / 70 text - sm mb - 4'>;
                       {service.tagline}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1729,11 +1852,14 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     {/* Features */}
                     <div className='space-y-2 mb-6'>;
                       {service && service.features.slice(0, 3).map((feature, idx) => (;
                         <div
                           key={idx}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -1749,12 +1875,15 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
                     <h3 className="text-xl font-bold text-white mb-2">{service.name}</h3>
                     <p className="text-white/70 text-sm mb-4">{service.tagline}</p>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                           className='flex items-center gap-2 text-sm text-white/60'>;
                           <CheckCircle className='w-4 h-4 text-green-400' />                          {feature}                      </div>;
                     </div>;
 
                     <h3 className="text-xl font-bold text-white mb-2">{service && service.name}</h3>;
                     <p className="text-white/70 text-sm mb-4">{service && service.tagline}</p>;
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                     {/* Features */}
@@ -1803,17 +1932,19 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
                     <div className='grid grid - cols - 3 gap - 4 mb - 6 text - center'>;
                       <div>;
                         <div className='text - lg font - bold text - blue - 400'>;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
                     {/* Stats */}
                     <div className='grid grid-cols-3 gap-4 mb-6 text-center'>
-
 
                       <div>
                         <div className='text-lg font-bold text-blue-400'>
                           {service.rating}
 
                     </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
                     {/* Stats */}
@@ -1827,6 +1958,8 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
                     {/* Stats */}
                     <div className='grid grid-cols-3 gap-4 mb-6 text-center'>
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       <div>
                         <div className='text-lg font-bold text-blue-400'>
                           {service.rating}
@@ -1834,7 +1967,11 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
                     {/* Stats */}
                     <div className="grid grid-cols-3 gap-4 mb-6 text-center">
                       <div>
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                         <div className="text-lg font-bold text-blue-400">{service.rating}</div>
                         <div className="text-xs text-white/60">Rating</div>
                       </div>
@@ -1847,6 +1984,7 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
                         <div className="text-xs text-white/60">Trial</div>
                       </div>
                     </div>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -1884,6 +2022,8 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                     </div>;
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     {/* Stats */}
                     <div className='grid grid-cols-3 gap-4 mb-6 text-center'>;
                       <div>;
@@ -1917,6 +2057,7 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
                     </div>;
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -1966,67 +2107,17 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
                     </div>;
                     {/* CTA */}
                     <a;
+=======
+                    {/* CTA */}
+                    <a
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       href={service.link}
-                      target='_blank';
-                      rel='noopener noreferrer';
-                      className='w - full bg - gradient - to - r from - blue - 600 to - cyan - 600 text - white py - 3 px - 4 rounded - xl font - medium text - center block hover:from - blue - 700 hover:to - cyan - 700 transition - all duration - 300 flex items - center justify - center gap - 2';
-                    >;
-                      Learn More;
-                      <ExternalLink className='w - 4 h - 4' />                    </a>                      target="_blank";
-                      rel="noopener noreferrer";
-                      className="w - full bg - gradient - to - r from - blue - 600 to - cyan - 600 text - white py - 3 px - 4 rounded - xl font - medium text - center block hover:from - blue - 700 hover:to - cyan - 700 transition - all duration - 300 flex items - center justify - center gap - 2";
-                    >;
-                      Learn More;
-                      <ExternalLink className="w - 4 h - 4" />;
-                  </div>;
-                </motion.div>))}
-            </AnimatePresence>;
-          </div>) : (
-          <div className='space - y-6'>            <AnimatePresence>          <div className="space - y-6">;
-            <AnimatePresence>;
-              {filtered_services.map ((service, index) => (
-                <motion.div;
-                  key={service.id}
-                  initial={{ opacity: 0, coordinate_x: -30 }}
-                  animate={{ opacity: 1, coordinate_x: 0 }}
-                  exit={{ opacity: 0, coordinate_x: 30 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className='group relative overflow - hidden rounded - 2xl border border - white / 10 bg - gradient - to - r from - white / 5 to - white / 10 backdrop - blur - xl hover:border - cyan - 400 / 30 transition - all duration - 300 p - 6';
-                >;
-                  <div className='flex flex - col lg:flex - row gap - 6'>;
-                    {/* Left Side - Icon and Basic Info */}
-                    <div className='flex - shrink - 0'>;
-                      <div className='text - 6xl mb - 4'>{service.icon}</div>;
-                      {service.popular && (
-                        <div className='bg - gradient - to - r from - yellow - 400 to - orange - 500 text - black text - xs font - bold px - 3 py - 1 rounded - full text - center'>                          Popular                >;
-                  <div className="flex flex - col lg:flex - row gap - 6">;
-                    {/* Left Side - Icon and Basic Info */}
-                    <div className="flex - shrink - 0">;
-                      <div className="text - 6xl mb - 4">{service.icon}</div>;
-                      {service.popular && (
-                        <div className="bg - gradient - to - r from - yellow - 400 to - orange - 500 text - black text - xs font - bold px - 3 py - 1 rounded - full text - center">;
-                          Popular;
-                        </div>)}
-                    </div>;
-                    {/* Center - Service Details */}
-                    <div className='flex - 1'>;
-                      <div className='flex items - start justify - between mb - 4'>;
-                        <div>;
-                          <h3 className='text - 2xl font - bold text - white mb - 2'>;
-                            {service.name}
-                          </h3>;
-                          <p className='text - white / 70 text - lg mb - 3'>;
-                            {service.tagline}
-                          </p>;
-                          <p className='text - white / 60 text - sm'>;
-                            {service.description}
-                          </p>;
-                        </div>;
-                        <div className='text - right'>;
-                          <div className='text - 3xl font - bold text - white'>;
-                            {service.price}
-                      href={service.link}
-                      target="_blank"
+                      target='_blank'
+                      rel='noopener noreferrer'
+                      className='w-full bg-gradient-to-r from-blue-600 to-cyan-600 text-white py-3 px-4 rounded-xl font-medium text-center block hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center gap-2'
+                    >
+                      Learn More
+                      <ExternalLink className='w-4 h-4' />                    </a>                      target="_blank"
                       rel="noopener noreferrer"
                       className="w-full bg-gradient-to-r from-blue-600 to-cyan-600 text-white py-3 px-4 rounded-xl font-medium text-center block hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center gap-2"
                     >
@@ -2049,13 +2140,19 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   className='group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-r from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 p-6'
 
+                      )}
+
                 >
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   <div className='flex flex-col lg:flex-row gap-6'>
                     {/* Left Side - Icon and Basic Info */}
                     <div className='flex-shrink-0'>
                       <div className='text-6xl mb-4'>{service.icon}</div>
                       {service.popular && (
+<<<<<<< HEAD
 
                         <div className='bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full text-center'>                          Popular
 
@@ -2087,21 +2184,42 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
                         <div>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
+=======
+                      )}
+                    </div>
+                    {/* CTA */}
+                    <a
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     {/* Center - Service Details */}
-                    <div className='flex-1'>
-                      <div className='flex items-start justify-between mb-4'>
-                        <div className='bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full text-center'>                          Popular
-
-                          Popular
-
-                        </div>
+                    <div className='flex - 1'>;
+                      <div className='flex items - start justify - between mb - 4'>;
+                        <div>;
+                          <h3 className='text - 2xl font - bold text - white mb - 2'>;
+                            {service.name}
+                          </h3>;
+                          <p className='text - white / 70 text - lg mb - 3'>;
+                            {service.tagline}
+                          </p>;
+                          <p className='text - white / 60 text - sm'>;
+                            {service.description}
+                          </p>;
+                        </div>;
+                        <div className='text - right'>;
+                          <div className='text - 3xl font - bold text - white'>;
+                            {service.price}
                       )}
                     </div>
 
                     {/* Center - Service Details */}
+<<<<<<< HEAD
                     <div className='flex-1'>
                       <div className='flex items-start justify-between mb-4'>
 
+=======
+                    <div className="flex-1">
+                      <div className="flex items-start justify-between mb-4">
+                        <div>
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                         <div>
                           <h3 className='text-2xl font-bold text-white mb-2'>
                             {service.name}
@@ -2130,9 +2248,12 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
                           <div className="text-white/60">{service.period}</div>
                         </div>
                       </div>
+<<<<<<< HEAD
 =======
                     </div>;
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     {/* Center - Service Details */}
                     <div className='flex-1'>;
                       <div className='flex items-start justify-between mb-4'>;
@@ -2164,6 +2285,7 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
                           <div className="text-white/60">{service && service.period}</div>;
                         </div>;
                       </div>;
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                       {/* Features Grid */}
@@ -2173,6 +2295,9 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                         ))}
 
+=======
+                      {/* Features Grid */}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       {/* Stats Row */}
                       <div className='flex items-center gap-6 text-sm text-white/60'>
                         <div className='flex items-center gap-2'>
@@ -2182,6 +2307,7 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
                           </span>
                         </div>                        </div>
                       <div className="grid grid-cols-2 gap-2 mb-4">
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
                       <div className='grid grid-cols-2 gap-2 mb-4'>
@@ -2193,6 +2319,8 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
                             <CheckCircle className='w-4 h-4 text-green-400 flex-shrink-0' />
                             <span className='truncate'>{feature}</span>                          </div>                      <div className="grid grid-cols-2 gap-2 mb-4">
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                         {service.features.slice(0, 6).map((feature, idx) => (
                           <div key={idx} className="flex items-center gap-2 text-sm text-white/60">
                             <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
@@ -2208,7 +2336,10 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
                         ))}
                       </div>
 
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       {/* Stats Row */}
                       <div className="flex items-center gap-6 text-sm text-white/60">
                         <div className="flex items-center gap-2">
@@ -2221,18 +2352,22 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
                           <span>{service.customers}+ customers</span>
                         </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
                         <div className="flex items-center gap-2">
 
 =======
                         <div className="flex items-center gap-2">
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                           <Clock className="w-4 h-4 text-green-400" />
                           <span>{service.setupTime} setup</span>
                         </div>
                       </div>
                     </div>
                     {/* Right Side - CTA and Category */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
                     <div className="flex-shrink-0 flex flex-col items-end gap-4">
@@ -2247,11 +2382,14 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
                           <span>{getCategoryIcon(service.category)}</span>
                           <span className='text-sm'>{service.category}</span>                        </div>                    <div className="flex-shrink-0 flex flex-col items-end gap-4">
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       <div className="text-right">
                         <div className="text-sm text-white/60 mb-1">Category</div>
                         <div className="flex items-center gap-2 text-white">
                           <span>{getCategoryIcon(service.category)}</span>
                           <span className="text-sm">{service.category}</span>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
                         </div>
@@ -2263,6 +2401,8 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
 =======
                       </div>;
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       {/* Stats Row */}
                       <div className='flex items-center gap-6 text-sm text-white/60'>;
                         <div className='flex items-center gap-2'>;
@@ -2302,6 +2442,7 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
                           <span>{getCategoryIcon(service && service.category)}</span>;
                           <span className="text-sm">{service && service.category}</span>;
                       </div>;
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                       <a
@@ -2330,10 +2471,13 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
                   </div>
                 </motion.div>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               ))}
             </AnimatePresence>;
           </div>;
         )}
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -2342,17 +2486,22 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         {/* No Results */}
         {filteredServices && filteredServices.length === 0 && (;
           <motion&& motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             className='text-center py-20'
           >
             <div className='text-6xl mb-4'>🔍</div>
@@ -2361,18 +2510,28 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
             </h3>
             <p className='text-white/60'>
               Try adjusting your search or filter criteria
+        )}
+            </p>          </motion.div>
+
+          </motion.div>
+
+        )}
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             </p>          </motion.div>
 
           </motion.div>
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -2406,11 +2565,19 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
         {/* Contact CTA */}
         <motion.div
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+        )}
+
+        )}
+        {/* Contact CTA */}
+        <motion&& motion.div
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0 && 0.8 }}
           viewport={{ once: true }}
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -2419,6 +2586,8 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
           className='mt-20 text-center'
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         >
           <div className='bg-gradient-to-r from-blue-600/20 to-cyan-600/20 rounded-3xl p-12 border border-blue-500/30'>
             <h3 className='text-3xl font-bold text-white mb-4'>
@@ -2430,9 +2599,12 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <a
                 href='mailto:kleber@ziontechgroup && ziontechgroup.com'
                 className='bg-gradient-to-r from-blue-600 to-cyan-600 text-white py-4 px-8 rounded-xl font-medium hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center gap-2'>;
@@ -2441,6 +2613,7 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
               </a>;
               <a
                 href='tel:+13024640950'
+<<<<<<< HEAD
 <<<<<<< HEAD
                 className='bg-white/10 text-white py-4 px-8 rounded-xl font-medium hover:bg-white/20 transition-all duration-300 flex items-center justify-center gap-2'>        >;
           <div className="bg-gradient-to-r from-blue-600/20 to-cyan-600/20 rounded-3xl p-12 border border-blue-500/30">;
@@ -2676,6 +2849,8 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
               </a>
               <a
                 href="tel:+13024640950"
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 className="bg-white/10 text-white py-4 px-8 rounded-xl font-medium hover:bg-white/20 transition-all duration-300 flex items-center justify-center gap-2"
               >
                 Call +1 302 464 0950
@@ -2685,10 +2860,28 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
         </motion.div>
       </div>
     </section>
+<<<<<<< HEAD
 );
   );
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 
+
+                Call +1 302 464 0950;
+              </a>;
+            </div>;
+          </div>;
   );
 }
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  );
+}
+}
+        </motion.div>;
+      </div>;
+    </section>);
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

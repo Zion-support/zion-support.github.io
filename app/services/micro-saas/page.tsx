@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 export const metadata = { title: 'Micro SaaS Development | Zion Tech Group' };
 
 export default function MicroSaaSPage() {
@@ -12,10 +13,13 @@ export default function MicroSaaSPage() {
         <Item title="Ops & reliability" details={["CI/CD", "Observability", "Error budgets", "SLOs", "On-call setup"]} />
       </div>
       <Pricing />
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     </section>
   );
 }
 
+<<<<<<< HEAD
 =======
 export const metadata = { 
   title: 'Micro SaaS Development | Zion Tech Group',
@@ -267,10 +271,13 @@ function Pricing() {
       <Plan name="MVP Sprint" price="$8k–$20k" features={["2–4 weeks", "MVP scope", "Stripe billing", "Basic analytics"]} />
       <Plan name="Growth" price="$20k–$60k" features={["6–10 weeks", "SEO + content", "CRM + email", "Observability"]} />
       <Plan name="Scale" price="$60k+" features={["Custom roadmap", "SRE + security", "Multi-region", "SLAs"]} />
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     </div>
   );
 }
 
+<<<<<<< HEAD
 function Plan({ name, price, features }: { name: string; price: string; features: string[] }) {
   return (
 <<<<<<< HEAD
@@ -312,3 +319,5 @@ function Plan({ name, price, features }: { name: string; price: string; features
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   );
 }
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -20,10 +21,13 @@ export default function DashboardPage() {;
     return (;
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <div className="min-h-screen flex items-center justify-center">;
         <div className="text-center">;
           <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-500 mx-auto mb-4"></div>;
           <p className="text-zinc-400">Loading...</p>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -86,14 +90,18 @@ export default function DashboardPage() {;
   }, [isAuthenticated, isLoading, router]);
   if (isLoading) {;
     return (;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <div className="min-h-screen flex items-center justify-center">;
         <div className="text-center">;
           <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-500 mx-auto mb-4"></div>;
           <p className="text-zinc-400">Loading...</p>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         </div>;
-      </div>);
+      </div>;
+    );
   }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -131,6 +139,8 @@ if ( {) {
 =======
           Welcome back, {user?.name || "User"}! 👋;
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   if (!isAuthenticated) {return null;
   }
 ;
@@ -143,9 +153,12 @@ if ( {) {
       {/* Welcome Header */}
       <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-xl p-8 border border-blue-500/20">;
         <h1 className="text-3xl font-bold text-white mb-2">;
+<<<<<<< HEAD
           Welcome back, {user?.name |"User"}! 👋;
           Welcome back, {user?.name || "User"}! 👋;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         </h1>;
         <p className="text - zinc - 300 text - lg">;
           Ready to continue building your digital economy? Here's what you can do next.;
@@ -217,6 +230,7 @@ if ( {) {
         <h2 className="text - xl font - semibold text - white mb - 4">Account Information</h2>;
         <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 4">;
           <div>;
+<<<<<<< HEAD
 
             <label className="block text - sm font - medium text - zinc - 400 mb - 1">Name</label>;
             <p className="text - white">{user?.name || "Not provided"}</p>;
@@ -238,6 +252,8 @@ if ( {) {
             <p className="text-white">{user?.name |"Not provided"}</p>;
             <p className="text-white">{user?.name || "Not provided"}</p>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           </div>;
           <div>;
             <label className="block text - sm font - medium text - zinc - 400 mb - 1">Email</label>;

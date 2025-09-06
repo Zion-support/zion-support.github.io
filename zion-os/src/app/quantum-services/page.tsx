@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -43,6 +44,8 @@ export const metadata = {;
   keywords: "quantum computing, quantum algorithms, quantum machine learning, quantum optimization, Zion Tech Group, quantum services"},;
 export default function QuantumServicesPage() {;
   return (;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <div className="min-h-screen">;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       {/* Hero Section */}
@@ -125,6 +128,7 @@ export default function QuantumServicesPage() {;
                   <path stroke_linecap="round" stroke_linejoin="round" stroke_width={2} d="M10 20l4 - 16m4 4l4 4 - 4 4M6 16l - 4-4 4 - 4" />;
                 </svg>;
               </div>;
+<<<<<<< HEAD
 
               <h3 className="text - xl font - semibold mb - 3">Quantum Algorithm Development</h3>;
               <p className="text - gray - 400 mb - 4">;
@@ -148,6 +152,8 @@ export default function QuantumServicesPage() {;
                 Custom quantum algorithms designed for your specific business problems;
                 Custom quantum algorithms designed for your specific business problems,;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 from optimization challenges to complex simulations.;
               </p>;
               <ul className="space - y-2 mb - 6 text - sm text - gray - 400">;

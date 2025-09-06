@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -11,17 +12,20 @@ import {Button} from "@/components/ui/button";
 import {Badge} from "@/components/ui/badge";
 import {ChevronRight, FileText, Image, Clock, Zap, BookOpen} from "lucide-react";
 import {Link} from "react-router-dom";
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from "react",
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
 import { Badge } from "@/components/ui/badge",
-
-
 import { ChevronRight, FileText, Image, Clock, Zap, BookOpen } from "lucide-react";
 import { Link } from "react-router-dom";
 import { ChevronRight, FileText, Image, Clock, Zap, BookOpen } from "lucide-react",
 import { Link } from "react-router-dom",
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export function TalentDashboard() {
   return (
     <div className="space-y-6 px-4 pb-24">
@@ -159,12 +163,16 @@ export function TalentDashboard() {
   )
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from "react";
 import {Card, CardContent, CardHeader, CardTitle, CardDescription} from "@/components/ui/card";
 import {Button} from "@/components/ui/button";
 import {Badge} from "@/components/ui/badge";
 import {ChevronRight, FileText, Image, Clock, Zap, BookOpen} from "lucide-react";
 import {Link} from "react-router-dom";
+<<<<<<< HEAD
 =======
 
 
@@ -173,6 +181,8 @@ import {Link} from "react-router-dom";
 
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from "react",;
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
@@ -180,6 +190,7 @@ import { Badge } from "@/components/ui/badge",;
 import { ChevronRight, FileText, Image, Clock, Zap, BookOpen } from "lucide-react",;
 import { Link } from "react-router-dom";
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 export function TalentDashboard() {;
   return (
@@ -196,6 +207,8 @@ export function TalentDashboard() {;
 export function TalentDashboard() {;
   return (;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <div className="space-y-6 px-4 pb-24">;
       <section>;
         <div className="flex items-center justify-between mb-4">;
@@ -207,10 +220,13 @@ export function TalentDashboard() {;
           </Link>;
         </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
         ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <div className="space-y-3">;
           <Card>;
             <CardContent className="p-4">;
@@ -231,6 +247,7 @@ export function TalentDashboard() {;
                 </div>;
               </div>;
               <div className="flex gap-2 mt-3">;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 import React from './react';
@@ -277,11 +294,14 @@ function TalentDashboard() {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <Button size="sm">Apply Now</Button>;
                 <Button size="sm" variant="outline">View Details</Button>;
               </div>;
             </CardContent>;
           </Card>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
           <Card>;
@@ -326,6 +346,8 @@ function TalentDashboard() {
               </div>;
               <div className="flex gap-2 mt-3">;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <Button size="sm">Apply Now</Button>;
                 <Button size="sm" variant="outline">View Details</Button>;
               </div>;
@@ -333,6 +355,7 @@ function TalentDashboard() {
           </Card>;
         </div>;
       </section>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       <section>;
@@ -385,11 +408,14 @@ function TalentDashboard() {
             </div>;
             <Button variant="outline" className="w-full mt-4">;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               View All Applications;
             </Button>;
           </CardContent>;
         </Card>;
       </section>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       <section>;
@@ -445,10 +471,13 @@ function TalentDashboard() {
           <h2 className="text-lg font-medium">Learning Hub</h2>;
           <Button variant="ghost" size="sm" className="h-8">;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             View all;
           </Button>;
         </div>;
         <Card>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
           <CardContent className="p - 4">;
@@ -470,11 +499,14 @@ function TalentDashboard() {
                 <h3 className="font-medium">Improve your profile visibility</h3>;
                 <p className="text-sm text-muted-foreground">5 tips for getting noticed by clients</p>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               </div>;
             </div>;
           </CardContent>;
         </Card>;
       </section>;
+<<<<<<< HEAD
 
     </div>);
 <<<<<<< HEAD
@@ -501,3 +533,7 @@ function TalentDashboard() {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+    </div>);
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

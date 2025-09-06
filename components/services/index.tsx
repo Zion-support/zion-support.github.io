@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -15,6 +16,8 @@ export default /**
  */
 function ServicesIndexPage() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const all = (enhancedRealMicroSaasServices as unknown[]) .concat (
 }React.useEffect ( () => {
   const next = services.filter ( (s) => {
@@ -22,9 +25,13 @@ function ServicesIndexPage() {
   const res = await fetch ('/api / quote - request', {
   method: 'POST', headers: {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   'Content-Type': 'application/json' ;
 };
@@ -47,6 +54,7 @@ budgetRange: values.budgetRange;
   handleSubmit
 }/> </div>)
 };export default ServicesPage;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -75,6 +83,33 @@ import { Star } from 'lucide-react';
 <<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+export default function ServicesIndexPage () {
+ export default function ServicesIndexPage () {
+  const all = (enhancedRealMicroSaasServices as unknown[]) .concat (
+}React.useEffect ( () => {
+  const next = services.filter ( (s) => {
+  //Category const handleSubmit = async (values: QuoteFormValues) => {
+  const res = await fetch ('/api/quote-request', {
+  method: 'POST', headers: {
+body: JSON.stringify ({
+  service: values.serviceTitle, description: values.projectDescription, timeline: {
+  start: values.timelineStart, end: values.timelineEnd
+}
+budgetRange: values.budgetRange;
+}
+<Head> <title>Zion AI Marketplace - Services</title> <meta name="description" content="Discover curated IT services. Request quotes with AI-assisted summaries." /> </Head>) )
+}</div> </div> </div> </div> <QuoteRequestModal open= {
+  modalOpen
+}onClose= {
+  () => setModalOpen (false)
+}service= {
+  selected
+}onSubmit= {
+  handleSubmit
+}/> </div>)
+};export default ServicesPage;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 const mapLocalToServiceItem = (item: any): ServiceItem => ({
   slug: item.slug
   title: item.name
@@ -91,6 +126,7 @@ const ServicesPage: NextPage = () => {
   const [selected, setSelected] = React.useState<ServiceItem | null>(null);
 export default function ServicesIndexPage() {
   const all = (enhancedRealMicroSaasServices as unknown[])
+<<<<<<< HEAD
     .concat(
 =======
 class ErrorBoundary extends React.Component {
@@ -162,6 +198,8 @@ export default function ServicesIndexPage() {;
   const all = (enhancedRealMicroSaasServices as unknown[]);
     .concat(;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       extraServices as any[];
 =======
   'Content - Type': 'application / json';
@@ -192,9 +230,12 @@ const mapLocalToServiceItem = (item: any): ServiceItem => ({
   priceRangeUSD: item.priceRangeUSD,
   categories: [item.category],
   rating: Math.round ((3.8 + Math.random () * 1.2) * 10) / 10}),
+<<<<<<< HEAD
 =======
 rating: Math.round ((3.8 + Math.random () * 1.2) * 10) / 10}),
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 const ServicesPage: NextPage = () => {
   const [services, set_services] = React.useState < ServiceItem[]>([]);
   const [filtered, set_filtered] = React.useState < ServiceItem[]>([]);
@@ -210,11 +251,14 @@ function ServicesIndexPage() {
     .concat (
       extra_services as any[];
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
     .concat(;
       extraServices as any[];
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       additionalEnhancedServices as any[];
       newlyAddedServices as any[];
       curatedMarketServices as any[];
@@ -225,6 +269,7 @@ function ServicesIndexPage() {
       realOperationalServices as any[];
       verified2025Additions as any[];
       realServicesQ12025 as any[];
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   // Normalize various category labels into our main buckets;
@@ -265,10 +310,13 @@ function ServicesIndexPage() {
   }, [filters, services]);
   const availableCategories = React && React.useMemo(() => {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     const set = new Set<string>();
     services && services.forEach((s) => s && s.categories.forEach((c) => set && set.add(c)));
     return Array && Array.from(set);
   }, [services]);
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -310,14 +358,21 @@ function ServicesIndexPage() {
                 <EnhancedMarketplaceCard key={service.slug || service.id} service={service} onRequestQuote={handleRequestQuote} />
 
 
+=======
+    }
+  }
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               ))}
             </div>
           </div>
         </div>
       </div>
 
+<<<<<<< HEAD
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <UltraFuturisticBackground variant="quantum" intensity={1 && 1.5}>;
       <Head>;
         <title>Zion AI Marketplace - Services</title>;
@@ -424,25 +479,32 @@ if ( {) {
               {filtered.map ((service) => (
                 <EnhancedMarketplaceCard key={service.slug || service.id} service={service} onRequestQuote={handleRequestQuote} />))}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             </div>;
           </div>;
         </div>;
       </div>;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       <QuoteRequestModal
         open={modalOpen}
         onClose={() => setModalOpen(false)}
         service={selected}
         onSubmit={handleSubmit}
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -466,6 +528,12 @@ export default ServicesPage;
 
 export default ServicesPage;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+export default ServicesPage;
+
+export default ServicesPage;
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <QuoteRequestModal;
         open={modal_open}
         on_close={() => setModalOpen (false)}
@@ -477,6 +545,7 @@ export default ServicesPage;
 ;
 export default ServicesPage;
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -651,3 +720,5 @@ export default ServicesPage;
 }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -1,8 +1,13 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 interface FraudItem {
@@ -27,6 +32,7 @@ export default function FraudAdminPage() {
     setLoading(true)
     setError(null)
     try {
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -97,11 +103,14 @@ export default function FraudAdminPage() {
     } catch (e: any) {
       setError(e.message |'Failed to load')
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     } finally {
 
       set_loading (false);
 
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     fetchItems();
@@ -115,6 +124,8 @@ export default function FraudAdminPage() {
   }
   useEffect(() => {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     fetchItems()
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [adminToken])
@@ -122,6 +133,7 @@ export default function FraudAdminPage() {
     localStorage.setItem('admin-token', adminToken)
     fetchItems()
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -167,10 +179,13 @@ export default function FraudAdminPage() {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const takeAction = async (id: string, action: 'SUSPEND' | 'WARN' | 'IGNORE') => {
     const res = await fetch('/api/fraud/admin/action', {
       method: 'POST'
       headers: {
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -208,6 +223,8 @@ export default function FraudAdminPage() {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <div className="p-6 max-w-7xl mx-auto">
       <h1 className="text-2xl font-bold mb-4">Fraud Monitoring - Admin Review</h1>
@@ -215,6 +232,7 @@ export default function FraudAdminPage() {
         <input
           className="border rounded px-2 py-1 w-80"
           placeholder="Admin token (optional)"
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -238,6 +256,8 @@ export default function FraudAdminPage() {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         />
         <button className="bg-blue-600 text-white px-3 py-1 rounded" onClick={onSaveToken}>Save</button>
         <button className="bg-gray-200 px-3 py-1 rounded" onClick={fetchItems}>Refresh</button>
@@ -246,6 +266,7 @@ export default function FraudAdminPage() {
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
@@ -253,6 +274,9 @@ export default function FraudAdminPage() {
       {error && <div className="text-red-600">{error}</div>}
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {loading && <div>Loading...</div>  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -263,6 +287,7 @@ export default function FraudAdminPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -270,6 +295,8 @@ export default function FraudAdminPage() {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <div className="overflow-x-auto">
         <table className="min-w-full border">
           <thead>
@@ -286,6 +313,7 @@ export default function FraudAdminPage() {
           <tbody>
             {items.map((it) => (
               <tr key={it.id} className="border-t">
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -299,12 +327,15 @@ export default function FraudAdminPage() {
                 <td className="p-2 border">{it.userId |'—'}</td>
                 <td className="p-2 border">{it.userId || '—'}</td>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <td className="p-2 border">{it.source}</td>
                 <td className="p-2 border">{new Date(it.createdAt).toLocaleString()}</td>
                 <td className="p-2 border">
                   <div className="text-sm space-y-1">
                     {it.heuristic?.reasons?.slice(0, 3).map((r, idx) => (
                       <div key={idx} className="text-gray-700">{r}</div>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -322,10 +353,13 @@ export default function FraudAdminPage() {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   </div>
                 </td>
                 <td className="p-2 border">
                   <div className="text-sm">
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -339,6 +373,8 @@ export default function FraudAdminPage() {
                     <div className="font-semibold">{it.gpt?.label |'—'}</div>
                     <div className="font-semibold">{it.gpt?.label || '—'}</div>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     <div className="text-gray-700">{it.gpt?.reason}</div>
                   </div>
                 </td>
@@ -356,6 +392,7 @@ export default function FraudAdminPage() {
         </table>
       </div>
     </div>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -462,10 +499,15 @@ export default function FraudAdminPage() {
   );
 };
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  );
+};
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -473,3 +515,5 @@ export default function FraudAdminPage() {
 }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

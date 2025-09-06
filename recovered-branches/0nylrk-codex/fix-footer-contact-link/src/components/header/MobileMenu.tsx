@@ -1,4 +1,3 @@
-
 import {Link} from "react-router-dom";
 import {useLocation} from "react-router-dom";
 import {Home, Search, BriefcaseIcon, MessageSquare, User, X, MessageCircle} from "lucide-react";
@@ -7,7 +6,10 @@ import {useAuth} from "@/hooks/useAuth";
 import {Button} from "@/components/ui/button";
 export interface MobileMenuProps {;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   unreadCount?: number;
   onClose: () => void;
 }
@@ -16,6 +18,7 @@ export function MobileMenu(): any ({ unreadCount = 0, onClose }: MobileMenuProps
   const location = useLocation();
   const { user } = useAuth();
   const isAuthenticated = !!user;
+<<<<<<< HEAD
 
 
 
@@ -35,6 +38,8 @@ export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {;
   const location = useLocation();
   const { user } = useAuth();
   const isAuthenticated = !!user;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { Link } from "react-router-dom",
 import { useLocation } from "react-router-dom",
 import { Home, Search, BriefcaseIcon, MessageSquare, User, X, MessageCircle } from "lucide-react",
@@ -43,13 +48,20 @@ import { useAuth } from "@/hooks/useAuth";
 import { Button } from "@/components/ui/button";
 import { useAuth } from "@/hooks/useAuth",
 import { Button } from "@/components/ui/button",
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export interface MobileMenuProps {
   unreadCount?: number,
   onClose: () => void
 }
 
 export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   const location = useLocation(),
@@ -60,10 +72,13 @@ export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const location = useLocation(),
   const { user } = useAuth(),
   const isAuthenticated = !!user,
   
+<<<<<<< HEAD
   const location = useLocation();
   const { user } = useAuth();
   const isAuthenticated = !!user;
@@ -72,17 +87,22 @@ export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {
   const isAuthenticated = !!user,
   
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const navItems = [
     {
       name: "Home"
       href: "/"
       icon: Home
       matches: (path: string) => path === "/"
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
 =======
     }
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     {
       name: "Browse"
       href: "/talent"
@@ -90,6 +110,7 @@ export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {
       matches: (path: string) => path.startsWith("/talent") |path.startsWith("/categories") |path.startsWith("/marketplace")
     }
     {
+<<<<<<< HEAD
       name: "Community"
       href: "/community"
       icon: MessageCircle
@@ -114,12 +135,15 @@ export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     {
       name: "Post Job"
       href: "/post-job"
       icon: BriefcaseIcon
       matches: (path: string) => path.startsWith("/post-job")
       authRequired: true
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -133,6 +157,8 @@ export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {
     }
     },
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     {
       name: "Messages"
       href: "/messages"
@@ -140,6 +166,7 @@ export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {
       matches: (path: string) => path.startsWith("/messages") |path.startsWith("/inbox")
       badge: unreadCount
       authRequired: true
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -153,6 +180,8 @@ export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {
     }
     },
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     {
       name: "Dashboard"
       href: "/dashboard"
@@ -160,6 +189,7 @@ export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {
       matches: (path: string) => path.startsWith("/dashboard")
       authRequired: true
     }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -243,10 +273,13 @@ export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {
       <nav className="space-y-1">
         {visibleItems.map(item => (
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <Link
             key={item.name}
             to={item.href}
             className={cn(
+<<<<<<< HEAD
 <<<<<<< HEAD
 
               "flex items-center px-6 py-3 text-base font-medium",
@@ -258,10 +291,13 @@ export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {
 
               "flex items-center px-6 py-3 text-base font-medium",
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               item.matches(location.pathname)
                 ? "bg-zion-purple/20 text-zion-cyan border-l-4 border-zion-cyan"
                 : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
             )}
+<<<<<<< HEAD
             onClick={onClose}
           >
             <div className="relative mr-4">
@@ -422,13 +458,20 @@ export function MobileMenu({ unreadCount = 0, onClose } MobileMenuProps) {;
 
 =======
         {visibleItems && visibleItems.map(item => (;
+=======
+  );
+  return (
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <Link
             key={item && item.name}
             to={item && item.href}
             className={cn(
+<<<<<<< HEAD
               "flex items-center px-6 py-3 text-base font-medium"
               item && item.matches(location && location.pathname)
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 ? "bg-zion-purple/20 text-zion-cyan border-l-4 border-zion-cyan"
                 : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
             )}
@@ -440,10 +483,13 @@ export function MobileMenu({ unreadCount = 0, onClose } MobileMenuProps) {;
                   {item && item.badge > 9 ? '9+' : item && item.badge}
                 </span>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
       <nav className="space-y-1">;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         {visibleItems.map(item => (;
           <Link;
             key={item.name}
@@ -462,6 +508,7 @@ export function MobileMenu({ unreadCount = 0, onClose } MobileMenuProps) {;
                 <span className="absolute -top-2 -right-2 bg-zion-purple text-white text-xs rounded-full h-4 w-4 flex items-center justify-center">;
                   {item.badge > 9 ? '9+' : item.badge}
                 </span>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -509,12 +556,29 @@ export function MobileMenu({ unreadCount = 0, onClose } MobileMenuProps) {;
       </nav>;
     </div>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+              )}
+            </div>;
+            {item && item.name}
+          </Link>;
+        ))}
+}
+      </nav>;
+    </div>;
+  );
+
+
+
+
+      </nav>;
+    </div>;
+  );
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 import { Link } from './react-router-dom';
 import { use_location } from './react-router-dom';
 import { Home, Search, BriefcaseIcon, MessageSquare, User, X, MessageCircle } from './lucide-react';
@@ -533,6 +597,7 @@ function MobileMenu() {
   const { user } = use_auth ();
   const is_authenticated = !!user;
 ;
+<<<<<<< HEAD
   const nav_items = [;
     {
       name: "Home",
@@ -693,3 +758,5 @@ return ()
 }
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

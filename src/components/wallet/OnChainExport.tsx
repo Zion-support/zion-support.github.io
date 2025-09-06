@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import React, { useState } from "react",
 import React, { useState } from "react",
@@ -19,10 +20,13 @@ import { Wallet, Info, Check, ChevronRight, ArrowUpRight } from 'lucide-react';
 <<<<<<< HEAD
 ;
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {
   Tooltip;
   TooltipContent;
   TooltipProvider;
+<<<<<<< HEAD
   TooltipTrigger} from "@/components/ui/tooltip",
 import { useToast } from "@/hooks/use-toast";
 import { useAuth } from "@/hooks/useAuth";
@@ -38,17 +42,22 @@ import {
 import { useAuth } from "@/hooks/useAuth"
 export function OnChainExport() {
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const [isConnected, setIsConnected] = useState(false)
   const [isExporting, setIsExporting] = useState(false)
   const [exportStatus, setExportStatus] = useState<'idle' | 'processing' | 'success' | 'error'>('idle')
   const { toast } = useToast()
   const { user } = useAuth()
+      // Check if wallet is available;
+      const ethereum = (window as any).ethereum;
+      // Check condition
+if ( {) {
+  $2
   const handleConnectWallet = async () => {
     try {
       // Check if wallet is available
       const ethereum = (window as any).ethereum
-import React, { useState } from "react",
-import React, { useState } from "react",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
 import { Wallet, Info, Check, ChevronRight, ArrowUpRight } from 'lucide-react'
@@ -75,25 +84,6 @@ export function OnChainExport() {
           title: "Wallet not detected"
           description: "Please install MetaMask or another Ethereum wallet to use this feature"
           variant: "destructive"
-        })
-        })
-        return
-      }
-      // Request accounts
-      const accounts = await ethereum.request({ method: 'eth_requestAccounts' })
-      const address = accounts[0]
-}
-
-  )
-        return;
-      }
-      
-      // Request accounts
-      const accounts = await ethereum.request({ method: 'eth_requestAccounts' }),
-      const address = accounts[0];
-};
-  );
-};
 }
         }),
         return
@@ -222,7 +212,6 @@ export function OnChainExport() {;
   const handleConnectWallet = async () => {;
     try {;
       // Check if wallet is available;
-ursor/fix-website-loading-errors-and-merge-6662
       const ethereum = (window as any).ethereum,;
       if (!ethereum) {;
         toast({;
@@ -336,5 +325,8 @@ ursor/fix-website-loading-errors-and-merge-6662
   );
 }
 ;
+<<<<<<< HEAD
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

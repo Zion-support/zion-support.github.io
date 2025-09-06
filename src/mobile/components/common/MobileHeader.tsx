@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import React from "react";
 import { useRouter  } from 'next/router';
@@ -53,11 +54,16 @@ interface MobileHeaderProps {
   title: string;  showBack?: boolean;  title: string
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 title: string;  showBack?: boolean;  title: string
+=======
+
+  title: string;  showBack?: boolean;  title: string
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   showBack?: boolean
   showNotifications?: boolean
   showSettings?: boolean
   className?: string
   onNotificationsClick?: () => void
+<<<<<<< HEAD
 interface MobileHeaderProps {
   title: string,
   showBack?: boolean;
@@ -82,10 +88,13 @@ export function MobileHeader({
   showSettings = false
   className
   onNotificationsClick
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   onSettingsClick}: MobileHeaderProps) {
   const router = useRouter()
   return (
     <header className={cn(
+<<<<<<< HEAD
       "sticky top-0 z-40 bg-background/80 backdrop-blur-sm border-b border-border"
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
@@ -124,10 +133,13 @@ export function MobileHeader({
 
 
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       className
       <div className="flex items-center justify-between h-14 px-4">
         <div className="flex items-center">
           {showBack && (
+<<<<<<< HEAD
             <Button
               variant="ghost"
               size="icon"
@@ -144,10 +156,13 @@ export function MobileHeader({
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             >
               <ChevronLeft className="h-5 w-5" />
               <span className="sr-only">Back</span>
             </Button>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
               <span className='sr-only'>Settings</span>            </Button>            <Button
@@ -217,6 +232,8 @@ export function MobileHeader(): any ({;
               <span className="sr-only">Notifications</span>;
             </Button>;
           )}
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 <<<<<<< HEAD
           {showSettings && (;
@@ -229,14 +246,19 @@ export function MobileHeader(): any ({;
             <Button 
               <span className='sr-only'>Settings</span>            </Button>            <Button 
             <Button 
+            <Button 
+              <span className='sr-only'>Settings</span>            </Button>            <Button 
+            <Button 
 
 
+          {showSettings && (
               variant="ghost" 
               size="icon"
               onClick={onSettingsClick}
             >
               <Settings className="h-5 w-5" />
               <span className="sr-only">Settings</span>
+<<<<<<< HEAD
 
 ;
 }
@@ -369,10 +391,13 @@ export function MobileHeader({;
     </header>;
   );  )
 }
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ;
 }
 }
 }
+
             </Button>
 import React from "react",;
 import { useRouter } from 'next/router',;
@@ -431,16 +456,11 @@ export function MobileHeader({;
               <span className="sr-only">Notifications</span>;
             </Button>;
           )}
-          {showSettings && (;
-            <Button;
-              variant="ghost";
-              size="icon";
-              onClick={onSettingsClick}
-            >;
               <Settings className="h-5 w-5" />;
               <span className="sr-only">Settings</span>;
             </Button>;
           )}
+<<<<<<< HEAD
         </div>;
       </div>;
     </header>;
@@ -449,3 +469,5 @@ export function MobileHeader({;
 ;
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

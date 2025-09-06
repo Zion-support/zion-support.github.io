@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 import LoadingSpinner from './LoadingSpinner';
 
 interface ButtonProps {
@@ -30,26 +31,31 @@ const Button: React.FC<ButtonProps> = ({
     outline: 'border border-white/30 hover:border-white/60 text-white hover:bg-white/10',
     ghost: 'text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-800',
     danger: 'bg-red-600 hover:bg-red-700 text-white shadow-lg'
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   };
   
   const sizeClasses = {
-    sm: 'px-4 py-2 text-sm',
-    md: 'px-6 py-3 text-base',
-    lg: 'px-8 py-4 text-lg'
+    small: 'px-3 py-1.5 text-sm',
+    medium: 'px-4 py-2 text-base',
+    large: 'px-6 py-3 text-lg'
   };
   
   const classes = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className}`;
   
   return (
+<<<<<<< HEAD
     <button
       type={type}
       className={classes}
       onClick={onClick}
       disabled={disabled || loading}
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     >
       {loading && <LoadingSpinner size="sm" />}
       {children}
-    </button>
+    </motion.button>
   );
 };
 

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -42,28 +43,46 @@ export default function ServiceDescriptionGeneratorPage(req, res) {
 export default function ServiceDescriptionGeneratorPage() {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export default function ServiceDescriptionGeneratorPage() {
 export default function ServiceDescriptionGeneratorPage(req, res) {
   try {
 export default function ServiceDescriptionGeneratorPage() {;
 export default function ServiceDescriptionGeneratorPage(req, res) {
   try {
+<<<<<<< HEAD
 export default function ServiceDescriptionGeneratorPage(req, res) {
   try {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+
+export default function ServiceDescriptionGeneratorPage(req, res) {
+  try {
+
+
+export default function ServiceDescriptionGeneratorPage() {;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const [title, setTitle] = useState('');
   const [targetAudience, setTargetAudience] = useState('');
   const [featuresInput, setFeaturesInput] = useState('');
   const [additionalNotes, setAdditionalNotes] = useState('');
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const [tone, setTone] = useState<
     'professional' | 'friendly' | 'persuasive' | 'technical'
 
   >('professional');
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -77,20 +96,25 @@ export default function ServiceDescriptionGeneratorPage(req, res) {
 =======
 
   const [tone, setTone] = useState<'professional' | 'friendly' | 'persuasive' | 'technical'>('professional');
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
-  const [tone, setTone] = useState<'professional' | 'friendly' | 'persuasive' | 'technical'>('professional'),
 
+<<<<<<< HEAD
   const [tone, setTone] = useState<
     'professional' | 'friendly' | 'persuasive' | 'technical'
   >('professional');
   const [tone, setTone] = useState<'professional' | 'friendly' | 'persuasive' | 'technical'>('professional');
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null),
   const [generated, setGenerated] = useState('');
   const [accepted, setAccepted] = useState(false);
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
   const keyFeatures = useMemo(() => {
@@ -151,13 +175,99 @@ function handleAccept() {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+=======
+  const keyFeatures = useMemo(() => {
+    return featuresInput
+      .split('\n')
+      .map(f => f.trim())
+      .filter(Boolean);  }, [featuresInput]);
+  async function handleSubmit(e: React.FormEvent) {
+    e.preventDefault();
+    setLoading(true);
+    setError(null);
+    setAccepted(false)
+    try {
+      const response = await fetch('/api/generate-service-description', {
+        method: 'POST'
+        headers: { 'Content-Type': 'application/json' }
+        body: JSON.stringify({
+          title
+          keyFeatures
+          targetAudience
+          additionalNotes: additionalNotes |undefined
+          tone
+        })
+      });
+      if (!response.ok) {
+        const data = await response.json().catch(() => ({}));
+        throw new Error(data.error |'Failed to generate');
+      }
+      const data = (await response.json()) as { description: string }
+      setGenerated(data.description |'');
+    } catch (err: any) {
+      setError(err.message |'Something went wrong');
+    } finally {
+      setLoading(false);    }
+  }
+  function handleAccept() {
+    setAccepted(true);  }
+  function handleCopy() {
+    if (!generated) return;
+    navigator.clipboard.writeText(generated).catch(() => {});
 
+  }
+  const [tone, setTone] = useState<'professional' | 'friendly' | 'persuasive' | 'technical'>('professional');
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+  const [generated, setGenerated] = useState('');
+  const [accepted, setAccepted] = useState(false);
+  const keyFeatures = useMemo(() => {;
+    return featuresInput;
+      .split('\n');
+      .map((f) => f.trim());
+      .filter(Boolean);
+  }, [featuresInput]),;
+  async function handleSubmit(e: React.FormEvent) {;
+    e.preventDefault(),;
+    setLoading(true);
+    setError(null);
+    setAccepted(false);
+    try {
+      const response = await fetch('/api/generate-service-description', {;
+        method: 'POST',;
+        headers: { 'Content-Type': 'application/json' },;
+        body: JSON.stringify({;
+          title,;
+          keyFeatures,;
+          targetAudience,;
+          additionalNotes: additionalNotes || undefined,;
+    } finally {;
+      setLoading(false);
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+    if (!generated) return;
+    navigator.clipboard.writeText(generated).catch(() => {});
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+
+}
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
+
+  }
   return (
     <div className="max-w-3xl mx-auto">
       <h1 className="text-2xl font-semibold mb-4">Service Description Generator</h1>
       <p className="text-sm text-gray-600 dark:text-gray-300 mb-6">
         Enter your service details. We will generate a polished description using GPT-4. You can edit it on the page and accept when ready.
       </p>
+<<<<<<< HEAD
 
 
 
@@ -165,6 +275,8 @@ function handleAccept() {
     setAccepted(true);  }
   function handleCopy() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <form
         onSubmit={handleSubmit}
         className='space-y-4 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-lg p-4'>;
@@ -178,11 +290,15 @@ function handleAccept() {
             placeholder='e && e.g., On-Demand Web Performance Audit'
             value={title}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
     setAccepted(true)
   }
 
 
+<<<<<<< HEAD
 =======
     setAccepted(true)
   }
@@ -198,6 +314,8 @@ function handleAccept() {
       </p>
       <form onSubmit={handleSubmit} className="space-y-4 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-lg p-4">
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <div>
           <label className="block text-sm font-medium mb-1">Service Title</label>
           <input
@@ -207,6 +325,7 @@ function handleAccept() {
             value={title}
             onChange={(e) => setTitle(e.target.value)}
             required
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
           />
@@ -226,21 +345,29 @@ function handleAccept() {
           />;
         </div>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+          />
+        </div>
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <div>;
           <label className='block text-sm font-medium mb-1'>;
             Target Audience;
           </label>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <input
             type='text'
             className='w-full rounded-md border border-gray-300 dark:border-gray-700 bg-transparent px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500'
             placeholder='e && e.g., CTOs and product teams at growth-stage SaaS'
             value={targetAudience}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -264,12 +391,15 @@ function handleAccept() {
             Key Features (one per line);
           </label>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <textarea
             className='w-full min-h-[120px] rounded-md border border-gray-300 dark:border-gray-700 bg-transparent px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500'
             placeholder={
               'e && e.g.\nCore Web Vitals deep-dive\nActionable prioritised recommendations\nHands-on fixes or step-by-step guidance'
             }
             value={featuresInput}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -374,11 +504,14 @@ function handleAccept() {
         </div>
         <div>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             className='w-full min-h-[80px] rounded-md border border-gray-300 dark:border-gray-700 bg-transparent px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500'
             placeholder='Constraints, deliverables, timeline, pricing preferences, compliance, etc.'
             value={additionalNotes}
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
             onChange={e => setAdditionalNotes(e && e.target.value)}
@@ -386,10 +519,13 @@ function handleAccept() {
         </div>;
         <div className='flex items-center gap-3'>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <button
             type='submit'
             disabled={loading}
             className='inline-flex items-center justify-center rounded-md bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 disabled:opacity-60'>;
+<<<<<<< HEAD
             {loading ? 'Generating…' : 'Generate Description'}
 <<<<<<< HEAD
 
@@ -404,6 +540,8 @@ function handleAccept() {
             <h2 className='text-xl font-semibold'>Generated Description</h2>;
             <div className='flex items-center gap-2'>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <button
                 onClick={handleCopy}
                 className='rounded-md border border-gray-300 dark:border-gray-700 px-3 py-1 text-sm hover:bg-gray-50 dark:hover:bg-gray-800'>;
@@ -411,6 +549,7 @@ function handleAccept() {
               </button>;
               <button
                 onClick={handleAccept}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -469,6 +608,11 @@ function handleAccept() {
         </div>
         <div className='flex items-center gap-3'>
         <div className="flex items-center gap-3">
+=======
+          <button
+            type="submit"
+            disabled={loading}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <button
             type="submit"
             disabled={loading  } catch (error) {
@@ -482,6 +626,7 @@ function handleAccept() {
             {loading ? 'Generating…' : 'Generate Description'}
           </button>
 <<<<<<< HEAD
+<<<<<<< HEAD
           {error && <span className="text-red-600 text-sm">{error}</span>}
 =======
           {error && <span className="text-red-600 text-sm">{error}</span>  } catch (error) {
@@ -490,6 +635,9 @@ function handleAccept() {
   }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+          {error && <span className="text-red-600 text-sm">{error}</span>}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         </div>
       </form>
 
@@ -500,6 +648,7 @@ function handleAccept() {
             <div className="flex items-center gap-2">
               <button
 <<<<<<< HEAD
+<<<<<<< HEAD
                 onClick={handleCopy}
 =======
                 onClick={handleCopy  } catch (error) {
@@ -508,11 +657,14 @@ function handleAccept() {
   }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 className="rounded-md border border-gray-300 dark:border-gray-700 px-3 py-1 text-sm hover:bg-gray-50 dark:hover:bg-gray-800"
               >
                 Copy
               </button>
               <button
+<<<<<<< HEAD
 <<<<<<< HEAD
                 onClick={handleAccept}
                 className="rounded-md bg-emerald-600 hover:bg-emerald-700 text-white px-3 py-1 text-sm"
@@ -528,10 +680,13 @@ className="rounded-md bg-emerald-600 hover:bg-emerald-700 text-white px-3 py-1 t
                 className="rounded-md bg-emerald-600 hover:bg-emerald-700 text-white px-3 py-1 text-sm"
               >
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 Accept
               </button>
             </div>
           </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
           <textarea
 
@@ -565,6 +720,8 @@ className="rounded-md bg-emerald-600 hover:bg-emerald-700 text-white px-3 py-1 t
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             className="w-full min-h-[280px] rounded-md border border-gray-300 dark:border-gray-700 bg-transparent px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
             value={generated}
             onChange={(e) => setGenerated(e.target.value)}
@@ -576,22 +733,34 @@ className="rounded-md bg-emerald-600 hover:bg-emerald-700 text-white px-3 py-1 t
         </div>
       )}
     </div>
+            <div className="text-emerald-700 dark:text-emerald-400 text-sm">Accepted. You can copy and paste this into your CMS.</div>
+          )  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
   )
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <div>;
           <label className='block text - sm font - medium mb - 1'>;
             Additional Notes (optional);
@@ -603,6 +772,7 @@ className="rounded-md bg-emerald-600 hover:bg-emerald-700 text-white px-3 py-1 t
             on_change={e => setAdditionalNotes (e.target.value)}
           />;
         </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -676,6 +846,8 @@ className="rounded-md bg-emerald-600 hover:bg-emerald-700 text-white px-3 py-1 t
 }
         </div>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -688,6 +860,7 @@ className="rounded-md bg-emerald-600 hover:bg-emerald-700 text-white px-3 py-1 t
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -695,3 +868,5 @@ className="rounded-md bg-emerald-600 hover:bg-emerald-700 text-white px-3 py-1 t
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

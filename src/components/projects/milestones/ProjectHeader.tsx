@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import React from 'react';
 import { useRouter  } from 'next/router';
@@ -20,12 +21,15 @@ export function ProjectHeader({ title }: ProjectHeaderProps) {;
       <div className='flex items-center'>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 return (
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <div className='flex flex-col md:flex-row justify-between items-start md:items-center py-4 border-b'>;
       <div className='flex items-center'>;
         <Button
           variant='ghost'
           size='sm'
           className='mr-2'
+<<<<<<< HEAD
 <<<<<<< HEAD
           onClick={() => router && router.back()} // Changed to router && router.back()        >;
           <ArrowLeft className='h-4 w-4 mr-1' />;
@@ -69,6 +73,10 @@ interface ProjectHeaderProps {;
   title: string;
 }
 
+=======
+}
+;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export function ProjectHeader({ title }: ProjectHeaderProps) {
   const router = useRouter(); // Changed from useNavigate to useRouter
   return (
@@ -87,6 +95,7 @@ export function ProjectHeader({ title }: ProjectHeaderProps) {
       </div>
     </div>
   )
+<<<<<<< HEAD
 }
 }
 ursor/fix-website-loading-errors-and-merge-6662
@@ -94,3 +103,5 @@ ursor/fix-website-loading-errors-and-merge-6662
 }
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

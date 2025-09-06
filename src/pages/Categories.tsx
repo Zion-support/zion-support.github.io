@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { GradientHeading } from "@/components/GradientHeading";
 import { SkeletonCard  } from '@/components/ui';
 import ErrorBoundary from "@/components/GlobalErrorBoundary";
@@ -14,6 +15,8 @@ import ErrorBoundary from "@/components/GlobalErrorBoundary";
 import { GradientHeading } from "@/components/GradientHeading",
 import { SkeletonCard } from '@/components/ui',
 import ErrorBoundary from "@/components/GlobalErrorBoundary",
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { Folder } from 'lucide-react'
 import { CATEGORIES  } from '@/data/categories';
 import { NextSeo  } from '@/components/NextSeo';
@@ -25,6 +28,7 @@ interface CategoryType {
   icon: string
 
 
+<<<<<<< HEAD
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -55,12 +59,15 @@ class ErrorBoundary extends React.Component {
   const isLoading = !data && !error;
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       logErrorToProduction ('Categories API error:', { data: response.status_text }),
       return CATEGORIES as CategoryType[];
     fallback_data: initial_categories}),
   const categories = data || [];
   const is_loading = !data && !error;
 }
+<<<<<<< HEAD
 import React from './react';
 import { Brain, Cloud, Shield, Code, Database, Network  } from './lucide-react';"});"});
 <<<<<<< HEAD
@@ -78,6 +85,8 @@ import { Brain, Cloud, Shield, Code, Database, Network  } from './lucide-react';
 import React from "react";
 import { Brain, Cloud, Shield, Code, Database, Network } from "lucide-react";"});"})
 }
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 const Categories: React.FC: = () => {,"
   const categories = []
   return ("
@@ -193,6 +202,7 @@ const Categories: React.FC = () => {}
 export default Categories""
 "
   )}
+<<<<<<< HEAD
 export: default Categories
 export default Categories," ]
 }
@@ -216,6 +226,8 @@ interface CategoryType {
   name: string,
   slug: string,
   icon: string
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import useSWR from 'swr',;
 import { CategoryCard } from "@/components/CategoryCard",;
 import { GradientHeading } from "@/components/GradientHeading",;
@@ -315,6 +327,7 @@ export default function Categories({ categories: initialCategories = [] }: Categ
   );
 }
 ;
+<<<<<<< HEAD
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 const Categories: React.FC: = () => {, ";
@@ -434,3 +447,5 @@ export: default Categories,
 export default Categories, " ];
 export default Categories"")))))))));
 }
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

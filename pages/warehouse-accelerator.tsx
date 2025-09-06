@@ -1,14 +1,9 @@
-
-
-						<a href="/services" className="px-4 py-2 rounded-lg bg-white text-black font-medium">Explore Services</Link>
-						<a href="/contact" className="px-4 py-2 rounded-lg border border-white/10 text-gray-200">Contact Sales</Link>
-
-
 					</div>
 				</div>
 			</section>
 		</>
 	)
+<<<<<<< HEAD
 
 }
 
@@ -63,13 +58,18 @@ export default function WarehouseAcceleratorPage() {
 	)
 };
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

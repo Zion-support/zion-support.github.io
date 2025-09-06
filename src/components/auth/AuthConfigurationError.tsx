@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -44,6 +45,9 @@ import {
   RefreshCw
   Settings
   CheckCircle
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from 'react'
 import Link from 'next/link'
 import {
@@ -61,54 +65,6 @@ import { Button  } from '@/components/ui/button';
 import { Alert, AlertDescription } from '@/components/ui/alert';
 interface AuthConfigurationErrorProps {
   onRetry?: () => void;
-  showSetupButton?: boolean
-
-export function AuthConfigurationError({
-  onRetry
-  showSetupButton = true
-}: AuthConfigurationErrorProps) {
-  const handleRefresh = () => {
-    if (onRetry) {
-      onRetry()
-    } else {
-      window.location.reload() }
-  }
-  return (
-    <div className='min-h-screen bg-gradient-to-br from-red-50 via-orange-50 to-yellow-50 flex items-center justify-center p-4'>
-      <div className='max-w-2xl w-full'>
-export function AuthConfigurationError({ onRetry, showSetupButton = true }: AuthConfigurationErrorProps) {
-  const handleRefresh = () => {
-    if (onRetry) {
-      onRetry()
-    } else {
-      window.location.reload()
-    }
-  }
-  return (
-    <div className='min-h-screen bg-gradient-to-br from-red-50 via-orange-50 to-yellow-50 flex items-center justify-center p-4'>
-      <div className='max-w-2xl w-full'>
-        {/* Main Error Card */}
-        <div className='bg-white rounded-2xl shadow-xl border border-red-200 p-8 mb-6'>
-          <div className='text-center mb-6'>
-            <div className='mx-auto mb-4 h-16 w-16 rounded-full bg-red-100 flex items-center justify-center'>
-              <AlertTriangle className='h-8 w-8 text-red-600' />
-            </div>
-            <h1 className='text-3xl font-bold text-gray-900 mb-2'>
-              Authentication Service Unavailable
-            </h1>
-            <p className='text-gray-600'>
-              The sign-up system needs to be configured before users can create
-              accounts
-            </p>
-          </div>
-          <Alert variant='destructive' className='mb-6'>
-            <AlertTriangle className='h-4 w-4' />
-            <AlertDescription>
-              <strong>Critical Issue #1:</strong> Auth0 environment variables
-              are not configured. New users cannot sign up until this is
-              resolved.            </AlertDescription>
-          </Alert>
-          {/* Technical Details */}        {/* Main Error Card */}
 import React from 'react',;
 import Link from 'next/link',;
 import { AlertTriangle, ExternalLink, RefreshCw, Settings, CheckCircle } from 'lucide-react';
@@ -124,6 +80,7 @@ export function AuthConfigurationError({ onRetry, showSetupButton = true }: Auth
     if (onRetry) {;
       onRetry();
     } else {;
+<<<<<<< HEAD
       window.location.reload();
     }
   },
@@ -201,6 +158,15 @@ if ( {) {
 ursor/fix-website-loading-errors-and-merge-6662
         <div className="bg-white rounded-2xl shadow-xl border border-red-200 p-8 mb-6">
 
+=======
+    }
+  },
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-red-50 via-orange-50 to-yellow-50 flex items-center justify-center p-4">
+      <div className="max-w-2xl w-full">
+        {/* Main Error Card */}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <div className="bg-white rounded-2xl shadow-xl border border-red-200 p-8 mb-6">
           <div className="text-center mb-6">
             <div className="mx-auto mb-4 h-16 w-16 rounded-full bg-red-100 flex items-center justify-center">
@@ -213,6 +179,7 @@ ursor/fix-website-loading-errors-and-merge-6662
               The sign-up system needs to be configured before users can create accounts
             </p>
           </div>
+<<<<<<< HEAD
           <Alert variant="destructive" className="mb-6">
             <AlertTriangle className="h-4 w-4" />
             <AlertDescription>
@@ -220,36 +187,56 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
 
+=======
+
+
+
+
+
+
+
+
+
+
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <Alert variant="destructive" className="mb-6">
             <AlertTriangle className="h-4 w-4" />
             <AlertDescription>
               <strong>Critical Issue #1:</strong> Auth0 environment variables are not configured. 
+<<<<<<< HEAD
           <div className='bg-gray-50 rounded-lg p-4 mb-6'>
             <h3 className='font-semibold text-gray-900 mb-2'>
               Missing Configuration:
             </h3>
             <ul className='text-sm text-gray-700 space-y-1'>              <li>• AUTH0_SECRET</li>          <div className="bg-gray-50 rounded-lg p-4 mb-6">
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               New users cannot sign up until this is resolved.
             </AlertDescription>
           </Alert>
           {/* Technical Details */}
 
-          <div className="bg-gray-50 rounded-lg p-4 mb-6">
 
 
+<<<<<<< HEAD
 
           <div className="bg-gray-50 rounded-lg p-4 mb-6">
             <h3 className="font-semibold text-gray-900 mb-2">Missing Configuration:</h3>
           <div className="bg-gray-50 rounded-lg p-4 mb-6">
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <h3 className="font-semibold text-gray-900 mb-2">Missing Configuration:</h3>
             <ul className="text-sm text-gray-700 space-y-1">
-              <li>• AUTH0_SECRET</li>
-              <li>• AUTH0_BASE_URL</li>
-              <li>• AUTH0_ISSUER_BASE_URL</li>
-              <li>• AUTH0_CLIENT_ID</li>
-              <li>• AUTH0_CLIENT_SECRET</li>
+              <li> AUTH0_SECRET</li>
+              <li> AUTH0_BASE_URL</li>
+              <li> AUTH0_ISSUER_BASE_URL</li>
+              <li> AUTH0_CLIENT_ID</li>
+              <li> AUTH0_CLIENT_SECRET</li>
             </ul>
           </div>
+<<<<<<< HEAD
           {/* Action Buttons */}
           <div className='flex flex-col sm:flex-row gap-3 mb-6'>
             {showSetupButton && (
@@ -263,11 +250,14 @@ ursor/fix-website-loading-errors-and-merge-6662
             {showSetupButton && (
               <Button 
                 onClick={() => window.open('/AUTH0_SETUP_GUIDE_ISSUE_1.md_blank')}
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 className="bg-blue-600 hover:bg-blue-700 text-white flex-1"
               >
                 <Settings className="w-4 h-4 mr-2" />
                 Setup Guide
               </Button>
+<<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         <div className='bg-white rounded-2xl shadow-xl border border-red-200 p-8 mb-6'>;
@@ -309,6 +299,8 @@ ursor/fix-website-loading-errors-and-merge-6662
               </Button>
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   };
   return (;
     <div className="min-h-screen bg-gradient-to-br from-red-50 via-orange-50 to-yellow-50 flex items-center justify-center p-4">;
@@ -353,7 +345,7 @@ ursor/fix-website-loading-errors-and-merge-6662
             <h3 className='font-semibold text-gray-900 mb-2'>;
               Missing Configuration:;
             </h3>;
-            <ul className='text-sm text-gray-700 space-y-1'>              <li>• AUTH0_SECRET</li>          <div className="bg-gray-50 rounded-lg p-4 mb-6">;
+            <ul className='text-sm text-gray-700 space-y-1'>              <li> AUTH0_SECRET</li>          <div className="bg-gray-50 rounded-lg p-4 mb-6">;
             <h3 className="font-semibold text-gray-900 mb-2">Missing Configuration:</h3>;
             <ul className="text-sm text-gray-700 space-y-1">;
     <div className='min - h-screen bg - gradient - to - br from - red - 50 via - orange - 50 to - yellow - 50 flex items - center justify - center p - 4'>;
@@ -404,9 +396,10 @@ ursor/fix-website-loading-errors-and-merge-6662
             <h3 className='font - semibold text - gray - 900 mb - 2'>;
               Missing Configuration:;
             </h3>;
-            <ul className='text - sm text - gray - 700 space - y-1'>              <li>• AUTH0_SECRET</li>          <div className="bg - gray - 50 rounded - lg p - 4 mb - 6">;
+            <ul className='text - sm text - gray - 700 space - y-1'>              <li> AUTH0_SECRET</li>          <div className="bg - gray - 50 rounded - lg p - 4 mb - 6">;
             <h3 className="font - semibold text - gray - 900 mb - 2">Missing Configuration:</h3>;
             <ul className="text - sm text - gray - 700 space - y-1">;
+<<<<<<< HEAD
 import React from 'react',;
 import Link from 'next/link',;
 import { AlertTriangle, ExternalLink, RefreshCw, Settings, CheckCircle } from 'lucide-react';
@@ -427,10 +420,13 @@ export function AuthConfigurationError({ onRetry, showSetupButton = true } AuthC
     }
   },;
 ;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             )}
             <Button
               onClick={handleRefresh}
               variant='outline'
+<<<<<<< HEAD
               className='flex-1'            >
               <RefreshCw className='w-4 h-4 mr-2' />              Check Again              <RefreshCw className="w-4 h-4 mr-2" />
   };
@@ -487,11 +483,14 @@ export function AuthConfigurationError({ onRetry, showSetupButton = true } AuthC
 ;
             <Button;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               onClick={handleRefresh}
               variant="outline" 
               className="flex-1"
             >
               <RefreshCw className="w-4 h-4 mr-2" />
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -512,18 +511,17 @@ export function AuthConfigurationError({ onRetry, showSetupButton = true } AuthC
             ;
             <Button ;
               onClick={handleRefresh}
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
               Check Again
             </Button>
           </div>
-              className='flex-1'>;
-              <RefreshCw className='w-4 h-4 mr-2' />              Check Again              <RefreshCw className="w-4 h-4 mr-2" />;
-              Check Again;
-            </Button>;
-          </div>;
-
           {/* Quick Setup Steps */}
+<<<<<<< HEAD
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <div className="border-t pt-6">
             <h3 className="font-semibold text-gray-900 mb-3">Quick Setup Steps:</h3>
             <ol className="space-y-3 text-sm">
@@ -542,6 +540,7 @@ export function AuthConfigurationError({ onRetry, showSetupButton = true } AuthC
                   </Link>
                 </div>
               </li>
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
               <li className='flex items-start gap-3'>
                 <span className='flex-shrink-0 w-6 h-6 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-xs font-semibold'>
@@ -549,6 +548,8 @@ export function AuthConfigurationError({ onRetry, showSetupButton = true } AuthC
                 </span>                <div>                <div>
                   <strong>Create Auth0 Account:</strong>
                   <br />
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   <a
                     href="https://manage.auth0.com/"
                     target="_blank"
@@ -556,12 +557,15 @@ export function AuthConfigurationError({ onRetry, showSetupButton = true } AuthC
                     className="text-blue-600 hover:underline inline-flex items-center gap-1"
                   >
                     Visit Auth0 Dashboard <ExternalLink className="w-3 h-3" />
+<<<<<<< HEAD
                   </a>
                 </div>
               </li>
 <<<<<<< HEAD
 =======
               
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
               <li className="flex items-start gap-3">
@@ -572,6 +576,7 @@ export function AuthConfigurationError({ onRetry, showSetupButton = true } AuthC
                   Create a "Regular Web Application" named "Zion AI Marketplace"
                 </div>
               </li>
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
               <li className='flex items-start gap-3'>
                 <span className='flex-shrink-0 w-6 h-6 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-xs font-semibold'>
@@ -595,6 +600,9 @@ export function AuthConfigurationError({ onRetry, showSetupButton = true } AuthC
                 <div>
                   <strong>Restart Application:</strong>
                   <br />
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
                 <div>
                   <strong>Configure Environment:</strong>
@@ -615,6 +623,7 @@ export function AuthConfigurationError({ onRetry, showSetupButton = true } AuthC
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="text-blue-600 hover:underline inline-flex items-center gap-1">;
+<<<<<<< HEAD
               variant="outline" ;
               className="flex-1";
             >;
@@ -638,11 +647,17 @@ export function AuthConfigurationError({ onRetry, showSetupButton = true } AuthC
                     rel="noopener noreferrer";
                     className="text-blue-600 hover:underline inline-flex items-center gap-1";
                   >;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     Visit Auth0 Dashboard <ExternalLink className="w-3 h-3" />;
                   </a>;
                 </div>;
               </li>;
+<<<<<<< HEAD
               ;
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <li className="flex items-start gap-3">;
                 <span className="flex-shrink-0 w-6 h-6 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-xs font-semibold">2</span>;
                 <div>;
@@ -720,6 +735,7 @@ export function AuthConfigurationError({ onRetry, showSetupButton = true } AuthC
                   <code className='bg-gray-100 px-1 rounded'>;
                     npm run dev;
                   </code>{' '}
+<<<<<<< HEAD
               <li className="flex items-start gap-3">
                 <span className="flex-shrink-0 w-6 h-6 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-xs font-semibold">3</span>
                 <div>
@@ -728,16 +744,21 @@ export function AuthConfigurationError({ onRetry, showSetupButton = true } AuthC
                     npm run dev
                   </code>{' '}
                   to apply changes                </div>                <div>
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   <strong>Configure Environment:</strong>
                   <br />
                   Copy credentials to <code className="bg-gray-100 px-1 rounded">.env.local</code> file
                 </div>
               </li>
               <li className="flex items-start gap-3">
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
               
               <li className="flex items-start gap-3">
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <span className="flex-shrink-0 w-6 h-6 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-xs font-semibold">4</span>
                 <div>
                   <strong>Restart Application:</strong>
@@ -746,17 +767,27 @@ export function AuthConfigurationError({ onRetry, showSetupButton = true } AuthC
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
             <Link
               href="/help"
               className="flex items-center gap-2 p-3 bg-white rounded-lg hover:bg-blue-50 transition-colors text-blue-700 hover:text-blue-800"
 
 =======
+=======
+                <div>
+                  <strong>Configure Environment:</strong>
+                  <br />
+                  Copy credentials to <code className="bg-gray-100 px-1 rounded">.env.local</code> file
+                </div>
+              </li>
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   Run <code className="bg-gray-100 px-1 rounded">npm run dev</code> to apply changes
                 </div>
               </li>
             </ol>
           </div>
         </div>
+<<<<<<< HEAD
                   to apply changes                </div>                <div>;
                   <strong>Configure Environment:</strong>;
                   <br />;
@@ -828,10 +859,14 @@ export function AuthConfigurationError({ onRetry, showSetupButton = true } AuthC
             <Link 
               href="/marketplace" 
               className="flex items-center gap-2 p-3 bg-white rounded-lg hover:bg-blue-50 transition-colors text-blue-700 hover:text-blue-800"
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             >
+              <span>Browse Marketplace</span>            >
               <span>Browse Marketplace</span>
               <ExternalLink className="w-4 h-4" />
             </Link>
+<<<<<<< HEAD
             <Link 
               href="/talent" 
               className="flex items-center gap-2 p-3 bg-white rounded-lg hover:bg-blue-50 transition-colors text-blue-700 hover:text-blue-800"
@@ -841,6 +876,8 @@ export function AuthConfigurationError({ onRetry, showSetupButton = true } AuthC
               href="/talent" 
             <Link
               href="/talent"
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             
             <Link 
               href="/talent" 
@@ -849,6 +886,7 @@ export function AuthConfigurationError({ onRetry, showSetupButton = true } AuthC
               <span>View Talent Pool</span>
               <ExternalLink className="w-4 h-4" />
             </Link>
+<<<<<<< HEAD
             <Link 
               href="/help" 
               className="flex items-center gap-2 p-3 bg-white rounded-lg hover:bg-blue-50 transition-colors text-blue-700 hover:text-blue-800"
@@ -858,6 +896,10 @@ export function AuthConfigurationError({ onRetry, showSetupButton = true } AuthC
               href="/help" 
             <Link
               href="/help"
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
             
@@ -868,6 +910,7 @@ export function AuthConfigurationError({ onRetry, showSetupButton = true } AuthC
               <span>Contact Support</span>
               <ExternalLink className="w-4 h-4" />
             </Link>
+<<<<<<< HEAD
             <Link
               href="/status"
               className="flex items-center gap-2 p-3 bg-white rounded-lg hover:bg-blue-50 transition-colors text-blue-700 hover:text-blue-800"
@@ -875,6 +918,9 @@ export function AuthConfigurationError({ onRetry, showSetupButton = true } AuthC
               <span>System Status</span>
             
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               className='flex items-center gap-2 p-3 bg-white rounded-lg hover:bg-blue-50 transition-colors text-blue-700 hover:text-blue-800'>;
               <span>Browse Marketplace</span>            >;
               <span>Browse Marketplace</span>;
@@ -884,15 +930,27 @@ export function AuthConfigurationError({ onRetry, showSetupButton = true } AuthC
 
             
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <Link 
               href="/status" 
               className="flex items-center gap-2 p-3 bg-white rounded-lg hover:bg-blue-50 transition-colors text-blue-700 hover:text-blue-800"
             >
               <span>System Status</span>
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <ExternalLink className='w-4 h-4' />
             </Link>
             <Link
@@ -917,6 +975,7 @@ export function AuthConfigurationError({ onRetry, showSetupButton = true } AuthC
               <ExternalLink className='w-4 h-4' />            </Link>              <ExternalLink className="w-4 h-4" />
             </Link>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
               className='flex items-center gap-2 p-3 bg-white rounded-lg hover:bg-blue-50 transition-colors text-blue-700 hover:text-blue-800'>;
               <span>Browse Marketplace</span>            >;
@@ -936,12 +995,19 @@ export function AuthConfigurationError({ onRetry, showSetupButton = true } AuthC
 =======
 
 
+=======
+              <ExternalLink className="w-4 h-4" />
+            </Link>
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           </div>
         </div>
         {/* Setup Script Info */}
         {showSetupButton && (
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <div className="mt-6 text-center">
             <div className="bg-green-50 rounded-lg border border-green-200 p-4">
               <div className="flex items-center justify-center gap-2 text-green-700 mb-2">
@@ -955,6 +1021,7 @@ export function AuthConfigurationError({ onRetry, showSetupButton = true } AuthC
                 Run the setup script to configure Auth0 interactively:
               </p>
 
+<<<<<<< HEAD
               <ExternalLink className="w-4 h-4" />
             </Link>
           </div>
@@ -982,6 +1049,11 @@ export function AuthConfigurationError({ onRetry, showSetupButton = true } AuthC
               <p className="text-sm text-green-600 mb-3">
                 Run the setup script to configure Auth0 interactively:
               </p>
+=======
+
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <code className="bg-green-100 text-green-800 px-3 py-1 rounded text-sm">
                 npm run setup:auth0
               </code>
@@ -989,6 +1061,7 @@ export function AuthConfigurationError({ onRetry, showSetupButton = true } AuthC
           </div>
         )}
 
+<<<<<<< HEAD
             <Link
               href="/talent" 
               className="flex items-center gap-2 p-3 bg-white rounded-lg hover:bg-blue-50 transition-colors text-blue-700 hover:text-blue-800">;
@@ -1127,15 +1200,23 @@ export function AuthConfigurationError({ onRetry, showSetupButton = true } AuthC
               className="text-blue-600 hover: underline"
             >
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               AUTH0_SETUP_GUIDE_ISSUE_1.md
             </button>
           </p>
         </div>
       </div>
     </div>
+<<<<<<< HEAD
 export default AuthConfigurationError }
 export default AuthConfigurationError
 
+=======
+
+              onClick = {() => window && window.open('/AUTH0_SETUP_GUIDE_ISSUE_1 && AUTH0_SETUP_GUIDE_ISSUE_1.md_blank'),}
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
               onClick = {() => window && window.open('/AUTH0_SETUP_GUIDE_ISSUE_1 && AUTH0_SETUP_GUIDE_ISSUE_1.md_blank'),}
@@ -1146,6 +1227,7 @@ export default AuthConfigurationError;
 }
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
         <div className="mt-6 text-center text-sm text-gray-500">;
@@ -1269,27 +1351,27 @@ export default AuthConfigurationError;
               onClick={() => window.open('/AUTH0_SETUP_GUIDE_ISSUE_1.md_blank')}
               className="text-blue-600 hover:underline";
             >;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   )
-export default AuthConfigurationError }
-export default AuthConfigurationError
-
-export default AuthConfigurationError };
-;
-export default AuthConfigurationError;
-}
-}
         <div className="mt-6 text-center text-sm text-gray-500">;
           <p>;
             For detailed instructions, see{' '}
             <button;
               onClick={() => window.open('/AUTH0_SETUP_GUIDE_ISSUE_1.md_blank')}
+
+              onClick = {() => window && window.open('/AUTH0_SETUP_GUIDE_ISSUE_1 && AUTH0_SETUP_GUIDE_ISSUE_1.md_blank'),}
               className="text-blue-600 hover: underline";
+<<<<<<< HEAD
             >;
               AUTH0_SETUP_GUIDE_ISSUE_1.md;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             </button>;
           </p>;
         </div>;
       </div>;
+<<<<<<< HEAD
     </div>;
   );}
 ;
@@ -1315,3 +1397,7 @@ export default AuthConfigurationError;
 }
 ;
 export default AuthConfigurationError;
+=======
+    </div>;
+  );
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

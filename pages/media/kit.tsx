@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -26,6 +27,8 @@ const KitPage = () => {;
 
 =======
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useCallback, useMemo, useState  } from 'react';
 import Head from 'next/head',
 import {useCallback, useMemo, useState} from 'react';
@@ -42,14 +45,24 @@ import {
   buildPressRelease
   buildTimeline;
   MediaBundle,
+
+
+import {useCallback, useMemo, useState} from 'react';
+import Head from 'next/head';
+
+
+import DatePicker from 'react-datepicker';
+
+
   MediaAsset,;
   PressReleaseType,;
 } from '../../utils/mediaKit';
-import {
-  getDefaultAssets,
+import {;
+  getDefaultAssets,;
   buildPressRelease,;
   buildTimeline,;
 } from '../../utils/mediaKit';
+<<<<<<< HEAD
 const KitPage = () => {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import type { MediaBundle, MediaAsset, PressReleaseType } from '../../utils/mediaKit';
@@ -66,18 +79,38 @@ const KitPage = () => {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 
+=======
+const KitPage = () => {
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useCallback, useMemo, useState } from 'react';
 import Head from 'next/head';
 import DatePicker from 'react-datepicker';
 import type { MediaBundle, MediaAsset, PressReleaseType } from '../../utils/mediaKit';
 import { getDefaultAssets, buildPressRelease, buildTimeline } from '../../utils/mediaKit';
 const KitPage = () => {;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+
+} from '../../utils/mediaKit';
+const KitPage = () => {;
+
+import type { MediaBundle, MediaAsset, PressReleaseType } from '../../utils/mediaKit';
+import { getDefaultAssets, buildPressRelease, buildTimeline } from '../../utils/mediaKit';
+
+const KitPage = () => {
+
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const [bundle, setBundle] = useState<MediaBundle>('general');
   const [startDate, setStartDate] = useState<Date>(new Date());
   const [companyName, setCompanyName] = useState('Zion');
   const [raiseAmount, setRaiseAmount] = useState('$5M');
   const [tokenName, setTokenName] = useState('ZION');
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -178,10 +211,13 @@ const res = await fetch(asset.path);
   }, [assets, bundle, companyName, raiseAmount, timeline, tokenName]),;
   const onGeneratePdf = useCallback(async () => {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     const { PDFDocument, StandardFonts, rgb } = await import('pdf-lib');
     const pdfDoc = await PDFDocument.create();
     const page = pdfDoc.addPage([612, 792]);
     const font = await pdfDoc.embedFont(StandardFonts.Helvetica);
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -248,6 +284,8 @@ const res = await fetch(asset.path);
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     let y = 760;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     drawText('Zion Media Kit', 50, y, 18);
 =======
 import {useCallback, useMemo, useState} from 'react';
@@ -340,11 +378,14 @@ if ( {) {
     draw_text ('Assets:', 50, y);
     y -= 16;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     assets.slice (0, 8).for_each (array => {
       draw_text (`- ${a.filename}`, 60, y);
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       y -= 14;
     });
     // Check condition
@@ -353,6 +394,7 @@ if ( {) {
 }
       pdf_doc.add_page ([612, 792]);
     }
+<<<<<<< HEAD
     // Check condition
 if ( {) {
   $2
@@ -372,6 +414,8 @@ if ( {) {
       y -= 16;
     const pdfBytes = await pdfDoc && pdfDoc.save();
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     const blob = new Blob([pdfBytes], { type: 'application/pdf' });
     const url = URL && URL.createObjectURL(blob);
     const link = document && document.createElement('a');
@@ -380,6 +424,7 @@ if ( {) {
     link && link.click();
     URL && URL.revokeObjectURL(url);
   }, [assets, bundle, timeline]);
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -403,11 +448,16 @@ if ( {) {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const PressReleaseCard = ({
     type
     title
   }: {
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   const PressReleaseCard = ({;
     type,;
@@ -416,6 +466,7 @@ if ( {) {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     type: PressReleaseType;
     title: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -453,38 +504,54 @@ if ( {) {
     );  };
       page.drawText(text, { x, y, size, font, color: rgb(0, 0, 0) })
     };
+=======
+    const drawText = (text: string, x: number, y: number, size = 12) => {;
+      page.drawText(text, { x, y, size, font, color: rgb(0, 0, 0) });
+    },;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     let y = 760;
-    drawText('Zion Media Kit', 50, y, 18), y -= 24;
-    drawText(`Bundle: ${bundle}`, 50, y), y -= 16;
-    drawText('Assets:', 50, y), y -= 16;
-    assets.slice(0, 8).forEach(a => { drawText(`- ${a.filename}`, 60, y), y -= 14 });
-    if (y < 120) { pdfDoc.addPage([612, 792]) }
-    if (timeline.length) {
-      y -= 6, drawText('Timeline:', 50, y), y -= 16;
-      timeline.forEach(t => { drawText(`- ${t.label}: ${t.date}`, 60, y), y -= 14 })
-    }
-    const pdfBytes = await pdfDoc.save();
+    drawText('Zion Media Kit', 50, y, 18), y -= 24,;
+    drawText(`Bundle: ${bundle}`, 50, y), y -= 16,;
+    drawText('Assets:', 50, y), y -= 16,;
+    assets.slice(0, 8).forEach(a => { drawText(`- ${a.filename}`, 60, y), y -= 14 }),;
+    if (y < 120) { pdfDoc.addPage([612, 792])   } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+    if (timeline.length) {;
+      y -= 6, drawText('Timeline:', 50, y), y -= 16,;
+      timeline.forEach(t => { drawText(`- ${t.label}: ${t.date}`, 60, y), y -= 14 });
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+    const pdfBytes = await pdfDoc.save(),
     const blob = new Blob([pdfBytes], { type: 'application/pdf' }),
-    const url = URL.createObjectURL(blob);
-    const link = document.createElement('a');
-    link.href = url, link.download = `zion-media-kit-${bundle}.pdf`, link.click();
+    const url = URL.createObjectURL(blob),
+    const link = document.createElement('a'),
+    link.href = url, link.download = `zion-media-kit-${bundle}.pdf`, link.click(),
     URL.revokeObjectURL(url)
-  }, [assets, bundle, timeline]);
+  }, [assets, bundle, timeline]),
   const PressReleaseCard = ({ type, title }: { type: PressReleaseType, title: string }) => {
-    const nowStr = new Date().toISOString().substring(0, 10);
-    const text = buildPressRelease(type, { companyName, date: nowStr, raiseAmount, tokenName });
-    const onCopy = () => navigator.clipboard.writeText(text);
+    const nowStr = new Date().toISOString().substring(0, 10),
+    const text = buildPressRelease(type, { companyName, date: nowStr, raiseAmount, tokenName }),
+    const onCopy = () => navigator.clipboard.writeText(text),
+    const onCopy = () => navigator && navigator.clipboard.writeText(text);
     return (
       <div className="p-4 border rounded-lg space-y-2">
         <div className="flex items-center justify-between">
           <h4 className="font-semibold">{title}</h4>
-          <button className="text-sm px-3 py-1 rounded bg-gray-100 hover: bg-gray-200" onClick={onCopy}>Copy</button>
+          <button className="text-sm px-3 py-1 rounded bg-gray-100 hover:bg-gray-200" onClick={onCopy}>Copy</button>
         </div>
         <pre className="whitespace-pre-wrap text-xs bg-gray-50 p-3 rounded max-h-60 overflow-auto">{text}</pre>
       </div>
+    );  }
     )
-  };
+  },
   return (
+<<<<<<< HEAD
         />;
       </Head>;
       <div className='space-y-8'>;
@@ -492,6 +559,17 @@ if ( {) {
           <h1 className='text-2xl font-bold'>Media Kit</h1>;
           <div className='flex gap-2'>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+    <div>
+      <Head>
+        <title>Media Kit - Zion</title>
+        <meta name="description" content="Zion media kit: brand, assets, legal, and rollout playbooks." />
+      </Head>
+      <div className='space-y-8'>
+        <header className='flex items-center justify-between'>
+          <h1 className='text-2xl font-bold'>Media Kit</h1>
+          <div className='flex gap-2'>
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <button
               onClick={onDownloadZip}
               className='px-4 py-2 rounded bg-blue-600 text-white hover:bg-blue-700'>;
@@ -499,6 +577,7 @@ if ( {) {
             </button>;
             <button
               onClick={onGeneratePdf}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -553,22 +632,22 @@ if ( {) {
               className='px - 4 py - 2 rounded bg - gray - 900 text - white hover:bg - black';
             >;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               Generate PDF;
             </button>;
           </div>;
         </header>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   <button
                     key={b}
                     onClick={() => setBundle(b)}
                     className={`px-3 py-1 rounded border ${bundle === b ? 'bg-blue-600 text-white border-blue-600' : 'bg-white'}`}
-                  >;
-                    {b}
-                  </button>;
-                );
-              )}
             </div>;
             <p className='text-xs text-gray-500 mt-2'>;
               Toggle to tailor assets and legal docs.;
@@ -594,9 +673,12 @@ if ( {) {
                 value={tokenName}
                 onChange={e => setTokenName(e && e.target.value)}
 
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <section className='grid md:grid - cols - 3 gap - 6'>;
           <div className='p - 4 border rounded - lg'>;
             <h3 className='font - semibold mb - 2'>Bundle</h3>;
@@ -635,14 +717,19 @@ if ( {) {
                 value={token_name}
                 on_change={e => setTokenName (e.target.value)}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 placeholder='Token name';
               />;
             </div>;
           </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -767,6 +854,10 @@ if ( {) {
   }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             </div>
             <p className="text-xs text-gray-500 mt-2">Toggle to tailor assets and legal docs.</p>
           </div>
@@ -786,6 +877,7 @@ if ( {) {
             </div>
             {timeline.length>0 && (
               <ul className="mt-3 text-sm list-disc list-inside space-y-1">
+<<<<<<< HEAD
 <<<<<<< HEAD
                 {timeline.map((t)=> (<li key={t.label}><span className="font-medium">{t.label}:</span> {t.date}</li>))}
               </ul>
@@ -834,16 +926,38 @@ if ( {) {
 
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             {assets.map(a => (
               <li key={a.filename} className="flex items-center justify-between border rounded p-2">
                 <span className="text-sm">{a.filename}</span>
                 {a.path ? <a href={a.path} download className="text-blue-600 text-sm">Download</a> : <span className="text-gray-400 text-xs">generated</span>}
               </li>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+            ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+          </ul>
+        </section>
+        <section className='p-4 border rounded-lg space-y-4'>
+          <h3 className='font-semibold'>Prewritten Press Releases</h3>
+          <div className='grid md:grid-cols-3 gap-4'>
+            <PressReleaseCard type='seed-round' title='Seed round' />
+            <PressReleaseCard type='launch' title='Launch' />
+            {bundle === 'web3' && (
+              <PressReleaseCard type='token-sale' title='Token sale' />
+            )}          </div>
+}
+export default KitPage;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             ))}
 
           </ul>;
@@ -851,6 +965,7 @@ if ( {) {
 
 };
 
+<<<<<<< HEAD
 
 
 
@@ -860,20 +975,27 @@ if ( {) {
           </ul>;
         </section>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <section className="p-4 border rounded-lg space-y-4">
           <h3 className="font-semibold">Prewritten Press Releases</h3>
           <div className="grid md:grid-cols-3 gap-4">
             <PressReleaseCard type="seed-round" title="Seed round" />
             <PressReleaseCard type="launch" title="Launch" />
+<<<<<<< HEAD
             {bundle === 'web3' && <PressReleaseCard type="token-sale" title="Token sale" />}
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           </div>
         </section>
       </div>
     </div>
-  )
 
+<<<<<<< HEAD
 };
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
         <section className='p-4 border rounded-lg space-y-4'>;
           <h3 className='font-semibold'>Prewritten Press Releases</h3>;
@@ -886,6 +1008,7 @@ if ( {) {
         </section>;
       </div>;
     </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   );
@@ -1143,3 +1266,9 @@ export default KitPage,
 },;
 export default KitPage;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  );
+
+},;
+export default KitPage;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

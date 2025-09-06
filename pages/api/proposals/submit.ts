@@ -1,9 +1,9 @@
 
-
 import type { NextApiRequest, NextApiResponse } from "next";
 import nodemailer from "nodemailer";
 import crypto from "crypto";
 import {
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -23,6 +23,8 @@ import {
   updateProposalMeta,
   updateArtifacts,;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 } from "../../../utils/data/proposals";
 async function submitByEmail(
   to: string
@@ -31,26 +33,33 @@ async function submitByEmail(
   attachments: any[] = []
 ) {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import type { NextApiRequest, NextApiResponse } from 'next';
 import nodemailer from 'nodemailer';
 import crypto from 'crypto';
 import { getProposal, updateProposalMeta, updateArtifacts } from '../../../utils/data/proposals';
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 async function submitByEmail(to: string, subject: string, text: string, attachments: any[] = []) {;
@@ -60,24 +69,28 @@ async function submitByEmail(to: string, subject: string, text: string, attachme
 =======
 async function submitByEmail(to: string, subject: string, text: string, attachments: any[] = []) {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const host = process.env.EMAIL_HOST;
   const port = Number(process.env.EMAIL_PORT |587);
   const user = process.env.EMAIL_USER;
   const pass = process.env.EMAIL_PASS;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
   const from = process.env.EMAIL_FROM |user;
   if (!host |!user |!pass) throw new Error("Email not configured");
   const from = process.env.EMAIL_FROM || user;
   if (!host || !user || !pass) throw new Error("Email not configured");
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const transporter = nodemailer.createTransport({
     host
     port
     secure: port === 465
     auth: { user, pass }
   });
-  if (!host || !user || !pass) throw new Error('Email not configured');
-  const transporter = nodemailer.createTransport({ host, port, secure: port === 465, auth: { user, pass } });
   await transporter.sendMail({ from, to, subject, text, attachments });
 }
 export default async function handler(
@@ -126,7 +139,16 @@ export default async function handler(
   } catch (error: any) {
     return res
       .status(500)
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+      .json({ error: error?.message |"Submission failed" });
+import type { NextApiRequest, NextApiResponse } from 'next';
+import nodemailer from 'nodemailer';
+import crypto from 'crypto';
+import { getProposal, updateProposalMeta, updateArtifacts } from '../../../utils/data/proposals';
+async function submitByEmail(to: string, subject: string, text: string, attachments: any[] = []) {
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   const host = process && process.env.EMAIL_HOST;
   const port = Number(process && process.env.EMAIL_PORT || 587);
@@ -158,15 +180,20 @@ function submitByEmail() {
 }
   const transporter = nodemailer.create_transport ({
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     host,
     port,
     secure: port === 465,
     auth: { user, pass },
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   });
+<<<<<<< HEAD
     const { id, channels = ["email"], emailTo, delegateNote } = req && req.body || {};
     if (!id) return res && res.status($1).json({ $2 });
   const from = process.env.EMAIL_FROM || user;
@@ -180,6 +207,8 @@ function submitByEmail() {
     secure: port === 465
     auth: { user, pass }
   });
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   try {
 
@@ -197,6 +226,7 @@ function submitByEmail() {
       const text = `Please find the proposal attached.\n\nTitle: ${meta.title}\nTarget: ${meta.targetInstitution}\nType: ${meta.type}\nRegion: ${meta.regionalScope}\nBudget/Resolution: ${meta.budgetOrResolution}\n\nDAO Governance: See document.\n\nDelegate Note: ${delegateNote || 'N/A'}`;
       await submitByEmail(to, subject, text)
 
+<<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
   if (!host || !user || !pass) throw new Error('Email not configured');
@@ -209,11 +239,16 @@ function submitByEmail() {
   }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     }
     // ENS record hash (default: compute and store hash only)
     let ensRecordHash: string | undefined;
     try {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
       ensRecordHash = `0x${hash}`;
@@ -226,6 +261,7 @@ function submitByEmail() {
     return res
       .status(500)
 
+<<<<<<< HEAD
       .json({ error: error?.message |"Submission failed" });
   }
 }
@@ -310,6 +346,9 @@ export default async function handler(req, res) {
     let ensRecordHash: string | undefined;
     try {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+      .json({ error: error?.message |"Submission failed" });
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       const hash = crypto.createHash('sha256').update(JSON.stringify(meta)).digest('hex');
       ensRecordHash = `0x${hash}`;
       updateArtifacts(id, { ensRecordHash })
@@ -319,6 +358,7 @@ export default async function handler(req, res) {
     return res.status(200).json({ meta: updated })
   } catch (error: any) {
     return res.status(500).json({ error: error?.message || 'Submission failed' })
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   }
@@ -352,6 +392,9 @@ export default async function handler(req, res) {
   }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   const from = process.env.EMAIL_FROM || user;
 
@@ -384,6 +427,7 @@ export default async function handler(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   }
 }
@@ -395,3 +439,7 @@ export default async function handler(req, res) {
   }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  }
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

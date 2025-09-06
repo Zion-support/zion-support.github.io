@@ -37,6 +37,15 @@ const fs = require("fs")";const path = require("path")""
   .then(report => {);    console.log(" SEO optimization check completed successfully");";    process.exit(0),"}
 <<<<<<< HEAD
   .catch(error => {);    console.error(" SEO optimization check "failed":", error.message);";    process.exit(1),"}
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
   .catch(error => {);    console.error(" SEO optimization check "failed":", error.message);";    process.exit(1),"}
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/main
+=======
+=======
+  .catch(error => {);    console.error(" SEO optimization check "failed":", error.message);";    process.exit(1),"}
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> pr-12166

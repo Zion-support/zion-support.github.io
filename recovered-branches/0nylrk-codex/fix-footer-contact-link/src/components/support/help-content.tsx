@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -8,6 +9,8 @@ import React from "react";
 import {HelpCategory} from "./types";
 import {HelpCircle, CreditCard, Users, Calendar, Briefcase} from "lucide-react";
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from "react",
 import { HelpCategory } from "./types",
 import { 
@@ -18,12 +21,15 @@ import {
   Briefcase 
 } from "lucide-react",
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export const HELP_CATEGORIES: HelpCategory[] = [
   {
     id: "getting-started"
@@ -32,6 +38,7 @@ export const HELP_CATEGORIES: HelpCategory[] = [
     icon: <HelpCircle className="h-6 w-6 text-zion-purple" />
     articles: [
       {
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -57,12 +64,15 @@ export const HELP_CATEGORIES: HelpCategory[] = [
         tags: ["account", "registration", "setup"]
       },
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {
         id: "complete-profile"
         title: "Completing your profile"
         content: "A complete profile helps you get the most out of Zion AI Marketplace. Follow these steps to set up your profile:\n\n1. Navigate to the Profile section from your dashboard\n2. Upload a professional profile picture\n3. Add your basic information including location and contact details\n4. Write a compelling bio that highlights your expertise or requirements\n5. For talent users: Add your skills, experience, and portfolio items\n6. For client users: Add information about your company or projects\n\nA complete profile increases your visibility on the platform and helps our AI matching system connect you with the right opportunities or talent."
         lastUpdated: "2023-11-18"
         tags: ["profile", "setup"]
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -79,6 +89,8 @@ export const HELP_CATEGORIES: HelpCategory[] = [
   }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       },
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {
         id: "platform-navigation",
         title: "Navigating the platform",
@@ -87,12 +99,15 @@ export const HELP_CATEGORIES: HelpCategory[] = [
         tags: ["navigation", "interface"]
       }
     ]
+<<<<<<< HEAD
   },
 <<<<<<< HEAD
 
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   {
     id: "hiring"
     name: "Hiring Process"
@@ -100,6 +115,7 @@ export const HELP_CATEGORIES: HelpCategory[] = [
     icon: <Briefcase className="h-6 w-6 text-zion-cyan" />
     articles: [
       {
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -134,6 +150,8 @@ export const HELP_CATEGORIES: HelpCategory[] = [
     ]
   }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         id: "post-job",
         title: "Posting a job",
         content: "Posting a job on Zion AI Marketplace is quick and straightforward. Follow these steps to create an effective job posting:\n\n1. Click on the 'Post a Job' button from your dashboard\n2. Fill in the job title, category, and required skills\n3. Write a detailed description of the project or position\n4. Specify your budget range and timeline\n5. Add any specific requirements or qualifications\n6. Review and publish your listing\n\nFor best results, be as specific as possible about your requirements and expectations. Our AI matching system will use this information to connect you with the most qualified talent.",
@@ -161,6 +179,7 @@ export const HELP_CATEGORIES: HelpCategory[] = [
         lastUpdated: "2023-12-05",
         tags: ["offer", "contract", "negotiation"]
       }
+<<<<<<< HEAD
     ]
   },
 <<<<<<< HEAD
@@ -639,6 +658,8 @@ export const HELP_CATEGORIES: HelpCategory[] = [;
   }
 ];
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
         id: "file-dispute",
         title: "How to file a dispute",
@@ -657,12 +678,15 @@ export const HELP_CATEGORIES: HelpCategory[] = [;
         id: "dispute-prevention",
         title: "Tips for preventing disputes",
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
         content: "The best way to handle disputes is to prevent them from happening. Here are some best practices:\n\n1. Always create clear, detailed contracts with specific deliverables\n2. Break large projects into smaller milestones with clear acceptance criteria\n3. Maintain regular communication through the platform's messaging system\n4. Address concerns immediately rather than letting them accumulate\n5. Document all important decisions and changes to the original agreement\n6. Use the platform's time tracking tools for hourly projects\n7. Provide and request feedback throughout the project, not just at the end\n\nBy following these guidelines, you can significantly reduce the risk of disputes and ensure a smooth working relationship.";
         lastUpdated: "2023-12-05",
         tags: ["prevention", "best practices", "communication"]
       }
     ]
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         content: "The best way to handle disputes is to prevent them from happening. Here are some best practices:\n\n1. Always create clear, detailed contracts with specific deliverables\n2. Break large projects into smaller milestones with clear acceptance criteria\n3. Maintain regular communication through the platform's messaging system\n4. Address concerns immediately rather than letting them accumulate\n5. Document all important decisions and changes to the original agreement\n6. Use the platform's time tracking tools for hourly projects\n7. Provide and request feedback throughout the project, not just at the end\n\nBy following these guidelines, you can significantly reduce the risk of disputes and ensure a smooth working relationship.",
         lastUpdated: "2023-12-05",
         tags: ["prevention", "best practices", "communication"]
@@ -827,8 +851,11 @@ export const HELP_CATEGORIES: HelpCategory[] = [;
         tags: ["prevention", "best practices", "communication"];
       }
     ];
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 import React from './react';
 import { HelpCategory } from './types';
@@ -986,26 +1013,9 @@ export const HELP_CATEGORIES: HelpCategory[] = [;
         tags: ["prevention", "best practices", "communication"];
       }
     ];
-
-        id: "file-dispute",
-        title: "How to file a dispute",
-        content: "If you encounter issues with a contract or project, you can use our dispute resolution system. Here's how to file a dispute:\n\n1. Navigate to the project in question from your dashboard\n2. Click the 'Issues' tab and select 'File a Dispute'\n3. Select the dispute category (payment, deliverables, communication, etc.)\n4. Provide a clear description of the issue\n5. Attach any relevant evidence (messages, deliverables, contract details)\n6. Submit your dispute\n\nOnce submitted, the other party will be notified and given 72 hours to respond. Our support team will be automatically notified of all disputes filed.",
-        lastUpdated: "2023-11-05",
-        tags: ["dispute", "resolution", "conflict"]
-      },
-      {
-        id: "mediation-process",
-        title: "The mediation process",
-        content: "When disputes can't be resolved directly between parties, our mediation process helps find a fair solution. Here's how mediation works:\n\n1. After a dispute is filed, both parties have 72 hours to attempt direct resolution\n2. If unresolved, a mediator from our support team is assigned to the case\n3. The mediator reviews all details and evidence from both sides\n4. A mediation call is scheduled with all parties (optional but recommended)\n5. The mediator proposes a resolution based on contract terms and platform policies\n6. Both parties can accept the proposed resolution or request escalation\n\nMost disputes are successfully resolved during mediation, avoiding the need for further escalation.",
-        lastUpdated: "2023-11-18",
-        tags: ["mediation", "dispute", "resolution"]
-      },
-      {
-        id: "dispute-prevention",
-        title: "Tips for preventing disputes",
-
   }
 ];
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 ;
@@ -1328,3 +1338,5 @@ tags: ["prevention", "best practices", "communication" ]
   }
 ];
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

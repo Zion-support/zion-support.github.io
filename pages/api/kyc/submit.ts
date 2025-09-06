@@ -1,4 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -13,6 +14,8 @@ function load(): Record<string, KycProfile> {
 <<<<<<< HEAD
 =======
 import type { KycProfile } from '../../../utils/kyc';
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { validateKycSubmission } from '[^']*';
 import { getAmlProvider } from '[^']*';
 import fs from 'fs';
@@ -20,25 +23,20 @@ import path from 'path';
 
 const DATA_DIR = path.join(process.cwd(), 'data', 'kyc');const FILE = path.join(DATA_DIR, 'profiles.json');
 
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  res.status(200).json({ message: 'KYC submitted' });
-import type { NextApiRequest, NextApiResponse } from 'next';
-import type { KycProfile } from '../../../utils/kyc';
-import { validateKycSubmission } from '../../../utils/kyc';
-import { getAmlProvider } from '../../../utils/aml';
-import fs from 'fs';
-import path from 'path';
-const DATA_DIR = path.join(process.cwd(), 'datakyc'),;
-const FILE = path.join(DATA_DIR, 'profiles.json');
 function load(): Record<string, KycProfile> {
   try {
+
     const raw = fs.readFileSync(FILE, 'utf8');
+<<<<<<< HEAD
     return JSON.parse(raw);
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   } catch {
     return {}
   }
 function save(db: Record<string, KycProfile>) {
+<<<<<<< HEAD
 <<<<<<< HEAD
   fs && fs.mkdirSync(DATA_DIR, { recursive: true });
   fs && fs.writeFileSync(FILE, JSON && JSON.stringify(db, null, 2));
@@ -54,12 +52,15 @@ export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
   if (req && req.method !== 'POST')
     return res && res.status(405).json({ error: 'Method not allowed' });  const { userId } = req && req.body as { userId?: string };
   if (!userId) return res && res.status(400).json({ error: 'Missing userId' });
 
+<<<<<<< HEAD
   if (req.method !== 'POST')
     return res.status(405).json({ error: 'Method not allowed' });  const { userId } = req.body as { userId?: string }
   if (req.method !== 'POST');
@@ -71,10 +72,13 @@ if (req && req.method !== 'POST')
   if (!userId) return res && res.status(400).json({ error: 'Missing userId' });
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const db = load();
   const profile = db[userId];
   if (!profile) return res && res.status($1).json({$2});
   const validation = validateKycSubmission(profile);
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -103,11 +107,14 @@ profile.amlStatus = amlResult.status === 'clear' ? 'clear' : amlResult.status ==
   profile && profile.amlStatus =
     amlResult && amlResult.status === 'clear'
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       ? 'clear'
       : amlResult && amlResult.status === 'match'
         ? 'match'
         : 'review';
   // Flags and risk scoring
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -129,11 +136,14 @@ profile.amlStatus = amlResult.status === 'clear' ? 'clear' : amlResult.status ==
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     ''
   )
     .split(',')[0]
     .trim();
   if (ip) {
+<<<<<<< HEAD
     // naive duplicate IP heuristic: more than 2 submissions from same IP → flag
 <<<<<<< HEAD
 
@@ -217,6 +227,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   // Compute simple risk score
   let riskScore = 10; // base low risk
   if (flags && flags.has('aml_alert')) riskScore += 50;
@@ -228,11 +240,16 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   profile && profile.status = 'submitted';
   const now = new Date().toISOString();
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import type { KycProfile } from '../../../utils / kyc';
 import {validateKycSubmission} from '../../../utils / kyc';
 import {getAmlProvider} from '../../../utils / aml';
@@ -265,6 +282,7 @@ function handler() {
 }  const { user_id } = req.body as { user_id?: string }
   if (return res.status (400).json ({ error: 'Missing user_id' })) {
   $2
+<<<<<<< HEAD
 =======
   profile.lastUpdatedAt = now;
   profile.auditTrail.push({
@@ -388,6 +406,8 @@ export default async function handler(req, res) {
   save(db);
   res.status(200).json({ ok: true, profile, aml: amlResult })
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
   const db = load ();
   const profile = db[user_id];
@@ -471,6 +491,16 @@ if ( {) {
   profile.status = 'submitted';
   const now = new Date ().toISOString ();
   profile.lastUpdatedAt = now;
+  profile.auditTrail.push({ at: now, by: userId, action: 'kyc_submitted', details: { aml: amlResult, ip } });
+  db[userId] = profile;
+  save(db);
+  res.status(200).json({ ok: true, profile, aml: amlResult })
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
   profile.audit_trail.push ({
     at: now,
     by: user_id,
@@ -482,6 +512,7 @@ if ( {) {
 ;
 res.status (200).json ({ ok: true, profile, aml: aml_result });
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -499,3 +530,8 @@ res.status (200).json ({ ok: true, profile, aml: aml_result });
   }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  profile.lastUpdatedAt = now;
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import {Button} from '@/components/ui/button';
 import {Card, CardContent} from '@/components/ui/card';
 import {Accordion, AccordionContent, AccordionItem, AccordionTrigger} from '@/components/ui/accordion';
@@ -55,11 +56,18 @@ export function AIMilestoneGenerator({
 
 export function AIMilestoneGenerator({;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+export function AIMilestoneGenerator({;
+import React, { useState } from 'react';
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   scope;
   startDate;
   endDate;
   projectType;
   onAddMilestones;
+<<<<<<< HEAD
 <<<<<<< HEAD
   onAddMilestone;
 }: AIMilestoneGeneratorProps) {;
@@ -123,6 +131,12 @@ export function AIMilestoneGenerator({;
   }
   };
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  onAddMilestone;
+}: AIMilestoneGeneratorProps) {;
+  const { generateMilestones, generatedMilestones, isGenerating, clearGeneratedMilestones } = useMilestoneGenerator();
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useState } from 'react',;
 import { Button } from '@/components/ui/button',;
 import { Card, CardContent } from '@/components/ui/card',;
@@ -155,13 +169,18 @@ export function AIMilestoneGenerator({;
   const { generateMilestones, generatedMilestones, isGenerating, clearGeneratedMilestones } = useMilestoneGenerator(),;
   const [selectedMilestones, setSelectedMilestones] = useState<Record<string boolean>>({}),;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const handleGenerateMilestones = async () => {;
     if (!scope || !startDate || !projectType) {;
       return;
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     const input: MilestoneInput = {;
@@ -242,11 +261,18 @@ export function AIMilestoneGenerator({;
     }
 
 <<<<<<< HEAD
+=======
+
+    const input: MilestoneInput = {;
+    }
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   },
 
 
 
 
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
@@ -341,12 +367,18 @@ export function AIMilestoneGenerator({;
 ;
   return (;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+    }
+  }
+  return (
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <div className="space-y-4">;
       <div className="flex items-center justify-between">;
         <h3 className="text-lg font-medium flex items-center">;
           <Sparkles className="w-5 h-5 mr-2 text-primary" />;
           AI Milestone Generator;
         </h3>;
+<<<<<<< HEAD
 <<<<<<< HEAD
         <Button
           variant="outline"
@@ -573,21 +605,35 @@ if ( {) {
                           <Badge variant="secondary" className="ml-2 flex items-center">;
                             <Sparkles className="w-3 h-3 mr-1" />;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+        <Button
+          variant="outline"
+          onClick={handleGenerateMilestones}
+                      <input
+                        type="checkbox"
+                        id={`milestone-${index}`}
+                        checked={selectedMilestones[index] |false}
+                        onChange={() => toggleMilestoneSelection(index)}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                             AI Suggested;
                           </Badge>;
                         </div>;
                       </AccordionTrigger>;
                     </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
                       onClick={(e) => {
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+                      onClick={(e) => {
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
                         e.stopPropagation(),
-
-
                         handleAddSingleMilestone(milestone)
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
                       onClick={(e) => {;
@@ -602,6 +648,8 @@ if ( {) {
                         e.stopPropagation(),;
                         handleAddSingleMilestone(milestone),;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       }}
                       className="mr-2";
                     >;
@@ -611,6 +659,9 @@ if ( {) {
                   <AccordionContent>;
                     <div className="pl-6 space-y-2">;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       <p className="text-sm">{milestone && milestone.description}</p>;
                       <div className="flex items-center text-sm text-muted-foreground">;
                         <Calendar className="w-4 h-4 mr-1" />;
@@ -623,6 +674,7 @@ if ( {) {
                   </AccordionContent>;
                 </AccordionItem>;
               ))}
+<<<<<<< HEAD
 =======
                       <p className="text-sm">{milestone.description}</p>;
                       <div className="flex items-center text-sm text-muted-foreground">;
@@ -636,10 +688,13 @@ if ( {) {
                   </AccordionContent>;
                 </AccordionItem>;              ))}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             </Accordion>;
           </CardContent>;
         </Card>;
       )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     </div>;
@@ -650,6 +705,8 @@ if ( {) {
 =======
     </div>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     <Button;
                       variant="ghost";
                       size="sm";
@@ -680,6 +737,7 @@ if ( {) {
         </Card>)}
     </div>);
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -805,3 +863,5 @@ return (<div className="space-y-4" > <div className="flex items-center justify-b
   )
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

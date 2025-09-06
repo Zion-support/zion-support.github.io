@@ -1,6 +1,7 @@
-if (typeof window !== 'undefined') { window.addEventListener('load',() => { const perfData = performance.getEntriesByType('navigation')[0]; })}
+if (typeof window !== 'undefined') { window && window.addEventListener('load',() => { const perfData = performance && performance.getEntriesByType('navigation')[0]; })}
 // Performance monitoring
 if (typeof window !== 'undefined') {
+<<<<<<< HEAD
 <<<<<<< HEAD
   window.addEventListener('load', () => {
     const perfData = performance.getEntriesByType('navigation')[0];
@@ -33,3 +34,5 @@ if (typeof window !== 'undefined') { window.addEventListener('load',() => { cons
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -1,5 +1,18 @@
+import React from "react";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,;
+
+} from "@/components/ui/card";
+import { AnalyticsChart } from "@/components/analytics/AnalyticsChart";
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 import {;
   Card,;
@@ -27,6 +40,7 @@ export function ConversionAnalysisChart(): any ({;
     data && data.length > 0;
       ? Object && Object.keys(data[0]).filter((key) => key !== "date");
 
+<<<<<<< HEAD
 =======
 import React from './react';
 =======
@@ -86,6 +100,8 @@ export function ConversionAnalysisChart(): any ({;
   const dataKeys =;
     data && data.length > 0;
       ? Object && Object.keys(data[0]).filter((key) => key !== "date");
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from './react';
 import {
   Card,
@@ -95,13 +111,17 @@ import {
   CardTitle,
 } from '@/components / ui / card';
 import { AnalyticsChart  } from '@/components / analytics / AnalyticsChart';
+<<<<<<< HEAD
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface ConversionAnalysisProps {
   data: Array < Record < string, any>>;
   time_range: string;
   onTimeRangeChange: (range: string) => void;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -216,6 +236,10 @@ export function ConversionAnalysisChart({ data, timeRange, onTimeRangeChange } C
       </CardContent>
     </Card>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from "react",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 import { AnalyticsChart } from "@/components/analytics/AnalyticsChart",;
@@ -236,6 +260,7 @@ export function ConversionAnalysisChart({ data, timeRange, onTimeRangeChange }: 
         <CardDescription className="text-zion-slate-light">Track different conversion types</CardDescription>;
       </CardHeader>;
       <CardContent>;
+<<<<<<< HEAD
         <AnalyticsChart;
           title="";
           data={data || []}
@@ -245,18 +270,21 @@ export function ConversionAnalysisChart({ data, timeRange, onTimeRangeChange }: 
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           timeRange={timeRange}
           onTimeRangeChange={onTimeRangeChange}
         />;
       </CardContent>;
     </Card>;
 <<<<<<< HEAD
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-  );
+<<<<<<< HEAD
 =======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
+
+
+  );
         <AnalyticsChart;
           title="";
           data={data || []}
@@ -267,8 +295,22 @@ export function ConversionAnalysisChart({ data, timeRange, onTimeRangeChange }: 
         />;
       </CardContent>;
     </Card>);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+export /**
+ * ConversionAnalysisChart - Function description
+ */
+function ConversionAnalysisChart() {
+  const data_keys =;
+    data && data.length > 0;
+      ? Object.keys (data[0]).filter ((key) => key !== "date");
+      : [];
+;
+  return (
+          Track different conversion types;
+        </CardDescription>;
+      </CardHeader>;
+      <CardContent>;
 }
+<<<<<<< HEAD
 =======
         <AnalyticsChart;
           title="";
@@ -295,3 +337,5 @@ return (<Card className="bg-zion-blue-dark border-zion-blue-light" > <CardHeader
   );
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

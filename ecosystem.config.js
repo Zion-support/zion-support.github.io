@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -168,10 +169,11 @@ module.exports = {;
       error_file:'./logs/performance-error.log',;
       out_file:'./logs/performance-out.log',;
       log_file:'./logs/performance-combined.log',;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 module.exports = {;
   apps:[;
 module.exports = {apps:[;
-origin/main
     {;
       name:'error-fixer';
       script:'automation/lint-error-fixer.cjs';
@@ -245,12 +247,16 @@ origin/main
       error_file:'./logs/performance-error.log';
       out_file:'./logs/performance-out.log';
       log_file:'./logs/performance-combined.log';
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       time:true;
     }
   ];
 };      env: {
         NODE_ENV: 'production'
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       },
@@ -259,28 +265,130 @@ origin/main
       log_file: './logs/performance-combined && combined.log',
 
       time: true
+=======
+module.exports = {
+  apps: [{
+    name: "ziontechgroup-site"
+    script: "npm"
+    args: "start"
+    instances: 1
+    exec_mode: "fork"
+    env: {
+      NODE_ENV: "production"
+      PORT: 3000
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     }
-  ]
-
-
-=======
-
-=======
-
-
-
-=======
-=======
-
+    env_production: {
+      NODE_ENV: "production"
+      PORT: 3000
+    }
+    max_memory_restart: "1G"
+    node_args: "--max-old-space-size=1024"
+    error_file: "./logs/err.log"
+    out_file: "./logs/out.log"
+    log_file: "./logs/combined.log"
+    time: true
+  }]
+};
+};
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
 }
-
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-export default {
+origin/main
+origin/automation-improvements-final
+}
+  }];
+};
+;
+;
+module.exports = {;
+  apps: [;
+    {;
+      name: 'error-fixer',;
+      script: 'automation/lint-error-fixer.cjs',;
+      args: 'continuous',;
+      instances: 1,;
+      autorestart: true,;
+      watch: false,;
+      max_memory_restart: '1G',;
+      env: {;
+        NODE_ENV: 'production';
+      },;
+      error_file: './logs/error-fixer-error.log',;
+      out_file: './logs/error-fixer-out.log',;
+      log_file: './logs/error-fixer-combined.log',;
+      time: true;
+    },;
+    {;
+      name: 'intelligent-orchestrator',;
+      script: 'automation/intelligent-orchestrator.cjs',;
+      args: 'continuous',;
+      instances: 1,;
+      autorestart: true,;
+      watch: false,;
+      max_memory_restart: '1G',;
+      env: {;
+        NODE_ENV: 'production';
+      },;
+      error_file: './logs/orchestrator-error.log',;
+      out_file: './logs/orchestrator-out.log',;
+      log_file: './logs/orchestrator-combined.log',;
+      time: true;
+    },;
+    {;
+      name: 'automation-dashboard',;
+      script: 'automation/automation-dashboard.cjs',;
+      args: 'start',;
+      instances: 1,;
+      autorestart: true,;
+      watch: false,;
+      max_memory_restart: '1G',;
+      env: {;
+        NODE_ENV: 'production',;
+        PORT: 3001;
+      },;
+      error_file: './logs/dashboard-error.log',;
+      out_file: './logs/dashboard-out.log',;
+      log_file: './logs/dashboard-combined.log',;
+      time: true;
+    },;
+    {;
+      name: 'code-quality-monitor',;
+      script: 'automation/code-quality-monitor.cjs',;
+      instances: 1,;
+      autorestart: true,;
+      watch: false,;
+      max_memory_restart: '512M',;
+      env: {;
+        NODE_ENV: 'production';
+      },;
+      error_file: './logs/code-quality-error.log',;
+      out_file: './logs/code-quality-out.log',;
+      log_file: './logs/code-quality-combined.log',;
+      time: true;
+    },;
+    {;
+      name: 'performance-optimizer',;
+      script: 'automation/performance-optimizer.cjs',;
+      instances: 1,;
+      autorestart: true,;
+      watch: false,;
+      max_memory_restart: '512M',;
+      env: {;
+        NODE_ENV: 'production';
+      },;
+      error_file: './logs/performance-error.log',;
+      out_file: './logs/performance-out.log',;
+      log_file: './logs/performance-combined.log',;
+      time: true;
+    }
+  ];
+},;
   apps: [;
     {
 
       name: 'bolt-zion-app',
+<<<<<<< HEAD
 =======
       name: 'bolt - zion - app',
 
@@ -536,6 +644,8 @@ origin/main
 origin/automation-improvements-final
 },
 }
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export default {
   apps: [
     {
@@ -734,14 +844,8 @@ module.exports = {
     out_file: "./logs/out.log"
     log_file: "./logs/combined.log"
     time: true
-  }]
 };
-};
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-ursor/integrate-build-improve-and-re-verify-8f7d
 }
-origin/main
-origin/automation-improvements-final
 }
   }];
 };
@@ -830,6 +934,7 @@ module.exports = {;
     }
   ];
 },;
+<<<<<<< HEAD
 
 
 
@@ -1069,3 +1174,5 @@ module && module.exports = {
   ]
 },
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

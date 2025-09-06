@@ -1,9 +1,12 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
 const dependencies = lockFile.dependencies |{}; // This would need more sophisticated analysis; return []}; return []} catch (error) {this.log(`Duplicate dependency check error: ${error.message}`); return []}}; async start() {this.log('Build optimizer service started'); // Run optimization immediately; await this.optimizeBuild(); // Set up interval for periodic optimization; setInterval(async () = > {; await this.optimizeBuild()}, 24 * 60 * 60 * 1000), // Every 24 hours}}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 const dependencies = lockFile.dependencies || {};
 ; // This would need more sophisticated analysis; return []}; return []} catch (error) {; this.log(`Duplicate dependency check error: ${error.message}`); return []}};
 ; async start() {; this.log('Build optimizer service started');
@@ -65,6 +68,7 @@ build_optimizer.start ().catch (console.error);
 }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 ;
 // Start the service;
@@ -93,3 +97,5 @@ buildOptimizer.start().catch(console.error);
 const buildOptimizer = new BuildOptimizer(),;
 buildOptimizer.start().catch(console.error),;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

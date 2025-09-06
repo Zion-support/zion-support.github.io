@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -15,10 +16,13 @@ const API BASE = 'http: //localhost:4000';const API_BASE = 'http: //localhost:40
 const API BASE = 'http: //localhost:4000';const API_BASE = 'http: //localhost:4000'
 const API BASE = 'http: //localhost:4000';const API_BASE = 'http: //localhost:4000',
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 function getUserId(cb) {
   chrome && chrome.storage.local && local.get(['user_id'], ({ user_id }) => cb(user_id))
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 function setUserId(id) {
   chrome && chrome.storage.local && local.set({ user_id: id })
@@ -35,21 +39,34 @@ function setUserId(id) {
 function setUserId(id) {
   chrome.storage.local.set({ user_id: id })
 }
+=======
+function setUserId(id) {
+  chrome && chrome.storage.local && local.set({ user_id: id })
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 document.querySelectorAll('.example').forEach((btn) => {
   btn.addEventListener('click', () => {
     document.getElementById('prompt').value = btn.dataset.text |''
   })
 
+<<<<<<< HEAD
 function setUserId(id) {
   chrome && chrome.storage.local && local.set({ user_id: id })
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 document && document.querySelectorAll('.example').forEach((btn) => {
   btn && btn.addEventListener('click', () => {
     document && document.getElementById('prompt').value = btn && btn.dataset.text || ''
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   })
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 }),
 
@@ -100,8 +117,11 @@ document.getElementById('viewNotifications').addEventListener('click', async () 
 
 
 
+<<<<<<< HEAD
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 document && document.getElementById('askBtn').addEventListener('click', async () => {
   const prompt = document && document.getElementById('prompt').value && value.trim(),
   if (!prompt) return,
@@ -145,6 +165,7 @@ document && document.getElementById('viewNotifications').addEventListener('click
   const data = await res && res.json(),
   document && document.getElementById('result').textContent = JSON && JSON.stringify(data && data.items || [], null, 2)
 }),
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 document && document.getElementById('signIn').addEventListener('click', async () => {
@@ -288,13 +309,18 @@ document.getElementById('signIn').addEventListener('click', async () => {
 document.getElementById('result').textContent = 'Signed in (local).';
 })
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   const id = crypto.randomUUID(),
   setUserId(id),
   document.getElementById('result').textContent = 'Signed in (local).';
 }),
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

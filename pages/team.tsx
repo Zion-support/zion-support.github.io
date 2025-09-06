@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -20,11 +21,14 @@ class ErrorBoundary extends React.Component {
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 import React from "react";
 import Head from "next/head";
 import Link from "next/link";
 import { motion } from "framer-motion";
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -53,6 +57,8 @@ import {
   Globe
   Code
   Shield
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   ArrowRight,
   Phone,
   Mail,
@@ -65,23 +71,32 @@ import {
   Globe,
   Code,
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
   Shield,;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 } from "lucide-react";
 import Layout from "../components/Layout";
 const teamMembers = [
   {
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     id: 1,
     name: "Kleber Santos",
     position: "CEO & Founder",
     department: "Leadership",
     bio: "Visionary leader with 15+ years in technology and business transformation. Passionate about leveraging AI and cloud technologies to solve complex business challenges.",
+<<<<<<< HEAD
 
 
 
@@ -92,6 +107,8 @@ origin/automation-improvements-final
     expertise: ["Strategic Leadership", "AI/ML", "Cloud Architecture", "Business Development"]
   },
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     id: 1
     name: "Kleber Santos"
     position: "CEO & Founder"
@@ -162,6 +179,7 @@ origin/automation-improvements-final
     expertise: ["Data Science", "Big Data", "Predictive Analytics", "BI"]
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 Shield,
@@ -171,6 +189,8 @@ import Layout from "../components / Layout";
 const team_members = [;
   {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     image: "/api / placeholder / 300 / 300",
     linkedin: "https://linkedin.com / in / klebersantos",
     twitter: "https://twitter.com / klebersantos",
@@ -183,6 +203,7 @@ const team_members = [;
     ],
   },
   {
+<<<<<<< HEAD
     id: 2,
     name: "Sarah Johnson",
     position: "CTO",
@@ -356,6 +377,8 @@ origin/main
     expertise: ["Product Strategy", "SaaS Development", "UX/UI", "Mobile Apps"],
   },
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     expertise: ["Product Strategy", "SaaS Development", "UX/UI", "Mobile Apps"]
 =======
     name: 'Dr. Sarah Johnson',
@@ -385,6 +408,7 @@ origin/main
     icon: Users,
     description: 'Leading our development teams with agile methodologies and client-focused delivery.'
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   }
 >>>>>>> origin/automation-improvements-final
@@ -395,6 +419,8 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
   }
 origin/automation-improvements-final
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     id: 6
     name: "Lisa Wang"
     position: "Head of Product Development"
@@ -405,6 +431,7 @@ origin/automation-improvements-final
     twitter: "https://twitter.com/lisawang"
     github: "https://github.com/lisawang"
     expertise: ["Product Strategy", "SaaS Development", "UX/UI", "Mobile Apps"]
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -446,6 +473,8 @@ origin/automation-improvements-final
 =======
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 ];
@@ -454,12 +483,15 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 const departments = [;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   }
 ];
 ;
 const departments = [;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   {
     name: "Leadership"
     description: "Strategic vision and company direction"
@@ -616,8 +648,6 @@ const teamMembers = [;
   },;
 ];
 
-ursor/integrate-build-improve-and-re-verify-8f7d
-origin/automation-improvements-final
     <Layout
       title="Our Team - Zion Tech Group"
       description="Meet our expert team of technology professionals. Experienced engineers, data scientists, and business leaders dedicated to delivering exceptional results."
@@ -861,9 +891,11 @@ origin/automation-improvements-final
             <Link
               href="/contact"
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
               className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-purple-600 px-8 py-4 rounded-lg font-semibold transition-colors">;
-=======
 ;
 const stats = [;
   { number: "65+", label: "Team Members" },
@@ -876,6 +908,7 @@ export default /**
  */
 function TeamPage() {
   return (
+<<<<<<< HEAD
     <Layout;
       title="Our Team - Zion Tech Group";
       description="Meet our expert team of technology professionals. Experienced engineers, data scientists, and business leaders dedicated to delivering exceptional results.";
@@ -1113,11 +1146,14 @@ function TeamPage() {
               className="bg - transparent border - 2 border - white text - white hover:bg - white hover:text - purple - 600 px - 8 py - 4 rounded - lg font - semibold transition - colors";
             >;
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               Get in Touch;
             </Link>;
           </div>;
         </div>;
       </section>;
+<<<<<<< HEAD
 
 
 
@@ -1126,6 +1162,8 @@ function TeamPage() {
 =======
     </Layout>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <>
       <SEO
         title='Our Team | Zion Tech Group'
@@ -1140,9 +1178,12 @@ function TeamPage() {
       </div>
     </>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 origin/automation-improvements-final
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     </Layout>;
   );
 }
@@ -1182,6 +1223,7 @@ const teamMembers = [
     description:
       "Leading our development teams with agile methodologies and client-focused delivery."
   }
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
               className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-purple-600 px-8 py-4 rounded-lg font-semibold transition-colors">;
@@ -1239,6 +1281,9 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 =======
 className="bg-purple-600 text-white hover:bg-purple-700 px-8 py-4 rounded-lg font-semibold transition-colors text-lg">;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+              className="bg-purple-600 text-white hover:bg-purple-700 px-8 py-4 rounded-lg font-semibold transition-colors text-lg">;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               Get Free Consultation;
             </Link>;
           </div>;
@@ -1294,10 +1339,15 @@ className="bg-purple-600 text-white hover:bg-purple-700 px-8 py-4 rounded-lg fon
         </div>;
       </section>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 const teamMembers = [;
   {;
     name: "Dr. Sarah Johnson",;
@@ -1331,6 +1381,7 @@ const teamMembers = [;
     description:;
       "Leading our development teams with agile methodologies and client-focused delivery.",;
   },;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -1376,19 +1427,19 @@ const teamMembers = [
   }
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ];
 
 export default function TeamPage() {;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
-
-
-=======
-
-=======
-
     <>
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 
@@ -1400,11 +1451,14 @@ export default function TeamPage() {;
     <>
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <SEO
         title="Our Team | Zion Tech Group"
         description="Meet the leadership team at Zion Tech Group."
         canonical="/team"
 
+<<<<<<< HEAD
 <<<<<<< HEAD
       />
       <div className="container mx-auto px-4 py-16">
@@ -1436,6 +1490,12 @@ export default function TeamPage() {;
     </>;
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+
+    </>;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   );
   return (
     <>;
@@ -1452,12 +1512,16 @@ export default function TeamPage() {;
       </div>;
     </>;
   );
+<<<<<<< HEAD
 }
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from 'react';
 import SEO from '../components/SEO';
 export default function TeamPage() {
 	return (
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -1470,10 +1534,13 @@ import SEO from '../components/SEO',
 export default function TeamPage() {
 	return (
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 		<>
 			<SEO title="Our Team | Zion Tech Group" description="Meet the leadership team at Zion Tech Group." canonical="/team" />
 			<div className="container mx-auto px-4 py-16">
 				<h1 className="text-4xl font-bold mb-4">Our Team</h1>
+<<<<<<< HEAD
 				<p className="text-gray-300 mb-8">Profiles coming soon. For inquiries, contact us.</p>
 			</div>
 		</>
@@ -1488,6 +1555,9 @@ export default function TeamPage() {
     </Layout>);
 </Layout>);
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+    </Layout>);
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 import Head from './next / head';
 import { motion  } from './framer-motion';
@@ -1563,16 +1633,20 @@ function TeamPage() {
 ;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 }
 
 ;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -1583,3 +1657,5 @@ ursor/fix-lint-push-and-merge-to-main-ae4e
 }
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

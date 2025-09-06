@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -12,6 +13,8 @@ export function securityMiddleware("request": NextRequest) {;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   // Apply Content Security Policy;
   const cspString = Object && Object.entries(contentSecurityPolicy && contentSecurityPolicy.directives);
     .map(([key, values]) => `${key} ${values && values.join(" ")}`);
@@ -22,6 +25,7 @@ export function securityMiddleware("request": NextRequest) {;
   response && response.headers.set("X-RateLimit-Remaining", "99");
   response && response.headers.set("X-RateLimit-Reset", new Date(Date && Date.now() + 3600000).toISOString());
   return response}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 export const config = {"matcher": [;
@@ -100,3 +104,5 @@ ursor/add-new-services-and-deploy-updates-0462
 origin/automation-improvements-final
 export function securityMiddleware(request: NextRequest) {const response = NextResponse.next(); securityHeaders.forEach(({ key,value }) => {response.headers.set(key,value)}); const cspString = Object.entries(contentSecurityPolicy.directives); .map(([key,values]) => `${key} ${values.join(" ")}`); .join("; "); response.headers.set("Content-Security-Policy",cspString); response.headers.set("X-RateLimit-Limit","100"); response.headers.set("X-RateLimit-Remaining","99"); response.headers.set("X-RateLimit-Reset",new Date(Date.now() + 3600000).toISOString()); return response} ; export const config = {matcher: [; "/((?!api|_next/static|_next/image|favicon.ico).*)",],,}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

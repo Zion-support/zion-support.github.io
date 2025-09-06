@@ -1,8 +1,11 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 import {onsiteServicePricing, CountryPricing} from "@/data/onsiteServicePricing";
@@ -10,11 +13,11 @@ import {CountrySelector} from "./CountrySelector";
 import {PaymentSection} from "./PaymentSection";
 import {ServiceDetails} from "./ServiceDetails";
 
-=======
 import { onsiteServicePricing, CountryPricing } from "@/data/onsiteServicePricing",
 import { CountrySelector } from "./CountrySelector",
 import { PaymentSection } from "./PaymentSection",
 import { ServiceDetails } from "./ServiceDetails",
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -30,6 +33,8 @@ export function CountryServiceSelector({
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {
   onsiteServicePricing,
   CountryPricing,
@@ -37,7 +42,6 @@ import {
 import { CountrySelector } from "./CountrySelector";
 import { PaymentSection } from "./PaymentSection";
 import { ServiceDetails } from "./ServiceDetails";
->>>>>>> main
 interface CountryServiceSelectorProps {
   onCountryChange?: (country: CountryPricing | null) => void;
   selectedCountry?: CountryPricing | null;
@@ -46,12 +50,16 @@ interface CountryServiceSelectorProps {
 export function CountryServiceSelector({
   onCountryChange,
   selectedCountry: initialCountry,
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }: CountryServiceSelectorProps) {
   return (
     <div className="space-y-6">
       <div className="bg-zion-blue-dark rounded-lg p-6 border border-zion-blue-light">
         <CountrySelector
+<<<<<<< HEAD
 <<<<<<< HEAD
           onCountryChange={onCountryChange |(() => {})}
           selectedCountry={initialCountry |null}
@@ -141,6 +149,8 @@ function CountryServiceSelector() {
       </div>
 
 >>>>>>> main
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {initialCountry && <ServiceDetails country={initialCountry.country} />}
     </div>
   );
@@ -204,4 +214,7 @@ selectedCountry?: CountryPricing | null
   )
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

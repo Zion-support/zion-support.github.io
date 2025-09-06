@@ -1,7 +1,12 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
+// Use the shared icon wrapper
 // Use the shared icon wrapper;
 
+<<<<<<< HEAD
 =======
 // Use the shared icon wrapper;
 
@@ -10,6 +15,9 @@ import React, { useState, useEffect } from 'react';
 // Use the shared icon wrapper
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+import React, { useState, useEffect } from 'react';
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {Bell} from '@/components/icons';
 import {Button} from '@/components/ui/button';
 import {Popover, PopoverContent, PopoverTrigger} from '@/components/ui/popover';
@@ -17,6 +25,7 @@ import {useNotifications} from '@/context/notifications/NotificationContext';
 import {toast} from 'sonner';
 import {NotificationFilter, NotificationHeader, NotificationList, NotificationFooter} from '@/components/notifications';
 import {FilterType} from '@/components/notifications/NotificationFilter';
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 export const NotificationCenter: React.FC = () => {;
@@ -50,11 +59,14 @@ export const NotificationCenter:React.FC = () => {;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     loading;
     filter;
     setFilter;
     fetchNotifications;
   } = useNotifications();
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -82,6 +94,8 @@ import React, { useState, useEffect } from 'react',
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 // Use the shared icon wrapper
 import { Bell } from '@/components/icons',
 import { Button } from '@/components/ui/button',
@@ -100,6 +114,7 @@ export const NotificationCenter: React.FC = () => {
     filteredNotifications,
     unreadCount, 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     markAsRead, 
     markAllAsRead,
@@ -113,6 +128,8 @@ export const NotificationCenter: React.FC = () => {
     markAsRead, 
     markAllAsRead,
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     dismissNotification, 
     loading,
     filter,
@@ -124,15 +141,19 @@ export const NotificationCenter: React.FC = () => {
   const [error, setError] = useState<string | null>(null),
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   // Refresh notifications when popover opens
   useEffect(() => {
     if (open) {
       const loadNotifications = async () => {
         try {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -209,6 +230,8 @@ export const NotificationCenter: React.FC = () => {;
         try {;
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           await fetchNotifications();
           setError(null);
         } catch (err) {;
@@ -217,6 +240,7 @@ export const NotificationCenter: React.FC = () => {;
           toast && toast.error("Failed to load notifications");
         }
 
+<<<<<<< HEAD
 =======
           await fetchNotifications(),;
           setError(null);
@@ -249,6 +273,8 @@ export const NotificationCenter: React.FC = () => {;
       loadNotifications();
     }
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const handleMarkAllAsRead = async () => {
     try {
       await markAllAsRead(),
@@ -257,11 +283,16 @@ export const NotificationCenter: React.FC = () => {;
       console.error("Failed to mark notifications as read:", err),
       toast.error("Failed to update notifications")
     }
+<<<<<<< HEAD
   }
   const handleFilterChange = (newFilter: FilterType) => {
     setFilter(newFilter as any)
   }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   },
 
   const handleFilterChange = (newFilter: FilterType) => {
@@ -269,9 +300,12 @@ export const NotificationCenter: React.FC = () => {;
   },
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <Popover open={open} onOpenChange={setOpen}>
       <PopoverTrigger asChild>
@@ -279,6 +313,7 @@ export const NotificationCenter: React.FC = () => {;
           <Bell className="h-5 w-5 text-zion-slate-light" />
           {unreadCount > 0 && (
             <span className="absolute -top-0.5 -right-0.5 flex h-5 w-5 items-center justify-center rounded-full bg-zion-cyan text-[10px] text-white font-medium">
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   }, [open, fetchNotifications]),;
@@ -288,15 +323,19 @@ export const NotificationCenter: React.FC = () => {;
 
   }, [open, fetchNotifications]);
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  }, [open, fetchNotifications]),;
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const handleMarkAllAsRead = async () => {;
     try {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       await markAllAsRead();
       toast && toast.success("All notifications marked as read");
     } catch (err) {;
       console && console.error("Failed to mark notifications as read:", err);
       toast && toast.error("Failed to update notifications");
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -311,6 +350,8 @@ export const NotificationCenter: React.FC = () => {;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <Popover open={open} onOpenChange={setOpen}>;
       <PopoverTrigger asChild>;
@@ -318,20 +359,23 @@ export const NotificationCenter: React.FC = () => {;
           <Bell className="h-5 w-5 text-zion-slate-light" />;
           {unreadCount > 0 && (;
 
-            <span className="absolute -top-0.5 -right-0.5 flex h-5 w-5 items-center justify-center rounded-full bg-zion-cyan text-[10px] text-white font-medium">;
-
 
               {unreadCount > 9 ? '9+' : unreadCount}
             </span>;
           )}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         </Button>;
       </PopoverTrigger>;
       <PopoverContent className="w-[350px] p-0 bg-zion-blue border-zion-blue-light max-h-[500px] flex flex-col">;
         <NotificationHeader
+<<<<<<< HEAD
           unreadCount={unreadCount} 
           onMarkAllAsRead={handleMarkAllAsRead} 
         />;
@@ -420,11 +464,15 @@ if ( {) {
       <PopoverContent className="w-[350px] p - 0 bg - zion - blue border - zion - blue - light max - h-[500px] flex flex - col">;
         <NotificationHeader;
           unread_count={unread_count}
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           onMarkAllAsRead={handleMarkAllAsRead}
+        <NotificationFilter
         />;
         <NotificationFilter;
           filter={filter as FilterType}
           onFilterChange={handleFilterChange}
+<<<<<<< HEAD
         />;
         <NotificationList;
 <<<<<<< HEAD
@@ -433,18 +481,26 @@ if ( {) {
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
+=======
+        />
+        <NotificationList
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         
         <NotificationFilter 
           filter={filter as FilterType} 
           onFilterChange={handleFilterChange} 
         />
-
         <NotificationList 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+        />;
+        <NotificationList;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           loading={loading}
           error={error}
           notifications={filtered_notifications}
@@ -454,9 +510,12 @@ if ( {) {
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         />;
 
         <NotificationFooter onClose={() => setOpen(false)} />;
@@ -468,8 +527,6 @@ if ( {) {
 
 
 };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
           on_dismiss={dismiss_notification}
           on_retry={fetch_notifications}
         />;
@@ -478,6 +535,7 @@ if ( {) {
     </Popover>);
 }
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -569,3 +627,5 @@ if ( {) {
   );
 };
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

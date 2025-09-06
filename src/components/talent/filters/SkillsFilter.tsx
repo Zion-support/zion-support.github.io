@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { ChevronDown, ChevronUp } from 'lucide-react'
 <<<<<<< HEAD
 =======
@@ -31,6 +32,8 @@ export function SkillsFilter({
   isMobileFilterOpen,
 }: SkillsFilterProps) {
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { ChevronDown, ChevronUp } from 'lucide-react'
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import { Button } from "@/components/ui/button",
@@ -38,6 +41,7 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { SkillsFilterProps } from "@/types/filters";
 // Common skills in AI and tech
 
+<<<<<<< HEAD
 const POPULAR_SKILLS = [
 <<<<<<< HEAD
 =======
@@ -123,6 +127,8 @@ export function SkillsFilter(): any ({;
 
 export function SkillsFilter({ selectedSkills, toggleSkill, expanded, toggleSection, isMobileFilterOpen }: SkillsFilterProps) {
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
 <<<<<<< HEAD
     <div className='mb-6 border-b border-zion-blue-light pb-6'>;
@@ -138,10 +144,13 @@ export function SkillsFilter({ selectedSkills, toggleSkill, expanded, toggleSect
     <div className="mb-6 border-b border-zion-blue-light pb-6">
       <button
         onClick={toggleSection}
+<<<<<<< HEAD
         className='flex w-full items-center justify-between text-white font-medium'      >
         className="flex w-full items-center justify-between text-white font-medium"
       >
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <span>Skills</span>
         {expanded ? (
           <ChevronUp className="h-4 w-4 text-zion-slate-light" />
@@ -149,20 +158,25 @@ export function SkillsFilter({ selectedSkills, toggleSkill, expanded, toggleSect
           <ChevronDown className="h-4 w-4 text-zion-slate-light" />
         )}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
       
 
 
 =======
-      </button>
+=======
       
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+      </button>
       {expanded && (
-        <div className="mt-4 space-y-2">
           {POPULAR_SKILLS.map(skill => (
             <div key={skill} className="flex items-center">
               <Checkbox
                 id={`skill-${skill}`}
+<<<<<<< HEAD
                 checked={selectedSkills.includes(skill)}
                 onCheckedChange={() => toggleSkill(skill)}
             <div key={skill} className="flex items-center">
@@ -203,7 +217,19 @@ const POPULAR_SKILLS = [
                 onCheckedChange={() => toggleSkill(skill)}
 
             <div key={skill} className="flex items-center">;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
+export function SkillsFilter({ selectedSkills, toggleSkill, expanded, toggleSection, isMobileFilterOpen }: SkillsFilterProps) {
+  return (
+    <div className="mb-6 border-b border-zion-blue-light pb-6">
+      <button
+                className="border-zion-slate-light data-[state=checked]:bg-zion-purple data-[state=checked]:border-zion-purple"
+              />
+              <label
+                htmlFor={`skill-${skill}`}
+                className="ml-2 text-sm text-zion-slate-light cursor-pointer"
+              >
 import { ChevronDown, ChevronUp } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { Checkbox } from "@/components/ui/checkbox";
@@ -241,22 +267,17 @@ function SkillsFilter() {
         on_click={toggle_section}
         className='flex w - full items - center justify - between text - white font - medium'      >;
         <span > Skills</span>;
+        onClick={toggleSection}
+        className="flex w-full items-center justify-between text-white font-medium"
+      >
+        <span>Skills</span>
         {expanded ? (
-          <ChevronUp className='h - 4 w - 4 text - zion - slate - light' />) : (
-          <ChevronDown className='h - 4 w - 4 text - zion - slate - light' />)}
-      </button>;
+          <ChevronUp className="h-4 w-4 text-zion-slate-light" />
+        ) : (
+          <ChevronDown className="h-4 w-4 text-zion-slate-light" />
+        )}
+      </button>
       {expanded && (
-        <div className='mt - 4 space - y-2'>;
-          {POPULAR_SKILLS.map (skill => (
-            <div key={skill} className='flex items - center'>              <Checkbox;
-                id={`skill-${skill}`}
-                checked={selected_skills.includes (skill)}
-                onCheckedChange={() => toggle_skill (skill)}
-            <div key={skill} className="flex items - center">;
-import { Button  } from '@/components / ui / button';
-import { Checkbox  } from '@/components / ui / checkbox';
-import { SkillsFilterProps  } from '@/types / filters';
-
 // Common skills in AI and tech;
 const POPULAR_SKILLS = [;
   "Machine Learning";
@@ -271,14 +292,13 @@ const POPULAR_SKILLS = [;
   "Docker";
   "Kubernetes";
   "React";
-
-  "Node.js";
-
+  "Node && Node.js";
   "TypeScript";
   "DevOps";
   "Security";
 ];
 
+<<<<<<< HEAD
 
               <Checkbox
                 id={`skill-${skill}`}
@@ -346,10 +366,13 @@ export function SkillsFilter({ selectedSkills, toggleSkill, expanded, toggleSect
         <div className="mt-4 space-y-2">
           {POPULAR_SKILLS.map(skill => (
             <div key={skill} className="flex items-center">
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <Checkbox
                 id={`skill-${skill}`}
                 checked={selectedSkills.includes(skill)}
                 onCheckedChange={() => toggleSkill(skill)}
+<<<<<<< HEAD
                 className='border-zion-slate-light data-[state=checked]:bg-zion-purple data-[state=checked]:border-zion-purple'              />
               <label
                 htmlFor={`skill-${skill}`}
@@ -384,6 +407,15 @@ export function SkillsFilter({ selectedSkills, toggleSkill, expanded, toggleSect
 }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+                {skill}
+              ">;
+              </label>;
+            </div>;
+          ))}
+}
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     </div>
   );
 }
@@ -425,7 +457,10 @@ function SkillsFilter() {
 }
         </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 className="ml-2 text-sm text-zion-slate-light cursor-pointer";
               >;
                 {skill}
@@ -435,6 +470,7 @@ function SkillsFilter() {
         </div>;
       )}
       )};
+<<<<<<< HEAD
 
 =======
 
@@ -448,13 +484,19 @@ function SkillsFilter() {
       )}
       )};
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+        </div>
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     </div>;
   );
 };
 }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 ;
 =======
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

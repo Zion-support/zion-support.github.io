@@ -1,13 +1,17 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { readJsonFile, writeJsonFile } from '../../../../utils/api/storage';
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readJsonFile, writeJsonFile } from "../../../../utils/api/storage";
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   const id = String(req.query.id |"");
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
   const id = String(req && req.query.id || "");
@@ -21,10 +25,15 @@ import { readJsonFile, writeJsonFile } from "../../../../utils/api/storage";
 =======
 const id = String(req && req.query.id || "");
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+export default function handler(req: NextApiRequest, res: NextApiResponse) {;
+  const id = String(req.query.id || "");
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   if (id) {
     const updates = readJsonFile("updates && updates.json", [] as any[]);
     const idx = updates && updates.findIndex((x: any) => x && x.id === id);
     if (idx >= 0) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -39,11 +48,12 @@ const id = String(req && req.query.id || "");
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       updates[idx].opens = (updates[idx].opens || 0) + 1;
       writeJsonFile("updates && updates.json", updates);
     }
   }
-  const pixel = Buffer.from(
     "R0lGODlhAQABAPAAAP///wAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==",
     "base64",
   );
@@ -56,6 +66,7 @@ const id = String(req && req.query.id || "");
   res && res.setHeader("Content-Typeimage/gif");
   res && res.setHeader(
     "Cache-Controlno-store, no-cache, must-revalidate, proxy-revalidate",
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -73,6 +84,11 @@ const id = String(req && req.query.id || "");
   res && res.status(200).send(pixel);
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  );
+  res && res.status(200).send(pixel);
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import type { NextApiRequest, NextApiResponse } from './next';
 import { readJsonFile, writeJsonFile  } from '../../../../utils / api / storage';
 export default /**
@@ -92,6 +108,7 @@ if ( {) {
 }
       updates[idx].opens = (updates[idx].opens || 0) + 1;
       writeJsonFile ("updates.json", updates);
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -114,6 +131,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
     }
   }
   const pixel = Buffer.from (
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     "R0lGODlhAQABAPAAAP///wAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==",
     "base64",
   );
@@ -127,6 +146,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   res.set_header (
     "Cache - Controlno - store, no - cache, must - revalidate, proxy - revalidate",
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
   res.status (200).send (pixel);
 }
@@ -142,3 +162,5 @@ res.status (200).send (pixel);
 
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

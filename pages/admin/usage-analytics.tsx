@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 
@@ -7,6 +8,8 @@
 =======
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useCallback, useEffect, useMemo, useState } from 'react',;
 import Head from 'next/head',;
 import EnhancedLayout from '../../components/layout/EnhancedLayout',;
@@ -46,17 +49,21 @@ function PieChart({ data, size = 160 }: { data: Datum[], size?: number }) {
     <svg width={size} height={size} viewBox={`0 0 ${size} ${size}`}>{slices}</svg>
   )
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useCallback, useEffect, useMemo, useState } from 'react';
 import Head from 'next/head';
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
 import { GetServerSideProps } from 'next';
 import { requireAdminRole } from '../../utils/auth';
 import DatePicker from 'react-datepicker';
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   const total = Math.max(1, data.reduce((s, d) => s + d.value, 0));
@@ -110,6 +117,8 @@ function PieChart({ data, size = 160 }: { data: Datum[], size?: number }) {;
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 
 function LineChart({ data, width = 360, height = 140 }: { data: { date: string, value: number }[], width?: number, height?: number }) {
@@ -131,18 +140,24 @@ function Funnel({ data }: { data: Datum[] }) {
     <div className="flex flex-col gap-2">
       {data.map((d, i) => (
         <div key={d.label} className="bg-purple-500 text-white text-sm px-3 py-2 rounded" style={{ width: `${100 - i * 12}%` }}>
+<<<<<<< HEAD
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           {d.label}: {d.value}
         </div>
       ))}
     </div>
   )
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     return <path key={d.label} d={path} fill={colors[i % colors.length]} />
   })
 =======
@@ -188,9 +203,13 @@ function PieChart() {
     <svg width={size} height={size} view_box={`0 0 ${size} ${size}`}>{slices}</svg>);
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 /**
  * LineChart - Function description
  */
@@ -202,14 +221,19 @@ function LineChart() {
     return `${x}, ${y}`;
   }).join (' '),
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <svg width={width} height={height} className="border rounded bg - white / 40 dark:bg - gray - 900 / 40">;
       <polyline fill="none" stroke="#3b82f6" stroke_width="2" points={points} />;
     </svg>);
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -225,6 +249,8 @@ function Funnel() {
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <div className="flex flex-col gap-2">
       {data.map((d, i) => (
         <div key={d.label} className="bg-purple-500 text-white text-sm px-3 py-2 rounded" style={{ width: `${100 - i * 12}%` }}>
@@ -234,6 +260,7 @@ function Funnel() {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
 
 
 
@@ -452,6 +479,8 @@ export default function UsageAnalytics() {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
         </div>;
       ))  } catch (error) {
@@ -475,17 +504,14 @@ export default function UsageAnalytics(req, res) {
   const [loading, setLoading] = useState(false);
   const [pagesMostUsed, setPagesMostUsed] = useState<Datum[]>([]);
   const [events, setEvents] = useState<Datum[]>([]);
-  const [line, setLine] = useState<{ date: string, value: number }[]>([]),;
-  const [funnel, setFunnel] = useState<Datum[]>([]);
-  const refresh = useCallback(async () => {;
-    setLoading(true);
-    try {
-      const params = new URLSearchParams({ start: start.toISOString(), end: end.toISOString(), userType }),;
+
+
       const res = await fetch(`/api/admin/analytics/summary?${params.toString()}`);
       const json = await res.json();
       setPagesMostUsed(json.pagesMostUsed || []);
       setEvents(json.events || []);
       setLine(json.line || []);
+<<<<<<< HEAD
       setFunnel(json.funnel || []);
     } finally {;
       setLoading(false);
@@ -536,25 +562,33 @@ export default function UsageAnalytics(req, res) {
                   <li key={d.label} className="flex justify-between gap-4 min-w-[180px]"><span>{d.label}</span><span className="text-gray-500">{d.value}</span></li>
                 ))}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               </ul>
             </div>
           </div>
 
 
+<<<<<<< HEAD
 =======
               </ul>
             </div>
           </div>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <div className="border rounded p-4 bg-white/70 dark:bg-gray-900 lg:col-span-2">
             <div className="font-medium mb-2">Events Over Time</div>
             <LineChart data={line} />
@@ -569,10 +603,13 @@ export default function UsageAnalytics(req, res) {
           </div>
         </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <div className="border rounded p-4 bg-white/70 dark:bg-gray-900">
           <div className="font-medium mb-2">Funnel</div>
           <Funnel data={funnel} />
@@ -582,6 +619,7 @@ export default function UsageAnalytics(req, res) {
         </div>
       </div>
     </EnhancedLayout>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 }
@@ -594,6 +632,17 @@ export default function UsageAnalytics(req, res) {
 
 <<<<<<< HEAD
 =======
+=======
+  )
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+}
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   }, [start, end, user_type]),
   useEffect (() => { refresh () }, []),
   return (
@@ -659,11 +708,9 @@ export default function UsageAnalytics(req, res) {
       </div>;
     </EnhancedLayout>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
   } catch (error) {
@@ -673,3 +720,5 @@ export default function UsageAnalytics(req, res) {
 }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

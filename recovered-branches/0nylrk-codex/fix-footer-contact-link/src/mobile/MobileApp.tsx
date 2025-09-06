@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -17,6 +18,8 @@ import {MobileJobPost} from "./pages/MobileJobPost";
 import {useAuth} from "@/hooks/useAuth";
 export function MobileApp() {;
   const { isAuthenticated } = useAuth();
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from "react",
 import { Routes, Route, Navigate } from "react-router-dom",
 import { MobileThemeProvider } from "./theme/MobileThemeProvider",
@@ -26,8 +29,6 @@ import { MobileBrowse } from "./pages/MobileBrowse",
 import { MobileProjects } from "./pages/MobileProjects",
 import { MobileMessages } from "./pages/MobileMessages",
 import { MobileResumeBuilder } from "./pages/MobileResumeBuilder",
-
-
 import { MobileJobPost } from "./pages/MobileJobPost";
 import { useAuth } from "@/hooks/useAuth";
 export function MobileApp() {
@@ -37,7 +38,13 @@ import { useAuth } from "@/hooks/useAuth",
 export function MobileApp() {
   const { isAuthenticated } = useAuth(),
   
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <MobileThemeProvider>
       <Routes>
@@ -60,6 +67,9 @@ export function MobileApp() {
   )
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from "react";
 import {Routes, Route, Navigate} from "react-router-dom";
 import {MobileThemeProvider} from "./theme/MobileThemeProvider";
@@ -71,14 +81,16 @@ import {MobileMessages} from "./pages/MobileMessages";
 import {MobileResumeBuilder} from "./pages/MobileResumeBuilder";
 import {MobileJobPost} from "./pages/MobileJobPost";
 import {useAuth} from "@/hooks/useAuth";
-=======
 
 
+<<<<<<< HEAD
 =======
 =======
 
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from "react",;
 import { Routes, Route, Navigate } from "react-router-dom",;
 import { MobileThemeProvider } from "./theme/MobileThemeProvider",;
@@ -90,6 +102,7 @@ import { MobileMessages } from "./pages/MobileMessages",;
 import { MobileResumeBuilder } from "./pages/MobileResumeBuilder",;
 import { MobileJobPost } from "./pages/MobileJobPost",;
 import { useAuth } from "@/hooks/useAuth",;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 export function MobileApp() {;
@@ -128,11 +141,14 @@ export function MobileApp() {;
   const { isAuthenticated } = useAuth();
   return (;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <MobileThemeProvider>;
       <Routes>;
         <Route path="/onboarding" element={<MobileOnboarding />} />;
         <Route;
           path="/";
+<<<<<<< HEAD
 <<<<<<< HEAD
           element={
             is_authenticated ? <MobileHome /> : <Navigate to="/onboarding" />;
@@ -168,11 +184,14 @@ export function MobileApp() {;
             isAuthenticated ? <MobileHome /> : <Navigate to="/onboarding" />;
           } ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         />;
         <Route path="/browse" element={<MobileBrowse />} />;
         <Route path="/projects" element={<MobileProjects />} />;
         <Route path="/inbox" element={<MobileMessages />} />;
         <Route path="/resume" element={<MobileResumeBuilder />} />;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -182,12 +201,15 @@ export function MobileApp() {;
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <Route path="/post - job" element={<MobileJobPost />} />;
         <Route path="/profile" element={<div > Profile page</div>} />;
         <Route path="*" element={<Navigate to="/" replace />} />;
       </Routes>;
     </MobileThemeProvider>);
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
     </MobileThemeProvider>);
@@ -201,3 +223,6 @@ export function MobileApp() {;
 }
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

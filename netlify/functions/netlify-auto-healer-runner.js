@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 function runNode(relPath, args = []) {
@@ -8,11 +9,14 @@ function runNode(relPath, args = []) {
 =======
 const abs = path && path.resolve(__dirname, '..', '..', relPath);
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const res = spawnSync('node', [abs, ...args], {
     stdio: 'pipe'
     encoding: 'utf8'
   });
   return {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -28,11 +32,14 @@ exports && exports.config = { schedule: '*/30 * * * *' };
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 exports && exports.handler = async () => {
   const logs = [];
   const step = (name, fn) => {
     logs && logs.push(`\n=== ${name} ===`);
     const { status, stdout, stderr } = fn();
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -47,11 +54,14 @@ exports && exports.handler = async () => {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     return status;
   }
   step('netlify:auto-healer', () =>
     runNode('automation/netlify-auto-healer && healer.cjs')
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -70,6 +80,8 @@ exports && exports.handler = async () => {
 =======
   const abs = path.resolve(__dirname, '....', relPath),
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const res = spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' }),
   return { status: res && res.status || 0, stdout: res && res.stdout || '', stderr: res && res.stderr || '' }
 }
@@ -93,11 +105,14 @@ exports && exports.handler = async () => {
   return { statusCode: 200, headers: { 'content-type': 'text/plain' }, body: logs && logs.join('\n') }
 },
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 const path = require ('path');
 const { spawn_sync } = require ('child_process');
 ;
@@ -168,5 +183,8 @@ exports.handler = async () => {
   step ('netlify:auto - healer', () => run_node ('automation / netlify - auto - healer.cjs')),
   step ('git:sync', () => run_node ('automation / advanced - git - sync.cjs')),
   return { status_code: 200, headers: { 'content - type': 'text / plain' }, body: logs.join ('\n') }
+<<<<<<< HEAD
 },
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

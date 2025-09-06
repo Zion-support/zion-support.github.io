@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { ServiceVariant } from '../types / service - variants';
 
@@ -749,21 +750,28 @@ export const emergingTech2026Services: EmergingTech2026Service[] = [;
   growthRate: string, variant: ServiceVariant,
   contactInfo: {
 <<<<<<< HEAD
+=======
+  contactInfo: {
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       
     mobile: string, email: string,
     address: string,
     website: string
   
+<<<<<<< HEAD
 =======
     mobile: string, email: string,
     address: string,
     website: string
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     },
     realImplementation: boolean, implementationDetails: string,
   launchDate: string, customers: number,
   rating: number,
   reviews: number
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 }
@@ -1312,6 +1320,9 @@ export const emergingTech2026Services: EmergingTech2026Service[] = [
     }
     realImplementation: true
     implementationDetails:
+=======
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       'Advanced quantum energy platform with energy optimization, renewable energy management, and smart grid capabilities. Includes real-time monitoring and predictive analytics.'
     launchDate: '2026-04-20'
     customers: 180
@@ -1336,37 +1347,50 @@ export const emergingTech2026Services: EmergingTech2026Service[] = [
     rating: 4.8
 
     reviews: 120
-import { ServiceVariant } from '../types / service - variants';
-
-export interface EmergingTech2026Service {
-
-  {
-
-  id: string, name: string,
-  tagline: string, price: string,
-  period: string, description: string,
-  features: string[], popular: boolean,
-  icon: string, color: string,
-  textColor: string, link: string,
-  marketPosition: string, targetAudience: string,
-  trialDays: number, setupTime: string,
-  category: string, realService: boolean,
-  technology: string[], integrations: string[],
-  useCases: string[], roi: string,
-  competitors: string[], marketSize: string,
-  growthRate: string, variant: ServiceVariant,
-  contactInfo: {
-      
-    mobile: string, email: string,
-    address: string,
-    website: string
-  
-    },
-    realImplementation: boolean, implementationDetails: string,
-  launchDate: string, customers: number,
-  rating: number,
-  reviews: number
+  }
+];
+import { ServiceVariant } from '../types/service-variants',;
+export interface EmergingTech2026Service {;
+  id: string,;
+  name: string,;
+  tagline: string,;
+  price: string,;
+  period: string,;
+  description: string,;
+  features: string[],;
+  popular: boolean,;
+  icon: string,;
+  color: string,;
+  textColor: string,;
+  link: string,;
+  marketPosition: string,;
+  targetAudience: string,;
+  trialDays: number,;
+  setupTime: string,;
+  category: string,;
+  realService: boolean,;
+  technology: string[],;
+  integrations: string[],;
+  useCases: string[],;
+  roi: string,;
+  competitors: string[],;
+  marketSize: string,;
+  growthRate: string,;
+  variant: ServiceVariant,;
+  contactInfo: {;
+    mobile: string,;
+    email: string,;
+    address: string,;
+    website: string;
+  },;
+  realImplementation: boolean,;
+  implementationDetails: string,;
+  launchDate: string,;
+  customers: number,;
+  rating: number,;
+  reviews: number;
 }
+<<<<<<< HEAD
 
 export const emergingTech2026Services: EmergingTech2026Service[] = [
   // Neuromorphic Computing Platform
@@ -1398,6 +1422,8 @@ export const emergingTech2026Services: EmergingTech2026Service[] = [
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       address: '364 E Main St STE 1008 Middletown DE 19709',
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       website: 'https://ziontechgroup.com';
     }
     real_implementation: true,
@@ -1406,6 +1432,7 @@ export const emergingTech2026Services: EmergingTech2026Service[] = [
     customers: 180;
     rating: 4.8,
     reviews: 120;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 ];
@@ -1416,6 +1443,8 @@ export const emergingTech2026Services: EmergingTech2026Service[] = [
 =======
   }
 ];
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { ServiceVariant } from '../types/service-variants',;
 export interface EmergingTech2026Service {;
   id: string,;
@@ -1494,6 +1523,8 @@ export const emergingTech2026Services: EmergingTech2026Service[] = [;
       mobile: '+1 302 464 0950',;
       email: 'kleber@ziontechgroup.com',;
       address: '364 E Main St STE 1008 Middletown DE 19709',;
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+
       website: 'https://ziontechgroup.com';
     },;
     realImplementation: true,;
@@ -1811,5 +1842,9 @@ export const emergingTech2026Services: EmergingTech2026Service[] = [;
     rating: 4.8;
     reviews: 120;
   }
+<<<<<<< HEAD
 ];
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

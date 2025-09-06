@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -9,6 +10,8 @@
 
 
 import React from 'react';
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { Link  } from 'react-router-dom';
 import { Logo  } from './Logo';
 import { UserMenu  } from './UserMenu';
@@ -20,22 +23,35 @@ import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput",
 import { generateSearchSuggestions } from "@/data/marketplaceData",
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {Link} from 'react-router-dom';
 import {Logo} from './Logo';
 import {UserMenu} from './UserMenu';
 import {LanguageSelector} from './LanguageSelector';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
   // If we have a white-label tenant and no specific customTheme is provided;
   // use the tenant's primary color;
   const effectiveTheme = customTheme || (isWhitelabel ? {;
 
+import React from 'react';
+  const { user } = useAuth();
+  const { isWhitelabel, primaryColor } = useWhitelabel();
+  const navigate = useNavigate();
+  const [query, setQuery] = useState("");
+  const searchSuggestions = generateSearchSuggestions();
     primaryColor;
     backgroundColor: '#0f172a', // Default dark background;
     textColor: '#ffffff', // Default light text;
   } : undefined);
+<<<<<<< HEAD
 
 
 =======
@@ -51,6 +67,8 @@ export interface HeaderProps {;
   hideLogin?: boolean;
   customLogo?: string;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from 'react',
 import { Link } from 'react-router-dom',
 import { Logo } from './Logo',
@@ -64,6 +82,7 @@ import { generateSearchSuggestions } from "@/data/marketplaceData",
 import { useNavigate } from "react-router-dom",
 import { useState } from "react",
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -81,6 +100,11 @@ export interface HeaderProps {
   hideLogin?: boolean,
   customLogo?: string,
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+export interface HeaderProps {
+  hideLogin?: boolean,
+  customLogo?: string,
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   customTheme?: {
 
     primaryColor: string
@@ -90,10 +114,13 @@ export interface HeaderProps {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export function Header({ hideLogin = false, customLogo, customTheme }: HeaderProps) {;
   const { user } = useAuth();
   const { isWhitelabel, primaryColor } = useWhitelabel();
@@ -126,23 +153,15 @@ export function Header({ hideLogin = false, customLogo, customTheme }: HeaderPro
     backgroundColor: '#0f172a', // Default dark background
     textColor: '#ffffff', // Default light text
   } : undefined),
-
-
   
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const headerStyle = effectiveTheme ? {
     backgroundColor: effectiveTheme.backgroundColor
     color: effectiveTheme.textColor
     borderColor: `${effectiveTheme.primaryColor}20`
-
-
-  } : {},
-
-
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    if (query.trim()) {
 
   const headerStyle = effectiveTheme ? {;
     backgroundColor: effectiveTheme && effectiveTheme.backgroundColor,;
@@ -157,15 +176,10 @@ export function Header({ hideLogin = false, customLogo, customTheme }: HeaderPro
       setQuery("");
     }
 
-  };
-
-
-  },
-  
-
   return (
     <header
       className="sticky top-0 z-50 w-full border-b border-zion-purple/20 bg-zion-blue-dark/90 backdrop-blur-md"
+<<<<<<< HEAD
 
       style={headerStyle}>;
       <div className="container flex h-16 items-center px-4 sm:px-6">;
@@ -203,10 +217,13 @@ export function Header({ hideLogin = false, customLogo, customTheme }: HeaderPro
         </div>
         <form onSubmit={handleSubmit} className="hidden md:block w-64 mx-4">
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <EnhancedSearchInput
             value={query}
             onChange={setQuery}
             searchSuggestions={searchSuggestions}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -221,13 +238,18 @@ export function Header({ hideLogin = false, customLogo, customTheme }: HeaderPro
 
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           {!hideLogin && <UserMenu />}
         </div>
       </div>
     </header>
   )
 }
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from 'react',;
 import { Link } from 'react-router-dom',;
 import { Logo } from './Logo',;
@@ -241,56 +263,58 @@ import { generateSearchSuggestions } from "@/data/marketplaceData",;
 import { useNavigate } from "react-router-dom",;
 import { useState } from "react",;
 export interface HeaderProps {;
-  hideLogin?: boolean,;
-  customLogo?: string,;
+  hideLogin?: boolean;
+  customLogo?: string;
   customTheme?: {;
     primaryColor: string,;
     backgroundColor: string,;
     textColor: string;
   }
 }
-;
-export function Header({ hideLogin = false, customLogo, customTheme }: HeaderProps) {;
-  const { user } = useAuth(),;
-  const { isWhitelabel, primaryColor } = useWhitelabel(),;
-  const navigate = useNavigate(),;
-  const [query, setQuery] = useState(""),;
-  const searchSuggestions = generateSearchSuggestions(),;
-  // If we have a white-label tenant and no specific customTheme is provided,;
-  // use the tenant's primary color;
-  const effectiveTheme = customTheme || (isWhitelabel ? {;
-    primaryColor,;
+
+export function Header(): any ({ hideLogin = false, customLogo, customTheme }: HeaderProps) {;
+  const { user } = useAuth();
+  const { isWhitelabel, primaryColor } = useWhitelabel();
+  const navigate = useNavigate();
+  const [query, setQuery] = useState("");
+  const searchSuggestions = generateSearchSuggestions();
+  // If we have a white-label tenant and no specific customTheme is provided;
+  // use the tenant's primary color
+  const effectiveTheme = customTheme |(isWhitelabel ? {
+    primaryColor;
     backgroundColor: '#0f172a', // Default dark background;
     textColor: '#ffffff', // Default light text;
-  } : undefined),;
-  const headerStyle = effectiveTheme ? {;
-    backgroundColor: effectiveTheme.backgroundColor,;
-    color: effectiveTheme.textColor,;
-    borderColor: `${effectiveTheme.primaryColor}20`;
-  } : {},;
-  const handleSubmit = (e: React.FormEvent) => {;
-    e.preventDefault(),;
-    if (query.trim()) {;
+  } : undefined);
+  const headerStyle = effectiveTheme ? {
+    backgroundColor: effectiveTheme.backgroundColor
+    color: effectiveTheme.textColor
+    borderColor: `${effectiveTheme.primaryColor}20`
+  } : {}
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault()
+    if (query.trim()) {
       navigate(`/search?q=${encodeURIComponent(query)}`);
       setQuery("");
     }
-  };
-  return (;
-    <header;
-      className="sticky top-0 z-50 w-full border-b border-zion-purple/20 bg-zion-blue-dark/90 backdrop-blur-md";
+  }
+
+  return (
+    <header
+      className="sticky top-0 z-50 w-full border-b border-zion-purple/20 bg-zion-blue-dark/90 backdrop-blur-md"
       style={headerStyle}
-    >;
-      <div className="container flex h-16 items-center px-4 sm:px-6">;
-        <Logo customLogo={customLogo} customColor={effectiveTheme?.primaryColor} />;
-        <div className="ml-6 flex-1">;
-          <MainNavigation />;
-        </div>;
-        <form onSubmit={handleSubmit} className="hidden md:block w-64 mx-4">;
-          <EnhancedSearchInput;
+    >
+      <div className="container flex h-16 items-center px-4 sm:px-6">
+        <Logo customLogo={customLogo} customColor={effectiveTheme?.primaryColor} />
+        <div className="ml-6 flex-1">
+          <MainNavigation />
+        </div>
+        <form onSubmit={handleSubmit} className="hidden md:block w-64 mx-4">
+          <EnhancedSearchInput
             value={query}
             onChange={setQuery}
             searchSuggestions={searchSuggestions}
 
+<<<<<<< HEAD
 <<<<<<< HEAD
           />;
         </form>;
@@ -310,17 +334,25 @@ export function Header({ hideLogin = false, customLogo, customTheme }: HeaderPro
         <div className="flex items-center gap-2">;
           <LanguageSelector />;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           {!hideLogin && <UserMenu />}
-        </div>;
-      </div>;
-    </header>;
-  );
+        </div>
+      </div>
+    </header>
+  )
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {MainNavigation} from '@/layout / MainNavigation';
 import {use_auth} from '@/hooks / use_auth';
 import {use_whitelabel} from '@/context / WhitelabelContext';
@@ -347,6 +379,7 @@ function Header() {
   const [query, set_query] = useState ("");
   const search_suggestions = generateSearchSuggestions ();
 ;
+<<<<<<< HEAD
   // If we have a white - label tenant and no specific custom_theme is provided;
   // use the tenant's primary color;
   const effective_theme = custom_theme || (is_whitelabel ? {
@@ -517,3 +550,5 @@ return (<header <div className="ml-6 flex-1" > <MainNavigation /> </div> <Enhanc
 }
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

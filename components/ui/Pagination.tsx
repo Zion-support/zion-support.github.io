@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -60,12 +61,15 @@ function Pagination() {  const total_pages = Math.max (1, Math.ceil (total / pag
 };
 
 export default function Pagination({ page, pageSize, total, onChange }: PaginationProps) {;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
   const totalPages = Math.max(1, Math.ceil(total / pageSize));
   const canPrev = page > 1;
   const canNext = page < totalPages;
   const goTo = (p: number) => {
+<<<<<<< HEAD
 
 };
 
@@ -134,6 +138,8 @@ export default function Pagination({ page, pageSize, total, onChange }: Paginati
   const canNext = page < totalPages;
   const goTo = (p: number) => {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     if (p >= 1 && p <= totalPages) onChange(p);
   }
   return (
@@ -159,6 +165,7 @@ export default function Pagination({ page, pageSize, total, onChange }: Paginati
     </div>;
   );
 
+<<<<<<< HEAD
 }  }
 =======
     if (p >= 1 && p <= totalPages) onChange(p)
@@ -169,6 +176,8 @@ export default function Pagination({ page, pageSize, total, onChange }: Paginati
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <div className="flex items-center justify-between gap-2 mt-4">;
       <EnhancedButton variant="secondary" size="md" onClick={() => goTo(page - 1)} disabled={!canPrev}>;
@@ -176,6 +185,7 @@ export default function Pagination({ page, pageSize, total, onChange }: Paginati
       </EnhancedButton>;
       <div className="text-sm">;
         Page {page} of {totalPages}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -189,6 +199,8 @@ export default function Pagination({ page, pageSize, total, onChange }: Paginati
 
 );
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import Link from 'next/link';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 interface PaginationProps {;
@@ -197,6 +209,7 @@ interface PaginationProps {;
   baseUrl: string;
   className?: string;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -295,12 +308,15 @@ const Pagination: React.FC < PaginationProps> = ({
       const startPage = Math && Math.max(1, currentPage - 2);
       const endPage = Math && Math.min(totalPages, startPage + maxVisiblePages - 1);
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       if (startPage > 1) {;
         pages && pages.push(1);
         if (startPage > 2) {;
           pages && pages.push('...');
 }
       }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -317,6 +333,8 @@ const Pagination: React.FC < PaginationProps> = ({
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
         pages && pages.push(totalPages);
 }
@@ -343,6 +361,7 @@ const Pagination: React.FC < PaginationProps> = ({
       {/* Page Numbers */}
       <div className="flex items-center space-x-1">;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
         {getPageNumbers().map((page, index) => {;
           if (page === '...') {;
@@ -353,6 +372,8 @@ const Pagination: React.FC < PaginationProps> = ({
           if (page === '...') {;
             return (
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <span key={index} className="px-3 py-2 text-sm text-gray-500">;
                 ...;
               </span>;
@@ -364,6 +385,7 @@ const Pagination: React.FC < PaginationProps> = ({
             <Link
               key={pageNumber}
               href={`${baseUrl}?page=${pageNumber}`}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -377,6 +399,8 @@ const Pagination: React.FC < PaginationProps> = ({
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               {pageNumber}
             </Link>;
           );
@@ -487,24 +511,28 @@ if ( {) {
         <span className="flex items - center px - 3 py - 2 text - sm font - medium text - gray - 300 bg - gray - 100 border border - gray - 200 rounded - lg cursor - not - allowed">;
           Next;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
-}
-export default Pagination;
-}
 =======
-  );
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
+}
+}
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
 =======
   );
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <ChevronRight className="w - 4 h - 4 ml - 1" />;
         </span>)}
     </nav>);
 }
+<<<<<<< HEAD
 export default Pagination;
 <<<<<<< HEAD
 }
@@ -522,3 +550,8 @@ export default Pagination;
 }
   );
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+  );
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

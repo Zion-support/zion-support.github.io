@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import React from "react",
 import { format } from "date-fns",
@@ -21,6 +22,8 @@ type QuoteRequestCardProps = {
   onToggleArchive: (id: string, isArchived: boolean) => void
 },
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from "react"
 import {format} from "date-fns"
 import {Card, CardContent, CardHeader, CardTitle, CardDescription} from "@/components/ui/card"
@@ -35,7 +38,16 @@ type QuoteRequestCardProps = {
   onToggleArchive: (id: string, isArchived: boolean) => void
 }
 export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({
+<<<<<<< HEAD
   onMarkAsResponded
+=======
+  quote,
+  onViewDetails,
+  quote,
+  onViewDetails,
+  onMarkAsResponded,
+  onToggleArchive
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }) => {
   // Format date for display
   const formatDate = (dateString: string) => {
@@ -44,6 +56,7 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({
     } catch (e) {
       return dateString
     }
+<<<<<<< HEAD
   }
     <Card key={quote.id} className="bg-zion-blue-dark border border-zion-blue-light overflow-hidden">
       <CardHeader className="pb-2">
@@ -166,6 +179,10 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({;
   }
   },
 
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <Card key={quote.id} className="bg-zion-blue-dark border border-zion-blue-light overflow-hidden">
       <CardHeader className="pb-2">
@@ -184,15 +201,21 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({;
           <span className="text-white font-medium">From: </span>
           {quote.requester_name}
         </div>
+<<<<<<< HEAD
         <p className="text-white line-clamp-3 mb-4">{quote.project_summary}</p>
         
         <p className="text-white line-clamp-3 mb-4">{quote.project_summary}</p>
         
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <div className="flex items-center gap-2 text-sm text-zion-slate-light mb-3">
           <CalendarIcon className="h-4 w-4" />
           <span>Timeline: {quote.timeline}</span>
         </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -335,6 +358,8 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({;
 <<<<<<< HEAD
 =======
         
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <div className="flex justify-between items-center mt-4">
           <Button
             variant="outline"
@@ -345,10 +370,13 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({;
             <Eye className="h-4 w-4" />
             View Details
           </Button>
-          
+
           <div className="flex items-center">
             {quote.status !== 'responded' && onMarkAsResponded && (
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <Button
                 variant="ghost"
                 size="sm"
@@ -359,6 +387,7 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({;
                 Mark Responded
               </Button>
             )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -372,6 +401,8 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({;
               {quote && quote.is_archived ? (;
 =======
             
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <Button
               variant="ghost"
               size="sm"
@@ -475,23 +506,24 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({;
                 Mark Responded;
               </Button>;
             )}
-;
-            <Button;
-              variant="ghost";
-              size="sm";
-              onClick={() => onToggleArchive(quote.id, !quote.is_archived)}
               className="flex items-center gap-1";
             >;
               {quote.is_archived ? (;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <RefreshCw className="h-4 w-4" />;
               ) : (;
                 <ArchiveIcon className="h-4 w-4" />;
               )}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             </Button>;
           </div>;
         </div>;
@@ -565,5 +597,8 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({;
     </Card>);
 }
 "},
+<<<<<<< HEAD
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

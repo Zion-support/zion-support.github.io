@@ -1,15 +1,14 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
-=======
-import React from\';react\' const ContactForm = () => { const [formData,setFormData] = useState({ \"firstName\": \',\"lastName\": \',\"email\": \',\"comp\": \',\"phone\": \',\"service\": \',\"message\": \'}) const [isSubmitting,setIsSubmitting] = useState(false) const [submitStatus,setSubmitStatus] = useState(\'idle\') const handleInputChange = e => { const { name,value } = e.target setFormData(prev => ({ ...prev,[name]: value})) } const handleSubmit = async e => { e.preventDefault() setIsSubmitting(true) setSubmitStatus(\'idle\') try {\''\'';
-const React from";react" const ContactForm = () => { const [formData,setFormData] = useState({ firstName: ",lastName: ",email: ",comp: ",phone: ",service: ",message: "}) const [isSubmitting,setIsSubmitting] = useState(false) const [submitStatus,setSubmitStatus] = useState("idle") const handleInputChange = e => { const { name,value } = e.target setFormData(prev => ({ .prev,[name]: value})) } const handleSubmit = async e => { e.preventDefault() setIsSubmitting(true) setSubmitStatus("idle") try {"""";"""
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4:temp_exclude/src.disabled/components/ContactForm.js.jsx
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import _React from';react' const ContactForm = () => { const [formData,setFormData] = useState({ "firstName": ',"lastName": ',"email": ',"comp": ',"phone": ',"service": ',"message": '}) const [isSubmitting,setIsSubmitting] = useState(false) const [submitStatus,setSubmitStatus] = useState('idle') const handleInputChange = e => { const { name,value } = e.target setFormData(prev => ({ ...prev,[name]: value})) } const handleSubmit = async e => { e.preventDefault() setIsSubmitting(true) setSubmitStatus('idle') try {'''';
+<<<<<<< HEAD
 =======
 =======
 =======
@@ -24,12 +23,17 @@ const React from";react" const ContactForm = () => { const [formData,setFormData
 :temp_exclude/src.disabled/components/ContactForm.js.jsx
 import _React from';react' const ContactForm = () => { const [formData,setFormData] = useState({ "firstName": ',"lastName": ',"email": ',"comp": ',"phone": ',"service": ',"message": '}) const [isSubmitting,setIsSubmitting] = useState(false) const [submitStatus,setSubmitStatus] = useState('idle') const handleInputChange = e => { const { name,value } = e.target setFormData(prev => ({ ...prev,[name]: value})) } const handleSubmit = async e => { e.preventDefault() setIsSubmitting(true) setSubmitStatus('idle') try {'''';
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from\';react\' const ContactForm = () => { const [formData,setFormData] = useState({ \"firstName\": \',\"lastName\": \',\"email\": \',\"comp\": \',\"phone\": \',\"service\": \',\"message\": \'}) const [isSubmitting,setIsSubmitting] = useState(false) const [submitStatus,setSubmitStatus] = useState(\'idle\') const handleInputChange = e => { const { name,value } = e && e.target setFormData(prev => ({ ...prev,[name]: value})) } const handleSubmit = async e => { e && e.preventDefault() setIsSubmitting(true) setSubmitStatus(\'idle\') try {\''\'';
 const React from";react" const ContactForm = () => { const [formData,setFormData] = useState({ firstName: ",lastName: ",email: ",comp: ",phone: ",service: ",message: "}) const [isSubmitting,setIsSubmitting] = useState(false) const [submitStatus,setSubmitStatus] = useState("idle") const handleInputChange = e => { const { name,value } = e && e.target setFormData(prev => ({ .prev,[name]: value})) } const handleSubmit = async e => { e && e.preventDefault() setIsSubmitting(true) setSubmitStatus("idle") try {"""";"""
-
 import _React from';react' const ContactForm = () => { const [formData,setFormData] = useState({ "firstName": ',"lastName": ',"email": ',"comp": ',"phone": ',"service": ',"message": '}) const [isSubmitting,setIsSubmitting] = useState(false) const [submitStatus,setSubmitStatus] = useState('idle') const handleInputChange = e => { const { name,value } = e && e.target setFormData(prev => ({ ...prev,[name]: value})) } const handleSubmit = async e => { e && e.preventDefault() setIsSubmitting(true) setSubmitStatus('idle') try {'''';
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 import _React from';react' const ContactForm = () => { const [formData,setFormData] = useState({ "firstName": ',"lastName": ',"email": ',"comp": ',"phone": ',"service": ',"message": '}) const [isSubmitting,setIsSubmitting] = useState(false) const [submitStatus,setSubmitStatus] = useState('idle') const handleInputChange = e => { const { name,value } = e.target setFormData(prev => ({ ...prev,[name]: value})) } const handleSubmit = async e => { e.preventDefault() setIsSubmitting(true) setSubmitStatus('idle') try {'''';
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+import _React from';react' const ContactForm = () => { const [formData,setFormData] = useState({ "firstName": ',"lastName": ',"email": ',"comp": ',"phone": ',"service": ',"message": '}) const [isSubmitting,setIsSubmitting] = useState(false) const [submitStatus,setSubmitStatus] = useState('idle') const handleInputChange = e => { const { name,value } = e && e.target setFormData(prev => ({ ...prev,[name]: value})) } const handleSubmit = async e => { e && e.preventDefault() setIsSubmitting(true) setSubmitStatus('idle') try {'''';
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -15,7 +15,10 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Cloud, Server, Database, Shield, Zap, ArrowRight, CheckCircle } from 'lucide-react';
+<<<<<<< HEAD
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 const features = [
   {
     icon: Cloud,
@@ -158,6 +161,7 @@ export default function CloudDevOpsPage() {;
         </section>;
       </div>;
     </Layout>;
+<<<<<<< HEAD
     title: 'Infrastructure as Code',
     description: 'Automated infrastructure provisioning and management'
     description: 'Seamless migration to cloud platforms with minimal downtime and maximum efficiency.',
@@ -165,6 +169,8 @@ export default function CloudDevOpsPage() {;
     description: 'Seamless migration to cloud platforms with minimal downtime and maximum efficiency.',
     benefits: ['Zero-downtime migration', 'Cost optimization', 'Performance improvement', 'Scalability']
   },
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   {
     icon: GitBranch,
     title: 'CI/CD Pipelines',
@@ -195,6 +201,7 @@ const benefits = [
   'Faster time-to-market for applications'
 ];
 export default function CloudDevOpsServices() {
+<<<<<<< HEAD
 
 const tools = [
   { name: 'AWS', description: 'Amazon Web Services cloud platform' },
@@ -208,16 +215,22 @@ const tools = [
 ];
 
 export default function CloudDevOpsPage() {
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <Layout
       title="Cloud & DevOps Services - Zion Tech Group"
       description="Comprehensive cloud migration and DevOps services. Transform your infrastructure with modern cloud technologies and automated processes."
+<<<<<<< HEAD
       keywords="cloud services, DevOps, cloud migration, infrastructure as code, CI/CD, cloud optimization"
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     >
       <div className="min-h-screen bg-white">
       keywords="cloud services, DevOps, cloud migration, infrastructure as code, CI/CD, cloud optimization">;
       <div className="min-h-screen bg-white">;
         {/* Hero Section */}
+<<<<<<< HEAD
         <section className="bg-gradient-to-r from-blue-600 to-cyan-700 text-white py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
@@ -251,6 +264,8 @@ export default function CloudDevOpsPage() {
                 Comprehensive cloud and DevOps services designed to modernize your infrastructure
                 and accelerate your development processes.
               </p>
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             </div>
             </div>
             </motion.div>
@@ -273,6 +288,7 @@ export default function CloudDevOpsPage() {
           </div>
         </section>
         {/* Benefits Section */}
+<<<<<<< HEAD
         <section className="py-20">;
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">;
@@ -305,6 +321,8 @@ export default function CloudDevOpsPage() {
                 </button>
               </div>
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         {/* Tools Section */}
         <section className="py-16 bg-white">;
           <div className="max-w-7xl mx-auto px-4">;
@@ -394,6 +412,7 @@ export default function CloudDevOpsPage() {
     </Layout>
     </Layout>
     </>
+<<<<<<< HEAD
     </>
 <<<<<<< HEAD
     </Layout>
@@ -405,3 +424,5 @@ export default Cloud-devops;
 =======
 export default Cloud-devops;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

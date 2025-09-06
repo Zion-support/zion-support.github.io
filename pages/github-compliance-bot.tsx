@@ -1,13 +1,17 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           </div>
         </div>
       </div>
     </Layout>
   )
+<<<<<<< HEAD
 
 }
 
@@ -102,10 +106,17 @@ export default function GitHubComplianceBotPage(req, res) {
     </Layout>;
   );
   } catch (error) {
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 ;
 ;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+;
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

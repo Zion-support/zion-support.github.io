@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 import Image from 'next/image';
@@ -44,23 +45,38 @@ interface ProjectCardProps {
   project: PortfolioProject;
   onEdit: (project: PortfolioProject) => void;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   onDelete: (projectId: string) => void; import Image from 'next/image'
 interface ProjectCardProps {
   project: PortfolioProject
   onEdit: (project: PortfolioProject,) => void
   onDelete: (projectId: string,) => void
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 
 }
 
+<<<<<<< HEAD
 =======
   const [deleteDialogOpen, setDeleteDialogOpen] = useState(false);
   const handleDelete = null;
+=======
+export function ProjectCard(): any ({ project, onEdit, onDelete }: ProjectCardProps) {;
+
+}
+
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ;
 export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {;
   const [deleteDialogOpen, setDeleteDialogOpen] = useState(false);
   const handleDelete = () => {;
+<<<<<<< HEAD
     if (project.id) {;
       onDelete(project.id);
     }
@@ -93,6 +109,8 @@ export function ProjectCard(): any ({ project, onEdit, onDelete }: ProjectCardPr
   };
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <Card className='h-full flex flex-col'>;
       <div className='relative h-48 overflow-hidden rounded-t-lg bg-muted'>        {project && project.image_url ? (;
@@ -108,6 +126,7 @@ export function ProjectCard(): any ({ project, onEdit, onDelete }: ProjectCardPr
             alt={project && project.title}
             className='object-cover'
             loading='lazy'
+<<<<<<< HEAD
         ) : (
           <div className='w-full h-full flex items-center justify-center bg-muted'>;
             <FileText className='h-12 w-12 text-muted-foreground/50' />;
@@ -200,6 +219,8 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
   const [deleteDialogOpen, setDeleteDialogOpen] = useState(false);
   const handleDelete = null;
   const [deleteDialogOpen, setDeleteDialogOpen] = useState(false)
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const handleDelete = () => {
     if (project.id) {
       onDelete(project.id)
@@ -209,14 +230,30 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
 
 
 
-  return (
+;
+export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {;
+  const [deleteDialogOpen, setDeleteDialogOpen] = useState(false);
+  const handleDelete = () => {;
+    if (project.id) {;
+      onDelete(project.id);
+    }
+    setDeleteDialogOpen(false)
+  },
   
+    if (project.id) {;
+      onDelete(project.id);
+    }
+    setDeleteDialogOpen(false)
+  },
+  
+  return (
     <Card className="h-full flex flex-col">
       <div className="relative h-48 overflow-hidden rounded-t-lg bg-muted">
         {project.image_url ? (
           <Image
             src={project.image_url}
             alt={project.title}
+<<<<<<< HEAD
             className='object-cover'
             loading='lazy'    <Card className="h-full flex flex-col">
       <div className="relative h-48 overflow-hidden rounded-t-lg bg-muted">
@@ -229,29 +266,19 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
             className="object-cover"
             loading="lazy"
           />
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         ) : (
           <div className="w-full h-full flex items-center justify-center bg-muted">
             <FileText className="h-12 w-12 text-muted-foreground/50" />
           </div>
         )}
       </div>
-      <CardContent className='flex-grow pt-6'>
-        <div className='space-y-2'>
-          <h3 className='font-semibold text-lg'>{project.title}</h3>
-            <p className="text-sm text-muted-foreground line-clamp-3">{project.description}</p>
-          )}
-      <CardContent className='flex-grow pt-6'>
-        <div className='space-y-2'>
-          <h3 className='font-semibold text-lg'>{project.title}</h3>
-      
-      <CardContent className="flex-grow pt-6">
-        <div className="space-y-2">
-          <h3 className="font-semibold text-lg">{project.title}</h3>
-          
           {project.description && (
             <p className="text-sm text-muted-foreground line-clamp-3">{project.description}</p>
           )}
-          {project.technologies && project.technologies.length > 0 && (
             <div className='flex flex-wrap gap-1 mt-2'>
               {project.technologies.map((tech, index) => (
                 <Badge key={index} variant='secondary' className='text-xs'>                  {tech}                <Badge key={index} variant="secondary" className="text-xs">
@@ -262,6 +289,7 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
           </div>
         )}
       </div>
+<<<<<<< HEAD
 
       </div>;
 
@@ -315,6 +343,8 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
             <div className="flex flex-wrap gap-1 mt-2">
               {project.technologies.map((tech, index) => (
                 <Badge key={index} variant="secondary" className="text-xs">
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   {tech}
                 </Badge>;
               ))}
@@ -322,13 +352,17 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
           )}
         </div>
       </CardContent>
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       
       <CardFooter className="flex justify-between border-t bg-muted/40 p-4">
         <div className="flex gap-2">
           {project.github_url && (
             <a
               href={project.github_url}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
               rel="noopener noreferrer"
@@ -349,12 +383,15 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
             </a>;
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
               target="_blank"
               rel="noopener noreferrer"
               aria-label="GitHub"
               title="GitHub"
             >
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
               <Button variant='ghost' size='icon' aria-label='GitHub link'>
@@ -397,11 +434,14 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
               title="Live demo"
             >
               <Button variant="ghost" size="icon" aria-label="Live demo link">
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <Link className="h-4 w-4" />
               </Button>
             </Link>
           )}
         </div>
+<<<<<<< HEAD
         <div className='flex gap-2'>
           <Button
             variant='ghost'
@@ -432,10 +472,16 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
         </div>
       </CardFooter>
       
+=======
+
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <AlertDialog open={deleteDialogOpen} onOpenChange={setDeleteDialogOpen}>
           <AlertDialogHeader>
             <AlertDialogTitle>Delete Project</AlertDialogTitle>
             <AlertDialogDescription>
+<<<<<<< HEAD
               Are you sure you want to delete this project? This action cannot
               be undone.            </AlertDialogDescription>
           </AlertDialogHeader>
@@ -522,15 +568,16 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
           <AlertDialogHeader>;
             <AlertDialogTitle > Delete Project</AlertDialogTitle>;
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <AlertDialogDescription>;
               Are you sure you want to delete this project? This action cannot;
               be undone.            </AlertDialogDescription>;
           </AlertDialogHeader>;
           <AlertDialogFooter>;
-
-
             <AlertDialogAction
               onClick={handleDelete}
+<<<<<<< HEAD
               className='bg-destructive text-destructive-foreground'>              Delete              Are you sure you want to delete this project? This action cannot be undone.;
             </AlertDialogDescription>;
           </AlertDialogHeader>;
@@ -545,15 +592,22 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
               className='bg-destructive text-destructive-foreground'
             >              Delete              Are you sure you want to delete this project? This action cannot be undone.
               Are you sure you want to delete this project? This action cannot be undone.
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             </AlertDialogDescription>
           </AlertDialogHeader>
           <AlertDialogFooter>
             <AlertDialogCancel>Cancel</AlertDialogCancel>
+<<<<<<< HEAD
             <AlertDialogAction
               onClick={handleDelete}
               className='bg-destructive text-destructive-foreground'
             >            <AlertDialogAction onClick={handleDelete} className="bg-destructive text-destructive-foreground">
             <AlertDialogAction onClick={handleDelete} className="bg-destructive text-destructive-foreground">
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               Delete
             </AlertDialogAction>
           </AlertDialogFooter>
@@ -564,6 +618,7 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
           </AlertDialogFooter>;
         </AlertDialogContent>;
       </AlertDialog>;
+<<<<<<< HEAD
 
 
   );
@@ -573,10 +628,13 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
 }
       </AlertDialog>;
     </Card>;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   );
 };
 }
 }
+<<<<<<< HEAD
       </AlertDialog>
     </Card>
   )
@@ -586,3 +644,5 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
     </Card>);
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 }
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

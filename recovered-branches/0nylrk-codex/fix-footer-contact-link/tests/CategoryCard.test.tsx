@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import {render, screen} from '@testing-library/react',;
 import {MemoryRouter} from 'react-router-dom',;
@@ -49,13 +50,18 @@ import {MemoryRouter} from 'react-router-dom';
 import {CategoryCard} from '@/components/CategoryCard';
 >>>>>>> main
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+import {render, screen} from '@testing-library/react';
+import {MemoryRouter} from 'react-router-dom';
+import {CategoryCard} from '@/components/CategoryCard';
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 it('renders category card with link to slug', () => {
   render(
     <MemoryRouter>
       <CategoryCard title="Test Category" description="desc" icon="*" />
     </MemoryRouter>
-<<<<<<< HEAD
   ),
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
@@ -113,6 +119,8 @@ it ('treats underscores as spaces in slug', () => {
   const link = screen.getByRole ('link', { name: /ai_tools / i });
   expect (link).toHaveAttribute ('href / category / ai - tools');
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 it('renders category card with link to slug', () => {;
   render(;
@@ -120,6 +128,7 @@ it('renders category card with link to slug', () => {;
       <CategoryCard title='Test Category' description='desc' icon='*' />;
     </MemoryRouter>;
   ),;
+<<<<<<< HEAD
 
 
 import {render, screen} from '@testing - library / react';
@@ -245,6 +254,8 @@ it ('treats underscores as spaces in slug', () => {
 }),
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   );
   const link = screen.getByRole('link', { name: /test category/i });
   expect(link).toHaveAttribute('href/category/test-category');
@@ -261,5 +272,8 @@ it('treats underscores as spaces in slug', () => {
       <CategoryCard title='AI_Tools' description='desc' icon='*' />
   const link = screen.getByRole('link', { name: /ai_tools/i });
   expect(link).toHaveAttribute('href/category/ai-tools');
+<<<<<<< HEAD
 >>>>>>> main
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

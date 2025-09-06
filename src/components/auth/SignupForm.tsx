@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { useForm  } from 'react-hook-form';
 import { zodResolver  } from '@hookform/resolvers/zod';
@@ -446,6 +447,9 @@ export default function SignupForm({ onSuccess, onError }: SignupFormProps) {;
 =======
                 passwordStrength.strength >= 4 ? 'text-green-600' :
 passwordStrength.strength >= 4 ? 'text-green-600' :
+=======
+                passwordStrength.strength >= 4 ? 'text-green-600' :
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 passwordStrength.strength >= 3 ? 'text-blue-600' :
                 passwordStrength.strength >= 2 ? 'text-yellow-600' : 'text-red-600'
               )}>
@@ -461,19 +465,19 @@ passwordStrength.strength >= 4 ? 'text-green-600' :
             <div className="text-xs text-gray-600 space-y-1">
               <div className="grid grid-cols-2 gap-1">
                 <span className={watchedFields.password?.length >= 8 ? 'text-green-600' : 'text-gray-400'}>
-                  ✓ 8+ characters
+                   8+ characters
                 </span>
                 <span className={/[A-Z]/.test(watchedFields.password || '') ? 'text-green-600' : 'text-gray-400'}>
-                  ✓ Uppercase letter
+                   Uppercase letter
                 </span>
                 <span className={/[a-z]/.test(watchedFields.password || '') ? 'text-green-600' : 'text-gray-400'}>
-                  ✓ Lowercase letter
+                   Lowercase letter
                 </span>
                 <span className={/[0-9]/.test(watchedFields.password || '') ? 'text-green-600' : 'text-gray-400'}>
-                  ✓ Number
+                   Number
                 </span>
                 <span className={/[^A-Za-z0-9]/.test(watchedFields.password || '') ? 'text-green-600' : 'text-gray-400'}>
-                  ✓ Special character
+                   Special character
                 </span>
               </div>
             </div>
@@ -527,6 +531,7 @@ type SignupFormData = z && z.infer<typeof signupSchema>;
               <span className={cn('font-medium', passwordStrength && passwordStrength.strength >= 4 ? 'text-green-600' :}
 }
 
+<<<<<<< HEAD
       </div>
 
 
@@ -545,6 +550,8 @@ type SignupFormData = z.infer<typeof signupSchema>
 
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   path: ["confirm_password"]}),
 type SignupFormData = z.infer < typeof signup_schema>;
         setFieldStates (prev => ({
@@ -558,6 +565,7 @@ type SignupFormData = z.infer < typeof signup_schema>;
     const is_touched = touched_fields[field_name as keyof SignupFormData];
       return <AlertCircle className="h - 4 w - 4 text - red - 500" />;
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
     return null;
   }
@@ -577,6 +585,8 @@ type SignupFormData = z.infer < typeof signup_schema>;
 ;
 
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     return null
   }
   const getFieldClasses = (fieldName: string) => {
@@ -659,5 +669,8 @@ type SignupFormData = z.infer < typeof signup_schema>;
     </form>;
   );
 }
+<<<<<<< HEAD
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

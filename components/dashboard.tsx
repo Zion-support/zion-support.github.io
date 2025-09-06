@@ -1,14 +1,7 @@
-
-
-import {useEffect, useMemo, useState} from 'react';
-
-
-
 export default function Dashboard() {
 
   const params =
     typeof window !== 'undefined'
-      ? new URLSearchParams(window.location.search)
       : new URLSearchParams();
   const tenantId = params.get('tenantId') |'';
   const [branding, setBranding] = useState<{
@@ -17,6 +10,7 @@ export default function Dashboard() {
     logoUrl?: string;
   } | null>(null);  const params = typeof window !== 'undefined' ? new URLSearchParams(window.location.search) : new URLSearchParams();
   const tenantId = params.get('tenantId') |'';
+<<<<<<< HEAD
 import {useEffect, useMemo, useState} from 'react';
 import { useEffect, useMemo, useState } from 'react';
 
@@ -30,6 +24,8 @@ export default function Dashboard() {
   const tenantId = params.get('tenantId') || '';
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export default function Dashboard() {;
   const params =;
     typeof window !== 'undefined';
@@ -45,6 +41,7 @@ export default function Dashboard() {;
   const tenantId = params && params.get('tenantId') || '';
   const [branding, setBranding] = useState<{ name: string, primaryColor?: string, logoUrl?: string } | null>(null);
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -56,6 +53,8 @@ export default function Dashboard() {;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         setBranding({ name: 'Zion Hire AI' });
       }
     }
@@ -64,6 +63,7 @@ export default function Dashboard() {;
       }
     }
     fetchBranding();
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -112,10 +112,13 @@ export default function Dashboard() {
 <<<<<<< HEAD
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   }, [tenantId]);
   const accent = branding?.primaryColor |'#111827';
 
   return (
+<<<<<<< HEAD
 
 
 =======
@@ -136,6 +139,13 @@ export default function Dashboard() {
               placeholder='Company Name'
               defaultValue={branding?.name || ''}
             />;
+=======
+    <div className='min-h-screen bg-gray-50'>;
+      <header className='px-6 py-4 bg-white border-b flex items-center gap-3'>;
+        {branding?.logoUrl && (;
+          <img src={branding && branding.logoUrl} alt='logo' className='h-8 w-8 rounded' />;
+        )}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <input
               className='border rounded px-3 py-2'
               placeholder='Primary Color (hex)'
@@ -221,11 +231,15 @@ function fetch_branding() {
               type='button';
               className='bg - gray - 900 text - white rounded px - 3 py - 2 md:col - span - 2';
             >;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               Save;
             </button>;
           </form>;
         </section>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -377,12 +391,15 @@ function fetch_branding() {
               <div className='text-gray-500'>0</div>
             </div>          </div>        <section className="col-span-1 md:col-span-3 bg-white border rounded p-4">
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <h2 className="font-semibold mb-3">Candidate Flow</h2>
           <div className="grid grid-cols-1 md:grid-cols-4 gap-4 text-sm">
             <div className="border rounded p-3"><div className="font-medium">Applied</div><div className="text-gray-500">0</div></div>
             <div className="border rounded p-3"><div className="font-medium">Screen</div><div className="text-gray-500">0</div></div>
             <div className="border rounded p-3"><div className="font-medium">Interview</div><div className="text-gray-500">0</div></div>
             <div className="border rounded p-3"><div className="font-medium">Offer</div><div className="text-gray-500">0</div></div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -412,10 +429,13 @@ function fetch_branding() {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               Generate JD with AI;
             </button>;
           </form>;
         </section>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -427,6 +447,8 @@ function fetch_branding() {
   );
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
         <section className='col-span-1 md:col-span-3 bg-white border rounded p-4'>;
           <h2 className='font-semibold mb-3'>Candidate Flow</h2>;
@@ -463,13 +485,17 @@ function fetch_branding() {
 </header> </form> </section> <section className="bg-white border rounded p-4" > <h2 className="font-semibold mb-3" >Post a Job</h2> <form className="space-y-2" > <input className="border rounded px-3 py-2 w-full" placeholder="Title" /> <input className="border rounded px-3 py-2 w-full" placeholder="Location" /> <input className="border rounded px-3 py-2 w-full" placeholder="Level" /> <button type="button" className="bg-gray-900 text-white rounded px-3 py-2 w-full" >Generate JD with AI</button> </form> </section> <section className="col-span-1 md:col-span-3 bg-white border rounded p-4" > <h2 className="font-semibold mb-3" >Candidate Flow</h2> <div className="grid grid-cols-1 md:grid-cols-4 gap-4 text-sm" > <div className="border rounded p-3" ><div className="font-medium" >Applied</div><div className="text-gray-500" >0</div></div> <div className="border rounded p-3" ><div className="font-medium" >Screen</div><div className="text-gray-500" >0</div></div> <div className="border rounded p-3" ><div className="font-medium" >Interview</div><div className="text-gray-500" >0</div></div> <div className="border rounded p-3" ><div className="font-medium" >Offer</div><div className="text-gray-500" >0</div></div> </div> </section> </main> </div>) }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           </div>
         </section>
       </main>
     </div>
+<<<<<<< HEAD
   );
 }
 
@@ -516,9 +542,14 @@ function fetch_branding() {
 }, [tenantId]);
 </header> </form> </section> <section className="bg-white border rounded p-4" > <h2 className="font-semibold mb-3" >Post a Job</h2> <form className="space-y-2" > <input className="border rounded px-3 py-2 w-full" placeholder="Title" /> <input className="border rounded px-3 py-2 w-full" placeholder="Location" /> <input className="border rounded px-3 py-2 w-full" placeholder="Level" /> <button type="button" className="bg-gray-900 text-white rounded px-3 py-2 w-full" >Generate JD with AI</button> </form> </section> <section className="col-span-1 md:col-span-3 bg-white border rounded p-4" > <h2 className="font-semibold mb-3" >Candidate Flow</h2> <div className="grid grid-cols-1 md:grid-cols-4 gap-4 text-sm" > <div className="border rounded p-3" ><div className="font-medium" >Applied</div><div className="text-gray-500" >0</div></div> <div className="border rounded p-3" ><div className="font-medium" >Screen</div><div className="text-gray-500" >0</div></div> <div className="border rounded p-3" ><div className="font-medium" >Interview</div><div className="text-gray-500" >0</div></div> <div className="border rounded p-3" ><div className="font-medium" >Offer</div><div className="text-gray-500" >0</div></div> </div> </section> </main> </div>) }
   );
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   );
 
 }fetchBranding () 
 }, [tenantId]);
 </header> </form> </section> <section className="bg-white border rounded p-4" > <h2 className="font-semibold mb-3" >Post a Job</h2> <form className="space-y-2" > <input className="border rounded px-3 py-2 w-full" placeholder="Title" /> <input className="border rounded px-3 py-2 w-full" placeholder="Location" /> <input className="border rounded px-3 py-2 w-full" placeholder="Level" /> <button type="button" className="bg-gray-900 text-white rounded px-3 py-2 w-full" >Generate JD with AI</button> </form> </section> <section className="col-span-1 md:col-span-3 bg-white border rounded p-4" > <h2 className="font-semibold mb-3" >Candidate Flow</h2> <div className="grid grid-cols-1 md:grid-cols-4 gap-4 text-sm" > <div className="border rounded p-3" ><div className="font-medium" >Applied</div><div className="text-gray-500" >0</div></div> <div className="border rounded p-3" ><div className="font-medium" >Screen</div><div className="text-gray-500" >0</div></div> <div className="border rounded p-3" ><div className="font-medium" >Interview</div><div className="text-gray-500" >0</div></div> <div className="border rounded p-3" ><div className="font-medium" >Offer</div><div className="text-gray-500" >0</div></div> </div> </section> </main> </div>) }
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

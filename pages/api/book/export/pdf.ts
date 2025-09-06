@@ -1,7 +1,10 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import type { NextApiRequest, NextApiResponse } from 'next';
 import puppeteer from 'puppeteer';
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 import type { NextApiRequest, NextApiResponse } from 'next',;
 import puppeteer from 'puppeteer',;
@@ -23,6 +26,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     headless: true
     args: ['--no-sandbox--disable-setuid-sandbox']})
   try {
+<<<<<<< HEAD
   if (req.method !== '$1') {
     res.status(405).json({ error: 'Method not allowed' });
     return;
@@ -35,6 +39,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     args: ['--no-sandbox--disable-setuid-sandbox']});
 
   try {
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     const page = await browser.newPage();
     await page.setContent(html, { waitUntil: 'networkidle0' });
     const pdfBuffer = await page.pdf({ format: pageSize === 'A4' ? 'A4' : 'Letter', printBackground: true });
@@ -43,6 +49,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     res.setHeader('Content-Typeapplication/pdf');
     res.setHeader('Content-Dispositionattachment, filename="zion-os-book.pdf"');
 
+<<<<<<< HEAD
     res.status(200).send(pdfBuffer);
   } catch (error) {
     try { await browser.close() } catch {  } catch (error) {
@@ -122,6 +129,8 @@ if ( {) {
   } catch (e: any) {
     try { await browser.close() } catch {}
     res.status(500).json({ error: e?.message |'Failed to render PDF' })
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import type { NextApiRequest, NextApiResponse } from 'next';
 import puppeteer from 'puppeteer';
 export const config = {;
@@ -138,7 +147,10 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ;
   const { html, pageSize } = req.body as { html: string, pageSize?: 'A4' | 'LETTER' },;
   if (!html) {;
@@ -169,14 +181,19 @@ export default async function handler(req, res) {
 ;
   const browser = await puppeteer.launch({;
     headless: true;
+
+
     args: ['--no-sandbox--disable-setuid-sandbox']});
+
   try {
     const page = await browser.newPage();
     await page.setContent(html, { waitUntil: 'networkidle0' });
     const pdfBuffer = await page.pdf({ format: pageSize === 'A4' ? 'A4' : 'Letter', printBackground: true });
-    await browser.close(),;
+    await browser.close();
+
     res.setHeader('Content-Typeapplication/pdf');
     res.setHeader('Content-Dispositionattachment, filename="zion-os-book.pdf"');
+
     res.status(200).send(pdfBuffer);
   } catch (error) {
     try { await browser.close() } catch {  } catch (error) {
@@ -194,6 +211,13 @@ export default async function handler(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+  }
 }
+<<<<<<< HEAD
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

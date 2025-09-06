@@ -1,7 +1,31 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import React from 'react';
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+import { useRouter  } from 'next/router';
+import { useCurrentUser } from '../../hooks/useCurrentUser';
+export default function ComposePage() {
+
+  const router = useRouter();
+  const {
+    type
+    recipientId
+    recipientName
+    jobId
+    jobTitle
+    talentId
+    talentName
+  } = router.query as Record<string, string>;  const { user, loading } = useCurrentUser();
+import {useRouter} from 'next/router';
+import {useCurrentUser} from '../../hooks/useCurrentUser';
+export default function ComposePage() {;
+import { useRouter } from 'next/router';
+import { useCurrentUser } from '../../hooks/useCurrentUser';
+export default function ComposePage(req, res) {
+  try {
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
   const router = useRouter();
@@ -12,6 +36,7 @@ import React from 'react';
   const [linkUrl, setLinkUrl] = React.useState('');
   const [file, setFile] = React.useState<File | null>(null);
   const [sending, setSending] = React.useState(false);
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -40,6 +65,8 @@ export default function ComposePage() {;
   React && React.useEffect(() => {;
     if (!loading && !user) router && router.replace('/auth');  }, [loading, user, router]);
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   if (!user) return null;
 
   const headerTitle =;
@@ -54,6 +81,7 @@ export default function ComposePage() {;
       ? { type: 'invite', jobId, jobTitle, talentId, talentName }
       : type === 'apply';
         ? { type: 'application', jobId, jobTitle }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -112,13 +140,28 @@ const onSend = async () => {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+    if (!recipientId && !talentId) return alert('Missing recipient');
+    if (!message && message.trim() && !file && !linkUrl) return;
+    setSending(true);
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     let attachmentBase64: string | undefined,
     if (file) {
       const buff = await file.arrayBuffer();
       const base64 = Buffer.from(buff).toString('base64');
       const mime = file.type || 'application/octet-stream';
+      attachmentBase64 = `data:${mime};base64,${base64}`;    }
+      attachmentBase64 = `data:${mime},base64,${base64}`;
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+      const mime = file.type || 'application/octet-stream';
       attachmentBase64 = `data:${mime},base64,${base64}`
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -132,10 +175,14 @@ const onSend = async () => {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     const res = await fetch('/api/messages/compose', {
       method: 'POST'
       headers: { 'Content-Type': 'application/json' }
       body: JSON.stringify({
+<<<<<<< HEAD
 
 
     let attachmentBase64: string | undefined;    if (file) {;
@@ -246,6 +293,8 @@ const onSend = async () => {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         recipientId: recipientId || talentId,
         body: message,
         linkUrl: linkUrl || undefined,
@@ -264,6 +313,7 @@ const onSend = async () => {
           <div className="p-4 border-b">
             <h1 className="text-xl font-semibold">{headerTitle}</h1>
             <p className="text-sm text-gray-500">
+<<<<<<< HEAD
 
               {type === 'invite' && jobTitle ? `Hi ${talentName || recipientName || ''}, I’d like to invite you to discuss a project: ${jobTitle}` : null  } catch (error) {
     console.error("Error:", error);
@@ -317,6 +367,8 @@ const onSend = async () => {
 className="w-full border rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-indigo-500"
               placeholder={type === 'invite' && jobTitle ? `Hi ${talentName || recipientName || ''}, I’d like to invite you to discuss a project: ${jobTitle}` : 'Write your message...'}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             />
             <input type="url" value={linkUrl} onChange={(e) => setLinkUrl(e.target.value)} placeholder="Optional proposal or portfolio link" className="border rounded-lg p-2 w-full" />
             <input type="file" onChange={(e) => setFile(e.target.files?.[0] || null)} className="text-sm" />
@@ -328,6 +380,10 @@ className="w-full border rounded-lg p-2 focus:outline-none focus:ring-2 focus:ri
       </div>
     </div>
 
+}
+  )
+}
+
 
 
 }
@@ -336,9 +392,13 @@ className="w-full border rounded-lg p-2 focus:outline-none focus:ring-2 focus:ri
   )
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {use_router} from 'next / router';
 import {useCurrentUser} from '../../hooks / useCurrentUser';
 export default /**
@@ -374,6 +434,7 @@ if (return null) {
       ? `Invite ${recipient_name || talent_name || 'Talent'}`;
       : type === 'apply';
         ? `Apply to ${job_title || 'Job'}`;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 import { useRouter  } from 'next/router';
@@ -413,6 +474,8 @@ export default function ComposePage(req, res) {
       : type === 'apply'
         ? `Apply to ${jobTitle |'Job'}`
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         : 'New Message';
   const context =;
     type === 'invite';
@@ -420,6 +483,7 @@ export default function ComposePage(req, res) {
       : type === 'apply';
         ? { type: 'application', job_id, job_title }
         : { type: 'general' }
+<<<<<<< HEAD
 <<<<<<< HEAD
   const on_send = async () => {
     if (return alert ('Missing recipient')) {
@@ -472,16 +536,21 @@ if ( {) {
     : { type: 'general' },;
   const onSend = async () => {;
     if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     setSending(true);
     let attachmentBase64: string | undefined;
     if (file) {;
       const buff = await file.arrayBuffer();
       const base64 = Buffer.from(buff).toString('base64');
+<<<<<<< HEAD
       const mime = file.type |'application/octet-stream';
       attachmentBase64 = `data:${mime};base64,${base64}`;    }
       const mime = file.type || 'application/octet-stream';
       const mime = file.type || 'application/octet-stream';
       attachmentBase64 = `data:${mime};base64,${base64}`;    }
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       attachmentBase64 = `data:${mime},base64,${base64}`;
       } catch (error) {
     console.error("Error:", error);
@@ -492,6 +561,7 @@ if ( {) {
       method: 'POST'
       headers: { 'Content-Type': 'application/json' }
       body: JSON.stringify({
+<<<<<<< HEAD
         recipientId: recipientId |talentId
         body: message
         linkUrl: linkUrl |undefined
@@ -500,6 +570,8 @@ if ( {) {
         context
       })
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     });
     const data = await res.json ();
     set_sending (false);
@@ -519,6 +591,7 @@ if ( {) {
               {type === 'invite' && job_title;
                 ? `Hi ${talent_name || recipient_name || ''}, I’d like to invite you to discuss a project: ${job_title}`;
                 : null}
+<<<<<<< HEAD
 <<<<<<< HEAD
               {type === 'apply' && job_title ? `Applying to: ${job_title}` : null}
             </p>;
@@ -559,6 +632,8 @@ if ( {) {
           <div className="p-4 space-y-3">
             <textarea
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               value={message}
               on_change={e => set_message (e.target.value)}
               rows={6}
@@ -567,6 +642,7 @@ if ( {) {
                 type === 'invite' && job_title;
                   ? `Hi ${talent_name || recipient_name || ''}, I’d like to invite you to discuss a project: ${job_title}`;
                   : 'Write your message...';
+<<<<<<< HEAD
               }
 <<<<<<< HEAD
             />;
@@ -658,3 +734,7 @@ if ( {) {
   }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

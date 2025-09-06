@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -24,6 +25,8 @@ function ITServicesPage() {
 export default function ITServicesPage() {return (;
 export default function ITServicesPage() {;
   return (;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-900 text-white">;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       {/* Hero Section */}
@@ -99,6 +102,7 @@ export default function ITServicesPage() {;
                 Learn More About Cloud Infrastructure;
               </a>;
             </div>;
+<<<<<<< HEAD
 
             {/* DevOps & CI / CD */}
             <div className="bg - zinc - 800 rounded - xl p - 8 border border - zinc - 700">;
@@ -124,6 +128,8 @@ export default function ITServicesPage() {;
                 Accelerate your software delivery with automated deployment pipelines;
                 Accelerate your software delivery with automated deployment pipelines,;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 infrastructure as code, and DevOps culture implementation that drives innovation.;
               </p>;
               <div className="space - y-4 mb - 8">;
@@ -162,6 +168,7 @@ export default function ITServicesPage() {;
               </a>;
             </div>;
             {/* Cybersecurity */}
+<<<<<<< HEAD
 
             <div className="bg - zinc - 800 rounded - xl p - 8 border border - zinc - 700">;
               <div className="text - 4xl mb - 6">🛡️</div>;
@@ -185,6 +192,8 @@ export default function ITServicesPage() {;
                 Protect your business with comprehensive cybersecurity solutions including security audits;
                 Protect your business with comprehensive cybersecurity solutions including security audits,;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 penetration testing, compliance frameworks, and incident response planning.;
               </p>;
               <div className="space - y-4 mb - 8">;
@@ -309,6 +318,7 @@ export default function ITServicesPage() {;
               </a>;
             </div>;
             {/* Digital Transformation */}
+<<<<<<< HEAD
 
             <div className="bg - zinc - 800 rounded - xl p - 8 border border - zinc - 700">;
               <div className="text - 4xl mb - 6">🔄</div>;
@@ -332,6 +342,8 @@ export default function ITServicesPage() {;
                 Guide your organization through end-to-end digital transformation with strategic consulting;
                 Guide your organization through end-to-end digital transformation with strategic consulting,;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 legacy system modernization, and change management expertise.;
               </p>;
               <div className="space - y-4 mb - 8">;

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   const bannerLink = isIOS ? appStoreUrl : googlePlayUrl
 import React, { useState, useEffect } from "react"
@@ -8,12 +9,15 @@ import { useIsMobile } from "@/hooks/use-mobile"
 interface SmartAppBannerProps {
   appName?: string
   appIconSrc?: string
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useIsMobile } from "@/hooks/use-mobile";
 interface SmartAppBannerProps {;
   appName?: string;
   appIconSrc?: string;
   appStoreUrl?: string;
   googlePlayUrl?: string;
+<<<<<<< HEAD
   delay?: number; // Delay in milliseconds before showing the banner
 
 import React, { useState, useEffect } from "react",
@@ -69,15 +73,25 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
   const [isVisible, setIsVisible] = useState(false)
   const isMobile = useIsMobile()
   useEffect((,) => {
+=======
+}
+export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
+}
+export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const [isVisible, setIsVisible] = useState(false),
   const isMobile = useIsMobile(),
   
   useEffect(() => {
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     // Only show banner on mobile devices and if it hasn't been dismissed
     if (isMobile && !safeStorage.getItem("smartBannerDismissed")) {
       const timer = setTimeout(() => {
         setIsVisible(true)
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -86,6 +100,8 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
       const timer = setTimeout(() => {
         setIsVisible(true)
       }, delay)
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       return () => clearTimeout(timer)
     }
     return undefined
@@ -97,6 +113,7 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
   const resetBanner = () => {
     safeStorage.removeItem("smartBannerDismissed")
     setIsVisible(true)
+<<<<<<< HEAD
   }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       }, delay),
@@ -116,6 +133,8 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
     setIsVisible(true)
   },
   
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
   // Only render on mobile devices
@@ -130,6 +149,7 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
     ) : null
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
   const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent)
@@ -140,6 +160,9 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
   const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent)
   const bannerLink = isIOS ? appStoreUrl : googlePlayUrl
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   delay?: number; // Delay in milliseconds before showing the banner;
 }
 
@@ -155,10 +178,13 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
   const bannerLink = isIOS ? appStoreUrl : googlePlayUrl,
   
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <div className="fixed top-0 left-0 right-0 bg-zion-blue-dark border-b border-zion-purple/30 p-3 z-50 animate-fade-in">
       <div className="flex items-center">
@@ -170,6 +196,7 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
           )}
         </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
           <h4 className="font-semibold text-white">{appName}</h4>
@@ -178,11 +205,14 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
         
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
         <div className="flex-1">
           <h4 className="font-semibold text-white">{appName}</h4>
           <p className="text-xs text-gray-300">Get our app for the best experience</p>
         </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -196,6 +226,9 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
         
 
         
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <div className="flex items-center gap-3">
           <Link
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -206,8 +239,11 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
             <ArrowRight className="w-3 h-3 ml-1" />
           </Link>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
           
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
           <button onClick={dismissBanner} className="text-gray-300" aria-label="Dismiss">
 =======
@@ -223,9 +259,12 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
     </div>
   )
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 '"
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 '";
 ;
@@ -286,8 +325,6 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({;
   // Detect iOS or Android;
   const isIOS = /iPad|iPhone|iPod/.test(navigator && navigator.userAgent);
   const bannerLink = isIOS ? appStoreUrl : googlePlayUrl;
-
-  return (
     <div className="fixed top-0 left-0 right-0 bg-zion-blue-dark border-b border-zion-purple/30 p-3 z-50 animate-fade-in">;
       <div className="flex items-center">;
         <div className="w-12 h-12 bg-zion-cyan/20 rounded-lg mr-3 flex-shrink-0 flex items-center justify-center">;
@@ -296,6 +333,7 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({;
           ) : (;
             <div className="text-zion-cyan font-bold text-lg">Z</div>;
           )}
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -382,6 +420,8 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({;
             <ArrowRight className="w-3 h-3 ml-1" />;
           </Link>;
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <button onClick={dismissBanner} className="text-gray-300" aria-label="Dismiss">;
             <X className="h-5 w-5" />;
           </button>;
@@ -473,7 +513,10 @@ if ( {) {
     </div>);
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 '";
 =======
 '";
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -1,9 +1,12 @@
 // Accessibility configuration;
+<<<<<<< HEAD
 
   "colorContrast": {;
     minimumRatio: 4 && 4.5,
     "enhancedRatio": 7 && 7.0,},
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   // Keyboard navigation;
   "keyboardNavigation": {tabIndex: 0
     "arrowKeys": true
@@ -12,6 +15,7 @@
     "spaceKey": true,}
 }
 // Accessibility utilities;
+<<<<<<< HEAD
 
 export const accessibilityUtils = {;
   // Generate unique IDs for ARIA attributes;
@@ -109,11 +113,14 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export const accessibilityConfig = {ariaLabels: {; navigation: "Main navigation"; footer: "Site footer"; search: "Search"; menu: "Menu"; close: "Close"; open: "Open"; next: "Next"; previous: "Previous"; loading: "Loading"; error: "Error"; success: "Success"; warning: "Warning";,}; focusManagement: {skipToContent: true; focusTrap: 'true'; focusVisible: 'true;';,}; colorContrast: {minimumRatio: 4.5; enhancedRatio: '7.0;';,}; keyboardNavigation: {tabIndex: 0; arrowKeys: 'true'; escapeKey: 'true'; enterKey: 'true'; spaceKey: 'true;';,} } export const accessibilityUtils = {generateId: (prefix = "id") => `${prefix}-${Math.random().toString(36).substr(2,9)}`; isVisible: ({const style = window.getComputedStyle(element)) => $3; return style.display !== "none" && style.visibility !== "hidden" && style.opacity !== "0"}; announce: ({const announcement = document.createElement("div")) => $3; announcement.setAttribute("aria-live","polite"); announcement.setAttribute("aria-atomic","true"); announcement.className = "sr-only"; announcement.textContent = message; document.body.appendChild(announcement); setTimeout(() => {; document.body.removeChild(announcement);,},1000);,} }
 export const accessibilityConfig = {ariaLabels: {; navigation: "Main navigation",footer: "Site footer",search: "Search",menu: "Menu",close: "Close",open: "Open",next: "Next",previous: "Previous",loading: "Loading",error: "Error",success: "Success",warning: "Warning",,},focusManagement: {skipToContent: true,focusTrap: true,focusVisible: true,,},colorContrast: {minimumRatio: 4.5,enhancedRatio: 7.0,,},keyboardNavigation: {tabIndex: 0,arrowKeys: true,escapeKey: true,enterKey: true,spaceKey: true,,} } export const accessibilityUtils = {generateId: (prefix = "id") => `${prefix}-${Math.random().toString(36).substr(2,9)}`,isVisible: ({const style = window.getComputedStyle(element)) => $3; return style.display !== "none" && style.visibility !== "hidden" && style.opacity !== "0"},announce: ({const announcement = document.createElement("div")) => $3; announcement.setAttribute("aria-live","polite"); announcement.setAttribute("aria-atomic","true"); announcement.className = "sr-only"; announcement.textContent = message; document.body.appendChild(announcement); setTimeout(() => {; document.body.removeChild(announcement),,},1000),,} }
 export const accessibilityConfig = {ariaLabels: {; navigation: "Main navigation",footer: "Site footer",search: "Search",menu: "Menu",close: "Close",open: "Open",next: "Next",previous: "Previous",loading: "Loading",error: "Error",success: "Success",warning: "Warning",,},focusManagement: {skipToContent: true,focusTrap: true,focusVisible: true,,},colorContrast: {minimumRatio: 4.5,enhancedRatio: 7.0,,},keyboardNavigation: {tabIndex: 0,arrowKeys: true,escapeKey: true,enterKey: true,spaceKey: true,,} } export const accessibilityUtils = {generateId: (prefix = "id") => `${prefix}-${Math.random().toString(36).substr(2,9)}`,isVisible: ({const style = window.getComputedStyle(element)) => $3; return style.display !== "none" && style.visibility !== "hidden" && style.opacity !== "0"},announce: ({const announcement = document.createElement("div")) => $3; announcement.setAttribute("aria-live","polite"); announcement.setAttribute("aria-atomic","true"); announcement.className = "sr-only"; announcement.textContent = message; document.body.appendChild(announcement); setTimeout(() => {; document.body.removeChild(announcement),,},1000),,} }
 export const accessibilityConfig = {ariaLabels: {; navigation: "Main navigation",footer: "Site footer",search: "Search",menu: "Menu",close: "Close",open: "Open",next: "Next",previous: "Previous",loading: "Loading",error: "Error",success: "Success",warning: "Warning",,},focusManagement: {skipToContent: true,focusTrap: true,focusVisible: true,,},colorContrast: {minimumRatio: 4.5,enhancedRatio: 7.0,,},keyboardNavigation: {tabIndex: 0,arrowKeys: true,escapeKey: true,enterKey: true,spaceKey: true,,} } export const accessibilityUtils = {generateId: (prefix = "id") => `${prefix}-${Math.random().toString(36).substr(2,9)}`,isVisible: ({const style = window.getComputedStyle(element)) => $3; return style.display !== "none" && style.visibility !== "hidden" && style.opacity !== "0"},announce: ({const announcement = document.createElement("div")) => $3; announcement.setAttribute("aria-live","polite"); announcement.setAttribute("aria-atomic","true"); announcement.className = "sr-only"; announcement.textContent = message; document.body.appendChild(announcement); setTimeout(() => {; document.body.removeChild(announcement),,},1000),,} }
 export const accessibilityConfig = {ariaLabels: {; navigation: "Main navigation",footer: "Site footer",search: "Search",menu: "Menu",close: "Close",open: "Open",next: "Next",previous: "Previous",loading: "Loading",error: "Error",success: "Success",warning: "Warning",,},focusManagement: {skipToContent: true,focusTrap: true,focusVisible: true,,},colorContrast: {minimumRatio: 4.5,enhancedRatio: 7.0,,},keyboardNavigation: {tabIndex: 0,arrowKeys: true,escapeKey: true,enterKey: true,spaceKey: true,,} } export const accessibilityUtils = {generateId: (prefix = "id") => `${prefix}-${Math.random().toString(36).substr(2,9)}`,isVisible: ({const style = window.getComputedStyle(element)) => $3; return style.display !== "none" && style.visibility !== "hidden" && style.opacity !== "0"},announce: ({const announcement = document.createElement("div")) => $3; announcement.setAttribute("aria-live","polite"); announcement.setAttribute("aria-atomic","true"); announcement.className = "sr-only"; announcement.textContent = message; document.body.appendChild(announcement); setTimeout(() => {; document.body.removeChild(announcement),,},1000),,} }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 export const accessibilityConfig = {; ariaLabels: {; navigation: "Main navigation",; footer: "Site footer",; search: "Search",; menu: "Menu",; close: "Close",; open: "Open",; next: "Next",; previous: "Previous",; loading: "Loading",; error: "Error",; success: "Success",; warning: "Warning";,;,},; ; focusManagement: {; skipToContent: true,; focusTrap: 'true',; focusVisible: 'true;',;,},; ; colorContrast: {; minimumRatio: 4 && 4.5,; enhancedRatio: '7 && 7.0;',;,},; ; keyboardNavigation: {; tabIndex: 0,; arrowKeys: 'true',; escapeKey: 'true',; enterKey: 'true',; spaceKey: 'true;',;,} } export const accessibilityUtils = {; generateId: (prefix = "id") => `${prefix}-${Math && Math.random().toString(36).substr(2,9)}`,; ; isVisible: ({; const style = window && window.getComputedStyle(element)) => $3; return style && style.display !== "none" && style && style.visibility !== "hidden" && style && style.opacity !== "0"},; ; announce: ({; const announcement = document && document.createElement("div")) => $3; announcement && announcement.setAttribute("aria-live","polite"); announcement && announcement.setAttribute("aria-atomic","true"); announcement && announcement.className = "sr-only"; announcement && announcement.textContent = message; document && document.body.appendChild(announcement); setTimeout(() => {; document && document.body.removeChild(announcement);,;,},1000);,;,} }
@@ -193,3 +200,5 @@ export const accessibility_config = { aria_labels: { navigation: "Main navigatio
 
 origin/main
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

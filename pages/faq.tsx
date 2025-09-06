@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 class ErrorBoundary extends React.Component {
@@ -30,6 +31,8 @@ import Link from "next/link";
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export default function FAQ() {
   const contact = {
     phone: "+1 302 464 0950"
@@ -88,10 +91,13 @@ export default function FAQ() {
       answer:
         "Yes, we work with businesses of all sizes, from startups to enterprises. Our micro SaaS products are particularly well-suited for small and medium businesses looking for cost-effective solutions."
     }
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import Head from 'next/head'
 import Link from 'next/link'
 export default function FAQ() {
@@ -153,6 +159,7 @@ export default function FAQ() {
   }
 }
   ]
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -277,13 +284,13 @@ export default function FAQ() {;
 <<<<<<< HEAD
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               Find answers to the most common questions about our services, pricing,
               implementation, and support. Can't find what you're looking for? Contact us directly.
             </p>
           </div>
         </section>
-
-
         <section className="py-16 px-4">
           <div className="max-w-4xl mx-auto">
             <div className="space-y-8">
@@ -300,15 +307,17 @@ export default function FAQ() {;
             </div>
           </div>
         </section>
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         {/* Contact CTA */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
         <section className="py-16 px-4 bg-slate-900/40">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-8">
@@ -320,6 +329,7 @@ export default function FAQ() {;
               business.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -700,6 +710,8 @@ export default function FAQ() {
 
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from 'react';
 import Head from 'next/head';
 import Layout from '../components/Layout';
@@ -723,6 +735,9 @@ export default function FAQPage() {
       </div>
     </Layout>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 
@@ -730,6 +745,7 @@ export default function FAQPage() {
 
   );
 }
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
                 className="px-8 py-3 bg-slate-800 hover:bg-slate-700 border border-white/10 rounded-lg font-semibold transition-colors">;
@@ -777,3 +793,6 @@ origin/automation-improvements-final
   }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

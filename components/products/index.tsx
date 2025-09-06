@@ -1,6 +1,9 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <div className='container mx-auto px-4 py-10'>;
       <h1 className='text-2xl font-semibold'>Products</h1>;
@@ -15,6 +18,7 @@
       <p className="mt-2 text-gray-600 dark: text-gray-300">Browse Zion products.</p>;
     </div>;
   );
+<<<<<<< HEAD
 
 }
 
@@ -22,7 +26,26 @@
 =======
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from 'react';
+
+
+
+export default function ProductsIndexPage() {
+  return (
+    <div className='container mx-auto px-4 py-10'>
+      <h1 className='text-2xl font-semibold'>Products</h1>
+      <p className='mt-2 text-gray-600 dark:text-gray-300'>
+        Browse Zion products.
+      </p>
+    </div>;
+  );export default function ProductsIndexPage() {
+  return (
+    <div className="container mx-auto px-4 py-10">
+      <h1 className="text-2xl font-semibold">Products</h1>
+      <p className="mt-2 text-gray-600 dark: text-gray-300">Browse Zion products.</p>
+
 export default /**
  * ProductsIndexPage - Function description
  */
@@ -43,6 +66,7 @@ function ProductsIndexPage() {
       <p className="mt - 2 text - gray - 600 dark: text - gray - 300">Browse Zion products.</p>;
     </div>);
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -94,3 +118,5 @@ export default function ProductsIndexPage() {
 }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

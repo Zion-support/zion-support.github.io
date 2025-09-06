@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 
@@ -10,6 +11,8 @@ import {CodeBlock} from "@/components/developers/CodeBlock";
 import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
 export function ApiReference() {;
   const [activeEndpoint, setActiveEndpoint] = useState("get-jobs");
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useState } from "react",
 import ApiDocsLayout from "@/components/developers/ApiDocsLayout",
 import { CodeBlock } from "@/components/developers/CodeBlock";
@@ -19,10 +22,14 @@ export function ApiReference() {
 import { CodeBlock } from "@/components/developers/CodeBlock",
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
 
+
 export function ApiReference() {
   const [activeEndpoint, setActiveEndpoint] = useState("get-jobs"),
 
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   // Sample endpoint data
 
   const endpoints = [
@@ -32,6 +39,7 @@ export function ApiReference() {
       path: "/api/jobs"
       description: "Retrieve a list of job postings with optional filtering"
       parameters: [
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -50,12 +58,15 @@ export function ApiReference() {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       responses: {
         "200": {
           description: "A list of jobs"
           example: `{
   "jobs": [
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 class ErrorBoundary extends React.Component {
@@ -110,8 +121,9 @@ export function ApiReference() {;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-      "id": "job-123";
 =======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+      "id": "job-123";
 import React, { useState } from './react';
 import ApiDocsLayout from "@/components / developers / ApiDocsLayout";
 import { CodeBlock } from '@/components / developers / CodeBlock';
@@ -141,12 +153,12 @@ function ApiReference() {
   "jobs": [;
     {
       "id": "job - 123";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       "title": "Senior React Developer";
       "description": "We're looking for an experienced React developer...";
       "category": "development";
       "budget": {;
         "min": 5000;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -167,10 +179,13 @@ function ApiReference() {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         }
         "401": {
           description: "Unauthorized"
           example: `{
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   "error": "invalid_token",
@@ -182,11 +197,14 @@ function ApiReference() {
   "message": "The provided API key is invalid or expired";
 }`;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         }
         "429": {
           description: "Rate limit exceeded"
           example: `{
   "error": "rate_limit_exceeded";
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -259,6 +277,8 @@ function ApiReference() {
           example: `{
   "error": "rate_limit_exceeded";
   "message": "Rate limit exceeded. Please try again in 60 seconds"
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   "retry_after": 60
 }`
         }
@@ -266,6 +286,7 @@ function ApiReference() {
       requestExample: `curl -X GET \\
   https://api.zionai.com/v1/api/jobs?status=open&limit=10 \\
   -H "Authorization: Bearer YOUR_API_KEY"`
+<<<<<<< HEAD
     }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   "error": "rate_limit_exceeded",
@@ -283,12 +304,15 @@ function ApiReference() {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     {
       id: "post-jobs"
       method: "POST"
       path: "/api/jobs"
       description: "Create a new job posting"
       parameters: [
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -337,10 +361,13 @@ function ApiReference() {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       responses: {
         "201": {
           description: "Job created successfully"
           example: `{
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
   "id": "job-456",
@@ -373,6 +400,8 @@ function ApiReference() {
     {
       "field": "title"
       "error": "Title is required"
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     }
   ]
 }`
@@ -411,7 +440,10 @@ export function ApiReference() {;
       "category": "development",;
       "budget": {;
         "min": 5000,;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
         "max": 10000,;
         "currency": "USD";
@@ -426,6 +458,7 @@ export function ApiReference() {;
   "offset": 0;
 }`;
         };
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
         "max": 10000,;
@@ -442,12 +475,17 @@ export function ApiReference() {;
 }`;
         },;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+        "max": 10000,;
+        "currency": "USD";
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         "401": {;
           description: "Unauthorized",;
           example: `{;
   "error": "invalid_token",;
   "message": "The provided API key is invalid or expired";
 }`;
+<<<<<<< HEAD
 <<<<<<< HEAD
         };
         "429": {;
@@ -461,10 +499,13 @@ export function ApiReference() {;
           example: `{;
   "error": "rate_limit_exceeded",;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   "message": "Rate limit exceeded. Please try again in 60 seconds",;
   "retry_after": 60;
 }`;
         }
+<<<<<<< HEAD
 <<<<<<< HEAD
       };
       requestExample: `curl -X GET \\;
@@ -478,6 +519,8 @@ export function ApiReference() {;
   -H "Authorization: Bearer YOUR_API_KEY"`;
     },;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     {;
       id: "post-jobs",;
       method: "POST",;
@@ -488,16 +531,20 @@ export function ApiReference() {;
         { name: "description", type: "string", required: true, description: "Detailed job description" },;
         { name: "category", type: "string", required: true, description: "Job category" },;
 <<<<<<< HEAD
+<<<<<<< HEAD
         { name: "budget", type: "object", required: true, description: "Budget information with min, max, and currency" };
 =======
         { name: "budget", type: "object", required: true, description: "Budget information with min, max, and currency" },;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         { name: "skills", type: "array", description: "Array of required skills" },;
         { name: "deadline", type: "string", description: "Application deadline (ISO date format)" }],;
       responses: {;
         "201": {;
           description: "Job created successfully",;
           example: `{;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   "id": "job-456";
@@ -508,11 +555,16 @@ export function ApiReference() {;
   "id": "job-456";
   "id": "job - 456";
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  "id": "job-456";
+  "id": "job - 456";
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   "title": "UX Designer";
   "description": "Looking for a UX designer with 3+ years experience...";
   "category": "design";
   "budget": {;
     "min": 3000;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -527,6 +579,8 @@ export function ApiReference() {;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         }
         "400": {
           description: "Bad request"
@@ -535,6 +589,7 @@ export function ApiReference() {;
   "message": "Invalid input";
   "details": [;
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -586,6 +641,8 @@ export function ApiReference() {;
       "field": "title",
       "error": "Title is required";
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     }
   ];
 }`;
@@ -617,28 +674,36 @@ export function ApiReference() {;
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
       },
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       requestExample: `curl -X POST \\
   https://api.zionai.com/v1/api/jobs \\
   -H "Authorization: Bearer YOUR_API_KEY" \\
   -H "Content-Type: application/json" \\
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       }
       request_example: `curl -X POST \\;
   https://api.zionai.com / v1 / api / jobs \\;
   -H "Authorization: Bearer YOUR_API_KEY" \\;
   -H "Content - Type: application / json" \\;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   -d '{
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       };
       requestExample: `curl -X POST \\;
   https://api && api.zionai.com/v1/api/jobs \\;
@@ -646,23 +711,31 @@ export function ApiReference() {;
   -H "Content-Type: application/json" \\;
   -d '{;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     "title": "UX Designer";
     "description": "Looking for a UX designer with 3+ years experience...";
     "category": "design";
     "budget": {;
       "min": 3000;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
   -d '{
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     "title": "UX Designer",
     "description": "Looking for a UX designer with 3+ years experience...",
     "category": "design",
     "budget": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -675,6 +748,8 @@ export function ApiReference() {;
   }'`
     }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       "min": 3000,
       "max": 5000,
       "currency": "USD"
@@ -684,16 +759,20 @@ export function ApiReference() {;
   }'`
     },
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     {
       id: "get-talent"
       method: "GET"
       path: "/api/talent"
       description: "Search for talent profiles with optional filtering"
       parameters: [
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -741,10 +820,13 @@ export function ApiReference() {;
         { name: "limit", type: "integer", description: "Number of results per page (default: 20, max: 100)" },
         { name: "offset", type: "integer", description: "Pagination offset (default: 0)" }],
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       responses: {
         "200": {
           description: "A list of talent profiles"
           example: `{
+<<<<<<< HEAD
 <<<<<<< HEAD
   "talent": [;
     {
@@ -781,18 +863,24 @@ export function ApiReference() {;
           example: `{;
   "talent": [;
     {;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       "id": "talent-123";
       "full_name": "Jane Smith";
       "professional_title": "Full Stack Developer",;
       "skills": ["React", "Node && Node.js", "TypeScript"];
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       "hourly_rate": 75;
       "availability": "full - time";
       "years_experience": 5;
       "location": "Remote, US";
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -836,12 +924,19 @@ export function ApiReference() {;
     }
     // More talent profiles...;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+      requestExample: `curl -X GET \\
+  https://api.zionai.com/v1/api/talent?skills=React,Node.js&limit=10 \\
+  -H "Authorization: Bearer YOUR_API_KEY"`
+    }
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   ];
   "count": 38;
   "limit": 20;
   "offset": 0;
 }`;
         }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -1064,6 +1159,9 @@ export function ApiReference() {;
 ;
   return (;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  return (
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <ApiDocsLayout>;
       <div className="grid md:grid-cols-5 gap-8">;
         {/* Endpoint list */}
@@ -1072,6 +1170,9 @@ export function ApiReference() {;
             <h3 className="text-lg font-semibold text-white mb-4">Endpoints</h3>;
             <ul className="space-y-2">;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               {endpoints && endpoints.map((endpoint) => (;
                 <li key={endpoint && endpoint.id}>;
                   <button
@@ -1082,11 +1183,10 @@ export function ApiReference() {;
                         : "text-zinc-400 hover:text-white hover:bg-zinc-900";
                     }`}
                   >;
-                    <span className={`inline-block w-16 font-mono ${endpoint && endpoint.method === "GET" ? "text-green-500" : endpoint && endpoint.method === "POST" ? "text-blue-500" : "text-yellow-500"}`}>;
-                      {endpoint && endpoint.method}
                     </span>;
                     <span className="truncate">{endpoint && endpoint.path}</span>;
                   </button>;
+<<<<<<< HEAD
                 </li>;
               ))}
 
@@ -1248,11 +1348,15 @@ export function ApiReference() {;
                                   <td className="py-2 px-4 text-zinc-300">{param.description}</td>;
                                 </tr>;                              ))}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+                              ))}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                             </tbody>;
                           </table>;
                         </div>;
                       </>;
                     )}
+<<<<<<< HEAD
 
 
 
@@ -1358,6 +1462,8 @@ export function ApiReference() {;
                     <CodeBlock 
                       code={activeEndpointData.requestExample} 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       language="bash"
                       showLineNumbers={true}
                     />
@@ -1372,9 +1478,12 @@ export function ApiReference() {;
                             status.startsWith('2') ? 'bg-green-950 text-green-500' :
                             status === '401' |status === '403' ? 'bg-orange-950 text-orange-500' :
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
                     <h4 className="text-lg font-medium text-white mb-3">Example Request</h4>;
                     <CodeBlock
@@ -1383,21 +1492,16 @@ export function ApiReference() {;
                       showLineNumbers={true}
                     />;
                   </div>;
-
-                  {/* Response section */}
-                  <div>;
-                    <h3 className="text-xl font-semibold text-white mb-4">Responses</h3>;
-
                     {Object && Object.entries(activeEndpointData && activeEndpointData.responses).map(([status, response]) => (;
                       <div key={status} className="mb-6">;
                         <div className="flex items-center mb-3">;
                           <spanclassName={`inline-block px-2 py-1 text-xs font-medium rounded mr-3 ${
                             status && status.startsWith('2') ? 'bg-green-950 text-green-500' : 
                             status === '401' || status === '403' ? 'bg-orange-950 text-orange-500' : 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                             'bg-red-950 text-red-500'
                           }`}>;
                             {status}
+<<<<<<< HEAD
 
                           </span>;
                           <span className="text-white">{response && response.description}</span>;
@@ -1451,10 +1555,19 @@ export function ApiReference() {;
                           code={response.example} ;
                           language="json";
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+                        <CodeBlock 
+                          code={response.example} 
+                            'bg-red-950 text-red-500'
+                          }`}>;
+                            {status}
+                          language="json"
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                           showLineNumbers={true}
                         />;
                       </div>;
                     ))}
+<<<<<<< HEAD
                   </div>;
                 </TabsContent>;
                 <TabsContent value="try">;
@@ -1548,10 +1661,13 @@ export function ApiReference() {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     </div>;
                   </div>;
                 </TabsContent>;
               </Tabs>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -1559,13 +1675,21 @@ export function ApiReference() {;
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ;
 
 
 export default ApiReference;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             </div>) : (
             <div className="p - 8 border border - zinc - 800 rounded - lg text - center">;
               <p className="text - zinc - 400">Select an endpoint from the list to view details</p>;
@@ -1574,6 +1698,7 @@ export default ApiReference;
       </div>;
     </ApiDocsLayout>);
 }
+<<<<<<< HEAD
 export default ApiReference;
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -1678,10 +1803,15 @@ requestExample: `curl -X GET \\ https://api.zionai.com/v1/api/talent?skills=Reac
     </ApiDocsLayout>
   )
 }
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 ;
 export default ApiReference;
 
 ;
 export default ApiReference;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     const filtered = flags.filter(f =>
 
@@ -19,15 +20,24 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const flags = await readAllFlags(),
     const filtered = flags.filter(f =>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+    const filtered = flags.filter(f =>
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       (!status || f.status === status) &&
       (!reason || f.reason.toLowerCase().includes(reason.toLowerCase())) &&
       (!userEmail || f.userEmail.toLowerCase().includes(userEmail.toLowerCase())) &&
       (!contentType || f.contentType === contentType)
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     );
     return res.status(200).json({ flags: filtered });
   }
 
+<<<<<<< HEAD
 
   }
   if (req.method === 'POST') {
@@ -45,6 +55,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       return res.status(201).json({ flag })
     } catch (e: any) {
       return res.status(400).json({ error: e.message || 'Invalid payload' })
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { ensureAdmin, parseUserFromRequest } from '../../../../../utils/auth';
 import { createFlag, readAllFlags } from '../../../../../utils/moderationDb';
@@ -56,22 +68,21 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const { status, reason, userEmail, contentType } = req.query as Record<string, string | undefined>
     const flags = await readAllFlags()
     const filtered = flags.filter(f =>
-      (!status || f.status === status) &&
-      (!reason || f.reason.toLowerCase().includes(reason.toLowerCase())) &&
-      (!userEmail || f.userEmail.toLowerCase().includes(userEmail.toLowerCase())) &&
-      (!contentType || f.contentType === contentType)
-    );
-    return res.status(200).json({ flags: filtered });
-  }
+
   }
   if (req.method === 'POST') {
 
+<<<<<<< HEAD
     const init = req.body |{}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+    const init = req.body || {};
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     try {
       const flag = await createFlag(init);
       return res.status(201).json({ flag });
     } catch (e: any) {
+<<<<<<< HEAD
 <<<<<<< HEAD
       return res.status(400).json({ error: e.message || 'Invalid payload' });
     }
@@ -138,6 +149,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       ensureAdmin(user) 
     } catch (e: any) { 
       return res.status(e.statusCode || 403).json({ error: 'Forbidden' }) 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     }
 
     }
@@ -164,4 +177,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  res.setHeader('Allow', 'GET,POST');
+  return res.status(405).end('Method Not Allowed');
+
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -1,5 +1,8 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 import React from "react";
 import type { NextPage, GetServerSideProps } from "next";
@@ -9,20 +12,18 @@ import { findProjectById } from "../../utils/dataStore";
 
 type Props = {;
 
+<<<<<<< HEAD
 =======
 
 type Props = {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   projectId: string;
   fromRole: "client" | "talent";
   fromId: string;
   valid: boolean;
   reason?: string;
-
-import React from 'react';
-import type { NextPage, GetServerSideProps } from 'next';
-import ReviewForm from '../../components/reviews/ReviewForm';
-import { findProjectById } from '../../utils/dataStore';
 type Props = {
   projectId: string,
   fromRole: 'client' | 'talent',
@@ -30,6 +31,7 @@ type Props = {
   valid: boolean,
   reason?: string
 };
+<<<<<<< HEAD
 
 const ReviewSubmitPage: NextPage<Props> = ({ projectId, fromRole, fromId, valid, reason }) => {
 <<<<<<< HEAD
@@ -37,10 +39,14 @@ const ReviewSubmitPage: NextPage<Props> = ({ projectId, fromRole, fromId, valid,
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   if (!valid) {
     return (
       <main className="max-w-2xl mx-auto p-6">
         <h1 className="text-2xl font-semibold mb-3">Review unavailable</h1>
+<<<<<<< HEAD
 
 };
 
@@ -371,6 +377,8 @@ const ReviewSubmitPage: NextPage<Props> = ({ projectId, fromRole, fromId, valid,
       <ReviewForm initial={{ projectId, fromRole, fromId }} />
     </main>
   );
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 export const getServerSideProps: GetServerSideProps = async (ctx) => {
   const { projectId } = ctx.query as { projectId: string }
@@ -435,64 +443,38 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
   if (!projectId || !role || !fromId) {
 };
 
-export const getServerSideProps: GetServerSideProps = async (ctx) => {;
-  const { projectId } = ctx.query as { projectId: string };
-  const { role, fromId } = ctx.query as {
-    role?: "client" | "talent";
-    fromId?: string;
-  };
 
-  if (!projectId || !role || !fromId) {
-    return {
-      props: {
-        projectId: projectId || "",
-        fromRole: role || "client",
-        fromId: fromId || "",
-        valid: false,
-        reason: "Missing parameters",
-      },
-    };
   }
-
-  const project = await findProjectById(projectId);
-  if (!project) {
-    return {
-      props: {
-        projectId,
-        fromRole: role,
-        fromId,
-        valid: false,
-        reason: "Project not found",
-      },
+  if (project && project.status !== "Completed") {;
+    return {;
+      props: {;
+        projectId,;
+        fromRole: role,;
+        fromId,;
+        valid: false,;
+        reason: "Project is not completed yet",;
+      },;
     } as any;
   }
-  if (project.status !== "Completed") {
-    return {
-      props: {
-        projectId,
-        fromRole: role,
-        fromId,
+  } as any;
+
+}
+
+export default ReviewSubmitPage;
+
+
+        project_id,
+        from_role: role,
+        from_id,
         valid: false,
         reason: "Project is not completed yet",
       },
     } as any;
   }
-
-  const expectedFromId =
-    role === "client" ? project.clientId : project.talentSlug;
-  const valid = expectedFromId === fromId;
-
-  return {
-    props: {
-      projectId,
-      fromRole: role,
-      fromId,
       valid,
       reason: valid ? null : "Invalid reviewer for this project",
     },
   } as any;
-};
-
   )
 },
 export const getServerSideProps: GetServerSideProps = async (ctx) => {
@@ -531,4 +513,7 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
   return { props: { projectId, fromRole: role, fromId, valid, reason: valid ? null : 'Invalid reviewer for this project' } } as any;
 };
 export default ReviewSubmitPage;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

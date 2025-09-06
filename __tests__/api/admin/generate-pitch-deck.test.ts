@@ -1,8 +1,11 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { NextApiRequest, NextApiResponse } from 'next'
 import { createMocks, RequestMethod } from 'node-mocks-http'
 import handler from '@/pages/api/admin/generate-pitch-deck'
@@ -54,10 +57,13 @@ describe('/api/admin/generate-pitch-deck API Endpoint'
             "error"
       "method"
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
       "headers"
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { NextApiRequest, NextApiResponse } from 'next';
 import { createMocks, RequestMethod } from 'node-mocks-http';
 import handler from '@/pages/api/admin/generate-pitch-deck';
@@ -380,6 +386,7 @@ describe('/api/admin/generate-pitch-deck API Endpoint', () => {
   });
 });
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
       "headers"
@@ -392,3 +399,6 @@ ursor/add-new-services-and-deploy-updates-0462
 ursor/integrate-build-improve-and-re-verify-8f7d
       "headers"
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+      "headers"
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

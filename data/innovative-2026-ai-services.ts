@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { ServiceVariant } from '../types / service - variants';
 
@@ -503,21 +504,28 @@ export const innovative2026AIServices: Innovative2026AIService[] = [;
   growthRate: string, variant: ServiceVariant,
   contactInfo: {
 <<<<<<< HEAD
+=======
+  contactInfo: {
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       
     mobile: string, email: string,
     address: string,
     website: string
   
+<<<<<<< HEAD
 =======
     mobile: string, email: string,
     address: string,
     website: string
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     },
     realImplementation: boolean, implementationDetails: string,
   launchDate: string, customers: number,
   rating: number,
   reviews: number
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 }
@@ -838,6 +846,9 @@ export const innovative2026AIServices: Innovative2026AIService[] = [
     }
     realImplementation: true
     implementationDetails:
+=======
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       'Enterprise-grade sales intelligence platform with AI-powered insights, comprehensive data coverage, advanced analytics, and seamless CRM integrations. Includes mobile app and API access.'
     launchDate: '2025-06-20'
     customers: 1900
@@ -862,6 +873,7 @@ export const innovative2026AIServices: Innovative2026AIService[] = [
 
     reviews: 950
   }
+<<<<<<< HEAD
 ];
 import { ServiceVariant } from '../types/service-variants',;
 export interface Innovative2026AIService {;
@@ -1184,8 +1196,10 @@ export const innovative2026AIServices: Innovative2026AIService[] = [
       
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       address: '364 E Main St STE 1008 Middletown DE 19709',
-
+    reviews: 950
       website: 'https://ziontechgroup.com';
     }
     real_implementation: true,
@@ -1194,7 +1208,6 @@ export const innovative2026AIServices: Innovative2026AIService[] = [
     customers: 1900;
     rating: 4.8,
     reviews: 950;
-
 ];
 import { ServiceVariant } from '../types/service-variants',;
 export interface Innovative2026AIService {;
@@ -1461,5 +1474,9 @@ export const innovative2026AIServices: Innovative2026AIService[] = [;
   }
 ];
   }
+<<<<<<< HEAD
 ];
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import {;
   Select;
   SelectContent;
@@ -56,7 +57,10 @@ import { Button } from "@/components/ui/button",
 import { Card, CardContent } from "@/components/ui/card",
 import { Input } from "@/components/ui/input",
 import { Textarea } from "@/components/ui/textarea",
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {
+
 
   Select
   SelectContent
@@ -99,23 +103,19 @@ export function MobileResumeBuilder() {
       case "education":
         return <EducationStep />
       case "skills":
-        return <SkillsStep />
-      default:
-        return <BasicsStep />
-    }
-  },;
-
-        return <SkillsStep />
-        return <SkillsStep />,
       default:
         return <BasicsStep />
     }
   }
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <div className="space-y-6 px-4 pb-24">;
       <div className="flex justify-between px-1 py-2 overflow-x-auto hide-scrollbar">;
         <Button
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -135,10 +135,13 @@ export function MobileResumeBuilder() {
           className="flex-1 rounded-full"
           onClick={() => setCurrentStep("basics")}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         >
           Basics
         </Button>
         <Button
+<<<<<<< HEAD
 <<<<<<< HEAD
 
           variant={currentStep === "experience" ? "default" : "outline"}
@@ -154,10 +157,19 @@ export function MobileResumeBuilder() {
           variant={currentStep === "education" ? "default" : "outline"}
           className="flex-1 rounded-full"
           onClick={() => setCurrentStep("education")}
+=======
+
+        >
+          Experience
+        </Button>
+        <Button
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         >
           Education
         </Button>
         <Button
+<<<<<<< HEAD
           variant = {currentStep === "skills" ? "default" : "outline",}
           className="flex-1 rounded-full"
           onClick = {() => setCurrentStep("skills"),}
@@ -190,6 +202,8 @@ export function MobileResumeBuilder() {
           variant={currentStep === "skills" ? "default" : "outline"}
           className="flex-1 rounded-full"
           onClick={() => setCurrentStep("skills")}
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
         >
 <<<<<<< HEAD
@@ -197,6 +211,7 @@ export function MobileResumeBuilder() {
         </Button>
       </div>
       {renderStepContent()}
+<<<<<<< HEAD
 
 
 =======
@@ -215,6 +230,8 @@ ursor/fix-website-loading-errors-and-merge-6662
       <Button className="w-full flex gap-2" size="lg">
         <Zap className="h-5 w-5" /> Enhance with AI
       </Button>
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
       <Button variant="default" className="w-full" size="lg">
@@ -253,6 +270,7 @@ function BasicsStep() {
         <div className="space-y-2">
           <Label htmlFor="summary">Professional Summary</Label>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
           <Textarea 
@@ -264,6 +282,8 @@ function BasicsStep() {
           <Textarea 
             id="summary" 
             placeholder="Write a brief summary about yourself" 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             rows = {4,}
           />
         </div>
@@ -271,9 +291,6 @@ function BasicsStep() {
     </Card>
   )
 }
-          <Textarea 
-            id="summary" 
-            placeholder="Write a brief summary about yourself" 
 import React, { useState } from "react",;
 import { Button } from "@/components/ui/button",;
 import { Card, CardContent } from "@/components/ui/card",;
@@ -331,11 +348,15 @@ export function MobileResumeBuilder() {;
           variant={currentStep === "skills" ? "default" : "outline"}
           className="flex-1 rounded-full";
           onClick={() => setCurrentStep("skills")}
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         >;
           Skills;
         </Button>;
       </div>;
+<<<<<<< HEAD
 
       {renderStepContent()}
 
@@ -343,20 +364,28 @@ export function MobileResumeBuilder() {;
         <Zap className="h-5 w-5" /> Enhance with AI;
       </Button>;
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <Button variant="default" className="w-full" size="lg">;
         Save & Preview;
       </Button>;
     </div>;
   );
 }
+<<<<<<< HEAD
 
 function BasicsStep() {;
   return (
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <Card>;
       <CardContent className="p-4 space-y-4">;
         <div className="space-y-2">;
           <Label htmlFor="title">Resume Title</Label>;
+<<<<<<< HEAD
           <Input id="title" name="title" placeholder="e && e.g. Senior Frontend Developer" />;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         </div>;
         <div className="space-y-2">;
           <Label htmlFor="fullName">Full Name</Label>;
@@ -364,7 +393,10 @@ function BasicsStep() {;
         </div>;
         <div className="space-y-2">;
           <Label htmlFor="email">Email Address</Label>;
+<<<<<<< HEAD
           <Input id="email" name="email" type="email" placeholder="you@example && example.com" autoComplete="email" />;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         </div>;
         <div className="space-y-2">;
           <Label htmlFor="phone">Phone Number</Label>;
@@ -377,6 +409,7 @@ function BasicsStep() {;
         <div className="space-y-2">;
           <Label htmlFor="summary">Professional Summary</Label>;
 <<<<<<< HEAD
+<<<<<<< HEAD
           <Textarea
             id="summary" 
             placeholder="Write a brief summary about yourself" 
@@ -388,6 +421,8 @@ function BasicsStep() {;
             placeholder="Write a brief summary about yourself";
             rows={4}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           />;
         </div>;
       </CardContent>;
@@ -395,12 +430,15 @@ function BasicsStep() {;
   );
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 unction ExperienceStep() {
 ursor/fix-website-loading-errors-and-merge-6662
 
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 function ExperienceStep() {
   const addExperience = () => {
@@ -409,6 +447,7 @@ function ExperienceStep() {
   }
   const removeExperience = (id: string,) => {
     setExperiences(experiences.filter(exp => exp.id !== id))
+<<<<<<< HEAD
   }
   const removeEducation = (id: string,) => {
     setEducations(educations.filter(edu => edu.id !== id))
@@ -600,6 +639,8 @@ function ExperienceStep() {;
 };
   );
 };
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   },
   
   return (
@@ -797,70 +838,45 @@ function SkillsStep() {
     </div>;
   );
 }
-;
-function EducationStep() {;
-  const [educations, setEducations] = useState([{ id: '1' }]),;
-  const addEducation = () => {;
-    const newId = (educations.length + 1).toString(),;
-    setEducations([...educations, { id: newId }]);
-  },;
-  const removeEducation = (id: string) => {;
-    setEducations(educations.filter(edu => edu.id !== id));
-  },;
-  return (;
-    <div className="space-y-4">;
-      {educations.map((edu, index) => (;
-        <Card key={edu.id}>;
-          <CardContent className="p-4 space-y-4">;
-            <div className="flex justify-between items-center">;
-              <h3 className="font-medium">Education {index + 1}</h3>;
-              {educations.length > 1 && (;
-                <Button;
-                  variant="ghost";
-                  size="icon";
-                  onClick={() => removeEducation(edu.id)}
-                  aria-label="Remove education";
-                >;
-                  <Trash2 className="h-5 w-5 text-destructive" />;
-                </Button>;
-              )}
-            </div>;
-            <div className="space-y-2">;
-              <Label htmlFor={`institution-${edu.id}`}>Institution</Label>;
-              <Input id={`institution-${edu.id}`} placeholder="School or university name" />;
-            </div>;
-            <div className="space-y-2">;
-              <Label htmlFor={`degree-${edu.id}`}>Degree</Label>;
-              <Input id={`degree-${edu.id}`} placeholder="e.g. Bachelor of Science" />;
-            </div>;
-            <div className="space-y-2">;
-              <Label htmlFor={`fieldOfStudy-${edu.id}`}>Field of Study</Label>;
-              <Input id={`fieldOfStudy-${edu.id}`} placeholder="e.g. Computer Science" />;
-            </div>;
-            <div className="grid grid-cols-2 gap-3">;
-              <div className="space-y-2">;
-                <Label htmlFor={`eduStartDate-${edu.id}`}>Start Date</Label>;
-                <Input id={`eduStartDate-${edu.id}`} type="month" />;
-              </div>;
-              <div className="space-y-2">;
-                <Label htmlFor={`eduEndDate-${edu.id}`}>End Date</Label>;
-                <Input id={`eduEndDate-${edu.id}`} type="month" placeholder="Present" />;
-              </div>;
-            </div>;
-          </CardContent>;
-        </Card>;
-      ))}
-;
-      <Button;
-        variant="outline";
-        className="w-full gap-2";
-        onClick={addEducation}
-      >;
-        <Plus className="h-4 w-4" /> Add Another Education;
-      </Button>;
-    </div>;
-  );
+/**
+ * BasicsStep - Function description
+ */
+function BasicsStep() {
+  return (
+    <Card>;
+      <CardContent className="p - 4 space - y-4">;
+        <div className="space - y-2">;
+          <Label html_for="title">Resume Title</Label>;
+          <Input id="title" name="title" placeholder="e.g. Senior Frontend Developer" />;
+        </div>;
+        <div className="space - y-2">;
+          <Label html_for="full_name">Full Name</Label>;
+          <Input id="full_name" name="full_name" placeholder="Your full name" auto_complete="name" />;
+        </div>;
+        <div className="space - y-2">;
+          <Label html_for="email">Email Address</Label>;
+          <Input id="email" name="email" type="email" placeholder="you@example.com" auto_complete="email" />;
+        </div>;
+        <div className="space - y-2">;
+          <Label html_for="phone">Phone Number</Label>;
+          <Input id="phone" name="phone" placeholder="Your phone number" auto_complete="tel" />;
+        </div>;
+        <div className="space - y-2">;
+          <Label html_for="location">Location</Label>;
+          <Input id="location" name="location" placeholder="City, Country" auto_complete="address - level2" />;
+        </div>;
+        <div className="space - y-2">;
+          <Label html_for="summary">Professional Summary</Label>;
+          <Textarea;
+            id="summary";
+            placeholder="Write a brief summary about yourself";
+            rows = {4, }
+          />;
+        </div>;
+      </CardContent>;
+    </Card>);
 }
+<<<<<<< HEAD
 ;
 function SkillsStep() {;
   const [skills, setSkills] = useState([;
@@ -954,3 +970,5 @@ function SkillsStep() {;
 
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

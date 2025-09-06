@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 if (!id) return;
       try {;
         const res = await fetch(`/api/products/${id}`);
@@ -14,6 +15,8 @@ import { useEffect, useState  } from 'react';
 import { useRouter } from 'next/router', // Changed from useParams
 import { useEffect, useState  } from 'react';
 import { useEffect, useState } from 'react';
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import Image from 'next/image';
 import { Button  } from '@/components/ui/button';
 import { NEW_PRODUCTS  } from '@/data/newProductsData';
@@ -42,8 +45,6 @@ export default function ProductPage() {;
     const fetchProduct = async () => {
       if (!id) return;
       try {
-if (!id) return;
-      try {;
         const res = await fetch(`/api/products/${id}`);
         if (res.ok) {
           const data = await res.json();
@@ -81,12 +82,16 @@ export default function ProductPage() {;
         if (res.ok) {;
           const data = await res.json(),;
           setProduct(data);
+<<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         // Fail silently and fall back to local data
+<<<<<<< HEAD
         logErrorToProduction('Error fetching product', { data: err });
       }
 <<<<<<< HEAD
@@ -101,6 +106,8 @@ ursor/fix-website-loading-errors-and-merge-6662
     };
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     // Only fetch if id is available (from router)
     if (id) {
       fetchProduct();
@@ -111,6 +118,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 =======
     }
+<<<<<<< HEAD
   }, [id]), // id is now from router.query
   if (!product && !id) { // If no id from router yet, it might still be loading
     return <div className="p-6 text-white">Loading product details...</div>
@@ -155,12 +163,15 @@ ursor/fix-website-loading-errors-and-merge-6662
     if (id) {;
       fetchProduct();
     }
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   }, [id]), // id is now from router && router.query;
 
 
     return <div className="p-6 text-white">Product not found</div>
   }, [id]), // id is now from router.query;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     return <div className="p-6 text-white">Product not found</div>
@@ -205,12 +216,21 @@ ursor/fix-website-loading-errors-and-merge-6662
         title={product.title}
         description={product.description}
         ogImage={product.images?.[0]}
+=======
+    }
+  }, [id]), // id is now from router.query
+  if (!product && !id) { // If no id from router yet, it might still be loading
+    return <div className="p-6 text-white">Loading product details...</div>
+  }
+  if (!product) {
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       />
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         <h1 className="text-2xl font-bold mb-4">{product.title}</h1>
         {product.images?.length ? (
           <div className="mb-4 relative w-full h-64">
             <Image
+<<<<<<< HEAD
 <<<<<<< HEAD
 
               src = {product.images[0] |'/placeholder.svg',}
@@ -233,10 +253,15 @@ ursor/fix-website-loading-errors-and-merge-6662
               fill
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+              className="object-cover rounded-md"
+              fill
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             />
           </div>
         ) : null}
         <p className="mb-6">{product.description}</p>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
         title = {product && product.title,}
@@ -291,11 +316,14 @@ product.title ;
           {inCart ? 'In Cart' : adding ? 'Adding...' : 'Add to Cart'}
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         </Button>;
       </div>;
     </>;
   );
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 //Only fetch if id is available (from router) ;
@@ -304,6 +332,8 @@ product.title ;
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import Image from 'next / image';
 import {Button} from '@/components / ui / button';
 import {NEW_PRODUCTS} from '@/data / newProductsData';
@@ -328,6 +358,7 @@ function ProductPage() {
 if ( {) {
   $2
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
       const found_product = NEW_PRODUCTS.find ((p) => p.id === id);
       set_product (found_product || null);
@@ -413,39 +444,47 @@ if (return) {
         <Button on_click={handle_add} disabled={adding || in_cart}>;
           {in_cart ? 'In Cart' : adding ? 'Adding...' : 'Add to Cart'}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         </Button>;
       </div>;
-    </>);
-;
+    </>;
+        </Button>
+      </div>
+    </>
+  );
 }
 //Only fetch if id is available (from router) ;
-}const in_cart = items.some (index => i.id === product.id);
-const handle_add = () =>: any {
-  // Check condition
-if (return) {
-  $2
-}
-set_adding (true);
-dispatch ({
+}const inCart = items.some (i => i.id === product.id);
+const handleAdd = () => {if (inCart) return;
+setAdding (true);
+dispatch ({;
   type: 'ADD ITEM';
-payload: {
+payload: {;
   id: product.id, name: product.title,  price: product.price ?? 0, quantity: 1 ;
-;
 });
-toast.success (`1× $ {
-  product.title ;
+toast.success (`1× $ {product.title ;
 }added`);
-set_timeout ( () => set_adding (false), 500) ;
+setTimeout ( () => setAdding (false), 500) ;
 }
 product.title ;
-}description= {
-  product.description ;
-}og_image= {
-  product.images?.[0] ;
+}description= {product.description ;
+}ogImage= {product.images?.[0] ;
 }/> </Button> </div> </>) ;
 }';
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 =======
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+}
+        </Button>;
+      </div>;
+    </>;
+  );
+}
+;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

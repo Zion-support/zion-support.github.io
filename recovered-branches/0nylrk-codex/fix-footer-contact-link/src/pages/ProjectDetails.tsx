@@ -1,7 +1,4 @@
 
-
-
-
 import {useState, useEffect} from "react";
 import {useParams, useNavigate, Link} from "react-router-dom";
 import {format} from "date-fns";
@@ -23,6 +20,7 @@ import {toast} from "@/hooks/use-toast";
 import {supabase} from "@/integrations/supabase/client";
 import {ProjectReviewSection} from "@/components/projects/reviews/ProjectReviewSection";
 import {AlertCircle, Calendar, CheckCircle2, Clock, FileText, Layers, MessageSquare, Video, User, XCircle} from "lucide-react";
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -30,11 +28,14 @@ function ProjectDetailsContent() {;
   // useParams may be untyped in this environment, so avoid passing a;
   // type argument and cast the result instead to prevent TS2347 errors.;
   const { projectId } = useParams() as { projectId?: string };
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const { user } = useAuth();
   const navigate = useNavigate();
   const { getProjectById, updateProjectStatus } = useProjects();
 
 
+<<<<<<< HEAD
 =======
 function ProjectDetailsContent() {
   // useParams may be untyped in this environment, so avoid passing a
@@ -44,12 +45,15 @@ function ProjectDetailsContent() {
   const navigate = useNavigate();
   const { getProjectById, updateProjectStatus } = useProjects();
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const [project, setProject] = useState<Project | null>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [notes, setNotes] = useState<any[]>([]);
   const [newNote, setNewNote] = useState("");
   const [isSubmittingNote, setIsSubmittingNote] = useState(false);
   const [activeTab, setActiveTab] = useState("details");
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -65,6 +69,8 @@ function ProjectDetailsContent() {
       if (projectData) {
         setProject(projectData);
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useState, useEffect } from "react",
 import { useParams, useNavigate, Link } from "react-router-dom",
 import { format } from "date-fns",
@@ -116,11 +122,14 @@ import {
   User,
   XCircle} from "lucide-react",
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 function ProjectDetailsContent() {
   // useParams may be untyped in this environment, so avoid passing a
@@ -140,12 +149,11 @@ function ProjectDetailsContent() {
   // Load project data
   useEffect(() => {
     async function loadProject() {
-      if (!projectId) return,
-      
-      setIsLoading(true),
-      const projectData = await getProjectById(projectId),
-      
+      if (!projectId) return;
+      setIsLoading(true);
+      const projectData = await getProjectById(projectId);
       if (projectData) {
+<<<<<<< HEAD
         setProject(projectData),
         
 <<<<<<< HEAD
@@ -154,6 +162,8 @@ function ProjectDetailsContent() {
 =======
         
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         // Now fetch notes
         fetchProjectNotes(projectId)
       } else {
@@ -162,6 +172,7 @@ function ProjectDetailsContent() {
           description: "The requested project could not be found."
           variant: "destructive"})
         navigate("/dashboard")
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -296,11 +307,14 @@ if ( {) {
 ;
   const fetchProjectNotes = async (project_id: string) => {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     try {
       const { data, error } = await supabase;
         .from ("project_notes");
         .select (`;
           *;
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -317,10 +331,13 @@ if (throw error) {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     } catch (err) {
       console.error ("Error fetching project notes:", err);
     }
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -362,10 +379,13 @@ if (throw error) {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     } finally {
       setIsSubmittingNote (false);
     }
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -405,10 +425,13 @@ if ( {) {
     switch (status) {
 =======
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   // Load project data;
   useEffect(() => {;
     async function loadProject() {;
       if (!projectId) return;
+<<<<<<< HEAD
 
       setIsLoading(true);
       const projectData = await getProjectById(projectId);
@@ -438,6 +461,8 @@ if ( {) {
       if (projectData) {;
         setProject(projectData),;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         // Now fetch notes;
         fetchProjectNotes(projectId);
       } else {;
@@ -446,15 +471,19 @@ if ( {) {
           description: "The requested project could not be found.",;
           variant: "destructive"}),;
         navigate("/dashboard");
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       }
 
       setIsLoading(false);
     }
+<<<<<<< HEAD
 
 
     
@@ -624,11 +653,14 @@ if ( {) {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       case "canceled":
         return <Badge variant="destructive">Canceled</Badge>
       default:
         return <Badge variant="outline">{status}</Badge>
     }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -641,15 +673,38 @@ if ( {) {
   if (isLoading) {
 <<<<<<< HEAD
 =======
+=======
+  if (isLoading) {
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       case "canceled":;
         return <Badge variant="destructive">Canceled</Badge>,;
       default:;
         return <Badge variant="outline">{status}</Badge>;
+
+    loadProject();
+  }, [projectId]);
+
+  const fetchProjectNotes = async (projectId: string) => {;
+    try {;
+      const { data, error } = await supabase;
+        .from("project_notes");
+        .select(`;
+          *;
+          created_by_profile:profiles!user_id(display_name, avatar_url);
+        `);
+        .eq("project_id", projectId);
+        .order("created_at", { ascending: false }),;
+
+      if (error) throw error;
+
+      setNotes(data || []);
+    } catch (err) {;
+      console && console.error("Error fetching project notes:", err);
     }
   };
 
-  if (isLoading) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+      case "offer_sent": return <Badge variant="outline">Offer Sent</Badge>;
+      case "offer_accepted":;
     return (
       <div className="container mx-auto py-8">;
         <div className="flex justify-center items-center h-64">;
@@ -661,6 +716,7 @@ if ( {) {
       </div>;
     );
   }
+<<<<<<< HEAD
 
 
   if (!project) {;
@@ -792,6 +848,8 @@ function ProjectDetailsContent() {;
         .insert({;
   if (!project) {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     return (
       <div className="container mx-auto py-8">;
         <Card>;
@@ -802,7 +860,6 @@ function ProjectDetailsContent() {;
               The project you're looking for doesn't exist or you don't have access to it.;
             </p>;
             <Button onClick={() => navigate("/dashboard")}>;
-=======
         return <Badge className="bg - green - 100 text - green - 800">Offer Accepted</Badge>;
       case "changes_requested":;
         return <Badge variant="secondary">Changes Requested</Badge>;
@@ -814,6 +871,7 @@ function ProjectDetailsContent() {;
         return <Badge variant="destructive">Canceled</Badge>,
       default:;
         return <Badge variant="outline">{status}</Badge>;
+<<<<<<< HEAD
 <<<<<<< HEAD
     }
   }
@@ -923,11 +981,16 @@ if ( {) {
             </p>;
             <Button on_click={() => navigate ("/dashboard")}>;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+    }
+  }
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               Return to Dashboard;
             </Button>;
           </CardContent>;
         </Card>;
 
+<<<<<<< HEAD
 =======
       <div className="container mx-auto py-8">
         <div className="flex justify-center items-center h-64">
@@ -940,6 +1003,8 @@ if ( {) {
     )
   }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   if (!project) {
     return (
       <div className="container mx-auto py-8">
@@ -959,6 +1024,7 @@ if ( {) {
     )
   }
   // Check if user is either the client or the talent
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1001,16 +1067,23 @@ if ( {) {
   const isActiveProject = ["offer_accepted", "in_progress"].includes(project.status);
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  }
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   
   const isOfferPending = project.status === "offer_sent",
   const isOfferAccepted = ["offer_accepted", "in_progress", "completed"].includes(project.status),
   const isActiveProject = ["offer_accepted", "in_progress"].includes(project.status),
   
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <>
       <SEO
@@ -1208,10 +1281,14 @@ if ( {) {
                           <a href={project.agreement_url} target="_blank" rel="noopener noreferrer">
                             View
 <<<<<<< HEAD
+<<<<<<< HEAD
                           </a>
 =======
                           </Link>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+                          </Link>
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                         </Button>
                       </div>
                     ) : (
@@ -1238,9 +1315,12 @@ if ( {) {
                     <div className="space-y-4">
                       <div className="space-y-4 max-h-[400px] overflow-y-auto mb-4">
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       </div>);
   }
   // Check if user is either the client or the talent;
@@ -1303,11 +1383,6 @@ if ( {) {
                       </AlertDialogFooter>;
                     </AlertDialogContent>;
                   </AlertDialog>;
-                  <Button variant="outline" on_click={() => handleStatusChange ("changes_requested")}>;
-                    <MessageSquare className="mr - 2 h - 4 w - 4" /> Request Changes;
-                  </Button>;
-                </>)}
-              {(is_client || is_talent) && project.status === "in_progress" && (
                 <AlertDialog>;
                   <AlertDialogTrigger as_child>;
                     <Button variant="default">;
@@ -1329,40 +1404,16 @@ if ( {) {
                       </AlertDialogAction>;
                     </AlertDialogFooter>;
                   </AlertDialogContent>;
-                </AlertDialog>)}
-              {isActiveProject && (
-                <Button variant="default" as_child>;
-                  <Link to={`/project/${project.id}/milestones`}>;
-                    <Layers className="mr - 2 h - 4 w - 4" /> Milestones;
-                  </Link>;
-                </Button>)}
-              {isActiveProject && (
-                <Button variant="outline" as_child>;
-                  <Link to={`/project/${project.id}/room`}>;
-                    <Video className="mr - 2 h - 4 w - 4" /> Project Room;
-                  </Link>;
-                </Button>)}
-              {(is_client || is_talent) && ["offer_sent", "offer_accepted", "in_progress"].includes (project.status) && (
-                <Button;
-                  variant="outline";
-                  on_click={() => navigate (`/messages?talent_id=${project.talent_id}&client_id=${project.client_id}`)}
                 >;
                   <MessageSquare className="mr - 2 h - 4 w - 4" /> Message;
                 </Button>)}
             </div>;
           </div>;
         </div>;
-        <div className="grid grid - cols - 1 lg:grid - cols - 3 gap - 8">;
-          <div className="order - 2 lg:order - 1 lg:col - span - 2">;
-            <Tabs default_value="details" value={active_tab} onValueChange={setActiveTab}>;
-              <TabsList className="mb - 6">;
                 <TabsTrigger value="details">Project Details</TabsTrigger>;
                 <TabsTrigger value="timeline">Timeline</TabsTrigger>;
                 <TabsTrigger value="documents">Documents</TabsTrigger>;
                 <TabsTrigger value="notes">Shared Notes</TabsTrigger>;
-                {project.status === "completed" && (
-                  <TabsTrigger value="reviews">Reviews</TabsTrigger>)}
-              </TabsList>;
               <TabsContent value="details">;
                 <Card>;
                   <CardHeader>;
@@ -1374,21 +1425,12 @@ if ( {) {
                   <CardContent>;
                     <div className="space - y-4">;
                       <div>;
-                        <h3 className="font - semibold mb - 2">Project Description</h3>;
-                        <div className="bg - muted / 30 p - 4 rounded - md">;
-                          <p className="whitespace - pre - wrap">{project.scope_summary}</p>;
-                        </div>;
-                      </div>;
                       <div>;
                         <h3 className="font - semibold mb - 2">Payment Terms</h3>;
                         <Badge variant="outline" className="capitalize">;
                           {project.payment_terms} Payment;
                         </Badge>;
                       </div>;
-                      <div>;
-                        <h3 className="font - semibold mb - 2">Job Details</h3>;
-                        <div className="bg - muted / 30 p - 4 rounded - md">;
-                          <p className="whitespace - pre - wrap">{project.job?.description}</p>;
                         </div>;
                       </div>;
                     </div>;
@@ -1404,20 +1446,6 @@ if ( {) {
                     </CardDescription>;
                   </CardHeader>;
                   <CardContent>;
-                    <div className="space - y-4">;
-                      <div className="flex items - start gap - 3 p - 3 bg - muted / 30 rounded - md">;
-                        <Calendar className="h - 5 w - 5 text - primary mt - 0.5" />;
-                        <div>;
-                          <h3 className="font - semibold">Start Date</h3>;
-                          <p>{format (new Date (project.start_date), "PPP")}</p>;
-                        </div>;
-                      </div>;
-                      <div className="flex items - start gap - 3 p - 3 bg - muted / 30 rounded - md">;
-                        <Clock className="h - 5 w - 5 text - primary mt - 0.5" />;
-                        <div>;
-                          <h3 className="font - semibold">Project Status</h3>;
-                          <div className="mt - 1">;
-                            {getStatusBadge (project.status)}
                           </div>;
                         </div>;
                       </div>;
@@ -1434,10 +1462,6 @@ if ( {) {
                     </CardDescription>;
                   </CardHeader>;
                   <CardContent>;
-                    {project.agreement_url ? (
-                      <div className="flex items - center justify - between bg - muted / 30 p - 4 rounded - md">;
-                        <div className="flex items - center gap - 3">;
-                          <FileText className="h - 5 w - 5 text - primary" />;
                           <div>;
                             <h3 className="font - semibold">Project Agreement</h3>;
                             <p className="text - sm text - muted - foreground">;
@@ -1445,16 +1469,10 @@ if ( {) {
                             </p>;
                           </div>;
                         </div>;
-                        <Button variant="outline" size="sm" as_child>;
                           <a href={project.agreement_url} target="_blank" rel="noopener noreferrer">;
                             View;
                           </a>;
                         </Button>;
-                      </div>) : (
-                      <div className="text - center py - 8">;
-                        <FileText className="h - 10 w - 10 text - muted - foreground mx - auto mb - 2" />;
-                        <h3 className="font - semibold">No Documents Yet</h3>;
-                        <p className="text - sm text - muted - foreground">;
                           No documents have been uploaded to this project.;
                         </p>;
                       </div>)}
@@ -1470,15 +1488,16 @@ if ( {) {
                     </CardDescription>;
                   </CardHeader>;
                   <CardContent>;
-                    <div className="space - y-4">;
-                      <div className="space - y-4 max - h-[400px] overflow - y-auto mb - 4">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+    navigate("/unauthorized");
+    return null;
+  }
                         {notes.length > 0 ? (
                           notes.map ((note) => (
                             <div key={note.id} className="bg - muted / 30 p - 3 rounded - md">;
                               <div className="flex items - center gap - 2 mb - 2">;
                                 <Avatar className="h - 6 w - 6">;
                                   {note.created_by_profile?.avatar_url ? (
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -1892,11 +1911,14 @@ if ( {) {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                                     <img
                                       src={note && note.created_by_profile.avatar_url}
                                       alt={note && note.created_by_profile.display_name}
                                     />;
                                   ) : (;
+<<<<<<< HEAD
 <<<<<<< HEAD
                                     <User className="h-4 w-4" />;
                                   )}
@@ -1955,6 +1977,10 @@ if ( {) {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+                                    <User className="h-4 w-4" />;
+                                  )}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                           <Textarea
                             placeholder="Add a note or update to the project..."
                             value={newNote}
@@ -1964,13 +1990,17 @@ if ( {) {
                           <Button
                             onClick={handleSubmitNote}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
                             disabled={!newNote && newNote.trim() || isSubmittingNote}>;
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                             {isSubmittingNote ? "Posting..." : "Post Note"}
                           </Button>;
                         </div>;
                       )}
+<<<<<<< HEAD
 
 =======
                             disabled={!newNote && newNote.trim() || isSubmittingNote}>;
@@ -2069,6 +2099,8 @@ if ( {) {
                     <Avatar className="h-10 w-10">
                       {project.talent_profile?.profile_picture_url ? (
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                         <img
                           src={project.talent_profile.profile_picture_url}
                           alt={project.talent_profile.full_name}
@@ -2117,6 +2149,7 @@ if ( {) {
                           variant="outline"
                           size="sm"
                           className="mt-2"
+<<<<<<< HEAD
                           onClick={() => navigate(`/messages?clientId=${project.client_id}`)}
                         >
                           <MessageSquare className="mr-1 h-3 w-3" /> Message
@@ -2559,6 +2592,8 @@ if ( {) {
 <<<<<<< HEAD
                       {project && project.talent_profile?.profile_picture_url ? (;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                         <img
                           src={project && project.talent_profile.profile_picture_url}
                           alt={project && project.talent_profile.full_name}
@@ -2566,6 +2601,7 @@ if ( {) {
                       ) : (;
                         <User className="h-6 w-6" />;
                       )}
+<<<<<<< HEAD
 
                     </Avatar>;
                     <div>;
@@ -2599,16 +2635,22 @@ if ( {) {
                       </p>
                       {isClient && (
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                         <Button
                           variant="outline"
                           size="sm"
                           className="mt-2"
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                           onClick={() => navigate(`/messages?talentId=${project && project.talent_id}`)}
                         >;
                           <MessageSquare className="mr-1 h-3 w-3" /> Message;
                         </Button>;
                       )}
+<<<<<<< HEAD
 
                     </div>;
                   </div>;
@@ -2664,6 +2706,8 @@ if ( {) {
               </CardContent>;
             </Card>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             {/* Project Status Card */}
             <Card className="mt-6">
               <CardHeader>
@@ -2695,6 +2739,7 @@ if ( {) {
                   <p className="text-sm text-amber-600 flex items-center gap-1">
                     <AlertCircle className="h-4 w-4" /> The talent has requested changes to this offer.
                   </p>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -2737,6 +2782,10 @@ if ( {) {
 =======
             ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+                    </div>;
+                  </div>;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             {/* Project Status Card */}
             <Card className="mt-6">;
               <CardHeader>;
@@ -2746,6 +2795,7 @@ if ( {) {
                 <div className="space-y-2">;
                   <div className="flex justify-between items-center">;
                     <span className="text-sm font-medium">Current Status:</span>;
+<<<<<<< HEAD
 <<<<<<< HEAD
                     <div>{getStatusBadge(project && project.status)}</div>;
                   </div>;
@@ -2777,10 +2827,13 @@ if ( {) {
                     <span className="text-sm">;
                       {format(new Date(project.start_date), "PPP")}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     </span>;
                   </div>;
                 </div>;
               </CardContent>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
               {/* Conditional Footer Based on Status */}
@@ -2790,10 +2843,13 @@ if ( {) {
               {/* Conditional Footer Based on Status */}
               {project.status === "changes_requested" && isClient && (;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <CardFooter className="flex-col items-start gap-2 border-t pt-6">;
                   <p className="text-sm text-amber-600 flex items-center gap-1">;
                     <AlertCircle className="h-4 w-4" /> The talent has requested changes to this offer.;
                   </p>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                   <Button
@@ -2804,12 +2860,34 @@ if ( {) {
                     variant="outline";
                     onClick={() => navigate(`/messages?talentId=${project.talent_id}`)}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+                        <img
+                          src={project && project.client_profile.avatar_url}
+                          alt={project && project.client_profile.display_name}
+                        />;
+                      ) : (;
+                        <User className="h-6 w-6" />;
+                      )}
+                        <Button
+                          variant="outline"
+                          size="sm"
+                          className="mt-2"
+                          onClick={() => navigate(`/messages?clientId=${project && project.client_id}`)}
+                        >;
+                          <MessageSquare className="mr-1 h-3 w-3" /> Message;
+                        </Button>;
+                      )}
+                  <Button
+                    variant="outline"
+                    onClick={() => navigate(`/messages?talentId=${project && project.talent_id}`)}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     className="w-full";
                   >;
                     <MessageSquare className="mr-2 h-4 w-4" /> Discuss Changes;
                   </Button>;
                 </CardFooter>;
               )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -2824,11 +2902,14 @@ if ( {) {
 
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             </Card>;
           </div>;
         </div>;
       </main>;
       <Footer />;
+<<<<<<< HEAD
 
     </>;
   );
@@ -2925,6 +3006,8 @@ export default function ProjectDetails() {
       <Footer />;
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     </>);
 }
 export default /**
@@ -2936,6 +3019,7 @@ function ProjectDetails() {
       <ProjectDetailsContent />;
     </ProtectedRoute>);
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -2969,3 +3053,5 @@ export default function ProjectDetails() {;
 }
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

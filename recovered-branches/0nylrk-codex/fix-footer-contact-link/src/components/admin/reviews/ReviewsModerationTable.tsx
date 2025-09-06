@@ -1,7 +1,4 @@
 
-
-
-
 import {useState} from "react";
 import {useMutation} from "@tanstack/react-query";
 import {Check, X, User, Star, MoreHorizontal} from "lucide-react";
@@ -9,6 +6,7 @@ import {format} from "date-fns";
 import {toast} from "@/hooks/use-toast";
 import {supabase} from "@/integrations/supabase/client";
 import {Review, ReviewStatus} from "@/types/reviews";
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -22,6 +20,8 @@ import {DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger
 import {Badge} from "@/components/ui/badge";
 import {Button} from "@/components/ui/button";
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useState } from "react",
 import { useMutation } from "@tanstack/react-query",
 import { Check, X, User, Star, MoreHorizontal } from "lucide-react",
@@ -30,11 +30,14 @@ import { toast } from "@/hooks/use-toast",
 import { supabase } from "@/integrations/supabase/client",
 import { Review, ReviewStatus } from "@/types/reviews",
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 import {
   Table,
@@ -59,10 +62,13 @@ import {
 import { Badge } from "@/components/ui/badge",
 import { Button } from "@/components/ui/button",
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface ReviewsModerationTableProps {
   reviews: Review[]
   isLoading: boolean
@@ -70,6 +76,7 @@ interface ReviewsModerationTableProps {
   onRefresh: () => void
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -85,6 +92,8 @@ interface ReviewsModerationTableProps {
 
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 export function ReviewsModerationTable({;
   reviews;
@@ -92,12 +101,19 @@ export function ReviewsModerationTable({;
 export function ReviewsModerationTable({
   reviews,
   isLoading,
+
+
+
+
   onRefresh}: ReviewsModerationTableProps) {
   const [selectedReview, setSelectedReview] = useState<Review | null>(null),
   const [viewDetailsOpen, setViewDetailsOpen] = useState(false);
   const [viewDetailsOpen, setViewDetailsOpen] = useState(false),
 
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const { mutate: updateReviewStatus, isPending } = useMutation({
     mutationFn: async ({
 
@@ -110,6 +126,7 @@ export function ReviewsModerationTable({
       const { error } = await supabase
         .from("reviews")
         .update({ status })
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -145,12 +162,15 @@ export function ReviewsModerationTable({
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     onError: (error: Error) => {
       toast({
 
         title: "Error"
         description: `Failed to update review: ${error.message}`
         variant: "destructive"})
+<<<<<<< HEAD
 
     }}),
 
@@ -164,11 +184,14 @@ export function ReviewsModerationTable({
   const getStatusColor = (status: ReviewStatus) => {
     switch (status) {
       case "approved": return "bg-green-100 text-green-800 hover:bg-green-200",
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       case "rejected":
         return "bg-red-100 text-red-800 hover:bg-red-200"
       default:
         return "bg-yellow-100 text-yellow-800 hover:bg-yellow-200"
     }
+<<<<<<< HEAD
 
   },
 
@@ -179,12 +202,15 @@ export function ReviewsModerationTable({
   },
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const getInitials = (name: string) => {
     return name
       .split(" ")
       .map((n) => n[0])
       .join("")
       .toUpperCase()
+<<<<<<< HEAD
 
   },
 
@@ -291,6 +317,11 @@ export function ReviewsModerationTable({
                         src={review.reviewer_profile.avatar_url}
                         alt={review.reviewer_profile.display_name |""}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+                        src={review.reviewer_profile.avatar_url}
+                        alt={review.reviewer_profile.display_name |""}
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useState } from "react",;
 import { useMutation } from "@tanstack/react-query",;
 import { Check, X, User, Star, MoreHorizontal } from "lucide-react",;
@@ -321,14 +352,18 @@ import {;
 import { Badge } from "@/components/ui/badge",;
 import { Button } from "@/components/ui/button",;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface ReviewsModerationTableProps {;
   reviews: Review[],;
   isLoading: boolean,;
   onRefresh: () => void;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 export function ReviewsModerationTable(): any ({;
@@ -517,6 +552,12 @@ export function ReviewsModerationTable({;
   if (isLoading) {;
     return (;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+        .eq("id", reviewId);
+      if (error) throw error;
+      return { reviewId, status }
+    return (
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <div className="space-y-4">;
         <div className="h-12 w-full bg-muted rounded animate-pulse" />;
         <div className="h-16 w-full bg-muted rounded animate-pulse" />;
@@ -524,13 +565,13 @@ export function ReviewsModerationTable({;
         <div className="h-16 w-full bg-muted rounded animate-pulse" />;
       </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     );
   }
-
-
-  if (reviews && reviews.length === 0) {;
-
     return (
+<<<<<<< HEAD
 =======
   if (reviews && reviews.length === 0) {;
     return (
@@ -545,12 +586,15 @@ export function ReviewsModerationTable({;
   if (reviews.length === 0) {;
     return (;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <div className="py-10 text-center">;
         <h3 className="text-lg font-medium mb-2">No reviews to moderate</h3>;
         <p className="text-muted-foreground">;
           All reviews have been processed. Check back later for new submissions.;
         </p>;
       </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
     );
   }
@@ -592,6 +636,10 @@ export function ReviewsModerationTable({;
 =======
   const renderStars = (rating: number) => {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+    );
+  }
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     return (
       <div className="flex">;
         {[1, 2, 3, 4, 5].map((star) => (;
@@ -600,6 +648,7 @@ export function ReviewsModerationTable({;
             className={`h-4 w-4 ${star <= rating ? "fill-yellow-400 text-yellow-400" : "text-gray-300"}`}
           />;
         ))}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       </div>;
@@ -613,6 +662,9 @@ export function ReviewsModerationTable({;
     );
   };
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useState } from './react';
 import { use_mutation } from '@tanstack / react - query';
 import { Check, X, User, Star, MoreHorizontal } from './lucide-react';
@@ -645,40 +697,6 @@ function ReviewsModerationTable() {
       status}: {
       review_id: string,
       status: ReviewStatus;
-    }) => {
-      const { error } = await supabase;
-        .from ("reviews");
-        .update ({ status });
-        .eq ("id", review_id);
-;
-      // Check condition
-if (throw error) {
-  $2
-}
-      return { review_id, status }
-    }
-    on_success: (data) => {
-      toast ({
-        title: "Review updated",
-        description: `Review has been ${data.status}.`}),
-      on_refresh ();
-      setViewDetailsOpen (false);
-    }
-    on_error: (error: Error) => {
-      toast ({
-        title: "Error",
-        description: `Failed to update review: ${error.message}`,
-        variant: "destructive"});
-    }});
-;
-  const getStatusColor = (status: ReviewStatus) =>: any {
-    switch (status) {
-      case "approved": return "bg - green - 100 text - green - 800 hover:bg - green - 200";
-      case "rejected":;
-        return "bg - red - 100 text - red - 800 hover:bg - red - 200",
-      default:;
-        return "bg - yellow - 100 text - yellow - 800 hover:bg - yellow - 200";
-    }
   }
 ;
   const get_initials = (name: string) =>: any {
@@ -711,12 +729,6 @@ if ( {) {
         <p className="text - muted - foreground">;
           All reviews have been processed. Check back later for new submissions.;
         </p>;
-      </div>);
-  }
-  const handle_approve = (review_id: string) =>: any {
-    updateReviewStatus ({ review_id, status: "approved" });
-  }
-;
   const handle_reject = (review_id: string) =>: any {
     updateReviewStatus ({ review_id, status: "rejected" });
   }
@@ -732,13 +744,8 @@ if ( {) {
         {[1, 2, 3, 4, 5].map ((star) => (
           <Star;
             key={star}
-            className={`h - 4 w - 4 ${star <= rating ? "fill - yellow - 400 text - yellow - 400" : "text - gray - 300"}`}
-          />))}
-      </div>);
-  }
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     ),;
@@ -771,10 +778,13 @@ if ( {) {
   };
   return (;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <>;
       <Table>;
         <TableHeader>;
           <TableRow>;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
                     {review.reviewer_profile?.avatar_url ? (;
@@ -786,6 +796,8 @@ if ( {) {
 =======
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                         src={review.reviewer_profile.avatar_url}
                         alt={review.reviewer_profile.display_name |""}
                       />
@@ -793,6 +805,7 @@ if ( {) {
                       <AvatarFallback>
                         {review.reviewer_profile?.display_name
                           ? getInitials(review.reviewer_profile.display_name)
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
                         src={review && review.reviewer_profile.avatar_url}
@@ -844,11 +857,19 @@ if ( {) {
                         {review.reviewer_profile?.display_name || "User"}
                       </span>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+                          : <User className="h-4 w-4" />}
+                      </AvatarFallback>;
+                    )}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     )}
                   </div>;
                 </div>;
               </TableCell>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <TableCell>{renderStars(review && review.rating)}</TableCell>;
               <TableCell>;
                 {format(new Date(review && review.created_at), "MMM d, yyyy")}
@@ -864,6 +885,7 @@ if ( {) {
                 {review && review.report_count > 0 ? (;
                   <Badge variant="destructive">{review && review.report_count}</Badge>;
                 ) : (;
+<<<<<<< HEAD
 =======
               <TableCell>{renderStars(review.rating)}</TableCell>;
               <TableCell>;
@@ -882,11 +904,14 @@ if ( {) {
                   <Badge variant="destructive">{review.report_count}</Badge>;
                 ) :(;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   "None";
                 )}
               </TableCell>;
               <TableCell className="text-right">;
                 <div className="flex justify-end gap-2">;
+<<<<<<< HEAD
 <<<<<<< HEAD
                   {review && review.status === "pending" && (;
                     <>;
@@ -937,10 +962,15 @@ if ( {) {
                   {review.status === "pending" && (
                     <>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+                  {review && review.status === "pending" && (;
+                    <>;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       <Button
                         size="sm"
                         variant="outline"
                         className="h-8 w-8 p-0"
+<<<<<<< HEAD
 <<<<<<< HEAD
                         onClick={() => handleApprove(review && review.id)}
 =======
@@ -952,10 +982,13 @@ if ( {) {
                         className="h-8 w-8 p-0";
                         onClick={() => handleApprove(review.id)}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                         disabled={isPending}
                       >;
                         <Check className="h-4 w-4 text-green-500" />;
                       </Button>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
                         onClick={() => handleApprove(review.id)}
@@ -964,10 +997,13 @@ if ( {) {
                         <Check className="h-4 w-4 text-green-500" />
                       </Button>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       <Button
                         size="sm"
                         variant="outline"
                         className="h-8 w-8 p-0"
+<<<<<<< HEAD
 <<<<<<< HEAD
                         onClick={() => handleReject(review && review.id)}
 =======
@@ -977,6 +1013,8 @@ if ( {) {
                         className="h-8 w-8 p-0";
                         onClick={() => handleReject(review.id)}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                         disabled={isPending}
                       >;
                         <X className="h-4 w-4 text-red-500" />;
@@ -985,6 +1023,7 @@ if ( {) {
                   )}
                   <DropdownMenu>;
                     <DropdownMenuTrigger asChild>;
+<<<<<<< HEAD
 <<<<<<< HEAD
                       <Button
                         variant="ghost"
@@ -997,6 +1036,8 @@ if ( {) {
                         className="h-8 w-8 p-0";
                       >;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                         <MoreHorizontal className="h-4 w-4" />;
                       </Button>;
                     </DropdownMenuTrigger>;
@@ -1004,6 +1045,7 @@ if ( {) {
                       <DropdownMenuItem onClick={() => handleViewDetails(review)}>;
                         View details;
                       </DropdownMenuItem>;
+<<<<<<< HEAD
 <<<<<<< HEAD
                       {review && review.status === "approved" && (;
                         <DropdownMenuItem onClick={() => updateReviewStatus({ reviewId: review && review.id, status: "rejected" })}>;
@@ -1018,6 +1060,8 @@ if ( {) {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <TableHead > Reviewer</TableHead>;
             <TableHead > Rating</TableHead>;
             <TableHead > Date</TableHead>;
@@ -1111,6 +1155,7 @@ if ( {) {
                           Mark as rejected;
                         </DropdownMenuItem>)}
                       {review.status === "rejected" && (
+<<<<<<< HEAD
                         onClick={() => handleReject(review.id)}
                         disabled={isPending}
                       >
@@ -1166,21 +1211,27 @@ if ( {) {
               </TableCell>
             </TableRow>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     </DropdownMenuContent>;
                   </DropdownMenu>;
                 </div>;
               </TableCell>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
             </TableRow>;
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           ))}
 
         </TableBody>;
       </Table>;
 
+<<<<<<< HEAD
 =======
             </TableRow>;
           ))}
@@ -1188,6 +1239,8 @@ if ( {) {
       </Table>;
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {selectedReview && (;
         <Dialog open={viewDetailsOpen} onOpenChange={setViewDetailsOpen}>;
           <DialogContent className="max-w-lg">;
@@ -1196,21 +1249,30 @@ if ( {) {
               <DialogDescription>;
                 Review submitted on{" "}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 {format(new Date(selectedReview && selectedReview.created_at), "MMMM d, yyyy")}
               </DialogDescription>;
             </DialogHeader>;
 
+<<<<<<< HEAD
 =======
                 {format(new Date(selectedReview.created_at), "MMMM d, yyyy")}
               </DialogDescription>;
             </DialogHeader>;
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <div className="space-y-4">;
               <div className="flex items-center justify-between">;
                 <div className="flex items-center gap-2">;
                   <Avatar>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     {selectedReview && selectedReview.reviewer_profile?.avatar_url ? (;
                       <AvatarImage
                         src={selectedReview && selectedReview.reviewer_profile.avatar_url}
@@ -1224,6 +1286,7 @@ if ( {) {
                           : <User className="h-4 w-4" />}
                       </AvatarFallback>;
                     )}
+<<<<<<< HEAD
 
                   </Avatar>;
                   <div>;
@@ -1270,6 +1333,8 @@ if ( {) {
                   <div>;
                     <div className="font-medium">;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   )}
                   {selectedReview && selectedReview.quality_rating && (;
                     <Badge variant="outline">;
@@ -1286,6 +1351,7 @@ if ( {) {
                       variant={selectedReview && selectedReview.would_work_again ? "default" : "secondary"}
                       className={selectedReview && selectedReview.would_work_again ? "bg-green-100 text-green-800" : "bg-gray-100 text-gray-800"}>;
                       {selectedReview && selectedReview.would_work_again ? "Would work again" : "Would not work again"}
+<<<<<<< HEAD
 <<<<<<< HEAD
                     </Badge>;
                   )}
@@ -1373,10 +1439,18 @@ if ( {) {
                     variant="destructive";
                     onClick={() => handleReject(selectedReview.id)}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+                    </Badge>;
+                  )}
+                  <Button
+                    variant="destructive"
+                    onClick={() => handleReject(selectedReview && selectedReview.id)}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     disabled={isPending}
                   >;
                     Reject;
                   </Button>;
+<<<<<<< HEAD
 <<<<<<< HEAD
                   <Button
                     onClick={() => handleApprove(selectedReview && selectedReview.id)}
@@ -1385,28 +1459,42 @@ if ( {) {
                   <Button;
                     onClick={() => handleApprove(selectedReview.id)}                    disabled={isPending}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+                  <Button
+                    onClick={() => handleApprove(selectedReview && selectedReview.id)}
+                    disabled={isPending}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   >;
                     Approve;
                   </Button>;
                 </>;
               )}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               {selectedReview && selectedReview.status === "approved" && (;
                 <Button
                   variant="destructive"
                   onClick={() => updateReviewStatus({ reviewId: selectedReview && selectedReview.id, status: "rejected" })}
+<<<<<<< HEAD
 =======
               {selectedReview.status === "approved" && (;
                 <Button;
                   variant="destructive";
                   onClick={() => updateReviewStatus({ reviewId:selectedReview.id, status:"rejected" })}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   disabled={isPending}
                 >;
                   Mark as Rejected;
                 </Button>;
               )}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               {selectedReview && selectedReview.status === "rejected" && (;
                 <Button
                   onClick={() => updateReviewStatus({ reviewId: selectedReview && selectedReview.id, status: "approved" })}
@@ -1415,6 +1503,7 @@ if ( {) {
                   Mark as Approved;
                 </Button>;
               )}
+<<<<<<< HEAD
 =======
               {selectedReview.status === "rejected" && (;
                 <Button;
@@ -1424,14 +1513,18 @@ if ( {) {
                   Mark as Approved;
                 </Button>;              )}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             </DialogFooter>;
           </DialogContent>;
         </Dialog>;
       )}
     </>;
 <<<<<<< HEAD
-  );
+<<<<<<< HEAD
 =======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+  );
             </TableRow>))}
         </TableBody>;
       </Table>;
@@ -1544,6 +1637,7 @@ if ( {) {
           </DialogContent>;
         </Dialog>)}
     </>);
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
   ),; import {
@@ -1797,4 +1891,6 @@ return (<> <Table> <TableHeader> <TableRow> <TableHead>Reviewer</TableHead> <Tab
     </>
   )
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }

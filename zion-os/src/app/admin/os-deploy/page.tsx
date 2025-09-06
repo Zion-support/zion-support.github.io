@@ -1,9 +1,12 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
 'use client';
 import React, { useState } from 'react';
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export default function OSDeployPage() {
 
 export default function OSDeployPage() {;
@@ -14,18 +17,42 @@ const [loading, setLoading] = useState(false);
     // Simulate deployment
     setTimeout(() => {
       setLoading(false);
-
     }, 3000);
   }
-;
-  const [message, set_message] = useState ('');
-  const [message_type, setMessageType] = useState<'success' | 'error' | 'info'>('success');
-;
-  // Mock feature keys and functions;
+  const [message, setMessage] = useState('');
+  const [messageType, setMessageType] = useState<'success' | 'error' | 'info'>('success');
+  // Mock feature keys and functions
   const FeatureKeys = ['ai', 'blockchain', 'governance', 'treasury'];
+<<<<<<< HEAD
 ;
   const label_for = (key: string) =>: any {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  const labelFor = (key: string) => {
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+'use client';
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     const labels: { [key: string]: string } = {
       ai: 'AI Integration'
       blockchain: 'Blockchain Technology'
@@ -46,7 +73,10 @@ ai: 'Advanced AI capabilities and automation'
 =======
 =======
 'use client';
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 export default function OSDeployPage() {;
   const [loading, setLoading] = useState(false);
@@ -76,6 +106,7 @@ export default function OSDeployPage() {;
       treasury: 'Treasury Management';
     }
     return labels[key] || key;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -108,6 +139,9 @@ export default function OSDeployPage() {;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+        {/* Header */}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <input
                   id="instanceName"
                   name="instanceName"
@@ -115,6 +149,7 @@ export default function OSDeployPage() {;
                   required
                   className="w-full bg-zinc-900/50 border border-white/20 rounded-lg p-3 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all"
                   placeholder="My Digital Economy"
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -189,6 +224,8 @@ ai: 'Advanced AI capabilities and automation',
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   <option value="GENERAL">General</option>;
                   <option value="HEALTH">Healthcare</option>;
                   <option value="EDUCATION">Education</option>;
@@ -198,6 +235,7 @@ ai: 'Advanced AI capabilities and automation',
                   <option value="TECH">Technology</option>;
                 </select>;
               </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -212,12 +250,15 @@ ai: 'Advanced AI capabilities and automation',
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <input
                   id="subdomain"
                   name="subdomain"
                   type="text"
                   className="w-full bg-zinc-900/50 border border-white/20 rounded-lg p-3 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all"
                   placeholder="latam"
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -231,11 +272,14 @@ ai: 'Advanced AI capabilities and automation',
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <input
                   id="defaultLanguage"
                   name="defaultLanguage"
                   type="text"
                   className="w-full bg-zinc-900/50 border border-white/20 rounded-lg p-3 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all"
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -249,12 +293,15 @@ ai: 'Advanced AI capabilities and automation',
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <input
                   id="region"
                   name="region"
                   type="text"
                   className="w-full bg-zinc-900/50 border border-white/20 rounded-lg p-3 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all"
                   placeholder="North America"
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -269,6 +316,8 @@ ai: 'Advanced AI capabilities and automation',
               <div className="space-y-2">
                 <label htmlFor="tokenSystem" className="block text-sm font-medium text-white/90">Token System</label>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 />;
               </div>;
             </div>;
@@ -284,6 +333,7 @@ ai: 'Advanced AI capabilities and automation',
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">;
               <div className="space-y-2">;
                 <label className="block text-sm font-medium text-white/90">Token System</label>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -358,11 +408,17 @@ ai: 'Advanced AI capabilities and automation',
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+                <select
+                  id="tokenSystem"
+                  name="tokenSystem"
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   <option value="SHARED">ZION$ Shared</option>;
                   <option value="LOCAL">Local Token</option>;
                   <option value="HYBRID">Hybrid System</option>;
                 </select>;
               </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -384,10 +440,13 @@ ai: 'Advanced AI capabilities and automation',
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   <option value="DAO FULL">Full DAO</option>;
                   <option value="HYBRID">Hybrid Governance</option>;
                 </select>;
               </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -435,6 +494,8 @@ ai: 'Advanced AI capabilities and automation',
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   <input
 =======
               <div className="space - y-2">;
@@ -483,6 +544,7 @@ ai: 'Advanced AI capabilities and automation',
                     name="features";
                     value={k}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -502,12 +564,15 @@ ai: 'Advanced AI capabilities and automation',
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <input
                   id="treasury"
                   type="checkbox"
                   name="treasury"
                   aria-label="Treasury Management"
                   className="w-4 h-4 text-blue-600 bg-zinc-900 border-white/20 rounded focus:ring-blue-500 focus:ring-2"
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -525,12 +590,15 @@ ai: 'Advanced AI capabilities and automation',
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <input
                   id="governance"
                   type="checkbox"
                   name="governance"
                   aria-label="Governance System"
                   className="w-4 h-4 text-blue-600 bg-zinc-900 border-white/20 rounded focus:ring-blue-500 focus:ring-2"
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -548,12 +616,15 @@ ai: 'Advanced AI capabilities and automation',
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <input
                   id="moderation"
                   type="checkbox"
                   name="moderation"
                   aria-label="Content Moderation"
                   className="w-4 h-4 text-blue-600 bg-zinc-900 border-white/20 rounded focus:ring-blue-500 focus:ring-2"
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -571,12 +642,15 @@ ai: 'Advanced AI capabilities and automation',
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <input
                   id="partnerships"
                   type="checkbox"
                   name="partnerships"
                   aria-label="Partnership Management"
                   className="w-4 h-4 text-blue-600 bg-zinc-900 border-white/20 rounded focus:ring-blue-500 focus:ring-2"
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -669,10 +743,13 @@ ai: 'Advanced AI capabilities and automation',
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 </div>;
               </label>;
             </div>;
           </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
             </button>;
@@ -682,15 +759,20 @@ ai: 'Advanced AI capabilities and automation',
             </button>;
             {message && (;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <div
                 className={`mt-6 p-4 rounded-lg ${
                   messageType === 'success'
                     ? 'bg-green-900/20 border border-green-500/20 text-green-400'
                     : 'bg-red-900/20 border border-red-500/20 text-red-400'
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 }`}
               >
 "use client",;
@@ -1080,6 +1162,7 @@ export default function AdminDeployPage() {;
                   ? 'bg-green-900/20 border border-green-500/20 text-green-400';
                   : 'bg-red-900/20 border border-red-500/20 text-red-400';
               }`}>;
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -1100,19 +1183,54 @@ export default function AdminDeployPage() {;
 }
 
 =======
+=======
+                {message}
+              </div>;
+            )}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           </div>
         </form>
       </div>
     </div>
   );
 }
+                }`}>;
+                {message}
+              </div>;
+            )}
           </div>;
         </form>;
       </div>;
     </div>;
   );
+          {/* Submit Button */}
+          <div className="text - center">;
+            <button;
+              disabled={loading}
+              className="btn - primary text - lg px - 12 py - 4 disabled:opacity - 50 disabled:cursor - not - allowed hover - lift";
+            >;
+              {loading ? 'Deploying...' : 'Deploy Digital Economy'}
+            </button>;
+            {message && (
+              <div;
+                className={`mt - 6 p - 4 rounded - lg ${
+                  message_type === 'success';
+                    ? 'bg - green - 900 / 20 border border - green - 500 / 20 text - green - 400';
+                    : 'bg - red - 900 / 20 border border - red - 500 / 20 text - red - 400';
+                }`}
+              >;
+                {message}
+              </div>)}
+          </div>;
+        </form>;
+      </div>;
+    </div>);
 }
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ;
 function labelFor(key: string) {;
   switch (key) {;
@@ -1155,8 +1273,11 @@ function getFeatureDescription(key: string) {;
 }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

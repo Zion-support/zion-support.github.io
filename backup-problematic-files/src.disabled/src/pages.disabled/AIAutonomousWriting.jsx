@@ -9,4 +9,7 @@ const AIAutonomousWriting = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default AIAutonomousWriting;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

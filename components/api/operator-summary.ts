@@ -1,11 +1,15 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     );
     const metrics = await r && r.json();
     const jobs24 =
 
+<<<<<<< HEAD
 =======
 export default async function handler(
   req: NextApiRequest
@@ -19,6 +23,8 @@ export default async function handler(
     const metrics = await r && r.json();
     const jobs24 =
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       metrics?.marketplace?.find((m: any) => m && m.key === 'jobs_24h')?.value || 0;
     const voters =
       metrics?.dao?.find((m: any) => m && m.key === 'voter_participation')?.value ||
@@ -28,6 +34,7 @@ export default async function handler(
     const tx =
       metrics?.token?.find((m: any) => m && m.key === 'tx_volume_daily')?.value || 0;
     const instances =
+<<<<<<< HEAD
       metrics?.multiverse?.find((m: any) => m && m.key === 'active_instances')
         ?.value || 0;
 <<<<<<< HEAD
@@ -35,6 +42,8 @@ export default async function handler(
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     const summary = [
       `Marketplace steady: ${jobs24} jobs posted in the last 24h, fill rates improving`
       `DAO engagement at ${voters}% voter participation with active delegates`
@@ -42,6 +51,7 @@ export default async function handler(
       `Multiverse scale: ${instances} active sub-instances with cross-instance flows`
       `Treasury stable and contributors earning consistently across regions`
     ];
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -70,6 +80,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   } catch (e) {
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ;
 export default async /**
  * handler - Function description
@@ -103,6 +115,7 @@ function handler() {
   } catch (e) {
     res.status (200).json ({ summary: [], error: 'Failed to compute summary' });
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   }
 }
@@ -113,3 +126,7 @@ function handler() {
   }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  }
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

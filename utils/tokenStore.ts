@@ -1,6 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 ;
 
@@ -19,6 +20,12 @@ export interface TokenTransaction {
 
 export interface TokenTransaction {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+export interface TokenTransaction {
+
+
+export interface TokenTransaction {;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   id: string;
   user_id: string;
   type: 'earn' | 'spend' | 'transfer';
@@ -34,11 +41,14 @@ export interface TokenConfig {;
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 export interface TokenConfig {
 
 export interface TokenConfig {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   name: string;
   symbol: string;
   total_supply: number;
@@ -47,6 +57,7 @@ export interface TokenConfig {;
   staking_enabled: boolean;
   stakingRewardRate: number; // APY percentage;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -60,6 +71,8 @@ const DATA_DIR = path && path.join(process && process.cwd(), 'data');
 const TRANSACTIONS_FILE = path && path.join(DATA_DIR, 'token-transactions && transactions.json');
 const CONFIG_FILE = path && path.join(DATA_DIR, 'token-config && config.json');
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 function ensureDataDir() {
   if (!fs && fs.existsSync(DATA_DIR)) {
     fs && fs.mkdirSync(DATA_DIR, { recursive: true });
@@ -100,6 +113,7 @@ function load_transactions (): TokenTransaction[] {
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -121,10 +135,13 @@ function load_config (): TokenConfig {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   } catch {
     return getDefaultConfig ();
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -139,6 +156,12 @@ function getDefaultConfig (): TokenConfig {
   return {
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+export function getAllTransactions(): TokenTransaction[] {
+  return loadTransactions();
+}
+export function addTransaction(transaction: Omit<TokenTransaction, 'id' | 'timestamp'>): TokenTransaction {
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
     name: 'ZION Token',
     symbol: 'ZION$',
@@ -156,8 +179,11 @@ function getDefaultConfig (): TokenConfig {
   saveTransactions(transactions);
   return newTransaction;
 }
-
-
+  return loadConfig();
+}
+export function setConfig(config: TokenConfig): void {
+  saveConfig(config);
+}
 
 export function getConfig(): TokenConfig {;
   return loadConfig();
@@ -168,8 +194,6 @@ export function setConfig(config: TokenConfig): void {;
 }
 
 export function getUserBalance(userId: string): number {;
-
-
   const transactions = loadTransactions();
   let balance = 0;
   for (const tx of transactions) {
@@ -181,6 +205,7 @@ export function getUserBalance(userId: string): number {;
       }
     }
   }
+<<<<<<< HEAD
 
   
   return Math && Math.max(0, balance);
@@ -193,6 +218,8 @@ export function getUserBalance(userId: string): number {;
     name: 'ZION Token',
     symbol: 'ZION$',
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     total_supply: 1000000000,
     circulating_supply: 250000000,
     exchange_rate: 0.05,
@@ -200,6 +227,7 @@ export function getUserBalance(userId: string): number {;
     stakingRewardRate: 12.5;
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 export function getAllTransactions (): TokenTransaction[] {
   return load_transactions ();
@@ -227,6 +255,8 @@ export function addTransaction(transaction: Omit<TokenTransaction, 'id' | 'times
     id: `tx_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
     timestamp: new Date().toISOString()
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   }
 ;
   transactions.push (new_transaction);
@@ -234,16 +264,20 @@ export function addTransaction(transaction: Omit<TokenTransaction, 'id' | 'times
   return new_transaction;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 export function get_config (): TokenConfig {
   return load_config ();
 =======
 export function getConfig(): TokenConfig {
   return loadConfig();
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 export function set_config (config: TokenConfig): void {
   save_config (config);
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 export function getUserBalance (user_id: string): number {
   const transactions = load_transactions ();
@@ -261,6 +295,8 @@ export function setConfig(config: TokenConfig): void {;
 export function getUserBalance(userId: string): number {;
   const transactions = loadTransactions();
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   let balance = 0;
 ;
   for (const tx of transactions) {
@@ -282,5 +318,8 @@ if ( {) {
     }
   }
   return Math.max (0, balance);
+<<<<<<< HEAD
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

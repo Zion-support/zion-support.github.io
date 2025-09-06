@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 import * as React from 'react'
@@ -19,6 +20,10 @@ import Link from 'next/link';
 import { useTranslation } from 'react-i18next';
 export interface EmptyStateProps {;
 import * as React from 'react';
+=======
+import * as React from 'react'
+import * as React from 'react'
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {
   RefreshCw
   Wifi
@@ -33,6 +38,7 @@ import Link from 'next/link'
 import { useTranslation } from 'react-i18next'
 
 export interface EmptyStateProps {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 const defaultContent = {
@@ -124,6 +130,16 @@ export function EmptyState({
     | 'loading';
 
 
+=======
+  type: 'products' | 'categories' | 'talent' | 'equipment' | 'search' | 'error' | 'network' | 'loading';
+  title?: string;
+  description?: string;
+  action?: {
+    label: string;
+    onClick: () => void
+  }
+  icon?: React.ReactNode
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import * as React from 'react',;
 import { RefreshCw, Wifi, Server, ShoppingCart, Users, Wrench, Lightbulb } from 'lucide-react';
 import { Button } from '@/components/ui/button',;
@@ -135,6 +151,7 @@ export interface EmptyStateProps {;
   description?: string,;
   action?: {;
     label: string,;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -185,11 +202,20 @@ export interface EmptyStateProps {;
     onClick: () => void;
   };
   icon?: React && React.ReactNode;
+=======
+    onClick: () => void;
+  },;
+  icon?: React.ReactNode;
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 const defaultContent = {
   products: {
     icon: <ShoppingCart className="w-16 h-16 text-gray-400" />,
@@ -222,6 +248,7 @@ const defaultContent = {
   loading: {
     icon: <RefreshCw className="w-16 h-16 text-blue-400 animate-spin" />,
     title: 'Loading...',
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -276,6 +303,8 @@ export function EmptyState({
           className='flex items-center gap-2'        >
           <RefreshCw className='w-4 h-4' />
     description: 'We\'re fetching the latest data for you. This should only take a moment.'}},
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 export function EmptyState({
   type,
@@ -310,22 +339,9 @@ export function EmptyState({
           className="flex items-center gap-2"
         >
           <RefreshCw className="w-4 h-4" />
-      
-
-
-      
-      {type === 'error' && (
-        </Button>
-      )}
-      
-        <div className="mt-4 text-sm text-gray-500 dark:text-gray-400">
-          <p>If this issue continues, please contact our support team.</p>
-        </div>
-      )}
           {action.label}
         </Button>
       )}
-      
 
       
       {type === 'error' && (
@@ -333,6 +349,7 @@ export function EmptyState({
           <p>If this issue continues, please contact our support team.</p>
         </div>
       )}
+<<<<<<< HEAD
       
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       {type === 'network' && (
@@ -477,6 +494,8 @@ export function ProductsEmptyState ({
   onAddProduct,
   is_authenticated = false,
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }: {
   on_retry?: () => void;
   onAddProduct?: () => void;
@@ -517,25 +536,21 @@ export function NetworkErrorState({ onRetry }: { onRetry?: () => void }) {
 export function ServerErrorState({ onRetry }: { onRetry?: () => void }) {
       />
   )
-} 
-};
-;
-}
-}
-}
-}
-}
-}
-}
 
+      {type === 'network' && (
+        <div className="mt-4 text-sm text-gray-500 dark:text-gray-400">
+          <p>
             {t('general.check_status_page')}
             {" "}
             <Link href="https://status.zion.ai" className="underline">
               {t('general.status_page')}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             </Link>;
             .;
           </p>;
@@ -543,6 +558,7 @@ export function ServerErrorState({ onRetry }: { onRetry?: () => void }) {
       )}
     </div>;
   );
+<<<<<<< HEAD
 
 // Specific empty state variants for quick use;
 export function ProductsEmptyState(): any ({;
@@ -631,19 +647,27 @@ export function ServerErrorState({ onRetry }: { onRetry?: () => void }) {
 }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  const action = onAddProduct;
+    ? {;
+        label: isAuthenticated ? 'Add Product' : 'Login to Add Product',;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <EmptyState
       type="categories"
       action={onRetry ? { label: 'Refresh Categories', onClick: onRetry } : undefined}
     />;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   );
 }
-
 
   const customDescription = isAuthenticated;
     ? "We're working on adding new products to our marketplace. Check back soon for exciting new offerings, or add your own!";
     : "We're working on adding new products to our marketplace. Check back soon for exciting new offerings, or log in to add your own!";
+<<<<<<< HEAD
 
       />;
 =======
@@ -652,8 +676,17 @@ export function ServerErrorState({ onRetry }: { onRetry?: () => void }) {
 
 export function CategoriesEmptyState(): any ({ onRetry }: { onRetry?: () => void }) {;
       />;
+=======
+  return (;
+    <EmptyState;
+      type="products";
+      action={action}
+      description={customDescription}
+    />;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   );
 
+<<<<<<< HEAD
 export function TalentEmptyState(): any ({ onRetry }: { onRetry?: () => void }) {;
       />;
   );
@@ -674,6 +707,8 @@ export function ServerErrorState(): any ({ onRetry }: { onRetry?: () => void }) 
       />;
   );
 } ;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 
@@ -702,7 +737,10 @@ export function ServerErrorState ({ on_retry }: { on_retry?: () => void }) {
       />);
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

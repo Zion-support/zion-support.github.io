@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -9,20 +10,17 @@ import Head from 'next/head';
 
 import {
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   Check,
   Shield,
   ShieldAlert,
   Lock,
   Phone,
   Mail,
-  MapPin,;
-  ExternalLink,;
-
 } from 'lucide-react';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
-
-
 
 export default function AIGuardrailsPage() {
   const contactInfo = {
@@ -31,7 +29,6 @@ export default function AIGuardrailsPage() {
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com',;
   };
-
 
   const features = [
     'Prompt/output policy engine with allow/deny lists'
@@ -79,6 +76,7 @@ import Head from 'next/head';
         <link rel='canonical' href='https://ziontechgroup && ziontechgroup.com/ai-guardrails' />;
       </Head>;
 
+<<<<<<< HEAD
 
       <section className='min-h-screen pt-28 pb-20 px-4'>;
         <div className='max-w-6xl mx-auto'>;
@@ -158,10 +156,13 @@ function AIGuardrailsPage() {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               Safety and governance for LLM apps with minimal integration and;
               strong guarantees.;
             </p>;
           </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
                     className='w-full bg-gradient-to-r from-rose-500 to-orange-600 text-white'>;
@@ -503,6 +504,8 @@ export default function AIGuardrailsPage() {
 				</div>
 			</section>
 		</UltraAdvancedFuturisticBackground>
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       className='flex items - start gap - 2 text - gray - 200';
                     >;
                       <Check className='w - 5 h - 5 text - emerald - 400 mt - 0.5' />{' '}
@@ -532,31 +535,12 @@ export default function AIGuardrailsPage() {
               </div>;
             </Card>;
           </div>;
-
-          <div className='grid grid - cols - 1 md:grid - cols - 3 gap - 6 mb - 12'>;
-            <Card className='p - 6 bg - black / 30 border border - purple - 500 / 30'>;
-              <h3 className='text - lg font - semibold mb - 2'>SDKs & Proxies</h3>;
-              <p className='text - gray - 300 text - sm'>;
-                Drop - in Node / Python SDKs and gateway proxy for provider - agnostic;
-                guardrail enforcement.;
-              </p>;
-            </Card>;
-            <Card className='p - 6 bg - black / 30 border border - emerald - 500 / 30'>;
-              <h3 className='text - lg font - semibold mb - 2'>Compliance</h3>;
-              <p className='text - gray - 300 text - sm'>;
-                SOC 2 - friendly audit logs, policy - as - code, and retention;
-                controls for evidence collection.;
-              </p>;
-            </Card>;
-            <Card className='p - 6 bg - black / 30 border border - cyan - 500 / 30'>;
-              <h3 className='text - lg font - semibold mb - 2'>Integrations</h3>;
-              <p className='text - gray - 300 text - sm'>;
-
                 Slack, PagerDuty, Datadog and SIEM integrations for alerting and;
                 incident response.;
               </p>;
             </Card>;
           </div>;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
@@ -568,6 +552,11 @@ export default function AIGuardrailsPage() {
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+	);
+}
+	);
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     </UltraAdvancedFuturisticBackground>);					<div className="bg - black / 20 border border - rose - 500 / 30 rounded - 2xl p - 6">;
       <h3 className="text - xl font - semibold text - white mb - 4 text - center">Contact</h3>;
       <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 6 text - sm">;
@@ -584,6 +573,7 @@ export default function AIGuardrailsPage() {
   </UltraAdvancedFuturisticBackground>);
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 );
@@ -592,3 +582,5 @@ export default function AIGuardrailsPage() {
 	);
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

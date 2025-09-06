@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState, useEffect  } from 'react';
 import { useAuth  } from '@/hooks/useAuth';
 import { useResume  } from '@/hooks/useResume';
@@ -198,6 +199,8 @@ ursor/fix-website-loading-errors-and-merge-6662
     )
   }
   
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   if (isLoading) {
     return (
       <div className="flex justify-center items-center h-64">
@@ -205,7 +208,6 @@ ursor/fix-website-loading-errors-and-merge-6662
       </div>
     )
   }
-  
   if (error) {
     return (
       <Alert variant="destructive" className="mb-6">
@@ -215,23 +217,21 @@ ursor/fix-website-loading-errors-and-merge-6662
       </Alert>
     )
   }
+<<<<<<< HEAD
   
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   if (!resume && !showNewResumeForm) {
     return <EmptyResumeState onCreateClick={() => setShowNewResumeForm(true)} />
   }
   if (showNewResumeForm) {
-
-  if (!resume && !showNewResumeForm) {;
-    return <EmptyResumeState onCreateClick={() => setShowNewResumeForm(true)} />;
-  }
-
-  if (showNewResumeForm) {;
     return (
       <CreateResumeForm
         onCreateResume = {handleCreateNewResume,}
         onCancel = {(,) => setShowNewResumeForm(false),}
         isLoading = {isLoading,}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -271,6 +271,12 @@ ursor/fix-website-loading-errors-and-merge-6662
   }
   
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+
+  
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ;
   if (!resume && !showNewResumeForm) {;
     return <EmptyResumeState onCreateClick={() => setShowNewResumeForm(true)} />;
@@ -290,10 +296,14 @@ ursor/fix-website-loading-errors-and-merge-6662
 
   return (
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <div className="space-y-6">;
       <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">;
         <h1 className="text-2xl font-bold">Resume Builder</h1>;
         <div className="flex gap-4 flex-wrap items-center">;
+<<<<<<< HEAD
           {resume && <ResumeVersionSelector currentResume={resume} onResumeChange={handleResumeChange} />}
 
 
@@ -312,6 +322,9 @@ ursor/fix-website-loading-errors-and-merge-6662
           <Button;
             onClick={() => setShowNewResumeForm(true)}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+          {resume && <ResumeVersionSelector currentResume={resume} onResumeChange={handleResumeChange} />}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             variant="outline"
             size="sm"
             className="gap-2"
@@ -322,6 +335,7 @@ ursor/fix-website-loading-errors-and-merge-6662
         </div>
       </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -329,6 +343,8 @@ ursor/fix-website-loading-errors-and-merge-6662
       
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
       <Card>
@@ -340,6 +356,7 @@ ursor/fix-website-loading-errors-and-merge-6662
             <h2 className="text-xl font-semibold">{resume?.basic_info?.title |'My Resume'}</h2>
             <ResumeProgress resume={resume} progress={progress} />
           </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -366,6 +383,9 @@ ursor/fix-website-loading-errors-and-merge-6662
 ursor/fix-website-loading-errors-and-merge-6662
           <Tabs value={activeTab} onValueChange={setActiveTab}>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
           
 
@@ -436,6 +456,7 @@ if ( {) {
             {resume && (;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
               <ResumeStepContent
 =======
             {resume && (
@@ -445,12 +466,21 @@ if ( {) {
             {resume && (
               <ResumeStepContent 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+              <ResumeStepContent
+          <Tabs value={activeTab} onValueChange={setActiveTab}>
+            <ResumeSteps
+              steps = {RESUME_STEPS,}
+              activeTab = {activeTab,}
+              onChange = {setActiveTab,}
+            />
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 activeTab = {activeTab,}
                 resume = {resume as Resume,}
                 onNextStep = {nextStep,}
                 onPrevStep = {prevStep,}
-              />
             )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -512,11 +542,14 @@ if ( {) {
               />;
             )}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           </Tabs>;
         </CardContent>;
       </Card>;
     </div>;
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -578,3 +611,7 @@ if ( {) {
 }</Tabs> </CardContent> </Card> </div>);
 }'"}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+}
+;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

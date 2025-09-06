@@ -1,9 +1,12 @@
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
 
 =======
 import React, { useState, useEffect, useRef } from 'react';
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { format  } from 'date-fns';
 import { MessageSquare  } from 'lucide-react';
 import { useMessaging  } from '@/context/MessagingContext';
@@ -14,7 +17,10 @@ import { useAuth  } from '@/hooks/useAuth';
 import { MessageBubble  } from './MessageBubble';
 import { DateDivider } from './DateDivider';
 export function ConversationDetailView() {
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {format} from 'date-fns';
 import {MessageSquare} from 'lucide-react';
 import {useMessaging} from '@/context/MessagingContext';
@@ -26,10 +32,13 @@ import {MessageBubble} from './MessageBubble';
 import {DateDivider} from './DateDivider';
 export function ConversationDetailView() {;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const { user } = useAuth();
   const {
     activeConversation;
@@ -46,6 +55,7 @@ export function ConversationDetailView() {;
     }
   }, [activeConversation?.id, loadMessages]);
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
   useEffect(() => {
@@ -60,6 +70,8 @@ export function ConversationDetailView() {;
     await sendMessage(activeConversation.id, messageText);
     setMessageText('')
   }
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useState, useEffect, useRef } from 'react',;
 import { format } from 'date-fns',;
 import { MessageSquare } from 'lucide-react',;
@@ -85,15 +97,22 @@ export function ConversationDetailView() {;
       loadMessages(activeConversation.id);
     }
   }, [activeConversation?.id, loadMessages]),
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {format} from 'date-fns';
 
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {format} from 'date - fns';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+import React, { useState, useEffect, useRef } from 'react';
 import {MessageSquare} from 'lucide-react';
 import {use_messaging} from '@/context / MessagingContext';
 import {Button} from '@/components / ui / button';
@@ -107,16 +126,22 @@ import {DateDivider} from './DateDivider';
 
 
 
+<<<<<<< HEAD
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   
   useEffect(() => {
     scrollToBottom()
   }, [activeMessages]),
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })
@@ -129,6 +154,7 @@ import {DateDivider} from './DateDivider';
     await sendMessage(activeConversation.id, messageText),
     setMessageText('')
   },
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   useEffect(() => {;
     scrollToBottom();
@@ -147,6 +173,10 @@ import {DateDivider} from './DateDivider';
   };
 
   if (!activeConversation) {;
+=======
+  
+  if (!activeConversation) {
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     return (
       <div className="flex-1 flex flex-col items-center justify-center p-8">;
         <MessageSquare className="h-16 w-16 text-zion-purple/40 mb-4" />;
@@ -158,6 +188,7 @@ import {DateDivider} from './DateDivider';
     );
   }
 
+<<<<<<< HEAD
 
   
 
@@ -178,6 +209,8 @@ import {DateDivider} from './DateDivider';
   }
   
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   // Group messages by date
   const groupedMessages: { date: string, messages: any[] }[] = []
   activeMessages.forEach(message => {
@@ -192,6 +225,7 @@ import {DateDivider} from './DateDivider';
       })
     }
   });
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -202,11 +236,14 @@ import {DateDivider} from './DateDivider';
 =======
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ;
 
   // Group messages by date;
   const groupedMessages: { date: string, messages: any[] }[] = [],;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   activeMessages && activeMessages.forEach(message => {;
     const messageDate = format(new Date(message && message.created_at), 'yyyy-MM-dd');
@@ -217,10 +254,13 @@ import {DateDivider} from './DateDivider';
     const messageDate = format(new Date(message && message.created_at), 'yyyy-MM-dd');
     const existingGroup = groupedMessages && groupedMessages.find(group => group && group.date === messageDate);
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     if (existingGroup) {;
       existingGroup && existingGroup.messages.push(message);
     } else {;
       groupedMessages && groupedMessages.push({;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
   const hasContextData = activeConversation.context_data &&
@@ -236,10 +276,13 @@ import {DateDivider} from './DateDivider';
     } else {;
       groupedMessages.push({;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         date: messageDate,;
         messages: [message];
       });
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   }),
@@ -257,95 +300,18 @@ import {DateDivider} from './DateDivider';
       {/* Header */}
 =======
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   }),
   
   const hasContextData = activeConversation.context_data && 
     (activeConversation.context_data.title || activeConversation.context_data.description),
-  });
-  const hasContextData = activeConversation && activeConversation.context_data && ;
-    (activeConversation && activeConversation.context_data.title || activeConversation && activeConversation.context_data.description);
-  return (
 
-import React, { useState, useEffect, useRef } from 'react',;
-import { format } from 'date-fns',;
-import { MessageSquare } from 'lucide-react',;
-import { useMessaging } from '@/context/MessagingContext',;
-import { Button } from '@/components/ui/button',;
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar',;
-import { AspectRatio } from '@/components/ui/aspect-ratio',;
-import { useAuth } from '@/hooks/useAuth',;
-import { MessageBubble } from './MessageBubble',;
-import { DateDivider } from './DateDivider',;
-;
-export function ConversationDetailView() {;
-  const { user } = useAuth(),;
-  const { ;
-    activeConversation,;
-    activeMessages, ;
-    sendMessage, ;
-    loadMessages;
-  } = useMessaging(),;
-  const [messageText, setMessageText] = useState(''),;
-  const messagesEndRef = useRef<HTMLDivElement>(null),;
-  ;
-  useEffect(() => {;
-    if (activeConversation) {;
-      loadMessages(activeConversation.id),;
-    }
-  }, [activeConversation?.id, loadMessages]),;
-  ;
-  useEffect(() => {;
-    scrollToBottom(),;
-  }, [activeMessages]),;
-;
-  const scrollToBottom = () => {;
-    messagesEndRef.current?.scrollIntoView({ behavior:'smooth' }),;
-  },;
-  ;
-  const handleSendMessage = async (e:React.FormEvent) => {;
-    e.preventDefault(),;
-    if (!messageText.trim() || !activeConversation) return,;
-    ;
-    await sendMessage(activeConversation.id, messageText),;
-    setMessageText(''),;
-  },;
-  ;
-  if (!activeConversation) {;
-    return (;
-      <div className="flex-1 flex flex-col items-center justify-center p-8">;
-        <MessageSquare className="h-16 w-16 text-zion-purple/40 mb-4" />;
-        <h3 className="text-xl font-medium text-white mb-2">No Conversation Selected</h3>;
-        <p className="text-zion-slate text-center max-w-md">;
-          Select a conversation from the list to view and send messages.;
-        </p>;
-      </div>;
-    ),;
-  }
-  ;
-  // Group messages by date;
-  const groupedMessages:{ date:string, messages:any[] }[] = [],;
-  ;
-  activeMessages.forEach(message => {;
-    const messageDate = format(new Date(message.created_at), 'yyyy-MM-dd'),;
-    const existingGroup = groupedMessages.find(group => group.date === messageDate),;
-    ;
-    if (existingGroup) {;
-      existingGroup.messages.push(message),;
-    } else {;
-      groupedMessages.push({;
-        date:messageDate,;
-        messages:[message];
-      }),;
-    }
-  }),;
-  ;
-  const hasContextData = activeConversation.context_data && ;
-    (activeConversation.context_data.title || activeConversation.context_data.description),;
-;
-  return (;
+  return (
     <div className="flex-1 flex flex-col h-full">;
       {/* Header */}
+<<<<<<< HEAD
   
   const hasContextData = activeConversation.context_data && 
     (activeConversation.context_data.title || activeConversation.context_data.description),
@@ -383,11 +349,14 @@ export function ConversationDetailView() {;
               {activeConversation.other_user.user_type === 'talent' ? 'Talent' : 
                activeConversation.other_user.user_type === 'employer' ? 'Employer' : 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                activeConversation.other_user.user_type === 'admin' ? 'Admin' : 'User'}
             </div>
           </div>
         </div>
       </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
       <div className="p-4 border-b border-zion-purple/20 bg-zion-blue-dark/30">;
@@ -497,9 +466,12 @@ if ( {) {
   const hasContextData = active_conversation.context_data &&;
     (active_conversation.context_data.title || active_conversation.context_data.description);
 ;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
-    <div className="flex - 1 flex flex - col h - full">;
+    <div className="flex-1 flex flex-col h-full">;
       {/* Header */}
+<<<<<<< HEAD
       <div className="p - 4 border - b border - zion - purple / 20 bg - zion - blue - dark / 30">;
         <div className="flex items - center gap - 3">;
           <Avatar className="h - 10 w - 10 border border - zion - purple / 20">;
@@ -528,15 +500,20 @@ if ( {) {
                activeConversation.other_user.user_type === 'employer' ? 'Employer' :;
                activeConversation.other_user.user_type === 'admin' ? 'Admin' :'User'}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             </div>;
           </div>;
         </div>;
       </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
                     src={activeConversation && activeConversation.context_data.image_url}
                     alt={activeConversation && activeConversation.context_data.title || "Context"}
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     className="object-cover"
                   />;
                 </AspectRatio>;
@@ -560,9 +537,6 @@ if ( {) {
           </div>;
         </div>;
       )}
-
-
-
       {/* Messages */}
       <div className="flex-1 overflow-y-auto p-4 space-y-4">;
         {groupedMessages && groupedMessages.length === 0 ? (;
@@ -585,17 +559,13 @@ if ( {) {
             </div>;
           ));
         )}
-
-        <div ref={messagesEndRef} />;
-      </div>;
-
-
       {/* Input */}
       <div className="p-3 border-t border-zion-purple/20">;
         <form onSubmit={handleSendMessage} className="flex items-start gap-2">;
           <textarea
             value={messageText}
 
+<<<<<<< HEAD
 =======
       ;
       {/* Context information (if available) */}
@@ -725,11 +695,17 @@ if ( {) {
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+            onChange={(e) => setMessageText(e && e.target.value)}
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <div className="p-3 border-t border-zion-purple/20">;
         <form onSubmit={handleSendMessage} className="flex items-start gap-2">;
           <textarea;
             value={messageText}
             onChange={(e) => setMessageText(e.target.value)}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
             placeholder="Type a message...";
@@ -845,6 +821,8 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           >;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             Send;
           </Button>;
         </form>;
@@ -853,6 +831,7 @@ if ( {) {
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
@@ -900,3 +879,9 @@ if ( {) {
 }
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+}
+;
+    </div>);
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

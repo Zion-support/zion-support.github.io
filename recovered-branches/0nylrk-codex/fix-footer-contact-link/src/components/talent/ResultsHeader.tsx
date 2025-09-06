@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -20,12 +21,16 @@ interface ResultsHeaderProps {
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { Loader2 } from "lucide-react";
->>>>>>> main
 interface ResultsHeaderProps {
   isLoading: boolean;
   resultCount: number;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 export function ResultsHeader({ isLoading, resultCount }: ResultsHeaderProps) {
   return (
@@ -38,15 +43,19 @@ export function ResultsHeader({ isLoading, resultCount }: ResultsHeaderProps) {
       ) : (
         <span>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import {Loader2} from "lucide-react";
 interface ResultsHeaderProps {;
   isLoading: boolean,;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   resultCount: number;
 }
 
 export function ResultsHeader(): any ({ isLoading, resultCount }: ResultsHeaderProps) {;
   return (
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
           {resultCount === 0 ? (
@@ -64,6 +73,8 @@ interface ResultsHeaderProps {;
 export function ResultsHeader({ isLoading, resultCount }: ResultsHeaderProps) {;
   return (;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <div className="flex items-center mb-6 text-zion-slate-light">;
       {isLoading ? (;
         <div className="flex items-center">;
@@ -77,6 +88,7 @@ export function ResultsHeader({ isLoading, resultCount }: ResultsHeaderProps) {;
           ) : (;
             `Found ${resultCount} talent${resultCount !== 1 ? 's' : ''}`;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 
@@ -86,6 +98,8 @@ export function ResultsHeader({ isLoading, resultCount }: ResultsHeaderProps) {;
       )}
     </div>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
           {resultCount === 0 ? (
             "No talents found. Try adjusting your filters."
@@ -94,13 +108,9 @@ export function ResultsHeader({ isLoading, resultCount }: ResultsHeaderProps) {;
 
 
           )}
-=======
-          {resultCount === 0
-            ? "No talents found. Try adjusting your filters."
-            : `Found ${resultCount} talent${resultCount !== 1 ? "s" : ""}`}
->>>>>>> main
-        </span>
+        </span>;
       )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -108,6 +118,14 @@ export function ResultsHeader({ isLoading, resultCount }: ResultsHeaderProps) {;
   );
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+    </div>
+
+  )
+}
+;
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { Loader2  } from './lucide-react';
 interface ResultsHeaderProps {
   is_loading: boolean;
@@ -131,6 +149,7 @@ function ResultsHeader() {
         </span>)}
     </div>);
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -187,3 +206,5 @@ resultCount: number
 }
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

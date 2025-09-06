@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import React, { create_context, useState, useContext, useEffect, ReactNode } from 'react';
@@ -39,6 +40,10 @@ export interface AnalyticsEvent {
   type: AnalyticsEventType
   type: AnalyticsEventType,;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  type: AnalyticsEventType,;
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   path?: string;
   component?: string;
   elementId?: string;
@@ -51,11 +56,14 @@ export interface AnalyticsEvent {
 export interface AnalyticsContextType {;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 export interface AnalyticsContextType {
 
 export interface AnalyticsContextType {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   trackEvent: (type: AnalyticsEventType, metadata?: Record<string, any>) => void;
   trackConversion: (conversionType: string, value?: number, metadata?: Record<string, any>) => void;
   pageViews: number
@@ -63,6 +71,7 @@ export interface AnalyticsContextType {;
   events: AnalyticsEvent[]
   clearEvents: () => void
 }
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -86,14 +95,20 @@ export function AnalyticsProvider({ children }: { children: ReactNode }) {
   }, [location.pathname]);
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { createContext, useState, useContext, useEffect, ReactNode } from 'react',;
 import { useLocation } from 'react-router-dom',;
 import { useAuth } from '@/hooks/useAuth',;
 import { supabase } from '@/integrations/supabase/client',;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 // Analytics event types;
 export type AnalyticsEventType =;
   | 'page_view';
@@ -109,14 +124,18 @@ export type AnalyticsEventType =;
   | 'payment_completed';
   | 'signup';
 <<<<<<< HEAD
+<<<<<<< HEAD
   | 'login';
 ;
 // Interface for analytics events;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export interface AnalyticsEvent {
   type: AnalyticsEventType
   path?: string;
   component?: string;
+<<<<<<< HEAD
 
 import {useLocation} from 'react-router-dom';
 import {useAuth} from '@/hooks/useAuth';
@@ -188,11 +207,17 @@ export interface AnalyticsContextType {;
   trackEvent: (type: AnalyticsEventType, metadata?: Record<string any>) => void,;
   trackConversion: (conversionType: string, value?: number, metadata?: Record<string any>) => void,;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  userId?: string | null;
+  metadata?: Record<string, any>;
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   pageViews: number,;
   lastEvent: AnalyticsEvent | null,;
   events: AnalyticsEvent[],;
   clearEvents: () => void;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -208,6 +233,8 @@ export interface AnalyticsContextType {;
   const trackEvent = async (type: AnalyticsEventType, metadata: Record<string, any> = {}) => {
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 const AnalyticsContext = createContext<AnalyticsContextType | undefined>(
   undefined
@@ -228,20 +255,22 @@ export function AnalyticsProvider({ children }: { children: ReactNode }) {
 
   // Track page views when location changes
   useEffect(() => {
-    trackEvent('page_view', { path: location.pathname }),
-    setPageViews((prev) => prev + 1),
+    trackEvent('page_view', { path: location.pathname })
+    setPageViews((prev) => prev + 1);
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [location.pathname]),
-
   // Function to track general analytics events
   const trackEvent = async (type: AnalyticsEventType, metadata: Record<string any> = {}) => {
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     const event: AnalyticsEvent = {
       type
       path: location.pathname
       timestamp: Date.now()
       userId: user?.id
       metadata
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -260,6 +289,8 @@ export function AnalyticsProvider({ children }: { children: ReactNode }) {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     try {
       // Store event in Supabase for persistent analytics
       await supabase.from('analytics_events').insert([{
@@ -268,12 +299,15 @@ export function AnalyticsProvider({ children }: { children: ReactNode }) {
         user_id: user?.id
         metadata: metadata
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
       }]);
       console.log(`Analytics event tracked: ${type}`, metadata)
     } catch (error) {
       console.error('Error logging analytics event:', error)
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     }
   }
   // Function to track conversion events
@@ -298,6 +332,7 @@ export function AnalyticsProvider({ children }: { children: ReactNode }) {
         lastEvent;
         events;
         clearEvents
+<<<<<<< HEAD
 const AnalyticsContext = createContext<AnalyticsContextType | undefined>(;
   undefined;
 );
@@ -308,6 +343,14 @@ export function AnalyticsProvider(): any ({ children }: { children: ReactNode })
   const location = useLocation();
   const { user } = useAuth();
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+      }]),
+      
+      // // // console.log(`Analytics event tracked: ${type}`, metadata)
+    } catch (error) {
+      console.error('Error logging analytics event:', error)
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   element_id?: string;
   timestamp: number,
   user_id?: string | null;
@@ -362,6 +405,7 @@ function AnalyticsProvider() {
         user_id: user?.id,
         metadata: metadata;
       }]);
+<<<<<<< HEAD
 ;
       console.log (`Analytics event tracked: ${type}`, metadata);
 <<<<<<< HEAD
@@ -448,76 +492,30 @@ export interface AnalyticsContextType {;
   lastEvent:AnalyticsEvent | null,;
   events:AnalyticsEvent[],;
   clearEvents:() => void;
+=======
+
+      }}
+    >
+      {children}
+    </AnalyticsContext.Provider>
+  )
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
-      }]),
-      
-      // // // console.log(`Analytics event tracked: ${type}`, metadata)
-    } catch (error) {
-      console.error('Error logging analytics event:', error)
-;
-const AnalyticsContext = createContext<AnalyticsContextType | undefined>(;
-  undefined;
-),;
-export function AnalyticsProvider({ children }: { children: ReactNode }) {;
-  const [pageViews, setPageViews] = useState(0),;
-  const [events, setEvents] = useState<AnalyticsEvent[]>([]),;
-  const [lastEvent, setLastEvent] = useState<AnalyticsEvent | null>(null),;
-  const location = useLocation(),;
-  const { user } = useAuth(),;
-  // Track page views when location changes;
-  useEffect(() => {;
-    trackEvent('page_view', { path: location.pathname }),;
-    setPageViews((prev) => prev + 1),;
-    // eslint-disable-next-line react-hooks/exhaustive-deps;
-  }, [location.pathname]),;
-  // Function to track general analytics events;
-  const trackEvent = async (type: AnalyticsEventType, metadata: Record<string any> = {}) => {;
-    const event: AnalyticsEvent = {;
-      type,;
-      path: location.pathname,;
-      timestamp: Date.now(),;
-      userId: user?.id,;
-      metadata;
-    },;
-    setEvents((prevEvents) => [...prevEvents, event]),;
-    setLastEvent(event),;
-    try {;
-      // Store event in Supabase for persistent analytics;
-      await supabase.from('analytics_events').insert([{;
-        event_type: type,;
-        path: location.pathname,;
-        user_id: user?.id,;
-        metadata: metadata;
-      }]),;
-      // // // console.log(`Analytics event tracked: ${type}`, metadata);
-    } catch (error) {;
-      console.error('Error logging analytics event:', error);
-    }
-  },;
-  // Function to track conversion events;
-  const trackConversion = (conversionType: string, value?: number, metadata: Record<string any> = {}) => {;
-    trackEvent('conversion', {;
-      conversionType,;
-      value,;
-      ...metadata;
-    });
-  },;
-  // Clear events (for development or testing);
-  const clearEvents = () => {;
-    setEvents([]),;
-    setLastEvent(null);
-  },;
-  return (;
-    <AnalyticsContext.Provider;
-      value={{;
-        trackEvent,;
-        trackConversion,;
-        pageViews,;
-        lastEvent,;
-        events,;
-        clearEvents;
+export const useAnalytics = (): AnalyticsContextType => {
   };
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+
+
+      }}
+    >
+    } catch (error) {
+      console.error ('Error logging analytics event:', error);
+    }
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <AnalyticsContext&& AnalyticsContext.Provider
       value={{
@@ -528,10 +526,6 @@ export function AnalyticsProvider({ children }: { children: ReactNode }) {;
         events
         clearEvents
       }}>;
-
-
-      }}
-    >
       {children}
     </AnalyticsContext && AnalyticsContext.Provider>;
   );
@@ -544,15 +538,6 @@ export const useAnalytics = (): AnalyticsContextType => {;
 
 export const useAnalytics = (): AnalyticsContextType => {;
 
-      }}
-    >
-      {children}
-    </AnalyticsContext.Provider>
-  )
-}
-export const useAnalytics = (): AnalyticsContextType => {
-
-export const useAnalytics = (): AnalyticsContextType => {;
   const context = useContext(AnalyticsContext);
   if (!context) {
     throw new Error('useAnalytics must be used within an AnalyticsProvider')
@@ -560,9 +545,9 @@ export const useAnalytics = (): AnalyticsContextType => {;
   // Cast is used here because the context default is undefined until provided
   // by `AnalyticsProvider`. The runtime check above ensures it's defined.
   return context as AnalyticsContextType
-
 ;
 export const useAnalytics = (): AnalyticsContextType => {;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
@@ -572,10 +557,13 @@ export const useAnalytics = (): AnalyticsContextType => {;
 ;
 export const useAnalytics = (): AnalyticsContextType => {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const context = useContext(AnalyticsContext);
   if (!context) {;
     throw new Error('useAnalytics must be used within an AnalyticsProvider');
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -704,3 +692,7 @@ setLastEvent (null)
   return context as AnalyticsContextType;
 };
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+};
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

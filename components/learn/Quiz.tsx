@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -50,6 +51,8 @@ type Props = {
 type Props = {
   questions: Question[]
   onComplete: (score: number) => void
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export default function Quiz({ questions, onComplete }: Props) {
 
 export default function Quiz({ questions, onComplete }: Props) {;
@@ -60,6 +63,7 @@ export default function Quiz({ questions, onComplete }: Props) {;
     0
   );
   function submit() {
+<<<<<<< HEAD
 
 
 
@@ -72,6 +76,8 @@ export default function Quiz({ questions, onComplete }: Props) {;
   );
   function submit() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     setSubmitted(true);
     onComplete(score);
   }
@@ -86,6 +92,7 @@ export default function Quiz({ questions, onComplete }: Props) {;
             {q && q.options.map((opt, i) => (;
               <label key={i} className='flex items-center gap-2'>;
                 <input
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -125,6 +132,12 @@ export default function Quiz({ questions, onComplete }: Props) {
     onComplete(score)
   }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  function submit() {
+  function submit() {
+
+    setSubmitted(true)
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
     onComplete(score)
   }
@@ -138,6 +151,7 @@ export default function Quiz({ questions, onComplete }: Props) {
               <label key={i} className="flex items-center gap-2">;
                 <input
                   type="radio"
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -224,6 +238,8 @@ function submit() {
   );
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <div className='mt - 2 text - sm'>;
               {answers[q.id] === q.answer_index ? (
                 <span className='text - green - 600'>Correct</span>) : (
@@ -239,12 +255,12 @@ function submit() {
         Submit Quiz;
       </button>;
       {submitted && (
-        <div className='text - sm'>;
           Score: {score} / {questions.length}
         </div>)}
     </div>);      <button on_click={submit} className="px - 4 py - 2 bg - blue - 600 text - white rounded">Submit Quiz</button>;
       {submitted && <div className="text - sm">Score: {score} / {questions.length}</div>}
     </div>);
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -260,25 +276,21 @@ function submit() {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
                 />
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <span>{opt}</span>
               </label>
             ))}
           </div>
           {submitted && (
-            <div className='mt-2 text-sm'>
-              {answers[q.id] === q.answerIndex ? (
-                <span className='text-green-600'>Correct</span>
-              ) : (
-                <span className='text-red-600'>Incorrect</span>              )}              {answers[q.id] === q.answerIndex ? (
-                <span className="text-green-600">Correct</span>
-              ) : (
-                <span className="text-red-600">Incorrect</span>
               )}
             </div>
           )}
         </div>
       ))}
+  )
 
+<<<<<<< HEAD
   );
 }
 
@@ -300,10 +312,17 @@ function submit() {
       {submitted && <div className="text-sm">Score: {score} / {questions.length}</div>}
     </div>
 );
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
   );
 }
 
+<<<<<<< HEAD
 }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

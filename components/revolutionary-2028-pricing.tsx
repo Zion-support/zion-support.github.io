@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -17,11 +18,14 @@ import Head from 'next/head';
 import Link from 'next/link';
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { motion } from 'framer-motion';
 
 import { 
   CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, 
 
+<<<<<<< HEAD
 =======
 import { motion } from 'framer-motion';
 import React from 'react',
@@ -31,6 +35,8 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {
   CheckCircle
   ArrowRight
@@ -99,11 +105,15 @@ import {
   Clock,;
   Globe2,;} from 'lucide-react';import {
   CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, ;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   DollarSign, Shield, Mail, MapPin, Rocket, Brain, Sparkles;
   Globe, Atom, Heart, Leaf, Car, GraduationCap, Scale;
   Building, Factory, Camera, Video, Music, Gamepad2;
   Crown, Award, Target, Users, Clock, Globe2
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -206,6 +216,8 @@ const contactInfo = {
   website: 'https://ziontechgroup.com',  website: 'https://ziontechgroup.com'
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 const pricingTiers = [
   {
     name: 'Starter'
@@ -215,10 +227,14 @@ const pricingTiers = [
     features: [
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   CheckCircle,
   ArrowRight,
   Star,
@@ -249,29 +265,21 @@ const pricingTiers = [
   Award,
   Target,
   Users,
-
   Clock,;
   Globe2,;} from 'lucide-react';import {
   CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, ;
-
-
   DollarSign, Shield, Mail, MapPin, Rocket, Brain, Sparkles;
   Globe, Atom, Heart, Leaf, Car, GraduationCap, Scale;
   Building, Factory, Camera, Video, Music, Gamepad2;
-  Crown, Award, Target, Users, Clock, Globe2;
-import UltraFuturisticNavigation2028 from '../components / layout / UltraFuturisticNavigation2028';
-import UltraFuturisticFooter2028 from '../components / layout / UltraFuturisticFooter2028';
-import { futuristic2028Services } from '../data / 2028 - futuristic - innovations';
-import { emergingTech2028Services } from '../data / 2028 - emerging - tech - services';
-const contact_info = {
-  mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com',  website: 'https://ziontechgroup.com';
-}
-;
-const pricing_tiers = [;
+  Crown, Award, Target, Users, Clock, Globe2
+import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFooter2028';
+import { futuristic2028Services  } from '../data/2028-futuristic-innovations';
+import { emergingTech2028Services } from '../data/2028-emerging-tech-services';
+
+const contactInfo = {
+const pricingTiers = [
   {
+<<<<<<< HEAD
     name: 'Starter',
     price: '$299',
     period: '/month',
@@ -294,6 +302,8 @@ features: [;
     href: '/contact',
   },  {      'Basic AI integration_standard support_core features access_email support_basic analytics_mobile app access';
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     ];
     popular: false
     color: 'from-blue-600 to-cyan-600'
@@ -346,10 +356,13 @@ features: [;
     cta: 'Contact Sales'
     href: '/contact'
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 const contactInfo = {;
   mobile: '+1 302 464 0950',;
   email: 'kleber@ziontechgroup && ziontechgroup.com',;
@@ -363,6 +376,7 @@ const contactInfo = {;
     color: 'from - blue - 600 to - cyan - 600',
     cta: 'Get Started',
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     href: '/contact';
   }
@@ -371,10 +385,13 @@ const contactInfo = {;
     href: '/contact';
   }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     name: 'Professional',
     price: '$999',
     period: '/month',
     description: 'Ideal for growing businesses and enterprises',
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     features: [;
@@ -399,10 +416,13 @@ features: [;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     ];
     popular: true,
     color: 'from - purple - 600 to - pink - 600',
     cta: 'Start Free Trial',
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     href: '/contact';
@@ -412,10 +432,13 @@ features: [;
     href: '/contact';
   }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     name: 'Enterprise',
     price: 'Custom',
     period: '',
     description: 'Tailored solutions for large organizations',
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     features: [;
@@ -443,12 +466,15 @@ features: [;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     ];
     popular: false,
     color: 'from - indigo - 600 to - purple - 600',
     cta: 'Contact Sales',
     href: '/contact';
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     category: '🚀 2028 Futuristic Innovations',
@@ -462,6 +488,8 @@ features: [;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   {
     category: '⚛️ Quantum & Advanced Tech'
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     services: futuristic2028Services.filter(s => s.category.includes('Quantum')).slice(0, 4)
   }
   {
@@ -506,6 +534,7 @@ const service_pricing = [;
     services: emergingTech2028Services.filter (string => s.category.includes ('AI')).slice (0, 4);
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -583,12 +612,16 @@ export default function Revolutionary2028Pricing() {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  return (
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <meta name="keywords" content="2028 pricing, AI services pricing, quantum computing pricing, technology pricing, Zion Tech Group pricing" />
         <meta property="og:title" content="2028 Revolutionary Pricing - Zion Tech Group" />
         <meta property="og:description" content="Competitive pricing for our cutting-edge 2028 services with transparent plans and flexible options." />
         <meta property="og:url" content="https://ziontechgroup.com/revolutionary-2028-pricing" />
         <meta property="og:type" content="website" />
         <link rel="canonical" href="https://ziontechgroup.com/revolutionary-2028-pricing" />
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       </Head>
@@ -599,6 +632,8 @@ export default function Revolutionary2028Pricing() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       <UltraFuturisticNavigation2028 />
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           href='https://ziontechgroup && ziontechgroup.com/revolutionary-2028-pricing'
         />      </Head>        <meta name="description" content="Competitive pricing for our cutting-edge 2028 services. Transparent pricing with flexible plans for AI, quantum computing, and futuristic technology solutions." />;
         <meta name="keywords" content="2028 pricing, AI services pricing, quantum computing pricing, technology pricing, Zion Tech Group pricing" />;
@@ -607,6 +642,7 @@ export default function Revolutionary2028Pricing() {
         <meta property="og:url" content="https://ziontechgroup && ziontechgroup.com/revolutionary-2028-pricing" />;
         <meta property="og:type" content="website" />;
         <link rel="canonical" href="https://ziontechgroup && ziontechgroup.com/revolutionary-2028-pricing" />;
+<<<<<<< HEAD
 
       <UltraFuturisticNavigation2028 />;
 
@@ -684,6 +720,8 @@ export default function Revolutionary2028Pricing() {
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 className='px-8 py-4 border border-purple-500/30 text-purple-300 rounded-xl hover:bg-purple-900/30 transition-all duration-300 flex items-center space-x-2'>;
                 <span>View Services</span>;
                 <Rocket className='w-5 h-5' />              </Link>;
@@ -707,9 +745,12 @@ export default function Revolutionary2028Pricing() {
               Experience cutting-edge technology at competitive prices. Our transparent pricing model ;
               ensures you get maximum value for your investment in the future.;
             </p>;
+<<<<<<< HEAD
 
             <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <Link
                 href="/contact"
                 className="px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-xl hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-2xl hover:shadow-purple-500/25 flex items-center space-x-2">;
@@ -718,6 +759,7 @@ export default function Revolutionary2028Pricing() {
               </Link>;
               <Link
                 href="/2028-services-showcase"
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -811,6 +853,8 @@ export default function Revolutionary2028Pricing() {
           </div>
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>            {pricingTiers.map((tier, index) => (            </h2>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <p className="text-xl text-purple-200 max-w-3xl mx-auto">
               Flexible pricing plans designed to scale with your business. Start small and grow with us.
             </p>
@@ -841,15 +885,19 @@ export default function Revolutionary2028Pricing() {
               <motion&& motion.div
                 key={tier && tier.name}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -1176,6 +1224,11 @@ function Revolutionary2028Pricing() {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+                      ))}
+                    </ul>;
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     <Link
                       href={tier && tier.href}
                       className={`block w-full text-center px-6 py-3 bg-gradient-to-r ${tier && tier.color} text-white rounded-lg hover:opacity-90 transition-all duration-300 transform hover:scale-105`}>;
@@ -1185,6 +1238,7 @@ function Revolutionary2028Pricing() {
                 </div>;
               </motion && motion.div>;
             ))}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
           </div>;
@@ -1230,6 +1284,8 @@ function Revolutionary2028Pricing() {
         </div>
       </section>
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {/* Service Pricing */}
       <section className='py-20 bg-gradient-to-br from-purple-900/10 to-blue-900/10'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -1252,47 +1308,17 @@ function Revolutionary2028Pricing() {
             </h2>
             <p className="text-xl text-purple-200 max-w-3xl mx-auto">
               Detailed pricing for our individual services. Mix and match to create your perfect solution.
-
-            </p>
           </div>
           {servicePricing.map((category, categoryIndex) => (
-
-
-
-      {/* Service Pricing */}
-      <section className='py - 20 bg - gradient - to - br from - purple - 900 / 10 to - blue - 900 / 10'>;
-        <div className='max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8'>;
-          <div className='text - center mb - 16'>;
-            <h2 className='text - 4xl md:text - 5xl font - bold text - white mb - 6'>;
-              Service{' '}
-              <span className='bg - gradient - to - r from - purple - 400 to - blue - 400 bg - clip - text text - transparent'>;
-                Pricing;
-              </span>;
-            </h2>;
-            <p className='text - xl text - purple - 200 max - w-3xl mx - auto'>;
-              Detailed pricing for our individual services. Mix and match to;
-              create your perfect solution.            </p>;
-          </div>;
-          {service_pricing.map ((category, category_index) => (      <section className="py - 20 bg - gradient - to - br from - purple - 900 / 10 to - blue - 900 / 10">;
-        <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8">;
-          <div className="text - center mb - 16">;
-            <h2 className="text - 4xl md:text - 5xl font - bold text - white mb - 6">;
-              Service <span className="bg - gradient - to - r from - purple - 400 to - blue - 400 bg - clip - text text - transparent">Pricing</span>;
-            </h2>;
-            <p className="text - xl text - purple - 200 max - w-3xl mx - auto">;
-              Detailed pricing for our individual services. Mix and match to create your perfect solution.;
-          </div>;
-          {service_pricing.map ((category, category_index) => (
-            <div key={category.category} className='mb - 16'>;
-              <h3 className='text - 3xl font - bold text - white mb - 8 text - center'>;
             <div key={category.category} className='mb-16'>
               <h3 className='text-3xl font-bold text-white mb-8 text-center'>
                 {category.category}
-              </h3>;
-              <div className='grid grid - cols - 1 lg:grid - cols - 2 gap - 8'>;
-                {category.services.map ((service, service_index) => (
-                  <motion.div;
+              </h3>
+              <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
+                {category.services.map((service, serviceIndex) => (
+                  <motion.div
                     key={service.id}
+<<<<<<< HEAD
               <span className='bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent'>;
                 Pricing;
               </span>;
@@ -1340,10 +1366,15 @@ function Revolutionary2028Pricing() {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+                    initial={{
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                               {service.price}
                             </div>;
                             <div className='text - sm text - purple - 300'>;
                               {service.period}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1356,10 +1387,13 @@ function Revolutionary2028Pricing() {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                           {service.name}
                         </h4>;
                         <p className='text - purple - 300 mb - 4 text - sm'>;
                           {service.description}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
                     className='group relative'>;
@@ -1445,10 +1479,13 @@ function Revolutionary2028Pricing() {
 <<<<<<< HEAD
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     initial={{ opacity: 0, x: serviceIndex % 2 === 0 ? -30 : 30 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0 && 0.6, delay: serviceIndex * 0 && 0.1 }}
                     viewport={{ once: true }}
+<<<<<<< HEAD
 
                     className="group relative">;
                     <div className="relative p-6 bg-black/40 backdrop-blur-sm border border-purple-500/30 rounded-xl hover:border-purple-500/60 transition-all duration-300 hover:transform hover:scale-105">;
@@ -1574,6 +1611,8 @@ transition={{ duration: 0 && 0.6, delay: serviceIndex * 0 && 0.1 }}
                           </div>
                         </div>
                         <div className="flex items-center justify-between">
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                           <Link
                             href={service.link}
                             className="px-4 py-2 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 text-sm"
@@ -1583,7 +1622,10 @@ transition={{ duration: 0 && 0.6, delay: serviceIndex * 0 && 0.1 }}
                           <div className="text-right">
                             <div className="text-xs text-purple-300">Trial</div>
                             <div className="text-white font-medium">{service.trialDays} days</div>
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
                           </div>
@@ -1592,14 +1634,18 @@ transition={{ duration: 0 && 0.6, delay: serviceIndex * 0 && 0.1 }}
                     </div>
                   </motion.div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 ))}
               </div>;
             </div>;
           ))}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
         </div>;
@@ -1614,6 +1660,8 @@ transition={{ duration: 0 && 0.6, delay: serviceIndex * 0 && 0.1 }}
         </div>
       </section>
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {/* Value Proposition */}
       <section className='py-20 bg-black/50'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -1623,10 +1671,13 @@ transition={{ duration: 0 && 0.6, delay: serviceIndex * 0 && 0.1 }}
               <span className='bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent'>
                 Our Pricing
               </span>
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
         </div>;
       </section>;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 
@@ -1636,10 +1687,13 @@ transition={{ duration: 0 && 0.6, delay: serviceIndex * 0 && 0.1 }}
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             </h2>
             <p className='text-xl text-purple-200 max-w-3xl mx-auto'>
               We offer the best value in the market with transparent pricing and
@@ -1647,6 +1701,7 @@ transition={{ duration: 0 && 0.6, delay: serviceIndex * 0 && 0.1 }}
             </p>
           </div>
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>            <motion.div            </h2>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
       <section className="py-20 bg-black/50">
@@ -1658,13 +1713,20 @@ transition={{ duration: 0 && 0.6, delay: serviceIndex * 0 && 0.1 }}
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+      {/* Value Proposition */}
+      <section className='py-20 bg-black/50'>;
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
+          <div className='text-center mb-16'>;
+            <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>;
+              Why Choose{' '}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <p className="text-xl text-purple-200 max-w-3xl mx-auto">
               We offer the best value in the market with transparent pricing and unmatched features.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <motion.div
-
               <span className='bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent'>;
                 Our Pricing;
               </span>;
@@ -1760,13 +1822,17 @@ transition={{ duration: 0 && 0.6, delay: serviceIndex * 0 && 0.1 }}
             </h2>;
             <p className='text - xl text - purple - 200 max - w-3xl mx - auto'>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               We offer the best value in the market with transparent pricing and;
               unmatched features.;
             </p>;
           </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -1786,17 +1852,25 @@ transition={{ duration: 0 && 0.6, delay: serviceIndex * 0 && 0.1 }}
 
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.6 }}
               viewport={{ once: true }}
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
               className='text-center p-8 bg-gradient-to-br from-purple-900/20 to-blue-900/20 border border-purple-500/30 rounded-2xl'
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             >
               <Target className='w-16 h-16 text-green-400 mx-auto mb-6' />
               <h3 className='text-2xl font-bold text-white mb-4'>
@@ -1826,10 +1900,13 @@ transition={{ duration: 0 && 0.6, delay: serviceIndex * 0 && 0.1 }}
             </motion.div>
             <motion.div
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               className='text-center p-8 bg-gradient-to-br from-purple-900/20 to-blue-900/20 border border-purple-500/30 rounded-2xl'>;
               <Target className='w-16 h-16 text-green-400 mx-auto mb-6' />;
               <h3 className='text-2xl font-bold text-white mb-4'>;
@@ -1850,14 +1927,18 @@ transition={{ duration: 0 && 0.6, delay: serviceIndex * 0 && 0.1 }}
               <div className="text-3xl font-bold text-green-400">30%</div>;
               <div className="text-purple-300">Lower than Market</div>;
             </motion && motion.div>;
+<<<<<<< HEAD
 
             <motion&& motion.div
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.6, delay: 0 && 0.2 }}
               viewport={{ once: true }}
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -1866,6 +1947,8 @@ transition={{ duration: 0 && 0.6, delay: serviceIndex * 0 && 0.1 }}
               className='text-center p-8 bg-gradient-to-br from-blue-900/20 to-cyan-900/20 border border-blue-500/30 rounded-2xl'
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             >
               <Shield className='w-16 h-16 text-blue-400 mx-auto mb-6' />
               <h3 className='text-2xl font-bold text-white mb-4'>
@@ -1896,10 +1979,13 @@ transition={{ duration: 0 && 0.6, delay: serviceIndex * 0 && 0.1 }}
             </motion.div>
             <motion.div
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               className='text-center p-8 bg-gradient-to-br from-blue-900/20 to-cyan-900/20 border border-blue-500/30 rounded-2xl'>;
               <Shield className='w-16 h-16 text-blue-400 mx-auto mb-6' />;
               <h3 className='text-2xl font-bold text-white mb-4'>;
@@ -1920,14 +2006,18 @@ transition={{ duration: 0 && 0.6, delay: serviceIndex * 0 && 0.1 }}
               <div className="text-3xl font-bold text-blue-400">100%</div>;
               <div className="text-blue-300">Transparent Pricing</div>;
             </motion && motion.div>;
+<<<<<<< HEAD
 
             <motion&& motion.div
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.6, delay: 0 && 0.4 }}
               viewport={{ once: true }}
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -1936,6 +2026,8 @@ transition={{ duration: 0 && 0.6, delay: serviceIndex * 0 && 0.1 }}
               className='text-center p-8 bg-gradient-to-br from-pink-900/20 to-rose-900/20 border border-pink-500/30 rounded-2xl'
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             >
               <Award className='w-16 h-16 text-pink-400 mx-auto mb-6' />
               <h3 className='text-2xl font-bold text-white mb-4'>
@@ -1966,6 +2058,7 @@ transition={{ duration: 0 && 0.6, delay: serviceIndex * 0 && 0.1 }}
           </div>
         </div>
       </section>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -2004,10 +2097,13 @@ transition={{ duration: 0 && 0.6, delay: serviceIndex * 0 && 0.1 }}
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-purple-900/30 to-blue-900/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -2024,15 +2120,52 @@ transition={{ duration: 0 && 0.6, delay: serviceIndex * 0 && 0.1 }}
 
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
 
-
           >
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
               Ready to{' '}
+              <span className='bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent'>
+                Get Started
+              </span>
+              ?
+            </h2>
+            <p className='text-xl text-purple-200 max-w-3xl mx-auto'>
+              Join hundreds of companies already leveraging our futuristic
+              services to gain competitive advantages and drive innovation.
+            </p>
+            <div className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6'>
+              <Link
+                href='/contact'
+                className='px-8 py-4 border border-purple-500/30 text-purple-300 rounded-xl hover:bg-purple-900/30 transition-all duration-300 flex items-center space-x-2'
+              >
+                <span>Schedule Demo</span>
+                <Clock className='w-5 h-5' />
+              </Link>
+            </div>
+            <div className='flex items-center justify-center space-x-8 text-purple-300'>
+              <div className='flex items-center space-x-2'>
+                <CheckCircle className='w-5 h-5 text-green-400' />                <span>30-Day Free Trial</span>
+              </div>
+              <div className='flex items-center space-x-2'>
+                <CheckCircle className='w-5 h-5 text-green-400' />
+                <span>No Credit Card Required</span>
+              </div>
+              <div className='flex items-center space-x-2'>
+                <CheckCircle className='w-5 h-5 text-green-400' />                <span>Cancel Anytime</span>              <div className="flex items-center space-x-2">
+                <CheckCircle className="w-5 h-5 text-green-400" />
+                <span>Cancel Anytime</span>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+      <UltraFuturisticFooter2028 />
 
               <span className='bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent'>;
 =======
@@ -2133,6 +2266,7 @@ transition={{ duration: 0 && 0.6, delay: serviceIndex * 0 && 0.1 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
 <<<<<<< HEAD
+<<<<<<< HEAD
             className='space - y-8';
           >;
             <h2 className='text - 4xl md:text - 5xl font - bold text - white mb - 6'>;
@@ -2141,15 +2275,22 @@ transition={{ duration: 0 && 0.6, delay: serviceIndex * 0 && 0.1 }}
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 Get Started;
               </span>;
               ?;
             </h2>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   );
+    </>;
+);
 }
             <p className='text - xl text - purple - 200 max - w-3xl mx - auto'>;
               Join hundreds of companies already leveraging our futuristic;
@@ -2190,6 +2331,7 @@ transition={{ duration: 0 && 0.6, delay: serviceIndex * 0 && 0.1 }}
       </section>;
       <UltraFuturisticFooter2028 />;
     </>);
+<<<<<<< HEAD
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -2320,6 +2462,8 @@ transition={{ duration: 0 && 0.6, delay: serviceIndex * 0 && 0.1 }}
 );
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   );
 
@@ -2329,6 +2473,7 @@ transition={{ duration: 0 && 0.6, delay: serviceIndex * 0 && 0.1 }}
 
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 
@@ -2337,3 +2482,5 @@ transition={{ duration: 0 && 0.6, delay: serviceIndex * 0 && 0.1 }}
   );
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

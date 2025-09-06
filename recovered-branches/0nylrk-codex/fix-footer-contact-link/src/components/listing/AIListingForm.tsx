@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -24,6 +25,8 @@ import {Button} from "@/components/ui/button";
 import {Input} from "@/components/ui/input";
 import {Textarea} from "@/components/ui/textarea";
 import {Sparkles} from "lucide-react";
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useState } from "react",
 import { useToast } from "@/hooks/use-toast",
 import { Button } from "@/components/ui/button",
@@ -39,6 +42,7 @@ interface AIListingFormProps {
     category: string
     keyFeatures: string
     targetAudience: string
+<<<<<<< HEAD
   }) => void;
   isLoading: boolean
 
@@ -158,11 +162,19 @@ export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AILis
           disabled={isLoading}
         />
       </div>
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <Button
         onClick={handleSubmit}
         disabled={isLoading |!title |!category}
       <Button 
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+      <Button 
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useState } from "react",;
 import { useToast } from "@/hooks/use-toast",;
 import { Button } from "@/components/ui/button",;
@@ -170,9 +182,12 @@ import { Input } from "@/components/ui/input",;
 import { Textarea } from "@/components/ui/textarea",;
 import { Sparkles } from "lucide-react",;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface AIListingFormProps {;
   onSubmit: (formData: {;
     title: string,;
@@ -180,10 +195,13 @@ interface AIListingFormProps {;
     keyFeatures: string,;
     targetAudience: string;
 <<<<<<< HEAD
+<<<<<<< HEAD
   }) => void;
   isLoading: boolean,;
   initialValues?: {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     title?: string;
     category?: string;
     keyFeatures?: string;
@@ -193,6 +211,7 @@ interface AIListingFormProps {;
 
 export function AIListingForm(): any ({ onSubmit, isLoading, initialValues = {} }: AIListingFormProps) {;
   const { toast } = useToast();
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -228,10 +247,13 @@ export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AILis
         variant: "destructive";
 <<<<<<< HEAD
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       });
       return;
     }
 
+<<<<<<< HEAD
 
 =======
       });
@@ -250,16 +272,22 @@ export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AILis
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <div className="space-y-4">;
       <div className="space-y-2">;
         <label htmlFor="title" className="text-sm font-medium text-zion-slate-light">Title</label>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <Input
           id="title"
           value={title}
           onChange={(e) => setTitle(e && e.target.value)}
           placeholder="Enter your product or service title";
+<<<<<<< HEAD
 =======
 
 import React, { useState } from "react",;
@@ -320,12 +348,15 @@ export function AIListingForm({ onSubmit, isLoading, initialValues = {} } AIList
           value={title}
           onChange={(e) => setTitle(e.target.value)}
           placeholder="Enter your product or service title";
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           className="bg-zion-blue border border-zion-blue-light text-white";
           disabled={isLoading}
         />;
       </div>;
       <div className="space-y-2">;
         <label htmlFor="category" className="text-sm font-medium text-zion-slate-light">Category</label>;
+<<<<<<< HEAD
         <Input;
           id="category";
           value={category}
@@ -374,6 +405,11 @@ export function AIListingForm({ onSubmit, isLoading, initialValues = {} } AIList
           id="category"
           value={category}
 <<<<<<< HEAD
+=======
+        <Input
+          id="category"
+          value={category}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           onChange={(e) => setCategory(e && e.target.value)}
           placeholder="e && e.g. AI Tool, Digital Product, Service";
           className="bg-zion-blue border border-zion-blue-light text-white";
@@ -382,6 +418,7 @@ export function AIListingForm({ onSubmit, isLoading, initialValues = {} } AIList
       </div>;
       <div className="space-y-2">;
         <label htmlFor="keyFeatures" className="text-sm font-medium text-zion-slate-light">Key Features (Optional)</label>;
+<<<<<<< HEAD
 =======
           onChange={(e) => setCategory(e.target.value)}
           placeholder=&quot;e.g. AI Tool, Digital Product, Service&quot;
@@ -395,6 +432,11 @@ export function AIListingForm({ onSubmit, isLoading, initialValues = {} } AIList
           id="keyFeatures"
           value={keyFeatures}
 <<<<<<< HEAD
+=======
+        <Textarea
+          id="keyFeatures"
+          value={keyFeatures}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           onChange={(e) => setKeyFeatures(e && e.target.value)}
           placeholder="Briefly describe the main features or benefits";
           className="bg-zion-blue border border-zion-blue-light text-white min-h-20";
@@ -403,6 +445,7 @@ export function AIListingForm({ onSubmit, isLoading, initialValues = {} } AIList
       </div>;
       <div className="space-y-2">;
         <label htmlFor="targetAudience" className="text-sm font-medium text-zion-slate-light">Target Audience (Optional)</label>;
+<<<<<<< HEAD
 =======
           onChange={(e) => setKeyFeatures(e.target.value)}
           placeholder=&quot;Briefly describe the main features or benefits&quot;
@@ -436,6 +479,13 @@ export function AIListingForm({ onSubmit, isLoading, initialValues = {} } AIList
         onClick={handleSubmit}
         disabled={isLoading || !title || !category}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+        <Input
+          id="targetAudience"
+          value={targetAudience}
+        onClick={handleSubmit}
+        disabled={isLoading |!title |!category}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white mt-2"
       >
         {isLoading ? (
@@ -446,6 +496,7 @@ export function AIListingForm({ onSubmit, isLoading, initialValues = {} } AIList
             Generate Optimized Content
           </>
         )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -490,6 +541,8 @@ export function AIListingForm({ onSubmit, isLoading, initialValues = {} } AIList
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useState } from './react';
 import { use_toast } from '@/hooks / use - toast';
 import { Button } from '@/components / ui / button';
@@ -521,6 +574,7 @@ function AIListingForm() {
   const [key_features, setKeyFeatures] = useState (initial_values.key_features || "");
   const [target_audience, setTargetAudience] = useState (initial_values.target_audience || "");
 ;
+<<<<<<< HEAD
 
 
 
@@ -626,3 +680,5 @@ if ( {) {
 }
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -1,10 +1,14 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export interface EnterpriseIt2026ServiceV2 {
 
 export interface EnterpriseIt2026ServiceV2 {;
 
+<<<<<<< HEAD
 import { ServiceVariant } from '../types/service-variants';
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
@@ -16,6 +20,10 @@ export interface EnterpriseIt2026ServiceV2 {;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+export interface EnterpriseIt2026ServiceV2 {
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   id: string;
   name: string;
   tagline: string;
@@ -46,6 +54,7 @@ export interface EnterpriseIt2026ServiceV2 {;
     mobile: string;
     email: string;
     address: string;
+<<<<<<< HEAD
 
     website: string;
   }
@@ -809,6 +818,8 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [;
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup && ziontechgroup.com';
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export interface EnterpriseIT2026ServiceV2 {
   id: string, name: string,
   tagline: string, price: string,
@@ -825,6 +836,7 @@ export interface EnterpriseIT2026ServiceV2 {
   growthRate: string, variant: ServiceVariant,
   contactInfo: {
 <<<<<<< HEAD
+<<<<<<< HEAD
       
     mobile: string, email: string,
     address: string,
@@ -835,11 +847,14 @@ export interface EnterpriseIT2026ServiceV2 {
     address: string,
     website: string
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     },
     realImplementation: boolean, implementationDetails: string,
   launchDate: string, customers: number,
   rating: number,
   reviews: number
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 }
@@ -1464,6 +1479,9 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [
     }
     realImplementation: true
     implementationDetails:
+=======
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       'Production-ready quantum security platform with post-quantum algorithms, monitoring, and enterprise deployment.'
     launchDate: '2026-05-01'
     customers: 280
@@ -1489,6 +1507,7 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [
 
     reviews: 180
   }
+<<<<<<< HEAD
 ];
 import { ServiceVariant } from '../types/service-variants',;
 export interface EnterpriseIT2026ServiceV2 {;
@@ -1931,8 +1950,10 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [;
       
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       address: '364 E Main St STE 1008 Middletown DE 19709',
-
+    reviews: 180
       website: 'https://ziontechgroup.com';
     }
     real_implementation: true,
@@ -1941,7 +1962,6 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [;
     customers: 280;
     rating: 4.9,
     reviews: 180;
-
 ];
 import { ServiceVariant } from '../types/service-variants',;
 export interface EnterpriseIT2026ServiceV2 {;
@@ -2384,5 +2404,9 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [;
   }
 ];
   }
+<<<<<<< HEAD
 ];
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

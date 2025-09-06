@@ -1,16 +1,21 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { Component, ReactNode } from 'react';
 =======
 import React, { Component, ReactNode, ErrorInfo } from 'react';
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 interface Props {
   children: ReactNode;
+  fallback?: ReactNode;
 }
 
 interface State {
   hasError: boolean;
   error?: Error;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
   errorInfo?: ErrorInfo;
@@ -52,10 +57,14 @@ class ErrorBoundary extends Component<Props, State> {
             >
               Refresh Page
             </button>
+=======
+    if (this.state.hasError) {
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           </div>
         </div>
       );
     }
+<<<<<<< HEAD
 
     return this.props.children;
   }
@@ -66,3 +75,5 @@ export default ErrorBoundary;
 =======
 export default ErrorBoundary;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

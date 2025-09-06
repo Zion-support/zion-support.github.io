@@ -15,6 +15,15 @@ const files = fs.readdirSync(pagesDir).filter(file => file.endsWith('.tsx')
         '};\n\n'
 <<<<<<< HEAD
     if (p1.includes("'") && p2.includes("'") && !p1.includes("'") && !p2.includes(")
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
     if (p1.includes("'") && p2.includes("'") && !p1.includes("'") && !p2.includes(")
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/main
+=======
+=======
+    if (p1.includes("'") && p2.includes("'") && !p1.includes("'") && !p2.includes(")
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> pr-12166

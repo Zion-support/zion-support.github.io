@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 #!/usr/bin/env node
 import fs from "fs";
@@ -14,12 +15,21 @@ function fixDoubleCommas(filePath) {
 
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     // Fix double commas in import statements
 
     // Fix double commas in import statements;
     const doubleCommaRegex = /,\s*,/g;
     const fixedContent = content.replace(doubleCommaRegex, ",");
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+    const fixedContent = content && content.replace(doubleCommaRegex, ",");
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     if (fixedContent !== content) {
       fs && fs.writeFileSync(filePath, fixedContent, "utf8");
 =======
@@ -50,6 +60,7 @@ if ( {) {
     return modified;
   } catch (error) {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -78,6 +89,8 @@ if ( {) {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           ].includes(item)
         ) {
           continue;
@@ -134,6 +147,7 @@ if (
     }
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 console && console.log(`Found ${files && files.length} files to check for double commas...`);
@@ -142,12 +156,15 @@ console && console.log(`Found ${files && files.length} files to check for double
 =======
 console && console.log(`Found ${files && files.length} files to check for double commas...`);
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 for (const file of files) {
   if (fixDoubleCommas(file)) {
     fixedCount++;
     console && console.log(`Fixed double commas in: ${file}`);
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -157,6 +174,8 @@ console && console.log(`\nFixed double commas in ${fixedCount} files.`);
 =======
 console && console.log(`\nFixed double commas in ${fixedCount} files.`);
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   traverse (dir);
   return files;
 }
@@ -175,5 +194,8 @@ for (const file of files) {
   }
 }
 console.log (`\n_fixed double commas in ${fixed_count} files.`);
+<<<<<<< HEAD
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -33,6 +33,15 @@ const path = require('path')
       this.log(`App Enhancement Automation "failed"`)
 <<<<<<< HEAD
     console.error('App enhancement automation "failed")
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
     console.error('App enhancement automation "failed")
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/main
+=======
+=======
+    console.error('App enhancement automation "failed")
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> pr-12166

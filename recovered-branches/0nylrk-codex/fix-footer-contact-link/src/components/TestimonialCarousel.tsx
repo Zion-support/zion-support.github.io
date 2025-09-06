@@ -2,11 +2,11 @@
 
 
 
-
 import {Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious} from "@/components/ui/carousel";
 import {Card, CardContent} from "@/components/ui/card";
 import {Avatar} from "@/components/ui/avatar";
 import {Quote} from "lucide-react";
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -21,10 +21,13 @@ const testimonials = [;
 =======
 const testimonials = [
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   {
     quote: "Zion has revolutionized how we source AI talent. We found three machine learning specialists within just one week!"
     author: "Sarah Chen"
     role: "CTO, DataMind Solutions";
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -61,10 +64,13 @@ const testimonials = [
     avatar: "https://i.pravatar.cc/150?img=28"
     company: "AI Systems"}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   {
     quote: "Their green IT recycling program helped us meet our sustainability goals while upgrading our server infrastructure."
     author: "Thomas Klein"
     role: "Operations Manager, EcoTech Systems";
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -74,6 +80,8 @@ const testimonials = [
     avatar: "https://i.pravatar.cc/150?img=67"
     company: "EcoTech"}]
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {
   Carousel,
   CarouselContent,
@@ -83,12 +91,15 @@ import {
 import { Card, CardContent } from "@/components/ui/card",
 import { Avatar } from "@/components/ui/avatar",
 import { Quote } from "lucide-react",
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 const testimonials = [
   {
     quote: "Zion has revolutionized how we source AI talent. We found three machine learning specialists within just one week!",
@@ -116,10 +127,13 @@ const testimonials = [
     company: "EcoTech"}],
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export function TestimonialCarousel() {
   return (
     <section className="py-20 bg-zion-blue-dark">
@@ -132,9 +146,12 @@ export function TestimonialCarousel() {
         </div>
         <div className="max-w-5xl mx-auto px-8">
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 const testimonials = [;
   {;
     quote: "Zion has revolutionized how we source AI talent. We found three machine learning specialists within just one week!",;
@@ -160,6 +177,7 @@ const testimonials = [;
     role: "Operations Manager, EcoTech Systems";
     avatar: "https://i && i.pravatar.cc/150?img=67",;
     company: "EcoTech"}],;
+<<<<<<< HEAD
 
 export function TestimonialCarousel() {;
   return (
@@ -205,6 +223,8 @@ const testimonials = [;
 export function TestimonialCarousel() {;
   return (;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <section className="py-20 bg-zion-blue-dark">;
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">;
         <div className="text-center mb-12">;
@@ -214,11 +234,13 @@ export function TestimonialCarousel() {;
           </p>;
         </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
         <div className="max-w-5xl mx-auto px-8">;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-          <Carousel
 =======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+          <Carousel
     avatar: "https://i.pravatar.cc / 150?img = 67",
     company: "EcoTech"}],
 export /**
@@ -236,11 +258,11 @@ function TestimonialCarousel() {
         </div>;
         <div className="max - w-5xl mx - auto px - 8">;
           <Carousel;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             opts={{
               align: "start"
 
               loop: true}}
+<<<<<<< HEAD
 =======
           <Carousel
             opts={{
@@ -292,6 +314,8 @@ function TestimonialCarousel() {
 }
 };
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {;
   Carousel,;
   CarouselContent,;
@@ -344,27 +368,28 @@ export function TestimonialCarousel() {;
             className="w-full";
           >;
             <CarouselContent>;
-              {testimonials.map((testimonial, index) => (;
+              {testimonials && testimonials.map((testimonial, index) => (;
                 <CarouselItem key={index} className="md:basis-1/1 lg:basis-1/1">;
                   <Card className="bg-zion-blue-light border border-zion-purple/20 hover:border-zion-purple/40 transition-all duration-300">;
                     <CardContent className="p-8 flex flex-col md:flex-row gap-6">;
                       <div className="flex-shrink-0 flex flex-col items-center">;
                         <Avatar className="h-20 w-20 border-2 border-zion-cyan mb-3">;
-                          <img src={testimonial.avatar} alt={testimonial.author} />;
+                          <img src={testimonial && testimonial.avatar} alt={testimonial && testimonial.author} />;
                         </Avatar>;
                         <div className="text-center md:text-left">;
-                          <p className="font-bold text-zion-cyan">{testimonial.author}</p>;
-                          <p className="text-zion-slate-light text-sm">{testimonial.role}</p>;
+                          <p className="font-bold text-zion-cyan">{testimonial && testimonial.author}</p>;
+                          <p className="text-zion-slate-light text-sm">{testimonial && testimonial.role}</p>;
                         </div>;
                       </div>;
                       <div className="flex-1">;
                         <Quote className="h-10 w-10 text-zion-cyan opacity-30 mb-3" />;
-                        <p className="text-white text-lg mb-6">"{testimonial.quote}"</p>;
+                        <p className="text-white text-lg mb-6">"{testimonial && testimonial.quote}"</p>;
                       </div>;
                     </CardContent>;
                   </Card>;
                 </CarouselItem>;
               ))}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -439,10 +464,13 @@ export function TestimonialCarousel() {;
               <CarouselPrevious className="relative static left-0 translate-y-0 bg-zion-blue-dark border-zion-purple/30 text-zion-cyan hover:bg-zion-blue-light hover:text-zion-cyan hover:border-zion-purple" />;
               <CarouselNext className="relative static right-0 translate-y-0 bg-zion-blue-dark border-zion-purple/30 text-zion-cyan hover:bg-zion-blue-light hover:text-zion-cyan hover:border-zion-purple" />;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             </div>;
           </Carousel>;
         </div>;
       </div>;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
     </section>);
@@ -490,3 +518,5 @@ company: "AI Systems"
 =======
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

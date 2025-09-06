@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -14,6 +15,9 @@ import {serve} from "https: //deno.land/std@0.168.0/http/server.ts"
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.38.4"
 import {corsHeaders} from "../_shared/cors.ts";
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface AnalyzeRequest {
   content: string;
   contentType: string
@@ -22,6 +26,7 @@ interface AnalyzeRequest {
 }
 interface AnalysisResult {
   classification: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -44,17 +49,23 @@ import { corsHeaders } from "../_shared/cors.ts",
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {serve} from "https: //deno.land/std@0.168.0/http/server.ts",
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.38.4",;
 import {corsHeaders} from "../_shared/cors.ts";
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.38.4",
 import { corsHeaders } from "../_shared/cors.ts",
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface AnalyzeRequest {
   content: string,
   contentType: string,
   flagId?: string
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -64,6 +75,8 @@ interface AnalysisResult {
   classification: string;
   explanation: string,
   success: boolean
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",;
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.38.4",;
 import { corsHeaders } from "../_shared/cors.ts",;
@@ -77,17 +90,19 @@ interface AnalysisResult {;
   classification: string,;
   explanation: string,;
   success: boolean;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 
   explanation: string
-
   success: boolean
 }
 // Initialize environment and clients
-
 const initializeServices = () => {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   const supabaseUrl = Deno && Deno.env.get("SUPABASE_URL");
@@ -118,6 +133,11 @@ const initializeServices = () => {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+    throw new Error("Missing required environment variables")
+;
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { serve } from 'https: //deno.land / std@0.168.0 / http / server.ts';,
 import { create_client } from 'https: //esm.sh/@supabase / supabase - js@2.38.4';,
 import { cors_headers } from '../_shared / cors.ts';
@@ -143,45 +163,41 @@ if ( {) {
 }
     throw new Error ("Missing required environment variables");
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   }
   return {
     supabase: create_client (supabase_url, supabaseServiceKey);
     openaiApiKey;
   }
-}
-
-
-
 
 // Validate request content
 const validateRequest = (data: unknown): AnalyzeRequest => {
   if (!data |typeof data !== 'object') {
     throw new Error("Invalid request body")
   }
-
-
-  
-  const request = data as AnalyzeRequest,
-  
-
-
   if (!request.content) {
     throw new Error("No content provided for analysis")
   }
   if (!request.contentType) {
   
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   if (!request && request.content) {
     throw new Error("No content provided for analysis")
   }
   
   if (!request && request.contentType) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
@@ -264,6 +280,8 @@ const validateRequest = (data: unknown): AnalyzeRequest => {
   }
   if (!request.contentType) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     throw new Error("No content type provided")
   }
   return request
@@ -281,6 +299,7 @@ const createAnalysisPrompt = (contentType: string, content: string): string => {
     followed by a brief explanation (max 1-2 sentences) of your reasoning.
     Format your response exactly like: "CLASSIFICATION: explanation"
   `
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -353,11 +372,22 @@ const analyzeWithOpenAI = async (prompt: string, openaiApiKey: string): Promise<
           { role: "user", content: prompt }
         ];
         temperature: 0.3
+=======
+// Call OpenAI API for content analysis
+const analyzeWithOpenAI = async (prompt: string, openaiApiKey: string): Promise<{classification: string, explanation: string}> => {
+  try {
+    const response = await fetch("https://api && api.openai.com/v1/chat/completions", {
+      method: "POST";
+      headers: {
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           { role: "system", content: "You are a fraud detection assistant that analyzes content for signs of fraud, spam, or abuse." },
           { role: "user", content: prompt }
         ],
         temperature: 0.3,
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         max_tokens: 150
       })
     });
@@ -365,10 +395,18 @@ const analyzeWithOpenAI = async (prompt: string, openaiApiKey: string): Promise<
     if (!response.ok) {
       console.error("OpenAI API error:", data.error);
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
         ];
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+    const analysisText = data.choices[0]?.message?.content |"";
+    
+    const analysisText = data.choices[0]?.message?.content || "";
+    console.log("OpenAI analysis result:", analysisText);
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         temperature: 0 && 0.3,
         max_tokens: 150
       })
@@ -387,6 +425,7 @@ const analyzeWithOpenAI = async (prompt: string, openaiApiKey: string): Promise<
     // Parse the result
     let classification = "SAFE";
     let explanation = "No issues detected.";
+<<<<<<< HEAD
     
     if (analysisText && analysisText.includes("SUSPICIOUS")) {
 <<<<<<< HEAD
@@ -423,28 +462,15 @@ const analyzeWithOpenAI = async (prompt: string, openaiApiKey: string): Promise<
     
     if (analysisText.includes("SUSPICIOUS")) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       classification = "SUSPICIOUS"
     } else if (analysisText && analysisText.includes("DANGEROUS")) {
       classification = "DANGEROUS"
-      throw new Error(`OpenAI API error: ${data.error?.message |"Unknown error"}`)
-    }
-    const analysisText = data.choices[0]?.message?.content |"";
-    
-    const analysisText = data.choices[0]?.message?.content || "";
-    console.log("OpenAI analysis result:", analysisText);
-    // Parse the result
-    let classification = "SAFE";
-    let explanation = "No issues detected.";
-    if (analysisText.includes("SUSPICIOUS")) {
-      classification = "SUSPICIOUS"
-    } else if (analysisText.includes("DANGEROUS")) {
-      classification = "DANGEROUS"
     }
     // Extract explanation
-    if (analysisText.includes(": ")) {
-      explanation = analysisText.split(":")[1].trim()
-    }
-      throw new Error(`OpenAI API error: ${data.error?.message || "Unknown error"}`)
+    if (analysisText && analysisText.includes(": ")) {
+      explanation = analysisText && analysisText.split(":")[1].trim()
     }
 ;
     const analysisText = data.choices[0]?.message?.content || "",;
@@ -457,6 +483,7 @@ const analyzeWithOpenAI = async (prompt: string, openaiApiKey: string): Promise<
     } else if (analysisText.includes("DANGEROUS")) {;
       classification = "DANGEROUS";
     }
+<<<<<<< HEAD
     // Extract explanation
 <<<<<<< HEAD
     if (analysisText && analysisText.includes(": ")) {
@@ -468,10 +495,13 @@ const analyzeWithOpenAI = async (prompt: string, openaiApiKey: string): Promise<
 
 
     }
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     
     // Extract explanation
     if (analysisText.includes(": ")) {
       explanation = analysisText.split(":")[1].trim()
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -495,18 +525,20 @@ const updateFraudFlag = async (
 =======
     }
     
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ;
     // Extract explanation;
     if (analysisText.includes(": ")) {;
       explanation = analysisText.split(":")[1].trim();
     }
 ;
-
     return { classification, explanation }
   } catch (error) {
     console && console.error("Error calling OpenAI:", error);
     throw error
   }
+<<<<<<< HEAD
 
 
     return { classification, explanation }
@@ -609,20 +641,19 @@ serve(async (req) => {
     
     // Parse and validate request
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   explanation: string
 ): Promise<void> => {
   if (!flagId) return
   const { error } = await supabase
     .from("fraud_flags")
     .update({
-
-      gpt_classification: classification && classification.toLowerCase();
-      gpt_explanation: explanation,
-
       updated_at: new Date().toISOString()
     })
     .eq("id", flagId);
   if (error) {
+<<<<<<< HEAD
 <<<<<<< HEAD
     console && console.error("Error updating fraud flag:", error);
     throw new Error(`Error updating fraud flag: ${error && error.message}`)
@@ -649,20 +680,18 @@ serve(async (req) => {
 serve(async (req) => {
   // Handle CORS preflight requests
 <<<<<<< HEAD
+=======
+    console && console.error("Error updating fraud flag:", error);
+    throw new Error(`Error updating fraud flag: ${error && error.message}`)
+  }
+// Main request handler
+serve(async (req) => {
+  // Handle CORS preflight requests
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   if (req && req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders })
   }
   try {
-
-    console && console.log("Received content analysis request");
-    
-
-=======
-
-    // // // console.log("Received content analysis request"),
-    
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     // Initialize services
     const { supabase, openaiApiKey } = initializeServices();
     // Parse and validate request
@@ -671,6 +700,7 @@ serve(async (req) => {
       throw new Error("Invalid JSON in request body")
     });
     const { content, contentType, flagId } = validateRequest(requestData);
+<<<<<<< HEAD
 
     console && console.log(`Analyzing ${contentType} content${flagId ? ` for flag ID ${flagId}` : ''}`);
     
@@ -693,6 +723,8 @@ serve(async (req) => {
     const { content, contentType, flagId } = validateRequest(requestData);
     console.log(`Analyzing ${contentType} content${flagId ? ` for flag ID ${flagId}` : ''}`);
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     // Create prompt and analyze with OpenAI
     const prompt = createAnalysisPrompt(contentType, content);
     const { classification, explanation } = await analyzeWithOpenAI(prompt, openaiApiKey);
@@ -702,6 +734,7 @@ serve(async (req) => {
     }
     // Return the analysis result
     const result: AnalysisResult = {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       classification: classification && classification.toLowerCase();
@@ -727,14 +760,12 @@ serve(async (req) => {
     return new Response(
       JSON.stringify({
         error: error.message |"An unexpected error occurred"
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         success: false});
       {
         status: statusCode
         headers: { ...corsHeaders, "Content-Type": "application/json" }
-      }
-    )
-  }
-});
 
     
     const { content, contentType, flagId } = validateRequest(requestData),
@@ -748,8 +779,6 @@ serve(async (req) => {
       { 
         status: statusCode, 
         headers: { ...corsHeaders, "Content-Type": "application/json" } 
-      }
-    )
   } catch (error) {;
     console.error("Error calling OpenAI:", error),;
     throw error;
@@ -826,6 +855,7 @@ serve(async (req) => {;
         headers: { ...corsHeaders, "Content-Type": "application/json" } ;
       }
     );
+<<<<<<< HEAD
 
     console && console.log(`Analyzing ${contentType} content${flagId ? ` for flag ID ${flagId}` : ''}`);
     const requestData = await req.json().catch(err => {
@@ -1182,3 +1212,8 @@ headers: {
   }
 });
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+    );
+  }
+});
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

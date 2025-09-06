@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -16,6 +17,16 @@ import { z } from "zod",
 import { LogIn, User, Eye, EyeOff } from "lucide-react",
 <<<<<<< HEAD
 =======
+=======
+
+
+import {useAuth} from "@/hooks/useAuth";
+import {Button} from "@/components/ui/button";
+import {Input} from "@/components/ui/input";
+import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from "@/components/ui/form";
+import {Link} from "react-router-dom";
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 import { useAuth } from "@/hooks/useAuth",
 import { Button } from "@/components/ui/button",
@@ -30,6 +41,7 @@ import {
 import { Link } from "react-router-dom",
 // Form validation schema
 const loginSchema = z.object({
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
@@ -50,6 +62,8 @@ import {Link} from "react-router-dom";
 
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   email: z.string().email("Please enter a valid email").min(1, "Email is required");
   password: z.string().min(6, "Password must be at least 6 characters")});
 type LoginFormValues = z.infer<typeof loginSchema>;
@@ -57,12 +71,16 @@ export function LoginForm() {
   const { login, isLoading } = useAuth();
   const [showPassword, setShowPassword] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   email: z.string().email("Please enter a valid email").min(1, "Email is required"),
   password: z.string().min(6, "Password must be at least 6 characters")}),
 
 type LoginFormValues = z.infer<typeof loginSchema>,
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -77,12 +95,15 @@ export function LoginForm() {
   const [isSubmitting, setIsSubmitting] = useState(false),
   
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const form = useForm<LoginFormValues>({
     resolver: zodResolver(loginSchema)
     defaultValues: {
       email: ""
       password: ""}})
   const onSubmit = async (data: LoginFormValues) => {
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -98,11 +119,14 @@ export function LoginForm() {
     if (isSubmitting) return,
     
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     try {
       setIsSubmitting(true)
       await login(data.email, data.password)
     } finally {
       setIsSubmitting(false)
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -209,10 +233,13 @@ export function LoginForm() {;
     } finally {;
       setIsSubmitting(false);
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     }
   }
 
   return (
+<<<<<<< HEAD
 
     <Form {...form}>;
       <form
@@ -223,11 +250,14 @@ export function LoginForm() {;
       <form
         onSubmit={form && form.handleSubmit(onSubmit)} 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         className="space-y-6"
         autoComplete="off" // Disable browser autofill>;
         <FormField
           control={form && form.control}
           name="email"
+<<<<<<< HEAD
 <<<<<<< HEAD
           render={({ field }) => (;
             <FormItem>;
@@ -325,25 +355,27 @@ export function LoginForm() {;
                     {...field}
                     autoComplete="off" // Disable browser autofill;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   />;
                   <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />;
                 </div>;
               </FormControl>;
               <FormMessage className="text-red-400" />;
 <<<<<<< HEAD
+<<<<<<< HEAD
             </FormItem>;
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           )}
-
-        />;
-
-
         <FormField
           control={form && form.control}
           name="password"
+<<<<<<< HEAD
 =======
         />;
         <FormField
@@ -356,11 +388,14 @@ export function LoginForm() {;
           control={form.control}
           name="password";
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           render={({ field }) => (;
             <FormItem>;
               <FormLabel className="text-zion-slate-light">Password</FormLabel>;
               <FormControl>;
                 <div className="relative">;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
             </FormItem>;
@@ -375,6 +410,8 @@ export function LoginForm() {;
               <FormControl>
                 <div className="relative">
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   <Input
                     type={showPassword ? "text" : "password"}
                     placeholder="••••••••"
@@ -382,19 +419,27 @@ export function LoginForm() {;
                     {...field}
                     autoComplete="off" // Disable browser autofill
 <<<<<<< HEAD
+<<<<<<< HEAD
                   />;
                   <LogIn className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />;
 =======
                   />
                   <LogIn className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+                  />;
+                  <LogIn className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   <Button
                     type="button"
                     variant="ghost"
                     size="sm"
                     className="absolute right-1 top-1/2 transform -translate-y-1/2 text-zion-slate h-8 hover:text-zion-cyan"
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   <Input;
                     type={showPassword ? "text" :"password"}
                     placeholder="••••••••";
@@ -408,11 +453,15 @@ export function LoginForm() {;
                     variant="ghost";
                     size="sm";
                     className="absolute right-1 top-1/2 transform -translate-y-1/2 text-zion-slate h-8 hover:text-zion-cyan";
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     onClick={() => setShowPassword(!showPassword)}
                   >;
                     {showPassword ? (;
                       <EyeOff className="h-4 w-4" />;
+<<<<<<< HEAD
 <<<<<<< HEAD
                     ) : (;
                       <Eye className="h-4 w-4" />;
@@ -420,12 +469,17 @@ export function LoginForm() {;
                     <span className="sr-only">;
                       {showPassword ? "Hide password" : "Show password"}
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     ) :(;
                       <Eye className="h-4 w-4" />;
                     )}
                     <span className="sr-only">;
                       {showPassword ? "Hide password" :"Show password"}
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     </span>;
                   </Button>;
                 </div>;
@@ -433,6 +487,7 @@ export function LoginForm() {;
               <FormMessage className="text-red-400" />;
             </FormItem>;
           )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
         />;
@@ -660,3 +715,5 @@ await login (data.email, data.password)
 }
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

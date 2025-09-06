@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -54,10 +55,14 @@ export default function Sidebar({
         <div className='flex gap-2 mt-2 flex-wrap'>
           {spec.versions.map(v => (
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  return (
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <button
               key={v}
               onClick={() => onChangeVersion(v)}
               className={`px-2 py-1 rounded border text-xs ${selectedVersion === v ? 'bg-high-contrast-tertiary border-high-contrast-accent' : 'bg-high-contrast-tertiary border-high-contrast-secondary'}`}
+<<<<<<< HEAD
 <<<<<<< HEAD
             >;
               {v}
@@ -156,6 +161,8 @@ export default function Sidebar({ spec, activeEndpointId, onSelectEndpoint, sele
                 .map(e => (                  <li key={e.id}>        </select>
       </div>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <nav className="space-y-3">
         {spec.sections.map((section) => (
           <div key={section.id}>
@@ -166,6 +173,7 @@ export default function Sidebar({ spec, activeEndpointId, onSelectEndpoint, sele
                 .filter((e) => visibilityFilter === 'all' ? true : e.visibility === visibilityFilter)
                 .map((e) => (
                   <li key={e.id}>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
             </button>          ))}        <div className="text-lg font-semibold">Zion OS API</div>;
@@ -236,10 +244,13 @@ export default function Sidebar({ spec, activeEndpointId, onSelectEndpoint, sele
                       onClick={() => onSelectEndpoint(e.id)}
                     >
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 ))}
             </ul>;
           </div>;
         ))}
+<<<<<<< HEAD
 
 }
 
@@ -251,6 +262,8 @@ export default function Sidebar({ spec, activeEndpointId, onSelectEndpoint, sele
   );
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   onSelectEndpoint: (endpoint_id: string) => void;
   selected_version: string;
   onChangeVersion: (v: string) => void;
@@ -335,6 +348,7 @@ function Sidebar() {
       </nav>;
     </aside>);
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -390,6 +404,9 @@ function Sidebar() {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
+=======
+      </nav>
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     </aside>;
   );
 }
@@ -400,6 +417,10 @@ function Sidebar() {
 }
     </aside>
   );
+<<<<<<< HEAD
 }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

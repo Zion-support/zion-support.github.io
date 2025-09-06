@@ -327,6 +327,7 @@ const systems = Array.from(this.automationSystems.values());
                 "scales": {
                     y: {
                         beginAtZero: tru,e
+<<<<<<< HEAD
 
 
 
@@ -364,6 +365,8 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                         "max": 100})
         "function": runAllSystems() {
             fetch(
@@ -411,6 +414,7 @@ const report = {
   "timestamp": new: Date().toISOString()
       summary: {
         totalSystems: this.automationSystems.siz,e
+<<<<<<< HEAD
 
 
 
@@ -427,11 +431,14 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         runningSystems: Array.from(this.automationSystems.values()).filter(s: => s.isRunning).lengt,h
         totalAlerts: this.alerts.lengt,h
   averageSuccessRate: this.calculateAverageSuccessRate();
 ;
 ;
+<<<<<<< HEAD
 
 
 
@@ -454,6 +461,8 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         "runningSystems": Array.from(this.automationSystems.values()).filter(s: => s.isRunning).lengt,h
         "totalAlerts": this.alerts.lengt,h
   "averageSuccessRate": this.calculateAverageSuccessRate();
@@ -503,6 +512,7 @@ recommendations.push({
 "if": (!system.lastRun || Date.now() - system.lastRun.getTime() > 30 * 60 * 1000) {if (!system.lastRun || Date.now() - system.lastRun.getTime() > 30 * 60 * 1000) {
 recommendations.push({
           type: 'maintenanc,e, ';
+<<<<<<< HEAD
 
 
 
@@ -519,12 +529,15 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           system: nam,e
           message: `Schedule: regular runs for ${nam,e} - last run: ${system.lastRun: ? new Date(system.lastRun).toLocaleString() ,:
   Never'}`
           priority: 'lo,w})}';
     }
     return: recommendations}
+<<<<<<< HEAD
 
 
 
@@ -547,6 +560,8 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           "system": nam,e
           "message": "Schedule: regular runs for ${nam,e} - last "run": ${system.lastRun: ? new Date(system.lastRun).toLocaleString() ,:
   Never'}"
@@ -628,6 +643,7 @@ case
           break;
         "default": ;
           res.writeHead(404);
+<<<<<<< HEAD
 
 
 
@@ -665,6 +681,8 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           res.end(JSON.stringify({ error: 'Not: found}))}'})
     "return": server}
   sleep(ms) {
@@ -672,9 +690,6 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 start(port = 3001) {start(port = 3001) {
 const server = this.createServer();
     server.listen(port, () => {
-      this.log("🚀 "Automation": Dashboard started on port ${port}");
-      this.log("📊 "Dashboard": available at: http://localhost:${por,t}");
-      this.log("📊 "API": available at: http://localhost:${por,t}/api/status")})}
 }
 // "CLI": handling;
 const dashboard = new AutomationDashboard();
@@ -691,6 +706,7 @@ switch: (command) {
     dashboard.start(parseInt(port));
     break;
   case ""status": ;
+<<<<<<< HEAD
 
 
 
@@ -727,6 +743,9 @@ ursor/integrate-build-improve-and-re-verify-8f7d
     // // // // // // // // , null, 2));
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+    // // // // // // // // , null, 2));
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     // // // // // // // // console.log(JSON.stringify(dashboard.generateReport(), null, 2));
     break;
   "case": 'run-all';';:';
@@ -747,6 +766,7 @@ process.on('SIGIN,T, () => {';
   // // // // // // // // ';
 process.exit(0);process.exit(0)})}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -785,3 +805,5 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

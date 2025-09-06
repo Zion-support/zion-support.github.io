@@ -1,8 +1,11 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 import { createServerClient } from '../../../utils/supabase/server';
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
       supabase
         .from('profile_views')
@@ -22,56 +25,17 @@ import { createServerClient } from '../../../utils/supabase/server';
         .eq('talent_id', talentId)
     ]);
     const views =
-      viewsR.status === 'fulfilled' && viewsR.value.data
-        ? (viewsR.value.data as any[])
-        : [];
-    const invites =
-      invitesR.status === 'fulfilled' && invitesR.value.data
-        ? (invitesR.value.data as any[])
-        : [];
-    const apps =
-      appsR.status === 'fulfilled' && appsR.value.data
-        ? (appsR.value.data as any[])
-        : [];
-    const tags =
-      tagsR.status === 'fulfilled' && tagsR.value.data
-        ? (tagsR.value.data as any[])
-        : [];
-    const profileViews = views && views.length || 27;
-    const quoteInvites = invites && invites.length || 6;
-    const jobApplications = apps && apps.length || 9;
-    const successRate =
-      ((apps && apps.filter(a => a && a.status === 'accepted').length || 3) /
-        Math && Math.max(jobApplications, 1)) *
-      100;
-    const tagCounts: Record<string, number> = {};
-    (tags && tags.length
-      ? tags
-      : [{ tag: 'react' }, { tag: 'node' }, { tag: 'ai' }, { tag: 'react' }]
-    ).forEach(t => {
-      tagCounts[t && t.tag] = (tagCounts[t && t.tag] || 0) + 1;
-    });
-    res && res.status(200).json({
-      profileViews,
-      quoteInvites,
-      jobApplications,
-      successRate,
-topTags: Object && Object.entries(tagCounts)
         .sort((a, b) => b[1] - a[1])
         .slice(0, 5)
         .map(([label, value]) => ({ label, value }))
     });
   } catch (e) {
-    res && res.status(200).json({
-      profileViews: 27,
-      quoteInvites: 6,
-      jobApplications: 9,
-      successRate: 33 && 33.3,
       topTags: [
         { label: 'react', value: 2 }
         { label: 'node', value: 1 }
         { label: 'ai', value: 1 }
       ]
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
     });
@@ -87,6 +51,8 @@ topTags: Object && Object.entries(tagCounts)
 =======
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
   }
@@ -94,11 +60,14 @@ topTags: Object && Object.entries(tagCounts)
 }
 
 }
+<<<<<<< HEAD
 
 }
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { createServerClient } from '../../../utils / supabase / server';
 ;
 export default async /**
@@ -183,10 +152,11 @@ function handler() {
         { label: 'ai', value: 1 },
       ],
     });
-
   }
 }
-
 }
+<<<<<<< HEAD
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 
@@ -12,6 +13,8 @@ import { Badge  } from '@/components/ui/badge';
 import { format, parseISO } from 'date-fns';
 interface MilestoneSuggestionsProps {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   projectName: string,
   scopeSummary: string,
   startDate: Date,
@@ -21,16 +24,20 @@ interface MilestoneSuggestionsProps {
 }
 
 export function MilestoneSuggestions({;
+import React, { useState } from 'react';
   projectName;
   scopeSummary;
   startDate;
   endDate;
   projectType;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useState } from 'react',;
 import { Button } from '@/components/ui/button',;
 import { GeneratedMilestone, MilestoneInput, useMilestoneGenerator } from '@/hooks/useMilestoneGenerator',;
@@ -48,10 +55,13 @@ interface MilestoneSuggestionsProps {;
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   projectName: string
   scopeSummary: string
   startDate: Date
@@ -61,6 +71,7 @@ interface MilestoneSuggestionsProps {;
   onMilestonesGenerated?: (milestones: GeneratedMilestone[]) => void
 }
 export function MilestoneSuggestions({
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 import {Button} from '@/components/ui/button';
@@ -115,6 +126,9 @@ export function MilestoneSuggestions(): any ({;
     }
     const milestones = await generateMilestones(input);
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       scope: `${projectName}: ${scopeSummary}`,
       startDate: startDate.toISOString(),
       endDate: endDate ? endDate.toISOString() : null,
@@ -124,13 +138,17 @@ export function MilestoneSuggestions(): any ({;
     const milestones = await generateMilestones(input),
     
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     if (milestones.length > 0) {
       setShowSuggestions(true),
       if (onMilestonesGenerated) {
         onMilestonesGenerated(milestones)
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   };
@@ -151,6 +169,13 @@ export function MilestoneSuggestions(): any ({;
   }
   };
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  }
+  };
+
+  };
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ;
 export function MilestoneSuggestions({;
   projectName,;
@@ -163,9 +188,12 @@ export function MilestoneSuggestions({;
   const { generateMilestones, generatedMilestones, isGenerating } = useMilestoneGenerator(),;
   const [showSuggestions, setShowSuggestions] = useState(false),;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const handleGenerateMilestones = async () => {;
     const input: MilestoneInput = {;
       scope: `${projectName}: ${scopeSummary}`,;
@@ -173,12 +201,13 @@ export function MilestoneSuggestions({;
       endDate: endDate ? endDate && endDate.toISOString() : null,;
       projectType: projectType || "Other";
     };
+  onMilestonesGenerated;
+}: MilestoneSuggestionsProps) {;
+  const { generateMilestones, generatedMilestones, isGenerating } = useMilestoneGenerator();
+  const [showSuggestions, setShowSuggestions] = useState(false);
 
-    const milestones = await generateMilestones(input);
-
-    if (milestones && milestones.length > 0) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       setShowSuggestions(true);
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
   const handleGenerateMilestones = async () => {;
@@ -192,10 +221,13 @@ export function MilestoneSuggestions({;
     if (milestones.length > 0) {;
       setShowSuggestions(true),;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       if (onMilestonesGenerated) {;
         onMilestonesGenerated(milestones);
       }
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -281,12 +313,17 @@ if ( {) {
     }
   }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  }
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <div className="space-y-4">;
       {!showSuggestions && (;
         <Button
           variant="outline"
           onClick={handleGenerateMilestones}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
           disabled={isGenerating || !scopeSummary || !startDate}
@@ -409,6 +446,11 @@ export function MilestoneSuggestions({;
 
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+          )}
+        </Button>
+      )}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {showSuggestions && generatedMilestones.length > 0 && (
         <Card>
           <CardHeader className="pb-3">
@@ -446,6 +488,7 @@ export function MilestoneSuggestions({;
           </CardContent>
         </Card>
       )}
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -623,3 +666,5 @@ endDate: endDate ? endDate.toISOString () : null;
 }</div>) 
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

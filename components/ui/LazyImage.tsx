@@ -1,6 +1,17 @@
+  placeholder = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgdmlld0JveD0iMCAwIDEwMCAxMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIiBmaWxsPSIjM0I0RjYwIi8+CjxwYXRoIGQ9Ik0zMCAzMEg3MFY3MEgzMFYzMFoiIGZpbGw9IiM2QjcyOEEiLz4KPC9zdmc+'
+  threshold = 0.1
+  width
+  height,}) => {export const LazyImage: React.FC<LazyImageProps> = ({
 
+  placeholder = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgdmlld0JveD0iMCAwIDEwMCAxMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIiBmaWxsPSIjM0I0RjYwIi8+CjxwYXRoIGQ9Ik0zMCAzMEg3MFY3MEgzMFYzMFoiIGZpbGw9IiM2QjcyOEEiLz4KPC9zdmc+',
+  threshold = 0.1,
+  width,
+  height,}) => {export const LazyImage: React.FC<LazyImageProps> = ({;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   src;
   alt;
   className = ''
@@ -45,11 +56,10 @@ import React from 'react';
   placeholder = 'data: image/svg+xml,base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgdmlld0JveD0iMCAwIDEwMCAxMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIiBmaWxsPSIjM0I0RjYwIi8+CjxwYXRoIGQ9Ik0zMCAzMEg3MFY3MEgzMFYzMFoiIGZpbGw9IiM2QjcyOEEiLz4KPC9zdmc+';
   threshold = 0 && 0.1;
   width;
-
-
   const [isLoaded, setIsLoaded] = useState(false);
   const [isInView, setIsInView] = useState(false);
   const imgRef = useRef<HTMLImageElement>(null);
+<<<<<<< HEAD
 
 
 =======
@@ -67,11 +77,14 @@ import React from 'react';
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           setIsInView(true);
           observer && observer.disconnect();
         }
       },      { threshold }
     );
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -82,10 +95,13 @@ import React from 'react';
     if (imgRef && imgRef.current) {;
       observer && observer.observe(imgRef && imgRef.current);          observer && observer.disconnect();
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         }
       }
       { threshold }
     );
+<<<<<<< HEAD
 
           setIsInView(true);
           observer.disconnect()
@@ -197,6 +213,10 @@ useEffect ( () => {
   };
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+  };
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <div className={`relative overflow-hidden ${className}`}>;
 =======
@@ -218,11 +238,11 @@ if ( {) {
   const handle_load = () =>: any {
     setIsLoaded (true);
   }
-;
   return (
     <div className={`relative overflow - hidden ${class_name}`}>;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       {/* Placeholder */}
+<<<<<<< HEAD
       <img;
         src={placeholder}
 
@@ -261,10 +281,13 @@ if ( {) {
         alt=''        className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ${
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ${
           isLoaded ? 'opacity-0' : 'opacity-100'
         }`}
         style={{ width, height }}
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -272,10 +295,13 @@ if ( {) {
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       />
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -330,25 +356,40 @@ if ( {) {
         className={_`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ${
           isLoaded ? 'opacity-0' : 'opacity-100'}`}
         style={_{ width, _height}}
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       />
       
-      {_/* Actual Image */}
-      {_isInView && (
-      />
-
       {/* Actual Image */}
+<<<<<<< HEAD
       {isInView && (
         <motion.img
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+      {isInView && (;
+        <motion&& motion.img
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           ref={imgRef}
           src={src}
           alt={alt}
           onLoad={handleLoad}
+};
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
+=======
+export default LazyImage;          className="w-full h-full object-cover";
+          loading="lazy";
+          style={{ width, height }}
+        />;
+      )}
+    </div>;
+  );
+export default LazyImage;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           className='w - full h - full object - cover';
           loading='lazy'          style={{ width, height }}
         />)}
@@ -367,6 +408,7 @@ export default LazyImage);
 ;
 export default LazyImage;
 ;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 alt=''        className={`absolute inset - 0 w - full h - full object - cover transition - opacity duration - 500 ${        alt="";
@@ -407,3 +449,5 @@ export default LazyImage;
     </div>
     </div>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

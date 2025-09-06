@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 // Mock implementation for Sentry to prevent Node.js module import issues during build
 // This mock provides all the necessary Sentry APIs without importing any Node.js modules
@@ -150,14 +151,19 @@ const mockSentry = {;
 
       constructor() {}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+      constructor() {}
+    }
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     Http: class Http {
       constructor() {}
-    },
+    }
     OnUncaughtException: class OnUncaughtException {
       constructor() {}
-    },
+    }
     OnUnhandledRejection: class OnUnhandledRejection {
       constructor() {}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -175,10 +181,13 @@ const mockSentry = {;
   },
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   // Transport
-  makeBrowserOfflineTransport: noopReturn,
-  makeFetchTransport: noopReturn,
+  makeBrowserOfflineTransport: noopReturn
+  makeFetchTransport: noopReturn
   // Utils
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   createTransport: noopReturn,
@@ -267,14 +276,20 @@ const mock_sentry = {
   SDK_VERSION: '7.0.0-mock'
   // Constants
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  createTransport: noopReturn
+  SDK_VERSION: '7.0.0-mock'
+  // Constants
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   Severity: {
-    Fatal: 'fatal',
-    Error: 'error',
-    Warning: 'warning',
-    Info: 'info',
+    Fatal: 'fatal'
+    Error: 'error'
+    Warning: 'warning'
+    Info: 'info'
     Debug: 'debug'
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 export const init = mockSentry && mockSentry.init;
@@ -312,6 +327,8 @@ export const Severity = mockSentry && mockSentry.Severity;
 
 
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 // Mock scope
 const mockScope = {
   setUser: noop
@@ -354,7 +371,30 @@ const mockHub = {
   configureScope: noop
   withScope: (callback: (...args: any[]) => any) => callback(mockScope)
   startTransaction: () => mockTransaction
+
+      constructor() {}
+    }
+    Http: class Http {
+      constructor() {}
+    },
+    OnUncaughtException: class OnUncaughtException {
+      constructor() {}
+    },
+    OnUnhandledRejection: class OnUnhandledRejection {
+      constructor() {}
+  // Transport
+  makeBrowserOfflineTransport: noopReturn,
+  makeFetchTransport: noopReturn,
+  // Utils
+  Severity: {
+    Fatal: 'fatal',
+    Error: 'error',
+    Warning: 'warning',
+    Info: 'info',
+    Debug: 'debug'
+  }
 }
+<<<<<<< HEAD
 // Export default mock that covers all Sentry packages
 export default mockSentry
 // Named exports for compatibility
@@ -391,6 +431,8 @@ export const createTransport = mockSentry.createTransport
 export const SDK_VERSION = mockSentry.SDK_VERSION
 export const Severity = mockSentry.Severity
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 // Additional exports for compatibility
 export { mockSentry as Sentry }
 // All exports are already defined above
@@ -488,6 +530,7 @@ export const create_transport = mock_sentry.create_transport;
 export const SDK_VERSION = mock_sentry.SDK_VERSION;
 export const Severity = mock_sentry.Severity;
 // Additional exports for compatibility;
+<<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
 // Additional exports for compatibility;
 export { mockSentry as Sentry };
@@ -586,3 +629,5 @@ export { mockSentry as Sentry };
 export { mock_sentry as Sentry }
 // All exports are already defined above;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

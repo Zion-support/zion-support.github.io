@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -11,10 +12,13 @@ const SidebarNavigation: React.FC = () => {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     { name: 'Home', href: '/', icon: Home },
     { name: 'Profile', href: '/profile', icon: User },
     { name: 'Settings', href: '/settings', icon: Settings }
   ];
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 ;
@@ -58,6 +62,8 @@ import React,{ useState } from \'react\'; import { Link,useLocation } from \'rea
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <div className={`${is_open ? 'w - 64' : 'w - 16'} transition - all duration - 300 bg - white shadow - lg`}>;
         <div className="p - 4">;
           <button;
@@ -93,5 +99,8 @@ import React,{ useState } from \'react\'; import { Link,useLocation } from \'rea
     </div>);
 }
 ;
+<<<<<<< HEAD
 export default SidebarNavigation;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -11,6 +12,8 @@ interface FeatureCardProps {;
   gradient: string,;
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   className?: string;
 }
 export default function FeatureCard({
@@ -21,6 +24,7 @@ export default function FeatureCard({
   gradient
   className = ''
 }: FeatureCardProps) {
+<<<<<<< HEAD
 
 interface FeatureCardProps {
   icon: string,
@@ -42,6 +46,8 @@ interface FeatureCardProps {;
   description: string,;
   features: string[],;
   gradient: string,;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   className?: string;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 }
@@ -49,6 +55,7 @@ export default /**
  * FeatureCard - Function description
  */
 function FeatureCard() {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   return (
@@ -90,6 +97,10 @@ function FeatureCard() {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+  return (
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       </ul>;
     </div>);
 }

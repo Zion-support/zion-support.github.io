@@ -1,8 +1,7 @@
-
-
 import type { NextApiRequest, NextApiResponse } from "next";
 import { createClient } from "@supabase/supabase-js";
 import OpenAI from "openai";
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -17,12 +16,15 @@ const supabaseKey =
   process && process.env.SUPABASE_SERVICE_ROLE_KEY ||
   process && process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 const supabase =
   supabaseUrl && supabaseKey ? createClient(supabaseUrl, supabaseKey) : null;
 const openaiApiKey = process && process.env.OPENAI_API_KEY;
 const openai = openaiApiKey ? new OpenAI({ apiKey: openaiApiKey }) : null;
 const supabaseUrl = process && process.env.NEXT_PUBLIC_SUPABASE_URL;
 const supabaseKey =
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -40,12 +42,15 @@ const supabase = supabaseUrl && supabaseKey ? createClient(supabaseUrl, supabase
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 const openaiApiKey = process.env.OPENAI_API_KEY;
 =======
   process && process.env.SUPABASE_SERVICE_ROLE_KEY ||
   process && process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
 const supabase =
   supabaseUrl && supabaseKey ? createClient(supabaseUrl, supabaseKey) : null;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -54,16 +59,22 @@ const supabase =
 const openaiApiKey = process.env.OPENAI_API_KEY;
 const openai = openaiApiKey ? new OpenAI({ apiKey: openaiApiKey }) : null;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
+<<<<<<< HEAD
   if (req && req.method !== "POST")
     return res && res.status(405).json({ message: "Method not allowed" });
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   export default async function handler(
     req: NextApiRequest
     res: NextApiResponse
   ) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     if (req && req.method !== "POST")
@@ -81,11 +92,14 @@ export default async function handler(
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     }
     try {
       let aiSummary: string | null = null;
       let aiTags: string[] = [];
       if (openai) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -102,6 +116,8 @@ export default async function handler(
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         )
           .replace(/tags?:/i, "")
           .trim();
@@ -114,6 +130,9 @@ export default async function handler(
       }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') return res.status(405).json({ message: 'Method not allowed' });
 
@@ -121,6 +140,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (!service || !description || !email) {
     return res.status(400).json({ message: 'Missing required fields' });
   }
+<<<<<<< HEAD
 
 =======
       let saved: any = null;
@@ -180,6 +200,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(500).json({ message: 'Server error' })
   };
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
@@ -288,6 +310,7 @@ if (throw error) {
     }
     return res.status (500).json ({ message: "Server error" });
 <<<<<<< HEAD
+<<<<<<< HEAD
   }
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -307,6 +330,8 @@ if (throw error) {
     }
     return res.status(500).json({ message: "Server error" });
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   }
 }
     return res
@@ -316,4 +341,10 @@ if (throw error) {
     console.error('quote-request error', e);
     return res.status(500).json({ message: 'Server error' });
   }
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

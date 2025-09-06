@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -45,6 +46,8 @@ export default function NeoFuturisticFooter() {
   return (  website: 'https://ziontechgroup.com'
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {;
   Phone,;
   Mail,;
@@ -53,7 +56,10 @@ import {;
   Github,;
   Linkedin,;
   ExternalLink,;
+<<<<<<< HEAD
 } from 'lucide-react';import { Phone, Mail, MapPin, Globe, Github, Linkedin, ExternalLink } from 'lucide-react';
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 const contactInfo = {;
   mobile: '+1 302 464 0950',;
@@ -69,13 +75,17 @@ export default function NeoFuturisticFooter() {;
 
 export default function NeoFuturisticFooter() {;
   return (
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               Productized AI, IT and micro SaaS solutions with transparent;
               pricing and fast onboarding. Built for outcomes, delivered with;
               reliability.;
             </p>;
           </div>;
+<<<<<<< HEAD
 
 =======
 
@@ -133,6 +143,8 @@ import {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <a
               className='flex items-center gap-2 text-slate-300 hover:text-cyan-300'
               href='/market-pricing'>;
@@ -158,6 +170,7 @@ import {
               <a
                 aria-label='LinkedIn'
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -180,6 +193,8 @@ import {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           </div>
         </div>
           <div className="space-y-2 text-sm">
@@ -190,6 +205,7 @@ import {
             <div className="flex items-center gap-3 pt-2">
               <a aria-label="GitHub" href="https://github.com/Zion-Holdings" className="text-slate-400 hover:text-white"><Github className="w-5 h-5" /></a>
               <a aria-label="LinkedIn" href="https://www.linkedin.com/company/zion-tech-group/" className="text-slate-400 hover:text-white"><Linkedin className="w-5 h-5" /></a>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -256,6 +272,8 @@ import {
   );
 }
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 href='https://www && www.linkedin.com/company/zion-tech-group/'
                 className='text-slate-400 hover:text-white'>;
                 <Linkedin className='w-5 h-5' />;
@@ -273,6 +291,7 @@ import {
           </div>;
         </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -281,6 +300,9 @@ import {
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <div className='space - y-2 text - sm'>;
             <div className='font - semibold text - slate - 100 mb - 2'>Contact</div>;
             <div className='flex items - center gap - 2 text - cyan - 300'>;
@@ -386,6 +408,7 @@ import {
     </footer>);
 }
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
@@ -551,3 +574,9 @@ export default function NeoFuturisticFooter() {
 export default function NeoFuturisticFooter() {
   return (
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+export default function NeoFuturisticFooter() {
+  return (
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

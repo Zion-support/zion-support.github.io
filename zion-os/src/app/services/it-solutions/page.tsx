@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -299,6 +300,8 @@ export default function ITSolutionsPage() {;
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 "use client",
 import { useState  } from './react';,
 interface ITService {
@@ -313,6 +316,7 @@ interface ITService {
   icon: string,
   features: string[],
   technologies: string[],
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 "use client";
@@ -329,6 +333,8 @@ interface ITService {id: string;
   features: string[];
   technologies: string[];
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   industries: string[];
 }
 const it_services: ITService[] = [;
@@ -349,7 +355,6 @@ const it_services: ITService[] = [;
     pricing: "Starting at $15, 000",
     starting_price: 15000,
     contact_link: "mailto:kleber@ziontechgroup.com?subject = Cloud%20Migration%20Inquiry",
-    icon: "☁️",
     features: [;
       "Multi - cloud strategy planning",
       "Infrastructure as Code (IaC)",
@@ -394,7 +399,6 @@ const it_services: ITService[] = [;
     pricing: "Starting at $8, 500",
     starting_price: 8500,
     contact_link: "mailto:kleber@ziontechgroup.com?subject = Cybersecurity%20Inquiry",
-    icon: "🔒",
     features: [;
       "Penetration testing",
       "Security audits and assessments",
@@ -439,7 +443,6 @@ const it_services: ITService[] = [;
     pricing: "Starting at $6, 500",
     starting_price: 6500,
     contact_link: "mailto:kleber@ziontechgroup.com?subject = Network%20Infrastructure%20Inquiry",
-    icon: "🌐",
     features: [;
       "Network design and planning",
       "Hardware procurement and setup",
@@ -484,7 +487,6 @@ const it_services: ITService[] = [;
     pricing: "Starting at $200 / hour",
     starting_price: 200,
     contact_link: "mailto:kleber@ziontechgroup.com?subject = IT%20Strategy%20Inquiry",
-    icon: "💡",
     features: [;
       "Technology roadmap planning",
       "Digital transformation strategy",
@@ -529,7 +531,6 @@ const it_services: ITService[] = [;
     pricing: "Starting at $25, 000",
     starting_price: 25000,
     contact_link: "mailto:kleber@ziontechgroup.com?subject = Data%20Center%20Inquiry",
-    icon: "🏢",
     features: [;
       "Data center design and planning",
       "Infrastructure procurement",
@@ -574,7 +575,6 @@ const it_services: ITService[] = [;
     pricing: "Starting at $2, 500 / month",
     starting_price: 2500,
     contact_link: "mailto:kleber@ziontechgroup.com?subject = Managed%20IT%20Services%20Inquiry",
-    icon: "🔄",
     features: [;
       "24 / 7 monitoring and alerting",
       "Help desk support",
@@ -602,6 +602,7 @@ const it_services: ITService[] = [;
       "Financial Services";
     ];
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 ],
 export default /**
@@ -907,6 +908,8 @@ export default function ITSolutionsPage() {;
   return (;
     <div className="space-y-8">;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {/* Header */}
       <div className="text - center space - y-4">;
         <h1 className="text - 4xl font - bold">IT Solutions & Services</h1>;

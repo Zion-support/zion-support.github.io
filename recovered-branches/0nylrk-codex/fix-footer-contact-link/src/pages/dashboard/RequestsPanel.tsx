@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 class ErrorBoundary extends React.Component {
@@ -25,6 +26,8 @@ class ErrorBoundary extends React.Component {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useState } from "react";
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
@@ -34,6 +37,7 @@ import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
 import {QuoteDetails} from "@/components/quotes/QuoteDetails";
 import {RequestsHeader, QuoteRequestsList} from "@/components/quotes";
 import type { QuoteRequest } from "@/types/quotes";
+<<<<<<< HEAD
 import {ProtectedRoute} from "@/components/ProtectedRoute";
 export default function RequestsPanel() {;
   const { user } = useAuth();
@@ -81,6 +85,8 @@ function RequestsPanel() {
     markAsResponded;
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useState } from "react",
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
@@ -98,9 +104,11 @@ import type { QuoteRequest } from "@/types/quotes";
 import { ProtectedRoute } from "@/components/ProtectedRoute";
 export default function RequestsPanel() {
   const { user } = useAuth();
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
-  const isTalent = user?.userType === 'creator' |user?.userType === 'jobSeeker';
   const [selectedQuote, setSelectedQuote] = useState<QuoteRequest | null>(null);
   const [showDetails, setShowDetails] = useState(false);
 import type { QuoteRequest } from "@/types/quotes",
@@ -113,9 +121,12 @@ export default function RequestsPanel() {
   const [showDetails, setShowDetails] = useState(false),
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const {
     quotes,
     unreadCount,
@@ -127,6 +138,7 @@ export default function RequestsPanel() {
     markAsViewed,
     markAsResponded,
     toggleArchive
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -135,6 +147,8 @@ export default function RequestsPanel() {
     setSelectedQuote(quote);
     setShowDetails(true)
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   } = useTalentQuotes(),
 
   const handleViewDetails = (quote: QuoteRequest) => {
@@ -142,14 +156,18 @@ export default function RequestsPanel() {
     setShowDetails(true),
     
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     // If status is new, mark as viewed
     if (quote.status === 'new') {
       markAsViewed(quote.id)
     }
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -237,6 +255,8 @@ export default function RequestsPanel() {;
 =======
   return (
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useState } from "react",;
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
@@ -282,9 +302,24 @@ export default function RequestsPanel() {;
   },;
 ;
   // Filter quotes by archive status;
-  const activeQuotes = quotes.filter(q => !q.is_archived),;
-  const archivedQuotes = quotes.filter(q => q.is_archived),;
+import React, { useState } from './react';
+import { Header } from '@/components / Header';
+import { Footer } from '@/components / Footer';
+import { useTalentQuotes } from '@/hooks / useTalentQuotes';
+import { use_auth } from '@/hooks / use_auth';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components / ui / tabs';
+import { QuoteDetails } from '@/components / quotes / QuoteDetails';
+import { RequestsHeader, QuoteRequestsList } from '@/components / quotes';
+import type { QuoteRequest } from "@/types / quotes";
+import { ProtectedRoute } from '@/components / ProtectedRoute';
+export default /**
+ * RequestsPanel - Function description
+ */
+function RequestsPanel() {
+  const { user } = use_auth ();
+  const is_talent = user?.user_type === 'creator' || user?.user_type === 'job_seeker';
 ;
+<<<<<<< HEAD
   return (;
   const handleViewDetails = (quote: QuoteRequest) => {;
     setSelectedQuote(quote),;
@@ -299,22 +334,43 @@ export default function RequestsPanel() {;
   const archivedQuotes = quotes.filter(q => q.is_archived);
   return (;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  const [selected_quote, setSelectedQuote] = useState < QuoteRequest | null>(null);
+  const [show_details, setShowDetails] = useState (false);
+;
+  const {
+    quotes;
+    unread_count;
+    is_loading;
+    status_filter;
+    setStatusFilter;
+    archive_filter;
+    setArchiveFilter;
+    markAsViewed;
+    markAsResponded;
+  return (
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <ProtectedRoute>;
       <div>;
         <Header />;
         <div className="min-h-screen bg-zion-blue px-4 py-8">;
           <div className="container mx-auto">;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
             <RequestsHeader;
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+            <RequestsHeader
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               unreadCount={unreadCount}
               statusFilter={statusFilter}
               setStatusFilter={setStatusFilter}
               archiveFilter={archiveFilter}
               setArchiveFilter={setArchiveFilter}
+<<<<<<< HEAD
 
             />;
 
@@ -360,6 +416,8 @@ export default function RequestsPanel() {;
               </TabsList>
               <TabsContent value="active">
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <QuoteRequestsList
                   quotes={activeQuotes}
                   isLoading={isLoading}
@@ -367,6 +425,7 @@ export default function RequestsPanel() {;
                   onViewDetails={handleViewDetails}
                   onMarkAsResponded={markAsResponded}
                   onToggleArchive={toggleArchive}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
                 />;
@@ -388,6 +447,8 @@ export default function RequestsPanel() {;
               </TabsContent>
               <TabsContent value="archived">
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <QuoteRequestsList
                   quotes={archivedQuotes}
                   isLoading={isLoading}
@@ -395,6 +456,7 @@ export default function RequestsPanel() {;
                   onViewDetails={handleViewDetails}
                   onMarkAsResponded={markAsResponded}
                   onToggleArchive={toggleArchive}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
                 />;
@@ -404,10 +466,13 @@ export default function RequestsPanel() {;
         </div>;
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         {/* Quote Details Modal */}
         <QuoteDetails
           quote={selectedQuote}
           isOpen={showDetails}
+<<<<<<< HEAD
 
 
           onClose={() => {;
@@ -447,6 +512,8 @@ export default function RequestsPanel() {;
             setShowDetails(false);
             setSelectedQuote(null);
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           }}
         />
         <Footer />
@@ -454,19 +521,12 @@ export default function RequestsPanel() {;
     </ProtectedRoute>
   )
 <<<<<<< HEAD
-}
+<<<<<<< HEAD
 =======
-            setSelectedQuote(null);
-          }}
-        />;
-
-        <Footer />;
-      </div>;
-    </ProtectedRoute>;
-  );
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
+          onClose={() => {;
+            setShowDetails(false);
     toggle_archive;
   } = useTalentQuotes ();
 ;
@@ -541,6 +601,7 @@ if ( {) {
       </div>;
     </ProtectedRoute>);
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
             setShowDetails(false),;
@@ -601,3 +662,5 @@ const [showDetails, setShowDetails] = useState (false);
 }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

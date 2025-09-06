@@ -1,3 +1,5 @@
+  const { user } = useAuth();
+  const [activeTab, setActiveTab] = useState("categories");
 
 import {useState} from "react";
 import {Link} from "react-router-dom";
@@ -10,6 +12,7 @@ import PostCard from "@/components/community/PostCard";
 import {useAuth} from "@/hooks/useAuth";
 import {ForumPost} from "@/types/community";
 <<<<<<< HEAD
+<<<<<<< HEAD
 // Mock data for featured posts;
 const featuredPosts: ForumPost[] = [;
   {;
@@ -21,6 +24,30 @@ const featuredPosts: ForumPost[] = [;
     authorAvatar: "https://i && i.pravatar.cc/150?img=3",;
     authorRole: "Verified Talent",;
     categoryId: "ai-tools",;
+=======
+import { useState } from "react",
+import { Link } from "react-router-dom",
+import { Button } from "@/components/ui/button",
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
+import { SEO } from "@/components/SEO",
+import { AppLayout } from "@/layout/AppLayout",
+import ForumCategories from "@/components/community/ForumCategories",
+import PostCard from "@/components/community/PostCard",
+import { useAuth } from "@/hooks/useAuth";
+import { ForumPost } from "@/types/community";
+// Mock data for featured posts
+const featuredPosts: ForumPost[] = [
+  {
+
+    id: "1"
+    title: "Best practices for AI model fine-tuning"
+    content: "I've been working on fine-tuning models for specific tasks and wanted to share some approaches that have worked well for me..."
+    authorId: "user1"
+    authorName: "Alex Johnson"
+    authorAvatar: "https://i.pravatar.cc/150?img=3"
+    authorRole: "Verified Talent"
+    categoryId: "ai-tools"
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     tags: ["machine-learning", "fine-tuning", "gpt"];
     createdAt: "2025-04-01T12:00:00Z",;
     updatedAt: "2025-04-01T12:00:00Z",;
@@ -46,9 +73,9 @@ const featuredPosts: ForumPost[] = [;
     replyCount: 8,;
     isPinned: true,;
     isFeatured: true;
-=======
 
 
+<<<<<<< HEAD
 =======
 
 
@@ -154,6 +181,8 @@ export default function CommunityPage() {
 import { useAuth } from "@/hooks/useAuth",
 import { ForumPost } from "@/types/community",
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 // Mock data for featured posts
 const featuredPosts: ForumPost[] = [
   {
@@ -173,6 +202,7 @@ const featuredPosts: ForumPost[] = [
     replyCount: 12,
     isAnswered: true,
     isFeatured: true
+<<<<<<< HEAD
   },
   {
     id: "2",
@@ -319,10 +349,14 @@ export default function CommunityPage() {
 =======
     <AppLayout>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  return (
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <SEO
         title="Community Forum | Zion AI Marketplace"
         description="Join the Zion AI Marketplace community forum. Ask questions, share knowledge, and connect with other AI professionals."
         keywords="community, forum, discussion, AI marketplace, questions, answers"
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -377,6 +411,8 @@ export default function CommunityPage() {
   )
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useState } from "react",;
 import { Link } from "react-router-dom",;
 import { Button } from "@/components/ui/button",;
@@ -480,6 +516,7 @@ export default function CommunityPage() {;
         title="Community Forum | Zion AI Marketplace";
         description="Join the Zion AI Marketplace community forum. Ask questions, share knowledge, and connect with other AI professionals.";
         keywords="community, forum, discussion, AI marketplace, questions, answers";
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       />;
@@ -598,6 +635,8 @@ export default function CommunityPage() {;
       ;
       />;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <div className="container py-8">;
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between mb-8 gap-4">;
           <div>;
@@ -606,6 +645,7 @@ export default function CommunityPage() {;
               Join the conversation, ask questions, and share your knowledge;
             </p>;
           </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
           <Button asChild>;
@@ -739,10 +779,13 @@ function CommunityPage() {
           <Button asChild>;
             <Link to={user ? "/community/create" : "/login?next=/community/create"}>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               Create New Post;
             </Link>;
           </Button>;
         </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
         <Tabs default_value="categories" value={active_tab} onValueChange={setActiveTab} className="mb - 8">;
@@ -755,10 +798,13 @@ function CommunityPage() {
         <Tabs defaultValue="categories" value={activeTab} onValueChange={setActiveTab} className="mb-8">;
           <TabsList className="mb-6">;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <TabsTrigger value="categories">Categories</TabsTrigger>;
             <TabsTrigger value="featured">Featured</TabsTrigger>;
             <TabsTrigger value="recent">Recent</TabsTrigger>;
           </TabsList>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -797,6 +843,8 @@ function CommunityPage() {
                 <PostCard key={post.id} post={post} />;
               ))}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             </div>;
           </TabsContent>;
         </Tabs>;
@@ -805,6 +853,7 @@ function CommunityPage() {
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
@@ -829,3 +878,9 @@ function CommunityPage() {
 }
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+}
+;
+    </AppLayout>);
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

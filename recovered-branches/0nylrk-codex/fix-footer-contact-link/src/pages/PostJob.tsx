@@ -1,4 +1,3 @@
-
 import {Header} from "@/components/header";
 import {Footer} from "@/components/Footer";
 import {JobPostingForm} from "@/components/jobs";
@@ -9,6 +8,7 @@ import {Navigate} from "react-router-dom";
 import {useIsMobile} from "@/hooks/use-mobile";
 export default function PostJob() {;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -17,6 +17,8 @@ export default function PostJob() {;
   const isMobile = useIsMobile();
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { Header } from "@/components/header",
 import { Footer } from "@/components/Footer",
 import { JobPostingForm } from "@/components/jobs",
@@ -30,6 +32,7 @@ export default function PostJob() {
 
   const isMobile = useIsMobile();
 
+<<<<<<< HEAD
 import { Navigate } from "react-router-dom",
 import { useIsMobile } from "@/hooks/use-mobile",
 export default function PostJob() {
@@ -94,12 +97,15 @@ export default function PostJob() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   if (isLoading) {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     return (
       <div className="flex items-center justify-center min-h-screen">;
         <div className="animate-pulse">Loading...</div>;
       </div>;
     );
   }
+<<<<<<< HEAD
 
 
   return (
@@ -110,6 +116,8 @@ export default function PostJob() {;
 =======
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { Header } from "@/components/header",;
 import { Footer } from "@/components/Footer",;
 import { JobPostingForm } from "@/components/jobs",;
@@ -130,6 +138,7 @@ export default function PostJob() {;
   }
 ;
   return (;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     <>;
@@ -221,6 +230,8 @@ export default function PostJob() {;
           <CardHeader>;
             <CardTitle className={`text-${isMobile ? '2xl' : '3xl'} font-bold`}>Post a Job</CardTitle>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <CardDescription>;
               Fill out the form below to post your job and find the perfect talent.;
             </CardDescription>;
@@ -236,6 +247,7 @@ export default function PostJob() {;
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
@@ -275,3 +287,10 @@ if (isLoading) {
 }
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+}
+;
+      {is_mobile && <div className="h - 16"></div>}
+    </>);
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

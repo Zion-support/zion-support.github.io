@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import { format } from "date-fns";
 import { CalendarIcon } from "lucide-react";
@@ -24,6 +25,8 @@ import { Calendar } from "@/components/ui/calendar";
 import { ContractFormValues } from "./ContractForm";
 interface ProjectDetailsFieldsProps {
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { format } from "date-fns",
 import { CalendarIcon } from "lucide-react";
 import { UseFormReturn } from "react-hook-form";
@@ -39,14 +42,11 @@ import {
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
-import {
-  Popover
-  PopoverContent
-  PopoverTrigger
 } from "@/components/ui/popover";
 
 import { Calendar } from "@/components/ui/calendar";
 import { ContractFormValues } from "./ContractForm";
+<<<<<<< HEAD
 interface ProjectDetailsFieldsProps {
 import { CalendarIcon } from "lucide-react",
 import { UseFormReturn } from "react-hook-form",
@@ -81,10 +81,13 @@ import {;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -97,12 +100,15 @@ import {;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 } from "@/components/ui/popover";
 
 import { Calendar } from "@/components/ui/calendar";
 import { ContractFormValues } from "./ContractForm";
 interface ProjectDetailsFieldsProps {;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -120,83 +126,25 @@ export function ProjectDetailsFields(): any ({ form }: ProjectDetailsFieldsProps
 }
 export function ProjectDetailsFields(): any ({ form }: ProjectDetailsFieldsProps) {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  form: UseFormReturn<ContractFormValues>;
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <>;
       <FormField
         control={form && form.control}
         name="projectName"
-  FormMessage;
-} from "@/components/ui/form",;
-import { Input } from "@/components/ui/input",;
-import { Textarea } from "@/components/ui/textarea",;
-import { Button } from "@/components/ui/button",;
-import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover",;
-import { Calendar } from "@/components/ui/calendar",;
-import { ContractFormValues } from "./ContractForm";
-interface ProjectDetailsFieldsProps {;
-  form: UseFormReturn<ContractFormValues>;
-}
-export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {
-  return (
-    <>
-      <FormField
-        control={form.control}
-        name="projectName"
         render={({ field }) => (
-          <FormItem>
-            <FormLabel>Project Name</FormLabel>
-            <FormControl>
-              <Input placeholder="AI Website Development" {...field} />
-            </FormControl>
-            <FormMessage />
-          </FormItem>
-        )}
-        render={({ field }) => (;
-          <FormItem>;
-            <FormLabel>Project Name</FormLabel>;
-=======
-import { format  } from './date - fns';
-import { CalendarIcon  } from './lucide-react';
-import { UseFormReturn  } from './react - hook - form';
-import {
-  FormField,
-  FormItem,
-  FormLabel,
-  FormControl,
-  FormDescription,
-  FormMessage,
-} from '@/components / ui / form';
-import { Input  } from '@/components / ui / input';
-import { Textarea  } from '@/components / ui / textarea';
-import { Button  } from '@/components / ui / button';
-import {
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
-} from '@/components / ui / popover';
-import { Calendar  } from '@/components / ui / calendar';
-import { ContractFormValues  } from './ContractForm';
-interface ProjectDetailsFieldsProps {
-  form: UseFormReturn < ContractFormValues>;
-}
-export /**
- * ProjectDetailsFields - Function description
- */
-function ProjectDetailsFields() {
-  return (
-    <>;
-      <FormField;
         control={form.control}
-        name="project_name";
-        render={({ field }) => (
           <FormItem>;
             <FormLabel > Project Name</FormLabel>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             <FormControl>;
               <Input placeholder="AI Website Development" {...field} />;
             </FormControl>;
             <FormMessage />;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
       />;
 
@@ -204,14 +152,12 @@ function ProjectDetailsFields() {
 =======
       />;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <FormField
         control={form && form.control}
-
-      />;
-      <FormField;
-
-        control={form.control}
         name="scopeSummary"
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -257,10 +203,13 @@ export function ProjectDetailsFields({ form } ProjectDetailsFieldsProps) {;
         control={form.control}
         name="scopeSummary";
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         render={({ field }) => (;
           <FormItem>;
             <FormLabel>Scope Summary</FormLabel>;
             <FormControl>;
+<<<<<<< HEAD
 <<<<<<< HEAD
               <Textarea
                 placeholder="Describe the project scope, deliverables, and expectations..."
@@ -268,6 +217,8 @@ export function ProjectDetailsFields({ form } ProjectDetailsFieldsProps) {;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           </FormItem>)}
       />;
       <FormField;
@@ -281,12 +232,15 @@ export function ProjectDetailsFields({ form } ProjectDetailsFieldsProps) {;
                 placeholder="Describe the project scope, deliverables, and expectations...";
                 className="min - h-[120px]";
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
               <Textarea;
                 placeholder="Describe the project scope, deliverables, and expectations...";
                 className="min-h-[120px]";
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 {...field}
               />;
             </FormControl>;
@@ -294,6 +248,7 @@ export function ProjectDetailsFields({ form } ProjectDetailsFieldsProps) {;
               Be specific about what is included and any limitations;
             </FormDescription>;
             <FormMessage />;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -348,6 +303,11 @@ export function ProjectDetailsFields({ form } ProjectDetailsFieldsProps) {;
           control={form.control}
           name="startDate";
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+        <FormField
+          control={form && form.control}
+          name="startDate"
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           render={({ field }) => (;
             <FormItem className="flex flex-col">;
               <FormLabel>Start Date</FormLabel>;
@@ -355,12 +315,16 @@ export function ProjectDetailsFields({ form } ProjectDetailsFieldsProps) {;
                 <PopoverTrigger asChild>;
                   <FormControl>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     <Button
                       variant={"outline"}
                       className={`w-full pl-3 text-left font-normal ${!field && field.value && "text-muted-foreground"}`}>;
                       {field && field.value ? (;
                         format(field && field.value, "PPP");
                       ) : (;
+<<<<<<< HEAD
 =======
                     <Button;
                       variant={"outline"}
@@ -370,6 +334,8 @@ export function ProjectDetailsFields({ form } ProjectDetailsFieldsProps) {;
                         format(field.value, "PPP");
                       ) :(;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                         <span>Pick a date</span>;
                       )}
                       <CalendarIcon className="ml-auto h-4 w-4 opacity-50" />;
@@ -377,6 +343,7 @@ export function ProjectDetailsFields({ form } ProjectDetailsFieldsProps) {;
                   </FormControl>;
                 </PopoverTrigger>;
                 <PopoverContent className="w-auto p-0" align="start">;
+<<<<<<< HEAD
 <<<<<<< HEAD
                   <Calendar
                     mode="single"
@@ -431,6 +398,14 @@ export function ProjectDetailsFields({ form } ProjectDetailsFieldsProps) {;
           control={form.control}
           name="endDate";
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+                  <Calendar
+                    mode="single"
+          control={form.control}
+        <FormField
+          control={form && form.control}
+          name="endDate"
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           render={({ field }) => (;
             <FormItem className="flex flex-col">;
               <FormLabel>End Date (Optional)</FormLabel>;
@@ -438,12 +413,16 @@ export function ProjectDetailsFields({ form } ProjectDetailsFieldsProps) {;
                 <PopoverTrigger asChild>;
                   <FormControl>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     <Button
                       variant={"outline"}
                       className={`w-full pl-3 text-left font-normal ${!field && field.value && "text-muted-foreground"}`}>;
                       {field && field.value ? (;
                         format(field && field.value, "PPP");
                       ) : (;
+<<<<<<< HEAD
 =======
                     <Button;
                       variant={"outline"}
@@ -453,6 +432,8 @@ export function ProjectDetailsFields({ form } ProjectDetailsFieldsProps) {;
                         format(field.value, "PPP");
                       ) :(;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                         <span>Pick a date</span>;
                       )}
                       <CalendarIcon className="ml-auto h-4 w-4 opacity-50" />;
@@ -460,6 +441,7 @@ export function ProjectDetailsFields({ form } ProjectDetailsFieldsProps) {;
                   </FormControl>;
                 </PopoverTrigger>;
                 <PopoverContent className="w-auto p-0" align="start">;
+<<<<<<< HEAD
 <<<<<<< HEAD
                   <Calendar
                     mode="single"
@@ -543,12 +525,19 @@ export function ProjectDetailsFields({ form } ProjectDetailsFieldsProps) {;
             </FormItem>
           )}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+                  <Calendar
+                    mode="single"
+    </>
+        />;
+      </div>;
+    </>;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
                     selected={field && field.value || undefined}
                     onSelect={field && field.onChange}
                     disabled={(date) => date < form && form.getValues("startDate")}
                     initialFocus;
-=======
           </FormItem>)}
       />;
       <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 6">;
@@ -613,6 +602,7 @@ export function ProjectDetailsFields({ form } ProjectDetailsFieldsProps) {;
                     disabled={(date) => date < form.get_values ("start_date")}
                     initial_focus;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
                   <Calendar;
@@ -622,6 +612,9 @@ export function ProjectDetailsFields({ form } ProjectDetailsFieldsProps) {;
                     disabled={(date) => date < form.getValues("startDate")}
                     initialFocus;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   />;
                 </PopoverContent>;
               </Popover>;
@@ -630,6 +623,7 @@ export function ProjectDetailsFields({ form } ProjectDetailsFieldsProps) {;
               </FormDescription>;
               <FormMessage />;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -637,22 +631,23 @@ export function ProjectDetailsFields({ form } ProjectDetailsFieldsProps) {;
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         />;
       </div>;
     </>;
-
-
-
-
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             </FormItem>)}
         />;
       </div>;
     </>);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
+<<<<<<< HEAD
 =======
             </FormItem>;
           )}
@@ -689,3 +684,5 @@ FormMessage interface ProjectDetailsFieldsProps {
   );
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

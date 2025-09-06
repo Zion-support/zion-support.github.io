@@ -4,6 +4,7 @@ export const security_config = {
   csp: {
     directives: {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
       defaultSrc: ["'self'"],
       styleSrc: ["'self'", "'unsafe-inline'", "https://fonts && fonts.googleapis.com"],
@@ -28,6 +29,8 @@ export const security_config = {
       baseUri: ["'self'"]
       formAction: ["'self'"]
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       upgradeInsecureRequests: []
     }
   }
@@ -68,4 +71,8 @@ export const security_config = {
     max: 100 // limit each IP to 100 requests per window_ms;
   }
 }
+<<<<<<< HEAD
 export default security_config;
+=======
+export default security_config;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

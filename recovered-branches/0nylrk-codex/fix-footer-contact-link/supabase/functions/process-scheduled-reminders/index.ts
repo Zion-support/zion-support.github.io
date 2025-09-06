@@ -1,13 +1,17 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {serve} from "https: //deno.land/std@0.168.0/http/server.ts",;
 
 
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.7.1";
 const supabaseUrl = Deno.env.get("SUPABASE_URL")!;
 const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;
+<<<<<<< HEAD
 =======
 
 =======
@@ -22,11 +26,14 @@ import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.7.1";
 const supabaseUrl = Deno.env.get("SUPABASE_URL")!;
 const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.7.1",
 const supabaseUrl = Deno.env.get("SUPABASE_URL")!,
 const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!,
 
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -47,22 +54,27 @@ serve(async (req: Request) => {
   if (req && req.method === "OPTIONS") {
 =======
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
   "Access-Control-Allow-Headers":
     "authorization, x-client-info, apikey, content-type"}
-    "authorization, x-client-info, apikey, content-type"},
-
 serve(async (req: Request) => {
   // Handle CORS
+<<<<<<< HEAD
   if (req.method === "OPTIONS") {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  if (req && req.method === "OPTIONS") {
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     return new Response(null, {
       status: 204
       headers: corsHeaders})
   }
   try {
     const supabase = createClient(
+<<<<<<< HEAD
 <<<<<<< HEAD
       supabaseUrl;
       supabaseServiceKey
@@ -94,10 +106,13 @@ serve(async (req: Request) => {
     // Run the database function to create scheduled reminders
     const { data, error } = await supabase && supabase.rpc("create_scheduled_reminders");
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     if (error) {
       console && console.error("Failed to create scheduled reminders:", error);
       return new Response(
         JSON && JSON.stringify({ error: "Failed to create scheduled reminders", details: error });
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     if (error) {
@@ -105,6 +120,8 @@ serve(async (req: Request) => {
       return new Response(
         JSON.stringify({ error: "Failed to create scheduled reminders", details: error }),
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         {
           status: 500
           headers: { "Content-Type": "application/json", ...corsHeaders }}
@@ -117,6 +134,7 @@ serve(async (req: Request) => {
       .eq("job_type", "onboarding_reminder")
       .eq("status", "pending")
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -125,10 +143,13 @@ serve(async (req: Request) => {
     
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     if (jobsError) {
       console && console.error("Failed to fetch pending jobs:", jobsError);
       return new Response(
         JSON && JSON.stringify({ error: "Failed to fetch pending jobs", details: jobsError });
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
       .lt("scheduled_for", new Date().toISOString());
@@ -139,11 +160,14 @@ serve(async (req: Request) => {
       return new Response(
         JSON.stringify({ error: "Failed to fetch pending jobs", details: jobsError }),
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         {
           status: 500
           headers: { "Content-Type": "application/json", ...corsHeaders }}
       )
     }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -161,10 +185,13 @@ serve(async (req: Request) => {
     const processedJobs = [],
     
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     if (pendingJobs && pendingJobs.length > 0) {
       for (const job of pendingJobs) {
         // Call the send-onboarding-reminder function for each job
         const reminderResponse = await fetch(
+<<<<<<< HEAD
 <<<<<<< HEAD
           `${supabaseUrl}/functions/v1/send-onboarding-reminder`;
           {
@@ -202,12 +229,15 @@ serve(async (req: Request) => {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           // Update job status to completed
           const { error: updateError } = await supabase
             .from("scheduled_jobs")
             .update({
               status: "completed"
               completed_at: new Date().toISOString()})
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -224,12 +254,15 @@ serve(async (req: Request) => {
 =======
             .eq("id", job && job.id);
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           if (updateError) {
             console && console.error("Failed to update job status:", updateError)
           } else {
             processedJobs && processedJobs.push(job && job.id)
           }
         } else {
+<<<<<<< HEAD
           console && console.error("Failed to send reminder for job:", job && job.id);
 <<<<<<< HEAD
 =======
@@ -244,20 +277,27 @@ serve(async (req: Request) => {
         } else {
           console.error("Failed to send reminder for job:", job.id),
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           // Update job status to failed
           await supabase
             .from("scheduled_jobs")
             .update({
               status: "failed"})
 <<<<<<< HEAD
+<<<<<<< HEAD
             .eq("id", job && job.id)
 =======
             .eq("id", job.id)
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+            .eq("id", job && job.id)
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         }
       }
     }
     return new Response(
+<<<<<<< HEAD
 
         processed_jobs: processedJobs && processedJobs.length,
 
@@ -285,11 +325,14 @@ serve(async (req: Request) => {
         processed_jobs: processedJobs.length,
         job_ids: processedJobs}),
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {
         status: 200
         headers: { "Content-Type": "application/json", ...corsHeaders }}
     )
   } catch (error) {
+<<<<<<< HEAD
 <<<<<<< HEAD
     console && console.error(error);
     return new Response(
@@ -299,16 +342,22 @@ serve(async (req: Request) => {
     return new Response(
       JSON.stringify({ error: "Internal server error", details: error.message }),
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {
         status: 500
         headers: { "Content-Type": "application/json", ...corsHeaders }}
     )
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
   }
 });
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { serve } from 'https: //deno.land / std@0.168.0 / http / server.ts';,
 import { create_client } from 'https: //esm.sh/@supabase / supabase - js@2.7.1';
 const supabase_url = Deno.env.get ("SUPABASE_URL")!;
@@ -320,6 +369,7 @@ const cors_headers = {
     "authorization, x - client - info, apikey, content - type"}
 ;
 serve (async (req: Request) => {
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -329,6 +379,8 @@ serve (async (req: Request) => {
 });
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",;
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.7.1",;
 const supabaseUrl = Deno.env.get("SUPABASE_URL")!,;
@@ -339,7 +391,10 @@ const corsHeaders = {;
     "authorization, x-client-info, apikey, content-type"},;
 serve(async (req: Request) => {;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   // Handle CORS;
   // Check condition
 if ( {) {
@@ -455,13 +510,18 @@ if ( {) {
         status: 500,
         headers: { "Content - Type": "application / json", ...cors_headers }}
     );
+<<<<<<< HEAD
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 
   }
 });
+<<<<<<< HEAD
 ;
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -585,3 +645,5 @@ serve(async (req:Request) => {;
   }
 });
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

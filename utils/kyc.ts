@@ -1,18 +1,24 @@
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   kind: "document" | 'government_id_back' | 'selfie' | 'business_registration' | 'tax_certificate' | 'proof_of_address';
 >>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
   url: string;
   uploaded_at: string;
   status: 'pending' | 'approved' | 'rejected';
 }
+<<<<<<< HEAD
 
 
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export interface KycProfile {
   user_id: string;
 
@@ -20,6 +26,8 @@ export interface KycProfile {
 export interface KycProfile {;
 
   userId: string;
+export interface KycProfile {
+  user_id: string;
   role: KycRole;
   fullLegalName?: string;
   business_name?: string;
@@ -37,6 +45,7 @@ export interface KycProfile {;
     at: string;
     by: string;
     action: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     details?: any
@@ -80,11 +89,14 @@ if ( {) {
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     return ['government_id', 'proof_of_address'];
   } else {
     return ['business_registration', 'proof_of_address', 'beneficial_ownership'];
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -95,17 +107,13 @@ if ( {) {
   $2
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     return ['bank_statement', 'utility_bill'];
   } else {
     return ['bank_statement', 'utility_bill', 'tax_certificate'];
   }
 }
-
-
-
-export function validateKycSubmission(profile: KycProfile): { ok: boolean, missing: string[] } {;
-
-
   const missing: string[] = [];
   
   if (!profile && profile.fullLegalName && !profile && profile.businessName) {
@@ -114,6 +122,7 @@ export function validateKycSubmission(profile: KycProfile): { ok: boolean, missi
   
   if (!profile && profile.country) {
     missing && missing.push('country');
+<<<<<<< HEAD
 <<<<<<< HEAD
   }
   
@@ -131,11 +140,17 @@ export function validateKycSubmission(profile: KycProfile): { ok: boolean, missi
   if (!profile && profile.fullLegalName && !profile && profile.businessName) {
     missing && missing.push('name'),
 
+=======
+  const missing: string[] = [];
+  if (!profile.fullLegalName && !profile.businessName) {
+    missing.push('name');
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   }
   
   if (!profile && profile.country) {
     missing && missing.push('country');
   }
+<<<<<<< HEAD
 
   if (profile.role === 'client' && !profile.dateOfBirth) {
     missing.push('dateOfBirth');
@@ -148,6 +163,8 @@ export function validateKycSubmission(profile: KycProfile): { ok: boolean, missi
     missing.push('dateOfBirth');
   }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   if (profile.role === 'enterprise' && !profile.businessRegistrationNumber) {
     missing.push('businessRegistrationNumber');
 =======
@@ -161,6 +178,7 @@ export function validateKycSubmission(profile: KycProfile): { ok: boolean, missi
   }
   return {
 
+<<<<<<< HEAD
     ok: missing && missing.length === 0,
 <<<<<<< HEAD
 
@@ -196,15 +214,21 @@ export type KycStatus = 'not started' | 'in progress' | 'submitted' | 'approved'
 export type AmlStatus = 'clear' | 'match' | 'review' | 'unknown';
 export interface KycDocumentMeta {
 
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export interface KycDocumentMeta {;
   kind: "document" | 'government_id_back' | 'selfie' | 'business_registration' | 'tax_certificate' | 'proof_of_address';
   url: string;
   uploadedAt: string;
   status: 'pending' | 'approved' | 'rejected';
 }
+<<<<<<< HEAD
 export interface KycProfile {
 
 export interface KycProfile {;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   userId: string;
   role: KycRole;
   fullLegalName?: string;
@@ -226,7 +250,11 @@ export interface KycProfile {;
     details?: any
   }>;
 }
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export function validateKycSubmission (profile: KycProfile): { ok: boolean, missing: string[] } {
   const missing: string[] = [];
 ;
@@ -259,6 +287,7 @@ if ( {) {
     missing;
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
@@ -306,3 +335,7 @@ export function validateKycSubmission(profile: KycProfile): { ok: boolean, missi
   }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

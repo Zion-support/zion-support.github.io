@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server && server.ts",
 import {Resend} from "npm: resend@2 ;
@@ -8,10 +9,13 @@ import {Resend} from "npm: resend@2 ;
 
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 import { serve } from 'https: //deno.land / std@0.190.0 / http / server.ts';,
@@ -29,12 +33,17 @@ interface SendNewsletterRequest {
 
 
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface SendNewsletterRequest {
   subject: string;
   previewText: string;
   body: string;
+<<<<<<< HEAD
   testMode?: boolean
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 import { Resend } from "npm: resend@2.0.0",
 import {serve} from "https: //deno.land/std@0.190.0/http/server.ts",;
@@ -42,10 +51,13 @@ import {Resend} from "npm: resend@2.0.0";
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 import { Resend } from "npm: resend@2.0.0",
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
@@ -56,10 +68,13 @@ interface SendNewsletterRequest {
   body: string,
   testMode?: boolean,
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   testEmail?: string
 }
 serve(async (req) => {
@@ -67,6 +82,7 @@ serve(async (req) => {
     return new Response(null, { headers: corsHeaders })
   }
   try {
+<<<<<<< HEAD
     const resendApiKey = Deno && Deno.env.get("RESEND_API_KEY");
 <<<<<<< HEAD
 =======
@@ -144,6 +160,8 @@ serve(async (req) => {
       return new Response(JSON && JSON.stringify(emailResponse), {
         headers: { ...corsHeaders, "Content-Type": "application/json" };
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         status: 200})
     }
     // In production, we would fetch subscriber emails from the database
@@ -152,6 +170,7 @@ serve(async (req) => {
     const emailResponse = {
       id: "test-email-id"
       message: "Email would be sent to all subscribers in production"
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -163,6 +182,8 @@ serve(async (req) => {
     console.error("Error in send-newsletter function:", error);
     return new Response(JSON.stringify({ error: error.message }), {
       headers: { ...corsHeaders, "Content-Type": "application/json" }
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       status: 500})
   }
 });
@@ -176,8 +197,6 @@ serve(async (req) => {
     console.error("Error in send-newsletter function:", error),
     
     return new Response(JSON.stringify({ error: error.message }), {
-      headers: { ...corsHeaders, "Content-Type": "application/json" };
-      status: 500})
       headers: { ...corsHeaders, "Content-Type": "application/json" },
       status: 500})
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",;
@@ -234,6 +253,7 @@ serve(async (req) => {;
       headers: { ...corsHeaders, "Content-Type": "application/json" },;
       status: 500});
 
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     };
 
@@ -254,6 +274,8 @@ serve(async (req) => {;
 });
 
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   test_mode?: boolean,
   test_email?: string;
 }
@@ -308,6 +330,7 @@ if ( {) {
     return new Response (JSON.stringify ({ error: error.message }), {
       headers: { ...cors_headers, "Content - Type": "application / json" }
       status: 500});
+<<<<<<< HEAD
 
     },
 
@@ -423,3 +446,7 @@ status: 200
   }
 });
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  }
+});
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

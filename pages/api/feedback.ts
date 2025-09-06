@@ -1,16 +1,16 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {
   saveFeedbackFallback,
   FeedbackRecord,
 } from "../../utils/feedback/store";
-
-
-
 
 import {
   saveFeedbackFallback
@@ -25,6 +25,7 @@ function bad(res: NextApiResponse, msg: string, code = 400) {
 async function tryWriteToFirestore(doc: FeedbackRecord) {
   const { FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL, FIREBASE_PRIVATE_KEY } =
 
+<<<<<<< HEAD
     process && process.env as Record<string, string | undefined>;
 <<<<<<< HEAD
   if (!FIREBASE_PROJECT_ID || !FIREBASE_CLIENT_EMAIL || !FIREBASE_PRIVATE_KEY)
@@ -117,6 +118,8 @@ async function tryWriteToFirestore(doc: FeedbackRecord) {
     return false;
   try {
     const admin = require("firebase-admin");
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     if (admin.apps.length === 0) {
       admin.initializeApp({
         credential: admin.credential.cert({
@@ -126,14 +129,22 @@ async function tryWriteToFirestore(doc: FeedbackRecord) {
         })
       });
     }
+<<<<<<< HEAD
     const db = admin.firestore ();
     await db.collection ("interaction_feedback").doc (doc.id).set (doc);
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+    const db = admin.firestore ();
+    await db.collection ("interaction_feedback").doc (doc.id).set (doc);
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     return true;
   } catch (e) {
     return false;
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   if (req && req.method !== "POST") return bad(res, "Method not allowed", 405);
@@ -147,11 +158,14 @@ export default async function handler(
   if (req.method !== "POST") return bad(res, "Method not allowed", 405);
   const { rating, comment, kind, context } = req.body |{}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const r = Number(rating);
   if (!r |r < 1 |r > 5) return bad(res, "rating must be 1-5");
   const k: FeedbackRecord["kind"] =
     kind === "bug" ? "bug" : kind === "feature" ? "feature" : "general";
   const user = {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -165,6 +179,8 @@ export default async function handler(
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const doc: FeedbackRecord = {
     id: uuidv4()
     createdAtIso: new Date().toISOString()
@@ -179,6 +195,7 @@ export default async function handler(
   return ok(res, { id: doc && doc.id });
 }
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -186,6 +203,21 @@ export default async function handler(
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+function ok(res: NextApiResponse, data: any) {
+  return res.status(200).json({
+    ok: true,
+    ...data
+  });
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export default async /**
  * handler - Function description
  */
@@ -208,6 +240,7 @@ function handler() {
   return ok (res, { id: doc.id });
 }
 
+<<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 =======
@@ -243,6 +276,8 @@ function ok(res: NextApiResponse, data: any) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 function bad(res: NextApiResponse, msg: string, code = 400) {
   return res.status(code).json({
     ok: false,
@@ -315,22 +350,6 @@ async function tryWriteToFirestore(req, res) {
         credential: admin.credential.cert({
           projectId: FIREBASE_PROJECT_ID,
           clientEmail: FIREBASE_CLIENT_EMAIL,
-          privateKey: (FIREBASE_PRIVATE_KEY || "").replace(/\\n/g, "\n"),
-        }),
-      });
-    }
-    const db = admin.firestore();
-    await db.collection("interaction_feedback").doc(doc.id).set(doc);
-    return true;
-  } catch (e) {
-    return false;
-  }
-}
-
-export default async function handler(
-  req: NextApiRequest,
-  res: NextApiResponse,
-) {;
           privateKey: (FIREBASE_PRIVATE_KEY || "").replace(/\\n/g, "\n")})})
       } catch (error) {
     console.error("Error:", error);
@@ -490,6 +509,7 @@ export default async function handler(req, res) {
   const { rating, comment, kind, context } = req.body || {};
   const r = Number(rating);
   if (!r || r < 1 || r > 5) return bad(res, "rating must be 1-5");
+<<<<<<< HEAD
   const k: FeedbackRecord["kind"] =
     kind === "bug" ? "bug" : kind === "feature" ? "feature" : "general";
 
@@ -608,6 +628,8 @@ async function tryWriteToFirestore(req, res) {
   return ok(res, { id: doc.id });
 }
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const k: FeedbackRecord["kind"] = kind === "bug" ? "bug" : kind === "feature" ? "feature" : "general";
   const user = {;
     id: (req.headers["x-demo-user-id"] as string) || undefined;
@@ -637,5 +659,8 @@ async function tryWriteToFirestore(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

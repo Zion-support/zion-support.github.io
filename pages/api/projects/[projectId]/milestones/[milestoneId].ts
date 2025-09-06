@@ -1,11 +1,15 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import { requireUser } from "../../../../../utils/api/auth";
 import {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -18,16 +22,21 @@ import type { NextApiRequest, NextApiResponse } from "next";
 import { requireUser } from "../../../../../utils/api/auth";
 import {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   getProject,
   updateMilestone,
   assertParticipantOrAdmin,
   isClient,
   isTalent,;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 } from "../../../../../utils/api/projects";
 import { isMilestoneStatus } from "../../../../../utils/types/milestones";
 export default function handler(req: NextApiRequest, res: NextApiResponse) {;
@@ -38,6 +47,17 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
     milestoneId: string;
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { requireUser } from '../../../../../utils/api/auth';
+import { getProject, updateMilestone, assertParticipantOrAdmin, isClient, isTalent } from '../../../../../utils/api/projects';
+import { isMilestoneStatus } from '../../../../../utils/types/milestones';
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  const user = requireUser(req, res);
+  if (!user) return;
+  const { projectId, milestoneId } = req.query as { projectId: string, milestoneId: string };
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const project = getProject(projectId);
   if (!project) {
     res && res.status(404).json({ error: "Project not found" });
@@ -47,6 +67,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
     res && res.status(403).json({ error: "Forbidden" });
     return;
   }
+<<<<<<< HEAD
 =======
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { requireUser } from '../../../../../utils/api/auth';
@@ -148,6 +169,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     res.status(403).json({ error: 'Forbidden' });
     return;
   }
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   if (req.method === "PATCH") {
 
   if (req.method === 'PATCH') {
@@ -157,10 +180,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       return;
     }
     // Enforce status transition rules
-    if (body.status) {
+    if (body && body.status) {
       const isClientUser = isClient(project, user);
       const isTalentUser = isTalent(project, user);
-      const status: string = body.status;
+      const status: string = body && body.status;
       const allowed =
         (status === "In Progress" && isClientUser) |
         (status === "Submitted" && isTalentUser) |
@@ -185,21 +208,11 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       }
       if (status === 'Paid') {
         body.paidAt = new Date().toISOString()
-
-      }
-    }
-
-  res.setHeader("AllowPATCH");
-  res.status(405).end("Method Not Allowed");
-}
-=======
-}
-;
-
   res.setHeader('AllowPATCH');
   res.status(405).end('Method Not Allowed')
 }
 
+<<<<<<< HEAD
       res.status(404).json({ error: 'Milestone not found' });
       return
     }
@@ -528,3 +541,5 @@ export default function handler(req, res) {
   }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -1,5 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -16,11 +17,14 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     res.status(405).json({ error: 'Method Not Allowed' });
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     return
 
   const { username, password } = req.body |{}
   const envUser = process.env.ADMIN_USERNAME |'kleber@ziontechgroup.com';
   const envPass = process.env.ADMIN_PASSWORD |'Tw2.R5u&2!sDfeW';
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
   if (req && req.method !== 'POST') {
@@ -50,6 +54,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {;
     res.status(405).json({ error: 'Method Not Allowed' });
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+    res.status(405).json({ error: 'Method Not Allowed' });
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     return
   }
 
@@ -65,12 +72,15 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     res && res.status(401).json({ error: 'Invalid credentials' });
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
 =======
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { setSessionCookie } from '../../../utils / admin_auth';
 export default /**
  * handler - Function description
@@ -108,6 +118,7 @@ if ( {) {
     res.status (401).json ({ error: 'Invalid credentials' });
   }  } else {
 <<<<<<< HEAD
+<<<<<<< HEAD
     res.status (401).json ({ error: 'Invalid credentials' });
   }
 }
@@ -117,3 +128,5 @@ if ( {) {
   }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

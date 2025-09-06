@@ -1,15 +1,21 @@
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
 
 =======
 import React, { useState } from 'react';
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {
   Dialog;
   DialogContent;
   DialogDescription;
   DialogHeader;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useState } from 'react',
 import {
   Dialog,
@@ -17,10 +23,13 @@ import {
   DialogDescription,
   DialogHeader,
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   DialogTitle} from "@/components/ui/dialog",
 import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
@@ -30,6 +39,7 @@ import { toast } from "@/hooks/use-toast",
 import { supabase } from "@/integrations/supabase/client",
 import { TalentProfile } from "@/types/talent",
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -50,6 +60,8 @@ export interface HireConfirmationModalProps {
 }
 export function HireConfirmationModal({
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle} from "@/components/ui/dialog";
 import {Button} from "@/components/ui/button";
 import {Input} from "@/components/ui/input";
@@ -61,6 +73,7 @@ import {TalentProfile} from "@/types/talent";
 import {useAuth} from "@/hooks/useAuth";
 import {JobApplication} from "@/types/jobs";
 <<<<<<< HEAD
+<<<<<<< HEAD
 export interface HireConfirmationModalProps {;
   isOpen: boolean,;
   onClose: () => void,;
@@ -70,6 +83,9 @@ export interface HireConfirmationModalProps {;
   isSubmitting?: boolean;
 }
 
+=======
+  isOpen;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 export function HireConfirmationModal({ ;
 
@@ -77,6 +93,7 @@ export function HireConfirmationModal({ ;
   isOpen;
   onClose, ;
   candidateData, ;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 export function HireConfirmationModal(): any ({ ;
@@ -84,10 +101,14 @@ export function HireConfirmationModal(): any ({ ;
   onClose, ;
   candidateData, ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+import React, { useState } from 'react';
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   application;
   onConfirm;
   isSubmitting = false;
 }: HireConfirmationModalProps) {;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 export interface HireConfirmationModalProps {
@@ -109,11 +130,14 @@ export function HireConfirmationModal({ ;
   isSubmitting = false
 }: HireConfirmationModalProps) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const [projectName, setProjectName] = useState('');
   const [projectDescription, setProjectDescription] = useState('');
   const [updateAvailability, setUpdateAvailability] = useState(true);
   const [isLoading, setIsLoading] = useState(false);
   const { user } = useAuth();
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -130,6 +154,8 @@ export function HireConfirmationModal({ ;
       return
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useState } from 'react',
 import {
   Dialog,
@@ -145,9 +171,12 @@ import { toast } from "@/hooks/use-toast",
 import { supabase } from "@/integrations/supabase/client",
 import { TalentProfile } from "@/types/talent",
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useAuth } from "@/hooks/useAuth",
 import { JobApplication } from "@/types/jobs",
 export interface HireConfirmationModalProps {
@@ -204,6 +233,7 @@ export function HireConfirmationModal({;
         description: 'Please fill in both project name and description.',;
         variant: 'destructive'}),;
       return;
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -211,6 +241,8 @@ export function HireConfirmationModal({;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     }
     if (!user) {
       toast({
@@ -226,15 +258,21 @@ export function HireConfirmationModal({;
         variant: 'destructive'})
       return
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
   // Get talent information from either candidateData or application;
   const talentData = candidateData || (application?.talent_profile as TalentProfile);
 
+<<<<<<< HEAD
 =======
   // Get talent information from either candidateData or application;
   const talentData = candidateData || (application?.talent_profile as TalentProfile);
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const handleHireCandidate = async () => {;
     if (!projectName || !projectDescription) {;
       toast({;
@@ -244,9 +282,13 @@ export function HireConfirmationModal({;
       return;
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     if (!user) {;
       toast({;
         title: 'Not authenticated',;
@@ -255,9 +297,13 @@ export function HireConfirmationModal({;
       return;
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     if (!talentData) {;
       toast({;
         title: 'Missing talent data',;
@@ -265,15 +311,21 @@ export function HireConfirmationModal({;
         variant: 'destructive'}),;
       return;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     }
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+    }
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     }
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     setIsLoading(true);
@@ -353,11 +405,16 @@ if ( {) {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+    }
+    setIsLoading(true);
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     try {
       const { data: project_data, error: project_error } = await supabase;
         .from ('projects');
         .insert ([;
           {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -453,6 +510,8 @@ if ( {) {
 =======
             setIsLoading(false);
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             client_id: user.id,
             talent_id: talent_data.user_id,
             job_id: application?.job_id || null,
@@ -473,6 +532,7 @@ if ( {) {
           variant: 'destructive'}),
         setIsLoading (false);
         return;
+<<<<<<< HEAD
       }
       // Create a new hiring record;
       const { error: hiring_error } = await supabase;
@@ -534,10 +594,15 @@ if ( {) {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+            return;
+          }
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           setIsLoading(false);
           return;
         }
       }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -639,6 +704,8 @@ if ( {) {
   }
   };
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ;
     setIsLoading(true),;
     // Create a new project;
@@ -711,13 +778,18 @@ if ( {) {
       }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       toast({;
         title: 'Candidate hired successfully',;
         description: `${talentData && talentData.full_name} has been hired for the project.`}),;
       onConfirm();
+<<<<<<< HEAD
       onClose();
     } catch (error) {;
       console && console.error('Error hiring candidate:', error);
@@ -758,8 +830,16 @@ if ( {) {
 
   return (
 
+=======
+    }
+
+  },
+    }
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   }
+
   return (
+<<<<<<< HEAD
 
 import React, { useState } from 'react',;
 import {;
@@ -936,16 +1016,21 @@ export function HireConfirmationModal({ ;
             </Label>;
 <<<<<<< HEAD
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <Input
               id="projectName"
               value={projectName}
               onChange={(e) => setProjectName(e && e.target.value)}
+<<<<<<< HEAD
 =======
             <Input;
               id="projectName";
               value={projectName}
               onChange={(e) => setProjectName(e.target.value)}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               className="col-span-3";
             />;
           </div>;
@@ -954,20 +1039,27 @@ export function HireConfirmationModal({ ;
               Project Description;
             </Label>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <Textarea
               id="projectDescription"
               value={projectDescription}
               onChange={(e) => setProjectDescription(e && e.target.value)}
+<<<<<<< HEAD
 =======
             <Textarea;
               id="projectDescription";
               value={projectDescription}
               onChange={(e) => setProjectDescription(e.target.value)}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               className="col-span-3";
             />;
           </div>;
           <div className="flex items-center space-x-2">;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
   },
@@ -1006,16 +1098,22 @@ export function HireConfirmationModal({ ;
           </div>
           <div className="flex items-center space-x-2">
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <input
               type="checkbox"
               id="updateAvailability"
               className="h-4 w-4"
               checked={updateAvailability}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               onChange={(e) => setUpdateAvailability(e && e.target.checked)}
             />;
             <label
               htmlFor="updateAvailability"
+<<<<<<< HEAD
 =======
               onChange={(e) => setUpdateAvailability(e.target.checked)}
             />
@@ -1211,3 +1309,5 @@ if (!projectName || !projectDescription) {
 }
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

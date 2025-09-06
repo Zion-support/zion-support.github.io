@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -26,11 +27,17 @@ import React, { useEffect, useState } from 'react';
 
 
 =======
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 export default function EpisodePage() {
 
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export default function EpisodePage() {
 
   const router = useRouter();
@@ -38,10 +45,13 @@ export default function EpisodePage() {
   const [episode, setEpisode] = useState<any>(null);
   useEffect(() => {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export default function EpisodePage() {;
   const router = useRouter();
   const { id } = router && router.query as { id?: string };
@@ -53,6 +63,7 @@ export default function EpisodePage() {;
     (async () => {;
       const res = await fetch('/api/podcast/get?id=' + id);
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -60,10 +71,13 @@ export default function EpisodePage() {;
       setEpisode(data.episode)
     })()
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   }, [id]);
   if (!episode) return <div>Loading…</div>;
 
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -77,6 +91,8 @@ export default function EpisodePage() {;
         </audio>
       )}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <div>
         <h2 className="text-xl font-semibold">Transcript</h2>
         <pre className="whitespace-pre-wrap bg-gray-50 p-3 rounded">{episode.transcript}</pre>
@@ -85,9 +101,12 @@ export default function EpisodePage() {;
 );
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <div>;
         <h2 className="text-xl font-semibold">Transcript</h2>;
         <pre className="whitespace-pre-wrap bg-gray-50 p-3 rounded">{episode && episode.transcript}</pre>;
@@ -96,11 +115,14 @@ export default function EpisodePage() {;
   );
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { use_router } from 'next / router';
 export default /**
  * EpisodePage - Function description
@@ -155,6 +177,7 @@ if (return <div > Loading…</div>) {
     </div>);
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 =======
@@ -185,6 +208,8 @@ export default function EpisodePage() {
 
   return (
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <div className='space-y-4'>
       <h1 className='text-2xl font-bold'>{episode.title}</h1>
       <p className='text-sm text-gray-600'>
@@ -203,6 +228,7 @@ export default function EpisodePage() {
         </pre>
       </div>
     </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   );
@@ -226,3 +252,5 @@ export default function EpisodePage() {
 }
   );
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

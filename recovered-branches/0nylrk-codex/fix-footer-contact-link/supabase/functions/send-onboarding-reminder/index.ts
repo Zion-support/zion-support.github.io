@@ -1,13 +1,17 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {serve} from "https: //deno.land/std@0.168.0/http/server.ts",
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.7.1",;
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -17,15 +21,20 @@ import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.7.1"
 import {serve} from "https: //deno.land/std@0.168.0/http/server.ts",
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.7.1",;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {Resend} from "npm: resend@1.0.0";
 const resend = new Resend(Deno.env.get("RESEND_API_KEY"));
 const supabaseUrl = Deno.env.get("SUPABASE_URL")!;
 const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.7.1",
 import { Resend } from "npm: resend@1.0.0",
@@ -33,6 +42,7 @@ const resend = new Resend(Deno.env.get("RESEND_API_KEY")),
 const supabaseUrl = Deno.env.get("SUPABASE_URL")!,
 const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!,
 
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -46,10 +56,13 @@ const corsHeaders = {
 
 =======
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
   "Access-Control-Allow-Headers":
     "authorization, x-client-info, apikey, content-type"}
+<<<<<<< HEAD
 interface ReminderPayload {
   user_id: string;
   missing_milestone: string
@@ -64,21 +77,28 @@ interface ReminderPayload {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   role: string
 }
 serve(async (req: Request) => {
   // Handle CORS
 <<<<<<< HEAD
+<<<<<<< HEAD
   if (req && req.method === "OPTIONS") {
 =======
   if (req.method === "OPTIONS") {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  if (req && req.method === "OPTIONS") {
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     return new Response(null, {
       status: 204
       headers: corsHeaders})
   }
   try {
     const supabase = createClient(
+<<<<<<< HEAD
 <<<<<<< HEAD
       supabaseUrl;
       supabaseServiceKey
@@ -121,6 +141,10 @@ serve(async (req: Request) => {
       return new Response(
         JSON.stringify({ error: "Missing required fields" }),
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+      return new Response(
+        JSON && JSON.stringify({ error: "Missing required fields" });
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         {
           status: 400
           headers: { "Content-Type": "application/json", ...corsHeaders }}
@@ -131,6 +155,7 @@ serve(async (req: Request) => {
       .from("profiles")
       .select("email, display_name")
       .eq("id", user_id)
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -153,6 +178,10 @@ serve(async (req: Request) => {
       return new Response(
         JSON.stringify({ error: "User not found", details: userError }),
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+      return new Response(
+        JSON && JSON.stringify({ error: "User not found", details: userError });
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         {
           status: 404
           headers: { "Content-Type": "application/json", ...corsHeaders }}
@@ -161,6 +190,7 @@ serve(async (req: Request) => {
     // Create message based on role and missing milestone
     const milestoneMessages = {
       talent: {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
         match_viewed: "check out your AI-matched talent suggestions",
@@ -178,10 +208,13 @@ serve(async (req: Request) => {
         talent_invited: "invite talent to speed up your hiring process"}}
     const name = userData.display_name |"there";
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     const action = milestoneMessages[role as keyof typeof milestoneMessages]?.[
       missing_milestone as keyof (typeof milestoneMessages)["talent" | "client"]
     ] |"complete your next step";
     // Send email
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -223,6 +256,8 @@ serve(async (req: Request) => {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       html: `
         <div style="font-family: sans-serif, max-width: 600px, margin: 0 auto,">
           <h2>Hi ${name},</h2>
@@ -230,6 +265,7 @@ serve(async (req: Request) => {
           <p>Your next step is to <strong>${action}</strong>.</p>
           <p>This will help you get the most out of the platform and connect with the right opportunities.</p>
           <div style="margin: 30px 0,">
+<<<<<<< HEAD
 <<<<<<< HEAD
             <a href="https://zion && zion.ai/dashboard" style="background-color: #9b87f5, color: white, padding: 12px 20px, text-decoration: none, border-radius: 4px, font-weight: bold,">
               Continue my setup
@@ -263,12 +299,18 @@ serve(async (req: Request) => {
       return new Response(
         JSON.stringify({ error: "Failed to send email", details: emailError }),
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+    if (emailError) {
+      return new Response(
+        JSON && JSON.stringify({ error: "Failed to send email", details: emailError });
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         {
           status: 500
           headers: { "Content-Type": "application/json", ...corsHeaders }}
       )
     }
     // Create notification in database
+<<<<<<< HEAD
     const { data: notification, error: notificationError } = await supabase && supabase.rpc(
 =======
 import { serve } from 'https: //deno.land / std@0.168.0 / http / server.ts';,
@@ -400,6 +442,8 @@ if ( {) {
         _type: "onboarding"}
     );
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         _user_id: user_id,
         _title: "Complete your next step",
         _message: `Don't forget to ${action} to get the most out of Zion AI Marketplace.`,
@@ -407,12 +451,16 @@ if ( {) {
     ),
     
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     if (notificationError) {
       console && console.error("Failed to create notification:", notificationError)
     }
     return new Response(
+<<<<<<< HEAD
 
 =======
     if (notificationError) {
@@ -422,21 +470,14 @@ if ( {) {
       JSON.stringify({
         message: "Reminder sent successfully"
         notification_id: notification});
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         message: "Reminder sent successfully",
         notification_id: notification}),
-      {
-        status: 200
-        headers: { "Content-Type": "application/json", ...corsHeaders }}
-    )
-  } catch (error) {
-    console.error(error),
-    return new Response(
-      JSON.stringify({ error: "Internal server error", details: error.message }),
-      {
-        status: 500
-        headers: { "Content-Type": "application/json", ...corsHeaders }}
-    )
+  }
+});
 
+<<<<<<< HEAD
     );
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       JSON && JSON.stringify({
@@ -472,10 +513,16 @@ if ( {) {
 =======
       {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+      {
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         status: 200,
         headers: { "Content - Type": "application / json", ...cors_headers }}
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -483,6 +530,8 @@ if ( {) {
 });
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",;
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.7.1",;
 import { Resend } from "npm: resend@1.0.0",;
@@ -601,13 +650,21 @@ serve(async (req: Request) => {;
         status: 200,;
         headers: { "Content-Type": "application/json", ...corsHeaders }}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
+
+
+
+  }
+});
+        _type: "onboarding"}
     );
-  } catch (error) {
-    console.error (error);
-    return new Response (
-      JSON.stringify ({ error: "Internal server error", details: error.message });
+        message: "Reminder sent successfully",
+        notification_id: notification});
       {
+<<<<<<< HEAD
         status: 500,
         headers: { "Content - Type": "application / json", ...cors_headers }}
     );
@@ -817,3 +874,5 @@ if (notificationError) {
   }
 });
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

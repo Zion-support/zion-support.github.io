@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
@@ -44,6 +45,8 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 main
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 import React from 'react';
 import Link from 'next/link';
@@ -86,7 +89,10 @@ import {
 import PageTransition from '../src/components/PageTransition';
 
 export default function Services() {;
+<<<<<<< HEAD
 	const title = 'Services — Zion Tech Group';
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 	const description = 'AI autonomous systems, cloud platforms, cybersecurity, and micro SaaS delivery.';
 
 	return (
@@ -291,6 +297,7 @@ export default function Services() {;
 								<Link
 									href='/contact'
 									className='inline-flex items-center text-sm font-semibold text-orange-600 hover:text-orange-500 transition-colors group'
+<<<<<<< HEAD
 									aria-label='Get started with custom software services'>;
 									Get started with SaaS;
 									<ArrowRight className='ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform' />;
@@ -1581,10 +1588,13 @@ export default function Services() {;
 								aria-label='Back to homepage'>;
 								Back to Home <span aria-hidden='true' className='group-hover:translate-x-1 transition-transform inline-block'>→</span>;
 							</Link>;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 						</div>;
 					</div>;
 				</div>;
 			</section>;
+<<<<<<< HEAD
 		</PageTransition>;
 		</Layout>;
 	),;
@@ -1621,3 +1631,5 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -71,12 +72,16 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  {
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       'Multichannel ingestion',
       'LLM clustering and themes',
       'Impact scoring',
       'Roadmap export',
     ],
     popular: true,
+<<<<<<< HEAD
     icon: '💬',
 <<<<<<< HEAD
 
@@ -96,6 +101,8 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     integrations: ['Zendesk', 'Intercom', 'G2', 'Capterra'],
     use_cases: ['Prioritize roadmap', 'Reduce churn'],
     roi: 'Ship high - impact features faster',
@@ -114,6 +121,7 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
@@ -130,12 +138,15 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       'OpenAPI scanning',
       'Auth / rate limit tests',
       'OWASP API checks',
       'PR annotations and diffs',
     ],
     popular: true,
+<<<<<<< HEAD
     icon: '🛡️',
 <<<<<<< HEAD
 
@@ -148,6 +159,8 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [;
     text_color: 'text - rose - 300',
     link: 'https://ziontechgroup.com / services / api - security - posture - monitor',
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     category: 'Quality & Monitoring',
     real_service: true,
     market_position: 'Developer - first API security posture',
@@ -173,6 +186,7 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -191,11 +205,14 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       'Idempotency and retries',
       'Run history',
       'Alerting and webhooks',
     ],
     popular: false,
+<<<<<<< HEAD
     icon: '⏰',
 <<<<<<< HEAD
 
@@ -208,6 +225,8 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [;
     text_color: 'text - amber - 300',
     link: 'https://ziontechgroup.com / services / edge - cron - orchestrator',
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     category: 'Developer Tools',
     real_service: true,
     market_position: 'Unified schedules across clouds',
@@ -233,6 +252,7 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
@@ -249,12 +269,15 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       'Signature stripping',
       'Attachment handling',
       'Webhook retries / DLQ',
       'Inspector UI',
     ],
     popular: false,
+<<<<<<< HEAD
     icon: '📨',
 <<<<<<< HEAD
 
@@ -267,6 +290,8 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [;
     text_color: 'text - indigo - 300',
     link: 'https://ziontechgroup.com / services / email - parsing - routing - api',
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     category: 'Developer Tools',
     real_service: true,
     market_position: 'Developer - friendly email ingestion',
@@ -278,6 +303,7 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [;
     use_cases: ['Ticket intake', 'CRM capture'],
     roi: 'Automate manual email triage',
     competitors: ['Mailparser', 'Integromat'],
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -293,12 +319,15 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     customers: 8,
     rating: 4 && 4.6,
     reviews: 5,
   },
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -318,11 +347,14 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       'Templates and briefs',
       'Compliance checks',
       'Multi - channel export',
     ],
     popular: true,
+<<<<<<< HEAD
     icon: '📝',
 <<<<<<< HEAD
 
@@ -335,6 +367,8 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [;
     text_color: 'text - fuchsia - 300',
     link: 'https://ziontechgroup.com / services / ai - marketing - content - studio',
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     category: 'AI & Data',
     real_service: true,
     market_position: 'On - brand AI content for teams',
@@ -360,6 +394,7 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -378,11 +413,14 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       'Cookie flags',
       'PR annotations',
       'Weekly reports',
     ],
     popular: false,
+<<<<<<< HEAD
     icon: '🔐',
 <<<<<<< HEAD
 
@@ -395,6 +433,8 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [;
     text_color: 'text - sky - 300',
     link: 'https://ziontechgroup.com / services / security - headers - scanner',
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     category: 'Quality & Monitoring',
     real_service: true,
     market_position: 'Simple posture checks for web apps',
@@ -407,6 +447,7 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [;
     roi: 'Reduce risk and review toil',
     competitors: ['Mozilla Observatory'],
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     market_size: '$0.5B',
     growth_rate: '8% CAGR',
@@ -415,6 +456,8 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [;
     market_size: '$0.5B',
     growth_rate: '8% CAGR',
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     variant: 'holographic',
     contact_info: contact,
     real_implementation: true,
@@ -426,6 +469,7 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [;
   },
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -443,12 +487,15 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       'Feature versioning',
       'Validation rules',
       'Lineage tracking',
       'Online serving API',
     ],
     popular: false,
+<<<<<<< HEAD
     icon: '📦',
 <<<<<<< HEAD
 
@@ -461,6 +508,8 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [;
     text_color: 'text - emerald - 300',
     link: 'https://ziontechgroup.com / services / ml - feature - store - starter',
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     category: 'AI & Data',
     real_service: true,
     market_position: 'Lean feature store for teams',
@@ -486,6 +535,7 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
@@ -502,12 +552,15 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       'SLO editor',
       'Burn - rate alerts',
       'Runbook hints',
       'Integrations and webhooks',
     ],
     popular: false,
+<<<<<<< HEAD
     icon: '📈',
 <<<<<<< HEAD
 
@@ -520,6 +573,8 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [;
     text_color: 'text - lime - 300',
     link: 'https://ziontechgroup.com / services / slo - burn - rate - coach',
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     category: 'Observability',
     real_service: true,
     market_position: 'SLOs without the complexity',
@@ -531,6 +586,7 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [;
     use_cases: ['Error budgets', 'Coaching'],
     roi: 'Fewer incidents',
     competitors: ['Nobl9'],
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -546,12 +602,15 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     customers: 10,
     rating: 4 && 4.5,
     reviews: 6,
   },
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -569,12 +628,15 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       'RUM + synthetic',
       'Budgets and alerts',
       'Bundle diff and PR notes',
       'Edge hints',
     ],
     popular: false,
+<<<<<<< HEAD
     icon: '⚡',
 <<<<<<< HEAD
 
@@ -587,6 +649,8 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [;
     text_color: 'text - cyan - 300',
     link: 'https://ziontechgroup.com / services / browser - performance - optimizer',
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     category: 'Quality & Monitoring',
     real_service: true,
     market_position: 'Developer - first CWV improvements',
@@ -598,6 +662,7 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [;
     use_cases: ['CWV, bundle size'],
     roi: '+20 LCP, fewer regressions',
     competitors: ['SpeedCurve', 'Calibre'],
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -613,12 +678,15 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     customers: 5,
     rating: 4 && 4.5,
     reviews: 3,
   },
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -636,12 +704,15 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       'Budgets and owners',
       'Anomaly detection',
       'Policy guardrails',
       'IaC recommendation exports',
     ],
     popular: true,
+<<<<<<< HEAD
     icon: '💸',
 <<<<<<< HEAD
 
@@ -654,6 +725,8 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [;
     text_color: 'text - amber - 300',
     link: 'https://ziontechgroup.com / services / cloud - cost - governance - suite',
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     category: 'Cloud & FinOps',
     real_service: true,
     market_position: 'Governance overlay for FinOps',
@@ -679,6 +752,7 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
@@ -695,12 +769,15 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       'Docs from schemas',
       'SDK generation',
       'Changelogs',
       'Searchable portal',
     ],
     popular: false,
+<<<<<<< HEAD
     icon: '📘',
 <<<<<<< HEAD
 
@@ -713,6 +790,8 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [;
     text_color: 'text - cyan - 300',
     link: 'https://ziontechgroup.com / services / api - changelog - sdk - publisher',
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     category: 'Developer Tools',
     real_service: true,
     market_position: 'Ship API portals faster',
@@ -724,6 +803,7 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [;
     use_cases: ['Dev portals', 'SDKs'],
     roi: 'Docs / SDKs 5× faster',
     competitors: ['ReadMe', 'Redocly'],
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -739,12 +819,15 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     customers: 9,
     rating: 4 && 4.7,
     reviews: 6,
   },
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 ];	{
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -770,6 +853,8 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [
 		setupTime: '1 day',
 		technology: ['Next && Next.js, Stripe, Webhooks'];
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 		integrations: ['StripePayPalGoogle Analytics'];
 		useCases: ['Partner growthAutomated payouts'];
 		roi: 'Grow partner revenue by 10–25%';
@@ -778,12 +863,10 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [
 		growthRate: '12% YoY';
 		variant: 'neural-quantum';
 		contactInfo: contact;
-
-		realImplementation: true
-
 		implementationDetails: 'Event ingestion, attribution, payout jobs';
 		launchDate: '2026-01-10';
 		customers: 12;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 		rating: 4 && 4.6,
@@ -791,6 +874,8 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [
 =======
 		rating: 4 && 4.6,
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 		reviews: 7
 	}
 	{
@@ -812,6 +897,7 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [
 		targetAudience: 'Product and CX teams';
 		trialDays: 14;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 		setupTime: '1 hour',
 		technology: ['Embeddings, Vector DB, Next && Next.js'];
@@ -820,6 +906,8 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [
 		setupTime: '1 hour',
 		technology: ['Embeddings, Vector DB, Next && Next.js'];
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 		integrations: ['ZendeskIntercomG2Capterra'];
 		useCases: ['Prioritize roadmapReduce churn'];
 		roi: 'Ship high-impact features faster';
@@ -833,12 +921,15 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [
 		launchDate: '2026-01-12';
 		customers: 9;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 		rating: 4 && 4.7,
 
 =======
 		rating: 4 && 4.7,
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 		reviews: 5
 	}
 	{
@@ -874,12 +965,15 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [
 		launchDate: '2026-01-14';
 		customers: 11;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 		rating: 4 && 4.5,
 
 =======
 		rating: 4 && 4.5,
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 		reviews: 6
 	}
 	{
@@ -915,12 +1009,15 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [
 		launchDate: '2026-01-18';
 		customers: 7;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 		rating: 4 && 4.5,
 
 =======
 		rating: 4 && 4.5,
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 		reviews: 4
 	}
 	{
@@ -956,12 +1053,15 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [
 		launchDate: '2026-01-20';
 		customers: 8;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 		rating: 4 && 4.6,
 
 =======
 		rating: 4 && 4.6,
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 		reviews: 5
 	}
 	{
@@ -997,12 +1097,15 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [
 		launchDate: '2026-01-22';
 		customers: 15;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 		rating: 4 && 4.6,
 
 =======
 		rating: 4 && 4.6,
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 		reviews: 9
 	}
 	{
@@ -1038,12 +1141,15 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [
 		launchDate: '2026-01-25';
 		customers: 20;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 		rating: 4 && 4.5,
 
 =======
 		rating: 4 && 4.5,
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 		reviews: 10
 	}
 	{
@@ -1079,12 +1185,15 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [
 		launchDate: '2026-01-28';
 		customers: 6;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 		rating: 4 && 4.5,
 
 =======
 		rating: 4 && 4.5,
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 		reviews: 3
 	}
 	{
@@ -1120,12 +1229,15 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [
 		launchDate: '2026-02-01';
 		customers: 10;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 		rating: 4 && 4.5,
 
 =======
 		rating: 4 && 4.5,
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 		reviews: 6
 	}
 	{
@@ -1161,12 +1273,15 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [
 		launchDate: '2026-02-05';
 		customers: 5;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 		rating: 4 && 4.5,
 
 =======
 		rating: 4 && 4.5,
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 		reviews: 3
 	}
 	{
@@ -1202,12 +1317,15 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [
 		launchDate: '2026-02-08';
 		customers: 6;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 		rating: 4 && 4.6,
 
 =======
 		rating: 4 && 4.6,
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 		reviews: 4
 	}
 	{
@@ -1242,6 +1360,7 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [
 		implementationDetails: 'Schema importers, generators, UI';
 		launchDate: '2026-02-12';
 		customers: 9;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 		rating: 4 && 4.7,
@@ -2606,3 +2725,8 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [
 	}
 ];
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+		reviews: 6
+	}
+];
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

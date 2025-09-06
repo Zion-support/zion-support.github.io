@@ -1,10 +1,13 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import EmptyState from '../../components/ui/EmptyState';
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 const Messages: NextPage = () => {
   return (
@@ -13,14 +16,18 @@ const Messages: NextPage = () => {
         <title>Messages - Zion</title>
       </Head>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <h1 className="text-2xl font-semibold">Messages</h1>
       <EmptyState
         title="No messages yet"
         description="Start a conversation by requesting a quote or responding to an existing one."
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -35,6 +42,8 @@ const Messages: NextPage = () => {
 }
 export default Messages;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import type { NextPage } from 'next',
 import Head from 'next / head',
 import EmptyState from '../../components / ui / EmptyState',
@@ -49,6 +58,7 @@ const Messages: NextPage = () => {
         title="No messages yet";
         description="Start a conversation by requesting a quote or responding to an existing one.";
         icon={<span>📫</span>}
+<<<<<<< HEAD
         primary_action={{ label: 'Explore talent', href: '/talent' }}
         secondary_action={{ label: 'Browse services', href: '/services' }}
       />;
@@ -77,6 +87,8 @@ export default Messages,
 
 export default Messages
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export default Messages,;
         icon={<span>📫</span>  } catch (error) {
     console.error("Error:", error);
@@ -94,11 +106,15 @@ export default Messages,;
   }
 }
       />;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     </div>;
   );
 },;
 export default Messages;
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -106,3 +122,5 @@ export default Messages;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

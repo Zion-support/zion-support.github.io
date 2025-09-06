@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const in_standalone = window.match_media ('(display - mode: standalone)').matches,
         description: 'Your browser does not support app installation.'}),
       return;
@@ -12,6 +13,8 @@ import React, { useEffect, useState } from 'react',;
     const inStandalone = window.matchMedia('(display-mode: standalone)').matches,
         description: 'Your browser does not support app installation.'}),
       return;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useEffect, useState } from 'react',;
 import { Button } from '@/components/ui/button',;
 import { Loader2 } from 'lucide-react';
@@ -77,5 +80,8 @@ export const PwaInstallButton: React.FC = () => {;
   )
 },
 
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export default PwaInstallButton,

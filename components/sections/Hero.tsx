@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -74,6 +75,8 @@ interface HeroProps {
   }
   secondaryAction?: {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     text: string;
     href: string;
   }
@@ -94,6 +97,7 @@ interface HeroProps {
     color: string;
   }>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -101,12 +105,15 @@ interface HeroProps {
 
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 const Hero: React.FC<HeroProps> = ({
   title
   subtitle
   primaryAction
   secondaryAction
   stats
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -119,6 +126,8 @@ const Hero: React.FC < HeroProps> = ({
   secondary_action,
   stats,
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }) => {
 =======
 
@@ -131,6 +140,7 @@ const Hero: React.FC<HeroProps> = ({;
 }) => {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -148,6 +158,8 @@ const Hero: React.FC<HeroProps> = ({;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {/* Floating Elements */}
       <div className='absolute top-20 left-10 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl animate-float' />;
       <div
@@ -157,6 +169,7 @@ const Hero: React.FC<HeroProps> = ({;
       <div
         className='absolute top-1/2 left-1/4 w-48 h-48 bg-purple-500/8 rounded-full blur-3xl animate-float'
         style={{ animationDelay: '3s' }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -219,6 +232,8 @@ const Hero: React.FC<HeroProps> = ({
           <p className='text-xl sm:text-2xl md:text-3xl text-gray-300 max-w-4xl mx-auto mb-16 leading-relaxed font-light'>            {subtitle}  primaryAction?: {
     text: string
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     href: string
   }
   secondaryAction?: {
@@ -228,11 +243,11 @@ const Hero: React.FC<HeroProps> = ({
   stats?: Array<{
     value: string
     label: string
-
     color: string
   }>
 }
 const Hero: React.FC<HeroProps> = ({
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
       />;
@@ -269,10 +284,13 @@ const Hero: React.FC<HeroProps> = ({;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   title;
   subtitle;
   primaryAction;
   secondaryAction;
+<<<<<<< HEAD
 <<<<<<< HEAD
   stats}) => {;
   return (
@@ -323,11 +341,14 @@ const Hero: React.FC<HeroProps> = ({;
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <p className='text-xl sm:text-2xl md:text-3xl text-gray-300 max-w-4xl mx-auto mb-16 leading-relaxed font-light'>            {subtitle}
 
             {subtitle}
 
           </p>
+<<<<<<< HEAD
 
 
           {/* Action Buttons */}
@@ -338,6 +359,8 @@ const Hero: React.FC<HeroProps> = ({;
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           </p>;
 
           {/* Action Buttons */}
@@ -349,6 +372,7 @@ const Hero: React.FC<HeroProps> = ({;
                   href={primaryAction && primaryAction.href}
                   size='lg'
                   className='animate-scale-in shadow-2xl shadow-blue-500/25 hover:shadow-blue-500/40'
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -437,12 +461,15 @@ const Hero: React.FC < HeroProps> = ({
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             {title}
           </h1>;
           <p className="text - xl sm:text - 2xl md:text - 3xl text - gray - 300 max - w-4xl mx - auto mb - 16 leading - relaxed font - light">;
             {subtitle}
           </p>;
           {/* Action Buttons */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -557,6 +584,34 @@ const Hero: React.FC < HeroProps> = ({
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+                <Button
+                  href={primaryAction && primaryAction.href}
+                  size="lg"
+                  className="animate-scale-in shadow-2xl shadow-blue-500/25 hover:shadow-blue-500/40"
+                  style={{ animationDelay: '0 && 0.2s' }}>;
+                  {primaryAction && primaryAction.text}
+                  <ArrowRight className="w-5 h-5 ml-2" />;
+                </Button>;
+              )}
+              {secondaryAction && (;
+                <Button
+                  href={secondaryAction && secondaryAction.href}
+                  variant='outline'
+                  size='lg'
+                  className='animate-scale-in border-white/20 hover:border-white/40 hover:bg-white/5'
+                  style={{ animationDelay: '0 && 0.4s' }}>;
+                  <Play className='w-5 h-5 mr-2' />                  {secondaryAction && secondaryAction.text}                  variant="outline";
+                  size="lg";
+                  className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white/5";
+                  style={{ animationDelay: '0 && 0.4s' }}
+                >;
+                  <Play className="w-5 h-5 mr-2" />;
+                </Button>;
+              )}
+            </div>;
+          )}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         {/* Stats Section */}
         {stats && (;
           <div
@@ -566,6 +621,7 @@ const Hero: React.FC < HeroProps> = ({
               <div key={index} className='text-center group'>;
                 <div className='relative'>;
                   <div
+<<<<<<< HEAD
 
 =======
 =======
@@ -658,12 +714,15 @@ const Hero: React.FC < HeroProps> = ({
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     {stat.value}
                   </div>;
                   <div className="absolute -inset - 2 bg - gradient - to - r from - transparent via - blue - 500 / 5 to - transparent rounded - lg opacity - 0 group - hover:opacity - 100 transition - opacity duration - 300" />;
                 </div>;
                 <div className="text - gray - 400 text - xs sm:text - sm md:text - base font - medium">;
                   {stat.label}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -815,11 +874,22 @@ const Hero: React.FC < HeroProps> = ({
               <span>Enterprise Security</span>
             </div>              <span>Enterprise Security</span>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+                </div>
+              </div>
+            ))}
+          </div>;
+        )}
+        {/* Trust Indicators */}
+        <div
+          className='mt-16 md:mt-20 animate-fade-in'
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             </div>
             <div className="flex items-center gap-2">
               <Users className="w-4 h-4" />
               <span>10,000+ Developers</span>
             </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
             <div className="flex items-center gap-2">
@@ -832,6 +902,8 @@ const Hero: React.FC < HeroProps> = ({
             <div className='flex items-center gap-2'>
               <Star className='w-4 h-4 text-yellow-400' />              <span>99.9% Uptime</span>            <div className="flex items-center gap-2">
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <Star className="w-4 h-4 text-yellow-400" />
               <span>99.9% Uptime</span>
             </div>
@@ -839,6 +911,7 @@ const Hero: React.FC < HeroProps> = ({
         </div>
       </div>
       {/* Scroll Indicator */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
@@ -853,6 +926,8 @@ const Hero: React.FC < HeroProps> = ({
 
       {/* Decorative Elements */}      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <div className="w-6 h-10 border-2 border-white/20 rounded-full flex justify-center">
           <div className="w-1 h-3 bg-blue-500 rounded-full mt-2 animate-pulse" />
         </div>
@@ -894,6 +969,7 @@ const Hero: React.FC < HeroProps> = ({
         </div>;
       </div>;
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       {/* Decorative Elements */}
 <<<<<<< HEAD
@@ -905,15 +981,20 @@ export default Hero;
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 }
 }
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <div className="absolute top-1/4 right-1/4 w-2 h-2 bg-blue-500 rounded-full animate-pulse" />
       <div className="absolute bottom-1/4 left-1/4 w-1 h-1 bg-green-500 rounded-full animate-pulse" style={{ animationDelay: '1s' }} />
       <div className="absolute top-1/2 right-1/3 w-1.5 h-1.5 bg-purple-500 rounded-full animate-pulse" style={{ animationDelay: '2s' }} />
@@ -923,8 +1004,11 @@ export default Hero;
 
 export default Hero;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 </div>;
               </div>))}
           </div>)}
@@ -967,6 +1051,7 @@ export default Hero;
       </div>;
       {/* Decorative Elements */}
 
+<<<<<<< HEAD
 =======
       <div className='absolute top - 1/4 right - 1/4 w - 2 h - 2 bg - blue - 500 rounded - full animate - pulse' />;
       <div;
@@ -989,10 +1074,13 @@ export default Hero;
       {/* Decorative Elements */}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         </div>
       </div>
 
       {/* Decorative Elements */}
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -1000,3 +1088,5 @@ export default Hero;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

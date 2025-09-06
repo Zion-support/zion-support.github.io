@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -40,6 +41,8 @@ import { useAuth } from "@/contexts/AuthContext",;
 import Link from "next/link",;
 export function LayoutWrapper({ children }: { children: React.ReactNode }) {;
   const { user, isAuthenticated, logout } = useAuth();
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     <>;
@@ -68,6 +71,7 @@ export function LayoutWrapper({ children }: { children: React.ReactNode }) {;
                 >;
                   Dashboard;
                 </Link>;
+<<<<<<< HEAD
 
                 <div className="flex items - center gap - 3">;
                   <span className="text - sm text - zinc - 400">;
@@ -91,6 +95,8 @@ export function LayoutWrapper({ children }: { children: React.ReactNode }) {;
                     Welcome, {user?.name |user?.email}
                     Welcome, {user?.name || user?.email}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   </span>;
                   <button;
                     on_click={logout}

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import { useEffect, useState } from 'react';
 import EmptyState from '../../components / ui / EmptyState';
@@ -28,11 +29,14 @@ if ( {) {
 }
 =======
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   if (!favorites.length) {
     return <EmptyState title="Nothing here yet..." message="Save profiles to revisit them easily." ctaLabel="Browse Talent" ctaHref="/talent" />
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+<<<<<<< HEAD
 
   }
 
@@ -70,6 +74,8 @@ export default function FavoritesPage() {
 
 }
     <div>
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <h2 className=&quot;text-xl font-semibold mb-4&quot;>Favorites</h2>
       <ul className=&quot;list-disc pl-6&quot;>
         {favorites.map(f => <li key={f}>{f}</li>)}
@@ -95,4 +101,10 @@ export default function FavoritesPage() {
   }
 }
 }
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

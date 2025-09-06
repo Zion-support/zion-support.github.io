@@ -1,5 +1,3 @@
-
-
 interface TalentProfileProps {
 
   profile: TalentProfileType
@@ -8,9 +6,12 @@ interface TalentProfileProps {
   onMessageTalent?: () => void
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from "react";
 import {Handshake, MessageSquare, Star} from "lucide-react";
 import {Button} from "@/components/ui/button";
@@ -25,6 +26,7 @@ import {ProfileRatings} from "./ProfileRatings";
 import {TalentProfile, as, TalentProfileType} from "@/types/talent";
 import {useAuth} from "@/hooks/useAuth";
 import {Availability} from "@/types/profile";
+<<<<<<< HEAD
 <<<<<<< HEAD
 interface TalentProfileProps {;
   profile: TalentProfileType,;
@@ -49,6 +51,8 @@ export function TalentProfile(): any ({ ;
 
 
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from "react",
 import { Handshake, MessageSquare, Star } from "lucide-react",
 import { Button } from "@/components/ui/button",
@@ -61,10 +65,6 @@ import { ProfileAvailability } from "./ProfileAvailability",
 import { ProfileContact } from "./ProfileContact",
 import { ProfileRatings } from "./ProfileRatings",
 import { TalentProfile as TalentProfileType } from "@/types/talent",
-import { useAuth } from "@/hooks/useAuth";
-import { Availability } from "@/types/profile";
-import { useAuth } from "@/hooks/useAuth",
-import { Availability } from "@/types/profile",
 interface TalentProfileProps {
 
   profile: TalentProfileType
@@ -79,6 +79,7 @@ export function TalentProfile({
 }: TalentProfileProps) {
   const { isAuthenticated } = useAuth();
 
+<<<<<<< HEAD
 export function TalentProfile({ ;
   profile;
   onRequestHire;
@@ -90,12 +91,15 @@ export function TalentProfile({
   const { isAuthenticated } = useAuth(),
   
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   // Create proper availability object from talent profile
 
   const availability: Availability = {
     status: profile.availability_type === 'full_time' ? 'available' :
             profile.availability_type === 'part_time' ? 'limited' : 'unavailable'
     message: `${profile.professional_title} with ${profile.years_experience} years of experience`
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -111,10 +115,13 @@ export function TalentProfile({
   },
   
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   // Create proper skills array for ProfileSkills component
   const skillsArray = profile.skills?.map(skill => ({
     name: skill
     level: 3 // Default level since we don't have this data
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -130,6 +137,8 @@ export function TalentProfile({
   })) || [],
   
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   // Create proper projects array for ProfileProjects component
   const projectsArray = profile.key_projects?.map((proj, i) => ({
     id: `project-${i}`
@@ -137,11 +146,14 @@ export function TalentProfile({
     description: proj.description
     date: new Date().toISOString() // Default date since we don't have this data
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   })) |[];
 
   return (
     <div className="container mx-auto px-4 py-8">
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   })) || [],
   
   return (
@@ -192,6 +204,7 @@ export function TalentProfile({;
   })) || [];
   return (;
     <div className="container mx-auto px-4 py-8">;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
@@ -232,12 +245,17 @@ export function TalentProfile({;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  return (
+    <div className="container mx-auto px-4 py-8">;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {/* Profile Header */}
       <ProfileHero
         name={profile && profile.full_name}
         title={profile && profile.professional_title}
         avatarUrl={profile && profile.profile_picture_url}
         profileType="talent"
+<<<<<<< HEAD
 <<<<<<< HEAD
 
         rating={profile && profile.average_rating}
@@ -310,6 +328,8 @@ export function TalentProfile({;
 
           
           
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           {/* Projects Section */}
           <ProfileProjects projects={projectsArray} />
           {/* Ratings Section */}
@@ -318,17 +338,12 @@ export function TalentProfile({;
               <Star className="mr-2 h-5 w-5 text-yellow-400" />
               Reviews & Ratings
             </h2>
-
-            <ProfileRatings 
-
-
-            <ProfileRatings
-            <ProfileRatings 
               userId={profile.id}
               averageRating={profile.average_rating}
               ratingCount={profile.rating_count}
             />
           </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -336,6 +351,8 @@ export function TalentProfile({;
         <div className="lg:col-span-2 space-y-8">;
           {/* Bio Section */}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from './react';
 import { Handshake, MessageSquare, Star } from './lucide-react';
 import { Button } from '@/components / ui / button';
@@ -428,7 +445,6 @@ function TalentProfile() {
               rating_count={profile.rating_count}
             />;
           </div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           {/* Hire Now CTA */}
           {is_authenticated && (
             <div className="bg - zion - purple / 10 border border - zion - purple / 30 rounded - lg p - 6 mb - 8">;
@@ -437,6 +453,7 @@ function TalentProfile() {
                 <p className="text - zion - slate mb - 6 max - w-md">;
                   Connect with {profile.full_name} for your next project and get started right away.;
                   {profile.hourly_rate && ` Rate starts at $${profile.hourly_rate}/hour.`}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -490,6 +507,8 @@ function TalentProfile() {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       variant="outline"
                       className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
                       onClick={onMessageTalent}>;
@@ -497,6 +516,7 @@ function TalentProfile() {
                       Message;
                     </Button>;
                   )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -632,10 +652,13 @@ export function TalentProfile({ ;
                       Message;
                     </Button>;                  )}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 </div>;
               </div>;
             </div>;
           )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
         </div>;
@@ -650,6 +673,8 @@ export function TalentProfile({ ;
       </div>;
     </div>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 </p>;
                 <div className="flex flex - wrap gap - 4 justify - center">;
                   <Button;
@@ -677,6 +702,7 @@ export function TalentProfile({ ;
       </div>;
     </div>);
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -774,3 +800,5 @@ return (</div> </div> {
   )
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

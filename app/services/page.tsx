@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import Link from "next/link";
 
 export const metadata = {
@@ -18,12 +19,15 @@ export default function ServicesOverviewPage() {
           outcomes for your business.
         </p>
       </div>
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
         <ServiceCard
           href="/services/micro-saas"
           title="Micro SaaS"
           description="End-to-end product development with billing, auth, and analytics"
           bullets={[
+<<<<<<< HEAD
             "Foundational architecture",
 <<<<<<< HEAD
             "Billing + subscriptions",
@@ -32,18 +36,18 @@ export default function ServicesOverviewPage() {
             "Billing + subscriptions", 
             "Growth analytics"
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           ]}
           icon="🚀"
         />
         <ServiceCard
           href="/services/ai-services"
-          title="AI Services"
-          description="LLM applications, RAG systems, and MLOps pipelines"
-          bullets={["RAG and agents", "Evals + guardrails", "MLOps pipelines"]}
           icon="🤖"
         />
         <ServiceCard
           href="/services/it-services"
+<<<<<<< HEAD
           title="IT Services"
           description="Cloud migration, DevOps, and security solutions"
           bullets={["Cloud migration", "DevOps + SRE", "Security"]}
@@ -70,10 +74,13 @@ export default function ServicesOverviewPage() {
           bullets={["Process automation", "Workflow optimization", "AI automation"]}
           icon="⚡"
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         />
         <ServiceCard
           href="/services/data-analytics"
           title="Data Analytics"
+<<<<<<< HEAD
           description="Advanced analytics and BI solutions that transform data into insights"
           bullets={["Real-time dashboards", "Predictive analytics", "AI-powered insights"]}
           icon="📊"
@@ -184,10 +191,21 @@ function ServiceCard({
   description: string;
   bullets: string[];
   icon: string;
+=======
+        />
+        <ServiceCard
+          href="/services/ai-code-reviewer"
+          title="AI Code Reviewer"
+        />
+        <ServiceCard
+          href="/services/invoice-automation"
+          title="Invoice Automation"
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }) {
   return (
     <Link
       href={href}
+<<<<<<< HEAD
       className="group border border-gray-200 rounded-xl p-8 block hover:border-blue-300 hover:shadow-lg transition-all duration-200 bg-white"
     >
       <div className="text-4xl mb-4">{icon}</div>
@@ -251,3 +269,5 @@ function CTA() {
     </div>
   );
 }
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -1,20 +1,29 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {supabase} from '@/integrations / supabase / client';
 export type MilestoneStatus = 'pending' | 'in_progress' | 'submitted' | 'completed' | 'rejected' | 'paid' | 'approved';
 ;
 
 export interface Milestone {
+import {supabase} from '@/integrations/supabase/client';
+export type MilestoneStatus = 'pending' | 'in_progress' | 'submitted' | 'completed' | 'rejected' | 'paid' | 'approved';
 
 export interface Milestone {;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+export interface Milestone {
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   id: string;
   project_id: string;
   title: string;
@@ -24,6 +33,7 @@ export interface Milestone {;
   status: MilestoneStatus;
   created_at: string;
   updated_at: string;
+<<<<<<< HEAD
 
   created_by: string,
   deliverables?: any[];
@@ -42,13 +52,20 @@ export interface MilestoneActivity {;
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   created_by: string
   deliverables?: any[]
 }
 export interface MilestoneActivity {
 
 export interface MilestoneActivity {;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+}
+export interface MilestoneActivity {
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   id: string;
   milestone_id: string;
   user_id: string;
@@ -58,6 +75,7 @@ export interface MilestoneActivity {;
   comment?: string;
   created_at: string;
   created_by_profile?: {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     display_name: string,
@@ -100,5 +118,7 @@ export interface MilestoneActivity {;
     avatar_url?: string;
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   }
 }

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { Milestone  } from '@/hooks/useMilestones';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -9,10 +10,13 @@ export const PaymentSummary: React.FC<PaymentSummaryProps> = ({ milestones, paym
 }; import React from 'react'
 import { Milestone } from '@/hooks/useMilestones'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { CreditCard } from 'lucide-react'
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card'
 import React from 'react'
 interface PaymentSummaryProps {
+<<<<<<< HEAD
 
   milestones: Milestone[]
   paymentTerms: string | null
@@ -116,9 +120,23 @@ import { CreditCard } from 'lucide-react';
 interface PaymentSummaryProps {;
   milestones: Milestone[],;
   paymentTerms: string | null;
+=======
+
+  milestones: Milestone[]
+  paymentTerms: string | null
+import { CreditCard } from 'lucide-react'
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card'
+import React from 'react'
+interface PaymentSummaryProps {
+
+  milestones: Milestone[]
+  paymentTerms: string | null
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 
 export const PaymentSummary: React.FC<PaymentSummaryProps> = ({ milestones, paymentTerms }) => {
+}
+export const PaymentSummary: React.FC<PaymentSummaryProps> = ({ milestones, paymentTerms },) => {
   const totalPayment = milestones.reduce(
     (sum, m) => sum + parseFloat(m.amount.toString()), 
     0
@@ -146,12 +164,18 @@ export const PaymentSummary: React.FC<PaymentSummaryProps> = ({ milestones, paym
               ${totalPayment}
             </p>
           </div>
+<<<<<<< HEAD
           
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <div>
             <p className="font-medium capitalize">
               {paymentTerms |"Not specified"}
             </p>
           </div>
+<<<<<<< HEAD
             <p className="text-sm text-muted-foreground mb-1">Paid Amount</p>
             <p className="font-medium">
               ${paidAmount}
@@ -159,12 +183,15 @@ export const PaymentSummary: React.FC<PaymentSummaryProps> = ({ milestones, paym
 ursor/fix-website-loading-errors-and-merge-6662
           
           
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
           <div>
             <p className="text-sm text-muted-foreground mb-1">Paid Amount</p>
             <p className="font-medium">
               ${paidAmount}
+<<<<<<< HEAD
             </p>
           </div>
         </div>
@@ -173,6 +200,23 @@ ursor/fix-website-loading-errors-and-merge-6662
   )
 }
 '"
+=======
+
+            </p>;
+          </div>;
+
+          <div>;
+            <p className="text-sm text-muted-foreground mb-1">Payment Terms</p>;
+            <p className="font-medium capitalize">;
+              {paymentTerms || "Not specified"}
+            </p>;
+          </div>;
+
+          <div>;
+            <p className="text-sm text-muted-foreground mb-1">Paid Amount</p>;
+            <p className="font-medium">;
+              ${paidAmount}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 
@@ -183,7 +227,12 @@ ursor/fix-website-loading-errors-and-merge-6662
     </Card>;
   );
 };
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+'"
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 } import React from 'react';
@@ -234,4 +283,7 @@ export const PaymentSummary: React.FC < PaymentSummaryProps> = ({ milestones, pa
       </CardContent>;
     </Card>);
 }
+<<<<<<< HEAD
 '";
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

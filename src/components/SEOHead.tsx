@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
@@ -97,3 +98,8 @@ const SEOHead: React.FC<SEOHeadProps> = ({
 };
 
 export default SEOHead;
+=======
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+  const siteUrl = process.env.REACT_APP_SITE_URL || 'https: any
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

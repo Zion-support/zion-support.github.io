@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
@@ -21,6 +22,8 @@ import type { NextApiRequest, NextApiResponse } from "next";
 import { getAllTransactions } from "../../../../utils/token/service";
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const { userId } = req.query
   const txs = getAllTransactions()
   const filtered = typeof userId === "string" ? txs.filter((t) => t.userId === userId) : txs
@@ -33,6 +36,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const isAdmin = req.headers['x-admin'] === 'true';
     if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
 
+<<<<<<< HEAD
     if (req.method === 'GET') {
       const { userId } = req.query;
       const transactions = getAllTransactions(userId as string);
@@ -47,3 +51,5 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

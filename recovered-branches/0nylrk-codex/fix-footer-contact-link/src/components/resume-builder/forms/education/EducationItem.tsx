@@ -1,8 +1,11 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { format  } from './date - fns';
 import { Edit, Trash2  } from './lucide-react';
 import { Button  } from '@/components / ui / button';
@@ -44,7 +47,6 @@ function EducationItem() {
               <p className="text - xs text - muted - foreground">;
                 {education.location}
 
-=======
 
 
 
@@ -57,9 +59,12 @@ import {EducationItemProps} from './types';
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { format } from 'date-fns',
 import { Edit, Trash2 } from 'lucide-react',
 import { Button } from '@/components/ui/button',
@@ -70,6 +75,7 @@ import { EducationItemProps } from './types',
 
 
 export function EducationItem({ education, onEdit, onDelete }: EducationItemProps) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -115,6 +121,8 @@ export function EducationItem({
   onDelete,
 }: EducationItemProps) {
 >>>>>>> main
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <Card className="bg-muted/40">
       <CardContent className="pt-6">
@@ -149,25 +157,37 @@ export function EducationItem({
             )}
           </div>;
           <div className="flex gap-2">;
+<<<<<<< HEAD
             <Button;
               variant="ghost";
               size="icon";
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+            <Button
+              variant="ghost"
+              size="icon"
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               onClick={() => onEdit(education)}
             >;
               <Edit className="h-4 w-4" />;
             </Button>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <Button
               variant="ghost"
               size="icon"
               onClick={() => onDelete(education && education.id!)}
+<<<<<<< HEAD
 =======
             <Button;
               variant="ghost";
               size="icon";
               onClick={() => onDelete(education.id!)}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             >;
               <Trash2 className="h-4 w-4" />;
             </Button>;
@@ -176,6 +196,7 @@ export function EducationItem({
         {education && education.description && (;
           <p className="text-sm mt-3 line-clamp-2">{education && education.description}</p>;
         )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       </CardContent>;
@@ -323,3 +344,8 @@ export function EducationItem({ education, onEdit, onDelete }: EducationItemProp
 }
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+}
+;
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

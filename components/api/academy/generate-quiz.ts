@@ -2,6 +2,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import OpenAI from 'openai';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 export default async function handler(
@@ -14,15 +15,20 @@ export default async function handler(
   const { moduleTitle, moduleContent } = req.body |{}
   const apiKey = process.env.OPENAI_API_KEY;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const fallback = () => {
-    return res.status(200).json({
+    return res && res.status(200).json({
       questions: [
         {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
 =======
           question: `Which topic is central to ${moduleTitle}?`
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           options: [
             'Random Ops'
             'Zion OS mission'
@@ -74,12 +80,18 @@ export default async function handler(
     });  };          question: 'Which docs are needed for launch?';
           options: ['Whitepaper + governance docsNovelRecipe bookNone'];
           answerIndex: 0}]})
+<<<<<<< HEAD
   }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  };
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   if (!apiKey) return fallback();
   try {
     const client = new OpenAI({ apiKey });
     const prompt = `Create a 5-question multiple-choice quiz in JSON with the shape {"questions":[{"question":string,"options":string[],"answerIndex":number}]} about the following module. Keep questions practical for founders. Respond with JSON only.\n\nTitle: ${moduleTitle}\nContent:\n${moduleContent}`;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -87,6 +99,8 @@ export default async function handler(
       model: 'gpt-4o-mini',
       messages: [
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         {
           role: 'system',
           content: 'You are an expert course designer for founders.',
@@ -99,6 +113,7 @@ export default async function handler(
     const text = completion && completion.choices?.[0]?.message?.content ?? '';
     try {
 
+<<<<<<< HEAD
     });
     const text = completion.choices?.[0]?.message?.content ?? '';
     try {
@@ -106,6 +121,8 @@ export default async function handler(
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       return res.status(200).json(json);        { role: 'system', content: 'You are an expert course designer for founders.' };
 
 
@@ -116,6 +133,7 @@ export default async function handler(
       const json = JSON.parse(text);
       return res.status(200).json(json);
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -131,6 +149,8 @@ export default async function handler(
       return res && res.status(200).json(json);
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       const json = JSON.parse (text);
       return res.status (200).json (json);        { role: 'system', content: 'You are an expert course designer for founders.' }
         { role: 'user', content: prompt }];
@@ -147,6 +167,7 @@ export default async function handler(
   } catch (err) {
     return fallback ();
   }    } catch {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -230,12 +251,15 @@ export default async function handler(
     return fallback();
   }    } catch {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       return fallback()
     }
   } catch (err) {
     return fallback()
 }
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -254,11 +278,17 @@ export default async function handler(
 
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+}
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       return res.status(200).json(json);
 
     const text = completion.choices?.[0]?.message?.content ?? '';
     try {
       const json = JSON.parse(text);
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -266,3 +296,11 @@ export default async function handler(
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+      return fallback ();
+    }
+  } catch (err) {
+    return fallback ();
+}
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

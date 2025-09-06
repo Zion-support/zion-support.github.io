@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import React, { useState } from 'react'
 import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar'
@@ -63,6 +64,8 @@ import {
 import { cn } from '@/lib / utils';
 import { use_router } from 'next / router';
 import { toast } from 'sonner';
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface Message {
   id: string;
   content: string;
@@ -76,6 +79,7 @@ interface MobileChatViewProps {
     id: string;
     name: string;
     avatar?: string;
+<<<<<<< HEAD
     status?: string;
   }
   messages: Message[];
@@ -252,6 +256,8 @@ interface Message {;
 ;
 interface MobileChatViewProps {;
   contact: {;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     id: string,;
     name: string,;
     avatar?: string,;
@@ -284,6 +290,7 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
       e.preventDefault()
       handleSend()
     }
+<<<<<<< HEAD
   }
   const startVideoCall = () => {
     const roomId = `mobile-${contact.id}`
@@ -329,11 +336,14 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <div className="flex flex-col h-full pb-safe">
       <header className="sticky top-0 z-10 bg-background border-b border-border">
         <div className="flex items-center h-14 px-4">
           <Button
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -354,6 +364,8 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
           </Button>
           
           <div className="flex items-center flex-1 gap-3 mx-2">
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
             <Avatar>
               <AvatarImage src={contact.avatar} alt={contact.name} />
@@ -363,6 +375,7 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
               </AvatarFallback>
             </Avatar>
             <div>
+<<<<<<< HEAD
 
             aria-label='Go back'>;
             <ChevronLeft className='h-5 w-5' />;
@@ -397,10 +410,15 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
           </div>
           <div className='flex'>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <Button
               variant='ghost'
               size='icon'
+              variant="ghost"
+              size="icon"
               onClick={startAudioCall}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
               aria-label='Start audio call'>;
@@ -413,10 +431,13 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
               <Phone className='h-5 w-5' />
             </Button>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <Button
-              variant='ghost'
-              size='icon'
+              variant="ghost"
+              size="icon"
               onClick={startVideoCall}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -427,12 +448,15 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
             <Button variant='ghost' size='icon' aria-label='More options'>
               <MoreVertical className='h-5 w-5' />
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <h3 className="font-medium">{contact.name}</h3>
               <p className="text-xs text-muted-foreground">
                 {contact.status || "Online"}
               </p>
             </div>
           </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -474,6 +498,8 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
               variant="ghost"
               size="icon"
               onClick={startVideoCall}
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               aria-label="Start video call"
             >
               <Video className="h-5 w-5" />
@@ -482,21 +508,10 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
             <Button variant="ghost" size="icon" aria-label="More options">
               <MoreVertical className="h-5 w-5" />
             </Button>
-            
-            <Button
-              variant="ghost"
-              size="icon"
-              onClick={startVideoCall}
-              aria-label="Start video call"
-            >
-              <Video className="h-5 w-5" />
-            </Button>
-            
-            <Button variant="ghost" size="icon" aria-label="More options">
-              <MoreVertical className="h-5 w-5" />
           </div>
         </div>
       </header>
+<<<<<<< HEAD
       <div className='flex-1 overflow-y-auto p-4 space-y-4'>
         {messages.map(message => (
           <div
@@ -555,11 +570,14 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
             <Button variant='ghost' size='icon' aria - label='More options'>;
               <MoreVertical className='h - 5 w - 5' />;
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             </Button>;
           </div>;
         </div>;
       </header>;
 
+<<<<<<< HEAD
               'flex',
               message && message.isMe ? 'justify-end' : 'justify-start'
             )}>;
@@ -573,12 +591,15 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
                 'max-w-[80%] rounded-2xl px-4 py-2'
                 message.isMe
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   ? 'bg-primary text-primary-foreground rounded-tr-none'
                   : 'bg-muted rounded-tl-none'
               )}>;
               <p>{message && message.content}</p>;
               <div
                 className={cn(
+<<<<<<< HEAD
 <<<<<<< HEAD
 
                   'text-xs mt-1 flex justify-end',
@@ -731,6 +752,8 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                 {message.isMe && message.status && (;
                   <span className="ml-1">;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
                     {message.status === 'read' ? '✓✓' : '✓'}
@@ -747,6 +770,7 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
           </div>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         ))}
+<<<<<<< HEAD
 
       
       <div className="sticky bottom-0 bg-background border-t border-border p-2">
@@ -878,6 +902,9 @@ ursor/fix-website-loading-errors-and-merge-6662
         <div className='flex items-center gap-2'>
           <Button variant='ghost' size='icon' aria-label='Attach file'>
             <PaperclipIcon className='h-5 w-5' />
+=======
+      </div>
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           </Button>
           <Input
             value={newMessage}
@@ -939,22 +966,38 @@ ursor/fix-website-loading-errors-and-merge-6662
             size="icon"
             onClick={handleSend}
             disabled={!newMessage.trim()}
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             className={!newMessage.trim() ? "opacity-50" : ""}
             aria-label="Send message"
           >
             <Send className="h-5 w-5" />
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+            onChange={(e) => setNewMessage(e.target.value)}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
+            onKeyDown={handleKeyDown}
 
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+            className={!newMessage.trim() ? "opacity-50" : ""}
+            aria-label="Send message"
+          >
+            <Send className="h-5 w-5" />
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           </Button>
         </div>
       </div>
     </div>
   )
+<<<<<<< HEAD
 <<<<<<< HEAD
 
             placeholder='Type a message...';
@@ -983,6 +1026,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 }
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   </span>)}
               </div>;
             </div>;
@@ -1014,7 +1059,10 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 ;
 =======
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

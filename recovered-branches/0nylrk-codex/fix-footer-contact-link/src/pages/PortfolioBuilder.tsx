@@ -1,8 +1,11 @@
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
 
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useState  } from 'react';
 import { AppHeader  } from '@/layout/AppHeader';
 import { Footer  } from '@/components/Footer';
@@ -13,7 +16,10 @@ import { ResumeWizard  } from '@/components/resume-builder/ResumeWizard';
 import { PortfolioBuilder as PortfolioSection } from '@/components/resume-builder/portfolio/PortfolioBuilder';
 function PortfolioBuilderContent() {
   const [activeTab, setActiveTab] = useState('resume');
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {useState} from 'react';
 import {AppHeader} from '@/layout/AppHeader';
 import {Footer} from '@/components/Footer';
@@ -23,10 +29,13 @@ import {Tabs, TabsContent, TabsList, TabsTrigger} from '@/components/ui/tabs';
 import {ResumeWizard} from '@/components/resume-builder/ResumeWizard';
 import {PortfolioBuilder, as, PortfolioSection} from '@/components/resume-builder/portfolio/PortfolioBuilder';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useState } from 'react',
 import { AppHeader } from '@/layout/AppHeader',
 import { Footer } from '@/components/Footer',
@@ -35,6 +44,7 @@ import { ProtectedRoute } from '@/components/ProtectedRoute',
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs',
 import { ResumeWizard } from '@/components/resume-builder/ResumeWizard',
 import { PortfolioBuilder as PortfolioSection } from '@/components/resume-builder/portfolio/PortfolioBuilder',
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -52,6 +62,11 @@ function PortfolioBuilderContent() {
   const [activeTab, setActiveTab] = useState('resume'),
   
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+function PortfolioBuilderContent() {
+  const [activeTab, setActiveTab] = useState('resume'),
+  
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <>
       <SEO
@@ -78,6 +93,7 @@ function PortfolioBuilderContent() {
     </>
   )
 }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import {useState} from 'react';
@@ -157,6 +173,8 @@ function PortfolioBuilderContent() {;
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ;
 
 export default function PortfolioBuilder() {;
@@ -167,6 +185,7 @@ export default function PortfolioBuilder() {;
   );
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 ;
 
@@ -174,6 +193,10 @@ export default function PortfolioBuilder() {;
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {useState} from 'react';
 import {AppHeader} from '@/layout / AppHeader';
 import {Footer} from '@/components / Footer';
@@ -223,6 +246,7 @@ function PortfolioBuilder() {
     </ProtectedRoute>);
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
   ),;
@@ -245,3 +269,5 @@ export default function PortfolioBuilder() {;
 ;
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

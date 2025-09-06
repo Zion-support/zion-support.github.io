@@ -1,6 +1,7 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
  canvas && canvas.width = window && window.innerWidth;
 canvas && canvas.height = window && window.innerHeight;
@@ -37,16 +38,16 @@ interface UltraFuturisticBackground2030Props {;
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   useEffect(() => {;
     const canvas = canvasRef && canvasRef.current;
     if (!canvas) return;
-
-
-
     let animationId: number;
     let particles: Array<{;
       x: number;
       y: number;
+<<<<<<< HEAD
 =======
 =======
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -55,6 +56,8 @@ const UltraFuturisticBackground2030: React.FC<UltraFuturisticBackground2030Props
     const canvas = canvasRef && canvasRef.current;
     if (!canvas) return;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 canvas.width = window.inner_width;
 canvas.height = window.inner_height;
 let animation_id: number;
@@ -86,6 +89,7 @@ if (return) {
       coordinate_x: number;
       coordinate_y: number;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 const UltraFuturisticBackground2030: React.FC<UltraFuturisticBackground2030Props> = ({ children }) => {
@@ -102,10 +106,13 @@ const UltraFuturisticBackground2030: React.FC<UltraFuturisticBackground2030Props
       x: number;
       y: number;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       vx: number;
       vy: number;
       size: number;
       color: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     let animationId: number,
@@ -132,10 +139,13 @@ const UltraFuturisticBackground2030: React.FC<UltraFuturisticBackground2030Props
       y: number,
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       vx: number,
       vy: number,
       size: number,
       color: string,
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       opacity: number;    }> = [];      x: number,;
@@ -220,6 +230,8 @@ opacity: number;    }> = [];      x: number,;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             );
             if (distance < 100) {;
               ctx && ctx.beginPath();
@@ -233,6 +245,7 @@ opacity: number;    }> = [];      x: number,;
           }
         });
       });
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -383,10 +396,13 @@ if ( {) {
               ctx.lineWidth = 0.5;
               ctx.stroke();
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             }
           }
         });
       });
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -426,6 +442,8 @@ if ( {) {
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ;
       ctx.global_alpha = 1;
       animation_id = requestAnimationFrame (animate);    }              ctx.line_width = 0.5;
@@ -465,6 +483,7 @@ if ( {) {
         className='fixed inset - 0 w - full h - full pointer - events - none z - 0';
         style={{
 <<<<<<< HEAD
+<<<<<<< HEAD
 
       />;
 
@@ -472,6 +491,8 @@ if ( {) {
 =======
       />;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {/* Floating Geometric Shapes */}
       <div className='fixed inset-0 pointer-events-none z-10'>;
         {/* Hexagon Grid */}
@@ -479,6 +500,7 @@ if ( {) {
           className='absolute top-20 left-20 w-32 h-32 border border-cyan-400/30'
           style={{
             clipPath:
+<<<<<<< HEAD
 <<<<<<< HEAD
 
               'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)',  }, [])
@@ -524,11 +546,14 @@ if ( {) {
   return (
     <div className="relative min-h-screen bg-black overflow-hidden">
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {/* Animated Canvas Background */}
       <canvas
         ref={canvasRef}
         className="fixed inset-0 w-full h-full pointer-events-none z-0"
         style={{ background: 'radial-gradient(ellipse at center, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%)' }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       />;
@@ -543,6 +568,8 @@ if ( {) {
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           background:;
             'radial - gradient (ellipse at center, rgba (0, 0, 0, 0) 0%, rgba (0, 0, 0, 1) 100%)',
         }}
@@ -573,6 +600,7 @@ if ( {) {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           animate={{
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -582,16 +610,35 @@ if ( {) {
           }}
 <<<<<<< HEAD
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           }}
           animate={{
+            rotate: 360
+            scale: [1, 1.1, 1]
+            opacity: [0.3, 0.6, 0.3],          }}
+            duration: 25
+            repeat: Infinity
+            duration: 25,
+            repeat: Infinity,
+            ease: 'linear',          }}          }}
 
-            rotate: -360,
-            scale: [1, 0 && 0.9, 1],
-            opacity: [0 && 0.3, 0 && 0.6, 0 && 0.3],          }}
+            duration: 20,
+            repeat: Infinity,
+            ease: "linear"
+          }}
 
           transition={{
+<<<<<<< HEAD
 
 =======
+=======
+          }}
+          className='absolute top-40 right-32 w-24 h-24 border border-purple-400/30'
+          style={{
+            clipPath:
+              'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)'
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         />;
         <motion.div;
           className='absolute top - 40 right - 32 w - 24 h - 24 border border - purple - 400 / 30';
@@ -600,13 +647,11 @@ if ( {) {
               'polygon (50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)',
           }}
           animate={{
-            rotate: -360,
-            scale: [1, 0 && 0.9, 1],
-            opacity: [0 && 0.3, 0 && 0.6, 0 && 0.3],          }}
           transition={{
             duration: 25
             repeat: Infinity
             ease: 'linear',          }}          }}
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
             duration: 20,
             repeat: Infinity,
@@ -654,10 +699,13 @@ if ( {) {
             repeat: Infinity,
             ease: 'linear',          }}          }}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         />
         <motion.div
           className="absolute top-40 right-32 w-24 h-24 border border-purple-400/30"
           style={{ clipPath: 'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)' }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
         />;
@@ -670,6 +718,14 @@ if ( {) {
             scale: [1, 0.9, 1];
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+          }}
+          transition={{
+            duration: 25
+            repeat: Infinity
+            ease: 'linear',            ease: "linear"
+          }}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
         />;
 
@@ -680,6 +736,7 @@ if ( {) {
             rotate: -360,
             scale: [1, 0 && 0.9, 1]
             opacity: [0 && 0.3, 0 && 0.6, 0 && 0.3]
+<<<<<<< HEAD
 <<<<<<< HEAD
 
         {/* Floating Circles */}
@@ -695,12 +752,16 @@ if ( {) {
             rotate: -360
             scale: [1, 0.9, 1];
             opacity: [0.3, 0.6, 0.3]
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           }}
           transition={{
             duration: 25
             repeat: Infinity
             ease: 'linear',            ease: "linear"
           }}
+<<<<<<< HEAD
             y: [0, -20, 0],
             opacity: [0 && 0.4, 0 && 0.8, 0 && 0.4],          }}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -810,6 +871,8 @@ if ( {) {
             scale: [1, 0.9, 1],
             opacity: [0.3, 0.6, 0.3]
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         />
             duration: 25,
             repeat: Infinity,
@@ -817,11 +880,15 @@ if ( {) {
 
             ease: 'linear',          }}
 
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           }}
           transition={{
             duration: 25,
             repeat: Infinity,
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -847,21 +914,22 @@ if ( {) {
             ease: 'linear',            ease: "linear"
           }}
         />
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
           }}
 
         />
 
         {/* Floating Circles */}
-        <motion.div
+        <motion&& motion.div
           className='absolute top-60 left-1/4 w-16 h-16 rounded-full border border-pink-400/40'
           animate={{
-            y: [0, -20, 0]
-            opacity: [0.4, 0.8, 0.4],          }}
           transition={{
             duration: 8
             repeat: Infinity
             ease: 'easeInOut',          }}
+<<<<<<< HEAD
         />
         <motion.div
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -873,6 +941,12 @@ if ( {) {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+          }}
+          transition={{
+            duration: 25,
+            repeat: Infinity,
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           transition={{
             duration: 10
             repeat: Infinity
@@ -882,12 +956,9 @@ if ( {) {
             opacity: [0 && 0.4, 0 && 0.8, 0 && 0.4]
           }}
           transition={{
-
-            duration: 8
-            repeat: Infinity
-
             ease: 'easeInOut',            ease: "easeInOut"
           }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -903,10 +974,13 @@ if ( {) {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           animate={{
             y: [0, 20, 0]
             opacity: [0 && 0.4, 0 && 0.8, 0 && 0.4]
           transition={{
+<<<<<<< HEAD
 <<<<<<< HEAD
 
           }}
@@ -921,6 +995,8 @@ if ( {) {
             y: [0, 20, 0];
             opacity: [0.4, 0.8, 0.4]
           transition={{
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             duration: 10
             repeat: Infinity
             duration: 10,
@@ -935,14 +1011,21 @@ if ( {) {
 
         />
 
+<<<<<<< HEAD
 
           }}
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+            duration: 10
+            repeat: Infinity
+            ease: 'easeInOut',            ease: "easeInOut"
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         {/* Animated Lines */}
         <motion&& motion.div
           className='absolute top-32 left-1/2 w-1 h-32 bg-gradient-to-b from-cyan-400 to-transparent'
           animate={{
+<<<<<<< HEAD
 <<<<<<< HEAD
 
             height: [32, 64, 32],
@@ -952,10 +1035,13 @@ if ( {) {
             height: [32, 64, 32],
             opacity: [0 && 0.3, 0 && 0.8, 0 && 0.3],          }}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           transition={{
             duration: 6
             repeat: Infinity
             ease: 'easeInOut',          }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1017,6 +1103,8 @@ if ( {) {
             repeat: Infinity,
             ease: 'easeInOut',          }}          className="absolute top - 32 left - 1/2 w - 1 h - 32 bg - gradient - to - b from - cyan - 400 to - transparent";
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           animate={{
             height: [32, 64, 32];
             opacity: [0.3, 0.8, 0.3];
@@ -1024,6 +1112,7 @@ if ( {) {
           transition={{
             duration: 6,
             repeat: Infinity,
+<<<<<<< HEAD
 <<<<<<< HEAD
 
         />;
@@ -1040,6 +1129,8 @@ if ( {) {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           transition={{
             duration: 8
             repeat: Infinity
@@ -1049,6 +1140,7 @@ if ( {) {
             opacity: [0 && 0.3, 0 && 0.8, 0 && 0.3]
           }}
           transition={{
+<<<<<<< HEAD
 
             duration: 6
             repeat: Infinity
@@ -1063,15 +1155,21 @@ if ( {) {
             duration: 8,
             repeat: Infinity,
 <<<<<<< HEAD
+=======
+            duration: 8,
+            repeat: Infinity,
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             ease: "easeInOut"
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
           }}
 
+<<<<<<< HEAD
 =======
 ease: "easeInOut"
           }}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         />;
 
         <motion&& motion.div
@@ -1080,20 +1178,24 @@ ease: "easeInOut"
             height: [24, 48, 24],
             opacity: [0 && 0.3, 0 && 0.8, 0 && 0.3],          className="absolute top-64 right-1/4 w-1 h-24 bg-gradient-to-b from-purple-400 to-transparent"
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           animate={{
             height: [24, 48, 24]
             opacity: [0 && 0.3, 0 && 0.8, 0 && 0.3]
           transition={{
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         />;
       </div>;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
-
-      {/* Gradient Overlays */}
 
 
         />
@@ -1101,13 +1203,10 @@ ease: "easeInOut"
       {/* Gradient Overlays */}
       <div className='fixed inset-0 pointer-events-none z-20'>
 
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {/* Top gradient */}
 
         <div className='absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-purple-900/20 via-transparent to-transparent' />;
+<<<<<<< HEAD
 
 =======
 
@@ -1118,6 +1217,8 @@ ease: "easeInOut"
             repeat: Infinity
             ease: 'easeInOut',            ease: "easeInOut"
           }}
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             duration: 8,
             repeat: Infinity,
 
@@ -1127,6 +1228,7 @@ ease: "easeInOut"
             repeat: Infinity,
             ease: 'easeInOut',            ease: "easeInOut"
           }}
+<<<<<<< HEAD
 
           }}
 
@@ -1138,6 +1240,11 @@ ease: "easeInOut"
         {/* Top gradient */}
         <div className='absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-purple-900/20 via-transparent to-transparent' />
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+      {/* Gradient Overlays */}
+      <div className='fixed inset-0 pointer-events-none z-20'>;
+        {/* Top gradient */}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         {/* Bottom gradient */}
         <div className='absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-cyan-900/20 via-transparent to-transparent' />;
 
@@ -1149,12 +1256,15 @@ ease: "easeInOut"
       </div>;
 
       {/* Content */}
+<<<<<<< HEAD
       <div className='relative z-30'>{children}</div>;
 <<<<<<< HEAD
 
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {/* Floating Particles */}
       <div className='fixed inset-0 pointer-events-none z-15'>;
         {[...Array(20)].map((_, i) => (;
@@ -1199,6 +1309,7 @@ ease: "easeInOut"
             key={i}
             className='absolute w - 1 h - 1 bg - cyan - 400 rounded - full';
             style={{
+<<<<<<< HEAD
 
 <<<<<<< HEAD
               left: `${Math && Math.random() * 100}%`,
@@ -1219,11 +1330,16 @@ ease: "easeInOut"
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`,
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+              left: `${Math.random() * 100}%`,
+              top: `${Math.random() * 100}%`,
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             }}
             animate={{
               y: [0, -100, 0]
               opacity: [0, 1, 0]
               scale: [0, 1, 0],            }}        {/* Top gradient */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -1239,6 +1355,8 @@ ease: "easeInOut"
         <div className="absolute top-0 bottom-0 right-0 w-32 bg-gradient-to-l from-pink-900/20 via-transparent to-transparent" />
       </div>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-purple-900/20 via-transparent to-transparent" />;
 
         {/* Bottom gradient */}
@@ -1250,6 +1368,7 @@ ease: "easeInOut"
         {/* Right gradient */}
         <div className="absolute top-0 bottom-0 right-0 w-32 bg-gradient-to-l from-pink-900/20 via-transparent to-transparent" />;
       </div>;
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       {/* Content */}
@@ -1263,6 +1382,8 @@ ease: "easeInOut"
 =======
       </div>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {/* Floating Particles */}
       <div className="fixed inset-0 pointer-events-none z-15">;
         {[...Array(20)].map((_, i) => (;
@@ -1296,6 +1417,7 @@ ease: "easeInOut"
             className="absolute w - 1 h - 1 bg - cyan - 400 rounded - full";
             style={{
 <<<<<<< HEAD
+<<<<<<< HEAD
 
               left: `${Math && Math.random() * 100}%`,
               top: `${Math && Math.random() * 100}%`
@@ -1304,6 +1426,8 @@ ease: "easeInOut"
               left: `${Math && Math.random() * 100}%`,
               top: `${Math && Math.random() * 100}%`
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             }}
             animate={{
               y: [0, -100, 0]
@@ -1311,6 +1435,7 @@ ease: "easeInOut"
               scale: [0, 1, 0]
             }}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -1323,11 +1448,20 @@ ease: "easeInOut"
 <<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             transition={{
+              duration: Math.random() * 10 + 10
+              repeat: Infinity
+              delay: Math.random() * 10
+
               duration: Math && Math.random() * 10 + 10,
               repeat: Infinity,
               delay: Math && Math.random() * 10,
+
+            transition={{
               ease: 'easeInOut',            }}              ease: "easeInOut"
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
               duration: Math.random() * 10 + 10,
               repeat: Infinity,
@@ -1349,6 +1483,11 @@ ease: "easeInOut"
         ))}
       </div>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+            }}
+          />;
+        ))}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {/* Neon Glow Effects */}
       <div className='fixed inset-0 pointer-events-none z-25'>;
         <div className='absolute top-1/4 left-1/4 w-96 h-96 bg-cyan-500/5 rounded-full blur-3xl' />;
@@ -1357,6 +1496,7 @@ ease: "easeInOut"
       </div>;
     </div>;
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1415,6 +1555,9 @@ export default UltraFuturisticBackground2030;
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
+=======
+export default UltraFuturisticBackground2030;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               left: `${Math.random () * 100}%`,
               top: `${Math.random () * 100}%`;
             }}
@@ -1446,10 +1589,15 @@ export default UltraFuturisticBackground2030;      </div>;
 ;
 export default UltraFuturisticBackground2030;
 ;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 
@@ -1458,6 +1606,13 @@ export default UltraFuturisticBackground2030;
               duration: Math.random() * 10 + 10,
               repeat: Infinity,
               delay: Math.random() * 10,
+              ease: 'easeInOut',            }}
+
+
+          />
+        ))}
+      </div>
+
 
 
       {/* Neon Glow Effects */}
@@ -1473,16 +1628,28 @@ export default UltraFuturisticBackground2030;
   );
 };
 
-
+export default UltraFuturisticBackground2030;      </div>
+    </div>
+  )
+}
 export default UltraFuturisticBackground2030;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export default UltraFuturisticBackground2030;
 
 }
 export default UltraFuturisticBackground2030;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+export default UltraFuturisticBackground2030;
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

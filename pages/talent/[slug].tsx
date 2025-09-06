@@ -1,5 +1,8 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -24,17 +27,20 @@ class ErrorBoundary extends React.Component {
 }
 import React from 'react';
 
-=======
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import type { NextPage } from "next";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import { useState } from "react";
 import EnhancedButton from "../../components/ui/EnhancedButton";
 import { TrustBadge, MicroTestimonial } from "../../components/ui/Badges";
+<<<<<<< HEAD
 
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -52,10 +58,15 @@ import { useState  } from './react';
 import EnhancedButton from "../../components / ui / EnhancedButton";
 import { TrustBadge, MicroTestimonial  } from '../../components / ui / Badges';
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 const TalentProfile: NextPage = () => {
-  const router = useRouter();
+  const router = use_router ();
   const { slug } = router.query;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 const TalentProfile: NextPage = () => {;
@@ -73,6 +84,15 @@ const TalentProfile: NextPage = () => {;
 
     ]);
   }
+import type { NextPage } from 'next',
+import Head from 'next/head',
+import { useRouter } from 'next/router',
+import { useState } from 'react',
+import EnhancedButton from '../../components/ui/EnhancedButton',
+import { TrustBadge, MicroTestimonial } from '../../components/ui/Badges',
+const TalentProfile: NextPage = () => {
+  const router = useRouter(),
+  const { slug } = router.query,
   return (
     <div className="space-y-6 pb-20">;
       {" "}
@@ -104,6 +124,7 @@ const TalentProfile: NextPage = () => {;
 
 
 
+<<<<<<< HEAD
 =======
   const [responseLog, setResponseLog] = useState<
     Array<{ action: "Accept" | "Decline" | "Negotiate"; at: string }>
@@ -124,6 +145,8 @@ const TalentProfile: NextPage = () => {
   const router = useRouter(),
   const { slug } = router.query,
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const [responseLog, setResponseLog] = useState<Array<{ action: 'Accept' | 'Decline' | 'Negotiate', at: string }>>([]),
   const handleRespond = (action: 'Accept' | 'Decline' | 'Negotiate') => {
     setResponseLog((prev) => [...prev, { action, at: new Date().toISOString() }])
@@ -133,6 +156,7 @@ const TalentProfile: NextPage = () => {
       <Head>
         <title>{slug} - Talent - Zion</title>
       </Head>
+
       <header className="flex items-start justify-between gap-4">
         <div>
           <h1 className="text-2xl font-semibold">{slug}</h1>
@@ -148,21 +172,28 @@ const TalentProfile: NextPage = () => {
           <EnhancedButton variant="ghost" onClick={() => handleRespond('Negotiate')}>Negotiate</EnhancedButton>
         </div>
       </header>
+
       <section className="grid md:grid-cols-3 gap-6">
         <div className="md:col-span-2 space-y-4">
           <div className="border rounded-md p-4">
             <h2 className="font-semibold mb-2">About</h2>
-            <p className="text-sm opacity-90">Experienced developer specializing in React, Next.js, and Node.js.</p>
+            <p className="text-sm opacity-90">
+              Experienced developer specializing in React, Next.js, and Node.js.
+            </p>
           </div>
           <div className="border rounded-md p-4">
             <h2 className="font-semibold mb-2">Testimonials</h2>
-            <MicroTestimonial quote="Fantastic work, delivered on time." author="Acme Corp" />
+            <MicroTestimonial
+              quote="Fantastic work, delivered on time."
+              author="Acme Corp"
+            />
           </div>
         </div>
         <aside className="space-y-4">
           <div className="border rounded-md p-4">
             <h3 className="font-semibold mb-2">Response Log</h3>
             <ul className="space-y-1 text-sm">
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -209,12 +240,15 @@ const TalentProfile: NextPage = () => {
             variant="ghost";
             on_click={() => handle_respond ("Negotiate")}
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           >;
             Negotiate;
           </EnhancedButton>;
         </div>;
       </header>;
 
+<<<<<<< HEAD
               {responseLog.length === 0 && <li className="opacity-70">No responses yet.</li>}
 <<<<<<< HEAD
 =======
@@ -301,19 +335,25 @@ const TalentProfile: NextPage = () => {
     </div>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             </ul>;
           </div>;
         </aside>;
       </section>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 },;
@@ -351,3 +391,7 @@ export default TalentProfile;
 },;
 export default TalentProfile;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+export default TalentProfile;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

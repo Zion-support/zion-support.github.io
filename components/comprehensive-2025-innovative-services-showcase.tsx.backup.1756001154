@@ -23,6 +23,10 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
   ];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 // Import existing services for comprehensive showcase
 import { realMicroSaasServices2025 } from '../data/2025-real-micro-saas-services';
 
@@ -129,6 +133,11 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
     const cat = categories.find(c => c.name === category);
     return cat ? cat.icon : Star;
 >>>>>>> 4e26761e9808218b595a40eae6dfbc7c204b5906
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/main
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   };
 
   const getCategoryColor = (category: string) => {
@@ -140,6 +149,10 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
     <Layout>
       <SEO 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         title="2025 Comprehensive Innovative Services Showcase | Zion Tech Group"
         description="Discover our comprehensive portfolio of innovative micro SAAS services, AI solutions, and cutting-edge technology platforms. From quantum computing to healthcare AI, explore the future of business technology."
         keywords={["innovative micro SAAS", "AI services", "quantum computing", "healthcare AI", "cybersecurity", "blockchain", "space technology", "autonomous vehicles", "IoT", "metaverse", "Zion Tech Group"]}
@@ -156,6 +169,11 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
           'autonomous systems'
         ]}
 >>>>>>> 4e26761e9808218b595a40eae6dfbc7c204b5906
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/main
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       />
       
       {/* Hero Section */}
@@ -320,6 +338,10 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
                       </div>
                     </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     <span className="text-gray-300 text-sm">
                       {(service as any).rating || 0} ({(service as any).reviews || 0} reviews)
                     </span>
@@ -357,6 +379,11 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
                     
                     <div className="space-y-3 mb-6">
 >>>>>>> 4e26761e9808218b595a40eae6dfbc7c204b5906
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/main
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       {service.features.slice(0, 4).map((feature, idx) => (
                         <div key={idx} className="flex items-center space-x-3 text-sm text-gray-300">
                           <div className="w-2 h-2 bg-cyan-400 rounded-full"></div>

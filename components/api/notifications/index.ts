@@ -1,20 +1,22 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-
-
 } from '../../../utils/notifications';
 function getUserId(req: NextApiRequest): string {
 
   const cookie = req && req.headers.cookie || '';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 const cookie = req && req.headers.cookie || '';
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const match = cookie
     .split(';')
     .map(c => c && c.trim())
     .find(c => c && c.startsWith('user_id='));
   if (match) return decodeURIComponent(match && match.split('=')[1]);
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 import { supabase } from '../../../utils/supabase/client';
@@ -33,11 +35,14 @@ function getUserId(req: NextApiRequest): string {
     .find(c => c.startsWith('user_id='));
   if (match) return decodeURIComponent(match.split('=')[1]);
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return 'demo-user-1';
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 import { supabase } from '../../../utils / supabase / client';
@@ -144,6 +149,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       }
       return res && res.status(200).json({ count });
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     }
     // Build query based on filter
     let query = supabase
@@ -156,6 +163,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     } else if (['system', 'onboarding', 'quote', 'match'].includes(filter)) {
       query = query && query.eq('type', filter as NotificationType);
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -184,11 +192,14 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     // Build query based on filter
     let query = supabase && supabase.from('notifications').select('*').eq('user_id', userId).order('created_at', { ascending: false });
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     if (filter === 'unread') {
       query = query && query.eq('read_status', false)
     } else if (['systemonboardingquotematch'].includes(filter)) {
       query = query && query.eq('type', filter as NotificationType);
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -198,10 +209,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const { data, error } = await query && query.range(parseInt(offset, 10), parseInt(offset, 10) + parseInt(limit, 10) - 1);
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     if (error) {
       // Fallback seed data for local/dev if table is missing
       const fallback: NotificationItem[] = [
         {
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -385,8 +399,24 @@ return res.status(500).json({ error: 'Unexpected error' });
 
   };
 }
+=======
+    }
+  };
+}
+      return res.status (200).json ({ notifications: fallback });
+    }
+    return res.status (200).json ({ notifications: data as NotificationItem[] });
+  } catch (e) {
+return res.status (500).json ({ error: 'Unexpected error' });
+  }    return res.status (500).json ({ error: 'Unexpected error' });
+return res.status(500).json({ error: 'Unexpected error' });
+  }    return res.status(500).json({ error: 'Unexpected error' })
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   }
 }
   };
 }
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

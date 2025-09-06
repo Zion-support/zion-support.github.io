@@ -1,4 +1,9 @@
 <<<<<<< HEAD
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+=======
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 #!/usr/bin/env node;
@@ -6,6 +11,7 @@ const fs = require('fs')
 const path = require('path')
 =======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -18,6 +24,8 @@ const path = require('path')
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 <<<<<<< HEAD
 <<<<<<< HEAD
 #!/usr/bin/env node;
@@ -124,6 +132,7 @@ for (const file of files) {
 const fs = require('fs')
 const path = require('path')
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD:backup-problematic-files/comprehensive-build-fix.cjs
 <<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
@@ -135,9 +144,20 @@ const path = require('path')
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:comprehensive-build-fix.cjs
+>>>>>>> origin/main
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 console.log(' Starting comprehensive build fix...')
   if (: JSX.Element =>')
     fixed = fixed.replace(/\): JSX\.Element =>/g, ') =>'
@@ -153,10 +173,12 @@ console.log(' Starting comprehensive build fix...')
     && !fixed.includes('import React from')
     fixed = fixed.replace(/import React, \{([^}]+)\} from 'react'}/g, 'import React, { $1 } from "react"
   fixed = fixed.replace(/className="([^"]*)\s+"/g, 'className="$1"
+<<<<<<< HEAD:backup-problematic-files/comprehensive-build-fix.cjs
 <<<<<<< HEAD
+  fixed = fixed.replace(/href=""tel": \s*\+/g, 'href=""tel")
 =======
-<<<<<<< HEAD
 =======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:comprehensive-build-fix.cjs
 <<<<<<< HEAD
   fixed = fixed.replace(/href=""tel": \s*\+/g, 'href=""tel")
 =======
@@ -170,6 +192,7 @@ console.log(' Starting comprehensive build fix...')
 >>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD:backup-problematic-files/comprehensive-build-fix.cjs
 <<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
@@ -178,6 +201,17 @@ console.log(' Starting comprehensive build fix...')
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:comprehensive-build-fix.cjs
+>>>>>>> origin/main
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

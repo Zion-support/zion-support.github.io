@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -30,6 +31,8 @@ Object.defineProperty(window, 'matchMedia', {
   writable: true,
   value: (query: string) => ({
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     matches: false,
     media: query,
     onchange: null,
@@ -70,6 +73,7 @@ global && global.IntersectionObserver = jest && jest.fn().mockImplementation(() 
   unobserve: jest && jest.fn(),
   disconnect: jest && jest.fn(),
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 }));
 
@@ -82,6 +86,8 @@ const originalConsoleWarn = console && console.warn;
 const originalConsoleError = console && console.error;
 const originalConsoleWarn = console && console.warn;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 beforeAll(() => {
   console && console.error = (...args: any[]) => {
     if (
@@ -90,6 +96,7 @@ beforeAll(() => {
     ) {
       return;
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -101,6 +108,8 @@ beforeAll(() => {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     if (
       typeof args[0] === 'string' &&
       args[0].includes('Warning: ReactDOM && ReactDOM.render is no longer supported')
@@ -108,6 +117,7 @@ beforeAll(() => {
       return;
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     originalConsoleWarn && originalConsoleWarn.call(console, ...args);
   };
@@ -116,10 +126,13 @@ beforeAll(() => {
     originalConsoleWarn && originalConsoleWarn.call(console, ...args);
   };
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 });
 afterAll(() => {
   console && console.error = originalConsoleError;
   console && console.warn = originalConsoleWarn;
+<<<<<<< HEAD
 
 });
 <<<<<<< HEAD
@@ -129,6 +142,8 @@ afterAll(() => {
 =======
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ;
 // Mock IntersectionObserver;
 global.IntersectionObserver = jest.fn ().mock_implementation (() => ({
@@ -170,7 +185,10 @@ after_all (() => {
   console.warn = originalConsoleWarn;
 });
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from "react";
 import {useForm} from "react-hook-form";
 import {zodResolver} from "@hookform/resolvers/zod";
@@ -10,6 +9,7 @@ import {basicInfoSchema, BasicInfoFormData} from "./schema";
 import {PersonalInfoFields} from "./PersonalInfoFields";
 import {ContactFields} from "./ContactFields";
 export interface BasicInfoFormProps {;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -38,6 +38,8 @@ export function BasicInfoForm(): any ({;
   resumeId;
   resumeId?: string;
   initialData?: Partial<BasicInfoFormData>;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useState, useEffect } from "react",
 import { useForm } from "react-hook-form",
 import { zodResolver } from "@hookform/resolvers/zod",
@@ -52,8 +54,6 @@ export interface BasicInfoFormProps {
   resumeId?: string;
 
   initialData?: Partial<BasicInfoFormData>;
-  onSave: (data: BasicInfoFormData) => void
-
   skills?: string[];
   yearsExperience?: number;
 import { PersonalInfoFields } from "./PersonalInfoFields",
@@ -74,7 +74,14 @@ export function BasicInfoForm({;
   skills = [];
   yearsExperience = 0;
 export function BasicInfoForm({
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+export function BasicInfoForm(): any ({;
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   resumeId;
 
   initialData = {}
@@ -82,6 +89,9 @@ export function BasicInfoForm({
   skills = [];
   yearsExperience = 0;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 
@@ -91,6 +101,7 @@ export function BasicInfoForm({
 
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
   resumeId,
@@ -99,11 +110,14 @@ export function BasicInfoForm({
   skills = [],
   yearsExperience = 0,
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   onComplete
 }: BasicInfoFormProps) {
   const form = useForm<BasicInfoFormData>({
     resolver: zodResolver(basicInfoSchema)
     defaultValues: {
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -135,17 +149,22 @@ export function BasicInfoForm({
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   useEffect(() => {
     if (initialData) {
       Object.entries(initialData).forEach(([key, value]) => {
         if (value !== undefined) {
           form.setValue(key as keyof BasicInfoFormData, value as any)
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useState, useEffect } from "react",;
 import { useForm } from "react-hook-form",;
 import { zodResolver } from "@hookform/resolvers/zod",;
@@ -172,9 +191,12 @@ export function BasicInfoForm({;
   skills = [],;
   yearsExperience = 0,;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   onComplete;
 }: BasicInfoFormProps) {;
   const form = useForm<BasicInfoFormData>({;
@@ -189,6 +211,7 @@ export function BasicInfoForm({;
       linkedin: "",;
       github: "",;
       hourlyRate: 0,;
+<<<<<<< HEAD
 <<<<<<< HEAD
       ...initialData}});
 
@@ -324,6 +347,11 @@ export function BasicInfoForm({;
         }
       })
     }
+=======
+        }
+      });
+    }
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   }, [initialData, form]);
   const handleSubmit = (data: BasicInfoFormData) => {
     onSave(data)
@@ -332,29 +360,40 @@ export function BasicInfoForm({;
     }
   }
   };
+
+
+        }
+      });
+    }
+
+
   }, [initialData, form]),;
+
   const handleSubmit = (data: BasicInfoFormData) => {;
-    onSave(data);
+    onSave(data),;
     if (onComplete) {;
       onComplete();
     }
+
   },
+        }
+      });
+    }
+  }, [initialData, form]);
+    }
+  }
 
   return (
-    <Form {...form}>
-      <form onSubmit={form.handleSubmit(handleSubmit)} className="space-y-6">
-        <Card className="p-6 space-y-6">
-          <PersonalInfoFields control={form.control} />
-          <ContactFields control={form.control} />
-          <div className="pt-4 border-t border-gray-200">
-            <h3 className="text-lg font-medium mb-4">Rate Information</h3>
             <RateOptimizationSection
-              control={form.control}
-              setValue={form.setValue}
+              control={form && form.control}
+              setValue={form && form.setValue}
               skills={skills}
+<<<<<<< HEAD
               yearsExperience={yearsExperience |0}
               yearsExperience={yearsExperience || 0}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               location={form.getValues("location")}
               rateType="hourly"
             />
@@ -366,6 +405,7 @@ export function BasicInfoForm({;
       </form>
     </Form>
   )
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -414,9 +454,9 @@ export function BasicInfoForm({;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+}
 import React, { useState, useEffect } from './react';
 import { use_form } from './react - hook - form';
 import { zod_resolver } from '@hookform / resolvers / zod';
@@ -453,6 +493,7 @@ function BasicInfoForm() {
       hourly_rate: 0,
       ...initial_data}});
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -551,3 +592,5 @@ if (initialData) {
 }
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

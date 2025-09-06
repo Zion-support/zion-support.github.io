@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -42,6 +43,10 @@ export const useLocalStorage = <T>(ke:y:string, initialValu:e:T) => {;
 export const useLocalStorage = <T>(ke:y:string, initialValu:e:T) => {const [storedValue, setStoredValue] = useState<T>(() => {;
 origin/main
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+}
+export const useLocalStorage = <T>(ke:y:string, initialValu:e:T) => {const [storedValue, setStoredValue] = useState<T>(() => {;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     try {;
       const item = window.localStorage.getItem(key);
       return item ? JSON.parse(item) :initialValue} catch (error) {console.error(`Error reading localStorage key "${key}":`, error);
@@ -49,6 +54,7 @@ origin/main
   });
   const setValue = (valu:e:T | ((va:l:T) => T)) => {try {;
       const valueToStore = value instanceof Function ? value(storedValue) :value;import { useState, useEffect } from 'react';
+<<<<<<< HEAD
 export function useLocalStorage<T>(key: string, initialValue: T) {
 <<<<<<< HEAD
 =======
@@ -99,20 +105,25 @@ export const useLocalStorage = <T>(ke:y:string, initialValu:e:T) => {const [stor
 export function useLocalStorage<T>(key: string, initialValue: T) {
 ursor/integrate-build-improve-and-re-verify-8f7d
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 // Get from local storage then parse stored json or return initialValue
 interface UseLocalStorageProps {
   // Add props here as needed
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 origin/main
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export const useLocalStorage = <T>(key: string, initialValue: T) => {
     try {
       const item = window && window.localStorage.getItem(key);
       return item ? JSON && JSON.parse(item) : initialValue;
     } catch (error) {
-      console && console.error(`Error reading localStorage key "${key}":`, error);
+      console.error(`Error reading localStorage key "${key}":`, error);
     }
   });
   // Return a wrapped version of useState's setter function that persists the new value to localStorage
@@ -128,6 +139,7 @@ export const useLocalStorage = <T>(key: string, initialValue: T) => {
     } catch (error) {
       // eslint-disable-next-line no-console
 <<<<<<< HEAD
+<<<<<<< HEAD
 
       console && console.error(`Error setting localStorage key "${key}":`, error);
 
@@ -139,13 +151,20 @@ export const useLocalStorage = <T>(key: string, initialValue: T) => {
       console && console.error(`Error setting localStorage key "${key}":`, error);
   };
   return [storedValue, setValue] as const;
+=======
+      console.error(`Error setting localStorage key "${key}":`, error)}
+  }
+  return [storedValue, setValue] as const}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
+
       console.error(`Error setting localStorage key "${key}":`, error)};
   };
   return [storedValue, setValue] as const};
 };
 };
 };
+<<<<<<< HEAD
 };
 };
 };
@@ -301,3 +320,5 @@ export default useLocalStorage;
 export default useLocalStorage;
 ursor/fix-lint-push-and-merge-to-main-ae4e
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

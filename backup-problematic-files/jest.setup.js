@@ -17,6 +17,7 @@ jest.mock("next/router", () => ({
       events: {
         on: jest.fn(),
         off: jest.fn(),
+<<<<<<< HEAD
       isFallback: false
     };
   },
@@ -55,6 +56,8 @@ jest.mock('next/image', () => ({
 
 :backup-problematic-files/jest.setup.js
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     };
   },
 }));
@@ -66,10 +69,13 @@ jest.mock("next/image", () => {
   };
 });
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
 :jest.setup.js
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 // Mock Next.js Link component
 jest.mock("next/link", () => {
@@ -81,6 +87,7 @@ jest.mock("next/link", () => {
     );
   };
 });
+<<<<<<< HEAD
 main:jest.setup.js
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
@@ -102,6 +109,8 @@ jest.mock('next/link', () => ({
 main:jest.setup.js
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 }));
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 // Mock window.matchMedia
 Object.defineProperty(window, 'matchMedia', {
@@ -133,6 +142,7 @@ global.ResizeObserver = class ResizeObserver {
   observe() {}
   unobserve() {}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 };
 
@@ -148,3 +158,5 @@ beforeEach(() => {
 };
 :backup-problematic-files/jest.setup.js
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -11,6 +12,10 @@ import dynamic from 'next/dynamic';
 import dynamic from 'next/dynamic'
 import dynamic from 'next/dynamic',;
 import dynamic from 'next/dynamic'
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 const TranslationPreview = dynamic(() => import('../../components/admin/TranslationPreview'), { ssr: false }),
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 export default function TranslationsAdminPage() {
@@ -18,6 +23,7 @@ export default function TranslationsAdminPage() {
     <div className="container mx-auto px-4 py-8">
       <TranslationPreview />
     </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -45,11 +51,14 @@ function TranslationsAdminPage() {
 =======
   );
 };
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   )
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+
 }
 import dynamic from 'next/dynamic';
 const _TranslationPreview = dynamic__(() => import('../../components/admin/TranslationPreview'), {_ssr: false});
@@ -58,14 +67,14 @@ export default function TranslationsAdminPage() {_return (
       <TranslationPreview />
     </div>
   )
-}
-
-
-
-
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

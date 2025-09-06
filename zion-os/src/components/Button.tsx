@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -62,6 +63,8 @@ const Button = forwardRef<HTMLButtonElement ButtonProps>(({;
   const classes = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${roundedClasses[rounded]} ${widthClasses} ${className}`,;
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const content = (;
     <>;
       {loading && <LoadingSpinner size="sm" color="white" className="mr-2" />}
@@ -69,6 +72,7 @@ const Button = forwardRef<HTMLButtonElement ButtonProps>(({;
       <span className={loading ? 'opacity-0' : ''}>{children}</span>;
       {icon && iconPosition === 'right' && !loading && <span className="ml-2">{icon}</span>}
     </>;
+<<<<<<< HEAD
 
 'use client',
 import React, { forward_ref } from 'react',
@@ -106,6 +110,8 @@ interface ButtonProps {children: React.ReactNode;
   type?: 'button' | 'submit' | 'reset';
   fullWidth?: boolean;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   rounded?: 'sm' | 'md' | 'lg' | 'xl' | 'full';
 }
 const Button = forward_ref < HTMLButtonElement ButtonProps>(({
@@ -122,6 +128,7 @@ const Button = forward_ref < HTMLButtonElement ButtonProps>(({
   type = 'button',
   full_width = false,
   rounded = 'lg';
+<<<<<<< HEAD
 <<<<<<< HEAD
 }, ref) => {
   const base_classes = 'inline - flex items - center justify - center font - semibold transition - all duration - 300 transform hover: scale - 105 focus:outline - none focus:ring - 2 focus:ring - offset - 2 focus:ring - offset - black focus:ring - purple - 500 disabled:opacity - 50 disabled:cursor - not - allowed disabled:transform - none',
@@ -260,19 +267,25 @@ const Button = forwardRef<HTMLButtonElement ButtonProps>(({;
   if (href) {;
     return (;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <Link href={href} className={classes}>;
         {content}
       </Link>);
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ;
 
 
   return (;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
   return (
@@ -280,12 +293,16 @@ const Button = forwardRef<HTMLButtonElement ButtonProps>(({;
 =======
   return (
 ;
+=======
+  return (
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     <button;
       ref={ref}
       type={type}
       className={classes}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -420,6 +437,8 @@ export function FloatingActionButton({;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <Button;
       {...props}
       icon={icon}

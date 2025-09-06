@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 export function ClientDashboard() {
 =======
 
@@ -26,6 +27,8 @@ import { Button } from "@/components/ui/button",
 import { Badge } from "@/components/ui/badge",
 import { ChevronRight, Plus, UserCheck, FileText, Bell } from 'lucide-react'
 import Link from "next/link",
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export function ClientDashboard() {
   return (
     <div className="space-y-6 px-4 pb-24">
@@ -34,11 +37,6 @@ export function ClientDashboard() {
           <Plus className="mr-2 h-5 w-5" /> Post a New Job
         </Button>
       </section>
-
-
-
-      
-
       <section>
         <div className="flex items-center justify-between mb-4">
           <h2 className="text-lg font-medium">Active Projects</h2>
@@ -48,24 +46,12 @@ export function ClientDashboard() {
             </Button>
           </Link>
         </div>
-        
-
         <Card>
           <CardContent className="p-4">
             <div className="space-y-4">
               <div className="flex justify-between items-start">
                 <div>
                   <h3 className="font-medium">Website Redesign</h3>
-                  <div className="text-sm text-muted-foreground">In Progress • Due in 12 days</div>
-                </div>
-                <Badge>3 Milestones</Badge>
-              </div>
-              <div className='space-y-1'>
-                <div className='flex justify-between text-sm'>
-              
-              <div className="space-y-1">
-                <div className="flex justify-between text-sm">
-
                   <span>Progress</span>
                   <span className="font-medium">60%</span>
                 </div>
@@ -73,20 +59,12 @@ export function ClientDashboard() {
                   <div className="h-full bg-primary rounded-full" style={{width: '60%'}}></div>
                 </div>
               </div>
-              <div className='flex justify-between items-center'>
-                <div className='flex -space-x-2'>
-                  <div className='w-7 h-7 rounded-full bg-primary/20 flex items-center justify-center'>
-                    <UserCheck className='h-4 w-4' />
-              
-              <div className="flex justify-between items-center">
-                <div className="flex -space-x-2">
-                  <div className="w-7 h-7 rounded-full bg-primary/20 flex items-center justify-center">
-                    <UserCheck className="h-4 w-4" />
                   </div>
                   <div className="w-7 h-7 rounded-full bg-secondary/20 border-2 border-background flex items-center justify-center">
                     <UserCheck className="h-4 w-4" />
                   </div>
                 </div>
+<<<<<<< HEAD
                 <Button size='sm' variant='outline'>
                   View Details
                 </Button>              </div>import { ChevronRight, Plus, UserCheck, FileText, Bell } from 'lucide-react'
@@ -215,6 +193,9 @@ xport function ClientDashboard() {
 =======
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 
@@ -227,6 +208,7 @@ ursor/fix-website-loading-errors-and-merge-6662
           </CardContent>
         </Card>
       </section>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -244,6 +226,10 @@ ursor/fix-website-loading-errors-and-merge-6662
         <div className="flex items-center justify-between mb-4">
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+      <section>
+        <div className="flex items-center justify-between mb-4">
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <h2 className="text-lg font-medium">Suggested Talents</h2>
           <Link href="/mobile/marketplace">
             <Button variant="ghost" size="sm" className="h-8 gap-1">
@@ -251,6 +237,7 @@ ursor/fix-website-loading-errors-and-merge-6662
             </Button>
           </Link>
         </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -268,20 +255,29 @@ ursor/fix-website-loading-errors-and-merge-6662
             <CardContent className="p-4">
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+          <Card>
+            <CardContent className="p-4">
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <div className="flex justify-between">
                 <div className="flex items-center gap-3">
                   <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
                     <UserCheck className="h-6 w-6 text-primary" />
                   </div>
                   <div>
-                    <h3 className="font-medium">Sarah Johnson</h3>
-                    <p className="text-sm text-muted-foreground">UX Designer • 5 years exp</p>
+                    <h3 className='font-medium'>Sarah Johnson</h3>
+                    <p className='text-sm text-muted-foreground'>
+                      UX Designer  5 years exp
+                    </p>
                   </div>
                 </div>
-                <div className="bg-primary/10 text-primary font-medium self-start rounded-full px-2 py-1 text-xs">
+                <div className='bg-primary/10 text-primary font-medium self-start rounded-full px-2 py-1 text-xs'>
                   95% match
                 </div>
               </div>
+<<<<<<< HEAD
               <div className="mt-3 flex gap-1 flex-wrap">
                 <Badge variant="outline" className="text-xs">UI/UX</Badge>
                 <Badge variant="outline" className="text-xs">Figma</Badge>
@@ -308,6 +304,12 @@ ursor/fix-website-loading-errors-and-merge-6662
             <CardContent className="p-4">
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+          <Card>
+            <CardContent className="p-4">
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <div className="flex justify-between">
                 <div className="flex items-center gap-3">
                   <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
@@ -323,17 +325,21 @@ ursor/fix-website-loading-errors-and-merge-6662
                 </div>
               </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <div className='mt-3 flex gap-1 flex-wrap'>
                 <Badge variant='outline' className='text-xs'>
-                  React
+                  UI/UX
                 </Badge>
                 <Badge variant='outline' className='text-xs'>
-                  Node.js
+                  Figma
                 </Badge>
                 <Badge variant='outline' className='text-xs'>
+<<<<<<< HEAD
                   AWS
                 </Badge>              <div className="mt-3 flex gap-1 flex-wrap">
               <div className="mt-3 flex gap-1 flex-wrap">
@@ -346,6 +352,12 @@ ursor/fix-website-loading-errors-and-merge-6662
                 <Badge variant="outline" className="text-xs">Node.js</Badge>
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+                <Badge variant="outline" className="text-xs">React</Badge>
+                <Badge variant="outline" className="text-xs">Node.js</Badge>
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <Badge variant="outline" className="text-xs">AWS</Badge>
               </div>
               <div className="flex gap-2 mt-3">
@@ -362,11 +374,14 @@ ursor/fix-website-loading-errors-and-merge-6662
         </div>
       </section>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
       
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
       <section>
@@ -376,6 +391,7 @@ ursor/fix-website-loading-errors-and-merge-6662
         </div>
 
 
+<<<<<<< HEAD
         
 
 
@@ -384,6 +400,8 @@ ursor/fix-website-loading-errors-and-merge-6662
           <h2 className="text-lg font-medium">Recent Updates</h2>
         </div>
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <Card>
         <div className="flex items-center justify-between mb-4">
           <h2 className="text-lg font-medium">Recent Updates</h2>
@@ -400,6 +418,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                 <p className="text-xs text-muted-foreground">2 hours ago</p>
               </div>
             </div>
+<<<<<<< HEAD
             <div className='flex gap-3 items-start'>
               <div className='bg-primary/10 p-2 rounded-full'>
                 <FileText className='h-5 w-5 text-primary' />
@@ -451,6 +470,10 @@ ursor/fix-website-loading-errors-and-merge-6662
                 <p className='text-sm'>
                   <strong>Mobile App Development:</strong> 3 new applicants for
                   your job post
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               </div>
               <div>
                 <p className="text-sm">
@@ -461,6 +484,7 @@ ursor/fix-website-loading-errors-and-merge-6662
               </div>
             </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
       
       <section>
@@ -470,6 +494,8 @@ ursor/fix-website-loading-errors-and-merge-6662
               View All Notifications
             </Button>          </CardContent>      <section>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <div className="flex items-center justify-between mb-4">
           <h2 className="text-lg font-medium">Recent Updates</h2>
         </div>
@@ -498,17 +524,21 @@ ursor/fix-website-loading-errors-and-merge-6662
               </div>
             </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
             
             
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
             
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
             <Button variant="outline" className="w-full">View All Notifications</Button>
           </CardContent>
         </Card>
       </section>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -523,10 +553,13 @@ ursor/fix-website-loading-errors-and-merge-6662
     </div>
   )
 }
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from "react",;
 import { Card, CardContent } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
 import { Badge } from "@/components/ui/badge",;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import { ChevronRight, Plus, UserCheck, FileText, Bell } from 'lucide-react';
 import Link from "next/link";
@@ -589,6 +622,11 @@ export function ClientDashboard() {;
 import Link from "next/link";
 export function ClientDashboard() {;
   return (
+=======
+import { ChevronRight, Plus, UserCheck, FileText, Bell } from 'lucide-react';
+import Link from "next/link";
+export function ClientDashboard() {;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <div className="space-y-6 px-4 pb-24">;
       <section className="mt-4">;
         <Button className="w-full py-6" size="lg">;
@@ -634,120 +672,6 @@ export function ClientDashboard() {;
                   </div>;
                   <div className="w-7 h-7 rounded-full bg-secondary/20 border-2 border-background flex items-center justify-center">;
                     <UserCheck className="h-4 w-4" />;
-import React from 'react';
-import { Card, CardContent } from '@/components / ui / card';
-import { Button } from '@/components / ui / button';
-import { Badge } from '@/components / ui / badge';
-import { ChevronRight, Plus, UserCheck, FileText, Bell } from 'lucide-react';
-import Link from 'next / link';
-import React from './react';
-import { Card, CardContent  } from '@/components / ui / card';
-import { Button  } from '@/components / ui / button';
-import { Badge  } from '@/components / ui / badge';
-import Link from './next / link';
-export /**
- * ClientDashboard - Function description
- */
-function ClientDashboard() {
-  return (
-    <div className='space - y-6 px - 4 pb - 24'>;
-      <section className='mt - 4'>;
-        <Button className='w - full py - 6' size='lg'>;
-          <Plus className='mr - 2 h - 5 w - 5' /> Post a New Job;
-        </Button>;
-      </section>;
-      <section>;
-        <div className='flex items - center justify - between mb - 4'>;
-          <h2 className='text - lg font - medium'>Active Projects</h2>;
-          <Link href='/mobile / projects'>;
-            <Button variant='ghost' size='sm' className='h - 8 gap - 1'>;
-              View all <ChevronRight className='h - 4 w - 4' />;
-            </Button>;
-          </Link>;
-        </div>;
-        <Card>;
-          <CardContent className='p - 4'>;
-            <div className='space - y-4'>;
-              <div className='flex justify - between items - start'>;
-                <div>;
-                  <h3 className='font - medium'>Website Redesign</h3>;
-                  <div className='text - sm text - muted - foreground'>;
-                    In Progress • Due in 12 days;
-                  </div>;
-                </div>;
-                <Badge > 3 Milestones</Badge>;
-              </div>;
-              <div className='space - y-1'>;
-                <div className='flex justify - between text - sm'>;
-                  <span > Progress</span>;
-                  <span className='font - medium'>60%</span>;
-                </div>;
-                <div className='h - 2 bg - primary / 20 rounded - full overflow - hidden'>;
-                  <div;
-                    className='h - full bg - primary rounded - full';
-                    style={{ width: '60%' }}
-                  ></div>;
-                </div>;
-              </div>;
-              <div className='flex justify - between items - center'>;
-                <div className='flex -space - x-2'>;
-                  <div className='w - 7 h - 7 rounded - full bg - primary / 20 flex items - center justify - center'>;
-                    <UserCheck className='h - 4 w - 4' />;
-                  </div>;
-                  <div className='w - 7 h - 7 rounded - full bg - secondary / 20 border - 2 border - background flex items - center justify - center'>;
-                    <UserCheck className='h - 4 w - 4' />;
-                  </div>;
-                </div>;
-                <Button size='sm' variant='outline'>;
-                  View Details;
-                </Button>              </div > import { ChevronRight, Plus, UserCheck, FileText, Bell } from 'lucide-react';
-export /**
- * ClientDashboard - Function description
- */
-function ClientDashboard() {
-  return (
-    <div className="space - y-6 px - 4 pb - 24">;
-      <section className="mt - 4">;
-        <Button className="w - full py - 6" size="lg">;
-          <Plus className="mr - 2 h - 5 w - 5" /> Post a New Job;
-        </Button>;
-      </section>;
-      <section>;
-        <div className="flex items - center justify - between mb - 4">;
-          <h2 className="text - lg font - medium">Active Projects</h2>;
-          <Link href="/mobile / projects">;
-            <Button variant="ghost" size="sm" className="h - 8 gap - 1">;
-              View all <ChevronRight className="h - 4 w - 4" />;
-            </Button>;
-          </Link>;
-        </div>;
-        <Card>;
-          <CardContent className="p - 4">;
-            <div className="space - y-4">;
-              <div className="flex justify - between items - start">;
-                <div>;
-                  <h3 className="font - medium">Website Redesign</h3>;
-                  <div className="text - sm text - muted - foreground">In Progress • Due in 12 days</div>;
-                </div>;
-                <Badge > 3 Milestones</Badge>;
-              </div>;
-              <div className="space - y-1">;
-                <div className="flex justify - between text - sm">;
-                  <span > Progress</span>;
-                  <span className="font - medium">60%</span>;
-                </div>;
-                <div className="h - 2 bg - primary / 20 rounded - full overflow - hidden">;
-                  <div className="h - full bg - primary rounded - full" style={{width: '60%'}}></div>;
-                </div>;
-              </div>;
-              <div className="flex justify - between items - center">;
-                <div className="flex -space - x-2">;
-                  <div className="w - 7 h - 7 rounded - full bg - primary / 20 flex items - center justify - center">;
-                    <UserCheck className="h - 4 w - 4" />;
-                  </div>;
-                  <div className="w - 7 h - 7 rounded - full bg - secondary / 20 border - 2 border - background flex items - center justify - center">;
-                    <UserCheck className="h - 4 w - 4" />;
-
                   </div>;
                 </div>;
                 <Button size="sm" variant="outline">View Details</Button>;
@@ -756,6 +680,7 @@ function ClientDashboard() {
           </CardContent>;
         </Card>;
       </section>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       <section>;
@@ -1031,3 +956,5 @@ ursor/fix-website-loading-errors-and-merge-6662
 ;
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

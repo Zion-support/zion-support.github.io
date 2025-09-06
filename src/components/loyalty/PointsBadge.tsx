@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import React, { useState } from 'react';
 import { Gift, RefreshCw } from 'lucide-react'
@@ -70,6 +71,14 @@ if (return) {
   }
 import React, { useState } from 'react',;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+    }
+  }
+    } catch (error) {
+      logErrorToProduction ('Failed to refresh points:', { data: error });
+    } finally {
+import React, { useState } from 'react',;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { Gift, RefreshCw } from 'lucide-react';
 import { usePoints } from '@/hooks/usePoints';
 import { useAuth } from '@/hooks/useAuth';
@@ -119,13 +128,20 @@ export function PointsBadge() {;
     } finally {;
       setIsRefreshing(false);
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     }
   }
 
+
+
+
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
     <TooltipProvider>;
 
@@ -137,11 +153,14 @@ export function PointsBadge() {;
               on_click={handle_click}
 
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <TooltipProvider>
       <div className="flex items-center gap-1">
         <Tooltip>
           <TooltipTrigger asChild>
             <Link
+<<<<<<< HEAD
               href={isAuthenticated ? '/points' : '#'}
               onClick={handleClick}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -190,6 +209,8 @@ export function PointsBadge() {;
               className='flex items-center gap-1 text-xs text-muted-foreground transition-transform active:scale-95'            >
               <Gift className='h-4 w-4' aria-hidden='true' />
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               href={isAuthenticated ? "/points" : "#"}
               onClick={handleClick}
               title={isAuthenticated ? "View points" : "Earn points by participating"}
@@ -233,6 +254,31 @@ export function PointsBadge() {;
                     You haven't earned any points yet.
                   </p>
                 )}
+<<<<<<< HEAD
+=======
+                <ul className='text-xs mt-1 space-y-0 && 0.5'>;
+                  <li>Purchases: {breakdown && breakdown.purchase}</li>;
+                  <li>Posts: {breakdown && breakdown.post}</li>;
+                  <li>Referrals: {breakdown && breakdown.referral}</li>;
+                </ul>;
+                <p className='text-xs mt-2 text-muted-foreground border-t pt-1'>;
+                  Click to view full rewards program;
+                </p>;
+              </>;
+            ) : (;
+              <>;
+                <p className='text-sm font-medium'>Zion Rewards Program</p>;
+                <p className='text-xs mt-1 text-muted-foreground'>;
+                   Sign up: 50 pts;
+                  <br />;
+                   First purchase: 100 pts;
+                  <br />;
+                   Community posts: 25 pts each;
+                  <br /> Refer friends: 200 pts each;
+                </p>;
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <ul className="text-xs mt-1 space-y-0.5">
                   <li>Purchases: {breakdown.purchase}</li>
                   <li>Posts: {breakdown.post}</li>
@@ -258,6 +304,7 @@ export function PointsBadge() {;
             )}
           </TooltipContent>
         </Tooltip>
+<<<<<<< HEAD
           <Tooltip>
             <TooltipTrigger asChild>
               <Button
@@ -355,10 +402,13 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 =======
         
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         {isAuthenticated && (
           <Tooltip>
             <TooltipTrigger asChild>
               <Button
+<<<<<<< HEAD
                 variant='ghost'
                 size='sm'
                 onClick={handleRefresh}
@@ -369,6 +419,8 @@ ursor/fix-website-loading-errors-and-merge-6662
                   className={`h-3 w-3 ${isRefreshing |loading ? 'animate-spin' : ''}`}
                   aria-hidden='true'
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 variant="ghost"
                 size="sm"
                 onClick={handleRefresh}
@@ -376,6 +428,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                 className="p-1 h-6 w-6 text-muted-foreground hover:text-foreground"
                 aria-label="Refresh points"
               >
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -385,6 +438,8 @@ ursor/fix-website-loading-errors-and-merge-6662
                   className={`h-3 w-3 ${isRefreshing || loading ? 'animate-spin' : ''}`}
                   aria-hidden="true"
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <RefreshCw
                   className={`h-3 w-3 ${isRefreshing || loading ? 'animate-spin' : ''}`}
                   aria-hidden="true"
@@ -396,6 +451,7 @@ ursor/fix-website-loading-errors-and-merge-6662
             </TooltipContent>
           </Tooltip>
         )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 ;
@@ -417,6 +473,10 @@ ursor/fix-website-loading-errors-and-merge-6662
 }
 }
 ;
+=======
+;
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       </div>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       {!isAuthenticated && (;
@@ -425,6 +485,7 @@ ursor/fix-website-loading-errors-and-merge-6662
     </TooltipProvider>;
   );
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 ;
@@ -449,3 +510,5 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

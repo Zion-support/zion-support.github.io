@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 import React from 'react';
@@ -73,6 +74,8 @@ export default function MicroSAAS() {
 =======
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     >
       <div className="min-h-screen bg-gray-50 py-20">
         <div className="container mx-auto px-4">
@@ -89,6 +92,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
       </div>
     </Layout>
 <<<<<<< HEAD
+<<<<<<< HEAD
   );
 
 
@@ -99,3 +103,5 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 }
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

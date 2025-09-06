@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 import React from 'react';
@@ -18,10 +19,13 @@ interface Service {;
     currency?: string;
 
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from 'react';
     monthly?: number;
     yearly?: number;
     currency?: string;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     setupTime?: string;
   };
@@ -33,10 +37,13 @@ import React from 'react';
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   period?: string;
   pricing?: any;
   features: string[],;
   popular?: boolean;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -204,27 +211,15 @@ interface Service {
   icon: string
 
   marketPrice?: string;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   competitors?: string[];
   targetMarket?: string;
   useCases?: string[];
-  integration?: string[],
-  benefits?: string[]
-}
-interface ServiceCardProps {
-
-interface ServiceCardProps {
-  service: Service,
-  variant?: 'ai' | 'quantum' | 'space' | 'cybersecurity' | 'enterprise' | 'automation' | 'it' | 'emerging' | 'premium' | 'default'
-}
-
-  service: Service
-  variant?: 'ai' | 'quantum' | 'space' | 'cybersecurity' | 'enterprise' | 'automation' | 'it' | 'emerging' | 'premium' | 'default'
-}
-const UltraFuturisticServiceCard2026: React.FC<ServiceCardProps> = ({ service, variant = 'default' }) => {
-  const getVariantStyles = () => {
     switch (variant) {
-      case 'ai':
+      case 'ai':;
         return {
+<<<<<<< HEAD
           gradient: 'from-purple-600 via-pink-600 to-purple-700'
           borderColor: 'border-purple-400/30'
           textColor: 'text-purple-400'
@@ -303,10 +298,13 @@ const UltraFuturisticServiceCard2026: React.FC<ServiceCardProps> = ({ service, v
           iconBg: 'bg-gray-500/20'
           iconBorder: 'border-gray-400/30'
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         }
     }
   }
   const styles = getVariantStyles();
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -324,6 +322,8 @@ const UltraFuturisticServiceCard2026: React.FC<ServiceCardProps> = ({ service, v
 =======
   const CategoryIcon = getCategoryIcon(service && service.category);
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <motion&& motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -333,6 +333,7 @@ const UltraFuturisticServiceCard2026: React.FC<ServiceCardProps> = ({ service, v
       className="group relative">;
       <div className="relative p-8 rounded-2xl bg-gradient-to-br from-gray-900/50 to-gray-800/50 border border-white/10 hover:border-white/20 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl backdrop-blur-sm overflow-hidden">;
         {/* Enhanced Background Glow */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
         <div className={`absolute inset-0 bg-gradient-to-br ${styles && styles.gradient} opacity-5 group-hover:opacity-10 transition-opacity duration-300`}></div>;
@@ -350,6 +351,8 @@ const UltraFuturisticServiceCard2026: React.FC<ServiceCardProps> = ({ service, v
 
         <div className={`absolute inset-0 bg-gradient-to-br ${styles && styles.gradient} opacity-5 group-hover:opacity-10 transition-opacity duration-300`}></div>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         {/* Popular Badge */}
         {service && service.popular && (;
           <motion&& motion.div
@@ -362,9 +365,12 @@ const UltraFuturisticServiceCard2026: React.FC<ServiceCardProps> = ({ service, v
           </motion && motion.div>;
         )}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           gradient: 'from - purple - 600 via - pink - 600 to - purple - 700',
           border_color: 'border - purple - 400 / 30',
           text_color: 'text - purple - 400',
@@ -483,6 +489,7 @@ const UltraFuturisticServiceCard2026: React.FC<ServiceCardProps> = ({ service, v
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
             transition={{ delay: 0.2, type: "spring", stiffness: 200 }}
+<<<<<<< HEAD
             className="absolute -top - 3 left - 6 px - 4 py - 1 bg - gradient - to - r from - yellow - 500 to - orange - 500 text - black text - sm font - bold rounded - full shadow - lg";
           >;
             <Star className="w - 4 h - 4 inline mr - 1" />;
@@ -500,10 +507,13 @@ const UltraFuturisticServiceCard2026: React.FC<ServiceCardProps> = ({ service, v
         
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         {/* Service Header */}
         <div className="text - center mb - 8 relative z - 10">;
           <div className={`w - 24 h - 24 mx - auto mb - 6 rounded - full ${styles.icon_bg} flex items - center justify - center border ${styles.icon_border} text - 4xl backdrop - blur - sm`}>;
             {service.icon}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -539,6 +549,8 @@ const UltraFuturisticServiceCard2026: React.FC<ServiceCardProps> = ({ service, v
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         {/* Features List */}
         <div className="space-y-3 mb-8 relative z-10">;
           <h4 className="text-sm font-semibold text-gray-300 mb-4 flex items-center">;
@@ -556,11 +568,6 @@ const UltraFuturisticServiceCard2026: React.FC<ServiceCardProps> = ({ service, v
               <span>{feature}</span>;
             </motion && motion.div>;
           ))}
-
-
-        
-
-
         {/* Enhanced Market Information */}
         {service.marketPrice && (
           <div className="border-t border-white/10 pt-4 mb-6 space-y-3 relative z-10">
@@ -572,6 +579,7 @@ const UltraFuturisticServiceCard2026: React.FC<ServiceCardProps> = ({ service, v
               <div className="text-xs text-gray-500">
                 Competes with: {service.competitors.slice(0, 2).join()}
               </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -591,9 +599,12 @@ const UltraFuturisticServiceCard2026: React.FC<ServiceCardProps> = ({ service, v
                 Competes with: {service && service.competitors.slice(0, 2).join()}
               </div>;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             )}
-          </div>;
+          </div>
         )}
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -642,6 +653,8 @@ const UltraFuturisticServiceCard2026: React.FC<ServiceCardProps> = ({ service, v
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         {/* Benefits Section */}
         {service && service.benefits && (;
           <div className="border-t border-white/10 pt-4 mb-6 relative z-10">;
@@ -660,6 +673,7 @@ const UltraFuturisticServiceCard2026: React.FC<ServiceCardProps> = ({ service, v
           </div>;
         )}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -667,6 +681,8 @@ const UltraFuturisticServiceCard2026: React.FC<ServiceCardProps> = ({ service, v
         
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         {/* CTA Button */}
         <div className="relative z-10">
           <motion.button
@@ -677,11 +693,6 @@ const UltraFuturisticServiceCard2026: React.FC<ServiceCardProps> = ({ service, v
             Get Started
           </motion.button>
         </div>
-
-
-        
-
-
         {/* Enhanced Hover Effects */}
         <div className="absolute inset-0 bg-gradient-to-br from-white/0 via-white/0 to-white/0 group-hover: from-white/5 group-hover:via-white/2 group-hover:to-white/5 transition-all duration-500 rounded-2xl"></div>
       </div>
@@ -696,12 +707,15 @@ export default UltraFuturisticServiceCard2026;
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   );
 };
 UltraFuturisticServiceCard2026.displayName = 'UltraFuturisticServiceCard2026';
 export default UltraFuturisticServiceCard2026;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         {/* CTA Button */}
         <div className="relative z-10">;
           <motion&& motion.button
@@ -719,6 +733,9 @@ export default UltraFuturisticServiceCard2026;
   ),;
 });
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 UltraFuturisticServiceCard2026 && UltraFuturisticServiceCard2026.displayName = 'UltraFuturisticServiceCard2026';
 
@@ -726,10 +743,8 @@ UltraFuturisticServiceCard2026 && UltraFuturisticServiceCard2026.displayName = '
 
 
 export default UltraFuturisticServiceCard2026;
-
-=======
-
 export default UltraFuturisticServiceCard2026;
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
@@ -739,6 +754,11 @@ export default UltraFuturisticServiceCard2026;
 export default UltraFuturisticServiceCard2026;
 UltraFuturisticServiceCard2026 && UltraFuturisticServiceCard2026.displayName = 'UltraFuturisticServiceCard2026';
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+UltraFuturisticServiceCard2026.displayName = 'UltraFuturisticServiceCard2026';
+export default UltraFuturisticServiceCard2026;
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           </div>;
           <h3 className="text - 2xl font - bold text - white mb - 3 group - hover:text - gray - 100 transition - colors">;
             {service.name}
@@ -834,6 +854,7 @@ UltraFuturisticServiceCard2026.display_name = 'UltraFuturisticServiceCard2026';
 ;
 export default UltraFuturisticServiceCard2026;
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
@@ -1080,3 +1101,5 @@ export default UltraFuturisticServiceCard2026;
 export default UltraFuturisticServiceCard2026;
 export default UltraFuturisticServiceCard2026;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

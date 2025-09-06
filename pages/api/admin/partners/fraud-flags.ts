@@ -1,6 +1,7 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { getServerSupabase } from '../../../../utils/supabase/server';
@@ -23,12 +24,15 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         ],
       });
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     }
     const supabase = getServerSupabase()
     const { data, error } = await supabase
       .from('referral_events')
       .select('ip_address, created_at')
       .eq('partner_code', code)
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -40,11 +44,14 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       const key = (row as any).ip_address |'unknown'
       counts.set(key, (counts.get(key) |0) + 1)
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     }
     const flags: any[] = []
     counts.forEach((count, ip) => {
       if (count > 30 && ip !== 'unknown') {
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
@@ -76,33 +83,18 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 ;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     return res.status(500).json({ error: e?.message })
   };
 };
 import type { NextApiRequest, NextApiResponse } from 'next';
 
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  try {
-    const isAdmin = req.headers['x-admin'] === 'true';
-    if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
 
-    if (req.method === 'GET') {
-      const code = (req.query.code as string)?.toLowerCase();
-      if (!code) return res.status(400).json({ error: 'Code required' });
 
-      // Mock fraud flags data
-      const flags = [
-        { type: 'suspicious_ip', severity: 'low', note: 'Multiple visits from same IP' }
-      ];
-
-      res.json({ flags });
-    } else {
-      res.setHeader('Allow', 'GET');
-      res.status(405).end('Method Not Allowed');
-    }
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

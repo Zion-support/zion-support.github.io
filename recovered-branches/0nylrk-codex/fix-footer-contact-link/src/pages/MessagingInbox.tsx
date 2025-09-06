@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -23,22 +24,19 @@ export default function MessagingInbox() {
     markAsRead;
     fetchConversations;
     isLoading
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   } = useMessaging();
 
   const isMobile = useIsMobile();
   const navigate = useNavigate();
   const [activeCall, setActiveCall] = useState<string | null>(null);
 import {MessageSquare, Video} from 'lucide-react';
-import {useMessaging} from '@/context/MessagingContext';
-import {ProtectedRoute} from '@/components/ProtectedRoute';
-import {ConversationsList, ConversationDetailView} from '@/components/messaging';
-import {useIsMobile} from '@/hooks/use-mobile';
+import {use_messaging} from '@/context / MessagingContext';
+import {ProtectedRoute} from '@/components / ProtectedRoute';
+import {ConversationsList, ConversationDetailView} from '@/components / messaging';
+import {useIsMobile} from '@/hooks / use - mobile';
 import {toast} from 'sonner';
-import {Button} from '@/components/ui/button';
-import {useNavigate} from 'react-router-dom';
-export default function MessagingInbox() {
-  const { ;
-    conversations;
 import React, { useEffect, useState } from 'react',
 import { MessageSquare, Video } from 'lucide-react',
 import { useMessaging } from '@/context/MessagingContext',
@@ -61,10 +59,12 @@ export default function MessagingInbox() {
   const navigate = useNavigate(),
   const [activeCall, setActiveCall] = useState<string | null>(null),
   
+
   useEffect(() => {
     // Fetch conversations when component mounts
     const loadData = async () => {
       try {
+<<<<<<< HEAD
         await fetchConversations()
       } catch (error) {
         console.error("Failed to load conversations:", error),
@@ -140,13 +140,15 @@ function MessagingInbox() {
     }
 
 =======
+=======
+        await fetch_conversations ();
+      } catch (error) {
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const startVideoCall = () => {
     if (!activeConversation) {
       toast.error("Please select a conversation first"),
       return
     }
-    const roomId = `msg-${activeConversation.id}`;
-    setActiveCall(roomId);
     // Show toast notification
     toast.success("Starting video call", {
       description: "Initializing video call connection..."
@@ -154,6 +156,7 @@ function MessagingInbox() {
     // Navigate to video call page
     navigate(`/call/${roomId}`)
   }
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
     
@@ -174,6 +177,9 @@ function MessagingInbox() {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <ProtectedRoute>
       <div className="min-h-screen bg-zion-blue">
@@ -185,11 +191,14 @@ function MessagingInbox() {
             </h1>
             {activeConversation && (
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <Button
                 onClick={startVideoCall}
                 className="flex items-center gap-2 bg-zion-purple hover:bg-zion-purple-light"
@@ -202,6 +211,7 @@ function MessagingInbox() {
           <div className="bg-zion-blue-light/10 rounded-lg shadow-lg border border-zion-purple/20 overflow-hidden">
             <div className={`flex flex-col md:flex-row h-[${isMobile ? '85vh' : '75vh'}]`}>
               {/* Conversations List */}
+<<<<<<< HEAD
               {isLoading ? (
                 <div className="flex-1 flex items-center justify-center p-8">
                   <div className="animate-pulse">Loading conversations...</div>
@@ -307,6 +317,8 @@ export default function MessagingInbox() {;
 
             {activeConversation && (;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <Button
                 onClick={startVideoCall}
                 className="flex items-center gap-2 bg-zion-purple hover:bg-zion-purple-light">;
@@ -314,6 +326,7 @@ export default function MessagingInbox() {;
                 Start Call;
               </Button>;
             )}
+<<<<<<< HEAD
 
           </div>;
 
@@ -334,6 +347,8 @@ export default function MessagingInbox() {;
           <div className="bg-zion-blue-light/10 rounded-lg shadow-lg border border-zion-purple/20 overflow-hidden">;
             <div className={`flex flex-col md:flex-row h-[${isMobile ? '85vh' : '75vh'}]`}>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               {/* Conversations List */}
               {isLoading ? (;
                 <div className="flex-1 flex items-center justify-center p-8">;
@@ -341,9 +356,12 @@ export default function MessagingInbox() {;
                 </div>;
               ) : (;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     }
 ;
     load_data ();
@@ -396,6 +414,7 @@ if ( {) {
                 </div>) : (
                 <ConversationsList;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
                 <ConversationsList;
@@ -406,10 +425,13 @@ if ( {) {
                 <ConversationsList;
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   conversations={conversations}
                   active_conversation={active_conversation}
                   setActiveConversation={setActiveConversation}
                   markAsRead={markAsRead}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -507,11 +529,14 @@ export default function MessagingInbox() {;
               )}
               ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               {/* Conversation Detail */}
               <ConversationDetailView />;
             </div>;
           </div>;
         </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -608,3 +633,5 @@ return (<ProtectedRoute> <div className="min-h-screen bg-zion-blue" > <div class
 }
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -1,5 +1,6 @@
 
 
+<<<<<<< HEAD
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -28,10 +29,13 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 } from 'lucide-react';
 import UltraQuantumHolographicBackground from '../components/ui/UltraQuantumHolographicBackground';
 
 
+<<<<<<< HEAD
 =======
 import Head from 'next / head';
 import { motion } from 'framer-motion';
@@ -277,6 +281,8 @@ import {
   Zap as ZapIcon2;
 import {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   Star,
   Zap,
   Shield,
@@ -392,6 +398,7 @@ import {
   Share,
   Users as UsersIcon2,
 <<<<<<< HEAD
+<<<<<<< HEAD
   Target as TargetIcon,
   Zap as ZapIcon2,
 } from 'lucide-react';
@@ -450,6 +457,33 @@ export default function Revolutionary2025Pricing() {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  Target as TargetIcon,
+  Zap as ZapIcon2,
+} from 'lucide-react';
+import UltraQuantumHolographicBackground from '../components / ui / UltraQuantumHolographicBackground';
+import UltraAdvancedNavigation from '../components / layout / UltraAdvancedNavigation';
+import {revolutionaryAI2025Services} from '../data / revolutionary - 2025 - ai - services';
+import {revolutionaryITInfrastructure2025Services} from '../data / revolutionary - 2025 - it - infrastructure';
+import {revolutionary2025MicroSaasServices} from '../data / revolutionary - 2025 - micro - saas';
+export default /**
+ * Revolutionary2025Pricing - Function description
+ */
+function Revolutionary2025Pricing() {
+  const [billing_cycle, setBillingCycle] = useState<'monthly' | 'yearly'>(
+    'monthly');  const [selected_category, setSelectedCategory] = useState < string>('all');
+;
+  const contact_info = {
+    mobile: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',
+    website: 'https://ziontechgroup.com',  }
+;
+  // Combine all revolutionary services;
+  const allRevolutionaryServices = [;
+    ...revolutionaryAI2025Services,
+    ...revolutionaryITInfrastructure2025Services,
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     {
       id: 'all'
       name: 'All Services'
@@ -533,22 +567,32 @@ export default function Revolutionary2025Pricing() {;
               service && service.category.includes('Network') ||;
               service && service.category.includes('Computing');
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import { Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Code, BookOpen, Activity, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, ChevronRight, Crown, Infinity, Check, X, AlertTriangle, Info, Zap as ZapIcon, Shield as ShieldIcon, Users as UsersIcon, Globe as GlobeIcon, Cpu as CpuIcon, Database as DatabaseIcon, Cloud as CloudIcon, Smartphone as SmartphoneIcon, Palette as PaletteIcon, Search as SearchIcon, MessageSquare as MessageSquareIcon, FileText as FileTextIcon, Calendar as CalendarIcon, CreditCard as CreditCardIcon, BarChart3 as BarChart3Icon, Settings as SettingsIcon, Code as CodeIcon, BookOpen as BookIcon, Activity as ActivityIcon, Database as DatabaseIcon2, Play as PlayIcon, Mail as MailIcon, Phone as PhoneIcon, MapPin as MapPinIcon, Filter as FilterIcon, Grid as GridIcon, List as ListIcon, ChevronDown as ChevronDownIcon, ChevronUp as ChevronUpIcon, Sparkles as SparklesIcon, FlaskConical as FlaskConicalIcon, Dna as DnaIcon, Car as CarIcon, Leaf as LeafIcon, Factory as FactoryIcon, Truck as TruckIcon, Microscope as MicroscopeIcon, GraduationCap as GraduationCapIcon, ShieldCheck as ShieldCheckIcon, Brain as BrainIcon, Atom as AtomIcon, Globe2 as Globe2Icon, Bot as BotIcon, ChevronRight as ChevronRightIcon, Eye, Heart, Share2, Download, Bookmark, ThumbsUp, MessageCircle, Share, Users as UsersIcon2, Target as TargetIcon, Zap as ZapIcon2 } from 'lucide-react';
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
             );
           if (selectedCategory === 'saas');
             return (
 <<<<<<< HEAD
+<<<<<<< HEAD
 
-    return basePrice;  }
 =======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+    return basePrice;  }
+    return basePrice;  };
+
 import { Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Code, BookOpen, Activity, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, ChevronRight, Crown, Infinity, Check, X, AlertTriangle, Info, Zap as ZapIcon, Shield as ShieldIcon, Users as UsersIcon, Globe as GlobeIcon, Cpu as CpuIcon, Database as DatabaseIcon, Cloud as CloudIcon, Smartphone as SmartphoneIcon, Palette as PaletteIcon, Search as SearchIcon, MessageSquare as MessageSquareIcon, FileText as FileTextIcon, Calendar as CalendarIcon, CreditCard as CreditCardIcon, BarChart3 as BarChart3Icon, Settings as SettingsIcon, Code as CodeIcon, BookOpen as BookIcon, Activity as ActivityIcon, Database as DatabaseIcon2, Play as PlayIcon, Mail as MailIcon, Phone as PhoneIcon, MapPin as MapPinIcon, Filter as FilterIcon, Grid as GridIcon, List as ListIcon, ChevronDown as ChevronDownIcon, ChevronUp as ChevronUpIcon, Sparkles as SparklesIcon, FlaskConical as FlaskConicalIcon, Dna as DnaIcon, Car as CarIcon, Leaf as LeafIcon, Factory as FactoryIcon, Truck as TruckIcon, Microscope as MicroscopeIcon, GraduationCap as GraduationCapIcon, ShieldCheck as ShieldCheckIcon, Brain as BrainIcon, Atom as AtomIcon, Globe2 as Globe2Icon, Bot as BotIcon, ChevronRight as ChevronRightIcon, Eye, Heart, Share2, Download, Bookmark, ThumbsUp, MessageCircle, Share, Users as UsersIcon2, Target as TargetIcon, Zap as ZapIcon2 } from 'lucide-react';
 
+<<<<<<< HEAD
 =======
 import { Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Code, BookOpen, Activity, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, ChevronRight, Crown, Infinity, Check, X, AlertTriangle, Info, Zap as ZapIcon, Shield as ShieldIcon, Users as UsersIcon, Globe as GlobeIcon, Cpu as CpuIcon, Database as DatabaseIcon, Cloud as CloudIcon, Smartphone as SmartphoneIcon, Palette as PaletteIcon, Search as SearchIcon, MessageSquare as MessageSquareIcon, FileText as FileTextIcon, Calendar as CalendarIcon, CreditCard as CreditCardIcon, BarChart3 as BarChart3Icon, Settings as SettingsIcon, Code as CodeIcon, BookOpen as BookIcon, Activity as ActivityIcon, Database as DatabaseIcon2, Play as PlayIcon, Mail as MailIcon, Phone as PhoneIcon, MapPin as MapPinIcon, Filter as FilterIcon, Grid as GridIcon, List as ListIcon, ChevronDown as ChevronDownIcon, ChevronUp as ChevronUpIcon, Sparkles as SparklesIcon, FlaskConical as FlaskConicalIcon, Dna as DnaIcon, Car as CarIcon, Leaf as LeafIcon, Factory as FactoryIcon, Truck as TruckIcon, Microscope as MicroscopeIcon, GraduationCap as GraduationCapIcon, ShieldCheck as ShieldCheckIcon, Brain as BrainIcon, Atom as AtomIcon, Globe2 as Globe2Icon, Bot as BotIcon, ChevronRight as ChevronRightIcon, Eye, Heart, Share2, Download, Bookmark, ThumbsUp, MessageCircle, Share, Users as UsersIcon2, Target as TargetIcon, Zap as ZapIcon2 } from 'lucide-react';
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import UltraQuantumHolographicBackground from '../components/ui/UltraQuantumHolographicBackground';
 import UltraAdvancedNavigation from '../components/layout/UltraAdvancedNavigation';
 import { revolutionaryAI2025Services } from '../data/revolutionary-2025-ai-services';
@@ -589,6 +633,7 @@ export default function Revolutionary2025Pricing() {
         if (selectedCategory === 'saas') return service.category.includes('AI') || service.category.includes('Virtual') || service.category.includes('Creative');
         return true
       });
+<<<<<<< HEAD
 
   // Calculate pricing with billing cycle
   const getPrice = (service: any) => {
@@ -673,6 +718,8 @@ export default function Revolutionary2025Pricing(req, res) {
     return basePrice
   },
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   // Pricing tiers for comparison
   const pricingTiers = [
     {
@@ -682,6 +729,7 @@ export default function Revolutionary2025Pricing(req, res) {
       period: billingCycle === 'monthly' ? '/month' : '/month'
       savings: billingCycle === 'yearly' ? 'Save 20%' : ''
       features: [
+<<<<<<< HEAD
 <<<<<<< HEAD
 
               service && service.category.includes('AI') ||;
@@ -792,6 +840,8 @@ export default function Revolutionary2025Pricing(req, res) {
             Solutions;
           </title>;
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         'Access to 25+ Core Services'
         'Basic AI Integration'
         'Standard Support (24/7)'
@@ -865,13 +915,12 @@ export default function Revolutionary2025Pricing(req, res) {
     globalReach: '150+ countries',  }
 
         'Access to 25+ Core ServicesBasic AI IntegrationStandard Support (24/7)30-Day Free TrialBasic Analytics DashboardEmail Support99.5% Uptime GuaranteeStandard Security Features'
-      ],
+      ];
       icon: <Sparkles className="w-8 h-8" />,
       variant: 'quantum' as const,
       popular: false,
       cta: 'Start Free Trial',
       ctaVariant: 'secondary' as const
-    },
     {
       name: 'Professional',
       description: 'Ideal for growing businesses and teams',
@@ -879,6 +928,7 @@ export default function Revolutionary2025Pricing(req, res) {
       period: billingCycle === 'monthly' ? '/month' : '/month',
       savings: billingCycle === 'yearly' ? 'Save 20%' : '',
       features: [
+<<<<<<< HEAD
         'Access to 50+ ServicesAdvanced AI IntegrationPriority Support (24/7)60-Day Free TrialAdvanced Analytics DashboardPhone & Email Support99.9% Uptime GuaranteeAdvanced Security Features',
         'Custom IntegrationsPerformance Monitoring'
       ],
@@ -985,6 +1035,8 @@ export default function Revolutionary2025Pricing(req, res) {
 =======
 'Access to 50+ ServicesAdvanced AI IntegrationPriority Support (24/7)60-Day Free TrialAdvanced Analytics DashboardPhone & Email Support99.9% Uptime GuaranteeAdvanced Security Features';
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         'Custom IntegrationsPerformance Monitoring'
       ];
       icon: <Rocket className="w-8 h-8" />,
@@ -993,10 +1045,14 @@ export default function Revolutionary2025Pricing(req, res) {
       cta: 'Start Free Trial',
       ctaVariant: 'primary' as const
 <<<<<<< HEAD
+<<<<<<< HEAD
     };
 =======
 };
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+    };
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     {
       name: 'Enterprise',
       description: 'For large organizations and enterprises',
@@ -1133,14 +1189,18 @@ if ( {) {
   // Market analysis;
   const market_analysis = {
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     totalMarketSize: '$150B+',
     growth_rate: '250% annually',
     customer_satisfaction: '98%',
     averageROI: '500%',
     timeToValue: '< 30 days',
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   },
@@ -1154,6 +1214,8 @@ if ( {) {
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
           <title>Revolutionary 2025 Pricing - Zion Tech Group | Competitive AI & IT Solutions</title>
           <meta name="description" content="Explore competitive pricing for Zion Tech Group's revolutionary 2025 services. AI consciousness simulation, quantum computing, zero trust security, and innovative micro SaaS solutions. Contact: +1 302 464 0950" />
@@ -1170,6 +1232,7 @@ if ( {) {
         <UltraAdvancedNavigation />
 
         {/* Hero Section */}
+<<<<<<< HEAD
 
         <section className="relative py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
@@ -1300,6 +1363,8 @@ if ( {) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             >
               <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6">
                 Revolutionary 2025 Pricing
@@ -1308,11 +1373,15 @@ if ( {) {
                 Experience the future of technology at competitive prices. Our revolutionary services
                 deliver 10x better performance at 50% lower costs than traditional solutions.
               </p>
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               {/* Billing Toggle */}
               <div className='flex items-center justify-center gap-4 mb-12'>;
                 <span className='text-gray-400'>Monthly</span>;
                 <button
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -1321,17 +1390,25 @@ if ( {) {
                   className={`relative inline-flex h-8 w-16 items-center rounded-full transition-colors ${
                     billingCycle === 'yearly' ? 'bg-blue-600' : 'bg-gray-600'
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   }`}
                 >;
                   <span
                     className={`inline-block h-6 w-6 transform rounded-full bg-white transition-transform ${
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
                   animate={{ opacity: 1, scale: 1 }}
 
                       billingCycle === 'yearly' ? 'translate-x-8' : 'translate-x-1'
                     }`}
+<<<<<<< HEAD
 =======
 
 =======
@@ -1372,6 +1449,8 @@ if ( {) {
                       billingCycle === 'yearly' ? 'translate-x-8' : 'translate-x-1'
                     }`}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               {/* Billing Toggle */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1402,15 +1481,19 @@ if ( {) {
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   />
                 </button>
                 <span className="text-gray-400">Yearly (Save 20%)</span>
               </div>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -1423,12 +1506,16 @@ if ( {) {
               {/* Market Analysis */}
               <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 mb-12'>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+              <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 mb-12'>
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               {/* Market Analysis */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
               <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 mb-12">
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -1449,6 +1536,11 @@ if ( {) {
   }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+                <motion.div
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   transition={{ duration: 0.6, delay: 0.1 }} className="bg-gradient-to-br from-blue-600/20 to-purple-600/20 backdrop-blur-sm rounded-2xl p-4 border border-blue-500/30">
                   <div className="text-2xl font-bold text-blue-400">{marketAnalysis.totalMarketSize}</div>
                   <div className="text-xs text-gray-400">Market Size</div>
@@ -1456,6 +1548,7 @@ if ( {) {
                 
                 <motion.div
 <<<<<<< HEAD
+<<<<<<< HEAD
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
 =======
@@ -1470,6 +1563,10 @@ if ( {) {
   }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  animate={{ opacity: 1, scale: 1 }}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   transition={{ duration: 0.6, delay: 0.2 }} className="bg-gradient-to-br from-green-600/20 to-emerald-600/20 backdrop-blur-sm rounded-2xl p-4 border border-green-500/30">
                   <div className="text-2xl font-bold text-green-400">{marketAnalysis.growthRate}</div>
                   <div className="text-xs text-gray-400">Growth Rate</div>
@@ -1477,6 +1574,7 @@ if ( {) {
                 
                 <motion.div
 <<<<<<< HEAD
+<<<<<<< HEAD
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
 =======
@@ -1491,6 +1589,10 @@ if ( {) {
   }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  animate={{ opacity: 1, scale: 1 }}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   transition={{ duration: 0.6, delay: 0.3 }} className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-2xl p-4 border border-purple-500/30">
                   <div className="text-2xl font-bold text-purple-400">{marketAnalysis.customerSatisfaction}</div>
                   <div className="text-xs text-gray-400">Satisfaction</div>
@@ -1498,6 +1600,7 @@ if ( {) {
                 
                 <motion.div
 <<<<<<< HEAD
+<<<<<<< HEAD
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
 =======
@@ -1512,6 +1615,10 @@ if ( {) {
   }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  animate={{ opacity: 1, scale: 1 }}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   transition={{ duration: 0.6, delay: 0.4 }} className="bg-gradient-to-br from-orange-600/20 to-red-600/20 backdrop-blur-sm rounded-2xl p-4 border border-orange-500/30">
                   <div className="text-2xl font-bold text-orange-400">{marketAnalysis.averageROI}</div>
                   <div className="text-xs text-gray-400">Average ROI</div>
@@ -1519,6 +1626,7 @@ if ( {) {
                 
                 <motion.div
 <<<<<<< HEAD
+<<<<<<< HEAD
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
 =======
@@ -1533,6 +1641,10 @@ if ( {) {
   }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  animate={{ opacity: 1, scale: 1 }}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   transition={{ duration: 0.6, delay: 0.5 }} className="bg-gradient-to-br from-cyan-600/20 to-blue-600/20 backdrop-blur-sm rounded-2xl p-4 border border-cyan-500/30">
                   <div className="text-2xl font-bold text-cyan-400">{marketAnalysis.timeToValue}</div>
                   <div className="text-xs text-gray-400">Time to Value</div>
@@ -1540,6 +1652,7 @@ if ( {) {
                 
                 <motion.div
 <<<<<<< HEAD
+<<<<<<< HEAD
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
 =======
@@ -1554,18 +1667,26 @@ if ( {) {
   }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  animate={{ opacity: 1, scale: 1 }}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   transition={{ duration: 0.6, delay: 0.6 }} className="bg-gradient-to-br from-pink-600/20 to-rose-600/20 backdrop-blur-sm rounded-2xl p-4 border border-pink-500/30">
                   <div className="text-2xl font-bold text-pink-400">{marketAnalysis.globalReach}</div>
                   <div className="text-xs text-gray-400">Global Reach</div>
                 </motion.div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               </div>
             </motion.div>
           </div>
         </section>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
                   transition={{ duration: 0 && 0.6, delay: 0 && 0.1 }}
@@ -1637,6 +1758,8 @@ if ( {) {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         {/* Pricing Tiers */}
         <section className='py-20 px-4 sm:px-6 lg:px-8'>;
           <div className='max-w-7xl mx-auto'>            <motion&& motion.div
@@ -1644,6 +1767,7 @@ if ( {) {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
               viewport={{ once: true }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -1658,6 +1782,8 @@ if ( {) {
 viewport={{ once: true }} className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 Choose Your Transformation Plan
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -1665,6 +1791,7 @@ viewport={{ once: true }} className="text-center mb-16">
                 our revolutionary AI and quantum computing services.
               </p>
             </motion.div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
@@ -1860,6 +1987,8 @@ viewport={{ once: true }} className="text-center mb-16">
                 our revolutionary AI and quantum computing services.
               </p>
             </motion.div>
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <div className='grid grid-cols-1 lg:grid-cols-3 gap-8'>              {pricingTiers.map((tier, index) => (
                 <motion.div
                   key={tier.name}
@@ -1873,6 +2002,7 @@ viewport={{ once: true }} className="text-center mb-16">
                   } bg-gradient-to-br from-gray-900/50 to-gray-800/50 backdrop-blur-sm rounded-3xl p-8`}
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
               {pricingTiers.map((tier, index) => (
+<<<<<<< HEAD
                 <motion.div
                   key={tier.name  } catch (error) {
     console.error("Error:", error);
@@ -1909,6 +2039,22 @@ viewport={{ once: true }} className="text-center mb-16">
   }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+              className='text-center mb-16'>;
+              <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>;
+                Choose Your Transformation Plan;
+              </h2>;
+              <p className='text-xl text-gray-300 max-w-3xl mx-auto'>;
+                Start with our starter plan and scale up as you grow. All plans;
+                include our revolutionary AI and quantum computing services.;
+              </p>;
+            </motion && motion.div>;
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0 && 0.6, delay: index * 0 && 0.2 }}
+                  viewport={{ once: true }}
+                  className={`relative ${
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 >
                   {tier.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
@@ -1916,6 +2062,7 @@ viewport={{ once: true }} className="text-center mb-16">
                         Most Popular
                       </div>
                     </div>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -1942,11 +2089,14 @@ viewport={{ once: true }} className="text-center mb-16">
                   </div>
                   <ul className='space-y-4 mb-8'>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1965,6 +2115,8 @@ viewport={{ once: true }} className="text-center mb-16">
 =======
 
                     <h3 className='text-2xl font-bold text-white mb-2'>
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       {tier.name}
                     </h3>
                     <p className='text-gray-400 mb-6'>{tier.description}</p>
@@ -1974,6 +2126,7 @@ viewport={{ once: true }} className="text-center mb-16">
                       </span>
                       <span className='text-gray-400'>{tier.period}</span>
                     </div>
+<<<<<<< HEAD
                     {tier.savings && (
                       <div className='text-green-400 text-sm font-semibold mb-6'>                        {tier.savings}
                       </div>
@@ -2002,11 +2155,16 @@ viewport={{ once: true }} className="text-center mb-16">
                   </div>
                   <ul className="space-y-4 mb-8">
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     {tier.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-start gap-3">
                         <Check className="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0" />
                         <span className="text-gray-300">{feature}</span>
                       </li>
+<<<<<<< HEAD
 <<<<<<< HEAD
                     ))}
                   </ul>
@@ -2048,6 +2206,9 @@ viewport={{ once: true }} className="text-center mb-16">
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+                    ))}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   </ul>
                   <button className='w-full px-6 py-3 bg-gradient-to-r from-cyan-600 to-blue-700 hover:from-cyan-700 hover:to-blue-800 text-white font-semibold rounded-lg transition-all duration-200'>                    {tier.cta}
                   </button>
@@ -2056,7 +2217,10 @@ viewport={{ once: true }} className="text-center mb-16">
             </div>
           </div>
         </section>
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   <ul className='space-y-4 mb-8'>;
                     {tier && tier.features.map((feature, featureIndex) => (;
                       <li key={featureIndex} className='flex items-start gap-3'>;
@@ -2078,7 +2242,10 @@ viewport={{ once: true }} className="text-center mb-16">
           </div>;
         </section>;
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         {/* Service Pricing Grid */}
         <section className='py-20 px-4 sm:px-6 lg:px-8'>;
           <div className='max-w-7xl mx-auto'>            <motion&& motion.div
@@ -2087,10 +2254,13 @@ viewport={{ once: true }} className="text-center mb-16">
               transition={{ duration: 0 && 0.8 }}
               viewport={{ once: true }}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         {/* Service Pricing Grid */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -2098,14 +2268,18 @@ viewport={{ once: true }} className="text-center mb-16">
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
+<<<<<<< HEAD
               viewport={{ once: true }} className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
                 Individual Service Pricing
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Choose individual services or bundle them for maximum savings. 
                 All services include free trials and comprehensive support.
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
               </p>
@@ -2128,15 +2302,22 @@ className='text-center mb-16'>;
 <<<<<<< HEAD
 
 
+=======
+              </p>
+            </motion.div>
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             {/* Category Filter */}
 
             </div>;
 
 
+<<<<<<< HEAD
 =======
             {/* Category Filter */}
             </div>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             {/* Services Grid */}
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>;
               {filteredServices && filteredServices.map(service => (                <motion&& motion.div
@@ -2147,6 +2328,7 @@ className='text-center mb-16'>;
                   viewport={{ once: true }}
                   className='group relative bg-gradient-to-br from-gray-900/50 to-gray-800/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50 hover:border-blue-500/50 transition-all duration-300 hover:scale-105'>;
                   {/* Service Header */}
+<<<<<<< HEAD
                   <div className='flex items-start justify-between mb-4'>;
                     <div className='flex items-center gap-3'>;
                       <div className='text-3xl'>{service && service.icon}</div>;
@@ -2340,6 +2522,8 @@ className='text-center mb-16'>;
                   className='group relative bg-gradient-to-br from-gray-900/50 to-gray-800/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50 hover:border-blue-500/50 transition-all duration-300 hover:scale-105'
                 >
                   {/* Service Header */}
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   <div className='flex items-start justify-between mb-4'>
                     <div className='flex items-center gap-3'>
                       <div className='text-3xl'>{service.icon}</div>
@@ -2428,6 +2612,7 @@ className='text-center mb-16'>;
                   <div className="flex items-start justify-between mb-4">
                     <div className="flex items-center gap-3">
                       <div className="text-3xl">{service.icon}</div>
+<<<<<<< HEAD
                       <div>
                         <h3 className="text-xl font-bold text-white group-hover:text-blue-400 transition-colors">
                           {service.name  } catch (error) {
@@ -2436,6 +2621,30 @@ className='text-center mb-16'>;
   }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+                  <div className='flex items-start justify-between mb-4'>;
+                    <div className='flex items-center gap-3'>;
+                      <div className='text-3xl'>{service && service.icon}</div>;
+                      <div>;
+                        <h3 className='text-xl font-bold text-white group-hover:text-blue-400 transition-colors'>;
+                          {service && service.name}
+                        </h3>;
+                        <p className='text-gray-400 text-sm'>;
+                          {service && service.tagline}
+                        </p>;
+                      </div>;
+                    </div>;
+                    {service && service.popular && (;
+                      <div className='bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs px-2 py-1 rounded-full flex items-center gap-1'>;
+                        <Star className='w-3 h-3' />                        Popular;
+                      </div>;
+
+                    )}
+
+                      <div>
+                        <h3 className="text-xl font-bold text-white group-hover:text-blue-400 transition-colors">
+                          {service.name}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                         </h3>
                         <p className="text-gray-400 text-sm">{service.tagline}</p>
                       </div>
@@ -2446,11 +2655,14 @@ className='text-center mb-16'>;
                         Popular
                       </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -2463,6 +2675,7 @@ className='text-center mb-16'>;
   }
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
                   <p className="text-gray-300 mb-4 line-clamp-3">{service.description}</p>
                   {/* Price and Rating */}
@@ -2504,11 +2717,14 @@ className='text-center mb-16'>;
                     <div className="flex items-center gap-2">
                       <span className="text-2xl font-bold text-blue-400">
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                         ${getPrice(service)  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -2548,6 +2764,12 @@ className='text-center mb-16'>;
 
 =======
                   {/* Key Features */}
+=======
+                      </span>
+                      <span className="text-gray-400">{service.period}</span>
+                    </div>
+                  </div>
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   {/* Key Features */}
                   <div className='mb-4'>
                     <h4 className='text-sm font-semibold text-gray-300 mb-2'>
@@ -2562,16 +2784,23 @@ className='text-center mb-16'>;
                           <div className='w-1.5 h-1.5 bg-blue-500 rounded-full'></div>                          {feature}
                         </div>
                       ))}
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   {/* Key Features */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   <div className="mb-4">
                     <h4 className="text-sm font-semibold text-gray-300 mb-2">Key Features:</h4>
                     <div className="grid grid-cols-1 gap-1">
@@ -2579,9 +2808,13 @@ className='text-center mb-16'>;
                         <div key={idx} className="flex items-center gap-2 text-sm text-gray-400">
                           <div className="w-1.5 h-1.5 bg-blue-500 rounded-full"></div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                           {feature  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -2594,15 +2827,19 @@ className='text-center mb-16'>;
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       {service.features.length > 3 && (
                         <div className="text-xs text-gray-500 mt-1">
                           +{service.features.length - 3} more features
                         </div>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -2627,6 +2864,8 @@ className='text-center mb-16'>;
                     <button className='flex-1 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700'>
                       <ExternalLink className='w-4 h-4 mr-2' />
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -2640,6 +2879,7 @@ className='text-center mb-16'>;
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -2652,6 +2892,9 @@ className='text-center mb-16'>;
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+                  </div>
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     </div>;
                   </div>;
 
@@ -2667,6 +2910,7 @@ className='text-center mb-16'>;
 
                   {/* Actions */}
 
+<<<<<<< HEAD
                   <div className="flex items-center gap-3">
                     <button className="flex-1 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700">
                       <ExternalLink className="w-4 h-4 mr-2" />
@@ -2682,12 +2926,15 @@ className='text-center mb-16'>;
                     <button className="flex-1 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700">
                       <ExternalLink className="w-4 h-4 mr-2" />
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       Learn More
                     </button>
                     <button className="border-blue-500 text-blue-400 hover:bg-blue-500/20">
                       <Phone className="w-4 h-4" />
                     </button>
                   </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -2730,41 +2977,25 @@ className='text-center mb-16'>;
               whileInView={{ opacity: 1, y: 0 }}
                   {/* Hover Effects */}
                   <div className='absolute inset-0 bg-gradient-to-r from-blue-600/5 to-purple-600/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none'></div>                </motion.div>
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               ))}
             </div>
           </div>
         </section>
         {/* Contact Section */}
-        <section className='py-20 px-4 sm:px-6 lg:px-8'>
-          <div className='max-w-4xl mx-auto text-center'>            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-                  {/* Hover Effects */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                  <div className="absolute inset-0 bg-gradient-to-r from-blue-600/5 to-purple-600/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
-                </motion.div>
-              ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            </div>;
-          </div>;
-        </section>;
-        {/* Contact Section */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+        {/* Contact Section */}
+        <section className='py-20 px-4 sm:px-6 lg:px-8'>;
+          <div className='max-w-4xl mx-auto text-center'>            <motion&& motion.div
+
+        {/* Contact Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               initial={{ opacity: 0, y: 30 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -2786,6 +3017,7 @@ className='text-center mb-16'>;
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -2794,10 +3026,15 @@ className='text-center mb-16'>;
 =======
             >
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+            >
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Ready to Get Started?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
+<<<<<<< HEAD
 <<<<<<< HEAD
                 Contact our team to discuss your specific needs and get a custom quote. 
                 We offer flexible pricing and payment options to fit your budget.
@@ -2813,6 +3050,11 @@ className='text-center mb-16'>;
                 Contact our team to discuss your specific needs and get a custom quote.
                 We offer flexible pricing and payment options to fit your budget.
               </p>
+=======
+                Contact our team to discuss your specific needs and get a custom quote. 
+                We offer flexible pricing and payment options to fit your budget.
+              </p>
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <div className='grid grid-cols-1 md:grid-cols-3 gap-6 mb-8'>
                 <div className='bg-gradient-to-br from-blue-600/20 to-purple-600/20 backdrop-blur-sm rounded-2xl p-6 border border-blue-500/30'>
                   <Phone className='w-8 h-8 text-blue-400 mx-auto mb-3' />
@@ -2840,6 +3082,7 @@ className='text-center mb-16'>;
                   </p>
                 </div>
               </div>
+<<<<<<< HEAD
               <div className='flex flex-col sm:flex-row gap-4 justify-center'>
                 <button className='bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700'>
                   <Phone className='w-5 h-5 mr-2' />
@@ -2874,15 +3117,23 @@ className='text-center mb-16'>;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   Get Custom Quote
                 </button>
                 <button className="border-blue-500 text-blue-400 hover:bg-blue-500/20">
                   <BookOpen className="w-5 h-5 mr-2" />
                   Download Pricing Guide
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 </button>
               </div>
             </motion.div>
@@ -2891,14 +3142,20 @@ className='text-center mb-16'>;
       </div>
     </UltraQuantumHolographicBackground>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
               transition={{ duration: 0 && 0.8 }}
               viewport={{ once: true }}>;
               <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>;
+<<<<<<< HEAD
 =======
 =======
               transition={{ duration: 0 && 0.8 }}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 }
@@ -2986,11 +3243,14 @@ className='text-center mb-16'>;
                 budget.;
               </p>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   )
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
@@ -3029,6 +3289,7 @@ className='text-center mb-16'>;
                 </button>;
                 <button className='border - blue - 500 text - blue - 400 hover:bg - blue - 500 / 20'>;
                   <BookOpen className='w - 5 h - 5 mr - 2' />                  Download Pricing Guide;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 );
@@ -3069,6 +3330,8 @@ className='text-center mb-16'>;
                   <BookOpen className="w-5 h-5 mr-2" />;
                   Download Pricing Guide;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 </button>;
               </div>;
             </motion.div>;
@@ -3076,9 +3339,12 @@ className='text-center mb-16'>;
         </section>;
       </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     </UltraQuantumHolographicBackground>;
   );
   } catch (error) {
@@ -3086,6 +3352,7 @@ className='text-center mb-16'>;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -3093,3 +3360,5 @@ className='text-center mb-16'>;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

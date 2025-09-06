@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -40,10 +41,13 @@ const LazyComponent = ({ component: Component, fallback, ...props }: {;
   component: React.ComponentType<any>,;
   fallback: ReactNode,;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   [key: string]: any;
 }) =>: any (
   <Suspense fallback={fallback}>;
     <Component {...props} />;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   </Suspense>;
@@ -65,16 +69,15 @@ interface ErrorBoundaryProps {;
 export class ErrorBoundary extends Component<ErrorBoundaryProps ErrorBoundaryState> {;
   constructor(props: ErrorBoundaryProps) {;
     super(props),;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     this.state = { hasError: false }
   }
-;
-  static getDerivedStateFromError(error: Error): ErrorBoundaryState {;
-    return { hasError: true, error }
+  static getDerivedStateFromError(error: Error): ErrorBoundaryState {return { hasError: true, error }
   }
-;
-  componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {;
-    console.error("Error caught by boundary:", error, errorInfo);
+  componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {console.error("Error caught by boundary:", error, errorInfo);
   }
+<<<<<<< HEAD
 ;
   render() {;
     if (this.state.hasError) {;
@@ -90,6 +93,17 @@ export class ErrorBoundary extends Component<ErrorBoundaryProps ErrorBoundarySta
   </Suspense>;
 );
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+// Error boundary for better error handling;
+interface ErrorBoundaryState {
+  has_error: boolean,
+  error?: Error;
+}
+interface ErrorBoundaryProps {
+  children: ReactNode,
+  fallback?: ReactNode;
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 // Error boundary for better error handling;
 interface ErrorBoundaryState {
   has_error: boolean,
@@ -110,6 +124,7 @@ export class ErrorBoundary extends Component < ErrorBoundaryProps ErrorBoundaryS
   componentDidCatch (error: Error, error_info: React.ErrorInfo) {
     console.error ("Error caught by boundary:", error, error_info);
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
   render () {
     // Check condition
@@ -152,6 +167,8 @@ export class ErrorBoundary extends Component<ErrorBoundaryProps ErrorBoundarySta
   render() {;
     if (this.state.hasError) {;
       return this.props.fallback || (;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <div className="p-6 text-center">;
           <div className="text-[var(--error)] text-lg mb-2">Something went wrong</div>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -163,6 +180,7 @@ export class ErrorBoundary extends Component<ErrorBoundaryProps ErrorBoundarySta
           </button>;
         </div>);
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -186,10 +204,13 @@ export function LoadingSpinner({ size = "md", className = "" }: {;
   },;
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (;
     <div className={`animate-spin rounded-full border-2 border-[var(--border)] border-t-[var(--accent)] ${sizeClasses[size]} ${className}`} />;
   );
 }
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -251,10 +272,13 @@ export function LoadingSpinner({ size = "md", className = "" }: {;
     md: "w-6 h-6",;
     lg: "w-8 h-8";
   },;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (;
     <div className={`animate-spin rounded-full border-2 border-[var(--border)] border-t-[var(--accent)] ${sizeClasses[size]} ${className}`} />;
   );
 }
+<<<<<<< HEAD
 // Skeleton loading component;
 export function Skeleton({ className = "", lines = 1 }: {className?: string;
   lines?: number;
@@ -266,6 +290,8 @@ export function Skeleton({ className = "", lines = 1 }: {;
   lines?: number;
 }) {;
   return (;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <div className={`animate-pulse ${className}`}>;
       {Array.from({ length: lines }).map((_, i) => (;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -276,6 +302,7 @@ export function Skeleton({ className = "", lines = 1 }: {;
         />))}
     </div>);
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 export /**
@@ -312,6 +339,8 @@ export function usePerformanceMonitor(componentName: string) {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       // Log performance metrics in development;
       // Check condition
 if ( {) {
@@ -319,6 +348,7 @@ if ( {) {
 }
         // // // console.log (`${component_name} render time: ${duration.to_fixed (2)}ms`);
       }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -346,12 +376,15 @@ if ( {) {
       // Send to analytics in production;
       if (process.env.NODE_ENV === "production" && duration > 100) {;
         // Could send to analytics service here;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         console.warn(`${componentName} took ${duration.toFixed(2)}ms to render`);
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       }
     }
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 export /**
@@ -439,10 +472,13 @@ export function useDebounce<T>(value: T, delay: number): T {;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     }
   }, [value, delay]);
   return debounced_value;
 }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -458,3 +494,5 @@ export { LazyComponent }
 ;
 export { LazyComponent };
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

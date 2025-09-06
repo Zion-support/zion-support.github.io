@@ -2,15 +2,18 @@
 
 
 
-
 import React, { useState } from "react";
 import {Button} from "@/components/ui/button";
 import {Card, CardContent} from "@/components/ui/card";
 import {Briefcase, Users, Check} from "lucide-react";
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useState } from './react';
 import { Button } from '@/components / ui / button';
 import { Card, CardContent } from '@/components / ui / card';
@@ -19,6 +22,7 @@ import { Briefcase, Users, Check } from './lucide-react';
 type UserRole = "talent" | "client" | null;
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -29,23 +33,28 @@ type UserRole = "talent" | "client" | null;
 
 type UserRole = "talent" | "client" | null;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
 import { Card, CardContent } from "@/components/ui/card",
 import { Briefcase, Users, Check } from "lucide-react",
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 type UserRole = "talent" | "client" | null,
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface RolePickerProps {
   on_select: (role: UserRole) => void;
 }
 
+<<<<<<< HEAD
 =======
 
 type UserRole = "talent" | "client" | null,
@@ -70,24 +79,33 @@ interface RolePickerProps {
   onSelect: (role: UserRole) => void
 }
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export function RolePicker({ onSelect }: RolePickerProps) {;
   const [selectedRole, setSelectedRole] = useState<UserRole>(null);
 export function RolePicker({ onSelect }: RolePickerProps) {
   const [selectedRole, setSelectedRole] = useState<UserRole>(null);
   const [selectedRole, setSelectedRole] = useState<UserRole>(null),
 
+
+
+
   const handleSelect = (role: UserRole) => {
     setSelectedRole(role)
     onSelect(role)
+<<<<<<< HEAD
   }
   },
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   return (
     <div className="space-y-4 px-4">
       <h2 className="text-xl font-medium">What brings you to Zion?</h2>
       <p className="text-muted-foreground">Choose how you want to use our platform</p>
       <div className="space-y-3 mt-6">
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -103,29 +121,38 @@ interface RolePickerProps {;
 
 export function RolePicker(): any ({ onSelect }: RolePickerProps) {;
   const [selectedRole, setSelectedRole] = useState<UserRole>(null);
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   const handleSelect = (role: UserRole) => {;
     setSelectedRole(role),;
     onSelect(role);
   };
-
   return (
     <div className="space-y-4 px-4">;
       <h2 className="text-xl font-medium">What brings you to Zion?</h2>;
       <p className="text-muted-foreground">Choose how you want to use our platform</p>;
-
       <div className="space-y-3 mt-6">;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+interface RolePickerProps {
+  on_select: (role: UserRole) => void;
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <Card
           className={`cursor-pointer transition-all ${
             selectedRole === 'talent'
               ? "border-primary bg-primary/5"
               : "border-border hover:border-primary/40"
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 import React, { useState } from "react",;
 import { Button } from "@/components/ui/button",;
@@ -157,7 +184,10 @@ export function RolePicker({ onSelect } RolePickerProps) {;
             selectedRole === 'talent' ;
               ? "border-primary bg-primary/5" ;
               :"border-border hover:border-primary/40";
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           }`}
           onClick={() => handleSelect('talent')}
         >;
@@ -179,6 +209,7 @@ export function RolePicker({ onSelect } RolePickerProps) {;
         </Card>;
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
         <Card
 =======
@@ -214,10 +245,15 @@ export function RolePicker({ onSelect } RolePickerProps) {;
         <Card
         <Card 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+        <Card
+        <Card
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           className={`cursor-pointer transition-all ${
             selectedRole === 'client'
               ? "border-primary bg-primary/5"
               : "border-border hover:border-primary/40"
+<<<<<<< HEAD
 <<<<<<< HEAD
           }`}
           onClick={() => handleSelect('client')}
@@ -230,6 +266,8 @@ function RolePicker() {
   const [selected_role, setSelectedRole] = useState < UserRole>(null);
 =======
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ;
         <Card ;
           className={`cursor-pointer transition-all ${;
@@ -251,6 +289,7 @@ function RolePicker() {
               {selectedRole === 'client' && (;
                 <Check className="h-5 w-5 text-primary" />;
               )}
+<<<<<<< HEAD
           }`}
           onClick={() => handleSelect('client')}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -397,10 +436,13 @@ export function RolePicker({ onSelect }: RolePickerProps) {;
                 <Check className="h-5 w-5 text-primary" />
               )}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             </div>;
           </CardContent>;
         </Card>;
       </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     </div>);
@@ -429,3 +471,5 @@ space-y-3 mt-6"> <Card className= {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

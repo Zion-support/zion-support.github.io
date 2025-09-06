@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 export default function Home() {;
@@ -23,6 +24,8 @@ export default function Home() {;
     </div>;
   );
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from './react';
 import Link from './next / link';
 ;
@@ -38,5 +41,9 @@ function Home() {
         <Link href="/services">View Our Services</Link>;
       </main>;
     </div>);
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
+=======
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

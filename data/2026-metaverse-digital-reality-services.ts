@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
       "Immersive experiences";
@@ -17,6 +18,8 @@
 export interface MetaverseDigitalRealityService2026 {;
 export interface MetaverseDigitalRealityService2026 {
 export interface MetaverseDigitalRealityService2026 {;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   id: string;
   name: string;
   tagline: string;
@@ -57,8 +60,18 @@ export const metaverseDigitalRealityServices2026: MetaverseDigitalRealityService
         address: '364 E Main St STE 1008 Middletown DE 19709'
       }
     }
+  real_implementation: boolean;
+  contact_info: {
+    mobile: string;
+    email: string;
+        mobile: '+1 302 464 0950',
+        email: 'kleber@ziontechgroup && ziontechgroup.com',
+        address: '364 E Main St STE 1008 Middletown DE 19709',
+      },
+    },
   ];    features: [
 
+<<<<<<< HEAD
   id: string,;
   name: string,;
   tagline: string,;
@@ -115,6 +128,11 @@ export interface MetaverseDigitalRealityService2026 {;
     }
   }
 ];
+=======
+      "Immersive experiences";
+      "Digital reality";
+      "Metaverse platform";
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export interface MetaverseDigitalRealityService2026 {;
   };
 
@@ -164,6 +182,8 @@ export const metaverseDigitalRealityServices2026: MetaverseDigitalRealityService
   }
 }
 
+export interface MetaverseDigitalRealityService2026 {;
+
 export const metaverseDigitalRealityServices2026: MetaverseDigitalRealityService2026[] = [
   {
     id: "2026-metaverse-digital-reality",
@@ -182,6 +202,7 @@ export const metaverseDigitalRealityServices2026: MetaverseDigitalRealityService
     category: "Metaverse Digital Reality 2026",
     realImplementation: true,
     contactInfo: {
+<<<<<<< HEAD
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
@@ -193,3 +214,8 @@ export const metaverseDigitalRealityServices2026: MetaverseDigitalRealityService
   }
 ];
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+    }
+  }
+;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

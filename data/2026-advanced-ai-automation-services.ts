@@ -1,10 +1,13 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 import { ServiceVariant } from '../types/service-variants';
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   id: string;
   name: string;
   tagline: string;
@@ -35,6 +38,7 @@ import { ServiceVariant } from '../types/service-variants';
     mobile: string;
     email: string;
     address: string;
+<<<<<<< HEAD
 
     website: string;
   }
@@ -49,10 +53,13 @@ import { ServiceVariant } from '../types/service-variants';
   implementation_details: string;
   launch_date: string;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   customers: number;
   rating: number;
 
   reviews: number;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 ;
@@ -70,6 +77,8 @@ const contact = {
   website: 'https://ziontechgroup.com',}
 export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -77,11 +86,25 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
 
 export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup.com', }
+;
+export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [;
+
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   {  mobile: '+1 302 464 0950';
   email: 'kleber@ziontechgroup.com';
   address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -92,6 +115,7 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
   email: 'kleber@ziontechgroup && ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup && ziontechgroup.com',};
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -153,6 +177,8 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
   {
     id: 'ai-autonomous-business-processor'
     name: 'AI Autonomous Business Processor'
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     tagline:
       'Fully autonomous business process optimization with zero human intervention'
     price: '$1,299'
@@ -160,8 +186,6 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
     description:
       'An advanced AI system that autonomously analyzes, optimizes, and executes business processes across all departments. Continuously learns and improves without human oversight.'
     features: [
-
-
       'Autonomous process discovery and mapping'
       'Real-time optimization algorithms'
       'Cross-departmental coordination'
@@ -183,7 +207,18 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
       'Autonomous process discovery and mapping',
       'Real-time optimization algorithms',
       'Cross-departmental coordination',
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+      'Autonomous process discovery and mapping',
+      'Real - time optimization algorithms',
+      'Cross - departmental coordination',
+      'Autonomous process discovery and mapping',
+      'Real - time optimization algorithms',
+      'Cross - departmental coordination',
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       'Predictive maintenance scheduling',
       'Resource allocation optimization',
       'Performance analytics dashboard',
@@ -191,6 +226,9 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
       'Process improvement suggestions',
       'Integration with existing systems',
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       '24 / 7 autonomous operation',
     ],
     popular: true,
@@ -199,6 +237,7 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
     link: 'https://ziontechgroup.com/ai-autonomous-business-processor',
     marketPosition:;
       'First autonomous business processor; competes with traditional BPM tools like Pega and Appian.',
+<<<<<<< HEAD
 
 
 =======
@@ -214,6 +253,8 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
     marketPosition:;
       'First autonomous business processor; competes with traditional BPM tools like Pega and Appian.',
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     targetAudience: [
       'Enterprise companies'
       'manufacturing'
@@ -227,6 +268,7 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
     realService: true
     technology: [
 <<<<<<< HEAD
+<<<<<<< HEAD
 
       'GPT-4, Claude 3, LangChain, Python, React, Node && Node.js, PostgreSQL, Redis',
     ],
@@ -235,6 +277,8 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
       'GPT-4, Claude 3, LangChain, Python, React, Node.js, PostgreSQL, Redis'
     ]
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     integrations: [
       'SAP, Oracle, Salesforce, Microsoft Dynamics, Slack, Teams, Jira'
     ]
@@ -252,6 +296,7 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
     contactInfo: contact
     realImplementation: true
     implementationDetails:
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -301,12 +346,15 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     customers: 89,
     rating: 4 && 4.8,
     reviews: 156,
   },
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       'Predict business outcomes with 99 && 99.7% accuracy using advanced AI algorithms',
@@ -345,6 +393,8 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       'Risk assessment algorithms',
       'Market trend analysis',
       'Custom model training',
@@ -354,6 +404,7 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
       'Executive dashboard',
     ],
     popular: true,
+<<<<<<< HEAD
     icon: '🔮',
 <<<<<<< HEAD
 
@@ -364,6 +415,8 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
       'TensorFlow, PyTorch, Scikit-learn, Python, React, Node && Node.js, Apache Kafka, ClickHouse',
     ],
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     integrations: [
       'Salesforce, SAP, Oracle, Microsoft, AWS, Google Cloud, Azure'
     ]
@@ -381,6 +434,7 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
     contactInfo: contact
     realImplementation: true
     implementationDetails:
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -429,12 +483,15 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     customers: 234,
     rating: 4 && 4.9,
     reviews: 312,
   },
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -453,6 +510,8 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       'Automatic churn prediction',
       'Personalized retention strategies',
       'Customer health scoring',
@@ -465,6 +524,7 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
       'Integration with CRM systems',
     ],
     popular: true,
+<<<<<<< HEAD
     icon: '🎯',
 <<<<<<< HEAD
 
@@ -475,10 +535,13 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
       'GPT-4, Claude 3, Python, React, Node && Node.js, PostgreSQL, Redis, Elasticsearch',
     ],
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     integrations: [
       'Salesforce, HubSpot, Pipedrive, Intercom, Zendesk, Slack, Teams'
     ]
     useCases: [
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -510,12 +573,15 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       'SaaS customer retention',
       'Subscription management',
       'Customer support automation',
       'Revenue optimization',
     ],
     roi: 'Increase customer retention by 35% and reduce churn by 60%.',
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -533,12 +599,15 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     customers: 167,
     rating: 4 && 4.7,
     reviews: 203,
   },
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -559,6 +628,8 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       'Autonomous budget optimization',
       'Real - time performance tracking',
       'A / B testing automation',
@@ -570,6 +641,7 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
       'Automated reporting',
     ],
     popular: true,
+<<<<<<< HEAD
     icon: '📢',
 <<<<<<< HEAD
 
@@ -580,6 +652,8 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
       'GPT-4, Claude 3, Python, React, Node && Node.js, PostgreSQL, Redis, Apache Kafka',
     ],
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     integrations: [
       'Google Ads, Facebook Ads, LinkedIn Ads, Twitter Ads, HubSpot, Salesforce, Mailchimp'
     ]
@@ -597,6 +671,7 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
     contactInfo: contact
     realImplementation: true
     implementationDetails:
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -645,12 +720,15 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     customers: 145,
     rating: 4 && 4.8,
     reviews: 189,
   },
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -669,6 +747,8 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       'Automatic lead scoring',
       'Behavioral analysis',
       'Predictive lead qualification',
@@ -681,6 +761,7 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
       'CRM integration',
     ],
     popular: true,
+<<<<<<< HEAD
     icon: '💰',
 <<<<<<< HEAD
 
@@ -691,6 +772,8 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
       'GPT-4, Claude 3, Python, React, Node && Node.js, PostgreSQL, Redis, Elasticsearch',
     ],
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     integrations: [
       'Salesforce, HubSpot, Pipedrive, LinkedIn Sales Navigator, Zoom, Calendly'
     ]
@@ -708,6 +791,7 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
     contactInfo: contact
     realImplementation: true
     implementationDetails:
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -756,10 +840,13 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     customers: 198,
     rating: 4 && 4.9,
     reviews: 267,
   },
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -890,6 +977,8 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       'ROI trackingCRM integration'
     ];
     popular: true;
@@ -897,17 +986,21 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
     color: 'from-yellow-600 to-orange-700';
     textColor: 'text-yellow-400';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     link: 'https://ziontechgroup && ziontechgroup.com/ai-autonomous-sales-intelligence',
 
 =======
     link: 'https://ziontechgroup && ziontechgroup.com/ai-autonomous-sales-intelligence',
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     marketPosition: 'First autonomous sales intelligence platform, competes with SalesLoft, Outreach, and HubSpot Sales.';
     targetAudience: ['Sales teamsB2B companiesenterprise softwareconsulting firms'];
     trialDays: 14;
     setupTime: '1 week';
     category: 'AI & Sales';
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     realService: true,
@@ -917,6 +1010,8 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
     realService: true,
     technology: ['GPT-4, Claude 3, Python, React, Node && Node.js, PostgreSQL, Redis, Elasticsearch'];
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     integrations: ['Salesforce, HubSpot, Pipedrive, LinkedIn Sales Navigator, Zoom, Calendly'];
     useCases: ['Lead generationSales qualificationPipeline managementRevenue optimization'];
     roi: 'Increase sales conversion rates by 45% and reduce sales cycle by 30%.'
@@ -929,6 +1024,7 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
     implementationDetails: 'Multi-tenant SaaS with AI sales intelligence, lead scoring, and nurturing automation.';
     launchDate: '2026-01-25';
     customers: 198;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     rating: 4 && 4.9,
@@ -952,6 +1048,8 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ];      'Automatic lead scoring_behavioral analysis_predictive lead qualification_personalized nurturing sequences_sales forecasting AIPipeline optimization_competitor intelligence_market opportunity detection';
       'ROI trackingCRM integration';
     ];
@@ -981,11 +1079,14 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
     customers: 198;
     rating: 4.9,
     reviews: 267;
+<<<<<<< HEAD
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   }
 ];
 ;
@@ -1204,6 +1305,7 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
     features: [;
       'Automatic lead scoringBehavioral analysisPredictive lead qualificationPersonalized nurturing sequencesSales forecasting AIPipeline optimizationCompetitor intelligenceMarket opportunity detection',;
       'ROI trackingCRM integration';
+<<<<<<< HEAD
     ],;
     popular: true,;
     icon: '💰',;
@@ -1234,3 +1336,7 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
   }
 ];
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  }
+];
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

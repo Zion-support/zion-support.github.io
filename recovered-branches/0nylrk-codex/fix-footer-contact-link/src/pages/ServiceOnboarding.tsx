@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 class ErrorBoundary extends React.Component {
@@ -25,6 +26,8 @@ class ErrorBoundary extends React.Component {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from "react";
 import {ServiceProviderRegistrationForm} from "@/components/profile/ServiceProviderRegistrationForm";
 import {Header} from "@/components/Header";
@@ -33,6 +36,7 @@ import {useAuth} from "@/hooks/useAuth";
 import {Navigate} from "react-router-dom";
 export default function ServiceOnboarding() {;
   const { user, isLoading } = useAuth();
+<<<<<<< HEAD
 
 <<<<<<< HEAD
   // If not authenticated, redirect to login;
@@ -57,6 +61,8 @@ export default function ServiceOnboarding() {;
 =======
   }
   return (
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from "react",
 import { ServiceProviderRegistrationForm } from "@/components/profile/ServiceProviderRegistrationForm",
 import { Header } from "@/components/Header",
@@ -70,11 +76,18 @@ import { Navigate } from "react-router-dom",
 export default function ServiceOnboarding() {
   const { user, isLoading } = useAuth(),
 
+  // If not authenticated, redirect to login;
+  if (!isLoading && !user) {;
+    return <Navigate to="/login" replace />;
+
+
+
   // If not authenticated, redirect to login
   if (!isLoading && !user) {
     return <Navigate to="/login" replace />
   }
   return (
+<<<<<<< HEAD
     <>
       <Header />
       <div className="bg-zion-blue min-h-screen py-8 md: py-12">
@@ -181,20 +194,28 @@ if ( {) {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  }
+  return (
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               Showcase your services to potential clients. Create a professional profile;
               to get discovered on the Zion Marketplace.;
             </p>;
           </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
 =======
           ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <ServiceProviderRegistrationForm />;
         </div>;
       </div>;
       <Footer />;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     </>);
@@ -222,3 +243,5 @@ if ( {) {
 }
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

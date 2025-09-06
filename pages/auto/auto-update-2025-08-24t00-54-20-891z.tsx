@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 
@@ -22,6 +23,8 @@ const Page: NextPage = () => {
 =======
 const Page: NextPage = () => {
   return (
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import type { NextPage } from 'next';
 import Head from 'next/head';
 
@@ -31,8 +34,13 @@ import type { NextPage } from 'next',;
 import Head from 'next/head',;
 import type { NextPage } from 'next'
 import Head from 'next/head'
+
+import type { NextPage } from 'next'
+import Head from 'next/head'
+
 const Page: NextPage = () => {
   return (
+<<<<<<< HEAD
 import type {_NextPage} from 'next';
 import Head from 'next/head';
 const Page: NextPage = () => {_return (
@@ -40,6 +48,8 @@ const Page: NextPage = () => {
   return (
 ursor/fix-lint-push-and-merge-to-main-ce13
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <>
       <Head>
         <title>Auto Update 2025-08-24T00-54-20-891Z</title>
@@ -51,12 +61,21 @@ ursor/fix-lint-push-and-merge-to-main-ce13
       </div>
     </>
   )
+},
+
+export default Page,;
+;
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 export default Page;
 
 =======
+=======
+export default Page;
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import type { NextPage } from 'next',
 import Head from 'next / head',
 const Page: NextPage = () => {
@@ -74,6 +93,7 @@ const Page: NextPage = () => {
 },
 export default Page,
 ;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
@@ -100,9 +120,14 @@ export default Page;
 
 },
 ;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export default Page
 },
 
 
 export default Page
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -1,6 +1,9 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 import { useEffect, useState } from "react",
 import Link from "next/link",
@@ -10,6 +13,7 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Badge } from "@/components/ui/badge",
 import { useProjects } from "@/hooks/useProjects",
 import { Project } from "@/types/projects",
+<<<<<<< HEAD
 import { useEffect, useState } from 'react'
 import Link from 'next/link'
 import { BriefcaseIcon, Clock } from 'lucide-react'
@@ -52,6 +56,8 @@ xport function ActiveProjectsCard() {
 
 
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export function ActiveProjectsCard() {
 xport function ActiveProjectsCard() {
   const { projects, isLoading } = useProjects();
@@ -59,6 +65,7 @@ xport function ActiveProjectsCard() {
   
   useEffect(() => {
     if (projects && !isLoading) {
+<<<<<<< HEAD
       const active = null;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       const active = projects.filter(p => 
@@ -70,10 +77,15 @@ xport function ActiveProjectsCard() {
   
 <<<<<<< HEAD
 =======
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   if (isLoading) {
     return (
       <Card>
         <CardHeader>
+<<<<<<< HEAD
       const active = null;
     return (
       <Card>
@@ -123,6 +135,8 @@ export function ActiveProjectsCard() {;
           <CardTitle className='flex items-center gap-2'>
             <BriefcaseIcon className='h-5 w-5 text-primary' />            <span>Active Projects</span>          <CardTitle className="flex items-center gap-2">
           <CardTitle className="flex items-center gap-2">
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <BriefcaseIcon className="h-5 w-5 text-primary" />
             <span>Active Projects</span>
           </CardTitle>
@@ -130,6 +144,7 @@ export function ActiveProjectsCard() {;
         </CardHeader>
         <CardContent>
           <div className="space-y-2">
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
@@ -163,6 +178,9 @@ export function ActiveProjectsCard() {;
   }
     )
   }
+=======
+            {[1, 2].map(idx => (
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <div key={idx} className="h-16 animate-pulse bg-muted rounded"></div>
 import { useEffect, useState } from "react",;
 import Link from "next/link",;
@@ -202,8 +220,11 @@ export function ActiveProjectsCard() {;
         </CardContent>;
       </Card>;
     );
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
   }
@@ -214,14 +235,19 @@ export function ActiveProjectsCard() {;
 
 
 
+<<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
 =======
+=======
+  }
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   
   if (activeProjects.length === 0) {
     return (
       <Card>
         <CardHeader>
 
+<<<<<<< HEAD
   }
   
   if (activeProjects.length === 0) {
@@ -234,10 +260,15 @@ ursor/fix-website-loading-errors-and-merge-6662
           <CardDescription>Your ongoing work</CardDescription>
         </CardHeader>          <CardTitle className="flex items-center gap-2">
           <CardTitle className="flex items-center gap-2">
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <BriefcaseIcon className="h-5 w-5 text-primary" />
           </CardTitle>
           <CardDescription>Your ongoing work</CardDescription>
         </CardHeader>
+<<<<<<< HEAD
         <CardContent className='text-center py-6'>
           <p className='text-muted-foreground mb-2'>
             You don't have any active projects at the moment.
@@ -247,6 +278,13 @@ ursor/fix-website-loading-errors-and-merge-6662
           <p className="text-muted-foreground mb-2">You don't have any active projects at the moment.</p>
           <Button variant="outline" asChild>
             <Link href="/jobs">Find Opportunities</Link>
+=======
+        </CardContent>
+      </Card>
+    )
+  }
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -254,6 +292,7 @@ ursor/fix-website-loading-errors-and-merge-6662
   }
   return (
 
+<<<<<<< HEAD
 
     <Card>;
       <CardHeader>;
@@ -312,6 +351,8 @@ ursor/fix-website-loading-errors-and-merge-6662
         <CardDescription>Your ongoing work</CardDescription>
       </CardHeader>
       <CardContent className='space-y-4'>
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <Card>
       <CardHeader>
@@ -334,6 +375,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                   project && project.status === 'in_progress'
                     ? 'bg-blue-100 text-blue-800 hover:bg-blue-100'
                     : ''
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -363,6 +405,8 @@ ursor/fix-website-loading-errors-and-merge-6662
       )}
 
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 }          <div key={project.id} className="border rounded-md p-3">
             <div className="flex justify-between items-start mb-2">
               <h3 className="font-medium text-sm">{project.job?.title}</h3>
@@ -409,11 +453,15 @@ ursor/fix-website-loading-errors-and-merge-6662
               <span>Started {new Date(project.start_date).toLocaleDateString()}</span>
             </div>
             <Button size="sm" variant="outline" className="w-full mt-2" asChild>
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <Link href={`/project/${project.id}`}>View Project</Link>
             </Button>
           </div>
         ))}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
             </Button>
@@ -607,3 +655,5 @@ if ( {'") {
 ;
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

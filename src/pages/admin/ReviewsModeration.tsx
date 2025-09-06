@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import { SEO } from '@/components/SEO'
 import { ReviewsModerationTable } from '@/components/admin/reviews/ReviewsModerationTable'
@@ -70,6 +71,8 @@ import { Star, AlertTriangle } from 'lucide-react'
 import { toast } from "@/components/ui/use-toast",
 import { logErrorToProduction } from '@/utils/productionLogger',
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 function ReviewsModerationContent() {
   const [activeTab, setActiveTab] = useState("pending"),
   const [reviews, setReviews] = useState([]),
@@ -78,6 +81,7 @@ function ReviewsModerationContent() {
   const fetchReviews = async () => {
     setIsLoading(true),
     try {
+<<<<<<< HEAD
 <<<<<<< HEAD
       // In a real application, you would fetch reviews from an API;
       // For now, let's simulate a delay and return empty data;
@@ -100,11 +104,17 @@ function ReviewsModerationContent() {
     fetch_reviews ();        title: "Error",
         description: "Failed to load reviews. Please try again later.",
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       // In a real application, you would fetch reviews from an API
       // For now, let's simulate a delay and return empty data
       await new Promise(resolve => setTimeout(resolve, 1000)),
       setReviews([]),
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+        description: "Failed to load reviews. Please try again later.",
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         variant: "destructive"}),
       setIsLoading (false);
     }
@@ -144,12 +154,40 @@ function ReviewsModerationContent() {;
       // For now, let's simulate a delay and return empty data;
       await new Promise(resolve => setTimeout(resolve, 1000));
       setReviews([]);
+      setIsLoading(false);
+      logErrorToProduction(;
+        error instanceof Error ? error && error.message : String(error),;
+        error instanceof Error ? error : undefined,;
+        { message: 'Error fetching reviews' }
+      );
+      toast({;
+        title: 'Error',;
+        description: 'Failed to load reviews. Please try again later.',;
+        variant: 'destructive',;
+      });
+      setIsLoading(false);    }
+  };
 
+  useEffect(() => {;
+    fetchReviews();        title: "Error",;
+        description: "Failed to load reviews. Please try again later.",;
+        variant: "destructive"}),;
+      setIsLoading(false);
+    }
+  };
 
+  useEffect(() => {;
+    fetchReviews();
+  useEffect((,) => {;
+    fetchReviews();
+  }, [activeTab]),;
+
+  const handleRefresh = () => {;
+    fetchReviews();
+  };
 
   return (
     <>;
-
       setIsLoading(false)
     } catch (error) {
       logErrorToProduction(error instanceof Error ? error.message : String(error), error instanceof Error ? error : undefined, { message: 'Error fetching reviews' });
@@ -159,6 +197,7 @@ function ReviewsModerationContent() {;
         variant: "destructive"});
       setIsLoading(false)
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -181,10 +220,9 @@ function ReviewsModerationContent() {;
   }
   },
   
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
-  },
-  
-  }
     <>
       <SEO
         title="Review Moderation | Zion AI Marketplace"
@@ -197,6 +235,7 @@ function ReviewsModerationContent() {;
             <p className="text-muted-foreground mt-1">Manage, approve, or reject reviews</p>
           </div>
         </div>
+<<<<<<< HEAD
         <Card>
           <CardHeader>
             <CardTitle className='flex items-center gap-2'>
@@ -210,6 +249,8 @@ function ReviewsModerationContent() {;
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <Star className="h-5 w-5" />
               Review Management
             </CardTitle>
@@ -218,6 +259,7 @@ function ReviewsModerationContent() {;
             </CardDescription>
           </CardHeader>
           <CardContent>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
             <Tabs defaultValue="pending" value={activeTab} onValueChange={setActiveTab}>
@@ -284,6 +326,8 @@ function ReviewsModerationContent() {;
 
               <TabsContent value="pending" className="mt-0">;
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <ReviewsModerationTable
                 <ReviewsModerationTable 
                   reviews={reviews}
@@ -292,19 +336,6 @@ function ReviewsModerationContent() {;
                   reviews = {reviews,}
                   isLoading = {isLoading,}
                   onRefresh = {handleRefresh,}
-
-              
-
-
-              
-              <TabsContent value="pending" className="mt-0">
-                <ReviewsModerationTable 
-                  reviews={reviews}
-                  isLoading={isLoading}
-                  onRefresh={handleRefresh}
-                />
-              </TabsContent>
-              
 
               <TabsContent value="reported" className="mt-0">
 <<<<<<< HEAD
@@ -316,12 +347,15 @@ function ReviewsModerationContent() {;
                   <p className="text-muted-foreground">
                     This section will show reviews that have been reported by users.
 <<<<<<< HEAD
+<<<<<<< HEAD
 
                   </p>
 =======
                   </p>
                   </p>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 
@@ -336,6 +370,7 @@ function ReviewsModerationContent() {;
       </main>
     </>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
   return (<ProtectedRoute> <ReviewsModerationContent /> </ProtectedRoute> '"}
@@ -345,6 +380,8 @@ function ReviewsModerationContent() {;
 
 
 export default function ReviewsModeration() {
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <SEO;
         title='Review Moderation | Zion AI Marketplace';
         description='Moderate and manage reviews in the Zion AI Marketplace';
@@ -356,27 +393,8 @@ export default function ReviewsModeration() {
             <p className='text - muted - foreground mt - 1'>;
               Manage, approve, or reject reviews;
             </p>;
-  )
-}
-export default function ReviewsModeration() {
-  return (
-    <ProtectedRoute>
-      <ReviewsModerationContent />
-    </ProtectedRoute>
-  )
-}
-return (<> <SEO title="Review Moderation | Zion AI Marketplace" description="Moderate and manage reviews in the Zion AI Marketplace" /> <main className="container mx-auto px-4 py-8" > <div className="flex justify-between items-center mb-8" > <div> <h1 className="text-3xl font-bold" >Review Moderation</h1> <p className="text-muted-foreground mt-1" >Manage, approve, or reject reviews</p> </div> </div> <Card> <CardHeader> <CardTitle className="flex items-center gap-2" > <Star className="h-5 w-5" /> Review Management </CardTitle> <CardDescription> Review and moderate user-submitted reviews before they go live </CardDescription> </CardHeader> <CardContent> </TabsList> <TabsContent value="pending" className="mt-0" > <ReviewsModerationTable reviews= {
-  reviews
-}isLoading= {
-  isLoading
-}onRefresh= {
-  handleRefresh "
-}/> </TabsContent> <TabsContent value="reported" className="mt-0" > <div className="text-center py-12 border rounded-lg" > <AlertTriangle className="h-10 w-10 text-amber-500 mx-auto mb-2" /> <h3 className="text-lg font-medium mb-2" >Reported Reviews</h3> <p className="text-muted-foreground" > This section will show reviews that have been reported by users. </p> </div> </TabsContent> </Tabs> </CardContent> </Card> </main> </>)
-}export default function ReviewsModeration () {
-  return (<ProtectedRoute> <ReviewsModerationContent /> </ProtectedRoute> '"}
   return (<ProtectedRoute> <ReviewsModerationContent /> </ProtectedRoute> '"};
 ;
-
 import { SEO } from "@/components/SEO",;
 import { ReviewsModerationTable } from "@/components/admin/reviews/ReviewsModerationTable",;
 import { ProtectedRoute } from "@/components/ProtectedRoute",;
@@ -429,9 +447,12 @@ function ReviewsModerationContent() {;
         <Card>;
           <CardHeader>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <CardTitle className="flex items-center gap-2">;
               <Star className="h-5 w-5" />;
               Review Management;
@@ -452,9 +473,12 @@ function ReviewsModerationContent() {;
                   isLoading={isLoading}
                   onRefresh={handleRefresh}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 />;
               </TabsContent>;
 
@@ -488,6 +512,7 @@ export default function ReviewsModeration() {;
     </ProtectedRoute>;
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 return (<> <SEO title="Review Moderation | Zion AI Marketplace" description="Moderate and manage reviews in the Zion AI Marketplace" /> <main className="container mx - auto px - 4 py - 8" > <div className="flex justify - between items - center mb - 8" > <div> <h1 className="text - 3xl font - bold" >Review Moderation</h1> <p className="text - muted - foreground mt - 1" >Manage, approve, or reject reviews</p> </div> </div> <Card> <CardHeader> <CardTitle className="flex items - center gap - 2" > <Star className="h - 5 w - 5" /> Review Management </CardTitle> <CardDescription> Review and moderate user - submitted reviews before they go live </CardDescription> </CardHeader> <CardContent> </TabsList> <TabsContent value="pending" className="mt - 0" > <ReviewsModerationTable reviews= {
@@ -510,3 +535,7 @@ function ReviewsModeration() {
 }
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+}
+;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

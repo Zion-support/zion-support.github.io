@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 const { spawn } = require ('child_process'),
 console.log ('🚀 Starting development server...'),
@@ -28,6 +29,8 @@ dev_process.on ('close', (code) => {
 <<<<<<< HEAD
 =======
 const { spawn } = require('child_process');
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 console.log('🚀 Starting development server...');
 // Start the development server;
 const devProcess = spawn('npm', ['rundev'], {stdio: 'inherit';
@@ -71,6 +74,7 @@ process.on('SIGTERM', () => {;
   devProcess.kill('SIGTERM'),;
   process.exit(0);
 }),;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 process.on ('SIGINT', () => {
   console.log ('Stopping development server...'),
@@ -116,3 +120,5 @@ process.on('SIGTERM', () => {;
   process.exit(0);
 });
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

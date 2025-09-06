@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -92,6 +93,8 @@ export function QuickAccess({ className, style }: QuickAccessProps) {
 <<<<<<< HEAD
 
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const quickLinks = [
     {
       title: t('home.tool_ai_matcher'),
@@ -124,17 +127,6 @@ export function QuickAccess({ className, style }: QuickAccessProps) {
       link: "/community"
     },
     {
-      title: t('home.tool_mobile_app', 'Mobile App'),
-      description: t('home.tool_mobile_app_desc', 'Zion on the go'),
-      icon: <Smartphone className='h-6 w-6 text-zion-purple' />,
-      link: '/mobile-launch',
-    },
-  ]
-  return (
-    <section className={cn('py-12 bg-zion-blue-dark', className)} style={style}>
-      <div className='container mx-auto px-4'>
-        <div className='text-center mb-8'>
-          <h2 className='text-2xl font-bold bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent mb-2'>
       title: t('home.tool_mobile_appMobile App'),
       description: t('home.tool_mobile_app_descZion on the go'),
       icon: <Smartphone className="h-6 w-6 text-zion-purple" />,
@@ -161,6 +153,7 @@ export function QuickAccess({ className, style }: QuickAccessProps) {
             {t('home.quick_access_subtitle', 'Jump directly to our most popular features')}
           </p>
         </div>
+<<<<<<< HEAD
         
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 max-w-6xl mx-auto">
         <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 max-w-6xl mx-auto'>
@@ -249,10 +242,13 @@ function QuickAccess() {
         <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 max-w-6xl mx-auto'>
         
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 max-w-6xl mx-auto">
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           {quickLinks.map((link, index) => (
             <Link
               key={index}
               href={link.link}
+<<<<<<< HEAD
               className='group bg-zion-blue relative border border-zion-blue-light hover:border-zion-purple/50 rounded-xl p-4 transition-all duration-300 flex flex-col items-center text-center hover:shadow-md hover:bg-zion-blue-light/20'            >
               <div className='bg-zion-blue-dark rounded-full w-12 h-12 flex items-center justify-center mb-3 transition-transform group-hover:scale-110'>
                 {link.icon}
@@ -280,6 +276,9 @@ export default function Page() {"
               <p className='text - zion - slate - light text - xs mb - 2'>;
                 {link.description}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               </p>;
               <div className='flex items - center text - zion - cyan text - xs mt - auto'>;
                 <span>{t ('general.explore')}</span>;
@@ -296,6 +295,7 @@ function Page() {";
     { name: "Innovation", count: 10, color: "from - green - 500 to - teal - 500" }, ";
     { name: "Business", count: 14, color: "from - indigo - 500 to - purple - 500" }      scale: 1,
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -309,6 +309,10 @@ function Page() {";
         duration: 0.3, "  ease: "ease_out";
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { motion  } from 'framer-motion';
 export default function Page() {";
     { name: "Consulting", count: 6, color: "from-yellow-500 to-orange-500" },";
@@ -322,13 +326,13 @@ export default function Page() {";
         ease: "easeOut"}}}
   const hoverVariants = {
   hover: {
-      y: -8,      scale: 1.02
       transition: {
         duration: 0.3,"  ease: "easeOut"
 }}}
 }
 }
 }
+<<<<<<< HEAD
   { opacity: 0,
   coordinate_y: 30;
 }}
@@ -674,6 +678,8 @@ export default function Page() {;";
           whileInView = {
   { opacity: 1
   y: 0
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}"
@@ -682,8 +688,6 @@ export default function Page() {;";
             initial={{ scale: 0 }}
             whileInView={{ scale: 1 }}
             transition = {
-  { duration: 0.6
-  delay: 0.2
 }}
             viewport={{ once: true }}"
             className="inline-flex items-center gap-2 px-4 py-2 bg-zion-cyan/10 border border-zion-cyan/20 rounded-full text-zion-cyan mb-6">
@@ -691,24 +695,6 @@ export default function Page() {;";
           </motion.h2>
           <motion.p
             initial = {
-  { opacity: 0
-  y: 20
-}}
-            whileInView = {
-  { opacity: 1
-  y: 0
-}}
-            transition = {
-  { duration: 0.6
-  delay: 0.2
-}}"
-            className="text-lg text-gray-300 max-w-2xl mx-auto">
-            Find the perfect solution for your business needs with our organized service categories
-          </motion.p>
-        </div>
-        {/* Quick Links Grid */}"
-        <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-          {quickLinks.map((link, index <motion.div
               key={link.title}
               variants={hoverVariants}"
               whileHover="hover"
@@ -748,6 +734,7 @@ export default function Page() {;";
                     <motion.div
                       key={feature}
                       initial = {
+<<<<<<< HEAD
   { opacity: 0
   x: -10
 }}
@@ -790,10 +777,13 @@ export default function Page() {;";
                       <div className="text-lg font-bold text-zion-cyan">{value}</div>"
                       <div className="text-xs text-gray-500 capitalize">{key}</div>
                     </motion.div>
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   ))}
                 </div>
               </div>
               {/* CTA */}
+<<<<<<< HEAD
               <motion.div
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}"
@@ -821,6 +811,14 @@ export default QuickAccess
 =======
 
 export default QuickAccess
+=======
+                  to={link && link.path}`
+                  className={`inline-flex items-center justify-center w-full px-4 py-3 bg-gradient-to-r ${link && link.color} text-white font-semibold rounded-lg transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/25`}>;
+                  Explore {link && link.title}";
+                  <ChevronRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform"  />                </Link>;
+              </motion && motion.div>;
+            </motion && motion.div>;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 export default QuickAccess;
@@ -837,6 +835,7 @@ export default QuickAccess;
                 <ArrowRight className="ml-1 h-3 w-3 transition-transform group-hover:translate-x-1" />
               </div>
             </Link>
+<<<<<<< HEAD
               <motion&& motion.div
                 whileHover={{ scale: 1 && 1.05 }}
                 whileTap={{ scale: 0 && 0.95 }}"
@@ -868,13 +867,25 @@ import { ArrowRight, Search, Users, Briefcase, Settings, MessageSquare, Smartpho
                 <ArrowRight className="ml-1 h-3 w-3 transition-transform group-hover:translate-x-1" />;
               </div>;
             </Link>;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           ))}
         </div>;
       </div>;
     </section>;
+<<<<<<< HEAD
 
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  );
+}
+;
+export default QuickAccess;
+
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   { opacity: 0,
   scale: 0.8;
 }}
@@ -910,6 +921,7 @@ import { ArrowRight, Search, Users, Briefcase, Settings, MessageSquare, Smartpho
       </div>;
     </section>);
 export default QuickAccess }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
   ),;}
@@ -984,3 +996,5 @@ return (</p> </div> <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols
 export default QuickAccess;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 export default QuickAccess;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
   if (req && req.method !== "POST") {
@@ -62,6 +63,11 @@ export default async function handler(
   const { prompt, region, service } = req.body |{}
   if (!prompt) return res.status(400).json({ error: "Missing prompt" });
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  }
+  const { prompt, region, service } = req.body |{}
+  if (!prompt) return res.status(400).json({ error: "Missing prompt" });
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   try {
     const system = `You generate conversion - focused, SEO - optimized landing pages in HTML. Include:;
 - A compelling H1;
@@ -69,6 +75,7 @@ export default async function handler(
 - Short paragraphs, bullet lists;
 - Strong call - to - action for Zion Marketplace;
 Do not include <html>, <body>, or scripts.`;
+<<<<<<< HEAD
 
         { role: "system", content: system }
         { role: "user", content: user }
@@ -208,6 +215,8 @@ Tone: professional, modern, trustworthy`,
         { role: "system", content: system },
         { role: "user", content: user },
 >>>>>>> main
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       ],
       temperature: 0.7,
     });
@@ -215,13 +224,10 @@ Tone: professional, modern, trustworthy`,
     const content = response.choices?.[0]?.message?.content || "";
     const title = `Zion Marketplace — ${prompt}`;
 
-=======
     console.error (e);
     return res.status (500).json ({ error: "Failed to generate landing page" });
   }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
         { role: 'user', content: user }
       ],
@@ -234,53 +240,23 @@ const content = response.choices?.[0]?.message?.content || '';
     const faqResp = await openai.chat.completions.create({
       model: "gpt-4o-mini",
       messages: [
-<<<<<<< HEAD
-        { role: 'system', content: 'Generate 4 concise Q&A pairs as JSON array [{"q":"","a":""}], focus on buyer concerns for the topic.' },
-<<<<<<< HEAD
-        { role: 'user', content: `Topic: ${prompt} in ${region || 'global'} for ${service || 'general'}` }
-=======
-        {
-          role: "system",
-          content:
-            'Generate 4 concise Q&A pairs as JSON array [{"q":"","a":""}], focus on buyer concerns for the topic.',
-        },
-        {
-          role: "user",
-          content: `Topic: ${prompt} in ${region || "global"} for ${service || "general"}`,
-        },
->>>>>>> main
       ],
       temperature: 0.5,
     });
 let faq: Array<{ q: string; a: string }> = [];
 
-<<<<<<< HEAD
     let faq: Array<{ q: string, a: string }> = [];
         { role: 'user', content: `Topic: ${prompt} in ${region || 'global'} for ${service || 'general'}` }],
       temperature: 0.5}),
     let faq: Array<{ q: string, a: string }> = [],
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-=======
     let faq: Array<{ q: string; a: string }> = [];
->>>>>>> main
     try {
       faq = JSON.parse(faqResp.choices?.[0]?.message?.content || "[]");
     } catch {
-<<<<<<< HEAD
-      faq = []
-<<<<<<< HEAD
-=======
-      faq = [];
->>>>>>> main
     }
-
     const h1 = prompt;
-    const slug = String(prompt)
-      .toLowerCase()
-      .replace(/[^a-z0-9]+/g, "-")
-      .replace(/^-+|-+$/g, "");
-
     return res.status(200).json({
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       slug,
       payload: {
@@ -306,6 +282,10 @@ let faq: Array<{ q: string; a: string }> = [];
 <<<<<<< HEAD
     return res.status(500).json({ error: 'Failed to generate landing page' })
 =======
+=======
+      slug
+      payload: {
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -315,34 +295,11 @@ let faq: Array<{ q: string; a: string }> = [];
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   }
 }
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
   }
 }
-;
-    const h1 = prompt;
-    const slug = String(prompt).toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
-    return res.status(200).json({;
-      slug,;
-      payload: {;
-        title,;
-        h1,;
-        bodyHtml: content,;
-        region: region || undefined,;
-        service: service || undefined;
-        faq}});
-  } catch (error) {
-    console.error(e);
-    return res.status(500).json({ error: 'Failed to generate landing page' });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -361,10 +318,12 @@ let faq: Array<{ q: string; a: string }> = [];
     return res.status(500).json({ error: "Internal server error" });
 <<<<<<< HEAD
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     return res.status(500).json({ error: "Failed to generate landing page" });
-
   }
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
@@ -405,3 +364,5 @@ let faq: Array<{ q: string; a: string }> = [];
   }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

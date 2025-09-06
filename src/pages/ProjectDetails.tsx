@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import React, { useState, useEffect } from 'react'
 import Link from 'next/link'
@@ -68,6 +69,8 @@ import {logErrorToProduction} from '@/utils / production_logger';
 
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {
   Card,
   CardContent,
@@ -75,6 +78,7 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
+<<<<<<< HEAD
 import React, { useState, useEffect } from "react",
 import Link from 'next/link';
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -84,6 +88,8 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components / ui / ta
 
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   AlertDialog,
   AlertDialogAction,
   AlertDialogCancel,
@@ -93,6 +99,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components / ui / ta
   AlertDialogHeader,
   AlertDialogTitle,
 
+<<<<<<< HEAD
 import { logErrorToProduction } from '@/utils/productionLogger';import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { format } from "date-fns";
@@ -187,6 +194,8 @@ import { toast } from "@/hooks/use-toast",
 import { supabase } from "@/integrations/supabase/client",
 import { ProjectReviewSection } from "@/components/projects/reviews/ProjectReviewSection",
 import { AlertCircle, Calendar, CheckCircle2, Clock, FileText, Layers, MessageSquare, Video, User, XCircle } from 'lucide-react'
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   Card
   CardContent
@@ -205,7 +214,10 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
   AlertDialogHeader
   AlertDialogTitle
   AlertDialogTrigger
+<<<<<<< HEAD
   AlertDialogTrigger,
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 } from '@/components/ui/alert-dialog'
 import { Avatar } from '@/components/ui/avatar'
 import { Badge } from '@/components/ui/badge'
@@ -224,6 +236,7 @@ import { ProjectReviewSection } from '@/components/projects/reviews/ProjectRevie
   User
   XCircle
 } from 'lucide-react'
+<<<<<<< HEAD
 function ProjectDetailsContent() {
   AlertDialogTrigger} from "@/components/ui/alert-dialog",
 import { Avatar } from "@/components/ui/avatar",
@@ -271,6 +284,8 @@ import { supabase } from "@/integrations/supabase/client",
 import { ProjectReviewSection } from "@/components/projects/reviews/ProjectReviewSection",
 import { AlertCircle, Calendar, CheckCircle2, Clock, FileText, Layers, MessageSquare, Video, User, XCircle } from 'lucide-react'
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 function ProjectDetailsContent() {
   const router = useRouter(),
   // Get projectId from Next.js router query params
@@ -288,6 +303,7 @@ function ProjectDetailsContent() {
   // Load project data
   useEffect(() => {
     async function loadProject() {
+<<<<<<< HEAD
       if (!projectId) return
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
@@ -298,10 +314,13 @@ function ProjectDetailsContent() {
 
       if (!projectId) return;
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       setIsLoading(true)
       const projectData = await getProjectById(projectId)
       if (projectData) {
         setProject(projectData)
+<<<<<<< HEAD
 <<<<<<< HEAD
 
           title: "Project not found",
@@ -314,6 +333,8 @@ ursor/fix-website-loading-errors-and-merge-6662
       const projectData = await getProjectById(projectId)
       if (projectData) {
         setProject(projectData)
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       if (!projectId) return,
       
       setIsLoading(true),
@@ -326,36 +347,6 @@ ursor/fix-website-loading-errors-and-merge-6662
         fetchProjectNotes(projectId)
       } else {
         toast({
-        
-        fetchProjectNotes(projectId)
-      } else {
-        toast({
-          title: 'Project not found'
-          description: 'The requested project could not be found.'
-          variant: 'destructive'
-        })
-        router.push('/dashboard')
-
-
-        // Now fetch notes
-        fetchProjectNotes(projectId)
-      } else {
-        toast({
-
-
-          title: 'Project not found',
-          description: 'The requested project could not be found.',
-          variant: 'destructive',
-        })
-        router.push('/dashboard')
-      }
-
-      setIsLoading(false)
-    }
-
-    loadProject()
-  }, [projectId])
-  const fetchProjectNotes = async (projectId: string) => {    try {
           title: "Project not found",
           description: "The requested project could not be found.",
           variant: "destructive"}),
@@ -424,18 +415,26 @@ function ProjectDetailsContent() {;
         fetchProjectNotes(projectId);
       } else {;
         toast({;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           title: 'Project not found',;
           description: 'The requested project could not be found.',;
           variant: 'destructive',;
         });
         router && router.push('/dashboard');
+=======
+          title: "Project not found",;
+          description: "The requested project could not be found.",;
+          variant: "destructive"}),;
+        router.push("/dashboard");
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       }
 <<<<<<< HEAD
 
 =======
       setIsLoading(false)
     }
+<<<<<<< HEAD
 
       const { data, error } = await supabase
       setIsLoading(false)
@@ -487,11 +486,14 @@ function ProjectDetailsContent() {;
 
       const { data, error } = await supabase
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       const { data, error } = await supabase
         .from("project_notes")
         .select(`
           *,
           created_by_profile:profiles!user_id(display_name, avatar_url)
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         `
         )
@@ -512,6 +514,8 @@ function ProjectDetailsContent() {;
   const handleSubmitNote = async () => {
     if (!newNote.trim() || !project || !user) return;
     setIsSubmittingNote(true)
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         `)
         .eq("project_id", projectId)
         .order("created_at", { ascending: false }),
@@ -533,6 +537,7 @@ function ProjectDetailsContent() {;
     
     setIsSubmittingNote(true),
     
+<<<<<<< HEAD
 <<<<<<< HEAD
   }
 
@@ -619,16 +624,12 @@ ursor/fix-website-loading-errors-and-merge-6662
           content: newNote
           content: newNote,
     
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     try {
       const { data, error } = await supabase
         .from("project_notes")
         .insert({
-          project_id: project.id
-          user_id: user.id
-          content: newNote
-          project_id: project.id,
-          user_id: user.id,
-          content: newNote,
         })
         .select()
       if (error) throw error
@@ -640,8 +641,24 @@ ursor/fix-website-loading-errors-and-merge-6662
         description: 'Your note has been added to the project.'
       })
     } catch (err: any) {
-          project_id: project.id,
-          user_id: user.id,
+      logErrorToProduction('Error adding note:', { data: err })
+      toast({
+        title: 'Failed to add note'
+        description: err.message |'An error occurred while adding note.'
+        variant: 'destructive'
+      })
+    } finally {
+      setIsSubmittingNote(false)
+    }
+  }
+  const handleStatusChange = async (newStatus: ProjectStatus) => {
+    if (!project) return;
+    const success = await updateProjectStatus(project.id, newStatus)
+    if (success) {
+      setProject({
+        ...project
+        status: newStatus
+      })
           content: newNote})
         .select(),
       
@@ -655,26 +672,18 @@ ursor/fix-website-loading-errors-and-merge-6662
         title: "Note added",
         description: "Your note has been added to the project."})
     } catch (err: any) {
-      logErrorToProduction ('Error adding note:', { data: err });
-      toast ({
-        title: 'Failed to add note',
-        description: err.message || 'An error occurred while adding note.',
-        variant: 'destructive',
-      });
-
-      logErrorToProduction('Error adding note:', { data: err })
+      logErrorToProduction('Error adding note:', { data: err }),
       toast({
-        title: 'Failed to add note'
-        description: err.message |'An error occurred while adding note.'
-        variant: 'destructive'
-      })
+        title: "Failed to add note",
+        description: err.message || "An error occurred while adding note.",
+        variant: "destructive"})
     } finally {
       setIsSubmittingNote(false)
     }
-      
-      if (newStatus === "offer_accepted") {
-  }
+  },
+  
   const handleStatusChange = async (newStatus: ProjectStatus) => {
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     if (!project) return;
 
@@ -736,6 +745,20 @@ if ( {) {
 
           title: 'Offer Accepted! 🎉',
           description: 'The project is now in progress. Congratulations!',
+=======
+    if (!project) return,
+    
+    const success = await updateProjectStatus(project.id, newStatus),
+    
+    if (success) {
+      setProject({
+        ...project,
+        status: newStatus}),
+      
+      // If offer was accepted, show a special toast
+      if (newStatus === "offer_accepted") {
+        toast({
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         })
       }
     }
@@ -794,19 +817,7 @@ if ( {) {
         </div>
       </div>
     )
-  
-ursor/fix-website-loading-errors-and-merge-6662
-      <div className='container mx - auto py - 8'>;
-        <div className='flex justify - center items - center h - 64'>;
-          <div className='text - center'>;
-            <div className='animate - spin h - 8 w - 8 border - 4 border - primary border - t-transparent rounded - full mx - auto mb - 4'></div>;
-            <p > Loading project details...</p>;
-          </div>;
-        </div>;
-      </div>);
   }
-  }
-  
   if (!project) {
     return (
       <div className="container mx-auto py-8">
@@ -817,6 +828,7 @@ ursor/fix-website-loading-errors-and-merge-6662
             <p className="text-muted-foreground mb-4">
               The project you're looking for doesn't exist or you don't have access to it.
             </p>
+<<<<<<< HEAD
             <Button onClick={() => router.push('/dashboard')}>              Return to Dashboard
 ursor/fix-website-loading-errors-and-merge-6662
             <Button onClick={() => router.push('/dashboard')}>              Return to Dashboard
@@ -827,13 +839,14 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             </Button>
+          </CardContent>
         </Card>
       </div>
     )
   }
-  // Check if user is either the client or the talent
-  // Check if user is either the client or the talent
   const isClient = user?.id === project.client_id
   const isTalent = user?.id === project.talent_id
   if (!isClient && !isTalent) {
@@ -849,11 +862,6 @@ ursor/fix-website-loading-errors-and-merge-6662
   const isActiveProject = ['offer_accepted', 'in_progress'].includes(
     project.status
   )
-
-  
-  // Check if user is either the client or the talent
-  
-  // Check if user is either the client or the talent
   const isClient = user?.id === project.client_id,
   const isTalent = user?.id === project.talent_id,
   
@@ -866,38 +874,23 @@ ursor/fix-website-loading-errors-and-merge-6662
   const isOfferAccepted = ["offer_accepted", "in_progress", "completed"].includes(project.status),
   const isActiveProject = ["offer_accepted", "in_progress"].includes(project.status),
   
-  
   return (
     <>
       <SEO 
         title={`Project: ${project.job?.title || 'Project Details'} | Zion AI Marketplace`} 
         description="View and manage your project details and collaboration."
-      <main className="container mx-auto px-4 py-8">
-        <div className="mb-6">
-          <div className="flex flex-col md:flex-row justify-between md:items-center gap-4 mb-2">
-            <div>
-              <h1 className='text-3xl font-bold'>
-                {project.job?.title |'Project'}
-              </h1>
-              <div className='flex items-center gap-2 mt-1'>
-ursor/fix-website-loading-errors-and-merge-6662
       />
       <main className="container mx-auto px-4 py-8">
         <div className="mb-6">
           <div className="flex flex-col md:flex-row justify-between md:items-center gap-4 mb-2">
             <div>
-              <h1 className='text-3xl font-bold'>
-                {project.job?.title |'Project'}
-              </h1>
-              <div className='flex items-center gap-2 mt-1'>
-              <h1 className="text-3xl font-bold">{project.job?.title || "Project"}</h1>
-              <div className="flex items-center gap-2 mt-1">
                 {getStatusBadge(project.status)}
                 <span className="text-muted-foreground">
                   Started on {format(new Date(project.start_date), "PPP")}
                 </span>
               </div>
             </div>
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
         title={`Project: ${project && project.job?.title || 'Project Details'} | Zion AI Marketplace`}
@@ -1036,6 +1029,8 @@ if ( {) {
                         <Clock className='h-5 w-5 text-primary mt-0.5' />
               <TabsContent value='documents'>
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             {/* Action Buttons Based on Role and Status */}
             <div className="space-x-2">
               {isTalent && isOfferPending && (
@@ -1056,67 +1051,10 @@ if ( {) {
                       </AlertDialogHeader>
                       <AlertDialogFooter>
                         <AlertDialogCancel>Cancel</AlertDialogCancel>
-                        <AlertDialogAction
-                          onClick={() => handleStatusChange('offer_accepted')}
-                        >                          Accept Offer
-                        <AlertDialogAction onClick={() => handleStatusChange("offer_accepted")}>
-                          Accept Offer
                         </AlertDialogAction>
                       </AlertDialogFooter>
                     </AlertDialogContent>
                   </AlertDialog>
-                        <AlertDialogAction
-                          onClick={() => handleStatusChange('offer_accepted')}
-                        >                          Accept Offer
-                      </AlertDialogFooter>
-                    </AlertDialogContent>
-                  </AlertDialog>
-                  </Button>
-                </>
-              )}
-              {(isClient |isTalent) && project.status === 'in_progress' && (
-                  
-                  <Button variant="outline" onClick={() => handleStatusChange("changes_requested")}>
-                    <MessageSquare className="mr-2 h-4 w-4" /> Request Changes
-
-                        </AlertDialogAction>
-                      </AlertDialogFooter>
-                    </AlertDialogContent>
-                  </AlertDialog>
-
-                        <AlertDialogCancel > Cancel</AlertDialogCancel>;
-                        <AlertDialogAction;
-                          on_click={() => handleStatusChange ('offer_accepted')}
-
-                        >                          Accept Offer;
-                        </AlertDialogAction>;
-                      </AlertDialogFooter>;
-                    </AlertDialogContent>;
-                  </AlertDialog>;
-
-
-
-                  
-                  <Button variant="outline" onClick={() => handleStatusChange("changes_requested")}>
-                    <MessageSquare className="mr-2 h-4 w-4" /> Request Changes
-
-                  </Button>
-              )}
-              
-              {(isClient || isTalent) && project.status === "in_progress" && (
-                <AlertDialog>
-                    <Button variant='default'>
-                      <CheckCircle2 className='mr-2 h-4 w-4' /> Mark as
-                      Completed
-                  <Button
-                    variant='outline'
-                    onClick={() => handleStatusChange('changes_requested')}
-                  >
-                    <MessageSquare className='mr-2 h-4 w-4' /> Request Changes
-                  </Button>
-                </>
-              )}
-              {(isClient |isTalent) && project.status === 'in_progress' && (
                   
                   <Button variant="outline" onClick={() => handleStatusChange("changes_requested")}>
                     <MessageSquare className="mr-2 h-4 w-4" /> Request Changes
@@ -1141,23 +1079,11 @@ if ( {) {
                     </AlertDialogHeader>
                     <AlertDialogFooter>
                       <AlertDialogCancel>Cancel</AlertDialogCancel>
-                      <AlertDialogAction
-                        onClick={() => handleStatusChange('completed')}
-                      >                        Mark as Completed
-ursor/fix-website-loading-errors-and-merge-6662
-                      <AlertDialogAction
-                        onClick={() => handleStatusChange('completed')}
-                      >                        Mark as Completed
-                      <AlertDialogAction onClick={() => handleStatusChange("completed")}>
-                        Mark as Completed
-
-
                       </AlertDialogAction>
+                    </AlertDialogFooter>
                   </AlertDialogContent>
                 </AlertDialog>
               )}
-              
-              
               {isActiveProject && (
                 <Button variant="default" asChild>
                   <Link href={`/project/[id]/milestones`}>
@@ -1172,64 +1098,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                   </Link>
                 </Button>
               )}
-              {(isClient |isTalent) &&
-                ['offer_sent', 'offer_accepted', 'in_progress'].includes(
-                  project.status
-                ) && (
-
-              {(isClient || isTalent) && project && project.status === 'in_progress' && (;
-                <AlertDialog>;
-                  <AlertDialogTrigger asChild>;
-                    <Button variant='default'>;
-                      <CheckCircle2 className='mr-2 h-4 w-4' /> Mark as;
-                      Completed;
-                    </Button>;
-                  </AlertDialogTrigger>;
-                  <AlertDialogContent>;
-                    <AlertDialogHeader>;
-                      <AlertDialogTitle>;
-                        Mark Project as Completed?;
-                      </AlertDialogTitle>;
-                      <AlertDialogDescription>;
-                        This will finalize the project and mark it as complete.;
-                        Make sure all deliverables have been provided and;
-                        approved.;
-                      </AlertDialogDescription>;
-                    </AlertDialogHeader>;
-                    <AlertDialogFooter>;
-                      <AlertDialogCancel>Cancel</AlertDialogCancel>;
-                      <AlertDialogAction
-                        onClick={() => handleStatusChange('completed')}
-                      >                        Mark as Completed;
-                      </AlertDialogAction>;
-                    </AlertDialogFooter>;
-                  </AlertDialogContent>;
-                </AlertDialog>;
-              )}
-
-              {isActiveProject && (;
-                <Button variant='default' asChild>;
-                  <Link href={`/project/[id]/milestones`}>;
-                    <Layers className='mr-2 h-4 w-4' /> Milestones;
-                  </Link>;
-                </Button>;
-              )}
-
-              {isActiveProject && (;
-                <Button variant='outline' asChild>;
-                  <Link href={`/project/[id]/room`}>;
-                    <Video className='mr-2 h-4 w-4' /> Project Room;
-                  </Link>;
-                </Button>;
-              )}
-
-              {(isClient || isTalent) &&;
-                ['offer_sent', 'offer_accepted', 'in_progress'].includes(;
-                  project && project.status;
-                ) && (;
-              {(isClient |isTalent) &&
-
-              {(isClient || isTalent) &&
                 ['offer_sent', 'offer_accepted', 'in_progress'].includes(
                   project.status
                 ) && (
@@ -1252,14 +1120,17 @@ ursor/fix-website-loading-errors-and-merge-6662
               defaultValue='details'
               value={activeTab}
               onValueChange={setActiveTab}
-            >;
-              <TabsList className='mb - 6'>;
-                <TabsTrigger value='details'>Project Details</TabsTrigger>;
-                <TabsTrigger value='timeline'>Timeline</TabsTrigger>;
-                <TabsTrigger value='documents'>Documents</TabsTrigger>;
-                <TabsTrigger value='notes'>Shared Notes</TabsTrigger>;
-
-              
+            >
+              <TabsList className='mb-6'>
+                <TabsTrigger value='details'>Project Details</TabsTrigger>
+                <TabsTrigger value='timeline'>Timeline</TabsTrigger>
+                <TabsTrigger value='documents'>Documents</TabsTrigger>
+                <TabsTrigger value='notes'>Shared Notes</TabsTrigger>
+                {project.status === 'completed' && (
+                  <TabsTrigger value='reviews'>Reviews</TabsTrigger>
+                )}
+              </TabsList>
+              <TabsContent value='details'>
               
               {(isClient || isTalent) && ["offer_sent", "offer_accepted", "in_progress"].includes(project.status) && (
                 <Button 
@@ -1287,10 +1158,8 @@ ursor/fix-website-loading-errors-and-merge-6662
               </TabsList>
               
               <TabsContent value="details">
-ursor/fix-website-loading-errors-and-merge-6662
-
-
                 <Card>
+                  <CardHeader>
                     <CardTitle>Project Scope</CardTitle>
                     <CardDescription>
                       Project details and expectations
@@ -1304,35 +1173,12 @@ ursor/fix-website-loading-errors-and-merge-6662
                           <p className="whitespace-pre-wrap">{project.scope_summary}</p>
                         </div>
                       </div>
-
-                      
-
-
                       <div>
                         <h3 className="font-semibold mb-2">Payment Terms</h3>
                         <Badge variant="outline" className="capitalize">
                           {project.payment_terms} Payment
                         </Badge>
                       </div>
-                        <h3 className="font-semibold mb-2">Job Details</h3>
-                        <div className="bg-muted/30 p-4 rounded-md">
-                          <p className="whitespace-pre-wrap">{project.job?.description}</p>
-ursor/fix-website-loading-errors-and-merge-6662
-                      
-                      
-                      <div>
-                        <h3 className="font-semibold mb-2">Payment Terms</h3>
-                        <Badge variant="outline" className="capitalize">
-                          {project.payment_terms} Payment
-                        </Badge>
-                      </div>
-                      <div>
-                        <h3 className='font-semibold mb-2'>Job Details</h3>
-                        <div className='bg-muted/30 p-4 rounded-md'>
-                          <p className='whitespace-pre-wrap'>
-                            {project.job?.description}
-                          </p>
-                      
                       <div>
                         <h3 className="font-semibold mb-2">Job Details</h3>
                         <div className="bg-muted/30 p-4 rounded-md">
@@ -1343,14 +1189,8 @@ ursor/fix-website-loading-errors-and-merge-6662
                   </CardContent>
                 </Card>
               </TabsContent>
-              <TabsContent value='timeline'>
-ursor/fix-website-loading-errors-and-merge-6662
-              <TabsContent value='timeline'>
-              
-              <TabsContent value="timeline">
-
-
                 <Card>
+                  <CardHeader>
                     <CardTitle>Project Timeline</CardTitle>
                     <CardDescription>
                       Key dates and milestones
@@ -1365,25 +1205,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                           <p>{format(new Date(project.start_date), "PPP")}</p>
                         </div>
                       </div>
-                      <div className='flex items-start gap-3 p-3 bg-muted/30 rounded-md'>
-                        <Clock className='h-5 w-5 text-primary mt-0.5' />
-                          <h3 className="font-semibold">Project Status</h3>
-                          <div className="mt-1">
-ursor/fix-website-loading-errors-and-merge-6662
-
-                      
-                      <div className="flex items-start gap-3 p-3 bg-muted/30 rounded-md">
-                        <Clock className="h-5 w-5 text-primary mt-0.5" />
-
-
-                        <div>
-                          <h3 className='font-semibold'>Project Status</h3>
-                          <div className='mt-1'>
-                      <div className='flex items-start gap-3 p-3 bg-muted/30 rounded-md'>
-                        <Clock className='h-5 w-5 text-primary mt-0.5' />
-                      
-                      <div className="flex items-start gap-3 p-3 bg-muted/30 rounded-md">
-                        <Clock className="h-5 w-5 text-primary mt-0.5" />
                         <div>
                           <h3 className="font-semibold">Project Status</h3>
                           <div className="mt-1">
@@ -1395,14 +1216,8 @@ ursor/fix-website-loading-errors-and-merge-6662
                   </CardContent>
                 </Card>
               </TabsContent>
-              <TabsContent value='documents'>
-ursor/fix-website-loading-errors-and-merge-6662
-              <TabsContent value='documents'>
-              
-              <TabsContent value="documents">
-
-
                 <Card>
+                  <CardHeader>
                     <CardTitle>Project Documents</CardTitle>
                     <CardDescription>
                       Agreements and relevant files
@@ -1419,6 +1234,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                               Uploaded when project was created
                             </p>
                           </div>
+<<<<<<< HEAD
                         </div>
               <TabsContent value='notes'>
 ursor/fix-website-loading-errors-and-merge-6662
@@ -1730,6 +1546,8 @@ ursor/fix-website-loading-errors-and-merge-6662
                               No notes yet. Add the first note to this project.;
                             </p>;
                           </div>;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                         )}
 
                       </div>;
@@ -1745,6 +1563,44 @@ ursor/fix-website-loading-errors-and-merge-6662
 
                                 <span className="font-medium text-sm">
                                   {note.created_by_profile?.display_name || "User"}
+                        </div>
+                        <Button variant="outline" size="sm" asChild>
+                          <a href={project.agreement_url} target="_blank" rel="noopener noreferrer">
+                            View
+                          </Link>
+                        </Button>
+                      </div>
+                    ) : (
+                      <div className="text-center py-8">
+                        <FileText className="h-10 w-10 text-muted-foreground mx-auto mb-2" />
+                        <h3 className="font-semibold">No Documents Yet</h3>
+                        <p className="text-sm text-muted-foreground">
+                          No documents have been uploaded to this project.
+                        </p>
+                      </div>
+                    )}
+                  </CardContent>
+                </Card>
+              </TabsContent>
+                <Card>
+                  <CardHeader>
+                    <CardTitle>Project Notes</CardTitle>
+                    <CardDescription>
+                      Shared notes and updates
+                    </CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <div className="space-y-4">
+                      <div className="space-y-4 max-h-[400px] overflow-y-auto mb-4">
+                        {notes.length > 0 ? (
+                                  {note.created_by_profile?.avatar_url ? (
+                                    <img
+                                      src={note.created_by_profile.avatar_url}
+                                      alt={note.created_by_profile.display_name}
+                                  ) : (
+                                    <User className="h-4 w-4" />
+                                  )}
+                                </Avatar>
                                 </span>
                                 <span className="text-xs text-muted-foreground">
                                   {format(new Date(note.created_at), "PPp")}
@@ -1761,6 +1617,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                             </p>
                           </div>
                         )}
+<<<<<<< HEAD
                           <Button
                             onClick = {handleSubmitNote,}
                             disabled = {!newNote.trim() |isSubmittingNote,}
@@ -1776,6 +1633,11 @@ ursor/fix-website-loading-errors-and-merge-6662
                           <Button
                             onClick = {handleSubmitNote,}
                             disabled = {!newNote.trim() |isSubmittingNote,}
+=======
+                      </div>
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       
                       {isOfferAccepted && (
                         <div>
@@ -1785,6 +1647,12 @@ ursor/fix-website-loading-errors-and-merge-6662
                             onChange={(e) => setNewNote(e.target.value)}
                             className="min-h-[100px] mb-2"
                           />
+<<<<<<< HEAD
+=======
+
+
+                          <Button
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                             onClick={handleSubmitNote}
                             disabled={!newNote.trim() || isSubmittingNote}
                           <Button
@@ -1799,6 +1667,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                   </CardContent>
                 </Card>
               </TabsContent>
+<<<<<<< HEAD
               <TabsContent value='reviews'>
               <TabsContent value='reviews'>
               
@@ -1820,6 +1689,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 
               
               <TabsContent value="reviews">
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
                 <ProjectReviewSection project={project} />
@@ -1828,6 +1699,7 @@ ursor/fix-website-loading-errors-and-merge-6662
           </div>
 
 
+<<<<<<< HEAD
           
           <div className="order-1 lg:order-2 lg:col-span-1">
 
@@ -1836,11 +1708,21 @@ ursor/fix-website-loading-errors-and-merge-6662
           <div className="order-1 lg:order-2 lg:col-span-1">
           
           <div className="order-1 lg:order-2 lg:col-span-1">
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <Card>
                 <CardTitle>Project Participants</CardTitle>
               </CardHeader>
               <CardContent>
-                <div className='space-y-6'>
+                      {project.talent_profile?.profile_picture_url ? (
+                        <img
+                          src={project.talent_profile.profile_picture_url}
+                          alt={project.talent_profile.full_name}
+                      ) : (
+                        <User className="h-6 w-6" />
+                      )}
+                    </Avatar>
+                    <div>
                   <div className='flex items-start gap-4'>
                     <Avatar className='h-10 w-10'>
                         <Button variant='outline' size='sm' as_child>;
@@ -1938,11 +1820,18 @@ ursor/fix-website-loading-errors-and-merge-6662
                 <div className='space - y-6'>;
                   <div className='flex items - start gap - 4'>;
                     <Avatar className='h - 10 w - 10'>;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+                <div className="space-y-6">
+                  <div className="flex items-start gap-4">
+                    <Avatar className="h-10 w-10">
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       {project.talent_profile?.profile_picture_url ? (
                         <img;
                           src={project.talent_profile.profile_picture_url}
                           alt={project.talent_profile.full_name}
+<<<<<<< HEAD
 <<<<<<< HEAD
                       ) : (
                         <User className='h-6 w-6' />
@@ -2001,6 +1890,15 @@ ursor/fix-website-loading-errors-and-merge-6662
                       )}
                     </Avatar>
                     <div>
+=======
+
+
+                      ) : (
+                        <User className="h-6 w-6" />
+                      )}
+                    </Avatar>
+                    <div>
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                           variant='outline'
                           size='sm'
                           className='mt-2'
@@ -2010,20 +1908,13 @@ ursor/fix-website-loading-errors-and-merge-6662
                             )
                           }                        >
                           <MessageSquare className='mr-1 h-3 w-3' /> Message
-                      <h3 className="font-semibold">
-                        {project.talent_profile?.full_name || "Talent"}
-                      </h3>
-                      <p className="text-sm text-muted-foreground">
-                        {project.talent_profile?.professional_title || "Professional"}
-                      </p>
-                      {isClient && (
-                        <Button
                           variant="outline"
                           size="sm"
                           className="mt-2"
                           onClick={() => router.push(`/messages?talentId=${project.talent_id}`)}
                         >
                           <MessageSquare className="mr-1 h-3 w-3" /> Message
+<<<<<<< HEAD
                       )}
                     </div>
                   </div>
@@ -2091,10 +1982,13 @@ ursor/fix-website-loading-errors-and-merge-6662
                         >
                           <MessageSquare className="mr-1 h-3 w-3" /> Message
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                         </Button>
                       )}
                     </div>
                   </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
                   <div className='flex items-start gap-4'>
@@ -2136,10 +2030,13 @@ ursor/fix-website-loading-errors-and-merge-6662
                     <Avatar className="h-10 w-10">
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       {project.talent_profile?.profile_picture_url ? (
                         <img;
                           src={project.talent_profile.profile_picture_url}
                           alt={project.talent_profile.full_name}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -2152,11 +2049,14 @@ ursor/fix-website-loading-errors-and-merge-6662
                           loading="lazy"
                         />
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       ) : (
                         <User className='h-6 w-6' />
                       )}
                     </Avatar>
                     <div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -2180,10 +2080,13 @@ ursor/fix-website-loading-errors-and-merge-6662
                         {project.talent_profile?.full_name |'Client'}
                       <h3 className="font-semibold">
                         {project.talent_profile?.full_name || "Client"}
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       </h3>
                       <p className="text-sm text-muted-foreground">Project Owner</p>
                       {isTalent && (
                         <Button
+<<<<<<< HEAD
                           variant='outline'
                           size='sm'
                           className='mt-2'
@@ -3174,6 +3077,8 @@ ursor/fix-website-loading-errors-and-merge-6662
             </Card>;
             {/* Project Status Card */}
             <Card className="mt-6">
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
               <CardHeader>
@@ -3188,6 +3093,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                     <span className='text-sm font-medium'>Current Status:</span>
                     <div>{getStatusBadge(project.status)}</div>
                   </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -3215,12 +3121,15 @@ ursor/fix-website-loading-errors-and-merge-6662
                     <span className="text-sm font-medium">Start Date:</span>
                     <span className="text-sm">
                       {format(new Date(project.start_date), "PPP")}
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
                     </span>
                   </div>
                 </div>
               </CardContent>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -3331,12 +3240,15 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 =======
               
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               {/* Conditional Footer Based on Status */}
               {project.status === "changes_requested" && isClient && (
                 <CardFooter className="flex-col items-start gap-2 border-t pt-6">
                   <p className="text-sm text-amber-600 flex items-center gap-1">
                     <AlertCircle className="h-4 w-4" /> The talent has requested changes to this offer.
                   </p>
+<<<<<<< HEAD
                   </Button>
                 </CardFooter>
               )}
@@ -3344,6 +3256,8 @@ ursor/fix-website-loading-errors-and-merge-6662
                 <CardFooter className='flex-col items-start gap-2 border-t pt-6'>
                   <p className='text-sm text-muted-foreground'>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
                   <Button 
@@ -3353,10 +3267,14 @@ ursor/fix-website-loading-errors-and-merge-6662
                   >
                     <MessageSquare className="mr-2 h-4 w-4" /> Discuss Changes
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
                   </Button>
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                   </Button>
@@ -3370,6 +3288,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                   </p>
                 </CardFooter>
               )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
               {project.status === 'completed' && (
@@ -3419,6 +3338,8 @@ ursor/fix-website-loading-errors-and-merge-6662
                     <MessageSquare className='mr-2 h-4 w-4' /> Discuss Changes;
                   </Button>;
                 </CardFooter>;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               )}
 
               {project && project.status === 'offer_sent' && isClient && (;
@@ -3446,6 +3367,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                   </p>;
                 </CardFooter>;
               )}
+<<<<<<< HEAD
               {/* Conditional Footer Based on Status */}
               {project.status === 'changes_requested' && is_client && (
                 <CardFooter className='flex - col items - start gap - 2 border - t pt - 6'>;
@@ -3686,6 +3608,17 @@ const ProjectDetails = () => {;
 
   );
 =======
+=======
+            </Card>
+          </div>
+        </div>
+      </main>
+    </>
+  )
+}
+setIsSubmittingNote (true)
+try {
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   if (error) throw error
 //Refresh notes
 }catch (err: any) {'
@@ -3696,7 +3629,6 @@ toast ({
 }finally {
   setIsSubmittingNote (false)
 }
-const handleStatusChange = async (newStatus: ProjectStatus) => {
   if (!project) return;
 const success = await updateProjectStatus (project.id, newStatus)
 if (success) {
@@ -3712,8 +3644,6 @@ case "in progress": return <Badge className="bg-blue-100 text-blue-800">In Progr
 case "completed": return <Badge variant="default">Completed</Badge>;"
 case "canceled": return <Badge variant="destructive">Canceled</Badge>;"
 default: return <Badge variant="outline"> {
-  status
-  status 
 }</Badge>
 };'"
 <p>Loading project details...</p> </div> </div> </div> <Card> <CardContent className="flex flex-col items-center justify-center py-10" > <AlertCircle className="h-10 w-10 text-muted-foreground mb-4" /> <h2 className="text-xl font-bold mb-2" >Project Not Found</h2> <p className="text-muted-foreground mb-4" > The project you're looking for doesn't exist or you don't have access to it. </p> <Button onClick={"
@@ -3773,7 +3703,10 @@ default: return <Badge variant="outline"> {
     <ProtectedRoute>
       <ProjectDetailsContent />
     </ProtectedRoute>
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from "react"
 import Head from "next/head"
 import Link from "next/link"
@@ -3797,19 +3730,19 @@ const ProjectDetails = () => {
               <div className="bg-white p-6 rounded-lg shadow-md">
                 <h2 className="text-2xl font-semibold mb-4">Our Services</h2>
                 <ul className="text-gray-600 space-y-2">
-                  <li>• Professional Solutions</li>
-                  <li>• Expert Implementation</li>
-                  <li>• 24/7 Support</li>
-                  <li>• Custom Development</li>
+                  <li> Professional Solutions</li>
+                  <li> Expert Implementation</li>
+                  <li> 24/7 Support</li>
+                  <li> Custom Development</li>
                 </ul>
               </div>
               <div className="bg-white p-6 rounded-lg shadow-md">
                 <h2 className="text-2xl font-semibold mb-4">Why Choose Us</h2>
                 <ul className="text-gray-600 space-y-2">
-                  <li>• Industry Expertise</li>
-                  <li>• Proven Results</li>
-                  <li>• Scalable Solutions</li>
-                  <li>• Competitive Pricing</li>
+                  <li> Industry Expertise</li>
+                  <li> Proven Results</li>
+                  <li> Scalable Solutions</li>
+                  <li> Competitive Pricing</li>
                 </ul>
               </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -3819,6 +3752,7 @@ const ProjectDetails = () => {
               <Link href="/contact/" className="bg-gray-600 text-white px-6 py-3 rounded-lg hover:bg-gray-700 transition-colors">
                 Contact Us
               </Link>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
             </div>
@@ -3848,6 +3782,8 @@ const ProjectDetails = () => {
     </>;
   );
 };
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             </Card>;
           </div>;
         </div>;
@@ -3864,6 +3800,7 @@ export default function ProjectDetails() {;
   );
 }
 ;
+<<<<<<< HEAD
 
 }
 
@@ -3984,3 +3921,5 @@ const ProjectDetails = () =>: any {
     </>);
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

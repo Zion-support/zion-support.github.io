@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -6,6 +7,8 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {useState} from "react";
 import {useForm} from "react-hook-form";
 import {Card, CardContent, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
@@ -14,6 +17,7 @@ import {Input} from "@/components/ui/input";
 import {Button} from "@/components/ui/button";
 import {Textarea} from "@/components/ui/textarea";
 import {ForumCategory} from "@/types/community";
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -30,6 +34,10 @@ import { useForm } from "react-hook-form",
 import { useState } from "react",
 import { useForm } from "react-hook-form",
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+import { useState } from "react",
+import { useForm } from "react-hook-form",
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { 
   Card;
   CardContent;
@@ -47,6 +55,7 @@ import {
 } from "@/components/ui/form",
 import { Input } from "@/components/ui/input",
 import { Button } from "@/components/ui/button",
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -63,15 +72,20 @@ import { Textarea } from "@/components/ui/textarea",
 import { ForumCategory } from "@/types/community",
 interface PostFormValues {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface PostFormValues {
   title: string,
   content: string,
   categoryId: ForumCategory,
   tags: string
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 }
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   title: string
   content: string
@@ -80,7 +94,10 @@ interface PostFormValues {
   tags: string
 }
 interface PostFormProps {
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   initialValues?: Partial<PostFormValues>;
   onSubmit: (values: PostFormValues) => void,
   isEditing?: boolean
@@ -90,10 +107,13 @@ export const PostForm = ({;
   initialValues;
   onSubmit;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useState } from "react",;
 import { useForm } from "react-hook-form",;
 import {;
@@ -129,15 +149,19 @@ interface PostFormProps {;
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   initialValues?: Partial<PostFormValues>;
   onSubmit: (values: PostFormValues) => void
   isEditing?: boolean
 }
 export const PostForm = ({
+<<<<<<< HEAD
   initialValues;
   onSubmit;
 <<<<<<< HEAD
@@ -145,10 +169,13 @@ export const PostForm = ({
   initialValues,
   onSubmit,
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   isEditing = false
 }: PostFormProps) => {
   const form = useForm<PostFormValues>({
     defaultValues: {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 import {useState} from "react";
@@ -256,6 +283,14 @@ export const PostForm = ({
     } finally {
       setIsSubmitting(false)
     }
+=======
+    }
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+    try {
+      await on_submit (values);
+    } finally {
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   }
       title: initialValues?.title || "",
       content: initialValues?.content || "",
@@ -265,13 +300,19 @@ export const PostForm = ({
   };
   }),;
   const [isSubmitting, setIsSubmitting] = useState(false),;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const handleSubmit = async (values: PostFormValues) => {;
     setIsSubmitting(true),;
     try {;
       await onSubmit(values);
     } finally {;
       setIsSubmitting(false);
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     }
@@ -394,6 +435,9 @@ export const PostForm = ({
 
 
 
+=======
+    }
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <Card>;
       <CardHeader>;
@@ -430,41 +474,15 @@ export const PostForm = ({
                     <Input placeholder="Enter post title..." {...field} />;
                   </FormControl>;
                   <FormMessage />;
-            />;
-            <FormField
-              control={form && form.control}
-              name="content"
-              render={({ field }) => (;
-                <FormItem>;
-                  <FormLabel>Content</FormLabel>;
-                  <FormControl>;
-                    <Textarea
-                      placeholder="Write your post content here..." 
-                      className="min-h-[200px]"
-                      {...field} 
-                    />;
-                  </FormControl>;
-                  <FormMessage />;
-                </FormItem>;
-              )}
-            />;
-            <FormField
-              control={form && form.control}
-              name="categoryId"
               render={({ field }) => (;
                 <FormItem>;
                   <FormLabel>Category</FormLabel>;
                   <FormControl>;
-                    <select
-                      className="w-full p-2 border rounded-md"
-                      {...field}>;
-                      <option value="getting-hired">Getting Hired</option>;
-                      <option value="project-help">Project Help</option>;
-                      <option value="ai-tools">AI Tools Discussion</option>;
                       <option value="feedback">Feedback & Feature Requests</option>;
                     </select>;
                   </FormControl>;
                   <FormMessage />;
+<<<<<<< HEAD
                 </FormItem>;
               )}
             />;
@@ -641,10 +659,13 @@ export const PostForm = ({
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     </Card>);
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 ;
 export default PostForm;
 ;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -844,3 +865,8 @@ export default PostForm,
 export default PostForm;
 export default PostForm,
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+export default PostForm;
+export default PostForm,
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

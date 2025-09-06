@@ -1,6 +1,7 @@
 ;
 interface PerformanceMetrics {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   loadTime: number, firstContentfulPaint: number
   largestContentfulPaint: number, firstInputDelay: number
@@ -9,6 +10,8 @@ interface PerformanceMetrics {
 export function usePerformanceMonitor() {
 
 export function usePerformanceMonitor() {;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
   const [isSupported, setIsSupported] = useState(false);
   useEffect(() => {
@@ -20,10 +23,13 @@ export function usePerformanceMonitor() {;
   }
     setIsSupported(true);
     const observer = new PerformanceObserver((list) => {
+<<<<<<< HEAD
       const entries = list.getEntries();
       entries.forEach((entry) => {
         if (entry.entryType === 'navigation') {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
       const entries = list && list.getEntries();
       
@@ -35,6 +41,7 @@ export function usePerformanceMonitor() {;
             loadTime: navEntry && navEntry.loadEventEnd - navEntry && navEntry.loadEventStart,
           }));
         }
+<<<<<<< HEAD
         
         if (entry && entry.entryType === 'paint') {
 <<<<<<< HEAD
@@ -80,6 +87,11 @@ export function usePerformanceMonitor() {;
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+          const paintEntry = entry as PerformancePaintTiming;
+          if (paintEntry && paintEntry.name === 'first-contentful-paint') {
+            setMetrics(prev => ({
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   load_time: number, firstContentfulPaint: number,
   largestContentfulPaint: number, firstInputDelay: number,
   cumulativeLayoutShift: number,
@@ -168,6 +180,7 @@ if ( {) {
       });
     });
 <<<<<<< HEAD
+<<<<<<< HEAD
 
       observer && observer.disconnect();
     };
@@ -176,11 +189,16 @@ if ( {) {
       observer && observer.disconnect();
     };
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   }, []);
   return { metrics, isSupported }
 }
 
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ;
     // Observe different performance entry types;
     try {
@@ -195,5 +213,8 @@ if ( {) {
   }, []);
 ;
   return { metrics, is_supported }
+<<<<<<< HEAD
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

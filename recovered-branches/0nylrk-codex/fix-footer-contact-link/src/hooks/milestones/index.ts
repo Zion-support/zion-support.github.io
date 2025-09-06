@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 export * from './use_milestones';
 ;
@@ -6,17 +7,22 @@ export * from './use_milestones';
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 // Index utility
 export const Index = () => {
   // Implementation here
   return null;
 };
 
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export * from './types';
 export * from './useLoadMilestones';
 export * from './useCreateMilestone';
@@ -25,7 +31,12 @@ export * from './useDeleteMilestone';
 export * from './useUploadDeliverable';
 export * from './useRecordActivity';
 export * from './useMilestones';
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export * from './types',;
 export * from './useLoadMilestones',;
 export * from './useCreateMilestone',;
@@ -33,6 +44,7 @@ export * from './useUpdateMilestone',;
 export * from './useDeleteMilestone',;
 export * from './useUploadDeliverable',;
 export * from './useRecordActivity',;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -45,3 +57,6 @@ export * from './useMilestones';
 export * from './useMilestones';
 export * from './useMilestones';
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+export * from './useMilestones';
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

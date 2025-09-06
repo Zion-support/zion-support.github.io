@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 class ErrorBoundary extends React.Component {
@@ -31,6 +32,8 @@ class ErrorBoundary extends React.Component {
 
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from "react";
 type Props = {;
 =======
@@ -39,6 +42,7 @@ type Props = {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   title: string;
   description: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   cta?: React && React.ReactNode;
@@ -63,6 +67,8 @@ export default function FuturisticCard(): any ({ title, description, cta }: Prop
     </div>;
   );
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ;
 export default /**
  * FuturisticCard - Function description
@@ -77,6 +83,7 @@ function FuturisticCard() {
         {cta && <div className="mt - 3">{cta}</div>}
       </div>;
     </div>);
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 }
@@ -116,3 +123,5 @@ function FuturisticCard() {
 =======
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

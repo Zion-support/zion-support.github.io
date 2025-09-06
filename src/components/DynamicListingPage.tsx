@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState, useEffect } from "react";
 import { useRouter  } from 'next/router';
 import { GradientHeading } from "@/components/GradientHeading",
@@ -49,47 +50,24 @@ import { Input } from "@/components/ui/input",
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger',
 <<<<<<< HEAD
 =======
+=======
+  title,
+  description,
+  categorySlug,
+  listings: allListings,
+  categoryFilters,
+  initialPrice = { min: 0, max: 10000 },
+
+      prev.includes(category)
+        ? prev.filter(c => c !== category)
+        : [...prev, category]
+    )
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {
   Select,
   SelectValue,
   SelectTrigger,
   SelectContent,
-  SelectItem,
-} from '@/components/ui/select'
-import { Checkbox } from '@/components/ui/checkbox'
-import Skeleton from 'react-loading-skeleton'
-import 'react-loading-skeleton/dist/skeleton.css'
-import { Slider } from '@/components/ui/slider'
-import { ProductListing, ListingView } from '@/types/listings'
-import { Search, Filter, LayoutGrid, List, Star } from 'lucide-react'
-import { toast } from '@/hooks/use-toast'
-import { captureException } from '@/utils/sentry'
-interface PriceRange {
-  min: number
-max: number 
-}interface DynamicListingPageProps {
-  title: string
-description: string
-categorySlug: string
-listings: ProductListing[]
-categoryFilters: {
-  label: string, value: string 
-}[]
-initialPrice?: PriceRange
-}const toggleCategory = (category: string) => {
-  setSelectedCategories (prev => prev.includes (category) ? prev.filter (c => c !== category) : [...prev, category] min: 0
-max: 10000 
-})
-  SelectItem} from "@/components/ui/select",
-import { Checkbox } from "@/components/ui/checkbox",
-import Skeleton from "react-loading-skeleton",
-import "react-loading-skeleton/dist/skeleton.css",
-import { Slider } from "@/components/ui/slider",
-import { ProductListing, ListingView } from "@/types/listings",
-import { Search, Filter, LayoutGrid, List, Star } from 'lucide-react'
-import { toast } from "@/hooks/use-toast",
-import { captureException } from "@/utils/sentry",
-interface PriceRange {
   min: number,
   max: number
 import { useState, useEffect } from "react",;
@@ -130,7 +108,9 @@ interface DynamicListingPageProps {;
    */;
   detailBasePath?: string;
 }
+
 export function DynamicListingPage({
+<<<<<<< HEAD
 
 
 
@@ -175,6 +155,8 @@ export function DynamicListingPage({
   const [searchQuery, setSearchQuery] = useState('')
   const [selectedCategories, setSelectedCategories] = useState<string[]>([])
   const toggleCategory = (category: string) => {    setSelectedCategories(prev =>
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   detailBasePath = "/marketplace/listing"}: DynamicListingPageProps) {
   const router = useRouter(),
   const [searchQuery, setSearchQuery] = useState(""),
@@ -185,6 +167,7 @@ export function DynamicListingPage({
         ? prev.filter(c => c !== category)
         : [...prev, category]
     )
+<<<<<<< HEAD
         ? prev.filter(c => c !== category)
         : [...prev, category]
     )
@@ -206,10 +189,13 @@ export function DynamicListingPage({
     <List className='h-4 w-4' />
   ) : (
     if (min == null |max == null |isNaN(min) |isNaN(max)) return
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   // Swap icons to match action
   const ToggleViewIcon = isGrid ? (
     <List className="h-4 w-4" />
   ) : (
+<<<<<<< HEAD
     <LayoutGrid className='h-4 w-4' />
   )
   const [isLoading, setIsLoading] = useState(false)
@@ -297,50 +283,23 @@ function DynamicListingPage() {
       prev.includes (category);
         ? prev.filter (c => c !== category);
         : [...prev, category]);
+=======
+    setCurrentPriceFilter([min, max])
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   }
-  const clear_categories = () =>: any setSelectedCategories ([]);
-  const [view, set_view] = useState < ListingView>('grid');
-  const is_grid = view === 'grid';
-  // Swap icons to match action;
-  const ToggleViewIcon = is_grid ? (
-    <List className='h - 4 w - 4' />) : (
-    <LayoutGrid className='h - 4 w - 4' />);
-  const [is_loading, setIsLoading] = useState (false);
-  const [price_range, setPriceRange] = useState < PriceRange>({
-    min: 0,
-    max: 10000,
-  });
-  const [selected_rating, setSelectedRating] = useState < number | null>(null);
-  const [selected_brand, setSelectedBrand] = useState ('all');
-  const [spec_query, setSpecQuery] = useState ('');
-  const [selected_availability, setSelectedAvailability] = useState ('all');
-  const [sort_option, setSortOption] = useState ('newest');
-  const brand_options = Array.from (
-    new Set (all_listings.map (l => l.brand).filter (Boolean)));
-  const availability_options = Array.from (
-    new Set (all_listings.map (l => l.availability).filter (Boolean)));
-  useEffect (() => {
-    const listingsWithPrice = all_listings.filter (l => l.price !== null);
-    // Check condition
-if ( {) {
-  $2
-}
-      const max = Math.max (...listingsWithPrice.map (l => l.price || 0));
-      setPriceRange ({ min: 0, max });
-      setCurrentPriceFilter ([0, max]) }
-  }, [all_listings]);
-  const [currentPriceFilter, setCurrentPriceFilter] = useState<;
-    [number, number];
-  >([0, initial_price.max]);
-  const handleSliderChange = (values: number[]) =>: any {
-    const [min, max] = values.map (Number);
-    if (|| isNaN (max)) return) {
-  $2
-}
-    setCurrentPriceFilter ([min, max]);
+  },
+  const clearCategories = () => setSelectedCategories([]),
+  const [view, setView] = useState<ListingView>("grid"),
+  const isGrid = view === "grid",
+  // Swap icons to match action
+  const ToggleViewIcon = isGrid ? (
+    <List className='h-4 w-4' />
+  ) : (
+    setCurrentPriceFilter([min, max])
   }
-  let filtered_listings: ProductListing[] = [];
+  let filteredListings: ProductListing[] = []
   try {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -360,6 +319,9 @@ if ( {) {
         (listing.brand && listing.brand === selectedBrand)
     filteredListings = allListings.filter(listing => {      const matchesSearch = null;
     filteredListings = allListings.filter(listing => {      const matchesSearch = null;
+=======
+    filteredListings = allListings.filter(listing => {      const matchesSearch = null;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <LayoutGrid className="h-4 w-4" />
   ),
   const [isLoading, setIsLoading] = useState(false),
@@ -406,6 +368,7 @@ if ( {) {
         listing.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
         (listing.tags &&
           listing.tags.some((tag: string) =>
+<<<<<<< HEAD
             tag.toLowerCase().includes(searchQuery.toLowerCase())
           ))
       const matchesBrand = null;
@@ -446,6 +409,13 @@ if ( {) {
           listing.specifications.some(s =>
             s.toLowerCase().includes(specQuery.toLowerCase())
           )) |
+=======
+            tag.toLowerCase().includes(searchQuery.toLowerCase()))),
+
+      const matchesSpecs =
+        !specQuery |
+        (listing.specifications &&
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         (listing.tags &&
           listing.tags.some(tag =>
             tag.toLowerCase().includes(specQuery.toLowerCase())
@@ -454,6 +424,7 @@ if ( {) {
         selectedAvailability === 'all' |
         (listing.availability && listing.availability === selectedAvailability)
       const matchesCategory =
+<<<<<<< HEAD
         selectedCategories.length === 0 |
         selectedCategories.includes(listing.category)
           listing.specifications.some((s) =>
@@ -476,6 +447,11 @@ if ( {) {
           listing.price <= currentPriceFilter[1])
           listing.price <= currentPriceFilter[1]),
 
+=======
+      const matchesPrice =
+        listing.price === null |
+        (listing.price >= currentPriceFilter[0] &&
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       const matchesRating =
         selectedRating === null |
         (listing.rating !== undefined && listing.rating >= selectedRating)
@@ -492,6 +468,7 @@ if ( {) {
         matchesSpecs &&
         matchesAvailability
       )
+<<<<<<< HEAD
     })
     filteredListings.sort((a, b) => {      switch (sortOption) {
         case 'price-asc':
@@ -515,6 +492,16 @@ if ( {) {
     setIsLoading(true)
     const listing = allListings.find(item => item.id === listingId)
     setTimeout(() => {
+=======
+          return (
+            new Date (b.created_at).get_time () - new Date (a.created_at).get_time ());
+      }
+    });
+  } catch (error) {
+    capture_exception (error);
+    logErrorToProduction ('Listing filter error:', { data: error });
+  }
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   const handleRequestQuote = (listingId: string) => {;
     setIsLoading(true);
@@ -525,6 +512,7 @@ if ( {) {
           title: 'Quote Requested'
           description: `Your quote request for ${listing.title} has been sent.`
         })
+<<<<<<< HEAD
     }),
     filteredListings.sort((a, b) => {
       switch (sortOption) {
@@ -745,40 +733,43 @@ export function DynamicListingPage(): any ({;
   } catch (error) {;
     captureException(error),;
     logErrorToProduction('Listing filter error:', { data: error });
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
         router.push ('/request - quote');
 
       }
     }, 500);
   }
+    const listing = allListings.find((item) => item.id === listingId),
 
+<<<<<<< HEAD
   const handleRequestQuote = (listingId: string) => {
     setIsLoading(true),
+=======
+    setTimeout(() => {
+      setIsLoading(false),
+      if (listing) {
+        toast({
+          title: "Quote Requested",
+          description: `Your quote request for ${listing.title} has been sent.`}),
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
         // Store quote data in sessionStorage for the request-quote page
         const quoteData = {
           serviceType: categorySlug
           specificItem: {
+<<<<<<< HEAD
         const quoteData = {
           serviceType: categorySlug
           specificItem: {
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             id: listing.id
             title: listing.title
             category: listing.category
             image: listing.images?.[0]
           }
-        }
-        if (typeof window !== 'undefined') {
-          sessionStorage.setItem('quoteRequestData', JSON.stringify(quoteData))
-        }
-            id: listing.id,
-            title: listing.title,
-            category: listing.category,
-            image: listing.images?.[0],
-          },
-        }
-            image: listing.images?.[0]}},
-        
         if (typeof window !== 'undefined') {
           sessionStorage.setItem('quoteRequestData', JSON.stringify(quoteData))
         }
@@ -787,6 +778,7 @@ export function DynamicListingPage(): any ({;
       }
     }, 500)
   }
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
             id: listing.id,
             title: listing.title,
@@ -799,6 +791,8 @@ export function DynamicListingPage(): any ({;
 
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         router.push("/request-quote")
       }
     }, 500)
@@ -813,6 +807,7 @@ export function DynamicListingPage(): any ({;
             {description}
           </p>
         </div>
+<<<<<<< HEAD
         <div className='grid grid-cols-1 lg:grid-cols-4 gap-6'>
           <div className='lg:col-span-1'>
             <div className='bg-zion-blue-dark rounded-lg border border-zion-blue-light p-4 sticky top-6'>
@@ -833,6 +828,8 @@ export function DynamicListingPage(): any ({;
   return (
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
           <div className="lg:col-span-1">
@@ -843,6 +840,7 @@ export function DynamicListingPage(): any ({;
 
               <div className="mb-6">
                 <label className="text-sm font-medium text-zion-slate-light block mb-2">
+<<<<<<< HEAD
                   Categories
                 <div className='space-y-2'>
                   {categoryFilters.map(filter => (
@@ -851,18 +849,29 @@ export function DynamicListingPage(): any ({;
                 </label>
                 <div className="space-y-2">
                   {categoryFilters.map(filter => (
+=======
+
+
+                  Categories
+                <div className='space-y-2'>
+                  {categoryFilters.map(filter => (
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     <div key={filter.value} className="flex items-center">
                       <Checkbox
                         id={`cat-${filter.value}`}
                         checked={selectedCategories.includes(filter.value)}
                         onCheckedChange={() => toggleCategory(filter.value)}
+<<<<<<< HEAD
                         className='border-zion-slate-light data-[state=checked]:bg-zion-purple data-[state=checked]:border-zion-purple'                      />
                         className="border-zion-slate-light data-[state=checked]:bg-zion-purple data-[state=checked]:border-zion-purple"
                       />
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       <label
                         htmlFor={`cat-${filter.value}`}
                         className="ml-2 text-sm text-zion-slate-light cursor-pointer"
                       >
+<<<<<<< HEAD
                         className='border-zion-slate-light data-[state=checked]:bg-zion-purple data-[state=checked]:border-zion-purple'                      />
                         htmlFor={`cat-${filter.value}`}
                         className="ml-2 text-sm text-zion-slate-light cursor-pointer"
@@ -884,6 +893,8 @@ ursor/fix-website-loading-errors-and-merge-6662
                 </label>;
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ;
   const handleRequestQuote = (listingId: string) => {;
     setIsLoading(true),;
@@ -898,30 +909,35 @@ ursor/fix-website-loading-errors-and-merge-6662
         const quoteData = {;
           serviceType: categorySlug,;
           specificItem: {;
-            id: listing.id,;
-            title: listing.title,;
-            category: listing.category,;
-            image: listing.images?.[0]}},;
+            id: listing && listing.id,;
+            title: listing && listing.title,;
+            category: listing && listing.category,;
+            image: listing && listing.images?.[0],;
+          },;
+        };
+
         if (typeof window !== 'undefined') {;
-          sessionStorage.setItem('quoteRequestData', JSON.stringify(quoteData));
+          sessionStorage && sessionStorage.setItem('quoteRequestData', JSON && JSON.stringify(quoteData));
         }
-;
-        router.push("/request-quote");
+
+        router && router.push('/request-quote');
+        router.push ('/request - quote');
       }
     }, 500);
-  },;
-  return (;
-    <div className="min-h-screen bg-zion-blue py-12 px-4">;
-      <div className="container mx-auto">;
-        <div className="text-center mb-12">;
+  }
+  return (
+    <div className='min-h-screen bg-zion-blue py-12 px-4'>;
+      <div className='container mx-auto'>;
+        <div className='text-center mb-12'>;
           <GradientHeading>{title}</GradientHeading>;
-          <p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto">;
+          <p className='mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto'>;
             {description}
 <<<<<<< HEAD
 
 =======
           </p>;
         </div>;
+<<<<<<< HEAD
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">;
           <div className="lg:col-span-1">;
             <div className="bg-zion-blue-dark rounded-lg border border-zion-blue-light p-4 sticky top-6">;
@@ -932,6 +948,21 @@ ursor/fix-website-loading-errors-and-merge-6662
                 <label className="text-sm font-medium text-zion-slate-light block mb-2">;
                   Categories;
                 </label>;
+=======
+
+        <div className='grid grid-cols-1 lg:grid-cols-4 gap-6'>;
+          <div className='lg:col-span-1'>;
+            <div className='bg-zion-blue-dark rounded-lg border border-zion-blue-light p-4 sticky top-6'>;
+              <h3 className='text-lg font-medium text-white mb-4 flex items-center'>;
+                <Filter className='mr-2 h-5 w-5' /> Filters;
+              </h3>;
+
+              <div className='mb-6'>;
+                <label className='text-sm font-medium text-zion-slate-light block mb-2'>;
+                  Categories;
+                </label>;
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <div className="space-y-2">;
                   {categoryFilters.map(filter => (;
                     <div key={filter.value} className="flex items-center">;
@@ -945,6 +976,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                         htmlFor={`cat-${filter.value}`}
                         className="ml-2 text-sm text-zion-slate-light cursor-pointer";
                       >;
+<<<<<<< HEAD
                   ))}
 
                 </div>;
@@ -957,10 +989,13 @@ ursor/fix-website-loading-errors-and-merge-6662
                   </label>;
 
                   <Select
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                         {filter.label}
                       </label>
                     </div>
                   ))}
+<<<<<<< HEAD
                 </div>
               </div>
               {brandOptions.length > 0 && (
@@ -987,6 +1022,8 @@ ursor/fix-website-loading-errors-and-merge-6662
                         >                          {b |'N/A'}
                         </SelectItem>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                           key={b || 'unknown-brand'}
                           value={b || ''}
                           className='text-white'>                          {b || 'N/A'}
@@ -1016,11 +1053,16 @@ ursor/fix-website-loading-errors-and-merge-6662
                         <SelectItem key={b || 'unknown-brand'} value={b || ''} className="text-white">
                           {b || 'N/A'}
                         </SelectItem>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       ))}
                     </SelectContent>
                   </Select>
                 </div>
               )}
+<<<<<<< HEAD
               <div className='mb-6'>
                 <label className='text-sm font-medium text-zion-slate-light block mb-2'>
                   Specifications
@@ -1070,19 +1112,21 @@ ursor/fix-website-loading-errors-and-merge-6662
                   placeholder='Search specifications...'
                   type="text"
                   placeholder="Search specifications..."
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   value={specQuery}
                   onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
                     setSpecQuery(e.target.value)
                   }
-                  className='bg-zion-blue border border-zion-blue-light text-white'                />
-                  className="bg-zion-blue border border-zion-blue-light text-white"
-                />
+
+
               </div>
               {availabilityOptions.length > 0 && (
                 <div className="mb-6">
                   <label className="text-sm font-medium text-zion-slate-light block mb-2">
                     Availability
                   </label>
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                   className='bg-zion-blue border border-zion-blue-light text-white'                />;
               </div>;
@@ -1111,6 +1155,8 @@ ursor/fix-website-loading-errors-and-merge-6662
                     onValueChange={(value: string) =>;
                       setSelectedAvailability(value);
                     }
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 <<<<<<< HEAD
 =======
@@ -1122,6 +1168,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                       <SelectItem value="all" className="text-white">
                         All
                       </SelectItem>
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                       {availabilityOptions.map(a => (
                         <SelectItem
@@ -1134,15 +1181,22 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       {availabilityOptions.map((a) => (
                         <SelectItem key={a || 'unknown-availability'} value={a || ''} className="text-white">
                           {a || 'N/A'}
                         </SelectItem>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       ))}
                     </SelectContent>
                   </Select>
                 </div>
               )}
+<<<<<<< HEAD
               <div className='mb-6'>
                 <label className='text-sm font-medium text-zion-slate-light block mb-2'>
                       ))}
@@ -1171,13 +1225,18 @@ ursor/fix-website-loading-errors-and-merge-6662
 
               <div className="mb-6">
                 <label className="text-sm font-medium text-zion-slate-light block mb-2">
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   Price Range
                 </label>
                 <div className="mt-6 px-2">
                   <Slider
+<<<<<<< HEAD
                     aria-label='Price range'
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                     aria-label="Price range"
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     defaultValue={[0, priceRange.max]}
                     min={0}
 <<<<<<< HEAD
@@ -1188,6 +1247,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                     step={priceRange.max / 100}
                     value={currentPriceFilter}
                     onValueChange={handleSliderChange}
+<<<<<<< HEAD
                     aria-label='Price range'
 ursor/fix-website-loading-errors-and-merge-6662
                     max={priceRange && priceRange.max}
@@ -1204,6 +1264,8 @@ ursor/fix-website-loading-errors-and-merge-6662
                     className="mb-4"
                   />
                   <div className="flex justify-between text-sm text-zion-slate-light">
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 <<<<<<< HEAD
@@ -1213,19 +1275,25 @@ ursor/fix-website-loading-errors-and-merge-6662
                   </div>
                 </div>
               </div>
+<<<<<<< HEAD
               <div className='mb-6'>
                 <label className='text-sm font-medium text-zion-slate-light block mb-2'>
                   Minimum Rating
                 </label>
                 <div className='flex flex-wrap gap-2'>
                   {[null, 3, 4, 5].map(rating => (
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     <Button
                       key={rating === null ? 'any' : rating}
                       variant='outline'
                       size='sm'
+<<<<<<< HEAD
                       onClick={() => {
                         logInfo('Rating selected:', { data: rating })
                         setSelectedRating(rating) }}
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       aria-pressed = {selectedRating === rating,}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                       className={`{;
@@ -1243,6 +1311,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                               key={i}
                               className='h-3 w-3 fill-zion-cyan text-zion-cyan'                            />;
 
+<<<<<<< HEAD
 
               <div className="mb-6">
                 <label className="text-sm font-medium text-zion-slate-light block mb-2">
@@ -1265,6 +1334,8 @@ ursor/fix-website-loading-errors-and-merge-6662
                             />
 
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       className={`{
                         selectedRating === rating
                           ? "bg-zion-purple/30 border-zion-purple text-zion-purple"
@@ -1274,11 +1345,14 @@ ursor/fix-website-loading-errors-and-merge-6662
                       {rating === null ? (
                         "Any"
                       ) : (
+<<<<<<< HEAD
                         <div className='flex items-center'>
                           {[...Array(rating)].map((_, i) => (
                             <Star
                               key={i}
                               className='h-3 w-3 fill-zion-cyan text-zion-cyan'                            />
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                         <div className="flex items-center">
                           {[...Array(rating)].map((_, i) => (
                             <Star
@@ -1299,6 +1373,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                 variant="outline"
                 className="w-full border-zion-purple text-zion-purple hover: bg-zion-purple/10"
                 onClick={() => {
+<<<<<<< HEAD
                   logInfo('Clearing filters')
                   setSearchQuery('')
                   clearCategories()
@@ -1309,6 +1384,8 @@ ursor/fix-website-loading-errors-and-merge-6662
                   setSelectedAvailability('all')
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   logInfo("Clearing filters"),
                   setSearchQuery(""),
                   clearCategories(),
@@ -1325,6 +1402,7 @@ ursor/fix-website-loading-errors-and-merge-6662
               </Button>
             </div>
           </div>
+<<<<<<< HEAD
           <div className='lg:col-span-3'>
             <div className='bg-zion-blue-dark rounded-lg p-4 mb-6 border border-zion-blue-light'>
               <div className='flex flex-col md:flex-row gap-4'>
@@ -1554,11 +1632,14 @@ ursor/fix-website-loading-errors-and-merge-6662
                 }}
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               >;
                 Clear All;
               </Button>;
             </div>;
           </div>;
+<<<<<<< HEAD
           <div className="lg:col-span-3">;
             <div className="bg-zion-blue-dark rounded-lg p-4 mb-6 border border-zion-blue-light">;
               <div className="flex flex-col md:flex-row gap-4">;
@@ -1593,6 +1674,10 @@ ursor/fix-website-loading-errors-and-merge-6662
                       <SelectItem value='rating' className='text-white'>
                         Highest Rating
                       </SelectItem>
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   <Select value={sortOption} onValueChange={setSortOption}>
                     <SelectTrigger className="w-[150px] bg-zion-blue border border-zion-blue-light text-white">
                       <SelectValue placeholder="Sort" />
@@ -1604,6 +1689,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                       <SelectItem value="rating" className="text-white">Highest Rating</SelectItem>
                     </SelectContent>
                   </Select>
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
                     onChange={(e: React && React.ChangeEvent<HTMLInputElement>) => {;
@@ -1677,6 +1763,8 @@ ursor/fix-website-loading-errors-and-merge-6662
                     title={isGrid ? 'List view' : 'Grid view'}
                     className='border-zion-blue-light text-zion-slate-light focus-visible:ring-zion-purple'                  >
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     variant="outline"
                     size="icon"
                     onClick={() => setView(isGrid ? "list" : "grid")}
@@ -1685,9 +1773,14 @@ ursor/fix-website-loading-errors-and-merge-6662
                     className="border-zion-blue-light text-zion-slate-light focus-visible:ring-zion-purple"
                   >
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     {ToggleViewIcon}
                     <span className="sr-only">
                       {isGrid ? "List view" : "Grid view"}
@@ -1696,6 +1789,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                 </div>
               </div>
             </div>
+<<<<<<< HEAD
             <div className='mb-6'>
               <p className='text-zion-slate-light'>
 ursor/fix-website-loading-errors-and-merge-6662
@@ -1715,6 +1809,10 @@ ursor/fix-website-loading-errors-and-merge-6662
 
             <div className="mb-6">
               <p className="text-zion-slate-light">
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 Showing {filteredListings.length} results
                 {selectedCategories.length > 0 &&
                   ` in ${selectedCategories.join(', ')}`}
@@ -1722,6 +1820,7 @@ ursor/fix-website-loading-errors-and-merge-6662
               </p>
             </div>
             {isLoading ? (
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                   <Button;
                     variant='outline';
@@ -1762,11 +1861,14 @@ ursor/fix-website-loading-errors-and-merge-6662
                   view === "grid"
                     ? "grid grid-cols-1 md:grid-cols-2 gap-6"
                     : "flex flex-col gap-6"
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 }
               >
                 {[1, 2, 3, 4].map(i => (
                   <div
                     key={i}
+<<<<<<< HEAD
                     className='rounded-lg overflow-hidden border border-zion-blue-light'                  >
                     <Skeleton height={192} width='100%' />
                     <div className='p-4'>
@@ -1778,6 +1880,8 @@ ursor/fix-website-loading-errors-and-merge-6662
                         <Skeleton height={24} width='25%' />
                         <Skeleton height={32} width='25%' />
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     className="rounded-lg overflow-hidden border border-zion-blue-light"
                   >
                     <Skeleton height={192} width="100%" />
@@ -1803,6 +1907,7 @@ ursor/fix-website-loading-errors-and-merge-6662
             ) : filteredListings.length > 0 ? (
               <div
                 className={
+<<<<<<< HEAD
                   view === 'grid'
                     ? 'grid grid-cols-1 md:grid-cols-2 gap-6'
                     : 'flex flex-col gap-6'
@@ -1828,6 +1933,8 @@ ursor/fix-website-loading-errors-and-merge-6662
                     onRequestQuote={handleRequestQuote}
                     detailBasePath={detailBasePath}
                   />;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 ))}
               </div>
             ) : (
@@ -1839,6 +1946,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                   Try adjusting your filters or search query
                 </p>
                 <Button
+<<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
 
                 ))}
@@ -1866,6 +1974,11 @@ ursor/fix-website-loading-errors-and-merge-6662
                     setSelectedAvailability('all') }}
                   className='border-zion-purple text-zion-purple hover:bg-zion-purple/10'
 
+=======
+
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   variant="outline"
                   onClick={() => {
                     setSearchQuery(""),
@@ -1879,10 +1992,15 @@ ursor/fix-website-loading-errors-and-merge-6662
                   className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 >
                   Clear All
                 </Button>
               </div>
+<<<<<<< HEAD
                   Clear All
                 </Button>
               </div>
@@ -1905,12 +2023,15 @@ ursor/fix-website-loading-errors-and-merge-6662
                   Clear All;
                 </Button>;
               </div>;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             )}
           </div>;
         </div>;
       </div>;
     </div>;
   );
+<<<<<<< HEAD
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 };
@@ -2173,3 +2294,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 ;
+=======
+}
+;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -14,6 +14,7 @@ export default function EnhancedHeader() {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -24,12 +25,15 @@ export default function EnhancedHeader() {
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const handleSearch = async ("e": React.FormEvent) => {
     e.preventDefault();
     if (searchQuery.trim()) {
       router.push(`/search?q=${encodeURIComponent(searchQuery.trim())}`);
     }
   };
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -69,6 +73,8 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const toggleDropdown = ("itemName": string) => {
     setActiveDropdown(activeDropdown === itemName ? null : itemName);
   };
@@ -99,6 +105,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
   
     >
       {' '}
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -109,6 +116,8 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <div className="max-w-7xl mx-auto px-4 "sm": px-6 lg:px-8">
         {' '}
         <div className="flex justify-between items-center h-16">
@@ -128,6 +137,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
             </a>{' '}
           </div>{' '}
           {}{' '}
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -138,6 +148,8 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <nav className="hidden "md": flex items-center space-x-8">
             {' '}
             {navigation.map(item => (
@@ -148,6 +160,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                     {' '}
                     <button
                       onClick={() => toggleDropdown(item.name)}
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -158,6 +171,8 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       className="flex items-center space-x-1 text-gray-700 "hover": text-blue-600 transition-colors duration-200"
                     >
                       {' '}
@@ -171,6 +186,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                           <a
                             key={dropdownItem.name}
                             href={dropdownItem.href}
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -181,6 +197,8 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                             className="block px-4 py-2 text-gray-700 "hover": bg-gray-50 hover:text-blue-600 transition-colors duration-200"
                           >
                             {' '}
@@ -193,6 +211,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                 ) : (
                   <a
                     href={item.href}
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -203,6 +222,8 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     className="text-gray-700 "hover": text-blue-600 transition-colors duration-200"
                   >
                     {' '}
@@ -213,6 +234,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
             ))}{' '}
           </nav>{' '}
           {}{' '}
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -223,6 +245,8 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <div className="hidden "md": flex items-center space-x-4">
             {' '}
             {}{' '}
@@ -233,6 +257,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                 placeholder="Search..."
                 value={searchQuery}
                 onChange={e => setSearchQuery(e.target.value)}
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -243,6 +268,8 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 className="w-64 px-4 py-2 pl-10 border border-gray-300 rounded-lg "focus": outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               />{' '}
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />{' '}
@@ -250,6 +277,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
             {}{' '}
             <div className="flex items-center space-x-2">
               {' '}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -264,6 +292,8 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <button className="p-2 text-gray-700 "hover": text-blue-600 transition-colors duration-200">
                 {' '}
                 <User className="h-5 w-5" />{' '}
@@ -275,6 +305,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
             </div>{' '}
           </div>{' '}
           {}{' '}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -289,6 +320,8 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <div className=""md": hidden">
             {' '}
             <button
@@ -306,6 +339,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
         </div>{' '}
         {}{' '}
         {mobileMenuOpen && (
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -316,6 +350,8 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <div className=""md": hidden">
             {' '}
             <div className="px-2 pt-2 pb-3 space-y-1 bg-white border-t border-gray-200">
@@ -328,6 +364,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                       {' '}
                       <button
                         onClick={() => toggleDropdown(item.name)}
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -338,6 +375,8 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                         className="flex items-center justify-between w-full px-3 py-2 text-gray-700 "hover": text-blue-600 transition-colors duration-200"
                       >
                         {' '}
@@ -351,6 +390,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                             <a
                               key={dropdownItem.name}
                               href={dropdownItem.href}
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -361,6 +401,8 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                               className="block px-3 py-2 text-gray-600 "hover": text-blue-600 transition-colors duration-200"
                             >
                               {' '}
@@ -373,6 +415,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                   ) : (
                     <a
                       href={item.href}
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -383,6 +426,8 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       className="block px-3 py-2 text-gray-700 "hover": text-blue-600 transition-colors duration-200"
                     >
                       {' '}
@@ -401,6 +446,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                     placeholder="Search..."
                     value={searchQuery}
                     onChange={e => setSearchQuery(e.target.value)}
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -411,6 +457,8 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     className="w-full px-4 py-2 pl-10 border border-gray-300 rounded-lg "focus": outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   />{' '}
                   <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />{' '}
@@ -422,6 +470,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
       </div>{' '}
     </header>
   );
+<<<<<<< HEAD
 
 
 
@@ -443,3 +492,5 @@ import React,{ useState,useEffect } from 'react'; import { useRouter } from 'nex
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

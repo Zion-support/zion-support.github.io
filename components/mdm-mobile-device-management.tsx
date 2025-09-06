@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -34,26 +35,26 @@ import Head from 'next/head';
 
 import {
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   Phone,
   Mail,
   MapPin,
   Check,
   ArrowRight,;
   Smartphone,;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 } from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import Button from '../components/ui/Button';
 import { extraServices } from '../data/extra-services';
-
-
-
-
-
 export default function MDMPage() {
   const service = extraServices.find(s =>
     s.link.endsWith('/mdm-mobile-device-management')
@@ -148,6 +149,7 @@ export default function MDMPage() {;
 import Head from 'next / head';
 import {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import React from 'react',
 import React from 'react';
@@ -161,10 +163,13 @@ import {
   ArrowRight
   Smartphone;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   Phone,
   Mail,
   MapPin,
   Check,
+<<<<<<< HEAD
 <<<<<<< HEAD
   ArrowRight,
   Smartphone,
@@ -172,6 +177,8 @@ import {
   ArrowRight,;
   Smartphone,;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 } from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components / ui / UltraAdvancedFuturisticBackground';
 import Button from '../components / ui / Button';
@@ -280,6 +287,7 @@ if (return null) {
         </div>;
       </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 }
@@ -290,10 +298,13 @@ if (return null) {
 
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { Phone, Mail, MapPin, Check, ArrowRight, Smartphone } from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import Button from '../components/ui/Button';
 import { extraServices } from '../data/extra-services';
+<<<<<<< HEAD
 <<<<<<< HEAD
 export default function MDMPage() {
 =======
@@ -306,6 +317,8 @@ import Button from '../components/ui/Button';
 import { extraServices } from '../data/extra-services';
 export default function MDMPage() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const service = extraServices.find(s => s.link.endsWith('/mdm-mobile-device-management'));
   if (!service) return null;
 
@@ -313,6 +326,7 @@ export default function MDMPage() {;
     <UltraAdvancedFuturisticBackground>
       <Head>
         <title>{service.name} - Zion Tech Group</title>
+<<<<<<< HEAD
 <<<<<<< HEAD
         <meta name="description" content={service.description} />
         <link rel="canonical" href="https://ziontechgroup.com/mdm-mobile-device-management" />
@@ -414,27 +428,39 @@ export default function MDMPage() {;
                   <span className='text-xs'>{service.contactInfo.address}</span>
                 </div>              </div>              <Button href="/contact" variant="quantum" size="lg" className="w-full">Start Trial<ArrowRight className="w-5 h-5 ml-2" /></Button>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <div className="mt-6 space-y-3 text-sm text-slate-300">
                 <div className="flex items-center space-x-2"><Phone className="w-4 h-4 text-cyan-400" /><span>{service.contactInfo.mobile}</span></div>
                 <div className="flex items-center space-x-2"><Mail className="w-4 h-4 text-purple-400" /><span>{service.contactInfo.email}</span></div>
                 <div className="flex items-center space-x-2"><MapPin className="w-4 h-4 text-green-400" /><span className="text-xs">{service.contactInfo.address}</span></div>
 <<<<<<< HEAD
+<<<<<<< HEAD
               </div>
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             </div>
           </div>
         </div>
       </div>
     </UltraAdvancedFuturisticBackground>
 <<<<<<< HEAD
+<<<<<<< HEAD
   );
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+}
+}
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
     </UltraAdvancedFuturisticBackground>);
 }
 ;
+<<<<<<< HEAD
 
 
 }
@@ -450,3 +476,5 @@ export default function MDMPage() {;
 ;
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

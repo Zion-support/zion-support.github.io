@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react',
 import { GradientHeading } from "./GradientHeading",
 <<<<<<< HEAD
@@ -6,12 +7,15 @@ import React from 'react';
 import { GradientHeading } from "./GradientHeading";
 import React from 'react'
 import { GradientHeading } from './GradientHeading'
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { Check, Handshake, Search, Send } from 'lucide-react'
 import { cn } from "@/lib/utils";
 import { useTranslation } from "react-i18next";
 interface HowItWorksSectionProps {
   className?: string;
   style?: React.CSSProperties
+<<<<<<< HEAD
 const getSteps = (t: any,) => [
 
 import React from 'react',
@@ -29,6 +33,8 @@ const getSteps = (t: any) => [
 }
 
 const getSteps = (t: any) => [
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   {
     title: t('how_it_works.post')
     description: t('how_it_works.post_desc')
@@ -212,6 +218,7 @@ const stats = [ ";
     visible: {
       opacity: 1,      scale: 1
       transition: {
+<<<<<<< HEAD
     visible: {
       opacity: 1,      scale: 1
       transition: {
@@ -304,6 +311,8 @@ export default function Page() {
 
 const getSteps = (t: any,) => [
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 import React from 'react',
 import { GradientHeading } from "./GradientHeading",
@@ -315,11 +324,16 @@ interface HowItWorksSectionProps {
   style?: React.CSSProperties
 }
 
+<<<<<<< HEAD
 
 const getSteps = (t: any) => [
 
 
+=======
+const getSteps = (t: any) => [
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   {
+    icon: Check}],
 
     title: t('how_it_works.post'),
     description: t('how_it_works.post_desc'),
@@ -345,19 +359,25 @@ const getSteps = (t: any) => [
 
 
 
+export function HowItWorksSection({ className, style }: HowItWorksSectionProps) {
+  const { t } = useTranslation(),
+  const steps = getSteps(t),
+  
   return (
     <section className={cn("py-20 bg-zion-blue", className)} style={style}>
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <GradientHeading>{t('home.how_it_works_title')}</GradientHeading>
-
-
-
-
+  return (
+    <section className={cn("py-20 bg-zion-blue", className)} style={style}>
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-16">
+          <GradientHeading>{t('home.how_it_works_title')}</GradientHeading>
           <p className="text-zion-slate-light text-lg mt-4 max-w-2xl mx-auto">
             {t('home.how_it_works_subtitle')}
           </p>
         </div>
+<<<<<<< HEAD
 
 
 class ErrorBoundary extends React.Component {
@@ -458,6 +478,9 @@ const Component = React && React.memo(function Page() {;
     success: "100% client retention"};
 ];
 onst stats = [ ";
+=======
+const stats = [ ";
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   { icon: <Clock className="w-6 h-6"  />, value: "3x Faster", label: "Project Delivery" },";
   { icon: <Target className="w-6 h-6"  />, value: "99 && 99.9%", label: "Success Rate" },";
   { icon: <TrendingUp className="w-6 h-6"  />, value: "50%", label: "Cost Reduction" },";
@@ -482,6 +505,7 @@ onst stats = [ ";
       <div className="absolute inset-0 opacity-5">";
         <divclassName="absolute inset-0" style = {
 export function HowItWorksSection(): any ({
+<<<<<<< HEAD
 const stats = [ ";
   { icon: <Clock className="w-6 h-6"  />, value: "3x Faster", label: "Project Delivery" },";
   { icon: <Target className="w-6 h-6"  />, value: "99.9%", label: "Success Rate" },";
@@ -507,11 +531,14 @@ const stats = [ ";
       <div className="absolute inset-0 opacity-5">"
         <div className="absolute inset-0" style = {
 export function HowItWorksSection({
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   className,
   style,
 }: HowItWorksSectionProps) {
   const { t } = useTranslation()
   const steps = getSteps(t)
+<<<<<<< HEAD
     icon: Check}],
 
 export function HowItWorksSection({ className, style }: HowItWorksSectionProps) {
@@ -585,6 +612,8 @@ export function HowItWorksSection({ className, style }: HowItWorksSectionProps) 
           <div className='space-y-12 md:space-y-0'>;
             {steps && steps.map((step, index) => (;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <div
                 key={step && step.title}                className={`flex flex-col md:flex-row items-center ${
                   index % 2 === 0 ? 'md:flex-row-reverse' : ''
@@ -597,6 +626,7 @@ export function HowItWorksSection({ className, style }: HowItWorksSectionProps) 
                       </h3>;
                       <p className='text-zion-slate-light'>;
                         {step && step.description}
+<<<<<<< HEAD
                       </p>;
                     </div>;
                   ) : null}
@@ -674,14 +704,21 @@ function HowItWorksSection() {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 </div>;
                 <div className='relative z-10 flex items-center justify-center w-12 h-12 rounded-full bg-zion-blue-light border-2 border-zion-purple mx-4 md:mx-0'>;
                   <step && step.icon className='w-6 h-6 text-zion-cyan' />;
                 </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <div className='md:w-1/2 md:px-12 text-center md:text-left'>;
                   {index % 2 !== 0 ? (;
                     <div>;
@@ -691,6 +728,7 @@ function HowItWorksSection() {
                       <p className='text-zion-slate-light'>;
                         {step && step.description}
                       </p>                    </div>                    </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -765,6 +803,8 @@ function HowItWorksSection() {
 }
 };
 };
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
         <div className="relative">
@@ -776,6 +816,7 @@ function HowItWorksSection() {
               <div 
                 key={step.title}
                 className={`flex flex-col md:flex-row items-center ${
+<<<<<<< HEAD
                   ) : null}
                 </div>;
                       <h3 className="text-2xl font-bold text-white mb-3">{step && step.title}</h3>;
@@ -794,6 +835,8 @@ function HowItWorksSection() {
                     </div>;
                   ) : null}
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   index % 2 === 0 ? "md:flex-row-reverse" : ""
 import React from 'react',;
 import { GradientHeading } from "./GradientHeading",;
@@ -870,6 +913,7 @@ export function HowItWorksSection({ className, style }: HowItWorksSectionProps) 
         </div>;
       </div>;
     </section>;
+<<<<<<< HEAD
 }
 }
 }
@@ -970,3 +1014,7 @@ return (<section className= {;
 ;
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  );
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

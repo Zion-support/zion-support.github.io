@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -49,25 +50,23 @@ export default function Header() {const [isMenuOpen, setIsMenuOpen] = useState(f
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const navigation = [;
-    { name: 'Home', href: '/' },
-    { name: 'About', href: '/about' },
-    { name: 'Services', href: '/services' },
-    { name: 'AI Solutions', href: '/ai - solutions' },
-    { name: 'Quantum Computing', href: '/quantum - computing' },
-    { name: 'Research & Development', href: '/research - development' },
-    { name: 'Case Studies', href: '/case - studies' },
-    { name: 'News', href: '/news' },
-    { name: 'Contact', href: '/contact' }],
+    { name: 'Home', href: '/' }
+    { name: 'About', href: '/about' }
+    { name: 'Services', href: '/services' }
+    { name: 'AI Solutions', href: '/ai-solutions' }
+    { name: 'Quantum Computing', href: '/quantum-computing' }
+    { name: 'Research & Development', href: '/research-development' }
+    { name: 'Case Studies', href: '/case-studies' }
+    { name: 'News', href: '/news' }
+    { name: 'Contact', href: '/contact' }];
   const services = [;
-    { name: 'AI Autonomous Systems', href: '/ai - autonomous - systems' },
-    { name: 'Quantum Neural Networks', href: '/quantum - neural - network - platform' },
-    { name: 'Enterprise Security', href: '/ai - powered - enterprise - security' },
-    { name: 'Business Intelligence', href: '/ai - business - intelligence' },
-    { name: 'Content Generation', href: '/ai - content - generator' }
-    { name: 'Research Automation', href: '/ai - autonomous - research - assistant' }];
-  return (
+    { name: 'Research Automation', href: '/ai-autonomous-research-assistant' }];
+  return (;
     <header;
+<<<<<<< HEAD
       className={`sticky top - 0 z - 50 transition - all duration - 300 ${
         is_scrolled;
           ? 'bg - black / 90 backdrop - blur - xl border - b border - white / 20 shadow - 2xl';
@@ -77,6 +76,12 @@ export default function Header() {const [isMenuOpen, setIsMenuOpen] = useState(f
 <<<<<<< HEAD
 
 
+=======
+      className={`sticky top-0 z-50 transition-all duration-300 ${isScrolled;
+          ? 'bg-black/90 backdrop-blur-xl border-b border-white/20 shadow-2xl';
+          : 'bg-black/60 backdrop-blur-md border-b border-white/10';
+      }`}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
@@ -94,8 +99,11 @@ export default function Header() {const [isMenuOpen, setIsMenuOpen] = useState(f
             </Link>;
           </div>;
 
+<<<<<<< HEAD
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           {/* Desktop Navigation */}
           <nav className=&quot;hidden lg:flex items - center space - x-8 & quot; role=&quot;navigation & quot; aria - label=&quot;Main menu & quot;>;
             {navigation.map ((item) => (
@@ -107,6 +115,7 @@ export default function Header() {const [isMenuOpen, setIsMenuOpen] = useState(f
               >;
                 {item.name}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -115,12 +124,12 @@ export default function Header() {const [isMenuOpen, setIsMenuOpen] = useState(f
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-400 to-blue-400 transition-all duration-300 group-hover:w-full"></span>
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               </Link>
             ))}
 ;
             {/* Services Dropdown */}
-
-
               <button 
                 className="text-gray-300 hover:text-white transition-all duration-200 font-medium flex items-center group"
                 aria-expanded="false"
@@ -137,9 +146,12 @@ export default function Header() {const [isMenuOpen, setIsMenuOpen] = useState(f
                   {services.map((service) => (
                     <Link
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 <span className=&quot;absolute -bottom - 1 left - 0 w - 0 h - 0.5 bg - gradient - to - r from - purple - 400 to - blue - 400 transition - all duration - 300 group - hover:w - full & quot;></span>;
               </Link>))}
             {/* Services Dropdown */}
@@ -172,6 +184,7 @@ export default function Header() {const [isMenuOpen, setIsMenuOpen] = useState(f
                         </svg>;
                       </div>;
                     </Link>))}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 role=&quot;banner&quot;
@@ -291,11 +304,14 @@ role=&quot;banner&quot;
                     </Link>
                   ))}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 </div>;
               </div>;
             </div>;
           </nav>;
           {/* CTA Button */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -304,6 +320,8 @@ role=&quot;banner&quot;
           <div className="hidden lg:flex items-center space-x-4">
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <Link
               href="/contact"
               className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white px-6 py-3 rounded-lg font-medium transition-all duration-200 transform hover:scale-105 shadow-lg hover:shadow-xl"
@@ -313,14 +331,20 @@ role=&quot;banner&quot;
             </Link>
           </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
           {/* Mobile menu button */}
           <button;
             onClick={() => setIsMenuOpen(!isMenuOpen)}
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+          {/* Mobile menu button */}
+          <button;
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+className=&quot;lg:hidden p-2 rounded-lg text-gray-400 hover:text-white hover:bg-white/10 transition-all duration-200&quot;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             className="lg:hidden p-2 rounded-lg text-gray-400 hover:text-white hover:bg-white/10 transition-all duration-200"
-
             aria-expanded={isMenuOpen}
             aria-label={isMenuOpen ? "Close menu" : "Open menu"}
             aria-controls="mobile-menu"
@@ -330,9 +354,12 @@ role=&quot;banner&quot;
                 <path stroke_linecap=&quot;round & quot; stroke_linejoin=&quot;round & quot; stroke_width={2} d=&quot;M6 18L18 6M6 6l12 12 & quot; />) : (
                 <path stroke_linecap=&quot;round & quot; stroke_linejoin=&quot;round & quot; stroke_width={2} d=&quot;M4 6h16M4 12h16M4 18h16 & quot; />)}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <div className=&quot;hidden lg:flex items-center space-x-4&quot;>
           <div className="hidden lg:flex items-center space-x-4">
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <Link
               href="/contact"
               className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white px-6 py-3 rounded-lg font-medium transition-all duration-200 transform hover:scale-105 shadow-lg hover:shadow-xl"
@@ -344,23 +371,30 @@ role=&quot;banner&quot;
           {/* Mobile menu button */}
           <button;
             onClick={() => setIsMenuOpen(!isMenuOpen)}
+<<<<<<< HEAD
 className=&quot;lg:hidden p-2 rounded-lg text-gray-400 hover:text-white hover:bg-white/10 transition-all duration-200&quot;
             className="lg:hidden p-2 rounded-lg text-gray-400 hover:text-white hover:bg-white/10 transition-all duration-200"
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             aria-expanded={isMenuOpen}
             aria-label={isMenuOpen ? "Close menu" : "Open menu"}
             aria-controls="mobile-menu"
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
               {isMenuOpen ? (
+<<<<<<< HEAD
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
               ) : (
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
               )}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             </svg>;
           </button>;
         </div>;
         {/* Mobile Navigation */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -374,10 +408,13 @@ className=&quot;lg:hidden p-2 rounded-lg text-gray-400 hover:text-white hover:bg
             aria-label="Mobile menu"
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           >
             <div className=&quot;px-2 pt-2 pb-3 space-y-1&quot;>
               {navigation.map((item) => (
                 <Link
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
           <div;
@@ -390,6 +427,8 @@ className=&quot;lg:hidden p-2 rounded-lg text-gray-400 hover:text-white hover:bg
               {navigation.map ((item) => (
                 <Link;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   key={item.name}
                   href={item.href}
                   className=&quot;block px - 3 py - 3 text - gray - 300 hover:text - white hover:bg - white / 5 rounded - lg transition - all duration - 200 & quot;
@@ -397,6 +436,7 @@ className=&quot;lg:hidden p-2 rounded-lg text-gray-400 hover:text-white hover:bg
                   aria - label={`Navigate to ${item.name} page`}
                 >;
                   {item.name}
+<<<<<<< HEAD
 
                 </Link>;
               ))}
@@ -408,6 +448,8 @@ className=&quot;lg:hidden p-2 rounded-lg text-gray-400 hover:text-white hover:bg
                 <div className="text-gray-400 text-sm font-medium mb-2">Services</div>
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 {services.map((service) => (
                   <Link
                     key={service.name}
@@ -417,6 +459,7 @@ className=&quot;lg:hidden p-2 rounded-lg text-gray-400 hover:text-white hover:bg
                     aria - label={`Navigate to ${service.name} service page`}
                   >;
                     {service.name}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
                   </Link>;
@@ -488,6 +531,8 @@ className=&quot;lg:hidden p-2 rounded-lg text-gray-400 hover:text-white hover:bg
               </div>
               <div className="pt-4">
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <Link
                   href="/contact"
                   className="block w-full text-center bg-gradient-to-r from-purple-600 to-blue-600 text-white px-6 py-3 rounded-lg font-medium hover:from-purple-700 hover:to-blue-700 transition-all duration-200"
@@ -501,9 +546,12 @@ className=&quot;lg:hidden p-2 rounded-lg text-gray-400 hover:text-white hover:bg
           </div>
         )}
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       </div>;
     </header>);
 }

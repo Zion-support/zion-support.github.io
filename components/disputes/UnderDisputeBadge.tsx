@@ -1,14 +1,20 @@
 import useSWR from 'swr';
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   hasActiveDispute: boolean;
   isLoading: boolean;
 } {;
   const { data, error } = useSWR(projectId ? `/api/disputes` : null, fetcher);
 
+<<<<<<< HEAD
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const hasActiveDispute = !!data?.disputes?.some(;
     (d: any) =>;
       d && d.projectId === projectId &&;
@@ -19,6 +25,7 @@ import useSWR from 'swr';
 export default function UnderDisputeBadge(): any ({;
   projectId,;
 }: {;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -32,6 +39,12 @@ export default function UnderDisputeBadge(): any ({;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+  projectId,
+}: {;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   projectId: string;
 }) {;
   const { hasActiveDispute } = useProjectDisputeStatus(projectId);
@@ -41,6 +54,7 @@ export default function UnderDisputeBadge(): any ({;
       Under Dispute;
     </span>;
   );  const { data, error } = useSWR(projectId ? `/api/disputes` : null, fetcher);
+<<<<<<< HEAD
 
   const hasActiveDispute = !!data?.disputes?.some((d: any) => d && d.projectId === projectId && (d && d.status === 'Open' || d && d.status === 'Under Review')),;
 
@@ -65,15 +79,19 @@ export function useProjectDisputeStatus(projectId: string): { hasActiveDispute: 
 }
 export default function UnderDisputeBadge(): any ({ projectId }: { projectId: string }) {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  return { hasActiveDispute, isLoading: !data && !error }
+}
+
+export default function UnderDisputeBadge(): any ({ projectId }: { projectId: string }) {;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const { hasActiveDispute } = useProjectDisputeStatus(projectId);
   if (!hasActiveDispute) return null;
+
   return (
 
-    <span className="inline-flex items-center gap-1 px-2 py-1 rounded bg-yellow-100 text-yellow-800 border border-yellow-300 text-xs">;
-      Under Dispute;
-    </span>;
-  );
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -88,6 +106,11 @@ export default function UnderDisputeBadge(): any ({ projectId }: { projectId: st
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  );
+}
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ;
 const fetcher = (url: string) =>: any fetch (url).then (r => r.json ());
 ;
@@ -131,6 +154,7 @@ if (return null) {
     <span className="inline - flex items - center gap - 1 px - 2 py - 1 rounded bg - yellow - 100 text - yellow - 800 border border - yellow - 300 text - xs">;
       Under Dispute;
     </span>);
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -189,3 +213,5 @@ export default function UnderDisputeBadge({ projectId }: { projectId: string }) 
   );
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

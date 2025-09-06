@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -12,6 +13,8 @@ import { cn } from "@/lib/utils",
 =======
 =======
 import React from "react";
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { cn } from "@/lib/utils";
 import React from "react",
 import { cn } from "@/lib/utils",
@@ -39,14 +42,28 @@ export function SidebarGroupLabel({
     >
       {children}
     </div>
+    <div 
+      className={cn("px-3 mb-2 text-xs font-semibold text-muted-foreground uppercase tracking-wider", className)} 
+  )
+import React from "react",;
+import { cn } from "@/lib/utils",;
+interface SidebarGroupLabelProps extends React.HTMLAttributes<HTMLDivElement> {;
 
+
+import React from "react",
+import { cn } from "@/lib/utils",
+
+
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {cn} from "@/lib/utils";
 interface SidebarGroupLabelProps extends React && React.HTMLAttributes<HTMLDivElement> {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   className?: string;
   children?: React && React.ReactNode;
 }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import React from './react';
@@ -67,15 +84,22 @@ function SidebarGroupLabel() {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       )}
       {...props}
     >;
       {children}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export function SidebarGroupLabel(): any ({ className, children, ...props }: SidebarGroupLabelProps) {;
   return (
     <div
@@ -93,10 +117,9 @@ export function SidebarGroupLabel(): any ({ className, children, ...props }: Sid
 
 
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
     </div>);
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -135,3 +158,5 @@ export function SidebarGroupLabel({ className, children, ...props }: SidebarGrou
 }
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

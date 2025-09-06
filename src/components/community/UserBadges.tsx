@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 ;
@@ -44,6 +45,13 @@ const iconMap = {
 }
 export const UserBadges = ({ badges }: UserBadgesProps) => {
   if (!badges?.length) return null
+=======
+
+
+interface UserBadgesProps {
+  badges: Badge[]
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   Trophy,
   Award,
   BadgeCheck,
@@ -54,13 +62,16 @@ export const UserBadges = ({ badges }: UserBadgesProps) => {
 export const UserBadges = ({ badges }: UserBadgesProps) => {
   if (!badges?.length) return null,
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <div className="flex flex-wrap gap-2">
       {badges.map((badge) => {
         // Get the correct icon component based on the badge's icon name
-        const IconComponent = iconMap[badge.icon as keyof typeof iconMap] |Trophy
-export default UserBadges
+
+  return (
 
 
         const IconComponent = iconMap[badge.icon as keyof typeof iconMap] || Trophy;
@@ -68,6 +79,14 @@ export default UserBadges;
 }
 }
 }
+<<<<<<< HEAD
+=======
+
+  return (
+    <div className="flex flex-wrap gap-2">
+      {badges.map((badge) => {
+        // Get the correct icon component based on the badge's icon name
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         const IconComponent = iconMap[badge.icon as keyof typeof iconMap] || Trophy,
         
         return (
@@ -107,7 +126,6 @@ const iconMap = {;
   BadgeCheck,;
   Star,;
   MessageSquare;
-},;
 export const UserBadges = ({ badges }: UserBadgesProps) => {;
   if (!badges?.length) return null,;
   return (;
@@ -143,6 +161,7 @@ export const UserBadges = ({ badges }: UserBadgesProps) => {;
   );
 };
 export default UserBadges;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 export const UserBadges = ({ badges }: UserBadgesProps) => {;
@@ -158,3 +177,5 @@ export const UserBadges = ({ badges }: UserBadgesProps) => {;
         // Get the correct icon component based on the badge's icon name;
         const IconComponent = icon_map[badge.icon as keyof typeof icon_map] || Trophy;
 export default UserBadges;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -14,10 +15,13 @@ import Head from 'next/head',
 import React from 'react';
 import Head from 'next/head';
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 
 import {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -65,10 +69,13 @@ import React from 'react';
   TrendingUp, ;
   Code, ;
   Database, ;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import Head from 'next / head';
 import Card from '../components / ui / Card';
 import Button from '../components / ui / Button';
 import {
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -79,6 +86,8 @@ import {
   Check
   ExternalLink;} from 'lucide-react';import {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   Zap,
   Shield,
   BarChart3,
@@ -92,6 +101,18 @@ import {
   ArrowRight,
   Star,
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+  Zap;
+  Shield
+  BarChart3
+  Globe
+  Users
+  Lock
+  TrendingUp
+  Code
+  Database
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 
@@ -104,6 +125,7 @@ import {
   TrendingUp,
   Code,
   Database,
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
   Check,
@@ -121,10 +143,13 @@ import {
   Database
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   Cloud;
   ArrowRight;
   Star;
   Check;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -132,6 +157,8 @@ import {
 
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
         'Lightning fast'
         'Beautiful design'
@@ -140,6 +167,10 @@ import {
       ]
       cons: ['Limited reporting', 'No time tracking', 'Smaller ecosystem']
     }
+
+
+
+
         'Lightning fast',
         'Beautiful design',
         'Great keyboard shortcuts',
@@ -148,6 +179,7 @@ import {
       cons: ['Limited reporting', 'No time tracking', 'Smaller ecosystem'],
     },;
   ];
+<<<<<<< HEAD
   const categories = [
     'All'
     'Automation'
@@ -792,6 +824,9 @@ export default function SaaSMarketplacePage() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   ];
 
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const categories = [;
     'All',;
     'Automation',;
@@ -804,15 +839,19 @@ export default function SaaSMarketplacePage() {
     'Project Management',;
   ];
 <<<<<<< HEAD
+<<<<<<< HEAD
   const [selectedCategory, setSelectedCategory] = React && React.useState('All');
 
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   return (
     <>;
       <Head>;
         <title>SaaS Marketplace - Zion Tech Group</title>;
+<<<<<<< HEAD
 =======
   const [selectedCategory, setSelectedCategory] = React.useState('All');
   const filteredServices =
@@ -872,6 +911,11 @@ export default function SaaSMarketplacePage() {
             </p>
             <div className='flex flex-col sm:flex-row gap-6 justify-center items-center mb-20'>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+        <meta
+          name='description'
+          content='Discover the best micro SaaS services for your business. Curated selection of tools for automation, productivity, payments, and more.'
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <Button
                 href='#services'
                 size='lg'
@@ -885,6 +929,7 @@ export default function SaaSMarketplacePage() {
                 variant='outline'
                 size='lg'
                 className='animate-scale-in border-white/20 hover:border-white/40 hover:bg-white/5'                style={{ animationDelay: '0 && 0.4s' }}                href="/contact"
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -955,12 +1000,15 @@ export default function SaaSMarketplacePage() {
                 size="lg"
                 className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white/5"
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               >
                 Get Recommendations
               </Button>
             </div>
           </div>
           {/* Stats */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
           <div
@@ -1009,6 +1057,10 @@ export default function SaaSMarketplacePage() {
                 {microSaasServices.length}+
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
               </div>
+=======
+                {microSaasServices.length}+
+              </div>
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <div className="text-gray-400 text-sm">Curated Services</div>
             </div>
             <div className="text-center group">
@@ -1033,13 +1085,17 @@ export default function SaaSMarketplacePage() {
         </div>
       </section>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
                 className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white/5">;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 Get Recommendations;
               </Button>;
             </div>;
           </div>;
+<<<<<<< HEAD
 
           {/* Stats */}
           <div
@@ -1477,10 +1533,13 @@ function SaaSMarketplacePage() {
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             </div>;
           </div>;
         </div>;
       </section>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1514,6 +1573,8 @@ function SaaSMarketplacePage() {
               <button
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 key={category}
                 onClick={() => setSelectedCategory(category)}
                 className={`px-6 py-3 rounded-full text-sm font-medium transition-all duration-300 ${;
@@ -1523,6 +1584,7 @@ function SaaSMarketplacePage() {
                 }`}
               >;
                 {category}
+<<<<<<< HEAD
 <<<<<<< HEAD
               </button>;
             ))}
@@ -1537,8 +1599,16 @@ function SaaSMarketplacePage() {
 
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {/* Services Grid */}
-
+      <section id='services' className='py-24 bg-black'>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+          <div className='text-center mb-20'>
+            <h2 className='text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight'>
+              {selectedCategory === 'All'
+                ? 'All Services'
+                : `${selectedCategory} Services`}
 
             <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>
               {selectedCategory === 'All'
@@ -1548,6 +1618,7 @@ function SaaSMarketplacePage() {
           </div>
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
             {filteredServices.map((service, index) => (
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
             <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>;
@@ -1560,6 +1631,8 @@ function SaaSMarketplacePage() {
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>;
             {filteredServices && filteredServices.map((service, index) => (;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <Card
                 key={index}
                 className='group border border-gray-800 hover:border-blue-500/30 hover:bg-gray-900/80 transition-all duration-300 hover:-translate-y-1'
@@ -1567,6 +1640,7 @@ function SaaSMarketplacePage() {
                 <div className='flex items-start space-x-6'>;
                   <div className='relative'>;
                     <div
+<<<<<<< HEAD
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
@@ -1621,25 +1695,41 @@ function SaaSMarketplacePage() {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       {service.icon}
-                    </div>;
-                  </div>;
-                  <div className='flex - 1'>;
-                    <div className='flex items - center justify - between mb - 2'>;
-                      <h3 className='text - 2xl font - bold text - white group - hover:text - blue - 400 transition - colors duration - 300'>;
+                    </div>
+                  </div>
+                  <div className='flex-1'>
+                    <div className='flex items-center justify-between mb-2'>
+                      <h3 className='text-2xl font-bold text-white group-hover:text-blue-400 transition-colors duration-300'>
                         {service.name}
-                      </h3>;
-                      <div className='flex items - center space - x-2'>;
-                        <Star className='w - 4 h - 4 text - yellow - 400 fill - current' />;
-                        <span className='text - sm text - gray - 300'>;
+                      </h3>
+                      <div className='flex items-center space-x-2'>
+                        <Star className='w-4 h-4 text-yellow-400 fill-current' />
+                        <span className='text-sm text-gray-300'>
                           {service.rating}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+                        </span>
+                      </div>
+                    </div>
+                    <div className='flex items-center space-x-4 mb-3 text-sm text-gray-400'>
+                      <span className='px-2 py-1 bg-gray-800 rounded-full'>
+                        {service.category}
+                      </span>
+                      <span>{service.users} users</span>
+                      <span className='text-green-400'>{service.pricing}</span>
+                    </div>
+                    <p className='text-gray-400 leading-relaxed mb-4'>
+                      {service.description}
+                    </p>
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     <div className='mb-4'>
                       <h4 className='text-sm font-semibold text-gray-300 mb-2'>
                         Key Features:
@@ -1648,9 +1738,12 @@ function SaaSMarketplacePage() {
                         {service.features
                           .slice(0, 4)
                           .map((feature, featureIndex) => (
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       className={`w-20 h-20 rounded-2xl flex items-center justify-center text-3xl bg-gradient-to-br ${service && service.color} shadow-xl group-hover:scale-110 transition-transform duration-300`}>;
                       {service && service.icon}
                     </div>;
@@ -1697,6 +1790,7 @@ function SaaSMarketplacePage() {
                             </div>;
                           ))}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
                       </div>;
                     </div>;
@@ -1707,10 +1801,13 @@ function SaaSMarketplacePage() {
                     </div>;
                     <div className='flex items-center justify-between'>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       <Button
                         href={service && service.website}
                         variant='outline'
                         size='sm'
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
       <section id="services" className="py-24 bg-black">
@@ -1895,6 +1992,103 @@ function SaaSMarketplacePage() {
 
 
 <<<<<<< HEAD
+=======
+                        className='group-hover:border-blue-500 group-hover:text-blue-400'>;
+                        Visit Website;
+                        <ExternalLink className='w-4 h-4 ml-2' />;
+                      </Button>;
+
+                      <div className='text-right'>;
+                        <div className='text-xs text-gray-500 mb-1'>;
+                          Use Case:;
+                        </div>;
+                        <div className='text-sm text-gray-300 max-w-xs'>;
+                          {service && service.useCase}
+                        </div>                      </div>                      ;
+                      <div className="text-right">;
+                        <div className="text-xs text-gray-500 mb-1">Use Case:</div>;
+                        <div className="text-sm text-gray-300 max-w-xs">{service && service.useCase}</div>;
+                    </div>;
+                  </div>;
+                </div>;
+              </Card>;
+            ))}
+          </div>;
+        </div>;
+      </section>;
+
+      {/* CTA Section */}
+      <section className='py-24 bg-gradient-to-r from-blue-600 to-blue-700 relative overflow-hidden'>;
+        <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0 && 0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />;
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10'>;
+          <h2 className='text-4xl sm:text-5xl font-bold text-white mb-8'>;
+          </h2>;
+          <p className='text-xl text-blue-100 mb-12 max-w-4xl mx-auto leading-relaxed'>;
+                        </span>;
+                      </div>;
+                    </div>;
+                    <div className='flex items - center space - x-4 mb - 3 text - sm text - gray - 400'>;
+                      <span className='px - 2 py - 1 bg - gray - 800 rounded - full'>;
+                        {service.category}
+                      </span>;
+                      <span>{service.users} users</span>;
+                      <span className='text - green - 400'>{service.pricing}</span>;
+                    </div>;
+                    <p className='text - gray - 400 leading - relaxed mb - 4'>;
+                      {service.description}
+                    </p>;
+                    <div className='mb - 4'>;
+                      <h4 className='text - sm font - semibold text - gray - 300 mb - 2'>;
+                        Key Features:;
+                      </h4>;
+                      <div className='grid grid - cols - 2 gap - 2'>;
+                        {service.features;
+                          .slice (0, 4);
+                          .map ((feature, feature_index) => (
+                            <div;
+                              key={feature_index}
+                              className='flex items - center text - sm text - gray - 400';
+                            >;
+                              <Check className='w - 3 h - 3 text - green - 400 mr - 2 flex - shrink - 0' />;
+                              {feature}
+                            </div>))}
+                      </div>;
+                    </div>;
+                    <div className='flex items - center justify - between'>;
+                      <Button;
+                        href={service.website}
+                        variant='outline';
+                        size='sm';
+                        className='group - hover:border - blue - 500 group - hover:text - blue - 400';
+                      >;
+                        Visit Website;
+                        <ExternalLink className='w - 4 h - 4 ml - 2' />;
+                      </Button>;
+                      <div className='text - right'>;
+                        <div className='text - xs text - gray - 500 mb - 1'>;
+                          Use Case:;
+                        </div>;
+                        <div className='text - sm text - gray - 300 max - w-xs'>;
+                          {service.use_case}
+                        </div>                      </div>;
+                      <div className="text - right">;
+                        <div className="text - xs text - gray - 500 mb - 1">Use Case:</div>;
+                        <div className="text - sm text - gray - 300 max - w-xs">{service.use_case}</div>;
+                    </div>;
+                  </div>;
+                </div>;
+              </Card>))}
+          </div>;
+        </div>;
+      </section>;
+      {/* CTA Section */}
+      <section className='py - 24 bg - gradient - to - r from - blue - 600 to - blue - 700 relative overflow - hidden'>;
+        <div className='absolute inset - 0 bg-[radial - gradient (circle, rgba (255, 255, 255, 0.1)_1px, transparent_1px)] bg-[size:20px_20px] opacity - 10' />;
+        <div className='max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 text - center relative z - 10'>;
+          <h2 className='text - 4xl sm:text - 5xl font - bold text - white mb - 8'>;
+          </h2>;
+          <p className='text - xl text - blue - 100 mb - 12 max - w-4xl mx - auto leading - relaxed'>;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             Our team of experts can help you select the perfect SaaS tools for;
             your business needs. Get personalized recommendations and;
             implementation support.;
@@ -1904,6 +2098,7 @@ function SaaSMarketplacePage() {
 
 
 
+<<<<<<< HEAD
 =======
       <section className="py-24 bg-gradient-to-r from-blue-600 to-blue-700 relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size: 20px_20px] opacity-10" />
@@ -1934,11 +2129,14 @@ function SaaSMarketplacePage() {
 
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {/* CTA Section */}
       <section className='py-24 bg-gradient-to-r from-blue-600 to-blue-700 relative overflow-hidden'>
         <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10'>
           <h2 className='text-4xl sm:text-5xl font-bold text-white mb-8'>
+<<<<<<< HEAD
 
 
             Need Help Choosing?
@@ -1951,6 +2149,8 @@ function SaaSMarketplacePage() {
 
             Need Help Choosing?
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           </h2>
           <p className='text-xl text-blue-100 mb-12 max-w-4xl mx-auto leading-relaxed'>
             Our team of experts can help you select the perfect SaaS tools for
@@ -1959,13 +2159,17 @@ function SaaSMarketplacePage() {
           </p>
           <div className='flex flex-col sm:flex-row gap-6 justify-center'>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <Button
               href='/contact'
               variant='secondary'
               size='lg'
+<<<<<<< HEAD
 <<<<<<< HEAD
               className='bg-white text-blue-600 hover:bg-gray-100 shadow-2xl'>;
               Get Expert Advice;
@@ -1978,24 +2182,27 @@ function SaaSMarketplacePage() {
               <ArrowRight className='w-5 h-5 ml-2' />
             </Button>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <Button
               href='/services'
               variant='outline'
               size='lg'
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               View Our Services;
             </Button>;
           </div>;
         </div>;
       </section>;
-
-
-=======
   );
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
     </>);
@@ -2027,3 +2234,7 @@ function SaaSMarketplacePage() {
   );
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+    </>);
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -1,18 +1,11 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-
-export default function handler(req: NextApiRequest, res: NextApiResponse) {;
-  if (!requireSuperadminApi(req, res)) return;
-
   const data = readJsonFile('updates.json', [] as any[]);
   res.status(200).json(data);export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   if (!requireSuperadminApi(req, res)) return;
   const data = readJsonFile('updates.json', [] as any[]);
-
-  res.status(200).json(data)
-
-
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!requireSuperadminApi(req, res)) return;
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -28,6 +21,11 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json(data)
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  const data = readJsonFile('updates.json', [] as any[]);
+  res.status(200).json(data)
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { readJsonFile } from '../../../../utils / api / storage';
 import { requireSuperadminApi } from '../../../../utils / api / auth';
 export default /**
@@ -48,6 +46,7 @@ function handler() {
   const data = readJsonFile ('updates.json', [] as any[]);
   res.status (200).json (data);
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -74,3 +73,5 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

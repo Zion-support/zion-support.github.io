@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 
@@ -7,6 +8,8 @@
 =======
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from 'react',;
 import ReactMarkdown from 'react-markdown',;
 import { useRouter } from 'next/router',;
@@ -23,11 +26,14 @@ function parseMarkdown(filePath: string): BlogPost | null {
   if (!fs.existsSync(filePath)) {
     return null
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from 'react';
 import ReactMarkdown from 'react-markdown';
 import { useRouter } from 'next/router';
@@ -36,6 +42,7 @@ import { BLOG_POSTS } from '@/data/blog-posts';
 import { AuthorBio } from '@/components/blog/AuthorBio';
 import { SocialShareButtons } from '@/components/blog/SocialShareButtons';
 import { CommentsSection } from '@/components/blog/CommentsSection';
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -112,6 +119,8 @@ if (return null, ) {
 }
 interface BlogPostPageProps {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 const BlogPostPage: React.FC<BlogPostPageProps> = ({ initialPost }) => {
   const router = useRouter()
   const { slug } = router.query
@@ -119,6 +128,7 @@ const BlogPostPage: React.FC<BlogPostPageProps> = ({ initialPost }) => {
   const [error, setError] = React.useState<string | null>(null)
   React.useEffect(() => {
     if (initialPost && initialPost.slug === slug) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -141,6 +151,10 @@ const BlogPostPage: React.FC<BlogPostPageProps> = ({ initialPost }) => {
     if (initialPost && initialPost.slug === slug) {
       setPost(initialPost)
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       setError(null), // Clear any previous error
     } else if (slug) {
       // This case handles if the slug changes and initialPost is not for the current slug
@@ -149,6 +163,7 @@ const BlogPostPage: React.FC<BlogPostPageProps> = ({ initialPost }) => {
       // If initialPost is null and getStaticProps didn't return notFound, that's an inconsistent state.
       // The previous logic tried a fallback here, but we aim to make getStaticProps authoritative.
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -156,6 +171,10 @@ const BlogPostPage: React.FC<BlogPostPageProps> = ({ initialPost }) => {
       if (directFallback) {
         setPost(directFallback)
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         setError(null)
       } else {
         // If getStaticProps is working correctly, this path (slug exists, no initialPost, no fallback)
@@ -165,6 +184,7 @@ const BlogPostPage: React.FC<BlogPostPageProps> = ({ initialPost }) => {
       }
     }
   }, [slug, initialPost])
+<<<<<<< HEAD
 <<<<<<< HEAD
   if (error) {
     return <div>{error}</div>
@@ -183,6 +203,8 @@ if ( {) {
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 function parseMarkdown(filePath: string): BlogPost | null {;
   if (!fs.existsSync(filePath)) {;
     return null;
@@ -199,8 +221,6 @@ function parseMarkdown(filePath: string): BlogPost | null {;
 if ( {) {
   $2
 }
-      // This case handles if the slug changes and initial_post is not for the current slug;
-      // Or if initial_post was null from getStaticProps (which shouldn't happen if not_found is true);
       // For now, we will rely on getStaticProps to provide the correct post or a 404.;
       // If initial_post is null and getStaticProps didn't return not_found, that's an inconsistent state.;
       // The previous logic tried a fallback here, but we aim to make getStaticProps authoritative.;
@@ -223,6 +243,7 @@ if ( {) {
 if ( {) {
   $2
 }
+<<<<<<< HEAD
     return <div>{error}</div>;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
@@ -545,6 +566,8 @@ const BlogPostPage: React.FC<BlogPostPageProps> = ({ initialPost }) => {;
         } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   }
   const articleLd = {
     author: post.author.name
@@ -552,108 +575,19 @@ const BlogPostPage: React.FC<BlogPostPageProps> = ({ initialPost }) => {;
     tags: post.tags |[]}
   const body = (post as any).body |post.content
   return (
-    <>
-      <AdvancedSEO
-        title={post.title}
-        description={post.excerpt}
-        image={post.featuredImage}
-        type="article"
-        article={articleLd}
-      />
-      <main className="prose dark:prose-invert max-w-3xl mx-auto py-8">
-        <h1>{post.title}</h1>
-        {post.excerpt && <p className="lead">{post.excerpt}</p>}
-        <div className="flex items-center gap-3 mb-6">
-          <img
-            src={post.author.avatarUrl}
-            alt={post.author.name}
-}
-      } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  }, [slug, initialPost]),;
-  if (error) {;
-    return <div>{error}</div>;
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  if (!post) {;
-    return <div>Article not found</div>;
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  const articleLd = {;
-    author: post.author.name;
-    publishedTime: post.publishedDate;
-    tags: post.tags || []};
-  const body = (post as any).body || post.content;
-  return (;
     <>;
       <AdvancedSEO;
-        title={post.title  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-        description={post.excerpt  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-        image={post.featuredImage  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-        type="article"
-        article={articleLd  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-      />
-      <main className="prose dark:prose-invert max-w-3xl mx-auto py-8">
-        <h1>{post.title}</h1>
-        {post.excerpt && <p className="lead">{post.excerpt}</p>  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-        <div className="flex items-center gap-3 mb-6">
-          <img
-            src={post.author.avatarUrl  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            alt={post.author.name  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+        title={post.title}
+        description={post.excerpt}
+        {post.excerpt && <p className="lead">{post.excerpt}</p>}
+        <div className="flex items - center gap - 3 mb - 6">;
+          <img;
+            src={post.author.avatar_url}
+            alt={post.author.name}
             className="w-10 h-10 rounded-full"
             onError={(e) => {
               const target = e.currentTarget as HTMLImageElement
               target.src = '/images/blog-placeholder.svg'
-            }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-          />
-          <div>
-            <p className="m-0 font-medium">{post.author.name}</p>
-            {post.author.title && (
-              <p className="m-0 text-sm text-zion-slate-light">
-                {post.author.title}
-              </p>
-            )}
                 {post.author.title  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -670,8 +604,6 @@ const BlogPostPage: React.FC<BlogPostPageProps> = ({ initialPost }) => {;
         {post.featuredImage && (
           <div className="aspect-[16/9] w-full relative overflow-hidden rounded-lg mb-6">
             <img
-              src={post.featuredImage}
-              alt={post.title}
               src={post.featuredImage  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -686,6 +618,7 @@ const BlogPostPage: React.FC<BlogPostPageProps> = ({ initialPost }) => {;
               onError={(e) => {
                 const target = e.currentTarget as HTMLImageElement
                 target.src = '/images/blog-placeholder.svg'
+<<<<<<< HEAD
               }}
             />
           </div>
@@ -724,6 +657,8 @@ export const getStaticProps: GetStaticProps<BlogPostPageProps> = async ({
   return { props: { initialPost: post }, revalidate: 60 }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
               }  } catch (error) {
     console.error("Error:", error);
@@ -737,12 +672,15 @@ export const getStaticProps: GetStaticProps<BlogPostPageProps> = async ({
     return res.status(500).json({ error: "Internal server error" });
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
   return { props: { initialPost: post }, revalidate: 60 }
 },;
 ;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
         <ReactMarkdown>{body}</ReactMarkdown>;
         <AuthorBio author={post.author} />;
@@ -805,4 +743,8 @@ export const getStaticProps: GetStaticProps<BlogPostPageProps> = async ({;
   }
 }
 };
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

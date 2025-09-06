@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 
@@ -40,6 +41,8 @@ import {
   SidebarGroupLabel
   SidebarGroupContent
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   Bell,
   FileText,
   Home,
@@ -48,11 +51,22 @@ import {
   Settings,
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   Users,;
 } from "lucide-react";
 =======
 import { Bell, FileText, Home, Mail, Search, Settings, Users } from "lucide-react",;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  Bell,
+  FileText,
+  Home,
+  Mail,
+  Search,
+  Settings,
+  Users,;
+} from "lucide-react";
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {;
   Sidebar,;
   SidebarContent,;
@@ -62,14 +76,18 @@ import {;
   SidebarMenuButton,;
   SidebarGroupLabel,;
 <<<<<<< HEAD
+<<<<<<< HEAD
   SidebarGroupContent,;
 
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 } from "@/components/ui/sidebar";
 
 export function AppSidebar() {;
   return (
+<<<<<<< HEAD
 
 
         
@@ -131,6 +149,8 @@ import {
         
         
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <SidebarGroup>
           <SidebarGroupLabel>Content</SidebarGroupLabel>
           <SidebarGroupContent>
@@ -141,10 +161,14 @@ import {
                     <FileText size={16} />
                     <span>My Content</span>
 <<<<<<< HEAD
+<<<<<<< HEAD
                   </a>
 =======
                   </Link>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+                  </Link>
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 </SidebarMenuButton>
               </SidebarMenuItem>
               <SidebarMenuItem>
@@ -153,15 +177,20 @@ import {
                     <Search size={16} />
                     <span>Analytics</span>
 <<<<<<< HEAD
+<<<<<<< HEAD
                   </a>
 =======
                   </Link>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+                  </Link>
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 </SidebarMenuButton>
               </SidebarMenuItem>
             </SidebarMenu>
           </SidebarGroupContent>
         </SidebarGroup>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -176,6 +205,8 @@ import {
         
         
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <SidebarGroup>
           <SidebarGroupLabel>Settings</SidebarGroupLabel>
           <SidebarGroupContent>
@@ -186,10 +217,14 @@ import {
                     <Users size={16} />
                     <span>Profile</span>
 <<<<<<< HEAD
+<<<<<<< HEAD
                   </a>
 =======
                   </Link>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+                  </Link>
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 </SidebarMenuButton>
               </SidebarMenuItem>
               <SidebarMenuItem>
@@ -198,10 +233,14 @@ import {
                     <Settings size={16} />
                     <span>Settings</span>
 <<<<<<< HEAD
+<<<<<<< HEAD
                   </a>
 =======
                   </Link>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+                  </Link>
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 </SidebarMenuButton>
               </SidebarMenuItem>
             </SidebarMenu>
@@ -209,9 +248,12 @@ import {
         </SidebarGroup>
       </SidebarContent>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
     </Sidebar>
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   );
 }
   )
@@ -227,11 +269,14 @@ import {;
   SidebarGroupContent} from "@/components/ui/sidebar";
 export function AppSidebar() {;
   return (;
+<<<<<<< HEAD
   SidebarGroupContent} from "@/components/ui/sidebar",;
 ;
 export function AppSidebar() {;
   return (;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <Sidebar>;
       <SidebarContent>;
         <SidebarGroup>;
@@ -240,6 +285,7 @@ export function AppSidebar() {;
             <SidebarMenu>;
               <SidebarMenuItem>;
                 <SidebarMenuButton asChild>;
+<<<<<<< HEAD
                   <a href="/creator-dashboard">;
                     <Home size={16} />;
                     <span>Home</span>;
@@ -283,10 +329,13 @@ function AppSidebar() {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   </a>;
                 </SidebarMenuButton>;
               </SidebarMenuItem>;
               <SidebarMenuItem>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
                 <SidebarMenuButton as_child>;
@@ -317,12 +366,15 @@ function AppSidebar() {
                     <Bell size={16} />;
                     <span>Notifications</span>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   </a>;
                 </SidebarMenuButton>;
               </SidebarMenuItem>;
             </SidebarMenu>;
           </SidebarGroupContent>;
         </SidebarGroup>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
         <SidebarGroup>;
@@ -347,10 +399,13 @@ function AppSidebar() {
                     <FileText size={16} />;
                     <span>My Content</span>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   </a>;
                 </SidebarMenuButton>;
               </SidebarMenuItem>;
               <SidebarMenuItem>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
                 <SidebarMenuButton as_child>;
@@ -411,6 +466,8 @@ function AppSidebar() {
                     <Settings size={16} />;
                     <span>Settings</span>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   </a>;
                 </SidebarMenuButton>;
               </SidebarMenuItem>;
@@ -418,6 +475,7 @@ function AppSidebar() {
           </SidebarGroupContent>;
         </SidebarGroup>;
       </SidebarContent>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -457,3 +515,8 @@ return (<Sidebar> <SidebarContent> <SidebarGroup> <SidebarGroupLabel>Dashboard</
 }
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  );
+}
+;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -33,6 +34,8 @@ import ITOnsiteServicesPage from "@/pages/ITOnsiteServicesPage";
 import SearchPage from "@/pages/SearchPage";
 import ProjectRoom from "@/pages/ProjectRoom";
 import VideoCall from "@/pages/VideoCall";
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { Route, Routes } from "react-router-dom",
 import { ProtectedRoute } from "@/components/ProtectedRoute",
 import Marketplace from "@/pages/Marketplace",
@@ -69,40 +72,6 @@ const MarketplaceRoutes = () => {
       {/* Equipment Routes */}
       <Route path="/equipment" element={<EquipmentPage />} />
       <Route path="/equipment/:id" element={<EquipmentDetail />} />
-const MarketplaceRoutes = () => {;
-  return (
-
-import { Route, Routes } from "react-router-dom",;
-import { ProtectedRoute } from "@/components/ProtectedRoute",;
-import Marketplace from "@/pages/Marketplace",;
-import Categories from "@/pages/Categories",;
-import CategoryDetail from "@/pages/CategoryDetail",;
-import Featured from "@/pages/Featured",;
-import ListingDetail from "@/pages/ListingDetail",;
-import EquipmentPage from "@/pages/EquipmentPage",;
-import EquipmentDetail from "@/pages/EquipmentDetail",;
-import PostJob from "@/pages/PostJob",;
-import JobDetails from "@/pages/JobDetails",;
-import PublishProduct from "@/pages/PublishProduct",;
-import ServicesPage from "@/pages/ServicesPage",;
-import RequestQuote from "@/pages/RequestQuote",;
-import AIMatcher from "@/pages/AIMatcher",;
-import ServiceDescriptionGenerator from "@/pages/ServiceDescriptionGenerator",;
-import ITOnsiteServicesPage from "@/pages/ITOnsiteServicesPage",;
-import SearchPage from "@/pages/SearchPage",;
-import ProjectRoom from "@/pages/ProjectRoom",;
-import VideoCall from "@/pages/VideoCall",;
-;
-const MarketplaceRoutes = () => {;
-  return (;
-    <Routes>;
-      {/* Marketplace Routes */}
-      <Route path="/marketplace" element={<Marketplace />} />;
-      <Route path="/categories" element={<Categories />} />;
-      <Route path="/category/:slug" element={<CategoryDetail />} />;
-      <Route path="/featured" element={<Featured />} />;
-      <Route path="/marketplace/listing/:id" element={<ListingDetail />} />;
-      <Route path="/listing/:id" element={<ListingDetail />} />;
       {/* Job Routes */}
       <Route
         path="/post-job"
@@ -178,14 +147,12 @@ import ITOnsiteServicesPage from "@/pages/ITOnsiteServicesPage",;
 import SearchPage from "@/pages/SearchPage",;
 import ProjectRoom from "@/pages/ProjectRoom",;
 import VideoCall from "@/pages/VideoCall",;
-
-
-
 const MarketplaceRoutes = () => {
 const MarketplaceRoutes = () => {;
   return (
     <Routes>;
       {/* Marketplace Routes */}
+<<<<<<< HEAD
 
 const MarketplaceRoutes = () => {;
   return (;
@@ -205,10 +172,13 @@ const MarketplaceRoutes = () => {;
       <Route path="/equipment/:id" element={<EquipmentDetail />} />;
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {/* Job Routes */}
       <Route
         path="/post-job"
         element={
+<<<<<<< HEAD
 
 =======
       ;
@@ -323,12 +293,15 @@ const MarketplaceRoutes = () => {;
         path="/call/:roomId";
         element={;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <ProtectedRoute>;
             <VideoCall />;
           </ProtectedRoute>;
         } ;
       />;
     </Routes>;
+<<<<<<< HEAD
 <<<<<<< HEAD
   );
 };
@@ -338,10 +311,16 @@ const MarketplaceRoutes = () => {;
 =======
 };
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+};
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 },
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
@@ -479,3 +458,6 @@ export default MarketplaceRoutes;
 },;
 export default MarketplaceRoutes;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+export default MarketplaceRoutes;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

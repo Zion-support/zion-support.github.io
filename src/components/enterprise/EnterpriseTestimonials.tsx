@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import React from "react";
 import { Quote } from 'lucide-react'
@@ -13,6 +14,8 @@ import { Quote } from 'lucide-react'
 <<<<<<< HEAD
 
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {
 
   Carousel
@@ -58,6 +61,7 @@ export function EnterpriseTestimonials() {
           <p className='text-xl text-muted-foreground max-w-2xl mx-auto'>            See how enterprise teams are transforming their hiring process
           </p>
         </div>
+<<<<<<< HEAD
         <Carousel className='w-full'>    quote: "The dedicated talent pool makes finding specialized AI engineers much faster than our previous solutions. The ROI has been tremendous."
     author: "Elena Rodriguez"
     title: "CTO"
@@ -71,6 +75,8 @@ import {
     title: "CTO",
     company: "FutureTech Systems",
     image: "/placeholder.svg"}],
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export function EnterpriseTestimonials() {
   return (
     <section id="testimonials" className="py-20 px-4 md:px-6">
@@ -99,6 +105,7 @@ export function EnterpriseTestimonials() {
                   </blockquote>
                   <div className='flex items-center gap-4'>
                     <div className='h-12 w-12 rounded-full overflow-hidden bg-muted'>
+<<<<<<< HEAD
                       <img
                         src={testimonial.image}
                         alt={testimonial.author}
@@ -120,6 +127,8 @@ export function EnterpriseTestimonials() {
           <div className='flex justify-center gap-2 mt-8'>            <CarouselPrevious />          <div className="flex justify-center gap-2 mt-8">
             <CarouselPrevious />
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <CarouselNext />
           </div>
         </Carousel>
@@ -166,7 +175,10 @@ const testimonials = [
     author: "Elena Rodriguez",
     title: "CTO",
     company: "FutureTech Systems",
+<<<<<<< HEAD
     image: "/placeholder.svg"}],
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 export function EnterpriseTestimonials() {
   return (
@@ -181,27 +193,34 @@ export function EnterpriseTestimonials() {
           </p>
         </div>
 
+<<<<<<< HEAD
         <Carousel className="w-full">
           <CarouselContent>
             {testimonials.map((testimonial, index) => (
         <Carousel className="w-full">
           <CarouselContent>
             {testimonials.map((testimonial, index) => (
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <CarouselItem key={index} className="md:basis-1/1 lg:basis-1/1">
                 <div className="bg-card rounded-xl p-8 border border-border h-full">
                   <Quote className="h-10 w-10 text-primary/20 mb-4" />
                   <blockquote className="text-xl mb-6 italic">
                     "{testimonial.quote}"
                   </blockquote>
+<<<<<<< HEAD
 import React from 'react';
 
 import React from "react",;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { Quote } from 'lucide-react';
 import {;
   Carousel,;
   CarouselContent,;
   CarouselItem,;
   CarouselNext,;
+<<<<<<< HEAD
   CarouselPrevious} from "@/components/ui/carousel",;
 ;
 const testimonials = [;
@@ -226,6 +245,8 @@ const testimonials = [;
 ;
 export function EnterpriseTestimonials() {;
   return (;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <section id="testimonials" className="py-20 px-4 md:px-6">;
       <div className="container mx-auto max-w-6xl">;
         <div className="text-center mb-12">;
@@ -236,14 +257,18 @@ export function EnterpriseTestimonials() {;
             See how enterprise teams are transforming their hiring process;
           </p>;
         </div>;
+<<<<<<< HEAD
 ;
         <Carousel className="w-full">;
           <CarouselContent>;
             {testimonials.map((testimonial, index) => (;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <CarouselItem key={index} className="md:basis-1/1 lg:basis-1/1">;
                 <div className="bg-card rounded-xl p-8 border border-border h-full">;
                   <Quote className="h-10 w-10 text-primary/20 mb-4" />;
                   <blockquote className="text-xl mb-6 italic">;
+<<<<<<< HEAD
                         {testimonial && testimonial.title}, {testimonial && testimonial.company}
                       </p>;
                     </div>;
@@ -322,12 +347,15 @@ export function EnterpriseTestimonials() {;
                     </div>;
                     <div>;
                       <p className="font-bold">{testimonial.author}</p>;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       <p className="text-sm text-muted-foreground">;
             <CarouselNext />
           </div>
         </Carousel>
       </div>
     </section>
+<<<<<<< HEAD
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           </CarouselContent>;
@@ -487,3 +515,5 @@ image: "/placeholder.svg" ;
 
 }
 ;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

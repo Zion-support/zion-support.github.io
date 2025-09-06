@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 
@@ -28,10 +29,26 @@ import {
   DropdownMenuTrigger
 } from "@/components/ui/dropdown-menu";
 import { useLanguage, SupportedLanguage } from "@/context/LanguageContext";
+=======
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from '@/components / ui / dropdown - menu';
+import { use_language, SupportedLanguage  } from '@/context / LanguageContext';
+export /**
+ * LanguageSelector - Function description
+ */
+function LanguageSelector() {
+  const { t } = use_translation ();
+  const { current_language, change_language, supported_languages } = use_language ();
+;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
 DropdownMenuTrigger,;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 } from "@/components/ui/dropdown-menu";
 import { useLanguage, SupportedLanguage } from "@/context/LanguageContext";
@@ -42,6 +59,11 @@ export function LanguageSelector() {;
 <<<<<<< HEAD
 =======
 
+=======
+} from "@/components/ui/dropdown-menu";
+import { useLanguage, SupportedLanguage } from "@/context/LanguageContext";
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from 'react',
 import { useTranslation } from 'react-i18next',
 import { Button } from '@/components/ui/button',
@@ -54,21 +76,9 @@ import {
 import { useLanguage, SupportedLanguage } from '@/context/LanguageContext',
 
 export function LanguageSelector() {
-
-
-import React from 'react',;
-import { useTranslation } from 'react-i18next',;
-import { Button } from '@/components/ui/button',;
-import { Globe } from 'lucide-react',;
-import {;
-  DropdownMenu,;
-  DropdownMenuContent,;
-  DropdownMenuItem,;
-} from "@/components/ui/dropdown-menu";
-import { useLanguage, SupportedLanguage } from "@/context/LanguageContext";
-export function LanguageSelector() {;
   const { t } = useTranslation();
   const { currentLanguage, changeLanguage, supportedLanguages } = useLanguage();
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   return (
     <DropdownMenu>;
@@ -166,6 +176,8 @@ DropdownMenuTrigger,;
 =======
   DropdownMenuTrigger,
 >>>>>>> main
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 } from "@/components/ui/dropdown-menu";
 import { useLanguage, SupportedLanguage } from "@/context/LanguageContext";
 
@@ -188,37 +200,6 @@ import { useLanguage, SupportedLanguage } from "@/context/LanguageContext";
         {supported_languages.map ((lang) => (
           <DropdownMenuItem;
             key={lang.code}
-
-
-            className={`cursor-pointer ${;
-              currentLanguage === lang.code ? 'bg-zion-purple/20 text-zion-cyan' : 'text-white hover:bg-zion-purple/10';
-
-
-const { t } = useTranslation();
-  const { currentLanguage, changeLanguage, supportedLanguages } = useLanguage();
-  const { t } = useTranslation();
-  const { currentLanguage, changeLanguage, supportedLanguages } = useLanguage();
-  const { t } = useTranslation(),
-  const { currentLanguage, changeLanguage, supportedLanguages } = useLanguage(),
-
-  return (
-    <DropdownMenu>
-      <DropdownMenuTrigger asChild>
-        <Button variant="ghost" size="icon" className="text-white hover:bg-zion-purple/10">
-          <Globe className="h-5 w-5" />
-          <span className="sr-only">{t('general.select_language')}</span>
-        </Button>
-      </DropdownMenuTrigger>
-      <DropdownMenuContent align="end" className="bg-zion-blue-dark border border-zion-purple/20">
-        {supportedLanguages.map((lang) => (
-          <DropdownMenuItem
-            key={lang.code}
-            className={`cursor-pointer ${
-              currentLanguage === lang.code
-                ? "bg-zion-purple/20 text-zion-cyan"
-                : "text-white hover:bg-zion-purple/10"
-            className={`cursor-pointer ${;
-              currentLanguage === lang.code ? 'bg-zion-purple/20 text-zion-cyan' : 'text-white hover:bg-zion-purple/10';
             }`}
             onClick={() => changeLanguage(lang.code)}
           >
@@ -229,6 +210,7 @@ const { t } = useTranslation();
           </DropdownMenuItem>
         ))}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
       </DropdownMenuContent>;
     </DropdownMenu>;
@@ -236,10 +218,12 @@ const { t } = useTranslation();
       </DropdownMenuContent>
     </DropdownMenu>
       </DropdownMenuContent>;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   );
 }
-    </DropdownMenu>);
 }
+<<<<<<< HEAD
   ),;}
  return (<DropdownMenu> <DropdownMenuTrigger asChild> key= {
   lang.code 
@@ -263,3 +247,5 @@ const { t } = useTranslation();
 =======
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

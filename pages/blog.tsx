@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -63,6 +64,10 @@ return (
 
 import React, { useState } from 'react';
 
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import Head from 'next/head';
 import Layout from '../components/layout/Layout';
 import React, { useState } from 'react',;
@@ -71,6 +76,8 @@ import Layout from '../components/layout/Layout',;
 import React, { useState } from 'react',
 import Head from 'next/head'
 import Layout from '../components/layout/Layout'
+
+
 export default function BlogPage() {
 	return (
 		<Layout>
@@ -84,8 +91,11 @@ export default function BlogPage() {
 			</section>
 		</Layout>
 	)
+<<<<<<< HEAD
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -93,7 +103,10 @@ export default function BlogPage() {
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

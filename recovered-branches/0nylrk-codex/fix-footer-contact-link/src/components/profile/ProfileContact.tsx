@@ -1,16 +1,20 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface ProfileContactProps {
   email?: string,
   profileName: string,
   profileType: 'service' | 'talent'
 }
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -19,11 +23,14 @@ export function ProfileContact({ email, profileName, profileType }: ProfileConta
   const [subject, setSubject] = useState("");
   const [isSending, setIsSending] = useState(false);
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export function ProfileContact({ email, profileName, profileType }: ProfileContactProps) {
   const [message, setMessage] = useState(""),
   const [subject, setSubject] = useState(""),
   const [isSending, setIsSending] = useState(false),
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   
 =======
@@ -34,6 +41,9 @@ export function ProfileContact({ email, profileName, profileType }: ProfileConta
   const [isSending, setIsSending] = useState(false);
   
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const handleSendMessage = (e: React.FormEvent) => {
     e.preventDefault(),
     setIsSending(true),
@@ -48,6 +58,7 @@ export function ProfileContact({ email, profileName, profileType }: ProfileConta
         description: `Your message has been sent to ${profileName}.`})
     }, 1000)
   },
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -92,6 +103,9 @@ export function ProfileContact({
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   return (
     <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-8">
@@ -100,64 +114,26 @@ export function ProfileContact({
         Contact
       </h3>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
 =======
 
 >>>>>>> main
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {email && (
-        <div className="mb-4 text-zion-slate-light">
-          <span className="block">Email: </span>
-          <a
+        <div className="mb - 4 text - zion - slate - light">;
+          <span className="block">Email: </span>;
+          <a;
             href={`mailto:${email}`}
-            className="text-zion-cyan hover:underline truncate block"
-          >
-            {email}
-          </Link>
-        </div>
-      )}
-
-      <form onSubmit={handleSendMessage}>
-        <div className="space-y-4">
-          <div>
-            <Input
-              placeholder="Subject"
-              value={subject}
-              onChange={(e) => setSubject(e.target.value)}
-              className="bg-zion-blue border-zion-blue-light text-white"
-              required
-            />
-          </div>
-          <div>
-            <Textarea
-              placeholder={`Message to ${profileName}...`}
-              value={message}
-              onChange={(e) => setMessage(e.target.value)}
-              className="bg-zion-blue border-zion-blue-light text-white min-h-[120px]"
-              required
-            />
-          </div>
-          <Button
-            type="submit"
-            className="w-full bg-zion-cyan hover:bg-zion-cyan/90"
-            disabled={isSending}
-          >
-            <Send className="mr-2 h-4 w-4" />
-            {isSending ? "Sending..." : "Send Message"}
-          </Button>
-        </div>
-      </form>
-    </div>
-<<<<<<< HEAD
-  )
-<<<<<<< HEAD
-=======
-  );
->>>>>>> main
 }
+<<<<<<< HEAD
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { Button  } from '@/components / ui / button';
 import { Input  } from '@/components / ui / input';
 import { Textarea  } from '@/components / ui / textarea';
@@ -199,7 +175,6 @@ function ProfileContact() {
         <Mail className="mr - 2 h - 5 w - 5 text - zion - cyan" />;
         Contact;
       </h3>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       {email && (
         <div className="mb-4 text-zion-slate-light">
           <span className="block">Email: </span>
@@ -217,16 +192,13 @@ interface ProfileContactProps {;
   profileName: string,;
   profileType: 'service' | 'talent';
 }
-
 export function ProfileContact(): any ({ email, profileName, profileType }: ProfileContactProps) {;
   const [message, setMessage] = useState("");
   const [subject, setSubject] = useState("");
   const [isSending, setIsSending] = useState(false);
-
   const handleSendMessage = (e: React && React.FormEvent) => {;
     e && e.preventDefault();
     setIsSending(true);
-
     // Here would be the actual API call to send the message;
     setTimeout(() => {;
       setIsSending(false);
@@ -237,6 +209,7 @@ export function ProfileContact(): any ({ email, profileName, profileType }: Prof
         description: `Your message has been sent to ${profileName}.`});
     }, 1000);
   };
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   return (
@@ -302,10 +275,15 @@ export function ProfileContact({ email, profileName, profileType } ProfileContac
             className="text-zion-cyan hover:underline truncate block";
           >;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  return (
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             {email}
           </a>;
         </div>;
       )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -326,10 +304,13 @@ export function ProfileContact({ email, profileName, profileType } ProfileContac
         </div>)}
       <form on_submit={handleSendMessage}>;
         <div className="space - y-4">;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <div>;
             <Input;
               placeholder="Subject";
               value={subject}
+<<<<<<< HEAD
               on_change={(e) => set_subject (e.target.value)}
               className="bg - zion - blue border - zion - blue - light text - white";
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -344,10 +325,13 @@ export function ProfileContact({ email, profileName, profileType } ProfileContac
               onChange={(e) => setSubject(e.target.value)}
               className="bg-zion-blue border-zion-blue-light text-white";
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               required;
             />;
           </div>;
           <div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
               onChange={(e) => setMessage(e && e.target.value)}
@@ -367,10 +351,13 @@ export function ProfileContact({ email, profileName, profileType } ProfileContac
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             className="w-full bg-zion-cyan hover:bg-zion-cyan/90"
             disabled={isSending}>;
             <Send className="mr-2 h-4 w-4" />;
             {isSending ? "Sending..." : "Send Message"}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
             className="w-full bg-zion-cyan hover:bg-zion-cyan/90"
@@ -405,6 +392,8 @@ export function ProfileContact({ email, profileName, profileType } ProfileContac
 =======
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <Textarea;
               placeholder={`Message to ${profile_name}...`}
               value={message}
@@ -426,6 +415,7 @@ export function ProfileContact({ email, profileName, profileType } ProfileContac
     </div>);
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
@@ -435,10 +425,13 @@ export function ProfileContact({ email, profileName, profileType } ProfileContac
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   )
   )
 
+<<<<<<< HEAD
   ),;}
  interface ProfileContactProps {
   email?: string;
@@ -463,3 +456,5 @@ setIsSending (true);
 }
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -1,4 +1,3 @@
-
 import {useEffect, useState} from "react";
 import {useNavigate} from "react-router-dom";
 import {Bell, Calendar, X} from "lucide-react";
@@ -7,6 +6,7 @@ import {Card, CardContent} from "@/components/ui/card";
 import {useProjects} from "@/hooks/useProjects";
 import {Project} from "@/types/projects";
 export function ProjectOfferBanner() {;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -31,6 +31,8 @@ export function ProjectOfferBanner() {;
 =======
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useEffect, useState } from "react",
 import { useNavigate } from "react-router-dom",
 import { Bell, Calendar, X } from "lucide-react",
@@ -44,18 +46,11 @@ export function ProjectOfferBanner() {
   const { projects, isLoading } = useProjects();
   const [pendingOffers, setPendingOffers] = useState<Project[]>([]);
   const [dismissed, setDismissed] = useState<Set<string>>(new Set());
-import { useProjects } from "@/hooks/useProjects",
-import { Project } from "@/types/projects",
-export function ProjectOfferBanner() {
-  const navigate = useNavigate(),
-  const { projects, isLoading } = useProjects(),
-  const [pendingOffers, setPendingOffers] = useState<Project[]>([]),
-  const [dismissed, setDismissed] = useState<Set<string>>(new Set()),
-  
   useEffect(() => {
     if (projects && !isLoading) {
       const offers = projects.filter(p => p.status === 'offer_sent'),
       setPendingOffers(offers)
+<<<<<<< HEAD
     }
   }, [projects, isLoading]);
   const handleDismiss = (projectId: string, e: React.MouseEvent) => {
@@ -74,6 +69,8 @@ export function ProjectOfferBanner() {
     return null
   }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useEffect, useState } from "react",;
 import { useNavigate } from "react-router-dom",;
 import { Bell, Calendar, X } from "lucide-react",;
@@ -106,6 +103,7 @@ export function ProjectOfferBanner() {;
   if (isLoading || pendingOffers.length === 0 || pendingOffers.every(p => dismissed.has(p.id))) {;
     return null;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -122,6 +120,10 @@ export function ProjectOfferBanner() {;
   }
   
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  }
+  
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <div className="mb-6 space-y-3">
       {pendingOffers
@@ -150,6 +152,7 @@ export function ProjectOfferBanner() {;
                 </Button>
                 <Button
                   size="sm"
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -286,6 +289,10 @@ export function ProjectOfferBanner() {;
                   variant="ghost";
                   onClick={(e) => handleDismiss(offer.id, e)}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+                  variant="ghost"
+                  onClick={(e) => handleDismiss(offer && offer.id, e)}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 >;
                   <X className="h-4 w-4" />;
                 </Button>;
@@ -294,12 +301,15 @@ export function ProjectOfferBanner() {;
           </Card>;
         ))}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     </div>;
   );
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useEffect, useState } from './react';
 import { use_navigate } from './react-router-dom';
 import { Bell, Calendar, X } from './lucide-react';
@@ -316,6 +326,7 @@ function ProjectOfferBanner() {
   const [pending_offers, setPendingOffers] = useState < Project[]>([]);
   const [dismissed, set_dismissed] = useState < Set < string>>(new Set ());
 ;
+<<<<<<< HEAD
 
 
 
@@ -427,3 +438,5 @@ if (isLoading || pendingOffers.length === 0 || pendingOffers.every (p => dismiss
 }
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

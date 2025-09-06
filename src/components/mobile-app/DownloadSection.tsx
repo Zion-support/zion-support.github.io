@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -17,7 +18,12 @@ xport const DownloadSection: React.FC = () => {
 import React from "react"
 import { QrCodeIcon } from 'lucide-react'import { AppStoreButtons } from "./AppStoreButtons"
 import { logInfo } from '@/utils/productionLogger'
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
+
+
+              
 import React from "react",
 import { QrCodeIcon } from 'lucide-react'
 import { AppStoreButtons } from "./AppStoreButtons",
@@ -37,6 +43,7 @@ export const DownloadSection: React.FC = () => {
               <p className="text-lg text-gray-300 mb-8">
                 Download the Zion app now and take your tech career or hiring needs to the next level. Available on iOS and Android.
               </p>
+<<<<<<< HEAD
               <AppStoreButtons
                 className="mb-8"
                 appStoreUrl = {appStoreUrl,}
@@ -53,6 +60,8 @@ appStoreUrl = {appStoreUrl,}
 
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               
               <AppStoreButtons 
                 className="mb-8" 
@@ -61,15 +70,18 @@ appStoreUrl = {appStoreUrl,}
                 onAppStoreClick={() => logInfo("App Store button clicked")}
                 onGooglePlayClick={() => logInfo("Google Play button clicked")}
               />
-              
               <div className="text-sm text-gray-400">
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
               
               <div className="text-sm text-gray-400">
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <p>Compatible with iOS 14+ and Android 8.0+</p>
                 <p>Free download, in-app purchases available</p>
               </div>
             </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   // These would typically come from environment variables or a config;
@@ -88,6 +100,8 @@ appStoreUrl = {appStoreUrl,}
             <div className="flex-shrink-0 bg-white dark: bg-zion-blue-dark p-4 rounded-lg">
             
             <div className="flex-shrink-0 bg-white dark:bg-zion-blue-dark p-4 rounded-lg">
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <div className="w-36 h-36 flex items-center justify-center bg-white dark:bg-zion-blue rounded-lg">
                 <QrCodeIcon className="w-full h-full p-2" />
                 {/* This would be replaced with an actual QR code in production */}
@@ -98,19 +112,6 @@ appStoreUrl = {appStoreUrl,}
         </div>
       </div>
     </section>
-  );
-};
-";
-}
-"
-
-  );
-};
-";
-  )
-}
-"
-
 },
 import React from "react",;
 import { QrCodeIcon } from 'lucide-react';
@@ -128,7 +129,10 @@ export const DownloadSection: React.FC = () => {;
             <div className="flex-1">;
               <h2 className="text-3xl md:text-4xl font-bold mb-4">Get The App Today</h2>;
               <p className="text-lg text-gray-300 mb-8">;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 Download the Zion app now and take your tech career or hiring needs to the next level. Available on iOS and Android.;
               </p>;
               <AppStoreButtons;
@@ -138,6 +142,7 @@ export const DownloadSection: React.FC = () => {;
                 onAppStoreClick = {(, ) => log_info ("App Store button clicked"), }
                 onGooglePlayClick = {() => log_info ("Google Play button clicked"), }
               />;
+<<<<<<< HEAD
 <<<<<<< HEAD
               <div className="text - sm text - gray - 400">;
                 <p > Compatible with iOS 14+ and Android 8.0+</p>;
@@ -169,6 +174,8 @@ export const DownloadSection: React.FC = () => {;
             </div>;
 
             <div className="flex-shrink-0 bg-white dark: bg-zion-blue-dark p-4 rounded-lg">;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <div className="w-36 h-36 flex items-center justify-center bg-white dark:bg-zion-blue rounded-lg">;
                 <QrCodeIcon className="w-full h-full p-2" />;
                 {/* This would be replaced with an actual QR code in production */}
@@ -182,15 +189,19 @@ export const DownloadSection: React.FC = () => {;
   );
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
             
             <div className="flex-shrink-0 bg-white dark:bg-zion-blue-dark p-4 rounded-lg">
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 ";
 
             
             <div className="flex-shrink-0 bg-white dark:bg-zion-blue-dark p-4 rounded-lg">
 
+<<<<<<< HEAD
               <div className="w-36 h-36 flex items-center justify-center bg-white dark:bg-zion-blue rounded-lg">
                 <QrCodeIcon className="w-full h-full p-2" />
                 {/* This would be replaced with an actual QR code in production */}
@@ -204,3 +215,5 @@ export const DownloadSection: React.FC = () => {;
 
   )
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

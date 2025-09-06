@@ -1,6 +1,6 @@
-import React from "react",
-import { Card, CardContent } from "@/components/ui/card",
+import { MessageSquare, ArchiveIcon } from 'lucide-react'
 
+<<<<<<< HEAD
 import React from "react"
 import { Card, CardContent } from "@/components/ui/card"
 
@@ -72,6 +72,10 @@ type EmptyStateCardProps = {
   type: 'active' | 'archived'
 },
 
+=======
+import { MessageSquare, ArchiveIcon } from 'lucide-react'
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card'
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export const EmptyStateCard: React.FC<EmptyStateCardProps> = ({ type }) => {
   const isActive = type === 'active',
   
@@ -91,6 +95,7 @@ export const EmptyStateCard: React.FC<EmptyStateCardProps> = ({ type }) => {
         </h3>
         <p className="text-zion-slate-light max-w-md mx-auto">
 <<<<<<< HEAD
+<<<<<<< HEAD
 
           {isActive 
 =======
@@ -103,6 +108,8 @@ export const EmptyStateCard: React.FC<EmptyStateCardProps> = ({ type }) => {
             : "You haven't archived any hire requests yet. Archive requests to keep your active list organized."
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           }
         </p>
       </CardContent>
@@ -110,6 +117,7 @@ export const EmptyStateCard: React.FC<EmptyStateCardProps> = ({ type }) => {
   )
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
           {isActive 
@@ -136,6 +144,8 @@ export const EmptyStateCard: React.FC<EmptyStateCardProps> = ({ type }) => {;
         <h3 className="text-xl font-medium text-white mb-2">;
           {isActive ? 'No hire requests yet' : 'No archived requests'}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         </h3>;
         <p className="text-zion-slate-light max-w-md mx-auto">;
           {isActive ;
@@ -153,12 +163,14 @@ export const EmptyStateCard: React.FC<EmptyStateCardProps> = ({ type }) => {;
       </CardContent>;
     </Card>;
   );
+<<<<<<< HEAD
 };
 };
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
 
-};
-};
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
 export const EmptyStateCard: React.FC < EmptyStateCardProps> = ({ type }) => {
   const is_active = type === 'active';
   return (
@@ -183,7 +195,10 @@ export const EmptyStateCard: React.FC < EmptyStateCardProps> = ({ type }) => {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 };
 =======
 };
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

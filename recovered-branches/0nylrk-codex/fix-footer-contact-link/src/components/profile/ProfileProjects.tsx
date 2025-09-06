@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -21,13 +22,18 @@ import { AspectRatio } from "@/components/ui/aspect-ratio",
 import { FileText } from "lucide-react",
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { ProfileProject } from "@/types/profile";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { FileText } from "lucide-react";
+<<<<<<< HEAD
 >>>>>>> main
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface ProfileProjectsProps {
   projects: ProfileProject[];
 }
@@ -35,6 +41,7 @@ export function ProfileProjects({ projects }: ProfileProjectsProps) {
   return (
     <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-8">
       <h3 className="text-xl font-bold text-white mb-4">Projects</h3>
+<<<<<<< HEAD
 <<<<<<< HEAD
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {projects.map((project) => (
@@ -134,6 +141,8 @@ export function ProfileProjects(): any ({ projects }: ProfileProjectsProps) {;
 =======
 
 >>>>>>> main
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {projects.map((project) => (
           <Card
@@ -145,7 +154,10 @@ export function ProfileProjects(): any ({ projects }: ProfileProjectsProps) {;
                 <img
                   src={project.imageUrl}
                   alt={project.title}
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   className="w-full h-full object-cover"
                 />
               </AspectRatio>
@@ -154,6 +166,7 @@ export function ProfileProjects(): any ({ projects }: ProfileProjectsProps) {;
                 <FileText className="text-zion-purple h-12 w-12 opacity-50" />
               </div>
             )}
+<<<<<<< HEAD
 <<<<<<< HEAD
             <CardContent className="p-4">
               <h4 className="text-white font-medium mb-2">{project.title}</h4>
@@ -178,6 +191,11 @@ export function ProfileProjects(): any ({ projects }: ProfileProjectsProps) {;
 =======
 <<<<<<< HEAD
 =======
+=======
+
+<CardContent className="p-4">
+              <h4 className="text-white font-medium mb-2">{project.title}</h4>
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { Card, CardContent } from "@/components/ui/card",;
 import { Badge } from "@/components/ui/badge",;
 import { ProfileProject } from "@/types/profile",;
@@ -215,8 +233,6 @@ export function ProfileProjects({ projects }: ProfileProjectsProps) {;
                 <div className="flex flex-wrap gap-1 mb-2">;
                   {project.tags.map((tag, i) => (;
                     <Badge key={i} variant="outline" className="text-xs border-zion-slate-dark text-zion-slate-light">;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-=======
               <p className="text-zion-slate text-sm mb-3 line-clamp-2">
                 {project.description}
               </p>
@@ -229,13 +245,17 @@ export function ProfileProjects({ projects }: ProfileProjectsProps) {;
                       variant="outline"
                       className="text-xs border-zion-slate-dark text-zion-slate-light"
                     >
+<<<<<<< HEAD
 >>>>>>> main
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       {tag}
                     </Badge>;
                   ))}
                 </div>;
               )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -244,6 +264,8 @@ export function ProfileProjects({ projects }: ProfileProjectsProps) {;
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <div className="text-xs text-zion-slate-light mt-2">
                 {project.date}
               </div>
@@ -252,6 +274,7 @@ export function ProfileProjects({ projects }: ProfileProjectsProps) {;
         ))}
       </div>
     </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -318,3 +341,8 @@ export function ProfileProjects({ projects }: ProfileProjectsProps) {;
 }
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  )
+}
+;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

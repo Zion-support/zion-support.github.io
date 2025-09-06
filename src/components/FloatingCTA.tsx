@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { Button } from "@/components/ui/button",
 =======
@@ -11,11 +12,14 @@ import { useState, useEffect } from "react";
 import { Button } from '@/components/ui/button'
 import Link from 'next/link'
 import { useState, useEffect } from 'react'
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { X } from 'lucide-react'
 
   const [isVisible, setIsVisible] = useState(false)
   useEffect(() => {
   // TODO: Add dependencies if needed
+<<<<<<< HEAD
 import { Button } from '@/components / ui / button';
 import Link from 'next / link';
 import { useState, useEffect } from 'react';
@@ -28,6 +32,12 @@ import { X } from 'lucide-react';
   return () => {
     // Cleanup function;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+}
+
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 };
 }, []); [])
     // Show CTA after 5 seconds
@@ -55,6 +65,7 @@ import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import { useState, useEffect } from "react"
 export function FloatingCTA() {
+<<<<<<< HEAD
   const [ isVisible, setIsVisible ] = useState(false)
   const [ isClosed, setIsClosed ] = useState(false)
   useEffect((,) => {
@@ -64,6 +75,8 @@ export function FloatingCTA() {
 <<<<<<< HEAD
 =======
 export function FloatingCTA() {
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 import { Button } from "@/components/ui/button",
 import Link from "next/link",
@@ -74,6 +87,7 @@ export function FloatingCTA() {
   const [isVisible, setIsVisible] = useState(false),
   const [isClosed, setIsClosed] = useState(false),
 
+<<<<<<< HEAD
 xport function FloatingCTA() {
   const [isVisible, setIsVisible] = useState(false),
   const [isClosed, setIsClosed] = useState(false),
@@ -86,6 +100,8 @@ xport function FloatingCTA() {
       const scrollPosition = window.scrollY;
       const threshold = 600; // Show CTA after scrolling 600px
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY,
@@ -93,17 +109,21 @@ xport function FloatingCTA() {
 <<<<<<< HEAD
 
 
+<<<<<<< HEAD
             className='text-zion-slate hover:text-white p-1'
             aria-label='Close'          >
             <X className='w-5 h-5' />          </button>
 
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
       if (scrollPosition > threshold && !isClosed) {
         setIsVisible(true)
       } else {
         setIsVisible(false)
       }
+<<<<<<< HEAD
     }
     window.addEventListener('scroll', handleScroll)
     return () => {
@@ -252,6 +272,10 @@ export function FloatingCTA() {;
 
   if (!isVisible) return null,
 
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <div className="fixed bottom-6 left-0 right-0 mx-auto max-w-md px-4 z-50 animate-fade-in">
       <div className="bg-gradient-to-r from-zion-blue-dark to-zion-blue p-4 rounded-lg border border-zion-purple shadow-lg flex items-center justify-between">
@@ -268,6 +292,7 @@ export function FloatingCTA() {;
           >
             <Link href="/signup">Register Now</Link>
           </Button>
+<<<<<<< HEAD
           <button
             onClick={handleClose}
             className="text-zion-slate hover: text-white p-1"
@@ -282,6 +307,8 @@ ursor/fix-website-loading-errors-and-merge-6662
             aria-label='Close'          >
             <X className='w-5 h-5' />          </button>
             <X className="w-5 h-5" />
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <button 
             onClick={handleClose}
             className="text-zion-slate hover: text-white p-1"
@@ -296,6 +323,7 @@ ursor/fix-website-loading-errors-and-merge-6662
       </div>
     </div>
   )
+<<<<<<< HEAD
 }
 }, [isClosed])
 return (<div className="fixed bottom-6 left-0 right-0 mx-auto max-w-md px-4 z-50 animate-fade-in" > <div className="bg-gradient-to-r from-zion-blue-dark to-zion-blue p-4 rounded-lg border border-zion-purple shadow-lg flex items-center justify-between" > <div className="mr-4" > <p className="text-white font-medium" >Ready to explore Zion?</p> <p className="text-zion-slate-light text-sm" >Register today to access all features!</p> </div> <div className="flex items-center gap-2" > <Button variant="default" size="sm" className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple whitespace-nowrap" asChild > <Link href="/signup" >Register Now</Link> </Button> <button aria-label="Close" w-5 h-5" /> </button> </div> </div> </div>)
@@ -322,14 +350,20 @@ return (<div className="fixed bottom-6 left-0 right-0 mx-auto max-w-md px-4 z-50
 }
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             aria-label='Close'           aria-label="Button">;
             <X className='w-5 h-5' />          </button>;
             <X className="w-5 h-5" />;
 
 ;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { Button } from "@/components/ui/button",;
 import Link from "next/link",;
 import { useState, useEffect } from "react",;
@@ -378,6 +412,7 @@ export function FloatingCTA() {;
             className="text-zion-slate hover: text-white p-1";
             aria-label="Close";
           >;
+<<<<<<< HEAD
 }
 }, [isClosed])
 return (<div className="fixed bottom-6 left-0 right-0 mx-auto max-w-md px-4 z-50 animate-fade-in" > <div className="bg-gradient-to-r from-zion-blue-dark to-zion-blue p-4 rounded-lg border border-zion-purple shadow-lg flex items-center justify-between" > <div className="mr-4" > <p className="text-white font-medium" >Ready to explore Zion?</p> <p className="text-zion-slate-light text-sm" >Register today to access all features!</p> </div> <div className="flex items-center gap-2" > <Button variant="default" size="sm" className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple whitespace-nowrap" asChild > <Link href="/signup" >Register Now</Link> </Button> <button aria-label="Close" w-5 h-5" /> </button> </div> </div> </div>)
@@ -389,12 +424,15 @@ return (<div className="fixed bottom-6 left-0 right-0 mx-auto max-w-md px-4 z-50
             aria-label='Close'           aria-label="Button">;
             <X className='w-5 h-5' />          </button>;
             <X className="w-5 h-5" />;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <X className="w-5 h-5" />;
           </button>;
         </div>;
       </div>;
     </div>;
   );
+<<<<<<< HEAD
   }, [is_closed]);
   const handle_close = () =>: any {
     setIsClosed (true);
@@ -539,5 +577,7 @@ return (<div className="fixed bottom-6 left-0 right-0 mx-auto max-w-md px-4 z-50
 }
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 ;

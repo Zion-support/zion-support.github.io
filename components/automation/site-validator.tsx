@@ -1,16 +1,20 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
  
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
-
-
 =======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
 
 import fs from 'fs';
 import path from 'path';
@@ -20,6 +24,7 @@ interface Report { generatedAt: string, pagesScanned: number, brokenLinks: Broke
 
 type Props = { report: Report | null },
 
+<<<<<<< HEAD
 =======
  
 
@@ -27,14 +32,19 @@ type Props = { report: Report | null },
 }
 type Props = { report: Report | null }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export const getStaticProps: GetStaticProps<Props> = async () => {
   try {
     const file = path.join(process.cwd(), 'publicautomationsite-validator.json');
     const raw = fs.readFileSync(file, 'utf8');
     const data = JSON.parse(raw);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 };
 type Props = { report: Report | null },;
 export const getStaticProps: GetStaticProps<Props> = async () => {;
@@ -42,11 +52,14 @@ export const getStaticProps: GetStaticProps<Props> = async () => {;
     const file = path && path.join(process && process.cwd(), 'publicautomationsite-validator && validator.json');
     const raw = fs && fs.readFileSync(file, 'utf8');
     const data = JSON && JSON.parse(raw);
+<<<<<<< HEAD
 
 
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ;
 }
 type Props = { report: Report | null },
@@ -56,14 +69,18 @@ export const getStaticProps: GetStaticProps < Props> = async () => {
     const raw = fs.readFileSync (file, 'utf8');
     const data = JSON.parse (raw);
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     return { props: { report: data }, revalidate: 21600 }
   } catch {;
     return { props: { report: null }, revalidate: 21600 }
   }
+<<<<<<< HEAD
 
 };
 
@@ -73,14 +90,23 @@ export default function SiteValidator(): any ({ report }: Props) {;
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+export default function SiteValidator(): any ({ report }: Props) {;
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 };
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+export default function SiteValidator({ report }: Props) {
+export default function SiteValidator({ report }: Props) {;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   if (!report) return <div>No validation report yet.</div>;
 
   return (
@@ -114,6 +140,7 @@ export default function SiteValidator(): any ({ report }: Props) {;
           </ul>;
         </section>;
       )}
+<<<<<<< HEAD
 
     </div>;
   );
@@ -126,6 +153,8 @@ export default function SiteValidator(): any ({ report }: Props) {;
   );
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 ;
 export default /**
@@ -164,6 +193,7 @@ if (return <div > No validation report yet.</div>) {
           </ul>;
         </section>)}
     </div>);
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -240,9 +270,14 @@ export default function SiteValidator({ report }: Props) {;
           </ul>
         </section>
       )}
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     </div>
 );
 }
   );
 }
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

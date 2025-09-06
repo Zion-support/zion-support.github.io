@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
@@ -141,3 +142,5 @@ const Header: React.FC<HeaderProps> = ({ onMenuClick }) => {
 export { Header };
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 export default Header;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -5,6 +6,8 @@
 }</select> </>)
 > <option value="light" >Light</option> <option value="dark" >Dark</option> </select>) ) 
 }</select> </>) 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }</div> </div> <PdfExportButton targetRef= {
   targetRef
 }fileName= {
@@ -30,7 +33,22 @@ export default function ResumePreviewPage({
   const [selectedVersionId, setSelectedVersionId] = useState<string>(
     versions[0]?.id |'current'
   );  const targetRef = useRef<HTMLDivElement>(null);
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  const activeData = useMemo(() => {
+    if (selectedVersionId === 'current') return initialData;
+    const found = versions.find(v => v.id === selectedVersionId);
+    return found?.data |initialData;
+  }, [selectedVersionId, initialData, versions]);
+
+import { GetServerSideProps } from 'next',
+import React, { useMemo, useRef, useState } from 'react',
+import PdfExportButton from '../../components/ui/PdfExportButton',
+import ResumePreview, { ResumeData } from '../../components/ui/ResumePreview',
+import { createServerClient } from '../../utils/supabase/server',
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   }, [selectedVersionId, initialData, versions]);
   return (
@@ -46,12 +64,19 @@ export default function ResumePreviewPage({
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+            onChange={e => setTheme(e && e.target.value as 'light' | 'dark')}
+            className='border border-gray-300 dark:border-gray-700 rounded px-2 py-1 bg-white dark:bg-black';
+          >;
+            <option value='light'>Light</option>;
+            <option value='dark'>Dark</option>          </select>;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
           {versions && versions.length > 0 && (;
             <>;
               <label className='text-sm ml-4'>Version</label>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               <select
                 value={selectedVersionId}
                 onChange={e => setSelectedVersionId(e && e.target.value)}
@@ -65,6 +90,7 @@ export default function ResumePreviewPage({
               </select>;
             </>;
 
+<<<<<<< HEAD
 =======
 import { GetServerSideProps } from 'next';
 import React, { useMemo, useRef, useState } from 'react';
@@ -112,6 +138,16 @@ export default function ResumePreviewPage({ initialData, versions = [] }: Resume
 =======
   }, [selectedVersionId, initialData, versions]),
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+export default function ResumePreviewPage({ initialData, versions = [] }: ResumePreviewPageProps) {
+
+  const activeData = useMemo(() => {
+    if (selectedVersionId === 'current') return initialData;
+    const found = versions.find(v => v.id === selectedVersionId);
+    return found?.data || initialData
+  }, [selectedVersionId, initialData, versions]),
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <div className="relative">
       <div className="flex items-center justify-between mb-4">
@@ -128,6 +164,7 @@ export default function ResumePreviewPage({ initialData, versions = [] }: Resume
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
+<<<<<<< HEAD
             <option value="light">Light</option>
             <option value="dark">Dark</option>
           </select>
@@ -155,10 +192,14 @@ export default function ResumePreviewPage({ initialData, versions = [] }: Resume
             <option value="dark">Dark</option>
           </select>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           {versions.length > 0 && (
             <>
               <label className="text-sm ml-4">Version</label>
               <select
+<<<<<<< HEAD
 <<<<<<< HEAD
                 value={selectedVersionId}
                 onChange={(e) => setSelectedVersionId(e.target.value)}
@@ -166,10 +207,20 @@ export default function ResumePreviewPage({ initialData, versions = [] }: Resume
               >
                 <option value="current">Current</option>
                 {versions.map(v => (
+=======
+        </div>
+      </div>
+      <PdfExportButton
+        targetRef={targetRef}
+        fileName={`resume-${activeData.name.replace(/\s+/g, '-').toLowerCase()}.pdf`}
+      />
+      <div className='mx-auto'>
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
       <PdfExportButton targetRef={targetRef} fileName={`resume-${activeData.name.replace(/\s+/g, '-').toLowerCase()}.pdf`} />
 
+<<<<<<< HEAD
 =======
 
       <PdfExportButton targetRef={targetRef} fileName={`resume-${activeData.name.replace(/\s+/g, '-').toLowerCase()}.pdf`} />
@@ -181,6 +232,8 @@ export default function ResumePreviewPage({ initialData, versions = [] }: Resume
           )}
 <PdfExportButton targetRef={targetRef} fileName={`resume-${activeData.name.replace(/\s+/g, '-').toLowerCase()}.pdf`} />
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <div className="mx-auto">
         <ResumePreview ref={targetRef} data={activeData} theme={theme} />
       </div>
@@ -192,17 +245,25 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
   // Simple auth guard for talent users, adjust with real roles when available
   const supabase = createServerClient();
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const user = await (supabase as any).auth.getUser?.();
   if (!user) {
     return {
       redirect: {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         destination: '/auth',
         permanent: false}}
   }
@@ -216,9 +277,13 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
     technologies: ['OpenAISupabasePostgresVercelDocker'],
     experience: [
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {
         title: 'Senior AI Engineer'
         company: 'Zion AI'
@@ -226,6 +291,7 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
         end: 'Present'
         location: 'Remote'
         bullets: [
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -242,6 +308,8 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
         <ResumePreview ref={targetRef} data={activeData} theme={theme} />;
       </div>;
     </div>;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
                   <option value={v.id} key={v.id}>{v.label}</option>
                 ))  } catch (error) {
@@ -256,7 +324,6 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
         </div>
       </div>
       <PdfExportButton
@@ -267,12 +334,11 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
         <ResumePreview ref={targetRef} data={activeData} theme={theme} />
       </div>
     </div>
-
-
   );
 
 export const getServerSideProps: GetServerSideProps = async ctx => {;
   // Simple auth guard for talent users; adjust with real roles when available  const supabase = createServerClient();
+<<<<<<< HEAD
   const user = await (supabase as any).auth && auth.getUser?.();
 <<<<<<< HEAD
 
@@ -372,6 +438,8 @@ return { props: { initialData, versions } };
       </div>
     </div>
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   )
   } catch (error) {
     console.error("Error:", error);
@@ -453,6 +521,7 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {;
   const versions = [] as Array<{ id: string; label: string, data: ResumeData }>;
 return { props: { initialData, versions } }
 }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -468,6 +537,8 @@ return { props: { initialData, versions } }
   const versions = [] as Array<{ id: string, label: string, data: ResumeData }>,
   return { props: { initialData, versions } }
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 };
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
@@ -547,6 +618,7 @@ if (return initial_data) {
     </div>);
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
                 value={selectedVersionId  } catch (error) {
     console.error("Error:", error);
@@ -580,6 +652,8 @@ if (return initial_data) {
     </div>
   );
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export const getServerSideProps: GetServerSideProps = async ctx => {
   // Simple auth guard for talent users; adjust with real roles when available  const supabase = createServerClient ();
   const user = await (supabase as any).auth.get_user?.();
@@ -620,10 +694,14 @@ if ( {) {
         end: 'Present',
         location: 'Remote',
 <<<<<<< HEAD
+<<<<<<< HEAD
         bullets: [;
 =======
 bullets: [;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+        bullets: [;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           'Built multi - agent automation systems improving throughput by 40%.',
           'Designed AI - driven dashboards and PDF export workflows.',
         ],
@@ -638,7 +716,6 @@ bullets: [;
       },
     ],
     certifications: [;
-      'AWS Certified Solutions Architect – Associate',
       'TensorFlow Developer Certificate',
     ],
     portfolio: [;
@@ -658,6 +735,7 @@ bullets: [;
   const versions = [] as Array<{ id: string; label: string, data: ResumeData }>;
 ;
 return { props: { initial_data, versions } }
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 ;
@@ -849,3 +927,8 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {;
 }
 };
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+};
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

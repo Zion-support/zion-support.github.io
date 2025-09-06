@@ -4,9 +4,19 @@
  * Focuses on specific error patterns and provides targeted error fixing;
  */
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+
+>>>>>>> origin/main
+=======
+=======
+
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> pr-12166
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
@@ -30,6 +40,15 @@ const { execSync } = require('child_process')
   console.error(' Targeted error resolution "failed")
 <<<<<<< HEAD
     console.error(' Targeted error resolution interval "failed")
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
     console.error(' Targeted error resolution interval "failed")
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/main
+=======
+=======
+    console.error(' Targeted error resolution interval "failed")
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> pr-12166

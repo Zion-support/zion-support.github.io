@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -29,6 +30,8 @@ export function HelpCategoryList({
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from "react";
 import {
   Card,
@@ -38,7 +41,6 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { HelpCategory } from "./types";
->>>>>>> main
 interface HelpCategoryListProps {
   categories: HelpCategory[];
   onCategorySelect: (categoryId: string) => void;
@@ -49,13 +51,17 @@ export function HelpCategoryList({
   categories,
   onCategorySelect,
   searchQuery,
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }: HelpCategoryListProps) {
   // Filter categories based on search query
 
   const filteredCategories = searchQuery
     ? categories.filter(
         (category) =>
+<<<<<<< HEAD
 <<<<<<< HEAD
           category.name.toLowerCase().includes(searchQuery.toLowerCase()) |
 =======
@@ -190,18 +196,17 @@ export function HelpCategoryList(): any ({ categories, onCategorySelect, searchQ
           );
       );
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     : categories;
 
   if (filteredCategories && filteredCategories.length === 0) {;
     return (
-
-=======
-    );
-  }
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
       {filteredCategories.map((category) => (
         <Card
+<<<<<<< HEAD
           key={category.id}
           className="cursor-pointer hover:border-zion-purple/50 transition-colors"
           onClick={() => onCategorySelect(category.id)}
@@ -275,6 +280,8 @@ export function HelpCategoryList({ categories, onCategorySelect, searchQuery } H
         </p>;
       </div>;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     );
   }
   return (
@@ -282,9 +289,15 @@ export function HelpCategoryList({ categories, onCategorySelect, searchQuery } H
     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
       {filteredCategories && filteredCategories.map(category => (;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+    : categories;
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <Card
           key={category && category.id}
           className="cursor-pointer hover:border-zion-purple/50 transition-colors"
@@ -300,6 +313,7 @@ export function HelpCategoryList({ categories, onCategorySelect, searchQuery } H
           <CardContent>;
             <p className="text-sm text-zion-slate-light">;
               {category && category.articles.length} articles;
+<<<<<<< HEAD
 <<<<<<< HEAD
             </p>;
           </CardContent>;
@@ -336,6 +350,8 @@ export function HelpCategoryList({ categories, onCategorySelect, searchQuery } H
 
   return (
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
       {filteredCategories.map(category => (
         <Card
@@ -357,6 +373,7 @@ export function HelpCategoryList({ categories, onCategorySelect, searchQuery } H
           </CardContent>
         </Card>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -371,6 +388,9 @@ export function HelpCategoryList({ categories, onCategorySelect, searchQuery } H
 }
 
 =======
+=======
+      ))}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from './react';
 import {
   Card,
@@ -440,4 +460,3 @@ if ( {) {
         </Card>))}
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

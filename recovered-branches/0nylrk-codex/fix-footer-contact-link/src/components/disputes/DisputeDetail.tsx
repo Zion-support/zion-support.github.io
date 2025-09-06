@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from "react";
 import {useParams, useNavigate} from "react-router-dom";
 import {useDisputes} from "@/hooks/useDisputes";
@@ -16,21 +15,27 @@ import {ShieldAlert, ArrowDown, Check, X, MessageSquare, Download} from "lucide-
 import {useAuth} from "@/hooks/useAuth";
 import {toast} from "sonner";
 <<<<<<< HEAD
+<<<<<<< HEAD
 export function DisputeDetail() {;
   // useParams may be untyped in this environment, so avoid passing a;
 =======
 export function DisputeDetail() {
   // useParams may be untyped in this environment, so avoid passing a
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   // type argument and cast the result instead to prevent TS2347 errors.;
   const { disputeId } = useParams() as { disputeId?: string };
   const navigate = useNavigate();
   const { user } = useAuth();
   const { getDisputeById, updateDisputeStatus, resolveDispute, getDisputeMessages, addDisputeMessage } = useDisputes();
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useState, useEffect } from "react",
 import { useParams, useNavigate } from "react-router-dom",
 import { useDisputes } from "@/hooks/useDisputes",
@@ -51,16 +56,21 @@ export function DisputeDetail() {
   // useParams may be untyped in this environment, so avoid passing a
   // type argument and cast the result instead to prevent TS2347 errors.
 
+<<<<<<< HEAD
   const { disputeId } = useParams() as { disputeId?: string }
   const navigate = useNavigate();
   const { user } = useAuth();
   const { getDisputeById, updateDisputeStatus, resolveDispute, getDisputeMessages, addDisputeMessage } = useDisputes();
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const [dispute, setDispute] = useState<any>(null);
   const [messages, setMessages] = useState<DisputeMessage[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [message, setMessage] = useState("");
   const [isSending, setIsSending] = useState(false);
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   const [resolution, setResolution] = useState({;
@@ -76,6 +86,8 @@ export function DisputeDetail() {
 
     const loadDisputeData = async () => {;
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       setIsLoading(true);
       try {;
         const disputeData = await getDisputeById(disputeId);
@@ -83,6 +95,7 @@ export function DisputeDetail() {
           toast && toast.error("Dispute not found");
           navigate("/dashboard/disputes");
           return;
+<<<<<<< HEAD
         }
         setDispute(disputeData);
 
@@ -230,12 +243,20 @@ export function DisputeDetail() {
     const success = await updateDisputeStatus(disputeId, status);
     if (success && dispute) {
       setDispute({ ...dispute, status })
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     }
   }
   const handleResolveDispute = async () => {
     if (!disputeId) return;
   };
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+  };
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useState, useEffect } from "react",;
 import { useParams, useNavigate } from "react-router-dom",;
 import { useDisputes } from "@/hooks/useDisputes",;
@@ -301,12 +322,10 @@ export function DisputeDetail() {;
     }
   },
 
-
-
-
   const handleResolveDispute = async () => {
     if (!disputeId) return,
     
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -324,14 +343,19 @@ export function DisputeDetail() {;
 
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     if (!resolution.summary) {
       toast.error("Please provide a resolution summary"),
       return
     }
+<<<<<<< HEAD
     const success = await resolveDispute(disputeId, resolution);
     
     const success = await resolveDispute(disputeId, resolution),
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     if (success && dispute) {
       setDispute({
         ...dispute
@@ -341,6 +365,7 @@ export function DisputeDetail() {;
         resolved_at: new Date().toISOString()
       })
     }
+<<<<<<< HEAD
 
   };
 
@@ -364,6 +389,8 @@ export function DisputeDetail() {;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     try {
       const success = await addDisputeMessage(disputeId, message, isAdmin),
       if (success) {
@@ -376,7 +403,9 @@ export function DisputeDetail() {;
       console.error("Error sending message:", error)
     } finally {
       setIsSending(false)
+  }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -386,20 +415,29 @@ export function DisputeDetail() {;
     if (!disputeId) return;
 
 =======
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   },;
 
   };
   const handleResolveDispute = async () => {;
     if (!disputeId) return;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     if (!resolution && resolution.summary) {;
       toast && toast.error("Please provide a resolution summary");
       return;
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     const success = await resolveDispute(disputeId, resolution);
     if (success && dispute) {;
       setDispute({ ;
@@ -412,6 +450,7 @@ export function DisputeDetail() {;
     }
   };
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   const handleSendMessage = async () => {;
     if (!disputeId || !message && message.trim()) return;
@@ -421,6 +460,10 @@ export function DisputeDetail() {;
   const handleSendMessage = async () => {;
     if (!disputeId || !message && message.trim()) return;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  const handleSendMessage = async () => {;
+    if (!disputeId || !message && message.trim()) return;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     setIsSending(true);
     try {;
       const success = await addDisputeMessage(disputeId, message, isAdmin);
@@ -435,6 +478,7 @@ export function DisputeDetail() {;
     } finally {;
       setIsSending(false);
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   };
@@ -518,6 +562,15 @@ export function DisputeDetail() {;
 
   if (!dispute) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+
+
+  }
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     return (
       <div className="p-8 text-center">
         <p>Dispute not found</p>
@@ -529,6 +582,7 @@ export function DisputeDetail() {;
   }
   const getStatusBadgeVariant = (status: DisputeStatus) => {
     switch (status) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -547,9 +601,14 @@ export function DisputeDetail() {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     return (
 =======
-  }
+=======
+;
+
   if (!dispute) {;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+  }
     return (
+<<<<<<< HEAD
       case "open": return "default";
       case "under_review": return "secondary"
       case "open": return "default",
@@ -570,6 +629,8 @@ export function DisputeDetail() {;
   if (!dispute) {;
     return (;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <div className="p-8 text-center">;
         <p>Dispute not found</p>;
         <Button onClick={() => navigate("/dashboard/disputes")} className="mt-4">;
@@ -578,6 +639,7 @@ export function DisputeDetail() {;
       </div>;
     );
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -593,6 +655,8 @@ export function DisputeDetail() {;
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useState, useEffect } from './react';
 import { use_params, use_navigate } from './react-router-dom';
 import { use_disputes } from '@/hooks / use_disputes';
@@ -727,6 +791,7 @@ if ( {) {
     } finally {
       setIsSending (false);
 <<<<<<< HEAD
+<<<<<<< HEAD
     }
   }
 ;
@@ -763,6 +828,8 @@ if ( {) {
     }
 
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 import React, { useState, useEffect } from "react",;
 import { useParams, useNavigate } from "react-router-dom",;
@@ -886,16 +953,14 @@ export function DisputeDetail() {;
     ),;
   }
 ;
-;
-  const getStatusBadgeVariant = (status: DisputeStatus) => {;
-    switch (status) {;
-      case "open": return "default",;
-      case "under_review": return "secondary",;
-      case "resolved": return "outline", // Changed from "success" to "outline";
-      case "closed": return "outline",;
+      case "closed": return "outline";
       default: return "default";
     }
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   },;
   return (;
     <div className="container mx-auto p-4 space-y-6">;
@@ -905,11 +970,14 @@ export function DisputeDetail() {;
             <h1 className="text-2xl font-bold">Dispute Case</h1>;
             <Badge variant={getStatusBadgeVariant(dispute.status)}>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               {dispute.status.replace('_ ')}
             </Badge>
           </div>
@@ -928,6 +996,7 @@ export function DisputeDetail() {;
           )}
         </div>
       </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -968,12 +1037,15 @@ export function DisputeDetail() {;
         </div>;
       </div>;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {dispute.status === "resolved" && dispute.resolution_summary && (
         <Alert className="bg - green - 50 border - green - 200 dark:bg - green - 900 / 20 dark:border - green - 900">;
           <Check className="h - 4 w - 4" />;
           <AlertTitle > This dispute has been resolved</AlertTitle>;
           <AlertDescription>;
             {dispute.resolution_summary}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -984,6 +1056,8 @@ export function DisputeDetail() {;
       
       
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         <div className="lg:col-span-2">
           <Tabs value={activeTab} onValueChange={setActiveTab}>
@@ -1033,9 +1107,12 @@ export function DisputeDetail() {;
                         </li>
                       )}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           </AlertDescription>;
         </Alert>)}
       <div className="grid grid - cols - 1 lg:grid - cols - 3 gap - 6">;
@@ -1085,13 +1162,17 @@ export function DisputeDetail() {;
                           <span > Under review</span>;
                         </li>)}
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       {dispute.resolved_at && (
                         <li className="flex gap - 2 items - center">;
                           <Badge variant="outline" className="h - 6 w - 6 rounded - full p - 0 flex items - center justify - center">;
                             {dispute.status !== "open" ? "3" : "2"}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1335,10 +1416,13 @@ export function DisputeDetail() {;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     )}
                   </CardContent>;
                 </Card>;
               )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1495,18 +1579,25 @@ export function DisputeDetail() {;
                           ),;
                         });
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+                          return (
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     )}
                   </div>;
                 </CardContent>;
                 <CardFooter>;
                   <div className="w-full space-y-4">;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     <Textarea
                       placeholder="Type your message here..."
                       value={message}
                       onChange={(e) => setMessage(e && e.target.value)}
                       className="min-h-[100px]";
                       disabled={isSending}
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -1666,6 +1757,8 @@ export function DisputeDetail() {;
                     </div>;
 <<<<<<< HEAD
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     {dispute.status !== "resolved" && (
                       <div>;
                         <h3 className="font - medium mb - 2">Resolve Dispute</h3>;
@@ -1673,6 +1766,7 @@ export function DisputeDetail() {;
                           <Textarea;
                             placeholder="Enter resolution summary...";
                             value={resolution.summary}
+<<<<<<< HEAD
 
 
 =======
@@ -1896,6 +1990,8 @@ export function DisputeDetail() {;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                                 </span>
                               </div>
                               <span className="text-xs opacity-70">
@@ -1921,9 +2017,12 @@ export function DisputeDetail() {;
                             if (message.trim()) {
                               addDisputeMessage(disputeId!, message, true).then(() => {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     />;
                     <div className="flex justify-end">;
                       <Button onClick={handleSendMessage} disabled={isSending || !message && message.trim()}>;
@@ -1984,7 +2083,6 @@ export function DisputeDetail() {;
                         </Button>;
                       </div>;
                     </div>;
-
                     {dispute && dispute.status !== "resolved" && (;
                       <div>;
                         <h3 className="font-medium mb-2">Resolve Dispute</h3>;
@@ -1995,7 +2093,6 @@ export function DisputeDetail() {;
                             onChange={(e) => setResolution({ ...resolution, summary: e && e.target.value })}
                             className="min-h-[100px]";
                           />;
-
                           <div className="grid grid-cols-2 gap-4">;
                             <div>;
                               <label className="text-sm font-medium mb-1 block">Resolution Type</label>;
@@ -2003,6 +2100,7 @@ export function DisputeDetail() {;
                                 className="w-full p-2 border rounded"
                                 value={resolution && resolution.resolution_type}
                                 onChange={(e) => setResolution({ ...resolution, resolution_type: e && e.target.value })}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
                     ;
@@ -2025,6 +2123,8 @@ export function DisputeDetail() {;
                                 value={resolution.resolution_type}
                                 onChange={(e) => setResolution({ ...resolution, resolution_type:e.target.value })}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                               >;
                                 <option value="client_favor">In Client's Favor</option>;
                                 <option value="talent_favor">In Talent's Favor</option>;
@@ -2034,23 +2134,31 @@ export function DisputeDetail() {;
                             </div>;
                           </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
                           ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                           <Button onClick={handleResolveDispute}>Resolve Dispute</Button>;
                         </div>;
                       </div>;
                     )}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
                     ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+                    ;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     <div>;
                       <h3 className="font-medium mb-2">Admin Notes</h3>;
                       <div className="space-y-4 max-h-[300px] overflow-y-auto p-2">;
                         {messages;
+<<<<<<< HEAD
 <<<<<<< HEAD
                           .filter(msg => msg && msg.is_admin_note);
                           .map((msg) => (;
@@ -2074,28 +2182,30 @@ export function DisputeDetail() {;
                             <p className="whitespace-pre-wrap text-sm">{msg && msg.message}</p>;
                           </div>;
                         ))}
+=======
+                                getDisputeMessages(disputeId!).then(setMessages);
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
-                        {!messages && messages.some(msg => msg && msg.is_admin_note) && (;
-                          <p className="text-sm text-muted-foreground italic">No admin notes yet</p>;
-                        )}
+                                setMessage("")
+                              })
+                                getDisputeMessages(disputeId!).then(setMessages),
+                                setMessage("")
+                              })
                       </div>;
-
                       <div className="mt-4 space-y-4">;
-                        <Textarea
-                          placeholder="Add an admin note (only visible to administrators)..."
+                        <Textarea;
+                          placeholder="Add an admin note (only visible to administrators)...";
                           value={message}
-                          onChange={(e) => setMessage(e && e.target.value)}
+                          onChange={(e) => setMessage(e.target.value)}
                         />;
-                        <Button
-                          variant="outline" 
+                        <Button;
+                          variant="outline";
                           onClick={() => {;
-                            if (message && message.trim()) {;
                               addDisputeMessage(disputeId!, message, true).then(() => {;
                                 getDisputeMessages(disputeId!).then(setMessages);
                                 setMessage("");
                               });
 
-=======
                             on_change={(e) => set_resolution ({ ...resolution, summary: e.target.value })}
                             className="min - h-[100px]";
                           />;
@@ -2132,14 +2242,15 @@ export function DisputeDetail() {;
                                     {msg.user_profile?.display_name?.[0] || 'A'}
                                   </AvatarFallback>;
                                 </Avatar>;
-                                <span className="text - sm font - medium">;
+                                <span className="text-sm font-medium">;
                                   {msg.user_profile?.display_name || 'Admin'}
                                 </span>;
                               </div>;
-                              <span className="text - xs opacity - 70">;
-                                {format (new Date (msg.created_at), 'MMM d, h:mm a')}
+                              <span className="text-xs opacity-70">;
+                                {format(new Date(msg.created_at), 'MMM d, h:mm a')}
                               </span>;
                             </div>;
+<<<<<<< HEAD
                             <p className="whitespace - pre - wrap text - sm">{msg.message}</p>;
                           </div>))}
                         {!messages.some (msg => msg.is_admin_note) && (
@@ -2177,21 +2288,28 @@ export function DisputeDetail() {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                             }
 =======
+=======
+                            <p className="whitespace-pre-wrap text-sm">{msg.message}</p>;
+                          </div>;
+                        ))}
+                        ;
+                        {!messages.some(msg => msg.is_admin_note) && (;
+                          <p className="text-sm text-muted-foreground italic">No admin notes yet</p>;
+                        )}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       </div>;
+                      ;
                       <div className="mt-4 space-y-4">;
                         <Textarea;
                           placeholder="Add an admin note (only visible to administrators)...";
                           value={message}
                           onChange={(e) => setMessage(e.target.value)}
                         />;
-                        <Button;
-                          variant="outline";
-                          onClick={() => {;
-                            if (message.trim()) {;
-                              addDisputeMessage(disputeId!, message, true).then(() => {;
-                                getDisputeMessages(disputeId!).then(setMessages);
-                                setMessage("");
-                              });
+
+                                getDisputeMessages(disputeId!).then(setMessages),
+                                setMessage("")
+                              })
+
                             }
                           }}
                         >
@@ -2269,77 +2387,11 @@ export function DisputeDetail() {;
       </div>
     </div>
   )
-                            on_change={(e) => set_resolution ({ ...resolution, summary: e.target.value })}
-                            className="min - h-[100px]";
-                          />;
-                          <div className="grid grid - cols - 2 gap - 4">;
-                            <div>;
-                              <label className="text - sm font - medium mb - 1 block">Resolution Type</label>;
-                              <select;
-                                className="w - full p - 2 border rounded";
-                                value={resolution.resolution_type}
-                                on_change={(e) => set_resolution ({ ...resolution, resolution_type: e.target.value })}
-                              >;
-                                <option value="client_favor">In Client's Favor</option>;
-                                <option value="talent_favor">In Talent's Favor</option>;
-                                <option value="compromise">Compromise</option>;
-                                <option value="dismissed">Dismissed</option>;
-                              </select>;
-                            </div>;
-                          </div>;
-                          <Button on_click={handleResolveDispute}>Resolve Dispute</Button>;
-                        </div>;
-                      </div>)}
-                    <div>;
-                      <h3 className="font - medium mb - 2">Admin Notes</h3>;
-                      <div className="space - y-4 max - h-[300px] overflow - y-auto p - 2">;
-                        {messages;
-                          .filter (msg => msg.is_admin_note);
-                          .map ((msg) => (
-                          <div key={msg.id} className="bg - yellow - 50 border - l-4 border - yellow - 200 p - 4 dark:bg - yellow - 900 / 20 dark:border - yellow - 900">;
-                            <div className="flex items - center justify - between mb - 2">;
-                              <div className="flex items - center gap - 2">;
-                                <Avatar className="h - 6 w - 6">;
-                                  <AvatarImage src={msg.user_profile?.avatar_url} />;
-                                  <AvatarFallback>;
-                                    {msg.user_profile?.display_name?.[0] || 'A'}
-                                  </AvatarFallback>;
-                                </Avatar>;
-                                <span className="text - sm font - medium">;
-                                  {msg.user_profile?.display_name || 'Admin'}
-                                </span>;
-                              </div>;
-                              <span className="text - xs opacity - 70">;
-                                {format (new Date (msg.created_at), 'MMM d, h:mm a')}
-                              </span>;
-                            </div>;
-                            <p className="whitespace - pre - wrap text - sm">{msg.message}</p>;
-                          </div>))}
-                        {!messages.some (msg => msg.is_admin_note) && (
-                          <p className="text - sm text - muted - foreground italic">No admin notes yet</p>)}
-                      </div>;
-                      <div className="mt - 4 space - y-4">;
-                        <Textarea;
-                          placeholder="Add an admin note (only visible to administrators)...";
-                          value={message}
-                          on_change={(e) => set_message (e.target.value)}
-                        />;
-                        <Button;
-                          variant="outline";
-                          on_click={() => {
-                            if () {) {
-  $2
 }
-                              addDisputeMessage (dispute_id!, message, true).then (() => {
-                                getDisputeMessages (dispute_id!).then (set_messages);
-                                set_message ("");
-                              });
-
-                                getDisputeMessages(disputeId!).then(setMessages),
-                                setMessage("")
-                              })
-
+}
+;
                             }
+<<<<<<< HEAD
                           .filter(msg => msg.is_admin_note);
                           .map((msg) => (;
                           <div key={msg.id} className="bg-yellow-50 border-l-4 border-yellow-200 p-4 dark:bg-yellow-900/20 dark:border-yellow-900">;
@@ -2383,6 +2435,8 @@ export function DisputeDetail() {;
                                 setMessage(""),;
                               }),;                            }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                           }}
                         >;
                           Add Admin Note;
@@ -2391,6 +2445,7 @@ export function DisputeDetail() {;
                     </div>;
                   </CardContent>;
                 </Card>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
           </Tabs>;
@@ -2493,11 +2548,14 @@ export function DisputeDetail() {;
 =======
                     {dispute.talent_profile?.display_name || "Unknown Talent"}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   </p>;
                 </div>;
               </div>;
             </CardContent>;
           </Card>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
           <Card>;
@@ -2548,11 +2606,14 @@ export function DisputeDetail() {;
                 <span className="font-medium">Raised by:</span>;
                 <span>{dispute.raised_by === dispute.client_profile?.id ? "Client" :"Talent"}</span>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               </div>;
             </CardContent>;
           </Card>;
         </div>;
       </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     </div>);
@@ -2707,3 +2768,5 @@ formatDistanceToNow (new Date (dispute.created at), {
 }
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

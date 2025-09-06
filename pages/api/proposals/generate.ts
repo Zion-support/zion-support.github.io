@@ -1,13 +1,15 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   try {
     const {
       target_institution,
       type,
       regional_scope,
       budgetOrResolution,
+<<<<<<< HEAD
       supporting_multiverses = [],
       title = "Zion DAO Proposal",
 
@@ -89,12 +91,15 @@ export default async function handler(
     } = req.body || {};
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       language = 'en'
     } = req.body || {};
 
     const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
     const userPrompt = promptAssist ||
       `Write a proposal for ${targetInstitution} on ${type} in ${regionalScope}. Budget/Resolution: ${budgetOrResolution}. Include metrics, social outcomes, and DAO-based governance logic.`;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -125,11 +130,21 @@ export default async function handler(
       completion.choices?.[0]?.message?.content || "# Proposal Draft\n\nTBD";
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
+=======
+
+    const completion = await openai.chat.completions.create({
+      model: process.env.OPENAI_MODEL || 'gpt-4o-mini',
+      messages: [
+      ],
+      temperature: 0.3
+    });
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       title,
       target_institution,
       type,
       regional_scope,
       budgetOrResolution,
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
       supportingMultiverses,
@@ -137,19 +152,26 @@ export default async function handler(
       language,
     });
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
-    return res.status(200).json({ meta, markdown: contentMarkdown });
+
+    return res.status(200).json({ meta, markdown: contentMarkdown })
   } catch (error: any) {
-<<<<<<< HEAD
     return res.status(500).json({ error: error?.message || 'Failed to generate proposal' })
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  res.status(200).json({ message: 'API endpoint' });
 
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       supporting_multiverses,
       content_markdown,
       language,
@@ -161,15 +183,21 @@ export default async function handler(
       .status (500);
       .json ({ error: error?.message || "Failed to generate proposal" });
 <<<<<<< HEAD
+<<<<<<< HEAD
   }
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
+=======
+  }
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 import type { NextApiRequest, NextApiResponse } from 'next';
 
   }
 }
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
       ],
@@ -214,10 +242,14 @@ import type { NextApiRequest, NextApiResponse } from 'next';
     return res.status(500).json({ error: "Internal server error" });
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     return res
       .status(500)
       .json({ error: error?.message || "Failed to generate proposal" });
->>>>>>> main
   }
 }
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

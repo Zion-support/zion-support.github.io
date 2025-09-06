@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   className?: string;
 import React from './react';
@@ -44,24 +45,42 @@ interface AppStoreButtonsProps {
 export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({ ;
 
 =======
+=======
+import React from "react";
+import {Apple, GithubIcon} from "lucide-react";
+import {cn} from "@/lib/utils";
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from "react",
 import { Apple, GithubIcon } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Apple, GithubIcon } from "lucide-react",
 import { cn } from "@/lib/utils",
+import React from "react";
+import {Apple, GithubIcon} from "lucide-react";
+import {cn} from "@/lib/utils";
+interface AppStoreButtonsProps {;
+
+  className?: string;
+import React from './react';
+import { Apple, GithubIcon } from './lucide-react';
+import { cn } from '@/lib / utils';
 interface AppStoreButtonsProps {
-  className?: string,
-  appStoreUrl?: string,
-  googlePlayUrl?: string,
-  onAppStoreClick?: () => void,
-  onGooglePlayClick?: () => void
+  class_name?: string;
+  appStoreUrl?: string;
+  googlePlayUrl?: string;
+  onAppStoreClick?: () => void;
+  onGooglePlayClick?: () => void;
 }
+<<<<<<< HEAD
 export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   className;
 
   appStoreUrl = "#";
   googlePlayUrl = "#";
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -184,11 +203,16 @@ export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({ ;
       </a>
       <a
         href={googlePlayUrl}
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       </Link>
 
       <a 
         href={googlePlayUrl} 
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         className="flex items-center bg-black text-white rounded-lg px-4 py-2 hover:bg-gray-900 transition-colors"
         onClick={handleGooglePlayClick}
         target="_blank"
@@ -208,6 +232,7 @@ export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({ ;
           <div className="text-xs">GET IT ON</div>
           <div className="text-xl font-semibold">Google Play</div>
         </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
       </a>
     </div>
@@ -229,6 +254,8 @@ export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({ ;
 
 };
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 },
 import React from "react",;
 import { Apple, GithubIcon } from "lucide-react",;
@@ -240,6 +267,7 @@ interface AppStoreButtonsProps {;
   onAppStoreClick?: () => void,;
   onGooglePlayClick?: () => void;
 }
+<<<<<<< HEAD
 ;
 export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({;
   className,;
@@ -382,6 +410,11 @@ export const AppStoreButtons:React.FC<AppStoreButtonsProps> = ({ ;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+    }
+  }
+  return (
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export const AppStoreButtons: React.FC < AppStoreButtonsProps> = ({
   class_name;
   appStoreUrl = "#";
@@ -451,6 +484,7 @@ if ( {) {
     </div>);
 }
 ;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -484,3 +518,5 @@ onAppStoreClick?. () h-8 w-8 mr-3"/> <div> <div className=" text-xs">Download on
 
 export default AppStoreButtons;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

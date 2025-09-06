@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -6,6 +7,8 @@
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {useState} from 'react';
 import {supabase} from '@/integrations / supabase / client';
 import {use_auth} from '@/hooks / use_auth';
@@ -16,6 +19,7 @@ export const useDeleteMilestone = () => {;
   const { user } = useAuth();
   const [isSubmitting, setIsSubmitting] = useState(false);
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -33,6 +37,8 @@ export const useDeleteMilestone = () => {;
   const { user } = useAuth();
   const [isSubmitting, setIsSubmitting] = useState(false);
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useState } from 'react',
 import { supabase } from '@/integrations/supabase/client',
 import { useAuth } from '@/hooks/useAuth',
@@ -40,6 +46,7 @@ import { toast } from 'sonner',
 export const useDeleteMilestone = () => {
   const { user } = useAuth(),
   const [isSubmitting, setIsSubmitting] = useState(false),
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -53,11 +60,14 @@ export const useDeleteMilestone = () => {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     try {
       setIsSubmitting(true)
       const { error } = await supabase
         .from('project_milestones')
         .delete()
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
         .eq('id', milestoneId);
@@ -67,36 +77,21 @@ export const useDeleteMilestone = () => {
     } catch (err: any) {
       console.error("Error deleting milestone:", err);
       toast.error("Failed to delete milestone: " + err.message)
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       return false
-    } finally {
-      setIsSubmitting(false)
-    }
-  }
-  return {
-    deleteMilestone;
-    isSubmitting
-  }
+export const useDeleteMilestone = () =>: any {
+  const { user } = use_auth ();
+  const [is_submitting, setIsSubmitting] = useState (false);
+;
+  const delete_milestone = async (milestone_id: string) => {
+    // Check condition
+if (return false) {
+  $2
 }
-
-        .eq('id', milestoneId),
-      
-      if (error) throw error,
-      
-      toast.success("Milestone deleted successfully"),
-      
-      return true
-    } catch (err: any) {
-      console.error("Error deleting milestone:", err),
-      toast.error("Failed to delete milestone: " + err.message),
-      return false
     } finally {
-      setIsSubmitting(false)
+      setIsSubmitting (false);
     }
-  };
-  
-  return {
-    deleteMilestone;
-    isSubmitting
 import { useState } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
 import { useAuth } from '@/hooks/useAuth',;
@@ -126,6 +121,7 @@ export const useDeleteMilestone = () => {;
   return {;
     deleteMilestone;
     isSubmitting;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
       
@@ -202,3 +198,7 @@ if (throw error) {
   }
 };
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  }
+};
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

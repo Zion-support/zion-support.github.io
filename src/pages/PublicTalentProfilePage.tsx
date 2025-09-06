@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 if (error) {
           throw error
         }
@@ -68,50 +69,32 @@ export default function ProfilePage() {
     const fetchProfile = async () => {
       setIsLoading(true),
       setIsError(false),
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       try {
         const { data, error } = await supabase
           .from("talent_profiles")
           .select("*")
           .eq("id", profileId)
-          .single()
-          throw error
-          .single()
-          .single(),
-
         if (error) {
           throw error
-if (error) {
-          throw error
         }
-        setProfileData(data)
-      } catch (error) {
-        logErrorToProduction(error instanceof Error ? error.message : String(error), error instanceof Error ? error : undefined, { message: 'Error fetching profile' })
-        setIsError(true)
-        logErrorToProduction(error instanceof Error ? error.message : String(error), error instanceof Error ? error : undefined, { message: 'Error fetching profile' }),
-        setIsError(true)
-          title: "Error"
-          description: "Failed to load profile. Please try again later."
-          variant: "destructive"})
-      } finally {
-        setIsLoading(false)
-      }
-    }
-    if (profileId) {
-      fetchProfile()
-    }
-  }, [profileId])
-ursor/fix-website-loading-errors-and-merge-6662
-        logErrorToProduction(error instanceof Error ? error.message : String(error), error instanceof Error ? error : undefined, { message: 'Error fetching profile' })
-        setIsError(true)
         logErrorToProduction(error instanceof Error ? error.message : String(error), error instanceof Error ? error : undefined, { message: 'Error fetching profile' }),
         setIsError(true),
 
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
+=======
+        logErrorToProduction(error instanceof Error ? error.message : String(error), error instanceof Error ? error : undefined, { message: 'Error fetching profile' }),
+        setIsError(true)
+        setIsError(true),
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         toast({
           title: "Error"
           description: "Failed to load profile. Please try again later."
           variant: "destructive"})
+<<<<<<< HEAD
         setProfileData (data);
       } catch (error) {
         logErrorToProduction (error instanceof Error ? error.message : String (error), error instanceof Error ? error : undefined, { message: 'Error fetching profile' }),
@@ -207,12 +190,18 @@ export default function ProfilePage() {;
   if (isLoading) {
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+      } finally {
+        setIsLoading(false)
+  if (isLoading) {
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     return (
       <div className="min-h-screen flex items-center justify-center">;
         <span className="loading loading-ring loading-lg"></span>;
       </div>;
     );
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
   if (isError |!profileData) {
     return (
@@ -246,9 +235,20 @@ export default function ProfilePage() {;
       </div>
     )
   }
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   if (isError |!profileData) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     return (
+<<<<<<< HEAD
+=======
+      <div className="min-h-screen flex items-center justify-center">;
+        <p className="text-red-500">Failed to load profile.</p>;
+      </div>;
+    );
+  }
+    return (
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <div className="min-h-screen flex items-center justify-center">
         <p className="text-red-500">Failed to load profile.</p>
       </div>
@@ -256,6 +256,7 @@ export default function ProfilePage() {;
   }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -263,10 +264,13 @@ export default function ProfilePage() {;
     <>
       <SEO
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <>
       <SEO
         title={`${profileData.full_name} | Talent Profile`}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
         description = {profileData.bio || "View the profile of this talented individual.",}
@@ -277,6 +281,10 @@ export default function ProfilePage() {;
         description = {profileData.bio |"View the profile of this talented individual.",}
         description = {profileData.bio || "View the profile of this talented individual.",}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+        description = {profileData.bio || "View the profile of this talented individual.",}
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ;
   return (;
     <>;
@@ -284,12 +292,17 @@ export default function ProfilePage() {;
         title={`${profileData.full_name} | Talent Profile`}
         description={profileData.bio || "View the profile of this talented individual."}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 =======
       />
       <div className="container mx-auto px-4 py-8">
         <div className="grid grid-cols-12 gap-6">
+<<<<<<< HEAD
           {/* Main Content Area */}
           <div className="col-span-12 lg:col-span-8">
             {/* Profile Header */}
@@ -359,6 +372,8 @@ ursor/fix-website-loading-errors-and-merge-6662
       <div className="container mx-auto px-4 py-8">
         <div className="grid grid-cols-12 gap-6">
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           {/* Main Content Area */}
           <div className="col-span-12 lg:col-span-8">;
             {/* Profile Header */}
@@ -417,6 +432,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                       </div>;
                     )}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
                   </div>;
                 </div>;
@@ -443,6 +459,11 @@ ursor/fix-website-loading-errors-and-merge-6662
                   </div>;
                 </div>;
               </div>;
+=======
+
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               {/* Skills */}
               {profileData.skills && profileData.skills.length > 0 && (
                 <div className="mt-4">
@@ -450,17 +471,24 @@ ursor/fix-website-loading-errors-and-merge-6662
                   <div className="flex flex-wrap gap-2">
                     {profileData.skills.map((skill: string, index: number) => (
                       <Badge key={skill + index} variant="secondary">{skill}</Badge>
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     ))}
                   </div>;
                 </div>;
               )}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             </div>
             {/* Bio Section */}
             <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-6">
               <h2 className="text-xl font-bold text-white mb-3">About Me</h2>
+<<<<<<< HEAD
               <p className="text-zion-slate-light">{profileData.bio |"No bio provided."}</p>
               )}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -491,6 +519,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
               <p className="text-zion-slate-light">{profileData.bio |"No bio provided."}</p>
               <p className="text-zion-slate-light">{profileData.bio || "No bio provided."}</p>
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             </div>
             {/* Portfolio Section */}
             <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-6">
@@ -501,12 +531,16 @@ ursor/fix-website-loading-errors-and-merge-6662
                     <a
                       key={link + index}
                       href={link}
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       target="_blank"
                       rel="noopener noreferrer"
                       className="flex items-center text-zion-cyan hover:text-white transition-colors">;
                       <LinkIcon className="h-4 w-4 mr-2" />;
                       {link}
+<<<<<<< HEAD
                     </a>;
                   ));
                 ) : (;
@@ -539,6 +573,13 @@ ursor/fix-website-loading-errors-and-merge-6662
               <p className="text-zion-slate-light">{profileData.experience || "No experience provided."}</p>
             </div>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+            </div>
+            {/* Experience Section */}
+            <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-6">
+              <h2 className="text-xl font-bold text-white mb-3">Experience</h2>
+            </div>
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             {/* Social Links */}
             <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-6">;
               <h2 className="text-xl font-bold text-white mb-3">Connect</h2>;
@@ -546,14 +587,18 @@ ursor/fix-website-loading-errors-and-merge-6662
                 {profileData && profileData.github_link && (;
                   <a
 <<<<<<< HEAD
+<<<<<<< HEAD
                     href = {profileData && profileData.github_link,}
 =======
                     href={profileData.github_link}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-zion-cyan hover:text-white transition-colors"
                     aria-label="GitHub"
+<<<<<<< HEAD
 <<<<<<< HEAD
 
                     title="GitHub"
@@ -575,6 +620,8 @@ ursor/fix-website-loading-errors-and-merge-6662
                 {profileData.twitter_link && (;
                   <a;
                     href={profileData.twitter_link}
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
                     target="_blank"
@@ -582,6 +629,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                     rel="noopener noreferrer"
                     className="text-zion-cyan hover:text-white transition-colors"
                     aria-label="Twitter"
+<<<<<<< HEAD
                     title="Twitter">;
                     <Twitter className="h-6 w-6" />;
                   </a>;
@@ -601,10 +649,13 @@ ursor/fix-website-loading-errors-and-merge-6662
                   <a;
                     href={profileData.linkedin_link}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-zion-cyan hover:text-white transition-colors"
                     aria-label="LinkedIn"
+<<<<<<< HEAD
 <<<<<<< HEAD
 
                     title="LinkedIn"
@@ -718,16 +769,35 @@ if (isLoading) {"
 }</div> </div> </div> </>)
 }'"}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+                )}
+              </div>
+            </div>
+          </div>
+          {/* Sidebar with HireNowCTA */}
+          <div className="col-span-12 lg:col-span-4 space-y-6">;
+            <HireNowCTA
+              talentProfile={{
+              }}
+            />
+            {/* Placeholder for other sidebar elements */}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   /* Placeholder for other sidebar elements */ ;
 }</div> </div> </div> </>) ;
 }'"};
 
 
+              }}
+            />
+            {/* Placeholder for other sidebar elements */}
           </div>;
         </div>;
       </div>;
     </>;
   );
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -956,3 +1026,5 @@ if ( {") {
 }
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

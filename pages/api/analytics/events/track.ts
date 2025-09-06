@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
   if (!fs.existsSync(LOG_FILE)) fs.writeFileSync(LOG_FILE, '')
@@ -11,28 +12,35 @@ const LOG_FILE = path.join(LOG_DIR, 'events.log.jsonl');
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import type { NextApiRequest, NextApiResponse } from 'next',;
 import fs from 'fs',;
 import path from 'path',;
 const LOG_DIR = path.join(process.cwd(), 'dataanalytics'),
 const LOG_FILE = path.join(LOG_DIR, 'events.log.jsonl'),
 
-const LOG_DIR = path.join(process.cwd(), 'dataanalytics')
-const LOG_FILE = path.join(LOG_DIR, 'events.log.jsonl')
-function ensureLogFile() {
-  if (!fs.existsSync(LOG_DIR)) fs.mkdirSync(LOG_DIR, { recursive: true });
+
   if (!fs.existsSync(LOG_FILE)) fs.writeFileSync(LOG_FILE, '')
 }
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method Not Allowed' });
 
   const { name, page = '', userType = 'guest', properties = {}, at } = req.body || {};
   if (!name || typeof name !== 'string') return res.status(400).json({ error: 'Invalid event name' });
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const nowIso = new Date().toISOString();
 =======
 import type { NextApiRequest, NextApiResponse } from 'next',
@@ -64,15 +72,20 @@ function handler() {
 }
   const now_iso = new Date ().toISOString (),
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const event = {
     name,
     page,
     user_type,
     properties,
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     fs.appendFileSync(LOG_FILE, JSON.stringify(event) + '\n')
@@ -85,6 +98,19 @@ function handler() {
 ip: (req.headers['x - forwarded - for'] || req.socket.remote_address || '') as string},
   try {
 <<<<<<< HEAD
+=======
+
+    fs.appendFileSync(LOG_FILE, JSON.stringify(event) + '\n')
+
+
+res.status(200).json({ ok: true });
+};
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { ensureAdmin } from '../../../utils/auth';
+
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  try {
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     ensureLogFile (),
     fs.appendFileSync (LOG_FILE, JSON.stringify (event) + '\n');
 
@@ -96,14 +122,8 @@ ip: (req.headers['x - forwarded - for'] || req.socket.remote_address || '') as s
   res.status(200).json({ ok: true })
 }
 
-=======
-res.status (200).json ({ ok: true });
-}
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
@@ -153,3 +173,5 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

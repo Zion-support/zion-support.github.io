@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -19,6 +20,8 @@ export default function CompanyWorkspace() {;
   const { user } = useAuth();
   const { company, isLoading, error } = useCompanyWorkspace(companySlug);
   const { isWhitelabel, tenant, brandName } = useWhitelabel();
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from "react",
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
@@ -28,8 +31,6 @@ import { Navigate, useParams } from "react-router-dom",
 import { SEO } from "@/components/SEO",
 import { ProtectedRoute } from "@/components/ProtectedRoute",
 import { useCompanyWorkspace } from "@/hooks/useCompanyWorkspace",
-
-
 import { useWhitelabel } from "@/context/WhitelabelContext";
 export default function CompanyWorkspace() {
   const { companySlug } = useParams() as { companySlug?: string }
@@ -43,7 +44,13 @@ export default function CompanyWorkspace() {
   const { company, isLoading, error } = useCompanyWorkspace(companySlug),
   const { isWhitelabel, tenant, brandName } = useWhitelabel(),
   
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   if (isLoading) {
     return (
 
@@ -66,6 +73,7 @@ export default function CompanyWorkspace() {
   const hasAccess = true, // For demo purposes, always grant access
   if (!hasAccess) {
     return <Navigate to="/unauthorized" />
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 class ErrorBoundary extends React.Component {
@@ -73,6 +81,10 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
+=======
+      <SEO
+      <SEO 
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   
   static getDerivedStateFromError(error) {
     return { hasError: true };
@@ -101,10 +113,10 @@ import {SEO} from "@/components/SEO";
 import {ProtectedRoute} from "@/components/ProtectedRoute";
 import {useCompanyWorkspace} from "@/hooks/useCompanyWorkspace";
 import {useWhitelabel} from "@/context/WhitelabelContext";
-=======
 
       <SEO 
 
+<<<<<<< HEAD
 =======
 =======
       <SEO 
@@ -115,6 +127,8 @@ import {useWhitelabel} from "@/context/WhitelabelContext";
       <SEO
       <SEO 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from "react",;
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
@@ -125,6 +139,7 @@ import { SEO } from "@/components/SEO",;
 import { ProtectedRoute } from "@/components/ProtectedRoute",;
 import { useCompanyWorkspace } from "@/hooks/useCompanyWorkspace",;
 import { useWhitelabel } from "@/context/WhitelabelContext",;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 export default function CompanyWorkspace() {;
@@ -144,11 +159,14 @@ export default function CompanyWorkspace() {;
   if (isLoading) {;
     return (;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <div className="flex items-center justify-center min-h-screen">;
         <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-zion-cyan"></div>;
       </div>;
     );
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   if (error || !company) {;
@@ -186,10 +204,15 @@ export default function CompanyWorkspace() {;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  }
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ;
   return (;
     <ProtectedRoute>;
       <SEO;
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -197,6 +220,8 @@ export default function CompanyWorkspace() {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         title={`${company.name} Workspace - ${isWhitelabel ? brandName : 'Zion AI Marketplace'}`}
         description={`${company.name}'s dedicated workspace ${isWhitelabel ? `on ${brandName}` : 'on Zion AI Marketplace'}. Collaborate with your team to find top talent.`}
       />
@@ -210,6 +235,7 @@ export default function CompanyWorkspace() {;
       <Footer />
     </ProtectedRoute>
   )
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -254,6 +280,8 @@ function CompanyWorkspace() {
   const { user } = use_auth ();
   const { company, is_loading, error } = useCompanyWorkspace (company_slug);
   const { is_whitelabel, tenant, brand_name } = use_whitelabel ();
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ;
   // Check condition
 if ( {) {
@@ -300,6 +328,7 @@ if ( {) {
       </main>;
       <Footer />;
     </ProtectedRoute>);
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -436,3 +465,6 @@ export default function CompanyWorkspace() {_const { companySlug} = useParams() 
 ;
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

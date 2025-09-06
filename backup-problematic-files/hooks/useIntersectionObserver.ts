@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import {useEffect, useRef, useState} from 'react';
 
@@ -12,10 +13,13 @@ import {useEffect, useRef, useState} from 'react';
 main:hooks/useIntersectionObserver.ts
 :backup-problematic-files/hooks/useIntersectionObserver.ts
 :backup-problematic-files/hooks/useIntersectionObserver.ts
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface UseIntersectionObserverProps {
   threshold?: number;
   root?: Element | null;
   rootMargin?: string;
+<<<<<<< HEAD
 :backup-problematic-files/hooks/useIntersectionObserver.ts
   freezeOnceVisible?: boolean;
 }
@@ -77,10 +81,13 @@ main:hooks/useIntersectionObserver.ts
       currentObserver.disconnect()
     }
 main:hooks/useIntersectionObserver.ts
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   }, [node, threshold, root, rootMargin, frozen]);
   const prevNode = useRef<Element | null>(null);
   useEffect(() => {
     if (prevNode.current) {
+<<<<<<< HEAD
 :backup-problematic-files/hooks/useIntersectionObserver.ts
       observer.current?.unobserve(prevNode.current);
     }
@@ -95,6 +102,8 @@ main:hooks/useIntersectionObserver.ts
 }
   return [setNode, entry] as const
 };
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return [setNode, entry] as const;
 }
 import { useEffect, useRef, useState } from 'react',;
@@ -149,6 +158,9 @@ export function useIntersectionObserver({;
   }, [node]);
   return [setNode, entry] as const
 }
+<<<<<<< HEAD
 main:hooks/useIntersectionObserver.ts
 :backup-problematic-files/hooks/useIntersectionObserver.ts
 :backup-problematic-files/hooks/useIntersectionObserver.ts
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

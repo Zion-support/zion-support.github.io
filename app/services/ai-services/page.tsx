@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 export const metadata = { title: 'AI Services | Zion Tech Group' };
 
 export default function AIPage() {
@@ -180,10 +181,13 @@ export default function AIPage() {
 
       <Pricing />
       <ContactSection />
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     </div>
   );
 }
 
+<<<<<<< HEAD
 function AIServiceCard({ title, description, features, price, icon }: { 
   title: string; 
   description: string; 
@@ -270,3 +274,5 @@ function Plan({ name, price, features }: { name: string; price: string; features
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   );
 }
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

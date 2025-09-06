@@ -1,4 +1,7 @@
 
+import React, { useState } from "react";
+import {Button} from "@/components/ui/button";
+import {Input} from "@/components/ui/input";
 import React, { useState } from './react';
 import { Button } from '@/components / ui / button';
 import { Input } from '@/components / ui / input';
@@ -25,6 +28,7 @@ if (return) {
         setIsSuccess (false);
       }, 5000);
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     } catch (error) {
       console.error ("Error subscribing:", error);
@@ -42,12 +46,15 @@ if (return) {
 
     setIsSubmitting(true),;
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     try {;
       // In a real implementation, this would connect to a backend service;
       // For now, we'll simulate a successful submission;
       await new Promise(resolve => setTimeout(resolve, 1000));
       setIsSuccess(true);
       setEmail("");
+<<<<<<< HEAD
 
       setTimeout(() => {;
         setIsSuccess(false);
@@ -82,6 +89,8 @@ export const MobileEmailCapture: React.FC = () => {
       await new Promise(resolve => setTimeout(resolve, 1000));
       setIsSuccess(true);
       setEmail("");
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useState } from "react";
 import {Button} from "@/components/ui/button";
 import {Input} from "@/components/ui/input";
@@ -89,7 +98,22 @@ export const MobileEmailCapture: React.FC = () => {;
   const [email, setEmail] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+      setTimeout(() => {;
+        setIsSuccess(false);
+      }, 5000);
+    } catch (error) {;
+      console && console.error("Error subscribing:", error);
+    } finally {;
+      setIsSubmitting(false);
+
+    }
+  }
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
@@ -98,15 +122,21 @@ export const MobileEmailCapture: React.FC = () => {
   const [isSubmitting, setIsSubmitting] = useState(false),
   const [isSuccess, setIsSuccess] = useState(false),
 
+import React, { useState } from "react";
+import {Button} from "@/components/ui/button";
+import {Input} from "@/components/ui/input";
+export const MobileEmailCapture: React.FC = () => {;
+  const [email, setEmail] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSuccess, setIsSuccess] = useState(false);
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault(),
-    if (!email || isSubmitting) return,
-
-    setIsSubmitting(true),
-
+    e.preventDefault();
+    if (!email |isSubmitting) return;
+    setIsSubmitting(true)
     try {
       // In a real implementation, this would connect to a backend service
       // For now, we'll simulate a successful submission
+<<<<<<< HEAD
       await new Promise(resolve => setTimeout(resolve, 1000)),
       setIsSuccess(true),
       setEmail(""),
@@ -115,6 +145,8 @@ export const MobileEmailCapture: React.FC = () => {
 =======
       
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       setTimeout(() => {
         setIsSuccess(false)
       }, 5000)
@@ -123,6 +155,7 @@ export const MobileEmailCapture: React.FC = () => {
     } finally {
       setIsSubmitting(false)
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
   }
@@ -208,6 +241,8 @@ export const MobileEmailCapture:React.FC = () => {;
       </div>
     </section>
   )
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 
 },
@@ -238,10 +273,13 @@ export const MobileEmailCapture: React.FC = () => {;
     }
   };
   return (;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
   },
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   return (
 
@@ -255,13 +293,17 @@ export const MobileEmailCapture: React.FC = () => {;
             Subscribe to our mobile app updates and be the first to try new features before they're released to the public.;
           </p>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
           <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">;
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <Input
               type="email"
               placeholder="Enter your email address"
               value={email}
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -344,6 +386,8 @@ export const MobileEmailCapture: React.FC = () => {;
           </form>;
           <p className="text-sm text-gray-400 mt-4">;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             We respect your privacy and will never share your information.;
           </p>;
         </div>;
@@ -352,6 +396,7 @@ export const MobileEmailCapture: React.FC = () => {;
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 };
@@ -362,10 +407,13 @@ export const MobileEmailCapture: React.FC = () => {;
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 };
     </section>);
 }
 ;
+<<<<<<< HEAD
     </section>);
 }
 ;
@@ -387,3 +435,5 @@ return (<section className=" py-16 bg-gradient-to-r from-zion-blue-dark to-zion-
   );
 };
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

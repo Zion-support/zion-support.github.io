@@ -1,22 +1,31 @@
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
 
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useState  } from 'react';
 import { Button  } from '@/components/ui/button';
 import { Sparkles, Loader2  } from 'lucide-react';
 import { useResumeEnhancer } from '@/hooks/useResumeEnhancer';
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {useState} from 'react';
 import {Button} from '@/components/ui/button';
 import {Sparkles, Loader2} from 'lucide-react';
 import {useResumeEnhancer} from '@/hooks/useResumeEnhancer';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface AIEnhancementButtonProps {
 
   currentContent: string
@@ -25,11 +34,14 @@ interface AIEnhancementButtonProps {
   onEnhanced: (enhancedContent: string) => void
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {useState} from 'react';
 import {Button} from '@/components / ui / button';
 import {Sparkles, Loader2} from 'lucide-react';
@@ -38,18 +50,28 @@ export function AIEnhancementButton({;
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+import {useState} from 'react';
+import {Button} from '@/components / ui / button';
+import {Sparkles, Loader2} from 'lucide-react';
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   buttonText?: string;
-  className?: string
+  className?: string;
 }
+<<<<<<< HEAD
 export function AIEnhancementButton({
 
 export function AIEnhancementButton({;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   currentContent;
   enhancementType;
   context;
   onEnhanced;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   buttonText = "Enhance with AI";
@@ -93,14 +115,14 @@ export function AIEnhancementButton({;
     }
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   buttonText = "Enhance with AI";
   className;
 }: AIEnhancementButtonProps) {;
   const { enhanceContent, isEnhancing } = useResumeEnhancer();
   const [error, setError] = useState<string | null>(null);
-  const handleEnhance = async () => {;
-    if (!currentContent || currentContent && currentContent.trim().length < 10) {;
       setError('Please enter at least some basic content before enhancing');
       return;
     }
@@ -110,12 +132,15 @@ export function AIEnhancementButton({;
       enhancementType;
       context;
     );
+
+
     if (enhancedContent) {;
       onEnhanced(enhancedContent);
     }
   };
 
 
+<<<<<<< HEAD
   buttonText = "Enhance with AI";
   className
 }: AIEnhancementButtonProps) {
@@ -139,6 +164,8 @@ export function AIEnhancementButton({;
 
   buttonText = "Enhance with AI";
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useState } from 'react',;
 import { Button } from '@/components/ui/button',;
 import { Sparkles, Loader2 } from 'lucide-react',;
@@ -169,6 +196,7 @@ export function AIEnhancementButton({
       return
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
   
@@ -187,6 +215,8 @@ export function AIEnhancementButton({
       onEnhanced(enhancedContent)
     }
   };
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ;
     setError(null),;
     const enhancedContent = await enhanceContent(;
@@ -198,11 +228,13 @@ export function AIEnhancementButton({
       onEnhanced(enhancedContent);
     }
   },
-
   
+<<<<<<< HEAD
   
   
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <Button
       type="button"
@@ -210,6 +242,7 @@ export function AIEnhancementButton({
       size="sm"
       className={`h-6 gap-1 text-primary hover:text-primary ${className}`}
       onClick={handleEnhance}
+<<<<<<< HEAD
 <<<<<<< HEAD
       disabled={isEnhancing}>;
       {isEnhancing ? (;
@@ -288,6 +321,8 @@ export function AIEnhancementButton({;
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {useResumeEnhancer} from '@/hooks / useResumeEnhancer';
 interface AIEnhancementButtonProps {
   current_content: string,
@@ -304,6 +339,7 @@ function AIEnhancementButton() {
   const { enhance_content, is_enhancing } = useResumeEnhancer ();
   const [error, set_error] = useState < string | null>(null);
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -367,3 +403,5 @@ context);
 }
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

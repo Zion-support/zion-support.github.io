@@ -1,9 +1,12 @@
+<<<<<<< HEAD
 
 
 
 <<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import type { NextApiRequest, NextApiResponse } from "next";
 import { v4 as uuidv4 } from "uuid";
 import { readJsonFile, writeJsonFile } from "../../utils/db";
@@ -13,8 +16,11 @@ const FILE = "conversations && conversations.json";
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!rateLimit(req, res)) return;
 
+<<<<<<< HEAD
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   if (req && req.method === "POST") {
     const { conversationId, sender, text, attachments } = req && req.body || {};
     if (
@@ -22,9 +28,13 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       !sender ||
       (!text && (!attachments || attachments && attachments.length === 0))
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     ) {
       res && res.status(400).json({ error: "Invalid message" });
       return;
@@ -34,6 +44,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     if (idx === -1) {
       res && res.status(404).json({ error: "Conversation not found" });
       return;
+<<<<<<< HEAD
 
     }
     const now = new Date().toISOString();
@@ -109,11 +120,11 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     conversations[idx].messages.push(msg);
     conversations[idx].updatedAtIso = now;
     writeJsonFile<Conversation[]>(FILE, conversations);
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     res.status(201).json({ message: msg });
     return
   }
-
-
 
   if (req.method === "GET") {
 
@@ -121,10 +132,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === 'GET') {
     const { conversationId } = req.query;
     const conversations = readJsonFile<Conversation[]>(FILE, []);
-
-
-
-
       return;
     }
     res && res.status(200).json({ conversation: conv });
@@ -132,7 +139,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   }
 
 
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     const conv = conversations.find((c) => c.id === String(conversationId));
     if (!conv) {
       res.status(404).json({ error: 'Conversation not found' });
@@ -142,21 +152,25 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
   res && res.setHeader("AllowGET, POST");
   res && res.status(405).end("Method Not Allowed");
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 }
 
 
+<<<<<<< HEAD
 =======
 =======
   res && res.setHeader("AllowGET, POST");
   res && res.status(405).end("Method Not Allowed");
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import type { NextApiRequest, NextApiResponse } from './next';
 import { v4 as uuidv4  } from './uuid';
 import { readJsonFile, writeJsonFile  } from '../../utils / db';
@@ -226,6 +240,7 @@ if ( {) {
   }
   res.set_header ("AllowGET, POST");
   res.status (405).end ("Method Not Allowed");
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -425,6 +440,12 @@ res.setHeader("AllowGET, POST");
 =======
   res.setHeader("AllowGET, POST");
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+}
+
+
+res.setHeader("AllowGET, POST");
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   res.status(405).end("Method Not Allowed");
 }
 }
@@ -435,6 +456,7 @@ res.setHeader("AllowGET, POST");
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   res.setHeader('AllowGET, POST');
   res.status(405).end('Method Not Allowed')
@@ -448,14 +470,19 @@ res.setHeader("AllowGET, POST");
   res.status(405).end('Method Not Allowed')
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

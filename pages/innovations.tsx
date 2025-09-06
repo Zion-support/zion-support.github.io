@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 import React from 'react';
@@ -12,10 +13,14 @@ import {
   Phone, Mail, MapPin, ExternalLink, Sparkles
 } from 'lucide-react'
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import UltraFuturisticBackground2029 from '../components/ui/UltraFuturisticBackground2029';
 import UltraFuturisticNavigation2029V2 from '../components/layout/UltraFuturisticNavigation2029V2';
 import UltraFuturisticFooter2029V2 from '../components/layout/UltraFuturisticFooter2029V2';
 import ComprehensiveServicesShowcase2029 from '../components/sections/ComprehensiveServicesShowcase2029';
+<<<<<<< HEAD
 <<<<<<< HEAD
 const contactInfo = {
 
@@ -59,6 +64,8 @@ const contactInfo = {
   address: '364 E Main St STE 1008 Middletown DE 19709'
   website: 'https://ziontechgroup.com'
 }
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from 'react',;
 import Head from 'next/head',;
 import { motion } from 'framer-motion',;
@@ -72,25 +79,21 @@ import {
   ChevronRight, Star, TrendingUp, Zap, Shield,
   ArrowRight, Search, Filter, Grid, List,
   Phone, Mail, MapPin, ExternalLink, Sparkles
-} from 'lucide-react',
-import UltraFuturisticBackground2029 from '../components/ui/UltraFuturisticBackground2029',
-import UltraFuturisticNavigation2029V2 from '../components/layout/UltraFuturisticNavigation2029V2',
-import UltraFuturisticFooter2029V2 from '../components/layout/UltraFuturisticFooter2029V2',
-import ComprehensiveServicesShowcase2029 from '../components/sections/ComprehensiveServicesShowcase2029',
-  ChevronRight, Star, TrendingUp, Zap, Shield,
-  ArrowRight, Search, Filter, Grid, List,
-  Phone, Mail, MapPin, ExternalLink, Sparkles
 } from 'lucide-react',;
 import UltraFuturisticBackground2029 from '../components/ui/UltraFuturisticBackground2029',;
 import UltraFuturisticNavigation2029V2 from '../components/layout/UltraFuturisticNavigation2029V2',;
 import UltraFuturisticFooter2029V2 from '../components/layout/UltraFuturisticFooter2029V2',;
 import ComprehensiveServicesShowcase2029 from '../components/sections/ComprehensiveServicesShowcase2029',;
 const contactInfo = {
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
+<<<<<<< HEAD
 };
 
 <<<<<<< HEAD
@@ -99,6 +102,8 @@ const contactInfo = {
 };
 },
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export default function InnovationsPage() {
   return (
     <UltraFuturisticBackground2029>
@@ -109,6 +114,7 @@ export default function InnovationsPage() {
           <meta name="keywords" content="AI innovations, quantum computing, space technology, enterprise solutions, Zion Tech Group, 2029 technology" />
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <link rel="icon" href="/favicon.ico" />
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -126,11 +132,14 @@ export default function InnovationsPage() {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <meta property="og:title" content="2029 Innovations - Zion Tech Group" />
           <meta property="og:description" content="Discover our groundbreaking 2029 innovations in AI consciousness, quantum computing, space technology, and enterprise solutions." />
           <meta property="og:type" content="website" />
           <meta property="og:url" content="https://ziontechgroup.com/innovations" />
           <meta property="og:image" content="https://ziontechgroup.com/og-image.jpg" />
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -148,11 +157,14 @@ export default function InnovationsPage() {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <meta name="twitter:card" content="summary_large_image" />
           <meta name="twitter:title" content="2029 Innovations - Zion Tech Group" />
           <meta name="twitter:description" content="Discover our groundbreaking 2029 innovations in AI consciousness, quantum computing, space technology, and enterprise solutions." />
           <meta name="twitter:image" content="https://ziontechgroup.com/og-image.jpg" />
         </Head>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -251,6 +263,8 @@ function InnovationsPage() {
         <section className=&quot;relative pt-32 pb-20 overflow-hidden&quot;>
           <div className=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8&quot;>
             <div className=&quot;text-center&quot;>
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         {/* Enhanced Navigation */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -266,10 +280,13 @@ function InnovationsPage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
               <motion.div
+<<<<<<< HEAD
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 1 }}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 initial={{ opacity: 0, scale: 0.8 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -286,17 +303,21 @@ function InnovationsPage() {
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 className="mb-8"
               >
                 <div className="inline-flex items-center justify-center w-24 h-24 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full mb-6">
                   <Sparkles className="w-12 h-12 text-white" />
                 </div>
               </motion.div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
               
@@ -340,6 +361,8 @@ function InnovationsPage() {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 className="text-5xl md:text-7xl font-bold mb-8"
               >
                 <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
@@ -351,6 +374,7 @@ function InnovationsPage() {
                 </span>
               </motion.h1>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
               
 
@@ -360,6 +384,11 @@ function InnovationsPage() {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
+=======
+                className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-12"
+              >
+                Experience the future today with our revolutionary innovations in AI consciousness
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-12"
               >
                 Experience the future today with our revolutionary innovations in AI consciousness
@@ -381,11 +410,10 @@ function InnovationsPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
                 className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-12"
               >
                 Experience the future today with our revolutionary innovations in AI consciousness,
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -416,10 +444,13 @@ function InnovationsPage() {
               >
                 Experience the future today with our revolutionary innovations in AI consciousness,
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 quantum computing, space technology, and enterprise solutions that are reshaping
                 industries and unlocking unprecedented possibilities.
               </motion.p>
               <motion.div
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -449,6 +480,8 @@ function InnovationsPage() {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 className="flex flex-col sm:flex-row gap-6 justify-center items-center"
               >
                 <a
@@ -457,6 +490,7 @@ function InnovationsPage() {
                 >
                   <Eye className="w-5 h-5 mr-2" />
                   Explore Innovations
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -480,6 +514,8 @@ function InnovationsPage() {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   className="inline-flex items-center px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-500 hover:text-white transition-all duration-300 transform hover:scale-105 text-lg"
                 >
                   <Mail className="w-5 h-5 mr-2" />
@@ -489,6 +525,7 @@ function InnovationsPage() {
             </div>
           </div>
         </section>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -550,6 +587,8 @@ function InnovationsPage() {
 =======
                 className="mb - 8";
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         {/* Innovation Categories Overview */}
         <section className="py - 20">;
           <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8">;
@@ -559,8 +598,11 @@ function InnovationsPage() {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         {/* Innovation Categories Overview */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -589,9 +631,6 @@ function InnovationsPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -599,8 +638,11 @@ function InnovationsPage() {
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
 
+<<<<<<< HEAD
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 
@@ -620,6 +662,7 @@ function InnovationsPage() {
             </motion.div>;
             <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 4 gap - 8">;
               {[;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -673,12 +716,18 @@ function InnovationsPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {[
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 {
                   icon: Brain
                   title: 'AI Consciousness'
                   description: 'Revolutionary AI consciousness development and emotional intelligence platforms'
                   color: 'from-violet-600 via-purple-600 to-indigo-600'
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
               {[
@@ -687,11 +736,14 @@ function InnovationsPage() {
                   title: 'AI Consciousness',
                   description: 'Revolutionary AI consciousness development and emotional intelligence platforms',
 <<<<<<< HEAD
+<<<<<<< HEAD
 
                   color: 'from - violet - 600 via - purple - 600 to - indigo - 600',
 =======
 color: 'from - violet - 600 via - purple - 600 to - indigo - 600',
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   features: ['Consciousness EvolutionEmotional IntelligenceCreative OrchestrationAutonomous Business Management'];
                 },
                 {
@@ -701,6 +753,7 @@ color: 'from - violet - 600 via - purple - 600 to - indigo - 600',
                   color: 'from - indigo - 600 via - blue - 600 to - cyan - 600',
                   features: ['Quantum - AI FusionQuantum Internet SecurityDNA ComputingQuantum Financial Trading'];
                 },
+<<<<<<< HEAD
                 {
                   icon: Rocket,
                   title: 'Space Technology',
@@ -771,6 +824,8 @@ color: 'from - violet - 600 via - purple - 600 to - indigo - 600',
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   className="group"
                 >
                   <div className={`p-8 rounded-2xl bg-gradient-to-br ${category.color} bg-opacity-10 border border-cyan-500/20 hover:border-cyan-500/40 transition-all duration-500 h-full hover:transform hover:scale-105 backdrop-blur-sm`}>
@@ -779,6 +834,7 @@ color: 'from - violet - 600 via - purple - 600 to - indigo - 600',
                         <category.icon className="w-8 h-8 text-white" />
                       </div>
                       <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors duration-300">
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -1003,6 +1059,8 @@ color: 'from - violet - 600 via - purple - 600 to - indigo - 600',
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       </p>
                     </div>
                     <div className="space-y-3">
@@ -1042,17 +1100,14 @@ color: 'from - violet - 600 via - purple - 600 to - indigo - 600',
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
                     </div>;
                   </div>;
-                </motion.div>;
-              ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+                </motion.div>))}
             </div>;
           </div>;
         </section>;
+
         {/* Comprehensive Services Showcase */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1095,13 +1150,16 @@ color: 'from - violet - 600 via - purple - 600 to - indigo - 600',
                 Innovation <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Impact</span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Our innovations are already transforming industries and creating unprecedented value 
-                Our innovations are already transforming industries and creating unprecedented value
+
+
+
+
                 for businesses worldwide.
               </p>
             </motion.div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {[
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                 {
                   icon: Zap,
@@ -1119,12 +1177,17 @@ color: 'from - violet - 600 via - purple - 600 to - indigo - 600',
                   description: 'Solutions designed for the next decade of technological advancement',
                   stats: '2029+ Future - ready';
 <<<<<<< HEAD
+=======
+                {
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
+                  stats: '2029+ Future-ready'
                 }
 
               ].map ((item, index) => (
                 <motion.div;
 
+<<<<<<< HEAD
 =======
                 }
                 {
@@ -1143,11 +1206,14 @@ color: 'from - violet - 600 via - purple - 600 to - indigo - 600',
               ].map((item, index) => (
                 <motion.div
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   key={item.title}
                   initial={{ opacity: 0, coordinate_y: 30 }}
                   whileInView={{ opacity: 1, coordinate_y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -1186,20 +1252,16 @@ color: 'from - violet - 600 via - purple - 600 to - indigo - 600',
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   className="text-center p-8 bg-gradient-to-br from-gray-900/80 to-gray-800/80 border border-gray-700/50 rounded-2xl backdrop-blur-sm hover:border-cyan-500/50 transition-all duration-500"
                 >
                   <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full mb-6">
                     <item.icon className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-2xl font-bold text-white mb-4">
-
-                  className="text - center p - 8 bg - gradient - to - br from - gray - 900 / 80 to - gray - 800 / 80 border border - gray - 700 / 50 rounded - 2xl backdrop - blur - sm hover:border - cyan - 500 / 50 transition - all duration - 500";
-                >;
-                  <div className="inline - flex items - center justify - center w - 16 h - 16 bg - gradient - to - r from - cyan - 500 to - blue - 500 rounded - full mb - 6">;
-                    <item.icon className="w - 8 h - 8 text - white" />;
-                  </div>;
-                  <h3 className="text - 2xl font - bold text - white mb - 4">;
                     {item.title}
+<<<<<<< HEAD
                   </h3>;
                   <p className="text - gray - 300 mb - 6 leading - relaxed">;
                     {item.description}
@@ -1218,15 +1280,14 @@ color: 'from - violet - 600 via - purple - 600 to - indigo - 600',
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   </h3>
                   <p className="text-gray-300 mb-6 leading-relaxed">
-                    {item.description  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+                    {item.description}
                   </p>
                   <div className="text-cyan-400 font-bold text-lg">
+<<<<<<< HEAD
                     {item.stats  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1275,6 +1336,8 @@ color: 'from - violet - 600 via - purple - 600 to - indigo - 600',
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               className="text-center"
             >
               <div className="bg-gradient-to-r from-gray-900/80 to-gray-800/80 border border-gray-700/50 rounded-2xl p-12 backdrop-blur-sm">
@@ -1283,8 +1346,11 @@ color: 'from - violet - 600 via - purple - 600 to - indigo - 600',
                 </h2>
                 <p className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto">
 
+<<<<<<< HEAD
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 
@@ -1292,24 +1358,10 @@ color: 'from - violet - 600 via - purple - 600 to - indigo - 600',
                 </p>
                 <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
                   <a
-
-
-                    href={`mailto:${contactInfo.email}?subject=Innovation Partnership Inquiry`  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
-
                     className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25 text-lg"
                   >
                     <Mail className="w-5 h-5 mr-2" />
                     Start Innovation Partnership
-
-
-                  </Link>
-
-
                   <div className="flex items-center space-x-6 text-gray-300">
                     <div className="flex items-center space-x-2">
                       <Phone className="w-5 h-5 text-cyan-400" />
@@ -1335,6 +1387,7 @@ color: 'from - violet - 600 via - purple - 600 to - indigo - 600',
     return res.status(500).json({ error: "Internal server error" });
   }
 
+<<<<<<< HEAD
 }
 
 }
@@ -1581,3 +1634,5 @@ color: 'from - violet - 600 via - purple - 600 to - indigo - 600',
 }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

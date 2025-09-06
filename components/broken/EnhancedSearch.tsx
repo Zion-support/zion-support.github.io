@@ -1,9 +1,12 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }];
 setIsSearching (true);
 
@@ -20,6 +23,7 @@ setIsSearching (false);
 [selected_filters]);
 [selected_filters]);
 //Close search on outside click useEffect ( () => {
+<<<<<<< HEAD
 
   const handleClickOutside = (event: MouseEvent) =>: any {
   if () {) {
@@ -136,11 +140,14 @@ setIsSearching (false)
   {
   opacity: 0, y: -10, scale: 0.95
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }animate= {
   {
   opacity: 1, y: 0, scale: 1
 }exit= {
   {
+<<<<<<< HEAD
 
 
   opacity: 0, y: -10, scale: 0.95 
@@ -171,6 +178,8 @@ setIsSearching (false)
   /* Filters */;
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }{
   show_filters && (<div className="p - 4 border - b border - gray - 700"> <div className="flex items - center gap - 2 mb - 3"> <Filter className="w - 4 h - 4 text - gray - 400" /> <span className="text - sm font - medium text - gray - 300">Filter by Category</span> </div> <div className="flex flex - wrap gap - 2"> {
   categories.map ( (category) => (<button key= {
@@ -181,6 +190,7 @@ setIsSearching (false)
   {
   duration: 0 && 0.2 
 
+<<<<<<< HEAD
 =======
 }{
   show_filters && (<div className="p - 4 border - b border - gray - 700"> <div className="flex items - center gap - 2 mb - 3"> <Filter className="w - 4 h - 4 text - gray - 400" /> <span className="text - sm font - medium text - gray - 300">Filter by Category</span> </div> <div className="flex flex - wrap gap - 2"> {
@@ -190,6 +200,8 @@ setIsSearching (false)
   {
   duration: 0 && 0.2 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }className="absolute top-full left-0 right-0 mt-2 bg-gray-900/95 backdrop-blur-md border border-gray-700 rounded-xl shadow-2xl z-50 max-h-96 overflow-y-auto"> {;
   /* Filters */ ;
 }{;
@@ -217,6 +229,7 @@ setIsSearching (false)
   /* Search Suggestions */ ;
 }<AnimatePresence> {;
   showSuggestions && suggestions && suggestions.length > 0 && (<motion&& motion.div initial= {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -258,6 +271,9 @@ setIsSearching (false)
 }<AnimatePresence> {
   showSuggestions && suggestions.length > 0 && (<motion.div initial= {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   {
   opacity: 0, y: -10
 }animate= {
@@ -265,6 +281,7 @@ setIsSearching (false)
   opacity: 1, y: 0
 }exit= {
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1008,6 +1025,8 @@ onClick={() => handleSearch()}
 wait: number
 }export default EnhancedSearch;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 // Debounce utility function
 function debounce<T extends (...args: any[]) => any>(
   func: T
@@ -1015,6 +1034,7 @@ function debounce<T extends (...args: any[]) => any>(
 ): (...args: Parameters<T>) => void {
   let timeout: NodeJS.Timeout
   return (...args: Parameters<T>) => {
+<<<<<<< HEAD
 <<<<<<< HEAD
     clearTimeout(timeout)
     timeout = setTimeout(() => func(...args), wait)
@@ -1025,6 +1045,8 @@ function debounce<T extends (...args: any[]) => any>(
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }className="absolute top-full left-0 right-0 mt-2 bg-gray-900 border border-gray-700 rounded-xl shadow-2xl overflow-hidden z-10"> {;
   /* Quick Actions */ ;
 }<div className="p-4 border-b border-gray-700"> <h3 className="text-sm font-medium text-gray-400 mb-3">Quick Actions</h3> <div className="grid grid-cols-2 gap-2"> {;
@@ -1122,6 +1144,7 @@ function debounce<T extends (...args: any[]) => any>(;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
 export default EnhancedSearch;
+<<<<<<< HEAD
 
 
 
@@ -1132,6 +1155,8 @@ export default EnhancedSearch;
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   category.id;
 }on_click= {
   () => toggle_filter (category.id);
@@ -1255,6 +1280,7 @@ function debounce < T extends (...args: any[]) => any>(
     timeout = set_timeout (() => func (...args), wait);
   }
 }
+<<<<<<< HEAD
 export default EnhancedSearch;
 ;
 <<<<<<< HEAD
@@ -1275,3 +1301,5 @@ export default EnhancedSearch;
 }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

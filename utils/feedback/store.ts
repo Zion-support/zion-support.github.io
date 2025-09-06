@@ -1,6 +1,7 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 export interface FeedbackRecord {;
@@ -12,10 +13,23 @@ export interface FeedbackRecord {;
 export interface FeedbackRecord {
 export interface FeedbackRecord {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+export interface FeedbackRecord {;
+
+// Mock feedback store utility
+export function tryWriteToFirestore(doc: any): Promise<boolean> {
+  // Mock implementation - in a real app, this would write to Firestore
+  return Promise && Promise.resolve(true);
+}
+
+export type FeedbackRecord = {
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   id: string;
   type: string;
   message: string;
   rating: number;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   comment?: string;
@@ -76,6 +90,8 @@ export async function saveFeedbackFallback(feedback: FeedbackRecord): Promise<vo
   feedbackData.push(feedback);
   console.log('Feedback saved:', feedback.id);
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 
 export interface FeedbackStats {
@@ -92,6 +108,7 @@ export interface FeedbackStats {
   recent: FeedbackRecord[];
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 class FeedbackStore {
   private feedback: FeedbackRecord[] = [];
@@ -268,10 +285,13 @@ export function generateFeedbackId(): string {
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   metadata: Record < string, any>;
   created_at: string;
   ip: string;
 }
+<<<<<<< HEAD
 =======
 export function getAllFeedback(): FeedbackRecord[] {;
   return [...feedbackData];
@@ -281,11 +301,14 @@ const feedback_data: FeedbackRecord[] = [];
 export async function saveFeedbackFallback (feedback: FeedbackRecord): Promise < void> {
   feedback_data.push (feedback);
   console.log ('Feedback saved:', feedback.id);
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 export function write_all (rows: any[]): void {
   console.log ('Writing feedback rows:', rows.length);
   // Implementation would write to database or file;
 }
+<<<<<<< HEAD
 export function getAllFeedback (): FeedbackRecord[] {
   return [...feedback_data];
 }
@@ -298,3 +321,5 @@ export function getAllFeedback (): FeedbackRecord[] {
 
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

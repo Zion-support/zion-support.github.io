@@ -9,4 +9,7 @@ const PrimaryNav = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default PrimaryNav;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

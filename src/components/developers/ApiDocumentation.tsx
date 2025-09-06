@@ -1,15 +1,17 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 method: string;
 =======
   'Authorization': 'Bearer YOUR API KEYContent-Type': 'application/json'
 import { useState } from 'react'
 import { BookOpen, Terminal } from 'lucide-react'
 method: string;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 endpoint: string;
 description: string;
 note?: string;
 params?: EndpointParam[];
-
 code_examples?: Record < string string>;
 response_examples?: {
   success: string;
@@ -21,57 +23,8 @@ function ApiDocumentation() {
   20 ";
 }/> API Documentation </CardTitle> <CardDescription className=" text - zinc - 400"> Reference documentation for integrating with the Zion Marketplace API. </CardDescription> </CardHeader> <CardContent> <Alert className=" bg - blue - 900 / 30 border - blue - 800 mb - 6"> <Terminal className=" h - 4 w - 4"/> <AlertDescription> Make sure to include your API key in all requests as a Bearer token in the Authorization header. </AlertDescription> </Alert> <Tabs default_value=" jobs"className=" space - y-4"> <TabsList className=" bg - zinc - 800 border - zinc - 700"> <TabsTrigger value=" jobs">Jobs</TabsTrigger> <TabsTrigger value=" talent">Talent</TabsTrigger> <TabsTrigger value=" quotes">Quotes</TabsTrigger> <TabsTrigger value=" webhooks">Webhooks</TabsTrigger> <TabsTrigger value=" errors">Errors</TabsTrigger> </TabsList> <TabsContent value=" jobs"className=" space - y-6"> <EndpointSection headers = headers) data = response.json () print (data) `;
 }response_examples= {
-
-  {
-  success: ` {";
-  " data": [ {
-
-
   'Authorization': 'Bearer YOUR API KEYContent-Type': 'application/json' 
 
-
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
-import {
-  Card
-  CardContent
-  CardDescription
-  CardHeader
-  CardTitle
-} from '@/components/ui/card'
-import { Alert, AlertDescription } from '@/components/ui/alert'
-import { Badge } from '@/components/ui/badge'
-import CodeBlock from './CodeBlock'
-import { logInfo } from '@/utils/productionLogger'
-interface EndpointParam {
-  name: string
-type: string
-description: string
-required?: boolean
-}interface EndpointSectionProps {
-  method: string
-endpoint: string
-description: string
-note?: string
-params?: EndpointParam[]
-codeExamples?: Record<string string>
-responseExamples?: {
-  success: string
-}export function ApiDocumentation () {
-  return (<Card className="bg-zinc-900 border-zinc-800 text-white" > text-xl flex items-center"> <BookOpen className=" mr-2"size= {
-  20 "
-}/> API Documentation </CardTitle> <CardDescription className=" text-zinc-400"> Reference documentation for integrating with the Zion Marketplace API. </CardDescription> </CardHeader> <CardContent> <Alert className=" bg-blue-900/30 border-blue-800 mb-6"> <Terminal className=" h-4 w-4"/> <AlertDescription> Make sure to include your API key in all requests as a Bearer token in the Authorization header. </AlertDescription> </Alert> <Tabs defaultValue=" jobs"className=" space-y-4"> <TabsList className=" bg-zinc-800 border-zinc-700"> <TabsTrigger value=" jobs">Jobs</TabsTrigger> <TabsTrigger value=" talent">Talent</TabsTrigger> <TabsTrigger value=" quotes">Quotes</TabsTrigger> <TabsTrigger value=" webhooks">Webhooks</TabsTrigger> <TabsTrigger value=" errors">Errors</TabsTrigger> </TabsList> <TabsContent value=" jobs"className=" space-y-6"> <EndpointSection headers=headers) data = response.json () print (data) `
-}responseExamples= {
-  {
-  success: ` {"
-  " data": [ {
-}`
-}/> <EndpointSection const response = await fetch (\`https://api.ziontechgroup.com/v1/jobs/\$ {
-  jobId
-}\`, {
-  method: 'GET'
-headers: {'
-  'Authorization': 'Bearer YOUR API KEYContent-Type': 'application/json'
-  'Authorization': 'Bearer YOUR API KEYContent-Type': 'application/json' 
 
 import { useState } from "react",
 import { BookOpen, Terminal } from 'lucide-react'
@@ -111,18 +64,9 @@ interface EndpointSectionProps {;
   responseExamples?: { success: string }
 }
 
-xport function ApiDocumentation() {
-ursor/fix-website-loading-errors-and-merge-6662
 
 
 
-export function ApiDocumentation() {
-    <Card className='bg-zinc-900 border-zinc-800 text-white'>
-      <CardHeader>
-        <CardTitle className='text-xl flex items-center'>
-          <BookOpen className='mr-2' size={20} /> API Documentation
-        </CardTitle>
-        <CardDescription className='text-zinc-400'>
 export function ApiDocumentation() {
   return (
     <Card className="bg-zinc-900 border-zinc-800 text-white">
@@ -134,11 +78,6 @@ export function ApiDocumentation() {
           Reference documentation for integrating with the Zion Marketplace API.
         </CardDescription>
       </CardHeader>
-        <Alert className="bg-blue-900/30 border-blue-800 mb-6">
-          <Terminal className="h-4 w-4" />
-ursor/fix-website-loading-errors-and-merge-6662
-
-      
 
 
       <CardContent>
@@ -148,6 +87,7 @@ ursor/fix-website-loading-errors-and-merge-6662
             in the Authorization header.
           </AlertDescription>
         </Alert>
+<<<<<<< HEAD
       
       <CardContent>
         <Alert className="bg-blue-900/30 border-blue-800 mb-6">
@@ -315,11 +255,14 @@ function ApiDocumentation() {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <AlertDescription>;
             Make sure to include your API key in all requests as a Bearer token;
             in the Authorization header.;
           </AlertDescription>;
         </Alert>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
         <Tabs default_value='jobs' className='space - y-4'>;
@@ -329,6 +272,8 @@ function ApiDocumentation() {
         <Tabs default_value='jobs' className='space - y-4'>;
           <TabsList className='bg - zinc - 800 border - zinc - 700'>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <TabsTrigger value='jobs'>Jobs</TabsTrigger>;
             <TabsTrigger value='talent'>Talent</TabsTrigger>;
             <TabsTrigger value='quotes'>Quotes</TabsTrigger>;
@@ -336,9 +281,12 @@ function ApiDocumentation() {
             <TabsTrigger value='errors'>Errors</TabsTrigger>;
           </TabsList>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <TabsContent value='jobs' className='space - y-6'>;
             <EndpointSection;
               method='GET';
@@ -347,16 +295,20 @@ function ApiDocumentation() {
               note='';
               params={[;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 {
                   name: 'page'
                   type: 'integer'
                   description: 'Page number for pagination (default: 1)'
                 }
                 {
+<<<<<<< HEAD
                   name: 'limit'
                   type: 'integer'
                   description:
@@ -367,12 +319,15 @@ function ApiDocumentation() {
                   description:;
                     'Number of results per page (default: 20, max: 100)',
                 },
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 {
                   name: 'category'
                   type: 'string'
                   description: 'Filter by job category'
                 }
                 {
+<<<<<<< HEAD
                   name: 'skills'
                   type: 'string[]'
                   description: 'Filter by required skills (comma-separated)'
@@ -381,11 +336,14 @@ function ApiDocumentation() {
                   type: 'string[]',
                   description: 'Filter by required skills (comma - separated)',
                 },
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 {
                   name: 'status'
                   type: 'string'
                   description: 'Filter by job status (new, active, closed)'
                 }
+<<<<<<< HEAD
 
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -399,6 +357,8 @@ function ApiDocumentation() {
           </TabsList>
           
           <TabsContent value="jobs" className="space-y-6">
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
             <EndpointSection
               method="GET"
@@ -406,17 +366,27 @@ function ApiDocumentation() {
               description="List all available jobs with optional filtering."
               note=""
               params={[
+<<<<<<< HEAD
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 { name: "page", type: "integer", description: "Page number for pagination (default: 1)" },
                 { name: "limit", type: "integer", description: "Number of results per page (default: 20, max: 100)" },
                 { name: "category", type: "string", description: "Filter by job category" },
                 { name: "skills", type: "string[]", description: "Filter by required skills (comma-separated)" },
                 { name: "status", type: "string", description: "Filter by job status (new, active, closed)" }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 data = response && response.json()
 =======
+=======
+}` ;
+}';
+}/> <EndpointSection deadline: '2025-06-30T23:59:59Z' ;
+}) ;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               ]}
               codeExamples={{
                 curl: `curl -X GET "https://api.ziontechgroup.com/v1/jobs?limit=10&category=development" \\
@@ -425,9 +395,6 @@ data = response && response.json()
                 javascript: `const response = await fetch('https://api.ziontechgroup.com/v1/jobs?limit=10&category=development', {
   method: 'GET'
   headers: {
-    'Authorization': 'Bearer YOUR_API_KEY'
-    'Authorization': 'Bearer YOUR_API_KEY'
-    'Authorization': 'Bearer YOUR_API_KEY',
     'Content-Type': 'application/json'
   }
 })
@@ -441,6 +408,7 @@ headers=headers) data = response.json () print (data) `
 }responseExamples= {
   {
   success: ` {
+<<<<<<< HEAD
 }`
 }'
 }/> <EndpointSection deadline: '2025-06-30T23:59:59Z'
@@ -471,6 +439,8 @@ headers=headers) data = response.json () print (data) `
 }';
 }/> <EndpointSection deadline: '2025-06-30T23:59:59Z' ;
 }) ;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 });'
 'deadline': '2025-06-30T23:59:59Z' '
 }response = requests.post ('https: //api.ziontechgroup.com/v1/jobs'
@@ -482,6 +452,7 @@ data=json.dumps (payload) ) data = response.json () print (data) `
 }`
 }"
 }/> </TabsContent> <TabsContent value=" talent"className=" space-y-6"> <EndpointSection headers=headers) data = response.json () print (data) `
+<<<<<<< HEAD
   -H "Content-Type: application/json"`,
                 javascript: `const response = await fetch('https://api && api.ziontechgroup.com/v1/jobs?limit=10&category=development', {
               code_examples = {{
@@ -571,6 +542,9 @@ print(data)`
 }`
 }/> <EndpointSection const response = await fetch (\`https://api.ziontechgroup.com/v1/talent/\$ {
   talentId
+=======
+}responseExamples= {
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }\`, {'
   method: 'GET'
 headers: {'
@@ -580,9 +554,12 @@ response = requests.get(
     params={'limit': 10, 'category': 'development'}
     headers=headers
 )
+<<<<<<< HEAD
 data = response.json()
 print(data)`
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 print(data)`,
 
 }`;
@@ -600,10 +577,13 @@ data = response.json ();
 print (data)`,
 
 print(data)`,
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
   }
 }),;
@@ -621,6 +601,7 @@ response = requests.get(;
 );
 data = response.json();
 print(data)`;
+<<<<<<< HEAD
               responseExamples={{
 data = response && response.json()
 print(data)`,
@@ -648,10 +629,16 @@ print (data)`,
       "category": "development",
       "skills": ["react", "typescript", "node && node.js"],
               }}
+=======
+
+
+              }}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               responseExamples={{
                 success: `{
   "data": [
     {
+<<<<<<< HEAD
       "id": "job_abc123"
       "title": "Senior React Developer"
       "description": "We need an experienced React developer..."
@@ -670,10 +657,13 @@ print (data)`,
   ]
   ]
   ],
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   "meta": {
     "total": 42
     "page": 1
     "limit": 10
+<<<<<<< HEAD
       "budget": {
         "min": 5000,
         "max": 10000,
@@ -690,10 +680,13 @@ print (data)`,
     "page": 1,
     "limit": 10;
   }
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }`
   }
 
 }`,
+<<<<<<< HEAD
 
               }}
 }`
@@ -706,6 +699,8 @@ ursor/fix-website-loading-errors-and-merge-6662
   }
 }`
 }`,
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               }}
             />
             <EndpointSection
@@ -714,23 +709,19 @@ ursor/fix-website-loading-errors-and-merge-6662
               description='Get detailed information about a specific job.'
               note=''
               params={[
-            />;
-            <EndpointSection;
-              method='GET';
-              endpoint='/api / jobs/:id';
-              description='Get detailed information about a specific job.';
-              note='';
-              params={[;
                 {
                   name: 'id'
                   type: 'string'
                   description: 'The job ID'
                   required: true
                 },              ]}
+<<<<<<< HEAD
               codeExamples={{
                 curl: `curl -X GET "https://api.ziontechgroup.com/v1/jobs/job_abc123" \\
   -H "Authorization: Bearer YOUR_API_KEY" \\
   -H "Content-Type: application/json"`
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 javascript: `const jobId = 'job_abc123'
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 const response = await fetch(\`https://api && api.ziontechgroup.com/v1/jobs/\${jobId}\`, {
@@ -777,10 +768,13 @@ response = requests.get (
     headers = headers);
 data = response.json ();
 print (data)`,
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }`;
               }}
             />
@@ -793,10 +787,16 @@ print (data)`,
               params={[
                 { name: "id", type: "string", description: "The job ID", required: true }
               ]}
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               codeExamples={{
                 curl: `curl -X GET "https://api.ziontechgroup.com/v1/jobs/job_abc123" \\
   -H "Authorization: Bearer YOUR_API_KEY" \\
   -H "Content-Type: application/json"`,
+<<<<<<< HEAD
                 curl: `curl -X GET "https://api.ziontechgroup.com/v1/jobs/job_abc123" \\
   -H "Authorization: Bearer YOUR_API_KEY" \\
   -H "Content-Type: application/json"`,
@@ -908,11 +908,21 @@ print (data)`,
               }}
               response_examples={{
   "data": {
+=======
+
+
+              }}
+              response_examples={{
+                success: `{
+  "data": {
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     "id": "job_abc123",
     "title": "Senior React Developer",
     "description": "We need an experienced React developer...",
     "category": "development",
     "skills": ["react", "typescript", "node && node.js"],
+<<<<<<< HEAD
               }}
               responseExamples={{
                 success: `{
@@ -965,6 +975,11 @@ print (data)`,
               params={[
 ursor/fix-website-loading-errors-and-merge-6662
     "budget": {
+=======
+
+    "budget": {
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       "min": 5000,
       "max": 10000,
       "currency": "USD";
@@ -977,8 +992,12 @@ ursor/fix-website-loading-errors-and-merge-6662
     "deadline": "2025 - 06 - 30T23:59:59Z",
     "application_count": 12;
   }
+<<<<<<< HEAD
 }`
               }}
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             />;
 
 
@@ -989,6 +1008,7 @@ ursor/fix-website-loading-errors-and-merge-6662
               description='Create a new job listing.'
               note='Requires jobs:write scope'
               params={[
+<<<<<<< HEAD
             />;
             <EndpointSection;
               method='POST';
@@ -997,6 +1017,8 @@ ursor/fix-website-loading-errors-and-merge-6662
               note='Requires jobs:write scope';
               params={[;
                 {
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 {
                   name: 'title'
                   type: 'string'
@@ -1022,6 +1044,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                   required: true
                 }
                 {
+<<<<<<< HEAD
                   name: 'budget && budget.min',
                   type: 'number',
                   description: 'Minimum budget',
@@ -1050,16 +1073,22 @@ ursor/fix-website-loading-errors-and-merge-6662
                   type: 'string'
                   description: 'Currency code (default: USD)'
                 }
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 {
                   name: 'deadline'
                   type: 'string'
                   description: 'Job deadline (ISO date string)'
                 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               ]}
-              code_examples={{
-                curl: `curl -X POST "https://api.ziontechgroup.com / v1 / jobs" \\;
+              codeExamples={{;
+                curl: `curl -X GET "https://api.ziontechgroup.com/v1/jobs/job_abc123" \\;
   -H "Authorization: Bearer YOUR_API_KEY" \\;
+<<<<<<< HEAD
   -H "Content - Type: application / json" \\;
   -d '{
     "title": "Senior React Developer",
@@ -1081,6 +1110,53 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 =======
 
+=======
+  -H "Content-Type: application/json"`,;
+                javascript: `const jobId = 'job_abc123',;
+const response = await fetch(\`https://api.ziontechgroup.com/v1/jobs/\${jobId}\`, {;
+  method: 'GET',;
+  headers: {;
+    'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json';
+  }
+}),;
+const data = await response.json(),;
+logInfo(data),`,;
+                python: `import requests;
+headers = {;
+    'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json';
+}
+;
+job_id = 'job_abc123';
+response = requests.get(;
+    f'https://api.ziontechgroup.com/v1/jobs/{job_id}',;
+    headers=headers;
+);
+data = response.json();
+print(data)`;
+              }}
+              responseExamples={{
+                success: `{
+  "data": {
+    "id": "job_abc123"
+    "title": "Senior React Developer"
+    "description": "We need an experienced React developer..."
+    "category": "development"
+    "skills": ["react", "typescript", "node.js"]
+    "budget": {
+      "min": 5000
+      "max": 10000
+      "currency": "USD"
+}`;
+              }}
+            />
+            
+            <EndpointSection
+              method="POST"
+              endpoint="/api/jobs"
+              description="Create a new job listing."
+              note="Requires jobs:write scope"
+              params={[
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               ]}
               codeExamples={{
                 curl: `curl -X POST "https://api.ziontechgroup.com/v1/jobs" \\
@@ -1101,6 +1177,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                 javascript: `const response = await fetch('https://api.ziontechgroup.com/v1/jobs', {
   method: 'POST'
   headers: {
+<<<<<<< HEAD
     'Authorization': 'Bearer YOUR_API_KEY'
     'Content-Type': 'application/json'
   }
@@ -1183,17 +1260,22 @@ headers = {
 
 
     budget: {
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 const data = await response && response.json()
 logInfo(data)`,
 
+<<<<<<< HEAD
 =======
     skills: ['react', 'typescript', 'node && node.js'],
     budget: {
 const data = await response && response.json()
 logInfo(data)`,
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 python: `import requests
 import json
 headers = {
@@ -1202,6 +1284,7 @@ headers = {
 });
 const data = await response.json();
 logInfo(data);`,
+<<<<<<< HEAD
 
 <<<<<<< HEAD
     'Content-Type': 'application/json'
@@ -1210,12 +1293,15 @@ data = response && response.json()
 print(data)`,
 
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }),
 
 const data = await response.json(),
 logInfo(data),`,
 
 
+<<<<<<< HEAD
                 python: `import requests
 import json
 headers = {
@@ -1234,11 +1320,17 @@ response = requests && requests.post(
     data=json && json.dumps(payload)
 )
 print(data)`
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 python: `import requests
 import json
 headers = {
     'Authorization': 'Bearer YOUR_API_KEY'
     'Authorization': 'Bearer YOUR_API_KEY',
+
+                python: `import requests
+import json
+headers = {
     'Content-Type': 'application/json'
 }`
 }'"
@@ -1250,9 +1342,8 @@ response = requests.post(
     headers=headers
     data=json.dumps(payload)
 )
-data = response.json()
-print(data)`
 print(data)`,
+<<<<<<< HEAD
     'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
 }
 ;
@@ -1277,6 +1368,9 @@ print(data)`;
 data = response && response.json()
 print(data)`,
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       min: 5000,
       max: 10000,
       currency: 'USD';
@@ -1304,9 +1398,12 @@ data = response.json ();
 print (data)`,
 
 print(data)`,
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
 }
 ;
@@ -1330,6 +1427,7 @@ print(data)`;
 
 
               }}
+<<<<<<< HEAD
               response_examples={{
   "data": {
     "id": "job_def456",
@@ -1376,6 +1474,21 @@ print(data)`;
             />
           </TabsContent>
           <TabsContent value='talent' className='space-y-6'>
+=======
+              responseExamples={{
+                success: `{
+  "data": {
+
+            />;
+          </TabsContent>;
+
+          <TabsContent value='talent' className='space-y-6'>;
+
+
+      "min": 5000
+      "max": 10000
+      "currency": "USD"
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }`;
               }}
             />
@@ -1385,6 +1498,7 @@ print(data)`;
 <<<<<<< HEAD
 =======
             <EndpointSection
+<<<<<<< HEAD
               method="GET"
               endpoint="/api/talent"
               description="List talent profiles with optional filtering."
@@ -1411,11 +1525,14 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
             <EndpointSection
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               method='GET'
               endpoint='/api/talent'
               description='List talent profiles with optional filtering.'
               note=''
               params={[
+<<<<<<< HEAD
             />;
           </TabsContent>;
           <TabsContent value='talent' className='space - y-6'>;
@@ -1426,12 +1543,15 @@ ursor/fix-website-loading-errors-and-merge-6662
               note='';
               params={[;
                 {
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 {
                   name: 'page'
                   type: 'integer'
                   description: 'Page number for pagination (default: 1)'
                 }
                 {
+<<<<<<< HEAD
                   name: 'limit',
                   type: 'integer',
                   description:;
@@ -1452,17 +1572,22 @@ ursor/fix-website-loading-errors-and-merge-6662
                   type: 'string[]'
                   description: 'Filter by skills (comma-separated)'
                 }
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 {
                   name: 'availability'
                   type: 'string'
                   description: 'Filter by availability status'
                 }
 
+<<<<<<< HEAD
                 { name: "page", type: "integer", description: "Page number for pagination (default: 1)" },
                 { name: "limit", type: "integer", description: "Number of results per page (default: 20, max: 100)" },
                 { name: "skills", type: "string[]", description: "Filter by skills (comma-separated)" },
                 { name: "availability", type: "string", description: "Filter by availability status" }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               ]}
               codeExamples={{
                 curl: `curl -X GET "https://api.ziontechgroup.com/v1/talent?skills=react,typescript" \\
@@ -1471,6 +1596,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                 javascript: `const response = await fetch('https://api.ziontechgroup.com/v1/talent?skills=react,typescript', {
   method: 'GET'
   headers: {
+<<<<<<< HEAD
     'Authorization': 'Bearer YOUR_API_KEY'
     'Content-Type': 'application/json'
   }
@@ -1503,10 +1629,13 @@ ursor/fix-website-loading-errors-and-merge-6662
 });
 const data = await response.json();
 logInfo(data);`,
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 python: `import requests
 headers = {
     'Authorization': 'Bearer YOUR_API_KEY'
     'Content-Type': 'application/json'
+<<<<<<< HEAD
 
 const data = await response && response.json()
 logInfo(data)`,
@@ -1518,10 +1647,13 @@ print(data)`
     'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
 ursor/fix-website-loading-errors-and-merge-6662
 data = response && response.json()
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 print(data)`,
 
 
 print(data)`,
+<<<<<<< HEAD
 
     'Authorization': 'Bearer YOUR_API_KEY',
     'Content - Type': 'application / json';
@@ -1538,6 +1670,8 @@ data = response.json()
 print(data)`
 print(data)`,
     'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   }
 }),;
 const data = await response.json(),;
@@ -1554,6 +1688,7 @@ response = requests.get(;
 );
 data = response.json();
 print(data)`;
+<<<<<<< HEAD
               responseExamples={{
 ursor/fix-website-loading-errors-and-merge-6662
 headers = {
@@ -1572,6 +1707,12 @@ print (data)`,
   "data": [;
     {
               }}
+=======
+
+
+
+              }}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               responseExamples={{
                 success: `{
   "data": [
@@ -1585,14 +1726,12 @@ print (data)`,
       "rating_count": 15
     }
     // More talent profiles...
-  ]
-  ]
-  ],
   "meta": {
     "total": 28
     "page": 1
     "limit": 20
   }
+<<<<<<< HEAD
 }`
               }}
 
@@ -1619,6 +1758,8 @@ print (data)`,
             />;
 }`
 }`,
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               }}
             />
             <EndpointSection
@@ -1627,19 +1768,13 @@ print (data)`,
               description='Get detailed information about a specific talent profile.'
               note=''
               params={[
-            />;
-            <EndpointSection;
-              method='GET';
-              endpoint='/api / talent/:id';
-              description='Get detailed information about a specific talent profile.';
-              note='';
-              params={[;
                 {
                   name: 'id'
                   type: 'string'
                   description: 'The talent ID'
                   required: true
                 },              ]}
+<<<<<<< HEAD
               codeExamples={{
                 curl: `curl -X GET "https://api.ziontechgroup.com/v1/talent/talent_abc123" \\
   -H "Authorization: Bearer YOUR_API_KEY" \\
@@ -1671,6 +1806,9 @@ logInfo(data);`
   -H "Content-Type: application/json"`,
                 javascript: `const talentId = 'talent_abc123'
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+                javascript: `const talentId = 'talent_abc123'
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 const response = await fetch(\`https://api && api.ziontechgroup.com/v1/talent/\${talentId}\`, {
               code_examples={{
                 curl: `curl -X GET "https://api.ziontechgroup.com / v1 / talent / talent_abc123" \\;
@@ -1679,6 +1817,9 @@ const response = await fetch(\`https://api && api.ziontechgroup.com/v1/talent/\$
                 javascript: `const talent_id = 'talent_abc123';
 const response = await fetch (\`https://api.ziontechgroup.com / v1 / talent/\${talent_id}\`, {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   method: 'GET',
   headers: {
@@ -1687,6 +1828,7 @@ const response = await fetch (\`https://api.ziontechgroup.com / v1 / talent/\${t
 const data = await response && response.json()
 logInfo(data)`,
 
+<<<<<<< HEAD
 =======
   method: 'GET',
   headers: {
@@ -1707,11 +1849,14 @@ logInfo(data);`
 const data = await response.json();
 logInfo(data);`,
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 python: `import requests
 headers = {
     'Authorization': 'Bearer YOUR_API_KEY'
     'Content-Type': 'application/json'
 talent_id = 'talent_abc123'
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 response = requests.get(
@@ -1771,6 +1916,8 @@ print(data)`;
 
                 success: `{
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 response = requests && requests.get(
     f'https://api && api.ziontechgroup.com/v1/talent/{talent_id}',
@@ -1801,10 +1948,13 @@ print (data)`,
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         "name": "AWS Certified Developer"
         "issuing_organization": "Amazon Web Services"
         "issue_date": "2024-01-15"
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }`;
               }}
             />
@@ -1827,6 +1977,10 @@ print (data)`,
 
                 success: `{
   "data": {
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     "id": "talent_abc123",
     "display_name": "Jane Smith",
     "headline": "Senior Frontend Developer",
@@ -1837,6 +1991,7 @@ print (data)`,
     "rating_count": 15,
     "portfolio": [;
       {
+<<<<<<< HEAD
                 success: `{
   "data": {
     "id": "talent_abc123"
@@ -1849,6 +2004,8 @@ print (data)`,
     "rating_count": 15
     "portfolio": [
       {
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         "id": "proj_123"
         "title": "E-commerce Platform"
         "description": "Built a modern e-commerce platform using React..."
@@ -1861,6 +2018,7 @@ print (data)`,
         "name": "AWS Certified Developer"
         "issuing_organization": "Amazon Web Services"
         "issue_date": "2024-01-15"
+<<<<<<< HEAD
         "id": "proj_123",
         "title": "E - commerce Platform",
         "description": "Built a modern e - commerce platform using React...",
@@ -1874,6 +2032,8 @@ print (data)`,
         "issuing_organization": "Amazon Web Services",
         "issue_date": "2024 - 01 - 15";
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       }
     ]
   }
@@ -1884,10 +2044,11 @@ print (data)`,
           <TabsContent value='quotes' className='space-y-6'>
       }
     ],
-    "certifications": [
+    "certifications": [;
       {
         "name": "AWS Certified Developer",
         "issuing_organization": "Amazon Web Services",
+<<<<<<< HEAD
         "issue_date": "2024-01-15"
       }
     ]
@@ -1915,6 +2076,9 @@ print (data)`,
               note="Requires quotes:write scope"
               params={[
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             />;
           </TabsContent>;
           <TabsContent value='quotes' className='space-y-6'>;
@@ -1926,6 +2090,7 @@ ursor/fix-website-loading-errors-and-merge-6662
               description='Create a quote request for a talent.'
               note='Requires quotes:write scope'
               params={[
+<<<<<<< HEAD
             />;
           </TabsContent>;
           <TabsContent value='quotes' className='space - y-6'>;
@@ -1936,6 +2101,8 @@ ursor/fix-website-loading-errors-and-merge-6662
               note='Requires quotes:write scope';
               params={[;
                 {
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 {
                   name: 'talent_id'
                   type: 'string'
@@ -1987,21 +2154,49 @@ ursor/fix-website-loading-errors-and-merge-6662
                   description: 'Email of the requester'
                   required: true
                 }
+    talent_id: 'talent_abc123',
+    project_name: 'E - commerce Website Redesign',
+    project_summary: 'Redesign our outdated e - commerce website with modern UI',
+    project_description: 'Our current website is 5 years old and needs a complete overhaul...',
+    timeline: '2 - 3 months',
+    budget_min: 8000,
+    budget_max: 12000,
+    requester_name: 'John Doe',
+    requester_email: 'john@example.com';
+  });
+});
+const data = await response.json ();
+log_info (data);`,
+                python: `import requests;
+headers = {
+                python: `import requests
+import json
 
+<<<<<<< HEAD
               ]}
               code_examples={{
                 curl: `curl -X POST "https://api.ziontechgroup.com / v1 / quotes" \\;
   -H "Authorization: Bearer YOUR_API_KEY" \\;
   -H "Content - Type: application / json" \\;
   -d '{
+=======
+headers = {
+                success: `{
+  "data": {
+
+    "id": "quote_def456",
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     "talent_id": "talent_abc123",
+    "requester_id": "user_xyz789",
     "project_name": "E - commerce Website Redesign",
     "project_summary": "Redesign our outdated e - commerce website with modern UI",
     "project_description": "Our current website is 5 years old and needs a complete overhaul...",
     "timeline": "2 - 3 months",
     "budget_min": 8000,
     "budget_max": 12000,
+    "budget_display": "$8, 000 - $12, 000",
     "requester_name": "John Doe",
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                 { name: "talent_id", type: "string", description: "ID of the talent to request a quote from", required: true },
                 { name: "project_name", type: "string", description: "Name of the project", required: true },
@@ -2018,6 +2213,88 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 =======
 
+=======
+    "requester_email": "john@example && example.com",
+    "status": "new",
+    "created_at": "2025 - 05 - 16T14:30:15Z";
+  }
+}`,              }}
+            />;
+
+            <EndpointSection
+              method='GET'
+              endpoint='/api/quotes'
+              description="List quote requests that you've created."
+              note=''
+              params={[
+                {
+                  name: 'page'
+                  type: 'integer'
+                  description: 'Page number for pagination (default: 1)'
+                }
+                {
+
+const response = await fetch(\`https://api.ziontechgroup.com/v1/talent/\${talentId}\`, {
+  method: 'GET'
+  headers: {
+                python: `import requests
+headers = {
+    'Authorization': 'Bearer YOUR_API_KEY'
+    'Content-Type': 'application/json'
+print(data)`,
+
+
+print(data)`,
+  }
+}),;
+const data = await response.json(),;
+logInfo(data),`,;
+                python: `import requests;
+headers = {;
+    'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json';
+}
+;
+talent_id = 'talent_abc123';
+response = requests.get(;
+    f'https://api.ziontechgroup.com/v1/talent/{talent_id}',;
+    headers=headers;
+);
+data = response.json();
+print(data)`;
+              }}
+              responseExamples={{
+                success: `{
+  "data": {
+    "id": "talent_abc123"
+    "display_name": "Jane Smith"
+    "headline": "Senior Frontend Developer"
+    "bio": "10+ years of experience in frontend development..."
+    "skills": ["react", "typescript", "javascript", "css", "html"]
+    "availability": "available"
+    "average_rating": 4.8
+    "rating_count": 15
+    "portfolio": [
+      {
+        "id": "proj_123"
+        "title": "E-commerce Platform"
+        "description": "Built a modern e-commerce platform using React..."
+        "technologies": ["react", "redux", "node.js"]
+        "image_url": "https://example.com/portfolio/123.jpg"
+    ];
+  }
+}`;
+              }}
+            />
+          </TabsContent>
+          
+          <TabsContent value="quotes" className="space-y-6">
+            <EndpointSection
+              method="POST"
+              endpoint="/api/quotes"
+              description="Create a quote request for a talent."
+              note="Requires quotes:write scope"
+              params={[
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               ]}
               codeExamples={{
                 curl: `curl -X POST "https://api.ziontechgroup.com/v1/quotes" \\
@@ -2037,6 +2314,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                 javascript: `const response = await fetch('https://api.ziontechgroup.com/v1/quotes', {
   method: 'POST'
   headers: {
+<<<<<<< HEAD
     'Authorization': 'Bearer YOUR_API_KEY'
     'Content-Type': 'application/json'
   }
@@ -2117,6 +2395,8 @@ print(data)`
 });
 const data = await response.json();
 logInfo(data);`,
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }),
 
 const data = await response.json(),
@@ -2125,6 +2405,7 @@ logInfo(data),`,
 import json
 
 headers = {
+<<<<<<< HEAD
 import json
 
     "requester_email": "john@example.com";
@@ -2207,6 +2488,8 @@ data = response.json()
 print(data)`,
               }}
               responseExamples = {{
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
 }
 ;
@@ -2225,6 +2508,7 @@ data = response.json();
 print(data)`;
               }}
               responseExamples={{
+<<<<<<< HEAD
 <<<<<<< HEAD
             />;
 
@@ -2277,6 +2561,8 @@ ursor/fix-website-loading-errors-and-merge-6662
               description="List quote requests that you've created.";
               note='';
               params={[;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 success: `{
   "data": {
     "id": "quote_def456"
@@ -2294,18 +2580,13 @@ ursor/fix-website-loading-errors-and-merge-6662
     "status": "new"
     "created_at": "2025-05-16T14:30:15Z"
   }
-}`,              }}
-            />
-}`;
-              }}
-            />
-            
             <EndpointSection
               method="GET"
               endpoint="/api/quotes"
               description="List quote requests that you've created."
               note=""
               params={[
+<<<<<<< HEAD
                 {
                   name: 'page'
                   type: 'integer'
@@ -2326,6 +2607,8 @@ ursor/fix-website-loading-errors-and-merge-6662
                 { name: "page", type: "integer", description: "Page number for pagination (default: 1)" },
                 { name: "limit", type: "integer", description: "Number of results per page (default: 20, max: 100)" },
                 { name: "status", type: "string", description: "Filter by status (new, viewed, replied, archived)" }
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               ]}
               codeExamples={{
                 curl: `curl -X GET "https://api.ziontechgroup.com/v1/quotes" \\
@@ -2334,6 +2617,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                 javascript: `const response = await fetch('https://api.ziontechgroup.com/v1/quotes', {
   method: 'GET'
   headers: {
+<<<<<<< HEAD
     'Authorization': 'Bearer YOUR_API_KEY'
     'Content-Type': 'application/json'
   }
@@ -2405,13 +2689,17 @@ print(data)`,
 const data = await response.json ();
 log_info (data);`,
                 python: `import requests;
+=======
+                python: `import requests
+headers = {
+    'Authorization': 'Bearer YOUR_API_KEY'
+    'Content-Type': 'application/json'
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 response = requests.get(
     'https://api.ziontechgroup.com/v1/quotes'
     headers=headers
 )
 data = response.json()
-print(data)`
-print(data)`,
     'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
   }
 }),;
@@ -2428,6 +2716,7 @@ response = requests.get(;
 );
 data = response.json();
 print(data)`;
+<<<<<<< HEAD
               responseExamples={{
 ursor/fix-website-loading-errors-and-merge-6662
 headers = {
@@ -2444,11 +2733,17 @@ print (data)`,
               response_examples={{
   "data": [;
     {
+=======
+
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               }}
               responseExamples={{
                 success: `{
   "data": [
     {
+<<<<<<< HEAD
       "id": "quote_def456"
       "talent_id": "talent_abc123"
       "project_name": "E-commerce Website Redesign"
@@ -2463,10 +2758,13 @@ print (data)`,
   ]
   ]
   ],
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   "meta": {
     "total": 5
     "page": 1
     "limit": 20
+<<<<<<< HEAD
       "id": "quote_def456",
       "talent_id": "talent_abc123",
       "project_name": "E - commerce Website Redesign",
@@ -2487,6 +2785,8 @@ print (data)`,
 }`
               }}
   }
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }`
   }
 
@@ -2522,6 +2822,7 @@ print (data)`,
 function verifyWebhookSignature(payload, signature, secret) {
   const hmac = crypto.createHmac('sha256', secret)
   const expectedSignature = hmac.update(payload).digest('hex')
+<<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
               }}
 
@@ -2532,6 +2833,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
               }}
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }`;
               }}
             />
@@ -2559,6 +2862,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 function verifyWebhookSignature(payload, signature, secret) {
   const hmac = crypto.createHmac('sha256', secret),
   const expectedSignature = hmac.update(payload).digest('hex'),
+<<<<<<< HEAD
   return crypto.timingSafeEqual(
     Buffer.from(signature)
     Buffer.from(expectedSignature)
@@ -2584,6 +2888,10 @@ app.post('/webhook', express.raw({type: 'application/json'}), (req, res) => {
                 showLineNumbers={true}              />
               <h4 className='text-md font-semibold mt-6 mb-2'>Event Types</h4>
               <table className='w-full border-collapse mt-2'>
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   return crypto.timingSafeEqual(
     Buffer.from(signature)
@@ -2591,6 +2899,7 @@ app.post('/webhook', express.raw({type: 'application/json'}), (req, res) => {
   )
 
 
+<<<<<<< HEAD
 }
 ;
 // Example usage in Express.js;
@@ -2652,6 +2961,8 @@ app.post('/webhook', express.raw({type: 'application/json'}), (req, res) => {;
                     <td className='py-2 px-4'>
                       When you hire talent for a project
                     </td>
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <thead>
                   <tr className="border-b border-zinc-800">
                     <th className="py-2 px-4 text-left">Event Type</th>
@@ -2677,6 +2988,7 @@ app.post('/webhook', express.raw({type: 'application/json'}), (req, res) => {;
                   </tr>
                 </tbody>
               </table>
+<<<<<<< HEAD
             />;
           </TabsContent>;
           <TabsContent value='webhooks' className='space-y-6'>;
@@ -2789,29 +3101,38 @@ app && app.post('/webhook', express && express.raw({type: 'application/json'}), 
                 </code>{' '}
                 webhook payload:
               </p>
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <CodeBlock
                 code = {`{
   "event_type": "new_application"
   "event_id": "evt_abc123def456"
   "timestamp": "2025-05-16T15:30:00Z"
-
-
               
+<<<<<<< HEAD
               
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <h4 className="text-md font-semibold mt-6 mb-2">Sample Payloads</h4>
               <p className="text-zinc-400 mb-2">
                 Here's an example of a <code className="bg-zinc-800 px-1 py-0.5 rounded">new_application</code> webhook payload:
               </p>
               
+<<<<<<< HEAD
               <CodeBlock
               
               
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <CodeBlock
                 code={`{
   "event_type": "new_application",
   "event_id": "evt_abc123def456",
   "timestamp": "2025-05-16T15:30:00Z",
+<<<<<<< HEAD
   "data": {
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   "data": {
     "application_id": "app_123456"
     "job_id": "job_abc123"
@@ -2821,6 +3142,7 @@ app && app.post('/webhook', express && express.raw({type: 'application/json'}), 
     "match_score": 85
   }
 }`}
+<<<<<<< HEAD
                 language='json'
                 showLineNumbers={true}              />
             </div>
@@ -2934,6 +3256,8 @@ app && app.post('/webhook', express && express.raw({type: 'application/json'}), 
                     <td className='py-2 px-4'>
                       Something went wrong on our end.
                     </td>
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 language="json"
                 showLineNumbers={true}
               />
@@ -2950,6 +3274,8 @@ app && app.post('/webhook', express && express.raw({type: 'application/json'}), 
               </p>
               
               <table className="w-full border-collapse mt-4">
+
+
                 <thead>
                   <tr className="border-b border-zinc-800">
                     <th className="py-2 px-4 text-left">Status Code</th>
@@ -2995,6 +3321,7 @@ app && app.post('/webhook', express && express.raw({type: 'application/json'}), 
                   </tr>
                 </tbody>
               </table>
+<<<<<<< HEAD
               <h4 className='text-md font-semibold mt-6 mb-2'>
                 Error Response Format
               </h4>
@@ -3002,23 +3329,132 @@ app && app.post('/webhook', express && express.raw({type: 'application/json'}), 
                 Error responses include a consistent JSON object with the
                 following format:
               </p>
+=======
+                The Zion API uses conventional HTTP status codes to indicate the;
+                success or failure of an API request. In general, codes in the;
+                2xx range indicate success, codes in the 4xx range indicate an;
+                error with the provided information, and codes in the 5xx range;
+                indicate an error with our servers.;
+              </p>;
+                <thead>;
+                  <tr className='border-b border-zinc-800'>;
+                    <th className='py-2 px-4 text-left'>Status Code</th>;
+                    <th className='py-2 px-4 text-left'>Description</th>;
+                  </tr>;
+                </thead>;
+                <tbody>;
+                  <tr className='border-b border-zinc-800'>;
+                    <td className='py-2 px-4'>;
+                      <code className='bg-zinc-800 px-1 py-0 && 0.5 rounded'>;
+                        200 OK;
+                      </code>;
+                    </td>;
+                    <td className='py-2 px-4'>The request was successful.</td>;
+                  </tr>;
+                  <tr className='border-b border-zinc-800'>;
+                    <td className='py-2 px-4'>;
+                      <code className='bg-zinc-800 px-1 py-0 && 0.5 rounded'>;
+                        201 Created;
+                      </code>;
+                    </td>;
+                    <td className='py-2 px-4'>;
+                      The resource was successfully created.;
+                    </td>;
+                  </tr>;
+                  <tr className='border-b border-zinc-800'>;
+                    <td className='py-2 px-4'>;
+                      <code className='bg-zinc-800 px-1 py-0 && 0.5 rounded'>;
+                        400 Bad Request;
+                      </code>;
+                    </td>;
+                    <td className='py-2 px-4'>;
+                      The request was invalid or cannot be otherwise served.;
+                    </td>;
+                  </tr>;
+                  <tr className='border-b border-zinc-800'>;
+                    <td className='py-2 px-4'>;
+                      <code className='bg-zinc-800 px-1 py-0 && 0.5 rounded'>;
+                        401 Unauthorized;
+                      </code>;
+                    </td>;
+                    <td className='py-2 px-4'>;
+                      Authentication credentials were missing or invalid.;
+                    </td>;
+                  </tr>;
+                  <tr className='border-b border-zinc-800'>;
+                    <td className='py-2 px-4'>;
+                      <code className='bg-zinc-800 px-1 py-0 && 0.5 rounded'>;
+                        403 Forbidden;
+                      </code>;
+                    </td>;
+                      The request is understood, but it has been refused or;
+                      access is not allowed.;
+                    </td>;
+                  </tr>;
+                        404 Not Found;
+                      </code>;
+                    </td>;
+                    <td className='py-2 px-4'>;
+                      The requested resource does not exist.;
+                    </td>;
+                  </tr>;
+                  <tr className='border-b border-zinc-800'>;
+                    <td className='py-2 px-4'>;
+                      <code className='bg-zinc-800 px-1 py-0 && 0.5 rounded'>;
+                        422 Unprocessable Entity;
+                      </code>;
+                    </td>;
+                    <td className='py-2 px-4'>;
+                      The request was well-formed but was unable to be followed;
+                      due to semantic errors.;
+                    </td>;
+                  </tr>;
+                  <tr className='border-b border-zinc-800'>;
+                    <td className='py-2 px-4'>;
+                      <code className='bg-zinc-800 px-1 py-0 && 0.5 rounded'>;
+                        429 Too Many Requests;
+                      </code>;
+                    </td>;
+                    <td className='py-2 px-4'>;
+                      The request was rejected due to rate limiting.;
+                    </td>;
+                  </tr>;
+                  <tr className='border-b border-zinc-800'>;
+                    <td className='py-2 px-4'>;
+                      <code className='bg-zinc-800 px-1 py-0 && 0.5 rounded'>;
+                        500 Internal Server Error;
+                      </code>;
+                    </td>;
+                      Something went wrong on our end.;
+                    </td>;
+                  </tr>;
+                </tbody>;
+              </table>;
+
+              <h4 className='text-md font-semibold mt-6 mb-2'>;
+                Error Response Format;
+              </h4>;
+              <p className='text-zinc-400 mb-2'>;
+                Error responses include a consistent JSON object with the;
+                following format:;
+              </p>;
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               
               <h4 className="text-md font-semibold mt-6 mb-2">Error Response Format</h4>
               <p className="text-zinc-400 mb-2">
                 Error responses include a consistent JSON object with the following format:
               </p>
               
+
+
               <CodeBlock
-                code={`{
+                code = {`{
   "error": {
     "code": "invalid_request"
     "message": "The request was invalid"
     "details": [
       {
-        "field": "project_name"
-        "message": "Project name is required"
-        "field": "project_name"
-        "message": "Project name is required"
       ,}
     ]
   }
@@ -3030,6 +3466,7 @@ app && app.post('/webhook', express && express.raw({type: 'application/json'}), 
                 The Zion API implements rate limiting to protect our
                 infrastructure and ensure fair usage. Rate limits are applied on
                 a per-API key basis. If you exceed the rate limits, you will
+<<<<<<< HEAD
                 language='json'
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                 showLineNumbers={true}              />;
@@ -3325,6 +3762,8 @@ app.post ('/webhook', express.raw ({type: 'application / json'}), (req, res) => 
                 <code className='bg-zinc-800 px-1 py-0 && 0.5 rounded'>;
                   429 Too Many Requests;
                 </code>{' '}
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 receive a{' '}
                 <code className='bg-zinc-800 px-1 py-0.5 rounded'>
                   429 Too Many Requests
@@ -3353,10 +3792,6 @@ app.post ('/webhook', express.raw ({type: 'application / json'}), (req, res) => 
                   </code>
                   : Unix timestamp when the rate limit resets
                 </li>
-        "field": "project_name",
-        "message": "Project name is required"
-        "field": "project_name",
-        "message": "Project name is required"
 ;
   // Process the webhook event;
   const event = JSON.parse(payload),;
@@ -3512,11 +3947,15 @@ app.post ('/webhook', express.raw ({type: 'application / json'}), (req, res) => 
       </CardContent>
     </Card>
   )
+<<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
 // Helper component for API endpoint documentation
 unction EndpointSection({
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 }
 
@@ -3534,6 +3973,7 @@ function EndpointSection({
   codeExamples
   responseExamples
 }: EndpointSectionProps) {
+<<<<<<< HEAD
   const [activeTab, setActiveTab] = useState('curl')
 
   return (
@@ -3592,6 +4032,8 @@ function EndpointSection({
                 Rate limits are applied on a per-API key basis. If you exceed the rate limits, you will receive;
                 a <code className="bg-zinc-800 px-1 py-0.5 rounded">429 Too Many Requests</code> response.;
                 response.;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               </p>;
               <p className='text-zinc-400 mb-2'>;
                 Rate limit information is included in the response headers:;
@@ -3621,6 +4063,7 @@ function EndpointSection({
   }
 }`}
                 language='json';
+<<<<<<< HEAD
               />;
               <h4 className='text - md font - semibold mt - 6 mb - 2'>Rate Limiting</h4>;
               <p className='text - zinc - 400 mb - 4'>;
@@ -4076,792 +4519,53 @@ print(data)`;
 }
 
 export function ApiDocumentation() {
+=======
+  const [activeTab, setActiveTab] = useState('curl')
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
-    <Card className=&quot;bg-zinc-900 border-zinc-800 text-white&quot;>
-
-import CodeBlock from "./CodeBlock";
-
-interface EndpointParam {name: string,
-  type: string,
-  description: string,
-  required?: boolean}
-
-interface EndpointSectionProps {method: string,
-  endpoint: string,
-  description: string,
-  note?: string;
-  params?: EndpointParam[];
-  codeExamples?: Record<string, string>;
-  responseExamples?: { success: string}
-}
-
-export function ApiDocumentation() {return (
-    <Card className="bg-zinc-900 border-zinc-800 text-white">
-      <CardHeader>
-        <CardTitle className=&quot;text-xl flex items-center&quot;>
-          <BookOpen className=&quot;mr-2&quot; size={20} /> API Documentation
-        </CardTitle>
-        <CardDescription className=&quot;text-zinc-400&quot;>
-          Reference documentation for integrating with the Zion Marketplace API.
-        </CardDescription>
-      </CardHeader>
-      
-      <CardContent>
-        <Alert className=&quot;bg-blue-900/30 border-blue-800 mb-6&quot;>
-          <Terminal className=&quot;h-4 w-4&quot; />
-          <AlertDescription>
-            Make sure to include your API key in all requests as a Bearer token in the Authorization header.
-          </AlertDescription>
-        </Alert>
-
-        <Tabs defaultValue=&quot;jobs&quot; className=&quot;space-y-4&quot;>
-          <TabsList className=&quot;bg-zinc-800 border-zinc-700&quot;>
-            <TabsTrigger value=&quot;jobs&quot;>Jobs</TabsTrigger>
-            <TabsTrigger value=&quot;talent&quot;>Talent</TabsTrigger>
-            <TabsTrigger value=&quot;quotes&quot;>Quotes</TabsTrigger>
-            <TabsTrigger value=&quot;webhooks&quot;>Webhooks</TabsTrigger>
-            <TabsTrigger value=&quot;errors&quot;>Errors</TabsTrigger>
-          </TabsList>
-          
-          <TabsContent value=&quot;jobs&quot; className=&quot;space-y-6&quot;>
-            <EndpointSection,
-method=&quot;GET&quot;
-              endpoint=&quot;/api/jobs&quot;
-              description=&quot;List all available jobs with optional filtering.&quot;
-              note="&quot;
-              params={[
-                { name: &quot;page&quot;, type: &quot;integer&quot;, description: &quot;Page number for pagination (default: 1)&quot },
-                { name: &quot;limit&quot;, type: &quot;integer&quot;, description: &quot;Number of results per page (default: 20, max: 100)&quot },
-                { name: &quot;category&quot;, type: &quot;string&quot;, description: &quot;Filter by job category&quot },
-                { name: &quot;skills&quot;, type: &quot;string[]&quot;, description: &quot;Filter by required skills (comma-separated)&quot },
-                { name: &quot;status&quot;, type: &quot;string&quot;, description: &quot;Filter by job status (new, active, closed)&quot }
-              ]}
-              codeExamples={{
-                curl: `curl -X GET &quot;https://api.ziontechgroup.com/v1/jobs?limit=10&category=development&quot; \\
-  -H &quot;Authorization: Bearer YOURAPI_KEY&quot; \\
-  -H &quot;Content-Type: application/json&quot;`,
-                javascript: `const response = await fetch('https://api.ziontechgroup.com/v1/jobs?limit=10&category=development', {
-  method: 'GET',
-  headers: {
-    'Authorization': 'Bearer YOURAPI_KEYContent-Type': 'application/json'
-  }
-}),
-
-const data = await response.json(),
-logInfo(data),`,
-                python: `import requests,
-headers = {
-    'Authorization': 'Bearer YOURAPI_KEYContent-Type': 'application/json'
-}
-
-response = requests.get(
-    'https: //api.ziontechgroup.com/v1/jobs',
-    params={'limit': 10, 'category': 'development'},    headers=headers
-)
-
-data = response.json()
-print(data)`
-              }}
-              responseExamples={_{
-                success: `{
-  &quot;data&quot;: [
-    {
-      &quot;id&quot;: &quot;jobabc123&quot;,
-      &quot;title&quot;: &quot;Senior React Developer&quot;,
-      &quot;description&quot;: &quot;We need an experienced React developer...&quot;,
-      &quot;category&quot;: &quot;development&quot;,
-      &quot;skills&quot;: [&quot;react&quot;, &quot;typescript&quot;, &quot;node.js&quot],
-      &quot;budget&quot;: {
-        &quot;min&quot;: 5000,
-        &quot;max&quot;: 10000,
-        &quot;currency&quot;: &quot;USD&quot
-      },
-      &quot;status&quot;: &quot;active&quot;,
-      &quot;clientid&quot;: &quot;userxyz789&quot;,
-      &quot;createdat&quot;: &quot;2025-05-15T10:30:00Z&quot
-    },
-    // More jobs...
-  ],
-  &quot;meta&quot;: {
-    &quot;total&quot;: 42,
-    &quot;page&quot;: 1,
-    &quot;limit&quot;: 10
-  }}`
-              }}
-            />
-            
-            <EndpointSection,
-method=&quot;GET&quot;
-              endpoint=&quot;/api/jobs/:id&quot;
-              description=&quot;Get detailed information about a specific job.&quot;
-              note="&quot;
-              params={[
-                { name: &quot;id&quot;, type: &quot;string&quot;, description: &quot;The job ID&quot;, required: true }
-              ]}
-              codeExamples={{
-                curl: `curl -X GET "https://api.ziontechgroup.com/v1/jobs/jobabc123" \\
-  -H "Authorization: Bearer YOURAPI_KEY" \\
-  -H "Content-Type: application/json"`,
-                javascript: `const jobId = 'jobabc123',const response = await fetch(\`https://api.ziontechgroup.com/v1/jobs/\${jobId}\`, {
-  method: 'GET',
-  headers: {
-    'Authorization': 'Bearer YOURAPI_KEYContent-Type': 'application/json'
-  }
-}),
-
-const data = await response.json(),
-logInfo(data),`,
-                python: `import requests,
-headers = {
-    'Authorization': 'Bearer YOURAPI_KEYContent-Type': 'application/json'
-}
-              method="GET"
-              endpoint="/api/jobs/:id"
-              description="Get detailed information about a specific job."
-              note=""
-              params={_[
-                { name: "id", type: "string", description: "The job ID", required: true}
-              ]}
-              codeExamples={_{
-                curl: `curl -X GET "https://api.ziontechgroup.com/v1/jobs/jobabc123" \\
-  -H "Authorization: Bearer YOURAPI_KEY" \\
-  -H "Content-Type: application/json"`, javascript: `const jobId = 'jobabc123';
-const response = await fetch(\`https://api.ziontechgroup.com/v1/jobs/\${jobId}\`, {method: 'GET', headers: {
-    'Authorization': 'Bearer YOURAPI_KEY', _'Content-Type': 'application/json'}
-});
-
-const data = await response.json();
-logInfo(data);`,
-                python: `import requests,
-headers = {_'Authorization': 'Bearer YOURAPI_KEY', _'Content-Type': 'application/json'}
-
-jobid = 'jobabc123'
-response = requests.get(
-    f'https://api.ziontechgroup.com/v1/jobs/{job_id}',
-    headers=headers
-)
-
-data = response.json()
-print(data)`
-              }}
-              responseExamples={_{
-                success: `{
-  &quot;data&quot;: {
-    &quot;id&quot;: &quot;jobabc123&quot;,
-    &quot;title&quot;: &quot;Senior React Developer&quot;,
-    &quot;description&quot;: &quot;We need an experienced React developer...&quot;,
-    &quot;category&quot;: &quot;development&quot;,
-    &quot;skills&quot;: [&quot;react&quot;, &quot;typescript&quot;, &quot;node.js&quot],
-    &quot;budget&quot;: {
-      &quot;min&quot;: 5000,
-      &quot;max&quot;: 10000,
-      &quot;currency&quot;: &quot;USD&quot
-    },
-    &quot;status&quot;: &quot;active&quot;,
-    &quot;clientid&quot;: &quot;userxyz789&quot;,
-    &quot;createdat&quot;: &quot;2025-05-15T10:30:00Z&quot;,
-    &quot;deadline&quot;: &quot;2025-06-30T23:59:59Z&quot;,
-    &quot;applicationcount&quot;: 12  }
-}`
-              }}
-            />
-            
-            <EndpointSection,
-method=&quot;POST&quot;
-              endpoint=&quot;/api/jobs&quot;
-              description=&quot;Create a new job listing.&quot;
-              note=&quot;Requires jobs:write scope&quot;
-              params={[
-                { name: &quot;title&quot;, type: &quot;string&quot;, description: &quot;Job title&quot;, required: true },
-                { name: &quot;description&quot;, type: &quot;string&quot;, description: &quot;Detailed job description&quot;, required: true },
-                { name: &quot;category&quot;, type: &quot;string&quot;, description: &quot;Job category&quot;, required: true },
-                { name: &quot;skills&quot;, type: &quot;string[]&quot;, description: &quot;Required skills&quot;, required: true },
-                { name: &quot;budget.min&quot;, type: &quot;number&quot;, description: &quot;Minimum budget&quot },
-                { name: &quot;budget.max&quot;, type: &quot;number&quot;, description: &quot;Maximum budget&quot },
-                { name: &quot;budget.currency&quot;, type: &quot;string&quot;, description: &quot;Currency code (default: USD)&quot },
-                { name: &quot;deadline&quot;, type: &quot;string&quot;, description: &quot;Job deadline (ISO date string)&quot }
-              ]}
-              codeExamples={{
-                curl: `curl -X POST &quot;https://api.ziontechgroup.com/v1/jobs&quot; \\
-  -H &quot;Authorization: Bearer YOURAPI_KEY&quot; \\
-  -H &quot;Content-Type: application/json&quot; \\
-  -d '{
-    &quot;title&quot;: &quot;Senior React Developer&quot;,
-    &quot;description&quot;: &quot;We need an experienced React developer...&quot;,
-    &quot;category&quot;: &quot;development&quot;,
-    &quot;skills&quot;: [&quot;react&quot;, &quot;typescript&quot;, &quot;node.js&quot],
-    &quot;budget&quot;: {
-      &quot;min&quot;: 5000,
-      &quot;max&quot;: 10000,
-      &quot;currency&quot;: &quot;USD&quot
-    },
-    &quot;deadline&quot;: &quot;2025-06-30T23:59:59Z&quot
-  }'`,
-                javascript: `const response = await fetch('https://api.ziontechgroup.com/v1/jobs', {
-  method: 'POST',
-  headers: {
-    'Authorization': 'Bearer YOURAPI_KEYContent-Type': 'application/json'
-  },
-  body: JSON.stringify({
-    title: 'Senior React Developer',
-    description: 'We need an experienced React developer...',
-    category: 'development',
-    skills: ['reacttypescriptnode.js'],
-    budget: {
-      min: 5000,
-      max: 10000,
-      currency: 'USD'
-    },    deadline: '2025-06-30T23:59:59Z'
-  })
-}),
-
-const data = await response.json(),
-logInfo(data),`,
-                python: `import requests,
-import json,
-headers = {
-    'Authorization': 'Bearer YOURAPI_KEYContent-Type': 'application/json'
-}
-
-payload = {
-    'title': 'Senior React Developerdescription': 'We need an experienced React developer...category': 'developmentskills': ['reacttypescriptnode.js'],
-    'budget': {
-        'min': 5000,
-        'max': 10000,
-        'currency': 'USD'
-    },    'deadline': '2025-06-30T23:59:59Z'
-}
-
-response = requests.post(
-    'https: //api.ziontechgroup.com/v1/jobs',
-    headers=headers,
-    data=json.dumps(payload)
-)
-
-data = response.json()
-print(data)`
-              }}
-              responseExamples={_{
-                success: `{
-  &quot;data&quot;: {
-    &quot;id&quot;: &quot;jobdef456&quot;,
-    &quot;title&quot;: &quot;Senior React Developer&quot;,
-    &quot;description&quot;: &quot;We need an experienced React developer...&quot;,
-    &quot;category&quot;: &quot;development&quot;,
-    &quot;skills&quot;: [&quot;react&quot;, &quot;typescript&quot;, &quot;node.js&quot],
-    &quot;budget&quot;: {
-      &quot;min&quot;: 5000,
-      &quot;max&quot;: 10000,
-      &quot;currency&quot;: &quot;USD&quot
-    },
-    &quot;status&quot;: &quot;new&quot;,
-    &quot;clientid&quot;: &quot;userxyz789&quot;,
-    &quot;createdat&quot;: &quot;2025-05-16T14:22:10Z&quot;,
-    &quot;deadline&quot;: &quot;2025-06-30T23:59:59Z&quot  }
-}`
-              }}
-            />
-          </TabsContent>
-          
-          <TabsContent value=&quot;talent&quot; className=&quot;space-y-6&quot;>
-            <EndpointSection,
-method=&quot;GET&quot;
-              endpoint=&quot;/api/talent&quot;
-              description=&quot;List talent profiles with optional filtering.&quot;
-              note="&quot;
-              params={[
-                { name: &quot;page&quot;, type: &quot;integer&quot;, description: &quot;Page number for pagination (default: 1)&quot },
-                { name: &quot;limit&quot;, type: &quot;integer&quot;, description: &quot;Number of results per page (default: 20, max: 100)&quot },
-                { name: &quot;skills&quot;, type: &quot;string[]&quot;, description: &quot;Filter by skills (comma-separated)&quot },
-                { name: &quot;availability&quot;, type: &quot;string&quot;, description: &quot;Filter by availability status&quot }
-              ]}
-              codeExamples={{
-                curl: `curl -X GET &quot;https://api.ziontechgroup.com/v1/talent?skills=react,typescript&quot; \\
-  -H &quot;Authorization: Bearer YOURAPI_KEY&quot; \\
-  -H &quot;Content-Type: application/json&quot;`,
-                javascript: `const response = await fetch('https://api.ziontechgroup.com/v1/talent?skills=react,typescript', {
-  method: 'GET',
-  headers: {
-    'Authorization': 'Bearer YOURAPI_KEYContent-Type': 'application/json'
-  }
-}),
-
-const data = await response.json(),
-logInfo(data),`,
-                python: `import requests,
-headers = {
-    'Authorization': 'Bearer YOURAPI_KEYContent-Type': 'application/json'
-}
-
-response = requests.get(
-    'https: //api.ziontechgroup.com/v1/talent',
-    params={'skills': 'react,typescript'},    headers=headers
-)
-
-data = response.json()
-print(data)`
-              }}
-              responseExamples={_{
-                success: `{
-  &quot;data&quot;: [
-    {
-      &quot;id&quot;: &quot;talentabc123&quot;,
-      &quot;displayname&quot;: &quot;Jane Smith&quot;,
-      &quot;headline&quot;: &quot;Senior Frontend Developer&quot;,
-      &quot;skills&quot;: [&quot;react&quot;, &quot;typescript&quot;, &quot;javascript&quot],
-      &quot;availability&quot;: &quot;available&quot;,
-      &quot;averagerating&quot;: 4.8,
-      &quot;ratingcount&quot;: 15
-    },
-    // More talent profiles...
-  ],
-  &quot;meta&quot;: {
-    &quot;total&quot;: 28,
-    &quot;page&quot;: 1,
-    &quot;limit&quot;: 20
-  }}`
-              }}
-            />
-            
-            <EndpointSection,
-method=&quot;GET&quot;
-              endpoint=&quot;/api/talent/:id&quot;
-              description=&quot;Get detailed information about a specific talent profile.&quot;
-              note="&quot;
-              params={[
-                { name: &quot;id&quot;, type: &quot;string&quot;, description: &quot;The talent ID&quot;, required: true }
-              ]}
-              codeExamples={{
-                curl: `curl -X GET "https://api.ziontechgroup.com/v1/talent/talentabc123" \\
-  -H "Authorization: Bearer YOURAPI_KEY" \\
-  -H "Content-Type: application/json"`,
-                javascript: `const talentId = 'talentabc123',const response = await fetch(\`https://api.ziontechgroup.com/v1/talent/\${talentId}\`, {
-  method: 'GET',
-  headers: {
-    'Authorization': 'Bearer YOURAPI_KEYContent-Type': 'application/json'
-  }
-}),
-
-const data = await response.json(),
-logInfo(data),`,
-                python: `import requests,
-headers = {
-    'Authorization': 'Bearer YOURAPI_KEYContent-Type': 'application/json'
-}
-              method="GET"
-              endpoint="/api/talent/:id"
-              description="Get detailed information about a specific talent profile."
-              note=""
-              params={_[
-                { name: "id", type: "string", description: "The talent ID", required: true}
-              ]}
-              codeExamples={_{
-                curl: `curl -X GET "https://api.ziontechgroup.com/v1/talent/talentabc123" \\
-  -H "Authorization: Bearer YOURAPI_KEY" \\
-  -H "Content-Type: application/json"`, javascript: `const talentId = 'talentabc123';
-const response = await fetch(\`https://api.ziontechgroup.com/v1/talent/\${talentId}\`, {method: 'GET', headers: {
-    'Authorization': 'Bearer YOURAPI_KEY', _'Content-Type': 'application/json'}
-});
-
-const data = await response.json();
-logInfo(data);`,
-                python: `import requests,
-headers = {_'Authorization': 'Bearer YOURAPI_KEY', _'Content-Type': 'application/json'}
-
-talentid = 'talentabc123'
-response = requests.get(
-    f'https://api.ziontechgroup.com/v1/talent/{talent_id}',
-    headers=headers
-)
-
-data = response.json()
-print(data)`
-              }}
-              responseExamples={_{
-                success: `{
-  &quot;data&quot;: {
-    &quot;id&quot;: &quot;talentabc123&quot;,
-    &quot;displayname&quot;: &quot;Jane Smith&quot;,
-    &quot;headline&quot;: &quot;Senior Frontend Developer&quot;,
-    &quot;bio&quot;: &quot;10+ years of experience in frontend development...&quot;,
-    &quot;skills&quot;: [&quot;react&quot;, &quot;typescript&quot;, &quot;javascript&quot;, &quot;css&quot;, &quot;html&quot],
-    &quot;availability&quot;: &quot;available&quot;,
-    &quot;averagerating&quot;: 4.8,
-    &quot;ratingcount&quot;: 15,
-    &quot;portfolio&quot;: [
-      {
-        &quot;id&quot;: &quot;proj123&quot;,
-        &quot;title&quot;: &quot;E-commerce Platform&quot;,
-        &quot;description&quot;: &quot;Built a modern e-commerce platform using React...&quot;,
-        &quot;technologies&quot;: [&quot;react&quot;, &quot;redux&quot;, &quot;node.js&quot],
-        &quot;imageurl&quot;: &quot;https://example.com/portfolio/123.jpg&quot
-      }
-    ],
-    &quot;certifications&quot;: [
-      {
-        &quot;name&quot;: &quot;AWS Certified Developer&quot;,
-        &quot;issuingorganization&quot;: &quot;Amazon Web Services&quot;,
-        &quot;issuedate&quot;: &quot;2024-01-15&quot
-      }    ]
-  }
-}`;
-              }}
-            />;
-          </TabsContent>;
-          ;
-          <TabsContent value="quotes" className="space-y-6">;
-            <EndpointSection;
-              method="POST";
-              endpoint="/api/quotes";
-              description="Create a quote request for a talent.";
-              note="Requires quotes:write scope";
-              params={[;
-                { name:"talent_id", type:"string", description:"ID of the talent to request a quote from", required:true },;
-                { name:"project_name", type:"string", description:"Name of the project", required:true },;
-                { name:"project_summary", type:"string", description:"Brief summary of the project", required:true },;
-                { name:"project_description", type:"string", description:"Detailed project description" },;
-                { name:"timeline", type:"string", description:"Expected timeline", required:true },;
-                { name:"budget_min", type:"number", description:"Minimum budget" },;
-                { name:"budget_max", type:"number", description:"Maximum budget" },;
-                { name:"requester_name", type:"string", description:"Name of the requester", required:true },;
-                { name:"requester_email", type:"string", description:"Email of the requester", required:true }
-              ]}
-              codeExamples={{;
-                curl:`curl -X POST "https://api.ziontechgroup.com/v1/quotes" \\;
-  -H "Authorization:Bearer YOUR_API_KEY" \\;
-  -H "Content-Type:application/json" \\;
-  -d '{;
-    "talent_id":"talent_abc123",;
-    "project_name":"E-commerce Website Redesign",;
-    "project_summary":"Redesign our outdated e-commerce website with modern UI",;
-    "project_description":"Our current website is 5 years old and needs a complete overhaul...",;
-    "timeline":"2-3 months",;
-    "budget_min":8000,;
-    "budget_max":12000,;
-    "requester_name":"John Doe",;
-    "requester_email":"john@example.com";
-  }'`,;
-                javascript:`const response = await fetch('https://api.ziontechgroup.com/v1/quotes', {;
-  method:'POST',;
-  headers:{;
-    'Authorization':'Bearer YOUR_API_KEYContent-Type':'application/json';
-  },;
-  body:JSON.stringify({;
-    talent_id:'talent_abc123',;
-    project_name:'E-commerce Website Redesign',;
-    project_summary:'Redesign our outdated e-commerce website with modern UI',;
-    project_description:'Our current website is 5 years old and needs a complete overhaul...',;
-    timeline:'2-3 months',;
-    budget_min:8000,;
-    budget_max:12000,;
-    requester_name:'John Doe',;
-    requester_email:'john@example.com';
-  });
-}),;
-;
-const data = await response.json(),;
-logInfo(data),`,;
-                python:`import requests;
-import json;
-;
-headers = {;
-    'Authorization':'Bearer YOUR_API_KEYContent-Type':'application/json';
-}
-;
-payload = {;
-    'talent_id':'talent_abc123project_name':'E-commerce Website Redesignproject_summary':'Redesign our outdated e-commerce website with modern UIproject_description':'Our current website is 5 years old and needs a complete overhaul...timeline':'2-3 monthsbudget_min':8000,;
-    'budget_max':12000,;
-    'requester_name':'John Doerequester_email':'john@example.com';
-}
-;
-response = requests.post(;
-    'https://api.ziontechgroup.com/v1/quotes',;
-    headers=headers,;
-    data=json.dumps(payload);
-);
-;
-data = response.json();
-print(data)`;
-              }}
-              responseExamples={{;
-                success:`{;
-  "data":{;
-    "id":"quote_def456",;
-    "talent_id":"talent_abc123",;
-    "requester_id":"user_xyz789",;
-    "project_name":"E-commerce Website Redesign",;
-    "project_summary":"Redesign our outdated e-commerce website with modern UI",;
-    "project_description":"Our current website is 5 years old and needs a complete overhaul...",;
-    "timeline":"2-3 months",;
-    "budget_min":8000,;
-    "budget_max":12000,;
-    "budget_display":"$8,000 - $12,000",;
-    "requester_name":"John Doe",;
-    "requester_email":"john@example.com",;
-    "status":"new",;
-    "created_at":"2025-05-16T14:30:15Z";
-  }
-}`;
-              }}
-            />;
-            ;
-            <EndpointSection;
-              method="GET";
-              endpoint="/api/quotes";
-              description="List quote requests that you've created.";
-              note="";
-              params={[;
-                { name:"page", type:"integer", description:"Page number for pagination (default:1)" },;
-                { name:"limit", type:"integer", description:"Number of results per page (default:20, max:100)" },;
-                { name:"status", type:"string", description:"Filter by status (new, viewed, replied, archived)" }
-              ]}
-              codeExamples={{;
-                curl:`curl -X GET "https://api.ziontechgroup.com/v1/quotes" \\;
-  -H "Authorization:Bearer YOUR_API_KEY" \\;
-  -H "Content-Type:application/json"`,;
-                javascript:`const response = await fetch('https://api.ziontechgroup.com/v1/quotes', {;
-  method:'GET',;
-  headers:{;
-    'Authorization':'Bearer YOUR_API_KEYContent-Type':'application/json';
-  }
-}),;
-;
-const data = await response.json(),;
-logInfo(data),`,;
-                python:`import requests;
-;
-headers = {;
-    'Authorization':'Bearer YOUR_API_KEYContent-Type':'application/json';
-}
-;
-response = requests.get(;
-    'https://api.ziontechgroup.com/v1/quotes',;
-    headers=headers;
-);
-;
-data = response.json();
-print(data)`;
-              }}
-              responseExamples={{;
-                success:`{;
-  "data":[;
-    {;
-      "id":"quote_def456",;
-      "talent_id":"talent_abc123",;
-      "project_name":"E-commerce Website Redesign",;
-      "project_summary":"Redesign our outdated e-commerce website with modern UI",;
-      "budget_display":"$8,000 - $12,000",;
-      "status":"new",;
-      "created_at":"2025-05-16T14:30:15Z",;
-      "viewed_at":null,;
-      "replied_at":null;
-    },;
-    // More quotes...;
-  ],;
-  "meta":{;
-    "total":5,;
-    "page":1,;
-    "limit":20;
-  }
-}`;
-              }}
-            />;
-          </TabsContent>;
-          ;
-          <TabsContent value="webhooks" className="space-y-6">;
-            <div className="prose prose-invert max-w-none">;
-              <h3 className="text-lg font-semibold mb-2">Webhook Events</h3>;
-              <p className="text-zinc-400 mb-4">;
-                The Zion API can send webhook notifications when certain events occur in your account.;
-                You can configure webhooks in the Webhooks tab of the Developer Dashboard.;
-              </p>;
-              ;
-              <h4 className="text-md font-semibold mt-6 mb-2">Authentication</h4>;
-              <p className="text-zinc-400 mb-4">;
-                When you create a webhook, you can optionally provide a secret key.;
-                If a secret is provided, each webhook request will include a signature in the;
-                <code className="bg-zinc-800 px-1 py-0.5 rounded">X-Zion-Signature</code> header.;
-                This signature is an HMAC SHA-256 hash of the request body using your webhook secret as the key.;
-              </p>;
-              ;
-              <CodeBlock;
-                code={`import crypto from 'crypto',;
-;
-// Function to verify webhook signature;
-function verifyWebhookSignature(payload, signature, secret) {;
-  const hmac = crypto.createHmac('sha256', secret),;
-  const expectedSignature = hmac.update(payload).digest('hex'),;
-  return crypto.timingSafeEqual(;
-    Buffer.from(signature),;
-    Buffer.from(expectedSignature);
-  ),;
-}
-;
-// Example usage in Express.js;
-app.post('/webhook', express.raw({type:'application/json'}), (req, res) => {;
-  const signature = req.headers['x-zion-signature'],;
-  const payload = req.body.toString(),;
-  const webhookSecret = process.env.WEBHOOK_SECRET,;
-  ;
-  if (!verifyWebhookSignature(payload, signature, webhookSecret)) {;
-    return res.status(401).send('Invalid signature'),;
-  }
-  ;
-  // Process the webhook event;
-  const event = JSON.parse(payload),;
-  logInfo('Received valid webhook:', { data:event }),;
-  ;
-  // Respond to acknowledge receipt;
-  res.status(200).send('Webhook received'),;
-}),`}
-                language="javascript";
-                showLineNumbers={true}
-              />;
-              ;
-              <h4 className="text-md font-semibold mt-6 mb-2">Event Types</h4>;
-              <table className="w-full border-collapse mt-2">;
-                <thead>;
-                  <tr className="border-b border-zinc-800">;
-                    <th className="py-2 px-4 text-left">Event Type</th>;
-                    <th className="py-2 px-4 text-left">Description</th>;
-                  </tr>;
-                </thead>;
-                <tbody>;
-                  <tr className="border-b border-zinc-800">;
-                    <td className="py-2 px-4 font-mono text-sm">new_application</td>;
-                    <td className="py-2 px-4">When a talent applies to one of your jobs</td>;
-                  </tr>;
-                  <tr className="border-b border-zinc-800">;
-                    <td className="py-2 px-4 font-mono text-sm">quote_received</td>;
-                    <td className="py-2 px-4">When you receive a quote from talent</td>;
-                  </tr>;
-                  <tr className="border-b border-zinc-800">;
-                    <td className="py-2 px-4 font-mono text-sm">milestone_approved</td>;
-                    <td className="py-2 px-4">When a project milestone is approved</td>;
-                  </tr>;
-                  <tr className="border-b border-zinc-800">;
-                    <td className="py-2 px-4 font-mono text-sm">talent_hired</td>;
-                    <td className="py-2 px-4">When you hire talent for a project</td>;
-                  </tr>;
-                </tbody>;
-              </table>;
-              ;
-              <h4 className="text-md font-semibold mt-6 mb-2">Sample Payloads</h4>;
-              <p className="text-zinc-400 mb-2">;
-                Here's an example of a <code className="bg-zinc-800 px-1 py-0.5 rounded">new_application</code> webhook payload:;
-              </p>;
-              ;
-              <CodeBlock;
-                code={`{;
-  "event_type":"new_application",;
-  "event_id":"evt_abc123def456",;
-  "timestamp":"2025-05-16T15:30:00Z",;
-  "data":{;
-    "application_id":"app_123456",;
-    "job_id":"job_abc123",;
-    "talent_id":"talent_xyz789",;
-    "applied_at":"2025-05-16T15:28:30Z",;
-    "status":"new",;
-    "match_score":85;
-  }
-}`}
-                language="json";
-                showLineNumbers={true}
-              />;
-            </div>;
-          </TabsContent>;
-          ;
-          <TabsContent value="errors" className="space-y-6">;
-            <div className="prose prose-invert max-w-none">;
-              <h3 className="text-lg font-semibold mb-2">Error Responses</h3>;
-              <p className="text-zinc-400 mb-4">;
-                The Zion API uses conventional HTTP status codes to indicate the success or failure of an API request.;
-                In general, codes in the 2xx range indicate success, codes in the 4xx range indicate an error with the;
-                provided information, and codes in the 5xx range indicate an error with our servers.;
-              </p>;
-              ;
-              <table className="w-full border-collapse mt-4">;
-                <thead>;
-                  <tr className="border-b border-zinc-800">;
-                    <th className="py-2 px-4 text-left">Status Code</th>;
-                    <th className="py-2 px-4 text-left">Description</th>;
-                  </tr>;
-                </thead>;
-                <tbody>;
-                  <tr className="border-b border-zinc-800">;
-                    <td className="py-2 px-4"><code className="bg-zinc-800 px-1 py-0.5 rounded">200 OK</code></td>;
-                    <td className="py-2 px-4">The request was successful.</td>;
-                  </tr>;
-                  <tr className="border-b border-zinc-800">;
-                    <td className="py-2 px-4"><code className="bg-zinc-800 px-1 py-0.5 rounded">201 Created</code></td>;
-                    <td className="py-2 px-4">The resource was successfully created.</td>;
-                  </tr>;
-                  <tr className="border-b border-zinc-800">;
-                    <td className="py-2 px-4"><code className="bg-zinc-800 px-1 py-0.5 rounded">400 Bad Request</code></td>;
-                    <td className="py-2 px-4">The request was invalid or cannot be otherwise served.</td>;
-                  </tr>;
-                  <tr className="border-b border-zinc-800">;
-                    <td className="py-2 px-4"><code className="bg-zinc-800 px-1 py-0.5 rounded">401 Unauthorized</code></td>;
-                    <td className="py-2 px-4">Authentication credentials were missing or invalid.</td>;
-                  </tr>;
-                  <tr className="border-b border-zinc-800">;
-                    <td className="py-2 px-4"><code className="bg-zinc-800 px-1 py-0.5 rounded">403 Forbidden</code></td>;
-                    <td className="py-2 px-4">The request is understood, but it has been refused or access is not allowed.</td>;
-                  </tr>;
-                  <tr className="border-b border-zinc-800">;
-                    <td className="py-2 px-4"><code className="bg-zinc-800 px-1 py-0.5 rounded">404 Not Found</code></td>;
-                    <td className="py-2 px-4">The requested resource does not exist.</td>;
-                  </tr>;
-                  <tr className="border-b border-zinc-800">;
-                    <td className="py-2 px-4"><code className="bg-zinc-800 px-1 py-0.5 rounded">422 Unprocessable Entity</code></td>;
-                    <td className="py-2 px-4">The request was well-formed but was unable to be followed due to semantic errors.</td>;
-                  </tr>;
-                  <tr className="border-b border-zinc-800">;
-                    <td className="py-2 px-4"><code className="bg-zinc-800 px-1 py-0.5 rounded">429 Too Many Requests</code></td>;
-                    <td className="py-2 px-4">The request was rejected due to rate limiting.</td>;
-                  </tr>;
-                  <tr className="border-b border-zinc-800">;
-                    <td className="py-2 px-4"><code className="bg-zinc-800 px-1 py-0.5 rounded">500 Internal Server Error</code></td>;
-                    <td className="py-2 px-4">Something went wrong on our end.</td>;
-                  </tr>;
-                </tbody>;
-              </table>;
-              ;
-              <h4 className="text-md font-semibold mt-6 mb-2">Error Response Format</h4>;
-              <p className="text-zinc-400 mb-2">;
-                Error responses include a consistent JSON object with the following format:;
-              </p>;
-              ;
-              <CodeBlock;
-                code={`{;
-  "error":{;
-    "code":"invalid_request",;
-    "message":"The request was invalid",;
-    "details":[;
-      {;
-        "field":"project_name",;
-        "message":"Project name is required";
-      }
-    ];
-  }
-}`}
+    <div className='border border-zinc-800 rounded-md'>
+      <div className='p-4'>
+        <div className='flex items-center'>
+          <Badge
+            variant='outline'
+            className={
+              method === 'GET'
+                ? 'border-green-500 text-green-400 font-mono'
+                : method === 'POST'
+                  ? 'border-blue-500 text-blue-400 font-mono'
+                  : method === 'PUT'
+                    ? 'border-yellow-500 text-yellow-400 font-mono'
+                    : 'border-red-500 text-red-400 font-mono'
+            }          >
+            {method}
+          </Badge>
+          <span className='ml-2 font-mono text-sm text-white'>{endpoint}</span>
+          {note && (
+            <Badge className='ml-auto bg-amber-800 text-amber-200 hover:bg-amber-800'>
+  const [activeTab, setActiveTab] = useState("curl"),
+  
+  return (
+    <div className="border border-zinc-800 rounded-md">
+      <div className="p-4">
+        <div className="flex items-center">
+          <Badge 
+            variant="outline" 
+            className={
+              method === 'GET' 
+                ? "border-green-500 text-green-400 font-mono" 
+                : method === 'POST' 
+                ? "border-blue-500 text-blue-400 font-mono"
+                : method === 'PUT'
+                ? "border-yellow-500 text-yellow-400 font-mono"
+                : "border-red-500 text-red-400 font-mono"
                 language="json";
               />;
-              ;
               <h4 className="text-md font-semibold mt-6 mb-2">Rate Limiting</h4>;
               <p className="text-zinc-400 mb-4">;
                 The Zion API implements rate limiting to protect our infrastructure and ensure fair usage.;
-                Rate limits are applied on a per-API key basis. If you exceed the rate limits, you will receive ;
+                Rate limits are applied on a per-API key basis. If you exceed the rate limits, you will receive;
                 a <code className="bg-zinc-800 px-1 py-0.5 rounded">429 Too Many Requests</code> response.;
-              </p>;
-              ;
-              <p className="text-zinc-400 mb-2">;
-                Rate limit information is included in the response headers:</p>;
-              ;
-              <ul className="list-disc pl-6 space-y-1 text-zinc-400">;
-                <li><code className="bg-zinc-800 px-1 py-0.5 rounded">X-RateLimit-Limit</code>:Number of requests allowed in the time window</li>;
-                <li><code className="bg-zinc-800 px-1 py-0.5 rounded">X-RateLimit-Remaining</code>:Number of requests remaining in the current window</li>;
-                <li><code className="bg-zinc-800 px-1 py-0.5 rounded">X-RateLimit-Reset</code>:Unix timestamp when the rate limit resets</li>;
               </p>;
               <p className="text-zinc-400 mb-2">;
                 Rate limit information is included in the response headers: </p>;
@@ -4910,6 +4614,7 @@ function EndpointSection({;
           <span className="ml-2 font-mono text-sm text-white">{endpoint}</span>;
           {note && (;
             <Badge className="ml-auto bg-amber-800 text-amber-200 hover:bg-amber-800">;
+<<<<<<< HEAD
             </Badge>
           )}
 
@@ -4927,6 +4632,8 @@ function EndpointSection({;
                 <th className='pb-2'>Name</th>
                 <th className='pb-2'>Type</th>
                 <th className='pb-2'>Description</th>
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               {note}
             </Badge>
           )}
@@ -4937,6 +4644,8 @@ function EndpointSection({;
         <p className="mt-2 text-zinc-400">{description}</p>
       </div>
       
+
+
       {params.length > 0 && (
         <div className="border-t border-zinc-800 p-4">
           <h4 className="font-medium mb-2">Parameters</h4>
@@ -4964,15 +4673,6 @@ function EndpointSection({;
                     {param && param.description}
                   </td>;
                 </tr>;
-
-                <tr key={index} className={index < params.length - 1 ? "border-b border-zinc-800" : ""}>
-                  <td className="py-2 font-mono text-sm">
-                    {param.name}
-                    {param.required && <span className="text-red-500">*</span>}
-                  </td>
-                  <td className="py-2 text-sm text-zinc-400">{param.type}</td>
-                  <td className="py-2 text-sm text-zinc-400">{param.description}</td>
-
                 </tr>
 <<<<<<< HEAD
                   onClick={() => setActiveTab(lang)}
@@ -4983,6 +4683,7 @@ function EndpointSection({;
           </table>
         </div>
       )}
+<<<<<<< HEAD
                 </tr>
               ))}
     </Card>;
@@ -5054,6 +4755,8 @@ function EndpointSection({;
           </table>;
         </div>;
       )}
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
       {codeExamples && (
         <div className='border-t border-zinc-800 p-4'>
@@ -5062,6 +4765,7 @@ function EndpointSection({;
             <div className='ml-auto flex border border-zinc-700 rounded-md overflow-hidden'>
               {Object.keys(codeExamples).map(lang => (                <button
 
+<<<<<<< HEAD
       {codeExamples && (;
         <div className='border-t border-zinc-800 p-4'>;
           <div className='flex items-center mb-2'>;
@@ -5199,6 +4903,11 @@ function EndpointSection() {
 }
 ;
                   className={`px-3 py-1 text-xs font-medium ${
+=======
+
+
+                  className={`px-3 py-1 text-xs font-medium ${
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     activeTab === lang 
                       ? "bg-zinc-700 text-white" 
                       : "text-zinc-400 hover:bg-zinc-800"
@@ -5210,13 +4919,17 @@ function EndpointSection() {
               ))}
             </div>
           </div>
+<<<<<<< HEAD
           <CodeBlock
             code={codeExamples[activeTab] |'// Code example not available'}
             language={activeTab === 'curl' ? 'bash' : activeTab}          />
           <CodeBlock 
             code={codeExamples[activeTab] || "// Code example not available"}
             language={activeTab === "curl" ? "bash" : activeTab}
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           />
+
         </div>
       )}
       {responseExamples && (
@@ -5226,24 +4939,6 @@ function EndpointSection() {
       )}
     </div>
   )
-}
-      )}
-      {responseExamples && (
-          <CodeBlock 
-            code={codeExamples[activeTab] || "// Code example not available"}
-            language={activeTab === "curl" ? "bash" : activeTab}
-          />
-        </div>
-      )}
-      
-      {responseExamples && (
-
-;
-}
-}
-}
-}
-}
 }
         <div className="border-t border-zinc-800 p-4">
           <h4 className="font-medium mb-2">Response</h4>
@@ -5257,6 +4952,7 @@ function EndpointSection() {
   );
 }
 ;
+<<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
       ;
       {codeExamples && (;
@@ -5435,3 +5131,5 @@ headers=headers) data = response.json () print (data) ` ;
         </div>
       )}
       {responseExamples && (
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

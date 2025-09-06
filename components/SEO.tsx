@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -76,21 +77,19 @@ import Head from './next / head';
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+import React from './react';
+import Head from './next / head';
+;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface SEOProps {
 =======
 interface SEOProps {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   title?: string;
   description?: string;
-
   keywords?: string;
 }
-
-const SEO: React.FC < SEOProps> = ({
-  title = "Zion Tech Group - Technology Solutions",
-  description = "Leading provider of AI services, IT solutions, and micro SaaS development.",
-  keywords = "AI services, IT solutions, micro SaaS, technology consulting",
-
 }) => {
 
 const SEO: React.FC<SEOProps> = ({;
@@ -100,6 +99,7 @@ const SEO: React.FC<SEOProps> = ({;
 }) => {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
+<<<<<<< HEAD
     <Head>;
       <title>{title}</title>;
       <meta name="description" content={description} />;
@@ -146,6 +146,9 @@ export default SEO;
 }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   image?: string;
   url?: string;
   type?: string;
@@ -159,6 +162,7 @@ export default function SEO({
 }: SEOProps) {
   const router = useRouter();
   const canonicalUrl = url || `https://zion.app${router.asPath}`;
+<<<<<<< HEAD
 
   return (
 <<<<<<< HEAD
@@ -193,10 +197,13 @@ export default SEO;
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 =======
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 export default SEO;
 }
 export default SEO;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     <Head>;
       <title>{title}</title>;
@@ -220,3 +227,5 @@ origin/automation-improvements-final
 }
 export default SEO;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

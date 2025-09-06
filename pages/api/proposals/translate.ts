@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -12,12 +13,38 @@ export default async function handler(
   res: NextApiResponse,
 ) {;
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   if (req.method !== "POST") return res.status($1).json({ $2 });
+  try {
+    const { markdown, targetLanguage = "en" } = req.body |{}
+    if (!markdown) return res.status($1).json({ $2 });
+    const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
+    const completion = await openai.chat.completions.create({
+      model: process.env.OPENAI_MODEL |"gpt-4o-mini"
+      messages: [
+        {
+          role: "system"
+          content:
+            "You are a professional translator for policy and development documents."
+        }
+        {
+          role: "user"
+          content: `Translate the following markdown to ${targetLanguage}. Preserve markdown structure.\n\n${markdown}`
+        }
+      ]
+      temperature: 0.2
+    });
+    const translated = completion.choices?.[0]?.message?.content |markdown;
+    return res.status(200).json({ translated });
 
   try {
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     const { markdown, targetLanguage = "en" } = req && req.body || {};
     if (!markdown) return res && res.status($1).json({ $2 });
     const openai = new OpenAI({ apiKey: process && process.env.OPENAI_API_KEY });
@@ -26,6 +53,7 @@ export default async function handler(
 
 
       messages: [
+<<<<<<< HEAD
 
 =======
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -142,6 +170,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
   } catch (error) {
     console.error("Error:", error);
@@ -162,8 +192,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

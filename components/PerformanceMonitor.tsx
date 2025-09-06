@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -41,6 +42,8 @@ interface PerformanceData {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   memory: {
     used: number
     total: number
@@ -50,6 +53,7 @@ interface PerformanceData {
 interface PerformanceMonitorProps {
   onPerformanceData?: (data: PerformanceData) => void
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -100,12 +104,17 @@ interface PerformanceNavigationTiming extends PerformanceEntry {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface Performance {
   getEntriesByType (type: string): PerformanceEntry[];
   now (): number;
 }
 interface PerformanceEntry {
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 interface PerformanceData {;
   domContentLoaded: number,;
@@ -188,6 +197,7 @@ interface PerformanceEntry {;
   duration: number;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 interface PerformanceNavigationTiming extends PerformanceEntry {;
@@ -195,6 +205,8 @@ interface PerformanceNavigationTiming extends PerformanceEntry {;
 =======
 interface PerformanceNavigationTiming extends PerformanceEntry {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   readonly connectEnd: number;
   readonly connectStart: number;
   readonly domComplete: number;
@@ -226,6 +238,7 @@ interface PerformanceNavigationTiming extends PerformanceEntry {
   readonly unloadEventEnd: number;
   readonly unloadEventStart: number;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -279,10 +292,13 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ onPerformanceDa
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       measurePerformance();
     } else {;
       window && window.addEventListener('load', measurePerformance);
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -295,6 +311,8 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ onPerformanceDa
       window && window.removeEventListener('load', measurePerformance);
     };
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   }, [onPerformanceData]);
   return null;
 }
@@ -369,6 +387,7 @@ interface PerformanceMetrics {fcp?: number;
   ttfb?: number;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -383,6 +402,8 @@ case 'paint': if (entry && entry.name === 'first-contentful-paint') {'          
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }));
 }
             break;
@@ -390,6 +411,7 @@ case 'paint': if (entry && entry.name === 'first-contentful-paint') {'          
 });
     // Observe different types of performance entries;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     try {;
 observer && observer.observe({ entryTypes: ['paint', 'largest-contentful-paint', 'first-input', 'layout-shift', 'navigation'] });
@@ -398,12 +420,15 @@ observer && observer.observe({ entryTypes: ['paint', 'largest-contentful-paint',
     try {;
 observer && observer.observe({ entryTypes: ['paint', 'largest-contentful-paint', 'first-input', 'layout-shift', 'navigation'] });
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 '    } catch (e) {'      // Fallback for browsers that don&apos;t support all entry types;
       observer && observer.observe({ entryTypes: ['paint', 'largest-contentful-paint'] });
 '    }';
     // Show metrics after 3 seconds;
     const timer = setTimeout(() => {setIsVisible(true);
 }, 3000);
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     return () => {;
@@ -413,10 +438,13 @@ observer && observer.observe({ entryTypes: ['paint', 'largest-contentful-paint',
     return () => {;
       observer && observer.disconnect();
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       clearTimeout(timer);
 }
 }, []);
   if (!isVisible) return null;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -433,12 +461,15 @@ if (value <= thresholds && thresholds.good) return 'text-green-600;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     return 'Poor;
 };';
   return (
     <div className="fixed bottom-4 left-4 bg-white shadow-lg rounded-lg p-4 border z-50 max-w-xs>      <h3 className="text-sm font-semibold mb-3 text-gray-900">Performance Metrics</h3>"      "      <div className="space-y-2 text-xs>        {metrics && metrics.fcp && ("          <div className="flex justify-between>            <span className="text-gray-600">FCP: </span>"            <span className={getScoreColor(metrics && metrics.fcp, { good: 1800, poor: 3000 })}>"              {Math && Math.round(metrics && metrics.fcp)}ms ({getScoreText(metrics && metrics.fcp, { good: 1800, poor: 3000 })})</span>;
           </div>;
         )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -465,6 +496,8 @@ if (value <= thresholds && thresholds.good) return 'text-green-600;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           </div>;
         )}
 =======
@@ -560,6 +593,7 @@ if (return 'Needs Improvement) {
 <div className="mt - 3 pt - 2 border - t border - gray - 200>        <button"          on_click={() => setIsVisible (false)}
           className="text - xs text - gray - 500 hover: text - gray - 700        >"          Hide</button>;
       </div>;
+<<<<<<< HEAD
 
     </div>);
 }
@@ -587,3 +621,5 @@ export default PerformanceMonitor;
 }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

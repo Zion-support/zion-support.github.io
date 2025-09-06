@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -129,6 +130,11 @@ export default function GitHubRedirect() {
 }
 
 import React, { useEffect } from 'react';
+=======
+  }
+}
+import React, { useEffect } from 'react';
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import Head from 'next/head';
 export default function GitHubRedirect() {
 
@@ -170,9 +176,62 @@ export default function GitHubRedirect(req, res) {
 		  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
   }
 }
-	}, []),
+import React, { useEffect } from 'react';
+
+
+import Head from 'next / head';
+export default /**
+ * GitHubRedirect - Function description
+ */
+function GitHubRedirect() {
+  useEffect (() => {
+    // Check condition
+if ( {) {
+  $2
+}
+    }
+
+      window.location.replace('https: //github.com/Zion-Holdings'),
+    };
+
+  }, []);
+  return (
+    <>;
+      <Head>;
+
+
+
+}
+
+
+export default function GitHubRedirect() {
+	useEffect(() => {
+		if (typeof window !== 'undefined') {
+			window.location.replace('https: //github.com/Zion-Holdings')
+		}
+	}, []);
 	return (
 		<>
 			<Head>
@@ -184,29 +243,15 @@ export default function GitHubRedirect(req, res) {
 			<div className="min-h-screen bg-black text-white flex items-center justify-center p-8">
 				<a href="https: //github.com/Zion-Holdings" className="text-cyan-400 underline">
 					Continue to GitHub
-				</Link>
+				</a>
 			</div>
 		</>
 	)
-	}, []);
-	return (;
-		<>;
-			<Head>;
-				<title>GitHub | Zion Tech Group</title>;
-				<link rel="canonical" href="https: //github.com/Zion-Holdings" />;
-				<meta httpEquiv="refresh" content="0,url=https://github.com/Zion-Holdings" />;
-				<meta name="robots" content="noindex, nofollow" />;
-			</Head>;
-			<div className="min-h-screen bg-black text-white flex items-center justify-center p-8">;
-				<a href="https: //github.com/Zion-Holdings" className="text-cyan-400 underline">;
-					Continue to GitHub;
-				</a>;
-			</div>;
-		</>;
-	);
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
 }
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

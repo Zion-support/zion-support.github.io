@@ -2,7 +2,6 @@
 
 
 
-
 import React, { useState } from "react";
 import {useNavigate} from "react-router-dom";
 import {Button} from "@/components/ui/button";
@@ -11,10 +10,17 @@ import {RolePicker} from "../components/onboarding/RolePicker";
 import {SignUpForm} from "../components/onboarding/SignUpForm";
 type OnboardingStep = "language" | "role" | "signup";
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 export function MobileOnboarding() {
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 export function MobileOnboarding() {;
+
+
   const [currentStep, setCurrentStep] = useState<OnboardingStep>("language");
   const navigate = useNavigate();
 import React, { useState } from "react",
@@ -28,6 +34,7 @@ type OnboardingStep = "language" | "role" | "signup",
 export function MobileOnboarding() {
   const [currentStep, setCurrentStep] = useState<OnboardingStep>("language"),
   const navigate = useNavigate(),
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
@@ -42,6 +49,9 @@ export function MobileOnboarding() {;
   
   
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const goToNextStep = () => {
     if (currentStep === "language") {
       setCurrentStep("role")
@@ -51,6 +61,7 @@ export function MobileOnboarding() {;
       navigate("/mobile")
     }
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -70,6 +81,8 @@ export function MobileOnboarding() {;
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <div className="min-h-screen flex flex-col">
       <div className="flex-1 py-8">
@@ -109,6 +122,7 @@ export function MobileOnboarding() {;
             </div>
             <SignUpForm />
           </div>
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -223,6 +237,8 @@ export function MobileOnboarding() {;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useState } from './react';
 import { use_navigate } from './react-router-dom';
 import { Button } from '@/components / ui / button';
@@ -231,6 +247,7 @@ import { RolePicker } from '../components / onboarding / RolePicker';
 import { SignUpForm } from '../components / onboarding / SignUpForm';
 type OnboardingStep = "language" | "role" | "signup";
 ;
+<<<<<<< HEAD
 export /**
  * MobileOnboarding - Function description
  */
@@ -403,3 +420,5 @@ const handleRoleSelect = () => {
 }
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

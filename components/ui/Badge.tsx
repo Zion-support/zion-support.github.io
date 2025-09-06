@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 // Define HTML element types;
@@ -8,12 +9,15 @@ interface HTMLElement {;
 // Define HTML element types;
 interface HTMLElement {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   className: string;
   id: string;
   innerHTML: string;
   textContent: string | null;
   style: { [key: string]: string }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -74,6 +78,8 @@ function Badge(): any ({ className, variant, ...props }: BadgeProps) {;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <div className={cn(badgeVariants({ variant }), className)} {...props} />;
   );
@@ -109,6 +115,7 @@ export interface BadgeProps;
 function Badge() {
   return (
 <<<<<<< HEAD
+<<<<<<< HEAD
     <div className={cn (badge_variants ({ variant }), class_name)} {...props} />);
 =======
     <div className={cn(badgeVariants({ variant }), className)} {...props} />;
@@ -117,3 +124,5 @@ function Badge() {
 }
 export { Badge, badge_variants }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

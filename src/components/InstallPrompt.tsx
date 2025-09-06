@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useEffect, useState } from 'react';
 <<<<<<< HEAD
 =======
@@ -42,6 +43,8 @@ interface BeforeInstallPromptEvent extends Event {;
     platform: string;
   }>,;
   prompt(): Promise<void>;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 // Augment the WindowEventMap to include 'beforeinstallprompt'
 declare global {
@@ -60,12 +63,15 @@ export const InstallPrompt: React.FC = () => {
     const isDismissed = dismissUntil && Date.now() < Number(dismissUntil)
     const hasShown = safeSessionStorage.getItem(SHOWN_KEY)
     // Do not show prompt if already installed (standalone mode)
+<<<<<<< HEAD
     if (isDismissed |hasShown |window.matchMedia('(display-mode: standalone)').matches) {
       return
     if (isDismissed |hasShown |window.matchMedia('(display-mode: standalone)').matches) {
       return
     if (isDismissed || hasShown || window.matchMedia('(display-mode: standalone)').matches) {
       return;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     }
     const handler = (e: BeforeInstallPromptEvent,) => {
       e.preventDefault()
@@ -95,6 +101,7 @@ export const InstallPrompt: React.FC = () => {
     if (outcome === 'accepted') {
       if (typeof window !== 'undefined' && (window as any).gtag) {
         (window as any).gtag('eventpwa_install_accepted')
+<<<<<<< HEAD
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -491,6 +498,12 @@ export default InstallPrompt;
     </>;
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  return (
+    <>
+      {/* Styles can be moved to a CSS file or a styled-components block if preferred */}
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <div className="fixed bottom - 4 right - 4 z-[1000] pwa - install - button - container"> {/* Added a container for styling */}
         <div className="bg - zion - blue - dark text - white p - 3 rounded - lg shadow - lg flex items - center space - x-3">;
           <p className="text - sm">Install our app for a better experience!</p>;
@@ -504,6 +517,7 @@ export default InstallPrompt;
 },
 export default InstallPrompt,
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
   )
 
@@ -536,3 +550,5 @@ main
     </>
   )
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

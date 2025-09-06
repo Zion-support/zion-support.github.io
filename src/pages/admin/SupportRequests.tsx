@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -44,10 +45,13 @@ import { Search, Filter } from 'lucide-react'
 import { SEO } from "@/components/SEO",
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 // Mock data for support requests
 
 const MOCK_SUPPORT_REQUESTS = [
   {
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import React, { useState } from 'react';
 import {
@@ -290,12 +294,17 @@ export default function SupportRequests() {
   },
   {
 <<<<<<< HEAD
+=======
+  },
+  {
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
+<<<<<<< HEAD
   }
 =======
     id: 'SR-1007',
@@ -378,6 +387,9 @@ export default function SupportRequests() {
   const [priorityFilter, setPriorityFilter] = useState<string | null>(null),
   const [categoryFilter, setCategoryFilter] = useState<string | null>(null),
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  }
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   
   static getDerivedStateFromError(error) {
     return { hasError: true };
@@ -493,6 +505,7 @@ const MOCK_SUPPORT_REQUESTS = [;
     category: 'verification',;
   },;
   {;
+<<<<<<< HEAD
     id: 'SR-1007',;
     user: 'jamie && jamie.taylor@tech && tech.org',;
     userId: 'user-345',;
@@ -580,6 +593,49 @@ export default function SupportRequests() {;
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+    id: "SR-1007",;
+    user: "jamie.taylor@tech.org",;
+    userId: "user-345",;
+    issue: "Cannot upload portfolio images",;
+    status: "resolved",;
+    priority: "medium",;
+    createdAt: "2023-12-10T15:10:00Z",;
+    lastUpdated: "2023-12-13T11:25:00Z",;
+    category: "profile";
+  }
+],;
+export default function SupportRequests() {;
+  const [searchQuery, setSearchQuery] = useState(""),;
+  const [statusFilter, setStatusFilter] = useState<string | null>(null),;
+  const [priorityFilter, setPriorityFilter] = useState<string | null>(null),;
+  const [categoryFilter, setCategoryFilter] = useState<string | null>(null),;
+  // Apply filters to the request data;
+  const filteredRequests = MOCK_SUPPORT_REQUESTS.filter(request => {;
+    // Apply search query filter;
+    if (searchQuery &&;
+        !request.issue.toLowerCase().includes(searchQuery.toLowerCase()) &&;
+        !request.user.toLowerCase().includes(searchQuery.toLowerCase()) &&;
+        !request.id.toLowerCase().includes(searchQuery.toLowerCase())) {;
+      return false;
+    }
+;
+    // Apply status filter;
+    if (statusFilter && request.status !== statusFilter) {;
+      return false;
+    }
+;
+    // Apply priority filter;
+    if (priorityFilter && request.priority !== priorityFilter) {;
+      return false;
+    }
+;
+    // Apply category filter;
+    if (categoryFilter && request.category !== categoryFilter) {;
+      return false;
+    }
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     return true;
   });
 
@@ -603,7 +659,25 @@ ursor/fix-website-loading-errors-and-merge-6662
   };
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
+    
+    return true
+  }),
+  
+  // Count by status for the summary dashboard
+  const openCount = MOCK_SUPPORT_REQUESTS.filter(r => r.status === 'open').length,
+  const inProgressCount = MOCK_SUPPORT_REQUESTS.filter(r => r.status === 'in-progress').length,
+  const resolvedCount = MOCK_SUPPORT_REQUESTS.filter(r => r.status === 'resolved').length,
+  const totalCount = MOCK_SUPPORT_REQUESTS.length,
+  
+  const resetFilters = () => {
+    setSearchQuery(""),
+    setStatusFilter(null),
+    setPriorityFilter(null),
+    setCategoryFilter(null)
+  },
+  
   return (
+<<<<<<< HEAD
     <>;
 
 
@@ -620,10 +694,28 @@ ursor/fix-website-loading-errors-and-merge-6662
           <div className="mt-4 md:mt-0">
             <Button className="bg-zion-purple hover:bg-zion-purple-light">
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+    <>
+      <SEO 
+        title="Support Requests | Admin Dashboard"
+        description="Manage and track user support requests and issues"
+      />
+      <div className="container mx-auto px-4 py-8">
+        <div className="flex flex-col md:flex-row items-start md:items-center justify-between mb-8">
+          <div>
+            <h1 className="text-3xl font-bold bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
+              Support Requests
+            </h1>
+            <p className="text-zion-slate-light mt-2">
+              Manage and respond to user support requests and issues
+            </p>
+          </div>
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               New Support Case
             </Button>
           </div>
         </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -642,6 +734,10 @@ ursor/fix-website-loading-errors-and-merge-6662
             <CardHeader className='pb-2'>
               <CardTitle className='text-2xl font-bold'>{openCount}</CardTitle>
         
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         {/* Status Cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
           <Card>
@@ -651,12 +747,15 @@ ursor/fix-website-loading-errors-and-merge-6662
               <CardDescription>Open Requests</CardDescription>
             </CardHeader>
           </Card>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
           <Card>
@@ -672,6 +771,7 @@ ursor/fix-website-loading-errors-and-merge-6662
               <CardDescription>In Progress</CardDescription>
             </CardHeader>
           </Card>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -692,6 +792,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
           
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
           <Card>
@@ -703,6 +805,7 @@ ursor/fix-website-loading-errors-and-merge-6662
               <CardDescription>Resolved</CardDescription>
             </CardHeader>
           </Card>
+<<<<<<< HEAD
             <CardHeader className="pb-2">
               <CardTitle className="text-2xl font-bold">{totalCount}</CardTitle>
 ursor/fix-website-loading-errors-and-merge-6662
@@ -726,6 +829,10 @@ ursor/fix-website-loading-errors-and-merge-6662
             <CardHeader className='pb-2'>
               <CardTitle className='text-2xl font-bold'>{totalCount}</CardTitle>
           
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <Card>
             <CardHeader className="pb-2">
               <CardTitle className="text-2xl font-bold">{totalCount}</CardTitle>
@@ -735,10 +842,13 @@ ursor/fix-website-loading-errors-and-merge-6662
           </Card>
         </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
         
         <Tabs defaultValue="all" className="mb-8">
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
           <TabsList>
@@ -747,6 +857,7 @@ ursor/fix-website-loading-errors-and-merge-6662
             <TabsTrigger value='ai-flagged'>AI Flagged</TabsTrigger>
             <TabsTrigger value='need-response'>Need Response</TabsTrigger>
           </TabsList>
+<<<<<<< HEAD
 
       />;
       <div className='container mx-auto px-4 py-8'>;
@@ -846,11 +957,14 @@ ursor/fix-website-loading-errors-and-merge-6662
           
           <TabsContent value="all" className="mt-6">
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             {/* Search and Filters */}
             <div className='flex flex-col md:flex-row gap-4 mb-6'>;
               <div className='relative flex-1'>;
                 <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400' />;
                 <Input
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -869,6 +983,8 @@ ursor/fix-website-loading-errors-and-merge-6662
                 value={statusFilter || ''}
                 onValueChange={value => setStatusFilter(value || null)}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               >
                 <SelectTrigger className='w-[180px]'>
                   <SelectValue placeholder='Status' />
@@ -882,6 +998,7 @@ ursor/fix-website-loading-errors-and-merge-6662
               <Select value={statusFilter || ""} onValueChange={value => setStatusFilter(value || null)}>
                 <SelectTrigger className="w-[180px]">
                   <SelectValue placeholder="Status" />
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 ursor/fix-website-loading-errors-and-merge-6662
@@ -899,6 +1016,8 @@ ursor/fix-website-loading-errors-and-merge-6662
                 <SelectTrigger className="w-[180px]">
                   <SelectValue placeholder="Priority" />
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 
@@ -923,12 +1042,15 @@ ursor/fix-website-loading-errors-and-merge-6662
                   <SelectItem value="resolved">Resolved</SelectItem>
                 </SelectContent>
               </Select>
+<<<<<<< HEAD
               <Select
                 value={priorityFilter |''}
                 onValueChange={value => setPriorityFilter(value |null)}
                 value={priorityFilter || ''}
                 onValueChange={value => setPriorityFilter(value || null)}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               >
                 <SelectTrigger className='w-[180px]'>
                   <SelectValue placeholder='Priority' />
@@ -937,12 +1059,15 @@ ursor/fix-website-loading-errors-and-merge-6662
                 <SelectTrigger className="w-[180px]">
                   <SelectValue placeholder="Priority" />
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
               
               <Select value={categoryFilter || ""} onValueChange={value => setCategoryFilter(value || null)}>
                 <SelectTrigger className="w-[180px]">
                   <SelectValue placeholder="Category" />
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 
@@ -967,12 +1092,15 @@ ursor/fix-website-loading-errors-and-merge-6662
                   <SelectItem value="low">Low</SelectItem>
                 </SelectContent>
               </Select>
+<<<<<<< HEAD
               <Select
                 value={categoryFilter |''}
                 onValueChange={value => setCategoryFilter(value |null)}
                 value={categoryFilter || ''}
                 onValueChange={value => setCategoryFilter(value || null)}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               >
                 <SelectTrigger className='w-[180px]'>
                   <SelectValue placeholder='Category' />
@@ -980,6 +1108,7 @@ ursor/fix-website-loading-errors-and-merge-6662
               <Select value={categoryFilter || ""} onValueChange={value => setCategoryFilter(value || null)}>
                 <SelectTrigger className="w-[180px]">
                   <SelectValue placeholder="Category" />
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -1001,6 +1130,11 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
 =======
+=======
+
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 </SelectTrigger>
                 <SelectContent>
                   <SelectItem value="">All Categories</SelectItem>
@@ -1012,6 +1146,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                   <SelectItem value="profile">Profile</SelectItem>
                 </SelectContent>
               </Select>
+<<<<<<< HEAD
               <Button
                 variant='outline'
                 onClick={resetFilters}
@@ -1040,6 +1175,8 @@ ursor/fix-website-loading-errors-and-merge-6662
             </div>
             
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             {/* Support Requests Table */}
             <Card>
               <CardContent className="p-0">
@@ -1059,6 +1196,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                   </TableHeader>
                   <TableBody>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
                     {filteredRequests.map((request) => (
                       <TableRow key={request.id}>
@@ -1072,6 +1210,9 @@ ursor/fix-website-loading-errors-and-merge-6662
                     {filteredRequests.map((request) => (
                       <TableRow key={request.id}>
                         <TableCell className="font-medium">{request.id}</TableCell>
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                         <TableCell>{request.user}</TableCell>
                         <TableCell className="max-w-xs truncate">{request.issue}</TableCell>
                         <TableCell>
@@ -1097,6 +1238,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                                   : 'outline'
                             }
                           >
+<<<<<<< HEAD
           <TabsContent value='escalated' className='mt-6'>
             <div className='bg-zion-blue-light/20 p-8 rounded-lg text-center'>
               <h3 className='text-xl font-medium mb-4'>Escalated Requests</h3>
@@ -1126,6 +1268,8 @@ ursor/fix-website-loading-errors-and-merge-6662
                         <TableCell className="max-w-xs truncate">{request.issue}</TableCell>
                         <TableCell>
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                           <Badge variant={
                             request.status === 'open' 
                               ? 'default' 
@@ -1150,6 +1294,7 @@ ursor/fix-website-loading-errors-and-merge-6662
   return (;
     <>;
       <SEO;
+<<<<<<< HEAD
         title='Support Requests | Admin Dashboard';
         description='Manage and track user support requests and issues';
       />;
@@ -1165,11 +1310,14 @@ ursor/fix-website-loading-errors-and-merge-6662
           </div>;
           <div className='mt - 4 md:mt - 0'>;
             <Button className='bg - zion - purple hover:bg - zion - purple - light'>;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               New Support Case;
             </Button>;
           </div>;
         </div>;
         {/* Status Cards */}
+<<<<<<< HEAD
         <div className='grid grid - cols - 1 sm:grid - cols - 2 lg:grid - cols - 4 gap - 4 mb - 8'>;
           <Card>;
             <CardHeader className='pb - 2'>;
@@ -1217,6 +1365,8 @@ ursor/fix-website-loading-errors-and-merge-6662
                   value={search_query}
                   on_change={e => setSearchQuery (e.target.value)}
                   className='pl - 10'                />;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               </div>;
               <Select;
                 value={status_filter || ''}
@@ -1226,6 +1376,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                   <SelectValue placeholder='Status' />;
                 </SelectTrigger>;
                 <SelectContent>;
+<<<<<<< HEAD
 <<<<<<< HEAD
                   <SelectItem value=''>All Statuses</SelectItem>;
                   <SelectItem value='open'>Open</SelectItem>;
@@ -1252,6 +1403,8 @@ ursor/fix-website-loading-errors-and-merge-6662
                 <SelectTrigger className="w-[180px]">;
                   <SelectValue placeholder="Priority" />;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 </SelectTrigger>;
                 <SelectContent>;
                   <SelectItem value=''>All Priorities</SelectItem>;
@@ -1260,6 +1413,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                   <SelectItem value='low'>Low</SelectItem>;
                 </SelectContent>;
               </Select>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
               <Select;
@@ -1274,6 +1428,8 @@ ursor/fix-website-loading-errors-and-merge-6662
                 <SelectTrigger className="w-[180px]">;
                   <SelectValue placeholder="Category" />;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 </SelectTrigger>;
                 <SelectContent>;
                   <SelectItem value=''>All Categories</SelectItem>;
@@ -1285,6 +1441,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                   <SelectItem value='profile'>Profile</SelectItem>;
                 </SelectContent>;
               </Select>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
               <Button;
@@ -1357,10 +1514,13 @@ ursor/fix-website-loading-errors-and-merge-6662
                                   : 'outline';
                             }
                           >;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                             {request.status}
                           </Badge>;
                         </TableCell>;
                         <TableCell>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
                             {request.priority}
@@ -1397,6 +1557,11 @@ ursor/fix-website-loading-errors-and-merge-6662
                               ? 'default';
                               : 'outline';
                           }>;
+=======
+                        <TableCell>{request.user}</TableCell>
+                        <TableCell className="max-w-xs truncate">{request.issue}</TableCell>
+                        <TableCell>
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                             {request.priority}
                           </Badge>
                         </TableCell>
@@ -1414,6 +1579,7 @@ ursor/fix-website-loading-errors-and-merge-6662
               </CardContent>
             </Card>
           </TabsContent>
+<<<<<<< HEAD
           <TabsContent value='escalated' className='mt-6'>
             <div className='bg-zion-blue-light/20 p-8 rounded-lg text-center'>
               <h3 className='text-xl font-medium mb-4'>Escalated Requests</h3>
@@ -1467,20 +1633,29 @@ ursor/fix-website-loading-errors-and-merge-6662
               <p className="text-zion-slate-light">
                 These support requests have been waiting for an agent response for over 24 hours.
 <<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
               </p>
             </div>
+<<<<<<< HEAD
 =======
               </p>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           </TabsContent>
         </Tabs>
       </div>
     </>
   )
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   </TableBody>;
                 </Table>;
               </CardContent>;
@@ -1546,6 +1721,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 }
 ;
 
+<<<<<<< HEAD
 }</TableCell> <TableCell> <Button variant=" ghost"size=" sm">View</Button> <Button variant=" ghost"size=" sm">Assign</Button> </TableCell> </TableRow>) ) "
 }</TableBody> </Table> </CardContent> </Card> </TabsContent> <TabsContent value=" escalated"className=" mt-6"> <div className=" bg-zion-blue-light/20 p-8 rounded-lg text-center"> <h3 className=" text-xl font-medium mb-4">Escalated Requests</h3> <p className=" text-zion-slate-light"> This tab will show support requests that have been escalated by agents or the system. </p> </div> </TabsContent> <TabsContent value=" ai-flagged"className=" mt-6"> <div className=" bg-zion-blue-light/20 p-8 rounded-lg text-center"> <h3 className=" text-xl font-medium mb-4">AI Flagged Issues</h3> <p className=" text-zion-slate-light"> This tab shows issues that our AI system has identified as requiring human attention. </p> </div> </TabsContent> <TabsContent value=" need-response"className=" mt-6"> <div className=" bg-zion-blue-light/20 p-8 rounded-lg text-center"> <h3 className=" text-xl font-medium mb-4">Awaiting Response</h3> <p className=" text-zion-slate-light" > These support requests have been waiting for an agent response for over 24 hours. </p> </div> </TabsContent> </Tabs> </div> </>)
 }'"}
@@ -1561,6 +1737,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 }<Card> <CardContent className=" p-0"> <Table> <TableHeader> <TableRow> <TableHead>ID</TableHead> <TableHead>User</TableHead> <TableHead>Issue</TableHead> <TableHead>Status</TableHead> <TableHead>Priority</TableHead> <TableHead>Category</TableHead> <TableHead>Created</TableHead> <TableHead>Last Updated</TableHead> <TableHead>Actions</TableHead> </TableRow> </TableHeader> <TableBody> {
   filteredRequests.map ( (request) => (<TableRow key= {
   request.id
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 }</TableCell> <TableCell> <Button variant=" ghost"size=" sm">View</Button> <Button variant=" ghost"size=" sm">Assign</Button> </TableCell> </TableRow>) ) ";
 }</TableBody> </Table> </CardContent> </Card> </TabsContent> <TabsContent value=" escalated"className=" mt-6"> <div className=" bg-zion-blue-light/20 p-8 rounded-lg text-center"> <h3 className=" text-xl font-medium mb-4">Escalated Requests</h3> <p className=" text-zion-slate-light"> This tab will show support requests that have been escalated by agents or the system. </p> </div> </TabsContent> <TabsContent value=" ai-flagged"className=" mt-6"> <div className=" bg-zion-blue-light/20 p-8 rounded-lg text-center"> <h3 className=" text-xl font-medium mb-4">AI Flagged Issues</h3> <p className=" text-zion-slate-light"> This tab shows issues that our AI system has identified as requiring human attention. </p> </div> </TabsContent> <TabsContent value=" need-response"className=" mt-6"> <div className=" bg-zion-blue-light/20 p-8 rounded-lg text-center"> <h3 className=" text-xl font-medium mb-4">Awaiting Response</h3> <p className=" text-zion-slate-light" > These support requests have been waiting for an agent response for over 24 hours. </p> </div> </TabsContent> </Tabs> </div> </>) ;
@@ -1611,20 +1789,12 @@ ursor/fix-website-loading-errors-and-merge-6662
   filtered_requests.map ( (request) => (<TableRow key= {
   request.id;
 }> <TableCell> <Badge variant= {
-  request.status === 'open' ? 'default' : request.status === 'in-progress' ? 'secondary' : 'outline'
-}> {
-  request.status
-}</Badge> </TableCell> <TableCell> <Badge variant= {'
-  request.priority === 'high' ? 'destructive' : request.priority === 'medium' ? 'default' : 'outline'
-}> {
-  request.priority
-}</Badge> </TableCell> <TableCell> {
-  request.category
-}</TableCell> <TableCell> {
-  new Date (request.createdAt) .toLocaleDateString ()
 }</TableCell> <TableCell> {
   new Date (request.last_updated) .toLocaleDateString () ";
 }</TableCell> <TableCell> <Button variant=" ghost"size=" sm">View</Button> <Button variant=" ghost"size=" sm">Assign</Button> </TableCell> </TableRow>) ) ";
+<<<<<<< HEAD
 }</TableBody> </Table> </CardContent> </Card> </TabsContent> <TabsContent value=" escalated"className=" mt - 6"> <div className=" bg - zion - blue - light / 20 p - 8 rounded - lg text - center"> <h3 className=" text - xl font - medium mb - 4">Escalated Requests</h3> <p className=" text - zion - slate - light"> This tab will show support requests that have been escalated by agents or the system. </p> </div> </TabsContent> <TabsContent value=" ai - flagged"className=" mt - 6"> <div className=" bg - zion - blue - light / 20 p - 8 rounded - lg text - center"> <h3 className=" text - xl font - medium mb - 4">AI Flagged Issues</h3> <p className=" text - zion - slate - light"> This tab shows issues that our AI system has identified as requiring human attention. </p> </div> </TabsContent> <TabsContent value=" need - response"className=" mt - 6"> <div className=" bg - zion - blue - light / 20 p - 8 rounded - lg text - center"> <h3 className=" text - xl font - medium mb - 4">Awaiting Response</h3> <p className=" text - zion - slate - light" > These support requests have been waiting for an agent response for over 24 hours. </p> </div> </TabsContent> </Tabs> </div> </>);
 }'"}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

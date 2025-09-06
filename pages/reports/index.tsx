@@ -1,7 +1,11 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 import { useEffect, useState } from 'react';
 
@@ -13,6 +17,7 @@ export default function Reports() {
   const [deps, setDeps] = useState<any>({}),
   const [changelog, setChangelog] = useState<any>({}),
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import { useEffect, useState  } from 'react';
 import { useEffect, useState } from 'react';
@@ -22,6 +27,8 @@ export default function Reports() {
   const [links, setLinks] = useState<any>({}),
   const [deps, setDeps] = useState<any>({}),
   const [changelog, setChangelog] = useState<any>({}),
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {useEffect, useState} from 'react';
 export default function Reports() {;
 import { useEffect, useState } from 'react';
@@ -35,6 +42,7 @@ export default function Reports() {
   useEffect(() => {
     Promise.all([
 
+<<<<<<< HEAD
 
 
 
@@ -49,6 +57,8 @@ export default function Reports() {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       fetch('/api/reports/uptime')
         .then(r => r.json())
         .then(setUptime)
@@ -89,11 +99,12 @@ export default function Reports() {
                   (r: any) => r.status >= 200 && r.status < 400
                 ).length
               }
-              /{lastUptime.results?.length} ok
-            </div>
-          ) : (
-            <div className='text-sm text-gray-500'>No data</div>
+              /{lastUptime && lastUptime.results?.length} ok;
+            </div>;
+          ) : (;
+            <div className='text-sm text-gray-500'>No data</div>;
           )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
         </div>
@@ -131,6 +142,16 @@ export default function Reports() {
     </div>
 );
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+}
+      fetch('/api/reports/uptime').then((r) => r.json()).then(setUptime),
+      fetch('/api/reports/seo').then((r) => r.json()).then(setSeo),
+      fetch('/api/reports/links').then((r) => r.json()).then(setLinks),
+      fetch('/api/reports/deps').then((r) => r.json()).then(setDeps),
+      fetch('/api/reports/changelog').then((r) => r.json()).then(setChangelog),
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
         </div>;
 
@@ -143,6 +164,7 @@ export default function Reports() {
       fetch('/api/reports/links').then((r) => r.json()).then(setLinks);
       fetch('/api/reports/deps').then((r) => r.json()).then(setDeps);
       fetch('/api/reports/changelog').then((r) => r.json()).then(setChangelog);
+<<<<<<< HEAD
 <<<<<<< HEAD
       fetch('/api/reports/pagespeed').then((r) => r.json()).then(setPagespeed)
     ]).catch(() => {})
@@ -157,6 +179,10 @@ export default function Reports() {
       fetch('/api/reports/pagespeed').then((r) => r.json()).then(setPagespeed)
     ]).catch(() => {});
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+      fetch('/api/reports/pagespeed').then((r) => r.json()).then(setPagespeed)
+    ]).catch(() => {})
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   }, []);
 
   const lastUptime = uptime[uptime.length - 1];
@@ -168,7 +194,10 @@ export default function Reports() {
         <div className="text-sm text-gray-500">Autonomously generated and synced</div>
       </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
         <div className='border rounded p-4'>;
           <div className='font-medium mb-1'>SEO (weekly)</div>;
@@ -199,8 +228,11 @@ export default function Reports() {
         </div>;
 
 
+<<<<<<< HEAD
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {useEffect, useState} from 'react';
 export default /**
  * Reports - Function description
@@ -287,13 +319,18 @@ function Reports() {
           <div className='font - medium mb - 1'>PageSpeed (weekly)</div>;
           <div className='text - sm text - gray - 600'>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             Pages: {pagespeed?.results?.length || 0}
           </div>;
         </div>;
       </section>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -325,10 +362,13 @@ function Reports() {
           <div className="text-sm text-gray-600">Checked: {deps?.entries?.length || 0}</div>
         </div>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <div className="border rounded p-4">
           <div className="font-medium mb-1">Changelog (weekly)</div>
           <div className="text-sm text-gray-600">Commits: {changelog?.totalCommits || 0}</div>
         </div>
+<<<<<<< HEAD
 
         <div className="border rounded p-4">
           <div className="font-medium mb-1">PageSpeed (weekly)</div>
@@ -367,3 +407,8 @@ function Reports() {
   }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -1,8 +1,8 @@
-
 import React, { useState, useEffect } from "react";
 import {X, ArrowRight} from "lucide-react";
 import {Link} from "react-router-dom";
 import {useIsMobile} from "@/hooks/use-mobile";
+<<<<<<< HEAD
 <<<<<<< HEAD
 interface SmartAppBannerProps {;
 
@@ -26,25 +26,31 @@ interface SmartAppBannerProps {
 }
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useState, useEffect } from "react",
 import { X, ArrowRight } from "lucide-react",
 import { Link } from "react-router-dom";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { Link } from "react-router-dom",
 import { useIsMobile } from "@/hooks/use-mobile",
+
+  appName?: string;
+import React, { useState, useEffect } from './react';
+import { X, ArrowRight } from './lucide-react';
+import { Link } from './react-router-dom';
+import { useIsMobile } from '@/hooks / use - mobile';
 interface SmartAppBannerProps {
-  appName?: string,
-  appIconSrc?: string,
-  appStoreUrl?: string,
-  googlePlayUrl?: string,
-  delay?: number, // Delay in milliseconds before showing the banner
+  app_name?: string;
+  appIconSrc?: string;
+  appStoreUrl?: string;
+  googlePlayUrl?: string;
+  delay?: number, // Delay in milliseconds before showing the banner;
 }
 
-export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({;
-  appName = "Zion Marketplace";
-  appIconSrc;
-  appStoreUrl = "/download";
-export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
+
+
+
 
   appName = "Zion Marketplace";
   appIconSrc;
@@ -62,6 +68,7 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
 }) => {
   const [isVisible, setIsVisible] = useState(false),
   const isMobile = useIsMobile(),
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
@@ -72,11 +79,15 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
 =======
   
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   useEffect(() => {
     // Only show banner on mobile devices and if it hasn't been dismissed
     if (isMobile && !localStorage.getItem("smartBannerDismissed")) {
       const timer = setTimeout(() => {
         setIsVisible(true)
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -130,6 +141,8 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
   },
   
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   // Only render on mobile devices
   if (!isMobile |!isVisible) {
     return process.env.NODE_ENV === 'development' ? (
@@ -139,6 +152,7 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
     ) : null
   }
   // Detect iOS or Android
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -297,11 +311,15 @@ export const SmartAppBanner:React.FC<SmartAppBannerProps> = ({;
   ;
   return (;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  return (
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <div className="fixed top-0 left-0 right-0 bg-zion-blue-dark border-b border-zion-purple/30 p-3 z-50 animate-fade-in">;
       <div className="flex items-center">;
         <div className="w-12 h-12 bg-zion-cyan/20 rounded-lg mr-3 flex-shrink-0 flex items-center justify-center">;
           {appIconSrc ? (;
             <img src={appIconSrc} alt={appName} className="w-10 h-10 rounded-md" />;
+<<<<<<< HEAD
 <<<<<<< HEAD
           ) : (;
             <div className="text-zion-cyan font-bold text-lg">Z</div>;
@@ -320,6 +338,11 @@ export const SmartAppBanner:React.FC<SmartAppBannerProps> = ({;
 
 };
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+          ) : (;
+            <div className="text-zion-cyan font-bold text-lg">Z</div>;
+          )}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 },
 import React, { useState, useEffect } from "react",;
 import { X, ArrowRight } from "lucide-react",;
@@ -381,6 +404,7 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({;
             <div className="text-zion-cyan font-bold text-lg">Z</div>;
           )}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
         </div>;
 
@@ -393,10 +417,16 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({;
         ;
         </div>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+        </div>;
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <div className="flex-1">;
           <h4 className="font-semibold text-white">{appName}</h4>;
           <p className="text-xs text-gray-300">Get our app for the best experience</p>;
         </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
         <div className="flex items-center gap-3">;
@@ -433,6 +463,9 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export const SmartAppBanner: React.FC < SmartAppBannerProps> = ({
   app_name = "Zion Marketplace";
   appIconSrc;
@@ -508,6 +541,7 @@ if ( {) {
     </div>);
 }
 ;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -552,3 +586,5 @@ const isMobile = useIsMobile ();
 
 export default SmartAppBanner;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

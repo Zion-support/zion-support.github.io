@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 
 interface UltraFuturisticBackgroundProps {
@@ -95,3 +96,5 @@ const UltraFuturisticBackground: React.FC<UltraFuturisticBackgroundProps> = ({
 };
 
 export default UltraFuturisticBackground;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

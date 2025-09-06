@@ -1,5 +1,6 @@
 import {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -87,11 +88,14 @@ const research_impact = [;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   {
     metric: 'Patents Filed'
     value: '25+'
     description: 'Intellectual property protecting our innovations'}
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -104,6 +108,8 @@ const academic_partners = [;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   {
     name: 'Stanford University'
     location: 'Stanford, CA'
@@ -120,6 +126,7 @@ const academic_partners = [;
     focus: 'AI Ethics & Governance'
     collaboration: 'Policy research and ethical AI development'}
   {
+<<<<<<< HEAD
 
     name: 'University of Tokyo',
     location: 'Tokyo, Japan',
@@ -138,18 +145,14 @@ function ResearchPage() {
 
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {/* Hero section */}
       <div className=&quot;relative isolate px - 6 pt - 14 lg:px - 8&quot;>;
         <div className=&quot;mx - auto max - w-2xl py - 32 sm:py - 48 lg:py - 56 & quot;>;
           <div className=&quot;text - center & quot;>;
             <h1 className=&quot;text - 4xl font - bold tracking - tight text - white sm:text - 6xl & quot;>;
               Research &{' '}
-
-
-            <p className="mt-6 text-lg leading-8 text-gray-300">
-              Pushing the boundaries of artificial intelligence through groundbreaking research, 
-
-
               innovative discoveries, and academic collaboration.
             </p>
           </div>
@@ -162,12 +165,8 @@ function ResearchPage() {
           <p className=&quot;mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl&quot;>
             Focus Areas
           </p>
-
-
-          <p className="mt-6 text-lg leading-8 text-gray-300">
-            Our research spans the cutting edge of AI and technology, driving innovation 
-
-
+          <p className=&quot;mt-6 text-lg leading-8 text-gray-300&quot;>
+            Our research spans the cutting edge of AI and technology, driving innovation
             and advancing the state of the art.
           </p>
         </div>
@@ -187,6 +186,7 @@ function ResearchPage() {
                       <span className=&quot;text-sm text-gray-400&quot;>{topic}</span>
                     </div>
                   ))}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -234,6 +234,8 @@ export default function ResearchPage() {;
   return (;
     <div className=&quot;bg-black&quot;>
 const Page: React.FC<PageProps> = ({ className }) => {
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <div className="bg-black">
       {/* Hero section */}
@@ -246,10 +248,6 @@ const Page: React.FC<PageProps> = ({ className }) => {
                 Innovation
               </span>
             </h1>
-            <p className=&quot;mt-6 text-lg leading-8 text-gray-300&quot;>
-              Pushing the boundaries of artificial intelligence through groundbreaking research
-            <p className="mt-6 text-lg leading-8 text-gray-300">
-              Pushing the boundaries of artificial intelligence through groundbreaking research, 
               innovative discoveries, and academic collaboration.
             </p>
           </div>
@@ -262,10 +260,6 @@ const Page: React.FC<PageProps> = ({ className }) => {
           <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
             Focus Areas
           </p>
-          <p className=&quot;mt-6 text-lg leading-8 text-gray-300&quot;>
-            Our research spans the cutting edge of AI and technology, driving innovation
-          <p className="mt-6 text-lg leading-8 text-gray-300">
-            Our research spans the cutting edge of AI and technology, driving innovation 
             and advancing the state of the art.
           </p>
         </div>
@@ -301,16 +295,17 @@ const Page: React.FC<PageProps> = ({ className }) => {
       </div>;
       {/* Recent Publications */}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base font-semibold leading-7 text-blue-400">Publications</h2>
           <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
-
-
             Recent Research
           </p>
           <p className="mt-6 text-lg leading-8 text-gray-300">
@@ -329,7 +324,10 @@ const Page: React.FC<PageProps> = ({ className }) => {
                     'bg-gray-600/20 text-gray-400'
                   }`}>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     {publication.impact}
                   </span>;
                   <span className=&quot;text - sm text - gray - 400 & quot;>{publication.year}</span>;
@@ -347,6 +345,7 @@ const Page: React.FC<PageProps> = ({ className }) => {
                   View Publication <span aria - hidden=&quot;true & quot;>→</span>;
                 </Link>;
               </div>))}
+<<<<<<< HEAD
 =======
 <div className=&quot;mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8&quot;>
         <div className=&quot;mx-auto max-w-2xl lg:text-center&quot;>
@@ -392,19 +391,20 @@ const Page: React.FC<PageProps> = ({ className }) => {
               </div>
             ))}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           </div>;
         </div>;
       </div>;
       {/* Research Impact */}
-
-
+            Research Influence
+          </p>
+          <p className=&quot;mt-6 text-lg leading-8 text-gray-300&quot;>
+            Our research has made significant contributions to the field
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base font-semibold leading-7 text-blue-400">Impact</h2>
           <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
-
-
-
             Research Influence
           </p>
           <p className="mt-6 text-lg leading-8 text-gray-300">
@@ -422,9 +422,12 @@ const Page: React.FC<PageProps> = ({ className }) => {
               </div>
             ))}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 <div className=&quot;mx - auto mt - 32 max - w-7xl px - 6 sm:mt - 40 lg:px - 8&quot;>;
         <div className=&quot;mx - auto max - w-2xl lg:text - center & quot;>;
           <h2 className=&quot;text - base font - semibold leading - 7 text - blue - 400 & quot;>Impact</h2>;
@@ -445,6 +448,7 @@ const Page: React.FC<PageProps> = ({ className }) => {
                 <p className=&quot;mt - 2 text - sm text - gray - 400 & quot;>{item.description}</p>;
               </div>))}
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 <div className=&quot;mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8&quot;>
@@ -455,6 +459,8 @@ const Page: React.FC<PageProps> = ({ className }) => {
           </p>
           <p className=&quot;mt-6 text-lg leading-8 text-gray-300&quot;>
             Our research has made significant contributions to the field
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base font-semibold leading-7 text-blue-400">Impact</h2>
@@ -480,15 +486,14 @@ const Page: React.FC<PageProps> = ({ className }) => {
         </div>;
       </div>;
       {/* Academic Collaborations */}
-
-
+            Academic Partnerships
+          </p>
+          <p className=&quot;mt-6 text-lg leading-8 text-gray-300&quot;>
+            We collaborate with leading academic institutions worldwide to advance
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base font-semibold leading-7 text-blue-400">Collaborations</h2>
           <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
-
-
-
             Academic Partnerships
           </p>
           <p className="mt-6 text-lg leading-8 text-gray-300">
@@ -507,6 +512,7 @@ const Page: React.FC<PageProps> = ({ className }) => {
                 <div className=&quot;space-y-3 text-gray-300&quot;>
                   <p className=&quot;flex items-center gap-2&quot;>
                     <GlobeAltIcon className=&quot;h-5 w-5 text-blue-400&quot; />
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -534,6 +540,8 @@ const Page: React.FC<PageProps> = ({ className }) => {
                   <p className=&quot;flex items - center gap - 2&quot;>;
                     <GlobeAltIcon className=&quot;h - 5 w - 5 text - blue - 400 & quot; />;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     {partner.location}
                   </p>;
                   <p className=&quot;flex items - center gap - 2&quot;>;
@@ -542,6 +550,7 @@ const Page: React.FC<PageProps> = ({ className }) => {
                   </p>;
                   <p className=&quot;flex items - center gap - 2&quot;>;
                     <UserGroupIcon className=&quot;h - 5 w - 5 text - blue - 400 & quot; />;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <div className=&quot;mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8&quot;>
@@ -583,6 +592,8 @@ const Page: React.FC<PageProps> = ({ className }) => {
                   <p className="flex items-center gap-2">
                     <UserGroupIcon className="h-5 w-5 text-blue-400" />
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     {partner.collaboration}
                   </p>;
                 </div>;
@@ -591,14 +602,10 @@ const Page: React.FC<PageProps> = ({ className }) => {
         </div>;
       </div>;
       {/* CTA section */}
-
-
-      <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
-        <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
-
-
-
+            Join our research community
+          </h2>
+          <p className=&quot;mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-300&quot;>
+            Interested in collaborating on cutting-edge AI research?
             Join our research community
           </h2>
           <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-300">
@@ -621,6 +628,7 @@ const Page: React.FC<PageProps> = ({ className }) => {
     </div>
   )
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -659,6 +667,8 @@ const Page: React.FC<PageProps> = ({ className }) => {
           </h2>
           <p className=&quot;mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-300&quot;>
             Interested in collaborating on cutting-edge AI research?
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">

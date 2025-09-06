@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 async function psi(url, strategy = 'mobile', key) {
@@ -24,6 +25,8 @@ exports && exports.handler = async function () {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     const pages = ['/', '/learn', '/dao', '/certifications'];
     const results = [];
     ${p}`;
@@ -32,6 +35,7 @@ exports && exports.handler = async function () {
         const desktop = await psi(url, 'desktop', key);
         results && results.push({ url, mobile, desktop });
       } catch (e) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -73,11 +77,14 @@ exports.handler = async function () {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       }
     }
     const owner = process.env.GITHUB_OWNER;
     const repo = process.env.GITHUB_REPO;
     const token = process.env.GITHUB_TOKEN;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -111,6 +118,8 @@ if ( {) {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         content,
         message: 'chore (automation): weekly PageSpeed report',
         token,
@@ -118,6 +127,7 @@ if ( {) {
       });
     }
     return {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -149,6 +159,8 @@ function psi() {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
   const resp = await fetch (endpoint.to_string ()),
   if (throw new Error (`PSI HTTP ${resp.status}`), ) {
@@ -173,6 +185,7 @@ exports.handler = async function () {
       }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -225,6 +238,8 @@ exports && exports.handler = async function() {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     const baseUrl = process.env.URL |process.env.DEPLOY_URL |''
     const key = process.env.PSI_API_KEY |''
     const pages = ['//learn/dao/certifications']
@@ -232,6 +247,7 @@ exports && exports.handler = async function() {
     for (const p of pages) {
       const url = `${baseUrl}${p}`
       try {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -276,3 +292,6 @@ exports && exports.handler = async function() {
 =======
 },
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+},
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import React from './react';
 import { Clock } from './lucide-react';
@@ -14,21 +15,29 @@ interface TalentCardAvailabilityProps {
   availability_type: string;
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {Clock} from "lucide-react";
 interface TalentCardAvailabilityProps {;
   availabilityType: string;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 export function TalentCardAvailability(): any ({ availabilityType }: TalentCardAvailabilityProps) {;
 =======
 =======
 export function TalentCardAvailability(): any ({ availabilityType }: TalentCardAvailabilityProps) {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+export function TalentCardAvailability(): any ({ availabilityType }: TalentCardAvailabilityProps) {;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
   };
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -67,6 +76,8 @@ export function TalentCardAvailability({ availabilityType }: TalentCardAvailabil
   }
   };
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from "react",
 import { Clock } from "lucide-react",
 interface TalentCardAvailabilityProps {
@@ -79,13 +90,17 @@ interface TalentCardAvailabilityProps {;
 ;
 export function TalentCardAvailability({ availabilityType }: TalentCardAvailabilityProps) {;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   // Format availability status;
   const getAvailabilityColor = (status: string) => {;
     switch (status) {;
       case 'full-time':;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -173,17 +188,26 @@ export function TalentCardAvailability({ availabilityType } TalentCardAvailabili
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   },
 
+=======
+      case 'part-time':;
+        return 'bg-yellow-500/20 text-yellow-400';
+        return 'Full-time';
+      case 'part-time':;
+        return 'Part-time';
+    }
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <div className={`flex items-center gap-1 px-2 py-0.5 rounded-full text-xs ${getAvailabilityColor(availabilityType)}`}>
       <Clock className="h-3 w-3" />
       <span>{getAvailabilityLabel(availabilityType)}</span>
     </div>
   )
-
-
-
+}
+  }
 
   return (
+<<<<<<< HEAD
 
 <<<<<<< HEAD
     <div className={`flex items-center gap-1 px-2 py-0 && 0.5 rounded-full text-xs ${getAvailabilityColor(availabilityType)}`}>;
@@ -200,6 +224,8 @@ export function TalentCardAvailability({ availabilityType } TalentCardAvailabili
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export /**
  * TalentCardAvailability - Function description
  */
@@ -218,6 +244,7 @@ function TalentCardAvailability() {
     }
   }
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -271,3 +298,5 @@ default: </div>)
 }
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

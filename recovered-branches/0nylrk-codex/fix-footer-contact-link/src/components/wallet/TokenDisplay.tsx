@@ -1,7 +1,10 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
-:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/wallet/TokenDisplay.tsx
 
+<<<<<<< HEAD
 =======
 :recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/wallet/TokenDisplay.tsx
 
@@ -13,7 +16,12 @@ import {Button} from "@/components/ui/button";
 import {Skeleton} from "@/components/ui/skeleton";
 
 export function TokenDisplay() {
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export function TokenDisplay() {;
+
+
+
   const { wallet, loading } = useWallet();
 import React from "react",
 import { BadgeDollarSign } from "lucide-react",
@@ -51,6 +59,7 @@ export function TokenDisplay() {
               </Button>
             </div>
           </div>
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
@@ -67,12 +76,17 @@ export function TokenDisplay() {;
 =======
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         )}
       </CardContent>
     </Card>
   )
 }
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from "react",;
 import { BadgeDollarSign } from "lucide-react",;
 import { useWallet } from "@/hooks/useWallet",;
@@ -80,10 +94,14 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Button } from "@/components/ui/button",;
 import { Skeleton } from "@/components/ui/skeleton",;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export function TokenDisplay() {;
   const { wallet, loading } = useWallet();
   return (;
 
+<<<<<<< HEAD
 =======
 ;
 export function TokenDisplay() {;
@@ -94,6 +112,8 @@ export function TokenDisplay() {;
   const { wallet, loading } = useWallet();
   return (;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <Card>;
       <CardHeader className="flex flex-row items-center justify-between pb-2">;
         <div>;
@@ -106,9 +126,12 @@ export function TokenDisplay() {;
         {loading ? (;
           <Skeleton className="h-12 w-28" />;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
         ) :(;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         ) : (;
           <div className="flex flex-col gap-2">;
             <div className="flex items-end">;
@@ -120,7 +143,10 @@ export function TokenDisplay() {;
             </p>;
             <div className="mt-2">;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 :recovered - branches / 0nylrk - codex / fix - footer - contact - link / src / components / wallet / TokenDisplay.tsx;
 import React from './react';
 import { BadgeDollarSign } from './lucide-react';
@@ -155,13 +181,17 @@ function TokenDisplay() {
               Use your tokens to boost visibility, access premium features, or convert to credits.;
             </p>;
             <div className="mt - 2">;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <Button variant="outline" size="sm">;
                 View Wallet;
               </Button>;
             </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
           </div>)}
@@ -187,3 +217,6 @@ function TokenDisplay() {
 }
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

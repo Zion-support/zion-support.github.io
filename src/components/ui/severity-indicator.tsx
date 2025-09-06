@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 size === "sm" ? "h-3 w-3" : size === "lg" ? "h-5 w-5" : "h-4 w-4"
 
 <<<<<<< HEAD
@@ -34,11 +35,27 @@ import { AlertTriangle, AlertCircle, CheckCircle } from 'lucide-react'
 
 
   className?: string
+=======
+import React from "react",
+import { cn } from "@/lib/utils",
+import { AlertTriangle, AlertCircle, CheckCircle } from 'lucide-react'
+
+interface SeverityIndicatorProps {
+  severity: "safe" | "suspicious" | "dangerous",
+  showIcon?: boolean,
+  showText?: boolean,
+  size?: "sm" | "md" | "lg",
+
+
+  className?: string
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 export function SeverityIndicator({ 
   severity, 
   showIcon = true, 
   showText = true, 
+<<<<<<< HEAD
   size = "md"
       default:
         return <CheckCircle className={cn(
@@ -91,6 +108,10 @@ export function SeverityIndicator({
       default:
         return <CheckCircle className={cn(
           size === "sm" ? "h-3 w-3" : size === "lg" ? "h-5 w-5" : "h-4 w-4"
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   size = "md",
   className 
 }: SeverityIndicatorProps) {
@@ -115,6 +136,7 @@ export function SeverityIndicator({
   }
 
   return (
+<<<<<<< HEAD
     <div className={cn("flex items-center gap-1", className)}>
       {showIcon && getSeverityIcon()}
       {showText && <span className="capitalize text-sm">{severity}</span>}
@@ -170,54 +192,19 @@ export function SeverityIndicator({;
 
 }
 ;
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
       {showIcon && getSeverityIcon()}
       {showText && <span className="capitalize text-sm">{severity}</span>}
     </div>
   )
-import React from "react",;
-import { cn } from "@/lib/utils",;
-import { AlertTriangle, AlertCircle, CheckCircle } from 'lucide-react';
-interface SeverityIndicatorProps {;
-  severity: "safe" | "suspicious" | "dangerous",;
-  showIcon?: boolean,;
-  showText?: boolean,;
-  size?: "sm" | "md" | "lg",;
-  className?: string;
-}
-;
-export function SeverityIndicator({;
-  severity,;
-  showIcon = true,;
-  showText = true,;
-  size = "md",;
-  className;
-}: SeverityIndicatorProps) {;
-  const getSeverityIcon = () => {;
-    switch (severity) {;
-      case 'dangerous':;
-        return <AlertCircle className={cn(;
-          size === "sm" ? "h-3 w-3" : size === "lg" ? "h-5 w-5" : "h-4 w-4",;
-          "text-destructive";
-        )} />,;
-      case 'suspicious':;
-        return <AlertTriangle className={cn(;
-          size === "sm" ? "h-3 w-3" : size === "lg" ? "h-5 w-5" : "h-4 w-4",;
-          "text-amber-500";
-        )} />,;
-      default:;
-        return <CheckCircle className={cn(;
-          size === "sm" ? "h-3 w-3" : size === "lg" ? "h-5 w-5" : "h-4 w-4";
-          "text-green-500";
-        )} />;
-    }
-  };
-  return (;
-    <div className={cn("flex items-center gap-1", className)}>;
       {showIcon && getSeverityIcon()}
       {showText && <span className="capitalize text-sm">{severity}</span>}
     </div>
   );
+<<<<<<< HEAD
 };
 }
 ;
@@ -231,3 +218,5 @@ export function SeverityIndicator({;
 }
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

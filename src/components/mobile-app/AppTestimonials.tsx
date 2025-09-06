@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import React from "react";
 import React from "react";
@@ -33,6 +34,9 @@ const testimonials = [
 const testimonials = [
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 {
+=======
+  {
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     name: 'Sarah Williams'
     role: 'Tech Recruiter'
     text: 'As a recruiter, this app has saved me countless hours. The talent quality is exceptional and the mobile interface is intuitive.'
@@ -40,6 +44,7 @@ const testimonials = [
     avatar: '/placeholder.svg'
   }
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     name: 'Michael Chen',
@@ -62,12 +67,16 @@ const testimonials = [
     avatar: '/placeholder.svg',
   },]
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  },]
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export const AppTestimonials: React.FC = () => {
   return (    avatar: "/placeholder.svg";
   }
 ];
 export const AppTestimonials: React.FC = () => {
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -127,6 +136,8 @@ export const AppTestimonials: React.FC = () => {;
 
 ];
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <section className='py-16 bg-zion-blue'>
       <div className='container mx-auto px-4'>
         <div className='text-center mb-12'>
@@ -150,34 +161,13 @@ export const AppTestimonials: React.FC = () => {;
                     <Star
                       key={i}
                       className={`h-5 w-5 ${i < testimonial.rating ? 'text-yellow-400 fill-yellow-400' : 'text-gray-400'}`}                    />
-import React from "react",
-import { Star } from 'lucide-react'
-import { Card, CardContent, CardFooter } from "@/components/ui/card",
-
-const testimonials = [
-  {
-    name: "Alex Johnson",
-    role: "AI Developer",
-    text: "The Zion app has completely changed how I find work. The AI matching is spot on and I've landed 3 contracts in my first month!",
-    rating: 5,
-    avatar: "/placeholder.svg"
-  },
-  {
-    name: "Sarah Williams",
-    role: "Tech Recruiter",
-    text: "As a recruiter, this app has saved me countless hours. The talent quality is exceptional and the mobile interface is intuitive.",
-    rating: 5,
-    avatar: "/placeholder.svg"
-  },
-  {
-    name: "Michael Chen",
-    role: "Full Stack Developer",
-    text: "I love being able to check job matches and respond to clients while on the go. The notification system is particularly useful.",
-    rating: 4,
     avatar: "/placeholder.svg"
   }
 ],
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 export const AppTestimonials: React.FC = () => {
   return (
@@ -188,9 +178,12 @@ export const AppTestimonials: React.FC = () => {
           <p className="text-lg text-gray-300 max-w-2xl mx-auto">
             Join thousands of satisfied users who have transformed their tech careers with the Zion mobile app.
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -200,11 +193,14 @@ export const AppTestimonials: React.FC = () => {
                 <div className="flex mb-4">
                   {Array.from({ length: 5 }).map((_, i) => (
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
                     <Star 
                       key={i}
                       className={`h-5 w-5 ${i < testimonial.rating ? "text-yellow-400 fill-yellow-400" : "text-gray-400"}`}
                     />
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   ))}
                 </div>
                 <p className="text-gray-200 mb-6">"{testimonial.text}"</p>
@@ -215,6 +211,7 @@ export const AppTestimonials: React.FC = () => {
                     <img src={testimonial.avatar} alt={testimonial.name} className="h-full w-full object-cover" loading="lazy" />
                   </div>
                   <div>
+<<<<<<< HEAD
                     <p className='font-semibold text-white'>
                       {testimonial.name}
                     </p>
@@ -274,19 +271,26 @@ export const AppTestimonials: React.FC = () => {
                     <img src={testimonial.avatar} alt={testimonial.name} className="h-full w-full object-cover" loading="lazy" />
                   </div>
                   <div>
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 
 
                     <p className="font-semibold text-white">{testimonial.name}</p>
 <<<<<<< HEAD
+<<<<<<< HEAD
                     <p className="text-sm text-gray-400">{testimonial.role}</p>
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+                    <p className="text-sm text-gray-400">{testimonial.role}</p>
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   </div>
                 </div>
               </CardFooter>
             </Card>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -326,6 +330,8 @@ export const AppTestimonials: React.FC = () => {"
   )
 }
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 }</div> </div> </section>) 
@@ -399,6 +405,7 @@ export const AppTestimonials: React.FC = () => {;
               </CardFooter>;
             </Card>;
           ))}
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -472,6 +479,8 @@ export const AppTestimonials: React.FC = () => {;
             </Card>;
           ))}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         </div>;
       </div>;
     </section>;
@@ -483,7 +492,8 @@ export const AppTestimonials: React.FC = () => {;
   );
 };
 
-
+  );
+};
 
         <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6'>;
           {testimonials.map ((testimonial, index) => (
@@ -569,7 +579,10 @@ export const AppTestimonials: React.FC = () => {";
 '"},
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

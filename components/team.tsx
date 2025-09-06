@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -50,6 +51,8 @@ const OrgChartPage = dynamic(() => import('../components/org/OrgChartPage'), {;
 
 export default function TeamPage() {
   return <OrgChartPage />;const OrgChartPage = dynamic(() => import('../components/org/OrgChartPage'), { ssr: false })
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export default function TeamPage() {;
   return <OrgChartPage />;const OrgChartPage = dynamic(() => import('../components/org/OrgChartPage'), { ssr: false }),
 export default function TeamPage() {;
@@ -60,5 +63,34 @@ export default function TeamPage() {;
 export default function TeamPage() {
   return <OrgChartPage />;
 }
+  return <OrgChartPage />;
 }
+
+export default function TeamPage() {;
+  return <OrgChartPage />;const OrgChartPage = dynamic(() => import('../components/org/OrgChartPage'), { ssr: false }),
+
+export default function TeamPage() {;
+  return <OrgChartPage />;const OrgChartPage = dynamic(() => import('../components/org/OrgChartPage'), { ssr: false }),;
+export default function TeamPage() {;
+  return <OrgChartPage />;
+import dynamic from 'next / dynamic';
+;
+const OrgChartPage = dynamic (() => import ('../components / org / OrgChartPage'), {
+  ssr: false,
+});
+;
+export default /**
+ * TeamPage - Function description
+ */
+function TeamPage() {
+  return <OrgChartPage />;const OrgChartPage = dynamic (() => import ('../components / org / OrgChartPage'), { ssr: false }),
+export default /**
+ * TeamPage - Function description
+ */
+function TeamPage() {
+  return <OrgChartPage />;
+}
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

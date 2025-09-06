@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 
@@ -11,6 +12,8 @@ import {Footer} from "@/components/Footer";
 import {LoginContent} from "@/components/auth/login";
 export default function Login() {;
   const { isAuthenticated, user } = useAuth();
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { Navigate } from "react-router-dom",
 import { useAuth } from "@/hooks/useAuth",
 import { Header } from "@/components/Header",
@@ -23,7 +26,14 @@ import { LoginContent } from "@/components/auth/login",
 export default function Login() {
   const { isAuthenticated, user } = useAuth(),
   
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   // Redirect if user is already logged in and has completed profile
   if (isAuthenticated && user?.profileComplete) {
     return <Navigate to="/" />
@@ -31,6 +41,7 @@ export default function Login() {
   // Redirect to onboarding if user is authenticated but hasn't completed profile
   if (isAuthenticated && !user?.profileComplete) {
     return <Navigate to="/onboarding" />
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import {Navigate} from "react-router-dom";
@@ -78,6 +89,10 @@ export default function Login() {;
   }
 <<<<<<< HEAD
 =======
+=======
+  }
+  }
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { Navigate } from './react-router-dom';
 import { use_auth } from '@/hooks / use_auth';
 import { Header } from '@/components / Header';
@@ -103,8 +118,8 @@ if ( {) {
 }
     return <Navigate to="/onboarding" />;
   }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   return (
+<<<<<<< HEAD
 =======
 import { Navigate } from "react-router-dom",;
 import { useAuth } from "@/hooks/useAuth",;
@@ -129,19 +144,22 @@ export default function Login() {;
 ;
   return (;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <>;
       <Header />;
       <LoginContent />;
       <Footer />;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
     </>);
 }
 
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
     </>;
@@ -162,3 +180,5 @@ export default function Login() {;
 }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

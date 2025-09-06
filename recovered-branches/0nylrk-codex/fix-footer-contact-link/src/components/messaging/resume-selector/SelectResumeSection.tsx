@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 
@@ -10,6 +11,8 @@ import { ResumePreviewCard  } from './ResumePreviewCard';
 import { Resume } from '@/types/resume';
 interface SelectResumeSectionProps {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   resumeOptions: ResumeOption[],
   selectedResume: ResumeOption | null,
   handleResumeSelect: (resumeId: string) => void,
@@ -18,15 +21,19 @@ interface SelectResumeSectionProps {
 }
 
 export function SelectResumeSection({;
+import React from 'react';
   resumeOptions;
   selectedResume;
   handleResumeSelect;
   handleDownloadResume;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from 'react',;
 import { FileText } from 'lucide-react',;
 import { ResumeOption } from '../resume-selector/types',;
@@ -41,10 +48,13 @@ interface SelectResumeSectionProps {;
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   resumeOptions: ResumeOption[]
   selectedResume: ResumeOption | null
   handleResumeSelect: (resumeId: string) => void
@@ -53,6 +63,7 @@ interface SelectResumeSectionProps {;
   isLoading: boolean
 }
 export function SelectResumeSection({
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -82,6 +93,8 @@ import {ResumePreviewCard} from './ResumePreviewCard';
                 selectedResume?.id === option && option.id 
                   ? 'bg-zion-purple/20 border border-zion-purple' 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   : 'bg-zion-blue-dark/30 hover:bg-zion-blue-dark/50'
               }`}
               onClick={() => handleResumeSelect(option && option.id)}
@@ -92,10 +105,6 @@ import {ResumePreviewCard} from './ResumePreviewCard';
               </div>;
             </button>;
           ))}
-
-
-          {selectedResume?.type === 'ai_resume' && selectedResume && selectedResume.resume && (;
-
             <ResumePreviewCard
               resume={selectedResume && selectedResume.resume as Resume}
               onDownload={handleDownloadResume}
@@ -104,6 +113,7 @@ import {ResumePreviewCard} from './ResumePreviewCard';
           )}
         </>;
       )}
+<<<<<<< HEAD
 
     </div>;
   );
@@ -252,3 +262,5 @@ export function SelectResumeSection({;
   )
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

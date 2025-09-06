@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -7,6 +8,8 @@
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 #!/usr/bin/env node,"}),"})
 import { execSync } from,"}),"})
   'child_process',"}),"})
@@ -16,6 +19,7 @@ import path from,"}),"})
   'path',"}),"})
 import { fileURLToPath } from,"}),"})
   'url',"}),"})
+<<<<<<< HEAD
 const __dirname = path && path.dirname(__filename),"}),"})
 // // // // // // // console && console.log(,"}),"})
   '🔒 Starting continuous security audit automation...'),"}),"})
@@ -350,6 +354,8 @@ const __dirname = path && path.dirname(__filename),"}),"})
 ,"}),"})
 // // // console && console.log(,"}),"})
   '🔒 Starting continuous security audit automation...'),"}),"})
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 // Get automation interval from environment variable ("default": 4 hours),"}),"})
 const AUTOMATION_INTERVAL = parseInt(process ; // 4 hours,"}),"})
 async function runSecurityAudit() {,"}),"})
@@ -651,6 +657,7 @@ async: function runContinuous() {
     // // // // // // // console && console.log('📦 Checking for known vulnerabilities...';);
     try {'
       execSync('npm audit --json;
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -676,3 +683,5 @@ async: function runContinuous() {
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

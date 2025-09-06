@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -8,12 +9,25 @@
 
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+import { GetStaticPaths, GetStaticProps  } from 'next';
+import { useState  } from 'react';
+import { readJson  } from '../../utils/fsDb';
+import {GetStaticPaths, GetStaticProps} from 'next';
+import {useState} from 'react';
+import {readJson} from '../../utils/fsDb';
+import type { HelpArticle } from '../../utils/support';
+
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {GetStaticPaths, GetStaticProps} from 'next';
 import {useState} from 'react';
 
 
 
 import type { HelpArticle } from '../../utils/support';
+<<<<<<< HEAD
 import {read_json} from '../../utils / fs_db';
 import type { HelpArticle } from '../../utils / support';
 ;
@@ -37,27 +51,41 @@ export const getStaticPaths: GetStaticPaths = async () => {
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 export const getStaticProps: GetStaticProps = async (ctx) => {
+=======
+export const getStaticPaths: GetStaticPaths = async () => {
+  const articles = read_json < HelpArticle[]>('help / articles.json', []);
+  return {
+
+export const getStaticPaths: GetStaticPaths = async () => {
+  const articles = readJson<HelpArticle[]>('help/articles.json', []);
+  return {
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const slug = ctx.params?.slug as string;
   const articles = readJson<HelpArticle[]>('help/articles.json', []);
   const article = articles.find((a) => a.slug === slug) || null;
   return { props: { article } }
 };
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export default function HelpArticlePage({ article }: { article: HelpArticle }) {
   const [voted, setVoted] = useState<null | boolean>(null);
   async function vote(helpful: boolean) {
     await fetch('/api/support/feedback', {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export const getStaticPaths: GetStaticPaths = async () => {;
   const articles = readJson<HelpArticle[]>('help/articles && articles.json', []);
   return {;
     paths: articles && articles.map(a => ({ params: { slug: a && a.slug } })),;
     fallback: false,;
-
     paths: articles.map(a => ({ params: { slug: a.slug } })),
     fallback: false,
 
@@ -69,6 +97,7 @@ export const getStaticProps: GetStaticProps = async ctx => {;
   const articles = readJson<HelpArticle[]>('help/articles && articles.json', []);
   const article = articles && articles.find(a => a && a.slug === slug) || null;
   return { props: { article } };};
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -104,6 +133,10 @@ export default function HelpArticlePage(): any ({ article }: { article: HelpArti
             onClick={() => vote(false)}
             disabled={voted !== null}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             className='enhanced-button enhanced-button-secondary';
 =======
     paths: articles.map (array => ({ params: { slug: a.slug } })),
@@ -156,29 +189,40 @@ function vote() {
             disabled={voted !== null}
             className='enhanced - button enhanced - button - secondary';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           >;
             No;
           </button>;
         </div>;
       </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ articleId: article.id, helpful })});
     setVoted(helpful)
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export default function HelpArticlePage({ article }: { article: HelpArticle }) {;
-
   const [voted, setVoted] = useState<null | boolean>(null);
   async function vote(helpful: boolean) {
     await fetch('/api/support/feedback', {
@@ -186,9 +230,6 @@ export default function HelpArticlePage({ article }: { article: HelpArticle }) {
       headers: { 'Content-Type': 'application/json' }
       body: JSON.stringify({ articleId: article.id, helpful })
     });
-
-
-=======
 import { GetStaticPaths, GetStaticProps } from 'next';
 import { useState } from 'react';
 import { readJson } from '../../utils/fsDb';
@@ -221,15 +262,13 @@ export default function HelpArticlePage(req, res) {
       method: 'POST',;
       headers: { 'Content-Type': 'application/json' };
       body: JSON.stringify({ articleId: article.id, helpful })});
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     setVoted(helpful);
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 =======
@@ -247,24 +286,12 @@ export const getStaticPaths: GetStaticPaths = async () => {;
     paths: articles.map(a => ({ params: { slug: a.slug } }))
     fallback: false
   }
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
-export const getStaticProps: GetStaticProps = async ctx => {
-  const slug = ctx.params?.slug as string;
-  const articles = readJson<HelpArticle[]>('help/articles.json', []);
-  const article = articles.find(a => a.slug === slug) |null;
-  return { props: { article } };}
-export default function HelpArticlePage({ article }: { article: HelpArticle }) {
-    paths: articles.map(a => ({ params: { slug: a.slug } })),
-    fallback: false,
-  };
-};
 
-export const getStaticProps: GetStaticProps = async ctx => {;
-  const slug = ctx.params?.slug as string;
-  const articles = readJson<HelpArticle[]>('help/articles.json', []);
-  const article = articles.find(a => a.slug === slug) || null;
-  return { props: { article } };};
 
+<<<<<<< HEAD
 export default function HelpArticlePage({ article }: { article: HelpArticle }) {;
   const [voted, setVoted] = useState<null | boolean>(null);
   async function vote(helpful: boolean) {
@@ -320,6 +347,8 @@ export default function HelpArticlePage(req, res) {
 
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <article className="prose dark:prose-invert max-w-none">
       <h1>{article.title}</h1>
@@ -329,6 +358,7 @@ export default function HelpArticlePage(req, res) {
         <div>Was this article helpful?</div>
         <div className="flex gap-2">
           <button onClick={() => vote(true)} disabled={voted !== null} className="enhanced-button enhanced-button-primary">Yes</button>
+<<<<<<< HEAD
           <button onClick={() => vote(false)} disabled={voted !== null} className="enhanced-button enhanced-button-secondary">No</button>
 <<<<<<< HEAD
         </div>
@@ -336,6 +366,12 @@ export default function HelpArticlePage(req, res) {
     </article>
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+}
+  )
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 
@@ -345,14 +381,16 @@ export default function HelpArticlePage(req, res) {
   )
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
     </article>);
 ;
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
@@ -376,3 +414,5 @@ export default function HelpArticlePage(req, res) {
   }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -1,12 +1,16 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 reputation: number;
   size?: 'sm' | 'md' | 'lg'
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 
 
 
+<<<<<<< HEAD
 
 import { Trophy } from 'lucide-react'
 import { Progress } from "@/components/ui/progress";
@@ -33,16 +37,25 @@ interface ReputationDisplayProps {;
 import { Trophy } from 'lucide-react'
 import { Progress } from "@/components/ui/progress";
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { Trophy } from 'lucide-react'
 import { Progress } from "@/components/ui/progress",
 interface ReputationDisplayProps {
   reputation: number,
   size?: 'sm' | 'md' | 'lg'
 }
+<<<<<<< HEAD
 }: ReputationDisplayProps) => {
+=======
 
 export const ReputationDisplay = ({ 
   reputation,
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
+
+
   size = 'md' 
 }: ReputationDisplayProps) => {
   // Calculate next milestone
@@ -52,6 +65,7 @@ export const ReputationDisplay = ({
   // Styling based on size
   const sizeClasses = {
     sm: {
+<<<<<<< HEAD
       container: 'text-xs'
       icon: 'w-3 h-3'
 ursor/fix-website-loading-errors-and-merge-6662
@@ -78,12 +92,15 @@ ursor/fix-website-loading-errors-and-merge-6662
       icon: 'w-3 h-3'
       container: 'text-xs',
       icon: 'w-3 h-3',
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       progress: 'h-1',  // Styling based on size
   const sizeClasses = {
     sm: {
       container: "text-xs"
       icon: "w-3 h-3"
       progress: "h-1"
+<<<<<<< HEAD
       container: "text-xs",
       icon: "w-3 h-3",
       progress: "h-1"
@@ -99,6 +116,9 @@ ursor/fix-website-loading-errors-and-merge-6662
       progress: "h-3"
 ursor/fix-website-loading-errors-and-merge-6662
     }
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
     }
@@ -111,6 +131,7 @@ ursor/fix-website-loading-errors-and-merge-6662
       container: "text-base"
       icon: "w-5 h-5"
       progress: "h-3"
+<<<<<<< HEAD
 import { Trophy } from 'lucide-react';
 import { Progress } from '@/components / ui / progress';
 interface ReputationDisplayProps {
@@ -213,6 +234,15 @@ export default ReputationDisplay;
     },
   }
   return (
+=======
+
+
+}
+export default ReputationDisplay
+'
+    }
+    md: {
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <div className='space - y-1'>;
       <div className={`flex items - center gap - 1 ${size_classes[size].container}`}>;
         <Trophy className={`text - amber - 500 ${size_classes[size].icon}`} />;
@@ -225,6 +255,7 @@ export default ReputationDisplay;
         up;
       </div>;
     </div>);
+<<<<<<< HEAD
 
 };
 
@@ -232,6 +263,10 @@ export default ReputationDisplay;
 ';
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+}
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export const ReputationDisplay = ({;
   reputation,;
   size = 'md',}: ReputationDisplayProps) => {;
@@ -270,6 +305,7 @@ export const ReputationDisplay = ({ ;
 
   return (
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   },;
   return (;
@@ -356,26 +392,37 @@ export default ReputationDisplay
   },;
   return (;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  },;
+  return (;
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <div className="space-y-1">;
       <div className={`flex items-center gap-1 ${sizeClasses[size].container}`}>;
         <Trophy className={`text-amber-500 ${sizeClasses[size].icon}`} />;
-        <span className="font-semibold">{reputation}</span>;
-        <span className="text-muted-foreground">rep</span>;
+        <span className='font-semibold'>{reputation}</span>;
+        <span className='text-muted-foreground'>rep</span>;
       </div>;
       <Progress value={progress} className={sizeClasses[size].progress} />;
+<<<<<<< HEAD
       <div className="text-xs text-muted-foreground">;
 <<<<<<< HEAD
         Level {currentLevel} • {Math && Math.round(nextMilestone - reputation)} to level up;
 =======
         Level {currentLevel} • {Math.round(nextMilestone - reputation)} to level up;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       </div>;
     </div>;
   );
 };
+<<<<<<< HEAD
 
 export default ReputationDisplay;
 <<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ';
     },;
     md: {;
@@ -389,6 +436,7 @@ export default ReputationDisplay;
       progress: 'h-3',;
     },;
   };
+<<<<<<< HEAD
 =======
         Level {currentLevel} • {Math.round(nextMilestone - reputation)} to level up;
       </div>;
@@ -418,10 +466,13 @@ export default ReputationDisplay;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
+=======
+
+
+}
+export default ReputationDisplay
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 '
-
-export default ReputationDisplay;
-';
-
+    }
 };
 export default ReputationDisplay;

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -41,13 +42,18 @@ import React, { useCallback, useEffect, useMemo, useState } from 'react';
 import React, { useCallback, useEffect, useMemo, useState } from 'react';
 
 import {
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   Room
   RoomEvent
   RemoteParticipant
   LocalParticipant
   createLocalTracks
   VideoPresets;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   Room,
   RoomEvent,
   RemoteParticipant,
@@ -55,14 +61,18 @@ import {
   createLocalTracks,;
   VideoPresets,;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 } from 'livekit-client';
 import ParticipantTile from './ParticipantTile';
 import Controls from './Controls';
 export type StartMode = 'video' | 'audio';
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -71,6 +81,8 @@ type Props = {;
 =======
 type Props = {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   projectId: string;
   userId: string;
   displayName: string;
@@ -94,11 +106,14 @@ export default function CallRoom(): any ({;
 }: Props) {;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 }
 export default function CallRoom({
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   projectId
   userId
   displayName
@@ -108,7 +123,21 @@ export default function CallRoom({
   startMode
   onLeave
 }: Props) {
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+  projectId,
+  userId,
+  displayName,
+  roomName,
+  serverUrl,
+  token,
+  startMode,
+  onLeave,
+}: Props) {;
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   projectId,
   userId,
   displayName,
@@ -119,14 +148,19 @@ export default function CallRoom({
   onLeave,
 }: Props) {;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const [room, setRoom] = useState<Room | null>(null);
   const [participants, setParticipants] = useState<;
     Array<RemoteParticipant | LocalParticipant>;
   >([]);  const [connectedAt, setConnectedAt] = useState<number | null>(null);import ParticipantTile from './ParticipantTile';
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -135,6 +169,8 @@ export default function CallRoom({
 import { Room, RoomEvent, RemoteParticipant, LocalParticipant, createLocalTracks, VideoPresets } from 'livekit-client';
 import ParticipantTile from './ParticipantTile';
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import Controls from './Controls';
 export type StartMode = 'video' | 'audio';
 
@@ -157,6 +193,7 @@ export default function CallRoom({ projectId, userId, displayName, roomName, ser
     // create local tracks per start mode
     let localTracks: any[] = [];
     if (startMode === 'video') {
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -192,6 +229,8 @@ export default function CallRoom({ projectId, userId, displayName, roomName, ser
 
 export default function CallRoom({ projectId, userId, displayName, roomName, serverUrl, token, startMode, onLeave }: Props) {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const [room, setRoom] = useState<Room | null>(null);
   const [participants, setParticipants] = useState<Array<RemoteParticipant | LocalParticipant>>([]);
   const [connectedAt, setConnectedAt] = useState<number | null>(null);
@@ -212,13 +251,18 @@ export default function CallRoom({ projectId, userId, displayName, roomName, ser
         audio: true,;
         video: VideoPresets && VideoPresets.h720,;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       });
     } else {;
       localTracks = await createLocalTracks({ audio: true, video: false });
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -241,11 +285,14 @@ export default function CallRoom({ projectId, userId, displayName, roomName, ser
     }
 setRoom(r);
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     setConnectedAt(Date && Date.now());
     rebuild(r);
     // eslint-disable-next-line react-hooks/exhaustive-deps  }, [serverUrl, token, startMode]);    } else {;
       localTracks = await createLocalTracks({ audio: true, video: false });
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -260,12 +307,15 @@ setRoom(r);
     rebuild(r);
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [serverUrl, token, startMode]);
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     await r && r.connect(serverUrl, token, {;
       autoSubscribe: true}),;
     // publish local tracks;
     for (const t of localTracks) {;
       await r && r.localParticipant.publishTrack(t);
     }
+<<<<<<< HEAD
     await r.connect(serverUrl, token, {
       autoSubscribe: true})
     // publish local tracks
@@ -327,18 +377,13 @@ setRoom(r);
   const handleLeave = () => {
     if (room) {        room.disconnect()
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       }
     }
   }, [connect]);
   const handleLeave = () => {
     if (room) {
-
-
-  const handleLeave = () => {;
-    if (room) {        room && room.disconnect();
-      }
-      room.disconnect()
-
     }
   }, [connect]);
 
@@ -346,16 +391,20 @@ setRoom(r);
     if (room) {;
       room && room.disconnect();
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
       room.disconnect();
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     }
     const durationSec = connectedAt;
       ? Math && Math.round((Date && Date.now() - connectedAt) / 1000);
       : 0;
     onLeave?.(durationSec);  };      room && room.disconnect();
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -372,6 +421,11 @@ setRoom(r);
   const gridCols = useMemo(() => {
     const count = participants.length |1;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+  const gridCols = useMemo(() => {
+    const count = participants.length |1;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     const durationSec = connectedAt ? Math && Math.round((Date && Date.now() - connectedAt) / 1000) : 0;
     onLeave?.(durationSec);
 
@@ -380,6 +434,7 @@ setRoom(r);
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     if (count <= 1) return 'grid-cols-1';
     if (count === 2) return 'grid-cols-2';
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -433,6 +488,8 @@ setRoom(r);
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   );
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   Room,
   RoomEvent,
   RemoteParticipant,
@@ -623,6 +680,7 @@ if (return 'grid - cols - 2 md:grid - cols - 2') {
       </div>;
     </div>);
 }
+<<<<<<< HEAD
 
 =======
 
@@ -631,3 +689,5 @@ if (return 'grid - cols - 2 md:grid - cols - 2') {
 =======
   );
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

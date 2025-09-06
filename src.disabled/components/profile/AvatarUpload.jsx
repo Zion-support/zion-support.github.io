@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -16,4 +17,8 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 "export: function AvatarUpload({ value,onChange }) {" const [url,setUrl] = useState(value) const handleUpload = result => {"";""";"""
 :temp_exclude/src.disabled/components/profile/AvatarUpload.jsx
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+'\"export\": function AvatarUpload({ value,onChange }) {\' const [url,setUrl] = useState(value) const handleUpload = result => {\'';\'"\";
+"export: function AvatarUpload({ value,onChange }) {" const [url,setUrl] = useState(value) const handleUpload = result => {"";""";"""
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 '"export": function AvatarUpload({ value,onChange }) {' const [url,setUrl] = useState(value) const handleUpload = result => {'';'"";""}

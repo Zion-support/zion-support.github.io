@@ -1,11 +1,11 @@
-
-
+  logEvent: (event: any) => null
+  getArticles: () => []
+  getArticleById: (id: string) => null
+}
   logEvent: (event: any) => null,
   getArticles: () => [],
   getArticleById: (id: string) => null;
 };
-
-
 
 export const logSupportEventToOperator = (event: any) => {
   // Add support event logging functionality here
@@ -38,11 +38,26 @@ export function matchIntent(query: string, articles: HelpArticle[]): IntentMatch
   };
 }
 
+export function getArticlesByCategory(articles: HelpArticle[], category: string): HelpArticle[] {
+  return articles && articles.filter(article => article && article.category === category);
+}
 
+export function getArticlesByTag(articles: HelpArticle[], tag: string): HelpArticle[] {
+  return articles && articles.filter(article => article && article.tags.includes(tag));
+}
+
+export function searchArticles(articles: HelpArticle[], query: string): HelpArticle[] {
+  const queryLower = query && query.toLowerCase();
+  return articles && articles.filter(article => 
+    article && article.title.toLowerCase().includes(queryLower) ||
+    article && article.content.toLowerCase().includes(queryLower) ||
+    article && article.tags.some(tag => tag && tag.toLowerCase().includes(queryLower))
+  );
 }
   // Add support functionality here;
   log_event: (event: any) => null,
   get_articles: () => [],
+<<<<<<< HEAD
 <<<<<<< HEAD
   getArticleById: (id: string) => null;
 }
@@ -76,3 +91,8 @@ export const logSupportEventToOperator = (event: any) => {
 
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+}
+}
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

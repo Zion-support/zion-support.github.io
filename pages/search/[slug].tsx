@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -25,10 +26,13 @@ import { SEO  } from '@/components/SEO';
 import { Button  } from '@/components/ui/button';
 import { Input  } from '@/components/ui/input';
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { GetServerSideProps } from 'next';
 import { useRouter } from 'next/router';
 import { useState, useEffect } from 'react';
 import { useAuth } from '@/context/auth/AuthProvider';
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -36,6 +40,8 @@ import { useAuth } from '@/context/auth/AuthProvider';
 import { Search, Filter, Grid, List } from 'lucide-react';import { SEO } from '@/components/SEO';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import ProductCard from '@/components/ProductCard';
 import { TalentCard  } from '@/components/talent/TalentCard';
 import { CategoryCard  } from '@/components/CategoryCard';
@@ -46,12 +52,16 @@ import { BLOG_POSTS  } from '@/data/blog-posts';
 import { useDebounce  } from '@/hooks/useDebounce';
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
 interface BaseSearchResult {
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   id: string;
   title: string;
   description?: string;
   slug: string;
   image?: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
   author?: {;
 =======
@@ -59,21 +69,27 @@ interface BaseSearchResult {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     name: string;
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     avatar?: string;
   }
   tags?: string[];
   category?: string;
   date?: string;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 ;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface ProductSearchResult extends BaseSearchResult {
   type: 'product' | 'equipment';
   price?: number;
   rating?: number;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 ;
@@ -93,20 +109,32 @@ interface TalentSearchResult extends BaseSearchResult {;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  type: 'talent';
+  rating?: number;
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ;
 interface BlogSearchResult extends BaseSearchResult {
   type: 'blog';
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 interface CategorySearchResult extends BaseSearchResult {
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 interface CategorySearchResult extends BaseSearchResult {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   type: 'category';
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 ;
@@ -114,11 +142,14 @@ interface CategorySearchResult extends BaseSearchResult {;
 =======
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 type SearchResult =;
   | ProductSearchResult;
   | TalentSearchResult;
   | BlogSearchResult;
   | CategorySearchResult;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -147,10 +178,13 @@ interface SearchResultsPageProps {;
 =======
 interface SearchResultsPageProps {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   initialResults: SearchResult[];
   query: string;
   slug: string;
   totalCount: number;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -187,15 +221,20 @@ interface SearchResultsPageProps {
   totalCount: number;
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { GetServerSideProps } from 'next';
 import { useRouter } from 'next/router';
 import { useState, useEffect } from 'react';
 import { useAuth } from '@/context/auth/AuthProvider';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Search, Filter, Grid, List } from 'lucide-react'
 =======
 import { Search, Filter, Grid, List } from 'lucide-react';
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { SEO } from '@/components/SEO';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -208,6 +247,7 @@ import { TALENT_PROFILES } from '@/data/talentData';
 import { BLOG_POSTS } from '@/data/blog-posts';
 import { useDebounce } from '@/hooks/useDebounce';
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -329,16 +369,23 @@ const hasPrice = (result: SearchResult): result is ProductSearchResult =>;
 const hasRating = (result: SearchResult): result is ProductSearchResult | TalentSearchResult =>;
   result.type === 'product' || result.type === 'equipment' || result.type === 'talent';
 interface SearchResultsPageProps {;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   initialResults: SearchResult[];
   query: string;
   slug: string;
   totalCount: number;
 interface OfflineFilters {
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   sortBy?: string;
   category?: string;
   minPrice?: number;
   maxPrice?: number;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -445,6 +492,8 @@ function offlineSearch(
           const aPrice = a && a.type === 'product' ? (a && a.price ?? 0) : 0;
           const bPrice = b && b.type === 'product' ? (b && b.price ?? 0) : 0;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           return aPrice - bPrice;        });
         break;
       case 'price_desc':;
@@ -454,11 +503,16 @@ function offlineSearch(
           return bPrice - aPrice;        });
         break;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
             b.type === 'product' || b.type === 'talent' ? (b.rating ?? 0) : 0;
 
@@ -625,6 +679,7 @@ function offlineSearch(;
         all.sort((a, b) => {;
           const aRating = (a.type === 'product' || a.type === 'talent') ? (a.rating ?? 0) : 0;
           const bRating = (b.type === 'product' || b.type === 'talent') ? (b.rating ?? 0) : 0;
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -638,6 +693,8 @@ function offlineSearch(;
           const bRating =;
             b && b.type === 'product' || b && b.type === 'talent' ? (b && b.rating ?? 0) : 0;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           return bRating - aRating;
         });
         break;
@@ -645,12 +702,23 @@ function offlineSearch(;
         break;
     }
   } else {;
+  return { results: paginated, totalCount: all.length }
+export default function SearchResultsPage({
+  initialResults
+  query
+  slug
+  totalCount
+  return { results: paginated, totalCount: all.length };
     all && all.sort((a, b) => a && a.title.localeCompare(b && b.title));
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           return aPrice - bPrice
         });
         break;
@@ -663,6 +731,7 @@ function offlineSearch(;
         break;
       case 'rating':
         all.sort((a, b) => {
+<<<<<<< HEAD
 <<<<<<< HEAD
           const aRating = (a.type === 'product' || a.type === 'talent') ? (a.rating ?? 0) : 0;
           const bRating = (b.type === 'product' || b.type === 'talent') ? (b.rating ?? 0) : 0;
@@ -694,16 +763,24 @@ const start = (page - 1) * limit;
   const paginated = all && all.slice(start, start + limit);
   return { results: paginated, totalCount: all && all.length };
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export default function SearchResultsPage(): any ({;
   initialResults,;
   query,;
   slug,;
   totalCount,;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }: SearchResultsPageProps) {  const router = useRouter();
 =======
   initialResults;
@@ -711,6 +788,7 @@ export default function SearchResultsPage(): any ({;
   slug;
   totalCount}: SearchResultsPageProps) {
   const router = useRouter();
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
@@ -920,6 +998,9 @@ export default function SearchResultsPage({
   slug,
   totalCount,;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }: SearchResultsPageProps) {  const router = useRouter();
   return { results: paginated, totalCount: all.length   } catch (error) {
     console.error("Error:", error);
@@ -935,6 +1016,7 @@ export default function SearchResultsPage({
 export default function SearchResultsPage(req, res) {
   try {
   const router = useRouter();
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -942,6 +1024,8 @@ export default function SearchResultsPage(req, res) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const { isAuthenticated } = useAuth();
   const [results, setResults] = useState<SearchResult[]>(initialResults);
   const [loading, setLoading] = useState(false);
@@ -955,6 +1039,7 @@ export default function SearchResultsPage(req, res) {
   const [maxPrice, setMaxPrice] = useState('');
   const [minRating, setMinRating] = useState('');
   const [totalResults, setTotalResults] = useState(totalCount);
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1010,10 +1095,13 @@ export default function SearchResultsPage(req, res) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       if (minPrice) params.append('minPrice', minPrice);
       if (maxPrice) params.append('maxPrice', maxPrice);
       if (minRating) params.append('minRating', minRating);
       const response = await fetch(`/api/search?${params.toString()}`);
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -1123,6 +1211,8 @@ export default function SearchResultsPage(req, res) {
   },;
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   // Handle search input change;
   const handleSearch = (newQuery: string) => {;
     setSearchQuery(newQuery),;
@@ -1132,8 +1222,8 @@ export default function SearchResultsPage(req, res) {
       });
       setCurrentPage(1);    }
   };
-  useEffect(() => {;
 
+<<<<<<< HEAD
 =======
         minRating: minRating ? Number(minRating) : undefined,;
       });
@@ -1243,6 +1333,8 @@ export default function SearchResultsPage(req, res) {
   }
 }
   },;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   useEffect(() => {;
     if (debouncedQuery.trim()) {;
       fetchResults(debouncedQuery, 1);
@@ -1250,6 +1342,7 @@ export default function SearchResultsPage(req, res) {
       setResults([]);
       setTotalResults(0);    }
   }, [debouncedQuery]);
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     fetchResults(searchQuery, nextPage)
   };
@@ -1265,10 +1358,16 @@ export default function SearchResultsPage(req, res) {
 =======
   const filteredResults = results.filter(r => {    if (
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  const categories = Array.from(
+    new Set(results.map((r) => r.category).filter(Boolean));
+  );
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       categoryFilter !== 'all' &&
       categoryFilter &&
       r.category !== categoryFilter
     ) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -1583,11 +1682,14 @@ if ( {) {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   // Group results by type for better display
   const groupedResults = filteredResults.reduce(
     (acc, result) => {
       if (!acc[result.type]) acc[result.type] = [];
       acc[result.type]!.push(result);
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       return acc
@@ -1767,27 +1869,25 @@ if (acc[result.type] = []) {
     }
     {} as Record<string, SearchResult[]>  );
       setTotalResults(0);
+=======
+      return false;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-  }, [debouncedQuery]),;
-  // Load more results;
-  const loadMore = () => {;
-    const nextPage = currentPage + 1;
-    setCurrentPage(nextPage);
-    fetchResults(searchQuery, nextPage);
-  },;
-  const categories = Array.from(;
-    new Set(results.map((r) => r.category).filter(Boolean)));
-  const filteredResults = results.filter((r) => {;
-    if (;
-      categoryFilter !== 'all' &&;
-      categoryFilter &&;
-      r.category !== categoryFilter;
-    ) {;
-      return false;
+    if (minPrice && r.type === 'product') {;
+      if ((r.price ?? 0) < Number(minPrice)) {;
+        return false;
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+    if (minPrice && r.type === 'product') {;
+      if ((r.price ?? 0) < Number(minPrice)) {;
+        return false;
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1838,21 +1938,34 @@ if (acc[result.type] = []) {
 }
     return true
   }),
+
   // Group results by type for better display
   const groupedResults = filteredResults.reduce(
     (acc, result) => {
-      if (!acc[result.type]) acc[result.type] = [],
-      acc[result.type]!.push(result),
+      if (!acc[result.type]) acc[result.type] = [];
+      acc[result.type]!.push(result);
+
       return acc
-    },
-    {} as Record<string SearchResult[]>),
   const renderResultCard = (result: SearchResult) => {
     switch (result.type) {
       case 'product':
       case 'equipment':
+
+  // Group results by type for better display;
+  const groupedResults = filteredResults && filteredResults.reduce(;
+    (acc, result) => {;
+      if (!acc[result && result.type]) acc[result && result.type] = [];
+      acc[result && result.type]!.push(result);
+      return acc;
+    },;
+    {} as Record<string, SearchResult[]>  );
+
+  const renderResultCard = (result: SearchResult) => {;
+    switch (result && result.type) {;
+      case 'product':;
+      case 'equipment':;
         return (
-          <div key={result.id} data-testid="result-card">
-            <ProductCard
+          <div key={result && result.id} data-testid='result-card'>            <ProductCard
               product={{
                 id: result.id
                 name: result.title
@@ -1876,13 +1989,14 @@ if (acc[result.type] = []) {
                 price: result.price || 0,
                 images: result.image ? [result.image] : [],
                 rating: result.rating || 0,
-                reviewCount: 0,
+                review_count: 0,
                 tags: result.tags || [],
                 category: result.category || '',
                 currency: '$',
-                created_at: new Date().toISOString(),
-                updated_at: new Date().toISOString(),
+                created_at: new Date ().toISOString (),
+                updated_at: new Date ().toISOString (),
                 stock: (result as any).stock,
+<<<<<<< HEAD
                 in_stock: ((result as any).stock || 0) > 0
               }  } catch (error) {
     console.error("Error:", error);
@@ -1917,6 +2031,8 @@ if (acc[result.type] = []) {
                 router.push(`/talent/${talent.id}?action=hire`);              }}
               isAuthenticated={isAuthenticated}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 id: result.id,
                 user_id: result.id,
                 full_name: result.title,
@@ -1929,6 +2045,7 @@ if (acc[result.type] = []) {
                 summary: result.description,
                 is_verified: false,
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -1940,6 +2057,8 @@ if (acc[result.type] = []) {
               onRequestHire={talent => {
                 router.push(`/talent/${talent.id}?action=hire`);              }}
               isAuthenticated={isAuthenticated}
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 availability_type: 'available'}  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1977,6 +2096,7 @@ if (acc[result.type] = []) {
           </div>
         );
       default:
+<<<<<<< HEAD
           <div key={result && result.id} data-testid='result-card'>            <CategoryCard
               title={result && result.title}
               description={result && result.description || ''}
@@ -1996,12 +2116,15 @@ if (acc[result.type] = []) {
             key={result.id}
             className="p-4 bg-white dark:bg-gray-800 rounded-lg shadow"
             data-testid="result-card"
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           >
-            <h3 className="font-semibold">{result.title}</h3>
-            <p className="text-gray-600 dark:text-gray-200">
+            <h3 className='font-semibold'>{result.title}</h3>
+            <p className='text-gray-600 dark:text-gray-200'>
               {result.description}
             </p>
           </div>
+<<<<<<< HEAD
         )
     }
 <<<<<<< HEAD
@@ -2031,6 +2154,10 @@ if (acc[result.type] = []) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 
+=======
+        );    }
+  }
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   };
 
           <div key={result.id} data-testid="result-card">
@@ -2052,34 +2179,21 @@ if (acc[result.type] = []) {
 }
             />;
           </div>;
-        ),;
+        );
       default:;
-        return (;
-          <div;
-            key={result.id  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            className="p-4 bg-white dark:bg-gray-800 rounded-lg shadow"
-            data-testid="result-card"
-          >
-            <h3 className="font-semibold">{result.title}</h3>
-            <p className="text-gray-600 dark:text-gray-200">
-              {result.description  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+
+          >;
+            <h3 className='font-semibold'>{result && result.title}</h3>;
+            <p className='text-gray-600 dark:text-gray-200'>;
+              {result && result.description}
             </p>;
           </div>;
-        );
-      } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+        );    }
   }
+
 }
   },
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   return (
     <>;
@@ -2134,6 +2248,11 @@ if (acc[result.type] = []) {
           {/* Search Header */}
 <<<<<<< HEAD
 =======
+=======
+  return (
+    <>;
+      <SEO
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         title={`Search Results for "${query}" - Zion Marketplace`  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -2157,16 +2276,26 @@ if (acc[result.type] = []) {
       />
       <div className='min-h-screen bg-gray-50 dark:bg-gray-900'>
       <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
+<<<<<<< HEAD
+=======
+
+      <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <div
           className="container mx-auto px-4 py-8"
           data-testid="search-results"
         >
+<<<<<<< HEAD
           {/* Search Header */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <div className="mb-8">
             <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
               <div className="flex-1">
@@ -2179,6 +2308,7 @@ if (acc[result.type] = []) {
                 >
                   {filteredResults.length > 0
                     ? `Found ${filteredResults.length} results for "${query}"`
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
@@ -2276,12 +2406,32 @@ if (acc[result.type] = []) {
             <div className="flex flex-wrap items-center justify-between gap-4 mt-6">
               <div className="flex items-center gap-2 flex-wrap">
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+                <Input
+                  type="text"
+                  value={searchQuery  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  onChange={(e) => handleSearch(e.target.value)  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  placeholder="Search marketplace..."
+                  className="pl-10"
+                />
+              </div>
+            </div>
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <Button
                   variant="outline"
                   size="sm"
                   className="flex items-center gap-2"
                   data-testid="filter-button"
                 >
+<<<<<<< HEAD
                   <Filter className="h-4 w-4" />
                   Filters
 <<<<<<< HEAD
@@ -2290,12 +2440,19 @@ if (acc[result.type] = []) {
                 <select
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+                </Button>
+                <select
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
                   data-testid='filter-button'>;
                   <Filter className='h-4 w-4' />                  Filters;
                 </Button>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
                 <select
                   value={sortBy}
@@ -2303,12 +2460,15 @@ if (acc[result.type] = []) {
                   className='px-3 py-1 border border-gray-300 rounded-md text-sm';
                   data-testid='sort-select';
 
+<<<<<<< HEAD
 =======
 =======
 
                 </Button>
                 <select
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 router.push (`/talent/${id}`);
               }}
               onRequestHire={talent => {
@@ -2389,16 +2549,21 @@ if (acc[result.type] = []) {
                   className='px - 3 py - 1 border border - gray - 300 rounded - md text - sm';
                   data - testid='sort - select';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 >;
                   <option value='relevance'>Relevance</option>;
                   <option value='newest'>Newest</option>;
                   <option value='price_asc'>Price: Low to High</option>;
                   <option value='price_desc'>Price: High to Low</option>;
                   <option value='rating'>Highest Rated</option>                </select>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -2529,6 +2694,10 @@ if (acc[result.type] = []) {
 }
                 </select>
                 <div className="flex items-center gap-1">
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   <input
                     type="number"
                     placeholder="Min $"
@@ -2549,6 +2718,7 @@ if (acc[result.type] = []) {
                   <input
                     type="number"
                     placeholder="Max $"
+<<<<<<< HEAD
 <<<<<<< HEAD
                     value={maxPrice}
                     onChange={(e) => setMaxPrice(e.target.value)}
@@ -2575,10 +2745,15 @@ if (acc[result.type] = []) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+                    value={maxPrice}
+                    onChange={(e) => setMaxPrice(e.target.value)}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     className="w-20 px-2 py-1 border border-gray-300 rounded-md text-sm"
                   />
                 </div>
                 <select
+<<<<<<< HEAD
                   value={minRating  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -2590,6 +2765,14 @@ if (acc[result.type] = []) {
   }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+                  value={minRating}
+
+                    onChange={e => setMaxPrice(e && e.target.value)}
+                    className='w-20 px-2 py-1 border border-gray-300 rounded-md text-sm'                  />;
+                </div>;
+                  onChange={(e) => setMinRating(e.target.value)}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   className="px-3 py-1 border border-gray-300 rounded-md text-sm"
                 >
                   <option value="">All Ratings</option>
@@ -2598,6 +2781,7 @@ if (acc[result.type] = []) {
                   <option value="2">2★ & up</option>
                 </select>
               </div>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -2677,6 +2861,8 @@ if (acc[result.type] = []) {
 
               <div className="flex items-center gap-2">
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <Button
                   variant={viewMode === 'grid' ? 'default' : 'outline'  } catch (error) {
     console.error("Error:", error);
@@ -2699,25 +2885,8 @@ if (acc[result.type] = []) {
                   <Grid className="h-4 w-4" />
                 </Button>
                 <Button
-
-                  variant={viewMode === 'list' ? 'default' : 'outline'  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                  size="sm"
-                  onClick={() => setViewMode('list')  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                  data-testid="view-mode-list"
-                  className={viewMode === 'list' ? 'active' : ''  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
                 >;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
                   <List className="h-4 w-4" />
@@ -2727,10 +2896,13 @@ if (acc[result.type] = []) {
           </div>
 >;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   <List className='h-4 w-4' />                </Button>;
               </div>;
             </div>;
           </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -2860,12 +3032,15 @@ if (acc[result.type] = []) {
               </div>;
             </div>;
           </div>;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           {/* Loading State */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
           {loading && results.length === 0 && (
+<<<<<<< HEAD
             <div className="flex justify-center py-12">
               <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
             </div>
@@ -2880,10 +3055,13 @@ if (acc[result.type] = []) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           {!loading && filteredResults.length === 0 && (
             <div data-testid="search-empty-state">
               <SearchEmptyState onRetry={() => fetchResults(searchQuery)} />
             </div>
+<<<<<<< HEAD
           )}
           {/* Results */}
           {filteredResults.length > 0 && (
@@ -2893,6 +3071,15 @@ if (acc[result.type] = []) {
                   <h2 className='text-xl font-semibold text-gray-900 dark:text-white mb-4 capitalize'>                    {type}s ({typeResults.length})
                   </h2>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+          {filteredResults && filteredResults.length > 0 && (;
+            <div className='space-y-8'>;
+              {Object && Object.entries(groupedResults).map(([type, typeResults]) => (;
+                <div key={type}>;
+                  <h2 className='text-xl font-semibold text-gray-900 dark:text-white mb-4 capitalize'>                    {type}s ({typeResults && typeResults.length});
+                  </h2>;
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   <div
                     className={
                       viewMode === 'grid'
@@ -2904,6 +3091,7 @@ if (acc[result.type] = []) {
                 </div>;
               ))}
               {/* Load More Button */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -2922,12 +3110,15 @@ if (acc[result.type] = []) {
                     ) : (
                       'Load More Results'
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     )}
                   </Button>;
                 </div>;
               )}
             </div>;
           )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -2964,11 +3155,14 @@ export const getServerSideProps: GetServerSideProps<;
     const response = await fetch(;
       `${apiBaseUrl}/api/search?query=${encodeURIComponent(query)}&limit=12`    );
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       process.env.NEXT_PUBLIC_API_URL || 'http: //localhost:3000',
     logInfo(`Fetching search results for slug: ${slug}, query: ${query}`),
     const response = await fetch(
       `${apiBaseUrl}/api/search?query=${encodeURIComponent(query)}&limit=12`;
     );
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -3051,16 +3245,24 @@ if ( {) {
     let results = [];
     let totalCount = 0;
     if (response.ok) {
+=======
+    let results = [];
+    let totalCount = 0;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       const data = await response.json();
       results = data.results |[];
       totalCount = data.totalCount |results.length;
       logInfo(`Server-side fetch successful: ${results.length} results`);
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     } else {
       logErrorToProduction (
         `Search API error: ${response.status} ${response.status_text}`);
       const offline = offline_search (query, 1, 12, { sort_by: 'relevance' });
       results = offline.results;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -3105,6 +3307,8 @@ if ( {) {
 }
 
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       results = data.results || [];
       totalCount = data.totalCount || results.length;
       logInfo(`Server-side fetch successful: ${results.length} results`)
@@ -3158,10 +3362,9 @@ total_count: offline.total_count,
     }  }
 }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 
+<<<<<<< HEAD
 =======
 =======
     };  }
@@ -3171,6 +3374,8 @@ total_count: offline.total_count,
 
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -3285,16 +3490,20 @@ export const getServerSideProps: GetServerSideProps<;
     let results = [];
     let totalCount = 0;
     if (response.ok) {;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       const data = await response.json();
       results = data.results || [];
       totalCount = data.totalCount || results.length;
       logInfo(`Server-side fetch successful: ${results.length} results`);
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -3339,6 +3548,8 @@ totalCount: offline.totalCount,
 }
 }
 }
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     } else {;
       logErrorToProduction(;
         `Search API error: ${response.status} ${response.statusText}`);
@@ -3381,4 +3592,8 @@ totalCount: offline.totalCount,
 }
 };
 
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

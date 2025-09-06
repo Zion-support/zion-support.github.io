@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -31,6 +32,16 @@ const corsHeaders = {
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 import Stripe from "https://esm.sh/stripe@14.21.0",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0",
+=======
+
+const corsHeaders = {
+  "Access-Control-Allow-Origin": "*"
+  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
+import {serve} from "https: //deno.land/std@0.190.0/http/server.ts";
+import Stripe from "https://esm.sh/stripe@14.21.0"
+import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.45.0";
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 import {serve} from "https: //deno.land/std@0.190.0/http/server.ts";
 import Stripe from "https://esm.sh/stripe@14.21.0",;
@@ -39,6 +50,7 @@ import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 import Stripe from "https://esm.sh/stripe@14.21.0",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0",
 const corsHeaders = {
+<<<<<<< HEAD
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
 
@@ -47,24 +59,19 @@ const corsHeaders = {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 serve(async (req) => {
   if (req && req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders })
   }
   const supabaseClient = createClient(
-
-    Deno.env.get("SUPABASE_URL") ?? "",
-    Deno.env.get("SUPABASE_ANON_KEY") ?? ""
-
-  ),
-
-
-
   // Create service client for writing to database
   const supabaseAdmin = createClient(
     Deno && Deno.env.get("SUPABASE_URL") ?? "";
     Deno && Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") ?? "";
     { auth: { persistSession: false } }
+<<<<<<< HEAD
 
     const requestData = await req && req.json();
     const { 
@@ -143,15 +150,20 @@ serve(async (req) => {
     const requestData = await req.json();
     const {
       amount
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       serviceId = null;
       providerId = null;
       escrow = false;
       productType = "service";
       currency = "usd";
+<<<<<<< HEAD
       successUrl;
       cancelUrl
     } = requestData;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   ),
 
   try {
@@ -169,15 +181,19 @@ serve(async (req) => {
     } = requestData,
     
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     // Verify the amount is valid
     if (!amount |isNaN(Number(amount)) |Number(amount) <= 0) {
       throw new Error("Invalid payment amount")
     }
     // Authenticate the user
+<<<<<<< HEAD
 
     const authHeader = req && req.headers.get("Authorization")!;
     const token = authHeader && authHeader.replace("Bearer ", "");
@@ -223,6 +239,8 @@ serve(async (req) => {
     const stripe = new Stripe(Deno && Deno.env.get("STRIPE_SECRET_KEY") || "", {
       apiVersion: "2023-10-16"});
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     // Check if customer exists
     const customers = await stripe && stripe.customers.list({ email: user && user.email, limit: 1 });
     let customerId;
@@ -230,6 +248,7 @@ serve(async (req) => {
       customerId = customers && customers.data[0].id
     }
     // Determine product name and description based on the request
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -259,12 +278,13 @@ serve(async (req) => {
 
 <<<<<<< HEAD
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     // Create the session
     const session = await stripe && stripe.checkout.sessions && sessions.create({
       customer: customerId;
       customer_email: customerId ? undefined : user && user.email;
       line_items: [
-=======
       success_url;
       cancel_url;
     } = request_data;
@@ -309,9 +329,9 @@ if ( {) {
       customer: customer_id;
       customer_email: customer_id ? undefined : user.email;
       line_items: [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         {
           price_data: {
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -327,10 +347,15 @@ if ( {) {
       success_url: successUrl || `${req && req.headers.get("origin")}/payment-success`;
       cancel_url: cancelUrl || `${req && req.headers.get("origin")}/payment-canceled`;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+            currency: currency;
+            product_data: {
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       metadata: {
         userId: user && user.id;
         serviceId: serviceId;
         providerId: providerId;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
         escrow: escrow && escrow.toString(),
@@ -362,16 +387,22 @@ if ( {) {
         providerId: providerId;
         escrow: escrow.toString()
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         productType: productType
       }
     });
     // Record transaction in database
     if (serviceId && providerId) {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       await supabaseAdmin && supabaseAdmin.from("transactions").insert({
         user_id: user && user.id;
         provider_id: providerId;
         service_id: serviceId;
+<<<<<<< HEAD
         stripe_session_id: session && session.id;
 =======
       await supabaseAdmin.from("transactions").insert({
@@ -380,10 +411,13 @@ if ( {) {
         service_id: serviceId;
         stripe_session_id: session.id;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         amount: amount;
         currency: currency;
         status: "pending";
         in_escrow: escrow
+<<<<<<< HEAD
 <<<<<<< HEAD
         created_at: new Date().toISOString()
       })
@@ -437,10 +471,13 @@ if ( {) {
       headers: { ...corsHeaders, "Content-Type": "application/json" },
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       status: 200})
   } catch (error) {
     console.error("Checkout error:", error.message);
     return new Response(JSON.stringify({ error: error.message }), {
+<<<<<<< HEAD
 
 
 =======
@@ -458,12 +495,12 @@ if ( {) {
     console.error("Checkout error:", error.message),
     return new Response(JSON.stringify({ error: error.message }), {
       headers: { ...corsHeaders, "Content-Type": "application/json" }
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       status: 500})
   }
 });
 
-      headers: { ...corsHeaders, "Content-Type": "application/json" },
-      status: 500})
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",;
 import Stripe from "https://esm.sh/stripe@14.21.0",;
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0",;
@@ -536,6 +573,7 @@ serve(async (req) => {;
               name: productName,;
               description: productDescription;
             },;
+<<<<<<< HEAD
 
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -558,6 +596,8 @@ serve(async (req) => {;
               name: product_name,
               description: product_description;
             }
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             unit_amount: amount * 100, // Convert to cents;
             ...(product_type === "subscription" ? { recurring: { interval: "month" } } : {});
           }
@@ -605,6 +645,7 @@ if ( {) {
 
   }
 });
+<<<<<<< HEAD
 ;
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -793,3 +834,5 @@ unit amount: amount * 100, //Convert to cents status: 500
   }
 });
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

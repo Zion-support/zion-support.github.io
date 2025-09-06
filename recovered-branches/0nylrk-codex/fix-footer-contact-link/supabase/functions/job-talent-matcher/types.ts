@@ -1,19 +1,25 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 export interface JobData {
 export interface JobData {;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   id: string;
   title: string;
   description: string;
   skills: string[];
   category: string;
   budget: {
+<<<<<<< HEAD
 
     min: number
 
     max: number
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     min: number,
     max: number;
   }
@@ -21,6 +27,7 @@ export interface JobData {;
 
 }
 export interface TalentProfile {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
   }
@@ -30,12 +37,15 @@ export interface TalentProfile {
 
 export interface TalentProfile {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   id: string;
   full_name: string;
   professional_title: string;
   bio?: string;
   skills: string[];
   years_experience: number;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
   hourly_rate?: number,
@@ -71,13 +81,13 @@ export interface MatchResult {
 
 export interface MatchResult {;
   talentId: string;
-  score: number;
-
-  matchedSkills: string[]
-
-  reason?: string
+=======
+  talent_id: string;
+  job_id: string;
+  match_score: number;
 }
-export interface JobData {;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+  score: number;
   id: string,;
   title: string,;
   description: string,;
@@ -113,19 +123,24 @@ export interface MatchResult {;
   talentId: string,;
   score: number,;
   matchedSkills: string[];
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 export interface MatchResult {
   talent_id: string;
   score: number;
 
   matched_skills: string[],
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   reason?: string;
 
 }
+;
 
 
 export interface JobData {;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
@@ -133,3 +148,6 @@ export interface JobData {;
 }
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

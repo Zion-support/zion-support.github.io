@@ -1,5 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 function getUserId(req: NextApiRequest): string {
@@ -12,6 +13,8 @@ function getUserId(req: NextApiRequest): string {
 
   const cookie = req.headers.cookie |'';
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const match = cookie
     .split(';')
     .map(c => c && c.trim())
@@ -22,6 +25,7 @@ export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   const cookie = req.headers.cookie || '';
@@ -36,11 +40,16 @@ export default async function handler(
   const match = cookie.split().map((c) => c.trim()).find((c) => c.startsWith('user_id='));
   if (match) return decodeURIComponent(match.split('=')[1]);
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  const match = cookie.split().map((c) => c.trim()).find((c) => c.startsWith('user_id='));
+  if (match) return decodeURIComponent(match.split('=')[1]);
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   if (req && req.method !== 'POST')
     return res && res.status(405).json({ error: 'Method not allowed' });  try {function getUserId(req: NextApiRequest): string {
   const cookie = req && req.headers.cookie || '';
   const match = cookie && cookie.split().map((c) => c && c.trim()).find((c) => c && c.startsWith('user_id='));
   if (match) return decodeURIComponent(match && match.split('=')[1]);
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -58,6 +67,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  return 'demo-user-1'
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   try {
     const userId = getUserId(req);
     const { error } = await supabase
@@ -66,17 +79,20 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       .eq('user_id', userId)
       .eq('read_status', false);
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   } catch (e) {
     return res.status(500).json({ error: 'Unexpected error' })
 }
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 
-    if (error) return res.status(200).json({ ok: true });
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     if (error) return res.status(200).json({ ok: true });
@@ -87,6 +103,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(500).json({ error: 'Unexpected error' })
 =======
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     if (error) return res && res.status(200).json({ ok: true });
 
     return res && res.status(200).json({ ok: true });
@@ -98,6 +116,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   };
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -164,3 +183,8 @@ function handler() {
 }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+}
+}
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

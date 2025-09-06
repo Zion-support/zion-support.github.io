@@ -1,7 +1,4 @@
 
-
-
-
 import React, { useState } from "react";
 import {useForm} from "react-hook-form";
 import {zodResolver} from "@hookform/resolvers/zod";
@@ -16,10 +13,13 @@ import {useDisputes} from "@/hooks/useDisputes";
 import {toast} from "sonner";
 import {FileText} from "lucide-react";
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useState } from "react",
 import { useForm } from "react-hook-form",
 import { zodResolver } from "@hookform/resolvers/zod",
@@ -44,6 +44,7 @@ import { DisputeReason, disputeReasonLabels } from "@/types/disputes",
 import { useDisputes } from "@/hooks/useDisputes",
 import { toast } from "sonner",
 import { FileText } from "lucide-react",
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -51,6 +52,8 @@ import { FileText } from "lucide-react",
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 const formSchema = z.object({
   reason_code: z.string()
     .min(1, { message: "Please select a reason for the dispute" })
@@ -58,6 +61,7 @@ const formSchema = z.object({
     .min(20, { message: "Description must be at least 20 characters" })
   attachments: z.array(z.any()).optional()})
 type DisputeFormProps = {
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -101,6 +105,8 @@ export function DisputeForm({
   const [files, setFiles] = useState<File[]>([]),
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema)
     defaultValues: {
@@ -109,6 +115,7 @@ export function DisputeForm({
       attachments: []}})
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.files) {
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 const formSchema = z && z.object({;
@@ -225,6 +232,8 @@ export function DisputeForm({ ;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   async function onSubmit(values: z.infer<typeof formSchema>) {
     try {
       setIsSubmitting(true)
@@ -237,6 +246,7 @@ export function DisputeForm({ ;
         // Future enhancement: Upload attachments
         // For now we just log the files that would be uploaded
         if (files.length > 0) {
+<<<<<<< HEAD
 <<<<<<< HEAD
           console.log(`Would upload ${files.length} files for dispute ${dispute.id}`)
         }
@@ -258,11 +268,14 @@ export function DisputeForm({ ;
         toast.success("Your dispute has been submitted"),
         
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         if (onDisputeCreated) {
           onDisputeCreated(dispute.id)
         }
       }
     } catch (error) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -281,6 +294,11 @@ export function DisputeForm({ ;
       form && form.setValue("attachments", [...files, ...newFiles]);
     }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+      toast.error("Failed to submit dispute. Please try again.")
+    } finally {
+      setIsSubmitting(false)
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   };
 
   const removeFile = (index: number) => {;
@@ -318,10 +336,10 @@ export function DisputeForm({ ;
       toast && toast.error("Failed to submit dispute. Please try again.");
     } finally {;
       setIsSubmitting(false);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     }
   }
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -418,41 +436,17 @@ export function DisputeForm({;
       const newFiles = Array.from(e.target.files),;
       setFiles(prev => [...prev, ...newFiles]),;
       form.setValue("attachments", [...files, ...newFiles]);
+=======
+          <FormField
+            control={form.control}
+            name="reason_code"
+      setFiles(prev => [...prev, ...newFiles]);
+      form && form.setValue("attachments", [...files, ...newFiles]);
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     }
-  },;
-  const removeFile = (index: number) => {;
-    const newFiles = [...files],;
-    newFiles.splice(index, 1),;
-    setFiles(newFiles),;
-    form.setValue("attachments", newFiles);
-  },;
-  async function onSubmit(values: z.infer<typeof formSchema>) {;
-    try {;
-      setIsSubmitting(true),;
-      const dispute = await createDispute({;
-        project_id: projectId,;
-        milestone_id: milestoneId,;
-        reason_code: values.reason_code,;
-        description: values.description}),;
-      if (dispute && dispute.id) {;
-        // Future enhancement: Upload attachments;
-        // For now we just log the files that would be uploaded;
-        if (files.length > 0) {;
-          // // // console.log(`Would upload ${files.length} files for dispute ${dispute.id}`);
-        }
-;
-        toast.success("Your dispute has been submitted");
-        if (onDisputeCreated) {;
-          onDisputeCreated(dispute.id);
-        }
-      }
-    } catch (error) {;
-      console.error("Error submitting dispute:", error);
-      toast.error("Failed to submit dispute. Please try again.");
-    } finally {;
-      setIsSubmitting(false);
     }
   }
+<<<<<<< HEAD
 ;
   return (;
 <<<<<<< HEAD
@@ -530,6 +524,9 @@ export function DisputeForm({;
       <Form {...form}>;
         <form onSubmit={form && form.handleSubmit(onSubmit)} className="space-y-6">;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+  return (
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <FormField
             control={form && form.control}
             name="reason_code"
@@ -537,7 +534,6 @@ export function DisputeForm({;
               <FormItem>;
                 <FormLabel>Reason for dispute</FormLabel>;
                 <Select onValueChange={field && field.onChange} defaultValue={field && field.value}>;
-=======
 import React, { useState } from './react';
 import { use_form } from './react - hook - form';
 import { zod_resolver } from '@hookform / resolvers / zod';
@@ -650,6 +646,7 @@ if ( {) {
               <FormItem>;
                 <FormLabel > Reason for dispute</FormLabel>;
                 <Select onValueChange={field.on_change} default_value={field.value}>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
           />;
@@ -667,6 +664,8 @@ if ( {) {
                 <FormLabel>Reason for dispute</FormLabel>;
                 <Select onValueChange={field.onChange} defaultValue={field.value}>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   <FormControl>;
                     <SelectTrigger>;
                       <SelectValue placeholder="Select a reason" />;
@@ -674,12 +673,15 @@ if ( {) {
                   </FormControl>;
                   <SelectContent>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
                     {Object.entries(disputeReasonLabels).map(([value, label]) => (;
                       <SelectItem key={value} value={value}>{label}</SelectItem>;
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     ))}
                   </SelectContent>;
                 </Select>;
@@ -693,6 +695,7 @@ if ( {) {
           <FormField
             control={form && form.control}
             name="description"
+<<<<<<< HEAD
 =======
                     {Object.entries(disputeReasonLabels).map(([value, label]) => (;
           />;
@@ -701,15 +704,19 @@ if ( {) {
             control={form.control}
             name="description";
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             render={({ field }) => (;
               <FormItem>;
                 <FormLabel>Describe the issue in detail</FormLabel>;
                 <FormControl>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   <Textarea
                     placeholder="Please provide specific details about the issue..."
                     className="min-h-[150px]"
-=======
                     {Object.entries (disputeReasonLabels).map (([value, label]) => (
                       <SelectItem key={value} value={value}>{label}</SelectItem>))}
                   </SelectContent>;
@@ -727,16 +734,20 @@ if ( {) {
                   <Textarea;
                     placeholder="Please provide specific details about the issue...";
                     className="min - h-[150px]";
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
                   <Textarea;
                     placeholder="Please provide specific details about the issue...";
                     className="min-h-[150px]";
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     {...field}
                   />;
                 </FormControl>;
                 <FormMessage />;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
           />;
@@ -851,16 +862,22 @@ if ( {) {
                             variant="ghost" ;
                             size="sm" ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                             onClick={() => removeFile(index)}
                           >;
                             Remove;
                           </Button>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                         </li>;
                       ))}
                     </ul>;
                   </div>;
                 )}
+<<<<<<< HEAD
 
 =======
 =======
@@ -903,10 +920,13 @@ if ( {) {
                   </div>;
                 )}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               </div>;
             </FormControl>;
             <FormMessage />;
           </FormItem>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
           <div className="flex justify - end space - x-2">;
@@ -928,22 +948,28 @@ if ( {) {
             <Button type="submit" disabled={isSubmitting}>;
               {isSubmitting ? "Submitting..." :"Submit Dispute"}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             </Button>;
           </div>;
         </form>;
       </Form>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     </div>);
 
 }
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             </Button>
           </div>
         </form>
       </Form>
     </div>
   )
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -1032,3 +1058,10 @@ description: values.description
 };
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+};
+}
+
+
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

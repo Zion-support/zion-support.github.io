@@ -1,9 +1,3 @@
-
-
-import React from 'react';
-
-import React from 'react';
-
 import React from 'react';
   id: string;
 label: string;
@@ -15,7 +9,10 @@ export function currentBadge(balance: number): Badge | null {;
 
   let current: Badge | null = null;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 threshold: number, //token balance threshold ;
 };
 
@@ -26,9 +23,12 @@ const BADGES: Badge[] = [;
   { id: 'elite', label: 'Elite', threshold: 1000 },;
 ];
 
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from "react";
 export type Badge = {
   id: string,
@@ -44,17 +44,22 @@ const BADGES: Badge[] = [
 export function currentBadge(balance: number): Badge | null {
   let current: Badge | null = null,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 import React from 'react';
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from 'react';
 ;
   id: string;
 label: string;
 threshold: number, //token balance threshold;
 }
+<<<<<<< HEAD
 ;
 const BADGES: Badge[] = [;
   { id: 'starter', label: 'Starter', threshold: 50 },
@@ -83,6 +88,8 @@ export function currentBadge(balance: number): Badge | null {;
 export default function Badges({ balance }: { balance: number }) {;
   const active = currentBadge(balance);
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <div className='flex gap - 2 items - center flex - wrap'>;
       {BADGES.map (boolean => (        <span;
@@ -92,9 +99,13 @@ export default function Badges({ balance }: { balance: number }) {;
               ? 'bg - yellow - 100 border - yellow - 300 text - yellow - 800';
               : 'bg - gray - 100 border - gray - 200 text - gray - 500'          }`}  let current: Badge | null = null,
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   for (const b of BADGES) {
     // Check condition
 if (current = b) {
@@ -103,19 +114,21 @@ if (current = b) {
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return current;
 export default function Badges(): any ({ balance }: { balance: number }) {;
   const active = currentBadge(balance);
   return (
 
 
-  }
-  return current;
-}
 
 
 
+export default function Badges(): any ({ balance }: { balance: number }) {;
+  const active = currentBadge(balance);
   return (
     <div className='flex gap-2 items-center flex-wrap'>;
       {BADGES && BADGES.map(b => (    <div className="flex gap-2 items-center flex-wrap">;
@@ -138,6 +151,7 @@ export default function Badges(): any ({ balance }: { balance: number }) {;
           Current: {active && active.label}
         </span>;
       )}
+<<<<<<< HEAD
 
     </div>;
   );        <span className="ml-2 text-xs text-green-600">Current: {active && active.label}</span>;
@@ -151,6 +165,8 @@ export default function Badges(): any ({ balance }: { balance: number }) {;
     </div>;
   );        <span className="ml-2 text-xs text-green-600">Current: {active && active.label}</span>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       )}
     </div>;
   );
@@ -179,17 +195,19 @@ function Badges() {
               : 'bg - gray - 100 border - gray - 200 text - gray - 500'              ? "bg - yellow - 100 border - yellow - 300 text - yellow - 800";
               : "bg - gray - 100 border - gray - 200 text - gray - 500";
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 
 export default function Badges({ balance }: { balance: number }) {;
 
 export default function Badges({ balance }: { balance: number }) {
-
   const active = currentBadge(balance);
 
   return (
@@ -201,6 +219,7 @@ export default function Badges({ balance }: { balance: number }) {
           className={`px-3 py-1 rounded-full text-xs border ${
             balance >= b.threshold
 
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -208,45 +227,36 @@ export default function Badges({ balance }: { balance: number }) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           }`}
           title={`Requires ${b.threshold} ZION$`}
         >;
           {b.label}
         </span>))}
       {active && (
+  );
+
+}
+  );
 
         <span className='ml - 2 text - xs text - green - 600'>;
           Current: {active.label}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <span className='ml - 2 text - xs text - green - 600'>;
           Current: {active.label}
         </span>)}
     </div>);        <span className="ml - 2 text - xs text - green - 600">Current: {active.label}</span>)}
     </div>);
-      {BADGES.map((b) => (
-        <span
-          key={b.id}
-          className={_`px-3 py-1 rounded-full text-xs border ${
-            balance >= b.threshold
-              ? &quot;bg-yellow-100 border-yellow-300 text-yellow-800&quot;
-              : &quot;bg-gray-100 border-gray-200 text-gray-500&quot;
-          }`}
-          title={`Requires ${b.threshold} ZION$`}
-        >
-          {_b.label}
-        </span>
-      ))}
-      {active && (
-        <span className=&quot;ml-2 text-xs text-green-600&quot;>Current: {active.label}</span>
-      )}
-    </div>
-  )
-
 }
+<<<<<<< HEAD
             balance >= b.threshold
               ? 'bg-yellow-100 border-yellow-300 text-yellow-800'
               : 'bg-gray-100 border-gray-200 text-gray-500'          }`}  let current: Badge | null = null
@@ -295,3 +305,5 @@ export default function Badges({ balance }: { balance: number }) {
 }
   );
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

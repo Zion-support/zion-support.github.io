@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -54,6 +55,8 @@ createdAtIso: now},
   res.setHeader('AllowGET, POST'),
   res.status(405).end('Method Not Allowed');
 };
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { rateLimit } from '../../utils/rate-limit';
 import { readJsonFile, writeJsonFile } from '../../utils/file-utils';
@@ -66,27 +69,33 @@ const FILE = 'applications.json'
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!rateLimit(req, res)) return
   if (req.method === 'GET') {
-    const { jobId, talentSlug } = req.query;
-    let apps = readJsonFile<Application[]>(FILE, []);
-    if (jobId) apps = apps.filter((a) => a.jobId === String(jobId));
-    if (talentSlug) apps = apps.filter((a) => a.talentSlug === String(talentSlug));
-    res.status(200).json({ applications: apps });
+    const { jobId, talentSlug } = req.query
+    let apps = readJsonFile<Application[]>(FILE, [])
+    if (jobId) apps = apps.filter((a) => a.jobId === String(jobId))
+    if (talentSlug) apps = apps.filter((a) => a.talentSlug === String(talentSlug))
+    res.status(200).json({ applications: apps })
     return
   }
   if (req.method === 'POST') {
-    const { jobId, talentSlug, action } = req.body || {};
-    if (!jobId || !talentSlug || !['applyskip'].includes(action)) {
-      res.status(400).json({ error: 'Invalid request' });
+    const { jobId, talentSlug, action } = req.body |{}
+    if (!jobId |!talentSlug |!['applyskip'].includes(action)) {
+      res.status(400).json({ error: 'Invalid request' })
       return
     }
-    const now = new Date().toISOString();
-    const apps = readJsonFile<Application[]>(FILE, []);
-    const existing = apps.find((a) => a.jobId === jobId && a.talentSlug === talentSlug);
+    const now = new Date().toISOString()
+    const apps = readJsonFile<Application[]>(FILE, [])
+    const existing = apps.find((a) => a.jobId === jobId && a.talentSlug === talentSlug)
     if (existing) {
+<<<<<<< HEAD
       existing.status = action === 'apply' ? 'applied' : 'skipped';
       writeJsonFile<Application[]>(FILE, apps);
       res.status(200).json({ application: existing });
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+      existing.status = action === 'apply' ? 'applied' : 'skipped'
+      writeJsonFile<Application[]>(FILE, apps)
+      res.status(200).json({ application: existing })
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       return
     }
     const app: Application = {
@@ -105,6 +114,7 @@ createdAtIso: now}
 }
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
@@ -179,3 +189,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

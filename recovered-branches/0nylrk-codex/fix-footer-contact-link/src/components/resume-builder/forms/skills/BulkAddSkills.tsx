@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -6,12 +7,15 @@
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {useState} from 'react';
 import {Button} from '@/components / ui / button';
 import {Loader2, Sparkles} from 'lucide-react';
 import {useResumeEnhancer} from '@/hooks / useResumeEnhancer';
 import {use_resume} from '@/hooks / use_resume';
 import {BulkAddSkillsProps} from './types';
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -31,12 +35,15 @@ import {BulkAddSkillsProps} from './types';
       return;
     }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     setError(null);
     try {;
       const enhancedContent = await enhanceContent(;
         bulkSkills;
         'skill-categorization';
       );
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -160,11 +167,14 @@ export const BulkAddSkills = ({ resumeId, onSuccess }: BulkAddSkillsProps) => {;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         } catch (err) {
           set_error ('Failed to parse categorized skills. Please try again.');
         }
       }
     } catch (err: any) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -250,9 +260,10 @@ export const BulkAddSkills = ({ resumeId, onSuccess }: BulkAddSkillsProps) => {;
     }
   }
   },
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   };
   },
-
   return (
     <div className="bg-muted/40 p-6 rounded-lg">
       <h3 className="text-md font-medium mb-4">Bulk Add & AI Categorization</h3>
@@ -261,6 +272,7 @@ export const BulkAddSkills = ({ resumeId, onSuccess }: BulkAddSkillsProps) => {;
           <label className="text-sm font-medium">Enter multiple skills (comma separated)</label>
           <Textarea
           <Textarea 
+<<<<<<< HEAD
             className="min-h-24"
             placeholder="Python, React, TypeScript, Project Management, Communication..."
             value={bulkSkills}
@@ -353,25 +365,36 @@ export const BulkAddSkills = ({ resumeId, onSuccess } BulkAddSkillsProps) => {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
           <Textarea 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
             className="min-h-24"
             placeholder="Python, React, TypeScript, Project Management, Communication..."
             value={bulkSkills}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
 =======
         <Button
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <Button 
+
           onClick={handleCategorizeSkills}
           disabled={isEnhancing |!bulkSkills.trim()}
           disabled={isEnhancing || !bulkSkills.trim()}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           className="gap-2"
         >
           {isEnhancing ? (
@@ -388,6 +411,11 @@ export const BulkAddSkills = ({ resumeId, onSuccess } BulkAddSkillsProps) => {;
       </div>
     </div>
   )
+}
+
+},
+};
+},
 
             onChange={(e) => setBulkSkills(e && e.target.value)}
           />;
@@ -400,6 +428,7 @@ export const BulkAddSkills = ({ resumeId, onSuccess } BulkAddSkillsProps) => {;
           {isEnhancing ? (;
             <Loader2 className="h-4 w-4 animate-spin" />;
           ) : (;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
           <Textarea ;
@@ -419,11 +448,16 @@ export const BulkAddSkills = ({ resumeId, onSuccess } BulkAddSkillsProps) => {;
             <Loader2 className="h-4 w-4 animate-spin" />;
           ) :(;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <Sparkles className="h-4 w-4" />;
           )}
           Categorize with AI;
         </Button>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
         <p className="text-xs text-muted-foreground mt-1">;
           AI will identify skills and categorize them automatically. This may take a moment to process.;
@@ -433,16 +467,24 @@ export const BulkAddSkills = ({ resumeId, onSuccess } BulkAddSkillsProps) => {;
       </div>;
     </div>;
   );
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 },
 
 
 };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
+    }
+  }
+  return (
+          <Textarea
+            className="min-h-24"
+            placeholder="Python, React, TypeScript, Project Management, Communication..."
+            value={bulkSkills}
       set_error (err.message || 'Failed to categorize skills');
     }
   }
@@ -479,6 +521,7 @@ export const BulkAddSkills = ({ resumeId, onSuccess } BulkAddSkillsProps) => {;
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
         ;
@@ -508,3 +551,5 @@ export const BulkAddSkills = ({ resumeId, onSuccess } BulkAddSkillsProps) => {;
 };
 },
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

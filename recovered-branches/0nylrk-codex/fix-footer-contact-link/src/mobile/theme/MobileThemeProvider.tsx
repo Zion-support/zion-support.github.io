@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import React from './react';
@@ -24,24 +25,29 @@ interface MobileThemeProviderProps {
 export function MobileThemeProvider({ children }: MobileThemeProviderProps) {
 
 export function MobileThemeProvider({ children }: MobileThemeProviderProps) {;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const { theme } = useTheme();
   return (
     <div className={`mobile-app ${theme === 'dark' ? 'dark' : 'light'}`}>
 import React from "react",
 import { useTheme } from "@/hooks/useTheme",
+  const { theme } = useTheme();
+  return (
+    <div className={`mobile-app ${theme === 'dark' ? 'dark' : 'light'}`}>
+import React from "react",
+import { useTheme } from "@/hooks/useTheme",
+import React from './react';
+import { use_theme } from '@/hooks / use_theme';
+
 interface MobileThemeProviderProps {
   children: React.ReactNode
 import React from "react",;
 import { useTheme } from "@/hooks/useTheme",;
 interface MobileThemeProviderProps {;
-import React from './react';
-import { use_theme } from '@/hooks / use_theme';
-
-import React from './react';
-import { use_theme } from '@/hooks / use_theme';
-interface MobileThemeProviderProps {
   children: React.ReactNode;
 }
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import {useTheme} from "@/hooks/useTheme";
 interface MobileThemeProviderProps {;
@@ -53,12 +59,17 @@ export function MobileThemeProvider(): any ({ children }: MobileThemeProviderPro
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <div className={`mobile-app ${theme === 'dark' ? 'dark' : 'light'}`}>;
 
 
 
 
+  return (
+    <div className={`mobile-app ${theme === 'dark' ? 'dark' : 'light'}`}>;
       {children}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     </div>;
@@ -71,6 +82,8 @@ export function MobileThemeProvider(): any ({ children }: MobileThemeProviderPro
   );
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export /**
  * MobileThemeProvider - Function description
  */
@@ -82,6 +95,7 @@ function MobileThemeProvider() {
       {children}
     </div>);
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -128,3 +142,5 @@ export function MobileThemeProvider({ children }: MobileThemeProviderProps) {;
   )
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

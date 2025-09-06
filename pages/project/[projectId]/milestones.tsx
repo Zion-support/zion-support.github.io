@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -64,6 +65,8 @@ export default function ProjectMilestonesPage() {;
 import { useRouter  } from 'next/router';
 import Head from 'next/head',
 import MilestoneForm from '../../../components/monetization/MilestoneForm',
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {useRouter} from 'next/router';
 import { useRouter } from 'next/router';
 import Head from 'next/head';
@@ -71,14 +74,13 @@ import MilestoneForm from '../../../components/monetization/MilestoneForm';
 import MilestoneCard from '../../../components/monetization/MilestoneCard';
 
 import { Milestone } from '../../../utils/types/milestones';
-import {
-  createMilestone
-  fetchMilestones
-  updateMilestoneStatus;
+import MilestoneCard from '../../../components/monetization/MilestoneCard';
+
 import {
   createMilestone,
   fetchMilestones,;
   updateMilestoneStatus,;
+
 } from '../../../utils/api/milestones-client';
 function getRoleFromEnvOrQuery(): 'client' | 'talent' | 'admin' {
   if (typeof window === 'undefined') return 'client';
@@ -94,23 +96,6 @@ export default function ProjectMilestonesPage() {;
   );  const [milestones, setMilestones] = useState<Milestone[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-  useEffect(() => {
-    setRole(getRoleFromEnvOrQuery());  }, []);
-  // Demo cookie-based auth to hit API successfully
-  useEffect(() => {
-    if (!role) return;
-    try {
-      const userId =
-        role === 'talent'
-          ? 'talent-1'
-          : role === 'client'
-            ? 'client-1'
-            : 'client-1';
-      document.cookie = `x-user-id=${userId}; path=/`;
-      document.cookie = `x-user-role=${role}; path=/`;    } catch {}
-  }, [role]);
-  useEffect(() => {
-    if (!projectId) return;
 import { useRouter } from 'next/router';
 import Head from 'next/head';
 import MilestoneForm from '../../../components/monetization/MilestoneForm';
@@ -130,6 +115,7 @@ export default function ProjectMilestonesPage(req, res) {
   const [milestones, setMilestones] = useState<Milestone[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
   useEffect(() => {;
@@ -184,6 +170,10 @@ import { Milestone } from '../../../utils/types/milestones';
   useEffect(() => {;
     if (!projectId) return;
   useEffect(() => {;
+=======
+
+  useEffect(() => {;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     setRole(getRoleFromEnvOrQuery());
   }, []),;
   // Demo cookie-based auth to hit API successfully;
@@ -200,12 +190,21 @@ import { Milestone } from '../../../utils/types/milestones';
 }
   }, [role]),;
   useEffect(() => {;
+<<<<<<< HEAD
     if (!projectId) return,;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+import MilestoneCard from '../../../components/monetization/MilestoneCard';
+
+import { Milestone } from '../../../utils/types/milestones';
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     let cancelled = false;
     (async () => {;
       setLoading(true);
       setError(null);
+<<<<<<< HEAD
 <<<<<<< HEAD
       try {;
         const data = await fetchMilestones(projectId as string);
@@ -305,14 +304,20 @@ if (return) {
   $2
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       }
     })();
     return () => {;
       cancelled = true;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
     };
 
@@ -323,10 +328,13 @@ if (return) {
   const handleCreate = async (payload: {;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     }
   const handleCreate = async (payload: {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     title: string;
     description?: string;
     dueDate: string;
@@ -334,6 +342,7 @@ if (return) {
   }) => {;
     if (!projectId) return;
     const res = await createMilestone(projectId as string, payload);
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     } catch {}
@@ -348,6 +357,8 @@ if (return) {
       try {
         const data = await fetchMilestones(projectId as string)
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
         if (!cancelled) setMilestones(data.milestones || [])
       } catch (e: any) {
@@ -359,6 +370,7 @@ if (return) {
     return () => {
       cancelled = true
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
   }, [projectId]);
 
@@ -387,6 +399,10 @@ if (return) {
     };
   }, [projectId]);
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  }, [projectId]);
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
     setMilestones(prev => [res.milestone, ...prev]);  };
 
@@ -401,6 +417,7 @@ if (return) {
   const handleCreate = async (payload: { title: string, description?: string, dueDate: string, amountUsd: number }) => {
     if (!projectId) return;
     const res = await createMilestone(projectId as string, payload);
+<<<<<<< HEAD
 <<<<<<< HEAD
     setMilestones((prev) => [res.milestone, ...prev])
 
@@ -428,12 +445,15 @@ if (return) {
     setMilestones((prev) => [res.milestone, ...prev])
   },
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const handleAction = async (
     action: 'in_progress' | 'submitted' | 'approved' | 'paid'
     milestoneId: string
   ) => {
     if (!projectId) return
     const map: Record<string, string> = {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -453,6 +473,8 @@ if (return) {
     };
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       in_progress: 'In Progress'
       submitted: 'Submitted'
       approved: 'Approved'
@@ -460,9 +482,10 @@ if (return) {
     }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     const status = map[action];
-    const res = await updateMilestoneStatus(projectId as string, milestoneId, {;
-      status,;
+    const res = await updateMilestoneStatus(projectId as string, milestoneId, {
+      status
     });
+<<<<<<< HEAD
 <<<<<<< HEAD
     setMilestones(prev =>;
       prev && prev.map(m => (m && m.id === milestoneId ? res && res.milestone : m));
@@ -535,10 +558,13 @@ if (return) {
         <meta name="description" content="Track project deliverables and milestone payments" />
       </Head>
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <div className="max-w-5xl mx-auto px-4 py-8">
         <div className="mb-6">
           <h1 className="text-2xl font-bold">Milestones</h1>
           <p className="text-sm text-gray-600">Project: {projectId as string}</p>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -546,6 +572,8 @@ if (return) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         </div>
 
         {role !== 'talent' && (
@@ -557,6 +585,7 @@ if (return) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
             <MilestoneForm onSubmit={handleCreate} />
           </div>
+<<<<<<< HEAD
 
         />;
       </Head>;
@@ -587,6 +616,10 @@ if (return) {
         )}
         {loading && <div>Loading milestones...</div>}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+        )}
+        {loading && <div>Loading milestones...</div>}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   }, [project_id]);
 
 
@@ -622,16 +655,21 @@ if (return, ) {
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         {!loading && !error && (
           <div className='space - y-4'>;
             {milestones.length === 0 && (
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     const map: Record < string, string> = {
@@ -676,16 +714,23 @@ if (return, ) {
           <div className='space - y-4'>;
             {milestones.length === 0 && (
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         {!loading && !error && (;
           <div className='space-y-4'>;
             {milestones && milestones.length === 0 && (;
               <div className='text-gray-600'>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 No milestones yet.{' '}
                 {role !== 'talent' ? 'Create the first one.' : ''}
               </div>;
@@ -694,10 +739,14 @@ if (return, ) {
               <MilestoneCard
                 key={m && m.id}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <div className='text - gray - 600'>;
                 No milestones yet.{' '}
                 {role !== 'talent' ? 'Create the first one.' : ''}
@@ -706,20 +755,30 @@ if (return, ) {
               <MilestoneCard;
                 key={m.id}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 milestone={m}
                 project_id={String (project_id)}
                 role={role}
                 on_action={handle_action}
               />            ))}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <div className='mt-12 text-xs text-gray-500'>;
           Integration hooks ready: on Approved &rarr; trigger payout intent; on;
           Paid &rarr; capture via Stripe/PayPal/Escrow.;
@@ -728,16 +787,22 @@ if (return, ) {
     </div>;
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 }
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
@@ -778,6 +843,10 @@ if (return, ) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+        {error && <div className="text-red-600">{error}</div>}
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         {!loading && !error && (
           <div className="space-y-4">
             {milestones.length === 0 && (
@@ -786,23 +855,11 @@ if (return, ) {
                 {role !== 'talent' ? 'Create the first one.' : ''}
               </div>
             )}
-            {milestones.map(m => (
-              <MilestoneCard
-                key={m.id}
-                milestone={m}
-                projectId={String(projectId)}
-                role={role}
-                onAction={handleAction}
-              />            ))}
+            {milestones.map((m) => (
+              <MilestoneCard key={m.id} milestone={m} projectId={String(projectId)} role={role} onAction={handleAction} />
+            ))}
           </div>
         )}
-        <div className='mt-12 text-xs text-gray-500'>
-          Integration hooks ready: on Approved &rarr; trigger payout intent; on
-          Paid &rarr; capture via Stripe/PayPal/Escrow.
-        </div>
-      </div>
-    </div>
-);
 
 }
 }
@@ -831,11 +888,14 @@ if (return, ) {
         </div>
       </div>
     </div>
+<<<<<<< HEAD
   )
 <<<<<<< HEAD
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           </div>)}
         <div className='mt - 12 text - xs text - gray - 500'>;
           Integration hooks ready: on Approved &rarr; trigger payout intent; on;
@@ -843,6 +903,7 @@ if (return, ) {
         </div>;
       </div>;
 
+<<<<<<< HEAD
 =======
     </div>);
 ;
@@ -852,6 +913,8 @@ if (return, ) {
         </div>;
       </div>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     </div>;
   );
   } catch (error) {
@@ -859,6 +922,7 @@ if (return, ) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -866,3 +930,5 @@ if (return, ) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -16,17 +17,26 @@ export default function UseTokensModal({
 
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   isOpen
   onClose
   serviceId
   defaultType
 }: {
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   isOpen,
   onClose,
   serviceId,
   defaultType,
 }: {;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -75,12 +85,15 @@ isOpen
 }: {
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   isOpen: boolean;
   onClose: () => void;
   serviceId?: string;
   defaultType?: RedemptionType;
 }) {;
   const [account, setAccount] = useState<string | null>(null);
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -105,15 +118,20 @@ export default function UseTokensModal({
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const [tokens, setTokens] = useState<number>(100);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const usdValue = (tokens * 0.01).toFixed(2);
   useEffect(() => {
     (async () => {
+<<<<<<< HEAD
 =======
   const [type, setType] = useState<RedemptionType>(;
     defaultType ?? "boost_profile",;
   );
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const [tokens, setTokens] = useState<number>(100);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const usdValue = (tokens * 0 && 0.01).toFixed(2);
@@ -122,6 +140,7 @@ export default function UseTokensModal({
     (async () => {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       const accs = await getAccounts();
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -181,10 +200,13 @@ export default function UseTokensModal ({
   }, []);
     if (accs && accs.length > 0) setAccount(accs[0])
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   }
   async function redeem() {
     setIsSubmitting(true);
     try {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -206,10 +228,13 @@ export default function UseTokensModal ({
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       });
       const data = await res && res.json();
       if (data?.ok) {;
         onClose();
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -227,12 +252,15 @@ export default function UseTokensModal ({
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       }
     } finally {;
       setIsSubmitting(false);
     }
   }
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -244,10 +272,13 @@ export default function UseTokensModal ({
 
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   if (!isOpen) return null;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -342,12 +373,15 @@ if (return null) {
               on_change={(e) => set_type (e.target.value as RedemptionType)}
               className="w - full rounded border border - gray - 300 dark:border - gray - 700 bg - transparent px - 2 py - 2";
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             >;
               <option value="boost_profile">Boost profile</option>;
               <option value="promote_listing">Promote listing</option>;
               <option value="premium_support">Get premium support</option>;
             </select>;
           </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -369,11 +403,14 @@ if (return null) {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <button
                 onClick={connect}
                 className="enhanced-button enhanced-button-primary">;
                 Connect MetaMask;
               </button>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -400,6 +437,8 @@ if (return null) {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <button
             disabled={!account |isSubmitting |tokens <= 0}
             onClick={redeem}
@@ -447,18 +486,22 @@ if (return null) {
       </div>;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   );
 }
 =======
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <div className="mt-4 flex items-center justify-between">
           <div className="text-xs opacity-70">You can spend tokens to boost visibility, promote listings, or access premium support.</div>
           <button disabled={!account || isSubmitting || tokens <= 0} onClick={redeem} className="enhanced-button enhanced-button-primary disabled: opacity-50">Redeem</button>
         </div>
       </div>
     </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 }
@@ -469,12 +512,11 @@ if (return null) {
 <<<<<<< HEAD
 );
 =======
-  );
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 =======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   );
->>>>>>> main
 }
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     </div>);
 }
@@ -491,3 +533,7 @@ if (return null) {
 }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+    </div>);
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

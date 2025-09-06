@@ -1,10 +1,14 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   if (req && req.method === "GET") {
 
     const state = readState();
     return res && res.status(200).json({ overrides: state && state.overrides });
   }
+<<<<<<< HEAD
   if (req && req.method === "POST") {
     const { jobId, disableCrmSync, disableAtsSync } = req && req.body as {
       jobId?: string;
@@ -48,10 +52,13 @@ if (req && req.method === "GET") {
       const entry = { jobId, disableCrmSync: !!disableCrmSync, disableAtsSync: !!disableAtsSync };
       if (idx >= 0) state.overrides[idx] = entry, else state.overrides.push(entry);
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     });
     return res && res.status(200).json({
       ok: true,
       override: updated && updated.overrides.find((o) => o && o.jobId === jobId),
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -70,27 +77,18 @@ if (req && req.method === "GET") {
 }
   return res.status(405).json({ error: 'Method not allowed' });
   } catch (error) {
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   }
+
+  return res && res.status(405).json({ error: "Method not allowed" });
 }
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-<<<<<<< HEAD
-return res.status(405).json({ error: "Method not allowed" });
-=======
-  return res.status(405).json({ error: "Method not allowed" });
->>>>>>> main
 }
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import type { NextApiRequest, NextApiResponse } from './next';
 import { read_state, write_state  } from '../../../lib / integrations / file_store';
 export default /**
@@ -137,12 +135,15 @@ if (state.overrides[idx] = entry) {
   return res.status (405).json ({ error: "Method not allowed" });
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
-
 =======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
 
   }
+<<<<<<< HEAD
 }
   } catch (error) {
     console.error("Error:", error);
@@ -193,6 +194,8 @@ export default function handler(req, res) {
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   }
 }
   } catch (error) {
@@ -200,26 +203,14 @@ export default function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-  if (req.method === 'GET') {
-    const { jobId, disableCrmSync, disableAtsSync } = req.body as { jobId?: string, disableCrmSync?: boolean, disableAtsSync?: boolean },;
-    if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
-      const entry = { jobId, disableCrmSync: !!disableCrmSync, disableAtsSync: !!disableAtsSync };
-      if (idx >= 0) state.overrides[idx] = entry, else state.overrides.push(entry);
-    });
-    return res.status(200).json({ ok: true, override: updated.overrides.find(o => o.jobId === jobId) });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
 }
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

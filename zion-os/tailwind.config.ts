@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import type { Config } from 'tailwindcss';
 const config: Config = {
@@ -21,6 +22,11 @@ const config: Config = {
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}"],
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+    &quot;./src / pages/**/*.{js, ts, jsx, tsx, mdx}&quot;,
+    &quot;./src / components/**/*.{js, ts, jsx, tsx, mdx}&quot;,
+    &quot;./src / app/**/*.{js, ts, jsx, tsx, mdx}&quot;],
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   theme: {
     extend: {
       colors: {
@@ -39,6 +45,7 @@ const config: Config = {
       background_image: {
         'gradient - radial': 'radial - gradient (var (--tw - gradient - stops))gradient - conic': 'conic - gradient (from 180deg at 50% 50%, var (--tw - gradient - stops))'}}},
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   plugins: []}
 
@@ -51,3 +58,5 @@ const config: Config = {
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 export default config;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -1,8 +1,11 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useState, useEffect  } from './react';
 import { Skill  } from '@/types / resume';
 import { SkillCategory  } from './SkillCategory';
@@ -15,6 +18,7 @@ export const SkillsList = ({ skills, onDeleteSkill }: SkillsListProps) =>: any {
   const [skillsByCategory, setSkillsByCategory] = useState<;
     Record < string, Skill[]>;
   >({});
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -39,11 +43,14 @@ import { Skill } from "@/types/resume";
 import { SkillCategory } from "./SkillCategory";
 >>>>>>> main
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface SkillsListProps {
   skills: Skill[];
   onDeleteSkill: (id: string, category: string) => Promise<void>;
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 export const SkillsList = ({ skills, onDeleteSkill }: SkillsListProps) => {;
@@ -64,10 +71,13 @@ export const SkillsList = ({ skills, onDeleteSkill }: SkillsListProps) => {
 
 >>>>>>> main
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   useEffect(() => {
     // Group skills by category
     const grouped = skills.reduce(
       (acc, skill) => {
+<<<<<<< HEAD
 <<<<<<< HEAD
         const category = skill.category |"Other";
         if (!acc[category]) {
@@ -114,6 +124,10 @@ if ( {) {
   }
     return null
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+    return null
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useState, useEffect } from 'react',;
 import { Skill } from '@/types/resume',;
 import { SkillCategory } from './SkillCategory',;
@@ -131,13 +145,8 @@ export const SkillsList = ({ skills, onDeleteSkill }: SkillsListProps) => {;
       if (!acc[category]) {;
         acc[category] = [];
       }
-      acc[category].push(skill),;
-      return acc;
-    }, {} as Record<string Skill[]>),;
-    setSkillsByCategory(grouped);
-  }, [skills]);
-  if (Object.keys(skillsByCategory).length === 0) {;
     return null;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -154,16 +163,21 @@ export const SkillsList = ({ skills, onDeleteSkill }: SkillsListProps) => {;
 =======
     return null;
 >>>>>>> main
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   }
 
   return (
     <div className="space-y-6">
       <h3 className="text-md font-medium">Your Skills</h3>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> main
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <div className="space-y-4">
         {Object.entries(skillsByCategory).map(([category, categorySkills]) => (
           <SkillCategory
@@ -173,6 +187,7 @@ export const SkillsList = ({ skills, onDeleteSkill }: SkillsListProps) => {;
             onDelete={onDeleteSkill}
           />
         ))}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 import {useState, useEffect} from 'react';
@@ -229,10 +244,13 @@ export const SkillsList = ({ skills, onDeleteSkill }: SkillsListProps) => {;
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   )
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
       </div>;
     </div>;
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -244,9 +262,10 @@ export const SkillsList = ({ skills, onDeleteSkill }: SkillsListProps) => {;
   );
 >>>>>>> main
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-};
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
+  );
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+};
       },
       {} as Record < string, Skill[]>,
     );
@@ -275,6 +294,7 @@ if (.length === 0) {) {
     </div>);
 }
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -313,3 +333,5 @@ return (<div className="space-y-6" > <h3 className="text-md font-medium" >Your S
   );
 };
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

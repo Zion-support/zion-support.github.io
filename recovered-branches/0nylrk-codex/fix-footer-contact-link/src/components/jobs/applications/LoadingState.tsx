@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 
@@ -14,10 +15,13 @@ import { Loader2 } from "lucide-react",
 import { Card, CardContent } from "@/components/ui/card",
 import { Loader2 } from "lucide-react",
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export function LoadingState() {
   return (
     <div className="flex justify-center items-center p-8">
       <Loader2 className="h-8 w-8 animate-spin text-primary" />
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     </div>
@@ -30,6 +34,8 @@ export function LoadingState() {
     </div>
   );
 }
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   )
 import { Card, CardContent } from "@/components/ui/card",;
 import { Loader2 } from "lucide-react";
@@ -37,14 +43,10 @@ export function LoadingState() {;
   return (;
     <div className="flex justify-center items-center p-8">;
       <Loader2 className="h-8 w-8 animate-spin text-primary" />;
-    </div>;
-  );
-}
-;
-    </div>
 
     </div>;
   );
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import { Card, CardContent  } from '@/components / ui / card';
 import { Loader2  } from './lucide-react';
@@ -75,3 +77,5 @@ export function LoadingState() {;
   return (<div className="flex justify-center items-center p-8" > <Loader2 className="h-8 w-8 animate-spin text-primary" /> </div>) 
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

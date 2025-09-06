@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React from 'react';
 import Link from 'next / link';
@@ -27,6 +28,10 @@ import { motion } from 'framer-motion';
 
 
 import {
+=======
+import { motion } from 'framer-motion';
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   Phone
   Mail
   MapPin
@@ -52,7 +57,10 @@ import {
   Award
   CheckCircle;} from 'lucide-react';import {
   Phone, Mail, MapPin, Globe, Zap, Brain, Atom
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   Phone,
   Mail,
   MapPin,
@@ -79,10 +87,13 @@ import {
   CheckCircle,;} from 'lucide-react';import {
   Phone, Mail, MapPin, Globe, Zap, Brain, Atom, ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   Rocket, Shield, Cpu, Target, Microscope, Users;
   Facebook, Twitter, Linkedin, Instagram, Youtube;
   Github, ArrowRight, Heart, Star, Award, CheckCircle
@@ -214,6 +225,7 @@ const serviceCategories = [
   },];      { name: 'AI Business Intelligence Suite 2030', href: '/ai-business-intelligence-suite-2030' }
       { name: 'AI Customer Experience Platform 2030', href: '/ai-customer-experience-platform-2030' }
       { name: 'AI Marketing Automation Suite 2030', href: '/ai-marketing-automation-2030' }
+<<<<<<< HEAD
 =======
 =======
 import { 
@@ -288,6 +300,8 @@ const serviceCategories = [
 <<<<<<< HEAD
 ];
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -473,6 +487,7 @@ const serviceCategories = [;
   },];      { name: 'AI Business Intelligence Suite 2030', href: '/ai-business-intelligence-suite-2030' },;
       { name: 'AI Customer Experience Platform 2030', href: '/ai-customer-experience-platform-2030' },;
       { name: 'AI Marketing Automation Suite 2030', href: '/ai-marketing-automation-2030' },;
+<<<<<<< HEAD
 
 
       { name: 'AI HR Management Suite 2030', href: '/ai-hr-management-suite-2030' }
@@ -644,6 +659,8 @@ const service_categories = [;
   }
 const quick_links = [;
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   { name: 'Home', href: '/' },
   { name: 'Services', href: '/services' },
   { name: 'Solutions', href: '/solutions' },
@@ -651,12 +668,6 @@ const quick_links = [;
   { name: 'Resources', href: '/resources' },
   { name: 'Case Studies', href: '/case - studies' },
   { name: 'Blog', href: '/blog' },
-
-  { name: 'Contact', href: '/contact' }, ];  { name: 'Contact', href: '/contact' }
-];
-;
-const company_info = [;
-
   { name: 'About Us', href: '/about' },
   { name: 'Careers', href: '/careers' },
   { name: 'Press', href: '/press' },
@@ -664,14 +675,6 @@ const company_info = [;
   { name: 'Support', href: '/support' },
   { name: 'Status', href: '/status' }
 ];
-
-
-
-
-
-const certifications = [
-
-
 
 const quickLinks = [;
   { name: 'Home', href: '/' },;
@@ -681,6 +684,7 @@ const quickLinks = [;
   { name: 'Resources', href: '/resources' },;
   { name: 'Case Studies', href: '/case-studies' },;
   { name: 'Blog', href: '/blog' },;
+<<<<<<< HEAD
   { name: 'Contact', href: '/contact' },];  { name: 'Contact', href: '/contact' }
 ];
 
@@ -697,6 +701,8 @@ const quickLinks = [
   { name: 'Contact', href: '/contact' },];  { name: 'Contact', href: '/contact' }
 ];
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 const companyInfo = [;
   { name: 'About Us', href: '/about' },;
   { name: 'Careers', href: '/careers' },;
@@ -726,6 +732,7 @@ const socialLinks = [;
   { name: 'YouTube', href: 'https://youtube && youtube.com/ziontechgroup', icon: Youtube },;
   { name: 'GitHub', href: 'https://github && github.com/ziontechgroup', icon: Github },;
 ];
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 const certifications = [;
@@ -906,6 +913,8 @@ export default function UltraFuturisticFooter2030() {
     <footer className='bg-gradient-to-br from-black via-purple-900/20 to-black text-white relative overflow-hidden'>
       {/* Animated Background */}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 via-transparent to-cyan-500/5"></div>
         <div className="absolute top-0 left-0 w-full h-full">
@@ -936,18 +945,26 @@ export default function UltraFuturisticFooter2030() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;
             {/* Company Info */}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
+                    {contactInfo.website.replace('https://', '')}
 
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   </a>
                 </div>
               </div>
             </div>
+<<<<<<< HEAD
 
             <div className="space-y-6">;
               <div className="flex items-center space-x-3">;
@@ -1081,10 +1098,13 @@ export default function UltraFuturisticFooter2030() {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   </a>;
                 </div>;
               </div>;
             </div>;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -1143,6 +1163,8 @@ export default function UltraFuturisticFooter2030() {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <span>Our Services</span>
               </h4>
               <div className='grid grid-cols-1 gap-4'>
@@ -1153,7 +1175,10 @@ export default function UltraFuturisticFooter2030() {
                     </h5>
                     <div className='space-y-1'>                      {category.services.map((service, serviceIndex) => (
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                         <Link
                           key={serviceIndex}
                           href={service && service.href}
@@ -1171,6 +1196,7 @@ export default function UltraFuturisticFooter2030() {
                           className='block text-xs text-gray-400 hover:text-purple-300 transition-colors'                          className="block text-xs text-gray-400 hover:text-purple-300 transition-colors">;
                           {service && service.name}
                         </Link>;
+<<<<<<< HEAD
 
 =======
 =======
@@ -1211,10 +1237,13 @@ export default function UltraFuturisticFooter2030() {
                           {service.name}
                         </Link>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       ))}
                     </div>;
                   </div>;
                 ))}
+<<<<<<< HEAD
 
               </div>;
             </div>;
@@ -1232,10 +1261,13 @@ export default function UltraFuturisticFooter2030() {
 
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             {/* Quick Links */}
 
 
                 ))}
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -1283,6 +1315,8 @@ className="block text-sm text-gray-400 hover:text-cyan-300 transition-colors fle
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   <Link
                     key={index}
                     href={link && link.href}
@@ -1295,6 +1329,7 @@ className="block text-sm text-gray-400 hover:text-cyan-300 transition-colors fle
                     className='block text-xs text-gray-400 hover:text-cyan-300 transition-colors'                    className="block text-xs text-gray-400 hover:text-cyan-300 transition-colors">;
                     {link && link.name}
                   </Link>;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -1332,6 +1367,11 @@ className="block text-sm text-gray-400 hover:text-cyan-300 transition-colors fle
               </h4>
 <<<<<<< HEAD
 =======
+=======
+                ))}
+                <span>Connect & Trust</span>
+              </h4>
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               </div>;
             </div>;
 
@@ -1341,6 +1381,7 @@ className="block text-sm text-gray-400 hover:text-cyan-300 transition-colors fle
                 <Users className='w-5 h-5 text-green-400' />;
                 <span>Connect & Trust</span>;
               </h4>;
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
@@ -1352,11 +1393,18 @@ className="block text-sm text-gray-400 hover:text-cyan-300 transition-colors fle
               </div>
             </div>
 
+=======
+              </div>
+            </div>
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             {/* Social & Certifications */}
             <div className='space-y-6'>
               <h4 className='text-lg font-semibold text-white flex items-center space-x-2'>
                 <Users className='w-5 h-5 text-green-400' />
+<<<<<<< HEAD
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <span>Connect & Trust</span>
               </h4>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -1368,6 +1416,7 @@ className="block text-sm text-gray-400 hover:text-cyan-300 transition-colors fle
                 <div className='flex flex-wrap gap-2'>                  {socialLinks && socialLinks.map((social, index) => (;
                     <a
                       key={index}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
                       href={social && social.href}                <span>Connect & Trust</span>;
@@ -1387,6 +1436,8 @@ className="block text-sm text-gray-400 hover:text-cyan-300 transition-colors fle
               {/* Social Links */}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                       href={social && social.href}
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       target='_blank'
                       rel='noopener noreferrer'
                       className='w-10 h-10 bg-gray-800/50 hover:bg-purple-500/20 rounded-lg flex items-center justify-center text-gray-400 hover:text-purple-400 transition-all duration-200 hover:shadow-lg hover:shadow-cyan-400/40'>;
@@ -1395,6 +1446,7 @@ className="block text-sm text-gray-400 hover:text-cyan-300 transition-colors fle
                       className="w-10 h-10 bg-gray-800/50 hover:bg-purple-500/20 rounded-lg flex items-center justify-center text-gray-400 hover:text-purple-400 transition-all duration-200 hover:shadow-lg hover:shadow-cyan-400/40";
                     >;
                       <social && social.icon className="w-5 h-5" />;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1547,6 +1599,8 @@ className="block text-sm text-gray-400 hover:text-cyan-300 transition-colors fle
                       href={social.href}                <span > Connect & Trust</span>;
               </h4>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               {/* Social Links */}
               <div className="space - y-3">;
                 <h5 className="text - sm font - medium text - green - 300">Follow Us</h5>;
@@ -1555,12 +1609,23 @@ className="block text-sm text-gray-400 hover:text-cyan-300 transition-colors fle
                     <a;
                       key={index}
                       href={social.href}
-
+              {/* Certifications */}
+              <div className='space-y-3'>
+                <h5 className='text-sm font-medium text-green-300 flex items-center space-x-2'>
+                  <Award className='w-4 h-4' />
 
                   <span>Certifications</span>
                 </h5>
                 <div className='grid grid-cols-1 gap-2'>
                   {certifications.map((cert, index) => (
+              {/* Certifications */}
+              <div className='space-y-3'>;
+                <h5 className='text-sm font-medium text-green-300 flex items-center space-x-2'>;
+                  <Award className='w-4 h-4' />;
+                  <span>Certifications</span>;
+                </h5>;
+                <div className='grid grid-cols-1 gap-2'>;
+                  {certifications && certifications.map((cert, index) => (;
                     <div
                       key={index}
                       className='flex items-center space-x-2 text-xs text-gray-400'>;
@@ -1572,6 +1637,7 @@ className="block text-sm text-gray-400 hover:text-cyan-300 transition-colors fle
                       <CheckCircle className="w-3 h-3 text-green-400" />;
                       <span>{cert}</span>;
                     </div>;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -1580,6 +1646,8 @@ className="block text-sm text-gray-400 hover:text-cyan-300 transition-colors fle
               </div>;
               {/* Certifications */}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <div className="space-y-3">
                 <h5 className="text-sm font-medium text-green-300 flex items-center space-x-2">
                   <Award className="w-4 h-4" />
@@ -1591,14 +1659,21 @@ className="block text-sm text-gray-400 hover:text-cyan-300 transition-colors fle
                       <CheckCircle className="w-3 h-3 text-green-400" />
                       <span>{cert}</span>
                     </div>
-
                   ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
                   ))}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       target='_blank';
                       rel='noopener noreferrer';
                       className='w - 10 h - 10 bg - gray - 800 / 50 hover:bg - purple - 500 / 20 rounded - lg flex items - center justify - center text - gray - 400 hover:text - purple - 400 transition - all duration - 200 hover:shadow - lg hover:shadow - cyan - 400 / 40';
@@ -1631,26 +1706,36 @@ className="block text-sm text-gray-400 hover:text-cyan-300 transition-colors fle
                       <span>{cert}</span>;
                     </div>))}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 </div>;
               </div>;
             </div>;
           </div>;
         </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         {/* Bottom Bar */}
         <div className='border-t border-purple-500/20'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6'>
             <div className='flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0'>
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
               <div className='flex items-center space-x-6 text-sm text-gray-400'>
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <span>&copy; 2024 Zion Tech Group. All rights reserved.</span>
                 <Link
                   href='/privacy'
@@ -1659,6 +1744,7 @@ className="block text-sm text-gray-400 hover:text-cyan-300 transition-colors fle
                 </Link>;
                 <Link
                   href='/terms'
+<<<<<<< HEAD
 
         <div className="border-t border-purple-500/20">
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-6">
@@ -1698,6 +1784,8 @@ className="block text-sm text-gray-400 hover:text-cyan-300 transition-colors fle
               </div>
               <div className='flex items-center space-x-4 text-sm text-gray-400'>              </div>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <div className="flex items-center space-x-4 text-sm text-gray-400">
                 <div className="flex items-center space-x-2">
                   <Heart className="w-4 h-4 text-red-400" />
@@ -1718,6 +1806,7 @@ className="block text-sm text-gray-400 hover:text-cyan-300 transition-colors fle
         </div>
       </div>
     </footer>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
                   className='hover:text-purple-400 transition-colors'>;
@@ -1777,12 +1866,15 @@ className="block text-sm text-gray-400 hover:text-cyan-300 transition-colors fle
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 </div>;
               </div>;
             </div>;
           </div>;
         </div>;
       </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -1809,10 +1901,19 @@ className="block text-sm text-gray-400 hover:text-cyan-300 transition-colors fle
 
 
 }
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   );
 }
 ;
 }
 }
 }
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  );
+}
+    </footer>);
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -7,6 +8,8 @@
 
 
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from 'react',;
 import { Milestone } from '@/hooks/useMilestones',;
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card',;
@@ -14,18 +17,11 @@ import { CreditCard } from 'lucide-react',;
 interface PaymentSummaryProps {;
   milestones: Milestone[],;
   paymentTerms: string | null;
-
-
-
 }
 
 export const PaymentSummary: React.FC<PaymentSummaryProps> = ({ milestones, paymentTerms }) => {
   const totalPayment = milestones.reduce(
     (sum, m) => sum + parseFloat(m.amount.toString()), 
-
-    0
-  ).toFixed(2),
-
   
   const paidAmount = milestones
     .filter(m => m.status === 'paid')
@@ -33,6 +29,7 @@ export const PaymentSummary: React.FC<PaymentSummaryProps> = ({ milestones, paym
       (sum, m) => sum + parseFloat(m.amount.toString()), 
       0
     ).toFixed(2),
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -62,6 +59,9 @@ export const PaymentSummary: React.FC<PaymentSummaryProps> = ({
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <Card className="mb-8 bg-muted/30">
       <CardHeader className="pb-3">
@@ -76,12 +76,15 @@ export const PaymentSummary: React.FC<PaymentSummaryProps> = ({
             <p className="text-2xl font-semibold">${totalPayment}</p>
           </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 
 >>>>>>> main
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <div>
             <p className="text-sm text-muted-foreground mb-1">Payment Terms</p>
             <p className="font-medium capitalize">
@@ -89,11 +92,14 @@ export const PaymentSummary: React.FC<PaymentSummaryProps> = ({
             </p>
           </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           <div>
             <p className="text-sm text-muted-foreground mb-1">Paid Amount</p>
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 import {Milestone} from '@/hooks/useMilestones';
 import {Card, CardContent, CardHeader, CardTitle} from '@/components/ui/card';
@@ -103,6 +109,7 @@ interface PaymentSummaryProps {;
   paymentTerms: string | null;
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 export const PaymentSummary: React.FC<PaymentSummaryProps> = ({ milestones, paymentTerms }) => {;
   const totalPayment = milestones && milestones.reduce(;
@@ -145,30 +152,28 @@ export const PaymentSummary: React.FC<PaymentSummaryProps> = ({ milestones, paym
             <p className="font-medium">;
               ${paidAmount}
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <p className="font-medium">
               ${paidAmount}
-<<<<<<< HEAD
-            </p>
-=======
-
-          <div>
-            <p className="text-sm text-muted-foreground mb-1">Paid Amount</p>
-            <p className="font-medium">${paidAmount}</p>
->>>>>>> main
           </div>
         </div>
       </CardContent>
     </Card>
 <<<<<<< HEAD
+<<<<<<< HEAD
   )
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             </p>;
           </div>;
         </div>;
       </CardContent>;
     </Card>;
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -182,9 +187,10 @@ export const PaymentSummary: React.FC<PaymentSummaryProps> = ({ milestones, paym
   );
 >>>>>>> main
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-};
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
+  );
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+};
 import React from './react';
 import { Milestone  } from '@/hooks / use_milestones';
 import { Card, CardContent, CardHeader, CardTitle  } from '@/components / ui / card';
@@ -235,8 +241,11 @@ export const PaymentSummary: React.FC < PaymentSummaryProps> = ({
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 import React from 'react',;
 import { Milestone } from '@/hooks/useMilestones',;
@@ -302,4 +311,7 @@ export const PaymentSummary:React.FC<PaymentSummaryProps> = ({ milestones, payme
 };
 
 };
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

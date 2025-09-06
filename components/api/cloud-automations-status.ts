@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -12,6 +13,8 @@ export default async function handler(
   const dir = path.resolve(process.cwd(), 'data/cloud-automations');
   const data: Record<string, any> = {};
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
@@ -28,13 +31,18 @@ import path from 'path';
 export default function handler(_req: NextApiRequest, res: NextApiResponse) {
   const dir = path.resolve(process.cwd(), "data/cloud-automations");
   const data: Record<string, any> = {}
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   try {
     if (fs.existsSync(dir)) {
       for (const f of fs.readdirSync(dir)) {
-        if (f.endsWith('.json')) {
+        if (f.endsWith(".json")) {
           const fp = path.join(dir, f);
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   const dir = path && path.resolve(process && process.cwd(), "data/cloud-automations");
@@ -86,10 +94,14 @@ function handler() {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+          );
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         }
       }
     }
   } catch (e) {
+<<<<<<< HEAD
     // ignore;
   }
 
@@ -125,3 +137,7 @@ function handler() {
   }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

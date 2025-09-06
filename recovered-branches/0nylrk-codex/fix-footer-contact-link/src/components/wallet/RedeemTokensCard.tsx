@@ -2,7 +2,6 @@
 
 
 
-
 import React, { useState } from "react";
 import {useWallet} from "@/hooks/useWallet";
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
@@ -10,10 +9,13 @@ import {Button} from "@/components/ui/button";
 import {Gift, ArrowRight, ExternalLink} from "lucide-react";
 import {Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger} from "@/components/ui/dialog";
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useState } from "react",
 import { useWallet } from "@/hooks/useWallet",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
@@ -31,18 +33,22 @@ import {
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 type RewardOption = {
   id: string
   title: string
   description: string
   cost: number
   type: 'credit' | 'feature' | 'course'
+<<<<<<< HEAD
 
 
 },
@@ -55,6 +61,8 @@ type RewardOption = {
 },
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 const REWARD_OPTIONS: RewardOption[] = [
   {
     id: 'premium-week'
@@ -62,6 +70,7 @@ const REWARD_OPTIONS: RewardOption[] = [
     description: '7 days of premium features including top placement in search results'
     cost: 100
     type: 'feature'
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -75,12 +84,15 @@ const REWARD_OPTIONS: RewardOption[] = [
   }
   },
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   {
     id: 'resume-review'
     title: 'AI Resume Review'
     description: 'Get your resume analyzed and optimized by our AI'
     cost: 50
     type: 'feature'
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -94,6 +106,8 @@ const REWARD_OPTIONS: RewardOption[] = [
   }
   },
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   {
     id: 'platform-credit'
     title: '$5 Platform Credit'
@@ -101,6 +115,7 @@ const REWARD_OPTIONS: RewardOption[] = [
     cost: 100
     type: 'credit'
   }
+<<<<<<< HEAD
 
 
 ],
@@ -123,11 +138,14 @@ export function RedeemTokensCard() {
   const [open, setOpen] = useState(false),
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const handleRedeem = async (option: RewardOption) => {
     if (!wallet |wallet.balance < option.cost) return
     await spendTokens(option.cost, `Redeemed: ${option.title}`)
     setOpen(false)
 
+<<<<<<< HEAD
 
   },
 
@@ -138,6 +156,8 @@ export function RedeemTokensCard() {
   },
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <Card>
       <CardHeader>
@@ -172,6 +192,7 @@ export function RedeemTokensCard() {
                       variant={wallet && wallet.balance >= option.cost ? "default" : "outline"}
                       disabled={!wallet |wallet.balance < option.cost}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -183,6 +204,8 @@ export function RedeemTokensCard() {
                     </Button>
                   </div>
                 </div>
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               ))}
             </div>
             <div className="flex justify-between">
@@ -196,6 +219,7 @@ export function RedeemTokensCard() {
       </CardContent>
     </Card>
   )
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -203,6 +227,8 @@ export function RedeemTokensCard() {
 =======
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useState } from "react",;
 import { useWallet } from "@/hooks/useWallet",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
@@ -216,9 +242,13 @@ import {;
   DialogTitle,;
   DialogTrigger} from "@/components/ui/dialog",;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 type RewardOption = {;
   id: string,;
   title: string,;
@@ -226,11 +256,14 @@ type RewardOption = {;
   cost: number,;
   type: 'credit' | 'feature' | 'course';
 <<<<<<< HEAD
+<<<<<<< HEAD
 };
 
 =======
 },;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 const REWARD_OPTIONS: RewardOption[] = [;
   {;
     id: 'premium-week',;
@@ -239,10 +272,13 @@ const REWARD_OPTIONS: RewardOption[] = [;
     cost: 100,;
     type: 'feature';
 <<<<<<< HEAD
+<<<<<<< HEAD
   };
 =======
   },;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   {;
     id: 'resume-review',;
     title: 'AI Resume Review',;
@@ -250,10 +286,13 @@ const REWARD_OPTIONS: RewardOption[] = [;
     cost: 50,;
     type: 'feature';
 <<<<<<< HEAD
+<<<<<<< HEAD
   };
 =======
   },;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   {;
     id: 'platform-credit',;
     title: '$5 Platform Credit',;
@@ -261,6 +300,7 @@ const REWARD_OPTIONS: RewardOption[] = [;
     cost: 100,;
     type: 'credit';
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 ];
 
@@ -346,6 +386,8 @@ export function RedeemTokensCard() {;
   };
   return (;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <Card>;
       <CardHeader>;
         <CardTitle className="flex items-center gap-2">;
@@ -367,6 +409,7 @@ export function RedeemTokensCard() {;
             </DialogHeader>;
             <div className="space-y-4 py-4">;
 <<<<<<< HEAD
+<<<<<<< HEAD
               {REWARD_OPTIONS && REWARD_OPTIONS.map((option) => (;
                 <div key={option && option.id} className="flex justify-between items-center border-b pb-4">;
                   <div>;
@@ -380,6 +423,8 @@ export function RedeemTokensCard() {;
                       variant={wallet && wallet.balance>= option && option.cost ? "default" : "outline"}
                       disabled={!wallet || wallet.balance < option && option.cost}
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       onClick={() => handleRedeem(option)}
                     >;
                       Redeem <ArrowRight className="ml-1 h-3 w-3" />;
@@ -387,6 +432,7 @@ export function RedeemTokensCard() {;
                   </div>;
                 </div>;
               ))}
+<<<<<<< HEAD
 
 =======
               {REWARD_OPTIONS.map((option) => (;
@@ -518,6 +564,8 @@ if (return, ) {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               </Button>;
             </div>;
           </DialogContent>;
@@ -527,6 +575,7 @@ if (return, ) {
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
@@ -603,3 +652,9 @@ flex items-center gap-2"> <Gift className=" h-5 w-5"/> Redeem Rewards </CardTitl
 }
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+}
+;
+    </Card>);
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

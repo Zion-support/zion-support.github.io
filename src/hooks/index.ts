@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import {useState} from 'react'
 export const useLocalStorage = (key: string, initialValue: unknown) => {
 
@@ -9,6 +10,8 @@ const [ storedValue, setStoredValue ] = useState(() => {    try {
     const item = window.localStorage.getItem(key)
     return item ? JSON.parse(item) : initialValue
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   } catch {
 export const useLocalStorage = (key: string, initial_value: unknown) =>: any {
       return initial_value;
@@ -16,6 +19,7 @@ export const useLocalStorage = (key: string, initial_value: unknown) =>: any {
   });
   const set_value = (value: unknown, ) =>: any {
     try {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       const valueToStore = value instanceof Function ? value(storedValue) : value;
@@ -27,6 +31,8 @@ export const useLocalStorage = (key: string, initial_value: unknown) =>: any {
   }
   return [storedValue, setValue] as const
 }
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       const valueToStore = value instanceof Function ? value (stored_value) : value;
       window.local_storage.set_item (key, JSON.stringify (valueToStore));
     } catch (_error) {
@@ -35,6 +41,7 @@ export const useLocalStorage = (key: string, initial_value: unknown) =>: any {
   }
   return [stored_value, set_value] as const;
 }
+<<<<<<< HEAD
 =======
       const valueToStore = value instanceof Function ? value(storedValue) : value
       window.localStorage.setItem(key, JSON.stringify(valueToStore))
@@ -47,3 +54,5 @@ export const useLocalStorage = (key: string, initial_value: unknown) =>: any {
 }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

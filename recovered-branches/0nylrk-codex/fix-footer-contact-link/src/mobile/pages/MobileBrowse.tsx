@@ -1,14 +1,15 @@
-
-
 // Mock data for demonstration
 
 const jobsData = [
   {
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useState } from "react";
 import {MobileHeader} from "../components/common/MobileHeader";
 import {BottomNavigation} from "../components/common/BottomNavigation";
@@ -17,9 +18,12 @@ import {BrowseCards} from "../components/browse/BrowseCards";
 import {Button} from "@/components/ui/button";
 import {useAuth} from "@/hooks/useAuth";
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useState } from "react",
 import { MobileHeader } from "../components/common/MobileHeader",
 import { BottomNavigation } from "../components/common/BottomNavigation",
@@ -105,7 +109,10 @@ export function MobileBrowse() {
   const { user } = useAuth();
   const isClient = user?.userType === 'employer' |user?.userType === 'buyer';
   const [browseType, setBrowseType] = useState<"jobs" | "talents">(isClient ? "talents" : "jobs");
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     id: "1",
     title: "Senior React Developer",
     subtitle: "TechCorp Inc.",
@@ -177,11 +184,14 @@ const talentsData = [
 ],
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
   },
   
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export function MobileBrowse() {;
   const { user } = useAuth();
   const isClient = user?.userType === 'employer' || user?.userType === 'buyer';
@@ -191,7 +201,10 @@ export function MobileBrowse() {
   const isClient = user?.userType === 'employer' || user?.userType === 'buyer',
   const [browseType, setBrowseType] = useState<"jobs" | "talents">(isClient ? "talents" : "jobs"),
   
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const handleViewDetails = (id: string) => {
     // // // console.log(`View details for item ${id}`),
     // Navigate to details page
@@ -200,9 +213,12 @@ export function MobileBrowse() {
   },
   
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <div className="min-h-screen">
       <MobileHeader
@@ -215,6 +231,7 @@ export function MobileBrowse() {
             variant={browseType === "jobs" ? "default" : "ghost"}
             className="rounded-full"
             onClick={() => setBrowseType("jobs")}
+<<<<<<< HEAD
           >
             Jobs
           </Button>
@@ -373,10 +390,13 @@ const talentsData = [;
 
 export function MobileBrowse() {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const { user } = useAuth();
   const isClient = user?.userType === 'employer' |user?.userType === 'buyer';
   const [browseType, setBrowseType] = useState<"jobs" | "talents">(isClient ? "talents" : "jobs");
 
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -389,11 +409,14 @@ export function MobileBrowse() {;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <div className="min-h-screen">;
       <MobileHeader
         title={browseType === "jobs" ? "Browse Jobs" : "Browse Talents"}
         showBack
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -536,15 +559,24 @@ export function MobileBrowse() {;
             variant={browseType === "jobs" ? "default" : "ghost"}
             className="rounded-full";
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+          <Button
+            variant={browseType === "jobs" ? "default" : "ghost"}
+            className="rounded-full"
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             onClick={() => setBrowseType("jobs")}
           >;
             Jobs;
           </Button>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <Button
             variant={browseType === "talents" ? "default" : "ghost"}
             className="rounded-full"
             onClick={() => setBrowseType("talents")}
+<<<<<<< HEAD
 
 =======
 =======
@@ -673,11 +705,14 @@ function MobileBrowse() {
             className="rounded-full";
             onClick={() => setBrowseType("talents")}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           >;
             Talents;
           </Button>;
         </div>;
       </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       <BrowseFilters type={browseType} />;
@@ -701,6 +736,12 @@ function MobileBrowse() {
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+        <BrowseCards
+          items={browseType === "jobs" ? jobsData : talentsData}
+          type={browseType}
+          onViewDetails={handleViewDetails}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <BrowseFilters type={browse_type} />;
       <div className="py - 4 px - 4">;
         <BrowseCards;
@@ -712,6 +753,7 @@ function MobileBrowse() {
       <BottomNavigation />;
     </div>);
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -749,3 +791,5 @@ return (<div className="min-h-screen" > <MobileHeader title= {
   )
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

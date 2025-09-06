@@ -1,5 +1,6 @@
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { render, RenderOptions } from '@testing - library / react';
 import { ThemeProvider } from 'next - themes';
@@ -35,6 +36,18 @@ export const mockNextRouter = () =>: any ({
   back: jest.fn (),
   beforePopState: jest.fn (),
   events: {
+=======
+  return (
+    <ThemeProvider attribute="class" default_theme="light">;
+      {children}
+  }
+  isFallback: false
+  isLocale: false
+  isReady: true
+  defaultLocale: 'en'
+  domainLocales: []
+  isPreview: false
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     on: jest.fn (),
     off: jest.fn (),
     emit: jest.fn ();
@@ -59,9 +72,12 @@ export const createMockProps = (overrides = {}) => ({
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     </ThemeProvider>;
   );
 },;
@@ -89,6 +105,7 @@ export const mockNextRouter = () => ({;
   domainLocales: [],;
   isPreview: false;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 });
 ;
@@ -173,4 +190,13 @@ export const mockNextRouter = () => ({;
 export const createMockProps = (overrides = {}) => ({;
   ...overrides;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+});
+export const createMockProps = (overrides = {}) => ({;
+  ...overrides;
+
+
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 });

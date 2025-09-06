@@ -1,11 +1,13 @@
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
-import React from 'react';
 =======
-
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+import React from 'react';
 import React, { ReactNode } from 'react';
 
+<<<<<<< HEAD
 >>>>>>> origin/automation-improvements-final
 import Header from '../Header';
 import Footer from '../Footer';
@@ -47,13 +49,25 @@ import React from 'react';
 import React, { ReactNode } from 'react';
 import Header from '../Header';
 import Footer from '../Footer';
+=======
+import Header from '../Header';
+import Footer from '../Footer';
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { ReactNode } from 'react';
 import Header from './Header';
 import Footer from './Footer';
-;
+import Header from '../Header';
+import Footer from '../Footer';
 
-import React, { ReactNode } from 'react';
+
+
+
+
+
+;
 import React from 'react';
+<<<<<<< HEAD
 import React from 'react';
 import React, { ReactNode } from 'react';
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -77,11 +91,14 @@ origin/main
 origin/automation-improvements-final
 import React from 'react';
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface LayoutProps {
   children: React.ReactNode;
 =======
 interface LayoutProps {;
   children: React && React.ReactNode;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
@@ -113,6 +130,11 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 origin/main
 origin/automation-improvements-final
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  title?: string;
+  description?: string;
+  keywords?: string;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export default function Layout({
 
   children
@@ -126,6 +148,7 @@ export default function Layout({
   noIndex = false
 
 }: LayoutProps) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -161,6 +184,8 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <div className="min-h-screen bg-white">;
 =======
@@ -173,6 +198,7 @@ function Layout() {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       <Header />;
       <main>;
+<<<<<<< HEAD
         {children}
 <<<<<<< HEAD
       </main>;
@@ -195,6 +221,8 @@ export default Layout;
 import React from 'react;
 import Header from './Header;
 import Footer from './Footer;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
   "./Footer"import Footer  from "react./Footer,;
@@ -206,6 +234,7 @@ export default function Layout({ children }: LayoutProps) {;
     </div>;
   )"; type: LayoutProps = { children: React.ReactNode, }; export default function Layout({ children }: LayoutProps) { return <div>{children}</div>; type LayoutProps = { children: React.ReactNode, }; export default function Layout({ children }: LayoutProps) { return <div>{children}</div> } " ;
 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -222,8 +251,24 @@ React from";
 <<<<<<< HEAD
   "./Footer"import Footer  from "react./Footer,;
 export default function Layout(): any ({ children }: LayoutProps) {;
+=======
+    <div className="min-h-screen bg-white">;
+export default /**
+ * Layout - Function description
+ */
+function Layout() {
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
-
+    <div className="min - h-screen bg - white">;
+      <Header />;
+      <main>;
+        {children}
+      </main>;
+      <Footer />;
+export default Layout;
+import React from 'react;
+import Header from './Header;
+import Footer from './Footer;
 export: default /**
  * Layout - Function description
  */
@@ -247,6 +292,7 @@ function Layout() { return <div>{children}</div>; type LayoutProps = { children:
  */
 function Layout() { return <div>{children}</div> } " ;
 }}
+<<<<<<< HEAD
 
 =======
 =======
@@ -332,3 +378,5 @@ export default function Layout({ children }: LayoutProps) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

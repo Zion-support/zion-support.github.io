@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import React from 'react';
 }
 import React, { Suspense, lazy } from 'react';
@@ -16,21 +17,27 @@ import React from 'react';
 import React, { Suspense, lazy } from 'react';
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from 'react'
 }
 import React, { Suspense, lazy } from 'react';
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface LazyComponentProps {
   component: ComponentType < Record < string, unknown>>;
   fallback?: ReactNode;
   [key: string]: unknown
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -86,10 +93,13 @@ export default LazyComponent;
 
 import React from 'react',;
 },
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 import React from 'react';
 }
 
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -107,6 +117,8 @@ import React from 'react';
 
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 const LazyComponent: React.FC < LazyComponentProps> = ({
   component: Component,
   fallback = <div className="animate - pulse bg - gray - 200 h - 32 rounded" />,
@@ -121,6 +133,7 @@ export default LazyComponent;
 import React from 'react',
 },
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
@@ -131,3 +144,5 @@ import React from 'react',
 
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

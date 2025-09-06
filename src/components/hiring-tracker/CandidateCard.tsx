@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import { useState } from 'react'
 // Local stub is used in place of the @hello-pangea/dnd package which isn't
@@ -98,6 +99,12 @@ const handleSaveNotes = () => {
       description: 'Your notes have been saved'
       title: 'Notes saved',
       description: 'Your notes have been saved',
+=======
+  const handleSaveNotes = () => {
+    // Here you would save the notes to the database
+    // For now, we'll just show a toast
+    toast({
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     })
     setShowNotes(false)
   }
@@ -108,10 +115,15 @@ const handleSaveNotes = () => {
       description: 'Offer has been sent to the talent.'
     })
   }
+<<<<<<< HEAD
   const candidateName = application.talent_profile?.full_name |'Candidate'
   const candidateName = application.talent_profile?.full_name |'Candidate'
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useState } from 'react';
 
   const candidateName = application.talent_profile?.full_name || 'Candidate'
@@ -124,7 +136,10 @@ import { useState } from 'react';
             ref={provided.innerRef}            {...provided.draggableProps}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       title: "Notes saved",
       description: "Your notes have been saved"
     }),
@@ -138,13 +153,17 @@ import { useState } from 'react';
       description: "Offer has been sent to the talent."
     })
   },
+<<<<<<< HEAD
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   const candidateName = application.talent_profile?.full_name || "Candidate",
   
   return (
     <>
       <Draggable draggableId={application.id} index={index}>
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         {provided => (
           <Card
@@ -152,10 +171,19 @@ import { useState } from 'react';
             ref={provided.innerRef}            {...provided.draggableProps}
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         {(provided) => (
           <Card 
             className="mb-2 p-0 shadow-sm border"
 import { useState } from "react",;
+<<<<<<< HEAD
+=======
+            {...provided.dragHandleProps}
+          >
+            <CardContent className='p-3'>
+              {/* Candidate Header */}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <div className='flex justify-between items-start mb-2'>
                 <div className='flex items-center gap-2'>
                   <AvatarPrimitive className='h-8 w-8'>
@@ -183,6 +211,7 @@ import { useState } from "react",;
                     </p>
                   </div>
                 </div>
+<<<<<<< HEAD
 import { useState } from 'react';
 // Local stub is used in place of the @hello-pangea/dnd package which isn't;
 // available in this environment.;
@@ -278,6 +307,9 @@ import {;
                     </Button>
                   </DropdownMenuTrigger>
                   <DropdownMenuContent align='end'>
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <DropdownMenu>
                   <DropdownMenuTrigger asChild>
                     <Button variant="ghost" className="h-8 w-8 p-0">
@@ -286,6 +318,7 @@ import {;
                   </DropdownMenuTrigger>
                   <DropdownMenuContent align="end">
                     <DropdownMenuItem onClick={() => setShowNotes(!showNotes)}>
+<<<<<<< HEAD
                       {showNotes ? "Hide notes" : "Add notes"}
                     </DropdownMenuItem>
                     <DropdownMenuItem onClick={() => setShowHireModal(true)}>
@@ -404,10 +437,17 @@ import {;
               {/* Notes Section */}
               {showNotes && (
                 <div className='mt-2'>
+=======
+                )}
+              {/* Notes Section */}
+              {showNotes && (;
+                <div className='mt-2'>;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   <Textarea
                     placeholder='Add private notes about this candidate...'
                     className='text-xs min-h-[60px]'
                     value={notes}
+<<<<<<< HEAD
                     onChange={e => setNotes(e.target.value)}                  />
                   <div className='flex justify-end mt-2'>
                     <Button size='sm' onClick={handleSaveNotes}>
@@ -459,6 +499,12 @@ import {;
 ;
               {/* Action Buttons */}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+                  </div>;
+                </div>;
+              )}
+              {/* Action Buttons */}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <div className="flex justify-between mt-2 gap-1">
                 <Button 
                   variant="outline" 
@@ -467,15 +513,21 @@ import {;
                   asChild
                 >
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
       </Draggable>;
 ;
 =======
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   <Link href={`/messages?talentId=${application.talent_id}`}>
                     <MessageSquare className="h-3 w-3 mr-1" /> Message
                   </Link>
                 </Button>
+<<<<<<< HEAD
                 <Button variant='outline' size='sm' className='flex-1' asChild>
                 
                 <Button 
@@ -484,6 +536,10 @@ import {;
                   className="flex-1"
                   asChild
                 >
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   {application.resume?.file_url ? (
                     <a href={application.resume.file_url} target="_blank" rel="noopener noreferrer">
                       <FileText className="h-3 w-3 mr-1" /> Resume
@@ -493,6 +549,7 @@ import {;
                       <FileText className="h-3 w-3 mr-1" /> No Resume
                     </span>
                   )}
+<<<<<<< HEAD
                 </Button>
   handleHireConfirmed
 }/> </>)
@@ -535,10 +592,13 @@ ursor/fix-website-loading-errors-and-merge-6662
                     </span>;
                   )}
                 </Button>;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <Button
                   variant='default'
                   size='sm'
                   className='flex-1'
+<<<<<<< HEAD
                   onClick={() => setShowHireModal(true)}                >
                   <BriefcaseIcon className='h-3 w-3 mr-1' /> Hire
                 </Button>
@@ -633,10 +693,17 @@ ursor/fix-website-loading-errors-and-merge-6662
   handleHireConfirmed
 }/> </>)
 }'"}
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   handleHireConfirmed 
 }/> </>) 
 }'"};
 ;
+<<<<<<< HEAD
+=======
+
+                </Button>
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 
                 <Button 
                   variant="default" 
@@ -650,6 +717,7 @@ ursor/fix-website-loading-errors-and-merge-6662
             </CardContent>;
           </Card>;
         )}
+<<<<<<< HEAD
       </Draggable>;
       {/* Hire Confirmation Modal */}
       <HireConfirmationModal
@@ -1213,6 +1281,8 @@ export function CandidateCard({ application, index } CandidateCardProps) {;
   handleHireConfirmed;
 }/> </>);
 }'"}
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       </Draggable>;
       {/* Hire Confirmation Modal */}
       <HireConfirmationModal;
@@ -1224,6 +1294,9 @@ export function CandidateCard({ application, index } CandidateCardProps) {;
     </>;
   );
 }
+<<<<<<< HEAD
 }'"
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

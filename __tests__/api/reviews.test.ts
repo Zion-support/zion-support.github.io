@@ -7,21 +7,27 @@ import { supabase } from '@/integrations/supabase/client'
 } from '@supabase/supabase-js'
 import { describe, it, expect, beforeEach, vi } from 'vitest'
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 jest.mock('@prisma/client'
           this.name = 'PrismaClientKnownRequestError'
 jest.mock('@/integrations/supabase/client'
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 jest.mock('@prisma/client'
           this.name = 'PrismaClientKnownRequestError'
 jest.mock('@/integrations/supabase/client'
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 describe('/api/reviews API Endpoint'
   describe('POST /api/reviews'
     it('should successfully create a review (201)'
@@ -70,12 +76,15 @@ describe('/api/reviews API Endpoint'
           "where"
         "method"
         "method"
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
 =======
         "error"
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 // Mock Prisma Client
 jest.mock('@prisma/client', () => {
   const mockPrismaClient = {
@@ -430,6 +439,7 @@ describe('/api/reviews API Endpoint', () => {
   })
 })
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
         "error"
@@ -444,3 +454,6 @@ ursor/add-new-services-and-deploy-updates-0462
 ursor/integrate-build-improve-and-re-verify-8f7d
         "error"
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+        "error"
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

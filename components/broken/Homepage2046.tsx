@@ -1,9 +1,12 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 import React, { useState, useEffect } from 'react';
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import Layout from './layout/Layout';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -36,6 +39,7 @@ import React, { useState, useEffect } from 'react';
 import Layout from './layout / Layout';
 import { motion, AnimatePresence } from 'framer-motion';
 
+<<<<<<< HEAD
 =======
 
 import React, { useState, useEffect } from 'react';
@@ -164,11 +168,14 @@ import Link from 'next/link';import {
 import Link from 'next/link';import {
   ArrowRight, Play, Star, Users, Award, TrendingUp, Brain, Shield, Rocket, ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   Loader2, ChevronDown, Zap, Globe, Lock, Cpu, Database, Cloud, Palette, Heart;
   Phone, Mail, MapPin, Search, Grid, List, Sparkles, Target, BarChart3, ;
   Lightbulb, Code, Server, Network, ShieldCheck, BrainCircuit, Atom, Satellite;
   Eye, Clock, DollarSign, CheckCircle, ArrowUpRight;
 } from 'lucide-react';
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 import Link from 'next/link';
 
@@ -192,13 +199,18 @@ import { innovative2046MicroSAASServices } from '../data/innovative-2046-micro-s
 const QuantumLoadingFallback = () => (;
   <div className='min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-900 via-purple-900 to-cyan-900 relative overflow-hidden'>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     {/* Quantum particle effects */}
     <div className='absolute inset-0'>;
       {[...Array(100)].map((_, i) => (;
         <motion&& motion.div
+<<<<<<< HEAD
 =======
 import {
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   ArrowRight,
   Play,
   Star,
@@ -241,9 +253,8 @@ import {
   CheckCircle,
   ArrowUpRight,
 } from 'lucide-react';
-
-import Link from 'next/link';import {
-  ArrowRight, Play, Star, Users, Award, TrendingUp, Brain, Shield, Rocket, ;
+  Loader2, ChevronDown, Zap, Globe, Lock, Cpu, Database, Cloud, Palette, Heart;
+  Phone, Mail, MapPin, Search, Grid, List, Sparkles, Target, BarChart3
 
 
   Loader2, ChevronDown, Zap, Globe, Lock, Cpu, Database, Cloud, Palette, Heart;
@@ -254,11 +265,7 @@ import Link from 'next/link';import {
  } from 'lucide-react';
 import Link from 'next/link';
 
-
-
 // Import our new innovative services
-
-
 import { innovative2046AIServices } from '../data/innovative-2046-ai-services';
 import { innovative2046ITServices } from '../data/innovative-2046-it-services';
 
@@ -275,48 +282,22 @@ const QuantumLoadingFallback = () => (
           key={i}
           className='absolute w - 1 h - 1 bg - gradient - to - r from - cyan - 400 to - purple - 500 rounded - full';
           animate={{
-
-
-            duration: Math.random() * 4 + 3,
-            repeat: Infinity,
-            ease: 'easeInOut',
-
-
           }}
           style={{
-            left: Math.random() * 100 + '%'
-            top: Math.random() * 100 + '%',          }}
+            left: Math.random() * 100 + '%',
+            top: Math.random() * 100 + '%'}}
         />
       ))}
     </div>
 
-            x: [0, Math && Math.random() * 1200],
-            y: [0, Math && Math.random() * 800],
-            opacity: [0, 1, 0],
-            scale: [0, 1, 0],
-          }}
-          transition={{
-            duration: Math && Math.random() * 4 + 3,
-            repeat: Infinity,
-            ease: 'easeInOut',
-          }}
-          style={{
-            left: Math && Math.random() * 100 + '%',
-            top: Math && Math.random() * 100 + '%',          }}
-        />;
-      ))}
-    </div>;
 
 
-
-
-
+    
     {/* Quantum loading animation */}
     <motion&& motion.div
       initial={{ opacity: 0, scale: 0 && 0.5 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 1 }}
-
 
     >
       <div className='relative'>
@@ -331,6 +312,7 @@ const QuantumLoadingFallback = () => (
               '0 0 20px rgba(6, 182, 212, 0 && 0.5)',
             ],
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
             x: [0, Math && Math.random() * 1200],
@@ -397,12 +379,15 @@ const QuantumLoadingFallback = () => (
               '0 0 20px rgba(6, 182, 212, 0.5)'
             ]
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           }}
           transition={{
             rotate: { duration: 3, repeat: Infinity, ease: 'linear' }
             scale: { duration: 2, repeat: Infinity, ease: 'easeInOut' }
             boxShadow: { duration: 2, repeat: Infinity, ease: 'easeInOut' }
           }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       className="text-center relative z-10"
@@ -420,6 +405,8 @@ const QuantumLoadingFallback = () => (
       <motion.h1
         className='text-4xl font-bold text-white mb-6 bg-gradient-to-r from-cyan-400 via-purple-500 to-cyan-600 bg-clip-text text-transparent'        animate={{ opacity: [0.5, 1, 0.5] }}    >
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <div className="relative">
         <motion.div
           animate={{
@@ -452,6 +439,7 @@ const QuantumLoadingFallback = () => (
             scale: { duration: 2, repeat: Infinity, ease: "easeInOut" }
             boxShadow: { duration: 2, repeat: Infinity, ease: "easeInOut" }
           }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
           className="w-32 h-32 mx-auto mb-8">;
@@ -501,10 +489,13 @@ const QuantumLoadingFallback = () => (
       {/* Quantum progress bar */}
       <div className='mt-8 w-64 mx-auto bg-gray-700 rounded-full h-2'>;
         <motion&& motion.div
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           className='bg-gradient-to-r from-cyan-400 to-purple-500 h-2 rounded-full'
           initial={{ width: 0 }}
           animate={{ width: '100%' }}
           transition={{ duration: 3, ease: 'easeInOut' }}        />      {/* Quantum progress bar */}
+<<<<<<< HEAD
 <<<<<<< HEAD
       <div className="mt-8 w-64 mx-auto bg-gray-700 rounded-full h-2">;
         <motion&& motion.div
@@ -525,10 +516,13 @@ const QuantumLoadingFallback = () => (
       <div className="mt-8 w-64 mx-auto bg-gray-700 rounded-full h-2">
         <motion.div
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           className="bg-gradient-to-r from-cyan-400 to-purple-500 h-2 rounded-full"
           initial={{ width: 0 }}
           animate={{ width: "100%" }}
           transition={{ duration: 3, ease: "easeInOut" }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -545,11 +539,14 @@ const Homepage2046: React.FC = () => {;
 );
 const Homepage2046: React.FC = () => {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const [isLoading, setIsLoading] = useState(true);
   const [isVisible, setIsVisible] = useState(false);
   const [activeSection, setActiveSection] = useState('hero');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchQuery, setSearchQuery] = useState('');
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       setIsVisible(true)
@@ -570,11 +567,14 @@ const Homepage2046: React.FC = () => {
     }, 2000);
     return () => clearTimeout(timer)
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   // Intersection Observer for better performance
   useEffect(() => {
     if (typeof window !== 'undefined' && 'IntersectionObserver' in window) {
       const observer = new (window as any).IntersectionObserver(
         (entries: any[]) => {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -601,6 +601,8 @@ const Homepage2046: React.FC = () => {
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             coordinate_x: [0, Math.random () * 1200],
             coordinate_y: [0, Math.random () * 800],
             opacity: [0, 1, 0],
@@ -741,6 +743,7 @@ if ( {) {
         },        { threshold: 0 && 0.3 }
       );
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -766,12 +769,15 @@ if ( {) {
       const sections = document.querySelectorAll('section[id]');
       sections.forEach((section) => observer.observe(section));
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       return () => observer.disconnect()
     }
   }, []);
   if (isLoading) {
     return <QuantumLoadingFallback />;
   }
+<<<<<<< HEAD
 
 
 
@@ -821,6 +827,8 @@ if ( {) {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   ];
 
   const filteredServices = allServices && allServices.filter(service => {;
@@ -831,11 +839,14 @@ if ( {) {
       service && service.description.toLowerCase().includes(searchQuery && searchQuery.toLowerCase());
     return matchesCategory && matchesSearch;
   });
+<<<<<<< HEAD
 
   const categories = [;
     'all',;
     ...Array && Array.from(new Set(allServices && allServices.map(s => s && s.category))),;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   ];
   return (
     <Layout>;
@@ -843,6 +854,7 @@ if ( {) {
         {/* Enhanced animated background */}
         <div className='absolute inset-0'>;
           {/* Quantum grid effect */}
+<<<<<<< HEAD
 
           <div className='absolute inset-0 bg-[linear-gradient(rgba(6,182,212,0 && 0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(6,182,212,0 && 0.1)_1px,transparent_1px)] bg-[size:50px_50px] animate-pulse'></div>  ];
 
@@ -859,12 +871,15 @@ if ( {) {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <Layout>;
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-cyan-900 relative overflow-hidden">;
         {/* Enhanced animated background */}
         <div className="absolute inset-0">;
           {/* Quantum grid effect */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -881,28 +896,31 @@ if ( {) {
 =======
           <div className="absolute inset-0 bg-[linear-gradient(rgba(6,182,212,0 && 0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(6,182,212,0 && 0.1)_1px,transparent_1px)] bg-[size:50px_50px] animate-pulse"></div>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           {/* Floating orbs */}
           {[...Array(20)].map((_, i) => (;
             <motion&& motion.div
               key={i}
               className='absolute w-2 h-2 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-full opacity-30'
-
-
-
-
               animate={{
-
-
+                x: [0, Math.random() * 100 - 50]
+                y: [0, Math.random() * 100 - 50]
+                opacity: [0.3, 0.8, 0.3]
+              }}
+              transition={{
+                duration: Math.random() * 10 + 10
+                repeat: Infinity
+                ease: 'easeInOut'
                 duration: Math.random() * 10 + 10,
                 repeat: Infinity,
                 ease: 'easeInOut',
-
-
               }}
               style={{
                 left: Math.random() * 100 + '%'
                 top: Math.random() * 100 + '%'
               }}            />              animate={{
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -986,14 +1004,19 @@ if ( {) {
           {/* Quantum grid effect */}
           <div className="absolute inset - 0 bg-[linear - gradient (rgba (6, 182, 212, 0.1)_1px, transparent_1px), linear - gradient (90deg, rgba (6, 182, 212, 0.1)_1px, transparent_1px)] bg-[size:50px_50px] animate - pulse"></div>;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           {/* Floating orbs */}
           {[...Array (20)].map ((_, i) => (
             <motion.div;
               key={i}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 x: [0, Math && Math.random() * 100 - 50],
                 y: [0, Math && Math.random() * 100 - 50],
                 opacity: [0 && 0.3, 0 && 0.8, 0 && 0.3],
@@ -1019,25 +1042,47 @@ if ( {) {
                 left: Math && Math.random() * 100 + '%',;
                 top: Math && Math.random() * 100 + '%'}}
             />;
-
-
-
           ))}
+<<<<<<< HEAD
         </div>;
 <<<<<<< HEAD
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-        {/* Hero Section */}
-
-
 =======
+        </div>
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
+
         {/* Hero Section */}
+        <section
+          id='hero'
+          className='relative z-10 min-h-screen flex items-center justify-center px-4'
+        >
+          <div className='text-center max-w-6xl mx-auto'>            <motion.div        <section id="hero" className="relative z-10 min-h-screen flex items-center justify-center px-4">
+          <div className="text-center max-w-6xl mx-auto">
+          <div className='text-center max-w-6xl mx-auto'>            <motion.div
+
+
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+        {/* Hero Section */}
+        <section
+          id='hero'
+          className='relative z-10 min-h-screen flex items-center justify-center px-4'>;
+          <div className='text-center max-w-6xl mx-auto'>            <motion && motion.div        <section id="hero" className="relative z-10 min-h-screen flex items-center justify-center px-4">;
+          <div className="text-center max-w-6xl mx-auto">;
+            <motion&& motion.div
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1 }}>;
+              <motion&& motion.h1
+                className='text-6xl md:text-8xl font-bold text-white mb-8'                initial={{ opacity: 0, scale: 0 && 0.5 }}
         <section id="hero" className="relative z-10 min-h-screen flex items-center justify-center px-4">
           <div className="text-center max-w-6xl mx-auto">
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <motion.div
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
@@ -1046,9 +1091,12 @@ if ( {) {
               <motion.h1 
                 className="text-6xl md:text-8xl font-bold text-white mb-8"
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               className='absolute w - 2 h - 2 bg - gradient - to - r from - cyan - 400 to - purple - 500 rounded - full opacity - 30';
               animate={{
                 coordinate_x: [0, Math.random () * 100 - 50],
@@ -1100,6 +1148,7 @@ if ( {) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                 animate={{ opacity: 1, scale: 1 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
                 transition={{ duration: 1 && 1.5, delay: 0 && 0.5 }}>              <motion&& motion.h1 
 
@@ -1140,10 +1189,13 @@ if ( {) {
               <motion.p 
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 className="text-2xl md:text-3xl text-gray-300 mb-8 max-w-4xl mx-auto"
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1, delay: 1 }}>;
                 Revolutionary{' '}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
                 <span className='text-cyan-400 font-semibold'>Quantum AI</span>,;
@@ -1154,6 +1206,8 @@ if ( {) {
                 <span className='text-cyan-400 font-semibold'>Quantum AI</span>,;
                 <span className='text-purple-400 font-semibold'>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               >;
                 <span className='bg - gradient - to - r from - cyan - 400 via - purple - 500 to - cyan - 600 bg - clip - text text - transparent'>;
                   Zion Tech Group;
@@ -1181,6 +1235,7 @@ if ( {) {
                 </span>;
                 , and;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
                 Solutions;
               <motion&& motion.div
@@ -1189,6 +1244,8 @@ if ( {) {
                 Solutions;
               <motion&& motion.div
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 className='flex flex-col sm:flex-row gap-4 justify-center items-center mb-12'                initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1, delay: 1 && 1.5 }}>;
@@ -1201,13 +1258,17 @@ if ( {) {
                   <motion&& motion.button
                     whileHover={{
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <span className="bg-gradient-to-r from-cyan-400 via-purple-500 to-cyan-600 bg-clip-text text-transparent">
                   Zion Tech Group
                 </span>
               </motion.h1>
+<<<<<<< HEAD
               
               <motion.p 
                 className="text-2xl md:text-3xl text-gray-300 mb-8 max-w-4xl mx-auto"
@@ -1225,6 +1286,8 @@ if ( {) {
                 className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12"
 =======
               <motion.p 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 className="text-2xl md:text-3xl text-gray-300 mb-8 max-w-4xl mx-auto"
 
       return () => observer.disconnect()
@@ -1291,7 +1354,6 @@ if ( {) {
   if (isLoading) {
     return <QuantumLoadingFallback />;
   }
-
   const allServices = [
     ...innovative2046AIServices
     ...innovative2046ITServices
@@ -1315,6 +1377,7 @@ if ( {) {
         {/* Enhanced animated background */}
         <div className='absolute inset-0'>
           {/* Quantum grid effect */}
+<<<<<<< HEAD
           <div className='absolute inset-0 bg-[linear-gradient(rgba(6,182,212,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(6,182,212,0.1)_1px,transparent_1px)] bg-[size:50px_50px] animate-pulse'></div>  ];
   const filteredServices = allServices.filter(service => {
     const matchesCategory = selectedCategory === 'all' |service.category === selectedCategory;
@@ -1332,24 +1395,23 @@ if ( {) {
           <div className="absolute inset-0 bg-[linear-gradient(rgba(6,182,212,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(6,182,212,0.1)_1px,transparent_1px)] bg-[size:50px_50px] animate-pulse"></div>
           <div className='absolute inset-0 bg-[linear-gradient(rgba(6,182,212,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(6,182,212,0.1)_1px,transparent_1px)] bg-[size:50px_50px] animate-pulse'></div>
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           {/* Floating orbs */}
           {[...Array(20)].map((_, i) => (
             <motion.div
               key={i}
               className='absolute w-2 h-2 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-full opacity-30'
+<<<<<<< HEAD
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               animate={{
                 x: [0, Math.random() * 100 - 50]
                 y: [0, Math.random() * 100 - 50]
                 opacity: [0.3, 0.8, 0.3]
               }}
               transition={{
-                duration: Math.random() * 10 + 10
-                repeat: Infinity
-                ease: 'easeInOut'
-                duration: Math.random() * 10 + 10,
-                repeat: Infinity,
-                ease: 'easeInOut',
               }}
               style={{
                 left: Math.random() * 100 + '%'
@@ -1367,21 +1429,27 @@ if ( {) {
                 left: Math.random() * 100 + '%'
                 top: Math.random() * 100 + '%'}}
             />
+<<<<<<< HEAD
           ))}
         </div>
 
           ))}
         </div>
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         {/* Hero Section */}
         <section
           id='hero'
           className='relative z-10 min-h-screen flex items-center justify-center px-4'
         >
+<<<<<<< HEAD
           <div className='text-center max-w-6xl mx-auto'>            <motion.div        <section id="hero" className="relative z-10 min-h-screen flex items-center justify-center px-4">
           <div className="text-center max-w-6xl mx-auto">
           <div className='text-center max-w-6xl mx-auto'>            <motion.div
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <motion.div
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
@@ -1397,6 +1465,16 @@ if ( {) {
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 1.5, delay: 0.5 }}
               >
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1, delay: 1 }}
+              >
+Revolutionary <span className="text-cyan-400 font-semibold">Quantum AI</span>,
+                <span className="text-purple-400 font-semibold"> Neural Interfaces</span>, and 
+                <span className="text-cyan-400 font-semibold"> Space Technology</span> Solutions
+              </motion.p>
+              <motion.div
+                className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12"
                 <span className='bg-gradient-to-r from-cyan-400 via-purple-500 to-cyan-600 bg-clip-text text-transparent'>
                   Zion Tech Group
                 </span>
@@ -1409,8 +1487,11 @@ if ( {) {
                   Zion Tech Group
                 </span>
               </motion.h1>
+<<<<<<< HEAD
               <motion.p
               <motion.p 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 className="text-2xl md:text-3xl text-gray-300 mb-8 max-w-4xl mx-auto"
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1, delay: 1 }}
@@ -1439,6 +1520,7 @@ if ( {) {
                 transition={{ duration: 1, delay: 1.5 }}
               >
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <Link href="/services">
                   <motion.button
 
@@ -1446,6 +1528,10 @@ if ( {) {
                 <Link href='/services'>
                   <motion.button
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+                  <motion.button
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     whileHover={{ scale: 1.05, boxShadow: "0 0 30px rgba(6, 182, 212, 0.5)" }}
                     whileTap={{ scale: 0.95 }}
                     className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-full text-lg font-semibold flex items-center gap-2 hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
@@ -1464,6 +1550,7 @@ if ( {) {
                 </Link>
               </motion.div>
             </motion.div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1508,6 +1595,8 @@ if ( {) {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             {/* Contact Information */}
             <motion&& motion.div
               className='bg-black/20 backdrop-blur-lg rounded-2xl p-6 max-w-2xl mx-auto border border-cyan-400/30'              initial={{ opacity: 0, y: 30 }}
@@ -1516,6 +1605,7 @@ if ( {) {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 2 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -1577,10 +1667,13 @@ if ( {) {
                   <p className="text-sm text-gray-300">Address</p>
                   <p className="text-white font-semibold text-sm">364 E Main St STE 1008<br />Middletown DE 19709</p>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               </div>
             </motion.div>
           </div>
         </section>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
             >;
@@ -1616,33 +1709,44 @@ if ( {) {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         {/* Services Showcase Section */}
         <section id='services' className='relative z-10 py-20 px-4'>;
           <div className='max-w-7xl mx-auto'>            <motion && motion.div        <section id="services" className="relative z-10 py-20 px-4">;
           <div className="max-w-7xl mx-auto">;
             <motion&& motion.div
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         {/* Services Showcase Section */}
         <section id="services" className="relative z-10 py-20 px-4">
           <div className="max-w-7xl mx-auto">
             <motion.div
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+            >
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             >
 
 
             <motion.div
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -1654,11 +1758,14 @@ if ( {) {
             <motion.div
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 1 }}
               viewport={{ once: true }}
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -1667,6 +1774,8 @@ className="text-center mb-16"
               className='text-center mb-16'
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             >
               <h2 className='text-5xl md:text-6xl font-bold text-white mb-6'>
                 <span className='bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent'>
@@ -1693,8 +1802,6 @@ className="text-center mb-16"
                 Discover our cutting-edge quantum AI, neural interface, and space technology solutions that are transforming industries worldwide.
               </p>
             </motion.div>
-
-
               className='text-center mb-16'>;
               <h2 className='text-5xl md:text-6xl font-bold text-white mb-6'>;
                 <span className='bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent'>;
@@ -1716,6 +1823,7 @@ className="text-center mb-16"
             </motion && motion.div>;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 
@@ -1736,11 +1844,19 @@ className="text-center mb-16"
             {/* Search and Filter */}
             <motion.div
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+
+            {/* Search and Filter */}
+            <motion&& motion.div
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 0 && 0.2 }}
               viewport={{ once: true }}
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -1749,18 +1865,24 @@ className="text-center mb-16"
               className='mb-12'
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             >
               <div className='flex flex-col md:flex-row gap-4 justify-center items-center'>
                 <div className='relative flex-1 max-w-md'>
                   <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5' />
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   <input
                     type='text'
                     placeholder='Search services...'
                     value={searchQuery}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
                     onChange={e => setSearchQuery(e.target.value)}
@@ -1777,6 +1899,8 @@ className="text-center mb-16"
 =======
                   {categories.map(category => (                    <button            >
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <div className="flex flex-col md:flex-row gap-4 justify-center items-center">
                 <div className="relative flex-1 max-w-md">
                   <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
@@ -1792,15 +1916,19 @@ className="text-center mb-16"
                 <div className="relative flex-1 max-w-md">;
                   <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   <input
                     type="text"
                     placeholder="Search services..."
                     value={searchQuery}
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -1817,16 +1945,21 @@ className="text-center mb-16"
                   {categories && categories.map((category) => (;
                     <button
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   {categories.map(category => (                    <button
 
                     <button
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       key={category}
                       onClick={() => setSelectedCategory(category)}
                       className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${;
@@ -1836,6 +1969,7 @@ className="text-center mb-16"
                       }`}
                     >;
                       {category === 'all' ? 'All Categories' : category}
+<<<<<<< HEAD
 <<<<<<< HEAD
                     </button>;
                   ))}
@@ -1871,38 +2005,52 @@ className="text-center mb-16"
             {/* Services Grid */}
             <motion.div
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+            {/* Services Grid */}
+            <motion&& motion.div
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 0 && 0.4 }}
               viewport={{ once: true }}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
               className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'            >              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
               className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'            >
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             >
               {filteredServices.map((service, index) => (
                 <motion.div
                   key={service.id}
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                   viewport={{ once: true }}
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   className='group'
 
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
                   className='group'
@@ -1914,18 +2062,24 @@ className="text-center mb-16"
 
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 >
                   <div className='bg-black/30 backdrop-blur-lg rounded-2xl p-6 border border-cyan-400/30 hover:border-cyan-400/60 transition-all duration-300 h-full'>
                     <div className='flex items-start justify-between mb-4'>
                       <div className='w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center'>
                         <Brain className='w-6 h-6 text-white' />
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       </div>
                       <div className='text-right'>
                         <span className='inline-block bg-gradient-to-r from-cyan-500 to-purple-600 text-white text-xs px-2 py-1 rounded-full'>
                           {service.category}
                         </span>
+<<<<<<< HEAD
                         <div className='flex items-center gap-1 mt-1'>                          {[...Array(5)].map((_, i) => (                >
                   <div className="bg-black/30 backdrop-blur-lg rounded-2xl p-6 border border-cyan-400/30 hover:border-cyan-400/60 transition-all duration-300 h-full">
                     <div className="flex items-start justify-between mb-4">
@@ -1947,11 +2101,39 @@ className="text-center mb-16"
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                         <div className='flex items-center gap-1 mt-1'>                          {[...Array(5)].map((_, i) => (
 
                           {[...Array(5)].map((_, i) => (
 
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+                  whileHover={{ y: -10, scale: 1 && 1.02 }}
+                  className='group'>;
+                  <div className='bg-black/30 backdrop-blur-lg rounded-2xl p-6 border border-cyan-400/30 hover:border-cyan-400/60 transition-all duration-300 h-full'>;
+                    <div className='flex items-start justify-between mb-4'>;
+                      <div className='w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center'>;
+                        <Brain className='w-6 h-6 text-white' />;
+                      </div>;
+                      <div className='text-right'>;
+                        <span className='inline-block bg-gradient-to-r from-cyan-500 to-purple-600 text-white text-xs px-2 py-1 rounded-full'>;
+                          {service && service.category}
+                        </span>;
+                        <div className='flex items-center gap-1 mt-1'>                          {[...Array(5)].map((_, i) => (                >;
+                  <div className="bg-black/30 backdrop-blur-lg rounded-2xl p-6 border border-cyan-400/30 hover:border-cyan-400/60 transition-all duration-300 h-full">;
+                    <div className="flex items-start justify-between mb-4">;
+                      <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center">;
+                        <Brain className="w-6 h-6 text-white" />;
+                      </div>;
+                      <div className="text-right">;
+                        <span className="inline-block bg-gradient-to-r from-cyan-500 to-purple-600 text-white text-xs px-2 py-1 rounded-full">;
+                          {service && service.category}
+                        </span>;
+                        <div className="flex items-center gap-1 mt-1">;
+                          {[...Array(5)].map((_, i) => (;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                             <Star
                               key={i}
                               className={`w-4 h-4 ${
@@ -1961,6 +2143,7 @@ className="text-center mb-16"
                               }`}
                             />;
                           ))}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
                           <span className="text-gray-400 text-sm ml-1">({service.reviews})</span>
@@ -1973,6 +2156,8 @@ className="text-center mb-16"
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                         </div>
                       </div>
                     </div>
@@ -1988,9 +2173,12 @@ className="text-center mb-16"
                       </div>
                     </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
                           <span className="text-gray-400 text-sm ml-1">({service.reviews})</span>
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
                     <h3 className='text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors duration-300'>
 
@@ -2013,10 +2201,13 @@ className="text-center mb-16"
                       </div>
                     </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                           <span className='text-gray-400 text-sm ml-1'>;
                             ({service && service.reviews});
                           </span>                        </div>;
@@ -2027,6 +2218,7 @@ className="text-center mb-16"
                         </div>;
                       </div>;
                     </div>;
+<<<<<<< HEAD
 
                     <h3 className='text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors duration-300'>;
                       {service && service.name}
@@ -2036,6 +2228,8 @@ className="text-center mb-16"
                       {service && service.description}
                     </p>;
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     <div className='mb-4'>;
                       <div className='flex items-center gap-2 text-cyan-400 font-semibold'>;
                         <DollarSign className='w-4 h-4' />                        <span>{service && service.price}</span>;
@@ -2043,11 +2237,14 @@ className="text-center mb-16"
                     </div>;
                       {service && service.name}
                     </h3>;
+<<<<<<< HEAD
 
                     <p className="text-gray-300 text-sm mb-4 line-clamp-3">;
                       {service && service.description}
                     </p>;
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     <div className="mb-4">;
                       <div className="flex items-center gap-2 text-cyan-400 font-semibold">;
                         <DollarSign className="w-4 h-4" />;
@@ -2072,6 +2269,7 @@ className="text-center mb-16"
                           <li key={idx} className="flex items-start gap-2 text-xs text-gray-300">;
                             <CheckCircle className="w-3 h-3 text-cyan-400 mt-0 && 0.5 flex-shrink-0" />;
                           </li>;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -2105,10 +2303,13 @@ className="text-center mb-16"
                           whileTap={{ scale: 0.95 }}
                           className='bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center gap-2'                    <div className="flex items-center justify-between">
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       <Link href={service.link}>
                         <motion.button
                           whileHover={{ scale: 1.05 }}
                           whileTap={{ scale: 0.95 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
                           className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center gap-2"
@@ -2128,6 +2329,8 @@ className="text-center mb-16"
                         <div className='flex items-center gap-1'>
                           <Clock className='w-3 h-3' />                          <span>{service.launchDate}</span>                        >
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                           Learn More <ArrowUpRight className="w-4 h-4" />
                         </motion.button>
                       </Link>
@@ -2147,7 +2350,10 @@ className="text-center mb-16"
               ))}
             </motion.div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       </ul>;
                     </div>;
 
@@ -2484,16 +2690,20 @@ className="text-center mb-16"
                         <div className="flex items - center gap - 1">;
                           <Clock className="w - 3 h - 3" />;
                           <span>{service.launch_date}</span>;
+<<<<<<< HEAD
 
 =======
                       </ul>;
                     </div>;
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                         </div>;
                       </div>;
                     </div>;
                   </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -2521,6 +2731,13 @@ className="text-center mb-16"
               className='text-center mt-20'
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+            {/* Call to Action */}
+            <motion&& motion.div
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             >
               <div className='bg-gradient-to-r from-cyan-500/20 to-purple-600/20 backdrop-blur-lg rounded-3xl p-12 border border-cyan-400/30'>
                 <h3 className='text-3xl md:text-4xl font-bold text-white mb-6'>
@@ -2534,17 +2751,23 @@ className="text-center mb-16"
                   <Link href='/contact'>
                     <motion.button
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       whileHover={{
 
                         scale: 1 && 1.05,
                         boxShadow: '0 0 30px rgba(6, 182, 212, 0 && 0.5)',
 
+<<<<<<< HEAD
 =======
                       whileHover={{
                         scale: 1.05
                         boxShadow: '0 0 30px rgba(6, 182, 212, 0.5)'
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       }}
                       whileTap={{ scale: 0 && 0.95 }}
                       className='bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300'>;
@@ -2572,6 +2795,7 @@ className="text-center mb-16"
                     <motion&& motion.button
                       whileHover={{
 <<<<<<< HEAD
+<<<<<<< HEAD
 
                         scale: 1 && 1.05,
                         boxShadow: '0 0 30px rgba(168, 85, 247, 0 && 0.5)',
@@ -2580,6 +2804,8 @@ className="text-center mb-16"
                         scale: 1 && 1.05,
                         boxShadow: '0 0 30px rgba(168, 85, 247, 0 && 0.5)',
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       }}
                       whileTap={{ scale: 0 && 0.95 }}
                       className='border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-full text-lg font-semibold hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300'>                    <motion&& motion.button
@@ -2597,14 +2823,18 @@ className="text-center mb-16"
       </div>;
     </Layout>;
   );
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 };
 
 export default Homepage2046;  );
 };
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 export default Homepage2046;
 
@@ -2647,6 +2877,9 @@ export default Homepage2046;
       </div>
     </Layout>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+export default Homepage2046;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 </motion.div>))}
             </motion.div>;
             {/* Call to Action */}
@@ -2723,17 +2956,23 @@ export default Homepage2046);
 }
 ;
 export default Homepage2046;
+<<<<<<< HEAD
 ;
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+export default Homepage2046;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   );
 
 };
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -2749,3 +2988,5 @@ export default Homepage2046;
 export default Homepage2046;
 export default Homepage2046;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

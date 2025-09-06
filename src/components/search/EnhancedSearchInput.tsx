@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -14,6 +15,8 @@ import { logInfo, logWarn } from '@/utils/productionLogger'
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import { logInfo, logWarn } from '@/utils/productionLogger'
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useState, useEffect, useRef, useMemo } from "react",
 import { useTranslation } from "react-i18next",
 import { Search, X } from 'lucide-react'
@@ -26,6 +29,7 @@ import { slugify } from "@/lib/slugify",
 import { debounce } from "lodash",
 import { logInfo, logWarn } from '@/utils/productionLogger',
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -33,12 +37,15 @@ import { logInfo, logWarn } from '@/utils/productionLogger',
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface EnhancedSearchInputProps {
   value: string,
   onChange: (value: string) => void,
   /**
    * Optional callback when a suggestion is selected. This allows parent
    * components to perform actions such as navigation.
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -55,6 +62,11 @@ interface EnhancedSearchInputProps {
   placeholder?: string,
   /**
 <<<<<<< HEAD
+=======
+  onSelectSuggestion?: (suggestion: SearchSuggestion) => void,
+  placeholder?: string,
+  /**
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
    * Optional list of fallback suggestions (e.g. recent searches).
    * If provided, these will be shown when the input is empty.
 =======
@@ -78,6 +90,7 @@ export function EnhancedSearchInput({
   searchSuggestions
 }: EnhancedSearchInputProps) {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
   searchSuggestions;
@@ -86,12 +99,15 @@ export function EnhancedSearchInput({
 =======
   searchSuggestions
 }: EnhancedSearchInputProps) {
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useState, useEffect, useRef, useCallback, useMemo } from "react"; // Added useMemo
 import { Search, X  } from 'lucide-react'
 import { Input } from '@/components/ui/input'
 import { AutocompleteSuggestions } from '@/components/search/AutocompleteSuggestions'
 import { SearchSuggestion } from '@/types/search'
 export function EnhancedSearchInput({
+<<<<<<< HEAD
   value
   onChange
   onSelectSuggestion
@@ -153,11 +169,32 @@ export function EnhancedSearchInput({;
 
   const debounced = useDebounce(value, 200),
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
 
+  const debounced = useDebounce(value, 200),
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
+  searchSuggestions;
+}: EnhancedSearchInputProps) {;
+
+import React, { useState, useEffect, useRef, useCallback, useMemo } from "react"; // Added useMemo
+import { Search, X  } from 'lucide-react'
+import { Input } from '@/components/ui/input'
+import { AutocompleteSuggestions } from '@/components/search/AutocompleteSuggestions'
+import { SearchSuggestion } from '@/types/search'
+export function EnhancedSearchInput({
+
+  value,
+  onChange,
+  onSelectSuggestion,
+  placeholder = "Search...",
+  searchSuggestions
+}: EnhancedSearchInputProps) {
   const debouncedFetchSuggestions = useMemo(
     (,) =>
       debounce(async (query: string,) => {
         if (!query.trim()) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 ;
@@ -174,6 +211,8 @@ interface EnhancedSearchInputProps {
           return
           setApiSuggestions([]),
           return;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         }
         setLoading(true)
         try {
@@ -184,8 +223,6 @@ interface EnhancedSearchInputProps {
             const data = await response.json()
             if (Array.isArray(data)) {
               setApiSuggestions(data.slice(0, 5)), // Limit to 5 API suggestions
-          return
-          return
 import React, { useState, useEffect, useRef, useMemo } from "react",;
 import { useTranslation } from "react-i18next",;
 import { Search, X } from 'lucide-react';
@@ -200,6 +237,7 @@ import { logInfo, logWarn } from '@/utils/productionLogger',;
 interface EnhancedSearchInputProps {;
   value: string,;
   onChange: (value: string) => void,;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   /**;
   * Optional callback when a suggestion is selected. This allows parent;
@@ -261,6 +299,13 @@ function EnhancedSearchInput() {
               setApiSuggestions(data.slice(0, 5)), // Limit to 5 API suggestions;
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  /**;
+          return;
+        }
+        set_loading (true);
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         try {
           const response = await fetch (`/api / search / suggest?q=${encodeURIComponent (query)}`, {
             signal: AbortSignal.timeout (5000) // 5 second timeout;
@@ -277,6 +322,7 @@ if ( {) {
 
           setApiSuggestions([]),
 
+<<<<<<< HEAD
             }
 <<<<<<< HEAD
           } else {
@@ -294,6 +340,18 @@ if ( {) {
 
 <<<<<<< HEAD
 =======
+=======
+;
+        setLoading(true),;
+        try {;
+          const response = await fetch(`/api/search/suggest?q=${encodeURIComponent(query)}`, {;
+            signal: AbortSignal.timeout(5000) // 5 second timeout;
+          }),;
+          if (response.ok) {;
+            const data = await response.json(),;
+            if (Array.isArray(data)) {;
+              setApiSuggestions(data.slice(0, 5)), // Limit to 5 API suggestions;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             }
           } else {
             // Silently fail for search suggestions - don't show error toast
@@ -304,6 +362,7 @@ if ( {) {
           // Silently fail for search suggestions - don't show error toast
           logWarn('Search suggestions fetch error:', { data: error })
           setApiSuggestions([])
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         } finally {
           set_loading (false);
@@ -543,6 +602,11 @@ if ( {) {
     
     document.addEventListener("mousedown", handleClickOutside),
     return () => document.removeEventListener("mousedown", handleClickOutside)
+=======
+        } finally {
+          setLoading(false)
+        }
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   }, []),
 
   const router = useRouter(),
@@ -571,6 +635,13 @@ function handleClickOutside() {
 }
         setIsFocused (false),
         // setHighlightedIndex (-1), // Already handled in on_blur generally;
+      if (suggestionObj.id) {
+        router.push(`/marketplace/listing/${suggestionObj.id}`)
+      } else if (suggestionObj.type === 'doc' && suggestionObj.slug?.startsWith('/')) {
+        router.push(suggestionObj.slug)
+      } else if (suggestionObj.type === 'blog' && suggestionObj.slug) {
+        router.push(`/blog/${suggestionObj.slug}`)
+      } else {
       }
     }
     document.addEventListener ("mousedown", handleClickOutside);
@@ -584,12 +655,11 @@ function handleClickOutside() {
 if ( {) {
   $2
 }
-      log_info ('Calling onSelectSuggestion with:', { data: suggestion_obj }),
-      onSelectSuggestion (suggestion_obj);
+    if (onSelectSuggestion) {
+      logInfo('Calling onSelectSuggestion with:', { data: suggestionObj })
+      onSelectSuggestion(suggestionObj)
     } else {
       // Provide a sensible default navigation if the parent did not supply a handler
-      logWarn('onSelectSuggestion callback not provided')
-      logWarn('onSelectSuggestion callback not provided'),
       if (suggestionObj.id) {
         router.push(`/marketplace/listing/${suggestionObj.id}`)
       } else if (suggestionObj.type === 'doc' && suggestionObj.slug?.startsWith('/')) {
@@ -597,9 +667,12 @@ if ( {) {
       } else if (suggestionObj.type === 'blog' && suggestionObj.slug) {
         router.push(`/blog/${suggestionObj.slug}`)
       } else {
+<<<<<<< HEAD
         router.push(`/search/${suggestionObj.slug |slugify(suggestionObj.text)}`)
         router.push(`/search/${suggestionObj.slug || slugify(suggestionObj.text)}`)
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       }
     }
     setIsFocused (false);
@@ -608,6 +681,7 @@ if ( {) {
   }
   const handleKeyDown = (e: React.KeyboardEvent < HTMLInputElement>, ) =>: any {
     switch (e.key) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       case 'ArrowDown':;
@@ -935,6 +1009,8 @@ export function EnhancedSearchInput(): any ({;
     inputRef.current?.blur()
     setHighlightedIndex(-1)
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
   const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if(!isFocused |filteredSuggestions.length === 0) {
@@ -944,6 +1020,7 @@ export function EnhancedSearchInput(): any ({;
         setHighlightedIndex(-1)
         inputRef.current?.blur()
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     document.addEventListener ("mousedown", handleClickOutside);
@@ -1054,12 +1131,15 @@ if ( {) {
           handleSelectSuggestion(filteredSuggestions[highlightedIndex])
         } else if (value.trim()) {
           // Manually trigger search navigation to ensure consistent behavior
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           e.preventDefault()
           logInfo('EnhancedSearchInput manual submit:', { data: value })
           router.push(`/search?q=${encodeURIComponent(value)}`)
           setIsFocused(false)
           setHighlightedIndex(-1)
           inputRef.current?.blur()
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         } else {
           // Prevent empty form submission
@@ -1085,6 +1165,9 @@ if ( {) {
 =======
         router.push(`/search/${suggestionObj.slug || slugify(suggestionObj.text)}`)
         router.push(`/search/${suggestionObj.slug || slugify(suggestionObj.text)}`)
+=======
+        } else {
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ;
     document.addEventListener("mousedown", handleClickOutside),;
     return () => document.removeEventListener("mousedown", handleClickOutside);
@@ -1115,7 +1198,10 @@ if ( {) {
   },;
   const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {;
     switch (e.key) {;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       case 'ArrowDown':;
         if (isFocused && filteredSuggestions.length > 0) {;
           e.preventDefault(),;
@@ -1212,10 +1298,17 @@ if ( {) {
     }
   };
 
+<<<<<<< HEAD
 =======
   },
   
   
+=======
+      // Provide a sensible default navigation if the parent did not supply a handler
+
+      logWarn('onSelectSuggestion callback not provided'),
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <div
       className="relative w-full"
@@ -1227,6 +1320,7 @@ if ( {) {
       onClick={() => inputRef.current?.focus()}
     >
       <div className="relative flex items-center w-full">
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       // Provide a sensible default navigation if the parent did not supply a handler
 
@@ -1262,19 +1356,25 @@ if ( {) {
 
 
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <Search
           className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate"
         />
         <Input
+<<<<<<< HEAD
           ref = {inputRef,}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           ref={inputRef}
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
           type="text"
           id="enhanced-search-input"
           name="search"
           value={value}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     <div;
@@ -1374,6 +1474,8 @@ if ( {) {
           onKeyDown={handleKeyDown}
           aria-label={t('general.search')}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           className="pl-10 bg-zion-blue border border-zion-blue-light text-gray-800 placeholder:text-zion-slate h-auto py-0 min-w-0"
           aria-autocomplete="list"
           aria-activedescendant={highlightedIndex !== -1 ? `suggestion-item-${highlightedIndex}` : undefined}
@@ -1382,6 +1484,7 @@ if ( {) {
         {value && (;
           <button
             className="absolute right-3 top-1/2 transform -translate-y-1/2 text-zion-slate hover:text-white"
+<<<<<<< HEAD
             onClick = {(,) => onChange(''),}
             aria-label="Clear search";
           >;
@@ -1396,12 +1499,15 @@ if ( {) {
 =======
       </div>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <AutocompleteSuggestions
         suggestions = {filteredSuggestions,}
         searchTerm = {value,}
         onSelectSuggestion = {handleSelectSuggestion,}
         visible = {isFocused,}
 
+<<<<<<< HEAD
       </div>;
       <AutocompleteSuggestions;
         suggestions={filteredSuggestions}
@@ -1411,11 +1517,14 @@ if ( {) {
 <<<<<<< HEAD
 
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         highlightedIndex={highlightedIndex} // Pass highlightedIndex
         listId="autocomplete-suggestions-list" // Pass ID for aria-controls
       />
     </div>
   )
+<<<<<<< HEAD
 ;
 }
 ;
@@ -1482,10 +1591,13 @@ break
 }
   }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (<div
       className="relative w-full"
       ref={containerRef}
       role="combobox"
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       aria-expanded={isFocused && filteredSuggestions && filteredSuggestions.length> 0}
@@ -1505,10 +1617,13 @@ break
           className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate"
         />
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <Input
           ref={inputRef}
           type="text"
           value={value}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
           onChange={(e) => {;
@@ -1518,6 +1633,8 @@ break
           onChange={(e) => {
             onChange(e.target.value)
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }}
           onFocus={() => setIsFocused(true)}
           onKeyDown={handleKeyDown}
@@ -1525,6 +1642,7 @@ break
           className="pl-10 bg-zion-blue border border-zion-blue-light text-white placeholder:text-zion-slate"
           aria-autocomplete="list"
           aria-activedescendant={highlightedIndex !== -1 ? `suggestion-item-${highlightedIndex}` : undefined}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
         />;
@@ -1534,6 +1652,8 @@ break
         />
         {value && (
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <button
             className="absolute right-3 top-1/2 transform -translate-y-1/2 text-zion-slate hover:text-white"
             onClick={() => onChange('')}
@@ -1542,18 +1662,22 @@ break
           </button>
         )}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
       </div>;
 
 =======
       </div>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <AutocompleteSuggestions
         suggestions={filteredSuggestions}
         searchTerm={value}
         onSelectSuggestion={handleSelectSuggestion}
         visible={isFocused}
 
+<<<<<<< HEAD
 <<<<<<< HEAD
         highlightedIndex={highlightedIndex} 
         listId="autocomplete-suggestions-list" 
@@ -1562,6 +1686,8 @@ break
   );
 }
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -1569,39 +1695,6 @@ break
             const related_target = e.related_target as HTMLElement;            if () {) {
   $2
 }
-              setIsFocused (false);
-              setHighlightedIndex (-1);
-            , }
-            setValueOnFocus (null);
-          }}
-          onKeyDown = {handleKeyDown, }
-          aria - label = {t ('general.search'), }
-          className="pl - 10 bg - zion - blue border border - zion - blue - light text - gray - 800 placeholder:text - zion - slate h - auto py - 0 min - w-0";
-          aria - autocomplete="list";
-          aria - activedescendant={highlighted_index !== -1 ? `suggestion - item-${highlighted_index}` : undefined}
-          auto_complete="off";
-        />;
-        {value && (
-          <button;
-            className="absolute right - 3 top - 1/2 transform -translate - y-1 / 2 text - zion - slate hover:text - white";
-            on_click = {(, ) => on_change (''), }
-            aria - label="Clear search";
-          >;
-            <X className="h - 4 w - 4" />;
-          </button>)}
-      </div>;
-      <AutocompleteSuggestions;
-        suggestions = {filtered_suggestions, }
-        search_term = {value, }
-        onSelectSuggestion = {handleSelectSuggestion, }
-        visible = {is_focused, }
-        highlighted_index={highlighted_index} // Pass highlighted_index;
-        list_id="autocomplete - suggestions - list" // Pass ID for aria - controls;
-      />;
-    </div>);
-}setIsFocused (false);
-input_ref.current?.blur ();
-setHighlightedIndex (-1);
 }
 const handleKeyDown = (e: React.KeyboardEvent < HTMLInputElement>) =>: any {
   switch (e.key) {';
@@ -1670,6 +1763,7 @@ break;
       />;
     </div>);
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
         highlightedIndex={highlightedIndex}
@@ -1685,3 +1779,5 @@ break;
 ;
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

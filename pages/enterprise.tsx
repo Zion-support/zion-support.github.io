@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -25,10 +26,12 @@ import type { GetServerSideProps } from 'next',
 import type { GetServerSideProps } from 'next';
 
 import type { GetServerSideProps } from 'next',;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export const getServerSideProps: GetServerSideProps = async () => {
   return {
     redirect: {
-      destination: '/plans / enterprise',
+      destination: '/plans/enterprise'
       permanent: false}}
 }
 export default function EnterpriseRedirect() { return null }
@@ -52,4 +55,9 @@ export default function EnterpriseRedirect() { return null   } catch (error) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

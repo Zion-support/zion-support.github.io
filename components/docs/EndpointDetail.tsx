@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -6,6 +7,8 @@
 import React from 'react';
 import CodeSamples from './CodeSamples';
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 import TryItConsole from './TryItConsole';
 
@@ -16,14 +19,13 @@ import TryItConsole from './TryItConsole';
   endpoint: EndpointSpec;
 }) {
 
-
   return (
-
 
     <div className='space-y-4'>
 
       <div>
         <div className='text-xl font-semibold text-high-contrast'>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 import { EndpointSpec } from '../../data / api - docs / types';
@@ -36,6 +38,8 @@ function EndpointDetail() {
       <div>;
         <div className='text - xl font - semibold text - high - contrast'>;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           {endpoint.title}
         </div>;
         <div className='text - sm text - high - contrast - muted'>;
@@ -50,6 +54,7 @@ function EndpointDetail() {
           </code>;
           <span className='px - 2 py - 0.5 rounded bg - high - contrast - tertiary border border - high - contrast - secondary'>;
             {endpoint.visibility}
+<<<<<<< HEAD
 
 export default function EndpointDetail({ endpoint }: { endpoint: EndpointSpec }) {
   return (
@@ -98,6 +103,8 @@ export default function EndpointDetail({
           </span>        </div>
       </div>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <div>
         <div className='font-medium mb-2'>Code Examples</div>        <CodeSamples samples={endpoint.samples} />
       </div>
@@ -107,6 +114,7 @@ export default function EndpointDetail({
           <span className="px-2 py-0.5 rounded bg-high-contrast-tertiary border border-high-contrast-secondary">{endpoint.method}</span>
           <code className="px-2 py-0.5 rounded bg-high-contrast-tertiary border border-high-contrast-secondary">{endpoint.path}</code>
           <span className="px-2 py-0.5 rounded bg-high-contrast-tertiary border border-high-contrast-secondary">{endpoint.visibility}</span>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
         </div>
@@ -197,10 +205,13 @@ export default function EndpointDetail(): any ({;
 
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <TryItConsole
           method={endpoint && endpoint.method}
           path={endpoint && endpoint.path}
           requiresAuth={
+<<<<<<< HEAD
 <<<<<<< HEAD
 
         <div className="font-medium mb-2">Try It</div>
@@ -238,10 +249,13 @@ export default function EndpointDetail(): any ({;
                 {r.burst ? `, burst ${r.burst}` : ''}
               </li>            ))}      </div>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {(endpoint.rateLimits && endpoint.rateLimits.length > 0) && (
         <div>
           <div className="font-medium mb-2">Rate Limits</div>
           <ul className="list-disc pl-5 text-sm text-high-contrast-muted">
+<<<<<<< HEAD
 <<<<<<< HEAD
             {endpoint.rateLimits.map((r, idx) => (
               <li key={idx}>{r.tier}: {r.limitPerMinute}/min{r.burst ? `, burst ${r.burst}` : ''}</li>
@@ -260,16 +274,20 @@ export default function EndpointDetail(): any ({;
             ))}
 <<<<<<< HEAD
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 
           </ul>
         </div>
       )}
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
+<<<<<<< HEAD
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {endpoint && endpoint.rateLimits && endpoint && endpoint.rateLimits.length > 0 && (;
         <div>;
           <div className='font-medium mb-2'>Rate Limits</div>;
@@ -287,15 +305,21 @@ export default function EndpointDetail(): any ({;
             {endpoint && endpoint.rateLimits.map((r, idx) => (;
               <li key={idx}>{r && r.tier}: {r && r.limitPerMinute}/min{r && r.burst ? `, burst ${r && r.burst}` : ''}</li>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             ))}
           </ul>;
         </div>;
       )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -322,10 +346,13 @@ export default function EndpointDetail(): any ({;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       )}
     </div>;
   );
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
             ))}
@@ -359,9 +386,16 @@ export default function EndpointDetail(): any ({;
       {(endpoint.errors && endpoint.errors.length > 0) && (
             ))}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           </ul>
         </div>
       )}
+        <div>
+          <div className="font-medium mb-2">Error Codes</div>
+          <ul className="list-disc pl-5 text-sm text-high-contrast-muted">
+            {endpoint.errors.map((e) => (
+              <li key={e.code}><strong>{e.code}</strong> ({e.httpStatus}) - {e.message}</li>
 
 <<<<<<< HEAD
       {(endpoint.errors && endpoint.errors.length > 0) && (
@@ -389,17 +423,27 @@ export default function EndpointDetail(): any ({;
           <ul className="list-disc pl-5 text-sm text-high-contrast-muted">
             {endpoint.errors.map((e) => (
               <li key={e.code}><strong>{e.code}</strong> ({e.httpStatus}) - {e.message}</li>
-
             ))}
 
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+            ))}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           </ul>
         </div>
       )}
     </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   );
 
+      )}
+    </div>
+  );
+}
           </span>        </div>;
       </div>;
       <div>;
@@ -458,6 +502,7 @@ export default function EndpointDetail(): any ({;
           </ul>;
         </div>)}
     </div>);
+<<<<<<< HEAD
 }
 
 =======
@@ -467,10 +512,13 @@ export default function EndpointDetail(): any ({;
 }
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 }
 
 }
+<<<<<<< HEAD
 
 }
 <<<<<<< HEAD
@@ -479,3 +527,5 @@ export default function EndpointDetail(): any ({;
 }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

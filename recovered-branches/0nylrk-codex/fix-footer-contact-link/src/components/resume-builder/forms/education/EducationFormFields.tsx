@@ -1,8 +1,11 @@
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
 
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useForm  } from 'react-hook-form';
 import { zodResolver  } from '@hookform/resolvers/zod';
 import { z  } from 'zod';
@@ -22,7 +25,10 @@ import { Form;
 import { useState  } from 'react';
 import { EducationFormFieldsProps  } from './types';
 import { Education } from '@/types/resume';
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {useForm} from 'react-hook-form';
 import {zodResolver} from '@hookform/resolvers/zod';
 import {z} from 'zod';
@@ -38,10 +44,13 @@ import {useState} from 'react';
 import {EducationFormFieldsProps} from './types';
 import {Education} from '@/types/resume';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 // Define schema for form validation
 
 const educationSchema = z.object({
@@ -55,6 +64,7 @@ const educationSchema = z.object({
   location: z.string().optional()})
 type EducationFormValues = z.infer<typeof educationSchema>;
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -66,16 +76,21 @@ export function EducationFormFields({
 }: EducationFormFieldsProps) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export function EducationFormFields({ 
   isEditing, 
   onSubmit, 
   onCancel 
 }: EducationFormFieldsProps) {;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const form = useForm<EducationFormValues>({
@@ -97,6 +112,7 @@ export function EducationFormFields({
       setError(err.message |'An error occurred')
     } finally {
       setIsLoading(false)
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import {useForm} from 'react-hook-form';
@@ -368,6 +384,9 @@ function EducationFormFields() {
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
+=======
+  };
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 import { useForm } from 'react-hook-form',;
 import { zodResolver } from '@hookform/resolvers/zod',;
@@ -389,7 +408,6 @@ import {;
 import { useState } from 'react',;
 import { EducationFormFieldsProps } from './types',;
 import { Education } from '@/types/resume',;
-;
 // Define schema for form validation;
 const educationSchema = z.object({;
   institution:z.string().min(1, 'Institution is required'),;
@@ -430,14 +448,28 @@ export function EducationFormFields({ ;
     } catch (err:any) {;
       setError(err.message || 'An error occurred');
     } finally {;
-      setIsLoading(false),;
     }
-  },;
-;
-  return (;
+
+  },
+import {z} from 'zod';
+import {format} from 'date - fns';
+import {Loader2} from 'lucide-react';
+import {Button} from '@/components / ui / button';
+import {Textarea} from '@/components / ui / textarea';
+import {Input} from '@/components / ui / input';
+import {Checkbox} from '@/components / ui / checkbox';
+import {Alert, AlertDescription} from '@/components / ui / alert';
+import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from '@/components / ui / form';
+import {useState} from 'react';
+import {EducationFormFieldsProps} from './types';
+    }
+  }
+
+  return (
     <Form {...form}>;
-      <form onSubmit={form.handleSubmit(handleSubmit)} className="space-y-4">;
+      <form onSubmit={form && form.handleSubmit(handleSubmit)} className="space-y-4">;
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
+<<<<<<< HEAD
           <FormField;
             control={form.control}
             name="institution";
@@ -445,10 +477,16 @@ export function EducationFormFields({ ;
               <FormItem>;
                 <FormLabel>Institution</FormLabel>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+          <FormField
+            control={form && form.control}
+            name="institution"
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <FormControl>;
                   <Input placeholder="University of California, MIT, etc." {...field} />;
                 </FormControl>;
                 <FormMessage />;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
           />;
@@ -465,16 +503,25 @@ export function EducationFormFields({ ;
             control={form.control}
             name="degree";
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+          <FormField
+            control={form && form.control}
+            name="degree"
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             render={({ field }) => (;
               <FormItem>;
                 <FormLabel>Degree</FormLabel>;
                 <FormControl>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   <Input placeholder="Bachelor's, Master's, Ph && Ph.D, etc." {...field} />;
                 </FormControl>;
                 <FormMessage />;
               </FormItem>;
             )}
+<<<<<<< HEAD
 
           />;
         </div>;
@@ -484,13 +531,14 @@ export function EducationFormFields({ ;
           />;
         </div>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <FormField
           control={form && form.control}
           name="field_of_study"
           render={({ field }) => (;
             <FormItem>;
               <FormLabel>Field of Study</FormLabel>;
-=======
               </FormItem>)}
           />;
           <FormField;
@@ -512,11 +560,11 @@ export function EducationFormFields({ ;
           render={({ field }) => (
             <FormItem>;
               <FormLabel > Field of Study</FormLabel>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               <FormControl>;
                 <Input placeholder="Computer Science, Engineering, etc." {...field} />;
               </FormControl>;
               <FormMessage />;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -541,6 +589,11 @@ export function EducationFormFields({ ;
                   <Input 
                     type="date" 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+          <FormField
+            control={form && form.control}
+            name="start_date"
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     {...field}
                     value={field.value |''}
                   />
@@ -550,6 +603,7 @@ export function EducationFormFields({ ;
             )}
           />
           <div className="space-y-4">
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -582,10 +636,13 @@ export function EducationFormFields({ ;
             control={form.control}
             name="start_date";
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             render={({ field }) => (;
               <FormItem>;
                 <FormLabel>Start Date</FormLabel>;
                 <FormControl>;
+<<<<<<< HEAD
 <<<<<<< HEAD
                   <Input
                     type="date" 
@@ -597,6 +654,8 @@ export function EducationFormFields({ ;
                     {...field}
                     value={field.value || ''} ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   />;
                 </FormControl>;
                 <FormMessage />;
@@ -604,9 +663,12 @@ export function EducationFormFields({ ;
             )}
           />;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
           <div className="space-y-4">;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <FormField
               control={form && form.control}
               name="is_current"
@@ -616,6 +678,7 @@ export function EducationFormFields({ ;
                     <Checkbox
                       checked={field && field.value}
                       onCheckedChange={field && field.onChange}
+<<<<<<< HEAD
 =======
 ;
           <div className="space-y-4">;
@@ -629,6 +692,8 @@ export function EducationFormFields({ ;
                       checked={field.value}
                       onCheckedChange={field.onChange}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     />;
                   </FormControl>;
                   <div className="space-y-1 leading-none">;
@@ -636,6 +701,7 @@ export function EducationFormFields({ ;
                   </div>;
                 </FormItem>;
               )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
             />;
@@ -774,10 +840,13 @@ export function EducationFormFields({ ;
             <FormItem>;
               <FormLabel>Location (Optional)</FormLabel>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <FormControl>;
                 <Input placeholder="Cambridge, MA" {...field} />;
               </FormControl>;
               <FormMessage />;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
         />;
@@ -794,15 +863,22 @@ export function EducationFormFields({ ;
           control={form.control}
           name="description";
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+        <FormField
+          control={form && form.control}
+          name="description"
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           render={({ field }) => (;
             <FormItem>;
               <FormLabel>Description (Optional)</FormLabel>;
               <FormControl>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <Textarea
                   placeholder="Notable achievements, courses, activities..."
                   className="min-h-[100px]"
-=======
             </FormItem>)}
         />;
         <FormField;
@@ -815,16 +891,20 @@ export function EducationFormFields({ ;
                 <Textarea;
                   placeholder="Notable achievements, courses, activities...";
                   className="min - h-[100px]";
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
                 <Textarea;
                   placeholder="Notable achievements, courses, activities...";
                   className="min-h-[100px]";
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   {...field}
                 />;
               </FormControl>;
               <FormMessage />;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
         />;
@@ -835,11 +915,14 @@ export function EducationFormFields({ ;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <Button
             type="button"
             variant="outline"
             onClick={onCancel}>;
             {isEditing ? 'Cancel' : 'Back'}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1024,3 +1107,5 @@ export function EducationFormFields({ ;
 }
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

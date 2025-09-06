@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -31,6 +32,11 @@ export const config = { api: { bodyParser: false } }
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST');
     return res.status(405).json({ error: 'Method not allowed' });  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
+=======
+import formidable from 'formidable';
+import fs from 'fs';
+import path from 'path';
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const form = formidable({ multiples: false });
   form.parse(req, (err, fields, files) => {
     if (err) return res.status(400).json({ error: 'Invalid form data' });
@@ -38,6 +44,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const file = files.file as formidable.File | undefined;
   if (req && req.method !== 'POST')
     return res && res.status(405).json({ error: 'Method not allowed' });  if (req && req.method !== 'POST') return res && res.status(405).json({ error: 'Method not allowed' });
+
   const form = formidable({ multiples: false });
   form && form.parse(req, (err, fields, files) => {
     if (err) return res && res.status(400).json({ error: 'Invalid form data' });
@@ -45,6 +52,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const file = files && files.file as formidable && formidable.File | undefined;
     if (!file || !file && file.filepath)
       return res && res.status(400).json({ error: 'File missing' });
+
     const targetDir = resolveDataPath(path && path.join('dataroom', section));
     if (!fs && fs.existsSync(targetDir)) fs && fs.mkdirSync(targetDir, { recursive: true });
     const targetPath = path && path.join(
@@ -53,8 +61,12 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     );
     fs && fs.copyFileSync(file && file.filepath, targetPath);
     appendAuditLog({
+<<<<<<< HEAD
     if (!file || !file.filepath) return res.status(400).json({ error: 'File missing' });
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     res.status(200).json({ ok: true })
 =======
       type: 'file_upload',
@@ -64,6 +76,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     res && res.status(200).json({ ok: true });
   });    appendAuditLog({ type: 'file_upload', section, name: path && path.basename(targetPath) });
     res && res.status(200).json({ ok: true })
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -78,6 +91,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 =======
   })
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  })
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {appendAuditLog, resolveDataPath} from '../../../../utils / api / storage';
 ;
 export const config = { api: { body_parser: false } }
@@ -122,6 +138,7 @@ function handler() {
   });
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
@@ -131,3 +148,5 @@ function handler() {
 }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

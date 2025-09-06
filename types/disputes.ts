@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 export type DisputeStatus = 'Open' | 'Under Review' | 'Resolved',
 =======
@@ -12,6 +13,8 @@ export type DisputeStatus = 'Open' | 'Under Review' | 'Resolved',
 
 
 export type DisputeStatus = 'Open' | 'Under Review' | 'Resolved';
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export type DisputeReason =
   | 'Scope Disagreement'
   | 'Quality Issues'
@@ -21,13 +24,21 @@ export type DisputeReason =
   | 'Other';
 export type DisputeStatus = 'Open' | 'Under Review' | 'Resolved',;
 export type DisputeStatus = 'Open' | 'Under Review' | 'Resolved';
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+export type DisputeStatus = 'Open' | 'Under Review' | 'Resolved',
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export type DisputeReason =;
   | 'Scope Disagreement';
   | 'Quality Issues';
   | 'Delivery Delay';
   | 'Payment Issue';
   | 'Communication Breakdown';
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   | 'Other',;
@@ -80,6 +91,8 @@ export type DisputeListItem = Pick<;
 export type UserSummary = {;
   id: string,;
   name: string,;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export type DisputeAttachment = {
   id: string;
   fileName: string;
@@ -115,6 +128,7 @@ export type DisputeCase = {
   talentUserId: string;
   createdAt: string;
   updatedAt: string;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
   role: 'admin' | 'client' | 'talent';
@@ -124,6 +138,8 @@ export type DisputeCase = {
 
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   status: DisputeStatus;
   reason: DisputeReason;
   reasonDetails?: string;
@@ -163,7 +179,12 @@ export type DisputeListItem = Pick<;
 export type UserSummary = {
   id: string;
   name: string;
+
+
   role: 'admin' | 'client' | 'talent';
 }
 };
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

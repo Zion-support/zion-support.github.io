@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -12,18 +13,21 @@ import {Button} from "@/components/ui/button";
 import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
 import {CountryServiceCard} from "@/components/services/CountryServiceCard";
 import {CountryPricing} from "@/data/onsiteServicePricing";
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useState } from "react",
 import { Search } from "lucide-react",
 import { Input } from "@/components/ui/input",
 import { Button } from "@/components/ui/button",
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
-
-
 import { CountryServiceCard } from "@/components/services/CountryServiceCard";
 import { CountryPricing } from "@/data/onsiteServicePricing";
 import { CountryServiceCard } from "@/components/services/CountryServiceCard",
 import { CountryPricing } from "@/data/onsiteServicePricing",
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface CountryTabsProps {
 
   popularCountries: string[]
@@ -34,15 +38,15 @@ interface CountryTabsProps {
   setSearchQuery: (query: string) => void
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export function CountryTabs({
   popularCountries;
 
-  filteredCountries
-  handleCountrySelect
-  searchQuery
-  setSearchQuery
 
+<<<<<<< HEAD
 
 export function CountryTabs({ ;
   popularCountries;
@@ -63,6 +67,8 @@ export function CountryTabs({
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }: CountryTabsProps) {
   return (
     <Tabs defaultValue="featured" className="w-full">
@@ -86,6 +92,16 @@ export function CountryTabs({
             .filter(country => popularCountries.includes(country.country))
             .map(country => (
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import { useState } from "react",;
+import { Search } from "lucide-react",;
+import { Input } from "@/components/ui/input",;
+import { Button } from "@/components/ui/button",;
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
+import { CountryServiceCard } from "@/components/services/CountryServiceCard",;
+import { CountryPricing } from "@/data/onsiteServicePricing",;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 import {useState} from "react";
 import {Search} from "lucide-react";
@@ -94,6 +110,7 @@ import {Button} from "@/components/ui/button";
 import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
 import {CountryServiceCard} from "@/components/services/CountryServiceCard";
 import {CountryPricing} from "@/data/onsiteServicePricing";
+<<<<<<< HEAD
 =======
               <CountryServiceCard
                 key={country.country}
@@ -109,6 +126,8 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
 import { CountryServiceCard } from "@/components/services/CountryServiceCard",;
 import { CountryPricing } from "@/data/onsiteServicePricing",;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface CountryTabsProps {;
   popularCountries: string[],;
   filteredCountries: CountryPricing[],;
@@ -117,6 +136,7 @@ interface CountryTabsProps {;
   setSearchQuery: (query: string) => void;
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 export function CountryTabs(): any ({ ;
   popularCountries;
@@ -140,10 +160,13 @@ interface CountryTabsProps {;
 export function CountryTabs({ ;
   popularCountries,;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   filteredCountries, ;
   handleCountrySelect, ;
   searchQuery, ;
   setSearchQuery ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 }: CountryTabsProps) {;
   return (
@@ -160,6 +183,8 @@ export function CountryTabs({;
 }: CountryTabsProps) {;
   return (;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <Tabs defaultValue="featured" className="w-full">;
       <TabsList className="bg-zion-blue-light border border-zion-blue-light w-full max-w-md mx-auto mb-6">;
         <TabsTrigger value="featured" className="data-[state=active]:bg-zion-purple">;
@@ -170,10 +195,13 @@ export function CountryTabs({;
         </TabsTrigger>;
       </TabsList>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
       ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <TabsContent value="featured" className="mt-0">;
         <div className="mb-6">;
           <h2 className="text-2xl font-bold text-white text-center">Featured Service Locations</h2>;
@@ -182,33 +210,43 @@ export function CountryTabs({;
           </p>;
         </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">;
           {filteredCountries;
             .filter(country => popularCountries && popularCountries.includes(country && country.country));
             .map(country => (;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <CountryServiceCard
                 key={country && country.country} 
                 country={country} 
 
+<<<<<<< HEAD
 =======
 =======
               <CountryServiceCard
                 key={country && country.country} 
                 country={country} 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
               <CountryServiceCard 
                 key={country.country} 
                 country={country} 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 onSelect={handleCountrySelect}
                 isPopular={true}
               />;
             ));
           }
+<<<<<<< HEAD
 
         </div>;
       </TabsContent>;
@@ -246,11 +284,14 @@ export function CountryTabs({;
           <div className="relative">
             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate-light" />
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <Input
               type="text"
               placeholder="Search by country..."
               className="pl-10 bg-zion-blue border-zion-blue-light text-white"
               value={searchQuery}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
               onChange={(e) => setSearchQuery(e.target.value)}
@@ -285,10 +326,13 @@ export function CountryTabs({;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               onSelect={handleCountrySelect}
               isPopular={popularCountries && popularCountries.includes(country && country.country)}
             />;
           ))}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -301,12 +345,15 @@ export function CountryTabs({;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <Button
               onClick={() => document && document.getElementById('pricing-table')?.scrollIntoView({ behavior: 'smooth' })}
               variant="outline";
               className="border-zion-purple text-zion-purple hover:bg-zion-purple/10";
             >;
               View All {filteredCountries && filteredCountries.length} Countries;
+<<<<<<< HEAD
 <<<<<<< HEAD
             </Button>;
           </div>;
@@ -353,6 +400,8 @@ export function CountryTabs({;
       </TabsContent>;
     </Tabs>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useState } from './react';
 import { Search } from './lucide-react';
 import { Input } from '@/components / ui / input';
@@ -437,6 +486,7 @@ function CountryTabs() {
     </Tabs>);
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
   ),;}
@@ -504,3 +554,5 @@ setSearchQuery
   )
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -1,8 +1,11 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import { useState  } from 'react';
 import { logDebug, logErrorToProduction  } from '@/utils/productionLogger';
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import Link from 'next/link';
 import { useRouter  } from 'next/router';
 import { Logo  } from '@/components/header/Logo';
@@ -20,29 +23,11 @@ import { ResponsiveNavigation  } from '@/components/navigation/ResponsiveNavigat
 import { MobileMenu  } from '@/components/header/MobileMenu';
 import { MobileBottomNav  } from '@/components/header/MobileBottomNav';
 
-import { useState } from 'react'
-import { logDebug, logErrorToProduction } from '@/utils/productionLogger'
-import Link from 'next/link'
-import { useRouter } from 'next/router'
-import { Logo } from '@/components/header/Logo'
-import { PointsBadge } from '@/components/loyalty/PointsBadge'
-import { UserMenu } from '@/components/header/UserMenu'
-import { LanguageSelector } from '@/components/header/LanguageSelector'
-import { ModeToggle } from '@/components/ModeToggle'
-import { useAuth } from '@/hooks/useAuth'
-import { useIsMobile } from '@/hooks/use-mobile'
-import { useMessaging } from '@/context/MessagingContext'
-import { EnhancedSearchInput } from '@/components/search/EnhancedSearchInput'
-import { generateSearchSuggestions } from '@/data/marketplaceData'
-import { slugify } from '@/lib/slugify'
-import { ResponsiveNavigation } from '@/components/navigation/ResponsiveNavigation'
-import { MobileMenu } from '@/components/header/MobileMenu'
-import { MobileBottomNav } from '@/components/header/MobileBottomNav'
-
 import { Menu, X } from 'lucide-react'
 import { useTranslation  } from 'react-i18next';
 import { CartDrawer  } from '@/components/cart/CartDrawer';
 import { LoginModal } from '@/components/auth/LoginModal';
+<<<<<<< HEAD
 
 import { useState } from 'react';
 import { log_debug, logErrorToProduction } from '@/utils / production_logger';
@@ -118,11 +103,14 @@ export function PrimaryNav() {
   const suggestions = generateSearchSuggestions()
   let unreadCount = 0
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   try {
     const messaging = use_messaging ();
     unread_count = messaging.unread_count;
   } catch {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     // context not available
 
@@ -135,15 +123,20 @@ export function PrimaryNav() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   };
 ;
   const handleSubmit = (e: React.FormEvent) => {;
     e.preventDefault();
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     const trimmed = query.trim();    if (trimmed) {
       logDebug('PrimaryNav search submit:', { query: trimmed })
       router
@@ -155,6 +148,7 @@ export function PrimaryNav() {
             component: 'PrimaryNav'
           })
         ) }
+<<<<<<< HEAD
   const handle_submit = (e: React.FormEvent) =>: any {
     e.prevent_default ();
     const trimmed = query.trim ();    // Check condition
@@ -253,6 +247,8 @@ export function PrimaryNav() {;
 
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <>
       <header
@@ -263,6 +259,7 @@ export function PrimaryNav() {;
       >
         <div className="container flex items-center justify-between gap-2 min-h-16 px-4 sm:px-6 max-[320px]:flex-wrap">
           <Logo />
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -284,6 +281,8 @@ export function PrimaryNav() {;
               style={{ width: 'clamp(12rem, 20vw, 16rem)' }}>;
             />          </div>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           
           {/* Navigation - hidden on mobile and tablets, shown on desktop */}
           <div className="hidden lg:block order-1 flex-shrink-0">
@@ -301,6 +300,7 @@ export function PrimaryNav() {;
               <EnhancedSearchInput
                 value={query}
                 onChange={setQuery}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       <header;
@@ -501,6 +501,11 @@ if ( {) {
               <CartDrawer />;
             </div>;
 
+=======
+                    // Default: search results page with query parameter;
+                    router.push (`/search?q=${encodeURIComponent (sugg.text)}`);
+                  }
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             {/* Compact controls group */}
             <div className='flex items-center gap-1 border-l border-primary/20 pl-1 ml-1'>;
                   set_query ('');
@@ -554,6 +559,7 @@ if ( {) {
             </form>;
             {/* Compact actions group */}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -567,6 +573,8 @@ if ( {) {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             {/* Compact controls group */}
             <div className="flex items-center gap-1 border-l border-primary/20 pl-1 ml-1">
               <ModeToggle />
@@ -579,6 +587,7 @@ if ( {) {
                 <>
                   <Link
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
                     href='/auth/login'
@@ -589,6 +598,8 @@ if ( {) {
                       setLoginOpen(true) }}
                   >
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     href="/auth/login"
                     className="text-sm hover: text-primary whitespace-nowrap"
                     data-testid="login-link"
@@ -601,14 +612,19 @@ if ( {) {
             </div>;
             {/* Compact controls group */}
 <<<<<<< HEAD
+<<<<<<< HEAD
             <div className='flex items - center gap - 1 border - l border - primary / 20 pl - 1 ml - 1'>;
 =======
             <div className="flex items-center gap-1 border-l border-primary/20 pl-1 ml-1">;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+            <div className='flex items - center gap - 1 border - l border - primary / 20 pl - 1 ml - 1'>;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <ModeToggle />;
               <LanguageSelector />;
             </div>;
             {/* Auth links - flex wrap for very small screens */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -643,6 +659,12 @@ if ( {) {
                     {t('auth.login')}
                   </Link>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+                    {t('auth.login')}
+                  </Link>
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   <Link
                     href='/signup'
                     className='text-sm hover:text-primary whitespace-nowrap'>;
@@ -651,21 +673,11 @@ if ( {) {
                 </>;
               )}
               {isLoggedIn && <UserMenu />}
-
-
-
-            </div>;
-          </div>;
-
-          {/* Tablet view (md to lg) - simplified controls */}
-
-          <div className="hidden md: flex lg:hidden items-center gap-2 order-2">
-
-
             <ModeToggle />
             <LanguageSelector />
             {!isLoggedIn && (
               <Link
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -694,6 +706,8 @@ if ( {) {
 
               >
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 href="/auth/login"
                 className="text-sm hover:text-primary"
                 data-testid="login-link"
@@ -718,6 +732,7 @@ if ( {) {
               </Link>
             )}
             {isLoggedIn && <UserMenu />}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
                 onClick={e => {;
@@ -782,11 +797,14 @@ if ( {) {
               {isLoggedIn && <UserMenu  />}
             </div>
           </div>
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           {/* Mobile menu button */}
           <button
-            className="lg:hidden p-2 rounded focus:outline-none flex-shrink-0"
+            className='lg:hidden p-2 rounded focus:outline-none flex-shrink-0'
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-expanded={mobileMenuOpen}
+<<<<<<< HEAD
             aria-label={t('general.toggle_mobile_menu')}          >
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           </div>;
@@ -802,11 +820,14 @@ if ( {) {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             {mobileMenuOpen ? (
               <X className="h-6 w-6" />
             ) : (
               <Menu className="h-6 w-6" />
             )}
+<<<<<<< HEAD
           </button>;
         </div>;
       </header>;
@@ -950,7 +971,10 @@ setLoginOpen (true) ;
     </>
   )
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
+
 return (<> <header className="sticky top-0 z-70 w-full border-b border-primary/20 bg-card/90 backdrop-blur-md" role="navigation" aria-label="Primary" data-testid="header" > <div className="container flex items-center justify-between gap-2 min-h-16 px-4 sm:px-6 max-[320px]:flex-wrap" > <Logo />
 }setQuery ('')
 //Track analytics event
@@ -989,6 +1013,7 @@ setLoginOpen (true)
 }/> </div> </div>)
 }{
   isMobile && <MobileBottomNav unreadCount= {
+<<<<<<< HEAD
   unreadCount
 
   unreadCount 
@@ -997,6 +1022,8 @@ setLoginOpen (true)
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }/>
 }<LoginModal isOpen= {
   loginOpen
@@ -1014,9 +1041,12 @@ setLoginOpen (true)
   { opacity: 0
   height: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 ;
 ;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             className="absolute inset-0 bg-black/50 backdrop-blur-sm"
             onClick={() => setMobileMenuOpen(false)}
             aria-hidden="true"
@@ -1028,6 +1058,7 @@ setLoginOpen (true)
               openLoginModal={(returnToPath) => setLoginOpen(true)}
             />;
           </div>;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           <button;
             className='lg:hidden p - 2 rounded focus:outline - none flex - shrink - 0';
@@ -1040,6 +1071,9 @@ setLoginOpen (true)
           </button>;
         </div>;
 <<<<<<< HEAD
+=======
+        </div>;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       </header>;
       {mobileMenuOpen && (
         <div className='lg:hidden fixed inset - 0 z - 60 pt - 16'>;
@@ -1057,6 +1091,7 @@ setLoginOpen (true)
       {is_mobile && <MobileBottomNav unread_count={unread_count} />}
       <LoginModal is_open={login_open} onOpenChange={setLoginOpen} />;
     </>);
+<<<<<<< HEAD
 }
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -1183,6 +1218,79 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 ;
 =======
+=======
+}
+}}
+              transition={{ duration: 0.3 }}"
+              className="lg:hidden bg-slate-900/95 backdrop-blur-md border-t border-white/10">"
+              <div className="px-4 py-6 space-y-4">
+                {services.map((category, index) => (
+                  <div key={index}>"
+                    <h3 className="text-sm font-semibold text-cyan-400 mb-2">
+                      {category.category}
+                    </h3>"
+                    <div className="space-y-2 ml-4">
+                      {category.items.map((service: unknown, serviceIndex: unknown
+                        <Link
+                          key={serviceIndex}
+                          to={service.path}"
+                          className="block text-gray-300 hover:text-white transition-colors duration-200"
+                          onClick={( setIsOpen(false)}
+                        >
+                          {service.name}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                ))}
+                <div className="pt-4 border-t border-white/10 space-y-2">
+                  <Link                    to="/solutions"
+                    className="block text-gray-300 hover:text-white transition-colors duration-200"
+                    onClick={: unknown setIsOpen(false)}
+                  >
+                    Solutions
+                  </Link>
+                  <Link                    to="/about"
+                    className="block text-gray-300 hover:text-white transition-colors duration-200"
+                    onClick={: unknown setIsOpen(false)}
+                  >
+                    About
+                  </Link>
+                  <Link                    to="/blog"
+                    className="block text-gray-300 hover:text-white transition-colors duration-200"
+                    onClick={: unknown setIsOpen(false)}
+                  >
+                    Blog
+                  </Link>
+                  <Link                    to="/contact"
+                    className="block text-gray-300 hover:text-white transition-colors duration-200"
+                    onClick={: unknown setIsOpen(false)}
+                  >
+                    Contact
+                  </Link>
+                </div>
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </nav>
+    </header>
+  )}
+'"`
+}
+            className="absolute inset-0 bg-black/50 backdrop-blur-sm"
+            onClick={() => setMobileMenuOpen(false)}
+            aria-hidden="true"
+          />
+          <div className="relative bg-card border-t border-primary/20 max-h-[calc(100vh-4rem)] overflow-y-auto">
+            <MobileMenu
+              unreadCount={unreadCount}
+              onClose={() => setMobileMenuOpen(false)}
+              openLoginModal={(returnToPath) => setLoginOpen(true)}
+            />;
+          </div>;
+        </div>;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       )}
       {isMobile && <MobileBottomNav unreadCount={unreadCount} />}
       <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />;
@@ -1190,5 +1298,8 @@ ursor/fix-website-loading-errors-and-merge-6662
   );
 }
 ;
+<<<<<<< HEAD
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

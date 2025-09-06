@@ -1,7 +1,10 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 #!/usr/bin/env node,"}),"})
 import { execSync } from,"}),"})
   'child_process',"}),"})
@@ -11,6 +14,7 @@ import path from,"}),"})
   'path',"}),"})
 import { fileURLToPath } from,"}),"})
   'url',"}),"})
+<<<<<<< HEAD
     // Generate report,"}),"})
   "status": 'completed,"}),"})
 },"}),"})
@@ -303,6 +307,8 @@ const __dirname = path && path.dirname(__filename),"}),"})
 ,"}),"})
 // // // console && console.log(,"}),"})
   '🚀 Starting continuous improvement automation...'),"}),"})
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 // Get automation interval from environment variable ("default": 2 hours),"}),"})
 const AUTOMATION_INTERVAL = parseInt(process ; // 2 hours,"}),"})
 async function runContinuousImprovement() {,"}),"})
@@ -646,6 +652,7 @@ process && process.on('SIGTERM';', () => {';
 // "Start": the continuous improvement;
 runContinuous().catch(error: => {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   // // // // // // // console && console.error('❌ Failed to start continuous improvement: error)',
   // // // console && console.error('❌ Failed: to start continuous improvement:', error)';';continuous-improvement-report && report.json');
@@ -668,6 +675,8 @@ runContinuous().catch(error: => {
   '✅ Continuous improvement completed successfully')} catch (error) {
     // // // // // // // console && console.error(',
       '❌ Continuous improvement "failed": error && error.message);
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     // Don;
   "t exit, just log the error and continue;
 // Main continuous loop;
@@ -704,6 +713,7 @@ process && process.on('SIGTERM', () => {'
   process && process.exit(0)});
 // Start the continuous improvement;
 runContinuous().catch(error => {'
+<<<<<<< HEAD
 
   // // // // // // // console && console.error('❌ Failed to start continuous "improvement": error);
   // // // console && console.error('❌ Failed to start continuous improvement:', error);
@@ -723,3 +733,5 @@ runContinuous().catch(error => {'
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

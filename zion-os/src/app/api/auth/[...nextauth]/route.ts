@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -105,58 +106,49 @@ import { prisma } from "@/lib/prisma",;
 import bcrypt from "bcryptjs",;
 const handler = NextAuth({;
   adapter: PrismaAdapter(prisma),;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   providers: [;
     CredentialsProvider({;
-      name: "credentials",;
+      name: "credentials";
       credentials: {;
-        email: { label: "Email", type: "email" },;
+        email: { label: "Email", type: "email" }
         password: { label: "Password", type: "password" }
-      },;
-      async authorize(credentials) {;
-        if (!credentials?.email || !credentials?.password) {;
+      }
+      async authorize(credentials) {if (!credentials?.email |!credentials?.password) {;
           return null;
         }
-;
-        const user = await prisma.user.findUnique({;
-          where: {;
+        const user = await prisma.user.findUnique({where: {;
             email: credentials.email;
           }
-        }),;
-        if (!user || !user.password) {;
-          return null;
+        });
+        if (!user |!user.password) {return null;
         }
-;
         const isPasswordValid = await bcrypt.compare(;
-          credentials.password,;
+          credentials.password;
           user.password;
-        ),;
-        if (!isPasswordValid) {;
-          return null;
+        );
+        if (!isPasswordValid) {return null;
         }
-;
-        return {;
-          id: user.id,;
-          email: user.email,;
-          name: user.name,;
+        return {id: user.id;
+          email: user.email;
+          name: user.name;
           role: user.role}
       }
     });
-  ],;
-  session: {;
-    strategy: "jwt"},;
-  callbacks: {;
-    async jwt({ token, user }) {;
-      if (user) {;
+  ];
+  session: {strategy: "jwt"}
+  callbacks: {async jwt({ token, user }) {if (user) {;
         token.role = user.role;
       }
       return token;
-    },;
-    async session({ session, token }) {;
-      if (token) {;
-        session.user.id = token.sub!,;
+    }
+    async session({ session, token }) {if (token) {;
+        session.user.id = token.sub!;
         session.user.role = token.role;
       }
       return session;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     }},;
   pages: {;
@@ -168,3 +160,5 @@ export { handler as GET, handler as POST };
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

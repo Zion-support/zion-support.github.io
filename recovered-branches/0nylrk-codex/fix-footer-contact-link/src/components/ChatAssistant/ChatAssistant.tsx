@@ -1,15 +1,21 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
 =======
 import React, { useState, useEffect, useRef, ReactNode } from 'react';
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { ChatMessage  } from './ChatMessage';
 import { ChatInput  } from './ChatInput';
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
 import { Button } from "@/components/ui/button";
 import { X } from "lucide-react";
 export interface Message {
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {ChatMessage} from './ChatMessage';
 import {ChatInput} from './ChatInput';
 import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
@@ -22,9 +28,12 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
 import { Button } from "@/components/ui/button",
 import { X } from "lucide-react",
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export interface Message {
   id: string,
   role: 'user' | 'assistant',
@@ -32,6 +41,7 @@ export interface Message {
   timestamp: Date,
   read?: boolean
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -41,25 +51,24 @@ export interface Message {
 
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 
-  id: string
-  role: 'user' | 'assistant'
-  message: string
-  timestamp: Date
 
   read?: boolean
 }
 export interface ChatAssistantProps {
 
-  isOpen: boolean
-  onClose: () => void
-  recipient: {
-    id: string
-    name: string
+
     id: string,
     name: string,;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     avatarUrl?: string;
     role?: string
   }
@@ -70,10 +79,14 @@ export interface ChatAssistantProps {
   contextHeader?: ReactNode
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 import {ChatMessage} from './ChatMessage';
 import {ChatInput} from './ChatInput';
 
+<<<<<<< HEAD
 =======
 import {ChatMessage} from './ChatMessage';
 import {ChatInput} from './ChatInput';
@@ -82,6 +95,9 @@ export function ChatAssistant({
 
 export function ChatAssistant({;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+import React, { useState, useEffect, useRef, ReactNode } from 'react';
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   isOpen;
   onClose;
   recipient;
@@ -89,6 +105,7 @@ export function ChatAssistant({;
 
   initialMessages = [];
   onSendMessage;
+<<<<<<< HEAD
 <<<<<<< HEAD
   contextHeader;
 }: ChatAssistantProps) {;
@@ -103,6 +120,8 @@ export function ChatAssistant({;
       setMessages(initialMessages)
     }
   }, [initialMessages]);
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   useEffect(() => {
     scrollToBottom()
   }, [messages]);
@@ -160,9 +179,12 @@ export function ChatAssistant({;
   contextHeader;
 }: ChatAssistantProps) {;
 
+<<<<<<< HEAD
   contextHeader;
 }: ChatAssistantProps) {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const [messages, setMessages] = useState<Message[]>(initialMessages),;
   const messagesEndRef = useRef<HTMLDivElement | null>(null),;
   useEffect(() => {;
@@ -171,10 +193,14 @@ export function ChatAssistant({;
     }
   }, [initialMessages]),
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   useEffect(() => {
     scrollToBottom()
@@ -185,20 +211,26 @@ export function ChatAssistant({;
 =======
   }
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   useEffect(() => {
     scrollToBottom()
   }, [messages]),
 
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })
+<<<<<<< HEAD
   },
   
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const handleSendMessage = async (message: string) => {
     if (!message.trim()) return
     // Add user message to the chat
     const newMessage: Message = {
 
+<<<<<<< HEAD
 
   useEffect(() => {;
     if (initialMessages && initialMessages.length > 0) {;
@@ -264,6 +296,8 @@ export function ChatAssistant({;
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4">;
       <div className="w-full max-w-xl bg-zion-blue rounded-lg shadow-xl overflow-hidden flex flex-col max-h-[80vh]">;
@@ -281,28 +315,12 @@ export function ChatAssistant({;
               {recipient && recipient.role && (;
                 <div className="text-xs text-zion-slate">{recipient && recipient.role}</div>;
               )}
-
-            </div>;
-          </div>;
-          <Button
-            variant="ghost" 
-            size="icon"
-            className="text-white hover:bg-zion-purple/10 rounded-full"
-            onClick={onClose}>;
-            <X className="h-5 w-5" />;
-          </Button>;
-        </div>;
-
-
         {/* Context Header (Optional) */}
         {contextHeader && (;
           <div className="border-b border-zion-purple/20 bg-zion-blue-dark/50 p-3">;
             {contextHeader}
           </div>;
         )}
-
-
-
         {/* Messages */}
         <div className="flex-1 overflow-y-auto p-4 space-y-4">;
           {messages && messages.length === 0 ? (;
@@ -312,6 +330,7 @@ export function ChatAssistant({;
           ) : (;
             messages && messages.map((msg) => (;
               <ChatMessage
+<<<<<<< HEAD
 
 
                 key={msg.id} 
@@ -368,6 +387,8 @@ export function ChatAssistant({;
                 key={msg.id}
                 key={msg.id} 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 role={msg.role}
                 message={msg.message}
               />
@@ -376,9 +397,12 @@ export function ChatAssistant({;
           <div ref={messagesEndRef} />
         </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 key={msg && msg.id} 
                 role={msg && msg.role}
                 message={msg && msg.message}
@@ -389,8 +413,17 @@ export function ChatAssistant({;
         </div>;
 
         {/* Input */}
+<<<<<<< HEAD
 
 <<<<<<< HEAD
+=======
+        <div className="p-3 border-t border-zion-purple/20 bg-zion-blue-dark/30">;
+          <ChatInput onSend={handleSendMessage} />;
+        </div>;
+      </div>;
+    </div>;
+  );
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { Avatar, AvatarFallback, AvatarImage } from '@/components / ui / avatar';
 import { Button } from '@/components / ui / button';
 import { X } from './lucide-react';
@@ -513,15 +546,13 @@ if (return null) {
         </div>;
       </div>;
     </div>);
-
-}
-=======
         <div className="p-3 border-t border-zion-purple/20 bg-zion-blue-dark/30">
           <ChatInput onSend={handleSendMessage} />
         </div>
       </div>
     </div>
   )
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -722,3 +753,10 @@ return ()
 };
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+};
+}
+
+
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

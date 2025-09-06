@@ -24,9 +24,12 @@ class ErrorBoundary extends React.Component {
 import React from 'react';
 import { useEffect, useMemo, useState } from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import { useRouter } from 'next/router';
 import { TALENT_PROFILES } from '../data/talent';
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export default function RequestToHirePage() {
 
 
@@ -37,15 +40,17 @@ export default function RequestToHirePage() {;
     () => TALENT_PROFILES.find(t => t.slug === talent)
     [talent]
   );export default function RequestToHirePage() {;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
   const router = useRouter();
   const { talent } = router.query as { talent?: string }
   const selected = useMemo(() => TALENT_PROFILES.find(t => t.slug === talent), [talent]);
-
-
   const [form, setForm] = useState({
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 import { use_router } from 'next / router';
@@ -74,16 +79,21 @@ function RequestToHirePage() {
   const selected = useMemo(() => TALENT_PROFILES.find(t => t.slug === talent), [talent]);
   const [form, setForm] = useState({
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     name: '',
     email: '',
     budget: '',
     timeline: '',
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export default function RequestToHirePage() {;
   const router = useRouter();
   const { talent } = router && router.query as { talent?: string };
@@ -108,6 +118,7 @@ export default function RequestToHirePage() {;
   const [submitting, setSubmitting] = useState(false);
   const [result, setResult] = useState<null | { id: string, message: string }>(null),;
   const [error, setError] = useState<string | null>(null);
+<<<<<<< HEAD
 
   const onSubmit = async (e: React && React.FormEvent) => {;
     e && e.preventDefault();
@@ -182,6 +193,10 @@ export default function RequestToHirePage() {;
       setSubmitting(false);    }          budget: normalizedBudget
           talentSlug: selected?.slug |null})})
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+      setError('Please fill in name, email, and description.');
+      return;    }      return;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       const data = await res.json();
       if (!res.ok) throw new Error(data.error |'Failed to submit');
       setResult({ id: data.id, message: 'Request submitted successfully.' })
@@ -189,6 +204,7 @@ export default function RequestToHirePage() {;
       setError(err.message |'Something went wrong')
     } finally {
       setSubmitting(false)
+<<<<<<< HEAD
 
     }
 
@@ -230,6 +246,8 @@ export default function RequestToHirePage() {;
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     }
   }
 
@@ -304,6 +322,7 @@ export default function RequestToHirePage() {;
           className='px-4 py-2 rounded bg-black text-white'>          {submitting ? 'Submitting…' : 'Submit Request'}      </div>;
     );
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
     }
@@ -331,6 +350,8 @@ export default function RequestToHirePage() {;
 </div>
     )
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   }
   return (
     <div className="max-w-xl mx-auto">;
@@ -357,6 +378,7 @@ export default function RequestToHirePage() {;
           <textarea className="w-full border rounded px-3 py-2" rows={5} value={form && form.description} onChange={(e) => setForm({ ...form, description: e && e.target.value })} />;
         </div>;
         {error && <div className="text-sm text-red-600">{error}</div>}
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -376,6 +398,8 @@ export default function RequestToHirePage() {;
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   );
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
@@ -538,6 +562,7 @@ if ( {) {
       </form>;
     </div>);
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -692,3 +717,5 @@ if ( {) {
   );
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

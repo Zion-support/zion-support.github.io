@@ -1,11 +1,14 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 export type UserType = 'freelancer' | 'b2b' | 'hiring_manager' | 'guest',
 export type TrackEventPayload = {
-  name: string,
-  page?: string,
-  user_type?: UserType,
-  properties?: Record < string any>,
+  name: string;
+  page?: string;
+  userType?: UserType;
+  properties?: Record<string, any>;
   at?: string;
 },
 export async /**
@@ -23,6 +26,7 @@ function track_event() {
 
   }
 }
+<<<<<<< HEAD
 =======
 =======
 export type UserType = 'freelancer' | 'b2b' | 'hiring_manager' | 'guest',;
@@ -59,11 +63,14 @@ export async function trackEvent(payload: TrackEventPayload) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     await fetch('/api/analytics/events/track', {;
       method: 'POST',;
       headers: { 'Content-Type': 'application/json' },;
       body: JSON.stringify(payload);
       keepalive: true as any});
+<<<<<<< HEAD
 
 
   }
@@ -81,6 +88,8 @@ export async function trackEvent(payload: TrackEventPayload) {;
       keepalive: true as any});
   } catch (e) {;
     // swallow;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   } catch (error) {
     // swallow;
     } catch (error) {
@@ -93,4 +102,13 @@ export async function trackEvent(payload: TrackEventPayload) {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+  }
+}
+  }
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

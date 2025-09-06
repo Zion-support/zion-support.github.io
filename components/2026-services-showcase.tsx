@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -102,6 +103,8 @@ import Head from 'next/head';
 
 import { motion } from 'framer-motion';
 import {
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   Search
   Filter
   Star
@@ -132,6 +135,7 @@ import {
   Lock,
   Cloud,
   Atom,
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 ;
   // Filter and sort services;
@@ -152,12 +156,56 @@ import {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  Sparkles,;
+  Target,;
+
+
+import { motion } from 'framer-motion';
+import {;
+  Search,;
+  Filter,;
+  Star,;
+  TrendingUp,;
+  Zap,;
+  Brain,;
+  Cpu,;
+  Shield,;
+  Rocket,;
+  Globe,;
+  Database,;
+  Lock,;
+  Cloud,;
+  Atom,;
+  Sparkles,;
+  Target,;
+} from 'lucide-react';import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';import { Search, Filter, Star, TrendingUp, Zap, Brain, Cpu, Shield, Rocket, Globe, Database, Lock, Cloud, Atom, Sparkles, Target } from 'lucide-react';
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
+
+import UltraAdvancedNavigation from '../components/layout/UltraAdvancedNavigation';
+import { revolutionary2026Services  } from '../data/revolutionary-2026-services';
+import { emergingTech2026Services  } from '../data/emerging-tech-2026-services';
+import { comprehensiveIT2026Services } from '../data/comprehensive-it-2026-services';
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [sortBy, setSortBy] = useState('name');
+
+  // Combine all 2026 services;
+  const allServices = [;
+    ...revolutionary2026Services,;
+    ...emergingTech2026Services,;
+    ...comprehensiveIT2026Services,    ...revolutionary2026Services;
+    ...emergingTech2026Services;
+    ...comprehensiveIT2026Services;
+  ];
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           return (
             parse_float (a.price.replace (/[^0 - 9.]/g, '')) -;
             parse_float (b.price.replace (/[^0 - 9.]/g, '')));        case 'rating':;
           return b.rating - a.rating;
         case 'customers':;
           return b.customers - a.customers;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -197,6 +245,8 @@ import {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           return (
             parseFloat(a && a.price.replace(/[^0-9.]/g, '')) -;
             parseFloat(b && b.price.replace(/[^0-9.]/g, ''));
@@ -217,9 +267,12 @@ import {
     .sort((a, b) => {
       switch (sortBy) {
         case 'price':
+<<<<<<< HEAD
           return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(/[^0-9.]/g, ''));
         case 'rating':
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         default:;
           return a.name.locale_compare (b.name);      }      const matches_search = service.name.toLowerCase ().includes (search_term.toLowerCase ()) ||;
                           service.description.toLowerCase ().includes (search_term.toLowerCase ()) ||;
@@ -237,6 +290,7 @@ import {
           return b.rating - a.rating;
         case 'customers':;
           return b.customers - a.customers;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -360,11 +414,14 @@ import {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <Head>;
           <title>;
             Zion Tech Group - 2026 Revolutionary Services Showcase | 1500+;
             Solutions;
           </title>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -383,11 +440,14 @@ import {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         {/* Hero Section */}
         <section className='relative z-10 pt-32 pb-16 px-4 sm:px-6 lg:px-8'>;
           <div className='max-w-7xl mx-auto text-center'>            <motion && motion.div        <section className="relative z-10 pt-32 pb-16 px-4 sm:px-6 lg:px-8">;
           <div className="max-w-7xl mx-auto text-center">;
             <motion&& motion.div
+<<<<<<< HEAD
 =======
 =======
           return b.customers - a.customers,
@@ -586,14 +646,16 @@ export default function ServicesShowcase2026() {;
         </Head>
 
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <meta property="og:description" content="1500+ cutting - edge services with 1000% ROI guarantee. Contact: +1 302 464 0950" />;
           <meta property="og:url" content="https://ziontechgroup.com / 2026 - services - showcase" />;
           <meta property="og:type" content="website" />;
           <link rel="canonical" href="https://ziontechgroup.com / 2026 - services - showcase" />;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         {/* Navigation */}
-        <UltraAdvancedNavigation />;
         {/* Hero Section */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -614,6 +676,10 @@ export default function ServicesShowcase2026() {;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               {/* Service Statistics */}
               <div className='grid grid-cols-2 md:grid-cols-4 gap-6 mb-12'>;
                 <div className='text-center p-4 bg-gray-800/30 rounded-xl border border-gray-700/50 backdrop-blur-sm'>;
@@ -643,6 +709,7 @@ export default function ServicesShowcase2026() {;
                       allServices && allServices.filter(s => s && s.category.includes('Emerging'));
                         .length;
                     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
               <h1 className="text-5xl md:text-7xl font-bold mb-6">
@@ -716,6 +783,8 @@ Discover the future of technology with our revolutionary AI, quantum computing, 
                   </div>
                   <div className='text-gray-400 text-sm'>Emerging Tech</div>                </div>                  2026 Revolutionary Services
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 </span>
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
@@ -745,6 +814,7 @@ Discover the future of technology with our revolutionary AI, quantum computing, 
           </div>
         </section>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
                   </div>;
                   <div className='text-gray-400 text-sm'>Emerging Tech</div>                </div>                  2026 Revolutionary Services;
@@ -756,6 +826,8 @@ Discover the future of technology with our revolutionary AI, quantum computing, 
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               {/* Service Statistics */}
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">;
                 <div className="text-center p-4 bg-gray-800/30 rounded-xl border border-gray-700/50 backdrop-blur-sm">;
@@ -778,6 +850,7 @@ Discover the future of technology with our revolutionary AI, quantum computing, 
             </motion && motion.div>;
           </div>;
         </section>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
@@ -846,6 +919,8 @@ Discover the future of technology with our revolutionary AI, quantum computing, 
                   />
                 </div>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 {/* Category Filter */}
                 <div className='relative'>;
                   <Filter className='absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5' />;
@@ -862,6 +937,7 @@ Discover the future of technology with our revolutionary AI, quantum computing, 
                       <option key={category && category.id} value={category && category.id}>;
                         {category && category.name} ({category && category.count});
                       </option>;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -889,6 +965,9 @@ Discover the future of technology with our revolutionary AI, quantum computing, 
                   </select>
                 </div>
 
+=======
+                    ))}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 {/* Sort By */}
                 <div className='relative'>
                   <TrendingUp className='absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5' />
@@ -908,11 +987,44 @@ Discover the future of technology with our revolutionary AI, quantum computing, 
             </div>
           </div>
         </section>
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
                   </select>;
                 </div>;
 
+=======
+        {/* Services Grid */}
+        <section className='relative z-10 py-16 px-4 sm:px-6 lg:px-8'>
+          <div className='max-w-7xl mx-auto'>
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>              {filteredServices.map((service, index) => (        <section className="relative z-10 py-16 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {filteredServices.map((service, index) => (
+                <motion.div
+                  key={service.id}
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  className='group'
+                >
+                  <div className='bg-gray-800/30 rounded-2xl p-6 border border-gray-700/50 backdrop-blur-sm hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105'>
+                    {/* Service Header */}
+                    <div className='flex items-start justify-between mb-4'>
+                      <div className='text-4xl'>{service.icon}</div>
+                      {service.popular && (
+                        <span className='bg-gradient-to-r from-pink-500 to-purple-600 text-white text-xs px-3 py-1 rounded-full'>                          Popular                >
+                  <div className="bg-gray-800/30 rounded-2xl p-6 border border-gray-700/50 backdrop-blur-sm hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105">
+                    {/* Service Header */}
+                    <div className="flex items-start justify-between mb-4">
+                      <div className="text-4xl">{service.icon}</div>
+                      {service.popular && (
+                        <span className="bg-gradient-to-r from-pink-500 to-purple-600 text-white text-xs px-3 py-1 rounded-full">
+                          Popular
+                        </span>
+                      )}
+                    </div>
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 
@@ -921,9 +1033,12 @@ Discover the future of technology with our revolutionary AI, quantum computing, 
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     {/* Service Title */}
                     <h3 className='text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300'>                      {service.name}
                     </h3>
@@ -933,8 +1048,8 @@ Discover the future of technology with our revolutionary AI, quantum computing, 
                     {/* Price */}
                     <div className='flex items-center justify-between mb-4'>
                       <div className='text-2xl font-bold text-cyan-400'>                    <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300">
-
         {/* Services Grid */}
+<<<<<<< HEAD
         <section className="relative z-10 py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -950,10 +1065,40 @@ Discover the future of technology with our revolutionary AI, quantum computing, 
               {filtered_services.map ((service, index) => (
                 <motion.div;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+        <section className='relative z-10 py-16 px-4 sm:px-6 lg:px-8'>;
+          <div className='max-w-7xl mx-auto'>;
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>              {filteredServices && filteredServices.map((service, index) => (        <section className="relative z-10 py-16 px-4 sm:px-6 lg:px-8">;
+          <div className="max-w-7xl mx-auto">;
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
+              {filteredServices && filteredServices.map((service, index) => (;
+                <motion&& motion.div
+                  key={service && service.id}
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
+                  className='group'>;
+                  <div className='bg-gray-800/30 rounded-2xl p-6 border border-gray-700/50 backdrop-blur-sm hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105'>;
+                    {/* Service Header */}
+                    <div className='flex items-start justify-between mb-4'>;
+                      <div className='text-4xl'>{service && service.icon}</div>;
+                      {service && service.popular && (;
+                        <span className='bg-gradient-to-r from-pink-500 to-purple-600 text-white text-xs px-3 py-1 rounded-full'>                          Popular                >;
+                  <div className="bg-gray-800/30 rounded-2xl p-6 border border-gray-700/50 backdrop-blur-sm hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105">;
+                    {/* Service Header */}
+                    <div className="flex items-start justify-between mb-4">;
+                      <div className="text-4xl">{service && service.icon}</div>;
+                      {service && service.popular && (;
+                        <span className="bg-gradient-to-r from-pink-500 to-purple-600 text-white text-xs px-3 py-1 rounded-full">;
+                          Popular;
+                        </span>;
+                      )}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   key={service.id}
                   initial={{ opacity: 0, coordinate_y: 30 }}
                   animate={{ opacity: 1, coordinate_y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -971,10 +1116,13 @@ Discover the future of technology with our revolutionary AI, quantum computing, 
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     {/* Service Header */}
                     <div className="flex items - start justify - between mb - 4">;
                       <div className="text - 4xl">{service.icon}</div>;
                       {service.popular && (
+<<<<<<< HEAD
 <<<<<<< HEAD
                         <span className="bg - gradient - to - r from - pink - 500 to - purple - 600 text - white text - xs px - 3 py - 1 rounded - full">;
                           Popular;
@@ -1027,6 +1175,8 @@ Discover the future of technology with our revolutionary AI, quantum computing, 
                       <div className='text-2xl font-bold text-cyan-400'>
                         <span className='text-gray-400 text-lg font-normal'>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                           {service.period}
                         </span>;
                       </div>;
@@ -1034,6 +1184,7 @@ Discover the future of technology with our revolutionary AI, quantum computing, 
                         <Star className='w - 4 h - 4 text - yellow - 400 fill - current' />;
                         <span className='text - white text - sm'>;
                           {service.rating}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1066,6 +1217,8 @@ Discover the future of technology with our revolutionary AI, quantum computing, 
                       {service.description}
                     </p>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     </div>;
 
                     {/* Service Title */}
@@ -1103,11 +1256,14 @@ Discover the future of technology with our revolutionary AI, quantum computing, 
                           ({service && service.reviews});
                         </span>                      </div>;
                     </div>;
+<<<<<<< HEAD
 
                     {/* Description */}
                     <p className='text-gray-400 text-sm mb-4 line-clamp-3'>                      {service && service.description}
                     </p>;
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     {/* Features */}                      <div className="flex items-center space-x-1">;
                         <Star className="w-4 h-4 text-yellow-400 fill-current" />;
                         <span className="text-white text-sm">{service && service.rating}</span>;
@@ -1122,10 +1278,13 @@ Discover the future of technology with our revolutionary AI, quantum computing, 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                     {/* Features */}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     <div className="mb-4">
                       <h4 className="text-white font-semibold mb-2 text-sm">Key Features:</h4>
                       <ul className="space-y-1">
@@ -1133,10 +1292,13 @@ Discover the future of technology with our revolutionary AI, quantum computing, 
                           <li key={idx} className="text-gray-400 text-xs flex items-center">
                             <Zap className="w-3 h-3 text-cyan-400 mr-2 flex-shrink-0" />
 <<<<<<< HEAD
+<<<<<<< HEAD
                             {feature}
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
                       {service.name}
@@ -1156,6 +1318,7 @@ Discover the future of technology with our revolutionary AI, quantum computing, 
 
                             {feature}
 
+<<<<<<< HEAD
 
 
                           </li>
@@ -1238,21 +1401,31 @@ Discover the future of technology with our revolutionary AI, quantum computing, 
 
                             {feature}
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                           </li>
                         ))}
                       </ul>
                     </div>
 
+
+
+                          </li>
+                        ))}
+
+
+
+
+
                     {/* Category and Technology */}
-                    <div className='flex items-center justify-between mb-4'>
-                      <span className='text-xs text-gray-500 bg-gray-700/50 px-2 py-1 rounded'>
-                        {service.category}
-                      </span>
-                      <span className='text-xs text-gray-500'>                        {service.customers}+ customers                    <div className="flex items-center justify-between mb-4">
+
+                    <div className="flex items-center justify-between mb-4">
+
                       <span className="text-xs text-gray-500 bg-gray-700/50 px-2 py-1 rounded">
                         {service.category}
                       </span>
                       <span className="text-xs text-gray-500">
+<<<<<<< HEAD
                       </span>
                     </div>
                     {/* CTA Button */}
@@ -1272,11 +1445,29 @@ Discover the future of technology with our revolutionary AI, quantum computing, 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+                    {/* Category and Technology */}
+                    <div className='flex items-center justify-between mb-4'>;
+                      <span className='text-xs text-gray-500 bg-gray-700/50 px-2 py-1 rounded'>;
+                        {service && service.category}
+                      </span>;
+                      <span className='text-xs text-gray-500'>                        {service && service.customers}+ customers                    <div className="flex items-center justify-between mb-4">;
+                      <span className="text-xs text-gray-500 bg-gray-700/50 px-2 py-1 rounded">;
+                        {service && service.category}
+                      </span>;
+                      <span className="text-xs text-gray-500">;
+                      </span>;
+                    </div>;
+
+                    {/* CTA Button */}
+                    <a
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     >
                       Learn More
                     </a>
                   </div>
                 </motion.div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
@@ -1298,11 +1489,18 @@ Discover the future of technology with our revolutionary AI, quantum computing, 
             </div>
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+              ))}
+            </div>
+
+              ))}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             {/* No Results */}
             {filteredServices && filteredServices.length === 0 && (;
               <motion&& motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
                 className="text-center py-16"
@@ -1342,24 +1540,27 @@ Discover the future of technology with our revolutionary AI, quantum computing, 
         </section>
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         {/* Contact Section */}
         <section className='relative z-10 py-20 px-4 sm:px-6 lg:px-8'>;
           <div className='max-w-4xl mx-auto text-center'>            <motion && motion.div        <section className="relative z-10 py-20 px-4 sm:px-6 lg:px-8">;
           <div className="max-w-4xl mx-auto text-center">;
             <motion&& motion.div
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         {/* Contact Section */}
         <section className='relative z-10 py-20 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-4xl mx-auto text-center'>            <motion.div        <section className="relative z-10 py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
-
-
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
 =======
@@ -1452,6 +1653,7 @@ Discover the future of technology with our revolutionary AI, quantum computing, 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               viewport={{ once: true }}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -1490,6 +1692,8 @@ Discover the future of technology with our revolutionary AI, quantum computing, 
 
 =======
               <div className='flex flex-col sm:flex-row gap-4 justify-center'>;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <a
                   href='/contact'
                   className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105'>;
@@ -1497,6 +1701,7 @@ Discover the future of technology with our revolutionary AI, quantum computing, 
                 </a>;
                 <a
                   href='/pricing'
+<<<<<<< HEAD
         {/* Contact Section */}
         <section className="relative z-10 py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
@@ -1565,6 +1770,8 @@ Discover the future of technology with our revolutionary AI, quantum computing, 
               </div>
               <div className="flex flex-col sm: flex-row gap-4 justify-center">
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   className='px-8 py-4 border border-cyan-500/30 text-cyan-300 font-semibold rounded-xl hover:bg-cyan-500/10 transition-all duration-300'>            >;
               <h2 className="text-3xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>;
               <p className="text-xl text-gray-300 mb-8">;
@@ -1585,24 +1792,46 @@ Discover the future of technology with our revolutionary AI, quantum computing, 
                   <span className="font-semibold text-sm">{contactInfo && contactInfo.address}</span>;
                 </div>;
               </div>;
+<<<<<<< HEAD
 
               <div className="flex flex-col sm: flex-row gap-4 justify-center">;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 <a
                   href="/contact"
 <<<<<<< HEAD
-
-
 =======
+                <a
+                  href="/contact"
+                <a
+                  href='/pricing'
+                  className='px-8 py-4 border border-cyan-500/30 text-cyan-300 font-semibold rounded-xl hover:bg-cyan-500/10 transition-all duration-300'                  href="/pricing"
+                  className="px-8 py-4 border border-cyan-500/30 text-cyan-300 font-semibold rounded-xl hover:bg-cyan-500/10 transition-all duration-300"
+                >
+                  View Pricing
+                </a>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+      </div>
+    </UltraAdvancedFuturisticBackground>
+  );
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
+
+                  className="px-8 py-4 border border-cyan-500/30 text-cyan-300 font-semibold rounded-xl hover:bg-cyan-500/10 transition-all duration-300">;
+                  View Pricing;
+                </a>;
+              </div>;
+            </motion && motion.div>;
+          </div>;
+        </section>;
+      </div>;
+    </UltraAdvancedFuturisticBackground>;
   );
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
-
   );
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
+}
               className='bg - gradient - to - r from - gray - 800 / 50 to - gray - 900 / 50 rounded - 2xl p - 8 border border - gray - 700 / 50 backdrop - blur - sm';
             >;
               <h2 className='text - 3xl font - bold text - white mb - 6'>;
@@ -1675,6 +1904,7 @@ Discover the future of technology with our revolutionary AI, quantum computing, 
         </section>;
       </div>;
     </UltraAdvancedFuturisticBackground>);
+<<<<<<< HEAD
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -1713,3 +1943,6 @@ Discover the future of technology with our revolutionary AI, quantum computing, 
   );
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

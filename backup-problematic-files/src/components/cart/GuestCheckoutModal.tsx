@@ -57,7 +57,7 @@ export default function GuestCheckoutModal({;
 ;
         {!isProdDomain() && (;
           <div className="rounded-md bg-amber-500/20 p-2 text-center text-amber-400">;
-            Pay with test data – use card 4242 4242 4242 4242 and any future date.;
+            Pay with test data  use card 4242 4242 4242 4242 and any future date.;
           </div>;
         )}
 ;
@@ -95,7 +95,7 @@ export default function GuestCheckoutModal({;
 ;
           <div className="bg-yellow-500/10 border border-yellow-500/30 rounded-lg p-3">;
             <p className="text-yellow-400 text-sm">;
-              💡 Creating an account allows you to track your order and checkout faster next time.;
+               Creating an account allows you to track your order and checkout faster next time.;
             </p>;
           </div>;
 ;
@@ -127,8 +127,8 @@ export default function GuestCheckoutModal({;
       </DialogContent>;
     </Dialog>;
   ),;}
- <DialogHeader> <DialogTitle className="text-white flex items-center gap-2" > <User className="h-5 w-5 text-zion-cyan" /> Guest Checkout </DialogTitle> <DialogDescription className="text-zion-slate-light" > Enter your details to complete your purchase as a guest. </DialogDescription> </DialogHeader> Pay with test data – use card 4242 4242 4242 4242 and any future date. </div>) ";
-}required className="bg-zion-blue-light border-zion-cyan/30 text-white placeholder:text-zion-slate-light" /> </div> <div className="space-y-2" > <Label htmlFor="guest-address" className="text-white flex items-center gap-2" > <MapPin className="h-4 w-4 text-zion-cyan" /> Shipping Address </Label> <Textarea required className="bg-zion-blue-light border-zion-cyan/30 text-white placeholder:text-zion-slate-light min-h-[80px]" /> </div> <div className="bg-yellow-500/10 border border-yellow-500/30 rounded-lg p-3" > <p className="text-yellow-400 text-sm" > 💡 Creating an account allows you to track your order and checkout faster next time. </p> </div> <DialogFooter className="space-x-2" > <Button > Cancel </Button> <Button > {";
+ <DialogHeader> <DialogTitle className="text-white flex items-center gap-2" > <User className="h-5 w-5 text-zion-cyan" /> Guest Checkout </DialogTitle> <DialogDescription className="text-zion-slate-light" > Enter your details to complete your purchase as a guest. </DialogDescription> </DialogHeader> Pay with test data  use card 4242 4242 4242 4242 and any future date. </div>) ";
+}required className="bg-zion-blue-light border-zion-cyan/30 text-white placeholder:text-zion-slate-light" /> </div> <div className="space-y-2" > <Label htmlFor="guest-address" className="text-white flex items-center gap-2" > <MapPin className="h-4 w-4 text-zion-cyan" /> Shipping Address </Label> <Textarea required className="bg-zion-blue-light border-zion-cyan/30 text-white placeholder:text-zion-slate-light min-h-[80px]" /> </div> <div className="bg-yellow-500/10 border border-yellow-500/30 rounded-lg p-3" > <p className="text-yellow-400 text-sm" >  Creating an account allows you to track your order and checkout faster next time. </p> </div> <DialogFooter className="space-x-2" > <Button > Cancel </Button> <Button > {";
   isSubmitting ? ('Processing...') : (<> <CreditCard className="h-4 w-4 mr-2" /> Continue to Payment </>) ;
 }</Button> </DialogFooter> </form> </DialogContent> </Dialog>) ;
 }'"

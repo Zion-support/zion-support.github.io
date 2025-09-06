@@ -1,6 +1,6 @@
-
 // AI Matchmaking utility functions;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 export interface MatchResultItem {
 =======
@@ -8,10 +8,16 @@ export interface MatchResultItem {
 // AI Matchmaking utility functions;
 export interface MatchResultItem {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+export interface MatchResultItem {
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 
 export interface MatchResultItem {;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -21,11 +27,15 @@ export interface MatchResultItem {
 
 export interface MatchResultItem {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+export interface MatchResultItem {
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   id: string;
   title: string;
   description: string;
   category: string;
   price?: number;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   skills?: string[],
@@ -67,11 +77,20 @@ const sample_data: MatchResultItem[] = [;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+export interface MatchResult {
+
+export interface MatchResult {;
+export interface MatchResult {
+  item: MatchResultItem;
+  score: number;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   {
     id: "talent - 1";
     title: "Senior AI Engineer";
     description: "Experienced AI engineer with expertise in machine learning and computer vision";
     category: "Talent - Engineering";
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     price: 120,
@@ -84,6 +103,9 @@ const sample_data: MatchResultItem[] = [;
     price: 120,
     skills: ["Machine Learning", "Computer Vision", "TensorFlow", "Python"];
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   }
   {
     id: "service - 1";
@@ -91,6 +113,7 @@ const sample_data: MatchResultItem[] = [;
     description: "Custom AI model training service with data preparation and deployment";
     category: "Services - AI Development";
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     price: 5000,
     skills: ["Machine Learning", "Model Training", "AI Deployment"];
@@ -99,12 +122,15 @@ const sample_data: MatchResultItem[] = [;
     price: 5000,
     skills: ["Machine Learning", "Model Training", "AI Deployment"];
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   }
   {
     id: "equipment - 1";
     title: "NVIDIA A100 GPU Server";
     description: "High - performance GPU server for AI model training and inference";
     category: "Equipment - Hardware";
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -165,6 +191,8 @@ export async function findMatches(
 
   type: string = ""
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 // AI Matchmaking utility functions;
 export interface MatchResultItem {;
   id: string,;
@@ -184,11 +212,14 @@ export interface MatchResult {;
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 // Sample data for testing when API is not available
 const sampleData: MatchResultItem[] = [
   {
@@ -215,9 +246,9 @@ const sampleData: MatchResultItem[] = [
     price: 15000,
     skills: ["GPU Computing", "High Performance", "AI Hardware"]
   }
-],
-
+];
 // Function to find matches based on query and type
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -236,12 +267,15 @@ export async function findMatches(
   query: string,
   type: string = "",
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   limit: number = 5
 ): Promise<MatchResult[]> {
   try {
     // In production, we would call an API endpoint here
     // For now, we'll simulate a response with sample data
     // Simulate API call delay
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -287,10 +321,13 @@ export async function findMatches(
       matchedSkills: item.skills?.slice(0, 2) |[];
       reason: `This ${item.category.split(' - ')[0].toLowerCase()} matches your needs based on the provided description.`
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     }));
     // Sort by score
-    return matches.sort((a, b) => b.score - a.score).slice(0, limit)
+    return matches && matches.sort((a, b) => b && b.score - a && a.score).slice(0, limit)
   } catch (error) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     console && console.error("Error in matchmaking:", error);
@@ -327,6 +364,8 @@ if ( {) {
   }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       matchedSkills: item.skills?.slice(0, 2) || [],
       reason: `This ${item.category.split(' - ')[0].toLowerCase()} matches your needs based on the provided description.`
     })),
@@ -337,7 +376,10 @@ if ( {) {
     console.error("Error in matchmaking:", error),
     return []
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ;
 // Sample data for testing when API is not available;
 const sampleData: MatchResultItem[] = [;
@@ -397,25 +439,6 @@ export async function findMatches(;
   } catch (error) {;
     console.error("Error in matchmaking:", error);
     return [];
-
-      filteredItems = sampleData && sampleData.filter(item => 
-        item && item.category.toLowerCase().includes(type && type.toLowerCase())
-      )
-    }
-    // Sort by simulated relevance (random for now)
-    const matches: MatchResult[] = filteredItems && filteredItems.map(item => ({
-      item,
-      score: Math && Math.floor(Math && Math.random() * 40) + 60, // Random score between 60 and 99
-      matchedSkills: item && item.skills?.slice(0, 2) || [];
-      reason: `This ${item && item.category.split(' - ')[0].toLowerCase()} matches your needs based on the provided description.`
-    }));
-    // Sort by score
-    return matches && matches.sort((a, b) => b && b.score - a && a.score).slice(0, limit)
-  } catch (error) {
-    console && console.error("Error in matchmaking:", error);
-    return []
-    price: 15000,
-    skills: ["GPU Computing", "High Performance", "AI Hardware"];
   }
 ];
 ;
@@ -435,6 +458,7 @@ export async function find_matches (
     // Check condition
 if ( {) {
   $2
+<<<<<<< HEAD
 
       matchedSkills: item.skills?.slice(0, 2) || [],
       reason: `This ${item.category.split(' - ')[0].toLowerCase()} matches your needs based on the provided description.`
@@ -448,6 +472,8 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
   }
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
       filtered_items = sample_data.filter (item =>;
         item.category.toLowerCase ().includes (type.toLowerCase ()));
@@ -460,6 +486,7 @@ if ( {) {
       reason: `This ${item.category.split (' - ')[0].toLowerCase ()} matches your needs based on the provided description.`;
     }));
 ;
+<<<<<<< HEAD
     // Sort by score;
     return matches.sort ((a, b) => b.score - a.score).slice (0, limit);
   } catch (error) {
@@ -562,3 +589,5 @@ export async function findMatches(;
 }
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

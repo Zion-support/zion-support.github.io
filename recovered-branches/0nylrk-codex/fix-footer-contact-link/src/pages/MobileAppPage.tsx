@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -34,6 +35,12 @@ class ErrorBoundary extends React.Component {
 
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from "react";
 import {AppLayout} from "@/layout/AppLayout";
 import {SEO} from "@/components/SEO";
@@ -44,10 +51,13 @@ import {AppTestimonials} from "@/components/mobile-app/AppTestimonials";
 import {AppStoreBanner} from "@/components/mobile-app/AppStoreBanner";
 import {DownloadSection} from "@/components/mobile-app/DownloadSection";
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from "react",
 import { AppLayout } from "@/layout/AppLayout",
 import { SEO } from "@/components/SEO",
@@ -57,6 +67,7 @@ import { AppScreenshots } from "@/components/mobile-app/AppScreenshots",
 import { AppTestimonials } from "@/components/mobile-app/AppTestimonials",
 import { AppStoreBanner } from "@/components/mobile-app/AppStoreBanner",
 import { DownloadSection } from "@/components/mobile-app/DownloadSection",
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -77,10 +88,16 @@ const MobileAppPage: React.FC = () => {
   return (
     <AppLayout>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+const MobileAppPage: React.FC = () => {
+const MobileAppPage: React.FC = () => {;
+  return (
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <SEO
         title="Zion AI Marketplace App"
         description="Hire top AI talent or find global IT jobs on the go. Download the Zion app now."
         keywords="AI freelancer app, hire tech, find IT jobs, tech marketplace app, mobile AI jobs"
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -94,9 +111,9 @@ const MobileAppPage: React.FC = () => {
     </AppLayout>
   )
 }
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export default MobileAppPage;
-
-},
 
 export default MobileAppPage,
 import React from "react",;
@@ -110,6 +127,7 @@ import { AppStoreBanner } from "@/components/mobile-app/AppStoreBanner",;
 import { DownloadSection } from "@/components/mobile-app/DownloadSection",;
 const MobileAppPage: React.FC = () => {;
   return (;
+<<<<<<< HEAD
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       />;
@@ -136,6 +154,8 @@ const MobileAppPage: React.FC = () => {;
 export default MobileAppPage;
 
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from './react';
 import { AppLayout } from '@/layout / AppLayout';
 import { SEO } from '@/components / SEO';
@@ -149,6 +169,7 @@ const MobileAppPage: React.FC = () => {
   return (
     <AppLayout>;
       <SEO;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -169,6 +190,8 @@ const MobileAppPage:React.FC = () => {;
     <AppLayout>;
       <SEO;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         title="Zion AI Marketplace App";
         description="Hire top AI talent or find global IT jobs on the go. Download the Zion app now.";
         keywords="AI freelancer app, hire tech, find IT jobs, tech marketplace app, mobile AI jobs";
@@ -179,14 +202,12 @@ const MobileAppPage:React.FC = () => {;
       <AppTestimonials />;
       <DownloadSection />;
       <AppStoreBanner />;
-    </AppLayout>);
-}
-;
 
 },
 
 
 export default MobileAppPage;
+<<<<<<< HEAD
 ;
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -214,3 +235,5 @@ export default MobileAppPage,; const MobileAppPage: React.FC = () => {
 },;
 export default MobileAppPage;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

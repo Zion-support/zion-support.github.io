@@ -1,7 +1,10 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {useAuth} from "@/hooks/useAuth";
 import {Button} from "@/components/ui/button";
 import {Header} from "@/components/Header";
@@ -14,6 +17,7 @@ import {NotificationCenter} from "@/components/NotificationCenter";
 import {useToast} from "@/hooks/use-toast";
 import {Link} from "react-router-dom";
 export default function Dashboard() {;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   const { user, logout } = useAuth();
@@ -28,6 +32,8 @@ export default function Dashboard() {;
 =======
   const { user, logout } = useAuth();
   const { toast } = useToast();
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useAuth } from "@/hooks/useAuth",
 import { Button } from "@/components/ui/button",
 import { Header } from "@/components/Header",
@@ -43,10 +49,23 @@ export default function Dashboard() {
   const { user, logout } = useAuth();
   const { toast } = useToast();
   if (!user) return null;
+<<<<<<< HEAD
   const { user, logout } = useAuth();
   const { toast } = useToast();
   if (!user) return null;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+import { useToast } from "@/hooks/use-toast",
+import { Link } from "react-router-dom",
+export default function Dashboard() {
+  const { user, logout } = useAuth(),
+  const { toast } = useToast(),
+
+  if (!user) return null,
+
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const handleTestNotification = async () => {;
     const result = await createTestNotification(user && user.id);
     if (result && result.success) {;
@@ -59,17 +78,19 @@ export default function Dashboard() {
         description: "Something went wrong",;
         variant: "destructive"});
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     }
   }
-    }
-
   },
 
-
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 import { useAuth } from "@/hooks/useAuth",;
@@ -106,12 +127,15 @@ export default function Dashboard() {;
 ;
   return (;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <>;
       <Header />;
       <div className="min-h-screen bg-zion-blue">;
         <div className="container mx-auto px-4 py-8">;
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">;
             {/* Left Sidebar - User Profile */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 import { useToast } from "@/hooks/use-toast",
@@ -153,26 +177,35 @@ export default function Dashboard() {
                   <h2 className="text-xl font-bold text-white">{user.displayName}</h2>
                   <p className="text-zion-slate-light mb-2">{user.email}</p>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
                   <Badge 
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
                   <Badge
                   <Badge 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     className="bg-zion-purple text-white mb-4"
                   >
                     {user.userType ? user.userType.charAt(0).toUpperCase() + user.userType.slice(1) : "New User"}
                   </Badge>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
                   <Button 
 
 
+<<<<<<< HEAD
 =======
                   <Button 
 
@@ -180,6 +213,8 @@ export default function Dashboard() {
                   <Button
                   <Button 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     className="w-full flex items-center gap-2 bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white"
                     onClick={() => window.location.href = "/profile"}
                   >
@@ -207,10 +242,14 @@ export default function Dashboard() {
                     <span className="text-zion-slate-light">ZION$ Balance</span>
                     <span className="text-zion-cyan font-medium">
 <<<<<<< HEAD
+<<<<<<< HEAD
                       <a href="/wallet" className="hover:underline">View Wallet</a>
 =======
                       <a href="/wallet" className="hover:underline">View Wallet</Link>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+                      <a href="/wallet" className="hover:underline">View Wallet</Link>
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     </span>
                   </div>
                   <div className="flex justify-between items-center">
@@ -229,10 +268,14 @@ export default function Dashboard() {
                     </Button>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
                     <Button 
 
 
+<<<<<<< HEAD
 =======
                     <Button 
 
@@ -240,10 +283,13 @@ export default function Dashboard() {
                     <Button
                     <Button 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       className="w-full flex items-center justify-center gap-2"
                       variant="outline"
                       onClick={async () => {
                         await createOnboardingNotification({
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -262,6 +308,8 @@ export default function Dashboard() {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                         toast({
                           title: "Onboarding notification sent"
                           description: "Check your notification center"
@@ -273,10 +321,14 @@ export default function Dashboard() {
                     </Button>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
                     <Button 
 
 
+<<<<<<< HEAD
 =======
                     <Button 
 
@@ -284,6 +336,8 @@ export default function Dashboard() {
                     <Button
                     <Button 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       className="w-full flex items-center justify-center gap-2"
                       variant="outline"
                       onClick={async () => {
@@ -294,10 +348,14 @@ export default function Dashboard() {
                           actionUrl: "/notifications"
                           actionText: "Explore Now"
 <<<<<<< HEAD
+<<<<<<< HEAD
                         });
 =======
                         }),
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+                        }),
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                         toast({
                           title: "System notification sent"
 
@@ -397,6 +455,7 @@ export default function Dashboard() {
       <Footer />
     </>
   )
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -999,6 +1058,8 @@ if ( {) {
                 <div>;
                   <h3 className="text-lg font-bold text-white mb-4">Community</h3>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   <CommunityDiscussion />;
                 </div>;
               </div>;
@@ -1007,6 +1068,7 @@ if ( {) {
         </div>;
       </div>;
       <Footer />;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     </>);
@@ -1049,3 +1111,5 @@ return (<> <Header /> <Badge className="bg-zion-purple text-white mb-4" > > <Use
 }
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

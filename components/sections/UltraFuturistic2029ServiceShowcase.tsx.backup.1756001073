@@ -1,6 +1,10 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { ChevronDown, Star, TrendingUp, Zap, Brain, Cpu, Shield, Rocket, Globe, Database, Lock, Cloud, Eye, Timer, Sparkles } from 'lucide-react';
 import UltraFuturisticServiceCard from '../ui/UltraFuturisticServiceCard';
 import { CuttingEdgeInnovation2029 } from '../../data/2029-cutting-edge-innovations';
@@ -63,6 +67,12 @@ interface Service {
 }
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-fce6
 
+<<<<<<< HEAD
+=======
+=======
+
+>>>>>>> origin/main
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface UltraFuturistic2029ServiceShowcaseProps {
   services: Service[];
   title?: string;
@@ -80,6 +90,10 @@ const categoryColors: { [key: string]: string } = {
   'AI & Business': 'from-blue-600 to-cyan-600',
   'Quantum & Time': 'from-green-600 to-emerald-600',
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   'AI & Augmented Reality': 'from-orange-600 to-red-600'
 =======
   'AI & Augmented Reality': 'from-orange-600 to-red-600',
@@ -99,6 +113,11 @@ const categoryColors: { [key: string]: string } = {
   'Edge Computing & AI': 'from-yellow-600 to-orange-600',
   'IoT & Security': 'from-red-600 to-pink-600'
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-fce6
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/main
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 };
 
 const categoryIcons: { [key: string]: any } = {
@@ -111,6 +130,10 @@ const categoryIcons: { [key: string]: any } = {
   'AI & Business': Database,
   'Quantum & Time': Timer,
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   'AI & Augmented Reality': Eye
 =======
   'AI & Augmented Reality': Eye,
@@ -130,6 +153,11 @@ const categoryIcons: { [key: string]: any } = {
   'Edge Computing & AI': Cpu,
   'IoT & Security': Lock
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-fce6
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/main
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 };
 
 const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceShowcaseProps> = ({
@@ -137,6 +165,10 @@ const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceSho
   title = "2029 Ultra-Futuristic Innovations",
   subtitle = "Experience the future of technology with our revolutionary services",
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   maxServices = 12
 }) => {
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
@@ -149,6 +181,11 @@ const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceSho
   const [searchTerm, setSearchTerm] = useState<string>('');
   const [showFilters, setShowFilters] = useState<boolean>(false);
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-fce6
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/main
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   // Get unique categories
   const categories = ['all', ...Array.from(new Set(services.map(service => service.category)))];
@@ -156,6 +193,10 @@ const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceSho
   // Filter and sort services
   const filteredServices = services
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     .filter(service => selectedCategory === 'all' || service.category === selectedCategory)
     .sort((a, b) => {
       switch (sortBy) {
@@ -200,6 +241,11 @@ const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceSho
         default:
           return 0;
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-fce6
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/main
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       }
     })
     .slice(0, maxServices);
@@ -221,17 +267,30 @@ const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceSho
       y: 0,
       transition: {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         duration: 0.6,
         ease: "easeOut" as const
 =======
         duration: 0.5
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-fce6
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/main
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       }
     }
   };
 
   return (
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <section className="py-20 relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0 pointer-events-none">
@@ -364,6 +423,11 @@ const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceSho
                       ? 'bg-gradient-to-r from-cyan-500 to-purple-500 text-white shadow-lg'
                       : 'bg-black/50 text-gray-300 hover:bg-black/70 border border-gray-600 hover:border-cyan-500/50'
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-fce6
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/main
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   }`}
                 >
                   {category === 'all' ? 'All Categories' : category}
@@ -371,6 +435,10 @@ const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceSho
               ))}
             </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           </div>
 
           {/* Sort Options */}
@@ -465,6 +533,11 @@ const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceSho
             </motion.div>
           )}
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-fce6
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/main
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         </motion.div>
 
         {/* Services Grid */}
@@ -472,11 +545,20 @@ const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceSho
           variants={containerVariants}
           initial="hidden"
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           whileInView="visible"
           viewport={{ once: true }}
 =======
           animate="visible"
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-fce6
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/main
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
         >
           {filteredServices.map((service, index) => (
@@ -486,6 +568,10 @@ const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceSho
               className="group"
             >
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <UltraFuturisticServiceCard
                 service={service}
                 className="h-full transform group-hover:scale-105 transition-transform duration-300"
@@ -493,11 +579,20 @@ const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceSho
 =======
               <UltraFuturisticServiceCard service={service} />
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-fce6
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/main
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             </motion.div>
           ))}
         </motion.div>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         {/* Call to Action */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -606,6 +701,10 @@ const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceSho
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-fce6
           </div>
         </motion.div>
+=======
+          </div>
+        </motion.div>
+>>>>>>> origin/main
       </div>
     </section>
   );

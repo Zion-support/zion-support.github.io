@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -141,6 +142,8 @@ const Analytics: React.FC<AnalyticsProps> = ({ trackingId = 'G-XXXXXXXXXX' }) =>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     (window as any).trackEvent = trackEvent;
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 const Analytics: React.FC < AnalyticsProps> = ({ tracking_id = 'G - XXXXXXXXXX' }) => {
   useEffect (() => {
     // Google Analytics 4;
@@ -245,6 +248,7 @@ if ( {) {
   return (
     <Head>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
       <script;
         dangerouslySetInnerHTML={{
@@ -283,6 +287,8 @@ if ( {) {
 <<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           __html: `
             // Performance monitoring
             if ('performance' in window) {
@@ -293,10 +299,13 @@ if ( {) {
                     const loadTime = perfData.loadEventEnd - perfData.loadEventStart;
                     if (window.gtag) {
                       window.gtag('event', 'timing_complete', {
+<<<<<<< HEAD
                         name: 'load'
                         value: Math.round(loadTime)
                         name: 'load',
                         value: Math.round(loadTime),
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       });
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                     const loadTime = perfData && perfData.loadEventEnd - perfData && perfData.loadEventStart
@@ -307,6 +316,7 @@ if ( {) {
                       })
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                     }
+<<<<<<< HEAD
                   }
 <<<<<<< HEAD
                 }, 0)
@@ -349,3 +359,5 @@ export default Analytics;
 
 export default Analytics;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

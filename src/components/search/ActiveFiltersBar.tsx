@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -8,6 +9,8 @@ class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { X } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
@@ -30,6 +33,7 @@ interface SearchFilters {;
   maxPrice: number,;
   minRating: number,;
   sort: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -94,6 +98,9 @@ export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({;
 }
 <<<<<<< HEAD
 =======
+=======
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ;
 interface ActiveFiltersBarProps {;
   filters: SearchFilters,;
@@ -183,6 +190,7 @@ export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({;
   if (activeFilters.length === 0) {;
     return null;
   }
+<<<<<<< HEAD
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
@@ -299,13 +307,15 @@ export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({;
           key = {filter.key,}
 
 =======
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export default ActiveFiltersBar; import React from 'react'
 
 import { X } from 'lucide-react'
 import { Button  } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-interface SearchFilters {
-
 interface SearchFilters {
 
   types: string[]
@@ -403,17 +413,26 @@ export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({
     return null
   }
   return (
+        <Badge 
+          key = {filter.key,}
+
     <div className={`flex items-center gap-2 flex-wrap ${className}`}>
       <span className="text-sm font-medium text-muted-foreground">Active filters:</span>
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       
       {activeFilters.map(filter => (
         <Badge 
           key={filter.key} 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           variant="secondary" 
           className="flex items-center gap-1 pl-2 pr-1"
         >
@@ -441,21 +460,11 @@ export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({
           <span className="text-xs">
             {filter.label}: {filter.value}
           </span>
-    <div className={`flex items-center gap-2 flex-wrap ${className}`}>;
-      <span className="text-sm font-medium text-muted-foreground">Active filters:</span>;
-
-      {activeFilters && activeFilters.map(filter => (;
-        <Badge
-          key = {filter && filter.key,}
-          variant="secondary" 
-          className="flex items-center gap-1 pl-2 pr-1">;
-          <span className="text-xs">;
-            {filter && filter.label}: {filter && filter.value}
-          </span>;
           <Button
             variant="ghost"
             size="sm"
             className="h-4 w-4 p-0 hover:bg-transparent"
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -467,6 +476,8 @@ export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({
             onClick = {(,) => removeFilter(filter.key),}
             onClick={() => removeFilter(filter.key)}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             aria-label={`Remove ${filter.label} filter`}
           >
             <X className="h-3 w-3" />
@@ -477,6 +488,7 @@ export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({
         variant="ghost"
         size="sm"
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -485,6 +497,8 @@ ursor/fix-website-loading-errors-and-merge-6662
         onClick = {onClearAll,}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         onClick={onClearAll}
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
         className="text-xs h-6 px-2"
@@ -496,6 +510,7 @@ ursor/fix-website-loading-errors-and-merge-6662
       </Button>
     </div>
   )
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -659,7 +674,15 @@ if ( {) {
 
 
 },
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export default ActiveFiltersBar,
+interface Filter {
+  key: string
+  value: string
+  label: string
+}
 
         className="text-xs h-6 px-2">;
         Clear all;
@@ -674,17 +697,21 @@ interface Filter {;
   value: string;
   label: string;
 }
-export default ActiveFiltersBar
-},
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface ActiveFiltersBarProps extends React && React.PropsWithChildren<{}> {;
 
   filters: Filter[];
   onRemoveFilter: key: string void;
 
+<<<<<<< HEAD
 =======
 export default ActiveFiltersBar,
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface Filter {
   key: string
   value: string
@@ -693,7 +720,13 @@ interface Filter {
 interface ActiveFiltersBarProps extends React.PropsWithChildren<{}> {
   filters: Filter[]
   onRemoveFilter: key: string void
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+interface ActiveFiltersBarProps extends React.PropsWithChildren<{}> {
+  filters: Filter[]
+  onRemoveFilter: key: string void
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   onClearAll: : unknown void}
         className="text-sm text-zion-slate-light hover: text-zion-cyan transition-colors underline"
       >
@@ -704,6 +737,7 @@ interface ActiveFiltersBarProps extends React.PropsWithChildren<{}> {
 '"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 export default ActiveFiltersBar,
       </button>;
@@ -711,6 +745,8 @@ export default ActiveFiltersBar,
   )};
 '";
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   filters: Filter[];
   onRemoveFilter: key: string void;
   onClearAll: : unknown void}
@@ -718,9 +754,15 @@ export default ActiveFiltersBar,
       >;
         Clear all;
       </button>;
+<<<<<<< HEAD
     </div>)}
 <<<<<<< HEAD
 '";
 =======
 '";
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+    </div>;
+  )};
+'";
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

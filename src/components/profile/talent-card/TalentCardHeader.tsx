@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import React from 'react'
 import { BadgeCheck } from 'lucide-react'
@@ -12,9 +13,16 @@ interface TalentCardHeaderProps {
   yearsExperience: number
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 yearsExperience
+=======
+  fullName,
+  professionalTitle, 
+  profilePicture, 
+  availabilityType,
+  yearsExperience
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }: TalentCardHeaderProps) {
   return (
-    <div className='flex items-start gap-4 mb-4'>
+    <div className="flex items-start gap-4 mb-4">
       <TalentCardAvatar profilePicture={profilePicture} fullName={fullName} />
 <<<<<<< HEAD
 =======
@@ -35,6 +43,7 @@ export function TalentCardHeader(): any ({;
           <h3 className='text-lg font-semibold text-white flex items-center gap-1'>;
 
 
+<<<<<<< HEAD
 export function TalentCardHeader({
   fullName
   professionalTitle
@@ -83,14 +92,24 @@ ursor/fix-website-loading-errors-and-merge-6662
         <div className="flex items-center justify-between">
           <h3 className="text-lg font-semibold text-white flex items-center gap-1">
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             {fullName}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
             {/* AI score could be used for verification badge */}
             {yearsExperience > 5 && (
               <BadgeCheck className="h-4 w-4 text-zion-cyan" aria-label="Verified Expert" />
-            )}
 
+            {fullName}
+            {/* AI score could be used for verification badge */}
+            {yearsExperience > 5 && (;
+              <BadgeCheck
+                className='h-4 w-4 text-zion-cyan'
+                aria-label='Verified Expert'
+              />;
+            )}
           </h3>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     </div>;
@@ -111,6 +130,8 @@ ursor/fix-website-loading-errors-and-merge-6662
     </div>;
   );
 };
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
           
           <TalentCardAvailability availabilityType={availabilityType} />
@@ -151,7 +172,10 @@ export function TalentCardHeader({;
               <BadgeCheck className="h-4 w-4 text-zion-cyan" aria-label="Verified Expert" />;
             )}
           </h3>;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <TalentCardAvailability availabilityType={availabilityType} />;
         </div>;
 
@@ -160,6 +184,7 @@ export function TalentCardHeader({;
     </div>;
   );
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -203,3 +228,5 @@ function TalentCardHeader() {
 }
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

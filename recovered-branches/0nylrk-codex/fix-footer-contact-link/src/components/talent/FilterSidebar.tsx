@@ -1,4 +1,3 @@
-
 import React from "react";
 import {Button} from "@/components/ui/button";
 import {Filter} from "lucide-react";
@@ -11,11 +10,14 @@ import {ExperienceFilter} from "./filters/ExperienceFilter";
 import {PriceFilter} from "./filters/PriceFilter";
 import {FilterSidebarProps} from "@/types/filters";
 <<<<<<< HEAD
+<<<<<<< HEAD
 export function FilterSidebar(): any ({;
 
 =======
 export function FilterSidebar({;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   searchTerm;
   setSearchTerm;
   selectedSkills;
@@ -34,6 +36,7 @@ export function FilterSidebar({;
   setSortOption;
   clearFilters;
 <<<<<<< HEAD
+<<<<<<< HEAD
   isMobileFilterOpen;
 }: FilterSidebarProps) {;
 =======
@@ -42,6 +45,8 @@ export function FilterSidebar({;
 =======
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from "react",
 import { Button } from "@/components/ui/button",
 import { Filter } from "lucide-react",
@@ -55,7 +60,10 @@ import { PriceFilter } from "./filters/PriceFilter";
 import { FilterSidebarProps } from "@/types/filters";
 import { PriceFilter } from "./filters/PriceFilter",
 import { FilterSidebarProps } from "@/types/filters",
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export function FilterSidebar({
   searchTerm,
   setSearchTerm,
@@ -74,6 +82,7 @@ export function FilterSidebar({
   sortOption,
   setSortOption,
   clearFilters,
+<<<<<<< HEAD
 
 <<<<<<< HEAD
   isMobileFilterOpen
@@ -118,10 +127,12 @@ export function FilterSidebar({;
   return (;
     <>;
       {/* Filter header */}
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   isMobileFilterOpen
 }: FilterSidebarProps) {
   return (
-    <>
+    <>;
       {/* Filter header */}
       <div className="flex items-center justify-between mb-6">
         <h3 className="text-lg font-semibold text-white flex items-center">
@@ -137,9 +148,12 @@ export function FilterSidebar({;
           Clear All
         </Button>
       </div>
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       
 import React from "react",;
 import { Button } from "@/components/ui/button",;
@@ -190,11 +204,14 @@ export function FilterSidebar({;
         </Button>;
       </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {/* Search */}
       <SearchFilter searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
       {/* Sorting */}
@@ -249,6 +266,7 @@ export function FilterSidebar({;
       )}
     </>
   )
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 =======
@@ -400,6 +418,11 @@ export function FilterSidebar({;
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
+=======
+  return (
+    <>;
+      {/* Filter header */}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from './react';
 import { Button } from '@/components / ui / button';
 import { Filter } from './lucide-react';
@@ -432,59 +455,8 @@ function FilterSidebar() {
           Clear All;
         </Button>;
       </div>;
-      {/* Search */}
-      <SearchFilter search_term={search_term} setSearchTerm={setSearchTerm} />;
-      {/* Sorting */}
-      <SortFilter sort_option={sort_option} setSortOption={setSortOption} />;
-      {/* Skills */}
-      <SkillsFilter;
-        selected_skills={selected_skills}
-        toggle_skill={toggle_skill}
-        expanded={expanded_sections.skills}
-        toggle_section={() => toggle_section ('skills')}
-        isMobileFilterOpen={isMobileFilterOpen}
-      />;
-      {/* Availability */}
-      <AvailabilityFilter;
-        selected_availability={selected_availability}
-        toggle_availability={toggle_availability}
-        expanded={expanded_sections.availability}
-        toggle_section={() => toggle_section ('availability')}
-        isMobileFilterOpen={isMobileFilterOpen}
-      />;
-      {/* Region */}
-      <RegionFilter;
-        selected_regions={selected_regions}
-        toggle_region={toggle_region}
-        expanded={expanded_sections.region}
-        toggle_section={() => toggle_section ('region')}
-        isMobileFilterOpen={isMobileFilterOpen}
-      />;
-      {/* Years of Experience */}
-      <ExperienceFilter;
-        experience_range={experience_range}
-        setExperienceRange={setExperienceRange}
-        expanded={expanded_sections.experience}
-        toggle_section={() => toggle_section ('experience')}
-        isMobileFilterOpen={isMobileFilterOpen}
-      />;
-      {/* Price Range */}
-      <PriceFilter;
-        price_range={price_range}
-        setPriceRange={setPriceRange}
-        expanded={expanded_sections.price}
-        toggle_section={() => toggle_section ('price')}
-        isMobileFilterOpen={isMobileFilterOpen}
-      />;
-      {isMobileFilterOpen && (
-        <Button;
-          on_click={() => window.dispatch_event (new CustomEvent ('closeMobileFilter'))}
-          className="w - full bg - zion - purple hover:bg - zion - purple - dark text - white mt - 4";
-        >;
-          Apply Filters;
-        </Button>)}
-    </>);
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
   ),;}
@@ -589,3 +561,5 @@ isMobileFilterOpen
 }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

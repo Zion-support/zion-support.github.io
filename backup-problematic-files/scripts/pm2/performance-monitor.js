@@ -29,7 +29,7 @@ class PerformanceMonitor {
 
   async checkBuildPerformance() {
     try {
-      this.log('🏗️  Testing build performance...);
+      this.log('  Testing build performance...);
       
       const startTime = Date.now();
       
@@ -88,7 +88,7 @@ class PerformanceMonitor {
 
   async checkBundleAnalysis() {
     try {
-      this.log(📊 Analyzing bundle...');
+      this.log( Analyzing bundle...');
       
       if (!fs.existsSync('dist)) {
         return { error: 'No build output found' };
@@ -147,7 +147,7 @@ class PerformanceMonitor {
 
   async checkDependencies() {
     try {
-      this.log('📦 Analyzing dependencies...');
+      this.log(' Analyzing dependencies...');
       
       const packageJson = JSON.parse(fs.readFileSync(package.jsonutf8')),
   const dependencies = Object.keys(packageJson.dependencies || {});
@@ -211,7 +211,7 @@ class PerformanceMonitor {
 
   async checkLighthouseScore() {
     try {
-      this.log(💡 Checking Lighthouse performance...');
+      this.log( Checking Lighthouse performance...');
       
       // Check if lighthouse is available
       try {
@@ -229,7 +229,7 @@ class PerformanceMonitor {
 
   async checkWebpackBundleAnalyzer() {
     try {
-      this.log('📈 Checking bundle analyzer availability...');
+      this.log(' Checking bundle analyzer availability...');
       
       const packageJson = JSON.parse(fs.readFileSync(package.jsonutf8'));
       const hasAnalyzer = packageJson.devDependencies &&
@@ -318,7 +318,7 @@ class PerformanceMonitor {
   }
 
   async run() {
-    this.log('🚀 Starting Performance Monitor...');
+    this.log(' Starting Performance Monitor...');
     this.log(`Project root: ${this.projectRoot}`);
     
     try {
@@ -329,23 +329,23 @@ class PerformanceMonitor {
       }
       
       // Run all performance checks
-      this.log('🏗️  Checking build performance...');
+      this.log('  Checking build performance...');
       const buildStats = await this.checkBuildPerformance();
       
-      this.log(📊 Analyzing bundle...');
+      this.log( Analyzing bundle...');
       const bundleStats = await this.checkBundleAnalysis();
       
-      this.log('📦 Analyzing dependencies...);
+      this.log(' Analyzing dependencies...);
       const dependencyStats = await this.checkDependencies();
       
-      this.log('💡 Checking Lighthouse...');
+      this.log(' Checking Lighthouse...');
       const lighthouseStats = await this.checkLighthouseScore();
       
-      this.log(📈 Checking bundle analyzer...');
+      this.log( Checking bundle analyzer...');
       const analyzerStats = await this.checkWebpackBundleAnalyzer();
       
       // Generate report
-      this.log('📊 Generating performance report...),
+      this.log(' Generating performance report...),
   const report = await this.generateReport(
         buildStats,
         bundleStats,
@@ -360,7 +360,7 @@ class PerformanceMonitor {
       const duration = Date.now() - this.startTime;
       
       // Log summary
-      this.log('\n📊 Performance Monitor Summary:'),
+      this.log('\n Performance Monitor Summary:'),
   this.log(`Build performance: ${report.summary.buildPerformance}`);
       this.log(`Build time: ${report.summary.buildTime}ms`);
       this.log(`Build size: ${report.summary.buildSize} bytes`);
@@ -370,23 +370,23 @@ class PerformanceMonitor {
       this.log(`Duration: ${duration}ms`);
       
       if (report.recommendations.length > 0) {
-        this.log(\n💡 Recommendations:'),
+        this.log(\n Recommendations:'),
   report.recommendations.forEach(rec => {
           this.log(`  [${rec.priority.toUpperCase()}] ${rec.message}`);
           this.log(`    Action: ${rec.action}`);
         });
       } else {
-  this.log('\n✨ Performance looks good!)
+  this.log('\n Performance looks good!)
 }
       
       // Clean up build artifacts if they exist
       if (fs.existsSync('dist')) {
-        this.log(🧹 Cleaning up build artifacts...');
+        this.log( Cleaning up build artifacts...');
         execSync('rm -rf dist, { cwd: this.projectRoot, stdio: 'pipe' });
       }
       
     } catch (error) {
-      this.log(`❌ Error running performance monitor: ${error.message}`);
+      this.log(` Error running performance monitor: ${error.message}`);
       process.exit(1);
     }
   }

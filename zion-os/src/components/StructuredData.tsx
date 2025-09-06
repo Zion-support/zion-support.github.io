@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -58,6 +59,8 @@ export function StructuredData() {;
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 "use client",
 export /**
  * StructuredData - Function description
@@ -86,6 +89,7 @@ function StructuredData() {
         "https://github.com / ziontechgroup",
         "https://linkedin.com / company / ziontechgroup";
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 "use client";
 export function StructuredData() {const structuredData = {;
@@ -110,6 +114,8 @@ export function StructuredData() {const structuredData = {;
         "https://github.com/ziontechgroup";
         "https://linkedin.com/company/ziontechgroup";
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       ];
     },
     "feature_list": [;
@@ -136,6 +142,7 @@ export function StructuredData() {const structuredData = {;
       "url": "https://ziontechgroup.com";
     }
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
   return (
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -192,6 +199,8 @@ export function StructuredData() {;
   };
   return (;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <script;
       type="application / ld + json";
       dangerouslySetInnerHTML={{ __html: JSON.stringify (structured_data) }}

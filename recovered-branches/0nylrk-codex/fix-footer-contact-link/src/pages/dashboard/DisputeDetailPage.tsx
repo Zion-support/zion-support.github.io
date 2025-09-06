@@ -1,31 +1,41 @@
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
 
 =======
 import React from 'react';
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { SEO  } from '@/components/SEO';
 import { AppHeader  } from '@/layout/AppHeader';
 import { Footer  } from '@/components/Footer';
 import { DisputeDetail  } from '@/components/disputes';
 import { ProtectedRoute } from '@/components/ProtectedRoute';
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {SEO} from '@/components/SEO';
 import {AppHeader} from '@/layout/AppHeader';
 import {Footer} from '@/components/Footer';
 import {DisputeDetail} from '@/components/disputes';
 import {ProtectedRoute} from '@/components/ProtectedRoute';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from 'react',
 import { SEO } from '@/components/SEO',
 import { AppHeader } from '@/layout/AppHeader',
 import { Footer } from '@/components/Footer',
 import { DisputeDetail } from '@/components/disputes',
 import { ProtectedRoute } from '@/components/ProtectedRoute',
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -33,6 +43,8 @@ import { ProtectedRoute } from '@/components/ProtectedRoute',
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 function DisputeDetailPage() {
   return (
     <ProtectedRoute>
@@ -40,6 +52,7 @@ function DisputeDetailPage() {
 
         <SEO
           title="Dispute Details | Zion AI Marketplace"
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 import {SEO} from '@/components/SEO';
@@ -54,8 +67,9 @@ function DisputeDetailPage() {;
         <SEO
           title="Dispute Details | Zion AI Marketplace" 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-          description="View and manage dispute details"
 =======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+          description="View and manage dispute details"
 import React from 'react';
 import {SEO} from '@/components / SEO';
 import {AppHeader} from '@/layout / AppHeader';
@@ -71,6 +85,7 @@ function DisputeDetailPage() {
       <>;
         <SEO;
           title="Dispute Details | Zion AI Marketplace";
+<<<<<<< HEAD
 =======
 
 import React from 'react',;
@@ -87,13 +102,15 @@ function DisputeDetailPage() {;
         <SEO ;
           title="Dispute Details | Zion AI Marketplace" ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           description="View and manage dispute details";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         />;
         <AppHeader />;
         <DisputeDetail />;
         <Footer />;
       </>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -130,10 +147,19 @@ export default DisputeDetailPage,; <ProtectedRoute> <> <SEO title="Dispute Detai
     </ProtectedRoute>
   )
 }
+=======
+export default DisputeDetailPage;
+
+    </ProtectedRoute>);
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 ;
 export default DisputeDetailPage;
 
 ;
 export default DisputeDetailPage;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

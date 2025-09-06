@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 import Head from 'next/head';
@@ -13,6 +14,10 @@ import Link from 'next/link';
 
 import React from 'react'
 
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from 'react',
 export default function PerformanceOptimization() {
   return (
@@ -41,6 +46,7 @@ export default function PerformanceOptimization() {
             <nav className='mb-8'>
               <Link
                 href='/blog'
+<<<<<<< HEAD
                 className='text-cyan-400 hover:text-cyan-300 transition-colors'
               >
                 ← Back to Blog
@@ -279,6 +285,17 @@ export default function PerformanceOptimization() {
   )
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+}
+import Head from 'next/head';
+import Link from 'next/link';
+};
+;
+import React from 'react';
+export default function PerformanceOptimization(req, res) {
+  try {
+  return (;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import Head from 'next / head';
 import Link from 'next / link';
 import React from 'react',
@@ -294,9 +311,13 @@ function PerformanceOptimization() {
           Performance Optimization in Autonomous Systems | Zion Tech Group;
         </title>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         />;
         <meta name='twitter:card' content='summary_large_image' />;
       </Head>;
@@ -442,13 +463,18 @@ function PerformanceOptimization() {
                 </ul>;
                 <p className='text - white / 90 mb - 4'>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   These metrics provide a comprehensive view of system;
                   performance and help identify optimization opportunities.;
                 </p>;
               </section>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -526,10 +552,13 @@ function PerformanceOptimization() {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   Autonomous systems often process massive amounts of data.;
                   Optimizing data pipelines is essential for maintaining;
                   performance:;
                 </p>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -557,11 +586,14 @@ function PerformanceOptimization() {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   Our data pipelines achieve 10x performance improvements;
                   through intelligent caching, parallel processing, and;
                   optimized data formats.;
                 </p>;
               </section>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -621,10 +653,13 @@ function PerformanceOptimization() {
 =======
                 <p className='text - white / 90 mb - 4'>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   This proactive approach ensures that performance issues are;
                   identified and resolved before they impact user experience.;
                 </p>;
               </section>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -638,10 +673,13 @@ function PerformanceOptimization() {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   Ready to unlock the full potential of your autonomous;
                   technology? Our performance optimization expertise can help;
                   you achieve peak efficiency.;
                 </p>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
                     className='px-6 py-3 border border-white/20 text-white rounded-lg hover:border-cyan-400/50 transition-all duration-300'>;
@@ -659,6 +697,8 @@ function PerformanceOptimization() {
                     href='/case - studies';
                     className='px - 6 py - 3 border border - white / 20 text - white rounded - lg hover:border - cyan - 400 / 50 transition - all duration - 300';
                   >;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     View Success Stories;
                   </Link>;
                 </div>;
@@ -667,6 +707,7 @@ function PerformanceOptimization() {
           </div>;
         </main>;
       </div>;
+<<<<<<< HEAD
     </>);
 }
           property='og:title'
@@ -1219,3 +1260,5 @@ export default function PerformanceOptimization(req, res) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

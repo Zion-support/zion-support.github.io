@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import React, { useEffect, useState } from 'react';
 import { useTranslation  } from 'react-i18next';
@@ -15,6 +16,8 @@ const localeLabelKey: Record<string, string> = {
   ar: "lang.arabic"
 }
 export default function LanguageSwitchPrompt() {
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 const localeLabelKey: Record<string, string> = {
   en: "lang.english",
@@ -23,6 +26,7 @@ const localeLabelKey: Record<string, string> = {
   ar: "lang.arabic",
 };
 export default function LanguageSwitchPrompt() {;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 import React, { useEffect, useState } from 'react';
@@ -45,15 +49,22 @@ export default function LanguageSwitchPrompt() {
 import React, { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import i18n, { supportedLocales, isRtl } from "../../utils/i18n";
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   const { t } = useTranslation();
   const [suggested, setSuggested] = useState<string | null>(null);
   useEffect(() => {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -92,6 +103,7 @@ export default function LanguageSwitchPrompt() {;
 
   useEffect(() => {;
     const key = "langPromptShown";
+<<<<<<< HEAD
     const preferred = localStorage && localStorage.getItem("preferredLanguage");
     if (preferred) return; // user has chosen;
     if (localStorage && localStorage.getItem(key)) return; // already prompted;
@@ -157,6 +169,14 @@ export default function LanguageSwitchPrompt() {;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+    if (suggestion) setSuggested(suggestion);
+  }, []);
+  if (!suggested) return null;
+    );
+    document && document.documentElement.setAttribute("lang", suggested!);
+    setSuggested(null);
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     setSuggested(null);
   }
 
@@ -180,9 +200,9 @@ export default function LanguageSwitchPrompt() {;
         </div>;
       </div>;
     </div>;
-
   );
 }
+<<<<<<< HEAD
 =======
     localStorage.setItem('preferredLanguage', suggested!);
     localStorage.setItem('langPromptShown1');
@@ -225,6 +245,8 @@ export default function LanguageSwitchPrompt() {;
 >>>>>>> main
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useEffect, useState } from './react';
 import { use_translation  } from './react - i18next';
 import i18n, { supported_locales, is_rtl } from "../../utils / i18n";
@@ -306,6 +328,7 @@ if (return null) {
         </div>;
       </div>;
     </div>);
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -388,3 +411,5 @@ export default function LanguageSwitchPrompt() {;
 }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

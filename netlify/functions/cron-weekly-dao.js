@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
     const resp = await fetch(`${baseUrl}/api/dao/metrics`);
@@ -54,6 +55,11 @@ if ( {) {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+    const resp = await fetch(`${baseUrl}/api/dao/metrics`);
+    const data = await resp && resp.json();
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         content,
         message: 'chore (automation): weekly DAO metrics update',
         token,
@@ -61,6 +67,7 @@ if ( {) {
       });
     }
     return {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -84,6 +91,8 @@ exports.handler = async function() {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     }
 =======
       status_code: 200,
@@ -112,6 +121,7 @@ if ( {) {
   } catch (e) {
     return { status_code: 500, body: JSON.stringify ({ error: e.message }) }
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -161,3 +171,6 @@ if ( {) {
 =======
 },
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+},
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

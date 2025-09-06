@@ -1,4 +1,10 @@
 
+import { GradientHeading } from "@/components/GradientHeading",
+import { Button } from "@/components/ui/button";
+import { Mail } from "lucide-react";
+import { Button } from "@/components/ui/button",
+import { Mail } from "lucide-react",
+
 import { GradientHeading  } from '@/components / GradientHeading';
 import { Button  } from '@/components / ui / button';
 import { Mail  } from './lucide-react';
@@ -27,6 +33,7 @@ function ContactSection() {
                   className="text - zion - cyan hover:text - zion - purple transition - colors";
                 >;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 import { GradientHeading } from "@/components/GradientHeading",;
@@ -51,25 +58,36 @@ export function ContactSection() {;
                 <p className="text-white font-semibold">Email Us</p>;
                 <a href="mailto:commercial@ziontechgroup.com" className="text-zion-cyan hover:text-zion-purple transition-colors">;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   commercial@ziontechgroup.com;
                 </a>;
               </div>;
             </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
             <Button className="bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple text - white">;
 
 =======
             <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white">;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+            <Button className="bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple text - white">;
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               Request Commercial Proposal;
             </Button>;
           </div>;
           <div className="relative">;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 
 
+<<<<<<< HEAD
 =======
 import { GradientHeading } from "@/components/GradientHeading";
 import { Button } from "@/components/ui/button";
@@ -81,6 +99,8 @@ import { Mail } from "lucide-react";
 import { Button } from "@/components/ui/button",
 import { Mail } from "lucide-react",
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export function ContactSection() {
   return (
     <section className="py-20 bg-zion-blue" id="contact">
@@ -117,13 +137,17 @@ export function ContactSection() {
                       Name
                     </label>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     <input
                       type="text"
                       id="name"
                       className="w-full rounded-md bg-zion-blue-dark border border-zion-blue-light focus:border-zion-purple focus:ring-1 focus:ring-zion-purple text-white"
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -138,10 +162,13 @@ export function ContactSection() {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     <input
                       type="email"
                       id="email"
                       className="w-full rounded-md bg-zion-blue-dark border border-zion-blue-light focus:border-zion-purple focus:ring-1 focus:ring-zion-purple text-white"
+<<<<<<< HEAD
 <<<<<<< HEAD
 
             <div className="absolute inset - 0 bg - gradient - to - r from - zion - purple / 20 to - zion - cyan / 20 rounded - lg filter blur - 3xl opacity - 30"></div>;
@@ -197,10 +224,13 @@ export function ContactSection() {
 =======
                       className="w-full rounded-md bg-zion-blue-dark border border-zion-blue-light focus:border-zion-purple focus:ring-1 focus:ring-zion-purple text-white";
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     />;
                   </div>;
                 </div>;
                 <div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -306,6 +336,8 @@ export function ContactSection() {
     </section>
   );
 }
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   )
 import { GradientHeading } from "@/components/GradientHeading",;
 import { Button } from "@/components/ui/button",;
@@ -396,6 +428,7 @@ export function ContactSection() {;
   );
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     </section>
 
@@ -420,3 +453,6 @@ export function ContactSection() {;
 }></textarea> </div> <div> <Button className=" w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white" > Send Message </Button> </div> </form> </div> </div> </div> </div> </section>) 
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -1,5 +1,3 @@
-
-
 import React from 'react',;
 import Head from 'next/head',;
 import Link from 'next/link',;
@@ -14,6 +12,7 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
+<<<<<<< HEAD
 
 
       type: 'Interactive Tool',
@@ -106,6 +105,8 @@ export default function ToolResourcePage() {
         <h2>Next Steps After Assessment</h2>
         <p>Once you complete the assessment, you'll receive:</p>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <ul>
           <li>A detailed readiness score and analysis</li>
           <li>Specific recommendations for improvement</li>
@@ -113,16 +114,20 @@ export default function ToolResourcePage() {
           <li>Resources and tools for implementation</li>
         </ul>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
       `
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       features: [
         'Comprehensive evaluation frameworkIndustry benchmarkingActionable recommendationsProgress trackingResource library access'
       ]
     }
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       id: 'ai-maturity-model',
@@ -141,6 +146,8 @@ export default function ToolResourcePage() {
       type: 'Framework'
       estimatedTime: '30 minutes'
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       fullContent: `
         <h2>About This Framework</h2>
         <p>The AI Maturity Model provides a structured approach to understanding and advancing your
@@ -155,7 +162,6 @@ export default function ToolResourcePage() {
           <li><strong>Level 4 - Optimization:</strong> Advanced AI systems with continuous improvement</li>
           <li><strong>Level 5 - Innovation:</strong> AI-driven business transformation and new capabilities</li>
         </ul>
-        <h2>Assessment Dimensions</h2>
         <p>The maturity model evaluates several key dimensions:</p>
         <ul>
           <li><strong>Strategy & Leadership:</strong> AI vision, executive support, and strategic alignment</li>
@@ -167,11 +173,14 @@ export default function ToolResourcePage() {
         <h2>Using the Framework</h2>
         <p>To effectively use this framework: </p>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <ol>
           <li>Assess your current state across all dimensions</li>
           <li>Identify gaps between current and target maturity levels</li>
@@ -189,16 +198,20 @@ export default function ToolResourcePage() {
           <li>Stakeholder alignment and communication</li>
         </ul>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
       `
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       features: [
         '5-level maturity frameworkMulti-dimensional assessmentGap analysis toolsTransformation roadmapProgress tracking'
       ]
     }
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       id: 'performance-benchmark',
@@ -217,6 +230,8 @@ export default function ToolResourcePage() {
       type: 'Analytics Tool'
       estimatedTime: '20 minutes'
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       fullContent: `
         <h2>About This Tool</h2>
         <p>The Performance Benchmarking Tool helps you compare your automation performance against
@@ -259,6 +274,7 @@ export default function ToolResourcePage() {
         </ul>
         <h2>Action Planning</h2>
 <<<<<<< HEAD
+<<<<<<< HEAD
         <p>Based on benchmark results, develop action plans that include: </p>
 
 
@@ -266,6 +282,8 @@ export default function ToolResourcePage() {
 =======
         <p>Based on benchmark results, develop action plans that include:</p>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <ul>
           <li>Specific performance improvement targets</li>
           <li>Resource requirements and investment plans</li>
@@ -274,15 +292,19 @@ export default function ToolResourcePage() {
           <li>Risk mitigation and contingency planning</li>
         </ul>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
       `
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       features: [
         'Industry benchmark databasePerformance gap analysisTrend analysis toolsAction planning frameworkProgress tracking'
       ]
     }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -296,14 +318,19 @@ export default function ToolResourcePage() {
   const tool = tools.find(t => t.id === id)
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export default function ToolResourcePage(req, res) {
   try {
   const router = useRouter();
@@ -475,6 +502,7 @@ export default function ToolResourcePage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -491,6 +519,10 @@ export default function ToolResourcePage(req, res) {
   ],
   const tool = tools.find(t => t.id === id),
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  ],
+  const tool = tools.find(t => t.id === id),
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   if (!tool) {
     return (
       <>
@@ -508,12 +540,16 @@ export default function ToolResourcePage(req, res) {
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
               <Link
               <Link 
               <Link
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 href="/resources"
                 className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-300"
               >
@@ -525,6 +561,7 @@ export default function ToolResourcePage(req, res) {
       </>
     )
   }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -533,6 +570,8 @@ export default function ToolResourcePage(req, res) {
 }
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <>
       <Head>
@@ -546,12 +585,12 @@ export default function ToolResourcePage(req, res) {
           <div className="max-w-4xl mx-auto">
             <nav className="mb-8">
               <Link href="/resources" className="text-cyan-400 hover:text-cyan-300 transition-colors">
-                ← Back to Resources
               </Link>
             </nav>
             <header className="mb-12">
               <div className="mb-6">
                 <span className="px-3 py-1 bg-green-400/20 text-green-400 text-sm rounded-full border border-green-400/30">
+<<<<<<< HEAD
 
 
                   {tool.type  } catch (error) {
@@ -612,6 +651,8 @@ export default function ToolResourcePage(req, res) {
               <div className="mb-6">
                 <span className="px-3 py-1 bg-green-400/20 text-green-400 text-sm rounded-full border border-green-400/30">
                   {tool.type}
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   {tool.type  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -628,9 +669,6 @@ export default function ToolResourcePage(req, res) {
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
               <div className="lg:col-span-2">
                 <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20">
-                  <div 
-                    className="prose prose-invert max-w-none"
-                    dangerouslySetInnerHTML={{ __html: tool.fullContent }}
                   <div
                     className="prose prose-invert max-w-none"
                     dangerouslySetInnerHTML={{ __html: tool.fullContent }}
@@ -639,10 +677,19 @@ export default function ToolResourcePage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+
+
+
                   />
                 </div>
               </div>
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <div className="space-y-6">
                 <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
                   <h3 className="font-semibold text-green-400 text-lg mb-4">Key Features</h3>
@@ -651,6 +698,7 @@ export default function ToolResourcePage(req, res) {
                       <li key={index} className="text-white/80 flex items-center gap-3">
                         <div className="w-2 h-2 bg-green-400 rounded-full"></div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -658,6 +706,8 @@ export default function ToolResourcePage(req, res) {
                       </li>
                     ))}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   ];
   const tool = tools.find(t => t.id === id);
   if (!tool) {;
@@ -754,17 +804,23 @@ export default function ToolResourcePage(req, res) {
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   </ul>
                 </div>
 
 
+<<<<<<< HEAD
 =======
                   </ul>
                 </div>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
                   <h3 className="font-semibold text-blue-400 text-lg mb-4">Tool Details</h3>
                   <div className="space-y-3">
@@ -782,9 +838,9 @@ export default function ToolResourcePage(req, res) {
             </div>
 
 
-            <div className="text-center">
 
 
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -796,6 +852,8 @@ export default function ToolResourcePage(req, res) {
               <Link 
               <Link
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 href="/contact"
                 className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-300"
               >
@@ -807,11 +865,12 @@ export default function ToolResourcePage(req, res) {
       </div>
     </>
 <<<<<<< HEAD
-
+<<<<<<< HEAD
 =======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
 }
 
-=======
       estimated_time: '15 minutes',
       full_content: `;
         <h2 > About This Tool</h2>;
@@ -1055,6 +1114,7 @@ if ( {) {
                     <div>;
                       <span className="text - white / 60 text - sm">Time Required:</span>;
                       <p className="text - white font - medium">{tool.estimated_time}</p>;
+<<<<<<< HEAD
 =======
 }
 
@@ -1074,11 +1134,14 @@ if ( {) {
                       <span className="text-white/60 text-sm">Time Required:</span>;
                       <p className="text-white font-medium">{tool.estimatedTime}</p>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     </div>;
                   </div>;
                 </div>;
               </div>;
             </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
             <div className="text - center">;
               <Link;
@@ -1090,12 +1153,15 @@ if ( {) {
                 href="/contact";
                 className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-300";
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               >;
                 Get Started with Your Project;
               </Link>;
             </div>;
           </div>;
         </main>;
+<<<<<<< HEAD
       </div>;
     </>);
 }
@@ -1120,3 +1186,7 @@ if ( {) {
 }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

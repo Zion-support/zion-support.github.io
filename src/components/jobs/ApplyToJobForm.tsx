@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import { useJobApplications } from "@/hooks/useJobApplications",
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -26,6 +27,8 @@ import { Job } from "@/types/jobs"
 import { toast } from "sonner"
 import { useState } from "react",
 import { useRouter } from 'next/router',
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useJobApplications } from "@/hooks/useJobApplications",
 import { useResume } from "@/hooks/useResume",
 import { useAuth } from "@/hooks/useAuth",
@@ -36,6 +39,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Alert, AlertDescription } from "@/components/ui/alert",
 import { AlertCircle, FileText, Loader2 } from 'lucide-react'
 import { formatDistanceToNow } from "date-fns",
+<<<<<<< HEAD
 import { Job } from "@/types/jobs";
 import { toast } from "sonner";
 ursor/fix-website-loading-errors-and-merge-6662
@@ -44,6 +48,8 @@ import { Job } from "@/types/jobs";
 import { toast } from "sonner";
 import { Job } from "@/types/jobs",
 import { toast } from "sonner",
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 interface ApplyToJobFormProps {
@@ -68,12 +74,15 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
     if (!user) {
       toast.error("You must be logged in to apply")
       router.push(`/login?returnTo=${encodeURIComponent(`/jobs/${job.id}`)}`)
+<<<<<<< HEAD
       return
     }
     if (!coverLetter.trim()) {
       setError("Please provide a cover letter")
       return
     }
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       return;
     }
     
@@ -88,6 +97,7 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
       const success = await applyToJob(
         job.id
         coverLetter
+<<<<<<< HEAD
         selectedResumeId |undefined
         resumeFile |undefined
       )
@@ -97,6 +107,8 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
         resumeFile |undefined
         selectedResumeId || undefined
         resumeFile || undefined
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       )
       if (success) {
         toast.success("Your application has been submitted!")
@@ -138,8 +150,12 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
       
       if (success) {
         toast.success("Your application has been submitted!"),
+<<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
         if (onSuccess) {
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
         if (onSuccess) {
@@ -149,6 +165,7 @@ ursor/fix-website-loading-errors-and-merge-6662
     } catch (err: any) {
       setError(err.message |"Failed to submit application")
       toast.error("Failed to submit application")
+<<<<<<< HEAD
     import { use_router } from 'next / router';
 import { use_router } from 'next / router';
 import { useJobApplications  } from '@/hooks / useJobApplications';
@@ -199,6 +216,8 @@ if ( {) {
   
   },
   
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <form onSubmit={handleSubmit} className="space-y-6">
       <div>
@@ -207,14 +226,8 @@ if ( {) {
           Posted {formatDistanceToNow(new Date(job.created_at), { addSuffix: true })}
         </p>
       </div>
-  return (
 
 
-      
-
-
-      {error && (
-      
       {error && (
         <Alert variant="destructive">
           <AlertCircle className="h-4 w-4" />
@@ -224,6 +237,7 @@ if ( {) {
       <div className="space-y-4">
         <div>
           <Label htmlFor="coverLetter">Cover Letter</Label>
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     if () {) {
   $2
@@ -357,6 +371,46 @@ export function ApplyToJobForm(): any ({ job, onSuccess }: ApplyToJobFormProps) 
           Posted {formatDistanceToNow(new Date(job && job.created_at), { addSuffix: true })}
         </p>;
       </div>;
+=======
+          <Textarea
+            id="coverLetter"
+            value={coverLetter}
+            onChange={(e) => setCoverLetter(e.target.value)}
+            rows={6}
+            placeholder="Introduce yourself and explain why you are a good fit for this job..."
+            className="mt-1"
+          />
+          <p className="text-xs text-muted-foreground mt-1">
+            Provide a brief introduction and highlight your relevant skills and experience.
+          </p>
+        </div>
+
+
+        <div>
+          <Label htmlFor="resume">Select Resume (Optional)</Label>
+          {isResumesLoading ? (
+            <div className="flex items-center gap-2 mt-2">
+              <Loader2 className="h-4 w-4 animate-spin" />
+              <span>Loading your resumes...</span>
+            </div>
+          ) : resumes && resumes.length > 0 ? (
+            <Select
+              value={selectedResumeId}
+              onValueChange={setSelectedResumeId}
+            >
+              <SelectTrigger className="mt-1">
+                <SelectValue placeholder="Select a resume" />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="">No resume</SelectItem>
+                {resumes.map((resume) => {
+                  if (resume.id) {
+                    return (
+                      <SelectItem key={resume.id} value={resume.id}>
+                        {resume.basic_info.title |"Untitled Resume"}
+                      </SelectItem>
+                    )
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useState } from "react",;
 import { useRouter } from 'next/router',;
 import { useJobApplications } from "@/hooks/useJobApplications",;
@@ -443,6 +497,7 @@ export function ApplyToJobForm({ job, onSuccess } ApplyToJobFormProps) {;
           <AlertDescription>{error}</AlertDescription>;
         </Alert>;
       )}
+<<<<<<< HEAD
       
       <div className="space-y-4">
         <div>
@@ -617,6 +672,8 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {;
             <Select
               value = {selectedResumeId,}
               onValueChange = {setSelectedResumeId,}>;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <SelectTrigger className="mt-1">;
     <form on_submit={handle_submit} className="space - y-6">;
       <div>;
@@ -657,6 +714,7 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {;
               onValueChange = {setSelectedResumeId, }
             >;
               <SelectTrigger className="mt - 1">;
+<<<<<<< HEAD
 =======
           ) :resumes && resumes.length > 0 ? (;
           ) : resumes && resumes.length > 0 ? (;
@@ -666,11 +724,14 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {;
             >;
               <SelectTrigger className="mt-1">;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <SelectValue placeholder="Select a resume" />;
               </SelectTrigger>;
               <SelectContent>;
                 <SelectItem value="">No resume</SelectItem>;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
                       <SelectItem key={resume && resume.id} value={resume && resume.id}>;
                         {resume && resume.basic_info.title || "Untitled Resume"}
@@ -705,6 +766,8 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {;
           )}
         </div>;
                     );
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   }
                   return null
                 })}
@@ -720,6 +783,7 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {;
                 variant="outline"
                 size="sm"
                 type="button"
+<<<<<<< HEAD
                 onClick={() => router.push("/dashboard/talent/portfolio")}
               >
                 Create Resume
@@ -729,18 +793,24 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {;
         </div>
         <div>
           <Label htmlFor="cvUpload">Or Upload CV (PDF)</Label>
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <input
             id="cvUpload"
             type="file"
             accept=".pdf"
             className="mt-1"
+<<<<<<< HEAD
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             onChange={(e) => setResumeFile(e.target.files?.[0] || null)}
           />
         </div>
       </div>
 
 
+<<<<<<< HEAD
       <div className="flex justify-end gap-2">
             onChange = {(e,) => setResumeFile(e && e.target.files?.[0] || null),}
           />;
@@ -762,16 +832,13 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {;
         </div>
       </div>
       
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <div className="flex justify-end gap-2">
         <Button
           type="button"
           variant="outline"
-          disabled = {isSubmitting,}
-          onClick={() => {
-            if (onSuccess) onSuccess()
-          disabled={isSubmitting}
-          onClick={() => {;
-            if (onSuccess) onSuccess();
+
           }}
         >
           Cancel
@@ -785,6 +852,7 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {;
           ) : (
             "Submit Application"
           )}
+<<<<<<< HEAD
 }</div> <div> <Label htmlFor="cvUpload" >Or Upload CV (PDF) </Label> <input /> </div> </div> <div className="flex justify-end gap-2" > <Button <> <Loader2 className="h-4 w-4 mr-2 animate-spin" /> Submitting... </>) : ("Submit Application")
 }</Button> </div> </form>)
 }"}
@@ -981,6 +1049,8 @@ handle_submit;
 }</Button> </div> </form>);
 }"}
 }"
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         </Button>
       </div>
     </form>
@@ -1009,12 +1079,17 @@ handleSubmit
 }</div> <div> <Label htmlFor="cvUpload" >Or Upload CV (PDF) </Label> <input /> </div> </div> <div className="flex justify-end gap-2" > <Button <> <Loader2 className="h-4 w-4 mr-2 animate-spin" /> Submitting... </>) : ("Submit Application") ;
 }</Button> </div> </form>) ;
 }"};
+
+
         </Button>;
       </div>;
     </form>;
   );
 }
+<<<<<<< HEAD
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 }
 ;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

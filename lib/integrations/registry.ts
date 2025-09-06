@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -18,6 +19,12 @@ import { IntegrationProviderMeta } from "./types";
 import { IntegrationProviderMeta } from "./types";
 export const PROVIDERS: IntegrationProviderMeta[] = [
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+import { IntegrationProviderMeta } from "./types";
+export const PROVIDERS: IntegrationProviderMeta[] = [
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   {
     id: "salesforce"
     name: "Salesforce"
@@ -32,6 +39,7 @@ export const PROVIDERS: IntegrationProviderMeta[] = [
   }
   {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -44,6 +52,8 @@ export const PROVIDERS: IntegrationProviderMeta[] = [
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   {
     id: "pipedrive"
     name: "PipeDrive"
@@ -65,6 +75,16 @@ export const PROVIDERS: IntegrationProviderMeta[] = [
   }
   {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    id: "bamboohr"
+    name: "BambooHR"
+    category: "ats"
+    description: "HRIS & ATS"
+  }
+];
+export function getProviderById(
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 }
 
@@ -81,6 +101,7 @@ export const PROVIDERS: IntegrationProviderMeta[] = [
   { id: 'bamboohr', name: 'BambooHR', category: 'ats', description: 'HRIS & ATS' }
 ];
 
+<<<<<<< HEAD
 =======
 =======
     id: "bamboohr"
@@ -100,6 +121,8 @@ export function getProviderById(
   return PROVIDERS && PROVIDERS.find((p) => p && p.id === id);
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ;
 export function getProviderById (
   id: string,
@@ -107,10 +130,13 @@ export function getProviderById (
   return PROVIDERS.find ((p) => p.id === id);
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
     id: "bamboohr",
     name: "BambooHR",
@@ -122,17 +148,23 @@ export function getProviderById (
 export function getProviderById(
 
   id: string,
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
   id: string,
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ): IntegrationProviderMeta | undefined {;
   return PROVIDERS.find((p) => p.id === id);
 }
 ): IntegrationProviderMeta | undefined {
   return PROVIDERS.find(p => p.id === id);
 
+<<<<<<< HEAD
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

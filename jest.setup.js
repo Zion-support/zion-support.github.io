@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 import "@testing-library/jest-dom";
@@ -9,10 +10,14 @@ import "@testing-library/jest-dom";
 import "@testing-library/jest-dom";
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 // Mock Next.js router
 jest.mock("next/router", () => ({
   useRouter() {
     return {
+<<<<<<< HEAD
 <<<<<<< HEAD
       route: "/"
       pathname: "/"
@@ -74,33 +79,18 @@ jest && jest.mock("next/link", () => {
 
   };
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 });
 
-
-
-// Mock window.matchMedia
-Object.defineProperty(window, 'matchMedia', {
-  writable: true
-  value: jest.fn().mockImplementation(query => ({
-
-    matches: false,
-    media: query,
-    onchange: null,
-    addListener: jest.fn(),
-    removeListener: jest.fn(),
-    addEventListener: jest.fn(),
-    removeEventListener: jest.fn(),
-
-    dispatchEvent: jest.fn()
-  }))
-});
 // Mock IntersectionObserver
 global.IntersectionObserver = class IntersectionObserver {
   constructor() {}
   disconnect() {}
   observe() {}
   unobserve() {}
-}
+};
+
 // Mock ResizeObserver
 global.ResizeObserver = class ResizeObserver {
   constructor() {}
@@ -108,48 +98,10 @@ global.ResizeObserver = class ResizeObserver {
   observe() {}
   unobserve() {}
 
-    return <img src={src} alt={alt} {...props} />;
-
-
-
-
-// Global test setup,
-=======
-}
-// Global test setup
-
-
-=======
-
-=======
-
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
-beforeEach(() => {
-  jest.clearAllMocks();
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-    "media": query,
-    "onchange": null,
-    "addListener": jest.fn(), // deprecated
-    "removeListener": jest.fn(), // deprecated
-    "addEventListener": jest.fn(),
-    "removeEventListener": jest.fn(),
-    "dispatchEvent": jest.fn()}))});
-
-
-=======
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-
 // Global test setup
 beforeEach(() => {
-  // Reset all mocks before each test
   jest.clearAllMocks();
+<<<<<<< HEAD
 
 
 
@@ -260,3 +212,5 @@ beforeEach(() => {
   jest.clearAllMocks();
 });
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

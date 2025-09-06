@@ -3,6 +3,7 @@ import fs from 'fs';
 import path from 'path';
 import {v4, as, uuidv4} from 'uuid';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -15,12 +16,17 @@ function grantPath(id: string) {
 const GRANTS_DIR = path && path.join(process && process.cwd(), 'data', 'grants');
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+const GRANTS_DIR = path && path.join(process && process.cwd(), 'data', 'grants');
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 function grantPath(id: string) {
   return path && path.join(GRANTS_DIR, `${id}.json`);const GRANTS_DIR = path && path.join(process && process.cwd(), 'datagrants');
 function grantPath(id: string) {
   return path && path.join(GRANTS_DIR, `${id}.json`);
 }
 function readGrant(id: string): GrantApplication | null {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -37,6 +43,8 @@ function readGrant(id: string): GrantApplication | null {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 function writeGrant(record: GrantApplication) {
   if (!fs && fs.existsSync(GRANTS_DIR)) fs && fs.mkdirSync(GRANTS_DIR, { recursive: true });
   fs && fs.writeFileSync(
@@ -44,6 +52,7 @@ function writeGrant(record: GrantApplication) {
     JSON && JSON.stringify(record, null, 2),
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     'utf8'
+<<<<<<< HEAD
   );  return JSON && JSON.parse(fs && fs.readFileSync(p, 'utf8')) as GrantApplication
 }
 function writeGrant(record: GrantApplication) {
@@ -51,6 +60,8 @@ function writeGrant(record: GrantApplication) {
   fs && fs.writeFileSync(grantPath(record && record.id), JSON && JSON.stringify(record, null, 2), 'utf8')
 }
 <<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -60,23 +71,23 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   const { id } = req.query as { id: string };
 
 
+<<<<<<< HEAD
 =======
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const { id } = req.query as { id: string }
 export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   const { id } = req.query as { id: string };
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   if (!id) return res.status(400).json({ error: 'Missing id' });
   const existing = readGrant(id);
   if (!existing) return res.status(404).json({ error: 'Not found' });
   if (req.method === 'GET') {
     return res.status(200).json({ updates: existing.updates |[] });
   }
-  if (req.method === 'POST') {
-    const { content } = req.body as { content?: string }
-    if (!content |!content.trim())
-      return res.status(400).json({ error: 'Missing content' });
     const update = {
+<<<<<<< HEAD
       id: uuidv4()
       createdAt: new Date().toISOString()
       content: content.trim()
@@ -107,10 +118,20 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 
 <<<<<<< HEAD
 
+=======
+      id: uuidv4(),
+      createdAt: new Date().toISOString(),
+      content: content && content.trim(),
+    };
+    existing && existing.updates = [...(existing && existing.updates || []), update];
+    existing && existing.updatedAt = new Date().toISOString();
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     writeGrant(existing);
     return res && res.status(201).json({ update });
   }
+    existing.updatedAt = new Date().toISOString();
 
+<<<<<<< HEAD
 
 
   res && res.setHeader('Allow', 'GET, POST');
@@ -136,12 +157,15 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 <<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   res && res.setHeader('Allow', 'GET, POST');
   res && res.status(405).end('Method Not Allowed');    existing && existing.updates = [...(existing && existing.updates || []), update];
     existing && existing.updatedAt = new Date().toISOString();
     writeGrant(existing);
     return res && res.status(201).json({ update })
   }
+<<<<<<< HEAD
   res && res.setHeader('AllowGET, POST');
   res && res.status(405).end('Method Not Allowed')
 }
@@ -160,6 +184,8 @@ function grant_path() {
  */
 function grant_path() {
   return path.join (GRANTS_DIR, `${id}.json`);
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 function read_grant (id: string): GrantApplication | null {
   if () fs.mkdir_sync (GRANTS_DIR, { recursive: true })) {
@@ -238,6 +264,7 @@ if ( {) {
   res.set_header ('AllowGET, POST');
   res.status (405).end ('Method Not Allowed');
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -259,3 +286,8 @@ if ( {) {
 
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

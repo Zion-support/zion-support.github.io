@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -9,19 +10,25 @@
 
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { Button  } from '@/components/ui/button';
 import { ArrowLeft, FileText, Link  } from 'lucide-react';
 import { PdfExportButton  } from '../PdfExportButton';
 import { Resume  } from '@/types/resume';
 import { useState  } from 'react';
 import { useIsMobile } from '@/hooks/use-mobile';
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {Button} from '@/components/ui/button';
 import {ArrowLeft, FileText, Link} from 'lucide-react';
 import {PdfExportButton} from '../PdfExportButton';
 import {Resume} from '@/types/resume';
 import {useState} from 'react';
 import {useIsMobile} from '@/hooks/use-mobile';
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -35,20 +42,24 @@ import { useState } from "react";
 import { useIsMobile } from "@/hooks/use-mobile";
 >>>>>>> main
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface PreviewHeaderProps {
   resume: Resume;
   onBack: () => void;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
 =======
 export function PreviewHeader({ resume, onBack }: PreviewHeaderProps) {
 export function PreviewHeader({ resume, onBack }: PreviewHeaderProps) {
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   const handleBrowserPrint = () => {
     setIsPrinting(true);
-
     // Inject print-specific CSS only for the duration of printing
     const style = document.createElement("style");
     style.innerHTML = `
@@ -66,13 +77,11 @@ interface PreviewHeaderProps {;
   onBack: () => void;
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export function PreviewHeader({ resume, onBack }: PreviewHeaderProps) {;
-
-
-  const [isPrinting, setIsPrinting] = useState(false);
-
-
   const handleBrowserPrint = () => {;
     setIsPrinting(true);
 
@@ -82,6 +91,7 @@ export function PreviewHeader({ resume, onBack }: PreviewHeaderProps) {;
       @media print {;
         body * {;
           visibility: hidden;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -93,16 +103,23 @@ export function PreviewHeader({ resume, onBack }: PreviewHeaderProps) {;
       @media print {;
         body * {;
           visibility: hidden;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         }
         .print-section, .print-section * {
           visibility: visible
         }
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         .print-section {
           position: absolute
           left: 0
           top: 0
           width: 100%
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -111,15 +128,15 @@ export function PreviewHeader({ resume, onBack }: PreviewHeaderProps) {;
           visibility: visible;
         }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         .print-section {;
           position: absolute,;
           left: 0,;
           top: 0,;
           width: 100%;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         }
         .no-print {;
-=======
 import { Button  } from '@/components / ui / button';
 import { ArrowLeft, FileText, Link  } from './lucide-react';
 import { PdfExportButton  } from '../PdfExportButton';
@@ -157,8 +174,8 @@ function PreviewHeader() {
           width: 100%;
         }
         .no - print {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           display: none !important;
+<<<<<<< HEAD
         }
       }
 <<<<<<< HEAD
@@ -174,8 +191,12 @@ function PreviewHeader() {
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     `,
     document.head.appendChild(style),
+
+
     
     // Trigger print dialog
     window.print(),
@@ -186,6 +207,7 @@ function PreviewHeader() {
       setIsPrinting(false)
     }, 1000)
   },
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -203,6 +225,8 @@ function PreviewHeader() {
   };
 >>>>>>> main
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   return (
     <div
@@ -213,16 +237,20 @@ function PreviewHeader() {
         Back
       </Button>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <div className={`flex ${isMobile ? 'flex-col' : 'flex-row'} space-${isMobile ? 'y-2' : 'x-2'} no-print`}>
         <PdfExportButton resume={resume} />
         <Button 
           variant="outline" 
           onClick={handleBrowserPrint} 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -239,6 +267,8 @@ function PreviewHeader() {
           onClick={handleBrowserPrint}
 >>>>>>> main
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           disabled={isPrinting}
           className="gap-2"
         >
@@ -246,18 +276,22 @@ function PreviewHeader() {
           Print
         </Button>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 
 >>>>>>> main
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <Button variant="outline" className="gap-2">
           <Link className="h-4 w-4" />
           Add to Profile
         </Button>
       </div>
     </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     document && document.head.appendChild(style);
@@ -316,6 +350,8 @@ function PreviewHeader() {
 =======
   );
 }
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     document.head.append_child (style);
 ;
     // Trigger print dialog;
@@ -356,6 +392,7 @@ function PreviewHeader() {
       </div>;
     </div>);
 }
+<<<<<<< HEAD
   ),;}
  
 }`;
@@ -386,3 +423,5 @@ document.head.appendChild (style);
 }
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

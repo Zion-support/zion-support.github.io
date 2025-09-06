@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 class ErrorBoundary extends React.Component {
@@ -673,6 +674,8 @@ const integrations = [
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {motion} from 'framer-motion';
 import {Brain, DollarSign, TrendingUp, Shield, Zap, CheckCircle, ArrowRight, Star, Users, Award, Clock, Globe, BarChart3, Target, Microscope, Phone, Mail, MapPin, ArrowUpRight, Play, BarChart, PieChart, LineChart, Activity,} from 'lucide-react';
 import Layout from '../components/layout/Layout';
@@ -685,7 +688,10 @@ const contactInfo = {
 const features = [
   {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     title: 'Real-time Market Sentiment Analysis',
     description:
       'Advanced AI algorithms analyze market sentiment with 94% accuracy using neural networks and natural language processing.',
@@ -743,13 +749,20 @@ const pricingPlans = [
       'Basic reporting and analytics',
     ],
     popular: false,
+<<<<<<< HEAD
     color: 'from-gray-500 to-gray-600',
   },  {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+    color: 'from-gray-500 to-gray-600'
+  };
+  {
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     name: 'Professional',
     price: 499,
     period: 'month',
     description: 'Ideal for professional traders and growing investment firms',
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     features: [;
@@ -772,10 +785,13 @@ const pricingPlans = [
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     name: 'Enterprise',
     price: 1499,
     period: 'month',
     description: 'For large investment firms and institutional investors',
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     features: [;
@@ -865,11 +881,18 @@ const integrations = [;
 
 const integrations = [
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+    benefits: ['Time savings', 'Regulatory compliance', 'Accurate reporting'],
+  }, ];
+;
+const integrations = [;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   { name: 'Bloomberg Terminal', logo: '🔵', category: 'Market Data' },
   { name: 'Reuters Eikon', logo: '🔴', category: 'Market Data' },
   { name: 'TradingView', logo: '📊', category: 'Charting' },
   { name: 'MetaTrader', logo: '📈', category: 'Trading Platform' },
   { name: 'Interactive Brokers', logo: '🏦', category: 'Broker' },
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -881,6 +904,8 @@ import Link from 'next/link';
 =======
   { name: 'TD Ameritrade', logo: '💼', category: 'Broker' },];
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { motion } from 'framer-motion';
 import {;
   Brain, DollarSign, TrendingUp, Shield, Zap,;
@@ -890,6 +915,7 @@ import {;
   BarChart, PieChart, LineChart, Activity;
 } from 'lucide-react',;
 import Layout from '../components/layout/Layout';
+<<<<<<< HEAD
 const contactInfo = {;
   mobile: '+1 302 464 0950';
   email: 'kleber@ziontechgroup.com';
@@ -1020,11 +1046,22 @@ const integrations = [;
 }
 ],
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 const NeuralFinanceAI: React.FC = () => {
   return (
     <Layout>
       <Head>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 const contactInfo = {;
   mobile: '+1 302 464 0950',;
@@ -1176,12 +1213,17 @@ const integrations = [;
   { name: 'TradingView', logo: '📊', category: 'Charting' },;
   { name: 'MetaTrader', logo: '📈', category: 'Trading Platform' },;
   { name: 'Interactive Brokers', logo: '🏦', category: 'Broker' },;
+<<<<<<< HEAD
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+const NeuralFinanceAI: React.FC = () => {
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   { name: 'TD Ameritrade', logo: '💼', category: 'Broker' },];
 
 const NeuralFinanceAI: React.FC = () => {;
   return (
+<<<<<<< HEAD
     <Layout>;
       <Head>;
         <title>;
@@ -1231,10 +1273,11 @@ const NeuralFinanceAI: React.FC = () => {;
         <link rel="canonical" href="https://ziontechgroup.com/neural-finance-ai" />
       </Head>
 <<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             >
 
 
@@ -1242,6 +1285,7 @@ const NeuralFinanceAI: React.FC = () => {;
                 <span className="bg-gradient-to-r from-violet-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
       {/* Hero Section */}
@@ -1280,6 +1324,16 @@ const NeuralFinanceAI: React.FC = () => {;
   }
 }
             >
+=======
+                  Neural Finance AI
+                </span>
+                <br />
+                <span className='text-white'>
+                  Revolutionary Trading Intelligence
+                </span>
+              </h1>
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <div className="inline-flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-violet-500/20 to-purple-500/20 border border-violet-500/30 rounded-full text-sm text-violet-300 mb-6">
                 <Brain className="w-4 h-4" />
                 <span>AI-Powered Financial Intelligence</span>
@@ -1288,7 +1342,10 @@ const NeuralFinanceAI: React.FC = () => {;
                 <span className='bg-gradient-to-r from-violet-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
                 <span className="bg-gradient-to-r from-violet-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   Neural Finance AI
                 </span>
                 <br />
@@ -1296,6 +1353,7 @@ const NeuralFinanceAI: React.FC = () => {;
                   Revolutionary Trading Intelligence
                 </span>
               </h1>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
               <div className="inline-flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-violet-500/20 to-purple-500/20 border border-violet-500/30 rounded-full text-sm text-violet-300 mb-6">
@@ -1328,10 +1386,13 @@ const NeuralFinanceAI: React.FC = () => {;
               </p>
               <div className='flex flex-col sm:flex-row gap-4 mb-8'>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <p className="text-xl text-gray-300 mb-8 leading-relaxed">
                 Advanced AI-powered financial analysis and trading platform using neural networks for real-time market prediction,
                 risk assessment, and automated portfolio optimization with 94% accuracy.
               </p>
+<<<<<<< HEAD
               
               <div className="flex flex-col sm:flex-row gap-4 mb-8">
 <<<<<<< HEAD
@@ -1341,6 +1402,8 @@ const NeuralFinanceAI: React.FC = () => {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <Link
                   href="#pricing"
                   className="bg-gradient-to-r from-violet-500 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-violet-600 hover:to-purple-700 transition-all duration-200 transform hover:scale-105 flex items-center justify-center space-x-2"
@@ -1353,6 +1416,7 @@ const NeuralFinanceAI: React.FC = () => {;
                   <span>Watch Demo</span>
                 </button>
               </div>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -1373,6 +1437,8 @@ const NeuralFinanceAI: React.FC = () => {;
                 <div className="flex items-center space-x-2">
                   <CheckCircle className="w-4 h-4 text-green-400" />
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   <span>94% Market Prediction Accuracy</span>
                 </div>
                 <div className="flex items-center space-x-2">
@@ -1386,13 +1452,17 @@ const NeuralFinanceAI: React.FC = () => {;
               </div>
             </motion.div>
 <<<<<<< HEAD
+<<<<<<< HEAD
             
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <motion.div
               initial={{ opacity: 0, x: 30 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
 
+<<<<<<< HEAD
 =======
             <motion.div
               initial={{ opacity: 0, x: 30 }  } catch (error) {
@@ -1411,6 +1481,8 @@ const NeuralFinanceAI: React.FC = () => {;
   }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               className="relative"
             >
               <div className="relative bg-gradient-to-br from-violet-500/20 to-purple-500/20 border border-violet-500/30 rounded-3xl p-8 backdrop-blur-sm">
@@ -1427,19 +1499,25 @@ const NeuralFinanceAI: React.FC = () => {;
                     </div>
                   </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   <div className='space-y-4'>
                     <div className='flex items-center justify-between p-3 bg-gray-800/50 rounded-lg border border-gray-700/50'>
                       <span className='text-gray-300'>AI Models</span>
                       <span className='text-violet-400 font-semibold'>
                         Advanced
                       </span>
+<<<<<<< HEAD
                   <div className="space-y-4">
                     <div className="flex items-center justify-between p-3 bg-gray-800/50 rounded-lg border border-gray-700/50">
                       <span className="text-gray-300">AI Models</span>
                       <span className="text-violet-400 font-semibold">Advanced</span>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     </div>
                     <div className="flex items-center justify-between p-3 bg-gray-800/50 rounded-lg border border-gray-700/50">
                       <span className="text-gray-300">Risk Management</span>
@@ -1450,9 +1528,12 @@ const NeuralFinanceAI: React.FC = () => {;
                       <span className="text-pink-400 font-semibold">Enabled</span>
                     </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   </div>
                 </div>
               </div>
@@ -1460,6 +1541,7 @@ const NeuralFinanceAI: React.FC = () => {;
           </div>
         </div>
       </section>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
           href='https://ziontechgroup && ziontechgroup.com/neural-finance-ai'
@@ -1700,10 +1782,13 @@ const NeuralFinanceAI: React.FC = () => {
       <section className='py-20 px-4 sm:px-6 lg:px-8'>
         <div className='max-w-7xl mx-auto'>          <motion.div
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -1739,6 +1824,8 @@ const NeuralFinanceAI: React.FC = () => {
 }
             className="text-center mb-16"
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-violet-400 to-purple-400 bg-clip-text text-transparent">
@@ -1749,6 +1836,7 @@ const NeuralFinanceAI: React.FC = () => {
               Leverage cutting-edge AI and neural network technology to gain unprecedented insights into financial markets.
             </p>
           </motion.div>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -1776,11 +1864,14 @@ const NeuralFinanceAI: React.FC = () => {
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 key={index}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -1816,11 +1907,14 @@ const NeuralFinanceAI: React.FC = () => {
 }
                 className="group bg-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-6 hover:border-violet-500/50 transition-all duration-300 hover:transform hover:scale-105"
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               >
                 <div className={`w-16 h-16 bg-gradient-to-r ${feature.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
                   <feature.icon className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl font-bold text-white mb-3 group-hover:text-violet-400 transition-colors duration-300">
+<<<<<<< HEAD
 <<<<<<< HEAD
                   {feature.title}
                 </h3>
@@ -1857,19 +1951,26 @@ const NeuralFinanceAI: React.FC = () => {
       </section>;
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {/* Use Cases Section */}
       <section className='py-20 px-4 sm:px-6 lg:px-8 bg-gray-900/30'>;
         <div className='max-w-7xl mx-auto'>          <motion&& motion.div
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {/* Use Cases Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-900/30">
         <div className="max-w-7xl mx-auto">
           <motion.div
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1890,10 +1991,14 @@ const NeuralFinanceAI: React.FC = () => {
       <section className='py-20 px-4 sm:px-6 lg:px-8 bg-gray-900/30'>
         <div className='max-w-7xl mx-auto'>          <motion.div
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -1945,6 +2050,10 @@ const NeuralFinanceAI: React.FC = () => {
 }
             className="text-center mb-16"
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
@@ -1955,6 +2064,7 @@ const NeuralFinanceAI: React.FC = () => {
               Discover how Neural Finance AI transforms various aspects of financial trading and investment management.
             </p>
           </motion.div>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -1982,11 +2092,14 @@ const NeuralFinanceAI: React.FC = () => {
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 key={index}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -2022,6 +2135,8 @@ const NeuralFinanceAI: React.FC = () => {
 }
                 className="bg-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-8"
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               >
                 <div className="flex items-start space-x-4">
                   <div className="w-16 h-16 bg-gradient-to-r from-violet-500 to-purple-600 rounded-2xl flex items-center justify-center flex-shrink-0">
@@ -2029,6 +2144,7 @@ const NeuralFinanceAI: React.FC = () => {
                   </div>
                   <div className="flex-1">
                     <h3 className="text-2xl font-bold text-white mb-3">
+<<<<<<< HEAD
 <<<<<<< HEAD
                       {useCase.title}
                     </h3>
@@ -2048,6 +2164,8 @@ const NeuralFinanceAI: React.FC = () => {
   }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     </p>
                     <div className="space-y-2">
                       {useCase.benefits.map((benefit, benefitIndex) => (
@@ -2056,10 +2174,13 @@ const NeuralFinanceAI: React.FC = () => {
                           <span>{benefit}</span>
                         </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -2067,15 +2188,19 @@ const NeuralFinanceAI: React.FC = () => {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
                       ))}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     </div>;
                   </div>;
                 </div>;
               </motion && motion.div>;
             ))}
 
+<<<<<<< HEAD
 <<<<<<< HEAD
           </div>;
         </div>;
@@ -2101,10 +2226,13 @@ const NeuralFinanceAI: React.FC = () => {
       <section id='pricing' className='py-20 px-4 sm:px-6 lg:px-8'>
         <div className='max-w-7xl mx-auto'>          <motion.div
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -2157,6 +2285,10 @@ const NeuralFinanceAI: React.FC = () => {
 }
             className="text-center mb-16"
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
@@ -2167,6 +2299,7 @@ const NeuralFinanceAI: React.FC = () => {
               Choose the perfect plan for your trading needs. All plans include our core AI-powered features.
             </p>
           </motion.div>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -2189,12 +2322,15 @@ const NeuralFinanceAI: React.FC = () => {
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 key={index}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
                 className={`relative bg-gray-900/50 backdrop-blur-sm border rounded-2xl p-8 ${
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -2426,6 +2562,8 @@ const NeuralFinanceAI: React.FC = () => {
   }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               >
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
@@ -2433,6 +2571,7 @@ const NeuralFinanceAI: React.FC = () => {
                       Most Popular
                     </div>
                   </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -2475,6 +2614,8 @@ const NeuralFinanceAI: React.FC = () => {
                   </div>
                 </div>
                 <ul className='space-y-4 mb-8'>
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -2484,6 +2625,7 @@ const NeuralFinanceAI: React.FC = () => {
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                   <p className="text-gray-400 text-sm mb-6">{plan.description}</p>
                   <div className="text-4xl font-bold text-white mb-2">
+<<<<<<< HEAD
                     ${plan.price  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -2495,11 +2637,17 @@ const NeuralFinanceAI: React.FC = () => {
                 <ul className='space-y-4 mb-8'>
                 <ul className="space-y-4 mb-8">
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center space-x-3 text-gray-300">
                       <CheckCircle className="w-5 h-5 text-violet-400 flex-shrink-0" />
                       <span className="text-sm">{feature}</span>
                     </li>
+<<<<<<< HEAD
 <<<<<<< HEAD
                   ))}
 =======
@@ -2509,12 +2657,16 @@ const NeuralFinanceAI: React.FC = () => {
   }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+                  ))}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 </ul>
                 
                 <Link
                   href="/contact"
                   className={`w-full py-3 px-6 rounded-xl font-semibold text-center transition-all duration-200 transform hover:scale-105 ${
                     plan.popular
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
@@ -2525,6 +2677,10 @@ const NeuralFinanceAI: React.FC = () => {
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
+=======
+                      ? 'bg-gradient-to-r from-violet-500 to-purple-600 text-white hover:from-violet-600 hover:to-purple-700'
+                      : 'bg-gray-800/50 text-white border border-gray-600 hover:bg-gray-700/50'
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   }`  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -2541,26 +2697,35 @@ const NeuralFinanceAI: React.FC = () => {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           </div>;
         </div>;
       </section>;
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {/* Integrations Section */}
       <section className='py-20 px-4 sm:px-6 lg:px-8 bg-gray-900/30'>;
         <div className='max-w-7xl mx-auto'>          <motion&& motion.div
 
-=======
 
+<<<<<<< HEAD
 =======
                       ? 'bg-gradient-to-r from-violet-500 to-purple-600 text-white hover:from-violet-600 hover:to-purple-700'
                       : 'bg-gray-800/50 text-white border border-gray-600 hover:bg-gray-700/50'
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {/* Integrations Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-900/30">
         <div className="max-w-7xl mx-auto">
           <motion.div
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -2577,10 +2742,14 @@ const NeuralFinanceAI: React.FC = () => {
       <section className='py-20 px-4 sm:px-6 lg:px-8 bg-gray-900/30'>
         <div className='max-w-7xl mx-auto'>          <motion.div
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -2634,6 +2803,10 @@ const NeuralFinanceAI: React.FC = () => {
 }
             className="text-center mb-16"
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">
@@ -2644,6 +2817,7 @@ const NeuralFinanceAI: React.FC = () => {
               Connect with your existing trading platforms and tools for a unified trading experience.
             </p>
           </motion.div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -2702,11 +2876,14 @@ const NeuralFinanceAI: React.FC = () => {
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 key={index}
                 initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -2757,6 +2934,8 @@ const NeuralFinanceAI: React.FC = () => {
                   {integration.name}
                 </h3>
                 <p className='text-xs text-gray-400'>{integration.category}</p>              </motion.div>
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             ))}
           </div>
         </div>
@@ -2808,6 +2987,7 @@ const NeuralFinanceAI: React.FC = () => {
           </div>;
         </div>;
       </section>;
+<<<<<<< HEAD
       {/* Contact CTA */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -2818,41 +2998,50 @@ const NeuralFinanceAI: React.FC = () => {
           <div className="bg-gradient-to-r from-violet-500/10 to-purple-500/10 border border-violet-500/20 rounded-3xl p-12 text-center">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+      {/* Contact CTA */}
+      <section className='py-20 px-4 sm: px-6 lg:px-8'>;
+        <div className='max-w-7xl mx-auto'>;
+          <div className='bg-gradient-to-r from-violet-500/10 to-purple-500/10 border border-violet-500/20 rounded-3xl p-12 text-center'>;
+            <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>;
+              Ready to Transform Your Trading?;
+            </h2>;
+            <p className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'>;
+              Join leading investment firms using Neural Finance AI to gain;
+              competitive advantages in today's dynamic financial markets.;
+            </p>;
 
+            <div className='flex flex-col sm:flex-row gap-4 justify-center mb-8'>;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <Link
-                href="/contact"
-                className="bg-gradient-to-r from-violet-500 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-violet-600 hover:to-purple-700 transition-all duration-200 transform hover:scale-105"
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+                href='/contact'
+                className='bg-gradient-to-r from-violet-500 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-violet-600 hover:to-purple-700 transition-all duration-200 transform hover:scale-105'>;
+                Start Free Trial;
+              </Link>;
               <Link
-                href="/contact"
-                className="bg-gradient-to-r from-violet-500 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-violet-600 hover:to-purple-700 transition-all duration-200 transform hover:scale-105"
-              Ready to Transform Your Trading?
-            </h2>
-            <p className=&quot;text-xl text-gray-300 mb-8 max-w-3xl mx-auto&quot;>
-              Join leading investment firms using Neural Finance AI to gain competitive advantages 
-              in today's dynamic financial markets.
-            </p>
-            
-            <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center mb-8&quot;>
-              <Link
-                href=&quot;/contact&quot;
-                className=&quot;bg-gradient-to-r from-violet-500 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-violet-600 hover:to-purple-700 transition-all duration-200 transform hover:scale-105&quot;
-
+                href='/contact'
               Ready to Transform Your Trading?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Join leading investment firms using Neural Finance AI to gain competitive advantages
+              Join leading investment firms using Neural Finance AI to gain competitive advantages 
               in today's dynamic financial markets.
             </p>
+<<<<<<< HEAD
             <div className='flex flex-col sm:flex-row gap-4 justify-center mb-8'>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <Link
                 href="/contact"
                 className="bg-gradient-to-r from-violet-500 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-violet-600 hover:to-purple-700 transition-all duration-200 transform hover:scale-105"
@@ -2866,6 +3055,7 @@ const NeuralFinanceAI: React.FC = () => {
                 Schedule Demo
               </Link>
             </div>
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -2880,10 +3070,13 @@ const NeuralFinanceAI: React.FC = () => {
                 ✓ 24/7 Support • ✓ 99.9% Uptime SLA • ✓ Global Infrastructure
               </p>            </div>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <div className="text-sm text-gray-400">
               <p>✓ 30-Day Free Trial • ✓ No Credit Card Required • ✓ Instant Setup</p>
               <p className="mt-2">✓ 24/7 Support • ✓ 99.9% Uptime SLA • ✓ Global Infrastructure</p>
             </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -2891,10 +3084,13 @@ const NeuralFinanceAI: React.FC = () => {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           </div>
         </div>
       </section>
     </Layout>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -2905,6 +3101,37 @@ const NeuralFinanceAI: React.FC = () => {
   )
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  )
+}
+export default NeuralFinanceAI;
+
+},
+export default NeuralFinanceAI,
+      <section className="py-20 px-4 sm: px-6 lg:px-8">;
+        <div className="max-w-7xl mx-auto">;
+          <div className="bg-gradient-to-r from-violet-500/10 to-purple-500/10 border border-violet-500/20 rounded-3xl p-12 text-center">;
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">;
+              Ready to Transform Your Trading?;
+            </h2>;
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">;
+              Join leading investment firms using Neural Finance AI to gain competitive advantages;
+              in today's dynamic financial markets.;
+            </p>;
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">;
+              <Link;
+                href="/contact";
+                className="bg-gradient-to-r from-violet-500 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-violet-600 hover:to-purple-700 transition-all duration-200 transform hover:scale-105";
+              >;
+                Start Free Trial;
+              </Link>;
+              <Link;
+                href="/contact";
+                className="border border-gray-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:border-gray-500 hover:bg-gray-800/50 transition-all duration-200";
+              >;
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 className='border border-gray-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:border-gray-500 hover:bg-gray-800/50 transition-all duration-200'>;
                 Schedule Demo;
               </Link>;
@@ -2916,12 +3143,15 @@ const NeuralFinanceAI: React.FC = () => {
                 Setup;
               </p>;
               <p className='mt-2'>;
+<<<<<<< HEAD
                 ✓ 24/7 Support • ✓ 99 && 99.9% Uptime SLA • ✓ Global Infrastructure;
 <<<<<<< HEAD
 
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 className='bg - gray - 900 / 50 backdrop - blur - sm border border - gray - 700 / 50 rounded - xl p - 6 text - center hover:border - green - 500 / 50 transition - all duration - 300 hover:transform hover:scale - 105';
               >;
                 <div className='text - 4xl mb - 3'>{integration.logo}</div>;
@@ -2963,10 +3193,14 @@ const NeuralFinanceAI: React.FC = () => {
               <p className='mt - 2'>;
                 ✓ 24 / 7 Support • ✓ 99.9% Uptime SLA • ✓ Global Infrastructure;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               </p>            </div>;
           </div>;
         </div>;
@@ -2974,6 +3208,7 @@ const NeuralFinanceAI: React.FC = () => {
 
 
 export default NeuralFinanceAI;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -3027,3 +3262,5 @@ export default NeuralFinanceAI,
 },;
 export default NeuralFinanceAI;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

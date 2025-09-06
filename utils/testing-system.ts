@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
   static async testUserInteraction (
     element: HTMLElement,
@@ -17,12 +18,15 @@ export class TestingSystem {
       case 'click':;
         element.click();
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         break;
       case 'type': // Handle typing;
         break;
       case 'hover': // Handle hover;
         break;
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -45,3 +49,6 @@ export class TestingSystem {
 }
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  }
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

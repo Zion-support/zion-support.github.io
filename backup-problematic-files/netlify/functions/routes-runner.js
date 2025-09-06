@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 :netlify/functions/routes-runner.js
 :backup-problematic-files/netlify/functions/routes-runner.js
 const path = require('path'),;
@@ -25,6 +26,8 @@ exports.handler = async () => {;
 },;
 :backup-problematic-files/netlify/functions/routes-runner.js
 :backup-problematic-files/netlify/functions/routes-runner.js
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 const path = require('path');
 const { spawnSync } = require('child_process');
 function runNode(relPath, args = []) {
@@ -55,6 +58,7 @@ exports.handler = async () => {
     runNode('automation/routes-map-generator.cjs')
   );
   logStep('git:sync', () => runNode('automation/advanced-git-sync.cjs'));
+<<<<<<< HEAD
 :netlify/functions/routes-runner.js
   return { statusCode: 200, body: logs.join('\n') }
 };function runNode(relPath, args = []) {
@@ -110,3 +114,5 @@ main:netlify/functions/routes-runner.js
 }
 main:netlify/functions/routes-runner.js
 :backup-problematic-files/netlify/functions/routes-runner.js
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import { GradientHeading } from "./GradientHeading",
 import { FeatureCard } from "./FeatureCard",
@@ -27,11 +28,13 @@ interface BenefitsSectionProps {
 }
 =======
 const getBenefits = (t: any,) => [
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 const getBenefits = (t: any) => [
-
-
   {
 
+<<<<<<< HEAD
     icon: <TrendingDown className="w-8 h-8" />}],
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -53,6 +56,9 @@ const getBenefits = (t: any) => [
 }
 
 const getBenefits = (t: any) => [
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   {
     title: t('benefits.ai_matchmaking')
     description: t('benefits.ai_matchmaking_desc')
@@ -69,26 +75,8 @@ const getBenefits = (t: any) => [
     icon: <Clock className='w-8 h-8' />
   }
   {
-    title: t('benefits.cost_reduction')
-    description: t('benefits.cost_reduction_desc')
-    icon: <TrendingDown className='w-8 h-8' />
-  }
-]
-export function BenefitsSection({ className, style }: BenefitsSectionProps) {
-  const { t } = useTranslation()
-  const benefits = getBenefits(t)
-    >
-      <div className='container mx-auto px-4'>
-        <div className='text-center mb-16'>
-          <GradientHeading>{t('home.benefits_title')}</GradientHeading>
-          <p className='text-zion-slate-light text-lg mt-4 max-w-2xl mx-auto'>
-            {t('home.benefits_subtitle')}
-          </p>
-        </div>
-        <div className='grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto'>          {benefits.map((benefit, index) => (
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-          {benefits.map((benefit, index) => (
 
+<<<<<<< HEAD
     title: t('benefits.ai_matchmaking'),
     description: t('benefits.ai_matchmaking_desc'),
     icon: <Bot className="w-8 h-8" />},
@@ -317,6 +305,9 @@ export function BenefitsSection({ className, style }: BenefitsSectionProps) {
     >
       <div className='container mx-auto px-4'>
         <div className='text-center mb-16'>
+=======
+  {
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     icon: <TrendingDown className="w-8 h-8" />}],
 
 export function BenefitsSection({ className, style }: BenefitsSectionProps) {
@@ -328,12 +319,10 @@ export function BenefitsSection({ className, style }: BenefitsSectionProps) {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <GradientHeading>{t('home.benefits_title')}</GradientHeading>
-          <p className="text-zion-slate-light text-lg mt-4 max-w-2xl mx-auto">
+          <p className='text-zion-slate-light text-lg mt-4 max-w-2xl mx-auto'>
             {t('home.benefits_subtitle')}
           </p>
         </div>
-        <div className='grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto'>          {benefits.map((benefit, index) => (
-        <div className='grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto'>          {benefits.map((benefit, index) => (        
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
           {benefits.map((benefit, index) => (
             <FeatureCard
@@ -383,53 +372,32 @@ export function BenefitsSection({ className, style }: BenefitsSectionProps) {;
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">;
           {benefits.map((benefit, index) => (;
             <FeatureCard;
+
+
               key={index}
               title={benefit.title}
               description={benefit.description}
               icon={benefit.icon}
-              className='bg-zion-blue hover:bg-zion-blue-dark transition-all duration-300'            />              className="bg-zion-blue hover:bg-zion-blue-dark transition-all duration-300"
-              className="bg-zion-blue hover:bg-zion-blue-dark transition-all duration-300"
-            />
           ))}
         </div>
       </div>
     </section>
   )
 }
-import React, { useState } from 'react'
-export /**
 export default BenefitsSection }}}}</motion.div></motion.div></motion.div>}
-import { GradientHeading } from './ui / GradientHeading'
-export default function Page() {
+import { GradientHeading } from './ui / GradientHeading';
+export default /**
+ * Page - Function description
+ */
+function Page() {
   {
-"
-    title: "24/7 Support","
-    description: "Our dedicated team is available around the clock to assist with any questions or issues you might encounter during your journey.","
-    icon: <Clock className="w-8 h-8"  />,"
-    color: "from-zion-blue to-zion-blue-dark","
-    bgColor: "from-zion-blue/20 to-zion-blue-dark/20","    stats: "99.9% Uptime"
-    features: ["
-      "Round-the-clock assistance","
-      "Expert technical support","
-      "Rapid response times","
-      "Proactive monitoring" ]
-}
-  {
-"
-    title: "Cost Reduction","
-    description: "Eliminate middlemen and reduce costs by up to 40% through direct connections with service providers and product vendors.","
-    icon: <TrendingDown className="w-8 h-8"  />,"
-    color: "from-zion-green to-zion-green-dark","
-    bgColor: "from-zion-green/20 to-zion-green-dark/20","    stats: "40% Cost Savings"
-    features: ["
-      "Direct provider connections","
-      "Competitive pricing","
-      "Bulk discount options","
-      "Transparent cost structure" ]
+
+
       "Direct provider connections",";
       "Competitive pricing",";
       "Bulk discount options",";
       "Transparent cost structure" ];
+
               className="bg-zion-blue hover:bg-zion-blue-dark transition-all duration-300"
             />
           ))}
@@ -437,8 +405,11 @@ export default function Page() {
       </div>;
     </section>;
   );
+<<<<<<< HEAD
 }
 ;
 }
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

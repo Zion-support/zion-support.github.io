@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import Skeleton from "@/components/ui/skeleton";
 import { cn } from "@/lib/utils";
 =======
@@ -36,6 +37,8 @@ interface AIMatchingResultsProps {
   onSelectMatch?: (match: MatchResultItem) => void
   isLoading?: boolean
   projectDescription?: string
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface AIMatchingResultsProps {
 
   matches: MatchResultItem[]
@@ -50,6 +53,7 @@ interface AIMatchingResultsProps {
 
   serviceType?: string
 }
+<<<<<<< HEAD
 
 
 export function AIMatchingResults({
@@ -89,6 +93,8 @@ export /**
 function AIMatchingResults() {
   const [active_tab, setActiveTab] = useState ('all');
   // Group matches by category;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const categories = {
     all: matches,
     talent: matches.filter (match =>;
@@ -97,6 +103,10 @@ function AIMatchingResults() {
       match.category.toLowerCase ().includes ('service')),
     equipment: matches.filter (match =>;
       match.category.toLowerCase ().includes ('equipment')),
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   }
   // Get the icon for a category;
   const getCategoryIcon = (category: string) =>: any {
@@ -123,6 +133,7 @@ if ( {) {
         </div>;
       </div>);
   }
+<<<<<<< HEAD
 import { useState } from 'react';
 import { MatchResultItem } from '@/lib/ai-matchmaking';
 import { Card, CardContent } from '@/components/ui/card';
@@ -327,10 +338,16 @@ export function AIMatchingResults({;
   }
   return (
     <div className='space-y-4'>
+=======
+  }
+  return (
+    <div className='space-y-4'>;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <Tabs
         defaultValue='all'
         value={activeTab}
         onValueChange={setActiveTab}
+<<<<<<< HEAD
             className='data-[state=active]:bg-zion-purple/20'>;
             Equipment ({categories && categories.equipment.length});
           </TabsTrigger>;
@@ -346,16 +363,21 @@ export function AIMatchingResults({;
                         className={cn(
                           'w-2',
                           match && match.category.toLowerCase().includes('talent')
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                             ? 'bg-zion-cyan'
                             : match && match.category.toLowerCase().includes('service')
                               ? 'bg-zion-purple'
                               : 'bg-green-500'
                         )}
+<<<<<<< HEAD
                       />;
                       <div className='flex-1 p-4'>;
                         <div className='flex items-start gap-4'>;
                           <Avatar className='h-12 w-12 border border-zion-blue-light'>;
                             {match && match.image ? (;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                               <AvatarImage
                                 src={match && match.image}
                                 alt={match && match.title}
@@ -365,6 +387,7 @@ export function AIMatchingResults({;
                                 <CategoryIcon className='h-6 w-6 text-zion-purple' />;
                               </AvatarFallback>;
                             )}
+<<<<<<< HEAD
   // Check condition
 if ( {) {
   $2
@@ -649,6 +672,9 @@ if ( {) {
                                   <div className="text-xs text-zion-slate-light">;
                                     {match.category.toLowerCase().includes("talent") ? "/hour" :""}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                                   </div>;
                                 </div>;
                               )}
@@ -689,6 +715,7 @@ if ( {) {
                                 </div>
                               )}
                             </div>
+<<<<<<< HEAD
 
                             
                             <div className="mt-2 flex flex-wrap gap-1">
@@ -719,10 +746,13 @@ if ( {) {
                                 </Badge>;
                               ))}
                             </div>;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                           </div>;
                         </div>;
                       </div>;
                     </div>;
+<<<<<<< HEAD
             )}
           </TabsContent>;
         ))}
@@ -748,6 +778,14 @@ if ( {) {
 };
 ;
 }
+=======
+
+
+
+            )}
+          </TabsContent>
+        ))}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
       </Tabs>;
     </div>;
@@ -755,7 +793,11 @@ if ( {) {
 }
 
 
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   </Card>);
               })) : (
               <div className='text - center py - 8 text - zion - slate - light'>;
@@ -764,6 +806,7 @@ if ( {) {
           </TabsContent>))}
       </Tabs>;
     </div>);
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
                   </Card>;
@@ -812,3 +855,5 @@ if (isLoading) {";
 }"
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 }
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

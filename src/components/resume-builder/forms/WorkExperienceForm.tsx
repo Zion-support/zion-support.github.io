@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 import { useState } from 'react'
@@ -107,6 +108,8 @@ if ( {) {
 
 
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       if (success) {
         form.reset({
           company_name: ''
@@ -119,20 +122,26 @@ if ( {) {
         setEditingId(null)
       }
     } catch (err: any) {
+<<<<<<< HEAD
       setError(err.message |'An error occurred')
     }
   }
   const handleEdit = (work: WorkExperience) => {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       setError(err.message || 'An error occurred');
     };
   };
   const handleEdit = (work: WorkExperience) => {;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     setEditingId(work.id!);    form.reset({
       ...work
   const handleEdit = (work: WorkExperience) => {
@@ -144,6 +153,7 @@ if ( {) {
           ? formatDateValue(work.end_date)
           : undefined
     })
+<<<<<<< HEAD
       // Check condition
 if ( {) {
   $2
@@ -256,9 +266,10 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
 
+=======
+  }
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
-
-
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -394,6 +405,7 @@ export function WorkExperienceForm(): any ({;
     }
   };
 
+<<<<<<< HEAD
   const handleEnhanceDescription = (enhancedContent: string) => {;
     form && form.setValue('description', enhancedContent);
   };
@@ -416,6 +428,8 @@ export function WorkExperienceForm(): any ({;
           Add your work history to showcase your professional experience.;
         </p>;
       </div>;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       {workExperiences && workExperiences.length > 0 && (;
@@ -434,6 +448,7 @@ export function WorkExperienceForm(): any ({;
                         ? work && work.start_date;
                         : format(work && work.start_date, 'MMM yyyy')}{' '}
 <<<<<<< HEAD
+<<<<<<< HEAD
                       -{' '}
                       {work && work.is_current;
                         ? 'Present';
@@ -442,6 +457,8 @@ export function WorkExperienceForm(): any ({;
                             ? work && work.end_date;
                             : format(work && work.end_date, 'MMM yyyy');
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       -{' '}
                       {work && work.is_current;
                         ? 'Present';
@@ -450,6 +467,7 @@ export function WorkExperienceForm(): any ({;
                             ? work && work.end_date;
                             : format(work && work.end_date, 'MMM yyyy');
                           : ''}
+<<<<<<< HEAD
                     </p>;
                     {work && work.location && (;
                       <p className='text-xs text-muted-foreground'>;
@@ -494,6 +512,8 @@ export function WorkExperienceForm(): any ({;
                             : format(work.end_date, 'MMM yyyy')
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                           : ''}
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <div className="space-y-4">
           <h3 className="text-md font-medium">Added Experience</h3>
           {workExperiences.map((work) => (
@@ -512,6 +532,7 @@ export function WorkExperienceForm(): any ({;
                           ? work.end_date 
                           : format(work.end_date, 'MMM yyyy')) : '')}
 <<<<<<< HEAD
+<<<<<<< HEAD
                     </p>
                     {work.location && (
                       <p className="text-xs text-muted-foreground">{work.location}</p>
@@ -524,12 +545,23 @@ export function WorkExperienceForm(): any ({;
                     form.reset({
 =======
 
+=======
+    <div className="space-y-6">
+      <div>
+        <h2 className="text-xl font-semibold mb-2">Work Experience</h2>
+        <p className="text-muted-foreground">
+          Add your work history to showcase your professional experience.
+        </p>
+      </div>
+      {workExperiences.length > 0 && (
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     </p>
                     {work.location && (
                       <p className="text-xs text-muted-foreground">{work.location}</p>
                     )}
                   </div>
                   <div className="flex gap-2">
+<<<<<<< HEAD
                       variant='ghost'
                       size='icon'
                       onClick={() => handleEdit(work)}
@@ -556,61 +588,25 @@ export function WorkExperienceForm(): any ({;
                       aria-label="Delete experience"
                     >
                       <Trash2 className="h-4 w-4" />
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     </Button>
                   </div>
                 </div>
                 {work.description && (
-                  <p className="text-sm mt-3 line-clamp-2">{work.description}</p>
-
-                )}
-              </CardContent>;
-            </Card>;
-        </div>;
-                  <p className='text-sm mt-3 line-clamp-2'>
-                    {work.description}
-                  </p>
-                  <p className="text-sm mt-3 line-clamp-2">{work.description}</p>
                 )}
               </CardContent>
             </Card>
           ))}
         </div>
       )}
-      <div className='bg-muted/40 p-6 rounded-lg'>
-        <h3 className='text-md font-medium mb-4'>
-
-      <div className="bg-muted/40 p-6 rounded-lg">
-        <h3 className="text-md font-medium mb-4">
-      <div className='bg-muted/40 p-6 rounded-lg'>
-        <h3 className='text-md font-medium mb-4'>
-
-      <div className="bg-muted/40 p-6 rounded-lg">
-        <h3 className="text-md font-medium mb-4">
           {editingId ? 'Update Experience' : 'Add Experience'}
         </h3>
         <Form {...form}>
-
-      <div className='bg-muted/40 p-6 rounded-lg'>;
-        <h3 className='text-md font-medium mb-4'>;
-          {editingId ? 'Update Experience' : 'Add Experience'}
-        </h3>;
-
-        <Form {...form}>;
-          <form
-            onSubmit={form && form.handleSubmit(handleAddOrUpdate)}
-            className='space-y-4'>;
-            <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>;
+          <form onSubmit={form.handleSubmit(handleAddOrUpdate)} className="space-y-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <FormField
                 control={form.control}
-                name='company_name'
-                render={({ field }: { field: any }) => (                  <FormItem>
-                name='company_name'
-                render={({ field }: { field: any }) => (                  <FormItem>
-                control={form.control}
-
-                name="company_name"
-                render={({ field }: { field: any }) => (
-                  <FormItem>
                     <FormLabel>Company Name</FormLabel>
                     <FormControl>
                       <Input placeholder="Google, Microsoft, etc." {...field} />
@@ -618,35 +614,6 @@ export function WorkExperienceForm(): any ({;
                     <FormMessage />
                   </FormItem>
                 )}
-              />
-ursor/fix-website-loading-errors-and-merge-6662
-              />;
-
-                control={form && form.control}
-                name='role_title'
-                render={({ field }: { field: any }) => (                  <FormItem>
-              />
-              <FormField
-                control={form.control}
-                name='role_title'
-                render={({ field }: { field: any }) => (                  <FormItem>
-              />;
-
-              <FormField
-                control={form && form.control}
-                name='role_title'
-                render={({ field }: { field: any }) => (                  <FormItem>;
-                    <FormLabel>Job Title</FormLabel>;
-                    <FormControl>;
-                      <Input
-                        placeholder='Software Engineer, Product Manager, etc.'
-                  </FormItem>)}
-              />;
-              <FormField;
-                control={form.control}
-                name="role_title"
-                render={({ field }: { field: any }) => (
-                  <FormItem>
                     <FormLabel>Job Title</FormLabel>
                     <FormControl>
                       <Input placeholder="Software Engineer, Product Manager, etc." {...field} />
@@ -654,72 +621,10 @@ ursor/fix-website-loading-errors-and-merge-6662
                     <FormMessage />
                   </FormItem>
                 )}
-              />
-            </div>
-            <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
-                )}
-
-              />;
-            </div>;
-
-
-
-            <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>;
-              <FormField
-                control={form.control}
-                name='start_date'
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <FormField
-                control={form.control}
-                name="start_date"
                 render={({ field }: { field: any }) => (
                   <FormItem>
                     <FormLabel>Start Date</FormLabel>
                     <FormControl>
-            <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
-              <FormField
-                control={form.control}
-                name='start_date'
-                  <FormItem>
-                    <FormLabel>Start Date</FormLabel>
-                    <FormControl>
-                      <Input type='date' {...field} value={field.value |''} />                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-              <div className='space-y-4'>
-                <FormField
-                  control={form.control}
-                  name='is_current'
-                  render={({ field }: { field: any }) => (
-                    <FormItem className='flex flex-row items-start space-x-3 space-y-0 py-2'>                      <FormControl>
-
-                render={({ field }: { field: any }) => (
-                  <FormItem>
-                    <FormLabel>Start Date</FormLabel>
-                    <FormControl>
-
-                render={({ field }: { field: any }) => (;
-                  <FormItem>;
-                    <FormLabel>Start Date</FormLabel>;
-                    <FormControl>;
-                      <Input type='date' {...field} value={field && field.value || ''} />                    </FormControl>;
-                    <FormMessage />;
-                  </FormItem>;
-
-                      <Input type='date' {...field} value={field.value || ''} />                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-
-              />
-
-
-
-                      <Input type='date' {...field} value={field.value || ''} />                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
                       <Input 
                         type="date" 
                         {...field} 
@@ -728,21 +633,12 @@ ursor/fix-website-loading-errors-and-merge-6662
                     </FormControl>;
                     <FormMessage />;
                   </FormItem>;
-
-
-
                 )}
               />
 
-              <div className='space-y-4'>;
+              <div className="space-y-4">
                 <FormField
-                  name='is_current'
-                  render={({ field }: { field: any }) => (
-                    <FormItem className='flex flex-row items-start space-x-3 space-y-0 py-2'>                      <FormControl>
                   control={form.control}
-                  name='is_current'
-                  render={({ field }: { field: any }) => (
-                    <FormItem className='flex flex-row items-start space-x-3 space-y-0 py-2'>                      <FormControl>
                   name="is_current"
                   render={({ field }: { field: any }) => (
                     <FormItem className="flex flex-row items-start space-x-3 space-y-0 py-2">
@@ -757,194 +653,29 @@ ursor/fix-website-loading-errors-and-merge-6662
                       </div>
                     </FormItem>
                   )}
-                />
-                {!form.watch('is_current') && (
-                  <FormField
-                    control={form.control}
-                    name='end_date'
-                />;
-                {!form.watch('is_current') && (;
-                  <FormField;
-                    control={form.control}
-                    name="end_date"
                     render={({ field }: { field: any }) => (
                       <FormItem>
                         <FormLabel>End Date</FormLabel>
                         <FormControl>
-                          <Input
-                            type='date'
-                            {...field}
-                            value={field.value |''}                          />
-                            value={field.value || ''}                          />
-                            value={field.value || ''}                          />
-
                           <Input 
                             type="date" 
                             {...field} 
                             value={field.value || ''} 
                           />
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
-                )}
-              </div>
-            </div>
-            <FormField
-              control={form.control}
-              name='location'
-                <FormItem>
-                  <FormLabel>Location (Optional)</FormLabel>
-                  <FormControl>
-                    <Input
-                      placeholder='San Francisco, CA (Remote)'                      {...field}
-                    />
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-            <FormField
-              control={form.control}
-              name='description'
-              render={({ field }: { field: any }) => (
-                <FormItem>
-                  <FormLabel className='flex justify-between'>
-                    <span>Job Description</span>
-                    <AIEnhancementButton
-                      currentContent={field.value |''}
-                      enhancementType='work-description'
-                      context={`Role: ${form.getValues('role_title')} at ${form.getValues('company_name')}`}
-                      onEnhanced={handleEnhanceDescription}
-                    />
-                  </FormLabel>
-                  <FormControl>
-                    <Textarea
-                      placeholder='Describe your responsibilities and accomplishments...'
-                      className='min-h-[100px]'
-                      {...field}
-                    />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-            {error && (
-              <Alert variant='destructive'>
-                <AlertDescription>{error}</AlertDescription>
-              </Alert>
-            )}
-            <div className='flex justify-between pt-2'>
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                            value={field && field.value || ''}                          />;
-                        </FormControl>;
-                        <FormMessage />;
-                      </FormItem>;
                         </FormControl>
                         <FormMessage />
                       </FormItem>
                     )}
                   />
                 )}
-                    )}
-                  />;
-                )}
-
-
-
-              </div>;
-            </div>;
-
-              </div>
-            </div>
-            <FormField
-              control={form.control}
-              name='location'
-              </div>;
-            </div>;
-            <FormField;
-              control={form.control}
-              name="location"
               render={({ field }: { field: any }) => (
                 <FormItem>
                   <FormLabel>Location (Optional)</FormLabel>
                   <FormControl>
-                    <Input
-                      placeholder='San Francisco, CA (Remote)'                      {...field}
-                    />
-                    <Input placeholder="San Francisco, CA (Remote)" {...field} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
               )}
-            />
-            <FormField
-              control={form.control}
-              name='description'
-              render={({ field }: { field: any }) => (
-                <FormItem>
-                  <FormLabel className='flex justify-between'>
-                    <span>Job Description</span>
-                    <AIEnhancementButton
-                      currentContent={field.value |''}
-                      enhancementType='work-description'
-                      context={`Role: ${form.getValues('role_title')} at ${form.getValues('company_name')}`}
-                      onEnhanced={handleEnhanceDescription}
-                    />
-                  </FormLabel>
-                  <FormControl>
-                    <Textarea
-                      placeholder='Describe your responsibilities and accomplishments...'
-                      className='min-h-[100px]'
-                </FormItem>)}
-            />;
-            <FormField;
-              control={form.control}
-              name='description';
-              render={({ field }: { field: any }) => (
-                <FormItem>;
-                  <FormLabel className='flex justify - between'>;
-                    <span > Job Description</span>;
-                    <AIEnhancementButton;
-                      current_content={field.value || ''}
-                      enhancement_type='work - description';
-                      context={`Role: ${form.get_values ('role_title')} at ${form.get_values ('company_name')}`}
-                      on_enhanced={handleEnhanceDescription}
-                    />;
-                  </FormLabel>;
-                  <FormControl>;
-                    <Textarea;
-                      placeholder='Describe your responsibilities and accomplishments...';
-                      className='min - h-[100px]';
-              name="location"
-
-              render={({ field }: { field: any }) => (
-                <FormItem>
-                  <FormLabel>Location (Optional)</FormLabel>
-                  <FormControl>
-
-                    <Input placeholder="San Francisco, CA (Remote)" {...field} />
-
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-
-
-                      {...field}
-                    />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-            {error && (
-              <Alert variant='destructive'>
-                <AlertDescription>{error}</AlertDescription>
-              </Alert>
-            )}
-            <div className='flex justify-between pt-2'>
             />;
             <FormField;
               control={form.control}
@@ -968,8 +699,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                     />;
                   </FormControl>;
                   <FormMessage />;
-                </FormItem>;
-              )}
             />
 
             {error && <Alert variant="destructive"><AlertDescription>{error}</AlertDescription></Alert>}
@@ -980,6 +709,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                 variant="outline"
                 onClick={() => {
                   if (editingId) {
+<<<<<<< HEAD
                     setEditingId(null)
                     setEditingId(null)
                     form.reset({
@@ -1005,6 +735,8 @@ ursor/fix-website-loading-errors-and-merge-6662
                     form.reset({
                     setEditingId(null),
                     setEditingId(null),
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     form.reset({
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                       company_name: '',
@@ -1012,6 +744,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                       start_date: format(new Date(), 'yyyy-MM-dd'),
                       is_current: false,
                       description: '',
+<<<<<<< HEAD
                       location: ''})
 <<<<<<< HEAD
 =======
@@ -1057,10 +790,15 @@ ursor/fix-website-loading-errors-and-merge-6662
                   } else {
                     onBack()
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+                  } else {
+                    onBack()
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   }
                 }}
               >;
                 {editingId ? 'Cancel' : 'Back'}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
               </Button>
@@ -1084,11 +822,19 @@ ursor/fix-website-loading-errors-and-merge-6662
                 </Button>
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+              </Button>
+
+
+                  {editingId ? 'Update' : 'Add'} Experience
+                </Button>
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 {!editingId && workExperiences.length > 0 && (
                   <Button type='button' onClick={onComplete}>
                     Next
                   </Button>
                 )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
               </div>
@@ -1167,11 +913,14 @@ if ( {) {
                   <Button type='button' on_click={on_complete}>;
                     Next;
                   </Button>)}
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               </div>;
             </div>;
           </form>;
         </Form>;
       </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 ;
@@ -1200,3 +949,7 @@ if ( {) {
 =======
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+}
+;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

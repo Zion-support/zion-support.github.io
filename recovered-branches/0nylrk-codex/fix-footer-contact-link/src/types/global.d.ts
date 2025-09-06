@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -10,14 +11,18 @@ import {ReactNode} from 'react';
 declare module '@/components/FeatureCard' {
 <<<<<<< HEAD
 =======
+=======
+// Extend FeatureCardProps to include key for mapping
+declare module '@/components/FeatureCard' {
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {ReactNode} from 'react';
 // Extend FeatureCardProps to include key for mapping;
 declare module '@/components / FeatureCard' {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   export interface FeatureCardProps {
     title: string;
     description: string;
     icon: ReactNode;
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -51,12 +56,15 @@ declare module '@/components/FeatureCard' {
 declare module '@/components/ListingScoreCard' {
   export interface ListingScoreCardProps {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     title: string;
     description: string;
     category: string;
     image?: string;
     tags?: string[];
     author?: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
     author_image?: string;
     ai_score?: number;
@@ -203,3 +211,10 @@ declare module '@/components/ProductListingCard' {;
   }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+    author_image?: string;
+    ai_score?: number;
+    rating?: number;
+  }
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

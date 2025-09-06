@@ -1,8 +1,12 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import fs from 'fs',;
 import path from 'path',;
 import Link from 'next/link',;
@@ -11,6 +15,7 @@ import Link from 'next/link',;
 function list(dir: string, baseDir: string) {
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -23,12 +28,15 @@ import Link from 'next/link',;
 function list(dir: string, baseDir: string) {
   const items = fs.readdirSync(dir)
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return items.map((name) => {
     const full = path.join(dir, name)
     const rel = path.relative(baseDir, full)
     const stat = fs.statSync(full)
     return { name, rel, isDir: stat.isDirectory() }
   })
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -37,6 +45,8 @@ function list(dir: string, baseDir: string) {
 export async function getStaticProps() {
   const base = path.join(process.cwd(), 'docs/gitbook')
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const sections = fs.existsSync(base)
     ? list(base, base).map((entry) => ({
         title: entry.name
@@ -45,12 +55,15 @@ export async function getStaticProps() {
 
   return { props: { sections }, revalidate: 600 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import fs from 'fs';
 import path from 'path';
 import Link from 'next/link';
@@ -64,12 +77,15 @@ function list(dir: string, baseDir: string) {;
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
   });
   } catch (error) {
@@ -94,6 +110,7 @@ export async function getStaticProps() {;
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -190,6 +207,11 @@ function DocsIndex() {
                     {it.rel}
                   </a>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+}
+export default function DocsIndex({ sections }: { sections: { title: string, items: { name: string, rel: string, isDir: boolean }[] }[] }) {
+  return (
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 </li>
               ))}
             </ul>
@@ -198,12 +220,15 @@ function DocsIndex() {
       </div>
     </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 }
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   </a>;
                 </li>))}
             </ul>;
@@ -213,6 +238,7 @@ function DocsIndex() {
 }
   );
 };
+<<<<<<< HEAD
 
                     {it.rel  } catch (error) {
     console.error("Error:", error);
@@ -250,6 +276,8 @@ function DocsIndex() {
 =======
   );
 };
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     {it.rel  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -276,6 +304,9 @@ function DocsIndex() {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
 }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

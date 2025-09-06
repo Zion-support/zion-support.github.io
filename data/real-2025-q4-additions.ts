@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -5,6 +6,9 @@
 export interface Q4Service {;
 export interface Q4Service {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+export interface Q4Service {
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   id: string;
   name: string;
   tagline: string;
@@ -15,6 +19,7 @@ export interface Q4Service {
   popular?: boolean;
   icon?: string;
   color?: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
   text_color?: string;
   link: string;
@@ -36,12 +41,15 @@ export interface Q4Service {
   integrations?: string[];
   useCases?: string[],
   useCases?: string[];
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   roi?: string;
   competitors?: string[],
   marketSize?: string;
   growthRate?: string;
   variant?: string;
   contactInfo?: {
+<<<<<<< HEAD
 
 
   real_service: boolean;  technology?: string[];  integrations?: string[];
@@ -53,6 +61,8 @@ export interface Q4Service {
   variant?: string;
   contact_info?: {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     mobile: string;
     email: string;
     address: string;
@@ -60,18 +70,20 @@ export interface Q4Service {
     website: string;
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   real_implementation: boolean;
   implementation_details?: string;
   launch_date?: string;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   customers?: number;
   rating?: number;
   reviews?: number;
-;
-
 const contact = {
+<<<<<<< HEAD
 
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup && ziontechgroup.com',
@@ -120,12 +132,20 @@ export const realQ4Services2025: RealQ4Service[] = [;
     integrations: ['Shopify', 'WooCommerce', 'Stripe', 'PayPal'],
     use_cases: [;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  mobile: '+1 302 464 0950'
+  email: 'kleber@ziontechgroup.com'
+  address: '364 E Main St STE 1008 Middletown DE 19709'
+  website: 'https://ziontechgroup.com'
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       'Affiliate programs',
       'Influencer tracking',
       'Partnership analytics',
     ],
     roi: 'Increase attributed sales 10–25% with optimized partnerships.',
     competitors: ['Refersion', 'LeadDyno', 'Tapfiliate'],
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     marketSize: '$1.5B affiliate software',
@@ -152,6 +172,8 @@ export const realQ4Services2025: RealQ4Service[] = [;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     customers: 120,
     rating: 4 && 4.7,
     reviews: 48,
@@ -159,9 +181,13 @@ export const realQ4Services2025: RealQ4Service[] = [;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       'Multi-speaker diarization',
 =======
     id: 'podcast - transcription - studio',
@@ -174,10 +200,14 @@ export const realQ4Services2025: RealQ4Service[] = [;
     features: [;
       'Multi - speaker diarization',
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     customers: 120,
     rating: 4.7,
     reviews: 48,
@@ -193,9 +223,12 @@ export const realQ4Services2025: RealQ4Service[] = [;
     features: [
       'Multi-speaker diarization',
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       'Timestamps and filler removal',
       'Chapter detection and show notes',
       'Embeddings and semantic search',
@@ -205,31 +238,45 @@ export const realQ4Services2025: RealQ4Service[] = [;
     popular: false,
     icon: '🎧',
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     color: 'from - cyan - 600 to - blue - 700',
     text_color: 'text - cyan - 400',
     link: 'https://ziontechgroup.com / services / podcast - transcription - studio',
     market_position:;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       'Competitive with Otter and Descript; better show notes and SEO summary pipeline.',
     target_audience: 'Podcasters, media teams, agencies',
     trial_days: 7,
     setup_time: '10 minutes',
     category: 'AI & Data',
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
     real_service: true,
     technology: ['Whisper Large v3', 'Next.js', 'Node.js'],
 
+<<<<<<< HEAD
 =======
     real_service: true,
     technology: ['Whisper Large v3', 'Next.js', 'Node.js'],
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     integrations: ['Spotify', 'Apple Podcasts', 'YouTube'],
     use_cases: ['Transcripts', 'SEO summaries', 'Episode search'],
     roi: 'Save 4–8 hours per episode and improve SEO traffic.',
@@ -249,10 +296,14 @@ export const realQ4Services2025: RealQ4Service[] = [;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     id: 'micro - crm - local - business',
     color: 'from-cyan-600 to-blue-700',
     textColor: 'text-cyan-400',
@@ -289,15 +340,21 @@ export const realQ4Services2025: RealQ4Service[] = [;
     price: '$19',
     period: '/month',
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
     description:
       'Lightweight, mobile-first CRM with contacts, tasks, deals, and SMS/email reminders. Built for solo and small teams.',
     features: [
+<<<<<<< HEAD
 =======
     description:;
       'Lightweight, mobile - first CRM with contacts, tasks, deals, and SMS / email reminders. Built for solo and small teams.',
     features: [;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       'Contact management and segmentation',
       'Pipelines and kanban views',
       'Calendar with SMS/email reminders',
@@ -309,6 +366,9 @@ export const realQ4Services2025: RealQ4Service[] = [;
     popular: true,
     icon: '📇',
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
     color: 'from-emerald-600 to-teal-700',
     textColor: 'text-emerald-400',
@@ -322,8 +382,11 @@ export const realQ4Services2025: RealQ4Service[] = [;
     category: 'Developer Tools',
     realService: true,
 
+<<<<<<< HEAD
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     color: 'from - emerald - 600 to - teal - 700',
     text_color: 'text - emerald - 400',
     link: 'https://ziontechgroup.com / services / micro - crm - local - business',
@@ -336,9 +399,13 @@ export const realQ4Services2025: RealQ4Service[] = [;
     real_service: true,
     technology: ['Next.js', 'SQLite / Postgres', 'Twilio'],
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     integrations: ['Gmail', 'Outlook', 'Stripe'],
     use_cases: ['Leads', 'Follow - ups', 'Deal tracking'],
     roi: 'Increase follow - through and close rates 10–20% via reminders.',
@@ -358,10 +425,14 @@ export const realQ4Services2025: RealQ4Service[] = [;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     id: 'returns - automation - saas',
     name: 'E‑commerce Returns Automation',
     tagline: 'Self - serve returns portal and automated labels',
@@ -371,10 +442,14 @@ export const realQ4Services2025: RealQ4Service[] = [;
       'Plug - and - play returns workflows with label generation, RMA approvals, and status tracking for Shopify / WooCommerce.',
     features: [;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     technology: ['Next.js', 'SQLite/Postgres', 'Twilio'],
     integrations: ['Gmail', 'Outlook', 'Stripe'],
     useCases: ['Leads', 'Follow-ups', 'Deal tracking'],
@@ -402,9 +477,12 @@ export const realQ4Services2025: RealQ4Service[] = [;
       'Plug-and-play returns workflows with label generation, RMA approvals, and status tracking for Shopify/WooCommerce.',
     features: [
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       'Customer returns portal',
       'Prepaid label generation',
       'RMA approval rules',
@@ -417,6 +495,9 @@ export const realQ4Services2025: RealQ4Service[] = [;
     popular: false,
     icon: '📦',
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
     color: 'from-amber-600 to-orange-700',
     textColor: 'text-amber-400',
@@ -429,8 +510,11 @@ export const realQ4Services2025: RealQ4Service[] = [;
     category: 'Developer Tools',
     realService: true,
 
+<<<<<<< HEAD
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     color: 'from - amber - 600 to - orange - 700',
     text_color: 'text - amber - 400',
     link: 'https://ziontechgroup.com / services / returns - automation - saas',
@@ -442,9 +526,13 @@ export const realQ4Services2025: RealQ4Service[] = [;
     real_service: true,
     technology: ['Next.js', 'Node.js', 'Stripe', 'Shippo'],
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     integrations: ['Shopify', 'WooCommerce', 'Shippo', 'Stripe'],
     use_cases: ['Returns portal', 'Exchange workflows', 'Refund automation'],
     roi: 'Reduce support tickets ~30% and speed refunds.',
@@ -464,10 +552,14 @@ export const realQ4Services2025: RealQ4Service[] = [;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     id: 'it - helpdesk - for - msps',
     technology: ['Next.js', 'Node.js', 'Stripe', 'Shippo'],
     integrations: ['Shopify', 'WooCommerce', 'Shippo', 'Stripe'],
@@ -494,15 +586,21 @@ export const realQ4Services2025: RealQ4Service[] = [;
     price: '$149',
     period: '/month',
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
     description:
       'Email/portal/API ticketing, SLA rules, KBs, and RMM/network integrations with client-facing reporting.',
     features: [
+<<<<<<< HEAD
 =======
     description:;
       'Email / portal / API ticketing, SLA rules, KBs, and RMM / network integrations with client - facing reporting.',
     features: [;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       'Inbox and portal ticket intake',
       'Auto-routing, SLAs, and escalations',
       'Public/private knowledge base',
@@ -514,6 +612,9 @@ export const realQ4Services2025: RealQ4Service[] = [;
     popular: true,
     icon: '🛠️',
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
     color: 'from-blue-600 to-indigo-700',
     textColor: 'text-indigo-400',
@@ -527,8 +628,11 @@ export const realQ4Services2025: RealQ4Service[] = [;
     category: 'Quality & Monitoring',
     realService: true,
 
+<<<<<<< HEAD
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     color: 'from - blue - 600 to - indigo - 700',
     text_color: 'text - indigo - 400',
     link: 'https://ziontechgroup.com / services / it - helpdesk - for - msps',
@@ -541,9 +645,13 @@ export const realQ4Services2025: RealQ4Service[] = [;
     real_service: true,
     technology: ['Next.js', 'Node.js', 'PostgreSQL'],
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     integrations: ['Zendesk', 'Freshdesk', 'Datadog', 'Grafana'],
     use_cases: ['IT support', 'SLA management', 'Client reporting'],
     roi: 'Faster resolution, less toil; better client satisfaction.',
@@ -565,10 +673,14 @@ export const realQ4Services2025: RealQ4Service[] = [;
 export const real2025Q4Additions = [;
   {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     id: 'ai - governed - rag - platform',
     name: 'AI - Governed RAG Platform',
     tagline: 'Enterprise - grade RAG with guardrails, approvals, and evals',
@@ -578,9 +690,13 @@ export const real2025Q4Additions = [;
       'Production - ready retrieval augmented generation with content pipelines, PII redaction, policy guardrails, evals, and human approvals for high - stakes workflows.',
     features: [;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       'Document sync and chunking pipelines',
       'Metadata and policy guardrails',
       'Evals and drift tracking',
@@ -591,10 +707,14 @@ export const real2025Q4Additions = [;
     popular: true,
     icon: '🧠',
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     color: 'from - cyan - 600 to - blue - 700',
     text_color: 'text - cyan - 300',
     link: `https://ziontechgroup.com / services/${to_slug ('ai - governed - rag - platform')}`,
@@ -617,9 +737,13 @@ export const real2025Q4Additions = [;
     real_implementation: true,
     implementation_details:;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       'Pipelines, policies, eval harness, cost and latency budgets.',
     launch_date: '2025 - 03 - 01',
     customers: 18,
@@ -629,10 +753,14 @@ export const real2025Q4Additions = [;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     id: 'edge - personalization - engine',
     name: 'Edge Personalization Engine',
     tagline: 'Real - time content and pricing personalization at the edge',
@@ -642,9 +770,13 @@ export const real2025Q4Additions = [;
       'Low - latency personalization rules and ML scoring at the edge with audience definitions, A / B tests, and analytics.',
     features: [;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       'Audience builder and traits',
       'Edge functions and KV cache',
       'A / B and holdout tests',
@@ -654,6 +786,9 @@ export const real2025Q4Additions = [;
     popular: true,
     icon: '⚡',
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
     technology: ['Next.js', 'Node.js', 'PostgreSQL'],
     integrations: ['Zendesk', 'Freshdesk', 'Datadog', 'Grafana'],
@@ -674,11 +809,157 @@ export const real2025Q4Additions = [;
   },
 ];
 
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 }
+=======
+    customers: 120,
+    rating: 4.7,
+    reviews: 48,
+  },
+  {
+    id: 'podcast-transcription-studio',
+    name: 'Podcast Transcription Studio',
+    tagline: 'Fast, accurate multi-speaker transcriptions with summaries',
+    price: '$29',
+    period: '/month',
+    description:
+      'Upload audio and receive punctuated transcripts, speaker diarization, show notes, and SEO-optimized summaries.',
+    features: [
+  {
+      'Timestamps and filler removal',
+      'Chapter detection and show notes',
+      'Embeddings and semantic search',
+      'Export to SRT, VTT, DOCX',
+      'Podcast platform integrations',
+    ],
+    popular: false,
+      'Competitive with Otter and Descript; better show notes and SEO summary pipeline.',
+    target_audience: 'Podcasters, media teams, agencies',
+    trial_days: 7,
+    setup_time: '10 minutes',
+    category: 'AI & Data',
+    integrations: ['Spotify', 'Apple Podcasts', 'YouTube'],
+    use_cases: ['Transcripts', 'SEO summaries', 'Episode search'],
+    roi: 'Save 4–8 hours per episode and improve SEO traffic.',
+    competitors: ['Otter', 'Descript', 'Rev'],
+    market_size: '$500M transcription tools',
+    growth_rate: '20% YoY',
+    variant: 'ai - futuristic',
+    contact_info: contact,
+    real_implementation: true,
+    implementation_details:;
+      'Batch transcription queue with GPU support; diarization and summarization pipeline.',
+    launch_date: '2025 - 09 - 15',
+    customers: 60,
+    rating: 4 && 4.6,
+    reviews: 22,
+  },
+  {
+      'Contact management and segmentation',
+      'Pipelines and kanban views',
+      'Calendar with SMS/email reminders',
+      'Import/export CSV and simple API',
+      'Mobile-friendly PWA',
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
+      'Basic reporting',
+    ],
+    popular: true,
+    icon: '📇',
+    integrations: ['Gmail', 'Outlook', 'Stripe'],
+    use_cases: ['Leads', 'Follow - ups', 'Deal tracking'],
+    roi: 'Increase follow - through and close rates 10–20% via reminders.',
+    competitors: ['HubSpot Starter', 'Zoho CRM', 'Pipedrive'],
+    market_size: '$5B SMB CRM',
+    growth_rate: '12% YoY',
+    variant: 'ai - futuristic',
+    contact_info: contact,
+    real_implementation: true,
+    implementation_details:;
+      'PWA with offline storage, task reminders, and webhook - based integrations.',
+    launch_date: '2025 - 10 - 20',
+    customers: 210,
+    rating: 4 && 4.5,
+    reviews: 77,
+  },
+  {
+      'Customer returns portal',
+      'Prepaid label generation',
+      'RMA approval rules',
+      'Inventory and refund sync',
+      'Email / SMS notifications',
+      'Analytics on reasons and cost',
+    ],
+    popular: false,
+    integrations: ['Shopify', 'WooCommerce', 'Shippo', 'Stripe'],
+    use_cases: ['Returns portal', 'Exchange workflows', 'Refund automation'],
+    roi: 'Reduce support tickets ~30% and speed refunds.',
+    competitors: ['Loop Returns', 'Returnly'],
+    market_size: '$800M returns software',
+    growth_rate: '18% YoY',
+    variant: 'ai - futuristic',
+    contact_info: contact,
+    real_implementation: true,
+    implementation_details:;
+      'Webhook - driven order sync; label / provider adapters.',
+    launch_date: '2025 - 10 - 05',
+    customers: 95,
+    rating: 4 && 4.6,
+    reviews: 35,
+  },
+  {
+      'Inbox and portal ticket intake',
+      'Auto - routing, SLAs, and escalations',
+      'Public / private knowledge base',
+      'Client portal with reports',
+      'RMM and network tool integrations',
+      'Billing export and time tracking',
+    ],
+    popular: true,
+    integrations: ['Zendesk', 'Freshdesk', 'Datadog', 'Grafana'],
+    use_cases: ['IT support', 'SLA management', 'Client reporting'],
+    roi: 'Faster resolution, less toil; better client satisfaction.',
+    competitors: ['Zendesk', 'Freshdesk', 'HaloPSA'],
+    market_size: '$10B helpdesk software',
+    growth_rate: '10% YoY',
+    variant: 'ai - futuristic',
+    contact_info: contact,
+    real_implementation: true,
+    implementation_details:;
+      'Email ingestion, rules engine, and portal with RBAC.',
+    launch_date: '2025 - 09 - 28',
+    customers: 70,
+    rating: 4 && 4.5,
+    reviews: 28,
+  },
+];
+export const real2025Q4Additions = [;
+  {
+      'Document sync and chunking pipelines',
+      'Metadata and policy guardrails',
+      'Evals and drift tracking',
+      'Human - in - the - loop approvals',
+      'Observability and cost caps',
+      'SDKs for Node / Python',
+    ],
+    popular: true,
+      'Pipelines, policies, eval harness, cost and latency budgets.',
+    launch_date: '2025 - 03 - 01',
+    customers: 18,
+    rating: 4 && 4.8,
+    reviews: 11,
+  },
+  {
+      'Audience builder and traits',
+      'Edge functions and KV cache',
+      'A / B and holdout tests',
+      'Privacy - first scoring',
+      'Dashboards and exports',
+    ],
+    popular: true,
 export const real2025Q4Additions = [
   {
     id: 'ai-governed-rag-platform',
@@ -697,9 +978,6 @@ export const real2025Q4Additions = [
     color: 'from-cyan-600 to-blue-700',
     textColor: 'text-cyan-300',
     link: `https://ziontechgroup.com/services/${toSlug('ai-governed-rag-platform')}`,
-
-    marketPosition: 'Safer alternative to DIY RAG, comparable to Guardrails/Evals + vector DB stacks.',
-
     targetAudience: 'Platform, data, and compliance teams',
     trialDays: 14,
     setupTime: '1–2 days',
@@ -737,13 +1015,12 @@ export const real2025Q4Additions = [
     icon: '⚡',
     color: 'from-emerald-600 to-teal-700',
     textColor: 'text-emerald-300',
-    link: `https://ziontechgroup.com/services/${toSlug('edge-personalization-engine')}`,
-    marketPosition: 'Simpler alternative to enterprise CDPs for SMBs, edge-native.',
     targetAudience: 'Growth and eCommerce teams',
     trialDays: 7,
     setupTime: 'Same day',
     category: 'Micro SaaS',
     realService: true,
+<<<<<<< HEAD
 
     color: 'from - emerald - 600 to - teal - 700',
     text_color: 'text - emerald - 300',
@@ -760,6 +1037,8 @@ export const real2025Q4Additions = [
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     integrations: ['Shopify, Stripe, Segment'],
     use_cases: ['Homepage variants, Pricing tests, Onsite promos'],
     roi: 'Lift conversion by 5–15% via real - time variants.',
@@ -779,6 +1058,7 @@ export const real2025Q4Additions = [
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -797,11 +1077,14 @@ export const real2025Q4Additions = [
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       'Seed data and fixtures',
       'Smoke tests and screenshots',
       'Secrets and policies as code',
       'Cost and TTL controls',
     ],
+<<<<<<< HEAD
     icon: '🚀',
 <<<<<<< HEAD
 
@@ -819,6 +1102,8 @@ export const real2025Q4Additions = [
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     category: 'Developer Tools',
     real_service: true,
     technology: ['Docker, K8s, IaC'],
@@ -840,6 +1125,7 @@ export const real2025Q4Additions = [
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
@@ -856,12 +1142,15 @@ export const real2025Q4Additions = [
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       'Streaming ingestion and rules',
       'Anomaly detection and drift',
       'LLM summaries and hints',
       'Slack / Email alerts and tickets',
       'Dashboards and exports',
     ],
+<<<<<<< HEAD
     icon: '📈',
 <<<<<<< HEAD
 
@@ -879,6 +1168,8 @@ export const real2025Q4Additions = [
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     category: 'Observability',
     real_service: true,
     technology: ['Loki / Elastic, OpenTelemetry, LLMs'],
@@ -900,6 +1191,7 @@ export const real2025Q4Additions = [
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
@@ -916,12 +1208,15 @@ export const real2025Q4Additions = [
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       'Policies and approvals',
       'Change logs and RBAC',
       'SLO - based rollbacks',
       'SDKs and edge eval',
       'Experiments and cohorts',
     ],
+<<<<<<< HEAD
     icon: '🏳️',
 <<<<<<< HEAD
 
@@ -1052,6 +1347,8 @@ export const real2025Q4Additions = [
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     category: 'Developer Tools',
     real_service: true,
     technology: ['Edge, SDKs, Audit logs'],
@@ -1073,6 +1370,7 @@ export const real2025Q4Additions = [
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
@@ -1089,12 +1387,15 @@ export const real2025Q4Additions = [
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       'Sequence composer and AI draft',
       'Warm - up and safety checks',
       'Reply intent and routing',
       'Blacklist monitoring',
       'CRM sync',
     ],
+<<<<<<< HEAD
     icon: '✉️',
 <<<<<<< HEAD
 
@@ -1111,6 +1412,8 @@ export const real2025Q4Additions = [
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     category: 'Growth & Marketing',
     real_service: true,
     technology: ['Postmaster, LLMs, ESP APIs'],
@@ -1132,6 +1435,7 @@ export const real2025Q4Additions = [
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
@@ -1148,12 +1452,15 @@ export const real2025Q4Additions = [
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       'Schema registry and versioning',
       'Back / forward compatibility checks',
       'Lineage and ownership',
       'Alerts and SLOs',
       'CI / CD integrations',
     ],
+<<<<<<< HEAD
     icon: '🧮',
 <<<<<<< HEAD
 
@@ -1248,6 +1555,8 @@ export const real2025Q4Additions = [
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     category: 'Data & Analytics',
     real_service: true,
     technology: ['dbt, Kafka, OpenLineage'],
@@ -1268,6 +1577,7 @@ export const real2025Q4Additions = [
   },
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1347,6 +1657,8 @@ export const real2025Q4Additions = [
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     category: 'Enterprise IT',
     real_service: true,
     technology: ['Okta, Entra, Auth0, SCIM'],
@@ -1368,6 +1680,7 @@ export const real2025Q4Additions = [
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
@@ -1384,11 +1697,14 @@ export const real2025Q4Additions = [
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       'Risk scoring and hygiene checks',
       'Stage SLAs and alerts',
       'Next - best action copilot',
       'Reporting and dashboards',
     ],
+<<<<<<< HEAD
     icon: '📊',
 <<<<<<< HEAD
 
@@ -1444,12 +1760,15 @@ export const real2025Q4Additions = [
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     category: 'Business Automation',
     real_service: true,
     technology: ['CRM APIs, LLMs, Dashboards'],
     integrations: ['Salesforce, HubSpot'],
     use_cases: ['Forecast accuracy, Pipeline velocity'],
     roi: 'Increase forecast accuracy and win rates.',
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     category: 'Business Automation',
@@ -1482,12 +1801,15 @@ export const real2025Q4Additions = [
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     customers: 14,
     rating: 4 && 4.5,
     reviews: 10,
   },
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1527,12 +1849,15 @@ export const real2025Q4Additions = [
     description:;
       'Reliably receive, verify, replay, and audit webhooks with DLQs, retries, and fan - out to multiple services.',
     features: [;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       'Signature verification and secrets',
       'Replay and DLQs',
       'Retries and backoff',
       'Fan - out and transformations',
       'Audit logs and RBAC',
     ],
+<<<<<<< HEAD
     icon: '🔁',
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     color: 'from - cyan - 600 to - blue - 700',
@@ -1546,6 +1871,8 @@ export const real2025Q4Additions = [
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     category: 'Developer Tools',
     real_service: true,
     technology: ['Queues, HMAC, Workers'],
@@ -1566,6 +1893,7 @@ export const real2025Q4Additions = [
   },
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1618,11 +1946,14 @@ export const real2025Q4Additions = [
     description:;
       'Hands - off Postgres ops: backups, PITR, failover drills, index maintenance, and baseline dashboards.',
     features: [;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       'Automated backups and PITR',
       'Failover drills and runbooks',
       'Index and bloat maintenance',
       'Performance dashboards',
     ],
+<<<<<<< HEAD
     icon: '🗄️',
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     color: 'from - emerald - 600 to - teal - 700',
@@ -1636,6 +1967,8 @@ export const real2025Q4Additions = [
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     category: 'Enterprise IT',
     real_service: true,
     technology: ['Postgres, Patroni / Cloud - native HA'],
@@ -1654,6 +1987,7 @@ export const real2025Q4Additions = [
     rating: 4 && 4.6,
     reviews: 9,
   },
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1838,6 +2172,9 @@ export const real2025Q4Additions = [
     textColor: 'text-emerald-300',
     link: `https://ziontechgroup && ziontechgroup.com/services/${toSlug('managed-postgres-ha-lite')}`;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+    color: 'from-emerald-600 to-teal-700';
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     marketPosition: 'Practical alternative to DBAs for small teams.';
     targetAudience: 'SMBs and startups';
     trialDays: 7;
@@ -1857,6 +2194,7 @@ export const real2025Q4Additions = [
     implementationDetails: 'Backup policies, failover drills, dashboards.';
     launchDate: '2025-03-11';
     customers: 17;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     rating: 4 && 4.6,
@@ -2585,3 +2923,8 @@ export const real2025Q4Additions = [
   }
 ];
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+    reviews: 9
+  }
+];
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

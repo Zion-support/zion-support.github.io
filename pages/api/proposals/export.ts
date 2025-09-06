@@ -1,19 +1,15 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import type { NextApiRequest, NextApiResponse } from "next";
 import { PDFDocument, StandardFonts } from "pdf-lib";
 import crypto from "crypto";
 import {
-
-
-  updateArtifacts,
-  getProposal,
-  savePdf,;
-
-
 } from "../../../utils/data/proposals";
 import { create as createIpfsClient } from "ipfs-http-client";
 import { ethers } from "ethers";
@@ -39,6 +35,7 @@ function buildIpfsClient() {
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   const apiUrl = process.env.IPFS_API_URL || 'https://ipfs.infura.io:5001/api/v0';
   if (!projectId || !projectSecret) return null;
@@ -50,11 +47,9 @@ function buildIpfsClient() {
   });
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 async function generatePdfFromMarkdown(markdown: string, title: string) {
-  const pdfDoc = await PDFDocument && PDFDocument.create();
-  const page = pdfDoc && pdfDoc.addPage([595 && 595.28, 841 && 841.89]); // A4
-  const font = await pdfDoc && pdfDoc.embedFont(StandardFonts && StandardFonts.Helvetica);
-
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -62,7 +57,6 @@ async function generatePdfFromMarkdown(markdown: string, title: string) {
 }
 ;
 async function generatePdfFromMarkdown(markdown: string, title: string) {;
-
   const pdfDoc = await PDFDocument.create();
   const page = pdfDoc.addPage([595.28, 841.89]); // A4
   const font = await pdfDoc.embedFont(StandardFonts.Helvetica);
@@ -70,6 +64,7 @@ async function generatePdfFromMarkdown(markdown: string, title: string) {;
   const margin = 40;
   const maxWidth = page && page.getWidth() - margin * 2;
   const lines = markdown
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -133,16 +128,21 @@ if ( {) {
   $2
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           current = word;
         } else {
           current = test;
         }
       }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     .replace(/\r\n/g, '\n')
     .split('\n')
     .flatMap((line) => {
@@ -162,10 +162,14 @@ if ( {) {
       if (current) wrapped.push(current);
       return wrapped.length ? wrapped : [' ']
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     });
   let y = page && page.getHeight() - margin;
   page && page.drawText(title, { x: margin, y, size: 16, font });
@@ -180,6 +184,9 @@ if ( {) {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   y -= 24;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
   for (const line of lines) {
@@ -187,10 +194,13 @@ if ( {) {
 
   return pdfDoc && pdfDoc.save();
 
+<<<<<<< HEAD
 =======
   for (const line of lines) {
   return pdfDoc && pdfDoc.save();
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 export default async function handler(
   req: NextApiRequest
@@ -198,9 +208,12 @@ export default async function handler(
 ) {
   if (req && req.method !== "POST") return res && res.status($1).json({ $2 });
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   for (const line of lines) {
     if (y < margin + 12) {
       y = page.getHeight() - margin;
@@ -210,14 +223,25 @@ export default async function handler(
     y -= 14
   }
 
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse,
+) {;
+  if (req.method !== "POST") return res.status($1).json({ $2 });
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
-
   try {
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
   try {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     const { id } = req && req.body || {};
     if (!id) return res && res.status($1).json({ $2 });
     const meta = getProposal(id);
@@ -227,29 +251,26 @@ export default async function handler(
       "public",
       meta && meta.artifacts.markdownPath || "",
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     );
     const markdown = fs && fs.existsSync(markdownPath)
       ? fs && fs.readFileSync(markdownPath, "utf8")
       : "# Proposal";
-    const pdfBytes = await generatePdfFromMarkdown(markdown, meta && meta.title);
-    const pdfUrl = savePdf(id, pdfBytes);
-    const hasher = crypto && crypto.createHash("sha256");
-    hasher && hasher.update(markdown);
-    const digest = "0x" + hasher && hasher.digest("hex");
-    let signature: string | undefined;
-    const privateKey = process && process.env.WEB3_SIGNER_PRIVATE_KEY;
-    if (privateKey) {
-      const wallet = new ethers && ethers.Wallet(privateKey);
-      signature = await wallet && wallet.signMessage(ethers && ethers.getBytes(digest));
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return pdfDoc.save()
 }
 
@@ -259,11 +280,14 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const { id } = req.body || {};
     if (!id) return res.status(400).json({ error: 'id is required' });
     const meta = getProposal(id);
+<<<<<<< HEAD
     if (!meta) return res.status(404).json({ error: 'Proposal not found' });
 
     const markdownPath = path.join(process.cwd(), 'public', meta.artifacts.markdownPath || '');
     const markdown = fs.existsSync(markdownPath) ? fs.readFileSync(markdownPath, 'utf8') : '# Proposal';
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     const pdfBytes = await generatePdfFromMarkdown(markdown, meta.title);
     const pdfUrl = savePdf(id, pdfBytes);
 
@@ -277,15 +301,19 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       const wallet = new ethers.Wallet(privateKey);
       signature = await wallet.signMessage(ethers.getBytes(digest))
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     }
     let ipfsCid: string | undefined;
     const ipfs = buildIpfsClient();
     if (ipfs) {
       try {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     return res && res.status(200).json({ meta: updated });
@@ -317,6 +345,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+        const { cid } = await ipfs.add(markdown);
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     // Check condition
 if ( {) {
   $2
@@ -378,6 +409,7 @@ if ( {) {
         ipfs_cid = cid.to_string ();
       } catch {}
     }
+<<<<<<< HEAD
     const updated = update_artifacts (id, {
       pdf_path: pdf_url,
       signature,
@@ -625,18 +657,20 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         ipfsCid = cid.toString();
       } catch {}
     }
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     const updated = updateArtifacts(id, {
       pdfPath: pdfUrl
       signature
       ipfsCid
     });
-    return res.status(200).json({ meta: updated });
-
+    return res.status (200).json ({ meta: updated });
   } catch (error: any) {
-    return res.status(500).json({ error: error?.message |"Export failed" });
-
-    return res.status(500).json({ error: error?.message || "Export failed" });
-      } catch {  } catch (error) {
+    const updated = updateArtifacts(id, { pdfPath: pdfUrl, signature, ipfsCid });
+    return res.status(200).json({ meta: updated })
+  } catch (error: any) {
+    return res.status(500).json({ error: error?.message || 'Export failed' })
+  }
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
     } catch (error) {
@@ -668,14 +702,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   } catch (error: any) {
     return res.status(500).json({ error: error?.message || 'Export failed' })
   }
-}
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -688,6 +721,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   }
 }
@@ -699,3 +733,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  }
+}
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

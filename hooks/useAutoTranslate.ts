@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { useEffect, useMemo, useState } from 'react';
 import { translateTextViaAI } from '../utils / translation';
@@ -7,11 +8,14 @@ import { translateTextViaAI } from '../utils / translation';
 import { useEffect, useMemo, useState } from 'react';
 import { translateTextViaAI } from '../utils / translation';
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export type UseAutoTranslateResult = {
   translations: Record < string, string>;
   loading: boolean;
   error?: string;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -52,6 +56,12 @@ export function useAutoTranslate(text: string, targets: string[], debounceMs = 6
 =======
       setTranslations({});
       return
+=======
+  const [translations, setTranslations] = useState<Record<string, string>>({});
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | undefined>(undefined);
+      setTranslations({});
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ;
 export function useAutoTranslate (
   text: string,
@@ -70,11 +80,15 @@ if ( {) {
 }
       set_translations ({});
       return;    }      return;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     }
     let cancelled = false;
     const timer = set_timeout (async () => {
       try {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -84,6 +98,8 @@ if ( {) {
       } catch (e: any) {
         if (!cancelled) setError(e?.message || 'Translation failed')
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         set_loading (true);
         set_error (undefined);
         const res = await translateTextViaAI (text, targets);
@@ -108,14 +124,20 @@ if ( {) {
 }
       }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     }
   }, [key, debounce_ms]);
 ;
   return { translations, loading, error }
-
+    }
+  }, [key, debounceMs]);
+  return { translations, loading, error }
 }
+<<<<<<< HEAD
 
 =======
 =======
@@ -132,3 +154,11 @@ if ( {) {
   return { translations, loading, error }
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+}
+    }
+  }, [key, debounce_ms]);
+;
+  return { translations, loading, error }
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

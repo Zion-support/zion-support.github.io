@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -58,10 +59,13 @@ export function FloatingCTA() {
 
       if (scrollPosition > threshold && !isClosed) {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         setIsVisible(true);
       } else {;
         setIsVisible(false);
       }
+<<<<<<< HEAD
 =======
 
   useEffect(() => {;
@@ -101,10 +105,13 @@ export function FloatingCTA() {
   }, [isClosed]);
   const handleClose = () => {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     setIsClosed(true);
     setIsVisible(false);
   }
   if (!isVisible) return null;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   return (
@@ -227,10 +234,15 @@ export function FloatingCTA() {;
 ;
   return (;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+  return (
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <div className="fixed bottom-6 left-0 right-0 mx-auto max-w-md px-4 z-50 animate-fade-in">;
       <div className="bg-gradient-to-r from-zion-blue-dark to-zion-blue p-4 rounded-lg border border-zion-purple shadow-lg flex items-center justify-between">;
         <div className="mr-4">;
           <p className="text-white font-medium">Ready to explore Zion?</p>;
+<<<<<<< HEAD
 <<<<<<< HEAD
           <p className="text-zion-slate-light text-sm">;
             Register today to access all features!;
@@ -264,6 +276,8 @@ export function FloatingCTA() {;
             className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple whitespace-nowrap";
             asChild;
           >;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <Link to="/signup">Register Now</Link>;
           </Button>;
           <button;
@@ -271,17 +285,23 @@ export function FloatingCTA() {;
             className="text-zion-slate hover: text-white p-1";
             aria-label="Close";
           >;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <X className="w-5 h-5" />;
           </button>;
         </div>;
       </div>;
     </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
   );
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { Button  } from '@/components / ui / button';
 import { Link  } from './react-router-dom';
 import { useState, useEffect  } from './react';
@@ -351,6 +371,7 @@ if (return null) {
       </div>;
     </div>);
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 }
 =======
@@ -382,3 +403,6 @@ return (<div className="fixed bottom-6 left-0 right-0 mx-auto max-w-md px-4 z-50
 }
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

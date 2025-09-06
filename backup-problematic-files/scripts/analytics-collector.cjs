@@ -12,6 +12,15 @@ console.log(' Starting Analytics Collection...')
     '.env.example'
 <<<<<<< HEAD
     'next.config.js'
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
     'next.config.js'
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/main
+=======
+=======
+    'next.config.js'
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> pr-12166

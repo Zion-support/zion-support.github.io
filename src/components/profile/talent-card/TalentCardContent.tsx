@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import React, { useState } from 'react'
 import { MapPin } from 'lucide-react'
@@ -29,6 +30,13 @@ export function TalentCardContent(): any ({;
 }: TalentCardContentProps) {;
   const [isHovering, setIsHovering] = useState(false);
 =======
+=======
+interface TalentCardContentProps {
+  summary: string | undefined;
+  bio: string;
+  timezone: string | undefined;
+  skills: string[] | undefined
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export function TalentCardContent({
   summary
   bio
@@ -36,7 +44,10 @@ export function TalentCardContent({
   skills
 }: TalentCardContentProps) {
   const [isHovering, setIsHovering] = useState(false)
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   return (
     <div>;
@@ -53,6 +64,7 @@ export function TalentCardContent({
         onMouseEnter={() => setIsHovering(true)}
         onMouseLeave={() => setIsHovering(false)}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
       >;
         <p className='text-zion-slate mb-4'>{summary || bio}</p>;
@@ -67,12 +79,15 @@ export function TalentCardContent({
         </div>
       )}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {/* Short bio or summary - longer on hover for desktop */}
       <div
         className="overflow-hidden transition-all duration-300" 
         style={{ maxHeight: isHovering ? '8rem' : '3rem' }}
         onMouseEnter = {() => setIsHovering(true),}
         onMouseLeave = {() => setIsHovering(false),}
+<<<<<<< HEAD
 <<<<<<< HEAD
       >;
         <p className='text-zion-slate mb-4'>{summary || bio}</p>;
@@ -106,6 +121,8 @@ interface TalentCardContentProps {
   timezone: string | undefined,
   skills: string[] | undefined
       
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useState } from "react",;
 import { MapPin } from 'lucide-react';
 import { TalentCardSkills } from "./TalentCardSkills",;
@@ -128,11 +145,15 @@ export function TalentCardContent({ summary, bio, timezone, skills }: TalentCard
         </div>
       )}
 ;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {/* Short bio or summary - longer on hover for desktop */}
       <div 
         className="overflow-hidden transition-all duration-300" 
         style={{ maxHeight: isHovering ? '8rem' : '3rem' }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
       <div 
@@ -153,17 +174,18 @@ export function TalentCardContent({ summary, bio, timezone, skills }: TalentCard
     </div>;
   );
 };
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         onMouseEnter={() => setIsHovering(true)}
         onMouseLeave={() => setIsHovering(false)}
       >
-        <p className='text-zion-slate mb-4'>{summary || bio}</p>
-      </div>
         <p className="text-zion-slate mb-4">
           {summary || bio}
         </p>;
       </div>;
       {/* Skills */}
       <TalentCardSkills skills={skills} />;
+<<<<<<< HEAD
     </div>;
   );
 }
@@ -223,3 +245,5 @@ function TalentCardContent() {
 =======
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

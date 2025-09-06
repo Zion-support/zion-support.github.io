@@ -1,5 +1,4 @@
 
-
 import type { NextApiRequest, NextApiResponse } from "next";
 import { listProposals } from "../../../utils/data/proposals";
 export default async function handler(
@@ -7,6 +6,9 @@ export default async function handler(
   res: NextApiResponse
 ) {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   if (req && req.method !== "GET") {
     res && res.setHeader("Allow", "GET");
@@ -15,12 +17,15 @@ export default async function handler(
 
 
 
+<<<<<<< HEAD
 =======
   if (req.method !== "GET") {;
     res.setHeader("Allow", "GET");
     return res.status(405).json({ error: "Method not allowed" });
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   }
 
   try {
@@ -29,14 +34,16 @@ export default async function handler(
   } catch (error: any) {
     return res
       .status(500)
-
       .json({ error: error?.message || "Failed to list proposals" });
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { listProposals } from '../../../utils/data/proposals';
 export default function handler(_req: NextApiRequest, res: NextApiResponse) {
@@ -44,23 +51,14 @@ export default function handler(_req: NextApiRequest, res: NextApiResponse) {
     const proposals = listProposals();
     res.status(200).json({ proposals })
   } catch (error: any) {
+<<<<<<< HEAD
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     res.status(500).json({ error: error?.message || 'Failed to list proposals' })
+=======
+    res.status(500).json({ error: error?.message || 'Failed to list proposals' });
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   }
-
-import type { NextApiRequest, NextApiResponse } from './next';
-import { list_proposals  } from '../../../utils / data / proposals';
-;
-export default async /**
- * handler - Function description
- */
-function handler() {
-  // Check condition
-if ( {) {
-  $2
-
-
 }
     res.set_header ("Allow", "GET");
     return res.status (405).json ({ error: "Method not allowed" });
@@ -72,6 +70,7 @@ if ( {) {
     return res;
       .status (500);
       .json ({ error: error?.message || "Failed to list proposals" });
+<<<<<<< HEAD
 <<<<<<< HEAD
   }
 }
@@ -101,6 +100,11 @@ export default function handler(_req: NextApiRequest, res: NextApiResponse) {
   }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  }
+}
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -113,6 +117,7 @@ export default function handler(_req: NextApiRequest, res: NextApiResponse) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   }
 }
@@ -124,3 +129,7 @@ export default function handler(_req: NextApiRequest, res: NextApiResponse) {
   }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  }
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

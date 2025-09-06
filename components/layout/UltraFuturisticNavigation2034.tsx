@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -11,10 +12,13 @@ import React, { useState, useEffect } from 'react';
 import React, { useState, useEffect } from 'react',
 import React, { useState, useEffect } from 'react';
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 
 import {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -46,6 +50,8 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 =======
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   Menu
   X
   ChevronDown
@@ -153,6 +159,7 @@ import { motion, AnimatePresence } from 'framer-motion';
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield
   Microscope, DollarSign, Home, Users, Briefcase
 
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import {
 
@@ -160,6 +167,9 @@ import {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+import {
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   Menu,
   X,
   ChevronDown,
@@ -262,19 +272,26 @@ import {
   Facebook,
   Instagram,
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   Youtube,;
   Github,;} from 'lucide-react';import {
   Menu, X, ChevronDown, Search, Phone, Mail, MapPin, 
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, 
   Microscope, DollarSign, Home, Users, Briefcase, ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   BookOpen, MessageCircle, Star, TrendingUp, Target;
   Layers, Cpu, Database, Cloud, Lock, ShieldCheck;
   Earth, Factory, Car, Building, GraduationCap, Scale;
@@ -282,6 +299,7 @@ import {
   Leaf, Sun, Moon, Wind, Droplets, Mountain;
   Code, Wrench, Smartphone, BarChart3, Eye;
   Network, Server, HardDrive, Monitor;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   Laptop, Watch, Headphones, Speaker, Mic, ;
@@ -299,6 +317,8 @@ import {
   Keyboard, Mouse, CpuIcon, DatabaseIcon
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   CloudIcon, LockIcon, ShieldIcon, GlobeIcon;
   ZapIcon, SparklesIcon, BrainIcon, AtomIcon;
   HeartIcon, RocketIcon, ShieldIcon as ShieldIcon2;
@@ -308,6 +328,7 @@ import {
   PaletteIcon, VideoIcon, LockIcon as LockIcon2;
   GlobeIcon as GlobeIcon2, CpuIcon as CpuIcon2;
   Handshake, LifeBuoy, Activity;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -333,6 +354,8 @@ const serviceCategories = [
     description: 'Next-generation AI consciousness and creativity'
     services: [
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     services: [;
       {
         name: 'Quantum Machine Learning',
@@ -353,10 +376,6 @@ const serviceCategories = [
         price: '$599 / month',
       },
       {
-        name: 'AI Climate Modeling',
-        href: '/ai - climate - modeling - platform',
-        description: 'Predict climate change with AI',
-        price: '$1, 299 / month',
       },
     ],
   },  {      { name: 'Quantum Machine Learning', href: '/quantum - machine - learning - platform', description: 'Harness quantum computing for ML', price: '$1, 999 / month' }
@@ -366,13 +385,18 @@ const serviceCategories = [
     ];
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     title: '🏙️ Enterprise IT Solutions',
     icon: CpuIcon,
     color: 'from - blue - 600 via - cyan - 600 to - teal - 600',
     description: 'Autonomous enterprise infrastructure',
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -413,10 +437,13 @@ const serviceCategories = [
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     title: '🛒 Business Automation',
     icon: ShoppingCart,
     color: 'from - teal - 600 via - emerald - 600 to - green - 600',
     description: 'Streamline business operations',
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -457,10 +484,13 @@ const serviceCategories = [
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     title: '🤖 Robotics & Automation',
     icon: RocketIcon,
     color: 'from - green - 600 via - yellow - 600 to - orange - 600',
     description: 'Intelligent automation solutions',
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -501,12 +531,17 @@ const serviceCategories = [
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     title: '🔬 Research & Development',
     icon: MicroscopeIcon,
     color: 'from - orange - 600 via - red - 600 to - pink - 600',
     description: 'Breakthrough research solutions',
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 const quickLinks = [
   { name: 'Home', href: '/', icon: Home }
@@ -517,6 +552,7 @@ const quickLinks = [
   { name: 'Case Studies', href: '/case-studies', icon: FileText }
   { name: 'Blog', href: '/blog', icon: MessageCircle }
   { name: 'Contact', href: '/contact', icon: MessageCircle },];  { name: 'Contact', href: '/contact', icon: MessageCircle }
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -561,6 +597,10 @@ const quick_links = [;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+    ];
+  }
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   { name: 'Home', href: '/', icon: Home },
   { name: 'Services', href: '/services', icon: Briefcase },
   { name: 'Solutions', href: '/solutions', icon: Target },
@@ -568,6 +608,7 @@ const quick_links = [;
   { name: 'Resources', href: '/resources', icon: BookOpen },
   { name: 'Case Studies', href: '/case - studies', icon: FileText },
   { name: 'Blog', href: '/blog', icon: MessageCircle },
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -639,11 +680,14 @@ const quickLinks = [
 const companyLinks = [
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   { name: 'About Us', href: '/about', icon: Users },
   { name: 'Careers', href: '/careers', icon: Briefcase },
   { name: 'News', href: '/news', icon: FileText },
   { name: 'Partners', href: '/partners', icon: Handshake },
   { name: 'Support', href: '/support', icon: LifeBuoy },
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   { name: 'Status', href: '/status', icon: Activity }
@@ -938,6 +982,10 @@ const certifications = [
   'ISO 27001 CertifiedSOC 2 Type II CompliantGDPR CompliantHIPAA CompliantPCI DSS Level 1FedRAMP AuthorizedQuantum Security CertifiedAI Ethics Compliant'
 ];
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  { name: 'Status', href: '/status', icon: Activity }
+];
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 
@@ -945,16 +993,20 @@ export default function UltraFuturisticNavigation2034() {;
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 export default function UltraFuturisticNavigation2034() {
 
 export default function UltraFuturisticNavigation2034() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const [isOpen, setIsOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [isScrolled, setIsScrolled] = useState(false);
   useEffect(() => {
     const handleScroll = () => {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       setIsScrolled(window.scrollY > 50)
@@ -972,6 +1024,8 @@ export default function UltraFuturisticNavigation2034() {;
   const closeDropdown = () => {
     setActiveDropdown(null);  };    }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll)
   }, []);
@@ -981,11 +1035,14 @@ export default function UltraFuturisticNavigation2034() {;
   const closeDropdown = () => {
     setActiveDropdown(null)
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 const quickLinks = [;
   { name: 'Home', href: '/', icon: Home },;
   { name: 'Services', href: '/services', icon: Briefcase },;
@@ -1043,11 +1100,14 @@ const socialLinks = [;
   { name: 'YouTube', href: 'https://youtube && youtube.com/@ziontechgroup', icon: Youtube },;
   { name: 'Twitter', href: 'https://twitter && twitter.com/ziontechgroup', icon: Twitter }
 ];
+<<<<<<< HEAD
 
 const certifications = [;
   'ISO 27001 CertifiedSOC 2 Type II CompliantGDPR CompliantHIPAA CompliantPCI DSS Level 1FedRAMP AuthorizedQuantum Security CertifiedAI Ethics Compliant';
 ];
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export default function UltraFuturisticNavigation2034() {;
   const [isOpen, setIsOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
@@ -1060,11 +1120,14 @@ export default function UltraFuturisticNavigation2034() {;
     window && window.addEventListener('scroll', handleScroll);
     return () => window && window.removeEventListener('scroll', handleScroll);
   }, []);
+<<<<<<< HEAD
 
   const toggleDropdown = (category: string) => {;
     setActiveDropdown(activeDropdown === category ? null : category);
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   };
 
   const closeDropdown = () => {;
@@ -1073,6 +1136,7 @@ export default function UltraFuturisticNavigation2034() {;
     return () => window && window.removeEventListener('scroll', handleScroll);
   }, []);
 
+<<<<<<< HEAD
   const toggleDropdown = (category: string) => {;
     setActiveDropdown(activeDropdown === category ? null : category);
   };
@@ -1082,14 +1146,19 @@ export default function UltraFuturisticNavigation2034() {;
   };
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <>;
       {/* Top Contact Bar */}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
                 {contactInfo.mobile}
               </span>
@@ -1107,9 +1176,12 @@ export default function UltraFuturisticNavigation2034() {;
             </div>
           </div>                {contactInfo.mobile}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <div className="bg-gradient-to-r from-cyan-900 via-blue-900 to-purple-900 text-white py-2 px-4 text-sm">
         <div className="max-w-7xl mx-auto flex flex-wrap items-center justify-between">
           <div className="flex items-center space-x-6">
@@ -1124,8 +1196,11 @@ export default function UltraFuturisticNavigation2034() {;
             <div className='flex items-center space-x-2'>
               <Phone className='w-4 h-4 text-cyan-400' />
               <span className='hover:text-cyan-400 transition-colors'>
+<<<<<<< HEAD
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 {contactInfo.mobile}
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
               </span>
@@ -1144,12 +1219,15 @@ export default function UltraFuturisticNavigation2034() {;
             </div>
           </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
           <div className="flex items-center space-x-4">
 
 =======
           <div className="flex items-center space-x-4">
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <div className="flex items-center space-x-2">
               <Star className="w-4 h-4 text-yellow-400" />
               <span className="text-yellow-400 font-semibold">5.0 Rating</span>
@@ -1157,6 +1235,7 @@ export default function UltraFuturisticNavigation2034() {;
             <div className="flex items-center space-x-2">
               <Users className="w-4 h-4 text-green-400" />
               <span className="text-green-400 font-semibold">50K+ Customers</span>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
             </div>
@@ -1175,6 +1254,9 @@ export default function UltraFuturisticNavigation2034() {;
       </div>
 <div className='bg-gradient-to-r from-cyan-900 via-blue-900 to-purple-900 text-white py-2 px-4 text-sm'>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+      <div className='bg-gradient-to-r from-cyan-900 via-blue-900 to-purple-900 text-white py-2 px-4 text-sm'>;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <div className='max-w-7xl mx-auto flex flex-wrap items-center justify-between'>;
           <div className='flex items-center space-x-6'>;
             <div className='flex items-center space-x-2'>;
@@ -1231,9 +1313,12 @@ export default function UltraFuturisticNavigation2034() {;
         </div>;
       </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       {/* Main Navigation */}
+<<<<<<< HEAD
 
 =======
       {/* Main Navigation */}
@@ -1247,10 +1332,13 @@ export default function UltraFuturisticNavigation2034() {;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         isScrolled 
           ? 'bg-black/90 backdrop-blur-xl border-b border-cyan-500/20' 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           : 'bg-transparent'
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -1270,6 +1358,8 @@ export default function UltraFuturisticNavigation2034() {;
 
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             >
               <div className='relative'>
                 <div className='w-12 h-12 bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500 rounded-xl flex items-center justify-center'>
@@ -1346,6 +1436,7 @@ export default function UltraFuturisticNavigation2034() {;
                 <p className="text-xs text-gray-400">Future Technology Solutions</p>;
               </div>;
             </motion && motion.div>;
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             {/* Desktop Navigation */}
@@ -1371,20 +1462,29 @@ export default function UltraFuturisticNavigation2034() {;
                   className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 font-medium"
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   {link.name}
                 </Link>
               ))}
 
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 >
                   {link.name}
                 </Link>
               ))}
 <<<<<<< HEAD
+<<<<<<< HEAD
               
 =======
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+              
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               {/* Services Dropdown */}
               <div className="relative group">
                 <button className="flex items-center space-x-1 text-gray-300 hover:text-cyan-400 transition-colors duration-200 font-medium">
@@ -1635,6 +1735,9 @@ function UltraFuturisticNavigation2034() {
                               key={service.name}
                               href={service.href}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                               className='block text - xs text - gray - 300 hover:text - cyan - 400 transition - colors'                            >              {/* Services Dropdown */}
               <div className="relative group">;
                 <button className="flex items - center space - x-1 text - gray - 300 hover:text - cyan - 400 transition - colors duration - 200 font - medium">;
@@ -1654,13 +1757,17 @@ function UltraFuturisticNavigation2034() {
                           {category.services.slice (0, 2).map ((service) => (
                             <Link;
 
+<<<<<<< HEAD
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                               key={service.name}
                               href={service.href}
                               className="block text - xs text - gray - 300 hover:text - cyan - 400 transition - colors";
                             >;
                               {service.name}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1685,19 +1792,25 @@ function UltraFuturisticNavigation2034() {
                             >
                               {service.name}
                             </Link>
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                           ))}
-                        </div>
-                      </div>
+                        </div>;
+                      </div>;
                     ))}
+<<<<<<< HEAD
                   </div>
                   <div className='mt-4 pt-4 border-t border-cyan-500/20'>
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     <Link
                       href='/services'
                       className='flex items-center justify-center w-full px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200'>;
                       View All Services;
                       <ArrowRight className='w-4 h-4 ml-2' />                    </Link>                    <Link
+<<<<<<< HEAD
 =======
                   </div>
                   <div className="mt-4 pt-4 border-t border-cyan-500/20">
@@ -1717,11 +1830,14 @@ function UltraFuturisticNavigation2034() {
                       href="/services"
                 href="/contact"
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 className="px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 font-medium"
               >
                 Get Started
               </Link>
             </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1769,10 +1885,13 @@ function UltraFuturisticNavigation2034() {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               >;
                 Get Started;
               </Link>;
             </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -1783,6 +1902,8 @@ function UltraFuturisticNavigation2034() {
             {/* Mobile Menu Button */}
             <div className="lg:hidden">
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <button
                 onClick={() => setIsOpen(!isOpen)}
                 className='text-gray-300 hover:text-cyan-400 transition-colors';
@@ -1797,13 +1918,17 @@ function UltraFuturisticNavigation2034() {
               >;
                 {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               </button>;
             </div>;
           </div>;
         </div>;
 
+<<<<<<< HEAD
 
 =======
 
@@ -1822,6 +1947,8 @@ function UltraFuturisticNavigation2034() {
 
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         {/* Mobile Menu */}
         <AnimatePresence>;
           {isOpen && (;
@@ -1829,6 +1956,7 @@ function UltraFuturisticNavigation2034() {
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -1882,12 +2010,19 @@ function UltraFuturisticNavigation2034() {
                       }`} />
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     </button>
                     <AnimatePresence>
                       {activeDropdown === category.title && (
                         <motion.div
+<<<<<<< HEAD
 =======
         {/* Mobile Menu */}
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <AnimatePresence>;
           {is_open && (
             <motion.div;
@@ -1897,6 +2032,7 @@ function UltraFuturisticNavigation2034() {
               transition={{ duration: 0.3 }}
               className='lg:hidden bg - black / 95 backdrop - blur - xl border - t border - cyan - 500 / 20';
             >;
+<<<<<<< HEAD
               <div className='px - 4 py - 6 space - y-4'>;
                 {quick_links.map (link => (                  <Link;
                     key={link.name}
@@ -1947,12 +2083,19 @@ function UltraFuturisticNavigation2034() {
                       {active_dropdown === category.title && (
                         <motion.div;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                           initial={{ opacity: 0, height: 0 }}
                           animate={{ opacity: 1, height: 'auto' }}
                           exit={{ opacity: 0, height: 0 }}
                           transition={{ duration: 0.2 }}
 
-
+                          ))}
+                        </motion && motion.div>;
+                      )}
+                    </AnimatePresence>;
+                  </div>;
+                ))}
                 <Link
                   href='/contact'
                   onClick={() => setIsOpen(false)}
@@ -1962,9 +2105,12 @@ function UltraFuturisticNavigation2034() {
                   className="block w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 font-medium text-center";
                           className='mt - 3 ml - 4 space - y-2';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 className='mt - 3 ml - 4 space - y-2';
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                         >;
                           {category.services.map (service => (                            <Link;
                               key={service.name}
@@ -1996,6 +2142,7 @@ className='mt - 3 ml - 4 space - y-2';
                   Get Started;
                 </Link>;
               </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -2048,10 +2195,13 @@ className='mt - 3 ml - 4 space - y-2';
 
       <div className="h-20"></div>
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     </>
 =======
         </AnimatePresence>;
       </nav>;
+<<<<<<< HEAD
 =======
 =======
 
@@ -2060,12 +2210,15 @@ className='mt - 3 ml - 4 space - y-2';
           )}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
       {/* Spacer for fixed navigation */}
       <div className='h-20'></div>;
     </>;
   );      <div className="h-20"></div>;
     </>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -2079,6 +2232,9 @@ className='mt - 3 ml - 4 space - y-2';
   );
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  );
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             </motion.div>)}
         </AnimatePresence>;
       </nav>;
@@ -2087,6 +2243,7 @@ className='mt - 3 ml - 4 space - y-2';
     </>);      <div className="h - 20"></div>;
     </>);
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -2110,3 +2267,6 @@ className='mt - 3 ml - 4 space - y-2';
     </>
   );
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

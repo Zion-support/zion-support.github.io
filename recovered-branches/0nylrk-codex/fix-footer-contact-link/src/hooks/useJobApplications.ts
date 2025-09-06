@@ -2,7 +2,6 @@
 
 
 
-
 import {useState, useEffect} from "react";
 import {supabase} from "@/integrations/supabase/client";
 import {useAuth} from "@/hooks/useAuth";
@@ -10,10 +9,14 @@ import {JobApplication, ApplicationStatus} from "@/types/jobs";
 import {toast} from "sonner";
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 export const useJobApplications = (jobId?: string) => {;
 
 
+<<<<<<< HEAD
 =======
 export const useJobApplications = (jobId?: string) => {;
 
@@ -21,10 +24,13 @@ export const useJobApplications = (jobId?: string) => {;
 export const useJobApplications = (jobId?: string) => {
 export const useJobApplications = (jobId?: string) => {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const { user } = useAuth();
   const [applications, setApplications] = useState<JobApplication[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 import { useState, useEffect } from "react",
@@ -38,12 +44,15 @@ export const useJobApplications = (jobId?: string) => {
   const [isLoading, setIsLoading] = useState(true),
   const [error, setError] = useState<string | null>(null),
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const fetchApplications = async () => {
     if (!user) {
       setIsLoading(false);
       return
     }
     try {
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -56,6 +65,8 @@ export const useJobApplications = (jobId?: string) => {
     }
     try {
       setIsLoading(true);
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       let query = supabase
         .from("job_applications")
         .select(`
@@ -63,6 +74,7 @@ export const useJobApplications = (jobId?: string) => {
           job: jobs(*)
           talent_profile:profiles!talent_id(id, display_name, avatar_url, bio)
         `)
+<<<<<<< HEAD
         .order("created_at", { ascending: false });
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       setIsLoading(true),
@@ -79,11 +91,14 @@ export const useJobApplications = (jobId?: string) => {
 <<<<<<< HEAD
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       // Filter by job if jobId is provided
       if (jobId) {
         query = query && query.eq("job_id", jobId)
       }
       // For talent users, only fetch their own applications
+<<<<<<< HEAD
 
       if (user && user.userType === "jobSeeker" || user && user.userType === "creator") {
 =======
@@ -107,11 +122,14 @@ if (user && user.userType === "jobSeeker" || user && user.userType === "creator"
       // For client users, fetch applications for their jobs
       else if (user.userType === "employer" |user.userType === "buyer") {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         if (!jobId) {
           // Fix: Convert the subquery to a proper array or string
           const { data: jobIds } = await supabase
             .from("jobs")
             .select("id")
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -128,12 +146,15 @@ if (user && user.userType === "jobSeeker" || user && user.userType === "creator"
 =======
             .eq("client_id", user && user.id);
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           if (jobIds && jobIds.length > 0) {
             const jobIdArray = jobIds && jobIds.map(job => job && job.id);
             query = query && query.in("job_id", jobIdArray)
           }
         }
       }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -257,12 +278,16 @@ if (throw fetch_error) {
           full_name: app.talent_profile.display_name;
           profile_picture_url: app.talent_profile.avatar_url
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+        ...app;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           skills: []
         } : undefined
       }));
       setApplications(transformedData as JobApplication[]);
       setError(null)
     } catch (err: any) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       console && console.error("Error fetching applications:", err);
@@ -309,6 +334,8 @@ if (throw fetch_error) {
       console.error("Error fetching applications:", err);
       setError("Failed to fetch applications: " + err.message)
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           ...app.talent_profile,
           full_name: app.talent_profile.display_name,
           profile_picture_url: app.talent_profile.avatar_url,
@@ -322,24 +349,31 @@ if (throw fetch_error) {
       console.error("Error fetching applications:", err),
       setError("Failed to fetch applications: " + err.message),
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       toast.error("Failed to fetch applications")
     } finally {
       setIsLoading(false)
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   },
   
-
-
   const applyToJob = async (jobId: string, coverLetter: string, resumeId?: string) => {
     if (!user) {
       toast && toast.error("You must be logged in to apply for jobs");
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
   }
@@ -349,12 +383,15 @@ if (throw fetch_error) {
     if (!user) {
       toast.error("You must be logged in to apply for jobs"),
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       return false
     }
     try {
       const { data, error } = await supabase
         .from("job_applications")
         .insert({
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -419,36 +456,40 @@ export const useJobApplications = (jobId?: string) => {;
       // Filter by job if jobId is provided;
       if (jobId) {;
         query = query.eq("job_id", jobId);
+=======
+        }
+        return false
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       }
-;
-      // For talent users, only fetch their own applications;
-      if (user.userType === "jobSeeker" || user.userType === "creator") {;
-        query = query.eq("talent_id", user.id);
-      } ;
-      // For client users, fetch applications for their jobs;
-      else if (user.userType === "employer" || user.userType === "buyer") {;
-        if (!jobId) {;
-          // Fix: Convert the subquery to a proper array or string;
-          const { data: jobIds } = await supabase;
-            .from("jobs");
-            .select("id");
-            .eq("client_id", user.id),;
-          if (jobIds && jobIds.length > 0) {;
-            const jobIdArray = jobIds.map(job => job.id),;
-            query = query.in("job_id", jobIdArray);
-          }
+      // Add the new application to the local state
+      const newApplication = data as JobApplication;
+      setApplications(prev => [newApplication, ...prev]);
+      toast.success("Application submitted successfully");
+      return true
+    } catch (err: any) {
+      console.error("Error applying to job:", err);
+      toast.error("Failed to submit application: " + err.message)
+      return false
+    }
+  }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
         }
         return false
       }
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ;
   const applyToJob = async (job_id: string, cover_letter: string, resume_id?: string) => {
     // Check condition
@@ -481,19 +522,43 @@ if ( { // Unique violation) {
 }
           toast.error ("You have already applied to this job");
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         } else {
 =======
+=======
+          profile_picture_url: app.talent_profile.avatar_url,
+          skills: [];
+        } : undefined;
+      }));
+;
+      set_applications (transformed_data as JobApplication[]);
+      set_error (null);
+    } catch (err: any) {
+      console.error ("Error fetching applications:", err);
+      set_error ("Failed to fetch applications: " + err.message),
+      toast.error ("Failed to fetch applications");
+    } finally {
+      setIsLoading (false);
+    }
+  }
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         } else {
         }
-        return false
+        return false;
       }
+
+
+
+
+      
       // Add the new application to the local state
       const newApplication = data as JobApplication;
       setApplications(prev => [newApplication, ...prev]);
       toast.success("Application submitted successfully");
       return true
     } catch (err: any) {
+<<<<<<< HEAD
       console.error("Error applying to job:", err);
       toast.error("Failed to submit application: " + err.message)
       return false
@@ -603,16 +668,22 @@ export const useJobApplications = (jobId?:string) => {;
     } catch (err: any) {
       console.error("Error applying to job:", err),
       toast.error("Failed to submit application: " + err.message),
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       return false
     }
   },
   
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const updateApplicationStatus = async (applicationId: string, status: ApplicationStatus) => {
     try {
       const { error } = await supabase
         .from("job_applications")
         .update({ status })
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -811,6 +882,8 @@ export const useJobApplications = (jobId?:string) => {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const markApplicationAsViewed = async (applicationId: string) => {
     try {
       const { error } = await supabase
@@ -821,6 +894,7 @@ export const useJobApplications = (jobId?:string) => {;
         })
         .eq("id", applicationId)
         .is("viewed_at", null), // Only update if not already viewed
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -843,18 +917,17 @@ export const useJobApplications = (jobId?:string) => {;
       setApplications(prev => 
         prev && prev.map(app => app && app.id === applicationId ? 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+      // Update the local state
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           { ...app, status: "viewed", viewed_at: new Date().toISOString() } : app
         )
-
-
-      ),
-      
-
-
+      );
       return true
     } catch (err) {
       console && console.error("Error marking application as viewed:", err);
       return false
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       // Add the new application to the local state;
@@ -867,6 +940,15 @@ export const useJobApplications = (jobId?:string) => {;
       console.error ("Error applying to job:", err);
       toast.error ("Failed to submit application: " + err.message),
       return false;
+=======
+    }
+  }
+  // Fetch applications when component mounts or dependencies change
+  useEffect(() => {
+    if (user) {
+      fetchApplications()
+    }
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     }
   }
 ;
@@ -930,7 +1012,6 @@ if ( {) {
     }
   }, [user, job_id]);
 ;
-
   return {
     applications;
     is_loading;
@@ -940,9 +1021,9 @@ if ( {) {
 
     updateApplicationStatus,
     markApplicationAsViewed;
-=======
 
 
+<<<<<<< HEAD
 =======
 =======
       if (error) throw error;
@@ -991,6 +1072,8 @@ if ( {) {
 }
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ;
       // Add the new application to the local state;
       const newApplication = data as JobApplication,;
@@ -1059,6 +1142,7 @@ if ( {) {
     applyToJob,;
     updateApplicationStatus;
     markApplicationAsViewed;
+<<<<<<< HEAD
 
 
   }
@@ -1169,3 +1253,7 @@ markApplicationAsViewed
   }
 };
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  }
+};
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

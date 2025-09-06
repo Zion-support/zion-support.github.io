@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useEffect, useState } from 'react';
 import { MessageSquare, Video } from 'lucide-react';
 import { use_messaging } from '@/context / MessagingContext';
@@ -40,12 +41,17 @@ import { toast } from 'sonner';
 
 import { useRouter } from 'next/router', // Changed from react-router-dom;
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {logErrorToProduction} from '@/utils/productionLogger';
 export default function MessagingInbox() {;
 import { useRouter } from 'next/router'; // Changed from react-router-dom
 
 import {logErrorToProduction} from '@/utils/productionLogger';
 
+import { Button } from '@/components/ui/button';
+import { LoadingSpinner } from '@/components/ui/enhanced-loading-states';
+import { useRouter } from 'next/router'; // Changed from react-router-dom
 import React, { useEffect, useState } from 'react',
 import { MessageSquare, Video } from 'lucide-react'
 import { useMessaging } from '@/context/MessagingContext',
@@ -59,14 +65,15 @@ import { useRouter } from 'next/router', // Changed from react-router-dom
 import {logErrorToProduction} from '@/utils/productionLogger',
 export default function MessagingInbox() {
 
-import {logErrorToProduction} from '@/utils/productionLogger',
-xport default function MessagingInbox() {
+
+export default function MessagingInbox() {
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   const {
     conversations
     activeConversation
     setActiveConversation
+<<<<<<< HEAD
 export default function MessagingInbox() {
 <<<<<<< HEAD
 
@@ -111,24 +118,20 @@ export default function MessagingInbox() {
     setActiveConversation, 
     markAsRead,
     fetchConversations,
+=======
+
+    markAsRead;
+    fetchConversations;
+export default function MessagingInbox() {
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     isLoading
   } = useMessaging(),
   const isMobile = useIsMobile(),
   const router = useRouter(), // Changed from navigate
-  const [activeCall, setActiveCall] = useState<string | null>(null),
-  
-  useEffect(() => {
-  const [activeCall, setActiveCall] = useState<string | null>(null);
-  
-  useEffect((,) => {
-  const [activeCall, setActiveCall] = useState<string | null>(null),
-  
-  useEffect(() => {
-  const [activeCall, setActiveCall] = useState<string | null>(null),
-  
-  useEffect(() => {
     // Fetch conversations when component mounts
     const loadData = async () => {
+<<<<<<< HEAD
     const loadData = async () => {
 import { Button } from '@/components / ui / button';
 import { LoadingSpinner } from '@/components / ui / enhanced - loading - states';
@@ -154,9 +157,12 @@ function MessagingInbox() {
     // Fetch conversations when component mounts;
     const load_data = async () => {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       try {
         await fetch_conversations ();
       } catch (error) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -175,23 +181,26 @@ function MessagingInbox() {
     loadData()
   }, [fetchConversations]);
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     };
     
     loadData()
   }, [fetchConversations]);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const startVideoCall = () => {
   
     if (!activeConversation) {
       toast.error("Please select a conversation first");
-      return;
-    }
-    
-    const roomId = `msg-${activeConversation.id}`;
-    setActiveCall(roomId);
 
+        logErrorToProduction('Failed to load conversations:', { data: error })
+        toast.error("Failed to load messages. Please try again.")
+      }
     },
     
     loadData()
@@ -202,15 +211,6 @@ function MessagingInbox() {
       toast.error("Please select a conversation first"),
       return
     }
-    const roomId = `msg-${activeConversation.id}`;
-    setActiveCall(roomId);
-    // Show toast notification
-    toast.success("Starting video call", {
-      description: "Initializing video call connection..."
-    });
-    // Navigate to video call page
-    router.push(`/call/${roomId}`), // Changed from navigate
-  }
 
     
     const roomId = `msg-${activeConversation.id}`,
@@ -218,36 +218,30 @@ function MessagingInbox() {
     
     const roomId = `msg-${activeConversation.id}`,
     setActiveCall(roomId),
+
     
     // Show toast notification
     toast.success("Starting video call", {
       description: "Initializing video call connection..."
+<<<<<<< HEAD
     });
     
     // Navigate to video call page
     router.push(`/call/${roomId}`), // Changed from navigate
   };
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     }),
     
     // Navigate to video call page
     router.push(`/call/${roomId}`), // Changed from navigate
   },
-    
-    const roomId = `msg-${activeConversation.id}`,
-    setActiveCall(roomId),
-    
-    const roomId = `msg-${activeConversation.id}`,
-    setActiveCall(roomId),
-
-    
-    // Show toast notification
-    toast.success("Starting video call", {
-      description: "Initializing video call connection..."
-
-
+  
+<<<<<<< HEAD
   
   
-  
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
       <div className="min-h-screen bg-zion-blue">
         <div className="container mx-auto py-8 px-4">
@@ -262,6 +256,7 @@ function MessagingInbox() {
 
 
             
+<<<<<<< HEAD
 
             {activeConversation && (
               <Button 
@@ -276,6 +271,8 @@ function MessagingInbox() {
             {activeConversation && (
               <Button
                 onClick = {startVideoCall,}
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             
             {activeConversation && (
               <Button 
@@ -289,8 +286,11 @@ function MessagingInbox() {
             )}
           </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
           
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
           <div className="bg-zion-blue-light/10 rounded-lg shadow-lg border border-zion-purple/20 overflow-hidden">
 =======
@@ -308,6 +308,7 @@ function MessagingInbox() {
               ) : (
                 <ConversationsList
 <<<<<<< HEAD
+<<<<<<< HEAD
 
               
 
@@ -320,6 +321,10 @@ function MessagingInbox() {
               )}
               
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+              
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useEffect, useState } from 'react',;
 import { MessageSquare, Video } from 'lucide-react';
 import { useMessaging } from '@/context/MessagingContext',;
@@ -350,6 +355,7 @@ export default function MessagingInbox() {;
         await fetchConversations();
       } catch (error) {;
         logErrorToProduction('Failed to load conversations:', { data: error }),;
+<<<<<<< HEAD
         toast && toast.error("Failed to load messages. Please try again.");
       }
     };
@@ -376,6 +382,8 @@ export default function MessagingInbox() {;
   };
 
   return (
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <ProtectedRoute>;
       <div className="min-h-screen bg-zion-blue">;
         <div className="container mx-auto py-8 px-4">;
@@ -384,15 +392,19 @@ export default function MessagingInbox() {;
               <MessageSquare className="h-6 w-6" />;
               Messages;
             </h1>;
+<<<<<<< HEAD
 
             {activeConversation && (;
               <Button
                 onClick = {startVideoCall,}
                 className="flex items-center gap-2 bg-zion-purple hover:bg-zion-purple-light">;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <Video className="h-4 w-4" />;
                 Start Call;
               </Button>;
             )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -405,6 +417,8 @@ export default function MessagingInbox() {;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               {/* Conversations List */}
               {isLoading ? (;
                 <div className="flex-1 flex items-center justify-center p-8">;
@@ -419,6 +433,7 @@ export default function MessagingInbox() {;
                 />;
               )}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 ;
 
@@ -431,6 +446,11 @@ ursor/fix-website-loading-errors-and-merge-6662
 ;
 
 
+=======
+
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               {/* Conversation Detail */}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
             </div>
@@ -440,6 +460,7 @@ ursor/fix-website-loading-errors-and-merge-6662
         {isMobile && <div className="h-16"></div>}
       </div>
     </ProtectedRoute>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -503,10 +524,13 @@ return (<ProtectedRoute> <div className="min-h-screen bg-zion-blue" > <div class
 }setActiveConversation= {setActiveConversation ;
 }markAsRead= {markAsRead ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }/>) ;
 }{/* Conversation Detail */ ;
 }<ConversationDetailView /> </div> </div> </div> </div> </ProtectedRoute>) ;
 }'"}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
   )
@@ -515,6 +539,8 @@ return (<ProtectedRoute> <div className="min-h-screen bg-zion-blue" > <div class
   )
 }
 ;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
         logErrorToProduction ('Failed to load conversations:', { data: error }),
         toast.error ("Failed to load messages. Please try again.");
@@ -617,9 +643,10 @@ return (<ProtectedRoute> <div className="min - h-screen bg - zion - blue" > <div
 }<ConversationDetailView /> </div> </div> </div> </div> </ProtectedRoute>) ;
 }'"}
 
-
-
   )
 }
+<<<<<<< HEAD
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

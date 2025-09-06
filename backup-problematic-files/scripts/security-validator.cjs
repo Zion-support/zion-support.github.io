@@ -16,6 +16,15 @@ console.log(' Starting Security Validation...')
     "medium"
 <<<<<<< HEAD
     "low"
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
     "low"
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/main
+=======
+=======
+    "low"
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> pr-12166

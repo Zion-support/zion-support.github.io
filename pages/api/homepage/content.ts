@@ -1,11 +1,11 @@
 
-
 import type { NextApiRequest, NextApiResponse } from "next";
 import fs from "fs";
 import path from "path";
 async function fetchFromGitHub() {
   try {
     const response = await fetch(
+<<<<<<< HEAD
 
       "https://api && api.github.com/repos/Zion-Holdings/zion && zion.app/contents/data/homepage && homepage.json",
 
@@ -48,6 +48,9 @@ export default async function handler(
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+=======
+    );
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import type { NextApiRequest, NextApiResponse } from './next';
 import fs from './fs';
 import path from './path';
@@ -71,6 +74,7 @@ if (return null) {
     return null;
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   if (req && req.method !== "GET") {
@@ -100,12 +104,15 @@ async function fetchFromGitHub(): Promise<any | null> {
   } catch {
     return null
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   }
 }
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   res.setHeader('Cache-Controls-maxage=60, stale-while-revalidate=600');
   try {
+<<<<<<< HEAD
 
     const localPath = path.join(process.cwd(), 'publicautonomyHOMEPAGE_CONTENT.json');
     if (fs.existsSync(localPath)) {
@@ -126,6 +133,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
@@ -144,7 +153,10 @@ function handler() {
 if ( {) {
   $2
 }
+<<<<<<< HEAD
     return res.status (405).json ({ error: "Method not allowed" });
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   }
   try {
     const local_path = path.join (process.cwd (), "data", "homepage.json");
@@ -159,7 +171,10 @@ if ( {) {
     // fall back to remote;
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -192,6 +207,7 @@ async function fetchFromGitHub(): Promise<any | null> {;
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
 }
   } catch (error) {
     console.error("Error:", error);
@@ -272,11 +288,14 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   if (remote) return res && res.status(200).json(remote);
   return res && res.status(200).json(null);
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
@@ -286,12 +305,21 @@ if (remote) return res && res.status(200).json(remote);
   return res && res.status(200).json(null);
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const remote = await fetchFromGitHub ();
   if (return res.status (200).json (remote)) {
   $2
 }
-  return res.status (200).json (null);
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -421,3 +449,8 @@ export default async function handler(req, res) {
 }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+}
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

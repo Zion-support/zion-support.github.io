@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -10,10 +11,13 @@ const { defineConfig,devices } from "@playwright/test"; export default defineCon
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from 'react';
 ;
 interface Playwright.configProps {;
   // Add props here as needed
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -45,6 +49,8 @@ ursor/add-new-services-and-deploy-updates-0462
 }}};
 origin/cursor/fix-syntax-push-and-merge-to-main-ba45
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 };
 export default function Playwright.config({ }: Playwright.configProps) {;
   return (,
@@ -55,6 +61,7 @@ export default function Playwright.config({ }: Playwright.configProps) {;
 };
 };
 };
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/automation-improvements-final
@@ -77,15 +84,14 @@ export default function Playwright.config({ }: Playwright.configProps) {;
 
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }}}
 }
 }}}
-
-
-
-
 }}}
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -100,3 +106,5 @@ origin/automation-improvements-final
 }}}
 origin/main
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

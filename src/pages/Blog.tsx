@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 import { useState, useEffect } from 'react'
@@ -174,6 +175,11 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
       } finally {
         setIsLoading (false);
       }
+=======
+// Categories for filtering
+
+const CATEGORIES = [
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   "All Categories",
   "Trends",
   "Marketing",
@@ -196,6 +202,7 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
   const [isLoading, setIsLoading] = useState(false),
   const router = useRouter(),
 
+
   // Reset state when navigating away to avoid cross-page leakage
   useEffect(() => {
     return () => {
@@ -203,64 +210,52 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
       setSelectedCategory('All Categories')
       setPosts([...initialPosts])
     }
-  }, [router.asPath, initialPosts]);
-  // useEffect(() => {;
-  //   const interval = setInterval(() => {;
-  //     setPosts(prev => [...prev, generateRandomBlogPost()]);
-  //   }, 120000); // every 2 minutes
-  //   return () => clearInterval(interval)
-  // }, [])
-  useEffect((,) => {
-    const fetchPosts = async () => {
-      setIsLoading(true)
+  }, [router.as_path, initial_posts]);
+  // useEffect (() => {
+  //   const interval = set_interval (() => {
+  //     set_posts (prev => [...prev, generateRandomBlogPost ()]);
+  //   }, 120000); // every 2 minutes;
+  //   return () => clear_interval (interval);
+  // }, []);
+  useEffect ((, ) => {
+    const fetch_posts = async () => {
+      setIsLoading (true);
       try {
-        const data: BlogPost[] = await fetchWithRetry(
-          `/api/blog?query=${encodeURIComponent(query)}`
-        )
-      setSearchQuery(""),
-      setSelectedCategory("All Categories"),
-      setPosts([...initialPosts])
-    }
-  }, [router.asPath, initialPosts]),
 
-  // useEffect(() => {
-  //   const interval = setInterval(() => {
-  //     setPosts(prev => [...prev, generateRandomBlogPost()]),
-  //   }, 120000), // every 2 minutes
-  //   return () => clearInterval(interval),
-  // }, []),
-
+  // Reset state when navigating away to avoid cross-page leakage
   useEffect(() => {
-    const fetchPosts = async () => {
-      setIsLoading(true),
-      try {
-        const data: BlogPost[] = await fetchWithRetry(
-          `/api/blog?query=${encodeURIComponent(query)}`
-        ),
+    return () => {
         setPosts(data)
       } catch (err) {
         logErrorToProduction('Failed to fetch blog posts', { data: err })
       } finally {
         setIsLoading(false)
       }
+<<<<<<< HEAD
     }
     fetchPosts()
   }, [query])
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     },
 
     fetchPosts()
   }, [query]),
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   // Filter blog posts based on selected category only.
   // Search filtering is handled server-side.
   const filteredPosts = posts.filter(post => {
     const matchesCategory =
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -268,24 +263,27 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
       selectedCategory === 'All Categories' |
       selectedCategory === 'All Categories' |
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   // Filter blog posts based on selected category only.
   // Search filtering is handled server-side.
   const filteredPosts = posts.filter(post => {
     const matchesCategory = null;
       selectedCategory === 'All Categories' ||
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       post.category === selectedCategory
     return matchesCategory
   })
   // Get featured posts
   const featuredPosts = posts.filter(post => post.isFeatured)
   logInfo('BlogPage filteredPosts:', { data: filteredPosts })
-
-
     },
 
     fetchPosts()
@@ -296,9 +294,12 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
   const filteredPosts = posts.filter(post => {
     const matchesCategory =
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       selectedCategory === "All Categories" || post.category === selectedCategory,
 
     return matchesCategory
@@ -310,12 +311,15 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
   logInfo('BlogPage filteredPosts:', { data: filteredPosts }),
   
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
 =======
   
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <>
       <SEO
@@ -329,6 +333,7 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
         <div className="container mx-auto">
           <div className="text-center mb-12">
             <GradientHeading>AI & Tech Insights</GradientHeading>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -395,6 +400,9 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
                         {featuredPost.publishedDate} • {featuredPost.readTime}
                       </p>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+                    </div>
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   </div>
                   <Button 
                     asChild
@@ -405,6 +413,7 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
                     </Link>
                   </Button>
                 </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
               </div>
@@ -422,6 +431,8 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
                   value={searchQuery}
                   onChange={e => setSearchQuery(e.target.value)}
                   className='pl-10 bg-zion-blue border border-zion-blue-light text-white'                />
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               </div>
               <Select
                 value={selectedCategory}
@@ -441,9 +452,12 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
                       className='text-white'
                     >                      {category}
                     </SelectItem>
+<<<<<<< HEAD
                 </SelectContent>
               </Select>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             </div>
             )
 import { useState, useEffect } from "react",;
@@ -555,63 +569,11 @@ export default function Blog(): any ({ posts: initialPosts = BLOG_POSTS }: BlogP
         title='Blog - Latest from Zion Tech Marketplace'
         description='Read expert insights and news on the Zion Tech Marketplace blog. Stay informed about trends, tips, and stories that help you succeed. Sign up for updates and never miss a breakthrough.'
         keywords='AI blog, tech trends, IT services blog, artificial intelligence news, technology innovation, digital transformation, sustainable IT'
-
-    fetch_posts ();
-  }, [query]);
-  // Filter blog posts based on selected category only.;
-  // Search filtering is handled server - side.;
-  const filtered_posts = posts.filter (post => {
-    const matches_category =;
-      selected_category === 'All Categories' ||;
-      post.category === selected_category;
-    return matches_category;
-  });
-  // Get featured posts;
-  const featured_posts = posts.filter (post => post.is_featured);
-  log_info ('BlogPage filtered_posts:', { data: filtered_posts });
-  return (
-    <>;
-      <SEO;
-        title='Blog - Latest from Zion Tech Marketplace';
-        description='Read expert insights and news on the Zion Tech Marketplace blog. Stay informed about trends, tips, and stories that help you succeed. Sign up for updates and never miss a breakthrough.';
-        keywords='AI blog, tech trends, IT services blog, artificial intelligence news, technology innovation, digital transformation, sustainable IT';
-        canonical='https://app.ziontechgroup.com / blog';
-      />;
-      <div className='min - h-screen bg - zion - blue pt - 12 pb - 20 px - 4'>;
-        <h1 > Blog</h1>;
-        <div className='container mx - auto'>;
-          <div className='text - center mb - 12'>;
-            <GradientHeading > AI & Tech Insights</GradientHeading>;
-            <p className='mt - 4 text - zion - slate - light text - xl max - w-3xl mx - auto'>;
-              Expert perspectives on artificial intelligence, tech innovation,
-              and digital transformation;
-            </p>;
-          </div>;
-
           {/* Featured Post Section - Only show if there are featured posts */}
-          {featured_posts.length > 0 &&;
+          {featuredPosts.length > 0 &&
             (() => {
-
-        canonical='https://app && app.ziontechgroup.com/blog'
-      />;
-      <div className='min-h-screen bg-zion-blue pt-12 pb-20 px-4'>;
-        <h1>Blog</h1>;
-        <div className='container mx-auto'>;
-          <div className='text-center mb-12'>;
-            <GradientHeading>AI & Tech Insights</GradientHeading>;
-            <p className='mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto'>;
-              Expert perspectives on artificial intelligence, tech innovation,;
-              and digital transformation;
-            </p>;
-          </div>;
-
-          {/* Featured Post Section - Only show if there are featured posts */}
-          {featuredPosts && featuredPosts.length > 0 &&;
-            (() => {;
-              const featuredPost = featuredPosts[0];
-              if (!featuredPost) return null;
-
-
+              const featuredPost = featuredPosts[0]
+              if (!featuredPost) return null
               return (
                 <div className='mb-16'>;
                   <h2 className='text-2xl font-bold text-white mb-6'>;
@@ -623,6 +585,7 @@ export default function Blog(): any ({ posts: initialPosts = BLOG_POSTS }: BlogP
                         src={featuredPost && featuredPost.featuredImage}
                         alt={
 <<<<<<< HEAD
+<<<<<<< HEAD
 
                           featuredPost && featuredPost.featuredImageAlt || featuredPost && featuredPost.title
                         }
@@ -632,13 +595,18 @@ export default function Blog(): any ({ posts: initialPosts = BLOG_POSTS }: BlogP
                           target && target.src = '/images/blog-placeholder && placeholder.svg';
 
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                           featuredPost.featuredImageAlt |featuredPost.title
                         }
                         className='object-cover w-full h-full hover:scale-105 transition-transform duration-300'
                         onError={e => {
                           const target = e.currentTarget as HTMLImageElement
                           target.src = '/images/blog-placeholder.svg'
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                         }}
                       />;
                     </div>;
@@ -657,6 +625,7 @@ export default function Blog(): any ({ posts: initialPosts = BLOG_POSTS }: BlogP
                           alt={featuredPost && featuredPost.author.name}
                           className='w-10 h-10 rounded-full mr-3'
 <<<<<<< HEAD
+<<<<<<< HEAD
 
                           onError={e => {;
                             const target = e && e.currentTarget as HTMLImageElement;
@@ -667,6 +636,11 @@ export default function Blog(): any ({ posts: initialPosts = BLOG_POSTS }: BlogP
                             const target = e.currentTarget as HTMLImageElement
                             target.src = '/images/blog-placeholder.svg'
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+                          onError={e => {
+                            const target = e.currentTarget as HTMLImageElement
+                            target.src = '/images/blog-placeholder.svg'
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                           }}
                         />;
                         <div>;
@@ -682,90 +656,59 @@ export default function Blog(): any ({ posts: initialPosts = BLOG_POSTS }: BlogP
                       <Button
                         asChild
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+              <Select
+                value={selectedCategory}
+                onValueChange={setSelectedCategory}>;
+                <SelectTrigger
+                  className='bg-zion-blue border border-zion-blue-light text-white'
+                  aria-label='Filter by category'>;
+                  <SelectValue placeholder='Select Category' />;
+                </SelectTrigger>;
+                <SelectContent className='bg-zion-blue-dark border border-zion-blue-light'>;
+                  {CATEGORIES && CATEGORIES.map(category => (;
+                    <SelectItem
+                      key={category}
+                      value={category}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
-                        className='bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple w-fit'>;
-                        <Link href={`/blog/${featuredPost && featuredPost.slug}`}>;
-              const featured_post = featured_posts[0];
-              // Check condition
-if (return null) {
-  $2
-}
-              return (
-                <div className='mb - 16'>;
-                  <h2 className='text - 2xl font - bold text - white mb - 6'>;
-                    Featured Article;
-                  </h2>;
-                  <div className='grid grid - cols - 1 lg:grid - cols - 2 gap - 8'>;
-                    <div className='aspect - video overflow - hidden rounded - lg'>;
-                      <img;
-                        src={featured_post.featured_image}
-                        alt={
-                          featured_post.featuredImageAlt || featured_post.title;
-                        }
-                        className='object - cover w - full h - full hover:scale - 105 transition - transform duration - 300';
-                        on_error={e => {
-                          const target = e.current_target as HTMLImageElement;
-                          target.src = '/images / blog - placeholder.svg';
-                        }}
-                      />;
-                    </div>;
-                    <div className='flex flex - col justify - center'>;
-                      <span className='text - sm text - zion - cyan bg - zion - blue - dark px - 3 py - 1 rounded - full inline - block mb - 2'>;
-                        {featured_post.category}
-                      </span>;
-                      <h3 className='text - 3xl font - bold text - white mb - 4'>;
-                        {featured_post.title}
-                      </h3>;
-                      <p className='text - zion - slate - light mb - 6'>;
-                        {featured_post.excerpt}                      </p>;
-                      <div className='flex items - center mb - 6'>;
-                        <img;
-                          src={featured_post.author.avatar_url}
-                          alt={featured_post.author.name}
-                          className='w - 10 h - 10 rounded - full mr - 3';
-                          on_error={e => {
-                            const target = e.current_target as HTMLImageElement;
-                            target.src = '/images / blog - placeholder.svg';
-                          }}
-                        />;
-                        <div>;
-                          <p className='text - white font - medium'>;
-                            {featured_post.author.name}
-                          </p>;
-                          <p className='text - sm text - zion - slate - light'>;
-                            {featured_post.published_date} •{' '}
-                            {featured_post.read_time}
-                          </p>;
-                        </div>;
-                      </div>;
-                      <Button;
-                        as_child;
-                        className='bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple w - fit';
-                      >;
-                        <Link href={`/blog/${featured_post.slug}`}>;
 
-                          Read Article;
-                        </Link>;
-                      </Button>;
-                    </div>;
-                  </div>;
 
-                  onChange={e => setSearchQuery(e && e.target.value)}
-                  className='pl-10 bg-zion-blue border border-zion-blue-light text-white'                />;
+                  ))}
+                </SelectContent>;
+              </Select>;
+            </div>;
+            {isLoading && (;
+              <div className='text-center py-4 text-white'>;
+                Loading articles...;
               </div>;
+<<<<<<< HEAD
 
 
 =======
+=======
+                  asChild
+                  className="bg-zion-blue-dark border border-zion-blue-light hover:border-zion-purple transition-all duration-300 group-hover:shadow-lg"
+                >
+                  <Link href={`/blog/${post.slug}`} className='block group'>
+                    <div className='aspect-[16/9] relative overflow-hidden'>
+                      <img
+                        src={post.featuredImage}
+                        alt={post.featuredImageAlt |post.title}
+                        className='object-cover w-full h-full hover:scale-105 transition-transform duration-300'
+                        onError={e => {
+                          const target = e.currentTarget as HTMLImageElement
+                          target.src = '/images/blog-placeholder.svg' }}
+                  <Link href={`/blog/${post.slug}`} className="block group">
+                  <div className="aspect-[16/9] relative overflow-hidden">
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                         className='bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple w-fit'
                       >
                         <Link href={`/blog/${featuredPost.slug}`}>
                           Read Article
                         </Link>
                       </Button>
-            <p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto">
-              Expert perspectives on artificial intelligence, tech innovation, and digital transformation
-            </p>
-          </div>
           
           {/* Featured Post Section - Only show if there are featured posts */}
           {featuredPosts.length > 0 && (() => {
@@ -814,6 +757,7 @@ if (return null) {
                       </p>
                     </div>
                   </div>
+<<<<<<< HEAD
                   <Button 
                     asChild
                     className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple w-fit"
@@ -1139,6 +1083,8 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {;
                       {post.excerpt}
                     </p>
                     <div className="flex items-center">
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       <img
                         src={post.author.avatarUrl}
                         alt={post.author.name}
@@ -1150,6 +1096,7 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {;
 
                       />
                     </div>
+<<<<<<< HEAD
 
                 </div>);
             })()}
@@ -1229,6 +1176,11 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {;
                         </div>;
                       </div>;
                       <h3 className='text - xl font - bold text - white mb - 3'>;
+=======
+                    <CardContent className='p-6'>
+                      <div className='flex items-center justify-between mb-3'>
+                        <span className='text-xs text-zion-cyan bg-zion-blue px-3 py-1 rounded-full'>
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                           {post.category}
                         </span>
                         <div className='text-xs text-zion-slate-light'>
@@ -1242,6 +1194,9 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {;
                       <p className='text - zion - slate - light mb - 4 line - clamp - 3'>;
                         {post.excerpt}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
                         src={post && post.featuredImage}
                         alt={post && post.featuredImageAlt || post && post.title}
@@ -1268,14 +1223,18 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {;
                       </p>;
                       <div className='flex items-center'>;
 
+<<<<<<< HEAD
 =======
                       </p>
                       <div className='flex items-center'>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                         <img
                           src={post && post.author.avatarUrl}
                           alt={post && post.author.name}
                           className='w-8 h-8 rounded-full mr-2'
+<<<<<<< HEAD
 <<<<<<< HEAD
 
                           onError={e => {;
@@ -1287,6 +1246,8 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {;
                             const target = e.currentTarget as HTMLImageElement
                             target.src = '/images/blog-placeholder.svg'
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                           }}
                         />;
                         <span className='text-sm text-white'>;
@@ -1314,42 +1275,6 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {;
                     </CardContent>;
                     <CardFooter className='p - 6 pt - 0'>;
                       <span className='text - zion - cyan group - hover:text - zion - purple'>;
-                        Read More →;
-                      </span>;
-                    </CardFooter>;
-                  </Link>;
-
-
-                  </CardContent>
-                  <CardFooter className="p-6 pt-0">
-                    <span className="text-zion-cyan group-hover:text-zion-purple">Read More →</span>
-                  </CardFooter>
-                  </Link>
-                </Card>
-          {!isLoading && filteredPosts.length > 0 ? (;
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
-              {filteredPosts.map((post) => (;
-                <Card;
-                  key={post.id}
-                  asChild;
-                  className="bg-zion-blue-dark border border-zion-blue-light hover:border-zion-purple transition-all duration-300 group-hover:shadow-lg";
-                >;
-                  <Link href={`/blog/${post.slug}`} className="block group">;
-                  <div className="aspect-[16/9] relative overflow-hidden">;
-                    <img;
-                      src={post.featuredImage}
-                      alt={post.featuredImageAlt || post.title}
-                      className="object-cover w-full h-full hover: scale-105 transition-transform duration-300";
-                      onError={(e) => {;
-                        const target = e.currentTarget as HTMLImageElement,;
-                        target.src = "/images/blog-placeholder.svg";
-                      }}
-                    />;
-                  </div>;
-                  <CardContent className="p-6">;
-                    <div className="flex items-center justify-between mb-3">;
-                      <span className="text-xs text-zion-cyan bg-zion-blue px-3 py-1 rounded-full">;
-                        {post.category}
                       </span>;
                       <div className="text-xs text-zion-slate-light">;
                         {post.publishedDate} • {post.readTime}
@@ -1378,9 +1303,9 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {;
                     <span className="text-zion-cyan group-hover:text-zion-purple">Read More →</span>;
                   </CardFooter>;
                   </Link>;
-                </Card>;
 
 
+<<<<<<< HEAD
               ))}
 <<<<<<< HEAD
             </div>;
@@ -1553,10 +1478,44 @@ min-h-screen bg-zion-blue pt-12 pb-20 px-4"> <h1>Blog</h1> <div className=" cont
 }</div> </div> </>)
 }'"  const featuredPosts = blogPosts.filter(post => post.featured)
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+                  <Button 
+                    asChild
+                    className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple w-fit"
+                  >
+                    <Link href={`/blog/${featuredPost.slug}`}>
+                      Read Article
+                    </Link>
+                  </Button>
+                </div>
+                  ))}
+                </SelectContent>
+              </Select>
+            </div>
+            {isLoading && (
+              <div className="text-center py-4 text-white">
+                Loading articles...
+              </div>
+            )}
+          </div>
+          {/* Blog Posts Grid */}
+          {!isLoading && filteredPosts.length > 0 ? (
+                  asChild
+                  className="bg-zion-blue-dark border border-zion-blue-light hover:border-zion-purple transition-all duration-300 group-hover:shadow-lg"
+                >
+                      />
+                      <span className="text-sm text-white">{post.author.name}</span>
+                    </div>
+              ))}
+            </div>;
+          ) : null}
+          {/* No Results Message - Show only if not loading and no posts */}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
   const regular_posts = blog_posts.filter (post => !post.featured);
 }
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     <>";
@@ -1614,10 +1573,13 @@ min-h-screen bg-zion-blue pt-12 pb-20 px-4"> <h1>Blog</h1> <div className=" cont
                 {categories.slice(0, 4).map((category, index) => (
                   <span;"
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     key = "{category.name}
                     className="px - 4 py - 2 bg - blue - 600 / 20 border border - blue - 400 / 30 rounded - full text - blue - 300 text - sm">;
                   >;
                     {category.name}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -1640,6 +1602,8 @@ export default function Blog() {
       category: &quot,Quantum Computing&quot
       tags: [&quot,Quantum&quot, &quot;Computing&quot, &quot;Innovation&quot]
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       id: 2,
       title: &quot,Quantum Computing Breakthroug,h: What It Means for Your Business&quot,
       excerpt: &quot,Understanding the latest quantum computing advances and their practical applications in solving complex business problems.&quot,
@@ -1649,10 +1613,13 @@ export default function Blog() {
       category: &quot,Quantum Computing&quot;
       tags: [&quot,Quantum&quot, &quot;Computing&quot, &quot;Innovation&quot],
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       image: &quot,/api/placeholder/600/400&quot,"
       title: "Quantum Computing Breakthrough: What It Means for Your Business", excerpt: "Understanding the latest quantum computing advances and their practical applications in solving complex business problems.","
       author: "Prof. Michael Rodriguez", date: "2025-01-12","
@@ -1727,104 +1694,11 @@ export default function Blog() {
   ]
   const categories = []
   const featuredPosts = blogPosts.filter(post => post.featured)
-                  </span>;
-export default /**
- * Blog - Function description
- */
-function Blog() {
-  const blog_posts = [], image: "/api / placeholder / 600 / 400",
-  {";
-      id: 1, title: "The Future of AI in Enterprise: 2025 Trends and Predictions", ";
-      excerpt: "Explore the latest AI trends transforming enterprise operations and how businesses can leverage these technologies for competitive advantage.", author: "Dr. Sarah Chen", ";
-      date: "2025 - 01 - 15", read_time: "8 min read", ";
-      category: "AI & Machine Learning", tags: ["AI, Enterprise, Technology"], image: "/api / placeholder / 600 / 400",
-      featured: true}, { id: 2}, {
-      id: 2,
-      title: &quot, Quantum Computing Breakthroug, h: What It Means for Your Business & quot,
-      excerpt: &quot, Understanding the latest quantum computing advances and their practical applications in solving complex business problems.&quot,
-      author: &quot, Prof. Michael Rodriguez & quot,
-      date: &quot, 2025 - 01 - 12 & quot,
-      read_time: &quot, 12 min read & quot,
-      category: &quot, Quantum Computing & quot,
-      tags: [&quot, Quantum & quot, &quot;Computing & quot, &quot;Innovation & quot],
-      image: &quot, /api / placeholder / 600 / 400 & quot, ";
-      title: "Quantum Computing Breakthrough: What It Means for Your Business", excerpt: "Understanding the latest quantum computing advances and their practical applications in solving complex business problems.", ";
-      author: "Prof. Michael Rodriguez", date: "2025 - 01 - 12", ";
-      read_time: "12 min read", category: "Quantum Computing", ";
-      tags: ["Quantum", "Computing", "Innovation"], image: "/api / placeholder / 600 / 400", ";
-      tags: ["Quantum, Computing, Innovation"], image: "/api / placeholder / 600 / 400",
-      featured: true}, { id: 3}, {
-      id: 3,
-      title: &quot, Micro SaaS Revolutio, number: Building Scalable Solutions & quot,
-      excerpt: &quot, How micro SaaS platforms are changing the software landscape and creating new opportunities for businesses.&quot,
-      author: &quot, Alex Thompson & quot,
-      date: &quot, 2025 - 01 - 10 & quot,
-      read_time: &quot, 6 min read & quot,
-      category: &quot, Micro SaaS & quot,
-      tags: [&quot, SaaS & quot, &quot;Software & quot, &quot;Business & quot],
-      image: &quot, /api / placeholder / 600 / 400 & quot, ";
-      title: "Micro SaaS Revolution: Building Scalable Solutions", excerpt: "How micro SaaS platforms are changing the software landscape and creating new opportunities for businesses.", ";
-      author: "Alex Thompson", date: "2025 - 01 - 10", ";
-      read_time: "6 min read", category: "Micro SaaS", ";
-      tags: ["SaaS", "Software", "Business"], image: "/api / placeholder / 600 / 400", ";
-      tags: ["SaaS, Software, Business"], image: "/api / placeholder / 600 / 400",
-      featured: false}, { id: 4}, {
-      id: 4,
-      title: &quot, Cybersecurity in the Age of A, I: New Threats and Solutions & quot,
-      excerpt: &quot, Examining how AI is both creating new security challenges and providing innovative solutions to protect enterprise data.&quot,
-      author: &quot, Lisa Park & quot,
-      date: &quot, 2025 - 01 - 08 & quot,
-      read_time: &quot, 10 min read & quot,
-      category: &quot, Cybersecurity & quot,
-      tags: [&quot, Security & quot, &quot;AI & quot, &quot;Enterprise & quot],
-      image: &quot, /api / placeholder / 600 / 400 & quot, ";
-      title: "Cybersecurity in the Age of AI: New Threats and Solutions", excerpt: "Examining how AI is both creating new security challenges and providing innovative solutions to protect enterprise data.", ";
-      author: "Lisa Park", date: "2025 - 01 - 08", ";
-      read_time: "10 min read", category: "Cybersecurity", ";
-      tags: ["Security", "AI", "Enterprise"], image: "/api / placeholder / 600 / 400", ";
-      tags: ["Security, AI, Enterprise"], image: "/api / placeholder / 600 / 400",
-      featured: false}, { id: 5}, {
-      id: 5,
-      title: &quot, Digital Transformatio, number: A Complete Guide for 2025 & quot,
-      excerpt: &quot, Comprehensive strategies for successful digital transformation initiatives in modern enterprises.&quot,
-      author: &quot, David Kumar & quot,
-      date: &quot, 2025 - 01 - 05 & quot,
-      read_time: &quot, 15 min read & quot,
-      category: &quot, Digital Transformation & quot,
-      tags: [&quot, Digital & quot, &quot;Transformation & quot, &quot;Strategy & quot],
-      image: &quot, /api / placeholder / 600 / 400 & quot, ";
-      title: "Digital Transformation: A Complete Guide for 2025", excerpt: "Comprehensive strategies for successful digital transformation initiatives in modern enterprises.", ";
-      author: "David Kumar", date: "2025 - 01 - 05", ";
-      read_time: "15 min read", category: "Digital Transformation", ";
-      tags: ["Digital", "Transformation", "Strategy"], image: "/api / placeholder / 600 / 400", ";
-      tags: ["Digital, Transformation, Strategy"], image: "/api / placeholder / 600 / 400",
-      featured: false}, { id: 6}, {
-      id: 6,
-      title: &quot, Cloud Infrastructure Best Practices for Global Enterprises & quot,
-      excerpt: &quot, Essential guidelines for designing and managing cloud infrastructure that scales with your business needs.&quot,
-      author: &quot, Maria Santos & quot,
-      date: &quot, 2025 - 01 - 03 & quot,
-      read_time: &quot, 9 min read & quot,
-      category: &quot, Cloud Computing & quot,
-      tags: [&quot, Cloud & quot, &quot;Infrastructure & quot, &quot;Enterprise & quot],
-      image: &quot, /api / placeholder / 600 / 400 & quot,
-      featured: false}
-  ]&quot;
-  const categories = []&quot;
-";
-      title: "Cloud Infrastructure Best Practices for Global Enterprises", excerpt: "Essential guidelines for designing and managing cloud infrastructure that scales with your business needs.", ";
-      author: "Maria Santos", date: "2025 - 01 - 03", ";
-      read_time: "9 min read", category: "Cloud Computing", ";
-      tags: ["Cloud", "Infrastructure", "Enterprise"], image: "/api / placeholder / 600 / 400", ";
-      tags: ["Cloud, Infrastructure, Enterprise"], image: "/api / placeholder / 600 / 400",
-      featured: false}
-  ];
-  const categories = [];
-  const featured_posts = blog_posts.filter (post => post.featured);
 }
   const regular_posts = blog_posts.filter ();
 }
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
 
                 onClick={() => {;
@@ -2872,6 +2746,8 @@ key = "{post.id}
                             {post.category === "Micro SaaS" && <Rocket  />}"
                             {post.category === "Cybersecurity" && <Shield  />}"
                             {post.category === "Digital Transformation" && <Globe  />}"
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                             {post.category === "Cloud Computing" && <Code  />}
                           </div>
                         </div>;"
@@ -2984,70 +2860,72 @@ key = "{post.id}
                   <div className="{"space-y-3"">
                     {categories.map((category, index) => (
                       <Link;"
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                         key = "{category.name}
-                        to="{"/blog / category/${category.name.toLowerCase ().replace (/\s+/g, " "-")}"}";
-                        className=""flex" items - center justify - between p - 3 rounded - lg hover:bg - slate - 700 / 50 transition - colors group"}>;
-                      >;";
-                        <div className="flex items - center">;";
-                          <category.icon class_name = "w - 5 h - 5 text - blue - 400 mr - 3 group - hover: text - blue - 300" />, ";
-                          <span className="text - gray - 300 group - hover:text - white">{category.name}</span>;
-                        </div>;";
-                        <span className="{"text - sm" text - gray - 400">{category.count}</span>;
-                      </Link>;";
-                        to = "{"/blog / category/${category.name.toLowerCase ().replace (/\s+/g, " "-')}"}";
-                        className=""flex" items - center justify - between p - 3 rounded - lg hover: bg - slate - 700 / 50 transition - colors group"}
-                      >";
-                        <div className="flex items - center">";
-                          <category.icon className="w - 5 h - 5 text - blue - 400 mr - 3 group - hover: text - blue - 300" />",
-                          <span className="text - gray - 300 group - hover:text - white">{category.name}</span>;
-                        </div>";
-                        <span className="&quot;text - sm" text - gray - 400 & quot;>{category.count}&quot </span>;
-                      </Link>))}
-                  </div>;
-                {/* comment */}";
-                <div className="bg - gradient - to - br from - blue - 600 / 20 to - purple - 600 / 20 rounded - xl p - 6 border border - blue - 400 / 30">;";
-                  <h3 className="text - xl font - bold text - white mb - 4">Stay Updated</h3>;";
-                  <p className="text - gray - 300 mb - 4">;
-                    Get the latest technology insights delivered to your inbox.;
-                  </p>;";
-                  <div className="space - y-3">;
-                    <input;";
-                      type="email";";
-                      placeholder="Enter your email";";
-                      className="w - full px - 4 py - 3 bg - slate - 800 / 50 border border - slate - 600 / 50 rounded - lg text - white placeholder - gray - 400 focus: outline - none focus:ring - 2 focus:ring - blue - 500">;
-                  />;";
-                    <button className="w - full px - 4 py - 3 bg - gradient - to - r from - blue - 600 to - purple - 600 text - white font - semibold rounded - lg hover:from - blue - 700 hover:to - purple - 700 transition - all duration - 200">;
-
-                      Subscribe;
-                    </button>;
-                  </div>;
-    </>";
-
-
-
-                <div className="&quot;bg - gradient - to - br" from - blue - 600 / 20 to - purple - 600 / 20 rounded - xl p - 6 border border - blue - 400 / 30 & quot;>&quot;
-                  <h3 className="&quot;text - xl" font - bold text - white mb - 4&quot;>Stay Updated & quot </h3>";
-                  <p className="&quot, text - gray - 300" mb - 4&quot, >;
-                    Get the latest technology insights delivered to your inbox.&quot,
-                  </p>",
-                  <div className="&quot;space - y-3 & quot;">&quot,
-                    <input type="&quot;email & quot;
-                      placeholder="&quot;Enter" your email & quot;";
-                      className="&quot;w - full" px - 4 py - 3 bg - slate - 800 / 50 border border - slate - 600 / 50 rounded - lg text - white placeholder - gray - 400 focus: outline - none focus:ring - 2 focus:ring - blue - 500 & quot, >;
-                  />&quot, ";
-                    <button class_name = "&quot, w - full" px - 4 py - 3 bg - gradient - to - r from - blue - 600 to - purple - 600 text - white font - semibold rounded - lg hover:from - blue - 700 hove, r: to - purple - 700 transition - all duration - 200 & quot, >;
-                      Subscribe & quot, ";
-                      type="email;
-                      placeholder="Enter your email;
-                      className="w - full px - 4 py - 3 bg - slate - 800 / 50 border border - slate - 600 / 50 rounded - lg text - white placeholder - gray - 400 focus: outline - none focus:ring - 2 focus:ring - blue - 500" />";
-                    <button className="w - full px - 4 py - 3 bg - gradient - to - r from - blue - 600 to - purple - 600 text - white font - semibold rounded - lg hover:from - blue - 700 hover:to - purple - 700 transition - all duration - 200">;
-                      Subscribe,
-                    </button>;
-                  </div>;
-</>),
-  )})))))))));
+                        to="{"/blog/category/${category.name.toLowerCase().replace(/\s+/g," "-")}"}"
+                        className=""flex" items-center justify-between p-3 rounded-lg hover:bg-slate-700/50 transition-colors group"}>
+                      >;"
+                        <div className="flex items-center">;"
+                          <category.icon className = "w-5 h-5 text-blue-400 mr-3 group-hover: text-blue-300" />,"
+                          <span className="text-gray-300 group-hover:text-white">{category.name}</span>
+                        </div>;"
+                        <span className="{"text-sm" text-gray-400">{category.count}</span>
+                      </Link>;"
+                        to = "{"/blog/category/${category.name.toLowerCase().replace(/\s+/g," "-')}"}"
+                        className=""flex" items-center justify-between p-3 rounded-lg hover: bg-slate-700/50 transition-colors group"}
+                      >"
+                        <div className="flex items-center">"
+                          <category.icon className="w-5 h-5 text-blue-400 mr-3 group-hover: text-blue-300" />"
+                          <span className="text-gray-300 group-hover:text-white">{category.name}</span>
+                        </div>"
+                        <span className="&quot;text-sm" text-gray-400&quot;>{category.count}&quot </span>
+                      </Link>
+                    ))}
+                  </div>
+                {/* comment */}"
+                <div className="bg-gradient-to-br from-blue-600/20 to-purple-600/20 rounded-xl p-6 border border-blue-400/30">;"
+                  <h3 className="text-xl font-bold text-white mb-4">Stay Updated</h3>;"
+                  <p className="text-gray-300 mb-4">
+                    Get the latest technology insights delivered to your inbox.
+                  </p>;"
+                  <div className="space-y-3">
+                    <input;"
+                      type="email";"
+                      placeholder="Enter your email";"
+                      className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-blue-500">
+                   />;"
+                    <button className="w-full px-4 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-200">
+                      Subscribe
+                    </button>
+                  </div>
+    </>"
+                <div className="&quot;bg-gradient-to-br" from-blue-600/20 to-purple-600/20 rounded-xl p-6 border border-blue-400/30&quot;>&quot
+                  <h3 className="&quot;text-xl" font-bold text-white mb-4&quot;>Stay Updated&quot </h3>"
+                  <p className="&quot,text-gray-300" mb-4&quot,>
+                    Get the latest technology insights delivered to your inbox.&quot
+                  </p>"
+                  <div className="&quot;space-y-3&quot;">&quot
+                    <input type="&quot;email&quot
+                      placeholder="&quot;Enter" your email&quot;"
+                      className="&quot;w-full" px-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-blue-500&quot,>
+                   />&quot,"
+                    <button className = "&quot,w-full" px-4 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hove,r: to-purple-700 transition-all duration-200&quot,>
+                      Subscribe&quot,"
+                      type="email
+                      placeholder="Enter your email
+                      className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-blue-500" />"
+                    <button className="w-full px-4 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-200">
+                      Subscribe
+                    </button>
+                  </div>
+</>
+  )
+  )})))))))))
 }
+<<<<<<< HEAD
 
                 variant="outline"
 ;
@@ -3056,6 +2934,8 @@ key = "{post.id}
 =======
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 variant="outline"
                 onClick={() => {
                   setSearchQuery(""),
@@ -3080,9 +2960,12 @@ key = "{post.id}
       </div>;
     </>;
   );
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 ;
 =======
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

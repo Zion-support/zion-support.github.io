@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
       const redirectTo = options?.redirectTo || '/login'
       const returnUrl = options?.returnUrl || router.asPath
@@ -28,13 +29,18 @@ interface AuthGuardProps {;
   showToast?: boolean,;
   allowGuest?: boolean;
 }
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 <<<<<<< HEAD
 
       const redirectTo = options?.redirectTo || '/login';
 =======
       const redirectTo = options?.redirectTo |'/login'
+<<<<<<< HEAD
 const redirectTo = options?.redirectTo |'/login'
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       const returnUrl = options?.returnUrl |router.asPath
           if (!requireAuth({ showToast: false })) return false
     const userRoles = user?.role ? [user.role] : []
@@ -44,6 +50,7 @@ const redirectTo = options?.redirectTo |'/login'
     isAuthenticated
     user
 
+<<<<<<< HEAD
     isLoading}
 }
 ursor/fix-website-loading-errors-and-merge-6662
@@ -60,6 +67,8 @@ const redirectTo = options?.redirectTo || '/login';
 ;
 =======
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     const userRoles = user?.role ? [user && user.role] : [];
     requireAuth;
     requireRole;
@@ -68,6 +77,7 @@ const redirectTo = options?.redirectTo || '/login';
     user;
     isLoading}
 }
+<<<<<<< HEAD
 
 
 
@@ -340,3 +350,5 @@ export function useAuthGuard() {;
 ;
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

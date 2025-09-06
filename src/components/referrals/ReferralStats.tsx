@@ -1,6 +1,7 @@
 interface ReferralStatsProps {
   stats: ReferralStatsType
   isLoading: boolean
+<<<<<<< HEAD
 
 
 
@@ -45,23 +46,16 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
 import { ReferralStats as ReferralStatsType } from "@/types/referrals",
 import { Award, Share, Star, TrendingUp } from 'lucide-react'
 
+=======
+export function ReferralStats({ stats, isLoading }: ReferralStatsProps) {
+  const statCards = [
+    {
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface ReferralStatsProps {
 
   stats: ReferralStatsType
   isLoading: boolean
 }
-export function ReferralStats({ stats, isLoading }: ReferralStatsProps) {
-  const statCards = [
-    {
-      title: 'Total Referrals'
-      icon: <Share className='h-5 w-5 text-muted-foreground' />
-      description: "People you've invited"
-    }
-      title: 'Total Referrals',
-      icon: <Share className='h-5 w-5 text-muted-foreground' />,
-      description: "People you've invited",
-    },
-    {
       title: 'Completed'
       value: stats.completedReferrals
       icon: <Star className='h-5 w-5 text-muted-foreground' />
@@ -80,6 +74,7 @@ export function ReferralStats({ stats, isLoading }: ReferralStatsProps) {
       description: 'Credits earned from referrals'
     }
   ]
+<<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 interface ReferralStatsProps {
@@ -200,6 +195,8 @@ export function ReferralStats(): any ({ stats, isLoading }: ReferralStatsProps) 
         </Card>;
       ))}
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   return (
     <div className='grid gap-4 md:grid-cols-2 lg:grid-cols-4'>
@@ -240,6 +237,7 @@ export function ReferralStats(): any ({ stats, isLoading }: ReferralStatsProps) 
           </CardHeader>
           <CardContent>
             {isLoading ? (
+<<<<<<< HEAD
               <div className='h-6 w-20 bg-muted animate-pulse rounded' />
             ) : (
               <>
@@ -249,13 +247,19 @@ export function ReferralStats(): any ({ stats, isLoading }: ReferralStatsProps) 
                 </p>              </>              <div className="h-6 w-20 bg-muted animate-pulse rounded" />
               <div className="h-6 w-20 bg-muted animate-pulse rounded" />
               <div className="h-6 w-20 bg-muted animate-pulse rounded" />
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
             ) : (
               <>
                 <div className="text-2xl font-bold">{card.value}</div>
                 <p className="text-xs text-muted-foreground">{card.description}</p>
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       title: 'Total Referrals',
       icon: <Share className='h - 5 w - 5 text - muted - foreground' />,
       description: "People you've invited",
@@ -292,6 +296,7 @@ export function ReferralStats(): any ({ stats, isLoading }: ReferralStatsProps) 
     <div className="grid gap - 4 md:grid - cols - 2 lg:grid - cols - 4">;
       {stat_cards.map ((card, i) => (
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
             )}
           </CardContent>
@@ -307,6 +312,8 @@ export function ReferralStats(): any ({ stats, isLoading }: ReferralStatsProps) 
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 }
 }
@@ -347,9 +354,12 @@ export function ReferralStats({ stats, isLoading }: ReferralStatsProps) {;
     <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">;
       {statCards.map((card, i) => (;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <Card key={i}>;
           <CardHeader className="flex flex - row items - center justify - between space - y-0 pb - 2">;
             <CardTitle className="text - sm font - medium">{card.title}</CardTitle>;
@@ -371,9 +381,12 @@ export function ReferralStats({ stats, isLoading }: ReferralStatsProps) {;
     </div>);
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 ursor/fix-website-loading-errors-and-merge-6662
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 ;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

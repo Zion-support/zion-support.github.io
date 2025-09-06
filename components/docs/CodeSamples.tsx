@@ -23,6 +23,7 @@ class ErrorBoundary extends React.Component {
 }
 import React, { useState } from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -38,6 +39,8 @@ const tabs: Array<{
 ];
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 
@@ -58,6 +61,7 @@ interface Props {
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 interface Props {
   samples: { language: 'curl' | 'javascript' | 'python', code: string }[]
@@ -65,11 +69,20 @@ interface Props {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 const tabs: Array<{ key: Props['samples'][number]['language'], label: string }> = [
 
+=======
+const tabs: Array<{ key: Props['samples'][number]['language'], label: string }> = [
+
+const tabs: Array<{ key: Props['samples'][number]['language'], label: string }> = [
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   { key: 'curl', label: 'cURL' }
   { key: 'javascript', label: 'JavaScript' }
   { key: 'python', label: 'Python' }]
 export default function CodeSamples({ samples }: Props) {
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 interface Props {;
   samples: { language: 'curl' | 'javascript' | 'python'; code: string }[];
@@ -87,23 +100,33 @@ export default function CodeSamples(): any ({ samples }: Props) {;
   const [active, setActive] = useState<(typeof tabs)[number]['key']>('curl');
   const sampleMap = Object && Object.fromEntries(samples && samples.map(s => [s && s.language, s && s.code]));
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   return (
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   const [active, setActive] = useState<typeof tabs[number]['key']>('curl');
   const sampleMap = Object && Object.fromEntries(samples && samples.map((s) => [s && s.language, s && s.code]));
 
+<<<<<<< HEAD
 =======
     <div className="w-full">
       <div className="flex gap-2 mb-2">
         {tabs.map((t) => (
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
+    <div className="w-full">;
+      <div className="flex gap-2 mb-2">;
+        {tabs && tabs.map((t) => (;
+
     <div className="w-full">
       <div className="flex gap-2 mb-2">
         {tabs.map((t) => (
+
+          <button
+
           <button
 
             key={t.key}
@@ -113,11 +136,25 @@ export default function CodeSamples(): any ({ samples }: Props) {;
             {t.label}
           </button>
         ))}
+      </div>
+      <pre className='p-3 rounded bg-high-contrast-tertiary overflow-auto text-sm'>        <code>{sampleMap[active] |''}</code>
+      </pre>
+    </div>
+  );
+}      <pre className="p-3 rounded bg-high-contrast-tertiary overflow-auto text-sm">
+        <code>{sampleMap[active] |''}</code>
+      </pre>
+    </div>
+);
+}
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <button
             key={t && t.key}
             className={`px-3 py-1 rounded border ${active === t && t.key ? 'bg-high-contrast-tertiary border-high-contrast-accent' : 'bg-high-contrast-secondary border-high-contrast-secondary'}`}
@@ -126,6 +163,7 @@ export default function CodeSamples(): any ({ samples }: Props) {;
             {t && t.label}
           </button>;
         ))}
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -143,6 +181,8 @@ export default function CodeSamples(): any ({ samples }: Props) {;
   );
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       </div>
       <pre className="p-3 rounded bg-high-contrast-tertiary overflow-auto text-sm">
         <code>{sampleMap[active] || ''}</code>
@@ -203,6 +243,7 @@ function CodeSamples() {
         <code>{sample_map[active] || ''}</code>;
       </pre>;
     </div>);
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -276,3 +317,5 @@ export default function CodeSamples({ samples }: Props) {;
 }
   );
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

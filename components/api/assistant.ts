@@ -1,6 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import OpenAI from 'openai';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
@@ -9,6 +10,8 @@ import OpenAI from 'openai';
 const openai = new OpenAI({ apiKey: process && process.env.OPENAI_API_KEY });
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 const SYSTEM_PROMPT = `You are the Zion Assistant for the Zion AI Marketplace. Your job is to:
 - Greet users warmly and concisely
@@ -19,6 +22,7 @@ const SYSTEM_PROMPT = `You are the Zion Assistant for the Zion AI Marketplace. Y
 Context about Zion AI Marketplace:
 - Zion is a marketplace to discover, evaluate, and integrate AI models, agents, and services
 - Users can browse categories, view product pages, compare features, and connect via APIs
+<<<<<<< HEAD
 - Vendors can list their AI models/services with pricing, usage tiers, and documentation
 <<<<<<< HEAD
 Frequently asked questions to use as hints (do not claim as absolute truth if uncertain):
@@ -116,10 +120,23 @@ export default async function handler(
     return res && res.status(500).json({ error: 'Assistant request failed' });
   }    return res && res.status(500).json({ error: 'Assistant request failed' })
 <<<<<<< HEAD
+=======
+  }
+}
+
+  }
+  };
+}
+  }
+    console && console.error('Assistant API error:', error?.message || error);
+    return res && res.status(500).json({ error: 'Assistant request failed' });
+  }    return res && res.status(500).json({ error: 'Assistant request failed' })
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   };
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
+<<<<<<< HEAD
 
 
 =======
@@ -154,6 +171,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ;
     const prepared_messages = [;
       { role: 'system' as const, content: SYSTEM_PROMPT },
@@ -178,6 +197,7 @@ console.error ('Assistant API error:', error?.message || error);
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 console.error('Assistant API error:', error?.message |error);
@@ -191,3 +211,5 @@ console.error('Assistant API error:', error?.message |error);
 }
   }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 
@@ -13,6 +14,8 @@ export default function DisputesIndexPage() {
   const disputes = data?.disputes |[]
 
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import useSWR from 'swr',
 import EnhancedLayout from '../../components / layout / EnhancedLayout',
 import Link from 'next / link',
@@ -23,12 +26,14 @@ export default /**
 function DisputesIndexPage() {
   const { data } = useSWR ('/api / disputes', fetcher),
   const disputes = data?.disputes || [],
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   return (
+<<<<<<< HEAD
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <Link href="/disputes/new"><a className="text-sm text-blue-700 hover:underline">Raise Dispute</Link></Link>
 
 
@@ -58,10 +63,25 @@ function DisputesIndexPage() {
               ))}
               {disputes.length === 0 && (
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
   return (
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+              )}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </EnhancedLayout>
+  );
+};
+              )  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <EnhancedLayout>;
       <div className="max - w-4xl mx - auto">;
         <div className="flex items - center justify - between mb - 4">;
@@ -88,6 +108,7 @@ function DisputesIndexPage() {
                 </tr>))}
               {disputes.length === 0 && (
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 }
@@ -98,6 +119,11 @@ function DisputesIndexPage() {
 
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+}
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <tr>;
                   <td col_span={4} className="px - 3 py - 6 text - center text - sm text - gray - 500">No disputes yet</td>;
                 </tr>)}
@@ -105,6 +131,7 @@ function DisputesIndexPage() {
           </table>;
         </div>;
       </div>;
+<<<<<<< HEAD
     </EnhancedLayout>);
 <<<<<<< HEAD
 }
@@ -132,12 +159,15 @@ function DisputesIndexPage() {
                   <td className="px-3 py-2">{d.status}</td>
                 </tr>
               ))  } catch (error) {
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 
 
+<<<<<<< HEAD
               {disputes.length === 0 && (
                 <tr>
                   <td colSpan={4} className="px-3 py-6 text-center text-sm text-gray-500">No disputes yet</td>
@@ -168,3 +198,5 @@ function DisputesIndexPage() {
 }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

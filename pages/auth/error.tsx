@@ -1,10 +1,22 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { use_router } from 'next / router';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components / ui / card';
 import { Button } from '@/components / ui / button';
 import { AlertTriangle } from 'lucide-react';
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+const errorMessages: Record<string string> = {OAuthSignin: 'The authentication provider is temporarily unavailable. Please try again later.';
+  default: 'There was an issue with your authentication request.';
+}
+export default function AuthErrorPage() {
+  const { query } = useRouter()
+  const message = errorMessages[query.error as string] |errorMessages.default
+const errorMessages: Record<string string> = {;
+  OAuthSignin: 'The authentication provider is temporarily unavailable. Please try again later.';
+  default: 'There was an issue with your authentication request.';
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 const errorMessages: Record<string string> = {;
@@ -18,21 +30,17 @@ const errorMessages: Record<string, string> = {;
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-
-
-
 }
 export default function AuthErrorPage() {
   const { query } = useRouter()
   const message = errorMessages[query.error as string] || errorMessages.default
-
   return (
     <>
       <Head>
-
+        <title>Authentication Error - Zion Tech Marketplace</title>;
+        <meta name=&quot;description&quot; content=&quot;Authentication error page&quot; />
         <title>Authentication Error - Zion Tech Marketplace</title>
         <meta name="description" content="Authentication error page" />
-
       </Head>
       <div className=&quot;min-h-screen flex items-center justify-center bg-gradient-to-br from-red-50 to-orange-100 dark:from-gray-900 dark:to-gray-800 p-4&quot;>
         <Card className=&quot;w-full max-w-md&quot;>
@@ -57,6 +65,7 @@ export default function AuthErrorPage() {
       </div>
     </>
   )
+<<<<<<< HEAD
 
 import Link from 'next / link';
 import Head from 'next / head';
@@ -174,3 +183,5 @@ export default function AuthErrorPage() {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 export function PaymentSection({ selectedCountry }: PaymentSectionProps) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -20,11 +21,14 @@ interface PaymentSectionProps {
   selectedCountry: CountryPricing
 }
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export function PaymentSection({ selectedCountry }: PaymentSectionProps) {
   // Handle successful payment
 
   const handlePaymentInitiated = () => {
     toast({
+<<<<<<< HEAD
       title: 'Processing your request'
       description:
         "You'll be redirected to our secure payment portal momentarily."
@@ -99,12 +103,13 @@ export function PaymentSection(): any ({ selectedCountry }: PaymentSectionProps)
 <<<<<<< HEAD
 =======
       title: 'Processing your request'
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       title: 'Processing your request',
       description:
         "You'll be redirected to our secure payment portal momentarily."
     })
   }
-
       title: "Processing your request",
       description: "You'll be redirected to our secure payment portal momentarily."})
   },
@@ -116,27 +121,6 @@ export function PaymentSection(): any ({ selectedCountry }: PaymentSectionProps)
         <MapPin className="mr-2 h-5 w-5 text-zion-purple" />
         {selectedCountry.country}
       </h4>
-      <p className='text-2xl font-bold text-zion-cyan mb-6'>
-        ${selectedCountry.pricePerIncident.toFixed(2)}
-      </p>
-      <PaymentButton
-        amount={selectedCountry.pricePerIncident}
-        serviceId='it-onsite-service'
-        providerId='zion-tech-group'
-        buttonText={`Pay for Service in ${selectedCountry.country}`}
-        className='bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white w-full py-6'
-        redirectUrl='/it-onsite-services?success=true'
-        onPaymentInitiated={handlePaymentInitiated}      />
-      <p className='text-xs text-zion-slate-light mt-2'>
-        Price includes transportation and first hour onsite. Additional hours
-        billed separately.
-      </p>
-    </div>
-  )
-}"}
-    </div>;
-  );
-}"};
       <p className="text-2xl font-bold text-zion-cyan mb-6">
 import { MapPin } from 'lucide-react';
 import { PaymentButton } from "@/components/transactions/PaymentButton",;
@@ -159,12 +143,16 @@ export function PaymentSection({ selectedCountry }: PaymentSectionProps) {;
       <h4 className="text-xl font-bold text-white mb-2 flex items-center justify-center">;
         <MapPin className="mr-2 h-5 w-5 text-zion-purple" />;
         {selectedCountry.country}
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       </h4>;
       <p className='text - 2xl font - bold text - zion - cyan mb - 6'>;
         ${selected_country.pricePerIncident.to_fixed (2)}
       </p>;
       <PaymentButton;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -188,3 +176,5 @@ export function PaymentSection({ selectedCountry }: PaymentSectionProps) {;
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 ;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

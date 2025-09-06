@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -33,6 +34,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     if (usingPlaceholder) {
       return res.status(200).json({ ok: true, code, status: 'pending', mock: true })
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     }
     const supabase = getServerSupabase();
     const { data: existing, error: existingErr } = await supabase
@@ -41,6 +44,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       .eq("code", code)
       .maybeSingle();
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -59,6 +63,8 @@ function sanitize_code (input: string): string {
     .replace (/[^a - z0 - 9-]/g, "-");
     .replace (/-+/g, "-");
     .replace (/^-|-$/g, "");
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 export default async /**
  * handler - Function description
@@ -102,12 +108,16 @@ if ( {) {
 }
     const { error } = await supabase.from ("partners").insert ({
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       code,
       name,
 
   }
 }
+<<<<<<< HEAD
 =======
       niche: niche || null, socials: socials || null,
       payout_method: payout_method || null, status: 'pending',
@@ -134,21 +144,23 @@ if ( {) {
 =======
       code,
       name,
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       niche: niche || null, socials: socials || null,
       payout_method: payout_method || null, status: 'pending',
       commission_rate: 0.15});
+
     if (error) return res.status(500).json({ error: error.message });
+
     return res.status(200).json({ ok: true, code, status: 'pending' })
   } catch (e: any) {
     return res.status(500).json({ error: e?.message })
-  }
 }
-    if (return res.status (500).json ({ error: "Database error" })) {
-  $2
 }
     return res.status (200).json ({ ok: true, code, status: "pending" });
   } catch (e: any) {
     return res.status (500).json ({ error: e?.message });
+<<<<<<< HEAD
 
     const {_data: existing, _error: existingErr} = await supabase
       .from('partners')
@@ -294,6 +306,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  }
+}
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -306,6 +323,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   }
 }
@@ -317,3 +335,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  }
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

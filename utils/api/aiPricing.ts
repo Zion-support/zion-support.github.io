@@ -1,5 +1,6 @@
 // Stub AI pricing utility - placeholder for missing functionality;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 },
 
@@ -11,10 +12,13 @@ export const getAIPricing = async (service: string) => {
   return { price: 99, currency: 'USD', success: true }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export const calculateAICost = async (usage: any) => {
   // Placeholder implementation;
   return { cost: 0, success: true }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -28,12 +32,15 @@ export const getAIPricing = async (service: string) => {;
 
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export const getAIPricing = async (service: string) => {;
   // Placeholder implementation;
   return { price: 99, currency: 'USD', success: true }
 },;
 export const calculateAICost = async (usage: any) => {;
   // Placeholder implementation;
+<<<<<<< HEAD
   return { cost: 0, success: true }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   return { price: 99, currency: 'USD', success: true   } catch (error) {
@@ -57,3 +64,8 @@ export const calculateAICost = async (usage: any) => {;
 };
 };
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+export const getAIPricing = async (service: string) => {;
+  // Placeholder implementation;
+};
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

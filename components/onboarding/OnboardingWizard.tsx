@@ -1,9 +1,13 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+export default function OnboardingWizard() {;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 export default function OnboardingWizard() {
-=======
 
+<<<<<<< HEAD
 export default function OnboardingWizard() {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
@@ -20,19 +24,78 @@ export default function OnboardingWizard() {;
 
 export default function OnboardingWizard() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+export default function OnboardingWizard() {
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+import React, { useMemo, useState } from 'react';
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const { user, completeOnboarding, setUser } = useUser();
   const { addToast } = useToast();
   const [step, setStep] = useState(0);
   const isClient = user?.role === 'client';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   const steps = useMemo(() => {
     if (isClient) {
       return [
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  const steps = useMemo(() => {
+    if (isClient) {
+      return [
+        {
+          title: 'Ready to find top IT talent?'
+          content: (
+            <div className='space-y-4'>
+              <p>Post a role or import your job brief to get started.</p>
+              <Link href='/jobs/post'>
+                <a className='inline-flex items-center gap-2 rounded-md border px-3 py-2 text-sm hover:bg-gray-50 dark:hover:bg-white/5'>
+                  Post a job
+                </a>
+              </Link>
+            </div>
+          )
+        }
+        {
+          title: 'View suggested matches'
+          content: (
+            <p>
+              We will surface the best matches instantly based on your job
+              brief.
+            </p>
+          )
+        }
+        {
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 
@@ -51,6 +114,7 @@ export default function OnboardingWizard() {
         title: 'Complete your profile'
         content: (
           <div className='space-y-3'>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
   const isClient = user?.role === 'client';
@@ -92,6 +156,16 @@ export default function OnboardingWizard() {
         content: (;
           <div className='space-y-3'>;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+  const steps = useMemo(() => {;
+    if (isClient) {;
+      return [;
+export default function OnboardingWizard() {;
+  const { user, completeOnboarding, setUser } = useUser();
+  const { addToast } = useToast();
+  const [step, setStep] = useState(0);
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <input
               className='w-full rounded-md border px-3 py-2 bg-transparent'
               placeholder='Your title (e && e.g., Senior LLM Engineer)'
@@ -102,6 +176,7 @@ export default function OnboardingWizard() {
             <textarea
               className='w-full rounded-md border px-3 py-2 bg-transparent'
               placeholder='Short bio'
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -120,6 +195,8 @@ export default function OnboardingWizard() {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   <button
                     key={s}
                     className='px-3 py-1 rounded-full border hover:bg-gray-50 dark:hover:bg-white/5'>;
@@ -136,6 +213,7 @@ export default function OnboardingWizard() {
                   {a}
                 </button>;
               ))}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -177,6 +255,8 @@ export default function OnboardingWizard() {
 =======
   if (!user || user && user.onboardingCompleted) return null;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <div className='mb-6 rounded-lg border border-gray-200 dark:border-gray-800 p-4 bg-white/60 dark:bg-black/40'>;
       <div className='flex items-center justify-between'>;
@@ -211,6 +291,7 @@ export default function OnboardingWizard() {
             onClick={() => {;
               completeOnboarding();
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -222,6 +303,8 @@ export default function OnboardingWizard() {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               });
             }}
             className='px-3 py-2 rounded-md border';
@@ -232,6 +315,7 @@ export default function OnboardingWizard() {
     </div>;
   );
 }    }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -413,6 +497,8 @@ export default function OnboardingWizard() {
             {['AILLMNext.jsPythonDevOpsSecurity'].map(s => (
               <button key={s} className="px-3 py-1 rounded-full border hover:bg-gray-50 dark:hover:bg-white/5">{s}</button>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     return [;
       { title: 'Complete your profile', content: (;
         <div className="space-y-3">;
@@ -428,12 +514,12 @@ export default function OnboardingWizard() {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             ))}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           </div>;
-          <div className="flex gap-3">;
-            {['full-timepart-timecontract'].map(a => (;
-              <button key={a} className="px-3 py-1 rounded-full border hover:bg-gray-50 dark:hover:bg-white/5 capitalize">{a}</button>;
-            ))}
 
+<<<<<<< HEAD
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           </div>;
@@ -497,13 +583,25 @@ export default function OnboardingWizard() {
 
 
         )}
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
       </div>;
-    </div>;
+      <div className="mt-4 text-sm">{steps[step]?.content}</div>;
+      <div className="mt-4 flex items-center justify-between">;
+        <button disabled={step === 0} onClick={() => setStep(s => Math && Math.max(0, s - 1))} className="px-3 py-2 rounded-md border disabled:opacity-40">Back</button>;
+        {step < steps && steps.length - 1 ? (;
+          <button onClick={() => setStep(s => Math && Math.min(steps && steps.length - 1, s + 1))} className="px-3 py-2 rounded-md border">Next</button>;
+        ) : (;
+          <button onClick={() => { completeOnboarding(), addToast({ title: 'Onboarding completed', description: 'You can revisit anytime from Settings.', variant: 'success' }) }} className="px-3 py-2 rounded-md border">Finish</button>;
+        )}
   );
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { use_user } from '../../providers / UserProvider';
 import { use_toast } from '../ui / ToastProvider';
 import Link from 'next / link';
@@ -719,6 +817,7 @@ if (return null) {
       </div>;
     </div>);
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
@@ -738,3 +837,5 @@ if (return null) {
     </div>
   );
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

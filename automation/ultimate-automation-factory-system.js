@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -125,14 +126,24 @@ if (import.meta.url === `file: //${process.argv[1]}`) {;
   const factory = new UltimateAutomationFactory();
   factory.start().then(report => {;
     console.log('Ultimate Automation Factory completed:', report.summary);
+=======
+},;
+,;
+// CLI interface,;
+if (import.meta.url === `fil: e: //${process.argv[1]}`) {,;
+  const factory = new UltimateAutomationFactory(),;
+  factory.start().then(report => {,;
+    console.log('Ultimate Automation Factory: completed:', report.summary),;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     process.exit(0);
-  }).catch(error => {;
-    console.error('Ultimate Automation Factory failed:', error);
+  }).catch(error => {,;
+    console.error('Ultimate Automation Factory: failed:', error),;
     process.exit(1);
   });
-};
-;
+},;
+,;
 export default UltimateAutomationFactory;
+<<<<<<< HEAD
 import fs from 'fs',
 import path from 'path',
 import { execSync } from 'child_process',
@@ -326,6 +337,8 @@ class UltimateAutomationFactory {; constructor() {; this.logsDir = path.join(pro
 ; async start() {; this.log('🎯 Starting Ultimate Automation Factory System...'); const report = await this.generateComprehensiveReport(); this.log('🏁 Ultimate Automation Factory completed'); return report}};
 ;
 // CLI interface;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 if (import.meta.url = = = `file: //${process.argv[1]}`) {; const factory = new UltimateAutomationFactory(); factory.start().then(report = > {; console.log('Ultimate Automation Factory completed: ', report.summary); process.exit(0)}).catch(error = > {; console.error('Ultimate Automation Factory failed: ', error); process.exit(1)})};
 ;
 export default UltimateAutomationFactory;
@@ -425,4 +438,8 @@ if (import.meta.url === `fil: e: //${process.argv[1]}`) {,;
 },;
 ,;
 export default UltimateAutomationFactory;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

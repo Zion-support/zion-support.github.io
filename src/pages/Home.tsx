@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { Link } from 'react-router-dom';
 <<<<<<< HEAD
@@ -237,3 +238,5 @@ function FeatureCard({ title, description }: {
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 export default Home;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -30,6 +31,8 @@ export function SkipLink({ targetId, children }: { targetId: string, children: R
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <a;
       href={`#${target_id}`}
       className="sr - only focus:not - sr - only focus:absolute focus:top - 4 focus:left - 4 bg-[var (--accent)] text - white px - 4 py - 2 rounded z - 50";
@@ -37,6 +40,7 @@ export function SkipLink({ targetId, children }: { targetId: string, children: R
       {children}
     </a>);
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -78,6 +82,8 @@ export function LiveRegion({;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <div;
       role={role}
       aria - live={aria_live}
@@ -87,6 +93,7 @@ export function LiveRegion({;
       {message}
     </div>);
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -106,84 +113,16 @@ export function useFocusTrap(enabled: boolean = true) {;
     const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement,;
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     const handleKeyDown = (e: KeyboardEvent) => {;
       if (e.key === "Tab") {;
         if (e.shiftKey) {;
           if (document.activeElement === firstElement) {;
-
-
-            e.preventDefault(),;
-            lastElement.focus();
-          }
-        } else {;
-          if (document.activeElement === lastElement) {;
-            e.preventDefault(),;
-
-
             firstElement.focus();
           }
         }
       }
-
-
-    },;
-    container.addEventListener("keydown", handleKeyDown),;
-    return () => container.removeEventListener("keydown", handleKeyDown);
-  }, [enabled]),;
-  return containerRef;
-}
-;
-// Keyboard navigation hook;
-export function useKeyboardNavigation(items: any[], onSelect: (item: any) => void) {;
-  const [selectedIndex, setSelectedIndex] = useState(-1),;
-  const handleKeyDown = (e: KeyboardEvent) => {;
-    switch (e.key) {;
-      case "ArrowDown": e.preventDefault(),;
-        setSelectedIndex(prev => (prev + 1) % items.length),;
-        break,;
-      case "ArrowUp":;
-        e.preventDefault(),;
-        setSelectedIndex(prev => (prev - 1 + items.length) % items.length),;
-        break,;
-      case "Enter":;
-      case " ":;
-        e.preventDefault(),;
-        if (selectedIndex >= 0) {;
-          onSelect(items[selectedIndex]);
-        }
-        break,;
-      case "Escape": setSelectedIndex(-1),;
-        break;
-    }
-  },;
-  useEffect(() => {;
-    document.addEventListener("keydown", handleKeyDown),;
-    return () => document.removeEventListener("keydown", handleKeyDown);
-  }, [items, selectedIndex, onSelect]),;
-  return { selectedIndex, setSelectedIndex }
-}
-;
-// Announcement component for screen readers;
-export function Announcement({;
-  message,;
-  priority = "polite";
-}: {;
-  message: string,;
-  priority?: "polite" | "assertive";
-}) {;
-  const [announcements, setAnnouncements] = useState<string[]>([]),;
-  useEffect(() => {;
-    if (message) {;
-      setAnnouncements(prev => [...prev, message]),;
-      // Clear announcement after a delay;
-      const timer = setTimeout(() => {;
-        setAnnouncements(prev => prev.slice(1));
-      }, 1000),;
-      return () => clearTimeout(timer);
-    }
-  }, [message]),;
-
-
   return (;
     <div aria-live={priority} aria-atomic="true" className="sr-only">;
       {announcements.map((announcement, index) => (;
@@ -192,6 +131,7 @@ export function Announcement({;
     </div>;
   );
 }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -285,31 +225,25 @@ export function useFocusTrap(enabled: boolean = true) {;
     ),;
     const firstElement = focusableElements[0] as HTMLElement,;
     const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement,;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     const handleKeyDown = (e: KeyboardEvent) => {;
       if (e.key === "Tab") {;
         if (e.shiftKey) {;
           if (document.activeElement === firstElement) {;
-            e.preventDefault();
-            lastElement.focus();
-          }
-        } else {if (document.activeElement === lastElement) {;
-            e.preventDefault();
-            e.preventDefault(),;
-            lastElement.focus();
-          }
-        } else {;
-          if (document.activeElement === lastElement) {;
-            e.preventDefault(),;
             firstElement.focus();
           }
         }
       }
+<<<<<<< HEAD
     }
     container.addEventListener("keydown", handleKeyDown);
     return () => container.removeEventListener("keydown", handleKeyDown);
   }, [enabled]);
   return containerRef;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 // Keyboard navigation hook;
 export function useKeyboardNavigation (items: any[], on_select: (item: any) => void) {
@@ -361,6 +295,7 @@ if ( {) {
       }, 1000),
       return () => clear_timeout (timer);
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
   }, [message]),
   return (
@@ -437,6 +372,8 @@ export function Announcement({;
       return () => clearTimeout(timer);
     }
   }, [message]),;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (;
     <div aria-live={priority} aria-atomic="true" className="sr-only">;
       {announcements.map((announcement, index) => (;
@@ -445,6 +382,7 @@ export function Announcement({;
     </div>;
   );
 }
+<<<<<<< HEAD
 // Progress indicator component;
 export function ProgressIndicator({value;
   max;
@@ -465,6 +403,8 @@ export function ProgressIndicator({;
   label: string;
 }) {;
   const percentage = Math.round((value / max) * 100),;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (;
     <div className="space-y-2">;
       <div className="flex justify-between text-sm">;
@@ -485,6 +425,7 @@ export function ProgressIndicator({;
       </div>;
     </div>);
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -540,6 +481,8 @@ export function CollapsibleSection({;
 }) {;
   const [isExpanded, setIsExpanded] = useState(defaultExpanded),;
   const contentRef = useRef<HTMLDivElement>(null),;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (;
     <div className="border border-[var(--border)] rounded-lg">;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -555,6 +498,7 @@ export function CollapsibleSection({;
         </span>;
       </button>;
       <div;
+<<<<<<< HEAD
 
         id={`collapsible-${title.toLowerCase ().replace (/\s+/g, '-')}`}
         ref={content_ref}
@@ -578,6 +522,8 @@ export function CollapsibleSection({;
         className={`overflow-hidden transition-all duration-300 ${;
           isExpanded ? "max-h-96 opacity-100" : "max-h-0 opacity-0";
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         }`}
         aria - hidden={!is_expanded}
       >;
@@ -587,6 +533,7 @@ export function CollapsibleSection({;
       </div>;
     </div>);
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -652,6 +599,8 @@ export function Tooltip({;
     left: "right-full top-1/2 transform -translate-y-1/2 mr-2";
     right: "left-full top-1/2 transform -translate-y-1/2 ml-2";
   };
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (;
     <div className="relative inline-block">;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

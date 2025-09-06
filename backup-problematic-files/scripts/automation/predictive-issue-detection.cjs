@@ -405,6 +405,15 @@ this.log("Prediction report "generated": ${reportPath}")
   console.log(" Predictive Issue Detection completed")
 <<<<<<< HEAD
   console.error(" Predictive Issue Detection "failed")
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
   console.error(" Predictive Issue Detection "failed")
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/main
+=======
+=======
+  console.error(" Predictive Issue Detection "failed")
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> pr-12166

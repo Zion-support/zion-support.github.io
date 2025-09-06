@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 
@@ -9,13 +10,18 @@ import React from "react";
 import {MobileHeader} from "../components/common/MobileHeader";
 import {BottomNavigation} from "../components/common/BottomNavigation";
 import {MobileProjectView} from "../components/projects/MobileProjectView";
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from "react",
 import { MobileHeader } from "../components/common/MobileHeader",
 import { BottomNavigation } from "../components/common/BottomNavigation";
 import { MobileProjectView } from "../components/projects/MobileProjectView";
 import { BottomNavigation } from "../components/common/BottomNavigation",
 import { MobileProjectView } from "../components/projects/MobileProjectView",
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 // Mock data
 
 const projectData = {
@@ -24,6 +30,7 @@ const projectData = {
   client: {
     name: "TechCorp Inc."
     avatar: ""
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import React from "react";
@@ -175,6 +182,8 @@ export function MobileProjects() {
           project={projectData}
         <MobileProjectView 
           project={projectData} 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from "react",;
 import { MobileHeader } from "../components/common/MobileHeader",;
 import { BottomNavigation } from "../components/common/BottomNavigation",;
@@ -186,18 +195,11 @@ const projectData = {;
   client: {;
     name: "TechCorp Inc.",;
     avatar: "";
-  },;
-  startDate: "Oct 15, 2023",;
-  endDate: "Jan 15, 2024",;
-  status: "in_progress",;
-  totalAmount: "$12,000",;
-  progress: 60,;
-  description: "Redesign of the company website with a focus on improving user experience and conversion rates. Includes new homepage, about page, and product listing pages.";
-},;
 const milestonesData = [;
   {;
     id: "milestone-1",;
     title: "Initial Design Concepts",;
+<<<<<<< HEAD
     dueDate: "Oct 30, 2023",;
     status: "completed" as const,;
     paymentStatus: "paid" as const,;
@@ -233,6 +235,8 @@ export function MobileProjects() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         <MobileProjectView 
           project={projectData} 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
           milestones={milestonesData}
@@ -242,9 +246,13 @@ export function MobileProjects() {;
     </div>
   )
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       />;
 
       <main className="py-4">;
@@ -259,10 +267,14 @@ export function MobileProjects() {;
   );
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from './react';
 import { MobileHeader } from '../components / common / MobileHeader';
 import { BottomNavigation } from '../components / common / BottomNavigation';
@@ -329,6 +341,7 @@ function MobileProjects() {
       <BottomNavigation />;
     </div>);
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -419,3 +432,5 @@ export function MobileProjects() {;
 };
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

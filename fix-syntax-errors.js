@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -77,11 +78,14 @@ files.forEach((file) => {
           modified = true;
           return match.trim() + ";";
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         }
         return match;
       },
     );
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 ;
     // Fix other common syntax issues;
@@ -132,6 +136,8 @@ if (&&) {
           !match.includes("import")
         ) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           modified = true;
           return match + ";";
         }
@@ -139,6 +145,7 @@ if (&&) {
       },
     );
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 ;
     // Check condition
@@ -167,15 +174,20 @@ if ( {) {
     console.error(`Error processing ${file}:`, error.message);
   }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 });
 
 console.log(`\nTotal files fixed: ${totalFixed}`);
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 }},
 
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }},
 ,
 // Run all fixes,
@@ -186,7 +198,10 @@ fixApiDocs();
 fixCareers();
 ,
 console.log('🎉 Syntax error fixes completed');
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 // Run all fixes,
 fixFooter(),
 fixAccessibility(),
@@ -203,8 +218,12 @@ fixApiDocs(),;
 fixCareers(),;
 // // // console.log('🎉 Syntax error fixes completed'),;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+}},
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

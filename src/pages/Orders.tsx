@@ -1,5 +1,6 @@
 import { FileText, CheckCircle2, Clock, ShieldAlert } from 'lucide-react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import Link from 'next / link'; // Changed from react-router-dom;
 import { use_auth } from '@/hooks / use_auth';
@@ -19,14 +20,21 @@ import { useAuth } from '@/hooks/useAuth';
 import { useGetOrdersQuery } from '@/hooks/useOrders';
 import {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+import {
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   Table
   TableBody
   TableCell
   TableHead
   TableHeader
-
-
-
+import {
+  Table,
+  TableBody,
+  TableCell,
+} from '@/components/ui/table';
+import { Badge } from '@/components/ui/badge';
 
 export default function OrdersPage() {;
 
@@ -34,11 +42,6 @@ export default function OrdersPage() {;
   const { data: orders, isLoading } = useGetOrdersQuery(user?.id);
 
   const formatDate = (date: string) => new Date(date).toLocaleDateString();
-
-  const getStatusBadge = (status: string,) => {;
-    switch (status) {;
-      case 'in_escrow':;
-
         return (
           <Badge variant='warning' className='flex items-center gap-1'>;
             <Clock className='h-3 w-3' /> In Escrow;
@@ -53,9 +56,6 @@ export default function OrdersPage() {;
         );
       case 'disputed':;
         return (
-
-        )
-
       default:
           <Badge variant='destructive' className='flex items-center gap-1'>;
             <ShieldAlert className='h-3 w-3' /> Disputed;
@@ -64,6 +64,7 @@ export default function OrdersPage() {;
       default:;
         return status;
     }
+<<<<<<< HEAD
   }
 import { FileText, CheckCircle2, Clock, ShieldAlert } from 'lucide-react'
 import Link from 'next/link', // Changed from react-router-dom
@@ -76,14 +77,32 @@ import {
   TableCell,
 <<<<<<< HEAD
 =======
-import { FileText, CheckCircle2, Clock, ShieldAlert } from 'lucide-react'
-import Link from 'next/link', // Changed from react-router-dom
-import { useAuth } from '@/hooks/useAuth',
-import { useGetOrdersQuery } from '@/hooks/useOrders',
+=======
 import {
   Table,
   TableBody,
   TableCell,
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+import { FileText, CheckCircle2, Clock, ShieldAlert } from 'lucide-react'
+import Link from 'next/link', // Changed from react-router-dom
+import { useAuth  } from '@/hooks/useAuth';
+import { useGetOrdersQuery } from '@/hooks/useOrders';
+import { Table;
+  TableBody;
+  TableCell;
+  TableHead;
+  TableHeader;
+  TableRow } from '@/components/ui/table';
+import { Badge  } from '@/components/ui/badge';
+import Skeleton from '@/components/ui/skeleton';
+import { EmptyState } from '@/components/ui/empty-state';
+export default function OrdersPage() {;
+  const { user } = useAuth();
+  const { data: orders, isLoading } = useGetOrdersQuery(user?.id);
+
+  const formatDate = (date: string) => new Date(date).toLocaleDateString();
+  const getStatusBadge = (status: string,) => {
   TableHead,
   TableHeader,
   TableRow} from '@/components/ui/table',
@@ -124,6 +143,7 @@ export default function OrdersPage() {
       default:
         return status
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -169,11 +189,38 @@ ursor/fix-website-loading-errors-and-merge-6662
               </TableRow>;
 
 <<<<<<< HEAD
+=======
+
+  return (
+    <div className="container max-w-4xl py-10">
+      <h1 className="text-3xl font-bold mb-6">Order History</h1>
+      {isLoading ? (
+        <Table>
+          <TableHeader>
+            <TableRow>
+              <TableHead>Order #</TableHead>
+              <TableHead>Date</TableHead>
+              <TableHead>Total</TableHead>
+              <TableHead>Status</TableHead>
+              <TableHead>View</TableHead>
+            </TableRow>
+          </TableHeader>
+          <TableBody>
+            {Array.from({ length: 3 }).map((_, i) => (
+              <TableRow key={i}>
+                <TableCell><Skeleton className="h-4 w-20" /></TableCell>
+                <TableCell><Skeleton className="h-4 w-24" /></TableCell>
+                <TableCell><Skeleton className="h-4 w-16" /></TableCell>
+                <TableCell><Skeleton className="h-4 w-20" /></TableCell>
+                <TableCell><Skeleton className="h-4 w-24" /></TableCell>
+              </TableRow>
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             ))}
           </TableBody>;
         </Table>;
       ) : orders && orders.length === 0 ? (;
         <EmptyState
+<<<<<<< HEAD
 =======
   }
   },
@@ -183,6 +230,8 @@ ursor/fix-website-loading-errors-and-merge-6662
           icon={<FileText className="h-10 w-10" />}
           title="No Orders"
           description="You haven't purchased anything yet."
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
         />
@@ -198,6 +247,7 @@ ursor/fix-website-loading-errors-and-merge-6662
             </TableRow>
           </TableHeader>
           <TableBody>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -244,6 +294,8 @@ ursor/fix-website-loading-errors-and-merge-6662
             {orders.map((order) => (
               <TableRow key={order.orderId}>
                 <TableCell className="font-medium">{order.orderId}</TableCell>
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
                 <TableCell>{formatDate(order.date)}</TableCell>
@@ -252,6 +304,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                 <TableCell>{getStatusBadge(order.status)}</TableCell>
                 <TableCell>
                   <Link
+<<<<<<< HEAD
                     href={`/orders/${order.orderId}`}
                     className='text-zion-purple underline'
 =======
@@ -261,11 +314,14 @@ ursor/fix-website-loading-errors-and-merge-6662
                     href={`/orders/${order.orderId}`} // Changed to href
                     className="text-zion-purple underline"
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   >
                     View
                   </Link>
                 </TableCell>
               </TableRow>
+<<<<<<< HEAD
           title='No Orders'          description="You haven't purchased anything yet.";
         />;
       ) : (;
@@ -311,12 +367,15 @@ ursor/fix-website-loading-errors-and-merge-6662
 ;
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           </TableBody>;
         </Table>;
       )}
     </div>;
   );
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 ;
@@ -436,3 +495,6 @@ function OrdersPage() {
 =======
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

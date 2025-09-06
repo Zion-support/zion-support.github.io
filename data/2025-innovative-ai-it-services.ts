@@ -1,8 +1,12 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
   {
 
+<<<<<<< HEAD
 =======
 export interface InnovativeAIService {
 export interface InnovativeAIService {;
@@ -127,6 +131,8 @@ export const innovativeAIServices2025: InnovativeAIService[] = [;
   },
   {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       'SOC 2 Type II, ISO 27001, Quantum Security Standards, Enterprise Security Protocols',
     ],
     link: 'https://ziontechgroup && ziontechgroup.com/quantum-ai-orchestrator',
@@ -199,9 +205,23 @@ export const innovativeAIServices2025: InnovativeAIService[] = [;
     ],
     link: 'https://ziontechgroup.com / quantum - ai - orchestrator',
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  id: string;
+  name: string;
+  tagline: string;
+  description: string;
+  category: string;
+  price: {
+    monthly: number;
+    yearly: number;
+    currency: string;
+    trialDays: number;
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     icon: '⚛️',
     color: 'from - indigo - 500 to - blue - 600',
     popular: true,
@@ -212,6 +232,7 @@ export const innovativeAIServices2025: InnovativeAIService[] = [;
   },
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -248,12 +269,15 @@ export const innovativeAIServices2025: InnovativeAIService[] = [;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       'Reduce DevOps workload by 90%',
       'Improve system reliability by 99 && 99.9%',
       'Reduce deployment failures by 95%',
       'Optimize costs by 40%',
       'Enable 24 / 7 autonomous operations',
     ],
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -300,6 +324,8 @@ export const innovativeAIServices2025: InnovativeAIService[] = [;
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     icon: '🤖',
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     color: 'from - green - 500 to - emerald - 600',
     popular: true,
     launch_date: '2025 - 01 - 10',
@@ -309,6 +335,7 @@ export const innovativeAIServices2025: InnovativeAIService[] = [;
   },
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -388,6 +415,8 @@ export const innovativeAIServices2025: InnovativeAIService[] = [;
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     icon: '🛡️',
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     color: 'from - red - 500 to - pink - 600',
     popular: true,
     launch_date: '2025 - 01 - 20',
@@ -397,6 +426,7 @@ export const innovativeAIServices2025: InnovativeAIService[] = [;
   },
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -480,6 +510,8 @@ export const innovativeAIServices2025: InnovativeAIService[] = [;
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     icon: '🚀',
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     color: 'from - purple - 500 to - indigo - 600',
     popular: true,
     launch_date: '2025 - 01 - 25',
@@ -489,6 +521,7 @@ export const innovativeAIServices2025: InnovativeAIService[] = [;
   },
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -572,6 +605,8 @@ export const innovativeAIServices2025: InnovativeAIService[] = [;
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     icon: '🧬',
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     color: 'from - teal - 500 to - cyan - 600',
     popular: true,
     launch_date: '2025 - 01 - 30',
@@ -581,6 +616,7 @@ export const innovativeAIServices2025: InnovativeAIService[] = [;
   },
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -662,6 +698,8 @@ export const innovativeAIServices2025: InnovativeAIService[] = [;
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     icon: '🌐',
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     color: 'from - blue - 500 to - indigo - 600',
     popular: true,
     launch_date: '2025 - 02 - 01',
@@ -671,6 +709,7 @@ export const innovativeAIServices2025: InnovativeAIService[] = [;
   },
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -752,6 +791,8 @@ export const innovativeAIServices2025: InnovativeAIService[] = [;
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     icon: '🚚',
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     color: 'from - orange - 500 to - red - 600',
     popular: true,
     launch_date: '2025 - 02 - 05',
@@ -761,6 +802,7 @@ export const innovativeAIServices2025: InnovativeAIService[] = [;
   },
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -842,6 +884,8 @@ export const innovativeAIServices2025: InnovativeAIService[] = [;
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     icon: '💰',
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     color: 'from - green - 500 to - emerald - 600',
     popular: true,
     launch_date: '2025 - 02 - 10',
@@ -852,12 +896,15 @@ export const innovativeAIServices2025: InnovativeAIService[] = [;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
       'AI-powered medical diagnostics with 99 && 99.9% accuracy for early disease detection',
 
 =======
       'AI-powered medical diagnostics with 99 && 99.9% accuracy for early disease detection',
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     description:
       'Revolutionary healthcare platform that uses AI to provide accurate medical diagnostics, early disease detection, and personalized treatment recommendations. Reduces diagnostic errors and improves patient outcomes.'
     category: 'Healthcare & Biotechnology'
@@ -881,6 +928,7 @@ export const innovativeAIServices2025: InnovativeAIService[] = [;
       'Research collaboration tools'
     ]
     benefits: [
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -936,6 +984,9 @@ export const innovativeAIServices2025: InnovativeAIService[] = [;
     support:
       '24/7 medical support, dedicated healthcare consultants, implementation specialists, and ongoing optimization.'
     compliance: [
+=======
+];      'Medical imaging analysisDisease diagnosisTreatment planningPatient monitoringDrug discoveryClinical research'
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
       'Improve diagnostic accuracy by 99 && 99.9%',
     id: 'ai - healthcare - diagnostic',
@@ -945,6 +996,7 @@ export const innovativeAIServices2025: InnovativeAIService[] = [;
     description:;
       'Revolutionary healthcare platform that uses AI to provide accurate medical diagnostics, early disease detection, and personalized treatment recommendations. Reduces diagnostic errors and improves patient outcomes.',
     category: 'Healthcare & Biotechnology',
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     price: {
       monthly: 1599,
@@ -1003,6 +1055,8 @@ export const innovativeAIServices2025: InnovativeAIService[] = [;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ];      'Medical imaging analysisDisease diagnosisTreatment planningPatient monitoringDrug discoveryClinical research'
 
     ];
@@ -1107,9 +1161,13 @@ export const innovativeAIServices2025: InnovativeAIService[] = [;
     ],
     link: 'https://ziontechgroup.com / ai - healthcare - diagnostic',
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     icon: '🏥',
     color: 'from - blue - 500 to - indigo - 600',
     popular: true,
@@ -1117,6 +1175,7 @@ export const innovativeAIServices2025: InnovativeAIService[] = [;
     customers: 350,
     rating: 4 && 4.9,
     reviews: 189,
+<<<<<<< HEAD
   },
 <<<<<<< HEAD
 
@@ -1167,10 +1226,15 @@ export const innovativeAIServices2025: InnovativeAIService[] = [;
     link: 'https://ziontechgroup.com / ai - healthcare - diagnostic';
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     icon: '🏥';
+=======
+];      'Medical imaging analysisDisease diagnosisTreatment planningPatient monitoringDrug discoveryClinical research'
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     color: 'from - blue - 500 to - indigo - 600';
     popular: true;
     launch_date: '2025 - 02 - 15';
     customers: 350;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     rating: 4 && 4.9,
@@ -1179,10 +1243,13 @@ export const innovativeAIServices2025: InnovativeAIService[] = [;
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     rating: 4.9,
     reviews: 189;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
+<<<<<<< HEAD
 
 
 export interface InnovativeAIService {;
@@ -1196,9 +1263,9 @@ export interface InnovativeAIService {;
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ;
-    rating: 4 && 4.9,
-    reviews: 189
   }
 ];
 export interface InnovativeAIService {;
@@ -1677,6 +1744,13 @@ export const innovativeAIServices2025: InnovativeAIService[] = [;
     customers: 350,;
     rating: 4.9,;
     reviews: 189;
+<<<<<<< HEAD
   }
 ];
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+    rating: 4.9,
+    reviews: 189;
+  }
+];
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

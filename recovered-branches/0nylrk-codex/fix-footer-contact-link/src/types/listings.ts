@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   description: string,
   icon: string;
@@ -22,32 +23,33 @@ export interface ProductListing {
   category: string,
   subcategory?: string, // Adding optional subcategory field;
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export interface ListingCategory {
 export interface ListingCategory {;
   id: string;
   name: string;
 
-  description: string
-
-  icon: string
 }
 export interface ProductListing {
-
-export interface ProductListing {;
   id: string;
   title: string;
   description: string;
+<<<<<<< HEAD
 
   category: string
 
   subcategory?: string, // Adding optional subcategory field
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   price: number | null;
   currency: string;
   tags: string[];
   author: {
     name: string;
     id: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     avatar_url?: string,
@@ -77,10 +79,13 @@ export interface ProductListing {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 }
 export interface ListingItem {
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   id: string;
   title: string;
   category: string;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     avatarUrl?: string
@@ -110,6 +115,8 @@ export interface ListingItem {;
 }
 export type ListingView = 'grid' | 'list';
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export interface ListingCategory {;
   id: string,;
   name: string,;
@@ -150,7 +157,10 @@ export interface ListingItem {;
   description?: string;
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   image?: string,
   description?: string;
 }
@@ -160,6 +170,7 @@ export interface ListingCategory {;
 
 
 export type ListingView = 'grid' | 'list';
+<<<<<<< HEAD
 ;
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -209,3 +220,5 @@ export type ListingView = 'grid' | 'list',; export type ListingView = 'grid' | '
 export type ListingView = 'grid' | 'list';
 export type ListingView = 'grid' | 'list';
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

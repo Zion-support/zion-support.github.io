@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -12,6 +13,9 @@ import LoadingSpinner from "./LoadingSpinner";
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 interface LazyImageProps {
 =======
+=======
+interface LazyImageProps {
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 interface LazyImageProps {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
@@ -26,6 +30,7 @@ interface LazyImageProps {;
   sizes?: string;
   quality?: number;
   fill?: boolean;
+<<<<<<< HEAD
 
 
 export default function LazyImage(): any ({;
@@ -73,6 +78,8 @@ export default function LazyImage({
   onError
 }: LazyImageProps) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   src,
   alt,
   width,
@@ -89,14 +96,18 @@ export default function LazyImage({
   onError,
 }: LazyImageProps) {;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const [isLoaded, setIsLoaded] = useState(false);
   const [isInView, setIsInView] = useState(priority);
   const [hasError, setHasError] = useState(false);
   const imgRef = useRef<HTMLDivElement>(null);
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -147,6 +158,8 @@ export default function LazyImage({
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     return (
       <div
         ref={imgRef}
@@ -167,6 +180,7 @@ export default function LazyImage({
         </div>;
       )}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
       {isInView && (;
@@ -174,6 +188,8 @@ export default function LazyImage({
 =======
       {isInView && (;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <Image
 =======
   style?: React.CSSProperties;
@@ -270,6 +286,7 @@ if ( {) {
             is_loaded ? "opacity - 100" : "opacity - 0";
           }`}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
         />)}
     </div>);
@@ -278,4 +295,6 @@ if ( {) {
         />)}
     </div>);
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }

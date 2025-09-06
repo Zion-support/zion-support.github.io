@@ -1,8 +1,11 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 export interface CuttingEdgeMicroSaas2028 {
 export interface CuttingEdgeMicroSaas2028 {;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   id: string;
   name: string;
   tagline: string;
@@ -31,12 +34,18 @@ export interface CuttingEdgeMicroSaas2028 {;
     mobile: string,;
     email: string,;
     address: string;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
+=======
+  }
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
 ];
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -72,22 +81,28 @@ export const cuttingEdge2028MicroSaas: CuttingEdgeMicroSaas2028[] = [;
   },
 ];      mobile: "+1 302 464 0950";
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   id: string, name: string,
   tagline: string, price: string,
   description: string, features: string[],
   link: string, category: string,
   realImplementation: boolean,
   contactInfo: {
+<<<<<<< HEAD
     mobile: string, email: string,
     address: string
   }
 }
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export const cuttingEdge2028MicroSaas: CuttingEdgeMicroSaas2028[] = [
   {
     id: "2028-cutting-edge-micro-saas", name: "2028 Cutting-Edge Micro SAAS Platform",
     tagline: "Cutting-edge micro SAAS for 2028", price: "$199/month",
     description: "Cutting-edge micro SAAS platform that showcases the latest innovations for 2028.",
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     id: '2028-cutting-edge-micro-saas'
@@ -97,6 +112,8 @@ export const cuttingEdge2028MicroSaas: CuttingEdgeMicroSaas2028[] = [
     description:
       'Cutting-edge micro SAAS platform that showcases the latest innovations for 2028.'
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     features: [
       "Cutting-edge features";
       "Latest innovations";
@@ -107,15 +124,23 @@ export const cuttingEdge2028MicroSaas: CuttingEdgeMicroSaas2028[] = [
     link: "/services/2028-cutting-edge-micro-saas", category: "Cutting-Edge Micro SAAS 2028",
     realImplementation: true,
     contactInfo: {
-      mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
 ];
+      mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    }
+  }
+];
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
@@ -162,3 +187,5 @@ export const cuttingEdge2028MicroSaas: CuttingEdgeMicroSaas2028[] = [
   }
 ];
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

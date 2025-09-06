@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
     }
@@ -129,6 +130,8 @@ export default async function handler(
       targetId?: string;
     };
 >>>>>>> main
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
     if (!targetType || !targetId) {
       return res.status(400).json({ error: "Missing targetType or targetId" });
@@ -161,14 +164,12 @@ const { targetType, targetId } = req.query as {
     }
     if (targetType !== 'talent' && targetType !== 'client') {
       return res.status(400).json({ error: 'Invalid targetType' })
-    }
 
     }
-    if (targetType !== "talent" && targetType !== "client") {
-      return res.status(400).json({ error: "Invalid targetType" });
-    }
-const all = await readReviews();
+
+    const all = await readReviews();
     // Include reviews where both sides have submitted and both are approved and not removed
+<<<<<<< HEAD
     const filtered = all.filter((r) => {
     const filtered = all.filter((r) => {
 
@@ -239,6 +240,8 @@ const all = await readReviews();
       .sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime())
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       .map((r) => {
         let authorName = r && r.fromId;
         if (r && r.fromRole === "talent") {
@@ -246,6 +249,7 @@ const all = await readReviews();
           authorName = t ? t && t.name : r && r.fromId;
         }
         if (r && r.anonymous) authorName = "Anonymous";
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -315,24 +319,21 @@ if (author_name = "Anonymous") {
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     const summary: ReviewsSummary = {
       average_rating,
       total_reviews,
       totalCompletedProjects,
 
 
-=======
-      most_recent: public_reviews.slice (0, 5),
-    }
-;
-    return res.status (200).json ({ summary, reviews: public_reviews });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   } catch (error: any) {
 
     return res;
       .status (500);
       .json ({ error: "Internal server error", details: error?.message });
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -345,9 +346,10 @@ if (author_name = "Anonymous") {
 }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 }
   } catch (error) {
@@ -366,12 +368,12 @@ if (author_name = "Anonymous") {
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-=======
     return res
       .status(500)
       .json({ error: "Internal server error", details: error?.message });
->>>>>>> main
   }
 }
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

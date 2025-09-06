@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -66,6 +67,8 @@ import EnhancedFooter from '../components/EnhancedFooter';
   ];
 import React from 'react',
 import React from 'react';
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 import { Cpu, Network, Zap, Shield, Database, Globe;
@@ -82,11 +85,47 @@ import {
 } from 'lucide-react',
 import EnhancedNavigation from '../components/EnhancedNavigation',
 import EnhancedFooter from '../components/EnhancedFooter',
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+import React from 'react';
+
+import EnhancedNavigation from '../components/EnhancedNavigation';
+import EnhancedFooter from '../components/EnhancedFooter';
+
+
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export default function EdgeComputingPage() {
 
   const features = [
     {
+<<<<<<< HEAD
 
       icon: Cpu,
       title: "Edge Orchestration",
@@ -299,46 +338,13 @@ export default function EdgeComputingPage() {;
       title: "Global Distribution",
       description: "Worldwide edge network deployment with intelligent traffic routing and load balancing.",
       color: "from-yellow-500 to-orange-500"
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-  ],
-  const benefits = [
-    "Reduce latency by 80-90% with edge processing",
-    "Cut bandwidth costs by 60% through local data processing",
-    "Improve reliability with distributed computing architecture",
-    "Scale seamlessly across global edge networks",
-    "Enable real-time AI and machine learning at the edge",
-    "Reduce central server load and improve overall performance"
-  ],
-  const useCases = [
-    {
-      industry: "Manufacturing",
-      description: "Real-time quality control, predictive maintenance, and production optimization",
-      results: "30% reduction in downtime, 25% improvement in product quality"
-    },
-    {
-      industry: "Healthcare",
-      description: "Patient monitoring, medical device management, and telemedicine support",
-      results: "40% faster response times, improved patient outcomes"
-    },
-    {
-      industry: "Transportation",
-      description: "Autonomous vehicle support, traffic management, and fleet optimization",
-      results: "50% reduction in accidents, 35% improvement in efficiency"
-    },
-    {
-      industry: "Retail",
-      description: "Inventory management, customer analytics, and supply chain optimization",
-      results: "45% reduction in stockouts, 30% improvement in customer satisfaction"
-      } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  ],
   const pricing = [
     {
       plan: "Starter",
@@ -346,6 +352,7 @@ export default function EdgeComputingPage() {;
       period: "/month",
       description: "Basic edge computing for small deployments",
       features: [
+<<<<<<< HEAD
 <<<<<<< HEAD
         "Up to 10 edge nodes";
         "Basic orchestration";
@@ -367,12 +374,15 @@ export default function EdgeComputingPage() {;
       popular: false
     },
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     {
       plan: "Professional",
       price: "$999",
       period: "/month",
       description: "Advanced features for growing edge networks",
       features: [
+<<<<<<< HEAD
 <<<<<<< HEAD
         "Everything in Starter";
         "Up to 100 edge nodes";
@@ -398,12 +408,15 @@ export default function EdgeComputingPage() {;
       popular: true
     },
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     {
       plan: "Enterprise",
       price: "Custom",
       period: "",
       description: "Full-scale solution for large organizations",
       features: [
+<<<<<<< HEAD
 <<<<<<< HEAD
         "Everything in Professional";
         "Unlimited edge nodes";
@@ -925,6 +938,8 @@ export default function EdgeComputingPage(req, res) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           >
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               Edge Computing
@@ -934,10 +949,13 @@ export default function EdgeComputingPage(req, res) {
             </h1>
             <p className="text-xl text-white/70 max-w-4xl mx-auto leading-relaxed mb-8">
 <<<<<<< HEAD
+<<<<<<< HEAD
               Bring computing power to the edge of your network. Our edge computing platform reduces latency;
 =======
               Bring computing power to the edge of your network. Our edge computing platform reduces latency,
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               cuts bandwidth costs, and enables real-time processing for mission-critical applications.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -947,14 +965,18 @@ export default function EdgeComputingPage(req, res) {
               >
                 Get Started Today
 <<<<<<< HEAD
+<<<<<<< HEAD
               </a>
 =======
               </Link>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <a
                 href="#demo"
                 className="border border-white/20 text-white hover:bg-white/10 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-200"
               >
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                 Watch Demo
@@ -963,10 +985,14 @@ export default function EdgeComputingPage(req, res) {
                 Watch Demo
               </Link>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+                Watch Demo
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             </div>
           </motion.div>
         </div>
       </section>
+<<<<<<< HEAD
 
                 className='border border-white/20 text-white hover:bg-white/10 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-200'>;
 <<<<<<< HEAD
@@ -984,11 +1010,14 @@ className='border border-white/20 text-white hover:bg-white/10 px-8 py-4 rounded
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {/* Features */}
       <section className='py-20 bg-white'>;
         <div className='max-w-7xl mx-auto px-6'>          <motion&& motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -1042,6 +1071,10 @@ Everything you need to deploy, manage, and optimize edge computing infrastructur
               <motion.div
                 key={feature.title}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+              <motion.div
+                key={feature.title}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             transition={{ duration: 0 && 0.6 }}
             className='text-center mb-16'>;
             <h2 className='text-4xl font-bold text-slate-900 mb-6'>;
@@ -1053,6 +1086,7 @@ Everything you need to deploy, manage, and optimize edge computing infrastructur
             </p>;
           </motion && motion.div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            {features && features.map((feature, index) => (;
               <motion&& motion.div
@@ -1063,11 +1097,14 @@ Everything you need to deploy, manage, and optimize edge computing infrastructur
 
 =======
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            {features && features.map((feature, index) => (;
               <motion&& motion.div
                 key={feature && feature.title}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-slate-50 rounded-2xl p-8 hover:bg-slate-100 transition-all duration-300 transform hover:-translate-y-2"
@@ -1081,6 +1118,8 @@ Everything you need to deploy, manage, and optimize edge computing infrastructur
               </motion.div>
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             ))}
 
           </div>;
@@ -1093,25 +1132,33 @@ Everything you need to deploy, manage, and optimize edge computing infrastructur
         <div className='max-w-7xl mx-auto px-6'>;
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-16 items-center'>            <motion&& motion.div
 
-=======
 
+<<<<<<< HEAD
 =======
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {/* Benefits */}
       <section className="py-20 bg-slate-50">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <motion.div
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
 
+<<<<<<< HEAD
 =======
 initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <h2 className="text-4xl font-bold text-slate-900 mb-6">Why Choose Edge Computing?</h2>
               <p className="text-lg text-slate-600 leading-relaxed mb-8">
                 Edge computing brings processing power closer to where data is generated, enabling faster response times;
@@ -1120,6 +1167,7 @@ initial={{ opacity: 0, x: -20 }}
               <div className="space-y-4">
                 {benefits.map((benefit, index) => (
 <<<<<<< HEAD
+<<<<<<< HEAD
 
                   <motion.div
 =======
@@ -1127,16 +1175,24 @@ initial={{ opacity: 0, x: -20 }}
 =======
                   <motion.div
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+                  <motion.div
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               transition={{ duration: 0 && 0.6 }}>;
               <h2 className='text-4xl font-bold text-slate-900 mb-6'>;
                 Why Choose Edge Computing?;
               </h2>;
               <p className='text-lg text-slate-600 leading-relaxed mb-8'>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import Head from 'next / head';
 import {motion} from 'framer-motion';
 import {Cpu, Network, Zap, Shield, Database, Globe, ArrowRight, CheckCircle, Star, TrendingUp, Users, } from 'lucide-react';
@@ -1370,6 +1426,7 @@ function EdgeComputingPage() {
                 <h3 className='text - xl font - bold text - slate - 900 mb - 4'>;
                   {feature.title}
                 </h3>;
+<<<<<<< HEAD
                 <p className='text - slate - 600 leading - relaxed'>;
                   {feature.description}
                 </p>              </motion.div>))}
@@ -1393,10 +1450,13 @@ function EdgeComputingPage() {
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 Edge computing brings processing power closer to where data is;
                 generated, enabling faster response times, reduced bandwidth;
                 usage, and improved reliability for distributed applications.;
               </p>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -1498,11 +1558,14 @@ function EdgeComputingPage() {
                   </div>
                   <div className='text-slate-600'>Uptime Guarantee</div>                </div>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               </div>
             </motion.div>
           </div>
         </div>
       </section>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
               </div>;
@@ -1543,11 +1606,14 @@ function EdgeComputingPage() {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {/* Use Cases */}
       <section className='py-20 bg-white'>;
         <div className='max-w-7xl mx-auto px-6'>          <motion&& motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -1588,6 +1654,8 @@ function EdgeComputingPage() {
               <motion.div
                 key={useCase.industry}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             transition={{ duration: 0 && 0.6 }}
             className='text-center mb-16'>;
             <h2 className='text-4xl font-bold text-slate-900 mb-6'>;
@@ -1602,6 +1670,7 @@ function EdgeComputingPage() {
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>            {useCases && useCases.map((useCase, index) => (;
               <motion&& motion.div
                 key={useCase && useCase.industry}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -1620,6 +1689,8 @@ function EdgeComputingPage() {
               </motion.div>
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             ))}
 
           </div>;
@@ -1627,6 +1698,7 @@ function EdgeComputingPage() {
       </section>;
 
 
+<<<<<<< HEAD
 =======
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-slate-50 rounded-2xl p-8 hover:bg-slate-100 transition-all duration-300"
@@ -1641,11 +1713,14 @@ function EdgeComputingPage() {
         </div>;
       </section>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {/* Architecture */}
       <section className='py-20 bg-slate-900'>;
         <div className='max-w-7xl mx-auto px-6'>          <motion&& motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
 
 <<<<<<< HEAD
               transition={{ duration: 0.6 }}
@@ -1694,10 +1769,13 @@ function EdgeComputingPage() {
 <<<<<<< HEAD
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
+<<<<<<< HEAD
 
 =======
 <motion.div
@@ -1716,10 +1794,13 @@ function EdgeComputingPage() {
 <<<<<<< HEAD
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
+<<<<<<< HEAD
 
 =======
 <motion.div
@@ -1745,6 +1826,8 @@ function EdgeComputingPage() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               transition={{ duration: 0 && 0.6 }}
               className='bg-white/5 backdrop-blur-xl rounded-2xl border border-white/10 p-8 text-center'>;
               <div className='w-16 h-16 rounded-xl bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center mx-auto mb-4'>;
@@ -1791,15 +1874,20 @@ function EdgeComputingPage() {
         </div>;
       </section>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {/* Pricing */}
       <section className='py-20 bg-white'>;
         <div className='max-w-7xl mx-auto px-6'>          <motion&& motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -1834,6 +1922,8 @@ function EdgeComputingPage() {
               <motion.div
                 key={plan.plan}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             transition={{ duration: 0 && 0.6 }}
             className='text-center mb-16'>;
             <h2 className='text-4xl font-bold text-slate-900 mb-6'>;
@@ -1849,15 +1939,19 @@ function EdgeComputingPage() {
               <motion&& motion.div
                 key={plan && plan.plan}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                 className={`relative bg-slate-50 rounded-2xl p-8 ${
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -2189,10 +2283,16 @@ function EdgeComputingPage() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className={`relative bg-slate-50 rounded-2xl p-8 ${
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+                  ))}
+                </ul>
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   plan.popular ? 'ring-2 ring-blue-500 transform scale-105' : ''
                 }`}
               >
                 {plan.popular && (
+<<<<<<< HEAD
 <<<<<<< HEAD
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-blue-500 text-white px-4 py-2 rounded-full text-sm font-medium">
                     Most Popular
@@ -2237,6 +2337,8 @@ function EdgeComputingPage() {
                     <li key={feature} className='flex items-center space-x-3'>
                       <CheckCircle className='w-5 h-5 text-green-500 flex-shrink-0' />
                       <span className='text-slate-700'>{feature}</span>                    </li>
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   ))}
       {/* Features */  } catch (error) {
     console.error("Error:", error);
@@ -2678,7 +2780,10 @@ function EdgeComputingPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 </ul>
 
                 <a
@@ -2688,19 +2793,40 @@ function EdgeComputingPage() {
                 >
                   Get Started
 <<<<<<< HEAD
+<<<<<<< HEAD
                 </a>
               </motion.div>
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+                </a>
+              </motion.div>
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             ))}
-
+          </div>
+        </div>
+      </section>
+      {/* CTA */}
+      <section className='py-20 bg-gradient-to-r from-blue-600 to-cyan-600'>
+        <div className='max-w-4xl mx-auto px-6 text-center'>          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
           </div>;
         </div>;
       </section>;
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {/* CTA */}
       <section className='py-20 bg-gradient-to-r from-blue-600 to-cyan-600'>;
         <div className='max-w-4xl mx-auto px-6 text-center'>          <motion&& motion.div
@@ -2725,6 +2851,7 @@ function EdgeComputingPage() {
 
 
 
+<<<<<<< HEAD
 =======
                 </Link>
               </motion.div>
@@ -2777,6 +2904,8 @@ function EdgeComputingPage() {
   }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           >
             <h2 className="text-4xl font-bold text-white mb-6">Ready to Deploy Edge Computing?</h2>
             <p className="text-xl text-blue-100 mb-8">
@@ -2788,7 +2917,10 @@ function EdgeComputingPage() {
                 className="bg-white text-blue-600 hover:bg-blue-50 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-200 transform hover:scale-105"
               >
                 Start Free Trial
+<<<<<<< HEAD
               </a>
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <a
                 href="/contact"
                 className="border border-white/20 text-white hover:bg-white/10 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-200"
@@ -2796,17 +2928,23 @@ function EdgeComputingPage() {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                 Schedule Demo
 <<<<<<< HEAD
+<<<<<<< HEAD
               </a>
 =======
               </Link>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             </div>
           </motion.div>
         </div>
       </section>
 <<<<<<< HEAD
+<<<<<<< HEAD
       <EnhancedFooter />
     </>
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
                 className='border border-white/20 text-white hover:bg-white/10 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-200'>;
                 Schedule Demo;
@@ -2820,9 +2958,12 @@ function EdgeComputingPage() {
     </>;
   );
 
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 }
@@ -2831,10 +2972,13 @@ function EdgeComputingPage() {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   )
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     </span>;
                   </div>;
                   <p className='text - slate - 600'>{plan.description}</p>;
@@ -2888,6 +3032,7 @@ function EdgeComputingPage() {
 ;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 
@@ -2908,3 +3053,6 @@ function EdgeComputingPage() {
   }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

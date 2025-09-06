@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import { Button } from '@/components/ui/button'
 import { Sparkles, Loader2 } from 'lucide-react'
@@ -71,6 +72,8 @@ interface AIEnhancementButtonProps {;
 }
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export function AIEnhancementButton({
   currentContent,
   enhancementType,
@@ -79,6 +82,7 @@ export function AIEnhancementButton({
   buttonText = "Enhance with AI",
   className
 }: AIEnhancementButtonProps) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -102,13 +106,18 @@ export function AIEnhancementButton({
       onEnhanced(enhancedContent)
     }
   }
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const { enhanceContent, isEnhancing } = useResumeEnhancer(),
   const [error, setError] = useState<string | null>(null),
   
   const handleEnhance = async () => {
     if (!currentContent || currentContent.trim().length < 10) {
       setError('Please enter at least some basic content before enhancing'),
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       return
     }
     setError(null)
@@ -119,6 +128,7 @@ export function AIEnhancementButton({
     )
     if (enhancedContent) {
       onEnhanced(enhancedContent)
+<<<<<<< HEAD
 interface AIEnhancementButtonProps {;
   currentContent: string;
   enhancementType:;
@@ -194,6 +204,8 @@ export function AIEnhancementButton(): any ({;
     </Button>
   )
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { Button } from '@/components / ui / button';
 import { Sparkles, Loader2 } from 'lucide-react';
 import { useResumeEnhancer } from '@/hooks / useResumeEnhancer';
@@ -239,6 +251,7 @@ if ( {) {
 }
       on_enhanced (enhanced_content);
     }
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   }
 
@@ -248,26 +261,25 @@ if ( {) {
 
   },
   
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   return (
-
-
-      onClick={handleEnhance}
-      disabled={isEnhancing}
-
-
+    <Button
+      type="button"
+      variant="ghost"
+      size="sm"
+      className={`h-6 gap-1 text-primary hover:text-primary ${className}`}
     >
       {isEnhancing ? (
         <Loader2 className="h-3 w-3 animate-spin" />
       ) : (
-
-
-        <Sparkles className="h-3 w-3" />
-      )}
-
-      <span className="text-xs">{buttonText}</span>;
-    </Button>;
-  );
+  );      onClick={handleEnhance}
+      disabled={isEnhancing}
+    >
+      {isEnhancing ? (
+        <Loader2 className="h-3 w-3 animate-spin" />
+      ) : (
 }
 
     <Button;
@@ -291,10 +303,14 @@ if ( {) {
       <span className="text - xs">{button_text}</span>;
     </Button>);
 }
-
+        <Sparkles className="h-3 w-3" />
+      )}
+      <span className="text-xs">{buttonText}</span>
+    </Button>
   )
 }
 ;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 ;
@@ -306,3 +322,5 @@ if ( {) {
 }
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

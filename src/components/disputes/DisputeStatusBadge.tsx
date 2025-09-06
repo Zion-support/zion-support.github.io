@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { Badge } from "@/components/ui/badge";
 =======
@@ -105,6 +106,8 @@ export function DisputeStatusBadge({ status }: DisputeStatusBadgeProps) {
       break
   }
   
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     default:
       break
   }
@@ -119,15 +122,6 @@ export function DisputeStatusBadge({ status }: DisputeStatusBadgeProps) {
       </TooltipTrigger>
       <TooltipContent>
         <p>{message}</p>
-      </TooltipContent>;
-    </Tooltip>;
-  );
-};
-}
-      </TooltipContent>
-    </Tooltip>
-  )
-}
 import { Badge } from "@/components/ui/badge",;
 import { ShieldAlert } from 'lucide-react';
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip",;
@@ -156,6 +150,7 @@ export function DisputeStatusBadge({ status }: DisputeStatusBadgeProps) {;
   }
 ;
   return (;
+<<<<<<< HEAD
     <Tooltip>;
       <TooltipTrigger asChild>;
         <Badge variant={variant} className='flex items-center gap-1'>;
@@ -199,6 +194,8 @@ export function DisputeStatusBadge({ status } DisputeStatusBadgeProps) {;
   }
   ;
   return (;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <Tooltip>;
       <TooltipTrigger asChild>;
         <Badge variant={variant} className="flex items-center gap-1">;
@@ -209,6 +206,7 @@ export function DisputeStatusBadge({ status } DisputeStatusBadgeProps) {;
       <TooltipContent>;
         <p>{message}</p>;
       </TooltipContent>;
+<<<<<<< HEAD
     </Tooltip>;
   );
 }
@@ -247,3 +245,7 @@ message ;
 }'"
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   )
+=======
+}
+;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

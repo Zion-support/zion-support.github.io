@@ -1,8 +1,11 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 export default function WalletPage() {_return (
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 import React from "react";
 import EnhancedLayout from "../../components/layout/EnhancedLayout";
@@ -10,24 +13,31 @@ import dynamic from "next/dynamic";
 const WalletPanel = dynamic(() => import("../../components/wallet/WalletPanel"), { ssr: false })
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from "react",;
 import EnhancedLayout from "../../components/layout/EnhancedLayout",;
 import dynamic from "next/dynamic",;
 const WalletPanel = dynamic(() => import("../../components/wallet/WalletPanel"), { ssr: false }),
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from "react",
 import EnhancedLayout from "../../components/layout/EnhancedLayout",
 import dynamic from "next/dynamic",
 const WalletPanel = dynamic(() => import("../../components/wallet/WalletPanel"), { ssr: false }),
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -37,6 +47,8 @@ const WalletPanel = dynamic(() => import("../../components/wallet/WalletPanel"),
 export default function WalletPage() {
   return (
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export default function WalletPage() {
   return (
     <EnhancedLayout title="Your ZION$ Wallet">
@@ -45,11 +57,20 @@ export default function WalletPage() {
       </div>
     </EnhancedLayout>
 <<<<<<< HEAD
-
+<<<<<<< HEAD
 =======
+  )
+import React from "react";
+import EnhancedLayout from "../../components/layout/EnhancedLayout";
+import dynamic from "next/dynamic";
+const WalletPanel = dynamic(() => import("../../components/wallet/WalletPanel"), { ssr: false });
+export default function WalletPage(req, res) {
+  try {
+  return (;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
 }
 
-=======
 import React from './react';,
 import EnhancedLayout from "../../components / layout / EnhancedLayout",
 import dynamic from './next / dynamic';,
@@ -63,13 +84,9 @@ function WalletPage() {
       <div className="max - w-2xl mx - auto">;
         <WalletPanel />;
       </div>;
-    </EnhancedLayout>);
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 }
@@ -102,3 +119,5 @@ export default function WalletPage(req, res) {
 }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

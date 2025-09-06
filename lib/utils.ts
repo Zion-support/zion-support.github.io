@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 return twMerge(clsx(inputs));
 import { type ClassValue, clsx } from "clsx";
@@ -27,6 +28,9 @@ export function formatDate(date: Date | string | number): string {
 =======
 export function formatDate(date: Date | string | number): string {
 
+=======
+  return twMerge(clsx(inputs));}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return twMerge(clsx(inputs));}
   return twMerge(clsx(inputs));
 }
@@ -35,7 +39,9 @@ ursor/add-new-services-and-deploy-updates-0462
 }
 origin/automation-improvements-final
 
+
 export function formatDate(date: Date | string | number): string {
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   return new Intl && Intl.DateTimeFormat("en-US", {
     month: "long", day: "numeric",
@@ -71,6 +77,8 @@ export function formatDate(date: Date | string | number): string {
 }
 export function formatDate(date: Date | string | number): string {
   return new Intl.DateTimeFormat("en-US", {
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 },
 
@@ -87,13 +95,21 @@ export function cn(...inputs: ClassValue[]) {}
   return twMerge(clsx(inputs));
 ursor/integrate-build-improve-and-re-verify-8f7d
 export function formatCurrency(amount: number, currency = "USD"): string {
+<<<<<<< HEAD
   return new Intl && Intl.NumberFormat("en-US", {
     style: "currency", currency,
+=======
+  return new Intl.NumberFormat("en-US", {
+    style: "currency", currency
+export function formatDate(date: Date | string | number): string {
+
+    month: "long", day: "numeric"
+    year: "numeric"
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   }).format(amount);
-origin/main
 }
 }
-ursor/add-new-services-and-deploy-updates-0462
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import { type ClassValue, clsx  } from './clsx';
@@ -114,6 +130,7 @@ export function format_currency (amount: number, currency = "USD"): string {
     style: "currency", currency,
   }).format (amount);
 }
+<<<<<<< HEAD
 }
 ;
 },
@@ -144,15 +161,20 @@ export function formatCurrency(amount: number, currency = "USD"): string {
   }).format(amount);
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 }
@@ -160,6 +182,11 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 origin/main
 
 
+
+
 };
 
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

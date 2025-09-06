@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -76,6 +77,8 @@ import {
   TrendingUp
   Shield;} from 'lucide-react';import {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   Brain,
   MessageSquare,
   Image,
@@ -87,6 +90,16 @@ import {
   ExternalLink,
   CheckCircle,
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+  Brain;
+  MessageSquare
+  Image
+  Video
+  Code
+  FileText
+  Zap
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 
@@ -97,6 +110,7 @@ import {
   Code,
   FileText,
   Zap,
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
   TrendingUp,
@@ -112,14 +126,25 @@ import {
   Zap
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   Star;
   ExternalLink;
   CheckCircle;
   TrendingUp;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+        'Advanced reasoning & analysis'
+        'Web browsing & real-time info'
+        'Plugin ecosystem access'
+        'Code generation & debugging'
+        'Professional writing assistance'
+      ],      pricing: '$20/month',        'Advanced reasoning & analysisWeb browsing & real-time infoPlugin ecosystem accessCode generation & debuggingProfessional writing assistance'
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 
@@ -130,8 +155,6 @@ import {
         'Code generation & debugging',
         'Professional writing assistance',
       ],      pricing: '$20/month',        'Advanced reasoning & analysisWeb browsing & real-time infoPlugin ecosystem accessCode generation & debuggingProfessional writing assistance';
-
-
       ];
       pricing: '$20/month'
       marketPrice: '$20/month'
@@ -140,6 +163,7 @@ import {
       textColor: 'text-green-400'
       gradient: 'from-green-400 to-emerald-500'
       popular: true
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
       icon: <Brain className="w-8 h-8 text-white" />,
@@ -172,6 +196,8 @@ function AiToolsPage() {
       pricing: '$20 / month',
       market_price: '$20 / month',
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       website: 'https://chat.openai.com',
       color: 'bg - gradient - to - br from - green - 500 to - emerald - 600',
       text_color: 'text - green - 400',
@@ -181,6 +207,7 @@ function AiToolsPage() {
       category: 'Conversational AI'
     }
     {
+<<<<<<< HEAD
 
 =======
   Shield
@@ -211,11 +238,14 @@ function AiToolsPage() {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       website: 'https://midjourney.com',
       color: 'bg - gradient - to - br from - purple - 500 to - pink - 600',
       text_color: 'text - purple - 400',
       gradient: 'from - purple - 400 to - pink - 500',
       popular: true,
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       category: 'Image Generation'
@@ -342,10 +372,16 @@ export default function AiToolsPage() {;
 <<<<<<< HEAD
 
 =======
+=======
+      category: 'Image Generation'
+    }
+    {
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       description: 'Anthropic\'s advanced AI assistant with superior reasoning, analysis, and document processing capabilities.';
       features: [;
         'Advanced reasoning abilitiesDocument analysisCode generationCreative writingResearch assistance';
       ];
+<<<<<<< HEAD
       pricing: '$10/month',
       marketPrice: '$10-20/month',
       website: 'https://github.com/features/copilot',
@@ -569,12 +605,17 @@ export default function AiToolsPage() {
     },  ];      category: 'Content Creation'
     }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         'Advanced reasoning abilities',
         'Document analysis',
         'Code generation',
         'Creative writing',
         'Research assistance',
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       ],      pricing: '$20 / month',    {
       icon: <MessageSquare className="w - 8 h - 8 text - white" />,
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -583,6 +624,7 @@ export default function AiToolsPage() {
       features: [;
         'Advanced reasoning abilities_document analysis_code generation_creative writing_research assistance';
       ];
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -605,10 +647,12 @@ export default function AiToolsPage() {
 
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   ];
 
-;
   const aiMarketStats = [;
+<<<<<<< HEAD
 
     {
 
@@ -680,26 +724,128 @@ export default function AiToolsPage() {
 
 =======
 description: 'Average productivity improvement',
+=======
+    {;
+      title: 'AI Market Size',;
+      value: '$136 && 136.6B',;
+      growth: '+37% YoY',;
+      description: 'Global AI market value in 2024',;
+    },    {;
+      title: 'AI Adoption Rate',;
+      value: '35%',;
+      growth: '+12% YoY',;
+      description: 'Businesses actively using AI tools',;
+    },    {;
+      title: 'AI Investment',;
+      value: '$93 && 93.5B',;
+      growth: '+28% YoY',;
+      description: 'Global AI investment in 2024',;
+    },    {;
+      title: 'AI Productivity Gain',;
+      value: '40%',;
+      growth: '+15% YoY',;
+      description: 'Average productivity improvement',;
+    },  ];      description: 'Global AI market value in 2024';
+    };
+    {;
+      title: 'AI Adoption Rate',;
+      value: '35%',;
+      growth: '+12% YoY',;
+      description: 'Businesses actively using AI tools',;
+    },      description: 'Businesses actively using AI tools';
+    };
+    {;
+      title: 'AI Investment',;
+      value: '$93 && 93.5B',;
+      growth: '+28% YoY',;
+      description: 'Global AI investment in 2024',;
+    },      description: 'Global AI investment in 2024';
+    };
+    {;
+      title: 'AI Productivity Gain',;
+      value: '40%',;
+      growth: '+15% YoY',;
+      description: 'Average productivity improvement',;
+    },      description: 'Average productivity improvement';
+    }
+  ];
+
+  const aiCategories = [;
+    {;
+      name: 'Conversational AI',;
+      description: 'Chatbots, virtual assistants, and language models',;
+      tools: 3,      tools: 3,;
+      avgPrice: '$20/month';
+    };
+    {;
+      name: 'Image Generation',;
+      description: 'AI-powered art, design, and visual content creation';
+      tools: 1,;
+      avgPrice: '$20/month',;
+    },;
+    {;
+      name: 'Image Generation',;
+      description: 'AI-powered art, design, and visual content creation',;
+      tools: 1,;
+      avgPrice: '$20/month',;
+    },    {;
+      name: 'Code Generation',;
+      description: 'AI-assisted programming and development tools',;
+      tools: 1,;
+      avgPrice: '$10/month',;
+    },    {;
+      name: 'Video Generation',;
+      description: 'AI video creation and editing tools',;
+      tools: 1,;
+      avgPrice: '$44/month',;
+    },    {;
+      name: 'Content Creation',;
+      description: 'AI-powered writing and content generation',;
+      tools: 1,;
+      avgPrice: '$82/month',;
+    },  ];    {;
+      name: 'Code Generation',;
+      description: 'AI-assisted programming and development tools',;
+      tools: 1,;
+      avgPrice: '$10/month',;
+    },      avgPrice: '$20/month';
+    };
+    {;
+      name: 'Code Generation',;
+      description: 'AI-assisted programming and development tools',;
+      tools: 1,;
+      avgPrice: '$10/month';
+    };
+    {;
+      name: 'Video Generation',;
+      description: 'AI video creation and editing tools',;
+      tools: 1,;
+      avgPrice: '$44/month',;
+    },      avgPrice: '$44/month';
+    };
+    {;
+      name: 'Content Creation',;
+      description: 'AI-powered writing and content generation',;
+      tools: 1,;
+      avgPrice: '$82/month',;
+    },      avgPrice: '$82/month';
+      description: 'Average productivity improvement',
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     },  ];      description: 'Global AI market value in 2024';
     }
     {
       title: 'AI Adoption Rate',
       value: '35%',
       growth: '+12% YoY',
-      description: 'Businesses actively using AI tools',
-    },      description: 'Businesses actively using AI tools';
-    }
     {
       title: 'AI Investment',
       value: '$93.5B',
       growth: '+28% YoY',
-      description: 'Global AI investment in 2024',
-    },      description: 'Global AI investment in 2024';
-    }
     {
       title: 'AI Productivity Gain',
       value: '40%',
       growth: '+15% YoY',
+<<<<<<< HEAD
       description: 'Average productivity improvement',
     },      description: 'Average productivity improvement';
     }
@@ -1209,6 +1355,9 @@ description: 'Average productivity improvement',
           </div>
         </div>
       </section>
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
       {/* AI Tools Grid */}
@@ -1217,6 +1366,7 @@ description: 'Average productivity improvement',
           <div className='text-center mb-20'>
             <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
 
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
@@ -1250,17 +1400,24 @@ description: 'Average productivity improvement',
               Curated AI Tools & Services
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
             </h2>
+=======
+              Curated AI Tools & Services
+            </h2>
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">
               Each tool has been carefully selected based on performance, reliability, and real-world value.
             </p>
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {aiTools.map((tool, index) => (
+<<<<<<< HEAD
 =======
           </div>;
         </div>;
       </section>;
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {/* AI Tools Grid */}
       <section className='section-padding bg-gradient-cursor'>;
         <div className='container-cursor'>;
@@ -1280,6 +1437,7 @@ description: 'Average productivity improvement',
               Each tool has been carefully selected based on performance, reliability, and real-world value.;
             </p>;
           </div>;
+<<<<<<< HEAD
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">;
             {aiTools && aiTools.map((tool, index) => (;
@@ -1289,11 +1447,14 @@ description: 'Average productivity improvement',
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <Card
                 key={index}
                 className={`card-hover group border-gradient-blue relative ${
                   tool && tool.popular ? 'ring-2 ring-cursor-blue ring-opacity-50' : ''
                 }`}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -1548,6 +1709,8 @@ description: 'Average productivity improvement',
                     </ul>;
                     <div className='flex items-center justify-between'>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       <Button
                         href={tool && tool.website}
                         variant='primary'
@@ -1576,6 +1739,7 @@ description: 'Average productivity improvement',
                   </div>;
                 </div>;
               </Card>;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -1596,10 +1760,13 @@ description: 'Average productivity improvement',
                         <li key={featureIndex} className="flex items-center text-gray-300">
                           <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                           {feature}
                         </li>
                       ))}
                     </ul>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
                     <div className="flex items-center justify-between">
@@ -1622,6 +1789,8 @@ description: 'Average productivity improvement',
                         </div>                      </div>                      <Button
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                         href={tool.website}
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                         variant="primary"
                         size="sm"
                         className="bg-cursor-blue hover:bg-cursor-blue-dark"
@@ -1637,20 +1806,18 @@ description: 'Average productivity improvement',
                   </div>
                 </div>
               </Card>
-
             ))}
-
-
-
-
+          </div>
+        </div>
+      </section>
 
       {/* AI Categories Overview */}
-
-
+      <section className='section-padding bg-gradient-cursor-accent'>
+        <div className='container-cursor'>
+          <div className='text-center mb-20'>
+            <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
 
               AI Tool Categories
-
-
             </h2>
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
               Understanding the different types of AI tools helps you build a
@@ -1661,6 +1828,9 @@ description: 'Average productivity improvement',
             {aiCategories.map((category, index) => (
           </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         </div>;
       </section>;
 
@@ -1735,12 +1905,17 @@ description: 'Average productivity improvement',
             <h2 className='text - responsive - lg font - bold mb - 8 gradient - text text - shadow'>;
             </h2>;
             <p className='text - responsive - md text - gray - 400 max - w-4xl mx - auto leading - relaxed'>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+            ))}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               Understanding the different types of AI tools helps you build a;
               comprehensive toolkit for your needs.;
             </p>;
           </div>;
 
+<<<<<<< HEAD
 =======
 =======
             ))}
@@ -1823,6 +1998,8 @@ description: 'Average productivity improvement',
           </div>
         </div>
       </section>
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
       {/* AI Implementation Guide */}
@@ -1831,6 +2008,7 @@ description: 'Average productivity improvement',
           <div className='text-center mb-20'>
             <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
 
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
@@ -1877,6 +2055,10 @@ description: 'Average productivity improvement',
               Getting Started with AI Tools
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
             </h2>
+=======
+              Getting Started with AI Tools
+            </h2>
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">
               Practical advice for implementing AI tools in your workflow and maximizing their value.
             </p>
@@ -1898,6 +2080,7 @@ description: 'Average productivity improvement',
                 </ul>
               </div>
             </Card>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -1922,6 +2105,8 @@ description: 'Average productivity improvement',
                 </p>
                 <ul className='space-y-2 text-sm text-gray-300'>                  <li>• Always review and edit AI-generated content</li>                </div>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <h3 className="text-xl font-semibold text-white mb-3">Best Practices</h3>
                 <p className="text-gray-400 mb-4">
                   Follow proven strategies to get the most out of your AI tools and ensure quality output.
@@ -1936,6 +2121,7 @@ description: 'Average productivity improvement',
           </div>
         </div>
       </section>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
           </div>;
@@ -2066,12 +2252,15 @@ description: 'Average productivity improvement',
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                   <li>• Use specific, detailed prompts</li>;
                   <li>• Maintain human oversight and creativity</li>;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 </ul>;
               </div>;
             </Card>;
           </div>;
         </div>;
       </section>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -2151,10 +2340,13 @@ description: 'Average productivity improvement',
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             </Button>;
           </div>;
         </div>;
       </section>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   );
@@ -2195,12 +2387,15 @@ description: 'Average productivity improvement',
               variant='outline'
               size='lg'
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               className='border-cursor-blue text-cursor-blue hover:bg-cursor-blue hover:text-white'            >              href="/micro-saas"
               variant="primary"
               size="lg"
               className="bg-cursor-blue hover:bg-cursor-blue-dark"
               Explore More Tools
             </Button>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
             <Button
@@ -2228,3 +2423,6 @@ description: 'Average productivity improvement',
 }
             <Button
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

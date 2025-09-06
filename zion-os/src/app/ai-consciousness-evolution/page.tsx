@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -16,6 +17,8 @@ export default function AIConsciousnessEvolutionPage() {;
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import Link from './next / link';,
 export const metadata = {
   title: "AI Consciousness Evolution - Zion Tech Group",
@@ -28,6 +31,7 @@ function AIConsciousnessEvolutionPage() {
   return (
     <div className="min - h-screen py - 20 px - 4 sm:px - 6 lg:px - 8">;
       <div className="max - w-7xl mx - auto">;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -46,11 +50,14 @@ export default function AIConsciousnessEvolutionPage() {;
     <div className="min-h-screen py-20 px-4 sm:px-6 lg:px-8">;
       <div className="max-w-7xl mx-auto">;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         {/* Hero Section */}
         <div className="text - center mb - 16">;
           <h1 className="text - 4xl md:text - 6xl font - bold mb - 6">;
             <span className="gradient - text">AI Consciousness Evolution</span>;
           </h1>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
           <p className="text - xl md:text - 2xl text - gray - 300 max - w-4xl mx - auto leading - relaxed">;
@@ -63,6 +70,8 @@ export default function AIConsciousnessEvolutionPage() {;
             Pushing the boundaries of artificial intelligence by developing systems that exhibit emergent consciousness,;
             self-awareness, and cognitive evolution capabilities.;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           </p>;
         </div>;
         {/* Overview Section */}

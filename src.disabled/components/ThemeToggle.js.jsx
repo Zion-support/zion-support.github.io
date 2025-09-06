@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -16,4 +17,8 @@ import React from\';react\' const ThemeToggle = () => { const [isDark,setIsDark]
 const React from";react" const ThemeToggle = () => { const [isDark,setIsDark] = useState(true) useEffect(() => {""";""
 :temp_exclude/src.disabled/components/ThemeToggle.js.jsx
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+import React from\';react\' const ThemeToggle = () => { const [isDark,setIsDark] = useState(true) useEffect(() => {\''\';
+const React from";react" const ThemeToggle = () => { const [isDark,setIsDark] = useState(true) useEffect(() => {""";""
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import _React from';react' const ThemeToggle = () => { const [isDark,setIsDark] = useState(true) useEffect(() => {''';

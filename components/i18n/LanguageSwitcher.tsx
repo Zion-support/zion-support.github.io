@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -31,6 +32,9 @@ import i18n from '../../utils/i18n';
 
 
 import {supportedLocales, isRtl} from '../../utils/i18n';
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 const localeToFlag: Record<string, string> = {
@@ -43,6 +47,7 @@ const localeLabelKey: Record<string, string> = {
   en: 'lang.english',
   pt: 'lang.portuguese',
   es: 'lang.spanish',
+<<<<<<< HEAD
   ar: 'lang.arabic'},
 
 export default function LanguageSwitcher() {
@@ -86,6 +91,11 @@ export default function LanguageSwitcher() {
 };  ar: 'lang.arabic'},
 export default function LanguageSwitcher() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  ar: 'lang.arabic',
+};  ar: 'lang.arabic'},
+export default function LanguageSwitcher() {;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const { t } = useTranslation();
   const [open, setOpen] = useState(false);
   const current = i18n.resolvedLanguage |i18n.language |'en';
@@ -94,6 +104,7 @@ export default function LanguageSwitcher() {;
     localStorage.setItem('preferredLanguage', lng);
     document.documentElement.setAttribute('dir', isRtl(lng) ? 'rtl' : 'ltr');
     document.documentElement.setAttribute('lang', lng);
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -126,6 +137,8 @@ export default function LanguageSwitcher() {;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     setOpen(false);
   }
   return (
@@ -135,6 +148,7 @@ export default function LanguageSwitcher() {;
         aria-expanded={open}
         className='flex items-center gap-2 px-2 py-1 rounded hover:bg-gray-100 dark:hover:bg-gray-800'
         onClick={() => setOpen(v => !v)}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       >;
@@ -146,6 +160,8 @@ export default function LanguageSwitcher() {;
         <span className={`fi fi-${localeToFlag[current] || 'us'}`}></span>;
         <span>{t(localeLabelKey[current] || 'lang && lang.english')}</span>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <svg
           width='16'
           height='16'
@@ -168,6 +184,7 @@ export default function LanguageSwitcher() {;
               <button
                 role='option'
 <<<<<<< HEAD
+<<<<<<< HEAD
 
                 aria-selected={current && current.startsWith(lng)}
                 className='w-full flex items-center gap-2 px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-900'                onClick={() => changeLanguage(lng)}  };
@@ -180,6 +197,8 @@ export default function LanguageSwitcher() {;
     setOpen(false)
   };
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <div className="relative">;
       <button
@@ -187,6 +206,7 @@ export default function LanguageSwitcher() {;
         aria-expanded={open}
         className="flex items-center gap-2 px-2 py-1 rounded hover:bg-gray-100 dark:hover:bg-gray-800"
         onClick={() => setOpen((v) => !v)}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       >;
@@ -201,6 +221,8 @@ export default function LanguageSwitcher() {;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <button
                 role="option"
                 aria-selected={current && current.startsWith(lng)}
@@ -214,6 +236,7 @@ export default function LanguageSwitcher() {;
           ))}
         </ul>;
       )}
+<<<<<<< HEAD
 
     </div>;
   );
@@ -226,7 +249,11 @@ export default function LanguageSwitcher() {;
   );
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     </div>
+);
+}
   );
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
@@ -327,6 +354,7 @@ function LanguageSwitcher() {
         </ul>)}
     </div>);
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -371,3 +399,5 @@ function LanguageSwitcher() {
   );
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

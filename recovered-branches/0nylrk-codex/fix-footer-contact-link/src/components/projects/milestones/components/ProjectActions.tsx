@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -14,34 +15,50 @@ import { Link  } from 'react-router-dom';
 import { ShieldAlert } from "lucide-react";
 import { RaiseDisputeButton } from '@/components/disputes/RaiseDisputeButton';
 interface ProjectActionsProps {
+=======
+
+import {Button} from '@/components/ui/button';
+import {Link} from 'react-router-dom';
+import {ShieldAlert} from "lucide-react";
+import {RaiseDisputeButton} from '@/components/disputes/RaiseDisputeButton';
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   projectId: string
   isUnderDispute: boolean
   disputeId?: string;
   isTalent: boolean
 
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {Button} from '@/components/ui/button';
 import {Link} from 'react-router-dom';
 import {ShieldAlert} from "lucide-react";
 import {RaiseDisputeButton} from '@/components/disputes/RaiseDisputeButton';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from 'react',
 import { Button } from '@/components/ui/button',
 import { Link } from 'react-router-dom',
 import { ShieldAlert } from "lucide-react",
 import { RaiseDisputeButton } from '@/components/disputes/RaiseDisputeButton',
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface ProjectActionsProps {
   projectId: string,
   isUnderDispute: boolean,
@@ -51,7 +68,10 @@ interface ProjectActionsProps {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export function ProjectActions({;
   projectId;
   isUnderDispute;
@@ -62,6 +82,7 @@ export function ProjectActions({
   isUnderDispute,
   disputeId,
   isTalent,
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
@@ -88,14 +109,23 @@ export function ProjectActions({
         </Button>
       ) : (
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  onAddMilestone
+}: ProjectActionsProps) {
+  return (
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <RaiseDisputeButton
           projectId={projectId}
           variant="outline"
         />
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from 'react',;
 import { Button } from '@/components/ui/button',;
 import { Link } from 'react-router-dom',;
@@ -113,15 +143,19 @@ export function ProjectActions({;
   projectId,;
   isUnderDispute,;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 export function ProjectActions(): any ({;
   projectId;
   isUnderDispute;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   disputeId;
   isTalent;
   onAddMilestone;
 }: ProjectActionsProps) {;
+<<<<<<< HEAD
 <<<<<<< HEAD
   return (;
 
@@ -184,12 +218,15 @@ export function ProjectActions({;
           variant="outline";
         />;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       )}
       {isTalent && !isUnderDispute && (
         <Button onClick={onAddMilestone}>
           Add Milestone
         </Button>
       )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     </div>
@@ -201,6 +238,8 @@ export function ProjectActions({;
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {Button} from '@/components / ui / button';
 import {Link} from 'react-router-dom';
 import { ShieldAlert } from './lucide-react';
@@ -228,10 +267,12 @@ function ProjectActions() {
         <RaiseDisputeButton;
           project_id={project_id}
           variant="outline";
-        />)}
-      {is_talent && !isUnderDispute && (
-        <Button on_click={onAddMilestone}>;
+        />;
+      )}
+      {isTalent && !isUnderDispute && (;
+        <Button onClick={onAddMilestone}>;
           Add Milestone;
+<<<<<<< HEAD
         </Button>)}
     </div>);
 }
@@ -267,3 +308,5 @@ onAddMilestone
   )
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

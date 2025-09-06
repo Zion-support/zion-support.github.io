@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 
@@ -58,6 +59,8 @@ import React from "react";
 import { Quote } from "lucide-react";
 import {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   Carousel,
   CarouselContent,
   CarouselItem,
@@ -66,9 +69,14 @@ import {
 } from "@/components/ui/carousel";
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   Carousel
   CarouselContent
   CarouselItem
@@ -101,7 +109,10 @@ const testimonials = [
     image: "/placeholder.svg"
   }
 ];
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from "react",
 import { Quote } from "lucide-react",
 import {
@@ -131,6 +142,7 @@ const testimonials = [
     company: "FutureTech Systems",
     image: "/placeholder.svg"}],
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
@@ -163,10 +175,17 @@ export function EnterpriseTestimonials() {
                   <div className="flex items-center gap-4">
                     <div className="h-12 w-12 rounded-full overflow-hidden bg-muted">
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+];
+
+export function EnterpriseTestimonials() {;
+  return (
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       <img
-                        src={testimonial.image}
-                        alt={testimonial.author}
+                        src={testimonial && testimonial.image}
+                        alt={testimonial && testimonial.author}
                         className="h-full w-full object-cover"
+<<<<<<< HEAD
                       />
                     </div>
                     <div>
@@ -195,6 +214,8 @@ export function EnterpriseTestimonials() {
   );
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from "react",;
 import { Quote } from "lucide-react",;
 import {;
@@ -224,6 +245,7 @@ const testimonials = [;
     image: "/placeholder.svg"}];
 export function EnterpriseTestimonials() {;
   return (;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -255,6 +277,8 @@ const testimonials = [;
 export function EnterpriseTestimonials() {;
   return (;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <section className="py-20 px-4 md:px-6">;
       <div className="container mx-auto max-w-6xl">;
         <div className="text-center mb-12">;
@@ -265,6 +289,7 @@ export function EnterpriseTestimonials() {;
             See how enterprise teams are transforming their hiring process;
           </p>;
         </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
         <Carousel className="w-full">;
@@ -279,10 +304,13 @@ export function EnterpriseTestimonials() {;
           <CarouselContent>;
             {testimonials.map((testimonial, index) => (;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <CarouselItem key={index} className="md:basis-1/1 lg:basis-1/1">;
                 <div className="bg-card rounded-xl p-8 border border-border h-full">;
                   <Quote className="h-10 w-10 text-primary/20 mb-4" />;
                   <blockquote className="text-xl mb-6 italic">;
+<<<<<<< HEAD
 <<<<<<< HEAD
                     "{testimonial && testimonial.quote}";
                   </blockquote>;
@@ -312,11 +340,14 @@ import {
   CarouselPrevious,
 } from '@/components / ui / carousel';
                       <img;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 
 }
 ;
+<<<<<<< HEAD
 const testimonials = [;
   {
     quote:;
@@ -382,10 +413,13 @@ function EnterpriseTestimonials() {
 <<<<<<< HEAD
                         {testimonial.title}, {testimonial.company}
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       </p>;
                     </div>;
                   </div>;
                 </div>;
+<<<<<<< HEAD
 
               </CarouselItem>))}
           </CarouselContent>;
@@ -402,11 +436,14 @@ function EnterpriseTestimonials() {
           </CarouselContent>;
           <div className="flex justify-center gap-2 mt-8">;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <CarouselPrevious />;
             <CarouselNext />;
           </div>;
         </Carousel>;
       </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     </section>);
@@ -444,3 +481,5 @@ image: "/placeholder.svg"
 }
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

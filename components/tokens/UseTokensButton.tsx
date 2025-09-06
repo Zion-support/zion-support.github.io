@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 
@@ -45,6 +46,13 @@ export default function UseTokensButton({
   defaultType?: RedemptionType;
 }) {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+  serviceId
+  defaultType
+}: {
+  serviceId?: string;
+  defaultType?: RedemptionType;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const [open, setOpen] = useState(false);
   return (
     <>;
@@ -59,6 +67,7 @@ export default function UseTokensButton({
         onClose={() => setOpen(false)}
         serviceId={serviceId}
         defaultType={defaultType}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -75,14 +84,8 @@ export default function UseTokensButton({ serviceId, defaultType }: { serviceId?
     </>
 <<<<<<< HEAD
 <<<<<<< HEAD
-);
 =======
   );
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-=======
-  );
->>>>>>> main
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   const [open, setOpen] = useState(false);
   return (
     <>;
@@ -97,9 +100,30 @@ export default function UseTokensButton({ serviceId, defaultType }: { serviceId?
         onClose={() => setOpen(false)}
         serviceId={serviceId}
         defaultType={defaultType}
-      />;
-    </>;
+      />
+    </>
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+);
   );
+<<<<<<< HEAD
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+  );
+>>>>>>> main
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+  const [open, setOpen] = useState(false);
+  return (
+      <UseTokensModal
+        isOpen={open}
+        onClose={() => setOpen(false)}
+        serviceId={serviceId}
+        defaultType={defaultType}
+      />
+    </>
+  );
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 }
@@ -118,6 +142,9 @@ export default /**
  */
 function UseTokensButton() {
   const [open, set_open] = useState (false);
+=======
+  const [open, setOpen] = useState(false);
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <>;
       <button;
@@ -149,6 +176,7 @@ function UseTokensButton() {
         default_type={default_type}
       />;
     </>);
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -197,3 +225,5 @@ function UseTokensButton() {
 }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

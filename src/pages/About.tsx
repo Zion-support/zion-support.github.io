@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { Users, Award, Target, Globe, Zap, Shield } from 'lucide-react';
 
@@ -206,3 +207,5 @@ const About: React.FC = () => {
 };
 
 export default About;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

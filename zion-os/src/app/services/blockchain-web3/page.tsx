@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -6,15 +7,20 @@
 export default function BlockchainWeb3Page() {;
   return (;
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <div className="space-y-8">;
       <div className="text-center space-y-4">;
         <h1 className="text-4xl font-bold">Blockchain & Web3 Solutions</h1>;
         <p className="text-xl opacity-80 max-w-3xl mx-auto">;
           Enterprise-grade blockchain infrastructure and Web3 integration services for the future of decentralized business;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 "use client",
 export default /**
  * BlockchainWeb3Page - Function description
@@ -26,6 +32,7 @@ function BlockchainWeb3Page() {
         <h1 className="text - 4xl font - bold">Blockchain & Web3 Solutions</h1>;
         <p className="text - xl opacity - 80 max - w-3xl mx - auto">;
           Enterprise - grade blockchain infrastructure and Web3 integration services for the future of decentralized business;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -40,6 +47,8 @@ export default function BlockchainWeb3Page() {;
         <p className="text-xl opacity-80 max-w-3xl mx-auto">;
           Enterprise-grade blockchain infrastructure and Web3 integration services for the future of decentralized business;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         </p>;
       </div>;
       {/* Service Overview */}
@@ -240,6 +249,7 @@ export default function BlockchainWeb3Page() {;
       </div>;
       {/* Pricing Tiers */}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -297,6 +307,8 @@ export default function BlockchainWeb3Page() {;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {/* Contact Section */}
       <div className="bg - gradient - to - r from - purple - 600 to - orange - 600 rounded - lg p - 8 text - white text - center">;
         <h2 className="text - 2xl font - bold mb - 4">Ready to Build the Future?</h2>;

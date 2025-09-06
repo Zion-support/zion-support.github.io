@@ -1,5 +1,8 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -15,6 +18,7 @@ class ErrorBoundary extends React.Component {
     console.error('Error caught by boundary:', error, errorInfo);
   }
   
+<<<<<<< HEAD
 =======
   static getDerivedStateFromError(error) {
     return { hasError: true };
@@ -23,16 +27,22 @@ class ErrorBoundary extends React.Component {
     console.error('Error caught by boundary:', error, errorInfo);
   }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     
     return this.props.children;
   }
 }
 
+<<<<<<< HEAD
 =======
 
 
@@ -48,11 +58,14 @@ import React from 'react';
 
 =======
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 import React from "react";
 import Layout from "../components/Layout";
 import React from 'react';
+<<<<<<< HEAD
 
 
 
@@ -154,6 +167,8 @@ import React from "react";
 import Layout from "../components/Layout";
 import React from 'react';
 ursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import Layout from '../components/Layout';
 import Layout from '../components/Layout';
 origin/automation-improvements-final
@@ -220,6 +235,7 @@ export default function Contact() {
 }
   };
   return (
+<<<<<<< HEAD
     <Layout
       title="Contact Us - Zion Tech Group"
       description="Get in touch with Zion Tech Group for your technology needs. Contact us for AI services, IT solutions, and more."
@@ -231,6 +247,8 @@ export default function Contact() {
               Contact Us
             </h1>
             <h1 className="text-4xl font-bold text-gray-900 mb-4">Contact Us</h1>
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Get in touch with our team for your technology needs.
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -238,6 +256,7 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 import React from "react";
@@ -255,6 +274,8 @@ import Head from 'next/head';
 import Link from 'next/link';
 origin/main
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from "react";
 import Layout from "../components/Layout";
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -294,6 +315,7 @@ export default function Contact() {
     </>
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
@@ -301,6 +323,8 @@ export default function Contact() {
 }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import Head from 'next/head';
 
 const ContactPage: React.FC = () => {
@@ -309,7 +333,6 @@ const ContactPage: React.FC = () => {
       <Head>
         <title>Contact Us - Zion Tech Group</title>
         <meta
-          name='description'
           content='Get in touch with Zion Tech Group for innovative micro SaaS, AI services, and IT solutions. Contact us for a free consultation.'
         />
         <meta
@@ -385,6 +408,7 @@ const ContactPage: React.FC = () => {
                   <ContactForm />
                 </div>
               </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -478,6 +502,8 @@ function Contact() {
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <>
       <Head>
         <title>Contact Us - Zion Tech Group</title>
@@ -793,16 +819,12 @@ function Contact() {
           </div>
         </div>
       </div>
-    </Layout>;
-    </>
-  );
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-ursor/integrate-build-improve-and-re-verify-8f7d
-origin/automation-improvements-final
-}
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

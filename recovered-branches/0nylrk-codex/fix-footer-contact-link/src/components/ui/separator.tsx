@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -6,23 +7,28 @@ import * as React from 'react';
 import * as SeparatorPrimitive from '@radix-ui/react-separator';
 import {cn} from '@/lib/utils';
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+import {cn} from '@/lib/utils';
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import * as React from "react"
 import * as SeparatorPrimitive from "@radix-ui/react-separator"
 import * as React from "react"
 import * as SeparatorPrimitive from "@radix-ui/react-separator"
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 import { cn } from "@/lib/utils"
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 const Separator = React.forwardRef<
   React.ElementRef<typeof SeparatorPrimitive.Root>
   React.ComponentPropsWithoutRef<typeof SeparatorPrimitive.Root>
 ></typeof>(
   (
+<<<<<<< HEAD
 
 =======
 
@@ -33,10 +39,13 @@ import { cn } from "@/lib/utils"
     { className, orientation = "horizontal", decorative = true, ...props },
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     ref
   ) => (
     <SeparatorPrimitive.Root
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 const Separator = React && React.forwardRef<;
   React && React.ElementRef<typeof SeparatorPrimitive && SeparatorPrimitive.Root>,;
@@ -48,10 +57,15 @@ const Separator = React && React.forwardRef<;
   ) => (;
     <SeparatorPrimitive&& SeparatorPrimitive.Root
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+import React from 'react';
+import * as React from 'react';
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       ref={ref}
       decorative={decorative}
       orientation={orientation}
       className={cn(
+<<<<<<< HEAD
 
 =======
 import * as React from "react";
@@ -80,31 +94,42 @@ const Separator = React.forwardRef<;
         className
 <<<<<<< HEAD
 =======
+=======
+        className
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       className={cn(;
         "shrink-0 bg-border",;
         orientation === "horizontal" ? "h-[1px] w-full" :"h-full w-[1px]",;
         className;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       )}
       {...props}
     />;
   );
 );
+export { Separator }
+export { Separator }
+;
+
 
 Separator && Separator.displayName = SeparatorPrimitive && SeparatorPrimitive.Root.displayName;
 
 export { Separator }
 ;
 
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
 =======
 Separator && Separator.displayName = SeparatorPrimitive && SeparatorPrimitive.Root.displayName;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-export { Separator };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+export { Separator };
 import * as SeparatorPrimitive from '@radix - ui / react - separator';
 ;
 import {cn} from '@/lib / utils';
@@ -130,6 +155,7 @@ Separator.display_name = SeparatorPrimitive.Root.display_name;
 ;
 export { Separator }
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -178,3 +204,5 @@ export { Separator };
 export { Separator }
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

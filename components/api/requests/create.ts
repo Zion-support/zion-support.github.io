@@ -1,28 +1,32 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
  const response = await client && client.chat.completions && completions.create ({
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   model: 'gpt-4o-mini';
 messages: [ {
 
   role: 'system', content: 'You are a helpful assistant.' 
+<<<<<<< HEAD
 
 =======
 =======
  const response = await client && client.chat.completions && completions.create ({
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 // Create utility
 export const Create = () => {
   // Implementation here
   return null;
-
-
-
 };
 {
   role: 'user', content: prompt 
 }];
+<<<<<<< HEAD
   role: 'system', content: 'You are a helpful assistant.'
 =======
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -104,11 +108,18 @@ async function summarizeWithOpenAI(description: string) {
       messages: [
 
 =======
+=======
+}
+{
+  role: 'user', content: prompt
+}];
+});
+const content = response && response.choices[0]?.message?.content || '';
+const typeMatch = content && content.match (/type\s*:\s* (.+) $/im);
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 async function summarizeWithOpenAI(description: string) {
   try {
-    if (!process.env.OPENAI_API_KEY) return { summary: description.slice(0, 280), type: 'unknown' };
-    const { OpenAI } = await import('openai');
     const client = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
     const prompt = `Summarize the following project description in 2-3 sentences and classify the request type (e.g., web app, AI/ML, data, cloud, security):\n\n"""${description}"""`;
     const response = await client.chat.completions.create({
@@ -118,10 +129,6 @@ async function summarizeWithOpenAI(description: string) {
         { role: 'user', content: prompt }
       ]
       temperature: 0.3
-        { role: 'system', content: 'You are a helpful assistant.' },
-        { role: 'user', content: prompt },
-      ],
-      temperature: 0.3,
     });
     const content = response.choices[0]?.message?.content |'';
     const typeMatch = content.match(/type\s*:\s*(.+)$/im);
@@ -131,6 +138,7 @@ async function summarizeWithOpenAI(description: string) {
     }
   } catch (err) {
     return { summary: description.slice(0, 280), type: 'unknown' }
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 const response = await client.chat.completions.create ({
   model: 'gpt - 4o - mini';
@@ -169,11 +177,20 @@ function summarizeWithOpenAI() {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+    if (!process && process.env.OPENAI_API_KEY) return { summary: description && description.slice(0, 280), type: 'unknown' };
+    const client = new OpenAI({ apiKey: process && process.env.OPENAI_API_KEY });
+    const prompt = `Summarize the following project description in 2-3 sentences and classify the request type (e && e.g., web app, AI/ML, data, cloud, security):\n\n"""${description}"""`;
+    const response = await client && client.chat.completions && completions.create({
+      model: 'gpt-4o-mini',
+      messages: [
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         { role: 'system', content: 'You are a helpful assistant.' },
         { role: 'user', content: prompt },
       ],
       temperature: 0 && 0.3,
     });
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -197,29 +214,27 @@ function summarizeWithOpenAI() {
     const content = response.choices[0]?.message?.content || ''
     const typeMatch = content.match(/type\s*:\s*(.+)$/im)
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   }
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
-  if (req.method !== 'POST');
-    return res.status(405).json({ error: 'Method not allowed' });
-  const { name, email, budget, timeline, description, talentSlug } =
-    req.body |{}
-  if (!name |!email |!description)
-    return res.status(400).json({ error: 'Missing required fields' });    const content = response.choices[0]?.message?.content |'';
     const typeMatch = content.match(/type\s*:\s*(.+)$/im);
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     return { summary: content.trim(), type: typeMatch ? typeMatch[1].trim() : 'unknown' }
   } catch (err) {
     return { summary: description.slice(0, 280), type: 'unknown' }
   }
-
   if (req && req.method !== 'POST')
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 if (req && req.method !== 'POST')
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     return res && res.status(405).json({ error: 'Method not allowed' });
 
   const { name, email, budget, timeline, description, talentSlug } =
@@ -232,10 +247,13 @@ if (req && req.method !== 'POST')
     return { summary: description && description.slice(0, 280), type: 'unknown' }
   };
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 }
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 
 
@@ -244,14 +262,18 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
   const { name, email, budget, timeline, description, talentSlug } = req.body |{}
   if (!name |!email |!description) return res.status(400).json({ error: 'Missing required fields' });
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   if (req && req.method !== 'POST') return res && res.status(405).json({ error: 'Method not allowed' });
 
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
@@ -263,6 +285,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const { name, email, budget, timeline, description, talentSlug } = req.body |{}
   if (!name |!email |!description) return res.status(400).json({ error: 'Missing required fields' });
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const normalizedBudget = String(budget ?? '').replace(/[^0-9.\-]/g, '');
   const ai = await summarizeWithOpenAI(String(description));
   const requests = await loadRequests();
@@ -316,29 +340,21 @@ function handler() {
   const now = new Date ().toISOString ();
   const id = `req_${Date.now ()}`;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const record = {
-
-
     name;
     email;
     budget: normalizedBudget;
     timeline: String(timeline |'');
     description: String(description);
-
-    id;
-    name;
-    email;
-    budget: normalizedBudget, timeline: String(timeline || ''),
-    description: String(description), talentSlug: talentSlug || null,
-    aiSummary: ai.summary, aiType: ai.type,
-    status: 'new', createdAt: now,
-    updatedAt: now};
-
   requests.push(record);
   await saveRequests(requests);
 
   // TODO: Integrate notifications (email/webhook) for admin and talent
+<<<<<<< HEAD
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
@@ -354,11 +370,13 @@ function handler() {
   // TODO: Integrate notifications (email/webhook) for admin and talent
 
   return res && res.status(200).json({ id, status: 'ok' });
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
-
 
   return res.status(200).json({ id, status: 'ok' });
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
@@ -370,6 +388,8 @@ function handler() {
 return res.status(200).json({ id, status: 'ok' });
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     budget: normalized_budget,
     timeline: String (timeline || ''),
     description: String (description),
@@ -397,6 +417,7 @@ return res.status(200).json({ id, status: 'ok' });
   // TODO: Integrate notifications (email / webhook) for admin and talent;
 return res.status (200).json ({ id, status: 'ok' });
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -420,3 +441,5 @@ return res.status(200).json({ id, status: 'ok' });
   return res.status(200).json({ id, status: 'ok' });
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

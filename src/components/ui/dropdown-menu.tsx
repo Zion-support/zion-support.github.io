@@ -1,7 +1,5 @@
-import * as React from "react"
-import * as DropdownMenuPrimitive from "@radix-ui/react-dropdown-menu"
-import { Check, ChevronRight, Circle } from 'lucide-react'
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -19,6 +17,8 @@ import { cn } from &quot;@/lib/utils&quot;
 import { cn } from "@/lib/utils"
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 const DropdownMenu = DropdownMenuPrimitive.Root
 const DropdownMenuTrigger = DropdownMenuPrimitive.Trigger
 const DropdownMenuGroup = DropdownMenuPrimitive.Group
@@ -29,25 +29,11 @@ const DropdownMenuSubTrigger = React.forwardRef<
   React.ElementRef<typeof DropdownMenuPrimitive.SubTrigger>
   React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.SubTrigger> & {
     inset?: boolean
-import * as React from &quot;react & quot;
-import * as DropdownMenuPrimitive from &quot;@radix - ui / react - dropdown - menu & quot;
-import { Check, ChevronRight, Circle } from 'lucide-react';
-import { cn } from &quot;@/lib / utils & quot;
-;
-const DropdownMenu = DropdownMenuPrimitive.Root;
-const DropdownMenuTrigger = DropdownMenuPrimitive.Trigger;
-const DropdownMenuGroup = DropdownMenuPrimitive.Group;
-const DropdownMenuPortal = DropdownMenuPrimitive.Portal;
-const DropdownMenuSub = DropdownMenuPrimitive.Sub;
-const DropdownMenuRadioGroup = DropdownMenuPrimitive.RadioGroup;
-const DropdownMenuSubTrigger = React.forward_ref<;
-  React.ElementRef < typeof DropdownMenuPrimitive.SubTrigger>,
-  React.ComponentPropsWithoutRef < typeof DropdownMenuPrimitive.SubTrigger> & {
-    inset?: boolean;
   }
 >(({ class_name, inset, children, ...props }, ref) => (
   <DropdownMenuPrimitive.SubTrigger;
     ref={ref}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -65,6 +51,8 @@ className={cn(
     className={cn(
       "flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none focus:bg-accent data-[state=open]:bg-accent",
       inset && "pl-8",
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
       className
@@ -73,6 +61,7 @@ className={cn(
     {...props}
   >;
     {children}
+<<<<<<< HEAD
 
 
 =======
@@ -84,6 +73,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 <ChevronRight className=&quot;ml-auto h-4 w-4&quot; />
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     <ChevronRight className="ml-auto h-4 w-4" />
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
   </DropdownMenuPrimitive.SubTrigger>
@@ -101,6 +92,7 @@ const DropdownMenuSubContent = React.forwardRef<
     ref={ref}
     className={cn(
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -109,6 +101,8 @@ ursor/fix-website-loading-errors-and-merge-6662
       &quot;z-50 min-w-[8rem] overflow-hidden rounded-md border border-border bg-popover p-1 text-popover-foreground shadow-lg data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2&quot;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       "z-50 min-w-[8rem] overflow-hidden rounded-md border border-border bg-popover p-1 text-popover-foreground shadow-lg data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2",
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
       className
@@ -123,6 +117,7 @@ DropdownMenuSubContent.displayName =;
   DropdownMenuPrimitive.SubContent.displayName;
 const DropdownMenuContent = React.forwardRef<;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -131,6 +126,8 @@ ursor/fix-website-loading-errors-and-merge-6662
   React.ElementRef<typeof DropdownMenuPrimitive.Content>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   React.ElementRef<typeof DropdownMenuPrimitive.Content>,;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
   React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.Content>;
@@ -143,6 +140,7 @@ ursor/fix-website-loading-errors-and-merge-6662
       ref={ref}
       sideOffset={sideOffset}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -154,6 +152,8 @@ className={cn(
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       className={cn(
         "z-50 min-w-[8rem] overflow-hidden rounded-md border border-border bg-popover p-1 text-popover-foreground shadow-md data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2",
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
         className
@@ -168,9 +168,13 @@ className={cn(
 DropdownMenuContent.displayName = DropdownMenuPrimitive.Content.displayName;
 const DropdownMenuItem = React.forwardRef<;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 className={cn (
       &quot;flex cursor - default select - none items - center rounded - sm px - 2 py - 1.5 text - sm outline - none focus:bg - accent data-[state = open]:bg - accent & quot;,
       inset && &quot;pl - 8&quot;,
@@ -216,6 +220,7 @@ const DropdownMenuItem = React.forward_ref<;
 
 
   React.ElementRef<typeof DropdownMenuPrimitive.Item>,;
+<<<<<<< HEAD
 
   React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.Item> & {;
     inset?: boolean;
@@ -250,19 +255,26 @@ className={cn(
 ursor/fix-website-loading-errors-and-merge-6662
   React.ElementRef<typeof DropdownMenuPrimitive.Item>;
   React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.Item> & {inset?: boolean;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   React.ElementRef<typeof DropdownMenuPrimitive.Item>,;
   React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.Item> & {;
     inset?: boolean;
   }
->(({ className, inset, ...props }, ref) => (;
+>(({ class_name, inset, ...props }, ref) => (
   <DropdownMenuPrimitive.Item;
     ref={ref}
+<<<<<<< HEAD
 className={cn(
       &quot;relative flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none transition-colors focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50&quot;
       inset && &quot;pl-8&quot;
     className={cn(
       "relative flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none transition-colors focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
       inset && "pl-8",
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       className
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     {...props}
@@ -271,6 +283,7 @@ className={cn(
 DropdownMenuItem.displayName = DropdownMenuPrimitive.Item.displayName;
 const DropdownMenuCheckboxItem = React.forwardRef<;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -278,6 +291,8 @@ const DropdownMenuCheckboxItem = React.forwardRef<;
   React.ElementRef<typeof DropdownMenuPrimitive.CheckboxItem>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   React.ElementRef<typeof DropdownMenuPrimitive.CheckboxItem>,;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
   React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.CheckboxItem>;
@@ -286,12 +301,9 @@ const DropdownMenuCheckboxItem = React.forwardRef<;
     ref={ref}
 
 
-    className={cn(
-      "relative flex cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none transition-colors focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
-
-
       className
     )}
+<<<<<<< HEAD
 className={cn (
       &quot;relative flex cursor - default select - none items - center rounded - sm px - 2 py - 1.5 text - sm outline - none transition - colors focus:bg - accent focus:text - accent - foreground data-[disabled]:pointer - events - none data-[disabled]:opacity - 50 & quot;,
       inset && &quot;pl - 8&quot;,
@@ -315,6 +327,8 @@ className={cn (
       className
     )}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     checked={checked}
     {...props}
   >;
@@ -324,6 +338,7 @@ className={cn (
       </DropdownMenuPrimitive.ItemIndicator>;
     </span>;
     {children}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -338,10 +353,15 @@ DropdownMenuCheckboxItem.displayName =;
 const DropdownMenuRadioItem = React.forwardRef<;
   React.ElementRef<typeof DropdownMenuPrimitive.RadioItem>;
   React.ElementRef<typeof DropdownMenuPrimitive.RadioItem>,;
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.RadioItem>;
 >(({ className, children, ...props }, ref) => (;
   <DropdownMenuPrimitive.RadioItem;
     ref={ref}
+<<<<<<< HEAD
   React.ElementRef<typeof DropdownMenuPrimitive.RadioItem>;
 >(({ className, children, ...props }, ref) => (;
   <DropdownMenuPrimitive.RadioItem;
@@ -352,6 +372,10 @@ className={cn(
       &quot;relative flex cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none transition-colors focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50&quot;
     className={cn(
       "relative flex cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none transition-colors focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       className
     )}
     {...props}
@@ -362,6 +386,7 @@ className={cn(
       </DropdownMenuPrimitive.ItemIndicator>
     </span>
     {children}
+<<<<<<< HEAD
   </DropdownMenuPrimitive.RadioItem>;
 ));
 DropdownMenuRadioItem.displayName = DropdownMenuPrimitive.RadioItem.displayName;
@@ -437,12 +462,15 @@ const DropdownMenuLabel = React.forwardRef<;
 
   React.ElementRef<typeof DropdownMenuPrimitive.Label>,;
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.Label> & {;
     inset?: boolean;
   }
 >(({ class_name, inset, ...props }, ref) => (
   <DropdownMenuPrimitive.Label;
     ref={ref}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -460,6 +488,10 @@ className={cn(
     className={cn(
       "px-2 py-1.5 text-sm font-semibold",
       inset && "pl-8",
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       className
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     {...props}
@@ -467,6 +499,7 @@ className={cn(
 ));
 DropdownMenuLabel.displayName = DropdownMenuPrimitive.Label.displayName;
 const DropdownMenuSeparator = React.forwardRef<;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -476,23 +509,15 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
   React.ElementRef<typeof DropdownMenuPrimitive.Separator>,;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
   React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.Separator>;
 >(({ className, ...props }, ref) => (;
-className={cn (
-      &quot;px - 2 py - 1.5 text - sm font - semibold & quot;,
-      inset && &quot;pl - 8&quot;,
-      class_name)}
-    {...props}
-  />));
-DropdownMenuLabel.display_name = DropdownMenuPrimitive.Label.display_name;
-const DropdownMenuSeparator = React.forward_ref<;
-  React.ElementRef < typeof DropdownMenuPrimitive.Separator>,
-  React.ComponentPropsWithoutRef < typeof DropdownMenuPrimitive.Separator>;
->(({ class_name, ...props }, ref) => (
   <DropdownMenuPrimitive.Separator;
     ref={ref}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -539,6 +564,8 @@ ursor/fix-website-loading-errors-and-merge-6662
     ref={ref}
     className={cn(&quot;-mx-1 my-1 h-px bg-muted&quot; className)}
     className={cn("-mx-1 my-1 h-px bg-muted", className)}
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     {...props}
 />
 ))
@@ -549,12 +576,10 @@ const DropdownMenuShortcut = ({
 }: React.HTMLAttributes<HTMLSpanElement>) => {
   return (
     <span
-      className={cn(&quot;ml-auto text-xs tracking-widest opacity-60&quot; className)}
-      className={cn("ml-auto text-xs tracking-widest opacity-60", className)}
       {...props}
-    />;
-  );
+    />);
 }
+<<<<<<< HEAD
 DropdownMenuShortcut.displayName = &quot;DropdownMenuShortcut&quot;
 export {
   DropdownMenu
@@ -600,3 +625,5 @@ export {
 =======
   DropdownMenuSubContent,
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

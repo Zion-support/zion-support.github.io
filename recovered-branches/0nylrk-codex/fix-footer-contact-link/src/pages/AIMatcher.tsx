@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -17,6 +18,8 @@ import {MatchResult} from "@/lib/ai-matchmaking";
 export default function AIMatcherPage() {;
   const navigate = useNavigate();
   const [selectedCategory, setSelectedCategory] = useState<string>("all");
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useState } from "react",
 import { useNavigate } from "react-router-dom",
 import { Header } from "@/components/Header",
@@ -49,10 +52,13 @@ export default function AIMatcherPage() {
     
     if (category.includes("talent") || category === "engineering" || 
         category === "data science" || category === "development") {
+<<<<<<< HEAD
 
 
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       itemType = "talent"
     } else if (category.includes("equipment") |category === "hardware") {
       itemType = "equipment"
@@ -67,6 +73,7 @@ export default function AIMatcherPage() {
         specificItem: match.item
       }
     })
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -83,6 +90,8 @@ export default function AIMatcherPage() {
   },
   
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <>
       <Header />
@@ -112,6 +121,20 @@ export default function AIMatcherPage() {
               </Select>
             </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+            <AIMatchmaker 
+              serviceType={selectedCategory === "all" ? "" : selectedCategory}
+import { useState } from "react",;
+import { useNavigate } from "react-router-dom",;
+import { Header } from "@/components/Header",;
+import { Footer } from "@/components/Footer",;
+import { GradientHeading } from "@/components/GradientHeading",;
+import { AIMatchmaker } from "@/components/AIMatchmaker",;
+import { Select, SelectValue, SelectTrigger, SelectContent, SelectItem } from "@/components/ui/select",;
+import { toast } from "@/hooks/use-toast",;
+import { MatchResult } from "@/lib/ai-matchmaking",;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 import {useState} from "react";
 import {useNavigate} from "react-router-dom";
@@ -123,6 +146,7 @@ import {Select, SelectValue, SelectTrigger, SelectContent, SelectItem} from "@/c
 import {toast} from "@/hooks/use-toast";
 import {MatchResult} from "@/lib/ai-matchmaking";
 export default function AIMatcherPage() {;
+<<<<<<< HEAD
   const navigate = useNavigate();
   const [selectedCategory, setSelectedCategory] = useState<string>("all");
 
@@ -189,6 +213,8 @@ import { toast } from "@/hooks/use-toast",;
 import { MatchResult } from "@/lib/ai-matchmaking",;
 ;
 export default function AIMatcherPage() {;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const navigate = useNavigate(),;
   const [selectedCategory, setSelectedCategory] = useState<string>("all"),;
   ;
@@ -214,6 +240,7 @@ export default function AIMatcherPage() {;
         serviceType:itemType,;
         specificItem:match.item;
       }
+<<<<<<< HEAD
     }),;
   },;
   ;
@@ -245,6 +272,8 @@ export default function AIMatcherPage() {;
   };
   return (;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <>;
       <Header />;
       <div className="min-h-screen bg-zion-blue py-12 px-4">;
@@ -256,10 +285,13 @@ export default function AIMatcherPage() {;
             </p>;
           </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
           ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <div className="max-w-4xl mx-auto">;
             <div className="mb-8">;
               <label className="block text-sm font-medium text-zion-slate-light mb-2">;
@@ -287,7 +319,6 @@ export default function AIMatcherPage() {;
 
               serviceType={selectedCategory === "all" ? "" : selectedCategory}
               onMatchSelect={handleMatchSelect}
-=======
 import { useState } from './react';
 import { use_navigate } from './react-router-dom';
 import { Header } from '@/components / Header';
@@ -364,6 +395,7 @@ if (|| category === "hardware") {) {
               service_type={selected_category === "all" ? "" : selected_category}
               onMatchSelect={handleMatchSelect}
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
             ;
@@ -374,11 +406,14 @@ if (|| category === "hardware") {) {
               serviceType={selectedCategory === "all" ? "" : selectedCategory}
               onMatchSelect={handleMatchSelect}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             />;
           </div>;
         </div>;
       </div>;
       <Footer />;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     </>);
@@ -408,3 +443,5 @@ min-h-screen bg-zion-blue py-12 px-4"> <div className=" container mx-auto"> <div
 ;
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

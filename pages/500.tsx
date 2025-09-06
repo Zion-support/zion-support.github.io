@@ -1,13 +1,24 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+              Something went wrong on our end. We&apos,re working to fix it.
+              Something went wrong on our end. We're working to fix it.
+              Something went wrong on our end. We&apos,re working to fix it. 
+              Something went wrong on our end. We're working to fix it.
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               Please try again in a few moments.
             </p>
           </div>
           <div className="space-y-4">
+            <Link 
+              href="/" 
+            <Link
+              href="/"
 
 
 
@@ -17,6 +28,10 @@
               Go Home
             </Link>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link 
+                href="/about" 
+              <Link
+                href="/about"
 
 
 
@@ -25,6 +40,10 @@
               >
                 About Us
               </Link>
+              <Link 
+                href="/services" 
+              <Link
+                href="/services"
 
 
 
@@ -33,6 +52,10 @@
               >
                 Services
               </Link>
+              <Link 
+                href="/contact" 
+              <Link
+                href="/contact"
 
 
 
@@ -47,6 +70,7 @@
       </div>
     </>
   )
+<<<<<<< HEAD
 
 }
 
@@ -70,6 +94,8 @@ import Link from 'next/link';
 export default function Custom500(req, res) {
   try {
   return (;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <>;
       <Head>;
         <title > 500 - Server Error | Zion Tech Group</title>;
@@ -123,6 +149,7 @@ export default function Custom500(req, res) {
       </div>;
     </>);
 }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -272,3 +299,5 @@ export default function Custom500(req, res) {
   }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

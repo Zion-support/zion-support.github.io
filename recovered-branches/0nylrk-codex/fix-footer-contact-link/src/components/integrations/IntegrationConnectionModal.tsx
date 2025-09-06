@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import {;
   Dialog,;
@@ -25,6 +26,8 @@ import React, { useState } from './react';
 <<<<<<< HEAD
 =======
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useState } from "react";
 import {
   Dialog
@@ -34,13 +37,17 @@ import {
   DialogHeader
   DialogTitle
 import React, { useState } from "react";
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {
   Dialog,
   DialogContent,
   DialogDescription,
   DialogFooter,
   DialogHeader,
+<<<<<<< HEAD
 <<<<<<< HEAD
   DialogTitle,
 } from '@/components / ui / dialog';
@@ -51,7 +58,19 @@ import { Checkbox  } from '@/components / ui / checkbox';
 import { Switch  } from '@/components / ui / switch';
 import { toast  } from './sonner';
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   DialogTitle,;
+
+
+import {;
+  Dialog,;
+  DialogContent,;
+  DialogDescription,;
+  DialogFooter,;
+  DialogHeader,;
+  DialogTitle,;
+
 } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -60,17 +79,23 @@ import { Checkbox } from "@/components/ui/checkbox";
 
 import { Switch } from "@/components/ui/switch";
 import { toast } from "sonner";
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface Integration {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   id: string;
   name: string;
   description: string;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   logo_url?: string;
   status: "connected" | "warning" | "disconnected";
 
 
+<<<<<<< HEAD
 interface IntegrationConnectionModalProps {;
 
 =======
@@ -119,18 +144,17 @@ interface IntegrationConnectionModalProps {;
   integration: Integration
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export function IntegrationConnectionModal(): any ({;
   isOpen,;
   onClose,;
   integration,;
 }: IntegrationConnectionModalProps) {;
   const [isConnecting, setIsConnecting] = useState(false);
-  const [syncSettings, setSyncSettings] = useState({;
-    autoCreateContacts: true,;
-    pushNotes: false,;
-    syncJobDetails: true,;
-    syncApplicantData: true,;
+
   });
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   const handleConnectOAuth = () => {;
@@ -140,15 +164,21 @@ export function IntegrationConnectionModal(): any ({;
     setTimeout(() => {;
 
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const handleConnectOAuth = () => {;
     setIsConnecting(true);
     // Simulate OAuth flow;
     setTimeout(() => {;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       setIsConnecting(false);
       toast && toast.success(`Connected to ${integration && integration.name} successfully`);
       onClose();
     }, 2000);
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -182,10 +212,13 @@ export function IntegrationConnectionModal(): any ({;
     // In a real application, this would save the sync settings;
     toast && toast.success("Integration settings saved");
   });
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const handleConnectOAuth = () => {
     setIsConnecting(true);
     // Simulate OAuth flow
     setTimeout(() => {
+<<<<<<< HEAD
       setIsConnecting(false);
       toast.success(`Connected to ${integration.name} successfully`);
       onClose();
@@ -286,6 +319,8 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }: Int
     onClose();
   }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>;
       <DialogContent className="sm:max-w-md">;
@@ -297,6 +332,7 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }: Int
             onError={(e) => {;
               (e && e.target as HTMLImageElement).src = "/placeholder && placeholder.svg";
             }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
   
@@ -330,18 +366,25 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }: Int
               {integration.status === "connected" || integration.status === "warning" 
                 ? "Manage your connection settings" 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 : `Connect your ${integration.name} account`}
             </DialogDescription>
           </div>
         </DialogHeader>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
         {integration.status === "connected" ||
 
         integration.status === "warning" ? (
+<<<<<<< HEAD
 
         {(integration.status === "connected" || integration.status === "warning") ? (
 
@@ -356,10 +399,15 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }: Int
         
         {(integration.status === "connected" || integration.status === "warning") ? (
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+        
+        {(integration.status === "connected" || integration.status === "warning") ? (
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <>
             <div className="grid gap-4 py-4">
               <div className="space-y-4">
                 <h3 className="text-sm font-medium">Sync Settings</h3>
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -370,6 +418,8 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }: Int
 =======
                 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <div className="flex items-center space-x-2">
                   <Checkbox
                     id="autoCreateContacts"
@@ -380,7 +430,10 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }: Int
                         autoCreateContacts: checked as boolean
                       })
                 
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <div className="flex items-center space-x-2">
                   <Checkbox 
                     id="autoCreateContacts" 
@@ -388,16 +441,20 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }: Int
                     onCheckedChange={(checked) => 
                       setSyncSettings({...syncSettings, autoCreateContacts: checked as boolean})
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     }
                   />
                   <Label htmlFor="autoCreateContacts">
                     Auto-create contacts in {integration.name}
                   </Label>
                 </div>
+<<<<<<< HEAD
 
 
 
@@ -409,6 +466,8 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }: Int
                   />
                   <Label htmlFor="autoCreateContacts">Auto-create contacts in {integration.name}</Label>
                 </div>
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <div className="flex items-center space-x-2">
                   <Checkbox
                     id="pushNotes"
@@ -419,7 +478,10 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }: Int
                         pushNotes: checked as boolean
                       })
                 
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <div className="flex items-center space-x-2">
                   <Checkbox 
                     id="pushNotes" 
@@ -427,14 +489,18 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }: Int
                     onCheckedChange={(checked) => 
                       setSyncSettings({...syncSettings, pushNotes: checked as boolean})
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     }
                   />
                   <Label htmlFor="pushNotes">Push notes and comments</Label>
                 </div>
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -445,6 +511,8 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }: Int
 =======
                 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <div className="flex items-center space-x-2">
                   <Checkbox
                     id="syncJobDetails"
@@ -455,7 +523,10 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }: Int
                         syncJobDetails: checked as boolean
                       })
                 
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <div className="flex items-center space-x-2">
                   <Checkbox 
                     id="syncJobDetails" 
@@ -463,14 +534,18 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }: Int
                     onCheckedChange={(checked) => 
                       setSyncSettings({...syncSettings, syncJobDetails: checked as boolean})
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     }
                   />
                   <Label htmlFor="syncJobDetails">Sync job details</Label>
                 </div>
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -481,6 +556,8 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }: Int
 =======
                 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <div className="flex items-center space-x-2">
                   <Checkbox
                     id="syncApplicantData"
@@ -491,7 +568,10 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }: Int
                         syncApplicantData: checked as boolean
                       })
                 
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <div className="flex items-center space-x-2">
                   <Checkbox 
                     id="syncApplicantData" 
@@ -499,15 +579,19 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }: Int
                     onCheckedChange={(checked) => 
                       setSyncSettings({...syncSettings, syncApplicantData: checked as boolean})
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     }
                   />
                   <Label htmlFor="syncApplicantData">Sync applicant data</Label>
                 </div>
               </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -523,6 +607,11 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }: Int
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+              <div className="space-y-2">
+                <h3 className="text-sm font-medium">API Details</h3>
+                <p className="text-xs text-muted-foreground">
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           />;
           <div>;
             <DialogTitle>{integration && integration.name} Integration</DialogTitle>;
@@ -537,6 +626,7 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }: Int
 
         {integration && integration.status === "connected" ||;
         integration && integration.status === "warning" ? (;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -622,11 +712,16 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration } Inte
         ;
         {(integration.status === "connected" || integration.status === "warning") ? (;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <>;
             <div className="grid gap-4 py-4">;
               <div className="space-y-4">;
                 <h3 className="text-sm font-medium">Sync Settings</h3>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
                 <div className="flex items-center space-x-2">;
                   <Checkbox
@@ -653,6 +748,7 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration } Inte
                         ...syncSettings,;
                         pushNotes: checked as boolean,;
                       });
+<<<<<<< HEAD
 =======
                 ;
                 <div className="flex items-center space-x-2">;
@@ -673,11 +769,16 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration } Inte
                     onCheckedChange={(checked) => ;
                       setSyncSettings({...syncSettings, pushNotes:checked as boolean});
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     }
                   />;
                   <Label htmlFor="pushNotes">Push notes and comments</Label>;
                 </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
                 <div className="flex items-center space-x-2">;
                   <Checkbox
@@ -688,6 +789,7 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration } Inte
                         ...syncSettings,;
                         syncJobDetails: checked as boolean,;
                       });
+<<<<<<< HEAD
 =======
                 ;
                 <div className="flex items-center space-x-2">;
@@ -697,11 +799,16 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration } Inte
                     onCheckedChange={(checked) => ;
                       setSyncSettings({...syncSettings, syncJobDetails:checked as boolean});
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     }
                   />;
                   <Label htmlFor="syncJobDetails">Sync job details</Label>;
                 </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
                 <div className="flex items-center space-x-2">;
                   <Checkbox
@@ -712,6 +819,7 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration } Inte
                         ...syncSettings,;
                         syncApplicantData: checked as boolean,;
                       });
+<<<<<<< HEAD
 =======
                 ;
                 <div className="flex items-center space-x-2">;
@@ -721,21 +829,26 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration } Inte
                     onCheckedChange={(checked) => ;
                       setSyncSettings({...syncSettings, syncApplicantData:checked as boolean});
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     }
                   />;
                   <Label htmlFor="syncApplicantData">Sync applicant data</Label>;
                 </div>;
               </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
               <div className="space-y-2">;
                 <h3 className="text-sm font-medium">API Details</h3>;
                 <p className="text-xs text-muted-foreground">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                   Last synced:{" "}
                   {integration && integration.lastSync;
                     ? new Date(integration && integration.lastSync).toLocaleString();
                     : "Never"}
+<<<<<<< HEAD
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
@@ -743,6 +856,8 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration } Inte
             
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <DialogFooter className="flex items-center justify-between">
               <Button
                 variant="outline"
@@ -750,7 +865,10 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration } Inte
                 type="button"
               >
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               
               <div className="space-y-2">
                 <h3 className="text-sm font-medium">API Details</h3>
@@ -764,7 +882,10 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration } Inte
             
             <DialogFooter className="flex items-center justify-between">
               <Button variant="outline" onClick={handleDisconnect} type="button">
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 Disconnect
               </Button>
               <Button onClick={handleSaveSettings} type="button">
@@ -776,6 +897,7 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration } Inte
           <>
             <div className="space-y-4 py-4">
               <p className="text-sm">
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -798,6 +920,8 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration } Inte
               </p>
               
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <div className="space-y-4">
                 <h3 className="text-sm font-medium">What will be synced:</h3>
                 <ul className="list-disc pl-4 text-sm space-y-1">
@@ -809,6 +933,7 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration } Inte
               </div>
             </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -816,6 +941,8 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration } Inte
             
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <DialogFooter>
               <Button onClick={handleConnectOAuth} disabled={isConnecting}>
                 {isConnecting
@@ -824,6 +951,7 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration } Inte
               </Button>
             </DialogFooter>
           </>
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -1042,6 +1170,12 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }: Int
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+        )}
+      </DialogContent>;
+    </Dialog>;
+  );
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   last_sync?: string;
 }
 interface IntegrationConnectionModalProps {
@@ -1221,6 +1355,7 @@ function IntegrationConnectionModal() {
       </DialogContent>;
     </Dialog>);
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 }
 =======
@@ -1273,3 +1408,6 @@ return (<Dialog open= {
 }
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

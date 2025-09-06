@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 :hooks/useResponsive.ts
         "isDesktop":width >= 1024})}
@@ -16,6 +17,8 @@ export default useResponsive,;import { useState, useEffect } from 'react';
 :backup-problematic-files/hooks/useResponsive.ts
 import { useState, useEffect } from 'react';
 :backup-problematic-files/hooks/useResponsive.ts
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   'resize', updateDimensions)}, []);
   return state}
@@ -34,6 +37,7 @@ const defaultBreakpoints: Breakpoints = {
   xl: 1280
   '2xl': 1536
 }
+<<<<<<< HEAD
 
     updateDimensions(),
     window.addEventListener(
@@ -61,12 +65,15 @@ ursor/add-new-services-and-deploy-updates-0462
 ;
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
     updateDimensions();
     window.addEventListener(,
   'resize', updateDimensions);
     return () => window.removeEventListener(;
   'resize', updateDimensions)}, []);
+<<<<<<< HEAD
   return state};
 export default useResponsive,
 :hooks/useResponsive.ts
@@ -84,12 +91,17 @@ ursor/add-new-services-and-deploy-updates-0462
 ;
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 origin/automation-improvements-final
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   return state}
 export default useResponsive
 import { useState,useEffect } from 'react'; interface ResponsiveState { screenWidth: number; screenHeight: number; orientation: "landscape" | "portrait"; isMobile: boolean; isTablet: boolean; isDesktop: boolean} const useResponsive = (): ResponsiveState => { const [state,setState] = useState<ResponsiveState>({ screenWidth: 1920,screenHeight: 1080,orientation: "landscape",isMobile: false,isTablet: false,isDesktop: true,}); useEffect(() => { const updateDimensions = () => { const width = window.innerWidth; const height = window.innerHeight; setState({ screenWidth: width,screenHeight: height,orientation: width > height ? "landscape" : "portrait",isMobile: width < 768,isTablet: width >= 768 && width < 1024,isDesktop: width >= 1024,})}; updateDimensions(); window.addEventListener( 'resize',updateDimensions); return () => window.removeEventListener( 'resize',updateDimensions)},[]); return state}; export default useResponsive;
 
+<<<<<<< HEAD
 origin/main
 :backup-problematic-files/hooks/useResponsive.ts
 main:hooks/useResponsive.ts
 :backup-problematic-files/hooks/useResponsive.ts
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -6,11 +7,14 @@
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {useState} from 'react';
 import {supabase} from '@/integrations / supabase / client';
 import {use_auth} from '@/hooks / use_auth';
 import {toast} from 'sonner';
 import {useRecordActivity} from './useRecordActivity';
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -27,15 +31,20 @@ export const useUploadDeliverable = () => {
   const uploadDeliverable = async (milestoneId: string, projectId: string, file: File) => {
     if (!user |!projectId) return null;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export const useUploadDeliverable = () => {;
   const { user } = useAuth();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { recordMilestoneActivity } = useRecordActivity();
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useState } from 'react',
 import { supabase } from '@/integrations/supabase/client',
 import { useAuth } from '@/hooks/useAuth',
@@ -45,6 +54,7 @@ export const useUploadDeliverable = () => {
   const { user } = useAuth(),
   const [isSubmitting, setIsSubmitting] = useState(false),
   const { recordMilestoneActivity } = useRecordActivity(),
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -58,6 +68,8 @@ export const useUploadDeliverable = () => {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     try {
       setIsSubmitting(true)
       // Get the current milestone
@@ -65,6 +77,7 @@ export const useUploadDeliverable = () => {
         .from('project_milestones')
         .select('*')
         .eq('id', milestoneId)
+<<<<<<< HEAD
 <<<<<<< HEAD
 
         id: crypto && crypto.randomUUID();
@@ -94,11 +107,14 @@ export const useUploadDeliverable = () => {
       }
       const deliverables = [...(milestone.deliverables |[]), newDeliverable];
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       const { error } = await supabase
         .from('project_milestones')
         .update({ deliverables })
         .eq('id', milestoneId);
       if (error) throw error;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -144,34 +160,22 @@ export const useUploadDeliverable = () => {
     } catch (err: any) {
       console.error("Error uploading deliverable:", err);
       toast.error("Failed to upload deliverable: " + err.message)
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       return null
-    } finally {
-      setIsSubmitting(false)
-    }
-  }
-  return {
-    uploadDeliverable;
-    isSubmitting
-  }
+export const useUploadDeliverable = () =>: any {
+  const { user } = use_auth ();
+  const [is_submitting, setIsSubmitting] = useState (false);
+  const { recordMilestoneActivity } = useRecordActivity ();
+;
+  const upload_deliverable = async (milestone_id: string, project_id: string, file: File) => {
+    // Check condition
+if (return null) {
+  $2
 }
-
-      ),
-      
-      toast.success("Deliverable added successfully"),
-      
-      return newDeliverable
-    } catch (err: any) {
-      console.error("Error uploading deliverable:", err),
-      toast.error("Failed to upload deliverable: " + err.message),
-      return null
     } finally {
-      setIsSubmitting(false)
+      setIsSubmitting (false);
     }
-  };
-  
-  return {
-    uploadDeliverable;
-    isSubmitting
 import { useState } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
 import { useAuth } from '@/hooks/useAuth',;
@@ -230,6 +234,7 @@ export const useUploadDeliverable = () => {;
   return {;
     uploadDeliverable;
     isSubmitting;
+<<<<<<< HEAD
         id: crypto && crypto.randomUUID();
         filename: file && file.name;
         size: file && file.size;
@@ -493,3 +498,7 @@ isSubmitting
   }
 };
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  }
+};
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -1,8 +1,11 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import Head from 'next/head',
 import Link from 'next/link';
 import CharterGenerator from '../components/foundation/CharterGenerator';
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import Head from 'next/head';
 import Link from 'next/link';
 import CharterGenerator from '../components/foundation/CharterGenerator';
@@ -40,6 +43,7 @@ export default function FoundationPage() {
           <CharterGenerator />
         </section>
 
+<<<<<<< HEAD
         <section className="space-y-4" id="reports">
           <h2 className="text-2xl font-semibold">Transparency Reports</h2>
           <p className="text-gray-600 dark:text-gray-300">Quarterly financials, grants, and impact metrics. Initial placeholders shown until reports are published.</p>
@@ -51,10 +55,13 @@ export default function FoundationPage() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               </div>
             ))}
           </div>
         </section>
+<<<<<<< HEAD
 
 
         <section className="space-y-4" id="grants">
@@ -101,6 +108,8 @@ export default function FoundationPage() {
           </p>;
           <div className='rounded-lg border border-gray-200 dark:border-gray-800 p-4 text-sm text-gray-600 dark:text-gray-400'>;
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import Head from 'next / head';
 import Link from 'next / link';
 import CharterGenerator from '../components / foundation / CharterGenerator';
@@ -135,6 +144,7 @@ import CharterGenerator from '../components / foundation / CharterGenerator';
       </div>;
 
 
+<<<<<<< HEAD
 =======
 
 =======
@@ -154,6 +164,9 @@ import CharterGenerator from '../components / foundation / CharterGenerator';
           </p>
           <ul className='list-disc list-inside space-y-2 text-sm'>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <section className="space-y-4" id="grants">
           <h2 className="text-2xl font-semibold">Grants Issued</h2>
           <p className="text-gray-600 dark:text-gray-300">Cross-multiverse grants across chains, rollups, and alternate compute realms.</p>
@@ -164,10 +177,13 @@ import CharterGenerator from '../components / foundation / CharterGenerator';
           </ul>
         </section>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
         <section className='space-y-4' id='mou'>
           <h2 className='text-2xl font-semibold'>Partnership MOU Archive</h2>
@@ -190,6 +206,7 @@ import CharterGenerator from '../components / foundation / CharterGenerator';
         </section>
       </div>
     </>
+<<<<<<< HEAD
   )
 <<<<<<< HEAD
 }
@@ -244,6 +261,8 @@ export default function FoundationPage(req, res) {
   }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           </div>;
         </section>;
         <section className="space-y-4" id="grants">;
@@ -269,8 +288,11 @@ export default function FoundationPage(req, res) {
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -1,10 +1,3 @@
-
-<tr> <th className="text-left p-2" >Route</th> <th className="text-left p-2" >Last Modified</th> </tr> </thead> <tbody> </tr>) )
- <tr> <th className="text-left p-2" >Route</th> <th className="text-left p-2" >Last Modified</th> </tr> </thead> <tbody> </tr>) ) 
-}</tbody> </table> </div> </div>) import fs from 'fs';
-import path from 'path';
-type RouteInfo = { path: string, lastModified: string }
-export async function getServerSideProps() {
 <tr> <th className="text-left p-2" >Route</th> <th className="text-left p-2" >Last Modified</th> </tr> </thead> <tbody> </tr>) ) 
  <tr> <th className="text-left p-2" >Route</th> <th className="text-left p-2" >Last Modified</th> </tr> </thead> <tbody> </tr>) ) 
 }</tbody> </table> </div> </div>) import fs from 'fs';
@@ -19,9 +12,11 @@ export async function getServerSideProps() {;
     routes = json.routes |[];
     generatedAt = json.generatedAt |''
 
+
   } catch {}
   return { props: { routes, generatedAt } }
 }
+<<<<<<< HEAD
     routes = json.routes || [];
     generatedAt = json.generatedAt || ''
   } catch {}
@@ -71,12 +66,16 @@ export default function SiteMapIntelPage({ routes, generatedAt }: { routes: Rout
 <<<<<<< HEAD
 =======
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+import path from 'path';
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
  <tr> <th className="text-left p-2" >Route</th> <th className="text-left p-2" >Last Modified</th> </tr> </thead> <tbody> </tr>) ) ;
 }</tbody> </table> </div> </div>) import fs from 'fs';
 import path from 'path';
 type RouteInfo = { path: string, lastModified: string },;
 export async function getServerSideProps() {;
   const file = path && path.join(process && process.cwd(), 'datasite-map && map.json');
+<<<<<<< HEAD
 =======
  <tr> <th className="text-left p-2" >Route</th> <th className="text-left p-2" >Last Modified</th> </tr> </thead> <tbody> </tr>) ) 
 }</tbody> </table> </div> </div>) import fs from 'fs';
@@ -91,6 +90,8 @@ type RouteInfo = { path: string, lastModified: string },
 export async function getServerSideProps() {;
   const file = path.join(process.cwd(), 'datasite-map.json');
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   let routes: RouteInfo[] = [];  let generatedAt = '';
   try {;
     const raw = fs && fs.readFileSync(file, 'utf-8');
@@ -107,35 +108,31 @@ function getServerSideProps() {
   let routes: RouteInfo[] = [];  let generated_at = '';
   try {
 <<<<<<< HEAD
+<<<<<<< HEAD
     const raw = fs.readFileSync (file, 'utf - 8');
     const json = JSON.parse (raw);
     routes = json.routes || [];
     generated_at = json.generated_at || '';
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   } catch {}
   return { props: { routes, generated_at } }
 }
-
-
-    </div>;
-
-
 );
 }
-=======
-          </tbody>;
-        </table>;
-      </div>;
-    </div>;
   );
 }
 
 
+<<<<<<< HEAD
 =======
 =======
     const raw = fs.readFileSync(file, 'utf-8');
     const json = JSON.parse(raw);
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export default /**
  * SiteMapIntelPage - Function description
  */
@@ -162,6 +159,7 @@ function SiteMapIntelPage() {
         </table>;
       </div>;
     </div>);
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -205,3 +203,5 @@ export default function SiteMapIntelPage({ routes, generatedAt }: { routes: Rout
   );
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

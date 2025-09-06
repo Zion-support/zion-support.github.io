@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 class ErrorBoundary extends React.Component {
@@ -25,12 +26,15 @@ class ErrorBoundary extends React.Component {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useState } from "react";
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
 import {IntegrationsHub} from "@/components/integrations/IntegrationsHub";
 import {SEO} from "@/components/SEO";
 import {ProtectedRoute} from "@/components/ProtectedRoute";
+<<<<<<< HEAD
 <<<<<<< HEAD
 export default function IntegrationsPage() {;
 
@@ -57,6 +61,8 @@ export default function IntegrationsPage() {
 
 =======
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useState } from "react",
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
@@ -65,36 +71,36 @@ import { SEO } from "@/components/SEO";
 import { ProtectedRoute } from "@/components/ProtectedRoute";
 import { SEO } from "@/components/SEO",
 import { ProtectedRoute } from "@/components/ProtectedRoute",
+
+
 export default function IntegrationsPage() {
   return (
-    <ProtectedRoute adminOnly={true}>
+    <ProtectedRoute adminOnly={true}>;
       <SEO
         title="Integrations - Zion AI Marketplace"
         description="Connect your Zion account with CRMs and Applicant Tracking Systems."
-      />
-      <Header />
-      <main className="min-h-screen bg-background">
-        <IntegrationsHub />
-      </main>
-      <Footer />
-    </ProtectedRoute>
-  )
 
 
 
+<<<<<<< HEAD
 
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useState } from "react",;
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
 import { IntegrationsHub } from "@/components/integrations/IntegrationsHub",;
 import { SEO } from "@/components/SEO",;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import { ProtectedRoute } from "@/components/ProtectedRoute",;
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { ProtectedRoute } from "@/components/ProtectedRoute";
 export default function IntegrationsPage() {;
   return (;
@@ -103,9 +109,13 @@ export default function IntegrationsPage() {;
         title="Integrations - Zion AI Marketplace";
         description="Connect your Zion account with CRMs and Applicant Tracking Systems.";
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       />;
       <Header />;
       <main className="min-h-screen bg-background">;
@@ -114,10 +124,15 @@ export default function IntegrationsPage() {;
       <Footer />;
     </ProtectedRoute>;
 <<<<<<< HEAD
+<<<<<<< HEAD
   );
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  );
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useState } from './react';
 import { Header } from '@/components / Header';
 import { Footer } from '@/components / Footer';
@@ -140,6 +155,7 @@ function IntegrationsPage() {
       </main>;
       <Footer />;
     </ProtectedRoute>);
+<<<<<<< HEAD
 
 
 
@@ -158,3 +174,5 @@ function IntegrationsPage() {
 }
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

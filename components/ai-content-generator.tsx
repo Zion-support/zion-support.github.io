@@ -1,5 +1,6 @@
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import {;
   Brain,;
@@ -331,6 +332,8 @@ import {
 
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const useCases = [
     {
       title: 'Blog Writing'
@@ -347,7 +350,6 @@ import {
       title: 'Marketing Copy'
       description:
         'Create compelling ad copy, landing pages, and marketing materials.'
-      icon: '🎯'
       examples: [
         'Facebook ads'
         'Google ads'
@@ -359,7 +361,6 @@ import {
       title: 'Social Media'
       description:
         'Generate engaging social media posts, captions, and hashtag suggestions.'
-      icon: '📱'
       examples: [
         'Instagram posts'
         'Twitter threads'
@@ -371,7 +372,6 @@ import {
       title: 'E-commerce'
       description:
         'Write product descriptions, category pages, and promotional content.'
-      icon: '🛍️'
       examples: [
         'Product descriptions'
         'Category pages'
@@ -380,14 +380,12 @@ import {
       ]
     },  ];
   const integrations = [
-    { name: 'WordPress', icon: '🔌', description: 'Direct plugin integration' },      examples: ['Product descriptionsCategory pagesPromotional emailsFAQ sections']
-    }
-  ];
-  const integrations = [
-
-      popular: false,;
-      color: 'border-purple-600',;
-      buttonColor: 'bg-purple-600 hover:bg-purple-700';
+    { name: 'WordPress', icon: '🔌', description: 'Direct plugin integration' }
+    { name: 'WordPress', icon: '🔌', description: 'Direct plugin integration' },
+    {
+      name: 'Shopify'
+      icon: '🛒'
+      description: 'E-commerce content automation'
     }
 
   const useCases = [;
@@ -459,6 +457,7 @@ import {
     { name: 'Mailchimp', icon: '📧', description: 'Email campaign content' },;
     { name: 'Slack', icon: '💬', description: 'Team collaboration' },;
 
+<<<<<<< HEAD
       features: [;
 <<<<<<< HEAD
 =======
@@ -483,6 +482,66 @@ import {
       buttonColor: 'bg-purple-600 hover:bg-purple-700'
     }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+      ];
+      popular: false,;
+      color: 'border-gray-600',;
+      buttonColor: 'bg-gray-600 hover:bg-gray-700';
+    };
+      name: 'Professional',;
+      price: '$99',;
+      period: '/month',;
+      description: 'Ideal for growing businesses and agencies',;
+      features: [;
+        '10,000 words per month',;
+        '25+ content templates',;
+        'Advanced SEO tools',;
+        'Priority support',;
+        'API access (1,000 calls/month)',;
+        'Advanced analytics',;
+        'Team collaboration',;
+        'Custom branding',;
+      ],;
+      popular: true,;
+      color: 'border-blue-500',;
+      buttonColor: 'bg-blue-600 hover:bg-blue-700',;
+    },    {        '10,000 words per month25+ content templatesAdvanced SEO toolsPriority supportAPI access (1,000 calls/month)Advanced analyticsTeam collaborationCustom branding';
+      name: 'Professional',
+      price: '$99',
+      period: '/month',
+      description: 'Ideal for growing businesses and agencies',
+      ];
+      popular: true,;
+      color: 'border-blue-500',;
+      buttonColor: 'bg-blue-600 hover:bg-blue-700';
+    };
+      name: 'Enterprise',;
+      price: '$299',;
+      period: '/month',;
+      description: 'For large organizations and enterprises',;
+      features: [;
+        'Unlimited words',;
+        'All templates + custom',;
+        'Full SEO suite',;
+        'Dedicated support',;
+        'Unlimited API access',;
+        'Advanced analytics',;
+        'White-label solution',;
+        'Custom integrations',;
+        'SLA guarantee',;
+      ],;
+      popular: false,;
+      color: 'border-purple-600',;
+      buttonColor: 'bg-purple-600 hover:bg-purple-700',;
+    },  ];        'Unlimited wordsAll templates + customFull SEO suiteDedicated supportUnlimited API accessAdvanced analyticsWhite-label solutionCustom integrations';
+        'SLA guarantee';
+      name: 'Enterprise',
+      price: '$299',
+      period: '/month',
+      description: 'For large organizations and enterprises',
+      ];
+      features: [;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         'Unlimited words',
         'All templates + custom',
         'Full SEO suite',
@@ -490,14 +549,18 @@ import {
         'Unlimited API access',
         'Advanced analytics',
 <<<<<<< HEAD
+<<<<<<< HEAD
         'White - label solution',
 =======
         'White-label solution',
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         'Custom integrations',
         'SLA guarantee',
       ],
       popular: false,
+<<<<<<< HEAD
 <<<<<<< HEAD
       color: 'border - purple - 600',
       button_color: 'bg - purple - 600 hover:bg - purple - 700',
@@ -581,18 +644,28 @@ import {
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+  ];
+
+  ];
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
     { name: 'WordPress', icon: '🔌', description: 'Direct plugin integration' },
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <>;
       <Head>;
         <title>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
         />;
@@ -645,10 +718,13 @@ import {
               Start Free Trial;
               <ArrowRight className='w-5 h-5 ml-2' />;
             </Button>;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <Button
               href='#demo'
               variant='outline'
               size='lg'
+<<<<<<< HEAD
   ];
   const useCases = [
     {
@@ -856,6 +932,8 @@ icon: '📝',
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-20">
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               className='border-white/20 hover:border-white/40 hover:bg-white/5'>;
               <Play className='w-5 h-5 mr-2' />              Watch Demo      </Head>;
 
@@ -880,9 +958,12 @@ icon: '📝',
           <p className="text-xl sm:text-2xl md:text-3xl text-gray-300 max-w-4xl mx-auto mb-16 leading-relaxed">;
             Create engaging, SEO-optimized content in seconds with the world's most advanced AI writing assistant;
           </p>;
+<<<<<<< HEAD
 
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-20">;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <Button
               href="#pricing"
               size="lg"
@@ -894,6 +975,7 @@ icon: '📝',
               href="#demo"
               variant="outline"
               size="lg"
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -942,6 +1024,8 @@ icon: '📝',
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
             {features.map((feature, index) => (
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <Card
                 key={index}
                 className='text-center group bg-gray-800/50 border border-gray-700 hover:border-purple-500/30 hover:bg-gray-800/80 transition-all duration-300 hover:-translate-y-1'
@@ -960,6 +1044,24 @@ icon: '📝',
                 key={index}
                 className="text-center group bg-gray-800/50 border border-gray-700 hover:border-purple-500/30 hover:bg-gray-800/80 transition-all duration-300 hover:-translate-y-1"
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+                </p>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Use Cases Section */}
+      <section className='py-24 bg-black relative overflow-hidden'>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
+          <div className='text-center mb-20'>
+            <h2 className='text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight'>
+              Use Cases
+            </h2>
+            <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>              Versatile content creation for every industry and purpose
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 style={{ animationDelay: `${(index * 0 && 0.1) + 0 && 0.2}s` }}>;
                 <div className="relative">;
                   <div className={`w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center transition-all duration-300 group-hover:scale-110 group-hover:shadow-lg bg-gradient-to-br ${feature && feature.color} shadow-xl`}>;
@@ -974,9 +1076,12 @@ icon: '📝',
                 </p>;
               </Card>;
 
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               Everything you need to create exceptional content at scale
             </p>
           </div>
@@ -1155,9 +1260,12 @@ icon: '📝',
                 <p className='text - gray - 400 leading - relaxed'>                  {feature.description}            {features.map ((feature, index) => (
               <Card;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 key={index}
                 className="text - center group bg - gray - 800 / 50 border border - gray - 700 hover:border - purple - 500 / 30 hover:bg - gray - 800 / 80 transition - all duration - 300 hover:-translate - y-1";
                 style={{ animation_delay: `${(index * 0.1) + 0.2}s` }}
@@ -1172,6 +1280,7 @@ icon: '📝',
                 </h3>;
                 <p className="text - gray - 400 leading - relaxed">;
                   {feature.description}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -1232,12 +1341,15 @@ icon: '📝',
           </div>
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>      <section className="py-24 bg-black relative overflow-hidden">
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-20">
             <h2 className="text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight">
               Use Cases
             </h2>
             <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
+<<<<<<< HEAD
 
           </div>;
         </div>;
@@ -1274,6 +1386,8 @@ icon: '📝',
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
             {useCases.map((useCase, index) => (
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <Card
                 key={index}
                 className='group border border-gray-700 hover:border-purple-500/30 hover:bg-gray-900/80 transition-all duration-300'>;
@@ -1308,6 +1422,7 @@ icon: '📝',
                       {useCase && useCase.examples.map((example, exampleIndex) => (;
                         <div key={exampleIndex} className="flex items-center text-sm text-gray-300">;
                           <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1357,12 +1472,17 @@ icon: '📝',
 
                         </div>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+                          {example}
+                        </div>
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       ))}
                     </div>;
                   </div>;
                 </div>;
               </Card>;
             ))}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
           </div>
@@ -1378,10 +1498,13 @@ icon: '📝',
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {/* Pricing Section */}
 
       <section id="pricing" className="py-24 bg-gray-900 relative overflow-hidden">
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -1400,12 +1523,15 @@ icon: '📝',
           </div>
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>            {pricingPlans.map((plan, index) => (      <section id="pricing" className="py-24 bg-gray-900 relative overflow-hidden">
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-20">
             <h2 className="text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight">
               Simple, Transparent Pricing
             </h2>
             <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1424,6 +1550,8 @@ icon: '📝',
         </div>;
       </section>;
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {/* Pricing Section */}
       <section
         id='pricing'
@@ -1446,6 +1574,7 @@ icon: '📝',
             <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">;
             </p>;
           </div>;
+<<<<<<< HEAD
 
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">;
             {pricingPlans && pricingPlans.map((plan, index) => (;
@@ -1604,6 +1733,12 @@ icon: '📝',
 
 
 <<<<<<< HEAD
+=======
+              <Card
+                key={index}
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <div className='text-center mb-8'>;
                   <h3 className='text-2xl font-bold text-white mb-2'>;
                     {plan && plan.name}
@@ -1614,6 +1749,7 @@ icon: '📝',
                   </div>;
                   <p className='text-gray-400'>{plan && plan.description}</p>;
                 </div>;
+<<<<<<< HEAD
 
                 <ul className='space-y-4 mb-8'>;
                   {plan && plan.features.map((feature, featureIndex) => (;
@@ -1638,11 +1774,13 @@ icon: '📝',
 
 =======
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <div className='text-center mb-8'>
                   <h3 className='text-2xl font-bold text-white mb-2'>
                     {plan.name}
-                  </h3>
-                  <div className='text-4xl font-bold text-white mb-2'>
+                  </h3>;
+                  <div className='text - 4xl font - bold text - white mb - 2'>;
                     {plan.price}
                     <span className='text-lg text-gray-400'>{plan.period}</span>
                   </div>
@@ -1650,22 +1788,20 @@ icon: '📝',
                 </div>
                 <ul className='space-y-4 mb-8'>
                   {plan.features.map((feature, featureIndex) => (
+
+                <ul className='space-y-4 mb-8'>;
+                  {plan && plan.features.map((feature, featureIndex) => (;
                     <li
                       key={featureIndex}
-                      className='flex items-center text-gray-300'
-                    >
-                      <CheckCircle className='w-5 h-5 text-green-400 mr-3 flex-shrink-0' />                      {feature}                  </div>
-                  <p className="text-gray-400">{plan.description}</p>
-                </div>
-                <ul className="space-y-4 mb-8">
-                  {plan.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-gray-300">
-                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+
                       {feature}
                     </li>;
                   ))}
+<<<<<<< HEAD
                 </ul>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <Button
                   href='/contact'
                   className={`w-full ${plan && plan.buttonColor} text-white`}
@@ -1679,6 +1815,7 @@ icon: '📝',
                 </Button>;
               </Card>;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
                       {feature}
@@ -1695,6 +1832,9 @@ icon: '📝',
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     </li>
                   ))}
                 </ul>
@@ -1702,6 +1842,7 @@ icon: '📝',
                 <Button
                   href="/contact"
                   className={`w-full ${plan.buttonColor} text-white`}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
                       {feature}
@@ -1721,12 +1862,15 @@ icon: '📝',
                   Get Started
                   <ArrowRight className='w-5 h-5 ml-2' />                </Button>                  className={`w-full ${plan.buttonColor} text-white`}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   size="lg"
                 >
                   Get Started
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </Button>
               </Card>
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
@@ -1746,10 +1890,14 @@ icon: '📝',
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+            ))}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {/* Integrations Section */}
 
       <section className="py-24 bg-black relative overflow-hidden">
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -1765,12 +1913,16 @@ icon: '📝',
           </div>
           <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6'>      <section className="py-24 bg-black relative overflow-hidden">
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+            ))}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-20">
             <h2 className="text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight">
               Seamless Integrations
             </h2>
             <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
+<<<<<<< HEAD
 
           </div>;
         </div>;
@@ -1807,6 +1959,8 @@ icon: '📝',
           <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6'>
             {integrations.map((integration, index) => (
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <Card
                 key={index}
                 className='text-center group border border-gray-700 hover:border-purple-500/30 hover:bg-gray-900/80 transition-all duration-300'>;
@@ -1828,6 +1982,7 @@ icon: '📝',
                 <h3 className="font-semibold text-white mb-2">{integration && integration.name}</h3>;
                 <p className="text-sm text-gray-400">{integration && integration.description}</p>;
               </Card>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1880,19 +2035,31 @@ icon: '📝',
 =======
 
               </Card>
+=======
+            ))}
+          </div>
+        </div>
+      </section>
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
             ))}
           </div>
         </div>
       </section>
 
+            ))}
       {/* CTA Section */}
+      {/* CTA Section */}
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <section className='py-24 bg-gradient-to-r from-purple-600 to-blue-600 relative overflow-hidden'>
         <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10'>
           <h2 className='text-4xl sm:text-5xl font-bold text-white mb-8'>
 
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -1900,6 +2067,8 @@ icon: '📝',
 =======
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             Ready to Transform Your Content Creation?
           </h2>
           <p className='text-xl text-purple-100 mb-12 max-w-4xl mx-auto leading-relaxed'>
@@ -1908,21 +2077,39 @@ icon: '📝',
           </p>
           <div className='flex flex-col sm:flex-row gap-6 justify-center'>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+      <section className='py-24 bg-gradient-to-r from-purple-600 to-blue-600 relative overflow-hidden'>;
+        <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0 && 0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />;
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10'>;
+          <h2 className='text-4xl sm:text-5xl font-bold text-white mb-8'>;
+            Ready to Transform Your Content Creation?;
+          </h2>;
+          <p className='text-xl text-purple-100 mb-12 max-w-4xl mx-auto leading-relaxed'>;
+            Join thousands of content creators who are already saving hours;
+            every day with AI-powered content generation.;
+          </p>;
+          <div className='flex flex-col sm:flex-row gap-6 justify-center'>;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <Button
               href='/contact'
               variant='secondary'
               size='lg'
+<<<<<<< HEAD
               className='bg-white text-purple-600 hover:bg-gray-100 shadow-2xl'>;
               Start Free Trial;
               <ArrowRight className='w-5 h-5 ml-2' />;
             </Button>;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <Button
               href='#demo'
               variant='outline'
               size='lg'
+<<<<<<< HEAD
 <<<<<<< HEAD
               className='border-white text-white hover:bg-white hover:text-purple-600 shadow-2xl'>;
               <Play className='w-5 h-5 mr-2' />              Watch Demo            Ready to Transform Your Content Creation?;
@@ -1956,6 +2143,8 @@ icon: '📝',
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <Button
               href="/contact"
               variant="secondary"
@@ -1968,6 +2157,7 @@ icon: '📝',
               href="#demo"
               variant="outline"
               size="lg"
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -2105,11 +2295,14 @@ icon: '📝',
             >;
               <Play className="w - 5 h - 5 mr - 2" />;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               Watch Demo;
             </Button>;
           </div>;
         </div>;
       </section>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   );
@@ -2117,6 +2310,8 @@ icon: '📝',
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               className="border-white text-white hover:bg-white hover:text-purple-600 shadow-2xl"
             >
               <Play className="w-5 h-5 mr-2" />
@@ -2126,6 +2321,7 @@ icon: '📝',
         </div>
       </section>
     </>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   );
@@ -2149,3 +2345,16 @@ icon: '📝',
 ;
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+}
+;
+}
+
+    </>);
+}
+
+
+
+    </>);
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import { useState, useEffect } from 'react'
 import { SEO } from '@/components/SEO'
@@ -36,45 +37,24 @@ export default function SavedTalentsPage() {
   const [savedTalents, setSavedTalents] = useState<TalentProfile[]>([])
   const [isLoading, setIsLoading] = useState(true)
   const router = useRouter()
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   // Using router.asPath instead of useLocation
-  useEffect((,) => {
-    if (!user) {
-      router.push(`/auth/login?returnTo=${encodeURIComponent(router.asPath)}`)
-    }
-  }, [user, router])
-  useEffect((,) => {
-    const fetchSavedTalents = async () => {
-      setIsLoading(true)
-      try {
-        if (!user) {
-          logWarn('User not authenticated.')
-import { toast } from "@/components/ui/use-toast",
-import { useRouter } from 'next/router',
-import { logErrorToProduction } from '@/utils/productionLogger',
-import { EmptyState } from "@/components/ui/empty-state",
-import { Heart } from 'lucide-react'
-import { logInfo, logWarn } from '@/utils/productionLogger',
 
-export default function SavedTalentsPage() {
+        const { data, error } = await supabase;
+          .from ('saved_talents');
+          .select (
+            `;
+            talent_profile (
+  }
 
-  const { user } = useAuth(),
-  const [savedTalents, setSavedTalents] = useState<TalentProfile[]>([]),
-  const [isLoading, setIsLoading] = useState(true),
-  const router = useRouter(),
-  // Using router.asPath instead of useLocation
+  const handleRequestHire = (talent: TalentProfile) =>: any {
+    log_info ('Request to hire:', { data: talent });    toast ({
 
   useEffect(() => {
     if (!user) {
       router.push(`/auth/login?returnTo=${encodeURIComponent(router.asPath)}`)
     }
-  }, [user, router])
-  useEffect((,) => {
-    const fetchSavedTalents = async () => {
-      setIsLoading(true)
-      try {
-        if (!user) {
-          logWarn('User not authenticated.')
-          return;
   }, [user, router]),
 
   useEffect(() => {
@@ -84,12 +64,12 @@ export default function SavedTalentsPage() {
         if (!user) {
           logWarn("User not authenticated."),
           return
-          return
         }
         const { data, error } = await supabase
           .from("saved_talents")
           .select(
             `
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 }
 
@@ -141,6 +121,9 @@ if ( {) {
         });
 
 =======
+=======
+            talent_profile (
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               id
               user_id
               full_name
@@ -157,6 +140,7 @@ if ( {) {
             )
           `
           )
+<<<<<<< HEAD
           .eq('user_id', user.id)
         if (error) {
           throw error
@@ -200,6 +184,8 @@ if ( {) {
     log_info ('Request to hire:', { data: talent });    toast ({
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           .eq("user_id", user.id),
 
         if (error) {
@@ -288,6 +274,7 @@ export default function SavedTalentsPage() {;
   },
 
   const handleRequestHire = (talent: TalentProfile) => {
+<<<<<<< HEAD
     logInfo('Request to hire:', { data: talent }),
     toast({
       title: "Hire Request Sent",
@@ -332,6 +319,9 @@ import { EmptyState } from "@/components/ui/empty-state",;
 import { Heart } from 'lucide-react';
 import { logInfo, logWarn } from '@/utils/productionLogger',;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  const handleViewProfile = (talentId: string) => {;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     router.push(`/talent/${talentId}`);
   };
   const handleRequestHire = (talent: TalentProfile) => {;
@@ -340,50 +330,29 @@ import { logInfo, logWarn } from '@/utils/productionLogger',;
 =======
       title: 'Hire Request Sent',
       description: `A hire request has been sent to ${talent.full_name}.`,
-    });
+    })
   }
   const handleToggleSave = async (
-    talent_id: string,
-    isCurrentlySaved: boolean) => {    try {
-      // Check condition
-if ( {) {
-  $2
-}
-        log_warn ('User not authenticated.');
+    talentId: string,
+    isCurrentlySaved: boolean
+  ) => {    try {
+      if (!user) {
+        logWarn('User not authenticated.')
         return;
       }
-
-
-;
-      if (isCurrentlySaved) {;
-
-        // Remove from saved talents;
         const { error } = await supabase;
           .from ('saved_talents');
-          .delete ();
-          .eq ('user_id', user.id);
-          .eq ('talent_id', talent_id);
+          .insert ([{ user_id: user.id, talent_id: talent_id }]);
         // Check condition
 if ( {) {
   $2
 }
           throw error;
         }
-
-  
-        setSavedTalents(prevTalents =>
-          prevTalents.filter(talent => talent.id !== talentId)
-        ),
-        toast({
-          title: "Talent Removed",
-          description: "Talent removed from saved list."})
-
-
       } else {
         // Add to saved talents
         const { error } = await supabase
           .from('saved_talents')
-
           .insert([{ user_id: user.id, talent_id: talentId }]),
   
           .insert([{ user_id: user.id, talent_id: talentId }]),
@@ -398,6 +367,7 @@ if ( {) {
           .from('talent_profiles')
           .select('*')
           .eq('id', talentId)
+<<<<<<< HEAD
 
 export default function SavedTalentsPage() {;
   const { user } = useAuth(),;
@@ -637,6 +607,8 @@ export default function SavedTalentsPage() {;
           return;
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           .single(),
   
         if (talentError) {
@@ -646,6 +618,7 @@ export default function SavedTalentsPage() {;
             description: "Failed to update saved talents. Please try again later.",
             variant: "destructive"}),
           return
+<<<<<<< HEAD
 <<<<<<< HEAD
         }
   
@@ -728,6 +701,11 @@ ursor/fix-website-loading-errors-and-merge-6662
         variant: "destructive"})
     }
   },
+=======
+        }
+  
+        if (talentData) {
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   return (
     <>
@@ -740,16 +718,20 @@ ursor/fix-website-loading-errors-and-merge-6662
         <p className="text-muted-foreground">
           Here are the talents you've saved for future reference.
         </p>
+<<<<<<< HEAD
         
 <<<<<<< HEAD
 =======
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         {isLoading ? (
           <div className="text-center py-8">Loading saved talents...</div>
         ) : savedTalents.length === 0 ? (
           <div className="py-8">
             <EmptyState
+<<<<<<< HEAD
 <<<<<<< HEAD
               icon={<Heart className="h-8 w-8" />}
               title="No Saved Talents"
@@ -762,11 +744,14 @@ ursor/fix-website-loading-errors-and-merge-6662
               description="You haven't saved any talents yet."
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               action={{ text: 'Browse Talent', href: '/talent' }}
               className="border-none bg-transparent text-center"
             />
           </div>
         ) : (
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8'>
@@ -964,12 +949,15 @@ if ( {) {
                 isAuthenticated={!!user}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
               />;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 
             ))}
-          </div>;
+          </div>
         )}
+<<<<<<< HEAD
 
       <SEO;
         title='Saved Talents | Zion AI Marketplace';
@@ -1006,6 +994,13 @@ if ( {) {
 }const {
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+      </div>
+    </>
+  )
+}, [user, router])
+}const {
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   data, error;
 }= await supabase .from ("saved talents") user id;
 full name;
@@ -1022,6 +1017,7 @@ is verified) `);
 }finally {
   setIsLoading (false);
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 }const {
@@ -1041,10 +1037,13 @@ is verified) `)
 }finally {
   setIsLoading (false)
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 }, [user]);
 }
   try {
+<<<<<<< HEAD
   // Check condition
 if ( {) {
   $2
@@ -1139,6 +1138,8 @@ return (<> <SEO title="Saved Talents | Zion AI Marketplace" description="View an
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   handleRequestHire;
 }is_authenticated= {
@@ -1149,11 +1150,15 @@ return (<> <SEO title="Saved Talents | Zion AI Marketplace" description="View an
 }'"}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       </div>;
     </>;
   );
 }
+<<<<<<< HEAD
   user id: user.id, talent id: talentId
 }])
 if (error) {
@@ -1192,3 +1197,8 @@ return (<> <SEO title="Saved Talents | Zion AI Marketplace" description="View an
 ;
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+            ))}
+          </div>
+        )}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

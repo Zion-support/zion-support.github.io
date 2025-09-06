@@ -1,3 +1,8 @@
+import React, { Suspense } from 'react';
+import { Routes, Route  } from 'react-router-dom';
+import './App.css',
+import { ThemeProvider } from "./components/ThemeProvider",
+import { WhitelabelProvider } from "./context/WhitelabelContext",
 
 
 class ErrorBoundary extends React.Component {
@@ -23,9 +28,12 @@ class ErrorBoundary extends React.Component {
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 import React, { Suspense } from "react";
@@ -33,6 +41,18 @@ import { Routes, Route } from "react-router-dom";
 import "./App ;
 import { ThemeProvider } from "./components/ThemeProvider";
 import { WhitelabelProvider } from "./context/WhitelabelContext";
+import {
+  AuthRoutes
+  DashboardRoutes
+  MarketplaceRoutes
+  TalentRoutes
+  AdminRoutes
+  MobileAppRoutes
+  ContentRoutes
+  ErrorRoutes
+  EnterpriseRoutes
+  CommunityRoutes
+  DeveloperRoutes
 
 import {;
   AuthRoutes,;
@@ -82,6 +102,13 @@ const baseRoutes = [;
   { path: "/community", element: <CommunityPage /> },;
   { path: "/contact", element: <ContactPage /> },;
 ];
+import React, { Suspense } from 'react',
+import { Routes, Route } from 'react-router-dom',
+import './App.css',
+import { ThemeProvider } from "./components/ThemeProvider",
+import { WhitelabelProvider } from "./context/WhitelabelContext",
+import { Toaster } from "./components/ui/toaster",
+import { Toaster as SonnerToaster } from "./components/ui/sonner",
 
 const App = () => {;
 
@@ -94,9 +121,12 @@ const App = () => {;
               <Route key={path} path={path} element={element} />;
             ))}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { Suspense } from './react';
 import { Routes, Route  } from './react-router-dom';
 import "./App.css";
@@ -104,6 +134,7 @@ import { ThemeProvider  } from './components / ThemeProvider';
 import { WhitelabelProvider  } from './context / WhitelabelContext';
 import { Toaster  } from './components / ui / toaster';
 import { Toaster, as, SonnerToaster  } from './components / ui / sonner';
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 import React, { Suspense } from 'react';
@@ -174,6 +205,8 @@ import { WhitelabelProvider } from "./context/WhitelabelContext",
 import { Toaster } from "./components/ui/toaster",
 import { Toaster as SonnerToaster } from "./components/ui/sonner",
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {
   AuthRoutes,
   DashboardRoutes,
@@ -185,6 +218,7 @@ import {
   ErrorRoutes,
   EnterpriseRoutes,
   CommunityRoutes,
+<<<<<<< HEAD
   DeveloperRoutes,
 } from './routes';
 const Home = React.lazy (() => import ("./pages / Home"));
@@ -375,6 +409,8 @@ export default App;
   )
 },
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export default App,
 import React, { Suspense } from 'react',;
 import { Routes, Route } from 'react-router-dom',;
@@ -436,6 +472,35 @@ const App = () => {;
             {baseRoutes.map(({ path, element }) => (;
               <Route key={path} path={path} element={element} />;
             ))}
+const OpenAppRedirect = React.lazy (() => import ("./pages / OpenAppRedirect"));
+const ContactPage = React.lazy (() => import ("./pages / Contact"));
+;
+const base_routes = [;
+  { path: "/", element: <Home /> },
+  { path: "/match", element: <AIMatcherPage /> },
+  { path: "/login", element: <Login /> },
+  { path: "/signup", element: <Signup /> },
+  { path: "/talent", element: <TalentDirectory /> },
+  { path: "/talents", element: <TalentsPage /> },
+  { path: "/services", element: <ServicesPage /> },
+  { path: "/it - onsite - services", element: <ITOnsiteServicesPage /> },
+  { path: "/categories", element: <Categories /> },
+  { path: "/equipment", element: <EquipmentPage /> },
+  { path: "/analytics", element: <Analytics /> },
+  { path: "/mobile - launch", element: <MobileLaunchPage /> },
+  { path: "/open - app", element: <OpenAppRedirect /> },
+  { path: "/community", element: <CommunityPage /> },
+  { path: "/contact", element: <ContactPage /> },
+];
+;
+const App = () =>: any {
+  return (
+    <WhitelabelProvider>;
+      <ThemeProvider default_theme="dark">;
+        <Suspense fallback={<div className="p - 4 text - center">Loading...</div>}>;
+          <Routes>;
+            {base_routes.map (({ path, element }) => (
+              <Route key={path} path={path} element={element} />))}
             <Route path="/auth/*" element={<AuthRoutes />} />;
             <Route path="/dashboard/*" element={<DashboardRoutes />} />;
             <Route path="/marketplace/*" element={<MarketplaceRoutes />} />;
@@ -450,6 +515,7 @@ const App = () => {;
           </Routes>;
         </Suspense>;
         <Toaster />;
+<<<<<<< HEAD
         <SonnerToaster position="top-right" />;
       </ThemeProvider>;
     </WhitelabelProvider>;
@@ -479,3 +545,7 @@ export default App;
 export default App;
 export default App;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+export default App;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

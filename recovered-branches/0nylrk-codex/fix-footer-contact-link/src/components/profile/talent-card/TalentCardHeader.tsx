@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 
@@ -6,10 +7,13 @@
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from "react";
 import {BadgeCheck} from "lucide-react";
 import {TalentCardAvatar} from "./TalentCardAvatar";
 import {TalentCardAvailability} from "./TalentCardAvailability";
+<<<<<<< HEAD
 <<<<<<< HEAD
 interface TalentCardHeaderProps {;
   fullName: string,;
@@ -29,6 +33,8 @@ export function TalentCardHeader(): any ({ ;
 }: TalentCardHeaderProps) {;
 =======
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from "react",
 import { BadgeCheck } from "lucide-react",
 import { TalentCardAvatar } from "./TalentCardAvatar";
@@ -38,20 +44,16 @@ interface TalentCardHeaderProps {
   fullName: string
   professionalTitle: string
   profilePicture?: string;
-  availabilityType: string
-
-  yearsExperience: number
+  availabilityType: string,;
+  yearsExperience: number;
 }
-export function TalentCardHeader({
-  fullName;
-
-  professionalTitle
-  profilePicture
-
   availabilityType;
+<<<<<<< HEAD
 import { TalentCardAvatar } from "./TalentCardAvatar",
 import { TalentCardAvailability } from "./TalentCardAvailability",
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface TalentCardHeaderProps {
   fullName: string,
   professionalTitle: string,
@@ -60,16 +62,12 @@ interface TalentCardHeaderProps {
   yearsExperience: number
 }
 
-
-export function TalentCardHeader({ 
-  fullName,
-
   professionalTitle, 
   profilePicture, 
   availabilityType,
-
   yearsExperience
 }: TalentCardHeaderProps) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
@@ -119,11 +117,15 @@ export function TalentCardHeader({ ;
         <div className="flex items-center justify-between">;
           <h3 className="text-lg font-semibold text-white flex items-center gap-1">;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  return (
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             {fullName}
             {/* AI score could be used for verification badge */}
             {yearsExperience > 5 && (;
               <BadgeCheck className="h-4 w-4 text-zion-cyan" aria-label="Verified Expert" />;
             )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 export function TalentCardHeader({ ;
@@ -210,6 +212,8 @@ export function TalentCardHeader({;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from './react';
 import { BadgeCheck } from './lucide-react';
 import { TalentCardAvatar } from './TalentCardAvatar';
@@ -242,6 +246,7 @@ function TalentCardHeader() {
       </div>;
     </div>);
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -289,3 +294,5 @@ yearsExperience
 }
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

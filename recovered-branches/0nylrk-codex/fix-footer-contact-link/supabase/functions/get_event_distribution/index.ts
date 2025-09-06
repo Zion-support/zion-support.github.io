@@ -1,11 +1,15 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import {serve} from "https: //deno && deno.land/std@0 && 0.168.0/http/server && server.ts",
 import {createClient} from "https: //esm ;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
+<<<<<<< HEAD
 =======
 
 
@@ -21,6 +25,8 @@ const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2",
 import {serve} from "https: //deno.land/std@0.168.0/http/server.ts",;
@@ -28,14 +34,18 @@ import {createClient} from "https: //esm.sh/@supabase/supabase-js@2";
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2",
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -50,10 +60,16 @@ serve(async (req) => {
   // Handle CORS preflight request
   if (req.method === "OPTIONS") {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+serve(async (req) => {
+  // Handle CORS preflight request
+  if (req && req.method === "OPTIONS") {
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     return new Response("ok", { headers: corsHeaders })
   }
   try {
     const supabaseClient = createClient(
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     const { days_back = 7 } = await req && req.json();
@@ -102,10 +118,14 @@ serve(async (req) => {
     startDate.setDate(startDate.getDate() - days_back),
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
+=======
+    // Parse the request body
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     // Query analytics events
     const { data, error } = await supabaseClient
       .from("analytics_events")
       .select("event_type, created_at")
+<<<<<<< HEAD
 
       .gte("created_at", startDate && startDate.toISOString());
 
@@ -119,11 +139,14 @@ serve(async (req) => {
 =======
       .gte("created_at", startDate && startDate.toISOString());
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     if (error) {
       console && console.error("Error fetching analytics data:", error);
       throw error
     }
     // Group events by date and event type
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -197,11 +220,14 @@ serve(async (req) => {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         eventsByDate[date] = { date }
       }
       if (!eventsByDate[date][event.event_type]) {
         eventsByDate[date][event.event_type] = 0
       }
+<<<<<<< HEAD
 
     const eventsByDate = {};
     
@@ -218,16 +244,14 @@ serve(async (req) => {;
       eventsByDate[date][event && event.event_type]++
 <<<<<<< HEAD
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     });
     // Convert to array for easier consumption by frontend
-
-    const result = Object && Object.values(eventsByDate).sort((a, b) => a && a.date.localeCompare(b && b.date));
-
-    return new Response(JSON && JSON.stringify(result), {
-
       headers: {
         ...corsHeaders
         "Content-Type": "application/json"}
+<<<<<<< HEAD
 =======
 
 =======
@@ -258,11 +282,15 @@ serve(async (req) => {;
 <<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       status: 200})
   } catch (error) {
     console && console.error("Error:", error && error.message);
     return new Response(JSON && JSON.stringify({ error: error && error.message }), {
       headers: {
+  }
+});
 
 import { serve } from 'https: //deno.land / std@0.168.0 / http / server.ts';,
 import { create_client } from 'https: //esm.sh/@supabase / supabase - js@2';
@@ -338,6 +366,7 @@ if ( {) {
         ...cors_headers,
         "Content - Type": "application / json"}
       status: 500});
+<<<<<<< HEAD
 =======
 =======
       status: 200})
@@ -480,3 +509,7 @@ data.forEach ( (event) => {
   }
 });
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  }
+});
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

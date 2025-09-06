@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 
@@ -6,10 +7,13 @@
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {cn} from "@/lib/utils";
 import {Badge} from "@/components/ui/badge";
 import {Button} from "@/components/ui/button";
 import {StarIcon} from "lucide-react";
+<<<<<<< HEAD
 <<<<<<< HEAD
 interface ListingScoreCardProps {;
   title: string,;
@@ -19,22 +23,32 @@ import { cn } from '@/lib / utils';
 import { Badge } from '@/components / ui / badge';
 import { Button } from '@/components / ui / button';
 import { StarIcon } from './lucide-react';
+=======
+import { cn } from "@/lib/utils",
+import { Badge } from "@/components/ui/badge",
+import { Button } from "@/components/ui/button";
+import { StarIcon } from "lucide-react";
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface ListingScoreCardProps {
   title: string,
   description: string,
 
   image?: string;
   category: string,;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
   image?: string;
   category: string,;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   tags?: string[];
   author?: string;
   author_image?: string;
   ai_score?: number;
   rating?: number;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -78,10 +92,13 @@ export function ListingScoreCard({
   tags;
   author
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   authorImage;
   aiScore = 0;
   rating = 0;
   reviewCount = 0;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -93,6 +110,8 @@ export function ListingScoreCard({
 import { Button } from "@/components/ui/button",
 import { StarIcon } from "lucide-react",
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface ListingScoreCardProps {
   title: string,
   description: string,
@@ -107,6 +126,7 @@ interface ListingScoreCardProps {
   className?: string
 }
 
+<<<<<<< HEAD
 
 export function ListingScoreCard({ 
   title,
@@ -118,6 +138,8 @@ export function ListingScoreCard({ ;
 export function ListingScoreCard({ 
   title,
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   description, 
   image, 
   category, 
@@ -131,12 +153,15 @@ export function ListingScoreCard({
 }: ListingScoreCardProps) {
   return (
     <div className={cn(
+<<<<<<< HEAD
       "flex flex-col overflow-hidden rounded-lg border border-zion-blue-light bg-zion-blue-dark hover:border-zion-purple/50 transition-all duration-300 group",
 <<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       className
     )}>
       {image && (
@@ -144,6 +169,7 @@ export function ListingScoreCard({
           <img
             src={image}
             alt={title}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -210,6 +236,9 @@ export function ListingScoreCard({ ;
             alt={title} ;
             className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105";
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+            className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           />;
         </div>;
       )}
@@ -224,6 +253,7 @@ export function ListingScoreCard({ ;
               <span>{aiScore}%</span>;
             </div>;
           )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -247,6 +277,8 @@ export function ListingScoreCard({ ;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         </div>
         <h3 className="text-xl font-bold mb-2 text-white group-hover:text-zion-purple transition-colors">{title}</h3>
         <p className="text-zion-slate mb-4 flex-grow line-clamp-2">{description}</p>
@@ -258,6 +290,7 @@ export function ListingScoreCard({ ;
                 <StarIcon
                   key={star}
                   className={cn(
+<<<<<<< HEAD
 <<<<<<< HEAD
 
         </div>;
@@ -274,6 +307,8 @@ export function ListingScoreCard({ ;
                     star <= Math.round(rating) 
                       ? "text-zion-cyan fill-zion-cyan" 
                       : "text-zion-slate-light"
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { cn } from "@/lib/utils",;
 import { Badge } from "@/components/ui/badge",;
 import { Button } from "@/components/ui/button",;
@@ -333,16 +368,21 @@ export function ListingScoreCard({;
         </div>;
         <h3 className="text-xl font-bold mb-2 text-white group-hover:text-zion-purple transition-colors">{title}</h3>;
         <p className="text-zion-slate mb-4 flex-grow line-clamp-2">{description}</p>;
+<<<<<<< HEAD
         ;
         </div>;
         <h3 className="text-xl font-bold mb-2 text-white group-hover:text-zion-purple transition-colors">{title}</h3>;
         <p className="text-zion-slate mb-4 flex-grow line-clamp-2">{description}</p>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         {/* Rating */}
         {rating > 0 && (;
           <div className="flex items-center gap-1 mb-4">;
             <div className="flex">;
               {[1, 2, 3, 4, 5].map((star) => (;
+<<<<<<< HEAD
 <<<<<<< HEAD
                 <StarIcon
                   key={star}
@@ -355,22 +395,32 @@ export function ListingScoreCard({;
                       ? "text-zion-cyan fill-zion-cyan";
                       : "text-zion-slate-light";
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+                <StarIcon
+                  key={star}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   className={cn(
                     "h-4 w-4", 
                     star <= Math && Math.round(rating) 
                       ? "text-zion-cyan fill-zion-cyan" 
 
 <<<<<<< HEAD
-                      : "text-zion-slate-light"
+<<<<<<< HEAD
 =======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+                      : "text-zion-slate-light"
 
+<<<<<<< HEAD
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     "h-4 w-4", 
                     star <= Math.round(rating) 
                       ? "text-zion-cyan fill-zion-cyan" 
                       : "text-zion-slate-light"
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
@@ -383,6 +433,9 @@ export function ListingScoreCard({;
                       ? "text-zion-cyan fill-zion-cyan" ;
                       :"text-zion-slate-light";
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+                      : "text-zion-slate-light"
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   )}
                 />;
               ))}
@@ -392,6 +445,7 @@ export function ListingScoreCard({;
             </span>;
           </div>;
         )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -432,10 +486,24 @@ export function ListingScoreCard({;
               </Badge>
             ))}
           </div>
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         )}
               </Badge>;
             ))}
           </div>;
+
+
+        <Button className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white">;
+          Request Quote;
+        </Button>;
+
+              </Badge>;
+            ))}
+          </div>;
+
+
+
         )}
         
         <Button className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white">
@@ -449,6 +517,7 @@ export function ListingScoreCard({;
               <div className="h-8 w-8 rounded-full bg-zion-purple/20 mr-2 flex items-center justify-center text-zion-purple">
                 {author.charAt(0)}
               </div>
+<<<<<<< HEAD
 
 
         )}
@@ -497,10 +566,13 @@ export function ListingScoreCard({;
               <div className="h-8 w-8 rounded-full bg-zion-purple/20 mr-2 flex items-center justify-center text-zion-purple">;                {author.charAt(0)}
               </div>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             )}
             <span className="text-sm text-zion-slate-light">{author}</span>;
           </div>;
         )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       </div>;
@@ -513,6 +585,8 @@ export function ListingScoreCard({;
       </div>;
     </div>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   review_count?: number;
   class_name?: string;
 }
@@ -586,6 +660,7 @@ function ListingScoreCard() {
     </div>);
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
   ),;}
@@ -645,3 +720,5 @@ className)
   )
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

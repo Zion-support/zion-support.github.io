@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 import { useState, useEffect } from "react"
@@ -31,6 +32,8 @@ interface JobsListProps {
 <<<<<<< HEAD
 =======
 import { useState, useEffect } from "react",
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useState, useEffect } from "react",
 import { useAuth } from "@/hooks/useAuth",
 import { supabase } from "@/integrations/supabase/client",
@@ -40,18 +43,22 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Badge } from "@/components/ui/badge",
 import { Loader2, Edit, X, Eye } from 'lucide-react'
 import { format } from "date-fns",
+<<<<<<< HEAD
 import Link from "next/link";
 import {logErrorToProduction} from '@/utils/productionLogger';
 interface JobsListProps {
 
   filter?: JobStatus
   onSelectJob?: (jobId: string, jobTitle: string) => void}
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export function JobsList({ filter, onSelectJob }: JobsListProps) {
   const { user } = useAuth()
   const [jobs, setJobs] = useState<Job[]>([])
   const [isLoading, setIsLoading] = useState(true)
   useEffect((,) => {
     const fetchJobs = async () => {
+<<<<<<< HEAD
       if (!user) return
 import Link from "next/link",
 import {logErrorToProduction} from '@/utils/productionLogger',
@@ -74,11 +81,16 @@ export function JobsList({ filter, onSelectJob }: JobsListProps) {
 
 <<<<<<< HEAD
 =======
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       try {
         let query = supabase
           .from("jobs")
           .select("*")
           .eq("client_id", user.id)
+<<<<<<< HEAD
           .order("created_at", { ascending: false })
         if (filter) {
           query = query.eq("status", filter)
@@ -220,6 +232,8 @@ export function JobsList({ filter, onSelectJob } JobsListProps) {;
           .order("created_at", { ascending: false }),
           .order("created_at", { ascending: false })
           .order("created_at", { ascending: false }),
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         if (filter) {
           query = query.eq("status", filter)
         }
@@ -232,9 +246,6 @@ export function JobsList({ filter, onSelectJob } JobsListProps) {;
         setIsLoading(false)
       }
     }
-    fetchJobs()
-  }, [user, filter])
-          .order("created_at", { ascending: false }),
 
         if (filter) {
           query = query.eq("status", filter)
@@ -252,6 +263,7 @@ import {logErrorToProduction} from '@/utils/productionLogger',;
 interface JobsListProps {;
   filter?: JobStatus,;
   onSelectJob?: (jobId: string, jobTitle: string) => void;
+<<<<<<< HEAD
   // Check condition
 if ( {) {
   $2
@@ -267,6 +279,8 @@ if ( {) {
         </Button>;
       </div>);
   }
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 ;
 export function JobsList({ filter, onSelectJob }: JobsListProps) {;
@@ -301,11 +315,11 @@ export function JobsList({ filter, onSelectJob }: JobsListProps) {;
 
   if (isLoading) {
     return (
-      <div className="flex justify-center items-center p-8">
-        <Loader2 className="h-8 w-8 animate-spin text-primary" />
-      </div>
-    )
+      <div className="flex justify - center items - center p - 8">;
+        <Loader2 className="h - 8 w - 8 animate - spin text - primary" />;
+      </div>);
   }
+<<<<<<< HEAD
   if (jobs.length === 0) {
     return (
       <div className="text-center p-8 border rounded-md bg-muted/20">
@@ -316,6 +330,8 @@ export function JobsList({ filter, onSelectJob }: JobsListProps) {;
           {filter
             ? `No jobs with status "${filter}" found.`
             : "You haven't posted any jobs yet.", }
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           {filter 
             ? `No jobs with status "${filter}" found.` 
             : "You haven't posted any jobs yet."
@@ -327,20 +343,18 @@ export function JobsList({ filter, onSelectJob }: JobsListProps) {;
       </div>
     )
   }
+<<<<<<< HEAD
   const getStatusColor = (status: JobStatus,) => {
     switch (status) {
   const getStatusColor = (status: JobStatus,) => {
     switch (status) {
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       case "new": return "bg-blue-100 text-blue-800"
       case "in_progress":
         return "bg-yellow-100 text-yellow-800"
       case "filled":
         return "bg-green-100 text-green-800"
-  const getStatusColor = (status: JobStatus) => {
-    switch (status) {
-
-  const getStatusColor = (status: JobStatus) => {
-    switch (status) {
       case "new": return "bg-blue-100 text-blue-800",
       case "in_progress":
         return "bg-yellow-100 text-yellow-800",
@@ -350,6 +364,7 @@ export function JobsList({ filter, onSelectJob }: JobsListProps) {;
         return "bg-gray-100 text-gray-800"
       default:
         return "bg-gray-100 text-gray-800"
+<<<<<<< HEAD
     }
         return "bg-gray-100 text-gray-800"
       default:
@@ -429,6 +444,9 @@ return (<div className="grid gap-6 md:grid-cols-2" > {
 }
 ;
 =======
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <div className="grid gap-6 md:grid-cols-2">
       {jobs.map((job,) => (
@@ -443,7 +461,10 @@ return (<div className="grid gap-6 md:grid-cols-2" > {
       {jobs.map((job) => (
         <Card 
           key={job.id} 
+<<<<<<< HEAD
           className={`overflow-hidden cursor-pointer transition-shadow hover:shadow-md ${
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           className={`overflow-hidden cursor-pointer transition-shadow hover:shadow-md ${
             onSelectJob ? "cursor-pointer" : ""
           }`}
@@ -467,6 +488,7 @@ return (<div className="grid gap-6 md:grid-cols-2" > {
               {job.description}
             </p>
             <div className="flex flex-wrap gap-1 mt-2">
+<<<<<<< HEAD
               {job.skills.slice(0, 3).map((skill, index,) => (
                 <Badge key={index} variant="outline" className="text-xs">
                 </Badge>
@@ -477,18 +499,24 @@ ursor/fix-website-loading-errors-and-merge-6662
     return (
               {job.skills.slice(0, 3).map((skill, index,) => (
                 <Badge key={index} variant="outline" className="text-xs">
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               {job.skills.slice(0, 3).map((skill, index) => (
                 <Badge key={index} variant="outline" className="text-xs">
     },;
     fetchJobs();
+<<<<<<< HEAD
   }, [user, filter]),;
   if (isLoading) {;
     return (;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <div className="flex justify-center items-center p-8">;
         <Loader2 className="h-8 w-8 animate-spin text-primary" />;
       </div>;
     );
   }
+<<<<<<< HEAD
 ;
   if (jobs.length === 0) {;
     return (;
@@ -498,6 +526,8 @@ ursor/fix-website-loading-errors-and-merge-6662
             ? `No jobs with status "${filter}" found.`;
             : "You haven't posted any jobs yet.";
           }
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         </p>;
         <Button asChild className="mt-4">;
           <Link href="/post-job">Post Your First Job</Link>;
@@ -518,15 +548,19 @@ ursor/fix-website-loading-errors-and-merge-6662
         return "bg - gray - 100 text - gray - 800";
     }
   }
+<<<<<<< HEAD
   return (
     <div className="grid gap-6 md:grid-cols-2">;
       {jobs && jobs.map((job,) => (;
         <Card
           key = {job && job.id,}
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           className={`overflow-hidden cursor-pointer transition-shadow hover:shadow-md ${
             onSelectJob ? "cursor-pointer" : ""
           }`}
           onClick = {(,) => onSelectJob?.(job && job.id, job && job.title),}
+<<<<<<< HEAD
   },;
 ;
   return (;
@@ -538,10 +572,13 @@ ursor/fix-website-loading-errors-and-merge-6662
             onSelectJob ? "cursor-pointer" :"";
           }`}
           onClick={() => onSelectJob?.(job.id, job.title)}
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         >;
           <CardHeader className="p-4">;
             <div className="flex justify-between items-start">;
               <div>;
+<<<<<<< HEAD
                 <CardTitle className="text-xl">{job.title}</CardTitle>;
                 <CardDescription className="mt-1">;
                   Posted {format(new Date(job.created_at), "PPP")}
@@ -712,6 +749,11 @@ return (<div className="grid gap - 6 md:grid - cols - 2" > {
 }</div>);
 }'"}
                 <Badge key={index} variant="outline" className="text-xs">;
+=======
+
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   {skill}
                 </Badge>
               ))}
@@ -744,6 +786,7 @@ return (<div className="grid gap - 6 md:grid - cols - 2" > {
                 <X className="h-4 w-4" />
               </Button>
             </div>
+<<<<<<< HEAD
     </div>
   )
         </Card>
@@ -847,3 +890,5 @@ return (<div className="grid gap-6 md:grid-cols-2" > {;
 }'"
           </CardFooter>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

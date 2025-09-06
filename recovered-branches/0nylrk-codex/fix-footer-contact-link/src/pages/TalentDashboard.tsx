@@ -1,4 +1,3 @@
-
 import {useState, useEffect} from "react";
 import {AppHeader} from "@/layout/AppHeader";
 import {Footer} from "@/components/Footer";
@@ -18,10 +17,13 @@ import {MyApplications} from "@/components/jobs/MyApplications";
 import {ProjectOfferBanner} from "@/components/projects/ProjectOfferBanner";
 import {UpcomingInterviewsCard} from "@/components/interviews/UpcomingInterviewsCard";
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 function TalentDashboardContent() {
   const { user } = useAuth();
   const [activeTab, setActiveTab] = useState("job-matches");
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useState, useEffect } from "react",
 import { AppHeader } from "@/layout/AppHeader",
 import { Footer } from "@/components/Footer",
@@ -125,6 +127,7 @@ function TalentDashboardContent() {
                 </div>
               </CardContent>
             </Card>
+<<<<<<< HEAD
 import {useState, useEffect} from "react";
 import {AppHeader} from "@/layout/AppHeader";
 import {Footer} from "@/components/Footer";
@@ -154,6 +157,8 @@ function TalentDashboardContent() {;
   return (
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             
 import { useState, useEffect } from "react",;
 import { AppHeader } from "@/layout/AppHeader",;
@@ -253,11 +258,14 @@ function TalentDashboardContent() {;
               </CardContent>;
             </Card>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             {/* New Onboarding Progress Tracker */}
             <TalentOnboardingSteps />
             {/* Upcoming Interviews Card */}
@@ -333,6 +341,7 @@ function TalentDashboardContent() {;
     </>
   )
 }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
     <>;
@@ -578,10 +587,13 @@ function TalentDashboardContent() {;
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ;
 
 export default function TalentDashboard() {;
   return (
+<<<<<<< HEAD
     <ProtectedRoute>;
       <TalentDashboardContent />;
     </ProtectedRoute>;
@@ -595,6 +607,10 @@ export default function TalentDashboard() {;
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useState, useEffect } from './react';
 import { AppHeader } from '@/layout / AppHeader';
 import { Footer } from '@/components / Footer';
@@ -778,6 +794,7 @@ function TalentDashboard() {
     </ProtectedRoute>);
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
   ),;
@@ -800,3 +817,5 @@ export default function TalentDashboard() {;
 ;
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

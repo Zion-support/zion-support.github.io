@@ -1,5 +1,3 @@
-
-
 interface ResumeStepContentProps {
 
   activeTab: string
@@ -20,9 +18,12 @@ interface ResumeStepContentProps {
           resumeId={resume?.id!}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {TabsContent} from "@/components/ui/tabs";
 import {Resume} from "@/types/resume";
 import {BasicInfoForm} from '../forms/basic-info';
@@ -31,6 +32,7 @@ import {EducationForm} from '../forms/EducationForm';
 import {SkillsForm} from '../forms/SkillsForm';
 import {CertificationsForm} from '../forms/CertificationsForm';
 import {PreviewResume} from '../PreviewResume';
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
           initialData={resume?.basic_info}
@@ -52,6 +54,8 @@ import { EducationForm } from '../forms/EducationForm',
 import { SkillsForm } from '../forms/SkillsForm',
 import { CertificationsForm } from '../forms/CertificationsForm',
 import { PreviewResume } from '../PreviewResume',
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface ResumeStepContentProps {
 
   activeTab: string
@@ -87,7 +91,6 @@ export const ResumeStepContent = ({
         />
       </TabsContent>
       <TabsContent value="work-experience">
-
         <WorkExperienceForm
         <WorkExperienceForm 
 import { TabsContent } from "@/components/ui/tabs",;
@@ -98,7 +101,10 @@ import { EducationForm } from '../forms/EducationForm',;
 import { SkillsForm } from '../forms/SkillsForm',;
 import { CertificationsForm } from '../forms/CertificationsForm',;
 import { PreviewResume } from '../PreviewResume',;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface ResumeStepContentProps {;
   activeTab: string,;
   resume: Resume,;
@@ -106,6 +112,9 @@ interface ResumeStepContentProps {;
   onPrevStep: () => void;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 export const ResumeStepContent = ({ ;
   activeTab;
@@ -124,25 +133,8 @@ export const ResumeStepContent = ({ ;
             // Here you would typically save the data to your backend;
             console && console.log("Saving basic info:", data);
           }}
-
-          initialData={resume?.basic_info}
-          onSave={(data) => {
-            // Here you would typically save the data to your backend
-            // // // console.log("Saving basic info:", data)
-          }}
-
-          onComplete={onNextStep}
-        />
-      </TabsContent>
-      <TabsContent value="work-experience">
-
-          onComplete={onNextStep} ;
-        />;
-      </TabsContent>;
-
-      <TabsContent value="work-experience">;
-
         <WorkExperienceForm
+<<<<<<< HEAD
 =======
 
         <WorkExperienceForm 
@@ -223,10 +215,13 @@ export const ResumeStepContent = ({;
       <TabsContent value="work-experience">;
         <WorkExperienceForm;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           resumeId={resume?.id!}
           workExperiences={resume?.work_experience |[]}
           onComplete={onNextStep}
           onBack={onPrevStep}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
         />;
@@ -247,10 +242,13 @@ export const ResumeStepContent = ({;
         <EducationForm
         <EducationForm 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           resumeId={resume?.id!}
           educationEntries={resume?.education |[]}
           onComplete={onNextStep}
           onBack={onPrevStep}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
         />;
@@ -263,11 +261,14 @@ export const ResumeStepContent = ({;
       </TabsContent>
       <TabsContent value="skills">
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <SkillsForm
           resumeId={resume?.id!}
           skills={resume?.skills |[]}
           onComplete={onNextStep}
           onBack={onPrevStep}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
         />;
@@ -288,10 +289,13 @@ export const ResumeStepContent = ({;
         <CertificationsForm
         <CertificationsForm 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           resumeId={resume?.id!}
           certifications={resume?.certifications |[]}
           onComplete={onNextStep}
           onBack={onPrevStep}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
         />;
@@ -307,10 +311,13 @@ export const ResumeStepContent = ({;
         <PreviewResume
           resume={resume as Resume}
           onBack={onPrevStep}
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         />
       </TabsContent>
     </>
   )
+<<<<<<< HEAD
 
         />;
       </TabsContent>;
@@ -471,6 +478,8 @@ onPrevStep
   onPrevStep 
 }/> </TabsContent> </>) 
 };
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 
         <PreviewResume 
@@ -480,5 +489,11 @@ onPrevStep
       </TabsContent>;
     </>;
   );
+
+
+
 };
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 const files = glob && glob.sync("src/**/*.{ts,tsx,js,jsx}", { cwd: process && process.cwd() });
 let totalFixed = 0;
@@ -13,11 +14,14 @@ files && files.forEach((file) => {
     const filePath = path && path.join(process && process.cwd(), file);
     let content = fs && fs.readFileSync(filePath, "utf8");
     let modified = false;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
     // Fix import statements missing semicolons;
 
     const importRegex = /^import\s+.*?from\s+['"][^'"]+['"]\s*,?\s*$/gm;
+<<<<<<< HEAD
 
     const matches = content && content.match(importRegex);
 
@@ -30,6 +34,8 @@ files && files.forEach((file) => {
     const importRegex = /^import\s+.*?from\s+['"][^'"]+['"]\s*,?\s*$/gm;
     const matches = content && content.match(importRegex);
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     if (matches) {
       matches && matches.forEach((match) => {
         if (!match && match.trim().endsWith(";")) {
@@ -73,6 +79,7 @@ if (.ends_with (") {
       });
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     content = content && content.replace(
       /(\w+)\s*=\s*[^;]+(?!;)\s*$/gm,
@@ -81,6 +88,8 @@ if (.ends_with (") {
     content = content && content.replace(
       /(\w+)\s*=\s*[^;]+(?!;)\s*$/gm,
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       (match, varName) => {
         if (
           !match && match.includes("function") &&
@@ -130,6 +139,7 @@ if (&&) {
       }
     );
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 console && console.log(`\nTotal files fixed: ${totalFixed}`);
@@ -138,6 +148,8 @@ console && console.log(`\nTotal files fixed: ${totalFixed}`);
 =======
 console && console.log(`\nTotal files fixed: ${totalFixed}`);
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ;
     // Check condition
 if ( {) {
@@ -153,5 +165,8 @@ if ( {) {
 });
 ;
 console.log (`\n_total files fixed: ${total_fixed}`);
+<<<<<<< HEAD
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

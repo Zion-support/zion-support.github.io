@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -11,10 +12,13 @@ import React, { useState, useEffect } from 'react';
 import React, { useState, useEffect } from 'react',
 import React, { useState, useEffect } from 'react';
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 
 import {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -46,6 +50,8 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 =======
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   Menu
   X
   ChevronDown
@@ -102,6 +108,7 @@ import { motion, AnimatePresence } from 'framer-motion';
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield
   Microscope, DollarSign, Home, Users, Briefcase
 
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import {
 
@@ -109,6 +116,9 @@ import {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+import {
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   Menu,
   X,
   ChevronDown,
@@ -160,24 +170,32 @@ import {
   Code,
   Wrench,
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   Smartphone,;
   BarChart3,;} from 'lucide-react';import {
   Menu, X, ChevronDown, Search, Phone, Mail, MapPin, 
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, 
   Microscope, DollarSign, Home, Users, Briefcase, ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   BookOpen, MessageCircle, Star, TrendingUp, Target;
   Layers, Cpu, Database, Cloud, Lock, ShieldCheck;
   Earth, Factory, Car, Building, GraduationCap, Scale;
   Palette, Camera, Video, Music, Gamepad2, Heart;
   Leaf, Sun, Moon, Wind, Droplets, Mountain;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -239,24 +257,22 @@ const serviceCategories = [
     description: 'Intelligent urban solutions',
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       { name: 'AI Education Platform', href: '/ai-education-platform', description: 'Personalized learning with AI', price: '$1,499/month' };
       { name: 'AI Content Creation Suite', href: '/ai-content-creation-suite', description: 'Unlimited AI content creation', price: '$1,299/month' };
       { name: 'AI Legal Research Platform', href: '/ai-legal-research-platform', description: 'Intelligent legal research', price: '$2,999/month' }
     ];
   };
-
-
       { name: 'Smart Traffic Management System', href: '/smart-traffic-management', description: 'AI traffic optimization', price: '$4,999/month' };
       { name: 'Electric Vehicle Charging Network', href: '/ev-charging-network', description: 'Smart EV infrastructure', price: '$2,999/month' };
       { name: 'Mobility as a Service Platform', href: '/mobility-as-a-service', description: 'Integrated mobility solutions', price: '$1,999/month' }
     ];
   };
 
-
-      { name: 'Corporate Training AI', href: '/corporate-training-ai', description: 'Intelligent employee training', price: '$2,499/month' };
-      { name: 'Language Learning AI', href: '/language-learning-ai', description: 'AI-powered language acquisition', price: '$1,299/month' }
     ];
   };
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -291,6 +307,8 @@ const serviceCategories = [
 ];
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 const companyLinks = [
   { name: '🏠 Home', href: '/', icon: Home }
   { name: '🚀 2028 Services', href: '/2028-services-showcase', icon: Rocket }
@@ -300,6 +318,7 @@ const companyLinks = [
     icon: Star
   }
   {
+<<<<<<< HEAD
     name: '💰 2028 Pricing'
     href: '/revolutionary-2028-pricing'
     icon: DollarSign
@@ -326,64 +345,52 @@ const companyLinks = [
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     services: [;
-      {
-        name: 'Carbon Footprint Tracking',
-        href: '/carbon - footprint - tracking',
-        description: 'Monitor environmental impact',
-        price: '$1, 499 / month',
-      },
-      {
-        name: 'Renewable Energy Management',
-        href: '/renewable - energy - management',
-        description: 'Optimize green energy',
-        price: '$2, 999 / month',
-      },
-      {
-        name: 'Waste Management AI',
-        href: '/waste - management - ai',
-        description: 'Intelligent waste optimization',
-        price: '$1, 999 / month',
-      },
-      {
-        name: 'Sustainable Supply Chain',
-        href: '/sustainable - supply - chain',
-        description: 'Green supply chain solutions',
-        price: '$3, 999 / month',
-      },
-    ],
-  }, ];      { name: 'Carbon Footprint Tracking', href: '/carbon - footprint - tracking', description: 'Monitor environmental impact', price: '$1, 499 / month' }
-      { name: 'Renewable Energy Management', href: '/renewable - energy - management', description: 'Optimize green energy', price: '$2, 999 / month' }
-      { name: 'Waste Management AI', href: '/waste - management - ai', description: 'Intelligent waste optimization', price: '$1, 999 / month' }
-      { name: 'Sustainable Supply Chain', href: '/sustainable - supply - chain', description: 'Green supply chain solutions', price: '$3, 999 / month' }
+      {;
+        name: 'Carbon Footprint Tracking',;
+        href: '/carbon-footprint-tracking',;
+        description: 'Monitor environmental impact',;
+        price: '$1,499/month',;
+      },;
+      {;
+        name: 'Renewable Energy Management',;
+        href: '/renewable-energy-management',;
+        description: 'Optimize green energy',;
+        price: '$2,999/month',;
+      },;
+      {;
+        name: 'Waste Management AI',;
+        href: '/waste-management-ai',;
+        description: 'Intelligent waste optimization',;
+        price: '$1,999/month',;
+      },;
+      {;
+        name: 'Sustainable Supply Chain',;
+        href: '/sustainable-supply-chain',;
+        description: 'Green supply chain solutions',;
+        price: '$3,999/month',;
+      },;
+    ],;
+  },];      { name: 'Carbon Footprint Tracking', href: '/carbon-footprint-tracking', description: 'Monitor environmental impact', price: '$1,499/month' };
+    title: '🌍 Sustainability & Green Tech',
+    icon: Leaf,
+    color: 'from - emerald - 600 to - green - 600',
+    description: 'Environmental solutions',
+      { name: 'Renewable Energy Management', href: '/renewable-energy-management', description: 'Optimize green energy', price: '$2,999/month' };
+      { name: 'Waste Management AI', href: '/waste-management-ai', description: 'Intelligent waste optimization', price: '$1,999/month' };
+      { name: 'Sustainable Supply Chain', href: '/sustainable-supply-chain', description: 'Green supply chain solutions', price: '$3,999/month' }
     ];
   }
-const company_links = [;
-  { name: '🏠 Home', href: '/', icon: Home },
-  { name: '🚀 2028 Services', href: '/2028 - services - showcase', icon: Rocket },
-  {
-    name: '⭐ Ultimate 2028',
-    href: '/ultimate - 2028 - services - showcase',
-    icon: Star,
-  },
-  {
-    name: '💰 2028 Pricing',
-    href: '/revolutionary - 2028 - pricing',
-    icon: DollarSign,
-  },  { name: '📊 Case Studies', href: '/case - studies', icon: Briefcase },
-  { name: '📚 Blog & Resources', href: '/blog', icon: BookOpen },
-  { name: '🎯 About Us', href: '/about', icon: Users },
-  { name: '📞 Contact', href: '/contact', icon: MessageCircle },
-  { name: '🔒 Support', href: '/support', icon: ShieldCheck }, ];  { name: '⭐ Ultimate 2028', href: '/ultimate - 2028 - services - showcase', icon: Star },
-  { name: '💰 2028 Pricing', href: '/revolutionary - 2028 - pricing', icon: DollarSign },
-  { name: '📊 Case Studies', href: '/case - studies', icon: Briefcase },
   { name: '📚 Blog & Resources', href: '/blog', icon: BookOpen },
   { name: '🎯 About Us', href: '/about', icon: Users },
   { name: '📞 Contact', href: '/contact', icon: MessageCircle },
   { name: '🔒 Support', href: '/support', icon: ShieldCheck }
 ];
 
-
+export default function UltraFuturisticNavigation2028() {
+export default function UltraFuturisticNavigation2028() {;
 
 const companyLinks = [;
   { name: '🏠 Home', href: '/', icon: Home },;
@@ -394,22 +401,6 @@ const companyLinks = [;
     icon: Star,;
   },;
   {;
-    name: '💰 2028 Pricing',;
-    href: '/revolutionary-2028-pricing',;
-    icon: DollarSign,;
-  },  { name: '📊 Case Studies', href: '/case-studies', icon: Briefcase },;
-  { name: '📚 Blog & Resources', href: '/blog', icon: BookOpen },;
-  { name: '🎯 About Us', href: '/about', icon: Users },;
-  { name: '📞 Contact', href: '/contact', icon: MessageCircle },;
-  { name: '🔒 Support', href: '/support', icon: ShieldCheck },];  { name: '⭐ Ultimate 2028', href: '/ultimate-2028-services-showcase', icon: Star },;
-  { name: '💰 2028 Pricing', href: '/revolutionary-2028-pricing', icon: DollarSign },;
-  { name: '📊 Case Studies', href: '/case-studies', icon: Briefcase },;
-  { name: '📚 Blog & Resources', href: '/blog', icon: BookOpen },;
-  { name: '🎯 About Us', href: '/about', icon: Users },;
-  { name: '📞 Contact', href: '/contact', icon: MessageCircle },;
-  { name: '🔒 Support', href: '/support', icon: ShieldCheck },  { name: '🔒 Support', href: '/support', icon: ShieldCheck }
-;
-const resource_links = [;
   { name: '📖 Documentation', href: '/docs', icon: BookOpen },
   { name: '🎥 Video Tutorials', href: '/tutorials', icon: Video },
   { name: '💡 API Reference', href: '/api', icon: Code },
@@ -417,6 +408,7 @@ const resource_links = [;
   { name: '📱 Mobile Apps', href: '/mobile', icon: Smartphone },
   { name: '☁️ Cloud Services', href: '/cloud', icon: Cloud },
   { name: '🔐 Security Center', href: '/security', icon: Shield },
+<<<<<<< HEAD
 
 
 
@@ -439,11 +431,14 @@ const resourceLinks = [
 export default function UltraFuturisticNavigation2028() {
 export default function UltraFuturisticNavigation2028() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const [isOpen, setIsOpen] = useState(false);
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState('');
   const toggleMenu = () => setIsOpen(!isOpen);
   const closeMenu = () => setIsOpen(false);
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -466,6 +461,8 @@ export default function UltraFuturisticNavigation2028() {;
   }
   const handleCategoryLeave = () => {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     setActiveCategory(null);
   };
 
@@ -477,6 +474,7 @@ export default function UltraFuturisticNavigation2028() {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   );
   return (
+<<<<<<< HEAD
 
 
     <nav className='relative z-50 bg-black/90 backdrop-blur-xl border-b border-purple-500/30'>  };
@@ -518,6 +516,8 @@ export default function UltraFuturisticNavigation2028() {;
 
 =======
     <nav className='relative z-50 bg-black/90 backdrop-blur-xl border-b border-purple-500/30'>  }
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <nav className='relative z-50 bg-black/90 backdrop-blur-xl border-b border-purple-500/30'>  };
     <nav className='relative z-50 bg-black/90 backdrop-blur-xl border-b border-purple-500/30'>
 
@@ -528,14 +528,15 @@ export default function UltraFuturisticNavigation2028() {;
     category.services.filter(service =>
       service.name.toLowerCase().includes(searchQuery.toLowerCase()) |
       service.description.toLowerCase().includes(searchQuery.toLowerCase())
-    <nav className='relative z-50 bg-black/90 backdrop-blur-xl border-b border-purple-500/30'>
-
-    )
   );
+
   return (
+<<<<<<< HEAD
     <nav className="relative z-50 bg-black/90 backdrop-blur-xl border-b border-purple-500/30">
       {/* Top Contact Bar */}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <div className="bg-gradient-to-r from-purple-900/50 to-blue-900/50 border-b border-purple-500/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-10 text-xs text-purple-200">
@@ -561,6 +562,7 @@ export default function UltraFuturisticNavigation2028() {;
           </div>
         </div>
       </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
                 href={contactInfo && contactInfo.website}
@@ -674,17 +676,23 @@ function UltraFuturisticNavigation2028() {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               </a>;
             </div>;
           </div>;
         </div>;
       </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
       {/* Main Navigation */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
+<<<<<<< HEAD
 
 =======
 =======
@@ -703,6 +711,8 @@ function UltraFuturisticNavigation2028() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           {/* Logo */}
           <div className='flex items-center'>;
             <Link href='/' className='flex items-center space-x-3 group'>;
@@ -718,6 +728,7 @@ function UltraFuturisticNavigation2028() {
                 </h1>;
                 <p className='text-xs text-purple-300'>;
                   2028 Future Technology;
+<<<<<<< HEAD
 <<<<<<< HEAD
                 </p>              </div>          {/* Logo */}
 
@@ -778,6 +789,8 @@ function UltraFuturisticNavigation2028() {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               {/* Mega Menu */}
               <div className='absolute top-full left-0 w-screen max-w-6xl bg-black/95 backdrop-blur-xl border border-purple-500/30 rounded-2xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0'>;
                 <div className='p-6'>;
@@ -798,6 +811,7 @@ function UltraFuturisticNavigation2028() {
                         <div className='space-y-2'>;
                           {category && category.services.slice(0, 2).map(service => (;
                             <Link
+<<<<<<< HEAD
 
           <div className="hidden lg:flex items-center space-x-8">
             {/* Service Categories */}
@@ -837,6 +851,8 @@ function UltraFuturisticNavigation2028() {
           <div className="hidden lg:flex items-center space-x-8">
             {/* Service Categories */}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <div className="relative group">
               <button className="flex items-center space-x-2 text-purple-200 hover:text-white transition-colors py-2">
                 <Sparkles className="w-5 h-5" />
@@ -851,10 +867,10 @@ function UltraFuturisticNavigation2028() {
                 <ChevronDown className="w-4 h-4" />;
               </button>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               {/* Mega Menu */}
               <div className="absolute top-full left-0 w-screen max-w-6xl bg-black/95 backdrop-blur-xl border border-purple-500/30 rounded-2xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">;
                 <div className="p-6">;
@@ -869,9 +885,8 @@ function UltraFuturisticNavigation2028() {
                         <div className="space-y-2">;
                           {category && category.services.slice(0, 2).map((service) => (;
                             <Link
-
-
                             </Link>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
@@ -988,14 +1003,19 @@ function UltraFuturisticNavigation2028() {
                                 <span className="text - xs text - purple - 400 font - medium">{service.price}</span>;
                               </div>;
                             </Link>))}
+=======
+                          ))}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                         </div>;
-                      </div>))}
+                      </div>;
+                    ))}
                   </div>;
-                  <div className='mt - 6 pt - 6 border - t border - purple - 500 / 20'>;
-                    <div className='flex items - center justify - between'>;
-                      <p className='text - purple - 300'>;
-                        Explore all our cutting - edge services;
+                  <div className='mt-6 pt-6 border-t border-purple-500/20'>;
+                    <div className='flex items-center justify-between'>;
+                      <p className='text-purple-300'>;
+                        Explore all our cutting-edge services;
                       </p>;
+<<<<<<< HEAD
                       <Link;
                         href='/services';
                         className='px - 4 py - 2 bg - gradient - to - r from - purple - 600 to - blue - 600 text - white rounded - lg hover:from - purple - 700 hover:to - blue - 700 transition - all duration - 300 transform hover:shadow - xl hover:shadow - cyan - 500 / 30'                      >                  <div className="mt - 6 pt - 6 border - t border - purple - 500 / 20">;
@@ -1013,23 +1033,28 @@ function UltraFuturisticNavigation2028() {
                       <p className='text-purple-300'>
                         Explore all our cutting-edge services
                       </p>
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       <Link
                         href='/services'
-                        className='px-4 py-2 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30'                      >                  <div className="mt-6 pt-6 border-t border-purple-500/20">
-                    <div className="flex items-center justify-between">
-                      <p className="text-purple-300">Explore all our cutting-edge services</p>
+                        className='px-4 py-2 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30'>                  <div className="mt-6 pt-6 border-t border-purple-500/20">;
+                    <div className="flex items-center justify-between">;
+                      <p className="text-purple-300">Explore all our cutting-edge services</p>;
                       <Link
                         href="/services"
                         className="px-4 py-2 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30"
-                      >
                         View All Services
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       </Link>;
                     </div>;
                   </div>;
                 </div>;
               </div>;
             </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -1061,6 +1086,8 @@ function UltraFuturisticNavigation2028() {
 =======
           </div>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           {/* Search and Actions */}
           <div className='hidden lg:flex items-center space-x-4'>;
             {/* Search */}
@@ -1074,6 +1101,7 @@ function UltraFuturisticNavigation2028() {
                 className='w-64 pl-10 pr-4 py-2 bg-purple-900/30 border border-purple-500/30 rounded-lg text-white placeholder-purple-300 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent'              />            {/* Search */}
             <div className="relative">;
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-purple-400" />;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -1086,6 +1114,8 @@ function UltraFuturisticNavigation2028() {
             </div>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             {/* Company Links */}
             {companyLinks.slice(1, 5).map((link) => (
               <Link
@@ -1096,6 +1126,7 @@ function UltraFuturisticNavigation2028() {
                 <link.icon className="w-4 h-4" />
                 <span>{link.name.replace(/^[🏠🚀⭐💰📊📚🎯📞🔒]/g, '').trim()}</span>
               </Link>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
             ))}
@@ -1118,10 +1149,16 @@ function UltraFuturisticNavigation2028() {
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+            {/* Search */}
+            <div className="relative">
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-purple-400" />
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <input
                 type="text"
                 placeholder="Search services..."
                 value={searchQuery}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -1187,10 +1224,13 @@ function UltraFuturisticNavigation2028() {
               className='px - 6 py - 3 bg - gradient - to - r from - purple - 600 to - blue - 600 text - white rounded - lg hover:from - purple - 700 hover:to - blue - 700 transition - all duration - 300 transform hover:shadow - xl hover:shadow - cyan - 500 / 30 shadow - lg hover:shadow - purple - 500 / 25'            >              href="/contact";
               className="px - 6 py - 3 bg - gradient - to - r from - purple - 600 to - blue - 600 text - white rounded - lg hover:from - purple - 700 hover:to - blue - 700 transition - all duration - 300 transform hover:shadow - xl hover:shadow - cyan - 500 / 30 shadow - lg hover:shadow - purple - 500 / 25";
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             >;
               Get Started;
             </Link>;
           </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -1201,6 +1241,8 @@ function UltraFuturisticNavigation2028() {
           {/* Mobile Menu Button */}
           <div className="lg:hidden">
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <button
               onClick={toggleMenu}
               className='text-purple-200 hover:text-white transition-colors p-2'>;
@@ -1213,13 +1255,17 @@ function UltraFuturisticNavigation2028() {
               className="text-purple-200 hover:text-white transition-colors p-2">;
               {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             </button>;
           </div>;
         </div>;
       </div>;
 
+<<<<<<< HEAD
 
 =======
 =======
@@ -1233,6 +1279,8 @@ function UltraFuturisticNavigation2028() {
 
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {/* Mobile Menu */}
       <AnimatePresence>;
         {isOpen && (;
@@ -1240,7 +1288,6 @@ function UltraFuturisticNavigation2028() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-
 
           >
             <div className='px-4 py-6 space-y-6'>
@@ -1251,16 +1298,11 @@ function UltraFuturisticNavigation2028() {
                   type='text'
                   placeholder='Search services...'
                   value={searchQuery}
-
-                  onChange={e => setSearchQuery(e && e.target.value)}
-                  className='w-full pl-10 pr-4 py-3 bg-purple-900/30 border border-purple-500/30 rounded-lg text-white placeholder-purple-300 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent'                />;
-              </div>;
-
-
               {/* Mobile Service Categories */}
               <div className='space-y-4'>;
                 <h3 className='text-lg font-semibold text-white border-b border-purple-500/30 pb-2'>          >;
             <div className="px-4 py-6 space-y-6">;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -1291,6 +1333,8 @@ function UltraFuturisticNavigation2028() {
           >
             <div className="px-4 py-6 space-y-6">
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               {/* Mobile Search */}
               <div className="relative">;
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-purple-400" />;
@@ -1298,6 +1342,7 @@ function UltraFuturisticNavigation2028() {
                   type="text"
                   placeholder="Search services..."
                   value={searchQuery}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -1328,12 +1373,15 @@ function UltraFuturisticNavigation2028() {
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                         <Link
                           key={service && service.name}
                           href={service && service.href}
                           onClick={closeMenu}
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -1371,10 +1419,15 @@ function UltraFuturisticNavigation2028() {
                         </Link>
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+                        </Link>
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       ))}
                     </div>;
                   </div>;
                 ))}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
               </div>;
@@ -1382,6 +1435,8 @@ function UltraFuturisticNavigation2028() {
               <div className="space-y-4">
               </div>
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               {/* Mobile Company Links */}
               <div className='space-y-4'>
                 <h3 className='text-lg font-semibold text-white border-b border-purple-500/30 pb-2'>
@@ -1400,6 +1455,7 @@ function UltraFuturisticNavigation2028() {
                       key={link.name}
                       href={link.href}
                       onClick={closeMenu}
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
               </div>;
@@ -1576,6 +1632,8 @@ function UltraFuturisticNavigation2028() {
 =======
               <div className="pt-4 border-t border-purple-500/30">
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       className='flex items-center space-x-3 p-3 rounded-lg bg-purple-900/20 hover:bg-purple-900/40 transition-colors'
                     >
                       <link.icon className='w-5 h-5 text-purple-400' />
@@ -1585,6 +1643,7 @@ function UltraFuturisticNavigation2028() {
                     >
                       <link.icon className="w-5 h-5 text-purple-400" />
                       <span className="text-purple-200">{link.name.replace(/^[🏠🚀⭐💰📊📚🎯📞🔒]/g, '').trim()}</span>
+<<<<<<< HEAD
                     </Link>
                   ))}
                 </div>;
@@ -1595,17 +1654,29 @@ function UltraFuturisticNavigation2028() {
 
                     </Link>
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   ))}
                 </div>
               </div>
-
               {/* Mobile CTA */}
               <div className='pt-4 border-t border-purple-500/30'>
 
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+                  ))}
+              {/* Mobile CTA */}
+              <div className='pt-4 border-t border-purple-500/30'>;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <Link
+                  href='/contact'
+                  onClick={closeMenu}
+                  className='block w-full text-center px-6 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300'>                <Link
                   href="/contact"
                   onClick={closeMenu}
+<<<<<<< HEAD
                   className="block w-full text-center px-6 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300"
                 >
                   Get Started
@@ -1620,6 +1691,11 @@ function UltraFuturisticNavigation2028() {
 =======
         )}
       </AnimatePresence>
+=======
+                  className="block w-full text-center px-6 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300">;
+      </AnimatePresence>;
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
       {/* Search Results Dropdown */}
       {searchQuery && filteredServices.length > 0 && (
@@ -1648,15 +1724,12 @@ function UltraFuturisticNavigation2028() {
                   href={service.href}
                   className="block p-3 rounded-lg bg-purple-900/20 hover:bg-purple-900/40 transition-colors"
                 >
-                  <div className='flex items-center justify-between'>
+                  <div className="flex items-center justify-between">
                     <div>
-                      <h4 className='text-sm font-medium text-white'>
-                        {service.name}
-                      </h4>
-                      <p className='text-xs text-purple-300'>
-                        {service.description}
-                      </p>
+                      <h4 className="text-sm font-medium text-white">{service.name}</h4>
+                      <p className="text-xs text-purple-300">{service.description}</p>
                     </div>
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
       </AnimatePresence>;
@@ -1670,19 +1743,57 @@ function UltraFuturisticNavigation2028() {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     <span className="text-xs text-purple-400 font-medium">{service.price}</span>
                   </div>
                     </span>                  </div>
 
-                  </div>
 
                 </Link>
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+      {/* Search Results Dropdown */}
+      {searchQuery && filteredServices && filteredServices.length > 0 && (;
+        <div className='absolute top-full left-0 right-0 bg-black/95 backdrop-blur-xl border border-purple-500/30 rounded-2xl shadow-2xl z-50'>;
+          <div className='p-4'>;
+            <div className='space-y-2'>;
+              {filteredServices && filteredServices.slice(0, 8).map(service => (;
+                <Link
+                  key={service && service.name}
+                  href={service && service.href}
+                  className='block p-3 rounded-lg bg-purple-900/20 hover:bg-purple-900/40 transition-colors'>;
+                  <div className='flex items-center justify-between'>;
+                    <div>;
+                      <h4 className='text-sm font-medium text-white'>;
+                        {service && service.name}
+                      </h4>;
+                      <p className='text-xs text-purple-300'>;
+                        {service && service.description}
+                      </p>;
+                    </div>;
+                    <span className='text-xs text-purple-400 font-medium'>;
+                      {service && service.price}
+                    </span>                  </div>                <Link
+                  key={service && service.name}
+                  href={service && service.href}
+                  className="block p-3 rounded-lg bg-purple-900/20 hover:bg-purple-900/40 transition-colors">;
+                  <div className="flex items-center justify-between">;
+                    <div>;
+                      <h4 className="text-sm font-medium text-white">{service && service.name}</h4>;
+                      <p className="text-xs text-purple-300">{service && service.description}</p>;
+                    </div>;
+                    <span className="text-xs text-purple-400 font-medium">{service && service.price}</span>;
+                  </div>;
+                </Link>;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               ))}
             </div>;
           </div>;
         </div>;
       )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -1703,6 +1814,9 @@ function UltraFuturisticNavigation2028() {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
     </nav>
+=======
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   );
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
@@ -1750,6 +1864,7 @@ function UltraFuturisticNavigation2028() {
     </nav>);
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 );
@@ -1759,3 +1874,5 @@ function UltraFuturisticNavigation2028() {
   );
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

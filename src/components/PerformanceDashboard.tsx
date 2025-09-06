@@ -1,8 +1,11 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
         <Card>
 
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useState } from 'react'
 import {
   Card
@@ -27,6 +30,7 @@ interface PerformanceMetrics {
   loadTime: number;
   healthStatus: 'healthy' | 'warning' | 'error'
 interface Improvement {
+<<<<<<< HEAD
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -70,6 +74,8 @@ interface PerformanceMetrics {;
   loadTime: number;
   healthStatus: 'healthy' | 'warning' | 'error';
 interface Improvement {;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   id: string;
   title: string;
   description: string;
@@ -177,6 +183,55 @@ const PerformanceDashboard: React.FC = () => {
       default:
         return <CheckCircle className='h-4 w-4' />
     }
+
+
+
+  return (
+
+
+        
+
+
+        <Card>
+          <CardHeader className='pb-2'>
+            <CardTitle className='text-sm font-medium text-gray-600'>
+              Page Count
+            </CardTitle>
+          </CardHeader>
+          <CardContent>
+            <div className='text-2xl font-bold'>{metrics.pageCount}</div>
+            <p className='text-xs text-gray-500'>Generated pages</p>
+          </CardContent>
+        </Card>
+        
+
+
+        <Card>
+          <CardHeader className='pb-2'>
+            <CardTitle className='text-sm font-medium text-gray-600'>
+              Load Time
+            </CardTitle>
+          </CardHeader>
+          <CardContent>
+            <div className='text-2xl font-bold'>{metrics.loadTime}s</div>
+            <p className='text-xs text-gray-500'>Average page load</p>
+          </CardContent>
+        </Card>
+        
+
+
+        <Card>
+          <CardHeader className='pb-2'>
+            <CardTitle className='text-sm font-medium text-gray-600'>
+              Health Status
+            </CardTitle>
+          </CardHeader>
+          <CardContent>
+            </div>
+          </CardContent>
+        </Card>
+      </div>
+
   }
   const completedImprovements = improvements.filter(
     imp => imp.status === 'completed'
@@ -199,6 +254,7 @@ interface Improvement {;
   description: string,;
   status: 'completed' | 'in-progress' | 'planned',;
   impact: 'high' | 'medium' | 'low',;
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import {
   Card,
@@ -328,6 +384,8 @@ const PerformanceDashboard: React.FC = () => {
       default:;
         return <CheckCircle className='h - 4 w - 4' />;
     }
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   category: 'performance' | 'security' | 'ux' | 'build';
 }
 ;
@@ -426,6 +484,7 @@ const PerformanceDashboard: React.FC = () => {;
   const completedImprovements = improvements.filter(imp => imp.status === 'completed'),
 
   return (
+<<<<<<< HEAD
     <div className="space-y-6 p-6">
       <div className="flex items-center justify-between">
         <h1 className="text-3xl font-bold text-gray-900">Performance Dashboard</h1>
@@ -444,6 +503,8 @@ const PerformanceDashboard: React.FC = () => {;
         
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <Card>
           <CardHeader className='pb-2'>
             <CardTitle className='text-sm font-medium text-gray-600'>
@@ -455,43 +516,12 @@ const PerformanceDashboard: React.FC = () => {;
             <p className='text-xs text-gray-500'>Generated pages</p>
           </CardContent>
         </Card>
-          <CardHeader className="pb-2">
-            <CardTitle className="text-sm font-medium text-gray-600">Page Count</CardTitle>
-ursor/fix-website-loading-errors-and-merge-6662
-
-        
-
-
         <Card>
           <CardHeader className='pb-2'>
             <CardTitle className='text-sm font-medium text-gray-600'>
               Load Time
             </CardTitle>
           <CardContent>
-            <div className='text-2xl font-bold'>{metrics.loadTime}s</div>
-            <p className='text-xs text-gray-500'>Average page load</p>
-          </CardContent>
-        </Card>
-        <Card>
-          <CardHeader className="pb-2">
-            <CardTitle className="text-sm font-medium text-gray-600">Build Size</CardTitle>
-          </CardHeader>
-          <CardContent>
-            <div className="text-2xl font-bold">{metrics.buildSize}</div>
-            <p className="text-xs text-gray-500">Total build output</p>
-          </CardContent>
-        </Card>
-        
-        <Card>
-          <CardHeader className="pb-2">
-            <CardTitle className="text-sm font-medium text-gray-600">Page Count</CardTitle>
-          </CardHeader>
-          <CardContent>
-            <div className="text-2xl font-bold">{metrics.pageCount}</div>
-            <p className="text-xs text-gray-500">Generated pages</p>
-          </CardContent>
-        </Card>
-        
         <Card>
           <CardHeader className="pb-2">
             <CardTitle className="text-sm font-medium text-gray-600">Load Time</CardTitle>
@@ -501,7 +531,6 @@ ursor/fix-website-loading-errors-and-merge-6662
             <p className="text-xs text-gray-500">Average page load</p>
           </CardContent>
         </Card>
-        
         <Card>
           <CardHeader className="pb-2">
             <CardTitle className="text-sm font-medium text-gray-600">Health Status</CardTitle>
@@ -510,6 +539,7 @@ ursor/fix-website-loading-errors-and-merge-6662
             <div className="flex items-center space-x-2">
               <CheckCircle className="h-5 w-5 text-green-500" />
               <span className="text-sm font-semibold text-green-600">Healthy</span>
+<<<<<<< HEAD
 
         <Card>
           <CardHeader className='pb-2'>
@@ -604,6 +634,8 @@ const PerformanceDashboard: React.FC = () => {;
         return <TrendingUp className='h-4 w-4 text-blue-500' />;
       default:;
         return <AlertCircle className='h-4 w-4 text-gray-500' />;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             </div>
           </CardContent>
         </Card>
@@ -620,6 +652,7 @@ const PerformanceDashboard: React.FC = () => {;
           </CardDescription>
         </CardHeader>
         <CardContent>
+<<<<<<< HEAD
           <div className='space-y-4'>
             {completedImprovements.map(improvement => (
               <div
@@ -627,6 +660,8 @@ const PerformanceDashboard: React.FC = () => {;
                 className='flex items-start space-x-3 p-3 border rounded-lg'
               >
                 <div className='flex-shrink-0 mt-1'>                  {getCategoryIcon(improvement.category)}
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <div className="space-y-4">
             {completedImprovements.map((improvement) => (
               <div key={improvement.id} className="flex items-start space-x-3 p-3 border rounded-lg">
@@ -645,8 +680,11 @@ const PerformanceDashboard: React.FC = () => {;
                       {getStatusIcon(improvement.status)}
                     </div>
                   </div>
+<<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   <p className="text-sm text-gray-600 mt-1">
   },;
   const getCategoryIcon = (category: string) => {;
@@ -659,6 +697,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 =======
     }
+<<<<<<< HEAD
   };
   const getImpactColor = (impact: string,) => {;
     switch (impact) {;
@@ -817,6 +856,8 @@ ursor/fix-website-loading-errors-and-merge-6662
             <div className="flex items-center space-x-2">;
               <CheckCircle className="h-5 w-5 text-green-500" />;
               <span className="text-sm font-semibold text-green-600">Healthy</span>;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             </div>;
           </CardContent>;
         </Card>;
@@ -834,6 +875,7 @@ ursor/fix-website-loading-errors-and-merge-6662
           </CardDescription>;
         </CardHeader>;
         <CardContent>;
+<<<<<<< HEAD
       {/* Completed Improvements */}
       <Card>
         <CardHeader>
@@ -870,6 +912,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
       {/* Action Buttons */}
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   <p className='text-sm text-gray-600 mt-1'>
                     {improvement.description}
                   </p>
@@ -880,6 +924,7 @@ ursor/fix-website-loading-errors-and-merge-6662
         </CardContent>
       </Card>
       {/* Action Buttons */}
+<<<<<<< HEAD
       <div className='flex space-x-4'>
         <Button
           onClick={() => window.open('/api/health/environment', '_blank')}
@@ -889,6 +934,8 @@ ursor/fix-website-loading-errors-and-merge-6662
       <div className="flex space-x-4">
         <Button onClick={() => window.open('/api/health/environment_blank')} variant="outline">
           <Shield className="h-4 w-4 mr-2" />
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           Check Health Status
         </Button>
         <Button onClick={() => alert('Bundle analysis available with: npm run build:analyze')} variant="outline">
@@ -898,6 +945,7 @@ ursor/fix-website-loading-errors-and-merge-6662
       </div>
     </div>
   )
+<<<<<<< HEAD
 export default PerformanceDashboard
 export default PerformanceDashboard
 export default PerformanceDashboard
@@ -906,6 +954,8 @@ export default PerformanceDashboard
 export default PerformanceDashboard
 export default PerformanceDashboard
 export default PerformanceDashboard
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           variant='outline';
@@ -932,6 +982,7 @@ export default PerformanceDashboard,
         </Button>;
         <Button onClick={() => alert('Bundle analysis available with: npm run build:analyze')} variant="outline">;
           <TrendingUp className="h-4 w-4 mr-2" />;
+<<<<<<< HEAD
           </div>;
         </CardContent>;
       </Card>;
@@ -951,16 +1002,23 @@ export default PerformanceDashboard,
           variant='outline';
         >;
           <TrendingUp className='h-4 w-4 mr-2' />;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           Bundle Analysis;
         </Button>;
       </div>;
     </div>;
   );
 
+<<<<<<< HEAD
 export default PerformanceDashboard, ;
 export default PerformanceDashboard, ;
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <div className='space - y-4'>;
             {completed_improvements.map (improvement => (
               <div;
@@ -1012,6 +1070,7 @@ export default PerformanceDashboard, ;
 }
 export default PerformanceDashboard;
 export default PerformanceDashboard,
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 import React, { useState } from 'react',;
@@ -1267,3 +1326,5 @@ export default PerformanceDashboard;
 export default PerformanceDashboard;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 export default PerformanceDashboard,
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

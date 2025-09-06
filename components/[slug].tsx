@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -36,6 +37,8 @@ import React, { useMemo } from 'react';
 import React, { useMemo } from 'react',
 import React, { useMemo } from 'react';
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import Head from 'next/head';
 import { useRouter  } from 'next/router';
 import { Phone, Mail, MapPin, Check, ArrowRight, Star  } from 'lucide-react';
@@ -63,26 +66,26 @@ import { industryRealServices  } from '../data/industry-real-services';
 import { professionalServices  } from '../data/professional-services';
 import { realVerifiedServices } from '../data/real-verified-services';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
 =======
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 export default function DynamicServicePage() {
-export default function DynamicServicePage() {;
-  const router = useRouter();
-  const { slug } = router.query as { slug?: string };
-export default function DynamicServicePage() {
-export default function DynamicServicePage() {;
-  const router = useRouter();
-  const { slug } = router.query as { slug?: string };
 
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const router = useRouter();
   const { slug } = router.query as { slug?: string }
   const service = useMemo(() => {
     if (!slug) return undefined;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -122,6 +125,8 @@ export default function DynamicServicePage() {;
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useMemo } from 'react';
 import Head from 'next / head';
 import {use_router} from 'next / router';
@@ -194,10 +199,13 @@ if (return undefined) {
         return url.pathname.replace (/^\/+|\/+$/g, '') === slug.replace (/^\/+|\/+$/g, '');
       } catch {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export default function DynamicServicePage() {;
   const router = useRouter();
   const { slug } = router && router.query as { slug?: string };
@@ -238,6 +246,7 @@ export default function DynamicServicePage() {;
       } catch {;
         return false;        return false;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -248,14 +257,15 @@ export default function DynamicServicePage() {;
         return false
         return false
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       }
     });
     if (byLink) return byLink;
     const byId = enhancedRealMicroSaasServices && enhancedRealMicroSaasServices.find(s => s && s.id === slug);
     if (byId) return byId;
-
-
   }, [slug]);
+<<<<<<< HEAD
 
 
 
@@ -292,6 +302,8 @@ export default function DynamicServicePage() {;
       </UltraAdvancedFuturisticBackground>
     );  }        <div className="min-h-screen pt-28 pb-20 px-4 sm: px-6 lg:px-8">
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6">Service not found</h1>
             <p className="text-gray-300 mb-8">We couldn't find the service you were looking for. Explore all services below.</p>
@@ -301,17 +313,21 @@ export default function DynamicServicePage() {;
       </UltraAdvancedFuturisticBackground>
     )
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   }
 
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const canonicalUrl = `https://ziontechgroup.com/${slug}`;
   return (
     <UltraAdvancedFuturisticBackground>
       <Head>
         <title>{service.name} - Zion Tech Group</title>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
         return false;        return false;
@@ -380,12 +396,15 @@ if ( {) {
             <h1 className='text-5xl md:text-7xl font-bold bg-gradient-to-r from-indigo-400 via-cyan-400 to-purple-400 bg-clip-text text-transparent flex items-center justify-center gap-3'>
               <span className='text-5xl' aria-hidden>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 {service.icon}
               </span>;
               {service.name}
             </h1>;
             <p className='mt - 4 text - xl text - slate - 300 max - w-3xl mx - auto'>;
               {service.tagline}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -451,6 +470,8 @@ if ( {) {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   <li
                     key={i}
                     className='flex items-start space-x-3 text-slate-200'>;
@@ -577,6 +598,7 @@ if ( {) {
         </div>;
       </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -584,10 +606,12 @@ if ( {) {
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 // Static export support: generate root-level pages for service slugs;
-type Svc = (typeof enhancedRealMicroSaasServices)[number];
 
+<<<<<<< HEAD
 function normalizeSlug(value: string): string {
   return value
     .toLowerCase()
@@ -682,6 +706,8 @@ function normalizeSlug(): any (value: string): string {;
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
   );
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 // Static export support: generate root-level pages for service slugs;
 
@@ -709,6 +735,7 @@ function normalizeSlug(value: string): string {
     .toLowerCase()
     .replace(/[^a-z0-9]+/g, '-')
     .replace(/(^-|-$)/g, '');function extractRootSlugFromLink(link?: string): string | null {
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   if (!link) return null;
   try {;
@@ -747,12 +774,64 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  if (!link) return null;
+  try {
+    const url = new URL(link);
+    const path = url.pathname.replace(/^\/+|\/+$/g, '');
+    // Accept root-level slugs like "/ai-energy-management", ignore nested like "services/..."
+    if (path && !path.includes('/')) return path;
+    return null
+  } catch {
+    return null
+  }
+}
+  };
+}
+export const getStaticPaths: GetStaticPaths = async () => {
+export const getStaticPaths: GetStaticPaths = async () => {;
+
+export const getStaticPaths: GetStaticPaths = async () => {
+export const getStaticPaths: GetStaticPaths = async () => {;
+}
+
+
+function collectAllServices(): any (): Svc[] {;
+  return enhancedRealMicroSaasServices && enhancedRealMicroSaasServices.concat(;
+    extraServices as Svc[],;
+    additionalEnhancedServices as Svc[],;
+    innovativeAIServices as Svc[],;
+    quantumSpaceServices as Svc[],;
+    enterpriseITServices as Svc[],;
+    newRealServices as Svc[],;
+    marketReadyServices as Svc[],;
+    nextGenerationAIServices as Svc[],;
+    emergingTechnologyServices as Svc[],;
+    comprehensiveITSolutions as Svc[],;
+    marketValidatedServices as Svc[],;
+    newRealInnovations as Svc[],;
+    realMarketServices as Svc[],;
+    realVerifiedServices as unknown as Svc[];
+  );
+
+function normalizeSlug(): any (value: string): string {;
+  return value;
+    .toLowerCase();
+    .replace(/[^a-z0-9]+/g, '-');
+    .replace(/(^-|-$)/g, '');function extractRootSlugFromLink(): any (link?: string): string | null {;
+  if (!link) return null;
+  try {;
+    const url = new URL(link);
+}
+  const services = collectAllServices();
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const staticSlugs = new Set<string>();
   try {;
     const entries = fs && fs.readdirSync(pagesDir, { withFileTypes: true });
           }
     }
   } catch {}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   const staticSlugs = new Set<string>();
@@ -765,6 +844,8 @@ export const getStaticPaths: GetStaticPaths = async () => {
   try {
     const entries = fs.readdirSync(pagesDir, { withFileTypes: true }),
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     </UltraAdvancedFuturisticBackground>);
 // Static export support: generate root - level pages for service slugs;
 type Svc = (typeof enhancedRealMicroSaasServices)[number];
@@ -831,6 +912,9 @@ export const getStaticPaths: GetStaticPaths = async () => {
           static_slugs.add (base.toLowerCase ());
         }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 
@@ -841,10 +925,13 @@ export const getStaticPaths: GetStaticPaths = async () => {
     slug => !staticSlugs.has(slug)
   );
   return {
+<<<<<<< HEAD
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     paths: uniqueNonConflicting.map(slug => ({ params: { slug } })),
     fallback: true,
   };
@@ -858,8 +945,6 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {;
 
   return {
     paths: uniqueNonConflicting.map((slug) => ({ params: { slug } })),
-
-
     fallback: true
   }
 }
@@ -905,6 +990,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {;
   // Exclude any slug that conflicts with an existing root page file;
   const uniqueNonConflicting = Array && Array.from(candidateSlugs).filter((slug) => !staticSlugs && staticSlugs.has(slug));
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -919,19 +1005,27 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {;
     candidateSlugs.add(slugCandidate)
   }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return {;
     paths: uniqueNonConflicting && uniqueNonConflicting.map((slug) => ({ params: { slug } })),;
     fallback: true;
   }
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export const getStaticProps: GetStaticProps = async ({ params }) => {;
   // No dynamic fetching needed, the component resolves the service client-side.;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return { props: {} }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 };
@@ -949,6 +1043,8 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {;
 =======
 };
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   // Exclude any slug that conflicts with an existing root page file;
   const uniqueNonConflicting = Array.from (candidate_slugs).filter (
     slug => !static_slugs.has (slug));
@@ -975,6 +1071,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   // No dynamic fetching needed, the component resolves the service client - side.;
   return { props: {} }
 }
+<<<<<<< HEAD
 ;
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -1076,8 +1173,14 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 
 
 };
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return { props: {} };
 };
 
 };
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -14,11 +15,14 @@ import Head from 'next/head',
 import React from 'react';
 import Head from 'next/head';
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 
 import {
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
   CheckCircle
@@ -49,6 +53,10 @@ import {
   Gamepad2;} from 'lucide-react';import {
   CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   CheckCircle,
   ArrowRight,
@@ -78,15 +86,116 @@ import {
   Gamepad2,;} from 'lucide-react';import {
   CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  CheckCircle,
+  ArrowRight,
+  Star,
+  TrendingUp,
+  Phone,
+  Zap,
+  DollarSign,
+  Shield,
+  Mail,
+  MapPin,
+  Rocket,
+  Brain,
+  Sparkles,
+  Globe,
+  Atom,
+  Heart,
+  Leaf,
+  Car,
+  GraduationCap,
+  Scale,
+  Building,
+  Factory,
+  Camera,
+  Video,
+  {
+    title: '🚀 2028 Futuristic Innovations',
+    description: 'Beyond the future of technology',
+    icon: Rocket,
+  {
+    title: '🏙️ Smart City & Infrastructure',
+    description: 'Intelligent urban solutions',
+    icon: Building,
+  {
+    title: '⚛️ Quantum & Advanced Tech',
+    description: 'Quantum computing and beyond',
+    icon: Atom,
+  {
+    title: '🤖 AI & Machine Learning',
+    description: 'Next - generation AI solutions',
+    icon: Brain,
+  {
+    title: '⛓️ Blockchain & Web3',
+    description: 'Decentralized solutions',
+    icon: Globe,
+  {
+    title: '🚗 Autonomous & Mobility',
+    description: 'Self - driving and mobility solutions',
+    icon: Car,
+  }
+];
+
+export default function ServicesShowcase2028() {;
+  return (
+    <>;
+      <Head>;
+        <title>2028 Futuristic Services Showcase - Zion Tech Group</title>;
+        <meta
+          name='description'
+          content='Explore our cutting-edge 2028 services including AI, quantum computing, autonomous systems, and futuristic innovations. Transform your business with next-generation technology.'
+        />;
+        <meta
+          name='keywords'
+          content='2028 technology, AI services, quantum computing, autonomous systems, futuristic innovations, Zion Tech Group'
+        />;
+        <meta
+          property='og:title'
+          content='2028 Futuristic Services Showcase - Zion Tech Group'
+        />;
+        <meta
+          property='og:description'
+          content='Explore our cutting-edge 2028 services including AI, quantum computing, autonomous systems, and futuristic innovations.'
+        />;
+        <meta
+          property='og:url'
+          content='https://ziontechgroup && ziontechgroup.com/2028-services-showcase'
+        />;
+        <meta property='og:type' content='website' />;
+        <link
+          rel='canonical'
+        <meta name="keywords" content="2028 technology, AI services, quantum computing, autonomous systems, futuristic innovations, Zion Tech Group" />
+        <meta property="og:title" content="2028 Futuristic Services Showcase - Zion Tech Group" />
+        <meta property="og:description" content="Explore our cutting-edge 2028 services including AI, quantum computing, autonomous systems, and futuristic innovations." />
+        <meta property="og:url" content="https://ziontechgroup.com/2028-services-showcase" />
+        <meta property="og:type" content="website" />
+        <link rel="canonical" href="https://ziontechgroup.com/2028-services-showcase" />
+      <UltraFuturisticNavigation2028 />
+          href='https://ziontechgroup && ziontechgroup.com/2028-services-showcase'
+        />      </Head>        <meta name="description" content="Explore our cutting-edge 2028 services including AI, quantum computing, autonomous systems, and futuristic innovations. Transform your business with next-generation technology." />;
+        <meta name="keywords" content="2028 technology, AI services, quantum computing, autonomous systems, futuristic innovations, Zion Tech Group" />;
+        <meta property="og:title" content="2028 Futuristic Services Showcase - Zion Tech Group" />;
+        <meta property="og:description" content="Explore our cutting-edge 2028 services including AI, quantum computing, autonomous systems, and futuristic innovations." />;
+        <meta property="og:url" content="https://ziontechgroup && ziontechgroup.com/2028-services-showcase" />;
+        <meta property="og:type" content="website" />;
+        <link rel="canonical" href="https://ziontechgroup && ziontechgroup.com/2028-services-showcase" />;
+      {/* Hero Section */}
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   DollarSign, Shield, Mail, MapPin, Rocket, Brain, Sparkles;
   Globe, Atom, Heart, Leaf, Car, GraduationCap, Scale;
   Building, Factory, Camera, Video, Music, Gamepad2
  } from 'lucide-react';
 import UltraFuturisticNavigation2028 from '../components/layout/UltraFuturisticNavigation2028',
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -125,10 +234,13 @@ import UltraFuturisticNavigation2028 from '../components/layout/UltraFuturisticN
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFooter2028';
 import { futuristic2028Services  } from '../data/2028-futuristic-innovations';
 import { emergingTech2028Services } from '../data/2028-emerging-tech-services';
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       {/* Hero Section */}
@@ -317,6 +429,8 @@ export default function ServicesShowcase2028() {
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 className='px-8 py-4 border border-purple-500/30 text-purple-300 rounded-xl hover:bg-purple-900/30 transition-all duration-300 flex items-center space-x-2'>;
                 <span>View Pricing</span>;
                 <DollarSign className='w-5 h-5' />              </Link>;
@@ -340,6 +454,7 @@ export default function ServicesShowcase2028() {
               Experience the future of technology with our cutting-edge 2028 services. ;
               From AI consciousness to quantum internet, we're building tomorrow's solutions today.;
             </p>;
+<<<<<<< HEAD
 
             <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
@@ -409,11 +524,16 @@ export default function ServicesShowcase2028() {
             {/* Stats */}
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+              <Link
+                href="/contact"
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               </div>
             </div>
           </motion.div>
         </div>
       </section>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
@@ -426,6 +546,9 @@ export default function ServicesShowcase2028() {
 =======
                 className="px-8 py-4 border border-purple-500/30 text-purple-300 rounded-xl hover:bg-purple-900/30 transition-all duration-300 flex items-center space-x-2">;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+                className="px-8 py-4 border border-purple-500/30 text-purple-300 rounded-xl hover:bg-purple-900/30 transition-all duration-300 flex items-center space-x-2">;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             {/* Stats */}
             <div className='grid grid-cols-1 md:grid-cols-4 gap-8 pt-16'>;
               <div className='text-center'>;
@@ -459,6 +582,7 @@ export default function ServicesShowcase2028() {
           </motion && motion.div>;
         </div>;
       </section>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
@@ -496,6 +620,8 @@ Discover our comprehensive range of futuristic services designed to transform yo
           </div>
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            {serviceCategories.map((category, index) => (            </h2>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <p className="text-xl text-purple-200 max-w-3xl mx-auto">
               Discover our comprehensive range of futuristic services designed to transform your business
               and propel you into the future of technology.
@@ -529,15 +655,19 @@ Discover our comprehensive range of futuristic services designed to transform yo
               <motion&& motion.div
                 key={category && category.title}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -823,10 +953,13 @@ function ServicesShowcase2028() {
 =======
                         </div>
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       ))}
                     </div>
 
                     <Link
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                       href={`/services#${category.title.toLowerCase().replace(/[^a-z0-9]/g, '-')}`}
                       className="inline-flex items-center space-x-2 text-purple-400 hover:text-purple-300 transition-colors group"
@@ -885,21 +1018,20 @@ function ServicesShowcase2028() {
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <div className='text-center mb-16'>
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
+=======
+            ))}
+      {/* Featured Services */}
+      <section className='py-20 bg-gradient-to-br from-purple-900/10 to-blue-900/10'>;
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
+          <div className='text-center mb-16'>;
+            <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               Featured{' '}
-              <span className='bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent'>
-                Services
-              </span>
-            </h2>
-            <p className='text-xl text-purple-200 max-w-3xl mx-auto'>
-              Our most innovative and in-demand services that are
-              revolutionizing industries worldwide.
-            </p>
-          </div>
-          <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>            {futuristic2028Services.slice(0, 6).map((service, index) => (            </h2>
             <p className="text-xl text-purple-200 max-w-3xl mx-auto">
               Our most innovative and in-demand services that are revolutionizing industries worldwide.
             </p>
           </div>
+<<<<<<< HEAD
                     </p>;
                     <div className='space - y-3 mb - 6'>;
                       {category.services.slice (0, 3).map (service => (
@@ -1013,11 +1145,14 @@ function ServicesShowcase2028() {
                       </div>;
                       <div className='text-sm text-purple-300'>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                         <span className='font-medium'>Market Size:</span>{' '}
                         {service && service.marketSize}
                       </div>;
                       <div className='text-sm text-purple-300'>;
                         <span className='font-medium'>Growth Rate:</span>{' '}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
                 className="group relative"
@@ -1093,6 +1228,8 @@ function ServicesShowcase2028() {
                           {service.setupTime}
                         </div>                      </div>              >
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <div className="relative p-8 bg-black/40 backdrop-blur-sm border border-purple-500/30 rounded-2xl hover:border-purple-500/60 transition-all duration-300 hover:transform hover:scale-105">
                   <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 to-blue-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   <div className="relative z-10">
@@ -1119,6 +1256,7 @@ function ServicesShowcase2028() {
                       </div>
                     </div>
                     <div className="flex items-center justify-between">
+<<<<<<< HEAD
 =======
                         {service && service.growthRate}
                       </div>;
@@ -1150,6 +1288,8 @@ function ServicesShowcase2028() {
             ))}
 
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             ))}
           </div>
         </div>
@@ -1175,35 +1315,12 @@ function ServicesShowcase2028() {
               Understand the market dynamics and growth potential of our futuristic services.
             </p>
           </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <motion.div
 
-              <span className='bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent'>;
-                Insights;
-              </span>;
-            </h2>;
-            <p className='text-xl text-purple-200 max-w-3xl mx-auto'>;
-                    </p>;
-                    <div className='mb - 6'>;
-                      <div className='flex items - center space - x-2 mb - 2'>;
-                        <Star className='w - 4 h - 4 text - yellow - 400' />;
-                        <span className='text - white font - medium'>;
-                          {service.rating}
-                        </span>;
-                        <span className='text - purple - 300'>;
-                          ({service.reviews} reviews);
-                        </span>;
-                      </div>;
-                      <div className='text - sm text - purple - 300'>;
-                        <span className='font - medium'>Market Size:</span>{' '}
-                        {service.market_size}
-                      </div>;
-                      <div className='text - sm text - purple - 300'>;
-                        <span className='font - medium'>Growth Rate:</span>{' '}
-                        {service.growth_rate}
-                      </div>;
-                    </div>;
-                    <div className='flex items - center justify - between'>;
-                      <Link;
-                        href={service.link}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0 && 0.6 }}
                         className='px - 6 py - 3 bg - gradient - to - r from - purple - 600 to - blue - 600 text - white rounded - lg hover:from - purple - 700 hover:to - blue - 700 transition - all duration - 300 transform hover:scale - 105';
                       >;
                         Learn More;
@@ -1255,6 +1372,7 @@ function ServicesShowcase2028() {
                   </div>;
                 </div>;
               </motion.div>))}
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           </div>;
         </div>;
@@ -1285,6 +1403,12 @@ function ServicesShowcase2028() {
 
 
 
+=======
+          </div>;
+        </div>;
+      </section>;
+      {/* Market Analysis */}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <section className='py - 20 bg - black / 50'>;
         <div className='max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8'>;
           <div className='text - center mb - 16'>;
@@ -1299,14 +1423,22 @@ function ServicesShowcase2028() {
               futuristic services.;
             </p>;
           </div>;
-              className="text-center p-8 bg-gradient-to-br from-purple-900/20 to-blue-900/20 border border-purple-500/30 rounded-2xl"
-            >
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0 && 0.6 }}
+              viewport={{ once: true }}
               <TrendingUp className="w-16 h-16 text-green-400 mx-auto mb-6" />
               <h3 className="text-2xl font-bold text-white mb-4">Market Growth</h3>
               <p className="text-purple-300 mb-6">
-Our services target markets with exponential growth potential
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                Our services target markets with exponential growth potential
+
+                with some sectors growing at 300-800% annually.
+              </p>
+              <div className="text-3xl font-bold text-green-400">500%+</div>
+              <div className="text-purple-300">Average Annual Growth</div>
+            </motion.div>
             <motion.div
+<<<<<<< HEAD
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
               initial={{ opacity: 0, y: 30 }}
@@ -1316,6 +1448,8 @@ Our services target markets with exponential growth potential
 <<<<<<< HEAD
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               className='text-center p-8 bg-gradient-to-br from-purple-900/20 to-blue-900/20 border border-purple-500/30 rounded-2xl'>;
               <TrendingUp className='w-16 h-16 text-green-400 mx-auto mb-6' />;
               <h3 className='text-2xl font-bold text-white mb-4'>;
@@ -1336,6 +1470,7 @@ Our services target markets with exponential growth potential
               <div className="text-3xl font-bold text-green-400">500%+</div>;
               <div className="text-purple-300">Average Annual Growth</div>;
             </motion && motion.div>;
+<<<<<<< HEAD
 
             <motion&& motion.div
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
@@ -1363,10 +1498,13 @@ Our services target markets with exponential growth potential
               <div className="text-purple-300">Average Annual Growth</div>
             </motion.div>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.6, delay: 0 && 0.2 }}
               viewport={{ once: true }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -1427,10 +1565,13 @@ Combined market size of our service categories exceeds
               <div className="text-blue-300">Total Addressable Market</div>
             </motion.div>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.6, delay: 0 && 0.4 }}
               viewport={{ once: true }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -1481,20 +1622,28 @@ First-to-market solutions with proprietary technology
 
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-purple-900/30 to-blue-900/30">
+=======
+
+      {/* CTA Section */}
+      <section className='py-20 bg-gradient-to-r from-purple-900/30 to-blue-900/30'>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>          <motion.div      <section className="py-20 bg-gradient-to-r from-purple-900/30 to-blue-900/30">
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
-              Your Business?;
-            </h2>;
-            <p className='text-xl text-purple-200 max-w-3xl mx-auto'>;
-              Join hundreds of forward-thinking companies already leveraging our;
-              futuristic services to gain competitive advantages and drive;
-              innovation.;
-            </p>;
-            <div className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6'>;
+
+
+          >
+            <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
+            className='space-y-8'>;
+            <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>;
+              Ready to{' '}
+              <span className='bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent'>;
+                Transform;
+              </span>{' '}
               <Link
                 href='/contact'
                 className='px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-xl hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-2xl hover:shadow-purple-500/25 flex items-center space-x-2'>;
@@ -1503,32 +1652,10 @@ First-to-market solutions with proprietary technology
               </Link>;
               <Link
                 href='/case-studies'
-            className="space-y-8"
-          >
-            <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
-              Ready to <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">Transform</span> Your Business?
-            </h2>
-            <p className="text-xl text-purple-200 max-w-3xl mx-auto">
-              Join hundreds of forward-thinking companies already leveraging our futuristic services 
-              to gain competitive advantages and drive innovation.
-            </p>
-
-            <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
-              <Link
-                href="/contact"
-                className="px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-xl hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-2xl hover:shadow-purple-500/25 flex items-center space-x-2"
-              >
-                <span>Start Your Journey</span>
-                <ArrowRight className="w-5 h-5" />
-</Link>
-              <Link
-                href="/case-studies"
-                className="px-8 py-4 border border-purple-500/30 text-purple-300 rounded-xl hover:bg-purple-900/30 transition-all duration-300 flex items-center space-x-2"
-              >
-                <span>View Case Studies</span>
-                <TrendingUp className="w-5 h-5" />
-</Link>
+                <span>Money-Back Guarantee</span>
+              </div>
             </div>
+<<<<<<< HEAD
             <div className="flex items-center justify-center space-x-8 text-purple-300">
               <div className="flex items-center space-x-2">
                 <CheckCircle className="w-5 h-5 text-green-400" />
@@ -1619,7 +1746,45 @@ First-to-market solutions with proprietary technology
 
 
 =======
+=======
+          </motion.div>
+        </div>
+      </section>
+      <UltraFuturisticFooter2028 />
+    </>
+);
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   );
+    </>;
+);
+}
+
+}
+
+            <div className='flex items-center justify-center space-x-8 text-purple-300'>;
+              <div className='flex items-center space-x-2'>;
+                <CheckCircle className='w-5 h-5 text-green-400' />                <span>30-Day Free Trial</span>;
+              </div>;
+              <div className='flex items-center space-x-2'>;
+                <CheckCircle className='w-5 h-5 text-green-400' />;
+                <span>24/7 Expert Support</span>;
+              </div>;
+              <div className='flex items-center space-x-2'>;
+                <CheckCircle className='w-5 h-5 text-green-400' />                <span>Money-Back Guarantee</span>              <div className="flex items-center space-x-2">;
+                <CheckCircle className="w-5 h-5 text-green-400" />;
+                <span>Money-Back Guarantee</span>;
+              </div>;
+            </div>;
+          </motion && motion.div>;
+        </div>;
+      </section>;
+
+      <UltraFuturisticFooter2028 />;
+    </>;
+  );
+}
+  );
+}
 }
           <div className='grid grid - cols - 1 md:grid - cols - 3 gap - 8'>            <motion.div            </h2>;
             <p className="text - xl text - purple - 200 max - w-3xl mx - auto">;
@@ -1766,6 +1931,7 @@ First-to-market solutions with proprietary technology
       </section>;
       <UltraFuturisticFooter2028 />;
     </>);
+<<<<<<< HEAD
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -1803,6 +1969,9 @@ First-to-market solutions with proprietary technology
 );
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+      <UltraFuturisticFooter2028 />
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   );
 
@@ -1811,6 +1980,7 @@ First-to-market solutions with proprietary technology
   );
 
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
@@ -1821,3 +1991,5 @@ First-to-market solutions with proprietary technology
   );
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

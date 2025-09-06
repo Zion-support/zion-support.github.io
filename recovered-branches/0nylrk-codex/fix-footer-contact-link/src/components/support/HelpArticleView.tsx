@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React, { useState } from './react';
 import { Button  } from '@/components / ui / button';
@@ -32,6 +33,8 @@ import { toast } from "@/components/ui/use-toast",
 import { HELP_CATEGORIES } from "./help-content",
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useState } from "react";
 import {Button} from "@/components/ui/button";
 import {Card} from "@/components/ui/card";
@@ -44,12 +47,16 @@ import { Card } from "@/components/ui/card",
 import { ThumbsUp, ThumbsDown } from "lucide-react",
 import { toast } from "@/components/ui/use-toast",
 import { HELP_CATEGORIES } from "./help-content";
+<<<<<<< HEAD
 >>>>>>> main
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface HelpArticleViewProps {
   articleId: string
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -80,10 +87,16 @@ export function HelpArticleView({ articleId }: HelpArticleViewProps) {
   for (const category of HELP_CATEGORIES) {
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  // Find the article in all categories
+  let article,
+  for (const category of HELP_CATEGORIES) {
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     const found = category.articles.find(a => a.id === articleId),
     if (found) {
       article = found,
       break
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 import { HELP_CATEGORIES } from "./help-content";
@@ -102,6 +115,8 @@ const found = category.articles.find(a => a.id === articleId),
     if (found) {
       article = found,
       break
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useState } from "react",;
 import { Button } from "@/components/ui/button",;
 import { Card } from "@/components/ui/card",;
@@ -110,6 +125,7 @@ import { toast } from "@/components/ui/use-toast",;
 import { HELP_CATEGORIES } from "./help-content",;
 interface HelpArticleViewProps {;
 
+<<<<<<< HEAD
   articleId: string;
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -121,6 +137,12 @@ interface HelpArticleViewProps {;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+  articleId: string;
+}
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export function HelpArticleView({ articleId }: HelpArticleViewProps) {
 
   const [feedbackGiven, setFeedbackGiven] = useState<
@@ -130,30 +152,6 @@ export function HelpArticleView({ articleId }: HelpArticleViewProps) {
   // Find the article in all categories
   let article = null;
   for (const category of HELP_CATEGORIES) {
-
-    const found = category.articles.find((a) => a.id === articleId);
-    if (found) {
-=======
-import React, { useState } from "react";
-import {Button} from "@/components/ui/button";
-import {Card} from "@/components/ui/card";
-import {ThumbsUp, ThumbsDown} from "lucide-react";
-import {toast} from "@/components/ui/use-toast";
-import {HELP_CATEGORIES} from "./help-content";
-interface HelpArticleViewProps {;
-  articleId: string;
-}
-
-export function HelpArticleView(): any ({ articleId }: HelpArticleViewProps) {;
-  const [feedbackGiven, setFeedbackGiven] = useState<"helpful" | "not-helpful" | null>(null);
-
-  // Find the article in all categories;
-  let article;
-  for (const category of HELP_CATEGORIES) {;
-    const found = category && category.articles.find(a => a && a.id === articleId);
-    if (found) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 export /**
  * HelpArticleView - Function description
  */
@@ -170,16 +168,12 @@ function HelpArticleView() {
 if ( {) {
   $2
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       article = found;
       break;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-=======
     const found = category.articles.find((a) => a.id === articleId);
     if (found) {
       article = found;
       break;
->>>>>>> main
     }
   }
 
@@ -190,7 +184,6 @@ if ( {) {
 
 
   const handleFeedback = (type: "helpful" | "not-helpful") => {
-<<<<<<< HEAD
     setFeedbackGiven(type),
     
     // In a real implementation, this would send feedback to the server
@@ -201,6 +194,7 @@ if ( {) {
         : "We'll work on improving this article."})
   },
   
+<<<<<<< HEAD
 =======
     (setFeedbackGiven(type),
       // In a real implementation, this would send feedback to the server
@@ -218,10 +212,13 @@ if ( {) {
 =======
 >>>>>>> main
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <div>
       <Card className="p-6">
         <h2 className="text-2xl font-bold mb-4">{article.title}</h2>
+<<<<<<< HEAD
 <<<<<<< HEAD
         <div className="flex items-center text-sm text-zion-slate-light mb-6">
           <span>Last updated: {formatDate(article.lastUpdated)}</span>
@@ -239,23 +236,29 @@ if ( {) {
 
 >>>>>>> main
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <div className="prose dark:prose-invert max-w-none mb-8">
           {article.content.split("\n").map((paragraph, idx) => (
             <p key={idx}>{paragraph}</p>
           ))}
         </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 
 >>>>>>> main
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <div className="border-t border-gray-200 dark:border-gray-700 pt-6 mt-6">
           <div className="flex flex-col sm:flex-row items-center justify-between">
             <div className="text-sm text-zion-slate-light mb-4 sm:mb-0">
               Was this article helpful?
             </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
             <div className="flex items-center space-x-3">
 =======
@@ -263,6 +266,8 @@ if ( {) {
 =======
 
 >>>>>>> main
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <div className="flex items-center space-x-3">
               <Button
                 variant="outline"
@@ -272,16 +277,6 @@ if ( {) {
                     ? "bg-green-100 dark:bg-green-900/30"
                     : ""
                 }
-                onClick={() => handleFeedback("helpful")}
-                disabled={feedbackGiven !== null}
-              >
-                <ThumbsUp className="h-4 w-4 mr-2" />
-                Yes
-              </Button>
-<<<<<<< HEAD
-=======
-
->>>>>>> main
               <Button
                 variant="outline"
                 size="sm"
@@ -290,18 +285,6 @@ if ( {) {
                     ? "bg-red-100 dark:bg-red-900/30"
                     : ""
                 }
-                onClick={() => handleFeedback("not-helpful")}
-                disabled={feedbackGiven !== null}
-              >
-                <ThumbsDown className="h-4 w-4 mr-2" />
-                No
-              </Button>
-            </div>
-          </div>
-<<<<<<< HEAD
-=======
-
->>>>>>> main
           {feedbackGiven === "not-helpful" && (
             <div className="mt-4 bg-zion-blue-dark p-4 rounded-md">
               <p className="text-sm text-zion-slate-light mb-2">
@@ -315,6 +298,7 @@ if ( {) {
                 Contact Support
               </Button>
             </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -406,11 +390,14 @@ export function HelpArticleView({ articleId } HelpArticleViewProps) {;
         </div>;
         ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <div className="border-t border-gray-200 dark:border-gray-700 pt-6 mt-6">;
           <div className="flex flex-col sm:flex-row items-center justify-between">;
             <div className="text-sm text-zion-slate-light mb-4 sm:mb-0">;
               Was this article helpful?;
             </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
             <div className="flex items-center space-x-3">;
@@ -489,11 +476,14 @@ if ( {) {
                 disabled={feedback_given !== null}
               >;
                 <ThumbsUp className="h - 4 w - 4 mr - 2" />;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 Yes;
               </Button>;
               <Button;
                 variant="outline";
                 size="sm";
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 className={
                   feedback_given === "not - helpful";
@@ -560,6 +550,8 @@ if ( {) {
                 onClick={() => handleFeedback("not-helpful")}
                 disabled={feedbackGiven !== null}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               >;
                 <ThumbsDown className="h-4 w-4 mr-2" />;
                 No;
@@ -567,10 +559,13 @@ if ( {) {
             </div>;
           </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
           ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           {feedbackGiven === "not-helpful" && (;
             <div className="mt-4 bg-zion-blue-dark p-4 rounded-md">;
               <p className="text-sm text-zion-slate-light mb-2">;
@@ -581,17 +576,20 @@ if ( {) {
               </Button>;
             </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           )}
-        </div>;
-      </Card>;
-    </div>;
-  );
+}
+;
+  });
 }
 
+<<<<<<< HEAD
 
 =======
           )}
@@ -601,6 +599,8 @@ if ( {) {
   );
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 on_click={() => handle_feedback ("not - helpful")}
                 disabled={feedback_given !== null}
               >;
@@ -633,31 +633,17 @@ function format_date (date: string): string {
     day: "numeric",
   });
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 
 =======
 
 =======
   ),;
-}
-
-
-
-function formatDate(date: string): string {
-  return new Date(date).toLocaleDateString("en-US", {
-    year: "numeric",
-    month: "long",
-<<<<<<< HEAD
-    day: "numeric"
-
-  })
-<<<<<<< HEAD
 =======
-    day: "numeric",
-  });
->>>>>>> main
 }
-=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+}
   })
 
 ;
@@ -686,7 +672,10 @@ function formatDate(date:string):string {;
     </div>
   );
 }
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 function formatDate(date: string): string {
   return new Date(date).toLocaleDateString("en-US", {
@@ -694,6 +683,7 @@ year: "numeric"
     month: "long"
     day: "numeric"
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   })
 =======
@@ -705,3 +695,8 @@ year: "numeric"
 }
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  });
+}
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

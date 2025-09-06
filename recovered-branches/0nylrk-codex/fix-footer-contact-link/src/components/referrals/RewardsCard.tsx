@@ -1,21 +1,23 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
 import {ReferralReward} from "@/types/referrals";
 import {formatDate} from "@/utils/referralUtils";
 import {BadgeDollarSign, Badge} from "lucide-react";
-
-=======
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { ReferralReward } from "@/types/referrals",
 import { formatDate } from "@/utils/referralUtils",
 import { BadgeDollarSign, Badge } from "lucide-react",
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -34,12 +36,33 @@ export function RewardsCard({ rewards, isLoading }: RewardsCardProps) {
 =======
 import {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+import {
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+} from "@/components/ui/card";
+import { ReferralReward } from "@/types/referrals";
+import { formatDate } from "@/utils/referralUtils";
+import { BadgeDollarSign, Badge } from "lucide-react";
+interface RewardsCardProps {
+  rewards: ReferralReward[];
+  isLoading: boolean;
+}
+export function RewardsCard({ rewards, isLoading }: RewardsCardProps) {
+  if (isLoading) {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 } from '@/components / ui / card';
 import { ReferralReward  } from '@/types / referrals';
 import { format_date  } from '@/utils / referral_utils';
@@ -56,7 +79,6 @@ function RewardsCard() {
 if ( {) {
   $2
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     return (
       <Card>;
         <CardHeader>;
@@ -75,6 +97,7 @@ if ( {) {
         </CardContent>;
       </Card>);
   }
+<<<<<<< HEAD
 
 =======
 =======
@@ -131,6 +154,8 @@ export function RewardsCard({ rewards, isLoading }: RewardsCardProps) {
         </CardContent>
       </Card>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     );
   }
   return (
@@ -152,12 +177,15 @@ export function RewardsCard({ rewards, isLoading }: RewardsCardProps) {
               className={`flex justify-between items-start ${
                 index !== rewards.length - 1 ? "border-b pb-3" : ""
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   )
 
 =======
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               }`}
             >
               <div>
@@ -187,13 +215,17 @@ export function RewardsCard({ rewards, isLoading }: RewardsCardProps) {
         </div>
       </CardContent>
     </Card>
-<<<<<<< HEAD
   )
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 import { ReferralReward } from "@/types/referrals",;
 import { formatDate } from "@/utils/referralUtils",;
 import { BadgeDollarSign, Badge } from "lucide-react",;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 interface RewardsCardProps {;
@@ -205,18 +237,20 @@ export function RewardsCard(): any ({ rewards, isLoading }: RewardsCardProps) {;
   if (isLoading) {;
     return (
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface RewardsCardProps {;
   rewards: ReferralReward[];
   isLoading: boolean;
-=======
-  );
->>>>>>> main
 }
 ;
 export function RewardsCard({ rewards, isLoading }: RewardsCardProps) {;
   if (isLoading) {;
     return (;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <Card>;
         <CardHeader>;
           <CardTitle className="flex items-center gap-2">;
@@ -232,12 +266,15 @@ export function RewardsCard({ rewards, isLoading }: RewardsCardProps) {;
         </CardContent>;
       </Card>;
 <<<<<<< HEAD
+<<<<<<< HEAD
     );
   }
 
   if (rewards && rewards.length === 0) {;
     return (
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     ),;
   }
 ;
@@ -248,7 +285,10 @@ export function RewardsCard({ rewards, isLoading }: RewardsCardProps) {;
 ;
   if (rewards.length === 0) {;
     return (;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <Card>;
         <CardHeader>;
           <CardTitle className="flex items-center gap-2">;
@@ -267,6 +307,7 @@ export function RewardsCard({ rewards, isLoading }: RewardsCardProps) {;
         </CardContent>;
       </Card>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     );
   }
@@ -274,6 +315,8 @@ export function RewardsCard({ rewards, isLoading }: RewardsCardProps) {;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   // Check condition
 if ( {) {
   $2
@@ -315,9 +358,12 @@ if ( {) {
           {rewards.map ((reward, index) => (
             <div;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               key={reward.id}
               className={`flex justify - between items - start ${
                 index !== rewards.length - 1 ? "border - b pb - 3" : "";
@@ -338,6 +384,7 @@ if ( {) {
                   Earned on {format_date (reward.created_at)}
                 </p>;
                 {reward.expires_at && (
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -425,10 +472,13 @@ if ( {) {
                     Expires on {formatDate(reward.expires_at)}
                   </p>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 )}
               </div>;
             </div>;
           ))}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -494,3 +544,8 @@ isLoading: boolean
 }
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+}
+import {
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

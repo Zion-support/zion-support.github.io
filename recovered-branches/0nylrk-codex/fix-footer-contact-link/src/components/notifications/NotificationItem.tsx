@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 // Use the centralized icon wrapper to avoid missing icons;
 <<<<<<< HEAD
@@ -6,6 +7,8 @@ import React from 'react';
 // Use the centralized icon wrapper to avoid missing icons
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {Check, Trash2, ChevronRight} from '@/components/icons';
 import {Button} from '@/components/ui/button';
 import {Badge} from '@/components/ui/badge';
@@ -15,20 +18,26 @@ import {Tooltip, TooltipContent, TooltipProvider, TooltipTrigger} from '@/compon
 import {useNavigate} from 'react-router-dom';
 import {Notification, NotificationType} from '@/context/notifications';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export const getTypeIcon = (type: NotificationType) => {
   switch (type) {
     case 'message':;
       return <span className="text-blue-500">💬</span>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from 'react',
 // Use the centralized icon wrapper to avoid missing icons
 import { Check, Trash2, ChevronRight } from '@/components/icons',
@@ -41,7 +50,10 @@ import { useNavigate } from 'react-router-dom',
 import { Notification, NotificationType } from '@/context/notifications',
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export const getTypeIcon = (type: NotificationType) => {
   switch (type) {
     case 'message':
@@ -58,6 +70,7 @@ export const getTypeIcon = (type: NotificationType) => {
       return <span className="text-yellow-500">⚠️</span>
     default:
       return <span className="text-gray-500">📣</span>
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
@@ -69,6 +82,8 @@ export const getTypeIcon = (type: NotificationType) => {
 export const getTypeIcon = (type: NotificationType) => {;
   switch (type) {;
     case 'message':;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       return <span className="text-blue-500">💬</span>;
     case 'quote_request':;
       return <span className="text-purple-500">📝</span>;
@@ -78,18 +93,11 @@ export const getTypeIcon = (type: NotificationType) => {;
       return <span className="text-zion-purple">🤝</span>;
     case 'onboarding':;
       return <span className="text-zion-cyan">🚀</span>;
-
-    case 'system':;
-      return <span className="text-yellow-500">⚠️</span>,;
-    default:;
-      return <span className="text-gray-500">📣</span>;
-  }
-};
-
   }
 };
 
 interface NotificationItemProps {
+<<<<<<< HEAD
   notification: Notification,
   onMarkAsRead: (id: string) => Promise<void>,
   onDismiss: (id: string) => Promise<void>
@@ -110,6 +118,8 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from 'react',;
 // Use the centralized icon wrapper to avoid missing icons;
 import { Check, Trash2, ChevronRight } from '@/components/icons',;
@@ -137,11 +147,14 @@ export const getTypeIcon = (type: NotificationType) => {;
     default:;
       return <span className="text-gray-500">📣</span>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   }
 }
 
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   }
 }
 interface NotificationItemProps {
@@ -158,7 +171,10 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({
   const handleClick = () => {
     if (!notification.read) {
       onMarkAsRead(notification.id)
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ;
 export const NotificationItem: React.FC<NotificationItemProps> = ({;
   notification,;
@@ -170,24 +186,39 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({;
     if (!notification.read) {;
       onMarkAsRead(notification.id);
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     }
     // If there's an action URL, navigate to it
     if (notification.action_url) {
       navigate(notification.action_url)
     }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
   }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+    }
+    // If there's an action URL, navigate to it
+    if (notification.action_url) {
+      navigate(notification.action_url)
+    }
+  }
+  },
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   },
   };
   },
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -263,11 +294,19 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({ ;
             </p>
             {notification.action_url && notification.action_text && (
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  return (
+    <div
+      className={cn(
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <Button
                 variant="link"
                 size="sm"
                 className="text-zion-cyan p-0 h-auto"
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 onClick={handleClick}>;
                 {notification && notification.action_text}
                 <ChevronRight className="h-3 w-3 ml-1" />;
@@ -279,6 +318,7 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({ ;
       </div>;
 
       {/* Action buttons that appear on hover */}
+<<<<<<< HEAD
 =======
                 onClick={handleClick}
               >
@@ -337,15 +377,21 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({ ;
 }
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <div className="absolute right-2 top-2 opacity-0 group-hover: opacity-100 transition-opacity flex gap-1">;
         <TooltipProvider>;
           <Tooltip>;
             <TooltipTrigger asChild>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <Button
                 variant="ghost" 
                 size="icon" 
                 className="h-6 w-6"
+<<<<<<< HEAD
 
 =======
               <Button;
@@ -383,6 +429,8 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({ ;
             <TooltipContent>;
               <p>Dismiss</p>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             </TooltipContent>;
           </Tooltip>;
         </TooltipProvider>;
@@ -391,6 +439,7 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({ ;
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 };
@@ -401,11 +450,16 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({ ;
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 };
     </div>);
 }
 ;
+<<<<<<< HEAD
     </div>;
   );
 };
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

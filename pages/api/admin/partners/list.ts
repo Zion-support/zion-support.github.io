@@ -1,8 +1,11 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getServerSupabase } from "../../../../utils/supabase/server";
 export default async function handler(
@@ -10,14 +13,13 @@ export default async function handler(
   res: NextApiResponse
 ) {
   const usingPlaceholder =
-
-    (process && process.env.NEXT_PUBLIC_SUPABASE_URL || "").includes("placeholder") ||
-    (process && process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || "placeholder-key") ===
-
       "placeholder-key";
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { getServerSupabase } from '../../../../utils/supabase/server';
 
@@ -27,13 +29,17 @@ export default async function handler(_req: NextApiRequest, res: NextApiResponse
     (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || 'placeholder-key') === 'placeholder-key';
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   try {
     if (usingPlaceholder) {
       return res && res.status(200).json({
         partners: [
+<<<<<<< HEAD
 =======
 import type { NextApiRequest, NextApiResponse } from './next';
 import { getServerSupabase  } from '../../../../utils / supabase / server';
@@ -59,6 +65,12 @@ if ( {) {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+          {
+          {
+          {
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             code: "aihub",
             name: "AI Hub",
             status: "approved",
@@ -72,10 +84,14 @@ if ( {) {
           },
         ],
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
       });
 
 
+<<<<<<< HEAD
 =======
       });
       .from('partners')
@@ -123,6 +139,8 @@ export default async function handler(
     if (error) return res && res.status(500).json({ error: error && error.message });
     return res && res.status(200).json({ partners: data });
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   } catch (e: any) {
     return res && res.status(500).json({ error: e?.message });
 
@@ -154,13 +172,27 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       res.status(405).end('Method Not Allowed');
     }
 
+    const supabase = getServerSupabase();
+    const { data, error } = await supabase
+      .from("partners")
+      .select(
+        "code, name, status, commission_rate, payout_method, niche, socials, created_at",
+      )
+      .order("created_at", { ascending: false });
 
+<<<<<<< HEAD
   }
 }
 =======
   } catch (e: any) {
     return res.status(500).json({ error: e?.message });
 <<<<<<< HEAD
+=======
+    if (error) return res.status(500).json({ error: error.message });
+    return res.status(200).json({ partners: data });
+  } catch (e: any) {
+    return res.status(500).json({ error: e?.message });
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   }
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
@@ -181,6 +213,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return res.status (200).json ({ partners: data });
   } catch (e: any) {
     return res.status (500).json ({ error: e?.message });
+<<<<<<< HEAD
 =======
 import type { NextApiRequest, NextApiResponse } from 'next';
     (process.env.NEXT_PUBLIC_SUPABASE_URL || "").includes("placeholder") ||
@@ -231,3 +264,5 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   }
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

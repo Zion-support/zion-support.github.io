@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import { useState, useEffect } from 'react'
 import { useRouter } from 'next/router'
@@ -41,10 +42,13 @@ import JsonLd from "@/components/JsonLd"
 import { Button } from "@/components/ui/button"
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { ArrowLeft, Calendar, Clock, ChevronLeft, ChevronRight, Share2, Facebook, Twitter, Linkedin } from 'lucide-react'
 import type { BlogPost as BlogPostType } from "@/types/blog",
 import { Separator } from "@/components/ui/separator";
 import ReactMarkdown from 'react-markdown';
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 import {logErrorToProduction} from '@/utils/productionLogger';
@@ -64,10 +68,14 @@ import { useSkeletonTimeout } from '@/hooks/useSkeletonTimeout';
 import { fetchWithRetry } from '@/utils/fetchWithRetry';
 import { BLOG_POSTS } from "@/data/blog-posts"
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+import { BLOG_POSTS } from "@/data/blog-posts";
+import { useSkeletonTimeout } from '@/hooks/useSkeletonTimeout';
+import { fetchWithRetry } from '@/utils/fetchWithRetry';
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export default function BlogPost() {;
 
 import { BLOG_POSTS } from "@/data/blog-posts"
-
 import { useState, useEffect } from "react",
 import { useRouter } from 'next/router',
 import Link from 'next/link',
@@ -85,6 +93,7 @@ import { BLOG_POSTS } from "@/data/blog-posts",
 import { useSkeletonTimeout } from '@/hooks/useSkeletonTimeout',
 import { fetchWithRetry } from '@/utils/fetchWithRetry',
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 xport default function BlogPost() {
@@ -92,43 +101,15 @@ export default function BlogPost() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 export default function BlogPost() {
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
-import { useState, useEffect } from 'react';
-import { use_router } from 'next / router';
-import Link from 'next / link';
-import { SEO } from '@/components / SEO';
-import JsonLd from '@/components / JsonLd';
-import { Button } from '@/components / ui / button';
-import ImageWithRetry from '@/components / ui / ImageWithRetry';
-import {
-  ArrowLeft,
-  Calendar,
-  Clock,
-  ChevronLeft,
-  ChevronRight,
-  Share2,
-  Facebook,
-  Twitter,
-  Linkedin,
-} from 'lucide-react';
-import type { BlogPost as BlogPostType } from '@/types / blog';
-import { Separator } from '@/components / ui / separator';
-import ReactMarkdown from 'react - markdown';
-import { logErrorToProduction } from '@/utils / production_logger';
-// Importing the sample blog posts - in a real app, you would fetch this from an API;
-import { BLOG_POSTS } from '@/data / blog - posts';
-import { useSkeletonTimeout } from '@/hooks / useSkeletonTimeout';
-import { fetchWithRetry } from '@/utils / fetchWithRetry';
-export default /**
- * BlogPost - Function description
- */
-function BlogPost() {
-  const router = use_router ();
 export default function BlogPost() {
 
   const router = useRouter()
   const { slug } = router.query as { slug: string }
+<<<<<<< HEAD
   const [post, set_post] = useState < BlogPostType | null>(null);
   const [related_posts, setRelatedPosts] = useState < BlogPostType[]>([]);
   const [showShareMenu, setShowShareMenu] = useState (false);
@@ -206,6 +187,16 @@ function BlogPost() {
         setError('Failed to load article');
       };
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  const [post, setPost] = useState<BlogPostType | null>(null)
+  const [relatedPosts, setRelatedPosts] = useState<BlogPostType[]>([])
+  const [showShareMenu, setShowShareMenu] = useState(false)
+  const [isLoading, setIsLoading] = useState(true)
+  const [error, setError] = useState<string | null>(null)
+  const timedOut = useSkeletonTimeout(20000)
+  useEffect((,) => {
+    const fetchPost = async () => {
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       const currentPost = BLOG_POSTS.find(p => p.slug === slug);      if (currentPost) {
         setPost(currentPost)
         const related = BLOG_POSTS.filter(
@@ -216,25 +207,16 @@ function BlogPost() {
         ).slice(0, 3)
         setRelatedPosts(related) } else {
         router.replace('/blog')
-      const current_post = BLOG_POSTS.find (p => p.slug === slug);      // Check condition
-if ( {) {
-  $2
-}
-        set_post (current_post);
-        const related = BLOG_POSTS.filter (
-          p =>;
-            p.id !== current_post.id &&;
-            (p.category === current_post.category ||;
-              p.tags.some (tag => current_post.tags.includes (tag)))).slice (0, 3);
-        setRelatedPosts (related) } else {
-        router.replace ('/blog');
       }
       setIsLoading (false);
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     fetchPost()
     window.scrollTo({ top: 0, behavior: 'smooth' })
   }, [slug, router])
@@ -322,12 +304,15 @@ export default function BlogPost() {;
   }, [slug, router]),
   
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
 =======
   
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   if (isLoading && !timedOut) {
     return (
       <div className="min-h-screen bg-zion-blue text-white p-8 flex justify-center items-center">
@@ -336,6 +321,7 @@ export default function BlogPost() {;
     )
   }
   if (!post && (error |timedOut)) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
   if (!post && (error |timedOut)) {
@@ -361,12 +347,17 @@ if ( {) {
   // If post is still null after loading, show not found
   if (!post) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  // If post is still null after loading, show not found
+  if (!post) {
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     return (
       <div className='min - h-screen bg - zion - blue text - white p - 8 flex flex - col justify - center items - center space - y-4'>;
         <p > Article not found.</p>;
         <Button on_click={(, ) => router.push ('/blog')}>Back to Blog</Button>;
       </div>);
   }
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -375,22 +366,17 @@ if ( {) {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   // Helper function to get share URL
   const getShareUrl = (platform: string) => {
     if (!post) return ''
     const url = encodeURIComponent(window.location.href)
     const title = encodeURIComponent(post.title)
-  // Helper function to get share URL;
-  const getShareUrl = (platform: string) =>: any {
-    // Check condition
-if (return '') {
-  $2
-}
-    const url = encodeURIComponent (window.location.href);
-    const title = encodeURIComponent (post.title);
     switch (platform) {
       case 'facebook':        return `https://www.facebook.com / sharer / sharer.php?u=${url}`;
     switch (platform) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       case 'facebook':;
@@ -428,6 +414,8 @@ if (return '') {
     image: post.featuredImage
     datePublished: post.publishedDate
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     author: {
       '@type': 'Person'
       name: post.author.name
@@ -508,6 +496,7 @@ if (return '') {
   }
 
 
+<<<<<<< HEAD
 
 ;
   // Helper function to get share URL;
@@ -555,6 +544,8 @@ if (return '') {
       <JsonLd data={articleLd} />
       <div className="min-h-screen bg-zion-blue pt-12 pb-20 px-4">
         <div className="container mx-auto">
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ;
   // Helper function to get share URL;
   const getShareUrl = (platform: string) => {;
@@ -580,17 +571,6 @@ if (return '') {
     image: post.featuredImage,
     datePublished: post.publishedDate,
     author: {
-      '@type': 'Person',
-      name: post.author.name,
-    },
-  }
-  return (
-    <>
-      <SEO
-        title={post.title}
-        description={post.excerpt}
-        keywords={post.tags.join(', ')}
-        ogImage={post.featuredImage}        canonical={`https://app.ziontechgroup.com/blog/${post.slug}`}
       "@type": "Person",
       name: post.author.name}},
   
@@ -616,12 +596,16 @@ if (return '') {
         keywords={post.tags.join(", ")}
         ogImage={post.featuredImage}
         canonical={`https://app.ziontechgroup.com/blog/${post.slug}`}
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       />
       <JsonLd data={articleLd} />
       <div className="min-h-screen bg-zion-blue pt-12 pb-20 px-4">
         <div className="container mx-auto">
           {/* Back to blog button */}
+<<<<<<< HEAD
 <<<<<<< HEAD
           <div className='mb-8'>;
             <Button
@@ -652,6 +636,9 @@ if (return '') {
           </div>;
 
 =======
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <div className="mb-8">
             <Button 
               variant="outline" 
@@ -664,6 +651,7 @@ if (return '') {
               </Link>
             </Button>
           </div>
+<<<<<<< HEAD
           <div className="mb-8 max-w-4xl mx-auto">
             <span className="text-sm text-zion-cyan bg-zion-blue-dark px-3 py-1 rounded-full inline-block mb-4">
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -736,6 +724,8 @@ if (return '') {
 <<<<<<< HEAD
 =======
           
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           {/* Article header */}
           <div className="mb-8 max-w-4xl mx-auto">
             <span className="text-sm text-zion-cyan bg-zion-blue-dark px-3 py-1 rounded-full inline-block mb-4">
@@ -743,15 +733,14 @@ if (return '') {
             </span>
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
               {post.title}
-            </h1>
-            <p className='text-xl text-zion-slate-light mb-8'>{post.excerpt}</p>
             {/* Author and metadata */}
-            <div className='flex flex-col sm:flex-row sm:items-center justify-between mb-8'>
-              <div className='flex items-center mb-4 sm:mb-0'>
+            <div className='flex flex-col sm:flex-row sm:items-center justify-between mb-8'>;
+              <div className='flex items-center mb-4 sm:mb-0'>;
                 <ImageWithRetry
-                  src={post.author.avatarUrl}
-                  alt={post.author.name}
+                  src={post && post.author.avatarUrl}
+                  alt={post && post.author.name}
                   className='w-12 h-12 rounded-full mr-3'
+<<<<<<< HEAD
                   fallbackSrc='/images/blog-placeholder.svg'                />
                 <div>
                   <p className='text-white font-medium'>{post.author.name}</p>
@@ -771,10 +760,13 @@ if (return '') {
                 </div>
                 <div className='relative'>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   <Button
                     variant='ghost'
                     size='sm'
                     className='text-zion-slate-light hover:text-white hover:bg-zion-blue-dark'
+<<<<<<< HEAD
 <<<<<<< HEAD
 
                     onClick={() => setShowShareMenu(!showShareMenu)}                  >;
@@ -793,6 +785,8 @@ if (return '') {
                   {showShareMenu && (
                     <div className='absolute right-0 top-full mt-2 bg-zion-blue-dark border border-zion-blue-light rounded-md p-2 z-10'>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       <a
                         href={getShareUrl('facebook')}
                         target='_blank'
@@ -826,85 +820,17 @@ if (return '') {
                     </div>;
                   )}
 
-            </h1>;
-            <p className='text - xl text - zion - slate - light mb - 8'>{post.excerpt}</p>;
-            {/* Author and metadata */}
-            <div className='flex flex - col sm:flex - row sm:items - center justify - between mb - 8'>;
-              <div className='flex items - center mb - 4 sm:mb - 0'>;
-                <ImageWithRetry;
-                  src={post.author.avatar_url}
-                  alt={post.author.name}
-                  className='w - 12 h - 12 rounded - full mr - 3';
-                  fallback_src='/images / blog - placeholder.svg'                />;
-                <div>;
-                  <p className='text - white font - medium'>{post.author.name}</p>;
-                  <p className='text - sm text - zion - slate - light'>;
-                    {post.author.title}
-                  </p>;
-                </div>;
-              </div>;
-              <div className='flex items - center space - x-4'>;
-                <div className='flex items - center text - zion - slate - light'>;
-                  <Calendar className='h - 4 w - 4 mr - 1' />;
-                  <span className='text - sm'>{post.published_date}</span>;
-                </div>;
-                <div className='flex items - center text - zion - slate - light'>;
-                  <Clock className='h - 4 w - 4 mr - 1' />;
-                  <span className='text - sm'>{post.read_time}</span>;
-                </div>;
-                <div className='relative'>;
-                  <Button;
-                    variant='ghost';
-                    size='sm';
-                    className='text - zion - slate - light hover:text - white hover:bg - zion - blue - dark';
-                    on_click={() => setShowShareMenu (!showShareMenu)}                  >;
-                    <Share2 className='h - 4 w - 4 mr - 1' />;
-                    <span className='text - sm'>Share</span>;
-                  </Button>;
-                  {showShareMenu && (
-                    <div className='absolute right - 0 top - full mt - 2 bg - zion - blue - dark border border - zion - blue - light rounded - md p - 2 z - 10'>;
-                      <a;
-                        href={getShareUrl ('facebook')}
-                        target='_blank';
-                        rel='noopener noreferrer';
-                        className='flex items - center p - 2 hover:bg - zion - blue rounded transition - colors text - zion - slate - light hover:text - white';
-                        aria - label='Share on Facebook';
-                        title='Share on Facebook'                      >;
-                        <Facebook className='h - 4 w - 4 mr - 2' />;
-                        <span > Facebook</span>;
-                      </a>;
-                      <a;
-                        href={getShareUrl ('twitter')}
-                        target='_blank';
-                        rel='noopener noreferrer';
-                        className='flex items - center p - 2 hover:bg - zion - blue rounded transition - colors text - zion - slate - light hover:text - white';
-                        aria - label='Share on Twitter';
-                        title='Share on Twitter'                      >;
-                        <Twitter className='h - 4 w - 4 mr - 2' />;
-                        <span > Twitter</span>;
-                      </a>;
-                      <a;
-                        href={getShareUrl ('linkedin')}
-                        target='_blank';
-                        rel='noopener noreferrer';
-                        className='flex items - center p - 2 hover:bg - zion - blue rounded transition - colors text - zion - slate - light hover:text - white';
-                        aria - label='Share on LinkedIn';
-                        title='Share on LinkedIn'                      >;
-                        <Linkedin className='h - 4 w - 4 mr - 2' />;
-                        <span > LinkedIn</span>;
-                      </a>;
-                    </div>)}
+            <div className="flex flex-wrap gap-2 mt-12">
+              {post.tags.map(tag => (
+                <span 
+                  key={tag} 
+                  className="text-xs text-zion-slate-light bg-zion-blue-dark px-3 py-1 rounded-full"
+                >
 
-                </div>;
-              </div>;
-            </div>;
-          </div>;
 
-                src={post && post.featuredImage}
-                alt={post && post.featuredImageAlt || post && post.title}
-                className='object-cover w-full h-full'
-                fallbackSrc='/images/blog-placeholder && placeholder.svg'              />;
-            </h1>
+                  #{tag}
+                </span>;
+              ))}
 
 <<<<<<< HEAD
             <p className="text-xl text-zion-slate-light mb-8">
@@ -1030,9 +956,6 @@ if (return '') {
                         <ImageWithRetry
                           src={relatedPost && relatedPost.featuredImage}
                           alt={
-
-                            relatedPost && relatedPost.featuredImageAlt || relatedPost && relatedPost.title
-
                           }
                           className='object-cover w-full h-full'
                           fallbackSrc='/images/blog-placeholder && placeholder.svg'                        />;
@@ -1046,17 +969,17 @@ if (return '') {
                         </h4>;
                       </div>;
                     </Link>;
-            </div>
 
-            
-            <Separator className="my-12 bg-zion-blue-light" />
-            
-
+<<<<<<< HEAD
 <<<<<<< HEAD
             {/* Related articles */}
             {relatedPosts.length > 0 && (
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+            {/* Related articles */}
+            {relatedPosts.length > 0 && (
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <div className="mt-12">
                 <h3 className="text-2xl font-bold text-white mb-6">Related Articles</h3>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -1091,6 +1014,7 @@ if (return '') {
                         <h4 className='text-white font-bold mt-1 line-clamp-2'>
                           {relatedPost.title}
                         </h4>
+<<<<<<< HEAD
                       </div>
                   ))}
             <p className="text-xl text-zion-slate-light mb-8">
@@ -1169,6 +1093,28 @@ if (return '') {
                     </div>
                   )}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+                    <Link 
+                      key={relatedPost.id}
+                      href={`/blog/${relatedPost.slug}`}
+                      className="bg-zion-blue-dark border border-zion-blue-light rounded-lg overflow-hidden hover:border-zion-purple transition-all duration-300"
+                    >
+                      <div className="aspect-[16/9] relative">
+                        <ImageWithRetry
+                          src={relatedPost.featuredImage}
+                          alt={relatedPost.featuredImageAlt || relatedPost.title}
+                          className="object-cover w-full h-full"
+                          fallbackSrc="/images/blog-placeholder.svg"
+                        />
+                      </div>
+                      <div className="p-4">
+                        <span className="text-xs text-zion-cyan">{relatedPost.category}</span>
+                        <h4 className="text-white font-bold mt-1 line-clamp-2">{relatedPost.title}</h4>
+
+                      </div>
+                    </Link>
+                  ))}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 </div>;
               </div>;
             </div>;
@@ -1192,7 +1138,10 @@ if (return '') {
                 {post.content}
               </ReactMarkdown>;
             </div>;
+<<<<<<< HEAD
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             {/* Tags */}
             <div className="flex flex-wrap gap-2 mt-12">
               {post.tags.map(tag => (
@@ -1200,6 +1149,7 @@ if (return '') {
                   key={tag} 
                   className="text-xs text-zion-slate-light bg-zion-blue-dark px-3 py-1 rounded-full"
                 >
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -1257,12 +1207,20 @@ if (return '') {
             
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+            </h1>
+                  #{tag}
+                </span>
+              ))}
+            </div>
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             {/* Related articles */}
             {relatedPosts.length > 0 && (
               <div className="mt-12">
                 <h3 className="text-2xl font-bold text-white mb-6">Related Articles</h3>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                   {relatedPosts.map(relatedPost => (
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
                     <Link
@@ -1306,12 +1264,15 @@ if (return '') {
 =======
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       </div>
                     </Link>
                   ))}
                 </div>
               </div>
             )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -1351,6 +1312,8 @@ if (return '') {
               <p className="text-zion-slate-light">
             <div className="mt-12 text-center">
               <p className="text-zion-slate-light">
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 Ready to put these ideas into action? Explore our{' '}
                 <Link href="/services" className="text-zion-cyan underline">AI services</Link>{' '}
                 or browse expert{' '}
@@ -1358,6 +1321,7 @@ if (return '') {
                   talent
                 </Link>{' '}
                 to accelerate your projects.
+<<<<<<< HEAD
   )
 }
 }
@@ -1981,6 +1945,21 @@ function BlogPost() {return (";
 }
 ;
 =======
+=======
+                <Link href="/talent" className="text-zion-cyan underline">talent</Link> to accelerate your projects.
+
+            <div className="mt-12 text-center">
+              <p className="text-zion-slate-light">
+                Ready to put these ideas into action? Explore our{' '}
+                <Link href="/services" className="text-zion-cyan underline">AI services</Link>{' '}
+                or browse expert{' '}
+              </p>
+            </div>
+            {/* Navigation */}
+            <div className="flex justify-between items-center mt-12">
+              <Button
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 variant="outline"
                 className="border-zion-blue-light text-zion-slate-light hover: bg-zion-blue-light hover:text-white"
                 asChild
@@ -1996,312 +1975,6 @@ function BlogPost() {return (";
       </div>
     </>
   )
-}
-outline"className=" border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white"asChild > <Link href=" /blog"> <ArrowLeft className=" mr-2 h-4 w-4"/> Back to all articles </Link> </Button> </div> </div> <div className=" relative"> <Button > <Share2 className=" h-4 w-4 mr-1"/> <span className=" text-sm">Share</span> </Button> <a href= {'
-  getShareUrl ('facebook') "
-}target=" blank"rel=" noopener noreferrer"className=" flex items-center p-2 hover:bg-zion-blue rounded transition-colors text-zion-slate-light hover:text-white"aria-label=" Share on Facebook"title=" Share on Facebook"> <Facebook className=" h-4 w-4 mr-2"/> <span>Facebook</span> </Link> <a > <Twitter className=" h-4 w-4 mr-2"/> <span>Twitter</span> </Link> <a > <Linkedin className=" h-4 w-4 mr-2"/> <span>LinkedIn</span> </Link> </div>)
-}</div> </div> </div> </div> /> </div> </div> <ReactMarkdown> {
-  post.content
-}</ReactMarkdown> </div> <span key= {
-  tag "
-}className=" text-xs text-zion-slate-light bg-zion-blue-dark px-3 py-1 rounded-full"> # {
-  tag
-}</span>) ) "
-}</div> <Separator className=" my-12 bg-zion-blue-light"/> > <div className=" aspect-[16/9] relative"> <ImageWithRetry </div> </Link>) )
-}</div> </div>) "
-}<Button asChild > <Link href=" /blog"> <ChevronLeft className=" mr-2 h-4 w-4" /> All Articles </Link> </Button> </div> </div> </div> </div> </>)
-}'"import React from 'react'
-import { SEO } from '@/components / SEO'
-export default function Page() {
-    ],
-}
-  const formatDate = (dateString: string) => {
-    return new Date(dateString) .toLocaleDateString('en - US', {
-      year: 'numeric'
-      month: 'long'
-      day: 'numeric',
-})
-}
-  const getCategoryIcon = (category: string) => {
-    const categoryIcons: { [key: string]: any } = {
-      ai: Brain
-      quantum: Cpu
-      security: Shield
-      cloud: Cloud
-      business: TrendingUp
-      iot: Network
-      emerging: Zap,
-}
-    return categoryIcons[category] |BookOpen
-}
-  const getCategoryName = (category: string) => {
-    const categoryNames: { [key: string]: string } = {
-      ai: 'Artificial Intelligence'
-      quantum: 'Quantum Computing'
-      security: 'Cybersecurity'
-      cloud: 'Cloud & DevOps'
-      business: 'Business Insights'
-      iot: 'IoT & Edge'
-      emerging: 'Emerging Tech',
-}
-    return categoryNames[category] |'Uncategorized'
-}
-  return (<div className="min - h-screen bg-gradient - to - br from - slate - 900 via - slate - 800 to - slate -900">
-      <SEO
-        title={`${blogPost.title} - Zion Tech Group Blog`}
-        description={blogPost.excerpt}
-      />
-      {/* Navigation */}
-      <section className="py-6 bg-slate -800 / 50">
-        <div className="container mx - auto px-4">
-          <Link
-            to="/blog"
-            className="inline - flex items - center space - x-2 text-cyan - 400 hover:text-cyan - 300 transition - colors duration -200">
-            <ArrowLeft className="w-4 h-4" />
-            <span > Back to Blog</span>
-          </Link>
-        </div>
-      </section>
-      {/* Article Header */}
-      <section className="py-12">
-        <div className="container mx - auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="max - w-4xl mx -auto">
-            {/* Category and Featured Badge */}
-            <div className="flex items - center space - x-3 mb-6">
-              <span className="px-4 py-2 bg-cyan - 500 / 20 text-cyan - 400 text-sm rounded-full font - medium flex items - center space - x-2">
-                {React.createElement (getCategoryIcon (blogPost.category) , {
-                  className: 'w-4 h-4',
-}) }
-                <span>{getCategoryName(blogPost.category) }</span>
-              </span>
-              {blogPost.featured && (<span className="px-4 py-2 bg-yellow-500 / 20 text-yellow-400 text-sm rounded-full font -medium">
-                  Featured Article
-                </span>) }
-            </div>
-            {/* Title */}
-            <h1 className="text-4xl md:text-5xl font - bold text-white mb-6 leading -tight">
-              {blogPost.title}
-            </h1>
-            {/* Excerpt */}
-            <p className="text-xl text-gray - 300 mb-8 leading -relaxed">
-              {blogPost.excerpt}
-            </p>
-            {/* Article Meta */}
-            <div className="flex flex - wrap items - center justify - between gap-4 py-6 border-t border-b border-slate -700 / 50">
-              <div className="flex items - center space - x-6">
-                <div className="flex items - center space - x-2">
-                  <User className="w-5 h-5 text-cyan -400" />
-                  <div>
-                    <span className="text-white font -medium">
-                      {blogPost.author}
-                    </span>
-                    <span className="text-gray - 400 text-sm block">
-                      {blogPost.authorRole}
-                    </span>
-                  </div>
-                </div>
-                <div className="flex items - center space - x-2">
-                  <Calendar className="w-5 h-5 text-cyan -400" />
-                  <span className="text-gray -300">
-                    {formatDate(blogPost.date) }
-                  </span>
-                </div>
-                <div className="flex items - center space - x-2">
-                  <Clock className="w-5 h-5 text-cyan -400" />
-                  <span className="text-gray -300">{blogPost.readTime}</span>
-                </div>
-              </div>
-              <div className="flex items - center space - x-4">
-                <button     className="flex items - center space - x-2 text-gray - 400 hover:text-cyan - 400 transition - colors duration -200">
-                  <Heart className="w-5 h-5" />
-                  <span>{blogPost.likes}</span>
-                </button>
-                <button     className="flex items - center space - x-2 text-gray - 400 hover:text-cyan - 400 transition - colors duration -200">
-                  <Bookmark className="w-5 h-5" />
-                </button>
-                <button     className="flex items - center space - x-2 text-gray - 400 hover:text-cyan - 400 transition - colors duration -200">
-                  <Share2 className="w-5 h-5" />
-                </button>
-              </div>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-      {/* Article Content */}
-      <section className="py-12">
-        <div className="container mx - auto px-4">
-          <div className="max - w-4xl mx -auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="prose prose - invert prose - lg max - w-none">
-              {/* Featured Image */}
-              <div className="w-full h-64 bg-gradient - to - br from - cyan - 500 / 20 to - blue - 500 / 20 rounded-2xl border border-cyan - 400 / 30 flex items - center justify - center mb-12">
-                <div className="text-center">
-                  <BookOpen className="w-20 h-20 text-cyan - 400 mx - auto mb-4" />
-                  <p className="text-gray -300">Featured Article Image</p>
-                </div>
-              </div>
-              {/* Article Content */}
-              <div
-                className="text-gray - 300 leading -relaxed"
-                // TODO: Sanitize content before using dangerouslySetInnerHTML={{ __html: blogPost.content }}
-              />
-            </motion.div>
-          </div>
-        </div>
-      </section>
-      {/* Tags */}
-      <section className="py-8 bg-slate -800 / 50">
-        <div className="container mx - auto px-4">
-          <div className="max - w-4xl mx -auto">
-            <div className="flex items - center space - x-3">
-              <Tag className="w-5 h-5 text-cyan -400" />
-              <span className="text-white font -medium">Tags:</span>
-              <div className="flex flex - wrap gap-2">
-                {blogPost.tags.map(tag => (<span
-                    key={tag}
-                    className="px-3 py-1 bg-slate - 700 / 50 text-cyan - 400 text-sm rounded-full border border-slate - 600 / 50 hover:border-cyan - 400 / 50 transition - all duration -200">
-                    {tag}
-                  </span>) ) }
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      {/* Author Bio */}
-      <section className="py-12">
-        <div className="container mx - auto px-4">
-          <div className="max - w-4xl mx -auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="bg-slate - 800 / 50 p - 8 rounded-2xl border border-slate -700 / 50">
-              <h3 className="text-2xl font - bold text-white mb-4">
-                About the Author
-              </h3>
-              <div className="flex items - start space - x-4">
-                <div className="w-16 h-16 bg-gradient - to - r from - cyan - 500 to - blue - 500 rounded-full flex items - center justify - center flex - shrink -0">
-                  <User className="w-8 h-8 text-white" />
-                </div>
-                <div>
-                  <h4 className="text-xl font - semibold text-white mb-2">
-                    {blogPost.author}
-                  </h4>
-                  <p className="text-cyan - 400 mb-2">{blogPost.authorRole}</p>
-                  <p className="text-gray -300">{blogPost.authorBio}</p>
-                </div>
-              </div>
-            </motion.div>
-          </div>
-        </div>
-      </section>
-      {/* Related Posts */}
-      <section className="py-20 bg-slate -800 / 50">
-        <div className="container mx - auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16">
-            <h2 className="text-4xl font - bold text-white mb-4">
-              Related Articles
-            </h2>
-            <p className="text-xl text-gray - 300 max - w-3xl mx -auto">
-              Continue exploring insights and analysis on related topics
-            </p>
-          </motion.div>
-          <div className="grid md:grid - cols - 3 gap-8 max - w-6xl mx -auto">
-            {blogPost.relatedPosts.map((post, index) => (<motion.article
-                key={post.id}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-slate - 700 / 50 rounded-xl border border-slate - 600 / 50 overflow-hidden hover:border-cyan - 400 / 50 transition - all duration -300 group">
-                <div className="h-48 bg-gradient - to - br from - cyan - 500 / 20 to - blue - 500 / 20 flex items - center justify -center">
-                  <BookOpen className="w-16 h-16 text-cyan -400" />
-                </div>
-                <div className="p -6">
-                  <div className="flex items - center space - x-2 mb-3">
-                    <span className="px-3 py-1 bg-cyan - 500 / 20 text-cyan - 400 text-xs rounded-full font -medium">
-                      {getCategoryName(post.category) }
-                    </span>
-                  </div>
-                  <h3 className="text-lg font - bold text-white mb-3 group - hover:text-cyan - 400 transition - colors duration -200">
-                    {post.title}
-                  </h3>
-                  <p className="text-gray - 300 mb-4 line - clamp -3">
-                    {post.excerpt}
-                  </p>
-                  <div className="flex items - center justify - between text-sm text-gray -400">
-                    <div className="flex items - center space - x-2">
-                      <Calendar className="w-4 h-4" />
-                      <span>{formatDate(post.date) }</span>
-                    </div>
-                    <div className="flex items - center space - x-2">
-                      <Clock className="w-4 h-4" />
-                      <span>{post.readTime}</span>
-                    </div>
-                  </div>
-                </div>
-              </motion.article>) ) }
-          </div>
-        </div>
-      </section>
-      {/* CTA Section */}
-      <section className="py-20">
-        <div className="container mx - auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center max - w-4xl mx -auto">
-            <h2 className="text-4xl font - bold text-white mb-6">
-              Ready to Transform Your Business?
-            </h2>
-            <p className="text-xl text-gray - 300 mb-8">
-              Let's discuss how our AI - powered solutions can drive innovation
-              and growth for your organization.</p>
-            <div className="flex flex - wrap justify - center gap-4">
-              <Link
-                to="/contact"
-                className="px-8 py-3 bg-gradient - to - r from - cyan - 500 to - blue - 500 text-white font - semibold rounded-lg hover:from - cyan - 600 hover:to - blue - 600 transition - all duration -300">
-                Get Started Today
-              </Link>
-              <Link
-                to="/services"
-                className="px-8 py-3 border border-cyan - 400 text-cyan - 400 font - semibold rounded-lg hover:bg-cyan - 400 hover:text-white transition - all duration -300">
-                Explore Our Services
-              </Link>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-    </div>)
-}
-export default function BlogPost() {return ("
-    <div className = "min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">"
-      <SEO title="BlogPost - Zion Tech Group" description="Professional BlogPost services by Zion Tech Group"  />"
-      <div className="container mx-auto px-4 py-20">"
-        <h1 className="text-4xl font-bold text-white mb-8">BlogPost</h1>"
-        <p className="text-gray-300 text-lg">
-          Professional BlogPost services to help your business grow.
-        </p>
-      </div>
-  )
-}
-}
-}
-  );
-};
-};
-};
                 <Link href="/talent" className="text-zion-cyan underline">talent</Link> to accelerate your projects.;
               </p>;
             </div>;
@@ -2325,8 +1998,11 @@ export default function BlogPost() {return ("
   );
 }
 ;
+<<<<<<< HEAD
 
 
 }
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

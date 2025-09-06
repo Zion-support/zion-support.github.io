@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
   try {
@@ -53,6 +54,12 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return res.status(400).json({ error: err.message })
 import type { NextApiRequest, NextApiResponse } from "next",;
 import { burnTokens, burnForFeature } from "../../../utils/token/service",;
+=======
+
+
+  try {
+  } catch (err: any) {
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ;
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -112,4 +119,15 @@ export default function handler(req, res) {
 }
   }
 }
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+}
+
+}
+;
+    return res.status(400).json({ error: err.message })
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

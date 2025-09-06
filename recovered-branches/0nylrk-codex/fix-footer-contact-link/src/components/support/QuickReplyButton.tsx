@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -7,10 +8,13 @@
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface QuickReplyButtonProps {
   text: string;
   onClick: () => void
 }
+<<<<<<< HEAD
 export function QuickReplyButton({ text, onClick }: QuickReplyButtonProps) {
 =======
 import React from "react";
@@ -41,10 +45,11 @@ import { Button } from "@/components/ui/button",
 import { cn } from "@/lib/utils",
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
->>>>>>> main
 interface QuickReplyButtonProps {
   text: string;
   onClick: () => void;
@@ -53,7 +58,10 @@ export function QuickReplyButton({ text, onClick }: QuickReplyButtonProps) {
 
         "border-zion-purple/30 hover: bg-zion-purple hover:text-white",
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         "transition-colors duration-200"
         "border-zion-purple/30 hover:bg-zion-purple hover:text-white",
         "transition-colors duration-200"
@@ -74,6 +82,7 @@ export function QuickReplyButton({ text, onClick }: QuickReplyButtonProps) {;
         "border-zion-purple/30 hover:bg-zion-purple hover:text-white";
         "transition-colors duration-200";
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -84,6 +93,9 @@ export function QuickReplyButton({ text, onClick }: QuickReplyButtonProps) {;
         "transition-colors duration-200",
 >>>>>>> main
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+        "transition-colors duration-200",
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       )}
       onClick={onClick}>;
       {text}
@@ -91,7 +103,10 @@ export function QuickReplyButton({ text, onClick }: QuickReplyButtonProps) {;
     </Button>;
   );
 }
+  return (
+    <Button
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -99,6 +114,8 @@ export function QuickReplyButton({ text, onClick }: QuickReplyButtonProps) {;
   );
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from './react';
 import { Button  } from '@/components / ui / button';
 import { cn  } from '@/lib / utils';
@@ -106,6 +123,7 @@ interface QuickReplyButtonProps {
   text: string;
   on_click: () => void;
 }
+<<<<<<< HEAD
 export /**
  * QuickReplyButton - Function description
  */
@@ -214,3 +232,5 @@ export function QuickReplyButton({ text, onClick }: QuickReplyButtonProps) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

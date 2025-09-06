@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -22,11 +23,14 @@ export interface TalentCardProps {
 }
 export function TalentCard({
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {Button} from "@/components/ui/button";
 import {Card} from "@/components/ui/card";
 import {Star, MapPin, Clock, ArrowRight, CheckCircle2} from "lucide-react";
 import {useNavigate} from "react-router-dom";
 import {TalentProfile} from "@/types/talent";
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 import { Button } from "@/components/ui/button",
@@ -44,6 +48,8 @@ export interface TalentCardProps {
 }
 
 export function TalentCard({;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   talent;
   onViewProfile;
   onRequestHire;
@@ -92,10 +98,13 @@ import { Card } from "@/components/ui/card",;
 import { Star, MapPin, Clock, ArrowRight, CheckCircle2 } from "lucide-react",;
 import { useNavigate } from "react-router-dom",;
 import { TalentProfile } from "@/types/talent",;
+<<<<<<< HEAD
 
 
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export interface TalentCardProps {;
   talent: TalentProfile,;
   onViewProfile: (id: string) => void,;
@@ -105,20 +114,30 @@ export interface TalentCardProps {;
   isAuthenticated: boolean;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 export function TalentCard(): any ({;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+export function TalentCard(): any ({;
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   talent;
   onViewProfile;
   onRequestHire;
   isSaved;
   onToggleSave;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   isAuthenticated;
 }: TalentCardProps) {;
   const navigate = useNavigate();
@@ -149,6 +168,7 @@ export function TalentCard(): any ({;
     }
   };
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -165,10 +185,16 @@ export function TalentCard(): any ({;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
 <<<<<<< HEAD
+=======
+
+
+  return (
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <Card className="overflow-hidden transition-all hover:shadow-lg border-zion-blue-light bg-zion-blue cursor-pointer" onClick={handleViewProfile}>;
       <div className="p-6">;
         <div className="flex items-start">;
           {/* Avatar */}
+<<<<<<< HEAD
 
           <div className="relative mr-4">;
             <div className="w-16 h-16 rounded-full overflow-hidden bg-zion-blue-dark border border-zion-blue-light">;
@@ -227,6 +253,8 @@ export function TalentCard({;
           <div className="relative mr-4">;
             <div className="w-16 h-16 rounded-full overflow-hidden bg-zion-blue-dark border border-zion-blue-light">;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               )}
             </div>;
             {talent && talent.is_verified && (;
@@ -235,6 +263,7 @@ export function TalentCard({;
               </div>;
             )}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
           </div>;
 
@@ -242,10 +271,13 @@ export function TalentCard({;
 =======
           </div>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           {/* Main Info */}
           <div className="flex-1">;
             <div className="flex justify-between items-start">;
               <h3 className="text-lg font-bold text-white">{talent && talent.full_name}</h3>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
   const handleToggleSave = (e: React.MouseEvent) => {;
@@ -289,10 +321,13 @@ export function TalentCard({;
             <div className="flex justify-between items-start">
               <h3 className="text-lg font-bold text-white">{talent.full_name}</h3>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <Button
                 variant="ghost"
                 size="sm"
                 className="p-1 h-auto text-zion-slate-light hover:text-zion-cyan"
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
                 onClick={handleToggleSave}
@@ -324,6 +359,8 @@ export function TalentCard({;
             
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             {/* Location & Availability */}
             <div className="mt-2 flex flex-wrap gap-3 text-sm">;
               {talent && talent.location && (;
@@ -336,6 +373,7 @@ export function TalentCard({;
                 <div className="flex items-center text-zion-slate-light">;
                   <Clock className="h-4 w-4 mr-1" />;
                   <span>{talent && talent.availability_type}</span>;
+<<<<<<< HEAD
 <<<<<<< HEAD
                 </div>;
               )}
@@ -404,12 +442,17 @@ export function TalentCard({;
             <div className="flex flex-wrap gap-2">;
               {skills && skills.map((skill, index) => (;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+                </div>;
+              )}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <span
                   key={index}
                   className="px-2 py-1 text-xs rounded-full bg-zion-blue-light text-zion-slate-light">;
                   {skill}
                 </span>;
               ))}
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -494,10 +537,13 @@ export function TalentCard({;
           <div>;
                 </span>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               )}
             </div>;
           </div>;
         )}
+<<<<<<< HEAD
 
 
 
@@ -513,10 +559,13 @@ export function TalentCard({;
               <div className="text-white font-bold">;
                 ${talent.hourly_rate}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <span className="text-zion-slate-light font-normal">/hr</span>;
               </div>;
             ) : (;
               <div className="text-zion-slate-light">Rate not specified</div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -538,10 +587,14 @@ export function TalentCard({;
           <div className="flex items-center gap-2">
             {isAuthenticated && (
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+            )}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <Button
                 size="sm"
                 variant="secondary"
                 onClick={handleRequestHire}
+<<<<<<< HEAD
 <<<<<<< HEAD
                 className="bg-zion-purple hover:bg-zion-purple-light text-white">;
                 Hire;
@@ -552,10 +605,16 @@ export function TalentCard({;
                 Hire
               </Button>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+                className="bg-zion-purple hover:bg-zion-purple-light text-white">;
+                Hire;
+              </Button>;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             )}
             <Button
               size="sm"
               variant="ghost"
+<<<<<<< HEAD
 
               onClick={(e) => {
 
@@ -569,6 +628,8 @@ export function TalentCard({;
 
                 e.stopPropagation(),
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 handleViewProfile()
               }}
               className="text-zion-cyan hover: text-white hover:bg-zion-blue-light"
@@ -580,6 +641,7 @@ export function TalentCard({;
       </div>
     </Card>
   )
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 =======
@@ -784,10 +846,13 @@ if ( {) {
             >;
               View <ArrowRight className="ml-1 h-4 w-4" />;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             </Button>;
           </div>;
         </div>;
       </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     </Card>);
@@ -855,3 +920,5 @@ isAuthenticated
 }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

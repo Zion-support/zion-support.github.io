@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 import { supabase } from "@/integrations/supabase/client",
@@ -10,26 +11,40 @@ import { supabase } from "@/integrations/supabase/client",
 import { toast } from "sonner",
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
 import { supabase } from "@/integrations/supabase/client",
 import { toast } from "sonner",
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {supabase} from "@/integrations/supabase/client";
 import {toast} from "sonner";
 import { supabase } from "@/integrations/supabase/client",
 import { toast } from "sonner",
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+import {supabase} from "@/integrations/supabase/client";
+import {toast} from "sonner";
+import { supabase } from "@/integrations/supabase/client",
+import { toast } from "sonner",
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export async function createJob(jobData: any) {
   try {
     const { data, error } = await supabase
       .from('jobs')
       .insert([jobData])
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -60,6 +75,8 @@ export async function createJob(jobData: any) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   }
 }
 export async function updateJob(jobId: string, jobData: any) {
@@ -68,6 +85,7 @@ export async function updateJob(jobId: string, jobData: any) {
       .from('jobs')
       .update(jobData)
       .eq('id', jobId)
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     console && console.error("Error updating job:", error);
@@ -93,11 +111,14 @@ import { toast } from "sonner",;
 export async function createJob(jobData:any) {;
       .select();
       .single();
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       .select()
       .single();
     if (error) throw error;
     return data
   } catch (error: any) {
+<<<<<<< HEAD
     console.error("Error updating job:", error);
     throw new Error(error.message |"Failed to update job")
       .single(),
@@ -108,6 +129,8 @@ export async function createJob(jobData:any) {;
     console.error("Error updating job:", error),
     throw new Error(error.message || "Failed to update job")
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   }
 }
 export async function getJobById(jobId: string) {
@@ -115,6 +138,7 @@ export async function getJobById(jobId: string) {
     const { data, error } = await supabase
       .from('jobs')
       .select('*')
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -178,11 +202,14 @@ export async function getJobById(jobId: string) {;
       .eq('id', jobId)
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     return data
   } catch (error: any) {
     console && console.error("Error fetching job:", error);
     toast && toast.error("Failed to load job details");
     return null
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -200,6 +227,8 @@ import { toast } from "sonner",;
 export async function createJob(jobData: any) {;
   try {;
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     const { data, error } = await supabase;
       .from ('jobs');
       .insert ([job_data]);
@@ -258,6 +287,7 @@ if (throw error) {
     console.error ("Error fetching job:", error);
     toast.error ("Failed to load job details");
     return null;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
 <<<<<<< HEAD
@@ -295,3 +325,7 @@ if (throw error) {
 }
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  }
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

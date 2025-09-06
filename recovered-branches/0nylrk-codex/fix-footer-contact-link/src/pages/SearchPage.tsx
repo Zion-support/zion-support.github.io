@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 class ErrorBoundary extends React.Component {
@@ -26,6 +27,8 @@ import React from 'react';
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {useEffect, useState} from "react";
 import {useNavigate, useSearchParams} from "react-router-dom";
 import {EnhancedSearchInput} from "@/components/search/EnhancedSearchInput";
@@ -34,6 +37,7 @@ import {SearchSuggestion} from "@/types/search";
 import {useAISearch} from "@/hooks/useAISearch";
 import {AppLayout} from "@/layout/AppLayout";
 export default function SearchPage() {;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -55,6 +59,8 @@ export default function SearchPage() {;
   const initial = params.get("q") || "";
   const [query, setQuery] = useState(initial);
   const { results, loading, search } = useAISearch();
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useEffect, useState } from "react",
 import { useNavigate, useSearchParams } from "react-router-dom",
 import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput",
@@ -78,13 +84,22 @@ export default function SearchPage() {
   const initial = params.get("q") || "",
   const [query, setQuery] = useState(initial),
   const { results, loading, search } = useAISearch(),
+
+  const [params] = useSearchParams();
+
+  const navigate = useNavigate();
+
   const suggestions: SearchSuggestion[] = generateSearchSuggestions(),
 
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   useEffect(() => {
     if (initial) {
       search(initial)
     }
+<<<<<<< HEAD
 
   const initial = params && params.get("q") || "";
   const [query, setQuery] = useState(initial);
@@ -147,10 +162,13 @@ export default function SearchPage() {;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <AppLayout>;
       <main className="container mx-auto px-4 py-8">;
         <form onSubmit={handleSubmit} className="mb-6">;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -159,12 +177,15 @@ export default function SearchPage() {;
       <main className="container mx-auto px-4 py-8">
         <form onSubmit={handleSubmit} className="mb-6">
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <EnhancedSearchInput
             value={query}
             onChange={setQuery}
             searchSuggestions={suggestions}
             placeholder="Search talent, jobs, and projects..."
 
+<<<<<<< HEAD
           />;
         </form>;
 
@@ -180,6 +201,8 @@ export default function SearchPage() {;
         </form>
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useEffect, useState } from "react",;
 import { useNavigate, useSearchParams } from "react-router-dom",;
 import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput",;
@@ -216,6 +239,7 @@ export default function SearchPage() {;
           />;
         </form>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -223,6 +247,8 @@ export default function SearchPage() {;
           />;
         </form>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         {loading && <p className="text-zion-slate-light">Searching...</p>}
         {!loading && results && results.length === 0 && (;
           <p className="text-zion-slate-light">No results found.</p>;
@@ -240,6 +266,7 @@ export default function SearchPage() {;
                 <p className="text-zion-slate-light">{r && r.description}</p>;
               </div>;
             ))}
+<<<<<<< HEAD
 <<<<<<< HEAD
           </div>;
         )}
@@ -293,6 +320,8 @@ export default function SearchPage() {;
       </main>;
     </AppLayout>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useEffect, useState } from './react';
 import { use_navigate, useSearchParams } from './react-router-dom';
 import { EnhancedSearchInput } from '@/components / search / EnhancedSearchInput';
@@ -357,6 +386,7 @@ if ( {) {
     </AppLayout>);
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
   ),;}
@@ -407,3 +437,5 @@ if ( {) {
   )
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

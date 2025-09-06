@@ -1,8 +1,11 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 
@@ -17,6 +20,7 @@ import {HELP_CATEGORIES} from "./help-content";
 import {AppLayout} from "@/layout/AppLayout";
 import {Search} from "lucide-react";
 export default function HelpCenter() {;
+
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const [selectedArticle, setSelectedArticle] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState("");
@@ -34,6 +38,7 @@ export default function HelpCenter() {
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null),
   const [selectedArticle, setSelectedArticle] = useState<string | null>(null),
   const [searchQuery, setSearchQuery] = useState(""),
+<<<<<<< HEAD
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 class ErrorBoundary extends React.Component {
@@ -72,10 +77,13 @@ import {Search} from "lucide-react";
 export default function HelpCenter() {;
 <<<<<<< HEAD
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const [selectedArticle, setSelectedArticle] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState("");
 
+<<<<<<< HEAD
 
 
 
@@ -84,6 +92,8 @@ export default function HelpCenter() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   
   const handleCategorySelect = (categoryId: string) => {
     setSelectedCategory(categoryId),
@@ -103,6 +113,7 @@ export default function HelpCenter() {;
     setSelectedArticle(null)
   },
   
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -142,6 +153,8 @@ export default function HelpCenter() {
 
 >>>>>>> main
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <AppLayout>
       <div className="container mx-auto px-4 py-8">
@@ -154,12 +167,15 @@ export default function HelpCenter() {
             team.
           </p>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 
 >>>>>>> main
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <div className="relative mb-8">
             <Input
               placeholder="Search for help articles..."
@@ -170,18 +186,22 @@ export default function HelpCenter() {
             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />
           </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 
 >>>>>>> main
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <Tabs defaultValue="articles" className="mb-8">
             <TabsList className="w-full grid grid-cols-3 mb-6">
               <TabsTrigger value="articles">Articles</TabsTrigger>
               <TabsTrigger value="faq">FAQ</TabsTrigger>
               <TabsTrigger value="contact">Contact Us</TabsTrigger>
             </TabsList>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -285,6 +305,8 @@ function HelpCenter() {
   };
   return (
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useState } from "react",;
 import { Input } from "@/components/ui/input",;
 import { Button } from "@/components/ui/button",;
@@ -295,31 +317,10 @@ import { HelpArticleView } from "./HelpArticleView",;
 import { HELP_CATEGORIES } from "./help-content",;
 import { AppLayout } from "@/layout/AppLayout",;
 import { Search } from "lucide-react",;
-;
 export default function HelpCenter() {;
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null),;
   const [selectedArticle, setSelectedArticle] = useState<string | null>(null),;
   const [searchQuery, setSearchQuery] = useState(""),;
-  ;
-  const handleCategorySelect = (categoryId:string) => {;
-    setSelectedCategory(categoryId),;
-    setSelectedArticle(null);
-  },;
-  ;
-  const handleArticleSelect = (articleId:string) => {;
-    setSelectedArticle(articleId);
-  },;
-  ;
-  const handleBackToCategories = () => {;
-    setSelectedCategory(null),;
-    setSelectedArticle(null),;
-  },;
-  ;
-  const handleBackToArticles = () => {;
-    setSelectedArticle(null),;
-  },;
-  ;
-  return (;
   const handleCategorySelect = (categoryId: string) => {;
     setSelectedCategory(categoryId),;
     setSelectedArticle(null);
@@ -335,7 +336,10 @@ export default function HelpCenter() {;
     setSelectedArticle(null);
   };
   return (;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <AppLayout>;
       <div className="container mx-auto px-4 py-8">;
         <div className="max-w-4xl mx-auto">;
@@ -346,6 +350,7 @@ export default function HelpCenter() {;
             Find answers to common questions or get in touch with our support team.;
           </p>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
           <div className="relative mb-8">;
             <Input
@@ -353,28 +358,38 @@ export default function HelpCenter() {;
               value={searchQuery}
               onChange={(e) => setSearchQuery(e && e.target.value)}
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           ;
           <div className="relative mb-8">;
             <Input;
               placeholder="Search for help articles...";
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               className="pl-10";
             />;
             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />;
           </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
           ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+          ;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <Tabs defaultValue="articles" className="mb-8">;
             <TabsList className="w-full grid grid-cols-3 mb-6">;
               <TabsTrigger value="articles">Articles</TabsTrigger>;
               <TabsTrigger value="faq">FAQ</TabsTrigger>;
               <TabsTrigger value="contact">Contact Us</TabsTrigger>;
             </TabsList>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
             <TabsContent value="articles">;
@@ -400,18 +415,24 @@ export default function HelpCenter() {;
                   categories={HELP_CATEGORIES} ;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 =======
+=======
+            <TabsContent value="articles">;
+              {!selectedCategory && !selectedArticle && (;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
             <TabsContent value="articles">
               {!selectedCategory && !selectedArticle && (
                 <HelpCategoryList
                   categories={HELP_CATEGORIES}
->>>>>>> main
                   onCategorySelect={handleCategorySelect}
                   searchQuery={searchQuery}
                 />
               )}
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               {selectedCategory && !selectedArticle && (
                 <>
                   <Button
@@ -421,6 +442,7 @@ export default function HelpCenter() {;
                   >
                     ← All Categories
                   </Button>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -442,12 +464,15 @@ export default function HelpCenter() {;
 =======
                   <HelpArticleList
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     categoryId={selectedCategory}
                     onArticleSelect={handleArticleSelect}
                     searchQuery={searchQuery}
                   />;
                 </>;
               )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -456,16 +481,18 @@ export default function HelpCenter() {;
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               {selectedArticle && (
                 <>
 
               {selectedArticle && (;
                 <>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                   <Button
                     variant="ghost"
                     onClick={handleBackToArticles}
                     className="mb-4">;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
               ;
@@ -478,10 +505,13 @@ export default function HelpCenter() {;
                   >;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                     ← Back to Articles;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   </Button>;
                   <HelpArticleView articleId={selectedArticle} />;
                 </>;
               )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -504,6 +534,8 @@ export default function HelpCenter() {;
 =======
 >>>>>>> main
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <div className="space-y-6">
                   <div>
                     <h3 className="font-medium text-zion-cyan mb-2">
@@ -513,14 +545,18 @@ export default function HelpCenter() {;
                       Our AI matching algorithm analyzes your requirements and
                       preferences to match you with the most compatible talent
 <<<<<<< HEAD
+<<<<<<< HEAD
                       or services. The process takes into account skills
 =======
                       or services. The process takes into account skills,
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       experience, availability, and past performance to ensure
                       optimal results.
                     </p>
                   </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -528,6 +564,8 @@ export default function HelpCenter() {;
 
 >>>>>>> main
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   <div>
                     <h3 className="font-medium text-zion-cyan mb-2">
                       How do I hire someone on Zion?
@@ -540,12 +578,15 @@ export default function HelpCenter() {;
                     </p>
                   </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 
 >>>>>>> main
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   <div>
                     <h3 className="font-medium text-zion-cyan mb-2">
                       What are the payment terms?
@@ -558,12 +599,15 @@ export default function HelpCenter() {;
                     </p>
                   </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 
 >>>>>>> main
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   <div>
                     <h3 className="font-medium text-zion-cyan mb-2">
                       How do I contact support?
@@ -579,12 +623,15 @@ export default function HelpCenter() {;
               </div>
             </TabsContent>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 
 >>>>>>> main
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <TabsContent value="contact">
               <div className="grid grid-cols-1 md: grid-cols-2 gap-8">
                 <div className="bg-zion-blue-light/20 rounded-lg p-6">
@@ -596,12 +643,15 @@ export default function HelpCenter() {;
                     questions or issues.
                   </p>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 
 >>>>>>> main
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   <div className="space-y-4">
                     <div className="flex items-center">
                       <div className="bg-zion-purple/10 p-2 rounded-full mr-3">
@@ -621,6 +671,7 @@ export default function HelpCenter() {;
                       >
                         support@ziontechgroup.com
 <<<<<<< HEAD
+<<<<<<< HEAD
                       </a>
                     </div>
 =======
@@ -631,6 +682,10 @@ export default function HelpCenter() {;
 
 >>>>>>> main
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+                      </Link>
+                    </div>
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     <div className="flex items-center">
                       <div className="bg-zion-purple/10 p-2 rounded-full mr-3">
                         <svg
@@ -648,23 +703,29 @@ export default function HelpCenter() {;
                     </div>
                   </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 
 >>>>>>> main
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   <Button className="w-full mt-6 bg-zion-purple hover:bg-zion-purple-light">
                     Open Live Chat
                   </Button>
                 </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 
 >>>>>>> main
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <div className="bg-zion-blue-light/20 rounded-lg p-6">
                   <h2 className="text-xl font-semibold mb-4">
                     Feedback & Suggestions
@@ -674,12 +735,15 @@ export default function HelpCenter() {;
                     our platform.
                   </p>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 
 >>>>>>> main
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   <form className="space-y-4">
                     <div>
                       <Input placeholder="Your email" />
@@ -694,12 +758,15 @@ export default function HelpCenter() {;
                       />
                     </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 
 >>>>>>> main
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     <Button className="w-full bg-zion-cyan hover:bg-zion-cyan/80">
                       Submit Feedback
                     </Button>
@@ -711,6 +778,7 @@ export default function HelpCenter() {;
         </div>
       </div>
     </AppLayout>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
             </TabsContent>;
@@ -930,14 +998,18 @@ export default function HelpCenter() {;
   );
 >>>>>>> main
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
+  );
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+}
     </AppLayout>);
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     </AppLayout>;
   );}
  export default function HelpCenter () {
@@ -990,4 +1062,7 @@ const handleBackToArticles = () => {
 
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

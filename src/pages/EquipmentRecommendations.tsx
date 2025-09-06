@@ -1,7 +1,10 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {useEffect, useState} from 'react'
 import {ProductListingCard} from '@/components/ProductListingCard'
 import {useAuth} from '@/hooks/useAuth'
@@ -30,6 +33,7 @@ export default function EquipmentRecommendations() {
   const [listings, setListings] = useState<ProductListing[]>([])
   const [loading, setLoading] = useState<boolean>(false)
   const [error, setError] = useState<boolean>(false)
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 import { useEffect, useState } from 'react',;
@@ -173,6 +177,8 @@ export default function EquipmentRecommendations() {;
 
   if (!isAuthenticated) {
     return (
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <Dialog open>
         <DialogContent className="bg-zion-blue border-zion-blue-light text-white">
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -180,6 +186,7 @@ export default function EquipmentRecommendations() {;
             <DialogTitle>Authentication required</DialogTitle>
           </DialogHeader>
           <p>Please sign in to get personalized AI picks.</p>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -197,11 +204,16 @@ export default function EquipmentRecommendations() {;
               Sign In
             </Link>          </Button>          <Button asChild className="mt-4 bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white">
           <Button asChild className="mt-4 bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white">
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <Link href="/auth/login?returnTo=/equipment/recommendations">Sign In</Link>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         </DialogContent>
       </Dialog>
     )
+<<<<<<< HEAD
             className='mt-4 bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white'>;
             <Link href='/auth/login?returnTo=/equipment/recommendations'>;
               Sign In;
@@ -248,6 +260,10 @@ export default function EquipmentRecommendations() {;
     </div>
   )
 }
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <div className="min-h-screen bg-zion-blue py-8 px-4">
       <h1 className="text-2xl font-bold text-white mb-6">AI Equipment Recommendations</h1>
       {loading && (
@@ -265,6 +281,7 @@ export default function EquipmentRecommendations() {;
       </div>;
     </div>;
   );
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
       </div>;
@@ -376,3 +393,5 @@ if ( {) {
 =======
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

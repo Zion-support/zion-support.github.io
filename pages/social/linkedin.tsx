@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -25,6 +26,10 @@ class ErrorBoundary extends React.Component {
 import React, { useEffect } from 'react';
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+export default function LinkedInRedirect() {
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 
@@ -61,6 +66,7 @@ export default function LinkedInRedirect() {;
     </>;
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
@@ -81,6 +87,21 @@ export default function LinkedInRedirect() {
 		}
 	}, []);
 
+=======
+export default function LinkedInRedirect(req, res) {
+  try {
+	useEffect(() => {;
+		if (typeof window !== 'undefined') {;
+			window.location.replace('https: //www.linkedin.com/company/zion-tech-group');
+		  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+
+
+}
+	}, []),
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 	return (
 		<>
 			<Head>
@@ -98,9 +119,12 @@ export default function LinkedInRedirect() {
 	)
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import Head from 'next / head';
 ;
 export default /**
@@ -142,6 +166,7 @@ if ( {) {
     </>);
 ;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
@@ -244,3 +269,6 @@ export default function LinkedInRedirect(req, res) {
   }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

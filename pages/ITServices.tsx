@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 class ErrorBoundary extends React.Component {
@@ -89,6 +90,8 @@ import React from "react";
 import Layout from "../components/Layout";
 origin/main
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export default function ITServices() {
   return (
     <Layout
@@ -98,6 +101,7 @@ export default function ITServices() {
       <div className="min-h-screen bg-gray-50 py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
+<<<<<<< HEAD
 <<<<<<< HEAD
 
             <h1 className="text-4xl font-bold text-gray-900 mb-4">IT Services</h1>
@@ -111,11 +115,14 @@ export default function ITServices() {
             <h1 className="text-4xl font-bold text-gray-900 mb-4">IT Services</h1>
 origin/automation-improvements-final
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Complete IT solutions to power your digital transformation.
             </p>
           </div>
           <div className="text-center">
+<<<<<<< HEAD
 <<<<<<< HEAD
 
             <p className="text-gray-600">IT Services page is under construction.</p>
@@ -199,6 +206,8 @@ function ITServices() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 
 
@@ -517,26 +526,23 @@ const stats = [
   { number: "500+", label: "IT Projects Completed" },
   { number: "24/7", label: "Support Available" }
 ];
+<<<<<<< HEAD
 
 export default function ITServices() {
   
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     >
-      {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white py-20">
+      <div className="min-h-screen bg-gray-50 py-20">
         <div className="container mx-auto px-4">
-          <motion.div
-            className="text-center"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              IT Services & Solutions
+          <div className="text-center mb-12">
+            <h1 className="text-4xl font-bold text-gray-900 mb-4">
+              IT Services
             </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Comprehensive IT services that keep your business running smoothly. From managed IT support 
-              and cloud migration to cybersecurity and data management - we provide the technology foundation your business needs.
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Complete IT solutions to power your digital transformation.
             </p>
+<<<<<<< HEAD
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
                 href="/contact" 
@@ -839,3 +845,6 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

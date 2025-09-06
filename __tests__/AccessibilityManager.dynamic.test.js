@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -33,6 +34,8 @@ import _React from 'react';  import '@testing-library/jest-dom'; import Accessib
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from 'react'
 import { render, screen, fireEvent } from '@testing-library/react'
 import '@testing-library/jest-dom'
@@ -45,6 +48,9 @@ describe('AccessibilityManagerdynamic'
   test('applies correct styling'
 const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import AccessibilityManagerdynamic from "./components/AccessibilityManager.dynamic"; describe('AccessibilityManagerdynamic', () => { test("renders without crashing",() => { render(<AccessibilityManagerdynamic />); expect( screen.getByTestId("accessibilitymanager.dynamic") ).toBeInTheDocument()}); test("displays correct content",() => { render(<AccessibilityManagerdynamic />)}); test("handles user interactions",() => { render(<AccessibilityManagerdynamic />)}); test("applies correct styling"
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

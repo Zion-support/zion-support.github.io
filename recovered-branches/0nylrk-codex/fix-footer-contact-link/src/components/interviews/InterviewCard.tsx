@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import {Card, CardContent, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
 import {Button} from "@/components/ui/button";
@@ -12,6 +11,7 @@ import {Dialog, DialogContent, DialogHeader, DialogTitle} from "@/components/ui/
 import {Clock, ExternalLink, MessageSquare, Video, X} from "lucide-react";
 import {toast} from "@/components/ui/use-toast";
 import {InterviewResponseForm} from "./InterviewResponseForm";
+<<<<<<< HEAD
 <<<<<<< HEAD
 interface InterviewCardProps {;
   interview: Interview,;
@@ -379,6 +379,8 @@ if ( {) {
       return `Starts in ${formatDistanceToNow(interviewDate)}`
     }
   };
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useState } from "react",
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
@@ -422,64 +424,22 @@ export function InterviewCard({ interview, onRefresh }: InterviewCardProps) {
     if (isPast(interviewDate)) {
       return `Took place ${formatDistanceToNow(interviewDate)} ago`
     } else {
-      return `Starts in ${formatDistanceToNow(interviewDate)}`
-    }
-  }
-  const handleRespondToInterview = async (status: 'confirmed' | 'declined' | 'rescheduled') => {
-    setIsLoading(true)
-    const success = await respondToInterview(interview.id, {
-      interview_id: interview.id
-      status
-    });
-import { toast } from "@/components/ui/use-toast",
-import { InterviewResponseForm } from "./InterviewResponseForm",
-interface InterviewCardProps {
-  interview: Interview,
-  onRefresh: () => Promise<void>
-import React, { useState } from "react",;
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
-import { Button } from "@/components/ui/button",;
-import { Badge } from "@/components/ui/badge",;
-import { Interview } from "@/types/interview",;
-import { useAuth } from "@/hooks/useAuth",;
-import { useInterviews } from "@/hooks/useInterviews",;
-import { format, formatDistanceToNow, isPast, parseISO } from "date-fns",;
-import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle, AlertDialogTrigger } from "@/components/ui/alert-dialog",;
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog",;
-import { Clock, ExternalLink, MessageSquare, Video, X } from "lucide-react",;
-import { toast } from "@/components/ui/use-toast",;
-import { InterviewResponseForm } from "./InterviewResponseForm",;
 interface InterviewCardProps {;
   interview: Interview,;
   onRefresh: () => Promise<void>;
 }
-;
-export function InterviewCard({ interview, onRefresh }: InterviewCardProps) {;
-  const { user } = useAuth(),;
-  const { respondToInterview, cancelInterview } = useInterviews(),;
-  const [isResponseDialogOpen, setIsResponseDialogOpen] = useState(false),;
-  const [isLoading, setIsLoading] = useState(false),;
-  const isClient = user?.id === interview.client_id,;
-  const isTalent = user?.id === interview.talent_id,;
-  // Format interview date and time;
-  const interviewDate = parseISO(interview.scheduled_date),;
-  const formattedDate = format(interviewDate, 'EEEE, MMMM d'),;
-  const formattedTime = format(interviewDate, 'h: mm a'),;
-  // Calculate when interview ends;
-  const endTime = new Date(interviewDate),;
-  endTime.setMinutes(endTime.getMinutes() + interview.duration_minutes),;
-  const formattedEndTime = format(endTime, 'h: mm a'),;
-  const isInterviewPending = interview.status === 'requested',;
-  const isInterviewConfirmed = interview.status === 'confirmed',;
-  const isInterviewLive = isInterviewConfirmed && !isPast(interviewDate) && isPast(new Date(interviewDate.getTime() - 5 * 60000)), // 5 minutes before;
-  const isInterviewPast = isPast(interviewDate),;
-  const getRelativeTime = () => {;
-    if (isPast(interviewDate)) {;
-      return `Took place ${formatDistanceToNow(interviewDate)} ago`;
-    } else {;
-      return `Starts in ${formatDistanceToNow(interviewDate)}`;
+
+export function InterviewCard(): any ({ interview, onRefresh }: InterviewCardProps) {;
+
+  const { user } = useAuth();
+  const { respondToInterview, cancelInterview } = useInterviews();
+  const [isResponseDialogOpen, setIsResponseDialogOpen] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+
+    } else {
+      return `Starts in ${formatDistanceToNow (interview_date)}`;
     }
-  },
+  }
 
   const handleRespondToInterview = async (status: 'confirmed' | 'declined' | 'rescheduled') => {
     setIsLoading(true),
@@ -492,21 +452,6 @@ export function InterviewCard({ interview, onRefresh }: InterviewCardProps) {;
       toast({
         title: `Interview ${status}`
         description: `You have successfully ${status} the interview request.`
-      }),
-      setIsResponseDialogOpen(false),
-      await onRefresh()
-    } else {
-      toast({
-        title: "Error"
-        description: "Failed to respond to the interview request. Please try again."
-        variant: "destructive"
-      })
-    }
-    setIsLoading(false)
-  }
-  const handleCancelInterview = async () => {
-    setIsLoading(true);
-    const success = await cancelInterview(interview.id);
   },
 
   const handleCancelInterview = async () => {
@@ -517,30 +462,11 @@ export function InterviewCard({ interview, onRefresh }: InterviewCardProps) {;
       toast({
         title: "Interview cancelled"
         description: "The interview has been cancelled successfully."
-      }),
-      await onRefresh()
-    } else {
-      toast({
-        title: "Error"
-        description: "Failed to cancel the interview. Please try again."
-        variant: "destructive"
-      })
-    }
-    setIsLoading(false)
-  }
-  },
-
   const getStatusBadge = () => {
     switch (interview.status) {
       case 'requested':
         return <Badge className="bg-amber-500">Pending</Badge>,
       case 'confirmed':
-        return isInterviewLive ?
-          <Badge className="bg-green-500 animate-pulse">Live Now</Badge> :
-          <Badge className="bg-green-600">Confirmed</Badge>;
-        return isInterviewLive ? 
-          <Badge className="bg-green-500 animate-pulse">Live Now</Badge> : 
-          <Badge className="bg-green-600">Confirmed</Badge>,
       case 'declined':
         return <Badge variant="destructive">Declined</Badge>,
       case 'rescheduled':
@@ -551,29 +477,24 @@ export function InterviewCard({ interview, onRefresh }: InterviewCardProps) {;
         return <Badge variant="outline" className="border-destructive text-destructive">Cancelled</Badge>,
       default:
         return <Badge>{interview.status}</Badge>
-    }
-  }
-  const getOtherPartyName = () => {
-    if (isClient) {
-      return interview.talent_name |'Talent'
-    } else {
-      return interview.client_name |'Client'
-    }
   }
   };
+
+  };
+
   },;
+
   const handleRespondToInterview = async (status: 'confirmed' | 'declined' | 'rescheduled') => {;
     setIsLoading(true),;
-    const success = await respondToInterview(interview.id, {;
-      interview_id: interview.id,;
-      status;
-    }),;
+    const success = await respondToInterview(interview && interview.id, { ;
+      interview_id: interview && interview.id, ;
+      status ;
+    });
+
     if (success) {;
       toast({;
         title: `Interview ${status}`,;
         description: `You have successfully ${status} the interview request.`;
-      }),;
-      setIsResponseDialogOpen(false),;
       await onRefresh();
     } else {;
       toast({;
@@ -583,15 +504,10 @@ export function InterviewCard({ interview, onRefresh }: InterviewCardProps) {;
       });
     }
     setIsLoading(false);
-  },;
-  const handleCancelInterview = async () => {;
-    setIsLoading(true),;
-    const success = await cancelInterview(interview.id),;
     if (success) {;
       toast({;
         title: "Interview cancelled",;
         description: "The interview has been cancelled successfully.";
-      }),;
       await onRefresh();
     } else {;
       toast({;
@@ -601,27 +517,54 @@ export function InterviewCard({ interview, onRefresh }: InterviewCardProps) {;
       });
     }
     setIsLoading(false);
-  },;
-  const getStatusBadge = () => {;
-    switch (interview.status) {;
-      case 'requested':;
-        return <Badge className="bg-amber-500">Pending</Badge>,;
-      case 'confirmed':;
-        return isInterviewLive ?;
-          <Badge className="bg-green-500 animate-pulse">Live Now</Badge> :;
-          <Badge className="bg-green-600">Confirmed</Badge>,;
+      });
+      setIsResponseDialogOpen (false);
+      await on_refresh ();
+    } else {
+      });
+    }
+    setIsLoading (false);
+  }
+;
+  const handleCancelInterview = async () => {
+    setIsLoading (true);
+    const success = await cancel_interview (interview.id);
+;
+    // Check condition
+if ( {) {
+  $2
+}
+      toast ({
+        title: "Interview cancelled",
+        description: "The interview has been cancelled successfully.";
+      });
+      await on_refresh ();
+    } else {
+          <Badge className="bg-green-600">Confirmed</Badge>;
       case 'declined':;
-        return <Badge variant="destructive">Declined</Badge>,;
+        return <Badge variant="destructive">Declined</Badge>;
       case 'rescheduled':;
-        return <Badge className="bg-blue-500">Rescheduled</Badge>,;
+        return <Badge className="bg-blue-500">Rescheduled</Badge>;
       case 'completed':;
-        return <Badge className="bg-green-700">Completed</Badge>,;
+        return <Badge className="bg-green-700">Completed</Badge>;
       case 'cancelled':;
-        return <Badge variant="outline" className="border-destructive text-destructive">Cancelled</Badge>,;
+        return <Badge variant="outline" className="border-destructive text-destructive">Cancelled</Badge>;
       default:;
-        <CardTitle className="text-lg">{interview.title}</CardTitle>;
+        return <Badge>{interview && interview.status}</Badge>;
+    }
+    }
+  }
+
+  return (
+    <Card className="bg-zion-blue-dark border border-zion-blue-light overflow-hidden">;
+      <CardHeader className="pb-2 relative">;
+        <div className="absolute right-4 top-4">;
+          {getStatusBadge()}
+        </div>;
+        <CardTitle className="text-lg">{interview && interview.title}</CardTitle>;
         <p className="text-sm text-muted-foreground">;
           with {getOtherPartyName()}
+<<<<<<< HEAD
         </p>;
       </CardHeader>;
       ;
@@ -671,15 +614,20 @@ export function InterviewCard({ interview, onRefresh }: InterviewCardProps) {;
               <MessageSquare className="h-4 w-4 mt-0.5 text-muted-foreground" />;
               <p className="text-sm line-clamp-2">{interview.notes}</p>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             </div>;
           )}
         </div>;
       </CardContent>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
       ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <CardFooter className="pt-2">;
         <div className="grid grid-cols-1 gap-2 w-full">;
           {/* For clients with pending requests */}
@@ -693,6 +641,7 @@ export function InterviewCard({ interview, onRefresh }: InterviewCardProps) {;
               <AlertDialogContent className="bg-zion-blue-dark border-zion-blue-light text-white">;
                 <AlertDialogHeader>;
                   <AlertDialogTitle>Cancel Interview Request</AlertDialogTitle>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
       toast ({
@@ -745,7 +694,13 @@ if ( {) {
       return interview.client_name || 'Client';
     }
   },
+=======
+      return interview.client_name || 'Client';
+    }
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
+  }
+;
   return (
     <Card className="bg-zion-blue-dark border border-zion-blue-light overflow-hidden">
       <CardHeader className="pb-2 relative">
@@ -790,6 +745,7 @@ if ( {) {
       <CardFooter className="pt-2">
         <div className="grid grid-cols-1 gap-2 w-full">
           {/* For clients with pending requests */}
+<<<<<<< HEAD
           {isClient && isInterviewPending && (
             <AlertDialog>
               <AlertDialogTrigger asChild>
@@ -876,11 +832,15 @@ if ( {) {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   <AlertDialogDescription>;
                     Are you sure you want to cancel this interview request? This action cannot be undone.;
                   </AlertDialogDescription>;
                 </AlertDialogHeader>;
                 <AlertDialogFooter>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
                   <AlertDialogCancel > Go Back</AlertDialogCancel>;
@@ -898,10 +858,13 @@ if ( {) {
                     className="bg-destructive text-destructive-foreground hover:bg-destructive/90";
                   >;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     Cancel Interview;
                   </AlertDialogAction>;
                 </AlertDialogFooter>;
               </AlertDialogContent>;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -927,6 +890,10 @@ if ( {) {
             </AlertDialog>;          )}
           ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+          
+;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           {/* For talents with pending requests */}
           {isTalent && isInterviewPending && (;
             <div className="grid grid-cols-2 gap-2">;
@@ -936,6 +903,7 @@ if ( {) {
               <Button variant="outline" onClick={() => handleRespondToInterview('declined')} disabled={isLoading}>;
                 Decline;
               </Button>;
+<<<<<<< HEAD
             </div>;
           )}
 <<<<<<< HEAD
@@ -1012,12 +980,13 @@ if ( {) {
 
                   <Video className="h-4 w-4 mr-2" /> 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   {isInterviewLive ? 'Join Now' : 'Join Meeting'}
                 </Button>;
               )}
-
-
               
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -1029,6 +998,8 @@ if ( {) {
               )}
               
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <AlertDialog>
                 <AlertDialogTrigger asChild>
                   <Button variant="outline" size="sm" className="w-full mt-2">
@@ -1046,6 +1017,7 @@ if ( {) {
                     <AlertDialogCancel>Go Back</AlertDialogCancel>
                     <AlertDialogAction
                       onClick={handleCancelInterview}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -1107,11 +1079,17 @@ if ( {) {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+                  {isInterviewLive ? 'Join Now' : 'Join Meeting'}
+                </Button>;
+              )}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     <AlertDialogDescription>;
                       Are you sure you want to cancel this interview? This action cannot be undone and the other party will be notified.;
                     </AlertDialogDescription>;
                   </AlertDialogHeader>;
                   <AlertDialogFooter>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
                     <AlertDialogCancel > Go Back</AlertDialogCancel>;
@@ -1129,11 +1107,14 @@ if ( {) {
                       className="bg-destructive text-destructive-foreground hover:bg-destructive/90";
                     >;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       Cancel Interview;
                     </AlertDialogAction>;
                   </AlertDialogFooter>;
                 </AlertDialogContent>;
               </AlertDialog>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
         </div>;
@@ -1185,10 +1166,13 @@ if ( {) {
           <InterviewResponseForm
           <InterviewResponseForm 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             interview={interview}
             onConfirm={() => handleRespondToInterview('confirmed')}
             onClose={() => setIsResponseDialogOpen(false)}
             isLoading={isLoading}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1209,6 +1193,8 @@ if ( {) {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             </>)}
         </div>;
       </CardFooter>;
@@ -1228,6 +1214,7 @@ if ( {) {
       </Dialog>;
     </Card>);
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 
 =======
@@ -1235,6 +1222,8 @@ if ( {) {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   ),; interface InterviewCardProps {
   interview: Interview;
 onRefresh: () => Promise<void> 
@@ -1270,6 +1259,7 @@ const getRelativeTime = () => {
   formatDistanceToNow (interviewDate) 
 }` 
 }
+<<<<<<< HEAD
 ;
 
 };
@@ -1317,3 +1307,5 @@ const getStatusBadge = () => {
 }
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

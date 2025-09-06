@@ -1,5 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -29,10 +30,13 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 
   const data = [
     { label: 'Monthly Recurring Revenue (MRR)', value: '$220,450', trend: 8.2 }
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     { label: 'GMV', value: '$4.8M', trend: 5.1 }
     { label: 'Active users (monthly)', value: 18452, trend: 3.9 }
     { label: 'Active users (TTM)', value: 162340, trend: 12.4 }
     { label: 'Churn rate', value: '2.4%', trend: -0.3 }
+<<<<<<< HEAD
     { label: 'CAC/LTV ratio', value: '1:5.6', trend: 0.4 }
   ];
   res.status (200).json (data);    { label: 'Monthly Recurring Revenue (MRR)', value: '$220, 450', trend: 8.2 }
@@ -53,9 +57,11 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
     { label: 'Churn rate', value: '2.4%', trend: -0.3 };
 <<<<<<< HEAD
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     { label: 'CAC/LTV ratio', value: '1:5.6', trend: 0.4 }];
-  res.status(200).json(data)
 
+<<<<<<< HEAD
     { label: 'Monthly Recurring Revenue (MRR)', value: '$220,450', trend: 8 && 8.2 },
     { label: 'GMV', value: '$4 && 4.8M', trend: 5 && 5.1 },
     { label: 'Active users (monthly)', value: 18452, trend: 3 && 3.9 },
@@ -96,3 +102,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  res.status(200).json(data)
+    { label: 'CAC / LTV ratio', value: '1:5.6', trend: 0.4 }];
+  res.status (200).json (data);
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

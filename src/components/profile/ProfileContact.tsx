@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 email?: string;
   profileName: string;
   profileType: 'service' | 'talent'
@@ -141,18 +142,29 @@ export function ProfileContact({ email, profileName, profileType }: ProfileConta
 
 
 =======
+=======
+
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-8">
       <h3 className="text-xl font-bold text-white mb-4 flex items-center">
         <Mail className="mr-2 h-5 w-5 text-zion-cyan" />
         Contact
       </h3>
+        Contact;
+      </h3>;
+
+
       
+
       {email && (
         <div className="mb-4 text-zion-slate-light">
           <span className="block">Email: </span>
           <a
             href={`mailto:${email}`}
+<<<<<<< HEAD
           </Link>
         </div>
       )}
@@ -260,15 +272,18 @@ export function ProfileContact(): any ({;
           <div>
             <Input
           >
+=======
+            className="text-zion-cyan hover:underline truncate block"
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             {email}
           </Link>
         </div>
       )}
-      
       <form onSubmit={handleSendMessage}>
         <div className="space-y-4">
           <div>
             <Input
+<<<<<<< HEAD
               placeholder='Subject'
               value={subject}
               onChange={e => setSubject(e.target.value)}
@@ -277,6 +292,8 @@ export function ProfileContact(): any ({;
         <div className="space-y-4">
           <div>
             <Input
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               placeholder="Subject"
               value={subject}
               onChange={(e) => setSubject(e.target.value)}
@@ -288,6 +305,7 @@ export function ProfileContact(): any ({;
             <Textarea
               placeholder={`Message to ${profileName}...`}
               value={message}
+<<<<<<< HEAD
               onChange={e => setMessage(e.target.value)}
               className='bg-zion-blue border-zion-blue-light text-white min-h-[120px]'
               required
@@ -346,6 +364,8 @@ export function ProfileContact(): any ({;
             className="w-full bg-zion-cyan hover:bg-zion-cyan/90"
             disabled={isSending}
           >
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <Send className="mr-2 h-4 w-4" />
             {isSending ? "Sending..." : "Send Message"}
           </Button>
@@ -353,6 +373,7 @@ export function ProfileContact(): any ({;
       </form>
     </div>
   )
+<<<<<<< HEAD
   `mailto:$ {
   email
 }` "
@@ -472,3 +493,5 @@ export function ProfileContact({ email, profileName, profileType }: ProfileConta
 }
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

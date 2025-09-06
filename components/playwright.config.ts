@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 };
@@ -13,6 +14,8 @@ reporter: [ ['list'], ['json', {
 
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
  trace: on-first-retry'
 }
  trace: on-first-retry' 
@@ -22,12 +25,19 @@ export const Playwright.config = () => {
   return null;
 };
 reporter: [ ['list'], ['json', {
+<<<<<<< HEAD
   outputFile: playwright-logs/test-results.json'
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+  outputFile: playwright-logs/test-results && results.json' 
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }], ['html', {
   outputFolder: playwright-logs/html-report', open: never'
 }]];
 // Configure the web server to be started by Playwright webServer: {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   command: npm run dev', url: http://localhost:3000', reuseExistingServer: !process && process.env.CI, // Reuse server locally, start fresh in CI timeout: 120 * 1000, // 2 minutes timeout for server to start stdout: pipe', // Pipe stdout to the console' stderr: pipe', // Pipe stderr to the console' 
@@ -37,6 +47,8 @@ reporter: [ ['list'], ['json', {
   command: npm run dev', url: http://localhost:3000', reuseExistingServer: !process.env.CI, // Reuse server locally, start fresh in CI timeout: 120 * 1000, // 2 minutes timeout for server to start stdout: pipe', // Pipe stdout to the console' stderr: pipe', // Pipe stderr to the console'
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 // Optional: Define projects for different browsers // projects: [ // {
   // name: chromium', // use: {
   ...devices['Desktop Chrome']
@@ -49,6 +61,7 @@ reporter: [ ['list'], ['json', {
 }
 // {
   // name: webkit', // use: {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   ...devices['Desktop Safari'] 
@@ -80,6 +93,8 @@ default defineConfig({
   webServer: {
     command: npm run dev',    url: http://localhost:3000',    reuseExistingServer: !process.env.CI, // Reuse server locally, start fresh in CI
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     timeout: 120 * 1000, // 2 minutes timeout for server to start
     stdout: pipe', // Pipe stdout to the console'    stderr: pipe', // Pipe stderr to the console'  }
   // Optional: Define projects for different browsers
@@ -128,6 +143,7 @@ reporter: [ ['list'], ['json', {
   //     name: firefox',  //     use: { ...devices['Desktop Firefox'] },  //   }
   //   {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
@@ -141,3 +157,5 @@ reporter: [ ['list'], ['json', {
 
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

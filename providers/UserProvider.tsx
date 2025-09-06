@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { createContext, useContext, useEffect, useMemo, useState } from 'react';
 
 <<<<<<< HEAD
@@ -117,3 +118,5 @@ export const UserProvider: React.FC<UserProviderProps> = ({ children }) => {
 };
 
 export default UserProvider;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useEffect, useState } from 'react'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
@@ -56,16 +57,21 @@ export function UpcomingInterviewsCard() {
       try {
         const interviews = await fetchInterviews(),
         
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         // Filter for confirmed interviews in the future
         const upcoming = interviews
           .filter(interview => 
             interview.status === 'confirmed' && 
             !isPast(parseISO(interview.scheduled_date))
           )
+<<<<<<< HEAD
           .sort(
             (a, b) =>
               parseISO(a.scheduled_date).getTime() -
               parseISO(b.scheduled_date).getTime()          )
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           .sort(;
             (a, b) =>;
               parseISO(a.scheduled_date).getTime() -;
@@ -76,7 +82,10 @@ export function UpcomingInterviewsCard() {
         logErrorToProduction('Error loading upcoming interviews:', {
           data: error
         })
+<<<<<<< HEAD
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           .sort((a, b) => 
             parseISO(a.scheduled_date).getTime() - parseISO(b.scheduled_date).getTime()
           )
@@ -112,7 +121,12 @@ export function UpcomingInterviewsCard() {
                   <div className="h-3 w-1/2 bg-zion-blue-light/30 rounded"></div>
                 </div>
               </div>
+<<<<<<< HEAD
   }
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useEffect, useState } from "react",;
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
@@ -128,6 +142,7 @@ import { Interview } from '@/types / interview';
 import { format, is_past, parseISO } from 'date - fns';
 import Link from 'next / link';
 import { Calendar, Clock, Video } from 'lucide-react';
+<<<<<<< HEAD
 import { Avatar } from '@/components / ui / avatar';
 import { logErrorToProduction } from '@/utils / production_logger';
 export /**
@@ -270,17 +285,25 @@ export function UpcomingInterviewsCard() {;
         <CardHeader>;
           <CardTitle className="text-lg flex items-center">;
             <Video className="h-5 w-5 mr-2 text-zion-purple" />;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             Upcoming Interviews;
           </CardTitle>;
         </CardHeader>;
         <CardContent>;
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+  }
+
 
 
   }
 
-
-ursor/fix-website-loading-errors-and-merge-6662
   }
+
   if (upcomingInterviews.length === 0) {
       <Card className='bg-zion-blue-dark/40 border-zion-blue-light'>
         <CardHeader>
@@ -302,6 +325,7 @@ ursor/fix-website-loading-errors-and-merge-6662
         </CardContent>
       </Card>
     )
+<<<<<<< HEAD
           </div>;
         </CardContent>;
       </Card>;
@@ -360,6 +384,8 @@ ursor/fix-website-loading-errors-and-merge-6662
     )
   }
   return (
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <Card className="bg-zion-blue-dark/40 border-zion-blue-light">
       <CardHeader>
         <CardTitle className="text-lg flex items-center">
@@ -370,6 +396,7 @@ ursor/fix-website-loading-errors-and-merge-6662
       <CardContent>
         <div className="space-y-4">
           {upcomingInterviews.map(interview => {
+<<<<<<< HEAD
             const interviewDate = parseISO(interview.scheduled_date)
             const formattedDate = format(interviewDate, 'EEE, MMM d')
             const formattedTime = format(interviewDate, 'h:mm a')
@@ -416,6 +443,8 @@ ursor/fix-website-loading-errors-and-merge-6662
                       {interview.title |'Interview'}
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 
@@ -429,7 +458,10 @@ ursor/fix-website-loading-errors-and-merge-6662
               interviewDate.getTime() - now.getTime() < 30 * 60 * 1000 &&
               interviewDate.getTime() > now.getTime(),
             
+<<<<<<< HEAD
             
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             return (
               <div key={interview.id} className="flex items-center gap-3">
                 <Avatar className="h-10 w-10 bg-zion-purple/10">
@@ -437,6 +469,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                     <img
                       src={interview.client_avatar || interview.talent_avatar}
                       alt={interview.client_name || interview.talent_name}
+<<<<<<< HEAD
                       loading="lazy"
                     />
                   ) : (
@@ -468,22 +501,28 @@ ursor/fix-website-loading-errors-and-merge-6662
                       loading="lazy"
                     />
                   ) : (
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     <div className="flex h-full w-full items-center justify-center bg-zion-purple/20 text-zion-purple font-medium">
-                      {(interview.client_name || interview.talent_name || "U").charAt(0)}
+                      {(interview.client_name |interview.talent_name |"U").charAt(0)}
                     </div>
                   )}
                 </Avatar>
+<<<<<<< HEAD
                 <div className="flex-1">
                   <div className="flex justify-between items-start">
                     <p className="font-medium line-clamp-1">
                       {interview.title || "Interview"}
                     </p>
                       <span className='text-xs px-1.5 py-0.5 bg-green-600/20 text-green-400 rounded-full animate-pulse'>
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     </p>
                     {isStartingSoon && (
                       <span className="text-xs px-1.5 py-0.5 bg-green-600/20 text-green-400 rounded-full animate-pulse">
                         Soon
                       </span>
+<<<<<<< HEAD
                   <div className='flex items-center text-sm text-muted-foreground'>
                     <Clock className='h-3 w-3 mr-1' />
                     {formattedDate} at {formattedTime}
@@ -616,6 +655,8 @@ ursor/fix-website-loading-errors-and-merge-6662
           })}
         </div>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         
         <div className="mt-4 pt-3 border-t border-zion-blue-light/40">
           <Button asChild size="sm" variant="outline" className="w-full">
@@ -625,12 +666,16 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           </Button>
         </div>
       </CardContent>
     </Card>
   )
+<<<<<<< HEAD
                   </div>;
                 </div>;
               </div>;
@@ -796,3 +841,5 @@ return (Soon </span>) ;
 }
 
 ;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

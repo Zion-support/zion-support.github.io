@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useEffect } from 'react'
 import { Header } from '@/components/Header'
 import { SEO } from '@/components/SEO'
@@ -111,6 +112,8 @@ export default function AIPoweredContent() {
     markAiExplored()
   }, [markAiExplored]),
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <>
       <SEO
@@ -133,25 +136,6 @@ export default function AIPoweredContent() {
           </p>
           <div className="relative w-full h-auto aspect-video mb-12 mx-auto rounded-lg shadow-xl overflow-hidden">
             <img
-              src='https://placehold.co/800x400'
-              alt='Screenshot of ZionGPT content tool';
-              className='object-cover';
-            />;
-          </div>;
-          <h2 className='text-2xl font-bold mb-4'>Benefits &amp; Use Cases</h2>
-          <ul className='list-disc list-inside space-y-2 mb-8 text-zion-slate-light'>
-            <li>
-              Save time drafting marketing content for your products or
-              services.
-            </li>
-              src="https: //placehold.co/800x400"
-              alt="Screenshot of ZionGPT content tool"
-              className="object-cover"
-            />
-          </div>
-          <h2 className="text-2xl font-bold mb-4">Benefits &amp, Use Cases</h2>
-          <ul className="list-disc list-inside space-y-2 mb-8 text-zion-slate-light">
-            <li>Save time drafting marketing content for your products or services.</li>
             <li>Improve search rankings with keyword optimized text.</li>
             <li>Create multilingual content to reach a global audience.</li>
           </ul>
@@ -166,29 +150,33 @@ export default function AIPoweredContent() {
               <p className="text-zion-slate-light">Yes, you can review and modify all suggestions before publishing.</p>
             </div>
           </div>
+<<<<<<< HEAD
           <div className='text-center'>
             <Button size='lg' className='bg-zion-purple text-white' asChild>
               <Link href='/open-app'>Try ZionGPT Now</Link>            </Button>          <div className="text-center">
           <div className="text-center">
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <Button size="lg" className="bg-zion-purple text-white" asChild>
-          <div className='text-center'>
-            <Button size='lg' className='bg-zion-purple text-white' asChild>
-              <Link href='/open-app'>Try ZionGPT Now</Link>            </Button>          <div className="text-center">
               <Link href="/open-app">Try ZionGPT Now</Link>
             </Button>
           </div>
         </div>
       </main>
     </>
+<<<<<<< HEAD
   )
 }
 ;
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 ;
 }
-
 import React, { useEffect } from "react",;
 import { Header } from "@/components/Header",;
 import { SEO } from "@/components/SEO",;
@@ -209,6 +197,7 @@ export default function AIPoweredContent() {;
   const { markAiExplored } = useAdvancedOnboardingStatus();
   useEffect(() => {;
     markAiExplored();
+<<<<<<< HEAD
 <<<<<<< HEAD
   }, [markAiExplored]);
   return (;
@@ -281,6 +270,8 @@ function AIPoweredContent() {
   const { markAiExplored } = useAdvancedOnboardingStatus ();
   useEffect (() => {
     markAiExplored ();
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   }, [markAiExplored]);
   return (
     <>;
@@ -313,6 +304,7 @@ function AIPoweredContent() {
             />;
           </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
           <h2 className='text - 2xl font - bold mb - 4'>Benefits &amp; Use Cases</h2>;
           <ul className='list - disc list - inside space - y-2 mb - 8 text - zion - slate - light'>;
 
@@ -330,6 +322,8 @@ function AIPoweredContent() {
           </div>;
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <h2 className="text-2xl font-bold mb-4">Benefits &amp, Use Cases</h2>;
           <ul className="list-disc list-inside space-y-2 mb-8 text-zion-slate-light">;
             <li>Save time drafting marketing content for your products or services.</li>;
@@ -354,9 +348,12 @@ function AIPoweredContent() {
           </div>;
         </div>;
       </main>;
+<<<<<<< HEAD
     </>;
   );
 }
 ;
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

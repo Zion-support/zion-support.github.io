@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -12,6 +13,8 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 
 import type { NextApiRequest, NextApiResponse } from 'next',;
 ;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 const templates = {
   lulu: {
     sizes: [
@@ -27,7 +30,6 @@ const templates = {
       { name: 'Letter', widthIn: 8.5, heightIn: 11, bleedIn: 0.125, marginIn: 0.75 }]}}
 
 export default function handler(_req: NextApiRequest, res: NextApiResponse) {
-  res.status(200).json(templates)
   res.status(200).json(templates);
 };
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -53,5 +55,12 @@ export default function handler(req, res) {
   }
 }
 }
+<<<<<<< HEAD
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

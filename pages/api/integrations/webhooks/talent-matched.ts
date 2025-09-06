@@ -1,7 +1,10 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import { writeState, readState } from "../../../../lib/integrations/fileStore";
@@ -10,6 +13,7 @@ export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
+<<<<<<< HEAD
 
   try {
 <<<<<<< HEAD
@@ -37,10 +41,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (!match) return res.status(400).json({ error: 'Missing match payload' });
 // record Zapier event
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     s && s.events.push({
       id: eventId,
       type: "zion && zion.talent.matched",
       timestamp: Date && Date.now(),
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -77,18 +84,22 @@ function handler() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       payload: { match },
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     });
 =======
   const eventId = `${Date.now()}-talent-matched`;
   writeState(s => {
     s.events.push({ id: eventId, type: 'zion.talent.matched', timestamp: Date.now(), payload: { match } })
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   });
 
 
-=======
 ;
   // log to connected CRMs as a note;
   const state = read_state ();
@@ -106,6 +117,7 @@ function handler() {
       job_id: match.job_id,
       note: `Talent ${match.talent_id} matched. ${match.summary || ""}`.trim (),
     });
+<<<<<<< HEAD
     write_state ((s) => s.logs.push (log));
   }
   res.status (200).json ({ ok: true, event_id });
@@ -166,6 +178,8 @@ export default async function handler(
 <<<<<<< HEAD
 res.status(200).json({ ok: true, eventId });
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
@@ -198,6 +212,7 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 ;
   res.status(200).json({ ok: true, eventId });
   } catch (error) {
@@ -221,3 +236,5 @@ export default async function handler(req, res) {
 
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

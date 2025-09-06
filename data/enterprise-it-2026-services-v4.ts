@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -725,11 +726,15 @@ export const enterpriseIT2026ServicesV4: EnterpriseIT2026ServiceV4[] = [;
     address: string,
     website: string
   
+=======
+  contactInfo: {
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     },
     realImplementation: boolean, implementationDetails: string,
   launchDate: string, customers: number,
   rating: number,
   reviews: number
+<<<<<<< HEAD
 
 }
 
@@ -765,6 +770,8 @@ export const enterpriseIT2026ServicesV4: EnterpriseIT2026ServiceV4[] = [
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
     
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     },
     realImplementation: true, implementationDetails: 'Comprehensive zero-trust network architecture platform with continuous verification and micro-segmentation.',
     launchDate: '2026-03-01', customers: 60,
@@ -782,7 +789,6 @@ export const enterpriseIT2026ServicesV4: EnterpriseIT2026ServiceV4[] = [
       'AI incident responsePredictive maintenancePerformance optimizationAutomated troubleshootingIntelligent monitoringRoot cause analysisCapacity planningCost optimization';
       'Compliance automationReal-time dashboards'
     ];
-    popular: true, icon: '⚙️',
     color: 'from-green-600 to-emerald-600', textColor: 'text-green-400',
     link: 'https://ziontechgroup.com/ai-powered-it-operations-center',
     marketPosition: 'First AI-powered IT operations center. Competitive advantage: Intelligent automation, predictive capabilities, and cost optimization.',
@@ -795,11 +801,14 @@ export const enterpriseIT2026ServicesV4: EnterpriseIT2026ServiceV4[] = [
     competitors: ['ServiceNowBMCBMC Helix'], marketSize: '$35B IT operations market',
     growthRate: '40% annual growth', variant: 'ai-futuristic',
     contactInfo: {
+<<<<<<< HEAD
       
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
     
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     },
     realImplementation: true, implementationDetails: 'AI-powered IT operations center with intelligent automation and predictive capabilities.',
     launchDate: '2026-02-15', customers: 120,
@@ -817,7 +826,6 @@ export const enterpriseIT2026ServicesV4: EnterpriseIT2026ServiceV4[] = [
       'Post-quantum algorithmsHybrid encryptionKey managementPerformance optimizationCompliance validationMigration toolsAPI integrationSecurity auditing';
       'Expert consultationFuture-proofing'
     ];
-    popular: false, icon: '🔒',
     color: 'from-purple-600 to-violet-600', textColor: 'text-purple-400',
     link: 'https://ziontechgroup.com/quantum-resistant-cryptography-platform',
     marketPosition: 'First comprehensive quantum-resistant cryptography platform. Competitive advantage: Future-proof security, hybrid encryption, and migration tools.',
@@ -830,11 +838,14 @@ export const enterpriseIT2026ServicesV4: EnterpriseIT2026ServiceV4[] = [
     competitors: ['EntrustDigiCertGlobalSign'], marketSize: '$15B cryptography market',
     growthRate: '70% annual growth', variant: 'quantum-futuristic',
     contactInfo: {
+<<<<<<< HEAD
       
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
     
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     },
     realImplementation: true, implementationDetails: 'Advanced quantum-resistant cryptography platform with post-quantum algorithms and hybrid encryption.',
     launchDate: '2026-04-01', customers: 35,
@@ -852,7 +863,6 @@ export const enterpriseIT2026ServicesV4: EnterpriseIT2026ServiceV4[] = [
       'AI migration planningZero-downtime migrationCost optimizationPerformance monitoringAutomated testingRollback capabilitiesCompliance validationMulti-cloud support';
       'Migration analyticsExpert support'
     ];
-    popular: true, icon: '☁️',
     color: 'from-sky-600 to-blue-600', textColor: 'text-sky-400',
     link: 'https://ziontechgroup.com/autonomous-cloud-migration-platform',
     marketPosition: 'First autonomous cloud migration platform. Competitive advantage: Zero downtime, AI automation, and cost optimization.',
@@ -865,11 +875,14 @@ export const enterpriseIT2026ServicesV4: EnterpriseIT2026ServiceV4[] = [
     competitors: ['AWS Migration HubAzure MigrateGoogle Cloud Migrate'], marketSize: '$50B cloud migration market',
     growthRate: '60% annual growth', variant: 'ai-autonomous',
     contactInfo: {
+<<<<<<< HEAD
       
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
     
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     },
     realImplementation: true, implementationDetails: 'Autonomous cloud migration platform with AI automation and zero-downtime capabilities.',
     launchDate: '2026-03-15', customers: 85,
@@ -888,7 +901,6 @@ export const enterpriseIT2026ServicesV4: EnterpriseIT2026ServiceV4[] = [
       'Global edge orchestrationResource optimizationReal-time processingIoT integrationAI model deploymentPerformance monitoringSecurity managementCompliance automation';
       'API gatewayAnalytics dashboard'
     ];
-    popular: false, icon: '🌐',
     color: 'from-orange-600 to-red-600', textColor: 'text-orange-400',
     link: 'https://ziontechgroup.com/edge-computing-orchestration-platform-2026',
     marketPosition: 'First global edge computing orchestration platform. Competitive advantage: Global scale, real-time processing, and AI optimization.',
@@ -901,11 +913,14 @@ export const enterpriseIT2026ServicesV4: EnterpriseIT2026ServiceV4[] = [
     competitors: ['AWS GreengrassAzure IoT EdgeGoogle Cloud IoT'], marketSize: '$40B edge computing market',
     growthRate: '80% annual growth', variant: 'edge-futuristic',
     contactInfo: {
+<<<<<<< HEAD
       
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
     
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     },
     realImplementation: true, implementationDetails: 'Advanced edge computing orchestration platform with global scale and real-time processing.',
     launchDate: '2026-04-15', customers: 45,
@@ -923,7 +938,6 @@ export const enterpriseIT2026ServicesV4: EnterpriseIT2026ServiceV4[] = [
       'AI data classificationAutomated catalogingPrivacy complianceData quality managementLineage trackingAccess controlAudit loggingCompliance reporting';
       'Integration APIsReal-time monitoring'
     ];
-    popular: true, icon: '📊',
     color: 'from-teal-600 to-cyan-600', textColor: 'text-teal-400',
     link: 'https://ziontechgroup.com/ai-powered-data-governance-platform',
     marketPosition: 'First AI-powered data governance platform. Competitive advantage: Intelligent automation, comprehensive compliance, and data quality management.',
@@ -936,11 +950,14 @@ export const enterpriseIT2026ServicesV4: EnterpriseIT2026ServiceV4[] = [
     competitors: ['CollibraInformaticaAlation'], marketSize: '$25B data governance market',
     growthRate: '45% annual growth', variant: 'ai-futuristic',
     contactInfo: {
+<<<<<<< HEAD
       
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
     
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     },
     realImplementation: true, implementationDetails: 'AI-powered data governance platform with intelligent automation and comprehensive compliance.',
     launchDate: '2026-03-01', customers: 95,
@@ -958,7 +975,6 @@ export const enterpriseIT2026ServicesV4: EnterpriseIT2026ServiceV4[] = [
       'AI-powered CI/CDAutomatic testingInfrastructure automationPerformance optimizationSecurity scanningDeployment automationMonitoring automationIncident response';
       'Cost optimizationCompliance automation'
     ];
-    popular: true, icon: '🚀',
     color: 'from-pink-600 to-rose-600', textColor: 'text-pink-400',
     link: 'https://ziontechgroup.com/autonomous-devops-platform',
     marketPosition: 'First fully autonomous DevOps platform. Competitive advantage: Zero human intervention, AI optimization, and comprehensive automation.',
@@ -971,11 +987,14 @@ export const enterpriseIT2026ServicesV4: EnterpriseIT2026ServiceV4[] = [
     competitors: ['GitLabJenkinsCircleCI'], marketSize: '$20B DevOps market',
     growthRate: '55% annual growth', variant: 'ai-autonomous',
     contactInfo: {
+<<<<<<< HEAD
       
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
     
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     },
     realImplementation: true, implementationDetails: 'Fully autonomous DevOps platform with AI-powered automation and zero human intervention.',
     launchDate: '2026-02-20', customers: 150,
@@ -994,7 +1013,6 @@ export const enterpriseIT2026ServicesV4: EnterpriseIT2026ServiceV4[] = [
       'Quantum-resistant encryptionDistributed storageAI security monitoringReal-time threat detectionCompliance automationPerformance optimizationDisaster recoveryData sovereignty';
       'API accessExpert consultation'
     ];
-    popular: false, icon: '💾',
     color: 'from-indigo-600 to-purple-600', textColor: 'text-indigo-400',
     link: 'https://ziontechgroup.com/quantum-safe-cloud-storage-platform',
     marketPosition: 'First quantum-safe cloud storage platform. Competitive advantage: Quantum-resistant encryption, distributed storage, and AI security.',
@@ -1007,6 +1025,7 @@ export const enterpriseIT2026ServicesV4: EnterpriseIT2026ServiceV4[] = [
     competitors: ['AWS S3Azure BlobGoogle Cloud Storage'], marketSize: '$80B cloud storage market',
     growthRate: '65% annual growth', variant: 'quantum-futuristic',
     contactInfo: {
+<<<<<<< HEAD
       
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -1439,25 +1458,24 @@ export const enterpriseIT2026ServicesV4: EnterpriseIT2026ServiceV4[] = [;
       'Quantum-safe cloud storage platform with quantum-resistant encryption and distributed storage.',
     launchDate: '2026-05-01',
     customers: 40,
+=======
+    },
+    realImplementation: true, implementationDetails: 'Quantum-safe cloud storage platform with quantum-resistant encryption and distributed storage.',
+    launchDate: '2026-05-01', customers: 40,
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     rating: 4.9,
-    reviews: 32,
-  },;
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709'
       website: 'https://ziontechgroup.com'
     }
+    reviews: 32;
 
     realImplementation: true;
     implementationDetails: 'Quantum-safe cloud storage platform with quantum-resistant encryption and distributed storage.';
     launchDate: '2026-05-01';
     customers: 40;
 
-    rating: 4.9
-
-    reviews: 32
-  }
-];
 import { ServiceVariant } from '../types/service-variants',;
 export interface EnterpriseIT2026ServiceV4 {;
   id: string,;
@@ -1854,4 +1872,7 @@ export const enterpriseIT2026ServicesV4: EnterpriseIT2026ServiceV4[] = [;
     reviews: 32;
   }
 ];
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import { useState } from "react",
 import { Input } from "@/components/ui/input",
@@ -11,6 +12,57 @@ import { Textarea } from '@/components/ui/textarea'
 import { Button } from '@/components/ui/button'
 import CodeBlock from './CodeBlock'
 interface Param {
+=======
+      method
+      headers: {
+        Authorization: `Bearer ${apiKey}`
+        'Content-Type': 'application/json'
+      }
+      // Add timeout to prevent hanging
+
+      try {
+        options.body = JSON.stringify (JSON.parse (body));
+      } catch {
+        options.body = body
+      }
+    }
+    setLoading(true)
+    setResponse(null)
+    try {
+      const res = await fetch (url, options);
+      const content_type = res.headers.get ('content - type');
+      let response_text: string;
+      if () {) {
+  $2
+}
+        try {
+          const json_data = await res.json ();
+          response_text = JSON.stringify (json_data, null, 2);
+        } catch {
+          response_text = await res.text ();
+        }
+      } else {
+        response_text = await res.text ();
+      }
+    } catch (err: any) {
+      let error_message = 'Request failed';
+      // Check condition
+if ( {) {
+  $2
+}
+        error_message = 'Request timed out (15s)';
+      } else if () {) {
+  $2
+}
+        error_message =;
+          'Network error - check CORS configuration or API endpoint';
+      } else {
+import { useState } from 'react';
+import { Input } from '@/components/ui/input';
+import { Textarea } from '@/components/ui/textarea';
+import { Button } from '@/components/ui/button';
+import CodeBlock from './CodeBlock';
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   name: string
 type: string
@@ -34,6 +86,7 @@ export function ApiPlayground({
   }
   const sendRequest = async () => {
     // For API documentation, use current domain if NEXT_PUBLIC_API_URL is not set
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import { Button } from "@/components/ui/button";
 import CodeBlock from "./CodeBlock";
@@ -46,6 +99,8 @@ import CodeBlock from "./CodeBlock";
     const baseUrl = null;
       process.env.NEXT_PUBLIC_API_URL ||
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       (typeof window !== 'undefined' ? window.location.origin : '')
     let url = `${baseUrl}${path}`
     const searchParams = new URLSearchParams()
@@ -60,6 +115,7 @@ import CodeBlock from "./CodeBlock";
 =======
 import { Button } from "@/components/ui/button",
 import CodeBlock from "./CodeBlock",
+<<<<<<< HEAD
 import { useState } from 'react';
 import { Input } from '@/components / ui / input';
 import { Textarea } from '@/components / ui / textarea';
@@ -71,6 +127,8 @@ import { Textarea } from "@/components/ui/textarea",
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import { Button } from "@/components/ui/button",
 import CodeBlock from "./CodeBlock",
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface Param {
   name: string,
   type: string,
@@ -118,6 +176,7 @@ export function ApiPlayground({ method, path, params = [] }: ApiPlaygroundProps)
       if (query) url += `?${query}`
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 const options: RequestInit = {
       method
@@ -130,10 +189,13 @@ const options: RequestInit = {
 
       method
       headers: {
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
     const options: RequestInit = {
       method
       headers: {
+<<<<<<< HEAD
         Authorization: `Bearer ${apiKey}`
         'Content-Type': 'application/json'
       }
@@ -492,20 +554,20 @@ if () {) {
     }
   },
 
+=======
+      try {
+        options.body = JSON.stringify(JSON.parse(body))
+      } catch {
+        options.body = body
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <div className="space-y-4">
       <Input
         value={apiKey}
-        onChange={e => setApiKey(e.target.value)}
-        placeholder='API Key'
-        onChange={(e) => setApiKey(e.target.value)}
-        placeholder="API Key"
       />
       {params.map(p => (
         <Input
           key={p.name}
-          value={paramValues[p.name] |''}
-          value={paramValues[p.name] || ''}
           onChange={e => handleParamChange(p.name, e.target.value)}        />
       ))}
       {method !== 'GET' && method !== 'DELETE' && (
@@ -514,40 +576,6 @@ if () {) {
           onChange={e => setBody(e.target.value)}
           className='font-mono'        />
       )}
-      <Button onClick={sendRequest} disabled={loading}>
-        {loading ? 'Sending...' : 'Send Request'}
-      </Button>
-      {response && <CodeBlock code={response} language='json' />}
-    </div>
-  )
-export default ApiPlayground
-  const val = paramValues[p.name]
-if (val) searchParams.append (p.name, val)
-})
-const query = searchParams.toString ()
-if (query) url += `?$ {
-  query
-}`
-}const options: RequestInit = {
-  method, headers: {
-  Authorization: `Bearer $ {
-  apiKey
-}`
-"Content-Type" : "application/json"
-}
-//Add timeout to prevent hanging signal: AbortSignal.timeout (15000)
-}
-}setLoading (true)
-setResponse (null)
-let responseText: string
-if (contentType?.includes ('application/json') ) {
-  try {
-  /> {
-  params.map ( (p) => (<Input key= {
-  p.name
-}</div>)
-}export default ApiPlayground
-'"
 
 
     </div>;
@@ -590,6 +618,7 @@ if (contentType?.includes ('application/json') ) {;
 }export default ApiPlayground;
 '";
 }
+<<<<<<< HEAD
           value={paramValues[p.name] || ""}
           onChange={(e) => handleParamChange(p.name, e.target.value)}
         />;
@@ -805,3 +834,25 @@ if (contentType?.includes ('application/json') ) {;
 '"
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 export default ApiPlayground;
+=======
+
+          value={paramValues[p.name] || ""}
+          onChange={(e) => handleParamChange(p.name, e.target.value)}
+        />;
+      ))}
+      {method !== "GET" && method !== "DELETE" && (
+        <Textarea
+          value={body}
+          onChange={(e) => setBody(e.target.value)}
+          className="font-mono"
+        />
+      )}
+      <Button onClick={sendRequest} disabled={loading}>
+        {loading ? "Sending..." : "Send Request"}
+      </Button>
+      {response && <CodeBlock code={response} language="json" />}
+    </div>
+  )
+}
+;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -1,15 +1,21 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react'
 =======
 
 import React from 'react'
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+import React from 'react'
+ursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 export const BrowserRouter = ({ children }: { children: any }) => children
 export const Routes = ({ children }: { children: any }) => children
 export const Route = ({ element }: { element: any }) => element
 export const Link = (props: any) => {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
   return React.createElement('a', props)
@@ -117,3 +123,5 @@ export const useSearchParams = () =>: any [new URLSearchParams (), () => {}] as 
   use_params;
   useSearchParams}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

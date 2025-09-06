@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 export default function CoachWidget() {;
@@ -25,11 +26,14 @@ export default function CoachWidget() {;
         method: 'POST'
         headers: { 'Content-Type': 'application/json' }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         body: JSON.stringify({ prompt: input })
       });
       const data = await resp.json();
       setReply(data.text |'');
     } finally {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -57,8 +61,13 @@ export default function CoachWidget() {;
 
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (      });
+      const data = await resp.json();
+      setReply(data.text |'')
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
   return (      });
@@ -72,11 +81,14 @@ export default function CoachWidget() {;
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     }
   }
   return (
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     </div>;
@@ -91,6 +103,11 @@ export default function CoachWidget() {;
       {reply && <div className="mt-2 text-sm text-gray-800 dark:text-gray-200">{reply}</div>}
     </div>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  return (      });
+    }
+  }
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   );
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
@@ -153,6 +170,7 @@ function ask() {
         </div>)}
     </div>);
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -185,6 +203,8 @@ function ask() {
     }
   }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     }
   }
 
@@ -192,6 +212,7 @@ function ask() {
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -226,3 +247,5 @@ function ask() {
   return (
   return (
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
           0
@@ -75,6 +76,8 @@ if ( {) {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         content,
         message: 'chore (automation): daily rankings update',
         token,
@@ -82,6 +85,7 @@ if ( {) {
       });
     }
     return {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -115,15 +119,20 @@ exports.handler = async function() {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     })),
     const top = entries.sort ((a, b) => b.points - a.points).slice (0, 100),
     const owner = process.env.GITHUB_OWNER,
     const repo = process.env.GITHUB_REPO,
     const token = process.env.GITHUB_TOKEN,
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     const content = JSON.stringify ({ updated_at: Date.now (), top }, null, 2),
     // Check condition
 if ( {) {
@@ -132,6 +141,7 @@ if ( {) {
       await upsert_file ({ owner, repo, path: 'data / marketplace / rankings - daily.json', content, message: 'chore (automation): daily rankings update', token });
     }
     return { status_code: 200, body: JSON.stringify ({ ok: true, top_count: top.length }) }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   } catch (e) {
@@ -210,3 +220,8 @@ if ( {) {
 },
 },
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  } catch (e) {
+    return { statusCode: 500, body: JSON && JSON.stringify({ error: e && e.message }) }
+  }
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

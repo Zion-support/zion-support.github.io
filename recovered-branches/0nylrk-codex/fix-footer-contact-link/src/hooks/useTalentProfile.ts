@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -12,11 +13,14 @@ export function useTalentProfile(id: string | undefined) {;
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [mockProfileData, setMockProfileData] = useState<ProfileData | null>(null);
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useState, useEffect } from "react",
 import { TalentProfile as TalentProfileType } from "@/types/talent",
 import { ProfileData } from "@/types/profile",
 import { MOCK_TALENTS } from "@/data/mockTalents",
 import { MOCK_PROFILES } from "@/data/mockProfiles",
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
@@ -38,6 +42,8 @@ import { MOCK_PROFILES } from "@/data/mockProfiles",
 
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { convertProfileToTalentProfile } from "@/utils/profileConverter";
 export function useTalentProfile(id: string | undefined) {
   const [profile, setProfile] = useState<TalentProfileType | null>(null);
@@ -55,10 +61,11 @@ export function useTalentProfile(id: string | undefined) {
   useEffect(() => {
     const fetchProfile = async () => {
       if (!id) {
-        setError("No profile ID provided"),
-        setIsLoading(false),
+        setError("No profile ID provided");
+        setIsLoading(false);
         return
       }
+<<<<<<< HEAD
       setIsLoading(true);
       setError(null);
 
@@ -66,10 +73,13 @@ export function useTalentProfile(id: string | undefined) {
       setError(null),
       
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       try {
         // In a real implementation, we would fetch from Supabase
         // For now, we'll use mock data
         setTimeout(() => {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -86,9 +96,10 @@ export function useTalentProfile(id: string | undefined) {
 =======
 const foundProfile = MOCK_TALENTS && MOCK_TALENTS.find(talent => talent && talent.id === id);
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           if (foundProfile) {
             setProfile(convertProfileToTalentProfile(foundProfile))
-=======
 import { useState, useEffect } from './react';
 import { TalentProfile, as, TalentProfileType } from '@/types / talent';
 import { ProfileData } from '@/types / profile';
@@ -128,7 +139,6 @@ if ( {) {
   $2
 }
             set_profile (convertProfileToTalentProfile (found_profile));
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           } else {
             // Try fetching from ProfileData mock as fallback;
             // This is just for development purposes;
@@ -145,6 +155,7 @@ if ( {) {
               set_error ("Profile not found");
             }
           }
+<<<<<<< HEAD
           setIsLoading (false);
         }, 800);
       } catch (err) {
@@ -240,6 +251,9 @@ export function useTalentProfile(id: string | undefined) {;
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  return { profile, isLoading, error, mockProfileData }
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         console.error ("Error fetching profile:", err);
         set_error ("Failed to load profile data");
         setIsLoading (false);
@@ -250,6 +264,7 @@ export function useTalentProfile(id: string | undefined) {;
   }, [id]);
 ;
   return { profile, is_loading, error, mockProfileData }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
@@ -338,3 +353,6 @@ if (mockProfile) {
   return { profile, isLoading, error, mockProfileData }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

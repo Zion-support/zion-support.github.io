@@ -1,7 +1,10 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export function getConfig() {
   return {
     tokenName: 'Zion Token',
@@ -10,13 +13,25 @@ export function getConfig() {
     totalSupply: 1000000
   };
 export interface TokenTransaction {;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   id: string;
+=======
+  id: string;
+  userId: string;
+
+
+  id: string;
+  user_id: string;
+export interface TokenTransaction {
+  id: string;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   user_id: string;
   amount: number;
   type: 'issue' | 'redeem' | 'transfer';
   reason: string;
   timestamp: number;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -34,6 +49,14 @@ export function issueTokens(userId: string, amount: number, reason: string): Tok
   const transaction: TokenTransaction = {
 
 
+=======
+
+
+
+}
+// Mock data storage - replace with actual database;
+let transactions: TokenTransaction[] = [];
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     id: `tx_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
     userId
     amount
@@ -41,7 +64,10 @@ export function issueTokens(userId: string, amount: number, reason: string): Tok
     reason
     timestamp: Date.now()
   }
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     id: `tx_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
     userId,
     amount,
@@ -51,10 +77,13 @@ export function issueTokens(userId: string, amount: number, reason: string): Tok
   };
   
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   transactions.push(transaction);
   return transaction;
 }
@@ -63,6 +92,7 @@ export function redeemTokens(userId: string, amount: number, reason: string): To
     id: `tx_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
     userId
     amount: -amount, // Negative for redemption
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 ;
@@ -101,16 +131,21 @@ export function redeem_tokens (user_id: string, amount: number, reason: string):
     reason,
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     type: 'redeem',
     reason,
     timestamp: Date.now();
   };
   
+  transactions.push(transaction);
+  return transaction;
     id: `tx_${Date && Date.now()}_${Math && Math.random().toString(36).substr(2, 9)}`,
     userId,
     amount,
     reason,
     timestamp: Date && Date.now()
+<<<<<<< HEAD
 <<<<<<< HEAD
   };
   transactions && transactions.push(transaction);
@@ -131,12 +166,10 @@ export function set_config (
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     timestamp: Date.now();
   };
-  
-  transactions.push(transaction);
-  return transaction;
-}
 // Token service utilities
 export interface TokenConfig {
   id: string;
@@ -240,14 +273,10 @@ export function set_config (
   // Update the configuration;
   Object.assign (current, partial);
 }
-export function setConfig(
-  partial: Partial<ReturnType<typeof getConfig>>
-): void {;
-  const current = getConfig();
-  // Update the configuration
-  Object.assign(current, partial);
-}
 
+<<<<<<< HEAD
 
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

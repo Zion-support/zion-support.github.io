@@ -4,9 +4,14 @@
 
 
 
+
+
 type Experiment = {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -40,13 +45,17 @@ hypothesis?: string;
 metric?: string;
 effort?: number;
 
+<<<<<<< HEAD
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 impact?: number;
 }
 type Props = {
   updated_at: string | null;
 items: Experiment[] }
+<<<<<<< HEAD
 ;
 export default /**
  * CurationPage - Function description
@@ -59,29 +68,41 @@ function CurationPage() {
   return (type Experiment = {
   title: string
 =======
+=======
+  return (type Experiment = {
+  title: string
+  title: string
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from "react";
 import fs from "fs";
 import path from "path";
 type Experiment = {
   title: string,
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   title: string,;
+
 
   hypothesis?: string;
   metric?: string;
   effort?: number;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   hypothesis?: string;
   metric?: string;
   effort?: number;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 impact?: number ;
 };
 type Props = {;
@@ -97,18 +118,56 @@ export default function CurationPage(): any ({ updatedAt, items }: Props) {;
   impact?: number;
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 type Props = {;
   updatedAt: string | null,;
   items: Experiment[];
 };
+<<<<<<< HEAD
 export default function CurationPage(): any ({ updatedAt, items }: Props) {;
 <<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+      <div className='mt-6 space-y-4'>
+        {items.map((exp, idx) => (
+          <div
+            key={idx}
+            className='rounded-xl border border-gray-200 bg-white p-5 shadow-sm'
+          >
+            <div className='text-base font-semibold text-gray-900'>
+              {exp.title}
+            </div>
+            {(exp.hypothesis |exp.metric) && (
+              <div className='mt-2 text-sm text-gray-700'>
+                {exp.hypothesis && (
+                  <div>
+                    <span className='font-medium'>Hypothesis:</span>{' '}
+                    {exp.hypothesis}
+                  </div>
+                )}
+                {exp.metric && (
+                  <div>
+                    <span className='font-medium'>Metric:</span> {exp.metric}
+                  </div>
+                )}
+              </div>
+            )}
+            {(exp.effort |exp.impact) && (
+              <div className='mt-2 text-xs text-gray-500'>
+                {exp.effort ? `Effort: ${exp.effort}/5` : null}
+                {exp.effort && exp.impact ? ' · ' : null}                {exp.impact ? `Impact: ${exp.impact}/5` : null}                {exp.effort && exp.impact ? " · " : null}
+                {exp.impact ? `Impact: ${exp.impact}/5` : null}
+  return (
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <main className='mx-auto max-w-4xl px-4 py-12'>;
       <h1 className='text-2xl font-bold text-gray-900'>;
@@ -121,6 +180,7 @@ export default function CurationPage(): any ({ updatedAt, items }: Props) {;
           next run.;
         </p>;
       )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -154,11 +214,14 @@ function CurationPage() {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             key={idx}
             className='rounded - xl border border - gray - 200 bg - white p - 5 shadow - sm';
           >;
             <div className='text - base font - semibold text - gray - 900'>;
               {exp.title}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -168,6 +231,8 @@ function CurationPage() {
         {items && items.map((exp, idx) => (;
           <div
             key={idx}
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             className='rounded-xl border border-gray-200 bg-white p-5 shadow-sm'>;
             <div className='text-base font-semibold text-gray-900'>;
               {exp && exp.title}
@@ -177,9 +242,13 @@ function CurationPage() {
                 {exp && exp.hypothesis && (;
                   <div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     <span className='font-medium'>Hypothesis:</span>{' '}
                     {exp && exp.hypothesis}
                   </div>;
@@ -191,6 +260,7 @@ function CurationPage() {
                 )}
               </div>;
             )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -205,6 +275,8 @@ function CurationPage() {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             )}
           </div>;
         ))}
@@ -213,12 +285,15 @@ function CurationPage() {
             Nothing to show yet.;
           </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 };
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export default function CurationPage({ updatedAt, items }: Props) {
   return (
     <main className="mx-auto max-w-4xl px-4 py-12">
@@ -243,6 +318,7 @@ export default function CurationPage({ updatedAt, items }: Props) {
               <div className="mt-2 text-xs text-gray-500">
                 {exp.effort ? `Effort: ${exp.effort}/5` : null}
                 {exp.effort && exp.impact ? " · " : null}
+<<<<<<< HEAD
 <<<<<<< HEAD
                 {exp.impact ? `Impact: ${exp.impact}/5` : null}
 =======
@@ -325,6 +401,9 @@ export default function CurationPage(_{_updatedAt, _items}: Props) {_return (
         )}
       </div>
     </main>;
+=======
+                {exp.impact ? `Impact: ${exp.impact}/5` : null}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 {exp.impact ? `Impact: ${exp.impact}/5` : null}
 
               </div>
@@ -332,17 +411,15 @@ export default function CurationPage(_{_updatedAt, _items}: Props) {_return (
           </div>
         ))}
         {!items.length && (
-          <div className='rounded-xl border border-gray-200 bg-white p-6 text-center text-gray-600'>            Nothing to show yet.          <div className="rounded-xl border border-gray-200 bg-white p-6 text-center text-gray-600">
-            Nothing to show yet.
           <div className='rounded-xl border border-gray-200 bg-white p-6 text-center text-gray-600'>            Nothing to show yet.
 
             Nothing to show yet.
 
-          </div>
         )}
       </div>
     </main>
   );
+<<<<<<< HEAD
 
 export async function getStaticProps() {
   try {
@@ -393,10 +470,13 @@ export async function getStaticProps() {
       props: {
         updatedAt: null,}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export async function getStaticProps() {
   try {
     const filePath = path.join(process.cwd(), "data", "ai-curation", "growth-experiments.json");
     const raw = fs.readFileSync(filePath, "utf8");
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     const parsed = JSON.parse(raw);
@@ -414,6 +494,15 @@ export async function getStaticProps() {
             </div>;
 </div>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+    const parsed = JSON.parse(raw);
+    );
+    const raw = fs.readFileSync(filePath, 'utf8');    const parsed = JSON.parse(raw);
+    return {
+      props: {
+            </div>;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             {(exp.hypothesis || exp.metric) && (
               <div className='mt - 2 text - sm text - gray - 700'>;
                 {exp.hypothesis && (
@@ -457,7 +546,6 @@ function getStaticProps() {
         items: parsed.items || [],
       },
       revalidate: 300,
-    }  } catch {
     return {
       props: {
         updated_at: null, }
@@ -476,6 +564,7 @@ function getStaticProps() {
       revalidate: 300,
     }        items: parsed.items || []},
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
         updatedAt: parsed.updatedAt |null
@@ -484,17 +573,22 @@ function getStaticProps() {
       revalidate: 300
     };        items: parsed.items |[]}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       revalidate: 300}
   } catch {
     return {
       props: {
 
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export async function getStaticProps() {;
   try {;
     const filePath = path && path.join(;
@@ -536,6 +630,7 @@ export async function getStaticProps() {;
       revalidate: 300,;
     };
   }        items: []},;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
         updatedAt: null,
@@ -581,6 +676,8 @@ export async function getStaticProps() {;
   }
 
 }
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         updatedAt: null
         items: []
       }
@@ -594,9 +691,25 @@ export async function getStaticProps() {;
       revalidate: 300,
     };
   }        items: []},
+        updated_at: null,
+        items: [],
+      },
+      revalidate: 300,
+    }
+  }        items: []}
+
+        updatedAt: null,
+        items: [],
+      },
+      revalidate: 300,
+    };
+  }        items: []},
       revalidate: 300}
 }
 }
+<<<<<<< HEAD
         updatedAt: null,
         updatedAt: null,
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

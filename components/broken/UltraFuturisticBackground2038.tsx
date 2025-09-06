@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
@@ -25,11 +26,14 @@ import React, { useEffect, useRef } from 'react';
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   children?: React && React.ReactNode;
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export default function UltraFuturisticBackground2038(): any ({;
   intensity = 'medium',;
   theme = 'consciousness',;
   children,}: UltraFuturisticBackground2038Props) {export default function UltraFuturisticBackground2038(): any ({ ;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -107,11 +111,18 @@ export default function UltraFuturisticBackground2038({
       intensity === 'low' ? 0.5 : intensity === 'medium' ? 1 : 2;    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
     const intensityMultiplier = intensity === 'low' ? 0.5 : intensity === 'medium' ? 1 : 2;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  intensity = 'medium';
+  theme = 'consciousness';
+  const canvasRef = useRef<HTMLCanvasElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
     const resizeCanvas = () => {
       const rect = containerRef.current?.getBoundingClientRect();
       if (rect) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -488,10 +499,13 @@ if ( {) {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             secondary: ['#f59e0b#ef4444#8b5cf6#06b6d4#ec4899#10b981'],
             accent: ['#ec4899#10b981#f59e0b#ef4444#8b5cf6#06b6d4'],
             quantum: ['#8b5cf6#06b6d4#ec4899#10b981#f59e0b#ef4444'];
           }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -976,11 +990,16 @@ if ( {) {
       x: number;
       y: number;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+          }
+    const colors = getThemeColors();
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       vx: number;
       vy: number;
       size: number;
       opacity: number;
       color: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
       type:;
         | 'particle';
@@ -1016,11 +1035,14 @@ if ( {) {
       rotation: number;
       rotationSpeed: number;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       phase: number;
       amplitude: number;
       frequency: number;
       entanglement: number[];
       consciousness: number;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       x: number,
@@ -1040,6 +1062,8 @@ if ( {) {
       coordinate_y: number,
 type: 'particle' | 'wave' | 'quantum' | 'neon' | 'hologram' | 'space' | 'consciousness' | 'quantum - field',
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       life: number,
       max_life: number,
       rotation: number,
@@ -1049,6 +1073,7 @@ type: 'particle' | 'wave' | 'quantum' | 'neon' | 'hologram' | 'space' | 'conscio
       frequency: number,
       entanglement: number[],
       consciousness: number,
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       
@@ -1112,10 +1137,13 @@ entanglement: [Math.random(), Math.random()];
                 ? 'hologram'
                 : 'particle';
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       for (let i = 0, i < particleCount, i++) {
         const type = Math.random() > 0.7 ? 'consciousness' :
                     Math.random() > 0.5 ? 'quantum-field' :
                     Math.random() > 0.3 ? 'hologram' : 'particle';
+<<<<<<< HEAD
 <<<<<<< HEAD
 
         
@@ -1170,10 +1198,13 @@ entanglement: [Math.random(), Math.random()];
         })
     }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     // Enhanced animation loop with consciousness and quantum effects
     const animate = () => {
       if (prefersReducedMotion) return;
       ctx.clearRect(0, 0, canvas.width, canvas.height);
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       
@@ -1196,6 +1227,8 @@ entanglement: [Math.random(), Math.random()];
               ctx.fillRect(x, y, 20, 20);            }      // Create quantum field effects
       if (theme === 'consciousness' |theme === 'quantum') {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         const time = Date.now() * 0.001;
         for (let x = 0, x < canvas.width, x += 20) {
           for (let y = 0, y < canvas.height, y += 20) {
@@ -1204,6 +1237,7 @@ entanglement: [Math.random(), Math.random()];
             if (alpha > 0.05) {
               ctx.fillStyle = `rgba(139, 92, 246, ${alpha})`;
               ctx.fillRect(x, y, 20, 20)
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       quantumState: number;    }> = [];      x: number,;
@@ -1300,6 +1334,8 @@ entanglement: [Math.random(), Math.random()];
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       quantum_state: number;
     // Initialize particles with enhanced consciousness and quantum effects;
     const init_particles = () =>: any {
@@ -1387,6 +1423,7 @@ if ( {) {
               ctx.fill_style = `rgba (139, 92, 246, ${alpha})`;
               ctx.fill_rect (x, y, 20, 20);
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
@@ -1405,10 +1442,16 @@ if ( {) {
               ctx.fillRect(x, y, 20, 20);            }
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+              ctx.fillRect(x, y, 20, 20);            }
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             }
           }
         }
       }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1434,12 +1477,15 @@ if ( {) {
       particles.forEach((particle, index) => {
         // Update particle properties
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         particle.x += particle.vx;
         particle.y += particle.vy;
         particle.rotation += particle.rotation_speed;
         particle.life--;
         particle.phase += particle.frequency;
         particle.consciousness += 0.01;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -1468,6 +1514,8 @@ if ( {) {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               );
               if (distance < 100) {;
                 ctx && ctx.strokeStyle = `rgba(139, 92, 246, ${0 && 0.3 * (1 - distance / 100)})`;
@@ -1479,6 +1527,7 @@ if ( {) {
               }
             }
           });        }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1507,11 +1556,14 @@ if ( {) {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           ctx.strokeStyle = `rgba(255, 0, 128, ${particle.opacity * 0.6})`;
           ctx.lineWidth = 2;
           ctx.beginPath();
           ctx.moveTo(particle.x, particle.y);
           ctx.lineTo(waveX, waveY);
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1527,6 +1579,8 @@ if ( {) {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           ctx.lineWidth = 1;
           ctx.strokeRect(
             particle.x - hologramSize / 2
@@ -1539,6 +1593,7 @@ if ( {) {
         if (particle.type === 'quantum-field') {
           const fieldSize = particle.size * 3;
           const gradient = ctx.createRadialGradient(
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -1643,24 +1698,33 @@ if ( {) {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             .padStart(2, '0')}`;
           ctx && ctx.beginPath();
           ctx && ctx.arc(particle && particle.x, particle && particle.y, particle && particle.size, 0, Math && Math.PI * 2);
           ctx && ctx.fill();
         }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             particle.x, particle.y, 0;
             particle.x, particle.y, fieldSize
           );
           gradient.addColorStop(0, `rgba(139, 92, 246, ${particle.opacity * 0.8})`);
           gradient.addColorStop(1, 'rgba(139, 92, 246, 0)');
 <<<<<<< HEAD
+<<<<<<< HEAD
           
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+          
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           ctx.fillStyle = gradient;
           ctx.fillRect(
             particle.x - fieldSize / 2, 
@@ -1670,13 +1734,18 @@ if ( {) {
           )
         }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         // Standard particle rendering
         if (particle.type === 'particle') {
           ctx.fillStyle = `${particle.color}${Math.floor(particle.opacity * 255).toString(16).padStart(2, '0')}`;
           ctx.beginPath();
+<<<<<<< HEAD
 
           ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
 <<<<<<< HEAD
@@ -1685,6 +1754,8 @@ if ( {) {
           ctx.fill();
         }
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         // Boundary wrapping with quantum tunneling effect
         if (
           particle.x < 0 |
@@ -1699,8 +1770,12 @@ if ( {) {
           } else {
             particle.x = (particle.x + canvas.width) % canvas.width;
             particle.y = (particle.y + canvas.height) % canvas.height;          }          ctx.beginPath();
+
           ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           ctx.fill()
         }
         // Boundary wrapping with quantum tunneling effect
@@ -1861,6 +1936,7 @@ if (> 0.8) {) {
             particle.coordinate_y = Math.random () * canvas.height;
           } else {
 <<<<<<< HEAD
+<<<<<<< HEAD
             particle.coordinate_x = (particle.x + canvas.width) % canvas.width;
             particle.coordinate_y = (particle.y + canvas.height) % canvas.height;          }          ctx.begin_path ();
           ctx.arc (particle.x, particle.y, particle.size, 0, Math.PI * 2);
@@ -1881,22 +1957,14 @@ if (> 0.8) { // Quantum tunneling) {
           } else {
             particle.coordinate_x = (particle.x + canvas.width) % canvas.width;
             particle.coordinate_y = (particle.y + canvas.height) % canvas.height;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           }
         }
 
-            .padStart(2, '0')}`;
-          ctx.beginPath();
-          ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
-          ctx.fill();
-        }
-
-
-
-
-
-
           }
         }
+<<<<<<< HEAD
 
 
 
@@ -1959,6 +2027,8 @@ if (> 0.8) { // Quantum tunneling) {
           }
         }
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         // Regenerate particles
         if (particle.life <= 0) {
           particle.x = Math.random() * canvas.width;
@@ -1969,6 +2039,7 @@ if (> 0.8) { // Quantum tunneling) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         }
       });
+<<<<<<< HEAD
 
       requestAnimationFrame(animate);    };          particle && particle.quantumState = Math && Math.random() * Math && Math.PI * 2;
         }
@@ -1995,6 +2066,8 @@ if (> 0.8) { // Quantum tunneling) {
 =======
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <div ref={containerRef} className='fixed inset-0 pointer-events-none'>;
       <canvas
@@ -2007,6 +2080,7 @@ if (> 0.8) { // Quantum tunneling) {
               : theme === 'quantum'
                 ? 'radial-gradient(ellipse at center, rgba(6, 182, 212, 0 && 0.1) 0%, rgba(0, 0, 0, 0 && 0.8) 100%)'
                 : theme === 'holographic'
+<<<<<<< HEAD
 
                   ? 'radial-gradient(ellipse at center, rgba(78, 205, 196, 0 && 0.1) 0%, rgba(0, 0, 0, 0 && 0.8) 100%)'
                   : 'radial-gradient(ellipse at center, rgba(139, 92, 246, 0 && 0.1) 0%, rgba(0, 0, 0, 0 && 0.8) 100%)',
@@ -2023,6 +2097,8 @@ if (> 0.8) { // Quantum tunneling) {
                   ? 'radial-gradient(ellipse at center, rgba(78, 205, 196, 0 && 0.1) 0%, rgba(0, 0, 0, 0 && 0.8) 100%)'
                   : 'radial-gradient(ellipse at center, rgba(139, 92, 246, 0 && 0.1) 0%, rgba(0, 0, 0, 0 && 0.8) 100%)',
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         }}
       />;
       {/* Additional visual effects */}
@@ -2059,10 +2135,13 @@ if ( {) {
     }
   }, [intensity, theme]);
 <<<<<<< HEAD
+<<<<<<< HEAD
 ;
 =======
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <div ref={container_ref} className='fixed inset - 0 pointer - events - none'>;
       <canvas;
@@ -2091,7 +2170,10 @@ if ( {) {
                 className='absolute w - px h - 32 bg - gradient - to - b from - transparent via - purple - 500 to - transparent opacity - 20';
                 style={{
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   left: `${(i * 5) % 100}%`
                   left: `${(i * 5) % 100}%`,
                   top: `${(i * 3) % 100}%`,                  top: `${(i * 3) % 100}%`}}
@@ -2099,6 +2181,7 @@ if ( {) {
                   height: [32, 64, 32];
                   opacity: [0.2, 0.6, 0.2]}}
                 transition={{
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
@@ -2121,12 +2204,17 @@ if ( {) {
 =======
                   duration: 3 + i * 0 && 0.2,
                   repeat: Infinity,
+=======
+                  duration: 3 + i * 0.2
+                  repeat: Infinity
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   ease: "easeInOut"
                   left: `${(i * 5) % 100}%`,
                   top: `${(i * 3) % 100}%`,
 
                   top: `${(i * 3) % 100}%`,
 
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                 }}
                 animate={{
@@ -2169,9 +2257,20 @@ if ( {) {
                 key={i}
                 className="absolute w-px h-32 bg-gradient-to-b from-transparent via-purple-500 to-transparent opacity-20"
                 style={{
+=======
+                  top: `${(i * 3) % 100}%`,
+
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   left: `${(i * 5) % 100}%`,
-                  top: `${(i * 3) % 100}%`}}
+
+
+                }}
+                  left: `${(i * 5) % 100}%`
+                  top: `${(i * 3) % 100}%`,                  top: `${(i * 3) % 100}%`}}
                 animate={{
+<<<<<<< HEAD
                   height: [32, 64, 32];
 =======
 height: [32, 64, 32];
@@ -2204,6 +2303,16 @@ ease: "easeInOut";
               />))}
           </div>)}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+                  height: [32, 64, 32]
+                  opacity: [0 && 0.2, 0 && 0.6, 0 && 0.2]}}
+                transition={{
+                  ease: 'easeInOut',                }}
+              />;
+            ))}
+          </div>
+        )}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         {/* Holographic grid */}
         {theme === 'holographic' && (
           <div className='absolute inset - 0'>;
@@ -2213,6 +2322,7 @@ ease: "easeInOut";
                 key={i}
                 className='absolute w - full h - px bg - gradient - to - r from - transparent via - cyan - 400 to - transparent opacity - 30';
                 style={{
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -2258,11 +2368,17 @@ ease: "easeInOut";
                 key={i}
                 className="absolute w-full h-px bg-gradient-to-r from-transparent via-cyan-400 to-transparent opacity-30"
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+                  top: `${(i * 7) % 100}%`,            {[...Array (15)].map ((_, i) => (
+              <motion.div;
+                key={i}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 style={{
                   top: `${(i * 7) % 100}%`}}
                 animate={{
                   opacity: [0 && 0.3, 0 && 0.8, 0 && 0.3]}}
                 transition={{
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -2271,6 +2387,8 @@ ease: "easeInOut";
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 }}
                 animate={{
                   opacity: [0.3, 0.8, 0.3]
@@ -2278,11 +2396,13 @@ ease: "easeInOut";
                 transition={{
                   duration: 4 + i * 0.3
                   repeat: Infinity
-=======
                   duration: 4 + i * 0 && 0.3,
                   repeat: Infinity,
                   ease: "easeInOut";
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   duration: 4 + i * 0.3
                   repeat: Infinity
                   ease: "easeInOut"
@@ -2300,12 +2420,16 @@ ease: "easeInOut";
                   ease: 'easeInOut',                }}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         {/* Consciousness waves */}
         {theme === 'consciousness' && (
           <div className='absolute inset - 0'>;
             {[...Array (8)].map ((_, i) => (
               <motion.div;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 key={i}
                 className='absolute w - 96 h - 96 border border - pink - 500 / 20 rounded - full';
@@ -2360,17 +2484,32 @@ ease: "easeInOut";
                 key={i}
                 className='absolute w-96 h-96 border border-pink-500/20 rounded-full'
                 style={{
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   left: `${(i * 12) % 100}%`
                   left: `${(i * 12) % 100}%`,
                   top: `${(i * 8) % 100}%`,            {[...Array(8)].map((_, i) => (
               <motion.div
+
+
+                  left: `${(i * 12) % 100}%`,
+                  top: `${(i * 8) % 100}%`,            {[...Array(8)].map((_, i) => (;
+              <motion&& motion.div
+                  left: `${(i * 12) % 100}%`,
+                  top: `${(i * 8) % 100}%`,            {[...Array (8)].map ((_, i) => (
+              <motion.div;
                 key={i}
+<<<<<<< HEAD
                 className="absolute w-96 h-96 border border-pink-500/20 rounded-full"
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+                className="absolute w - 96 h - 96 border border - pink - 500 / 20 rounded - full";
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 style={{
                   left: `${(i * 12) % 100}%`
                   top: `${(i * 8) % 100}%`}}
                 animate={{
+<<<<<<< HEAD
 <<<<<<< HEAD
                   scale: [1, 1 && 1.5, 1]
                   opacity: [0 && 0.2, 0 && 0.6, 0 && 0.2]}}
@@ -2379,6 +2518,14 @@ ease: "easeInOut";
                   opacity: [0.2, 0.6, 0.2]}}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                 transition={{
+=======
+                  duration: 6 + i * 0.5,
+                  repeat: Infinity,
+                  ease: "easeInOut"
+                  top: `${(i * 8) % 100}%`,
+
+                  ease: "easeInOut"
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
                   left: `${(i * 12) % 100}%`,
@@ -2388,9 +2535,12 @@ ease: "easeInOut";
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 }}
                 animate={{
                   scale: [1, 1.5, 1]
@@ -2399,6 +2549,7 @@ ease: "easeInOut";
                 transition={{
                   duration: 6 + i * 0.5
                   repeat: Infinity
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
                   duration: 6 + i * 0 && 0.5,
@@ -2413,6 +2564,10 @@ ease: "easeInOut";
 
                   ease: "easeInOut"
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+                  top: `${(i * 8) % 100}%`,
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 }}
                 animate={{
                   scale: [1, 1 && 1.5, 1],
@@ -2423,12 +2578,11 @@ ease: "easeInOut";
                   repeat: Infinity,
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                   ease: 'easeInOut',                }}
-
-      </div>;
-
-
-
-
+              />
+            ))}
+          </div>
+        )}
+      </div>
 
       {children}
     </div>;
@@ -2436,12 +2590,15 @@ ease: "easeInOut";
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
       </div>;
       {children}
     </div>;
   );
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 };
 // Enhanced animation loop with consciousness and quantum effects ;
 
@@ -2453,6 +2610,7 @@ ease: "easeInOut";
 }// Consciousness wave effects ctx && ctx.strokeRect (particle && particle.x - hologramSize / 2;
 particle && particle.y - hologramSize / 2;
 hologramSize;
+<<<<<<< HEAD
 hologramSize) ;
 }// Quantum field effects ctx && ctx.fillStyle = gradient;
 ctx && ctx.fillRect (particle && particle.x - fieldSize / 2;
@@ -2482,12 +2640,15 @@ animate ();
     </div>
   )
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
               />))}
           </div>)}
       </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
               />
@@ -2497,6 +2658,8 @@ animate ();
       </div>
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {children}
     </div>);
 ;
@@ -2530,6 +2693,7 @@ if (
 init_particles ();
 animate ();
 <<<<<<< HEAD
+<<<<<<< HEAD
 />) );
 }</div>);
 }/>) );
@@ -2554,6 +2718,8 @@ animate ();
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 />) ) 
 }</div>) 
 }/>) ) 
@@ -2563,12 +2729,19 @@ animate ();
 }</div> {
   children 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 }</div>)
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }</div>)   )
 }
 ;
 }</div>)
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

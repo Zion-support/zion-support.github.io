@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -106,12 +107,15 @@ function generateSiteMap() {;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
      `;
        });
        .join("")}
    </urlset>;
  `;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -233,10 +237,13 @@ function generateSiteMap() {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 function SiteMap() {
   // getServerSideProps will do the heavy lifting;
 }
 export const getServerSideProps: GetServerSideProps = async ({ res }) => {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -266,6 +273,18 @@ export default SiteMap;
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  const sitemap = generateSiteMap();
+  res.setHeader("Content-Type", "text/xml");
+  // we send the XML to the browser
+  res.write(sitemap);
+  res.end();
+  return {
+    props: {}
+  }
+}
+export default SiteMap;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   // We generate the XML sitemap with the posts data;
   const sitemap = generateSiteMap ();
 ;
@@ -280,5 +299,8 @@ export default SiteMap;
 }
 ;
 export default SiteMap;
+<<<<<<< HEAD
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

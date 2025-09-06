@@ -1,5 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
@@ -13,6 +14,8 @@ type Action = 'approve' | 'remove' | 'edit';
 import {readReviews, writeReviews} from '../../../utils/dataStore';
 const ADMIN_KEY = process.env.ADMIN_KEY || 'dev-admin-key';
 type Action = 'approve' | 'remove' | 'edit';
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 
@@ -27,6 +30,7 @@ export default async function handler(
   res: NextApiResponse
 ) {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   if (req && req.method !== 'POST') {
     return res && res.status(405).json({ error: 'Method not allowed' });  }
@@ -37,12 +41,15 @@ export default async function handler(
     return res && res.status(401).json({ error: 'Unauthorized' });  }
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   try {
 
     const idx = reviews && reviews.findIndex(r => r && r.id === reviewId);
     if (idx < 0) return res && res.status(404).json({ error: 'Review not found' });
 
 
+<<<<<<< HEAD
 =======
     const idx = reviews && reviews.findIndex(r => r && r.id === reviewId);
     if (idx < 0) return res && res.status(404).json({ error: 'Review not found' });
@@ -61,10 +68,13 @@ export default async function handler(
     const idx = reviews.findIndex(r => r.id === reviewId);
     if (idx < 0) return res.status(404).json({ error: 'Review not found' });
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     if (action === 'approve') {
       reviews[idx].approved = true;
     } else if (action === 'remove') {
       reviews[idx].removed = true;    } else if (action === 'edit') {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       if (!updates) return res && res.status(400).json({ error: 'Missing updates' });
@@ -75,6 +85,8 @@ export default async function handler(
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {read_reviews, write_reviews} from '../../../utils / data_store';
 const ADMIN_KEY = process.env.ADMIN_KEY || 'dev - admin - key';
 type Action = 'approve' | 'remove' | 'edit';
@@ -135,17 +147,21 @@ if ( {) {
         reviews[idx].rating = updates && updates.rating;
       }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     return res && res.status(200).json({ message: 'OK' });
 
 =======
     return res && res.status(200).json({ message: 'OK' });
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   } catch (error: any) {
     return res
       .status(500)
       .json({ error: 'Internal server error', details: error?.message });
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -252,6 +268,8 @@ if ( {) {
 =======
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 type Action = 'approve' | 'remove' | 'edit';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'Review moderated' });
@@ -312,77 +330,43 @@ export default async function handler(req, res) {
   }
 }
     },;
+
+
+
+
+
+
+    const { action, reviewId, updates } = req.body as {
+      action: Action, reviewId: string,
+      updates?: { rating?: number, text?: string }
+    };
     const reviews = await readReviews();
     const idx = reviews.findIndex((r) => r.id === reviewId);
-    if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
-          } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-        reviews[idx].rating = updates.rating;
-        } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-      if (typeof updates.text === 'string') {;
-        reviews[idx].text = updates.text.trim();
-        } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-    } else {;
-      return res.status(400).json({ error: 'Invalid action' });
-      } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-;
+    if (idx < 0) return res.status(404).json({ error: 'Review not found' });
+
+    if (action === 'approve') {
+      reviews[idx].approved = true
+    } else if (action === 'remove') {
+      reviews[idx].removed = true
+    } else if (action === 'edit') {
+      if (!updates) return res.status(400).json({ error: 'Missing updates' });
+      if (typeof updates.rating === 'number') {
+        if (updates.rating < 1 || updates.rating > 5) {
+          return res.status(400).json({ error: 'Rating must be 1-5' })
+        }
+        reviews[idx].rating = updates.rating
+      }
+      if (typeof updates.text === 'string') {
+        reviews[idx].text = updates.text.trim()
+      }
+    } else {
+      return res.status(400).json({ error: 'Invalid action' })
+    }
+
     await writeReviews(reviews);
-    return res.status(200).json({ message: 'OK' });
-  } catch (error) {
-    return res.status(500).json({ error: 'Internal server error', details: error?.message });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    return res.status(200).json({ message: 'OK' })
+  } catch (error: any) {
+    return res.status(500).json({ error: 'Internal server error', details: error?.message })
   }
 }
   } catch (error) {
@@ -402,6 +386,24 @@ export default async function handler(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+
+
+
 }
+<<<<<<< HEAD
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+        reviews[idx].text = updates.text.trim ();
+      }
+    } else {
+      return res.status (400).json ({ error: 'Invalid action' });
+    }
+    await write_reviews (reviews);
+    return res.status (200).json ({ message: 'OK' });
+  } catch (error: any) {
+    return res;
+      .status (500);
+      .json ({ error: 'Internal server error', details: error?.message });
+  }
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

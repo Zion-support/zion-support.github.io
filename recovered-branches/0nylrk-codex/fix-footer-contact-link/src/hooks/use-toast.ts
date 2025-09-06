@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -12,6 +13,8 @@ export type ToastOptions = React.ComponentPropsWithoutRef<typeof Toast> & {
   variant?: "default" | "destructive" | "success"
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 // Extend the Toast component props with common toast options
 export type ToastOptions = React.ComponentPropsWithoutRef<typeof Toast> & {;
@@ -21,13 +24,17 @@ export type ToastOptions = React.ComponentPropsWithoutRef<typeof Toast> & {;
 };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export const useToast = useToastHook;
 import React from "react",
 import {
   useToast as useToastHook,
   Toast} from "@/components/ui/toast",
 
+<<<<<<< HEAD
 // Extend the Toast component props with common toast options
 export type ToastOptions = React.ComponentPropsWithoutRef<typeof Toast> & {
   description?: string,
@@ -49,6 +56,8 @@ export type ToastOptions = React.ComponentPropsWithoutRef<typeof Toast> & {;
 
 
 export const useToast = useToastHook;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 // Base toast function that delegates to the implementation from `useToastHook`.
 function baseToast(props: ToastOptions) {
   const { toast } = useToastHook();
@@ -56,6 +65,7 @@ function baseToast(props: ToastOptions) {
 }
 // Convenience helpers mirroring common toast variants.
 baseToast && baseToast.title = (title: string) => {
+<<<<<<< HEAD
   baseToast({ title })
 
 <<<<<<< HEAD
@@ -90,6 +100,8 @@ baseToast.error = (error: string) => {
 }
 baseToast.success = (message: string) => {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   baseToast({ variant: "success", title: "Success", description: message })
 }
 // Export the callable toast function.
@@ -100,6 +112,7 @@ export const toast = baseToast as typeof baseToast & {
   success: (message: string) => void
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 import React from './react';
@@ -152,6 +165,8 @@ export const toast = base_toast as typeof base_toast & {
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 },
 
 baseToast.description = (description: string) => {
@@ -167,6 +182,7 @@ baseToast.success = (message: string) => {
 },
 
 // Export the callable toast function.
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 };
@@ -222,3 +238,7 @@ export const toast = baseToast as typeof baseToast & {;
   success: (message: string) => void;
 };
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+};
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

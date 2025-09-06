@@ -2,7 +2,6 @@
 
 
 
-
 import {useState} from "react";
 import {useToast} from "@/hooks/use-toast";
 import {useNavigate} from "react-router-dom";
@@ -25,21 +24,27 @@ export function QuoteRequestForm() {;
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 export function QuoteRequestForm() {;
 export function QuoteRequestForm() {
 
 export function QuoteRequestForm() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const navigate = useNavigate();
   const { toast } = useToast();
   const [currentStep, setCurrentStep] = useState<QuoteRequestSteps>("service");
   const [isSubmitting, setIsSubmitting] = useState(false);
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useState } from "react",
 import { useToast } from "@/hooks/use-toast",
 import { useNavigate } from "react-router-dom",
@@ -62,6 +67,7 @@ export function QuoteRequestForm() {
   const [currentStep, setCurrentStep] = useState<QuoteRequestSteps>("service"),
   const [isSubmitting, setIsSubmitting] = useState(false),
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -75,6 +81,9 @@ export function QuoteRequestForm() {
   
   
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const [formData, setFormData] = useState<QuoteFormData>({
     serviceType: ""
     serviceCategory: ""
@@ -87,6 +96,7 @@ export function QuoteRequestForm() {
     budget: {
       amount: 0
       type: "fixed"
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -100,12 +110,15 @@ export function QuoteRequestForm() {
     }
     },
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     contactInfo: {
       name: ""
       email: ""
       phone: ""
       company: ""
     }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -121,11 +134,14 @@ export function QuoteRequestForm() {
   }),
   
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const updateFormData = (data: Partial<QuoteFormData>) => {
     setFormData(prev => ({
       ...prev
       ...data
     }))
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -257,12 +273,17 @@ export function QuoteRequestForm() {
 
 =======
   }
+=======
+    }
+  }
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const handleSubmit = async () => {
     setIsSubmitting(true);
     try {
       // In a real application, you would send the data to your backend
       console.log("Submitting form data:", formData);
       // Simulate API call
+<<<<<<< HEAD
       await new Promise(resolve => setTimeout(resolve, 1500));
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   },
@@ -282,6 +303,8 @@ export function QuoteRequestForm() {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       toast({
         title: "Quote Request Submitted"
         description: "We've received your request and will get back to you soon."})
@@ -292,6 +315,7 @@ export function QuoteRequestForm() {
         title: "Submission Failed"
         description: "There was an error submitting your request. Please try again."
         variant: "destructive"})
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -409,10 +433,13 @@ function QuoteRequestForm() {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     } finally {
       setIsSubmitting (false);
     }
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -497,6 +524,8 @@ function QuoteRequestForm() {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <div className="container mx-auto px-4 py-12">
       <div className="max-w-3xl mx-auto">
@@ -519,10 +548,13 @@ function QuoteRequestForm() {
             <div className="flex justify-between mt-8">
               {currentStep !== "service" && (
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <Button
                   variant="outline"
                   onClick={handleBack}
@@ -542,6 +574,7 @@ function QuoteRequestForm() {
                 <Button
                   onClick={handleSubmit}
                   disabled={isSubmitting}
+<<<<<<< HEAD
                   className="ml-auto bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white"
                 >
                   {isSubmitting ? "Submitting..." : "Submit Request"}
@@ -560,6 +593,8 @@ function QuoteRequestForm() {
   )
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useState } from "react",;
 import { useToast } from "@/hooks/use-toast",;
 import { useNavigate } from "react-router-dom",;
@@ -679,10 +714,18 @@ export function QuoteRequestForm() {;
         return <TimelineStep formData={formData} updateFormData={updateFormData} />,;
       case "budget":;
         return <BudgetStep formData={formData} updateFormData={updateFormData} />,;
+        return <ServiceTypeStep formData={formData} updateFormData={updateFormData} />;
+      case "details":;
+        return <ProjectDetailsStep formData={formData} updateFormData={updateFormData} />;
+      case "timeline":;
+        return <TimelineStep formData={formData} updateFormData={updateFormData} />;
+      case "budget":;
+        return <BudgetStep formData={formData} updateFormData={updateFormData} />;
       case "summary":;
         return <SummaryStep formData={formData} updateFormData={updateFormData} />;
       default: return null;
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -826,6 +869,8 @@ export function QuoteRequestForm() {;
   };
   return (;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <div className="container mx-auto px-4 py-12">;
       <div className="max-w-3xl mx-auto">;
         <div className="text-center mb-8">;
@@ -839,9 +884,13 @@ export function QuoteRequestForm() {;
           </div>;
         </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <Card className="bg-zion-blue-dark border border-zion-blue-light mb-8">;
           <CardContent className="px-6 py-8">;
             <StepProgress currentStep={currentStep} />;
@@ -853,7 +902,10 @@ export function QuoteRequestForm() {;
             <div className="flex justify-between mt-8">;
               {currentStep !== "service" && (;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <Button
                   variant="outline"
                   onClick={handleBack}
@@ -861,6 +913,7 @@ export function QuoteRequestForm() {;
                   Back;
                 </Button>;
               )}
+<<<<<<< HEAD
 
 
 =======
@@ -876,6 +929,8 @@ export function QuoteRequestForm() {;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <Button
                   onClick={handleSubmit}
                   disabled={isSubmitting}
@@ -883,6 +938,7 @@ export function QuoteRequestForm() {;
                   {isSubmitting ? "Submitting..." : "Submit Request"}
                 </Button>;
               )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1012,6 +1068,8 @@ export function QuoteRequestForm() {;
                 </Button>;
               )}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             </div>;
           </CardContent>;
         </Card>;
@@ -1020,6 +1078,7 @@ export function QuoteRequestForm() {;
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
@@ -1073,3 +1132,9 @@ return (<div className="container mx-auto px-4 py-12" > <div className="max-w-3x
 }
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+}
+;
+    </div>);
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

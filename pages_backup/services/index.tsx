@@ -1,6 +1,31 @@
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+import React from 'react';
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -85,6 +110,8 @@ import Link from 'next/link';
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 const ServicesIndex: NextPage = () => {
   const services = [
     {
@@ -100,7 +127,7 @@ const ServicesIndex: NextPage = () => {
         'Fraud Detection & Risk Assessment'
       ],
       pricing: 'Starting at $2,500/month',
-      icon: '🧠',
+      icon: '',
       link: '/services/ai-development'
     },
     {
@@ -116,7 +143,7 @@ const ServicesIndex: NextPage = () => {
         'Disaster Recovery & Backup'
       ],
       pricing: 'Starting at $1,800/month',
-      icon: '☁️',
+      icon: '',
       link: '/services/cloud-solutions'
     },
     {
@@ -132,7 +159,7 @@ const ServicesIndex: NextPage = () => {
         'Blockchain Security Audits'
       ],
       pricing: 'Starting at $3,500/month',
-      icon: '🔗',
+      icon: '',
       link: '/services/blockchain'
     },
     {
@@ -148,7 +175,7 @@ const ServicesIndex: NextPage = () => {
         'Remote Device Control'
       ],
       pricing: 'Starting at $2,200/month',
-      icon: '🌐',
+      icon: '',
       link: '/services/iot-platforms'
     },
     {
@@ -164,7 +191,7 @@ const ServicesIndex: NextPage = () => {
         'Third-party Integrations'
       ],
       pricing: 'Starting at $1,500/month',
-      icon: '⚡',
+      icon: '',
       link: '/products/micro-saas'
     },
     {
@@ -180,7 +207,7 @@ const ServicesIndex: NextPage = () => {
         'Vulnerability Management'
       ],
       pricing: 'Starting at $2,000/month',
-      icon: '🔒',
+      icon: '',
       link: '/services/cybersecurity'
     },
     {
@@ -196,7 +223,7 @@ const ServicesIndex: NextPage = () => {
         'Performance Optimization'
       ],
       pricing: 'Starting at $1,200/month',
-      icon: '💻',
+      icon: '',
       link: '/services/web-development'
     },
     {
@@ -212,7 +239,6 @@ const ServicesIndex: NextPage = () => {
         'Custom Reporting Solutions'
       ],
       pricing: 'Starting at $1,800/month',
-      icon: '📊',
       link: '/services/data-analytics'
   const microSaasServices = [
     {
@@ -251,80 +277,81 @@ const ServicesIndex: NextPage = () => {
       link: "/services/intelligent-inventory-manager"
     }
   ];
-  const itServices = [
-    {
-      name: "Cloud Migration & Architecture",
-      description: "Complete cloud transformation with AWS, Azure, and Google Cloud expertise",
-      features: ["Multi-cloud strategy", "Security implementation", "Cost optimization", "24/7 monitoring"],
-      pricing: "Starting at $5,000/project",
-      link: "/services/cloud-migration"
-    },
-    {
-      name: "Cybersecurity Solutions",
-      description: "Comprehensive security assessment, implementation, and ongoing protection",
-      features: ["Security audits", "Penetration testing", "Compliance management", "Incident response"],
-      pricing: "Starting at $3,000/month",
-      link: "/services/cybersecurity-solutions"
-    },
-    {
-      name: "DevOps & CI/CD Implementation",
-      description: "Automated deployment pipelines and infrastructure as code solutions",
-      features: ["CI/CD pipelines", "Infrastructure automation", "Monitoring setup", "Performance optimization"],
-      pricing: "Starting at $4,000/month",
-      link: "/services/devops-implementation"
-    },
-    {
-      name: "Database Design & Optimization",
-      description: "High-performance database architecture and optimization services",
-      features: ["Database design", "Performance tuning", "Backup strategies", "Scalability planning"],
-      pricing: "Starting at $2,500/project",
-      link: "/services/database-optimization"
-    },
-    {
-      name: "API Development & Integration",
-      description: "Custom API development and third-party system integration",
-      features: ["RESTful APIs", "GraphQL", "Microservices", "Documentation"],
-      pricing: "Starting at $3,500/project",
-      link: "/services/api-development"
+  const itServices = [;
+    {;
+      name: "Cloud Migration & Architecture",;
+      description: "Complete cloud transformation with AWS, Azure, and Google Cloud expertise",;
+      features: ["Multi-cloud strategy", "Security implementation", "Cost optimization", "24/7 monitoring"],;
+      pricing: "Starting at $5,000/project",;
+      link: "/services/cloud-migration";
+    },;
+    {;
+      name: "Cybersecurity Solutions",;
+      description: "Comprehensive security assessment, implementation, and ongoing protection",;
+      features: ["Security audits", "Penetration testing", "Compliance management", "Incident response"],;
+      pricing: "Starting at $3,000/month",;
+      link: "/services/cybersecurity-solutions";
+    },;
+    {;
+      name: "DevOps & CI/CD Implementation",;
+      description: "Automated deployment pipelines and infrastructure as code solutions",;
+      features: ["CI/CD pipelines", "Infrastructure automation", "Monitoring setup", "Performance optimization"],;
+      pricing: "Starting at $4,000/month",;
+      link: "/services/devops-implementation";
+    },;
+    {;
+      name: "Database Design & Optimization",;
+      description: "High-performance database architecture and optimization services",;
+      features: ["Database design", "Performance tuning", "Backup strategies", "Scalability planning"],;
+      pricing: "Starting at $2,500/project",;
+      link: "/services/database-optimization";
+    },;
+    {;
+      name: "API Development & Integration",;
+      description: "Custom API development and third-party system integration",;
+      features: ["RESTful APIs", "GraphQL", "Microservices", "Documentation"],;
+      pricing: "Starting at $3,500/project",;
+      link: "/services/api-development";
     }
   ];
-  const aiServices = [
-    {
-      name: "Custom AI Model Development",
-      description: "Tailored machine learning models for your specific business needs",
-      features: ["Custom model training", "Data preprocessing", "Model deployment", "Performance monitoring"],
-      pricing: "Starting at $8,000/project",
-      link: "/services/custom-ai-models"
-    },
-    {
-      name: "Natural Language Processing",
-      description: "Advanced NLP solutions for text analysis, chatbots, and content generation",
-      features: ["Text analysis", "Chatbot development", "Content generation", "Sentiment analysis"],
-      pricing: "Starting at $4,500/project",
-      link: "/services/nlp-solutions"
-    },
-    {
-      name: "Computer Vision Solutions",
-      description: "Image and video analysis with object detection and recognition capabilities",
-      features: ["Object detection", "Image classification", "Video analysis", "Real-time processing"],
-      pricing: "Starting at $6,000/project",
-      link: "/services/computer-vision"
-    },
-    {
-      name: "Predictive Analytics Platform",
-      description: "Advanced forecasting and predictive modeling for business intelligence",
-      features: ["Time series forecasting", "Risk assessment", "Trend analysis", "Automated insights"],
-      pricing: "Starting at $5,500/month",
-      link: "/services/predictive-analytics"
-    },
-    {
-      name: "AI-Powered Automation",
-      description: "Intelligent process automation to streamline business operations",
-      features: ["Process mapping", "Workflow automation", "Decision trees", "Integration capabilities"],
-      pricing: "Starting at $3,000/month",
-      link: "/services/ai-automation"
+  const aiServices = [;
+    {;
+      name: "Custom AI Model Development",;
+      description: "Tailored machine learning models for your specific business needs",;
+      features: ["Custom model training", "Data preprocessing", "Model deployment", "Performance monitoring"],;
+      pricing: "Starting at $8,000/project",;
+      link: "/services/custom-ai-models";
+    },;
+    {;
+      name: "Natural Language Processing",;
+      description: "Advanced NLP solutions for text analysis, chatbots, and content generation",;
+      features: ["Text analysis", "Chatbot development", "Content generation", "Sentiment analysis"],;
+      pricing: "Starting at $4,500/project",;
+      link: "/services/nlp-solutions";
+    },;
+    {;
+      name: "Computer Vision Solutions",;
+      description: "Image and video analysis with object detection and recognition capabilities",;
+      features: ["Object detection", "Image classification", "Video analysis", "Real-time processing"],;
+      pricing: "Starting at $6,000/project",;
+      link: "/services/computer-vision";
+    },;
+    {;
+      name: "Predictive Analytics Platform",;
+      description: "Advanced forecasting and predictive modeling for business intelligence",;
+      features: ["Time series forecasting", "Risk assessment", "Trend analysis", "Automated insights"],;
+      pricing: "Starting at $5,500/month",;
+      link: "/services/predictive-analytics";
+    },;
+    {;
+      name: "AI-Powered Automation",;
+      description: "Intelligent process automation to streamline business operations",;
+      features: ["Process mapping", "Workflow automation", "Decision trees", "Integration capabilities"],;
+      pricing: "Starting at $3,000/month",;
+      link: "/services/ai-automation";
     }
   ];
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -626,6 +653,8 @@ const ServicesIndex: NextPage = () => {
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <>
       <Head>
@@ -633,6 +662,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
         <meta name="description" content="Comprehensive technology services including AI development, cloud solutions, blockchain, IoT platforms, and micro SAAS solutions. Expert IT services for modern businesses." />
         <meta name="keywords" content="AI development services, cloud solutions, blockchain development, IoT platforms, micro SAAS, cybersecurity, web development, data analytics" />
       </Head>
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -1102,6 +1132,8 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     Learn More
                   </Link>
                 </div>
@@ -1122,39 +1154,51 @@ ursor/fix-syntax-push-and-merge-to-main-40de
             </Link>
           </div>
         </section>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     Learn More
                   </Link>
                 </div>
               </div>
+                    href={service && service.link}
+                    className="w-full inline-flex items-center justify-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">;
+                    Learn More;
+                  </Link>;
+                </div>;
+              </div>;
             ))}
-          </div>
-        </section>
 
         {/* CTA Section */}
-        <section className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg p-12 text-center text-white">
-          <h2 className="text-3xl font-bold mb-4">Ready to Transform Your Business?</h2>
-          <p className="text-xl mb-8">Let's discuss how our technology solutions can accelerate your growth</p>
-          <div className="flex justify-center gap-4">
-            <Link href="/contact" className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-              Get Started Today
-            </Link>
-            <Link href="/about" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
-              Learn More About Us
-            </Link>
-          </div>
-        </section>
-      </main>
-    </div>
+        <section className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg p-12 text-center text-white">;
+          <h2 className="text-3xl font-bold mb-4">Ready to Transform Your Business?</h2>;
+          <p className="text-xl mb-8">Let's discuss how our technology solutions can accelerate your growth</p>;
+          <div className="flex justify-center gap-4">;
+            <Link href="/contact" className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">;
+              Get Started Today;
+            </Link>;
+            <Link href="/about" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">;
+              Learn More About Us;
+            </Link>;
+          </div>;
+        </section>;
+      </main>;
+    </div>;
   );
 };
 export default ServicesIndex;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">;
@@ -1404,6 +1448,7 @@ export default ServicesIndex;
                     ))}
                   </div>;
                   <Link
+<<<<<<< HEAD
                     href={service && service.link}
                     className="w-full inline-flex items-center justify-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">;
                     Learn More;
@@ -1439,10 +1484,13 @@ ursor/fix-syntax-push-and-merge-to-main-40de
     </div>
   );
 }
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       </main>;
     </div>;
   ),;
 };
+<<<<<<< HEAD
 export default ServicesIndex;
 <<<<<<< HEAD
 =======
@@ -1457,12 +1505,15 @@ ursor/fix-syntax-push-and-merge-to-main-40de
           </div>
         </section>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 export default ServicesIndex;
       </div>;
     </>;
   );
 
+<<<<<<< HEAD
 }
       </div>;
     </>;
@@ -1479,3 +1530,5 @@ export default ServicesIndex;
     </>
   );
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 const files = glob && glob.sync("src/**/*.{ts,tsx,js,jsx}", { cwd: process && process.cwd() });
 let totalFixed = 0;
@@ -9,11 +10,14 @@ const files = glob && glob.sync("src/**/*.{ts,tsx,js,jsx}", { cwd: process && pr
 let totalFixed = 0;
 files && files.forEach((file) => {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   try {
-    const filePath = path && path.join(process && process.cwd(), file);
-    let content = fs && fs.readFileSync(filePath, "utf8");
+    const filePath = path.join(process.cwd(), file);
+    let content = fs.readFileSync(filePath, "utf8");
     const modified = false;
     // Fix import statements with double punctuation
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     content = content ;/g,
@@ -22,6 +26,10 @@ files && files.forEach((file) => {
     content = content.replace(;
       /import\s+.*?from\s+['"][^'"]+['"],\s*;/g,
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+    content = content ;/g,
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       (match) => {
         return match && match.replace(",;", ";");
 =======
@@ -46,6 +54,7 @@ files.for_each ((file) => {
       /import\s+.*?from\s+['"][^'"]+['"], \s*;/g,
       (match) => {
         return match.replace (",", ";");
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -82,6 +91,10 @@ if (.ends_with (") {
 
     content = content.replace(
       /import\s+.*?from\s+['"][^'"]+['"],\s*;/g
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     content = content.replace(;
       /import\s+.*?from\s+['"][^'"]+['"],\s*;/g,
       (match) => {
@@ -91,14 +104,19 @@ if (.ends_with (") {
     // Fix import statements missing semicolons
     content = content.replace(
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       /^import\s+.*?from\s+['"][^'"]+['"]\s*,?\s*$/gm,
       (match) => {;
 
         if (!match.trim().endsWith(";")) {
           return match.trim() + ";";
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
@@ -111,10 +129,13 @@ if (.ends_with (") {
         if (!match.trim().endsWith(";")) {
           return match.trim() + ";";
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         }
         return match;
       }
     );
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     content = content && content.replace(
@@ -124,24 +145,27 @@ if (.ends_with (") {
     content = content && content.replace(
       /(\w+)\s*=\s*[^;]+(?!;)\s*$/gm,
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       (match, varName) => {
         if (
-          !match && match.includes("function") &&
-          !match && match.includes("if") &&
-          !match && match.includes("for") &&
-          !match && match.includes("while") &&
-          !match && match.includes("switch") &&
-          !match && match.includes("try") &&
-          !match && match.includes("catch") &&
-          !match && match.includes("finally") &&
-          !match && match.includes("return") &&
-          !match && match.includes("throw") &&
-          !match && match.includes("break") &&
-          !match && match.includes("continue") &&
-          !match && match.includes("debugger") &&
-          !match && match.includes("export") &&
-          !match && match.includes("import")
+          !match.includes("function") &&
+          !match.includes("if") &&
+          !match.includes("for") &&
+          !match.includes("while") &&
+          !match.includes("switch") &&
+          !match.includes("try") &&
+          !match.includes("catch") &&
+          !match.includes("finally") &&
+          !match.includes("return") &&
+          !match.includes("throw") &&
+          !match.includes("break") &&
+          !match.includes("continue") &&
+          !match.includes("debugger") &&
+          !match.includes("export") &&
+          !match.includes("import")
         ) {
+<<<<<<< HEAD
 =======
 ;
     // Fix other common syntax issues;
@@ -168,11 +192,14 @@ if (&&) {
           !match.includes ("export") &&;
           !match.includes ("import")) {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           return match + ";";
         }
         return match;
       }
     );
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -199,3 +226,5 @@ if ( {) {
 console.log (`\n_total files fixed: ${total_fixed}`);
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

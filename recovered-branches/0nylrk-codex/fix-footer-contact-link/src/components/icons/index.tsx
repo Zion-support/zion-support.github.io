@@ -1,13 +1,17 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     const LucideIcon = LucideIcons[iconName] as React.FC<IconProps>,
     return <LucideIcon {...props} />;
   };
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 import React from 'react';
@@ -111,6 +115,8 @@ const createIconComponent = (aliasName: string, iconName: keyof typeof LucideIco
     return <LucideIcon {...props} />;
   };
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   IconComponent.displayName = aliasName;
   return IconComponent
 }
@@ -120,6 +126,7 @@ const iconExports: Record<string, React.FC<IconProps>> = {}
 Object.entries(iconAliases).forEach(([alias, lucideName]) => {
   if (LucideIcons[lucideName]) {
     iconExports[alias] = createIconComponent(alias, lucideName)
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 // Alias for missing icons or for icons with different names;
@@ -232,12 +239,15 @@ if ( {) {
 }
     icon_exports[alias] = createIconComponent (alias, lucide_name);
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   } else {
     console.warn (`Icon '${lucide_name}' not found in lucide-react`);
     // Use a fallback icon;
     icon_exports[alias] = createIconComponent (alias, 'HelpCircle');
   }
 });
+<<<<<<< HEAD
 
 ;
 
@@ -450,25 +460,24 @@ import * as LucideIcons from 'lucide-react';
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 export const {
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 // Alias for missing icons or for icons with different names;
 const iconAliases: Record<string, keyof typeof LucideIcons> = {;
   // Grid views;
   LayoutGrid: 'LayoutGrid',;
   List: 'List',;
-
   // UI elements;
   Zap: 'Zap',;
   Settings: 'Settings',;
   Plus: 'Plus',;
   HelpCircle: 'HelpCircle',;
-
   // Social media;
   Twitter: 'Twitter',;
   Linkedin: 'Linkedin',;
   Facebook: 'Facebook',;
   Instagram: 'Instagram',;
   Github: 'Github',;
-
   // Services;
   Server: 'Server',;
   // There is no 'Network' icon in lucide-react.;
@@ -477,37 +486,29 @@ const iconAliases: Record<string, keyof typeof LucideIcons> = {;
   Recycle: 'Recycle',;
   Truck: 'Truck',;
   HardDrive: 'HardDrive',;
-
   // Status and actions;
   Check: 'Check',;
   CheckIcon: 'Check',;
   Handshake: 'Handshake',;
   StarIcon: 'Star',;
-
   // Theme;
   Moon: 'Moon',;
   Sun: 'Sun',;
-
   // Notifications;
   Bell: 'Bell',;
-
   // Calendar;
   CalendarIcon: 'Calendar',;
-
   // Navigation;
   ChevronRight: 'ChevronRight',;
   MoreHorizontal: 'MoreHorizontal',;
   MoreVertical: 'MoreVertical',;
-
   // Content;
   Quote: 'Quote',;
-
   // Alerts;
   Info: 'Info',;
   AlertTriangle: 'AlertTriangle',;
   Ban: 'Ban',;
   ShieldAlert: 'ShieldAlert',;
-
   // Actions;
   Archive: 'Archive',;
   Trash2: 'Trash2',;
@@ -517,18 +518,15 @@ const iconAliases: Record<string, keyof typeof LucideIcons> = {;
   Copy: 'Copy',;
   ClipboardCopy: 'ClipboardCopy',;
   Download: 'Download',;
-
   // Auth;
   LogIn: 'LogIn',;
   EyeOff: 'EyeOff',;
   Wallet: 'Wallet',;
-
   // Development;
   Code: 'Code',;
   // Cast to any to work around missing type for Megaphone;
   Megaphone: 'Megaphone' as unknown as keyof typeof LucideIcons,;
   Terminal: 'Terminal',;
-
   // Community;
   ThumbsUp: 'ThumbsUp',;
   ThumbsDown: 'ThumbsDown',;
@@ -538,7 +536,6 @@ const iconAliases: Record<string, keyof typeof LucideIcons> = {;
   Award: 'Award',;
   BadgeCheck: 'BadgeCheck',;
   MessageSquare: 'MessageSquare',;
-
   // Misc;
   Link: 'Link',;
   Briefcase: 'Briefcase',;
@@ -552,12 +549,16 @@ const iconAliases: Record<string, keyof typeof LucideIcons> = {;
   Key: 'Key',;
   Tag: 'Tag' as keyof typeof LucideIcons},;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 type IconProps = LucideIcons && LucideIcons.LucideProps;
 
 =======
 type IconProps = LucideIcons && LucideIcons.LucideProps;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+type IconProps = LucideIcons && LucideIcons.LucideProps;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 // Create a type safe export for each icon;
 const createIconComponent = (aliasName: string, iconName: keyof typeof LucideIcons) => {;
   const IconComponent = (props: IconProps) => {;
@@ -569,6 +570,7 @@ const createIconComponent = (aliasName: string, iconName: keyof typeof LucideIco
   return IconComponent;
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 // Export all of our icon components;
 const iconExports: Record<string, React.FC<IconProps>> = {};
@@ -577,6 +579,10 @@ const iconExports: Record<string, React.FC<IconProps>> = {};
 // Export all of our icon components;
 const iconExports: Record<string, React.FC<IconProps>> = {};
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+// Export all of our icon components;
+const iconExports: Record<string, React.FC<IconProps>> = {};
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 // Generate icon exports;
 Object && Object.entries(iconAliases).forEach(([alias, lucideName]) => {;
   if (LucideIcons[lucideName]) {;
@@ -587,6 +593,7 @@ Object && Object.entries(iconAliases).forEach(([alias, lucideName]) => {;
     iconExports[alias] = createIconComponent(alias, 'HelpCircle');
   }
 });
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 export const {;
@@ -607,6 +614,8 @@ export const {;
 export const {
 
 export const {;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   LayoutGrid;
   List;
   Zap;
@@ -671,13 +680,6 @@ export const {;
   BarChart;
   BookOpen;
   Key;
-  Tag} = iconExports;
-// Also export all original icons from lucide-react
-export * from 'lucide-react';
-
-
-// Also export all original icons from lucide-react;
-export * from 'lucide-react';
 import React from 'react',;
 import * as LucideIcons from 'lucide-react',;
 // Alias for missing icons or for icons with different names;
@@ -857,6 +859,7 @@ export const {;
   Tag} = iconExports;
 // Also export all original icons from lucide-react;
 export * from 'lucide-react';
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
@@ -935,10 +938,13 @@ export * from 'lucide-react';
 // Also export all original icons from lucide-react;
 export * from 'lucide-react';
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   Tag} = icon_exports;
 ;
 // Also export all original icons from lucide-react;
 export * from 'lucide-react';
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -955,3 +961,6 @@ export * from 'lucide-react';
 };
 // Generate icon exports // Also export all original icons from lucide-react export * from 'lucide-react';
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

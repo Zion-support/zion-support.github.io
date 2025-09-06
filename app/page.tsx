@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import Link from 'next/link';
 
 <<<<<<< HEAD
@@ -46,10 +47,13 @@ export default function HomePage() {
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors focus-visible:focus"
           >
             Explore Services
           </Link>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -67,6 +71,8 @@ export default function HomePage() {
           <a
             href="https://ziontechgroup.com"
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             className="border-2 border-gray-300 text-gray-700 px-8 py-3 rounded-lg font-semibold hover:border-gray-400 transition-colors focus-visible:focus"
           >
             Visit Main Site
@@ -74,6 +80,7 @@ export default function HomePage() {
         </div>
       </section>
 
+<<<<<<< HEAD
       <section className="py-12">
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -83,10 +90,13 @@ export default function HomePage() {
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <Card
             title="Micro SaaS"
             href="/services/micro-saas"
             description="End-to-end product engineering with billing, auth, analytics and growth."
+<<<<<<< HEAD
             icon="🚀"
 <<<<<<< HEAD
 =======
@@ -197,6 +207,8 @@ export default function HomePage() {
             description="Cloud migration, architecture, and optimization across AWS, Azure, and GCP."
             icon="☁️"
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           />
         </div>
       </section>
@@ -209,6 +221,7 @@ export default function HomePage() {
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -251,10 +264,13 @@ export default function HomePage() {
           />
         </div>
       </section>
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     </div>
   );
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -287,11 +303,14 @@ function Card({ title, description, href, icon }: {
     >
       <div className="text-4xl mb-4">{icon}</div>
       <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">{title}</h3>
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <p className="text-gray-600 leading-relaxed">{description}</p>
     </Link>
   );
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -310,12 +329,15 @@ function FeatureCard({ title, description }: {
 =======
 function FeatureCard({ title, description }: { title: string; description: string }) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <div className="text-center p-6">
       <h3 className="text-lg font-semibold text-gray-900 mb-3">{title}</h3>
       <p className="text-gray-600">{description}</p>
     </div>
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -329,3 +351,5 @@ function FeatureCard({ title, description }: { title: string; description: strin
 =======
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

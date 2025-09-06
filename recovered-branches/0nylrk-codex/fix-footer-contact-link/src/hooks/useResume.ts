@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 export * from './resume / useResumeBasic';
 ;
@@ -6,13 +7,21 @@ export * from './resume / useResumeBasic';
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 // UseResume utility
 export const UseResume = () => {
   // Implementation here
   return null;
 };
 
+export * from './resume/useResumeBasic';
+// This file re-exports all resume hooks to maintain backward compatibility;
+export * from './resume',;
+// This file re-exports all resume hooks to maintain backward compatibility;
+export * from './resume',;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 // This file re-exports all resume hooks to maintain backward compatibility
@@ -33,3 +42,8 @@ export * from './resume/useResumeBasic';
 export * from './resume/useResumeBasic';
 export * from './resume/useResumeBasic';
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+export * from './resume/useResumeBasic';
+// This file re - exports all resume hooks to maintain backward compatibility;
+export * from './resume';
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

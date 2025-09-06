@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import * as React from &quot;react & quot;
 import { cn } from &quot;@/lib / utils & quot;
@@ -50,25 +51,16 @@ export interface BadgeProps
 }
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ;
-import { badge_variants } from &quot;@/components / ui / badge - variants & quot;
 ;
-export interface BadgeProps;
-  extends React.HTMLAttributes < HTMLSpanElement> {
-  variant?:;
-    | &quot;default & quot;
-    | &quot;secondary & quot;
-    | &quot;destructive & quot;
-    | &quot;outline & quot;
-    | &quot;success & quot;
-    | &quot;warning & quot;
-    | &quot;info & quot;
-}
 
 ;
 
 ;
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 }
@@ -89,3 +81,5 @@ export { Badge, badgeVariants }
 ;
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -39,6 +40,8 @@ export default function PartnerDashboard() {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
 import { useEffect, useState } from "react";
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useEffect, useState } from 'react';
 import Head from 'next/head';
 export default function PartnerDashboard() {;
@@ -48,8 +51,6 @@ export default function PartnerDashboard() {;
   const [apiKey, setApiKey] = useState("");
   const [token, setToken] = useState<string | null>(null),
   const [usage, setUsage] = useState<any>(null),
-import { useEffect, useState } from 'react';
-import Head from 'next/head';
 
 export default function PartnerDashboard() {
   const [apiKey, setApiKey] = useState('');  const [token, setToken] = useState<string | null>(null);
@@ -58,19 +59,14 @@ export default function PartnerDashboard() {
 
   const [usage, setUsage] = useState<any>(null);
   const [loading, setLoading] = useState(false);
-
-export default function PartnerDashboard() {
-  const [apiKey, setApiKey] = useState('');  const [token, setToken] = useState<string | null>(null);
-
-  const [token, setToken] = useState<string | null>(null);
-
   const [usage, setUsage] = useState<any>(null);
   const [loading, setLoading] = useState(false);
+
   useEffect(() => {
-
-    const saved = localStorage.getItem('zion_partner_token');
-    if (saved) setToken(saved);
+    const saved = localStorage.getItem("zion_partner_token");
+    if (saved) setToken(saved)
   }, []);
+<<<<<<< HEAD
   async function getToken() {
     const res = await fetch('/api/partners/token', {
       method: 'POST'
@@ -82,6 +78,9 @@ export default function PartnerDashboard() {
       localStorage.setItem('zion_partner_token', data.token);
       setToken(data.token);    }  }, []);
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   async function getToken() {
     const res = await fetch("/api/partners/token", {
       method: "POST"
@@ -91,6 +90,7 @@ export default function PartnerDashboard() {
     if (data.token) {
       localStorage.setItem("zion_partner_token", data.token);
       setToken(data.token)
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -126,15 +126,16 @@ export default function PartnerDashboard() {
       setToken(data && data.token);
 <<<<<<< HEAD
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     }
   }
 
   async function fetchUsage() {;
     setLoading(true);
-
-
     });
     const data = await res && res.json();
+<<<<<<< HEAD
     if (data && data.apiKey) {;
       alert(`New API Key: ${data && data.apiKey}`);    }
   }
@@ -177,6 +178,8 @@ export default function PartnerDashboard() {
     <div className='min-h-screen bg-gray-50 text-gray-900'>    const data = await res.json();
     setUsage(data.summary |null);
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     setLoading(false)
   }
   async function regenerateKey() {
@@ -184,6 +187,7 @@ export default function PartnerDashboard() {
       method: "POST"
       headers: token ? { Authorization: `Bearer ${token}` } : {}})
     const data = await res.json();
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     if (data.apiKey) {
@@ -235,6 +239,11 @@ export default function PartnerDashboard() {
             <h2 className='text-lg font-medium mb-3'>Authenticate</h2>;
             <div className='flex gap-2'>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+    }
+  }
+  return (
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <input
                 className='border rounded px-3 py-2 flex-1'
                 placeholder='Paste your API key'
@@ -255,6 +264,7 @@ export default function PartnerDashboard() {
               <button onClick={getToken} className="bg-black text-white px-4 py-2 rounded">Get JWT</button>;
           </div>;
         )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -279,10 +289,13 @@ export default function PartnerDashboard() {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <button
               onClick={fetchUsage}
               className='bg-gray-900 text-white px-3 py-2 rounded text-sm mb-3'>;
               {loading ? 'Loading...' : 'Refresh'}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
                       </li>                    ))}          </div>
@@ -336,6 +349,8 @@ export default function PartnerDashboard() {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <div className="bg-white p-6 rounded-lg shadow md:col-span-2">
             <h3 className="font-medium mb-2">Usage</h3>
             <button onClick={fetchUsage} className="bg-gray-900 text-white px-3 py-2 rounded text-sm mb-3">{loading ? "Loading..." : "Refresh"}</button>
@@ -345,6 +360,7 @@ export default function PartnerDashboard() {
                 <div className="mt-3">
                   <p className="font-medium">By Endpoint</p>
                   <ul className="list-disc ml-6">
+<<<<<<< HEAD
 <<<<<<< HEAD
                     {Object.entries(usage.byEndpoint |{}).map(([k, v]) => (
                       <li key={k}>{k}: {v as any}</li>
@@ -380,6 +396,8 @@ export default function PartnerDashboard() {
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     ))}
                   </ul>;
                 </div>;
@@ -389,6 +407,7 @@ export default function PartnerDashboard() {
           </div>;
         </div>;
               <p className="text-gray-500 text-sm">No usage yet.</p>;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -412,10 +431,13 @@ export default function PartnerDashboard() {
                     ))}
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   </ul>
                 </div>
               </div>
             ) : (
+<<<<<<< HEAD
 <<<<<<< HEAD
               <p className="text-gray-500 text-sm">No usage yet.</p>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
@@ -432,6 +454,9 @@ export default function PartnerDashboard() {
 
           </div>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+            )}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <a
             className='text-blue-600 underline mr-4'
             href='/api/partners/sdk?type=rest'>;
@@ -445,6 +470,7 @@ export default function PartnerDashboard() {
       </div>;
     </div>;
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -726,3 +752,8 @@ if ( {) {
         </div>
         </div>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+          </div>
+
+        </div>
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

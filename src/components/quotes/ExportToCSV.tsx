@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Button } from "@/components/ui/button";
 import { Download } from 'lucide-react';
 import type { QuoteRequest } from "@/types/quotes";
@@ -10,6 +11,8 @@ import type { QuoteRequest } from "@/types/quotes";
 
 =======
 import { Button } from '@/components/ui/button'
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { Download } from 'lucide-react'
 import type { QuoteRequest } from "@/types/quotes";
 interface ExportToCSVProps {
@@ -33,41 +36,6 @@ export const ExportToCSV = ({
       'Status'
       'Created Date'
     ]
-import { Button } from "@/components/ui/button";
-    // Format quote data for CSV
-    const rows = quotes.map(quote => [
-      quote.id
-      quote.talent_name |'Unknown'
-      quote.requester_name
-      quote.requester_email
-      quote.project_name
-      quote.project_summary
-      quote.budget_display |
-        (quote.budget_min && quote.budget_max
-          ? `$${quote.budget_min} - $${quote.budget_max}`
-          : quote.budget_min
-            ? `$${quote.budget_min}`
-            : 'Not specified')
-      quote.timeline
-      quote.status
-      new Date(quote.created_at).toLocaleDateString()
-
-import { Button } from "@/components/ui/button",
-import { Download } from 'lucide-react'
-import type { QuoteRequest } from "@/types/quotes",
-interface ExportToCSVProps {
-  quotes: QuoteRequest[],
-  filename?: string
-}
-
-export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSVProps) => {
-  const handleExport = () => {
-    // Define CSV Headers
-    const headers = [
-      'IDTalent NameRequester NameRequester EmailProject NameProject SummaryBudgetTimeline',
-      'StatusCreated Date'
-    ],
-    
     // Format quote data for CSV
     const rows = quotes.map(quote => [
       quote.id,
@@ -84,7 +52,6 @@ export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSV
             : 'Not specified'),
       quote.timeline,
       quote.status,
-      new Date(quote.created_at).toLocaleDateString(),
     ])
     // Create CSV content
     const csvContent = [
@@ -98,14 +65,6 @@ export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSV
               ? `"${cell.replace(/"/g, '""')}"`
               : cell
           )
-          .join(',')
-      )
-    ].join('\n')
-    // Create download link
-          .join(',');
-      ),;
-    ].join('\n');
-    // Create download link;
     const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' })
     const url = URL.createObjectURL(blob)
     const link = document.createElement('a')
@@ -117,7 +76,10 @@ export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSV
     document.body.appendChild(link)
 import { Button } from "@/components/ui/button"
 import type { QuoteRequest } from "@/types/quotes"
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface ExportToCSVProps {
   quotes: QuoteRequest[]
   filename?: string
@@ -153,6 +115,7 @@ export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSV
       ...rows.map(row =>
         row.map(cell =>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
           // Escape commas and quotes in cell values
@@ -170,12 +133,19 @@ export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSV
         row.map(cell => 
 
 
+=======
+
+
+      ...rows.map(row => 
+        row.map(cell => 
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           // Escape commas and quotes in cell values
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
             ? `"${cell.replace(/"/g, '""')}"`
             : cell
         ).join()
       )
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     const blob = new Blob([csvContent], { type: 'text/csv,charset=utf-8,' });
@@ -206,6 +176,8 @@ export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSV
     setTimeout(() => {
       document.body.removeChild(link)
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       URL.revokeObjectURL(url)
     }, 100)
 import { Button } from '@/components / ui / button';
@@ -335,6 +307,7 @@ export const ExportToCSV = ({ quotes, filename = "quote - requests" }: ExportToC
   } }
   return (
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -344,6 +317,10 @@ export const ExportToCSV = ({ quotes, filename = "quote - requests" }: ExportToC
 
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { Button } from "@/components/ui/button",
 import { Download } from 'lucide-react'
 import type { QuoteRequest } from "@/types/quotes",
@@ -394,7 +371,6 @@ export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSV
 ;
   );
 };
-
     ].join('\n'),
     
     // Create download link
@@ -420,18 +396,25 @@ import { Button } from "@/components/ui/button",;
 import { Download } from 'lucide-react';
 import type { QuoteRequest } from "@/types/quotes",;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface ExportToCSVProps {;
   quotes: QuoteRequest[],;
   filename?: string;
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSVProps) => {;
   const handleExport = () => {;
     // Define CSV Headers;
     const headers = [;
+<<<<<<< HEAD
       'IDTalent NameRequester NameRequester EmailProject NameProject SummaryBudgetTimeline';
       'StatusCreated Date';
     ];
@@ -492,6 +475,9 @@ export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSV
   );
 };
 
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -509,12 +495,15 @@ export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSV
 };
 '"},;
 
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
 =======
   return (;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <Button;
       variant="outline";
       on_click = {handle_export, }
@@ -523,6 +512,7 @@ export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSV
     >;
       <Download size={16} />;
       Export CSV;
+<<<<<<< HEAD
     </Button>;
   );
 <<<<<<< HEAD
@@ -531,3 +521,5 @@ export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSV
 };
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

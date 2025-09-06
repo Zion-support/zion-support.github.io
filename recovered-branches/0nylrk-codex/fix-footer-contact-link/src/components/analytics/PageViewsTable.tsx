@@ -2,7 +2,6 @@
 
 
 
-
 import {useQuery} from "@tanstack/react-query";
 import {supabase} from "@/integrations/supabase/client";
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
@@ -10,6 +9,7 @@ import {Skeleton} from "@/components/ui/skeleton";
 import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
 import {useState} from "react";
 type TimeRange = '1d' | '7d' | '30d' | '90d' | '365d';
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -28,6 +28,8 @@ type TimeRange = '1d' | '7d' | '30d' | '90d' | '365d';
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useQuery } from "@tanstack/react-query",
 import { supabase } from "@/integrations/supabase/client",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
@@ -36,6 +38,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { useState } from "react",
 type TimeRange = '1d' | '7d' | '30d' | '90d' | '365d',
 
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -45,12 +48,15 @@ type TimeRange = '1d' | '7d' | '30d' | '90d' | '365d',
 
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 const timeRangeToInterval = {
   '1d': { days: 1, interval: 'hour' }
   '7d': { days: 7, interval: 'day' }
   '30d': { days: 30, interval: 'day' }
   '90d': { days: 90, interval: 'week' }
   '365d': { days: 365, interval: 'month' }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -144,6 +150,9 @@ export function PageViewsTable() {
               return (
                 <div key={index} className="flex items-center justify-between">
                   <div className="text-zion-slate-light font-medium">
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     {formatPathName(page.path)}
                   </div>
                   <div className="flex items-center gap-3">
@@ -153,18 +162,6 @@ export function PageViewsTable() {
                         <div
                           className="h-full bg-gradient-to-r from-zion-purple to-zion-cyan"
                           style={{ width: `${percentage}%` }}
-                        />
-                      </div>
-                      <span className="text-xs text-zion-slate">{percentage}%</span>
-                    </div>
-                  </div>
-                </div>
-              )
-            })
-          ) : (
-            <div className="text-center py-8 text-zion-slate">
-              No page view data available for this time period
-            </div>
           )}
         </div>
       </CardContent>
@@ -178,14 +175,18 @@ import { Skeleton } from "@/components/ui/skeleton",;
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",;
 import { useState } from "react",;
 type TimeRange = '1d' | '7d' | '30d' | '90d' | '365d',;
+<<<<<<< HEAD
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 const timeRangeToInterval = {;
   '1d': { days: 1, interval: 'hour' },;
   '7d': { days: 7, interval: 'day' },;
   '30d': { days: 30, interval: 'day' },;
   '90d': { days: 90, interval: 'week' },;
   '365d': { days: 365, interval: 'month' }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -319,6 +320,8 @@ export function PageViewsTable() {;
                         <div;
                           className="h-full bg-gradient-to-r from-zion-purple to-zion-cyan";
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                           style={{ width: `${percentage}%` }}
                         />;
                       </div>;
@@ -335,8 +338,8 @@ export function PageViewsTable() {;
 
 
 
-          )}
 
+<<<<<<< HEAD
 <<<<<<< HEAD
         </div>;
       </CardContent>;
@@ -480,3 +483,8 @@ return data || []
 }
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+          )}
+}
+;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

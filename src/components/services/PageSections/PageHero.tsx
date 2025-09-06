@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export function PageHero() {
 <<<<<<< HEAD
 =======
@@ -11,6 +12,8 @@ import { Clock, Map, DollarSign } from 'lucide-react'
 import { GradientHeading } from "@/components/GradientHeading",
 import { Clock, Map, DollarSign } from 'lucide-react'
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export function PageHero() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   return (
@@ -22,6 +25,7 @@ export function PageHero() {
         Professional IT onsite support services with transparent pricing across
         190+ countries worldwide
       </p>
+<<<<<<< HEAD
 <<<<<<< HEAD
           </div>
           <h3 className='text-xl font-bold text-white mb-2'>Global Coverage</h3>
@@ -55,10 +59,21 @@ export function PageHero() {
         <div className="bg-zion-blue-light p-6 rounded-lg border border-zion-purple/20 flex flex-col items-center text-center">
           <div className="bg-zion-purple/20 p-3 rounded-full mb-4">
             <Clock className="h-8 w-8 text-zion-cyan" />
+=======
+
+
+          </div>
+          <h3 className="text-xl font-bold text-white mb-2">Global Coverage</h3>
+          <p className="text-zion-slate-light">IT onsite services available in over 190 countries and territories worldwide</p>
+        </div>
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           </div>
           <h3 className="text-xl font-bold text-white mb-2">Rapid Response</h3>
           <p className="text-zion-slate-light">Guaranteed 4-hour response time for critical issues in most major cities</p>
         </div>
+<<<<<<< HEAD
         <div className='bg-zion-blue-light p-6 rounded-lg border border-zion-purple/20 flex flex-col items-center text-center'>
           <div className='bg-zion-purple/20 p-3 rounded-full mb-4'>
             <DollarSign className='h-8 w-8 text-zion-cyan' />
@@ -97,6 +112,8 @@ import { Clock, Map, DollarSign } from 'lucide-react'
           <h3 className="text-xl font-bold text-white mb-2">Transparent Pricing</h3>
           <p className="text-zion-slate-light">Clear per-incident pricing includes transportation and first hour onsite</p>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export function PageHero() {
   return (
     <div className="text-center mb-12">
@@ -120,9 +137,12 @@ export function PageHero() {
           <p className="text-zion-slate-light">Guaranteed 4-hour response time for critical issues in most major cities</p>
         </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
         
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <div className="bg-zion-blue-light p-6 rounded-lg border border-zion-purple/20 flex flex-col items-center text-center">
           <div className="bg-zion-purple/20 p-3 rounded-full mb-4">
             <DollarSign className="h-8 w-8 text-zion-cyan" />
@@ -135,6 +155,7 @@ export function PageHero() {
           <p className="text-zion-slate-light">Clear per-incident pricing includes transportation and first hour onsite</p>
         </div>
       </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -149,6 +170,9 @@ import { GradientHeading } from '@/components/GradientHeading';
 import { Clock, Map, DollarSign } from 'lucide-react';
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+import { Clock, Map, DollarSign } from 'lucide-react';
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export function PageHero() {;
   return (
     <div className='text-center mb-12'>;
@@ -201,9 +225,12 @@ export function PageHero() {;
     </div>
   )
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { GradientHeading } from "@/components/GradientHeading";
 import { Clock, Map, DollarSign } from 'lucide-react';
 export function PageHero() {;
@@ -242,6 +269,7 @@ export function PageHero() {;
     </div>;
   );
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 ursor/fix-website-loading-errors-and-merge-6662
@@ -335,3 +363,5 @@ function PageHero() {
     </div>);
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -1,8 +1,11 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 import {Dialog, DialogContent, DialogHeader, DialogTitle} from "@/components/ui/dialog";
@@ -11,14 +14,18 @@ import {TalentProfile} from "@/types/talent";
 import {UserProfile} from "@/types/auth";
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from "react",
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog",
 import { HireRequestForm } from "./HireRequestForm",
 import { TalentProfile } from "@/types/talent",
 import { UserProfile } from "@/types/auth",
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -27,6 +34,8 @@ import { UserProfile } from "@/types/auth",
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from "react";
 import {
   Dialog,
@@ -37,12 +46,16 @@ import {
 import { HireRequestForm } from "./HireRequestForm";
 import { TalentProfile } from "@/types/talent";
 import { UserProfile } from "@/types/auth";
+<<<<<<< HEAD
 >>>>>>> main
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface HireRequestModalProps {
   talent: TalentProfile | null;
   isOpen: boolean;
   onClose: () => void;
+<<<<<<< HEAD
 <<<<<<< HEAD
   userDetails?: UserProfile
 =======
@@ -72,11 +85,16 @@ export function HireRequestModal({
   };
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+    onClose();
+  };
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     onClose()
   },
 
-
   if (!talent) return null,
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -85,6 +103,9 @@ export function HireRequestModal({
 =======
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from './react';
 import {
   Dialog,
@@ -113,29 +134,38 @@ function HireRequestModal() {
 if (return null) {
   $2
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <Dialog open={is_open} onOpenChange={handle_close}>;
       <DialogContent className="bg - zion - blue - dark border - zion - blue - light max - w-4xl w-[95vw] max - h-[90vh] overflow - y-auto">;
         <DialogHeader>;
           <DialogTitle className="text - xl font - bold text - white">;
             Hire {talent.full_name}
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {Dialog, DialogContent, DialogHeader, DialogTitle} from "@/components/ui/dialog";
 import {HireRequestForm} from "./HireRequestForm";
 import {TalentProfile} from "@/types/talent";
 import {UserProfile} from "@/types/auth";
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 onClose();
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   }
   if (!talent) return null;
 
+<<<<<<< HEAD
     onClose()
   },
 
@@ -158,10 +188,13 @@ onClose();
 <<<<<<< HEAD
 
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             Hire {talent.full_name}
           </DialogTitle>
         </DialogHeader>
         <HireRequestForm
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import React from "react",;
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog",;
@@ -191,10 +224,13 @@ export function HireRequestModal(): any ({ talent, isOpen, onClose, userDetails 
 
 <<<<<<< HEAD
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             Hire {talent.full_name}
           </DialogTitle>
         </DialogHeader>
         <HireRequestForm 
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           talent={talent}
@@ -216,11 +252,13 @@ export function HireRequestModal(): any ({ talent, isOpen, onClose, userDetails 
         <HireRequestForm 
 =======
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <HireRequestForm
->>>>>>> main
           talent={talent}
           onClose={handleClose}
           userDetails={userDetails}
+<<<<<<< HEAD
         />
       </DialogContent>
     </Dialog>
@@ -254,6 +292,8 @@ export function HireRequestModal({ talent, isOpen, onClose, userDetails } HireRe
           <DialogTitle className="text-xl font-bold text-white">;
             Hire {talent.full_name}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           </DialogTitle>;
         </DialogHeader>;
         <HireRequestForm;
@@ -264,4 +304,3 @@ export function HireRequestModal({ talent, isOpen, onClose, userDetails } HireRe
       </DialogContent>;
     </Dialog>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

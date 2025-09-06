@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 
@@ -10,6 +11,8 @@ import {Button} from "@/components/ui/button";
 import {ChatAssistant} from "@/components/ChatAssistant";
 export function ChatAssistantTrigger() {;
   const [isOpen, setIsOpen] = useState(false);
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useState } from "react",
 import { MessageSquare } from "lucide-react",
 import { Button } from "@/components/ui/button";
@@ -21,7 +24,12 @@ import { ChatAssistant } from "@/components/ChatAssistant",
 export function ChatAssistantTrigger() {
   const [isOpen, setIsOpen] = useState(false),
 
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   // Handle sending messages to the AI chat assistant
 
   const handleSendMessage = async (message: string): Promise<void> => {
@@ -29,6 +37,7 @@ export function ChatAssistantTrigger() {
       const response = await fetch("https://ziontechgroup.functions.supabase.co/functions/v1/ai-chat", {
         method: "POST"
         headers: {
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -48,11 +57,14 @@ export function ChatAssistantTrigger() {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       if (!response.ok) {
         throw new Error("Failed to get response from AI assistant")
       }
       return Promise.resolve()
     } catch (error) {
+<<<<<<< HEAD
 <<<<<<< HEAD
       console.error("Error in AI chat:", error);
       return Promise.resolve()
@@ -64,12 +76,15 @@ import {ChatAssistant} from "@/components/ChatAssistant";
 =======
 
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
       console.error("Error in AI chat:", error),
       return Promise.resolve()
     }
   }
   return (
+<<<<<<< HEAD
     <>
       <Button
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -114,42 +129,12 @@ export function ChatAssistantTrigger() {;
         onClick={() => setIsOpen(true)}
 
 =======
-      <Button
-
-import { useState } from "react",;
-import { MessageSquare } from "lucide-react",;
-import { Button } from "@/components/ui/button",;
-import { ChatAssistant } from "@/components/ChatAssistant",;
-;
-export function ChatAssistantTrigger() {;
-  const [isOpen, setIsOpen] = useState(false),;
-;
-  // Handle sending messages to the AI chat assistant;
-  const handleSendMessage = async (message:string):Promise<void> => {;
-    try {;
-      const response = await fetch("https://ziontechgroup.functions.supabase.co/functions/v1/ai-chat", {;
-        method:"POST",;
-        headers:{;
-          "Content-Type":"application/json"},;
-        body:JSON.stringify({ ;
-          messages:[{ role:"user", content:message }] ;
-        })}),;
-      ;
-      if (!response.ok) {;
-        throw new Error("Failed to get response from AI assistant"),;
-      }
-      ;
-      return Promise.resolve(),;
-    } catch (error) {;
-      console.error("Error in AI chat:", error),;
-      return Promise.resolve(),;
-    }
-  },;
-;
-  return (;
+=======
     <>;
-      <Button;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+      <Button
         onClick={() => setIsOpen(true)}
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         size="icon";
         variant="outline";
@@ -172,10 +157,13 @@ export function ChatAssistantTrigger() {;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           }}
           onSendMessage={handleSendMessage}
         />;
       )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -185,6 +173,8 @@ export function ChatAssistantTrigger() {;
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useState } from './react';
 import { MessageSquare } from './lucide-react';
 import { Button } from '@/components / ui / button';
@@ -195,6 +185,7 @@ export /**
 function ChatAssistantTrigger() {
   const [is_open, setIsOpen] = useState (false);
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -340,3 +331,5 @@ export function ChatAssistantTrigger() {;
 }
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
   const user = requireUser(req, res);
@@ -49,6 +50,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'GET') return res.status(405).json({ error: 'Method not allowed' })
   const items = listConversations(user.id)
 
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   res.status(200).json({ items })
 import { NextApiRequest, NextApiResponse } from 'next',;
 import { requireUser } from '../../../utils/auth',;
@@ -68,6 +73,8 @@ import { requireUser } from '../../../utils/auth';
 import { listConversations } from '../../../utils/messaging/storage';
 export default function handler(req, res) {
   try {
+
+
   const user = requireUser(req, res);
   if (!user) return,;
   if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
@@ -79,11 +86,15 @@ export default function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 }
@@ -96,3 +107,5 @@ export default function handler(req, res) {
 }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

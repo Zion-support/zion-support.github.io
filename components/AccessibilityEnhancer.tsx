@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -96,6 +97,8 @@ const AccessibilityEnhancer: React.FC = () => {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       }
       if (liveRegion && liveRegion.parentNode) {;
         liveRegion && liveRegion.parentNode.removeChild(liveRegion);
@@ -103,6 +106,7 @@ const AccessibilityEnhancer: React.FC = () => {
     }
   }, []);
   return null;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -293,10 +297,13 @@ if ( {) {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     } else {
       root.class_list.remove ('reduced - motion');
     }
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -381,10 +388,13 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     const newValue = !isHighContrast;
     setIsHighContrast(newValue);
     localStorage && localStorage.setItem('highContrast', newValue && newValue.toString());
     applyAccessibilityStyles(newValue, fontSize, reducedMotion);
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   };
@@ -394,6 +404,8 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
   };
   const changeFontSize = (newSize: string) => {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     setFontSize(newSize);
     localStorage && localStorage.setItem('fontSize', newSize);
     applyAccessibilityStyles(isHighContrast, newSize, reducedMotion);
@@ -427,10 +439,24 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
               </button>;
             ))}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+      {/* Skip to main content link */}
+      <a
+        href="#main-content"
+        className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50"
+      >
+        Skip to main content
+      </a>
+      {/* Screen reader only content */}
+}
+export default AccessibilityEnhancer;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
           </div>;
         </div>;
       </div>;
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -446,6 +472,11 @@ export default AccessibilityEnhancer;
         </div>;
       </div>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+};
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {/* Skip to main content link */}
       <a
         href="#main-content"
@@ -469,6 +500,7 @@ export default AccessibilityEnhancer;
   );
 }
 export default AccessibilityEnhancer;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 ;
@@ -546,3 +578,6 @@ export default AccessibilityEnhancer;
 export default AccessibilityEnhancer;
 export default AccessibilityEnhancer;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+export default AccessibilityEnhancer;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

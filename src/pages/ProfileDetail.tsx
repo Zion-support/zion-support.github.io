@@ -1,7 +1,10 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export default function ProfileDetail() {;
   // useParams is typed as `any` in this environment due to missing type;
   // definitions, so avoid passing a type argument to prevent TS2347.;
@@ -10,6 +13,7 @@ export default function ProfileDetail() {;
   const [profileData, setProfileData] = useState<any>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -24,6 +28,8 @@ export default function ProfileDetail() {
   const [profileData, setProfileData] = useState<any>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useState, useEffect } from "react",
 import { useRouter } from "next/router",
 import { supabase } from "@/integrations/supabase/client",
@@ -35,11 +41,8 @@ import { Button } from "@/components/ui/button",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { Badge } from "@/components/ui/badge";
 import { MapPin, Clock, Link as LinkIcon, Github, Twitter, Linkedin, CheckCircle2, Mail, Phone, Globe } from 'lucide-react'
-import { HireNowCTA } from "@/components/profile/HireNowCTA";
-export default function ProfileDetail() {
-  // useParams is typed as `any` in this environment due to missing type
-  // definitions, so avoid passing a type argument to prevent TS2347.
 
+<<<<<<< HEAD
   const router = useRouter();
   const profileId = router.query.profileId as string;
   const [profileData, setProfileData] = useState<any>(null);
@@ -57,6 +60,10 @@ export default function ProfileDetail() {
   const [isLoading, setIsLoading] = useState(true),
   const [error, setError] = useState<string | null>(null),
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+  useEffect(() => {
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     const fetchProfile = async () => {
   useEffect((,) => {;
     const fetchProfile = async () => {;
@@ -75,6 +82,7 @@ export default function ProfileDetail() {
       try {
         if (!profileId) {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
           setError("Profile ID is missing."),
           return
@@ -84,11 +92,14 @@ export default function ProfileDetail() {
           return;
           setError("Profile ID is missing."),
           return
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         }
         const { data, error } = await supabase
           .from("talent_profiles")
           .select("*")
           .eq("id", profileId)
+<<<<<<< HEAD
           .single();
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -145,10 +156,17 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+        if (error) {
+          throw new Error(error.message);
+        }
+        if (!data) {
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         setProfileData(data)
       } catch (err: any) {
-        setError(err.message |"Failed to fetch profile.")
+        setError(err.message || "Failed to fetch profile.");
         toast({
+<<<<<<< HEAD
           title: "Error"
           description: err.message |"Failed to fetch profile."
           variant: "destructive"})
@@ -189,6 +207,8 @@ ursor/fix-website-loading-errors-and-merge-6662
   }, [profileId]),
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   if (isLoading) {
     return (
       <div className="min-h-screen flex items-center justify-center">
@@ -208,6 +228,7 @@ ursor/fix-website-loading-errors-and-merge-6662
       <div className="min-h-screen flex items-center justify-center">
         <p>Profile not found.</p>
       </div>
+<<<<<<< HEAD
 
   }, [profileId]);
 
@@ -226,6 +247,9 @@ ursor/fix-website-loading-errors-and-merge-6662
         description = {profileData.bio |"Check out this talent's profile on Zion!",}
         description = {profileData.bio || "Check out this talent's profile on Zion!",}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+        description = {profileData.bio || "Check out this talent's profile on Zion!",}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useState, useEffect } from "react",;
 import { useRouter } from "next/router",;
 import { supabase } from "@/integrations/supabase/client",;
@@ -284,9 +308,12 @@ export default function ProfileDetail() {;
     fetchProfile();
   }, [profileId]),;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   if (isLoading) {;
     return (
       <div className="min-h-screen flex items-center justify-center">;
@@ -313,22 +340,29 @@ export default function ProfileDetail() {;
   return (
     <>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
         description = {profileData.bio |"Check out this talent's profile on Zion!",}
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <SEO;
         title={`${profileData.full_name} | Zion AI Marketplace`}
         description={profileData.bio || "Check out this talent's profile on Zion!"}
 
 
+<<<<<<< HEAD
 =======
       <SEO;
         title={`${profileData.full_name} | Zion AI Marketplace`}
         description={profileData.bio || "Check out this talent's profile on Zion!"}
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       />
       <Header />
       <div className="container mx-auto px-4 py-8">
         <div className="grid grid-cols-12 gap-6">
+<<<<<<< HEAD
           {/* Main Content */}
           <div className="col-span-12 lg:col-span-8">
             {/* Profile Header */}
@@ -348,6 +382,10 @@ export default function ProfileDetail() {;
                       {profileData.is_verified && (
                         <CheckCircle2 className="w-5 h-5 text-zion-cyan" />
                       )}
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     </CardTitle>
                     <CardDescription className="text-zion-cyan">{profileData.professional_title}</CardDescription>
                   </div>
@@ -373,6 +411,7 @@ export default function ProfileDetail() {;
                       <span className="text-zion-slate-light font-normal">/hr</span>
                     </div>
                   )}
+<<<<<<< HEAD
                 </div>
               </CardContent>
             </Card>
@@ -566,6 +605,8 @@ if ( {) {
                 </div>;
               </CardContent>;
             </Card>;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             {/* About Section */}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
               <CardHeader>
@@ -626,6 +667,7 @@ if ( {) {
                       >
                         <LinkIcon className="h-4 w-4" />
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
                         {link.title |link.url}
@@ -680,10 +722,13 @@ if ( {) {
                         {link.title || link.url}
                       </Link>
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     ))}
                   </div>
                 ) : (
                   <p className="text-zion-slate-light">No portfolio links provided.</p>
+<<<<<<< HEAD
 
                 )}
               </CardContent>;
@@ -714,11 +759,14 @@ if ( {) {
                         {link.title || link.url}
                       </Link>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     ))}
                   </div>;
                 ) : (;
                   <p className="text-zion-slate-light">No portfolio links provided.</p>;
                 )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
               </CardContent>;
@@ -731,10 +779,16 @@ if ( {) {
             </Card>
           </div>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+              </CardContent>
+            </Card>
+          </div>
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           {/* Sidebar with HireNowCTA */}
           <div className="col-span-4 lg:col-span-1">;
             <HireNowCTA
               talentProfile={{
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -793,10 +847,18 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
               </div>;
             </div>;
+=======
+              }}
+            />;
+            {/* Contact Information */}
+                )}
+                )}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 
             {/* Social Links */}
+<<<<<<< HEAD
             <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mt-6">;
               <h3 className="text-xl font-bold mb-4">Social</h3>;
               <div className="flex flex-col space-y-3">;
@@ -813,10 +875,19 @@ if ( {) {
                   <a
                     href={profileData.github_url}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+            <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mt-6">
+              <h3 className="text-xl font-bold mb-4">Social</h3>
+              <div className="flex flex-col space-y-3">
+                {profileData.github_url && (
+                  <a
+                    href={profileData.github_url}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-2 text-zion-slate-light hover:text-zion-cyan"
                     aria-label="GitHub"
+<<<<<<< HEAD
 <<<<<<< HEAD
 
                     href = {profileData && profileData.twitter_url,}
@@ -841,12 +912,15 @@ if ( {) {
                 {profileData.twitter_url && (;
                   <a;
                     href={profileData.twitter_url}
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
                     target="_blank"
 <<<<<<< HEAD
                     rel="noopener noreferrer"
                     className="flex items-center gap-2 text-zion-slate-light hover:text-zion-cyan"
                     aria-label="Twitter"
+<<<<<<< HEAD
 
                     href = {profileData && profileData.linkedin_url,}
 
@@ -872,12 +946,15 @@ if ( {) {
                 {profileData.linkedin_url && (;
                   <a;
                     href={profileData.linkedin_url}
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
                     target="_blank"
 <<<<<<< HEAD
                     rel="noopener noreferrer"
                     className="flex items-center gap-2 text-zion-slate-light hover:text-zion-cyan"
                     aria-label="LinkedIn"
+<<<<<<< HEAD
 
                 <div className="flex flex - wrap gap - 4 text - sm">;
                   {profile_data.location && (
@@ -1049,12 +1126,13 @@ if ( {) {
                   </a>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                 )}
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               </div>;
             </div>;
           </div>;
         </div>;
       </div>;
-
 );
 }
 }, [profileId]);
@@ -1063,6 +1141,7 @@ if ( {) {
 
     </>);
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 }
@@ -1144,3 +1223,6 @@ if ( {) {
 }
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

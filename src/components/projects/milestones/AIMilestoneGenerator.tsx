@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     if (!scope |!startDate |!projectType) {
       return
@@ -21,12 +22,15 @@ import { Badge } from '@/components/ui/badge'
 
 interface AIMilestoneGeneratorProps {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface AIMilestoneGeneratorProps {;
   scope: string;
   startDate: string;
   endDate: string | null;
   projectType: string;
   onAddMilestones: (milestones: GeneratedMilestone[]) => void;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -62,68 +66,16 @@ export function AIMilestoneGenerator({
     if (!scope || !startDate || !projectType) {
       return;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     }
     const input: MilestoneInput = {
       scope
       startDate
       endDate
       projectType
-import React, { useState } from 'react';
-import { Button } from '@/components / ui / button';
-import { Card, CardContent } from '@/components / ui / card';
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from '@/components / ui / accordion';
-import { Loader2, Sparkles, Plus, Calendar } from 'lucide-react';
-import { format, parseISO } from 'date - fns';
-  MilestoneInput,
-  GeneratedMilestone,
-  useMilestoneGenerator,
-} from '@/hooks / useMilestoneGenerator';
-import { Badge } from '@/components / ui / badge';
-interface AIMilestoneGeneratorProps {
-  scope: string;
-  start_date: string;
-  end_date: string | null;
-  project_type: string;
-  onAddMilestones: (milestones: GeneratedMilestone[]) => void;
-  onAddMilestone: (milestone: GeneratedMilestone) => void;
-export /**
- * AIMilestoneGenerator - Function description
- */
-function AIMilestoneGenerator() {
-  const {
-    generate_milestones,
-    generated_milestones,
-    is_generating,
-    clearGeneratedMilestones,
-  } = useMilestoneGenerator ();
-  const [selected_milestones, setSelectedMilestones] = useState<;
-    Record < string, boolean>;
-  >({});
-  const handleGenerateMilestones = async () => {
-    // Check condition
-if ( {) {
-  $2
-}
-      return;
     }
-    const input: MilestoneInput = {
-      scope,
-      start_date,
-      end_date,
-      project_type,
-    }
-    await generate_milestones (input);
-    // Initially select all milestones;
-    const initial_selection: Record < number, boolean> = {}
-    generated_milestones.for_each ((_, index: number) => {
-      initial_selection[index] = true;
-    });
-    setSelectedMilestones (initial_selection);
   }
   const handleAddToProject = () =>: any {
     const selectedMilestonesList = generated_milestones.filter (
@@ -132,6 +84,7 @@ if ( {) {
     clearGeneratedMilestones ();
     setSelectedMilestones ({});
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   const toggleMilestoneSelection = (index: number, ) =>: any {
@@ -147,6 +100,8 @@ if ( {) {
       [index]: !prev[index]
     }))
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   }
   const handleAddSingleMilestone = (milestone: GeneratedMilestone) =>: any {
     onAddMilestone (milestone);
@@ -156,15 +111,15 @@ if ( {) {
       return format (parseISO (date_string), 'MMM dd, yyyy');
     } catch (error) {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       return dateString
     }
   }
-
-
-
 import React, { useState } from 'react',;
 import { Button } from '@/components/ui/button',;
 import { Card, CardContent } from '@/components/ui/card',;
@@ -184,9 +139,13 @@ interface AIMilestoneGeneratorProps {;
   projectType: string,;
   onAddMilestones: (milestones: GeneratedMilestone[]) => void,;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   onAddMilestone: (milestone: GeneratedMilestone) => void;
 export function AIMilestoneGenerator(): any ({;
   scope,;
@@ -253,6 +212,7 @@ export function AIMilestoneGenerator(): any ({;
       return dateString;
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   },
 
@@ -265,19 +225,13 @@ export function AIMilestoneGenerator(): any ({;
         </h3>
         <Button
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 
   return (
-    <div className='space-y-4'>;
-      <div className='flex items-center justify-between'>;
-        <h3 className='text-lg font-medium flex items-center'>;
-          <Sparkles className='w-5 h-5 mr-2 text-primary' />;
-          AI Milestone Generator;
-        </h3>;
-        <Button
-
-
           disabled={isGenerating || !scope || !startDate || !projectType}        >
 
 <<<<<<< HEAD
@@ -290,6 +244,7 @@ export function AIMilestoneGenerator(): any ({;
           disabled={isGenerating || !scope || !startDate || !projectType}
         >
 
+<<<<<<< HEAD
           disabled={isGenerating |!scope |!startDate |!projectType}        >
 ursor/fix-website-loading-errors-and-merge-6662
   },
@@ -310,6 +265,10 @@ ursor/fix-website-loading-errors-and-merge-6662
           onClick={handleGenerateMilestones}
           disabled={isGenerating || !scope || !startDate || !projectType}
         >
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           {isGenerating ? (
             <>
               <Loader2 className="mr-2 h-4 w-4 animate-spin" />
@@ -332,6 +291,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                 {generatedMilestones.length} milestones generated based on your
                 project scope
               </p>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
           disabled={isGenerating || !scope || !startDate || !projectType}>;
@@ -380,6 +340,8 @@ ursor/fix-website-loading-errors-and-merge-6662
             <Accordion type='multiple' className='w-full'>
               {generatedMilestones.map((milestone, index) => (
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <AccordionItem
                   value={`item-${index}`}
                   key={index}
@@ -466,6 +428,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                         </div>;
                       </AccordionTrigger>;
                     </div>;
+<<<<<<< HEAD
 
 
               <Button 
@@ -493,6 +456,8 @@ ursor/fix-website-loading-errors-and-merge-6662
                           <span className="font-medium">{milestone.title}</span>
                           <Badge variant="secondary" className="ml-2 flex items-center">
                             <Sparkles className="w-3 h-3 mr-1" />
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                             AI Suggested
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                           </Badge>
@@ -502,9 +467,13 @@ ursor/fix-website-loading-errors-and-merge-6662
                     <Button
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       variant="ghost"
                       size="sm"
                       onClick={(e) => {
@@ -513,8 +482,11 @@ ursor/fix-website-loading-errors-and-merge-6662
                       }}
                       className="mr-2"
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       variant="ghost"
                       size="sm"
                       onClick={(e) => {
@@ -522,6 +494,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                         handleAddSingleMilestone(milestone)
                       }}
                       className="mr-2"
+<<<<<<< HEAD
                     >
                       <Plus className='h-4 w-4' />
 =======
@@ -534,8 +507,9 @@ ursor/fix-website-loading-errors-and-merge-6662
 
                       <Plus className="h-4 w-4" />
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     >
-                      <Plus className='h-4 w-4' />
                       <Plus className="h-4 w-4" />
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                     </Button>
@@ -553,6 +527,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                     </div>
                   </AccordionContent>
                 </AccordionItem>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
                       onClick={e => {;
@@ -591,19 +566,27 @@ ursor/fix-website-loading-errors-and-merge-6662
 };
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             </Accordion>;
           </CardContent>;
         </Card>;
       )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
     </div>
   )
 }
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     </div>;
   );
 }
 ;
+<<<<<<< HEAD
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

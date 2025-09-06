@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -9,11 +10,12 @@ import {Badge} from "@/components/ui/badge";
 import {useJobSuggestions} from "@/hooks/useJobSuggestions";
 import {JobMatchesCard} from "./JobMatchesCard";
 import {NoJobsCard} from "./NoJobsCard";
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useAuth } from "@/hooks/useAuth",
 import { Loader2 } from "lucide-react",
 import { Badge } from "@/components/ui/badge",
 import { useJobSuggestions } from "@/hooks/useJobSuggestions",
-
 import { JobMatchesCard } from "./JobMatchesCard";
 import { NoJobsCard } from "./NoJobsCard";
 import { JobMatchesCard } from "./JobMatchesCard",
@@ -21,6 +23,7 @@ import { NoJobsCard } from "./NoJobsCard",
 interface SuggestedJobsProps {
   talentId?: string
 }
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 interface SuggestedJobsProps {
   talentId?: string
@@ -38,11 +41,18 @@ export function SuggestedJobs({ talentId }: SuggestedJobsProps) {
 export function SuggestedJobs({ talentId }: SuggestedJobsProps) {;
   const { user } = useAuth();
   const currentTalentId = talentId || user?.id;
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export function SuggestedJobs({ talentId }: SuggestedJobsProps) {
   const { user } = useAuth();
   const { user } = useAuth(),
   const currentTalentId = talentId || user?.id,
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const { 
     isLoading,
     updateJobMatchStatus, 
@@ -54,10 +64,13 @@ export function SuggestedJobs({ talentId }: SuggestedJobsProps) {
   } = useJobSuggestions(currentTalentId),
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const currentTalentId = talentId |user?.id;
   const {
     isLoading;
@@ -69,6 +82,7 @@ export function SuggestedJobs({ talentId }: SuggestedJobsProps) {
     }
   } = useJobSuggestions(currentTalentId);
   const handleApply = (matchId: string, jobId: string) => {
+<<<<<<< HEAD
 <<<<<<< HEAD
     updateJobMatchStatus(matchId, 'applied');
     // In a real app, this might redirect to application form or open a modal
@@ -220,31 +234,34 @@ export function SuggestedJobs({ talentId }: SuggestedJobsProps) {;
   if (isLoading) {;
     return (;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+  if (isLoading) {;
+    return (
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <div className="flex items-center justify-center p-6">;
         <Loader2 className="w-6 h-6 animate-spin text-primary" />;
       </div>;
     );
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   }
 
 
   if (newMatches && newMatches.length === 0 && viewedMatches && viewedMatches.length === 0 && appliedMatches && appliedMatches.length === 0) {;
     return <NoJobsCard />;
   }
-
-
-=======
-
   
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <div className="space-y-6">;
       {/* New Matches Section */}
+<<<<<<< HEAD
 
       {newMatches && newMatches.length > 0 && (;
         <div className="space-y-4">;
@@ -319,6 +336,8 @@ export function SuggestedJobs({ talentId }: SuggestedJobsProps) {;
                 onApply={handleApply}
                 onDecline={handleDecline}
                 showApplied={true}
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               />
             ))}
           </div>
@@ -327,6 +346,7 @@ export function SuggestedJobs({ talentId }: SuggestedJobsProps) {;
     </div>
   )
 }
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                 key={match && match.id} 
                 match={match} 
@@ -384,6 +404,10 @@ export function SuggestedJobs({ talentId }: SuggestedJobsProps) {;
           <div className="grid gap-4 md:grid-cols-2">;
             {viewedMatches && viewedMatches.map(match => (;
               <JobMatchesCard
+=======
+              <JobMatchesCard 
+                key={match.id} 
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 key={match && match.id} 
                 match={match} 
                 onApply={handleApply} 
@@ -394,24 +418,19 @@ export function SuggestedJobs({ talentId }: SuggestedJobsProps) {;
           </div>;
         </div>;
       )}
+<<<<<<< HEAD
 
 
       {/* Applied Jobs Section */}
       {appliedMatches && appliedMatches.length > 0 && (;
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             ))}
-          ;
-          <div className="grid gap-4 md:grid-cols-2">;
-            {viewedMatches.map(match => (;
-              <JobMatchesCard ;
-                key={match.id} ;
-                match={match} ;
-                onApply={handleApply} ;
-                onDecline={handleDecline} ;
-              />;            ))}
           </div>;
         </div>;
       )}
+<<<<<<< HEAD
       ;
       {/* Applied Jobs Section */}
       {appliedMatches.length > 0 && (;
@@ -440,12 +459,16 @@ export function SuggestedJobs({ talentId }: SuggestedJobsProps) {;
                 match={match} ;
                 onApply={handleApply} ;                onDecline={handleDecline}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+                onDecline={handleDecline}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 showApplied={true}
               />;
             ))}
           </div>;
         </div>;
       )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     </div>;
@@ -456,6 +479,8 @@ export function SuggestedJobs({ talentId }: SuggestedJobsProps) {;
 =======
     </div>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { use_auth } from '@/hooks / use_auth';
 import { Loader2 } from './lucide-react';
 import { Badge } from '@/components / ui / badge';
@@ -561,6 +586,7 @@ if ( {) {
         </div>)}
     </div>);
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -650,3 +676,5 @@ if (isLoading) {
 ;
               />;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import {Card, CardContent, CardHeader, CardTitle, CardFooter} from '@/components/ui/card';
 import {Textarea} from '@/components/ui/textarea';
@@ -37,39 +38,43 @@ export function AIEnhancementPanel({;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 export function AIEnhancementPanel(): any ({;
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 import React, { useState } from 'react';
-import { Card, CardContent, CardHeader, CardTitle, CardFooter  } from '@/components/ui/card';
-import { Textarea  } from '@/components/ui/textarea';
-import { Button  } from '@/components/ui/button';
-import { Input  } from '@/components/ui/input';
-import { Sparkles, Loader2, Copy, Check  } from '@/components/icons';
-import { useAIContentEnhancer, AIEnhancementOptions } from '@/hooks/useAIContentEnhancer';
-interface AIEnhancementPanelProps {
-
-  title: string
-  defaultOptions: AIEnhancementOptions
-  onApply: (content: string) => void
-
   onClose?: () => void;
   showInstructions?: boolean;
-  initialContent?: string
+  initialContent?: string;
 }
-export function AIEnhancementPanel({
+
+
 
 export function AIEnhancementPanel({;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   title;
   defaultOptions;
   onApply;
   onClose;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    content: initialContent || defaultOptions && defaultOptions.content}),;
+  const [generatedContent, setGeneratedContent] = useState<string>('');
+  const [copied, setCopied] = useState(false);
+  const { enhanceContent, isEnhancing } = useAIContentEnhancer();
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   showInstructions = true;
   initialContent = '';
 }: AIEnhancementPanelProps) {;
   const [options, setOptions] = useState<AIEnhancementOptions>({;
     ...defaultOptions;
+<<<<<<< HEAD
 
     content: initialContent || defaultOptions && defaultOptions.content}),;
   const [generatedContent, setGeneratedContent] = useState<string>('');
@@ -94,10 +99,13 @@ export function AIEnhancementPanel({;
   const { enhanceContent, isEnhancing } = useAIContentEnhancer();
   const handleGenerate = async () => {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     const result = await enhanceContent(options);
     if (result) {
       setGeneratedContent(result)
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   };
@@ -109,6 +117,11 @@ export function AIEnhancementPanel({;
   }
   };
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+  };
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useState } from 'react',;
 import { Card, CardContent, CardHeader, CardTitle, CardFooter } from '@/components/ui/card',;
 import { Textarea } from '@/components/ui/textarea',;
@@ -140,6 +153,7 @@ export function AIEnhancementPanel({;
   const [copied, setCopied] = useState(false),;
   const { enhanceContent, isEnhancing } = useAIContentEnhancer(),;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   const handleGenerate = async () => {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
@@ -157,6 +171,10 @@ export function AIEnhancementPanel({;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
   const handleGenerate = async () => {;
+=======
+
+  const handleGenerate = async () => {;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     const result = await enhanceContent(options);
     if (result) {;
       setGeneratedContent(result);
@@ -165,6 +183,7 @@ export function AIEnhancementPanel({;
 
 
 
+<<<<<<< HEAD
   const handleGenerate = async () => {;
     const result = await enhanceContent(options),;
     if (result) {;
@@ -173,6 +192,8 @@ export function AIEnhancementPanel({;
   },
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const handleInputChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
     field: keyof AIEnhancementOptions
@@ -180,25 +201,11 @@ export function AIEnhancementPanel({;
     setOptions({
       ...options
       [field]: e.target.value})
-
-
-  },
-
-
-
-  const handleApply = () => {
-    onApply(generatedContent);
-    if (onClose) onClose()
-
-
-  },
-
-
-
   const handleCopy = () => {
     navigator.clipboard.writeText(generatedContent);
     setCopied(true);
     setTimeout(() => setCopied(false), 2000)
+<<<<<<< HEAD
 
   };
 
@@ -295,6 +302,9 @@ export function AIEnhancementPanel({;
 ;
   return (;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  return (
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <Card className="w-full max-w-2xl mx-auto">;
       <CardHeader>;
         <CardTitle className="flex items-center gap-2">;
@@ -307,11 +317,15 @@ export function AIEnhancementPanel({;
         <div className="space-y-2">;
           <label className="text-sm font-medium">Content to enhance</label>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <Textarea
             placeholder="Enter your content to enhance..."
             className="min-h-[100px]"
             value={options && options.content}
             onChange={(e) => handleInputChange(e, 'content')}
+<<<<<<< HEAD
 
           />;
         </div>;
@@ -321,6 +335,8 @@ export function AIEnhancementPanel({;
           />;
         </div>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         {/* Context input */}
         <div className="space-y-2">;
           <label className="text-sm font-medium">Context (optional)</label>;
@@ -329,6 +345,7 @@ export function AIEnhancementPanel({;
             className="min-h-[60px]"
             value={options && options.context}
             onChange={(e) => handleInputChange(e, 'context')}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
           />;
@@ -356,10 +373,13 @@ export function AIEnhancementPanel({;
         </div>;
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         {/* Instructions input (optional) */}
         {showInstructions && (;
           <div className="space-y-2">;
             <label className="text-sm font-medium">Special instructions (optional)</label>;
+<<<<<<< HEAD
 <<<<<<< HEAD
             <Input
               placeholder="E && E.g., 'Make it more conversational' or 'Focus on leadership skills'"
@@ -369,10 +389,16 @@ export function AIEnhancementPanel({;
               placeholder="E.g., 'Make it more conversational' or 'Focus on leadership skills'";
               value={options.instructions}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+            <Input
+              placeholder="E && E.g., 'Make it more conversational' or 'Focus on leadership skills'"
+              value={options && options.instructions}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               onChange={(e) => handleInputChange(e, 'instructions')}
             />;
           </div>;
         )}
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -451,6 +477,8 @@ export function AIEnhancementPanel({;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         >
           {isEnhancing ? (
             <>
@@ -473,6 +501,7 @@ export function AIEnhancementPanel({;
                 variant="ghost"
                 size="sm"
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
           onClick={handleGenerate} 
           className="w-full" 
@@ -486,11 +515,14 @@ export function AIEnhancementPanel({;
           disabled={isEnhancing || !options.content && !options.context}
         >;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           {isEnhancing ? (;
             <>;
               <Loader2 className="mr-2 h-4 w-4 animate-spin" />;
               Enhancing...;
             </>;
+<<<<<<< HEAD
 <<<<<<< HEAD
           ) : (;
             <>;
@@ -509,21 +541,29 @@ export function AIEnhancementPanel({;
         </Button>;
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         {/* Output area */}
         {generatedContent && (;
           <div className="space-y-2 mt-4">;
             <div className="flex justify-between items-center">;
               <label className="text-sm font-medium">Generated content</label>;
 <<<<<<< HEAD
+<<<<<<< HEAD
               <Button
                 variant="ghost" 
                 size="sm" 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+        {/* Generate button */}
+        <Button
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 onClick={handleCopy}
                 className="h-8">;
                 {copied ? (;
                   <><Check className="h-4 w-4 mr-1" /> Copied</>;
                 ) : (;
+<<<<<<< HEAD
 =======
               <Button ;
                 variant="ghost" ;
@@ -535,11 +575,14 @@ export function AIEnhancementPanel({;
                   <><Check className="h-4 w-4 mr-1" /> Copied</>;
                 ) :(;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   <><Copy className="h-4 w-4 mr-1" /> Copy</>;
                 )}
               </Button>;
             </div>;
             <div className="relative">;
+<<<<<<< HEAD
 <<<<<<< HEAD
               <Textarea
                 value={generatedContent}
@@ -549,11 +592,14 @@ export function AIEnhancementPanel({;
                 value={generatedContent}
                 onChange={(e) => setGeneratedContent(e.target.value)}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 className="min-h-[200px]";
               />;
             </div>;
           </div>;
         )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       </CardContent>;
@@ -575,11 +621,14 @@ export function AIEnhancementPanel({;
           )}
             </Button>;          )}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <Button onClick={handleApply}>;
             Apply to Form;
           </Button>;
         </CardFooter>;
       )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     </Card>;
@@ -590,6 +639,8 @@ export function AIEnhancementPanel({;
 =======
     </Card>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {Card, CardContent, CardHeader, CardTitle, CardFooter} from '@/components / ui / card';
 import {Textarea} from '@/components / ui / textarea';
 import {Button} from '@/components / ui / button';
@@ -739,6 +790,7 @@ if ( {) {
     </Card>);
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
   ),;}
@@ -800,3 +852,5 @@ if ( {) {
   )
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -1,11 +1,15 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {useState, useEffect} from 'react';
 import {supabase} from '@/integrations/supabase/client';
 export function useJobDetails(jobId: string | undefined) {;
 
 
+<<<<<<< HEAD
 =======
 import { useState, useEffect  } from 'react';
 import { supabase } from '@/integrations/supabase/client';
@@ -17,6 +21,8 @@ import {useState, useEffect} from 'react';
 import {supabase} from '@/integrations/supabase/client';
 export function useJobDetails(jobId: string | undefined) {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const [job, setJob] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -36,6 +42,7 @@ export function useJobDetails(jobId: string | undefined) {;
       setJob(data);
       setError(null)
     } catch (err) {
+<<<<<<< HEAD
 <<<<<<< HEAD
       console && console.error('Error loading job details:', err);
       setError(err && err.message)
@@ -79,10 +86,13 @@ if (throw error) {
       console.error ('Error loading job details:', err);
       set_error (err.message);
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     } finally {
       setIsLoading (false);
     }
   }
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -113,11 +123,14 @@ if (throw error) {
   return {
     job;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     isLoading;
     error;
     loadJobDetails
   }
 }
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -127,6 +140,8 @@ if (throw error) {
 export default useJobDetails;
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useState, useEffect } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
 export function useJobDetails(jobId: string | undefined) {;
@@ -165,21 +180,26 @@ export function useJobDetails(jobId: string | undefined) {;
     job,;
     isLoading,;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     error;
     loadJobDetails;
   }
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 ;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default useJobDetails;
+<<<<<<< HEAD
 =======
 export default useJobDetails;
 ;
@@ -243,3 +263,5 @@ export default useJobDetails,; .from ('jobs') .select ('*') .eq ('id', jobId) .s
 ;
 export default useJobDetails;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

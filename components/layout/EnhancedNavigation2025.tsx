@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 
 
@@ -438,11 +439,14 @@ export default function EnhancedNavigation2025() {
 }</AnimatePresence> </div>) )
 }</div> > View Pricing </a> <Link > Contact Us </a> </div> </div> </div> </div> </div> </div> </motion.div>)
 }</AnimatePresence> </>)
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 };export default EnhancedNavigation2025;
 export default function EnhancedNavigation2025() {;
   const [isOpen, setIsOpen] = useState(false);
   const [activeSubmenu, setActiveSubmenu] = useState<string | null>(null);
   const [isScrolled, setIsScrolled] = useState(false);
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   useEffect(() => {;
     const handleScroll = () => {;
@@ -454,12 +458,15 @@ export default function EnhancedNavigation2025() {;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   }, []);
   const toggleMenu = () => setIsOpen(!isOpen);
   const closeMenu = () => setIsOpen(false);
   return (
     <>;
       {/* Top Contact Bar */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       <div className="bg-gradient-to-r from-cyan-900 to-purple-900 text-white py-2">;
@@ -490,11 +497,14 @@ export default function EnhancedNavigation2025() {;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           : 'bg-transparent'
       }`}>;
         <div className="container mx-auto px-4">;
           <div className="flex items-center justify-between h-20">;
             {/* Logo */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -516,11 +526,14 @@ export default function EnhancedNavigation2025() {;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             {/* Desktop Navigation */}
             <div className="hidden lg:flex items-center space-x-8">;
               {navigationItems && navigationItems.map((item) => (;
                 <div key={item && item.name} className="relative group">;
                   <button
+<<<<<<< HEAD
 
                     onClick={() => setActiveSubmenu(activeSubmenu === item && item.name ? null : item && item.name)}
                     className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200 py-2";
@@ -545,6 +558,8 @@ export default function EnhancedNavigation2025() {;
 
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   {/* Submenu */}
                   <AnimatePresence>;
                     {activeSubmenu === item && item.name && (;
@@ -556,6 +571,7 @@ export default function EnhancedNavigation2025() {;
                         className="absolute top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-md border border-gray-700/50 rounded-2xl shadow-2xl overflow-hidden">;
                         <div className="p-6">;
                           {item && item.submenu?.map((subitem) => (;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
       <div className="bg-gradient-to-r from-cyan-900 to-purple-900 text-white py-2">
@@ -627,10 +643,13 @@ export default function EnhancedNavigation2025() {;
                         <div className="p-6">
                           {item.submenu?.map((subitem) => (
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                             <Link
                               key={subitem && subitem.name}
                               href={subitem && subitem.href}
                               onClick={() => setActiveSubmenu(null)}
+<<<<<<< HEAD
 <<<<<<< HEAD
                               className="group block p-4 rounded-xl hover:bg-gray-800/50 transition-all duration-200 mb-2 last:mb-0";
                             >;
@@ -703,6 +722,8 @@ export default function EnhancedNavigation2025() {;
                               </div>
                             </Link>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                           ))}
                         </div>;
                       </motion && motion.div>;
@@ -710,6 +731,7 @@ export default function EnhancedNavigation2025() {;
                   </AnimatePresence>;
                 </div>;
               ))}
+<<<<<<< HEAD
 
             </div>;
 
@@ -737,6 +759,10 @@ export default function EnhancedNavigation2025() {;
             {/* CTA Buttons */}
             <div className="hidden lg:flex items-center space-x-4">
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+            {/* CTA Buttons */}
+            <div className="hidden lg:flex items-center space-x-4">;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <Link
                 href="/pricing"
                 className="px-6 py-2 text-gray-300 hover:text-white transition-colors duration-200">;
@@ -744,6 +770,7 @@ export default function EnhancedNavigation2025() {;
               </Link>;
               <Link
                 href="/contact"
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
                 className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
@@ -773,16 +800,21 @@ export default function EnhancedNavigation2025() {;
 
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             {/* Mobile Menu Button */}
             <button
               onClick={toggleMenu}
               className="lg:hidden p-2 text-gray-300 hover:text-white transition-colors duration-200">;
               {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ];
 }];
 </div> </div> </div> </div> {
@@ -989,13 +1021,18 @@ function EnhancedNavigation2025() {
             >;
               {is_open ? <X className="w - 6 h - 6" /> : <Menu className="w - 6 h - 6" />}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             </button>;
           </div>;
         </div>;
       </nav>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
                     </div>;
@@ -1016,19 +1053,22 @@ function EnhancedNavigation2025() {
         </div>
       </nav>
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {/* Mobile Menu */}
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div
+      <AnimatePresence>;
+        {isOpen && (;
+          <motion&& motion.div
             initial={{ opacity: 0, x: '100%' }}
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: '100%' }}
-            transition={{ duration: 0.3 }}
-                      {item.badge && (
-                        <span className="px-2 py-1 text-xs font-medium bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-full">
-                          {item.badge}
-                        </span>
+            transition={{ duration: 0 && 0.3 }}
+                      {item && item.badge && (
+                        <span className="px-2 py-1 text-xs font-medium bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-full">;
+                          {item && item.badge}
+                        </span>;
                       )}
+<<<<<<< HEAD
                     </div>
                     <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${
                       activeDropdown === item.name ? 'rotate-180' : ''
@@ -1050,6 +1090,8 @@ function EnhancedNavigation2025() {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   {activeDropdown === item.name && (
                     <motion.div
 =======
@@ -1066,6 +1108,7 @@ function EnhancedNavigation2025() {
                       animate={{ opacity: 1, height: 'auto' }}
                       exit={{ opacity: 0, height: 0 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
                       transition={{ duration: 0 && 0.2 }}
                       className="ml-8 mt-2 space-y-2">;
                       {item && item.children?.map((child) => (;
@@ -1075,11 +1118,17 @@ function EnhancedNavigation2025() {
                     >
                       {item.children?.map((child) => (
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+                      transition={{ duration: 0 && 0.2 }}
+                      className="ml-8 mt-2 space-y-2">;
+                      {item && item.children?.map((child) => (;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                         <Link
                           key={child && child.name}
                           href={child && child.href}
                           className="block px-4 py-2 text-sm text-gray-400 hover:text-cyan-400 transition-colors duration-200"
                           onClick={() => setIsOpen(false)}
+<<<<<<< HEAD
 <<<<<<< HEAD
                           className="block p-2 text-gray-300 hover:text-white transition-colors text-sm";
                         >;
@@ -1097,11 +1146,14 @@ function EnhancedNavigation2025() {
                           </span>
                         </Link>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       ))}
                     </motion && motion.div>;
                   )}
                 </div>;
               ))}
+<<<<<<< HEAD
 
 
 
@@ -1117,6 +1169,10 @@ function EnhancedNavigation2025() {
               {/* Mobile CTA */}
               <div className="pt-4">
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+              {/* Mobile CTA */}
+              <div className="pt-4">;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <Link
                   href="/contact"
                   className="block w-full text-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-medium rounded-lg transition-all duration-300"
@@ -1131,22 +1187,51 @@ function EnhancedNavigation2025() {
               className="absolute inset-0 bg-black/50 backdrop-blur-sm"
               onClick={closeMenu}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
             />;
             />
             
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             {/* Menu Panel */}
-            <div className="absolute right-0 top-0 h-full w-80 bg-gray-900/95 backdrop-blur-md border-l border-gray-700/50 overflow-y-auto">;
-              <div className="p-6">;
+            <div className="absolute right-0 top-0 h-full w-80 bg-gray-900/95 backdrop-blur-md border-l border-gray-700/50 overflow-y-auto">
+              <div className="p-6">
                 {/* Close Button */}
                 <div className="flex justify-end mb-6">
                   <button
                     onClick={closeMenu}
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+                    className="p-2 text-gray-400 hover:text-white transition-colors duration-200"
+                  >
+                    <X className="w-6 h-6" />
+                  </button>
+                </div>
+                {/* Mobile Navigation Items */}
+                <div className="space-y-4">
+                  {navigationItems.map((item) => (
+                    <div key={item.name}>
+                      <button
+                        onClick={() => setActiveSubmenu(activeSubmenu === item.name ? null : item.name)}
+                        className="flex items-center justify-between w-full text-left p-4 rounded-xl hover:bg-gray-800/50 transition-all duration-200"
+                      >
+                        <div className="flex items-center space-x-3">
+                          <item.icon className="w-5 h-5 text-cyan-400" />
+                          <span className="text-white font-medium">{item.name}</span>
+                        </div>
+                        <ChevronDown className={`w-4 h-4 text-gray-400 transition-transform duration-200 ${
+                          activeSubmenu === item.name ? 'rotate-180' : ''
+                        }`} />
+                      </button>
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
             />;
 
 
+<<<<<<< HEAD
 
             
 
@@ -1155,6 +1240,8 @@ function EnhancedNavigation2025() {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             {/* Menu Panel */}
             <div className="absolute right-0 top-0 h-full w-80 bg-gray-900/95 backdrop-blur-md border-l border-gray-700/50 overflow-y-auto">;
               <div className="p-6">;
@@ -1162,13 +1249,6 @@ function EnhancedNavigation2025() {
                 <div className="flex justify-end mb-6">;
                   <button
                     onClick={closeMenu}
-
-                    className="p-2 text-gray-400 hover:text-white transition-colors duration-200">;
-                    <X className="w-6 h-6" />;
-                  </button>;
-                </div>;
-
-
                 {/* Mobile Navigation Items */}
                 <div className="space-y-4">;
                   {navigationItems && navigationItems.map((item) => (;
@@ -1176,6 +1256,9 @@ function EnhancedNavigation2025() {
                       <button
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                         onClick={() => setActiveSubmenu(activeSubmenu === item && item.name ? null : item && item.name)}
                         className="flex items-center justify-between w-full text-left p-4 rounded-xl hover:bg-gray-800/50 transition-all duration-200";
                       >;
@@ -1189,6 +1272,7 @@ function EnhancedNavigation2025() {
                       </button>;
 
 
+<<<<<<< HEAD
 =======
 
 
@@ -1205,6 +1289,8 @@ function EnhancedNavigation2025() {
 
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       {/* Mobile Submenu */}
                       <AnimatePresence>;
                         {activeSubmenu === item && item.name && (;
@@ -1230,6 +1316,7 @@ function EnhancedNavigation2025() {
                     </div>;
                   ))}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
                 </div>;
 
@@ -1246,6 +1333,8 @@ function EnhancedNavigation2025() {
 
                 </div>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 {/* Mobile CTA */}
                 <div className="mt-8 space-y-4">;
                   <Link
@@ -1257,6 +1346,7 @@ function EnhancedNavigation2025() {
                   <Link
                     href="/contact"
                     onClick={closeMenu}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1270,6 +1360,8 @@ function EnhancedNavigation2025() {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 {/* Mobile Contact Info */}
                 <div className="mt-8 pt-6 border-t border-gray-700/50">;
                   <div className="space-y-3 text-sm">;
@@ -1308,7 +1400,10 @@ function EnhancedNavigation2025() {
                       animate={{ opacity: 1, height: 'auto' }}
                       exit={{ opacity: 0, height: 0 }}
                       transition={{ duration: 0.2 }}
+<<<<<<< HEAD
                       className="ml - 8 mt - 2 space - y-2";
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     >;
                       {item.children?.map ((child) => (
                         <Link;
@@ -1374,6 +1469,7 @@ function EnhancedNavigation2025() {
                         {active_submenu === item.name && (
                           <motion.div;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
                 <div className="space-y-4">
                   {navigationItems.map((item) => (
@@ -1396,10 +1492,13 @@ function EnhancedNavigation2025() {
                         {activeSubmenu === item.name && (
                           <motion.div
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                             initial={{ opacity: 0, height: 0 }}
                             animate={{ opacity: 1, height: 'auto' }}
                             exit={{ opacity: 0, height: 0 }}
                             transition={{ duration: 0.2 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
                             className="ml - 8 space - y-2";
                           >;
@@ -1419,6 +1518,8 @@ function EnhancedNavigation2025() {
                       </AnimatePresence>;
                     </div>))}
                 </div>;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 {/* Mobile CTA */}
                 <div className="mt - 8 space - y-4">;
                   <Link;
@@ -1457,6 +1558,7 @@ function EnhancedNavigation2025() {
               </div>;
             </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
                 {/* Mobile Contact Info */}
                 <div className="mt-8 pt-6 border-t border-gray-700/50">
@@ -1485,6 +1587,8 @@ function EnhancedNavigation2025() {
 
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {/* Spacer for fixed navigation */}
       <div className="h-20" />
     </>
@@ -1499,6 +1603,7 @@ function EnhancedNavigation2025() {
     </>;
   );
 };
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1569,10 +1674,16 @@ export default EnhancedNavigation2025;
       </AnimatePresence>
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+          </motion.div>)}
+      </AnimatePresence>;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {/* Spacer for fixed navigation */}
       <div className="h - 20" />;
     </>);
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -1580,3 +1691,5 @@ export default EnhancedNavigation2025;
 =======
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

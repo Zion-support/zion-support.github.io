@@ -4,14 +4,19 @@ export const metadata = {;
   description:;
     "Learn about Zion Tech Group's mission to deliver enterprise-grade AI,micro SaaS,and IT solutions that drive real business results.",;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   description:
 
     "Learn about Zion Tech Group's mission to deliver enterprise-grade AI,micro SaaS,and IT solutions that drive real business results.",;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
@@ -22,9 +27,13 @@ export const metadata = {
     "Learn about Zion Tech Group's mission to deliver enterprise-grade AI, micro SaaS, and IT solutions that drive real business results.",
     "Learn about Zion Tech Group's mission to deliver enterprise-grade AI,micro SaaS,and IT solutions that drive real business results.",;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 };
-export default function AboutPage() {;
+
+export default function AboutPage() {
   return (
+<<<<<<< HEAD
     <div className="animate-fade-in">;
       {" "}
       <div className="max-w-4xl mx-auto">;
@@ -89,15 +98,21 @@ function AboutPage() {
                 To democratize access to enterprise - grade technology;
                 solutions, making AI, cloud infrastructure, and software;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 development accessible to businesses of all sizes.{" "}
               </p>{" "}
             </div>{" "}
             <div>;
               {" "}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <h2 className="text - 2xl font - bold text - gray - 900 mb - 4">;
                 Our Vision;
               </h2>{" "}
@@ -106,17 +121,25 @@ function AboutPage() {
                 A world where every business can leverage advanced technology to;
                 compete effectively and scale efficiently, regardless of their;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 technical expertise.{" "}
               </p>{" "}
             </div>{" "}
           </div>{" "}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <div className="bg - gray - 50 rounded - lg p - 8 mb - 12">;
             {" "}
             <h2 className="text - 2xl font - bold text - gray - 900 mb - 6">;
@@ -150,18 +173,26 @@ function AboutPage() {
                 </h3>{" "}
                 <p className="text - sm text - gray - 600">;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   We work as an extension of your team;
                 </p>{" "}
               </div>{" "}
             </div>{" "}
           </div>{" "}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <div className="mb - 12">;
             {" "}
             <h2 className="text - 2xl font - bold text - gray - 900 mb - 6">;
@@ -176,9 +207,13 @@ function AboutPage() {
                 </h3>{" "}
                 <ul className="text - gray - 600 space - y-2">;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   {" "}
                   <li>• Large Language Model (LLM) applications</li>{" "}
                   <li>• Retrieval - Augmented Generation (RAG)</li>{" "}
@@ -187,9 +222,13 @@ function AboutPage() {
                 </ul>{" "}
               </div>{" "}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <div className="border border - gray - 200 rounded - lg p - 6">;
                 {" "}
                 <h3 className="font - semibold text - gray - 900 mb - 3">;
@@ -197,9 +236,13 @@ function AboutPage() {
                 </h3>{" "}
                 <ul className="text - gray - 600 space - y-2">;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   {" "}
                   <li>• AWS, GCP, and Azure migration</li>{" "}
                   <li>• Kubernetes and containerization</li>{" "}
@@ -210,12 +253,18 @@ function AboutPage() {
             </div>{" "}
           </div>{" "}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
               Let's discuss how we can help your business leverage technology;
 
 =======
               Let's discuss how we can help your business leverage technology;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+              Let's discuss how we can help your business leverage technology;
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               for growth.{" "}
             </p>{" "}
             <a
@@ -244,6 +293,7 @@ function AboutPage() {
         </div>{" "}
       </div>{" "}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     </div>);
 
@@ -254,4 +304,9 @@ function AboutPage() {
     </div>;
   );
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+    </div>);
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }

@@ -1,11 +1,10 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
-
-  service.name 
-}- Zion Tech Group</title>) ) 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }</ul> </div> <div className="bg-black/30 rounded-2xl border border-cyan-500/30 p-6 h-fit" > <div className="flex items-end justify-between mb-3" > <div> </div> </div> </div> </div> </div> </UltraAdvancedFuturisticBackground>) import React from 'react';
+<<<<<<< HEAD
 
 
 =======
@@ -30,10 +29,13 @@ return (<UltraAdvancedFuturisticBackground> <Head> <title> {
 }</ul> </div> <div className="bg-black/30 rounded-2xl border border-cyan-500/30 p-6 h-fit" > <div className="flex items-end justify-between mb-3" > <div> </div> </div> </div> </div> </div> </UltraAdvancedFuturisticBackground>) import React from 'react';
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import Head from 'next/head';
 import { Shield, Phone, Mail, MapPin, Check, ArrowRight  } from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
 import Button from '../components/ui/Button';
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -54,6 +56,8 @@ import {enhancedRealMicroSaasServices} from '../data/enhanced-real-micro-saas-se
 export default function ApiObservabilityPage() {;
   const service = enhancedRealMicroSaasServices && enhancedRealMicroSaasServices.find(s => s && s.link.endsWith('/api-observability'));
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   if (!service) return null;
 
   return (
@@ -150,6 +154,7 @@ if (return null) {
         </div>;
       </div>;
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -230,3 +235,8 @@ export default function ApiObservabilityPage() {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+    </UltraAdvancedFuturisticBackground>);
+}
+;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

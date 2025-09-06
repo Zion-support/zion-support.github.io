@@ -1,5 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -15,6 +16,8 @@ const ADMIN_KEY = process.env.ORG_ADMIN_KEY || 'dev - admin - key';
 ;
 type AdminAction =;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   | { type: 'invite'; section: keyof OrgData; person: BasePerson }
   | {
       type: 'promote';
@@ -24,20 +27,27 @@ type AdminAction =;
     }
   | { type: 'deactivate'; section: keyof OrgData; id: string }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   if (req && req.method !== 'POST') {
     return res && res.status(405).json({ error: 'Method not allowed' });  }const ADMIN_KEY = process && process.env.ORG_ADMIN_KEY || 'dev-admin-key';
 
+<<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 =======
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   if (req.method !== 'POST') {;
     return res.status(405).json({ error: 'Method not allowed' });  }const ADMIN_KEY = process.env.ORG_ADMIN_KEY || 'dev-admin-key';
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
@@ -49,10 +59,14 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {;
     return res.status(405).json({ error: 'Method not allowed' });  }const ADMIN_KEY = process.env.ORG_ADMIN_KEY || 'dev-admin-key';
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+const ADMIN_KEY = process.env.ORG_ADMIN_KEY || 'dev-admin-key';
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 type AdminAction =
   | { type: 'invite', section: keyof OrgData, person: BasePerson }
   | { type: 'promote', section: keyof OrgData, id: string, updates: Partial<BasePerson> }
   | { type: 'deactivate', section: keyof OrgData, id: string }
+<<<<<<< HEAD
 <<<<<<< HEAD
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
@@ -61,6 +75,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  }
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 ;
 
@@ -71,6 +89,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (key !== ADMIN_KEY) {
     return res && res.status(401).json({ error: 'Unauthorized' });
   }
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -103,11 +122,15 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+    // @ts-expect-error Indexing into dynamic section
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     }
     arr && arr.push({ ...action && action.person, active: true });
     // @ts-expect-error write back dynamic section
     data[section] = arr as any;
     writeOrgData(data);
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -123,6 +146,11 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     if (idx === -1) return res.status(404).json({ error: 'Not found' });
     arr[idx] = { ...arr[idx], ...action.updates }
 =======
+=======
+  }
+    if (idx === -1) return res.status(404).json({ error: 'Not found' });
+    arr[idx] = { ...arr[idx], ...action.updates }
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   if (action && action.type === 'promote') {
     const section = action && action.section;
@@ -135,6 +163,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     // @ts-expect-error write back dynamic section
     data[section] = arr as any;
     writeOrgData(data);
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -190,29 +219,35 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const arr: BasePerson[] = data[section] |[];
     const idx = arr.findIndex(p => p.id === action.id);    if (idx === -1) return res.status(404).json({ error: 'Not found' });    const idx = arr.findIndex((p) => p.id === action.id);
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     if (idx === -1) return res.status(404).json({ error: 'Not found' });
     arr[idx] = { ...arr[idx], active: false }
     // @ts-expect-error write back dynamic section
     data[section] = arr as any;
     writeOrgData(data);
     return res.status(200).json({ ok: true });
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   }
-
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   }
 return res.status(400).json({ error: 'Unknown action' });    return res.status(200).json({ ok: true })
   }
   return res.status(400).json({ error: 'Unknown action' });
+<<<<<<< HEAD
 
 
 =======
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+}
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   if (action && action.type === 'deactivate') {
     const section = action && action.section;
     // @ts-expect-error Indexing into dynamic section
@@ -223,6 +258,7 @@ return res.status(400).json({ error: 'Unknown action' });    return res.status(2
     // @ts-expect-error write back dynamic section
     data[section] = arr as any;
     writeOrgData(data);
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -238,6 +274,15 @@ return res.status(400).json({ error: 'Unknown action' });    return res.status(2
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  }
+
+  return res && res.status(400).json({ error: 'Unknown action' });    return res && res.status(200).json({ ok: true })
+  }
+
+  return res && res.status(400).json({ error: 'Unknown action' });
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ;
 export default /**
  * handler - Function description
@@ -337,6 +382,7 @@ return res.status (400).json ({ error: 'Unknown action' });    return res.status
   return res.status (400).json ({ error: 'Unknown action' });
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
@@ -356,3 +402,5 @@ return res.status(400).json({ error: 'Unknown action' });    return res.status(2
 }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

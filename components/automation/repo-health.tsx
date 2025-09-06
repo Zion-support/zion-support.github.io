@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -9,6 +10,8 @@
 
 
 import fs from 'fs';
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import fs from 'fs',
 import path from 'path';
 import type { GetStaticProps } from 'next';
@@ -21,9 +24,9 @@ interface Report {
 }
  
 
- 
 
 
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 }
 type Props = { report: Report | null }
@@ -49,6 +52,14 @@ export const getStaticProps: GetStaticProps<Props> = async () => {;
 =======
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+
+}
+type Props = { report: Report | null }
+export const getStaticProps: GetStaticProps<Props> = async () => {
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ;
 }
 type Props = { report: Report | null },
@@ -58,14 +69,18 @@ export const getStaticProps: GetStaticProps < Props> = async () => {
     const raw = fs.readFileSync (file, 'utf8');
     const data = JSON.parse (raw);
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     return { props: { report: data }, revalidate: 3600 }
   } catch {;
     return { props: { report: null }, revalidate: 3600 }
   }
+<<<<<<< HEAD
 
 };
 
@@ -75,10 +90,15 @@ export default function RepoHealth(): any ({ report }: Props) {;
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+export default function RepoHealth(): any ({ report }: Props) {;
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 };
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   if (!report) return <div>No report yet. Check back soon.</div>;
@@ -88,6 +108,13 @@ export default function RepoHealth(): any ({ report }: Props) {;
   if (!report) return <div>No report yet. Check back soon.</div>;
   return (
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+export default function RepoHealth({ report }: Props) {
+export default function RepoHealth({ report }: Props) {;
+  if (!report) return <div>No report yet. Check back soon.</div>;
+  return (
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <div className="space-y-6">;
       <header className="space-y-1">;
         <h1 className="text-3xl font-bold">Repo Health</h1>;
@@ -105,9 +132,13 @@ export default function RepoHealth(): any ({ report }: Props) {;
           {report && report.largestFiles.map((f, i) => (;
             <li key={i} className="flex justify-between gap-4"><span className="truncate">{f && f.file}</span><span className="text-gray-500">{(f && f.bytes/1024).toFixed(1)} KB</span></li>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           ))}
         </ul>;
       </section>;
@@ -117,6 +148,7 @@ export default function RepoHealth(): any ({ report }: Props) {;
           {report && report.stalePages.map((p, i) => (;
             <li key={i} className="flex justify-between gap-4"><span className="truncate">{p && p.file}</span><span className="text-gray-500">{new Date(p && p.lastCommitAt).toLocaleDateString()}</span></li>;
           ))}
+<<<<<<< HEAD
 
         </ul>;
       </section>;
@@ -128,6 +160,8 @@ export default function RepoHealth(): any ({ report }: Props) {;
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 ;
 export default /**
@@ -165,6 +199,7 @@ if (return <div > No report yet. Check back soon.</div>) {
         </ul>;
       </section>;
     </div>);
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -242,3 +277,5 @@ export default function RepoHealth({ report }: Props) {;
   );
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

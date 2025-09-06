@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -10,46 +11,48 @@ import React, { useState } from 'react';
 
 import React, { useState } from 'react';
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
   }
+  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
+  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
+  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
+    
     return this.props.children;
   }
 }
 import React, { useState } from 'react';
+
 export interface TreeNode {;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   name: string;
   path: string;
 
   type: 'folder' | 'file';
   exists?: boolean;
   children?: TreeNode[];
-
-
-
-interface TreeProps {
-  nodes: TreeNode[];
-  onDeploy?: (path: string) => void;
-
-
-
 function NodeItem({
   node
   depth
   onDeploy
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -66,6 +69,9 @@ function NodeItem ({
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }: {
 =======
+=======
+}: {
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 interface TreeProps {;
   nodes: TreeNode[];
@@ -79,6 +85,7 @@ function NodeItem(): any ({;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   node: TreeNode;
   depth: number;
+<<<<<<< HEAD
 
 import React, { useState } from "react";
 <<<<<<< HEAD
@@ -93,6 +100,13 @@ export interface TreeNode {
   path: string
   type: "folder" | "file"
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  name: string
+  path: string
+  type: "folder" | "file"
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const hasChildren = Array && Array.isArray(node && node.children) && node && node.children.length > 0;
   const toggle = () => setOpen(v => !v);
 
@@ -102,6 +116,7 @@ export interface TreeNode {;
   name: string,;
   path: string,;
   type: "folder" | "file",;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -182,16 +197,20 @@ function NodeItem({
   const copyPath = async () => {
     await navigator.clipboard.writeText(node.path);  }
 export interface TreeNode {
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   name: string
   path: string
   type: "folder" | "file"
+
 
   name: string,
   path: string,
   type: "folder" | "file",;
   exists?: boolean;
-  children?: TreeNode[]
+  children?: TreeNode[];
 }
+<<<<<<< HEAD
 interface TreeProps {
 
   nodes: TreeNode[]
@@ -200,10 +219,13 @@ interface TreeProps {
 }
 function NodeItem({ node, depth, onDeploy }: { node: TreeNode, depth: number, onDeploy?: (path: string) => void }) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const [open, setOpen] = useState<boolean>(false);
 
   const hasChildren = Array && Array.isArray(node && node.children) && node && node.children.length > 0;
   const toggle = () => setOpen((v) => !v);
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   };
@@ -230,10 +252,13 @@ function NodeItem({ node, depth, onDeploy }: { node: TreeNode, depth: number, on
       body: JSON.stringify({ path: node.path })
     });  };      headers: {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         "Content-Type": "application/json";
         // Expect an admin token in local storage, fall back to prompt
         "x-admin-token": localStorage.getItem("ADMIN_TOKEN") |""} as any;
       body: JSON.stringify({ path: node.path })})
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -267,6 +292,39 @@ function NodeItem({ node, depth, onDeploy }: { node: TreeNode, depth: number, on
 
 
 =======
+=======
+  return (
+    <div className='ml-2'>;
+      <div className='flex items-center gap-2 py-1'>;
+        {hasChildren ? (;
+          <button className='text-sm' onClick={toggle} aria-label='Toggle'>;
+            {open ? '▾' : '▸'}
+          </button>;
+        ) : (;
+          <span className='inline-block w-4' />;
+        )}
+        <span
+          className={`font-mono text-sm ${node && node.exists ? 'text-green-600' : 'text-gray-500'}`}>;
+          {node && node.path}
+        </span>;
+        <div className='ml-auto flex gap-2'>;
+          <button
+            className='px-2 py-0 && 0.5 text-xs bg-gray-100 rounded'
+            onClick={copyPath}
+            title='Copy path'>;
+            Copy;
+          </button>;
+          <button
+            className='px-2 py-0 && 0.5 text-xs bg-gray-100 rounded'
+            onClick={clonePath}
+            title='Create template'>;
+            Template;
+          </button>;
+          <button
+            className='px-2 py-0 && 0.5 text-xs bg-emerald-100 rounded'
+            onClick={deploy}
+            title='Auto-deploy'>;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   on_deploy?: (path: string) => void;
 }) {
   const [open, set_open] = useState < boolean>(false);
@@ -280,7 +338,7 @@ export interface TreeNode {
   name: string,
   path: string,
   type: "folder" | "file",
-exists?: boolean;
+  exists?: boolean;
   children?: TreeNode[];
 }
 interface TreeProps {
@@ -349,11 +407,15 @@ function NodeItem ({ node, depth, on_deploy }: { node: TreeNode, depth: number, 
             on_click={deploy}
             title='Auto - deploy';
           >;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             Deploy;
           </button>;
         </div>;
       </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -367,19 +429,20 @@ function NodeItem ({ node, depth, on_deploy }: { node: TreeNode, depth: number, 
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               node={child}
               depth={depth + 1}
               on_deploy={on_deploy}
             />          ))}
-
 
           ))}
         </div>
       )}
     </div>
 
-
 export function Tree(): any ({ nodes, onDeploy }: TreeProps) {;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -397,15 +460,16 @@ export function Tree(): any ({ nodes, onDeploy }: TreeProps) {;
           {node.path}
 export function Tree(): any ({ nodes, onDeploy }: TreeProps) {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  return (
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <div className="w-full">;
       {nodes && nodes.map((n) => (;
       ))}
     </div>;
-
-    </div>;
-
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -460,11 +524,15 @@ export default Tree;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+export default Tree;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }node= {
   child
 }depth= {
   depth + 1
 }onDeploy= {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -483,19 +551,25 @@ export default Tree;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }node= {
   n
 }depth= {
   0
 }onDeploy= {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   onDeploy 
 }/>) ) ;
 }</div>) ;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
   onDeploy 
@@ -506,11 +580,17 @@ export default Tree;
 export default Tree;
 
 =======
+=======
+export default Tree;
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <div className="w-full">
       {nodes.map((n) => (
 
 }export default Tree;}
+
 export default Tree;
+<<<<<<< HEAD
 
 
 
@@ -527,6 +607,8 @@ export default Tree;
 }
 export default Tree;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   child.path;
 }node= {
   child;
@@ -555,6 +637,7 @@ function Tree() {
 }export default Tree;}
 export default Tree;
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -729,3 +812,5 @@ export default Tree;
     </div>
   );
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

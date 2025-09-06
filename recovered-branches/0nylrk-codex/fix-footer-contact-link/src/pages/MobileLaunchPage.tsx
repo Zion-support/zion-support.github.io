@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -34,6 +35,12 @@ class ErrorBoundary extends React.Component {
 
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from "react";
 import {SEO} from "@/components/SEO";
 import {AppLayout} from "@/layout/AppLayout";
@@ -45,10 +52,13 @@ import {AppStoreBanner} from "@/components/mobile-app/AppStoreBanner";
 import {QrCodeDownload} from "@/components/mobile-app/QrCodeDownload";
 import {CommunityTrust} from "@/components/mobile-app/CommunityTrust";
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from "react",
 import { SEO } from "@/components/SEO",
 import { AppLayout } from "@/layout/AppLayout",
@@ -59,6 +69,7 @@ import { MobileEmailCapture } from "@/components/mobile-app/MobileEmailCapture",
 import { AppStoreBanner } from "@/components/mobile-app/AppStoreBanner",
 import { QrCodeDownload } from "@/components/mobile-app/QrCodeDownload",
 import { CommunityTrust } from "@/components/mobile-app/CommunityTrust",
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -79,11 +90,17 @@ const MobileLaunchPage: React.FC = () => {
   return (
     <AppLayout>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+const MobileLaunchPage: React.FC = () => {
+const MobileLaunchPage: React.FC = () => {;
+  return (
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <SEO
         title="Get the Zion App - AI Marketplace in Your Pocket"
         description="Download the Zion mobile app for iOS and Android. Hire AI talent, find tech jobs, and manage projects on the go."
         keywords="Zion mobile app, AI talent app, tech job app, project management app, iOS app, Android app"
         canonical="/mobile-launch"
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -98,9 +115,9 @@ const MobileLaunchPage: React.FC = () => {
     </AppLayout>
   )
 }
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export default MobileLaunchPage;
-
-},
 
 export default MobileLaunchPage,
 import React from "react",;
@@ -115,6 +132,7 @@ import { QrCodeDownload } from "@/components/mobile-app/QrCodeDownload",;
 import { CommunityTrust } from "@/components/mobile-app/CommunityTrust",;
 const MobileLaunchPage: React.FC = () => {;
   return (;
+<<<<<<< HEAD
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       />;
@@ -143,6 +161,8 @@ const MobileLaunchPage: React.FC = () => {;
 export default MobileLaunchPage;
 
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from './react';
 import { SEO } from '@/components / SEO';
 import { AppLayout } from '@/layout / AppLayout';
@@ -160,7 +180,6 @@ const MobileLaunchPage: React.FC = () => {
         title="Get the Zion App - AI Marketplace in Your Pocket";
         description="Download the Zion mobile app for iOS and Android. Hire AI talent, find tech jobs, and manage projects on the go.";
         keywords="Zion mobile app, AI talent app, tech job app, project management app, iOS app, Android app";
-        canonical="/mobile-launch";
       />;
       <MobileLaunchHero />;
       <MobileFeatureShowcase />;
@@ -169,14 +188,12 @@ const MobileLaunchPage: React.FC = () => {
       <AppTestimonials />;
       <MobileEmailCapture />;
       <AppStoreBanner />;
-    </AppLayout>);
-}
-;
 
 },
 
 
 export default MobileLaunchPage;
+<<<<<<< HEAD
 ;
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -227,3 +244,5 @@ export default MobileLaunchPage,; const MobileLaunchPage: React.FC = () => {
 },;
 export default MobileLaunchPage;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

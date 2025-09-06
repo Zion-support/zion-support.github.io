@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -8,6 +9,9 @@ import type { NextApiRequest, NextApiResponse } from 'next',;
 import OpenAI from 'openai',;
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY }),
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY })
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -25,6 +29,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         lng.startsWith('es') ? 'Spanish' :
         lng.startsWith('ar') ? 'Arabic' :
         'English'
+<<<<<<< HEAD
       )
       const completion = await openai.chat.completions.create({
         model: 'gpt-4o-mini'
@@ -40,6 +45,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       });
       const translated = completion.choices?.[0]?.message?.content?.trim() || '';
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       results[lng] = translated
     }
     return res.status(200).json(results)
@@ -47,16 +54,39 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     console.error('Translation error', err)
 
     return res.status(500).json({ error: 'Translation failed' })
+  };
+};
+import type { NextApiRequest, NextApiResponse } from 'next';
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  res.status(200).json({ translation: 'Translated content' });
+import type { NextApiRequest, NextApiResponse } from 'next';
+import OpenAI from 'openai';
+const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
+export default async function handler(req, res) {
+  try {
+  if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
+  const { text, targets } = req.body as { text: string, targets: string[] },;
+  if (!text || !Array.isArray(targets) || targets.length === 0) {;
+    return res.status(400).json({ error: 'Invalid input' });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
   }
 
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
   }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import type { NextApiRequest, NextApiResponse } from 'next',
 import OpenAI from 'openai',
 const openai = new OpenAI ({ api_key: process.env.OPENAI_API_KEY }),
@@ -91,6 +121,7 @@ if (|| targets.length === 0) {) {
         temperature: 0.2}),
       const translated = completion.choices?.[0]?.message?.content?.trim () || '',
       results[lng] = translated;
+<<<<<<< HEAD
     }
     return res.status (200).json (results);
   } catch (err: any) {
@@ -122,6 +153,8 @@ export default async function handler(req, res) {
   if (!text || !Array.isArray(targets) || targets.length === 0) {;
     return res.status(400).json({ error: 'Invalid input' });
     } catch (error) {
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
     } catch (error) {
@@ -129,6 +162,7 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 
 
   } catch (error) {
@@ -202,3 +236,15 @@ export default async function handler(req, res) {
   }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  }
+}
+  }
+}
+  }
+}
+  }
+}
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

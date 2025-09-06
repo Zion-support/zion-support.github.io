@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -31,16 +32,21 @@ function handler() {
 }
 import type { NextApiRequest, NextApiResponse } from 'next';
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import type { NextApiRequest, NextApiResponse } from 'next',;
 ;
 // In-memory demo store per process
 const store: Record<string, any> = (global as any).__ZION_DID_STORE__ || {},
 (global as any).__ZION_DID_STORE__ = store,
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 // In-memory demo store per process
 const store: Record<string, any> = (global as any).__ZION_DID_STORE__ |{}
@@ -52,12 +58,22 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const key = `${payload.address}`
   store[key] = { payload, message, signature, updatedAt: Date.now() }
 
+<<<<<<< HEAD
 
   if (req.method !== 'POST') return res.status(405).end();
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  if (req.method !== 'POST') return res.status(405).end(),
+  const { payload, message, signature } = req.body || {},
+  if (!payload || !payload.address) return res.status(400).json({ error: 'Missing payload' }),
+  const key = `${payload.address}`,
+  store[key] = { payload, message, signature, updatedAt: Date.now() },
+  return res.status(200).json({ ok: true });
+};
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   if (req.method !== 'POST') return res.status(405).end(),
   const { payload, message, signature } = req.body || {},
   if (!payload || !payload.address) return res.status(400).json({ error: 'Missing payload' }),
@@ -67,9 +83,12 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 // In-memory demo store per process;
 const store: Record<string, any> = (global as any).ZION_DID_STORE || {};
 export default function handler(req: any, res: any) {
@@ -86,6 +105,7 @@ export default function handler(req, res) {
   if (!payload || !payload.address) return res.status(400).json({ error: 'Missing payload' });
   const key = `${payload.address}`;
   store[key] = { payload, message, signature, updatedAt: Date.now() };
+<<<<<<< HEAD
   return res.status(200).json({ ok: true })
 }
 
@@ -148,6 +168,8 @@ export default function handler(req, res) {
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   }
 }
   } catch (error) {
@@ -155,6 +177,7 @@ export default function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   } catch (error) {
     console.error("Error:", error);
@@ -170,3 +193,5 @@ export default function handler(req, res) {
 }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

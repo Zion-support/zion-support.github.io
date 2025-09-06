@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -6,6 +7,10 @@
 import React from "react";
 import Link from "next/link";
 import { Mail, Phone, MapPin, Linkedin, Twitter, Github } from "lucide-react";
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 <<<<<<< HEAD
 
@@ -13,6 +18,7 @@ const EnhancedFooter: React.FC = () => {;
   const currentYear = new Date().getFullYear();
 
 
+<<<<<<< HEAD
 =======
 const EnhancedFooter: React.FC = () => {
   const currentYear = new Date().getFullYear();
@@ -29,6 +35,8 @@ const EnhancedFooter: React.FC = () => {
   const currentYear = new Date().getFullYear();
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const company = null;
   ];
 
@@ -61,16 +69,16 @@ const serviceCategories = [
       { name: 'AI Emotional Intelligence', href: '/ai-emotional-intelligence-platform' }
       { name: 'AI Quantum Hybrid Computing', href: '/ai-quantum-hybrid-computing' }
     ]
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
   }
-  {
-    title: 'Cutting-Edge IT'
-    services: [
-      { name: 'Zero Trust Architecture', href: '/zero-trust-network-architecture' }
-      { name: 'Edge Computing Orchestration', href: '/edge-computing-orchestration' }
-      { name: '5G Private Networks', href: '/5g-private-network-solutions' }
-      { name: 'Blockchain Infrastructure', href: '/blockchain-infrastructure-platform' }
-    ]
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
   }
+<<<<<<< HEAD
   {
     title: 'Innovative SaaS'
     services: [
@@ -104,6 +112,8 @@ const socialLinks = [
 export default function EnhancedFooter() {
   const currentYear = new Date().getFullYear()
   const services = [
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     { name: 'AI Services', href: '/ai-services' }
     { name: 'IT Services', href: '/it-services' }
     { name: 'Blockchain Solutions', href: '/blockchain-solutions' }
@@ -118,7 +128,10 @@ export default function EnhancedFooter() {
     { name: 'Micro SaaS', href: '/micro-saas' },;
     { name: 'Security', href: '/security' },;
     { name: 'Case Studies', href: '/case-studies' },;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   ];
   const company = [
     { name: 'About Us', href: '/about' }
@@ -140,12 +153,20 @@ export default function EnhancedFooter() {
 
   ];
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+const EnhancedFooter: React.FC = () => {
+  const currentYear = new Date().getFullYear();
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
 
 
@@ -161,12 +182,15 @@ export default function EnhancedFooter() {
             <p className="text-gray-300 mb-6">
               Leading technology solutions provider helping businesses transform
               their digital presence.
+<<<<<<< HEAD
 
 
             </p>
             <div className="flex space-x-4">
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <footer className="bg-gray-900 text-white">;
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">;
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;
@@ -255,6 +279,45 @@ const company_links = [;
   { name: 'Resources', href: '/resources' }
 ],
 const support_links = [;
+<<<<<<< HEAD
+=======
+
+const _serviceCategories = [
+  {_title: 'Next-Generation AI', _services: [
+      { name: 'AI Multimodal Fusion', _href: '/ai-multimodal-fusion-platform'},
+      {_name: 'AI Autonomous Decision Engine', _href: '/ai-autonomous-decision-engine'},
+      {_name: 'AI Emotional Intelligence', _href: '/ai-emotional-intelligence-platform'},
+      {_name: 'AI Quantum Hybrid Computing', _href: '/ai-quantum-hybrid-computing'}
+    ]
+  },
+  {_title: 'Cutting-Edge IT', _services: [
+      { name: 'Zero Trust Architecture', _href: '/zero-trust-network-architecture'},
+      {_name: 'Edge Computing Orchestration', _href: '/edge-computing-orchestration'},
+      {_name: '5G Private Networks', _href: '/5g-private-network-solutions'},
+      {_name: 'Blockchain Infrastructure', _href: '/blockchain-infrastructure-platform'}
+    ]
+  },
+  {_title: 'Innovative SaaS', _services: [
+      { name: 'AI Brand Personality', _href: '/ai-brand-personality-generator'},
+      {_name: 'Virtual Event Holograms', _href: '/virtual-event-hologram-platform'},
+      {_name: 'AI Meeting Transcriber', _href: '/ai-meeting-transcriber-pro'},
+      {_name: 'AI Mental Health Companion', _href: '/ai-mental-health-companion'}
+    ]
+  }
+],
+
+const companyLinks = [
+  { name: 'About Us', href: '/about' },
+  { name: 'Careers', href: '/careers' },
+  { name: 'News', href: '/news' },
+  { name: 'Case Studies', href: '/case-studies' },
+  { name: 'Blog', href: '/blog' },
+  { name: 'Resources', href: '/resources' }
+],
+
+const supportLinks = [
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   { name: 'Contact Support', href: '/contact' },
   { name: 'Documentation', href: '/docs' },
   { name: 'API Reference', href: '/api' },
@@ -338,6 +401,7 @@ function EnhancedFooter() {
             </div>;
           </div>;
           {/* Services */}
+<<<<<<< HEAD
 
 =======
 
@@ -358,10 +422,13 @@ const EnhancedFooter: React.FC = () => {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   Web Development;
                 </Link>;
               </li>;
               <li>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -374,10 +441,13 @@ const EnhancedFooter: React.FC = () => {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   Mobile Apps;
                 </Link>;
               </li>;
               <li>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -390,10 +460,13 @@ const EnhancedFooter: React.FC = () => {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   AI Solutions;
                 </Link>;
               </li>;
               <li>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -406,12 +479,15 @@ const EnhancedFooter: React.FC = () => {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   Cloud Services;
                 </Link>;
               </li>;
             </ul>;
           </div>;
           {/* Company */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -428,10 +504,13 @@ const EnhancedFooter: React.FC = () => {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   About Us;
                 </Link>;
               </li>;
               <li>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -444,10 +523,13 @@ const EnhancedFooter: React.FC = () => {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   Careers;
                 </Link>;
               </li>;
               <li>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -460,10 +542,13 @@ const EnhancedFooter: React.FC = () => {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   Blog;
                 </Link>;
               </li>;
               <li>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -476,12 +561,15 @@ const EnhancedFooter: React.FC = () => {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   Contact;
                 </Link>;
               </li>;
             </ul>;
           </div>;
           {/* Contact Info */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -522,14 +610,19 @@ const EnhancedFooter: React.FC = () => {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               </div>;
             </div>;
           </div>;
         </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <div className="border - t border - gray - 800 mt - 8 pt - 8">;
           <div className="flex flex - col md:flex - row justify - between items - center">;
 <p className="text - gray - 400 text - sm">;
@@ -547,15 +640,19 @@ const EnhancedFooter: React.FC = () => {
                 className="text - gray - 400 hover:text - white text - sm transition - colors";
               >;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 Terms of Service;
               </Link>;
             </div>;
           </div>;
         </div>;
       </div>;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -778,3 +875,8 @@ export default EnhancedFooter;
 =======
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+}
+export default EnhancedFooter;
+;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -1,11 +1,13 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
   {
 
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export interface InnovativeAIService {
-export interface InnovativeAIService {;
   id: string;
   name: string;
   tagline: string;
@@ -16,26 +18,27 @@ export interface InnovativeAIService {;
   popular: boolean;
   icon: string;
   color: string;
-  textColor: string;
+  text_color: string;
   link: string;
-  marketPosition: string;
-  targetAudience: string;
-  trialDays: number;
-  setupTime: string;
+  market_position: string;
+  target_audience: string;
+  trial_days: number;
+  setup_time: string;
   category: string;
-  realService: boolean;
+  real_service: boolean;
   technology: string[];
   integrations: string[];
-  useCases: string[];
+  use_cases: string[];
   roi: string;
   competitors: string[];
-  marketSize: string;
-  growthRate: string;
+  market_size: string;
+  growth_rate: string;
   variant: string;
-  contactInfo: {
+  contact_info: {
     mobile: string;
     email: string;
     address: string;
+
 
   {
 
@@ -49,6 +52,19 @@ export interface InnovativeAIService {;
     description:;
       'Enterprise - grade autonomous driving platform with advanced AI, computer vision, and safety systems. Enable commercial fleets to operate autonomously with 99.99% safety record.',
     features: [;
+  id: string;
+  name: string;
+  tagline: string;
+  price: string;
+  period: string;
+  description: string;
+  features: string[];
+  popular: boolean;
+  icon: string;
+  color: string;
+    mobile: string;
+    email: string;
+    address: string;
 
       'Advanced computer vision AI',
       'Real - time decision making',
@@ -62,8 +78,8 @@ export interface InnovativeAIService {;
       'Performance analytics',
     ],
     popular: true,
-    icon: '🚗',
 
+<<<<<<< HEAD
     website: string;
   }
 
@@ -238,6 +254,8 @@ export const innovativeAIServices: InnovativeAIService[] = [;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -253,6 +271,7 @@ export const innovativeAIServices: InnovativeAIService[] = [;
   },
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -270,6 +289,8 @@ export const innovativeAIServices: InnovativeAIService[] = [;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       'AI drug discovery algorithms',
       'Genetic sequence analysis',
       'Protein folding prediction',
@@ -282,6 +303,7 @@ export const innovativeAIServices: InnovativeAIService[] = [;
       'Multi - omics data analysis',
     ],
     popular: true,
+<<<<<<< HEAD
     icon: '🧬',
 <<<<<<< HEAD
 
@@ -332,6 +354,8 @@ export const innovativeAIServices: InnovativeAIService[] = [;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -347,6 +371,7 @@ export const innovativeAIServices: InnovativeAIService[] = [;
   },
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -364,6 +389,8 @@ export const innovativeAIServices: InnovativeAIService[] = [;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       'Quantum AI trading algorithms',
       'Nanosecond execution speed',
       'Real - time market analysis',
@@ -376,6 +403,7 @@ export const innovativeAIServices: InnovativeAIService[] = [;
       'API for integration',
     ],
     popular: true,
+<<<<<<< HEAD
     icon: '💰',
 <<<<<<< HEAD
 
@@ -426,6 +454,8 @@ export const innovativeAIServices: InnovativeAIService[] = [;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -441,6 +471,7 @@ export const innovativeAIServices: InnovativeAIService[] = [;
   },
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -458,6 +489,8 @@ export const innovativeAIServices: InnovativeAIService[] = [;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       'Satellite mission planning',
       'Orbital mechanics calculations',
       'Real - time satellite tracking',
@@ -470,6 +503,7 @@ export const innovativeAIServices: InnovativeAIService[] = [;
       'Multi - satellite operations',
     ],
     popular: true,
+<<<<<<< HEAD
     icon: '🚀',
 <<<<<<< HEAD
 
@@ -520,6 +554,8 @@ export const innovativeAIServices: InnovativeAIService[] = [;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -535,6 +571,7 @@ export const innovativeAIServices: InnovativeAIService[] = [;
   },
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -554,6 +591,8 @@ export const innovativeAIServices: InnovativeAIService[] = [;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       'Intelligent NPCs and avatars',
       '3D environment creation',
       'Virtual economy systems',
@@ -565,6 +604,7 @@ export const innovativeAIServices: InnovativeAIService[] = [;
       'Cross - platform support',
     ],
     popular: true,
+<<<<<<< HEAD
     icon: '🌐',
 <<<<<<< HEAD
 
@@ -615,6 +655,8 @@ export const innovativeAIServices: InnovativeAIService[] = [;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -630,6 +672,7 @@ export const innovativeAIServices: InnovativeAIService[] = [;
   },
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -647,6 +690,8 @@ export const innovativeAIServices: InnovativeAIService[] = [;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       'Quantum AI decision making',
       'Precision robotics control',
       'Industrial automation',
@@ -659,6 +704,7 @@ export const innovativeAIServices: InnovativeAIService[] = [;
       'Integration APIs',
     ],
     popular: true,
+<<<<<<< HEAD
     icon: '🤖',
 <<<<<<< HEAD
 
@@ -705,6 +751,8 @@ export const innovativeAIServices: InnovativeAIService[] = [;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -720,6 +768,7 @@ export const innovativeAIServices: InnovativeAIService[] = [;
   },
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -739,6 +788,8 @@ export const innovativeAIServices: InnovativeAIService[] = [;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       'AI threat detection',
       'Real - time monitoring',
       'Incident response',
@@ -750,6 +801,7 @@ export const innovativeAIServices: InnovativeAIService[] = [;
       'Integration APIs',
     ],
     popular: true,
+<<<<<<< HEAD
     icon: '🔒',
 <<<<<<< HEAD
 
@@ -800,6 +852,8 @@ export const innovativeAIServices: InnovativeAIService[] = [;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -815,6 +869,7 @@ export const innovativeAIServices: InnovativeAIService[] = [;
   },
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -832,6 +887,8 @@ export const innovativeAIServices: InnovativeAIService[] = [;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       'Quantum key distribution',
       'Quantum networks',
       'Ultra - secure communications',
@@ -844,6 +901,7 @@ export const innovativeAIServices: InnovativeAIService[] = [;
       '24 / 7 support',
     ],
     popular: true,
+<<<<<<< HEAD
     icon: '🌍',
 <<<<<<< HEAD
 
@@ -894,6 +952,8 @@ export const innovativeAIServices: InnovativeAIService[] = [;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -910,10 +970,26 @@ export const innovativeAIServices: InnovativeAIService[] = [;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+      'Quantum AI logistics platform with supply chain optimization and real-time analytics capabilities.'
+    launchDate: '2024-08-01'
+    customers: 67
+    rating: 4.7
+    reviews: 34
+  }
+      'Quantum AI logistics platform with supply chain optimization and real-time analytics capabilities.',
+    launchDate: '2024-08-01',
+    customers: 67,
+    rating: 4 && 4.7,
+    reviews: 34,
+  },;
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     id: 'quantum - logistics - platform',
     name: 'Quantum Logistics Platform',
     tagline: 'Quantum AI - powered supply chain optimization',
@@ -923,9 +999,13 @@ export const innovativeAIServices: InnovativeAIService[] = [;
       'Advanced quantum AI logistics platform for supply chain optimization, route planning, and inventory management with unprecedented efficiency.',
     features: [;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       'Quantum AI optimization',
       'Supply chain analytics',
       'Route optimization',
@@ -940,10 +1020,14 @@ export const innovativeAIServices: InnovativeAIService[] = [;
     popular: true,
     icon: '📦',
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     color: 'from - blue - 600 to - indigo - 700',
     text_color: 'text - blue - 400',
     link: 'https://ziontechgroup.com / quantum - logistics',
@@ -985,9 +1069,13 @@ export const innovativeAIServices: InnovativeAIService[] = [;
     variant: 'quantum - matrix',
     contact_info: {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -1005,20 +1093,27 @@ export const innovativeAIServices: InnovativeAIService[] = [;
       email: 'kleber@ziontechgroup && ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709',
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       website: 'https://ziontechgroup.com';
     }
     real_implementation: true;
     implementation_details: 'Quantum AI logistics platform with supply chain optimization and real - time analytics capabilities.';
     launch_date: '2024 - 08 - 01';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
     customers: 67;
 
     rating: 4 && 4.7,
 
+<<<<<<< HEAD
 =======
     customers: 67;
     rating: 4 && 4.7,
@@ -1027,6 +1122,13 @@ export const innovativeAIServices: InnovativeAIService[] = [;
   }
 ];
 =======
+=======
+    reviews: 34
+  }
+];
+  }
+];
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   id: string, name: string,
   tagline: string, price: string,
   period: string, description: string,
@@ -1051,6 +1153,47 @@ export const innovativeAIServices: InnovativeAIService[] = [;
   launchDate: string, customers: number,
   rating: number,
   reviews: number
+  }
+];
+export interface InnovativeAIService {;
+  id: string,;
+  name: string,;
+  tagline: string,;
+  price: string,;
+  period: string,;
+  description: string,;
+  features: string[],;
+  popular: boolean,;
+  icon: string,;
+  color: string,;
+  textColor: string,;
+  link: string,;
+  marketPosition: string,;
+  targetAudience: string,;
+  trialDays: number,;
+  setupTime: string,;
+  category: string,;
+  realService: boolean,;
+  technology: string[],;
+  integrations: string[],;
+  useCases: string[],;
+  roi: string,;
+  competitors: string[],;
+  marketSize: string,;
+  growthRate: string,;
+  variant: string,;
+  contactInfo: {;
+    mobile: string,;
+    email: string,;
+    address: string,;
+    website: string;
+  },;
+  realImplementation: boolean,;
+  implementationDetails: string,;
+  launchDate: string,;
+  customers: number,;
+  rating: number,;
+  reviews: number;
 }
 
 export const innovativeAIServices: InnovativeAIService[] = [
@@ -1069,6 +1212,7 @@ export const innovativeAIServices: InnovativeAIService[] = [
       'Advanced analytics dashboard',
       'API for research integration',
       'Compliance with medical standards',
+<<<<<<< HEAD
 
       '24/7 quantum AI support'
     ],
@@ -1103,6 +1247,8 @@ export const innovativeAIServices: InnovativeAIService[] = [
     period: '/month',
     description: 'Enterprise-grade autonomous driving platform with advanced AI, computer vision, and safety systems. Enable commercial fleets to operate autonomously with 99.99% safety record.',
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     features: [
       'Advanced computer vision AI',
       'Real-time decision making',
@@ -1113,6 +1259,7 @@ export const innovativeAIServices: InnovativeAIService[] = [
       'Weather adaptation',
       'Traffic prediction',
       'Emergency response systems',
+<<<<<<< HEAD
 
       'Performance analytics'
     ],
@@ -1146,6 +1293,8 @@ export const innovativeAIServices: InnovativeAIService[] = [
     price: '$3,999',
     period: '/month', description: 'AI-powered drug discovery and genetic engineering platform. Accelerate drug development by 10x while reducing costs by 90%. Advanced protein folding and drug interaction modeling.',
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     features: [
       'AI drug discovery algorithms',
       'Genetic sequence analysis',
@@ -1156,6 +1305,7 @@ export const innovativeAIServices: InnovativeAIService[] = [
       'Research collaboration platform',
       'Advanced analytics dashboard',
       'API for research integration',
+<<<<<<< HEAD
 
       'Multi-omics data analysis'
     ],
@@ -1191,6 +1341,8 @@ export const innovativeAIServices: InnovativeAIService[] = [
     price: '$7,999',
     period: '/month', description: 'Quantum AI-powered algorithmic trading with nanosecond precision. Process market data at quantum speeds for unprecedented accuracy and profit generation.',
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     features: [
       'Quantum AI trading algorithms',
       'Nanosecond execution speed',
@@ -1201,6 +1353,7 @@ export const innovativeAIServices: InnovativeAIService[] = [
       'Advanced backtesting',
       'Regulatory compliance',
       'Performance analytics',
+<<<<<<< HEAD
 
       'API for integration'
     ],
@@ -1234,6 +1387,8 @@ export const innovativeAIServices: InnovativeAIService[] = [
     price: '$5,999',
     period: '/month', description: 'Complete space mission management and satellite operations platform. Enable commercial space companies to operate like NASA with advanced mission planning and satellite tracking.',
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     features: [
       'Satellite mission planning',
       'Orbital mechanics calculations',
@@ -1244,6 +1399,7 @@ export const innovativeAIServices: InnovativeAIService[] = [
       'Space debris tracking',
       'Mission analytics dashboard',
       'Regulatory compliance tools',
+<<<<<<< HEAD
 
       'Multi-satellite operations'
     ],
@@ -1278,6 +1434,8 @@ export const innovativeAIServices: InnovativeAIService[] = [
     period: '/month',
     description: 'Complete AI-powered metaverse development platform with virtual world creation, AI NPCs, and immersive experiences. Build the next generation of digital worlds.',
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     features: [
       'AI-powered world generation',
       'Intelligent NPCs and avatars',
@@ -1438,6 +1596,7 @@ export const innovativeAIServices: InnovativeAIService[] = [
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
+<<<<<<< HEAD
 <<<<<<< HEAD
     
     },
@@ -1965,3 +2124,7 @@ export const innovativeAIServices: InnovativeAIService[] = [;
   }
 ];
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  }
+];
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

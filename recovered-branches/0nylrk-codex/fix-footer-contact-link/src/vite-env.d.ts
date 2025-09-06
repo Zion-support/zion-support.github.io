@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 ;
 
 
@@ -7,6 +8,9 @@
 
 ;
 interface ImportMetaEnv {readonly VITE_APP_TITLE: string;
+=======
+;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   // add more env variables as needed;
 }
 interface ImportMeta {readonly env: ImportMetaEnv;
@@ -32,6 +36,7 @@ declare module 'lovable-tagger' {import { Plugin } from 'vite';
   export function componentTagger(): Plugin;
 }
 // Add Node.js globals;
+<<<<<<< HEAD
 declare let __dirname: string;
 declare let process: {env: {;
     [key: string]: string | undefined;
@@ -87,15 +92,21 @@ declare let process: {;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     PORT?: string;
   }
 }
 // Badge component type fixes
 declare module '@/components/ui/badge' {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface ImportMetaEnv {
   readonly VITE_APP_TITLE: string,
   // add more env variables as needed;
@@ -103,6 +114,9 @@ interface ImportMetaEnv {
 interface ImportMeta {
   readonly env: ImportMetaEnv;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 // Global type declarations;
 declare namespace React {
@@ -120,6 +134,7 @@ declare module '@vitejs/plugin-react - swc' {
   import { Plugin } from 'vite',
   export default function reactSWC (): Plugin;
 }
+<<<<<<< HEAD
 =======
 ;
 interface ImportMetaEnv {;
@@ -199,13 +214,18 @@ declare module '@livekit/components-react' {export interface VideoCallProps {;
     onDisconnect?: () => void;
     className?: string;
   export interface BadgeProps {
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   export interface BadgeProps {
     className?: string,
     variant?: "default" | "secondary" | "destructive" | "outline",
     children?: React.ReactNode,
     key?: string | number
 },;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 declare module 'path' {
   export function resolve (...paths: string[]): string,
   export function join (...paths: string[]): string,
@@ -214,6 +234,7 @@ declare module 'path' {
 declare module 'lovable - tagger' {
   import { Plugin } from 'vite',
   export function component_tagger (): Plugin;
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 // Add Node.js globals;
@@ -225,10 +246,13 @@ declare let process: {
     PORT?: string;
   }
 },
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 // Badge component type fixes;
 declare module '@/components / ui / badge' {
   export interface BadgeProps {
   }
+<<<<<<< HEAD
   export const Badge: React.FC < BadgeProps>;
 }
 // FeatureCard type fixes;
@@ -311,10 +335,13 @@ declare module '@/components/FeatureCard' {;
     icon: React.ReactNode,;
     className?: string,;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     key?: number | string;
   }
 }
 // ListingScoreCard type fixes;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 declare module '@/components / ListingScoreCard' {
@@ -341,14 +368,14 @@ declare module '@/components / ChatAssistant / ChatMessage' {
     message: string,
     timestamp?: Date,
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     key?: string | number;
-  }
-}
-// ProductListingCard type fixes;
 
 
 
 
+<<<<<<< HEAD
 =======
 declare module '@/components/ListingScoreCard' {;
   export interface ListingScoreCardProps {;
@@ -408,11 +435,20 @@ declare module '@/components/ChatAssistant/ChatMessage' {;
     timestamp?: Date,;
     key?: string | number;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   }
   export const VideoCall: React.FC<VideoCallProps>;
   export const LiveKitRoom: React.FC<any>;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+// ProductListingCard type fixes;
+declare module '@/components/ProductListingCard' {;
+  export interface ProductListingCardProps {;
+    listing: any,;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 declare module '@/components / ProductListingCard' {
   export interface ProductListingCardProps {
@@ -422,6 +458,7 @@ declare module '@/components / ProductListingCard' {
     key?: string | number;
   }
   export const ProductListingCard: React.FC < ProductListingCardProps>;
+<<<<<<< HEAD
 =======
 declare module '@livekit/components-styles' {// Empty stub for the styles;
 }
@@ -450,6 +487,11 @@ declare module '@/components/ProductListingCard' {;
 // Removed custom lucide-react stub;
 // Create a replacement stub for LiveKit components;
 <<<<<<< HEAD
+=======
+}
+// Removed custom lucide-react stub;
+// Create a replacement stub for LiveKit components;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 declare module '@livekit / components - react' {
   export interface VideoCallProps {
     room?: string,
@@ -461,6 +503,7 @@ declare module '@livekit / components - react' {
   export const VideoCall: React.FC < VideoCallProps>;
   export const LiveKitRoom: React.FC < any>;
 }
+<<<<<<< HEAD
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 declare module '@livekit / components - styles' {
@@ -519,3 +562,9 @@ declare module '@livekit/components-styles' {;
 }
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+declare module '@livekit/components-styles' {;
+  // Empty stub for the styles;
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 import React, { useState, useEffect } from 'react',
@@ -6,6 +7,8 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {
   Menu
   X
@@ -108,41 +111,18 @@ import {
   FlaskConical,;
   Link as LinkIcon,;
 import Button from '../ui/Button';
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+export default function NeoFuturisticNavigation() {;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-import React, { useState, useEffect } from 'react';
+export default function NeoFuturisticNavigation() {
 
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const router = useRouter();
-
-
-
-
-
   const serviceCategories = [
     {
       name: 'Quantum Computing'
@@ -433,11 +413,6 @@ import React, { useState, useEffect } from 'react';
       link: '/reports'
     }
   ];
-
-
-
-
-
   // Popular quick links to flagship services
   const popularServiceLinks = [
     { name: 'AI Content Generator', href: '/ai-content-generator' }
@@ -450,11 +425,6 @@ import React, { useState, useEffect } from 'react';
     { name: 'AI Sales Automation', href: '/ai-sales-automation' }
     { name: 'AI Market Research', href: '/ai-market-research' }
   ];
-
-
-
-
-
   // Newly added real services quick links
   const newServiceLinks = [
     {
@@ -846,15 +816,13 @@ import React, { useState, useEffect } from 'react';
         <div
           className='h-full bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-600'
           style={{
-
-            width: `${typeof window !== 'undefined' && document && document.body.scrollHeight> 0 ? Math && Math.min(100, (window && window.scrollY / (document && document.body.scrollHeight - window && window.innerHeight)) * 100) : 0}%`,;
-
           }}
         />;
       </div>;
       <div className='max-w-7xl mx-auto px-4'>;
         <div className='flex items-center justify-between h-20'>;
           {/* Logo */}
+<<<<<<< HEAD
           <Link href='/' className='flex items-center space-x-3 group'>;
             <div className='relative'>;
               <div className='w-10 h-10 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300'>;
@@ -2209,6 +2177,11 @@ export default function NeoFuturisticNavigation() {
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+                {activeDropdown === 'mobile-services' && (
+                  <div className='ml-4 space-y-3'>
+                    {serviceCategories.map((category, index) => (
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   />;
                 </button>;
 
@@ -2239,6 +2212,7 @@ export default function NeoFuturisticNavigation() {
                       </div>;
                     ))}
                     <div className='pt-3'>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
           >
@@ -2292,10 +2266,13 @@ export default function NeoFuturisticNavigation() {
                     ))}
                     <div className='pt-3'>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       <Button
                         href='/services'
                         variant='quantum'
                         size='sm'
+<<<<<<< HEAD
 <<<<<<< HEAD
                         className='w-full'>;
                         View All Services;
@@ -2319,6 +2296,8 @@ export default function NeoFuturisticNavigation() {
 =======
               </div>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               {/* Company Section */}
               <div>;
                 <button
@@ -2328,6 +2307,7 @@ export default function NeoFuturisticNavigation() {
                   <span>Company</span>;
                   <ChevronRight
                     className={`w-5 h-5 transition-transform duration-300 ${activeDropdown === 'mobile-company' ? 'rotate-90' : ''}`}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -2342,6 +2322,8 @@ export default function NeoFuturisticNavigation() {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       <Link
                         key={index}
                         href={item && item.link}
@@ -2353,6 +2335,7 @@ export default function NeoFuturisticNavigation() {
                   </div>;
                 )}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
               </div>;
 
@@ -2360,6 +2343,8 @@ export default function NeoFuturisticNavigation() {
 =======
               </div>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               {/* Resources Section */}
               <div>;
                 <button
@@ -2369,6 +2354,7 @@ export default function NeoFuturisticNavigation() {
                   <span>Resources</span>;
                   <ChevronRight
                     className={`w-5 h-5 transition-transform duration-300 ${activeDropdown === 'mobile-resources' ? 'rotate-90' : ''}`}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -2383,6 +2369,8 @@ export default function NeoFuturisticNavigation() {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       <Link
                         key={index}
                         href={item && item.link}
@@ -2393,6 +2381,7 @@ export default function NeoFuturisticNavigation() {
                     ))}
                   </div>;
                 )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
               </div>;
@@ -2520,10 +2509,13 @@ export default function NeoFuturisticNavigation() {
                 </div>
                 <div className='mt-6 space-y-3'>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   <Button
                     href='/services'
                     variant='quantum'
                     size='lg'
+<<<<<<< HEAD
 <<<<<<< HEAD
                     className='w-full'>;
                     Explore Services;
@@ -2536,6 +2528,8 @@ export default function NeoFuturisticNavigation() {
                     <ArrowRight className='w-5 h-5 ml-2' />
                   </Button>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   <Button
                     href='/contact'
                     variant='secondary'
@@ -2850,6 +2844,7 @@ export default function NeoFuturisticNavigation() {
               </div>;
             </div>;
           </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -3441,6 +3436,8 @@ export default function NeoFuturisticNavigation() {
 }</div> </div> </div> <div className="mt-6 space-y-3" > <Button href="/services" variant="quantum" size="lg" className="w-full" > Explore Services <ArrowRight className="w-5 h-5 ml-2" /> </Button> <Button href="/contact" variant="secondary" size="lg" className="w-full" > Contact Us </Button> </div> </div> </div> </div> </div>)
 }</nav>) 								<div className="mt-6 space-y-3">
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 									<Button href="/services" variant="quantum" size="lg" className="w-full">
 										Explore Services
 										<ArrowRight className="w-5 h-5 ml-2" />
@@ -3455,6 +3452,7 @@ export default function NeoFuturisticNavigation() {
 				</div>
 			)}
 		</nav>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -3592,3 +3590,5 @@ export default function NeoFuturisticNavigation() {
 	);
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

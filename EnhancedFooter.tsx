@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -29,12 +30,15 @@ const EnhancedFooter: React.FC = () => {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     { name: 'About Us', href: '/about' },
     { name: 'Our Team', href: '/about#team' },
     { name: 'Careers', href: '/talent' },
     { name: 'Blog', href: '/blog' },
     { name: 'Contact', href: '/contact' }
   ];
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -70,6 +74,8 @@ import _React from 'react'; import Link from 'next/link'; import { Mail,Phone,Ma
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ;
   // const resources = [;
   //   { name: 'Documentation', href: '/resources / documentation' },
@@ -201,5 +207,8 @@ import _React from 'react'; import Link from 'next/link'; import { Mail,Phone,Ma
     </footer>);
 }
 ;
+<<<<<<< HEAD
 export default EnhancedFooter;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 export const useRecordActivity = () => {;
   const { user } = useAuth();
 
@@ -10,10 +11,28 @@ export const useRecordActivity = () => {;
   const { user } = useAuth();
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+import {useAuth} from '@/hooks/useAuth';
+import {supabase} from '@/integrations/supabase/client';
+import {MilestoneActivity} from './types';
+export const useRecordActivity = () => {
+  const { user } = useAuth();
+  const recordMilestoneActivity = async (
+    milestoneId: string
+    action: string
+    previousStatus: string | null
+    newStatus: string;
+import {useAuth} from '@/hooks/useAuth';
+import {supabase} from '@/integrations/supabase/client';
+import {MilestoneActivity} from './types';
+export const useRecordActivity = () => {;
+  const { user } = useAuth();
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useAuth } from '@/hooks/useAuth',
 import { supabase } from '@/integrations/supabase/client',
 import { MilestoneActivity } from './types',
 export const useRecordActivity = () => {
+<<<<<<< HEAD
   const { user } = useAuth(),
 <<<<<<< HEAD
 
@@ -32,6 +51,8 @@ export const useRecordActivity = () => {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     comment?: string
   ) => {
     if (!user) return null
@@ -39,6 +60,7 @@ export const useRecordActivity = () => {
       const { data, error } = await supabase
         .from('milestone_activities')
         .insert({
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -65,11 +87,14 @@ export const useRecordActivity = () => {
 
 
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           comment})
         .select(`
           *,
           created_by_profile:profiles!user_id(display_name, avatar_url)
         `)
+<<<<<<< HEAD
         .single();
       if (error) throw error;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -144,16 +169,21 @@ if (throw error) {
       console.error("Error recording activity:", err),
       return null
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     }
   };
   
   return {
     recordMilestoneActivity
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useAuth } from '@/hooks/useAuth',;
 import { supabase } from '@/integrations/supabase/client',;
 import { MilestoneActivity } from './types',;
@@ -188,6 +218,7 @@ export const useRecordActivity = () => {;
       console.error("Error recording activity:", err),;
       return null;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -208,6 +239,8 @@ export const useRecordActivity = () => {;
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     }
   };
   return {;
@@ -218,5 +251,14 @@ export const useRecordActivity = () => {;
   }
 }
 
+  };
+  return {;
+    recordMilestoneActivity;
+
+  }
+
 };
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

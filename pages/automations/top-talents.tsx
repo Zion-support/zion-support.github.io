@@ -1,12 +1,16 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 import type { NextPage, GetServerSideProps } from "next";
 import fs from "fs";
 import path from "path";
 import Link from "next/link";
+<<<<<<< HEAD
 
 
 type TalentItem = {;
@@ -25,11 +29,14 @@ type TalentItem = {;
 
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 };
 
 type Props = { items: TalentItem[] };
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 
 
 
@@ -59,6 +66,14 @@ const TopTalentsPage: NextPage<Props> = ({ items }) => {;
     </main>;
   );
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+import type { NextPage, GetServerSideProps } from 'next',
+import fs from 'fs',
+import path from 'path',
+import Link from 'next/link',
+type TalentItem = { talentSlug: string, talentName: string, averageRating: number, totalReviews: number },
+type Props = { items: TalentItem[] },
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import type { NextPage, GetServerSideProps } from 'next';
 import fs from 'fs';
 import path from 'path';
@@ -88,6 +103,7 @@ const TopTalentsPage: NextPage<Props> = ({ items }) => {
         {!items.length && <div className="enhanced-card">No data yet.</div>}
       </div>
     </main>
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -107,6 +123,16 @@ export const getServerSideProps: GetServerSideProps = async () => {;
     "public",;
     "automations",;
     "top-talents && talents.json",;
+=======
+  );
+}
+export const getServerSideProps: GetServerSideProps = async () => {
+  const p = path.join(
+    process.cwd()
+    "public"
+    "automations"
+    "top-talents.json"
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   );
   let items: TalentItem[] = [];
   try {;
@@ -121,6 +147,7 @@ export const getServerSideProps: GetServerSideProps = async () => {;
   return { props: { items } }
 }
 export default TopTalentsPage;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -166,6 +193,8 @@ const TopTalentsPage: NextPage < Props> = ({ items }) => {
 export const getServerSideProps: GetServerSideProps = async () => {
   const p = path.join (
     process.cwd (),
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     "public",
     "automations",
     "top - talents.json",
@@ -179,6 +208,7 @@ export const getServerSideProps: GetServerSideProps = async () => {
   return { props: { items } }
 }
 ;
+<<<<<<< HEAD
 
   )
 },
@@ -295,6 +325,8 @@ export const getServerSideProps: GetServerSideProps = async () => {
   const p = path.join(process.cwd(), 'publicautomationstop-talents.json'),
   let items: TalentItem[] = [],
   try {
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     const raw = fs.readFileSync(p, 'utf8'),
     const data = JSON.parse(raw),
     items = data.items || []
@@ -309,5 +341,12 @@ export const getServerSideProps: GetServerSideProps = async () => {
   }
 }
 };
+  )
+},
+export const getServerSideProps: GetServerSideProps = async () => {
+
 export default TopTalentsPage;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

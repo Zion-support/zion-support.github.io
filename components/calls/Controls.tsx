@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -33,6 +34,12 @@ type Props = {
 };
 export default function Controls({ room, onLeave, accent = 'cyan' }: Props) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+type Props = {;
+  room: Room | null;
+  onLeave: () => void;
+export default function Controls({ room, onLeave, accent = 'cyan' }: Props) {
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const [micEnabled, setMicEnabled] = React.useState(true);
   const [camEnabled, setCamEnabled] = React.useState(true);
   const [sharing, setSharing] = React.useState(false);
@@ -40,10 +47,13 @@ export default function Controls({ room, onLeave, accent = 'cyan' }: Props) {
   const toggleMic = async () => {
     if (!room) return;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   accent?: 'blue' | 'cyan';};type Props = {;
   room: Room | null,;
   onLeave: () => void,;
@@ -62,6 +72,7 @@ export default function Controls(): any ({ room, onLeave, accent = 'cyan' }: Pro
       await room && room.localParticipant.setMicrophoneEnabled(!micEnabled);
     setMicEnabled(enabled);  };    const enabled = await room && room.localParticipant.setMicrophoneEnabled(!micEnabled);
     setMicEnabled(enabled);
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -85,16 +96,28 @@ export default function Controls(): any ({ room, onLeave, accent = 'cyan' }: Pro
   const toggleCam = async () => {;
     if (!room) return;
 <<<<<<< HEAD
+=======
+  };
 
+  const toggleCam = async () => {;
+    if (!room) return;
+    const enabled = await room && room.localParticipant.setCameraEnabled(!camEnabled);
+    setCamEnabled(enabled);  };    setCamEnabled(enabled);
+  };
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
+  const toggleScreenShare = async () => {;
     if (!room) return;
     try {;
       const enabled =;
         await room && room.localParticipant.setScreenShareEnabled(!sharing);
       setSharing(enabled);
 
+<<<<<<< HEAD
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     } catch (e) {;
       console && console.warn('Screen share failed', e);    }
 =======
@@ -103,7 +126,37 @@ export default function Controls(): any ({ room, onLeave, accent = 'cyan' }: Pro
       setSharing(enabled)
     } catch (e) {
       console.warn('Screen share failed', e)
+  return (
+    <div className='flex items-center gap-3'>
+      <button
+        onClick={toggleMic}
+        className={`px-4 py-2 rounded ${accentClass} text-white`}
+      >
+      </button>
+      <button
+        onClick={toggleCam}
+        className={`px-4 py-2 rounded ${accentClass} text-white`}
+      >
+        {camEnabled ? 'Stop Video' : 'Start Video'}
+      </button>
+      <button
+        onClick={toggleScreenShare}
+        className='px-4 py-2 rounded bg-gray-700 text-white'
+      >
+        {sharing ? 'Stop Share' : 'Share Screen'}
+      </button>
+      <button
+        onClick={onLeave}
+        className='px-4 py-2 rounded bg-red-600 text-white'
+      >
+        Leave
+      </button>
+    </div>
+);
+}
+
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   };
@@ -111,20 +164,32 @@ export default function Controls(): any ({ room, onLeave, accent = 'cyan' }: Pro
 =======
 };
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+  };
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (      const enabled = await room && room.localParticipant.setScreenShareEnabled(!sharing);
       setSharing(enabled);
     } catch (e) {;
       console && console.warn('Screen share failed', e);
   };
+<<<<<<< HEAD
   return (
 <<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+  return (
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         className='px-4 py-2 rounded bg-red-600 text-white'>;
         Leave;
       </button>;
     </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -143,6 +208,9 @@ export default function Controls(): any ({ room, onLeave, accent = 'cyan' }: Pro
       <button onClick={onLeave} className="px-4 py-2 rounded bg-red-600 text-white">Leave</button>
     </div>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   );
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
@@ -231,6 +299,7 @@ if (return) {
       </button>;
     </div>);
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -322,3 +391,5 @@ export default function Controls({ room, onLeave, accent = 'cyan' }: Props) {;
   return (
   return (
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

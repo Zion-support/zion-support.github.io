@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -53,6 +54,8 @@ import React, { useEffect, useState, useCallback } from 'react';
 
 import { motion } from 'framer-motion';
 import {
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   Zap
   Clock
   TrendingUp
@@ -69,20 +72,23 @@ import {
   Cpu,
   Database,;
   Network,;
+
+
 } from 'lucide-react';
+
 interface PerformanceMetrics {;
   loadTime: number;
+<<<<<<< HEAD
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   Zap,
   Clock,
   TrendingUp,
   Activity,
   Gauge,
   Cpu,
-
-  Database,;
-  Network,;
 
 
 } from 'lucide-react';
@@ -93,6 +99,7 @@ interface PerformanceMetrics {
   largestContentfulPaint: number;
   cumulativeLayoutShift: number;
   firstInputDelay: number;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   timeToInteractive: number;
@@ -109,15 +116,20 @@ import { Zap, Clock, TrendingUp, Activity, Gauge, Cpu, Database, Network } from 
 }, []);
 import { Zap, Clock, TrendingUp, Activity, Gauge, Cpu, Database, Network } from 'lucide-react';
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface PerformanceMetrics {
   loadTime: number
   firstContentfulPaint: number
   largestContentfulPaint: number
   cumulativeLayoutShift: number
   firstInputDelay: number
+<<<<<<< HEAD
 
   timeToInteractive: number
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 //Add responsive sizes if not present // Check condition
 if ( {) {
   $2
@@ -132,12 +144,16 @@ interface PerformanceMetrics {
   largestContentfulPaint: number,
   cumulativeLayoutShift: number,
   firstInputDelay: number,
+<<<<<<< HEAD
   timeToInteractive: number;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 interface PerformanceOptimizerProps {
   class_name?: string;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 //Optimize images for (const img of Array && Array.from (images) ) {;
@@ -177,10 +193,13 @@ const PerformanceOptimizer: React.FC < PerformanceOptimizerProps> = ({ class_nam
   const [metrics, set_metrics] = useState < PerformanceMetrics>({
     load_time: 0,
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     firstContentfulPaint: 0,
     largestContentfulPaint: 0,
     cumulativeLayoutShift: 0,
     firstInputDelay: 0,
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
@@ -222,12 +241,15 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ className =
       );
       const lcp = performance.getEntriesByType('largest-contentful-paint')[0];
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       const newMetrics: PerformanceMetrics = {
         loadTime: navigation.loadEventEnd - navigation.loadEventStart
         firstContentfulPaint: fcp ? fcp.startTime : 0
         largestContentfulPaint: lcp ? lcp.startTime : 0
         cumulativeLayoutShift: 0, // Would need to be measured with CLS API
         firstInputDelay: 0, // Would need to be measured with FID API
+<<<<<<< HEAD
 <<<<<<< HEAD
 
         timeToInteractive: navigation.domContentLoadedEventEnd - navigation.navigationStart
@@ -244,6 +266,8 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ className =
       }
       setMetrics(newMetrics)
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   }, []);
   // Optimize images
   const optimizeImages = useCallback(async () => {
@@ -256,6 +280,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ className =
         if (img.complete && img.naturalWidth > 0) {
           // Add lazy loading
           img.loading = 'lazy';
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -360,6 +385,8 @@ if ( {) {
             img.sizes =;
               '(max - width: 768px) 100vw, (max - width: 1200px) 50vw, 33vw';
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           }
           optimized_count++;        }
       }
@@ -374,6 +401,7 @@ if ( {) {
           optimized_count++;
         }
       }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -396,6 +424,8 @@ if ( {) {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     } catch (error) {
       setOptimizationStatus ('Image optimization failed');
       console.error ('Image optimization error:', error);
@@ -404,6 +434,7 @@ if ( {) {
     }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   }, []);
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -603,11 +634,14 @@ if ( {) {
         @font-face {
 `;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           font-display: swap;        }          font-family: 'Orbitron',;
           font-display: swap;
         }
       `;
       document && document.head.appendChild(style);
+<<<<<<< HEAD
 
       setOptimizationStatus('Font optimization complete');
 <<<<<<< HEAD
@@ -639,10 +673,13 @@ if ( {) {
 ;
       // Simulate optimization delay;
       await new Promise (resolve => set_timeout (resolve, 800));
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     } catch (error) {
       setOptimizationStatus ('Font optimization failed');
       console.error ('Font optimization error:', error);
     } finally {
+<<<<<<< HEAD
       setIsOptimizing (false);    }      // Simulate optimization delay;
       await new Promise (resolve => set_timeout (resolve, 800));
 <<<<<<< HEAD
@@ -688,6 +725,8 @@ if ( {) {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       ];
 
       preloadLinks && preloadLinks.forEach(linkAttrs => {;
@@ -731,6 +770,7 @@ interface PerformanceOptimizerProps {preload_images?: string[];
   criticalCSS?: string;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -744,12 +784,15 @@ preloadImages = [], preloadFonts = [;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     // Performance monitoring;
     if (typeof window !== 'undefined' && 'performance' in window) {'      // Monitor Core Web Vitals'      const observer = new PerformanceObserver((list) => {;
         for (const entry of list && list.getEntries()) {;
 if (entry && entry.entryType === 'largest-contentful-paint') {'            console && console.log('LCP: ', entry && entry.startTime);
 '          }'          if (entry && entry.entryType === 'first-input') {'            console && console.log('FID: ', entry && entry.processingStart - entry && entry.startTime);'          }'          if (entry && entry.entryType === 'layout-shift') {'            if (!(entry as any).hadRecentInput) {'              console && console.log('CLS: ', (entry as any).value);'            }'          }}
       });
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       try {;
@@ -759,10 +802,13 @@ if (entry && entry.entryType === 'largest-contentful-paint') {'            conso
       try {;
         observer && observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] });
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 '      } catch (e) {'        // Fallback for browsers that don&apos;t support all entry types;
         console && console.log('Performance monitoring not fully supported');
 '      }';
       // Resource hints for better performance;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -806,6 +852,8 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           } else {
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       const addResourceHint = (href: string, as: string, type?: string) => {;
         const link = document && document.createElement('link');
         Object && Object.entries(linkAttrs).forEach(([key, value]) => {;
@@ -816,6 +864,7 @@ if ( {) {
             (link as any)[key] = value;
           }
         });
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -1176,10 +1225,13 @@ if ( { // LCP should be under 2.5s) {
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             }
           }
         }
       });
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -1224,6 +1276,8 @@ if ( { // LCP should be under 2.5s) {
     }
   }, [measurePerformance]);
       observer.observe({ entryTypes: ['largest-contentful-paint'] });
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       return () => {
         window.removeEventListener('load', measurePerformance);
         observer.disconnect();
@@ -1233,15 +1287,20 @@ if ( { // LCP should be under 2.5s) {
         window.removeEventListener('load', measurePerformance);
         observer.disconnect()
       }
-  }, [measurePerformance]);
-
   const getPerformanceScore = (): number => {
     let score = 100;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+    
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     if (metrics.firstContentfulPaint > 1800) score -= 20;
     if (metrics.largestContentfulPaint > 2500) score -= 25;
     if (metrics.loadTime > 3000) score -= 15;
     if (metrics.timeToInteractive > 3500) score -= 20;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -1292,10 +1351,16 @@ if ( { // LCP should be under 2.5s) {
   }
   const getPerformanceGrade = (score: number): string => {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  };
+
+  const getPerformanceGrade = (score: number): string => {;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     if (score >= 90) return 'A';
     if (score >= 80) return 'B';
     if (score >= 70) return 'C';
     if (score >= 60) return 'D';
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -1346,10 +1411,13 @@ if ( { // LCP should be under 2.5s) {
 =======
           className='text-sm text-cyan-400 hover:text-cyan-300 transition-colors duration-300'          className="text-sm text-cyan-400 hover:text-cyan-300 transition-colors duration-300"
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         >
           {showMetrics ? 'Hide' : 'Show'} Metrics
         </button>
       </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
           className='text-sm text-cyan-400 hover:text-cyan-300 transition-colors duration-300'          className="text-sm text-cyan-400 hover:text-cyan-300 transition-colors duration-300";
@@ -1374,10 +1442,13 @@ if ( { // LCP should be under 2.5s) {
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             className="h-3 bg-gradient-to-r from-red-500 via-yellow-500 to-green-500 rounded-full"
             initial={{ width: 0 }}
             animate={{ width: `${performanceScore}%` }}
             transition={{ duration: 1, ease: "easeOut" }}
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -1511,6 +1582,14 @@ if ( { // LCP should be under 2.5s) {
 
         >
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+      {/* Metrics Display */}
+      {showMetrics && (;
+        <motion&& motion.div
+          initial={{ opacity: 0, height: 0 }}
+          animate={{ opacity: 1, height: 'auto' }}
+          exit={{ opacity: 0, height: 0 }}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <div className='text-center p-3 rounded-lg bg-white/5 border border-white/10'>
             <Clock className='w-6 h-6 text-blue-400 mx-auto mb-2' />
             <div className='text-lg font-bold text-white'>
@@ -1591,6 +1670,7 @@ if ( { // LCP should be under 2.5s) {
             <div className="text-lg font-bold text-white">{Math.round(metrics.firstInputDelay)}ms</div>
             <div className="text-xs text-white/60">FID</div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
           <div className='text-center p-3 rounded-lg bg-white/5 border border-white/10'>;
             <Clock className='w-6 h-6 text-blue-400 mx-auto mb-2' />;
@@ -1659,8 +1739,11 @@ if ( { // LCP should be under 2.5s) {
         </motion.div>
       )}
       {/* Optimization Controls */}
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <div className='space-y-3'>        <button      <div className="space-y-3">
         <button
+
 
       {/* Optimization Controls */}
       <div className='space-y-3'>        <button      <div className="space-y-3">
@@ -1669,23 +1752,31 @@ if ( { // LCP should be under 2.5s) {
 
         <button
 
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
         <button
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
       {/* Optimization Controls */}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+        <button
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           onClick={runAllOptimizations}
           disabled={isOptimizing}
           className={`w-full px-4 py-3 rounded-lg font-semibold text-white transition-all duration-300 ${
             isOptimizing
               ? 'bg-gray-600 cursor-not-allowed'
               : 'bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-700 hover:to-blue-700 hover:scale-105'
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -1730,6 +1821,8 @@ if ( { // LCP should be under 2.5s) {
         )}
       </div>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {/* Performance Tips */}
       <div className='mt-6 pt-4 border-t border-white/10'>;
         <h4 className='text-sm font-semibold text-white/80 mb-3'>;
@@ -1750,6 +1843,7 @@ if ( { // LCP should be under 2.5s) {
 };export default PerformanceOptimizer;}
       // Preload critical resources;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -1762,6 +1856,8 @@ addResourceHint(image, 'image');
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 '      });'    }}, [preloadImages, preloadFonts]);
   return (
     <Head>;
@@ -1769,6 +1865,7 @@ addResourceHint(image, 'image');
       {criticalCSS && (;
         <style dangerouslySetInnerHTML={{ __html: criticalCSS }} />;
       )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -1787,11 +1884,14 @@ key={`preload-font-${index}`}          rel="preload""          as="style""      
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 "            if (link) {"              (link as HTMLLinkElement).rel = 'stylesheet;
 }'          }}`        />;
       ))}
       {/* Performance hints */}
       <meta httpEquiv="x-dns-prefetch-control" content="on" />"      "      {/* Service Worker registration */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1805,10 +1905,13 @@ key={`preload-font-${index}`}          rel="preload""          as="style""      
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
           ``        }}/>;
     </Head>;
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1817,6 +1920,12 @@ key={`preload-font-${index}`}          rel="preload""          as="style""      
   );
 =======
 
+=======
+      {/* Performance Tips */}
+      <div className="mt-6 pt-4 border-t border-white/10">
+        <h4 className="text-sm font-semibold text-white/80 mb-3">Performance Tips</h4>
+        <ul className="text-xs text-white/60 space-y-1">
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {/* Performance Tips */}
       <div className="mt-6 pt-4 border-t border-white/10">
         <h4 className="text-sm font-semibold text-white/80 mb-3">Performance Tips</h4>
@@ -1825,23 +1934,25 @@ key={`preload-font-${index}`}          rel="preload""          as="style""      
 =======
 =======
 
+<<<<<<< HEAD
         )}
       </div>
 
       {/* Performance Tips */}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
         )}
       </div>
-
-
 
       {/* Performance Tips */}
       <div className='mt-6 pt-4 border-t border-white/10'>
         <h4 className='text-sm font-semibold text-white/80 mb-3'>
           Performance Tips
         </h4>
+<<<<<<< HEAD
 
         <ul className='text-xs text-white/60 space-y-1'>          <li>• Use WebP images for better compression</li>
 
@@ -1856,6 +1967,8 @@ key={`preload-font-${index}`}          rel="preload""          as="style""      
         <ul className='text-xs text-white/60 space-y-1'>          <li>• Use WebP images for better compression</li>
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <li>• Use WebP images for better compression</li>
           <li>• Implement lazy loading for images</li>
           <li>• Minimize CSS and JavaScript bundles</li>
@@ -1866,12 +1979,15 @@ key={`preload-font-${index}`}          rel="preload""          as="style""      
     </div>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   )
 };
 export default PerformanceOptimizer;
 interface PerformanceMetrics {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   }, [measure_performance]);
 ;
   const getPerformanceScore = (): number => {
@@ -2071,10 +2187,13 @@ if (return 'D') {
     </div>);
 }export default PerformanceOptimizer;}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   );
 };export default PerformanceOptimizer;}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       // Preload critical resources;
       preload_images.for_each (image => {
 addResourceHint (image, 'image');
@@ -2084,6 +2203,7 @@ addResourceHint (image, 'image');
 '      });'    }}, [preload_images, preload_fonts]);
   return (
     <Head>;
+<<<<<<< HEAD
 <<<<<<< HEAD
       {/* Critical CSS inlined for above - the - fold content */}
       {criticalCSS && (
@@ -2095,6 +2215,8 @@ addResourceHint (image, 'image');
       )}
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 {/* Preload critical resources */}
       {preload_images.map ((image, index) => (
         <link;
@@ -2128,9 +2250,12 @@ export default PerformanceOptimizer;
 ;
 interface PerformanceMetrics {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   fcp: number;
   lcp: number;
   fid: number;
@@ -2143,14 +2268,18 @@ interface PerformanceMetrics {
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface PerformanceOptimizerProps {
   onMetricsUpdate?: (metrics: PerformanceMetrics) => void;
   enable_reporting?: boolean;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -2211,10 +2340,13 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       measureWebVitals();
     } else {;
       window && window.addEventListener('load', measureWebVitals);
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -2367,10 +2499,14 @@ export default PerformanceOptimizer;
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+export default PerformanceOptimizer;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   );
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
@@ -2380,3 +2516,5 @@ export default PerformanceOptimizer;
 export default PerformanceOptimizer;
 export default PerformanceOptimizer;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

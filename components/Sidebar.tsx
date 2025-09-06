@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -25,10 +28,13 @@ class ErrorBoundary extends React.Component {
 import React, { useState } from 'react';
 import Link from 'next / link';
 import { motion, AnimatePresence } from 'framer-motion';
+<<<<<<< HEAD
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { 
   X, 
   Building2, 
@@ -46,12 +52,11 @@ import {
   Phone,
   Mail,
   ExternalLink;
-
-
 } from 'lucide-react';
 interface SidebarProps {
   isOpen: boolean, onClose: () => void
 }
+<<<<<<< HEAD
 const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {const [openDropdowns, setOpenDropdowns] = useState<string[]>([]);
   const handleDropdownToggle = (title: string) => {
     setOpenDropdowns(prev =>
@@ -135,6 +140,12 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+        : [...prev, title];
+    );
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   ];
   return (
     <AnimatePresence>;
@@ -145,6 +156,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {;
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
+<<<<<<< HEAD
             className="fixed inset-0 bg-black bg-opacity-50 z-40"
             onClick={onClose}
 <<<<<<< HEAD
@@ -156,11 +168,14 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {;
           />;
           <motion&& motion.div
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             initial={{ x: -300 }}
             animate={{ x: 0 }}
             exit={{ x: -300 }}
             transition={{ type: 'spring', damping: 25, stiffness: 200 }}
             className="fixed left-0 top-0 h-full w-80 bg-white shadow-xl z-50"
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -169,6 +184,8 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {;
 =======
             <div className="p-6">;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               {/* Header */}
               <div className="flex items-center justify-between mb-8">;
                 <div className="flex items-center space-x-2">;
@@ -179,6 +196,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {;
                 </div>;
                 <button
                   onClick={onClose}
+<<<<<<< HEAD
                   className="p-2 hover:bg-gray-100 rounded-lg transition-colors"
 <<<<<<< HEAD
 
@@ -192,12 +210,15 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {;
                 </button>;
               </div>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               {/* Navigation */}
               <nav className="space-y-4">;
                 {Object && Object.entries(navigation).map(([title, links]) => (;
                   <div key={title}>;
                     <button
                       onClick={() => handleDropdownToggle(title)}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -212,6 +233,8 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     <Link
                       key={link && link.name}
                       href={link && link.href}
@@ -220,6 +243,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {;
                       {link && link.name}
                     </Link>;
                   ))}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
                 </div>;
@@ -230,6 +254,8 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {;
                 </div>;
               </div>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               {/* Contact Info */}
               <div className="mt-8 pt-8 border-t border-gray-200">;
                 <h3 className="text-lg font-semibold text-gray-900 mb-4">Contact Us</h3>;
@@ -247,6 +273,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {;
                   <Link
                     href="/contact"
                     className="inline-flex items-center space-x-2 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+<<<<<<< HEAD
                     onClick={onClose}>;
                     <span>Get Started</span>;
                     <ExternalLink className="w-4 h-4" />;
@@ -319,6 +346,9 @@ interface SidebarProps {
   is_open: boolean, on_close: () => void,
 }
 <<<<<<< HEAD
+=======
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 const Sidebar: React.FC < SidebarProps> = ({ is_open, on_close }) => {
   const [open_dropdowns, setOpenDropdowns] = useState < string[]>([]);
 ;
@@ -361,6 +391,7 @@ const Sidebar: React.FC < SidebarProps> = ({ is_open, on_close }) => {
     { name: 'Contact', href: '/contact' },
   ];
 ;
+<<<<<<< HEAD
 =======
 const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {const [openDropdowns, setOpenDropdowns] = useState<string[]>([]);
   const handleDropdownToggle = (title: string) => {
@@ -403,6 +434,8 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {const [openDro
 
   ];
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <AnimatePresence>;
       {is_open && (
@@ -413,6 +446,9 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {const [openDro
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             className="fixed inset - 0 bg - black bg - opacity - 50 z - 40";
             on_click={on_close}
           />;
@@ -449,6 +485,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {const [openDro
                 <div className="space - y-2">;
                   {quick_links.map ((link) => (
                     <Link;
+<<<<<<< HEAD
 =======
             className="fixed inset-0 bg-black bg-opacity-50 z-40"
             onClick={onClose}
@@ -487,6 +524,8 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {const [openDro
                   {quickLinks.map((link) => (
                     <Link
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       key={link.name}
                       href={link.href}
                       className="block text - gray - 600 hover:text - blue - 600 transition - colors py - 1";
@@ -498,6 +537,9 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {const [openDro
               </div>;
               {/* Contact Info */}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <div className="mt - 8 pt - 8 border - t border - gray - 200">;
                 <h3 className="text - lg font - semibold text - gray - 900 mb - 4">Contact Us</h3>;
                 <div className="space - y-3">;
@@ -524,6 +566,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {const [openDro
           </motion.div>;
         </>)}
     </AnimatePresence>);
+<<<<<<< HEAD
 }
 ;
 export default Sidebar;
@@ -577,3 +620,9 @@ export default Sidebar;
 
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+}
+;
+export default Sidebar;
+;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 const handleApplySuggestion = () =>: any {
@@ -73,6 +74,10 @@ interface ClientBudgetRecommenderProps {
   timeline?: string,
   scope?: string,
   experienceLevel?: string,
+=======
+import { Sparkles } from 'lucide-react'
+interface ClientBudgetRecommenderProps {
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   onSuggestionApplied: (minValue: number, maxValue: number,) => void
 }
 export const ClientBudgetRecommender: React.FC<
@@ -89,28 +94,10 @@ export const ClientBudgetRecommender: React.FC<
   const [suggestion, setSuggestion] = useState<PricingSuggestion | null>(null)
   const { user } = useAuth()
   const generateSuggestion = async () => {
-interface ClientBudgetRecommenderProps {
-  jobTitle: string
-  category: string
-  timeline?: string
-  scope?: string
-  experienceLevel?: string
-    if (!jobTitle |!category) {
-      return
-    if (!jobTitle |!category) {
-      return
-    if (!jobTitle || !category) {
-      return;
     }
     setIsLoading(true)
     try {
       const params: ClientBudgetParams = {
-        jobTitle
-        category
-        jobTitle
-        category
-        jobTitle,;
-        category;
       };        jobTitle
         category}
       if (timeline) params.timeline = timeline
@@ -129,13 +116,6 @@ interface ClientBudgetRecommenderProps {
   const handleApplySuggestion = () => {
     if (suggestion) {
       onSuggestionApplied(suggestion.minRate, suggestion.maxRate)
-      // Track this suggestion application
-      if (user && user.id) {
-        trackPricingSuggestion({
-          userId: user.id
-          suggestionType: 'client'
-          suggestedMin: suggestion.minRate
-          suggestedMax: suggestion.maxRate
   jobTitle: string,
   category: string,
   timeline?: string,
@@ -199,13 +179,6 @@ export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = (
     if (suggestion) {
       onSuggestionApplied(suggestion.minRate, suggestion.maxRate),
       
-      if (user && user.id) {
-        trackPricingSuggestion({
-          userId: user.id,
-          suggestionType: "client",
-          suggestedMin: suggestion.minRate,
-          suggestedMax: suggestion.maxRate,
-      
       // Track this suggestion application
       if (user && user.id) {
         trackPricingSuggestion({
@@ -213,24 +186,29 @@ export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = (
           suggestionType: "client",
           suggestedMin: suggestion.minRate,
           suggestedMax: suggestion.maxRate,
-          accepted: true,
-        })
-      }
-    }
-  }
           accepted: true
         })
       }
     }
+<<<<<<< HEAD
   }
   }
   },
+=======
+          accepted: true
+        })
+      }
+    }
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   return (
     <div className="space-y-4">
       <div>
         {!suggestion && !isLoading ? (
           <Button
+<<<<<<< HEAD
             type='button'
             variant='outline'
             onClick={generateSuggestion}
@@ -241,6 +219,8 @@ export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = (
             variant="outline"
             onClick={generateSuggestion}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             disabled={!jobTitle || !category}
             className="w-full"
           >
@@ -248,6 +228,7 @@ export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = (
 
           </Button>
         ) : (
+<<<<<<< HEAD
             disabled={!jobTitle || !category}
             className='w-full'>;
             <Sparkles className='h-4 w-4 mr-2' /> Get Budget Recommendation;
@@ -307,8 +288,15 @@ if ( {) {
     </div>
   )
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+          <PricingSuggestionBox
+            suggestion={suggestion}
+            isLoading={isLoading}
+            onApplySuggestion={handleApplySuggestion}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
   trackPricingSuggestion ({
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 
@@ -325,6 +313,12 @@ if ( {) {
         )}
 
 },
+=======
+}
+
+
+},
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             rateType="hourly"
           />
         )}
@@ -332,6 +326,10 @@ if ( {) {
     </div>;
   );
 };
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 
@@ -343,5 +341,8 @@ return (<div className="space - y-4" > <div> {";
 }</div> </div>);
 }
 '"  );
+<<<<<<< HEAD
 },
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

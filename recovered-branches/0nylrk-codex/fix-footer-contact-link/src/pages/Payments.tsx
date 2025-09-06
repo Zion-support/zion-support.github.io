@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 import React from "react";
@@ -7,24 +8,32 @@ import {Footer} from "@/components/Footer";
 import {TransactionHistory} from "@/components/transactions/TransactionHistory";
 import {GradientHeading} from "@/components/GradientHeading";
 import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from "react",
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
 import { TransactionHistory } from "@/components/transactions/TransactionHistory",
+<<<<<<< HEAD
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { GradientHeading } from "@/components/GradientHeading";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { GradientHeading } from "@/components/GradientHeading",
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export default function Payments() {
   return (
     <>
@@ -85,6 +94,7 @@ export default function Payments() {
                       <div className="flex items-center space-x-2">
                         <Checkbox id="notify-email" defaultChecked />
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -108,11 +118,14 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 
 // Import UI components for Payment Settings tab;
 
+<<<<<<< HEAD
 =======
                         <label
                           htmlFor="notify-email"
@@ -254,15 +267,19 @@ export default function Payments() {;
                           htmlFor="notify-email";
                           className="text-sm font-medium leading-none peer-disabled: cursor-not-allowed peer-disabled:opacity-70 text-white";
                         >;
+=======
+                        <label
+                          htmlFor="notify-email"
+                          className="text-sm font-medium leading-none peer-disabled: cursor-not-allowed peer-disabled:opacity-70 text-white">;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                           Email notifications;
                         </label>;
                       </div>;
                       <div className="flex items-center space-x-2">;
                         <Checkbox id="notify-push" defaultChecked />;
-                        <label;
-                          htmlFor="notify-push";
-                          className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 text-white";
-                        >;
+                        <label
+                          htmlFor="notify-push"
+                          className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 text-white">;
                           Push notifications;
                         </label>;
                       </div>;
@@ -278,7 +295,26 @@ export default function Payments() {;
     </>;
   );
 }
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+import {Button} from "@/components/ui/button";
+import {Switch} from "@/components/ui/switch";
+import {Label} from "@/components/ui/label";
+import {Checkbox} from "@/components/ui/checkbox";
+import { Button } from "@/components/ui/button",
+import { Switch } from "@/components/ui/switch",
+import { Label } from "@/components/ui/label",
+import { Checkbox } from "@/components/ui/checkbox",
+import React from "react",;
+import { Header } from "@/components/Header",;
+import { Footer } from "@/components/Footer",;
+import { TransactionHistory } from "@/components/transactions/TransactionHistory",;
+import { GradientHeading } from "@/components/GradientHeading",;
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
+export default function Payments() {;
+  return (;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from './react';
 import { Header } from '@/components / Header';
 import { Footer } from '@/components / Footer';
@@ -374,17 +410,12 @@ function Payments() {
     </>);
 }
 // Import UI components for Payment Settings tab;
-;
-// Import UI components for Payment Settings tab;
-import { Button } from "@/components/ui/button",;
-import { Switch } from "@/components/ui/switch",;
-import { Label } from "@/components/ui/label";
-import { Checkbox } from "@/components/ui/checkbox";
 import { Button } from '@/components / ui / button';
 import { Switch } from '@/components / ui / switch';
 import { Label } from '@/components / ui / label';
 import { Checkbox } from '@/components / ui / checkbox';
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -402,3 +433,5 @@ import { Label } from "@/components/ui/label",;
 import { Checkbox } from "@/components/ui/checkbox",; return (<> <Header /> <div className="min-h-screen bg-zion-blue py-12 px-4" > <div className="container mx-auto" > <div className="mb-12 text-center" > <GradientHeading level="h1" className="text-4xl lg:text-5xl font-bold mb-4" > Payments & Transactions </GradientHeading> </p> </div> <Tabs defaultValue="history" className="w-full" > <TabsList className="grid w-full max-w-md mx-auto grid-cols-2 mb-8" > <TabsTrigger value="history" >Transaction History</TabsTrigger> <TabsTrigger value="settings" >Payment Settings</TabsTrigger> </TabsList> <TabsContent value="history" > <TransactionHistory /> </TabsContent> <TabsContent value="settings" > <div className="bg-zion-blue-dark rounded-lg border border-zion-blue-light p-6" > <h2 className="text-2xl font-bold text-white mb-6" >Payment Settings</h2> <div className="space-y-8" > <div className="border-b border-zion-blue-light pb-6" > <h3 className="text-lg font-medium text-white mb-3" >Default Payment Method</h3> <p className="text-zion-slate-light mb-4" > Manage your payment methods and set your default preference. </p> <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white" border-b border-zion-blue-light pb-6"> <h3 className=" text-lg font-medium text-white mb-3">Escrow Settings</h3> <p className=" text-zion-slate-light mb-4"> Set your preferences for escrow services. Escrow holds funds until both parties confirm the service has been completed satisfactorily. </p> <div className=" flex items-center space-x-2"> <Switch id=" escrow-default"/> <Label htmlFor=" escrow-default"className=" text-white"> Use escrow by default </Label> </div> </div> <div> <h3 className=" text-lg font-medium text-white mb-3">Payment Notifications</h3> <p className=" text-zion-slate-light mb-4"> Choose how you want to be notified about payments and transactions. </p> <div className=" space-y-2"> <div className=" flex items-center space-x-2"> <Checkbox id=" notify-email"defaultChecked /> <label > Email notifications </label> </div> <div className=" flex items-center space-x-2"> <Checkbox id=" notify-push"defaultChecked /> <label htmlFor=" notify-push"className=" text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 text-white" > Push notifications </label> </div> </div> </div> </div> </div> </TabsContent> </Tabs> </div> </div> <Footer /> </>) 
 }// Import UI components for Payment Settings tab 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

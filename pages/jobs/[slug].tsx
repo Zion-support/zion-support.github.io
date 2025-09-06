@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -22,6 +23,8 @@ export default function JobDetailsPage() {;
     const t = setTimeout(() => setLoading(false), 600);
     return () => clearTimeout(t);
   }, []);
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useRouter  } from 'next/router';
 import EnhancedCard from '../../components/ui/EnhancedCard',
 import EnhancedButton from '../../components/ui/EnhancedButton',
@@ -36,12 +39,16 @@ export default function JobDetailsPage() {
   const { isMobile } = useResponsive();
   const { notify } = useToast();
   const [loading, setLoading] = useState(true);
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {useRouter} from 'next/router';
 import EnhancedCard from '../../components/ui/EnhancedCard';
 import EnhancedButton from '../../components/ui/EnhancedButton';
 import EnhancedLoading from '../../components/ui/EnhancedLoading';
 import useResponsive from '../../hooks/useResponsive';
+<<<<<<< HEAD
 import {useToast} from '../../components/ui/NotificationSystem';
 import {useEffect, useState} from 'react';
 export default function JobDetailsPage() {;
@@ -56,10 +63,13 @@ export default function JobDetailsPage() {;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   useEffect(() => {
     const t = setTimeout(() => setLoading(false), 600);
     return () => clearTimeout(t);
   }, []);
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
   const onApply = () => {
@@ -87,6 +97,8 @@ export default function JobDetailsPage() {
     notify('Application submitted! We’ll notify you when it’s viewed.success')
   },
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 import {useToast} from '../../components/ui/NotificationSystem';
 import {useEffect, useState} from 'react';
@@ -115,13 +127,6 @@ export default function JobDetailsPage() {;
 
   return (
 
-
-  useEffect(() => { const t = setTimeout(() => setLoading(false), 600), return () => clearTimeout(t) }, []);
-
-  const onApply = () => {
-    notify('Application submitted! We’ll notify you when it’s viewed.success')
-  };
-
   return (
     <div className="relative">
       {loading ? (
@@ -131,6 +136,7 @@ export default function JobDetailsPage() {;
           <EnhancedCard>
             <div className="flex items-start justify-between gap-3">
               <div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
             </div>
@@ -182,11 +188,16 @@ export default function JobDetailsPage() {;
 
               <li>3+ years with Python or TypeScript</li>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+              <li>3+ years with Python or TypeScript</li>
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <li>Experience with ML/AI production systems</li>
               <li>Familiarity with cloud infra and CI/CD</li>
             </ul>
           </EnhancedCard>
         </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     <div className='relative'>;
@@ -254,10 +265,13 @@ function JobDetailsPage() {
               {!is_mobile && (
                 <EnhancedButton on_click={on_apply} variant='primary'>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   Apply Now;
                 </EnhancedButton>              )}
             </div>;
           </EnhancedCard>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -286,6 +300,8 @@ function JobDetailsPage() {
   }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {isMobile && (
         <div className="fixed inset-x-0 bottom-0 z-30 bg-white/90 dark:bg-black/80 backdrop-blur border-t border-gray-200 dark:border-gray-800 p-3">
           <div className="container mx-auto px-2">
@@ -294,6 +310,9 @@ function JobDetailsPage() {
         </div>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <EnhancedCard>;
             <h2 className='font - semibold mb - 2'>Requirements</h2>;
             <ul className='list - disc pl - 5 space - y-1 text - sm text - gray - 700 dark:text - gray - 300'>              <li > 3+ years with Python or TypeScript</li>;
@@ -313,12 +332,11 @@ function JobDetailsPage() {
     </div>);
 ;
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
 }
 
+<<<<<<< HEAD
 =======
 =======
 
@@ -330,6 +348,8 @@ function JobDetailsPage() {
 
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -342,6 +362,7 @@ function JobDetailsPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -349,3 +370,5 @@ function JobDetailsPage() {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

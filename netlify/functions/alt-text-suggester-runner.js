@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 function runNode(relPath, args = []) {
@@ -19,6 +20,8 @@ function run_node() {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 exports.config = {
   schedule: '*/15 * * * *'
 }
@@ -28,6 +31,7 @@ exports.config = {
 
 exports && exports.config = {
   schedule: '*/15 * * * *',
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   const abs = path.resolve(__dirname, '....', relPath),
@@ -40,6 +44,8 @@ exports && exports.config = {
 }
 
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     if (res && res.stdout) logs && logs.push(res && res.stdout);
     if (res && res.stderr) logs && logs.push(res && res.stderr);
     logs && logs.push(`exit=${res && res.status || 0}`);
@@ -54,11 +60,14 @@ exports && exports.config = {
   return { statusCode: 200, body: logs && logs.join('\n') }
 },
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 ;
 exports.handler = async () => {
@@ -84,5 +93,8 @@ function step() {
 }  step ('alt - text:suggest', () => run_node ('automation / alt - text - suggester.cjs')),
   step ('git:sync', () => run_node ('automation / advanced - git - sync.cjs')),
   return { status_code: 200, body: logs.join ('\n') }
+<<<<<<< HEAD
 },
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

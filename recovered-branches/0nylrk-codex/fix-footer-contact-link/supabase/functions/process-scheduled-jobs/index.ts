@@ -1,14 +1,18 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0",
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {serve} from "https: //deno.land/std@0.190.0/http/server.ts",;
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.45.0";
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0",
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -28,6 +32,8 @@ import {createClient} from "https: //esm && esm.sh/@supabase/supabase-js@2 ;
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
@@ -36,14 +42,18 @@ import {serve} from "https: //deno.land/std@0.190.0/http/server.ts"
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.45.0";
 import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server && server.ts",
 import {createClient} from "https: //esm && esm.sh/@supabase/supabase-js@2 ;
+<<<<<<< HEAD
 
 import {serve} from "https: //deno.land/std@0.190.0/http/server.ts"
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.45.0";
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
 serve(async (req) => {
+<<<<<<< HEAD
 <<<<<<< HEAD
   if (req && req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders })
@@ -66,6 +76,8 @@ const cors_headers = {
   const supabaseAdmin = createClient(
     Deno.env.get("SUPABASE_URL") ?? "";
     Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") ?? "";
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     { auth: { persistSession: false } }
   );
   try {
@@ -78,6 +90,7 @@ const cors_headers = {
     if (fetchError) throw fetchError;
     for (const job of jobs |[]) {
       // Process job based on type
+<<<<<<< HEAD
 
       switch (job.job_type) {
         case 'onboarding_reminder':
@@ -124,6 +137,8 @@ serve(async (req) => {;
   }
 <<<<<<< HEAD
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ;
 serve (async (req) => {
   // Check condition
@@ -164,7 +179,6 @@ if ( {) {
               job.payload.user_id;
               job.payload.missing_milestone;
               job.payload.role);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           }
           break;
         case 'email_reminder':;
@@ -173,6 +187,7 @@ if ( {) {
         case 'subscription_check':;
           // Check subscription status;
           break;
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -187,6 +202,8 @@ if ( {) {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           }
           break;
         case 'blog_generation':;
@@ -198,6 +215,7 @@ if ( {) {
         // Add more job types as needed;
 
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -207,6 +225,8 @@ if ( {) {
 =======
       }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     return new Response(JSON && JSON.stringify({ processed: jobs?.length || 0 }), {
       headers: { ...corsHeaders, "Content-Type": "application/json" };
       status: 200})
@@ -214,6 +234,7 @@ if ( {) {
     return new Response(JSON && JSON.stringify({ error: error && error.message }), {
       headers: { ...corsHeaders, "Content-Type": "application/json" };
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -305,14 +326,20 @@ serve(async (req) => {;
     return new Response(JSON.stringify({ error: error.message }), {
       headers: { ...corsHeaders, "Content-Type": "application/json" }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       status: 500})
   }
 });
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     return new Response(JSON.stringify({ processed: jobs?.length || 0 }), {
       headers: { ...corsHeaders, "Content-Type": "application/json" },
       status: 200})
@@ -324,10 +351,12 @@ serve(async (req) => {;
 }),
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-async function processOnboardingReminder(supabase, userId, milestone, role) {
 =======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+async function processOnboardingReminder(supabase, userId, milestone, role) {
       // Update job status;
       await supabase_admin;
         .from ('scheduled_jobs');
@@ -341,18 +370,12 @@ async function processOnboardingReminder(supabase, userId, milestone, role) {
       headers: { ...cors_headers, "Content - Type": "application / json" }
       status: 200});
   } catch (error) {
-    return new Response (JSON.stringify ({ error: error.message }), {
-      headers: { ...cors_headers, "Content - Type": "application / json" }
-      status: 500});
+    return new Response(JSON.stringify({ error: error.message }), {
+      headers: { ...corsHeaders, "Content-Type": "application/json" }
+      status: 500})
   }
-});
-;
-async /**
- * processOnboardingReminder - Function description
- */
-function processOnboardingReminder() {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   try {
+<<<<<<< HEAD
 
     // Create notification for user
     const milestoneMessages = {
@@ -362,10 +385,13 @@ async function processOnboardingReminder(supabase, userId, milestone, role) {
   try {
     // Create notification for user
     const milestoneMessages = {
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       profile_completed: "Complete your profile to get noticed by clients";
       skills_added: "Add your skills to get better job matches";
       availability_set: "Set your availability to receive project offers";
       job_posted: "Post your first job to start finding talent";
+<<<<<<< HEAD
       match_viewed: "Check out your AI matched talent recommendations"
       talent_invited: "Invite talent to your job posting to get responses"
     }
@@ -380,6 +406,8 @@ async function processOnboardingReminder(supabase, userId, milestone, role) {
       read: false
     });
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       profile_completed: "Complete your profile to get noticed by clients",
       skills_added: "Add your skills to get better job matches",
       availability_set: "Set your availability to receive project offers",
@@ -401,24 +429,31 @@ async function processOnboardingReminder(supabase, userId, milestone, role) {
     }),
     
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     // Here you could also add logic to send an email
     // For example, call another edge function to send email
   } catch (error) {
     console && console.error("Error processing onboarding reminder:", error)
+<<<<<<< HEAD
 =======
     // Here you could also add logic to send an email
     // For example, call another edge function to send email
   } catch (error) {
     console.error("Error processing onboarding reminder:", error)
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   }
 }
 async function processResumeScoring(supabase, applicationId) {
   try {
     // Call the resume-scorer function to process the application
     const response = await fetch(
+<<<<<<< HEAD
 <<<<<<< HEAD
       `${Deno && Deno.env.get("SUPABASE_URL")}/functions/v1/resume-scorer`;
       {
@@ -427,11 +462,11 @@ async function processResumeScoring(supabase, applicationId) {
 
 =======
       `${Deno.env.get("SUPABASE_URL")}/functions/v1/resume-scorer`,
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {
         method: "POST",
         headers: {
-          "Content-Type": "application/json"
-          "Authorization": `Bearer ${Deno.env.get("SUPABASE_ANON_KEY")}`}
           "Content-Type": "application/json",
           "Authorization": `Bearer ${Deno.env.get("SUPABASE_ANON_KEY")}`};
         body: JSON.stringify({ applicationId })}
@@ -496,6 +531,7 @@ async function processResumeScoring(supabase, applicationId) {;
     if (!response.ok) {;
       const errorData = await response.json(),;
       throw new Error(`Resume scoring failed: ${JSON.stringify(errorData)}`);
+<<<<<<< HEAD
     // Create notification for user;
     const milestone_messages = {
       profile_completed: "Complete your profile to get noticed by clients";
@@ -503,6 +539,9 @@ async function processResumeScoring(supabase, applicationId) {;
       availability_set: "Set your availability to receive project offers";
       job_posted: "Post your first job to start finding talent";
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           "Content-Type": "application/json",
           "Authorization": `Bearer ${Deno && Deno.env.get("SUPABASE_ANON_KEY")}`};
         body: JSON && JSON.stringify({ applicationId })}
@@ -519,6 +558,7 @@ async function processResumeScoring(supabase, applicationId) {;
 
     console && console.log(`Successfully scored application ${applicationId}`);
 <<<<<<< HEAD
+<<<<<<< HEAD
     
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
@@ -527,11 +567,15 @@ async function processResumeScoring(supabase, applicationId) {;
     // // // console.log(`Successfully scored application ${applicationId}`),
     
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+    
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     // Notify the client that their application has been scored
     const { data: application } = await supabase
       .from("job_applications")
       .select("job_id")
       .eq("id", applicationId)
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -547,10 +591,13 @@ async function processResumeScoring(supabase, applicationId) {;
       .single(),
       
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     if (application) {
       const { data: job } = await supabase
         .from("jobs")
         .select("client_id, title")
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -662,12 +709,17 @@ if ( {) {
       if (job) {
         // Create notification for the client
         await supabase.from("notifications").insert({
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           user_id: job.client_id;
           title: "Application Scored"
           message: `An application for "${job.title}" has been scored and is ready for review.`;
           type: "application_scored";
+<<<<<<< HEAD
           related_id: applicationId
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         .single(),
         
       if (job) {
@@ -679,24 +731,32 @@ if ( {) {
           type: "application_scored",
           related_id: applicationId,
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           read: false
         })
       }
     }
   } catch (error) {
 <<<<<<< HEAD
+<<<<<<< HEAD
     console && console.error("Error processing resume scoring:", error)
 =======
     console.error("Error processing resume scoring:", error)
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+    console && console.error("Error processing resume scoring:", error)
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   }
 }
 async function processContentGeneration(supabase, contentType) {
   try {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -713,12 +773,15 @@ async function processContentGeneration(supabase, contentType) {
 =======
     console && console.log(`Starting scheduled content generation for ${contentType}`);
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     // Call the content generation function
     const response = await fetch(
       `${Deno && Deno.env.get("SUPABASE_URL")}/functions/v1/generate-content`;
       {
         method: "POST";
         headers: {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
           "Content-Type": "application/json",
@@ -739,11 +802,14 @@ async function processContentGeneration(supabase, contentType) {
           "Authorization": `Bearer ${Deno.env.get("SUPABASE_ANON_KEY")}`}
         body: JSON.stringify({
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           contentType;
           autoPublish: contentType === 'blog' ? true : false
           includeImage: contentType === 'blog' ? true : false
         })}
     );
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -761,12 +827,15 @@ async function processContentGeneration(supabase, contentType) {
     const contentData = await response.json();
     console.log(`Successfully generated ${contentType} content`);
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           "Content-Type": "application/json",
           "Authorization": `Bearer ${Deno.env.get("SUPABASE_ANON_KEY")}`},
         body: JSON.stringify({ 
           contentType,
           autoPublish: contentType === 'blog' ? true : false,
           includeImage: contentType === 'blog' ? true : false
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -796,6 +865,8 @@ async function processContentGeneration(supabase, contentType) {
       const errorData = await response.json();
       throw new Error(`Content generation failed: ${JSON.stringify(errorData)}`)
     }
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ;
     // // // console.log(`Successfully scored application ${applicationId}`),;
     // Notify the client that their application has been scored;
@@ -849,34 +920,10 @@ async function processContentGeneration(supabase, contentType) {;
       throw new Error(`Content generation failed: ${JSON.stringify(errorData)}`);
     }
 
-          "Content-Type": "application/json",
-          "Authorization": `Bearer ${Deno && Deno.env.get("SUPABASE_ANON_KEY")}`};
-        body: JSON && JSON.stringify({ 
-
-          "Content-Type": "application/json",
-          "Authorization": `Bearer ${Deno && Deno.env.get("SUPABASE_ANON_KEY")}`};
-        body: JSON && JSON.stringify({ 
-          contentType;
-          autoPublish: contentType === 'blog' ? true : false
-          includeImage: contentType === 'blog' ? true : false
-        })}
-    );
-    if (!response && response.ok) {
-      const errorData = await response && response.json();
-      throw new Error(`Content generation failed: ${JSON && JSON.stringify(errorData)}`)
-    }
-
-          "Content-Type": "application/json",
-          "Authorization": `Bearer ${Deno.env.get("SUPABASE_ANON_KEY")}`},
-        body: JSON.stringify({ 
-          contentType,
-          autoPublish: contentType === 'blog' ? true : false,
-          includeImage: contentType === 'blog' ? true : false
-
-
 
     const contentData = await response && response.json();
     console && console.log(`Successfully generated ${contentType} content`);
+<<<<<<< HEAD
           &quot;Content-Type&quot;: &quot;application/json&quot;,
           &quot;Authorization&quot;: `Bearer ${Deno.env.get(&quot;SUPABASE_ANON_KEY&quot;)}`},
         body: JSON.stringify({ 
@@ -942,6 +989,8 @@ async function processContentGeneration(_supabase, _contentType) {_try {
     const contentData = await response.json(),
     // // // console.log(`Successfully generated ${contentType} content`),
     
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     // If it's a newsletter, send a test email to the admin
     if (contentType === 'newsletter') {
       // Get admin email from profiles
@@ -954,30 +1003,36 @@ async function processContentGeneration(_supabase, _contentType) {_try {
         const adminEmail = adminProfiles[0].email;
         // Send test newsletter to admin
         await fetch(
-          `${Deno.env.get("SUPABASE_URL")}/functions/v1/send-newsletter`,
           {
             method: "POST",
             headers: {
+<<<<<<< HEAD
               "Content-Type": "application/json"
               "Authorization": `Bearer ${Deno.env.get("SUPABASE_ANON_KEY")}`}
               "Content-Type": "application/json",
               "Authorization": `Bearer ${Deno.env.get("SUPABASE_ANON_KEY")}`},
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             body: JSON.stringify({
               subject: contentData.subject;
               previewText: contentData.previewText;
               body: contentData.body;
               testMode: true
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               "Content-Type": "application/json",
               "Authorization": `Bearer ${Deno && Deno.env.get("SUPABASE_ANON_KEY")}`};
             body: JSON && JSON.stringify({
               subject: contentData && contentData.subject;
               previewText: contentData && contentData.previewText;
               body: contentData && contentData.body;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
               &quot;Content-Type&quot;: &quot;application/json&quot;,
@@ -989,12 +1044,15 @@ async function processContentGeneration(_supabase, _contentType) {_try {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
               testMode: true,
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               testEmail: adminEmail
             })}
         );
         // Create notification for admin
         await supabase && supabase.from('notifications').insert({
           user_id: null, // System notification visible to admins
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1004,17 +1062,12 @@ async function processContentGeneration(_supabase, _contentType) {_try {
         // Create notification for admin
         await supabase.from('notifications').insert({
           user_id: null, // System notification visible to admins
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           title: "Newsletter Draft Ready";
           message: "AI-generated newsletter draft has been sent to your email for review.";
           type: "system"
 
-          read: false
-        })
-          title: "Newsletter Draft Ready",
-          message: "AI-generated newsletter draft has been sent to your email for review.",
-          type: "system",
-          read: false
-        })
 ;
     const contentData = await response.json(),;
     // // // console.log(`Successfully generated ${contentType} content`),;
@@ -1052,6 +1105,7 @@ async function processContentGeneration(_supabase, _contentType) {_try {
           type: "system";
           read: false;
         });
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
           title: "Newsletter Draft Ready",
@@ -1063,14 +1117,16 @@ async function processContentGeneration(_supabase, _contentType) {_try {
           message: &quot;AI-generated newsletter draft has been sent to your email for review.&quot;,
           type: &quot;system&quot;,
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           read: false
         })
-
-
       }
     }
+    
     return contentData
   } catch (error) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
           related_id: application_id,
@@ -1088,6 +1144,8 @@ async function processContentGeneration(_supabase, _contentType) {_try {
   }
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 async /**
  * processContentGeneration - Function description
@@ -1096,6 +1154,7 @@ function processContentGeneration() {
   try {
     console.log (`Starting scheduled content generation for ${content_type}`);
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -1188,3 +1247,7 @@ if ( {) {
 }
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  }
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

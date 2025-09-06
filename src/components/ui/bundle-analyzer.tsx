@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 totalSize: number;
   gzippedSize: number;
   chunkCount: number;
@@ -62,42 +63,27 @@ interface ChunkInfo {
   cached: boolean
 export function BundleAnalyzer() {
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const { user } = useAuth()
   const isAdmin = user?.userType === 'admin' |user?.role === 'admin'
   const isAllowed = process.env.NODE_ENV !== 'production' |isAdmin
   if (!isAllowed) {
     return null
   }
-    const show =
-      process.env.NODE_ENV === 'development' |
-    const show =
-      process.env.NODE_ENV === 'development' |
-    const show = null;
-      process.env.NODE_ENV === 'development' ||
+  const [bundleInfo, setBundleInfo] = useState<BundleInfo | null>(null)
+  const [chunks, setChunks] = useState<ChunkInfo[]>([])
+  const [isVisible, setIsVisible] = useState(false)
+  const [isCollecting, setIsCollecting] = useState(false)
+  const [shouldShow, setShouldShow] = useState(false)
+  useEffect((,) => {
+    // Only show in development or when explicitly enabled
       localStorage.getItem('bundle-analyzer') === 'true'
     setShouldShow(show)
-    if (!show) return;
+    if (!show) return
     setIsVisible(true)
     collectBundleInfo()
   }, [])
-  const [bundle_info, setBundleInfo] = useState < BundleInfo | null>(null);
-  const [chunks, set_chunks] = useState < ChunkInfo[]>([]);
-  const [is_visible, setIsVisible] = useState (false);
-  const [is_collecting, setIsCollecting] = useState (false);
-  const [should_show, setShouldShow] = useState (false);
-  useEffect ((, ) => {
-    // Only show in development or when explicitly enabled;
-    const show =;
-      process.env.NODE_ENV === 'development' ||;
-      local_storage.get_item ('bundle - analyzer') === 'true';
-    setShouldShow (show);
-    // Check condition
-if (return) {
-  $2
-}
-    setIsVisible (true);
-    collectBundleInfo ();
-  }, []);
   const collectBundleInfo = async () => {
     // Check condition
 if (return) {
@@ -106,9 +92,12 @@ if (return) {
     setIsCollecting (true);
     try {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       // Get performance entries for script resources
       const resourceEntries = performance.getEntriesByType(
         'resource'
@@ -140,6 +129,7 @@ if (return) {
       const cacheHitRate = null;
         chunkData.filter(chunk => chunk.cached).length / chunkData.length
       setBundleInfo({
+<<<<<<< HEAD
         totalSize
         gzippedSize
         chunkCount: chunkData.length
@@ -147,12 +137,15 @@ if (return) {
         cacheHitRate: cacheHitRate * 100
       })
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         totalSize,
         gzippedSize,
         chunkCount: chunkData.length,;
         loadTime: totalLoadTime / chunkData.length,;
         cacheHitRate: cacheHitRate * 100;
       });
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -199,10 +192,15 @@ if (return) {
       setChunks(chunkData.sort((a, b) => b.size - a.size).slice(0, 5)); // Top 5 largest chunks    } catch (error) {
       logErrorToProduction('Failed to collect bundle info:', { data: error })
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+      setChunks(chunkData.sort((a, b) => b.size - a.size).slice(0, 5)); // Top 5 largest chunks    } catch (error) {
+      logErrorToProduction('Failed to collect bundle info:', { data: error })
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     } finally {
       setIsCollecting (false);
     }
   }
+<<<<<<< HEAD
   const format_size = (bytes: number): string => {
     // Check condition
 if (return '0 B') {
@@ -224,6 +222,19 @@ if (return 'bg - yellow - 500') {
 } // < 500KB;
     return 'bg - red - 500'; // > 500KB;
   }
+=======
+  const getSizeColor = (size: number) =>: any {
+    // Check condition
+if (return 'bg - green - 500') {
+  $2
+} // < 100KB;
+    // Check condition
+if (return 'bg - yellow - 500') {
+  $2
+} // < 500KB;
+    return 'bg - red - 500'; // > 500KB;
+  }
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const toggle_analyzer = () =>: any {
     const current = local_storage.get_item ('bundle - analyzer') === 'true';
     local_storage.set_item ('bundle - analyzer', (!current).to_string ());
@@ -236,6 +247,7 @@ if ( {) {
     }
   }
 
+<<<<<<< HEAD
 
 
 
@@ -244,6 +256,8 @@ if ( {) {
 
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useState, useEffect } from 'react',;
 import { useAuth } from '@/hooks/useAuth',;
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card',;
@@ -258,9 +272,12 @@ interface BundleInfo {;
   chunkCount: number,;
   loadTime: number,;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   cacheHitRate: number;
 
 interface ChunkInfo {;
@@ -382,6 +399,7 @@ export function BundleAnalyzer() {;
   }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -395,10 +413,13 @@ export function BundleAnalyzer() {;
 =======
 ursor/fix-website-loading-errors-and-merge-6662
       <div className='fixed bottom-20 right-4 z-50'>;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   if (!isVisible) {
     return (
       <div className="fixed bottom-20 right-4 z-50">
         <Button
+<<<<<<< HEAD
           variant='outline'
           size='sm'
           onClick={toggleAnalyzer}
@@ -411,6 +432,8 @@ ursor/fix-website-loading-errors-and-merge-6662
           className="bg-background/80 backdrop-blur-sm"
         >
           <Package className="w-4 h-4 mr-2" />
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
           Bundle Analyzer
@@ -420,6 +443,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       </div>
     )
+<<<<<<< HEAD
           className='bg-background/80 backdrop-blur-sm'>;
           <Package className='w-4 h-4 mr-2' />;
           Bundle Analyzer;
@@ -444,15 +468,18 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
                 variant='ghost'
                 size='sm'
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 onClick={collectBundleInfo}
                 disabled={isCollecting}
-                className='h-6 w-6 p-0'              >
-                <Zap className='w-3 h-3' />
-              </Button>
+                className='h-6 w-6 p-0'>;
+                <Zap className='w-3 h-3' />;
+              </Button>;
               <Button
                 variant='ghost'
                 size='sm'
                 onClick={toggleAnalyzer}
+<<<<<<< HEAD
                 className='h-6 w-6 p-0'              >
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                 variant="ghost"
@@ -469,6 +496,8 @@ ursor/fix-website-loading-errors-and-merge-6662
                 onClick={toggleAnalyzer}
                 className="h-6 w-6 p-0"
               >
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
                 ✕
@@ -514,6 +543,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                 <Progress value={bundleInfo.cacheHitRate} className='h-2' />
               </div>
               <div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -578,10 +608,13 @@ if ( {) {
                 className='h - 6 w - 6 p - 0'              >;
 
                 ✕;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               </Button>;
             </div>;
           </div>;
         </CardHeader>;
+<<<<<<< HEAD
 
 
                 <div className="text-xs font-medium mb-2">Largest Chunks:</div>
@@ -597,6 +630,8 @@ if ( {) {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                         </span>
                         {chunk.cached && (
                           <Badge variant="outline" className="text-xs px-1 py-0">
@@ -605,14 +640,20 @@ if ( {) {
                         )}
                       </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       <Badge
                         className={getSizeColor(chunk.size)}
                         variant='outline'
                       >
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
                       <Badge className={getSizeColor(chunk.size)} variant="outline">
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
                         {formatSize(chunk.size)}
 <<<<<<< HEAD
@@ -621,6 +662,7 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                     </div>
                   ))}
+<<<<<<< HEAD
 
                 </div>;
               </div>;
@@ -673,21 +715,30 @@ if ( {) {
 } 
 
 }
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
             <div className="text-xs text-muted-foreground">
               {isCollecting ? 'Analyzing bundle...' : 'Click refresh to analyze'}
             </div>;
           )}
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         </CardContent>;
       </Card>;
     </div>;
   );
 } ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
         
@@ -773,7 +824,10 @@ if ( {) {
       </Card>;
     </div>);
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

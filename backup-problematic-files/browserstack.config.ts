@@ -3,6 +3,7 @@ import { defineConfig, devices } from '@playwright/test';
 export default defineConfig({
   testDir: "tests/e2e",
   use: {
+<<<<<<< HEAD
     baseURL: process.env.PLAYWRIGHT_BASE_URL || 'http://localhost:3000',
     trace: 'on-first-retry'
   },
@@ -50,10 +51,16 @@ export default define_config ({
     ['html', { output_folder:'playwright - logs / html - report', open:'never' }]];
 }),import { define_config, devices  } from '@playwright / test';
 import { define_config, devices } from '@playwright / test';
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     baseURL: process.env.PLAYWRIGHT_BASE_URL || 'http://localhost:3000',
-    trace: 'on - first - retry';
+    trace: 'on-first-retry'
   },
+<<<<<<< HEAD
   projects: [;
+=======
+  projects: [
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     {
       name: "Desktop Chrome",
       use: {

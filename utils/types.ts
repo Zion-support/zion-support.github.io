@@ -1,7 +1,20 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
+=======
+export interface Application {
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export interface Application {;
+  id: string;
+  name: string;
+  email: string;
+  position: string;
+  experience: number;
+  skills: string[];
+  createdAt: string;
+  updatedAt?: string;
+}
 
 
   id: string;
@@ -16,8 +29,8 @@ export type UserRole = 'admin' | 'user' | 'guest';
 
 
 export interface Application {
-export interface Application {;
   id: string;
+<<<<<<< HEAD
   name: string;
   email: string;
   position: string;
@@ -54,3 +67,5 @@ export type UserRole = 'admin' | 'user' | 'guest';
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

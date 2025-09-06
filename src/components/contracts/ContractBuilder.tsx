@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -39,12 +40,18 @@ export function ContractBuilder({
         isOpen={isOpen}
         onClose={() => {
           setShowSmartContractBuilder(false);          onClose()
+=======
+isOpen;
+  onClose;
+  talent;
+  clientName;
+  const [templateManagerOpen, setTemplateManagerOpen] = useState(false);
+  const [showSmartContractBuilder, setShowSmartContractBuilder] = useState(false);
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         }}
         talent = {talent,}
         clientName = {clientName,}
         onContractGenerated = {onContractGenerated,}
-      />
-    )
 import { useState } from "react",
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog",
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs",
@@ -53,6 +60,7 @@ import { Save } from 'lucide-react'
 import { TalentProfile } from "@/types/talent",
 import { ContractForm, ContractFormValues } from "./components/ContractForm",
 import { ContractPreview } from "./components/ContractPreview",
+<<<<<<< HEAD
 import { TemplateManager } from "./templates/TemplateManager";
 import { SmartContractBuilder } from "./SmartContractBuilder";
 interface ContractBuilderProps {
@@ -92,6 +100,8 @@ isOpen;
   }
 import { TemplateManager } from "./templates/TemplateManager",
 import { SmartContractBuilder } from "./SmartContractBuilder",
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   }
 
   return (
@@ -106,6 +116,7 @@ import { SmartContractBuilder } from "./SmartContractBuilder",
               <TabsTrigger value="form">Contract Details</TabsTrigger>
               <TabsTrigger value="preview" disabled={!generatedContract}>Preview</TabsTrigger>
             </TabsList>
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
@@ -120,6 +131,10 @@ import { SmartContractBuilder } from "./SmartContractBuilder",
 
 
             
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <div className="flex gap-2">
               <Button
                 variant="outline"
@@ -144,8 +159,15 @@ import { SmartContractBuilder } from "./SmartContractBuilder",
 
               
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
+=======
+
+              <Button
+                variant="secondary"
+                size="sm"
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <Button
                 variant="secondary"
                 size="sm"
@@ -156,6 +178,7 @@ import { SmartContractBuilder } from "./SmartContractBuilder",
             </div>
           </div>
             <ContractForm
+<<<<<<< HEAD
               <Button
                 variant="secondary"
                 size="sm"
@@ -174,9 +197,10 @@ import { SmartContractBuilder } from "./SmartContractBuilder",
             <ContractForm
             <ContractForm 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
             <ContractForm 
-
               talent = {talent,}
 <<<<<<< HEAD
 =======
@@ -188,16 +212,20 @@ import { SmartContractBuilder } from "./SmartContractBuilder",
           </TabsContent>
           <TabsContent value="preview" className="pt-4">
             {generatedContract && (
+<<<<<<< HEAD
             />;
           </TabsContent>;
 
           <TabsContent value="preview" className="pt-4">;
             {generatedContract && (;
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <ContractPreview
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
               <ContractPreview 
+<<<<<<< HEAD
 
                 contractContent = {generatedContract,}
 <<<<<<< HEAD
@@ -218,6 +246,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 
               <ContractPreview
               <ContractPreview 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 contractContent = {generatedContract,}
                 talent = {talent,}
                 onClose = {onClose,}
@@ -259,7 +289,6 @@ ursor/fix-website-loading-errors-and-merge-6662
 }/> </DialogContent> </Dialog>)
 }"}
           
-          
           <TabsContent value="form" className="pt-4">
             <ContractForm 
               talent={talent}
@@ -292,6 +321,9 @@ ursor/fix-website-loading-errors-and-merge-6662
   );
 }
 ;
+<<<<<<< HEAD
 }
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import React, { useState } from 'react'
 import { Button } from "@/components/ui/button"
@@ -48,6 +49,8 @@ interface VideoCallRoomProps {
   onToggleMute?: (isMuted: boolean) => void,
   onToggleVideo?: (isEnabled: boolean) => void,
   onToggleScreenShare?: (isSharing: boolean) => void,  className?: string
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useState } from 'react',
 import { Button } from "@/components/ui/button",
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
@@ -56,6 +59,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
 
 
+<<<<<<< HEAD
   roomId: string
   participants?: Participant[]
   onLeave?: () => void
@@ -112,6 +116,8 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({
 <<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   participants = [], ;
     const secs = seconds % 60;
 };  onLeave,
@@ -120,6 +126,9 @@ ursor/fix-website-loading-errors-and-merge-6662
   onToggleScreenShare,
   className 
 
+}
+export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({
+  roomId
 },) => {
   const [isMuted, setIsMuted] = useState(false)
   const [isVideoEnabled, setIsVideoEnabled] = useState(true)
@@ -177,6 +186,7 @@ ursor/fix-website-loading-errors-and-merge-6662
     if (onLeave) {
       onLeave()
     }
+<<<<<<< HEAD
   }
   return (
     <Card className={`w-full ${className |'max-w-5xl mx-auto'}`}>
@@ -187,10 +197,13 @@ ursor/fix-website-loading-errors-and-merge-6662
 
   return (
     <Card className={`w-full ${className || 'max-w-5xl mx-auto'}`}>
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <CardHeader className="flex flex-row items-center justify-between bg-zion-blue-dark rounded-t-lg p-4">
         <div className="flex items-center space-x-2">
           <CardTitle className="text-white">Video Call</CardTitle>
           <Badge variant="outline" className="text-white border-zion-purple bg-zion-blue-light">
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import { Video, VideoOff, Mic, MicOff, Phone, ScreenShare, ScreenShareOff, Volume2, VolumeX } from 'lucide-react';
 import './video-call ;interface Participant {;
@@ -510,6 +523,13 @@ if ( {) {
                 
                 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+              <div key={participant.id} className="video-participant bg-zion-blue-dark rounded-lg overflow-hidden relative">
+                {participant.isVideoEnabled && !participant.isScreenSharing ? (
+                  <div className="bg-zion-blue-light h-full w-full flex items-center justify-center text-white">
+                    {/* Placeholder for actual video stream */}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <div className="video-metadata flex items-center space-x-2">
                   <span>{participant.name}</span>
                   {participant.isMuted && <MicOff className="h-4 w-4" />}
@@ -527,6 +547,7 @@ if ( {) {
             </div>
           )}
         </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -559,46 +580,64 @@ ursor/fix-website-loading-errors-and-merge-6662
         <div className="bg-zion-blue-dark border-t border-zion-blue-light p-4 flex items-center justify-center space-x-3">;
         
         <div className="bg-zion-blue-dark border-t border-zion-blue-light p-4 flex items-center justify-center space-x-3">
+=======
+
+
+        <div className="bg-zion-blue-dark border-t border-zion-blue-light p-4 flex items-center justify-center space-x-3">
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <Button
             variant="outline"
             size="icon"
             className="video-button rounded-full h-10 w-10"
+<<<<<<< HEAD
             onClick = {handleToggleMute,}
             aria-label = {isMuted ? 'Unmute microphone' : 'Mute microphone',}
           >
             {isMuted ? <MicOff /> : <Mic />}
           </Button>
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <Button
             variant="outline"
             size="icon"
             className="video-button rounded-full h-10 w-10"
+<<<<<<< HEAD
             onClick = {handleToggleVideo,}
             aria-label = {isVideoEnabled ? 'Disable camera' : 'Enable camera',}
           >
             {isVideoEnabled ? <Video /> : <VideoOff />}
           </Button>
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <Button
             variant="outline"
             size="icon"
             className="video-button rounded-full h-10 w-10"
+<<<<<<< HEAD
             onClick = {handleToggleScreenShare,}
             aria-label = {isScreenSharing ? 'Stop sharing screen' : 'Share screen',}
           >
             {isScreenSharing ? <ScreenShareOff /> : <ScreenShare />}
           </Button>
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <Button
             variant="outline"
             size="icon"
             className="video-button rounded-full h-10 w-10"
+<<<<<<< HEAD
             onClick = {handleToggleAudioOnly,}
             aria-label = {isAudioOnly ? 'Disable audio only' : 'Enable audio only',}
           >
             {isAudioOnly ? <VolumeX /> : <Volume2 />}
           </Button>
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <Button
             variant="destructive"
             size="icon"
             className="video-button video-button-danger rounded-full h-10 w-10"
+<<<<<<< HEAD
             onClick = {handleLeaveCall,}
             aria-label="Leave call"
           >
@@ -658,6 +697,8 @@ ursor/fix-website-loading-errors-and-merge-6662
             onClick={handleLeaveCall}
             aria-label="Leave call"
           >
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
             <Phone className="rotate-135" />
@@ -665,6 +706,7 @@ ursor/fix-website-loading-errors-and-merge-6662
       </CardContent>
     </Card>
   )
+<<<<<<< HEAD
 }
 
 };
@@ -674,6 +716,18 @@ ursor/fix-website-loading-errors-and-merge-6662
 },
 };
 },
+=======
+
+            aria-label="Leave call">;
+            <Phone className="rotate-135" />;
+          </Button>;
+        </div>;
+      </CardContent>;
+    </Card>;
+  );
+},;
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
                   <div className="bg - zion - blue - light h - full w - full flex items - center justify - center text - white">;
                     {/* Placeholder for actual video stream */}
@@ -754,6 +808,10 @@ ursor/fix-website-loading-errors-and-merge-6662
         </div>;
       </CardContent>;
     </Card>);
+};
 },
+<<<<<<< HEAD
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

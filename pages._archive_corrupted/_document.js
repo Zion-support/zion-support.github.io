@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -42,6 +43,8 @@ import { Html,Head,Main,NextScript } from 'next/document'; export default functi
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 import { Html,Head,Main,NextScript } from 'next/document'; export default function Document() { return ( <Html lang="en"> <Head> {} <link rel="preconnect" href="https: <link rel="preconnect" href="https: crossOrigin="" /> {} <link rel="dns-prefetch" href="https: {} <link href="https: rel="stylesheet" /> {} <link rel="icon" href="/favicon.ico" /> <link rel="apple-touch-icon" href="/icon-192.png" /> <link rel="manifest" href="/manifest.json" /> {} <meta name="theme-color" content="#0b1220" /> <meta name="msapplication-TileColor" content="#0b1220" /> {} <meta httpEquiv="X-Content-Type-Options" content="nosniff" /> <meta httpEquiv="X-Frame-Options" content="DENY" /> <meta httpEquiv="X-XSS-Protection" content="1 mode=block" /> {} <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" /> {} <script dangerouslySetInnerHTML={{ __html: ` if ('serviceWorker' in navigator) { window.addEventListener('load',function() { navigator.serviceWorker.register('/sw.js') }) } `,}} /> </Head> <body> <Main /> <NextScript /> </body> </Html> )}
 ursor/fix-syntax-push-and-merge-to-main-40de
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { Html, Head, Main, NextScript } from 'next/document';
 export default function Document() {
   return (
@@ -59,7 +62,10 @@ export default function Document() {
         {/* Optimized font loading */}
         <link
           href=""https": //fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           rel="stylesheet"
         />
         {/* Favicon and manifest */}
@@ -96,6 +102,7 @@ export default function Document() {
       </body>
     </Html>
   )}
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -117,3 +124,41 @@ import { Html,Head,Main,NextScript } from 'next/document'; export default functi
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+          rel="stylesheet"
+        />
+        {/* Favicon and manifest */}
+        <link rel="icon" href="/favicon.ico" />
+        <link rel="apple-touch-icon" href="/icon-192.png" />
+        <link rel="manifest" href="/manifest.json" />
+        {/* Theme color */}
+        <meta name="theme-color" content="#0b1220" />
+        <meta name="msapplication-TileColor" content="#0b1220" />
+        {/* Security headers */}
+        <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
+        <meta httpEquiv="X-Frame-Options" content="DENY" />
+        <meta httpEquiv="X-XSS-Protection" content="1 mode=block" />
+        {/* Viewport meta tag */}
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1, viewport-fit=cover"
+        />
+        {/* Service worker registration */}
+        <script
+          dangerouslySetInnerHTML={{
+            "__html": "
+              if ('serviceWorker' in navigator) {
+                window.addEventListener('load', function() {
+                  navigator.serviceWorker.register('/sw.js')
+                })
+              }
+            "}}
+        />
+      </Head>
+      <body>
+        <Main />
+        <NextScript />
+      </body>
+    </Html>
+  )}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

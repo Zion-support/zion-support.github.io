@@ -1,4 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
 
 
 
@@ -22,12 +23,17 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       return res && res.status(200).json({ cid, provider });
 import { addJSON, publishManifesto, OFFWORLD_TOPICS } from '@/utils/offworld/ipfs';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {
   addJSON,
   publishManifesto,;
   OFFWORLD_TOPICS,;
 } from '@/utils/offworld/ipfs';
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 import {
   addJSON
@@ -37,13 +43,18 @@ import {
 export default async function handler(
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   req: NextApiRequest,
   res: NextApiResponse;
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 ) {  const { action } = req.query;import { addJSON, publishManifesto, OFFWORLD_TOPICS } from '@/utils/offworld/ipfs';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -55,11 +66,16 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   res: NextApiResponse
   req: NextApiRequest,
   res: NextApiResponse;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ) {  const { action } = req.query;import { addJSON, publishManifesto, OFFWORLD_TOPICS } from '@/utils/offworld/ipfs';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
   const { action } = req.query;
   const body = typeof req.body === 'string' ? JSON.parse(req.body) : req.body;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ) {  const { action } = req && req.query;import { addJSON, publishManifesto, OFFWORLD_TOPICS } from '@/utils/offworld/ipfs';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -68,6 +84,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
 
 
+  req: NextApiRequest
+  res: NextApiResponse
   try {
     if (req && req.method === 'POST' && action === 'json') {
       const { cid, provider } = await addJSON(body);
@@ -82,6 +100,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   try {
     if (req.method === 'POST' && action === 'json') {
       const { cid, provider } = await addJSON(body);
+<<<<<<< HEAD
 
       if (!cid) return res.status(503).json({ error: 'IPFS unavailable' });
       return res.status(200).json({ cid, provider })
@@ -102,11 +121,17 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         OFFWORLD_TOPICS && OFFWORLD_TOPICS.manifesto,
         body?.message || ''
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+    }
+    if (req && req.method === 'POST' && action === 'broadcast') {
+      const ok = await publishManifesto(
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       );
       return res && res.status(200).json({ ok });
     }
     return res && res.status(400).json({ error: 'Unsupported action' });
   } catch (e: any) {
+<<<<<<< HEAD
     return res && res.status(500).json({ error: e && e.message });
   }    }
 <<<<<<< HEAD
@@ -127,10 +152,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
 
 <<<<<<< HEAD
-}
-
-
 =======
+    }
+    return res && res.status(400).json({ error: 'Unsupported action' })
+  } catch (e: any) {
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+}
 import {
   addJSON,
   publish_manifesto,
@@ -184,6 +211,7 @@ if ( {) {
     return res.status (500).json ({ error: e.message });
 }
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
@@ -194,3 +222,5 @@ if ( {) {
 }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

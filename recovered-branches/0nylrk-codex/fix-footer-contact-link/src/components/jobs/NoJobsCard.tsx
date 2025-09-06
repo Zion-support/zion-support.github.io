@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 
@@ -15,6 +16,8 @@ interface NoJobsCardProps {;
 export function NoJobsCard(): any ({ onUpdateProfile }: NoJobsCardProps) {;
 
 <<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <Card className="bg-muted/30 border border-dashed">;
       <CardContent className="p-6 text-center">;
@@ -30,9 +33,9 @@ export function NoJobsCard(): any ({ onUpdateProfile }: NoJobsCardProps) {;
       </CardContent>;
     </Card>;
   );
-=======
 import { Card, CardContent  } from '@/components / ui / card';
 import { Button  } from '@/components / ui / button';
+<<<<<<< HEAD
 =======
 
 import { Card, CardContent } from "@/components/ui/card";
@@ -74,6 +77,11 @@ interface NoJobsCardProps {
   onUpdateProfile?: () => void
 }
 <<<<<<< HEAD
+=======
+interface NoJobsCardProps {
+  onUpdateProfile?: () => void;
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export /**
  * NoJobsCard - Function description
  */
@@ -86,31 +94,23 @@ function NoJobsCard() {
           AI - matched jobs.;
         </p>;
         {onUpdateProfile && (
-          <Button variant="outline" className="mt - 4" as_child>;
-            <a href="/profile">Update Profile</a>;
-          </Button>)}
-      </CardContent>;
-    </Card>);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+    </Card>
+  );
 }
-=======
 
 
 
 
 
-=======
     </Card>;
-=======
-
 import { Card, CardContent } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
 interface NoJobsCardProps {
   onUpdateProfile?: () => void
 }
 
-  );
 }
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -153,3 +153,5 @@ export function NoJobsCard({ onUpdateProfile } NoJobsCardProps) {;
 }
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

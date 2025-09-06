@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 // If activating, deactivate all other models with the same purpose;
       // Check condition
@@ -31,6 +32,13 @@ import { Button } from "@/components/ui/button",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table",
 import { Badge } from "@/components/ui/badge",
+=======
+
+
+      }
+
+      // Update this model;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { Loader2, RefreshCw, Play, CheckCircle, AlertCircle } from 'lucide-react'
 import { supabase  } from '@/integrations/supabase/client';
 import { ModelConfig  } from '@/utils/zion-gpt';
@@ -38,19 +46,8 @@ import {logErrorToProduction} from '@/utils/productionLogger';
 interface ModelVersionData extends ModelConfig {
   trainingStatus: 'queued' | 'running' | 'succeeded' | 'failed';
   errorMessage?: string
-import { useState, useEffect } from 'react',;
-import { Button } from "@/components/ui/button",;
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table",;
-import { Badge } from "@/components/ui/badge",;
-import { Loader2, RefreshCw, Play, CheckCircle, AlertCircle } from 'lucide-react';
-import { supabase } from '@/integrations/supabase/client',;
-import { ModelConfig } from '@/utils/zion-gpt',;
-import {logErrorToProduction} from '@/utils/productionLogger',;
-interface ModelVersionData extends ModelConfig {;
-  trainingStatus: 'queued' | 'running' | 'succeeded' | 'failed',;
-  errorMessage?: string;
 }
+<<<<<<< HEAD
 
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -140,6 +137,14 @@ export function ZionGPTModelManager() {;
           .update({ active: false });
           .eq('purpose', purpose);
 
+=======
+      await supabase;
+        .from ('model_versions');
+        .update ({ active: !current_active });
+        .eq ('id', model_id),
+      // Refresh the model list;
+      fetch_models ();
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
       }
       // Update this model
@@ -152,22 +157,6 @@ export function ZionGPTModelManager() {;
     } catch (error) {
       logErrorToProduction('Error toggling model active state:', { data: error })
     }
-  }
-ursor/fix-website-loading-errors-and-merge-6662
-      }
-
-      // Update this model;
-      await supabase;
-        .from ('model_versions');
-        .update ({ active: !current_active });
-        .eq ('id', model_id),
-      // Refresh the model list;
-      fetch_models ();
-
-    } catch (error) {
-      logErrorToProduction ('Error toggling model active state:', { data: error });
-    }
-
 
         .order('createdAt', { ascending: false }),;
 
@@ -197,6 +186,7 @@ ursor/fix-website-loading-errors-and-merge-6662
   },;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
+<<<<<<< HEAD
   },
 
 
@@ -252,6 +242,8 @@ ursor/fix-website-loading-errors-and-merge-6662
   }
   },
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <Card className="w-full">
       <CardHeader className="flex flex-row items-center justify-between">
@@ -300,11 +292,14 @@ ursor/fix-website-loading-errors-and-merge-6662
                     ) : (
                       <Badge className="bg-yellow-500">Queued</Badge>
                     )}
+<<<<<<< HEAD
                     {model.active && <Badge className="ml-2 bg-purple-500">Active</Badge>}
                   </TableCell>
                   <TableCell>{new Date(model.createdAt).toLocaleDateString()}</TableCell>
                   <TableCell className="text-right">
                     {model.trainingStatus === 'queued' |model.trainingStatus === 'running' ? (
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       <Button
                         variant="ghost"
                         size="sm"
@@ -316,6 +311,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                           <Loader2 className="h-4 w-4 animate-spin" />;
                         ) : (;
                           <RefreshCw className="h-4 w-4" />;
+<<<<<<< HEAD
 
                     {model.trainingStatus === 'queued' || model.trainingStatus === 'running' ? (
                       <Button
@@ -332,12 +328,15 @@ ursor/fix-website-loading-errors-and-merge-6662
                         disabled = {activeJobs[model.id],}
                         onClick={() => checkTrainingStatus(model.id)}
                         disabled={activeJobs[model.id]}
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       >
                         {activeJobs[model.id] ? (
                           <Loader2 className="h-4 w-4 animate-spin" />
                         ) : (
                           <RefreshCw className="h-4 w-4" />
                         )}
+<<<<<<< HEAD
                         <span className="ml-1">Check</span>;
                       </Button>;
                     ) : model && model.trainingStatus === 'succeeded' ? (;
@@ -356,6 +355,8 @@ ursor/fix-website-loading-errors-and-merge-6662
                         variant={model.active ? "outline" : "default"}
                         size="sm"
                         onClick={() => toggleModelActive(model.id, model.active, model.purpose)}
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       >
                         {model.active ? (
                           <>
@@ -366,20 +367,27 @@ ursor/fix-website-loading-errors-and-merge-6662
                             <Play className="h-4 w-4 mr-1" /> Activate
                           </>
                         )}
+<<<<<<< HEAD
                       </Button>;
                     ) : (;
                         )}
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       </Button>
                     ) : (
                       <Button
                         variant="ghost"
                         size="sm"
                         className="text-red-500"
+<<<<<<< HEAD
                         title = {model.errorMessage |"Training failed",}
                         title={model.errorMessage || "Training failed"}
                         title = {model.errorMessage || "Training failed",}
                         title={model.errorMessage || "Training failed"}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                         title = {model && model.errorMessage || "Training failed",}>;
                         <AlertCircle className="h-4 w-4 mr-1" /> Error;
                       </Button>;
@@ -396,6 +404,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                         <AlertCircle className="h-4 w-4 mr-1" /> Error
                       </Button>
                     )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
                   </TableCell>;
@@ -433,6 +442,9 @@ ursor/fix-website-loading-errors-and-merge-6662
                 </TableRow>
                   </TableCell>;
                 </TableRow>;
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               ))}
             </TableBody>
           </Table>
@@ -441,10 +453,14 @@ ursor/fix-website-loading-errors-and-merge-6662
     </Card>
   )
 }
+<<<<<<< HEAD
 }
 ;
 main
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   },
   return (
     <Card className="w - full">;
@@ -533,4 +549,7 @@ main
       </CardContent>;
     </Card>);
 }
+<<<<<<< HEAD
 }
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

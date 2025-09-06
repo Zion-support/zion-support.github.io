@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -24,6 +25,8 @@ function BlockchainServicesPage() {
 export default function BlockchainServicesPage() {return (;
 export default function BlockchainServicesPage() {;
   return (;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-900 text-white">;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       {/* Hero Section */}
@@ -57,6 +60,7 @@ export default function BlockchainServicesPage() {;
         <div className="container mx - auto px - 6">;
           <div className="grid grid - cols - 1 lg:grid - cols - 2 gap - 12">;
             {/* DeFi Platform Development */}
+<<<<<<< HEAD
 
             <div className="bg - zinc - 800 rounded - xl p - 8 border border - zinc - 700">;
               <div className="text - 4xl mb - 6">💰</div>;
@@ -80,6 +84,8 @@ export default function BlockchainServicesPage() {;
                 Build next-generation decentralized finance platforms with lending, borrowing;
                 Build next-generation decentralized finance platforms with lending, borrowing,;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 yield farming, and automated market making capabilities.;
               </p>;
               <div className="space - y-4 mb - 8">;
@@ -118,6 +124,7 @@ export default function BlockchainServicesPage() {;
               </a>;
             </div>;
             {/* NFT Marketplace */}
+<<<<<<< HEAD
 
             <div className="bg - zinc - 800 rounded - xl p - 8 border border - zinc - 700">;
               <div className="text - 4xl mb - 6">🎨</div>;
@@ -141,6 +148,8 @@ export default function BlockchainServicesPage() {;
                 Create cutting-edge NFT marketplaces with advanced features, multi-chain support;
                 Create cutting-edge NFT marketplaces with advanced features, multi-chain support,;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 and innovative monetization strategies for digital assets.;
               </p>;
               <div className="space - y-4 mb - 8">;
@@ -179,6 +188,7 @@ export default function BlockchainServicesPage() {;
               </a>;
             </div>;
             {/* Smart Contract Development */}
+<<<<<<< HEAD
 
             <div className="bg - zinc - 800 rounded - xl p - 8 border border - zinc - 700">;
               <div className="text - 4xl mb - 6">📜</div>;
@@ -202,6 +212,8 @@ export default function BlockchainServicesPage() {;
                 Secure, audited smart contracts for any blockchain use case with comprehensive testing;
                 Secure, audited smart contracts for any blockchain use case with comprehensive testing,;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 security analysis, and deployment support.;
               </p>;
               <div className="space - y-4 mb - 8">;
@@ -240,6 +252,7 @@ export default function BlockchainServicesPage() {;
               </a>;
             </div>;
             {/* Web3 Infrastructure */}
+<<<<<<< HEAD
 
             <div className="bg - zinc - 800 rounded - xl p - 8 border border - zinc - 700">;
               <div className="text - 4xl mb - 6">🌐</div>;
@@ -263,6 +276,8 @@ export default function BlockchainServicesPage() {;
                 Build robust Web3 infrastructure with node management, API gateways;
                 Build robust Web3 infrastructure with node management, API gateways,;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 indexing services, and decentralized storage solutions.;
               </p>;
               <div className="space - y-4 mb - 8">;
@@ -301,6 +316,7 @@ export default function BlockchainServicesPage() {;
               </a>;
             </div>;
             {/* DAO Development */}
+<<<<<<< HEAD
 
             <div className="bg - zinc - 800 rounded - xl p - 8 border border - zinc - 700">;
               <div className="text - 4xl mb - 6">🏛️</div>;
@@ -324,6 +340,8 @@ export default function BlockchainServicesPage() {;
                 Create sophisticated decentralized autonomous organizations with advanced governance;
                 Create sophisticated decentralized autonomous organizations with advanced governance,;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 treasury management, and community engagement tools.;
               </p>;
               <div className="space - y-4 mb - 8">;

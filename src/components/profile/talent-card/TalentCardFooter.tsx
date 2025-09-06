@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useRouter } from 'next/router'
 interface TalentCardFooterProps {
   profile: TalentProfile,
@@ -138,6 +139,9 @@ export function TalentCardFooter({ profile, onViewProfile, onRequestHire }: Tale
     }
   }
   },
+=======
+    }
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   return (
@@ -157,6 +161,7 @@ export function TalentCardFooter({ profile, onViewProfile, onRequestHire }: Tale
             </div>;
           )}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -175,6 +180,8 @@ export function TalentCardFooter({ profile, onViewProfile, onRequestHire }: Tale
         </div>
         </div>
         </div>;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         {/* Action Buttons */}
         <div className="flex gap-2">
           <Button
@@ -184,14 +191,20 @@ export function TalentCardFooter({ profile, onViewProfile, onRequestHire }: Tale
           <Button 
             variant="default" 
             size="sm" 
+<<<<<<< HEAD
             onClick={handleRequestHire}
             onClick = {handleRequestHire,}
             onClick={handleRequestHire}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+        {/* Action Buttons */}
+        <div className="flex gap-2">
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             className="bg-zion-purple hover:bg-zion-purple-dark text-white"
           >
             Hire
           </Button>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -212,10 +225,15 @@ export function TalentCardFooter({ profile, onViewProfile, onRequestHire }: Tale
           
           
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+            onClick = {handleViewProfile,}
+          
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <Button 
             variant="outline" 
             size="sm" 
             onClick={handleViewProfile}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -226,6 +244,11 @@ export function TalentCardFooter({ profile, onViewProfile, onRequestHire }: Tale
 ursor/fix-website-loading-errors-and-merge-6662
 
 
+=======
+
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
             View
@@ -233,6 +256,7 @@ ursor/fix-website-loading-errors-and-merge-6662
           </Button>
         </div>
       </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
         </div>;
@@ -261,12 +285,15 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {/* Hire Request Modal */}
       <HireRequestModal
         talent = {profile,}
         isOpen = {isHireModalOpen,}
         onClose = {() => setIsHireModalOpen(false),}
         userDetails = {userProfile,}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     </>;
@@ -393,3 +420,6 @@ if ( {) {
 }
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

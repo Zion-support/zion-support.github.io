@@ -1,13 +1,17 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React from 'react';
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {useNavigate} from "react-router-dom";
 import {Badge} from "@/components/ui/badge";
 import {Button} from "@/components/ui/button";
 import {ProductListing} from "@/types/listings";
 import {Star, DollarSign} from "lucide-react";
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 interface ProductListingCardProps {;
@@ -37,6 +41,8 @@ export function ProductListingCard(): any ({ ;
 
 
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useNavigate } from "react-router-dom",
 import { Badge } from "@/components/ui/badge",
 import { Button } from "@/components/ui/button",
@@ -44,17 +50,18 @@ import { ProductListing } from "@/types/listings";
 import { Star, DollarSign } from "lucide-react";
 interface ProductListingCardProps {
 
-  listing: ProductListing
+interface ProductListingCardProps {;
+  listing: ProductListing,;
+
   view?: 'grid' | 'list';
-  onRequestQuote?: (id: string) => void
+  onRequestQuote?: (id: string) => void;
 }
-export function ProductListingCard({
-  listing
   view = 'grid';
-  onRequestQuote
-}: ProductListingCardProps) {
+  onRequestQuote;
+}: ProductListingCardProps) {;
   const isGrid = view === 'grid';
   const navigate = useNavigate();
+<<<<<<< HEAD
   // Get the first image or use a placeholder
   const imageUrl = listing.images && listing.images.length > 0
     ? listing.images[0]
@@ -62,6 +69,9 @@ export function ProductListingCard({
 import { ProductListing } from "@/types/listings",
 import { Star, DollarSign } from "lucide-react",
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 interface ProductListingCardProps {
   listing: ProductListing,
@@ -70,6 +80,7 @@ interface ProductListingCardProps {
 }
 
 export function ProductListingCard({ 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   listing, 
@@ -84,12 +95,15 @@ export function ProductListingCard({
   listing, 
   view = 'grid',
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   onRequestQuote
 }: ProductListingCardProps) {
   const isGrid = view === 'grid',
   const navigate = useNavigate(),
   
   // Get the first image or use a placeholder
+<<<<<<< HEAD
   const imageUrl = listing.images && listing.images.length > 0 
     ? listing.images[0] 
     : '/placeholder.svg',
@@ -99,10 +113,13 @@ export function ProductListingCard({
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   // Format price display
   const formatPrice = () => {
     if (listing.price === null) return "Custom pricing";
     return `${listing.currency}${listing.price.toLocaleString()}`
+<<<<<<< HEAD
 
 import { use_navigate } from './react-router-dom';
 import { Badge } from '@/components / ui / badge';
@@ -123,6 +140,8 @@ interface ProductListingCardProps {
     if (listing.price === null) return "Custom pricing",
     return `${listing.currency}${listing.price.toLocaleString()}`
   }
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   // Handle image loading errors
   const handleImageError = (e: React.SyntheticEvent<HTMLImageElement>) => {
     e.currentTarget.src = '/placeholder.svg'
@@ -133,6 +152,7 @@ interface ProductListingCardProps {
   }
   // Handle request quote button click
   const handleRequestQuote = (e: React.MouseEvent) => {
+<<<<<<< HEAD
     e.preventDefault();
     e.stopPropagation()
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -223,11 +243,14 @@ if ( {) {
 }
       onRequestQuote (listing.id);
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     } else {
       // Default behavior if no handler provided;
       navigate (`/request - quote?listing=${listing.id}`);
     }
   }
+<<<<<<< HEAD
 
 
 =======
@@ -306,6 +329,9 @@ if ( {) {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+      {/* Image */}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             className="w-full h-full object-cover"
             onError={handleImageError}
           />;
@@ -314,6 +340,7 @@ if ( {) {
               Featured;
             </Badge>;
           )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
         </div>;
@@ -324,6 +351,8 @@ if ( {) {
         </div>;
       </div>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {/* Content */}
       <div className={`flex flex-col justify-between ${isGrid ? 'p-4 flex-1' : 'p-4 flex-1'}`}>;
         <div>;
@@ -341,6 +370,7 @@ if ( {) {
                 )}
               </div>;
             )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -419,6 +449,8 @@ export function ProductListingCard({;
             )}
           </div>
           </div>;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           {/* Title & Description */}
           <div onClick={handleViewListing} className="block">
             <h3 className="text-lg font-semibold text-white mb-2 hover:text-zion-cyan transition-colors">
@@ -461,6 +493,7 @@ export function ProductListingCard({;
             <Button
               size="sm"
               onClick={(e) => {
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 ;
   return (
@@ -509,6 +542,10 @@ export function ProductListingCard({;
           </div>;
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+                e.stopPropagation();
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           {/* Title & Description */}
           <div on_click={handleViewListing} className="block">;
             <h3 className="text - lg font - semibold text - white mb - 2 hover:text - zion - cyan transition - colors">;
@@ -517,6 +554,7 @@ export function ProductListingCard({;
           </div>;
           <p className="text - sm text - zion - slate line - clamp - 2 mb - 4">;
             {listing.description}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -544,11 +582,14 @@ export function ProductListingCard({;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   {tag}
                 </span>;
               ))}
             </div>;
           )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
         </div>;
@@ -557,6 +598,8 @@ export function ProductListingCard({;
 =======
         </div>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         {/* Footer with price and button */}
         <div className="flex items-center justify-between mt-auto pt-3 border-t border-zion-blue-light">;
           <div className="text-sm font-medium">;
@@ -568,6 +611,7 @@ export function ProductListingCard({;
             ) : (;
               <span className="text-zion-slate-light">;
                 {formatPrice()}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -586,6 +630,11 @@ export function ProductListingCard({;
 
                 e.stopPropagation(),
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+                e.stopPropagation(),
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 navigate(`/listing/${listing.id}`)
               }}
               className="bg-zion-purple hover:bg-zion-purple-dark text-white"
@@ -594,6 +643,7 @@ export function ProductListingCard({;
             </Button>
             {onRequestQuote && (
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
               </span>;
@@ -601,6 +651,8 @@ export function ProductListingCard({;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           </div>;
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <div className="flex gap-2">;
             <Button
               size="sm" 
@@ -612,16 +664,19 @@ export function ProductListingCard({;
             >;
               Buy Now;
             </Button>;
-
             {onRequestQuote && (;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <Button
                 size="sm"
                 variant="outline"
                 onClick={handleRequestQuote}
+<<<<<<< HEAD
 <<<<<<< HEAD
                 className="border-zion-purple text-zion-purple hover:bg-zion-purple/10">;
 =======
@@ -776,14 +831,18 @@ export function ProductListingCard({ ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                 Request Quote;
               </Button>;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             )}
           </div>;
         </div>;
       </div>;
     </div>;
 <<<<<<< HEAD
-  );
+<<<<<<< HEAD
 =======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+  );
           </p>;
           {/* Tags */}
           {listing.tags && listing.tags.length > 0 && (
@@ -833,6 +892,7 @@ export function ProductListingCard({ ;
         </div>;
       </div>;
     </div>);
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
   ),; interface ProductListingCardProps {
@@ -900,4 +960,6 @@ return (<div className= {
     </div>
   )
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }

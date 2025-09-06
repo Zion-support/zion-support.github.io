@@ -2,7 +2,6 @@
 
 
 
-
 import React, { useState } from "react";
 import {useForm} from "react-hook-form";
 import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
@@ -14,10 +13,13 @@ import {Button} from "@/components/ui/button";
 import {toast} from "sonner";
 export type AppPlatform = "ios" | "android";
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useState } from "react",
 import { useForm } from "react-hook-form",
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
@@ -30,30 +32,41 @@ import { toast } from "sonner",
 export type AppPlatform = "ios" | "android",
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
 export type AppMetadataValues = {
 
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export type AppMetadataValues = {
   appTitle: string
   shortDescription: string
   longDescription: string
   keywords: string[]
   version: string
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+export type AppMetadataValues = {
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   appTitle: string,
   shortDescription: string,
   longDescription: string,
   keywords: string[],
   version: string,
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
   platform: AppPlatform;
 };
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   platform: AppPlatform
 }
 const defaultValues: AppMetadataValues = {
@@ -94,18 +107,16 @@ export const MetadataManager: React.FC = () => {
   const androidForm = useForm<AppMetadataValues>({ defaultValues: { ...defaultValues, platform: "android" } }),
   
   const currentForm = currentPlatform === "ios" ? iosForm : androidForm,
-  appTitle: string,
-  shortDescription: string,
-  longDescription: string,
-  keywords: string[],
-  version: string,
-
   
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const handleSaveMetadata = async (data: AppMetadataValues) => {
     setIsSaving(true)
     try {
       // This would be implemented with actual API calls in production
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -207,6 +218,8 @@ export const MetadataManager: React.FC = () => {
   },
   
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <div className="bg-zion-blue-dark rounded-lg p-6">
       <Tabs defaultValue="ios" className="w-full">
@@ -221,10 +234,14 @@ export const MetadataManager: React.FC = () => {
           </TabsList>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
           <Button 
 
 
+<<<<<<< HEAD
 =======
           <Button 
 
@@ -232,6 +249,8 @@ export const MetadataManager: React.FC = () => {
           <Button
           <Button 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             onClick={currentForm.handleSubmit(handleSaveMetadata)}
             disabled={isSaving}
           >
@@ -265,6 +284,7 @@ export const MetadataManager: React.FC = () => {
       </Tabs>
     </div>
   )
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -277,6 +297,8 @@ export const MetadataManager: React.FC = () => {
 }
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 },
 import React, { useState } from "react",;
 import { useForm } from "react-hook-form",;
@@ -289,9 +311,12 @@ import { Button } from "@/components/ui/button",;
 import { toast } from "sonner",;
 export type AppPlatform = "ios" | "android",;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export type AppMetadataValues = {;
   appTitle: string,;
   shortDescription: string,;
@@ -299,6 +324,7 @@ export type AppMetadataValues = {;
   keywords: string[],;
   version: string,;
   platform: AppPlatform;
+<<<<<<< HEAD
 <<<<<<< HEAD
 };
 
@@ -363,11 +389,14 @@ export const MetadataManager: React.FC = () => {;
       toast.error("Failed to save metadata"),;
       console.error(error);
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     } finally {;
       setIsSaving(false);
     }
   };
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   return (
 =======
@@ -433,6 +462,8 @@ export const MetadataManager:React.FC = () => {;
   return (;
   return (;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <div className="bg-zion-blue-dark rounded-lg p-6">;
       <Tabs defaultValue="ios" className="w-full">;
         <div className="flex justify-between items-center mb-6">;
@@ -444,6 +475,7 @@ export const MetadataManager:React.FC = () => {;
               Google Play (Android);
             </TabsTrigger>;
           </TabsList>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
           <Button
@@ -471,12 +503,15 @@ export const MetadataManager:React.FC = () => {;
           </Button>;
         </div>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <TabsContent value="ios" className="mt-0">;
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">;
             <div className="lg:col-span-2 space-y-6">;
               <MetadataForm form={iosForm} />;
               <ChangelogManager platform="ios" />;
             </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
             <div className="space-y-6">;
@@ -495,12 +530,15 @@ export const MetadataManager:React.FC = () => {;
           </div>;
         </TabsContent>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <TabsContent value="android" className="mt-0">;
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">;
             <div className="lg:col-span-2 space-y-6">;
               <MetadataForm form={androidForm} />;
               <ChangelogManager platform="android" />;
             </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
             <div className="space-y-6">;
@@ -558,6 +596,15 @@ export const MetadataManager:React.FC = () => {;
               <ScreenshotManager platform="android" />;
               <ExportPanel platform="android" metadata={androidForm.getValues()} />;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+    } catch (error) {
+      toast.error ("Failed to save metadata");
+      console.error (error);
+    } finally {
+      setIsSaving (false);
+    }
+  }
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             </div>;
           </div>;
         </TabsContent>;
@@ -566,6 +613,7 @@ export const MetadataManager:React.FC = () => {;
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 };
@@ -576,10 +624,13 @@ export const MetadataManager:React.FC = () => {;
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 };
     </div>);
 }
 ;
+<<<<<<< HEAD
     </div>);
 }
 ;
@@ -606,3 +657,5 @@ return (<div className="bg-zion-blue-dark rounded-lg p-6" > <Tabs defaultValue="
   );
 };
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -41,6 +42,8 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import {
 import {
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   ArrowRight
   Star
   Users
@@ -55,7 +58,17 @@ import {
   TrendingUp,
   Zap,
   Shield,
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  Globe,;
+  Rocket,;
+
+
+} from 'lucide-react';
+interface ServiceCardProps {
+  service: {
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {;
   ArrowRight,;
   Star,;
@@ -69,6 +82,7 @@ import {;
 interface ServiceCardProps {;
   service: {;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
   Globe,;
@@ -78,11 +92,14 @@ interface ServiceCardProps {;
 interface ServiceCardProps {
   service: {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     id: string;
     name: string;
     tagline: string;
     description: string;
     category: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
     price: {;
       monthly: number;
@@ -132,6 +149,8 @@ interface ServiceCardProps {
     roi: string;
     useCases: string[];
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     integrations: string[];
     support: string;
     compliance: string[];
@@ -139,6 +158,7 @@ interface ServiceCardProps {
     icon: string;
     color: string;
     popular: boolean;
+<<<<<<< HEAD
 <<<<<<< HEAD
     launch_date: string;
     customers: number;
@@ -167,6 +187,8 @@ const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = ({;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         return <Zap className='w-5 h-5' />;
       case 'quantum & emerging tech':;
         return <Rocket className='w-5 h-5' />;
@@ -176,6 +198,7 @@ const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = ({;
         return <Globe className='w-5 h-5' />;
       case 'micro saas':;
         return <TrendingUp className='w-5 h-5' />;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -241,6 +264,8 @@ const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = ({ service, ind
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         return <Rocket className="w-5 h-5" />;
       case 'enterprise it':;
         return <Shield className="w-5 h-5" />;
@@ -248,14 +273,15 @@ const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = ({ service, ind
         return <Globe className="w-5 h-5" />;
       case 'micro saas':;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         return <TrendingUp className="w-5 h-5" />;
-
-
-    }
 
       default:
 
 
+<<<<<<< HEAD
 =======
 =======
     launchDate: string;
@@ -300,6 +326,8 @@ const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = ({
         return <Zap className="w-5 h-5" />
     }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         return <Zap className='w-5 h-5' />;    }
 
     }
@@ -315,6 +343,7 @@ const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = ({
 
   };
 
+<<<<<<< HEAD
 
 
     >
@@ -335,6 +364,8 @@ const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = ({
 
 
     >;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {/* Glow effect */}
       <div className='absolute -inset-1 bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 rounded-2xl blur opacity-25 group-hover:opacity-75 transition duration-1000 group-hover:duration-200'></div>;
 
@@ -342,6 +373,7 @@ const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = ({
       {/* Main card */}
       <div className='relative bg-gray-900/80 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-6 h-full overflow-hidden'>;
         {/* Background pattern */}
+<<<<<<< HEAD
 
       return color
     }
@@ -351,6 +383,8 @@ const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = ({
       return color
     }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     return 'from-cyan-500 to-blue-500'
   }
 =======
@@ -377,6 +411,7 @@ const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = ({
       initial={{ opacity: 0, y: 50, scale: 0 && 0.9 }}
       animate={{ opacity: 1, y: 0, scale: 1 }}
       transition={{
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -466,10 +501,13 @@ const UltraFuturisticServiceCardV2: React.FC < ServiceCardProps> = ({
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         transition: { duration: 0.3 }
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         duration: 0 && 0.6,
         delay: index * 0 && 0.1,
         ease: [0 && 0.25, 0 && 0.46, 0 && 0.45, 0 && 0.94]
       }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       <div className="absolute -inset-1 bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 rounded-2xl blur opacity-25 group-hover:opacity-75 transition duration-1000 group-hover:duration-200"></div>;
@@ -500,6 +538,8 @@ const UltraFuturisticServiceCardV2: React.FC < ServiceCardProps> = ({
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         {/* Header */}
         <div className="relative z - 10 mb - 6">;
           <div className="flex items - start justify - between mb - 4">;
@@ -511,6 +551,7 @@ const UltraFuturisticServiceCardV2: React.FC < ServiceCardProps> = ({
                   <span className="text - xs font - medium text - gray - 400 uppercase tracking - wider">;
                     {service.category}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
                   <span className='text-xs font-medium text-gray-400 uppercase tracking-wider'>                    {service.category}
@@ -520,6 +561,8 @@ const UltraFuturisticServiceCardV2: React.FC < ServiceCardProps> = ({
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   </span>
                 </div>
               </div>
@@ -527,8 +570,11 @@ const UltraFuturisticServiceCardV2: React.FC < ServiceCardProps> = ({
 
             
 
+<<<<<<< HEAD
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             {service.popular && (
               <motion.div
 =======
@@ -551,6 +597,7 @@ const UltraFuturisticServiceCardV2: React.FC < ServiceCardProps> = ({
                 </div>;
               </div>;
             </div>;
+<<<<<<< HEAD
 
             {service && service.popular && (;
               <motion&& motion.div
@@ -563,10 +610,15 @@ const UltraFuturisticServiceCardV2: React.FC < ServiceCardProps> = ({
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+                initial={{ scale: 0 }}
+                animate={{ scale: 1 }}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             {service.name}
           </h3>
           <p className="text-gray-300 text-sm leading-relaxed">
 
+<<<<<<< HEAD
             {service.tagline}
 
 <<<<<<< HEAD
@@ -737,18 +789,26 @@ const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = (_{_service, _i
           </h3>
           <p className="text-gray-300 text-sm leading-relaxed">
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
           <p className='text-gray-300 text-sm leading-relaxed'>            {service.tagline}
 
             {service.tagline}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+          <h3 className="text-xl font-bold text-white mb-2 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r from-cyan-400 to-purple-400 transition-all duration-300">
+            {service.name}
+          </h3>
+          <p className="text-gray-300 text-sm leading-relaxed">
           </p>
         </div>
         {/* Stats */}
+<<<<<<< HEAD
 
 =======
           </p>
@@ -788,11 +848,14 @@ const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = (_{_service, _i
               <div className='text - 2xl font - bold text - cyan - 400'>;
 
 <<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 {service.rating}
 
               </div>
               <div className='text-xs text-gray-400'>Rating</div>
 
+<<<<<<< HEAD
 
 
 
@@ -804,6 +867,8 @@ const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = (_{_service, _i
               <div className='text-xs text-gray-400'>Rating</div>
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             </div>
             <div className='text-center'>
               <div className='text-2xl font-bold text-purple-400'>
@@ -813,6 +878,7 @@ const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = (_{_service, _i
             </div>
             <div className='text-center'>
               <div className='text-2xl font-bold text-pink-400'>
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 {service.reviews}
@@ -830,6 +896,20 @@ const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = (_{_service, _i
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+              </div>;
+              <div className='text - xs text - gray - 400'>Rating</div>;
+            </div>;
+            <div className='text - center'>;
+              <div className='text - 2xl font - bold text - purple - 400'>;
+                {service.customers.toLocaleString ()}
+              </div>;
+              <div className='text - xs text - gray - 400'>Customers</div>;
+            </div>;
+            <div className='text - center'>;
+              <div className='text - 2xl font - bold text - pink - 400'>;
+                {service.reviews}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <div className="text-center">
               <div className="text-2xl font-bold text-purple-400">{service.customers.toLocaleString()}</div>
               <div className="text-xs text-gray-400">Customers</div>
@@ -840,6 +920,7 @@ const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = (_{_service, _i
             </div>
           </div>
         </div>
+<<<<<<< HEAD
 =======
           </div>;
 
@@ -855,6 +936,8 @@ const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = (_{_service, _i
           </p>;
         </div>;
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         {/* Stats */}
         <div className='relative z-10 mb-6'>;
           <div className='grid grid-cols-3 gap-4'>;
@@ -885,6 +968,7 @@ const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = (_{_service, _i
             </div>;
           </div>;
         </div>;
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         {/* Pricing */}
@@ -925,6 +1009,10 @@ const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = (_{_service, _i
             )}
           </div>
         </div>
+=======
+          </div>;
+        </div>;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
         {/* Features preview */}
@@ -932,6 +1020,7 @@ const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = (_{_service, _i
           <h4 className='text-sm font-semibold text-gray-300 mb-3'>
             Key Features
           </h4>
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
           </div>;
@@ -984,13 +1073,17 @@ const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = (_{_service, _i
 
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <div className='space-y-2'>            {service.features.slice(0, 3).map((feature, idx) => (        <div className="relative z-10 mb-6">
           <h4 className="text-sm font-semibold text-gray-300 mb-3">Key Features</h4>
           <div className="space-y-2">
           <div className='space-y-2'>            {service.features.slice(0, 3).map((feature, idx) => (
 
+
             {service.features.slice(0, 3).map((feature, idx) => (
               <motion.div
+<<<<<<< HEAD
               </div>;
               <div className='text - xs text - gray - 400'>Reviews</div>            </div>            </div>;
             <div className="text - center">;
@@ -1102,6 +1195,11 @@ const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = (_{_service, _i
                 className='flex items-center space-x-2 text-sm'
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+                key={idx}
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               >
                 <div className='w-2 h-2 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full'></div>
                 <span className='text-gray-300'>{feature}</span>
@@ -1122,16 +1220,74 @@ const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = (_{_service, _i
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+              </div>
+        {/* Features preview */}
+        <div className='relative z-10 mb-6'>;
+          <h4 className='text-sm font-semibold text-gray-300 mb-3'>;
+            Key Features;
+          </h4>;
+          <div className='space-y-2'>            {service && service.features.slice(0, 3).map((feature, idx) => (        <div className="relative z-10 mb-6">;
+          <h4 className="text-sm font-semibold text-gray-300 mb-3">Key Features</h4>;
+          <div className="space-y-2">;
+            {service && service.features.slice(0, 3).map((feature, idx) => (;
+              <motion&& motion.div
+                key={idx}
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: 0 && 0.6 + idx * 0 && 0.1 }}
+                className='flex items-center space-x-2 text-sm'>;
+                <div className='w-2 h-2 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full'></div>;
+                <span className='text-gray-300'>{feature}</span>;
+              </motion && motion.div>;
+            ))}
+            {service && service.features.length > 3 && (;
+              <div className='text-xs text-gray-500 mt-2'>                +{service && service.features.length - 3} more features              >;
+                <div className="w-2 h-2 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full"></div>;
+                <span className="text-gray-300">{feature}</span>;
+              </motion && motion.div>;
+            ))}
+            {service && service.features.length > 3 && (;
+              <div className="text-xs text-gray-500 mt-2">;
+                +{service && service.features.length - 3} more features;
+              </div>;
+                key={idx}
+                initial={{ opacity: 0, coordinate_x: -20 }}
+                animate={{ opacity: 1, coordinate_x: 0 }}
+                transition={{ delay: 0.6 + idx * 0.1 }}
+            )}
+        {/* Benefits */}
+        <div className='relative z-10 mb-6'>;
+          <h4 className='text-sm font-semibold text-gray-300 mb-3'>;
+            Key Benefits;
+          </h4>;
+          <div className='space-y-2'>            {service && service.benefits.slice(0, 2).map((benefit, idx) => (        <div className="relative z-10 mb-6">;
+          <h4 className="text-sm font-semibold text-gray-300 mb-3">Key Benefits</h4>;
+          <div className="space-y-2">;
+            {service && service.benefits.slice(0, 2).map((benefit, idx) => (;
+              <motion&& motion.div
+                key={idx}
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+              >
+                <div className='w-2 h-2 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full'></div>
+                <span className='text-gray-300'>{feature}</span>
+              </motion.div>
+            ))}
+            {service.features.length > 3 && (
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               </div>
             )}
           </div>
         </div>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1139,10 +1295,13 @@ const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = (_{_service, _i
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         {/* Benefits */}
         <div className="relative z-10 mb-6">
           <h4 className="text-sm font-semibold text-gray-300 mb-3">Key Benefits</h4>
           <div className="space-y-2">
+<<<<<<< HEAD
 =======
         {/* Benefits */}
         <div className='relative z-10 mb-6'>
@@ -1155,6 +1314,8 @@ const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = (_{_service, _i
           <div className='space-y-2'>            {service.benefits.slice(0, 2).map((benefit, idx) => (
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             {service.benefits.slice(0, 2).map((benefit, idx) => (
               <motion.div
 =======
@@ -1185,30 +1346,40 @@ const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = (_{_service, _i
             {service.benefits.slice (0, 2).map ((benefit, idx) => (
               <motion.div;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 key={idx}
                 initial={{ opacity: 0, coordinate_x: -20 }}
                 animate={{ opacity: 1, coordinate_x: 0 }}
                 transition={{ delay: 0.8 + idx * 0.1 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
 
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         {/* Benefits */}
         <div className='relative z-10 mb-6'>
           <h4 className='text-sm font-semibold text-gray-300 mb-3'>
             Key Benefits
           </h4>
+<<<<<<< HEAD
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
           <div className='space-y-2'>            {service.benefits.slice(0, 2).map((benefit, idx) => (
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             {service.benefits.slice(0, 2).map((benefit, idx) => (
               <motion.div
                 key={idx}
@@ -1217,27 +1388,25 @@ const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = (_{_service, _i
                 transition={{ delay: 0.8 + idx * 0.1 }}
                 className='flex items-center space-x-2 text-sm'
               >
-                <div className='w-2 h-2 bg-gradient-to-r from-green-400 to-emerald-400 rounded-full'></div>
-
-                <span className='text-gray-300'>{benefit}</span>              </motion.div>
-
               </motion.div>
             ))}
 
           </div>;
         </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
-
 =======
+                <span className='text-gray-300'>{benefit}</span>              </motion.div>
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {/* Market info */}
 
         {service.marketSize && service.growthRate && (
           <div className="relative z-10 mb-6">
+<<<<<<< HEAD
 =======
                 <span className='text-gray-300'>{benefit}</span>              </motion.div>                className="flex items-center space-x-2 text-sm"
               >
@@ -1274,6 +1443,8 @@ const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = (_{_service, _i
                   {service.growthRate}
                 </span>              </div>          <div className="relative z-10 mb-6">
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <div className="bg-gray-800/30 rounded-lg p-3 border border-gray-600/20">
               <div className="flex items-center justify-between text-xs">
                 <span className="text-gray-400">Market Size</span>
@@ -1285,14 +1456,17 @@ const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = (_{_service, _i
               </div>
             </div>
           </div>
-        )}
+            ))}
 
         {/* Market info */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 {/* Market info */}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         {service && service.marketSize && service && service.growthRate && (;
           <div className='relative z-10 mb-6'>;
             <div className='bg-gray-800/30 rounded-lg p-3 border border-gray-600/20'>;
@@ -1318,6 +1492,7 @@ const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = (_{_service, _i
             </div>;
           </div>;
         )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -1358,10 +1533,13 @@ const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = (_{_service, _i
             className='group/btn relative w-full inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-xl overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/25'
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <motion.a
             href={service.link}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
             className="group/btn relative w-full inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-xl overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/25"
@@ -1380,6 +1558,8 @@ const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = (_{_service, _i
             {/* Button glow effect */}
             <div className='absolute inset-0 bg-gradient-to-r from-cyan-400 to-purple-400 opacity-0 group-hover/btn:opacity-100 transition-opacity duration-300'></div>          </motion.a>          >
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <span className="relative z-10 flex items-center space-x-2">
               <span>Learn More</span>
               <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform duration-200" />
@@ -1389,7 +1569,10 @@ const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = (_{_service, _i
           </motion.a>
         </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <div className='relative z-10'>          <motion&& motion.a
             href={service && service.link}
             whileHover={{ scale: 1 && 1.05 }}
@@ -1404,10 +1587,14 @@ const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = (_{_service, _i
               <span>Learn More</span>;
               <ArrowRight className='w-4 h-4 group-hover/btn:translate-x-1 transition-transform duration-200' />;
             </span>;
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
+          </motion.a>
 
             {/* Button glow effect */}
             <div className='absolute inset-0 bg-gradient-to-r from-cyan-400 to-purple-400 opacity-0 group-hover/btn:opacity-100 transition-opacity duration-300'></div>          </motion && motion.a>          >;
@@ -1422,27 +1609,35 @@ const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = (_{_service, _i
         </div>;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           </motion.a>
 
         </div>
 
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         {/* Hover overlay */}
         <motion&& motion.div
           initial={{ opacity: 0 }}
           whileHover={{ opacity: 1 }}
-
-
 export default UltraFuturisticServiceCardV2;
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 className='flex items - center space - x-2 text - sm';
               >;
                 <div className='w - 2 h - 2 bg - gradient - to - r from - green - 400 to - emerald - 400 rounded - full'></div>;
@@ -1520,6 +1715,7 @@ export default UltraFuturisticServiceCardV2;        />;
 ;
 export default UltraFuturisticServiceCardV2;
 ;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 =======
@@ -1528,38 +1724,33 @@ export default UltraFuturisticServiceCardV2;
       </div>
     </motion.div>
           className='absolute inset-0 bg-gradient-to-br from-cyan-500/10 to-purple-500/10 rounded-2xl pointer-events-none'
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
         />
       </div>
     </motion.div>
   );
-}
-};
-
 export default UltraFuturisticServiceCardV2;        />
       </div>
     </motion.div>
   )
 }
-};
-export default UltraFuturisticServiceCardV2;        />;
-      </div>;
-    </motion && motion.div>;
-  );
-};
 export default UltraFuturisticServiceCardV2;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
-
-
-        />
-      </div>
-    </motion.div>
-  );
+export default UltraFuturisticServiceCardV2;
+export default UltraFuturisticServiceCardV2;
 
 };
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -1568,3 +1759,5 @@ export default UltraFuturisticServiceCardV2;
 export default UltraFuturisticServiceCardV2;
 export default UltraFuturisticServiceCardV2;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -1,5 +1,8 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface MilestoneSuggestionsProps {
   project_name: string;
   scope_summary: string;
@@ -8,6 +11,7 @@ import { GeneratedMilestone, MilestoneInput, useMilestoneGenerator } from '@/hoo
 import { Loader2, Sparkles, Check } from 'lucide-react';
 import { Badge } from '@/components / ui / badge';
 interface MilestoneSuggestionsProps {
+<<<<<<< HEAD
 
 
   endDate?: Date;
@@ -42,12 +46,15 @@ interface MilestoneSuggestionsProps {
 <<<<<<< HEAD
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   endDate?: Date;
   projectType: string;
   onMilestonesGenerated?: (milestones: GeneratedMilestone[]) => void;  projectType: string,
   onMilestonesGenerated?: (milestones: GeneratedMilestone[],) => void
 
 
+<<<<<<< HEAD
 
 export function MilestoneSuggestions({
 =======
@@ -126,11 +133,19 @@ export function MilestoneSuggestions(): any ({;
 
 export function MilestoneSuggestions({
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  projectName: string
+  scopeSummary: string
+  startDate: Date
+
+export function MilestoneSuggestions({
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   projectName;
   scopeSummary;
   startDate;
   endDate;
   projectType;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 }: MilestoneSuggestionsProps) { const { generateMilestones, generatedMilestones, isGenerating  } = useMilestoneGenerator(),
@@ -156,13 +171,18 @@ export function MilestoneSuggestions({
     } catch (error) {
       return dateString
     }
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   };
 
 
 
 
 
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useState } from 'react',;
 import { Button } from '@/components/ui/button',;
 import { GeneratedMilestone, MilestoneInput, useMilestoneGenerator } from '@/hooks/useMilestoneGenerator',;
@@ -177,6 +197,7 @@ interface MilestoneSuggestionsProps {;
   endDate?: Date,;
   projectType: string,;
   onMilestonesGenerated?: (milestones: GeneratedMilestone[]) => void;
+}
 
 export function MilestoneSuggestions({
   projectName,
@@ -186,47 +207,13 @@ export function MilestoneSuggestions({
   projectType,
   onMilestonesGenerated
 }: MilestoneSuggestionsProps) {
-  const { generateMilestones, generatedMilestones, isGenerating } = useMilestoneGenerator(),
-  const [showSuggestions, setShowSuggestions] = useState(false),
-
-  const { generateMilestones, generatedMilestones, isGenerating } =
-    useMilestoneGenerator()
-  const [showSuggestions, setShowSuggestions] = useState(false)
-    const input: MilestoneInput = {
-      scope: `${projectName}: ${scopeSummary}`,
-      startDate: startDate.toISOString(),
-      endDate: endDate ? endDate.toISOString() : null,
-      projectType: projectType || 'Other',
-    }
-    const milestones = await generateMilestones(input)
-    if (milestones.length > 0) {
-      setShowSuggestions(true)
-      if (onMilestonesGenerated) {
-        onMilestonesGenerated(milestones) }  projectName: string,
-  scopeSummary: string,
-  startDate: Date,
-  endDate?: Date
-  projectType: string,
-  onMilestonesGenerated?: (milestones: GeneratedMilestone[]) => void
-}
-
 
 
   const handleGenerateMilestones = async () => {
     const input: MilestoneInput = {
       scope: `${projectName}: ${scopeSummary}`,
-        onMilestonesGenerated(milestones)
-      }
-    }
-  }
-  const formatDate = (dateString: string,) => {
-    try {
-      return format(parseISO(dateString), 'MMM dd, yyyy')
-      return dateString
-    }
-  }
-      projectType: projectType || "Other"
-    },
+      startDate: startDate.toISOString(),
+      endDate: endDate ? endDate.toISOString() : null,
 
     const milestones = await generateMilestones(input),
     
@@ -267,11 +254,8 @@ export function MilestoneSuggestions({;
       return dateString;
     }
   },
-    <div className="space-y-4">
-      {!showSuggestions && (
-  onMilestonesGenerated
-}: MilestoneSuggestionsProps) {
 
+<<<<<<< HEAD
   const { generateMilestones, generatedMilestones, isGenerating } =
     useMilestoneGenerator()
   const [showSuggestions, setShowSuggestions] = useState(false)
@@ -404,6 +388,8 @@ export function MilestoneSuggestions({
   }
       projectType: projectType || "Other"
     },
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
     const milestones = await generateMilestones(input),
     
@@ -444,12 +430,16 @@ export function MilestoneSuggestions({;
       return dateString;
     }
   },
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   return (
     <div className="space-y-4">
       {!showSuggestions && (
         <Button
+<<<<<<< HEAD
 
 
           variant="outline"
@@ -472,12 +462,17 @@ export function MilestoneSuggestions({;
 
 
 
+=======
+          {isGenerating ? (
+            <>
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <Loader2 className="mr-2 h-4 w-4 animate-spin" />
 <<<<<<< HEAD
               Generating milestones...
             </>
           ) : (
             <>
+<<<<<<< HEAD
 
               <Sparkles className="mr-2 h-4 w-4" />
 
@@ -495,36 +490,19 @@ export function MilestoneSuggestions({;
             <div className='space-y-3'>          <CardHeader className="pb-3">
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
 
-              Suggest Project Milestones with AI
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
+              <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+              Generating milestones...
             </>
-          disabled={isGenerating || !scopeSummary || !startDate}
-          className='w-full'>;
-          {isGenerating ? (;
-            <>;
-              <Loader2 className='mr-2 h-4 w-4 animate-spin' />              Generating milestones...;
-            </>;
-          ) : (;
-            <>;
-              <Sparkles className='mr-2 h-4 w-4' />              Suggest Project Milestones with AI;
-              <Loader2 className="mr-2 h-4 w-4 animate-spin" />;
-          variant="outline";
-          onClick={handleGenerateMilestones}
-          disabled={isGenerating || !scopeSummary || !startDate}
-          className="w-full";
-        >;
-          {isGenerating ? (;
-            <>;
-              <Loader2 className="mr-2 h-4 w-4 animate-spin" />;
-              Generating milestones...;
-            </>;
-          ) : (;
-            <>;
-              <Sparkles className='mr-2 h-4 w-4' />              <Sparkles className="mr-2 h-4 w-4" />;
-              Suggest Project Milestones with AI;
-            </>;
+          ) : (
+            <>
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
           )}
         </Button>;
@@ -537,13 +515,14 @@ ursor/fix-website-loading-errors-and-merge-6662
           <CardHeader className="pb-3">
               <Sparkles className='mr-2 h-4 w-4' />              <Sparkles className="mr-2 h-4 w-4" />
               <Sparkles className="mr-2 h-4 w-4" />
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               Suggest Project Milestones with AI
             </>
           )}
         </Button>
       )}
-      {showSuggestions && generatedMilestones.length > 0 && (
-        <Card>
           <CardHeader className='pb-3'>
             <CardTitle className='text-lg flex items-center'>
               <Sparkles className='h-5 w-5 mr-2 text-primary' />              AI-Suggested Milestones
@@ -552,14 +531,17 @@ ursor/fix-website-loading-errors-and-merge-6662
           <CardContent>
             <div className='space-y-3'>          <CardHeader className="pb-3">
 
-      {showSuggestions && generatedMilestones.length > 0 && (
-        <Card>
+
+
           <CardHeader className="pb-3">
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           <CardHeader className="pb-3">
 
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <CardTitle className="text-lg flex items-center">
 <<<<<<< HEAD
               <Sparkles className="h-5 w-5 mr-2 text-primary" />
@@ -569,6 +551,7 @@ ursor/fix-website-loading-errors-and-merge-6662
             </CardTitle>
           </CardHeader>
           <CardContent>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -587,6 +570,8 @@ ursor/fix-website-loading-errors-and-merge-6662
                     <div className="font-medium flex items-center">
                       {milestone.title}
                       <Badge variant="secondary" className="ml-2 text-xs">
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
                         AI Suggested
@@ -600,6 +585,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                     </div>
                   </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
             <div className="space-y-3">
 
@@ -611,6 +597,8 @@ ursor/fix-website-loading-errors-and-merge-6662
                   <p className="text-sm text-muted-foreground">{milestone.description}</p>
                   <div className="flex justify-between items-center mt-2 text-sm">
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               {generatedMilestones.map((milestone, index) => (
                 <div key={index} className="p-3 border rounded-lg bg-muted/10">
                   <div className="flex items-center justify-between mb-1">
@@ -624,8 +612,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                       Due: {formatDate(milestone.dueDate)}
                     </div>
                   </div>
-
-
                   <p className="text-sm text-muted-foreground">{milestone.description}</p>
 <<<<<<< HEAD
                   <div className="flex justify-between items-center mt-2 text-sm">
@@ -636,6 +622,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                 </div>
               ))}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
               <div className="flex items-center justify-center mt-4 text-sm text-muted-foreground">
@@ -654,6 +641,10 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
 
+=======
+
+              <div className="flex items-center justify-center mt-4 text-sm text-muted-foreground">
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <Check className="h-4 w-4 mr-1 text-green-500" />
 <<<<<<< HEAD
                 These milestones will be added to your contract
@@ -664,6 +655,7 @@ ursor/fix-website-loading-errors-and-merge-6662
           </CardContent>
         </Card>
       )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -825,6 +817,10 @@ ursor/fix-website-loading-errors-and-merge-6662
           </CardContent>;
         </Card>)}
     </div>);
+=======
+    </div>;
+  );
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 <Button variant="outline" on_click={
   handleGenerateMilestones;
@@ -840,6 +836,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 }"}
 
+<<<<<<< HEAD
 }<div className="flex items-center justify-center mt-4 text-sm text-muted-foreground" > <Check className="h-4 w-4 mr-1 text-green-500" /> These milestones will be added to your contract </div> </div> </CardContent> </Card>)
 }</div>)
 }"}
@@ -856,10 +853,13 @@ ursor/fix-website-loading-errors-and-merge-6662
 }</div>)
 }"}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }<div className="flex items-center justify-center mt-4 text-sm text-muted-foreground" > <Check className="h-4 w-4 mr-1 text-green-500" /> These milestones will be added to your contract </div> </div> </CardContent> </Card>) 
 }</div>) 
 }"};
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     </div>;
@@ -871,8 +871,15 @@ ursor/fix-website-loading-errors-and-merge-6662
   );
 }
 ;
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     </div>;
   );
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

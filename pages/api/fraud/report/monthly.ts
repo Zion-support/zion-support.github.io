@@ -1,7 +1,10 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getFraudStore } from "../../../../utils/fraud/store";
@@ -9,7 +12,6 @@ export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
-  try {
   if (req && req.method !== "GET") {
     res && res.status(405).json({ error: "Method not allowed" });
     return;
@@ -29,8 +31,12 @@ export default async function handler(
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import type { NextApiRequest, NextApiResponse } from './next';
 import { getFraudStore  } from '../../../../utils / fraud / store';
 ;
@@ -43,6 +49,7 @@ if ( {) {
   $2
 }
     res.status (405).json ({ error: "Method not allowed" });
+<<<<<<< HEAD
 =======
 
 import type { NextApiRequest, NextApiResponse } from "next";
@@ -66,6 +73,10 @@ export default async function handler(req, res) {
     return;
   }
 <<<<<<< HEAD
+=======
+    return;
+  }
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const month =;
     (req.query.month as string) || new Date ().toISOString ().slice (0, 7);
   const store = getFraudStore ();
@@ -73,6 +84,7 @@ export default async function handler(req, res) {
   res.status (200).json (report);
 }
 
+<<<<<<< HEAD
 =======
   const month =
     (req.query.month as string) |new Date().toISOString().slice(0, 7);
@@ -88,6 +100,8 @@ export default async function handler(req, res) {
   }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const month = (req.query.month as string) || new Date().toISOString().slice(0, 7);
   const store = getFraudStore();
   const report = await store.generateMonthlyReport(month);
@@ -98,17 +112,14 @@ export default async function handler(req, res) {
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 
@@ -9,13 +10,18 @@ import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
 import {FeaturedListingsSection} from "@/components/FeaturedListingsSection";
 import {GradientHeading} from "@/components/GradientHeading";
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
 import { FeaturedListingsSection } from "@/components/FeaturedListingsSection";
 import { GradientHeading } from "@/components/GradientHeading";
 import { FeaturedListingsSection } from "@/components/FeaturedListingsSection",
 import { GradientHeading } from "@/components/GradientHeading",
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export default function Featured() {
   return (
     <>
@@ -31,6 +37,7 @@ export default function Featured() {
               These featured listings represent the best that the Zion Marketplace has to offer.
             </p>
           </div>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import {Header} from "@/components/Header";
@@ -90,6 +97,8 @@ export default function Featured() {;
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { Header } from '@/components / Header';
 import { Footer } from '@/components / Footer';
 import { FeaturedListingsSection } from '@/components / FeaturedListingsSection';
@@ -108,18 +117,27 @@ function Featured() {
               Featured Listings;
             </GradientHeading>;
             <p className="text - zion - slate - light text - lg max - w-3xl mx - auto">;
+<<<<<<< HEAD
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               Discover our handpicked selection of premium AI products and services.;
               These featured listings represent the best that the Zion Marketplace has to offer.;
             </p>;
           </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           {/* Reuse the FeaturedListings component */}
           <FeaturedListingsSection showTitle={false} />
         </div>
@@ -128,10 +146,14 @@ function Featured() {
     </>
   )
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 }
 ;
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 }
@@ -147,3 +169,12 @@ function Featured() {
 }
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+          {/* Reuse the FeaturedListings component */}
+          <FeaturedListingsSection show_title={false} />;
+        </div>;
+      </div>;
+      <Footer />;
+    </>);
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

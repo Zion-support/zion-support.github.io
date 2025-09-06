@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -18,6 +19,8 @@ import { cn } from "@/lib/utils"
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 const Select = SelectPrimitive.Root
 const SelectGroup = SelectPrimitive.Group
 const SelectValue = SelectPrimitive.Value
@@ -28,6 +31,7 @@ const SelectTrigger = React.forwardRef<
   <SelectPrimitive.Trigger
     ref={ref}
     className={cn(
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -41,11 +45,14 @@ const SelectTrigger = React.forwardRef<
       &quot;flex h-10 w-full items-center justify-between rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 [&>span]:line-clamp-1&quot;
       "flex h-10 w-full items-center justify-between rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 [&>span]:line-clamp-1",
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       className
     )}
     {...props}
   >;
     {children}
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -63,6 +70,8 @@ const SelectTrigger = React.forwardRef<
     <SelectPrimitive.Icon asChild>
       <ChevronDown className="h-4 w-4 opacity-50" />
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     </SelectPrimitive.Icon>
   </SelectPrimitive.Trigger>
 ))
@@ -74,6 +83,7 @@ const SelectScrollUpButton = React.forwardRef<
   <SelectPrimitive.ScrollUpButton
     ref={ref}
     className={cn(
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -87,15 +97,21 @@ const SelectScrollUpButton = React.forwardRef<
       &quot;flex cursor-default items-center justify-center py-1&quot;
       "flex cursor-default items-center justify-center py-1",
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       className
     )}
     {...props}
   >
 <<<<<<< HEAD
+<<<<<<< HEAD
     <ChevronUp className=&quot;h-4 w-4&quot; />
 =======
     <ChevronUp className="h-4 w-4" />
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+    <ChevronUp className="h-4 w-4" />
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   </SelectPrimitive.ScrollUpButton>
 ))
 SelectScrollUpButton.displayName = SelectPrimitive.ScrollUpButton.displayName
@@ -106,6 +122,7 @@ const SelectScrollDownButton = React.forwardRef<
   <SelectPrimitive.ScrollDownButton
     ref={ref}
     className={cn(
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -119,15 +136,21 @@ const SelectScrollDownButton = React.forwardRef<
       &quot;flex cursor-default items-center justify-center py-1&quot;
       "flex cursor-default items-center justify-center py-1",
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       className
     )}
     {...props}
   >
 <<<<<<< HEAD
+<<<<<<< HEAD
     <ChevronDown className=&quot;h-4 w-4&quot; />
 =======
     <ChevronDown className="h-4 w-4" />
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+    <ChevronDown className="h-4 w-4" />
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   </SelectPrimitive.ScrollDownButton>
 ))
 SelectScrollDownButton.displayName =
@@ -136,14 +159,19 @@ const SelectContent = React.forwardRef<
   React.ElementRef<typeof SelectPrimitive.Content>
   React.ComponentPropsWithoutRef<typeof SelectPrimitive.Content>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >(({ className, children, position = &quot;popper&quot;, ...props }, ref) => (
 =======
 >(({ className, children, position = "popper", ...props }, ref) => (
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>(({ className, children, position = "popper", ...props }, ref) => (
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   <SelectPrimitive.Portal>
     <SelectPrimitive.Content
       ref={ref}
       className={cn(
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -163,6 +191,8 @@ const SelectContent = React.forwardRef<
         position === "popper" &&
           "data-[side=bottom]:translate-y-1 data-[side=left]:-translate-x-1 data-[side=right]:translate-x-1 data-[side=top]:-translate-y-1",
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         className
       )}
       position={position}
@@ -171,6 +201,7 @@ const SelectContent = React.forwardRef<
       <SelectScrollUpButton />
       <SelectPrimitive.Viewport
         className={cn(
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -186,6 +217,9 @@ const SelectContent = React.forwardRef<
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+        )}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import * as React from &quot;react & quot;
 import * as SelectPrimitive from &quot;@radix - ui / react - select & quot;
 import { Check, ChevronDown, ChevronUp } from &quot;lucide-react & quot;
@@ -253,6 +287,7 @@ const SelectContent = React.forward_ref<;
         position === &quot;popper & quot; &&;
           &quot;data-[side = bottom]:translate - y-1 data-[side = left]:-translate - x-1 data-[side = right]:translate - x-1 data-[side = top]:-translate - y-1 & quot;,
         class_name)}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 import * as React from "react";
@@ -336,16 +371,22 @@ const SelectContent = React.forwardRef<;
         className;
       )}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       position={position}
       {...props}
     >;
       <SelectScrollUpButton />;
       <SelectPrimitive.Viewport;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         className={cn (
           &quot;p - 1&quot;,
           position === &quot;popper & quot; &&;
             &quot;h-[var (--radix - select - trigger - height)] w - full min - w-[var (--radix - select - trigger - width)]&quot)}
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
         className={cn(;
@@ -361,11 +402,14 @@ const SelectContent = React.forwardRef<;
             "h-[var(--radix-select-trigger-height)] w-full min-w-[var(--radix-select-trigger-width)]"
         )}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       >;
         {children}
       </SelectPrimitive.Viewport>;
       <SelectScrollDownButton />;
     </SelectPrimitive.Content>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
   </SelectPrimitive.Portal>;
@@ -384,17 +428,21 @@ const SelectLabel = React.forwardRef<;
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  React.ComponentPropsWithoutRef<typeof SelectPrimitive.Label>;
+>(({ className, ...props }, ref) => (;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   </SelectPrimitive.Portal>));
 SelectContent.display_name = SelectPrimitive.Content.display_name;
 const SelectLabel = React.forward_ref<;
   React.ElementRef < typeof SelectPrimitive.Label>,
   React.ComponentPropsWithoutRef < typeof SelectPrimitive.Label>;
 >(({ class_name, ...props }, ref) => (
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   <SelectPrimitive.Label;
     ref={ref}
     className={cn (&quot;py - 1.5 pl - 8 pr - 2 text - sm font - semibold & quot;, class_name)}
     {...props}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
   React.ElementRef<typeof SelectPrimitive.Label>;
@@ -420,10 +468,13 @@ const SelectItem = React.forwardRef<;
   React.ElementRef<typeof SelectPrimitive.Item>;
   React.ElementRef<typeof SelectPrimitive.Item>,;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   React.ComponentPropsWithoutRef<typeof SelectPrimitive.Item>;
 >(({ className, children, ...props }, ref) => (;
   <SelectPrimitive.Item;
     ref={ref}
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -449,10 +500,28 @@ className={cn(
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+      &quot;relative flex w-full cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50&quot;
+    className={cn(
+      "relative flex w-full cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
+      &quot;relative flex w-full cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50&quot;,
+    className={cn(
+      "relative flex w-full cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
+
+
+    className={cn(
+      "relative flex w-full cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
+
+      &quot;relative flex w-full cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50&quot;,
+    className={cn(
+      "relative flex w-full cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       className
     )}
     {...props}
   >
+<<<<<<< HEAD
 <<<<<<< HEAD
     <span className=&quot;absolute left-2 flex h-3.5 w-3.5 items-center justify-center&quot;>
       <SelectPrimitive.ItemIndicator>
@@ -462,6 +531,11 @@ className={cn(
       <SelectPrimitive.ItemIndicator>
         <Check className="h-4 w-4" />
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+    <span className="absolute left-2 flex h-3.5 w-3.5 items-center justify-center">
+      <SelectPrimitive.ItemIndicator>
+        <Check className="h-4 w-4" />
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       </SelectPrimitive.ItemIndicator>
     </span>
     <SelectPrimitive.ItemText>{children}</SelectPrimitive.ItemText>
@@ -473,6 +547,7 @@ const SelectSeparator = React.forwardRef<
   React.ComponentPropsWithoutRef<typeof SelectPrimitive.Separator>
 >(({ className, ...props }, ref) => (
   <SelectPrimitive.Separator
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -523,11 +598,13 @@ export {
   SelectItem,
 <<<<<<< HEAD
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   SelectSeparator;
   SelectScrollUpButton;
   SelectScrollDownButton}
-=======
 
+<<<<<<< HEAD
 =======
   SelectSeparator;
   SelectScrollUpButton;
@@ -593,6 +670,8 @@ export {Select;
   SelectScrollUpButton;
   SelectScrollDownButton}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export {;
   Select,;
   SelectGroup,;
@@ -605,6 +684,7 @@ export {;
   SelectScrollUpButton;
   SelectScrollDownButton}
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -658,3 +738,5 @@ React.ComponentPropsWithoutRef<typeof SelectPrimitive.Separator> > ( ({
   Select, SelectGroup, SelectValue, SelectTrigger, SelectContent, SelectLabel, SelectItem, SelectSeparator, SelectScrollUpButton, SelectScrollDownButton 
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

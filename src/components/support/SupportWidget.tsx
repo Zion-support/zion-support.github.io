@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import React, { useState } from 'react'
 import { useRouter } from 'next/router'
@@ -12,6 +13,8 @@ export function SupportWidget() {
   const [isOpen, setIsOpen] = useState(false)
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 const [isOpen, setIsOpen] = useState(false)
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const { theme } = useTheme()
   const router = useRouter()
   return (
@@ -44,6 +47,7 @@ const [isOpen, setIsOpen] = useState(false)
                 className={cn(
                   'font-semibold'
                   theme === 'dark' ? 'text-white' : 'text-gray-800'
+<<<<<<< HEAD
 <<<<<<< HEAD
                 )}
               >
@@ -150,6 +154,8 @@ function SupportWidget() {
 }
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 import React, { useState } from "react",
 import { useRouter } from "next/router",
@@ -210,6 +216,7 @@ export function SupportWidget() {;
             </div>
             <div className="flex items-center gap-2">
 <<<<<<< HEAD
+<<<<<<< HEAD
               <Button
 =======
               <Button
@@ -221,6 +228,8 @@ export function SupportWidget() {;
 }
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 variant="ghost"
                 size="icon"
                 className="h-8 w-8 rounded-full"
@@ -242,15 +251,15 @@ export function SupportWidget() {;
           </div>
           
           <ChatBotPanel />
-          
-          
-          <ChatBotPanel />
         </div>
       )}
     </>;
   );
+<<<<<<< HEAD
 };
 };
 }
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

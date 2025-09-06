@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -21,16 +22,21 @@ export function LoadingSpinner({ size = "medium", className = "" }: LoadingSpinn
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 "use client",
 interface LoadingSpinnerProps {
   size?: "small" | "medium" | "large",
   class_name?: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 "use client";
 interface LoadingSpinnerProps {size?: "small" | "medium" | "large";
   className?: string;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 export /**
  * LoadingSpinner - Function description
@@ -41,6 +47,7 @@ function LoadingSpinner() {
     medium: "w - 8 h - 8",
     large: "w - 12 h - 12";
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
   return (
     <div className={`${size_classes[size]} ${class_name}`} role="status" aria - label="Loading">;
@@ -61,6 +68,8 @@ export function LoadingSpinner({ size = "medium", className = "" }: LoadingSpinn
   return (;
     <div className={`${sizeClasses[size]} ${className}`} role="status" aria-label="Loading">;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <svg;
         className="animate - spin text - blue - 500";
         xmlns="http: //www.w3.org / 2000 / svg";

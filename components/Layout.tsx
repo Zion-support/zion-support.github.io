@@ -1,5 +1,8 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -24,12 +27,16 @@ class ErrorBoundary extends React.Component {
   }
 }
 
+<<<<<<< HEAD
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from "react";
 import Head from "next/head";
 import Header from "./Header";
 import Footer from "./Footer";
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -61,6 +68,8 @@ import Header from "./Header";
 import Footer from "./Footer";
 origin/main
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface LayoutProps {
   children: React.ReactNode;
 =======
@@ -76,6 +85,7 @@ interface LayoutProps {;
   og_image?: string;
   no_index?: boolean;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -122,6 +132,8 @@ const Layout: React.FC<LayoutProps> = ({;
   return (
     <div className="min-h-screen bg-white">;
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 const Layout: React.FC < LayoutProps> = ({
   children,
   title = "Zion Tech Group - AI, IT & Micro SaaS Solutions",
@@ -165,6 +177,7 @@ const Layout: React.FC < LayoutProps> = ({
         <meta name="keywords" content={keywords} />;
         {canonical && <link rel="canonical" href={canonical} />}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -177,6 +190,8 @@ const Layout: React.FC < LayoutProps> = ({
 import React, { ReactNode } from "react";
 =======
         <meta property="og:title" content={ogTitle || title} />;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <meta
           property="og:description"
           content={ogDescription || description}
@@ -197,16 +212,20 @@ import React, { ReactNode } from "react";
         {/* JSON-LD */}
         <script
           type="application/ld+json"
+<<<<<<< HEAD
           dangerouslySetInnerHTML={{ __html: JSON && JSON.stringify(jsonLd) }}
         />;
       </Head>;
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <Header />;
       <main>{children}</main>;
       <Footer />;
     </div>;
   );
 };
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
@@ -219,6 +238,8 @@ import React, { ReactNode } from "react";
     </div>
 import React, { ReactNode } from "react";
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 interface LayoutProps {
   children: ReactNode,
@@ -230,6 +251,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
       {children}
     </main>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -240,6 +262,18 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 }
 export default Layout;
 =======
+=======
+import React, { ReactNode } from "react";
+interface LayoutProps {
+  children: ReactNode;
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         {no_index && <meta name="robots" content="noindex, nofollow" />}
         {/* Open Graph */}
         <meta property="og:title" content={og_title || title} />;
@@ -269,6 +303,7 @@ export default Layout;
       <Footer />;
     </div>);
 }
+<<<<<<< HEAD
 
   } catch (error) {
     console.error("Error:", error);
@@ -321,6 +356,8 @@ interface LayoutProps {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -346,4 +383,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   );
 };
 export default Layout;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 function ClientDashboardContent() {;
   const [activeTab, setActiveTab] = useState<JobStatus | "all">("all");
   const { jobs, isLoading } = useJobs();
@@ -76,6 +77,8 @@ function ClientDashboardContent() {
   const handleJobSelect = (jobId: string, jobTitle: string) => {
     setSelectedJobId(jobId);    setSelectedJobTitle(jobTitle)
   }
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       const firstJob = jobs[0],
       if (firstJob) {
         setSelectedJobId(firstJob.id),
@@ -83,6 +86,10 @@ function ClientDashboardContent() {
       }
     }
   }, [jobs, selectedJobId]),
+  const showAdvanced =;
+    onboardingStatus && onboardingStatus.jobPosted &&;
+    onboardingStatus && onboardingStatus.inviteSent &&;
+    onboardingStatus && onboardingStatus.responseReceived;
 
   const handleJobSelect = (jobId: string, jobTitle: string) => {
     setSelectedJobId(jobId),
@@ -90,6 +97,9 @@ function ClientDashboardContent() {
   },
 
   return (
+
+
+
     <>
       <SEO
         title="Client Dashboard | Zion AI Marketplace"
@@ -114,6 +124,7 @@ function ClientDashboardContent() {
             </Button>
           </div>
         </div>
+<<<<<<< HEAD
         <div className="mb-8">
           <ClientOnboardingSteps />
           {showAdvanced && (
@@ -235,12 +246,16 @@ if ( {) {
 
         {/* New Onboarding Steps */}
 <<<<<<< HEAD
+=======
+        {/* New Onboarding Steps */}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <div className="mb-8">;
           <ClientOnboardingSteps />;
           {showAdvanced && (;
             <div className="mt-6">;
               <AdvancedOnboardingSteps />;
             </div>;
+<<<<<<< HEAD
           )}
 
 
@@ -269,6 +284,11 @@ if ( {) {
                 <TabsTrigger value="closed" className={isMobile ? 'flex-1' : ''}>Closed</TabsTrigger>
               </TabsList>
               
+=======
+          )}
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <TabsContent value="all" className="mt-0">
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
               </TabsContent>
@@ -286,6 +306,7 @@ if ( {) {
               </TabsContent>
             </Tabs>
           </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
         {/* New Onboarding Steps */}
@@ -331,6 +352,8 @@ if ( {) {
           <div>
             <div className="sticky top-4 space-y-6">
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               {/* Active Projects Card */}
               <ActiveProjectsCard />;
               {/* Upcoming Interviews Card */}
@@ -342,6 +365,7 @@ if ( {) {
                   AI Talent Suggestions;
                 </h2>;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
           <div>
@@ -357,6 +381,8 @@ if ( {) {
                   AI Talent Suggestions
                 </h2>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 {selectedJobId ? (
                   <SuggestedTalents job_id={selectedJobId} />) : (
                   <div className="bg - muted / 30 border rounded - lg p - 6 text - center">;
@@ -373,6 +399,9 @@ if ( {) {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         </div>;
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">;
@@ -413,6 +442,7 @@ if ( {) {
           
           <div>
             <div className="sticky top-4 space-y-6">
+<<<<<<< HEAD
 
 =======
   return (<ProtectedRoute> <ClientDashboardContent /> </ProtectedRoute> '"};
@@ -468,6 +498,8 @@ return (<> <SEO title="Client Dashboard | Zion AI Marketplace" description="Mana
           <div>
             <div className="sticky top-4 space-y-6">
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               {/* Active Projects Card */}
               <ActiveProjectsCard />;
 
@@ -488,16 +520,15 @@ return (<> <SEO title="Client Dashboard | Zion AI Marketplace" description="Mana
                     <p className="text-muted-foreground">;
                       Select a job to see AI-matched talent suggestions;
                     </p>;
-                  </div>;
-                )}
+                  </div>)}
               </div>;
             </div>;
           </div>;
         </div>;
       </main>;
-    </>;
-  );
+    </>);
 }
+<<<<<<< HEAD
 
 export default function ClientDashboard() {;
   return (
@@ -564,3 +595,5 @@ function ClientDashboard() {
 }
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

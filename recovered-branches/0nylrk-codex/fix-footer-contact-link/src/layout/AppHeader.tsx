@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -54,6 +55,8 @@ function AppHeader() {
 =======
 =======
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useState  } from 'react';
 import { useMessaging  } from '@/context/MessagingContext';
 import { MainNavigation  } from './MainNavigation';
@@ -65,28 +68,22 @@ import { useIsMobile  } from '@/hooks/use-mobile';
 import { MobileBottomNav } from '@/components/header/MobileBottomNav';
 export function AppHeader() {
 import {useState} from 'react';
-import {useMessaging} from '@/context/MessagingContext';
+import {use_messaging} from '@/context / MessagingContext';
 import {MainNavigation} from './MainNavigation';
-import {Logo} from '@/components/header/Logo';
-import {ModeToggle} from '@/components/ModeToggle';
+import {Logo} from '@/components / header / Logo';
+import {ModeToggle} from '@/components / ModeToggle';
 import {Menu, X} from 'lucide-react';
-import {MobileMenu} from '@/components/header/MobileMenu';
-import {useIsMobile} from '@/hooks/use-mobile';
-import {MobileBottomNav} from '@/components/header/MobileBottomNav';
-export function AppHeader() {;
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const isMobile = useIsMobile();
-  // Try to access the messaging context, but provide a fallback value if it's not available
-  let unreadCount = 0;
-  try {
-    const { unreadCount: count } = useMessaging()
-
-    unreadCount = count
   } catch (error) {
+<<<<<<< HEAD
     console.warn('Messaging context not available')
   }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+    console.warn ('Messaging context not available');
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useState } from 'react',;
 import { useMessaging } from '@/context/MessagingContext',;
 import { MainNavigation } from './MainNavigation',;
@@ -106,6 +103,7 @@ export function AppHeader() {;
     unreadCount = count;
   } catch (error) {;
     console.warn('Messaging context not available');
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -113,8 +111,12 @@ export function AppHeader() {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   }
+  
   return (
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -182,6 +184,11 @@ export function AppHeader() {;
           <div className="md:hidden ml-auto mr-4">;
             <button;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+          {/* Mobile menu button */}
+          <div className="md:hidden ml-auto mr-4">;
+            <button
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               className="inline-flex items-center justify-center rounded-md p-2 text-white/70 hover:text-white hover:bg-zion-purple/10 focus:outline-none";
               aria-expanded={mobileMenuOpen}
@@ -190,6 +197,7 @@ export function AppHeader() {;
               <span className="sr-only">Open main menu</span>;
               {mobileMenuOpen ? (;
                 <X className="block h-6 w-6" aria-hidden="true" />;
+<<<<<<< HEAD
 <<<<<<< HEAD
               ) : (;
                 <Menu className="block h-6 w-6" aria-hidden="true" />;
@@ -322,6 +330,13 @@ export function AppHeader() {;
       {isMobile && <MobileBottomNav unreadCount={unreadCount} />}
     </>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+              ) : (;
+                <Menu className="block h-6 w-6" aria-hidden="true" />;
+              )}
+      {/* Mobile Bottom Navigation */}
+      {isMobile && <MobileBottomNav unreadCount={unreadCount} />}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <>;
       <header className="sticky top - 0 z - 50 w - full border - b border - zion - purple / 20 bg - zion - blue - dark / 90 backdrop - blur - md">;
         <div className="container flex h - 16 items - center px - 4 sm:px - 6">;
@@ -366,6 +381,7 @@ export function AppHeader() {;
     </>);
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
   ),;}
@@ -392,3 +408,5 @@ export function AppHeader() {;
   )
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

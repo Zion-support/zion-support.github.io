@@ -8,6 +8,7 @@ import {
   Linkedin,
   Github,
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -72,6 +73,8 @@ ursor/fix-syntax-push-and-merge-to-main-40de
   FileText,;
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   HelpCircle} from 'lucide-react';
 export default function EnhancedFooter() {
   const scrollToTop = () => {
@@ -116,6 +119,7 @@ export default function EnhancedFooter() {
     <footer className="bg-gray-900 text-white">
       {' '}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -130,6 +134,8 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <div className="max-w-7xl mx-auto px-4 "sm": px-6 lg:px-8 py-12">
         {' '}
         <div className="grid grid-cols-1 "md": grid-cols-2 lg:grid-cols-6 gap-8">
@@ -184,6 +190,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                   {' '}
                   <a
                     href={link.href}
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -194,6 +201,8 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     className="text-gray-300 "hover": text-white transition-colors duration-200"
                   >
                     {' '}
@@ -214,6 +223,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                   {' '}
                   <a
                     href={link.href}
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -224,6 +234,8 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     className="text-gray-300 "hover": text-white transition-colors duration-200"
                   >
                     {' '}
@@ -244,6 +256,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                   {' '}
                   <a
                     href={link.href}
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -254,6 +267,8 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     className="text-gray-300 "hover": text-white transition-colors duration-200"
                   >
                     {' '}
@@ -274,6 +289,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                   {' '}
                   <a
                     href={link.href}
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -284,6 +300,8 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     className="text-gray-300 "hover": text-white transition-colors duration-200"
                   >
                     {' '}
@@ -297,6 +315,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
         {}{' '}
         <div className="border-t border-gray-800 mt-12 pt-8">
           {' '}
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -313,6 +332,8 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <div className="flex flex-col "md": flex-row justify-between items-center">
             {' '}
             <div className="flex flex-col "md": flex-row items-center space-y-4 md:space-y-0 md:space-x-6">
@@ -327,6 +348,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                   <a
                     key={index}
                     href={link.href}
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -337,6 +359,8 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     className="text-gray-400 "hover": text-white transition-colors duration-200"
                   >
                     {' '}
@@ -346,6 +370,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
               </div>{' '}
             </div>{' '}
             {}{' '}
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -356,12 +381,15 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <div className="flex items-center space-x-4 mt-4 "md": mt-0">
               {' '}
               {socialLinks.map((social, index) => (
                 <a
                   key={index}
                   href={social.href}
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -372,6 +400,8 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   className="text-gray-400 "hover": text-white transition-colors duration-200"
                   aria-label={social.name}
                 >
@@ -387,6 +417,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
           {' '}
           <button
             onClick={scrollToTop}
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -397,6 +428,8 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             className="inline-flex items-center space-x-2 text-gray-400 "hover": text-white transition-colors duration-200"
           >
             {' '}
@@ -420,6 +453,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
       </div>{' '}
     </footer>
   );
+<<<<<<< HEAD
 
 
 
@@ -441,3 +475,5 @@ import React from 'react'; import { Mail,Phone,MapPin,Facebook,Twitter,Linkedin,
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -13,6 +14,8 @@ export default function EmailValidatorPage() {const [emails, setEmails] = useSta
   const [isValidating, setIsValidating] = useState(false);
   const [bulkMode, setBulkMode] = useState(false);
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useState } from 'react',;
 import Head from 'next/head',;
 import Card from '../components/ui/Card',;
@@ -76,6 +79,7 @@ export default function EmailValidatorPage() {;
       score = 60;
       issues.push('Possible typo in domain');
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -92,6 +96,8 @@ export default function EmailValidatorPage() {;
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useState } from 'react',
 import Head from 'next/head',
 import Card from '../components/ui/Card',
@@ -171,6 +177,7 @@ if (email.length > 254) {
       score = 0,
       issues.push('Email too long')
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -179,6 +186,8 @@ if (email.length > 254) {
 :backup-problematic-files/temp_broken_files/components/email-validator.tsx
 :backup-problematic-files/temp_broken_files/components/email-validator.tsx
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     }
     // Additional checks;
     if (email.length > 254) {status = 'invalid';
@@ -189,6 +198,7 @@ if (email.length > 254) {
       score = 0;
       issues.push('Local part too long');
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -255,6 +265,8 @@ if (email.length > 254) {
 :backup-problematic-files/temp_broken_files/components/email-validator.tsx
 :backup-problematic-files/temp_broken_files/components/email-validator.tsx
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     }
   }
   const getScoreColor = (score: number) => {if (score >= 80) return 'text-green-400';
@@ -302,6 +314,7 @@ if (email.length > 254) {
           </h1>
           <p className=&quot;text-xl text-blue-200 max-w-4xl mx-auto leading-relaxed&quot;>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
             Validate email addresses with our advanced validation service. Check for typos, disposable domains, 
@@ -317,6 +330,8 @@ if (email.length > 254) {
             and ensure maximum deliverability for your email campaigns and user registrations.          </p>
 :backup-problematic-files/temp_broken_files/components/email-validator.tsx
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         </div>
       </section>
       {/* Email Validation Tool */}
@@ -354,6 +369,7 @@ if (email.length > 254) {
                     <label className=&quot;block text-sm font-medium text-gray-300 mb-2&quot;>
                       Email Addresses (One per line)
                     </label>
+<<<<<<< HEAD
                     <textarea
                       value={emails}
                       onChange={(e) => setEmails(e.target.value)}
@@ -595,10 +611,13 @@ if (return null, ) {
 
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     )}
                   </Button>;
                   {validation_results.length > 0 && (
                     <Button;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -672,6 +691,8 @@ onClick={clearResults}
 :backup-problematic-files/temp_broken_files/components/email-validator.tsx
 :backup-problematic-files/temp_broken_files/components/email-validator.tsx
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       className=&quot;border-gray-600 text-gray-300 hover:bg-gray-700&quot;
                     >
                       Clear
@@ -679,10 +700,10 @@ onClick={clearResults}
                   )}
                 </div>
                 <div className=&quot;text-sm text-gray-400&quot;>
-                  <p>• Validates email format and syntax</p>
-                  <p>• Checks for disposable email domains</p>
-                  <p>• Detects common typos and mistakes</p>
-                  <p>• Provides deliverability score</p>
+                  <p> Validates email format and syntax</p>
+                  <p> Checks for disposable email domains</p>
+                  <p> Detects common typos and mistakes</p>
+                  <p> Provides deliverability score</p>
                 </div>
               </div>
             </Card>
@@ -763,6 +784,7 @@ variant=&quot;outline & quot;
                             {result.email}
                           </span>;
                         </div>;
+<<<<<<< HEAD
                         <span className={`text - sm font - medium ${getScoreColor (result.score)}`}>;
 <<<<<<< HEAD
 =======
@@ -833,6 +855,8 @@ variant=&quot;outline & quot;
                         </div>;
                         <span className={`text-sm font-medium ${getScoreColor(result.score)}`}>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   {validationResults.map((result, index) => (                    <div,
 key={index}
                       className={_`p-4 rounded-lg border ${
@@ -849,6 +873,7 @@ key={index}
                         </div>
                         <span className={_`text-sm font-medium ${getScoreColor(result.score)}`}>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -856,6 +881,8 @@ key={index}
 :backup-problematic-files/temp_broken_files/components/email-validator.tsx
 :backup-problematic-files/temp_broken_files/components/email-validator.tsx
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                           Score: {result.score}
 
 </span>;
@@ -866,6 +893,7 @@ key={index}
                       </div>;
 
                       {result.issues.length > 0 && (
+<<<<<<< HEAD
 
                         <div className=&quot;text-sm&quot;>
                           <span className=&quot;text-gray-400&quot;>Issues:</span>
@@ -911,6 +939,8 @@ key={index}
 :backup-problematic-files/temp_broken_files/components/email-validator.tsx
 :backup-problematic-files/temp_broken_files/components/email-validator.tsx
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                         </div>
                       )}
                       {result.hasTypo && (
@@ -923,7 +953,7 @@ key={index}
 </div>
               ) : (
                 <div className=&quot;bg-gray-900 p-6 rounded-lg border border-gray-700 text-center&quot;>
-                  <div className=&quot;text-6xl mb-4&quot;>📧</div>
+                  <div className=&quot;text-6xl mb-4&quot;></div>
                   <p className=&quot;text-gray-400&quot;>
                     Validation results will appear here. Enter an email address and click validate to get started.
                   </p>
@@ -958,6 +988,7 @@ key={index}
           </div>;
         </div>;
       </section>;
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -967,6 +998,8 @@ key={index}
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
       <section className="py-20 bg-gradient-to-r from-blue-600 to-indigo-600">
         <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
@@ -1001,6 +1034,7 @@ href=&quot;/pricing&quot;
       </section>
     </>
   )}
+<<<<<<< HEAD
 
 
 :components/email-validator.tsx
@@ -1184,3 +1218,5 @@ href=&quot;/pricing&quot;
 :backup-problematic-files/temp_broken_files/components/email-validator.tsx
 :backup-problematic-files/temp_broken_files/components/email-validator.tsx
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

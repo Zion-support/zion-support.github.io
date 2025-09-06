@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -6,6 +7,8 @@
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useState } from "react";
 import {useQuery} from "@tanstack/react-query";
 import {supabase} from "@/integrations/supabase/client";
@@ -18,7 +21,10 @@ import {Skeleton} from "@/components/ui/skeleton";
 import {ArrowLeft, ArrowRight, RefreshCcw, CheckCircle2, XCircle, Clock, AlertCircle} from "lucide-react";
 import {formatDistanceToNow} from "date-fns";
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useState } from "react",
 import { useQuery } from "@tanstack/react-query",
 import { supabase } from "@/integrations/supabase/client",
@@ -58,6 +64,7 @@ export function TransactionHistory() {
 
   const [filter, setFilter] = useState<'all' | 'pending' | 'completed' | 'escrow'>('all');
 
+<<<<<<< HEAD
   const { data: transactions, isLoading, error, refetch } = useQuery({
     queryKey: ['transactions', user?.id, filter];
     queryFn: async () => {
@@ -599,21 +606,28 @@ interface Transaction {_id: string;
 =======
       
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       toast({
         title: "Success"
         description: data.message |"Transaction updated successfully"})
       refetch()
     } catch (error) {
 <<<<<<< HEAD
+<<<<<<< HEAD
       console.error("Error managing transaction:", error);
 =======
       console.error("Error managing transaction:", error),
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+      console.error("Error managing transaction:", error),
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       toast({
         title: "Error"
         description: error.message |"Failed to update transaction"
         variant: "destructive"})
     }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -629,6 +643,8 @@ interface Transaction {_id: string;
   },
   
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const getStatusBadge = (status: string, inEscrow: boolean) => {
     switch(status) {
       case 'pending':
@@ -641,30 +657,42 @@ interface Transaction {_id: string;
             <Clock className="w-3 h-3 mr-1" /> Pending
           </Badge>
 <<<<<<< HEAD
+<<<<<<< HEAD
         );
 =======
         ),
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+        ),
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       case 'completed':
         return (
           <Badge variant="outline" className="bg-green-500/20 text-green-500 border-green-500">
             <CheckCircle2 className="w-3 h-3 mr-1" /> Completed
           </Badge>
 <<<<<<< HEAD
+<<<<<<< HEAD
         );
 =======
         ),
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+        ),
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       case 'refunded':
         return (
           <Badge variant="outline" className="bg-purple-500/20 text-purple-500 border-purple-500">
             <RefreshCcw className="w-3 h-3 mr-1" /> Refunded
           </Badge>
 <<<<<<< HEAD
+<<<<<<< HEAD
         );
 =======
         ),
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+        ),
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       case 'cancelled':
         return (
           <Badge variant="outline" className="bg-red-500/20 text-red-500 border-red-500">
@@ -678,6 +706,7 @@ interface Transaction {_id: string;
           </Badge>
         )
     }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -693,11 +722,14 @@ interface Transaction {_id: string;
   },
   
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const formatCurrency = (amount: number, currency: string) => {
     return new Intl.NumberFormat('en-US', {
       style: 'currency'
       currency: currency.toUpperCase()
     }).format(amount)
+<<<<<<< HEAD
 
 
   },
@@ -743,72 +775,9 @@ interface Transaction {_id: string;
     try {;
       const { data, error } = await supabase && supabase.functions.invoke('manage-transaction', {;
         body: { transactionId, action }
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       });
-
-      if (error) throw error;
-
-      toast({;
-        title: "Success",;
-        description: data && data.message || "Transaction updated successfully"}),;
-
-      refetch();
-    } catch (error) {;
-      console && console.error("Error managing transaction:", error);
-      toast({;
-        title: "Error",;
-        description: error && error.message || "Failed to update transaction",;
-        variant: "destructive"});
-    }
-  };
-
-  const getStatusBadge = (status: string, inEscrow: boolean) => {;
-    switch(status) {;
-      case 'pending':;
-        return inEscrow ? (;
-          <Badge variant="outline" className="bg-yellow-500/20 text-yellow-500 border-yellow-500">;
-            <Clock className="w-3 h-3 mr-1" /> In Escrow;
-          </Badge>;
-        ) : (;
-          <Badge variant="outline" className="bg-blue-500/20 text-blue-500 border-blue-500">;
-            <Clock className="w-3 h-3 mr-1" /> Pending;
-          </Badge>;
-        );
-      case 'completed':;
-        return (
-          <Badge variant="outline" className="bg-green-500/20 text-green-500 border-green-500">;
-            <CheckCircle2 className="w-3 h-3 mr-1" /> Completed;
-          </Badge>;
-        );
-      case 'refunded':;
-        return (
-          <Badge variant="outline" className="bg-purple-500/20 text-purple-500 border-purple-500">;
-            <RefreshCcw className="w-3 h-3 mr-1" /> Refunded;
-          </Badge>;
-        );
-      case 'cancelled':;
-        return (
-          <Badge variant="outline" className="bg-red-500/20 text-red-500 border-red-500">;
-            <XCircle className="w-3 h-3 mr-1" /> Cancelled;
-          </Badge>;
-        ),;
-      default:;
-        return (
-          <Badge variant="outline" className="bg-gray-500/20 text-gray-500 border-gray-500">;
-            <AlertCircle className="w-3 h-3 mr-1" /> Unknown;
-          </Badge>;
-        );
-    }
-  };
-
-  const formatCurrency = (amount: number, currency: string) => {;
-    return new Intl && Intl.NumberFormat('en-US', {;
-      style: 'currency',;
-      currency: currency && currency.toUpperCase();
-    }).format(amount);
-  };
-
-  if (error) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     return (
       <div className="bg-zion-blue-dark p-6 rounded-lg border border-zion-blue-light">;
         <div className="text-center text-zion-slate-light">;
@@ -825,6 +794,7 @@ interface Transaction {_id: string;
   }
   return (
 
+<<<<<<< HEAD
 
 =======
     display_name?: string;};
@@ -1050,6 +1020,8 @@ export function TransactionHistory() {_const { user} = useAuth();
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               return (
                 <Card key={transaction.id} className="bg-zion-blue-dark border-zion-blue-light overflow-hidden">
                   <CardHeader className="pb-3">
@@ -1063,6 +1035,7 @@ export function TransactionHistory() {_const { user} = useAuth();
                             <span>Payment to <span className="text-zion-purple">{counterpartyName}</span></span>
                           ) : (
                             <span>Payment from <span className="text-zion-cyan">Client</span></span>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -1290,6 +1263,8 @@ export function TransactionHistory() {_const { user} = useAuth();
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                           )}
                         </CardDescription>
                       </div>
@@ -1311,6 +1286,7 @@ export function TransactionHistory() {_const { user} = useAuth();
                       </span>
                     </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
                     {(transaction.completed_at || transaction.refunded_at || transaction.cancelled_at) && (
 
@@ -1320,6 +1296,8 @@ export function TransactionHistory() {_const { user} = useAuth();
                     {(transaction.completed_at |transaction.refunded_at |transaction.cancelled_at) && (
                     {(transaction.completed_at || transaction.refunded_at || transaction.cancelled_at) && (
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       <div className="flex justify-between items-center text-sm mt-1">
                         <span className="text-zion-slate-light">
                           {transaction.completed_at ? 'Completed:' :
@@ -1330,6 +1308,7 @@ export function TransactionHistory() {_const { user} = useAuth();
                             transaction.completed_at |
                             transaction.refunded_at |
                             transaction.cancelled_at!
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
@@ -1478,10 +1457,13 @@ export function TransactionHistory() {_const { user} = useAuth();
                             transaction.refunded_at || 
                             transaction.cancelled_at!
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                           ).toLocaleDateString()}
                         </span>;
                       </div>;
                     )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
                   </CardContent>;
@@ -1571,10 +1553,13 @@ export function TransactionHistory() {_const { user} = useAuth();
                 ? `You don't have any ${filter} transactions. Try changing the filter or make a new transaction.`;
 <<<<<<< HEAD
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 : "You haven't made any transactions yet. Once you make a payment or receive one, it will appear here."}
             </p>;
           </div>;
         )}
+<<<<<<< HEAD
 
 =======
                 :"You haven't made any transactions yet. Once you make a payment or receive one, it will appear here."}
@@ -1583,6 +1568,10 @@ export function TransactionHistory() {_const { user} = useAuth();
         )}
       </div>;
     </div>;
+=======
+;
+;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       // Check condition
 if (throw error) {
   $2
@@ -1820,34 +1809,8 @@ if ( {) {
           </div>)}
       </div>;
     </div>);
-  ),;}
-};
-const getStatusBadge = (status: string, inEscrow: boolean) => {
-  switch (status) {
-  case 'pending': return inEscrow ? (<Badge variant="outline" className="bg-yellow-500/20 text-yellow-500 border-yellow-500" > <Clock className="w-3 h-3 mr-1" /> In Escrow </Badge>) : (<Badge variant="outline" className="bg-blue-500/20 text-blue-500 border-blue-500" > <Clock className="w-3 h-3 mr-1" /> Pending </Badge>);
-case 'completed': return (<Badge variant="outline" className="bg-green-500/20 text-green-500 border-green-500" > <CheckCircle2 className="w-3 h-3 mr-1" /> Completed </Badge>);
-case 'refunded': return (<Badge variant="outline" className="bg-purple-500/20 text-purple-500 border-purple-500" > <RefreshCcw className="w-3 h-3 mr-1" /> Refunded </Badge>);
-case 'cancelled': return (<Badge variant="outline" className="bg-red-500/20 text-red-500 border-red-500" > <XCircle className="w-3 h-3 mr-1" /> Cancelled </Badge>);
-default: return (<Badge variant="outline" className="bg-gray-500/20 text-gray-500 border-gray-500" > <AlertCircle className="w-3 h-3 mr-1" /> Unknown </Badge> Try Again </Button> </div> </div>) 
-}<div className="flex space-x-2" > <Button > All </Button> <Button > Pending </Button> <Button > Completed </Button> <Button > Escrow </Button> </div> </div> </CardHeader> <CardContent> <div className="flex justify-between mb-2" > <Skeleton className="h-5 w-1/3 bg-zion-blue-light" /> <Skeleton className="h-5 w-1/4 bg-zion-blue-light" /> </div> <Skeleton className="h-4 w-2/3 bg-zion-blue-light" /> </CardContent> <CardFooter> <Skeleton className="h-9 w-28 bg-zion-blue-light rounded-md" /> </CardFooter> </Card> </div>) ) const counterpartyName = isClient ? transaction.provider?.display name || 'Service Provider' : 'Client';
-return (<Card key= {
-  transaction.id 
-}className="bg-zion-blue-dark border-zion-blue-light overflow-hidden" > <CardHeader className="pb-3" > <div className="flex justify-between items-start" > <div>) : (<span>Payment from <span className="text-zion-cyan" >Client</span></span>) 
-}</CardDescription> </div> {
-  getStatusBadge (transaction.status, transaction.in escrow) 
-}</div> </CardHeader> transaction.completed at || transaction.refunded at || transaction.cancelled at!) .toLocaleDateString () 
-}</span> </div>) 
-}</CardContent> > <CheckCircle2 className="mr-1 h-4 w-4" /> Release Funds </Button>) 
-}> <RefreshCcw className="mr-1 h-4 w-4" /> Request Refund </Button>) 
-}> <XCircle className="mr-1 h-4 w-4" /> Cancel </Button>) 
-}</CardFooter> </Card>) 
-}) 
-}</div>) : (<div className="text-center py-12 border border-dashed border-zion-blue-light rounded-lg" > <div className="mx-auto w-16 h-16 bg-zion-blue-light/30 rounded-full flex items-center justify-center mb-4" > <ArrowRight className="h-8 w-8 text-zion-slate-light" /> <ArrowLeft className="h-8 w-8 text-zion-slate-light -ml-4" /> </div> ? `You don't have any $ {
-  filter 
-}transactions. Try changing the filter or make a new transaction.` : "You haven't made any transactions yet. Once you make a payment or receive one, it will appear here." 
-}</p> </div>) 
-}</div> </div>) 
 }
+<<<<<<< HEAD
                           ).toLocaleDateString()}
                         </span>
                       </div>
@@ -1921,3 +1884,5 @@ return (<Card key= {
 =======
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

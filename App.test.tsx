@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
@@ -11,10 +12,13 @@ const { render,screen } from "@testing-library/react"; import { describe,it,expe
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { render, screen } from '@testing-library/react';
 import { describe, it, expect } from 'vitest';
 import App from './App';
 import React from 'react';
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 import React from 'react';
@@ -28,11 +32,14 @@ import React from 'react';
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 describe('App', () => {
   it('renders without crashing', () => {
     render(<App />);
     expect(screen.getByText('Hello App')).toBeInTheDocument();
   });
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -50,6 +57,8 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   it('displays correct content', () => {
     render(<App />);
     // Add specific content assertions here
@@ -58,6 +67,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
     render(<App />);
     // Add interaction tests here
   });
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 });
@@ -86,3 +96,8 @@ const { render,screen } from "@testing-library/react"; import { describe,it,expe
 ursor/automate-test-improve-and-merge-code-2480
 });
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+const { render,screen } from "@testing-library/react"; import { describe,it,expect } from "vitest"; import App from "./App"; describe('App', () => { it('renders without crashing', () => { render(<App />); expect(screen.getByRole("main")).toBeInTheDocument()}); it('displays correct content', () => { render(<App />)}); it("handles user interactions"
+
+});
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import { useState } from "react";
 import { Menu } from 'lucide-react'
@@ -33,6 +34,11 @@ export function EnterpriseStickyNav() {
             onClick={() => setOpen(!open)}
 
 
+=======
+import { useState } from 'react';
+import { Menu } from 'lucide-react';
+import Link from 'next/link';
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             aria-label='Toggle navigation';
             aria-expanded={open}          >;
             <Menu className='h-6 w-6' />;
@@ -43,7 +49,10 @@ export function EnterpriseStickyNav() {
               <Link
                 href='#features'
                 className='text-sm font-medium hover:text-primary'>;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useState } from 'react';
 import { Menu } from 'lucide-react';
 import Link from 'next / link';
@@ -68,13 +77,17 @@ import Link from 'next / link';
                 className='text - sm font - medium hover:text - primary';
               >;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 Features;
               </Link>;
             </li>;
             <li>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -87,10 +100,13 @@ import Link from 'next / link';
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 Pricing;
               </Link>;
             </li>;
             <li>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -103,10 +119,13 @@ import Link from 'next / link';
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 Testimonials;
               </Link>;
             </li>;
             <li>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -122,6 +141,8 @@ export function EnterpriseStickyNav() {
 export function EnterpriseStickyNav() {;
   const [open, setOpen] = useState(false);
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 <<<<<<< HEAD
             </li>;
@@ -136,6 +157,7 @@ export function EnterpriseStickyNav() {
 
 
   return (
+<<<<<<< HEAD
     <nav className="sticky top-16 z-40 bg-card border-b border-border">;
       <div className="container mx-auto px-4 md:px-6">;
         <div className="flex items-center justify-between h-12">;
@@ -181,16 +203,12 @@ export function EnterpriseStickyNav() {;
 export function EnterpriseStickyNav() {
   const [open, setOpen] = useState(false);
   return (
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <nav className="sticky top-16 z-40 bg-card border-b border-border">
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex items-center justify-between h-12">
           <button
-            className="md:hidden p-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
-            onClick={() => setOpen(!open)}
-            aria-label="Toggle navigation"
-            aria-expanded={open}
-          >
-            <Menu className="h-6 w-6" />
           </button>
           <ul className={`${open ? "flex" : "hidden"} flex-col gap-4 md:flex md:flex-row md:gap-8 w-full md:w-auto`}>
             <li>
@@ -208,6 +226,7 @@ export function EnterpriseStickyNav() {
           </ul>
         </div>
       </div>
+<<<<<<< HEAD
     </nav>;
   );
 };
@@ -218,6 +237,8 @@ export function EnterpriseStickyNav() {
     </nav>
   )
 }
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useState } from "react",;
 import { Menu } from 'lucide-react';
 import Link from "next/link",;
@@ -235,12 +256,15 @@ export function EnterpriseStickyNav() {;
           >;
             <Menu className="h-6 w-6" />;
           </button>;
+<<<<<<< HEAD
           <ul className={`${open ? "flex" :"hidden"} flex-col gap-4 md:flex md:flex-row md:gap-8 w-full md:w-auto`}>;
             <li>;
               <Link href="#features" className="text-sm font-medium hover:text-primary">Features</Link>;
           >;
             <Menu className="h-6 w-6" />;
           </button>;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <ul className={`${open ? "flex" : "hidden"} flex-col gap-4 md:flex md:flex-row md:gap-8 w-full md:w-auto`}>;
             <li>;
               <Link href="#features" className="text-sm font-medium hover: text-primary">Features</Link>;
@@ -253,6 +277,7 @@ export function EnterpriseStickyNav() {;
             </li>;
             <li>;
               <Link href="#contact" className="text-sm font-medium hover:text-primary">Contact Us</Link>;
+<<<<<<< HEAD
               <Link;
                 href='#contact';
                 className='text - sm font - medium hover:text - primary';
@@ -289,10 +314,13 @@ function EnterpriseStickyNav() {
             </li>;
             <li>;
               <Link href="#contact" className="text - sm font - medium hover:text - primary">Contact Us</Link>;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             </li>;
           </ul>;
         </div>;
       </div>;
+<<<<<<< HEAD
 
 
             </li>;
@@ -321,3 +349,5 @@ return (<nav className="sticky top-16 z-40 bg-card border-b border-border" > <di
     </nav>);
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

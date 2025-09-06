@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -32,3 +33,5 @@ import React from \'react\'; \"const navItems = [\" { \"title\": \"Products\",\"
 const React from "react"; "const navItems = [" { title: "Products",href: "/admin/products" }," { title: "Services",href: "/admin/services" }," { title: "Users",href: "/admin/users" }," { title: "Reports",href: "/admin/reports" },"];"export function AdminLayout({ children }) { return(<div className="flex min-h-screen">" <aside className="w-64 border-r p-6 space-y-2 bg-muted/50">" <h2 className="font-semibold text-lg mb-4">Back Office</h2>" <nav className="space-y-1">" {navItems.map((item) => (<Link key={item.href} href={item.href} className="block rounded-md px-3 py-2 text-sm hover: bg-accent">" {item.title}" </Link>))} </nav> </aside>" <main className="flex-1 p-6 overflow-y-auto">{children}</main>" </div>)};"export { AdminLayout }; export default AdminLayout; ";";'"'"
 import _React from 'react'; "const navItems = [" { "title": "Products","href": "/admin/products" }," { "title": "Services","href": "/admin/services" }," { "title": "Users","href": "/admin/users" }," { "title": "Reports","href": "/admin/reports" },"];"export function AdminLayout({ children }) { return(<div className="flex min-h-screen">" <aside className="w-64 border-r p-6 space-y-2 bg-muted/50">" <h2 className="font-semibold text-lg mb-4">Back Office</h2>" <nav className="space-y-1">" {navItems.map((item) => (<Link key={item.href} href={item.href} className="block rounded-md px-3 py-2 text-sm "hover": bg-accent">" {item.title}" </Link>))} </nav> </aside>" <main className="flex-1 p-6 overflow-y-auto">{children}</main>" </div>)};"export { AdminLayout }; export default AdminLayout; ";";
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

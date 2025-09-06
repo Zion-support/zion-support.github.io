@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -42,6 +43,8 @@ export function Analytics() {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     // Performance monitoring;
     // Check condition
 if ( {) {
@@ -56,6 +59,7 @@ if ( {) {
 }
             // // // console.log ("LCP:", entry.start_time);
           }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -77,11 +81,14 @@ if ( {) {
           if (entry.entryType === "first-input") {const firstInputEntry = entry as FirstInputEntry;
             // // // console.log("FID:", firstInputEntry.processingStart - firstInputEntry.startTime);
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           }
         }
-      }),
-      observer.observe ({ entry_types: ["largest - contentful - paint", "first - input"] }),
+      });
+      observer.observe({ entryTypes: ["largest-contentful-paint", "first-input"] });
       // Cumulative Layout Shift monitoring;
+<<<<<<< HEAD
       let cls = 0,
       const observer2 = new PerformanceObserver ((list) => {
         for (const entry of list.get_entries ()) {
@@ -136,6 +143,8 @@ if ( {) {
         observer.disconnect();
         observer2.disconnect();
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       }
     }
   }, []);

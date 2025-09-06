@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import React, { create_context, useContext, useState } from './react';
 
@@ -16,11 +17,14 @@ import React, { createContext, useContext, useState } from "react",
 =======
 import React, { create_context, useContext, useState } from './react';
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface SidebarContextType {
   is_open: boolean;
   toggle: () => void;
   open: () => void;
   close: () => void
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -39,10 +43,13 @@ export const use_sidebar = (): SidebarContextType => useContext (SidebarContext)
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface SidebarProviderProps {
   children: React.ReactNode;
   default_open?: boolean;
 }
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -70,26 +77,38 @@ interface SidebarProviderProps {
   children: React.ReactNode;
   defaultOpen?: boolean;
 }
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export function SidebarProvider({
   children
   defaultOpen = true
 }: SidebarProviderProps) {
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 export function SidebarProvider({ 
   children, 
   defaultOpen = true 
 }: SidebarProviderProps) {;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const [isOpen, setIsOpen] = useState(defaultOpen);
   const toggle = () => setIsOpen(!isOpen);
   const open = () => setIsOpen(true);
   const close = () => setIsOpen(false);
 
   return (
+<<<<<<< HEAD
     <SidebarContext.Provider value={{ isOpen, toggle, open, close }}>
 <<<<<<< HEAD
 
@@ -109,6 +128,13 @@ import React, { createContext, useContext, useState } from "react",;
       <div className={`grid ${isOpen ? 'grid-cols-[auto_1fr]' : 'grid-cols-[auto_1fr]'} min-h-screen w-full`}>
 import React, { createContext, useContext, useState } from "react",;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+      <div className={`grid ${isOpen ? 'grid-cols-[auto_1fr]' : 'grid-cols-[auto_1fr]'} min-h-screen w-full`}>
+
+import React, { createContext, useContext, useState } from "react",;
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface SidebarContextType {;
   isOpen: boolean,;
   toggle: () => void,;
@@ -116,16 +142,20 @@ interface SidebarContextType {;
   close: () => void;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 const SidebarContext = createContext<SidebarContextType>({;
   isOpen: true,;
   toggle: () => {},;
   open: () => {},;
   close: () => {}}),;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 export const useSidebar = (): SidebarContextType => useContext(SidebarContext);
 
@@ -139,6 +169,8 @@ export function SidebarProvider(): any ({ ;
   defaultOpen = true ;
 }: SidebarProviderProps) {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const [isOpen, setIsOpen] = useState(defaultOpen);
   const toggle = () => setIsOpen(!isOpen);
   const open = () => setIsOpen(true);
@@ -147,6 +179,7 @@ export function SidebarProvider(): any ({ ;
   return (;
     <SidebarContext.Provider value={{ isOpen, toggle, open, close }}>;
       <div className={`grid ${isOpen ? 'grid-cols-[auto_1fr]' : 'grid-cols-[auto_1fr]'} min-h-screen w-full`}>;
+<<<<<<< HEAD
 
 
 
@@ -171,10 +204,13 @@ export function SidebarProvider({;
     <SidebarContext.Provider value={{ isOpen, toggle, open, close }}>;
       <div className={`grid ${isOpen ? 'grid-cols-[auto_1fr]' : 'grid-cols-[auto_1fr]'} min-h-screen w-full`}>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         {children}
       </div>
     </SidebarContext.Provider>
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -293,3 +329,5 @@ return (<SidebarContext.Provider value= {
 ;
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

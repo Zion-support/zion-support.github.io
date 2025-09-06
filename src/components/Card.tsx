@@ -1,6 +1,7 @@
 import React from 'react';
 
 interface CardProps {
+<<<<<<< HEAD
   children?: React.ReactNode;
   title?: string;
   description?: string;
@@ -28,8 +29,9 @@ const Card: React.FC<CardProps> = ({
       {title && <h3 className="text-xl font-semibold text-white mb-2">{title}</h3>}
       {description && <p className="text-gray-300 mb-4">{description}</p>}
       {children}
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     </div>
   );
 };
 
-export default Card;

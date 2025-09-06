@@ -1,8 +1,11 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 export interface EmergingTechService2025 {
 export interface EmergingTechService2025 {;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   id: string;
   name: string;
   tagline: string;
@@ -31,12 +34,18 @@ export interface EmergingTechService2025 {;
     mobile: string,;
     email: string,;
     address: string;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
+=======
+  }
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
 ];
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -72,22 +81,28 @@ export const emergingTechServices2025: EmergingTechService2025[] = [;
   },
 ];      mobile: "+1 302 464 0950";
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   id: string, name: string,
   tagline: string, price: string,
   description: string, features: string[],
   link: string, category: string,
   realImplementation: boolean,
   contactInfo: {
+<<<<<<< HEAD
     mobile: string, email: string,
     address: string
   }
 }
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export const emergingTechServices2025: EmergingTechService2025[] = [
   {
     id: "metaverse-platform", name: "Metaverse Development Platform",
     tagline: "Create immersive virtual experiences", price: "$249/month",
     description: "Advanced metaverse development platform for building virtual worlds and experiences.",
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     id: 'metaverse-platform'
@@ -97,6 +112,8 @@ export const emergingTechServices2025: EmergingTechService2025[] = [
     description:
       'Advanced metaverse development platform for building virtual worlds and experiences.'
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     features: [
       "3D world building";
       "Avatar customization";
@@ -107,15 +124,23 @@ export const emergingTechServices2025: EmergingTechService2025[] = [
     link: "/services/metaverse-platform", category: "Emerging Tech 2025",
     realImplementation: true,
     contactInfo: {
-      mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
 ];
+      mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    }
+  }
+];
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
@@ -162,3 +187,5 @@ export const emergingTechServices2025: EmergingTechService2025[] = [
   }
 ];
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

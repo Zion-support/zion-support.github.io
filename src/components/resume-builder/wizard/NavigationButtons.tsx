@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import { Button } from "@/components/ui/button";
 import { Button } from '@/components/ui/button'
@@ -46,6 +47,8 @@ import { NavigationButtonsProps } from "./types",
 import { Button } from "@/components/ui/button",
 import { Loader2 } from 'lucide-react'
 import { NavigationButtonsProps } from "./types",
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export const NavigationButtons = ({
   onBack,
   onNext,
@@ -53,6 +56,7 @@ export const NavigationButtons = ({
   backLabel = "Back",
   nextLabel = "Next",
   isLoading = false}: NavigationButtonsProps) => {
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   return (
     <div className="flex justify-between">;
@@ -73,44 +77,24 @@ export const NavigationButtons = ({;
       {onBack && (;
         <Button variant='outline' onClick={onBack}>          {backLabel}
         <Button variant="outline" onClick={onBack}>
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <div className="flex justify-between">
       {onBack && (
         <Button variant="outline" onClick={onBack}>
-          {backLabel}
-        </Button>
-      )}
-      {onNext && (
-        <Button onClick={onNext} disabled={isNextDisabled |isLoading}>
-          {isLoading && <Loader2 className='mr-2 h-4 w-4 animate-spin' />}          {nextLabel}
-        </Button>
-      )}
-    </div>
-  )
-}
-"          {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
-          {nextLabel}
-        </Button>
-      )}
-    </div>
-  )
-}
-"  )
-}
-
-  );
-};
-"  );
-};
-        <Button variant="outline" onClick={onBack}>
 import { Button } from "@/components/ui/button",;
 import { Loader2 } from 'lucide-react';
 import { NavigationButtonsProps } from "./types",;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export const NavigationButtons = ({;
   onBack,;
   onNext,;
   isNextDisabled = false,;
+<<<<<<< HEAD
 <<<<<<< HEAD
   backLabel = 'Back',;
   nextLabel = 'Next',;
@@ -119,6 +103,8 @@ export const NavigationButtons = ({;
   return (
     <div className='flex justify-between'>;
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   backLabel = "Back",;
   nextLabel = "Next";
   isLoading = false}: NavigationButtonsProps) => {;
@@ -136,6 +122,7 @@ export const NavigationButtons = ({;
           {backLabel}
         </Button>;
       )}
+<<<<<<< HEAD
 
 
           {isLoading && <Loader2 className='mr-2 h-4 w-4 animate-spin' />}          {nextLabel}
@@ -145,11 +132,14 @@ export const NavigationButtons = ({;
     </div>;
   );
 };
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 =======
           {backLabel}
         </Button>;
       )}
+<<<<<<< HEAD
       {onNext && (
         <Button onClick={onNext} disabled={isNextDisabled || isLoading}>
           {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
@@ -158,3 +148,5 @@ export const NavigationButtons = ({;
 
       )}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

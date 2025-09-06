@@ -1,4 +1,13 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+if (!Sentry.getCurrentHub().getClient()) {Sentry.init({;
+    dsn: process.env.SENTRY_DSN |process.env.NEXT_PUBLIC_SENTRY_DSN |'';
+    tracesSampleRate: 0.1;
+    enabled: Boolean(process.env.SENTRY_DSN |process.env.NEXT_PUBLIC_SENTRY_DSN)});
+import * as Sentry from '@sentry/node',;
+import * as Sentry from '@sentry/node';
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 import * as Sentry from '@sentry / node',
 if (.get_client ()) {) {
@@ -10,8 +19,8 @@ if (.get_client ()) {) {
     enabled: Boolean (process.env.SENTRY_DSN || process.env.NEXT_PUBLIC_SENTRY_DSN)});
 }
 
-=======
 
+<<<<<<< HEAD
 =======
 =======
 import * as Sentry from '@sentry/node';
@@ -27,12 +36,15 @@ if (!Sentry.getCurrentHub().getClient()) {;
     tracesSampleRate: 0.1;
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 if (!Sentry.getCurrentHub().getClient()) {;
   Sentry.init({;
     dsn: process.env.SENTRY_DSN || process.env.NEXT_PUBLIC_SENTRY_DSN || '',;
     tracesSampleRate: 0.1;
     enabled: Boolean(process.env.SENTRY_DSN || process.env.NEXT_PUBLIC_SENTRY_DSN)});
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -40,12 +52,17 @@ if (!Sentry.getCurrentHub().getClient()) {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
     enabled: Boolean(process.env.SENTRY_DSN || process.env.NEXT_PUBLIC_SENTRY_DSN)});
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
 
 }
 }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React from 'react';
   }
@@ -8,6 +9,8 @@ import React from 'react';
 
 import React from 'react';
 import React from 'react'
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { CheckCircle } from 'lucide-react'
 
 import {
@@ -37,6 +40,7 @@ export function VerifiedBadge({
     sm: 'h-3.5 w-3.5'
     md: 'h-4 w-4'
     lg: 'h-5 w-5'
+<<<<<<< HEAD
 <<<<<<< HEAD
   }
 
@@ -111,13 +115,14 @@ if (return null) {
     sm: 'h - 3.5 w - 3.5',
     md: 'h - 4 w - 4',
     lg: 'h - 5 w - 5',
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   }
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components / ui / tooltip';
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip'
 interface VerifiedBadgeProps {
 
-  verified: boolean,
-  }
 
+<<<<<<< HEAD
 
 interface VerifiedBadgeProps {
   verified: boolean;
@@ -174,18 +179,24 @@ export function VerifiedBadge({ verified, size = 'sm', label = 'Verified talent'
 
 
   
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <TooltipProvider>
       <Tooltip>
         <TooltipTrigger asChild>
+<<<<<<< HEAD
           <span className='inline-flex text-blue-500'>            <CheckCircle className={`${sizeClasses[size]} fill-blue-100`} />          <span className="inline-flex text-blue-500">
           <span className="inline-flex text-blue-500">
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <CheckCircle className={`${sizeClasses[size]} fill-blue-100`} />
           </span>
         </TooltipTrigger>
         <TooltipContent>
           <p>{label}</p>
         </TooltipContent>
+<<<<<<< HEAD
       </Tooltip>;
     </TooltipProvider>;
   );
@@ -198,6 +209,10 @@ export function VerifiedBadge({ verified, size = 'sm', label = 'Verified talent'
 }
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+}
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export function VerifiedBadge(): any ({ verified, size = 'sm', label = 'Verified talent' }: VerifiedBadgeProps) {;
   if (!verified) return null;
 
@@ -227,9 +242,12 @@ export function VerifiedBadge(): any ({ verified, size = 'sm', label = 'Verified
 =======
       </Tooltip>;
 
+<<<<<<< HEAD
   );
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     </TooltipProvider>);
 }

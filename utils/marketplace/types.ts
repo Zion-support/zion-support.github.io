@@ -3,6 +3,7 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 export interface Offer {;
 =======
@@ -17,12 +18,17 @@ export interface Offer {
 export interface Offer {;
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+export interface Offer {;
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   id: string;
   createdAtIso: string;
   client_id: string;
   talent_slug: string;
   startDateIso: string;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   scopeSummary: string;
   paymentTerms: PaymentTerms;
@@ -65,12 +71,15 @@ export interface PaymentTerms {;
 
 export interface Project {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   id: string;
   title: string;
   summary: string;
   client_id: string;
   talent_slug: string;
   startDateIso: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -83,6 +92,8 @@ export interface Project {;
   notes: ProjectNote[];
 }
 export interface ProjectDocument {
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 export interface ProjectDocument {;
   id: string;
@@ -90,14 +101,23 @@ export interface ProjectDocument {;
   url?: string;
   uploadedAtIso: string;
 }
-export interface ProjectNote {
-
-export interface ProjectNote {;
+  id: string;
+  name: string;
+  url?: string;
+  uploadedAtIso: string;
+}
   id: string;
   authorId: string;
   authorRole: string;
   content: string;
   createdAtIso: string;
 }
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 

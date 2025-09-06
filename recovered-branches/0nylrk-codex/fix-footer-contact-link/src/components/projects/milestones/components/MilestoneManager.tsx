@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
@@ -21,6 +22,8 @@ import { Milestone, MilestoneStatus, MilestoneActivity  } from '@/hooks/useMiles
 import { toast } from "sonner";
 interface MilestoneManagerProps {
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   projectId: string
   milestones: Milestone[]
   activities: Record<string, MilestoneActivity[]>;
@@ -36,20 +39,26 @@ interface MilestoneManagerProps {
 
 import {MilestonesList} from '../MilestonesList';
 import {PaymentSummary} from '../PaymentSummary';
+<<<<<<< HEAD
 import {Milestone, MilestoneStatus, MilestoneActivity} from '@/hooks/useMilestones';
 import {toast} from "sonner";
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from 'react',
 import { MilestonesList } from '../MilestonesList',
 import { PaymentSummary } from '../PaymentSummary',
 import { Milestone, MilestoneStatus, MilestoneActivity } from '@/hooks/useMilestones',
 import { toast } from "sonner",
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface MilestoneManagerProps {
   projectId: string,
   milestones: Milestone[],
@@ -66,6 +75,7 @@ interface MilestoneManagerProps {
   refetch: () => Promise<void>
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -73,6 +83,8 @@ interface MilestoneManagerProps {
 =======
 
 export function MilestoneManager({;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   projectId;
   milestones;
   activities;
@@ -98,14 +110,18 @@ export function MilestoneManager({
   onUpdateStatus,
   onDeleteMilestone,
   onUploadDeliverable,
+<<<<<<< HEAD
 
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   refetch
 }: MilestoneManagerProps) {
 
   const handleMilestoneApproved = async (milestoneId: string) => {
     try {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   refetch;
@@ -113,6 +129,8 @@ export function MilestoneManager({
   const handleMilestoneApproved = async (milestoneId: string) => {;
     try {;
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       await onUpdateStatus(milestoneId, "completed" as MilestoneStatus);
       toast && toast.success("Milestone approved");
       await refetch();
@@ -120,12 +138,6 @@ export function MilestoneManager({
       console && console.error("Error approving milestone:", error);
       toast && toast.error("Failed to approve milestone");
     }
-
-  };
-
-  const handleMilestoneRejected = async (milestoneId: string) => {;
-    try {;
-
       await onUpdateStatus(milestoneId, "rejected" as MilestoneStatus);
       toast && toast.success("Milestone rejected");
       await refetch();
@@ -136,12 +148,7 @@ export function MilestoneManager({
   }
 
   return (
-
-    <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">;
-      <div className="lg:col-span-2">;
-
         <MilestonesList
-=======
 import {Milestone, MilestoneStatus, MilestoneActivity} from '@/hooks / use_milestones';
 import { toast } from './sonner';
 interface MilestoneManagerProps {
@@ -189,10 +196,13 @@ function MilestoneManager() {
     <div className="grid grid - cols - 1 lg:grid - cols - 3 gap - 6">;
       <div className="lg:col - span - 2">;
         <MilestonesList;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       await onUpdateStatus(milestoneId, "completed" as MilestoneStatus),
       toast.success("Milestone approved"),
       await refetch()
@@ -200,6 +210,7 @@ function MilestoneManager() {
       console.error("Error approving milestone:", error),
       toast.error("Failed to approve milestone")
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   },
@@ -213,6 +224,8 @@ function MilestoneManager() {
   },
   
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const handleMilestoneRejected = async (milestoneId: string) => {
     try {
       await onUpdateStatus(milestoneId, "rejected" as MilestoneStatus),
@@ -223,6 +236,7 @@ function MilestoneManager() {
       toast.error("Failed to reject milestone")
     }
 
+<<<<<<< HEAD
   },
 
 <<<<<<< HEAD
@@ -242,6 +256,11 @@ function MilestoneManager() {
 =======
         <MilestonesList
         <MilestonesList 
+=======
+  return (
+    <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+      <div className="lg:col-span-2">
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from 'react',;
 import { MilestonesList } from '../MilestonesList',;
 import { PaymentSummary } from '../PaymentSummary',;
@@ -261,21 +280,6 @@ interface MilestoneManagerProps {;
   onDeleteMilestone: (id: string) => Promise<boolean>,;
   onUploadDeliverable: (id: string, file: File) => Promise<any>,;
   refetch: () => Promise<void>;
-;
-interface MilestoneManagerProps {;
-  projectId:string,;
-  milestones:Milestone[],;
-  activities:Record<string MilestoneActivity[]>,;
-  isLoading:boolean,;
-  isClient:boolean,;
-  isTalent:boolean,;
-  paymentTerms?:string,;
-  isSubmitting:boolean,;
-  onCreateMilestone:(data:any) => Promise<Milestone | null>,;
-  onUpdateStatus:(id:string, status:MilestoneStatus, comment?:string) => Promise<boolean>,;
-  onDeleteMilestone:(id:string) => Promise<boolean>,;
-  onUploadDeliverable:(id:string, file:File) => Promise<any>,;
-  refetch:() => Promise<void>;
 }
 ;
 export function MilestoneManager({;
@@ -317,8 +321,8 @@ export function MilestoneManager({;
     <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">;
       <div className="lg:col-span-2">;
         <MilestonesList;
-        <MilestonesList 
 
+<<<<<<< HEAD
 } MilestoneManagerProps) {;
   const handleMilestoneApproved = async (milestoneId:string) => {;
     try {;
@@ -347,10 +351,13 @@ export function MilestoneManager({;
       <div className="lg:col-span-2">;
         <MilestonesList ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           milestones={milestones}
           activities={activities}
           is_loading={is_loading}
           is_client={is_client}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
           milestones={milestones}
@@ -358,10 +365,13 @@ export function MilestoneManager({;
           isLoading={isLoading}
           isClient={isClient}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           onCreateMilestone={onCreateMilestone}
           onUpdateStatus={onUpdateStatus}
           onDeleteMilestone={onDeleteMilestone}
           onUploadDeliverable={onUploadDeliverable}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -407,6 +417,8 @@ export function MilestoneManager({;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           is_submitting={is_submitting}
           on_approve={is_client ? handleMilestoneApproved : undefined}
           on_reject={is_client ? handleMilestoneRejected : undefined}
@@ -420,6 +432,7 @@ export function MilestoneManager({;
       </div>;
     </div>);
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 
 =======
@@ -427,6 +440,8 @@ export function MilestoneManager({;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   ),; interface MilestoneManagerProps {
   projectId: string;
 milestones: Milestone[];
@@ -447,6 +462,7 @@ refetch: () => Promise<void>
   try {
   
 }
+<<<<<<< HEAD
 ;
 
 };
@@ -495,3 +511,5 @@ grid grid-cols-1 lg:grid-cols-3 gap-6"> <div className=" lg:col-span-2" > <Miles
 }
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

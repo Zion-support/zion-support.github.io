@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -48,13 +49,12 @@ import {
 } from '../components/salary/InsightCharts';
 type InsightResponse = {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {;
   LineChart,;
   BarChart,;
   DonutChart,;
-
-
-
 } from '../components/salary/InsightCharts';
 
 type InsightResponse = {;
@@ -66,11 +66,14 @@ type InsightResponse = {;
   maxHourlyUsd: number;
   confidence: number;
 <<<<<<< HEAD
+<<<<<<< HEAD
   trend_monthly: { label: string; value: number }[];
   regional_comparison: { region: string; medianHourlyUsd: number }[];
   tags: string[];
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 import { LineChart, BarChart, DonutChart } from '../components/salary/InsightCharts';
 
@@ -79,14 +82,19 @@ type InsightResponse = {
 =======
   gpt_recommendation?: string;}  recommendedHourlyUsd: number,
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   recommendedMonthlyUsd: number,
   medianHourlyUsd: number,
   minHourlyUsd: number,
   maxHourlyUsd: number,
   confidence: number,
+<<<<<<< HEAD
   trend_monthly: { label: string, value: number }[],
   regional_comparison: { region: string, medianHourlyUsd: number }[],
   tags: string[],
@@ -161,12 +169,18 @@ export default function SalaryInsightsPage() {;
     'contract' | 'freelance' | 'full-time'
   >('contract');  const [loading, setLoading] = useState(false);  const [experienceLevel, setExperienceLevel] = useState<'Junior' | 'Mid' | 'Senior' | 'Lead'>('Senior');
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  const [roleTitle, setRoleTitle] = useState('Senior AI Engineer');
+  const [skills, setSkills] = useState('OpenAI, RAG, TypeScript');
+  const [region, setRegion] = useState('Remote, Global');
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const [remote, setRemote] = useState(true);
   const [employmentType, setEmploymentType] = useState<'contract' | 'freelance' | 'full-time'>('contract');
   const [loading, setLoading] = useState(false);
   const [data, setData] = useState<InsightResponse | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     // Lightweight login check via Supabase client if available, otherwise public mode
@@ -258,10 +272,13 @@ function SalaryInsightsPage() {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       });
       if (!res && res.ok) throw new Error('Failed to fetch insights');
       const json = (await res && res.json()) as InsightResponse;
       setData(json);
+<<<<<<< HEAD
 
           roleTitle;
           skills: skills.split().map((s) => s.trim()).filter(Boolean),
@@ -320,6 +337,8 @@ function SalaryInsightsPage() {
     } finally {
       setLoading(false);    }      if (!res.ok) throw new Error('Failed to fetch insights');
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       const json = (await res.json()) as InsightResponse;
       setData(json)
     } catch (e: any) {
@@ -328,6 +347,9 @@ function SalaryInsightsPage() {
       setLoading(false)
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     } catch (e: any) {;
       setError(e && e.message || 'Unexpected error');
     } finally {;
@@ -343,11 +365,10 @@ function SalaryInsightsPage() {
   }
 
   useEffect(() => {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 
       setLoading(false);    }
 
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
@@ -355,12 +376,13 @@ function SalaryInsightsPage() {
 
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     }
   }
 
-
-
   useEffect(() => {
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
@@ -406,6 +428,11 @@ const { supabase } = await import('../utils/supabase/client');
       output: data
     };    (async () => {    const payload = { createdAt: new Date().toISOString(), input: { roleTitle, skills, region, experienceLevel, remote, employmentType }, output: data }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+    fetchInsights();
+    // eslint-disable-next-line react-hooks/exhaustive-deps;
+  }, []);
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     (async () => {
       try {
         const { supabase } = await import('../utils/supabase/client');
@@ -413,6 +440,7 @@ const { supabase } = await import('../utils/supabase/client');
         if (user.data.user) {
           // Attempt to save to Supabase if table exists
           await supabase.from('salary_insights').insert({
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -442,6 +470,8 @@ const { supabase } = await import('../utils/supabase/client');
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         const { supabase } = await import ('../utils / supabase / client');
         const user = await supabase.auth.get_user ();
         setIsLoggedIn (!!user.data.user);
@@ -534,6 +564,7 @@ if ( {) {
           return;
         }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
@@ -558,10 +589,13 @@ if ( {) {
         // fall back      }          alert ('Insight saved to your profile');
           return;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         }
       } catch {;
         // fall back;
       }
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -576,10 +610,13 @@ if ( {) {
 
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       } catch {}
     })();
   }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -598,9 +635,11 @@ if ( {) {
     })()
   }
   const donutData = useMemo(() => {
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
-    if (!data) return [] as { label: string, value: number }[],
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
       try {;
@@ -640,6 +679,8 @@ const donutData = useMemo(() => {
       } catch {}
     })();
   }
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
       } catch {}
@@ -648,17 +689,26 @@ const donutData = useMemo(() => {
 
   const donutData = useMemo(() => {
     if (!data) return [] as { label: string; value: number }[];    const min = data.minHourlyUsd;      } catch {}
+        alert('Insight saved locally')
+      } catch {}
+      } catch {}
+    })();
+  }
     })()
   }
   const donutData = useMemo(() => {
+<<<<<<< HEAD
     if (!data) return [] as { label: string, value: number }[]
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     const min = data.minHourlyUsd;
     const median = data.medianHourlyUsd;
     const max = data.maxHourlyUsd;
     const lower = Math.max(0, median - min);
     const upper = Math.max(0, max - median);
     return [
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -694,6 +744,8 @@ const donutData = useMemo(() => {
       { label: 'Median', value: median || 1 },
       { label: 'Above Median', value: upper || 1 }]
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         const key = 'zion.salary - insights.history';
         const history = JSON.parse (local_storage.get_item (key) || '[]');
         history.unshift (payload);
@@ -732,6 +784,7 @@ if (return [] as { label: string, value: number }[], ) {
 ;
   return (
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -745,6 +798,8 @@ if (return [] as { label: string, value: number }[], ) {
 =======
 </div>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <div className="absolute -right-24 -top-24 h-72 w-72 rounded-full bg-white/10 blur-2xl" />
       </div>
       <div className="mt-6 grid grid-cols-1 lg:grid-cols-3 gap-6">
@@ -761,6 +816,7 @@ if (return [] as { label: string, value: number }[], ) {
               <div>
                 <label className="block text-sm mb-2" htmlFor="input-Experience">Experience</label>
                 <select value={experienceLevel} onChange={(e) => setExperienceLevel(e.target.value as any)} className="w-full rounded border border-gray-300 dark:border-gray-700 bg-white dark:bg-black px-3 py-2 text-sm">
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
         </div>
@@ -854,6 +910,8 @@ if (return [] as { label: string, value: number }[], ) {
                 <label className="block text-sm mb-2" htmlFor="input-Experience">Experience</label>
                 <select value={experienceLevel} onChange={(e) => setExperienceLevel(e.target.value as any)} className="w-full rounded border border-gray-300 dark:border-gray-700 bg-white dark:bg-black px-3 py-2 text-sm">
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   <option>Junior</option>
                   <option>Mid</option>
                   <option>Senior</option>
@@ -861,6 +919,7 @@ if (return [] as { label: string, value: number }[], ) {
                 </select>
               </div>
               <div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -877,11 +936,14 @@ if (return [] as { label: string, value: number }[], ) {
               </div>
             </div>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <label className="block text-sm mb-2" htmlFor="input-Employment">Employment</label>
                 <select value={employmentType} onChange={(e) => setEmploymentType(e.target.value as any)} className="w-full rounded border border-gray-300 dark:border-gray-700 bg-white dark:bg-black px-3 py-2 text-sm">
                   <option value="contract">Contract</option>
                   <option value="freelance">Freelance</option>
                   <option value="full-time">Full-time</option>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -987,10 +1049,13 @@ if (return [] as { label: string, value: number }[], ) {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <input
                 id='remote'
                 type='checkbox'
                 checked={remote}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
                 </select>
@@ -1003,6 +1068,8 @@ if (return [] as { label: string, value: number }[], ) {
               </div>
             </div>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <div className="flex items-center gap-2 mt-3">
               <input id="remote" type="checkbox" checked={remote} onChange={(e) => setRemote(e.target.checked)} />
               <label htmlFor="remote" className="text-sm" htmlFor="input-Remote role">Remote role</label>
@@ -1018,6 +1085,7 @@ if (return [] as { label: string, value: number }[], ) {
                 Remote role;
               </label>;
             </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -1043,6 +1111,8 @@ if (return [] as { label: string, value: number }[], ) {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <button
                 onClick={saveInsight}
                 className='rounded border border-gray-300 dark:border-gray-700 py-2 text-sm hover:bg-gray-50 dark:hover:bg-gray-900'>;
@@ -1059,6 +1129,7 @@ if (return [] as { label: string, value: number }[], ) {
                   alert('This would suggest a resume rate optimization.');
                 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
           <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4">
@@ -1066,11 +1137,14 @@ if (return [] as { label: string, value: number }[], ) {
 =======
           <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4">
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <h3 className="font-medium mb-2">Actions</h3>
             <div className="flex flex-col gap-2">
               <button onClick={saveInsight} className="rounded border border-gray-300 dark:border-gray-700 py-2 text-sm hover:bg-gray-50 dark:hover:bg-gray-900">Save insight</button>
               <button onClick={() => alert('This would prefill a job posting flow.')} className="rounded bg-emerald-600 text-white py-2 text-sm hover:bg-emerald-700">Use in Job Post</button>
               <button onClick={() => alert('This would suggest a resume rate optimization.')} className="rounded bg-blue-600 text-white py-2 text-sm hover:bg-blue-700">Optimize Resume Rate</button>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1218,11 +1292,14 @@ if (return [] as { label: string, value: number }[], ) {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               >;
                 Optimize Resume Rate;
               </button>            </div>;
           </div>;
         </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1248,6 +1325,8 @@ if (return [] as { label: string, value: number }[], ) {
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                 {data ? `$${data.recommendedHourlyUsd}` : '—'}
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               </div>;
             </div>;
             <div className='rounded - lg border border - gray - 200 dark:border - gray - 800 p - 4'>;
@@ -1259,6 +1338,7 @@ if (return [] as { label: string, value: number }[], ) {
             <div className='rounded - lg border border - gray - 200 dark:border - gray - 800 p - 4'>;
               <div className='text - xs text - gray - 500'>Median</div>;
               <div className='text - xl font - semibold'>;
+<<<<<<< HEAD
                 {data ? `$${data.medianHourlyUsd}` : '—'}
 <<<<<<< HEAD
 
@@ -1278,6 +1358,8 @@ if (return [] as { label: string, value: number }[], ) {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <div className='grid grid-cols-2 md:grid-cols-4 gap-4'>;
             <div className='rounded-lg border border-gray-200 dark:border-gray-800 p-4'>;
               <div className='text-xs text-gray-500'>Recommended Hourly</div>;
@@ -1328,6 +1410,7 @@ if (return [] as { label: string, value: number }[], ) {
               ) : (;
                 <div className='h-40 animate-pulse bg-gray-100 dark:bg-gray-900 rounded' />;
               )}
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -1352,10 +1435,13 @@ if (return [] as { label: string, value: number }[], ) {
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     ))}
                   </tbody>;
                 </table>;
               )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
               </div>;
@@ -1414,10 +1500,13 @@ if (return [] as { label: string, value: number }[], ) {
             <div className='rounded-lg border border-gray-200 dark:border-gray-800 p-4'>
               <h3 className='font-medium mb-3'>Distribution</h3>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               {data ? (
                 <div className='flex flex - col items - center gap - 3'>;
                   <DonutChart;
                     slices={
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1438,6 +1527,8 @@ if (return [] as { label: string, value: number }[], ) {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     }
                   />;
                   <div className='flex gap-2 flex-wrap justify-center text-xs'>;
@@ -1460,12 +1551,15 @@ if (return [] as { label: string, value: number }[], ) {
               ) : (;
                 <div className='h-40 animate-pulse bg-gray-100 dark:bg-gray-900 rounded' />                <div className="h-40 animate-pulse bg-gray-100 dark:bg-gray-900 rounded" />;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
             </div>
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4">
               <h3 className="font-medium mb-3">Distribution</h3>
               {data ? (
@@ -1478,6 +1572,7 @@ if (return [] as { label: string, value: number }[], ) {
                   </div>
                 </div>
               ) : (
+<<<<<<< HEAD
 <<<<<<< HEAD
                 <div className="h-40 animate-pulse bg-gray-100 dark:bg-gray-900 rounded" />
 
@@ -1499,6 +1594,8 @@ if (return [] as { label: string, value: number }[], ) {
 <div className="h-40 animate-pulse bg-gray-100 dark:bg-gray-900 rounded" />
               )}
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             </div>
           </div>
           {data?.gptRecommendation && (
@@ -1508,14 +1605,30 @@ if (return [] as { label: string, value: number }[], ) {
                 {data.gptRecommendation}
               </p>            </div>
           )}
-
           {data && (            <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4">
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+              )}
+
+
+
+
+
+            </div>
+          </div>
+          {data?.gptRecommendation && (
+
+            <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4">
+
+              )}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <h3 className="font-medium mb-2">GPT Recommendation</h3>
               <p className="text-sm text-gray-700 dark:text-gray-300 whitespace-pre-wrap">{data.gptRecommendation}</p>
             </div>
           )}
           {data && (
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1549,6 +1662,8 @@ if (return [] as { label: string, value: number }[], ) {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   <span
                     key={t}
                     className='rounded-full bg-indigo-50 dark:bg-indigo-900/30 text-indigo-700 dark:text-indigo-300 border border-indigo-200 dark:border-indigo-800 px-3 py-1 text-xs'>;
@@ -1561,6 +1676,7 @@ if (return [] as { label: string, value: number }[], ) {
                   <span key={t} className="rounded-full bg-indigo-50 dark:bg-indigo-900/30 text-indigo-700 dark:text-indigo-300 border border-indigo-200 dark:border-indigo-800 px-3 py-1 text-xs">{t}</span>;
               </div>;
             </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1589,6 +1705,9 @@ if (return [] as { label: string, value: number }[], ) {
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+          )}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   );
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
@@ -1630,6 +1749,10 @@ if (return [] as { label: string, value: number }[], ) {
               <p className="text - sm text - gray - 700 dark:text - gray - 300 whitespace - pre - wrap">{data.gpt_recommendation}</p>;
             </div>)}
           {data && (
+
+            </div>
+          )}
+
             <div className='rounded - lg border border - gray - 200 dark:border - gray - 800 p - 4'>;
               <h3 className='font - medium mb - 3'>Signals</h3>;
               <div className='flex gap - 2 flex - wrap'>;
@@ -1654,6 +1777,7 @@ if (return [] as { label: string, value: number }[], ) {
       </div>;
     </div>);
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -1683,3 +1807,5 @@ if (return [] as { label: string, value: number }[], ) {
 
           {data && (
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

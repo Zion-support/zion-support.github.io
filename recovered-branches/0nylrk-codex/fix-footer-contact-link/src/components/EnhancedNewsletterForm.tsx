@@ -1,6 +1,9 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React from 'react';
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 
@@ -10,6 +13,7 @@ export function EnhancedNewsletterForm() {;
   const [email, setEmail] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+<<<<<<< HEAD
 
   const handleSubmit = (e: React && React.FormEvent) => {;
     e && e.preventDefault();
@@ -32,39 +36,45 @@ import { Input } from "@/components/ui/input";
   }
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
 import { useState } from "react";
 import { Mail } from "lucide-react";
 import { useState } from "react",
 import { Mail } from "lucide-react",
-export function EnhancedNewsletterForm() {
-  const [email, setEmail] = useState(""),
-  const [isSubmitting, setIsSubmitting] = useState(false),
-  const [isSubmitted, setIsSubmitted] = useState(false),
 
-  const handleSubmit = (e: React.FormEvent) => {
-e.preventDefault();
-    e.preventDefault();
+  const handleSubmit = (e: React && React.FormEvent) => {;
+    e && e.preventDefault();
     setIsSubmitting(true);
+<<<<<<< HEAD
     // Simulate API call
     setTimeout(() => {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       setIsSubmitting(false);
       (setIsSubmitted(true), setEmail(""));
     }, 1000);
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export function EnhancedNewsletterForm() {
   const [email, setEmail] = useState(""),
   const [isSubmitting, setIsSubmitting] = useState(false),
   const [isSubmitted, setIsSubmitted] = useState(false),
 
   const handleSubmit = (e: React.FormEvent) => {
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     e.preventDefault(),
     setIsSubmitting(true),
     
@@ -77,6 +87,7 @@ export function EnhancedNewsletterForm() {
   },
 
   return (
+<<<<<<< HEAD
     <div className="w-full max-w-lg mx-auto bg-zion-blue-light border border-zion-purple/20 rounded-lg p-6">
       <div className="flex items-center mb-4">
         <div className="p-2 bg-zion-purple/20 rounded-full text-zion-cyan mr-3">
@@ -115,6 +126,10 @@ export function EnhancedNewsletterForm() {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {isSubmitted ? (
         <div className="text-center p-4 rounded-lg bg-zion-purple/20 border border-zion-purple/40">
           <p className="text-white font-medium">Thank you for subscribing!</p>
@@ -124,6 +139,7 @@ export function EnhancedNewsletterForm() {
         </div>
       ) : (
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
   return (
@@ -196,11 +212,14 @@ function EnhancedNewsletterForm() {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             Get exclusive offers, trending AI news, and early access to best;
             deals;
           </p>;
         </div>;
       </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
         <form onSubmit={handleSubmit} className="flex flex-col space-y-3 sm:flex-row sm:space-y-0 sm:space-x-2">
@@ -215,11 +234,14 @@ function EnhancedNewsletterForm() {
       ) : (
         <form onSubmit={handleSubmit} className="flex flex-col space-y-3 sm:flex-row sm:space-y-0 sm:space-x-2">
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <Input
             type="email"
             placeholder="Enter your email"
             className="flex-grow bg-zion-blue-dark text-white border-zion-purple/20 focus:border-zion-purple focus:ring-zion-purple"
             value={email}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -329,6 +351,8 @@ function EnhancedNewsletterForm() {
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             onChange={(e: React.ChangeEvent<HTMLInputElement>) => setEmail(e.target.value)}
             required
           />
@@ -342,6 +366,7 @@ function EnhancedNewsletterForm() {
         </form>
       )}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 }
@@ -353,6 +378,8 @@ function EnhancedNewsletterForm() {
         <div className="flex -space-x-1 mr-2">
           {[...Array(3)].map((_, i) => (
 <<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <div
               key={i}
               className="h-5 w-5 rounded-full border border-zion-blue-dark bg-zion-blue flex items-center justify-center text-zion-cyan"
@@ -364,9 +391,6 @@ function EnhancedNewsletterForm() {
         <span>Join 10,000+ tech professionals who already subscribe</span>
       </div>
     </div>
-<<<<<<< HEAD
-);
-=======
             <div key={i} className="h-5 w-5 rounded-full border border-zion-blue-dark bg-zion-blue flex items-center justify-center text-zion-cyan">
 import { Button } from "@/components/ui/button",;
 import { Input } from "@/components/ui/input",;
@@ -434,10 +458,7 @@ export function EnhancedNewsletterForm() {;
       </div>;
     </div>;
   );
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-=======
   );
->>>>>>> main
 }
   ),; const handleSubmit = (e: React.FormEvent) => {
   e.preventDefault ();
@@ -449,4 +470,7 @@ setIsSubmitting (true);
 }</div> <span>Join 10, 000+ tech professionals who already subscribe</span> </div> </div>) 
 }
 }
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

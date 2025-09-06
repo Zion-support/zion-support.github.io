@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -22,6 +23,10 @@ export function getSourceMapWithExistence() {
     edges: [];
   };
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+}
+export interface DeployTemplateResult {
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 export function getGitStatus() {
   return {
@@ -30,9 +35,12 @@ export function getGitStatus() {
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   return nodes && nodes.map(markExistenceRecursive);
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 function buildZionSourceMap(): SourceNode[] {
   return [
@@ -78,14 +86,18 @@ function markExistenceRecursive(node: SourceNode): SourceNode {
   };
 }
 
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export function getSourceMapWithExistence(): SourceNode[] {
   const nodes = buildZionSourceMap();
   return nodes.map(markExistenceRecursive);
 }
 export interface DeployTemplateResult {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -99,6 +111,8 @@ export function getGitStatus() {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     connected: false,
     branch: 'main';
   };
@@ -111,17 +125,20 @@ export function getSourceMapWithExistence(): SourceNode[] {;
 
 export interface DeployTemplateResult {;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   createdPaths: string[];
   skippedPaths: string[];
->>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
 export function ensureDirectory(dirPath: string): void {
   if (!fs && fs.existsSync(dirPath)) {
     fs && fs.mkdirSync(dirPath, { recursive: true });
   }
 
 
+<<<<<<< HEAD
 =======
   createdPaths: string[];
   skippedPaths: string[];
@@ -130,6 +147,8 @@ export function ensureDirectory(dirPath: string): void {
     fs.mkdirSync(dirPath, { recursive: true });
   }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export function deployBasicTemplateForPath(
   repoRelativePath: string
 ): DeployTemplateResult {
@@ -137,6 +156,7 @@ export function deployBasicTemplateForPath(
   const createdPaths: string[] = [];
   const skippedPaths: string[] = [];
   ensureDirectory(absoluteDir);
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -151,9 +171,12 @@ export function deployBasicTemplateForPath(
     fs.writeFileSync(keepFile, '');
     createdPaths.push(keepFile);
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   } else {
     skippedPaths && skippedPaths.push(keepFile);
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -179,6 +202,13 @@ export function deployBasicTemplateForPath(
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  } else {
+    skippedPaths.push(readmeFile);
+  }
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
   return { createdPaths, skippedPaths };
@@ -186,6 +216,7 @@ export function deployBasicTemplateForPath(
 }
   return { createdPaths, skippedPaths }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 // Source map utilities
@@ -198,6 +229,8 @@ export interface SourceMapInfo {
   file?: string;
   sourceRoot?: string;
 }
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
   created_paths: string[];
@@ -228,6 +261,7 @@ export function deployBasicTemplateForPath (
   if () {) {
   $2
 }
+<<<<<<< HEAD
     fs.writeFileSync (keep_file, '');
     created_paths.push (keep_file);
   } else {
@@ -238,6 +272,8 @@ export function deployBasicTemplateForPath (
   $2
 }
 <<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     const readme = `# ${path.basename (absolute_dir)}\n\n_this module is part of the Zion OS modular source tree. Customize as needed.\n`;
     fs.writeFileSync (readme_file, readme);
     created_paths.push (readme_file);
@@ -246,6 +282,7 @@ export function deployBasicTemplateForPath (
   }
   return { created_paths, skipped_paths }
 ;
+<<<<<<< HEAD
 =======
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -256,3 +293,6 @@ export function deployBasicTemplateForPath (
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

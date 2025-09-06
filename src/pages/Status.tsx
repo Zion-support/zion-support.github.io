@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { logWarn } from '@/utils/productionLogger'
 <<<<<<< HEAD
 =======
@@ -17,6 +18,8 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { logWarn } from '@/utils/productionLogger';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { logWarn } from '@/utils/productionLogger',
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface ServiceStatus {
   name: string
   status: 'operational' | 'degraded' | 'outage' | 'maintenance'
@@ -25,7 +28,6 @@ interface ServiceStatus {
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -33,6 +35,9 @@ class ErrorBoundary extends React.Component {
 
 
 
+
+
+;
 
 
 ;
@@ -80,6 +85,7 @@ const FALLBACK_SERVICES: ServiceStatus[] = [
     return this.props.children;
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
         return <CheckCircle className="h-5 w-5 text-green-500" />
@@ -94,6 +100,8 @@ import React, { useState, useEffect } from 'react'; import { motion  } from 'fra
 }
 
 ;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 const FALLBACK_SERVICES: ServiceStatus[] = [
   {
     name: "Marketplace API",
@@ -149,6 +157,7 @@ interface ServiceStatus {;
         return <CheckCircle className="h-5 w-5 text-green-500" />;
         return <Clock className="h-5 w-5 text-blue-500" />;
       default:;
+<<<<<<< HEAD
         return <AlertCircle className="h-5 w-5 text-gray-500" />}
 import React, { useState, useEffect } from 'react'; import { motion  } from 'framer-motion'; import { SEO } from '../components/SEO'; import {CheckCircle, AlertTriangle, XCircle, Clock, Activity, Server, Database, Globe, Zap, RefreshCw, TrendingUp, BarChart3, Calendar, AlertCircle, Info, ExternalLink } from 'lucide-react'; export default function Status() { const [lastUpdated, setLastUpdated] = useState(new Date()); const [isRefreshing, setIsRefreshing] = useState(false)
 }
@@ -261,3 +270,38 @@ function Status() { const [last_updated, setLastUpdated] = useState (new Date ()
 
 
 ;
+=======
+        return <AlertCircle className="h-5 w-5 text-gray-500" />;
+    }
+  },;
+  const getStatusText = (status: ServiceStatus['status']) => {;
+    switch (status) {;
+      case 'operational':;
+        return 'Operational',;
+      case 'degraded':;
+        return 'Degraded Performance',;
+      case 'outage':;
+        return 'Service Outage',;
+      case 'maintenance':;
+        return 'Scheduled Maintenance',;
+      default:;
+        return 'Unknown';
+    }
+  },;
+  const getStatusColor = (status: ServiceStatus['status']) => {;
+    switch (status) {;
+      case 'operational':;
+        return 'text-green-500',;
+      case 'degraded':;
+        return 'text-yellow-500',;
+      case 'outage':;
+        return 'text-red-500',;
+      case 'maintenance':;
+        return 'text-blue-500',;
+      default:;
+        return 'text-gray-500';
+    }
+  },
+
+  )
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

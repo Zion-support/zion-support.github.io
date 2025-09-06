@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -58,6 +59,8 @@ import {Button} from "@/components/ui/button";
 import PostForm from "@/components/community/PostForm";
 import {useToast} from "@/hooks/use-toast";
 import {ForumCategory} from "@/types/community";
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useState, useEffect } from "react",
 import { Link, useNavigate, useSearchParams } from "react-router-dom",
 import { AppLayout } from "@/layout/AppLayout",
@@ -81,6 +84,7 @@ export default function CreatePostPage() {;
   const navigate = useNavigate();
   const { toast } = useToast();
   const [searchParams] = useSearchParams();
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   // Get category from URL query params if available;
@@ -132,7 +136,12 @@ export default function CreatePostPage() {;
 =======
   return (
     <AppLayout>;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export default function CreatePostPage() {
+
+
+
 
   const navigate = useNavigate();
   const { toast } = useToast();
@@ -158,15 +167,6 @@ export default function CreatePostPage() {
       // Here we would normally save to the database
       // For now, we'll just simulate a successful post creation
       // Parse tags into an array
-      const tagsArray = values.tags.split(",").map(tag => tag.trim());
-      const tagsArray = values.tags.split(",").map(tag => tag.trim()),
-      
-      toast({
-        title: "Post created"
-        description: "Your post has been published successfully"
-      });
-      }),
-      
       // Redirect to the forum category
       navigate(`/community/category/${values.categoryId}`)
     } catch (error) {
@@ -175,17 +175,18 @@ export default function CreatePostPage() {
         description: "There was a problem creating your post"
         variant: "destructive"
       })
-    }
-  }
-  },
 
   return (
+<<<<<<< HEAD
     <AppLayout>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <SEO
         title="Create New Post | Community Forum | Zion AI Marketplace"
         description="Create a new discussion post in the Zion AI Marketplace community forum."
         keywords="community, forum, discussion, create post, new thread"
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -351,6 +352,8 @@ export default function CreatePostPage() {;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useState, useEffect } from './react';
 import { Link, use_navigate, useSearchParams } from './react-router-dom';
 import { AppLayout } from '@/layout / AppLayout';
@@ -373,6 +376,7 @@ function CreatePostPage() {
   const { toast } = use_toast ();
   const [search_params] = useSearchParams ();
 ;
+<<<<<<< HEAD
   // Get category from URL query params if available;
   const initial_category = search_params.get ("category") as ForumCategory | null;
 ;
@@ -467,3 +471,5 @@ return (<AppLayout> <SEO title="Create New Post | Community Forum | Zion AI Mark
 }
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -11,11 +12,14 @@ import React from 'react';
 import React from 'react',
 import React from 'react';
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 
 import {
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -58,6 +62,8 @@ import {
 } from 'lucide-react';
 import Layout from '../components/layout/Layout';import {
   TrendingUp, Brain, Shield, Zap, Target, ;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   TrendingUp,
   Brain,
@@ -79,10 +85,36 @@ import Layout from '../components/layout/Layout';import {
 import Layout from '../components/layout/Layout';import {
   TrendingUp, Brain, Shield, Zap, Target, ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+  TrendingUp,
+  Brain,
+  Shield,
+  Zap,
+  Target,
+  BarChart3,
+  Cpu,
+  Globe,
+  Users,
+  Award,
+  CheckCircle,
+  ArrowRight,
+  Star,
+  Phone,
+  Mail,;
+  MapPin,;
+} from 'lucide-react';
+import Layout from '../components/layout/Layout';import {
+  TrendingUp, Brain, Shield, Zap, Target, ;
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   BarChart3, Cpu, Globe, Users, Award;
   CheckCircle, ArrowRight, Star, Phone, Mail, MapPin
  } from 'lucide-react';
@@ -157,6 +189,9 @@ const pricingPlans = [
     popular: false
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   
   static getDerivedStateFromError(error) {
     return { hasError: true };
@@ -183,55 +218,25 @@ import { motion } from 'framer-motion';
   CheckCircle, ArrowRight, Star, Phone, Mail, MapPin;
 } from 'lucide-react';
 import Layout from '../components/layout/Layout';
-
-
   {
     name: 'Starter',
     price: 199,
     period: 'month',
-
-    features: [;
-      'Basic algorithms',
-      '5 asset classes',
-      'Daily rebalancing',
-      'Standard support',
-    ],
-    popular: false,
-  },  {
-    name: 'Professional',
-    price: 499,
-    period: 'month',    features: ['Basic algorithms5 asset classes_daily rebalancing_standard support'],
-    popular: false;
-  }
-
   {
     name: 'Professional',
     price: 499,
     period: 'month',
-
-    features: [;
-      'Advanced algorithms',
-      'All asset classes',
-      'Real - time rebalancing',
-      'Custom strategies',
-      'Priority support',
-    ],
-    popular: true,
-  },  {
-    name: 'Enterprise',
-    price: 1299,
-    period: 'month',    features: ['Advanced algorithms_all asset classes_real - time rebalancing_custom strategies_priority support'],
-    popular: true;
-  }
-
   {
     name: 'Enterprise',
     price: 1299,
     period: 'month',
+<<<<<<< HEAD
 
 =======
 ];
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export default function QuantumTradingAlgorithm() {
   return (
     <Layout>
@@ -272,6 +277,29 @@ export default function QuantumTradingAlgorithm() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className='mb-8'      </Head>
+export default function QuantumTradingAlgorithm() {;
+  return (
+    <Layout>;
+      <Head>;
+        <title>Quantum Trading Algorithm Pro | Zion Tech Group</title>;
+        <meta
+          name='description'
+          content='Advanced algorithmic trading platform leveraging quantum computing principles for ultra-fast market analysis and predictive trading strategies.'
+        />;
+        <meta
+          name='keywords'
+          content='quantum trading, algorithmic trading, AI trading, financial technology, Zion Tech Group'
+        />;
+        <meta
+          property='og:title'
+          content='Quantum Trading Algorithm Pro - Zion Tech Group'
+        />;
+        <meta
+          property='og:description'
+          content='Advanced algorithmic trading platform with quantum computing integration.'
+        />;
+        <meta
+          property='og:url'
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-black via-slate-900 to-black"></div>
@@ -288,21 +316,11 @@ export default function QuantumTradingAlgorithm() {
             transition={{ duration: 0.8 }}
             className='mb-8'
           >
-            <div className='inline-flex items-center px-4 py-2 rounded-full bg-green-500/10 border border-green-500/20 text-green-400 text-sm font-medium mb-6'>
-              <TrendingUp className='w-4 h-4 mr-2' />
-              Financial Technology
-            </div>
-            <h1 className='text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6'>
-              <span className='bg-gradient-to-r from-green-400 via-emerald-400 to-cyan-400 bg-clip-text text-transparent'>
-                Quantum Trading
-              </span>
-              <br />
-              <span className='text-white'>Algorithm Pro</span>
-            </h1>
-            <p className='text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto'>
-              Advanced algorithmic trading platform leveraging quantum computing
-              principles for ultra-fast market analysis and predictive trading
-              strategies.            </p>          >
+          {/* CTA Buttons */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-green-500/10 border border-green-500/20 text-green-400 text-sm font-medium mb-6">
               <TrendingUp className="w-4 h-4 mr-2" />
               Financial Technology
@@ -318,6 +336,7 @@ export default function QuantumTradingAlgorithm() {
               Advanced algorithmic trading platform leveraging quantum computing principles for ultra-fast market analysis and predictive trading strategies.
             </p>
           </motion.div>
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
           {/* CTA Buttons */}
@@ -326,10 +345,30 @@ export default function QuantumTradingAlgorithm() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
             className='flex flex-col sm:flex-row gap-4 justify-center items-center'
+=======
+          content='https://ziontechgroup && ziontechgroup.com/quantum-trading-algorithm'
+        />;
+      </Head>;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
+        {/* Background Elements */}
+        <div className='absolute inset-0 overflow-hidden pointer-events-none'>;
+          <div className='absolute top-20 left-20 w-32 h-32 bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-full blur-3xl animate-pulse'></div>;
+          <div className='absolute top-40 right-32 w-24 h-24 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 rounded-full blur-3xl animate-pulse delay-1000'></div>;
+          <div className='absolute bottom-32 left-32 w-28 h-28 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-500'></div>;
+        </div>;
 
           >
+        <div className='relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto'>          <motion&& motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+          {/* CTA Buttons */}
+          <motion&& motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}
+            className='flex flex-col sm:flex-row gap-4 justify-center items-center'>;
             <a
               href='#pricing'
               className='inline-flex items-center px-8 py-4 rounded-full bg-gradient-to-r from-green-500 to-emerald-500 text-white font-semibold text-lg hover:from-green-600 hover:to-emerald-600 transition-all duration-300 transform hover:scale-105'>;
@@ -338,6 +377,7 @@ export default function QuantumTradingAlgorithm() {
             </a>;
             <a
               href='#contact'
+<<<<<<< HEAD
               className='inline-flex items-center px-8 py-4 rounded-full border-2 border-green-500/30 text-green-400 font-semibold text-lg hover:bg-green-500/10 transition-all duration-300'>;
               <Phone className='w-5 h-5 mr-2' />              Contact Sales          >;
 
@@ -370,6 +410,8 @@ export default function QuantumTradingAlgorithm() {
             >
               <Phone className='w-5 h-5 mr-2' />              Contact Sales          >
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <a
               href="#pricing"
               className="inline-flex items-center px-8 py-4 rounded-full bg-gradient-to-r from-green-500 to-emerald-500 text-white font-semibold text-lg hover:from-green-600 hover:to-emerald-600 transition-all duration-300 transform hover:scale-105">;
@@ -378,6 +420,7 @@ export default function QuantumTradingAlgorithm() {
             </a>;
             <a
               href="#contact"
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -399,10 +442,13 @@ export default function QuantumTradingAlgorithm() {
         </div>
       </section>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {/* Features Section */}
       <section className="py-20 bg-gradient-to-b from-black to-slate-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -419,11 +465,14 @@ export default function QuantumTradingAlgorithm() {
 
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -432,6 +481,8 @@ export default function QuantumTradingAlgorithm() {
             className='text-center mb-16'
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           >
             <h2 className='text-3xl md:text-5xl font-bold text-white mb-6'>
               Revolutionary Trading Technology
@@ -460,10 +511,13 @@ export default function QuantumTradingAlgorithm() {
             {features.map((feature, index) => (
               <motion.div
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             className='text-center mb-16'>;
             <h2 className='text-3xl md:text-5xl font-bold text-white mb-6'>;
               Revolutionary Trading Technology;
@@ -482,6 +536,7 @@ export default function QuantumTradingAlgorithm() {
               Experience the future of algorithmic trading with quantum computing integration and AI-powered market analysis.;
             </p>;
           </motion && motion.div>;
+<<<<<<< HEAD
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;
             {features && features.map((feature, index) => (;
@@ -492,6 +547,8 @@ export default function QuantumTradingAlgorithm() {
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 key={index}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -500,19 +557,25 @@ export default function QuantumTradingAlgorithm() {
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
                 className="bg-gradient-to-br from-green-500/10 to-emerald-500/10 border border-green-500/20 rounded-2xl p-6 hover:border-green-500/40 transition-all duration-300"
               >
                 className='bg-gradient-to-br from-green-500/10 to-emerald-500/10 border border-green-500/20 rounded-2xl p-6 hover:border-green-500/40 transition-all duration-300'
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               >
                 <div className='w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-xl flex items-center justify-center mb-4'>
                   <CheckCircle className='w-6 h-6 text-white' />
                 </div>
                 <h3 className='text-lg font-semibold text-white mb-2'>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   {feature}
                 </h3>              </motion && motion.div>              >;
                 <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-xl flex items-center justify-center mb-4">;
@@ -520,6 +583,7 @@ export default function QuantumTradingAlgorithm() {
                 </div>;
                 <h3 className="text-lg font-semibold text-white mb-2">{feature}</h3>;
               </motion && motion.div>;
+<<<<<<< HEAD
 
 =======
                 className="bg-gradient-to-br from-green-500/10 to-emerald-500/10 border border-green-500/20 rounded-2xl p-6 hover:border-green-500/40 transition-all duration-300"
@@ -530,11 +594,14 @@ export default function QuantumTradingAlgorithm() {
                   {feature}
                 </h3>              </motion.div>              >
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-xl flex items-center justify-center mb-4">
                   <CheckCircle className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">{feature}</h3>
               </motion.div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -566,16 +633,32 @@ export default function QuantumTradingAlgorithm() {
 =======
 =======
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             ))}
           </div>
         </div>
       </section>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
+<<<<<<< HEAD
+=======
+            ))}
+      {/* Pricing Section */}
+      <section id='pricing' className='py-20 bg-black'>;
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion && motion.div      <section id="pricing" className="py-20 bg-black">;
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
+          <motion&& motion.div
+
+          </div>
+        </div>
+      </section>
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {/* Pricing Section */}
       <section id="pricing" className="py-20 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -592,11 +675,15 @@ export default function QuantumTradingAlgorithm() {
 
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -605,6 +692,8 @@ export default function QuantumTradingAlgorithm() {
             className='text-center mb-16'
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           >
             <h2 className='text-3xl md:text-5xl font-bold text-white mb-6'>
               Choose Your Plan
@@ -633,10 +722,13 @@ export default function QuantumTradingAlgorithm() {
             {pricingPlans.map((plan, index) => (
               <motion.div
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             className='text-center mb-16'>;
             <h2 className='text-3xl md:text-5xl font-bold text-white mb-6'>;
               Choose Your Plan;
@@ -655,6 +747,7 @@ export default function QuantumTradingAlgorithm() {
               Flexible pricing options designed for traders of all levels, from individual investors to institutional clients.;
             </p>;
           </motion && motion.div>;
+<<<<<<< HEAD
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">;
             {pricingPlans && pricingPlans.map((plan, index) => (;
@@ -665,12 +758,15 @@ export default function QuantumTradingAlgorithm() {
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 key={index}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
                 className={`relative bg-gradient-to-br from-green-500/10 to-emerald-500/10 border rounded-2xl p-8 ${
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -925,11 +1021,14 @@ function QuantumTradingAlgorithm() {
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     <span className="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
                       Most Popular
                     </span>
                   </div>
                 )}
+<<<<<<< HEAD
 
                   <div className='absolute -top - 4 left - 1/2 transform -translate - x-1 / 2'>;
 <<<<<<< HEAD
@@ -949,12 +1048,15 @@ function QuantumTradingAlgorithm() {
                 <div className='text-center mb-8'>
                   <h3 className='text-2xl font-bold text-white mb-4'>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     {plan.name}
                   </h3>;
                   <div className='text - 4xl font - bold text - white mb - 2'>;
                     ${plan.price}
                     <span className='text - lg text - gray - 400 font - normal'>;
                       /{plan.period}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
                 
@@ -968,6 +1070,8 @@ function QuantumTradingAlgorithm() {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     <span className="text-lg text-gray-400 font-normal">/{plan.period}</span>
                   </div>
                 </div>
@@ -975,6 +1079,7 @@ function QuantumTradingAlgorithm() {
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-gray-300">
                       <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+<<<<<<< HEAD
 <<<<<<< HEAD
 
               >;
@@ -1022,6 +1127,10 @@ function QuantumTradingAlgorithm() {
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+                      {feature}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 
@@ -1033,6 +1142,7 @@ function QuantumTradingAlgorithm() {
                 </ul>
 
                 <button className="w-full bg-gradient-to-r from-green-500 to-emerald-500 text-white font-semibold py-3 px-6 rounded-xl hover:from-green-600 hover:to-emerald-600 transition-all duration-300">
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
@@ -1050,6 +1160,8 @@ function QuantumTradingAlgorithm() {
                 </ul>
                 <button className='w-full bg-gradient-to-r from-green-500 to-emerald-500 text-white font-semibold py-3 px-6 rounded-xl hover:from-green-600 hover:to-emerald-600 transition-all duration-300'>                  Get Started                <button className="w-full bg-gradient-to-r from-green-500 to-emerald-500 text-white font-semibold py-3 px-6 rounded-xl hover:from-green-600 hover:to-emerald-600 transition-all duration-300">
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   Get Started
                 </button>
               </motion.div>
@@ -1057,13 +1169,15 @@ function QuantumTradingAlgorithm() {
           </div>
         </div>
       </section>
-
                 </ul>;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 </ul>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <button className='w-full bg-gradient-to-r from-green-500 to-emerald-500 text-white font-semibold py-3 px-6 rounded-xl hover:from-green-600 hover:to-emerald-600 transition-all duration-300'>                  Get Started                <button className="w-full bg-gradient-to-r from-green-500 to-emerald-500 text-white font-semibold py-3 px-6 rounded-xl hover:from-green-600 hover:to-emerald-600 transition-all duration-300">;
                   Get Started;
                 </button>;
@@ -1073,6 +1187,7 @@ function QuantumTradingAlgorithm() {
         </div>;
       </section>;
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -1101,6 +1216,8 @@ function QuantumTradingAlgorithm() {
       {/* Contact Section */}
       <section id="contact" className="py-20 bg-gradient-to-b from-slate-900 to-black">
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {/* Contact Section */}
       <section
         id='contact'
@@ -1110,12 +1227,23 @@ function QuantumTradingAlgorithm() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
 
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+      {/* Contact Section */}
+      <section
+        id='contact'
+        className='py-20 bg-gradient-to-b from-slate-900 to-black'>;
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion && motion.div      <section id="contact" className="py-20 bg-gradient-to-b from-slate-900 to-black">;
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
+          <motion&& motion.div
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -1124,6 +1252,8 @@ function QuantumTradingAlgorithm() {
             className='text-center mb-16'
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           >
             <h2 className='text-3xl md:text-5xl font-bold text-white mb-6'>
               Ready to Transform Your Trading?
@@ -1150,8 +1280,6 @@ function QuantumTradingAlgorithm() {
           </motion.div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <motion.div
-
-
             className='text-center mb-16'>;
             <h2 className='text-3xl md:text-5xl font-bold text-white mb-6'>;
               Ready to Transform Your Trading?;
@@ -1170,6 +1298,7 @@ function QuantumTradingAlgorithm() {
               Contact our team to learn more about how Quantum Trading Algorithm Pro can revolutionize your trading strategy.;
             </p>;
           </motion && motion.div>;
+<<<<<<< HEAD
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">;
             <motion&& motion.div
@@ -1190,11 +1319,17 @@ function QuantumTradingAlgorithm() {
 
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8, delay: 0 && 0.1 }}
               viewport={{ once: true }}
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -1203,6 +1338,8 @@ function QuantumTradingAlgorithm() {
               className='text-center'
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             >
               <div className='w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-2xl flex items-center justify-center mx-auto mb-4'>
                 <Phone className='w-8 h-8 text-white' />
@@ -1224,10 +1361,13 @@ function QuantumTradingAlgorithm() {
             </motion.div>
             <motion.div
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               className='text-center'>;
               <div className='w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-2xl flex items-center justify-center mx-auto mb-4'>;
                 <Phone className='w-8 h-8 text-white' />;
@@ -1240,14 +1380,18 @@ function QuantumTradingAlgorithm() {
               <h3 className="text-xl font-semibold text-white mb-2">Phone</h3>;
               <p className="text-gray-300">{contactInfo && contactInfo.mobile}</p>;
             </motion && motion.div>;
+<<<<<<< HEAD
 
             <motion&& motion.div
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}
               viewport={{ once: true }}
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -1256,6 +1400,8 @@ function QuantumTradingAlgorithm() {
               className='text-center'
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             >
               <div className='w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-2xl flex items-center justify-center mx-auto mb-4'>
                 <Mail className='w-8 h-8 text-white' />
@@ -1277,10 +1423,13 @@ function QuantumTradingAlgorithm() {
             </motion.div>
             <motion.div
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               className='text-center'>;
               <div className='w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-2xl flex items-center justify-center mx-auto mb-4'>;
                 <Mail className='w-8 h-8 text-white' />;
@@ -1293,14 +1442,18 @@ function QuantumTradingAlgorithm() {
               <h3 className="text-xl font-semibold text-white mb-2">Email</h3>;
               <p className="text-gray-300">{contactInfo && contactInfo.email}</p>;
             </motion && motion.div>;
+<<<<<<< HEAD
 
             <motion&& motion.div
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8, delay: 0 && 0.3 }}
               viewport={{ once: true }}
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -1309,6 +1462,8 @@ function QuantumTradingAlgorithm() {
               className='text-center'
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             >
               <div className='w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-2xl flex items-center justify-center mx-auto mb-4'>
                 <MapPin className='w-8 h-8 text-white' />
@@ -1332,8 +1487,11 @@ function QuantumTradingAlgorithm() {
         </div>
       </section>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               className='text-center'>;
               <div className='w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-2xl flex items-center justify-center mx-auto mb-4'>;
                 <MapPin className='w-8 h-8 text-white' />;
@@ -1475,16 +1633,20 @@ function QuantumTradingAlgorithm() {
       </section>;
     </Layout>);
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 =======
 
               className='text-center'>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   );
 
 }
+<<<<<<< HEAD
 
     </Layout>
   );
@@ -1505,3 +1667,5 @@ function QuantumTradingAlgorithm() {
   );
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

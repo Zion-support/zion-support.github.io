@@ -33,7 +33,11 @@ import { motion } from 'framer-motion';
 
 import React from 'react';
 
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 <<<<<<< HEAD
 import React from 'react';
@@ -396,6 +400,9 @@ export default function ApiDocsPage() {
                 <Link href="/contact" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold">
                   Get API Key
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
 =======
 >>>>>>> main
     name: 'Predictive Analytics',
@@ -598,6 +605,9 @@ export default function ApiDocsPage() {
                 <Link href="/contact" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold">
                   Get API Key
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
 =======
 >>>>>>> main
                 <Link
@@ -803,7 +813,10 @@ export default function ApiDocsPage() {
         </section>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/main
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -827,6 +840,9 @@ export default function ApiDocsPage() {
       </div>
     </>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
 =======
 >>>>>>> main
   Code, 
@@ -838,7 +854,11 @@ export default function ApiDocsPage() {
   Database,
 =======
   ArrowRight,
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   Server,
   Lock,
   Brain,
@@ -1174,7 +1194,11 @@ function APIDocsPage() {
                         <span key={idx} className="bg-green-100 text-green-800 text-xs px-2 py-1 rounded">;
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                           {method}
                         </span>;
                       ))}
@@ -1252,7 +1276,11 @@ function APIDocsPage() {
 =======
 >>>>>>> main
 =======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
                     </div>;
                   </div>;
@@ -1385,7 +1413,11 @@ function APIDocsPage() {
     </Layout>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 >>>>>>> origin/automation-improvements-final
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -1463,7 +1495,13 @@ function APIDocsPage() {
 <<<<<<< HEAD:pages/api-docs.tsx
                 <Link href="/docs" className="px-8 py-4 border-2 border-gray-300 text-gray-700 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">
                   View Documentation
+=======
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/main
 =======
 >>>>>>> main
                 <Link
@@ -1484,8 +1522,11 @@ function APIDocsPage() {
       </div>
 <<<<<<< HEAD
     </Layout>
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/automation-improvements-final
@@ -1610,7 +1651,11 @@ ursor/integrate-build-improve-and-re-verify-8f7d
       </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 =======
 <<<<<<< HEAD
@@ -1624,7 +1669,11 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 =======
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   );
 <<<<<<< HEAD
 =======

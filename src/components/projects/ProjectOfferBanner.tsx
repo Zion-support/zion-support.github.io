@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -45,6 +46,9 @@ export function ProjectOfferBanner() {
     return null
   }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useEffect, useState } from "react",
 import { useRouter } from 'next/router',
 import { Bell, Calendar, X } from 'lucide-react'
@@ -94,6 +98,7 @@ export function ProjectOfferBanner() {;
   if (isLoading || pendingOffers.length === 0 || pendingOffers.every(p => dismissed.has(p.id))) {;
     return null;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -114,12 +119,15 @@ export function ProjectOfferBanner() {;
   
   }
   
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   }
   
   return (
       {pendingOffers
         .filter(offer => !dismissed.has(offer.id))
         .map(offer => (
+<<<<<<< HEAD
           <Card
             key = {offer.id,}
           <Card
@@ -127,6 +135,8 @@ export function ProjectOfferBanner() {;
           <Card 
             key={offer.id} 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             className="border-2 border-primary bg-primary/5"
             onClick = {(,) => handleViewOffer(offer.id),}
           >
@@ -136,12 +146,13 @@ export function ProjectOfferBanner() {;
                   <Bell className="h-4 w-4 text-primary" />
                 </div>
                 <div>
-                  <h4 className="font-semibold">🎉 New Project Offer!</h4>
+                  <h4 className="font-semibold"> New Project Offer!</h4>
                   <p className="text-sm text-muted-foreground">
                     You've been selected for "{offer.job?.title}". Review and accept to get started.
                   </p>
                 </div>
               </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -150,6 +161,8 @@ ursor/fix-website-loading-errors-and-merge-6662
               
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
               
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
               <div className="flex items-center gap-2">
@@ -161,6 +174,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                 </Button>
                 <Button
                   size="sm"
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     </div>
@@ -253,6 +267,8 @@ export function ProjectOfferBanner() {;
                 </Button>;
                 <Button
                   size="sm" 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   variant="ghost"
                   onClick = {(e,) => handleDismiss(offer && offer.id, e),}
                 >;
@@ -262,6 +278,7 @@ export function ProjectOfferBanner() {;
             </CardContent>;
           </Card>;
         ))}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   if ()) {) {
@@ -372,6 +389,8 @@ const handleViewOffer = (projectId: string) => {
   router.push (`/project/$ {
   projectId
 }`)
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 if (isLoading |pendingOffers.length === 0 |pendingOffers.every (p => dismissed.has (p.id) ) ) {
   return null
@@ -380,17 +399,23 @@ if (isLoading |pendingOffers.length === 0 |pendingOffers.every (p => dismissed.h
 }> <CardContent className="p-4 flex items-center justify-between" > <div className="flex items-center gap-2" > <div className="bg-primary/10 rounded-full p-2" > <Bell className="h-4 w-4 text-primary" /> </div> <div> </p> </div> </div> <div className="flex items-center gap-2" > <Button size="sm" className="whitespace-nowrap" > View Offer </Button> <Button > <X className="h-4 w-4" /> </Button> </div> </CardContent> </Card>) )
 }</div>)
 }'"}
+<<<<<<< HEAD
     </div>;
   );
 }
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
     </div>;
   );
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 ;
 =======
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

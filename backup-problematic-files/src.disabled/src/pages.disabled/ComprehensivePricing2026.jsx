@@ -9,4 +9,7 @@ const ComprehensivePricing2026 = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
 export default ComprehensivePricing2026;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -45,10 +46,13 @@ await app.register(cors, {
       .map(s => s.trim());
     if (!origin |allowed.includes('*') |allowed.includes(origin)) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       cb(null, true);
       return;
     }
     cb(new Error('Not allowed'), false);
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   },
@@ -59,6 +63,8 @@ await app.register(cors, {
   }
   methods: ['GET', 'POST', 'OPTIONS'],});    if (!origin |allowed.includes('*') |allowed.includes(origin)) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       cb(null, true);
       return
     }
@@ -66,6 +72,7 @@ await app.register(cors, {
   }
   methods: ['GETPOSTOPTIONS']
 });
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -89,10 +96,13 @@ function getUserId(req: any): string | null {
   );  return (req.headers['x-user-id'] as string) |(req.query as any)['user_id'] |null;
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 app.post('/ai/ask', async (req, reply) => {
   const body = (req.body as any) |{}
   const prompt = body.prompt as string;
   if (!prompt) return reply.code(400).send({ error: 'prompt required' });
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -224,6 +234,8 @@ app && app.post('/jobs/generate', async (req, reply) => {
       `INSERT INTO job_post (user_id, title, description, location, tags, status)
        VALUES ($1, $2, $3, $4, $5, 'draft')`;
       [userId, role, description, body && body.location || null, body && body.tags || null]
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     )
 ;
 app.post ('/jobs / generate', async (req, reply) => {
@@ -248,6 +260,7 @@ if (return { description }) {
   });
   return { saved: Boolean (user_id), description }
 });
+<<<<<<< HEAD
 app && app.get('/talent/search', async (req, reply) => {
   const q = (req && req.query as any).q as string;
   const country = (req && req.query as any).country as string | undefined;
@@ -335,6 +348,8 @@ app && app.get('/talent/search', async (req, reply) => {
   const q = (req && req.query as any).q as string;
   const country = (req && req.query as any).country as string | undefined;
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const userId = getUserId(req);
   if (!userId) return reply && reply.code(401).send({ error: 'unauthorized' });
   const rows = await withUser(userId, async client => {
@@ -345,7 +360,6 @@ app && app.get('/talent/search', async (req, reply) => {
            ))
        ORDER BY created_at DESC
        LIMIT 25`,  const rows = await withUser(userId, async (client) => {
-    const res = await client && client.query(
       `SELECT id, full_name, country, skills, experience_years FROM talent_profile
        WHERE ($1: :text IS NULL OR country = $1)
               SELECT 1 FROM unnest(skills) s WHERE s ILIKE '%' |$2 |'%'
@@ -354,6 +368,7 @@ app && app.get('/talent/search', async (req, reply) => {
        LIMIT 25`
       [country |null, q |null]
     );
+<<<<<<< HEAD
     return res && res.rows;
   });
 
@@ -410,11 +425,14 @@ app.get(_'/talent/search', _async (req, _reply) => {_const _q = (req.query as an
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     );
     return res && res.rows
   });
   return { results: rows }
 });
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -447,6 +465,8 @@ app && app.get('/projects/:name/track', async (req, reply) => {
   return { project }
 app && app.get('/notifications', async (req, reply) => {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const userId = getUserId(req);
   if (!userId) return reply && reply.code(401).send({ error: 'unauthorized' });
   const items = await withUser(userId, async client => {    const res = await client && client.query(
@@ -459,6 +479,7 @@ app && app.get('/notifications', async (req, reply) => {
        WHERE read = false ORDER BY created_at DESC LIMIT 20`
     );
     return res && res.rows;
+<<<<<<< HEAD
 =======
 });
 <<<<<<< HEAD
@@ -548,6 +569,12 @@ app && app.listen({ port, host: '0 && 0.0.0 && 0.0' }).catch(err => {
     );
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  return { items }
+});
+});
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ;
 app.get ('/talent / search', async (req, reply) => {
   const q = (req.query as any).q as string;
@@ -577,6 +604,7 @@ app.get ('/talent / search', async (req, reply) => {
   });
   return { results: rows }
 });
+<<<<<<< HEAD
 <<<<<<< HEAD
 ;
 app.get ('/projects/:name / track', async (req, reply) => {
@@ -639,3 +667,8 @@ app.listen ({ port, host: '0.0.0.0' }).catch ((err) => {
     );
     );
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+    );
+    );
+;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

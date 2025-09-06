@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -35,6 +36,8 @@ import { toast } from "sonner",
 import {logErrorToProduction} from '@/utils/productionLogger',
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface SmartContractDeploymentProps {
   solidityCode: string,
   onDeploy: (options: DeploymentOptions) => Promise<void>,
@@ -42,37 +45,34 @@ interface SmartContractDeploymentProps {
 }
 
 export function SmartContractDeployment({ 
-  solidityCode,
-  onDeploy,
-  solidityCode
-  onDeploy
-  solidityCode,
-  onDeploy,
-  solidityCode
-  onDeploy
-  solidityCode,
-  onDeploy,
   isDeploying
+<<<<<<< HEAD
 isDeploying
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }: SmartContractDeploymentProps) {
   const [deploymentOptions, setDeploymentOptions] = useState<DeploymentOptions>({
     network: 'none'
     useEscrow: true
     deployToChain: false
     walletAddress: ''
+<<<<<<< HEAD
   })
   })
   const handleDeployContract = async () => {
     if (deploymentOptions.deployToChain && !deploymentOptions.walletAddress) {
       toast.error("Please enter a wallet address for blockchain deployment")
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       return;
     }
     try {
-      await onDeploy(deploymentOptions)
+      await on_deploy (deployment_options);
     } catch (error) {
-      logErrorToProduction('Deployment error:', { data: error })
+      logErrorToProduction ('Deployment error:', { data: error });
     }
   }
+<<<<<<< HEAD
   const handleDownloadSolidity = () => {
     // Create a blob from the Solidity code
     const blob = new Blob([solidityCode], { type: 'text/plain' })
@@ -221,6 +221,8 @@ export function SmartContractDeployment({;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   },
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 <<<<<<< HEAD
@@ -236,21 +238,14 @@ export function SmartContractDeployment({;
           Deploy your agreement as a smart contract for enhanced security and automation
         </CardDescription>
       </CardHeader>
+<<<<<<< HEAD
       
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <CardContent className="space-y-6">
         <div className="space-y-4">
           <div className="flex items-center space-x-2">
             <Switch
-              id="deploy-blockchain";
-              aria-label="Deploy to blockchain";
-              checked={deploymentOptions.deployToChain};
-              onCheckedChange={(checked) => setDeploymentOptions({;
-                ...deploymentOptions;                deployToChain: checked
-              id="deploy-blockchain"
-              aria-label="Deploy to blockchain"
-              checked={deploymentOptions.deployToChain}
-              onCheckedChange={(checked) => setDeploymentOptions({
-                ...deploymentOptions;                deployToChain: checked
   },;
   const handleDownloadSolidity = () => {;
     // Create a blob from the Solidity code;
@@ -272,32 +267,13 @@ export function SmartContractDeployment({;
       <CardHeader>;
         <CardTitle className="flex items-center gap-2">;
           <ShieldCheck className="h-5 w-5 text-primary" />;
-  const handleDownloadSolidity = () =>: any {
-    // Create a blob from the Solidity code;
-    const blob = new Blob ([solidity_code], { type: 'text / plain' }),
-    const url = URL.createObjectURL (blob);
-    // Create a temporary anchor to trigger download;
-    const array = document.create_element ('a');
-    a.href = url;
-    a.download = 'ZionContract.sol';
-    document.body.append_child (a);
-    a.click ();
-    // Clean up;
-    URL.revokeObjectURL (url);
-    document.body.remove_child (a);
-    toast.success ("Solidity contract downloaded");
-  }
-  return (
-    <Card className="w - full">;
-      <CardHeader>;
-        <CardTitle className="flex items - center gap - 2">;
-          <ShieldCheck className="h - 5 w - 5 text - primary" />;
           Smart Contract Deployment;
         </CardTitle>;
         <CardDescription>;
           Deploy your agreement as a smart contract for enhanced security and automation;
         </CardDescription>;
       </CardHeader>;
+<<<<<<< HEAD
       ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       <CardContent className="space-y-6">;
@@ -323,6 +299,10 @@ export function SmartContractDeployment({;
                   onValueChange={(value) => setDeploymentOptions({
                     ...deploymentOptions;                    network: value as BlockchainNetwork
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       
 
 
@@ -334,27 +314,47 @@ ursor/fix-website-loading-errors-and-merge-6662
               id="deploy-blockchain"
               aria-label="Deploy to blockchain"
 
+<<<<<<< HEAD
               })}
 
 
           
 
 
+=======
+      <CardContent className="space-y-6">;
+        <div className="space-y-4">;
+          <div className="flex items-center space-x-2">;
+            <Switch;
+              id="deploy-blockchain";
+              aria-label="Deploy to blockchain";
+              checked={deploymentOptions.deployToChain}
+              onCheckedChange={(checked) => setDeploymentOptions({;
+                ...deploymentOptions,;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 deployToChain: checked;
               })}
             />
             <Label htmlFor="deploy-blockchain">Deploy to blockchain</Label>
           </div>
+<<<<<<< HEAD
           
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           {deploymentOptions.deployToChain && (
             <>
               <div className="space-y-2">
                 <Label>Select blockchain network</Label>
+<<<<<<< HEAD
 
                 <RadioGroup
                   defaultValue={deploymentOptions.network}
                   onValueChange={(value) => setDeploymentOptions({
                     ...deploymentOptions;                    network: value as BlockchainNetwork
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <RadioGroup 
                   defaultValue={deploymentOptions.network}
                   onValueChange={(value) => setDeploymentOptions({;
@@ -365,6 +365,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                   onValueChange={(value) => setDeploymentOptions({;
                     ...deploymentOptions,;
                     network: value as BlockchainNetwork;
+<<<<<<< HEAD
 
 
                   onValueChange={(value) => setDeploymentOptions({
@@ -372,6 +373,8 @@ ursor/fix-website-loading-errors-and-merge-6662
                   onValueChange={(value) => setDeploymentOptions({;
                     ...deploymentOptions,;
                     network: value as BlockchainNetwork;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   })}
                   className="flex flex-col space-y-1"
                 >
@@ -389,6 +392,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
               
+<<<<<<< HEAD
 
               <div className="space-y-2">
               <div className="space-y-2">
@@ -402,6 +406,8 @@ ursor/fix-website-loading-errors-and-merge-6662
                   })}
                 />
               </div>
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               
               <div className="space-y-2">
                 <Label htmlFor="wallet-address">Wallet address for transactions</Label>
@@ -409,12 +415,17 @@ ursor/fix-website-loading-errors-and-merge-6662
                   id="wallet-address" 
                   placeholder="0x..." 
                   value={deploymentOptions.walletAddress || ''}
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                   onChange={(e) => setDeploymentOptions({
                     ...deploymentOptions;                    walletAddress: e.target.value
                   })}
                 />
               </div>
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   onChange={(e) => setDeploymentOptions({;
                     ...deploymentOptions;
                     walletAddress: e.target.value;
@@ -422,6 +433,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                 />
               </div>
               
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 ursor/fix-website-loading-errors-and-merge-6662
@@ -431,11 +443,14 @@ ursor/fix-website-loading-errors-and-merge-6662
                   checked={deploymentOptions.useEscrow}
 
               
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <div className="flex items-center space-x-2">
                 <Switch
                   id="use-escrow"
                   aria-label="Use escrow"
                   checked={deploymentOptions.useEscrow}
+<<<<<<< HEAD
                   onCheckedChange={(checked) => setDeploymentOptions({
                     ...deploymentOptions;                    useEscrow: checked
 
@@ -443,6 +458,9 @@ ursor/fix-website-loading-errors-and-merge-6662
                     ...deploymentOptions;
                     useEscrow: checked;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             />;
             <Label htmlFor="deploy-blockchain">Deploy to blockchain</Label>;
           </div>;
@@ -455,6 +473,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                   defaultValue={deploymentOptions && deploymentOptions.network}
                   onValueChange={(value) => setDeploymentOptions({;
                     ...deploymentOptions;                    network: value as BlockchainNetwork;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -472,6 +491,10 @@ ursor/fix-website-loading-errors-and-merge-6662
               <pre>{solidityCode && solidityCode.slice(0, 500)}...</pre>;
 =======
 
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
                   onCheckedChange={(checked) => setDeploymentOptions({;
                     ...deploymentOptions;
@@ -482,6 +505,7 @@ ursor/fix-website-loading-errors-and-merge-6662
               </div>
             </>
           )}
+<<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
                 deployToChain:checked;
               })}
@@ -541,6 +565,8 @@ ursor/fix-website-loading-errors-and-merge-6662
             </>;
           )}
           
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <div className="rounded-md bg-muted p-4">
             <h4 className="text-sm font-medium mb-2">Smart Contract Preview</h4>
             <div className="max-h-52 overflow-y-auto bg-background p-3 rounded text-xs font-mono">
@@ -549,9 +575,12 @@ ursor/fix-website-loading-errors-and-merge-6662
           </div>
         </div>
       </CardContent>
+<<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
       <CardFooter className="flex justify-between">
       
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
       <CardFooter className="flex justify-between">
@@ -559,9 +588,12 @@ ursor/fix-website-loading-errors-and-merge-6662
           <Download className="mr-2 h-4 w-4" />
           Download .sol File
         </Button>
+<<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
         <Button onClick={handleDeployContract} disabled={isDeploying}>
         
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
         <Button onClick={handleDeployContract} disabled={isDeploying}>
@@ -573,6 +605,7 @@ ursor/fix-website-loading-errors-and-merge-6662
           ) : (
             'Deploy Contract'
           )}
+<<<<<<< HEAD
         </Button>
       </CardFooter>
     </Card>
@@ -775,3 +808,5 @@ const handleDeployContract = async () => {;
 }
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -37,6 +37,7 @@ class ErrorMonitor {
       fs.mkdirSync(logsDir, { recursive: true });
     }
 
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -47,6 +48,8 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     // Initial health check
     await this.performHealthCheck();
     // Start continuous monitoring
@@ -79,6 +82,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
       this.monitoringReport.errorsDetected.push({
         type: 'health_check_failure',
         message: error.message,
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -89,13 +93,18 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
         timestamp: new Date().toISOString()
         timestamp: new Date().toISOString()
         timestamp: new Date().toISOString()
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         timestamp: new Date().toISOString()
         timestamp: new Date().toISOString()
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
         timestamp: new Date().toISOString()
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         timestamp: new Date().toISOString(),
       });
     }
@@ -169,6 +178,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
       'src/pages/index.tsx',
     ];
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
      is missing`,
@@ -187,6 +197,8 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
      is missing`,
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           timestamp: new Date().toISOString(),
         });
         this.monitoringReport.metrics.totalErrors += 1;
@@ -196,6 +208,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
   parseTypeScriptErrors(output) {
     const errors = [];
     const lines = output.split('\n');
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -219,15 +232,17 @@ ursor/fix-syntax-push-and-merge-to-main-40de
             timestamp: new Date().toISOString(),
           });
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             timestamp: new Date().toISOString(),
           });
 
     );
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
         }
       }
     }
 
+<<<<<<< HEAD
 
 
             timestamp: new Date().toISOString()
@@ -253,11 +268,14 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     return errors;
   }
   parseESLintErrors(output) {
     const errors = [];
     const lines = output.split('\n');
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     for (const line of lines) {
@@ -270,10 +288,13 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
           column: parseInt(match[3]),
           message: match[4].trim(),
 ursor/fix-syntax-push-and-merge-to-main-40de
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           timestamp: new Date().toISOString()
         });
       }
     }
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 ursor/add-new-services-and-deploy-updates-0462
@@ -281,10 +302,13 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
     );
       }
     }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 =======
     );
@@ -295,11 +319,14 @@ ursor/fix-syntax-push-and-merge-to-main-40de
     }
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           timestamp: new Date().toISOString(),
         });
       }
     }
 
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -310,6 +337,8 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     return errors;
   }
   updateHealthStatus() {
@@ -327,6 +356,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
     const status = this.monitoringReport.healthStatus;
     const totalErrors = this.monitoringReport.metrics.totalErrors;
     const totalWarnings = this.monitoringReport.metrics.totalWarnings;
+<<<<<<< HEAD
     console.log(`📊 Health Status: ${status.toUpperCase()}`);
     console.log(`📈 Total Errors: ${totalErrors}`);
     console.log(`⚠️  Total Warnings: ${totalWarnings}`);
@@ -348,6 +378,8 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
     console.log(`🏗️  Build Success: ${this.monitoringReport.metrics.buildSuccess ? '✅' : '❌'}`);
     console.log(`🔍 Type Check Success: ${this.monitoringReport.metrics.typeCheckSuccess ? '✅' : '❌'}`);
     console.log(`🧹 Lint Success: ${this.monitoringReport.metrics.lintSuccess ? '✅' : '❌'}`);
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     console.log(`🏗️  Build Success: ${this.monitoringReport.metrics.buildSuccess ? '✅' : '❌'}`);
     console.log(`🔍 Type Check Success: ${this.monitoringReport.metrics.typeCheckSuccess ? '✅' : '❌'}`);
     console.log(`🧹 Lint Success: ${this.monitoringReport.metrics.lintSuccess ? '✅' : '❌'}`);
@@ -360,7 +392,10 @@ ursor/fix-syntax-push-and-merge-to-main-40de
     console.log(`🔍 Type Check Success: ${this.monitoringReport.metrics.typeCheckSuccess ? '✅' : '❌'}`);
     console.log(`🧹 Lint Success: ${this.monitoringReport.metrics.lintSuccess ? '✅' : '❌'}`);
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     console.log(
       `🏗️  Build Success: ${this.monitoringReport.metrics.buildSuccess ? '✅' : '❌'}`
     );
@@ -377,6 +412,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
       const ErrorFixerAutomation = require('./error-fixer-automation.js');
       const automation = new ErrorFixerAutomation();
       await automation.run();
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -395,11 +431,16 @@ ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       console.log('✅ Error fixer completed');
+=======
+      console.log('✅ Error fixer completed');
+      console.log('✅ Error fixer completed');
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     } catch (error) {
       console.error('❌ Error fixer failed:', error);
       this.monitoringReport.errorsDetected.push({
         type: 'error_fixer_failure',
         message: error.message,
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -410,13 +451,18 @@ ursor/fix-syntax-push-and-merge-to-main-40de
         timestamp: new Date().toISOString()
         timestamp: new Date().toISOString()
         timestamp: new Date().toISOString()
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         timestamp: new Date().toISOString()
         timestamp: new Date().toISOString()
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
         timestamp: new Date().toISOString()
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         timestamp: new Date().toISOString(),
       });
     }
@@ -443,6 +489,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
       fs.mkdirSync(reportDir, { recursive: true });
     }
 
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -453,6 +500,8 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     // Add duration to report
     this.monitoringReport.duration = Date.now() - this.startTime;
     fs.writeFileSync(
@@ -491,6 +540,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
     console.log('✅ Error Monitor shutdown complete');
     process.exit(0);
   }
+<<<<<<< HEAD
 
 
 }
@@ -499,11 +549,14 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 =======
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 // Run the monitor
 if (require.main === module) {
   const monitor = new ErrorMonitor();
   monitor.start().catch(console.error);
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 module.exports = ErrorMonitor;
@@ -517,3 +570,5 @@ module.exports = ErrorMonitor;
 module.exports = ErrorMonitor;
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

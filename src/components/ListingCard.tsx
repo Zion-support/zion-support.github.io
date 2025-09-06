@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import React from 'react'
 import { cn } from '@/lib/utils'
@@ -115,6 +116,8 @@ import Link from 'next/link';
 import Image from 'next/image';interface ListingCardProps {;
   id?: string,;
 id?: string,;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   title: string,;
   description: string,;
   images?: string[],;
@@ -124,8 +127,11 @@ id?: string,;
   className?: string,;
   profileType?: 'service' | 'talent';
 }
+<<<<<<< HEAD
 ;
 export function ListingCard({;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   id,;
   title,;
   description,;
@@ -134,6 +140,7 @@ export function ListingCard({;
   tags,;
   author,;
   className,;
+<<<<<<< HEAD
         </h3>;
         <p className='text-zion-slate mb-4 flex-grow'>{description}</p>;
         {tags && tags.length > 0 && (;
@@ -167,11 +174,14 @@ export function ListingCard({;
         className
       )}
     >
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {images && images.length > 0 && images[0] && (
         <div className="h-48 w-full overflow-hidden relative">
           <Image
             src={images[0]}
             alt={title}
+<<<<<<< HEAD
             className='object-cover transition-transform duration-300 group-hover:scale-105'
             loading='lazy'          />
 ursor/fix-website-loading-errors-and-merge-6662
@@ -182,6 +192,8 @@ ursor/fix-website-loading-errors-and-merge-6662
             className="object-cover transition-transform duration-300 group-hover:scale-105"
             loading="lazy"
           />
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 <<<<<<< HEAD
@@ -195,6 +207,7 @@ ursor/fix-website-loading-errors-and-merge-6662
             {category}
           </Badge>
         </div>
+<<<<<<< HEAD
         <h3 className='text-xl font-bold mb-2 text-white group-hover:text-zion-purple transition-colors'>
           {title}
         </h3>
@@ -202,11 +215,14 @@ ursor/fix-website-loading-errors-and-merge-6662
         <h3 className="text-xl font-bold mb-2 text-white group-hover:text-zion-purple transition-colors">{title}</h3>
         <p className="text-zion-slate mb-4 flex-grow">{description}</p>
         {tags && tags.length > 0 && (
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 
           <div className="flex flex-wrap gap-2 mb-4">
             {tags.map((tag, i) => (
+<<<<<<< HEAD
               <Badge
                 key={i}
                 variant='outline'
@@ -225,6 +241,11 @@ ursor/fix-website-loading-errors-and-merge-6662
 
               </Badge>;
 
+=======
+              <Badge key={i} variant="outline" className="border-zion-slate-dark text-zion-slate-light">
+                {tag}
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 <<<<<<< HEAD
         
@@ -233,6 +254,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 ;"}) })"
 =======
             ))}
+<<<<<<< HEAD
           </div>;
         )}
 
@@ -280,6 +302,10 @@ ursor/fix-website-loading-errors-and-merge-6662
         
 
 
+=======
+          </div>
+        )}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
         
         {author && (
@@ -289,6 +315,7 @@ ursor/fix-website-loading-errors-and-merge-6662
             ) : (
               <div className="h-8 w-8 rounded-full bg-zion-purple/20 mr-2" />
             )}
+<<<<<<< HEAD
 ;"}) })"
             <span className="text-sm text-zion-slate-light">{author.name}</span>
           </div>
@@ -301,12 +328,15 @@ ursor/fix-website-loading-errors-and-merge-6662
             ) : (
               <div className="h-8 w-8 rounded-full bg-zion-purple/20 mr-2" />
             )}
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 
             <span className="text-sm text-zion-slate-light">{author.name}</span>
           </div>
         )}
+<<<<<<< HEAD
       </div>
     </Link>
   );
@@ -316,10 +346,13 @@ ursor/fix-website-loading-errors-and-merge-6662
             <span className="text-sm text-zion-slate-light">{author.name}</span>
           </div>
         )}
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       </div>;
     </Link>;
   );
 }
+<<<<<<< HEAD
 ;
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -547,3 +580,5 @@ profileType = 'service' ;
 ;
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -1,6 +1,4 @@
 
-export type ForwardRefComponent<T, P = {}> = React && React.ForwardRefExoticComponent<React && React.PropsWithoutRef<P> & React && React.RefAttributes<T>>;
-
 // Helper type for component refs
 export type ElementRef<T extends React && React.ElementType> = React && React.ComponentPropsWithRef<T>['ref'];
 
@@ -15,13 +13,17 @@ export type PolymorphicComponentProp<T extends React && React.ElementType, Props
 // We need to use a type that is compatible with both Slot's ref and React's ref handling
 export type SafeRef<T> = React && React.Ref<T>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 // Sidebar specific types
 export type SidebarState = "expanded" | "collapsed";
-=======
 import React from './react';
 // This file fixes the ref type issues in sidebar components;
 // Export a placeholder to ensure the file is recognized as a module;
@@ -54,13 +56,13 @@ export type SafeRef < T> = React.Ref < T>;
 // Sidebar specific types;
 export type SidebarState = "expanded" | "collapsed";
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 export type SidebarContext = {
   state: SidebarState;
   open: boolean;
   set_open: (open: boolean) => void;
   open_mobile: boolean;
   setOpenMobile: (open: boolean) => void;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -243,3 +245,6 @@ export type SidebarContext = {;
   toggleSidebar: () => void;
 };
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+};
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

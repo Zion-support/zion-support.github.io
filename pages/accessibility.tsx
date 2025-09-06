@@ -22,6 +22,7 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React from 'react';
+<<<<<<< HEAD
 
 import Link from 'next/link';
 import MainLayout from '../components/layout/MainLayout';
@@ -47,6 +48,8 @@ import MainLayout from '../components/layout/MainLayout';
 import { motion } from 'framer-motion';
 import {
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   Eye
   Ear
   Hand
@@ -59,16 +62,29 @@ import {
   Zap
   FileText
   Settings
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+  Eye,
+  Ear,
+  Hand,
+  Brain,
+  CheckCircle,
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   Eye, 
   Ear, 
   Hand, 
   Brain, 
   CheckCircle, 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   AlertTriangle,
   Globe,
   Users,
@@ -77,18 +93,24 @@ import {
   FileText,
   Settings;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 } from 'lucide-react';
 const accessibility_features = [;
   {
 
+<<<<<<< HEAD
 =======
 } from 'lucide-react';
 const accessibility_features = [;
   {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {;
   Eye, ;
   Ear, ;
@@ -153,6 +175,7 @@ const accessibilityFeatures = [;
     ];
   }
 ];
+<<<<<<< HEAD
 
 const standardsCompliance = [;
   {;
@@ -430,6 +453,11 @@ origin/automation-improvements-final
 
 
 
+=======
+
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export default function AccessibilityPage() {
 =======
 =======
@@ -441,10 +469,13 @@ interface AccessibilityProps {
 
 const Accessibility: React.FC<AccessibilityProps> = ({ className }) => {
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <MainLayout
       title="Accessibility - Zion Tech Group"
@@ -455,8 +486,6 @@ const Accessibility: React.FC<AccessibilityProps> = ({ className }) => {
             <motion&& motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-
-
             </motion.div>
           </div>
         </section>
@@ -464,9 +493,12 @@ const Accessibility: React.FC<AccessibilityProps> = ({ className }) => {
           <div className="container mx-auto px-4">
             <motion.div
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               transition={{ duration: 0 && 0.8 }}
               className="text-center max-w-4xl mx-auto">;
               <h1 className="text-4xl md:text-6xl font-bold mb-6">;
@@ -483,6 +515,7 @@ const Accessibility: React.FC<AccessibilityProps> = ({ className }) => {
         <section className="py-20">;
           <div className="container mx-auto px-4">;
             <motion&& motion.div
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
@@ -506,6 +539,8 @@ origin/automation-improvements-final
           <div className="container mx-auto px-4">
             <motion.div
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               className="text-center mb-16"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -655,6 +690,7 @@ origin/automation-improvements-final
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -675,6 +711,8 @@ origin/automation-improvements-final
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   key={index}
                   className="bg-gray-50 p-6 rounded-xl hover:shadow-lg transition-all duration-300"
                   initial={{ opacity: 0, y: 30 }}
@@ -695,6 +733,7 @@ origin/automation-improvements-final
                 </motion && motion.div>;
               ))}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -713,6 +752,8 @@ origin/automation-improvements-final
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       </div>
     </MainLayout>
 =======
@@ -754,6 +795,7 @@ origin/automation-improvements-final
             <motion&& motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
               transition={{ duration: 0 && 0.8 }}>;
               <h2 className="text-3xl md:text-4xl font-bold mb-6">;
                 Have Questions About Accessibility?;
@@ -775,6 +817,8 @@ origin/automation-improvements-final
       </div>;
     </MainLayout>;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   );
 }
 =======
@@ -1197,6 +1241,7 @@ function AccessibilityPage() {
     </MainLayout>);
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
               transition={{ duration: 0.8 }}
@@ -1231,3 +1276,5 @@ origin/automation-improvements-final
 
 export default Accessibility;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

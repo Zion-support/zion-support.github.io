@@ -1,15 +1,14 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
-=======
-import React from\';react\'';\"export\": { function }\';\"export\": default function CreatePostButton({ categoryId }) { return() <Button className=\'bg-zion-cyan \"hover\": bg-zion-cyan-light: text-zion-slate-dark\'>\' Create New Post\' </Button> )} \''\';\';
-const React from";react"";export: { function }";export: default function CreatePostButton({ categoryId }) { return() <Button className="bg-zion-cyan hover: bg-zion-cyan-light: text-zion-slate-dark">" Create New Post" </Button> )} """;";'"'"
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4:temp_exclude/src.disabled/components/community/CreatePostButton.js.jsx
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import _React from';react'';"export": { function }';"export": default function CreatePostButton({ categoryId }) { return() <Button className='bg-zion-cyan "hover": bg-zion-cyan-light: text-zion-slate-dark'>' Create New Post' </Button> )} ''';';
+<<<<<<< HEAD
 =======
 =======
 =======
@@ -24,12 +23,17 @@ const React from";react"";export: { function }";export: default function CreateP
 :temp_exclude/src.disabled/components/community/CreatePostButton.js.jsx
 import _React from';react'';"export": { function }';"export": default function CreatePostButton({ categoryId }) { return() <Button className='bg-zion-cyan "hover": bg-zion-cyan-light: text-zion-slate-dark'>' Create New Post' </Button> )} ''';';
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from\';react\'';\"export\": { function }\';\"export\": default function CreatePostButton({ categoryId }) { return () <Button className=\'bg-zion-cyan \"hover\": bg-zion-cyan-light: text-zion-slate-dark\'>\' Create New Post\' </Button> )} \''\';\';
 const React from";react"";export: { function }";export: default function CreatePostButton({ categoryId }) { return () <Button className="bg-zion-cyan hover: bg-zion-cyan-light: text-zion-slate-dark">" Create New Post" </Button> )} """;";'"'"
-
 import _React from';react'';"export": { function }';"export": default function CreatePostButton({ categoryId }) { return () <Button className='bg-zion-cyan "hover": bg-zion-cyan-light: text-zion-slate-dark'>' Create New Post' </Button> )} ''';';
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 import _React from';react'';"export": { function }';"export": default function CreatePostButton({ categoryId }) { return() <Button className='bg-zion-cyan "hover": bg-zion-cyan-light: text-zion-slate-dark'>' Create New Post' </Button> )} ''';';
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+import _React from';react'';"export": { function }';"export": default function CreatePostButton({ categoryId }) { return () <Button className='bg-zion-cyan "hover": bg-zion-cyan-light: text-zion-slate-dark'>' Create New Post' </Button> )} ''';';
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -28,19 +29,25 @@ interface TimelineFieldProps {
   form: UseFormReturn < FormValues>;
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {FormField, FormItem, FormLabel, FormControl, FormMessage} from "@/components/ui/form";
 import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
 import {UseFormReturn} from "react-hook-form";
 import {FormValues} from "./useHireRequestForm";
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form",
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
 import { UseFormReturn } from "react-hook-form",
 import { FormValues } from "./useHireRequestForm",
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -51,6 +58,8 @@ interface TimelineFieldProps {
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {
   FormField,
   FormItem,
@@ -67,10 +76,12 @@ import {
 } from "@/components/ui/select";
 import { UseFormReturn } from "react-hook-form";
 import { FormValues } from "./useHireRequestForm";
->>>>>>> main
 interface TimelineFieldProps {
   form: UseFormReturn<FormValues>;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 
 import {FormField, FormItem, FormLabel, FormControl, FormMessage} from "@/components/ui/form";
@@ -78,9 +89,12 @@ import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/c
 import {UseFormReturn} from "react-hook-form";
 import {FormValues} from "./useHireRequestForm";
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
     { value: "Less than 1 week", label: "Less than 1 week" }
     { value: "1-2 weeks", label: "1-2 weeks" }
@@ -88,13 +102,26 @@ import {FormValues} from "./useHireRequestForm";
     { value: "1-2 months", label: "1-2 months" }
     { value: "3-6 months", label: "3-6 months" }
     { value: "6+ months", label: "6+ months" }
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+interface TimelineFieldProps {
+  form: UseFormReturn < FormValues>;
+}
+
+import {FormField, FormItem, FormLabel, FormControl, FormMessage} from "@/components/ui/form";
+import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
+import {UseFormReturn} from "react-hook-form";
+import {FormValues} from "./useHireRequestForm";
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     { value: "Less than 1 week", label: "Less than 1 week" },
     { value: "1-2 weeks", label: "1-2 weeks" },
     { value: "2-4 weeks", label: "2-4 weeks" },
     { value: "1-2 months", label: "1-2 months" },
     { value: "3-6 months", label: "3-6 months" },
     { value: "6+ months", label: "6+ months" },
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -104,12 +131,16 @@ import {FormValues} from "./useHireRequestForm";
 =======
     { value: "Ongoing", label: "Ongoing" },
 >>>>>>> main
-  ];
 =======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+  ];
     { value: "Ongoing", label: "Ongoing" }
   ],
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   return (
     <FormField
@@ -131,9 +162,12 @@ import {FormValues} from "./useHireRequestForm";
                 {timelineOptions.map((option) => (
                   <SelectItem key={option.value} value={option.value}>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form",;
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",;
 import { UseFormReturn } from "react-hook-form",;
@@ -142,7 +176,6 @@ import { FormValues } from "./useHireRequestForm",;
 interface TimelineFieldProps {;
   form: UseFormReturn<FormValues>;
 }
-
 export function TimelineField(): any ({ form }: TimelineFieldProps) {;
   const timelineOptions = [;
     { value: "Less than 1 week", label: "Less than 1 week" },;
@@ -151,9 +184,7 @@ export function TimelineField(): any ({ form }: TimelineFieldProps) {;
     { value: "1-2 months", label: "1-2 months" },;
     { value: "3-6 months", label: "3-6 months" },;
     { value: "6+ months", label: "6+ months" },;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     { value: "Ongoing", label: "Ongoing" }
-=======
 export /**
  * TimelineField - Function description
  */
@@ -166,10 +197,10 @@ function TimelineField() {
     { value: "3 - 6 months", label: "3 - 6 months" },
     { value: "6+ months", label: "6+ months" },
     { value: "Ongoing", label: "Ongoing" },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   ];
 ;
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     <FormField;
@@ -320,3 +351,8 @@ export function TimelineField({ form } TimelineFieldProps) {;
     />);
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+                    {option.label}
+                  </SelectItem>
+                ))}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
   // const colorToUse = _customColor |(isWhitelabel ? primaryColor : undefined)
 
 =======
@@ -40,6 +41,8 @@ import React from 'react';
 import Link from 'next/link';
 import { useWhitelabel } from '@/context/WhitelabelContext';
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 import React from 'react',;
 import Link from 'next/link',;
@@ -58,6 +61,7 @@ export function Logo({ customLogo }: LogoProps) {
   // Use the white-label color if available and no specific _customColor is provided
   // const colorToUse = _customColor || (isWhitelabel ? primaryColor : undefined),
   
+<<<<<<< HEAD
   // const colorToUse = _customColor || (isWhitelabel ? primaryColor : undefined);
   if (logoToUse) {
 import Link from 'next / link';
@@ -78,6 +82,8 @@ if ( {) {
   $2
 }
   
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   if (logoToUse) {
     return (
       <Link href="/" className="flex items-center">
@@ -85,14 +91,18 @@ if ( {) {
       </Link>
     )
   }
+<<<<<<< HEAD
   
   
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <Link href="/" className="flex items-center">
       <img src="/logos/zion-logo.png" alt="Zion Logo" className="h-8" width={32} height={32} />
     </Link>
   )
+<<<<<<< HEAD
   if (logoToUse) {
 ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
@@ -111,6 +121,8 @@ export function Logo(): any ({ customLogo }: LogoProps) {;
   // Use the white-label color if available and no specific _customColor is provided;
   // const colorToUse = _customColor || (isWhitelabel ? primaryColor : undefined);
   if (logoToUse) {;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <Link href="/" className="flex items-center">;
         <img src={logoToUse} alt={`${brandName} Logo`} className="h-8" width={32} height={32} />;
       </Link>;
@@ -140,14 +152,18 @@ if ( {) {
           className='h - 8';
           width={32}
           height={32}
+<<<<<<< HEAD
         />;
       </Link>;
     );
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   }
   return (
     <Link href='/' className='flex items-center'>;
       <img
         src='/logos/zion-logo && logo.png'
+<<<<<<< HEAD
   if (logoToUse) {
     return (
       <Link href='/' className='flex items-center'>
@@ -165,16 +181,21 @@ if ( {) {
     <Link href='/' className='flex items-center'>
       <img
         src='/logos/zion-logo.png'
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         alt='Zion Logo'
         className='h-8'
         width={32}
         height={32}
+<<<<<<< HEAD
       />;
     </Link>;
   );
 }
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         />;
       </Link>);
   }
@@ -189,6 +210,7 @@ if ( {) {
       />;
     </Link>);
 }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 }
@@ -238,3 +260,5 @@ export function Logo({ customLogo } LogoProps) {;
 
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

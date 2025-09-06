@@ -1,6 +1,9 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useState  } from 'react';
 import { useAuth  } from '@/hooks/useAuth';
 import { supabase  } from '@/integrations/supabase/client';
@@ -11,7 +14,10 @@ import { ContractFormValues } from "@/components/contracts/components/ContractFo
 export function useSmartContracts() {
   const { user } = useAuth();
   const [isLoading, setIsLoading] = useState(false);
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 import {useState} from 'react';
 import {useAuth} from '@/hooks/useAuth';
@@ -24,10 +30,13 @@ export function useSmartContracts() {;
   const { user } = useAuth();
   const [isLoading, setIsLoading] = useState(false);
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
   const [deploymentStatus, setDeploymentStatus] = useState<'idle' | 'deploying' | 'success' | 'error'>('idle');
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const [deploymentStatus, setDeploymentStatus] = useState<'idle' | 'deploying' | 'success' | 'error'>('idle');
 import { useState } from 'react',
 import { useAuth } from '@/hooks/useAuth',
@@ -40,29 +49,19 @@ export function useSmartContracts() {
   const { user } = useAuth(),
   const [isLoading, setIsLoading] = useState(false),
   const [deploymentStatus, setDeploymentStatus] = useState<'idle' | 'deploying' | 'success' | 'error'>('idle'),
-
-import {useState} from 'react';
-import {useAuth} from '@/hooks/useAuth';
-import {supabase} from '@/integrations/supabase/client';
-import {toast} from 'sonner';
-import {BlockchainNetwork, DeploymentOptions, SmartContractInfo} from '@/types/smart-contracts';
-import {TalentProfile} from '@/types/talent';
-import {ContractFormValues} from "@/components/contracts/components/ContractForm";
-export function useSmartContracts() {;
-  const { user } = useAuth();
-  const [isLoading, setIsLoading] = useState(false);
-
-
-  const [deploymentStatus, setDeploymentStatus] = useState<'idle' | 'deploying' | 'success' | 'error'>('idle');
   
+<<<<<<< HEAD
   
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const generateSolidityContract = async (
     values: ContractFormValues
     talent: TalentProfile
     clientName: string
   ): Promise<string> => {
     try {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       setIsLoading(true),
@@ -126,9 +125,10 @@ setIsLoading(true),
 <<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       if (data && data.solidityCode) {
         return data.solidityCode
-=======
 import {useState} from 'react';
 import {use_auth} from '@/hooks / use_auth';
 import {supabase} from '@/integrations / supabase / client';
@@ -172,11 +172,11 @@ if ( {) {
   $2
 }
         return data.solidity_code;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       } else {
         throw new Error ("Failed to generate Solidity contract");
       }
     } catch (err: any) {
+<<<<<<< HEAD
 
       console.error ("Error generating Solidity contract:", err);
       toast.error ("Failed to generate smart contract");
@@ -215,11 +215,14 @@ if ( {) {
   
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const deploySmartContract = async (
     contractCode: string;
     options: DeploymentOptions
   ): Promise<SmartContractInfo | null> => {
     if (!user?.id) {
+<<<<<<< HEAD
 
       toast && toast.error("You must be logged in to deploy a contract"),
 
@@ -234,29 +237,23 @@ if ( {) {
   ): Promise<SmartContractInfo | null> => {
     if (!user?.id) {
       toast.error("You must be logged in to deploy a contract")
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       return null
     }
     try {
       setDeploymentStatus('deploying');
       // This would normally connect to MetaMask or other Web3 provider
       // For now, we'll just simulate success
-      const mockTransactionHash = `0x${Array.from({length: 64}, () =>
-        Math.floor(Math.random() * 16).toString(16)).join('')}`;
       const mockSmartContractInfo: SmartContractInfo = {
-        id: crypto.randomUUID();
+        id: crypto && crypto.randomUUID();
         transactionHash: mockTransactionHash;
-        networkName: options.network;
-        blockNumber: Math.floor(Math.random() * 1000000)
-        deployedAddress: `0x${Array.from({length: 40}, () =>
-          Math.floor(Math.random() * 16).toString(16)).join('')}`;
-        contractType: 'escrow';
-        createdAt: new Date().toISOString();
-        createdBy: user.id
         status: 'deployed'
       }
       // Wait to simulate blockchain transaction time
       await new Promise(resolve => setTimeout(resolve, 2000));
       setDeploymentStatus('success');
+<<<<<<< HEAD
       toast.success("Smart contract deployed successfully!");
       return mockSmartContractInfo
     } catch (err: any) {
@@ -301,6 +298,8 @@ if ( {) {
       setDeploymentStatus('success'),
       toast.success("Smart contract deployed successfully!"),
       
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       return mockSmartContractInfo
     } catch (err: any) {
       console.error("Error deploying smart contract:", err);
@@ -308,6 +307,7 @@ if ( {) {
       setDeploymentStatus('error');
       return null
     }
+<<<<<<< HEAD
   };
   
   return {
@@ -462,11 +462,14 @@ export function useSmartContracts() {;
       setDeploymentStatus('error');
       return null
     }
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   }
   return {
     generateSolidityContract;
     deploySmartContract;
     isLoading;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     deploymentStatus
@@ -520,12 +523,17 @@ if ( {) {
       return null;
     }
   }
+=======
+
+    deploymentStatus
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ;
   return {
     generateSolidityContract;
     deploySmartContract;
     is_loading;
     deployment_status;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -717,3 +725,8 @@ deploymentStatus
 }
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  }
+}
+;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

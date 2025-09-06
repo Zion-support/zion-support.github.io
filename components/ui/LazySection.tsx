@@ -14,6 +14,7 @@ interface LazySectionProps {
 }
 
 export const LazySection: React.FC<LazySectionProps> = ({
+<<<<<<< HEAD
   children;
   className = '';
   threshold = 0.1;
@@ -35,13 +36,18 @@ const getInitialPosition = () => {
   switch (direction) {
   case 'up':
 export const LazySection: React.FC<LazySectionProps> = ({
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   children
   className = ''
   threshold = 0.1
   delay = 0
   direction = 'up'
 }) => {
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   children,
   className = '',
   threshold = 0.1,
@@ -49,10 +55,13 @@ export const LazySection: React.FC<LazySectionProps> = ({
   direction = 'up',
 }) => {;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const ref = useRef<HTMLDivElement>(null);
   const isInView = useInView(ref, { threshold, once: true });
   const getInitialPosition = () => {
@@ -66,16 +75,20 @@ export const LazySection: React.FC<LazySectionProps> = ({
         return { opacity: 0, x: -50 }
       default:
 <<<<<<< HEAD
+<<<<<<< HEAD
 
         return { opacity: 0, y: 50 }
 
 =======
         return { opacity: 0, y: 50 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     }
   }
   const getAnimatePosition = () => {
     switch (direction) {
+<<<<<<< HEAD
 <<<<<<< HEAD
       case 'up':
 
@@ -101,6 +114,9 @@ export const LazySection: React.FC<LazySectionProps> = ({
 =======
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+      case 'up':
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     >
 =======
 class ErrorBoundary extends React.Component {
@@ -108,6 +124,7 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
+<<<<<<< HEAD
   
   static getDerivedStateFromError(error) {
     return { hasError: true };
@@ -117,6 +134,8 @@ class ErrorBoundary extends React.Component {
     console.error('Error caught by boundary:', error, errorInfo);
   }
   
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
@@ -154,9 +173,13 @@ export const LazySection: React.FC<LazySectionProps> = ({;
     }
   };
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const getAnimatePosition = () => {;
     switch (direction) {;
       case 'up':;
@@ -171,6 +194,7 @@ export const LazySection: React.FC<LazySectionProps> = ({;
         return { opacity: 1, y: 0 };
     }
   };
+<<<<<<< HEAD
 
 
     >;
@@ -321,3 +345,8 @@ export default LazySection;
 export default LazySection;
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+      {children}
+    </motion && motion.div>;
+  );
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

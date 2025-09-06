@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -7,6 +8,8 @@ import { useState } from "react";
 import Head from "next/head";
 import { useState } from 'react';
 import Head from 'next/head';
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 export default function Partners() {
   const [form, setForm] = useState({
@@ -23,10 +26,12 @@ export default function Partners() {
     pocName: "",
     pocEmail: "",
     useCaseType: "Education Partnership"}),
-
   const [loading, setLoading] = useState(false);
 
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     name: ''
     entityType: ''
     pocName: ''
@@ -44,16 +49,20 @@ export default function Partners() {
     setLoading(true);
     setResult(null);
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
   }
+<<<<<<< HEAD
   
   static getDerivedStateFromError(error) {
     return { hasError: true };
@@ -63,6 +72,8 @@ class ErrorBoundary extends React.Component {
     console.error('Error caught by boundary:', error, errorInfo);
   }
   
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
@@ -111,9 +122,12 @@ export default function Partners() {;
         pointOfContact: { name: form && form.pocName, email: form && form.pocEmail },;
       }),;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     });
     const data = await res && res.json();
     setLoading(false);
@@ -172,6 +186,7 @@ export default function Partners() {;
               onChange={e => setForm({ ...form, useCaseType: e && e.target.value })}
             >              <option>Education Partnership</option>    const data = await res && res.json();
     setLoading(false);
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     setResult(data);
@@ -255,12 +270,15 @@ function submit() {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       method: "POST",
       headers: { "Content - Type": "application / json" },
       body: JSON.stringify ({
         name: form.name,
         entity_type: form.entity_type,
         useCaseType: form.useCaseType,
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -395,11 +413,14 @@ function submit() {
             <h2 className="text-xl font-medium mb-4">Available Endpoints</h2>
             <ul className="list-disc ml-6 space-y-1 text-sm">
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <li>GET /jobs</li>
               <li>GET /certifications</li>
               <li>POST /verify-student</li>
               <li>POST /redeem-grant</li>
             </ul>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
             </button>;
@@ -423,6 +444,8 @@ function submit() {
 =======
             <div className='mt-6'>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <a
                 className='text-blue-600 underline mr-4'
                 href='/api/partners/sdk?type=rest'>;
@@ -430,6 +453,7 @@ function submit() {
               </a>;
               <a
                 className='text-blue-600 underline'
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -442,6 +466,8 @@ function submit() {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <div className="mt-6 text-sm text-gray-600">
               <p>Badges:</p>
               <div className="flex gap-2 mt-2">
@@ -452,6 +478,7 @@ function submit() {
           </div>
         </div>
         {result && (
+<<<<<<< HEAD
 <<<<<<< HEAD
 
                 href='/api/partners/sdk?type=graphql'>;
@@ -497,6 +524,8 @@ function submit() {
               {result.apiKey}
             </pre>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <a
               href={result && result.dashboardUrl}
               className='inline-block mt-4 bg-black text-white px-4 py-2 rounded'>;
@@ -507,16 +536,21 @@ function submit() {
             <pre className="bg-gray-100 p-3 rounded text-xs overflow-auto">{result && result.apiKey}</pre>;
             <a href={result && result.dashboardUrl} className="inline-block mt-4 bg-black text-white px-4 py-2 rounded">Go to Dashboard</a>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <div className="mt-8 bg-white p-6 rounded-lg shadow">
             <h3 className="text-lg font-medium mb-2">Registration Successful</h3>
             <p className="text-sm">Your API Key:</p>
             <pre className="bg-gray-100 p-3 rounded text-xs overflow-auto">{result.apiKey}</pre>
             <a href={result.dashboardUrl} className="inline-block mt-4 bg-black text-white px-4 py-2 rounded">Go to Dashboard</a>
+}
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
         )}
@@ -527,15 +561,23 @@ function submit() {
           </div>
         )}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+        )}
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       </div>;
     </div>;
   );
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+        )}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   );
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
@@ -640,14 +682,18 @@ function submit() {
     </div>);
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   );
 
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -667,3 +713,5 @@ function submit() {
 }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

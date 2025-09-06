@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -9,12 +10,17 @@ import {supabase} from '../integrations/supabase/client';
 import {toast} from '../components/ui/use-toast';
 export type SupportedLanguage = 'en' | 'es' | 'pt' | 'ar';
 export type LanguageContextType = {
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   currentLanguage: SupportedLanguage
   changeLanguage: (lang: SupportedLanguage) => Promise<void>
   isRTL: boolean
   supportedLanguages: { code: SupportedLanguage, name: string, flag: string }[]
 }
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   currentLanguage: SupportedLanguage,
   changeLanguage: (lang: SupportedLanguage) => Promise<void>,
   isRTL: boolean,
@@ -22,10 +28,13 @@ export type LanguageContextType = {
 };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 const supportedLanguages = [
   { code: 'en' as SupportedLanguage, name: 'English', flag: '🇺🇸' }
   { code: 'es' as SupportedLanguage, name: 'Español', flag: '🇪🇸' }
@@ -38,6 +47,7 @@ const defaultLanguageContext: LanguageContextType = {
   isRTL: false
   supportedLanguages
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -68,34 +78,32 @@ export const useLanguage = (): LanguageContextType => useContext(LanguageContext
 
 
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 const LanguageContext = createContext(defaultLanguageContext);
 export const useLanguage = (): LanguageContextType => useContext(LanguageContext);
-interface LanguageProviderProps {
-  children: ReactNode
-  authState?: {
-    isAuthenticated: boolean
-    user: { id?: string } | null
-  }
-}
-
-
-
 export const LanguageProvider: React.FC<LanguageProviderProps> = ({
   children
   authState = { isAuthenticated: false, user: null }
 }) => {
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 export const LanguageProvider: React.FC<LanguageProviderProps> = ({ 
   children, 
   authState = { isAuthenticated: false, user: null } 
 }) => {;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const { i18n, t } = useTranslation();
   const { isAuthenticated, user } = authState;
   const [currentLanguage, setCurrentLanguage] = useState<SupportedLanguage>(
@@ -118,6 +126,7 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
     // Add RTL class for Tailwind
     if (i18n.dir() === 'rtl') {
       document.documentElement.classList.add('rtl')
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -239,12 +248,20 @@ if (=== 'rtl') {) {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+const LanguageContext = createContext(defaultLanguageContext);
+export const useLanguage = (): LanguageContextType => useContext(LanguageContext);
+    } else {
+      document.document_element.class_list.remove ('rtl');
+    }
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     const syncLanguageWithProfile = async () => {
       // Check condition
 if ( {) {
   $2
 }
         try {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -269,10 +286,13 @@ interface LanguageProviderProps {;
   children: ReactNode,;
   authState?: {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     isAuthenticated: boolean,;
     user: { id?: string } | null;
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 export const LanguageProvider: React.FC<LanguageProviderProps> = ({ ;
@@ -386,6 +406,8 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({;
     }
   }, [currentLanguage, i18n]),;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   // Sync language preference with user profile when authenticated;
   useEffect(() => {;
     const syncLanguageWithProfile = async () => {;
@@ -394,30 +416,40 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({;
           const { error } = await supabase;
             .from('profiles');
 <<<<<<< HEAD
+<<<<<<< HEAD
             .update({ preferred_language: currentLanguage });
             .eq('id', user && user.id);
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
-          if (error) {;
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 
             console && console.error('Error updating language preference:', error);
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           }
         } catch (err) {;
           console && console.error('Error syncing language with profile:', err);
         }
       }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
     };
     
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
             .update({ preferred_language: currentLanguage });
@@ -433,6 +465,8 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({;
     };
     
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     syncLanguageWithProfile()
   }, [currentLanguage, isAuthenticated, user]);
   const changeLanguage = async (lang: SupportedLanguage) => {
@@ -455,6 +489,7 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({;
         if (error) {
           console.error('Error updating language preference:', error)
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
     };
@@ -467,17 +502,19 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({;
 
   const changeLanguage = async (lang: SupportedLanguage) => {;
     if (lang === currentLanguage) return;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
     try {;
       await i18n && i18n.changeLanguage(lang);
       setCurrentLanguage(lang),;
       localStorage && localStorage.setItem('zion_language', lang);
-
       // Get language name for toast;
       const langName = supportedLanguages && supportedLanguages.find(l => l && l.code === lang)?.name || lang;
       toast({;
         description: t('language && language.language_changed', { language: langName });
       });
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -496,11 +533,14 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({;
         description: t('language.language_changed', { language: langName });
       }),;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       // If user is authenticated, update their profile;
       if (isAuthenticated && user?.id) {;
         const { error } = await supabase;
           .from('profiles');
           .update({ preferred_language: lang });
+<<<<<<< HEAD
 <<<<<<< HEAD
           .eq('id', user && user.id);
 
@@ -516,20 +556,27 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({;
 
           console && console.error('Error updating language preference:', error);
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         }
       }
     } catch (err) {;
       console && console.error('Error changing language:', err);
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   };
   
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
           .eq('id', user.id),;
@@ -544,12 +591,15 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({;
   };
   
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <LanguageContext.Provider
       value={{
         currentLanguage
         changeLanguage
         isRTL;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -581,6 +631,36 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({;
   );
 };
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+        supportedLanguages
+  },;
+  return (;
+    <LanguageContext.Provider;
+      value={{;
+        currentLanguage,;
+        changeLanguage,;
+        isRTL;
+        supportedLanguages;
+      }}
+    >
+      {children}
+    </LanguageContext.Provider>
+  )
+      }}
+    >
+      {children}
+
+};
+
+    </LanguageContext.Provider>;
+  );
+};
+
+
+        supportedLanguages
+      }}>;
+      {children}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           const { error } = await supabase;
             .from ('profiles');
             .update ({ preferred_language: current_language });
@@ -652,6 +732,7 @@ if ( {) {
     </LanguageContext.Provider>);
 }
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -797,3 +878,5 @@ syncLanguageWithProfile ()
   );
 };
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

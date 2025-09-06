@@ -1,9 +1,13 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 // Next.config.analyze utility
 export const Next.config.analyze = () => {
   // Implementation here
   return null;
+<<<<<<< HEAD
 
 
 };
@@ -43,12 +47,15 @@ module && module.exports = {
   config && config.plugins.push(;
         new BundleAnalyzerPlugin({
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 };
 ;
 ,;
 ;};
 ;
 };
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -92,6 +99,8 @@ const { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer"); module.expo
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 =======
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ,
 };
 ;
@@ -100,37 +109,28 @@ const { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer"); module.expo
 ;
 };
 ,
+};
+,
 const { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer");
 ursor/integrate-build-improve-and-re-verify-8f7d
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 origin/automation-improvements-final
+};
+,
+const { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer");
 }
 ;}
 }
-origin/main
 const { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer");
 module.exports = {
   "webpack": (config, { isServer }) => {
   if (!isServer) {
   config.plugins.push(;
         new BundleAnalyzerPlugin({
-  "analyzerMode": "static"
-          "openAnalyzer": false
-          "reportFilename": "bundle-analysis.html"});
-      )}
-    return config}
-}
-
-const { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer"); module.exports = { webpack: (config,{ isServer }) => { if (!isServer) { config.plugins.push(; new BundleAnalyzerPlugin({ analyzerMode: "static",openAnalyzer: false,reportFilename: "bundle-analysis.html",}); )} return config} }
-
-const { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer"); module.exports = { webpack: (config,{ isServer }) => { if (!isServer) { config.plugins.push(; new BundleAnalyzerPlugin({ analyzerMode: "static",; openAnalyzer: 'false',; reportFilename: "bundle-analysis.html";,}); )} return config} }
-const { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer"); module.exports = { webpack: (config,{ isServer }) => { if (!isServer) { config.plugins.push(; new BundleAnalyzerPlugin({ analyzerMode: "static",openAnalyzer: false,reportFilename: "bundle-analysis.html",}); )} return config} }
-const { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer"); module.exports = { webpack: (config,{ isServer }) => { if (!isServer) { config.plugins.push(; new BundleAnalyzerPlugin({ analyzerMode: "static",openAnalyzer: false,reportFilename: "bundle-analysis.html",}); )} return config} }
-ursor/fix-lint-push-and-merge-to-main-ae4e
-const { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer"); module.exports = { webpack: (config,{ isServer }) => { if (!isServer) { config.plugins.push(; new BundleAnalyzerPlugin({ analyzerMode: "static",openAnalyzer: false,reportFilename: "bundle-analysis.html",}); )} return config} }
 };
 ,
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
@@ -153,22 +153,18 @@ const { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer"); module.expo
 };
 ,
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
 const { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer"); module.exports = { webpack: (config,{ isServer }) => { if (!isServer) { config.plugins.push(; new BundleAnalyzerPlugin({ analyzerMode: "static"; openAnalyzer: 'false'; reportFilename: "bundle-analysis.html";,}); )} return config} }
 const { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer"); module.exports = { webpack: (config,{ isServer }) => { if (!isServer) { config.plugins.push(; new BundleAnalyzerPlugin({ analyzerMode: "static",openAnalyzer: false,reportFilename: "bundle-analysis.html",}); )} return config} }
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
-=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+const { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer"); module.exports = { webpack: (config,{ isServer }) => { if (!isServer) { config.plugins.push(; new BundleAnalyzerPlugin({ analyzerMode: "static"; openAnalyzer: 'false'; reportFilename: "bundle-analysis.html";,}); )} return config} }
+const { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer"); module.exports = { webpack: (config,{ isServer }) => { if (!isServer) { config.plugins.push(; new BundleAnalyzerPlugin({ analyzerMode: "static",openAnalyzer: false,reportFilename: "bundle-analysis.html",}); )} return config} }
   "analyzerMode": "static",
           "openAnalyzer": false,
           "reportFilename": "bundle-analysis && analysis.html"});
       )}
     return config}
 }
-const { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer"); module && module.exports = { webpack: (config,{ isServer }) => { if (!isServer) { config && config.plugins.push(; new BundleAnalyzerPlugin({ analyzerMode: "static",; openAnalyzer: 'false',; reportFilename: "bundle-analysis && analysis.html";,}); )} return config} }
-const { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer"); module && module.exports = { webpack: (config,{ isServer }) => { if (!isServer) { config && config.plugins.push(; new BundleAnalyzerPlugin({ analyzerMode: "static",openAnalyzer: false,reportFilename: "bundle-analysis && analysis.html",}); )} return config} }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-}
-;
 ,
 ;}
 ;
@@ -197,6 +193,7 @@ if ( { config.plugins.push () {
   $2
 } new BundleAnalyzerPlugin ({ analyzer_mode: "static", open_analyzer: false, report_filename: "bundle - analysis.html", }))} return config} }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 };
@@ -221,3 +218,7 @@ const { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer"); module.expo
 },;
 ,;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+},;
+,;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

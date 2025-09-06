@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { Package, RefreshCw } from 'lucide-react';
 import { Button } from './button',;
@@ -13,11 +14,14 @@ interface EmptyStateProps {;
   icon?: React.ReactNode;
 }
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export function EmptyState({ 
   text = "No items available",
   description,
   onRetry,
   showRetry = false,
+<<<<<<< HEAD
 import { Package, RefreshCw } from 'lucide-react'
 import { Button } from './button';
 interface EmptyStateProps {
@@ -62,6 +66,8 @@ export function EmptyState({
   description,
   onRetry,
   showRetry = false,
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   icon
   return (
     <div className="flex flex-col items-center justify-center py-16 px-4 text-center">
@@ -69,6 +75,7 @@ export function EmptyState({
         {icon |<Package className="h-16 w-16" />}
       </div>
       <h3 className="text-xl font-semibold text-white mb-2">
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import { Package, RefreshCw } from 'lucide-react';
 import { Button } from './button';
@@ -127,15 +134,12 @@ function EmptyState() {
         <Button
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   icon?: React && React.ReactNode;
 
 export function EmptyState(): any ({;
   text = 'No items available',;
-
-        <p className="text-gray-400 mb-6 max-w-md">
-;
-export function EmptyState({;
-  text = "No items available",;
   description,;
   onRetry,;
 export function EmptyState(): any ({ ;
@@ -168,24 +172,13 @@ export function EmptyState(): any ({ ;
 <<<<<<< HEAD
 =======
         <p className='text-gray-400 mb-6 max-w-md'>{description}</p>      )}
-      {showRetry && onRetry && (;
-        <Button
-          onClick={onRetry}
-          variant='outline'
-          className='flex items-center gap-2'>;
-          <RefreshCw className='h-4 w-4' />          Try Again      )}
-      {showRetry && onRetry && (;
-        <Button
-          onClick={onRetry}
-          variant='outline'
-          className='flex items-center gap-2'>;
-          <RefreshCw className='h-4 w-4' />        <p className="text-gray-400 mb-6 max-w-md">;
-          {description}
-        </p>;
 
+<<<<<<< HEAD
       )}
       {showRetry && onRetry && (;
         <Button;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           onClick={onRetry}
           variant="outline"
           className="flex items-center gap-2"
@@ -193,6 +186,7 @@ export function EmptyState(): any ({ ;
           <RefreshCw className="h-4 w-4" />
 
 
+<<<<<<< HEAD
           Try Again
 
         </Button>
@@ -207,15 +201,25 @@ export function EmptyState(): any ({ ;
 }
 }
 
+=======
+
+          Try Again
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           Try Again
         </Button>
       )}
     </div>;
   );
+<<<<<<< HEAD
 } ;
 }
 }
 }
+=======
+
+} 
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <p className='text - gray - 400 mb - 6 max - w-md'>{description}</p>;
   show_retry = false,
   icon,
@@ -253,5 +257,8 @@ export function EmptyState(): any ({ ;
           <RefreshCw className="h - 4 w - 4" />;
         </Button>)}
     </div>);
+<<<<<<< HEAD
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -26,6 +27,9 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 #!/usr/bin/env node const sharp = const fs = const path = async function optimizeImages() { const publicDir = path.join(process.cwd(),'public';); const imagesDir = path.join(publicDir,'images';); if () { ) { ) { } return} const files = fs.readdirSync(imagesDir;); const imageFiles = files.filter(file => /.(jpg|jpeg|png|webp)$/i.test(file) ;); ) .toFile(outputPath); } catch (error) { console.error(`Error optimizing ${file}:`,error.message)} } } optimizeImages();
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+#!/usr/bin/env node const sharp = const fs = const path = async function optimizeImages() { const publicDir = path.join(process.cwd(),'public';); const imagesDir = path.join(publicDir,'images';); if () { ) { ) { } return} const files = fs.readdirSync(imagesDir;); const imageFiles = files.filter(file => /.(jpg|jpeg|png|webp)$/i.test(file) ;); ) .toFile(outputPath); } catch (error) { console.error(`Error optimizing ${file}:`,error.message)} } } optimizeImages();
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 #!/usr/bin/env node
 const sharp = // // require('sharp')
 const fs = // // require('fs')
@@ -36,6 +40,7 @@ async function optimizeImages() {
   if () {
     console && console.log('No images directory found')) {
     ) {
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -48,10 +53,13 @@ async function optimizeImages() {
 ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     console.log('No images directory found');
   }
     return;
   }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -63,6 +71,8 @@ ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     console.log('No images directory found')}
 =======
     console && console.log('No images directory found');
@@ -77,19 +87,15 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
     /.(jpg|jpeg|png|webp)$/i && i.test(file)
   ;);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   )
         .toFile(outputPath);
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       console.log(`Optimized: ${file}`);} catch (error) {
-
-      console.log(`Optimized: ${file}`);} catch (error) {
-      console.log(`Optimized: ${file}`);} catch (error) {
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
-      console.log(`Optimized: ${file}`);} catch (error) {
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
       console.log(`"Optimized": ${file}`)} catch (error) {
       console.error(`Error optimizing ${file}:`, error.message)}
 =======
@@ -110,6 +116,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
   }
 
 optimizeImages();
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -203,12 +210,18 @@ origin/cursor/integrate-build-improve-and-re-verify-242d
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+#!/usr/bin/env node const sharp = const fs = const path = async function optimizeImages() { const publicDir = path.join(process.cwd(),'public';); const imagesDir = path.join(publicDir,'images';); if () { console.log('No images directory found')) { ) { console.log('No images directory found')} return} const files = fs.readdirSync(imagesDir;); const imageFiles = files.filter(file => /.(jpg|jpeg|png|webp)$/i.test(file) ;); ) .toFile(outputPath); console.log(`Optimized: ${file}`)} catch (error) { console.error(`Error optimizing ${file}:`,error.message)} } } optimizeImages();
+#!/usr/bin/env node const sharp = const fs = const path = async function optimizeImages() { const publicDir = path.join(process.cwd(),'public';); const imagesDir = path.join(publicDir,'images';); if () { console.log('No images directory found')) { ) { console.log('No images directory found')} return} const files = fs.readdirSync(imagesDir;); const imageFiles = files.filter(file => /.(jpg|jpeg|png|webp)$/i.test(file) ;); ) .toFile(outputPath); console.log(`Optimized: ${file}`)} catch (error) { console.error(`Error optimizing ${file}:`,error.message)} } } optimizeImages();
+#!/usr/bin/env node const sharp = const fs = const path = async function optimizeImages() { const publicDir = path.join(process.cwd(),'public';); const imagesDir = path.join(publicDir,'images';); if () { console.log('No images directory found')) { ) { console.log('No images directory found')} return} const files = fs.readdirSync(imagesDir;); const imageFiles = files.filter(file => /.(jpg|jpeg|png|webp)$/i.test(file) ;); ) .toFile(outputPath); console.log(`Optimized: ${file}`)} catch (error) { console.error(`Error optimizing ${file}:`,error.message)} } } optimizeImages();
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 const sharp = require('sharp');
 const fs = require('fs');
 const path = require('path');
 async function optimizeImages() {}
   const publicDir = path.join(process.cwd(), 'public;';);
   const images = [];
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   
@@ -220,6 +233,8 @@ async function optimizeImages() {}
   
 origin/cursor/integrate-build-improve-and-re-verify-242d
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   function findImages(dir) {}
     const files = fs.readdirSync(dir;);
     files.forEach(file => {})
@@ -242,6 +257,7 @@ origin/cursor/integrate-build-improve-and-re-verify-242d
         .webp({ "quality": 80 }
 });
         .toFile(outputPath);
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -255,10 +271,13 @@ origin/cursor/integrate-build-improve-and-re-verify-242d
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       console.log(`"Optimized": ${imagePath} -> ${outputPath}`)} catch (error) {`}
       console.error(`Failed to optimize ${imagePath}:`, error.message)};
   };
 };
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -282,10 +301,13 @@ optimizeImages().catch(console.error);
       
 origin/automation-improvements-final
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 #!/usr/bin/env node
 const path = require('path');
 const fs = require('fs');
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -296,6 +318,8 @@ const fs = require('fs');
 
 console.log('🖼️  Image optimization script - placeholder');
 console.log('✅ Image optimization completed');
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 async function ensureDeps() {
   try { require('imagemin'); } catch { console.error('Missing imagemin deps'); process.exit(1); }
 }
@@ -308,9 +332,8 @@ async function run() {
   const svgo = require('imagemin-svgo');
   const fg = require('fast-glob');
 
-  const base = path.join(process.cwd(), 'public');
-  if (!fs.existsSync(base)) { console.log('No public/ directory'); return; }
 
+<<<<<<< HEAD
   const patterns = ['**/*.jpg','**/*.jpeg','**/*.png','**/*.svg'];
   const files = await fg(patterns, { cwd: base, onlyFiles: true });
   let totalSaved = 0; let count = 0;
@@ -342,12 +365,15 @@ ursor/automate-test-improve-and-merge-code-59d5
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
 
 console.log('🖼️  Image optimization script - placeholder');
 console.log('✅ Image optimization completed');
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -359,3 +385,5 @@ console.log('✅ Image optimization completed');
 origin/main
 origin/automation-improvements-final
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

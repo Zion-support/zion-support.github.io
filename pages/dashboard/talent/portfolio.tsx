@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 class ErrorBoundary extends React.Component {
@@ -29,6 +32,7 @@ import PdfExportButton from '../../../components/ui/PdfExportButton';
 import ResumePreview, {;
   ResumeData,;
 
+<<<<<<< HEAD
 =======
 } from '../../../components/ui/ResumePreview';
 import { createServerClient } from '../../../utils/supabase/server';
@@ -99,6 +103,16 @@ export default function TalentPortfolio() {
   const [theme, setTheme] = useState<'light' | 'dark'>('light');
   const ref = useRef<HTMLDivElement>(null);
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+import { GetServerSideProps } from 'next',
+import React, { useRef, useState } from 'react',
+import PdfExportButton from '../../../components/ui/PdfExportButton',
+import ResumePreview, { ResumeData } from '../../../components/ui/ResumePreview',
+import { createServerClient } from '../../../utils/supabase/server',
+export default function TalentPortfolio() {
+  const [theme, setTheme] = useState<'light' | 'dark'>('light'),
+  const ref = useRef<HTMLDivElement>(null),
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const data: ResumeData = {
     name: 'Your Name',
     contact: {
@@ -113,25 +127,30 @@ export default function TalentPortfolio() {
     portfolio: [{ title: 'Top Project', description: 'Showcase' }]},
   return (
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 return (
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <div className="relative">
       <div className="flex items-center gap-3 mb-4">
         <label className="text-sm">Theme</label>
         <select
           value={theme}
-          onChange={(e) => setTheme(e.target.value as 'light' | 'dark')}
-          className="border border-gray-300 dark:border-gray-700 rounded px-2 py-1 bg-white dark:bg-black"
         >
-          <option value="light">Light</option>
-          <option value="dark">Dark</option>
+          <option value='light'>Light</option>
+          <option value='dark'>Dark</option>
         </select>
       </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 return { props: {} };
 };
@@ -147,12 +166,15 @@ return { props: {} };
 
 export const getServerSideProps: GetServerSideProps = async () => {
   const supabase = createServerClient();
+<<<<<<< HEAD
   const user = await (supabase as any).auth.getUser?.();
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   if (!user) {
-    return { redirect: { destination: '/auth', permanent: false } } as any
+    return { redirect: { destination: '/auth', permanent: false } } as any;
   }
-  return { props: {} }
 };
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 import PdfExportButton from '../../../components / ui / PdfExportButton';
@@ -163,6 +185,8 @@ import {GetServerSideProps} from 'next';
 import React, { useRef, useState } from 'react';
 import PdfExportButton from '../../../components/ui/PdfExportButton';
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import ResumePreview, {
   ResumeData,
 } from '../../../components / ui / ResumePreview';
@@ -204,6 +228,7 @@ function TalentPortfolio() {
     certifications: ['AWS SAA - C03'],
     portfolio: [{ title: 'Top Project', description: 'Showcase' }],
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 ;
   return (
@@ -295,10 +320,13 @@ export const getServerSideProps: GetServerSideProps = async () => {;
   const user = await (supabase as any).auth.getUser?.()
   if (!user) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     return { redirect: { destination: '/auth', permanent: false } } as any;
   }
 return { props: {} }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 ;
 
@@ -342,3 +370,5 @@ export const getServerSideProps: GetServerSideProps = async () => {;
 }
 };
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

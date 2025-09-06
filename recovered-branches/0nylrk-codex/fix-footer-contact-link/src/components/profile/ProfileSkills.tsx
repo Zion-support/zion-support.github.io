@@ -1,16 +1,20 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { Badge } from "@/components/ui/badge",
 import { ProfileSkill } from "@/types/profile",
 import {Badge} from "@/components/ui/badge";
 import {ProfileSkill} from "@/types/profile";
 import { Badge } from "@/components/ui/badge",
 import { ProfileSkill } from "@/types/profile",
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
@@ -22,9 +26,9 @@ interface ProfileSkillsProps {
   skills: ProfileSkill[];
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface ProfileSkillsProps {
   skills: ProfileSkill[];
 }
@@ -33,12 +37,15 @@ export function ProfileSkills({ skills }: ProfileSkillsProps) {
     <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-8">
       <h3 className="text-xl font-bold text-white mb-4">Skills</h3>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 
 >>>>>>> main
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         {skills.map((skill, index) => (
           <div key={index} className="flex flex-col">
@@ -50,6 +57,7 @@ export function ProfileSkills({ skills }: ProfileSkillsProps) {
                 </span>
               )}
             </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
             <div className="h-2 w-full bg-zion-blue-light rounded-full overflow-hidden">
 
@@ -70,6 +78,8 @@ interface ProfileSkillsProps {;
               <div
                 className="h-full bg-gradient-to-r from-zion-purple to-zion-cyan"
 >>>>>>> main
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 style={{ width: `${(skill.level / 5) * 100}%` }}
               />
             </div>
@@ -77,19 +87,20 @@ interface ProfileSkillsProps {;
         ))}
       </div>
     </div>
-<<<<<<< HEAD
   )
-=======
 import { Badge } from "@/components/ui/badge",;
 import { ProfileSkill } from "@/types/profile";
+
+import {Badge} from "@/components/ui/badge";
+import {ProfileSkill} from "@/types/profile";
 interface ProfileSkillsProps {;
   skills: ProfileSkill[];
-=======
-  );
->>>>>>> main
 }
 
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export function ProfileSkills(): any ({ skills }: ProfileSkillsProps) {;
   return (
     <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-8">;
@@ -120,21 +131,21 @@ export function ProfileSkills(): any ({ skills }: ProfileSkillsProps) {;
   );
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+}
+;
+}
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { Badge  } from '@/components / ui / badge';
 import { ProfileSkill  } from '@/types / profile';
 interface ProfileSkillsProps {
   skills: ProfileSkill[];
-
-              <div 
-                className="h-full bg-gradient-to-r from-zion-purple to-zion-cyan" 
-
-  );
-
-
 }
 export /**
  * ProfileSkills - Function description
@@ -163,6 +174,7 @@ function ProfileSkills() {
       </div>;
     </div>);
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -224,3 +236,5 @@ export function ProfileSkills({ skills }: ProfileSkillsProps) {;
 }
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

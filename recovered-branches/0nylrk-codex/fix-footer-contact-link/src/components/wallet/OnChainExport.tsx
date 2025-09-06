@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
 import {Button} from "@/components/ui/button";
@@ -8,6 +7,7 @@ import {useToast} from "@/hooks/use-toast";
 import {useAuth} from "@/hooks/useAuth";
 export function OnChainExport() {;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
   const [isConnected, setIsConnected] = useState(false);
@@ -15,6 +15,8 @@ export function OnChainExport() {;
   const [exportStatus, setExportStatus] = useState<'idle' | 'processing' | 'success' | 'error'>('idle');
   const { toast } = useToast();
   const { user } = useAuth();
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useState } from "react",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { Button } from "@/components/ui/button";
@@ -27,12 +29,16 @@ import {
 import { useToast } from "@/hooks/use-toast";
 import { useAuth } from "@/hooks/useAuth";
 export function OnChainExport() {
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const [isConnected, setIsConnected] = useState(false);
   const [isExporting, setIsExporting] = useState(false);
   const [exportStatus, setExportStatus] = useState<'idle' | 'processing' | 'success' | 'error'>('idle'),
   const { toast } = useToast();
   const { user } = useAuth();
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -65,10 +71,14 @@ function OnChainExport() {
 
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const handleConnectWallet = async () => {
     try {
       // Check if wallet is available;
       const ethereum = (window as any).ethereum;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -125,11 +135,14 @@ export function OnChainExport() {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       // Sign message to verify ownership
       const message = `Zion AI Marketplace wallet verification\nAddress: ${address}\nTime: ${new Date().toISOString()}`
       await ethereum.request({
         method: 'personal_sign'
         params: [address, message]
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -148,6 +161,8 @@ export function OnChainExport() {
       
       setIsConnected(true),
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       toast({
         title: "Wallet connected"
         description: `Wallet ${address.slice(0, 6)}...${address.slice(-4)} connected successfully`})
@@ -158,16 +173,20 @@ export function OnChainExport() {
         variant: "destructive"
       })
     }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
 =======
   }
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const handleExportTokens = async () => {
     setIsExporting(true);
     setExportStatus('processing');
     try {
       // Simulate token export
+<<<<<<< HEAD
       await new Promise(resolve => setTimeout(resolve, 2000));
       setExportStatus('success');
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -187,6 +206,8 @@ export function OnChainExport() {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       toast({
         title: "Tokens exported"
         description: "Your ZION$ tokens have been exported to your wallet"})
@@ -197,6 +218,7 @@ export function OnChainExport() {
         description: error.message |"Could not export tokens"
         variant: "destructive"
       })
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -414,11 +436,15 @@ export function OnChainExport() {;
   ;
   return (;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  return (
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <Card>;
       <CardHeader>;
         <CardTitle className="flex items-center gap-2">;
           {isConnected ? (;
             <Wallet className="h-5 w-5 text-primary" />;
+<<<<<<< HEAD
 <<<<<<< HEAD
           ) : (;
             <Wallet className="h-5 w-5" />;
@@ -483,6 +509,11 @@ export function OnChainExport() {;
                 {isExporting ? "Processing..." : "Export Tokens"}
                 {!isExporting && <ArrowUpRight className="ml-2 h-4 w-4" />}
               </Button>
+=======
+          ) : (;
+            <Wallet className="h-5 w-5" />;
+          )}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             )}
           </div>
         ) : (
@@ -495,10 +526,14 @@ export function OnChainExport() {;
             </Button>
           </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 };
 ;
 
+<<<<<<< HEAD
 =======
 =======
 };
@@ -512,6 +547,8 @@ export function OnChainExport() {;
 };
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useState } from "react",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
@@ -594,9 +631,13 @@ export function OnChainExport() {;
             <Wallet className="h-5 w-5" />;
           )}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           On-chain Export;
           <TooltipProvider>;
             <Tooltip>;
@@ -605,6 +646,7 @@ export function OnChainExport() {;
               </TooltipTrigger>;
               <TooltipContent>;
                 <p className="max-w-xs">Export your ZION$ tokens to an external blockchain wallet</p>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 ;
@@ -626,16 +668,36 @@ export function OnChainExport() {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               </TooltipContent>;
             </Tooltip>;
           </TooltipProvider>;
         </CardTitle>;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 ;
 
 
+=======
+                {isExporting ? "Processing..." : "Export Tokens"}
+                {!isExporting && <ArrowUpRight className="ml-2 h-4 w-4" />}
+              </Button>;
+            )}
+          </div>;
+        ) : (;
+          <div className="space-y-2">;
+            <p className="text-sm text-muted-foreground mb-3">;
+              Connect your web3 wallet to export tokens to the blockchain.;
+            </p>;
+            <Button onClick={handleConnectWallet} className="w-full">;
+              Connect Wallet;
+            </Button>;
+          </div>;
+        )}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <CardDescription > Export your ZION$ to an external wallet</CardDescription>;
       </CardHeader>;
       <CardContent>;
@@ -669,6 +731,7 @@ export function OnChainExport() {;
           </div>)}
       </CardContent>;
     </Card>);
+<<<<<<< HEAD
         <CardDescription>Export your ZION$ to an external wallet</CardDescription>;
       </CardHeader>;
       <CardContent>;
@@ -720,3 +783,6 @@ export function OnChainExport() {;
 =======
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

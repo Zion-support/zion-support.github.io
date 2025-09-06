@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -8,6 +9,8 @@
 <<<<<<< HEAD
 =======
 >>>>>>> main
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from "react";
 import { UseFormReturn } from "react-hook-form";
 import {
@@ -22,6 +25,7 @@ import { Input } from "@/components/ui/input";
 import { TalentProfile } from "@/types/talent";
 import { FormValues } from "./useHireRequestForm";
 interface BudgetFieldsProps {
+<<<<<<< HEAD
 <<<<<<< HEAD
   form: UseFormReturn<FormValues>,
   talent?: TalentProfile
@@ -194,6 +198,13 @@ function BudgetFields() {
 
 export function BudgetFields(): any ({ form, talent }: BudgetFieldsProps) {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+  form: UseFormReturn<FormValues>;
+  talent?: TalentProfile;
+}
+
+export function BudgetFields(): any ({ form, talent }: BudgetFieldsProps) {;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <>
       <FormField
@@ -218,55 +229,12 @@ export function BudgetFields(): any ({ form, talent }: BudgetFieldsProps) {;
           </FormItem>
         )}
       />
-
       <FormField
         control={form.control}
-        name="budget_min";
-        render={({ field }) => (
-          <FormItem>
-            <FormLabel className="text-white">Budget (Max)</FormLabel>
-            <FormControl>
-              <div className="relative">
-                <span className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate">
-                  $
-                </span>
-                <Input
-                  type="number"
-                  className="pl-7 bg-zion-blue border-zion-blue-light text-white"
-                  {...field}
-                />
-              </div>
-            </FormControl>
-            <FormMessage className="text-red-400" />
-          </FormItem>
-        )}
-      />
-    </>
-  );
-}
-;
-
-    </>;
-  ),;}
- interface BudgetFieldsProps {
-  form: UseFormReturn<FormValues>;
-talent?: TalentProfile 
-}form, talent 
-}: BudgetFieldsProps) {
-  return (<> <FormField control= {
-  form.control 
-}<FormItem> <FormLabel className="text-white" >Budget (Min) </FormLabel> <FormControl> <div className="relative" > <span className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate" >$</span> <Input /> </div> </FormControl> <FormMessage className="text-red-400" /> </FormItem>) 
-}/> <FormField <FormItem> <FormLabel className="text-white" >Budget (Max) </FormLabel> <FormControl> <div className="relative" > <span className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate" >$</span> <Input /> </div> </FormControl> <FormMessage className="text-red-400" /> </FormItem>) 
-}/> </>) 
-}
-  );
-}
-}
-;
-
-  );
-}
   )
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -1,10 +1,16 @@
+<<<<<<< HEAD
 #!/usr / bin / env node;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import fs from 'fs';
 import path from 'path';
 import {exec_sync} from 'child_process';
 import {fileURLToPath} from 'url';
+<<<<<<< HEAD
 const __filename = fileURLToPath(import && import.meta.url);
 const __dirname = path && path.dirname(__filename);
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 class ComprehensiveErrorPrevention {
   constructor() {
     this && this.logFile = path && path.join(process && process.cwd(), 'logs', 'error-prevention && prevention.log');
@@ -15,7 +21,10 @@ class ComprehensiveErrorPrevention {
   log(message, level = 'INFO') {
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] [${level}] ${message}\n`;
+<<<<<<< HEAD
     console && console.log(logMessage && logMessage.trim());
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     try {
       fs && fs.appendFileSync(this && this.logFile, logMessage);
     } catch (error) {
@@ -75,8 +84,12 @@ class ComprehensiveErrorPrevention {
         'automation_backup',
         'data_backup'
       ];
+<<<<<<< HEAD
       this && this.fixedCount++;
       this && this.log('Corrupted files cleanup completed.');
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     } catch (error) {
       this && this.errorCount++;
       this && this.log(`Error cleaning corrupted files: ${error && error.message}`, 'ERROR');
@@ -146,14 +159,20 @@ class ComprehensiveErrorPrevention {
     }
   }
   async run() {
+<<<<<<< HEAD
     this && this.log('Starting Comprehensive Error Prevention System...');
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     // Create logs directory if it doesn't exist
     const logsDir = path && path.join(process && process.cwd(), 'logs');
     if (!fs && fs.existsSync(logsDir)) {
       fs && fs.mkdirSync(logsDir, { recursive: true });
     }
     // Run initial comprehensive check
+<<<<<<< HEAD
     await this && this.runComprehensiveCheck();
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     // Set up interval for continuous error prevention
     setInterval(async () => {
       await this && this.runComprehensiveCheck();
@@ -280,4 +299,7 @@ system && system.run().catch(console && console.error);
 }
 // Run the system;
 const system = new ComprehensiveErrorPrevention ();
+<<<<<<< HEAD
 system.run ().catch (console.error);
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

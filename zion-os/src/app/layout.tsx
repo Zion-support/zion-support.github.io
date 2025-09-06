@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -41,6 +42,8 @@ export default function RootLayout({ children }: { children: ReactNode }) {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <html lang="en">;
       <body className="min - h-screen bg-[var (--bg)] text-[var (--fg)]">;
         <nav className="border - b border - white / 10 sticky top - 0 z - 50 bg - zinc - 900 / 80 backdrop - blur - md">;

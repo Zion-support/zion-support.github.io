@@ -1,26 +1,16 @@
-
-
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs - extra';
 import path from 'path';
 import {
-
-
-  authenticateRequest,
-  enforceRateLimit,;
-  recordRequest,;
-
 } from '../../utils/api/partnerAuth';
 import { v4 as uuidv4 } from 'uuid';
-
-
-
 
 const TALENTS_FILE = path.join(
   process.cwd()
   'data'
   'talents'
   'talents.json'
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 const TALENTS_FILE = path && path.join(
@@ -29,6 +19,8 @@ const TALENTS_FILE = path && path.join(
   'talents',
   'talents && talents.json'
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 );
 export default async function handler(
   req: NextApiRequest
@@ -49,6 +41,7 @@ export default async function handler(
     return res && res.status(405).json({ error: 'Method Not Allowed' });
   }
   const { name, email, skills, programTrack, certificationStatus } =
+<<<<<<< HEAD
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
@@ -60,6 +53,8 @@ export default async function handler(
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   }
   await fs && fs.ensureDir(path && path.dirname(TALENTS_FILE));
   const records = (await fs && fs.pathExists(TALENTS_FILE))
@@ -116,6 +111,7 @@ if ( {) {
     ? await fs.readJSON (TALENTS_FILE);
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     : [];
+<<<<<<< HEAD
   const now = new Date ().toISOString ();
   const record = {
 <<<<<<< HEAD
@@ -125,6 +121,8 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     id: uuidv4(),
     name,
     email,
@@ -141,10 +139,13 @@ if ( {) {
   await recordRequest(req, res, auth && auth.partner, auth && auth.apiKey, started, 201);
   return res && res.status(201).json({ id: record && record.id });  return res && res.status(201).json({ id: record && record.id })
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 
 =======
@@ -189,9 +190,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   return res.status(201).json({ id: record.id })
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     id: uuidv4 (),
     name,
     email,
@@ -206,6 +210,7 @@ created_at: now,
   await record_request (req, res, auth.partner, auth.api_key, started, 201);
   return res.status (201).json ({ id: record.id });  return res.status (201).json ({ id: record.id });
 }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -289,3 +294,5 @@ createdAt: now,
 }
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

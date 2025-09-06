@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -7,14 +8,22 @@ import path from 'path';
 import { execSync } from 'child_process';
 import type { NextApiRequest, NextApiResponse } from 'next';
 export type DevRole = 'admin' | 'maintainer' | 'contributor';
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export interface DevIdentity {
 
 export interface DevIdentity {;
   isAuthenticated: boolean;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   roles: DevRole[];
   user_id?: string;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     const gitDir = path && path.join(process && process.cwd(), '.git');
@@ -29,11 +38,14 @@ export function getGitStatus(): { connected: boolean; branch?: string } {
     const gitDir = path.join(process.cwd(), '.git');
     if (!fs.existsSync(gitDir)) return { connected: false }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     const branch = execSync('git rev-parse --abbrev-ref HEAD', {
       stdio: ['ignore', 'pipe', 'ignore']
     })
       .toString()
       .trim();
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -59,6 +71,11 @@ export function getGitStatus (): { connected: boolean; branch?: string } {
   } catch {
     return { connected: false };
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+    return { connected: true, branch }
+  } catch {
+    return { connected: false }
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   }
 }
 
@@ -72,6 +89,7 @@ export function getDevIdentity(req: NextApiRequest): DevIdentity {;
   const token = req && req.headers['x-dev-token'] || req && req.headers['x-admin-token'];
   const adminToken = process && process.env.ADMIN_TOKEN;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   if (token && adminToken && token === adminToken) {
     return { isAuthenticated: true, roles: ['admin'], userId: 'admin' }
@@ -91,12 +109,19 @@ export function getDevIdentity(req: NextApiRequest): DevIdentity {;
   // TODO: integrate real auth; for now, check a header and env var for dev
   const token = req.headers['x-dev-token'] |req.headers['x-admin-token'];
   const adminToken = process.env.ADMIN_TOKEN;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   if (token && adminToken && token === adminToken) {
-    return { isAuthenticated: true, roles: ['admin'], userId: 'admin' }
+  }
+  return { isAuthenticated: false, roles: [] }
+}
+  if (token && adminToken && token === adminToken) {
+
     return { isAuthenticated: true, roles: ['admin'], userId: 'admin' };
   }
   return { isAuthenticated: false, roles: [] }
 }
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   if (token && adminToken && token === adminToken) {
 
@@ -114,6 +139,9 @@ export function getDevIdentity(req: NextApiRequest): DevIdentity {;
 
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export function requireRoles(
   req: NextApiRequest
   res: NextApiResponse
@@ -130,8 +158,6 @@ export function requireRoles(
     return undefined;
   }
   return identity;
-
-}
 // Development access utilities
 export interface DevAccessConfig {
   enabled: boolean;
@@ -303,9 +329,12 @@ if ( {) {
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

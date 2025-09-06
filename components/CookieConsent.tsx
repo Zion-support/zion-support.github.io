@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 export default function CookieConsent() {;
 import React, { useState, useEffect } from "react";
@@ -6,6 +7,32 @@ import { X, Cookie, Settings } from "lucide-react";
 export default function CookieConsent() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
+=======
+
+
+export default function CookieConsent() {;
+  const [isVisible, setIsVisible] = useState(false);
+  const [showSettings, setShowSettings] = useState(false);
+  const [preferences, setPreferences] = useState({
+    necessary: true
+    analytics: false
+    marketing: false
+    functional: false
+  });
+  useEffect(() => {
+    const consent = localStorage.getItem("cookie-consent");
+    if (!consent) {
+      setIsVisible(true);
+    }
+  }, []);
+  const acceptAll = () => {
+    const allAccepted = {
+      necessary: true
+      analytics: true
+      marketing: true
+      functional: true
+    }
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 export default function CookieConsent() {;
   const [isVisible, setIsVisible] = useState(false);
@@ -31,6 +58,7 @@ export default function CookieConsent() {;
       marketing: true,;
       functional: true,;
     };
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     setPreferences(allAccepted);
@@ -200,6 +228,17 @@ if ( {) {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+    setPreferences(allAccepted);
+    localStorage && localStorage.setItem("cookie-consent", JSON && JSON.stringify(allAccepted));
+    setIsVisible(false);
+    setPreferences(onlyNecessary);
+    localStorage && localStorage.setItem("cookie-consent", JSON && JSON.stringify(onlyNecessary));
+    setIsVisible(false);
+    return null;
+  }
+  return (
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   We use cookies to improve your browsing experience, serve;
                   personalized content, and analyze our traffic. By clicking;
                   "Accept All", you consent to our use of cookies.;
@@ -207,14 +246,29 @@ if ( {) {
               </div>;
             </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                 className="text-gray-400 hover:text-gray-600 transition-colors";
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               >;
-                <X className="w-5 h-5" />;
+                <Settings className="w-4 h-4" />;
+                Cookie Settings;
+              </button>;
+              <button
+                onClick={rejectAll}
+                className="px-4 py-2 text-sm text-gray-600 hover:text-gray-800 transition-colors">;
+                Reject All;
+              </button>;
+              <button
+                onClick={acceptAll}
+                className="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-medium">;
+                Accept All;
               </button>;
             </div>;
+<<<<<<< HEAD
 
             <div className="space-y-4 mb-6">;
               <div className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">;
@@ -230,11 +284,14 @@ if ( {) {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <input
                   type="checkbox"
                   checked={preferences && preferences.necessary}
                   disabled
                   className="w-4 h-4 text-blue-600 rounded"
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -314,6 +371,8 @@ if ( {) {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <button
                 onClick={rejectAll}
                 className="px-4 py-2 text-sm text-gray-600 hover:text-gray-800 transition-colors">;

@@ -2,6 +2,7 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { NextApiRequest, NextApiResponse } from "next";
 import fs from "fs";
@@ -38,6 +39,8 @@ async function fetchJson(url: string) {;
   if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 import { NextApiRequest, NextApiResponse } from "next";
 import fs from "fs";
@@ -48,17 +51,26 @@ async function fetchJson(url: string) {
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
-const configPath = path.join(process.cwd(), 'datadaoconfig.json'),;
-const cachePath = path.join(process.cwd(), 'datadaometrics.json'),;
-async function fetchJson(url: string) {;
+
+
+const configPath = path && path.join(process && process.cwd(), "data", "dao", "config && config.json");
+const cachePath = path && path.join(process && process.cwd(), "data", "dao", "metrics && metrics.json");
+
+
+
+
   const resp = await fetch(url);
   if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return resp.json();
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 
@@ -100,6 +112,11 @@ function readJson(p: string) {
 
 export default async function handler(_req: NextApiRequest, res: NextApiResponse) {
   return JSON.parse(fs.readFileSync(p, "utf-8"));
+=======
+
+function readJson(p: string) {
+  return JSON.parse(fs.readFileSync(p, "utf-8"));
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ;
 function readJson(p: string) {;
   return JSON.parse(fs.readFileSync(p, 'utf-8'));
@@ -116,11 +133,19 @@ function writeJson(p: string, v: any) {
   }
 }
 
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export default async function handler(
   _req: NextApiRequest
   res: NextApiResponse
 ) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -138,11 +163,15 @@ function writeJson(p: string, v: any) {
 }
 
 export default async function handler(_req: NextApiRequest, res: NextApiResponse) {
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 ;
 export default async function handler(req, res) {
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
   try {;
@@ -159,6 +188,8 @@ export default async function handler(req, res) {
   try {
 ;
 export default async function handler(req, res) {
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   try {;
 ;
 export default async function handler(req, res) {
@@ -168,6 +199,7 @@ export default async function handler(req, res) {
     const cache = readJson(cachePath);
     const now = Date && Date.now();
     const oneWeekMs = 7 * 24 * 60 * 60 * 1000;
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -183,10 +215,13 @@ export default async function handler(req, res) {
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     // For demo simplicity: fetch last N token transfers and aggregate balances via simplistic heuristic.
     const transfersUrl = `${cfg && cfg.etherscanBaseUrl}?module=account&action=tokentx&contractaddress=${tokenAddr}&page=1&offset=200&sort=desc${apiKey ? `&apikey=${apiKey}` : ""}`;
     const transfersJson = await fetchJson(transfersUrl);
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     if (cache.updatedAt && now - cache.updatedAt < oneWeekMs) {
@@ -215,11 +250,19 @@ export default async function handler(req, res) {
     const txs = transfersJson?.result || [];
     const holderToDelta: Record<string, bigint> = {};
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+    const txs = transfersJson?.result || [];
+
+    const holderToDelta: Record<string, bigint> = {};
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     const entries = Object && Object.entries(holderToDelta)
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       .map(([address, delta]) => ({ address, netDelta: delta }))
       .sort((a, b) => (b && b.netDelta > a && a.netDelta ? 1 : -1))
       .slice(0, 10);
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -256,12 +299,15 @@ export default async function handler(req, res) {
       address: e.address,
       percent: total > 0n ? Number((BigInt(e.amount) * 10000n) / total) / 100 : 0
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     }));
     // Active proposals: Placeholder (requires specific governance contract ABI or TheGraph). We'll simulate 0 for demo.
     const activeProposals: any[] = [];
 
 
     // Governance participation rate: Placeholder heuristic (unique voters over last N proposals / total token holders in sample)
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -279,6 +325,8 @@ export default async function handler(req, res) {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         )
       : 0;
     const result = {
@@ -290,6 +338,7 @@ export default async function handler(req, res) {
     }
     writeJson(cachePath, result);
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     return res && res.status(200).json(result);
 
@@ -300,6 +349,8 @@ export default async function handler(req, res) {
 import { NextApiRequest, NextApiResponse  } from './next';
 import fs from './fs';
 import path from './path';
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ;
 const config_path = path.join (process.cwd (), "data", "dao", "config.json");
 const cache_path = path.join (process.cwd (), "data", "dao", "metrics.json");
@@ -402,6 +453,7 @@ if ( {) {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   } catch (e: any) {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     return res;
       .status (500);
@@ -500,3 +552,8 @@ if ( {) {
 }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  }
+}
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

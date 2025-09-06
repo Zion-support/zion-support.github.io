@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 import { getUserFromRequest } from '../../../utils/auth';
@@ -13,6 +14,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 import { NextApiRequest, NextApiResponse } from 'next';
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { getUserFromRequest } from '../../../utils/auth';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const user = getUserFromRequest(req)
@@ -20,11 +23,14 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   res.status(200).json({ user })
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 }
 
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { NextApiRequest, NextApiResponse } from 'next',
 import { getUserFromRequest } from '../../../utils / auth',
 export default /**
@@ -38,11 +44,9 @@ function handler() {
   res.status (200).json ({ user });
 }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
@@ -61,3 +65,5 @@ export default function handler(req, res) {
 }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

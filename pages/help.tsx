@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -26,24 +27,32 @@ class ErrorBoundary extends React.Component {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useState } from "react";
 import Head from "next/head";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
 origin/automation-improvements-final
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import {
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   Search
   HelpCircle
   BookOpen
@@ -57,13 +66,19 @@ import {
   ChevronDown
   Cloud
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 import {
 
+<<<<<<< HEAD
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   Search,
   HelpCircle,
   BookOpen,
@@ -77,11 +92,15 @@ import {
   ChevronDown,
   Cloud,;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 } from "lucide-react";
+
 const helpArticles = [
   {
     id: "overview"
@@ -98,6 +117,7 @@ const helpArticles = [
     color: "green"
     articles: [
       {
+<<<<<<< HEAD
         title: "AI Implementation Guide"
         description: "How to implement AI solutions in your business"
         readTime: "10 min read"
@@ -169,6 +189,8 @@ const help_articles = [;
     title: "Cloud Services",
     description: "Cloud infrastructure and deployment solutions.",
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         title: 'AI Best Practices',
         description: 'Tips and best practices for AI development',
         readTime: '6 min read',
@@ -177,6 +199,7 @@ const help_articles = [;
     ]
   },
   {
+<<<<<<< HEAD
     id: 'cloud-services',
     title: 'Cloud Services',
     description: 'Cloud infrastructure and deployment solutions.',
@@ -219,6 +242,8 @@ origin/automation-improvements-final
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     articles: [
       {
         title: "Cloud Migration Guide"
@@ -226,6 +251,7 @@ origin/automation-improvements-final
         readTime: "12 min read"
         type: "Guide"
       }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     articles: [;
@@ -270,6 +296,8 @@ origin/automation-improvements-final
 
 origin/automation-improvements-final
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         title: "Cloud Security"
         description: "Best practices for securing your cloud infrastructure"
         readTime: "9 min read"
@@ -282,6 +310,7 @@ origin/automation-improvements-final
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 ];
+<<<<<<< HEAD
 
 ;
 const help_categories = [;
@@ -322,11 +351,27 @@ const help_categories = [;
 export default function HelpPage() {
   const [searchTerm, setSearchTerm] = useState("");
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+];
+export default function HelpPage() {
+  const [searchTerm, setSearchTerm] = useState("");
+
+];
+
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     color: 'blue',
     articles: helpArticles
   }
 ];
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+export default function HelpPage() {;
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 import {;
   Search,;
@@ -413,6 +458,7 @@ const helpCategories = [;
 
 export default function HelpPage() {;
   const [searchTerm, setSearchTerm] = useState("");
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -456,6 +502,10 @@ origin/automation-improvements-final
 
   }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+  }
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const filteredCategories = helpCategories
     .map((category) => ({
       ...category
@@ -466,6 +516,7 @@ origin/automation-improvements-final
       )
     }))
     .filter((category) => category.articles.length > 0);
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -506,6 +557,9 @@ origin/automation-improvements-final
 origin/automation-improvements-final
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <>;
       <Head>;
@@ -518,6 +572,7 @@ origin/automation-improvements-final
           name="keywords"
           content="help, support, documentation, FAQ, tutorials, guides"
 <<<<<<< HEAD
+<<<<<<< HEAD
 
         />;
       </Head>;
@@ -528,6 +583,8 @@ origin/automation-improvements-final
       </Head>;
       <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         {/* Hero Section */}
         <section className="relative py-20 px-4">;
           <div className="max-w-7xl mx-auto">;

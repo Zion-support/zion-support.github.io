@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import React from "react";
 import { ServiceLandingTemplate } from "@/components/services/ServiceLandingTemplate";
@@ -36,6 +37,8 @@ xport default function AITalentMatchingPage() {
       title: "AI-Powered Matching"
       description: "Advanced algorithms match the right talent with the right opportunities"
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export default function AITalentMatchingPage() {;
   const benefits = [;
     {;
@@ -53,39 +56,16 @@ export default function AITalentMatchingPage() {;
       title: "Success Tracking",;
       description: "Monitor performance and success rates of placements";
     }
-    {
-      icon: Users
-      title: "Verified Professionals"
-      description: "All candidates are pre-screened and verified for quality"
-    }
-    {
-      icon: TrendingUp
-      title: "Success Tracking"
-      description: "Monitor performance and success rates of placements"
-    }
-  ]
-  const features = [
-    "Machine learning-based candidate matching"
-    "Comprehensive skill assessment tools"
-    "Real-time market analysis"
-    "Automated interview scheduling"
-    "Performance analytics dashboard"
-    "Custom matching criteria"
-  ]
-  const stats = [
-    { label: "Successful Placements", value: "95%" }
-    { label: "Client Satisfaction", value: "98%" }
-    { label: "Time to Hire", value: "50% faster" }
-  ]
-
 
 import React from "react",
 import { ServiceLandingTemplate } from "@/components/services/ServiceLandingTemplate",
 import { Bot, Users, TrendingUp } from 'lucide-react'
 
 export default function AITalentMatchingPage() {
+
   const benefits = [
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -94,6 +74,10 @@ export default function AITalentMatchingPage() {
       title: "Precise Candidate Matching",
       description: "Leverage AI algorithms to pair your roles with the most qualified experts.",
       icon: <Bot className = "h-8 w-8" />},
+=======
+      title: "Precise Candidate Matching",
+      description: "Leverage AI algorithms to pair your roles with the most qualified experts.",
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     {
       title: "Streamlined Hiring Workflow",
       description: "Automated screening and ranking saves your team valuable time.",
@@ -112,6 +96,7 @@ export default function AITalentMatchingPage() {
       name: "Raj Patel",
       role: "Startup Founder",
       text: "The quality of candidates has improved dramatically since using Zion's platform.",
+<<<<<<< HEAD
 
   const features = [;
     "Machine learning-based candidate matching",;
@@ -170,6 +155,10 @@ function AITalentMatchingPage() {
       avatar: "/placeholder.svg"}],
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+      avatar: "/placeholder.svg"}],
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <ServiceLandingTemplate;
       title="AI Talent Matching";
@@ -194,6 +183,7 @@ function AITalentMatchingPage() {
       ctaLink="/contact"
     />;
   );
+<<<<<<< HEAD
 };
 };
 }
@@ -212,3 +202,5 @@ function AITalentMatchingPage() {
 =======
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

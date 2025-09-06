@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import { useState } from 'react'
 import { useRouter } from 'next/router'
@@ -9,10 +10,11 @@ import { SEO } from '@/components/SEO'
 import { ProtectedRoute } from '@/components/ProtectedRoute'
 import { Briefcase } from 'lucide-react'
 function HiringTrackerContent() {
+=======
+        title='Hiring Tracker | Zion AI Marketplace'
+        description='Manage your candidate pipeline in the Zion AI Marketplace.'
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
-  const router = useRouter()
-  const jobId = router.query.jobId as string
-  const [activeTab, setActiveTab] = useState<string>('kanban')
 
 import { useState } from "react",
 import { useRouter } from "next/router",
@@ -22,17 +24,6 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
 import { SEO } from "@/components/SEO";
 import { ProtectedRoute } from "@/components/ProtectedRoute";
 import { Briefcase } from 'lucide-react'
-function HiringTrackerContent() {
-
-  const router = useRouter()
-  const jobId = router.query.jobId as string
-  const [activeTab, setActiveTab] = useState<string>('kanban')
-
-function HiringTrackerContent() {
-  const router = useRouter(),
-  const jobId = router.query.jobId as string,
-  const [activeTab, setActiveTab] = useState<string>("kanban"),
-
   return (
     <>
       <SEO 
@@ -46,6 +37,7 @@ function HiringTrackerContent() {
               <Briefcase className="mr-2 h-6 w-6 text-primary" />
               Hiring Pipeline
             </h1>
+<<<<<<< HEAD
             <p className='text-muted-foreground mt-1'>              Track and manage your candidates through the hiring process  const [activeTab, setActiveTab] = useState<string>("kanban")
 
   return (
@@ -69,12 +61,15 @@ return (
         description='Manage your candidate pipeline in the Zion AI Marketplace.'
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <p className="text-muted-foreground mt-1">
 <<<<<<< HEAD
               Track and manage your candidates through the hiring process
             </p>
           </div>
         </div>
+<<<<<<< HEAD
 
 
 =======
@@ -89,29 +84,20 @@ return (
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
         <Tabs defaultValue="kanban" onValueChange={setActiveTab} className="mb-8">
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
           <TabsList>
-            <TabsTrigger value='kanban'>Kanban Board</TabsTrigger>
-            <TabsTrigger value='analytics'>Analytics</TabsTrigger>
+            <TabsTrigger value="kanban">Kanban Board</TabsTrigger>
+            <TabsTrigger value="analytics">Analytics</TabsTrigger>
           </TabsList>
-
-
-        <Tabs defaultValue="kanban" onValueChange={setActiveTab} className="mb-8">
-          <TabsList>
-
             <TabsTrigger value="kanban">Kanban Board</TabsTrigger>
             <TabsTrigger value="analytics">Analytics</TabsTrigger>
           </TabsList>
           <TabsContent value="kanban" className="mt-6">
             <KanbanBoard jobId={jobId} />
           </TabsContent>
-
-          
-          <TabsContent value="kanban" className="mt-6">
-            <KanbanBoard jobId={jobId} />
-          </TabsContent>
-          
 
           <TabsContent value="analytics" className="mt-6">
 <<<<<<< HEAD
@@ -122,6 +108,7 @@ return (
         </Tabs>
       </main>
     </>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   );
@@ -135,6 +122,8 @@ return (
 export default function HiringTracker() {
   return (
     <ProtectedRoute>
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <HiringTrackerContent />
     </ProtectedRoute>
 
@@ -152,15 +141,19 @@ export default function HiringTracker() {
   return (
   )
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <HiringTrackerContent />;
     </ProtectedRoute>;
   );
 };
 
+  )
 import { useState } from "react",;
 import { useRouter } from "next/router",;
 import { KanbanBoard } from "@/components/hiring-tracker/KanbanBoard",;
@@ -175,9 +168,12 @@ function HiringTrackerContent() {;
   const [activeTab, setActiveTab] = useState<string>("kanban");
   return (;
     <>;
+<<<<<<< HEAD
       <SEO
         title="Hiring Tracker | Zion AI Marketplace" 
         description="Manage your candidate pipeline in the Zion AI Marketplace." 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       />;
       <main className="container mx-auto px-4 py-8">;
         <div className="flex justify-between items-center mb-8">;
@@ -191,6 +187,7 @@ function HiringTrackerContent() {;
             </p>;
           </div>;
         </div>;
+<<<<<<< HEAD
 
         <Tabs
           defaultValue='kanban'
@@ -214,6 +211,8 @@ function HiringTrackerContent() {;
             <KanbanBoard jobId={jobId} />;
           </TabsContent>;
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <TabsContent value="analytics" className="mt-6">;
             <HiringAnalytics jobId={jobId} />;
           </TabsContent>;
@@ -222,14 +221,18 @@ function HiringTrackerContent() {;
     </>;
   );
 }
+<<<<<<< HEAD
 
 export default function HiringTracker() {;
   return (
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <ProtectedRoute>;
       <HiringTrackerContent />;
     </ProtectedRoute>;
   );
 }
+<<<<<<< HEAD
 
   );
 }
@@ -321,3 +324,5 @@ function HiringTracker() {
 =======
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

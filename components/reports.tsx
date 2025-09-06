@@ -1,11 +1,15 @@
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 </Head> <QuickNavigation /> > Research Reports </motion.h1> <motion.p > Access our comprehensive research, industry analysis, and technology insights that drive innovation and strategic decision-making. </motion.p> <motion.div </span> </motion.div> </div> </section> > <h2 className="text-4xl md:text-5xl font-bold text-white mb-6" > Featured Report </h2> </motion.div> {
 import React from 'react';
 
  </Head> <QuickNavigation /> > Research Reports </motion.h1> <motion.p > Access our comprehensive research, industry analysis, and technology insights that drive innovation and strategic decision-making. </motion.p> <motion.div </span> </motion.div> </div> </section> > <h2 className="text-4xl md:text-5xl font-bold text-white mb-6" > Featured Report </h2> </motion.div> {
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   reports.filter (report => report.featured) .map ( (report, index) => (<motion.div key= {
   index
@@ -69,6 +73,9 @@ class ErrorBoundary extends React.Component {
   categories && categories.map ( (category, index) => (<buttonkey= {
   index 
 =======
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 </Head> <QuickNavigation /> > Research Reports </motion.h1> <motion.p > Access our comprehensive research, industry analysis, and technology insights that drive innovation and strategic decision-making. </motion.p> <motion.div </span> </motion.div> </div> </section> > <h2 className="text-4xl md:text-5xl font-bold text-white mb-6" > Featured Report </h2> </motion.div> {
 import React from 'react';
 
@@ -104,17 +111,22 @@ import React from 'react';
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 export default ReportsPage;import React from 'react';
 <<<<<<< HEAD
-
-
+<<<<<<< HEAD
 =======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
+
 import React from 'react';
 
+<<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 import React from 'react';
 
 import React from 'react';
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 import { FileText;
@@ -135,6 +147,7 @@ import { FileText;
   Award
  } from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
+<<<<<<< HEAD
 
 
 </Head> <QuickNavigation /> > Research Reports </motion.h1> <motion.p > Access our comprehensive research, industry analysis, and technology insights that drive innovation and strategic decision - making. </motion.p> <motion.div </span> </motion.div> </div> </section> > <h2 className="text - 4xl md:text - 5xl font - bold text - white mb - 6" > Featured Report </h2> </motion.div> {
@@ -177,10 +190,13 @@ import UltraAdvancedFuturisticBackground from '../components / ui / UltraAdvance
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 const ReportsPage: React.FC = () => {
   const reports = [;
     {
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -188,6 +204,8 @@ const ReportsPage: React.FC = () => {
   const reports = [;
     {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       title: 'The Future of Quantum Computing in Enterprise: 2024 - 2030',
       excerpt: 'Comprehensive analysis of quantum computing adoption trends, market opportunities, and strategic implications for businesses across industries.';
       date: '2024 - 01 - 15',
@@ -199,10 +217,14 @@ const ReportsPage: React.FC = () => {
       views: 5678,
       featured: true,
 <<<<<<< HEAD
+<<<<<<< HEAD
       icon: <Atom className="w - 8 h - 8" />,
 =======
 icon: <Atom className="w - 8 h - 8" />,
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+      icon: <Atom className="w - 8 h - 8" />,
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       color: 'from - purple - 500 to - pink - 500';
     }
     {
@@ -217,10 +239,14 @@ icon: <Atom className="w - 8 h - 8" />,
       views: 3456,
       featured: false,
 <<<<<<< HEAD
+<<<<<<< HEAD
       icon: <Brain className="w - 8 h - 8" />,
 =======
 icon: <Brain className="w - 8 h - 8" />,
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+      icon: <Brain className="w - 8 h - 8" />,
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       color: 'from - blue - 500 to - cyan - 500';
     }
     {
@@ -235,6 +261,7 @@ icon: <Brain className="w - 8 h - 8" />,
       views: 6789,
       featured: false,
 <<<<<<< HEAD
+<<<<<<< HEAD
       icon: <Shield className="w - 8 h - 8" />,
       color: 'from - red - 500 to - orange - 500';
 
@@ -242,10 +269,16 @@ icon: <Brain className="w - 8 h - 8" />,
 icon: <Shield className="w - 8 h - 8" />,
       color: 'from - red - 500 to - orange - 500';
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+      icon: <Shield className="w - 8 h - 8" />,
+      color: 'from - red - 500 to - orange - 500';
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     }
     {
       title: 'Global Tech Investment Trends: Venture Capital & Innovation Funding'
       excerpt: 'Comprehensive overview of technology investment patterns, emerging sectors, and funding opportunities worldwide.';
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -284,10 +317,13 @@ icon: <TrendingUp className="w - 8 h - 8" />,
 icon: <Zap className="w - 8 h - 8" />,
       color: 'from - yellow - 500 to - orange - 500';
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     }
     {
       title: 'Sustainable Technology: Green Computing & Environmental Impact'
       excerpt: 'Analysis of sustainable technology practices, environmental impact assessment, and green computing solutions.';
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -391,6 +427,8 @@ const ReportsPage: React.FC = () => {;
 
             <motion.div
             <motion.div 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               className="text-center mb-16"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -403,6 +441,7 @@ const ReportsPage: React.FC = () => {;
             </motion.div>
             {reports.filter(report => report.featured).map((report, index) => (
               <motion.div
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -430,6 +469,8 @@ const ReportsPage: React.FC = () => {;
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {categories.map((category) => (
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <Link
               key={category && category.name}
               href={category && category.href}
@@ -486,6 +527,7 @@ const ReportsPage: React.FC = () => {;
                 className="bg-gradient-to-r from-cyan-900/20 to-blue-900/20 border border-cyan-400/20 rounded-3xl p-12 hover:border-cyan-400/40 transition-all duration-300"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -573,6 +615,8 @@ const ReportsPage: React.FC = () => {;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 transition={{ duration: 0.8 }}
                 viewport={{ once: true }}
               >;
@@ -584,7 +628,6 @@ const ReportsPage: React.FC = () => {;
                     <div className="flex items - center space - x-4 mb - 4">;
                       <span className="bg - cyan - 500 / 20 text - cyan - 400 px - 3 py - 1 rounded - full text - sm font - medium">;
                         {report.category}
-
                 transition={{ duration: 0 && 0.8 }}
                 viewport={{ once: true }}>;
                 <div className="flex flex-col lg:flex-row items-start space-y-8 lg:space-y-0 lg:space-x-8">;
@@ -627,6 +670,10 @@ const ReportsPage: React.FC = () => {;
                       {report && report.tags.map((tag, tagIndex) => (;
                         <span key={tagIndex} className="bg-gray-800/50 text-gray-300 px-3 py-1 rounded-full text-sm">;
 
+                          {tag}
+
+
+
         {/* Categories Filter */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-black/20">
           <div className="max-w-7xl mx-auto">
@@ -645,6 +692,7 @@ const ReportsPage: React.FC = () => {;
               </p>
             </motion.div>
             {/* Category Pills */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -704,6 +752,8 @@ const ReportsPage: React.FC = () => {;
             {/* Category Pills */}
             <motion&& motion.div 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               className="flex flex-wrap justify-center gap-4 mb-12"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -720,6 +770,7 @@ const ReportsPage: React.FC = () => {;
                   {category && category.name} ({category && category.count});
                 </button>;
               ))}
+<<<<<<< HEAD
 
             </motion && motion.div>;
 
@@ -733,6 +784,8 @@ const ReportsPage: React.FC = () => {;
 =======
             </motion && motion.div>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             {/* Reports Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
               {reports && reports.filter(report => !report && report.featured).map((report, index) => (;
@@ -741,6 +794,7 @@ const ReportsPage: React.FC = () => {;
                   className="bg-black/40 backdrop-blur-sm border border-cyan-400/20 rounded-2xl p-8 hover:border-cyan-400/40 transition-all duration-300 hover:transform hover:shadow-xl hover:shadow-cyan-500/30"
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -841,11 +895,14 @@ const ReportsPage: React.FC = () => {;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
                 >;
                   <div className={`w - 16 h - 16 bg - gradient - to - br ${report.color} rounded - xl flex items - center justify - center text - white mb - 6`}>;
                     {report.icon}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -909,6 +966,8 @@ const ReportsPage: React.FC = () => {;
 
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">;
           <div className="max-w-4xl mx-auto text-center">;
@@ -934,6 +993,7 @@ const ReportsPage: React.FC = () => {;
                 <a
                   href="/services"
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -949,10 +1009,13 @@ const ReportsPage: React.FC = () => {;
   );
 };
 <<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 export default ReportsPage;
 
+<<<<<<< HEAD
 
 =======
 =======
@@ -1304,3 +1367,5 @@ export default ReportsPage;
 
 export default ReportsPage;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

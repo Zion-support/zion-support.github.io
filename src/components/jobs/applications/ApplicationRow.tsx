@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Calendar, User, FileText, BarChart } from 'lucide-react'
 
 import { Button } from '@/components/ui/button'
@@ -41,24 +42,19 @@ interface ApplicationRowProps {
   onViewApplication: (application_id: string) => Promise < void>;
 
 }
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 interface ApplicationRowProps {
   application: JobApplication
   processingId: string | null
   onViewApplication: (applicationId: string) => Promise<void>
   onStatusChange: (
-    applicationId: string
-    newStatus: ApplicationStatus
-  ) => Promise<void>
-  onViewScore: (application: JobApplication) => void
-interface ApplicationRowProps {
-  application: JobApplication
-  processingId: string | null
-  onViewApplication: (applicationId: string,) => Promise<void>
-  onStatusChange: (applicationId: string, newStatus: ApplicationStatus,) => Promise<void>
-  onViewScore: (application: JobApplication,) => void
 
+<<<<<<< HEAD
 }
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export function ApplicationRow({
 
   application
@@ -68,7 +64,12 @@ export function ApplicationRow({
   onViewScore
 }: ApplicationRowProps) {
   const [avatarError, setAvatarError] = useState(false)
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+  const talentName = application.talent_profile?.full_name || 'Unknown'
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 import { formatDistanceToNow } from 'date-fns';
 import { Calendar, User, FileText, BarChart } from 'lucide-react';
@@ -81,8 +82,6 @@ import { ScoreBadge } from './ScoreBadge';
 import { ApplicationActions } from './ApplicationActions';
 import Image from 'next/image'; // Import next/image;
 import React, { useState } from 'react'; // Import useState;
-
-
 
 interface ApplicationRowProps {;
   application: JobApplication;
@@ -111,6 +110,12 @@ export function ApplicationRow(): any ({;
   const [avatarError, setAvatarError] = useState(false);
   const talentName = application && application.talent_profile?.full_name || 'Unknown';
 
+<<<<<<< HEAD
+=======
+
+  const talentName = application.talent_profile?.full_name || 'Unknown'
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
 <<<<<<< HEAD
     <TableRow key={application && application.id}>;
@@ -133,12 +138,12 @@ export function ApplicationRow(): any ({;
           <AvatarPrimitive className="h-9 w-9"> {/* Using renamed AvatarPrimitive */}
             {application.talent_profile?.profile_picture_url && !avatarError ? (
               <Image
-                src={application.talent_profile.profile_picture_url}
                 alt={talentName}
                 width={36} // Corresponds to h-9 w-9 (9 * 4px = 36px)
                 height={36} // Corresponds to h-9 w-9
                 className='rounded-full object-cover' // Ensure rounded and object-cover
                 onError={() => setAvatarError(true)}
+<<<<<<< HEAD
                 priority={false}              />
 ursor/fix-website-loading-errors-and-merge-6662
   const talentName = application.talent_profile?.full_name |'Unknown'
@@ -174,11 +179,14 @@ ursor/fix-website-loading-errors-and-merge-6662
 
             ) : (
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             ) : (
               <User className="h-5 w-5 text-gray-400" />
             )}
           </AvatarPrimitive>
           <div>
+<<<<<<< HEAD
             <div className='font-medium'>{talentName}</div>
             <div className='text-xs text-muted-foreground'>
               {application.talent_profile?.professional_title |'Talent'}
@@ -190,11 +198,14 @@ ursor/fix-website-loading-errors-and-merge-6662
             </div>
             <div className="text-xs text-muted-foreground">
               {application.talent_profile?.professional_title || "Talent"}
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             </div>
           </div>
         </div>
       </TableCell>
       <TableCell>
+<<<<<<< HEAD
         <div className='flex items-center gap-1'>
           <Calendar className='h-4 w-4 text-muted-foreground' />
           <span>
@@ -207,12 +218,15 @@ ursor/fix-website-loading-errors-and-merge-6662
           <Calendar className="h-4 w-4 text-muted-foreground" />
           <span>{formatDistanceToNow(new Date(application.created_at), { addSuffix: true })}</span>
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         </div>
       </TableCell>
       <TableCell>
         <StatusBadge status={application.status} />
       </TableCell>
       <TableCell>
+<<<<<<< HEAD
         <div className="flex items-center gap-1">
           <Calendar className="h-4 w-4 text-muted-foreground" />
           <span>{formatDistanceToNow(new Date(application.created_at), { addSuffix: true })}</span>
@@ -228,6 +242,8 @@ ursor/fix-website-loading-errors-and-merge-6662
           onClick={() => onViewScore(application)}
           className='flex items-center gap-1'        >
           <BarChart className='h-4 w-4 mr-1' />
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <Button 
           variant="ghost" 
           size="sm" 
@@ -240,14 +256,6 @@ ursor/fix-website-loading-errors-and-merge-6662
       </TableCell>
       <TableCell>
         {application.resume ? (
-          <Button variant='ghost' size='sm' asChild>
-            <a
-              href={application.resume.file_url |'#'}
-              target='_blank'
-              rel='noopener noreferrer'
-            >
-              <FileText className='h-4 w-4 mr-1' /> View
-            </a>
           <Button variant="ghost" size="sm" asChild>
             <a href={application.resume.file_url || "#"} target="_blank" rel="noopener noreferrer">
               <FileText className="h-4 w-4 mr-1" /> View
@@ -259,6 +267,7 @@ ursor/fix-website-loading-errors-and-merge-6662
       </TableCell>
       <TableCell className="text-right">
         <ApplicationActions
+<<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           </AvatarPrimitive>;
@@ -288,6 +297,8 @@ interface ApplicationRowProps {
 };
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 }
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { formatDistanceToNow } from "date-fns",;
 import { Calendar, User, FileText, BarChart } from 'lucide-react';
 import { Button } from "@/components/ui/button",;
@@ -351,6 +362,7 @@ interface ApplicationRowProps {
   onStatusChange: (application_id: string, new_status: ApplicationStatus, ) => Promise < void>,
   onViewScore: (application: JobApplication, ) => void;
 }
+<<<<<<< HEAD
 export /**
  * ApplicationRow - Function description
  */
@@ -366,15 +378,54 @@ function ApplicationRow() {
             {' '}
             {/* Using renamed AvatarPrimitive */}
             {application.talent_profile?.profile_picture_url && !avatar_error ? (
+=======
+import { formatDistanceToNow } from "date-fns",;
+import { Calendar, User, FileText, BarChart } from 'lucide-react';
+import { Button } from "@/components/ui/button",;
+import { Avatar as AvatarPrimitive } from "@/components/ui/avatar", // Renamed to avoid conflict;
+import { TableRow, TableCell } from "@/components/ui/table",;
+import { JobApplication, ApplicationStatus } from "@/types/jobs",;
+import { StatusBadge } from "./StatusBadge",;
+import { ScoreBadge } from "./ScoreBadge",;
+import { ApplicationActions } from "./ApplicationActions",;
+import Image from 'next/image', // Import next/image;
+import React, { useState } from 'react', // Import useState;
+interface ApplicationRowProps {;
+  application: JobApplication,;
+  processingId: string | null,;
+  onViewApplication: (applicationId: string) => Promise<void>,;
+  onStatusChange: (applicationId: string, newStatus: ApplicationStatus) => Promise<void>,;
+  onViewScore: (application: JobApplication) => void;
+}
+;
+export function ApplicationRow({;
+  application,;
+  processingId,;
+  onViewApplication,;
+  onStatusChange,;
+  onViewScore;
+}: ApplicationRowProps) {;
+  const [avatarError, setAvatarError] = useState(false);
+  const talentName = application.talent_profile?.full_name || "Unknown";
+  return (;
+    <TableRow key={application.id}>;
+      <TableCell>;
+        <div className="flex items-center gap-3">;
+          <AvatarPrimitive className="h-9 w-9"> {/* Using renamed AvatarPrimitive */}
+            {application.talent_profile?.profile_picture_url && !avatarError ? (;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <Image;
-                src={application.talent_profile.profile_picture_url}
-                alt={talent_name}
-                width={36} // Corresponds to h - 9 w - 9 (9 * 4px = 36px);
-                height={36} // Corresponds to h - 9 w - 9;
-                className='rounded - full object - cover' // Ensure rounded and object - cover;
-                on_error={() => setAvatarError (true)}
-                priority={false}              />) : (
-              <User className='h - 5 w - 5 text - gray - 400' />)}
+                src={application.talent_profile.profile_picture_url} ;
+                alt={talentName}
+                width={36} // Corresponds to h-9 w-9 (9 * 4px = 36px);
+                height={36} // Corresponds to h-9 w-9;
+                className="rounded-full object-cover" // Ensure rounded and object-cover;
+                onError={() => setAvatarError(true)}
+                priority={false}
+              />;
+            ) : (;
+              <User className="h-5 w-5 text-gray-400" />;
+            )}
           </AvatarPrimitive>;
           <div>;
             <div className='font - medium'>{talent_name}</div>;
@@ -385,6 +436,7 @@ function ApplicationRow() {
         </div>;
       </TableCell>;
       <TableCell>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
         <div className='flex items - center gap - 1'>;
@@ -426,10 +478,13 @@ function ApplicationRow() {
         >;
           <BarChart className="h-4 w-4 mr-1" />;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <ScoreBadge application={application} />;
         </Button>;
       </TableCell>;
       <TableCell>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
               href={application && application.resume.file_url || '#'}
@@ -443,12 +498,15 @@ function ApplicationRow() {
             <a href={application.resume.file_url || "#"} target="_blank" rel="noopener noreferrer">;
               <FileText className="h-4 w-4 mr-1" /> View;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             </a>;
           </Button>;
         ) : (;
           <span className='text-muted-foreground text-sm'>No resume</span>;
         )}
       </TableCell>;
+<<<<<<< HEAD
 <<<<<<< HEAD
       <TableCell className='text-right'>;
         <ApplicationActions
@@ -498,3 +556,5 @@ function ApplicationRow() {
 }
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -1,5 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 
+<<<<<<< HEAD
 
     }
 
@@ -9,6 +10,8 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 const p = path.join(
   process.cwd()
   'data'
@@ -36,6 +39,7 @@ export default function handler(_req: NextApiRequest, res: NextApiResponse) {
   }
 if (req.method === 'POST') {
     try {
+<<<<<<< HEAD
       const data = fs.readFileSync (p, 'utf8');
       const changelog = JSON.parse (data);
       return res.status (200).json (changelog);
@@ -45,14 +49,19 @@ if (req.method === 'POST') {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   if (req && req.method === 'POST') {
     try {
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       const { version, changes, date } = req && req.body;
       
       if (!version || !changes || !Array && Array.isArray(changes)) {
         return res && res.status(400).json({ error: 'Missing required fields' });
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       }
       let changelog = [];
       try {
@@ -74,6 +83,7 @@ if (req.method === 'POST') {
         // File doesn't exist, start with empty array;
       }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -90,6 +100,8 @@ if (req.method === 'POST') {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     } catch (error) {
       return res && res.status(500).json({ error: 'Failed to update changelog' });
     }
@@ -99,6 +111,7 @@ if (req.method === 'POST') {
   res && res.setHeader('Allow', 'GET, POST');
   res && res.status(405).end('Method Not Allowed');
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -159,6 +172,8 @@ export default function handler(req, res) {
     res.status(200).json(JSON.parse(fs.readFileSync(p, 'utf-8')));
   } catch (error) {
     res.status(500).json({ error: e?.message || 'Failed to read changelog' });
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -167,6 +182,7 @@ export default function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -186,3 +202,7 @@ export default function handler(req, res) {
   }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

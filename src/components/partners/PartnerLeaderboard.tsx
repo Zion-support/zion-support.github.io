@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Badge } from '@/components/ui/badge'
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card'
 import { Star } from 'lucide-react'
@@ -48,6 +49,11 @@ import { Crown, Medal, Trophy } from 'lucide-react'
   earnings: number,
   badges: string[]
 badges: string[]
+=======
+  referrals: number,
+  earnings: number,
+  badges: string[]
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 export function PartnerLeaderboard() {
   // Placeholder data - would come from API in real implementation
@@ -61,10 +67,13 @@ export function PartnerLeaderboard() {
       referrals: 178
       earnings: 4500
       badges: ["gold", "trending"]
+<<<<<<< HEAD
     }
 ursor/fix-website-loading-errors-and-merge-6662
     }
     },
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
     {
@@ -74,10 +83,13 @@ ursor/fix-website-loading-errors-and-merge-6662
       referrals: 145
       earnings: 3625
       badges: ["silver"]
+<<<<<<< HEAD
     }
 ursor/fix-website-loading-errors-and-merge-6662
     }
     },
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
     {
@@ -87,10 +99,13 @@ ursor/fix-website-loading-errors-and-merge-6662
       referrals: 124
       earnings: 3100
       badges: ["bronze"]
+<<<<<<< HEAD
     }
 ursor/fix-website-loading-errors-and-merge-6662
     }
     },
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
     {
@@ -101,6 +116,7 @@ ursor/fix-website-loading-errors-and-merge-6662
       referrals: 98
       earnings: 2450
       badges: []
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -135,6 +151,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 }
     },
     },
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     {
       id: "5",
       rank: 5,
@@ -143,28 +161,14 @@ ursor/fix-website-loading-errors-and-merge-6662
       referrals: 87,
       earnings: 2175,
       badges: ["newcomer"]
-    }
-  ]
-  // Function to render rank badge
-  const renderRankBadge = (rank: number,) => {
-    switch(rank) {
-      case 1:
-        return <Trophy className="h-5 w-5 text-yellow-500" />
-      case 2:
-        return <Medal className="h-5 w-5 text-gray-400" />
-      case 3:
-        return <Medal className="h-5 w-5 text-amber-700" />,
-      default:
-        return <span className="text-sm font-semibold">{rank}</span>;
-};
-  );
-};
-}
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",;
 import { Badge } from "@/components/ui/badge",;
 import { Crown, Medal, Trophy } from 'lucide-react';
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface LeaderboardEntry {;
   id: string,;
   rank: number,;
@@ -224,6 +228,7 @@ export function PartnerLeaderboard() {;
       badges: ["newcomer"];
     }
   ];
+<<<<<<< HEAD
 
   // Function to render rank badge;
   const renderRankBadge = (rank: number,) => {;
@@ -440,3 +445,15 @@ function PartnerLeaderboard() {
 
       badges: ["newcomer"]
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  // Function to render rank badge;
+  const renderRankBadge = (rank: number, ) =>: any {
+    switch (rank) {
+      case 1:;
+        return <Trophy className="h - 5 w - 5 text - yellow - 500" />;
+      case 2:;
+        return <Medal className="h - 5 w - 5 text - gray - 400" />;
+      case 3:;
+        return <Medal className="h - 5 w - 5 text - amber - 700" />,
+      default:;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

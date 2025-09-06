@@ -29,6 +29,7 @@ import React, { useState } from 'react';
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -80,6 +81,8 @@ export default function UNBridge() {
       'Write a proposal for the UN Development Program on integrating Zion into their Digital Labor Initiative. Include metrics, social outcomes, and DAO-based governance logic.',
     language: 'en',;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   });  const [loading, setLoading] = useState(false);
   const [result, setResult] = useState<any>(null);
   const [translated, setTranslated] = useState<string>('');
@@ -120,14 +123,20 @@ export default function UNBridge() {
         headers: { 'Content-Type': 'application/json' }
         body: JSON.stringify({
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+export default function UNBridge(req, res) {
+  try {
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           ...form;
           supportingMultiverses: form.supportingMultiverses.split().map((s) => s.trim()).filter(Boolean)})}),
       const data = await res.json();
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   const [form, setForm] = useState({;
     title: 'Zion DAO x Digital Labor Initiative',;
@@ -196,11 +205,16 @@ export default function UNBridge(req, res) {
   const [form, setForm] = useState({;
     title: 'Zion DAO x Digital Labor Initiative';
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  const [form, setForm] = useState({;
+    title: 'Zion DAO x Digital Labor Initiative',;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     targetInstitution: 'UN Development Programme',;
     type: 'Workforce Dev',;
     regionalScope: 'Global South',;
     budgetOrResolution: 'USD 3M over 24 months',;
     supportingMultiverses: 'Digital Labor, AI Ethics',;
+<<<<<<< HEAD
 <<<<<<< HEAD
     promptAssist:;
       'Write a proposal for the UN Development Program on integrating Zion into their Digital Labor Initiative. Include metrics, social outcomes, and DAO-based governance logic.',;
@@ -231,6 +245,8 @@ export default function UNBridge(req, res) {
             .filter(Boolean),;
         }),;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       });
       const data = await res && res.json();
       setResult(data);
@@ -239,6 +255,7 @@ export default function UNBridge(req, res) {
     }  }
 
 
+<<<<<<< HEAD
 =======
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -251,6 +268,8 @@ export default function UNBridge(req, res) {
     if (!result?.markdown) return;
     setLoading(true),;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     try {;
       const res = await fetch('/api/proposals/translate', {;
         method: 'POST',;
@@ -264,6 +283,9 @@ export default function UNBridge(req, res) {
       setLoading(false);
     }  }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
       });
@@ -273,6 +295,7 @@ export default function UNBridge(req, res) {
       const { proposals } = await list && list.json();
       const updated = proposals && proposals.find((p: any) => p && p.id === result && result.meta.id),;
 
+<<<<<<< HEAD
 =======
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -298,16 +321,24 @@ const list = await fetch('/api/proposals/list');
       const { proposals } = await list && list.json();
       const updated = proposals && proposals.find((p: any) => p && p.id === result && result.meta.id),;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       setResult((r: any) => ({ ...r, meta: updated }));
     } finally {;
       setLoading(false);
     }  }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   async function submit(): any (channels: string[]) {;
     if (!result?.meta?.id) return;
     setLoading(true),;
@@ -317,9 +348,12 @@ const list = await fetch('/api/proposals/list');
         headers: { 'Content-Type': 'application/json' },;
         body: JSON && JSON.stringify({ id: result && result.meta.id, channels }),;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       });
       const data = await res && res.json();
       setResult((r: any) => ({ ...r, meta: data && data.meta }));
@@ -409,9 +443,13 @@ const list = await fetch('/api/proposals/list');
               className='px-4 py-2 bg-black text-white rounded'>;
               {loading ? 'Working…' : 'Generate Proposal'}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             </button>;
           </div>;
         </div>;
@@ -446,9 +484,13 @@ const list = await fetch('/api/proposals/list');
           {translated && (;
             <div className='border rounded p-3 h-60 overflow-auto whitespace-pre-wrap bg-gray-50'>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               {translated}
             </div>;
           )}
@@ -456,9 +498,13 @@ const list = await fetch('/api/proposals/list');
             <button
               onClick={exportArtifacts}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               disabled={loading || !result}
               className='px-3 py-2 border rounded'>;
               Export PDF + Sign + IPFS;
@@ -475,9 +521,13 @@ const list = await fetch('/api/proposals/list');
             <div className='text-sm space-y-1'>;
               <div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <span className='font-medium'>Status:</span>{' '}
                 {result && result.meta.status}
               </div>;
@@ -512,13 +562,18 @@ const list = await fetch('/api/proposals/list');
             </div>;
           )}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         </div>;
       </div>;
     </div>;
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -626,6 +681,9 @@ const list = await fetch('/api/proposals/list');
   }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <div className="space-y-6">
       <h1 className="text-2xl font-semibold">Global Outreach: UN Bridge</h1>
@@ -665,6 +723,7 @@ const list = await fetch('/api/proposals/list');
             <textarea name="promptAssist" rows={5} value={form.promptAssist} onChange={onChange} className="w-full border rounded p-2" />
           </label>
           <div className="flex gap-3">
+<<<<<<< HEAD
             <button onClick={generate} disabled={loading} className="px-4 py-2 bg-black text-white rounded">{loading ? 'Working…' : 'Generate Proposal'}</button>
           </div>
         </div>
@@ -734,6 +793,8 @@ const list = await fetch('/api/proposals/list');
   }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           </div>
           <div className="flex items-center gap-2">
             <button onClick={() => translate('fr')} disabled={loading || !result} className="px-3 py-2 border rounded">Translate FR</button>
@@ -741,6 +802,7 @@ const list = await fetch('/api/proposals/list');
             <button onClick={() => translate('ar')} disabled={loading || !result} className="px-3 py-2 border rounded">Translate AR</button>
           </div>
           {translated && (
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -765,6 +827,8 @@ const list = await fetch('/api/proposals/list');
             >
               Submit (Email)
             </button>
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <div className="border rounded p-3 h-60 overflow-auto whitespace-pre-wrap bg-gray-50">
               {translated  } catch (error) {
     console.error("Error:", error);
@@ -777,14 +841,19 @@ const list = await fetch('/api/proposals/list');
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+          </div>
           <div className="flex items-center gap-2">
+<<<<<<< HEAD
             <button onClick={exportArtifacts} disabled={loading || !result} className="px-3 py-2 border rounded">Export PDF + Sign + IPFS</button>
             <button onClick={() => submit(['email'])} disabled={loading || !result} className="px-3 py-2 border rounded">Submit (Email)</button>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           </div>
           {result?.meta && (
             <div className="text-sm space-y-1">
               <div><span className="font-medium">Status:</span> {result.meta.status}</div>
+<<<<<<< HEAD
               {result.meta.artifacts?.markdownPath && (
                 <div><a className="text-blue-600 underline" href={result.meta.artifacts.markdownPath} target="_blank" rel="noreferrer">Markdown</a></div>
               )}
@@ -942,6 +1011,8 @@ if (return) {
 
 }
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <div><a className="text-blue-600 underline" href={result.meta.artifacts.pdfPath} target="_blank" rel="noreferrer">PDF</Link></div>
               )  } catch (error) {
     console.error("Error:", error);
@@ -1119,6 +1190,7 @@ if (return) {
         </div>;
       </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
     </div>);
@@ -1169,3 +1241,5 @@ if (return) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

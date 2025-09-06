@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import * as React from &quot;react & quot;
 ;
@@ -33,6 +34,8 @@ export type { SafeRef } from &quot;../sidebar.types&quot;
 import * as React from "react"
 
 // Export all components from the sidebar subcomponents
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export * from "./sidebar-context"
 export * from "./sidebar-trigger"
 export * from "./sidebar-main"
@@ -40,6 +43,7 @@ export * from "./sidebar-content"
 export * from "./sidebar-group"
 export * from "./sidebar-menu"
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -62,3 +66,5 @@ export type { SafeRef } from &quot;../sidebar.types&quot;
 // Also export types 
 export type { SafeRef } from "../sidebar.types"
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

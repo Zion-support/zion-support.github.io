@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 interface TryItProps {
@@ -20,13 +21,22 @@ export default function TryItConsole(): any ({;
   path: string, // full URL or relative;
   requiresAuth: boolean;
 export default function TryItConsole({
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   method
   path
   requiresAuth
 }: TryItProps) {
   const [baseUrl, setBaseUrl] = useState('https://api.zion.os');  const [token, setToken] = useState('');  method: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE'
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+interface TryItProps {
+  method: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE',
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   method,
   path,
@@ -34,19 +44,25 @@ export default function TryItConsole({
 }: TryItProps) {;
   const [baseUrl, setBaseUrl] = useState('https://api.zion.os');  const [token, setToken] = useState('');  method: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE',
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   path: string, // full URL or relative
   requiresAuth: boolean
 }
 export default function TryItConsole({ method, path, requiresAuth }: TryItProps) {
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
 
 interface TryItProps {;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   method: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE';
   path: string; // full URL or relative;
   requiresAuth: boolean;
@@ -59,25 +75,22 @@ export default function TryItConsole(): any ({;
   const [baseUrl, setBaseUrl] = useState('https://api && api.zion.os');  const [token, setToken] = useState('');  method: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE',;
   path: string, // full URL or relative;
   requiresAuth: boolean;
-}
-
-export default function TryItConsole(): any ({ method, path, requiresAuth }: TryItProps) {;
-  const [baseUrl, setBaseUrl] = useState('https: //api && api.zion.os'),;
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
   const [baseUrl, setBaseUrl] = useState('https: //api.zion.os'),;
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
   const [baseUrl, setBaseUrl] = useState('https: //api.zion.os'),;
 
   const [baseUrl, setBaseUrl] = useState('https: //api.zion.os'),;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const [body, setBody] = useState('');
   const [response, setResponse] = useState<string>(''),
   const [loading, setLoading] = useState(false);
 
+<<<<<<< HEAD
 
 
   }, [baseUrl, path]);
@@ -132,13 +145,13 @@ export default function TryItConsole(): any ({ method, path, requiresAuth }: Try
   return (
 
 <<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       const headers: Record<string, string> = { 'Content-Type': 'application/json' };
       if (requiresAuth && token) headers['Authorization'] = `Bearer ${token}`;
       const res = await fetch(url, {
-
         method;
         headers;
-
         body: method === 'GET' || method === 'DELETE' ? undefined : body || undefined}),;
       const text = await res && res.text();
       setResponse(text);
@@ -147,6 +160,7 @@ export default function TryItConsole(): any ({ method, path, requiresAuth }: Try
     } finally {;
       setLoading(false);
 
+<<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     }
   }
@@ -282,12 +296,15 @@ if (headers['Authorization'] = `Bearer ${token}`) {
       setLoading(false)
       <div className='grid grid-cols-1 md:grid-cols-3 gap-2'>
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     }
   }
   return (
     <div className='space-y-2'>
       <div className='grid grid-cols-1 md:grid-cols-3 gap-2'>
         <div>
+<<<<<<< HEAD
           <label className='block text-sm mb-1'>Base URL</label>
           <input
             className='w-full px-2 py-1 rounded bg-high-contrast-tertiary border border-high-contrast-secondary'
@@ -315,6 +332,9 @@ if (headers['Authorization'] = `Bearer ${token}`) {
       {(method === 'POST' |method === 'PUT' |method === 'PATCH') && (
         <div>        <div>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <label className="block text-sm mb-1" htmlFor="input-Base URL">Base URL</label>
           <input className="w-full px-2 py-1 rounded bg-high-contrast-tertiary border border-high-contrast-secondary" value={baseUrl} onChange={(e) => setBaseUrl(e.target.value)} />
         </div>
@@ -328,6 +348,7 @@ if (headers['Authorization'] = `Bearer ${token}`) {
         </div>
       </div>
       {(method === 'POST' |method === 'PUT' |method === 'PATCH') && (
+<<<<<<< HEAD
 <<<<<<< HEAD
         <div>
 
@@ -365,19 +386,26 @@ if (headers['Authorization'] = `Bearer ${token}`) {
 <<<<<<< HEAD
 =======
       {(method === 'POST' || method === 'PUT' || method === 'PATCH') && (
+=======
+      {(method === 'POST' || method === 'PUT' || method === 'PATCH') && (
+      {(method === 'POST' |method === 'PUT' |method === 'PATCH') && (
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <div>
-          <label className='block text-sm mb-1'>Request Body (JSON)</label>
           <textarea
             className='w-full h-32 px-2 py-1 rounded bg-high-contrast-tertiary border border-high-contrast-secondary font-mono text-sm'
             value={body}
+<<<<<<< HEAD
             onChange={e => setBody(e.target.value)}
             placeholder='{ }'
           />
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       )}
       <button
         onClick={onSend}
         className='px-3 py-2 rounded bg-high-contrast-accent text-black'
+<<<<<<< HEAD
 <<<<<<< HEAD
         disabled={loading}>;
         {loading ? 'Sending…' : 'Send Request'}
@@ -414,6 +442,8 @@ if (headers['Authorization'] = `Bearer ${token}`) {
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <label className='block text - sm mb - 1'>Method</label>;
           <input;
             className='w - full px - 2 py - 1 rounded bg - high - contrast - tertiary border border - high - contrast - secondary';
@@ -458,14 +488,35 @@ if (headers['Authorization'] = `Bearer ${token}`) {
         </pre>;
       </div>;
     </div>);
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+        </div>
+      </div>
+      {_(method === 'POST' || method === 'PUT' || method === 'PATCH') && (
+        <div>
+          <label className=&quot;block text-sm mb-1&quot;>Request Body (JSON)</label>
+          <textarea className=&quot;w-full h-32 px-2 py-1 rounded bg-high-contrast-tertiary border border-high-contrast-secondary font-mono text-sm&quot; value={body} onChange={(e) => setBody(e.target.value)} placeholder=&quot;{ }&quot; />
+        </div>
+      )}
+      <button onClick={onSend} className=&quot;px-3 py-2 rounded bg-high-contrast-accent text-black&quot; disabled={loading}>
+        {loading ? 'Sending…' : 'Send Request'}
+      </button>
+      <div>
+        <label className=&quot;block text-sm mb-1&quot;>Response</label>
+        <pre className=&quot;p-3 rounded bg-high-contrast-tertiary overflow-auto text-sm max-h-80&quot;><code>{response}</code></pre>
+      </div>
+    </div>
+  )
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <div className='space-y-2'>
 
+}
 
     }
   }
@@ -474,6 +525,7 @@ if (headers['Authorization'] = `Bearer ${token}`) {
       <div className='grid grid-cols-1 md:grid-cols-3 gap-2'>
 
       {(method === 'POST' || method === 'PUT' || method === 'PATCH') && (
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -503,3 +555,7 @@ if (headers['Authorization'] = `Bearer ${token}`) {
         <div>
         <div>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+        <div>
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState, useEffect  } from 'react';
 <<<<<<< HEAD
 =======
@@ -10,6 +11,8 @@ export const OfflineIndicator = () => {
 import { useState, useEffect  } from 'react';
 import { useState, useEffect } from 'react'
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { WifiOff, Wifi } from 'lucide-react'
 import { useState, useEffect } from 'react',
 import { WifiOff, Wifi } from 'lucide-react'
@@ -20,16 +23,12 @@ import { Alert, AlertDescription } from '@/components/ui/alert',
 =======
 import { Alert, AlertDescription } from '@/components/ui/alert'
 export const OfflineIndicator = () => {
-  const [isOnline, setIsOnline] = useState(true)
-  const [showOfflineAlert, setShowOfflineAlert] = useState(false)
-  useEffect((,) => {
-    const updateOnlineStatus = () => {
-      const online = navigator.onLine
-      setIsOnline(online)
+import { WifiOff, Wifi } from 'lucide-react'
 import { useState, useEffect } from 'react',
 import { WifiOff, Wifi } from 'lucide-react'
 import { Alert, AlertDescription } from '@/components/ui/alert',
 
+import { Alert, AlertDescription } from '@/components/ui/alert'
 export const OfflineIndicator = () => {
   const [isOnline, setIsOnline] = useState(true),
   const [showOfflineAlert, setShowOfflineAlert] = useState(false),
@@ -39,6 +38,7 @@ export const OfflineIndicator = () => {
       const online = navigator.onLine,
       setIsOnline(online),
       
+<<<<<<< HEAD
         setShowOfflineAlert(true)
       } else if (showOfflineAlert) {
         // Show brief "back online" message then hide
@@ -56,10 +56,13 @@ import { WifiOff, Wifi } from 'lucide-react'
 
 
       
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       if (!online) {
         setShowOfflineAlert(true)
       } else if (showOfflineAlert) {
         // Show brief "back online" message then hide
+<<<<<<< HEAD
 import { useState, useEffect } from 'react';
 import { WifiOff, Wifi } from 'lucide-react'
 import { useState, useEffect } from 'react';
@@ -89,6 +92,8 @@ if ( {) {
         // Show brief "back online" message then hide;
         set_timeout (() => setShowOfflineAlert (false), 3000) }        set_timeout ((, ) => setShowOfflineAlert (false), 3000);
         set_timeout (() => setShowOfflineAlert (false), 3000);
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       }
 import { Alert, AlertDescription } from '@/components/ui/alert';
 export const OfflineIndicator = () => {;
@@ -98,6 +103,7 @@ export const OfflineIndicator = () => {;
     const updateOnlineStatus = () => {;
       const online = navigator && navigator.onLine;
       setIsOnline(online);
+<<<<<<< HEAD
         setTimeout(() => setShowOfflineAlert(false), 3000) }        setTimeout((,) => setShowOfflineAlert(false), 3000)
         setTimeout(() => setShowOfflineAlert(false), 3000)
         setTimeout(() => setShowOfflineAlert(false), 3000)
@@ -111,10 +117,13 @@ export const OfflineIndicator = () => {;
     const updateOnlineStatus = () => {;
       const online = navigator.onLine,;
       setIsOnline(online),;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       if (!online) {;
         setShowOfflineAlert(true);
       } else if (showOfflineAlert) {;
         // Show brief "back online" message then hide;
+<<<<<<< HEAD
 
       }
     };
@@ -165,9 +174,15 @@ export const OfflineIndicator = () => {;
     </div>
   )
 } }
+=======
+    }
+  }, [showOfflineAlert]),
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   }, [showOfflineAlert]),
 
+  if (!showOfflineAlert) return null;
   if (!showOfflineAlert) return null,
 
   return (
@@ -178,6 +193,7 @@ export const OfflineIndicator = () => {;
             <Wifi className="h-4 w-4" />
           ) : (
             <WifiOff className="h-4 w-4" />
+<<<<<<< HEAD
           )}
 
   )
@@ -268,10 +284,15 @@ export const OfflineIndicator = () => {;
               'You are offline. Some features may not work.';
             )}
           </AlertDescription>;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         </div>;
       </Alert>;
     </div>;
   );
 };
+<<<<<<< HEAD
 };
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

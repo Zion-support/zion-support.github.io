@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 
@@ -11,6 +12,8 @@ export default function CloudAutomationsPage() {;
 =======
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export default function CloudAutomationsPage() {
 
 export default function CloudAutomationsPage() {;
@@ -24,10 +27,13 @@ export default function CloudAutomationsPage() {;
       .then(setData);
       .catch(() => setData({ ok: false }));
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export default function CloudAutomationsPage() {
   const [data, setData] = useState<any>(null);
   useEffect(() => {
@@ -36,18 +42,19 @@ export default function CloudAutomationsPage() {
       .then(setData)
       .catch(() => setData({ ok: false }))
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   }, []);
 
   const items = data?.data ? Object && Object.entries(data && data.data) : [];
-  return (
 
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             ) : null}
           </div>;
         ))}
+<<<<<<< HEAD
 
       </div>;
     </div>;
@@ -161,6 +168,8 @@ export default function CloudAutomationsPage() {
             {value.metrics ? (
               <pre className="mt-2 text-xs whitespace-pre-wrap">{JSON.stringify(value.metrics, null, 2)}</pre>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   );
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
@@ -178,6 +187,7 @@ export default function CloudAutomationsPage() {
           </div>))}
       </div>;
     </div>);
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -217,3 +227,5 @@ export default function CloudAutomationsPage() {
   );
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

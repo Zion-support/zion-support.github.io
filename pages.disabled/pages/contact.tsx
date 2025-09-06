@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -26,6 +27,8 @@ class ErrorBoundary extends React.Component {
 }
 const \"Contact\": NextPage = () => {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -125,6 +128,7 @@ const "ContactPage": React.FC = () => {;
 import type { NextPage } from 'next';
 import MainLayout from '../components/layout/MainLayout';
 import { Mail, Phone, MapPin, Clock, Send } from 'lucide-react';
+<<<<<<< HEAD
 
 
 
@@ -136,6 +140,8 @@ const "Contact": NextPage = () => {
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const contactInfo = [{
       icon: Mail,
       \"title\": \'Email Us\',
@@ -207,6 +213,7 @@ const "Contact": NextPage = () => {;
     }
   ];
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -218,6 +225,8 @@ const "Contact": NextPage = () => {;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {/* Hero Section */}
       <section className=\"bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20\">;
         <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\">;
@@ -400,6 +409,7 @@ const "Contact": NextPage = () => {;
       </section>;
       {/* FAQ Section */}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 ursor/fix-syntax-push-and-merge-to-main-40de
           <div className=\"grid grid-cols-1 md:grid-cols-2 gap-8\">
@@ -535,6 +545,8 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   );
 };
           {/* Contact Information */}
@@ -543,6 +555,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
               <motion&& motion.div
                 initial={{ opacity: 0, \"y\": 20 }}
                 animate={{ \"opacity\": 1, \"y\": 0 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -577,6 +590,8 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     key={index}
                     initial={{ \"opacity\": 0, \"y\": 20 }}
                     animate={{ \"opacity\": 1, \"y\": 0 }}
@@ -611,6 +626,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                 initial={{ opacity: 0, \"y\": 20 }}
                 animate={{ \"opacity\": 1, \"y\": 0 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
               <div className=\"max-w-4xl mx-auto\">
@@ -641,6 +657,8 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   initial={{ opacity: 0, \"y\": 20 }}
                   animate={{ \"opacity\": 1, \"y\": 0 }}
                   transition={{ \"duration\": 0 && 0.6, \"delay\": 0 && 0.2 }}
@@ -667,6 +685,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                         name=\"email\"
                         required
                         className=\"w-full px-4 py-3 border border-gray-300 rounded-lg focus: rin g-2 focus: rin g-blue-500 focus: borde r-transparent\"
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
                   <div className=\"grid grid-cols-1 md: gri d-cols-2 gap-6 mb-6\">
@@ -699,6 +718,8 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                         id=\"phone\"
                         name=\"phone\"
                         className=\"w-full px-4 py-3 border border-gray-300 rounded-lg focus: rin g-2 focus: rin g-blue-500 focus: borde r-transparent\"
@@ -714,6 +735,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                         name=\"company\"
                         className=\"w-full px-4 py-3 border border-gray-300 rounded-lg focus: rin g-2 focus: rin g-blue-500 focus: borde r-transparent\"
                         placeholder=\"Your company name\"
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -743,6 +765,8 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     <select
                       id=\"service\"
                       name=\"service\"
@@ -753,6 +777,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                           {service}
                         </option>;
                       ))}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -781,6 +806,8 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     <textarea
                       id=\"message\"
                       name=\"message\"
@@ -791,6 +818,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                   </div>;
                   <motion&& motion.button
                     type=\"submit\"
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -824,6 +852,8 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         {/* Hero Section */}
         <section className=\"relative py-20 px-4\">;
           <div className=\"max-w-7xl mx-auto\">;
@@ -843,6 +873,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
             <div className=\"grid grid-cols-1 \"lg\": grid-cols-2 gap-12\">;
               {/* Contact Form */}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 ursor/fix-syntax-push-and-merge-to-main-40de
               <div className=\"bg-slate-800/50 rounded-2xl p-8 border border-slate-700\">
@@ -860,6 +891,8 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 {isSubmitted ? (
                   <div className=\"text-center py-12\">
                     <CheckCircle className=\"w-16 h-16 text-green-500 mx-auto mb-4\" />
@@ -914,6 +947,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                           onChange={handleInputChange}
                           className=\"w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 \"focus\": ring-2 focus:ring-cyan-500 focus:border-transparent\"
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
                     <div className=\"grid grid-cols-1 md:grid-cols-2 gap-6\">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -943,6 +977,8 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                         <input
                           type=\"text\"
                           id=\"company\"
@@ -1020,6 +1056,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
               </div>;
               {/* Contact Information */}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -1077,6 +1114,8 @@ ursor/fix-syntax-push-and-merge-to-main-40de
             </div>;
           </section>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           {/* Services Overview */}
           <section className="py-20">;
             <div className="max-w-7xl mx-auto px-4 "sm": px-6 lg:px-8">;
@@ -1113,6 +1152,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
     </>;
   );
 }
+<<<<<<< HEAD
 
 
 
@@ -1124,6 +1164,8 @@ export default ContactPage
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           </div>
         </section>
       </div>
@@ -1136,6 +1178,7 @@ export default ContactPage;
     </>;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages.disabled/pages/contact.tsx
   );
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -1150,3 +1193,5 @@ ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react'
 import {formatDistanceToNow} from "date-fns"
 import Link from "next/link"
@@ -29,6 +30,8 @@ import React from 'react',
 import { formatDistanceToNow } from "date-fns",
 import Link from "next/link",
 import { ThumbsUp, ThumbsDown, MessageSquare, Pin, Lock, CheckCircle } from 'lucide-react'
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card",
 import { Badge } from "@/components/ui/badge",
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
@@ -36,6 +39,7 @@ import { Button } from "@/components/ui/button",
 import { cn } from "@/lib/utils",
 import { ForumPost } from "@/types/community",
 import { logInfo } from '@/utils/productionLogger',
+<<<<<<< HEAD
 interface PostCardProps {
   post: ForumPost
   compact?: boolean
@@ -67,6 +71,10 @@ export default PostCard;
 <<<<<<< HEAD
       "transition-shadow hover: shadow-md",
 =======
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface PostCardProps {
   post: ForumPost
   compact?: boolean
@@ -77,6 +85,7 @@ interface PostCardProps {
 
 
 
+<<<<<<< HEAD
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -123,6 +132,8 @@ export const PostCard = React && React.memo(PostCardComponent);
 PostCard && PostCard.displayName = 'PostCard';
 export default PostCard;
       "transition-shadow hover: shadow-md",
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
       "transition-shadow hover: shadow-md",
 import React from 'react';
@@ -144,6 +155,7 @@ interface PostCardProps {
 const PostCardComponent = ({ post, compact = false }: PostCardProps) =>: any {
   const time_ago = formatDistanceToNow (new Date (post.created_at), { add_suffix: true }),
   return (
+<<<<<<< HEAD
     <Card data - testid="post - card" className={cn (
       "transition - shadow hover:shadow - md";
 export const PostCard = React.memo (PostCardComponent);
@@ -309,6 +321,8 @@ export default PostCard;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 const PostCardComponent = ({ post, compact = false }: PostCardProps) => {
 export default PostCard;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 export default PostCard;

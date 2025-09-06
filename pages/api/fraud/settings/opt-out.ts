@@ -1,6 +1,15 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
+=======
+import type { NextApiRequest, NextApiResponse } from "next";
+import { getFraudStore } from "../../../../utils/fraud/store";
+export default async function handler(
+  req: NextApiRequest
+  res: NextApiResponse
+) {
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const store = getFraudStore();
 
     return res.status(200).json(settings)
@@ -17,6 +26,7 @@
 }
 
 
+<<<<<<< HEAD
 =======
 
   const store = getFraudStore();
@@ -25,6 +35,8 @@
   res.status(405).json({ error: "Method not allowed" });
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   if (req && req.method === "GET") {
     const userId = (req && req.query.userId as string) || "";
     if (!userId) return res && res.status(400).json({ error: "Missing userId" });
@@ -43,12 +55,16 @@
   res && res.status(405).json({ error: "Method not allowed" });
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import type { NextApiRequest, NextApiResponse } from './next';
 import { getFraudStore  } from '../../../../utils / fraud / store';
 ;
@@ -84,10 +100,13 @@ if ( {) {
   res.status (405).json ({ error: "Method not allowed" });
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 import type { NextApiRequest, NextApiResponse } from "next";
@@ -98,6 +117,7 @@ export default async function handler(
   res: NextApiResponse,
 ) {;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -128,6 +148,8 @@ export default async function handler(
   res: NextApiResponse,
 ) {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
@@ -135,12 +157,15 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import { getFraudStore } from '../../../../utils/fraud/store';
 export default async function handler(req, res) {
   try {
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const store = getFraudStore();
   if (req.method === 'GET') {
     const userId = (req.query.userId as string) || '';
@@ -171,6 +196,7 @@ export default async function handler(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -179,6 +205,8 @@ export default async function handler(req, res) {
   res.status(405).json({ error: "Method not allowed" });
 }
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
   } catch (error) {
     console.error("Error:", error);
@@ -200,5 +228,8 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

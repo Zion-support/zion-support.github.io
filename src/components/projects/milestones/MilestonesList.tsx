@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 if (isLoading) {
     return (
 =======
@@ -120,6 +121,9 @@ export const MilestonesList: React.FC<MilestonesListProps> = ({
 
   if (isLoading) {
 if (isLoading) {
+=======
+  if (isLoading) {
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     return (
       <div className="space-y-4">
         {[1, 2, 3].map((i) => (
@@ -130,6 +134,7 @@ if (isLoading) {
               <div className="h-4 bg-muted rounded animate-pulse w-3/4"></div>
             </CardContent>
           </Card>
+<<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       <div className="space-y-4">;
@@ -141,10 +146,13 @@ ursor/fix-website-loading-errors-and-merge-6662
               <div className="h-4 bg-muted rounded animate-pulse w-3/4"></div>;
             </CardContent>;
           </Card>;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         ))}
       </div>;
     );
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -155,11 +163,14 @@ ursor/fix-website-loading-errors-and-merge-6662
   
   
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   if (milestones.length === 0 && !showAddForm) {
     return (
       <EmptyState
         icon = {<span className="text-3xl">📊</span>,}
         title="No Milestones Yet"
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -225,6 +236,11 @@ ursor/fix-website-loading-errors-and-merge-6662
     );
   }
 
+=======
+
+  }
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <div className="space-y-6">
       {isClient && !showAddForm && (
@@ -235,14 +251,26 @@ ursor/fix-website-loading-errors-and-merge-6662
           </Button>
         </div>
       )}
+<<<<<<< HEAD
       
       
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {showAddForm && (
         <Card>
           <CardContent className="pt-6">
             <h3 className="text-lg font-medium mb-4">Create New Milestone</h3>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+              onSubmit = {handleSubmit,}
+              isSubmitting = {isSubmitting,}
+              onCancel = {(,) => setShowAddForm(false),}
+            />
+          </CardContent>
+        </Card>
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
       {showAddForm && (;
@@ -250,13 +278,16 @@ ursor/fix-website-loading-errors-and-merge-6662
           <CardContent className="pt-6">;
             <h3 className="text-lg font-medium mb-4">Create New Milestone</h3>;
 
+<<<<<<< HEAD
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <AddMilestoneForm
-            <AddMilestoneForm 
               onSubmit = {handleSubmit,}
               isSubmitting = {isSubmitting,}
               onCancel = {(,) => setShowAddForm(false),}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
             />
@@ -268,10 +299,13 @@ ursor/fix-website-loading-errors-and-merge-6662
               isSubmitting={isSubmitting}
               onCancel={() => setShowAddForm(false)}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             />;
           </CardContent>;
         </Card>;
       )}
+<<<<<<< HEAD
 
 
       <div className="space-y-4">;
@@ -299,13 +333,17 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 
 =======
+=======
+      <div className="space-y-4">
+        {milestones.map((milestone,) => (
+          <MilestoneCard
+        ))}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       </div>
     </div>
   )
 }
 "
-
-            <AddMilestoneForm 
               onSubmit={handleSubmit}
               isSubmitting={isSubmitting}
               onCancel={() => setShowAddForm(false)}
@@ -329,15 +367,21 @@ ursor/fix-website-loading-errors-and-merge-6662
             onReject={onReject}
           />;
         ))}
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       </div>;
     </div>;
   );
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
             <AddMilestoneForm 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   // Check condition
 if ( {) {
@@ -361,7 +405,7 @@ if ( {) {
 }
     return (
       <EmptyState;
-        icon = {<span className="text - 3xl">📊</span>, }
+        icon = {<span className="text - 3xl"></span>, }
         title="No Milestones Yet";
         description = {is_client ?;
           "Break down the project into manageable milestones to track progress and payments." :;
@@ -412,9 +456,12 @@ if ( {) {
     </div>);
 }
 ";
+<<<<<<< HEAD
 
 <<<<<<< HEAD
             <AddMilestoneForm
 =======
             <AddMilestoneForm
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

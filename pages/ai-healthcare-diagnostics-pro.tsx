@@ -1,5 +1,19 @@
+import React from 'react',
+import Head from 'next/head',
+import Layout from '../components/layout/Layout';
+import { motion } from 'framer-motion';
+import { Stethoscope, Brain, Eye, Heart;
+  Microscope, Shield, BarChart3;
+  TrendingUp, Target, Users, CheckCircle;
+  ArrowRight, Cpu, Network, Database;
+  Lock, Clock, DollarSign, PieChart;
+  Activity, Zap, Pill, Syringe, Hospital, Ambulance
+ } from 'lucide-react';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -70,6 +84,7 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {;
       description:;
         'Streamline diagnostic processes with intelligent automation, reducing diagnosis time by up to 80%.',;
       color: 'from-yellow-500 to-orange-500',;
+<<<<<<< HEAD
     },  ];
 =======
 =======
@@ -494,6 +509,15 @@ import {
   Activity, Zap, Pill, Syringe, Hospital, Ambulance
 } from 'lucide-react',
 import Link from 'next/link',
+=======
+    },  ];
+import Head from 'next / head';
+import Layout from '../components / layout / Layout';
+import {motion} from 'framer-motion';
+import {Stethoscope, Brain, Eye, Heart, Microscope, Shield, BarChart3, TrendingUp, Target, Users, CheckCircle, ArrowRight, Cpu, Network, Database, Lock, Clock, DollarSign, PieChart, Activity, Zap, Pill, Syringe, Hospital, Ambulance, } from 'lucide-react';
+import Link from 'next / link';
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -501,6 +525,7 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
   const features = [;
     {
       icon: Brain,
+<<<<<<< HEAD
 
       title: 'Advanced AI Diagnostics',
       description:;
@@ -933,6 +958,8 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
     {
       icon: Heart,
       name: 'Cardiology',
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       description:;
         'Heart disease detection, ECG analysis, cardiovascular risk assessment',
       accuracy: '99.1%',
@@ -962,6 +989,7 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
       icon: Shield,
       name: 'Hepatology',
       description:;
+<<<<<<< HEAD
         'Liver disease detection, cirrhosis assessment, tumor identification',
       accuracy: '99.0%',
     },
@@ -1215,6 +1243,8 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
 }
             className="mb-8"
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           >
             <div className="inline-flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-green-500/20 to-emerald-500/20 border border-green-500/30 rounded-full text-green-400 text-sm font-medium mb-6">
               <Brain className="w-4 h-4" />
@@ -1227,6 +1257,7 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
               <br />
               <span className="text-white">Diagnostics Pro</span>
             </h1>
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -1315,6 +1346,8 @@ className="bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-5
   }
 }
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12 max-w-4xl mx-auto">
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <motion.div
                 initial={{ opacity: 0, scale: 0.8 }  } catch (error) {
     console.error("Error:", error);
@@ -1337,6 +1370,7 @@ className="bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-5
                 <div className="text-gray-300">Diagnostic Accuracy</div>
               </motion.div>
               <motion.div
+<<<<<<< HEAD
                 initial={{ opacity: 0, scale: 0.8 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1353,12 +1387,15 @@ className="bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-5
   }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 className="bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 rounded-2xl p-6 backdrop-blur-sm"
               >
                 <div className="text-3xl font-bold text-cyan-400 mb-2">80%</div>
                 <div className="text-gray-300">Faster Diagnosis</div>
               </motion.div>
               <motion.div
+<<<<<<< HEAD
 <<<<<<< HEAD
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
@@ -1493,12 +1530,20 @@ className="px-8 py-4 border border-green-500/50 text-green-400 font-semibold rou
               >
 
 =======
+=======
+            </div>
+            {/* CTA Buttons */}
+
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <motion.button
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 Schedule Demo
               </motion.button>
               <motion.button
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
 
+<<<<<<< HEAD
                 Schedule Demo
               </motion.button>
               <motion.button
@@ -1520,11 +1565,17 @@ className="px-8 py-4 border border-green-500/50 text-green-400 font-semibold rou
                 className="px-8 py-4 border border-green-500/50 text-green-400 font-semibold rounded-xl hover:bg-green-500/10 transition-all duration-300"
               >
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+                className="px-8 py-4 border border-green-500/50 text-green-400 font-semibold rounded-xl hover:bg-green-500/10 transition-all duration-300"
+              >
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 Contact Sales
               </motion.button>
             </div>
           </motion.div>
         </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -1553,10 +1604,16 @@ className="px-8 py-4 border border-green-500/50 text-green-400 font-semibold rou
       </section>
       {/* Features Section */}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+      {/* Features Section */}
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <section className="py-20 bg-gray-900 relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(56,189,248,0.05),transparent_50%)]"></div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1565,10 +1622,14 @@ className="px-8 py-4 border border-green-500/50 text-green-400 font-semibold rou
         <div className='absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(56,189,248,0.05),transparent_50%)]'></div>
         <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion.div
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -1606,6 +1667,8 @@ className="px-8 py-4 border border-green-500/50 text-green-400 font-semibold rou
 }
             className="text-center mb-16"
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Powered by <span className="bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">Advanced AI</span>
@@ -1614,6 +1677,7 @@ className="px-8 py-4 border border-green-500/50 text-green-400 font-semibold rou
               Our platform combines cutting-edge artificial intelligence with deep medical expertise to deliver unprecedented diagnostic accuracy and speed.
             </p>
           </motion.div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -1683,10 +1747,13 @@ className="px-8 py-4 border border-green-500/50 text-green-400 font-semibold rou
 }
                 className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 border border-gray-700/50 rounded-2xl p-8 backdrop-blur-sm hover:border-green-500/30 transition-all duration-300 group"
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               >
                 <div className={`w-16 h-16 bg-gradient-to-r ${feature.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
                   <feature.icon className="w-8 h-8 text-white" />
                 </div>
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -1695,6 +1762,8 @@ className="px-8 py-4 border border-green-500/50 text-green-400 font-semibold rou
                 <p className="text-gray-300 leading-relaxed">{feature.description}</p>
               </motion.div>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             ))}
 
 =======
@@ -1705,10 +1774,9 @@ className="px-8 py-4 border border-green-500/50 text-green-400 font-semibold rou
       </section>
 <<<<<<< HEAD
 
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       {/* Medical Specialties Section */}
 
+<<<<<<< HEAD
 =======
       {/* Medical Specialties Section */}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -1733,10 +1801,13 @@ className="px-8 py-4 border border-green-500/50 text-green-400 font-semibold rou
         <div className='absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(139,92,246,0.08),transparent_50%)]'></div>
         <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion.div
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -1784,6 +1855,10 @@ className="px-8 py-4 border border-green-500/50 text-green-400 font-semibold rou
 }
             className="text-center mb-16"
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Medical <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">Specialties</span>
@@ -1791,6 +1866,7 @@ className="px-8 py-4 border border-green-500/50 text-green-400 font-semibold rou
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Our AI platform covers all major medical specialties with specialized models trained on millions of cases for maximum accuracy.
             </p>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -1913,16 +1989,21 @@ className="px-8 py-4 border border-green-500/50 text-green-400 font-semibold rou
 <<<<<<< HEAD
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 key={index}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
+<<<<<<< HEAD
 
 
 =======
                 className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 border border-gray-700/50 rounded-2xl p-8 backdrop-blur-sm hover:border-purple-500/30 transition-all duration-300"
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               >
                 <div className="flex items-center justify-between mb-4">
                   <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-600 rounded-2xl flex items-center justify-center">
@@ -1933,6 +2014,7 @@ className="px-8 py-4 border border-green-500/50 text-green-400 font-semibold rou
                     <div className="text-sm text-gray-400">Accuracy</div>
                   </div>
                 </div>
+<<<<<<< HEAD
 
 
 
@@ -1942,6 +2024,9 @@ className="px-8 py-4 border border-green-500/50 text-green-400 font-semibold rou
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
             ))}
 <<<<<<< HEAD
+=======
+            ))}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -1952,9 +2037,9 @@ className="px-8 py-4 border border-green-500/50 text-green-400 font-semibold rou
 <<<<<<< HEAD
 
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       {/* Use Cases Section */}
 
+<<<<<<< HEAD
 =======
       {/* Use Cases Section */}
             <ul className="text-sm text-gray-500 space-y-2">
@@ -2047,11 +2132,16 @@ className="px-8 py-4 border border-green-500/50 text-green-400 font-semibold rou
   }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <section className="py-20 bg-gray-900 relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(236,73,153,0.06),transparent_50%)]"></div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -2059,6 +2149,7 @@ className="px-8 py-4 border border-green-500/50 text-green-400 font-semibold rou
             viewport={{ once: true }}
 
 
+<<<<<<< HEAD
 =======
             className="text-center mb-16"
             initial={{ opacity: 0, y: 30 }  } catch (error) {
@@ -2083,6 +2174,8 @@ className="px-8 py-4 border border-green-500/50 text-green-400 font-semibold rou
 }
             className="text-center mb-16"
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Transform Your <span className="bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">Practice</span>
@@ -2091,6 +2184,7 @@ className="px-8 py-4 border border-green-500/50 text-green-400 font-semibold rou
               From radiology to pathology, our AI platform adapts to your specific medical specialty and workflow requirements.
             </p>
           </motion.div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -2122,11 +2216,14 @@ className="px-8 py-4 border border-green-500/50 text-green-400 font-semibold rou
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 key={index}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -2162,6 +2259,8 @@ className="px-8 py-4 border border-green-500/50 text-green-400 font-semibold rou
 }
                 className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 border border-gray-700/50 rounded-2xl p-8 backdrop-blur-sm"
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               >
                 <div className="flex items-start space-x-4">
                   <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-600 rounded-2xl flex items-center justify-center flex-shrink-0">
@@ -2172,6 +2271,7 @@ className="px-8 py-4 border border-green-500/50 text-green-400 font-semibold rou
                     <p className="text-gray-300 mb-4 leading-relaxed">{useCase.description}</p>
                     <div className="space-y-2">
                       {useCase.benefits.map((benefit, benefitIndex) => (
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -2190,12 +2290,15 @@ className="px-8 py-4 border border-green-500/50 text-green-400 font-semibold rou
                           <CheckCircle className='w-4 h-4 text-green-400' />
                           <span className='text-gray-300'>{benefit}</span>                        </div>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       ))}
                     </div>;
                   </div>;
                 </div>;
               </motion && motion.div>;
             ))}
+<<<<<<< HEAD
 
 <<<<<<< HEAD
           </div>;
@@ -2228,10 +2331,13 @@ className="px-8 py-4 border border-green-500/50 text-green-400 font-semibold rou
         <div className='absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(56,189,248,0.05),transparent_50%)]'></div>
         <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion.div
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -2289,6 +2395,10 @@ className="px-8 py-4 border border-green-500/50 text-green-400 font-semibold rou
 }
             className="text-center mb-16"
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Choose Your <span className="bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">Plan</span>
@@ -2297,6 +2407,7 @@ className="px-8 py-4 border border-green-500/50 text-green-400 font-semibold rou
               Flexible pricing options designed to scale with your healthcare practice. Start with our Starter plan and upgrade as you grow.
             </p>
           </motion.div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -2323,12 +2434,15 @@ className="px-8 py-4 border border-green-500/50 text-green-400 font-semibold rou
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 key={index}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
                 className={`relative bg-gradient-to-br from-gray-800/50 to-gray-900/50 border rounded-2xl p-8 backdrop-blur-sm ${
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -2541,6 +2655,8 @@ className="px-8 py-4 border border-green-500/50 text-green-400 font-semibold rou
   }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               >
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
@@ -2548,6 +2664,7 @@ className="px-8 py-4 border border-green-500/50 text-green-400 font-semibold rou
                       Most Popular
                     </div>
                   </div>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -2572,11 +2689,14 @@ className="px-8 py-4 border border-green-500/50 text-green-400 font-semibold rou
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <div className="text-center mb-8">
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                   <div className="flex items-baseline justify-center space-x-1 mb-2">
                     <span className="text-4xl font-bold text-white">{plan.price}</span>
                     <span className="text-gray-400">{plan.period}</span>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -2618,6 +2738,8 @@ className="px-8 py-4 border border-green-500/50 text-green-400 font-semibold rou
             viewport={{ once: true }}
             className='text-center mb-16'
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center space-x-3">
@@ -2625,7 +2747,10 @@ className="px-8 py-4 border border-green-500/50 text-green-400 font-semibold rou
                       <span className="text-gray-300">{feature}</span>
                     </li>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   ))}
                 </ul>
 
@@ -2635,7 +2760,6 @@ className="px-8 py-4 border border-green-500/50 text-green-400 font-semibold rou
                 </button>
               </motion.div>
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             ))}
 
           </div>;
@@ -2643,17 +2767,21 @@ className="px-8 py-4 border border-green-500/50 text-green-400 font-semibold rou
       </section>;
 
 
+<<<<<<< HEAD
 =======
             ))}
 </div>;
         </div>;
       </section>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {/* Integrations Section */}
       <section className='py-20 bg-gray-900 relative overflow-hidden'>;
         <div className='absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(139,92,246,0 && 0.08),transparent_50%)]'></div>;
         <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion&& motion.div
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -2691,12 +2819,15 @@ className="px-8 py-4 border border-green-500/50 text-green-400 font-semibold rou
           <motion.div
 <<<<<<< HEAD
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
 
 
+<<<<<<< HEAD
 =======
             className="text-center mb-16"
             initial={{ opacity: 0, y: 30 }  } catch (error) {
@@ -2721,6 +2852,8 @@ className="px-8 py-4 border border-green-500/50 text-green-400 font-semibold rou
 }
             className="text-center mb-16"
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Seamless <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">Integrations</span>
@@ -2728,6 +2861,7 @@ className="px-8 py-4 border border-green-500/50 text-green-400 font-semibold rou
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Connect with your existing healthcare systems and workflows. Our platform integrates with all major EHR, PACS, and medical device platforms.
             </p>
+<<<<<<< HEAD
           </motion.div>
 <<<<<<< HEAD
 
@@ -2803,11 +2937,14 @@ className="px-8 py-4 border border-green-500/50 text-green-400 font-semibold rou
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            {integrations.map((integration, index) => (
               <motion.div
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 key={index}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -2843,10 +2980,13 @@ className="px-8 py-4 border border-green-500/50 text-green-400 font-semibold rou
 }
                 className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 border border-gray-700/50 rounded-2xl p-6 backdrop-blur-sm text-center hover:border-green-500/30 transition-all duration-300"
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               >
                 <div className={`w-16 h-16 bg-gradient-to-r ${integration.color} rounded-2xl flex items-center justify-center mx-auto mb-4`}>
                   <integration.icon className="w-8 h-8 text-white" />
                 </div>
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -2861,17 +3001,23 @@ className="px-8 py-4 border border-green-500/50 text-green-400 font-semibold rou
                 <p className="text-gray-300 text-sm">{integration.description}</p>
               </motion.div>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             ))}
 
           </div>;
         </div>;
       </section>;
+          >
+            <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
+              Ready to <span className="bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">Transform</span> Healthcare?
 
             </h2>
             <p className='text-xl text-gray-300 mb-8 max-w-2xl mx-auto'>
               Join leading healthcare institutions worldwide who have already
               revolutionized patient care with AI-powered diagnostics.
             </p>
+<<<<<<< HEAD
 
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -2882,12 +3028,15 @@ className="px-8 py-4 border border-green-500/50 text-green-400 font-semibold rou
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 Schedule Demo
               </button>
               <button className='px-8 py-4 border border-green-500/50 text-green-400 font-semibold rounded-xl hover:bg-green-500/10 transition-all duration-300'>
                 Contact Sales
               </button>
             </div>
+<<<<<<< HEAD
 
               Healthcare?;
             </h2>;
@@ -2988,6 +3137,8 @@ className="px-8 py-4 border border-green-500/50 text-green-400 font-semibold rou
             <div className='mt-8 text-sm text-gray-400'>
               <p>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 Questions? Call us at{' '}
                 <a
                   href='tel:+13024640950'
@@ -2996,6 +3147,7 @@ className="px-8 py-4 border border-green-500/50 text-green-400 font-semibold rou
                 </a>{' '}
                 or email{' '}
                 <a
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -3011,10 +3163,13 @@ className="px-8 py-4 border border-green-500/50 text-green-400 font-semibold rou
               <p>Questions? Call us at <a href="tel:+13024640950" className="text-green-400 hover:text-green-300">+1 302 464 0950</Link> or email <a href="mailto:kleber@ziontechgroup.com" className="text-green-400 hover:text-green-300">kleber@ziontechgroup.com</Link></p>
             </div>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           </motion.div>
         </div>
       </section>
     </Layout>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -3025,6 +3180,16 @@ className="px-8 py-4 border border-green-500/50 text-green-400 font-semibold rou
   )
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  )
+}
+export default AIHealthcareDiagnosticsPro;
+
+},
+export default AIHealthcareDiagnosticsPro,
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   href='mailto: kleber@ziontechgroup && ziontechgroup.com'
                   className='text-green-400 hover:text-green-300'>;
                   kleber@ziontechgroup && ziontechgroup.com;
@@ -3034,6 +3199,7 @@ className="px-8 py-4 border border-green-500/50 text-green-400 font-semibold rou
         </div>;
       </section>;
     </Layout>;
+<<<<<<< HEAD
   ),;
 };
 <<<<<<< HEAD
@@ -3042,13 +3208,17 @@ className="px-8 py-4 border border-green-500/50 text-green-400 font-semibold rou
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 export default AIHealthcareDiagnosticsPro;
 
 <<<<<<< HEAD
-
+<<<<<<< HEAD
 =======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
           </motion.div>;
           <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8'>            {integrations.map ((integration, index) => (
               <motion.div;
@@ -3082,6 +3252,7 @@ export default AIHealthcareDiagnosticsPro;
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >;
+<<<<<<< HEAD
             <h2 className='text - 4xl md:text - 5xl font - bold text - white mb - 6'>;
               Ready to{' '}
               <span className='bg - gradient - to - r from - green - 400 to - emerald - 400 bg - clip - text text - transparent'>;
@@ -3133,6 +3304,8 @@ export default AIHealthcareDiagnosticsPro;
 },
 export default AIHealthcareDiagnosticsPro,
           >;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">;
               Ready to <span className="bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">Transform</span> Healthcare?;
             </h2>;
@@ -3157,4 +3330,7 @@ export default AIHealthcareDiagnosticsPro,
   );
 },;
 export default AIHealthcareDiagnosticsPro;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

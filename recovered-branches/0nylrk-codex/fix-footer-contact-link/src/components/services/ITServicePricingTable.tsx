@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -63,6 +64,8 @@ import { Globe, Search, ArrowUpDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 export function ITServicePricingTable() {
 >>>>>>> main
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const [searchQuery, setSearchQuery] = useState("");
 
 import { useState, useMemo } from "react",
@@ -71,6 +74,7 @@ import { Input } from "@/components/ui/input",
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table",
 import { Globe, Search, ArrowUpDown } from "lucide-react",
 import { Button } from "@/components/ui/button",
+<<<<<<< HEAD
 
 
 
@@ -102,6 +106,8 @@ export function ITServicePricingTable() {
 
 >>>>>>> main
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     // Filter by search query
     if (searchQuery) {
       filteredData = filteredData.filter((item) =>
@@ -113,6 +119,7 @@ export function ITServicePricingTable() {
     filteredData.sort((a, b) => {
       if (a[sortConfig.key] < b[sortConfig.key]) {
         return sortConfig.direction === "ascending" ? -1 : 1;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     key: "country",
@@ -139,6 +146,8 @@ if ( {) {
 }
         return sort_config.direction === "ascending" ? -1 : 1;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       }
       // Check condition
 if ( {) {
@@ -147,6 +156,7 @@ if ( {) {
         return sort_config.direction === "ascending" ? 1 : -1;
       }
 
+<<<<<<< HEAD
 import {useState, useMemo} from "react";
 import {onsiteServicePricing, CountryPricing} from "@/data/onsiteServicePricing";
 import {Input} from "@/components/ui/input";
@@ -243,13 +253,27 @@ export function ITServicePricingTable() {;
   };
 >>>>>>> main
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  const handleSort = (key: keyof CountryPricing) => {
+    setSortConfig({
+      key,
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   return (
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
+=======
+    <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4 w-full">;
+      <div className="flex items-center mb-6">;
+        <div className="relative flex-1">;
+          <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate-light" />;
+          <Input
+            placeholder="Search by country..."
+            value={searchQuery}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useState, useMemo } from "react",;
 import { onsiteServicePricing, CountryPricing } from "@/data/onsiteServicePricing",;
 import { Input } from "@/components/ui/input",;
@@ -300,11 +324,15 @@ export function ITServicePricingTable() {;
   },;
 ;
   return (;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4 w-full">;
       <div className="flex items-center mb-6">;
         <div className="relative flex-1">;
           <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate-light" />;
+<<<<<<< HEAD
 <<<<<<< HEAD
           <Input
             placeholder="Search by country..."
@@ -477,6 +505,8 @@ export function ITServicePricingTable() {;
                   variant="ghost" ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                   onClick={() => handleSort("pricePerIncident")}
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   className="hover:bg-zion-blue-dark p-0 flex items-center justify-end space-x-1 w-full text-zion-cyan hover:text-zion-cyan-light";
                 >;
                   <span>Price Per Incident</span>;
@@ -486,6 +516,7 @@ export function ITServicePricingTable() {;
             </TableRow>;
           </TableHeader>;
           <TableBody className="bg-zion-blue-dark">;
+<<<<<<< HEAD
 <<<<<<< HEAD
             {sortedData && sortedData.length > 0 ? (;
               sortedData && sortedData.map((item) => (;
@@ -511,21 +542,30 @@ export function ITServicePricingTable() {;
               ));
             ) :(;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+                </TableRow>;
+              ));
+            ) :(;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <TableRow>;
                 <TableCell colSpan={2} className="text-center py-10 text-zion-slate-light">;
                   No countries match your search;
                 </TableCell>;
               </TableRow>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             )}
           </TableBody>;
         </Table>;
       </div>;
     </div>;
+<<<<<<< HEAD
 =======
   ),;}
  const sortedData = useMemo ( () => {
@@ -555,10 +595,10 @@ sortConfig.key === key && sortConfig.direction === "ascending" ? "descending" : 
       </div>
     </div>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 ;
     return filtered_data;
   }, [onsiteServicePricing, search_query, sort_config]);
@@ -640,4 +680,3 @@ sortConfig.key === key && sortConfig.direction === "ascending" ? "descending" : 
       </div>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

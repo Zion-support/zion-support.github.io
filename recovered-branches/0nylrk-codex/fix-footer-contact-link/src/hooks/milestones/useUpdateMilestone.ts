@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -6,12 +7,15 @@
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {useState} from 'react';
 import {supabase} from '@/integrations / supabase / client';
 import {use_auth} from '@/hooks / use_auth';
 import {toast} from 'sonner';
 import {Milestone, MilestoneStatus} from './types';
 import {useRecordActivity} from './useRecordActivity';
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -31,15 +35,20 @@ export const useUpdateMilestone = () => {
     try {
       setIsSubmitting(true);
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export const useUpdateMilestone = () => {;
   const { user } = useAuth();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { recordMilestoneActivity } = useRecordActivity();
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useState } from 'react',
 import { supabase } from '@/integrations/supabase/client',
 import { useAuth } from '@/hooks/useAuth',
@@ -51,16 +60,20 @@ export const useUpdateMilestone = () => {
   const [isSubmitting, setIsSubmitting] = useState(false),
   const { recordMilestoneActivity } = useRecordActivity(),
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   
 =======
   
   
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const updateMilestoneStatus = async (milestoneId: string, newStatus: MilestoneStatus, comment?: string) => {
-    if (!user) return false,
-    
+    if (!user) return false;
     try {
+<<<<<<< HEAD
       setIsSubmitting(true),
       
 <<<<<<< HEAD
@@ -69,11 +82,14 @@ export const useUpdateMilestone = () => {
 =======
       
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       // Get the current status
       const { data: milestoneData, error: fetchError } = await supabase
         .from('project_milestones')
         .select('status')
         .eq('id', milestoneId)
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -105,10 +121,13 @@ export const useUpdateMilestone = () => {
       const previousStatus = milestoneData.status,
       
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       // Update the milestone status
       const { error } = await supabase
         .from('project_milestones')
         .update({ status: newStatus })
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -136,41 +155,35 @@ export const useUpdateMilestone = () => {
       console && console.error("Error updating milestone status:", err);
       toast && toast.error("Failed to update status: " + err && err.message),
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-      return false
 =======
-export const useUpdateMilestone = () =>: any {
-  const { user } = use_auth ();
-  const [is_submitting, setIsSubmitting] = useState (false);
-  const { recordMilestoneActivity } = useRecordActivity ();
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+      return false
+    } finally {
+      setIsSubmitting(false)
+    }
+  }
+  },
+  
+  const updateMilestone = async (milestoneId: string, data: Partial<Milestone>) => {
+    if (!user) return false,
+    
+    try {
+      setIsSubmitting(true)
+      const { error } = await supabase
+        .from('project_milestones')
+        .update(data)
+      return false
 ;
-  const updateMilestoneStatus = async (milestone_id: string, new_status: MilestoneStatus, comment?: string) => {
+  const update_milestone = async (milestone_id: string, data: Partial < Milestone>) => {
     // Check condition
 if (return false) {
   $2
 }
     try {
-      setIsSubmitting (true);
-;
-      // Get the current status;
-      const { data: milestone_data, error: fetch_error } = await supabase;
-        .from ('project_milestones');
-        .select ('status');
-        .eq ('id', milestone_id);
-        .single ();
-;
-      // Check condition
-if (throw fetch_error) {
-  $2
-}
-      if (throw new Error ("Milestone not found")) {
-  $2
-}
-      const previous_status = milestone_data.status;
-;
-      // Update the milestone status;
+      setIsSubmitting (true),
       const { error } = await supabase;
         .from ('project_milestones');
-        .update ({ status: new_status });
+        .update (data);
         .eq ('id', milestone_id);
 ;
       // Check condition
@@ -178,17 +191,17 @@ if (throw error) {
   $2
 }
       // Create activity record;
-      await recordMilestoneActivity (milestone_id, 'status_changed', previous_status, new_status, comment);
+      await recordMilestoneActivity (milestone_id, 'updated', null, 'updated_milestone details updated');
 ;
-      toast.success (`Milestone status changed to ${new_status}`);
+      toast.success ("Milestone updated successfully");
 ;
       return true;
     } catch (err: any) {
-      console.error ("Error updating milestone status:", err);
-      toast.error ("Failed to update status: " + err.message),
+      console.error ("Error updating milestone:", err);
+      toast.error ("Failed to update milestone: " + err.message),
       return false;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     } finally {
+<<<<<<< HEAD
       setIsSubmitting (false);
     }
 <<<<<<< HEAD
@@ -252,29 +265,13 @@ if (throw error) {
       setIsSubmitting(false)
     }
   }
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return {
     updateMilestoneStatus;
-    updateMilestone;
-    isSubmitting
-  }
-}
+    update_milestone;
+    is_submitting;
 
-        .eq('id', milestoneId),
-      
-      if (error) throw error,
-      
-      // Create activity record
-      await recordMilestoneActivity(milestoneId, 'updated', null, 'updatedMilestone details updated'),
-      
-      toast.success("Milestone updated successfully"),
-      
-      return true
-    } catch (err: any) {
-      console.error("Error updating milestone:", err),
-      toast.error("Failed to update milestone: " + err.message),
-      return false
-    } finally {
-      setIsSubmitting(false)
     }
   };
   
@@ -348,6 +345,7 @@ export const useUpdateMilestone = () => {;
     updateMilestoneStatus,;
     updateMilestone;
     isSubmitting;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
@@ -543,3 +541,9 @@ isSubmitting
   }
 };
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  }
+};
+;
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

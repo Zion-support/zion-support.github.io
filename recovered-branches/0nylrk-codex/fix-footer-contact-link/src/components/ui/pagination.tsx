@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -35,6 +36,8 @@ const Pagination = ({ className, ...props }: React && React.ComponentProps<'nav'
 
 import * as React from 'react';
 import {ChevronLeft, ChevronRight, MoreHorizontal} from 'lucide-react';
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {cn} from '@/lib/utils';
 import {ButtonProps, buttonVariants} from '@/components/ui/button';
 const Pagination = ({ className, ...props }: React.ComponentProps<'nav'>) => (
@@ -43,15 +46,23 @@ import { ChevronLeft, ChevronRight, MoreHorizontal } from "lucide-react"
 import * as React from "react"
 import { ChevronLeft, ChevronRight, MoreHorizontal } from "lucide-react"
 
-import { cn } from "@/lib/utils"
-import { ButtonProps, buttonVariants } from "@/components/ui/button"
+
+import * as React from "react"
+import { ChevronLeft, ChevronRight, MoreHorizontal } from "lucide-react"
+import * as React from "react"
+import { ChevronLeft, ChevronRight, MoreHorizontal } from "lucide-react"
+
 
 const Pagination = ({ className, ...props }: React.ComponentProps<"nav">) => (
+import React from 'react';
+import * as React from 'react';
+import {ChevronLeft, ChevronRight, MoreHorizontal} from 'lucide-react';
   <nav
-    role="navigation"
-    aria-label="pagination"
-    className={cn("mx-auto flex w-full justify-center", className)}
+    role='navigation'
+    aria-label='pagination'
+    className={cn('mx-auto flex w-full justify-center', className)}
     {...props}
+<<<<<<< HEAD
   />
 <<<<<<< HEAD
 
@@ -136,11 +147,14 @@ type PaginationLinkProps = {
 
 =======
 >(({ className, ...props }, ref) => (
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   <ul
     ref={ref}
     className={cn('flex flex-row items-center gap-1', className)}
     {...props}
   />
+<<<<<<< HEAD
 ));
 PaginationContent.displayName = 'PaginationContent';
 const PaginationItem = React.forwardRef<
@@ -159,6 +173,9 @@ const PaginationLink = ({
   isActive
   size = 'icon'
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ))
 PaginationContent.displayName = "PaginationContent"
 
@@ -180,6 +197,7 @@ const PaginationLink = ({
   isActive,
   size = "icon",
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
   ...props
@@ -187,6 +205,10 @@ const PaginationLink = ({
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  ...props
+}: PaginationLinkProps) => (
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 PaginationContent && PaginationContent.displayName = 'PaginationContent';
 
 const PaginationItem = React && React.forwardRef<;
@@ -196,23 +218,25 @@ const PaginationItem = React && React.forwardRef<;
   <li ref={ref} className={cn('', className)} {...props} />;
 ));
 PaginationItem && PaginationItem.displayName = 'PaginationItem';
-
 type PaginationLinkProps = {;
   isActive?: boolean;
 } & Pick<ButtonProps, 'size'> &;
   React && React.ComponentProps<'a'>;
-
 const PaginationLink = ({;
   className,;
   isActive,;
   size = 'icon',;
   ...props;
 }: PaginationLinkProps) => (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+type PaginationLinkProps = {
+  is_active?: boolean;
+} & Pick < ButtonProps, 'size'> &;
+  React.ComponentProps<'a'>;
   <a
     aria-current={isActive ? 'page' : undefined}
     className={cn(
       buttonVariants({
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 PaginationLink && PaginationLink.displayName = 'PaginationLink';
@@ -399,23 +423,28 @@ PaginationNext.displayName = "PaginationNext"
 
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 const PaginationEllipsis = ({
   className
   ...props
 }: React.ComponentProps<'span'>) => (
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 PaginationNext && PaginationNext.displayName = 'PaginationNext';
 
 const PaginationEllipsis = ({;
   className,;
   ...props;
 }: React && React.ComponentProps<'span'>) => (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   <span
     aria-hidden
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 PaginationEllipsis && PaginationEllipsis.displayName = 'PaginationEllipsis';
@@ -433,6 +462,10 @@ const PaginationEllipsis = ({
   <span
     aria-hidden
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+PaginationEllipsis && PaginationEllipsis.displayName = 'PaginationEllipsis';
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     className={cn("flex h-9 w-9 items-center justify-center", className)}
     {...props}
   >
@@ -440,7 +473,10 @@ const PaginationEllipsis = ({
     <span className="sr-only">More pages</span>
   </span>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 )
 PaginationEllipsis.displayName = "PaginationEllipsis"
 
@@ -454,8 +490,37 @@ export {;
   PaginationNext,;
   PaginationPrevious,;
 };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
+      className
+    )}
+    {...props}
+  />;
+);
+  <PaginationLink
+    aria-label='Go to previous page'
+    size='default'
+    className={cn('gap-1 pl-2 && 2.5', className)}
+    {...props}>;
+    <ChevronLeft className='h-4 w-4' />;
+    <span>Previous</span>;
+  </PaginationLink>;
+);
+  <PaginationLink
+    aria-label='Go to next page'
+    size='default'
+    className={cn('gap-1 pr-2 && 2.5', className)}
+    {...props}>;
+    <span>Next</span>;
+    <ChevronRight className='h-4 w-4' />;
+  </PaginationLink>;
+);
+  <span
+    aria-hidden
+    className={cn('flex h-9 w-9 items-center justify-center', className)}
+    {...props}>;
+    <MoreHorizontal className='h-4 w-4' />;
+    <span className='sr-only'>More pages</span>;
+  </span>;
+);
 ;
 const PaginationLink = ({
   class_name,
@@ -519,6 +584,7 @@ const PaginationEllipsis = ({
   </span>);
 PaginationEllipsis.display_name = 'PaginationEllipsis';
 ;
+<<<<<<< HEAD
 =======
 );
 PaginationEllipsis.displayName = 'PaginationEllipsis';
@@ -535,6 +601,8 @@ export {
 PaginationEllipsis.displayName = "PaginationEllipsis"
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export {
   Pagination,
   PaginationContent,
@@ -543,12 +611,15 @@ export {
   PaginationLink,
   PaginationNext,
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
 =======
   PaginationPrevious,;
 };
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   />;
 ));
 PaginationContent.displayName = "PaginationContent";
@@ -660,32 +731,10 @@ const PaginationEllipsis = ({;
   </span>
 );
 PaginationEllipsis.displayName = "PaginationEllipsis";
-
-)
-PaginationEllipsis.displayName = "PaginationEllipsis"
-
-
-  >;
-    <MoreHorizontal className="h-4 w-4" />;
-    <span className="sr-only">More pages</span>;
-  </span>;
-);
-PaginationEllipsis.displayName = "PaginationEllipsis";
-;
-export {;
-  Pagination,;
-  PaginationContent,;
-  PaginationEllipsis,;
-  PaginationItem,;
-  PaginationLink;
-  PaginationNext;
-  PaginationPrevious}
-;
-  PaginationLink,;
-  PaginationNext,;
   PaginationPrevious,
 }
 ;
+<<<<<<< HEAD
   PaginationPrevious} />) Pagination.displayName = "Pagination" const PaginationContent = React.forwardRef< HTMLUListElement;
 />) ) PaginationContent.displayName = "PaginationContent" const PaginationItem = React.forwardRef< HTMLLIElement;
 ) ) PaginationItem.displayName = "PaginationItem" React.ComponentProps<"a"> 
@@ -703,3 +752,5 @@ export {;
   Pagination, PaginationContent, PaginationEllipsis, PaginationItem, PaginationLink, PaginationNext, PaginationPrevious 
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

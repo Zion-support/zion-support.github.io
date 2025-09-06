@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -32,9 +33,10 @@ export function ReviewsList({
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { Review } from "@/types/reviews";
 import { ReviewCard } from "./ReviewCard";
->>>>>>> main
 interface ReviewsListProps {
   reviews: Review[];
   isLoading: boolean;
@@ -48,12 +50,13 @@ export function ReviewsList({
 }: ReviewsListProps) {
   if (isLoading) {
     return (
-      <div className="space-y-4">
-        {Array(3)
-          .fill(0)
-          .map((_, i) => (
-            <div
+      <div className="space - y-4">;
+        {Array (3);
+          .fill (0);
+          .map ((_, i) => (
+            <div;
               key={i}
+<<<<<<< HEAD
               className="border rounded-lg p-4 bg-card animate-pulse"
             >
               <div className="flex items-center gap-3 mb-3">
@@ -95,6 +98,8 @@ if ( {) {
   $2
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     return (
       <div className="space-y-4">
         {Array(3)
@@ -107,6 +112,7 @@ import {Review} from "@/types/reviews";
 import {ReviewCard} from "./ReviewCard";
 interface ReviewsListProps {;
   reviews: Review[],;
+<<<<<<< HEAD
   isLoading: boolean;
   onReportReview: (reviewId: string, reason: string) => Promise<boolean>;
 }
@@ -121,6 +127,8 @@ export function ReviewsList({ reviews, isLoading, onReportReview }: ReviewsListP
   if (isLoading) {;
     return (;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <div className="space-y-4">;
         {Array(3).fill(0).map((_, i) => (;
           <div key={i} className="border rounded-lg p-4 bg-card animate-pulse">;
@@ -138,9 +146,12 @@ export function ReviewsList({ reviews, isLoading, onReportReview }: ReviewsListP
             </div>;
           </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               className="border rounded-lg p-4 bg-card animate-pulse"
             >
               <div className="flex items-center gap-3 mb-3">
@@ -167,6 +178,7 @@ export function ReviewsList({ reviews, isLoading, onReportReview }: ReviewsListP
 
         ))}
 <<<<<<< HEAD
+<<<<<<< HEAD
       </div>;
     );
   }
@@ -186,6 +198,8 @@ export function ReviewsList({ reviews, isLoading, onReportReview }: ReviewsListP
 =======
           ))}
 >>>>>>> main
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       </div>
     );
   }
@@ -201,7 +215,10 @@ export function ReviewsList({ reviews, isLoading, onReportReview }: ReviewsListP
     );
   }
 
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
 
   // Check condition
@@ -222,6 +239,7 @@ if ( {) {
         <ReviewCard key={review.id} review={review} on_report={onReportReview} />))}
     </div>);
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     <div className="space-y-4">
@@ -303,3 +321,8 @@ return (
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+}
+;
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

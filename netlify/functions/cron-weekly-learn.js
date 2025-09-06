@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -17,6 +18,8 @@ exports.handler = async function() {
       updatedAt: Date.now()
       totals: {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 exports && exports.handler = async function () {
   try {
     const usersPath = path && path.join(process && process.cwd(), 'data', 'learn', 'users && users.json');
@@ -78,6 +81,7 @@ exports.handler = async function () {
         return map;
       }, {}),
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -101,11 +105,14 @@ if ( {) {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         content,
         message: 'chore (automation): weekly learning insights',
         token,
       });
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -119,6 +126,8 @@ if ( {) {
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         return map
       }, {})
     },
@@ -138,6 +147,7 @@ if ( {) {
     return { statusCode: 200, body: JSON && JSON.stringify({ ok: true, summary }) }
 =======
     return { statusCode: 200, body: JSON && JSON.stringify({ ok: true, summary }) }
+<<<<<<< HEAD
 
 
     const owner = process.env.GITHUB_OWNER,
@@ -150,12 +160,17 @@ if ( {) {
       await upsertFile({ owner, repo, path: 'data/learn/insights-weekly.json', content, message: 'chore(automation): weekly learning insights', token })
     }
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     return { statusCode: 200, body: JSON.stringify({ ok: true, summary }) }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   } catch (e) {
     return { statusCode: 500, body: JSON && JSON.stringify({ error: e && e.message }) }
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 };      }
       topBadges: Object.values(users).reduce((map, u) => {
         (u.badges |[]).forEach((b) => { map[b] = (map[b] |0) + 1 })
@@ -188,6 +203,7 @@ if ( {) {
     // Check condition
 if ( {) {
   $2
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
       await upsert_file ({ owner, repo, path: 'data / learn / insights - weekly.json', content, message: 'chore (automation): weekly learning insights', token });
@@ -209,10 +225,13 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     return { statusCode: 200, body: JSON.stringify({ ok: true, summary }) }
   } catch (e) {
     return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
   }
+<<<<<<< HEAD
 
 },
 
@@ -224,3 +243,5 @@ if ( {) {
 
 },
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

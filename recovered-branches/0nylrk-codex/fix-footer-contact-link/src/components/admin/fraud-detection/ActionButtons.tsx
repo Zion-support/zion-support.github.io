@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 import React from "react",
@@ -33,19 +34,17 @@ import React from './react';
 import { Button  } from '@/components / ui / button';
 import { Eye, Info, AlertTriangle, Ban  } from './lucide-react';
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface ActionButtonsProps {
   flag_id: string;
   status: string;
-
-import React from "react";
-import { Button } from "@/components/ui/button";
-import { Eye, Info, AlertTriangle, Ban } from "lucide-react";
-
 interface ActionButtonsProps {
   flagId: string,
   status: string,
   onAction: (flagId: string, action: 'warning' | 'suspension' | 'ban' | 'ignore') => void
 }
+<<<<<<< HEAD
 
 export const ActionButtons: React.FC<ActionButtonsProps> = ({ flagId, status, onAction }) => {
 <<<<<<< HEAD
@@ -57,6 +56,8 @@ export const ActionButtons: React.FC<ActionButtonsProps> = ({ flagId, status, on
 =======
 
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
 
     <div className="flex space-x-2">
@@ -67,7 +68,10 @@ import { Eye, Info, AlertTriangle, Ban  } from './lucide-react';
 interface ActionButtonsProps {
   flag_id: string;
   status: string;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface ActionButtonsProps {;
   flagId: string;
   status: string;
@@ -76,7 +80,6 @@ interface ActionButtonsProps {;
     action: "warning" | "suspension" | "ban" | "ignore",;
   ) => void;
 }
-
 export const ActionButtons: React.FC<ActionButtonsProps> = ({;
   flagId,;
   status,;
@@ -85,18 +88,24 @@ export const ActionButtons: React.FC<ActionButtonsProps> = ({;
   return (
     <div className="flex space-x-2">;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
   return (
 
     <div className="flex space-x-2">
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <Button
         variant="ghost"
         size="icon"
         title="View Details"
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 import React from "react",;
 import { Button } from "@/components/ui/button",;
@@ -115,11 +124,15 @@ export const ActionButtons:React.FC<ActionButtonsProps> = ({ flagId, status, onA
         variant="ghost";
         size="icon";
         title="View Details";
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         onClick={() => alert("View details (would open a detailed view)")}
       >;
         <Eye className="h-4 w-4" />;
       </Button>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
         onClick={() => alert("View details (would open a detailed view)")}
@@ -127,10 +140,17 @@ export const ActionButtons:React.FC<ActionButtonsProps> = ({ flagId, status, onA
         <Eye className="h-4 w-4" />
       </Button>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+        onClick={() => alert("View details (would open a detailed view)")}
+      >;
+        <Eye className="h-4 w-4" />;
+      </Button>;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <Button
         variant="ghost"
         size="icon"
         title="Send Warning"
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -152,10 +172,16 @@ export const ActionButtons:React.FC<ActionButtonsProps> = ({ flagId, status, onA
 =======
         onClick={() => onAction(flagId, "warning")}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+      >
+        <Info className="h-4 w-4" />
+      </Button>
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         disabled={status === "actioned" || status === "ignored"}
       >;
         <Info className="h-4 w-4" />;
       </Button>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
@@ -165,10 +191,13 @@ onClick={() => onAction(flagId, "warning")}
         <Info className="h-4 w-4" />
       </Button>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <Button
         variant="ghost"
         size="icon"
         title="Suspend User"
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -190,10 +219,16 @@ onClick={() => onAction(flagId, "warning")}
 =======
         onClick={() => onAction(flagId, "suspension")}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+      >
+        <AlertTriangle className="h-4 w-4" />
+      </Button>
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         disabled={status === "actioned" || status === "ignored"}
       >;
         <AlertTriangle className="h-4 w-4" />;
       </Button>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
@@ -203,10 +238,13 @@ onClick={() => onAction(flagId, "suspension")}
         <AlertTriangle className="h-4 w-4" />
       </Button>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <Button
         variant="ghost"
         size="icon"
         title="Ban User"
+<<<<<<< HEAD
 <<<<<<< HEAD
 
         disabled={status === "actioned" || status === "ignored"}
@@ -235,10 +273,15 @@ onClick={() => onAction(flagId, "ban")}
           variant="ghost"
           size="sm"
 <<<<<<< HEAD
+=======
+    </div>;
+);
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
     </div>;
 );
 
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
@@ -251,6 +294,8 @@ onClick={() => onAction(flagId, "ban")}
     </div>;
 );
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from "react",;
 import { Button } from "@/components/ui/button",;
 import { Eye, Info, AlertTriangle, Ban } from "lucide-react",;
@@ -297,19 +342,22 @@ export const ActionButtons: React.FC<ActionButtonsProps> = ({ flagId, status, on
         disabled={status === 'actioned' || status === 'ignored'}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
         onClick={() => onAction(flagId, "ban")}
         disabled={status === "actioned" || status === "ignored"}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       >;
         <Ban className="h-4 w-4" />;
       </Button>;
       {status === "pending" && (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         <Button
           variant="ghost"
           size="sm"
           onClick={() => onAction(flagId, "ignore")}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
       <Button;
@@ -345,11 +393,14 @@ export const ActionButtons: React.FC<ActionButtonsProps> = ({ flagId, status, on
           size="sm";
           onClick={() => onAction(flagId, 'ignore')}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         >;
           Ignore;
         </Button>;
       )}
     </div>;
+<<<<<<< HEAD
   );
 <<<<<<< HEAD
 
@@ -422,9 +473,10 @@ export const ActionButtons: React.FC < ActionButtonsProps> = ({
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     </div>
   );
->>>>>>> main
 };
   ),;
 },; interface ActionButtonsProps {
@@ -453,4 +505,7 @@ onClick={() => onAction(flagId, "ignore")}
 
   );
 };
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

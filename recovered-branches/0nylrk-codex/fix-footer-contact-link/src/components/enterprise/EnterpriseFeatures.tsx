@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -49,19 +50,21 @@ import React from "react",
 import { Users, Shield, Briefcase, Award, Settings, Globe } from "lucide-react",
 
 import {Users, Shield, Briefcase, Award, Settings, Globe} from "lucide-react";
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 const features = [
   {
     title: "Private Hiring Portal"
     description: "Create a secure, private hiring portal accessible only to your team members.";
     icon: Shield}
-    title: "Private Hiring Portal",
-    description: "Create a secure, private hiring portal accessible only to your team members.",
-    icon: Shield},
   {
+<<<<<<< HEAD
     title: "Dedicated Talent Pool"
     description: "Access to a curated pool of pre-vetted talent matched to your industry and needs."
     icon: Users}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   {
     title: "Custom SLA"
     description: "Get guaranteed response times and dedicated support with our custom SLAs."
@@ -76,6 +79,7 @@ const features = [
     icon: Settings}
   {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
@@ -85,6 +89,8 @@ const features = [
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 export function EnterpriseFeatures() {
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <section className="py-20 px-4 md:px-6 bg-muted/50">
       <div className="container mx-auto max-w-6xl">
@@ -99,6 +105,7 @@ export function EnterpriseFeatures() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {features.map((feature) => (
             <div
+<<<<<<< HEAD
               key={feature.title}
               className="bg-card rounded-lg p-6 shadow-sm border border-border transition-all hover:shadow-md"
             >
@@ -117,6 +124,13 @@ export function EnterpriseFeatures() {
 };
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+}
+};
+
+};
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from "react",;
 import { Users, Shield, Briefcase, Award, Settings, Globe } from "lucide-react",;
 
@@ -124,6 +138,7 @@ const features = [;
   {;
     title: "Private Hiring Portal",;
     description: "Create a secure, private hiring portal accessible only to your team members.";
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
           ))}
@@ -140,6 +155,8 @@ const features = [;
     title: "Private Hiring Portal",;
     description: "Create a secure, private hiring portal accessible only to your team members.",;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     icon: Shield},;
   {;
     title: "Dedicated Talent Pool",;
@@ -160,6 +177,7 @@ const features = [;
   {;
     title: "Global Access",;
     description: "Connect with talent across multiple regions with localized interfaces.",;
+<<<<<<< HEAD
 <<<<<<< HEAD
     icon: Globe}],;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
@@ -230,6 +248,11 @@ export function EnterpriseFeatures() {;
 =======
           {features.map((feature) => (;
           {features && features.map((feature) => (;
+=======
+
+export function EnterpriseFeatures() {;
+  return (
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <div
               key={feature && feature.title}
               className="bg-card rounded-lg p-6 shadow-sm border border-border transition-all hover:shadow-md">;
@@ -238,21 +261,27 @@ export function EnterpriseFeatures() {;
               </div>;
               <h3 className="font-bold text-xl mb-3">{feature && feature.title}</h3>;
               <p className="text-muted-foreground">{feature && feature.description}</p>;
-;
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
-          {features.map((feature) => (;
-            <div;
-              key={feature.title}
-              className="bg-card rounded-lg p-6 shadow-sm border border-border transition-all hover:shadow-md";
-            >;
-              <div className="h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center mb-5">;
-                <feature.icon className="h-6 w-6 text-primary" />;
-              </div>;
-              <h3 className="font-bold text-xl mb-3">{feature.title}</h3>;
-              <p className="text-muted-foreground">{feature.description}</p>;
             </div>;
           ))}
+    title: "Global Access",
+    description: "Connect with talent across multiple regions with localized interfaces.",
+    icon: Globe}],
+export /**
+ * EnterpriseFeatures - Function description
+ */
+function EnterpriseFeatures() {
+  return (
+    <section className="py - 20 px - 4 md:px - 6 bg - muted / 50">;
+      <div className="container mx - auto max - w-6xl">;
+        <div className="text - center mb - 16">;
+          <h2 className="text - 3xl md:text - 4xl font - bold mb - 4">;
+            Built for Enterprise Needs;
+          </h2>;
+          <p className="text - xl text - muted - foreground max - w-2xl mx - auto">;
+            Our enterprise solutions offer powerful tools designed for large teams and complex hiring needs;
+          </p>;
         </div>;
+<<<<<<< HEAD
       </div>;
     </section>;
 
@@ -298,3 +327,5 @@ icon: Settings
 ;
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

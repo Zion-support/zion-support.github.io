@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React from "react";
 import { Button } from "@/components/ui/button";
@@ -24,10 +25,45 @@ import { Eye, Info, AlertTriangle, Ban } from 'lucide-react'
 interface ActionButtonsProps {
 <<<<<<< HEAD
           onClick={() => onAction(flagId, 'ignore')}
+=======
+import { Eye, Info, AlertTriangle, Ban } from 'lucide-react'
+interface ActionButtonsProps {
+export const ActionButtons: React.FC<ActionButtonsProps> = ({ flagId, status, onAction }) => {
+  return (
+    <div className="flex space-x-2">
+      <Button
+        variant="ghost"
+        size="icon"
+        title="View Details"
+        aria-label="View details"
+        onClick={() => alert("View details (would open a detailed view)")}
+      >
+        <Eye className="h-4 w-4" />
+      </Button>
+      <Button
+};
+'"},;
+  );
+};
+
+
+        variant="ghost"
+        size="icon"
+        title="Send Warning"
+        aria-label="Send warning"
+        onClick={() => onAction(flagId, 'warning')}
+          onClick={() => onAction(flagId, 'ignore')}
+        >
+          Ignore
+        </Button>
+      )}
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 import React from 'react';
 import { Button } from '@/components / ui / button';
+<<<<<<< HEAD
 import { Eye, Info, AlertTriangle, Ban } from 'lucide-react';
 interface ActionButtonsProps {
   flag_id: string;
@@ -240,10 +276,10 @@ export const ActionButtons: React.FC<ActionButtonsProps> = ({ flagId, status, on
   );
 };
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from "react",;
 import { Button } from "@/components/ui/button",;
-import React from 'react';
-import { Button } from '@/components / ui / button';
 import { Eye, Info, AlertTriangle, Ban } from 'lucide-react';
 interface ActionButtonsProps {;
   flagId: string,;
@@ -304,5 +340,9 @@ export const ActionButtons: React.FC<ActionButtonsProps> = ({ flagId, status, on
       )}
     </div>;
   );
+<<<<<<< HEAD
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+};
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

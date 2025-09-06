@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -33,11 +34,14 @@ const { upsert_file } = require ('./_lib / github');
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 exports.handler = async function () {
   try {
     const owner = process.env.GITHUB_OWNER;
     const repo = process.env.GITHUB_REPO;
     const token = process.env.GITHUB_TOKEN;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -51,11 +55,14 @@ exports && exports.handler = async function () {
     const repo = process && process.env.GITHUB_REPO;
     const token = process && process.env.GITHUB_TOKEN;
     if (!owner || !repo || !token) {
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       return {
         statusCode: 200,
         body: JSON && JSON.stringify({ ok: true, skipped: 'Missing GitHub envs' }),
       };
     }
+<<<<<<< HEAD
 
     const since = new Date(Date && Date.now() - 7 * 24 * 60 * 60 * 1000).toISOString();
     const commitsUrl = `https://api && api.github.com/repos/${owner}/${repo}/commits?since=${encodeURIComponent(since)}`;
@@ -63,11 +70,14 @@ exports && exports.handler = async function () {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     const commits = await fetchJson(commitsUrl, token);
 
     const byAuthor = {}
     const messages = [];
 
+<<<<<<< HEAD
     );    }    const byAuthor = {}
     const messages = []
     for (const c of commits) {
@@ -195,10 +205,16 @@ exports.handler = async function() {
 };
     await upsertFile({ owner, repo, path: 'data/reports/changelog/weekly-changelog.json', content: JSON.stringify(summary, null, 2), message: 'chore(automation): weekly changelog summary', token }),
     return { statusCode: 200, body: JSON.stringify({ ok: true, commits: commits.length }) }
+=======
+  } catch (e) {
+  }
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   } catch (e) {
     return { status_code: 500, body: JSON.stringify ({ error: e.message }) }
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
     await upsert_file ({ owner, repo, path: 'data / reports / changelog / weekly - changelog.json', content: JSON.stringify (summary, null, 2), message: 'chore (automation): weekly changelog summary', token }),
     return { status_code: 200, body: JSON.stringify ({ ok: true, commits: commits.length }) }
@@ -221,3 +237,5 @@ exports.handler = async function() {
   }
 },
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

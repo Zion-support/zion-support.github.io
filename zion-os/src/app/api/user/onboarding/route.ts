@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -51,6 +52,8 @@ if ( {) {
         message: 'Onboarding completed successfully'
         user: {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           id: updatedUser && updatedUser.id,
           name: updatedUser && updatedUser.name,
           email: updatedUser && updatedUser.email,
@@ -62,6 +65,9 @@ if ( {) {
     );
   } catch (error) {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     console && console.error('Onboarding completion error:', error);
     return NextResponse && NextResponse.json(
 =======
@@ -81,10 +87,10 @@ if ( {) {
       { error: 'Internal server error' },
 
 
-=======
 
       { error: 'Internal server error' },
 
+<<<<<<< HEAD
 =======
 =======
 
@@ -96,6 +102,8 @@ if ( {) {
       { error: 'Internal server error' }
       { error: 'Internal server error' },
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { NextRequest, NextResponse } from "next/server",;
 import { getServerSession } from "next-auth",;
 import { prisma } from "@/lib/prisma",;
@@ -129,6 +137,7 @@ export async function POST(request: NextRequest) {;
     console.error("Onboarding completion error:", error);
     return NextResponse.json(;
       { error: "Internal server error" };
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -175,11 +184,24 @@ export async function POST(request: NextRequest) { try {
     return NextResponse.json(
       { error: 'Failed to complete onboarding' },
 
+=======
+      {
+        message: 'Onboarding completed successfully'
+        user: {
+      { error: 'Internal server error' },
+      { status: 500 }
+    );
+  }
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       { status: 500 }
     );
   }
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

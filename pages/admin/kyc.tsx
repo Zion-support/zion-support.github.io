@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 
@@ -13,6 +14,8 @@ export default function AdminKycPage() {
 
 =======
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useEffect, useState } from 'react';
 import Head from 'next/head';
 import type { KycProfile } from '../../utils/kyc';
@@ -22,7 +25,22 @@ import type { KycProfile } from '../../utils/kyc',;
 import React, { useEffect, useState } from 'react';
 import Head from 'next/head';
 import type { KycProfile } from '../../utils/kyc';
+
+
+
+
+import React, { useEffect, useState } from 'react';
+import Head from 'next/head';
+import type { KycProfile } from '../../utils/kyc';
+
+
+
+
+import React, { useEffect, useState } from 'react';
+import Head from 'next/head';
+import type { KycProfile } from '../../utils/kyc';
 export default function AdminKycPage() {
+<<<<<<< HEAD
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   const [queue, setQueue] = useState<KycProfile[]>([]);
@@ -61,6 +79,8 @@ export default function AdminKycPage() {
 
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const [queue, setQueue] = useState<KycProfile[]>([])
   const [reason, setReason] = useState<string>('')
   async function load() {
@@ -73,10 +93,11 @@ export default function AdminKycPage() {
   }, [])
   async function act(userId: string, action: 'approve' | 'reject' | 'needs_more_info') {
     const res = await fetch('/api/admin/kyc-queue', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-body: JSON.stringify({ userId, action, reason: reason || undefined })}),
-    const data = await res.json();
+      method: 'POST'
+      headers: { 'Content-Type': 'application/json' }
+      body: JSON.stringify({ userId, action, reason: reason |undefined })})
+    const data = await res.json()
+
     if (data.ok) load()
   }
   const [queue, setQueue] = useState<KycProfile[]>([]);
@@ -95,17 +116,22 @@ body: JSON.stringify({ userId, action, reason: reason || undefined })}),
   }, []);
   async function act(userId: string, action: 'approve' | 'reject' | 'needs_more_info') {
     const res = await fetch('/api/admin/kyc-queue', {
+
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ userId, action, reason: reason || undefined })}),
-    const data = await res.json(),
-    if (data.ok) load(),
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    const data = await res.json();
+    if (data.ok) load()
   }
+
+    if (data.ok) load()
+  }
+
 }
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <>
       <Head>
@@ -124,6 +150,7 @@ body: JSON.stringify({ userId, action, reason: reason || undefined })}),
             <div key={p.userId} className="border rounded p-4">
               <div className="flex items-center justify-between">
                 <div>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -146,13 +173,18 @@ body: JSON.stringify({ userId, action, reason: reason || undefined })}),
                   <div className="text-xs text-gray-500">Role: {p.role} • Status: {p.status} • AML: {p.amlStatus}</div>
                   {p.flags && p.flags.length > 0 && (
                     <div className="text-xs mt-1">Flags: {p.flags.join()}</div>
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   )}
                   )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 </div>
                 <div className="flex gap-2">
                   <button onClick={() => act(p.userId, 'approve')} className="px-3 py-1 rounded bg-green-600 text-white">Approve</button>
@@ -163,6 +195,7 @@ body: JSON.stringify({ userId, action, reason: reason || undefined })}),
               <div className="mt-3">
                 <div className="font-medium text-sm mb-1">Documents</div>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -176,6 +209,8 @@ body: JSON.stringify({ userId, action, reason: reason || undefined })}),
                   {(p.documents |[]).map((d) => (
                   {(p.documents || []).map((d) => (
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     <div key={d.id} className="border rounded p-2 text-xs">
                       <div>Kind: {d.kind}</div>
                       <div>Filename: {d.filename}</div>
@@ -190,11 +225,18 @@ body: JSON.stringify({ userId, action, reason: reason || undefined })}),
       </main>
     </>
 <<<<<<< HEAD
-
+<<<<<<< HEAD
 =======
+  ),
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
 }
 
-=======
 import React, { useEffect, useState } from 'react',
 import Head from 'next / head',
 import type { KycProfile } from '../../utils / kyc',
@@ -275,11 +317,9 @@ function act() {
       </main>;
     </>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 }
@@ -296,3 +336,5 @@ function act() {
 }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

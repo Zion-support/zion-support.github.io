@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -24,6 +25,8 @@ interface ConversationsListProps {
 
   markAsRead: (conversationId: string) => Promise<void>
 }
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export function ConversationsList({
   conversations;
 
@@ -33,7 +36,15 @@ export function ConversationsList({
 
 export function ConversationsList({ ;
   conversations;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+export function ConversationsList({ ;
+  conversations;
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from 'react',;
 import { User } from 'lucide-react',;
 import { Conversation } from '@/types/messaging',;
@@ -47,6 +58,7 @@ interface ConversationsListProps {;
 
 export function ConversationsList({ 
   conversations,
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   activeConversation, 
@@ -62,6 +74,11 @@ export function ConversationsList({
   setActiveConversation, 
   markAsRead 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  activeConversation, 
+  setActiveConversation, 
+  markAsRead 
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }: ConversationsListProps) {
   return (
     <div className="w-full md:w-80 border-r border-zion-purple/20 overflow-y-auto">
@@ -79,6 +96,7 @@ export function ConversationsList({
       ) : (
         <div>
           {conversations.map((conversation) => (
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 import {User} from 'lucide-react';
@@ -99,11 +117,14 @@ export function ConversationsList(): any ({ ;
 }: ConversationsListProps) {;
   return (
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <ConversationItem
               key={conversation.id}
               conversation={conversation}
               isActive={activeConversation?.id === conversation.id}
 
+<<<<<<< HEAD
 import React from 'react',;
 import { User } from 'lucide-react',;
 import { Conversation } from '@/types/messaging',;
@@ -168,11 +189,17 @@ export function ConversationsList({ ;
 =======
                 markAsRead(conversation && conversation.id);
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+              isActive={activeConversation?.id === conversation && conversation.id}
+              onClick={() => {;
+                setActiveConversation(conversation);
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               }}
             />;
           ))}
         </div>;
       )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     </div>;
@@ -185,6 +212,8 @@ export function ConversationsList({ ;
   );
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {User} from 'lucide-react';
 import {Conversation} from '@/types / messaging';
 import {ConversationItem} from './ConversationItem';
@@ -225,6 +254,7 @@ function ConversationsList() {
         </div>)}
     </div>);
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -268,3 +298,5 @@ function ConversationsList() {
   )
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

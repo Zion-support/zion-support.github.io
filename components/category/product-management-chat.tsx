@@ -1,5 +1,6 @@
 import type { NextPage } from 'next';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -19,6 +20,8 @@ const ProductManagementChat: NextPage = () => {
 
   return (
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <div>
       <Seo title="Product Management" description="Product management strategy and insights by Zion." openGraph={{ title: 'Product Management', description: 'Product management strategy and insights by Zion.' }} />
       <main>
@@ -30,10 +33,13 @@ const ProductManagementChat: NextPage = () => {
   )
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <div>;
       <Seo title="Product Management" description="Product management strategy and insights by Zion." openGraph={{ title: 'Product Management', description: 'Product management strategy and insights by Zion.' }} />;
       <main>;
@@ -47,6 +53,7 @@ const ProductManagementChat: NextPage = () => {
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 export default ProductManagementChat;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -94,3 +101,5 @@ export default ProductManagementChat
 export default ProductManagementChat;
 export default ProductManagementChat;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

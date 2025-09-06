@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -117,6 +118,8 @@ function JobApplicantsPage() {
         {applications.length === 0 && <p className="text-sm text-gray-500">No applicants yet.</p>}
         {applications.map((a) => {
           const talent = TALENT_PROFILES.find((t) => t.slug === a.talentSlug);
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useRouter  } from 'next/router';
 import {useRouter} from 'next/router';
 import useSWR from 'swr';
@@ -131,6 +134,8 @@ export default function JobApplicantsPage() {
     id ? `/api/applications?jobId=${id}` : null
     fetcher
   );  const { data: jobData } = useSWR(id ? `/api/jobs/${id}` : null, fetcher);
+
+
   const job = jobData?.job;
   const applications = (appsData?.applications as any[]) |[];
 
@@ -231,9 +236,6 @@ export default function JobApplicantsPage() {_const _router = useRouter();
             </div>
           );
         })}
-      </div>
-    </div>
-);
 
 }
           )
@@ -250,4 +252,11 @@ export default function JobApplicantsPage() {_const _router = useRouter();
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+      </div>;
+    </div>;
+  );
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 
@@ -5,19 +6,25 @@
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export type ServiceType = "service" | "talent" | "equipment" | "";
 export type ServiceCategory = string;
 export type TimelineType = "fixed" | "flexible";
 export type BudgetType = "fixed" | "hourly" | "range";
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export interface ListingItem {
   id: string;
   title: string;
   category: string
   image?: string
 }
+<<<<<<< HEAD
 export interface ContactInfo {
 
 export interface ListingItem {;
@@ -38,6 +45,8 @@ export interface ContactInfo {;
 ;
 export interface ListingItem {
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 export interface ListingItem {;
 
@@ -45,24 +54,16 @@ export interface ListingItem {;
   title: string;
   category: string,
   image?: string;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
 
 
 export interface ContactInfo {;
-
-
   name: string;
   email: string;
 
   phone: string,
   company: string;
 }
-export interface Budget {
-  amount: number;
-  max_amount?: number,
-  type: BudgetType;
-
 }
 export interface QuoteFormData {
   service_type: ServiceType;
@@ -73,6 +74,7 @@ export interface QuoteFormData {
   start_date?: Date;
   end_date?: Date;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -82,10 +84,21 @@ export interface Budget {;
 
 <<<<<<< HEAD
 =======
+=======
+  name: string;
+  email: string;
+  phone: string
+  company: string
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export interface Budget {
 
+
 export interface Budget {;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   amount: number;
   maxAmount?: number
   type: BudgetType
@@ -95,11 +108,14 @@ export interface Budget {;
 export interface QuoteFormData {;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 export interface QuoteFormData {
 
 export interface QuoteFormData {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   serviceType: ServiceType;
   serviceCategory: ServiceCategory;
   specificItem: ListingItem | null;
@@ -108,38 +124,41 @@ export interface QuoteFormData {;
   startDate?: Date;
   endDate?: Date;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   timeline: TimelineType;
 
-  budget: Budget,
-  contact_info: ContactInfo;
-}
-export type QuoteStatus = 'new' | 'in_review' | 'accepted' | 'responded' | 'closed' | 'archived';
-;
-
+export interface QuoteRequest {;
 export interface QuoteRequest {
+<<<<<<< HEAD
 =======
 =======
 ;
 
 export interface QuoteRequest {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 export interface QuoteRequest {;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   timeline: TimelineType;
-  budget: Budget
-  contactInfo: ContactInfo
-}
-export type QuoteStatus = 'new' | 'in_review' | 'accepted' | 'responded' | 'closed' | 'archived';
 export interface QuoteRequest {
+<<<<<<< HEAD
 
 export interface QuoteRequest {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   id: string;
   talent_id: string;
   talent_name?: string;
@@ -158,6 +177,7 @@ export interface QuoteRequest {;
   is_archived: boolean;
   viewed_at?: string;
   replied_at?: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   created_at: string,
@@ -244,3 +264,6 @@ export interface QuoteRequest {;
   updated_at: string;
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

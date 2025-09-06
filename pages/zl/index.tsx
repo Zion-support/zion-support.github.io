@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default function LocalHome(){return (<main className="min-h-screen bg-black text-zinc-100 p-8"><section className="prose prose-invert max-w-3xl mx-auto"><h1>Zion</h1><p>Trust, verified.</p><p>Sovereignty is a protocol.</p></section></main>)}
 =======
 
@@ -8,3 +9,5 @@ export default function LocalHome(){return (<main className="min-h-screen bg-bla
   }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

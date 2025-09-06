@@ -1,16 +1,65 @@
+export default async function handler(
+  req: NextApiRequest
+  res: NextApiResponse
+) {
+  if (req.method !== 'POST') {;
+    res.setHeader('Allow', 'POST');
+    return res.status(405).json({ error: 'Method Not Allowed' });
+  }
+  const { apiKey, ttlSeconds } = req.body |{}
+  if (!apiKey) {
+    return res.status(400).json({ error: 'apiKey required' });
+  }
+  const match = await findPartnerByApiKey(apiKey);
+  if (!match) {
+    return res.status(401).json({ error: 'Invalid API key' });  }
+  const { partner, apiKey: key } = match;
+  const token = signJwt(
+    {
+export default async function handler(
+  req: NextApiRequest
+  res: NextApiResponse
+) {
+  if (req.method !== 'POST') {;
+    res.setHeader('Allow', 'POST');
+    return res.status(405).json({ error: 'Method Not Allowed' });
+  }
+  const { apiKey, ttlSeconds } = req.body |{}
+  if (!apiKey) {
+    return res.status(400).json({ error: 'apiKey required' });
+  }
+  const match = await findPartnerByApiKey(apiKey);
+  if (!match) {
+    return res.status(401).json({ error: 'Invalid API key' });  }
+  const { partner, apiKey: key } = match;
+  const token = signJwt(
+    {
+  if (!apiKey) {
+    return res && res.status(400).json({ error: 'apiKey required' });
+  }
+  const match = await findPartnerByApiKey(apiKey);
+  if (!match) {
+    return res && res.status(401).json({ error: 'Invalid API key' });  }
+  const { partner, apiKey: key } = match;
+  const token = signJwt(
+    {
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 import type { NextApiRequest, NextApiResponse } from "next";
 import { findPartnerByApiKey, signJwt } from "../../../utils/api/partnerAuth";
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
   if (req && req.method !== "POST") {
     res && res.setHeader("Allow", "POST");
     return res && res.status(405).json({ error: "Method Not Allowed" })
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   const { apiKey, ttlSeconds } = req && req.body || {};
@@ -88,15 +137,24 @@ if ( {) {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  }
+  const { partner, apiKey: key } = match;
+  const token = signJwt(
+    {
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   }
   const { partner, api_key: key } = match;
   const token = sign_jwt (
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       sub: partner && partner.id,
       apiKeyId: key && key.id,
       name: partner && partner.name,
@@ -110,6 +168,7 @@ if ( {) {
   );
   return res
     .status(200)
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       sub: partner.id, apiKeyId: key.id,
@@ -129,6 +188,9 @@ if ( {) {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     .json({ token, partner: { id: partner && partner.id, name: partner && partner.name } });      sub: partner && partner.id;
       apiKeyId: key && key.id;
       name: partner && partner.name;
@@ -140,11 +202,14 @@ if ( {) {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       sub: partner.id,
       apiKeyId: key.id,
       name: partner.name,
@@ -163,6 +228,7 @@ if ( {) {
       useCaseType: partner.useCaseType} as any;
     typeof ttl_seconds === "number" ? Math.max (300, Math.min (86400, ttl_seconds)) : 3600);
   return res.status (200).json ({ token, partner: { id: partner.id, name: partner.name } });
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -175,3 +241,10 @@ if ( {) {
 
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  }
+  const { partner, apiKey: key } = match;
+  const token = signJwt(
+    {
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

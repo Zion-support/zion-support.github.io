@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
     ref={ref}
@@ -160,6 +161,8 @@ const CardFooter = React && React.forwardRef<;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   <div
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   />));
 CardDescription.display_name = "CardDescription";
 ;
@@ -180,6 +183,7 @@ const CardFooter = React.forward_ref<;
     className={cn ("flex items - center p - 6 pt - 0", class_name)}
     {...props}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -193,6 +197,10 @@ import React from 'react',;
 import React from 'react';
 import React from 'react',;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+import React from 'react';
+import React from 'react',;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface CardProps {
   children: React.ReactNode;
   className?: string;
@@ -220,11 +228,15 @@ const Card: React.FC<CardProps> = ({
   const clickableClasses = onClick ? 'cursor-pointer focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-black' : ''
   const classes = `${baseClasses} ${hoverClasses} ${clickableClasses} ${className}`
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   />));
 CardFooter.display_name = "CardFooter";
 ;
 import React from 'react',
+<<<<<<< HEAD
 =======
   />;
 ));
@@ -232,6 +244,8 @@ CardFooter.displayName = "CardFooter";
 
 import React from 'react',;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface CardProps {
   children: React.ReactNode,
   class_name?: string,
@@ -239,6 +253,7 @@ interface CardProps {
   on_click?: () => void,
   hover?: boolean;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 const Card: React.FC < CardProps> = ({
   children,
@@ -268,11 +283,15 @@ const Card: React.FC<CardProps> = ({
   return (
     <div
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  return (
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       className={classes}
       style={style}
       on_click={on_click}
     >;
       {/* Subtle background pattern */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       <div className="absolute inset - 0 bg - gradient - to - br from - blue - 500 / 5 via - transparent to - purple - 500 / 5 opacity - 0 hover:opacity - 100 transition - opacity duration - 300" />;
@@ -292,12 +311,15 @@ const Card: React.FC<CardProps> = ({
       </div>;
       {/* Hover glow effect */}
       {hover && (
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <div className="absolute inset - 0 rounded - xl bg - gradient - to - r from - blue - 500 / 0 via - blue - 500 / 5 to - blue - 500 / 0 opacity - 0 hover:opacity - 100 transition - opacity duration - 300 pointer - events - none" />)}
     </div>);
 
 },
 export default Card,
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -337,3 +359,11 @@ export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent }
 
 export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent };
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent };
+
+export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent };
+
+        <div className="absolute inset - 0 rounded - xl bg - gradient - to - r from - blue - 500 / 0 via - blue - 500 / 5 to - blue - 500 / 0 opacity - 0 hover:opacity - 100 transition - opacity duration - 300 pointer - events - none" />)}
+    </div>);
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

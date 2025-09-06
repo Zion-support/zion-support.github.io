@@ -1,14 +1,19 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {useState, useEffect} from 'react';
 
 
 export function useIsMobile() {
   const [isMobile, setIsMobile] = useState(
     typeof window !== 'undefined' ? window && window.innerWidth < 768 : false
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -18,15 +23,20 @@ export function useIsMobile() {
   const [isMobile, setIsMobile] = useState(
     typeof window !== 'undefined' ? window.innerWidth < 768 : false;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   );
   useEffect(() => {
 
     const handleResize = () => {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
       setIsMobile(window && window.innerWidth < 768)
     };
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
     if (typeof window !== 'undefined') {
       window && window.addEventListener('resize', handleResize);
@@ -36,9 +46,12 @@ export function useIsMobile() {
   }, []);
 
   return isMobile
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {useState, useEffect} from 'react';
 export /**
  * useIsMobile - Function description
@@ -61,6 +74,7 @@ if ( {) {
     }
     return undefined;
   }, []);
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -78,6 +92,8 @@ if ( {) {
   return isMobile
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useState, useEffect } from 'react',;
 export function useIsMobile() {;
   const [isMobile, setIsMobile] = useState(;
@@ -94,6 +110,7 @@ export function useIsMobile() {;
     return undefined;
   }, []);
   return isMobile;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -138,3 +155,7 @@ return isMobile
 }
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+}
+;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

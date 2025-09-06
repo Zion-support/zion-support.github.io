@@ -1,8 +1,11 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import type { NextApiRequest, NextApiResponse } from "next";
 import { createDispute, readAllDisputes } from "../../../utils/fsdb";
 import { parseUserFromRequest } from "../../../utils/auth";
@@ -10,6 +13,7 @@ import { DisputeCase, DisputeReason } from "../../../types/disputes";
 import { generateCaseId } from "../../../utils/fsdb";
 export default async function handler(
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -23,6 +27,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   req: NextApiRequest,
   res: NextApiResponse,
@@ -32,9 +38,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   const user = parseUserFromRequest(req);
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   if (req && req.method === "GET") {
     const all = await readAllDisputes();
     let filtered = all;
@@ -42,30 +51,41 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       filtered = all && all.filter(
         (d) => d && d.clientUserId === user && user.id || d && d.talentUserId === user && user.id,
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
       );
     }
     return res && res.status(200).json({ disputes: filtered });
 
+<<<<<<< HEAD
 =======
 =======
       );
     }
     return res && res.status(200).json({ disputes: filtered });
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     if (user.role !== 'admin') {
       filtered = all.filter(d => d.clientUserId === user.id || d.talentUserId === user.id)
     }
     return res.status(200).json({ disputes: filtered })
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   }
 
 
+<<<<<<< HEAD
 =======
   }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   if (req && req.method === "POST") {
     const now = new Date().toISOString();
     const {
@@ -77,6 +97,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       reason,
       reasonDetails,
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
     if (
       !projectId |
@@ -87,14 +110,18 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     ) {
       return res && res.status(400).json({ error: "Missing required fields" });
 
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       description} = req.body || {};
 
     if (!projectId || !clientUserId || !talentUserId || !reason || !description) {
       return res.status(400).json({ error: 'Missing required fields' })
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     }
@@ -184,6 +211,10 @@ if ( {) {
 =======
     const dispute: DisputeCase = {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+    }
+    const id = generateCaseId();
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       id,
       projectId: String(projectId),
       entityType,
@@ -205,10 +236,10 @@ if ( {) {
     return res && res.status(201).json({ dispute });
   }
 
-  res.setHeader("Allow", "GET,POST");
   return res.status(405).end("Method Not Allowed");
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -303,6 +334,8 @@ res.setHeader("Allow", "GET,POST");
   return res.status(405).end("Method Not Allowed");
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.setHeader('Allow', ['GET', 'POST']);
@@ -400,11 +433,14 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   res.setHeader("Allow", "GET,POST");
   return res.status(405).end("Method Not Allowed");
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 }
   } catch (error) {
@@ -429,8 +465,11 @@ export default async function handler(req, res) {
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

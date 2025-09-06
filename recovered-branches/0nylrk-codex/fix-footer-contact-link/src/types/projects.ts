@@ -1,8 +1,13 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
+export type ProjectStatus =
+export type ProjectStatus = 
 export type ProjectStatus = 
 
 
@@ -11,11 +16,14 @@ export type ProjectStatus =
   | 'changes_requested'
   | 'in_progress'
 <<<<<<< HEAD
+<<<<<<< HEAD
   | 'completed'
   | 'canceled';
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export type ProjectStatus =;
   | 'offer_sent';
   | 'offer_accepted';
@@ -30,6 +38,7 @@ export interface Project {;
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   | 'completed';
   | 'canceled';
@@ -37,6 +46,9 @@ export interface Project {
 
 export interface Project {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+export interface Project {
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   id: string;
   client_id: string;
   talent_id: string;
@@ -49,6 +61,7 @@ export interface Project {;
   created_at: string;
   updated_at: string;
   job?: {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     title: string,
@@ -65,12 +78,15 @@ export interface Project {;
 
   }
 }
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 
 export interface ProjectNote {;
 
 
+<<<<<<< HEAD
 =======
 
 
@@ -95,12 +111,16 @@ export interface ProjectNote {
 
 export interface ProjectNote {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+export interface ProjectNote {
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   id: string;
   project_id: string;
   user_id: string;
   content: string;
   created_at: string;
   created_by_profile?: {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     display_name: string,
@@ -158,5 +178,7 @@ export interface ProjectNote {;
     avatar_url?: string;
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   }
 }

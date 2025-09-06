@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { GripVertical } from 'lucide-react';
 import * as ResizablePrimitive from &quot;react-resizable-panels&quot;
 import * as ResizablePrimitive from &quot;react-resizable-panels&quot;
@@ -13,6 +14,8 @@ import { GripVertical } from 'lucide-react'
 import * as ResizablePrimitive from &quot;react-resizable-panels&quot;
 import { cn } from &quot;@/lib/utils&quot;
 import * as ResizablePrimitive from "react-resizable-panels"
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 import { cn } from "@/lib/utils"
 
@@ -25,6 +28,7 @@ onst ResizablePanelGroup = ({
   <ResizablePrimitive.PanelGroup
     className={cn(
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -33,6 +37,8 @@ ursor/fix-website-loading-errors-and-merge-6662
       &quot;flex h-full w-full data-[panel-group-direction=vertical]:flex-col&quot;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       "flex h-full w-full data-[panel-group-direction=vertical]:flex-col",
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
       className
@@ -54,6 +60,7 @@ const ResizableHandle = ({
   <ResizablePrimitive.PanelResizeHandle
     className={cn(
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -62,6 +69,8 @@ ursor/fix-website-loading-errors-and-merge-6662
       &quot;relative flex w-px items-center justify-center bg-border after:absolute after:inset-y-0 after:left-1/2 after:w-1 after:-translate-x-1/2 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring focus-visible:ring-offset-1 data-[panel-group-direction=vertical]:h-px data-[panel-group-direction=vertical]:w-full data-[panel-group-direction=vertical]:after:left-0 data-[panel-group-direction=vertical]:after:h-1 data-[panel-group-direction=vertical]:after:w-full data-[panel-group-direction=vertical]:after:-translate-y-1/2 data-[panel-group-direction=vertical]:after:translate-x-0 [&[data-panel-group-direction=vertical]>div]:rotate-90&quot;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       "relative flex w-px items-center justify-center bg-border after:absolute after:inset-y-0 after:left-1/2 after:w-1 after:-translate-x-1/2 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring focus-visible:ring-offset-1 data-[panel-group-direction=vertical]:h-px data-[panel-group-direction=vertical]:w-full data-[panel-group-direction=vertical]:after:left-0 data-[panel-group-direction=vertical]:after:h-1 data-[panel-group-direction=vertical]:after:w-full data-[panel-group-direction=vertical]:after:-translate-y-1/2 data-[panel-group-direction=vertical]:after:translate-x-0 [&[data-panel-group-direction=vertical]>div]:rotate-90",
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
       className
@@ -79,7 +88,11 @@ ursor/fix-website-loading-errors-and-merge-6662
   </ResizablePrimitive.PanelResizeHandle>;
 );
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { GripVertical } from 'lucide-react';
 import * as ResizablePrimitive from &quot;react - resizable - panels & quot;
 ;
@@ -90,6 +103,7 @@ export { ResizablePanelGroup, ResizablePanel, ResizableHandle }
 
 export { ResizablePanelGroup, ResizablePanel, ResizableHandle };
 export { ResizablePanelGroup, ResizablePanel, ResizableHandle }
+<<<<<<< HEAD
 export { ResizablePanelGroup, ResizablePanel, ResizableHandle };
 export { ResizablePanelGroup, ResizablePanel, ResizableHandle }
 
@@ -99,6 +113,8 @@ export { ResizablePanelGroup, ResizablePanel, ResizableHandle }
 ;
 export { ResizablePanelGroup, ResizablePanel, ResizableHandle };
 export { ResizablePanelGroup, ResizablePanel, ResizableHandle }
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ;
 const ResizablePanelGroup = ({
   class_name,
@@ -130,4 +146,7 @@ const ResizableHandle = ({
       </div>)}
   </ResizablePrimitive.PanelResizeHandle>);
 export { ResizablePanelGroup, ResizablePanel, ResizableHandle }
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

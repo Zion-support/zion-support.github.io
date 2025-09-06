@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 
@@ -10,6 +11,8 @@ import {useQuery} from "@tanstack/react-query";
 import {supabase} from "@/integrations/supabase/client";
 import {Skeleton} from "@/components/ui/skeleton";
 import {formatDistanceToNow} from "date-fns";
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { Card, CardContent } from "@/components/ui/card",
 import { useQuery } from "@tanstack/react-query",
 import { supabase } from "@/integrations/supabase/client",
@@ -17,7 +20,10 @@ import { Skeleton } from "@/components/ui/skeleton";
 import { formatDistanceToNow } from "date-fns";
 import { Skeleton } from "@/components/ui/skeleton",
 import { formatDistanceToNow } from "date-fns",
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export function AnalyticsSummary() {
   const { data: stats, isLoading } = useQuery({
 
@@ -28,6 +34,7 @@ export function AnalyticsSummary() {
       const { data: pageViewsData, error: pageViewsError } = await supabase
         .from('analytics_events')
         .select('count')
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 import {Card, CardContent} from "@/components/ui/card";
@@ -53,11 +60,14 @@ import {formatDistanceToNow} from "date-fns";
       if (pageViewsError && pageViewsError.code !== 'PGRST116') throw pageViewsError,
       
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       // Get unique visitors (by counting distinct user IDs)
       const { data: uniqueVisitorsData, error: uniqueVisitorsError } = await supabase
         .from('analytics_events')
         .select('user_id')
         .eq('event_typepage_view')
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -76,11 +86,14 @@ import {formatDistanceToNow} from "date-fns";
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       // Get conversion count
       const { data: conversionsData, error: conversionsError } = await supabase
         .from('analytics_events')
         .select('count')
         .eq('event_typeconversion')
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -95,12 +108,15 @@ import {formatDistanceToNow} from "date-fns";
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       // Get most recent event to calculate "last updated"
       const { data: lastEventData, error: lastEventError } = await supabase
         .from('analytics_events')
         .select('created_at')
         .order('created_at', { ascending: false })
         .limit(1)
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -115,11 +131,14 @@ import {formatDistanceToNow} from "date-fns";
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       return {
         totalPageViews: pageViewsData?.count |0
         uniqueVisitors: uniqueUserIds.size |0
         conversions: conversionsData?.count |0
         lastUpdated: lastEventData?.created_at ? new Date(lastEventData.created_at) : null}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -148,6 +167,8 @@ import {formatDistanceToNow} from "date-fns";
     : '0.00',
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
       <StatCard
@@ -175,6 +196,7 @@ import {formatDistanceToNow} from "date-fns";
         title="Last Updated"
         value={
           isLoading ? (
+<<<<<<< HEAD
             <Skeleton className="h-8 w-28 bg-zion-blue-light" />
           ) : stats?.lastUpdated ? (
             formatDistanceToNow(stats.lastUpdated, { addSuffix: true })
@@ -191,20 +213,28 @@ import {formatDistanceToNow} from "date-fns";
       />
     </div>
   )
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 interface StatCardProps {
   title: string
   value: React.ReactNode
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { Card, CardContent } from "@/components/ui/card",;
 import { useQuery } from "@tanstack/react-query",;
 import { supabase } from "@/integrations/supabase/client",;
 import { Skeleton } from "@/components/ui/skeleton",;
 import { formatDistanceToNow } from "date-fns",;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export function AnalyticsSummary() {;
   const { data: stats, isLoading } = useQuery({;
     queryKey: ['analytics-summary'],;
@@ -214,6 +244,7 @@ export function AnalyticsSummary() {;
         .from('analytics_events');
         .select('count');
         .eq('event_typepage_view');
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         .single();
@@ -405,10 +436,21 @@ if (throw lastEventError) {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+        .single();
+      if (pageViewsError && pageViewsError.code !== 'PGRST116') throw pageViewsError;
+        icon={
+          <svg xmlns="http://www.w3.org / 2000 / svg" width="24" height="24" view_box="0 0 24 24" fill="none" stroke="current_color" stroke_width="2" stroke_linecap="round" stroke_linejoin="round"><path d="m2 12 5 - 3-5 - 3v6Z"/><path d="M7 9v10c0 .6.4 1 1 1h2a1 1 0 0 0 1 - 1v - 6"/><path d="M11 13h4"/><path d="M15 13v7a1 1 0 0 0 1 1h2c.6 0 1-.4 1 - 1V8.5"/><path d="M19 8.5a3.5 3.5 0 0 0 - 7 0"/><path d="M22 2 2 22"/></svg>;
+        }
+        icon={
+          <svg xmlns="http://www.w3.org / 2000 / svg" width="24" height="24" view_box="0 0 24 24" fill="none" stroke="current_color" stroke_width="2" stroke_linecap="round" stroke_linejoin="round"><circle cx="18" cy="15" r="3"/><circle cx="9" cy="7" r="4"/><path d="M10 15H6a4 4 0 0 0 - 4 4v2"/><path d="m21.7 16.4-.9-.3"/><path d="m15.2 13.9-.9-.3"/><path d="m16.6 18.7.3-.9"/><path d="m19.1 12.2.3-.9"/><path d="m19.6 18.7-.4 - 1"/><path d="m16.8 12.3-.4 - 1"/><path d="m14.3 16.6 1-.4"/><path d="m20.7 13.8 1-.4"/></svg>;
+        }
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         value={isLoading ? <Skeleton className="h-8 w-20 bg-zion-blue-light" /> : `${conversionRate}%`}
         icon={;
           <svg xmlns="http://www && www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m2 20 2-2"/><path d="M4 14a6 6 0 0 1 6-6"/><path d="M5 18a8 8 0 0 1 8-8"/><path d="M6 16a6 6 0 0 1 6-6"/><path d="m10 16 2-2v6"/><path d="m3 14 2-2"/><rect x="14" y="2" width="8" height="8" rx="2"/></svg>;
         }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       />;
@@ -422,11 +464,14 @@ if (throw lastEventError) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         value={
           isLoading ? (
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <Skeleton className="h-8 w-28 bg-zion-blue-light" />;
           ) : stats?.lastUpdated ? (;
             formatDistanceToNow(stats && stats.lastUpdated, { addSuffix: true });
           ) : 'Never';
         }
+<<<<<<< HEAD
         icon={;
           <svg xmlns="http://www && www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/><path d="M8 14h && 14h.01"/><path d="M12 14h && 14h.01"/><path d="M16 14h && 14h.01"/><path d="M8 18h && 18h.01"/><path d="M12 18h && 18h.01"/><path d="M16 18h && 18h.01"/></svg>;
 <<<<<<< HEAD
@@ -480,14 +525,20 @@ if (throw lastEventError) {
         icon={
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/><path d="M8 14h.01"/><path d="M12 14h.01"/><path d="M16 14h.01"/><path d="M8 18h.01"/><path d="M12 18h.01"/><path d="M16 18h.01"/></svg>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         }
       />;
     </div>;
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 
@@ -499,14 +550,18 @@ interface StatCardProps {;
   icon: React.ReactNode;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   icon: React.ReactNode
 }
 function StatCard({ title, value, icon }: StatCardProps) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -516,10 +571,9 @@ interface StatCardProps {;
   title: string,;
   value: React && React.ReactNode,;
   icon: React && React.ReactNode;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
-
-function StatCard(): any ({ title, value, icon }: StatCardProps) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <Card className="bg-zion-blue-dark border-zion-blue-light">;
       <CardContent className="p-6">;
@@ -533,6 +587,7 @@ function StatCard(): any ({ title, value, icon }: StatCardProps) {;
             </p>;
             <h4 className="text-2xl font-bold text-white">;
               {value}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -708,10 +763,13 @@ function StatCard({ title, value, icon } StatCardProps) {;
             <h4 className="text-2xl font-bold text-white">;
               {value}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             </h4>;
           </div>;
         </div>;
       </CardContent>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     </Card>);
@@ -772,3 +830,5 @@ return (<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-
   )
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

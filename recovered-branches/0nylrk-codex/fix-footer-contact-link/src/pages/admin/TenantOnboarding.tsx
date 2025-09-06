@@ -1,5 +1,3 @@
-
-
   const [formData, setFormData] = useState({
 
     brand_name: ""
@@ -13,6 +11,9 @@
     is_co_branded: true
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -35,8 +36,11 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
+<<<<<<< HEAD
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 import React, { useState } from "react";
 import {Header} from "@/components/Header";
@@ -57,6 +61,7 @@ export default function TenantOnboarding() {;
   const { user } = useAuth();
   const [activeTab, setActiveTab] = useState("company");
   const [isSubmitting, setIsSubmitting] = useState(false);
+<<<<<<< HEAD
 <<<<<<< HEAD
   const [formData, setFormData] = useState({;
     brand_name: "",;
@@ -224,6 +229,8 @@ export default function TenantOnboarding() {;
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useState } from "react",
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
@@ -243,16 +250,13 @@ export default function TenantOnboarding() {
   const { user } = useAuth();
   const [activeTab, setActiveTab] = useState("company");
   const [isSubmitting, setIsSubmitting] = useState(false);
-import { supabase } from "@/integrations/supabase/client",
-import { Switch } from "@/components/ui/switch",
-export default function TenantOnboarding() {
-  const { user } = useAuth(),
-  const [activeTab, setActiveTab] = useState("company"),
-  const [isSubmitting, setIsSubmitting] = useState(false),
   const [formData, setFormData] = useState({
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     brand_name: ""
     subdomain: ""
     logo_url: ""
@@ -263,22 +267,30 @@ export default function TenantOnboarding() {
     custom_domain: ""
     is_co_branded: true
   });
-  // Check if user has admin role
+
+  // Check if user has admin role;
   const isAdmin = user?.role === "admin";
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   }),
   
   // Check if user has admin role
   const isAdmin = user?.role === "admin",
   
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   if (!isAdmin) {
     return <Navigate to="/unauthorized" />
   }
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+<<<<<<< HEAD
     const { name, value } = e.target,
     setFormData(prev => ({ ...prev, [name]: value }))
 <<<<<<< HEAD
@@ -320,11 +332,14 @@ export default function TenantOnboarding() {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       // Create landing page copy
       const landingPageCopy = {
         headline: "AI Hiring Assistant"
         subtitle: `Find the best talent for your ${formData.industry |"company"}`
         cta: "Get Started"
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       },
@@ -338,6 +353,8 @@ export default function TenantOnboarding() {
       },
       
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       // Submit to Supabase
       const { data, error } = await supabase
         .from('whitelabel_tenants')
@@ -355,6 +372,7 @@ export default function TenantOnboarding() {
           email_template_override: null
         })
         .select('id, brand_name, subdomain')
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -376,6 +394,8 @@ export default function TenantOnboarding() {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       // Reset form
       setFormData({
         brand_name: ""
@@ -389,6 +409,7 @@ export default function TenantOnboarding() {
         is_co_branded: true
       })
     } catch (error: any) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       console.error("Error creating tenant:", error),
@@ -406,10 +427,13 @@ export default function TenantOnboarding() {
       toast.error("Failed to create tenant", { 
         description: error.message 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       })
     } finally {
       setIsSubmitting(false)
     }
+<<<<<<< HEAD
 
   },
 
@@ -658,10 +682,16 @@ if (throw error) {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+    }
+  }
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     <TabsTrigger value="company">Company Info</TabsTrigger>;
                     <TabsTrigger value="branding">Branding</TabsTrigger>;
                     <TabsTrigger value="domain">Domain Setup</TabsTrigger>;
                   </TabsList>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
                       />;
@@ -1261,6 +1291,12 @@ if (throw error) {
 =======
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+                        placeholder="hire && hire.yourcompany.com"
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useState } from "react",;
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
@@ -1395,21 +1431,61 @@ export default function TenantOnboarding() {;
                   <TabsContent value="company" className="space-y-4">;
                     <div className="space-y-2">;
                       <Label htmlFor="brand_name">Company Name</Label>;
-                      <Input;
-                        id="brand_name";
-                        name="brand_name";
-                        value={formData.brand_name}
+                      <Input
+                        id="brand_name"
+                        name="brand_name"
+                        value={formData && formData.brand_name}
                         onChange={handleInputChange}
-                        placeholder="Acme Corporation";
-                        required;
-                      />;
-                    </div>;
-                    <div className="space-y-2">;
-                      <Label htmlFor="industry">Industry</Label>;
-                      <Select;
-                        name="industry";
-                        value={formData.industry} ;
+                        placeholder="Acme Corporation"
+                        required
+                      />
+                    </div>
+                    <div className="space-y-2">
+                      <Label htmlFor="industry">Industry</Label>
+                      <Select
+                        name="industry"
+                        value={formData.industry}
                         onValueChange={(value) => handleSelectChange("industry", value)}
+                      >
+                        <SelectTrigger>
+                          <SelectValue placeholder="Select industry" />
+                        </SelectTrigger>
+                        <SelectContent>
+                          <SelectItem value="technology">Technology</SelectItem>
+                          <SelectItem value="healthcare">Healthcare</SelectItem>
+                          <SelectItem value="finance">Finance</SelectItem>
+                          <SelectItem value="education">Education</SelectItem>
+                          <SelectItem value="retail">Retail</SelectItem>
+                          <SelectItem value="manufacturing">Manufacturing</SelectItem>
+                          <SelectItem value="services">Professional Services</SelectItem>
+                          <SelectItem value="other">Other</SelectItem>
+                        </SelectContent>
+                      </Select>
+                    </div>
+                    <div className="space-y-2">
+                      <Label htmlFor="company_size">Company Size</Label>
+                      <Select
+                        name="company_size"
+                        value={formData.company_size}
+                        onValueChange={(value) => handleSelectChange("company_size", value)}
+                      >
+                        <SelectTrigger>
+                          <SelectValue placeholder="Select company size" />
+                        </SelectTrigger>
+                        <SelectContent>
+                          <SelectItem value="1-10">1-10 employees</SelectItem>
+                          <SelectItem value="11-50">11-50 employees</SelectItem>
+                          <SelectItem value="51-200">51-200 employees</SelectItem>
+                          <SelectItem value="201-500">201-500 employees</SelectItem>
+                          <SelectItem value="501-1000">501-1000 employees</SelectItem>
+                          <SelectItem value="1000+">1000+ employees</SelectItem>
+                        </SelectContent>
+                      </Select>
+                    </div>
+                  </TabsContent>
+                  <TabsContent value="branding" className="space-y-4">
+                    <div className="space-y-2">
+                      <Label htmlFor="logo_url">Logo URL</Label>
                       >;
                         <SelectTrigger>;
                           <SelectValue placeholder="Select industry" />;
@@ -1426,11 +1502,12 @@ export default function TenantOnboarding() {;
                         </SelectContent>;
                       </Select>;
                     </div>;
+
                     <div className="space-y-2">;
                       <Label htmlFor="company_size">Company Size</Label>;
-                      <Select;
-                        name="company_size";
-                        value={formData.company_size} ;
+                      <Select
+                        name="company_size" 
+                        value={formData && formData.company_size} 
                         onValueChange={(value) => handleSelectChange("company_size", value)}
                       >;
                         <SelectTrigger>;
@@ -1447,14 +1524,16 @@ export default function TenantOnboarding() {;
                       </Select>;
                     </div>;
                   </TabsContent>;
+
                   <TabsContent value="branding" className="space-y-4">;
                     <div className="space-y-2">;
                       <Label htmlFor="logo_url">Logo URL</Label>;
-                      <Input;
-                        id="logo_url";
-                        name="logo_url";
-                        value={formData.logo_url}
+                      <Input
+                        id="logo_url"
+                        name="logo_url"
+                        value={formData && formData.logo_url}
                         onChange={handleInputChange}
+<<<<<<< HEAD
                         placeholder="https://example.com/logo.png";
 <<<<<<< HEAD
 
@@ -1594,11 +1673,14 @@ export default function TenantOnboarding() {;
                       />;
                       <p className="text-xs text-muted-foreground">;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                         If you want to use your own domain, enter it here. You'll need to configure DNS records.;
                       </p>;
                     </div>;
                   </TabsContent>;
                 </Tabs>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
                 <div className="flex justify - end space - x-2">;
@@ -1617,6 +1699,8 @@ export default function TenantOnboarding() {;
                   <Button type="submit" disabled={isSubmitting}>;
                     {isSubmitting ? "Creating..." : "Create Tenant"}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   </Button>;
                 </div>;
               </form>;
@@ -1629,6 +1713,7 @@ export default function TenantOnboarding() {;
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
@@ -1697,3 +1782,9 @@ Tenant Onboarding - Zion AI Marketplace" description="Onboard a new white-label 
 }
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+}
+;
+    </>);
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

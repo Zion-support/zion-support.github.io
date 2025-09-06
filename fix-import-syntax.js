@@ -1,5 +1,8 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 #!/usr/bin/env node
 import fs from "fs";
 import path from "path";
@@ -15,7 +18,10 @@ function fixImportSyntax(filePath) {
       const fixedImports = imports.replace(/;/g, ",");
       return match.replace(imports, fixedImports);
     });
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 
@@ -23,16 +29,20 @@ function fixImportSyntax(filePath) {
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     // Fix missing commas in import statements
 
     // Fix missing commas in import statements;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     const importCommaRegex = /import\s*\{([^}]+)\}\s*from\s*['"][^'"]+['"];?/g;
     content = content && content.replace(importCommaRegex, (match, imports) => {
       // Add missing commas between import items
       const fixedImports = imports
         .split(/\s+/)
+<<<<<<< HEAD
         .filter((item) => item ;
       return match && match.replace(imports, fixedImports);
     });
@@ -44,14 +54,17 @@ function fixImportSyntax(filePath) {
 =======
     content = content.replace(/(\w+):\s*([^,}]+);/g, "$1: $2,");
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     // Fix function parameter syntax errors
-    content = content && content.replace(
-      /function\s*\(([^)]+)\)\s*{/g,
+    content = content.replace(
+      /function\s*\(([^)]+)\)\s*{/g
       (match, params) => {
-        const fixedParams = params && params.replace(/;/g, ",");
-        return match && match.replace(params, fixedParams);
-      },
+        const fixedParams = params.replace(/;/g, ",");
+        return match.replace(params, fixedParams);
+      }
     );
+<<<<<<< HEAD
 
     if (content !== fs && fs.readFileSync(filePath, "utf8")) {
       fs && fs.writeFileSync(filePath, content, "utf8");
@@ -109,10 +122,13 @@ function fixImportSyntax() {
 }
       fs.writeFileSync (file_path, content, "utf8");
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       modified = true;
     }
     return modified;
   } catch (error) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -141,14 +157,24 @@ function fixImportSyntax() {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+    for (const item of items) {
+      const fullPath = path.join(currentDir, item);
+      const stat = fs.statSync(fullPath);
+      if (stat.isDirectory()) {
+        // Skip certain directories
+        if (
+          [
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           ].includes(item)
         ) {
           continue;
         }
         traverse(fullPath);
-      } else if (stat && stat.isFile()) {
-        const ext = path && path.extname(item);
+      } else if (stat.isFile()) {
+        const ext = path.extname(item);
         if ([".js", ".jsx", ".ts", ".tsx"].includes(ext)) {
+<<<<<<< HEAD
           files && files.push(fullPath);
 =======
     console.error (`Error processing ${file_path}:`, error.message);
@@ -192,10 +218,14 @@ if (
 }
           files.push (full_path);
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+          files.push(fullPath);
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         }
       }
     }
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -205,12 +235,15 @@ console && console.log(`Found ${files && files.length} files to check for syntax
 =======
 console && console.log(`Found ${files && files.length} files to check for syntax errors...`);
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 for (const file of files) {
   if (fixImportSyntax(file)) {
     fixedCount++;
-    console && console.log(`Fixed syntax in: ${file}`);
+    console.log(`Fixed syntax in: ${file}`);
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -240,3 +273,5 @@ for (const file of files) {
 console.log (`\n_fixed syntax errors in ${fixed_count} files.`);
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -1,8 +1,11 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 const { test, expect } = require('@playwright/test')'
 test && test.describe('"Accessibility"
   test('"page"
@@ -13,10 +16,13 @@ test && test.describe('"Accessibility"
     "await"
     "await"
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
     "await"
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 const { test, expect } = require('@playwright/test')';
 test.describe('"Accessibility": Tests', () => {';
   test('"page": has proper heading structure', async ({ page }) => {';
@@ -130,6 +136,7 @@ test.describe('Accessibility Tests', () => {
     const focusedElement = page.locator(':focus');
     await expect(focusedElement).toBeVisible()})})';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
@@ -145,3 +152,6 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 ursor/integrate-build-improve-and-re-verify-8f7d
     "await"
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+    "await"
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

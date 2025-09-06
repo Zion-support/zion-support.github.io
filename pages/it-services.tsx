@@ -1,16 +1,19 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import Head from 'next/head';
 
 import Link from 'next/link';
-=======
 import React from 'react';
 import Head from 'next / head';
 import Link from 'next / link';
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 import { motion } from 'framer-motion';
+<<<<<<< HEAD
 
 =======
 import Head from 'next/head';
@@ -18,6 +21,44 @@ import Head from 'next/head';
 import Link from 'next/link';
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
+=======
+  Server
+  Shield
+  Cloud
+  Database
+  Network
+  Monitor
+  Settings
+  CheckCircle
+  ArrowRight
+  Clock
+  Award
+  Star
+  Zap
+  TrendingUp
+  Users
+  Sprout
+  Eye
+  Bot
+  Lock
+  Globe
+  Cpu
+  HardDrive
+  Wifi
+  Smartphone
+  Laptop
+  MessageSquare
+  Mail
+  Building
+  BarChart3
+  Code
+  Search
+  ShoppingCart
+  BookOpen
+  Brain
+  DollarSign
+  Rocket
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   Server,
   Shield,
   Cloud,
@@ -54,9 +95,6 @@ import Link from 'next/link';
   Brain,
   DollarSign,
   Rocket;
-
-
-
 } from 'lucide-react';
 const it_services = [{
     title: 'Cloud Infrastructure Management',
@@ -68,6 +106,7 @@ const it_services = [{
     popular: true;
   },
   {
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -75,12 +114,15 @@ const it_services = [{
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     title: 'Cybersecurity Solutions'
     description: 'Enterprise-grade security services to protect your digital assets and data.'
     icon: Shield
     features: ['Threat Detection', 'Vulnerability Assessment', 'Security Audits', 'Incident Response']
     pricing: '$5,000 - $40,000/project'
     category: 'Security'
+<<<<<<< HEAD
 
 
 
@@ -88,6 +130,8 @@ const it_services = [{
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     popular: true
   }
   {
@@ -591,9 +635,12 @@ const supportLevels = [{
     features: ['Dedicated Team', 'SLA Guarantees', 'Custom Monitoring', 'Real-time Reports']
     pricing: 'Custom Pricing'
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {;
   Server,;
   Shield,;
@@ -1099,6 +1146,7 @@ title: 'AI-Powered IT Operations (AIOps)',;
     pricing: '$15,000 - $75,000/project',;
     category: 'Disaster Recovery',;
     popular: true;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 import Link from 'next/link',
@@ -1658,6 +1706,8 @@ title: 'AI-Powered IT Operations (AIOps)'
     category: 'Disaster Recovery'
     popular: true
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   }
 ];
 const technologies = [{ name: 'Cloud Platforms', icon: Cloud, description: 'AWS, Azure, GCP, DigitalOcean' },;
@@ -2238,12 +2288,15 @@ function ITServicesPage() {
                   </Head>;
       {/* Hero Section */}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       <section className="relative bg - gradient - to - br from - green - 900 via - emerald - 900 to - teal - 900 text - white py - 20 overflow - hidden">;
 <div className="absolute inset - 0">;
                   <div className="absolute top - 20 left - 10 w - 72 h - 72 bg - green - 500 rounded - full mix - blend - multiply filter blur - xl opacity - 20 animate - pulse">;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   </div>;
                   <div className="absolute top - 40 right - 10 w - 72 h - 72 bg - emerald - 500 rounded - full mix - blend - multiply filter blur - xl opacity - 20 animate - pulse animation - delay - 2000">;
                   </div>;
@@ -2259,6 +2312,7 @@ function ITServicesPage() {
                   <Server className="h - 16 w - 16 text - green - 400 mr - 4" />;
                   <h1 className="text - 4xl md:text - 6xl font - bold">;
                 IT{' '}
+<<<<<<< HEAD
 <<<<<<< HEAD
                 <span className="bg - gradient - to - r from - green - 400 to - emerald - 400 bg - clip - text text - transparent">;
 
@@ -2308,6 +2362,8 @@ function ITServicesPage() {
                   </div>
                   </section>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {/* Services Grid */}
       <section className="py - 20 bg - gray - 50">;
                   <div className="container mx - auto px - 4">;
@@ -2331,15 +2387,19 @@ function ITServicesPage() {
               return (
                 <motion.div;
                   key={index}
+<<<<<<< HEAD
 className="bg - white p - 8 rounded - xl shadow - lg hover:shadow - xl transition - all duration - 300 group;
 <<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from 'react';
 import Head from 'next / head';
 import Link from 'next / link';
 import { motion } from 'framer-motion';
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -2360,6 +2420,8 @@ import { motion } from 'framer-motion'
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { 
   Server, 
   Shield, 
@@ -2418,6 +2480,7 @@ import {
   Star,
   Zap,
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
@@ -2431,6 +2494,8 @@ import {
 =======
   Rocket,
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {
   Server
   Shield
@@ -2469,6 +2534,7 @@ import {
   BookOpen
   Rocket
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -2479,6 +2545,8 @@ import {
 =======
   Rocket,;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   Laptop;
 } from 'lucide-react';
 
@@ -2487,6 +2555,7 @@ import {
 import Layout from '../components/Layout'
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
   Rocket,;
@@ -2498,6 +2567,8 @@ origin/main
 } from 'lucide-react'
 import Layout from '../components/Layout'
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 const itServices = [
   {
     title: 'Cloud Infrastructure Management'
@@ -2516,6 +2587,7 @@ import Layout from '../components / Layout';
 ;
 const it_services = [;
   {
+<<<<<<< HEAD
     title: 'Cloud Infrastructure Management',
     description: 'Comprehensive cloud infrastructure setup, management, and optimization services',
     icon: Cloud,
@@ -2552,6 +2624,8 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     category: 'Security',
     popular: true,
     benefits: ['Enhanced security posture', 'Reduced risk', 'Compliance assurance', '24/7 protection'],
@@ -2569,6 +2643,7 @@ origin/automation-improvements-final
     popular: true
     benefits: ['Enhanced security posture', 'Reduced risk', 'Compliance assurance', '24/7 protection']
     marketPrice: '$4,000/month'
+<<<<<<< HEAD
 
 
 
@@ -2579,6 +2654,8 @@ origin/automation-improvements-final
 origin/main
     link: '/contact'
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     pricing: '$1, 500 - $8, 000 / month',
     category: 'Security',
     popular: true,
@@ -2612,6 +2689,7 @@ origin/main
     link: '/contact'
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 ]
 
@@ -2619,6 +2697,8 @@ origin/main
 =======
 ]
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 const industries = [
   { name: 'Healthcare', icon: Shield, description: 'Secure and compliant IT solutions for healthcare organizations' }
   { name: 'Finance', icon: TrendingUp, description: 'Robust IT infrastructure for financial services' }
@@ -2627,11 +2707,17 @@ const industries = [
   { name: 'Education', icon: GraduationCap, description: 'Educational technology and learning management systems' }
   { name: 'Government', icon: Globe, description: 'Secure government IT solutions and compliance' }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 ];
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+];
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export default function ITServices() {;
 
 
@@ -2639,12 +2725,16 @@ export default function ITServices() {;
   const [selectedCategory, setSelectedCategory] = useState('all');
   useEffect(() => {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import Link from 'next/link';
 import Head from 'next/head';
 import { useState, useEffect } from 'react';
 import { ContactInfo } from '../types';
 import ErrorBoundary from '../components/ErrorBoundary';
+<<<<<<< HEAD
 export default function ITServices() {
 =======
 ];
@@ -2652,33 +2742,30 @@ export default function ITServices() {
 export default function ITServices() {
 export default function ITServices() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+export default function ITServices() {
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const [isLoaded, setIsLoaded] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState('all');
   
   useEffect(() => {
+<<<<<<< HEAD
     const timer = setTimeout(() => setIsLoaded(true), 100);
     return () => clearTimeout(timer)
   }, []);
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
     const timer = setTimeout(() => setIsLoaded(true), 100);
     return () => clearTimeout(timer);  }, []);
   const contact: ContactInfo = {
-
-
-
-
-
   const filteredServices =
     selectedCategory === 'all'
       ? services
       : services.filter(service => service.category === selectedCategory);
 
   return (
-
-  const [isLoaded, setIsLoaded] = useState(false)
-  const [selectedCategory, setSelectedCategory] = useState('all')
-
 
 import Link from 'next/link';
 import Head from 'next/head';
@@ -2689,6 +2776,7 @@ export default function ITServices(req, res) {
   try {
   const [isLoaded, setIsLoaded] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState('all');
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -2705,6 +2793,8 @@ export default function ITServices(req, res) {
     address: '364 E Main St STE 1008 Middletown DE 19709',;
     site: 'https://ziontechgroup && ziontechgroup.com',  };
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const categories = [;
     { id: 'all', name: 'All IT Services', count: 100 },;
     { id: 'cloud', name: 'Cloud & Infrastructure', count: 25 },;
@@ -2712,6 +2802,7 @@ export default function ITServices(req, res) {
     { id: 'devops', name: 'DevOps & Automation', count: 15 },;
     { id: 'blockchain', name: 'Blockchain & Web3', count: 15 },;
     { id: 'quantum', name: 'Quantum Computing', count: 10 },;
+<<<<<<< HEAD
     { id: 'enterprise', name: 'Enterprise Solutions', count: 15 },  ];
 
   const services = [;
@@ -2735,220 +2826,53 @@ export default function ITServices(req, res) {
         'Optimization Solutions',;
         'Future-Proof Technology',;
       ],;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     },;
     {;
       id: 2,;
       name: 'Blockchain & Web3 Solutions',;
-      description:;
-        'Comprehensive blockchain development and Web3 integration services for modern businesses.',;
-      category: 'blockchain',;
-      features: [;
-        'Smart Contract Development',;
-        'DApp Creation',;
-        'DeFi Integration',;
-        'NFT Platforms',;
-      ],;
-      price: 'Custom Pricing',;
-      popular: true,;
-      benefits: [;
-        'Decentralized Solutions',;
-        'Enhanced Security',;
-        'Transparency',;
-        'Innovation',;
-      ],;
     },;
     {;
       id: 3,;
       name: 'DevSecOps & Security Automation',;
-      description:;
-        'Integrated development, security, and operations with automated security testing and deployment.',;
-      category: 'devops',;
-      features: [;
-        'CI/CD Pipelines',;
-        'Security Scanning',;
-        'Automated Testing',;
-        'Infrastructure as Code',;
-      ],;
-      price: '$199/month',;
-      popular: false,;
-      benefits: [;
-        'Faster Deployment',;
-        'Enhanced Security',;
-        'Reduced Risk',;
-        'Automated Compliance',;
-      ],;
     },;
     {;
       id: 4,;
       name: 'Enterprise Data Platform',;
-      description:;
-        'Comprehensive data management and analytics platform for enterprise-scale operations.',;
-      category: 'enterprise',;
-      features: [;
-        'Data Warehousing',;
-        'Real-time Analytics',;
-        'Data Governance',;
-        'Machine Learning Integration',;
-      ],;
-      price: '$299/month',;
-      popular: true,;
-      benefits: [;
-        'Data-Driven Insights',;
-        'Scalable Architecture',;
-        'Compliance Ready',;
-        'Advanced Analytics',;
-      ],;
     },;
     {;
       id: 5,;
       name: 'High-Performance Computing Solutions',;
-      description:;
-        'Optimized computing infrastructure for demanding computational workloads and research.',;
-      category: 'cloud',;
-      features: [;
-        'GPU Computing',;
-        'Parallel Processing',;
-        'Distributed Computing',;
-        'Performance Monitoring',;
-      ],;
-      price: '$399/month',;
-      popular: false,;
-      benefits: [;
-        'Massive Processing Power',;
-        'Scalable Resources',;
-        'Cost Optimization',;
-        'Advanced Capabilities',;
-      ],;
     },;
     {;
       id: 6,;
       name: 'Cloud Migration Services',;
-      description:;
-        'Seamless migration of applications and infrastructure to cloud platforms with zero downtime.',;
-      category: 'cloud',;
-      features: [;
-        'Assessment & Planning',;
-        'Data Migration',;
-        'Application Modernization',;
-        'Performance Optimization',;
-      ],;
-      price: 'Custom Pricing',;
-      popular: true,;
-      benefits: [;
-        'Reduced Costs',;
-        'Enhanced Scalability',;
-        'Improved Security',;
-        'Better Performance',;
-      ],;
     },;
     {;
       id: 7,;
       name: 'Infrastructure as Code',;
-      description:;
-        'Automated infrastructure provisioning and management using modern DevOps practices.',;
-      category: 'devops',;
-      features: [;
-        'Terraform Automation',;
-        'Configuration Management',;
-        'Version Control',;
-        'Environment Provisioning',;
-      ],;
-      price: '$149/month',;
-      popular: false,;
-      benefits: [;
-        'Consistent Environments',;
-        'Faster Provisioning',;
-        'Version Control',;
-        'Reduced Errors',;
-      ],;
     },;
     {;
       id: 8,;
       name: 'Disaster Recovery Solutions',;
-      description:;
-        'Comprehensive backup and disaster recovery strategies to ensure business continuity.',;
-      category: 'security',;
-      features: [;
-        'Automated Backups',;
-        'Multi-site Replication',;
-        'Recovery Testing',;
-        'RTO/RPO Optimization',;
-      ],;
-      price: '$179/month',;
-      popular: true,;
-      benefits: [;
-        'Business Continuity',;
-        'Data Protection',;
-        'Minimal Downtime',;
-        'Compliance Ready',;
-      ],;
     },;
     {;
       id: 9,;
       name: 'Cybersecurity Assessment',;
-      description:;
-        'Comprehensive security evaluation and penetration testing for enterprise systems.',;
-      category: 'security',;
-      features: [;
-        'Vulnerability Assessment',;
-        'Penetration Testing',;
-        'Compliance Auditing',;
-        'Security Recommendations',;
-      ],;
-      price: '$249/month',;
-      popular: false,;
-      benefits: [;
-        'Risk Identification',;
-        'Compliance Assurance',;
-        'Security Hardening',;
-        'Threat Mitigation',;
-      ],;
     },;
     {;
       id: 10,;
       name: 'API Development & Integration',;
-      description:;
-        'Custom API development and third-party integration services for seamless connectivity.',;
-      category: 'enterprise',;
-      features: [;
-        'RESTful APIs',;
-        'GraphQL Services',;
-        'Third-party Integration',;
-        'API Documentation',;
-      ],;
-      price: '$129/month',;
-      popular: true,;
-      benefits: [;
-        'System Integration',;
-        'Improved Efficiency',;
-        'Scalable Architecture',;
-        'Developer Experience',;
-      ],;
     },;
     {;
       id: 11,;
       name: 'Microservices Architecture',;
-      description:;
-        'Design and implementation of microservices-based applications for scalable systems.',;
-      category: 'enterprise',;
-      features: [;
-        'Service Design',;
-        'Container Orchestration',;
-        'Service Mesh',;
-        'Monitoring & Logging',;
-      ],;
-      price: '$199/month',;
-      popular: false,;
-      benefits: [;
-        'Scalable Architecture',;
-        'Independent Deployment',;
-        'Technology Diversity',;
-        'Fault Isolation',;
-      ],;
     },;
     {;
       id: 12,;
       name: 'Edge Computing Solutions',;
+<<<<<<< HEAD
       description:;
         'Distributed computing infrastructure for low-latency applications and IoT systems.',;
       category: 'cloud',;
@@ -3160,6 +3084,10 @@ export default function ITServices(req, res) {
       <Head>
         <title>IT Services - Zion Tech Group</title>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+      <Head>
+        <title>IT Services - Zion Tech Group</title>
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <meta
           name='description'
           content='Explore our 100+ comprehensive IT services including cloud computing, cybersecurity, DevOps, blockchain solutions, and quantum computing consulting.'
@@ -3168,7 +3096,10 @@ export default function ITServices(req, res) {
           name='keywords'
           content='IT services, cloud computing, cybersecurity, DevOps, blockchain, quantum computing, enterprise solutions, infrastructure'
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <ErrorBoundary level='page'>
         <main className='min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white'>
           {/* Hero Section */}
@@ -3191,6 +3122,7 @@ export default function ITServices(req, res) {
                 cutting-edge technology solutions that scale with your business
                 and drive innovation.              </p>
             </div>
+<<<<<<< HEAD
           </section>
           {/* Category Filter */}
           <section className='py-8 px-4'>
@@ -3278,6 +3210,8 @@ export default function ITServices(req, res) {
               </div>
             </div>
           </section>
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
           {/* Services Grid */}
           <section className='py-16 px-4' role='main'>
@@ -3298,51 +3232,55 @@ export default function ITServices(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+        />;
+        <meta name='viewport' content='width=device-width, initial-scale=1 && 1.0' />;
+        <meta name='robots' content='index, follow' />;
+        <link rel='canonical' href={`${contact && contact.site}/it-services`} />;
+      </Head>;
+
+      <ErrorBoundary level='page'>;
+        <main className='min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white'>;
+
+          {/* Hero Section */}
+          <section className='py-20 px-4 text-center' role='banner'>;
+            <div className='max-w-4xl mx-auto'>;
+              <h1                className={`text-5xl md:text-6xl font-extrabold tracking-tight mb-6 transition-all duration-1000 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
               >;
                 IT Services;
               </h1>;
-              <p className={`text-xl md:text-2xl text-slate-300 mb-8 transition-all duration-1000 delay-200 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>;
+              <p
+                className={`text-xl md:text-2xl text-slate-300 mb-8 transition-all duration-1000 delay-200 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>;
                 100+ Comprehensive IT Solutions;
               </p>;
-              <p className={`text-lg text-slate-400 mb-12 max-w-3xl mx-auto transition-all duration-1000 delay-400 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>;
-                Transform your business with our enterprise-grade IT services. From cloud infrastructure;
-                to quantum computing, we provide cutting-edge technology solutions that scale with your;
-                business and drive innovation.;
-              </p>;
+              <p
+
+                className={`text-lg text-slate-400 mb-12 max-w-3xl mx-auto transition-all duration-1000 delay-400 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>;
+                Transform your business with our enterprise-grade IT services.;
+                From cloud infrastructure to quantum computing, we provide;
+                cutting-edge technology solutions that scale with your business;
+                and drive innovation.              </p>;
             </div>;
           </section>;
-          {/* Category Filter */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-          <section className="py-8 px-4">
-            <div className="max-w-6xl mx-auto">
-              <div className="flex flex-wrap justify-center gap-4 mb-8">
-                {categories.map((category) => (
-                  <button
-                    key={category.id  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                    onClick={() => setSelectedCategory(category.id)  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+
+
+          {/* Category Filter */}
+          <section className='py-8 px-4'>;
+            <div className='max-w-6xl mx-auto'>;
+              <div className='flex flex-wrap justify-center gap-4 mb-8'>;
+                {categories && categories.map(category => (                  <button
+                    key={category && category.id}
+                    onClick={() => setSelectedCategory(category && category.id)}
                     className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${;
-                      selectedCategory === category.id;
+                      selectedCategory === category && category.id;
                         ? 'bg-green-600 text-white';
                         : 'bg-slate-800 text-slate-300 hover:bg-slate-700';
-                    }`  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+
+                    }`}
                   >;
-                    {category.name} ({category.count});
+                    {category && category.name} ({category && category.count});
                   </button>;
+<<<<<<< HEAD
                 ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -3360,10 +3298,15 @@ export default function ITServices(req, res) {
             <div className="max-w-7xl mx-auto">
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+                ))}
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 {filteredServices.map((service, index) => (
                   <div                    key={service.id}
                     className={`p-6 bg-slate-900/60 rounded-xl border border-white/10 hover:border-green-500/40 transition-all duration-300 hover:scale-105 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
                     style={{ transitionDelay: `${index * 100}ms` }}
+<<<<<<< HEAD
                   >
                     {service.popular && (
                       <div className='absolute -top-2 -right-2 bg-green-600 text-white text-xs font-bold px-2 py-1 rounded-full'>
@@ -3377,6 +3320,8 @@ export default function ITServices(req, res) {
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
                     )}
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     )}
 
                     <h3 className='text-xl font-bold mb-3'>{service.name}</h3>
@@ -3398,18 +3343,19 @@ export default function ITServices(req, res) {
                             <span className='w-1.5 h-1.5 bg-green-400 rounded-full mr-2 flex-shrink-0'></span>                            {feature}
                           </li>
                         ))}
-                      </ul>;
-                    </div>;
-                    <div className='mb-4'>;
-                      <h4 className='text-sm font-semibold text-blue-400 mb-2'>;
-                        Benefits:;
-                      </h4>;
-                      <div className='flex flex-wrap gap-1'>;
-                        {service && service.benefits.map((benefit, benefitIndex) => (;
+                      </ul>
+                    </div>
+                    <div className='mb-4'>
+                      <h4 className='text-sm font-semibold text-blue-400 mb-2'>
+                        Benefits:
+                      </h4>
+                      <div className='flex flex-wrap gap-1'>
+                        {service.benefits.map((benefit, benefitIndex) => (
                           <span
                             key={benefitIndex}
-                            className='text-xs bg-slate-800 text-slate-300 px-2 py-1 rounded'>                            {benefit}
-                          </span>;
+                            className='text-xs bg-slate-800 text-slate-300 px-2 py-1 rounded'
+                          >                            {benefit}
+                          </span>
                         ))}
                       </div>
                     </div>
@@ -3423,6 +3369,7 @@ export default function ITServices(req, res) {
                     </div>
                     <button className='w-full py-2 bg-green-600 hover:bg-green-700 rounded-lg font-semibold transition-colors'>                      Learn More
                     </button>
+<<<<<<< HEAD
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                   </div>
@@ -3437,50 +3384,18 @@ export default function ITServices(req, res) {
               </div>;
             </div>;
           </section>;
+=======
+                  </div>
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           {/* Technology Stack Section */}
-          <section className='py-16 px-4 bg-slate-900/40'>;
-            <div className='max-w-6xl mx-auto'>;
-              <h2 className='text-3xl md:text-4xl font-bold text-center mb-12'>;
-                Our Technology Stack;
-              </h2>;
-              <div className='grid md:grid-cols-2 lg:grid-cols-4 gap-8'>;
-                <div className='text-center'>;
-                  <div className='w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4'>;
-                    <svg
-                      className='w-8 h-8 text-white'
-                      fill='none'
-                      stroke='currentColor'
-                      viewBox='0 0 24 24'>;
-                      <path
-                        strokeLinecap='round'
-                        strokeLinejoin='round'
-                        strokeWidth={2}
-                        d='M3 15a4 4 0 004 4M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z'
-                      />
-                    )  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                    <h3 className="text-xl font-bold mb-3">{service.name}</h3>
-                    <p className="text-slate-300 mb-4 text-sm">{service.description}</p>
-                    <div className="mb-4">
-                      <h4 className="text-sm font-semibold text-green-400 mb-2">Key Features:</h4>
-                      <ul className="text-slate-400 text-sm space-y-1">
-                        {service.features.map((feature, featureIndex) => (
-                          <li key={featureIndex} className="flex items-center">
-                            <span className="w-1.5 h-1.5 bg-green-400 rounded-full mr-2 flex-shrink-0"></span>
-                            {feature  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                          </li>;
-                        ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+          <section className='py-16 px-4 bg-slate-900/40'>
+            <div className='max-w-6xl mx-auto'>
+              <h2 className='text-3xl md:text-4xl font-bold text-center mb-12'>
+                Our Technology Stack
+              </h2>
+              <div className='grid md:grid-cols-2 lg:grid-cols-4 gap-8'>
+                <div className='text-center'>
+                  <div className='w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4'>
                       </ul>
                     </div>
                     <div className='mb-4'>
@@ -3537,7 +3452,16 @@ origin/automation-improvements-final
             </div>
           </section>
 
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+                  </div>
+
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           {/* Technology Stack Section */}
           <section className='py-16 px-4 bg-slate-900/40'>
             <div className='max-w-6xl mx-auto'>
@@ -3596,6 +3520,7 @@ origin/automation-improvements-final
                         strokeWidth={2}
                         d='M3 15a4 4 0 004 4M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z'
 <<<<<<< HEAD
+<<<<<<< HEAD
 
                       />;
                     </svg>;
@@ -3611,6 +3536,8 @@ origin/automation-improvements-final
 
 =======
                       />
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       </div>;
                     </div>;
                     <div className="flex items-center justify-between mb-4">;
@@ -3653,7 +3580,23 @@ origin/automation-improvements-final
                 </div>
                 <div className='text-center'>
                   <div className='w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4'>
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+                      />;
+                    </svg>;
+                  </div>;
+                  <h3 className='text-xl font-bold mb-2'>Cloud Platforms</h3>;
+                  <p className='text-slate-400'>;
+                    AWS, Azure, GCP, and hybrid cloud solutions;
+                  </p>;
+                </div>;
+
+                <div className='text-center'>;
+                  <div className='w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4'>;
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     <svg
                       className='w-8 h-8 text-white'
                       fill='none'
@@ -3663,6 +3606,10 @@ origin/automation-improvements-final
                         strokeLinecap='round'
                         strokeLinejoin='round'
                         strokeWidth={2}
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
 
 
 
@@ -3688,6 +3635,7 @@ origin/automation-improvements-final
                 <div className='text-center'>;
                   <div className='w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4'>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
                         d='M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z'
@@ -3706,6 +3654,9 @@ origin/automation-improvements-final
                 <div className='text-center'>
                   <div className='w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4'>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     <svg
                       className='w-8 h-8 text-white'
                       fill='none'
@@ -3722,6 +3673,11 @@ origin/automation-improvements-final
                         strokeLinejoin='round'
                         strokeWidth={2}
                         d='M15 12a3 3 0 11-6 0 3 3 0 016 0z'
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
 
 
 
@@ -3746,6 +3702,7 @@ origin/automation-improvements-final
                 <div className='text-center'>;
                   <div className='w-16 h-16 bg-orange-600 rounded-full flex items-center justify-center mx-auto mb-4'>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
                       />
@@ -3764,6 +3721,9 @@ origin/automation-improvements-final
                 <div className='text-center'>
                   <div className='w-16 h-16 bg-orange-600 rounded-full flex items-center justify-center mx-auto mb-4'>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     <svg
                       className='w-8 h-8 text-white'
                       fill='none'
@@ -3773,6 +3733,10 @@ origin/automation-improvements-final
                         strokeLinecap='round'
                         strokeLinejoin='round'
                         strokeWidth={2}
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-orange-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
 
 
 
@@ -3786,6 +3750,18 @@ origin/automation-improvements-final
               </div>
             </div>
           </section>
+          {/* CTA Section */}
+          <section className='py-16 px-4'>
+            <div className='max-w-4xl mx-auto text-center'>
+              <h2 className='text-3xl md:text-4xl font-bold mb-8'>
+          {/* CTA Section */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+          <section className="py-16 px-4">
+            <div className="max-w-4xl mx-auto text-center">
+              <h2 className="text-3xl md:text-4xl font-bold mb-8">
 
 
 
@@ -3821,6 +3797,7 @@ origin/automation-improvements-final
                 technology solutions can modernize your infrastructure and;
                 accelerate your digital transformation.;
               </p>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
               <div className='flex flex-col sm:flex-row items-center justify-center gap-4'>;
@@ -3871,6 +3848,13 @@ origin/automation-improvements-final
               <div className='flex flex-col sm:flex-row items-center justify-center gap-4'>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+              <div className='flex flex-col sm:flex-row items-center justify-center gap-4'>;
+
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <Link
                   href='/contact'
                   className='px-8 py-3 bg-green-600 hover:bg-green-700 rounded-lg font-semibold transition-colors'>;
@@ -3878,6 +3862,7 @@ origin/automation-improvements-final
                   <ArrowRight className="ml-2 w-4 h-4" />;
                 </Link>;
                 <a
+<<<<<<< HEAD
                   href={`tel:${contact && contact.phone.replace(/[^\d+]/g, '')}`}
                   className='px-8 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-colors'>;
                   Call {contact && contact.phone}
@@ -3886,13 +3871,23 @@ origin/automation-improvements-final
                 <a
 
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   href={`tel:${contact.phone.replace(/[^\d+]/g, '')}`}
                   className='px-8 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-colors'
                 >
                   Call {contact.phone}
                 </a>
+                  href={`tel:${contact && contact.phone.replace(/[^\d+]/g, '')}`}
+                  className='px-8 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-colors'>;
+                  Call {contact && contact.phone}
+                </a>;
                 <a
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   href={`mailto:${contact && contact.email}`}
                   className='px-8 py-3 bg-slate-800 hover:bg-slate-700 border border-white/10 rounded-lg font-semibold transition-colors'>;
                   Email Us;
@@ -3902,10 +3897,15 @@ origin/automation-improvements-final
           </div>;
         </section>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         {/* Services Grid */}
         <section className="py-16 px-4">;
           <div className="max-w-7xl mx-auto">;
@@ -3914,6 +3914,7 @@ origin/automation-improvements-final
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
               viewport={{ once: true }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -3932,12 +3933,15 @@ origin/automation-improvements-final
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   key={index}
                   className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow"
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
                   viewport={{ once: true }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -3967,14 +3971,19 @@ whileHover={{ y: -5 }} ">;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                           {feature}
-                        </li>;
+                        </li>
                       ))}
-                    </ul>;
-                  </div>;
-                  <div className="mb-4">;
-                  <span className="text-sm font-semibold text-green-600">{service && service.pricing}</span>;
-                  </div>;
+                    </ul>
+                  </div>
+  );
+
+            </div>
+                  <div className="mb-4">
+                  <span className="text-sm font-semibold text-green-600">{service.pricing}</span>
+                  </div>
                   <Link
                     href="/contact"
                     className="w-full bg-green-600 hover:bg-green-700 text-white py-2 px-4 rounded-lg font-semibold transition-colors inline-flex items-center justify-center text-sm">;
@@ -4092,6 +4101,7 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
@@ -4108,6 +4118,8 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
                   {level.pricing}
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <Layout>
       <Head>
         <title>IT Services - Zion Tech Group</title>
@@ -4130,6 +4142,7 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
           <section className='py-20 px-4 text-center' role='banner'>
             <div className='max-w-4xl mx-auto'>
               <h1
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -4159,13 +4172,14 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       description: 'Expert guidance on quantum computing implementation and optimization for enterprise applications.',
       category: 'quantum',
       features: ['Quantum Algorithm DesignHardware SelectionPerformance OptimizationSecurity Implementation'],
       price: 'Custom Pricing',
       popular: true,
       benefits: ['Exponential SpeedupAdvanced CryptographyOptimization SolutionsFuture-Proof Technology']
-    };
     {
       id: 2,
       name: 'Blockchain & Web3 Solutions',
@@ -4175,17 +4189,14 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
       price: 'Custom Pricing',
       popular: true,
       benefits: ['Decentralized SolutionsEnhanced SecurityTransparencyInnovation']
-    };
     {
       id: 3,
       name: 'DevSecOps & Security Automation',
       description: 'Integrated development, security, and operations with automated security testing and deployment.',
-    category: 'devops',
       features: ['CI/CD PipelinesSecurity ScanningAutomated TestingInfrastructure as Code'],
       price: '$199/month',
       popular: false,
       benefits: ['Faster DeploymentEnhanced SecurityReduced RiskAutomated Compliance']
-    };
     {
       id: 4,
       name: 'Enterprise Data Platform',
@@ -4195,7 +4206,6 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
       price: '$299/month',
       popular: true,
       benefits: ['Data-Driven InsightsScalable ArchitectureCompliance ReadyAdvanced Analytics']
-    };
     {
       id: 5,
       name: 'High-Performance Computing Solutions',
@@ -4205,7 +4215,6 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
       price: '$399/month',
       popular: false,
       benefits: ['Massive Processing PowerScalable ResourcesCost OptimizationAdvanced Capabilities']
-    };
     {
       id: 6,
       name: 'Cloud Migration Services',
@@ -4215,7 +4224,6 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
       price: 'Custom Pricing',
       popular: true,
       benefits: ['Reduced CostsEnhanced ScalabilityImproved SecurityBetter Performance']
-    };
     {
       id: 7,
       name: 'Infrastructure as Code',
@@ -4225,7 +4233,6 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
       price: '$149/month',
       popular: false,
       benefits: ['Consistent EnvironmentsFaster ProvisioningVersion ControlReduced Errors']
-    };
     {
       id: 8,
       name: 'Disaster Recovery Solutions',
@@ -4235,7 +4242,6 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
       price: '$179/month',
       popular: true,
       benefits: ['Business ContinuityData ProtectionMinimal DowntimeCompliance Ready']
-    };
     {
       id: 9,
       name: 'Cybersecurity Assessment',
@@ -4245,7 +4251,6 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
       price: '$249/month',
       popular: false,
       benefits: ['Risk IdentificationCompliance AssuranceSecurity HardeningThreat Mitigation']
-    };
     {
       id: 10,
       name: 'API Development & Integration',
@@ -4255,7 +4260,6 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
       price: '$129/month',
       popular: true,
       benefits: ['System IntegrationImproved EfficiencyScalable ArchitectureDeveloper Experience']
-    };
     {
       id: 11,
       name: 'Microservices Architecture',
@@ -4265,7 +4269,6 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
       price: '$199/month',
       popular: false,
       benefits: ['Scalable ArchitectureIndependent DeploymentTechnology DiversityFault Isolation']
-    };
     {
       id: 12,
       name: 'Edge Computing Solutions',
@@ -4276,12 +4279,6 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
       popular: true,
       benefits: ['Reduced LatencyBandwidth SavingsOffline CapabilityEnhanced Performance']
     }
-  ];
-
-  const filteredServices = selectedCategory === 'all' 
-    ? services 
-    : services.filter(service => service.category === selectedCategory);
-
   return (
     <>
       <Head>
@@ -4292,7 +4289,6 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href={`${contact.site}/it-services`} />
       </Head>
-      
       <ErrorBoundary level="page">
         <main className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white">
           {/* Hero Section */}
@@ -4300,6 +4296,7 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
             <div className="max-w-4xl mx-auto">
               <h1 
                 className={`text-5xl md:text-6xl font-extrabold tracking-tight mb-6 transition-all duration-1000 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
               >
                 IT Services
@@ -4531,13 +4528,12 @@ ursor/integrate-build-improve-and-re-verify-8f7d
                 cutting-edge technology solutions that scale with your business
                 and drive innovation.
               <p className={`text-xl md:text-2xl text-slate-300 mb-8 transition-all duration-1000 delay-200 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 100+ Comprehensive IT Solutions
               </p>
               <p className={`text-lg text-slate-400 mb-12 max-w-3xl mx-auto transition-all duration-1000 delay-400 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
                 Transform your business with our enterprise-grade IT services. From cloud infrastructure 
-            </div>
-          </section>
-{/* Category Filter */}
                 to quantum computing, we provide cutting-edge technology solutions that scale with your 
                 business and drive innovation.
               </p>
@@ -4546,16 +4542,18 @@ ursor/integrate-build-improve-and-re-verify-8f7d
         </div>
       </section>
                   </div>
-  );
                   href={`tel:${contact.phone.replace(/[^\d+]/g,'')}`  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+
+
+
+                className={`text-5xl md:text-6xl font-extrabold tracking-tight mb-6 transition-all duration-1000 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+
+
+
 }
-
-          </section>
-
-          {/* Category Filter */}
           </section>
 
           {/* Category Filter */}
@@ -4565,6 +4563,7 @@ ursor/integrate-build-improve-and-re-verify-8f7d
                 {categories.map(category => (
 ursor/integrate-build-improve-and-re-verify-8f7d
 
+<<<<<<< HEAD
                   <Link
                     href={service.link}
                     className="w-full inline-flex items-center justify-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
@@ -4637,6 +4636,8 @@ ursor/integrate-build-improve-and-re-verify-8f7d
                 {categories.map((category) => (
                   <button
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ;
 const industries = [;
   { name: 'Healthcare', icon: Shield, description: 'Secure and compliant IT solutions for healthcare organizations' },
@@ -4977,9 +4978,12 @@ function ITServices() {
               <div className='flex flex - wrap justify - center gap - 4 mb - 8'>;
                 {categories.map (category => (                  <button;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     key={category.id}
                     on_click={() => setSelectedCategory (category.id)}
                     className={`px - 6 py - 3 rounded - lg font - semibold transition - all duration - 300 ${
@@ -4987,6 +4991,7 @@ function ITServices() {
                         ? 'bg - green - 600 text - white';
                         : 'bg - slate - 800 text - slate - 300 hover:bg - slate - 700';
                     }`}
+<<<<<<< HEAD
 <<<<<<< HEAD
                   >;
                     {category.name} ({category.count});
@@ -5547,6 +5552,9 @@ className="text - center p - 6 rounded - lg hover:bg - gray - 50 transition - co
               <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-8'>
                 {filteredServices.map((service, index) => (
                   <div
+=======
+                  >;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <section className="py-16 px-4" role="main">
             <div className="max-w-7xl mx-auto">
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -5557,24 +5565,6 @@ className="text - center p - 6 rounded - lg hover:bg - gray - 50 transition - co
                     style={{ transitionDelay: `${index * 100}ms` }}
                   >
                     {service.popular && (
-                      <div className='absolute -top-2 -right-2 bg-green-600 text-white text-xs font-bold px-2 py-1 rounded-full'>
-                        Popular
-                      </div>
-                    )}
-
-                    <h3 className='text-xl font-bold mb-3'>{service.name}</h3>
-                    <p className='text-slate-300 mb-4 text-sm'>
-                      {service.description}
-                    </p>
-
-                    <div className='mb-4'>
-                      <h4 className='text-sm font-semibold text-green-400 mb-2'>
-                        Key Features:
-                      </h4>
-                      <ul className='text-slate-400 text-sm space-y-1'>
-                        {service.features.map((feature, featureIndex) => (
-                          <li key={featureIndex} className='flex items-center'>
-                            <span className='w-1.5 h-1.5 bg-green-400 rounded-full mr-2 flex-shrink-0'></span>
                       <div className="absolute -top-2 -right-2 bg-green-600 text-white text-xs font-bold px-2 py-1 rounded-full">
                         Popular
                       </div>
@@ -5595,53 +5585,15 @@ className="text - center p - 6 rounded - lg hover:bg - gray - 50 transition - co
                       </ul>
                     </div>
 
-                    <div className='mb-4'>
-                      <h4 className='text-sm font-semibold text-blue-400 mb-2'>
-                        Benefits:
-                      </h4>
-                      <div className='flex flex-wrap gap-1'>
-                        {service.benefits.map((benefit, benefitIndex) => (
-                          <span
-                            key={benefitIndex}
-                            className='text-xs bg-slate-800 text-slate-300 px-2 py-1 rounded'
-                          >
-                    <div className="mb-4">
-                      <h4 className="text-sm font-semibold text-blue-400 mb-2">Benefits:</h4>
-                      <div className="flex flex-wrap gap-1">
-                        {service.benefits.map((benefit, benefitIndex) => (
-                          <span key={benefitIndex} className="text-xs bg-slate-800 text-slate-300 px-2 py-1 rounded">
-                            {benefit}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
-
-                    <div className='flex items-center justify-between mb-4'>
-                      <span className='text-2xl font-bold text-green-400'>
-                        {service.price}
-                      </span>
-                      <span className='text-xs text-slate-500 capitalize'>
-                        {service.category.replace('-', ' ')}
-                      </span>
-                    </div>
-
-                    <button className='w-full py-2 bg-green-600 hover:bg-green-700 rounded-lg font-semibold transition-colors'>
-                    
-                    <div className="flex items-center justify-between mb-4">
-                      <span className="text-2xl font-bold text-green-400">{service.price}</span>
-                      <span className="text-xs text-slate-500 capitalize">{service.category.replace('- ')}</span>
-                    </div>
-                    
-                    <button className="w-full py-2 bg-green-600 hover:bg-green-700 rounded-lg font-semibold transition-colors">
-                      Learn More
-                    </button>
-                  </div>
                 ))}
               </div>
             </div>
           </section>
 
+<<<<<<< HEAD
           {/* Technology Stack Section */}
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <section className='py-16 px-4 bg-slate-900/40'>
             <div className='max-w-6xl mx-auto'>
               <h2 className='text-3xl md:text-4xl font-bold text-center mb-12'>
@@ -5669,22 +5621,22 @@ className="text - center p - 6 rounded - lg hover:bg - gray - 50 transition - co
                   <p className='text-slate-400'>
                     AWS, Azure, GCP, and hybrid cloud solutions
                   </p>
-origin/automation-improvements-final
                 </div>
                   <ul className="space-y-3 mb-8">
                   {level.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-gray-600">
                   <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />
                       {feature}
-                    </li>
+                    </li>;
                   ))}
-                </ul>
+                </ul>;
                   <Link
                   href="/contact"
                   className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors inline-flex items-center justify-center ${
                     index === 1
 ? 'bg-green-600 hover: bg-green-700 text-white'
                       : 'bg-gray-100 hover:bg-gray-200 text-gray-900'
+<<<<<<< HEAD
                   }`}
                 >
                   <span>Choose Plan</span>
@@ -5814,10 +5766,13 @@ origin/automation-improvements-final
 
 =======
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   );
 
             </div>
             </div>
+<<<<<<< HEAD
 
           </motion.div>
         </div>
@@ -5843,12 +5798,61 @@ origin/automation-improvements-final
 ursor/integrate-build-improve-and-re-verify-b76c
 origin/main
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           </section>
         </main>
       </ErrorBoundary>
     </>
   )
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+}
+          <section className="py-16 px-4 bg-slate-900/40">;
+            <div className="max-w-6xl mx-auto">;
+              <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">;
+                Our Technology Stack;
+              </h2>;
+              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">;
+                <div className="text-center">;
+                  <div className="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4">;
+                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">;
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 15a4 4 0 004 4M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />;
+                    </svg>;
+                  </div>;
+                  <h3 className="text-xl font-bold mb-2">Cloud Platforms</h3>;
+                  <p className="text-slate-400">AWS, Azure, GCP, and hybrid cloud solutions</p>;
+                </div>;
+                <div className="text-center">;
+                  <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">;
+                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">;
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />;
+                    </svg>;
+                  </div>;
+                  <h3 className="text-xl font-bold mb-2">Security</h3>;
+                  <p className="text-slate-400">Zero-trust architecture and advanced threat protection</p>;
+                </div>;
+                <div className="text-center">;
+                  <div className="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">;
+                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">;
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />;
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />;
+                    </svg>;
+                  </div>;
+                  <h3 className="text-xl font-bold mb-2">DevOps</h3>;
+                  <p className="text-slate-400">CI/CD pipelines and infrastructure automation</p>;
+                </div>;
+                <div className="text-center">;
+                  <div className="w-16 h-16 bg-orange-600 rounded-full flex items-center justify-center mx-auto mb-4">;
+                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">;
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />;
+                    </svg>;
+                  </div>;
+                  <h3 className="text-xl font-bold mb-2">Blockchain</h3>;
+                  <p className="text-slate-400">Smart contracts and decentralized applications</p>;
+                </div>;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
               transition={{ duration: 0 && 0.8, delay: 0 && 0.3 }}
               viewport={{ once: true }}>;
@@ -5888,10 +5892,13 @@ origin/main
   );
 }
 
+<<<<<<< HEAD
 =======
 =======
               transition={{ duration: 0 && 0.8, delay: 0 && 0.3 }}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <section className="py - 20 bg - gradient - to - r from - green - 600 to - emerald - 600 text - white">;
 <div className="container mx - auto px - 4 text - center">;
                   <motion.div;
@@ -6011,6 +6018,7 @@ origin/main
           </section>;
         </main>;
       </ErrorBoundary>;
+<<<<<<< HEAD
     </>);
 }
 <<<<<<< HEAD
@@ -6123,3 +6131,12 @@ origin/main
 }
 ursor/fix-lint-push-and-merge-to-main-ae4e
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+}
+ursor/fix-lint-push-and-merge-to-main-ae4e
+    </>);
+}
+
+
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

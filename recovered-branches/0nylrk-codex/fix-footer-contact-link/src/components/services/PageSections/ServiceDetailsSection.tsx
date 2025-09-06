@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -29,9 +30,10 @@ export function ServiceDetailsSection({
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { CountryPricing } from "@/data/onsiteServicePricing";
 import { CountryServiceSelector } from "../CountryServiceSelector";
->>>>>>> main
 interface ServiceDetailsSectionProps {
   selectedCountry: CountryPricing | null;
   setSelectedCountry: (country: CountryPricing | null) => void;
@@ -59,6 +61,7 @@ export function ServiceDetailsSection({
           </p>
         </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 import { CountryPricing  } from '@/data / onsiteServicePricing';
@@ -72,12 +75,15 @@ export /**
  */
 function ServiceDetailsSection() {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <div id="service - details" className="mt - 12">;
       {selected_country ? (
         <CountryServiceSelector;
           selected_country={selected_country}
           onCountryChange={setSelectedCountry}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -131,6 +137,8 @@ export function ServiceDetailsSection({ selectedCountry, setSelectedCountry } Se
         </div>;
 <<<<<<< HEAD
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         />) : (
         <div className="text - center">;
           <h2 className="text - 2xl font - bold text - white mb - 4">;
@@ -142,6 +150,7 @@ export function ServiceDetailsSection({ selectedCountry, setSelectedCountry } Se
           </p>;
         </div>)}
     </div>);
+<<<<<<< HEAD
 =======
 =======
       )}
@@ -176,7 +185,16 @@ setSelectedCountry: (country: CountryPricing | null) => void
 }
       )}
     </div>
+=======
+
+      )}
+    </div>
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   )
+
 }
+<<<<<<< HEAD
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

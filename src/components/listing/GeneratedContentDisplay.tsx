@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
               <Badge
@@ -20,8 +21,12 @@ import { ArrowRight } from 'lucide-react'
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+import { ArrowRight } from 'lucide-react'
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 interface GeneratedContent {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
   description: string
@@ -43,11 +48,19 @@ export function GeneratedContentDisplay({
 import React from "react",
 import { Button } from "@/components/ui/button",
 import { Badge } from "@/components/ui/badge",
+=======
+import React from "react";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { ArrowRight } from 'lucide-react'
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 
 interface GeneratedContent {
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   description: string,
   tags: string[],
   suggestedPrice: {
@@ -65,9 +78,6 @@ interface GeneratedContentDisplayProps {
 }
 
 export function GeneratedContentDisplay({ content, onApply }: GeneratedContentDisplayProps) {
-
-
-
   return (
     <Card className="border border-zion-blue-light bg-zion-blue-dark">
       <CardHeader>
@@ -80,6 +90,7 @@ export function GeneratedContentDisplay({ content, onApply }: GeneratedContentDi
         </div>
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
@@ -126,10 +137,14 @@ ursor/fix-website-loading-errors-and-merge-6662
               >                {tag}              <Badge key={index} className="bg-zion-purple/20 text-zion-purple hover:bg-zion-purple/30">
         
         <div>
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <h3 className="text-sm font-medium text-zion-slate-light mb-2">Tags</h3>
             {content.tags.map((tag, index) => (
               <Badge key={index} className="bg-zion-purple/20 text-zion-purple hover:bg-zion-purple/30">
                 {tag}
+<<<<<<< HEAD
               </Badge>
             ))}
           </div>
@@ -140,27 +155,39 @@ ursor/fix-website-loading-errors-and-merge-6662
         </div>
         
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <div>
           <h3 className="text-sm font-medium text-zion-slate-light mb-2">Suggested Price Range</h3>
           <p className="text-white">
             ${content.suggestedPrice.min.toFixed(2)} - ${content.suggestedPrice.max.toFixed(2)}
+<<<<<<< HEAD
           </p>
         </div>
 <<<<<<< HEAD
-
-        
-        <div>
-
 =======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
+
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <div>
           <h3 className='text-sm font-medium text-zion-slate-light mb-2'>
-            Key Selling Points
+            Suggested Price Range
           </h3>
+<<<<<<< HEAD
           <ul className='list-disc pl-5 text-white space-y-1'>            {content.keyPoints.map((point, index) => (        <div>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           <h3 className="text-sm font-medium text-zion-slate-light mb-2">Suggested Price Range</h3>
           <p className="text-white">
             ${content.suggestedPrice.min.toFixed(2)} - ${content.suggestedPrice.max.toFixed(2)}
+=======
+          <p className='text-white'>
+            ${content.suggestedPrice.min.toFixed(2)} - $
+            {content.suggestedPrice.max.toFixed(2)}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           </p>
         </div>
         <div>
@@ -169,6 +196,7 @@ ursor/fix-website-loading-errors-and-merge-6662
             {content.keyPoints.map((point, index) => (
             {content.keyPoints.map((point, index,) => (
               <li key={index}>{point}</li>
+<<<<<<< HEAD
           </div>;
         </div>;
 
@@ -318,10 +346,13 @@ function GeneratedContentDisplay() {
               <li key={index}>{point}</li>
             ))}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           </ul>;
         </div>;
       </CardContent>;
       <CardFooter>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -329,6 +360,8 @@ function GeneratedContentDisplay() {
         <Button;
           onClick={onApply}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           className="w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover: from-zion-cyan-light hover:to-zion-cyan text-white"
         >
           Apply to My Listing
@@ -336,6 +369,7 @@ function GeneratedContentDisplay() {
         </Button>
       </CardFooter>
     </Card>
+<<<<<<< HEAD
   );
 }
 
@@ -372,3 +406,5 @@ function GeneratedContentDisplay() {
 ;
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

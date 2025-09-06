@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -52,10 +53,13 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 #!/usr/bin/env node
 import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -124,11 +128,14 @@ class AdvancedSourceFixer {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       ) {
         await this && this.fixFile(fullPath);
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       }
     }
   }
   async fixFile(filePath) {
     try {
+<<<<<<< HEAD
       const content = fs && fs.readFileSync(filePath, "utf8");
       let fixedContent = content;
       let wasFixed = false;
@@ -187,6 +194,8 @@ class AdvancedSourceFixer {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       });
       this && this.log(`Error fixing ${filePath}: ${error && error.message}`, "ERROR");
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     }
   }
   hasParsingErrors(content) {
@@ -204,13 +213,6 @@ class AdvancedSourceFixer {
       /'\)' expected/
       /'\}' expected/
     ];
-    return errorPatterns && errorPatterns.some((pattern) => pattern && pattern.test(content));
-  }
-  hasImportExportIssues(content) {
-    return (
-      content && content.includes("from") &&
-      !content && content.includes("import") &&
-      !content && content.includes("export")
     );
   }
   hasSyntaxIssues(content) {
@@ -221,11 +223,11 @@ class AdvancedSourceFixer {
       /const.*const.*const/
       /let.*let.*let/
     ];
-    return syntaxIssues && syntaxIssues.some((pattern) => pattern && pattern.test(content));
   }
   fixParsingErrors(content, filePath) {
     let fixed = content;
     // Fix unterminated strings
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -251,10 +253,13 @@ class AdvancedSourceFixer {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     return fixed;
   }
   fixImportExportIssues(content, filePath) {
     let fixed = content;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -277,6 +282,8 @@ class AdvancedSourceFixer {
     fixed = fixed.replace(/import\s+{\s*}\s*from/g, "import React from");
     fixed = fixed.replace(/import\s+from\s+['"]/g, "import React from 'react'");
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
     fixed = fixed && fixed.replace(/import\s+{\s*}\s*from/g, "import React from");
@@ -289,12 +296,15 @@ class AdvancedSourceFixer {
     if (!fixed.includes("export default") && !fixed.includes("export {")) {;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
     if (!fixed.includes("export default") && !fixed.includes("export {")) {
 
     if (!fixed.includes("export default") && !fixed.includes("export {")) {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       fixed += "\n\nexport default {};";
     }
     return fixed;
@@ -302,6 +312,7 @@ class AdvancedSourceFixer {
   fixSyntaxIssues(content, filePath) {
     let fixed = content;
     // Fix duplicate keywords
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -323,14 +334,15 @@ class AdvancedSourceFixer {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     return fixed;
   }
   getAppliedFixes(original, fixed) {
     const fixes = [];
     if (original !== fixed) {
-      if (original && original.length !== fixed && fixed.length) {
-        fixes && fixes.push("Content length changed");
       }
+<<<<<<< HEAD
 <<<<<<< HEAD
       if (fixed && fixed.includes("import React")) {
         fixes ;
@@ -577,10 +589,13 @@ if ( {) {
 }
         fixes.push ("Added semicolons");
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       }
     }
     return fixes;
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -602,18 +617,24 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 if (import.meta.url === `file://${process.argv[1]}`) {
   const fixer = new AdvancedSourceFixer();
   fixer.fixAllSourceFiles().catch(console.error);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 if (import && import.meta.url === `file://${process ;
   fixer && fixer.fixAllSourceFiles().catch(console && console.error);
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -627,22 +648,19 @@ if (import && import.meta.url === `file://${process ;
 
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 if (import.meta.url === `file://${process.argv[1]}`) {
   const fixer = new AdvancedSourceFixer();
   fixer.fixAllSourceFiles().catch(console.error);
 }
-
-module.exports = AdvancedSourceFixer;
-
-
-export default AdvancedSourceFixer;
 if (require.main === module) {
   const fixer = new AdvancedSourceFixer();
   fixer.fixAllSourceFiles().catch(console.error);
 
 module.exports = AdvancedSourceFixer;
-
 export default AdvancedSourceFixer;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 =======
@@ -662,6 +680,10 @@ export default AdvancedSourceFixer;
   }
 }
 <<<<<<< HEAD
+=======
+
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 // Check condition
 if ( {) {
   $2
@@ -671,14 +693,17 @@ if ( {) {
 }
 export default AdvancedSourceFixer;
 ;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 if (import.meta.url === `file://${process.argv[1]}`) {
   const fixer = new AdvancedSourceFixer();
   fixer.fixAllSourceFiles().catch(console.error);
 }
-
 export default AdvancedSourceFixer;
+<<<<<<< HEAD
 }
 const fixer = new AdvancedSourceFixer();
 fixer.fixAllSourceFiles().catch(console.error);
@@ -701,14 +726,29 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 export default AdvancedSourceFixer;
 origin/main
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 if (require.main === module) {
   const fixer = new AdvancedSourceFixer();
   fixer.fixAllSourceFiles().catch(console.error);
 
 module.exports = AdvancedSourceFixer;
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-origin/automation-improvements-final
 export default AdvancedSourceFixer;
 
 }
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+// Check condition
+if ( {) {
+  $2
+}
+  const fixer = new AdvancedSourceFixer ();
+  fixer.fixAllSourceFiles ().catch (console.error);
+}
+export default AdvancedSourceFixer;
+;
+export default AdvancedSourceFixer;
+
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

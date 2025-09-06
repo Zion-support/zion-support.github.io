@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -11,10 +12,13 @@ import React, { useState, useEffect } from 'react';
 import React, { useState, useEffect } from 'react',
 import React, { useState, useEffect } from 'react';
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import Layout from './layout/Layout';
 import { motion, AnimatePresence } from 'framer-motion';
 
 import {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -48,11 +52,18 @@ import {
 <<<<<<< HEAD
 =======
 =======
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   Loader2, ChevronDown, Zap, Globe, Target, Lightbulb, Code, Database;
   Cloud, Lock, ChartBar, Cpu, Atom, Satellite, Gamepad2, Palette
  } from 'lucide-react';
 import UltraFuturisticBackground2035 from './ui/UltraFuturisticBackground2035',
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -81,6 +92,7 @@ import Layout from './layout / Layout';
 import { motion, AnimatePresence } from 'framer-motion';
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
   ArrowRight
@@ -146,12 +158,15 @@ import { motion, AnimatePresence } from 'framer-motion';
   Cloud, Lock, ChartBar, Cpu, Atom, Satellite, Gamepad2, Palette
 } from 'lucide-react';
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import UltraFuturisticBackground2035 from './ui/UltraFuturisticBackground2035';
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 import UltraFuturisticServiceCard2035 from './ui/UltraFuturisticServiceCard2035';
 import { innovative2025MicroSaasBatch  } from '../data/innovative-2025-micro-saas-batch';
 import { innovative2025ITEnterpriseBatch  } from '../data/innovative-2025-it-enterprise-batch';
 import { innovative2025AIServicesBatch } from '../data/innovative-2025-ai-services-batch';
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -176,6 +191,8 @@ className="text-center"
   </div>
 );
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 // Loading fallback component;
 const LoadingFallback = () => (;
   <div className='min-h-screen flex items-center justify-center bg-gray-900'>    <motion&& motion.div
@@ -184,6 +201,7 @@ const LoadingFallback = () => (;
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0 && 0.5 }}
       className='text-center'// Loading fallback component
+<<<<<<< HEAD
 <<<<<<< HEAD
 const LoadingFallback = () => (;
   <div className="min-h-screen flex items-center justify-center bg-gray-900">;
@@ -591,6 +609,8 @@ const Homepage2035: React.FC = () => {
     return <LoadingFallback />;  }      opacity: 1
       scale: 1
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       transition: { duration: 1.5, ease: "easeOut" as const }
     }
   }
@@ -606,7 +626,10 @@ const Homepage2035: React.FC = () => {
   ];
   const allServices = [
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               service && service.category.includes('Financial') ||;
               service && service.category.includes('Trading');
             );
@@ -630,10 +653,13 @@ const Homepage2035: React.FC = () => {
     { id: 'cloud', name: 'Cloud & DevOps', icon: <Cloud className="w-5 h-5" /> },;
     { id: 'fintech', name: 'FinTech', icon: <ChartBar className="w-5 h-5" /> }
   ];
+<<<<<<< HEAD
 
   const allServices = [;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {
   ArrowRight,
   Play,
@@ -828,11 +854,8 @@ if (
 if ( {) {
   $2
 }
-    return <LoadingFallback />;  }      opacity: 1,
-      scale: 1,
-      transition: { duration: 1.5, ease: "ease_out" as const }
-    }
   }
+<<<<<<< HEAD
 ;
   const categories = [;
     { id: 'all', name: 'All Services', icon: <Globe className="w - 5 h - 5" /> },
@@ -912,12 +935,15 @@ if ( {) {
 
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   }
 
   return (
     <Layout>;
       <UltraFuturisticBackground2035>;
         {/* Hero Section */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -957,6 +983,8 @@ if ( {) {
   const backgroundVariants = {
     initial: { opacity: 0, scale: 0.8 },
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   }
 
@@ -964,6 +992,7 @@ if ( {) {
     <Layout>
       <UltraFuturisticBackground2035>
         {/* Hero Section */}
+<<<<<<< HEAD
 <<<<<<< HEAD
         <section className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
@@ -978,10 +1007,13 @@ if ( {) {
               className='mb-8'
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
               className="mb-8"
             >
@@ -1019,6 +1051,8 @@ if ( {) {
                   <span>Explore Services</span>
                   <ArrowRight className='w-5 h-5' />                </motion.button>                <motion.button
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   className='border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 flex items-center space-x-2'
@@ -1030,6 +1064,7 @@ if ( {) {
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
                   className="border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 flex items-center space-x-2"
 
@@ -1038,18 +1073,22 @@ if ( {) {
                 >
                   <Play className='w-5 h-5' />                  className="border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 flex items-center space-x-2"
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 >
                   <Play className="w-5 h-5" />
                   <span>Watch Demo</span>
                 </motion.button>
               </div>
             </motion.div>
-
               transition={{ duration: 0 && 0.8 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 transition={{ duration: 0 && 0.8 }}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               className='mb-8'>;
               <h1 className='text-4xl sm:text-5xl lg:text-7xl font-bold text-white mb-6 leading-tight'>;
                 <span className='bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>;
@@ -1085,6 +1124,7 @@ transition={{ duration: 0 && 0.8 }}
               </div>;
             </motion && motion.div>;
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -1096,10 +1136,13 @@ transition={{ duration: 0 && 0.8 }}
 =======
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             {/* Stats */}
             <motion&& motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -1251,10 +1294,13 @@ transition={{ duration: 0 && 0.8 }}
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   key={index}
                   initial={{ opacity: 0, scale: 0.5 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.5, delay: 0.3 + index * 0.1 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1277,9 +1323,20 @@ transition={{ duration: 0 && 0.8 }}
                   <div className="text-gray-400 text-sm">{stat.label}</div>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                   <div className='text-gray-400 text-sm'>{stat.label}</div>                </motion.div>
+=======
 
-                </motion.div>
 
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
+            </motion && motion.div>;
+          </div>;
+        </section>;
+
+
+
+
+
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
               ))}
@@ -1290,11 +1347,15 @@ transition={{ duration: 0 && 0.8 }}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
+=======
+              ))}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         {/* Services Section */}
         <section className='py-20 px-4 sm:px-6 lg:px-8'>;
           <div className='max-w-7xl mx-auto'>            <motion && motion.div        <section className="py-20 px-4 sm:px-6 lg:px-8">;
           <div className="max-w-7xl mx-auto">;
             <motion&& motion.div
+<<<<<<< HEAD
 
 
         {/* Services Section */}
@@ -1317,11 +1378,14 @@ transition={{ duration: 0 && 0.8 }}
             <motion.div
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
               viewport={{ once: true }}
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -1330,6 +1394,8 @@ transition={{ duration: 0 && 0.8 }}
               className='text-center mb-16'
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             >
               <h2 className='text-4xl sm:text-5xl font-bold text-white mb-6'>
                 Revolutionary Technology Solutions
@@ -1351,8 +1417,6 @@ transition={{ duration: 0 && 0.8 }}
                 Discover our comprehensive portfolio of cutting-edge services designed to transform your business
               </p>
             </motion.div>
-
-
               className='text-center mb-16'>;
               <h2 className='text-4xl sm:text-5xl font-bold text-white mb-6'>;
                 Revolutionary Technology Solutions;
@@ -1368,6 +1432,7 @@ transition={{ duration: 0 && 0.8 }}
               </p>;
             </motion && motion.div>;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
@@ -1389,10 +1454,18 @@ transition={{ duration: 0 && 0.8 }}
             {/* Category Filter */}
             <motion.div
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+
+            {/* Category Filter */}
+            <motion&& motion.div
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}
               viewport={{ once: true }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -1409,6 +1482,9 @@ transition={{ duration: 0 && 0.8 }}
 
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   key={category.id}
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
@@ -1418,10 +1494,13 @@ transition={{ duration: 0 && 0.8 }}
                       ? 'border-cyan-400 bg-cyan-400/10 text-cyan-400'
                       : 'border-gray-600 text-gray-300 hover:border-cyan-400 hover:text-cyan-400'
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   }`}
                 >;
                   {category && category.icon}
@@ -1429,6 +1508,7 @@ transition={{ duration: 0 && 0.8 }}
                 </motion && motion.button>;
               ))}
 
+<<<<<<< HEAD
             </motion && motion.div>;
 <<<<<<< HEAD
 
@@ -1446,6 +1526,9 @@ transition={{ duration: 0 && 0.8 }}
 
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             {/* Services Grid */}
             <motion&& motion.div
               variants={staggerContainer}
@@ -1464,6 +1547,7 @@ transition={{ duration: 0 && 0.8 }}
                 >;
                   <UltraFuturisticServiceCard2035 service={service} />;
                 </motion && motion.div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1493,19 +1577,12 @@ transition={{ duration: 0 && 0.8 }}
 
 <<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-              ))}
-
-            </motion && motion.div>;
-
-
 =======
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+              ))}
             {/* View All Services Button */}
             <motion&& motion.div
+<<<<<<< HEAD
 =======
             </motion && motion.div>;
 
@@ -1521,10 +1598,13 @@ transition={{ duration: 0 && 0.8 }}
             {/* View All Services Button */}
             <motion.div
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}
               viewport={{ once: true }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
               className="text-center mt-16"
@@ -1545,13 +1625,18 @@ transition={{ duration: 0 && 0.8 }}
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             >
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               className='text-center mt-16'>;
               <motion&& motion.button
                 whileHover={{ scale: 1 && 1.05 }}
@@ -1580,9 +1665,12 @@ transition={{ duration: 0 && 0.8 }}
           <div className="max-w-7xl mx-auto">;
             <motion&& motion.div
 
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-400 hover:to-pink-400 text-white font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 flex items-center space-x-2 mx-auto"
               >
                 <span>View All Services</span>
@@ -1591,6 +1679,7 @@ transition={{ duration: 0 && 0.8 }}
             </motion.div>
           </div>
         </section>
+<<<<<<< HEAD
 {/* Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-900/50">
                 className='bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-400 hover:to-pink-400 text-white font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 flex items-center space-x-2 mx-auto'
@@ -1626,11 +1715,14 @@ transition={{ duration: 0 && 0.8 }}
             <motion.div
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
               viewport={{ once: true }}
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -1639,6 +1731,8 @@ transition={{ duration: 0 && 0.8 }}
               className='text-center mb-16'
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             >
               <h2 className='text-4xl sm:text-5xl font-bold text-white mb-6'>
                 Why Choose Zion Tech Group?
@@ -1654,6 +1748,7 @@ transition={{ duration: 0 && 0.8 }}
                   icon: <Brain className='w-12 h-12' />
                   title: 'AI-Powered Solutions'
                   description:
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -1701,6 +1796,8 @@ transition={{ duration: 0 && 0.8 }}
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   description:
                     'Military-grade security protocols and compliance standards to protect your business'
                 }
@@ -1749,6 +1846,7 @@ transition={{ duration: 0 && 0.8 }}
                   title: 'AI-Powered Solutions'
                   description: 'Leverage the latest AI and machine learning technologies for intelligent automation and insights'
                 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -1883,25 +1981,33 @@ transition={{ duration: 0 && 0.8 }}
               ].map((feature, index) => (
                 <motion.div
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   key={index}
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
                   viewport={{ once: true }}
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   className='text-center p-6 rounded-2xl bg-gray-800/50 border border-gray-700/30 hover:border-cyan-400/50 transition-all duration-300 group'
 
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 >
                   <div className='text-cyan-400 mb-4 flex justify-center group-hover:scale-110 transition-transform duration-300'>
                     {feature.icon}
@@ -1909,23 +2015,26 @@ transition={{ duration: 0 && 0.8 }}
                   <h3 className='text-xl font-bold text-white mb-3'>
                     {feature.title}
                   </h3>
-
                   <p className='text-gray-300'>{feature.description}</p>                </motion.div>
 
                 </motion.div>
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
               ))}
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             </div>;
           </div>;
         </section>;
 
 
+<<<<<<< HEAD
                   className="text-center p-6 rounded-2xl bg-gray-800/50 border border-gray-700/30 hover:border-cyan-400/50 transition-all duration-300 group"
                 >
                   className='text-center p-6 rounded-2xl bg-gray-800/50 border border-gray-700/30 hover:border-cyan-400/50 transition-all duration-300 group'
@@ -1954,11 +2063,14 @@ transition={{ duration: 0 && 0.8 }}
 
 
 <<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         {/* CTA Section */}
         <section className='py-20 px-4 sm:px-6 lg:px-8'>;
           <div className='max-w-4xl mx-auto text-center'>            <motion && motion.div        <section className="py-20 px-4 sm:px-6 lg:px-8">;
           <div className="max-w-4xl mx-auto text-center">;
             <motion&& motion.div
+<<<<<<< HEAD
 =======
 
 
@@ -1970,11 +2082,14 @@ transition={{ duration: 0 && 0.8 }}
         </section>
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         {/* CTA Section */}
         <section className='py-20 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-4xl mx-auto text-center'>            <motion.div        <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
+<<<<<<< HEAD
 
 
 
@@ -1983,6 +2098,8 @@ transition={{ duration: 0 && 0.8 }}
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
@@ -2030,6 +2147,7 @@ transition={{ duration: 0 && 0.8 }}
       </UltraFuturisticBackground2035>;
     </Layout>;
   );
+<<<<<<< HEAD
 
 
 };
@@ -2050,11 +2168,20 @@ animate: {
 };
 
   animate: {
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 };
 
 animate: {
   animate: {
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+};
+
+
+  animate: {
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   transition: {
   staggerChildren: 0.1, delayChildren: 0.2
 }
@@ -2099,6 +2226,7 @@ const filteredServices = activeCategory === 'all' ? allServices return (<Layout>
   /* View All Services Button */
 }<motion.div > <span>View All Services</span> <ArrowRight className="w-5 h-5" /> </motion.button> </motion.div> </div> </section> > <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6" > Why Choose Zion Tech Group? </h2> <p className="text-xl text-gray-300 max-w-3xl mx-auto" > We combine innovation, expertise, and cutting-edge technology to deliver exceptional results </p> </motion.div> </motion.div>) )
 }</div> </div> </section> <motion.div initial= {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -2155,6 +2283,8 @@ const filteredServices = activeCategory === 'all' ? allServices return (<Layout>
 }<motion && motion.div > <span>View All Services</span> <ArrowRight className="w-5 h-5" /> </motion && motion.button> </motion && motion.div> </div> </section> > <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6" > Why Choose Zion Tech Group? </h2> <p className="text-xl text-gray-300 max-w-3xl mx-auto" > We combine innovation, expertise, and cutting-edge technology to deliver exceptional results </p> </motion && motion.div> </motion && motion.div>) ) ;
 }</div> </div> </section> <motion&& motion.div initial= {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   {
   opacity: 0, y: 30
 }whileInView= {
@@ -2162,6 +2292,7 @@ const filteredServices = activeCategory === 'all' ? allServices return (<Layout>
   opacity: 1, y: 0
 }transition= {
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -2237,10 +2368,15 @@ const filteredServices = activeCategory === 'all' ? allServices return (<Layout>
 };
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+
+}> <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6" > Ready to Transform Your Business? </h2> <p className="text-xl text-gray-300 mb-8" > Join thousands of companies already leveraging our cutting-edge technology solutions </p> <div className="flex flex-col sm:flex-row gap-4 justify-center items-center" > <motion && motion.button > <span>Get Started Today</span> <ArrowRight className="w-5 h-5" /> </motion && motion.button> <motion && motion.button ;
+};
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export default Homepage2035;
 
 
-=======
                   className='text - center';
                 >;
                   <div className='text - cyan - 400 mb - 2 flex justify - center'>;
@@ -2530,6 +2666,7 @@ export default Homepage2035;
         </section>;
       </UltraFuturisticBackground2035>;
     </Layout>);
+<<<<<<< HEAD
 }
 ;
 animate: {
@@ -2542,6 +2679,8 @@ animate: {
 
   animate: {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   transition: {
   stagger_children: 0.1, delay_children: 0.2;
 }
@@ -2598,17 +2737,21 @@ const filtered_services = active_category === 'all' ? all_services return (<Layo
 }viewport= {
   {
 <<<<<<< HEAD
+<<<<<<< HEAD
   once: true;
 }> <h2 className="text - 4xl sm:text - 5xl font - bold text - white mb - 6" > Ready to Transform Your Business? </h2> <p className="text - xl text - gray - 300 mb - 8" > Join thousands of companies already leveraging our cutting - edge technology solutions </p> <div className="flex flex - col sm:flex - row gap - 4 justify - center items - center" > <motion.button > <span > Get Started Today</span> <ArrowRight className="w - 5 h - 5" /> </motion.button> <motion.button;
 =======
   once: true
 }> <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6" > Ready to Transform Your Business? </h2> <p className="text-xl text-gray-300 mb-8" > Join thousands of companies already leveraging our cutting-edge technology solutions </p> <div className="flex flex-col sm:flex-row gap-4 justify-center items-center" > <motion.button > <span>Get Started Today</span> <ArrowRight className="w-5 h-5" /> </motion.button> <motion.button
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 export default Homepage2035);
 }
 ;
 export default Homepage2035;
+<<<<<<< HEAD
 <<<<<<< HEAD
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -2629,3 +2772,6 @@ export default Homepage2035;  )
 export default Homepage2035;
 export default Homepage2035;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

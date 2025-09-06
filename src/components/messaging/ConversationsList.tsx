@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useMemo } from 'react';
 <<<<<<< HEAD
 import { User } from 'lucide-react';
@@ -70,6 +71,8 @@ export const ConversationsList: React.FC<ConversationsListProps> = ({
 
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useMemo } from 'react',;
 import { User } from 'lucide-react';
 import { Conversation } from '@/types/messaging',;
@@ -115,6 +118,7 @@ export function ConversationsList({;
 <<<<<<< HEAD
 =======
   return (
+<<<<<<< HEAD
     <div className="w-full md:w-80 border-r border-zion-purple/20 overflow-y-auto">
       <div className="p-3 border-b border-zion-purple/20">
         <h3 className="font-medium text-white">Conversations</h3>
@@ -140,6 +144,8 @@ return (
   };
 
   return (
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <div className='w-full md:w-80 border-r border-zion-purple/20 overflow-y-auto'>;
       <div className='p-3 border-b border-zion-purple/20'>;
         <h3 className='font-medium text-white'>Conversations</h3>;
@@ -159,10 +165,19 @@ return (
           height={listHeight}
           itemCount={conversations.length}
           itemSize={itemSize}
-          width='100%'        >
           width="100%"
         >
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+          {Row}
+        </List>
+      )}
+    </div>
+  )
+}
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <div className='w - full md:w - 80 border - r border - zion - purple / 20 overflow - y-auto'>;
       <div className='p - 3 border - b border - zion - purple / 20'>;
         <h3 className='font - medium text - white'>Conversations</h3>;
@@ -182,6 +197,7 @@ return (
           width='100%'        >;
           {Row}
 <<<<<<< HEAD
+<<<<<<< HEAD
         </List>)}
     </div>);
 }
@@ -191,22 +207,12 @@ return (
       )}
     </div>
   )
+=======
+        </List>)}
+    </div>);
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 
-          {Row}
-        </List>
-      )};
-    </div>;
-  );
-};
-}
-    </div>;
-  );
-}
-;
-    </div>
-  )
-}
           {Row}
         </List>
       )};
@@ -219,7 +225,7 @@ return (
           {Row}
         </List>;
       )}
-
+    </div>;
   );
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df

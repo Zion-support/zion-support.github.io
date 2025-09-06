@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 const categories: ForumCategoryInfo[] = [
   {
@@ -23,6 +24,8 @@ const categories: ForumCategoryInfo[] = [
 import { ForumCategoryInfo } from "@/types/community";
 const categories: ForumCategoryInfo[] = [
 import { ForumCategoryInfo } from "@/types/community",
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   {
 
     id: "getting-hired"
@@ -32,15 +35,14 @@ import { ForumCategoryInfo } from "@/types/community",
     icon: "Briefcase"
   }
 import { ForumCategoryInfo } from "@/types/community",
-import { ForumCategoryInfo } from "@/types/community",
   {
     id: "project-help"
     name: "Project Help"
     description: "Get help with your ongoing projects and collaboration."
     adminOnly: false
     icon: "MessageSquare"
-  }
   {
+<<<<<<< HEAD
     id: "ai-tools"
     name: "AI Tools Discussion"
     description: "Discuss AI tools, frameworks, and best practices."
@@ -57,16 +59,21 @@ import { ForumCategoryInfo } from "@/types/community",
   },
   {
 {
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     id: "feedback"
     name: "Feedback & Feature Requests"
     description: "Share your feedback and suggest new features."
     adminOnly: false
     icon: "FileText"
+<<<<<<< HEAD
   }
 ursor/fix-website-loading-errors-and-merge-6662
   {
   }
   },
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
   {
@@ -75,6 +82,7 @@ ursor/fix-website-loading-errors-and-merge-6662
     description: "Official announcements from the Zion team."
     adminOnly: true
     icon: "Megaphone"
+<<<<<<< HEAD
 const categories: ForumCategoryInfo[] = [;
   {
     id: "getting - hired",
@@ -249,29 +257,43 @@ export const ForumCategories = () =>: any {
       {visibleCategories.map((category) => {
         const Icon = iconMap[category.icon as keyof typeof iconMap],
         return (
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   const isAdmin = user?.userType === 'admin' || user?.role === 'admin'
 export default ForumCategories;
 ;
 
+<<<<<<< HEAD
 export default ForumCategories;
 
 
 =======
+=======
+import Link from "next/link",;
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card",;
+import { useAuth } from "@/hooks/useAuth",;
+import { MessageSquare, Briefcase, Code, FileText, Megaphone } from 'lucide-react';
+import { ForumCategoryInfo } from "@/types/community",;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 const categories: ForumCategoryInfo[] = [;
   {;
     id: "getting-hired",;
     name: "Getting Hired",;
+<<<<<<< HEAD
     description: "Tips, strategies, and questions about getting hired on the platform.",;
     adminOnly: false,;
     icon: "Briefcase";
   },;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   {;
     id: "project-help",;
     name: "Project Help",;
     description: "Get help with your ongoing projects and collaboration.",;
     adminOnly: false,;
     icon: "MessageSquare";
+<<<<<<< HEAD
   },;
   {;
     id: "ai-tools",;
@@ -280,13 +302,18 @@ const categories: ForumCategoryInfo[] = [;
     adminOnly: false,;
     icon: "Code";
   },;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   {;
     id: "feedback",;
     name: "Feedback & Feature Requests",;
     description: "Share your feedback and suggest new features.",;
     adminOnly: false,;
     icon: "FileText";
+<<<<<<< HEAD
   },;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   {;
     id: "announcements",;
     name: "Announcements",;
@@ -294,6 +321,7 @@ const categories: ForumCategoryInfo[] = [;
     adminOnly: true,;
     icon: "Megaphone";
   }
+<<<<<<< HEAD
 
 ";
   const isAdmin = user?.userType === 'admin' || user?.role === 'admin';
@@ -370,14 +398,19 @@ export const ForumCategories = () => {;
         return (;
           <Link key={category.id} href={`/community/category/${category.id}`}>;
             <Card className="h-full transition-all hover:shadow-md hover:border-zion-purple/50 cursor-pointer">;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <CardHeader className="flex flex-row items-center gap-4">;
                 <div className="p-2 bg-zion-purple/10 rounded-full">;
                   <Icon className="h-6 w-6 text-zion-purple" />;
                 </div>;
+<<<<<<< HEAD
                 <CardTitle className="text-xl">{category.name}</CardTitle>;
               </CardHeader>;
               <CardContent>;
                 <CardDescription className="text-base">{category.description}</CardDescription>;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               </CardContent>;
             </Card>;
           </Link>;
@@ -386,10 +419,20 @@ export const ForumCategories = () => {;
     </div>;
   );
 };
+<<<<<<< HEAD
 export default ForumCategories;
 
+=======
+
+export default ForumCategories;
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export default ForumCategories;
 ";
   const is_admin = user?.user_type === 'admin' || user?.role === 'admin';
 export default ForumCategories;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

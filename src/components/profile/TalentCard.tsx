@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 export interface TalentCardProps {
   talent: TalentProfile;
   onViewProfile: (id: string) => void;
@@ -29,6 +30,9 @@ import { TalentProfile } from "@/types/talent",
 import Image from 'next/image', // Import next/image
 import React, { useState } from 'react', // Import React and useState
 
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export interface TalentCardProps {
   talent: TalentProfile
   onViewProfile: (id: string) => void
@@ -36,6 +40,7 @@ export interface TalentCardProps {
   isSaved: boolean
   onToggleSave: (id: string, isSaved: boolean) => void
   isAuthenticated: boolean
+<<<<<<< HEAD
 export interface TalentCardProps {
 xport interface TalentCardProps {
   talent: TalentProfile
@@ -50,6 +55,8 @@ xport interface TalentCardProps {
   onToggleSave: (id: string, isSaved: boolean,) => void,
   isAuthenticated: boolean
 }
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   isAuthenticated: boolean
 }
@@ -66,7 +73,10 @@ export function TalentCard({
   const handleViewProfile = () => {
     if (onViewProfile) {
       onViewProfile(talent.id) }      onViewProfile(talent.id)
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     }
   }
   const handleRequestHire = (e: React.MouseEvent) => {
@@ -86,6 +96,7 @@ export function TalentCard({
       onToggleSave(talent.id, !isSaved)
     if (onToggleSave) {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 import { Button } from '@/components/ui/button';
@@ -103,6 +114,8 @@ import { Card } from '@/components/ui/card';
               {' '}
               {/* Added relative for Image */}
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               {talent.profile_picture_url && !avatarError ? (
                 <Image
                   src={talent.profile_picture_url}
@@ -117,18 +130,9 @@ import { Card } from '@/components/ui/card';
                   onError={() => setAvatarError(true)}
                   priority={false}                />
               ) : (
-  talent: TalentProfile
-  onViewProfile: (id: string,) => void
-  onRequestHire: (talent: TalentProfile,) => void
-  isSaved: boolean
-  onToggleSave: (id: string, isSaved: boolean,) => void
-                <div className='w-full h-full flex items-center justify-center text-zion-slate-light text-xl font-bold'>                  src={talent.profile_picture_url}
-                  alt={talent.full_name |'Talent Avatar'}
-                <div className='w-full h-full flex items-center justify-center text-zion-slate-light text-xl font-bold'>                  src={talent.profile_picture_url}
-                  alt={talent.full_name |'Talent Avatar'}
-                <div className='w-full h-full flex items-center justify-center text-zion-slate-light text-xl font-bold'>                  src={talent.profile_picture_url} 
 import { Button } from "@/components/ui/button",;
 import { Card } from "@/components/ui/card",;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import { Star, MapPin, Clock, ArrowRight, CheckCircle2 } from 'lucide-react';
 import Link from 'next/link';
@@ -153,11 +157,15 @@ export interface TalentCardProps {;
 }
 
 export function TalentCard(): any ({;
+=======
+import { Star, MapPin, Clock, ArrowRight, CheckCircle2 } from 'lucide-react';
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   talent,;
   onViewProfile,;
   onRequestHire,;
   isSaved,;
   onToggleSave,;
+<<<<<<< HEAD
   isAuthenticated,;
 }: TalentCardProps) {;
   const [avatarError, setAvatarError] = useState(false);
@@ -212,19 +220,38 @@ export function TalentCard(): any ({;
                   fill={true}                  style={{ objectFit: 'cover' }}
                   className='rounded-full' // Make sure image itself is rounded if fill is used in a rounded container                  onError={() => setAvatarError(true)}
                   priority={false}
+=======
+  const handleViewProfile = () => {;
+    if (onViewProfile) {;
+      onViewProfile(talent.id);
+    }
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 />;
               ) : (;
                 <div className='w-full h-full flex items-center justify-center text-zion-slate-light text-xl font-bold'>                  {talentNameInitial}
                   className="rounded-full" // Make sure image itself is rounded if fill is used in a rounded container;
                   onError={() => setAvatarError(true)}
+                  priority={false}
 
-                  priority={false}                />;
-              ) : (;
-                <div className='w-full h-full flex items-center justify-center text-zion-slate-light text-xl font-bold'>                  src={talent && talent.profile_picture_url} ;
-                  alt={talent && talent.full_name || 'Talent Avatar'}
+import Link from 'next/link';
+import { TalentProfile } from '@/types/talent';
 
+import Image from 'next/image'; // Import next/image
+import React, { useState } from 'react'; // Import React and useState
+import { Button } from "@/components/ui/button",
+import { Card } from "@/components/ui/card",
+import { Star, MapPin, Clock, ArrowRight, CheckCircle2 } from 'lucide-react'
+import Link from "next/link",
+import { TalentProfile } from "@/types/talent",
+import Image from 'next/image', // Import next/image
+import React, { useState } from 'react', // Import React and useState
+
+
+<<<<<<< HEAD
 =======
                   src={talent.profile_picture_url} 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   alt={talent.full_name || 'Talent Avatar'}
                   fill={true}
                   style={{ objectFit: 'cover' }}
@@ -252,6 +279,7 @@ export function TalentCard(): any ({;
                   className="rounded-full" // Make sure image itself is rounded if fill is used in a rounded container
                   onError={() => setAvatarError(true)}
                   priority={false}
+<<<<<<< HEAD
                 />
               ) : (
                 <div className="w-full h-full flex items-center justify-center text-zion-slate-light text-xl font-bold">
@@ -344,11 +372,14 @@ export interface TalentCardProps {
                 className="p-1 h-auto text-zion-slate-light hover:text-zion-cyan"
                 onClick={handleToggleSave}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               >
                 <Star className={`h-5 w-5 ${isSaved ? "fill-yellow-400 text-yellow-400" : ""}`} />
                 <span className="sr-only">{isSaved ? "Saved" : "Save"}</span>
               </Button>
             </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -421,48 +452,20 @@ export interface TalentCardProps {
           <div className='flex items-center gap-2'>
             {isAuthenticated && (
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 
                   <MapPin className="h-4 w-4 mr-1" />
                   <span>{talent.location}</span>
                 </div>
-                />;
-                <span className='sr-only'>{isSaved ? 'Saved' : 'Save'}</span>;
-              </Button>;
-            </div>;
-            <p className='text-zion-cyan font-medium'>;
-              {talent && talent.professional_title}
-            </p>;
-
-            <div className='mt-2 flex flex-wrap gap-3 text-sm'>;
-              {talent && talent.location && (;
-                <div className='flex items-center text-zion-slate-light'>;
-                  <MapPin className='h-4 w-4 mr-1' />                  <span>{talent && talent.location}</span>;
-                </div>;
-
-
               )}
-              {talent && talent.availability_type && (;
-                <div className='flex items-center text-zion-slate-light'>;
-                  <Clock className='h-4 w-4 mr-1' />                  <span>{talent && talent.availability_type}</span>                <div className="flex items-center text-zion-slate-light">;
-                  <MapPin className="h-4 w-4 mr-1" />;
-                  <span>{talent && talent.location}</span>;
-                </div>;
-              )}
-              {talent && talent.availability_type && (;
-                <div className='flex items-center text-zion-slate-light'>;
-                  <Clock className='h-4 w-4 mr-1' />                <div className="flex items-center text-zion-slate-light">;
-                  <Clock className="h-4 w-4 mr-1" />;
-                  <span>{talent && talent.availability_type}</span>;
-                </div>;
-              )}
-
-
               {(talent && talent.skills?.length || 0) > 5 && (;
                 <span className='px-2 py-1 text-xs rounded-full bg-zion-purple/20 text-zion-cyan'>                  +{(talent && talent.skills?.length || 0) - 5} more                <span className="px-2 py-1 text-xs rounded-full bg-zion-purple/20 text-zion-cyan">;
                   +{(talent && talent.skills?.length || 0) - 5} more;
                 </span>;
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -492,10 +495,15 @@ export interface TalentCardProps {
           </div>
           <div className='flex items-center gap-2'>
             {isAuthenticated && (
+=======
+              )}
+          </div>;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <Button
                 size='sm'
                 variant='secondary'
                 onClick={handleRequestHire}
+<<<<<<< HEAD
                 className='bg-zion-purple hover:bg-zion-purple-light text-white'              >                className="bg-zion-purple hover:bg-zion-purple-light text-white"
               size="sm"
               variant="ghost"
@@ -504,6 +512,9 @@ export interface TalentCardProps {
             >;
               View <ArrowRight className="ml-1 h-4 w-4" />;
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+                className='bg-zion-purple hover:bg-zion-purple-light text-white'>                className="bg-zion-purple hover:bg-zion-purple-light text-white";
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <div>;
             {talent && talent.hourly_rate ? (;
               <div className="text-white font-bold">;
@@ -512,6 +523,7 @@ ursor/fix-website-loading-errors-and-merge-6662
               </div>;
             ) : (;
               <div className="text-zion-slate-light">Rate not specified</div>;
+<<<<<<< HEAD
 
         
         <div className="mt-5 flex items-center justify-between">
@@ -617,15 +629,28 @@ ursor/fix-website-loading-errors-and-merge-6662
               <Button
               <Button
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 size="sm"
                 variant="secondary"
                 onClick={handleRequestHire}
-
-
+                className="bg-zion-purple hover:bg-zion-purple-light text-white"
+              >
+                Hire
+              </Button>
+            )}
+            <Button
+              size="sm"
+              variant="ghost"
+              onClick={handleViewProfile}
+              className="text-zion-cyan hover: text-white hover:bg-zion-blue-light";
+            >;
+              View <ArrowRight className="ml-1 h-4 w-4" />;
             </Button>;
           </div>;
         </div>;
       </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -637,3 +662,5 @@ ursor/fix-website-loading-errors-and-merge-6662
 ;
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 import { useState, useEffect } from 'react',
@@ -12,10 +13,15 @@ import { useState, useEffect } from 'react',
 import { useState, useEffect  } from 'react';
 import { useState, useEffect } from 'react',
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+import { useState, useEffect } from 'react',
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { Button } from "@/components/ui/button",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table",
 import { Badge } from "@/components/ui/badge",
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -36,6 +42,8 @@ import { Loader2, RefreshCw, Play, CheckCircle, AlertCircle } from "lucide-react
 import { supabase } from '@/integrations/supabase/client',
 import { ModelConfig } from '@/utils/zion-gpt',
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {useState, useEffect} from 'react';
 import {Button} from "@/components/ui/button";
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
@@ -44,11 +52,14 @@ import {Badge} from "@/components/ui/badge";
 import {Loader2, RefreshCw, Play, CheckCircle, AlertCircle} from "lucide-react";
 import {supabase} from '@/integrations/supabase/client';
 import {ModelConfig} from '@/utils/zion-gpt';
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface ModelVersionData extends ModelConfig {
 
   trainingStatus: 'queued' | 'running' | 'succeeded' | 'failed'
@@ -57,22 +68,24 @@ interface ModelVersionData extends ModelConfig {
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export function ZionGPTModelManager() {;
   const [models, setModels] = useState<ModelVersionData[]>([]);
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const [isLoading, setIsLoading] = useState(true);
   const [activeJobs, setActiveJobs] = useState<{[key: string]: boolean}>({}),;
 
   // Fetch model data on component mount;
   useEffect(() => {;
     fetchModels();
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   }, []);
 
   const fetchModels = async () => {;
     try {;
       setIsLoading(true);
+<<<<<<< HEAD
 
 =======
 interface ModelVersionData extends ModelConfig {;
@@ -142,12 +155,15 @@ if (throw error) {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     } catch (error) {
       console.error ('Error fetching models:', error);
     } finally {
       setIsLoading (false);
     }
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -187,12 +203,15 @@ if (throw error) {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     } catch (error) {
       console.error (`Error checking status for model ${model_id}:`, error);
     } finally {
       setActiveJobs (prev => ({ ...prev, [model_id]: false }));
     }
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -293,6 +312,8 @@ export function ZionGPTModelManager() {;
     }
   }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   };
 import { useState, useEffect } from 'react',
 import { Button } from "@/components/ui/button",
@@ -306,9 +327,12 @@ interface ModelVersionData extends ModelConfig {
   trainingStatus: 'queued' | 'running' | 'succeeded' | 'failed',
   errorMessage?: string
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useState, useEffect } from 'react',;
 import { Button } from "@/components/ui/button",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
@@ -334,16 +358,23 @@ export function ZionGPTModelManager() {;
     try {;
       setIsLoading(true),;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       const { data, error } = await supabase;
         .from('model_versions');
         .select('*');
         .order('createdAt', { ascending: false }),;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
       if (error) throw error;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
       // Map the data to our component state;
       setModels(data && data.map(model => ({;
@@ -361,6 +392,7 @@ export function ZionGPTModelManager() {;
     } finally {;
       setIsLoading(false);
     }
+<<<<<<< HEAD
   };
 
   const checkTrainingStatus = async (modelId: string) => {;
@@ -491,10 +523,13 @@ export function ZionGPTModelManager() {;
         );
       ),;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       // Also update in the database;
       await supabase;
         .from('model_versions');
         .update({;
+<<<<<<< HEAD
 <<<<<<< HEAD
           training_status: data && data.status,;
           error_message: data && data.error || null,;
@@ -539,6 +574,8 @@ export function ZionGPTModelManager() {;
     }
   },;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const toggleModelActive = async (modelId: string, currentActive: boolean, purpose: string) => {;
     try {;
       // If activating, deactivate all other models with the same purpose;
@@ -548,6 +585,7 @@ export function ZionGPTModelManager() {;
           .update({ active: false });
           .eq('purpose', purpose);
       }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -600,6 +638,16 @@ export function ZionGPTModelManager() {;
 ;
   return (;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+    }
+
+  },
+    }
+  }
+
+  return (
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <Card className="w-full">;
       <CardHeader className="flex flex-row items-center justify-between">;
         <div>;
@@ -618,10 +666,14 @@ export function ZionGPTModelManager() {;
             <Loader2 className="h-8 w-8 animate-spin text-primary" />;
           </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
         ) : (;
 =======
         ) :(;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+        ) : (;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <Table>;
             <TableHeader>;
               <TableRow>;
@@ -636,6 +688,9 @@ export function ZionGPTModelManager() {;
             </TableHeader>;
             <TableBody>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               {models && models.map((model) => (;
                 <TableRow key={model && model.id}>;
                   <TableCell className="font-medium">{model && model.id}</TableCell>;
@@ -652,6 +707,7 @@ export function ZionGPTModelManager() {;
                     ) : (;
                       <Badge className="bg-yellow-500">Queued</Badge>;
                     )}
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -664,6 +720,8 @@ export function ZionGPTModelManager() {;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       <Button
                         variant="ghost"
                         size="sm"
@@ -673,6 +731,7 @@ export function ZionGPTModelManager() {;
                         {activeJobs[model && model.id] ? (;
                           <Loader2 className="h-4 w-4 animate-spin" />;
                         ) : (;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
               {models.map((model) => (;
@@ -706,11 +765,16 @@ export function ZionGPTModelManager() {;
                           <Loader2 className="h-4 w-4 animate-spin" />;
                         ) :(;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                           <RefreshCw className="h-4 w-4" />;
                         )}
                         <span className="ml-1">Check</span>;
                       </Button>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     ) : model && model.trainingStatus === 'succeeded' ? (;
                       <Button
                         variant={model && model.active ? "outline" : "default"}
@@ -722,6 +786,7 @@ export function ZionGPTModelManager() {;
                             <CheckCircle className="h-4 w-4 mr-1" /> Active;
                           </>;
                         ) : (;
+<<<<<<< HEAD
 =======
                     ) :model.trainingStatus === 'succeeded' ? (;
                       <Button;
@@ -735,11 +800,14 @@ export function ZionGPTModelManager() {;
                           </>;
                         ) :(;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                           <>;
                             <Play className="h-4 w-4 mr-1" /> Activate;
                           </>;
                         )}
                       </Button>;
+<<<<<<< HEAD
 <<<<<<< HEAD
                     ) : (;
 =======
@@ -831,10 +899,14 @@ export function ZionGPTModelManager() {;
                       </Button>
                     ) : (
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+                    ) : (;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       <Button
                         variant="ghost"
                         size="sm"
                         className="text-red-500"
+<<<<<<< HEAD
 <<<<<<< HEAD
 
                         title={model && model.errorMessage || "Training failed"}>;
@@ -859,6 +931,8 @@ export function ZionGPTModelManager() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                   </TableCell>;
                 </TableRow>;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     )}
 
                   </TableCell>;
@@ -868,6 +942,7 @@ export function ZionGPTModelManager() {;
             </TableBody>;
           </Table>;
         )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       </CardContent>;
@@ -883,6 +958,10 @@ export function ZionGPTModelManager() {;
 =======
       </CardContent>;
     </Card>;
+=======
+;
+;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const toggleModelActive = async (model_id: string, current_active: boolean, purpose: string) => {
     try {
       // If activating, deactivate all other models with the same purpose;
@@ -994,40 +1073,8 @@ if ( {) {
           </Table>)}
       </CardContent>;
     </Card>);
-  ),; interface ModelVersionData extends ModelConfig {
-  trainingStatus: 'queued' | 'running' | 'succeeded' | 'failed';
-errorMessage?: string 
-}export function ZionGPTModelManager () {
-  const [models, setModels] = useState<ModelVersionData[]> ([]);
-const [isLoading, setIsLoading] = useState (true);
-const [activeJobs, setActiveJobs] = useState< {
-  [key: string]: boolean 
-}> ({
-  
-});
-//Fetch model data on component mount useEffect ( () => {
-  fetchModels () 
-}, []);
-const fetchModels = async () => {
-  try {
-  setIsLoading (true);
-const {
-  data, error 
-}= await supabase .from ('model versions') .select ('*') .order ('createdAt', {
-  ascending: false 
-});
-//Map the data to our component state if (error) throw error;
-//Update the local model status setModels (prev => prev.map (model => model.id === modelId ? {
-  ...model, trainingStatus: data.status, errorMessage: data.error || null 
-}: model) );
-//Also update in the database await supabase .from ('model versions') .update ({
-  training status: data.status, error message: data.error || null, //If training succeeded, automatically set to active ... (data.status === 'succeeded' ? {
-  active: true 
-}: {
-  
-}) 
-}) .eq ('id', modelId) 
 }
+<<<<<<< HEAD
 };
 const toggleModelActive = async (modelId: string, currentActive: boolean, purpose: string) => {
   try {
@@ -1072,3 +1119,5 @@ const toggleModelActive = async (modelId: string, currentActive: boolean, purpos
 }
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

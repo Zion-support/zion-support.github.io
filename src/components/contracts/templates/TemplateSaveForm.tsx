@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import { useState } from 'react'
 import { useForm, type ControllerRenderProps } from 'react-hook-form'
@@ -105,6 +106,8 @@ import { useState } from 'react';
 import { useForm, type ControllerRenderProps } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { Loader2 } from 'lucide-react';
 import { ContractFormValues } from '@/components/contracts/components/ContractForm';
 import { ContractTemplate } from '@/types/contracts';
@@ -215,6 +218,7 @@ if ( {) {
 }
       return;
     }
+<<<<<<< HEAD
     set_saving (true);
     try {
       // Check condition
@@ -307,11 +311,14 @@ export function TemplateSaveForm({;
     }
   },
   
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
         <FormField
           control={form.control}
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           name='title'
           render={({
@@ -325,6 +332,8 @@ export function TemplateSaveForm({;
           name="title"
           render={({ field }: { field: ControllerRenderProps<FormValues "title"> }) => (
             <FormItem>
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
               <FormLabel>Template Name</FormLabel>
               <FormControl>
@@ -332,6 +341,7 @@ export function TemplateSaveForm({;
               </FormControl>
               <FormMessage />
             </FormItem>
+<<<<<<< HEAD
           )}
         />
         <FormField
@@ -366,6 +376,8 @@ export function TemplateSaveForm({;
             field: ControllerRenderProps < FormValues, 'title'>;
           }) => (            <FormItem>;
               <FormLabel > Template Name</FormLabel>;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <FormControl>;
                 <Input {...field} placeholder='Enter template name' />;
               </FormControl>;
@@ -375,6 +387,7 @@ export function TemplateSaveForm({;
         <FormField;
           control={form.control}
           name='is_default';
+<<<<<<< HEAD
           render={({
             field
           }: {
@@ -407,10 +420,13 @@ export function TemplateSaveForm({;
         />
         <div className='flex gap-2 justify-end'>
           <Button type='button' variant='outline' onClick={onCancel}>
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <Switch
                   aria-label='Default template'
                   checked={field && field.value}
                   onCheckedChange={field && field.onChange}                />;
+<<<<<<< HEAD
 
 import { useState } from "react",;
 import { useForm, type ControllerRenderProps } from "react-hook-form",;
@@ -493,10 +509,13 @@ export function TemplateSaveForm({;
               <FormLabel>Template Name</FormLabel>;
               <FormControl>;
                 <Input {...field} placeholder="Enter template name" />;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               </FormControl>;
               <FormMessage />;
             </FormItem>;
           )}
+<<<<<<< HEAD
         />;
         <FormField;
           control={form.control}
@@ -576,6 +595,11 @@ try {
             ) : (;
               `${editTemplate ? 'Update' : 'Save'} Template`;
             Cancel
+=======
+
+
+            Cancel
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           </Button>
           <Button type="submit" disabled={saving}>
             {saving ? (
@@ -584,6 +608,7 @@ try {
                 Saving...
               </>
             ) : (
+<<<<<<< HEAD
               `${editTemplate ? 'Update' : 'Save'} Template`
             )}
           </Button>
@@ -619,6 +644,8 @@ try {
             ) :(;
               `${editTemplate ? "Update" :"Save"} Template`;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   editTemplate ? "Update" : "Save" 
 }Template`) ;
 }</Button> </div> </form> </Form>) ;
@@ -631,6 +658,7 @@ try {
           </Button>;
         </div>;
       </form>;
+<<<<<<< HEAD
     </Form>;
 setSaving (true);
 try {;
@@ -677,3 +705,5 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 }
 ;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

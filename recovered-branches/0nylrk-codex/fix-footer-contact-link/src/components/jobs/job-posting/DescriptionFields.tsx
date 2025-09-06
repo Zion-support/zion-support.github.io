@@ -1,3 +1,9 @@
+  FormField
+  FormItem
+  FormLabel
+  FormControl
+  FormDescription
+  FormMessage
 
 
 import {;
@@ -7,6 +13,7 @@ import {;
   FormControl,;
   FormDescription,;
   FormMessage,;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -25,12 +32,18 @@ import {
   FormDescription
   FormMessage
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   FormField,
   FormItem,
   FormLabel,
   FormControl,
   FormDescription,
   FormMessage,;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -52,10 +65,16 @@ import { Textarea } from "@/components/ui/textarea";
 import { JobSchemaType } from './validation';
 interface DescriptionFieldsProps {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+} from "@/components/ui/form";
+
+import { Textarea } from "@/components/ui/textarea";
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   control: Control<JobSchemaType>;
   handleEditorChange: (content: string) => void;
   editorContent: string
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -97,18 +116,23 @@ export function DescriptionFields({ control, handleEditorChange, editorContent }
         control={control}
         name="description";
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+        control={control}
+        name="description"
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         render={({ field }) => (;
           <FormItem>;
             <FormLabel>Job Description</FormLabel>;
             <FormControl>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <Textarea
-=======
-
-=======
-=======
 
 
+<<<<<<< HEAD
 =======
 
 
@@ -125,6 +149,8 @@ export function DescriptionFields({
                   field.onChange(e.target.value)
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from 'react',
 import { Control } from 'react-hook-form',
 import { FormField, FormItem, FormLabel, FormControl, FormDescription, FormMessage } from "@/components/ui/form",
@@ -152,9 +178,13 @@ export function DescriptionFields({ control, handleEditorChange, editorContent }
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         control={control}
         name="description"
         render={({ field }) => (
@@ -162,17 +192,17 @@ export function DescriptionFields({ control, handleEditorChange, editorContent }
             <FormLabel>Job Description</FormLabel>
             <FormControl>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <Textarea
               <Textarea 
-                value={editorContent}
-                onChange={(e) => {;
-                  handleEditorChange(e.target.value);
-                  field.onChange(e.target.value);
 
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                 value={editorContent}
                 onChange={(e) => {;
@@ -187,6 +217,13 @@ export function DescriptionFields({ control, handleEditorChange, editorContent }
                 }}
                 className="min-h-[200px]";
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+                value={editorContent}
+                onChange={(e) => {;
+                }}
+                className="min-h-[200px]";
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from './react';
 import { Control  } from './react - hook - form';
 import {
@@ -225,6 +262,7 @@ function DescriptionFields() {
                 }}
                 className="min - h-[200px]";
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
               <Textarea ;
@@ -235,6 +273,8 @@ function DescriptionFields() {
                 }}
                 className="min-h-[200px]";
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 placeholder="Enter a detailed description of the job role";
               />;
             </FormControl>;
@@ -242,6 +282,7 @@ function DescriptionFields() {
               Detailed description of the job role.;
             </FormDescription>;
             <FormMessage />;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       />;
@@ -258,10 +299,13 @@ function DescriptionFields() {
         control={control}
         name="responsibilities";
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         render={({ field }) => (;
           <FormItem>;
             <FormLabel>Responsibilities (Optional)</FormLabel>;
             <FormControl>;
+<<<<<<< HEAD
 <<<<<<< HEAD
               <Textarea
                 placeholder="List the main responsibilities of this job"
@@ -285,6 +329,8 @@ function DescriptionFields() {
                 placeholder="List the main responsibilities of this job";
                 className="resize-none min-h-[100px]";
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 {...field}
               />;
             </FormControl>;
@@ -292,6 +338,7 @@ function DescriptionFields() {
               List the main responsibilities of this job.;
             </FormDescription>;
             <FormMessage />;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       />;
@@ -308,10 +355,13 @@ function DescriptionFields() {
         control={control}
         name="qualifications";
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         render={({ field }) => (;
           <FormItem>;
             <FormLabel>Qualifications (Optional)</FormLabel>;
             <FormControl>;
+<<<<<<< HEAD
 <<<<<<< HEAD
               <Textarea
                 placeholder="List the required qualifications for this job"
@@ -335,6 +385,8 @@ function DescriptionFields() {
                 placeholder="List the required qualifications for this job";
                 className="resize-none min-h-[100px]";
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 {...field}
               />;
             </FormControl>;
@@ -342,6 +394,7 @@ function DescriptionFields() {
               List the required qualifications for this job.;
             </FormDescription>;
             <FormMessage />;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       />;
@@ -358,10 +411,13 @@ function DescriptionFields() {
         control={control}
         name="benefits";
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         render={({ field }) => (;
           <FormItem>;
             <FormLabel>Benefits (Optional)</FormLabel>;
             <FormControl>;
+<<<<<<< HEAD
 <<<<<<< HEAD
               <Textarea
                 placeholder="List the benefits offered for this job"
@@ -385,6 +441,8 @@ function DescriptionFields() {
                 placeholder="List the benefits offered for this job";
                 className="resize-none min-h-[100px]";
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 {...field}
               />;
             </FormControl>;
@@ -392,6 +450,7 @@ function DescriptionFields() {
               List the benefits offered for this job.;
             </FormDescription>;
             <FormMessage />;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       />;
@@ -408,10 +467,13 @@ function DescriptionFields() {
         control={control}
         name="application_instructions";
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         render={({ field }) => (;
           <FormItem>;
             <FormLabel>Application Instructions (Optional)</FormLabel>;
             <FormControl>;
+<<<<<<< HEAD
 <<<<<<< HEAD
               <Textarea
                 placeholder="Provide instructions on how to apply for this job"
@@ -419,6 +481,8 @@ function DescriptionFields() {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           </FormItem>)}
       />;
       <FormField;
@@ -432,12 +496,15 @@ function DescriptionFields() {
                 placeholder="Provide instructions on how to apply for this job";
                 className="resize - none min - h-[100px]";
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
               <Textarea;
                 placeholder="Provide instructions on how to apply for this job";
                 className="resize-none min-h-[100px]";
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 {...field}
               />;
             </FormControl>;
@@ -445,6 +512,7 @@ function DescriptionFields() {
               Provide instructions on how to apply for this job.;
             </FormDescription>;
             <FormMessage />;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -559,10 +627,14 @@ function DescriptionFields() {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
 =======
+=======
+  );
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           </FormItem>)}
       />;
     </>);
 }
+<<<<<<< HEAD
   ),;}
  interface DescriptionFieldsProps {
   control: Control<JobSchemaType>;
@@ -587,3 +659,5 @@ editorContent: string
   );
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

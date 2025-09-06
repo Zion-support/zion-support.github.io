@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { supabase  } from '@/integrations/supabase/client';
 import {logErrorToProduction} from '@/utils/productionLogger';
@@ -35,6 +36,9 @@ export function TenantsList() {
 ;
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useState, useEffect } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
 import {logErrorToProduction} from '@/utils/productionLogger',;
@@ -71,6 +75,7 @@ export function TenantsList() {;
         .select('*');
         .order('created_at', { ascending: false }),;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 .order('created_at', { ascending: false }),;
 
@@ -79,6 +84,8 @@ export function TenantsList() {;
 ;
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       if (error) throw error,;
       setTenants(data as WhitelabelTenant[]);
     } catch (error: any) {;
@@ -270,6 +277,7 @@ export function TenantsList() {;
   );
 }
 ;
+<<<<<<< HEAD
 
 
         .order ('created_at', { ascending: false }),
@@ -277,3 +285,5 @@ export function TenantsList() {;
 }
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

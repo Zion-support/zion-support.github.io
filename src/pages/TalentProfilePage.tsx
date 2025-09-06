@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import { TalentProfile } from "@/components/profile/TalentProfile",
 import React, { useState, useEffect } from "react";
@@ -76,6 +77,8 @@ export default function TalentProfilePage() {
 import React, { useState, useEffect } from "react",
 import { useRouter } from 'next/router',
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { TalentProfile } from "@/components/profile/TalentProfile",
 import { ProfileLoadingState } from "@/components/profile/ProfileLoadingState",
 import { ProfileErrorState } from "@/components/profile/ProfileErrorState",
@@ -89,6 +92,7 @@ import { Handshake, MessageSquare } from 'lucide-react'
 import { Button } from "@/components/ui/button",
 import { useAuth } from "@/hooks/useAuth",
 import { UserProfile } from "@/types/auth",
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 import React, { useState, useEffect } from 'react';
@@ -145,6 +149,8 @@ import { toast } from "@/hooks/use-toast";
 import { SEO } from "@/components/SEO";
 export default function TalentProfilePage() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { toast } from "@/hooks/use-toast",
 import { SEO } from "@/components/SEO",
 export default function TalentProfilePage() {
@@ -157,6 +163,7 @@ export default function TalentProfilePage() {
   const { userDetails } = useAuthStatus(),
   const { isAuthenticated, user } = useAuth(),
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -175,6 +182,8 @@ export default function TalentProfilePage() {
   const { userDetails } = useAuthStatus()
   const { isAuthenticated, user } = useAuth()
   // Create a compatible UserProfile from UserDetails or the authenticated user
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   // Create a compatible UserProfile from UserDetails or the authenticated user
   const userProfile: UserProfile = user
     ? {
@@ -210,8 +219,13 @@ export default function TalentProfilePage() {
     name: user.name |''
     points: user.points |0
   const userProfile: UserProfile = user ? {
+<<<<<<< HEAD
   const userProfile: UserProfile = user ? {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+  // Create a compatible UserProfile from UserDetails or the authenticated user
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     id: user.id || '',
     displayName: user.displayName || '',
     email: user.email || '', // Ensure email is always a string
@@ -223,7 +237,10 @@ export default function TalentProfilePage() {
     name: user.name || '',
     points: user.points || 0
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   } : {
     id: userDetails?.id |''
 =======
@@ -234,6 +251,7 @@ ursor/fix-website-loading-errors-and-merge-6662
     email: userDetails?.email |'', // Ensure email is always a string
     userType: null, // Default empty string since userDetails doesn't have this property
     profileComplete: false, // Default value since userDetails doesn't have this property
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -259,10 +277,15 @@ ursor/fix-website-loading-errors-and-merge-6662
   },
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   // Handle loading error gracefully
   useEffect((,) => {
     if (error) {
       toast({
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -274,6 +297,8 @@ ursor/fix-website-loading-errors-and-merge-6662
         title: 'Error loading profile',
         title: 'Error loading profile',
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         description:
           'There was a problem loading this talent profile. Please try again.'
         variant: 'destructive'
@@ -321,6 +346,7 @@ ursor/fix-website-loading-errors-and-merge-6662
     updated_at: new Date ().toISOString (); // Default value since user_details doesn't have this property    role: '', // Default empty string since user_details doesn't have this property;
     name: '',
     points: 0;
+<<<<<<< HEAD
     }
   }, [error])
   if (isLoading) {
@@ -339,6 +365,8 @@ ursor/fix-website-loading-errors-and-merge-6662
       router.push(`/login?returnTo=${encodeURIComponent(`/talent/${id}`)}`)
       return
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   // Handle loading error gracefully;
   useEffect ((, ) => {
     // Check condition
@@ -354,39 +382,22 @@ if ( {) {
         description: "There was a problem loading this talent profile. Please try again.",
         variant: "destructive"});
     }
-  }, [error]);
+  }, [error])
+  if (isLoading) {
+    return <ProfileLoadingState />
+  }
   // Check condition
 if ( {) {
   $2
 }
-    return <ProfileLoadingState />;
   }
-
-  // Check condition
-if ( {) {
-  $2
-}
-    return <ProfileErrorState error={error} />;
-  }
-  const handleRequestHire = () =>: any {
-    // Check condition
-if ( {) {
-  $2
-}
-      toast ({
-        title: 'Authentication required',
-        description: 'Please sign in to hire this talent.',
-        variant: 'default',
-      });
-      router.push (`/login?return_to=${encodeURIComponent (`/talent/${id}`)}`);
-      return;
-
     }
     setIsHireModalOpen (true) }      router.push (`/login?return_to=${encodeURIComponent (`/talent/${id}`)}`);
       return;
     }
     setIsHireModalOpen (true);
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -433,6 +444,8 @@ import { SEO } from '@/components/SEO';
 
 import React, { useState, useEffect } from "react";
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useRouter } from 'next/router';
 =======
 import { useRouter } from 'next/router';
@@ -507,8 +520,17 @@ export default function TalentProfilePage() {;
     name: '',;
     points: 0;
   };
-
-
+  // Handle loading error gracefully;
+  useEffect((,) => {;
+    if (error) {;
+      toast({;
+        title: 'Error loading profile',;
+        description:;
+          'There was a problem loading this talent profile. Please try again.',;
+        variant: 'destructive',;
+      });    }        title: "Error loading profile",;
+        description: "There was a problem loading this talent profile. Please try again.",;
+        variant: "destructive"});
     }
   }, [error]);
 
@@ -520,8 +542,53 @@ export default function TalentProfilePage() {;
     return <ProfileErrorState error={error} />;
   }
 
+  const handleRequestHire = () => {;
+    if (!isAuthenticated) {;
+      toast({;
+        title: 'Authentication required',;
+        description: 'Please sign in to hire this talent.',;
+        variant: 'default',;
+      });
+      router && router.push(`/login?returnTo=${encodeURIComponent(`/talent/${id}`)}`);
+      return;
+    }
+    setIsHireModalOpen(true);  };      router && router.push(`/login?returnTo=${encodeURIComponent(`/talent/${id}`)}`);
+      return;
+    }
+    setIsHireModalOpen(true);
+  };
 
+  const handleMessageTalent = () => {;
+    if (!isAuthenticated) {;
+      toast({;
+        title: 'Authentication required',;
+        description: 'Please sign in to message this talent.',;
+        variant: 'default',;
+      });
+      return;
+    }
+    setIsMessageModalOpen(true);
+  };
+  const handleRequestHire = () => {
+    if (!isAuthenticated) {
+      toast({
+        title: "Authentication required",
+        description: "Please sign in to hire this talent.",
+        variant: "default"});
+      router.push(`/login?returnTo=${encodeURIComponent(`/talent/${id}`)}`);
+      return
+    }
+    setIsHireModalOpen(true)
+  };
 
+  const handleMessageTalent = () => {
+    if (!isAuthenticated) {
+      toast({
+        title: "Authentication required",
+        description: "Please sign in to message this talent.",
+        variant: "default"});
+      router.push(`/login?returnTo=${encodeURIComponent(`/talent/${id}`)}`);
+      return
   const handleMessageTalent = () =>: any {
     // Check condition
 if ( {) {
@@ -537,11 +604,9 @@ if ( {) {
     setIsMessageModalOpen (true);
   }
 
-
-
-
   return (
     <>;
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -567,10 +632,13 @@ if ( {) {
       />
       <div className='min-h-screen bg-zion-blue pb-12'>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <TalentProfile
           profile={profile}
           onRequestHire={handleRequestHire}
           onMessageTalent={handleMessageTalent}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
         />;
@@ -611,17 +679,19 @@ if ( {) {
           onMessageTalent={handleMessageTalent}
         />;
         <BackToDirectoryButton />;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         {/* Sticky action buttons that appear when scrolling */}
         <StickyAction>;
-          <div className='p - 2 flex gap - 2'>;
-            <Button;
-              size='sm';
-              className='bg - zion - purple text - white hover:bg - zion - purple - dark';
-              on_click={handleRequestHire}
-            >;
-              <Handshake className='mr - 2 h - 4 w - 4' />;
+          <div className='p-2 flex gap-2'>;
+            <Button
+              size='sm'
+              className='bg-zion-purple text-white hover:bg-zion-purple-dark'
+              onClick={handleRequestHire}>;
+              <Handshake className='mr-2 h-4 w-4' />;
               Hire Now;
             </Button>;
+<<<<<<< HEAD
             <Button;
               size='sm';
               variant='outline';
@@ -753,6 +823,12 @@ return (<> <SEO title= {
 }onMessageTalent= {
 
 
+=======
+            <Button
+              size='sm'
+              variant='outline'
+              className='border-zion-purple text-zion-purple hover:bg-zion-purple/10'
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         title={profile.full_name}
         description={profile.bio || 'Talent profile'}
         ogImage={profile.profile_picture_url}
@@ -765,6 +841,8 @@ return (<> <SEO title= {
 
 
 
+  if (error |!profile) {
+    return <ProfileErrorState error={error} />
         title: "Error loading profile",
         description: "There was a problem loading this talent profile. Please try again.",
         variant: "destructive"})
@@ -844,6 +922,7 @@ export default function TalentProfilePage() {;
   const handleRequestHire = () => {
     if (!isAuthenticated) {
       toast({
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -1154,6 +1233,9 @@ return (<> <SEO title= {
         onMessageTalent = {handleMessageTalent,}
       />
       <BackToDirectoryButton />
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         title: "Authentication required",
         description: "Please sign in to hire this talent.",
         variant: "default"}),
@@ -1203,13 +1285,15 @@ return (<> <SEO title= {
       />
       <div className="min-h-screen bg-zion-blue pb-12">
       <TalentProfile
-      <TalentProfile
         profile={profile}
         onRequestHire={handleRequestHire}
         onMessageTalent={handleMessageTalent}
       />;
       <BackToDirectoryButton />;
+<<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {/* Sticky action buttons that appear when scrolling */}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         <div className="p-2 flex gap-2">
@@ -1221,23 +1305,11 @@ ursor/fix-website-loading-errors-and-merge-6662
             <Handshake className="mr-2 h-4 w-4" />
             Hire Now
           </Button>
-      />;
-      <BackToDirectoryButton />;
-
-      {/* Sticky action buttons that appear when scrolling */}
-      <StickyAction>;
-        <div className="p-2 flex gap-2">;
-          <Button
-            size="sm"
-            className="bg-zion-purple text-white hover:bg-zion-purple-dark"
-            onClick = {handleRequestHire,}>;
-            <Handshake className="mr-2 h-4 w-4" />;
-            Hire Now;
-          </Button>;
           <Button
             size="sm"
             variant="outline"
             className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1252,6 +1324,9 @@ ursor/fix-website-loading-errors-and-merge-6662
       {/* Request to Hire Modal */}
       <HireRequestModal
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             onClick = {handleMessageTalent,}>;
             <MessageSquare className="mr-2 h-4 w-4" />;
   handleMessageTalent;
@@ -1307,6 +1382,7 @@ ursor/fix-website-loading-errors-and-merge-6662
         </div>;
       </StickyAction>;
 
+<<<<<<< HEAD
 
       <HireRequestModal 
 <<<<<<< HEAD
@@ -1314,10 +1390,20 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+            onClick={handleMessageTalent}
+          >
+            <MessageSquare className="mr-2 h-4 w-4" />
+            Message
+          </Button>
+        </div>
+      </StickyAction>
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         talent = {profile,}
         isOpen = {isHireModalOpen,}
         onClose = {(,) => setIsHireModalOpen(false),}
         userDetails = {userProfile,}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       />;
@@ -1326,6 +1412,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
       />
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {/* Message Talent Modal */}
       <MessageTalentModal
         talent = {profile,}
@@ -1334,13 +1422,15 @@ ursor/fix-website-loading-errors-and-merge-6662
         onClose = {() => setIsMessageModalOpen(false),}      />;
 
 ;
-
       
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 ;
       
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {/* Request to Hire Modal */}
       <HireRequestModal;
         talent={profile}
@@ -1355,13 +1445,17 @@ ursor/fix-website-loading-errors-and-merge-6662
         onClose={() => setIsMessageModalOpen(false)}
       />;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     </div>;
     </>;
   );
 }
+<<<<<<< HEAD
 
 
       {/* Request to Hire Modal */}
@@ -1384,3 +1478,5 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

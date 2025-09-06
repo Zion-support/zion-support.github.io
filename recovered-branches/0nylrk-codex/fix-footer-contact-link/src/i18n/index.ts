@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import {initReactI18next} from 'react-i18next';
 import LanguageDetector from 'i18next-browser-languagedetector';
@@ -16,6 +17,8 @@ import esTranslation from './locales/es/translation.json',
 import ptTranslation from './locales/pt/translation.json',
 import arTranslation from './locales/ar/translation.json',
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 // Initialize i18next
 i18n
   .use(LanguageDetector) // Detect user language
@@ -37,6 +40,7 @@ i18n
     }
     fallbackLng: 'en', // Default language
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     debug: process && process.env.NODE_ENV === 'development',
 
@@ -45,6 +49,8 @@ i18n
 
     debug: process.env.NODE_ENV === 'development'
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     interpolation: {
       escapeValue: false, // React already escapes by default
     }
@@ -54,6 +60,7 @@ i18n
       caches: ['localStorage']
     }});
 // For RTL language support
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -77,13 +84,17 @@ i18n.on('languageChanged', (lng) => {
   // Save language preference to localStorage
   localStorage.setItem('zion_language', lng);
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   // If user is authenticated, save language preference to profile
   // This will be implemented in the LanguageContext
 });
 export default i18n;
 <<<<<<< HEAD
-
+<<<<<<< HEAD
 =======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
 import i18n from 'i18next';
 import {initReactI18next} from 'react - i18next';
 import LanguageDetector from 'i18next - browser - languagedetector';
@@ -91,6 +102,7 @@ import en_translation from './locales / en / translation.json';
 import es_translation from './locales / es / translation.json';
 import pt_translation from './locales / pt / translation.json';
 import ar_translation from './locales / ar / translation.json';
+<<<<<<< HEAD
 =======
 
 
@@ -108,6 +120,8 @@ import ptTranslation from './locales/pt/translation.json',;
 import arTranslation from './locales/ar/translation.json',;
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 // Initialize i18next;
 i18n;
   .use (LanguageDetector) // Detect user language;
@@ -150,11 +164,10 @@ i18n.on ('language_changed', (lng) => {
 ;
   // If user is authenticated, save language preference to profile;
   // This will be implemented in the LanguageContext;
-
-}),;
-
-
+});
+;
 export default i18n;
+<<<<<<< HEAD
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -209,3 +222,5 @@ i18n.on('languageChanged', (lng) => {;
 }),;
 export default i18n;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

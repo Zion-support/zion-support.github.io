@@ -1,21 +1,29 @@
-
 import {ChevronDown, ChevronUp} from "lucide-react";
 import {Button} from "@/components/ui/button";
 import {Checkbox} from "@/components/ui/checkbox";
 import {SkillsFilterProps} from "@/types/filters";
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
 
 
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { ChevronDown, ChevronUp } from "lucide-react",
 import { Button } from "@/components/ui/button",
 import { Checkbox } from "@/components/ui/checkbox";
 import { SkillsFilterProps } from "@/types/filters";
 import { Checkbox } from "@/components/ui/checkbox",
 import { SkillsFilterProps } from "@/types/filters",
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 // Common skills in AI and tech
 
 const POPULAR_SKILLS = [
@@ -66,26 +74,29 @@ export function SkillsFilter({ selectedSkills, toggleSkill, expanded, toggleSect
                 className="ml-2 text-sm text-zion-slate-light cursor-pointer"
               >
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { ChevronDown, ChevronUp } from "lucide-react",;
 import { Button } from "@/components/ui/button",;
 import { Checkbox } from "@/components/ui/checkbox",;
 import { SkillsFilterProps } from "@/types/filters",;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 // Common skills in AI and tech;
 const POPULAR_SKILLS = [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 import { ChevronDown, ChevronUp } from './lucide-react';
 import { Button } from '@/components / ui / button';
 import { Checkbox } from '@/components / ui / checkbox';
 import { SkillsFilterProps } from '@/types / filters';
 // Common skills in AI and tech;
 const POPULAR_SKILLS = [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   "Machine Learning";
   "Deep Learning";
   "Python";
@@ -103,6 +114,7 @@ const POPULAR_SKILLS = [;
   "DevOps";
   "Security";
 ];
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -114,6 +126,8 @@ const POPULAR_SKILLS = [;
             <div key={skill} className="flex items-center">;
 <<<<<<< HEAD
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <Checkbox
                 id={`skill-${skill}`}
                 checked={selectedSkills && selectedSkills.includes(skill)}
@@ -127,13 +141,14 @@ const POPULAR_SKILLS = [;
               >
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+                className="ml-2 text-sm text-zion-slate-light cursor-pointer">;
                 {skill}
               </label>;
             </div>;
           ))}
         </div>;
       )}
+<<<<<<< HEAD
 =======
               <Checkbox
 
@@ -181,11 +196,14 @@ export function SkillsFilter({ selectedSkills, toggleSkill, expanded, toggleSect
             <div key={skill} className="flex items-center">;
               <Checkbox;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
     </div>;
   );
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -193,6 +211,8 @@ export function SkillsFilter({ selectedSkills, toggleSkill, expanded, toggleSect
   );
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ;
 export /**
  * SkillsFilter - Function description
@@ -230,12 +250,16 @@ function SkillsFilter() {
     </div>);
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 };
 ;
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 
@@ -301,3 +325,5 @@ toggleSection
 };
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

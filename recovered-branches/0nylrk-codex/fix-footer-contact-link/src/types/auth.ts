@@ -1,9 +1,12 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   permissions?: string[];
   company_id?: string;
 
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export interface UserDetails {
 export interface UserDetails {;
   id?: string;
@@ -15,17 +18,24 @@ export interface UserDetails {;
   headline?: string;
   profileComplete?: boolean;
   role?: string;
-  permissions?: string[];
-  company_id?: string;
+  permissions?: string[],
+  companyId?: string;
+  bio?: string;
+  createdAt?: string;
+  updatedAt?: string
+}
 
   permissions?: string[];
   company_id?: string;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   bio?: string;
   created_at?: string;
   updated_at?: string;
 }
-export interface UserProfile {
   id?: string;
   display_name?: string;
   email: string;
@@ -38,6 +48,7 @@ export interface UserProfile {
   avatar_url?: string;
   headline?: string;
   role?: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   permissions?: string[],
@@ -88,6 +99,8 @@ export interface AuthContextType {;
   signOut?: () => Promise<void>;
 
   signUp?: (email: string, password: string, userData?: Partial<UserDetails>) => Promise<{ error: any }>
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 export interface UserDetails {;
   id?: string,;
@@ -104,8 +117,6 @@ export interface UserDetails {;
   bio?: string,;
   createdAt?: string,;
   updatedAt?: string;
-  permissions?: string[],
-  company_id?: string;
 }
 ;
 export interface UserProfile {;
@@ -123,7 +134,10 @@ export interface UserProfile {;
   role?: string,;
   permissions?: string[],;
   companyId?: string;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 ;
 // Update AuthContextType definition to match implementation;
@@ -161,6 +175,7 @@ export interface AuthContextType {
   sign_out?: () => Promise < void>;
   sign_up?: (email: string, password: string, user_data?: Partial < UserDetails>) => Promise<{ error: any }>;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 =======
@@ -228,9 +243,14 @@ export interface AuthContextType {;
   signOut?:() => Promise<void>,;
   signUp?:(email:string, password:string, userData?:Partial<UserDetails>) => Promise<{ error:any }>,;
 } 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 }
 ;
 }
+<<<<<<< HEAD
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

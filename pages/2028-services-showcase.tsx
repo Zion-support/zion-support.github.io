@@ -1,11 +1,8 @@
-
-
-
-
 import React from 'react',;
 import Head from 'next/head',;
 import Link from 'next/link',;
 import { motion } from 'framer-motion',;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 import { 
@@ -23,6 +20,8 @@ import Head from 'next/head',;
 import Link from 'next/link',;
 import { motion } from 'framer-motion',;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { 
   CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, 
   DollarSign, Shield, Mail, MapPin, Rocket, Brain, Sparkles,
@@ -33,6 +32,7 @@ import UltraFuturisticNavigation2028 from '../components/layout/UltraFuturisticN
 import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFooter2028',;
 import { futuristic2028Services } from '../data/2028-futuristic-innovations',;
 import { emergingTech2028Services } from '../data/2028-emerging-tech-services',;
+<<<<<<< HEAD
 <<<<<<< HEAD
 const contactInfo = {
   mobile: '+1 302 464 0950',
@@ -89,24 +89,18 @@ const serviceCategories = [
 =======
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-
-
-
-import {;
-  CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap,;
-  DollarSign, Shield, Mail, MapPin, Rocket, Brain, Sparkles,;
-  Globe, Atom, Heart, Leaf, Car, GraduationCap, Scale,;
-  Building, Factory, Camera, Video, Music, Gamepad2;
-} from 'lucide-react',;
-
 import UltraFuturisticNavigation2028 from '../components/layout/UltraFuturisticNavigation2028';
 import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFooter2028';
 import { futuristic2028Services } from '../data/2028-futuristic-innovations';
 import { emergingTech2028Services } from '../data/2028-emerging-tech-services';
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -279,12 +273,31 @@ color: 'from - orange - 600 to - red - 600',
     services: futuristic2028Services.filter (string => s.category.includes ('Autonomous')).slice (0, 4);
   }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+    description: 'Intelligent urban solutions'
+    icon: Building
+    color: 'from-blue-600 to-cyan-600'
+    services: emergingTech2028Services.filter(s => s.category.includes('Smart City') |s.category.includes('Infrastructure')).slice(0, 4)
+  }
+  {
+    description: 'Quantum computing and beyond'
+    icon: Atom
+    color: 'from-indigo-600 to-blue-600'
+    services: futuristic2028Services.filter(s => s.category.includes('Quantum')).slice(0, 4)
+  }
+  {
+    description: 'Next-generation AI solutions'
+    icon: Brain
+    color: 'from-emerald-600 to-teal-600'
+    services: emergingTech2028Services.filter(s => s.category.includes('AI')).slice(0, 4)
+  }
+  }
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ],
-export default /**
- * ServicesShowcase2028 - Function description
- */
-function ServicesShowcase2028() {
+export default function ServicesShowcase2028() {
   return (
+<<<<<<< HEAD
     <>;
       <Head>;
         <title > 2028 Futuristic Services Showcase - Zion Tech Group</title>;
@@ -299,12 +312,23 @@ function ServicesShowcase2028() {
       <UltraFuturisticNavigation2028 />;
 <<<<<<< HEAD
 
+=======
+    <>
+      <Head>
+        <title>2028 Futuristic Services Showcase - Zion Tech Group</title>
+        <meta name="description" content="Explore our cutting-edge 2028 services including AI, quantum computing, autonomous systems, and futuristic innovations. Transform your business with next-generation technology." />
+        <meta name="keywords" content="2028 technology, AI services, quantum computing, autonomous systems, futuristic innovations, Zion Tech Group" />
+        <meta property="og:title" content="2028 Futuristic Services Showcase - Zion Tech Group" />
+        <meta property="og:description" content="Explore our cutting-edge 2028 services including AI, quantum computing, autonomous systems, and futuristic innovations." />
+        <meta property="og:url" content="https://ziontechgroup.com/2028-services-showcase" />
+        <meta property="og:type" content="website" />
+        <link rel="canonical" href="https://ziontechgroup.com/2028-services-showcase" />
+      </Head>
+      <UltraFuturisticNavigation2028 />
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {/* Hero Section */}
-      <section className="relative min - h-screen flex items - center justify - center bg - gradient - to - br from - black via - purple - 900 / 20 to - blue - 900 / 20 overflow - hidden">;
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+      <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-black via-purple-900/20 to-blue-900/20 overflow-hidden">
         {/* Animated Background */}
-
-
       {/* Hero Section */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -316,9 +340,6 @@ function ServicesShowcase2028() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         <div className="absolute inset-0">
           <div className="absolute top-0 left-0 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse"></div>
           <div className="absolute top-1/2 right-0 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
@@ -326,10 +347,13 @@ function ServicesShowcase2028() {
         </div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             initial={{ opacity: 0, y: 30 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -345,8 +369,6 @@ function ServicesShowcase2028() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
             className="space-y-8"
           >
             <div className="inline-flex items-center space-x-2 bg-purple-900/30 border border-purple-500/30 rounded-full px-6 py-3 text-purple-300 text-sm">
@@ -383,15 +405,6 @@ function ServicesShowcase2028() {
                 <DollarSign className="w-5 h-5" />
               </Link>
             </div>
-
-
-            {/* Stats */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
-
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8 pt-16">
               <div className="text-center">
                 <div className="text-3xl font-bold text-purple-400">50+</div>
@@ -413,15 +426,6 @@ function ServicesShowcase2028() {
           </motion.div>
         </div>
       </section>
-
-
-      {/* Services Categories */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
-
       <section className="py-20 bg-black/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -439,6 +443,7 @@ function ServicesShowcase2028() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {serviceCategories.map((category, index) => (
               <motion.div
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -530,15 +535,20 @@ function ServicesShowcase2028() {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 key={category.title}
                 initial={{ opacity: 0, coordinate_y: 30 }}
                 whileInView={{ opacity: 1, coordinate_y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 className="group relative"
               >
                 <div className="relative p-8 bg-gradient-to-br from-purple-900/20 to-blue-900/20 border border-purple-500/30 rounded-2xl hover:border-purple-500/60 transition-all duration-300 hover:transform hover:scale-105">
@@ -555,10 +565,13 @@ function ServicesShowcase2028() {
                           <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
                           <span className="text-purple-200 text-sm">{service.name}</span>
                         </div>
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -571,8 +584,6 @@ function ServicesShowcase2028() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
                       className="inline-flex items-center space-x-2 text-purple-400 hover:text-purple-300 transition-colors group"
                     >
                       <span>Explore More</span>
@@ -581,23 +592,6 @@ function ServicesShowcase2028() {
                   </div>
                 </div>
               </motion.div>
-
-
-            ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-          </div>;
-        </div>;
-      </section>;
-      {/* Featured Services */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
-
       <section className="py-20 bg-gradient-to-br from-purple-900/10 to-blue-900/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -611,6 +605,7 @@ function ServicesShowcase2028() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {futuristic2028Services.slice(0, 6).map((service, index) => (
               <motion.div
+<<<<<<< HEAD
 
                 className="group relative";
               >;
@@ -660,15 +655,20 @@ function ServicesShowcase2028() {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 key={service.id}
                 initial={{ opacity: 0, coordinate_x: index % 2 === 0 ? -30 : 30 }}
                 whileInView={{ opacity: 1, coordinate_x: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 className="group relative"
               >
                 <div className="relative p-8 bg-black/40 backdrop-blur-sm border border-purple-500/30 rounded-2xl hover:border-purple-500/60 transition-all duration-300 hover:transform hover:scale-105">
@@ -690,10 +690,13 @@ function ServicesShowcase2028() {
                         <span className="text-purple-300">({service.reviews} reviews)</span>
                       </div>
                       <div className="text-sm text-purple-300">
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                         <span className="font-medium">Market Size:</span> {service.marketSize  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -706,21 +709,10 @@ function ServicesShowcase2028() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
                       </div>
                     </div>
                     <div className="flex items-center justify-between">
                       <Link
-
-
-                        href={service.link  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
-
                         className="px-6 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
                       >
                         Learn More
@@ -733,23 +725,6 @@ function ServicesShowcase2028() {
                   </div>
                 </div>
               </motion.div>
-
-
-            ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-          </div>;
-        </div>;
-      </section>;
-      {/* Market Analysis */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
-
       <section className="py-20 bg-black/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -762,30 +737,6 @@ function ServicesShowcase2028() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <motion.div
-
-
-              initial={{ opacity: 0, y: 30 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              whileInView={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              transition={{ duration: 0.6 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              viewport={{ once: true }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
-
               className="text-center p-8 bg-gradient-to-br from-purple-900/20 to-blue-900/20 border border-purple-500/30 rounded-2xl"
             >
               <TrendingUp className="w-16 h-16 text-green-400 mx-auto mb-6" />
@@ -796,39 +747,13 @@ function ServicesShowcase2028() {
                 Our services target markets with exponential growth potential,
 
                 Our services target markets with exponential growth potential, 
-
                 Our services target markets with exponential growth potential,
-
                 with some sectors growing at 300-800% annually.
               </p>
               <div className="text-3xl font-bold text-green-400">500%+</div>
               <div className="text-purple-300">Average Annual Growth</div>
             </motion.div>
             <motion.div
-
-
-              initial={{ opacity: 0, y: 30 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              whileInView={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              transition={{ duration: 0.6, delay: 0.2 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              viewport={{ once: true }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
-
               className="text-center p-8 bg-gradient-to-br from-blue-900/20 to-cyan-900/20 border border-blue-500/30 rounded-2xl"
             >
               <DollarSign className="w-16 h-16 text-blue-400 mx-auto mb-6" />
@@ -844,30 +769,6 @@ function ServicesShowcase2028() {
               <div className="text-blue-300">Total Addressable Market</div>
             </motion.div>
             <motion.div
-
-
-              initial={{ opacity: 0, y: 30 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              whileInView={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              transition={{ duration: 0.6, delay: 0.4 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              viewport={{ once: true }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
-
               className="text-center p-8 bg-gradient-to-br from-pink-900/20 to-rose-900/20 border border-pink-500/30 rounded-2xl"
             >
               <Shield className="w-16 h-16 text-pink-400 mx-auto mb-6" />
@@ -885,6 +786,7 @@ function ServicesShowcase2028() {
           </div>
         </div>
       </section>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -1002,6 +904,8 @@ function ServicesShowcase2028() {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {/* CTA Section */}
       <section className="py - 20 bg - gradient - to - r from - purple - 900 / 30 to - blue - 900 / 30">;
         <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 text - center">;
@@ -1010,6 +914,7 @@ function ServicesShowcase2028() {
             whileInView={{ opacity: 1, coordinate_y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -1044,6 +949,8 @@ function ServicesShowcase2028() {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             className="space-y-8"
           >
             <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
@@ -1051,8 +958,11 @@ function ServicesShowcase2028() {
             </h2>
             <p className="text-xl text-purple-200 max-w-3xl mx-auto">
 
+<<<<<<< HEAD
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 
@@ -1097,10 +1007,13 @@ function ServicesShowcase2028() {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             className="space - y-8";
           >;
             <h2 className="text - 4xl md: text - 5xl font - bold text - white mb - 6">;
@@ -1144,6 +1057,7 @@ function ServicesShowcase2028() {
         </div>;
       </section>;
       <UltraFuturisticFooter2028 />;
+<<<<<<< HEAD
     </>);
 <<<<<<< HEAD
 }
@@ -1919,3 +1833,7 @@ export default function ServicesShowcase2028() {
 }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

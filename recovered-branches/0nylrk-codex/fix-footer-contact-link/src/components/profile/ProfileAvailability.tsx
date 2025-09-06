@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -16,6 +17,8 @@ interface ProfileAvailabilityProps {
 import { Availability } from "@/types/profile",
 import { Badge } from "@/components/ui/badge";
 import { Calendar, Clock, Check } from "lucide-react";
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {Availability} from "@/types/profile";
 import {Badge} from "@/components/ui/badge";
 import {Calendar, Clock, Check} from "lucide-react";
@@ -39,12 +42,36 @@ export function ProfileAvailability({ availability }: ProfileAvailabilityProps) 
       case 'unavailable': return 'Currently Unavailable'
       default: return ''
     }
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  };
+import { Availability } from "@/types/profile",
+import { Badge } from "@/components/ui/badge",
+import { Calendar, Clock, Check } from "lucide-react",
+
+interface ProfileAvailabilityProps {
+  availability: Availability
+import { Availability } from "@/types/profile",;
+import { Badge } from "@/components/ui/badge",;
+import { Calendar, Clock, Check } from "lucide-react",;
+import { Availability } from '@/types / profile';
+import { Badge } from '@/components / ui / badge';
+import { Calendar, Clock, Check } from './lucide-react';
+
+interface ProfileAvailabilityProps {
+  availability: Availability;
+}
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {Availability} from "@/types/profile";
 import {Badge} from "@/components/ui/badge";
 import {Calendar, Clock, Check} from "lucide-react";
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface ProfileAvailabilityProps {;
   availability: Availability;
 }
@@ -67,6 +94,7 @@ export function ProfileAvailability(): any ({ availability }: ProfileAvailabilit
       default: return '';
 
     }
+<<<<<<< HEAD
   }
 =======
 
@@ -105,11 +133,14 @@ export function ProfileAvailability({ availability }: ProfileAvailabilityProps) 
       default: return '';
     }
   },
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   return (
     <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-8">
       <h3 className="text-xl font-bold text-white mb-4">Availability</h3>
       <div className="flex flex-col md:flex-row md:items-center md:gap-6 mb-4">
+<<<<<<< HEAD
   }
 
 
@@ -124,11 +155,16 @@ export function ProfileAvailability({ availability }: ProfileAvailabilityProps) 
 
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <Badge
           variant="outline"
         <Badge 
           variant="outline" 
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           className={`${getStatusColor(availability.status)} text-sm py-1 px-3 mb-4 md:mb-0 w-fit`}
         >
           {getStatusText(availability.status)}
@@ -155,6 +191,7 @@ export function ProfileAvailability({ availability }: ProfileAvailabilityProps) 
                   <span>{slot.hours}</span>
                 </div>
               </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -277,6 +314,14 @@ export function ProfileAvailability({ availability } ProfileAvailabilityProps) {
       )}
     </div>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+  return (
+            ))}
+          </div>;
+        </div>;
+      )}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export /**
  * ProfileAvailability - Function description
  */
@@ -334,6 +379,7 @@ function ProfileAvailability() {
     </div>);
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
   ),;}
@@ -360,3 +406,5 @@ function ProfileAvailability() {
   )
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

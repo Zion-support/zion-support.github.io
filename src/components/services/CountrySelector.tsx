@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import { useState, useEffect } from 'react'
 import { Globe } from 'lucide-react'
@@ -12,30 +13,9 @@ import {
   CountryPricing,
   onsiteServicePricing,
 } from '@/data/onsiteServicePricing'
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
-import { useState, useEffect } from "react",
-import { Globe } from 'lucide-react'
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
-import { CountryPricing, onsiteServicePricing } from "@/data/onsiteServicePricing",
-
-
-import {
-  Select
-  SelectContent
-  SelectItem
-  SelectTrigger
-  SelectValue
-} from '@/components/ui/select'
-  CountryPricing
-  onsiteServicePricing
-} from '@/data/onsiteServicePricing'
-interface CountrySelectorProps {
-  onCountryChange: (country: CountryPricing | null) => void
-  selectedCountry: CountryPricing | null
-export function CountrySelector({
-  onCountryChange
-  selectedCountry
-}: CountrySelectorProps) {
 interface CountrySelectorProps {
   onCountryChange: (country: CountryPricing | null) => void
   selectedCountry: CountryPricing | null
@@ -43,10 +23,12 @@ export function CountrySelector({;
   onCountryChange,;
   selectedCountry;
 }: CountrySelectorProps) {;
-ursor/fix-website-loading-errors-and-merge-6662
   const [topCountries, setTopCountries] = useState<CountryPricing[]>([]);interface CountrySelectorProps {
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 const [topCountries, setTopCountries] = useState<CountryPricing[]>([]);interface CountrySelectorProps {
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   onCountryChange: (country: CountryPricing | null,) => void
 
   selectedCountry: CountryPricing | null
@@ -56,13 +38,19 @@ const [topCountries, setTopCountries] = useState<CountryPricing[]>([]);interface
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 
 
+<<<<<<< HEAD
 =======
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     const popular = [
       'United States'
       'United Kingdom'
@@ -75,6 +63,7 @@ const [topCountries, setTopCountries] = useState<CountryPricing[]>([]);interface
     const top = onsiteServicePricing
       .filter(item => popular.includes(item.country))
       .sort((a, b) => a.country.localeCompare(b.country))
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -89,10 +78,16 @@ const [topCountries, setTopCountries] = useState<CountryPricing[]>([]);interface
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     setTopCountries(top)
   }, [])
   // Handle country selection
   const handleCountryChange = (countryName: string) => {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     const country =
@@ -220,11 +215,17 @@ export function CountrySelector(): any ({;
 
   return (
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+    onCountryChange(country)
+
+  return (
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <div className="mb-6">
       <h3 className="text-xl font-semibold text-white mb-4 flex items-center">
         <Globe className="mr-2 h-5 w-5 text-zion-cyan" />
         {selectedCountry ? `IT Onsite Service in ${selectedCountry.country}` : "Select Country for IT Onsite Service"}
       </h3>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -342,6 +343,8 @@ export function CountrySelector({ onCountryChange, selectedCountry }: CountrySel
             {onsiteServicePricing
               .sort((a, b) => a.country.localeCompare(b.country))
               .map((item) => (
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 
@@ -349,6 +352,7 @@ export function CountrySelector({ onCountryChange, selectedCountry }: CountrySel
                 {item.country} - ${item.pricePerIncident.toFixed(2)}
               </SelectItem>
             ))}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -376,6 +380,8 @@ function CountrySelector() {
   onCountryChange: (country: CountryPricing | null, ) => void,
   selected_country: CountryPricing | null;
 }
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   // Set top / popular countries;
   useEffect (() => {
     const popular = [;
@@ -431,6 +437,7 @@ function CountrySelector() {
               <SelectItem key={item.country} value={item.country} className="text - white">;
               </SelectItem>))}
 <<<<<<< HEAD
+<<<<<<< HEAD
           </div>;
           <div className='p - 2'>;
             <p className='text - sm text - zion - slate - light pb - 1'>All Countries</p>;
@@ -463,6 +470,8 @@ function CountrySelector() {
 
 ;
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           </div>;
         </SelectContent>;
       </Select>;
@@ -470,8 +479,11 @@ function CountrySelector() {
   );
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 ;
 =======
 ;
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

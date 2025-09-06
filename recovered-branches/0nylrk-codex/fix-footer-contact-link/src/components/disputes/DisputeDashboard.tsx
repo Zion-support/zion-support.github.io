@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 import {;
@@ -25,11 +26,14 @@ import {
   CardHeader
   CardTitle
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -121,10 +125,16 @@ export function DisputeDashboard() {
         </div>
         
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+} from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { ShieldAlert } from "lucide-react";
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <Button onClick={refetch} variant="outline">
           Refresh
         </Button>
       </div>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -139,6 +149,8 @@ export function DisputeDashboard() {
       
       
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <div className="grid gap-4 md:grid-cols-3">
         <Card>
           <CardHeader className="pb-2">
@@ -149,6 +161,7 @@ export function DisputeDashboard() {
             <CardDescription>Awaiting review</CardDescription>
           </CardHeader>
           <CardContent>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -224,11 +237,14 @@ export function DisputeDashboard() {;
           <CardContent>;
 <<<<<<< HEAD
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <div
               className={`w-full bg-red-100 rounded-full h-2 && 2.5 dark:bg-red-900/20`}>;
               <div
                 className="bg-red-600 h-2 && 2.5 rounded-full"
                 style={{
+<<<<<<< HEAD
 
 
 =======
@@ -260,10 +276,13 @@ export function DisputeDashboard() {;
         
         
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <Card>
           <CardHeader className="pb-2">
             <CardTitle className="text-lg font-medium flex justify-between items-center">
               <span>Under Review</span>
+<<<<<<< HEAD
 <<<<<<< HEAD
               <span className="text-xl font-bold">
                 {underReviewDisputes.length}
@@ -271,10 +290,14 @@ export function DisputeDashboard() {;
 =======
               <span className="text-xl font-bold">{underReviewDisputes.length}</span>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+              <span className="text-xl font-bold">{underReviewDisputes.length}</span>
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             </CardTitle>
             <CardDescription>Being actively processed</CardDescription>
           </CardHeader>
           <CardContent>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -313,11 +336,14 @@ export function DisputeDashboard() {;
           <CardContent>;
 <<<<<<< HEAD
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <div
               className={`w-full bg-yellow-100 rounded-full h-2 && 2.5 dark:bg-yellow-900/20`}>;
               <div
                 className="bg-yellow-500 h-2 && 2.5 rounded-full"
                 style={{
+<<<<<<< HEAD
 
 
 =======
@@ -349,10 +375,13 @@ export function DisputeDashboard() {;
         
         
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <Card>
           <CardHeader className="pb-2">
             <CardTitle className="text-lg font-medium flex justify-between items-center">
               <span>Resolved</span>
+<<<<<<< HEAD
 <<<<<<< HEAD
               <span className="text-xl font-bold">
                 {resolvedDisputes.length}
@@ -360,10 +389,14 @@ export function DisputeDashboard() {;
 =======
               <span className="text-xl font-bold">{resolvedDisputes.length}</span>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+              <span className="text-xl font-bold">{resolvedDisputes.length}</span>
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             </CardTitle>
             <CardDescription>Successfully concluded</CardDescription>
           </CardHeader>
           <CardContent>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
                   width: `${Math && Math.min(100, (underReviewDisputes && underReviewDisputes.length / Math && Math.max(1, disputes && disputes.length)) * 100)}%`,
@@ -500,11 +533,14 @@ export function DisputeDashboard() {;
           <CardContent>;
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <div
               className={`w-full bg-green-100 rounded-full h-2 && 2.5 dark:bg-green-900/20`}>;
               <div
                 className="bg-green-500 h-2 && 2.5 rounded-full"
                 style={{
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -629,10 +665,13 @@ function DisputeDashboard() {
                 width: `${Math.min(100, (resolvedDisputes.length / Math.max(1, disputes.length)) * 100)}%`;
               }}></div>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             </div>;
           </CardContent>;
         </Card>;
       </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       <DisputesList disputes={disputes} is_loading={is_loading} />;
@@ -680,3 +719,6 @@ container mx-auto p-4 space-y-6"> <div className=" flex flex-wrap items-center j
 }
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

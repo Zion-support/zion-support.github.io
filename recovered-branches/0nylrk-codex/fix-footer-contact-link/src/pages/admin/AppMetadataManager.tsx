@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -34,19 +35,29 @@ class ErrorBoundary extends React.Component {
 
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from "react";
 import {AppLayout} from "@/layout/AppLayout";
 import {SEO} from "@/components/SEO";
 import {MetadataManager} from "@/components/mobile-app/admin/MetadataManager";
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from "react",
 import { AppLayout } from "@/layout/AppLayout",
 import { SEO } from "@/components/SEO",
 import { MetadataManager } from "@/components/mobile-app/admin/MetadataManager",
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -67,10 +78,16 @@ const AppMetadataManager: React.FC = () => {
   return (
     <AppLayout>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+const AppMetadataManager: React.FC = () => {
+const AppMetadataManager: React.FC = () => {;
+  return (
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <SEO
         title="App Metadata Manager"
         description="Manage app store metadata for the Zion mobile application"
         noindex={true}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -82,9 +99,9 @@ const AppMetadataManager: React.FC = () => {
     </AppLayout>
   )
 }
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export default AppMetadataManager;
-
-},
 
 export default AppMetadataManager,
 import React from "react",;
@@ -93,6 +110,7 @@ import { SEO } from "@/components/SEO",;
 import { MetadataManager } from "@/components/mobile-app/admin/MetadataManager",;
 const AppMetadataManager: React.FC = () => {;
   return (;
+<<<<<<< HEAD
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       />;
@@ -113,6 +131,8 @@ const AppMetadataManager: React.FC = () => {;
 export default AppMetadataManager;
 
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from './react';
 import { AppLayout } from '@/layout / AppLayout';
 import { SEO } from '@/components / SEO';
@@ -125,14 +145,12 @@ const AppMetadataManager: React.FC = () => {
         description="Manage app store metadata for the Zion mobile application";
         noindex={true}
       />;
-    </AppLayout>);
-}
-;
 
 },
 
 
 export default AppMetadataManager;
+<<<<<<< HEAD
 ;
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -176,3 +194,5 @@ export default AppMetadataManager;
 },;
 export default AppMetadataManager;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

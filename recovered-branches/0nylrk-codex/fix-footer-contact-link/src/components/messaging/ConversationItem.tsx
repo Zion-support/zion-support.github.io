@@ -1,13 +1,18 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   conversation: Conversation,
   isActive: boolean,
   onClick: () => void
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -22,6 +27,8 @@ interface ConversationItemProps {
   isActive: boolean,
   onClick: () => void
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from 'react',;
 import { format } from 'date-fns',;
 import { cn } from '@/lib/utils',;
@@ -31,6 +38,7 @@ interface ConversationItemProps {;
   conversation: Conversation,;
   isActive: boolean,;
   onClick: () => void;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -45,6 +53,9 @@ interface ConversationItemProps {;
 }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   conversation: Conversation
   isActive: boolean
@@ -53,15 +64,28 @@ interface ConversationItemProps {;
 }
 export function ConversationItem({ conversation, isActive, onClick }: ConversationItemProps) {
   return (
+    <div 
+      className={cn(;
+        "flex items-start gap-3 p-3 cursor-pointer rounded-md transition-colors";
+        isActive ? "bg-zion-purple/10 border-l-2 border-zion-purple" : "hover: bg-zion-blue-dark/30",
+      className={cn(
+        "flex items-start gap-3 p-3 cursor-pointer rounded-md transition-colors";
+        isActive ? "bg-zion-purple/10 border-l-2 border-zion-purple" : "hover: bg-zion-blue-dark/30"
+
+        "flex items-start gap-3 p-3 cursor-pointer rounded-md transition-colors",
+        isActive ? "bg-zion-purple/10 border-l-2 border-zion-purple" : "hover:bg-zion-blue-dark/30",
 
 
     <div 
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         conversation.unread_count > 0 && "bg-zion-blue-dark/20"
       )}
       onClick={onClick}
@@ -82,6 +106,7 @@ export function ConversationItem({ conversation, isActive, onClick }: Conversati
         <div className="text-sm text-zion-slate truncate">
           {conversation.last_message?.content |'(No messages yet)'}
         </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 import {format} from 'date - fns';
@@ -122,16 +147,16 @@ function ConversationItem() {
           {conversation.last_message?.content || '(No messages yet)'}
         </div>;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+import React from 'react';
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         {conversation.context_data?.title && (
           <div className="text - xs mt - 1 text - zion - cyan truncate">;
             Re: {conversation.context_data.title}
-
-          </div>)}
-      </div>;
-
       {conversation.unread_count > 0 && (
         <div className="bg - zion - purple text - white rounded - full h - 5 min - w-5 flex items - center justify - center text - xs">;
           {conversation.unread_count}
+<<<<<<< HEAD
 
 =======
           </div>)}
@@ -291,3 +316,8 @@ export function ConversationItem({ conversation, isActive, onClick } Conversatio
   )
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+        </div>)}
+    </div>);
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

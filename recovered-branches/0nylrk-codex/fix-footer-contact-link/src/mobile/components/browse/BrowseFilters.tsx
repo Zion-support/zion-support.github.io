@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React, { useState } from './react';
 import { Button } from '@/components / ui / button';
@@ -40,6 +41,8 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {;
       setActiveFilters([...activeFilters, filter])
     }
   };
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
 import { Slider } from "@/components/ui/slider",
@@ -65,22 +68,22 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {
     setActiveFilters(activeFilters.filter(f => f !== filter))
   }
 
+import React, { useState } from './react';
+import { Button } from '@/components / ui / button';
+import { Slider } from '@/components / ui / slider';
+import { Switch } from '@/components / ui / switch';
+import { Input } from '@/components / ui / input';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components / ui / select';
+import { X, Filter } from './lucide-react';
+import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetFooter, SheetTrigger } from '@/components / ui / sheet';
+import { Badge } from '@/components / ui / badge';
+import { Label } from '@/components / ui / label';
+
 import { Label } from "@/components/ui/label",
 interface BrowseFiltersProps {
-  type: "jobs" | "talents"
-import React, { useState } from "react",;
-import { Button } from "@/components/ui/button",;
-import { Slider } from "@/components/ui/slider",;
-import { Switch } from "@/components/ui/switch",;
-import { Input } from "@/components/ui/input",;
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",;
-import { X, Filter } from "lucide-react",;
-import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetFooter, SheetTrigger } from "@/components/ui/sheet",;
-import { Badge } from "@/components/ui/badge",;
-import { Label } from "@/components/ui/label",;
-interface BrowseFiltersProps {;
   type: "jobs" | "talents";
 }
+<<<<<<< HEAD
 ;
 export function BrowseFilters({ type }: BrowseFiltersProps) {;
   const [activeFilters, setActiveFilters] = useState<string[]>([]),;
@@ -90,16 +93,21 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {;
     }
   },
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   
   const removeFilter = (filter: string) => {
     setActiveFilters(activeFilters.filter(f => f !== filter))
   },
   
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <div className="space-y-3">
       <div className="flex justify-between items-center px-4">
@@ -153,6 +161,7 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {;
                         defaultValue={[0, 10]}
                         max={20}
                         step={1}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -244,6 +253,11 @@ export function BrowseFilters(): any ({ type }: BrowseFiltersProps) {;
                         max={20} 
                         step={1} 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+interface BrowseFiltersProps {
+  type: "jobs" | "talents";
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                         className="my-4"
                       />;
                       <div className="flex justify-between text-xs text-muted-foreground">;
@@ -251,6 +265,7 @@ export function BrowseFilters(): any ({ type }: BrowseFiltersProps) {;
                         <span>20+ years</span>;
                       </div>;
                     </div>;
+<<<<<<< HEAD
                   </>;
                 )}
 <<<<<<< HEAD
@@ -441,6 +456,8 @@ export function BrowseFilters({ type } BrowseFiltersProps) {;
                 <div className="space-y-2">;
                   <Label>Location</Label>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   <Select>;
                     <SelectTrigger>;
                       <SelectValue placeholder="Select location" />;
@@ -453,6 +470,7 @@ export function BrowseFilters({ type } BrowseFiltersProps) {;
                     </SelectContent>;
                   </Select>;
                 </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
                 <div className="space - y-2">;
@@ -527,6 +545,8 @@ export function BrowseFilters({ type } BrowseFiltersProps) {;
           <Select>;
             <SelectTrigger className="w-[120px] h-8">;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <SelectValue placeholder="Sort By" />;
             </SelectTrigger>;
             <SelectContent>;
@@ -535,6 +555,7 @@ export function BrowseFilters({ type } BrowseFiltersProps) {;
               <SelectItem value="salary">Highest Pay</SelectItem>;
             </SelectContent>;
           </Select>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
                 className="h-3 w-3 cursor-pointer" 
@@ -564,6 +585,8 @@ export function BrowseFilters({ type } BrowseFiltersProps) {;
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           {active_filters.map ((filter) => (
             <Badge;
               key={filter}
@@ -580,6 +603,7 @@ export function BrowseFilters({ type } BrowseFiltersProps) {;
       </div>;
     </div>);
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -681,3 +705,5 @@ if (!activeFilters.includes (filter) ) {
   )
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

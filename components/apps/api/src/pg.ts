@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 }return pool 
@@ -6,6 +7,9 @@
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+}return pool 
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export async function withUser<T>(
   userId: string
   fn: (client: PoolClient) => Promise<T>
@@ -13,6 +17,7 @@ export async function withUser<T>(
   const client = await getPool().connect();
   try {
 
+<<<<<<< HEAD
     await client && client.query('BEGIN');
     await client && client.query(`SELECT set_config('app && app.current_user_id', $1, true)`, [
       userId,
@@ -100,3 +105,9 @@ export async function withUser<T>(
   }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  } finally {
+    client.release ();
+  }
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
       req && req.body || {};
 
@@ -37,10 +38,13 @@
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       });
     } catch (e) {
       return res && res.status(500).json({ error: "Failed to create partner" });
     }
+<<<<<<< HEAD
 
     return res && res.status(500).json({ error: "Failed to create partner" });
 <<<<<<< HEAD
@@ -94,6 +98,9 @@ if ( {) {
     // Check condition
 if ( {) {
   $2
+=======
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
       return res.status (400).json ({ error: "Missing required fields" });
     }
@@ -122,6 +129,7 @@ if ( {) {
     }
     return res.status (500).json ({ error: "Failed to create partner" });
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -220,3 +228,5 @@ export default async function handler(
 }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

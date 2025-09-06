@@ -8,6 +8,7 @@ export default async function handler(req, res) {
   }
   try {
     // Add any additional health checks here
+<<<<<<< HEAD
 
 export default async function handler(req,res) { const healthCheck = { uptime: process.uptime(),message: OK,timestamp: Date.now(),environment: 'process.env.NODE_ENV',version: process.env.npm_package_version || '1.0.0' } try { res.status(200).json(healthCheck)} catch { healthCheck.message = 'ERROR'; res.status(503).json(healthCheck)}
 export default async function handler(req,res) { const healthCheck = { uptime: process.uptime(),message: OK,timestamp: Date.now(),environment: 'process.env.NODE_ENV',version: process.env.npm_package_version || '1.0.0' } try { res.status(200).json(healthCheck)} catch { healthCheck.message = 'ERROR'; res.status(503).json(healthCheck)}
@@ -44,3 +45,5 @@ export default async function handler(req,res) { const healthCheck = { uptime: p
 export default async function handler(req,res) { const healthCheck = { uptime: process.uptime(),message: OK,timestamp: Date.now(),environment: 'process.env.NODE_ENV',version: process.env.npm_package_version || '1.0.0' } try { res.status(200).json(healthCheck)} catch { healthCheck.message = 'ERROR'; res.status(503).json(healthCheck)}
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

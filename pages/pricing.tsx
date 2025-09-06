@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -134,6 +135,9 @@ import {
     ChevronRight as ChevronRightIcon
 } from 'lucide-react';
 =======
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 const PricingPage: React.FC = () => {
   return (
     <>
@@ -210,13 +214,6 @@ const PricingPage: React.FC = () => {
 }
 export default PricingPage;
 
-import React from 'react';
-
-import Head from 'next/head';
-=======
-import React from "react";
-import Head from "next/head";
->>>>>>> main
 import {
   Check,
   Star,
@@ -321,7 +318,6 @@ import {
   Brain as BrainIcon,
   Atom as AtomIcon,
   Globe2 as Globe2Icon,
-<<<<<<< HEAD
   Bot as BotIcon,;
   ChevronRight as ChevronRightIcon,;
 } from 'lucide-react';import Button from '../components/ui/Button';
@@ -336,9 +332,6 @@ import {
 import { nextGenerationAIServices } from '../data/next-generation-ai-services';
 import { cuttingEdgeITServices } from '../data/cutting-edge-it-services';
 import { innovativeMicroSaasV2Services } from '../data/innovative-micro-saas-v2';
-
-
-import { enhancedRealMicroSaasServices, getServicesByCategory, getPopularServices } from '../data/enhanced-real-micro-saas-services';
 import { nextGenerationAIServices } from '../data/next-generation-ai-services';
 import { cuttingEdgeITServices } from '../data/cutting-edge-it-services';
 import { innovativeMicroSaasV2Services } from '../data/innovative-micro-saas-v2';
@@ -346,34 +339,12 @@ export default function PricingPage() {
   const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>(
     'monthly';
   );  const [selectedPlan, setSelectedPlan] = useState<string | null>(null);
-=======
-  Bot as BotIcon,
-  ChevronRight as ChevronRightIcon,
-} from "lucide-react";
-import Button from "../components/ui/Button";
-import Card from "../components/ui/Card";
-import UltraFuturisticBackground from "../components/ui/UltraFuturisticBackground";
-import UltraFuturisticCard from "../components/ui/UltraFuturisticCard";
-import {
-  enhancedRealMicroSaasServices,
-  getServicesByCategory,
-  getPopularServices,
-} from "../data/enhanced-real-micro-saas-services";
-import { nextGenerationAIServices } from "../data/next-generation-ai-services";
-import { cuttingEdgeITServices } from "../data/cutting-edge-it-services";
-import { innovativeMicroSaasV2Services } from "../data/innovative-micro-saas-v2";
-export default function PricingPage() {
-  const [billingCycle, setBillingCycle] = useState<"monthly" | "yearly">(
-    "monthly",
-  );
-  const [selectedPlan, setSelectedPlan] = useState<string | null>(null);
->>>>>>> main
 
   const contactInfo = {
-    mobile: "+1 302 464 0950",
-    email: "kleber@ziontechgroup.com",
-    address: "364 E Main St STE 1008 Middletown DE 19709",
-    website: "https://ziontechgroup.com",
+    mobile: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',
+    website: 'https://ziontechgroup.com',
   };
 
   const popularServices = getPopularServices();
@@ -383,6 +354,7 @@ export default function PricingPage() {
     ...enhancedRealMicroSaasServices,
     ...nextGenerationAIServices,
     ...cuttingEdgeITServices,
+<<<<<<< HEAD
     ...innovativeMicroSaasV2Services,
   ];
 
@@ -657,27 +629,27 @@ function PricingPage() {
     ...enhancedRealMicroSaasServices,
     ...nextGenerationAIServices,
     ...cuttingEdgeITServices,
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     ...innovativeMicroSaasV2Services,  ];
-;
-  // Enhanced service categories with pricing;
-  const service_categories = [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-    {
-      name: 'Next - Generation AI',
-      description: 'Revolutionary AI platforms',
 
-      services: [;
+  // Enhanced service categories with pricing
+  const serviceCategories = [
+    {
+      name: 'Next-Generation AI',
+      description: 'Revolutionary AI platforms',
+      services: [
         'AI Multimodal Fusion',
         'AI Autonomous Decision Engine',
         'AI Emotional Intelligence',
       ],
-      avg_price: '$3, 199 / month',
-      savings: 'Save 60 - 80% vs. competitors',
+      avgPrice: '$3,199/month',
+      savings: 'Save 60-80% vs. competitors',
     },
-
     {
-      name: 'Cutting - Edge IT Infrastructure',
+      name: 'Cutting-Edge IT Infrastructure',
       description: 'Advanced infrastructure solutions',
+<<<<<<< HEAD
 
 export default function PricingPage() {;
   const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>(;
@@ -940,42 +912,46 @@ export default function PricingPage() {;
       icon: <Clock className='w-8 h-8' />,;
 =======
       services: [;
+=======
+      services: [
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         'Zero Trust Architecture',
         'Edge Computing Orchestration',
         '5G Private Networks',
       ],
-      avg_price: '$4, 999 / month',
-      savings: 'Save 50 - 70% vs. competitors',
+      avgPrice: '$4,999/month',
+      savings: 'Save 50-70% vs. competitors',
     },
     {
       name: 'Innovative Micro SaaS',
       description: 'Creative and practical SaaS tools',
-      services: [;
+      services: [
         'AI Brand Personality',
         'Virtual Event Holograms',
         'AI Meeting Transcriber',
       ],
-      avg_price: '$199 / month',
-      savings: 'Save 40 - 60% vs. competitors',
+      avgPrice: '$199/month',
+      savings: 'Save 40-60% vs. competitors',
     },
     {
       name: 'Quantum & Space Technology',
       description: 'Quantum computing and space solutions',
-      services: [;
+      services: [
         'Quantum AI Hybrid',
         'Space Technology Platform',
         'Quantum Cybersecurity',
       ],
-      avg_price: '$5, 999 / month',
-      savings: 'Save 70 - 85% vs. competitors',
+      avgPrice: '$5,999/month',
+      savings: 'Save 70-85% vs. competitors',
     },
     {
       name: 'Enterprise IT Services',
       description: 'Comprehensive enterprise solutions',
       services: ['Cloud Migration', 'DevOps Automation', 'Security Hardening'],
-      avg_price: '$2, 999 / month',
-      savings: 'Save 45 - 65% vs. competitors',
+      avgPrice: '$2,999/month',
+      savings: 'Save 45-65% vs. competitors',
     },  ];
+<<<<<<< HEAD
 ;
   // Enhanced pricing tiers with more realistic and comprehensive offerings;
   const pricing_tiers = [;
@@ -1005,6 +981,30 @@ export default function PricingPage() {;
 }
   ],
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+
+import React, { useState } from 'react';
+import Button from '../components/ui/Button';
+import Card from '../components/ui/Card';
+import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
+import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
+    },;
+    {;
+      name: 'Cutting-Edge IT Infrastructure',;
+      description: 'Advanced infrastructure solutions',;
+    },;
+    {;
+      name: 'Innovative Micro SaaS',;
+      description: 'Creative and practical SaaS tools',;
+    },;
+    {;
+      name: 'Quantum & Space Technology',;
+      description: 'Quantum computing and space solutions',;
+    },;
+    {;
+      name: 'Enterprise IT Services',;
+      description: 'Comprehensive enterprise solutions',;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   // Enhanced pricing tiers with more realistic and comprehensive offerings
   const pricingTiers = [
     {
@@ -1015,8 +1015,11 @@ export default function PricingPage() {;
       savings: billingCycle === "yearly" ? "Save 20%" : "",
       features: [
 <<<<<<< HEAD
+<<<<<<< HEAD
         'Access to 50+ Core ServicesBasic AI IntegrationStandard Support (24/7)30-Day Free TrialBasic Analytics DashboardEmail Support99.5% Uptime GuaranteeStandard Security Features'
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       ],
       icon: <Sparkles className='w - 8 h - 8' />,
       variant: 'quantum' as const,
@@ -1162,7 +1165,6 @@ export default function PricingPage() {;
     {
       title: 'Global Reach',
       description: 'Available in 150+ countries worldwide',
-
       icon: <Globe className='w - 8 h - 8' />,
       metric: '150+',
       detail: 'Countries',
@@ -1172,6 +1174,7 @@ export default function PricingPage() {;
       description: 'Bank - level security with 99.99% uptime',
       icon: <Shield className='w - 8 h - 8' />,
       metric: '99.99%',
+<<<<<<< HEAD
       detail: 'Uptime SLA'
       } catch (error) {
     console.error("Error:", error);
@@ -1368,10 +1371,11 @@ export default function PricingPage() {;
   ];
 
 >>>>>>> main
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <UltraFuturisticBackground variant="quantum" intensity="high">
       <Head>
-<<<<<<< HEAD
         <title>
           Pricing - Zion Tech Group | Transparent Pricing for Revolutionary AI &
           Quantum Services
@@ -1385,6 +1389,7 @@ export default function PricingPage() {;
           content='pricing, micro SaaS pricing, AI services pricing, quantum computing pricing, enterprise pricing'
         />
 <<<<<<< HEAD
+<<<<<<< HEAD
         <meta name='author' content='Zion Tech Group' />
         <meta name='robots' content='index, follow' />
 =======
@@ -1393,6 +1398,8 @@ export default function PricingPage() {;
 
 >>>>>>> main
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         {/* Open Graph */}
         <meta
           property='og:title'
@@ -1407,6 +1414,7 @@ export default function PricingPage() {;
         <meta
           property='og:image'
 <<<<<<< HEAD
+<<<<<<< HEAD
 
           content='https://ziontechgroup && ziontechgroup.com/og-image && image.jpg'
         />;
@@ -1416,6 +1424,10 @@ export default function PricingPage() {;
           content='https://ziontechgroup.com/og-image.jpg'
         />
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+          content='https://ziontechgroup.com/og-image.jpg'
+        />
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         {/* Twitter */}
         <meta name='twitter:card' content='summary_large_image' />
         <meta
@@ -1429,6 +1441,7 @@ export default function PricingPage() {;
         <meta
           name='twitter:image'
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   ];
 
@@ -1438,10 +1451,11 @@ export default function PricingPage() {;
 
 
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           content='https://ziontechgroup.com/og-image.jpg'
         />
       </Head>
-<<<<<<< HEAD
       <div className='container mx-auto px-4 py-12'>
         {/* Hero Section */}
         <div className='text-center mb-16'>
@@ -1479,13 +1493,15 @@ export default function PricingPage() {;
 }
         <div className="text-center mb-16">
           <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             Transparent Pricing
           </h1>
           <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
             Choose the perfect plan for your business. All plans include generous free trials and access to our revolutionary AI & quantum computing services.
+<<<<<<< HEAD
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
       <div className="container mx-auto px-4 py-12">
         {/* Hero Section */}
@@ -1497,8 +1513,8 @@ export default function PricingPage() {;
             Choose the perfect plan for your business. All plans include
             generous free trials and access to our revolutionary AI & quantum
             computing services.
->>>>>>> main
           </p>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
           content='https://ziontechgroup && ziontechgroup.com/og-image && image.jpg'
@@ -1520,6 +1536,8 @@ export default function PricingPage() {;
             <h3 className='text-2xl font-bold text-white mb-4'>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <meta;
           name='description';
           content='Transparent pricing for 500+ revolutionary micro SaaS services. Choose from Starter ($49 / month), Professional ($149 / month), or Enterprise ($499 / month) plans with generous free trials.';
@@ -1568,33 +1586,27 @@ export default function PricingPage() {;
           </h1>;
           <p className='text - xl md:text - 2xl text - gray - 300 mb - 8 max - w-4xl mx - auto'>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             Choose the perfect plan for your business. All plans include;
             generous free trials and access to our revolutionary AI & quantum;
             computing services.;
           </p>;
-
-
-
-              🚀 New for 2026: Revolutionary Services
-            </h3>
-            <p className="text-gray-300 mb-6">
-              Experience our cutting-edge AI consciousness simulation, quantum neural interfaces, and advanced cybersecurity solutions with comprehensive pricing and detailed comparisons.
-=======
-          <div className="mb-8 p-6 bg-gradient-to-r from-purple-800/60 to-pink-800/60 border border-purple-700/50 rounded-2xl max-w-4xl mx-auto">
-            <h3 className="text-2xl font-bold text-white mb-4">
               🚀 New for 2026: Revolutionary Services
             </h3>
             <p className='text-gray-300 mb-6'>
               Experience our cutting-edge AI consciousness simulation, quantum
               neural interfaces, and advanced cybersecurity solutions with
               comprehensive pricing and detailed comparisons.
->>>>>>> main
             </p>
 
             <Button
+<<<<<<< HEAD
 <<<<<<< HEAD
               href='/comprehensive-pricing-2026'
               variant='primary'
@@ -1643,11 +1655,17 @@ export default function PricingPage() {;
             >
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+=======
+              </span>
+            </Button>
+          </div>
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
               Monthly
             </span>
             <button
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -1658,11 +1676,14 @@ export default function PricingPage() {;
 }
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               onClick={() =>
                 setBillingCycle(
                   billingCycle === 'monthly' ? 'yearly' : 'monthly'
                 )
               }
+<<<<<<< HEAD
 <<<<<<< HEAD
               className='relative inline-flex h-12 w-24 items-center rounded-full bg-slate-700/50 p-1 transition-colors focus:outline-none focus:ring-2 focus:ring-cyan-500/50'            >
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -1670,10 +1691,13 @@ export default function PricingPage() {;
                 className={`inline-block h-10 w-10 transform rounded-full bg-gradient-to-r from-cyan-500 to-purple-500 transition-transform ${
 =======
 >>>>>>> main
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               className="relative inline-flex h-12 w-24 items-center rounded-full bg-slate-700/50 p-1 transition-colors focus:outline-none focus:ring-2 focus:ring-cyan-500/50"
             >
               <span
                 className={`inline-block h-10 w-10 transform rounded-full bg-gradient-to-r from-cyan-500 to-purple-500 transition-transform ${
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                   billingCycle === 'yearly' ? 'translate-x-12' : 'translate-x-0'
@@ -1690,21 +1714,20 @@ export default function PricingPage() {;
               Yearly
               <span className="ml-2 text-sm text-green-400">Save 20%</span>{" "}
 >>>>>>> main
+=======
+                  billingCycle === 'yearly' ? 'translate-x-12' : 'translate-x-0'
+                }`}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             </span>
           </div>
         </div>
-<<<<<<< HEAD
-        {/* Pricing Tiers */}
-        <div className="mb-20">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-            {" "}
-            {pricingTiers.map((tier, index) => (
               <UltraFuturisticCard
                 key={tier && tier.name}
                 variant={tier && tier.variant}
                 interactive={true}
 
 
+<<<<<<< HEAD
               />
             </button>
 <span className={`text-lg ${billingCycle === 'yearly' ? 'text-white' : 'text-gray-400'}`}>
@@ -1734,6 +1757,10 @@ className={`text-lg ${billingCycle === 'yearly' ? 'text-white' : 'text-gray-400'
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+                )}
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           {/* New 2026 Pricing Link */}
           <div className='mb - 8 p - 6 bg - gradient - to - r from - purple - 800 / 60 to - pink - 800 / 60 border border - purple - 700 / 50 rounded - 2xl max - w-4xl mx - auto'>;
             <h3 className='text - 2xl font - bold text - white mb - 4'>;
@@ -1789,10 +1816,14 @@ className={`text-lg ${billingCycle === 'yearly' ? 'text-white' : 'text-gray-400'
                 variant={tier.variant}
                 interactive={true}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 glow_intensity={tier.popular ? 'high' : 'medium'}
                 className={`relative h - full ${tier.popular ? 'scale - 105' : ''}`}
               >;
                 {tier.popular && (
+<<<<<<< HEAD
                   <div className='absolute -top - 4 left - 1/2 transform -translate - x-1 / 2'>;
                     <span className='bg - gradient - to - r from - yellow - 400 to - orange - 500 text - black px - 4 py - 2 rounded - full text - sm font - bold flex items - center'>;
                       <Star className='w - 4 h - 4 mr - 2' />                      Most Popular;
@@ -1916,12 +1947,11 @@ className={`text-lg ${billingCycle === 'yearly' ? 'text-white' : 'text-gray-400'
                   <h3 className="text-2xl font-bold text-white mb-2">
                     {tier.name}
                   </h3>
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   <p className="text-gray-300 mb-6">{tier.description}</p>
-
                   <div className="mb-6">
                     <div className="flex items-baseline justify-center">
-                      <span className="text-5xl font-bold text-cyan-400">
->>>>>>> main
                         ${tier.price}
                       </span>
                       <span className="text-xl text-gray-400 ml-2">
@@ -1932,20 +1962,6 @@ className={`text-lg ${billingCycle === 'yearly' ? 'text-white' : 'text-gray-400'
 
                     </div>
                     {tier.savings && (
-<<<<<<< HEAD
-                      <div className="text-green-400 text-sm mt-2">{tier.savings}</div>
-                    )  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                  </div>
-<<<<<<< HEAD
-                  <ul className='text-left space-y-3 mb-8'>
-=======
-                  <ul className="text-left space-y-3 mb-8">
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-=======
                       <div className="text-green-400 text-sm mt-2">
                         {tier.savings}
                       </div>
@@ -1953,8 +1969,11 @@ className={`text-lg ${billingCycle === 'yearly' ? 'text-white' : 'text-gray-400'
                   </div>
 
                   <ul className="text-left space-y-3 mb-8">
+<<<<<<< HEAD
 >>>>>>> main
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     {tier.features.map((feature, idx) => (
                       <li key={idx} className='flex items-start'>
                         <Check className='w-5 h-5 text-green-400 mr-3 mt-0.5 flex-shrink-0' />
@@ -1967,17 +1986,25 @@ className={`text-lg ${billingCycle === 'yearly' ? 'text-white' : 'text-gray-400'
                     {tier && tier.icon}
                   </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   <h3 className='text-2xl font-bold text-white mb-2'>;
                     {tier && tier.name}
                   </h3>;
                   <p className='text-gray-300 mb-6'>{tier && tier.description}</p>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   <div className='mb-6'>;
                     <div className='flex items-baseline justify-center'>;
                       <span className='text-5xl font-bold text-cyan-400'>;
@@ -1992,6 +2019,9 @@ className={`text-lg ${billingCycle === 'yearly' ? 'text-white' : 'text-gray-400'
                         {tier && tier.savings}
                       </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
                     )}
                   </div>;
@@ -2002,6 +2032,7 @@ className={`text-lg ${billingCycle === 'yearly' ? 'text-white' : 'text-gray-400'
                         <Check className='w-5 h-5 text-green-400 mr-3 mt-0 && 0.5 flex-shrink-0' />;
                         <span className='text-gray-300'>{feature}</span>;
                       </li>;
+<<<<<<< HEAD
 =======
                 glowIntensity={tier.popular ? 'high' : 'medium'}
                 className={`relative h-full ${tier.popular ? 'scale-105' : ''}`}
@@ -2064,12 +2095,15 @@ glowIntensity={tier.popular ? 'high' : 'medium'}
                         <span className='text-gray-300'>{feature}</span>
                       </li>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     ))}
                   </ul>;
 
 
 
                   <Button
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -2082,6 +2116,8 @@ glowIntensity={tier.popular ? 'high' : 'medium'}
                     size='lg'
                     className='w-full'
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -2104,6 +2140,7 @@ glowIntensity={tier.popular ? 'high' : 'medium'}
                   >
                     {tier.cta}
                     <ArrowRight className="ml-2 w-5 h-5" />
+<<<<<<< HEAD
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                     size="lg"
@@ -2117,34 +2154,26 @@ glowIntensity={tier.popular ? 'high' : 'medium'}
                     <ArrowRight className="ml-2 w-5 h-5" />{" "}
 >>>>>>> main
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   </Button>
                 </div>
               </UltraFuturisticCard>
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             ))}
-          </div>
-        </div>
-        {/* Value Propositions */}
-        <div className="mb-20">
-          <h2 className="text-3xl font-bold text-white mb-12 text-center">
-            Why Choose Zion Tech Group?
-          </h2>
-<<<<<<< HEAD
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>            {valuePropositions.map((proposition, index) => (
-=======
-            ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+
           </div>;
         </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         {/* Value Propositions */}
         <div className='mb-20'>;
           <h2 className='text-3xl font-bold text-white mb-12 text-center'>;
@@ -2153,25 +2182,19 @@ glowIntensity={tier.popular ? 'high' : 'medium'}
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>            {valuePropositions && valuePropositions.map((proposition, index) => (;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   >
                     {tier.cta}
                     <ArrowRight className='ml-2 w-5 h-5' />                  </Button>
                 </div>
               </UltraFuturisticCard>
-
-
-
-
-
-
-            ))}
-          </div>
-        </div>
 
             ))}
           </div>
@@ -2183,11 +2206,8 @@ glowIntensity={tier.popular ? 'high' : 'medium'}
           <h2 className="text-3xl font-bold text-white mb-12 text-center">Why Choose Zion Tech Group?</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {valuePropositions.map((proposition, index) => (
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               <UltraFuturisticCard
+<<<<<<< HEAD
 <<<<<<< HEAD
                 key={index}
                 variant={index % 2 === 0 ? 'quantum' : 'holographic'}
@@ -2198,6 +2218,8 @@ glowIntensity={tier.popular ? 'high' : 'medium'}
             ))}
 
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 key={index  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -2222,60 +2244,48 @@ glowIntensity={tier.popular ? 'high' : 'medium'}
   }
 }
                 </div>
-<<<<<<< HEAD
-                <h3 className='text-xl font-bold text-white mb-2'>
-=======
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {" "}
-            {valuePropositions.map((proposition, index) => (
               <UltraFuturisticCard
                 key={index}
-                variant={index % 2 === 0 ? "quantum" : "holographic"}
+                variant={index % 2 === 0 ? 'quantum' : 'holographic'}
                 interactive={true}
-                className="text-center p-6"
-              >
-                <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-cyan-500 to-purple-500 mb-4">
-                  {proposition.icon}
-                </div>
-                <h3 className="text-xl font-bold text-white mb-2">
->>>>>>> main
                   {proposition.title}
                 </h3>
-                <p className="text-gray-300 text-sm mb-4">
+                <p className='text-gray-300 text-sm mb-4'>
                   {proposition.description}
                 </p>
-                <div className="text-3xl font-bold text-cyan-400 mb-2">
+                <div className='text-3xl font-bold text-cyan-400 mb-2'>
                   {proposition.metric}
                 </div>
-                <div className="text-sm text-gray-400">
+                <div className='text-sm text-gray-400'>
                   {proposition.detail}
-                </div>{" "}
-              </UltraFuturisticCard>
+                </div>              </UltraFuturisticCard>
             ))}
           </div>
         </div>
-        {/* Service Category Pricing Examples */}
-        <div className="mb-20">
-          <h2 className="text-3xl font-bold text-white mb-12 text-center">
-            Service Category Pricing
-          </h2>
-<<<<<<< HEAD
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
-=======
                 <h3 className="text-xl font-bold text-white mb-2">{proposition.title}</h3>
                 <p className="text-gray-300 text-sm mb-4">{proposition.description}</p>
                 <div className="text-3xl font-bold text-cyan-400 mb-2">{proposition.metric}</div>
                 <div className="text-sm text-gray-400">{proposition.detail}</div>
               </UltraFuturisticCard>
+<<<<<<< HEAD
 ))}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+            ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           </div>;
         </div>;
-
             {serviceCategoryPricing.map((category, index) => (
               <UltraFuturisticCard
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       </div>)}
                   </div>;
                   <ul className='text - left space - y-3 mb - 8'>;
@@ -2334,9 +2344,12 @@ glowIntensity={tier.popular ? 'high' : 'medium'}
           <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6'>;
             {serviceCategoryPricing.map ((category, index) => (
               <UltraFuturisticCard;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 key={index}
                 variant={
                   index % 3 === 0;
@@ -2346,12 +2359,6 @@ glowIntensity={tier.popular ? 'high' : 'medium'}
                       : 'neural';
                 }
                 interactive={true}
-
-                className='p - 6';
-              >;
-                <div className='flex items - center mb - 4'>;
-                  <div className='inline - flex items - center justify - center w - 12 h - 12 rounded - full bg - gradient - to - r from - cyan - 500 to - purple - 500 mr - 4'>;
-
                     {category.icon}
                   </div>;
                   <div>;
@@ -2387,10 +2394,8 @@ glowIntensity={tier.popular ? 'high' : 'medium'}
 
 
                 </ul>
-=======
                 </ul>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 <Button
                   href='/services'
                   variant='secondary'
@@ -2400,12 +2405,12 @@ glowIntensity={tier.popular ? 'high' : 'medium'}
                   <ChevronRight className='ml-2 w-4 h-4' />                </Button>;
               </UltraFuturisticCard>;
 
-=======
         <div className="mb-20">
           <h2 className="text-3xl font-bold text-white mb-12 text-center">Service Category Pricing</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {serviceCategoryPricing.map((category, index) => (
               <UltraFuturisticCard
+<<<<<<< HEAD
 <<<<<<< HEAD
                 key={index}
                 variant={index % 3 === 0 ? 'quantum' : index % 3 === 1 ? 'holographic' : 'neural'}
@@ -2441,10 +2446,13 @@ glowIntensity={tier.popular ? 'high' : 'medium'}
                 interactive={true}
 >>>>>>> main
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 className="p-6"
               >
                 <div className="flex items-center mb-4">
                   <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-gradient-to-r from-cyan-500 to-purple-500 mr-4">
+<<<<<<< HEAD
 <<<<<<< HEAD
                     {category.icon}
 =======
@@ -2455,12 +2463,15 @@ glowIntensity={tier.popular ? 'high' : 'medium'}
   }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   </div>
                   <div>
                     <h3 className="text-lg font-bold text-white">{category.category}</h3>
                     <div className="text-cyan-400 font-semibold">{category.startingPrice}</div>
                   </div>
                 </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
                 
 =======
@@ -2481,6 +2492,8 @@ glowIntensity={tier.popular ? 'high' : 'medium'}
 
                 <ul className="space-y-2 mb-4">
 >>>>>>> main
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   {category.services.map((service, idx) => (
                     <li
                       key={idx}
@@ -2490,8 +2503,11 @@ glowIntensity={tier.popular ? 'high' : 'medium'}
                       {service}
                     </li>
                   ))}
+<<<<<<< HEAD
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <ul className="space-y-2 mb-4">
                   {category.services.map((service, idx) => (
                     <li key={idx} className="text-sm text-gray-300 flex items-center">
@@ -2500,7 +2516,10 @@ glowIntensity={tier.popular ? 'high' : 'medium'}
                     </li>
                   ))}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 </ul>
                 
                 <Button
@@ -2510,13 +2529,9 @@ glowIntensity={tier.popular ? 'high' : 'medium'}
                   className="w-full"
                 >
                   Explore Services
-<<<<<<< HEAD
-                  <ChevronRight className="ml-2 w-4 h-4" />
-=======
-                  <ChevronRight className="ml-2 w-4 h-4" />{" "}
->>>>>>> main
                 </Button>
 
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                 </ul>
                 
@@ -2542,6 +2557,8 @@ glowIntensity={tier.popular ? 'high' : 'medium'}
 
 =======
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             ))}
           </div>
         </div>
@@ -2551,9 +2568,12 @@ glowIntensity={tier.popular ? 'high' : 'medium'}
             Popular Services Pricing
           </h2>
 <<<<<<< HEAD
+<<<<<<< HEAD
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>            {popularServices.slice(0, 6).map((service, index) => (
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -2563,17 +2583,21 @@ glowIntensity={tier.popular ? 'high' : 'medium'}
           </div>;
         </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <ChevronRight className='ml-2 w-4 h-4' />                </Button>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         {/* Popular Services Pricing */}
         <div className='mb-20'>;
           <h2 className='text-3xl font-bold text-white mb-12 text-center'>;
             Popular Services Pricing;
           </h2>;
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>            {popularServices && popularServices.slice(0, 6).map((service, index) => (;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -2611,6 +2635,9 @@ glowIntensity={tier.popular ? 'high' : 'medium'}
 
 =======
 =======
+=======
+              <UltraFuturisticCard
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 key={service.id  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -2626,7 +2653,6 @@ glowIntensity={tier.popular ? 'high' : 'medium'}
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-=======
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {" "}
             {popularServices.slice(0, 6).map((service, index) => (
@@ -2634,20 +2660,27 @@ glowIntensity={tier.popular ? 'high' : 'medium'}
                 key={service.id}
                 variant={service.variant as any}
                 interactive={true}
+<<<<<<< HEAD
 >>>>>>> main
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 className="p-6"
               >
                 <div className="text-center mb-4">
                   <div className="text-3xl mb-3">{service.icon}</div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   <h3 className="text-lg font-bold text-white mb-2">{service.name}</h3>
                   <div className="text-2xl font-bold text-cyan-400 mb-2">{service.price}</div>
                   <div className="text-sm text-gray-400">{service.category}</div>
                 </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
                 
 =======
@@ -2669,6 +2702,8 @@ glowIntensity={tier.popular ? 'high' : 'medium'}
                 <div className="mb-4">
                   <div className="text-xs text-gray-400 mb-2">
 >>>>>>> main
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     Key Features:
                   </div>
                   <ul className="text-xs text-gray-300 space-y-1">
@@ -2683,11 +2718,14 @@ glowIntensity={tier.popular ? 'high' : 'medium'}
                 <Button
                   href={service.link}
 <<<<<<< HEAD
+<<<<<<< HEAD
                   variant='primary'
                   size='sm'
                   className='w-full'
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <div className="mb-4">
                   <div className="text-xs text-gray-400 mb-2">Key Features:</div>
                   <ul className="text-xs text-gray-300 space-y-1">
@@ -2697,6 +2735,9 @@ glowIntensity={tier.popular ? 'high' : 'medium'}
                         {feature}
                       </li>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
                     ))}
 
@@ -2704,12 +2745,15 @@ glowIntensity={tier.popular ? 'high' : 'medium'}
                 </div>;
 
 
+<<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
                     ))}
                   </ul>;
                 </div>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <Button
                   href={service && service.link}
                   variant='primary'
@@ -2718,6 +2762,7 @@ glowIntensity={tier.popular ? 'high' : 'medium'}
                   Learn More;
                   <ExternalLink className='ml-2 w-4 h-4' />                </Button>;
               </UltraFuturisticCard>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -2761,25 +2806,20 @@ glowIntensity={tier.popular ? 'high' : 'medium'}
                 </Button>
               </UltraFuturisticCard>
 <<<<<<< HEAD
+=======
+                </Button>
+              </UltraFuturisticCard>
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             ))}
           </div>
         </div>
         {/* FAQ Section */}
-        <div className="mb-20">
-          <h2 className="text-3xl font-bold text-white mb-12 text-center">
-            Frequently Asked Questions
-          </h2>
-          <div className="max-w-4xl mx-auto space-y-4">
-            <UltraFuturisticCard variant="quantum" className="p-6">
-              <h3 className="text-lg font-bold text-white mb-3">
-                What's included in the free trial?
-              </h3>
-              <p className="text-gray-300">
                 All plans include a generous free trial period with full access
                 to the selected services. No credit card required to start your
                 trial.
               </p>
             </UltraFuturisticCard>
+<<<<<<< HEAD
 <<<<<<< HEAD
             <UltraFuturisticCard variant='holographic' className='p-6'>
               <h3 className='text-lg font-bold text-white mb-3'>
@@ -2789,6 +2829,8 @@ glowIntensity={tier.popular ? 'high' : 'medium'}
               <h3 className="text-lg font-bold text-white mb-3">
 >>>>>>> main
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 Can I change my plan later?
               </h3>
               <p className='text-gray-300'>
@@ -2797,6 +2839,7 @@ glowIntensity={tier.popular ? 'high' : 'medium'}
                 adjustments.
               </p>
             </UltraFuturisticCard>
+<<<<<<< HEAD
 <<<<<<< HEAD
             <UltraFuturisticCard variant='neural' className='p-6'>
               <h3 className='text-lg font-bold text-white mb-3'>
@@ -2810,6 +2853,8 @@ glowIntensity={tier.popular ? 'high' : 'medium'}
               <h3 className="text-lg font-bold text-white mb-3">
 >>>>>>> main
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 What support is included?
               </h3>
               <p className='text-gray-300'>
@@ -2817,6 +2862,7 @@ glowIntensity={tier.popular ? 'high' : 'medium'}
                 plans include priority support with dedicated account managers.
               </p>
             </UltraFuturisticCard>
+<<<<<<< HEAD
 <<<<<<< HEAD
             <UltraFuturisticCard variant='quantum' className='p-6'>
               <h3 className='text-lg font-bold text-white mb-3'>
@@ -2830,11 +2876,14 @@ glowIntensity={tier.popular ? 'high' : 'medium'}
               <h3 className="text-lg font-bold text-white mb-3">
 >>>>>>> main
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 Is there a setup fee?
               </h3>
               <p className='text-gray-300'>
                 No setup fees for any plan. All services are designed for
                 instant deployment with our AI-powered setup wizards.
+<<<<<<< HEAD
 <<<<<<< HEAD
               </p>            </UltraFuturisticCard>
 =======
@@ -2883,6 +2932,8 @@ glowIntensity={tier.popular ? 'high' : 'medium'}
               <h3 className="text-xl font-bold text-white mb-3">Address</h3>
               <p className="text-green-400 text-sm font-semibold leading-relaxed">
 >>>>>>> main
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 {contactInfo.address}
               </p>
               <p className="text-gray-400 text-sm mt-2">
@@ -2897,9 +2948,6 @@ glowIntensity={tier.popular ? 'high' : 'medium'}
             variant="quantum-holographic-advanced"
             className="p-12"
           >
-<<<<<<< HEAD
-            <h2 className='text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>
-=======
         <div className="mb-20">
           <h2 className="text-3xl font-bold text-white mb-12 text-center">Frequently Asked Questions</h2>
           <div className="max-w-4xl mx-auto space-y-4">
@@ -2924,6 +2972,7 @@ glowIntensity={tier.popular ? 'high' : 'medium'}
             </UltraFuturisticCard>
           </div>
         </div>
+<<<<<<< HEAD
         {/* Contact Information */}
 
                 <div className='mb-4'>
@@ -3017,6 +3066,8 @@ variant='primary'
           </div>
         </div>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           </div>;
         </div>;
 
@@ -3107,6 +3158,7 @@ variant='primary'
           </div>;
         </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
         {/* CTA Section */}
@@ -3121,6 +3173,8 @@ variant='primary'
           >
             <h2 className='text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         {/* CTA Section */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -3129,9 +3183,6 @@ variant='primary'
         <div className="text-center">
           <UltraFuturisticCard variant="quantum-holographic-advanced" className="p-12">
             <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               Ready to Get Started?
             </h2>
             <p className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'>
@@ -3145,6 +3196,7 @@ variant='primary'
               Ready to Get Started?;
             </h2>;
             <p className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'>;
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
                   </div>;
@@ -3275,6 +3327,8 @@ variant='primary'
             <div className="flex flex-col sm: flex-row gap-4 justify-center mb-8">
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
               Ready to Get Started?
             </h2>
@@ -3285,8 +3339,11 @@ variant='primary'
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+<<<<<<< HEAD
 >>>>>>> main
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <Button
                 href='/services'
                 variant='primary'
@@ -3296,6 +3353,7 @@ variant='primary'
                 <Play className='ml-2 w-5 h-5' />;
               </Button>;
               <Button
+<<<<<<< HEAD
                 href="/contact"
                 variant="secondary"
                 size="lg"
@@ -3315,29 +3373,28 @@ variant='primary'
 =======
             <div className="text-sm text-gray-400">
 >>>>>>> main
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <p>
                 ✓ 30-90 Day Free Trials • ✓ No Credit Card Required • ✓ Instant
                 Setup
               </p>
-              <p className="mt-2">
-                ✓ 24/7 Support • ✓ 99.99% Uptime SLA • ✓ Global Infrastructure
-<<<<<<< HEAD
-              </p>            </div>
-=======
             <div className="text-sm text-gray-400">
               <p>✓ 30-90 Day Free Trials • ✓ No Credit Card Required • ✓ Instant Setup</p>
               <p className="mt-2">✓ 24/7 Support • ✓ 99.99% Uptime SLA • ✓ Global Infrastructure</p>
             </div>
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-=======
               </p>{" "}
             </div>
+<<<<<<< HEAD
 >>>>>>> main
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           </UltraFuturisticCard>
         </div>
       </div>
     </UltraFuturisticBackground>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -3366,6 +3423,8 @@ variant='primary'
 
     </UltraFuturisticBackground>
   )
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   )
         <div className="mb-20">;
           <h2 className="text-3xl font-bold text-white mb-12 text-center">Frequently Asked Questions</h2>;
@@ -3431,6 +3490,13 @@ variant='primary'
               No credit card required, instant setup, and full support included.;
             </p>;
             <div className="flex flex-col sm: flex-row gap-4 justify-center mb-8">;
+
+
+                className='text-lg px-8 py-4'>;
+                Contact Sales;
+                <MessageSquare className='ml-2 w-5 h-5' />;
+              </Button>;
+            </div>;
               <Button;
                 href='/services';
                 variant='primary';
@@ -3458,14 +3524,19 @@ variant='primary'
               <p className='mt - 2'>;
                 ✓ 24 / 7 Support • ✓ 99.99% Uptime SLA • ✓ Global Infrastructure;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               </p>            </div>;
           </UltraFuturisticCard>;
         </div>;
       </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -3481,10 +3552,12 @@ variant='primary'
   );
 >>>>>>> main
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-}
-
-
 =======
+  );
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+}
+
+
 
     </UltraFuturisticBackground>
 
@@ -3493,6 +3566,7 @@ variant='primary'
 
 
     </UltraFuturisticBackground>
+<<<<<<< HEAD
   )
 
 }
@@ -3521,23 +3595,13 @@ variant='primary'
   )
 
   )
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 }
 
-}
 
-  );
-}
 
-}
-
-    </UltraFuturisticBackground>;
-  );
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
     </UltraFuturisticBackground>
   )
 }
@@ -3552,5 +3616,8 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 origin/automation-improvements-final
   );
 }
+<<<<<<< HEAD
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

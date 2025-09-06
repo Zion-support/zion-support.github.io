@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
@@ -61,6 +62,8 @@ export function RolePicker({ onSelect }: RolePickerProps) {
 
       <div className="space-y-3 mt-6">
         <Card 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           className={`cursor-pointer transition-all ${
             selectedRole === 'talent' 
               ? "border-primary bg-primary/5" 
@@ -83,15 +86,16 @@ export function RolePicker({ onSelect }: RolePickerProps) {
             </div>
           </CardContent>
         </Card>
-        <Card
-
-        <Card 
           className={`cursor-pointer transition-all ${
+<<<<<<< HEAD
 className={`cursor-pointer transition-all ${
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             selectedRole === 'client' 
               ? "border-primary bg-primary/5" 
               : "border-border hover:border-primary/40"
           }`}
+<<<<<<< HEAD
           onClick={() => handleSelect('client')}
         >
           <CardContent className="p-5">
@@ -184,6 +188,8 @@ export function RolePicker(): any ({ onSelect }: RolePickerProps) {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           }`}
           onClick = {() => handleSelect('client'),}
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         >;
           <CardContent className='p-5'>;
             <div className='flex items-center'>;
@@ -199,6 +205,7 @@ export function RolePicker(): any ({ onSelect }: RolePickerProps) {;
               {selectedRole === 'client' && (;
                 <Check className='h-5 w-5 text-primary' />;
               )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 import React, { useState } from 'react';
@@ -272,10 +279,13 @@ function RolePicker() {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             </div>;
           </CardContent>;
         </Card>;
       </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -289,3 +299,5 @@ function RolePicker() {
 }
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

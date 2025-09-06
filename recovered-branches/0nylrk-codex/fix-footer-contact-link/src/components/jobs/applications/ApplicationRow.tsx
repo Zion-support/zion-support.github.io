@@ -1,5 +1,3 @@
-
-
 interface ApplicationRowProps {
 
   application: JobApplication
@@ -10,9 +8,12 @@ interface ApplicationRowProps {
   onViewScore: (application: JobApplication) => void
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {formatDistanceToNow} from "date-fns";
 import {Link} from "react-router-dom";
 import {Calendar, User, FileText, BarChart} from "lucide-react";
@@ -24,6 +25,59 @@ import {StatusBadge} from "./StatusBadge";
 import {ScoreBadge} from "./ScoreBadge";
 import {ApplicationActions} from "./ApplicationActions";
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import { formatDistanceToNow } from "date-fns",
+import { Link } from "react-router-dom",
+import { Calendar, User, FileText, BarChart } from "lucide-react",
+import { Button } from "@/components/ui/button",
+import { Avatar } from "@/components/ui/avatar",
+import { TableRow, TableCell } from "@/components/ui/table",
+import { JobApplication, ApplicationStatus } from "@/types/jobs",
+import { StatusBadge } from "./StatusBadge",
+interface ApplicationRowProps {
+
+  application: JobApplication
+  processingId: string | null
+  onViewApplication: (applicationId: string) => Promise<void>
+  onStatusChange: (applicationId: string, newStatus: ApplicationStatus) => Promise<void>
+
+  onViewScore: (application: JobApplication) => void
+import { formatDistanceToNow } from "date-fns",
+import { Link } from "react-router-dom",
+import { Calendar, User, FileText, BarChart } from "lucide-react",
+import { Button } from "@/components/ui/button",
+import { Avatar } from "@/components/ui/avatar",
+import { TableRow, TableCell } from "@/components/ui/table",
+import { JobApplication, ApplicationStatus } from "@/types/jobs",
+import { StatusBadge } from "./StatusBadge",
+interface ApplicationRowProps {
+
+  application: JobApplication
+  processingId: string | null
+  onViewApplication: (applicationId: string) => Promise<void>
+  onStatusChange: (applicationId: string, newStatus: ApplicationStatus) => Promise<void>
+
+  onViewScore: (application: JobApplication) => void
+}
+import { formatDistanceToNow } from "date-fns",
+import { Link } from "react-router-dom",
+import { Calendar, User, FileText, BarChart } from "lucide-react",
+import { Button } from "@/components/ui/button",
+import { Avatar } from "@/components/ui/avatar",
+import { TableRow, TableCell } from "@/components/ui/table",
+import { JobApplication, ApplicationStatus } from "@/types/jobs",
+import { StatusBadge } from "./StatusBadge",
+interface ApplicationRowProps {
+
+  application: JobApplication
+  processingId: string | null
+  onViewApplication: (applicationId: string) => Promise<void>
+  onStatusChange: (applicationId: string, newStatus: ApplicationStatus) => Promise<void>
+
+  onViewScore: (application: JobApplication) => void
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface ApplicationRowProps {;
   application: JobApplication,;
   processingId: string | null,;
@@ -34,6 +88,7 @@ interface ApplicationRowProps {;
 
 export function ApplicationRow(): any ({;
 
+<<<<<<< HEAD
 =======
 import { formatDistanceToNow } from "date-fns",
 import { Link } from "react-router-dom",
@@ -59,10 +114,14 @@ interface ApplicationRowProps {
 
 export function ApplicationRow({;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+export function ApplicationRow({;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   application;
   processingId;
   onViewApplication;
   onStatusChange;
+<<<<<<< HEAD
 <<<<<<< HEAD
   onViewScore;
 }: ApplicationRowProps) {;
@@ -86,14 +145,21 @@ export function ApplicationRow({;
 
   return (
     <TableRow key={application && application.id}>;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export function ApplicationRow({
   application,
   processingId,
   onViewApplication,
   onStatusChange,
+}
+
+
+
   onViewScore
 }: ApplicationRowProps) {
   return (
+<<<<<<< HEAD
     <TableRow key={application.id}>
       <TableCell>
         <div className="flex items-center gap-3">
@@ -147,10 +213,15 @@ export function ApplicationRow({
         ) : (
           <span className="text-muted-foreground text-sm">No resume</span>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+    <TableRow key={application && application.id}>;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         )}
       </TableCell>
       <TableCell className="text-right">
         <ApplicationActions
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -314,8 +385,13 @@ export function ApplicationRow({;
       </TableCell>;
       <TableCell className="text-right">;
 <<<<<<< HEAD
-        <ApplicationActions
 =======
+  return (
+        )}
+      </TableCell>;
+      <TableCell className="text-right">;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+        <ApplicationActions
 import { formatDistanceToNow } from './date - fns';
 import { Link } from './react-router-dom';
 import { Calendar, User, FileText, BarChart } from './lucide-react';
@@ -360,12 +436,15 @@ function ApplicationRow() {
         </div>;
       </TableCell>;
       <TableCell>;
+<<<<<<< HEAD
         <div className="flex items - center gap - 1">;
           <Calendar className="h - 4 w - 4 text - muted - foreground" />;
           <span>{formatDistanceToNow (new Date (application.created_at), { add_suffix: true })}</span>;
 =======
           <span>{formatDistanceToNow(new Date(application.created_at), { addSuffix: true })}</span>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         </div>;
       </TableCell>;
       <TableCell>;
@@ -375,6 +454,7 @@ function ApplicationRow() {
         <Button;
           variant="ghost";
           size="sm";
+<<<<<<< HEAD
 <<<<<<< HEAD
           on_click={() => onViewScore (application)}
           className="flex items - center gap - 1";
@@ -386,10 +466,13 @@ function ApplicationRow() {
         >;
           <BarChart className="h-4 w-4 mr-1" />;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <ScoreBadge application={application} />;
         </Button>;
       </TableCell>;
       <TableCell>;
+<<<<<<< HEAD
 <<<<<<< HEAD
         {application.resume ? (
           <Button variant="ghost" size="sm" as_child>;
@@ -416,16 +499,22 @@ function ApplicationRow() {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           </Button>) : (
           <span className="text - muted - foreground text - sm">No resume</span>)}
       </TableCell>;
       <TableCell className="text - right">;
         <ApplicationActions;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           application={application}
           processing_id={processing_id}
           onViewApplication={onViewApplication}
           onStatusChange={onStatusChange}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
         />;
@@ -486,3 +575,5 @@ onViewScore: (application: JobApplication) => void
   )
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

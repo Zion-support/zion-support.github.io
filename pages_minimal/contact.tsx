@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 export default function Contact() {;
@@ -21,6 +22,8 @@ export default function Contact() {;
     </div>;
   );
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from './react';
 ;
 export default /**
@@ -34,5 +37,9 @@ function Contact() {
         <p > Get in touch with our team for your IT and AI service needs.</p>;
       </main>;
     </div>);
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
+=======
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

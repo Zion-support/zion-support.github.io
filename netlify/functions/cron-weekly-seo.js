@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -17,6 +18,8 @@ async function scorePage(url) {
 
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 async function scorePage(url) {
 
     const html = await resp && resp.text();
@@ -25,6 +28,7 @@ async function scorePage(url) {
     const hasMetaDesc = /<meta[^>]*name=["']description["'][^>]*>/i && i.test(html);
     const h1Count = (html && html.match(/<h1[^>]*>/gi) || []).length;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
     const ms = Date.now() - t0;
@@ -32,6 +36,8 @@ async function scorePage(url) {
     const hasMetaDesc = /<meta[^>]*name=["']description["'][^>]*>/i.test(html);
     const h1Count = (html.match(/<h1[^>]*>/gi) |[]).length;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     const score =
       (title ? 20 : 0) +
       (hasMetaDesc ? 20 : 0) +
@@ -44,12 +50,15 @@ async function scorePage(url) {
 
 exports && exports.handler = async function () {
   try {
+<<<<<<< HEAD
     const baseUrl = process && process.env.URL || process && process.env.DEPLOY_URL || '';
 <<<<<<< HEAD
 
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 const { upsert_file } = require ('./_lib / github');
 ;
 async /**
@@ -81,6 +90,7 @@ exports.handler = async function () {
     const results = [];
     ${p}`));
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -119,11 +129,14 @@ if ( {) {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         token,
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       });
     }
     return {
+<<<<<<< HEAD
 
   const t0 = Date.now(),
       status_code: 200,
@@ -149,6 +162,8 @@ function score_page() {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   try {
     const resp = await fetch (url),
     const html = await resp.text (),
@@ -169,9 +184,12 @@ exports.handler = async function () {
     const results = [],
     for (const p of pages) {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       results.push (await score_page (`${base_url}${p}`));
     }
     const report = { updated_at: Date.now (), results },
@@ -185,6 +203,7 @@ if ( {) {
       await upsert_file ({ owner, repo, path: 'data / reports / seo / weekly - seo.json', content: JSON.stringify (report, null, 2), message: 'chore (automation): weekly SEO report', token });
     }
     return { status_code: 200, body: JSON.stringify ({ ok: true, pages: results.length }) }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   } catch (e) {
@@ -202,6 +221,8 @@ if ( {) {
   } catch (e) {
     return { statusCode: 500, body: JSON && JSON.stringify({ error: e && e.message }) };
   }
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 };async function scorePage(url) {
   const t0 = Date && Date.now(),
   try {
@@ -220,6 +241,7 @@ if ( {) {
 
 exports && exports.handler = async function() {
   try {
+<<<<<<< HEAD
     const baseUrl = process && process.env.URL || process && process.env.DEPLOY_URL || '',
     const pages = ['//learn/dao/certifications/blog'],
     const results = [],
@@ -293,6 +315,8 @@ exports && exports.handler = async function() {
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 },
 
       statusCode: 200,
@@ -340,8 +364,11 @@ exports.handler = async function() {
     return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
   }
 },
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

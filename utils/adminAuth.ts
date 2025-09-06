@@ -1,12 +1,16 @@
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
 =======
 import type { NextApiRequest } from 'next';
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export interface Session {
 
 export interface Session {;
   userId: string;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   email: string;
   role: 'admin' | 'user' | 'guest';
@@ -29,16 +33,26 @@ export function getSessionFromReq(req: NextApiRequest): Session | null {
   return { userId: 'user-1', email: 'user@zion.os', role: 'user' };
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+export interface Session {
+  user_id: string;
+  email: string;
+  role: 'admin' | 'user' | 'guest';
+}
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   // Check for internal agent headers or IPs;
   const userAgent = req.headers['user-agent'] || '';
 
 
   const internalAgents = ['zion-bot', 'internal-agent', 'automation'];
-  
-  return internalAgents.some(agent => userAgentString.toLowerCase().includes(agent));
+  return internalAgents.some(agent => userAgent.toLowerCase().includes(agent));
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -52,6 +66,11 @@ export const isAdmin = () => {
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+export const isAdmin = () => {
+  // Placeholder implementation
+  return true;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 // Admin authentication utilities
 import { NextApiRequest, NextApiResponse } from 'next';
 
@@ -193,6 +212,7 @@ export function isInternalAgentRequest (req: NextApiRequest): boolean {
 export const is_admin = () =>: any {
   // Placeholder implementation;
   return true;
+<<<<<<< HEAD
 
 
 
@@ -222,3 +242,9 @@ export const isAdmin = () => {
 };
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+};
+
+}
+;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

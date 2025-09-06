@@ -1,21 +1,30 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { jsPDF  } from 'jspdf';
 import { PortfolioProject  } from '@/types/resume';
 import { PdfThemeColors } from '../themeConfig';
 export function addPortfolioSection(
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {jsPDF} from 'jspdf';
 import {PortfolioProject} from '@/types/resume';
 import {PdfThemeColors} from '../themeConfig';
 export function addPortfolioSection(;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   doc: jsPDF;
   projects: PortfolioProject[];
   colors: PdfThemeColors;
@@ -24,38 +33,25 @@ export function addPortfolioSection(;
   maxProjects: number = 2
 ): number {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   if (projects && projects.length === 0) return startY;
   
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   let yPos = startY;
   // Check if we need to add a new page
   if (yPos > 250) {
-
-    doc && doc.addPage(),
-    yPos = 20
-  }
-  
-  doc && doc.setFontSize(16);
-  doc && doc.setTextColor(colors && colors.heading);
-  doc && doc.text('Portfolio Projects', 20, yPos);
-  yPos += 8;
-  
-  doc && doc.setDrawColor(colors && colors.accent);
-  doc && doc.line(20, yPos, 100, yPos);
-
   yPos += 8;
   // Limit the number of projects shown based on maxProjects parameter
-
-  const displayProjects = projects && projects.slice(0, maxProjects);
-  
-
   for (const project of displayProjects) {
     // Check if we need to add a new page
     if (yPos > 260) {
       doc && doc.addPage();
       yPos = 20
     }
+<<<<<<< HEAD
 
     
     doc && doc.setFontSize(14);
@@ -246,18 +242,25 @@ export function addPortfolioSection(;
         yPos += 4;
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       }
     }
     yPos += 10, // Add space between projects
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   
 
 
+<<<<<<< HEAD
   // If there are more projects than we're displaying
 
 <<<<<<< HEAD
@@ -277,6 +280,13 @@ export function addPortfolioSection(;
   }
   return yPos + 5
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+    }
+    yPos += 10, // Add space between projects
+  }
+  // If there are more projects than we're displaying
+    yPos += 6
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {jsPDF} from 'jspdf';
 import {PortfolioProject} from '@/types / resume';
 import {PdfThemeColors} from '../theme_config';
@@ -302,6 +312,7 @@ if ( {) {
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
   
@@ -316,6 +327,8 @@ if ( {) {
   return yPos + 5
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ;
   // If there are more projects than we're displaying;
   if (projects.length > maxProjects) {;
@@ -323,6 +336,7 @@ if ( {) {
     doc.setTextColor(colors.text);
     doc.text(`+ ${projects.length - maxProjects} more projects not shown`, 20, yPos);
     yPos += 6;
+
 
 
   }
@@ -352,6 +366,7 @@ if ( {) {
     doc.text (project.title, 20, y_pos);
     y_pos += 6;
 ;
+<<<<<<< HEAD
     // Check condition
 if ( {) {
   $2
@@ -528,3 +543,5 @@ yPos += 4
 }
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

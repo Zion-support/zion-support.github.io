@@ -24,6 +24,9 @@ class ErrorBoundary extends React.Component {
 }
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   return (
     <UltraFuturisticBackground variant='space' intensity='high'>;
@@ -64,11 +67,20 @@ import React from 'react';
                   className='text-cyan-300 underline'
                   href='https://aws && aws.amazon.com/config/pricing/'
                   target='_blank'
+
+}
+import React from 'react',
+import Head from 'next/head',
+import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground',
+import Card from '../components/ui/Card',
                   rel='noopener noreferrer'>;
+<<<<<<< HEAD
 =======
 =======
                   rel='noopener noreferrer'>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import Head from 'next / head';
 import UltraFuturisticBackground from '../components / ui / UltraFuturisticBackground';
 import Card from '../components / ui / Card';
@@ -124,9 +136,13 @@ function ITAssetDiscoveryAgentPage() {
               </li>;
               <li>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <a;
                   className='text - cyan - 300 underline';
                   href='https://azure.microsoft.com / pricing / details / monitor/';
@@ -134,13 +150,17 @@ function ITAssetDiscoveryAgentPage() {
                   rel='noopener noreferrer';
                 >;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   Azure Monitor;
                 </a>;
               </li>;
               <li>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -155,12 +175,15 @@ function ITAssetDiscoveryAgentPage() {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   GCP Asset Inventory;
                 </a>;
               </li>;
             </ul>;
           </Card>;
         </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
             className='px-6 py-3 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 text-white'>;
@@ -177,10 +200,13 @@ function ITAssetDiscoveryAgentPage() {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             Contact Sales;
           </a>;
         </div>;
       </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -280,6 +306,8 @@ import Head from 'next/head',
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground',
 import Card from '../components/ui/Card',
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export default function ITAssetDiscoveryAgentPage() {
 	return (
 		<UltraFuturisticBackground variant="space" intensity="high">
@@ -301,6 +329,7 @@ export default function ITAssetDiscoveryAgentPage() {
 							<li>Drift and anomaly alerts</li>
 						</ul>
 					</Card>
+<<<<<<< HEAD
 <<<<<<< HEAD
 					<Card className="p-6 bg-black/40 border border-gray-800">
 						<h2 className="font-semibold mb-2">References</h2>
@@ -345,3 +374,9 @@ export default function ITAssetDiscoveryAgentPage() {
 		</UltraFuturisticBackground>
 	)
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+    </UltraFuturisticBackground>);
+;
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

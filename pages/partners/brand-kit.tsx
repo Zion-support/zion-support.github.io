@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -26,6 +27,8 @@ export default function BrandKit() {
       <ul className="list-disc pl-6">
         <li><a className="text-blue-600 underline" href="/brand-kit.txt">Brand Kit (txt)</Link></li>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       </ul>
       <div className="mt-4 p-4 rounded border">
         <h2 className="font-medium mb-2">Smart CTA</h2>
@@ -34,6 +37,7 @@ export default function BrandKit() {
       </div>
     </div>
   )
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -64,3 +68,6 @@ export default function BrandKit() {
   }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

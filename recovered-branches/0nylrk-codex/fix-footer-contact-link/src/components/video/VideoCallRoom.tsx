@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 
@@ -6,6 +7,8 @@
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useState } from 'react';
 import {Button} from "@/components/ui/button";
 import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card";
@@ -13,14 +16,27 @@ import {Badge} from "@/components/ui/badge";
 import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
 import {Video, VideoOff, Mic, MicOff, Phone, ScreenShare, ScreenShareOff, Volume2, VolumeX} from '@/components/icons';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import React, { useState } from 'react',
+import { Button } from "@/components/ui/button",
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
+import { Badge } from "@/components/ui/badge",
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Video, VideoOff, Mic, MicOff, Phone, ScreenShare, ScreenShareOff, Volume2, VolumeX  } from '@/components/icons';
+import './video-call.css';
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import './video-call ;
 interface Participant {;
   id: string,;
   name: string,;
 
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useState } from 'react';
 import { Button } from '@/components / ui / button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components / ui / card';
@@ -32,13 +48,17 @@ interface Participant {
   id: string,
   name: string,
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   avatar?: string;
   is_muted?: boolean;
   isVideoEnabled?: boolean;
   isScreenSharing?: boolean;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -96,10 +116,13 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({
   roomId
   participants = []
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   onLeave;
   onToggleMute;
   onToggleVideo;
   onToggleScreenShare;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   className ;
@@ -111,11 +134,14 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({
   className
 }) => {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const [isMuted, setIsMuted] = useState(false);
   const [isVideoEnabled, setIsVideoEnabled] = useState(true);
   const [isScreenSharing, setIsScreenSharing] = useState(false);
   const [isAudioOnly, setIsAudioOnly] = useState(false);
   const [callDuration, setCallDuration] = useState(0);
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -151,11 +177,14 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({
   };
   const handleToggleMute = () => {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     const newMuteState = !isMuted;
     setIsMuted(newMuteState);
     if (onToggleMute) {;
       onToggleMute(newMuteState);
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   };
@@ -202,6 +231,8 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
 import { Video, VideoOff, Mic, MicOff, Phone, ScreenShare, ScreenShareOff, Volume2, VolumeX } from '@/components/icons',
 import './video-call.css',
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface Participant {
   id: string,
   name: string,
@@ -211,12 +242,15 @@ interface Participant {
   isScreenSharing?: boolean,
   isHost?: boolean
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     }
 
 
+<<<<<<< HEAD
 =======
 }
 
@@ -267,14 +301,14 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({
     setIsMuted(newMuteState);
     if (onToggleMute) {
       onToggleMute(newMuteState)
+=======
+    // If turning video back on, ensure we're not in audio-only mode;
+    if (newVideoState) {;
+      setIsAudioOnly(false);
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     }
   };
 
-  const handleToggleVideo = () => {
-    const newVideoState = !isVideoEnabled;
-    setIsVideoEnabled(newVideoState);
-    if (onToggleVideo) {
-      onToggleVideo(newVideoState)
 import React, { useState } from 'react',;
 import { Button } from "@/components/ui/button",;
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",;
@@ -346,6 +380,7 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({;
     if (newVideoState) {
       setIsAudioOnly(false)
     }
+<<<<<<< HEAD
 
     }
 
@@ -364,6 +399,10 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({;
 =======
   const handleToggleScreenShare = () => {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  const handleToggleScreenShare = () => {;
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     const newScreenShareState = !isScreenSharing;
     setIsScreenSharing(newScreenShareState);
 
@@ -371,11 +410,14 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({;
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   }
   };
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const handleToggleScreenShare = () => {
     const newScreenShareState = !isScreenSharing;
     setIsScreenSharing(newScreenShareState);
@@ -397,6 +439,7 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({;
       onLeave()
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   };
 
@@ -407,10 +450,16 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({;
   }
   };
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+  };
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   },;
   const handleToggleScreenShare = () => {;
     const newScreenShareState = !isScreenSharing,;
     setIsScreenSharing(newScreenShareState),;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     if (onToggleScreenShare) {;
@@ -425,6 +474,14 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({;
   };
   const handleToggleAudioOnly = () => {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+    }
+    const newScreenShareState = !isScreenSharing;
+    setIsScreenSharing(newScreenShareState);
+    if (onToggleScreenShare) {;
+      onToggleScreenShare(newScreenShareState);
+    }
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     setIsAudioOnly(!isAudioOnly);
     if (!isAudioOnly) {;
       setIsVideoEnabled(false);
@@ -432,6 +489,7 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({;
         onToggleVideo(false);
       }
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -567,11 +625,22 @@ export const VideoCallRoom:React.FC<VideoCallRoomProps> = ({ ;
       if (onToggleVideo) {;
             Room:{roomId}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+    }
+
+
+
+
+  }
+  return (
+            Room: {roomId}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           </Badge>;
         </div>;
         <div className="flex items-center space-x-2">;
           <Badge variant="secondary" className="bg-zion-blue-light text-white">;
             {formatDuration(callDuration)}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   is_host?: boolean;
@@ -704,10 +773,13 @@ if ( {) {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           {participants.length > 0 ? (
             participants.map ((participant) => (
               <div key={participant.id} className="video - participant bg - zion - blue - dark rounded - lg overflow - hidden relative">;
                 {participant.isVideoEnabled && !participant.isScreenSharing ? (
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -750,15 +822,21 @@ if ( {) {
               <div key={participant.id} className="video-participant bg-zion-blue-dark rounded-lg overflow-hidden relative">;
                 {participant.isVideoEnabled && !participant.isScreenSharing ? (;
                   <div className="bg-zion-blue-light h-full w-full flex items-center justify-center text-white">;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     {/* Placeholder for actual video stream */}
                     <Video className="h-12 w-12 opacity-50" />;
                   </div>;
                 ) :participant.isScreenSharing ? (;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   <div className="bg-zion-blue h-full w-full flex items-center justify-center text-white">;
                     {/* Placeholder for screen share */}
                     <ScreenShare className="h-12 w-12 opacity-50" />;
                   </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
                 ) : (;
                   <div className="bg-zion-blue-dark h-full w-full flex items-center justify-center">;
@@ -767,17 +845,23 @@ if ( {) {
                       <AvatarFallback className="bg-zion-purple text-white text-2xl">;
                         {participant && participant.name.charAt(0).toUpperCase()}
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 ) :(;
                   <div className="bg-zion-blue-dark h-full w-full flex items-center justify-center">;
                     <Avatar className="h-20 w-20">;
                       <AvatarImage src={participant.avatar} alt={participant.name} />;
                       <AvatarFallback className="bg-zion-purple text-white text-2xl">;
                         {participant.name.charAt(0).toUpperCase()}
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       </AvatarFallback>;
                     </Avatar>;
                   </div>;
                 )}
+<<<<<<< HEAD
 
 
                 
@@ -840,6 +924,8 @@ if ( {) {
                 )}
                 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <div className="video-metadata flex items-center space-x-2">
                   <span>{participant.name}</span>
                   {participant.isMuted && <MicOff className="h-4 w-4" />}
@@ -858,6 +944,7 @@ if ( {) {
           )}
         </div>
         <div className="bg-zion-blue-dark border-t border-zion-blue-light p-4 flex items-center justify-center space-x-3">
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -921,16 +1008,20 @@ if ( {) {
 
           <Button
 
+=======
+          <Button
+            variant="outline"
+            size="icon"
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           
-
           <Button 
 
             variant="outline" 
             size="icon" 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             className="video-button rounded-full h-10 w-10"
             onClick={handleToggleVideo}>;
             {isVideoEnabled ? <Video /> : <VideoOff />}
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -940,43 +1031,49 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           </Button>;
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <Button
-
+            variant="outline"
           
-
           <Button 
 
             variant="outline" 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+            className="video-button rounded-full h-10 w-10"
+            onClick={handleToggleMute}>;
+            {isMuted ? <MicOff /> : <Mic />}
+            className="video-button rounded-full h-10 w-10"
+            onClick={handleToggleVideo}>;
+            {isVideoEnabled ? <Video /> : <VideoOff />}
             size="icon"
             className="video-button rounded-full h-10 w-10"
             onClick={handleToggleScreenShare}>;
             {isScreenSharing ? <ScreenShareOff /> : <ScreenShare />}
-
-          </Button>;
-
           <Button
-
+            variant="outline"
           
-
           <Button 
 
             variant="outline" 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             size="icon"
             className="video-button rounded-full h-10 w-10"
             onClick={handleToggleAudioOnly}>;
             {isAudioOnly ? <VolumeX /> : <Volume2 />}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
           </Button>
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <Button 
             variant="destructive" 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
           <Button
@@ -1029,6 +1126,8 @@ if ( {) {
           <Button 
             variant="destructive" 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             size="icon"
             className="video-button video-button-danger rounded-full h-10 w-10"
             onClick={handleLeaveCall}
@@ -1039,6 +1138,11 @@ if ( {) {
       </CardContent>
     </Card>
   )
+}
+
+},
+};
+},
 
           </Button>;
 
@@ -1047,6 +1151,7 @@ if ( {) {
             size="icon"
             className="video-button video-button-danger rounded-full h-10 w-10"
             onClick={handleLeaveCall}>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
         ;
@@ -1094,23 +1199,27 @@ if ( {) {
             onClick={handleLeaveCall}
           >;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <Phone className="rotate-135" />;
           </Button>;
         </div>;
       </CardContent>;
     </Card>;
 <<<<<<< HEAD
+<<<<<<< HEAD
   );
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  );
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 },
 
 
 };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
                   <div className="bg - zion - blue - light h - full w - full flex items - center justify - center text - white">;
                     {/* Placeholder for actual video stream */}
                     <Video className="h - 12 w - 12 opacity - 50" />;
@@ -1188,6 +1297,7 @@ if ( {) {
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
   ),;
@@ -1252,3 +1362,5 @@ if (onToggleVideo) {
 };
 },
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

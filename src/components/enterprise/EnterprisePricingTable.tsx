@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 =======
 import { Check, X } from 'lucide-react'
 
+<<<<<<< HEAD
 import React from "react";
 import { Button } from "@/components/ui/button";
 import React from 'react'
@@ -125,6 +126,10 @@ import { Badge } from "@/components/ui/badge";
 export function EnterprisePricingTable() {
 import { Badge } from "@/components/ui/badge",
 
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 export function EnterprisePricingTable() {
   const plans = [
@@ -170,6 +175,7 @@ export function EnterprisePricingTable() {
       users: "Unlimited users",
       popular: false,
       features: [
+<<<<<<< HEAD
         { name: 'Private hiring portal', included: true },
         { name: 'Dedicated talent pool', included: true },
         { name: 'Premium SLA (1h)', included: true },
@@ -194,6 +200,8 @@ export function EnterprisePricingTable() {
         </div>
         <div className='overflow-x-auto'>
           <Table className='border rounded-lg'>    <section id="pricing" className="py-20 px-4 md:px-6">
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         { name: "Private hiring portal", included: true },
         { name: "Dedicated talent pool", included: true },
         { name: "Premium SLA (1h)", included: true },
@@ -206,6 +214,7 @@ export function EnterprisePricingTable() {
 
   return (
     <section id="pricing" className="py-20 px-4 md:px-6">
+<<<<<<< HEAD
         { name: "Dedicated success manager", included: true }]}];
   return (
     <section id="pricing" className="py-20 px-4 md:px-6">
@@ -297,12 +306,15 @@ export function EnterprisePricingTable() {;
         </div>
         <div className="overflow-x-auto">
           <Table className="border rounded-lg">
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <div className="container mx-auto max-w-7xl">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Enterprise Plans</h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
           </p>
         </div>
+<<<<<<< HEAD
         <div className='overflow-x-auto'>
           <Table className='border rounded-lg'>
             <TableHeader>
@@ -455,21 +467,29 @@ export function EnterprisePricingTable() {;
 }
 
 =======
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                           {plan.billing}
                         </span>
                       </div>
                       <p className='text-sm text-muted-foreground mt-1'>
                         {plan.description}
+<<<<<<< HEAD
                       </p>
                       <p className='text-sm font-medium mt-2'>{plan.users}</p>                      <Button
                         className={`mt-4 w-full ${plan.popular ? 'bg-zion-purple hover:bg-zion-purple/90' : ''}`}
                         variant={plan.popular ? 'default' : 'outline'}
                       >
                         {plan.name === "Enterprise" ? "Request Quote" : "Get Started"}
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 
                       </Button>
+<<<<<<< HEAD
                   </TableHead>
                 ))}
       </div>
@@ -594,11 +614,23 @@ export function EnterprisePricingTable() {;
     </section>
   )
 }
+=======
+                    </div>
+                  </TableHead>
+                ))}
+      </div>
+    </section>
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
       </div>;
     </section>;
   );
 };
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               </TableRow>;
             </TableHeader>;
             <TableBody>;
@@ -619,6 +651,7 @@ export function EnterprisePricingTable() {;
             </TableBody>;
           </Table>;
         </div>;
+<<<<<<< HEAD
         <div className='mt-8 text-center text-sm text-muted-foreground'>;
           All plans include SSL security, 99 && 99.9% uptime SLA, and dedicated;
           support        </div>;
@@ -627,11 +660,14 @@ export function EnterprisePricingTable() {;
   );
 }        <div className="mt-8 text-center text-sm text-muted-foreground">;
           All plans include SSL security, 99 && 99.9% uptime SLA, and dedicated support;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         </div>;
       </div>;
     </section>;
   );
 }
+<<<<<<< HEAD
   );
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -815,6 +851,8 @@ function EnterprisePricingTable() {
           </Table>;
         </div>;
         <div className="mt-8 text-center text-sm text-muted-foreground">;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           All plans include SSL security, 99.9% uptime SLA, and dedicated support;
         </div>;
       </div>;
@@ -822,5 +860,8 @@ function EnterprisePricingTable() {
   );
 }
 ;
+<<<<<<< HEAD
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import { useState } from 'react'
 import { Button } from '@/components/ui/button'
@@ -53,6 +54,8 @@ class ErrorBoundary extends React.Component {
       setIsSubmitting(false)
     }
   }
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useState } from 'react',;
 import { Button } from '@/components/ui/button',;
 import { Input } from '@/components/ui/input',;
@@ -95,6 +98,8 @@ export default function GuestCheckoutModal({;
     }
   },
 
+
+
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent className="bg-zion-blue border-zion-cyan/20 max-w-md">
@@ -112,6 +117,7 @@ export default function GuestCheckoutModal({;
             Pay with test data – use card 4242 4242 4242 4242 and any future date.
           </div>
         )}
+<<<<<<< HEAD
         <form onSubmit={handleSubmit} className='space-y-4'>
           <div className='space-y-2'>
 
@@ -146,6 +152,8 @@ export default function GuestCheckoutModal({;
         <form onSubmit={handleSubmit} className='space-y-4'>;
           <div className='space-y-2'>;
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               htmlFor='guest-email'
               className='text-white flex items-center gap-2'>;
               <Mail className='h-4 w-4 text-zion-cyan' />;
@@ -154,6 +162,7 @@ export default function GuestCheckoutModal({;
             <Input
               id='guest-email'
               type='email'
+<<<<<<< HEAD
 
               value={email || ''}
               onChange={e => setEmail(e && e.target.value || '')}
@@ -323,6 +332,8 @@ export default function GuestCheckoutModal({;
               className='bg-zion-cyan hover:bg-zion-cyan/90 text-zion-blue'            >
               id="guest-email"
               type="email"
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               value={email || ''}
               onChange={(e) => setEmail(e.target.value || '')}
               placeholder="your.email@example.com"
@@ -336,13 +347,6 @@ export default function GuestCheckoutModal({;
               <MapPin className="h-4 w-4 text-zion-cyan" />
               Shipping Address
             </Label>
-            <Textarea
-              id="guest-address"
-              value={address || ''}
-              onChange={(e) => setAddress(e.target.value || '')}
-              placeholder="Enter your full shipping address..."
-              required
-              className="bg-zion-blue-light border-zion-cyan/30 text-white placeholder:text-zion-slate-light min-h-[80px]"
             />
           </div>
 
@@ -366,10 +370,13 @@ export default function GuestCheckoutModal({;
               disabled={isSubmitting || !email || !address}
               className="bg-zion-cyan hover:bg-zion-cyan/90 text-zion-blue"
             >
+<<<<<<< HEAD
                 'Processing...'
               ) : (
                 <>
                   <CreditCard className='h-4 w-4 mr-2' />
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               {isSubmitting ? (
                 'Processing...'
               ) : (
@@ -378,6 +385,7 @@ export default function GuestCheckoutModal({;
                   Continue to Payment
                 </>
               )}
+<<<<<<< HEAD
 }
 }
             </Button>
@@ -390,6 +398,8 @@ export default function GuestCheckoutModal({;
 }
 };
 };
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
               disabled={isSubmitting || !email || !address}
@@ -405,6 +415,7 @@ export default function GuestCheckoutModal({;
 
 };
 };
+<<<<<<< HEAD
 
 
           <DialogFooter className='space - x-2'>;
@@ -427,17 +438,23 @@ export default function GuestCheckoutModal({;
                 </>)}
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             </Button>;
           </DialogFooter>;
         </form>;
       </DialogContent>;
+<<<<<<< HEAD
 ;
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     </Dialog>;
   );
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
@@ -445,3 +462,5 @@ export default function GuestCheckoutModal({;
 }
 }
 ;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

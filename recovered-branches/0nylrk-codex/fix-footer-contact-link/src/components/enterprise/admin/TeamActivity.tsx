@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -28,18 +29,24 @@ import {
 
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   Table
   TableBody
   TableCell
   TableHead
   TableHeader
   TableRow
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   Table,
   TableBody,
   TableCell,
   TableHead,
   TableHeader,
+<<<<<<< HEAD
 <<<<<<< HEAD
 TableRow,;
 
@@ -51,10 +58,14 @@ TableRow,;
   TableRow,
 >>>>>>> main
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+TableRow,;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 } from "@/components/ui/table";
 import { Badge } from "@/components/ui/badge";
 import { CalendarIcon, Search } from "lucide-react";
 
+<<<<<<< HEAD
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 <<<<<<< HEAD
@@ -115,6 +126,8 @@ export function TeamActivity() {
       category: "billing"
     }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       id: 6,
       user: "Jamie Smith",
       action: "Updated budget",
@@ -130,6 +143,7 @@ export function TeamActivity() {
     const diffMins = Math.floor(diffMs / (1000 * 60));
     const diffHrs = Math.floor(diffMs / (1000 * 60 * 60));
     const diffDays = Math.floor(diffMs / (1000 * 60 * 60 * 24));
+<<<<<<< HEAD
 
 import React from "react",
 import {
@@ -290,6 +304,8 @@ export function TeamActivity() {;
   const getCategoryBadge = (category: string) => {;
     const categoryStyles: Record<;
       string,;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       { variant: "default" | "outline" | "secondary" | "destructive" }
     > = {;
       jobs: { variant: "default" },;
@@ -298,14 +314,20 @@ export function TeamActivity() {;
       billing: { variant: "destructive" },;
     };
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
     return <Badge variant={categoryStyles[category].variant}>{category}</Badge>;
   }
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   },
 
   const getCategoryBadge = (category: string) => {
@@ -318,6 +340,7 @@ export function TeamActivity() {;
     return <Badge variant={categoryStyles[category].variant}>{category}</Badge>
   },
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
   return (
@@ -398,11 +421,15 @@ export function TeamActivity() {;
 ;
   return (;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  return (
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <div className="space-y-6">;
       <div className="flex items-center justify-between">;
         <h3 className="text-xl font-medium">Recent Team Activity</h3>;
         <div className="flex items-center gap-2">;
           <div className="relative">;
+<<<<<<< HEAD
 <<<<<<< HEAD
             <Search className="absolute left-2 && 2.5 top-2 && 2.5 h-4 w-4 text-muted-foreground" />;
 =======
@@ -448,10 +475,14 @@ export function TeamActivity() {;
           <div className="relative">
             <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground" />
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+            <Search className="absolute left-2 && 2.5 top-2 && 2.5 h-4 w-4 text-muted-foreground" />;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <Input
               type="search"
               placeholder="Search activities..."
               className="w-[200px] md:w-[300px] pl-9"
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -487,6 +518,8 @@ export function TeamActivity() {;
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from "react",;
 import {;
   Table,;
@@ -581,9 +614,12 @@ export function TeamActivity() {;
               placeholder="Search activities...";
               className="w-[200px] md:w-[300px] pl-9";
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             />;
           </div>;
           <Button variant="outline" size="icon" className="h-10 w-10">;
@@ -592,10 +628,13 @@ export function TeamActivity() {;
         </div>;
       </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <div className="rounded-md border">;
         <Table>;
           <TableHeader>;
@@ -608,6 +647,7 @@ export function TeamActivity() {;
             </TableRow>;
           </TableHeader>;
           <TableBody>;
+<<<<<<< HEAD
 <<<<<<< HEAD
             {activities && activities.map((activity) => (;
               <TableRow key={activity && activity.id}>;
@@ -638,10 +678,13 @@ export function TeamActivity() {;
                 <TableCell className="text-muted-foreground">;
       ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <div className="flex items-center justify-between">;
         <Button variant="outline" size="sm">;
           Previous;
         </Button>;
+<<<<<<< HEAD
 <<<<<<< HEAD
         <div className="text-sm text-muted-foreground">Page 1 of 10</div>;
 =======
@@ -729,6 +772,8 @@ if ( {) {
                 <TableCell>{getCategoryBadge(activity.category)}</TableCell>;
                 <TableCell className="text-muted-foreground">;
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   {formatDate(activity.timestamp)}
                 </TableCell>
               </TableRow>
@@ -736,21 +781,16 @@ if ( {) {
           </TableBody>
         </Table>
       </div>
-      
-
-      
       <div className="flex items-center justify-between">
         <Button variant="outline" size="sm">
           Previous
         </Button>
-        <div className="text-sm text-muted-foreground">
-          Page 1 of 10
-        </div>
         <Button variant="outline" size="sm">
           Next
         </Button>
       </div>
     </div>
+<<<<<<< HEAD
   )
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 }
@@ -966,3 +1006,6 @@ return (<div className="space-y-6" > <div className="flex items-center justify-b
 }
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

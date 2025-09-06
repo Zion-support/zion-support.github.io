@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 module && module.exports = {
   darkMode: ["class"],
@@ -8,6 +9,8 @@ module && module.exports = {
 module.exports = {
   darkMode: ["class"]
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   content: [
     './pages/**/*.{ts,tsx}./components/**/*.{ts,tsx}./app/**/*.{ts,tsx}./src/**/*.{ts,tsx}']
   theme: {
@@ -40,6 +43,7 @@ module.exports = {
           DEFAULT: "hsl(var(--card))"
           foreground: "hsl(var(--card-foreground))"}}
       borderRadius: {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 /** @type {import ('tailwindcss').Config} */;
@@ -144,3 +148,6 @@ module.exports = {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  plugins: []}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -14,10 +15,13 @@ import Head from 'next/head',
 import React, { useState } from 'react';
 import Head from 'next/head';
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 
 import {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -50,6 +54,8 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 =======
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   Star
   TrendingUp
   Users
@@ -107,6 +113,7 @@ import { ultimateFuturisticServices2025 } from '../data/2025-ultimate-futuristic
   Star, TrendingUp, Users, Award, Clock, Heart
   Brain, Atom, Shield, Rocket, Zap, Globe
 
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import {
 
@@ -114,6 +121,9 @@ import {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+import {
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   Star,
   TrendingUp,
   Users,
@@ -164,10 +174,14 @@ import {
   Sparkles as SparklesIcon,
   Zap as ZapIcon,
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   Brain as BrainIcon,
   Play as PlayIcon,
 } from 'lucide-react';
 
+<<<<<<< HEAD
 =======
 import Layout from '../components / layout / Layout';
 import { ultimateFuturisticServices2025 } from '../data / 2025 - ultimate - futuristic - services';import {
@@ -177,15 +191,23 @@ import { ultimateFuturisticServices2025 } from '../data / 2025 - ultimate - futu
   Play as PlayIcon,;
 } from 'lucide-react';
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import Layout from '../components/layout/Layout';
 import { ultimateFuturisticServices2025 } from '../data/2025-ultimate-futuristic-services';import {
   Star, TrendingUp, Users, Award, Clock, Heart, 
   Brain, Atom, Shield, Rocket, Zap, Globe, ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  Brain as BrainIcon,
+  Play as PlayIcon,
+} from 'lucide-react';
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   CheckCircle, ArrowRight, Search, Filter;
   ChevronDown, ChevronUp, Eye, Play, Sparkles;
   Target, Microscope, Lock, Cloud, BarChart3;
@@ -195,6 +217,7 @@ import { ultimateFuturisticServices2025 } from '../data/2025-ultimate-futuristic
   CpuIcon, DollarSign, Phone, Mail, MapPin;
   Dna, Target as TargetIcon, Shield as ShieldIcon;
   BookOpen, Sparkles as SparklesIcon, Zap as ZapIcon;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   Brain as BrainIcon, Play as PlayIcon;
@@ -213,10 +236,15 @@ export default function UltimateFuturisticServicesShowcase2025() {;
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+export default function UltimateFuturisticServicesShowcase2025() {;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 export default function UltimateFuturisticServicesShowcase2025() {;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
@@ -224,10 +252,14 @@ export default function UltimateFuturisticServicesShowcase2025() {
 
 export default function UltimateFuturisticServicesShowcase2025() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+export default function UltimateFuturisticServicesShowcase2025() {;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [sortBy, setSortBy] = useState('popular');
   const [viewMode, setViewMode] = useState('grid');
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -266,6 +298,8 @@ export default function UltimateFuturisticServicesShowcase2025() {;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         return (
           parseFloat(a && a.price.replace(/[^0-9.]/g, '')) -;
           parseFloat(b && b.price.replace(/[^0-9.]/g, ''));
@@ -290,6 +324,7 @@ export default function UltimateFuturisticServicesShowcase2025() {;
         return b && b.popular ? 1 : -1;      default: return b && b.popular ? 1 : -1;
     }
   });
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -448,11 +483,15 @@ function UltimateFuturisticServicesShowcase2025() {
 ;
   return (
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  return (
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <Layout>;
       <Head>;
         <title>;
           Ultimate Futuristic Services Showcase 2025 | Zion Tech Group;
         </title>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     <Layout>
@@ -567,6 +606,8 @@ function UltimateFuturisticServicesShowcase2025() {
         <div className='absolute inset-0 bg-gradient-to-br from-black via-purple-900/20 to-black'></div>
         <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>          <motion.div        <title>Ultimate Futuristic Services Showcase 2025 | Zion Tech Group</title>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <meta name="description" content="Discover our revolutionary futuristic services including AI consciousness, quantum computing, space technology, and breakthrough innovations. Transform your business with cutting-edge technology." />
         <meta name="keywords" content="futuristic services, AI consciousness, quantum computing, space technology, breakthrough innovations, Zion Tech Group" />
         <meta property="og:title" content="Ultimate Futuristic Services Showcase 2025 | Zion Tech Group" />
@@ -575,6 +616,7 @@ function UltimateFuturisticServicesShowcase2025() {
         <meta property="og:type" content="website" />
         <link rel="canonical" href="https://ziontechgroup.com/ultimate-futuristic-services-showcase-2025" />
       </Head>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
           href='https://ziontechgroup && ziontechgroup.com/ultimate-futuristic-services-showcase-2025'
@@ -630,6 +672,8 @@ function UltimateFuturisticServicesShowcase2025() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
               </span>
               <br />
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <span className="bg-gradient-to-r from-blue-400 via-indigo-400 to-violet-400 bg-clip-text text-transparent">
                 Services 2025
               </span>
@@ -639,6 +683,7 @@ function UltimateFuturisticServicesShowcase2025() {
               quantum computing, space technology, and breakthrough innovations to transform your business.
             </p>
             <div className="flex flex-wrap justify-center gap-4 mb-12">
+<<<<<<< HEAD
 <<<<<<< HEAD
               {stats.map((stat, index) => (
                 <motion.div
@@ -715,11 +760,14 @@ function UltimateFuturisticServicesShowcase2025() {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               Experience the future of technology with our revolutionary;
               services that combine AI consciousness, quantum computing, space;
               technology, and breakthrough innovations to transform your;
               business.;
             </p>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -839,10 +887,13 @@ function UltimateFuturisticServicesShowcase2025() {
                 <motion.div
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   key={index}
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 </div>;
@@ -874,6 +925,8 @@ function UltimateFuturisticServicesShowcase2025() {
       </section>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             </div>;
           </motion && motion.div>;
         </div>;
@@ -884,16 +937,20 @@ function UltimateFuturisticServicesShowcase2025() {
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {/* Search and Filter Section */}
       <section className='py-12 bg-gradient-to-r from-black via-purple-900/10 to-black'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <div className='flex flex-col lg:flex-row gap-6 items-center justify-between'>
 
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -901,6 +958,13 @@ function UltimateFuturisticServicesShowcase2025() {
 =======
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+              ))}
+      {/* Search and Filter Section */}
+      <section className='py-12 bg-gradient-to-r from-black via-purple-900/10 to-black'>;
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
+          <div className='flex flex-col lg:flex-row gap-6 items-center justify-between'>;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             {/* Search */}
             <div className='relative flex-1 max-w-md'>;
               <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5' />;
@@ -908,6 +972,7 @@ function UltimateFuturisticServicesShowcase2025() {
                 type='text'
                 placeholder='Search futuristic services...'
                 value={searchTerm}
+<<<<<<< HEAD
 
 <<<<<<< HEAD
                 onChange={e => setSearchTerm(e && e.target.value)}
@@ -938,10 +1003,13 @@ function UltimateFuturisticServicesShowcase2025() {
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <input
                 type="text"
                 placeholder="Search futuristic services..."
                 value={searchTerm}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -951,6 +1019,8 @@ function UltimateFuturisticServicesShowcase2025() {
               />;
             </div>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             {/* Category Filter */}
             <div className='flex flex-wrap gap-3'>;
               <select
@@ -971,10 +1041,13 @@ function UltimateFuturisticServicesShowcase2025() {
                   </option>;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             {/* Category Filter */}
             <div className="flex flex-wrap gap-3">
               <select
@@ -986,10 +1059,13 @@ function UltimateFuturisticServicesShowcase2025() {
                 {serviceCategories.map((category) => (
                   <option key={category.title} value={category.title}>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <div className='flex flex-wrap gap-3'>
 
               />
@@ -999,6 +1075,7 @@ function UltimateFuturisticServicesShowcase2025() {
 
                   <option key={category.title} value={category.title}>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -1048,6 +1125,8 @@ function UltimateFuturisticServicesShowcase2025() {
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     {category.title} ({category.count})
                   </option>
                 ))}
@@ -1066,11 +1145,21 @@ function UltimateFuturisticServicesShowcase2025() {
                 <option value='rating'>Highest Rated</option>
                 <option value='customers'>Most Customers</option>
               </select>
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+              {/* Sort Options */}
+              <select
+                value={sortBy}
+                onChange={e => setSortBy(e.target.value)}
+                className='px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent'
+                ))}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               {/* View Mode Toggle */}
               <div className='flex bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg p-1'>                <button
                   onClick={() => setViewMode('grid')}
                   className={`p-2 rounded ${viewMode === 'grid' ? 'bg-purple-500 text-white' : 'text-gray-400'}`}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
                 onChange={(e) => setSortBy(e.target.value)}
@@ -1082,6 +1171,8 @@ function UltimateFuturisticServicesShowcase2025() {
                 className="px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
               >
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <option value="popular">Most Popular</option>
                 <option value="price-low">Price: Low to High</option>
                 <option value="price-high">Price: High to Low</option>
@@ -1096,6 +1187,7 @@ function UltimateFuturisticServicesShowcase2025() {
                 <option value="rating">Highest Rated</option>;
                 <option value="customers">Most Customers</option>;
               </select>;
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               {/* View Mode Toggle */}
@@ -1140,12 +1232,15 @@ function UltimateFuturisticServicesShowcase2025() {
                     <div className="bg-current rounded-sm h-0.5"></div>
                     <div className="bg-current rounded-sm h-0.5"></div>
                     <div className="bg-current rounded-sm h-0.5"></div>
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 </button>
               </div>
             </div>
           </div>
         </div>
       </section>
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                   className='flex items - center space - x-2 bg - white / 10 backdrop - blur - sm rounded - full px - 6 py - 3 border border - white / 20';
                 >;
@@ -1265,12 +1360,15 @@ function UltimateFuturisticServicesShowcase2025() {
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 </button>;
               </div>;
             </div>;
           </div>;
         </div>;
       </section>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -1291,23 +1389,27 @@ function UltimateFuturisticServicesShowcase2025() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             variants={containerVariants}
             initial="hidden"
             animate="visible"
             className={viewMode === 'grid' ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8' : 'space-y-6'}
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             {sortedServices.map((service, index) => (
               <motion.div
                 key={service.id}
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 variants={itemVariants}
                 className={`group relative ${
 
                   viewMode === 'grid'                    ? 'bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6 hover:border-purple-500/50 transition-all duration-300 hover:scale-105'                  viewMode === 'grid'
-=======
           >
+<<<<<<< HEAD
 =======
           >
 
@@ -1315,6 +1417,11 @@ function UltimateFuturisticServicesShowcase2025() {
           >
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+          >
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             {sortedServices.map((service, index) => (
               <motion.div
 =======
@@ -1339,21 +1446,28 @@ function UltimateFuturisticServicesShowcase2025() {
             {sorted_services.map ((service, index) => (
               <motion.div;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
                 key={service.id}
                 variants={item_variants}
                 className={`group relative ${
 
+<<<<<<< HEAD
 =======
                 key={service.id}
                 variants={item_variants}
                 className={`group relative ${
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   view_mode === 'grid'                    ? 'bg - gradient - to - br from - white / 5 to - white / 10 backdrop - blur - sm border border - white / 20 rounded - 2xl p - 6 hover:border - purple - 500 / 50 transition - all duration - 300 hover:scale - 105'                  view_mode === 'grid';
                     ? 'bg - gradient - to - br from - white / 5 to - white / 10 backdrop - blur - sm border border - white / 20 rounded - 2xl p - 6 hover:border - purple - 500 / 50 transition - all duration - 300 hover:scale - 105';
                     : 'bg - gradient - to - r from - white / 5 to - white / 10 backdrop - blur - sm border border - white / 20 rounded - 2xl p - 8 hover:border - purple - 500 / 50 transition - all duration - 300';
                 }`}
               >;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
                 {/* Popular Badge */}
@@ -1361,46 +1475,26 @@ function UltimateFuturisticServicesShowcase2025() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       {service.icon}
                     </div>
                   </div>
                   <div className={`${viewMode === 'list' ? 'flex-1' : ''}`}>
                     <h3 className='text-xl font-bold text-white mb-2 group-hover:text-purple-400 transition-colors'>
-                  <div className='absolute top - 4 right - 4 bg - gradient - to - r from - purple - 500 to - pink - 500 text - white text - xs font - semibold px - 3 py - 1 rounded - full'>                    Popular                  <div className="absolute top - 4 right - 4 bg - gradient - to - r from - purple - 500 to - pink - 500 text - white text - xs font - semibold px - 3 py - 1 rounded - full">;
                     Popular;
-                  </div>)}
-                {/* Service Header */}
-                <div;
-                  className={`${view_mode === 'list' ? 'flex items - start space - x-6' : 'text - center'}`}
-                >;
-                  <div;
-                    className={`${view_mode === 'list' ? 'flex - shrink - 0' : 'mx - auto mb - 4'}`}
-                  >;
-                    <div;
-                      className={`w - 16 h - 16 rounded - 2xl bg - gradient - to - br ${service.color} flex items - center justify - center text - 3xl`}
-                    >;
-                      {service.icon}
-                    </div>;
                   </div>;
-                  <div className={`${view_mode === 'list' ? 'flex - 1' : ''}`}>;
-                    <h3 className='text - xl font - bold text - white mb - 2 group - hover:text - purple - 400 transition - colors'>;
+                {service.popular && (
+                )}
+                {/* Service Header */}
                       {service.name}
                     </h3>;
                     <p className='text - gray - 300 text - sm mb - 3'>;
                       {service.tagline}
-
-                    </p>;
-
                     {/* Price */}
                     <div className='flex items - center justify - center space - x-2 mb - 4'>;
                       <span className='text - 3xl font - bold text - white'>;
                         {service.price}
-
-                <div className={`${viewMode === 'list' ? 'flex items-start space-x-6' : 'text-center'}`}>
-                  <div className={`${viewMode === 'list' ? 'flex-shrink-0' : 'mx-auto mb-4'}`}>
-                    <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${service.color} flex items-center justify-center text-3xl`}>
-                      {service.icon}
-
                     </div>
                   </div>
                   <div className={`${viewMode === 'list' ? 'flex-1' : ''}`}>
@@ -1416,49 +1510,6 @@ function UltimateFuturisticServicesShowcase2025() {
                   </div>
                 </div>
                 {/* Description */}
-
-                      className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${service && service.color} flex items-center justify-center text-3xl`}>;
-                      {service && service.icon}
-                    </div>;
-                  </div>;
-
-                  <div className={`${viewMode === 'list' ? 'flex-1' : ''}`}>;
-                    <h3 className='text-xl font-bold text-white mb-2 group-hover:text-purple-400 transition-colors'>;
-                      {service && service.name}
-                    </h3>;
-                    <p className='text-gray-300 text-sm mb-3'>;
-                      {service && service.tagline}
-                    </p>;
-
-                    {/* Price */}
-                    <div className='flex items-center justify-center space-x-2 mb-4'>;
-                      <span className='text-3xl font-bold text-white'>;
-                        {service && service.price}
-                      </span>;
-                      <span className='text-gray-400'>{service && service.period}</span>                    </div>                      {service && service.icon}
-                    </div>;
-                  </div>;
-
-                  <div className={`${viewMode === 'list' ? 'flex-1' : ''}`}>;
-                    <h3 className="text-xl font-bold text-white mb-2 group-hover:text-purple-400 transition-colors">;
-                      {service && service.name}
-                    </h3>;
-                    <p className="text-gray-300 text-sm mb-3">{service && service.tagline}</p>;
-
-                    {/* Price */}
-                    <div className="flex items-center justify-center space-x-2 mb-4">;
-                      <span className="text-3xl font-bold text-white">{service && service.price}</span>;
-                      <span className="text-gray-400">{service && service.period}</span>;
-                    </div>;
-                  </div>;
-                </div>;
-
-                {/* Description */}
-                <p className='text-gray-300 mb-6 leading-relaxed'>;
-                  {service && service.description}
-                </p>;
-
-
                 {/* Features */}
                 <div className='mb-6'>;
                   <h4 className='text-white font-semibold mb-3 flex items-center'>;
@@ -1473,6 +1524,7 @@ function UltimateFuturisticServicesShowcase2025() {
                         <CheckCircle className='w-4 h-4 text-green-400 mr-2 flex-shrink-0' />                        {feature}
                       </div>;
                     ))}
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -1541,18 +1593,13 @@ function UltimateFuturisticServicesShowcase2025() {
                     {service.features.length > 4 && (
 <<<<<<< HEAD
                       <div className='text - sm text - purple - 400 mt - 2'>                        +{service.features.length - 4} more features;
-
-                {/* Features */}
-                <div className="mb - 6">;
-                  <h4 className="text - white font - semibold mb - 3 flex items - center">;
-                    <Sparkles className="w - 4 h - 4 mr - 2 text - purple - 400" />;
-                    Key Features;
-                  </h4>;
-                  <div className="grid grid - cols - 1 gap - 2">;
-                    {service.features.slice (0, 4).map ((feature, idx) => (
-                      <div key={idx} className="flex items - center text - sm text - gray - 300">;
-                        <CheckCircle className="w - 4 h - 4 text - green - 400 mr - 2 flex - shrink - 0" />;
 =======
+                        {feature}
+                      </div>))}
+                    {service.features.length > 4 && (
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
+                    {service.features.length > 4 && (
                       <div className='text-sm text-purple-400 mt-2'>                        +{service.features.length - 4} more features
                 {/* Features */}
                 <div className="mb-6">
@@ -1566,6 +1613,7 @@ function UltimateFuturisticServicesShowcase2025() {
                         <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                         {feature}
+<<<<<<< HEAD
                       </div>))}
                     {service.features.length > 4 && (
 
@@ -1604,6 +1652,13 @@ function UltimateFuturisticServicesShowcase2025() {
 
                         +{service.features.length - 4} more features
 
+=======
+                      </div>
+                    ))}
+                    {service.features.length > 4 && (
+                      <div className='text-sm text-purple-400 mt-2'>                      <div className="text-sm text-purple-400 mt-2">
+                        +{service.features.length - 4} more features
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       </div>
                     )}
                   </div>
@@ -1618,6 +1673,7 @@ function UltimateFuturisticServicesShowcase2025() {
                     </span>
 
 
+<<<<<<< HEAD
                         {feature}
                       </div>
                     ))}
@@ -1645,6 +1701,10 @@ function UltimateFuturisticServicesShowcase2025() {
 
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   </div>
                   <div className='text-gray-400'>
                     <span className='block'>Trial</span>
@@ -1669,6 +1729,7 @@ function UltimateFuturisticServicesShowcase2025() {
                 </div>
                 {/* ROI and Market Info */}                  </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
                 <div className="grid grid-cols-2 gap-4 mb-6 text-sm">
                   <div className="text-gray-400">
@@ -1678,6 +1739,9 @@ function UltimateFuturisticServicesShowcase2025() {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+                    )}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   <div className="text-gray-400">
                     <span className="block">Trial</span>
                     <span className="text-white font-medium">{service.trialDays} days</span>
@@ -1694,6 +1758,7 @@ function UltimateFuturisticServicesShowcase2025() {
                     <span className="text-white font-medium">{service.customers}+</span>
                   </div>
                 </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1753,6 +1818,8 @@ function UltimateFuturisticServicesShowcase2025() {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 {/* ROI and Market Info */}
                 <div className='mb-6 p-4 bg-gradient-to-r from-purple-500/10 to-pink-500/10 rounded-lg border border-purple-500/20'>;
                   <div className='text-sm'>;
@@ -1765,6 +1832,7 @@ function UltimateFuturisticServicesShowcase2025() {
                         Market Size:;
                       </span>{' '}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
                 {/* ROI and Market Info */}
@@ -1774,12 +1842,15 @@ function UltimateFuturisticServicesShowcase2025() {
                 {/* ROI and Market Info */}
                 <div className="mb-6 p-4 bg-gradient-to-r from-purple-500/10 to-pink-500/10 rounded-lg border border-purple-500/20">
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   <div className="text-sm">
                     <div className="text-gray-300 mb-2">
                       <span className="font-semibold text-white">ROI: </span> {service.roi}
                     </div>
                     <div className="text-gray-300">
                       <span className="font-semibold text-white">Market Size: </span> {service.marketSize}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
                     </div>
@@ -1790,6 +1861,8 @@ function UltimateFuturisticServicesShowcase2025() {
                   </div>
                 </div>
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       {service && service.marketSize}                    </div>                <div className="mb-6 p-4 bg-gradient-to-r from-purple-500/10 to-pink-500/10 rounded-lg border border-purple-500/20">;
                   <div className="text-sm">;
                     <div className="text-gray-300 mb-2">;
@@ -1799,6 +1872,7 @@ function UltimateFuturisticServicesShowcase2025() {
                       <span className="font-semibold text-white">Market Size: </span> {service && service.marketSize}
                   </div>;
                 </div>;
+<<<<<<< HEAD
                 {/* Action Buttons */}
 <<<<<<< HEAD
 
@@ -1828,6 +1902,8 @@ function UltimateFuturisticServicesShowcase2025() {
                 <div className="flex flex-col sm:flex-row gap-3">
                   <Link
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     href={service.link}
                     className="flex-1 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold py-3 px-6 rounded-lg text-center hover:from-purple-600 hover:to-pink-600 transition-all duration-300 transform hover:scale-105"
                   >
@@ -1837,6 +1913,7 @@ function UltimateFuturisticServicesShowcase2025() {
                     <Eye className="w-5 h-5" />
                   </button>
                 </div>
+<<<<<<< HEAD
 
                     href={service && service.link}
                     className="flex-1 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold py-3 px-6 rounded-lg text-center hover:from-purple-600 hover:to-pink-600 transition-all duration-300 transform hover:scale-105">;
@@ -1849,6 +1926,8 @@ function UltimateFuturisticServicesShowcase2025() {
 <<<<<<< HEAD
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 {/* Contact Info */}
                 <div className='mt-6 pt-6 border-t border-white/10'>;
                   <div className='text-center text-sm text-gray-400'>;
@@ -1877,6 +1956,7 @@ function UltimateFuturisticServicesShowcase2025() {
                   </div>;
                 </div>;
               </motion && motion.div>;
+<<<<<<< HEAD
 
             ))}
 
@@ -1924,6 +2004,8 @@ function UltimateFuturisticServicesShowcase2025() {
                         {contactInfo.email}
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       </a>
                     </div>
                   </div>
@@ -1931,6 +2013,7 @@ function UltimateFuturisticServicesShowcase2025() {
               </motion.div>
             ))}
           </motion.div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1941,25 +2024,19 @@ function UltimateFuturisticServicesShowcase2025() {
 
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           {/* No Results */}
-
-          {sortedServices.length === 0 && (
-            <div className="text-center py-16">
-              <div className="text-6xl mb-4">🔍</div>
-              <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>
-              <p className="text-gray-400 mb-6">Try adjusting your search criteria or category filter</p>
-              <button
-                onClick={() => {
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                   setSearchTerm('');
-
-                  setSelectedCategory('all');
-
                 }}
-
-
+                className="bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold py-3 px-6 rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-300";
+              >;
+                Clear Filters;
+              </button>;
+            </div>;
           )}
+<<<<<<< HEAD
 =======
 
 
@@ -1979,6 +2056,20 @@ function UltimateFuturisticServicesShowcase2025() {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+      {/* CTA Section */}
+      <section className='py-20 bg-gradient-to-r from-purple-900/20 via-black to-pink-900/20'>
+        <div className='max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8'>          <motion.div      <section className="py-20 bg-gradient-to-r from-purple-900/20 via-black to-pink-900/20">
+        <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+          <motion.div
+
+
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {/* CTA Section */}
       <section className='py-20 bg-gradient-to-r from-purple-900/20 via-black to-pink-900/20'>;
         <div className='max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8'>          <motion && motion.div      <section className="py-20 bg-gradient-to-r from-purple-900/20 via-black to-pink-900/20">;
@@ -2004,6 +2095,7 @@ function UltimateFuturisticServicesShowcase2025() {
               </Link>;
               <Link
                 href='/pricing'
+<<<<<<< HEAD
 
 =======
 
@@ -2070,6 +2162,8 @@ function UltimateFuturisticServicesShowcase2025() {
                 href='/pricing'
                 className='border border-white/20 text-white font-semibold py-4 px-8 rounded-lg text-lg hover:border-purple-500/50 transition-colors'              >              Ready to Experience the Future?
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             </h2>
             <p className="text-xl text-gray-300 mb-8">
               Transform your business with our revolutionary futuristic services.
@@ -2077,10 +2171,13 @@ function UltimateFuturisticServicesShowcase2025() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 className='border border-white/20 text-white font-semibold py-4 px-8 rounded-lg text-lg hover:border-purple-500/50 transition-colors'>              Ready to Experience the Future?;
             </h2>;
             <p className="text-xl text-gray-300 mb-8">;
@@ -2089,12 +2186,17 @@ function UltimateFuturisticServicesShowcase2025() {
             </p>;
             <div className="flex flex-col sm:flex-row gap-4 justify-center">;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
               <Link
                 href="/contact"
 
 
+=======
+  );
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
@@ -2306,6 +2408,7 @@ function UltimateFuturisticServicesShowcase2025() {
       </section>;
     </Layout>);
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
@@ -2340,3 +2443,5 @@ function UltimateFuturisticServicesShowcase2025() {
   );
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -23,6 +23,7 @@ class ErrorBoundary extends React.Component {
 }
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 export default function LeadershipPage() {
@@ -38,6 +39,12 @@ import Head from 'next/head';
 
 export default function LeadershipPage() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+export default function LeadershipPage() {
+
+export default function LeadershipPage() {
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <div className='min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8'>;
       <Head>;
@@ -98,6 +105,7 @@ function LeadershipPage() {
             </p>;
           </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
           <div className='p - 6 rounded - 2xl bg - black / 40 border border - cyan - 500 / 20'>;
             <h2 className='text - white text - xl font - semibold mb - 2'>Advisors</h2>;
@@ -108,10 +116,13 @@ function LeadershipPage() {
             <h2 className='text - white text - xl font - semibold mb - 2'>Advisors</h2>;
             <p className='text - slate - 300'>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               Advisors from cloud, security, data, and venture ecosystems.;
             </p>;
           </div>;
         </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -201,6 +212,8 @@ export default function LeadershipPage() {
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     </div>);	return (
   <div className="min - h-screen pt - 24 pb - 20 px - 4 sm:px - 6 lg:px - 8">;
   <Head>;
@@ -226,6 +239,7 @@ export default function LeadershipPage() {
   </div>),
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 =======
@@ -245,3 +259,5 @@ export default function LeadershipPage() {
 	),
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

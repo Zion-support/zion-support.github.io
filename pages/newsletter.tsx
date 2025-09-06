@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -45,16 +46,21 @@ import {
 =======
 import {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Layout from './components/Layout';
 import { motion } from 'framer-motion';
 import { 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 origin/automation-improvements-final
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   ArrowRight,
   Users,
   Calendar,
@@ -70,6 +76,9 @@ origin/automation-improvements-final
   TrendingUp,
   Award,
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 import {;
   ArrowRight,;
@@ -89,6 +98,7 @@ import {;
   Clock,;
 
 } from "lucide-react";
+<<<<<<< HEAD
 =======
   Clock
 } from 'lucide-react';
@@ -111,6 +121,11 @@ import {;
 } from 'lucide-react';
 origin/automation-improvements-final
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  Clock
+} from 'lucide-react';
+origin/automation-improvements-final
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   ArrowRight
   Users
@@ -129,10 +144,13 @@ origin/automation-improvements-final
   Clock
 } from "lucide-react";
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 const benefits = [
   {
     title: "Exclusive Content"
@@ -141,13 +159,17 @@ const benefits = [
     icon: FileText
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 } from './lucide-react';
 ;
 const benefits = [;
   {
+<<<<<<< HEAD
     title: "Exclusive Content",
     description:;
       "Get access to exclusive white papers, case studies, and industry insights.",
@@ -173,6 +195,8 @@ const benefits = [;
     title: "Webinar Invitations",
     title: "Webinar Invitations"
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     description:
       "Receive invitations to our expert-led webinars and virtual events."
     icon: Video
@@ -186,6 +210,7 @@ const benefits = [;
   {
     title: "Industry Insights"
     description:
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     description:;
@@ -204,6 +229,8 @@ const benefits = [;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       "Stay updated with the latest trends and developments in technology.",
     icon: TrendingUp,
   },
@@ -222,6 +249,7 @@ const benefits = [;
     description: 'Stay updated with the latest trends and developments in technology.',
     icon: TrendingUp
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/automation-improvements-final
 =======
@@ -272,6 +300,8 @@ const testimonials = [;
     name: "Sarah Johnson"
     role: "CTO, TechCorp"
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     content:
       "The newsletter has been invaluable for staying ahead of industry trends. The insights are always relevant and actionable."
     rating: 5
@@ -315,13 +345,17 @@ export default function NewsletterPage() {
     rating: 5
   }
 ];
+<<<<<<< HEAD
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 export default function NewsletterPage() {;
   const [email, setEmail] = useState("");
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 export default function NewsletterPage() {
@@ -330,10 +364,13 @@ origin/automation-improvements-final
 export default function NewsletterPage() {;
   const [email, setEmail] = useState("");
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const [isSubscribed, setIsSubscribed] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const handleSubmit = async (e) => {
     e.preventDefault();
+<<<<<<< HEAD
 =======
 const benefits = [;
   {;
@@ -428,10 +465,13 @@ origin/automation-improvements-final
     // Simulate API call
     await new Promise((resolve) => setTimeout(resolve, 2000));
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     setIsSubscribed(true);
     setIsLoading(false);
   }
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
 
         <meta name="description" content="Subscribe to our newsletter for exclusive content, industry insights, and early access to new features." />
@@ -477,6 +517,8 @@ origin/automation-improvements-final
       <Head>;
         <title>Newsletter - Zion Tech Group</title>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         {/* Hero Section */}
         <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">;
           <div className="container mx-auto px-4">;
@@ -484,6 +526,7 @@ origin/automation-improvements-final
               className="text-center max-w-4xl mx-auto"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
               transition={{ duration: 0.8 }}
@@ -499,11 +542,14 @@ origin/automation-improvements-final
                 features delivered directly to your inbox.
               </p>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
                 Get exclusive insights, industry trends, and early access to new features delivered directly to your inbox.
               </p>
               
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
@@ -523,6 +569,9 @@ origin/automation-improvements-final
               
 origin/automation-improvements-final
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               {!isSubscribed ? (
                 <form onSubmit={handleSubmit} className="max-w-md mx-auto">
                   <div className="flex flex-col sm:flex-row gap-4">
@@ -577,6 +626,7 @@ origin/automation-improvements-final
                 </motion && motion.div>;
               )}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
             </motion && motion.div>;
           </div>;
@@ -588,6 +638,8 @@ origin/automation-improvements-final
           </div>;
         </section>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         {/* Benefits Section */}
         <section className="py-16 bg-white">;
           <div className="container mx-auto px-4">;
@@ -595,6 +647,7 @@ origin/automation-improvements-final
               className="text-center mb-12"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
                 Join thousands of professionals who rely on our newsletter for the latest insights and updates.
@@ -621,15 +674,20 @@ origin/automation-improvements-final
                 Join thousands of professionals who rely on our newsletter for the latest insights and updates.
 origin/automation-improvements-final
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               </p>
             </motion.div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {benefits.map((benefit, index) => (
                 <motion.div
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     content:;
       "The newsletter has been invaluable for staying ahead of industry trends. The insights are always relevant and actionable.",
     rating: 5,
@@ -756,9 +814,12 @@ function NewsletterPage() {
               {benefits.map ((benefit, index) => (
                 <motion.div;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   key={benefit.title}
                   className="text - center";
                   initial={{ opacity: 0, coordinate_y: 30 }}
@@ -770,6 +831,7 @@ function NewsletterPage() {
                   </div>;
                   <h3 className="text - xl font - semibold text - gray - 900 mb - 2">;
                     {benefit.title}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
                   <p className="text-gray-600">
@@ -804,6 +866,8 @@ function NewsletterPage() {
                   </p>
 origin/automation-improvements-final
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 </motion.div>
               ))}
             </div>
@@ -841,7 +905,10 @@ origin/automation-improvements-final
           </div>;
         </section>;
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         {/* Stats Section */}
         <section className="py-16 bg-gray-50">;
           <div className="container mx-auto px-4">;
@@ -850,6 +917,7 @@ origin/automation-improvements-final
                 className="text-center"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
                 <div className="text-4xl font-bold text-blue-600 mb-2">10K+</div>
@@ -872,6 +940,8 @@ origin/automation-improvements-final
                 <div className="text-4xl font-bold text-blue-600 mb-2">10K+</div>
 origin/automation-improvements-final
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <div className="text-gray-600">Subscribers</div>
               </motion.div>
               <motion.div
@@ -896,6 +966,7 @@ origin/automation-improvements-final
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
                 <div className="text-4xl font-bold text-blue-600 mb-2">Weekly</div>
 
@@ -917,6 +988,8 @@ origin/automation-improvements-final
                 <div className="text-4xl font-bold text-blue-600 mb-2">Weekly</div>
 origin/automation-improvements-final
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <div className="text-gray-600">Delivery</div>
               </motion.div>
               <motion.div
@@ -950,7 +1023,10 @@ origin/automation-improvements-final
           </div>;
         </section>;
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         {/* Testimonials Section */}
         <section className="py-16 bg-white">;
           <div className="container mx-auto px-4">;
@@ -958,6 +1034,7 @@ origin/automation-improvements-final
               className="text-center mb-12"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
                 Don't just take our word for it. Here's what our community has to say.
@@ -984,6 +1061,8 @@ origin/automation-improvements-final
                 Don't just take our word for it. Here's what our community has to say.
 origin/automation-improvements-final
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               </p>
             </motion.div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -1070,6 +1149,7 @@ origin/automation-improvements-final
                   whileInView={{ opacity: 1, coordinate_y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
                       <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
 
@@ -1077,6 +1157,8 @@ origin/automation-improvements-final
 =======
                       <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               transition={{ duration: 0 && 0.8 }}>;
               <h2 className="text-3xl font-bold text-gray-900 mb-4">;
                 What Our Subscribers Say;
@@ -1094,6 +1176,7 @@ origin/automation-improvements-final
                   className="bg-gray-50 rounded-lg p-6"
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
                   transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}>;
                   <div className="flex items-center mb-4">;
                     {[...Array(testimonial && testimonial.rating)].map((_, i) => (;
@@ -1121,6 +1204,8 @@ origin/automation-improvements-final
                       <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
 origin/automation-improvements-final
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     ))}
                   </div>;
                   <p className="text-gray-600 mb-4 italic">;
@@ -1137,6 +1222,7 @@ origin/automation-improvements-final
                 </motion && motion.div>;
               ))}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
             </div>;
           </div>;
@@ -1148,6 +1234,8 @@ origin/automation-improvements-final
           </div>;
         </section>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-green-600 to-teal-600 text-white">;
           <div className="container mx-auto px-4">;
@@ -1155,6 +1243,7 @@ origin/automation-improvements-final
               className="text-center max-w-4xl mx-auto"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
               transition={{ duration: 0.8 }}
@@ -1170,11 +1259,14 @@ origin/automation-improvements-final
                 your inbox every week.
               </p>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
                 Subscribe now and start receiving valuable insights delivered to your inbox every week.
               </p>
               
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
@@ -1194,6 +1286,9 @@ origin/automation-improvements-final
               
 origin/automation-improvements-final
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               {!isSubscribed && (
                 <form onSubmit={handleSubmit} className="max-w-md mx-auto">
                   <div className="flex flex-col sm:flex-row gap-4">
@@ -1238,6 +1333,7 @@ origin/automation-improvements-final
                   </div>;
                 </form>;
               )}
+<<<<<<< HEAD
 
 
               <div className="mt-8 text-green-100 text-sm">;
@@ -1341,3 +1437,5 @@ origin/automation-improvements-final
 origin/automation-improvements-final
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

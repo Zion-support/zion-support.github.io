@@ -1,9 +1,13 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ;
 
 
 
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
@@ -20,6 +24,9 @@ import { motion } from 'framer-motion';
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface NavigationItem {
   name: string, href: string
   submenu?: NavigationItem[];
@@ -31,12 +38,16 @@ const InteractiveNavigation: React.FC<InteractiveNavigationProps> = ({
   items
   className = ''
 }) => {
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 interface NavigationItem {;
   name: string, href: string,;
   submenu?: NavigationItem[];
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -50,6 +61,8 @@ interface NavigationItem {;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: 10 }}
@@ -76,13 +89,12 @@ interface NavigationItem {;
     </nav>;
   );
 
-
-
 };
 
 export default InteractiveNavigation;};
 ursor/automate-test-fix-improve-and-merge-code-99d1,";
 
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -97,6 +109,11 @@ export default InteractiveNavigation;};
 ursor/automate-test-fix-improve-and-merge-code-99d1,";
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+}
+export default InteractiveNavigation;}
+ursor/automate-test-fix-improve-and-merge-code-99d1,";
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 const InteractiveNavigation: React.FC: = () => {";
     <nav className="bg-white shadow-lg">";";
       <div: className="container mx-auto px-4">";";
@@ -105,12 +122,15 @@ const InteractiveNavigation: React.FC: = () => {";
           <div: className="hidden md:flex: space-x-8">",";
             <Link: href="/" className="text-gray-600 hover:text-gray-900: transition-colors">Home</Link>",";
 <<<<<<< HEAD
+<<<<<<< HEAD
 
             <Link: href="/services" className="text-gray-600 hover:text-gray-900: transition-colors">Services</Link>",",;
 
             <Link: href = "/about" className="text-gray-600 hover:text-gray-900: transition-colors">About</Link>",";
             <Link: href="/contact" className="text-gray-600 hover:text-gray-900: transition-colors">Contact</Link>",';
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface InteractiveNavigationProps {
   items: NavigationItem[], class_name?: string,
 }
@@ -190,6 +210,7 @@ const InteractiveNavigation: React.FC: = () => {";
             <Link: href="/contact" className="text - gray - 600 hover:text - gray - 900: transition - colors">Contact</Link>", ';
 
 export default Component}
+<<<<<<< HEAD
 =======
 =======
             <Link: href="/services" className="text-gray-600 hover:text-gray-900: transition-colors">Services</Link>",",;
@@ -209,3 +230,8 @@ export default Component}
 export default Component}
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+;
+
+export default Component}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 class ErrorBoundary extends React.Component {
@@ -123,6 +124,8 @@ import {motion} from 'framer-motion';
 import {CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, DollarSign, Shield, Mail, MapPin, Rocket, Brain, Sparkles, Atom, Dna, Users, Globe, Cpu, Target, Microscope, Lock, Cloud, BarChart3, Settings, Eye, Award, Clock, Heart, Lightbulb, Target, as, TargetIcon, Zap, as, ZapIcon, Shield, as, ShieldIcon, Globe, as, GlobeIcon, Search, Code, TestTube, Server, Database, Network, Shield, as, SecurityIcon, Wifi, Building, Cpu, as, CpuIcon, TrendingUp, as, ChartIcon, Megaphone, HeadphonesIcon, Users, as, TeamIcon,} from 'lucide-react';
 import Layout from '../components/layout/Layout';
 import { innovativeBusinessSolutions2025 } from '../data/2025-innovative-business-solutions';
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from 'react',
 import Head from 'next/head',
 import Link from 'next/link';
@@ -135,6 +138,7 @@ import { CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, DollarSign;
   Search, Code, TestTube, Server, Database, Network, Shield as SecurityIcon;
   Wifi, Building, Cpu as CpuIcon, TrendingUp as ChartIcon, Megaphone, HeadphonesIcon, Users as TeamIcon
  } from 'lucide-react';
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import Layout from '../components/layout/Layout';
 import { innovativeBusinessSolutions2025 } from '../data/2025-innovative-business-solutions';
@@ -149,88 +153,71 @@ const contactInfo = {
   email: 'kleber@ziontechgroup.com'
   address: '364 E Main St STE 1008 Middletown DE 19709'
   website: 'https://ziontechgroup.com'
+=======
+import Layout from '../components/layout/Layout';
+import { innovativeBusinessSolutions2025 } from '../data/2025-innovative-business-solutions';
+
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
-const heroStats = [
-  {
-    label: 'Business Solutions'
-    value: '100+'
-    icon: <Target className='w-5 h-5' />
-  }
-  {
-    label: 'Happy Businesses'
-    value: '250+'
-    icon: <Users className='w-5 h-5' />
-  }
-  {
-    label: 'Success Rate'
-    value: '99.5%'
-    icon: <Award className='w-5 h-5' />
-  }
-  {
-    label: 'ROI Average'
-    value: '400%'
-    icon: <TrendingUp className='w-5 h-5' />
-  },];
+import React from 'react';
+  Wifi, Building, Cpu as CpuIcon, TrendingUp as ChartIcon, Megaphone, HeadphonesIcon, Users as TeamIcon
+} from 'lucide-react',
+import Layout from '../components/layout/Layout',
+import { innovativeBusinessSolutions2025 } from '../data/2025-innovative-business-solutions',
+const contactInfo = {
 const serviceCategories = [
   {
-    title: 'Business Intelligence & Analytics'
-    description:
-      'AI-powered business intelligence and data analytics solutions'
-    services: innovativeBusinessSolutions2025.filter(
-      s => s.category === 'Business Intelligence & Analytics'
-    )
-    icon: ChartIcon
-    color: 'from-blue-500 to-cyan-600'
-    features: ['Data Analysis', 'Predictive Analytics', 'Real-time Insights']
-  }
+    title: 'Business Intelligence & Analytics',
+    description: 'AI-powered business intelligence and data analytics solutions',
+    services: innovativeBusinessSolutions2025.filter(s => s.category === 'Business Intelligence & Analytics'),
+    icon: ChartIcon,
+    color: 'from-blue-500 to-cyan-600',
+    features: ['Data AnalysisPredictive AnalyticsReal-time Insights']
+  };
   {
-    title: 'Marketing Automation'
-    description: 'Intelligent marketing automation with AI-driven optimization'
-    services: innovativeBusinessSolutions2025.filter(
-      s => s.category === 'Marketing Automation'
-    )
-    icon: Megaphone
-    color: 'from-purple-500 to-pink-600'
-    features: [
-      'Campaign Optimization'
-      'Content Personalization'
-      'ROI Tracking'
-    ]
-  }
+    title: 'Marketing Automation',
+    description: 'Intelligent marketing automation with AI-driven optimization',
+    services: innovativeBusinessSolutions2025.filter(s => s.category === 'Marketing Automation'),
+    icon: Megaphone,
+    color: 'from-purple-500 to-pink-600',
+    features: ['Campaign OptimizationContent PersonalizationROI Tracking']
+  };
   {
-    title: 'Sales Intelligence'
-    description: 'AI-powered sales automation and intelligence solutions'
-    services: innovativeBusinessSolutions2025.filter(
-      s => s.category === 'Sales Intelligence'
-    )
-    icon: TrendingUp
-    color: 'from-green-500 to-emerald-600'
-    features: ['Lead Scoring', 'Sales Forecasting', 'Pipeline Optimization']
-  }
+    title: 'Sales Intelligence',
+    description: 'AI-powered sales automation and intelligence solutions',
+    services: innovativeBusinessSolutions2025.filter(s => s.category === 'Sales Intelligence'),
+    icon: TrendingUp,
+    color: 'from-green-500 to-emerald-600',
+    features: ['Lead ScoringSales ForecastingPipeline Optimization']
+  };
   {
-    title: 'Customer Service'
-    description: 'Intelligent customer service with AI automation'
-    services: innovativeBusinessSolutions2025.filter(
-      s => s.category === 'Customer Service'
-    )
-    icon: HeadphonesIcon
-    color: 'from-orange-500 to-red-600'
-    features: ['AI Chatbots', 'Ticket Automation', 'Sentiment Analysis']
-  }
+    title: 'Customer Service',
+    description: 'Intelligent customer service with AI automation',
+    services: innovativeBusinessSolutions2025.filter(s => s.category === 'Customer Service'),
+    icon: HeadphonesIcon,
+    color: 'from-orange-500 to-red-600',
+    features: ['AI ChatbotsTicket AutomationSentiment Analysis']
+  };
   {
-    title: 'HR Management'
-    description: 'AI-powered HR automation and management solutions'
-    services: innovativeBusinessSolutions2025.filter(
-      s => s.category === 'HR Management'
-    )
-    icon: TeamIcon
-    color: 'from-teal-500 to-cyan-600'
-    features: [
-      'Recruitment Automation'
-      'Performance Analytics'
-      'Employee Engagement'
-    ]
-  },];
+    title: 'HR Management',
+    description: 'AI-powered HR automation and management solutions',
+    services: innovativeBusinessSolutions2025.filter(s => s.category === 'HR Management'),
+    icon: TeamIcon,
+    color: 'from-teal-500 to-cyan-600',
+
 const heroFeatures = [
   {
     title: 'AI-Powered Intelligence'
@@ -240,6 +227,7 @@ const heroFeatures = [
     gradient: 'bg-gradient-to-r from-cyan-500 to-blue-600'
   }
   {
+<<<<<<< HEAD
     title: 'Automated Workflows'
     description:
       'Intelligent automation that reduces manual tasks and improves operational efficiency.'
@@ -376,6 +364,8 @@ const service_categories = [;
 const serviceCategories = [
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   {
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     title: 'Business Intelligence & Analytics',
     description:;
       'AI - powered business intelligence and data analytics solutions',
@@ -392,6 +382,9 @@ const serviceCategories = [
       string => s.category === 'Marketing Automation'),
     icon: Megaphone,
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     color: 'from - purple - 500 to - pink - 600',
     features: [;
       'Campaign Optimization',
@@ -407,6 +400,7 @@ const serviceCategories = [
     icon: TrendingUp,
     color: 'from - green - 500 to - emerald - 600',
     features: ['Lead Scoring', 'Sales Forecasting', 'Pipeline Optimization'],
+<<<<<<< HEAD
 =======
     color: 'from-purple-500 to-pink-600',
     features: ['Campaign OptimizationContent PersonalizationROI Tracking']
@@ -419,18 +413,26 @@ const serviceCategories = [
     color: 'from-green-500 to-emerald-600',
     features: ['Lead ScoringSales ForecastingPipeline Optimization']
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   },
   {
     title: 'Customer Service',
     description: 'Intelligent customer service with AI automation',
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     services: innovativeBusinessSolutions2025.filter (
       string => s.category === 'Customer Service'),
     icon: HeadphonesIcon,
     color: 'from - orange - 500 to - red - 600',
     features: ['AI Chatbots', 'Ticket Automation', 'Sentiment Analysis'],
+<<<<<<< HEAD
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   },
   {
     title: 'HR Management',
@@ -439,10 +441,14 @@ const serviceCategories = [
       string => s.category === 'HR Management'),
     icon: TeamIcon,
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
     content:;
       "Zion Tech Group's business intelligence platform has transformed our decision - making process. We now have real - time insights that have increased our revenue by 300%.",
 
+<<<<<<< HEAD
 =======
     color: 'from - teal - 500 to - cyan - 600',
     features: [;
@@ -502,6 +508,8 @@ const testimonials = [
     content:
       "Zion Tech Group's business intelligence platform has transformed our decision-making process. We now have real-time insights that have increased our revenue by 300%.",
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     rating: 5,
     avatar: '👨‍💼',
   },  {
@@ -509,14 +517,20 @@ const testimonials = [
     role: 'Marketing Director, DigitalFlow Agency',
     company: 'DigitalFlow Agency',
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
     content:;
       "The AI marketing automation platform has revolutionized our campaigns. We've seen conversion rates increase by 150% while reducing costs by 40%.",
 
+<<<<<<< HEAD
 =======
     content:
       "The AI marketing automation platform has revolutionized our campaigns. We've seen conversion rates increase by 150% while reducing costs by 40%.",
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     rating: 5,
     avatar: '👩‍💼',
   },  {
@@ -525,6 +539,9 @@ const testimonials = [
     company: 'TechSales Pro',
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     color: 'from-teal-500 to-cyan-600',
 
 
@@ -538,6 +555,7 @@ export default function InnovativeBusinessSolutions() {
 
       {/* Hero Section */}
 
+<<<<<<< HEAD
 =======
 
 =======
@@ -556,6 +574,8 @@ export default function InnovativeBusinessSolutions() {
     avatar: '👨‍💻',
   },];
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     features: ['Recruitment AutomationPerformance AnalyticsEmployee Engagement']
 import React from 'react';
 import Head from 'next/head';
@@ -708,6 +728,7 @@ export default function InnovativeBusinessSolutions() {
         <link rel="canonical" href="https://ziontechgroup.com/innovative-business-solutions" />
       </Head>
       {/* Hero Section */}
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       <section className="relative py-20 lg:py-32 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-teal-900/20 via-green-900/20 to-emerald-900/20"></div>
@@ -767,12 +788,15 @@ export default function InnovativeBusinessSolutions() {
 
 =======
 =======
+=======
+      <section className='relative py-20 lg:py-32 overflow-hidden'>
+        <div className='absolute inset-0 bg-gradient-to-br from-teal-900/20 via-green-900/20 to-emerald-900/20'></div>
+        <div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>          <motion.div
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            <p className="text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Transform your business operations with AI-powered intelligence, automation, and analytics that drive growth and efficiency
-
             transition={{ duration: 0.8 }}
+
       {/* Hero Section */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -798,6 +822,7 @@ export default function InnovativeBusinessSolutions() {
   }
 }
           >
+
             <h1 className="text-4xl lg:text-6xl font-bold bg-gradient-to-r from-teal-400 via-green-400 to-emerald-400 bg-clip-text text-transparent mb-6">
               Innovative Business Solutions
             </h1>
@@ -810,7 +835,22 @@ export default function InnovativeBusinessSolutions() {
             <div className="flex flex-wrap justify-center gap-4 mb-12">
               {heroStats.map((stat, index) => (
                 <motion.div
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+            transition={{ duration: 0 && 0.8 }}>;
+            <h1 className='text-4xl lg:text-6xl font-bold bg-gradient-to-r from-teal-400 via-green-400 to-emerald-400 bg-clip-text text-transparent mb-6'>;
+              Innovative Business Solutions;
+            </h1>;
+            <p className='text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto'>;
+              Transform your business operations with AI-powered intelligence,;
+              automation, and analytics that drive growth and efficiency;
+            </p>;
+            <div className='flex flex-wrap justify-center gap-4 mb-12'>              {heroStats && heroStats.map((stat, index) => (;
+                <motion&& motion.div
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     content:;
       'Their sales intelligence platform has increased our sales productivity by 200%. The AI - powered lead scoring and forecasting are game - changers.',
     rating: 5,
@@ -880,6 +920,7 @@ function InnovativeBusinessSolutions() {
                   <span className="text-teal-400 font-semibold">{stat.value}</span>
                   <span className="text-gray-300 text-sm">{stat.label}</span>
                 </motion.div>
+<<<<<<< HEAD
               ))}
 =======
                   key={index}
@@ -923,6 +964,8 @@ function InnovativeBusinessSolutions() {
   }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="#services" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-teal-500 to-green-600 text-white font-semibold rounded-lg hover:from-teal-600 hover:to-green-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30">
@@ -933,14 +976,18 @@ function InnovativeBusinessSolutions() {
                 <Phone className="mr-2 w-5 h-5" />
                 Get Started
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               </Link>
             </div>
           </motion.div>
         </div>
       </section>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -980,10 +1027,13 @@ href={`tel:${contactInfo && contactInfo.mobile}`}
       <section className='py-20 bg-gradient-to-b from-black to-gray-900'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion.div
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -1019,6 +1069,8 @@ href={`tel:${contactInfo && contactInfo.mobile}`}
 }
             className="text-center mb-16"
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
               Why Choose Our Business Solutions?
@@ -1027,6 +1079,7 @@ href={`tel:${contactInfo && contactInfo.mobile}`}
               Our business solutions combine cutting-edge AI technology with proven business processes to deliver unprecedented results
             </p>
           </motion.div>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -1052,11 +1105,14 @@ href={`tel:${contactInfo && contactInfo.mobile}`}
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -1092,6 +1148,8 @@ href={`tel:${contactInfo && contactInfo.mobile}`}
 }
                 className="relative group"
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               >
                 <div className={`${feature.gradient} p-1 rounded-xl`}>
                   <div className="bg-gray-900 rounded-xl p-6 h-full">
@@ -1106,11 +1164,14 @@ href={`tel:${contactInfo && contactInfo.mobile}`}
                 </div>
               </motion.div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1119,24 +1180,30 @@ href={`tel:${contactInfo && contactInfo.mobile}`}
 
           </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
         </div>;
       </section>;
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {/* Services Section */}
       <section id='services' className='py-20 bg-black'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion&& motion.div
 
-=======
 
+<<<<<<< HEAD
 =======
             ))}
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {/* Services Section */}
       <section id="services" className="py-20 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1147,10 +1214,14 @@ href={`tel:${contactInfo && contactInfo.mobile}`}
       <section id='services' className='py-20 bg-black'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion.div
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -1194,6 +1265,10 @@ href={`tel:${contactInfo && contactInfo.mobile}`}
 }
             className="text-center mb-16"
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
               Business Solution Categories
@@ -1202,6 +1277,7 @@ href={`tel:${contactInfo && contactInfo.mobile}`}
               Comprehensive business solutions covering every aspect of modern business operations
             </p>
           </motion.div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1233,11 +1309,14 @@ href={`tel:${contactInfo && contactInfo.mobile}`}
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 key={categoryIndex}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.8, delay: categoryIndex * 0 && 0.2 }}
                 viewport={{ once: true }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -1310,6 +1389,8 @@ href={`tel:${contactInfo && contactInfo.mobile}`}
           <div className="space-y-16">
             {serviceCategories.map((category, categoryIndex) => (
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <motion.div
                 key={categoryIndex  } catch (error) {
     console.error("Error:", error);
@@ -1338,11 +1419,16 @@ href={`tel:${contactInfo && contactInfo.mobile}`}
 }
                 className="relative"
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               >
                 <div className="text-center mb-12">
                   <div className={`inline-flex items-center justify-center w-20 h-20 ${category.color} rounded-2xl mb-6`}>
@@ -1352,9 +1438,12 @@ href={`tel:${contactInfo && contactInfo.mobile}`}
                   <p className="text-xl text-gray-300 max-w-2xl mx-auto">{category.description}</p>
                 </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
                 <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
                   {category.services.map((service, serviceIndex) => (
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     <motion.div
 
                       key={service.id  } catch (error) {
@@ -1385,6 +1474,7 @@ href={`tel:${contactInfo && contactInfo.mobile}`}
                       className="relative group"
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     >
                       <div className={`${service.color} p-1 rounded-xl`}>
@@ -1643,6 +1733,8 @@ transition={{ duration: 0.5, delay: service_index * 0.1 }}
   }
 }
                       className="relative group"
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     >
                       <div className={`${service.color} p-1 rounded-xl`}>
                         <div className="bg-gray-900 rounded-xl p-6 h-full">
@@ -1664,21 +1756,6 @@ transition={{ duration: 0.5, delay: service_index * 0.1 }}
                             <span className="text-2xl font-bold text-white">{service.price}</span>
                             <span className="text-gray-400">{service.period}</span>
                           </div>
-                          <p className='text-gray-300 text-sm mb-4'>
-                            {service.description}
-                          </p>
-                          <div className='space-y-2 mb-6'>
-                            {service.features
-                              .slice(0, 3)
-                              .map((feature, featureIndex) => (
-                                <div
-                                  key={featureIndex}
-                                  className='flex items-center text-sm text-gray-300'
-                                >
-                                  <CheckCircle className='w-4 h-4 text-green-400 mr-2 flex-shrink-0' />
-                                  {feature}
-                                </div>
-                              ))}
                           <p className="text-gray-300 text-sm mb-4">{service.description}</p>
                           <div className="space-y-2 mb-6">
                             {service.features.slice(0, 3).map((feature, featureIndex) => (
@@ -1698,22 +1775,12 @@ transition={{ duration: 0.5, delay: service_index * 0.1 }}
                           </div>
                           <div className="flex items-center justify-between">
                             <Link
-                              href={service.link  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
                               className="inline-flex items-center text-teal-400 hover:text-teal-300 transition-colors duration-300"
                             >
                               Learn More
                               <ArrowRight className="ml-1 w-4 h-4" />
                             </Link>
                             <Link
-                              href={`tel:${contactInfo.mobile}`  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
                               className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-teal-500 to-green-600 text-white text-sm font-semibold rounded-lg hover:from-teal-600 hover:to-green-700 transition-all duration-300"
                             >
                               Get Started
@@ -1722,14 +1789,8 @@ transition={{ duration: 0.5, delay: service_index * 0.1 }}
                         </div>
                       </div>
                     </motion.div>
-                  ))}
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
       {/* Testimonials Section */}
+<<<<<<< HEAD
       <section className='py-20 bg-gradient-to-b from-gray-900 to-black'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -1757,6 +1818,13 @@ transition={{ duration: 0.5, delay: service_index * 0.1 }}
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+      <section className='py-20 bg-gradient-to-b from-gray-900 to-black'>;
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion&& motion.div
+
+
+      {/* Testimonials Section */}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <section className="py-20 bg-gradient-to-b from-gray-900 to-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
@@ -1781,6 +1849,16 @@ transition={{ duration: 0.5, delay: service_index * 0.1 }}
   }
 }
             className="text-center mb-16"
+<<<<<<< HEAD
+=======
+
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0 && 0.8 }}
+            viewport={{ once: true }}
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
               What Our Clients Say
@@ -1794,8 +1872,9 @@ transition={{ duration: 0.5, delay: service_index * 0.1 }}
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
+<<<<<<< HEAD
                 className='bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-teal-500/20'
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
@@ -1826,6 +1905,10 @@ transition={{ duration: 0.5, delay: service_index * 0.1 }}
   }
 }
                 className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-teal-500/20"
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               >
                 <div className="flex items-center mb-4">
                   <span className="text-3xl mr-3">{testimonial.avatar}</span>
@@ -1839,6 +1922,7 @@ transition={{ duration: 0.5, delay: service_index * 0.1 }}
                 <div className="flex items-center">
                   <div className="flex text-yellow-400">
                     {[...Array(testimonial.rating)].map((_, i) => (
+<<<<<<< HEAD
                       <Star key={i} className='w-4 h-4 fill-current' />                    ))}
                   </div>
                 </div>
@@ -1847,11 +1931,16 @@ transition={{ duration: 0.5, delay: service_index * 0.1 }}
           </div>
         </div>
       </section>
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {/* CTA Section */}
-      <section className='py-20 bg-gradient-to-r from-teal-900/20 via-green-900/20 to-emerald-900/20'>
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>          <motion.div
+      <section className='py-20 bg-gradient-to-r from-teal-900/20 via-green-900/20 to-emerald-900/20'>;
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>          <motion&& motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
                       <Star key={i} className="w-4 h-4 fill-current" />
@@ -1900,6 +1989,27 @@ transition={{ duration: 0.5, delay: service_index * 0.1 }}
   }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+            transition={{ duration: 0 && 0.8 }}
+            viewport={{ once: true }}>;
+            <h2 className='text-3xl lg:text-4xl font-bold text-white mb-6'>;
+              Ready to Transform Your Business?;
+            </h2>;
+            <p className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'>;
+              Join hundreds of businesses that have already revolutionized their;
+              operations with our innovative AI-powered solutions;
+            </p>;
+            <div className='flex flex-col sm:flex-row gap-4 justify-center'>;
+              <Link
+                href={`tel:${contactInfo && contactInfo.mobile}`}
+                className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-teal-500 to-green-600 text-white font-semibold rounded-lg hover:from-teal-600 hover:to-green-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30'>;
+                <Phone className='mr-2 w-5 h-5' />                Call Now: {contactInfo && contactInfo.mobile}
+              </Link>;
+              <Link
+
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
               Ready to Transform Your Business?
@@ -1908,6 +2018,7 @@ transition={{ duration: 0.5, delay: service_index * 0.1 }}
               Join hundreds of businesses that have already revolutionized their operations with our innovative AI-powered solutions
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
+<<<<<<< HEAD
               <Link
 <<<<<<< HEAD
                 href={`tel:${contactInfo.mobile}`}
@@ -1957,6 +2068,8 @@ className="inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-lg text-
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               >
                 <Mail className="mr-2 w-5 h-5" />
                 Email Us
@@ -1967,10 +2080,17 @@ className="inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-lg text-
               <p className="text-gray-300">🌐 {contactInfo.website}</p>
             </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           </motion.div>
         </div>
       </section>
+);
+  return (<Layout> <Head> <title>Innovative Business Solutions - Zion Tech Group</title> </Head> {
+  /* Hero Section */
+}<section className="relative py-20 lg:py-32 overflow-hidden" > <div className="absolute inset-0 bg-gradient-to-br from-teal-900/20 via-green-900/20 to-emerald-900/20" ></div> <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center" > <motion.div initial= {
 
                 href={`mailto:${contactInfo && contactInfo.email}`}
                 className='inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-lg text-white font-semibold rounded-lg border border-teal-500/30 hover:bg-white/20 transition-all duration-300'>;
@@ -1991,6 +2111,7 @@ className="inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-lg text-
   /* Hero Section */ ;
 }<section className="relative py-20 lg:py-32 overflow-hidden" > <div className="absolute inset-0 bg-gradient-to-br from-teal-900/20 via-green-900/20 to-emerald-900/20" ></div> <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center" > <motion&& motion.div initial= {
 
+<<<<<<< HEAD
 =======
                 href={`mailto:${contactInfo && contactInfo.email}`}
           </motion.div>
@@ -2003,6 +2124,8 @@ className="inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-lg text-
   /* Hero Section */
 }<section className="relative py-20 lg:py-32 overflow-hidden" > <div className="absolute inset-0 bg-gradient-to-br from-teal-900/20 via-green-900/20 to-emerald-900/20" ></div> <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center" > <motion.div initial= {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   {
   opacity: 0, y: 20
 }animate= {
@@ -2011,10 +2134,13 @@ className="inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-lg text-
 }transition= {
   {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   duration: 0 && 0.8 
 
 }> <h1 className="text-4xl lg:text-6xl font-bold bg-gradient-to-r from-teal-400 via-green-400 to-emerald-400 bg-clip-text text-transparent mb-6" > Innovative Business Solutions </h1> </motion && motion.div>) ) ;
@@ -2027,10 +2153,13 @@ className="inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-lg text-
 }</div> </div> </motion && motion.div>) ) ;
 }</div> </div> </section> <motion&& motion.div initial= {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   {
   opacity: 0, y: 20
 }whileInView= {
@@ -2038,6 +2167,7 @@ className="inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-lg text-
   opacity: 1, y: 0
 }transition= {
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -2047,11 +2177,14 @@ className="inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-lg text-
 
 }viewport= {
   {
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   once: true 
 
 }> <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6" > Ready to Transform Your Business? </h2> <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto" > Join hundreds of businesses that have already revolutionized their operations with our innovative AI-powered solutions </p> <div className="flex flex-col sm:flex-row gap-4 justify-center" > <Link > <Mail className="mr-2 w-5 h-5" /> Email Us </Link> </div> </div> </motion && motion.div> </div> </section> </Layout>) ;
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -2064,6 +2197,8 @@ className="inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-lg text-
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       className='relative group';
                     >;
                       <div className={`${service.color} p - 1 rounded - xl`}>;
@@ -2245,6 +2380,7 @@ className="inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-lg text-
   once: true;
 }> <h2 className="text - 3xl lg:text - 4xl font - bold text - white mb - 6" > Ready to Transform Your Business? </h2> <p className="text - xl text - gray - 300 mb - 8 max - w-3xl mx - auto" > Join hundreds of businesses that have already revolutionized their operations with our innovative AI - powered solutions </p> <div className="flex flex - col sm:flex - row gap - 4 justify - center" > <Link > <Mail className="mr - 2 w - 5 h - 5" /> Email Us </Link> </div> </div> </motion.div> </div> </section> </Layout>);
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
@@ -2264,3 +2400,7 @@ className="inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-lg text-
   }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

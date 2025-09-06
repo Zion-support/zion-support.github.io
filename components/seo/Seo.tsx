@@ -23,6 +23,7 @@ class ErrorBoundary extends React.Component {
 }
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
   return <NextSeo {...props} />;
@@ -38,10 +39,20 @@ export default function Seo(props: SeoProps) {;
 
 
 <<<<<<< HEAD
+=======
+  return <NextSeo {...props} />;
+}
+
+}
+export type SeoProps = NextSeoProps, export default function Seo(props: SeoProps) {
+  return <NextSeo {...props} />;
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { NextSeo } from 'next - seo';
 import { NextSeoProps } from 'next - seo';
 ;
 export type SeoProps = NextSeoProps;
+<<<<<<< HEAD
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 ;
@@ -78,3 +89,6 @@ export default function Seo(props: SeoProps) {;
 
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  return <NextSeo {...props} />;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

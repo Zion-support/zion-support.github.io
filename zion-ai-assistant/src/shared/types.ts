@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -18,10 +19,13 @@ export type ProjectType = "Web Dev" | "AI / ML" | "DevOps" | "Mobile" | "Data En
 export interface MilestoneSuggestionInput {
   scopeOfWork: string,
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   startDateIso: string, // ISO 8601;
   endDateIso: string,   // ISO 8601;
   project_type: ProjectType;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -57,10 +61,13 @@ export interface SuggestedMilestoneItem {
   title: string,
   description: string,
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   suggestedDueDateIso: string;
   estimatedEffortHours: number, // estimated hours;
   tags?: string[], // e.g., ["AI Suggested"];
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 export interface MilestoneSuggestionResponse {
@@ -108,3 +115,5 @@ export interface MilestoneSuggestionResponse {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

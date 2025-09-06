@@ -2,6 +2,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -17,12 +18,17 @@ function grantPath(id: string) {
 const GRANTS_DIR = path && path.join(process && process.cwd(), 'data', 'grants');
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+const GRANTS_DIR = path && path.join(process && process.cwd(), 'data', 'grants');
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 function grantPath(id: string) {
   return path && path.join(GRANTS_DIR, `${id}.json`);const GRANTS_DIR = path && path.join(process && process.cwd(), 'datagrants');
 function grantPath(id: string) {
   return path && path.join(GRANTS_DIR, `${id}.json`);
 }
 function readGrant(id: string): GrantApplication | null {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -46,12 +52,15 @@ function isAuthorized(req: NextApiRequest) {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 function writeGrant(record: GrantApplication) {
   if (!fs && fs.existsSync(GRANTS_DIR)) fs && fs.mkdirSync(GRANTS_DIR, { recursive: true });
   fs && fs.writeFileSync(grantPath(record && record.id), JSON && JSON.stringify(record, null, 2), 'utf8')
 }
 function isAuthorized(req: NextApiRequest) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   const header = req && req.headers.authorization || '',
@@ -61,11 +70,14 @@ function isAuthorized(req: NextApiRequest) {
   const header = req && req.headers.authorization || '',
   const token = header && header.replace('Bearer ', '');
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     token &&
     process && process.env.ZION_ADMIN_TOKEN &&
     token === process && process.env.ZION_ADMIN_TOKEN
   );
+<<<<<<< HEAD
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 <<<<<<< HEAD
   if (!isAuthorized(req)) {
@@ -195,6 +207,9 @@ function write_grant() {
 writeGrant(existing);
   res.status(200).json({ record: existing });  res.status(200).json({ record: existing })
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   if (!existing) return res && res.status(404).json({ error: 'Not found' });
 
   const ms = existing && existing.milestones || [];
@@ -208,6 +223,7 @@ writeGrant(existing);
   existing && existing.fundsReleased = (existing && existing.fundsReleased || 0) + tranche;
   existing && existing.milestones = ms;
   existing && existing.updatedAt = new Date().toISOString();
+<<<<<<< HEAD
 
   writeGrant(existing);
 <<<<<<< HEAD
@@ -217,6 +233,10 @@ writeGrant(existing);
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+}
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   res.status(200).json({ record: existing })
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
@@ -307,6 +327,7 @@ if ( {) {
 write_grant (existing);
   res.status (200).json ({ record: existing });  res.status (200).json ({ record: existing });
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -323,12 +344,31 @@ write_grant (existing);
 
 
 
+=======
+  const tranche = ms[idx].trancheAmount || 0
+  existing.fundsReleased = (existing.fundsReleased || 0) + tranche,
+  existing.milestones = ms,
+  existing.updatedAt = new Date().toISOString(),
 
-  writeGrant(existing);
-  res.status(200).json({ record: existing });
+
+
+
+writeGrant(existing);
+  res.status(200).json({ record: existing });  res.status(200).json({ record: existing })
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
 }
 }
 }
   writeGrant(existing);
   res.status(200).json({ record: existing });
+}
+}
+}
+  writeGrant(existing);
+  res.status(200).json({ record: existing });
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react',
 import Link from 'next/link';
 <<<<<<< HEAD
@@ -7,6 +8,8 @@ import React from 'react',
 import Link from 'next/link';
 import React from 'react'
 import Link from 'next/link'
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { MessageSquare } from 'lucide-react'
 
 import { Button } from '@/components/ui/button'
@@ -19,6 +22,7 @@ import {
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip'
 
 interface EmptyStateProps {
+<<<<<<< HEAD
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -63,6 +67,8 @@ import {
 } from '@/components / ui / tooltip';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components / ui / tooltip';
 interface EmptyStateProps {
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   title: string;
   subtitle: string;
   cta: string;
@@ -82,6 +88,7 @@ const EmptyState: React.FC<EmptyStateProps> = ({
       </div>
       <h2 className='text-xl font-medium mb-2'>{title}</h2>
       <p className='text-muted-foreground mb-6'>{subtitle}</p>      <TooltipProvider>      <h2 className="text-xl font-medium mb-2">{title}</h2>
+<<<<<<< HEAD
 import React from 'react';
 import Link from 'next/link';
 import { MessageSquare } from 'lucide-react'
@@ -116,6 +123,8 @@ const EmptyState: React.FC<EmptyStateProps> = ({;
               </Button>;
             ) : (;
               <Button disabled>{cta}</Button>;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from 'react';
 import Link from 'next/link';
 import { MessageSquare } from 'lucide-react';
@@ -147,6 +156,7 @@ const EmptyState: React.FC<EmptyStateProps> = ({ title, subtitle, cta, href, has
             ) : (
               <Button disabled>{cta}</Button>
             )}
+<<<<<<< HEAD
 
 
 
@@ -255,13 +265,18 @@ export default EmptyState;
 export default EmptyState;
 }
 export default EmptyState
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
         </Tooltip>;
       </TooltipProvider>;
     </div>;
   );
+<<<<<<< HEAD
 },;
 export default EmptyState;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 },;
 export default EmptyState;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

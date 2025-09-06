@@ -1,7 +1,10 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 import React, { useState, useEffect } from 'react';
 
@@ -9,6 +12,7 @@ import Head from 'next / head';
 ;
 
 interface Partner {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -18,6 +22,9 @@ import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
 interface Partner {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface Partner {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   id: string;
@@ -25,6 +32,7 @@ interface Partner {;
   name: string;
   status: 'active' | 'inactive' | 'pending';
   commission: number;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -76,20 +84,24 @@ const AdminPartnersPage: React.FC = () => {;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const [partners, setPartners] = useState<Partner[]>([]);
   const [loading, setLoading] = useState(true);
   const [searchTerm, setSearchTerm] = useState('');
   const [statusFilter, setStatusFilter] = useState('all');
-
     const json = await res.json();
     setFlags(json.flags |[]);
 
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useEffect, useState } from 'react';
 
 export default function AdminPartners() {
@@ -97,6 +109,7 @@ export default function AdminPartners() {
   const [selected, setSelected] = useState<string>('');
   const [flags, setFlags] = useState<any[]>([]);
 
+<<<<<<< HEAD
   useEffect(() => {
     (async () => {
       try {
@@ -124,6 +137,8 @@ export default function AdminPartners() {
     setFlags(json.flags || [])
   }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   useEffect(() => {;
     // Simulate loading partners;
@@ -139,6 +154,7 @@ export default function AdminPartners() {
       body: JSON && JSON.stringify({ code, ...updates }),;
     });
     const res = await fetch('/api/admin/partners/list');
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -188,6 +204,8 @@ export default function AdminPartners(req, res) {
       body: JSON.stringify({ code, ...updates })}),;
     const res = await fetch('/api/admin/partners/list');
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     const json = await res.json();
     setPartners(json.partners || []);
     } catch (error) {
@@ -200,17 +218,21 @@ export default function AdminPartners(req, res) {
     setSelected(code);
     const res = await fetch(`/api/admin/partners/fraud-flags?code=${encodeURIComponent(code)}`);
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     const json = await res.json();
     setFlags(json.flags || []);
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -419,6 +441,11 @@ function view_flags() {
                     step={0.01}
                     onBlur={(e) => updatePartner(p.code, { commission_rate: Number(e.target.value) })}
                     className="w-24 border rounded px-2 py-1"
+=======
+
+}
+  return (
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <div className="space-y-6">
       <h1 className="text-2xl font-semibold">Admin • Partners</h1>
       <div className="overflow-auto">
@@ -477,7 +504,72 @@ function view_flags() {
   }
 }
                     className="w-24 border rounded px-2 py-1"
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+  return (
+    <div className='space-y-6'>;
+      <h1 className='text-2xl font-semibold'>Admin • Partners</h1>;
+      <div className='overflow-auto'>;
+        <table className='min-w-full text-sm'>;
+          <thead>;
+            <tr className='text-left border-b'>;
+              <th className='py-2 pr-4'>Code</th>;
+              <th className='py-2 pr-4'>Name</th>;
+              <th className='py-2 pr-4'>Status</th>;
+              <th className='py-2 pr-4'>Commission</th>;
+              <th className='py-2 pr-4'>Actions</th>;
+            </tr>;
+          </thead>;
+          <tbody>;
+            {partners && partners.map(p => (;
+              <tr key={p && p.code} className='border-b'>;
+                <td className='py-2 pr-4'>{p && p.code}</td>;
+                <td className='py-2 pr-4'>{p && p.name}</td>;
+                <td className='py-2 pr-4'>{p && p.status}</td>;
+                <td className='py-2 pr-4'>;
+                  <input
+
+
+                    }
+                    className='w-24 border rounded px-2 py-1';
+                  />;
+                </td>;
+                <td className='py-2 pr-4 space-x-2'>;
+                  <button
+                    className='px-2 py-1 rounded border'
+                    onClick={() =>;
+                      updatePartner(p && p.code, { status: 'approved' });
+
+                    on_blur={e =>;
+                      update_partner (p.code, {
+                        commission_rate: Number (e.target.value),
+                      });
+                    }
+                    className='w - 24 border rounded px - 2 py - 1';
+                  />;
+                </td>;
+                <td className='py - 2 pr - 4 space - x-2'>;
+                  <button;
+                    className='px - 2 py - 1 rounded border';
+                    on_click={() =>;
+                      update_partner (p.code, { status: 'approved' });
+
+                    }
+                  >;
+                    Approve;
+                  </button>;
+
+
+                    }
+                  >;
+                    Reject;
+                  </button>;
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   />
                 </td>
                 <td className="py-2 pr-4 space-x-2">
@@ -486,6 +578,7 @@ function view_flags() {
                   <button className="px-2 py-1 rounded border" onClick={() => viewFlags(p.code)}>Fraud Flags</button>
                 </td>
               </tr>
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
@@ -548,6 +641,8 @@ function view_flags() {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         {/* Filters */}
         <div className="bg-white rounded-lg shadow p-6 mb-6">;
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
@@ -565,6 +660,7 @@ function view_flags() {
               <label className="block text-sm font-medium mb-2">Filter by Status</label>;
               <select
                 value={statusFilter}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -648,6 +744,8 @@ function view_flags() {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           {loading ? (
             <div className="text - center py - 8">Loading partners...</div>) : filtered_partners.length === 0 ? (
             <div className="text - center py - 8 text - gray - 500">;
@@ -709,6 +807,7 @@ function view_flags() {
                       <td className="px - 6 py - 4 whitespace - nowrap text - sm font - medium">;
                         <div className="flex space - x-2">;
                           {partner.status === 'pending' && (
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -799,6 +898,8 @@ function view_flags() {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                               <button
                                 onClick={() => handleStatusChange(partner && partner.id, 'active')}
                                 className="text-green-600 hover:text-green-900";
@@ -829,6 +930,7 @@ function view_flags() {
                               Activate;
                             </button>;
                           )}
+<<<<<<< HEAD
                           <button className="text-blue-600 hover:text-blue-900">;
 =======
                             <>;
@@ -1083,21 +1185,31 @@ function view_flags() {
                 </tbody>
               </table>
             </div>
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           )}
         </div>
       </main>
     </>
   );
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 }
 }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1110,6 +1222,7 @@ function view_flags() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -1117,3 +1230,5 @@ function view_flags() {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

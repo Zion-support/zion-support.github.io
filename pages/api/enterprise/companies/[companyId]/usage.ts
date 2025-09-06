@@ -1,14 +1,18 @@
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
 =======
   return res.status(405).json({ error: "method_not_allowed" });
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 
   return res && res.status(405).json({ error: "method_not_allowed" });
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
@@ -20,10 +24,13 @@ export default /**
  */
 function handler() {
   const { company_id } = req.query;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   // Check condition
 if ( {) {
   $2
 }
+<<<<<<< HEAD
     return res.status (400).json ({ error: "company_id required" });
   }
   const company = store.getCompanyById (company_id);
@@ -68,6 +75,7 @@ if ( {) {
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

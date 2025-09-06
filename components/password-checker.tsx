@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 import React, { useState, useEffect } from 'react',
@@ -24,6 +25,8 @@ import {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 export default function PasswordCheckerPage() {
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   Lock,
   Shield,
   Eye,
@@ -32,6 +35,7 @@ export default function PasswordCheckerPage() {
   RefreshCw,
   CheckCircle,
   XCircle,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   AlertTriangle,
@@ -85,10 +89,16 @@ symbols: /[!@#$%^&*()_+\-=\[\]{},':"\\|,.<>\/?]/.test(pass);
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+} from 'lucide-react';import { Lock, Shield, Eye, EyeOff, Copy, RefreshCw, CheckCircle, XCircle, AlertTriangle, ArrowRight } from 'lucide-react';
+
+import {
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { Lock, Shield, Eye, EyeOff, Copy, RefreshCw, CheckCircle, XCircle, AlertTriangle, ArrowRight } from 'lucide-react';
 
 
 export default function PasswordCheckerPage() {;
+<<<<<<< HEAD
 
 
 
@@ -96,11 +106,14 @@ export default function PasswordCheckerPage() {;
 =======
 export default function PasswordCheckerPage() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const [password, setPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
   const [strength, setStrength] = useState(0);
   const [strengthText, setStrengthText] = useState('');
   const [strengthColor, setStrengthColor] = useState('');
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -114,6 +127,25 @@ export default function PasswordCheckerPage() {;
   useEffect(() => {
     if (password) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+    }
+  AlertTriangle,;
+  ArrowRight,;
+} from 'lucide-react';import { Lock, Shield, Eye, EyeOff, Copy, RefreshCw, CheckCircle, XCircle, AlertTriangle, ArrowRight } from 'lucide-react';
+
+import {
+import { Lock, Shield, Eye, EyeOff, Copy, RefreshCw, CheckCircle, XCircle, AlertTriangle, ArrowRight } from 'lucide-react';
+
+
+export default function PasswordCheckerPage() {;
+  const [password, setPassword] = useState('');
+  const [showPassword, setShowPassword] = useState(false);
+  const [strength, setStrength] = useState(0);
+  const [strengthText, setStrengthText] = useState('');
+  const [strengthColor, setStrengthColor] = useState('');
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       analyzePassword(password);
     } else {
       resetAnalysis();    }      analyzePassword(password)
@@ -123,6 +155,7 @@ export default function PasswordCheckerPage() {;
     }
   }, [password]);
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       length: pass.length >= 8,
@@ -149,6 +182,8 @@ export default function PasswordCheckerPage() {;
       noSequential: !hasSequentialChars(pass)
     }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     setChecks(newChecks);
     // Calculate strength score
     let score = 0;
@@ -165,6 +200,7 @@ export default function PasswordCheckerPage() {;
     setStrength(score);
     // Set strength text and color
     if (score >= 90) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
   const analyzePassword = (pass: string) => {;
@@ -212,6 +248,8 @@ export default function PasswordCheckerPage() {;
       setStrengthColor('text-green-400');
     } else if (score >= 70) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       setStrengthText('Strong');
       setStrengthColor('text-green-400');
     } else if (score >= 50) {;
@@ -224,6 +262,7 @@ export default function PasswordCheckerPage() {;
       setStrengthText('Very Weak');
       setStrengthColor('text-red-400');
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   };
@@ -321,11 +360,14 @@ export default function PasswordCheckerPage() {;
       suggestions.push('For maximum security, use 16+ characters');
     setSuggestions(suggestions);  };    if (!checks.symbols) suggestions.push('Add at least one special character (!@#$%^&*)');
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     if (!checks.noCommon) suggestions.push('Avoid common passwords like "password" or "123456"');
     if (!checks.noSequential) suggestions.push('Avoid sequential characters like "123" or "abc"');
     if (pass.length < 12) suggestions.push('Consider making your password 12+ characters for better security');
     if (pass.length < 16) suggestions.push('For maximum security, use 16+ characters');
     setSuggestions(suggestions)
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   };
@@ -333,11 +375,14 @@ export default function PasswordCheckerPage() {;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const resetAnalysis = () => {
     setStrength(0);
     setStrengthText('');
     setStrengthColor('');
     setChecks({
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -537,6 +582,8 @@ setSuggestions([]);
       noCommon: false
       noSequential: false
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     });
     set_suggestions ([]);  }
 ;
@@ -554,6 +601,7 @@ setSuggestions([]);
     const charset =;
       'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*';
     let result = '';
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     const charset = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*';
@@ -581,6 +629,8 @@ setSuggestions([]);
   const copyToClipboard = (text: string) => {
     navigator.clipboard.writeText(text);  };    let result = '';
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     // Ensure at least one of each required character type
     result += 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'[Math.floor(Math.random() * 26)], // Uppercase
     result += 'abcdefghijklmnopqrstuvwxyz'[Math.floor(Math.random() * 26)], // Lowercase
@@ -590,6 +640,7 @@ setSuggestions([]);
     for (let i = 4, i < length, i++) {
       result += charset[Math.floor(Math.random() * charset.length)]
     }
+<<<<<<< HEAD
     // Shuffle the password
     result = result.split('').sort(() => Math.random() - 0.5).join('');
     setGeneratedPassword(result);
@@ -655,10 +706,13 @@ setSuggestions([]);
   }
   const getStrengthBarColor = () => {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     if (strength >= 90) return 'bg-green-500';
     if (strength >= 70) return 'bg-green-400';
     if (strength >= 50) return 'bg-yellow-400';
     if (strength >= 30) return 'bg-orange-400';
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -697,6 +751,11 @@ setSuggestions([]);
       <XCircle className="w-5 h-5 text-red-400" />
     )
   };
+=======
+
+  };
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const getCheckIcon = (passed: boolean) => {;
     return passed ? (;
       <CheckCircle className='w-5 h-5 text-green-400' />;
@@ -706,32 +765,11 @@ setSuggestions([]);
     ) : (;
       <XCircle className="w-5 h-5 text-red-400" />;
     );
-    return 'bg-red-400';  }
-  const getCheckIcon = (passed: boolean) => {
-    return passed ? (
-      <CheckCircle className='w-5 h-5 text-green-400' />
-    ) : (
-      <XCircle className='w-5 h-5 text-red-400' />
-    );  };    return 'bg-red-400'
-  }
-  const getCheckIcon = (passed: boolean) => {
-    return passed ? (
-      <CheckCircle className='w-5 h-5 text-green-400' />
-    ) : (
-      <XCircle className='w-5 h-5 text-red-400' />
-    );      <CheckCircle className="w-5 h-5 text-green-400" />
-    ) : (
-      <XCircle className="w-5 h-5 text-red-400" />
-    )
+
   return (
     <>
       <Head>
         <title>Password Strength Checker - Zion Tech Group</title>
-
-
-  };
-      {_/* Hero Section */}
-
         <meta
           name='description'
           content='Check your password strength with our advanced security analyzer. Get detailed feedback and suggestions to create stronger, more secure passwords.'
@@ -746,7 +784,13 @@ setSuggestions([]);
         />
       </Head>
 
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {/* Hero Section */}
       <section className='pt-32 pb-20 bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
@@ -793,6 +837,7 @@ setSuggestions([]);
         </div>
       </section>
       {/* Password Checker Tool */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
         />;
@@ -942,11 +987,14 @@ setSuggestions([]);
                         <Eye className='w-5 h-5' />
                       )}                    </button>              Check Your Password Strength
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             </h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
               Our advanced security analyzer evaluates multiple factors to determine password strength and security.
             </p>
           </div>
+<<<<<<< HEAD
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {/* Input Form */}
             <Card className="p-8 bg-gray-800 border border-gray-700">
@@ -982,12 +1030,17 @@ setSuggestions([]);
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 {/* Password Input */}
                 <div>;
                   <labelclassName="block text-sm font-medium text-gray-300 mb-2" htmlFor="input-
                     Enter Password
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ;
     // Ensure at least one of each required character type;
     result += 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'[Math.floor (Math.random () * 26)]; // Uppercase;
@@ -1139,8 +1192,11 @@ if (return 'bg - orange - 400') {
                     <input;
                       type={show_password ? 'text' : 'password'}
                       value={password}
+<<<<<<< HEAD
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       on_change={e => set_password (e.target.value)}
                       placeholder='Type your password here...';
                       className='w - full px - 4 py - 3 pr - 12 bg - gray - 700 border border - gray - 600 rounded - lg text - white placeholder - gray - 400 focus:outline - none focus:ring - 2 focus:ring - indigo - 500 focus:border - transparent';
@@ -1175,6 +1231,7 @@ if (return 'bg - orange - 400') {
                     Enter Password;
                   </label>;
                   <div className="relative">;
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -1214,10 +1271,13 @@ if (return 'bg - orange - 400') {
                 </div>
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 {/* Generate Password */}
                 <div>;
                   <Button
                     onClick={generateStrongPassword}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -1278,9 +1338,27 @@ if (return 'bg - orange - 400') {
 <<<<<<< HEAD
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+                    className='w-full bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white py-3 text-lg font-semibold'>;
+                    <RefreshCw className='w-5 h-5 mr-2' />                    Generate Strong Password                    className="w-full bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white py-3 text-lg font-semibold";
+                  >;
+                    <RefreshCw className="w-5 h-5 mr-2" />;
+                    Generate Strong Password;
+                  </Button>;
+                </div>;
+
+                {/* Generated Password Display */}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       {generatedPassword}
+                    <div className='mt-2 p-2 bg-gray-800 rounded text-sm font-mono text-white break-all'>                      {generatedPassword}
+
+                      {generatedPassword}
+
+                    </div>
+                  </div>
                     </div>;
                   </div>;
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -1317,6 +1395,9 @@ if (return 'bg - orange - 400') {
                 )}
                 <div className='text-sm text-gray-400'>                  <p>• Real-time strength analysis</p>                <div className="text-sm text-gray-400">
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+                )}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   <p>• Real-time strength analysis</p>
                   <p>• Multiple security criteria</p>
                   <p>• Detailed feedback and suggestions</p>
@@ -1325,6 +1406,7 @@ if (return 'bg - orange - 400') {
               </div>
             </Card>
             {/* Strength Analysis */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
             <Card className="p-8 bg-gray-800 border border-gray-700">
@@ -1336,10 +1418,13 @@ if (return 'bg - orange - 400') {
               </h3>
               {password ? (            <Card className="p-8 bg-gray-800 border border-gray-700">
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <h3 className="text-2xl font-bold text-white mb-6 flex items-center">
                 <Shield className="w-6 h-6 mr-3 text-purple-400" />
                 Security Analysis
               </h3>
+<<<<<<< HEAD
 <<<<<<< HEAD
               {password ? (
 
@@ -1376,6 +1461,8 @@ if (return 'bg - orange - 400') {
               {password ? (
                 <div className='space-y-6'>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   {/* Strength Score */}
                   <div>;
                     <div className='flex items-center justify-between mb-2'>;
@@ -1388,6 +1475,7 @@ if (return 'bg - orange - 400') {
                     <div className='w-full bg-gray-700 rounded-full h-3'>;
                       <div                        className={`h-3 rounded-full transition-all duration-300 ${getStrengthBarColor()}`}                <div className="space-y-6">;
                   {/* Strength Score */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1437,12 +1525,18 @@ if (return 'bg - orange - 400') {
                       <div 
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+
+
+                      <div 
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                         className={`h-3 rounded-full transition-all duration-300 ${getStrengthBarColor()}`}
                         style={{ width: `${strength}%` }}
                       />
                     </div>
                   </div>
-
                   <div>;
                     <div className="flex items-center justify-between mb-2">;
                       <span className="text-sm text-gray-300">Password Strength:</span>;
@@ -1458,6 +1552,7 @@ if (return 'bg - orange - 400') {
                     </div>;
                   </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -1479,11 +1574,15 @@ if (return 'bg - orange - 400') {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
                   {/* Security Checks */}
                   <div>
-                    <h4 className="text-lg font-semibold text-white mb-3">Security Criteria</h4>
-                    <div className="space-y-3">
+                    <h4 className='text-lg font-semibold text-white mb-3'>
+                      Security Criteria
+                    </h4>
+                    <div className='space-y-3'>
                       {Object.entries(checks).map(([key, passed]) => (
                         <div key={key} className='flex items-center space-x-3'>
                           {getCheckIcon(passed)}
@@ -1495,12 +1594,150 @@ if (return 'bg - orange - 400') {
                           <span className={`text-sm ${passed ? 'text-green-400' : 'text-red-400'}`}>
                           >                            {key === 'length' && 'At least 8 characters'}
 
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+                  {/* Security Checks */}
+                  <div>;
+                    <h4 className='text-lg font-semibold text-white mb-3'>;
+                      Security Criteria;
+                    </h4>;
+                    <div className='space-y-3'>;
+                      {Object && Object.entries(checks).map(([key, passed]) => (;
+                        <div key={key} className='flex items-center space-x-3'>;
+                          {getCheckIcon(passed)}
+                          <span
+                            className={`text-sm ${passed ? 'text-green-400' : 'text-red-400'}`}>                            {key === 'length' && 'At least 8 characters'}                      {Object && Object.entries(checks).map(([key, passed]) => (;
+                        <div key={key} className="flex items-center space-x-3">;
+                          {getCheckIcon(passed)}
+                          <span className={`text-sm ${passed ? 'text-green-400' : 'text-red-400'}`}>;
+                    <input;
+                      type={show_password ? 'text' : 'password'}
+                      value={password}
+                      on_change={(e) => set_password (e.target.value)}
+                      placeholder="Type your password here...";
+                      className="w - full px - 4 py - 3 pr - 12 bg - gray - 700 border border - gray - 600 rounded - lg text - white placeholder - gray - 400 focus:outline - none focus:ring - 2 focus:ring - indigo - 500 focus:border - transparent";
+                    />;
+                    <button;
+                      type="button";
+                      on_click={() => setShowPassword (!show_password)}
+                      className="absolute inset - y-0 right - 0 pr - 3 flex items - center text - gray - 400 hover:text - white";
+                    >;
+                      {show_password ? <EyeOff className="w - 5 h - 5" /> : <Eye className="w - 5 h - 5" />}
+                    </button>;
+                  </div>;
+                </div>;
+                {/* Generate Password */}
+                <div>;
+                  <Button;
+                    on_click={generateStrongPassword}
+                    className='w - full bg - gradient - to - r from - indigo - 600 to - purple - 600 hover:from - indigo - 700 hover:to - purple - 700 text - white py - 3 text - lg font - semibold';
+                  >;
+                    <RefreshCw className='w - 5 h - 5 mr - 2' />                    Generate Strong Password                    className="w - full bg - gradient - to - r from - indigo - 600 to - purple - 600 hover:from - indigo - 700 hover:to - purple - 700 text - white py - 3 text - lg font - semibold";
+                  >;
+                    <RefreshCw className="w - 5 h - 5 mr - 2" />;
+                    Generate Strong Password;
+                  </Button>;
+                </div>;
+                {/* Generated Password Display */}
+                {generated_password && (
+                  <div className='p - 4 bg - gray - 700 rounded - lg border border - gray - 600'>;
+                    <div className='flex items - center justify - between'>;
+                      <span className='text - sm text - gray - 300'>;
+                        Generated Password:;
+                      </span>;
+                      <Button;
+                        on_click={() => copyToClipboard (generated_password)}
+                        variant='outline';
+                        size='sm';
+                        className='border - gray - 600 text - gray - 300 hover:bg - gray - 600';
+                      >;
+                        <Copy className='w - 4 h - 4 mr - 2' />;
+                        Copy;
+                      </Button>;
+                    </div>;
+                    <div className='mt - 2 p - 2 bg - gray - 800 rounded text - sm font - mono text - white break - all'>                      {generated_password}                      <Button;
+                        on_click={() => copyToClipboard (generated_password)}
+                        variant="outline";
+                        size="sm";
+                        className="border - gray - 600 text - gray - 300 hover:bg - gray - 600";
+                      >;
+                        <Copy className="w - 4 h - 4 mr - 2" />;
+                        Copy;
+                      </Button>;
+                    </div>;
+                    <div className="mt - 2 p - 2 bg - gray - 800 rounded text - sm font - mono text - white break - all">;
+                      {generated_password}
+                    </div>;
+                  </div>)}
+                <div className='text - sm text - gray - 400'>                  <p>• Real - time strength analysis</p>                <div className="text - sm text - gray - 400">;
+                  <p>• Real - time strength analysis</p>;
+                  <p>• Multiple security criteria</p>;
+                  <p>• Detailed feedback and suggestions</p>;
+                  <p>• Strong password generator</p>;
+                </div>;
+              </div>;
+            </Card>;
+            {/* Strength Analysis */}
+            <Card className='p - 8 bg - gray - 800 border border - gray - 700'>;
+              <h3 className='text - 2xl font - bold text - white mb - 6 flex items - center'>;
+                <Shield className='w - 6 h - 6 mr - 3 text - purple - 400' />                Security Analysis;
+              </h3>;
+              {password ? (            <Card className="p - 8 bg - gray - 800 border border - gray - 700">;
+              <h3 className="text - 2xl font - bold text - white mb - 6 flex items - center">;
+                <Shield className="w - 6 h - 6 mr - 3 text - purple - 400" />;
+                Security Analysis;
+              </h3>;
+              {password ? (
+                <div className='space - y-6'>;
+                  {/* Strength Score */}
+                  <div>;
+                    <div className='flex items - center justify - between mb - 2'>;
+                      <span className='text - sm text - gray - 300'>;
+                        Password Strength:;
+                      </span>                      <span className={`text - lg font - bold ${strength_color}`}>;
+                        {strength_text} ({strength}/100);
+                      </span>;
+                    </div>;
+                    <div className='w - full bg - gray - 700 rounded - full h - 3'>;
+                      <div                        className={`h - 3 rounded - full transition - all duration - 300 ${getStrengthBarColor ()}`}                <div className="space - y-6">;
+                  {/* Strength Score */}
+                  <div>;
+                    <div className="flex items - center justify - between mb - 2">;
+                      <span className="text - sm text - gray - 300">Password Strength:</span>;
+                        {strength_text} ({strength}/100);
+                      </span>;
+                    </div>;
+                    <div className='w - full bg - gray - 700 rounded - full h - 3'>;
+                      <div                    <div className="w - full bg - gray - 700 rounded - full h - 3">;
+                      <div;
+                        className={`h - 3 rounded - full transition - all duration - 300 ${getStrengthBarColor ()}`}
+                        style={{ width: `${strength}%` }}
+                      />;
+                    </div>;
+                  </div>;
+                  {/* Security Checks */}
+                  <div>;
+                    <h4 className='text - lg font - semibold text - white mb - 3'>;
+                      Security Criteria;
+                    </h4>;
+                    <div className='space - y-3'>;
+                      {Object.entries (checks).map (([key, passed]) => (
+                        <div key={key} className='flex items - center space - x-3'>;
+                          {getCheckIcon (passed)}
+                          <span;
+                            className={`text - sm ${passed ? 'text - green - 400' : 'text - red - 400'}`}
+                          >                            {key === 'length' && 'At least 8 characters'}                      {Object.entries (checks).map (([key, passed]) => (
+                        <div key={key} className="flex items - center space - x-3">;
+                          {getCheckIcon (passed)}
+                          <span className={`text - sm ${passed ? 'text - green - 400' : 'text - red - 400'}`}>;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                             {key === 'length' && 'At least 8 characters'}
                             {key === 'uppercase' && 'Contains uppercase letter'}
                             {key === 'lowercase' && 'Contains lowercase letter'}
                             {key === 'numbers' && 'Contains number'}
                             {key === 'symbols' && 'Contains special character'}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -1515,27 +1752,13 @@ if (return 'bg - orange - 400') {
                     </div>
                   </div>
 
+=======
+                    </div>;
+                  </div>;
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   {/* Suggestions */}
-                  {suggestions.length > 0 && (
-                    <div>
-                      <h4 className='text-lg font-semibold text-white mb-3'>
-                        Suggestions
-                      </h4>
-                      <div className='space-y-2'>
-                        {suggestions.map((suggestion, index) => (
-                          <div
-                            key={index}
-                            className='flex items-start space-x-3'
-                          >
-                            <AlertTriangle className='w-4 h-4 text-yellow-400 mt-0.5 flex-shrink-0' />
-                            <span className='text-sm text-yellow-300'>
-                              {suggestion}
-                            </span>                          </div>                      <h4 className="text-lg font-semibold text-white mb-3">Suggestions</h4>
-                      <div className="space-y-2">
-                        {suggestions.map((suggestion, index) => (
-                          <div key={index} className="flex items-start space-x-3">
-                            <AlertTriangle className="w-4 h-4 text-yellow-400 mt-0.5 flex-shrink-0" />
-                            <span className="text-sm text-yellow-300">{suggestion}</span>
                             </span>                          </div>
 
                           </div>
@@ -1546,6 +1769,7 @@ if (return 'bg - orange - 400') {
                   )}
                 </div>
               ) : (
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
                     </div>;
@@ -1569,20 +1793,59 @@ if (return 'bg - orange - 400') {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+                <div className='bg-gray-900 p-6 rounded-lg border border-gray-700 text-center'>
+                  <div className='text-6xl mb-4'>🔒</div>
+                  <p className='text-gray-400'>
+                    Enter a password above to see the security analysis and get
+                    personalized suggestions.                  </p>                <div className="bg-gray-900 p-6 rounded-lg border border-gray-700 text-center">
+                  <div className="text-6xl mb-4">🔒</div>
+                  <p className="text-gray-400">
+                    Enter a password above to see the security analysis and get personalized suggestions.
+                </div>
+              )}
+            </Card>
+          </div>
+        </div>
+      </section>
+
+                  {/* Suggestions */}
+                  {suggestions && suggestions.length > 0 && (;
+                    <div>;
+                      <h4 className='text-lg font-semibold text-white mb-3'>;
+                        Suggestions;
+                      </h4>;
+                      <div className='space-y-2'>;
+                        {suggestions && suggestions.map((suggestion, index) => (;
+                          <div
+                            key={index}
+                            className='flex items-start space-x-3'>;
+                            <AlertTriangle className='w-4 h-4 text-yellow-400 mt-0 && 0.5 flex-shrink-0' />;
+                            <span className='text-sm text-yellow-300'>;
+                              {suggestion}
+                            </span>                          </div>                      <h4 className="text-lg font-semibold text-white mb-3">Suggestions</h4>;
+                      <div className="space-y-2">;
+                        {suggestions && suggestions.map((suggestion, index) => (;
+                          <div key={index} className="flex items-start space-x-3">;
+                            <AlertTriangle className="w-4 h-4 text-yellow-400 mt-0 && 0.5 flex-shrink-0" />;
+                            <span className="text-sm text-yellow-300">{suggestion}</span>;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                         ))}
                       </div>;
                     </div>;
                   )}
 
 
-              )}
-
-
 
 
 
 <<<<<<< HEAD
+
+
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {/* Features */}
 
       <section className="py-20 bg-gray-800">
@@ -1639,6 +1902,7 @@ if (return 'bg - orange - 400') {
 
             <Card className="text-center p-8 bg-gray-700 border border-gray-600">
 
+<<<<<<< HEAD
 =======
       {/* Features */}
 
@@ -1728,21 +1992,27 @@ if (return 'bg - orange - 400') {
                 Your passwords are never stored or transmitted - analysis
                 happens locally in your browser.              </p>            <Card className="text-center p-8 bg-gray-700 border border-gray-600">
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <div className="text-4xl mb-4">🔒</div>
               <h3 className="text-xl font-bold text-white mb-4">Privacy First</h3>
               <p className="text-gray-400">
                 Your passwords are never stored or transmitted - analysis happens locally in your browser.
+<<<<<<< HEAD
 <<<<<<< HEAD
 
               </p>
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             </Card>
           </div>
         </div>
       </section>
       {/* Security Tips */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       <section className="py-20 bg-gray-900">
@@ -1816,10 +2086,13 @@ if (return 'bg - orange - 400') {
                   <CheckCircle className='w-5 h-5 text-green-400 mr-3 mt-0.5 flex-shrink-0' />                  Update passwords regularly                <li className="flex items-start">
                   <CheckCircle className="w-5 h-5 text-green-400 mr-3 mt-0.5 flex-shrink-0" />
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   Update passwords regularly
                 </li>
               </ul>
             </Card>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -1874,6 +2147,8 @@ if (return 'bg - orange - 400') {
                   <XCircle className='w-5 h-5 text-red-400 mr-3 mt-0.5 flex-shrink-0' />                  Avoid writing passwords down                <li className="flex items-start">
                   <XCircle className="w-5 h-5 text-red-400 mr-3 mt-0.5 flex-shrink-0" />
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   Avoid writing passwords down
                 </li>
               </ul>
@@ -1881,6 +2156,7 @@ if (return 'bg - orange - 400') {
           </div>
         </div>
       </section>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
             </Card>;
@@ -2115,10 +2391,13 @@ if (return 'bg - orange - 400') {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               Follow these guidelines to create and maintain strong, secure;
               passwords for all your accounts.;
             </p>;
           </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -2150,10 +2429,13 @@ if (return 'bg - orange - 400') {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   Update passwords regularly;
                 </li>;
               </ul>;
             </Card>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -2198,6 +2480,8 @@ if (return 'bg - orange - 400') {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   Avoid writing passwords down;
                 </li>;
               </ul>;
@@ -2205,6 +2489,7 @@ if (return 'bg - orange - 400') {
           </div>;
         </div>;
       </section>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -2248,12 +2533,15 @@ href="/pricing"
 
             Ready to Secure Your Passwords?
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           </h2>
           <p className='text-xl text-indigo-100 mb-8'>
             Join thousands of users who trust our password strength checker to
             improve their account security.
           </p>
           <div className='flex flex-col sm:flex-row gap-4 justify-center'>
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             <Button
@@ -2273,19 +2561,33 @@ href="/pricing"
               <ArrowRight className='w-5 h-5 ml-2' />
             </Button>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+            <Button
+              href='/contact'
+              size='lg'
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <Button
               href='/pricing'
               variant='outline'
               size='lg'
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+  );
+}
+}
+  );
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               View Pricing;
             </Button>;
           </div>;
         </div>;
       </section>;
+<<<<<<< HEAD
 
 
 =======
@@ -2309,10 +2611,13 @@ href="/pricing"
     </>
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   );
 }
     </>);
 }
+<<<<<<< HEAD
   );
 }
     </>);
@@ -2324,3 +2629,5 @@ href="/pricing"
   );
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

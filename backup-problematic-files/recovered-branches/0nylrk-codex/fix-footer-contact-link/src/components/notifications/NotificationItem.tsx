@@ -13,6 +13,7 @@ import { Notification, NotificationType } from '@/context/notifications',;
 export const getTypeIcon = (type:NotificationType) => {;
   switch (type) {;
     case 'message':;
+<<<<<<< HEAD
       return <span className="text-blue-500">💬</span>,;
     case 'quote_request':;
       return <span className="text-purple-500">📝</span>,;
@@ -22,10 +23,20 @@ export const getTypeIcon = (type:NotificationType) => {;
       return <span className="text-zion-purple">🤝</span>,;
     case 'onboarding':;
       return <span className="text-zion-cyan">🚀</span>,;
+=======
+      return <span className="text-blue-500"></span>,;
+    case 'quote_request':;
+      return <span className="text-purple-500"></span>,;
+    case 'booking_confirmation':;
+      return <span className="text-green-500"></span>,;
+    case 'hire_request':;
+      return <span className="text-zion-purple"></span>,;
+    case 'onboarding':;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     case 'system':;
-      return <span className="text-yellow-500">⚠️</span>,;
+      return <span className="text-yellow-500"></span>,;
     default:;
-      return <span className="text-gray-500">📣</span>;
+      return <span className="text-gray-500"></span>;
   }
 },;
 ;

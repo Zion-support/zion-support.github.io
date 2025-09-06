@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from "react",
 import { useForm, useFieldArray } from "react-hook-form",
 import { zodResolver } from "@hookform/resolvers/zod",
@@ -18,6 +19,8 @@ import { zodResolver } from "@hookform/resolvers/zod",
 import { z } from "zod",
 import { useRouter } from 'next/router',
 import {logErrorToProduction} from '@/utils/productionLogger',
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {
   Form
   FormControl
@@ -68,17 +71,6 @@ import { AspectRatio } from "@/components/ui/aspect-ratio"
 import { Separator } from "@/components/ui/separator"
 import { toast } from "@/components/ui/use-toast"
 import { User, Briefcase, Star, Calendar, Globe, DollarSign, FileText, Link, Upload, ArrowRight, ArrowLeft, Trash2, Plus, CheckCircle2 } from 'lucide-react'
-import { useTalentProfileEnhancer } from "@/hooks/useTalentProfileEnhancer";
-import { supabase } from "@/integrations/supabase/client";
-import { useAuth } from "@/hooks/useAuth"
-import { useTalentProfileEnhancer } from "@/hooks/useTalentProfileEnhancer"
-import { supabase } from "@/integrations/supabase/client"
-import { useAuth } from "@/hooks/useAuth",
-import { useTalentProfileEnhancer } from "@/hooks/useTalentProfileEnhancer";
-import { supabase } from "@/integrations/supabase/client";
-import { useAuth } from "@/hooks/useAuth"
-import { useTalentProfileEnhancer } from "@/hooks/useTalentProfileEnhancer"
-import { supabase } from "@/integrations/supabase/client"
 // Define the form schema with validation
 
 const talentSchema = z.object({
@@ -135,8 +127,6 @@ export function TalentOnboardingForm() {
   const [showSuccessScreen, setShowSuccessScreen] = useState(false)
   const { enhanceProfile, isGenerating } = useTalentProfileEnhancer()
   const totalSteps = 4
-import { useTalentProfileEnhancer } from "@/hooks/useTalentProfileEnhancer",
-import { supabase } from "@/integrations/supabase/client",
 import { useAuth } from "@/hooks/useAuth",
 import { useTalentProfileEnhancer } from "@/hooks/useTalentProfileEnhancer",
 import { supabase } from "@/integrations/supabase/client",
@@ -144,98 +134,6 @@ import { supabase } from "@/integrations/supabase/client",
     resolver: zodResolver(talentSchema)
     defaultValues: {
       basicInfo: {
-import { useTalentProfileEnhancer } from "@/hooks/useTalentProfileEnhancer",
-import { supabase } from "@/integrations/supabase/client",
-    resolver: zodResolver(talentSchema)
-    defaultValues: {
-      basicInfo: {
-        fullName: user?.displayName |''
-        professionalTitle: ''
-        profilePicture: undefined
-      }
-      experience: {
-        bio: ''
-        keyProjects: [{ title: '', description: '' }]
-        yearsOfExperience: ''
-      }
-      skills: {
-        skillsList: ''
-        toolsUsed: ''
-      }
-      availability: {
-        availabilityType: ''
-        timezone: ''
-        hourlyRate: ''
-        portfolioLinks: [{ url: '' }]
-        cv: undefined
-      }
-    }
-    mode: 'onChange'
-  })
-  const {
-    fields: projectFields
-    append: appendProject
-    remove: removeProject
-  } = useFieldArray({
-    name: 'experience.keyProjects'
-    control: form.control
-  })
-  const {
-    fields: linkFields
-    append: appendLink
-    remove: removeLink
-  } = useFieldArray({
-    name: 'availability.portfolioLinks'
-    control: form.control
-  })
-  // Handle profile picture upload
-  const handleProfilePictureUpload = async (
-    e: React.ChangeEvent<HTMLInputElement>
-  ) => {
-    const file = e.target.files?.[0]
-    if (!file) return
-        fullName: user?.displayName || "",
-        professionalTitle: "",
-        profilePicture: undefined},
-      experience: {
-        bio: "",
-        keyProjects: [{ title: "", description: "" }],
-        yearsOfExperience: ""},
-      skills: {
-        skillsList: "",
-        toolsUsed: ""},
-      availability: {
-        availabilityType: '',
-        timezone: '',
-        hourlyRate: '',
-        portfolioLinks: [{ url: '' }],
-        cv: undefined,
-      },
-    },
-    mode: 'onChange',
-  })
-  const {
-    fields: projectFields,
-    append: appendProject,
-    remove: removeProject,
-  } = useFieldArray({
-    name: 'experience.keyProjects',
-    control: form.control,
-  })
-  const {
-    fields: linkFields,
-    append: appendLink,
-    remove: removeLink,
-  } = useFieldArray({
-    name: 'availability.portfolioLinks',
-    control: form.control,
-  })
-  // Handle profile picture upload
-  const handleProfilePictureUpload = async (
-    e: React.ChangeEvent<HTMLInputElement>
-  ) => {
-    const file = e.target.files?.[0]
-    if (!file) return;
         availabilityType: "",
         timezone: "",
         hourlyRate: "",
@@ -262,6 +160,7 @@ import { supabase } from "@/integrations/supabase/client",
     const reader = new FileReader()
     reader.onloadend = () => {
       setProfilePictureUrl(reader.result as string)
+<<<<<<< HEAD
     
     const reader = new FileReader()
     reader.onloadend = () => {
@@ -463,8 +362,13 @@ export function TalentOnboardingForm() {;
 public_url;
 }= supabase.storage.from ('resumes') .getPublicUrl (file_name);
 return public_url;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 //Rest of the file remains unchanged... // [Previous implementation continues...] return null;
 }'}
 }
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

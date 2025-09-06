@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
       <Head>
@@ -14,6 +15,8 @@ import { motion } from 'framer-motion';
 import Head from 'next/head';
 import Link from 'next/link';
 import {motion} from 'framer-motion';
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import Head from 'next/head',
 import Link from 'next/link';
 import { motion } from 'framer-motion';
@@ -23,32 +26,20 @@ export default function FrontLanding() {
 
 
     <div className='relative min-h-screen overflow-hidden bg-slate-950 text-white'>
+<<<<<<< HEAD
 import Link from 'next/link',
 import { motion } from 'framer-motion',
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 export default function FrontLanding() {
   return (
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <div className="relative min-h-screen overflow-hidden bg-slate-950 text-white">
       <Head>
         <title>Zion — Autonomous Cloud Automations</title>
         <meta name="description" content="Futuristic, cloud-native autonomous automations that innovate, optimize, and sync changes to the repo continuously." />
       </Head>
       {/* Animated background layers */}
-
-      {/* Animated background layers */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
-      <div aria-hidden className="pointer-events-none absolute inset-0 -z-10">
-        <div className="absolute -top-24 -left-24 h-[38rem] w-[38rem] rounded-full bg-fuchsia-500/20 blur-3xl animate-float" />
-        <div className="absolute top-1/4 -right-32 h-[30rem] w-[30rem] rounded-full bg-cyan-400/20 blur-3xl animate-float-slow" />
-        <div className="absolute bottom-0 left-1/4 h-[26rem] w-[26rem] rounded-full bg-violet-400/10 blur-2xl animate-float-fast" />
-        <div className="absolute inset-0 opacity-[0.08] [background:radial-gradient(circle_at_center,rgba(255,255,255,0.35)_0,rgba(255,255,255,0)_60%),linear-gradient(90deg,rgba(255,255,255,0.12)_1px,transparent_1px),linear-gradient(0deg,rgba(255,255,255,0.12)_1px,transparent_1px)] bg-[size:100%_100%,3rem_3rem,3rem_3rem] animate-grid" />
-        <div className="absolute inset-0 [mask-image:radial-gradient(ellipse_at_center,white,transparent_70%)]">
-          <div className="twinkle-field absolute inset-0" />
-        </div>
       </div>
 
       {/* Header */  } catch (error) {
@@ -66,8 +57,6 @@ export default function FrontLanding() {
             <Link href="/automation"><a className="text-white/80 hover:text-white">Automations</Link></Link>
             <Link href="/newsroom"><a className="text-white/80 hover:text-white">Newsroom</Link></Link>
             <Link href="/contact"><a className="text-white/80 hover:text-white">Contact</Link></Link>
-
-
           </div>
           <div className='hidden gap-6 md:flex'>
             <Link href='/'>
@@ -84,6 +73,7 @@ export default function FrontLanding() {
             </Link>          </div>
         </nav>
       </header>
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -430,6 +420,8 @@ className="mx-auto inline-flex items-center gap-2 rounded-full border border-whi
               new automation factories—fixing, optimizing, and syncing changes
               to the repository continuously.            </motion.p>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {/* Hero */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -439,10 +431,13 @@ className="mx-auto inline-flex items-center gap-2 rounded-full border border-whi
         <section className="mx-auto max-w-7xl px-6 pt-10 pb-16 md:pt-16 md:pb-24">
           <div className="text-center">
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <motion.div
               initial={{ opacity: 0, y: 10 }  } catch (error) {
     console.error("Error:", error);
@@ -465,20 +460,28 @@ className="mx-auto inline-flex items-center gap-2 rounded-full border border-whi
               Autonomous agents running continuous improvements
             </motion.div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
             {/* Quick stats */}
             <div className='mt-8 grid grid-cols-2 gap-3 sm:grid-cols-4'>
               {[
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 ['24/7', 'Autonomous']
                 ['Main', 'Direct Sync']
                 ['0 Ops', 'Cloud‑Native']
                 ['Safety', 'Guardrails']
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 ['24/7', 'Autonomous'],
                 ['Main', 'Direct Sync'],
                 ['0 Ops', 'Cloud‑Native'],
                 ['Safety', 'Guardrails'],
+<<<<<<< HEAD
 <<<<<<< HEAD
 
               ].map(([k, v]) => (                <motion.div
@@ -486,11 +489,17 @@ className="mx-auto inline-flex items-center gap-2 rounded-full border border-whi
 =======
               ].map(([k, v]) => (                <motion.div
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+              ].map(([k, v]) => (                <motion.div
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   key={k}
-                  initial={{ opacity: 0, coordinate_y: 6 }}
-                  whileInView={{ opacity: 1, coordinate_y: 0 }}
+                  initial={{ opacity: 0, y: 6 }}
+                  whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
               ))}
@@ -516,6 +525,7 @@ className="mx-auto inline-flex items-center gap-2 rounded-full border border-whi
           <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Features</h2>
           <div className="mt-6 grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
             {[
+<<<<<<< HEAD
 =======
                   transition={{ duration: 0.5 }}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -593,6 +603,8 @@ className="mx-auto inline-flex items-center gap-2 rounded-full border border-whi
           <div className='mt-6 grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3'>
             {[
               {
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 title: 'Self‑Improving'
                 desc: 'Agents continuously analyze, invent, and evolve automations.'
               }
@@ -616,7 +628,21 @@ className="mx-auto inline-flex items-center gap-2 rounded-full border border-whi
                 title: 'Observability'
                 desc: 'Dashboards, reports, and GitHub Actions artifacts.'
               }
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+                title: 'Self‑Improving',
+                desc: 'Agents continuously analyze, invent, and evolve automations.',
+              },
+              {
+                initial={{ opacity: 0, y: 8 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                title: 'Observability',
+                desc: 'Dashboards, reports, and GitHub Actions artifacts.',
+              },
+            ].map (function => (              <motion.article;
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 title: 'Self‑Improving',
                 desc: 'Agents continuously analyze, invent, and evolve automations.',
               },
@@ -641,17 +667,22 @@ className="mx-auto inline-flex items-center gap-2 rounded-full border border-whi
                 desc: 'Dashboards, reports, and GitHub Actions artifacts.',
               },
 <<<<<<< HEAD
+<<<<<<< HEAD
 
             ].map(f => (              <motion.article
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
             ].map(f => (              <motion.article
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+            ].map(f => (              <motion.article
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 key={f.title}
                 initial={{ opacity: 0, coordinate_y: 8 }}
                 whileInView={{ opacity: 1, coordinate_y: 0 }}
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 viewport={{ once: true }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -676,7 +707,20 @@ className="mx-auto inline-flex items-center gap-2 rounded-full border border-whi
           <div className='mt - 6 grid grid - cols - 1 gap - 5 md:grid - cols - 3'>;
             {[;
 
+=======
+                title: 'Code Quality & Refactors',
+                desc: 'Lints, fixes, and proposes refactors with type‑safety improvements.',
+              },
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               {
+                title: 'Performance & A11y',
+                desc: 'Optimizes bundles, assets, and accessibility with continuous checks.',
+              },
+              {
+                title: 'Content & SEO',
+                desc: 'Curates content, updates promotions, and tunes metadata for reach.',
+              },
+            ].map(c => (              <motion.article
 
 
                 title: 'Code Quality & Refactors',
@@ -712,12 +756,10 @@ className="mx-auto inline-flex items-center gap-2 rounded-full border border-whi
           </h2>
           <div className='mx-auto mt-6 max-w-4xl grid grid-cols-1 gap-3 md:grid-cols-2'>
             {[
-
               '24/7 progress without human intervention',
               'Rapid feedback loop with safe, incremental edits',
               'Continuous delivery directly to main branch',
               'Fewer regressions via layered checks and reports',
-
             ].map(b => (              <motion.div
                 key={b}
                 initial={{ opacity: 0, y: 6 }}
@@ -738,7 +780,6 @@ className="mx-auto inline-flex items-center gap-2 rounded-full border border-whi
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
             className='animated-border relative overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-r from-fuchsia-600/20 via-violet-600/20 to-cyan-600/20 p-8 text-center backdrop-blur-xl'
-
             <motion.h1
               initial={{ opacity: 0, y: 8 }  } catch (error) {
     console.error("Error:", error);
@@ -1042,32 +1083,12 @@ export default function FrontLanding(req, res) {
                 <h3 className="text-lg font-semibold">{f.title}</h3>
                 <p className="mt-1 text-sm text-white/75">{f.desc}</p>
               </motion.article>
-            ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-          </div>;
-        </section>;
-        {/* Capabilities */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
-        <section className="mx-auto max-w-7xl px-6 pb-14">
-          <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Capabilities</h2>
-          <div className="mt-6 grid grid-cols-1 gap-5 md:grid-cols-3">
-            {[
-              { title: 'Code Quality & Refactors', desc: 'Lints, fixes, and proposes refactors with type‑safety improvements.' };
-              { title: 'Performance & A11y', desc: 'Optimizes bundles, assets, and accessibility with continuous checks.' };
-              { title: 'Content & SEO', desc: 'Curates content, updates promotions, and tunes metadata for reach.' }].map((c) => (
-              <motion.article
                 key={c.title}
           </div>;
         </section>;
 
         {/* Capabilities */}
+<<<<<<< HEAD
 <<<<<<< HEAD
         <section className='mx-auto max-w-7xl px-6 pb-14'>;
           <h2 className='text-center text-2xl font-bold tracking-wide text-white/90'>;
@@ -1090,6 +1111,8 @@ export default function FrontLanding(req, res) {
             ].map(c => (              <motion&& motion.article
                 key={c && c.title}
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 initial={{ opacity: 0, y: 8 }}
                 whileInView={{ opacity: 1, y: 0 }}
 =======
@@ -1097,6 +1120,7 @@ export default function FrontLanding(req, res) {
                 desc: 'Curates content, updates promotions, and tunes metadata for reach.',
               },
             ].map (c => (              <motion.article;
+<<<<<<< HEAD
 =======
                 transition={{ duration: 0.6 }}
                 className='group glow-card relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur-md hover:border-cyan-400/30'
@@ -1141,11 +1165,14 @@ export default function FrontLanding(req, res) {
               },
             ].map(c => (              <motion.article
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 key={c.title}
                 initial={{ opacity: 0, coordinate_y: 8 }}
                 whileInView={{ opacity: 1, coordinate_y: 0 }}
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 viewport={{ once: true }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1221,10 +1248,13 @@ export default function FrontLanding(req, res) {
               'Fewer regressions via layered checks and reports',
             ].map(b => (              <motion.div
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 key={b}
                 initial={{ opacity: 0, coordinate_y: 6 }}
                 whileInView={{ opacity: 1, coordinate_y: 0 }}
                 viewport={{ once: true }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -1248,10 +1278,13 @@ export default function FrontLanding(req, res) {
         <section className='mx - auto max - w-7xl px - 6 pb - 24'>          <motion.div;
             initial={{ opacity: 0, scale: 0.98 }}
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
 
 
+<<<<<<< HEAD
         {/* CTA */}
         <section className="mx-auto max-w-7xl px-6 pb-24">
           <motion.div
@@ -1270,10 +1303,16 @@ export default function FrontLanding(req, res) {
         {/* CTA */}
         <section className='mx-auto max-w-7xl px-6 pb-24'>          <motion.div
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+        {/* CTA */}
+        <section className="mx-auto max-w-7xl px-6 pb-24">
+          <motion.div
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             initial={{ opacity: 0, scale: 0.98 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
             className="animated-border relative overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-r from-fuchsia-600/20 via-violet-600/20 to-cyan-600/20 p-8 text-center backdrop-blur-xl"
 
@@ -1717,10 +1756,15 @@ export default function FrontLanding(req, res) {
 }
             className="animated-border relative overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-r from-fuchsia-600/20 via-violet-600/20 to-cyan-600/20 p-8 text-center backdrop-blur-xl"
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+            className="animated-border relative overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-r from-fuchsia-600/20 via-violet-600/20 to-cyan-600/20 p-8 text-center backdrop-blur-xl"
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           >
             <h3 className="text-2xl font-bold">Ready to build with autonomous cloud agents?</h3>
             <p className="mx-auto mt-2 max-w-2xl text-white/80">Scale development with a tireless fleet of self‑improving automations.</p>
             <div className="mt-6 flex flex-wrap justify-center gap-3">
+<<<<<<< HEAD
 <<<<<<< HEAD
               <Link href="/services"><a className="rounded-xl bg-white/90 px-6 py-3 font-semibold text-slate-900 hover:bg-white">Get Started</a></Link>
               <Link href="/automation"><a className="rounded-xl border border-white/20 bg-white/5 px-6 py-3 font-semibold backdrop-blur-md hover:bg-white/10">View Automations</a></Link>
@@ -1998,6 +2042,11 @@ export default function FrontLanding(req, res) {
               <Link href="/services"><a className="rounded-xl bg-white/90 px-6 py-3 font-semibold text-slate-900 hover:bg-white">Get Started</Link></Link>
               <Link href="/automation"><a className="rounded-xl border border-white/20 bg-white/5 px-6 py-3 font-semibold backdrop-blur-md hover:bg-white/10">View Automations</Link></Link>
             </div>
+=======
+              <Link href="/services"><a className="rounded-xl bg-white/90 px-6 py-3 font-semibold text-slate-900 hover:bg-white">Get Started</a></Link>
+              <Link href="/automation"><a className="rounded-xl border border-white/20 bg-white/5 px-6 py-3 font-semibold backdrop-blur-md hover:bg-white/10">View Automations</a></Link>
+            </div>
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           </motion.div>
         </section>
         {/* Explore more */}
@@ -2009,73 +2058,71 @@ export default function FrontLanding(req, res) {
             <Link href='/services/ai-seo-auditor'>
               <a className='bg-white/5 hover:bg-white/10 rounded-lg p-4 transition-colors border border-white/10'>
                 <span className='text-white/90'>
-                  AI SEO Auditor — automate SEO improvements
                 </span>
               </a>
             </Link>
             <Link href='/services/customer-support-chatbot'>
               <a className='bg-white/5 hover:bg-white/10 rounded-lg p-4 transition-colors border border-white/10'>
                 <span className='text-white/90'>
-                  Customer Support Chatbot — reduce response time
                 </span>
               </a>
             </Link>
             <Link href='/services/landing-page-generator'>
               <a className='bg-white/5 hover:bg-white/10 rounded-lg p-4 transition-colors border border-white/10'>
                 <span className='text-white/90'>
-                  Landing Page Generator — launch pages instantly
                 </span>
               </a>
             </Link>
             <Link href='/services/price-intelligence-service'>
               <a className='bg-white/5 hover:bg-white/10 rounded-lg p-4 transition-colors border border-white/10'>
                 <span className='text-white/90'>
-                  Price Intelligence — market‑aware pricing
                 </span>
               </a>
             </Link>
             <Link href='/automation'>
               <a className='bg-white/5 hover:bg-white/10 rounded-lg p-4 transition-colors border border-white/10'>
                 <span className='text-white/90'>
-                  Automation Status — live agents & reports
                 </span>
               </a>
             </Link>
             <Link href='/newsroom'>
               <a className='bg-white/5 hover:bg-white/10 rounded-lg p-4 transition-colors border border-white/10'>
                 <span className='text-white/90'>
-                  Newsroom — latest autonomous updates
                 </span>
               </a>
             </Link>
             <Link href='/site-health'>
               <a className='bg-white/5 hover:bg-white/10 rounded-lg p-4 transition-colors border border-white/10'>
                 <span className='text-white/90'>
-                  Site Health — audits & insights
                 </span>
               </a>
             </Link>
             <Link href='/contact'>
               <a className='bg-white/5 hover:bg-white/10 rounded-lg p-4 transition-colors border border-white/10'>
                 <span className='text-white/90'>
-                  Contact — discuss your use‑case
                 </span>
               </a>
             </Link>          </div>
         </section>
       </main>
+<<<<<<< HEAD
     </div>
   );
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     </div>;
   );
 
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         {/* Explore more */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -2097,6 +2144,7 @@ export default function FrontLanding(req, res) {
         </section>
       </main>
     </div>
+<<<<<<< HEAD
   )
 <<<<<<< HEAD
 }
@@ -2125,6 +2173,8 @@ export default function FrontLanding(req, res) {
   }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <section className="mx-auto max-w-7xl px-6 pb-16">;
           <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Explore more</h2>;
           <div className="mt-6 grid grid-cols-1 gap-4 sm: grid-cols-2 md:grid-cols-3 lg:grid-cols-4">;
@@ -2146,6 +2196,7 @@ export default function FrontLanding(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -2153,3 +2204,5 @@ export default function FrontLanding(req, res) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

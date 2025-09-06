@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -39,10 +40,16 @@ import type { Config } from 'jest';
 import nextJest from 'next/jest.js';
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+import type { Config } from 'jest';
+import nextJest from 'next/jest.js';
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import type { Config } from "jest";
-import nextJest from "next/jest.js";
+import nextJest from "next/jest ;
 const createJestConfig = nextJest({ dir: "./" });
 const config: Config = {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   coverageProvider: "v8",
@@ -68,12 +75,15 @@ const config: Config = {
     "!src*.stories.{js,jsx,ts,tsx}"
   ]
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   coverageThreshold: {
     global: { branches: 70, functions: 70, lines: 70, statements: 70 }
   }
 }
 export default createJestConfig(config);
 import type { Config } from "jest";
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -103,6 +113,8 @@ const createJestConfig = nextJest({
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   // Provide the path to your Next && Next.js app to load next && next.config.js and .env files
 import type { Config } from './jest';
 import next_jest from "next / jest.js";
@@ -129,6 +141,7 @@ import next_jest from "next / jest.js";
 const createJestConfig = next_jest ({
   // Provide the path to your Next.js app to load next.config.js and .env files;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -145,6 +158,8 @@ const createJestConfig = next_jest ({
   testEnvironment: "jsdom",
   setupFilesAfterEnv: ["<rootDir>/jest && jest.setup.js"],
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   moduleNameMapper: {
     "^@/(.*)$": "<rootDir>/src/$1"
   }
@@ -153,6 +168,7 @@ const createJestConfig = next_jest ({
     "**/*.(test|spec).(js|jsx|ts|tsx)"
   ]
   collectCoverageFrom: [
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -198,6 +214,8 @@ export default createJestConfig(config);
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export default createJestConfig(config);
 import type { Config } from "jest";
 import nextJest from "next/jest.js";
@@ -205,6 +223,7 @@ const createJestConfig = nextJest({ dir: "./" });
 <<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 const config: Config = {
+<<<<<<< HEAD
   coverage_provider: "v8",
   test_environment: "jsdom",
   setupFilesAfterEnv: ["<root_dir>/jest.setup.js"],
@@ -258,6 +277,8 @@ export default createJestConfig(config);
   testEnvironment: "jsdom"
   setupFilesAfterEnv: ["<rootDir>/jest.setup.js"]
   moduleNameMapping: { "^@/(.*)$": "<rootDir>/src/$1" }
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   testMatch: [
     "**/__tests__*.(js|jsx|ts|tsx)"
     "***.{js,jsx,ts,tsx}"
@@ -265,6 +286,7 @@ export default createJestConfig(config);
     "!src*.stories.{js,jsx,ts,tsx}"
   ]
   coverageThreshold: {
+<<<<<<< HEAD
     global: { branches: 70, functions: 70, lines: 70, statements: 70 },
   },
 };
@@ -278,10 +300,13 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 export default createJestConfig(config);
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 origin/automation-improvements-final
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     global: { branches: 70, functions: 70, lines: 70, statements: 70 }
   }
 }
 export default createJestConfig(config);
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 }
@@ -318,3 +343,5 @@ export default createJestConfig (config);
 
 origin/main
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

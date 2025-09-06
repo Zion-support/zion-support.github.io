@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 import {
@@ -27,6 +28,8 @@ import {
   Search,
   Settings,;
   Users;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 } from 'lucide-react'; import {
   Sidebar
   SidebarContent
@@ -53,6 +56,7 @@ export function AppSidebar() {
   return (
     <Sidebar>
       <SidebarContent>
+<<<<<<< HEAD
         <SidebarGroup title='Dashboard'>
           <SidebarMenuItem href='/creator-dashboard' icon={<Home size={16} />}>
             <span>Home</span>
@@ -77,6 +81,8 @@ export function AppSidebar() {
             <span>Profile</span>
           </SidebarMenuItem>
           <SidebarMenuItem href='/settings' icon={<Settings size={16} />}>            <span>Settings</span>            <span>Home</span>
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           </SidebarMenuItem>
           <SidebarMenuItem href="/messaging" icon={<Mail size={16} />}>
             <span>Messages</span>
@@ -102,6 +108,7 @@ export function AppSidebar() {
           </SidebarMenuItem>
         </SidebarGroup>
       </SidebarContent>
+<<<<<<< HEAD
     </Sidebar>
   )
 }
@@ -117,6 +124,10 @@ ursor/fix-website-loading-errors-and-merge-6662
 }
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {;
   Bell,;
   FileText,;
@@ -205,6 +216,7 @@ export function AppSidebar() {;
           </SidebarMenuItem>;
         </SidebarGroup>;
       </SidebarContent>;
+<<<<<<< HEAD
 
 import { Bell, FileText, Home, Mail, Search, Settings, Users } from 'lucide-react'
 
@@ -215,6 +227,8 @@ import { Bell, FileText, Home, Mail, Search, Settings, Users } from 'lucide-reac
   );
 }
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     </Sidebar>;
   );
 }
@@ -297,6 +311,7 @@ function AppSidebar() {
         </SidebarGroup>;
       </SidebarContent>;
     </Sidebar>);
+<<<<<<< HEAD
     </Sidebar>
   )
 }
@@ -307,3 +322,5 @@ import { Bell, FileText, Home, Mail, Search, Settings, Users } from 'lucide-reac
 import { Bell, FileText, Home, Mail, Search, Settings, Users } from 'lucide-react'
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 }
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

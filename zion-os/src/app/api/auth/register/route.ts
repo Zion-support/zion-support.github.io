@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -33,11 +34,14 @@ export async function POST() {
     // Check if user already exists;
     const existing_user = await prisma.user.find_unique ({
       where: { email }}),
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     // Check condition
 if ( {) {
   $2
 }
       return NextResponse.json (
+<<<<<<< HEAD
         { error: "User with this email already exists" },
 <<<<<<< HEAD
 
@@ -90,6 +94,8 @@ if ( {) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { NextRequest, NextResponse } from "next/server",;
 import bcrypt from "bcryptjs",;
 import { prisma } from "@/lib/prisma",;
@@ -143,9 +149,12 @@ export async function POST(request: NextRequest) {;
     return NextResponse.json(;
       { error: "Internal server error" };
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       { status: 500 }
     );
   }

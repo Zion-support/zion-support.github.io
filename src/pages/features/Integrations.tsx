@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useEffect } from 'react'
 import { Header } from '@/components/Header'
 import { SEO } from '@/components/SEO'
@@ -83,6 +84,8 @@ export default function IntegrationsFeature() {
     markSlackConnected()
   }, [markSlackConnected]),
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <>
       <SEO
@@ -105,20 +108,6 @@ export default function IntegrationsFeature() {
           </p>
           <div className="relative w-full h-auto aspect-video mx-auto mb-12 rounded-lg shadow-xl overflow-hidden">
             <img
-              src='https://placehold.co/800x400'
-              alt='Screenshot showing integrations';
-              className='object-cover';
-            />;
-          </div>;
-          <h2 className='text-2xl font-bold mb-4'>Benefits &amp; Use Cases</h2>
-          <ul className='list-disc list-inside space-y-2 mb-8 text-zion-slate-light'>
-              src="https://placehold.co/800x400"
-              alt="Screenshot showing integrations"
-              className="object-cover"
-            />
-          </div>
-          <h2 className="text-2xl font-bold mb-4">Benefits &amp, Use Cases</h2>
-          <ul className="list-disc list-inside space-y-2 mb-8 text-zion-slate-light">
             <li>Trigger Slack notifications for new orders or messages.</li>
             <li>Embed talent search or job listings directly on your site.</li>
             <li>Build custom analytics by pulling data from our REST endpoints.</li>
@@ -134,26 +123,30 @@ export default function IntegrationsFeature() {
               <p className="text-zion-slate-light">Yes, free tier requests are limited per hour. Contact sales for higher limits.</p>
             </div>
           </div>
+<<<<<<< HEAD
           <div className='text-center'>
             <Button size='lg' className='bg-zion-purple text-white' asChild>
               <Link href='/developers'>Learn More</Link>            </Button>          <div className="text-center">
           <div className="text-center">
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <Button size="lg" className="bg-zion-purple text-white" asChild>
-          <div className='text-center'>
-            <Button size='lg' className='bg-zion-purple text-white' asChild>
-              <Link href='/developers'>Learn More</Link>            </Button>          <div className="text-center">
               <Link href="/developers">Learn More</Link>
             </Button>
           </div>
         </div>
       </main>
     </>
+<<<<<<< HEAD
   )
 }
 ;
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 ;
-
 import React, { useEffect } from "react",;
 import { Header } from "@/components/Header",;
 import { SEO } from "@/components/SEO",;
@@ -172,6 +165,7 @@ export default function IntegrationsFeature() {;
   const { markSlackConnected } = useAdvancedOnboardingStatus();
   useEffect(() => {;
     markSlackConnected();
+<<<<<<< HEAD
             />;
           </div>;
           <h2 className='text-2xl font-bold mb-4'>Benefits &amp; Use Cases</h2>;
@@ -203,6 +197,8 @@ function IntegrationsFeature() {
   const { markSlackConnected } = useAdvancedOnboardingStatus ();
   useEffect (() => {
     markSlackConnected ();
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   }, [markSlackConnected]);
   return (
     <>;
@@ -235,6 +231,7 @@ function IntegrationsFeature() {
             />;
           </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
           <h2 className='text - 2xl font - bold mb - 4'>Benefits &amp; Use Cases</h2>;
           <ul className='list - disc list - inside space - y-2 mb - 8 text - zion - slate - light'>;
             <li > Trigger Slack notifications for new orders or messages.</li>;
@@ -260,6 +257,8 @@ function IntegrationsFeature() {
           </div>;
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <h2 className="text-2xl font-bold mb-4">Benefits &amp, Use Cases</h2>;
           <ul className="list-disc list-inside space-y-2 mb-8 text-zion-slate-light">;
             <li>Trigger Slack notifications for new orders or messages.</li>;
@@ -284,9 +283,12 @@ function IntegrationsFeature() {
           </div>;
         </div>;
       </main>;
+<<<<<<< HEAD
     </>;
   );
 }
 ;
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

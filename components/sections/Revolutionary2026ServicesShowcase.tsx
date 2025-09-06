@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -80,6 +81,8 @@ import { metaverseDigitalRealityServices2026 } from '../../data/2026-metaverse-d
 <<<<<<< HEAD
 =======
 import {
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   ArrowRight
   Star
   TrendingUp
@@ -88,7 +91,20 @@ import {
   Rocket
   Globe
   Sparkles;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+} from 'lucide-react';import Link from 'next/link';
+import { ArrowRight, Star, TrendingUp, Zap, Brain, Rocket, Globe, Sparkles } from 'lucide-react';
+import Link from 'next/link';
+import { aiAutonomousServices2026 } from '../../data/2026-ai-autonomous-services';
+import { quantumSpaceTechServices2026 } from '../../data/2026-quantum-space-tech-services';
+import { metaverseDigitalRealityServices2026 } from '../../data/2026-metaverse-digital-reality-services';import { ArrowRight, Star, TrendingUp, Zap, Brain, Rocket, Globe, Sparkles } from 'lucide-react';
+import Link from 'next/link';
+import { aiAutonomousServices2026  } from '../../data/2026-ai-autonomous-services';
+import { quantumSpaceTechServices2026  } from '../../data/2026-quantum-space-tech-services';
+import { metaverseDigitalRealityServices2026 } from '../../data/2026-metaverse-digital-reality-services';
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   ArrowRight,
   Star,
   TrendingUp,
@@ -96,10 +112,13 @@ import {
   Brain,
   Rocket,
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   Globe,;
   Sparkles,;
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 } from 'lucide-react';import Link from 'next/link';
 import { aiAutonomousServices2026 } from '../../data/2026-ai-autonomous-services';
 import { quantumSpaceTechServices2026 } from '../../data/2026-quantum-space-tech-services';
@@ -110,6 +129,7 @@ import { aiAutonomousServices2026  } from '../../data/2026-ai-autonomous-service
 import { quantumSpaceTechServices2026  } from '../../data/2026-quantum-space-tech-services';
 import { metaverseDigitalRealityServices2026 } from '../../data/2026-metaverse-digital-reality-services';
 export default function Revolutionary2026ServicesShowcase() {
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -148,6 +168,8 @@ export default function Revolutionary2026ServicesShowcase() {
   // Get featured services from each category
 
   // Get featured services from each category;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const featuredAIServices = aiAutonomousServices2026.slice(0, 3);
   const featuredQuantumServices = quantumSpaceTechServices2026.slice(0, 3);
   const featuredMetaverseServices = metaverseDigitalRealityServices2026.slice(
@@ -159,6 +181,7 @@ export default function Revolutionary2026ServicesShowcase() {
     visible: {
       opacity: 1
       transition: {
+<<<<<<< HEAD
         staggerChildren: 0.1
       }
     },  };        staggerChildren: 0.1
@@ -166,12 +189,15 @@ export default function Revolutionary2026ServicesShowcase() {
     }
   }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const itemVariants = {
     hidden: { opacity: 0, y: 20 }
     visible: {
       opacity: 1
       y: 0
       transition: {
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -180,6 +206,8 @@ export default function Revolutionary2026ServicesShowcase() {
       }
     }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export default function Revolutionary2026ServicesShowcase() {;
   // Get featured services from each category;
   const featuredAIServices = aiAutonomousServices2026 && aiAutonomousServices2026.slice(0, 3);
@@ -189,6 +217,7 @@ export default function Revolutionary2026ServicesShowcase() {;
     3;
   );  const featuredMetaverseServices = metaverseDigitalRealityServices2026 && metaverseDigitalRealityServices2026.slice(0, 3);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -196,6 +225,8 @@ export default function Revolutionary2026ServicesShowcase() {;
         duration: 0.6,
       },
     },
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   const containerVariants = {;
     hidden: { opacity: 0 },;
@@ -209,6 +240,7 @@ export default function Revolutionary2026ServicesShowcase() {;
     }
   };
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -233,10 +265,18 @@ export default function Revolutionary2026ServicesShowcase() {;
         duration: 0 && 0.6,;
       },;
     },;
-  };
+=======
+
   return (
     <section className='py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden'>;
       {/* Enhanced Background Effects */}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+  };
+
+  return (
+    <section className="py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+      {/* Enhanced Background Effects */}
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       <div className='absolute inset-0'>;
         <div className='absolute inset-0 bg-gradient-to-br from-purple-900/30 via-transparent to-cyan-900/30'></div>;
@@ -281,17 +321,18 @@ export default function Revolutionary2026ServicesShowcase() {;
 
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <div className='max-w-7xl mx-auto relative z-10'>        {/* Enhanced Header */}
 
         {/* Enhanced Header */}
 
-
         <motion.div
+        <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0 && 0.8 }}
           viewport={{ once: true }}
-
 
         >
           <div className='inline-flex items-center space-x-2 bg-gradient-to-r from-purple-600/20 to-pink-600/20 px-4 py-2 rounded-full border border-purple-500/30 mb-6'>
@@ -310,10 +351,13 @@ export default function Revolutionary2026ServicesShowcase() {;
             technologies ever created.
             <span className='text-purple-400 font-semibold'>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           className='text-center mb-20'>;
           <div className='inline-flex items-center space-x-2 bg-gradient-to-r from-purple-600/20 to-pink-600/20 px-4 py-2 rounded-full border border-purple-500/30 mb-6'>;
             <Sparkles className='w-5 h-5 text-purple-400' />;
@@ -336,6 +380,7 @@ export default function Revolutionary2026ServicesShowcase() {;
               {' '}
               1000% ROI guaranteed;
             </span>{' '}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -411,6 +456,8 @@ export default function Revolutionary2026ServicesShowcase() {;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           {/* Service Statistics */}
           <div className='grid grid - cols - 2 md:grid - cols - 4 gap - 6 mt - 12'>;
             <div className='text - center'>;
@@ -431,6 +478,7 @@ export default function Revolutionary2026ServicesShowcase() {;
               <div className='text - 3xl font - bold text - pink - 400'>;
                 {metaverseDigitalRealityServices2026.length}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
           className="text-center mb-20"
         >
@@ -439,6 +487,8 @@ export default function Revolutionary2026ServicesShowcase() {;
           className="text-center mb-20"
         >
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-purple-600/20 to-pink-600/20 px-4 py-2 rounded-full border border-purple-500/30 mb-6">
             <Sparkles className="w-5 h-5 text-purple-400" />
             <span className="text-purple-300 text-sm font-medium">2026 Revolutionary Innovations</span>
@@ -467,20 +517,21 @@ export default function Revolutionary2026ServicesShowcase() {;
               <div className="text-gray-400 text-sm">Metaverse Services</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-green-400">∞</div>
               <div className="text-gray-400 text-sm">Possibilities</div>
             </div>
           </div>
         </motion.div>
-
             with our revolutionary solutions.;
           </p>;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
             with our revolutionary solutions.;
           </p>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           {/* Service Statistics */}
           <div className='grid grid-cols-2 md:grid-cols-4 gap-6 mt-12'>;
             <div className='text-center'>;
@@ -504,7 +555,6 @@ export default function Revolutionary2026ServicesShowcase() {;
               <div className='text-gray-400 text-sm'>Metaverse Services</div>;
             </div>;
             <div className='text-center'>;
-              <div className='text-3xl font-bold text-green-400'>∞</div>;
               <div className='text-gray-400 text-sm'>Possibilities</div>            </div>        >;
           <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-purple-600/20 to-pink-600/20 px-4 py-2 rounded-full border border-purple-500/30 mb-6">;
             <Sparkles className="w-5 h-5 text-purple-400" />;
@@ -537,23 +587,26 @@ export default function Revolutionary2026ServicesShowcase() {;
               <div className="text-gray-400 text-sm">Metaverse Services</div>;
             </div>;
             <div className="text-center">;
-              <div className="text-3xl font-bold text-green-400">∞</div>;
               <div className="text-gray-400 text-sm">Possibilities</div>;
             </div>;
           </div>;
         </motion && motion.div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 
         {/* AI Autonomous Services Section */}
         <motion&& motion.div
           variants={containerVariants}
+<<<<<<< HEAD
 
 
           viewport={{ once: true }}
@@ -810,29 +863,14 @@ export default function Revolutionary2026ServicesShowcase() {;
         {/* AI Autonomous Services Section */}
         <motion.div
           variants={containerVariants}
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           initial='hidden'
           whileInView='visible'
 
           viewport={{ once: true }}
-          className='mb-20'
-        >
-          <div className='flex items-center space-x-3 mb-12'>
-            <div className='w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center'>
-              <Brain className='w-6 h-6 text-white' />
-            </div>
-            <div>
-              <h3 className='text-3xl font-bold text-white'>
-                AI Autonomous Services
-              </h3>
-              <p className='text-blue-300'>
-                Fully autonomous AI systems that run your business
-              </p>
-            </div>
-          </div>
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            {featuredAIServices.map((service, index) => (
-              <motion.div
                 key={service.id}
-                variants={itemVariants}
+                variants={item_variants}
                 className='group relative'          viewport={{ once: true }}
           className="mb-20"
         >
@@ -846,11 +884,15 @@ export default function Revolutionary2026ServicesShowcase() {;
             </div>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             {featuredAIServices.map((service, index) => (
               <motion.div
                 key={service.id}
                 variants={itemVariants}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
                 className="group relative"
@@ -900,6 +942,8 @@ export default function Revolutionary2026ServicesShowcase() {;
                     ))}                  </div>
                   <div className='flex items-center justify-between mb-4'>                  <div className="space-y-3 mb-6">
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     {service.features.slice(0, 3).map((feature, idx) => (
                       <div key={idx} className="flex items-center space-x-2">
                         <div className="w-2 h-2 bg-blue-400 rounded-full"></div>
@@ -907,6 +951,7 @@ export default function Revolutionary2026ServicesShowcase() {;
                       </div>
                     ))}
                   </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -962,6 +1007,8 @@ export default function Revolutionary2026ServicesShowcase() {;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                         {service.price}
                       </span>;
                       <span className='text - gray - 400'>{service.period}</span>;
@@ -970,6 +1017,7 @@ export default function Revolutionary2026ServicesShowcase() {;
                       <Star className='w - 4 h - 4 text - yellow - 400 fill - current' />;
                       <span className='text - yellow - 400 text - sm'>;
                         {service.rating}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -980,6 +1028,8 @@ export default function Revolutionary2026ServicesShowcase() {;
                   <div className="flex items-center justify-between mb-4">
                     <div>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       <span className="text-2xl font-bold text-blue-400">{service.price}</span>
                       <span className="text-gray-400">{service.period}</span>
                     </div>
@@ -991,13 +1041,18 @@ export default function Revolutionary2026ServicesShowcase() {;
                   </div>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   <Link 
                     href={service.link} 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
                   <Link
@@ -1005,6 +1060,8 @@ export default function Revolutionary2026ServicesShowcase() {;
                   <Link 
                     href={service.link} 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     className="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors text-sm font-medium"
                   >
                     Learn More <ArrowRight className="w-4 h-4 ml-2" />
@@ -1013,12 +1070,14 @@ export default function Revolutionary2026ServicesShowcase() {;
               </motion.div>
             ))}
           </div>
-
           className='mb-20'>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 className='mb-20'>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <div className='flex items-center space-x-3 mb-12'>;
             <div className='w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center'>;
               <Brain className='w-6 h-6 text-white' />;
@@ -1032,6 +1091,33 @@ className='mb-20'>;
               </p>;
             </div>;
           </div>;
+<<<<<<< HEAD
+=======
+        {/* Quantum Space Tech Services Section */}
+        <motion.div
+          variants={containerVariants}
+          initial='hidden'
+          whileInView='visible'
+          viewport={{ once: true }}
+          className='mb-20'
+        >
+          <div className='flex items-center space-x-3 mb-12'>
+            <div className='w-12 h-12 bg-gradient-to-br from-indigo-500 to-purple-500 rounded-xl flex items-center justify-center'>
+              <Rocket className='w-6 h-6 text-white' />
+            </div>
+            <div>
+              <h3 className='text-3xl font-bold text-white'>
+                Quantum Space Technology
+              </h3>
+              <p className='text-indigo-300'>
+                Revolutionary quantum-powered space exploration and technology
+              </p>
+            </div>
+          </div>
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            {featuredQuantumServices.map((service, index) => (
+              <motion.div
+                key={service.id}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            {featuredAIServices && featuredAIServices.map((service, index) => (;
               <motion&& motion.div
@@ -1048,6 +1134,7 @@ className='mb-20'>;
               <p className="text-blue-300">Fully autonomous AI systems that run your business</p>;
             </div>;
           </div>;
+<<<<<<< HEAD
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
             {featuredAIServices && featuredAIServices.map((service, index) => (;
@@ -1206,10 +1293,13 @@ className='mb-20'>;
             </Link>
           </div>
         </motion.div>
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
         {/* Quantum Space Tech Services Section */}
         <motion&& motion.div
           variants={containerVariants}
+<<<<<<< HEAD
           initial='hidden'
           whileInView='visible'
 
@@ -1250,6 +1340,11 @@ className='mb-20'>;
           whileInView="visible"
           viewport={{ once: true }}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+                key={service.id}
+                variants={item_variants}
+                className='group relative'          viewport={{ once: true }}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           className="mb-20"
         >
           <div className="flex items-center space-x-3 mb-12">
@@ -1266,6 +1361,7 @@ className='mb-20'>;
               <motion.div
                 key={service.id}
                 variants={itemVariants}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
           className="mb - 20";
@@ -1303,10 +1399,13 @@ className='mb-20'>;
                     <div>
                       <h4 className='text-xl font-bold text-white'>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                         {service.name}
                       </h4>;
                       <p className='text - indigo - 300 text - sm'>;
                         {service.tagline}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1331,6 +1430,8 @@ className='mb-20'>;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     {service.features.slice(0, 3).map((feature, idx) => (
                       <div key={idx} className="flex items-center space-x-2">
                         <div className="w-2 h-2 bg-indigo-400 rounded-full"></div>
@@ -1338,6 +1439,7 @@ className='mb-20'>;
                       </div>
                     ))}
                   </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1367,6 +1469,8 @@ className='mb-20'>;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                         {service.price}
                       </span>;
                       <span className='text - gray - 400'>{service.period}</span>;
@@ -1375,6 +1479,7 @@ className='mb-20'>;
                       <Star className='w - 4 h - 4 text - yellow - 400 fill - current' />;
                       <span className='text - yellow - 400 text - sm'>;
                         {service.rating}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -1385,6 +1490,8 @@ className='mb-20'>;
                   <div className="flex items-center justify-between mb-4">
                     <div>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       <span className="text-2xl font-bold text-indigo-400">{service.price}</span>
                       <span className="text-gray-400">{service.period}</span>
                     </div>
@@ -1396,13 +1503,18 @@ className='mb-20'>;
                   </div>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   <Link 
                     href={service.link} 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
                   <Link
@@ -1410,6 +1522,8 @@ className='mb-20'>;
                   <Link 
                     href={service.link} 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     className="inline-flex items-center text-indigo-400 hover:text-indigo-300 transition-colors text-sm font-medium"
                   >
                     Learn More <ArrowRight className="w-4 h-4 ml-2" />
@@ -1418,6 +1532,7 @@ className='mb-20'>;
               </motion.div>
             ))}
           </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -1539,10 +1654,13 @@ className='mb-20'>;
 =======
           <div className='text-center mt-8'>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <Link
               href='/services?category=quantum-space'
               className='inline-flex items-center px-6 py-3 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-semibold rounded-xl hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30'>;
               View All Quantum Space Services{' '}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -1553,10 +1671,13 @@ className='mb-20'>;
           <div className="text-center mt-8">
             <Link 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               href="/services?category=quantum-space"
               className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-semibold rounded-xl hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30"
             >
               View All Quantum Space Services <ArrowRight className="w-5 h-5 ml-2" />
+<<<<<<< HEAD
 
             </Link>
 <<<<<<< HEAD
@@ -1564,12 +1685,15 @@ className='mb-20'>;
           </div>
         </motion.div>
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <ArrowRight className='w-5 h-5 ml-2' />            </Link>          <div className="text-center mt-8">;
             <Link
               href="/services?category=quantum-space"
               className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-semibold rounded-xl hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30">;
               View All Quantum Space Services <ArrowRight className="w-5 h-5 ml-2" />;
           </div>;
+<<<<<<< HEAD
         </motion && motion.div>;
 
 
@@ -1582,14 +1706,14 @@ className='mb-20'>;
 
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
         {/* Metaverse & Digital Reality Services Section */}
         <motion&& motion.div
           variants={containerVariants}
-
-
-
-
+          initial='hidden'
+          whileInView='visible'
 
           viewport={{ once: true }}
 
@@ -1642,11 +1766,14 @@ className='mb-20'>;
           initial='hidden';
           whileInView='visible';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
           initial='hidden'
           whileInView='visible'
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           viewport={{ once: true }}
           className='mb - 20';
         >;
@@ -1666,10 +1793,17 @@ className='mb-20'>;
           <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8'>            {featuredMetaverseServices.map ((service, index) => (
               <motion.div;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
+        {/* Metaverse & Digital Reality Services Section */}
+        <motion&& motion.div
+          variants={containerVariants}
                 key={service.id}
                 variants={item_variants}
                 className='group relative'          viewport={{ once: true }}
+<<<<<<< HEAD
 
           initial="hidden"
           whileInView="visible"
@@ -1683,6 +1817,8 @@ className='mb-20'>;
           whileInView="visible"
           viewport={{ once: true }}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           className="mb-20"
         >
           <div className="flex items-center space-x-3 mb-12">
@@ -1699,6 +1835,7 @@ className='mb-20'>;
               <motion.div
                 key={service.id}
                 variants={itemVariants}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
                 className="group relative"
@@ -1748,6 +1885,8 @@ className='mb-20'>;
                     ))}                  </div>
                   <div className='flex items-center justify-between mb-4'>                  <div className="space-y-3 mb-6">
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     {service.features.slice(0, 3).map((feature, idx) => (
                       <div key={idx} className="flex items-center space-x-2">
                         <div className="w-2 h-2 bg-pink-400 rounded-full"></div>
@@ -1755,6 +1894,7 @@ className='mb-20'>;
                       </div>
                     ))}
                   </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1810,6 +1950,8 @@ className='mb-20'>;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                         {service.price}
                       </span>;
                       <span className='text - gray - 400'>{service.period}</span>;
@@ -1818,6 +1960,7 @@ className='mb-20'>;
                       <Star className='w - 4 h - 4 text - yellow - 400 fill - current' />;
                       <span className='text - yellow - 400 text - sm'>;
                         {service.rating}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -1828,6 +1971,8 @@ className='mb-20'>;
                   <div className="flex items-center justify-between mb-4">
                     <div>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       <span className="text-2xl font-bold text-pink-400">{service.price}</span>
                       <span className="text-gray-400">{service.period}</span>
                     </div>
@@ -1839,13 +1984,18 @@ className='mb-20'>;
                   </div>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   <Link 
                     href={service.link} 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
                   <Link
@@ -1853,6 +2003,8 @@ className='mb-20'>;
                   <Link 
                     href={service.link} 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     className="inline-flex items-center text-pink-400 hover:text-pink-300 transition-colors text-sm font-medium"
                   >
                     Learn More <ArrowRight className="w-4 h-4 ml-2" />
@@ -1861,6 +2013,7 @@ className='mb-20'>;
               </motion.div>
             ))}
           </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -1980,10 +2133,13 @@ className='mb-20'>;
 =======
           <div className='text-center mt-8'>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <Link
               href='/services?category=metaverse'
               className='inline-flex items-center px-6 py-3 bg-gradient-to-r from-pink-600 to-rose-600 text-white font-semibold rounded-xl hover:from-pink-700 hover:to-rose-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30'>;
               View All Metaverse Services{' '}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -1994,10 +2150,13 @@ className='mb-20'>;
           <div className="text-center mt-8">
             <Link 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               href="/services?category=metaverse"
               className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-pink-600 to-rose-600 text-white font-semibold rounded-xl hover:from-pink-700 hover:to-rose-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30"
             >
               View All Metaverse Services <ArrowRight className="w-5 h-5 ml-2" />
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -2009,6 +2168,8 @@ className='mb-20'>;
 
 
 <<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <ArrowRight className='w-5 h-5 ml-2' />            </Link>          <div className="text-center mt-8">;
             <Link
               href="/services?category=metaverse"
@@ -2017,15 +2178,9 @@ className='mb-20'>;
           </div>;
         </motion && motion.div>;
 
-
-=======
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {/* Call to Action Section */}
         <motion&& motion.div
+<<<<<<< HEAD
 =======
         {/* Call to Action Section */}
         <motion&& motion.div
@@ -2035,26 +2190,19 @@ className='mb-20'>;
         {/* Call to Action Section */}
         <motion.div
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0 && 0.8 }}
           viewport={{ once: true }}
-
-
-                {' '}
-                Contact us today;
-              </span>{' '}
-
-          className="text-center"
-        >
-          <div className="bg-gradient-to-r from-purple-900/40 via-pink-900/40 to-cyan-900/40 backdrop-blur-xl border border-purple-500/30 rounded-3xl p-12">
-            <h3 className="text-4xl font-bold text-white mb-6">
               Ready to Experience the Future?
             </h3>
             <p className="text-gray-300 text-xl mb-8 max-w-3xl mx-auto">
               Join thousands of companies already achieving unprecedented success with our revolutionary 2026 technologies. 
               <span className="text-purple-400 font-semibold"> Contact us today</span> to start your transformation.
             </p>
+<<<<<<< HEAD
             
             <div className="flex flex-col sm: flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
               <Link 
@@ -2146,23 +2294,31 @@ className='mb-20'>;
                 </span>
                 <span className='text-purple-300'>🌐 ziontechgroup.com</span>              </div>            <div className="mt-8 text-center">
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <p className="text-gray-400 text-sm mb-2">Contact Information</p>
               <div className="flex flex-col sm:flex-row items-center justify-center space-y-2 sm:space-y-0 sm:space-x-6 text-sm">
                 <span className="text-purple-300">📱 +1 302 464 0950</span>
                 <span className="text-purple-300">✉️ kleber@ziontechgroup.com</span>
                 <span className="text-purple-300">🌐 ziontechgroup.com</span>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
               </div>
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             </div>
           </div>
         </motion.div>
       </div>
     </section>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
               to start your transformation.;
             </p>;
@@ -2202,15 +2358,17 @@ className='mb-20'>;
       </div>;
     </section>;
   );
+<<<<<<< HEAD
 =======
 =======
               to start your transformation.;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   );
 
 }
-
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
@@ -2317,6 +2475,7 @@ className='mb-20'>;
     </section>);
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 );
@@ -2326,3 +2485,5 @@ className='mb-20'>;
   );
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

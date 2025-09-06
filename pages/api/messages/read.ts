@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
   const user = requireUser(req, res);
@@ -67,6 +68,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!conv |!conv.participants.includes(user.id)) return res.status(404).json({ error: 'Conversation not found' })
   markAsRead(conversationId, user.id)
 
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   res.status(200).json({ success: true })
 import { NextApiRequest, NextApiResponse } from 'next',;
 import { requireUser } from '../../../utils/auth',;
@@ -92,9 +97,14 @@ import { getConversationById, markAsRead } from '../../../utils/messaging/storag
 export default function handler(req, res) {
   try {
   const user = requireUser(req, res);
-  if (!user) return,;
-  if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
+  if (!user) return;
+  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
+  const { conversationId } = req.body || {};
+  if (!conversationId) return res.status(400).json({ error: 'Missing conversationId' });
+  const conv = getConversationById(conversationId);
+  if (!conv || !conv.participants.includes(user.id)) return res.status(404).json({ error: 'Conversation not found' });
   markAsRead(conversationId, user.id);
+<<<<<<< HEAD
   res.status(200).json({ success: true });
   } catch (error) {
     console.error("Error:", error);
@@ -105,10 +115,13 @@ export default function handler(req, res) {
   }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 }
@@ -121,3 +134,5 @@ export default function handler(req, res) {
 }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -3,6 +3,7 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import {LucideIcon} from "lucide-react";
 import {BadgeCheck, //, publishing, a, listing, Award, //, top, contributor, Star, //, profile, complete, Trophy, //, featured, creator, BadgePlus, //, first, action, BadgeDollarSign, //, monetization} from "lucide-react";
@@ -16,6 +17,10 @@ import {BadgeCheck, //, publishing, a, listing, Award, //, top, contributor, Sta
 import {LucideIcon} from "lucide-react";
 import {BadgeCheck, //, publishing, a, listing, Award, //, top, contributor, Star, //, profile, complete, Trophy, //, featured, creator, BadgePlus, //, first, action, BadgeDollarSign, //, monetization} from "lucide-react";
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+import {LucideIcon} from "lucide-react";
+import {BadgeCheck, //, publishing, a, listing, Award, //, top, contributor, Star, //, profile, complete, Trophy, //, featured, creator, BadgePlus, //, first, action, BadgeDollarSign, //, monetization} from "lucide-react";
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { LucideIcon } from "lucide-react",
 import {
   BadgeCheck, // publishing a listing
@@ -30,17 +35,21 @@ import {
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export type BadgeKey =
   | "first_listing"
   | "top_contributor"
   | "profile_complete"
   | "featured_creator"
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 import { LucideIcon } from './lucide-react';
@@ -190,6 +199,8 @@ import {;
   BadgeDollarSign // monetization;
 } from "lucide-react",;
 ;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ;
 ;
 
@@ -202,7 +213,13 @@ import {;
   BadgePlus,  // first action;
   BadgeDollarSign // monetization;
 } from "lucide-react",;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+import { LucideIcon } from './lucide-react';
+import { BadgeCheck, //, publishing, a, listing, Award, //, top, contributor, Star, //, profile, complete, Trophy, //, featured, creator, BadgePlus, //, first, action, BadgeDollarSign, //, monetization } from './lucide-react';
+;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export type BadgeKey =;
   | "first_listing";
   | "top_contributor";
@@ -210,16 +227,20 @@ export type BadgeKey =;
   | "featured_creator";
   | "first_action";
 <<<<<<< HEAD
+<<<<<<< HEAD
   | "monetized";
 ;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export interface BadgeMeta {
   key: BadgeKey;
   name: string;
   description: string;
   icon: LucideIcon;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -232,10 +253,13 @@ export const badge_list: BadgeMeta[] = [;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   {
     key: "first_listing";
     name: "First Listing"
     description: "Published your first product, service, or listing.";
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     icon: BadgeCheck,
@@ -247,12 +271,15 @@ export const badge_list: BadgeMeta[] = [;
     color: "#8B5CF6",  // Vivid Purple;
     bg: "#E5DEFF",     // Soft Purple;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   }
   {
     key: "top_contributor";
     name: "Top Contributor";
     description: "Recognized as a top contributor in the community.";
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     icon: Award,
     color: "#F97316",  // Bright Orange;
@@ -263,12 +290,15 @@ export const badge_list: BadgeMeta[] = [;
     color: "#F97316",  // Bright Orange;
     bg: "#FEF7CD",     // Soft Yellow;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   }
   {
     key: "profile_complete";
     name: "Profile Complete";
     description: "Completed all steps in your profile setup.";
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     icon: Star,
     color: "#FFD700", // Gold;
@@ -279,12 +309,15 @@ export const badge_list: BadgeMeta[] = [;
     color: "#FFD700", // Gold;
     bg: "#FFFBEA",   // Very light yellow;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   }
   {
     key: "featured_creator";
     name: "Featured Creator";
     description: "Featured on the Zion homepage.";
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     icon: Trophy,
     color: "#0EA5E9", // Ocean Blue;
@@ -295,12 +328,15 @@ export const badge_list: BadgeMeta[] = [;
     color: "#0EA5E9", // Ocean Blue;
     bg: "#D3E4FD",   // Soft Blue;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   }
   {
     key: "first_action";
     name: "First Action"
     description: "Took your first community, posting, or listing action.";
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     icon: BadgePlus,
     color: "#1EAEDB", // Bright Blue;
@@ -311,11 +347,14 @@ export const badge_list: BadgeMeta[] = [;
     color: "#1EAEDB", // Bright Blue;
     bg: "#F3F3F3",   // Light Gray;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   }
   {
     key: "monetized";
     name: "Monetized";
     description: "Earned your first AI dollar in the marketplace.";
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   badgeList && badgeList.find((b) => b && b.key === key),
@@ -325,6 +364,8 @@ export const badge_list: BadgeMeta[] = [;
 =======
   badgeList && badgeList.find((b) => b && b.key === key),
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     icon: BadgeDollarSign,
     color: "#22C55E", // Soft Green;
     bg: "#F2FCE2",    // Soft Green;
@@ -334,20 +375,27 @@ export const getBadgeMeta = (key: BadgeKey) =>: any;
   badge_list.find ((b) => b.key === key),
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   | "first_action"
 
   bg: string
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 export const badgeList: BadgeMeta[] = [
 
   {
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 }
@@ -482,3 +530,5 @@ export const badgeList: BadgeMeta[] = [;
 export const getBadgeMeta = (key: BadgeKey) =>;
   badgeList.find((b) => b.key === key);
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

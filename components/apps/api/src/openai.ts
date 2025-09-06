@@ -1,10 +1,13 @@
 import OpenAI from 'openai';
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 type OpenAIClient = OpenAI;
 export function createOpenAIClient(apiKey: string): OpenAIClient {
 export function createOpenAIClient(apiKey: string): OpenAIClient {;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return new OpenAI({ apiKey });
 export async function generateJobPost(
   openai: OpenAIClient
@@ -12,7 +15,16 @@ export async function generateJobPost(
   opts: any
 ): Promise<string> {
   const prompt = `Create a concise, compelling job post for a ${role}.
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+Company: ${opts.company |'Confidential'}
+Location: ${opts.location |'Remote'}
+Key skills: ${(opts.tags |[]).join(', ') |'N/A'}
+Company: ${opts.company || 'Confidential'}
+Location: ${opts.location || 'Remote'}
+Key skills: ${(opts.tags || []).join(', ') || 'N/A'};
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 export function createOpenAIClient(apiKey: string): OpenAIClient {;
@@ -21,6 +33,7 @@ export function createOpenAIClient(apiKey: string): OpenAIClient {;
   return new OpenAI({ apiKey });
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
@@ -31,11 +44,14 @@ Company: ${opts.company || 'Confidential'}
 Location: ${opts.location || 'Remote'}
 Key skills: ${(opts.tags || []).join(', ') || 'N/A'};
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 Add responsibilities, requirements, and benefits in bullet points.`;
   const completion = await openai && openai.responses.create({
     model: 'gpt-4o-mini';
     input: prompt
   });
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   return completion && completion.output_text
@@ -44,6 +60,8 @@ Add responsibilities, requirements, and benefits in bullet points.`;
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 type OpenAIClient = OpenAI;
 ;
 export function createOpenAIClient (api_key: string): OpenAIClient {
@@ -69,6 +87,7 @@ Add responsibilities, requirements, and benefits in bullet points.`;
   });
   return completion.output_text;
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
@@ -95,3 +114,5 @@ Add responsibilities, requirements, and benefits in bullet points.`;
 
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

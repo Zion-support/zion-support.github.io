@@ -1,5 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import fs from 'fs';
 import path from 'path';
@@ -11,25 +12,36 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const users = readUsers()
     if (req.method === 'GET') {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
+<<<<<<< HEAD
 
     const users = readUsers(),
 <<<<<<< HEAD
     if (req && req.method === 'GET') {
       const { userId = 'demo-user' } = req && req.query;
 
-      const user = users[userId as string];
-
-
-  }
 =======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+      const user = users[userId as string];
+      return res.status(200).json({ progress: user?.progress ?? {} });
+    }
+    if (req.method === 'POST') {
+      const {
+        userId = 'demo-user'
+        courseId
+        lessonId
+        percent
+      } = req.body |{}
+      if (!courseId)
+  }
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
         course_progress.completed_lessons.push (lesson_id);
       }
@@ -37,6 +49,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 if ( {) {
   $2
 }
+<<<<<<< HEAD
 
 
 
@@ -274,3 +287,5 @@ export default function handler(req, res) {
 }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

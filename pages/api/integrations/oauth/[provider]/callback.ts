@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -10,12 +11,19 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 import type { NextApiRequest, NextApiResponse } from "next";
+=======
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  res.status(200).json({
+    ok: true
+    message:
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({
     ok: true
     message:
       "OAuth mock callback successful. Use /api/integrations/connect to finalize connection."
   });
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   res.status(200).json({ ok: true, message: 'OAuth mock callback successful. Use /api/integrations/connect to finalize connection.' })
 }
@@ -41,6 +49,8 @@ function handler() {
 =======
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       "OAuth mock callback successful. Use /api/integrations/connect to finalize connection.",;
   });
 }
@@ -64,4 +74,28 @@ export default function handler(req, res) {
   }
 }
 }
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+    message:
+      "OAuth mock callback successful. Use /api/integrations/connect to finalize connection."
+  });
+}
+  res.status(200).json({ ok: true, message: 'OAuth mock callback successful. Use /api/integrations/connect to finalize connection.' })
+}
+import type { NextApiRequest, NextApiResponse } from './next';
+export default /**
+ * handler - Function description
+ */
+function handler() {
+  res.status (200).json ({
+    ok: true,
+    message:;
+      "OAuth mock callback successful. Use /api / integrations / connect to finalize connection.",
+  });
+}
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

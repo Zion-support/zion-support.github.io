@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -14,10 +15,13 @@ import Head from 'next/head',
 import React from 'react';
 import Head from 'next/head';
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 
 import {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -57,10 +61,13 @@ import React from 'react';
   TrendingUp, ;
   DollarSign, ;
   Users, ;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import Head from 'next / head';
 import Card from '../components / ui / Card';
 import Button from '../components / ui / Button';
 import {
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -75,6 +82,8 @@ import {
   Globe
   Rocket;} from 'lucide-react';import {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   Search,
   Filter,
   TrendingUp,
@@ -88,6 +97,16 @@ import {
   Zap,
   Brain,
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+  Globe,;
+  Rocket,;} from 'lucide-react';import { ;
+  Search;
+  Filter
+  TrendingUp
+  DollarSign
+  Users
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 
@@ -96,6 +115,7 @@ import {
   TrendingUp,
   DollarSign,
   Users,
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
   Globe,
@@ -109,6 +129,8 @@ import {
   Users
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   Star;
   Check;
   X;
@@ -118,6 +140,7 @@ import {
   Brain;
   Globe;
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -127,8 +150,11 @@ export default function ToolComparisonPage() {
   Rocket
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export default function ToolComparisonPage() {;
 
+export default function ToolComparisonPage() {
   const [searchTerm, setSearchTerm] = React.useState('');
   const [selectedCategory, setSelectedCategory] = React.useState('All');
   const [sortBy, setSortBy] = React.useState('rating');
@@ -149,6 +175,7 @@ function ToolComparisonPage() {
     // AI Tools;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -464,6 +491,8 @@ function ToolComparisonPage() {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       pros: [
         'Easy to use'
         'Extensive integrations'
@@ -597,6 +626,7 @@ function ToolComparisonPage() {
       ]
       icon: <Globe className='w-6 h-6' />
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -621,6 +651,8 @@ function ToolComparisonPage() {
       pros: ['Powerful capabilities_easy to use_regular updates_good free tier'],
       cons: ['Sometimes inaccurate_limited context_privacy concerns'],
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       website: 'https://chat.openai.com',
       icon: <Brain className="w - 6 h - 6" />,
       color: 'text - green - 400';
@@ -631,26 +663,6 @@ function ToolComparisonPage() {
       pricing: '$10 - $30 / month',
       rating: 4.7,
       users: '1M+',
-
-      best_for: 'Designers, marketers, content creators',
-      pros: [;
-        'High - quality output',
-        'Creative control',
-        'Commercial rights',
-        'Active community',
-      ],
-      cons: [;
-        'Discord - only interface',
-        'Limited customization',
-        'Monthly subscription',
-      ],
-      website: 'https://midjourney.com',
-      icon: <Zap className='w - 6 h - 6' />,
-      color: 'text - purple - 400',
-    },    {      best_for: 'Designers, marketers, content creators';
-      pros: ['High - quality output_creative control_commercial rights_active community'],
-      cons: ['Discord - only interface_limited customization_monthly subscription'],
-
       website: 'https://midjourney.com',
       icon: <Zap className="w - 6 h - 6" />,
       color: 'text - purple - 400';
@@ -661,22 +673,6 @@ function ToolComparisonPage() {
       pricing: '$39 - $125 / month',
       rating: 4.6,
       users: '100K+',
-
-      best_for: 'Marketing teams, content creators, businesses',
-      pros: [;
-        'Specialized for marketing',
-        'Brand voice training',
-        'SEO optimization',
-        'Team features',
-      ],
-      cons: ['Expensive', 'Limited free trial', 'Can be repetitive'],
-      website: 'https://jasper.ai',
-      icon: <Brain className='w - 6 h - 6' />,
-      color: 'text - blue - 400',
-    },    // SaaS Tools      best_for: 'Marketing teams, content creators, businesses';
-      pros: ['Specialized for marketing_brand voice trainingSEO optimization_team features'],
-      cons: ['ExpensiveLimited free trial_can be repetitive'],
-
       website: 'https://jasper.ai',
       icon: <Brain className="w - 6 h - 6" />,
       color: 'text - blue - 400';
@@ -688,74 +684,11 @@ function ToolComparisonPage() {
       pricing: 'Free - $19.99 / month',
       rating: 4.8,
       users: '2M+',
-
-      best_for: 'Businesses looking to automate workflows',
-      pros: [;
-        'Easy to use',
-        'Extensive integrations',
-        'Reliable',
-        'Great support',
-      ],
-      cons: ['Can get expensive', 'Limited customization'],
-      website: 'https://zapier.com',
-      icon: <Zap className='w - 6 h - 6' />,
-      color: 'text - orange - 400',
-    },    {      pros: ['Easy to use_extensive integrationsReliableGreat support'],
-      cons: ['Can get expensive_limited customization'],
-      website: 'https://zapier.com',
-      icon: <Zap className="w - 6 h - 6" />,
-      color: 'text - orange - 400';
-    }
-
       name: 'Notion',
       category: 'Productivity',
       pricing: 'Free - $8 / month',
       rating: 4.7,
       users: '20M+',
-
-      best_for: 'Teams that need flexible workspace',
-      pros: [;
-        'Highly flexible',
-        'Beautiful interface',
-        'Great templates',
-        'Free tier',
-      ],
-      cons: ['Learning curve', 'Limited offline access', 'Can be overwhelming'],
-      website: 'https://notion.so',
-      icon: <Globe className='w - 6 h - 6' />,
-      color: 'text - gray - 400',
-    },    {      pros: ['Highly flexible_beautiful interface_great templates_free tier'],
-      cons: ['Learning curve_limited offline access_can be overwhelming'],
-      website: 'https://notion.so',
-      icon: <Globe className="w - 6 h - 6" />,
-      color: 'text - gray - 400';
-    }
-
-      name: 'Stripe',
-      category: 'Payments',
-      pricing: '2.9% + 30¢ per transaction',
-      rating: 4.9,
-      users: '1M+',
-
-      best_for: 'Online businesses, SaaS companies, e - commerce',
-      pros: [;
-        'Developer - friendly',
-        'Global reach',
-        'Excellent docs',
-        'Reliable',
-      ],
-      cons: [;
-        'Higher fees than some alternatives',
-        'Complex for beginners',
-        'Strict requirements',
-      ],
-      website: 'https://stripe.com',
-      icon: <DollarSign className='w - 6 h - 6' />,
-      color: 'text - blue - 400',
-    },    // Startup Tools      best_for: 'Online businesses, SaaS companies, e - commerce';
-      pros: ['Developer - friendly_global reach_excellent docs_reliable'],
-      cons: ['Higher fees than some alternatives_complex for beginners_strict requirements'],
-
       website: 'https://stripe.com',
       icon: <DollarSign className="w - 6 h - 6" />,
       color: 'text - blue - 400';
@@ -767,26 +700,6 @@ function ToolComparisonPage() {
       pricing: 'Free - $45 / month',
       rating: 4.7,
       users: '135K+',
-
-      best_for: 'B2B startups, SaaS companies, marketing teams',
-      pros: [;
-        'Free tier',
-        'All - in - one solution',
-        'Great for beginners',
-        'Excellent support',
-      ],
-      cons: [;
-        'Can get expensive',
-        'Complex for small teams',
-        'Limited customization',
-      ],
-      website: 'https://hubspot.com',
-      icon: <TrendingUp className='w - 6 h - 6' />,
-      color: 'text - orange - 400',
-    },    {      best_for: 'B2B startups, SaaS companies, marketing teams';
-      pros: ['Free tier_all - in - one solution_great for beginners_excellent support'],
-      cons: ['Can get expensive_complex for small teams_limited customization'],
-
       website: 'https://hubspot.com',
       icon: <TrendingUp className="w - 6 h - 6" />,
       color: 'text - orange - 400';
@@ -797,17 +710,6 @@ function ToolComparisonPage() {
       pricing: 'Free - $59 / month',
       rating: 4.5,
       users: '12M+',
-
-      best_for: 'E - commerce, content creators, small businesses',
-      pros: ['Free tier', 'Easy to use', 'Good templates', 'Affordable'],
-      cons: ['Limited free features', 'Basic automation', 'Can be expensive'],
-      website: 'https://mailchimp.com',
-      icon: <Users className='w - 6 h - 6' />,
-      color: 'text - yellow - 400',
-    },    {      best_for: 'E - commerce, content creators, small businesses';
-      pros: ['Free tier_easy to use_good templates_affordable'],
-      cons: ['Limited free features_basic automation_can be expensive'],
-
       website: 'https://mailchimp.com',
       icon: <Users className="w - 6 h - 6" />,
       color: 'text - yellow - 400';
@@ -818,6 +720,7 @@ function ToolComparisonPage() {
       pricing: 'Free - $12 / month',
       rating: 4.8,
       users: '10M+',
+<<<<<<< HEAD
 
   });
 
@@ -851,12 +754,15 @@ function ToolComparisonPage() {
     const matchesCategory = selectedCategory === 'All' |tool.category === selectedCategory;
     return matchesSearch && matchesCategory
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const sortedTools = [...filteredTools].sort((a, b) => {
     switch (sortBy) {
       case 'rating':
         return b.rating - a.rating;
       case 'users':
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 export default function ToolComparisonPage() {;
   const [searchTerm, setSearchTerm] = React && React.useState('');
@@ -873,6 +779,8 @@ export default function ToolComparisonPage() {;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const allTools = [;
     // AI Tools;
     {;
@@ -1139,6 +1047,7 @@ export default function ToolComparisonPage() {;
       default: return 0;
   });
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -1214,18 +1123,18 @@ export default function ToolComparisonPage() {;
 
 =======
             <div className='flex flex-col sm:flex-row gap-6 justify-center items-center mb-20'>;
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <Button
                 href='#comparison'
                 size='lg'
                 className='animate-scale-in shadow-2xl shadow-purple-500/25 hover:shadow-purple-500/40'
-                style={{ animationDelay: '0 && 0.2s' }}>;
-                Start Comparing;
-                <ArrowRight className='w-5 h-5 ml-2' />;
-              </Button>;
               <Button
                 href='/contact'
                 variant='outline'
                 size='lg'
+<<<<<<< HEAD
                 className='animate-scale-in border-white/20 hover:border-white/40 hover:bg-white/5'                style={{ animationDelay: '0 && 0.4s' }}                href="/contact"
     <>
       <Head>
@@ -1420,12 +1329,15 @@ export default function ToolComparisonPage() {;
 =======
                 className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white/5"
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               >
                 Get Expert Advice
               </Button>
             </div>
           </div>
           {/* Stats */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
           <div
@@ -1474,6 +1386,10 @@ export default function ToolComparisonPage() {;
                 {allTools.length}+
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
               </div>
+=======
+                {allTools.length}+
+              </div>
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <div className="text-gray-400 text-sm">Tools Analyzed</div>
             </div>
             <div className="text-center group">
@@ -1497,6 +1413,7 @@ export default function ToolComparisonPage() {;
           </div>
         </div>
       </section>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
                 className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white/5">;
@@ -1608,10 +1525,13 @@ export default function ToolComparisonPage() {;
             <div className="relative flex-1 max-w-md">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <input
                 type="text"
                 placeholder="Search tools, categories, or use cases..."
                 value={searchTerm}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -1621,10 +1541,13 @@ export default function ToolComparisonPage() {;
               />;
             </div>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             {/* Category Filter */}
             <div className='flex flex-wrap gap-2'>;
               {categories && categories.map(category => (            <div className="flex flex-wrap gap-2">;
               {categories && categories.map((category) => (;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1650,6 +1573,9 @@ export default function ToolComparisonPage() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
             <div className='flex flex-wrap gap-2'>
 
+=======
+                <button
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               {categories.map(category => (                <button
 
               />
@@ -1659,6 +1585,7 @@ export default function ToolComparisonPage() {;
 
                 <button
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -1668,6 +1595,8 @@ export default function ToolComparisonPage() {;
                 <button
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   key={category}
                   onClick={() => setSelectedCategory(category)}
                   className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${;
@@ -1680,6 +1609,7 @@ export default function ToolComparisonPage() {;
                 </button>;
               ))}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
             </div>;
 
@@ -1687,11 +1617,14 @@ export default function ToolComparisonPage() {;
 =======
             </div>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             {/* Sort */}
             <div className='flex items-center space-x-2'>;
               <Filter className='w-5 h-5 text-gray-400' />;
 =======
             </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
             {/* Sort */}
@@ -1709,11 +1642,15 @@ export default function ToolComparisonPage() {;
             <div className="flex items-center space-x-2">
               <Filter className="w-5 h-5 text-gray-400" />
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
             {/* Sort */}
             <div className='flex items-center space-x-2'>
               <Filter className='w-5 h-5 text-gray-400' />
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -1724,6 +1661,8 @@ export default function ToolComparisonPage() {;
               <Filter className='w-5 h-5 text-gray-400' />
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <select
                 value={sortBy}
                 onChange={e => setSortBy(e && e.target.value)}
@@ -1733,6 +1672,7 @@ export default function ToolComparisonPage() {;
                 <option value='users'>Sort by Users</option>;
                 <option value='name'>Sort by Name</option>              </select>              <select
                 value={sortBy}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       <section id="comparison" className="py-24 bg-black">
@@ -1806,6 +1746,8 @@ export default function ToolComparisonPage() {;
               <tbody>
                 {sortedTools.map((tool, index) => (                <tr className="border-b border-gray-800">
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   <th className="text-left py-4 px-6 text-gray-300 font-medium">Tool</th>
                   <th className="text-left py-4 px-6 text-gray-300 font-medium">Category</th>
                   <th className="text-left py-4 px-6 text-gray-300 font-medium">Pricing</th>
@@ -1813,6 +1755,7 @@ export default function ToolComparisonPage() {;
                   <th className="text-left py-4 px-6 text-gray-300 font-medium">Users</th>
                   <th className="text-left py-4 px-6 text-gray-300 font-medium">Best For</th>
                   <th className="text-left py-4 px-6 text-gray-300 font-medium">Actions</th>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1883,6 +1826,8 @@ export default function ToolComparisonPage() {;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   <tr
                     key={index}
                     className='border-b border-gray-800/50 hover:bg-gray-900/50 transition-colors duration-200'>;
@@ -1945,6 +1890,7 @@ export default function ToolComparisonPage() {;
                       </div>;
                     </td>;
                   </tr>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -2027,20 +1973,20 @@ export default function ToolComparisonPage() {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+                ))}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           )}
         </div>
       </section>
 
-
-
-
       {/* Detailed Comparison Cards */}
-
-
+      <section className='py-24 bg-gray-900'>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+          <div className='text-center mb-20'>
+            <h2 className='text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight'>
 
               Detailed Analysis
-
-
             </h2>
             <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>
               Deep dive into each tool's pros, cons, and use cases to make the
@@ -2050,7 +1996,10 @@ export default function ToolComparisonPage() {;
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
             {sortedTools.slice(0, 6).map((tool, index) => (
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               </tbody>;
             </table>;
           </div>;
@@ -2085,9 +2034,12 @@ export default function ToolComparisonPage() {;
 
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>;
             {sortedTools && sortedTools.slice(0, 6).map((tool, index) => (;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
                 ))}
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               </tbody>
             </table>
           </div>
@@ -2103,6 +2055,7 @@ export default function ToolComparisonPage() {;
               <Search className="w-16 h-16 text-gray-600 mx-auto mb-4" />
               <h3 className="text-xl font-semibold text-gray-400 mb-2">No tools found</h3>
               <p className="text-gray-500">Try adjusting your search criteria or category filter.</p>
+<<<<<<< HEAD
           )}
         </div>
       </section>
@@ -2113,13 +2066,18 @@ export default function ToolComparisonPage() {;
         </div>
       </section>
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {/* Detailed Comparison Cards */}
       <section className='py-24 bg-gray-900'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <div className='text-center mb-20'>
             <h2 className='text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight'>
+<<<<<<< HEAD
 
               Detailed Analysis
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             </h2>
             <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>
               Deep dive into each tool's pros, cons, and use cases to make the
@@ -2128,13 +2086,21 @@ export default function ToolComparisonPage() {;
           </div>
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
             {sortedTools.slice(0, 6).map((tool, index) => (
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+          )}
+        </div>
+      </section>
+      {/* Detailed Comparison Cards */}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <Card
                 key={index}
                 className='group border border-gray-800 hover:border-purple-500/30 hover:bg-gray-900/80 transition-all duration-300 hover:-translate-y-1'
                 style={{ animationDelay: `${index * 0 && 0.1}s` }}>;
                 <div className='flex items-start space-x-4 mb-4'>;
                   <div
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -2334,10 +2300,13 @@ export default function ToolComparisonPage() {;
 
                 <div className='flex items-center justify-between'>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   <span
                     className={`text-sm font-medium ${getPricingColor(tool && tool.pricing)}`}>                    {tool && tool.pricing}
                   </span>;
                   <Button
+<<<<<<< HEAD
 <<<<<<< HEAD
                     href={tool && tool.website}                <div className="flex items-center justify-between">;
                   <span className={`text-sm font-medium ${getPricingColor(tool && tool.pricing)}`}>;
@@ -2362,6 +2331,8 @@ export default function ToolComparisonPage() {;
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <div className="flex items-center justify-between">
                   <span className={`text-sm font-medium ${getPricingColor(tool.pricing)}`}>
 
@@ -2374,6 +2345,7 @@ export default function ToolComparisonPage() {;
                   >                    {tool.pricing}
                   </span>
                   <Button
+<<<<<<< HEAD
 
                     href={tool.website}
 
@@ -2388,12 +2360,15 @@ export default function ToolComparisonPage() {;
                     href={tool.website}
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     {tool.pricing}
                   </span>
                   <Button
                     href={tool.website}
 
 
+<<<<<<< HEAD
 
                   </Button>
 
@@ -2409,6 +2384,10 @@ export default function ToolComparisonPage() {;
                 </div>
               </Card>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+                </div>
+              </Card>
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             ))}
 
           </div>;
@@ -2420,6 +2399,7 @@ export default function ToolComparisonPage() {;
 
 
       {/* CTA Section */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 variant="outline"
@@ -2446,10 +2426,13 @@ variant="outline"
 
       {/* CTA Section */}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <section className='py-24 bg-gradient-to-r from-purple-600 to-purple-700 relative overflow-hidden'>
         <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10'>
           <h2 className='text-4xl sm:text-5xl font-bold text-white mb-8'>
+<<<<<<< HEAD
 
 
             Need Help Choosing?
@@ -2462,6 +2445,8 @@ variant="outline"
 
             Need Help Choosing?
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           </h2>
           <p className='text-xl text-purple-100 mb-12 max-w-4xl mx-auto leading-relaxed'>
             Our experts can analyze your business needs and recommend the
@@ -2469,13 +2454,29 @@ variant="outline"
           </p>
           <div className='flex flex-col sm:flex-row gap-6 justify-center'>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+            ))}
+      {/* CTA Section */}
+      <section className='py-24 bg-gradient-to-r from-purple-600 to-purple-700 relative overflow-hidden'>;
+        <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0 && 0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />;
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10'>;
+          <h2 className='text-4xl sm:text-5xl font-bold text-white mb-8'>;
+          </h2>;
+          <p className='text-xl text-purple-100 mb-12 max-w-4xl mx-auto leading-relaxed'>;
+            Our experts can analyze your business needs and recommend the;
+            perfect combination of tools to accelerate your growth.;
+          </p>;
+          <div className='flex flex-col sm:flex-row gap-6 justify-center'>;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <Button
               href='/contact'
               variant='secondary'
               size='lg'
+<<<<<<< HEAD
 <<<<<<< HEAD
               className='bg-white text-purple-600 hover:bg-gray-100 shadow-2xl'>;
               Get Expert Consultation;
@@ -2488,19 +2489,25 @@ variant="outline"
               <ArrowRight className='w-5 h-5 ml-2' />
             </Button>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <Button
               href='/saas-marketplace'
               variant='outline'
               size='lg'
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               Explore All Tools;
             </Button>;
           </div>;
         </div>;
       </section>;
+<<<<<<< HEAD
 
 
 =======
@@ -2512,6 +2519,12 @@ variant="outline"
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
+=======
+  );
+}
+    </>);
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               className='border-white text-white hover:bg-white hover:text-purple-600 shadow-2xl'            >              href="/saas-marketplace"
               variant="outline"
               size="lg"
@@ -2522,6 +2535,7 @@ variant="outline"
         </div>
       </section>
     </>
+<<<<<<< HEAD
 
 
 }
@@ -2530,8 +2544,15 @@ variant="outline"
     </>);
 );
   );
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 
   );
 }
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+}
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

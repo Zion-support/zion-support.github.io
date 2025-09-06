@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 import { useState, useEffect } from "react"
@@ -43,6 +44,8 @@ import { Button } from "@/components/ui/button";
   );
 };
 import { Button } from "@/components/ui/button";
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { Form } from "@/components/ui/form";
 import { DialogDescription, DialogFooter, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { useToast } from "@/hooks/use-toast";
@@ -53,6 +56,7 @@ import { ProjectDetailsFields } from "./ProjectDetailsFields";
 import { PaymentTermsFields } from "./PaymentTermsFields";
 import { AdditionalClausesFields } from "./AdditionalClausesFields";
 import {logErrorToProduction} from '@/utils/productionLogger';
+<<<<<<< HEAD
   )
 }
 
@@ -355,3 +359,5 @@ export function ContractForm({;
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 ;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -16,6 +17,8 @@ import EnterpriseAdmin from "../pages/EnterpriseAdmin";
 import CompanyWorkspace from "../pages/CompanyWorkspace";
 import EnterpriseBilling from "../pages/EnterpriseBilling";
 import ZionHireAI from "../pages/ZionHireAI";
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { Fragment } from "react",
 import { Route, Routes } from "react-router-dom",
 import EnterprisePlans from "../pages/EnterprisePlans",
@@ -59,11 +62,15 @@ import ZionHireAI from "../pages/ZionHireAI",;
 
 const EnterpriseRoutes = () => {
 const EnterpriseRoutes = () => {;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <Routes>;
       {/* Enterprise Routes */}
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 const EnterpriseRoutes = () => {;
@@ -108,6 +115,8 @@ const EnterpriseRoutes = () => {;
 =======
 };
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { Fragment } from './react';
 import { Route, Routes } from './react-router-dom';
 import EnterprisePlans from "../pages / EnterprisePlans";
@@ -130,11 +139,8 @@ const EnterpriseRoutes = () =>: any {
     </Routes>);
 }
 ;
-
-},
-
-
 export default EnterpriseRoutes;
+<<<<<<< HEAD
 ;
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -168,3 +174,5 @@ export default EnterpriseRoutes;
 },;
 export default EnterpriseRoutes;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

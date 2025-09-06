@@ -1,17 +1,3 @@
-import React from './react';
-import Link from './next / link';
-interface ButtonProps {
-  children: React.ReactNode, href?: string,
-  on_click?: () => void;
-  type?: "button" | "submit" | "reset";
-  variant?: "primary" | "secondary" | "outline";
-  size?: "sm" | "md" | "lg";
-  class_name?: string;
-  disabled?: boolean;
-  style?: React.CSSProperties;
-}
-const Button: React.FC < ButtonProps> = ({
-
   children,
   href,
   on_click,
@@ -22,6 +8,7 @@ const Button: React.FC < ButtonProps> = ({
   disabled = false,
   style
 }) => {
+<<<<<<< HEAD
 
 
 class ErrorBoundary extends React.Component {
@@ -164,6 +151,8 @@ if ( {) {
       </Link>
     )
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   }
   return (
     <button;
@@ -171,6 +160,7 @@ if ( {) {
       className={classes}
       on_click={on_click}
       disabled={disabled}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     </button>;
@@ -237,3 +227,5 @@ Button.displayName = 'Button';
 export default Button;
 export default Button;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

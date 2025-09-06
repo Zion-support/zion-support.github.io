@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -29,20 +30,41 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 
+
+
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+
+
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+
+
 export function ReferralGuide() {
 
   const steps = [
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components / ui / card';
+export /**
+ * ReferralGuide - Function description
+ */
+function ReferralGuide() {
+  const steps = [;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     {
       title: "Share your referral link"
       description: "Copy your unique referral link and share it with potential clients or talent"}
     {
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -76,6 +98,8 @@ import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/compo
       description: "Rewards are issued based on the type of user who completes onboarding"}]
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       title: "They sign up"
       description: "When someone clicks your link and creates an account, they're tagged as your referral"}
     {
@@ -83,6 +107,7 @@ import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/compo
       description: "Once they complete their profile setup, your referral is confirmed"}
       title: "They sign up",;
       description: "When someone clicks your link and creates an account, they're tagged as your referral"};
+
       title: "They sign up",
       description: "When someone clicks your link and creates an account, they're tagged as your referral"},
     {
@@ -91,7 +116,12 @@ import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/compo
     {
       title: "You earn rewards"
       description: "Rewards are issued based on the type of user who completes onboarding"}]
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   return (
     <Card>
@@ -113,10 +143,13 @@ import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/compo
             </div>
 
 <<<<<<< HEAD
-
+<<<<<<< HEAD
 =======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 
+<<<<<<< HEAD
 =======
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 
@@ -129,6 +162,8 @@ import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/compo
 }
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export function ReferralGuide() {;
   const steps = [;
     {;
@@ -136,6 +171,7 @@ export function ReferralGuide() {;
       description: "Copy your unique referral link and share it with potential clients or talent"},;
     {;
       title: "They sign up",;
+<<<<<<< HEAD
 <<<<<<< HEAD
       description: "When someone clicks your link and creates an account, they're tagged as your referral"};
     {;
@@ -176,6 +212,10 @@ export function ReferralGuide() {;
       description: "Rewards are issued based on the type of user who completes onboarding"}];
   return (;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+  return (
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <Card>;
       <CardHeader>;
         <CardTitle>How Referrals Work</CardTitle>;
@@ -184,13 +224,17 @@ export function ReferralGuide() {;
       <CardContent>;
         <div className="space-y-4">;
 <<<<<<< HEAD
+<<<<<<< HEAD
           {steps && steps.map((step, index) => (;
             <div key={index} className="flex gap-4">;
               <div className="flex h-8 w-8 items-center justify-center rounded-full bg-primary text-primary-foreground">;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
 =======
@@ -198,7 +242,10 @@ export function ReferralGuide() {;
 
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
+;
                 {index + 1}
               </div>;
               <div className="space-y-1">;
@@ -207,6 +254,7 @@ export function ReferralGuide() {;
               </div>;
             </div>;
           ))}
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         </div>;
       </CardContent>;
@@ -215,6 +263,8 @@ export function ReferralGuide() {;
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       title: "They sign up",
       description: "When someone clicks your link and creates an account, they're tagged as your referral"}
     {
@@ -246,6 +296,7 @@ export function ReferralGuide() {;
     </Card>);
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
           {steps.map((step, index) => (;
@@ -273,3 +324,5 @@ export function ReferralGuide() {;
 }
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

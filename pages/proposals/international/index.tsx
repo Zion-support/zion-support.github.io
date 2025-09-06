@@ -4,6 +4,7 @@
       setItems(data.proposals || []);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import React, { useEffect, useState } from 'react';
 import React, { useEffect, useState } from 'react',;
@@ -18,6 +19,8 @@ export default function InternationalProposals() {
       const data = await res.json()
       setItems(data.proposals |[])
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       setLoading(false)
     })()
   }, [])
@@ -26,6 +29,7 @@ export default function InternationalProposals() {
     const res = await fetch('/api/proposals/list')
     const data = await res.json()
     setItems(data.proposals |[])
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -139,6 +143,8 @@ function update_status() {
 
 =======
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   }
     await fetch('/api/proposals/status', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ id, status }) }),
@@ -166,29 +172,14 @@ export default function InternationalProposals(req, res) {
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+
+
   }
 }
   return (
-    <div className="space-y-6">
-      <h1 className="text-2xl font-semibold">International Proposals</h1>
+    <div className="space - y-6">;
+      <h1 className="text - 2xl font - semibold">International Proposals</h1>;
       {loading ? (
-        <div>Loading…</div>
-      ) : (
-        <div className="grid gap-4">
-          {items.map((p) => (
-            <div key={p.id} className="border rounded p-4">
-              <div className="flex items-center justify-between">
-                <div>
-                  <div className="font-medium">{p.title}</div>
-                  <div className="text-sm opacity-70">{p.targetInstitution} · {p.type} · {p.regionalScope}</div>
-                </div>
-                <div className="text-sm">Status: <span className="font-medium">{p.status}</span></div>
-              </div>
-              <div className="mt-2 flex items-center gap-3 text-sm">
-                {p.artifacts?.markdownPath && <a href={p.artifacts.markdownPath} target="_blank" rel="noreferrer" className="underline">Markdown</a>}
-                {p.artifacts?.pdfPath && <a href={p.artifacts.pdfPath} target="_blank" rel="noreferrer" className="underline">PDF</a>}
-                {p.artifacts?.ipfsCid && <span>IPFS: {p.artifacts.ipfsCid}</span>}
-                {p.artifacts?.ensRecordHash && <span>ENS: {p.artifacts.ensRecordHash.slice(0, 16)}…</span>}
                 {p.artifacts?.markdownPath && <a href={p.artifacts.markdownPath} target="_blank" rel="noreferrer" className="underline">Markdown</Link>  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -216,19 +207,26 @@ export default function InternationalProposals(req, res) {
                 <button onClick={() => updateStatus(p.id, 'Rejected')} className="px-2 py-1 border rounded">Mark Rejected</button>
               </div>
             </div>
+<<<<<<< HEAD
           ))}
           {!items.length && <div className="opacity-70">No proposals yet.</div>}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         </div>
       )}
     </div>
   );
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -252,6 +250,7 @@ export default function InternationalProposals(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 }
 
@@ -263,3 +262,5 @@ export default function InternationalProposals(req, res) {
 }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

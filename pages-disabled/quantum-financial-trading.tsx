@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -47,11 +48,14 @@ import React from "react";
 import SEO from "../components/SEO";
 export default function AISustainabilityPlatformPage() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <div className="min-h-[60vh] px-6 py-24">;
       <SEO
         title="AI Sustainability Platform | Zion Tech Group"
         description="Sustainability analytics and optimization"
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 import React from './react';
@@ -74,10 +78,13 @@ function AISustainabilityPlatformPage() {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           Measure and optimize sustainability metrics with AI. Details coming;
           soon.;
         </p>;
       </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     </div>);
@@ -115,3 +122,5 @@ function AISustainabilityPlatformPage() {
 }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

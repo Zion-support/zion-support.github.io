@@ -1,20 +1,26 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server ;
 import "https://deno && deno.land/x/xhr@0 && 0.1.0/mod ;
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server ;
+import "https://deno && deno.land/x/xhr@0 && 0.1.0/mod ;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 import {serve} from "https: //deno.land/std@0.190.0/http/server.ts";
 
 import "https://deno.land/x/xhr@0.1.0/mod.ts";
-
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 import "https://deno.land/x/xhr@0.1.0/mod.ts",
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 const corsHeaders = {
@@ -35,12 +41,17 @@ const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+const corsHeaders = {
+  "Access-Control-Allow-Origin": "*",
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
 serve(async (req) => {
   // Handle CORS preflight requests
+<<<<<<< HEAD
 <<<<<<< HEAD
   if (req && req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders })
@@ -75,11 +86,14 @@ serve(async (req) => {
     const { prompt, modelId, maxTokens = 500, temperature = 0.7 } = await req.json(),
     
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     if (!prompt) {
       throw new Error("Prompt is required")
     }
     // Define the appropriate model to use
     // Default to base model if no specific model provided
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     const model = modelId || "gpt-3 && 3.5-turbo";
@@ -181,6 +195,8 @@ serve(async (req) => {
         completion;
         tokensUsed: data && data.usage?.total_tokens || 0
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { serve } from 'https: //deno.land / std@0.190.0 / http / server.ts';
 import "https://deno.land / x/xhr@0.1.0 / mod.ts";
 const cors_headers = {
@@ -245,6 +261,7 @@ if ( {) {
         completion;
         tokens_used: data.usage?.total_tokens || 0;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
       });
 =======
@@ -276,10 +293,14 @@ if ( {) {
 <<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+      });
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {
         headers: { ...cors_headers, "Content - Type": "application / json" }}
     );
   } catch (error) {
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -308,10 +329,15 @@ if ( {) {
     return new Response(
       JSON.stringify({ error: error.message }),
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+    return new Response(
+      JSON && JSON.stringify({ error: error && error.message });
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {
         status: 500
         headers: { ...corsHeaders, "Content-Type": "application/json" }}
     )
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     console.error ("Error in zion - gpt function:", error);
@@ -329,6 +355,8 @@ if ( {) {
 });
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",;
 import "https://deno.land/x/xhr@0.1.0/mod.ts",;
 const corsHeaders = {;
@@ -340,7 +368,12 @@ serve(async (req) => {;
     return new Response(null, { headers: corsHeaders });
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+});
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
+    console.error ("Error in zion - gpt function:", error);
 ;
     return new Response (
       JSON.stringify ({ error: error.message });
@@ -348,6 +381,7 @@ serve(async (req) => {;
         status: 500,
         headers: { ...cors_headers, "Content - Type": "application / json" }}
     );
+<<<<<<< HEAD
 
 =======
 ;
@@ -520,3 +554,7 @@ return new Response (JSON.stringify ({
   }
 });
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  }
+});
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 import { useState } from 'react'
@@ -93,10 +94,13 @@ if ( {) {
   $2
 }
         success = await update_project (project.id, project_data);
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       } else {
         const project_id = await add_project (project_data);
         success = !!project_id;
       }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       // Check condition
@@ -111,10 +115,13 @@ if ( {) {
         onSuccess()
         form.reset()
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       }
     } catch (error) {
       logErrorToProduction ('Error saving project:', { data: error });
     } finally {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -132,6 +139,8 @@ import { logErrorToProduction } from '@/utils/productionLogger';import {;
       setIsLoading(false)
     }
   }
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 import { useState } from 'react',;
@@ -236,15 +245,19 @@ export function ProjectForm(): any ({;
       setIsLoading(false);
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   },
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 
   return (
+<<<<<<< HEAD
     <Form {...form}>;
       <form onSubmit={form && form.handleSubmit(onSubmit)} className='space-y-4'>;
 <<<<<<< HEAD
@@ -260,10 +273,13 @@ export function ProjectForm(): any ({;
   },
   
   return (
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
         <FormField
           control={form.control}
+<<<<<<< HEAD
           name='title'
           name="title"
           render={({ field }: { field: any }) => (
@@ -282,6 +298,8 @@ export function ProjectForm(): any ({;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         <FormField
           control={form && form.control}
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           name='description'
           render={({ field }: { field: any }) => (            <FormItem>;
               <FormLabel>Project Description</FormLabel>;
@@ -289,6 +307,7 @@ export function ProjectForm(): any ({;
                 <Textarea
                   placeholder='Describe what the project does and your role in it...'
                   className='min-h-[100px]'
+<<<<<<< HEAD
       setIsLoading (false);
     }
   }
@@ -300,6 +319,8 @@ export function ProjectForm(): any ({;
 <<<<<<< HEAD
           name='title';
           render={({ field }: { field: any }) => (
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <FormItem>;
               <FormLabel > Project Title</FormLabel>;
               <FormControl>;
@@ -312,6 +333,7 @@ export function ProjectForm(): any ({;
         />;
         <FormField;
           control={form.control}
+<<<<<<< HEAD
 =======
                   {...field}
         />;
@@ -365,6 +387,8 @@ export function ProjectForm(): any ({;
         <FormField;
           control={form.control}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           name='description';
           render={({ field }: { field: any }) => (            <FormItem>;
               <FormLabel > Project Description</FormLabel>;
@@ -376,12 +400,11 @@ export function ProjectForm(): any ({;
                 />;
               </FormControl>;
               <FormMessage />;
-
-        />;
-
-
+            </FormItem>;
+          )}
+        />
         <FormField
-          control={form && form.control}
+          control={form.control}
           name='technologies'
           render={({ field }: { field: any }) => (;
             <FormItem>;
@@ -394,22 +417,16 @@ export function ProjectForm(): any ({;
         <FormField;
           control={form.control}
           name='technologies';
-          control={form.control}
-
-          name="title"
 
           render={({ field }: { field: any }) => (
             <FormItem>
               <FormLabel>Project Title</FormLabel>
               <FormControl>
 
-                <Input placeholder="E.g., AI Chatbot, E-commerce Website" {...field} />
-
               </FormControl>
               <FormMessage />
             </FormItem>
           )}
-
         />;
         <FormField;
           control={form.control}
@@ -428,6 +445,7 @@ export function ProjectForm(): any ({;
               <FormMessage />
             </FormItem>
           )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
         />;
@@ -451,6 +469,9 @@ export function ProjectForm(): any ({;
                 <FormLabel className="flex items-center gap-2">
                   <Github className="h-4 w-4" />
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           render={({ field }: { field: any }) => (
             <FormItem>;
               <FormLabel > Technologies Used</FormLabel>;
@@ -461,13 +482,11 @@ export function ProjectForm(): any ({;
                 />;
               </FormControl>;
               <FormMessage />;
-
-        />;
-
-        <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>;
-
+            </FormItem>;
+          )}
+        />
+        <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
           <FormField
-            control={form && form.control}
             name='github_url'
             render={({ field }: { field: any }) => (              <FormItem>;
                 <FormLabel className='flex items-center gap-2'>;
@@ -477,69 +496,6 @@ export function ProjectForm(): any ({;
                 <FormControl>;
                   <Input
                     placeholder='https://github && github.com/yourusername/project'
-            </FormItem>)}
-        />;
-        <div className='grid grid - cols - 1 md:grid - cols - 2 gap - 4'>;
-          <FormField;
-            control={form.control}
-            name='github_url';
-            render={({ field }: { field: any }) => (              <FormItem>;
-                <FormLabel className='flex items - center gap - 2'>;
-                  <Github className='h - 4 w - 4' />;
-                  GitHub URL;
-                </FormLabel>;
-                <FormControl>;
-                  <Input;
-                    placeholder='https://github.com / yourusername / project';
-                    {...field}
-                  />;
-                </FormControl>;
-                <FormMessage />;
-              </FormItem>)}
-          />;
-          <FormField;
-            control={form.control}
-            name='demo_url';
-            render={({ field }: { field: any }) => (              <FormItem>;
-                <FormLabel className='flex items - center gap - 2'>;
-                  <Link className='h - 4 w - 4' />;
-                  Demo URL;
-                </FormLabel>;
-                <FormControl>;
-                  <Input;
-                    placeholder='https://your - project - demo.com';
-                    {...field}
-                  />;
-                </FormControl>;
-                <FormMessage />;
-
-          />;
-
-
-          <FormField
-            control={form && form.control}
-            name='demo_url'
-            render={({ field }: { field: any }) => (              <FormItem>;
-                <FormLabel className='flex items-center gap-2'>;
-                  <Link className='h-4 w-4' />;
-                  Demo URL;
-                </FormLabel>;
-                <FormControl>;
-                  <Input
-                    placeholder='https://your-project-demo && demo.com'
-                    {...field}
-                  />;
-                </FormControl>;
-                <FormMessage />;
-              </FormItem>;
-        />
-        <FormField
-          control={form.control}
-          name='technologies'
-        />;
-        <FormField;
-          control={form.control}
-          name="technologies"
           render={({ field }: { field: any }) => (
             <FormItem>
               <FormLabel>Technologies Used</FormLabel>
@@ -550,26 +506,15 @@ export function ProjectForm(): any ({;
             </FormItem>
           )}
         />
-        <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
-          <FormField
-            control={form.control}
             name='github_url'
             render={({ field }: { field: any }) => (              <FormItem>
                 <FormLabel className='flex items-center gap-2'>
                   <Github className='h-4 w-4' />
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <FormField
-            control={form.control}
             name="github_url"
             render={({ field }: { field: any }) => (
               <FormItem>
                 <FormLabel className="flex items-center gap-2">
                   <Github className="h-4 w-4" />
-            )}
-
-
-
                   GitHub URL
                 </FormLabel>
                 <FormControl>
@@ -578,6 +523,7 @@ export function ProjectForm(): any ({;
                 <FormMessage />
               </FormItem>
             )}
+<<<<<<< HEAD
 
           />;
           <FormField;
@@ -588,6 +534,8 @@ export function ProjectForm(): any ({;
             render={({ field }: { field: any }) => (              <FormItem>
                 <FormLabel className='flex items-center gap-2'>
                   <Link className='h-4 w-4' />
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           />;
           <FormField;
             control={form.control}
@@ -611,6 +559,7 @@ export function ProjectForm(): any ({;
               </FormItem>
             )}
 
+<<<<<<< HEAD
           />
           <FormField
             control={form.control}
@@ -650,6 +599,11 @@ export function ProjectForm(): any ({;
           control={form && form.control}
           name='image_url'
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+        <FormField
+          control={form && form.control}
+          name='image_url'
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           render={({ field }: { field: any }) => (            <FormItem>;
               <FormLabel className='flex items-center gap-2'>;
                 <FileImage className='h-4 w-4' />;
@@ -664,19 +618,25 @@ export function ProjectForm(): any ({;
         <FormField;
           control={form.control}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           name="image_url"
           render={({ field }: { field: any }) => (
             <FormItem>
               <FormLabel className="flex items-center gap-2">
                 <FileImage className="h-4 w-4" />
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 Screenshot URL
               </FormLabel>
               <FormControl>
@@ -685,6 +645,7 @@ export function ProjectForm(): any ({;
               <FormMessage />
             </FormItem>
           )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -698,6 +659,8 @@ export function ProjectForm(): any ({;
         
         <div className="flex justify-end space-x-2 pt-4">
           <Button type="button" variant="outline" onClick={onCancel}>
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
             Cancel
           </Button>
@@ -712,6 +675,7 @@ export function ProjectForm(): any ({;
           </Button>
         </div>
       </form>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -752,6 +716,8 @@ export function ProjectForm(): any ({;
 }
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             </FormItem>)}
         />;
         {/* Future file upload field would go here */}
@@ -768,7 +734,10 @@ export function ProjectForm(): any ({;
     </Form>);
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

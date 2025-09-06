@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -7,10 +8,15 @@ import Head from 'next/head';
 
 interface ProviderMeta {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   id: string;
   name: string;
   category: 'crm' | 'ats';
   description?: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -30,11 +36,14 @@ function StatusIcon(): any ({;
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     status === 'connected' ? '✅' : status === 'warning' ? '⚠️' : '❌';
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <span className='text-xl' title={status}>;
       {label}
     </span>;
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -45,12 +54,18 @@ import Head from 'next/head';
 interface ProviderMeta { id: string, name: string, category: 'crm' | 'ats', description?: string }
 interface ConnectionMap { [providerId: string]: any }
 <<<<<<< HEAD
+=======
+import Head from 'next/head';
+interface ProviderMeta { id: string, name: string, category: 'crm' | 'ats', description?: string }
+interface ConnectionMap { [providerId: string]: any }
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 interface ConnectionMap {;
   [key: string]: boolean,;
 
 
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -323,6 +338,8 @@ export default function AdminIntegrationsPage() {
     [providers]
   );
 import { useEffect, useMemo, useState } from 'react';
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useState } from 'react';
 import { useEffect, useMemo, useState } from 'react';
 import Head from 'next/head';
@@ -349,6 +366,22 @@ export default function AdminIntegrationsPage() {
   const [connections, setConnections] = useState<ConnectionMap>({});
   const [loading, setLoading] = useState(false);
   const [selected, setSelected] = useState<string | null>(null);
+      });
+      await refresh();
+    } finally {;
+      setLoading(false);
+    }  }
+      });
+      await refresh();
+    } finally {;
+      setLoading(false);
+    }  }
+      });
+      await refresh();
+    } finally {;
+      setLoading(false);
+    }
+  }
   const [syncRules, setSyncRules] = useState<any>({ autoCreateContacts: true, pushNotesMode: 'auto', autoSyncApplicants: true, autoUploadResumes: true });
   async function refresh() {
     const [p, s] = await Promise.all([
@@ -371,45 +404,6 @@ export default function AdminIntegrationsPage() {
       await new Promise(r => setTimeout(r, 500));
       await fetch('/api/integrations/connect', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ providerId, syncRules }) });
       await refresh();
-    } finally {
-      setLoading(false);
-    }  }
-
-  async function disconnect(providerId: string) {
-    setLoading(true),
-    try {
-      await fetch('/api/integrations/disconnect', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ providerId }),
-      });
-      await refresh();
-    } finally {
-      setLoading(false);
-    }  }
-
-  async function resync(providerId: string) {
-    setLoading(true),
-    try {
-      await fetch('/api/integrations/resync', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ providerId }),
-      });
-      await refresh();
-    } finally {
-      setLoading(false);
-    }
-  }
-
-  const grouped = useMemo(
-    () => ({
-      crm: providers.filter(p => p.category === 'crm'),
-      ats: providers.filter(p => p.category === 'ats'),
-    }),
-    [providers]
-  );
-
     } finally { setLoading(false);   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -454,6 +448,9 @@ export default function AdminIntegrationsPage() {
     crm: providers.filter(p => p.category === 'crm'),
     ats: providers.filter(p => p.category === 'ats')
   }), [providers]);
+
+
+
   function Card({ p }: { p: ProviderMeta }) {
     const conn = connections[p.id] |{ status: 'disconnected' }
     const isConnected = conn.status === 'connected';
@@ -476,38 +473,12 @@ export default function AdminIntegrationsPage() {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-}
-          {isConnected && (
-            <>
-              <button
-                onClick={() => resync(p.id)}
-                disabled={loading}
-                className='px-3 py-1.5 rounded bg-blue-600 text-white text-sm'
-              >
-                Resync Now
-              </button>
-              <button
-                onClick={() => setSelected(p.id)}
-                className='px-3 py-1.5 rounded border text-sm'
-              >
-                Configure
-              </button>
-              <button
-                onClick={() => disconnect(p.id)}
-                disabled={loading}
-                className='px-3 py-1.5 rounded border text-sm'
-              >
-                Disconnect
-              </button>            </>
-          )}
-        </div>
-      </div>
-    );  }
 
               <button onClick={() => resync(p.id)} disabled={loading} className="px-3 py-1.5 rounded bg-blue-600 text-white text-sm">Resync Now</button>
               <button onClick={() => setSelected(p.id)} className="px-3 py-1.5 rounded border text-sm">Configure</button>
               <button onClick={() => disconnect(p.id)} disabled={loading} className="px-3 py-1.5 rounded border text-sm">Disconnect</button>
             </>
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
@@ -546,149 +517,34 @@ function RulesModal() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   function RulesModal() {
     if (!selected) return null,
     const provider = providers.find(p => p.id === selected)!,
     const isCrm = provider.category === 'crm',
-    return (
-      <div className="fixed inset-0 bg-black/40 flex items-center justify-center">
-        <div className="w-full max-w-md rounded-lg bg-white dark:bg-neutral-900 p-4 border border-gray-200 dark:border-gray-800">
-          <div className="font-semibold mb-2">Sync Rules — {provider.name}</div>
-          <div className="space-y-3 text-sm">
-            {isCrm ? (
-              <>
 
+  async function resync(providerId: string) {
+    setLoading(true);
+    try {
+      await fetch('/api/integrations/resync', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ providerId }) }),
+      await refresh()
+    } finally { setLoading(false) }
+  }
 
-                <label className='flex items-center gap-2'>
-                  <input
-                    type='checkbox'
-                    checked={!!syncRules.autoCreateContacts}
-                    onChange={e =>
-                      setSyncRules({
-                        ...syncRules
-                        autoCreateContacts: e.target.checked
-                      })
-                    }
-                  />{' '}
-                  Auto-create contacts;
-                </label>;
-                <div>;
-                  <div className='mb-1'>Push notes:</div>;
-                  <div className='flex gap-3'>;
-                    <label className='flex items-center gap-2'>;
-                      <input
-                        type='radio'
-                        name='pushNotes'
-                        checked={syncRules && syncRules.pushNotesMode === 'auto'}
-                        onChange={() =>;
-                          setSyncRules({ ...syncRules, pushNotesMode: 'auto' });
-;
-interface ConnectionMap {
-  [provider_id: string]: any,
-/**
- * StatusIcon - Function description
- */
-function StatusIcon() {
-  const label =;
-    status === 'connected' ? '✅' : status === 'warning' ? '⚠️' : '❌';
-  return (
-    <span className='text - xl' title={status}>;
-      {label}
-    </span>);
-;
-interface ConnectionMap {
-  [key: string]: boolean,
-const AdminIntegrationsPage: React.FC = () => {  const [providers, set_providers] = useState < ProviderMeta[]>([]);
-  const [connections, set_connections] = useState < ConnectionMap>({});
-  const [loading, set_loading] = useState (false);
-  const [selected, set_selected] = useState < string | null>(null);
-  const [sync_rules, setSyncRules] = useState < any>({
-    autoCreateContacts: true,
-    pushNotesMode: 'auto',
-    autoSyncApplicants: true,
-    autoUploadResumes: true,
-  });
-;
-  async /**
- * refresh - Function description
- */
-function refresh() {
-    const [p, s] = await Promise.all ([;
-      fetch ('/api / integrations / providers').then (r => r.json ()),
-      fetch ('/api / integrations / status').then (r => r.json ()),
-    ]);
-    set_providers (p.providers || []);
-    set_connections (s.connections || {});
-  }
-  useEffect (() => {
-    refresh ();
-  }, []);
-  async /**
- * connect - Function description
- */
-function connect() {
-    set_loading (true),
-    try {
-      // Open mock oauth popup;
-      window.open (
-        `/api / integrations / oauth/${provider_id}/start`,
-        'oauth',
-        'width = 500, height = 700');
-      await new Promise (r => set_timeout (r, 500));
-      await fetch ('/api / integrations / connect', {
-        method: 'POST',
-        headers: { 'Content - Type': 'application / json' },
-        body: JSON.stringify ({ provider_id, sync_rules }),
-      });
-      await refresh ();
-    } finally {
-      set_loading (false);
-    }  }
-  async /**
- * disconnect - Function description
- */
-function disconnect() {
-    set_loading (true),
-    try {
-      await fetch ('/api / integrations / disconnect', {
-        method: 'POST',
-        headers: { 'Content - Type': 'application / json' },
-        body: JSON.stringify ({ provider_id }),
-      });
-      await refresh ();
-    } finally {
-      set_loading (false);
-    }  }
-  async /**
- * resync - Function description
- */
-function resync() {
-    set_loading (true),
-    try {
-      await fetch ('/api / integrations / resync', {
-        method: 'POST',
-        headers: { 'Content - Type': 'application / json' },
-        body: JSON.stringify ({ provider_id }),
-      });
-      await refresh ();
-    } finally {
-      set_loading (false);
-    }
-  }
-  const grouped = useMemo (
-    () => ({
-      crm: providers.filter (p => p.category === 'crm'),
-      ats: providers.filter (p => p.category === 'ats'),
-    }),
-    [providers]);
-;
-  /**
- * Card - Function description
- */
-function Card() {
-    const conn = connections[p.id] || { status: 'disconnected' }
-    const is_connected = conn.status === 'connected';
+  const grouped = useMemo(;
+    () => ({;
+      crm: providers && providers.filter(p => p && p.category === 'crm'),;
+      ats: providers && providers.filter(p => p && p.category === 'ats'),;
+    }),;
+    [providers];
+  );
+
+  function Card(): any ({ p }: { p: ProviderMeta }) {;
+    const conn = connections[p && p.id] || { status: 'disconnected' };
+    const isConnected = conn && conn.status === 'connected';
     return (
+<<<<<<< HEAD
       <div className='rounded - lg border border - gray - 200 dark:border - gray - 800 p - 4 flex flex - col gap - 3 bg - white / 60 dark:bg - black / 40'>;
         <div className='flex items - center justify - between'>;
           <div className='flex items - center gap - 3'>;
@@ -775,10 +631,13 @@ if (return null) {
                         on_change={() =>;
                           setSyncRules ({ ...sync_rules, pushNotesMode: 'auto' });
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                         }
                       />{' '}
                       Auto;
                     </label>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -794,6 +653,8 @@ if (return null) {
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     <label className='flex items - center gap - 2'>;
                       <input;
                         type='radio';
@@ -807,6 +668,7 @@ if (return null) {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                         }
                       />{' '}
+<<<<<<< HEAD
                       Manual only;
                     </label>                  </div>;
                 </div>;
@@ -824,6 +686,8 @@ if (return null) {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     }
                   />{' '}
                   Auto-sync applicants;
@@ -831,6 +695,7 @@ if (return null) {
                 <label className='flex items-center gap-2'>;
                   <input
                     type='checkbox'
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1103,34 +968,16 @@ if (return null) {
           <ManualOverrideForm />
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <code>
                 /api/integrations/zapier/talent-matched?since=TIMESTAMP
               </code>
             </li>          </ul>
-    ),
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  return (
-    <>
-      <Head>
-        <title>Admin Integrations • Zion</title>
-      </Head>
-      <main className='container mx-auto px-4 py-8'>
-        <h1 className='text-2xl font-semibold mb-2'>Integrations</h1>
-        <p className='text-sm text-gray-600 mb-6'>
-          Connect your CRM and ATS to sync contacts, applicants, and activity.
-        </p>
-        <section className='mb-8'>
-          <h2 className='text-lg font-semibold mb-3'>CRM</h2>
-          <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4'>
-            {grouped.crm.map(p => (
-              <Card key={p.id} p={p} />
-            ))}
-          </div>
+
+
         </section>
+<<<<<<< HEAD
         <section className='mb-10'>
           <h2 className='text-lg font-semibold mb-3'>ATS</h2>
           <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4'>
@@ -1189,10 +1036,14 @@ if (return null) {
           <h2 className="text-lg font-semibold mb-2">Manual Overrides</h2>
           <ManualOverrideForm />
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         </section>
       </main>
       <RulesModal />
     </>
+<<<<<<< HEAD
 
 
               <code>;
@@ -1236,10 +1087,15 @@ function ManualOverrideForm() {;
   );
 function ManualOverrideForm() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  );
+function ManualOverrideForm() {;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const [jobId, setJobId] = useState('');
   const [disableCrmSync, setDisableCrmSync] = useState(false);
   const [disableAtsSync, setDisableAtsSync] = useState(false);
   const [message, setMessage] = useState('');
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -1262,6 +1118,29 @@ function ManualOverrideForm() {
 
   }
 <<<<<<< HEAD
+=======
+  )
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+function ManualOverrideForm() {
+  const [jobId, setJobId] = useState(''),
+  const [disableCrmSync, setDisableCrmSync] = useState(false),
+  const [disableAtsSync, setDisableAtsSync] = useState(false),
+  const [message, setMessage] = useState(''),
+  async function save() {
+    setMessage(''),
+    const res = await fetch('/api/integrations/overrides', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ jobId, disableCrmSync, disableAtsSync }) }),
+    if (res.ok) setMessage('Saved'), else setMessage('Error'),
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  }
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <div className='rounded-lg border border-gray-200 dark:border-gray-800 p-4 bg-white/60 dark:bg-black/40 max-w-xl'>;
       <div className='grid grid-cols-1 gap-3'>;
@@ -1294,6 +1173,7 @@ function ManualOverrideForm() {
           <button
             onClick={save}
 
+<<<<<<< HEAD
 =======
   )
   } catch (error) {
@@ -1317,6 +1197,8 @@ function ManualOverrideForm() {
 }
   return (
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             className='px-3 py-1 && 1.5 rounded bg-black text-white text-sm'>;
             Save Override;
           </button>;
@@ -1326,6 +1208,7 @@ function ManualOverrideForm() {
     </div>;
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
@@ -1333,6 +1216,9 @@ function ManualOverrideForm() {
     if (res.ok) setMessage('Saved'), else setMessage('Error')
   }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4 bg-white/60 dark:bg-black/40 max-w-xl">
       <div className="grid grid-cols-1 gap-3">
@@ -1349,10 +1235,13 @@ function ManualOverrideForm() {
     </div>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   )
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       </div>);  }
   return (
     <>;
@@ -1465,6 +1354,7 @@ function save() {
 ;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 
@@ -1472,6 +1362,9 @@ function save() {
 
 );
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 }
 }
@@ -1480,16 +1373,21 @@ function save() {
 }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   ),
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -1497,3 +1395,5 @@ function save() {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

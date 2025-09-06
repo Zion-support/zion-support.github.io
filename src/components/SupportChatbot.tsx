@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import { useState, useRef, useEffect  } from 'react';
 import { MessageSquare, X } from 'lucide-react'
@@ -21,6 +22,8 @@ import {logErrorToProduction} from '@/utils/productionLogger';
           headers: {
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useState, useRef, useEffect } from 'react'
 import { MessageSquare, X } from 'lucide-react'
 import { Button } from '@/components/ui/button'
@@ -43,6 +46,7 @@ import {logErrorToProduction} from '@/utils/productionLogger',;
 // Fallback responses when API is unavailable
 
 const FALLBACK_RESPONSES = [
+<<<<<<< HEAD
 
 
 
@@ -60,12 +64,22 @@ const FALLBACK_RESPONSES = [
   'While I work on resolving my connection issues, you can find helpful information in our help section or contact our support team for immediate assistance.'
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   "I'm here to help! You can browse our help documentation, contact support at support@ziontechgroup.com, or try asking your question in a different way.",
   "Thanks for reaching out! While I'm having trouble connecting to my knowledge base, I can suggest checking our FAQ section or contacting our support team directly.",
   "I understand you need assistance. For immediate help, please visit our help center or reach out to support@ziontechgroup.com.",
   "I'm currently experiencing technical difficulties, but I'd be happy to help you get to the right resource. Try browsing our documentation or contacting support.",
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   'While I work on resolving my connection issues, you can find helpful information in our help section or contact our support team for immediate assistance.',
+=======
+interface Msg { id: string, role: 'user' | 'assistant', message: string }
+
+// Fallback responses when API is unavailable
+
+const FALLBACK_RESPONSES = [
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ]
 export function SupportChatbot() {
   const [open, setOpen] = useState(false)
@@ -81,6 +95,7 @@ export function SupportChatbot() {
       id: Date.now().toString()
       role: 'user'
       message: text
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 import { useState, useRef, useEffect } from 'react';
@@ -118,6 +133,8 @@ function SupportChatbot() {
       role: 'user',
       message: text,
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     }
     setMessages(prev => [...prev, userMsg])
     setLoading(true)
@@ -143,6 +160,7 @@ function SupportChatbot() {
         }
       )
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 // Fallback responses when API is unavailable
 
@@ -155,6 +173,8 @@ const FALLBACK_RESPONSES = [
   "Thanks for reaching out! While I'm having trouble connecting to my knowledge base, I can suggest checking our FAQ section or contacting our support team directly.",
   "I understand you need assistance. For immediate help, please visit our help center or reach out to support@ziontechgroup.com.",
   "I'm currently experiencing technical difficulties, but I'd be happy to help you get to the right resource. Try browsing our documentation or contacting support.",
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   "While I work on resolving my connection issues, you can find helpful information in our help section or contact our support team for immediate assistance."
 ],
 
@@ -189,15 +209,19 @@ export function SupportChatbot() {
       }),
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 ursor/fix-website-loading-errors-and-merge-6662
       // If Supabase function fails, try local API fallback
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       // If Supabase function fails, try local API fallback
       if (!res.ok) {
         res = await fetch('/api/kb-chat', {
           method: 'POST'
           headers: { 'Content-Type': 'application/json' }
           body: JSON.stringify({
+<<<<<<< HEAD
             messages: [
               ...messages.map(m => ({ role: m.role, content: m.message }))
               { role: 'user', content: text }
@@ -214,6 +238,8 @@ ursor/fix-website-loading-errors-and-merge-6662
           ''
         const finalMsg =
           message.trim() |
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         const message = null;
           data.message ||
           data.choices?.[0]?.message?.content ||
@@ -245,10 +271,13 @@ ursor/fix-website-loading-errors-and-merge-6662
         let buffer = ''
         let accumulated = ''
         while (!done) {
+<<<<<<< HEAD
           const result = await reader.read()
           done = result.done
           buffer += decoder.decode(result.value |new Uint8Array())
           const lines = buffer.split('\n')
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           const result = await reader.read();
           done = result.done;
           buffer += decoder.decode(result.value || new Uint8Array());
@@ -264,6 +293,7 @@ ursor/fix-website-loading-errors-and-merge-6662
               }
               try {
                 const json = JSON.parse(line)
+<<<<<<< HEAD
                 const token =
                   json.choices?.[0]?.delta?.content |
                   json.choices?.[0]?.text |
@@ -273,6 +303,8 @@ ursor/fix-website-loading-errors-and-merge-6662
                 const token = null;
                   json.choices?.[0]?.delta?.content ||
                   json.choices?.[0]?.text ||
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   ''
                 if (token) {
                   accumulated += token
@@ -281,6 +313,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                       m.id === botId ? { ...m, message: accumulated } : m
                     )
                   )
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
             messages: [...messages.map(m => ({ role: m.role, content: m.message })), { role: 'user', content: text }]
           })
@@ -648,6 +681,11 @@ export function SupportChatbot() {;
         const final =
           accumulated.trim() |
                   setMessages(prev => prev.map(m => m.id === botId ? { ...m, message: accumulated } : m));
+=======
+
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 }
               } catch (_) {
                 // ignore parse errors
@@ -656,10 +694,13 @@ export function SupportChatbot() {;
           }
           buffer = lines[lines.length - 1] |''
         }
+<<<<<<< HEAD
         const final =
           accumulated.trim() |
         const final = null;
           accumulated.trim() ||
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           FALLBACK_RESPONSES[
             Math.floor(Math.random() * FALLBACK_RESPONSES.length)
           ] |
@@ -680,12 +721,16 @@ export function SupportChatbot() {;
         id: Date.now().toString() + '-e'
         role: 'assistant'
         message: fallbackResponse
+<<<<<<< HEAD
       }
       setMessages(prev => [...prev, errorMsg])
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     } finally {
       setLoading(false)
       setTyping(false)
     }
+<<<<<<< HEAD
         const final = accumulated.trim() ||
           (FALLBACK_RESPONSES[Math.floor(Math.random() * FALLBACK_RESPONSES.length)] || "I'm experiencing technical difficulties. Please contact support@ziontechgroup.com for assistance."),
         setMessages(prev => prev.map(m => m.id === botId ? { ...m, message: final } : m))
@@ -748,6 +793,21 @@ export function SupportChatbot() {;
     } finally {
       setLoading(false),
       setTyping(false)
+=======
+  }
+
+  if (!open) {
+        onClick={() => setOpen(true)}
+        size='icon'
+        variant='outline'
+        className='fixed bottom-4 right-20 h-12 w-12 rounded-full shadow-lg bg-zion-purple text-white hover:bg-zion-purple-light z-40'
+        aria-label='Open help chat'      >
+        <MessageSquare className='h-5 w-5' />
+
+        const final = accumulated.trim() ||
+          (FALLBACK_RESPONSES[Math.floor(Math.random() * FALLBACK_RESPONSES.length)] || "I'm experiencing technical difficulties. Please contact support@ziontechgroup.com for assistance."),
+        setMessages(prev => prev.map(m => m.id === botId ? { ...m, message: final } : m))
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     }
   },
 
@@ -761,12 +821,15 @@ export function SupportChatbot() {;
         aria-label="Open help chat"
       >
         <MessageSquare className="h-5 w-5" />
+<<<<<<< HEAD
       </Button>
     )
       </Button>
     )
       </Button>
     )
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   }
 
   if (!open) {
@@ -780,6 +843,7 @@ export function SupportChatbot() {;
     )
   }
   return (
+<<<<<<< HEAD
     <div className="fixed bottom-4 right-20 bg-zion-blue w-80 max-w-full rounded-lg shadow-xl flex flex-col z-40">
       <div className="bg-zion-blue-dark p-2 flex justify-between items-center">
         <span className="text-white font-medium">Help Bot</span>
@@ -798,6 +862,8 @@ export function SupportChatbot() {;
           aria-label="Close help bot"
         >
           <X className="h-5 w-5" />
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 <<<<<<< HEAD
 
@@ -814,6 +880,7 @@ export function SupportChatbot() {;
             role="assistant" 
             message="Hi! I'm here to help you with questions about Zion. What can I assist you with today?" 
           />
+<<<<<<< HEAD
         {messages.map(m => (
           <ChatMessage key={m.id} role={m.role} message={m.message} />
         ))}
@@ -935,6 +1002,15 @@ ursor/fix-website-loading-errors-and-merge-6662
         {typing && (
           <ChatMessage role="assistant" message="..." />
         )}
+=======
+
+
+
+        )}
+        {messages.map(m => (
+          <ChatMessage key={m.id} role={m.role} message={m.message} />
+        ))}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
         <div ref={endRef} />
@@ -943,6 +1019,7 @@ ursor/fix-website-loading-errors-and-merge-6662
       </div>
     </div>
   )
+<<<<<<< HEAD
 ;
 }
 ;
@@ -1171,3 +1248,5 @@ setTyping (false)
 ;
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

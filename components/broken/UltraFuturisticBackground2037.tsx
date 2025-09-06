@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -377,10 +378,13 @@ if ( {) {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             }
           });
         });
       }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -423,12 +427,15 @@ if ( {) {
     }
 }, []),
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <div ref={container_ref} className=&quot;fixed inset - 0 w - full h - full pointer - events - none & quot;>;
       <canvas;
         ref={canvas_ref}
         className=&quot;w - full h - full & quot;
         style={{
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -722,3 +729,5 @@ export default UltraFuturisticBackground2037;
 export default UltraFuturisticBackground2037
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

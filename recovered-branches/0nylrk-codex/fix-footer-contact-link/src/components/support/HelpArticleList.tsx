@@ -1,14 +1,16 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
 import {HELP_CATEGORIES} from "./help-content";
 
-=======
 import React from "react",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { HELP_CATEGORIES } from "./help-content",
@@ -19,6 +21,7 @@ interface HelpArticleListProps {
   categoryId: string,
   onArticleSelect: (articleId: string) => void,
   searchQuery: string
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -33,6 +36,8 @@ export function HelpArticleList({ categoryId, onArticleSelect, searchQuery }: He
   if (!category) {
     return <div>Category not found</div>
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from "react",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 import { HELP_CATEGORIES } from "./help-content",;
@@ -46,8 +51,6 @@ export function HelpArticleList({ categoryId, onArticleSelect, searchQuery }: He
   const category = HELP_CATEGORIES.find(cat => cat.id === categoryId),;
   if (!category) {;
     return <div>Category not found</div>;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-=======
 import React from "react";
 import {
   Card,
@@ -72,14 +75,17 @@ export function HelpArticleList({
 
   if (!category) {
     return <div>Category not found</div>;
->>>>>>> main
   }
 
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   // Filter articles based on search query
   const filteredArticles = searchQuery
     ? category.articles.filter(
         (article) =>
+<<<<<<< HEAD
 <<<<<<< HEAD
           article.title.toLowerCase().includes(searchQuery.toLowerCase()) |
           article.content.toLowerCase().includes(searchQuery.toLowerCase())
@@ -102,6 +108,8 @@ export function HelpArticleList({
 
 >>>>>>> main
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <div>
       <div className="mb-6">
@@ -109,12 +117,15 @@ export function HelpArticleList({
         <p className="text-zion-slate-light">{category.description}</p>
       </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 
 >>>>>>> main
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {filteredArticles.length === 0 ? (
         <div className="text-center py-8">
           <h3 className="text-lg font-medium mb-2">No articles found</h3>
@@ -125,6 +136,7 @@ export function HelpArticleList({
       ) : (
         <div className="space-y-4">
           {filteredArticles.map((article) => (
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
@@ -234,15 +246,17 @@ export function HelpArticleList({ categoryId, onArticleSelect, searchQuery } Hel
         <div className="space-y-4">;
           {filteredArticles && filteredArticles.map(article => (;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <Card
               key={article && article.id}
               className="cursor-pointer hover:border-zion-purple/50 transition-colors"
-              onClick={() => onArticleSelect(article && article.id)}
             >;
               <CardHeader className="pb-2">;
                 <CardTitle className="text-lg">{article && article.title}</CardTitle>;
                 <CardDescription className="text-zion-slate-light text-sm">;
                   Last updated: {formatDate(article && article.lastUpdated)}
+<<<<<<< HEAD
 =======
       ) :(;
         <div className="space-y-4">;
@@ -257,11 +271,16 @@ export function HelpArticleList({ categoryId, onArticleSelect, searchQuery } Hel
                 <CardDescription className="text-zion-slate-light text-sm">;
                   Last updated:{formatDate(article.lastUpdated)}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 </CardDescription>;
               </CardHeader>;
               <CardContent>;
                 <p className="text-sm text-zion-slate-light truncate">;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   {article && article.content.substring(0, 120)}...;
                 </p>;
               </CardContent>;
@@ -269,6 +288,7 @@ export function HelpArticleList({ categoryId, onArticleSelect, searchQuery } Hel
           ))}
         </div>;
       )}
+<<<<<<< HEAD
 
 
 
@@ -295,6 +315,10 @@ function formatDate(date: string): string {
   });
 >>>>>>> main
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+function formatDate(date: string): string {
+  return new Date(date).toLocaleDateString("en-US", {
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 
 function formatDate(): any (date: string): string {;
@@ -306,7 +330,6 @@ function formatDate(): any (date: string): string {;
   });
 }
 
-=======
 import React from './react';
 import {
   Card,
@@ -321,11 +344,6 @@ interface HelpArticleListProps {
   onArticleSelect: (article_id: string) => void;
   search_query: string;
 }
-export /**
- * HelpArticleList - Function description
- */
-function HelpArticleList() {
-  const category = HELP_CATEGORIES.find ((cat) => cat.id === category_id);
 ;
   // Check condition
 if ( {) {
@@ -384,10 +402,13 @@ function format_date (date: string): string {
     day: "numeric",
   });
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   {article.content.substring(0, 120)}...;
                 </p>;
               </CardContent>;
@@ -401,6 +422,7 @@ function format_date (date: string): string {
   })
   })
 
+<<<<<<< HEAD
 ;
 function formatDate(date:string):string {;
   return new Date(date).toLocaleDateString("en-US", {;
@@ -453,3 +475,5 @@ function formatDate(date: string): string {;
 }
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

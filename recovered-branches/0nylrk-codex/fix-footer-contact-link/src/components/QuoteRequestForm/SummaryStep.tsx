@@ -1,7 +1,10 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {useEffect, useState} from "react";
 import {QuoteFormData} from "@/types/quotes";
 import {Card, CardContent} from "@/components/ui/card";
@@ -10,6 +13,7 @@ import {Textarea} from "@/components/ui/textarea";
 import {AIMatchingResults} from "@/components/AIMatchingResults";
 import {findMatches, MatchResult} from "@/lib/ai-matchmaking";
 import {toast} from "@/hooks/use-toast";
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 interface SummaryStepProps {
@@ -36,6 +40,8 @@ export function SummaryStep({ formData, updateFormData }: SummaryStepProps) {;
           ${formData.budget.type === 'fixed' ? `budget ${formData.budget.amount}` : ''}
           ${formData.timeline}
         `;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useEffect, useState } from "react",
 import { QuoteFormData } from "@/types/quotes",
 import { Card, CardContent } from "@/components/ui/card",
@@ -59,6 +65,7 @@ export function SummaryStep({ formData, updateFormData }: SummaryStepProps) {
     const runMatching = async () => {
       if (!formData.projectDescription) return;
       setIsMatching(true);
+<<<<<<< HEAD
       try {
         // Create a query string from the form data
         const queryString = `
@@ -82,11 +89,16 @@ import { AIMatchingResults } from "@/components/AIMatchingResults",;
 import { findMatches, MatchResult } from "@/lib/ai-matchmaking",;
 import { toast } from "@/hooks/use-toast",;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface SummaryStepProps {;
   formData: QuoteFormData,;
   updateFormData: (data: Partial<QuoteFormData>) => void;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 export function SummaryStep(): any ({ formData, updateFormData }: SummaryStepProps) {;
 
@@ -95,18 +107,25 @@ export function SummaryStep(): any ({ formData, updateFormData }: SummaryStepPro
   const [matches, setMatches] = useState<MatchResult[]>([]);
 
 
+<<<<<<< HEAD
 =======
   const [isMatching, setIsMatching] = useState(false);
   const [matches, setMatches] = useState<MatchResult[]>([]);
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   // Run AI matching when the component mounts;
   useEffect(() => {;
     const runMatching = async () => {;
       if (!formData && formData.projectDescription) return;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       setIsMatching(true);
       try {;
         // Create a query string from the form data;
@@ -118,6 +137,9 @@ export function SummaryStep(): any ({ formData, updateFormData }: SummaryStepPro
           ${formData && formData.timeline}
         `;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
         // Get AI matches;
         const results = await findMatches(;
@@ -125,10 +147,10 @@ export function SummaryStep(): any ({ formData, updateFormData }: SummaryStepPro
           queryString;
           formData && formData.serviceType;
           3;
-=======
 
 
         
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
         // Get AI matches;
@@ -156,20 +178,29 @@ export function SummaryStep({ formData, updateFormData }: SummaryStepProps) {;
         `,
         
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         // Get AI matches
         const results = await findMatches(
           queryString,
           formData.serviceType,
           3
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         );
 
 =======
+=======
+  const [isMatching, setIsMatching] = useState(false);
+
+  const [matches, setMatches] = useState<MatchResult[]>([]);
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           queryString;
           formData && formData.serviceType;
           3;
         );
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import { useEffect, useState } from './react';
 import { QuoteFormData } from '@/types / quotes';
@@ -251,6 +282,11 @@ if (return) {
     },
     
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+      } finally {
+        setIsMatching (false);
+      }
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     runMatching()
   }, [formData]);
   const handleSelectMatch = (match: MatchResult) => {
@@ -262,6 +298,7 @@ if (return) {
     toast({
       title: "Match Selected"
       description: `You've selected ${match.item.title}`})
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -280,6 +317,8 @@ if (return) {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   // Map the onSelectMatch handler to work with the item directly
   const handleItemSelect = (item: any) => {
     // Find the original MatchResult that contains this item
@@ -287,6 +326,7 @@ if (return) {
     if (matchResult) {
       handleSelectMatch(matchResult)
     }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -352,6 +392,10 @@ if (return) {
     <div className="space-y-6">;
       <h3 className="text-xl font-semibold text-white mb-4">Review Your Request</h3>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  }
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {/* AI Matching Results */}
       <AIMatchingResults
         serviceType={formData.serviceType}
@@ -417,6 +461,7 @@ if (return) {
                 </div>
               )}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -429,6 +474,8 @@ if (return) {
               
               
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               {formData.endDate && (
                 <div>
                   <Label className="text-zion-slate-light">End Date</Label>
@@ -492,12 +539,16 @@ if (return) {
   )
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
       } finally {
         setIsMatching (false);
       }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         setMatches(results);
       } catch (error) {;
         console && console.error("Error during AI matching:", error);
@@ -545,6 +596,7 @@ if (return) {
       <AIMatchingResults
         serviceType={formData && formData.serviceType}
         projectDescription={formData && formData.projectDescription}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 import { useEffect, useState } from "react",;
@@ -722,15 +774,21 @@ const matchResult = matches.find(match => match.item.id === item.id),
 serviceType={formData.serviceType}
         projectDescription={formData.projectDescription}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         matches={matchItems}
         onSelectMatch={handleItemSelect}
         isLoading={isMatching}
       />;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
       ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {/* Service Information */}
       <div>;
         <h4 className="text-lg font-medium text-white mb-2">Service Information</h4>;
@@ -738,6 +796,7 @@ serviceType={formData.serviceType}
           <CardContent className="pt-4">;
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
               <div>;
+<<<<<<< HEAD
                 <Label className="text-zion-slate-light">Service Type</Label>;
 <<<<<<< HEAD
                 <div className="text-white">{formData && formData.serviceType}</div>;
@@ -758,10 +817,14 @@ serviceType={formData.serviceType}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                 </div>;
               )}
+=======
+              </div>;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             </div>;
           </CardContent>;
         </Card>;
       </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1077,3 +1140,6 @@ if ( {) {
 };
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

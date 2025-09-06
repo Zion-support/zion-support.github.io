@@ -1,10 +1,16 @@
+<<<<<<< HEAD
 }
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useRouter } from 'next/router',
 import { useState, useEffect, useCallback, useMemo } from 'react',
 import { motion, AnimatePresence } from 'framer-motion',
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { ArrowUp, Filter, SortAsc, Zap, TrendingUp, Star, ShoppingCart, MapPin, Package, AlertTriangle, RefreshCw } from 'lucide-react'
 import { useInfiniteScrollPagination  } from '@/hooks/useInfiniteScroll';
 =======
@@ -36,11 +42,14 @@ import {logErrorToProduction} from '@/utils/productionLogger';
 const INITIAL_EQUIPMENT: ProductListing[] = [
   {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
     id: "nvidia-a100-server";
     title: "NVIDIA A100 GPU Training Server";
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     description: "High-performance AI training server with 8x A100 GPUs, designed for demanding machine learning workloads.",
     category: "AI Hardware";
     price: 85000;
@@ -49,6 +58,7 @@ const INITIAL_EQUIPMENT: ProductListing[] = [
     specifications: ["8x A100 GPUs", "2TB HBM2e", "NVLink"],
     tags: ["AI", "Machine Learning", "GPU"],
     author: { name: "NVIDIA", id: "nvidia" },
+<<<<<<< HEAD
     images: ["https://images.unsplash.com/photo-1618599515406-3e5fd8cd9a27?auto;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     id: "nvidia-a100-server",
@@ -220,6 +230,8 @@ const EquipmentFilterControls = ({
 ),
 
 <<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -227,6 +239,7 @@ const EquipmentFilterControls = ({
 const EquipmentCard = ({ equipment, onViewDetails }: { equipment: ProductListing, onViewDetails: () => void }) => {
   const { formatPrice } = useCurrency(),
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -236,6 +249,8 @@ const EquipmentCard = ({ equipment, onViewDetails }: { equipment: ProductListing
     </EquipmentErrorBoundary>
   );
 };
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <Card className="h-full hover:shadow-lg transition-shadow">
       <CardHeader className="pb-3">
         <div className="flex items-start justify-between">
@@ -418,7 +433,10 @@ function EquipmentPageContent() {;
     window.addEventListener('scroll', handleScroll),
     return () => window.removeEventListener('scroll', handleScroll)
   }, []),
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   // Loading state
   if (loading && equipment.length === 0) {
@@ -435,6 +453,7 @@ function EquipmentPageContent() {;
     )
   }
 
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -602,3 +621,5 @@ function EquipmentPage() {
 =======
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

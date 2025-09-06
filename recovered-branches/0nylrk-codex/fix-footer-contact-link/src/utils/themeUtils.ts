@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 export interface ThemeColors {;
 
@@ -15,6 +16,11 @@ export type ThemePreset = 'light' | 'dark' | 'neon' | 'corporate' | 'startup';
 
 export interface ThemeColors {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+export interface ThemeColors {;
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   primaryColor: string;
   backgroundColor: string;
   textColor: string;
@@ -24,6 +30,7 @@ export interface ThemeColors {;
 }
 // Define theme presets
 export function getThemeColors(preset: ThemePreset, primaryColor: string): ThemeColors {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -87,6 +94,11 @@ export interface ThemeColors {
 export function getThemeColors (preset: ThemePreset, primary_color: string): ThemeColors {
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+  switch (preset) {
+// Define theme presets;
+export function getThemeColors (preset: ThemePreset, primary_color: string): ThemeColors {
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   switch (preset) {
     case 'dark':;
       return {
@@ -95,10 +107,13 @@ export function getThemeColors (preset: ThemePreset, primary_color: string): The
   const root = document.documentElement,;
 
 
+<<<<<<< HEAD
 =======
   const root = document.documentElement
   const root = document.documentElement,;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   root.style.setProperty('--primary-color', colors.primaryColor);
   root.style.setProperty('--background-color', colors.backgroundColor);
   root.style.setProperty('--text-color', colors.textColor);
@@ -110,12 +125,16 @@ export function getThemeColors (preset: ThemePreset, primary_color: string): The
 
   document.body.style.color = colors.textColor
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
   switch (preset) {
     case 'dark':;
       return {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const root = document && document.documentElement,
   root && root.style.setProperty('--primary-color', colors && colors.primaryColor);
   root && root.style.setProperty('--background-color', colors && colors.backgroundColor);
@@ -130,10 +149,13 @@ export function getThemeColors (preset: ThemePreset, primary_color: string): The
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export type ThemePreset = 'light' | 'dark' | 'neon' | 'corporate' | 'startup',;
 export interface ThemeColors {;
   primaryColor: string,;
@@ -143,10 +165,16 @@ export interface ThemeColors {;
   buttonColor: string,;
   cardBackground: string;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
+=======
+  switch (preset) {
+    case 'dark':;
+      return {
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         primary_color;
         background_color: '#0f172a';
         text_color: '#e2e8f0';
@@ -189,6 +217,7 @@ export interface ThemeColors {;
 }
 // Apply theme colors to document CSS variables;
 
+<<<<<<< HEAD
 =======
 }
 ;
@@ -241,6 +270,8 @@ export function getThemeColors(preset: ThemePreset, primaryColor: string): Theme
 ;
 // Apply theme colors to document CSS variables;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export function applyThemeColors(colors: ThemeColors) {;
   const root = document.documentElement,;
   root.style.setProperty('--primary-color', colors.primaryColor),;
@@ -253,13 +284,28 @@ export function applyThemeColors(colors: ThemeColors) {;
   document.body.style.backgroundColor = colors.backgroundColor;
   document.body.style.color = colors.textColor;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
+export /**
+ * applyThemeColors - Function description
+ */
+function applyThemeColors() {
+  const root = document.document_element,
+  root.style.set_property ('--primary - color', colors.primary_color);
+  root.style.set_property ('--background - color', colors.background_color);
+  root.style.set_property ('--text - color', colors.text_color);
+  root.style.set_property ('--accent - color', colors.accent_color);
+  root.style.set_property ('--button - color', colors.button_color);
+  root.style.set_property ('--card - background', colors.card_background);
 ;
+<<<<<<< HEAD
   // Set background and text colors on body;
   document.body.style.background_color = colors.background_color;
   document.body.style.color = colors.text_color;
@@ -346,3 +392,5 @@ export function applyThemeColors(colors:ThemeColors) {;
 }
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

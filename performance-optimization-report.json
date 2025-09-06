@@ -1,5 +1,6 @@
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   "timestamp": "2025-09-06T10:56:47.356Z",
   "totalDuration": 7910,
@@ -17274,6 +17275,8 @@
     },
     {
       "type": "code-splitting",
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       "recommendations": [
         "Implement route-based code splitting",
         "Use dynamic imports for large components",
@@ -17288,6 +17291,7 @@
         "Consider implementing cache invalidation strategy"
       ]
     }
+<<<<<<< HEAD
   ]
 <<<<<<< HEAD
 =======
@@ -17402,4 +17406,7 @@
   }
   }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  }
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }

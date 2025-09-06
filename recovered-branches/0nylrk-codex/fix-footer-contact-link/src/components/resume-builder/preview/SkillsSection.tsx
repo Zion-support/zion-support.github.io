@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 import {Skill} from '@/types/resume';
@@ -14,6 +15,11 @@ interface SkillsSectionProps {
   skills: Skill[];
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+interface SkillsSectionProps {
+  skills: Skill[];
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 interface SkillsSectionProps {
@@ -21,6 +27,7 @@ interface SkillsSectionProps {
 }
 export function SkillsSection({ skills }: SkillsSectionProps) {
   // Group skills by category
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -49,14 +56,14 @@ if ( {) {
 =======
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const skillsByCategory = skills.reduce((acc, skill) => {;
     const category = skill.category || 'Other';
     if (!acc[category]) {
       acc[category] = []
     }
     acc[category].push(skill);
-
-=======
 import { Skill } from '@/types/resume',;
 interface SkillsSectionProps {;
   skills: Skill[];
@@ -70,6 +77,7 @@ export function SkillsSection({ skills }: SkillsSectionProps) {;
       acc[category] = [];
     }
     acc[category].push(skill),
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -88,11 +96,14 @@ const skillsByCategory = skills.reduce(
   );
   if (skills.length === 0) return null;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     return acc
   }, {} as Record<string Skill[]>),
 
   if (skills.length === 0) return null,
   
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -114,6 +125,8 @@ const skillsByCategory = skills.reduce(
 
 >>>>>>> main
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <div className="mb-6">
       <h2 className="text-lg font-semibold border-b mb-3">Skills</h2>
@@ -123,6 +136,7 @@ const skillsByCategory = skills.reduce(
             <h3 className="text-sm font-medium">{category}</h3>
             <p className="text-sm">
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
               {skills.map(skill => skill.name).join(', ')}
@@ -131,11 +145,14 @@ const skillsByCategory = skills.reduce(
 =======
               {skills.map((skill) => skill.name).join(", ")}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             </p>
           </div>
         ))}
       </div>
     </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     },
@@ -223,6 +240,8 @@ export function SkillsSection({ skills } SkillsSectionProps) {;
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <div className="mb - 6">;
       <h2 className="text - lg font - semibold border - b mb - 3">Skills</h2>;
@@ -237,4 +256,3 @@ export function SkillsSection({ skills } SkillsSectionProps) {;
       </div>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

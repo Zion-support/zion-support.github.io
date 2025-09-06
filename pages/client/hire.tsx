@@ -1,6 +1,3 @@
-
-
-
 import {useState} from 'react';
 
 
@@ -11,6 +8,7 @@ import {useState} from 'react';
   const [result, setResult] = useState<any | null>(null),
   const [showFeedback, setShowFeedback] = useState(false);
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -23,22 +21,30 @@ export default function ClientHirePage() {
   const [termsType, setTermsType] = useState("hourly");
 import {useState} from 'react';
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   async function sendOffer() {;
     setLoading(true);
     setResult(null);
     const paymentTerms =;
       termsType === 'hourly';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
         ? { type: 'hourly', hourlyRateUsd }
         : termsType === 'fixed';
           ? { type: 'fixed', fixedAmountUsd }
 
+<<<<<<< HEAD
 =======
         ? { type: 'hourly', hourlyRateUsd }
         : termsType === 'fixed';
           ? { type: 'fixed', fixedAmountUsd }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           : { type: 'milestone', milestones: [] };
 
     const res = await fetch('/api/marketplace/offers', {;
@@ -56,39 +62,56 @@ import {useState} from 'react';
         agreementUrl,;
       }),;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
     });
     const json = await res && res.json();
     setLoading(false);
 
+<<<<<<< HEAD
 =======
     });
     const json = await res && res.json();
     setLoading(false);
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     if (!json && json.ok) {;
       alert(json && json.error || 'Failed to send offer');
     } else {;
       setResult(json && json.offer);
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       setShowFeedback(true);    }
 =======
       termsType === "hourly"
         ? { type: "hourly", hourlyRateUsd }
         : termsType === "fixed"
         ? { type: "fixed", fixedAmountUsd }
-  const [showFeedback, setShowFeedback] = useState(false);
-
-
 import { useState } from "react",
 import FeedbackModal from "../../components/ui/FeedbackModal",
-
 export default function ClientHirePage() {
   const [talentSlug, setTalentSlug] = useState("ava-chen");
   const [startDateIso, setStartDateIso] = useState<string>(new Date().toISOString().slice(0, 10)),
+  const [scopeSummary, setScopeSummary] = useState("Build AI-enabled reporting module");
+  const [termsType, setTermsType] = useState("hourly");
+  const [hourlyRateUsd, setHourlyRateUsd] = useState(120);
+  const [fixedAmountUsd, setFixedAmountUsd] = useState(5000);
+  const [agreementUrl, setAgreementUrl] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [result, setResult] = useState<any | null>(null),
+  const [showFeedback, setShowFeedback] = useState(false);
+  async function sendOffer() {
+    setLoading(true);
+    setResult(null);
 
   const [scopeSummary, setScopeSummary] = useState("Build AI-enabled reporting module"),
   const [termsType, setTermsType] = useState("hourly"),
@@ -98,13 +121,14 @@ export default function ClientHirePage() {
   const [loading, setLoading] = useState(false),
   const [result, setResult] = useState<any | null>(null),
   const [showFeedback, setShowFeedback] = useState(false),
-
   async function sendOffer() {
     setLoading(true),
     setResult(null),
     const paymentTerms =
-
-
+      termsType === "hourly"
+        ? { type: "hourly", hourlyRateUsd   } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
         : termsType === "fixed";
@@ -129,6 +153,7 @@ export default function ClientHirePage() {
       setShowFeedback(true)
     }
   }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
   }
@@ -373,12 +398,15 @@ export default function ClientHirePage() {
     } else {
       setResult(json.offer);
       setShowFeedback(true);    }
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   }
   return (
     <div className='max-w-3xl mx-auto p-6 space-y-6'>
       <h1 className='text-xl font-semibold'>Hire Talent</h1>
       <div className='space-y-4 border rounded p-4'>
+<<<<<<< HEAD
   const [scopeSummary, setScopeSummary] = useState("Build AI-enabled reporting module"),
   const [termsType, setTermsType] = useState("hourly"),
   const [hourlyRateUsd, setHourlyRateUsd] = useState(120),
@@ -460,10 +488,13 @@ export default function ClientHirePage() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <div className="max-w-3xl mx-auto p-6 space-y-6">
       <h1 className="text-xl font-semibold">Hire Talent</h1>
 
       <div className="space-y-4 border rounded p-4">
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -474,14 +505,29 @@ export default function ClientHirePage() {
       <h1 className="text-xl font-semibold">Hire Talent</h1>
       <div className="space-y-4 border rounded p-4">
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <div>
-          <label className="block text-sm font-medium">Talent</label>
-          <input value={talentSlug} onChange={(e) => setTalentSlug(e.target.value)} className="w-full border rounded px-3 py-2" />
+          <label className='block text-sm font-medium'>
+            Agreement URL (optional)
+          </label>
+          <input
+            value={agreementUrl}
+            onChange={e => setAgreementUrl(e.target.value)}
+            placeholder='https://...'
+            className='w-full border rounded px-3 py-2'
+          />
         </div>
+<<<<<<< HEAD
 
         <div>
           <label className="block text-sm font-medium">Start date</label>
           <input type="date" value={startDateIso} onChange={(e) => setStartDateIso(e.target.value)} className="w-full border rounded px-3 py-2" />
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         </div>
 
         <div>
@@ -498,6 +544,7 @@ export default function ClientHirePage() {
           </select>
         </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -511,20 +558,29 @@ export default function ClientHirePage() {
         {termsType === 'hourly' && (
         {termsType === "hourly" && (
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <div>
             <label className="block text-sm font-medium">Hourly rate (USD)</label>
             <input type="number" value={hourlyRateUsd} onChange={(e) => setHourlyRateUsd(Number(e.target.value))} className="w-full border rounded px-3 py-2" />
           </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
         )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
         {termsType === "fixed" && (
@@ -543,10 +599,13 @@ export default function ClientHirePage() {
 =======
         )}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <div>
           <label className="block text-sm font-medium">Agreement URL (optional)</label>
           <input value={agreementUrl} onChange={(e) => setAgreementUrl(e.target.value)} placeholder="https://..." className="w-full border rounded px-3 py-2" />
         </div>
+<<<<<<< HEAD
 
         <div className="flex justify-end">
           <button onClick={sendOffer} disabled={loading} className="px-4 py-2 rounded bg-indigo-600 text-white">
@@ -683,10 +742,13 @@ export default function ClientHirePage() {
           <div className='font-medium'>Offer sent</div>;
           <div className='text-sm'>Offer ID: {result && result.id}</div>        </div>;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       )}
       <FeedbackModal
         isOpen={showFeedback}
         onClose={() => setShowFeedback(false)}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -695,11 +757,14 @@ export default function ClientHirePage() {
           actionType: 'listing_publish',;
           metadata: { talentSlug },;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         }}
         userHeaders={{;
           'x-demo-user-role': 'client',;
           'x-demo-user-id': 'client-1',;
         }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -709,10 +774,13 @@ export default function ClientHirePage() {
     </div>;
   );
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         defaultContext={{ actionType: 'listing_publish', metadata: { talentSlug } }}
         userHeaders={{ 'x-demo-user-role': 'clientx-demo-user-id': 'client-1' }}
       />
     </div>
+<<<<<<< HEAD
   )
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
@@ -805,6 +873,8 @@ export default function ClientHirePage() {
       </div>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       {result && (
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <div className='border rounded p - 4 bg - emerald - 50'>;
           <div className='font - medium'>Offer sent</div>;
           <div className='text - sm'>Offer ID: {result.id}</div>        </div>)}
@@ -818,6 +888,7 @@ export default function ClientHirePage() {
         user_headers={{
           'x - demo - user - role': 'client',
           'x - demo - user - id': 'client - 1',
+<<<<<<< HEAD
         }}
 <<<<<<< HEAD
       />;
@@ -867,6 +938,11 @@ export default function ClientHirePage() {
     </div>
 );
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+      />
+    </div>
+);
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 }
         <div className="flex justify-end">
@@ -881,9 +957,12 @@ export default function ClientHirePage() {
       </div>
       {result && (
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <div className="border rounded p-4 bg-emerald-50">
           <div className="font-medium">Offer sent</div>
           <div className="text-sm">Offer ID: {result.id}</div>
@@ -1011,6 +1090,7 @@ export default function ClientHirePage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -1018,3 +1098,5 @@ export default function ClientHirePage() {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

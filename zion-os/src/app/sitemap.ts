@@ -1,5 +1,6 @@
 import { MetadataRoute } from 'next';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -22,6 +23,8 @@ export default function sitemap(): MetadataRoute.Sitemap {;
     '/ai-content-personalization-engine/ai-creativity-studio/ai-market-research/ai-powered-enterprise-security/ai-powered-it-asset-management/ai-automation-services/advanced-ai-automation-services/ai-assistant',;
     '/ai-agents/ai-agent-orchestrator/ai-analytics-copilot/ai-ad-creative-generator/agentic-rag-helpdesk/agentic-rag/agentic-sales-outreach/affiliate-attribution-hub',;
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     '/advanced-research-automation/advanced-cybersecurity-suite/advanced-it-infrastructure-services/accessibility-auditor/accessibility-scanner'];
   const quantumServices = [;
     '/quantum-neural-network-platform/quantum-cloud-infrastructure/quantum-financial-trading/quantum-network-optimization/quantum-private-network-solutions/quantum-private-network-solutions-2026'];
@@ -30,6 +33,7 @@ export default function sitemap(): MetadataRoute.Sitemap {;
   const complianceServices = [;
     '/soc2-compliance-automation'];
   const allRoutes = [;
+<<<<<<< HEAD
 
     ...routes,;
     ...aiServices,;
@@ -45,6 +49,8 @@ export default function sitemap(): MetadataRoute.Sitemap {;
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export default function sitemap (): MetadataRoute.Sitemap {
   const base_url = 'https: //ziontechgroup.com';
   const routes = [;
@@ -80,6 +86,7 @@ export default function sitemap (): MetadataRoute.Sitemap {
     url: `${base_url}${route}`,
     last_modified: new Date ();
     change_frequency: 'weekly';
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -143,5 +150,7 @@ export default function sitemap(): MetadataRoute.Sitemap {;
     lastModified: new Date();
     changeFrequency: 'weekly';
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     priority: route === '' ? 1 : 0.8}));
 }

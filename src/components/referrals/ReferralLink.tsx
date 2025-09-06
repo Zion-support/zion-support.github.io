@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import { useState } from 'react'
 import { Button } from '@/components/ui/button'
@@ -17,6 +18,8 @@ import { Button } from "@/components/ui/button",
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 import { Input } from "@/components/ui/input",
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { Copy, Facebook, Link, Share, Twitter } from 'lucide-react'
 interface ReferralLinkProps {
   referralLink: string;
@@ -32,6 +35,7 @@ export function ReferralLink({
     onCopy()
     setCopied(true)
     setTimeout(() => setCopied(false), 2000)
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
   }
@@ -65,6 +69,8 @@ function ReferralLink() {
     set_copied (true);
     set_timeout (() => set_copied (false), 2000);
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   }
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
@@ -131,7 +137,11 @@ export function ReferralLink(): any ({;
     setTimeout(() => setCopied(false), 2000);
   };
   return (
+<<<<<<< HEAD
   }
+=======
+  return (
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <Card className="mt-6">
       <CardHeader>
         <CardTitle className="flex items-center gap-2">
@@ -155,6 +165,7 @@ export function ReferralLink(): any ({;
               <span className="sr-only">Copy</span>
             </Button>
           </div>
+<<<<<<< HEAD
   },
 
   return (
@@ -285,15 +296,14 @@ export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProp
             </Button>
           </div>
           {copied && (
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <p className='text-sm text-green-600 dark:text-green-500'>              Copied to clipboard!
             <p className="text-sm text-green-600 dark:text-green-500">
   const handleCopy = () => {
     onCopy()
     setCopied(true)
     setTimeout(() => setCopied(false), 2000)
-  }
-
-  return (
     <Card className="mt-6">
       <CardHeader>
         <CardTitle className="flex items-center gap-2">
@@ -318,11 +328,11 @@ export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProp
             </Button>
           </div>
           {copied && (
-          {copied && (
           
           {copied && (
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
             <p className="text-sm text-green-600 dark:text-green-500">
+<<<<<<< HEAD
           {copied && (
           {copied && (
           
@@ -378,11 +388,14 @@ export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProp
           {copied && (
 
             <p className="text-sm text-green-600 dark:text-green-500">
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               Copied to clipboard!
             </p>
           )}
         </div>
       </CardContent>
+<<<<<<< HEAD
 
               variant="outline"
               size="sm"
@@ -407,10 +420,13 @@ export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProp
               size="sm"
               className="flex items-center gap-2"
               onClick={() => onShare('twitter')}
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             >
               <Twitter className="h-4 w-4" />
               Twitter
             </Button>
+<<<<<<< HEAD
             <Button
               variant='outline'
               size='sm'
@@ -421,10 +437,13 @@ export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProp
               className="flex items-center gap-2"
               onClick = {() => onShare('facebook'),}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <Button 
               variant="outline" 
               size="sm"
               className="flex items-center gap-2"
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -433,10 +452,13 @@ export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProp
               onClick = {() => onShare('facebook'),}
               onClick={() => onShare('facebook')}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             >
               <Facebook className="h-4 w-4" />
               Facebook
             </Button>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -462,10 +484,13 @@ export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProp
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               LinkedIn
             </Button>
           </div>
         </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
               onClick={() => onShare('linkedin')}            >;
@@ -483,6 +508,8 @@ export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProp
     </Card>
   )
 }
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useState } from "react",;
 import { Button } from "@/components/ui/button",;
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
@@ -497,12 +524,12 @@ interface ReferralLinkProps {;
 export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProps) {;
   const [copied, setCopied] = useState(false),;
   const handleCopy = () => {;
-    onCopy(),;
+    onCopy();
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   };
-  return (;
-    <Card className="mt-6">;
+
+    <Card className="mt - 6">;
       <CardHeader>;
         <CardTitle className="flex items-center gap-2">;
           <Link className="h-5 w-5" />;
@@ -513,6 +540,7 @@ export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProp
         </CardDescription>;
       </CardHeader>;
       <CardContent>;
+<<<<<<< HEAD
         <div className="flex flex-col space-y-3">;
           <div className="flex space-x-2">;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -607,3 +635,5 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
   )
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

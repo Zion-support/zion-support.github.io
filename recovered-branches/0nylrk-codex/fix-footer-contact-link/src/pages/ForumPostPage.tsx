@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -20,6 +21,8 @@ import {useAuth} from "@/hooks/useAuth";
 import ReplyCard from "@/components/community/ReplyCard";
 import ReplyForm from "@/components/community/ReplyForm";
 import {useToast} from "@/hooks/use-toast";
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useState } from "react",
 import { useParams, Link } from "react-router-dom",
 import { AppLayout } from "@/layout/AppLayout",
@@ -35,13 +38,15 @@ import { formatDistanceToNow, format } from "date-fns",
 import { ForumPost, ForumReply } from "@/types/community",
 import { useAuth } from "@/hooks/useAuth",
 import ReplyCard from "@/components/community/ReplyCard",
-
 import ReplyForm from "@/components/community/ReplyForm";
 import { useToast } from "@/hooks/use-toast";
 // Mock data for a forum post
 import ReplyForm from "@/components/community/ReplyForm",
 import { useToast } from "@/hooks/use-toast",
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 // Mock data for a forum post
 const mockPost: ForumPost = {
   id: "1",
@@ -63,10 +68,13 @@ const mockPost: ForumPost = {
 },
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 const mockPost: ForumPost = {
   id: "1"
   title: "Best practices for AI model fine-tuning"
@@ -98,11 +106,14 @@ const mockReplies: ForumReply[] = [
     updatedAt: "2025-04-01T14:30:00Z"
     upvotes: 12
     downvotes: 0
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
 =======
   }
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   {
     id: "reply2"
     postId: "1"
@@ -127,6 +138,7 @@ const mockReplies: ForumReply[] = [
     upvotes: 15
     downvotes: 0
     isAnswer: true
+<<<<<<< HEAD
   }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   },
@@ -160,6 +172,8 @@ const mockReplies: ForumReply[] = [
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   {
     id: "reply4"
     postId: "1"
@@ -171,6 +185,7 @@ const mockReplies: ForumReply[] = [
     upvotes: 4
     downvotes: 0
   }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 class ErrorBoundary extends React.Component {
@@ -386,10 +401,13 @@ export default function ForumPostPage() {;
 <<<<<<< HEAD
   const { postId } = useParams() as { postId?: string };
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const { user } = useAuth();
   const { toast } = useToast();
   const [post, setPost] = useState(mockPost);
   const [replies, setReplies] = useState(mockReplies);
+<<<<<<< HEAD
 
 
 =======
@@ -486,6 +504,9 @@ export default function ForumPostPage() {
   if (!post) {;
     return (;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+    return (
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <AppLayout>;
         <div className="container py-8">;
           <h1>Post not found</h1>;
@@ -494,6 +515,7 @@ export default function ForumPostPage() {
           </Button>;
         </div>;
       </AppLayout>;
+<<<<<<< HEAD
 <<<<<<< HEAD
     );
   }
@@ -508,6 +530,10 @@ export default function ForumPostPage() {
   },
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+    );
+  }
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const handleDownvote = () => {
     if (!user) {
       toast({
@@ -519,6 +545,7 @@ export default function ForumPostPage() {
     toast({
       title: "Vote recorded"
       description: "You downvoted this post"})
+<<<<<<< HEAD
 
 
   },
@@ -531,6 +558,8 @@ export default function ForumPostPage() {
   },
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const handleSubmitReply = async (content: string) => {
     if (!user) {
       toast({
@@ -540,6 +569,7 @@ export default function ForumPostPage() {
     }
     // Create a new reply
     const newReply: ForumReply = {
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -553,10 +583,13 @@ export default function ForumPostPage() {
       createdAt: new Date().toISOString()
       updatedAt: new Date().toISOString()
       upvotes: 0
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       downvotes: 0
     }
     setReplies([...replies, newReply]);
     setPost({ ...post, replyCount: post.replyCount + 1 })
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       id: `reply${Date.now()}`,
       postId: post.id,
@@ -591,6 +624,8 @@ export default function ForumPostPage() {
   },
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const handleMarkAsAnswer = (replyId: string) => {
     // Only post author or admin can mark an answer
     if (!isAuthor && !isAdminOrMod) {
@@ -598,6 +633,7 @@ export default function ForumPostPage() {
         title: "Permission denied"
         description: "Only the original poster or moderators can mark answers"
         variant: "destructive"
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -678,12 +714,18 @@ export default function ForumPostPage() {
     // Update the replies;
     const updatedReplies = replies && replies.map(reply => ({;
 
+=======
+      });
+      return;
+    }
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       ...reply;
       isAnswer: reply && reply.id === replyId;
     }));
 
       ...reply,
       isAnswer: reply.id === replyId
+<<<<<<< HEAD
 
 =======
       }),
@@ -697,11 +739,14 @@ export default function ForumPostPage() {
     setReplies(updatedReplies);
     setPost({ ...post, isAnswered: true })
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     })),
     
     setReplies(updatedReplies),
     setPost({ ...post, isAnswered: true }),
     
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     toast({
@@ -720,6 +765,11 @@ export default function ForumPostPage() {
   },
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+    toast({
+      title: "Answer marked"
+      description: "The reply has been marked as the accepted answer"})
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const handleReportPost = () => {
     if (!user) {
       toast({
@@ -730,6 +780,7 @@ export default function ForumPostPage() {
     toast({
       title: "Report submitted"
       description: "A moderator will review this content"})
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -753,11 +804,14 @@ export default function ForumPostPage() {
       description: post.isPinned ? "The post has been unpinned" : "The post has been pinned to the top"})
 
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     toast({
       title: post.isPinned ? "Post unpinned" : "Post pinned"
       description: post.isPinned ? "The post has been unpinned" : "The post has been pinned to the top"})
   }
   const handleLockPost = () => {
+<<<<<<< HEAD
     if (!isAdminOrMod) return;
     setPost({ ...post, isLocked: !post.isLocked })
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -774,12 +828,15 @@ export default function ForumPostPage() {
       title: post.isLocked ? "Post unlocked" : "Post locked"
       description: post.isLocked ? "Comments are now allowed" : "Comments are now disabled"})
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     toast({
       title: post.isLocked ? "Post unlocked" : "Post locked"
       description: post.isLocked ? "Comments are now allowed" : "Comments are now disabled"})
   }
   const timeAgo = formatDistanceToNow(new Date(post.createdAt), { addSuffix: true })
   const formattedDate = format(new Date(post.createdAt), "MMMM d, yyyy 'at' h: mm a")
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
   },
@@ -792,6 +849,9 @@ export default function ForumPostPage() {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <AppLayout>
       <SEO
@@ -823,6 +883,7 @@ export default function ForumPostPage() {
                   <div className="font-medium text-lg">{post.authorName}</div>
                   {post.authorRole && (
                     <Badge variant="outline" className="mt-1">
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -1082,6 +1143,8 @@ export default function ForumPostPage() {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       {post.authorRole}
                     </Badge>
                   )}
@@ -1099,6 +1162,7 @@ export default function ForumPostPage() {;
               {post.tags.map(tag => (
                 <Badge key={tag} variant="outline" className="bg-zion-purple/10 hover:bg-zion-purple/20">
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
@@ -1111,12 +1175,13 @@ export default function ForumPostPage() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     setReplies(updatedReplies);
     setPost({ ...post, isAnswered: true }),;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
     toast({;
       title: "Answer marked",;
       description: "The reply has been marked as the accepted answer"});
   };
-
   const handleReportPost = () => {;
     if (!user) {;
       toast({;
@@ -1124,35 +1189,18 @@ export default function ForumPostPage() {;
         description: "Please sign in to report content"}),;
       return;
     }
-
     toast({;
       title: "Report submitted",;
       description: "A moderator will review this content"});
   };
-
-  const handlePinPost = () => {;
-    if (!isAdminOrMod) return;
-
-    setPost({ ...post, isPinned: !post && post.isPinned }),;
-
     toast({;
       title: post && post.isPinned ? "Post unpinned" : "Post pinned",;
       description: post && post.isPinned ? "The post has been unpinned" : "The post has been pinned to the top"});
   };
-
-  const handleLockPost = () => {;
-    if (!isAdminOrMod) return;
-
-    setPost({ ...post, isLocked: !post && post.isLocked }),;
-
     toast({;
       title: post && post.isLocked ? "Post unlocked" : "Post locked",;
       description: post && post.isLocked ? "Comments are now allowed" : "Comments are now disabled"});
   };
-
-  const timeAgo = formatDistanceToNow(new Date(post && post.createdAt), { addSuffix: true }),;
-  const formattedDate = format(new Date(post && post.createdAt), "MMMM d, yyyy 'at' h: mm a"),;
-
   return (
     <AppLayout>;
       <SEO
@@ -1160,6 +1208,7 @@ export default function ForumPostPage() {;
         description={post && post.content.substring(0, 160)}
         keywords={`community, forum, discussion, ${post && post.tags.join()}`}
       />;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1294,12 +1343,15 @@ export default function ForumPostPage() {;
       />;
       ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <div className="container py-8">;
         <div className="flex items-center gap-3 mb-6">;
           <Link to="/community" className="text-sm text-muted-foreground hover:text-foreground">;
             Forum;
           </Link>;
           <span className="text-muted-foreground">/</span>;
+<<<<<<< HEAD
 <<<<<<< HEAD
           <Link to={`/community/category/${post && post.categoryId}`} className="text-sm text-muted-foreground hover:text-foreground">;
             {post && post.categoryId.split('-').map(word => word && word.charAt(0).toUpperCase() + word && word.slice(1)).join(' ')}
@@ -1317,11 +1369,14 @@ export default function ForumPostPage() {;
         </div>;
         ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <Card>;
           <CardContent className="p-6">;
             <div className="flex justify-between items-start mb-6">;
               <div className="flex items-center gap-4">;
                 <Avatar className="h-12 w-12">;
+<<<<<<< HEAD
 <<<<<<< HEAD
                   <AvatarImage src={post && post.authorAvatar} />;
                   <AvatarFallback>{post && post.authorName.charAt(0)}</AvatarFallback>;
@@ -1341,10 +1396,13 @@ export default function ForumPostPage() {;
                     <Badge variant="outline" className="mt-1">;
                       {post.authorRole}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     </Badge>;
                   )}
                 </div>;
               </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
               <div className="flex items-center text-sm text-muted-foreground">;
@@ -1356,10 +1414,13 @@ export default function ForumPostPage() {;
                 <Calendar className="h-4 w-4 mr-1" />;
                 <time dateTime={post.createdAt} title={formattedDate}>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   {timeAgo}
                 </time>;
               </div>;
             </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
             <h1 className="text-2xl font-bold mb-2">{post && post.title}</h1>;
@@ -1373,11 +1434,13 @@ export default function ForumPostPage() {;
             <div className="flex flex-wrap gap-2 mb-6">;
               {post.tags.map(tag => (;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <Badge key={tag} variant="outline" className="bg-zion-purple/10 hover:bg-zion-purple/20">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                   {tag}
                 </Badge>;
               ))}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
             </div>;
@@ -1405,15 +1468,21 @@ export default function ForumPostPage() {;
             <div className="flex flex-wrap items-center justify-between gap-4 mt-6">
               <div className="flex items-center gap-4">
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <Button
                   variant="outline"
                   size="sm"
                   onClick={handleUpvote}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   className="flex items-center gap-2">;
                   <ThumbsUp className="h-4 w-4" />;
                   <span>{post && post.upvotes}</span>;
                 </Button>;
+<<<<<<< HEAD
 =======
                   className="flex items-center gap-2"
                 >
@@ -1421,10 +1490,13 @@ export default function ForumPostPage() {;
                   <span>{post.upvotes}</span>
                 </Button>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <Button
                   variant="outline"
                   size="sm"
                   onClick={handleDownvote}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1490,6 +1562,8 @@ export default function ForumPostPage() {;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     <Button
                       variant="ghost"
                       size="sm"
@@ -1506,6 +1580,7 @@ export default function ForumPostPage() {;
                     </Button>;
                   </>;
                 )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -1983,6 +2058,8 @@ if (return) {
           
           
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           {!post.isLocked && (
             <div className="mb-8">
               <h3 className="text-lg font-medium mb-4">Your Response</h3>
@@ -1994,6 +2071,7 @@ if (return) {
                     Please <Link to="/login" className="font-medium text-zion-purple hover:underline">sign in</Link> to join the discussion.
                   </AlertDescription>
                 </Alert>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -2049,6 +2127,11 @@ if (return) {
 =======
           
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+              )}
+            </div>
+          )}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           {post.isLocked && (
             <Alert className="mb-8">
               <AlertDescription className="flex items-center">
@@ -2062,15 +2145,19 @@ if (return) {
               .filter(reply => !reply.isAnswer)
               .map(reply => (
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
           {post && post.isLocked && (;
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <ReplyCard
                   key={reply.id}
                   reply={reply}
                   onMarkAnswer={() => handleMarkAsAnswer(reply.id)}
 
+<<<<<<< HEAD
           {post && post.isLocked && (;
                 </Alert>;              )}
             </div>;
@@ -2124,6 +2211,11 @@ if (return) {
                   canMarkAnswer={!post.isAnswered && (isAuthor || isAdminOrMod)}
                 />
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+                  canMarkAnswer={!post.isAnswered && (isAuthor || isAdminOrMod)}
+                />
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               ))}
           </div>;
         </div>;
@@ -2132,9 +2224,13 @@ if (return) {
   );
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <div className="mt - 8">;
           <h2 className="text - xl font - bold mb - 6">Responses ({post.reply_count})</h2>;
           {post.is_answered && (
@@ -2178,6 +2274,7 @@ if (return) {
         </div>;
       </div>;
     </AppLayout>);
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 
@@ -2304,3 +2401,5 @@ downvotes: 0
 }
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

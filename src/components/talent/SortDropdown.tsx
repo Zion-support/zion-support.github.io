@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import React from "react",
 import { Button } from "@/components/ui/button";
@@ -39,14 +40,24 @@ interface SortDropdownProps {
 import {
   DropdownMenu;
 DropdownMenu;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   DropdownMenuContent;
   DropdownMenuItem;
   DropdownMenuTrigger} from "@/components/ui/dropdown-menu",
 
+<<<<<<< HEAD
 interface SortDropdownProps {
 import { Button } from "@/components/ui/button",
 import { SORT_OPTIONS } from "@/data/sortOptions",
 import { SortDesc, ChevronDown } from 'lucide-react'
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+import { Button } from "@/components/ui/button",
+import { SORT_OPTIONS } from "@/data/sortOptions",
+import { SortDesc, ChevronDown } from 'lucide-react'
+
+<<<<<<< HEAD
 import { Button } from "@/components/ui/button",
 import { SORT_OPTIONS } from "@/data/sortOptions",
 import { SortDesc, ChevronDown } from 'lucide-react'
@@ -54,15 +65,14 @@ import { SortDesc, ChevronDown } from 'lucide-react'
 import { Button } from "@/components/ui/button",
 import { SORT_OPTIONS } from "@/data/sortOptions",
 import { SortDesc, ChevronDown } from 'lucide-react'
-
-import { Button } from "@/components/ui/button",
-import { SORT_OPTIONS } from "@/data/sortOptions",
-import { SortDesc, ChevronDown } from 'lucide-react'
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   sortOption: string
 
   setSortOption: (option: string) => void
 }
 export function SortDropdown({ sortOption, setSortOption }: SortDropdownProps) {
+<<<<<<< HEAD
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
@@ -80,6 +90,8 @@ export function SortDropdown({ sortOption, setSortOption }: SortDropdownProps) {
         <Button 
           variant="outline" 
           className="w-full justify-between border-zion-blue-light text-white"
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         >
           <div className="flex items-center gap-2">
             <SortDesc className="h-4 w-4 text-zion-purple" />
@@ -88,6 +100,7 @@ export function SortDropdown({ sortOption, setSortOption }: SortDropdownProps) {
           <ChevronDown className="h-4 w-4 ml-2 opacity-50" />
         </Button>
       </DropdownMenuTrigger>
+<<<<<<< HEAD
       <DropdownMenuContent 
         align="start" 
         className="w-[200px] bg-zion-blue-dark border-zion-blue-light"
@@ -111,10 +124,13 @@ export function SortDropdown({ sortOption, setSortOption }: SortDropdownProps) {
       >
         {SORT_OPTIONS.map((option) => (
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <DropdownMenuItem
             key={option.value}
             onClick={() => setSortOption(option.value)}
             className={`text-white hover:bg-zion-blue-light/30 cursor-pointer ${
+<<<<<<< HEAD
               sortOption === option.value ? "bg-zion-purple/20 text-zion-purple" : ""
             }`}
           >
@@ -139,6 +155,8 @@ export function SortDropdown({ sortOption, setSortOption }: SortDropdownProps) {
             key={option.value}
             onClick={() => setSortOption(option.value)}
             className={`text-white hover:bg-zion-blue-light/30 cursor-pointer ${
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
               sortOption === option.value ? "bg-zion-purple/20 text-zion-purple" : ""
@@ -166,13 +184,18 @@ export function SortDropdown({ sortOption, setSortOption }: SortDropdownProps) {
         >;
           <div className="flex items-center gap-2">;
             <SortDesc className="h-4 w-4 text-zion-purple" />;
+<<<<<<< HEAD
             {SORT_OPTIONS.find(opt => opt.value === sortOption)?.label || "Sort by"}
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
             {SORT_OPTIONS.find(opt => opt.value === sortOption)?.label || "Sort by"}
           </div>;
           <ChevronDown className="h-4 w-4 ml-2 opacity-50" />;
         </Button>;
       </DropdownMenuTrigger>;
+<<<<<<< HEAD
 
 
               sortOption === option.value ? "bg-zion-purple/20 text-zion-purple" : "";
@@ -189,11 +212,14 @@ export function SortDropdown({ sortOption, setSortOption }: SortDropdownProps) {
       </DropdownMenuTrigger>;
       <DropdownMenuContent;
         align="start";
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         className="w-[200px] bg-zion-blue-dark border-zion-blue-light";
       >;
         {SORT_OPTIONS.map((option) => (;
           <DropdownMenuItem;
             key={option.value}
+<<<<<<< HEAD
             onClick={() => setSortOption(option.value)}
             className={`text-white hover:bg-zion-blue-light/30 cursor-pointer ${
               sortOption === option.value ? "bg-zion-purple/20 text-zion-purple" : ""
@@ -329,3 +355,5 @@ ursor/fix-website-loading-errors-and-merge-6662
 ;
             onClick={() => setSortOption(option.value)}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 import React, { useState } from 'react'
@@ -8,6 +9,8 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { logErrorToProduction } from '@/utils/productionLogger'
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useState } from 'react';
 import { useAuth } from '@/hooks/useAuth';
 import { Button } from '@/components/ui/button';
@@ -32,25 +35,18 @@ interface QuickAction {;
   action: () => void;
   category: 'performance' | 'development' | 'maintenance';
 
-
-;
-  const [isVisible, setIsVisible] = useState(false);
-  const [isProcessing, setIsProcessing] = useState<string | null>(null);
-  const executeAction = async (actionId: string, action: () => void) => {;
-
-
     setIsProcessing(actionId);    try {
       await action()
     } catch (error) {
       logErrorToProduction(`Failed to execute action ${actionId}:`, {
         data: error
       })
-import React, { useState } from 'react';
-import { use_auth } from '@/hooks / use_auth';
-import { Button } from '@/components / ui / button';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components / ui / card';
-import { Badge } from '@/components / ui / badge';
-import { logErrorToProduction } from '@/utils / production_logger';
+import React, { useState } from 'react'
+import { useAuth } from '@/hooks/useAuth'
+import { Button } from '@/components/ui/button'
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
+import { Badge } from '@/components/ui/badge'
+import { logErrorToProduction } from '@/utils/productionLogger'
 import {
   Zap
   Download
@@ -69,6 +65,7 @@ interface QuickAction {
   icon: React.ReactNode;
   action: () => void;
   category: 'performance' | 'development' | 'maintenance';
+<<<<<<< HEAD
 <<<<<<< HEAD
   dangerous?: boolean;
 export /**
@@ -103,6 +100,8 @@ if ( {) {
       logErrorToProduction (`Failed to execute action ${action_id}:`, {
         data: error,
       });
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   dangerous?: boolean
 export function QuickActions() {
 
@@ -112,24 +111,21 @@ export function QuickActions() {
   if (!isAllowed) {
     return null
   }
-  const [isVisible, setIsVisible] = useState(false)
-  const [isProcessing, setIsProcessing] = useState<string | null>(null)
-  const executeAction = async (actionId: string, action: () => void) => {
-;
-  const [isVisible, setIsVisible] = useState(false);
-  const [isProcessing, setIsProcessing] = useState<string | null>(null);
-  const executeAction = async (actionId: string, action: () => void) => {;
     setIsProcessing(actionId);    try {
       await action()
     } catch (error) {
       logErrorToProduction(`Failed to execute action ${actionId}:`, {
         data: error
       })
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     } finally {
       setIsProcessing (null);
     }
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
   const actions: QuickAction[] = [
@@ -164,6 +160,8 @@ export function QuickActions() {
       category: 'maintenance'
       dangerous: true
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
       id: 'enable - performance - monitor',
 
@@ -207,6 +205,7 @@ export function QuickActions() {;
   },
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -250,6 +249,8 @@ export function QuickActions() {;
   },
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const actions: QuickAction[] = [
     // Performance Actions
     {
@@ -259,6 +260,7 @@ export function QuickActions() {;
       icon: <Activity className='w - 4 h - 4' />,
       category: 'performance',
       action: () => {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -283,11 +285,14 @@ export function QuickActions() {;
         localStorage.setItem('performance-monitoringtrue'),
         window.location.reload()
       }},
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     {
       id: 'enable-bundle-analyzer',
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       label: 'Enable Bundle Analyzer',
       description: 'Monitor bundle size and chunks',
+<<<<<<< HEAD
       icon: <Package className='w - 4 h - 4' />,
       category: 'performance',
       action: () => {
@@ -352,18 +357,16 @@ ursor/fix-website-loading-errors-and-merge-6662
       id: 'enable - bundle - analyzer',
       label: 'Enable Bundle Analyzer',
       description: 'Monitor bundle size and chunks',
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       icon: <Package className='w - 4 h - 4' />,
       category: 'performance',
       action: () => {
-
-
-
-
     {
-      id: 'clear - cache',
+      id: 'clear-cache',
       label: 'Clear Cache',
       description: 'Clear browser cache and storage',
-      icon: <Trash2 className='w - 4 h - 4' />,
+      icon: <Trash2 className="w-4 h-4" />,
       category: 'maintenance',
       dangerous: true,
       action: () => {
@@ -375,9 +378,12 @@ if ( {) {
             names.for_each (name => caches.delete (name));
           });
         }
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       },
     },
         localStorage.clear(),
@@ -398,6 +404,7 @@ if ( {) {
       action: () => {
         // Preload critical fonts
         const criticalFonts = [
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   dangerous?: boolean;
@@ -783,6 +790,8 @@ export function QuickActions() {;
           link.href = font,
           document.head.appendChild(link)
         }),
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
         // Preload critical images
         const criticalImages = [
@@ -815,6 +824,7 @@ export function QuickActions() {;
             width: screen.width,
             height: screen.height,
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
     {
@@ -835,6 +845,8 @@ export function QuickActions() {;
         URL.revokeObjectURL(url)
       },
     },
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             colorDepth: screen.colorDepth
           }
         },
@@ -852,6 +864,7 @@ export function QuickActions() {;
         document.body.removeChild(a),
         URL.revokeObjectURL(url)
       }},
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       id: 'test-error-boundary',
       label: 'Test Error Boundary',
@@ -910,6 +923,8 @@ export function QuickActions() {;
   if (!isVisible) {
       <div className='fixed bottom-4 left-4 z-50'>;
         <Button
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     {
       id: 'test-error-boundary',
       label: 'Test Error Boundary',
@@ -918,15 +933,6 @@ export function QuickActions() {;
       category: 'development',
       dangerous: true,
       action: () => {
-        throw new Error('Test error for Sentry integration - this is intentional!')
-      }},
-        throw new Error(
-          'Test error for Sentry integration - this is intentional!'
-        )
-      },
-    },
-        throw new Error('Test error for Sentry integration - this is intentional!')
-      }},
     {
       id: 'refresh-app',
       label: 'Hard Refresh',
@@ -935,6 +941,7 @@ export function QuickActions() {;
       category: 'maintenance',
       action: () => {
         window.location.reload()
+<<<<<<< HEAD
       },
     },
   ]
@@ -951,6 +958,8 @@ export function QuickActions() {;
     maintenance:
       'bg-orange-100 dark:bg-orange-900/20 text-orange-800 dark:text-orange-200',
   }
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       }}],
 
   const categorizedActions = {
@@ -964,8 +973,43 @@ export function QuickActions() {;
     maintenance: 'bg-orange-100 dark:bg-orange-900/20 text-orange-800 dark:text-orange-200'},
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
+<<<<<<< HEAD
 
 
+=======
+    {
+      id: 'download-performance-report',
+      label: 'Download Performance Report',
+      description: 'Export current performance metrics',
+      icon: <Download className="w-4 h-4" />,
+      category: 'development',
+      action: () => {
+        const metrics = {
+          timestamp: new Date().toISOString(),
+          performance: window.window.window.performance.getEntriesByType('navigation')[0],
+          resources: window.window.window.performance.getEntriesByType('resource').slice(0, 20),
+          memory: (performance as any).memory || {},
+          userAgent: navigator.userAgent,
+          screen: {
+            width: screen.width,
+            height: screen.height,
+    {
+      id: 'test-error-boundary',
+      label: 'Test Error Boundary',
+      description: 'Trigger an error to test Sentry integration',
+      icon: <Monitor className="w-4 h-4" />,
+      category: 'development',
+      dangerous: true,
+      action: () => {
+    {
+      id: 'refresh-app',
+      label: 'Hard Refresh',
+      description: 'Force reload with cache bypass',
+      icon: <RefreshCw className="w-4 h-4" />,
+      category: 'maintenance',
+      action: () => {
+        window.location.reload()
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   if (!isVisible) {
     return (
 <<<<<<< HEAD
@@ -976,6 +1020,7 @@ export function QuickActions() {;
 =======
       <div className="fixed bottom-4 left-4 z-50">
         <Button
+<<<<<<< HEAD
           variant='outline'
           size='sm'
           onClick={() => setIsVisible(true)}
@@ -988,6 +1033,8 @@ export function QuickActions() {;
           className="bg-background/80 backdrop-blur-sm"
         >
           <Settings className="w-4 h-4 mr-2" />
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
           Quick Actions
@@ -997,6 +1044,7 @@ export function QuickActions() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       </div>
     )
+<<<<<<< HEAD
           className='bg-background/80 backdrop-blur-sm'        >;
           <Settings className='w-4 h-4 mr-2' />;
           Quick Actions;
@@ -1025,11 +1073,14 @@ export function QuickActions() {;
 
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               ✕
             </Button>
           </div>
         </CardHeader>
 
+<<<<<<< HEAD
               variant='ghost'
               size='sm'
               onClick={() => setIsVisible(false)}
@@ -1102,6 +1153,8 @@ export function QuickActions() {;
 }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
         <CardContent className="pt-0 space-y-4">
           {Object.entries(categorizedActions).map(([category, categoryActions]) => (
@@ -1134,23 +1187,32 @@ export function QuickActions() {;
                           <div className="text-xs opacity-70 mt-1">
                             {action.description}
                           </div>;
+                          <div className='flex-1 text-left'>;
+                            <div className='font-medium text-sm'>;
+                              {action && action.label}
+                            </div>;
+                            <div className='text-xs opacity-70 mt-1'>;
+                              {action && action.description}
+                            </div>                          </div>;
                         </div>;
-                      </div>;
-                    </Button>;
-                  </div>;
-                ))}
+                      </Button>;
+                    </div>;
+                  ))}
+                </div>;
               </div>;
-            </div>;
-          ))}
         </CardContent>;
       </Card>;
     </div>;
   );
 } ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
         local_storage.clear ();
@@ -1288,7 +1350,7 @@ if ( {) {
               size='sm';
               on_click={() => setIsVisible (false)}
               className='h - 6 w - 6 p - 0'            >;
-              ✕;
+              ;
             </Button>;
           </div>;
         </CardHeader>;
@@ -1340,7 +1402,10 @@ if ( {) {
 }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

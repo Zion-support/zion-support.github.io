@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -23,6 +24,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 import type { NextApiRequest, NextApiResponse } from "next";
 import { issueTokens } from "../../../../utils/token/service";
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" })
   const { userId, amount, reason } = req.body |{}
@@ -31,6 +34,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const tx = issueTokens(userId, Math.floor(amount), reason |"admin_issue")
     return res.status(200).json({ tx })
 
+<<<<<<< HEAD
   } catch (err: any) {
     return res.status(400).json({ error: err.message });
   try {
@@ -50,3 +54,5 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

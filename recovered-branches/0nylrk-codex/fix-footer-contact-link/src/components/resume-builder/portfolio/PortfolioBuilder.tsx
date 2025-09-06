@@ -1,10 +1,13 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {useState, useEffect} from 'react';
 import {Card, CardContent} from '@/components/ui/card';
 import {Button} from '@/components/ui/button';
@@ -14,6 +17,7 @@ import {ProjectForm} from './ProjectForm';
 import {PortfolioProject} from '@/types/resume';
 import {usePortfolio} from '@/hooks/usePortfolio';
 export function PortfolioBuilder() {;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -30,6 +34,8 @@ import { usePortfolio } from "@/hooks/usePortfolio";
 export function PortfolioBuilder() {
 >>>>>>> main
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const { projects, fetchProjects, deleteProject, isLoading } = usePortfolio();
   const [showAddProject, setShowAddProject] = useState(false);
   const [editingProject, setEditingProject] = useState<PortfolioProject | null>(
@@ -57,6 +63,7 @@ export function PortfolioBuilder() {
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   };
 
@@ -65,6 +72,8 @@ export function PortfolioBuilder() {
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useState, useEffect } from 'react',;
 import { Card, CardContent } from '@/components/ui/card',;
 import { Button } from '@/components/ui/button',;
@@ -94,6 +103,7 @@ export function PortfolioBuilder() {;
       fetchProjects();
     }
   },
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -108,6 +118,9 @@ export function PortfolioBuilder() {;
 
 >>>>>>> main
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   if (isLoading) {
     return (
       <div className="flex justify-center items-center h-64">
@@ -116,9 +129,12 @@ export function PortfolioBuilder() {;
     );
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <div className="space-y-6">
       <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-6">
@@ -138,17 +154,21 @@ export function PortfolioBuilder() {;
         </Button>
       </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 
 >>>>>>> main
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {/* Edit or Add Form */}
       {(showAddProject |editingProject) && (
         <Card>
           <CardContent className="pt-6">
             <h2 className="text-xl font-semibold mb-6">
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 import {useState, useEffect} from 'react';
@@ -226,16 +246,22 @@ export function PortfolioBuilder() {;
 <<<<<<< HEAD
             <ProjectForm 
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
             <ProjectForm
->>>>>>> main
               project={editingProject || undefined}
               onSuccess={editingProject ? handleEditSuccess : handleAddSuccess}
-<<<<<<< HEAD
+              onCancel={() => {;
+                setShowAddProject(false);
+                setEditingProject(null);
+            <ProjectForm 
+              project={editingProject || undefined}
+              onSuccess={editingProject ? handleEditSuccess : handleAddSuccess}
               onCancel={() => {
                 setShowAddProject(false);
-<<<<<<< HEAD
                 setEditingProject(null)
+<<<<<<< HEAD
 =======
 
 
@@ -244,10 +270,13 @@ export function PortfolioBuilder() {;
             <ProjectForm
               project={editingProject || undefined}
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               onSuccess={editingProject ? handleEditSuccess : handleAddSuccess}
               onCancel={() => {;
                 setShowAddProject(false);
                 setEditingProject(null);
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -270,17 +299,23 @@ export function PortfolioBuilder() {;
                 setEditingProject(null);
 >>>>>>> main
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+                setEditingProject(null);
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               }}
             />;
           </CardContent>;
         </Card>;
       )}
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {/* Projects List */}
       {projects && projects.length > 0 ? (;
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">;
@@ -289,6 +324,7 @@ export function PortfolioBuilder() {;
               key={project && project.id}
               project={project}
               onEdit={() => setEditingProject(project)}
+<<<<<<< HEAD
 <<<<<<< HEAD
               onDelete={handleDeleteProject}
             />;
@@ -481,11 +517,14 @@ if ( {) {
                   on_click={() => setShowAddProject (true)}
                   className="mt - 2";
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 >;
                   Add Your First Project;
                 </Button>;
               </div>;
             </CardContent>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
           </Card>))}
@@ -517,3 +556,5 @@ if ( {) {
             </h2>
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -20,6 +21,8 @@ origin/cursor/integrate-build-improve-and-re-verify-242d
 }}; return (; <a href = {resolved} className = {className} {...rest}>; {children}}}};
 origin/cursor/fix-syntax-push-and-merge-to-main-ba45
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 };
 };
   return (;
@@ -28,6 +31,7 @@ origin/cursor/fix-syntax-push-and-merge-to-main-ba45
 };
 };
 };
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -58,7 +62,21 @@ origin/cursor/fix-syntax-push-and-merge-to-main-ba45
 >>>>>>> origin/automation-improvements-final
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from 'react';
+type Href = string | { pathname?: string; href?: string };
+type LinkProps = React.AnchorHTMLAttributes<HTMLAnchorElement> & {
+  href: Href;
+  children: React.ReactNode;
+};
+};
+  return (;
+    <a href={resolved} className={className} {...rest}>;
+      {children};
+};
+};
+};
 
 
 class ErrorBoundary extends React.Component {
@@ -89,6 +107,7 @@ import React from 'react';
 interface HTMLElement {;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 ursor/integrate-build-improve-and-re-verify-8f7d
 ursor/fix-syntax-push-and-merge-to-main-40de
@@ -113,12 +132,15 @@ import React from 'react';
 // Define HTMLAnchorElement if not available
 interface HTMLElement {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   className: string;
   id: string;
   innerHTML: string;
   textContent: string | null;
   style: { [key: string]: string }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -127,10 +149,13 @@ interface HTMLAnchorElement extends HTMLElement {;
 =======
 interface HTMLAnchorElement extends HTMLElement {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   tagName: 'A';
   href: string;
   target: string;
 }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -150,11 +175,16 @@ interface HTMLAnchorElement extends HTMLElement {
 };
 }
 function resolveHref(href: Href): string {
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 type Href = string | { pathname?: string; href?: string }
 type LinkProps = React.AnchorHTMLAttributes<HTMLAnchorElement> & {
   href: Href;
   children: React.ReactNode;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }}; return (; <a href = {resolved} className = {className} {...rest}>; {children}}}};
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 };
@@ -167,6 +197,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 };
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 function resolveHref(href: Href): string {
 =======
@@ -184,6 +215,28 @@ function resolveHref(): any (href: Href): string {;
 origin/main
 function resolveHref(href: Href): string {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+}}; return (; <a href = {resolved} className = {className} {...rest}>; {children}}}};
+};
+};
+  return (;
+    <a href={resolved} className={className} {...rest}>;
+      {children};
+};
+};
+};
+import React from 'react';
+  className: string;
+  id: string;
+  innerHTML: string;
+  textContent: string | null;
+  style: { [key: string]: string }
+}
+  tagName: 'A';
+  href: string;
+  target: string;
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   if (typeof href === 'string') return href;
   return href?.pathname |(href as { href?: string })?.href |'#';
 }
@@ -200,6 +253,7 @@ export default function Link({ href, children, className, ...rest }: LinkProps) 
 
     });
   }
+<<<<<<< HEAD
 
 
 
@@ -211,6 +265,8 @@ export default function Link({ href, children, className, ...rest }: LinkProps) 
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from 'react';
 type Href = string | { pathname?: string; href?: string };
 type LinkProps = React.AnchorHTMLAttributes<HTMLAnchorElement> & {
@@ -228,11 +284,14 @@ export default function Link({ href, children, className, ...rest }: LinkProps) 
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 export default function Link({ href, children, className, ...rest }: LinkProps) {
 
 export default function Link({ href, children, className, ...rest }: LinkProps) {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const resolved = resolveHref(href);
   if (React.isValidElement(children)) {
     const existingClass = (children.props as { className?: string })?.className || '';
@@ -259,6 +318,7 @@ export default function Link(): any ({ href, children, className, ...rest }: Lin
   }
 =======
 
+<<<<<<< HEAD
 
 
 
@@ -276,39 +336,50 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 origin/main
 origin/automation-improvements-final
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <a href={resolved} className={className} {...rest}>;
       {children}
     </a>;
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-=======
-
-
-
-=======
+ursor/integrate-build-improve-and-re-verify-8f7d
+}
+}
+import React from 'react'; type Href = string | { pathname?: string; href?: string }; type LinkProps = React.AnchorHTMLAttributes<HTMLAnchorElement> & { href: Href; children: React.ReactNode}; function resolveHref(href: Href): string { if (typeof href === 'string') return href; return href?.pathname || (href as { href?: string })?.href || '#'} export default function Link({ href,children,className,...rest }: LinkProps) { const resolved = resolveHref(href); if (React.isValidElement(children)) { const existingClass = (children.props as { className?: string })?.className || ''; const mergedClassName = [existingClass,className].filter(Boolean).join(' '); return React.cloneElement(children as React.ReactElement,{ href: resolved,className: mergedClassName,...rest,})} return ( <a href={resolved} className={className} {...rest}> {children} </a> )}
+}
+import React from 'react'; type Href = string | { pathname?: string; href?: string }; type LinkProps = React.AnchorHTMLAttributes<HTMLAnchorElement> & { href: Href; children: React.ReactNode}; function resolveHref(href: Href): string { if (typeof href === 'string') return href; return href?.pathname || (href as { href?: string })?.href || '#'} export default function Link({ href,children,className,...rest }: LinkProps) { const resolved = resolveHref(href); if (React.isValidElement(children)) { const existingClass = (children.props as { className?: string })?.className || ''; const mergedClassName = [existingClass,className].filter(Boolean).join(' '); return React.cloneElement(children as React.ReactElement,{ href: resolved,className: mergedClassName,...rest,})} return ( <a href={resolved} className={className} {...rest}> {children} </a> )}
+}
+}
 }
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45
-=======
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-=======
-=======
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
 }
 
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/automation-improvements-final
 =======
+=======
+
+}
+
+
+
+}
+
+}
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ;
 // Define HTMLAnchorElement if not available;
 interface HTMLElement {
@@ -360,6 +431,7 @@ function Link() {
       {children}
     </a>);
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 }
@@ -398,3 +470,5 @@ origin/main
 origin/automation-improvements-final
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

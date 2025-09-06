@@ -10,6 +10,7 @@ const features = [;
     icon: GraduationCap,;
     title: 'Learning Management Systems,',;
     description: 'Comprehensive LMS platforms that support online and blended learning environments.'';
+<<<<<<< HEAD
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -30,6 +31,8 @@ const features = [
     title: 'Learning Management System',
     description: 'Comprehensive LMS with course management and student tracking',
     benefits: ['Course creation', 'Student management', 'Progress tracking', 'Assessments']
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   },
   {}
     icon: Users,
@@ -38,6 +41,7 @@ const features = [
   },
   },;
   {}
+<<<<<<< HEAD
     icon: Users,;
     title: 'Student Information Systems,',;
     description: 'Integrated SIS solutions for managing student data, enrollment, and academic records.',;
@@ -61,6 +65,8 @@ const features = [
   },
   {
     icon: BookOpen,
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     title: 'Digital Content Management',
     description: 'Interactive digital content creation and distribution'
   },
@@ -225,6 +231,7 @@ export default function EducationSolutionsPage() {
                     {feature.description}
                   </p>
                 </div>
+<<<<<<< HEAD
     title: 'Virtual Classrooms,',;
     description: 'Advanced virtual classroom solutions with video conferencing and collaboration tools.'';
   },;
@@ -408,11 +415,20 @@ export default function EducationSolutionsPage() {;
         </section>;
         {/* Solutions List */}
         <section className="py-20 bg-gray-800/30">";
+=======
+                        {benefit}
+                      </div>;
+                    ))}
+                  </div>;
+                </motion && motion.div>;
+              ))}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <div className="container mx-auto px-4">";
             <div className="max-w-4xl mx-auto">";
               <h2 className="text-3xl font-bold text-white text-center mb-12">";
                 Our Education Solutions;
               </h2>;
+<<<<<<< HEAD
               <div className="grid grid-cols-1 md: grid-cols-2 gap-6">",;
                 {solutions && solutions.map((solution, index) => (,;
                   <div key={index} className="flex items-center space-x-3">";
@@ -421,11 +437,16 @@ export default function EducationSolutionsPage() {;
                   </div>;
                 ))}
               </div>,;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             </div>;
           </div>;
         </section>;
         {/* Accessibility Section */}
+<<<<<<< HEAD
         <section className="py-20">";
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <div className="container mx-auto px-4">";
             <div className="bg-gray-800/50 rounded-2xl p-12">";
               <div className="text-center mb-12">";
@@ -433,11 +454,14 @@ export default function EducationSolutionsPage() {;
                   Accessible & Inclusive Education;
                 </h2>;
                 <p className="text-xl text-gray-300 max-w-3xl mx-auto">";
+<<<<<<< HEAD
                   Our education solutions are built with accessibility in mind, ;
                   ensuring equal access to learning opportunities for all students.;
                 </p>;
               </div>;
               <div className="grid grid-cols-1 md: grid-cols-3 gap-8">", <div className="text-center">",;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   <div className="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4">";
                     <Globe className="w-8 h-8 text-white" />";
                   </div>;
@@ -463,7 +487,10 @@ export default function EducationSolutionsPage() {;
           </div>;
         </section>;
         {/* CTA Section */}
+<<<<<<< HEAD
         <section className="py-20">";
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <div className="container mx-auto px-4">";
             <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-12 text-center">";
               <h2 className="text-4xl font-bold text-white mb-6">";
@@ -473,15 +500,19 @@ export default function EducationSolutionsPage() {;
                 Let our education technology experts help you implement solutions that;
                 enhance learning outcomes and support modern educational practices.;
               </p>;
+<<<<<<< HEAD
               <div className="flex flex-col sm: flex-row gap-4 justify-center">", <button className="bg-white text-blue-600 px-8 py-4 rounded-lg hover:bg-gray-100 transition-colors font-medium">",;
                   Schedule Consultation;
                 </button>;
                 <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover: bg-white hover:text-blue-600 transition-colors font-medium">", Download Education Guide,;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 </button>;
               </div>;
             </div>;
           </div>;
         </section>;
+<<<<<<< HEAD
       </div>;
     </Layout>;
         {/* Benefits Section */}
@@ -528,6 +559,8 @@ export default function EducationSolutionsPage() {;
                   </div>;
                 </motion && motion.div>;
               ))}
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             </div>
           </div>
         </section>
@@ -556,6 +589,7 @@ export default function EducationSolutionsPage() {;
     </Layout>
     </Layout>
     </>
+<<<<<<< HEAD
     </>
 <<<<<<< HEAD
     </Layout>
@@ -567,3 +601,5 @@ export default Education;
 =======
 export default Education;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -1,22 +1,36 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
+import {useEffect, useState} from 'react';
+const STEPS = [
+  { key: 'job', label: 'Job posted' }
+  { key: 'invite', label: 'First invite sent' }
+  { key: 'response', label: 'First response received' }
 ] as const;
 type StepKey = (typeof STEPS)[number]['key'];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 const STEPS = [
   { key: 'job', label: 'Job posted' },
   { key: 'invite', label: 'First invite sent' },
   { key: 'response', label: 'First response received' }] as const,
+<<<<<<< HEAD
 
 type StepKey = typeof STEPS[number]['key'];
 
 export default function ClientDashboard() {
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const [completed, setCompleted] = useState<Record<StepKey, boolean>>({ job: false, invite: false, response: false }),
   useEffect(() => {
     try {
@@ -24,15 +38,21 @@ export default function ClientDashboard() {
       if (raw) setCompleted(JSON.parse(raw))
     } catch {}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   }, []);
   useEffect(() => {
 
 
+<<<<<<< HEAD
 =======
   }, []);
   useEffect(() => {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export default function ClientDashboard() {;
   const [completed, setCompleted] = useState<Record<StepKey, boolean>>({;
     job: false,;
@@ -57,6 +77,7 @@ export default function ClientDashboard() {;
 
   const progress = Math && Math.round(;
     (Object && Object.values(completed).filter(Boolean).length / STEPS && STEPS.length) * 100;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -177,6 +198,13 @@ export default function ClientDashboard() {
 
 import EnhancedCard from '../../components/ui/EnhancedCard';
 import EnhancedButton from '../../components/ui/EnhancedButton';
+=======
+
+  );
+  const toggle = (key: StepKey) =>;
+    setCompleted(c => ({ ...c, [key]: !c[key] }));
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useEffect, useState } from 'react';
 const STEPS = [;
   { key: 'job', label: 'Job posted' },;
@@ -205,7 +233,45 @@ export default function ClientDashboard(req, res) {
   }, [completed]),
   const progress = Math.round((Object.values(completed).filter(Boolean).length / STEPS.length) * 100),
   const toggle = (key: StepKey) => setCompleted((c) => ({ ...c, [key]: !c[key] })),
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  return (
+    <div className='space-y-4'>;
+      <EnhancedCard>;
+        <div className='flex items-center justify-between'>;
+          <div>;
+            <h1 className='text-lg font-semibold'>Welcome back</h1>;
+            <p className='text-sm text-gray-600 dark:text-gray-300'>;
+              Post your first job and invite talent to get started.;
+            </p>;
+          </div>;
+          <div className='text-sm font-medium'>{progress}%</div>;
+        </div>;
+        <div className='mt-3 h-2 w-full bg-gray-100 dark:bg-gray-800 rounded'>;
+          <div
+            className='h-2 rounded bg-blue-600'
+            style={{ width: `${progress}%` }}
+                </span>;
+                <span className='text-sm'>{s && s.label}</span>;
+              </div>;
+              {completed[s && s.key] ? (;
+                <button
+                  onClick={() => toggle(s && s.key)}
+                  className='text-xs text-gray-500 hover:underline';
+                >;
+                  Undo;
+                </button>;
+              ) : (;
+                <EnhancedButton
+                  onClick={() => toggle(s && s.key)}
+                  variant='secondary';
+                  className='text-xs py-1 px-2';
+                >;
+                  {s && s.key === 'job' ? 'Post a Job' : 'Mark done'}
+                </EnhancedButton>              )}
+            </li>;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <div className="space-y-4">
       <EnhancedCard>
@@ -235,8 +301,8 @@ export default function ClientDashboard(req, res) {
               ) : (
 
 
-
 }
+
 
                 <EnhancedButton onClick={() => toggle(s.key)} variant="secondary" className="text-xs py-1 px-2">{s.key === 'job' ? 'Post a Job' : 'Mark done'}</EnhancedButton>
               )  } catch (error) {
@@ -251,16 +317,22 @@ export default function ClientDashboard(req, res) {
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         </ul>;
       </EnhancedCard>;
     </div>;
   );
 
 
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   )
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
@@ -358,6 +430,7 @@ function ClientDashboard() {
     </div>);
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
@@ -425,11 +498,14 @@ export default function ClientDashboard() {
     </div>;
   );
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -437,3 +513,5 @@ export default function ClientDashboard() {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

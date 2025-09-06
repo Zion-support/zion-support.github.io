@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -6,6 +7,8 @@ import React from 'react';
 =======
 import React from 'react';
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import Head from 'next/head';
 import Layout from '../components/layout/Layout';
 export default function MarketPricingPage() {
@@ -24,6 +27,7 @@ export default function MarketPricingPage() {
             <div className="bg-black/30 rounded-2xl border border-cyan-500/30 p-6">
               <h2 className="text-2xl font-semibold mb-2">LLM & AI Platforms</h2>
               <ul className="list-disc list-inside text-slate-300 space-y-1">
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -43,12 +47,15 @@ export default function MarketPricingPage() {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               </ul>
               <div className="text-sm text-slate-400 mt-3">Typical SMB budgets: $100–$2,000/month depending on traffic and model choice.</div>
             </div>
             <div className="bg-black/30 rounded-2xl border border-purple-500/30 p-6">
               <h2 className="text-2xl font-semibold mb-2">Security & Compliance</h2>
               <ul className="list-disc list-inside text-slate-300 space-y-1">
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -68,12 +75,15 @@ export default function MarketPricingPage() {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               </ul>
               <div className="text-sm text-slate-400 mt-3">Typical SMB budgets: $200–$5,000/month based on scale and compliance scope.</div>
             </div>
             <div className="bg-black/30 rounded-2xl border border-emerald-500/30 p-6">
               <h2 className="text-2xl font-semibold mb-2">Data & Analytics</h2>
               <ul className="list-disc list-inside text-slate-300 space-y-1">
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -93,12 +103,15 @@ export default function MarketPricingPage() {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               </ul>
               <div className="text-sm text-slate-400 mt-3">Typical SMB budgets: $100–$3,000/month depending on storage, queries, and concurrency.</div>
             </div>
             <div className="bg-black/30 rounded-2xl border border-amber-500/30 p-6">
               <h2 className="text-2xl font-semibold mb-2">Cloud & Edge</h2>
               <ul className="list-disc list-inside text-slate-300 space-y-1">
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -118,12 +131,15 @@ export default function MarketPricingPage() {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               </ul>
               <div className="text-sm text-slate-400 mt-3">Typical SMB budgets: $200–$10,000/month depending on traffic and workloads.</div>
             </div>
             <div className="bg-black/30 rounded-2xl border border-blue-500/30 p-6">
               <h2 className="text-2xl font-semibold mb-2">Vector Search & RAG Infra</h2>
               <ul className="list-disc list-inside text-slate-300 space-y-1">
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -144,11 +160,14 @@ export default function MarketPricingPage() {
                 <li>Weaviate pricing: <a className="text-cyan-400 underline" href={`https://weaviate.io/pricing`} target="_blank" rel="noopener noreferrer">weaviate.io/pricing</Link></li>
                 <li>Qdrant Cloud: <a className="text-cyan-400 underline" href={`https://qdrant.tech/pricing/`} target="_blank" rel="noopener noreferrer">qdrant.tech/pricing</Link></li>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               </ul>
               <div className="text-sm text-slate-400 mt-3">Typical SMB budgets: $50–$1,000/month based on dimensions, throughput, and replicas.</div>
             <div className="bg-black/30 rounded-2xl border border-cyan-500/30 p-6">
               <h2 className="text-2xl font-semibold mb-2">Email Deliverability & Warmup</h2>
               <ul className="list-disc list-inside text-slate-300 space-y-1">
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -169,12 +188,15 @@ export default function MarketPricingPage() {
                 <li>Mailgun pricing: <a className="text-cyan-400 underline" href={`https://www.mailgun.com/pricing/`} target="_blank" rel="noopener noreferrer">mailgun.com/pricing</Link></li>
                 <li>SendGrid pricing: <a className="text-cyan-400 underline" href={`https://sendgrid.com/pricing/`} target="_blank" rel="noopener noreferrer">sendgrid.com/pricing</Link></li>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               </ul>
               <div className="text-sm text-slate-400 mt-3">Typical SMB budgets: $50–$300/month for warmup and monitoring, ESP fees separate.</div>
             </div>
             <div className="bg-black/30 rounded-2xl border border-purple-500/30 p-6">
               <h2 className="text-2xl font-semibold mb-2">Product Analytics & Personalization</h2>
               <ul className="list-disc list-inside text-slate-300 space-y-1">
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -195,12 +217,15 @@ export default function MarketPricingPage() {
                 <li>Mixpanel pricing: <a className="text-cyan-400 underline" href={`https://mixpanel.com/pricing/`} target="_blank" rel="noopener noreferrer">mixpanel.com/pricing</Link></li>
                 <li>Mutiny personalization: <a className="text-cyan-400 underline" href={`https://www.mutinyhq.com/product`} target="_blank" rel="noopener noreferrer">mutinyhq.com/product</Link></li>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               </ul>
               <div className="text-sm text-slate-400 mt-3">Typical SMB budgets: $100–$1,500/month depending on MAUs and features.</div>
             </div>
             <div className="bg-black/30 rounded-2xl border border-emerald-500/30 p-6">
               <h2 className="text-2xl font-semibold mb-2">Vector Search & Retrieval</h2>
               <ul className="list-disc list-inside text-slate-300 space-y-1">
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -221,12 +246,15 @@ export default function MarketPricingPage() {
                 <li>Weaviate Cloud: <a className="text-cyan-400 underline" href={`https://weaviate.io/pricing`} target="_blank" rel="noopener noreferrer">weaviate.io/pricing</Link></li>
                 <li>Elastic Search pricing: <a className="text-cyan-400 underline" href={`https://www.elastic.co/pricing`} target="_blank" rel="noopener noreferrer">elastic.co/pricing</Link></li>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               </ul>
               <div className="text-sm text-slate-400 mt-3">Typical SMB budgets: $50–$1,000/month depending on index size and QPS.</div>
             </div>
             <div className="bg-black/30 rounded-2xl border border-amber-500/30 p-6">
               <h2 className="text-2xl font-semibold mb-2">API Security & Edge</h2>
               <ul className="list-disc list-inside text-slate-300 space-y-1">
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -247,12 +275,15 @@ export default function MarketPricingPage() {
                 <li>Fastly pricing: <a className="text-cyan-400 underline" href={`https://www.fastly.com/pricing`} target="_blank" rel="noopener noreferrer">fastly.com/pricing</Link></li>
                 <li>Salt Security overview: <a className="text-cyan-400 underline" href={`https://salt.security`} target="_blank" rel="noopener noreferrer">salt.security</Link></li>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               </ul>
               <div className="text-sm text-slate-400 mt-3">Typical SMB budgets: $100–$2,000/month based on traffic and protections.</div>
             </div>
             <div className="bg-black/30 rounded-2xl border border-slate-500/30 p-6">
               <h2 className="text-2xl font-semibold mb-2">Privacy, PII & DSAR</h2>
               <ul className="list-disc list-inside text-slate-300 space-y-1">
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -273,6 +304,8 @@ export default function MarketPricingPage() {
                 <li>VGS pricing: <a className="text-cyan-400 underline" href={`https://www.verygoodsecurity.com/pricing`} target="_blank" rel="noopener noreferrer">verygoodsecurity.com/pricing</Link></li>
                 <li>Transcend: <a className="text-cyan-400 underline" href={`https://transcend.io/product/`} target="_blank" rel="noopener noreferrer">transcend.io/product</Link></li>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               </ul>
               <div className="text-sm text-slate-400 mt-3">Typical SMB budgets: $100–$2,000/month by data volume and systems.</div>
             </div>
@@ -280,6 +313,7 @@ export default function MarketPricingPage() {
               <h2 className="text-2xl font-semibold mb-2">Identity & SSO/SCIM</h2>
               <ul className="list-disc list-inside text-slate-300 space-y-1">
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -301,6 +335,9 @@ export default function MarketPricingPage() {
                 <li>WorkOS pricing: <a className="text-cyan-400 underline" href={`https://workos.com/pricing`} target="_blank" rel="noopener noreferrer">workos.com/pricing</Link></li>
                 <li>Okta pricing: <a className="text-cyan-400 underline" href={`https://www.okta.com/pricing/`} target="_blank" rel="noopener noreferrer">okta.com/pricing</Link></li>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               </ul>
               <div className="text-sm text-slate-400 mt-3">Typical SMB budgets: $100–$1,500/month depending on MAUs and features.</div>
             </div>
@@ -309,6 +346,7 @@ export default function MarketPricingPage() {
       </div>
     </Layout>
   )
+<<<<<<< HEAD
 
 }
 
@@ -325,6 +363,8 @@ export default /**
 function MarketPricingPage() {
   return (
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <Layout>;
       <Head>;
         <title > Market Pricing & Competitor References | Zion Tech Group</title>;
@@ -436,6 +476,7 @@ function MarketPricingPage() {
                 <li > WorkOS pricing: <a className="text - cyan - 400 underline" href={`https://workos.com / pricing`} target="_blank" rel="noopener noreferrer">workos.com / pricing</a></li>;
                 <li > Okta pricing: <a className="text - cyan - 400 underline" href={`https://www.okta.com / pricing/`} target="_blank" rel="noopener noreferrer">okta.com / pricing</a></li>;
               </ul>;
+<<<<<<< HEAD
               <div className="text - sm text - slate - 400 mt - 3">Typical SMB budgets: $100–$1, 500 / month depending on MAUs and features.</div>;
 <<<<<<< HEAD
 =======
@@ -559,10 +600,13 @@ export default function MarketPricingPage(req, res) {
               </ul>;
               <div className="text-sm text-slate-400 mt-3">Typical SMB budgets: $100–$1,500/month depending on MAUs and features.</div>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             </div>;
           </div>;
         </div>;
       </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
     </Layout>);
 }
@@ -581,3 +625,11 @@ export default function MarketPricingPage(req, res) {
 
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+;
+;
+
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

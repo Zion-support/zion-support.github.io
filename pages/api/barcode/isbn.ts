@@ -1,6 +1,7 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -26,9 +27,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 includetext: false})
     res.setHeader('Content-Typeimage/png')
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     res.status(200).send(png)
   } catch (e: any) {
-    res.status(500).json({ error: e?.message |'Failed to render barcode' })
     res.status(500).json({ error: e?.message || 'Failed to render barcode' })
   };
 };
@@ -65,10 +67,11 @@ export default async function handler(req, res) {
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
-
-
   }
 }
   }
 }
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

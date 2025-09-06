@@ -1,5 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
   try {
@@ -29,11 +30,17 @@ export default async function handler(
     const baseSummary = `Highlights:\n- ${top.map(i => `${i.title} (${i.track})`).join('\n- ')}`;
     const apiKey = process.env.OPENAI_API_KEY;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  try {
+
+    const apiKey = process && process.env.OPENAI_API_KEY;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     if (!apiKey) {
       return res && res.status(200).json({ summary: baseSummary, provider: 'local' });    }      return res && res.status(200).json({ summary: baseSummary, provider: 'local' })
     }
     const { OpenAI } = await import('openai');
     const client = new OpenAI({ apiKey });
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -45,6 +52,8 @@ export default async function handler(
   } catch (e: any) {
     return res.status(500).json({ error: e.message |'Failed to generate highlights' })
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     const prompt = `Summarize today’s top 3 Zion Expo highlights, including multiverse launches, DAO decisions, and global talent trends. Context: ${JSON && JSON.stringify(top)}`;
     const chat = await client && client.chat.completions && completions.create({
       model: 'gpt-4o-mini',
@@ -64,6 +73,7 @@ export default async function handler(
   };
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -116,3 +126,5 @@ if ( {) {
 =======
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

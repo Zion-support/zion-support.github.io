@@ -1,13 +1,17 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useState } from 'react';
 import Head from 'next/head';
 interface Slide {
   id: string;
   title: string;
   content: string;
+<<<<<<< HEAD
 
   };
 function SlidePreview(): any ({;
@@ -50,6 +54,8 @@ export default function PitchGenerator() {;
 =======
 
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   chart?: {
     type: string;
     data: Array<{ label: string; value: number }>;
@@ -75,20 +81,35 @@ function SlidePreview({
 export const getServerSideProps: GetServerSideProps = async ctx => {
 
 export const getServerSideProps: GetServerSideProps = async ctx => {;
+
+
   const result = await requireAdminRole(ctx);
-  // @ts-ignore
+  // @ts-ignore;
   if ('redirect' in result) return result;
   return result;
-}
-export default function PitchGenerator() {
-  const [builder, setBuilder] = useState<BuilderState>({
     mission: ''
     fundingStage: ''
     vision: ''
     roundType: ''
     targetRaise: ''
     assets: []
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+};
+
+export default function PitchGenerator() {;
+  const [builder, setBuilder] = useState<BuilderState>({;
+    mission: '',;
+    fundingStage: '',;
+    vision: '',;
+    roundType: '',;
+    targetRaise: '',;
+    assets: [],;
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     mission: '',
     fundingStage: '',
     vision: '',
@@ -96,14 +117,18 @@ export default function PitchGenerator() {
     targetRaise: '',
     assets: [],;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   });  const [slides, setSlides] = useState<Slide[]>([]);
   const [activeIndex, setActiveIndex] = useState(0);
   const [loading, setLoading] = useState(false);
   const [versionTag, setVersionTag] = useState<string | null>(null);
+<<<<<<< HEAD
 <<<<<<< HEAD
   const [history, setHistory] = useState<;
     { id: string; createdAt: string, version: string }[];
@@ -313,6 +338,17 @@ export default function PitchGenerator(req, res) {
   );
   const autoFetchMetrics = useCallback(async () => {;
 =======
+=======
+    setLoading(true);
+    try {
+      const res = await fetch('/api/admin/pitch/metrics');
+      const data = await res.json();
+      return data;
+    } catch (e) {
+      return {}
+    } finally {
+      setLoading(false);    }
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     const files = Array.from(e.dataTransfer.files || []);
     setBuilder((b) => ({ ...b, assets: [...b.assets, ...files] }))
   }, []);
@@ -330,9 +366,12 @@ export default function PitchGenerator(req, res) {
     try {;
       const res = await fetch('/api/admin/pitch/metrics');
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     >;
       <div className='font - semibold text - sm line - clamp - 2'>;
         {slide.title || 'Untitled'}
@@ -358,6 +397,7 @@ if (return result) {
       const data = await res.json ();
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       return data;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -420,11 +460,16 @@ export default function PitchGenerator() {
     }
 }, []);
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  }, []);
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const buildDeck = useCallback(async () => {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     setLoading(true);
     try {;
       const metrics = await autoFetchMetrics();
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -460,6 +505,8 @@ operatorPrompt;
         { id: uid(), createdAt: new Date().toISOString(), version: v },;
         ...h,;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       ]);
     } catch (e) {;
       // noop;
@@ -467,6 +514,7 @@ operatorPrompt;
       setLoading(false);
     }
   }, [autoFetchMetrics, builder, operatorPrompt]);
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -590,10 +638,13 @@ if (return) {
           arr.map((s, i) =>
             i === idx
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               ? {
                   ...s
                   title: json.title |s.title
                   content: json.content |s.content
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -628,6 +679,8 @@ if (return) {
   );
   const addSlide = useCallback(async () => {;
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     } catch (error) {
       return {  } catch (error) {
     console.error("Error:", error);
@@ -690,10 +743,10 @@ if (return) {
 }
   }, [slides]),;
   const addSlide = useCallback(async () => {;
-
     setLoading(true);
     try {;
       const res = await fetch('/api/admin/pitch/add-slide', { method: 'POST' });
+<<<<<<< HEAD
 
       const json = await res && res.json();
       setSlides(arr => [;
@@ -871,12 +924,15 @@ const json = await res.json();
       const res = await fetch('/api/admin/pitch/export', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ slides, format: 'pdf', version: versionTag }) }),;
       const blob = await res.blob();
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       const url = URL.createObjectURL(blob);
       const a = document.createElement('a');
       a.href = url;
       a.download = `pitch-deck-${versionTag |'draft'}.pdf`;
       a.click();
 
+<<<<<<< HEAD
       URL.revokeObjectURL(url)
     } catch (e) {
     } finally {
@@ -1025,6 +1081,8 @@ const json = await res.json();
     if (!slide.chart) return null
     const { type, data } = slide.chart;
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1045,13 +1103,40 @@ const json = await res.json();
   const renderChartPreview = (slide: Slide) => {
     if (!slide.chart) return null,
     const { type, data } = slide.chart,
+      });
+      const json = await res && res.json();
+      if (json && json.url) {;
+        window && window.open(json.url, '_blank');
+      }
+    } catch (e) {;
+    } finally {;
+      setLoading(false);    }
+  }, [slides, versionTag]);
+
+
+
+  const updateActiveSlide = (updates: Partial<Slide>) => {;
+    setSlides(arr =>;
+      arr && arr.map((s, i) => (i === activeIndex ? { ...s, ...updates } : s));
+    );  };
+
+  const renderChartPreview = (slide: Slide) => {;
+    if (!slide && slide.chart) return null,;
+    const { type, data } = slide && slide.chart;
     return (
+
+
+    return (
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <div className="mt-3">
         <div className="text-xs text-gray-500 dark:text-gray-400">Chart preview: {type}</div>
         <div className="flex gap-2 items-end h-24 mt-2">
           {type === 'bar' && data.map((d) => (
             <div key={d.label} className="bg-blue-500 w-6" style={{ height: `${Math.max(4, d.value)}px` }} title={`${d.label}: ${d.value}`} />
+<<<<<<< HEAD
 <<<<<<< HEAD
           ))}
 =======
@@ -1061,10 +1146,13 @@ const json = await res.json();
   }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           {type === 'funnel' && (
             <div className="w-full">
               <div className="flex flex-col gap-1">
                 {data.map((d, idx) => (
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -1081,6 +1169,8 @@ const json = await res.json();
             </div>
           )}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   <div key={d.label} className="bg-purple-500 text-white text-xs px-2 py-1" style={{ width: `${100 - idx * 12}%` }}>{d.label}: {d.value}</div>
                 ))  } catch (error) {
     console.error("Error:", error);
@@ -1095,11 +1185,16 @@ const json = await res.json();
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           {type === 'timeline' && (
             <div className="text-xs grid grid-cols-4 gap-2 w-full">
               {data.map((d) => (
@@ -1107,6 +1202,7 @@ const json = await res.json();
                   <div className="font-medium">{d.label}</div>
                   <div>{d.value}</div>
                 </div>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
               disabled={loading || slides && slides.length === 0}
@@ -1298,10 +1394,13 @@ if (return null, ) {
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         </div>
       </div>
     )
   };
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1327,6 +1426,9 @@ if (return null, ) {
   },
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   return (
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
               ))  } catch (error) {
@@ -1347,12 +1449,12 @@ if (return null, ) {
       </div>
     )
   },
-
   return (
     <EnhancedLayout>
       <Head>
         <title>Pitch Generator - Admin</title>
       </Head>
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -1445,6 +1547,8 @@ if (return null, ) {
                 className='mt-4 border-2 border-dashed rounded-md p-4 text-center text-sm text-gray-500 dark:text-gray-400'
               >
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <div className="space-y-6">
         <div className="flex items-center justify-between">
           <h1 className="text-2xl font-semibold">Pitch Generator</h1>
@@ -1454,6 +1558,7 @@ if (return null, ) {
             <button onClick={exportGoogleSlides} disabled={loading || slides.length === 0} className="px-3 py-2 rounded bg-green-600 text-white disabled:opacity-50">Export to Google Slides</button>
           </div>
         </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -1520,10 +1625,15 @@ if (return null, ) {
               <input value={builder.targetRaise} onChange={(e) => setBuilder({ ...builder, targetRaise: e.target.value })} className="w-full border rounded px-2 py-1 bg-transparent" />
               <div onDrop={onAssetDrop} onDragOver={prevent} onDragEnter={prevent} className="mt-4 border-2 border-dashed rounded-md p-4 text-center text-sm text-gray-500 dark:text-gray-400">
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 Drag & drop logos, photos here
-                <div className="text-xs mt-1">{builder.assets.length} file(s) added</div>
+                <div className='text-xs mt-1'>
+                  {builder.assets.length} file(s) added
+                </div>
               </div>
             </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1537,11 +1647,14 @@ if (return null, ) {
               </button>
               <ul className='text-sm mt-2 list-disc ml-5 text-gray-600 dark:text-gray-300'>                <li>Active users (30d)</li>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <div className="border rounded-md p-4 bg-white/70 dark:bg-gray-900">
               <div className="font-medium mb-2">Auto Data</div>
               <button onClick={autoFetchMetrics} className="px-2 py-1 rounded bg-gray-100 dark:bg-gray-800 text-sm">Refresh</button>
               <ul className="text-sm mt-2 list-disc ml-5 text-gray-600 dark:text-gray-300">
                 <li>Active users (30d)</li>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -1549,6 +1662,8 @@ if (return null, ) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <li>GMV, MRR, YoY growth</li>
                 <li>Total completed projects</li>
                 <li>Global reach</li>
@@ -1557,6 +1672,7 @@ if (return null, ) {
               </ul>
             </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -1564,11 +1680,16 @@ if (return null, ) {
                 Version: {versionTag || '—'}
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               </div>
               <ul className='mt-2 space-y-1 text-sm'>
                 {history.map(h => (
                 className='mt-4 border-2 border-dashed rounded-md p-4 text-center text-sm text-gray-500 dark:text-gray-400'>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 Drag & drop logos, photos here;
                 <div className='text-xs mt-1'>;
                   {builder && builder.assets.length} file(s) added;
@@ -1580,7 +1701,6 @@ if (return null, ) {
               <div className='font-medium mb-2'>Auto Data</div>;
               <button
                 onClick={autoFetchMetrics}
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 className='px-2 py-1 rounded bg-gray-100 dark:bg-gray-800 text-sm'>;
                 Refresh;
               </button>;
@@ -1602,9 +1722,12 @@ if (return null, ) {
                 {history && history.map(h => (;
 
 
+<<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   <li
                     key={h && h.id}
                     className='flex justify-between border rounded px-2 py-1'>;
@@ -1612,6 +1735,7 @@ if (return null, ) {
                     <span className='text-gray-500 dark:text-gray-400'>;
                       {new Date(h && h.createdAt).toLocaleString()}
                     </span>                  </li>;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -1635,6 +1759,10 @@ if (return null, ) {
 =======
                 ))}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+                ))}
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               </ul>;
             </div>;
           </div>;
@@ -1650,9 +1778,13 @@ if (return null, ) {
               <div className='mt-3 flex gap-3 overflow-x-auto py-2'>;
                 {slides && slides.map((s, i) => (;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   <SlidePreview
                     key={s && s.id}
                     slide={s}
@@ -1662,6 +1794,7 @@ if (return null, ) {
                 ))}
                 <button
                   onClick={addSlide}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1791,14 +1924,19 @@ if (return null, ) {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   + Add Slide;
                 </button>;
               </div>;
             </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             {/* Active Slide Editor */}
             {active_slide && (
               <div className='border rounded - md p - 4 bg - white / 70 dark:bg - gray - 900'>;
@@ -1814,14 +1952,18 @@ if (return null, ) {
                       disabled={loading}
                       className='px - 2 py - 1 rounded bg - blue - 600 text - white text - sm disabled:opacity - 50';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     >;
                       Rephrase;
                     </button>;
                   </div>;
                 </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1846,12 +1988,15 @@ if (return null, ) {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     }
                     className='border rounded px-2 py-1';
                   >;
                     Bar Chart;
                   </button>;
                   <button
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1871,12 +2016,15 @@ if (return null, ) {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     }
                     className='border rounded px-2 py-1';
                   >;
                     Funnel;
                   </button>;
                   <button
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1896,12 +2044,15 @@ if (return null, ) {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     }
                     className='border rounded px-2 py-1';
                   >;
                     Timeline;
                   </button>;
                 </div>              </div>;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -1947,12 +2098,16 @@ if (return null, ) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
+=======
+}
+}
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 }
 }
 }
-
             <div className="border rounded-md p-4 bg-white/70 dark:bg-gray-900">
               <div className="font-medium mb-2">History</div>
               <div className="text-xs text-gray-500 dark:text-gray-400">Version: {versionTag || '—'}</div>
@@ -2013,21 +2168,27 @@ if (return null, ) {
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
             )}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           </div>;
         </div>;
       </main>;
     </>;
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       </div>
     </EnhancedLayout>
   )
@@ -2038,6 +2199,7 @@ if (return null, ) {
                   value={active_slide.content}
                   on_change={e => updateActiveSlide ({ content: e.target.value })}
                   className='w - full mt - 3 border rounded px - 2 py - 1 bg - transparent';
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
             <div className='border rounded-md p-4 bg-white/70 dark:bg-gray-900'>
@@ -2109,6 +2271,8 @@ if (return null, ) {
                   onChange={e => updateActiveSlide({ content: e.target.value })}
                   className='w-full mt-3 border rounded px-2 py-1 bg-transparent'
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   rows={10}
                 />;
                 <div className='mt - 4 grid grid - cols - 3 gap - 2 text - sm'>;
@@ -2161,6 +2325,7 @@ if (return null, ) {
                       });
                     }
 <<<<<<< HEAD
+<<<<<<< HEAD
                     className='border rounded px - 2 py - 1';
                   >;
                     Timeline;
@@ -2168,11 +2333,14 @@ if (return null, ) {
                 </div>              </div>)}
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           </div>;
         </div>;
 </main>;
     </>);
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
@@ -2258,11 +2426,14 @@ if (return null, ) {
     </EnhancedLayout>;
   );
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -2270,3 +2441,5 @@ if (return null, ) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

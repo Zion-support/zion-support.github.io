@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import React from "react",
 import { UseFormReturn } from "react-hook-form",
@@ -17,21 +18,37 @@ import { X } from 'lucide-react'
         e && e.currentTarget.value = "";
       }
     }
+=======
+interface MetadataFormProps {
+  form: UseFormReturn<AppMetadataValues>
+interface MetadataFormProps {
+  form: UseFormReturn<AppMetadataValues>
+}
+export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
+
+  const { control, register, watch, setValue } = form
+  const keywords = watch("keywords")
+  const platform = watch("platform")
+  const addKeyword = (e: React.KeyboardEvent<HTMLInputElement>,) => {
+    if (e.key === "Enter" |e.key === ",") {
+      e.preventDefault()
+      const value = e.currentTarget.value.trim()
+      if (value && !keywords.includes(value)) {
+        setValue("keywords", [...keywords, value])
+        e.currentTarget.value = ""
+      };
+    };
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   };
-
-
   const maxDescriptionLength = platform === "ios" ? 4000 : 4000;
-};  const removeKeyword = (keyword: string,) => {;
-    setValue(;
-      "keywords",;
-      keywords && keywords.filter((k,) => k !== keyword);
-    );
-  },;
-
-  const maxDescriptionLength = platform === "ios" ? 4000 : 4000,;
-  const longDescription = watch("longDescription"),;
-
-
+};  const removeKeyword = (keyword: string,) => {
+    setValue(
+      "keywords"
+      keywords.filter((k,) => k !== keyword)
+    )
+  }
+  const maxDescriptionLength = platform === "ios" ? 4000 : 4000
+  const longDescription = watch("longDescription")
   return (
     <Card className="bg-zion-blue border-zion-purple/30">;
       <CardHeader>;
@@ -43,15 +60,14 @@ import { X } from 'lucide-react'
             <FormField
               control = {control,}
               name="appTitle"
-
-              render={({ field }: { field: any },) => (;
-                <FormItem>;
-                  <FormLabel>App Title</FormLabel>;
-                  <FormControl>;
-
+              render={({ field }: { field: any },) => (
+                <FormItem>
+                  <FormLabel>App Title</FormLabel>
+                  <FormControl>
                     <Input
                       placeholder="Enter app title"
                       maxLength = {platform === "ios" ? 30 : 50,}
+<<<<<<< HEAD
 =======
 interface MetadataFormProps {;
   form: UseFormReturn<AppMetadataValues>;
@@ -137,6 +153,9 @@ if ( {) {
                   <FormControl>;
 
 =======
+=======
+                      {...field}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     />
                   </FormControl>
                   <FormDescription>
@@ -152,6 +171,7 @@ if ( {) {
                 <FormItem>
                   <FormLabel>Short Description</FormLabel>
                   <FormControl>
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                     <Input
                       placeholder="Brief description of your app"
@@ -193,20 +213,29 @@ if ( {) {
                     Max {platform === "ios" ? "170" : "80"} characters
                   </FormDescription>
                 </FormItem>
+=======
+                    <Input
+                      placeholder="Brief description of your app"
+                      maxLength = {platform === "ios" ? 170 : 80,}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               )}
             />
             <FormField
               control = {control,}
               name="longDescription"
+<<<<<<< HEAD
               render={({ field }: { field: any },) => (
                 <FormItem>
                   <FormLabel>Long Description</FormLabel>
                   <FormControl>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     <Textarea
                       placeholder="Detailed description of your app"
                       className="min-h-32"
                       maxLength = {maxDescriptionLength,}
+<<<<<<< HEAD
                 </FormItem>)}
             />;
             <FormField;
@@ -243,11 +272,14 @@ if ( {) {
             <div>
               <FormLabel htmlFor="keywords">Keywords</FormLabel>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <Input
                 id="keywords"
                 placeholder="Add keywords (press Enter or comma to add)"
                 onKeyDown = {addKeyword,}
                 className="mb-2"
+<<<<<<< HEAD
 <<<<<<< HEAD
 
               />;
@@ -262,6 +294,8 @@ if ( {) {
                 {keywords.map((keyword, index,) => (
                   <Badge key={index} className="bg-zion-purple/60 hover:bg-zion-purple">
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     {keyword}
                     <button
                       type="button"
@@ -273,6 +307,7 @@ if ( {) {
                     </button>;
                   </Badge>;
                 ))}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
               </div>;
@@ -307,30 +342,29 @@ if ( {) {
                     <Input
                       placeholder="e.g., 1.0.0"
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       {...field}
                     />;
                   </FormControl>;
                 </FormItem>;
               )}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             />
           </div>
         </Form>
       </CardContent>
     </Card>
   )
-import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form",
-import { Badge } from "@/components/ui/badge",
-import { X } from 'lucide-react'
-
-
-}
-};
 
 import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form",
 import { Badge } from "@/components/ui/badge",
 import { X } from 'lucide-react'
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
                     {long_description.length}/{maxDescriptionLength} characters;
@@ -387,3 +421,6 @@ import { X } from 'lucide-react'
     </Card>);
 },
 ;
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

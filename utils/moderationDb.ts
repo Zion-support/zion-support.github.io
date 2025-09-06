@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -5,6 +6,13 @@
 export interface ModerationFlag {
 export interface ModerationFlag {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+export interface ModerationFlag {
+export interface ModerationFlag {;
+
+
+export interface ModerationFlag {
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   id: string;
   contentId: string;
   contentType: string;
@@ -48,6 +56,7 @@ export async function create_flag (data: Partial < ModerationFlag>): Promise < M
 
 =======
 }
+<<<<<<< HEAD
 
 ;
 export async function getFlagById (id: string): Promise < ModerationFlag | null> {
@@ -67,18 +76,14 @@ export async function create_flag (data: Partial < ModerationFlag>): Promise < M
 }
 
 // Mock data storage - replace with actual database
+=======
+// Mock data storage - replace with actual database;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 let flags: ModerationFlag[] = [];
-export async function getFlagById(id: string): Promise<ModerationFlag | null> {
-  return flags.find(flag => flag.id === id) |null;
-
 }
-export async function readAllFlags(): Promise<ModerationFlag[]> {
-  // Mock implementation - replace with actual database logic
-  return [];
-}
-
-export async function createFlag(data: Partial<ModerationFlag>): Promise<ModerationFlag> {
+export async function create_flag (data: Partial < ModerationFlag>): Promise < ModerationFlag> {
   const flag: ModerationFlag = {
+<<<<<<< HEAD
     id: `flag_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
     contentId: data.contentId |''
     contentType: data.contentType |'post'
@@ -128,6 +133,11 @@ export interface ModerationFlag {
 
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 export interface ModerationAction {
   id: string, flagId: string,
@@ -169,6 +179,7 @@ export async function getAllFlags(): Promise<ModerationFlag[]> {
   return [...flags];
 }
 
+<<<<<<< HEAD
 export async function createAction(action: Omit<ModerationAction, 'id' | 'createdAt'>): Promise<ModerationAction> {
   const newAction: ModerationAction = {
     ...action,
@@ -197,6 +208,13 @@ export async function getActionsForFlag(flagId: string): Promise<ModerationActio
   return actions.filter(action => action.flagId === flagId);
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+export async function createFlag(data: Partial<ModerationFlag>): Promise<ModerationFlag> {
+  const flag: ModerationFlag = {
+    id: `flag_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
+    contentId: data.contentId || '',
+    contentType: data.contentType || 'post',
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     id: `flag_${Date.now ()}_${Math.random ().to_string (36).substr (2, 9)}`,
     content_id: data.content_id || '',
     content_type: data.content_type || 'post',
@@ -220,10 +238,13 @@ if (return undefined) {
   $2
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   flag.status = status;
   flag.admin_notes = admin_notes || flag.admin_notes;
   flag.updated_at = new Date ().toISOString ();
@@ -231,7 +252,10 @@ if (return undefined) {
   return flag;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

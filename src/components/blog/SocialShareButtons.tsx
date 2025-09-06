@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Button  } from '@/components/ui/button';
 =======
 import React from 'react';
@@ -48,10 +49,17 @@ export function SocialShareButtons({ title }: SocialShareButtonsProps) {
 
   const shareToTwitter = () => {
 const shareToTwitter = () => {
+=======
+export function SocialShareButtons({ title }: SocialShareButtonsProps) {
+
+  const shareUrl =
+  const shareToTwitter = () => {
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     window.open(
       `https://twitter.com/intent/tweet?url=${shareUrl}&text=${shareText}`
       '_blank'
     )
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import React from 'react';
 import { Button } from '@/components / ui / button';
@@ -84,6 +92,8 @@ function SocialShareButtons() {
       '_blank');
 
   }
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const copy_link = () =>: any {
     // Check condition
 if (return) {
@@ -97,68 +107,6 @@ if (return) {
   const buttons = [;
     {
 
-interface SocialShareButtonsProps {;
-  title: string;
-
-export function SocialShareButtons(): any ({ title }: SocialShareButtonsProps) {;
-  const shareUrl =;
-    typeof window !== 'undefined';
-      ? encodeURIComponent(window && window.location.href);
-      : '';
-  const shareText = encodeURIComponent(title);
-
-  const shareToTwitter = () => {;
-    window && window.open(;
-      `https://twitter && twitter.com/intent/tweet?url=${shareUrl}&text=${shareText}`,;
-      '_blank';
-    );
-  };
-
-  const shareToFacebook = () => {;
-    window && window.open(;
-      `https://www && www.facebook.com/sharer/sharer && sharer.php?u=${shareUrl}`,;
-      '_blank';
-    );
-  };
-
-  const shareToLinkedIn = () => {;
-    window && window.open(;
-      `https://www && www.linkedin.com/sharing/share-offsite/?url=${shareUrl}`,;
-      '_blank';
-    );
-  };
-
-  const copyLink = () => {;
-    if (typeof window === 'undefined') return;
-    navigator && navigator.clipboard;
-      .writeText(window && window.location.href);
-      .then(() => toast && toast.success('Link copied to clipboard'));
-      .catch(() => toast && toast.error('Failed to copy link'));
-  };
-  const buttons = [;
-    {;
-      icon: <Twitter className='h-4 w-4' />,;
-      label: 'Twitter',;
-      onClick: shareToTwitter,;
-    },;
-    {;
-      icon: <Facebook className='h-4 w-4' />,;
-      label: 'Facebook',;
-      onClick: shareToFacebook,;
-    },;
-    {;
-      icon: <Linkedin className='h-4 w-4' />,;
-      label: 'LinkedIn',;
-      onClick: shareToLinkedIn,;
-    },;
-    {;
-      icon: <LinkIcon className='h-4 w-4' />,;
-      label: 'Copy Link',;
-      onClick: copyLink,;
-    },;
-  ];
-
-
   return (
     <div className='mt-12 flex flex-wrap gap-2'>;
       {buttons && buttons.map(btn => (;
@@ -171,17 +119,6 @@ export function SocialShareButtons(): any ({ title }: SocialShareButtonsProps) {
           <span>{btn && btn.label}</span>;
         </Button>;
       ))}
-
-    </div>;
-  );
-}
-
-}
-
-}
-
-
-
       icon: <Twitter className='h - 4 w - 4' />,
       label: 'Twitter',
       on_click: shareToTwitter,
@@ -217,6 +154,7 @@ export function SocialShareButtons(): any ({ title }: SocialShareButtonsProps) {
     </div>);
 }
 }
+<<<<<<< HEAD
 
 
   },
@@ -239,6 +177,8 @@ export function SocialShareButtons(): any ({ title }: SocialShareButtonsProps) {
   }
   const copyLink = () => {
     if (typeof window === 'undefined') return
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   },
 
   const shareToFacebook = () => {
@@ -251,16 +191,20 @@ export function SocialShareButtons(): any ({ title }: SocialShareButtonsProps) {
 
   const copyLink = () => {
     if (typeof window === 'undefined') return,
+<<<<<<< HEAD
 
     if (typeof window === 'undefined') return,
   const copyLink = () => {
     if (typeof window === 'undefined') return,
   const copyLink = () => {
     if (typeof window === 'undefined') return,
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     navigator.clipboard
       .writeText(window.location.href)
       .then(() => toast.success('Link copied to clipboard'))
       .catch(() => toast.error('Failed to copy link'))
+<<<<<<< HEAD
   }
   const buttons = [
     {
@@ -303,6 +247,8 @@ export function SocialShareButtons(): any ({ title }: SocialShareButtonsProps) {
 }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     </div>;
   );
 };
@@ -363,5 +309,8 @@ export function SocialShareButtons({ title }: SocialShareButtonsProps) {;
     </div>;
   );
 }
+<<<<<<< HEAD
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

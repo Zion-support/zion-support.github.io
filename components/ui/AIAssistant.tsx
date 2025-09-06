@@ -1,6 +1,7 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React, { useCallback, useEffect, useMemo, useState } from "react";
 export type AIAssistantProps = {
@@ -15,11 +16,14 @@ import React, { useCallback, useEffect, useMemo, useState } from 'react';
 import React, { useCallback, useEffect, useMemo, useState } from "react";
 export type AIAssistantProps = {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
   }
+<<<<<<< HEAD
   
   static getDerivedStateFromError(error) {
     return { hasError: true };
@@ -29,10 +33,13 @@ class ErrorBoundary extends React.Component {
     console.error('Error caught by boundary:', error, errorInfo);
   }
   
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
+<<<<<<< HEAD
     
     return this.props.children;
   }
@@ -51,12 +58,15 @@ export type AIAssistantProps = {;
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   buttonLabel?: string;
   title?: string;
   defaultPrompt: string;
   systemPrompt?: string;
   onAccept: (markdown: string) => void;
   authorizationToken?: string;
+<<<<<<< HEAD
 
 };
 
@@ -67,6 +77,8 @@ export type AIAssistantProps = {;
 
 =======
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   buttonLabel = "Generate with AI"
   title = "AI Writing Assistant"
   defaultPrompt
@@ -74,7 +86,11 @@ export type AIAssistantProps = {;
   onAccept
   authorizationToken
 }: AIAssistantProps) {
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   buttonLabel = "Generate with AI",
   title = "AI Writing Assistant",
   defaultPrompt,
@@ -82,6 +98,7 @@ export type AIAssistantProps = {;
   onAccept,
   authorizationToken,
 }: AIAssistantProps) {;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -97,12 +114,15 @@ authorizationToken
 }: AIAssistantProps) {
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const [isOpen, setIsOpen] = useState(false);
   const [prompt, setPrompt] = useState(defaultPrompt);
   const [output, setOutput] = useState("");
   const [loading, setLoading] = useState(false);
   const [isEditing, setIsEditing] = useState(false);
   const [error, setError] = useState<string | null>(null);
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -293,11 +313,14 @@ if ( {) {
   const onClose = useCallback(() => setIsOpen(false), []);
   const canAccept = useMemo(() => (output && output.trim().length > 0), [output]);
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <>;
       <button
         type="button"
         onClick={onOpen}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -307,15 +330,20 @@ if ( {) {
         {buttonLabel}
       </button>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {isOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center">
           <div className="absolute inset-0 bg-black/50" onClick={onClose} />
           <div className="relative z-10 w-full max-w-2xl rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black shadow-xl">
             <div className="flex items-center justify-between px-4 py-3 border-b border-gray-200 dark:border-gray-800">
               <h3 className="text-base font-semibold">{title}</h3>
+<<<<<<< HEAD
 =======
       </button>;
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {isOpen && (;
         <div className="fixed inset-0 z-50 flex items-center justify-center">;
           <div className="absolute inset-0 bg-black/50" onClick={onClose} />;
@@ -328,6 +356,7 @@ if ( {) {
                 className="text-sm opacity-70 hover:opacity-100">;
                 Close;
               </button>{" "}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -346,12 +375,15 @@ if ( {) {
                   className="block text-xs font-medium mb-1"
 htmlFor="input-Operator prompt">;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   Operator prompt;
                 </label>;
                 <textarea
                   value={prompt}
                   onChange={(e) => setPrompt(e && e.target.value)}
                   rows={4}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
                   className="w-full rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 p-2 text-sm";
@@ -365,6 +397,8 @@ className="w-full rounded-md border border-gray-300 dark:border-gray-700 bg-whit
               </div>;
               <div className="flex items-center gap-2">;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <button
                   onClick={callOperator}
                   disabled={loading}
@@ -394,6 +428,7 @@ className="w-full rounded-md border border-gray-300 dark:border-gray-700 bg-whit
                     (onAccept(output), onClose());
                   }}
                   disabled={!canAccept}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
                   className="ml-auto rounded-md bg-green-600 text-white px-3 py-1 && 1.5 text-sm disabled:opacity-60";
@@ -488,10 +523,13 @@ className="ml-auto rounded-md bg-green-600 text-white px-3 py-1 && 1.5 text-sm d
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 >;
                   Accept;
                 </button>;
               </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -506,15 +544,20 @@ className="ml-auto rounded-md bg-green-600 text-white px-3 py-1 && 1.5 text-sm d
                 <div className="text-red-600 text-sm">{error}</div>
               )}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               {error && <div className="text-red-600 text-sm">{error}</div>}
               <div>;
                 <label
                   className="block text-xs font-medium mb-1"
 <<<<<<< HEAD
+<<<<<<< HEAD
                   htmlFor="input-Output (markdown)">;
 =======
 htmlFor="input-Output (markdown)">;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   Output (markdown);
                 </label>;
                 {isEditing ? (;
@@ -522,6 +565,7 @@ htmlFor="input-Output (markdown)">;
                     value={output}
                     onChange={(e) => setOutput(e && e.target.value)}
                     rows={12}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
                     className="w-full rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 p-2 text-sm";
@@ -537,6 +581,8 @@ className="w-full rounded-md border border-gray-300 dark:border-gray-700 bg-whit
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 )}
               </div>;
             </div>;
@@ -555,6 +601,7 @@ className="w-full rounded-md border border-gray-300 dark:border-gray-700 bg-whit
         </div>
       )}
     </>
+<<<<<<< HEAD
   );
 <<<<<<< HEAD
 
@@ -597,3 +644,5 @@ className="w-full rounded-md border border-gray-300 dark:border-gray-700 bg-whit
 }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

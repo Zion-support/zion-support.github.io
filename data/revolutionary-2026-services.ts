@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { ServiceVariant } from '../types / service - variants';
 
@@ -1270,21 +1271,28 @@ export const revolutionary2026Services: Revolutionary2026Service[] = [;
   growthRate: string, variant: ServiceVariant,
   contactInfo: {
 <<<<<<< HEAD
+=======
+  contactInfo: {
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       
     mobile: string, email: string,
     address: string,
     website: string
   
+<<<<<<< HEAD
 =======
     mobile: string, email: string,
     address: string,
     website: string
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     },
     realImplementation: boolean, implementationDetails: string,
   launchDate: string, customers: number,
   rating: number,
   reviews: number
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 }
@@ -2356,6 +2364,9 @@ export const revolutionary2026Services: Revolutionary2026Service[] = [
     }
     realImplementation: true
     implementationDetails:
+=======
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       'Space-grade quantum platform with satellite integration, mission planning tools, and comprehensive space operations support.'
     launchDate: '2026-03-01'
     customers: 45
@@ -2380,37 +2391,50 @@ export const revolutionary2026Services: Revolutionary2026Service[] = [
     rating: 4.8
 
     reviews: 25
-import { ServiceVariant } from '../types / service - variants';
-
-export interface Revolutionary2026Service {
-
-  {
-
-  id: string, name: string,
-  tagline: string, price: string,
-  period: string, description: string,
-  features: string[], popular: boolean,
-  icon: string, color: string,
-  textColor: string, link: string,
-  marketPosition: string, targetAudience: string,
-  trialDays: number, setupTime: string,
-  category: string, realService: boolean,
-  technology: string[], integrations: string[],
-  useCases: string[], roi: string,
-  competitors: string[], marketSize: string,
-  growthRate: string, variant: ServiceVariant,
-  contactInfo: {
-      
-    mobile: string, email: string,
-    address: string,
-    website: string
-  
-    },
-    realImplementation: boolean, implementationDetails: string,
-  launchDate: string, customers: number,
-  rating: number,
-  reviews: number
+  }
+];
+import { ServiceVariant } from '../types/service-variants',;
+export interface Revolutionary2026Service {;
+  id: string,;
+  name: string,;
+  tagline: string,;
+  price: string,;
+  period: string,;
+  description: string,;
+  features: string[],;
+  popular: boolean,;
+  icon: string,;
+  color: string,;
+  textColor: string,;
+  link: string,;
+  marketPosition: string,;
+  targetAudience: string,;
+  trialDays: number,;
+  setupTime: string,;
+  category: string,;
+  realService: boolean,;
+  technology: string[],;
+  integrations: string[],;
+  useCases: string[],;
+  roi: string,;
+  competitors: string[],;
+  marketSize: string,;
+  growthRate: string,;
+  variant: ServiceVariant,;
+  contactInfo: {;
+    mobile: string,;
+    email: string,;
+    address: string,;
+    website: string;
+  },;
+  realImplementation: boolean,;
+  implementationDetails: string,;
+  launchDate: string,;
+  customers: number,;
+  rating: number,;
+  reviews: number;
 }
+<<<<<<< HEAD
 
 export const revolutionary2026Services: Revolutionary2026Service[] = [
   // AI-Powered Business Intelligence & Analytics
@@ -2442,6 +2466,8 @@ export const revolutionary2026Services: Revolutionary2026Service[] = [
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       address: '364 E Main St STE 1008 Middletown DE 19709',
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       website: 'https://ziontechgroup.com';
     }
     real_implementation: true,
@@ -2450,6 +2476,7 @@ export const revolutionary2026Services: Revolutionary2026Service[] = [
     customers: 45;
     rating: 4.8,
     reviews: 25;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 ];
@@ -2460,6 +2487,8 @@ export const revolutionary2026Services: Revolutionary2026Service[] = [
 =======
   }
 ];
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { ServiceVariant } from '../types/service-variants',;
 export interface Revolutionary2026Service {;
   id: string,;
@@ -2538,6 +2567,8 @@ export const revolutionary2026Services: Revolutionary2026Service[] = [;
       mobile: '+1 302 464 0950',;
       email: 'kleber@ziontechgroup.com',;
       address: '364 E Main St STE 1008 Middletown DE 19709',;
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+
       website: 'https://ziontechgroup.com';
     },;
     realImplementation: true,;
@@ -3119,5 +3150,9 @@ export const revolutionary2026Services: Revolutionary2026Service[] = [;
     rating: 4.8;
     reviews: 25;
   }
+<<<<<<< HEAD
 ];
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

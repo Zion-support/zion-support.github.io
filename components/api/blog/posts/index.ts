@@ -1,16 +1,16 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 
-
   if (req.method === 'GET') {
 
   if (req.method === 'GET') {;
-
+  if (req.method === 'GET') {
     const { status, topic, tag, author, limit, offset } = req.query;
 =======
   if (req && req.method === 'GET') {
     const { status, topic, tag, author, limit, offset } = req && req.query;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     let posts = readPosts();
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -109,6 +109,8 @@ return res.status(405).end();
   return res && res.status(405).end();
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { v4 as uuidv4 } from 'uuid';
 import { BlogPost } from '@/utils / types / blog';
 import { read_posts, write_posts } from '@/utils / data / blog_store';
@@ -193,9 +195,6 @@ if ( {) {
       seo: {
         meta_title: body.seo?.meta_title || body.title!,
         meta_description: body.seo?.meta_description || '',
-
-        metaTitle: body.seo?.metaTitle || body.title!,
-        metaDescription: body.seo?.metaDescription || '',
         ogImageUrl: body.seo?.ogImageUrl || body.coverImageUrl || '',
       },
       body: body.body || '',
@@ -207,27 +206,23 @@ if ( {) {
     return res.status (201).json (post);
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
 
 =======
-return res.status (405).end ();
-    }
-    const post: BlogPost = {_id: uuidv4(), _title: body.title!, _slug: body.slug!, _coverImageUrl: body.coverImageUrl || '', _author: body.author!, _publishDate: body.publishDate!, _tags: body.tags || [], _topics: body.topics || [], _seo: {
-        metaTitle: body.seo?.metaTitle || body.title!, _metaDescription: body.seo?.metaDescription || '', _ogImageUrl: body.seo?.ogImageUrl || body.coverImageUrl || ''},
-      body: body.body || '',
-      status: body.status || 'draft',
-      metrics: { views: 0, likes: 0, shares: 0 }},
-    posts.unshift(post),
-    writePosts(posts),
-    return res.status(201).json(post)
-
-  }
-
-  return res.status(405).end()
+=======
+return res.status(405).end();
+}
 
 }
+}
+  return res.status(405).end();
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+return res.status (405).end ();
+}
+<<<<<<< HEAD
 import { v4 as uuidv4  } from 'uuid';
 import { BlogPost  } from '@/utils/types/blog';
 import { readPosts, writePosts } from '@/utils/data/blogStore';
@@ -317,3 +312,5 @@ return res.status(405).end();
 }
   return res.status(405).end();
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

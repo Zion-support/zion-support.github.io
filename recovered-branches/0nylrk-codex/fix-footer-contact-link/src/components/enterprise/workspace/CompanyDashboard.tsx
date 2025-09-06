@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -21,25 +22,28 @@ export interface Company {;
   };
   plan: string;
   teamSize: number;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 import React from "react",
 import { WorkspaceHeader } from "./WorkspaceHeader",
 import { SharedInbox } from "./SharedInbox",
 import { TeamStats } from "./TeamStats",
 import { QuickActions } from "./QuickActions",
-
-
-
 import { RecentActivity } from "./RecentActivity";
 import { TalentPool } from "./TalentPool";
 import { RecentActivity } from "./RecentActivity",
 import { TalentPool } from "./TalentPool",
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export interface Company {
   id: string,
   name: string,
   logoUrl?: string,
   theme?: {
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -64,6 +68,8 @@ interface CompanyDashboardProps {
   company: Company;
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     primaryColor: string,
     backgroundColor: string,
     textColor: string
@@ -81,13 +87,15 @@ import { QuickActions } from "./QuickActions",;
 import { RecentActivity } from "./RecentActivity",;
 import { TalentPool } from "./TalentPool",;
 export interface Company {;
-  id: string,;
-  name: string,;
-  logoUrl?: string,;
+  id: string;
+  name: string;
+  logoUrl?: string;
   theme?: {;
-    primaryColor: string,;
-    backgroundColor: string,;
+    primaryColor: string;
+    backgroundColor: string;
+
     textColor: string;
+<<<<<<< HEAD
   },;
   plan: string,;
   teamSize: number,;
@@ -97,11 +105,14 @@ export interface Company {;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   teamLimit: number;
   billingCycle: string;
-  workspaceUrl: string;
+  workspaceUrl: string
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   company: Company;
@@ -113,17 +124,25 @@ export interface Company {;
 ;
 interface CompanyDashboardProps {;
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface CompanyDashboardProps {
 ;
 interface CompanyDashboardProps {;
+
+
   company: Company;
 }
 
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export function CompanyDashboard({ company }: CompanyDashboardProps) {
   return (
     <div className="container mx-auto max-w-7xl py-8 px-4 md:px-6">
       <WorkspaceHeader company={company} />
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -138,6 +157,8 @@ export function CompanyDashboard({ company }: CompanyDashboardProps) {
       
       
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <div className="mt-8 grid grid-cols-1 lg: grid-cols-3 gap-6">
         <div className="lg:col-span-2 space-y-6">
           <QuickActions />
@@ -145,6 +166,7 @@ export function CompanyDashboard({ company }: CompanyDashboardProps) {
           <TalentPool />
         </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -158,16 +180,21 @@ export function CompanyDashboard({ company }: CompanyDashboardProps) {
         
         
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <div className="space-y-6">
           <TeamStats />
           <SharedInbox />
         </div>
       </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
     </div>
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   );
 }
   )
@@ -175,7 +202,11 @@ export function CompanyDashboard({ company }: CompanyDashboardProps) {
 export function CompanyDashboard({ company }: CompanyDashboardProps) {;
   return (;
 
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface CompanyDashboardProps {;
   company: Company;
 }
@@ -188,7 +219,10 @@ export function CompanyDashboard(): any ({ company }: CompanyDashboardProps) {;
       <div className="mt-8 grid grid-cols-1 lg: grid-cols-3 gap-6">;
         <div className="lg:col-span-2 space-y-6">;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from './react';
 import { WorkspaceHeader  } from './WorkspaceHeader';
 import { SharedInbox  } from './SharedInbox';
@@ -224,12 +258,16 @@ function CompanyDashboard() {
       <div className="mt - 8 grid grid - cols - 1 lg: grid - cols - 3 gap - 6">;
         <div className="lg:col - span - 2 space - y-6">;
 
+<<<<<<< HEAD
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <QuickActions />;
           <RecentActivity />;
           <TalentPool />;
         </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
         <div className="space - y-6">;
@@ -237,10 +275,13 @@ function CompanyDashboard() {
 =======
         <div className="space - y-6">;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <TeamStats />;
           <SharedInbox />;
         </div>;
       </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -311,3 +352,8 @@ export function CompanyDashboard({ company } CompanyDashboardProps) {;
 }
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  );
+}
+;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

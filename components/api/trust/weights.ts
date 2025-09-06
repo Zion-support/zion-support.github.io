@@ -1,13 +1,11 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-
-
-
 import {
   getTrustWeights,
   setTrustWeights,
   getDefaultWeights,;
 } from '../../../utils/trust/weights';
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -22,6 +20,8 @@ import {
 } from '../../../utils/trust/weights';
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {
   getTrustWeights
   setTrustWeights
@@ -31,6 +31,7 @@ export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
+<<<<<<< HEAD
   try {
   if (req && req.method === 'GET') {
     const current = await getTrustWeights();
@@ -96,6 +97,11 @@ function handler() {
   // Check condition
 if ( {) {
   $2
+=======
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+    const current = await getTrustWeights();
+  }
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
     const current = await getTrustWeights ();
     return res.status (200).json ({ current, defaults: getDefaultWeights () });  }
@@ -124,6 +130,7 @@ if ( {) {
   res.set_header ('AllowGET, PUT');
   return res.status (405).json ({ error: 'Method not allowed' });
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -140,3 +147,5 @@ if ( {) {
 }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

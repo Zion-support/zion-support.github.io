@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 /** @type {import ('next').NextConfig} */;
 const next_config = {
@@ -47,11 +48,17 @@ const nextConfig = {;
   reactStrictMode: true,;
   reactStrictMode: true;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  reactStrictMode: true,;
+  reactStrictMode: true;
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   compress: true,;
   poweredByHeader: false,;
   eslint: { ignoreDuringBuilds: true },;
   typescript: { ignoreBuildErrors: true },;
   pageExtensions: ['tsxtsjsxjs'],;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   // Image optimization;
@@ -133,3 +140,5 @@ module.exports = nextConfig;
 },;
 module.exports = nextConfig,;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

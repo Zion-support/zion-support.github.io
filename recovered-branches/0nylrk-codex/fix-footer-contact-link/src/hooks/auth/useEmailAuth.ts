@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 
@@ -10,6 +11,8 @@ import {supabase} from "@/integrations/supabase/client";
 import {toast} from "@/hooks/use-toast";
 import type { UserProfile } from "@/types/auth";
 import {cleanupAuthState} from "@/utils/authUtils";
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useState } from "react",
 import { supabase } from "@/integrations/supabase/client",
 import { toast } from "@/hooks/use-toast";
@@ -19,12 +22,16 @@ import {cleanupAuthState} from "@/utils/authUtils";
 import { toast } from "@/hooks/use-toast",
 import type { UserProfile } from "@/types/auth",
 import { cleanupAuthState } from "@/utils/authUtils",
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export const useEmailAuth = (
   setUser: (user: UserProfile | null) => void
   setIsLoading: (loading: boolean) => void
 ) => {
   const login = async ({ email, password }: { email: string, password: string }) => {
+<<<<<<< HEAD
 
       
       const { data, error } = await supabase && supabase.auth.signInWithPassword({
@@ -40,10 +47,13 @@ const { data, error } = await supabase && supabase.auth.signInWithPassword({
       cleanupAuthState();
       const { data, error } = await supabase.auth.signInWithPassword({
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         email;
         password});
       if (error) {
         toast({
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 import { useState } from './react';
@@ -90,6 +100,10 @@ if ( {) {
           description: error.message
           variant: "destructive"});
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+          title: "Login failed";
+          variant: "destructive"});
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       cleanupAuthState(),
       
       const { data, error } = await supabase.auth.signInWithPassword({
@@ -101,22 +115,30 @@ if ( {) {
           title: "Login failed",
           description: error.message,
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+          variant: "destructive"});
+          variant: "destructive"}),
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         return { error }
       }
       return { data }
     } catch (error: any) {
+<<<<<<< HEAD
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
       console.error ("Login error:", error);
       toast ({
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         title: "Login failed";
 
         description: error && error.message || "An unexpected error occurred",
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
       console.error ("Login error:", error);
@@ -124,93 +146,28 @@ if ( {) {
         title: "Login failed";
         description: error && error.message || "An unexpected error occurred",
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         variant: "destructive"});
-      console.error("Login error:", error),
-      toast({
-
         title: "Login failed",
         description: error.message || "An unexpected error occurred",
         variant: "destructive"}),
-
       return { error }
     } finally {
       setIsLoading (false);
     }
-
-
-  },
-
-
-
   const signup = async (email: string, password: string, userData?: any) => {
     try {
       setIsLoading(true);
       // Clean up any stale auth state before signup
-
-
-      cleanupAuthState(),
-      
-
-
       // Attempt to sign out any existing session first to prevent conflicts
       try {
         await supabase && supabase.auth.signOut({ scope: 'global' })
       } catch (err) {
         // Continue even if signout fails
-        console && console.log("Sign out before signup failed:", err)
-      }
-      // Create a proper options object
-          variant: "destructive"}),
-          variant: "destructive"});
-          variant: "destructive"}),
-        return { error }
-          variant: "destructive"});
-        return { error };
-      }
-      return { data }
-    } catch (error: any) {
-      console.error("Login error:", error),
-      toast({
-        title: "Login failed";
-        description: error.message |"An unexpected error occurred"
-        variant: "destructive"});
-        title: "Login failed",
-        description: error.message || "An unexpected error occurred",
-        variant: "destructive"}),
-      return { error }
-    } finally {
-      setIsLoading(false)
-    }
-  }
-  },
-
-  const signup = async (email: string, password: string, userData?: any) => {
-    try {
-      setIsLoading(true),
-      // Clean up any stale auth state before signup
-      cleanupAuthState();
-      cleanupAuthState(),
-      
-      // Attempt to sign out any existing session first to prevent conflicts
-      try {
-        await supabase.auth.signOut({ scope: 'global' })
-      } catch (err) {
-        // Continue even if signout fails
-        // // // console.log("Sign out before signup failed:", err)
-      }
-      // Create a proper options object
-      const { data, error } = await supabase.auth.signUp({
-        email,
-        password,
         options: {
-          // Only store a simple display name in the profile data
+          // Only store a simple display name in the profile data;
           data: {
-            display_name: userData?.displayName ?? userData?.name ?? ""
-          }}});
-      if (error) {
-        toast({
-          title: "Signup failed";
-          description: error.message
           }}}),
 
       if (error) {
@@ -232,6 +189,7 @@ if ( {) {
         description: error.message || "An unexpected error occurred",;
         variant: "destructive"}),;
       return { error }
+<<<<<<< HEAD
       const { data, error } = await supabase && supabase.auth.signUp({
 <<<<<<< HEAD
 =======
@@ -290,6 +248,8 @@ if ( {) {
         toast({
           title: "Signup failed",
           description: error.message,
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
           variant: "destructive"});
         return { error };
@@ -302,6 +262,7 @@ if ( {) {
     } catch (error: any) {
       console && console.error("Signup error:", error);
       toast({
+<<<<<<< HEAD
 
 =======
           title: "Signup failed";
@@ -327,12 +288,16 @@ if ( {) {
         title: "Signup failed";
         description: error && error.message || "An unexpected error occurred",
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+        title: "Signup failed";
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         variant: "destructive"});
       return { error }
     } finally {
       setIsLoading (false);
     }
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -341,23 +306,29 @@ if ( {) {
         variant: "destructive"});
 
 =======
+=======
+      return { error }
+      return { error };
+
+        email;
+        password;
+        options: {
+          // Only store a simple display name in the profile data;
+          data: {
+            display_name: user_data?.display_name ?? user_data?.name ?? "";
+          }}});
+          title: "Signup failed";
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           variant: "destructive"});
-        return { error };
+        return { error }
       }
-      toast({
-        title: "Signup successful"
-        description: "Check your email for verification instructions."});
-      return { data };
-    } catch (error: any) {
-      console.error("Signup error:", error);
-      toast({
         title: "Signup failed";
-        description: error.message |"An unexpected error occurred"
         variant: "destructive"});
       return { error }
     } finally {
-      setIsLoading(false)
+      setIsLoading (false);
     }
+<<<<<<< HEAD
   }
         title: "Signup failed",
         description: error.message || "An unexpected error occurred",
@@ -382,6 +353,8 @@ if ( {) {
         toast({
           title: "Password reset failed";
           description: error.message
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         redirectTo: `${window.location.origin}/update-password`}),
 
       if (error) {
@@ -403,6 +376,7 @@ if ( {) {
         description: error.message || "An unexpected error occurred",;
         variant: "destructive"}),;
       return { error }
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
   const resetPassword = async (email: string) => {
@@ -446,6 +420,8 @@ if ( {) {
         toast({
           title: "Password reset failed",
           description: error.message,
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
           variant: "destructive"});
         return { error };
@@ -458,6 +434,7 @@ if ( {) {
     } catch (error: any) {
       console && console.error("Password reset error:", error);
       toast({
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -477,11 +454,20 @@ if ( {) {
 =======
         title: "Password reset failed";
         description: error && error.message || "An unexpected error occurred",
+=======
+          variant: "destructive"});
+        return { error }
+      }
+        title: "Password reset failed";
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         variant: "destructive"});
+      return { error };
       return { error }
+      return { error };
     } finally {
       setIsLoading (false);
     }
+<<<<<<< HEAD
   }
 ;
   return { login, signup, reset_password }
@@ -548,6 +534,8 @@ if ( {) {
 =======
   return { login, signup, resetPassword }
 };
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 import { useState } from "react",;
 import { supabase } from "@/integrations/supabase/client",;
@@ -569,164 +557,17 @@ export const useEmailAuth = (;
         email,;
         password}),;
 ;
-      if (error) {;
-        toast({;
-          title:"Login failed",;
-          description:error.message,;
-          variant:"destructive"}),;
-        return { error },;
-      }
-;
-      return { data },;
-    } catch (error:any) {;
-      console.error("Login error:", error),;
-      toast({;
-        title:"Login failed",;
-        description:error.message || "An unexpected error occurred",;
-        variant:"destructive"}),;
-      return { error },;
-    } finally {;
-      setIsLoading(false),;
+      return { error }
+      return { error };
+
+    } finally {
+      setIsLoading(false)
     }
-  },;
-;
-  const signup = async (email:string, password:string, userData?:any) => {;
-    try {;
-      setIsLoading(true),;
-      // Clean up any stale auth state before signup;
-      cleanupAuthState(),;
-      ;
-      // Attempt to sign out any existing session first to prevent conflicts;
-      try {;
-        await supabase.auth.signOut({ scope:'global' }),;
-      } catch (err) {;
-        // Continue even if signout fails;
-        // // // console.log("Sign out before signup failed:", err),;
-      }
-      ;
-      // Create a proper options object;
-      const { data, error } = await supabase.auth.signUp({;
-        email,;
-        password,;
-        options:{;
-          // Only store a simple display name in the profile data;
-          data:{;
-            display_name:userData?.displayName ?? userData?.name ?? "";
-          }}}),;
-;
-      if (error) {;
-        toast({;
-          title:"Signup failed",;
-          description:error.message,;
-          variant:"destructive"}),;
-        return { error },;
-      }
-;
-      toast({;
-        title:"Signup successful",;
-        description:"Check your email for verification instructions."}),;
-      return { data },;
-    } catch (error:any) {;
-      console.error("Signup error:", error),;
-      toast({;
-        title:"Signup failed",;
-        description:error.message || "An unexpected error occurred",;
-        variant:"destructive"}),;
-      return { error },;
-    } finally {;
-      setIsLoading(false),;
-    }
-  },;
-;
-  const resetPassword = async (email:string) => {;
-    try {;
-      setIsLoading(true),;
-      const { error } = await supabase.auth.resetPasswordForEmail(email, {;
-        redirectTo:`${window.location.origin}/update-password`}),;
-;
-      if (error) {;
-        toast({;
-          title:"Password reset failed",;
-          description:error.message,;
-          variant:"destructive"}),;
-        return { error },;
-      }
-;
-      toast({;
-        title:"Password reset email sent",;
-        description:"Check your email for password reset instructions."}),;
-      return {},;
-    } catch (error:any) {;
-      console.error("Password reset error:", error),;
-      toast({;
-        title:"Password reset failed",;
-        description:error.message || "An unexpected error occurred",;
-        variant:"destructive"}),;
-      return { error },;
-    } finally {;
-      setIsLoading(false),;
-    }
-  },;
-;
-  return { login, signup, resetPassword },;
-},; export const useEmailAuth = (setUser: (user: UserProfile | null) => void;
-setIsLoading: (loading: boolean) => void) => {
-  const login = async ({
-  email, password 
-}: {
-  email: string, password: string 
-}) => {
-  try {
-  setIsLoading (true);
-}return {
-  data 
-}
-}catch (error: any) {
-  
-}finally {
-  setIsLoading (false) 
-}
-};
-const signup = async (email: string, password: string, userData?: any) => {
-  try {
-  setIsLoading (true);
-//Attempt to sign out any existing session first to prevent conflicts try {
-  
-}data, error 
-}= await supabase.auth.signUp ({
-  email, password, options: {
-  //Only store a simple display name in the profile data data: {
-  if (error) {
-  toast ({
-  title: "Signup failed";
-description: error.message;
-}finally {
-  setIsLoading (false) 
-}
-};
-const resetPassword = async (email: string) => {
-  try {
-  setIsLoading (true);
-const {
-  error 
-}= await supabase.auth.resetPasswordForEmail (email, {
-  redirectTo: `$ {
-  window.location.origin 
-}/update-password` 
-});
-if (error) {
-  toast ({
-  title: "Password reset failed";
-description: error.message;
-}finally {
-  setIsLoading (false) 
-}
-};
-return {
-  login, signup, resetPassword 
-}
-};
+  };
 
   return { login, signup, resetPassword }
 };
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

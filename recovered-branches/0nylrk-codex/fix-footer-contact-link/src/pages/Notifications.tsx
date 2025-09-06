@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -34,6 +35,12 @@ class ErrorBoundary extends React.Component {
 
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useState } from 'react';
 import {AppHeader} from "@/layout/AppHeader";
 import {Footer} from "@/components/Footer";
@@ -49,10 +56,13 @@ import {SEO} from "@/components/SEO";
 import {useNavigate} from "react-router-dom";
 import {cn} from "@/lib/utils";
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useState } from 'react',
 import { AppHeader } from "@/layout/AppHeader",
 import { Footer } from "@/components/Footer",
@@ -73,12 +83,15 @@ import { Skeleton } from "@/components/ui/skeleton",
 import { SEO } from "@/components/SEO",
 import { useNavigate } from "react-router-dom",
 import { cn } from "@/lib/utils",
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 const getNotificationIcon = (type: NotificationType, className: string = "h-5 w-5") => {
   switch (type) {
     case 'message':
@@ -96,6 +109,7 @@ const getNotificationIcon = (type: NotificationType, className: string = "h-5 w-
     default:
       return <Bell className={cn(className, "text-gray-500")} />
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 }
@@ -148,6 +162,9 @@ const getNotificationTypeBadge = (type: NotificationType) => {;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useState } from 'react';
 import { AppHeader } from '@/layout / AppHeader';
 import { Footer } from '@/components / Footer';
@@ -164,20 +181,6 @@ import { use_navigate } from './react-router-dom';
 import { cn } from '@/lib / utils';
 const getNotificationIcon = (type: NotificationType, class_name: string = "h - 5 w - 5") =>: any {
   switch (type) {
-    case 'message':;
-      return <MessageCircle className={cn (class_name, "text - blue - 500")} />;
-    case 'quote_request':;
-      return <Briefcase className={cn (class_name, "text - purple - 500")} />;
-    case 'booking_confirmation':;
-      return <CheckCircle className={cn (class_name, "text - green - 500")} />;
-    case 'hire_request':;
-      return <UserCheck className={cn (class_name, "text - zion - purple")} />;
-    case 'onboarding':;
-      return <Settings className={cn (class_name, "text - zion - cyan")} />;
-    case 'system':;
-      return <AlertCircle className={cn (class_name, "text - yellow - 500")} />;
-    default:;
-      return <Bell className={cn (class_name, "text - gray - 500")} />;
   }
 }
 ;
@@ -201,6 +204,9 @@ const getNotificationTypeBadge = (type: NotificationType) =>: any {
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 const NotificationCard: React.FC<{
   notification: {
@@ -211,6 +217,7 @@ const NotificationCard: React.FC<{
     read: boolean
     created_at: string
     action_url?: string;
+<<<<<<< HEAD
 
 
 =======
@@ -224,6 +231,8 @@ const NotificationCard: React.FC<{
     if (!notification.read) {
       onMarkAsRead(notification.id)
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useState } from 'react',;
 import { AppHeader } from "@/layout/AppHeader",;
 import { Footer } from "@/components/Footer",;
@@ -261,11 +270,16 @@ const getNotificationIcon = (type: NotificationType, className: string = "h-5 w-
     default:;
       return <Bell className={cn(className, "text-gray-500")} />;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   }
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+  }
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     case 'system':;
       return <Badge className="bg-yellow-500">System</Badge>,;
     default:;
@@ -293,30 +307,32 @@ const NotificationCard: React.FC<{;
 
     if (!notification.read) {;
       onMarkAsRead(notification.id);
-
-
     }
 
     if (notification && notification.action_url) {;
       navigate(notification && notification.action_url);
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
   },
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   };
   },
-
-
   
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
   };
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <divclassName={cn(
       "border rounded-lg shadow-sm p-4 mb-3 group transition-colors"
@@ -326,6 +342,9 @@ const NotificationCard: React.FC<{;
         <div className="mt-1">;
           {getNotificationIcon(notification && notification.type, "h-6 w-6")}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         </div>;
         <div className="flex-1">;
           <div className="flex justify-between">;
@@ -339,6 +358,7 @@ const NotificationCard: React.FC<{;
                 {!notification && notification.read && (;
                   <Badge variant="outline" className="bg-zion-cyan bg-opacity-20 text-zion-cyan text-xs">New</Badge>;
                 )}
+<<<<<<< HEAD
 
               </div>;
             </div>;
@@ -473,10 +493,13 @@ const NotificationCard: React.FC<{;
             <div className="flex items-center gap-2">
               {!notification.read && (
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <Button
                   variant="ghost"
                   size="sm"
                   className="h-8 w-8 p-0"
+<<<<<<< HEAD
 <<<<<<< HEAD
                   onClick={() => onMarkAsRead(notification && notification.id)}
 =======
@@ -489,11 +512,14 @@ const NotificationCard: React.FC<{;
                   className="h-8 w-8 p-0";
                   onClick={() => onMarkAsRead(notification.id)}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 >;
                   <Check className="h-4 w-4 text-green-400" />;
                   <span className="sr-only">Mark as read</span>;
                 </Button>;
               )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
                   onClick={() => onMarkAsRead(notification.id)}
@@ -503,10 +529,13 @@ const NotificationCard: React.FC<{;
                 </Button>
               )}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <Button
                 variant="ghost"
                 size="sm"
                 className="h-8 w-8 p-0"
+<<<<<<< HEAD
 <<<<<<< HEAD
 
                 onClick={() => onDismiss(notification && notification.id)}
@@ -541,10 +570,13 @@ const NotificationCard: React.FC<{;
           <p className="text-zion-slate-light mb-3">{notification.message}</p>
           {notification.action_url && notification.action_text && (
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <Button
               variant="outline"
               size="sm"
               className="mt-1 text-zion-cyan border-zion-cyan hover:bg-zion-cyan hover:text-black"
+<<<<<<< HEAD
 <<<<<<< HEAD
               onClick={handleAction}>;
               {notification && notification.action_text}
@@ -589,9 +621,10 @@ export default function NotificationsPage() {;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     filteredNotifications;
     unreadCount;
-=======
     action_text?: string;
   }
   onMarkAsRead: (id: string) => Promise < void>,
@@ -680,12 +713,12 @@ function NotificationsPage() {
   const {
     filtered_notifications;
     unread_count;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     markAsRead;
     markAllAsRead;
     dismiss_notification;
     loading;
     filter;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -774,19 +807,25 @@ export default function NotificationsPage() {;
             <Button
               variant="outline"
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <Button
               variant="outline"
           ;
           {unreadCount > 0 && (;
             <Button;
               variant="outline";
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               onClick={() => markAllAsRead()}
             >;
               <Check className="mr-2 h-4 w-4" />;
               Mark all as read;
             </Button>;
           )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
         </div>;
@@ -993,11 +1032,14 @@ export default function NotificationsPage() {;
   )
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             </TabsContent>;
           </Tabs>;
         </div>;
       </main>;
       <Footer />;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     </>);
@@ -1073,3 +1115,5 @@ return (<> <SEO title="Notifications | Zion AI Marketplace" description="View an
 }
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

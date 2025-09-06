@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import {  Carousel,  Carousel,
   CarouselContent,
@@ -45,6 +46,8 @@ onst testimonials = CASE_STUDIES,
 =======
 ursor/fix-website-loading-errors-and-merge-6662
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 const testimonials = CASE_STUDIES,
 
 import {  Carousel,  Carousel
@@ -71,8 +74,13 @@ import { CASE_STUDIES } from "@/data/case-studies"
 const testimonials = CASE_STUDIES
 export function TestimonialCarousel() {
   return (
+<<<<<<< HEAD
           <Carousel
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {  Carousel,  Carousel,;
   CarouselContent,;
   CarouselItem,;
@@ -96,7 +104,6 @@ import Link from "next/link";
 import Image from "next/image";
 import { CASE_STUDIES } from "@/data/case-studies";
 const testimonials = CASE_STUDIES,;
-
 export function TestimonialCarousel() {;
   return (
     <section className='py-20 bg-zion-blue-dark'>;
@@ -145,6 +152,7 @@ function TestimonialCarousel() {
           </p>;
         </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
         <div className='max - w-5xl mx - auto px - 8'>;
           <Carousel;
@@ -153,10 +161,15 @@ function TestimonialCarousel() {
 =======
         <div className='max - w-5xl mx - auto px - 8'>;
           <Carousel;
+=======
+        <div className='max - w-5xl mx - auto px - 8'>;
+          <Carousel;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             opts={{
               align: 'start'
               loop: true
             }}
+<<<<<<< HEAD
 import {
   Carousel,
   CarouselContent,
@@ -183,21 +196,12 @@ export function TestimonialCarousel() {
           </p>
         </div>
         <div className='max-w-5xl mx-auto px-8'>
+=======
+        
+        <div className="max-w-5xl mx-auto px-8">
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <Carousel
             opts={{
-              align: 'start'
-              loop: true
-            }}
-            className='w-full'
-
-          >
-            <CarouselContent>
-              {testimonials.map((testimonial, index) => (
-                <CarouselItem key={index} className='md:basis-1/1 lg:basis-1/1'>
-                  <Card className='bg-zion-blue-light border border-zion-purple/20 hover:border-zion-purple/40 transition-all duration-300 flex flex-col'>
-                    <CardContent className='p-8 flex flex-col md:flex-row gap-6 flex-1'>
-                      <div className='flex-shrink-0 flex flex-col items-center'>
-                        <Avatar className='h-20 w-20 border-2 border-zion-cyan mb-3'>                          <Image              {testimonials.map((testimonial, index) => (
         
         <div className="max-w-5xl mx-auto px-8">
           <Carousel
@@ -209,23 +213,15 @@ export function TestimonialCarousel() {
             <CarouselContent>
               {testimonials.map((testimonial, index) => (
                 <CarouselItem key={index} className="md:basis-1/1 lg:basis-1/1">
-                <CarouselItem key={index} className='md:basis-1/1 lg:basis-1/1'>
-                  <Card className='bg-zion-blue-light border border-zion-purple/20 hover:border-zion-purple/40 transition-all duration-300 flex flex-col'>
-                    <CardContent className='p-8 flex flex-col md:flex-row gap-6 flex-1'>
-                      <div className='flex-shrink-0 flex flex-col items-center'>
-                        <Avatar className='h-20 w-20 border-2 border-zion-cyan mb-3'>                          <Image              {testimonials.map((testimonial, index) => (
-                <CarouselItem key={index} className="md:basis-1/1 lg:basis-1/1">
                   <Card className="bg-zion-blue-light border border-zion-purple/20 hover:border-zion-purple/40 transition-all duration-300 flex flex-col">
                     <CardContent className="p-8 flex flex-col md:flex-row gap-6 flex-1">
                       <div className="flex-shrink-0 flex flex-col items-center">
                         <Avatar className="h-20 w-20 border-2 border-zion-cyan mb-3">
-                            alt={testimonial.author}
-                            width={80}
-                            height={80}
-                            loading='lazy'
-                          <Image
 
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             className='w - full';
           >;
             <CarouselContent>;
@@ -241,6 +237,7 @@ export function TestimonialCarousel() {
                       <div className="flex - shrink - 0 flex flex - col items - center">;
                         <Avatar className="h - 20 w - 20 border - 2 border - zion - cyan mb - 3">;
                             src={testimonial.avatar}
+<<<<<<< HEAD
 <<<<<<< HEAD
                             alt={testimonial.author}
 =======
@@ -284,6 +281,8 @@ export function TestimonialCarousel() {;
                     <CardContent className="p-8 flex flex-col md:flex-row gap-6 flex-1">;
                       <div className="flex-shrink-0 flex flex-col items-center">;
                         <Avatar className="h-20 w-20 border-2 border-zion-cyan mb-3">;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                             alt={testimonial.author}
             className='w-full'>;
             <CarouselContent>;
@@ -298,6 +297,7 @@ export function TestimonialCarousel() {;
                     <CardContent className="p-8 flex flex-col md:flex-row gap-6 flex-1">;
                       <div className="flex-shrink-0 flex flex-col items-center">;
                         <Avatar className="h-20 w-20 border-2 border-zion-cyan mb-3">;
+<<<<<<< HEAD
                             src={testimonial && testimonial.avatar}
                             alt={testimonial && testimonial.author}
                             width={80}
@@ -309,22 +309,29 @@ export function TestimonialCarousel() {;
 
 
                           <Image;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                             src={testimonial.avatar}
                             alt={testimonial.author}
                             width={80}
                             height={80}
+<<<<<<< HEAD
                             loading="lazy"
                           />
 
                             loading='lazy'
                             loading="lazy"
                           />
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                         </Avatar>
                         <div className="text-center md:text-left">
                           <p className="font-bold text-zion-cyan">{testimonial.author}</p>
                           <p className="text-zion-slate-light text-sm">{testimonial.role}</p>
                         </div>
                       </div>
+<<<<<<< HEAD
                       <div className='flex-1'>
                         <div className='flex items-center gap-3 mb-4'>                          <Image
                       <div className="flex-1">
@@ -337,6 +344,8 @@ export function TestimonialCarousel() {;
                         </div>
                       </div>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 
@@ -344,6 +353,7 @@ export function TestimonialCarousel() {;
                       <div className="flex-1">
                         <div className="flex items-center gap-3 mb-4">
                           <Image
+<<<<<<< HEAD
 <<<<<<< HEAD
             <div className='flex justify-center mt-8 gap-2'>
               <CarouselPrevious className='relative static left-0 translate-y-0 bg-zion-blue-dark border-zion-purple/30 text-zion-cyan hover:bg-zion-blue-light hover:text-zion-cyan hover:border-zion-purple' />
@@ -363,10 +373,13 @@ export function TestimonialCarousel() {;
                       <div className="flex-1">
                         <div className="flex items-center gap-3 mb-4">
                           <Image
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                             src={testimonial.companyLogo}
                             alt={`${testimonial.company} logo`}
                             width={32}
                             height={32}
+<<<<<<< HEAD
                             className='h-8 w-auto'
                             loading='lazy'
                           <span className='text-white font-semibold'>
@@ -376,11 +389,14 @@ export function TestimonialCarousel() {;
                             loading="lazy"
                           />
                           <span className="text-white font-semibold">{testimonial.company}</span>
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                         </div>
                         <Quote className="h-10 w-10 text-zion-cyan opacity-30 mb-3" />
                         <p className="text-white text-lg mb-6">"{testimonial.quote}"</p>
                       </div>
                     </CardContent>
+<<<<<<< HEAD
                     <CardFooter className='p-6 pt-0'>
                       <Button
                         variant='link'
@@ -402,6 +418,8 @@ export function TestimonialCarousel() {;
                         <p className="text-white text-lg mb-6">"{testimonial.quote}"</p>
                       </div>
                     </CardContent>
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 
@@ -415,6 +433,7 @@ export function TestimonialCarousel() {;
                 </CarouselItem>
               ))}
             </CarouselContent>
+<<<<<<< HEAD
             <div className='flex justify-center mt-8 gap-2'>
               <CarouselPrevious className='relative static left-0 translate-y-0 bg-zion-blue-dark border-zion-purple/30 text-zion-cyan hover:bg-zion-blue-light hover:text-zion-cyan hover:border-zion-purple' />
               <CarouselNext className='relative static right-0 translate-y-0 bg-zion-blue-dark border-zion-purple/30 text-zion-cyan hover:bg-zion-blue-light hover:text-zion-cyan hover:border-zion-purple' />            </div>            <div className="flex justify-center mt-8 gap-2">
@@ -428,12 +447,16 @@ ursor/fix-website-loading-errors-and-merge-6662
               <CarouselPrevious className='relative static left-0 translate-y-0 bg-zion-blue-dark border-zion-purple/30 text-zion-cyan hover:bg-zion-blue-light hover:text-zion-cyan hover:border-zion-purple' />
               <CarouselNext className='relative static right-0 translate-y-0 bg-zion-blue-dark border-zion-purple/30 text-zion-cyan hover:bg-zion-blue-light hover:text-zion-cyan hover:border-zion-purple' />            </div>            <div className="flex justify-center mt-8 gap-2">
             <div className="flex justify-center mt-8 gap-2">
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
               <CarouselPrevious className="relative static left-0 translate-y-0 bg-zion-blue-dark border-zion-purple/30 text-zion-cyan hover: bg-zion-blue-light hover:text-zion-cyan hover:border-zion-purple" />
               <CarouselNext className="relative static right-0 translate-y-0 bg-zion-blue-dark border-zion-purple/30 text-zion-cyan hover:bg-zion-blue-light hover:text-zion-cyan hover:border-zion-purple" />
             </div>
           </Carousel>
         </div>
+<<<<<<< HEAD
       </div>;
     </section>;
   );
@@ -441,12 +464,17 @@ ursor/fix-website-loading-errors-and-merge-6662
       </div>
     </section>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             </CarouselContent>;
             <div className='flex justify-center mt-8 gap-2'>;
               <CarouselPrevious className='relative static left-0 translate-y-0 bg-zion-blue-dark border-zion-purple/30 text-zion-cyan hover:bg-zion-blue-light hover:text-zion-cyan hover:border-zion-purple' />;
               <CarouselNext className='relative static right-0 translate-y-0 bg-zion-blue-dark border-zion-purple/30 text-zion-cyan hover:bg-zion-blue-light hover:text-zion-cyan hover:border-zion-purple' />            </div>            <div className="flex justify-center mt-8 gap-2">;
               <CarouselPrevious className="relative static left-0 translate-y-0 bg-zion-blue-dark border-zion-purple/30 text-zion-cyan hover: bg-zion-blue-light hover:text-zion-cyan hover:border-zion-purple" />;
               <CarouselNext className="relative static right-0 translate-y-0 bg-zion-blue-dark border-zion-purple/30 text-zion-cyan hover:bg-zion-blue-light hover:text-zion-cyan hover:border-zion-purple" />;
+<<<<<<< HEAD
 
                             loading='lazy';
                         </Avatar>;
@@ -462,12 +490,15 @@ ursor/fix-website-loading-errors-and-merge-6662
     </section>);
 }
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                         </div>;
                       </div>;
                       <div className='flex - 1'>;
                         <div className='flex items - center gap - 3 mb - 4'>                          <Image;
                       <div className="flex - 1">;
                         <div className="flex items - center gap - 3 mb - 4">;
+<<<<<<< HEAD
                           />;
                         </Avatar>;
                         <div className="text - center md:text - left">;
@@ -544,6 +575,8 @@ ursor/fix-website-loading-errors-and-merge-6662
     </section>
   )
 }
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                             className="h-8 w-auto";
                             loading="lazy";
                           />;
@@ -562,11 +595,15 @@ ursor/fix-website-loading-errors-and-merge-6662
                 </CarouselItem>;
               ))}
             </CarouselContent>;
+<<<<<<< HEAD
             <div className="flex justify-center mt-8 gap-2">;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             </div>;
           </Carousel>;
         </div>;
       </div>;
+<<<<<<< HEAD
 
 
               <CarouselPrevious className="relative static left-0 translate-y-0 bg-zion-blue-dark border-zion-purple/30 text-zion-cyan hover: bg-zion-blue-light hover:text-zion-cyan hover:border-zion-purple" />;
@@ -597,3 +634,5 @@ Discover how Zion is transforming the tech and AI marketplace ecosystem </p> </d
     </section>);
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

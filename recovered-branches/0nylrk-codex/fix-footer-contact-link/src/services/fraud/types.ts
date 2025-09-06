@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -13,12 +14,15 @@ export interface AnalysisResult {
 
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 export interface MessageAnalysisResult extends AnalysisResult {
   severity: FraudSeverity;
 }
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -47,13 +51,12 @@ export interface MessageAnalysisResult extends AnalysisResult {
 
 <<<<<<< HEAD
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export interface EmailAnalysisResult extends AnalysisResult {}
 export interface FlagResult {
-
-  success: boolean,
-  error?: string;
-
 }
+<<<<<<< HEAD
 
 
 =======
@@ -82,8 +85,22 @@ export interface FlagResult {
   error?: string
 }
 export interface SignupCheckResult extends AnalysisResult {}
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ;
 export interface SignupCheckResult extends AnalysisResult {}
 ;
 ;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+;
+export interface SignupCheckResult extends AnalysisResult {}
+;
+
+;
+
+export interface SignupCheckResult extends AnalysisResult {}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

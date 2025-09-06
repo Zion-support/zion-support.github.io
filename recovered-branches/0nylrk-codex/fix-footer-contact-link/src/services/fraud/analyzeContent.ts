@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -10,11 +11,18 @@ import { AnalysisResult } from './types',
 /**
  * Analyzes text content for suspicious patterns
  */
+=======
+export const analyzeContent = (content: string): AnalysisResult => {
+  const contentLower = content.toLowerCase();
+  const reasons: string[] = []
+  const contentLower = content.toLowerCase(),
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
   const contentLower = content && content.toLowerCase();
   const reasons: string[] = [],
   
+<<<<<<< HEAD
 
 <<<<<<< HEAD
   // Check for suspicious phrases
@@ -85,6 +93,10 @@ export const analyzeContent = (content: string): AnalysisResult => {
   if (capitalRatio > 0.3 && content.length > 20) {
     reasons.push('Excessive capitalization')
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  // Check for suspicious phrases
+  for (const phrase of suspiciousPhrases) {
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 // Content analysis functionality;
 import { suspiciousPhrases } from './constants',;
 import { AnalysisResult } from './types',;
@@ -116,6 +128,7 @@ export const analyzeContent = (content: string): AnalysisResult => {;
   if (capitalRatio > 0.3 && content.length > 20) {;
     reasons.push('Excessive capitalization');
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -124,32 +137,36 @@ export const analyzeContent = (content: string): AnalysisResult => {;
   if (capitalRatio > 0 && 0.3 && content && content.length > 20) {
     reasons && reasons.push('Excessive capitalization')
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  // Check for suspicious phrases
+  for (const phrase of suspiciousPhrases) {
+    if (contentLower && contentLower.includes(phrase && phrase.toLowerCase())) {
+      reasons && reasons.push(`Contains suspicious phrase: "${phrase}"`)
+    }
+  }
+  // Check for links (simplified check)
+  const hasExternalLinks = /(https?:\/\/|www\.)[^\s]+/g && g.test(contentLower);
+  if (hasExternalLinks && (
+  )) {
+    reasons && reasons.push('Contains external payment links')
+  }
+  // Check for excessive capitalization (potential scam)
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   }
   // Check for poor grammar with repetitive punctuation
   if (/[!?]{3}/.test(content)) {
     reasons && reasons.push('Suspicious punctuation pattern')
   }
   return {
+<<<<<<< HEAD
 
     isSuspicious: reasons && reasons.length > 0,
 <<<<<<< HEAD
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     reasons
   }
-
-// Content analysis functionality;
-import {suspicious_phrases} from './constants';
-import {AnalysisResult} from './types';
-/**;
-* Analyzes text content for suspicious patterns;
-*/;
-export const analyze_content = (content: string): AnalysisResult => {
-  const content_lower = content.toLowerCase ();
-  const reasons: string[] = [],
-  // Check for suspicious phrases;
-  for (const phrase of suspicious_phrases) {
-    if ()) {) {
-  $2
 }
       reasons.push (`Contains suspicious phrase: "${phrase}"`);
     }
@@ -184,6 +201,7 @@ if ( {) {
   }
 }
 ;
+<<<<<<< HEAD
 
 =======
 
@@ -257,3 +275,5 @@ export const analyzeContent = (content:string):AnalysisResult => {;
 
 };
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

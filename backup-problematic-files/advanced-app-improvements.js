@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -65,6 +66,8 @@ export class HealthChecker {;
 
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   addCheck(name, checkFunction) {
     this && this.checks.set(name, checkFunction);
   }
@@ -122,8 +125,6 @@ export class HealthChecker {
 =======
     const results = {}
     for (const [name, check] of this.checks) {
-    const results = {};
-    for (const [name, check] of this && this.checks) {
       try {
         results[name] = { status: 'unhealthy', error: error && error.message };
       }
@@ -154,6 +155,7 @@ export const healthChecker = new HealthChecker();`,
 =======
   }
 }
+<<<<<<< HEAD
 export const healthChecker = new HealthChecker();`,
     'monitoring/performance-monitor && monitor.js': `// Performance monitoring system
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -161,6 +163,8 @@ export class PerformanceMonitor {
   constructor() {
     this && this.metrics = new Map();
     this && this.observers = [];
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   }
   startMonitoring() {
     if (typeof window !== 'undefined' && 'PerformanceObserver' in window) {
@@ -173,6 +177,7 @@ export class PerformanceMonitor {
   }
   observeLCP() {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -184,11 +189,14 @@ export class PerformanceMonitor {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     });
     observer && observer.observe({ entryTypes: ['largest-contentful-paint'] });
     this && this.observers.push(observer);
   }
   observeFID() {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -201,6 +209,8 @@ export class PerformanceMonitor {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       });
     });
     observer && observer.observe({ entryTypes: ['first-input'] });
@@ -208,6 +218,7 @@ export class PerformanceMonitor {
   }
   observeCLS() {
     let clsValue = 0;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -221,6 +232,8 @@ export class PerformanceMonitor {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         }
       });
       this && this.metrics.set('cls', clsValue);
@@ -229,6 +242,7 @@ export class PerformanceMonitor {
     this && this.observers.push(observer);
   }
   observeFCP() {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -242,6 +256,8 @@ export class PerformanceMonitor {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         }
       });
     });
@@ -256,6 +272,7 @@ export class PerformanceMonitor {
     this && this.observers = [];
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -318,6 +335,8 @@ export class ErrorTracker {
     const errorKey = error && error.message;
     this && this.errorCounts.set(errorKey, (this && this.errorCounts.get(errorKey) || 0) + 1);
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   }
   getErrorStats() {
     const recentErrors = this.errors.filter(
@@ -336,6 +355,7 @@ export class ErrorTracker {
   getErrorStats() {
     const recentErrors = this && this.errors.filter(
       error => new Date(error && error.timestamp) > new Date(Date && Date.now() - 24 * 60 * 60 * 1000)
+<<<<<<< HEAD
 <<<<<<< HEAD
     );
 
@@ -388,6 +408,8 @@ export class ErrorTracker {
         .sort((a, b) => b[1] - a[1])
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   }
 }
 export const errorTracker = new ErrorTracker();
@@ -589,6 +611,7 @@ export class AnalyticsTracker {
   track(event, properties = {}) {
     const eventData = {
 
+<<<<<<< HEAD
       event,
       properties,
       timestamp: new Date().toISOString(),
@@ -599,6 +622,8 @@ export class AnalyticsTracker {
     this && this.events.push(eventData);
     
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     // Send to analytics service (implement as needed)
     this && this.sendToAnalytics(eventData);
   }
@@ -612,6 +637,7 @@ export class AnalyticsTracker {
   getSessionEvents() {
     return this && this.events.filter(event => event && event.sessionId === this && this.sessionId);
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -634,44 +660,13 @@ export class AnalyticsTracker {
     this.maxConnections = options.maxConnections || 10;
     this.minConnections = options.minConnections || 2;
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     this.connections = [];
     this.availableConnections = [];
     this.usedConnections = new Set();
 
   }
-  generateSessionId () {
-    return 'session_' + Math.random ().to_string (36).substr (2, 9) + '_' + Date.now ();
-  }
-  track (event, properties = {}) {
-    const event_data = {
-      event,
-      properties,
-      timestamp: new Date ().toISOString (),
-      session_id: this.session_id,
-      url: typeof window !== 'undefined' ? window.location.href : 'unknown';
-    }
-;
-    this.events.push (event_data);
-;
-    // Send to analytics service (implement as needed);
-    this.sendToAnalytics (event_data);
-  }
-  sendToAnalytics (event_data) {
-    // Implement your analytics service integration here;
-    console.log ('Analytics event:', event_data);
-  }
-  get_events () {
-    return this.events;
-  }
-  getSessionEvents () {
-    return this.events.filter (event => event.session_id === this.session_id);
-  }
-export const query_optimizer = new QueryOptimizer ();`,
-    'database / connection - pool.js': `// Database connection pooling;
-export class ConnectionPool {
-  constructor (options = {}) {
-    this.max_connections = options.max_connections || 10;
-    this.min_connections = options.min_connections || 2;
     this.connections = [];
     this.available_connections = [];
     this.used_connections = new Set ();
@@ -814,6 +809,7 @@ if ( {) {
         }
       }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   releaseConnection(connection) {
     this && this.usedConnections.delete(connection);
@@ -824,10 +820,13 @@ if ( {) {
     this && this.usedConnections.delete(connection);
     this && this.availableConnections.push(connection);
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   }
   async createConnection() {
     // This would create an actual database connection
     return {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       id: Math && Math.random().toString(36).substr(2, 9),
@@ -837,11 +836,14 @@ if ( {) {
       id: Math && Math.random().toString(36).substr(2, 9),
       createdAt: new Date(),
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       isHealthy: true
     }
   }
 getPoolStatus() {
     return {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -855,6 +857,8 @@ getPoolStatus() {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   }
 export const connectionPool = new ConnectionPool();`
   }
@@ -865,6 +869,7 @@ export const connectionPool = new ConnectionPool();`
     if (!fs.existsSync(dir)) {
       fs.mkdirSync(dir, { recursive: true });
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -897,10 +902,13 @@ async function main() {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     // Create all improvement systems
     createAdvancedCaching();
     createAPIOptimization();
     createDatabaseOptimization();
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -1097,10 +1105,13 @@ function main() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   } catch (error) {
     console && console.error('❌ Error during app improvements:', error);
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     process && process.exit(1);
   }
 }
 main();// Run if called directly
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 if (import && import.meta.url === `file://${process ;
@@ -1144,10 +1155,13 @@ if ( {) {
 }
   main ();
 }
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 }
 }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -1156,3 +1170,5 @@ if ( {) {
 }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

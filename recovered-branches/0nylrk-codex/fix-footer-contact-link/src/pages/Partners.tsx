@@ -1,4 +1,3 @@
-
 import {Button} from "@/components/ui/button";
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
 import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
@@ -13,11 +12,14 @@ import {useAuth} from "@/hooks/useAuth";
 import {useNavigate} from "react-router-dom";
 export default function Partners() {;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
   const [activeTab, setActiveTab] = useState("overview");
   const { user, isAuthenticated } = useAuth();
   const navigate = useNavigate();
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { Button } from "@/components/ui/button",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
@@ -31,11 +33,15 @@ import { PartnerResources } from "@/components/partners/PartnerResources",
 import { useAuth } from "@/hooks/useAuth";
 import { useNavigate } from "react-router-dom";
 export default function Partners() {
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const [activeTab, setActiveTab] = useState("overview");
   const { user, isAuthenticated } = useAuth();
 
   const navigate = useNavigate();
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -49,6 +55,8 @@ export default function Partners() {
   const [activeTab, setActiveTab] = useState("overview"),
   const { user, isAuthenticated } = useAuth(),
   const navigate = useNavigate(),
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   // If not authenticated, display partner program info and signup CTA
   if (!isAuthenticated) {
@@ -188,6 +196,7 @@ export default function Partners() {;
   const [activeTab, setActiveTab] = useState("overview"),;
   const { user, isAuthenticated } = useAuth();
   const navigate = useNavigate();
+<<<<<<< HEAD
 import {Button} from "@/components/ui/button";
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
 import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
@@ -209,10 +218,13 @@ export default function Partners() {;
 
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   // If not authenticated, display partner program info and signup CTA;
   if (!isAuthenticated) {;
     return (
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -241,16 +253,22 @@ export default function Partners() {;
   if (!isAuthenticated) {;
     return (;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <div className="container max-w-6xl py-10">;
         <div className="text-center mb-8">;
           <h1 className="text-4xl font-bold tracking-tight text-white mb-2">Zion AI Partner Program</h1>;
           <p className="text-xl text-zion-slate-light">Earn rewards by referring AI talent and clients to our marketplace</p>;
         </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <div className="grid md:grid-cols-2 gap-8 mb-12">;
           <Card className="bg-zion-blue-dark border-zion-blue-light">;
             <CardHeader>;
@@ -260,11 +278,15 @@ export default function Partners() {;
             <CardContent className="space-y-4">;
               <div className="flex items-start gap-3">;
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <CheckCircle className="h-5 w-5 text-zion-cyan mt-0 && 0.5" />;
 =======
                 <CheckCircle className="h-5 w-5 text-zion-cyan mt-0.5" />;
                 <CheckCircle className="h-5 w-5 text-zion-cyan mt-0.5" />;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+                <CheckCircle className="h-5 w-5 text-zion-cyan mt-0 && 0.5" />;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <div>;
                   <p className="font-medium text-white">Monetize your audience</p>;
                   <p className="text-sm text-zion-slate-light">Earn commissions from successful referrals</p>;
@@ -272,11 +294,15 @@ export default function Partners() {;
               </div>;
               <div className="flex items-start gap-3">;
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <CheckCircle className="h-5 w-5 text-zion-cyan mt-0 && 0.5" />;
 =======
                 <CheckCircle className="h-5 w-5 text-zion-cyan mt-0.5" />;
                 <CheckCircle className="h-5 w-5 text-zion-cyan mt-0.5" />;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+                <CheckCircle className="h-5 w-5 text-zion-cyan mt-0 && 0.5" />;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <div>;
                   <p className="font-medium text-white">Exclusive insights</p>;
                   <p className="text-sm text-zion-slate-light">Get early access to AI marketplace trends</p>;
@@ -284,11 +310,15 @@ export default function Partners() {;
               </div>;
               <div className="flex items-start gap-3">;
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <CheckCircle className="h-5 w-5 text-zion-cyan mt-0 && 0.5" />;
 =======
                 <CheckCircle className="h-5 w-5 text-zion-cyan mt-0.5" />;
                 <CheckCircle className="h-5 w-5 text-zion-cyan mt-0.5" />;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+                <CheckCircle className="h-5 w-5 text-zion-cyan mt-0 && 0.5" />;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <div>;
                   <p className="font-medium text-white">Marketing resources</p>;
                   <p className="text-sm text-zion-slate-light">Access our partner toolkit with ready-to-use materials</p>;
@@ -297,10 +327,14 @@ export default function Partners() {;
             </CardContent>;
           </Card>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <Card className="bg-zion-blue-dark border-zion-blue-light">;
             <CardHeader>;
               <CardTitle className="text-white">For AI Organizations</CardTitle>;
@@ -309,11 +343,15 @@ export default function Partners() {;
             <CardContent className="space-y-4">;
               <div className="flex items-start gap-3">;
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <CheckCircle className="h-5 w-5 text-zion-purple mt-0 && 0.5" />;
 =======
                 <CheckCircle className="h-5 w-5 text-zion-purple mt-0.5" />;
                 <CheckCircle className="h-5 w-5 text-zion-purple mt-0.5" />;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+                <CheckCircle className="h-5 w-5 text-zion-purple mt-0 && 0.5" />;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <div>;
                   <p className="font-medium text-white">Expand your ecosystem</p>;
                   <p className="text-sm text-zion-slate-light">Connect your community to AI job opportunities</p>;
@@ -321,11 +359,15 @@ export default function Partners() {;
               </div>;
               <div className="flex items-start gap-3">;
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <CheckCircle className="h-5 w-5 text-zion-purple mt-0 && 0.5" />;
 =======
                 <CheckCircle className="h-5 w-5 text-zion-purple mt-0.5" />;
                 <CheckCircle className="h-5 w-5 text-zion-purple mt-0.5" />;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+                <CheckCircle className="h-5 w-5 text-zion-purple mt-0 && 0.5" />;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <div>;
                   <p className="font-medium text-white">Co-branded opportunities</p>;
                   <p className="text-sm text-zion-slate-light">Create joint content and events</p>;
@@ -333,11 +375,15 @@ export default function Partners() {;
               </div>;
               <div className="flex items-start gap-3">;
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <CheckCircle className="h-5 w-5 text-zion-purple mt-0 && 0.5" />;
 =======
                 <CheckCircle className="h-5 w-5 text-zion-purple mt-0.5" />;
                 <CheckCircle className="h-5 w-5 text-zion-purple mt-0.5" />;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+                <CheckCircle className="h-5 w-5 text-zion-purple mt-0 && 0.5" />;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <div>;
                   <p className="font-medium text-white">Custom tracking</p>;
                   <p className="text-sm text-zion-slate-light">Detailed analytics on your referral performance</p>;
@@ -347,10 +393,14 @@ export default function Partners() {;
           </Card>;
         </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <div className="text-center mb-12">;
           <h2 className="text-2xl font-bold text-white mb-4">How It Works</h2>;
           <div className="grid md:grid-cols-3 gap-6">;
@@ -366,10 +416,14 @@ export default function Partners() {;
               </CardContent>;
             </Card>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
             ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <Card className="bg-zion-blue-dark border-zion-blue-light">;
               <CardHeader className="text-center pb-2">;
                 <div className="mx-auto bg-zion-blue-light rounded-full w-12 h-12 flex items-center justify-center mb-4">;
@@ -382,10 +436,14 @@ export default function Partners() {;
               </CardContent>;
             </Card>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
             ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <Card className="bg-zion-blue-dark border-zion-blue-light">;
               <CardHeader className="text-center pb-2">;
                 <div className="mx-auto bg-zion-blue-light rounded-full w-12 h-12 flex items-center justify-center mb-4">;
@@ -400,11 +458,15 @@ export default function Partners() {;
           </div>;
         </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
         <div className="flex justify-center gap-4">;
           <Button
             size="lg" 
             className="bg-zion-purple hover:bg-zion-purple-dark"
+<<<<<<< HEAD
 =======
 ;
         <div className="flex justify-center gap-4">;
@@ -416,16 +478,21 @@ export default function Partners() {;
             size="lg";
             className="bg-zion-purple hover:bg-zion-purple-dark";
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             onClick={() => navigate('/signup')}
           >;
             Apply to Join;
           </Button>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
           <Button;
             size="lg";
             variant="outline";
             className="text-zion-cyan border-zion-cyan";
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             onClick={() => navigate('/login')}
           >
             Partner Login
@@ -434,12 +501,16 @@ export default function Partners() {;
       </div>
     )
   }
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <Button
             size="lg" 
             variant="outline" 
 
             className="text-zion-cyan border-zion-cyan"
+<<<<<<< HEAD
 
           <Button 
             size="lg" 
@@ -458,12 +529,15 @@ export default function Partners() {;
             variant="outline" ;
             className="text-zion-cyan border-zion-cyan";
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             onClick={() => navigate('/login')}
           >;
             Partner Login;
           </Button>;
         </div>;
       </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
     );
   }
@@ -476,6 +550,11 @@ export default function Partners() {;
 
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+    );
+  }
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   // Authenticated user view - Partner Dashboard
   return (
     <div className="container max-w-7xl py-10">
@@ -526,6 +605,7 @@ export default function Partners() {;
       </Tabs>
     </div>
   )
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -817,3 +897,5 @@ if ( {) {
 }
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

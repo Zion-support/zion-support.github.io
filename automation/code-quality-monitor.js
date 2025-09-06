@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -12,6 +13,8 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
@@ -24,6 +27,7 @@ class CodeQualityMonitor {
     this.logFile = path.join(__dirname, 'logs', 'code-quality-monitor.log');
     this.reportFile = path.join(__dirname, 'reports', 'code-quality.json');
     // Ensure directories exist
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -37,10 +41,13 @@ class CodeQualityMonitor {
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     fs.mkdirSync(path.dirname(this.logFile), { "recursive": true });
     fs.mkdirSync(path.dirname(this.reportFile), { "recursive": true });
   }
   log(message, level = 'INFO') {
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -67,11 +74,19 @@ origin/automation-improvements-final
 class CodeQualityMonitor {; constructor() {; this.metrics = {; complexity: 0, maintainability: 0, testCoverage: 0, performance: 0, lastUpdated: new Date().toISOString()}; this.logFile = path.join(__dirname, "logs", "code-quality.log")};
 #!/usr/bin/env node;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+const fs = require("fs");
+const path = require("path");
+const { execSync } = require("child_process");
+class CodeQualityMonitor {; constructor() {; this.metrics = {; complexity: 0, maintainability: 0, testCoverage: 0, performance: 0, lastUpdated: new Date().toISOString()}; this.logFile = path.join(__dirname, "logs", "code-quality.log")};
+#!/usr/bin/env node;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ; log(message) {; const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] ${message}\n`; console.log(message); fs.appendFileSync(this.logFile, logMessage)};
 ; async analyzeCodeQuality() {; try {; this.log("Starting code quality analysis...");
 ; this.metrics.complexity = this.calculateComplexity(); this.metrics.maintainability = this.calculateMaintainability(); this.metrics.testCoverage = this.calculateTestCoverage(); this.metrics.performance = this.calculatePerformance(); this.metrics.lastUpdated = new Date().toISOString();
 ; this.saveMetrics(); this.log("Code quality analysis completed successfully"); return this.metrics} catch (error) {; this.log(`Code quality analysis failed: ${error.message}`, "ERROR"); return null};
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -82,6 +97,11 @@ class CodeQualityMonitor {; constructor() {; this.metrics = {; complexity: 0, ma
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 class CodeQualityMonitor {;
   constructor() {;
     this.metrics = {;
@@ -93,6 +113,7 @@ class CodeQualityMonitor {;
 ;
   log(message) {;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -101,10 +122,13 @@ class CodeQualityMonitor {;
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] ${message}\n`;
     console.log(message);
     fs.appendFileSync(this.logFile, logMessage);
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -114,6 +138,8 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 ursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   }
   async runQualityChecks() {
     this.log('Running code quality checks...');
@@ -128,6 +154,7 @@ ursor/integrate-build-improve-and-re-verify-8f7d
     try {
       execSync('yarn lint', { "stdio": 'pipe', "cwd": process.cwd() });
       results.lint.status = 'pass';
+<<<<<<< HEAD
 
 
 
@@ -136,6 +163,8 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       this.log('"ESLint": PASS');
     } catch (error) {
       results.lint.status = 'fail';
@@ -143,6 +172,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
       results.lint.errors = (output.match(/error/gi) || []).length;
       results.lint.warnings = (output.match(/warning/gi) || []).length;
       results.lint.issues = results.lint.errors + results.lint.warnings;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -154,12 +184,15 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       this.log(`"ESLint": ${results.lint.issues} issues found`, 'WARN');
     }
     // TypeScript check
     try {
       execSync('npx tsc --noEmit', { "stdio": 'pipe', "cwd": process.cwd() });
       results.typeCheck.status = 'pass';
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -169,11 +202,14 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       this.log('"TypeScript": PASS');
     } catch (error) {
       results.typeCheck.status = 'fail';
       const output = error.stdout || error.message;
       results.typeCheck.errors = (output.match(/error TS/g) || []).length;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -185,6 +221,8 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       this.log(`"TypeScript": ${results.typeCheck.errors} errors found`, 'WARN');
     }
     // Test coverage (if tests exist)
@@ -208,6 +246,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
     results.qualityScore = this.calculateQualityScore(results);
     // Generate report
     fs.writeFileSync(this.reportFile, JSON.stringify(results, null, 2));
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -221,6 +260,8 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     this.log(`Code quality report "generated": ${this.reportFile}`);
     return results;
   }
@@ -243,6 +284,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
     }
     return Math.max(0, Math.min(100, score));
   }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -254,6 +296,8 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   async run() {
     this.log('Starting Code Quality Monitor...');
     try {
@@ -264,6 +308,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
       if (results.qualityScore < 70) {
         this.log('Code quality is below threshold. Review needed.', 'WARN');
       }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -275,6 +320,8 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     } catch (error) {
       this.log(`Error in code quality "monitor": ${error.message}`, 'ERROR');
     }
@@ -285,6 +332,7 @@ if (require.main === module) {
   const monitor = new CodeQualityMonitor();
   monitor.run().catch(console.error);
 }
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -309,6 +357,8 @@ module.exports = CodeQualityMonitor;
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 };
 ;
   async analyzeCodeQuality() {;
@@ -346,6 +396,7 @@ class CodeQualityMonitor {,
   };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
@@ -363,11 +414,17 @@ class CodeQualityMonitor {,
 }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+}
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ,
   log(message) {,
     const timestamp = new Date().toISOString(),
     const logMessage = `[${timestamp}] ${message}\n`,
     console.log(message),
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -384,6 +441,8 @@ class CodeQualityMonitor {,
     fs.appendFileSync(this.logFile, logMessage)
   },
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ,
   async analyzeCodeQuality() {,
     try {,
@@ -397,6 +456,7 @@ class CodeQualityMonitor {,
 ,
       this.saveMetrics(),
       this.log("Code quality analysis completed successfully"),
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -410,10 +470,13 @@ ursor/automate-test-improve-and-merge-code-8ee2
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 const fs = require("fs");
 const path = require("path");
 const { execSync } = require("child_process");
 class CodeQualityMonitor {constructor() {; this.metrics = {; complexity: 0, maintainability: 0, testCoverage: 0, performance: 0, lastUpdated: new Date().toISOString()}; this.logFile = path.join(__dirname, "logs", "code-quality.log")}; log(message) {const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] ${message}\n`; console.log(message); fs.appendFileSync(this.logFile, logMessage)}; async analyzeCodeQuality() {try {; this.log("Starting code quality analysis..."); this.metrics.complexity = this.calculateComplexity(); this.metrics.maintainability = this.calculateMaintainability(); this.metrics.testCoverage = this.calculateTestCoverage(); this.metrics.performance = this.calculatePerformance(); this.metrics.lastUpdated = new Date().toISOString(); this.saveMetrics(); this.log("Code quality analysis completed successfully"); return this.metrics} catch (error) {this.log(`Code quality analysis failed: ${error.message}`, "ERROR"); return null}
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -500,6 +563,8 @@ class CodeQualityMonitor {,;
 =======
 origin/main
 origin/automation-improvements-final
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 class CodeQualityMonitor {constructor() {; this.metrics = {; complexity: 0, maintainability: 0, testCoverage: 0, performance: 0, lastUpdated: new Date().toISOString()}; this.logFile = path.join(__dirname, "logs", "code-quality.log")}; log(message) {const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] ${message}\n`; console.log(message); fs.appendFileSync(this.logFile, logMessage)}; async analyzeCodeQuality() {try {; this.log("Starting code quality analysis..."); this.metrics.complexity = this.calculateComplexity(); this.metrics.maintainability = this.calculateMaintainability(); this.metrics.testCoverage = this.calculateTestCoverage(); this.metrics.performance = this.calculatePerformance(); this.metrics.lastUpdated = new Date().toISOString(); this.saveMetrics(); this.log("Code quality analysis completed successfully"); return this.metrics} catch (error) {this.log(`Code quality analysis failed: ${error.message}`, "ERROR"); return null}
       return this.metrics
     } catch (error) {,
@@ -549,4 +614,7 @@ class CodeQualityMonitor {,;
       this.log(`Code quality analysis: failed: ${error.message}`, "ERROR"),;
       return null;
     },;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

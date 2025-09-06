@@ -1,11 +1,15 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import { NextApiRequest, NextApiResponse } from "next";
 import { requireUser } from "../../../utils/auth";
 import {
+<<<<<<< HEAD
 
   getConversationById,
   getMessages,
@@ -19,17 +23,29 @@ import {
   getConversationById
   getMessages
   sendMessage
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { NextApiRequest, NextApiResponse } from "next";
 import { requireUser } from "../../../utils/auth";
 import {
   getConversationById,
   getMessages,
   sendMessage,;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+  getConversationById,
+  getMessages,
+  sendMessage,;
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 } from "../../../utils/messaging/storage";
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const user = requireUser(req, res);
   if (!user) return;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -74,6 +90,11 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     }
     const messages = getMessages(id);
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+    }
+    const messages = getMessages(id);
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       conversationId,
       recipientId,
 =======
@@ -83,6 +104,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     if (!recipientId || !body) return res.status(400).json({ error: 'Missing fields' });
     const { conversation, message } = sendMessage({
       conversationId,
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -108,6 +130,21 @@ if ( {) {
   $2
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+    res.status(405).json({ error: 'Method not allowed' })
+  }
+}
+    res.status(405).json({ error: "Method not allowed" });
+import type { NextApiRequest, NextApiResponse } from 'next';
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  res.status(200).json({ message: 'API endpoint' });
+import { NextApiRequest, NextApiResponse } from 'next';
+import { requireUser } from '../../../utils/auth';
+import { getConversationById, getMessages, sendMessage } from '../../../utils/messaging/storage';
+export default function handler(req, res) {
+  try {
+  const user = requireUser(req, res);
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     const { id } = req.query;
     if (return res.status ($1).json ({ $2 })) {
   $2
@@ -132,6 +169,7 @@ if ( {) {
       link_url,
       attachmentBase64,
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
@@ -152,6 +190,8 @@ if ( {) {
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       body,
       link_url,
       attachmentBase64,
@@ -160,6 +200,7 @@ if ( {) {
 
       context,
     });
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -283,6 +324,20 @@ export default function handler(req, res) {
   }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  } else {
+    res && res.status(405).json({ error: "Method not allowed" });
+  }
+
+}
+
+    res.status (200).json ({ conversation, message });
+  } else {
+    res.status (405).json ({ error: "Method not allowed" });
+  }
+}
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -300,6 +355,7 @@ export default function handler(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   }
 }
@@ -311,3 +367,7 @@ export default function handler(req, res) {
   }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  }
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

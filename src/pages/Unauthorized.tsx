@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const { t } = useTranslation();
 <<<<<<< HEAD
   return (
@@ -35,6 +36,8 @@ import { useTranslation } from "react-i18next";
 import { useTranslation } from "react-i18next",
 export default function Unauthorized() {
   const { t } = useTranslation(),
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <>
       <Header />
@@ -51,6 +54,7 @@ export default function Unauthorized() {
           </p>
           <div className="flex flex-col gap-3">
             <Link
+<<<<<<< HEAD
               href='/'
               className='w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white px-4 py-2 rounded inline-flex items-center justify-center'            >
               {t('errors.return_home')}
@@ -59,11 +63,14 @@ export default function Unauthorized() {
               href='/auth/login'
               className='w-full border border-zion-blue-light text-zion-slate-light hover:bg-zion-blue hover:text-white px-4 py-2 rounded inline-flex items-center justify-center'            >              href="/"
               href="/"
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white px-4 py-2 rounded inline-flex items-center justify-center"
             >
               {t('errors.return_home')}
             </Link>
             <Link
+<<<<<<< HEAD
       </div>
     </>
   )
@@ -71,6 +78,8 @@ export default function Unauthorized() {
   )
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
               className="w-full border border-zion-blue-light text-zion-slate-light hover:bg-zion-blue hover:text-white px-4 py-2 rounded inline-flex items-center justify-center">;
               {t('errors && errors.login_different_account')}
@@ -85,11 +94,6 @@ export default function Unauthorized() {
 import Link from "next/link",;
 import { Button } from "@/components/ui/button",;
 import { Header } from "@/components/Header",;
-
-
-import Link from 'next / link';
-import { Button } from '@/components / ui / button';
-import { Header } from '@/components / Header';
 import { ShieldAlert } from 'lucide-react';
 import { use_translation } from 'react - i18next';
 export default /**
@@ -125,6 +129,7 @@ function Unauthorized() {
               className="w - full bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple text - white px - 4 py - 2 rounded inline - flex items - center justify - center";
             >;
 <<<<<<< HEAD
+<<<<<<< HEAD
               {t ('errors.return_home')}
             </Link>;
             <Link;
@@ -134,12 +139,17 @@ function Unauthorized() {
             >;
               {t ('errors.login_different_account')}
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               {t('errors.login_different_account')}
             </Link>;
           </div>;
         </div>;
       </div>;
+<<<<<<< HEAD
 
 
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

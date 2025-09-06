@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -43,6 +44,8 @@ import {
   GraduationCap
   Globe
   CheckCircle
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   Users,
   MapPin,
   Clock,
@@ -59,10 +62,13 @@ import {
   Globe,
   CheckCircle,;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 } from "lucide-react";
 const jobOpenings = [
   {
@@ -141,14 +147,10 @@ const benefits = [
       "Comprehensive health insurance, mental health support, and wellness programs"
   }
   {
-    icon: DollarSign
-    title: "Competitive Compensation"
-    description:
-      "Competitive salaries, performance bonuses, and equity participation"
-  }
+  },
   {
-    icon: GraduationCap
-    title: "Learning & Development"
+    icon: GraduationCap,
+    title: "Learning & Development",
     description:
       "Professional development budget, conference attendance, and training programs"
   }
@@ -167,12 +169,9 @@ const benefits = [
     icon: Award
     title: "Career Growth"
     description:
-      "Clear career paths, mentorship programs, and advancement opportunities"
-  }
 ];
 const values = [
   {
-    title: "Innovation"
     description:
       "We encourage creative thinking and embrace new technologies to solve complex problems."
   }
@@ -189,9 +188,8 @@ const values = [
   {
     title: "Integrity"
     description:
-      "We conduct business with honesty, transparency, and ethical practices."
-  }
 ];
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -205,6 +203,9 @@ const values = [
 
 import React from 'react';
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -246,6 +247,7 @@ import {;
   GraduationCap,;
   Globe,;
   CheckCircle,;
+<<<<<<< HEAD
 <<<<<<< HEAD
 } from "lucide-react";
 
@@ -414,6 +416,9 @@ interface CareersProps {
 
 const Careers: React.FC<CareersProps> = ({ className }) => {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <MainLayout
       title="Careers - Zion Tech Group"
@@ -421,7 +426,6 @@ const Careers: React.FC<CareersProps> = ({ className }) => {
       keywords="careers, jobs, employment, technology careers, AI jobs, software development">;
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
         {/* Hero Section */}
-
 import Head from 'next/head';
 import Layout from '../components/Layout';
 
@@ -432,6 +436,7 @@ export default function CareersPage() {
         <section className="bg-gradient-to-r from-blue-600 to-purple-600 py-20">
           <div className="container mx-auto px-4">
             <div className="text-center text-white">
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -447,6 +452,8 @@ export default function CareersPage() {
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">;
@@ -659,6 +666,7 @@ function CareersPage() {
                 difference.;
               </p>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -674,6 +682,8 @@ function CareersPage() {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         {/* Why Join Us */}
         <section className="py-20 bg-white">;
           <div className="container mx-auto px-4">;
@@ -681,6 +691,7 @@ function CareersPage() {
               className="text-center mb-16"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -706,6 +717,8 @@ function CareersPage() {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     className="bg-gray-50 p-6 rounded-lg hover:shadow-lg transition-shadow duration-300"
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -720,6 +733,7 @@ function CareersPage() {
                     <p className="text-gray-600">{benefit && benefit.description}</p>;
                   </motion && motion.div>;
                 ))}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -784,10 +798,13 @@ function CareersPage() {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               </div>;
             </div>;
           </div>;
         </section>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -812,6 +829,8 @@ function CareersPage() {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     className="bg-white p-6 rounded-lg shadow-lg"
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -823,6 +842,7 @@ function CareersPage() {
                     <p className="text-gray-600">{value && value.description}</p>;
                   </motion && motion.div>;
                 ))}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -866,14 +886,19 @@ function CareersPage() {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               </div>;
             </div>;
           </div>;
         </section>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         {/* Open Positions */}
         <section id="open - positions" className="py - 20 bg - white">;
           <div className="container mx - auto px - 4">;
@@ -883,6 +908,7 @@ function CareersPage() {
               animate={{ opacity: 1, coordinate_y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
+<<<<<<< HEAD
             >;
               <h2 className="text - 3xl md:text - 4xl font - bold text - gray - 900 mb - 6">;
                 Open Positions;
@@ -900,6 +926,8 @@ function CareersPage() {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     key={job.id}
                     className="bg - white border border - gray - 200 rounded - lg p - 6 hover:shadow - lg transition - shadow duration - 300";
                     initial={{ opacity: 0, coordinate_y: 30 }}
@@ -910,6 +938,7 @@ function CareersPage() {
                     <div className="flex items - center justify - between mb - 4">;
                       <span className="bg - blue - 100 text - blue - 800 px - 3 py - 1 rounded - full text - sm font - semibold">;
                         {job.department}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -928,11 +957,14 @@ function CareersPage() {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                         {job.location}
                       </div>;
                       <div className="flex items - center text - sm text - gray - 600">;
                         <Clock className="w - 4 h - 4 mr - 2" />;
                         {job.experience}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -993,6 +1025,8 @@ function CareersPage() {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                             <li
                               key={idx}
                               className="flex items-center text-sm text-gray-600">;
@@ -1000,6 +1034,7 @@ function CareersPage() {
                               {requirement}
                             </li>;
                           ))}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1017,12 +1052,15 @@ function CareersPage() {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                           <span
                             key={idx}
                             className="bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">;
                             {benefit}
                           </span>;
                         ))}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
                       </div>;
@@ -1033,6 +1071,8 @@ function CareersPage() {
                       </div>;
                     </div>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     <a
                       href={`/careers/${job && job.id}`}
                       className="w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold flex items-center justify-center">;
@@ -1041,6 +1081,7 @@ function CareersPage() {
                     </a>;
                   </motion && motion.div>;
                 ))}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1091,11 +1132,14 @@ function CareersPage() {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               </div>;
             </div>;
           </div>;
         </section>;
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -1106,6 +1150,8 @@ function CareersPage() {
 =======
     </Layout>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold">;
                   Learn More About Us;
                 </a>;
@@ -1127,6 +1173,7 @@ function CareersPage() {
               animate={{ opacity: 1, coordinate_y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
+<<<<<<< HEAD
             >;
               <h2 className="text - 3xl md:text - 4xl font - bold mb - 6">;
                 Don't See Your Dream Job?;
@@ -1183,13 +1230,20 @@ function CareersPage() {
           </div>
         </section>
       </div>
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     </MainLayout>
     </MainLayout>
     </Layout>
+    </MainLayout>;
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
     </MainLayout>;
   );
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 }
+=======
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

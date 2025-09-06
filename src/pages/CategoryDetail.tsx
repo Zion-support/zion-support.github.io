@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 const AUTO_SERVICE_TITLES = [
 =======
 import { GradientHeading } from "@/components/GradientHeading",
@@ -53,6 +54,8 @@ import {NextSeo} from '@/components/NextSeo'
 import {Header} from "@/components/Header"
 import ListingGridSkeleton from '@/components/skeletons/ListingGridSkeleton'
 import {logErrorToProduction} from '@/utils/productionLogger'
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 const AUTO_SERVICE_TITLES = [
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   "AI-Powered Customer Support"
@@ -63,6 +66,7 @@ const AUTO_SERVICE_TITLES = [
   "Machine Learning Model Tuning"
   "IoT Device Integration Service"
   "Blockchain Data Solutions"
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 import { use_router } from 'next / router';
@@ -128,6 +132,8 @@ function generateInnovationListing(index: number): ProductListing {
 ],
 
 function generateInnovationListing(index: number): ProductListing {
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const title = AUTO_SERVICE_TITLES[index % AUTO_SERVICE_TITLES.length] || 'AI Service',
   const price = Math.floor(Math.random() * 9500) + 500, // $500 - $10,000
   const rating = Math.floor(Math.random() * 2) + 4, // 4-5 stars
@@ -242,11 +248,15 @@ export default function CategoryDetail({ slug: slugProp }: CategoryDetailProps =
       description: "Rent or buy specialized hardware, servers, and devices",
       icon: <Code className="w-6 h-6" />
     },
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     'innovation': {
       title: "Innovation"
       description: "Discover cutting-edge solutions and tech breakthroughs"
       icon: <Bot className="w-6 h-6" />
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
       title: "Innovation"
@@ -256,10 +266,21 @@ export default function CategoryDetail({ slug: slugProp }: CategoryDetailProps =
     }
     },
     },
+=======
+
+
+    'ai-models-apis': {
+      title: "AI Models & APIs"
+      description: "Access cutting-edge AI models with easy integration"
+      icon: <Brain className="w-6 h-6" />
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     'content-creation': {
       title: "Content Creation"
       description: "Generate high-quality content for your projects"
       icon: <PenLine className="w-6 h-6" />
+<<<<<<< HEAD
     }
     },
     'data-analysis': {
@@ -297,6 +318,8 @@ export default function CategoryDetail({ slug: slugProp }: CategoryDetailProps =
 
 
     },
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
     'data-analysis': {
@@ -305,16 +328,10 @@ export default function CategoryDetail({ slug: slugProp }: CategoryDetailProps =
       icon: <BarChart className="w-6 h-6" />
 
 
-    },
-
-
     'computer-vision': {
       title: "Computer Vision"
       description: "Image and video processing solutions"
       icon: <Eye className="w-6 h-6" />
-
-
-    },
 
 
     'virtual-assistants': {
@@ -323,18 +340,24 @@ export default function CategoryDetail({ slug: slugProp }: CategoryDetailProps =
       icon: <Bot className="w-6 h-6" />
 
 
+<<<<<<< HEAD
     },
 
 
     },
     },
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     'voice-speech': {
       title: "Voice & Speech"
       description: "Speech recognition and synthesis tools"
       icon: <Mic className="w-6 h-6" />
+<<<<<<< HEAD
     }
     },
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     },
 
     'developer-tools': {
@@ -342,6 +365,7 @@ export default function CategoryDetail({ slug: slugProp }: CategoryDetailProps =
       description: "AI-powered coding assistance and automation",;
       icon: <Code className="w-6 h-6" />;
     };          icon: <Bot className="w-6 h-6" />},
+<<<<<<< HEAD
     'developer-tools': {
 
     },
@@ -360,6 +384,8 @@ export default function CategoryDetail({ slug: slugProp }: CategoryDetailProps =
     : 'Category | Zion Marketplace'
   const seoDescription =
     category.description |'Explore listings in this category.'
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     },
 
     'developer-tools': {
@@ -477,18 +503,27 @@ export default function CategoryDetail({ slug: slugProp }: CategoryDetailProps =
   const seoDescription =
     category.description || 'Explore listings in this category.',
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
+=======
+        setCategory(currentCategory)
+        innovationCounterRef.current = 0
+    : 'Category | Zion Marketplace'
+  const seoDescription = null;
+    category.description || 'Explore listings in this category.'
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
         setCategory(currentCategory)
         innovationCounterRef.current = 0
     : 'Category | Zion Marketplace'
   const seoDescription = null;
     category.description || 'Explore listings in this category.'
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   useEffect(() => {
@@ -598,10 +633,13 @@ export default function CategoryDetail({ slug: slugProp }: CategoryDetailProps =
     category.description || 'Explore listings in this category.'
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <>
       <NextSeo title={seoTitle} description={seoDescription} />
       <Header />
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -624,12 +662,16 @@ export default function CategoryDetail({ slug: slugProp }: CategoryDetailProps =
 
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+        <div className="min-h-screen bg-zion-blue">
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <div className="container mx-auto px-4 py-12">
           <div className="mb-4">
             <Link href="/categories" className="text-zion-cyan hover:text-zion-cyan-light transition-colors inline-flex items-center">
-              ← Back to Categories
+               Back to Categories
             </Link>
           </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -637,6 +679,10 @@ export default function CategoryDetail({ slug: slugProp }: CategoryDetailProps =
 
 =======
           
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <div className="text-center mb-12">
             <div className="flex justify-center mb-6">
               <div className="text-zion-cyan p-4 bg-zion-blue-dark rounded-full">
@@ -648,6 +694,7 @@ export default function CategoryDetail({ slug: slugProp }: CategoryDetailProps =
             </GradientHeading>
             <p className="text-zion-slate-light text-lg max-w-3xl mx-auto">
               {category.description}
+<<<<<<< HEAD
             </p>
           </div>
           {isLoading ? (
@@ -913,6 +960,16 @@ function generateInnovationListing(): any (index: number): ProductListing {;
           ) : (;
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">;
               {listings && listings.map((listing,) => (;
+=======
+                {category.icon}
+              </div>;
+            </div>;
+            <GradientHeading className="text - 4xl md:text - 5xl font - bold mb - 4">;
+              {category.title}
+            </GradientHeading>;
+            <p className="text - zion - slate - light text - lg max - w-3xl mx - auto">;
+              {category.description}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <ProductListingCard
                   key = {listing && listing.id,}
                   listing = {listing,}
@@ -920,15 +977,22 @@ function generateInnovationListing(): any (index: number): ProductListing {;
                   detailBasePath="/marketplace/listing"
                 />;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               ))}
             </div>;
           )}
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -942,6 +1006,9 @@ function generateInnovationListing(): any (index: number): ProductListing {;
   )
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
           </div>;
         </div>;
@@ -949,6 +1016,7 @@ function generateInnovationListing(): any (index: number): ProductListing {;
     </>;
   );
 }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -982,3 +1050,8 @@ function generateInnovationListing(): any (index: number): ProductListing {;
 
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+              ))}
+            </div>
+          )}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

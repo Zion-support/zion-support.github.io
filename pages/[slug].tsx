@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -94,6 +95,8 @@ if (return undefined) {
       try {
         const url = new URL (s.link);
         return url.pathname.replace (/^\/+|\/+$/g, '') === slug.replace (/^\/+|\/+$/g, '');
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from 'react',
 import Head from 'next/head',
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground',
@@ -142,9 +145,38 @@ const service = useMemo(() => {
         const url = new URL(s.link);
         return url.pathname.replace(/^\/+|\/+$/g, '') === slug.replace(/^\/+|\/+$/g, '');
       } catch {
+
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+import React, { useMemo } from 'react';
+import Head from 'next / head';
+import {GetStaticPaths, GetStaticProps} from 'next';
+
         return false;
       }
     });
+<<<<<<< HEAD
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 function getAllServices(): any (): Service[] {;
@@ -166,6 +198,15 @@ function getAllServices(): any (): Service[] {;
 import React, { useMemo } from 'react';
 import Head from 'next/head';
 
+=======
+    // Check condition
+if (return by_link) {
+  $2
+}
+  }, [slug]);
+import React, { useMemo } from 'react';
+import Head from 'next/head';
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 import Button from '../components/ui/Button';
 import Card from '../components/ui/Card';
@@ -182,6 +223,10 @@ import { realQ4Services2025, real2025Q4Additions } from '../data/real-2025-q4-ad
 import { real2026Q1Additions } from '../data/real-2026-q1-additions';
 import fs from 'fs';
 import path from 'path';
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 type Service = typeof enhancedRealMicroSaasServices[number];
 function getAllServices(): Service[] {
   return enhancedRealMicroSaasServices
@@ -190,11 +235,18 @@ function getAllServices(): Service[] {
     .concat(curatedMarketServices as Service[])
     .concat(new2025Services as unknown as Service[])
 		.concat(marketValidatedServices as unknown as Service[]);
+<<<<<<< HEAD
 		.concat(moreRealServices2025 as unknown as Service[])
 		.concat(verified2025Additions as unknown as Service[])
 		.concat(realServicesQ12025 as unknown as Service[])
 		.concat(realEnterpriseServices2025 as unknown as Service[])
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+		.concat(moreRealServices2025 as unknown as Service[]);
+		.concat(verified2025Additions as unknown as Service[]);
+		.concat(realServicesQ12025 as unknown as Service[]);
+		.concat(realEnterpriseServices2025 as unknown as Service[]);
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 		.concat(verifiedRealServices2025Batch2 as unknown as Service[]);
 		.concat(realMarketAugmentations2025 as unknown as Service[]);
 		.concat(additionalLiveServices2025 as unknown as Service[]);
@@ -204,12 +256,16 @@ function getAllServices(): Service[] {
 		.concat(realServicesQ32025 as unknown as Service[]);
 		.concat(realQ4Services2025 as unknown as Service[]);
 		.concat(real2025Q4Additions as unknown as Service[]);
+<<<<<<< HEAD
 		.concat(realMarketServicesExtended as unknown as Service[]);
 <<<<<<< HEAD
 		.concat(real2026Q1Additions as unknown as Service[]);
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 	const services = getAllServices(),
 	const slugs = new Set<string>(),
@@ -223,6 +279,7 @@ export async function getStaticProps() {
 	const incomingSlug = (params?.slug |'').replace(/^\/+|\/+$/g, '')
 	let service: Service | undefined = services.find((s) => toSlug(s.id |'') === incomingSlug |toSlug(s.name |'') === incomingSlug)
 	if (!service) {return { notFound: true }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 function toSlug(): any (value: string): string {;
@@ -257,10 +314,13 @@ export async function getStaticProps(): any ({ params }: { params: { slug: strin
 	if (!service) {;
 		return { notFound: true }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 	}
 	return {props: { service }
 	}
 
+<<<<<<< HEAD
 
 =======
 	return enhancedRealMicroSaasServices
@@ -436,6 +496,8 @@ export async function getStaticProps() {
 	}
 export default function RootServiceDetailPage({ service }: { service: Service }) {const canonical = `https://ziontechgroup.com/${toSlug(service.id |service.name |'')}`,	return (
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ;
 export default function RootServiceDetailPage({ service }: { service: Service }) {;
 	const canonical = `https://ziontechgroup.com/${toSlug(service.id || service.name || '')}`,	return (
@@ -481,7 +543,6 @@ function getExistingRootPageSlugs(): Set<string> {
 			if (m) {
 				const base = m[1];
 				if (base !== 'index' && base !== '404' && base !== '500' && base !== '[slug]') {
-export async function getStaticPaths() {
 					slugs.add(base);
 				  } catch (error) {
     console.error("Error:", error);
@@ -590,11 +651,6 @@ export async function getStaticPaths(req, res) {
 	return {
 		paths: filtered.map((slug) => ({ params: { slug } })),
 		fallback: false
-		return { notFound: true }
-	}
-	return {
-		props: { service }
-	}
 	};
   } catch (error) {
     console.error("Error:", error);
@@ -661,17 +717,24 @@ export default function RootServiceDetailPage({ service }: { service: Service })
 	const canonical = `https://ziontechgroup.com/${toSlug(service.id || service.name || '')}`;
 	return (
 
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 		<UltraFuturisticBackground variant="quantum" intensity="high">
 			<Head>
 				<title>{service.name} | Zion Tech Group</title>
 				<meta name="description" content={service.tagline |service.description} />
 				<link rel="canonical" href={canonical} />
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 export default function RootServiceDetailPage(): any ({ service }: { service: Service }) {;
@@ -682,16 +745,20 @@ export default function RootServiceDetailPage(): any ({ service }: { service: Se
 				<meta name="description" content={service && service.tagline || service && service.description} />;
 				<link rel="canonical" href={canonical} />;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 				<script
 					type="application/ld+json"
 					dangerouslySetInnerHTML={{
 						__html: JSON && JSON.stringify(
 							{
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -711,6 +778,8 @@ export default function RootServiceDetailPage(): any ({ service }: { service: Se
 									"@type": "Organization"
 									name: "Zion Tech Group"
 									url: "https://ziontechgroup.com"
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 								},
 								offers: {
 									"@type": "Offer",
@@ -834,11 +903,15 @@ export default function RootServiceDetailPage(): any ({ service }: { service: Se
 							<h3 className="text-white text-lg font-semibold mb-4">Key Features</h3>
 							<ul className="space-y-2 text-gray-300">
 								{(service.features || []).slice(0, 12).map((f: string) => (
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 									<li key={f} className="flex items-start gap-2">
 										<Check className="w-4 h-4 mt-0.5 text-emerald-400" />
 										<span>{f}</span>
 									</li>
+<<<<<<< HEAD
 								))}
 							</ul>
 						</Card>
@@ -861,6 +934,8 @@ export default function RootServiceDetailPage(): any ({ service }: { service: Se
 								))}
 								{(service.integrations || []).slice(0, 12).map((i: string) => (
 									<span key={i} className="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-gray-200">{i}</span>
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 								))}
 								))  } catch (error) {
     console.error("Error:", error);
@@ -875,7 +950,10 @@ export default function RootServiceDetailPage(): any ({ service }: { service: Se
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 							</div>
 						</Card>
 					</div>
@@ -887,16 +965,20 @@ export default function RootServiceDetailPage(): any ({ service }: { service: Se
 								<a href="/contact" className="inline-flex items-center gap-2 text-cyan-300 hover:text-cyan-200">
 									<Phone className="w-4 h-4" /> +1 302 464 0950
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 								</a>
 =======
 =======
 								</a>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 								</a>
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
@@ -904,14 +986,19 @@ export default function RootServiceDetailPage(): any ({ service }: { service: Se
 								</Link>
 								</a>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 								<a href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center gap-2 text-cyan-300 hover:text-cyan-200">
 									<Mail className="w-4 h-4" /> kleber@ziontechgroup.com
 								</a>
 								<div className="flex items-start gap-2 text-gray-300">
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 									<MapPin className="w-4 h-4 mt-1" /> 364 E Main St STE 1008 Middletown DE 19709
 								</div>
 							</div>
@@ -919,6 +1006,7 @@ export default function RootServiceDetailPage(): any ({ service }: { service: Se
 								<Button href="/contact" className="w-full">Talk to Sales</Button>
 							</div>
 						</Card>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -939,6 +1027,8 @@ export default function RootServiceDetailPage(): any ({ service }: { service: Se
 							<a href={service.link || canonical} className="inline-flex items-center gap-2 text-cyan-300 hover:text-cyan-200">
 							<a href={service.link || canonical} className="inline-flex items-center gap-2 text-cyan-300 hover:text-cyan-200">
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 								Open canonical page <ExternalLink className="w-4 h-4" />
 							</a>
 						</Card>
@@ -946,6 +1036,7 @@ export default function RootServiceDetailPage(): any ({ service }: { service: Se
 				</div>
 			</div>
 		</UltraFuturisticBackground>
+<<<<<<< HEAD
 
 
 								"@context": "https://schema && schema.org",
@@ -1067,6 +1158,8 @@ export default function RootServiceDetailPage(): any ({ service }: { service: Se
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ;
 function getAllServices (): Service[] {
   return enhancedRealMicroSaasServices;
@@ -1154,6 +1247,7 @@ if ( {) {
 }
   return { not_found: true }
   }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 }
@@ -1304,3 +1398,5 @@ const canonical = `https://ziontechgroup.com/${to_slug (service.id || service.na
   }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

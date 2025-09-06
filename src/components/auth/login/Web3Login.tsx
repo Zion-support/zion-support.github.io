@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -20,6 +21,8 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { useAuth } from "@/hooks/useAuth";
 import { useWallet as useAppWallet } from "../../../context/WalletContext.tsx", // Renamed to avoid conflict if useWallet hook is defined locally
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { useAuth } from "@/hooks/useAuth";
@@ -28,6 +31,7 @@ import { Wallet } from 'lucide-react'import { toast } from "sonner";
 import {logErrorToProduction} from '@/utils/productionLogger';
 export function Web3Login() {;
 
+<<<<<<< HEAD
 import { useState } from "react",
 import { Button } from "@/components/ui/button",
 import { useAuth } from "@/hooks/useAuth",
@@ -40,6 +44,8 @@ export function Web3Login() {
   const { loginWithWeb3 } = useAuth(),
   const { isWalletSystemAvailable } = useAppWallet(),
   const [isLoading, setIsLoading] = useState(false),
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   const handleWeb3Login = async () => {
@@ -48,16 +54,27 @@ export function Web3Login() {
         description: "The Web3 login system is currently not available. Please ensure your Reown Project ID is configured."})
       return
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+  const handleWeb3Login = async () => {
+    if (!isWalletSystemAvailable) {
+      toast("Web3 login unavailable", {
+        description: "The Web3 login system is currently not available. Please ensure your Reown Project ID is configured."})
+      return
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const handleWeb3Login = async () => {
     if (!isWalletSystemAvailable) {
       toast("Web3 login unavailable", {
         description: "The Web3 login system is currently not available. Please ensure your Reown Project ID is configured."}),
       return;
+<<<<<<< HEAD
     try {
       setIsLoading(true)
       // Check if Ethereum provider (e.g., MetaMask) is available
       const ethereum = (window as any).ethereum
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     }
     try {
       setIsLoading(true)
@@ -67,6 +84,11 @@ export function Web3Login() {
       
       // Check if Ethereum provider (e.g., MetaMask) is available
       const ethereum = (window as any).ethereum,
+<<<<<<< HEAD
+=======
+    }
+    try {
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       if (!ethereum) {
         toast("Web3 wallet not found", {
           description: "Please install MetaMask or another compatible wallet."})
@@ -75,6 +97,7 @@ export function Web3Login() {
         toast("Web3 wallet not found", {
           description: "Please install MetaMask or another compatible wallet."}),
         return;
+<<<<<<< HEAD
       await loginWithWeb3(), // This is from useAuth, assumed to be a separate flow
       }
 
@@ -88,10 +111,14 @@ export function Web3Login() {
       await loginWithWeb3(), // This is from useAuth, assumed to be a separate flow
       
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+      }
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     } catch (error: any) {
       toast("Login failed", {
         description: error.message |"Failed to connect wallet. Please try again."})
       logErrorToProduction('Web3 login error:', { data: error })
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
   }
@@ -148,6 +175,8 @@ if ( {) {
     } finally {
       setIsLoading (false);
     }
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   const { loginWithWeb3 } = useAuth();
@@ -217,25 +246,16 @@ export function Web3Login() {;
         description: "The Web3 login system is currently not available. Please ensure your Reown Project ID is configured."}),;
       return;
     }
-;
-    try {;
-      setIsLoading(true),;
-      // Check if Ethereum provider (e.g., MetaMask) is available;
-      const ethereum = (window as any).ethereum,;
       if (!ethereum) {;
         toast("Web3 wallet not found", {;
           description: "Please install MetaMask or another compatible wallet."}),;
         return;
       }
-;
-      await loginWithWeb3(), // This is from useAuth, assumed to be a separate flow;
-    } catch (error: any) {;
-      toast("Login failed", {;
-        description: error.message || "Failed to connect wallet. Please try again."}),;
       logErrorToProduction('Web3 login error:', { data: error });
     } finally {;
       setIsLoading(false);
     }
+<<<<<<< HEAD
   },;
   const buttonDisabled = isLoading || !isWalletSystemAvailable,;
   const buttonTitle = !isWalletSystemAvailable;
@@ -297,3 +317,5 @@ export function Web3Login() {;
 
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

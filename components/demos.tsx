@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 import React, { useState } from 'react';
@@ -54,6 +55,8 @@ import {
   Play,;
 } from 'lucide-react';import { Mail, Lock, Link, FileText, CheckCircle, Zap, BarChart3, Code, Play } from 'lucide-react';
 export default function DemosPage() {;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 } from 'lucide-react';
 
 import {
@@ -67,7 +70,15 @@ import {
   Code
   Play;
 } from 'lucide-react';import { Mail, Lock, Link, FileText, CheckCircle, Zap, BarChart3, Code, Play } from 'lucide-react';
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export default function DemosPage() {
   const [activeDemo, setActiveDemo] = useState<string>('email-validator');
   const demos = [
@@ -136,6 +147,7 @@ export default function DemosPage() {
   ];
   const activeDemoData = demos.find(demo => demo.id === activeDemo);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -165,17 +177,18 @@ class ErrorBoundary extends React.Component {
 import React, { useState } from 'react';
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 export default function DemosPage() {;
   const [activeDemo, setActiveDemo] = useState<string>('email-validator');
-
-
 
     <>;
       <Head>;
         <title>;
           Interactive Demos | Zion Tech Group - Test Our Micro SaaS Services;
         </title>;
+<<<<<<< HEAD
 
         />;
         <meta name='twitter:card' content='summary_large_image' />;
@@ -266,19 +279,25 @@ export default function DemosPage() {;
             </p>
             <div className='flex flex-col sm:flex-row gap-6 justify-center items-center mb-20'>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <Button
                 href='#demos'
                 size='lg'
                 className='animate-scale-in shadow-2xl shadow-blue-500/25 hover:shadow-blue-500/40'
+<<<<<<< HEAD
                 style={{ animationDelay: '0 && 0.2s' }}>;
                 Start Testing;
                 <Play className='w-5 h-5 ml-2' />;
               </Button>;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <Button
                 href='/micro-saas'
                 variant='outline'
                 size='lg'
                 className='animate-scale-in border-white/20 hover:border-white/40 hover:bg-white/5'
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -349,19 +368,25 @@ export default function DemosPage() {;
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-20">
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <Button
                 href="#demos"
                 size="lg"
                 className="animate-scale-in shadow-2xl shadow-blue-500/25 hover:shadow-blue-500/40"
+<<<<<<< HEAD
                 style={{ animationDelay: '0 && 0.2s' }}>;
                 Start Testing;
                 <Play className="w-5 h-5 ml-2" />;
               </Button>;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <Button
                 href="/micro-saas"
                 variant="outline"
                 size="lg"
                 className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white/5"
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -717,30 +742,30 @@ export default function DemosPage() {;
             </h2>;
             <p className='text - lg text - gray - 400 max - w-2xl mx - auto'>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               Each demo showcases a different micro SaaS service with full;
               functionality;
             </p>;
           </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <button
-
-
-
-
-
-                key={demo.id}
-                onClick={() => setActiveDemo(demo.id)}
-                className={`p-4 rounded-lg border transition-all duration-300 text-left group ${
-                  activeDemo === demo.id
-                    ? 'border-blue-500 bg-blue-500/10'
-                    : 'border-gray-700 bg-gray-800/50 hover:border-gray-600 hover:bg-gray-800/80'
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+                key={demo && demo.id}
+                onClick={() => setActiveDemo(demo && demo.id)}
+                className={`p-4 rounded-lg border transition-all duration-300 text-left group ${;
+                  activeDemo === demo && demo.id;
+                    ? 'border-blue-500 bg-blue-500/10';
+                    : 'border-gray-700 bg-gray-800/50 hover:border-gray-600 hover:bg-gray-800/80';
                 }`}
               >;
                 <div
+<<<<<<< HEAD
 
 =======
               <button
@@ -762,6 +787,32 @@ export default function DemosPage() {;
 
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+                  className={`w-12 h-12 rounded-lg bg-gradient-to-br ${demo && demo.color} flex items-center justify-center mb-3 group-hover:scale-110 transition-transform duration-300`}>;
+                  {demo && demo.icon}
+                </div>;
+                <h3 className='font-semibold text-white mb-2 group-hover:text-blue-400 transition-colors duration-300'>;
+                  {demo && demo.title}
+                </h3>;
+                <p className='text-sm text-gray-400 leading-relaxed'>;
+                  {demo && demo.description}
+                </p>;
+                {activeDemo === demo && demo.id && (;
+                  <div className='mt-3 flex items-center text-blue-400 text-sm'>;
+                    <CheckCircle className='w-4 h-4 mr-2' />                    Active Demo                  {demo && demo.icon}
+                </div>;
+                <h3 className="font-semibold text-white mb-2 group-hover:text-blue-400 transition-colors duration-300">;
+                  {demo && demo.title}
+                </h3>;
+                <p className="text-sm text-gray-400 leading-relaxed">;
+                  {demo && demo.description}
+                </p>;
+                {activeDemo === demo && demo.id && (;
+                  <div className="mt-3 flex items-center text-blue-400 text-sm">;
+                    <CheckCircle className="w-4 h-4 mr-2" />;
+                    Active Demo;
+                  </div>;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 key={demo.id}
                 on_click={() => setActiveDemo (demo.id)}
                 className={`p - 4 rounded - lg border transition - all duration - 300 text - left group ${
@@ -769,6 +820,7 @@ export default function DemosPage() {;
                     ? 'border - blue - 500 bg - blue - 500 / 10';
                     : 'border - gray - 700 bg - gray - 800 / 50 hover:border - gray - 600 hover:bg - gray - 800 / 80';
                 }`}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
               >;
@@ -816,6 +868,8 @@ export default function DemosPage() {;
 
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   {demo.icon}
                 </div>
                 <h3 className='font-semibold text-white mb-2 group-hover:text-blue-400 transition-colors duration-300'>
@@ -825,18 +879,15 @@ export default function DemosPage() {;
                   {demo.description}
                 </p>
                 {activeDemo === demo.id && (
-                  <div className='mt-3 flex items-center text-blue-400 text-sm'>
-
-                    <CheckCircle className='w-4 h-4 mr-2' />                    Active Demo
-
-                    Active Demo
-
-
                   </div>
                 )}
               </button>;
             ))}
+          </div>
+        </div>
+      </section>
 
+<<<<<<< HEAD
           </div>;
         </div>;
       </section>;
@@ -848,6 +899,8 @@ export default function DemosPage() {;
         </div>;
       </section>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {/* Active Demo */}
       <section className='py-16 bg-black relative overflow-hidden'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>;
@@ -858,21 +911,21 @@ export default function DemosPage() {;
             </div>;
             <h2 className='text-3xl sm:text-4xl font-bold text-white mb-4'>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {/* Active Demo */}
       <section className='py-16 bg-black relative overflow-hidden'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
           <div className='text-center mb-12'>
             <div className='inline-flex items-center px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-medium mb-4'>
               <Play className='w-4 h-4 mr-2' />
-
-
-
               Live Demo
             </div>
             <h2 className='text-3xl sm:text-4xl font-bold text-white mb-4'>
@@ -881,11 +934,14 @@ export default function DemosPage() {;
             <p className='text-lg text-gray-400 max-w-2xl mx-auto'>              {activeDemoData?.description}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
               {activeDemoData?.title}
             </h2>;
             <p className='text-lg text-gray-400 max-w-2xl mx-auto'>              {activeDemoData?.description}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             </p>;
           </div>;
 
@@ -896,13 +952,18 @@ export default function DemosPage() {;
             </div>;
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               {activeDemoData?.title}
             </h2>;
             <p className="text-lg text-gray-400 max-w-2xl mx-auto">;
               {activeDemoData?.description}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -996,10 +1057,13 @@ export default function DemosPage() {;
             </div>;
             <h2 className="text - 3xl sm:text - 4xl font - bold text - white mb - 4">;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               {activeDemoData?.title}
             </h2>;
             <p className="text - lg text - gray - 400 max - w-2xl mx - auto">;
               {activeDemoData?.description}
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -1027,6 +1091,11 @@ export default function DemosPage() {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
+=======
+        </div>
+      </section>
+      {/* Features */}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <section className='py-24 bg-gray-900 relative overflow-hidden'>
         <div className='absolute inset-0 bg-[linear-gradient(rgba(59,130,246,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(59,130,246,0.05)_1px,transparent_1px)] bg-[size:50px_50px] opacity-20' />
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
@@ -1077,7 +1146,11 @@ export default function DemosPage() {;
               <div className='w-16 h-16 mx-auto mb-6 rounded-2xl bg-orange-500/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-300'>
                 <BarChart3 className='w-8 h-8 text-orange-400' />              <p className="text-gray-400 leading-relaxed">
 
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 See exact request/response formats for easy integration
               </p>
             </Card>
@@ -1160,6 +1233,7 @@ export default function DemosPage() {;
               </p>
             </Card>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -1172,6 +1246,8 @@ export default function DemosPage() {;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <h3 className="text-xl font-bold mb-4 text-white group-hover:text-cyan-400 transition-colors duration-300">
                 Instant Testing
               </h3>
@@ -1179,6 +1255,7 @@ export default function DemosPage() {;
                 No signup required - start testing immediately
               </p>
             </Card>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -1192,6 +1269,8 @@ export default function DemosPage() {;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <h3 className="text-xl font-bold mb-4 text-white group-hover:text-pink-400 transition-colors duration-300">
                 Production Ready
               </h3>
@@ -1203,12 +1282,15 @@ export default function DemosPage() {;
         </div>
       </section>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
             </p>;
 =======
             </p>;
 </p>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           </div>;
 
           <div className='animate-fade-in'>{activeDemoData?.component}</div>          <div className="animate-fade-in">;
@@ -1247,6 +1329,7 @@ export default function DemosPage() {;
             </p>;
           </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -1263,10 +1346,13 @@ export default function DemosPage() {;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 Test actual API endpoints with real data processing and response;
                 times;
               </p>;
             </Card>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1283,10 +1369,13 @@ export default function DemosPage() {;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 Experience complete service capabilities, not just mock;
                 responses;
               </p>;
             </Card>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1363,6 +1452,8 @@ export default function DemosPage() {;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 Same infrastructure that powers our production services;
               </p>;
             </Card>;
@@ -1370,14 +1461,18 @@ export default function DemosPage() {;
         </div>;
       </section>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               Get Started;
             </Button>;
           </div>;
         </div>;
       </section>;
+<<<<<<< HEAD
 
 
 =======
@@ -1470,8 +1565,13 @@ export default function DemosPage() {;
     </>);
 );
   );
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 
   );
 }
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

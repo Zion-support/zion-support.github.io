@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import { define_config } from 'cypress;
@@ -9,6 +10,8 @@ import { define_config } from 'cypress;
 =======
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ;
 export default define_config ({,
   e2e: {,
@@ -36,6 +39,7 @@ import { defineConfig } from 'cypress'; export default defineConfig({ e2e: { bas
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 
+<<<<<<< HEAD
 import { defineConfig } from 'cypress;
 import { defineConfig } from 'cypress;
 ;
@@ -81,6 +85,8 @@ ursor/fix-lint-push-and-merge-to-main-ae4e
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   base_url: 'http://localhost:3000',
 support_file: cypress / support / e2e.ts',
 import { define_config } from 'cypress'; export default define_config ({ e2e: { base_url: 'http: support_file: 'cypress / support / e2e.ts', spec_pattern: 'cypress / e2e*.cy.{js, jsx, ts, tsx}', viewport_width: 1280, viewport_height: 720, video: false, screenshotOnRunFailure: true, defaultCommandTimeout: 10000, request_timeout: 10000, response_timeout: 10000, setupNodeEvents () { }, }, component: { dev_server: { framework: 'react', bundler: 'vite', }, }, });
@@ -101,6 +107,7 @@ import { define_config } from 'cypress'; export default define_config ({ e2e: { 
       run_mode: 2,
       open_mode: 0;
     },
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -118,10 +125,13 @@ import { define_config } from 'cypress'; export default define_config ({ e2e: { 
 
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     setupNodeEvents(on, config) {,
       // implement node event listeners here
     }
   }
+<<<<<<< HEAD
 
 
 
@@ -166,6 +176,8 @@ ursor/fix-lint-push-and-merge-to-main-ae4e
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 origin/automation-improvements-final
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export default defineConfig({
   e2e: {
   baseUrl: 'http://localhost:3000'
@@ -189,6 +201,7 @@ import { defineConfig } from 'cypress'; export default defineConfig({ e2e: { bas
     }
   }
 })
+<<<<<<< HEAD
 
 <<<<<<< HEAD
     setupNodeEvents (on, config) {,
@@ -206,3 +219,5 @@ import { defineConfig } from 'cypress'; export default defineConfig({ e2e: { bas
 
 origin/main
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -1,15 +1,14 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
-=======
-import React,{ useState,useRef,useEffect } from\';react\' import { Link } from\';\';react-router-dom\' import { User,Settings,LogOut,ChevronDown,Bell,ShoppingCart } from\';\';lucide-react\' import { useAuth } from \'../../hooks/useAuth\' export const UserMenu = () => { const [isOpen,setIsOpen] = useState(false) const menuRef = useRef(null) const { user,logout } = useAuth() useEffect(() => { const handleClickOutside = (event) => { if (menuRef.current && !menuRef.current.contains(event.target)) { setIsOpen(false)} } document.addEventListener(\'';mousedown\',handleClickOutside) \"return\": () => document.removeEventListener(\'';mousedown\',handleClickOutside)},[]) const handleLogout = async () => { try { await logout() setIsOpen(false)} catch (error) {\'';\'';
-const React,{ useState,useRef,useEffect } from";react" import { Link } from";";react-router-dom" import { User,Settings,LogOut,ChevronDown,Bell,ShoppingCart } from";";lucide-react" import { useAuth } from "././hooks/useAuth" export const UserMenu = () => { const [isOpen,setIsOpen] = useState(false) const menuRef = useRef(null) const { user,logout } = useAuth() useEffect(() => { const handleClickOutside = (event) => { if (menuRef.current && !menuRef.current.contains(event.target)) { setIsOpen(false)} } document.addEventListener("";mousedown",handleClickOutside) return: () => document.removeEventListener("";mousedown",handleClickOutside)},[]) const handleLogout = async () => { try { await logout() setIsOpen(false)} catch (error) {"";"";'"'"
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4:temp_exclude/src.disabled/components/header/UserMenu.js.jsx
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import _React,{ useState,useRef,useEffect } from';react' import { Link } from';';react-router-dom' import { User,Settings,LogOut,ChevronDown,Bell,ShoppingCart } from';';lucide-react' import { useAuth } from '../../hooks/useAuth' export const UserMenu = () => { const [isOpen,setIsOpen] = useState(false) const menuRef = useRef(null) const { user,logout } = useAuth() useEffect(() => { const handleClickOutside = (event) => { if (menuRef.current && !menuRef.current.contains(event.target)) { setIsOpen(false)} } document.addEventListener('';mousedown',handleClickOutside) "return": () => document.removeEventListener('';mousedown',handleClickOutside)},[]) const handleLogout = async () => { try { await logout() setIsOpen(false)} catch (error) {'';'';
+<<<<<<< HEAD
 =======
 =======
 =======
@@ -24,12 +23,17 @@ const React,{ useState,useRef,useEffect } from";react" import { Link } from";";r
 :temp_exclude/src.disabled/components/header/UserMenu.js.jsx
 import _React,{ useState,useRef,useEffect } from';react' import { Link } from';';react-router-dom' import { User,Settings,LogOut,ChevronDown,Bell,ShoppingCart } from';';lucide-react' import { useAuth } from '../../hooks/useAuth' export const UserMenu = () => { const [isOpen,setIsOpen] = useState(false) const menuRef = useRef(null) const { user,logout } = useAuth() useEffect(() => { const handleClickOutside = (event) => { if (menuRef.current && !menuRef.current.contains(event.target)) { setIsOpen(false)} } document.addEventListener('';mousedown',handleClickOutside) "return": () => document.removeEventListener('';mousedown',handleClickOutside)},[]) const handleLogout = async () => { try { await logout() setIsOpen(false)} catch (error) {'';'';
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React,{ useState,useRef,useEffect } from\';react\' import { Link } from\';\';react-router-dom\' import { User,Settings,LogOut,ChevronDown,Bell,ShoppingCart } from\';\';lucide-react\' import { useAuth } from \'../../hooks/useAuth\' export const UserMenu = () => { const [isOpen,setIsOpen] = useState(false) const menuRef = useRef(null) const { user,logout } = useAuth() useEffect(() => { const handleClickOutside = (event) => { if (menuRef && menuRef.current && !menuRef && menuRef.current.contains(event && event.target)) { setIsOpen(false)} } document ;mousedown\',handleClickOutside) \"return\": () => document && document.removeEventListener(\'';mousedown\',handleClickOutside)},[]) const handleLogout = async () => { try { await logout() setIsOpen(false)} catch (error) {\'';\'';
 const React,{ useState,useRef,useEffect } from";react" import { Link } from";";react-router-dom" import { User,Settings,LogOut,ChevronDown,Bell,ShoppingCart } from";";lucide-react" import { useAuth } from "././hooks/useAuth" export const UserMenu = () => { const [isOpen,setIsOpen] = useState(false) const menuRef = useRef(null) const { user,logout } = useAuth() useEffect(() => { const handleClickOutside = (event) => { if (menuRef && menuRef.current && !menuRef && menuRef.current.contains(event && event.target)) { setIsOpen(false)} } document ;mousedown",handleClickOutside) return: () => document && document.removeEventListener("";mousedown",handleClickOutside)},[]) const handleLogout = async () => { try { await logout() setIsOpen(false)} catch (error) {"";"";'"'"
-
 import _React,{ useState,useRef,useEffect } from';react' import { Link } from';';react-router-dom' import { User,Settings,LogOut,ChevronDown,Bell,ShoppingCart } from';';lucide-react' import { useAuth } from '../../hooks/useAuth' export const UserMenu = () => { const [isOpen,setIsOpen] = useState(false) const menuRef = useRef(null) const { user,logout } = useAuth() useEffect(() => { const handleClickOutside = (event) => { if (menuRef && menuRef.current && !menuRef && menuRef.current.contains(event && event.target)) { setIsOpen(false)} } document ;mousedown',handleClickOutside) "return": () => document && document.removeEventListener('';mousedown',handleClickOutside)},[]) const handleLogout = async () => { try { await logout() setIsOpen(false)} catch (error) {'';'';
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 import _React,{ useState,useRef,useEffect } from';react' import { Link } from';';react-router-dom' import { User,Settings,LogOut,ChevronDown,Bell,ShoppingCart } from';';lucide-react' import { useAuth } from '../../hooks/useAuth' export const UserMenu = () => { const [isOpen,setIsOpen] = useState(false) const menuRef = useRef(null) const { user,logout } = useAuth() useEffect(() => { const handleClickOutside = (event) => { if (menuRef.current && !menuRef.current.contains(event.target)) { setIsOpen(false)} } document.addEventListener('';mousedown',handleClickOutside) "return": () => document.removeEventListener('';mousedown',handleClickOutside)},[]) const handleLogout = async () => { try { await logout() setIsOpen(false)} catch (error) {'';'';
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+import _React,{ useState,useRef,useEffect } from';react' import { Link } from';';react-router-dom' import { User,Settings,LogOut,ChevronDown,Bell,ShoppingCart } from';';lucide-react' import { useAuth } from '../../hooks/useAuth' export const UserMenu = () => { const [isOpen,setIsOpen] = useState(false) const menuRef = useRef(null) const { user,logout } = useAuth() useEffect(() => { const handleClickOutside = (event) => { if (menuRef && menuRef.current && !menuRef && menuRef.current.contains(event && event.target)) { setIsOpen(false)} } document ;mousedown',handleClickOutside) "return": () => document && document.removeEventListener('';mousedown',handleClickOutside)},[]) const handleLogout = async () => { try { await logout() setIsOpen(false)} catch (error) {'';'';
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

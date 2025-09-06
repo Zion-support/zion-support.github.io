@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 import type { NextPage } from 'next';
@@ -17,11 +18,14 @@ const ResumeBuilder: NextPage = () => {
   const [skillsText, setSkillsText] = useState('')
   const operatorToken = process.env.NEXT_PUBLIC_OPERATOR_TOKEN
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const generateSummaryPrompt = useMemo(() => (
     `Create a professional resume summary for a ${role.toLowerCase()} with ${experienceYears} years of experience in ${skills}. Tone: ${tone}.\n\nReturn markdown only.`
   ), [role, experienceYears, skills, tone])
   const improveSectionPrompt = (sectionName: string, content: string) => (
     `Improve the following resume ${sectionName} to be professional, concise, and results-focused. Keep markdown formatting.\n\n${content}`
+<<<<<<< HEAD
 
 <<<<<<< HEAD
   );
@@ -51,17 +55,22 @@ const ResumeBuilder: NextPage = () => {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <div>
       <Head>
         <title>Resume Builder - Zion AI Marketplace</title>
       </Head>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       <h1 className="text-2xl font-semibold mb-4">Resume Builder</h1>
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <section className="mb-8">
         <h2 className="text-lg font-semibold mb-2">Profile</h2>
         <div className="grid gap-3 sm:grid-cols-2">
@@ -80,10 +89,13 @@ const ResumeBuilder: NextPage = () => {
         </div>
       </section>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <section className="mb-8">
         <div className="flex items-center justify-between mb-2">
           <h2 className="text-lg font-semibold">Summary</h2>
@@ -91,6 +103,7 @@ const ResumeBuilder: NextPage = () => {
             <AIAssistant
               buttonLabel="Generate with AI"
               title="Generate Resume Summary"
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -99,6 +112,8 @@ const ResumeBuilder: NextPage = () => {
               onAccept={setSummary}
               authorizationToken={operatorToken}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               defaultPrompt={generateSummaryPrompt  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -115,15 +130,19 @@ const ResumeBuilder: NextPage = () => {
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             />
             <AIAssistant
               buttonLabel="Improve with AI"
               title="Improve Resume Summary"
+<<<<<<< HEAD
 <<<<<<< HEAD
 
               defaultPrompt={improveSectionPrompt('summary', summary || 'No content provided. Generate a summary based on role, years, and skills.')}
@@ -150,6 +169,12 @@ const ResumeBuilder: NextPage = () => {
               onAccept={setSummary}
               authorizationToken={operatorToken}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+              defaultPrompt={improveSectionPrompt('summary', summary || 'No content provided. Generate a summary based on role, years, and skills.')}
+              onAccept={setSummary}
+              authorizationToken={operatorToken}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               defaultPrompt={improveSectionPrompt('summary', summary || 'No content provided. Generate a summary based on role, years, and skills.')  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -165,6 +190,7 @@ const ResumeBuilder: NextPage = () => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -175,6 +201,8 @@ const ResumeBuilder: NextPage = () => {
           </div>
         </div>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             />
           </div>
         </div>
@@ -186,6 +214,7 @@ const ResumeBuilder: NextPage = () => {
           <AIAssistant
             buttonLabel="Improve with AI"
             title="Improve Experience"
+<<<<<<< HEAD
 <<<<<<< HEAD
 
             defaultPrompt={improveSectionPrompt('experience section', experience || 'Add experience details to improve.')}
@@ -212,6 +241,12 @@ const ResumeBuilder: NextPage = () => {
             onAccept={setExperience}
             authorizationToken={operatorToken}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+            defaultPrompt={improveSectionPrompt('experience section', experience || 'Add experience details to improve.')}
+            onAccept={setExperience}
+            authorizationToken={operatorToken}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             defaultPrompt={improveSectionPrompt('experience section', experience || 'Add experience details to improve.')  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -227,6 +262,7 @@ const ResumeBuilder: NextPage = () => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -236,6 +272,8 @@ const ResumeBuilder: NextPage = () => {
           />
         </div>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           />
         </div>
         <textarea value={experience} onChange={e => setExperience(e.target.value)} rows={10} className="w-full rounded-md border p-3" />
@@ -246,6 +284,7 @@ const ResumeBuilder: NextPage = () => {
           <AIAssistant
             buttonLabel="Improve with AI"
             title="Improve Skills"
+<<<<<<< HEAD
 <<<<<<< HEAD
 
             defaultPrompt={improveSectionPrompt('skills list', skillsText || `Create a professional skills list for ${role} with ${experienceYears} years in ${skills}.`)}
@@ -272,6 +311,12 @@ const ResumeBuilder: NextPage = () => {
             onAccept={setSkillsText}
             authorizationToken={operatorToken}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+            defaultPrompt={improveSectionPrompt('skills list', skillsText || `Create a professional skills list for ${role} with ${experienceYears} years in ${skills}.`)}
+            onAccept={setSkillsText}
+            authorizationToken={operatorToken}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             defaultPrompt={improveSectionPrompt('skills list', skillsText || `Create a professional skills list for ${role} with ${experienceYears} years in ${skills}.`)  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -287,6 +332,7 @@ const ResumeBuilder: NextPage = () => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -294,6 +340,8 @@ const ResumeBuilder: NextPage = () => {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           />
         </div>
         <textarea value={skillsText} onChange={e => setSkillsText(e.target.value)} rows={6} className="w-full rounded-md border p-3" />
@@ -301,16 +349,23 @@ const ResumeBuilder: NextPage = () => {
     </div>
   )
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+},
+export default ResumeBuilder,
+},
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 },
 export default ResumeBuilder,
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -332,10 +387,16 @@ export default ResumeBuilder,
 }
 export default ResumeBuilder;
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 },
 export default ResumeBuilder,
 },
 
 export default ResumeBuilder,;
 export default ResumeBuilder,
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

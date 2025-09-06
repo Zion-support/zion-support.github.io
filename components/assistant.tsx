@@ -1,16 +1,22 @@
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface Message {;
   role: 'user' | 'assistant';
   content: string;
 
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 interface Message {;
   role: 'user' | 'assistant';
   content: string;
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export default function Assistant() {;
   const params =;
     typeof window !== 'undefined';
@@ -21,15 +27,26 @@ export default function Assistant() {;
   const [messages, setMessages] = useState<Message[]>([interface Message { role: 'user' | 'assistant', content: string }
 
 export default function Assistant() {;
+<<<<<<< HEAD
   const params = typeof window !== 'undefined' ? new URLSearchParams(window && window.location.search) : new URLSearchParams();
   const tenantId = params && params.get('tenantId') || '';
   const brand = params && params.get('brand') || 'Zion AI';
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const [messages, setMessages] = useState<Message[]>([;
     {;
       role: 'assistant',;
       content: `Hi! I am ${brand} Assistant. Ask me about roles, hiring timelines, and more.`,;
     },;
+  const params = typeof window !== 'undefined' ? new URLSearchParams(window.location.search) : new URLSearchParams();
+  const tenantId = params.get('tenantId') |'';
+  const brand = params.get('brand') |'Zion AI';
+  const [messages, setMessages] = useState<Message[]>([
+    {
+      role: 'assistant'
+      content: `Hi! I am ${brand} Assistant. Ask me about roles, hiring timelines, and more.`
+    }
   ]);
   const [input, setInput] = useState('');
 
@@ -62,6 +79,7 @@ export default function Assistant() {;
       return;
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -77,13 +95,10 @@ export default function Assistant() {;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     ]);
   }
-
-
-
-
-
   return (
     <div className='min-h-full h-full w-full flex flex-col bg-white'>;
       <div className='px-4 py-2 border-b text-sm text-gray-600 flex items-center gap-2'>;
@@ -106,6 +121,7 @@ export default function Assistant() {;
             }>            {m && m.content}    }
     // Basic fallback;
     setMessages(prev => [...prev, { role: 'user', content: question }, { role: 'assistant', content: 'Thanks! A recruiter will follow up shortly.' }]);
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -261,11 +277,14 @@ return (
       >
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <input
           className="flex-1 border rounded px-3 py-2 text-sm"
           placeholder="Ask about the role..."
           value={input}
 
+<<<<<<< HEAD
 =======
         ))}
       </div>
@@ -275,6 +294,8 @@ return (
           placeholder="Ask about the role..."
 value={input}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           onChange={(e) => setInput(e && e.target.value)}
         />;
         <button type="submit" className="bg-gray-900 text-white text-sm rounded px-3 py-2">Send</button>;
@@ -282,15 +303,22 @@ value={input}
     </div>;
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           className='bg-gray-900 text-white text-sm rounded px-3 py-2'
         >
           Send
         </button>
       </form>
     </div>
+}
+  );
+  );
+
 
   );
 
@@ -300,10 +328,13 @@ value={input}
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {useEffect, useMemo, useState} from 'react';
 ;
 interface Message {
@@ -452,6 +483,7 @@ if ( {) {
     </div>);
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
         className='p-3 border-t flex gap-2'
@@ -494,3 +526,5 @@ if ( {) {
 }
   );
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

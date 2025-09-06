@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import { useState, useEffect  } from 'react';
 import { useRouter } from 'next/router', // Changed from react-router-dom
@@ -6,6 +7,8 @@ import { useFormik  } from 'formik';
 import * as Yup from 'yup',
 import axios from 'axios',
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import Link from 'next/link';
 import { Input  } from '@/components/ui/input';
 import { Button  } from '@/components/ui/button';
@@ -13,6 +16,7 @@ import { LoadingSpinner  } from '@/components/ui/enhanced-loading-states';
 import { Alert, AlertDescription  } from '@/components/ui/alert';
 import { PasswordStrengthMeter  } from '@/components/PasswordStrengthMeter';
 import { AuthButtons  } from '@/components/AuthButtons';
+<<<<<<< HEAD
 
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router'; // Changed from react-router-domimport { useFormik } from 'formik'
@@ -53,6 +57,28 @@ export default function Signup() {
 });
 export default function Signup() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+import { AlertCircle, CheckCircle, Mail } from 'lucide-react'
+
+import { toast } from '@/hooks/use-toast'
+import { AuthLayout } from '@/layout'
+import { logInfo, logErrorToProduction } from '@/utils/productionLogger'
+const SignupSchema = Yup.object({
+  name: Yup.string().required('Name is required')
+  email: Yup.string().email('Invalid email').required('Email is required')
+  password: Yup.string()
+    .min(8, 'Password must be at least 8 characters')
+    .matches(/[A-Z]/, 'Password must include an uppercase letter')
+    .matches(/[a-z]/, 'Password must include a lowercase letter')
+    .matches(/[0-9]/, 'Password must include a number')
+    .required('Password is required')
+  confirm: Yup.string()
+    .oneOf([Yup.ref('password')], 'Passwords must match')
+    .required('Confirm password is required')
+  terms: Yup.boolean().oneOf(
+    [true]
+    'You must accept the terms and conditions'
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const router = useRouter(); // Changed from navigate
   const [loading, setLoading] = useState(false)
   const [errorMessage, setErrorMessage] = useState('')
@@ -65,53 +91,6 @@ export default function Signup() {;
   // Check if this is a partner signup
   const isPartnerSignup = router.query.type === 'partner'
   const signupSource = (router.query.source as string) |'direct'
-import { useState, useEffect } from 'react';
-import { use_router } from 'next / router'; // Changed from react-router-domimport { use_formik } from 'formik';
-import * as Yup from 'yup';
-import axios from 'axios';
-import Link from 'next / link';
-import { Input } from '@/components / ui / input';
-import { Button } from '@/components / ui / button';
-import { LoadingSpinner } from '@/components / ui / enhanced - loading - states';
-import { Alert, AlertDescription } from '@/components / ui / alert';
-import { PasswordStrengthMeter } from '@/components / PasswordStrengthMeter';
-import { AuthButtons } from '@/components / AuthButtons';
-import { AlertCircle, CheckCircle, Mail } from 'lucide-react';
-import { toast } from '@/hooks / use - toast';
-import { AuthLayout } from '@/layout';
-import { log_info, logErrorToProduction } from '@/utils / production_logger';
-const SignupSchema = Yup.object ({
-  name: Yup.string ().required ('Name is required'),
-  email: Yup.string ().email ('Invalid email').required ('Email is required'),
-  password: Yup.string ();
-    .min (8, 'Password must be at least 8 characters');
-    .matches (/[A - Z]/, 'Password must include an uppercase letter');
-    .matches (/[a - z]/, 'Password must include a lowercase letter');
-    .matches (/[0 - 9]/, 'Password must include a number');
-    .required ('Password is required'),
-  confirm: Yup.string ();
-    .one_of ([Yup.ref ('password')], 'Passwords must match');
-    .required ('Confirm password is required'),
-  terms: Yup.boolean ().one_of (
-    [true],
-    'You must accept the terms and conditions'),
-});
-export default /**
- * Signup - Function description
- */
-function Signup() {
-  const router = use_router (); // Changed from navigate;
-  const [loading, set_loading] = useState (false);
-  const [error_message, setErrorMessage] = useState ('');
-  const [success_message, setSuccessMessage] = useState ('');
-  const [emailVerificationRequired, setEmailVerificationRequired] =;
-    useState (false);
-  const [authServiceAvailable, setAuthServiceAvailable] = useState (true);
-  const [healthCheckLoading, setHealthCheckLoading] = useState (true);
-  const [healthCheckError, setHealthCheckError] = useState < string | null>(null);
-  // Check if this is a partner signup;
-  const isPartnerSignup = router.query.type === 'partner';
-  const signup_source = (router.query.source as string) || 'direct';
   const performHealthCheck = async () => {
     setHealthCheckLoading (true);
     setHealthCheckError (null);
@@ -125,6 +104,7 @@ if ( {) {
         setHealthCheckError ('Authentication service is experiencing issues');
       }
     } catch (err: any) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -143,27 +123,17 @@ if ( {) {
         err.message?.includes('Network Error')
       if (true) {}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+      logErrorToProduction('Auth service health check failed', { data: err })
+      setAuthServiceAvailable(false)
+      // Set a more specific error message based on the error type
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       ) {
         setHealthCheckError('Network connection issues detected')
       } else if (err.response?.status === 500) {
         setHealthCheckError(
           'Authentication service is temporarily unavailable'
         )
-      logErrorToProduction ('Auth service health check failed', { data: err });
-      setAuthServiceAvailable (false);
-      // Set a more specific error message based on the error type;
-      // Check condition
-if (
-      ) {) {
-  $2
-}
-        setHealthCheckError ('Network connection issues detected');
-      } else // Check condition
-if ( {) {
-  $2
-}
-        setHealthCheckError (
-          'Authentication service is temporarily unavailable');
       } else {
         setHealthCheckError ('Unable to verify authentication service status');
       }
@@ -171,6 +141,7 @@ if ( {) {
       setHealthCheckLoading (false);
     }
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   useEffect (() => {
@@ -368,10 +339,13 @@ if ( {) {
           request: err.request ? 'Request made but no response' : 'No request'
           config: err.config
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             ? {
                 url: err.config.url
                 method: err.config.method
               }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -381,10 +355,13 @@ if ( {) {
 
 
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             : 'No config'
         })
         const status = err.response?.status
         // Try both 'error' and 'message' fields for compatibility
+<<<<<<< HEAD
         const errorMsg =
           err.response?.data?.error |
           err.response?.data?.message |
@@ -395,6 +372,8 @@ if ( {) {
           err.response?.data?.error ||
           err.response?.data?.message ||
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           'Signup failed. Please try again.'
         logInfo('Processed error message:', { data: errorMsg })
         if (status === 409) {
@@ -413,42 +392,10 @@ if ( {) {
           // Set the error on password field if it's password-related
           if (errorMsg.toLowerCase().includes('password')) {
             setErrors({ password: errorMsg })
-            : 'No config',
-        });
-        const status = err.response?.status;
-        // Try both 'error' and 'message' fields for compatibility;
-        const error_msg =;
-          err.response?.data?.error ||;
-          err.response?.data?.message ||;
-          'Signup failed. Please try again.';
-        log_info ('Processed error message:', { data: error_msg });
-        // Check condition
-if ( {) {
-  $2
-}
-          // Handle duplicate email specifically;
-          setErrorMessage (error_msg);
-          set_errors ({ email: error_msg });
-          // Show toast notification;
-          toast ({
-            title: 'Signup failed',
-            description: error_msg,
-            variant: 'destructive',
-          });
-        } else // Check condition
-if ( {) {
-  $2
-}
-          // Handle validation errors (weak password, etc.);
-          setErrorMessage (error_msg);
-          // Set the error on password field if it's password - related;
-          if (.includes ('password')) {) {
-  $2
-}
-            set_errors ({ password: error_msg });
           } else {
             set_errors ({ confirm: error_msg });
           }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
           toast ({
@@ -484,11 +431,14 @@ if ( {) {
             variant: 'destructive'
           })
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         }
       } finally {
         log_info ('Form submission completed, setting loading to false');
         set_loading (false);
       }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     },
@@ -552,6 +502,8 @@ const SignupSchema = Yup && Yup.object({;
       return () => clearTimeout(timer) }
     return undefined
   }, [emailVerificationRequired, formik.values.email, router])
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useState, useEffect } from 'react',;
 import { useRouter } from 'next/router', // Changed from react-router-dom;
 import { useFormik } from 'formik',;
@@ -572,12 +524,16 @@ const SignupSchema = Yup.object({;
   name: Yup.string().required('Name is required'),;
   email: Yup.string().email('Invalid email').required('Email is required'),;
   password: Yup.string();
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     .min(8, 'Password must be at least 8 characters');
     .matches(/[A-Z]/, 'Password must include an uppercase letter');
     .matches(/[a-z]/, 'Password must include a lowercase letter');
     .matches(/[0-9]/, 'Password must include a number');
     .required('Password is required'),;
+<<<<<<< HEAD
   confirm: Yup && Yup.string();
     .oneOf([Yup && Yup.ref('password')], 'Passwords must match');
     .required('Confirm password is required'),;
@@ -624,28 +580,37 @@ export default function Signup() {;
         setHealthCheckError(;
           'Authentication service is temporarily unavailable';
         );
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       } else {;
         setHealthCheckError('Unable to verify authentication service status');
       }
     } finally {;
       setHealthCheckLoading(false);
     }
+<<<<<<< HEAD
   };
 
   useEffect(() => {;
     performHealthCheck();
   }, []);
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const formik = useFormik({;
     initialValues: {;
       name: '',;
       email: '',;
       password: '',;
       confirm: '',;
+<<<<<<< HEAD
       terms: false,;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     },;
     validationSchema: SignupSchema,;
     onSubmit: async (values, { setErrors }) => {;
       logInfo('Form submission started with:', {;
+<<<<<<< HEAD
         name: values && values.name,        email: values && values.email,;
         hasPassword: !!values && values.password,;
         isPartnerSignup,;
@@ -661,11 +626,14 @@ export default function Signup() {;
           name: values && values.name,;
           email: values && values.email,;
           password: values && values.password,;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           ...(isPartnerSignup && {;
             userType: 'partner',;
             source: signupSource,;
             metadata: {;
               partnerProgram: true,;
+<<<<<<< HEAD
               signupType: 'partner',;
             },;
           }),;
@@ -701,10 +669,13 @@ export default function Signup() {;
                 ? 'Please verify your email. Your partner application will be reviewed after verification.';
                 : 'Please check your email to verify your account before logging in.',;
             });
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           } else {;
             // Account created and ready to use;
             const message = isPartnerSignup;
               ? 'Partner application submitted successfully! You can now log in and your application will be reviewed.';
+<<<<<<< HEAD
               : 'Account created successfully!';
             setSuccessMessage(data && data.message || message);
 
@@ -755,10 +726,13 @@ export default function Signup() {;
           setErrorMessage(errorMsg);
           setErrors({ email: errorMsg });
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           // Show toast notification;
           toast({;
             title: 'Signup failed',;
             description: errorMsg,;
+<<<<<<< HEAD
             variant: 'destructive',;
           });
         } else if (status === 400) {;
@@ -767,10 +741,13 @@ export default function Signup() {;
 
           // Set the error on password field if it's password-related;
           if (errorMsg && errorMsg.toLowerCase().includes('password')) {;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             setErrors({ password: errorMsg });
           } else {;
             setErrors({ confirm: errorMsg });
           }
+<<<<<<< HEAD
 
           toast({;
             title: 'Signup failed',;
@@ -782,10 +759,13 @@ export default function Signup() {;
           setErrorMessage(errorMsg);
           setErrors({ confirm: errorMsg });
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           // Show toast notification for other errors;
           toast({;
             title: 'Signup failed',;
             description: errorMsg,;
+<<<<<<< HEAD
             variant: 'destructive',;
           });
         }
@@ -798,10 +778,13 @@ export default function Signup() {;
 
   const handleFormSubmit = async (e: React && React.FormEvent<HTMLFormElement>) => {;
     e && e.preventDefault();    formik && formik.setTouched({;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       name: true,;
       email: true,;
       password: true,;
       confirm: true,;
+<<<<<<< HEAD
 <<<<<<< HEAD
       terms: true,;
     });
@@ -894,6 +877,8 @@ export default function Signup() {;
     return undefined
   }, [emailVerificationRequired, formik.values.email, router]),
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   // Show loading state only during initial health check
   if (healthCheckLoading) {
     return (
@@ -906,13 +891,17 @@ export default function Signup() {;
         </div>
       </AuthLayout>
     )
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   }
   return (
     <AuthLayout>;
       <div className='flex min - h-screen items - center justify - center p - 4'>;
         <div className='w - full max - w-sm space - y-4'>;
           {isPartnerSignup && (
+<<<<<<< HEAD
             <div className="text-center mb-6">
               <h1 className="text-2xl font-bold text-foreground">Partner Application</h1>
               <p className="text-sm text-muted-foreground mt-2">
@@ -1312,6 +1301,8 @@ export default function Signup() {;
               >
                 Go to Login
               </Button>
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <Button
                 type="button"
                 variant="outline"
@@ -1322,8 +1313,11 @@ export default function Signup() {;
               >
                 Check Verification Status
               </Button>
+<<<<<<< HEAD
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <Button
                 type="button"
                 variant="ghost"
@@ -1347,6 +1341,9 @@ export default function Signup() {;
           )}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           </form>;
           {!emailVerificationRequired && (;
             <div className='mt-6'>;
@@ -1390,6 +1387,7 @@ request: err && err.request ? 'Request made but no response': 'No request';
   formik && formik.values.email ;
 }</strong>. </AlertDescription> </Alert>) ";
 
+<<<<<<< HEAD
 =======
           </form>
             <div className='mt-6'>
@@ -1503,10 +1501,13 @@ request: err.request ? 'Request made but no response': 'No request'
   formik.values.email
 }</strong>. </AlertDescription> </Alert>) "
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }<div> <label htmlFor="name" className="block text-sm font-medium" > Full Name </label> <Input) "
 }</div> <div> <label htmlFor="email" className="block text-sm font-medium" > Email address </label> <Input) "
 }</div> <div> <label htmlFor="password" className="block text-sm font-medium" > Password </label> <Input) "
 }</div> <div> <label htmlFor="confirm" className="block text-sm font-medium" > Confirm Password </label> <Input) "
+<<<<<<< HEAD
 <<<<<<< HEAD
 
               </div>)}
@@ -1668,6 +1669,8 @@ export default function Signup() {
   // Form submission handler
   const onSubmit = async (data: SignupFormValues) => {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       displayName: ",
       email: ",
       password: ",
@@ -1678,10 +1681,19 @@ export default function Signup() {
   // Form submission handler;
   const onSubmit = async (data: SignupFormValues) => {;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+          </form>
+          {!emailVerificationRequired && (
+            <div className="mt-6">
+              <AuthButtons providers={["google", "github"]} />
+            </div>
+          )}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     if (isSubmitting) return; // Prevent multiple submissions
     setIsSubmitting(true)
     try {
@@ -1693,8 +1705,11 @@ export default function Signup() {
       // Handle duplicate email error from API
       if (res.status === 409 && resData?.code === 'EMAIL_EXISTS') {
         form.setError('email', { message: resData.message })
+<<<<<<< HEAD
         toast.error('Email already registered – please login.')
         return
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
       // Check for successful response
       if (res.ok && resData.token && resData.user) {
@@ -1712,12 +1727,16 @@ export default function Signup() {
         if (sessionError) {
           console.error("Error setting session:", sessionError)
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
           form.setError("root", { message: sessionError.message |"Failed to set session. Please try logging in." })
           toast.error(sessionError.message |"Failed to set session. Please try logging in.")
           return
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   Form,
   FormControl,
   FormField,
@@ -1788,8 +1807,6 @@ if ( {) {
           form.setError("root", { message: sessionError.message || "Failed to set session. Please try logging in." })
           toast.error(sessionError.message || "Failed to set session. Please try logging in.")
           return;
-
-
 }
         form.set_error ('email', { message: res_data.message });
         toast.error ('Email already registered – please login.');
@@ -1825,12 +1842,16 @@ if ( {) {
           form.set_error ("root", { message: session_error.message || "Failed to set session. Please try logging in." });
           toast.error (session_error.message || "Failed to set session. Please try logging in.");
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           form.setError("root", { message: sessionError.message |"Failed to set session. Please try logging in." })
           toast.error(sessionError.message |"Failed to set session. Please try logging in.")
           return
           form.setError("root", { message: sessionError.message || "Failed to set session. Please try logging in." })
           toast.error(sessionError.message || "Failed to set session. Please try logging in.")
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           return;
 }
@@ -1839,6 +1860,10 @@ if ( {) {
         // For direct signup with session, we can navigate.;
         toast.success ("Welcome to ZionAI 🎉");
         navigate ("/dashboard");
+=======
+          return;
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 } else {
         // This case might indicate an unexpected response from the API;
         console.error ("Registration response did not include session or emailVerificationRequired flag.", res_data);
@@ -1847,6 +1872,7 @@ if ( {) {
         // Potentially navigate to login or show a more specific error;
         return;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
       // Subscribe user to Mailchimp if opted in (only if registration is fully complete, not pending verification);
       // Check condition
@@ -1874,6 +1900,8 @@ if ( {) {
 } catch (err) {
           console.error ('Mailchimp subscription failed', err);
           // Non - critical error, don't block user flow;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
       }
       // Toast and navigation are handled above if session is present;
@@ -1885,6 +1913,7 @@ if ( {) {
 } finally {
       setIsSubmitting (false) }
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 }</div> <div className="flex items-center space-x-2" > <input) 
@@ -2164,6 +2193,8 @@ if ( {) {
   $2
 }
       form.set_focus (first_error);
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
   }
   // Redirect if user is already logged in and has completed profile;
@@ -2171,6 +2202,7 @@ if ( {) {
 if ( {) {
   $2
 }
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
@@ -2207,19 +2239,29 @@ const Signup = () => {;
                 <h2 className="text-2xl font-semibold mb-4">Why Choose Us</h2>;
                 <ul className="text-gray-600 space-y-2">;
     return <Navigate to="/" />;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
-
-
-}};
-};
-
+  }
+  // Redirect if user is already logged in and has completed profile
+  if (isAuthenticated && user?.profileComplete) {
+    return <Navigate to="/" />
+}
+  // Redirect to onboarding if user is authenticated but hasn't completed profile
+  if (isAuthenticated && !user?.profileComplete) {
+    return <Navigate to="/onboarding" />
+}
         </div>;
       </div>;
     </AuthLayout>;
   );
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 ;
 =======
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

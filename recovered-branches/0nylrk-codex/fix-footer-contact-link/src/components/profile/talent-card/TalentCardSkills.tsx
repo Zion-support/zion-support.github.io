@@ -1,15 +1,19 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from "react",
 import { Badge } from "@/components/ui/badge",
 import {Badge} from "@/components/ui/badge";
 import React from "react",
 import { Badge } from "@/components/ui/badge",
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -21,12 +25,17 @@ import React from "react";
 import { Badge } from "@/components/ui/badge";
 >>>>>>> main
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+import React from "react";
+import { Badge } from "@/components/ui/badge";
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface TalentCardSkillsProps {
   skills: string[] | undefined;
 }
 
 export function TalentCardSkills({ skills = [] }: TalentCardSkillsProps) {
 
+<<<<<<< HEAD
 
   // Get top skills (limit to 4)
 
@@ -60,21 +69,23 @@ import {Badge} from "@/components/ui/badge";
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  return (
+    <div className="flex flex-wrap gap-1 mb-5">
+      {topSkills.map((skill) => (
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from "react",;
 import { Badge } from "@/components/ui/badge",;
 
 interface TalentCardSkillsProps {;
   skills: string[] | undefined;
 }
-
 export function TalentCardSkills(): any ({ skills = [] }: TalentCardSkillsProps) {;
   // Get top skills (limit to 4);
   const topSkills = skills && skills.slice(0, 4) || [];
-
   return (
     <div className="flex flex-wrap gap-1 mb-5">;
       {topSkills && topSkills.map(skill => (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         <Badge
           key={skill}
 
@@ -91,6 +102,7 @@ export function TalentCardSkills(): any ({ skills = [] }: TalentCardSkillsProps)
         </Badge>;
       )}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     </div>;
 =======
@@ -100,6 +112,8 @@ export function TalentCardSkills(): any ({ skills = [] }: TalentCardSkillsProps)
 }
 
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from './react';
 import { Badge  } from '@/components / ui / badge';
 interface TalentCardSkillsProps {
@@ -127,4 +141,3 @@ function TalentCardSkills() {
         </Badge>)}
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

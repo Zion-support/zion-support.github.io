@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
@@ -14,35 +15,34 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 <<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 <<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { supabase } from '../../../utils/supabase/client';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' })
-=======
-import type { NextApiRequest, NextApiResponse } from "next";
-import { supabase } from "../../../utils/supabase/client";
-export default async function handler(
-  req: NextApiRequest,
-  res: NextApiResponse,
-) {
-  if (req.method !== "POST") {
-    return res.status(405).json({ error: "Method not allowed" });
->>>>>>> main
   }
   try {
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+import type { NextApiRequest, NextApiResponse } from 'next';
+
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   try {;
     const { name, email, role, country, source } = req.body || {};
 
-    if (!name || !email || !role || !country) {
-      return res.status(400).json({ error: "Missing required fields" });
-    }
 
 
     const { name, email, role, country, source } = req.body |{}
     if (!name |!email |!role |!country) {
 
       return res.status(400).json({ error: "Missing required fields" });
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -53,10 +53,13 @@ export default async function handler(
 
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     }
     const { data, error } = await supabase
       .from("summit_registrations")
       .insert([
+<<<<<<< HEAD
 =======
     const { name, email, role, country, source } = req.body || {}
 ;
@@ -130,6 +133,9 @@ if ( {) {
 =======
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
     return res && res.status(200).json({ ok: true, registration: data });
   } catch (e: any) {
@@ -139,6 +145,7 @@ if ( {) {
 
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -171,18 +178,22 @@ if ( {) {
   } catch (e: any) {
     return res.status (500).json ({ error: e?.message || "Unknown error" });
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
   }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+  }
+}
     return res.status(500).json({ error: e?.message || 'Unknown error' })
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ;
     const { data, error } = await supabase;
       .from('summit_registrations');
@@ -211,38 +222,10 @@ if ( {) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-;
-    return res.status(200).json({ ok: true, registration: data });
-  } catch (error) {
-    return res.status(500).json({ error: e?.message || 'Unknown error' });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-=======
     return res.status(500).json({ error: e?.message || "Unknown error" });
->>>>>>> main
   }
 }
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

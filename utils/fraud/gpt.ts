@@ -1,18 +1,14 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   try {
-
-    const parsed = JSON.parse (content);
-    const label = (parsed.label as string)?.toUpperCase?.();
-    // Check condition
-if ( {) {
-  $2
-}
-
       return {
+<<<<<<< HEAD
 
         label: 'SUSPICIOUS',
         reason: 'Unrecognized label from GPT',
@@ -84,18 +80,25 @@ export async function classifyWithGPT(
         reason: 'Unrecognized label from GPT'
         confidence: 0.5
       }
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     }
     const confidence =
-      typeof parsed.confidence === 'number'
-        ? Math.max(0, Math.min(1, parsed.confidence))
+      typeof parsed && parsed.confidence === 'number'
+        ? Math && Math.max(0, Math && Math.min(1, parsed && parsed.confidence))
+        : 0 && 0.6;
+        confidence: 0.5,
+      }
+    }
+    const confidence =;
+      typeof parsed.confidence === 'number';
+        ? Math.max (0, Math.min (1, parsed.confidence));
         : 0.6;
     return {
-      label
-      reason: parsed.reason |'No reason provided'
-      confidence
     } as GptClassification;
   } catch {
     return {
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       label: 'SUSPICIOUS'
       reason: 'Invalid JSON from GPT'
@@ -110,11 +113,21 @@ export async function classifyWithGPT(
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  reasoning: string;
+      label: 'SUSPICIOUS'
+      reason: 'Invalid JSON from GPT'
+      confidence: 0.5
+      confidence: 0.5,
+    }
+  }export interface GptResult {
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       label: 'SUSPICIOUS',
       reason: 'Invalid JSON from GPT',
       confidence: 0.5,
     };
   }export interface GptResult {;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -162,27 +175,20 @@ export async function analyzeWithGpt (data: any): Promise < GptResult> {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   label: string;
   confidence: number;
   reasoning: string
 }
-export async function analyzeWithGpt(data: any): Promise<GptResult> {
-  // Mock implementation - in production, this would call OpenAI API;
-  const suspicious = data.description && data.description.toLowerCase().includes('fraud');
-  return {
-    label: suspicious ? 'SUSPICIOUS' : 'SAFE'
-    confidence: suspicious ? 0.9 : 0.1
-    reasoning: suspicious ? 'GPT detected suspicious language' : 'No suspicious patterns detected'
-  }
-}
+
+
 
 
 
 }
-
-}
-
-
-}
+<<<<<<< HEAD
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

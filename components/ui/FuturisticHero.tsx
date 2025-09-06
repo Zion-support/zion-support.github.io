@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import Link from 'next / link';
 =======
 import Link from 'next/link';
@@ -16,6 +17,10 @@ export default function FuturisticHero() {;
 =======
 
 
+=======
+export default function FuturisticHero() {
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export default function FuturisticHero() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   return (
@@ -57,16 +62,20 @@ function FuturisticHero() {
           </Link>;
           <Link href='/services'>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
             <a className='px - 5 py - 3 rounded - lg border border - gray - 300 dark:border - gray - 700 hover:bg - gray - 100 dark:hover:bg - gray - 900'>;
 
 =======
             <a className='px - 5 py - 3 rounded - lg border border - gray - 300 dark:border - gray - 700 hover:bg - gray - 100 dark:hover:bg - gray - 900'>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               Explore Services;
             </a>;
           </Link>;
         </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   );
@@ -90,20 +99,24 @@ export default function FuturisticHero() {
           <Link href="/services"><a className="px-5 py-3 rounded-lg border border-gray-300 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-900">Explore Services</a></Link>
         </div>
         <div className="mt-10 mx-auto max-w-3xl p-6 rounded-2xl bg-white/70 dark:bg-black/40 backdrop-blur border border-gray-200 dark:border-gray-800 shadow">
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <p className="text-sm text-gray-700 dark:text-gray-300">
             Talent marketplace • Project accelerators • Secure contracts • Integrated AI toolchain
           </p>
         </div>
       </div>
-
   );
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     </section>
 );
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <div className='mt - 10 mx - auto max - w-3xl p - 6 rounded - 2xl bg - white / 70 dark:bg - black / 40 backdrop - blur border border - gray - 200 dark:border - gray - 800 shadow'>;
           <p className='text - sm text - gray - 700 dark:text - gray - 300'>;
             Talent marketplace • Project accelerators • Secure contracts •;
@@ -133,6 +146,7 @@ function FuturisticHero() {
       </div>;
     </section>);
 }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -150,3 +164,5 @@ function FuturisticHero() {
 }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

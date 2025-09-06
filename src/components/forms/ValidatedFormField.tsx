@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 import React, { useState, useEffect } from 'react'
@@ -27,6 +28,8 @@ import { cn } from '@/lib/utils'
 import { CheckCircle, AlertCircle, Eye, EyeOff } from 'lucide-react'
 import { Button } from '@/components/ui/button';
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useState, useEffect } from 'react';
 import {;
   FormField,;
@@ -41,6 +44,7 @@ import {;
   Select,;
   SelectContent,;
   SelectItem,;
+<<<<<<< HEAD
   SelectTrigger,;
   SelectValue,;
 } from '@/components/ui/select';import { Checkbox } from '@/components/ui/checkbox';
@@ -50,11 +54,18 @@ import { CheckCircle, AlertCircle, Eye, EyeOff } from 'lucide-react';
 =======
 import { Button } from '@/components/ui/button';
 interface ValidationRule {;
+=======
+import { Button } from '@/components/ui/button';
+
+import { CheckCircle, AlertCircle, Eye, EyeOff } from 'lucide-react'
+import { Button } from '@/components/ui/button';
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface ValidationRule {
   required?: boolean;
   minLength?: number;
   maxLength?: number;
   pattern?: RegExp;
+<<<<<<< HEAD
   custom?: (value: any) => string | null
 interface ValidatedFormFieldProps {
   name: string;
@@ -68,6 +79,8 @@ interface ValidatedFormFieldProps {
   className?: string;
   disabled?: boolean;
   showValidIcon?: boolean;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   name: string
   label: string
   type?:
@@ -88,6 +101,11 @@ interface ValidatedFormFieldProps {
   className?: string
   disabled?: boolean
   showValidIcon?: boolean
+<<<<<<< HEAD
+=======
+  custom?: (value: any) => string | null
+interface ValidatedFormFieldProps {
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   debounceMs?: number
 export function ValidatedFormField({
 
@@ -129,6 +147,7 @@ export function ValidatedFormField({
       setValidationState(error ? 'invalid' : 'valid')
     }, debounceMs)
     setDebounceTimer(timer)
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import React, { useState, useEffect } from 'react';
 import {
@@ -250,11 +269,14 @@ if ( {) {
       return validation.custom(value)
     }
     return null
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   }
   const getValidationIcon = () => {
     if (!showValidIcon |!isTouched |validationState === 'idle') return null
     switch (validationState) {
       case 'validating':
+<<<<<<< HEAD
     // Check condition
 if ( {) {
   $2
@@ -292,6 +314,8 @@ if (return null) {
 }
     switch (validation_state) {
       case 'validating':;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         return (
           <div className='animate-spin h-4 w-4 border-2 border-primary border-t-transparent rounded-full' />
         )
@@ -314,9 +338,12 @@ if (return null) {
         return ''
     }
   }
+<<<<<<< HEAD
   const renderField = () => {
     const baseClasses = cn(getFieldClasses(), className)
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const render_field = () =>: any {
     const base_classes = cn (getFieldClasses (), class_name);
     switch (type) {
@@ -324,11 +351,14 @@ if (return null) {
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         return (
           <div className='relative'>;
             <Textarea
 
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useState, useEffect } from 'react';
 
 import { Checkbox } from '@/components/ui/checkbox';
@@ -340,6 +370,7 @@ interface ValidationRule {;
   minLength?: number,;
   maxLength?: number,;
   pattern?: RegExp,;
+<<<<<<< HEAD
   const render_field = () =>: any {
     const base_classes = cn (getFieldClasses (), class_name);
     switch (type) {
@@ -401,6 +432,8 @@ interface ValidatedFormFieldProps {;
 }
 ;
 export function ValidatedFormField({;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   custom?: (value: any) => string | null;
 }
 ;
@@ -484,45 +517,8 @@ export function ValidatedFormField({;
 
     return null
   },
-  const getValidationIcon = () => {
-    if (!showValidIcon || !isTouched || validationState === 'idle') return null
-    switch (validationState) {
-      case 'validating':
-    return null;
-  };
-  const getValidationIcon = () => {;
-    if (!showValidIcon || !isTouched || validationState === 'idle') return null;
-    switch (validationState) {;
-      case 'validating':;
 
   const getValidationIcon = () => {
-    if (!showValidIcon || !isTouched || validationState === 'idle') return null
-    switch (validationState) {
-      case 'validating':
-        return (
-          <div className='animate-spin h-4 w-4 border-2 border-primary border-t-transparent rounded-full' />
-        )
-      case 'valid':
-        return <CheckCircle className='h-4 w-4 text-green-500' />
-      case 'invalid':
-        return <AlertCircle className='h-4 w-4 text-red-500' />
-      default:
-        return null
-    }
-  }
-  const getFieldClasses = () => {
-    if (!isTouched) return ''
-    switch (validationState) {
-      case 'valid':
-        return 'border-green-500 focus:border-green-500 focus:ring-green-500/20'
-      case 'invalid':
-        return 'border-red-500 focus:border-red-500 focus:ring-red-500/20'
-      default:
-        return ''
-    }
-  }
-  const renderField = () => {
-    const baseClasses = cn(getFieldClasses(), className)
     if (!showValidIcon || !isTouched || validationState === 'idle') return null,
 
     switch (validationState) {
@@ -563,6 +559,7 @@ export function ValidatedFormField({;
   const renderField = () => {
     const baseClasses = cn(getFieldClasses(), className),
 
+<<<<<<< HEAD
       case 'textarea':
   };
   const getFieldClasses = () => {;
@@ -609,23 +606,22 @@ export function ValidatedFormField({;
         );
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     switch (type) {
       case 'textarea':
         return (
           <div className="relative">
             <Textarea
-              disabled = {disabled,}
-              className = {baseClasses,}
-              rows = {4,}
-              disabled={disabled}
-              className={baseClasses}
-              rows={4}
+
+
               {...form.register(name)}
             />
             <div className="absolute top-2 right-2">
               {getValidationIcon()}
             </div>
           </div>
+<<<<<<< HEAD
         )
       case 'select':
         return (
@@ -652,6 +648,8 @@ export function ValidatedFormField({;
 
 =======
         return (
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <div className="relative">
             <Select onValueChange={(value) => form.setValue(name, value)} disabled={disabled}>
               <SelectTrigger className={baseClasses}>
@@ -669,6 +667,7 @@ export function ValidatedFormField({;
               {getValidationIcon()}
             </div>
           </div>
+<<<<<<< HEAD
         )
 ursor/fix-website-loading-errors-and-merge-6662
       case 'checkbox':
@@ -836,6 +835,9 @@ ursor/fix-website-loading-errors-and-merge-6662
               htmlFor={name}
         )
         ),
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
       case 'checkbox':
         return (
@@ -848,20 +850,19 @@ ursor/fix-website-loading-errors-and-merge-6662
             />
             <label
               htmlFor={name}
-              className='text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70'            >
-              className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-            >
+
+
               {label}
             </label>
             {getValidationIcon()}
           </div>
-        )
-        ),
+
 
       case 'password':
         return (
           <div className="relative">
             <Input
+<<<<<<< HEAD
               className='text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70'            >
             </label>
             {getValidationIcon()}
@@ -890,11 +891,14 @@ ursor/fix-website-loading-errors-and-merge-6662
               type={showPassword ? 'text' : 'password'}
               disabled={disabled}
               className={cn(baseClasses, 'pr-20')}
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               {...form.register(name)}
             />
             <div className="absolute inset-y-0 right-0 flex items-center gap-1 pr-3">
               {getValidationIcon()}
               <Button
+<<<<<<< HEAD
                 type='button'
                 variant='ghost'
                 size='sm'
@@ -908,12 +912,15 @@ ursor/fix-website-loading-errors-and-merge-6662
                 onClick={() => setShowPassword(!showPassword)}
                 aria-label={showPassword ? 'Hide password' : 'Show password'}
               >
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
                 {showPassword ? (
                   <EyeOff className="h-4 w-4" />
                 ) : (
                   <Eye className="h-4 w-4" />
                 )}
+<<<<<<< HEAD
               </Button>
             </div>
           </div>
@@ -1052,10 +1059,25 @@ ursor/fix-website-loading-errors-and-merge-6662
 
                   <p className="text-sm text-muted-foreground">{description}</p>
 
+=======
+
+
+      default:
+        return (
+          <div className="relative">
+            <Input
+                    {fieldError.message}
+                  </FormMessage>
                 )}
-              </div>;
-          </FormItem>;
+                {description && !fieldError && (
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+                )}
+              </div>
+            )}
+          </FormItem>
         )}
+<<<<<<< HEAD
       />
     )
       case 'textarea':;
@@ -1158,12 +1180,15 @@ if ( {) {
               </div>)}
           </FormItem>)}
       />);
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   }
       render={() => (
         <FormItem>;
           <FormLabel className='text - sm font - medium'>;
             {label}
             {validation.required && (
+<<<<<<< HEAD
                     {fieldError.message}
                   </FormMessage>
                 )}
@@ -1221,13 +1246,18 @@ if ( {) {
                   <AlertCircle className='h-3 w-3' />;
                   {fieldError && fieldError.message}
                 </FormMessage>;
+=======
+                  {fieldError.message}
+                </FormMessage>
               )}
               {description && !fieldError && (
-                <p className='text-sm text-muted-foreground'>{description}</p>
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+              )}
             </div>
           )}
         </FormItem>
       )}
+<<<<<<< HEAD
   }}
     }
   }}
@@ -1479,10 +1509,17 @@ export const commonValidations = {
   }}
     }
   }}
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   }},
     };
   }};
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     />;
   );
 }
@@ -1498,17 +1535,11 @@ export const commonValidations = {;
   required: { required: true },;
   email: {;
     required: true,;
-    pattern: validationPatterns.email,;
-    custom: (value: string) => {;
-      if (value && !validationPatterns.email.test(value)) {;
-        return 'Please enter a valid email address';
-      }
-      return null;
-    }
   },;
   password: {;
     required: true,;
     minLength: 8,;
+<<<<<<< HEAD
     custom: (value: string) => {;
       if (value && !validationPatterns.strongPassword.test(value)) {;
         return 'Password must contain at least 8 characters with uppercase, lowercase, number, and special character';
@@ -1530,3 +1561,5 @@ export const commonValidations = {;
   }},
     }
   }};
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

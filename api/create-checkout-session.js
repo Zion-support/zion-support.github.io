@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -44,6 +45,9 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
       success_url: `${req.headers.origin}/success?session_id={CHECKOUT_SESSION_ID}`,
       cancel_url: `${req.headers.origin}/cancel`,
     });
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     res.statusCode = 200;
     res.json({ 
       success: true, 
@@ -55,8 +59,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
     res.statusCode = 500;
     res.json({ error: err.message || 'Checkout session creation failed' });
   }
-export default withErrorLogging(handler);
-ursor/fix-syntax-push-and-merge-to-main-40de
+
 export default function handler(req, res) {
   res.status(200).json({ message: "Checkout session created" })}
 export default function handler(req,res) { res.status(200).json({ message: "Checkout session created" })}
@@ -65,6 +68,7 @@ export default function handler(req,res) { res.status(200).json({ message: "Chec
 export default function handler(req, res) {
   res.status(200).json({ "message": 'Checkout session created' });
 }
+<<<<<<< HEAD
 
 export default function handler(req,res) { res.status(200).json({ message: 'Checkout session created' })}
 export default function handler(req,res) { res.status(200).json({ message: 'Checkout session created' })}
@@ -72,6 +76,8 @@ export default function handler(req,res) { res.status(200).json({ message: 'Chec
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       url: session.url
     })
   } catch (err) {,
@@ -81,9 +87,12 @@ ursor/fix-syntax-push-and-merge-to-main-40de
   };
 };
 export default withErrorLogging(handler),
+<<<<<<< HEAD
 ,
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 =======
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

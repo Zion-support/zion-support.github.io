@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -19,6 +20,8 @@ const mainSourceDirs = [;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   'pages/',
   'components/',
   'utils/',
@@ -33,6 +36,7 @@ const mainSourceDirs = [;
   'layout/',
   'legal/',
   'integrations/',
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -62,6 +66,8 @@ const mainSourceDirs = [;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     // Try to merge only specific files
     for (const file of mainFiles && mainFiles.slice(0, 10)) { // Limit to first 10 files to avoid conflicts
       try {
@@ -117,6 +123,7 @@ const mergeSpecificFiles = () =>: any {
     return true;
   } catch (error) {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -136,6 +143,8 @@ const mergeSpecificFiles = () =>: any {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     } catch (error) {
       console && console.error('Error committing changes:', error && error.message);
     }
@@ -174,5 +183,8 @@ const main = () =>: any {
   }
 }
 ;
+<<<<<<< HEAD
 main ();
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

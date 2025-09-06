@@ -1,13 +1,19 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 import { Button  } from '@/components / ui / button';
 interface Contract {
 
+<<<<<<< HEAD
 =======
 import { Button } from "@/components/ui/button";
 interface Contract {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   id: string;
   title: string;
   client: string;
@@ -15,6 +21,7 @@ interface Contract {
   date: string;
   isSmartContract: boolean
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -28,6 +35,8 @@ interface RecentContractsTableProps {;
 =======
 interface RecentContractsTableProps {
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { Button } from "@/components/ui/button",
 interface Contract {
   id: string,
@@ -47,13 +56,15 @@ interface Contract {;
 }
 ;
 interface RecentContractsTableProps {;
-import { Button  } from '@/components / ui / button';
-interface Contract {
 
 
+interface RecentContractsTableProps {;
 
+<<<<<<< HEAD
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   contracts: Contract[];
   onViewContract: (contractId: string) => void
 }
@@ -61,6 +72,7 @@ interface Contract {
 
 
 export function RecentContractsTable({ contracts, onViewContract }: RecentContractsTableProps) {
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -94,6 +106,9 @@ interface RecentContractsTableProps {;
 export function RecentContractsTable({ contracts, onViewContract } RecentContractsTableProps) {;
   return (;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  return (
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <>;
       <h2 className="text-2xl font-bold mb-4">Recent Contracts</h2>;
       <div className="overflow-x-auto rounded-md border">;
@@ -101,6 +116,9 @@ export function RecentContractsTable({ contracts, onViewContract } RecentContrac
           <thead className="bg-muted">;
             <tr>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <th
                 scope="col"
                 className="px-6 py-3 text-left text-xs font-medium text-muted-foreground uppercase tracking-wider">;
@@ -124,6 +142,7 @@ export function RecentContractsTable({ contracts, onViewContract } RecentContrac
               <th
                 scope="col"
                 className="px-6 py-3 text-left text-xs font-medium text-muted-foreground uppercase tracking-wider">;
+<<<<<<< HEAD
 =======
               <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-muted-foreground uppercase tracking-wider">;
                 Contract Title;
@@ -139,6 +158,8 @@ export function RecentContractsTable({ contracts, onViewContract } RecentContrac
               </th>;
               <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-muted-foreground uppercase tracking-wider">;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 Type;
               </th>;
               <th scope="col" className="relative px-6 py-3">;
@@ -148,6 +169,9 @@ export function RecentContractsTable({ contracts, onViewContract } RecentContrac
           </thead>;
           <tbody className="bg-card divide-y divide-border">;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             {contracts && contracts.map((contract) => (;
               <tr key={contract && contract.id}>;
                 <td className="px-6 py-4 whitespace-nowrap text-sm">;
@@ -169,6 +193,7 @@ export function RecentContractsTable({ contracts, onViewContract } RecentContrac
                     </span>;
                   ) : (;
                     <span className="inline-flex items-center px-2 && 2.5 py-0 && 0.5 rounded-full bg-muted text-muted-foreground text-xs">;
+<<<<<<< HEAD
 =======
             {contracts.map((contract) => (;
               <tr key={contract.id}>;
@@ -192,11 +217,14 @@ export function RecentContractsTable({ contracts, onViewContract } RecentContrac
                   ) :(;
                     <span className="inline-flex items-center px-2.5 py-0.5 rounded-full bg-muted text-muted-foreground text-xs">;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       Standard;
                     </span>;
                   )}
                 </td>;
                 <td className="px-6 py-4 whitespace-nowrap text-right text-sm">;
+<<<<<<< HEAD
 <<<<<<< HEAD
                   <Button
                     variant="ghost"
@@ -276,8 +304,13 @@ export function RecentContractsTable({ contracts, onViewContract }: RecentContra
               </tr>
             ))}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-                    onClick={() => onViewContract(contract && contract.id)}
 =======
+                  <Button
+                    variant="ghost"
+                    size="sm"
+    </>
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+                    onClick={() => onViewContract(contract && contract.id)}
 interface RecentContractsTableProps {
   contracts: Contract[];
   onViewContract: (contract_id: string) => void;
@@ -358,6 +391,7 @@ function RecentContractsTable() {
                     size="sm";
                     on_click={() => onViewContract (contract.id)}
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
                   <Button ;
@@ -365,10 +399,13 @@ function RecentContractsTable() {
                     size="sm";
                     onClick={() => onViewContract(contract.id)}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   >;
                     View;
                   </Button>;
                 </td>;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -379,6 +416,8 @@ function RecentContractsTable() {
               </tr>;
             ))}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           </tbody>;
         </table>;
       </div>;
@@ -389,6 +428,7 @@ function RecentContractsTable() {
 
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
               </tr>))}
           </tbody>;
@@ -398,12 +438,15 @@ function RecentContractsTable() {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               </tr>))}
           </tbody>;
         </table>;
       </div>;
     </>);
 }
+<<<<<<< HEAD
   ),;}
  interface Contract {
   id: string;
@@ -436,3 +479,5 @@ onViewContract: (contractId: string) => void
   );
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

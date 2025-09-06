@@ -1,5 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import { readJsonFile, writeJsonFile } from '../../../../utils/api/storage';
 import { requireSuperadminApi } from '../../../../utils/api/auth';
@@ -33,6 +34,11 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   if (req.method !== 'POST')
     return res.status(405).json({ error: 'Method not allowed' });  const { amount } = req.body |{};export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return res.status(405).json({ error: 'Method not allowed' });  const { amount } = req.body || {};export default function handler(req: NextApiRequest, res: NextApiResponse) {;
+=======
+  if (!requireSuperadminApi(req, res)) return;
+  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
+  const { amount } = req.body |{}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     return res.status(405).json({ error: 'Method not allowed' });  const { amount } = req.body || {};export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   if (!requireSuperadminApi(req, res)) return;
@@ -43,6 +49,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   const record = { amount, timestamp: new Date().toISOString() }
   commits.push(record);
   writeJsonFile('deal/soft-commits.json', commits);
+<<<<<<< HEAD
 
   if (req && req.method !== 'POST')
     return res && res.status(405).json({ error: 'Method not allowed' });  const { amount } = req && req.body || {};export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -59,11 +66,13 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 }
 
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
+}
+
   res.status(200).json(record)
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
@@ -98,6 +107,7 @@ function handler() {
   writeJsonFile ('deal / soft - commits.json', commits);
   res.status (200).json (record);  res.status (200).json (record);
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 }
@@ -107,3 +117,5 @@ function handler() {
 
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

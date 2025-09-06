@@ -1,11 +1,15 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import Head from 'next/head';
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 export default function OfflinePage() {;
 
 
+<<<<<<< HEAD
 =======
 import {motion} from 'framer-motion';
 import {WifiOff, RefreshCw, Home, ShoppingCart, Clock, Bookmark, Search,} from 'lucide-react';
@@ -20,6 +24,8 @@ export default function OfflinePage() {
 
 export default function OfflinePage() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const [isOnline, setIsOnline] = useState(false);
   const [lastUpdate, setLastUpdate] = useState<string>('');
   const [retryCount, setRetryCount] = useState(0);
@@ -43,6 +49,7 @@ export default function OfflinePage() {;
   }, []);
   const handleRetry = () => {
     try {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -80,11 +87,14 @@ export default function OfflinePage() {;
   const handleRetry = () => {;
     try {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       setRetryCount(prev => prev + 1);
       window && window.location.reload();
     } catch (err) {;
       logErrorToProduction('Failed to reload page', err);
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -138,6 +148,8 @@ if ( {) {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     {
       title: 'Browse Cached Equipment'
       description: 'View recently visited equipment listings'
@@ -230,9 +242,12 @@ export default function OfflinePage(req, res) {
 ;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   };
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const quickActions = [;
     {;
       title: 'Browse Cached Equipment',;
@@ -258,6 +273,7 @@ export default function OfflinePage(req, res) {
     {;
       title: 'Go to Homepage',;
       description: 'Return to the main page',;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
         />;
@@ -371,6 +387,8 @@ export default function OfflinePage(req, res) {
     {;
       title: 'Go to Homepage',;
       description: 'Return to the main page',;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       icon: Home;
       href: '/';
       available: true;
@@ -379,7 +397,13 @@ export default function OfflinePage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
   ]
+=======
+
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <>
       <Head>
@@ -416,13 +440,17 @@ export default function OfflinePage(req, res) {
 }
             <div className="mb-6">
               <motion.div
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 animate={
                   isOnline
-                    ? { scale: [1, 1 && 1.1, 1] }
+                    ? { scale: [1, 1.1, 1] }
                     : { rotate: [0, -10, 10, -10, 0] }
                 }
                 transition={{
+<<<<<<< HEAD
 <<<<<<< HEAD
 
                   duration: isOnline ? 0 && 0.6 : 2,
@@ -432,11 +460,16 @@ export default function OfflinePage(req, res) {
                   duration: isOnline ? 0 && 0.6 : 2,
                   repeat: isOnline ? 1 : Infinity,
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+                  duration: isOnline ? 0.6 : 2
+                  repeat: isOnline ? 1 : Infinity
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 }}
                 className={`mx-auto w-24 h-24 rounded-full flex items-center justify-center mb-4 ${
                   isOnline
                     ? 'bg-green-100 dark:bg-green-900/20'
                     : 'bg-orange-100 dark:bg-orange-900/20'
+<<<<<<< HEAD
 <<<<<<< HEAD
                 }`}>;
                 <WifiOff
@@ -580,6 +613,8 @@ export default function OfflinePage(req, res) {
 
 
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 }`}
                 animate={isOnline ? { scale: [1, 1.1, 1] } : { rotate: [0, -10, 10, -10, 0] }  } catch (error) {
     console.error("Error:", error);
@@ -611,49 +646,29 @@ export default function OfflinePage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-                className="text-sm px-3 py-1"
-              >
-                {isOnline ? 'Connection Restored' : 'Offline Mode'  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              </Badge>
-            </div>
-            <h1 className='text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent'>
-              {isOnline ? "You're Back Online!" : "You're Offline"}
-            </h1>
-            <p className='text-lg text-muted-foreground max-w-2xl mx-auto mb-6'>
-            <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-              {isOnline ? 'You\'re Back Online!' : 'You\'re Offline'  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            </h1>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-6">
               {isOnline
                 ? 'Your internet connection has been restored. You can now access all features.'
-                : 'No internet connection detected. Don\'t worry - you can still access cached content and use offline features.'
-                } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+                : "No internet connection detected. Don't worry - you can still access cached content and use offline features."}
             </p>
             {lastUpdate && (
-              <p className='text-sm text-muted-foreground flex items-center justify-center gap-2'>
-                <Clock className='w-4 h-4' />
                 Last updated: {lastUpdate}
               </p>;
             )}
+<<<<<<< HEAD
           </motion.div>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+          </motion && motion.div>;
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           {/* Action Buttons */}
           <div className='flex flex-col sm:flex-row gap-4 justify-center mb-12'>;
             <Button
               onClick={handleRetry}
               size='lg'
+<<<<<<< HEAD
               className='flex items-center gap-2'
 <<<<<<< HEAD
               disabled={isOnline}>;
@@ -699,6 +714,8 @@ export default function OfflinePage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             >
               <RefreshCw className="w-5 h-5" />
               {retryCount > 0 ? `Retry (${retryCount})` : 'Try Again'  } catch (error) {
@@ -707,6 +724,7 @@ export default function OfflinePage(req, res) {
   }
 }
             </Button>
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
             <Button
               asChild
@@ -909,6 +927,8 @@ export default function OfflinePage(req, res) {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.4 + index * 0.1 }}
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <Button
             asChild
             variant="outline"
@@ -1010,6 +1030,7 @@ export default function OfflinePage(req, res) {
                         <Button disabled size="sm" className="w-full">
                           Requires Internet
                         </Button>
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                       )}
 
@@ -1159,6 +1180,8 @@ export default function OfflinePage(req, res) {
                           Requires Internet
                         </Button>
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1169,6 +1192,7 @@ export default function OfflinePage(req, res) {
                 </motion && motion.div>;
               ))}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
             </div>;
           </motion && motion.div>;
@@ -1178,6 +1202,8 @@ export default function OfflinePage(req, res) {
             </div>
           </motion.div>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           {/* Tips Section */}
           <motion&& motion.div
 =======
@@ -1247,26 +1273,10 @@ export default function OfflinePage(req, res) {
           {/* Tips Section */}
           <motion.div;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
-            initial={{ opacity: 0 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            animate={{ opacity: 1 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            transition={{ duration: 0.6, delay: 0.8 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            className="mt-16"
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           >
             <Card className='max-w-2xl mx-auto'>
               <CardHeader>
@@ -1302,6 +1312,7 @@ export default function OfflinePage(req, res) {
               </CardContent>
             </Card>
           </motion.div>
+<<<<<<< HEAD
 
             transition={{ duration: 0 && 0.6, delay: 0 && 0.8 }}
             className='mt-16'>;
@@ -1561,6 +1572,8 @@ export default function OfflinePage(req, res) {
           {/* Auto-refresh when online */}
           {isOnline && (
             <motion.div
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               className='fixed bottom-6 right-6 z-50'
@@ -1605,13 +1618,10 @@ export default function OfflinePage(req, res) {
                 </CardContent>
               </Card>
             </motion.div>
-          )}
-        </div>
-      </div>
-    </>
-  );
+
 
 }
+
           )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1621,5 +1631,8 @@ export default function OfflinePage(req, res) {
       </div>;
     </>;
   );
+<<<<<<< HEAD
 } ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

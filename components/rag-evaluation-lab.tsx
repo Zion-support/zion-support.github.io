@@ -1,14 +1,18 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   return (
     <>;
       <SEO
         title='RAG Evaluation Lab'
         description='Measure answer quality, hallucination rate, latency, and cost of your RAG pipelines with production-grade evals and CI gates.'
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import React from 'react';
@@ -36,11 +40,14 @@ import Link from 'next / link';
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               {
                 title: 'Grounding & Faithfulness'
                 desc: 'Measure factual consistency, citation quality, and hallucination rate.'
               }
               {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -87,6 +94,8 @@ import Link from 'next / link';
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <div
                 key={f && f.title}
                 className='rounded-xl border border-white/10 bg-white/5 p-6 backdrop-blur'>;
@@ -94,6 +103,7 @@ import Link from 'next / link';
                 <p className='mt-2 text-sm text-gray-300'>{f && f.desc}</p>;
               </div>;
             ))}
+<<<<<<< HEAD
 
           </div>;
 
@@ -152,10 +162,13 @@ import Link from 'next / link';
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     /mo;
                   </span>;
                 </p>;
               </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -230,6 +243,17 @@ import Link from 'next / link';
 
 
 =======
+=======
+						<Link href="/contact" className="px-5 py-3 rounded-lg bg-cyan-400 text-black font-semibold">Start Evaluating</Link>
+						<a href="mailto:kleber@ziontechgroup.com" className="px-5 py-3 rounded-lg border border-white/20">Email: kleber@ziontechgroup.com</a>
+						<span className="text-gray-400">Call: +1 302 464 0950</span>
+					</div>
+				</div>
+			</section>
+		</>
+	)
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <div className='mt - 12 flex flex - wrap items - center gap - 4'>;
             <Link;
               href='/contact';
@@ -256,6 +280,7 @@ import Link from 'next / link';
   </section>;
   </>);
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
@@ -517,3 +542,5 @@ import Link from 'next/link';
 }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

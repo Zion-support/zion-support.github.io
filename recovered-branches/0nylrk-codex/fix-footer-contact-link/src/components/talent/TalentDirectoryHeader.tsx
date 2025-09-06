@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React from './react';
 
@@ -21,13 +22,22 @@ interface TalentDirectoryHeaderProps {
   title: string;
   description: string
 =======
+=======
+import React from "react";
+
+import React from "react",
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from './react';
 import React from "react";
 import React from "react",
 interface TalentDirectoryHeaderProps {
   title: string;
   description: string;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 
 export function TalentDirectoryHeader({
@@ -35,31 +45,40 @@ export function TalentDirectoryHeader({
   description,
 }: TalentDirectoryHeaderProps) {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <div className="bg-zion-blue-dark border-b border-zion-blue-light">
       <div className="container mx-auto px-4 py-8 md:py-12">
         <h1 className="text-3xl md:text-4xl font-bold text-white mb-2">
           {title}
         </h1>
-<<<<<<< HEAD
         <p className="text-zion-slate-light max-w-2xl">
-<<<<<<< HEAD
           {description}
         </p>
       </div>
     </div>
   )
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 interface TalentDirectoryHeaderProps {;
   title: string,;
   description: string;
 <<<<<<< HEAD
+=======
+import React from "react",;
+interface TalentDirectoryHeaderProps {;
+  title: string,;
+  description: string;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 
         </h1>;
         <p className="text-zion-slate-light max-w-2xl">;
+<<<<<<< HEAD
 =======
 =======
         <p className="text-zion-slate-light max-w-2xl">{description}</p>
@@ -104,18 +123,30 @@ export function TalentDirectoryHeader({ title, description }: TalentDirectoryHea
         </h1>
         <p className="text-zion-slate-light max-w-2xl">
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           {description}
         </p>;
       </div>;
     </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   );
-}
 
+<<<<<<< HEAD
 =======
 =======
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+        <p className="text-zion-slate-light max-w-2xl">
+        <p className="text-zion-slate-light max-w-2xl">
+
+}
+;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export /**
  * TalentDirectoryHeader - Function description
  */
@@ -129,6 +160,7 @@ function TalentDirectoryHeader() {
         <p className="text - zion - slate - light max - w-2xl">{description}</p>;
       </div>;
     </div>);
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -165,3 +197,6 @@ description: string
 }
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

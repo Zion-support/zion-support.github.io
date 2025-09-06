@@ -1,16 +1,20 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 import {AlertTriangle, RefreshCw} from 'lucide-react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 ;
 
 =======
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface Props {
   children: ReactNode,  fallback?: ReactNode;
 }
 interface State {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -50,6 +54,8 @@ class ErrorBoundary extends Component<Props, State> {;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       }
       return (
         <div className="min-h-screen flex items-center justify-center bg-gray-50">;
@@ -80,6 +86,7 @@ class ErrorBoundary extends Component<Props, State> {;
               </details>;
             )}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -94,6 +101,8 @@ class ErrorBoundary extends Component<Props, State> {;
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   has_error: boolean,
   error?: Error;
 }

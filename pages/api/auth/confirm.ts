@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
@@ -40,10 +41,13 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 } ;
 import type { NextApiRequest, NextApiResponse } from 'next';
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'GET' && req.method !== 'POST') {
     res.status(405).end()
 
+<<<<<<< HEAD
     return
   }
   // TODO: Implement confirmation logic here
@@ -63,3 +67,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

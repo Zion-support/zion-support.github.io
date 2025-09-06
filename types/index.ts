@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 export interface ContactInfo {;
 export interface ContactInfo {
@@ -13,31 +14,26 @@ export interface Service {;
 =======
 // Core Types
 export interface ContactInfo {
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   phone: string;
   email: string;
   address: string;
   site: string;
 }
-
 export interface Service {
-  id: string;
-  name: string;
-  description: string;
-  category: 'micro-saas' | 'ai-services' | 'it-services';
-  price: {
-    min: number;
-    max: number;
-    currency: string;
-  };
   features: string[];
   technologies: string[];
-  deliveryTime: string;
+  delivery_time: string;
   support: string;
   image?: string;
   popular?: boolean;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 }
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export interface ServiceCategory {
   title: string;
   description: string;
@@ -47,6 +43,7 @@ export interface ServiceCategory {
   color: string;
 }
 
+<<<<<<< HEAD
 export interface SEOProps {
   title?: string;
   description?: string;
@@ -155,9 +152,12 @@ export interface AnimationState {,
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 }
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export interface LoadingState {
-  isLoading: boolean;
+  is_loading: boolean;
   error?: string;
+<<<<<<< HEAD
   progress?: number;
 }
 <<<<<<< HEAD
@@ -172,6 +172,8 @@ export interface AnimationState {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 }
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export interface FormData {
   name: string;
   email: string;
@@ -179,6 +181,7 @@ export interface FormData {
   phone?: string;
   service?: string;
   message: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
   project?: string;
@@ -287,6 +290,8 @@ export interface Project {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 }
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export interface ContactForm {
   name: string;
   email: string;
@@ -295,6 +300,7 @@ export interface ContactForm {
   service: string;
   budget?: string;
   message: string;
+<<<<<<< HEAD
   preferredContact: 'email' | 'phone' | 'both';
 }
 <<<<<<< HEAD
@@ -668,13 +674,17 @@ export interface FAQ {
 export interface PricingPlan {
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   name: string;
   price: number;
   period: string;
   features: string[];
   popular?: boolean;
   cta: string;
+}
   href: string;
+<<<<<<< HEAD
 
 
   name: string;
@@ -686,29 +696,11 @@ export interface PricingPlan {
   popular?: boolean;
   cta: string;
   description: string;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
-export interface ApiResponse<T> {
-  success: boolean;
-  data?: T;
-  error?: string;
-  message?: string;
+;
 }
-export interface PaginationParams {
-  page: number;
-  limit: number;
-  sort?: string;
-  order?: 'asc' | 'desc';
-}
-export interface PaginatedResponse<T> {
-  data: T[];
-  pagination: {
-    page: number;
-    limit: number;
-    total: number;
-    pages: number;
-    hasNext: boolean;
-    hasPrev: boolean;
-  }
 }
 export interface PerformanceMetrics {
   fcp?: number;
@@ -718,10 +710,10 @@ export interface PerformanceMetrics {
   ttfb?: number;
 }
 export interface AccessibilitySettings {
-  highContrast: boolean;
-  fontSize: number;
-  reducedMotion: boolean;
-  screenReader: boolean;
+  high_contrast: boolean;
+  font_size: number;
+  reduced_motion: boolean;
+  screen_reader: boolean;
 }
 export interface UserPreferences {
   theme: 'light' | 'dark' | 'system';
@@ -733,6 +725,7 @@ export interface UserPreferences {
     marketing: boolean;
   }
 }
+<<<<<<< HEAD
 
 export interface NavigationItem {
   name: string;
@@ -813,6 +806,10 @@ export interface HeroSection {;
       href: string;
     }
 =======
+=======
+export interface CompanyInfo {
+  name: string;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   tagline: string;
   description: string;
   address: {
@@ -826,6 +823,7 @@ export interface HeroSection {;
     phone: string;
     email: string;
     website: string;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   }
   certifications: string[];
@@ -1004,12 +1002,17 @@ export interface ContactFormData {
   service: string;
   message: string;
 =======
+=======
+  }
+  certifications: string[];
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export interface ErrorInfo {
   message: string;
   code?: string;
   details?: any;
   timestamp: string;
-  userAgent?: string;
+  user_agent?: string;
   url?: string;
 }
 export interface FormField {
@@ -1018,102 +1021,11 @@ export interface FormField {
   type: 'text' | 'email' | 'tel' | 'textarea' | 'select' | 'checkbox' | 'radio';
   required: boolean;
   placeholder?: string;
-  options?: { value: string; label: string }[];
   validation?: {
     min?: number;
     max?: number;
     pattern?: string;
     message?: string;
-  };
-}
-
-export interface User {
-  id: string;
-  email: string;
-  name: string;
-  role: 'admin' | 'manager' | 'developer' | 'client' | 'guest';
-  permissions: string[];
-  profile: {
-    avatar?: string;
-    bio?: string;
-    skills: string[];
-    experience: number;
-    location: string;
-    timezone: string;
-  };
-  preferences: {
-    theme: 'light' | 'dark' | 'auto';
-    language: string;
-    notifications: {
-      email: boolean;
-      push: boolean;
-      sms: boolean;
-    };
-  };
-  activity: {
-    lastLogin: Date;
-    loginCount: number;
-    projects: string[];
-    tasks: string[];
-  };
-  subscription: {
-    plan: 'free' | 'basic' | 'premium' | 'enterprise';
-    status: 'active' | 'inactive' | 'cancelled' | 'expired';
-    startDate: Date;
-    endDate: Date;
-    features: string[];
-  };
-}
-
-export interface Notification {
-  id: string;
-  type: 'info' | 'success' | 'warning' | 'error';
-  title: string;
-  message: string;
-  timestamp: Date;
-  read: boolean;
-  action?: {
-    label: string;
-    url: string;
-  };
-  category: 'system' | 'project' | 'team' | 'client' | 'billing';
-  priority: 'low' | 'medium' | 'high';
-  expires?: Date;
-}
-
-export interface BaseComponentProps {
-  className?: string;
-  children?: React.ReactNode;
-  id?: string;
-  disabled?: boolean;
-  loading?: boolean;
-  onClick?: () => void;
-  type?: 'button' | 'submit' | 'reset';
-}
-
-export interface InputProps {
-  className?: string;
-  children?: React.ReactNode;
-  id?: string;
-  disabled?: boolean;
-  loading?: boolean;
-  onClick?: () => void;
-  type?: 'text' | 'email' | 'password' | 'tel' | 'url' | 'number';
-  placeholder?: string;
-  value?: string;
-  onChange?: (value: string) => void;
-  error?: string;
-  required?: boolean;
-}
-
-export interface ApiRequest {
-  method: 'GET' | 'POST' | 'PUT' | 'DELETE' | 'PATCH';
-  url: string;
-  data?: any;
-  params?: Record<string, any>;
-  headers?: Record<string, string>;
-}
-
 export interface Partner {
   name: string;
   logo: string;
@@ -1121,6 +1033,7 @@ export interface Partner {
   description: string;
   tier: 'platinum' | 'gold' | 'silver' | 'bronze';
 }
+<<<<<<< HEAD
 
 export interface FAQ {
   question: string;
@@ -1383,6 +1296,8 @@ export interface Award {
   image?: string;
 }
 export interface Certification {
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   name: string;
   issuer: string;
   date: string;
@@ -1442,9 +1357,6 @@ export interface Pagination {
   has_next: boolean;
   has_prev: boolean;
 }
-
-export interface APIResponse < T> {
-
   data: T;
   success: boolean;
   message?: string;
@@ -1457,13 +1369,11 @@ export interface ErrorResponse {
   errors: string[];
   code?: string;
 }
-
-export interface SuccessResponse < T> {
-
   success: true;
   data: T;
   message?: string;
 }
+<<<<<<< HEAD
 
 
 
@@ -1483,3 +1393,5 @@ export type Response < T> = SuccessResponse < T> | ErrorResponse;
 =======
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

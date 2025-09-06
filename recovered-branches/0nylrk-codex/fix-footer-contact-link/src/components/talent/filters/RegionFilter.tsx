@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -7,12 +8,15 @@
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 const REGION_OPTIONS = [
   { id: "North America", label: "North America" }
   { id: "Europe", label: "Europe" }
   { id: "Asia", label: "Asia" }
   { id: "South America", label: "South America" }
   { id: "Australia", label: "Australia" }
+<<<<<<< HEAD
 =======
 import {ChevronDown, ChevronUp} from "lucide-react";
 import {Checkbox} from "@/components/ui/checkbox";
@@ -32,16 +36,18 @@ import { Checkbox } from "@/components/ui/checkbox",
 import { RegionFilterProps } from "@/types/filters",
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { ChevronDown, ChevronUp } from "lucide-react";
 import { Checkbox } from "@/components/ui/checkbox";
 import { RegionFilterProps } from "@/types/filters";
->>>>>>> main
 const REGION_OPTIONS = [
   { id: "North America", label: "North America" },
   { id: "Europe", label: "Europe" },
   { id: "Asia", label: "Asia" },
   { id: "South America", label: "South America" },
   { id: "Australia", label: "Australia" },
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   { id: "Africa", label: "Africa" }
@@ -60,6 +66,8 @@ export function RegionFilter(): any ({ selectedRegions, toggleRegion, expanded, 
   { id: "Africa", label: "Africa" },
 ];
 >>>>>>> main
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 export function RegionFilter({
   selectedRegions,
@@ -68,7 +76,10 @@ export function RegionFilter({
   toggleSection,
   isMobileFilterOpen,
 }: RegionFilterProps) {
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <div className="mb-6 border-b border-zion-blue-light pb-6">
       <button
@@ -83,12 +94,15 @@ export function RegionFilter({
         )}
       </button>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 
 >>>>>>> main
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {expanded && (
         <div className="mt-4 space-y-2">
           {REGION_OPTIONS.map((region) => (
@@ -99,6 +113,7 @@ export function RegionFilter({
                 onCheckedChange={() => toggleRegion(region.id)}
                 className="border-zion-slate-light data-[state=checked]:bg-zion-purple data-[state=checked]:border-zion-purple"
               />
+<<<<<<< HEAD
               <label
                 htmlFor={`region-${region.id}`}
                 className="ml-2 text-sm text-zion-slate-light cursor-pointer"
@@ -116,10 +131,9 @@ const REGION_OPTIONS = [;
   { id: "Asia", label: "Asia" },;
   { id: "South America", label: "South America" },;
   { id: "Australia", label: "Australia" },;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   { id: "Africa", label: "Africa" }
-];
-export function RegionFilter({ selectedRegions, toggleRegion, expanded, toggleSection, isMobileFilterOpen }: RegionFilterProps) {;
-  return (;
 ];
 export function RegionFilter({
   selectedRegions
@@ -128,8 +142,7 @@ export function RegionFilter({
   toggleSection
   isMobileFilterOpen
 }: RegionFilterProps) {
-export function RegionFilter(): any ({ selectedRegions, toggleRegion, expanded, toggleSection, isMobileFilterOpen }: RegionFilterProps) {;
-  return (
+
     <div className="mb-6 border-b border-zion-blue-light pb-6">;
       <button
         onClick={toggleSection}
@@ -140,6 +153,7 @@ export function RegionFilter(): any ({ selectedRegions, toggleRegion, expanded, 
         ) : (;
           <ChevronDown className="h-4 w-4 text-zion-slate-light" />;
         )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -154,6 +168,8 @@ export function RegionFilter(): any ({ selectedRegions, toggleRegion, expanded, 
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <Checkbox
                 id={`region-${region && region.id}`}
                 checked={selectedRegions && selectedRegions.includes(region && region.id)}
@@ -161,26 +177,14 @@ export function RegionFilter(): any ({ selectedRegions, toggleRegion, expanded, 
                 className="border-zion-slate-light data-[state=checked]:bg-zion-purple data-[state=checked]:border-zion-purple";
               />;
               <label
-
-                htmlFor={`region-${region.id}`}
-                className="ml-2 text-sm text-zion-slate-light cursor-pointer"
-              >
-
-
                 {region.label}
               </label>
             </div>
           ))}
         </div>;
       )}
-
-    </div>;
-  );
-    </div>
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 import { ChevronDown, ChevronUp  } from './lucide-react';
 import { Checkbox  } from '@/components / ui / checkbox';
 import { RegionFilterProps  } from '@/types / filters';
@@ -193,6 +197,7 @@ const REGION_OPTIONS = [;
   { id: "Africa", label: "Africa" },
 ];
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -289,3 +294,5 @@ export function RegionFilter({ selectedRegions, toggleRegion, expanded, toggleSe
 }
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

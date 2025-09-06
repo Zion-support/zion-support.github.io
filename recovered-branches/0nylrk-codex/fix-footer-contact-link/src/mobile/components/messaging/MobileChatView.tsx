@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 
@@ -6,6 +7,8 @@
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useState } from "react";
 import {Avatar, AvatarImage, AvatarFallback} from "@/components/ui/avatar";
 import {Button} from "@/components/ui/button";
@@ -14,6 +17,7 @@ import {Send, PaperclipIcon, ChevronLeft, MoreVertical, Video, Phone} from "luci
 import {cn} from "@/lib/utils";
 import {useNavigate} from "react-router-dom";
 import {toast} from "sonner";
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 import React, { useState } from './react';
@@ -24,6 +28,8 @@ import { Send, PaperclipIcon, ChevronLeft, MoreVertical, Video, Phone } from './
 import { cn } from '@/lib / utils';
 import { use_navigate } from './react-router-dom';
 import { toast } from './sonner';
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useState } from "react",
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar",
 import { Button } from "@/components/ui/button",
@@ -32,6 +38,7 @@ import { Send, PaperclipIcon, ChevronLeft, MoreVertical, Video, Phone } from "lu
 import { cn } from "@/lib/utils",
 import { useNavigate } from "react-router-dom";
 import { toast } from "sonner";
+<<<<<<< HEAD
 interface Message {
 
   id: string
@@ -113,14 +120,18 @@ import { cn } from "@/lib/utils",;
 import { useNavigate } from "react-router-dom",;
 import { toast } from "sonner",;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface Message {;
   id: string,;
   content: string,;
   timestamp: string,;
   isMe: boolean,;
 <<<<<<< HEAD
-
+<<<<<<< HEAD
 =======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
 import React, { useState } from './react';
 import { Avatar, AvatarImage, AvatarFallback } from '@/components / ui / avatar';
 import { Button } from '@/components / ui / button';
@@ -129,29 +140,48 @@ import { Send, PaperclipIcon, ChevronLeft, MoreVertical, Video, Phone } from './
 import { cn } from '@/lib / utils';
 import { use_navigate } from './react-router-dom';
 import { toast } from './sonner';
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface Message {
   id: string,
   content: string,
   timestamp: string,
-
-
+  sender?: string;
+  avatar?: string;
+  status?: 'sent' | 'delivered' | 'read';
+}
 interface MobileChatViewProps {
   contact: {
 
     id: string
     name: string
     avatar?: string;
-
+interface Message {
+  id: string,
+  content: string,
+  timestamp: string,
   isMe: boolean,
   sender?: string,
   avatar?: string,
   status?: 'sent' | 'delivered' | 'read'
+<<<<<<< HEAD
 
 
 
 =======
+=======
+import React, { useState } from "react",;
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar",;
+import { Button } from "@/components/ui/button",;
+import { Input } from "@/components/ui/input",;
+import { Send, PaperclipIcon, ChevronLeft, MoreVertical, Video, Phone } from "lucide-react",;
+import { cn } from "@/lib/utils",;
+import { useNavigate } from "react-router-dom",;
+import { toast } from "sonner",;
+interface Message {;
+  id: string,;
+  content: string,;
+  timestamp: string,;
+  isMe: boolean,;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   sender?: string,;
   avatar?: string,;
   status?: 'sent' | 'delivered' | 'read';
@@ -169,6 +199,7 @@ interface MobileChatViewProps {;
   onSendMessage: (content: string) => void;
 }
 
+<<<<<<< HEAD
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
@@ -192,17 +223,18 @@ interface MobileChatViewProps {;
 
 export function MobileChatView(): any ({ contact, messages, onBack, onSendMessage }: MobileChatViewProps) {;
 
+=======
+  onSendMessage: (content: string) => void
+}
+export function MobileChatView({ contact, messages, onBack, onSendMessage }: MobileChatViewProps) {
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const [newMessage, setNewMessage] = useState("");
 
   const navigate = useNavigate();
-
-
-  const handleSend = () => {;
-    if (newMessage && newMessage.trim() !== "") {;
-
       onSendMessage(newMessage);
       setNewMessage("");
     }
+<<<<<<< HEAD
 
 
 =======
@@ -241,6 +273,8 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
       onSendMessage(newMessage),;
       setNewMessage("");
     }
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   },;
   const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {;
     if (e.key === 'Enter' && !e.shiftKey) {;
@@ -248,8 +282,8 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
       handleSend();
     }
   },
-
   
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -260,10 +294,13 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
 
 
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const startVideoCall = () => {
     const roomId = `mobile-${contact.id}`,
     toast.success("Starting video call", {
       description: `Connecting with ${contact.name}...`
+<<<<<<< HEAD
     });
     // Navigate to video call page
     navigate(`/call/${roomId}`)
@@ -285,10 +322,13 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
 
 
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const startAudioCall = () => {
     const roomId = `mobile-audio-${contact.id}`,
     toast.success("Starting audio call", {
       description: `Connecting with ${contact.name}...`
+<<<<<<< HEAD
     });
     // Navigate to video call page with audio-only flag
     navigate(`/call/${roomId}?audioOnly=true`)
@@ -305,6 +345,8 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <div className="flex flex-col h-full pb-safe">
       <header className="sticky top-0 z-10 bg-background border-b border-border">
@@ -343,15 +385,20 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
             key={message.id}
             className={cn(
 <<<<<<< HEAD
+<<<<<<< HEAD
               "flex";
 =======
               "flex",
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+              "flex",
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               message.isMe ? "justify-end" : "justify-start"
             )}
           >
             <div
               className={cn(
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -371,31 +418,34 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
                 message.isMe 
                   ? "bg-primary text-primary-foreground rounded-tr-none" 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   : "bg-muted rounded-tl-none"
               )}
             >
               <p>{message.content}</p>
               <div className={cn(
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 "text-xs mt-1 flex justify-end";
 
-                message.isMe ? "text-primary-foreground/80" : "text-muted-foreground"
-              )}>
-                "text-xs mt-1 flex justify-end",
-                message.isMe ? "text-primary-foreground/80" : "text-muted-foreground"
-              )}>
   },;
   const startVideoCall = () => {;
     const roomId = `mobile-${contact.id}`,;
     toast.success("Starting video call", {;
+<<<<<<< HEAD
   const handleSend = () => {;
     if (newMessage && newMessage.trim() !== "") {;
       onSendMessage(newMessage);
       setNewMessage("");
     }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     status?: string;
   }
   messages: Message[],
@@ -501,49 +551,53 @@ if ( {) {
                 "text - xs mt - 1 flex justify - end";
                 message.is_me ? "text - primary - foreground / 80" : "text - muted - foreground")}>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 {message.timestamp}
                 {message.is_me && message.status && (
                   <span className="ml - 1">;
                     {message.status === 'read' ? '✓✓' : '✓'}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   };
-
   const handleKeyDown = (e: React && React.KeyboardEvent<HTMLInputElement>) => {;
     if (e && e.key === 'Enter' && !e && e.shiftKey) {;
       e && e.preventDefault(),;
       handleSend();
     }
   };
-
   const startVideoCall = () => {;
     const roomId = `mobile-${contact && contact.id}`;
     toast && toast.success("Starting video call", {;
       description: `Connecting with ${contact && contact.name}...`;
     });
-
     // Navigate to video call page;
     navigate(`/call/${roomId}`);
   };
-
   const startAudioCall = () => {;
     const roomId = `mobile-audio-${contact && contact.id}`;
     toast && toast.success("Starting audio call", {;
       description: `Connecting with ${contact && contact.name}...`;
     });
-
     // Navigate to video call page with audio-only flag;
     navigate(`/call/${roomId}?audioOnly=true`);
   };
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   return (
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
 
 import React, { useState } from "react",;
@@ -628,13 +682,17 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage } Mobi
     navigate(`/call/${roomId}?audioOnly=true`);
   },;
   return (;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <div className="flex flex-col h-full pb-safe">;
       <header className="sticky top-0 z-10 bg-background border-b border-border">;
         <div className="flex items-center h-14 px-4">;
           <Button variant="ghost" size="icon" onClick={onBack}>;
             <ChevronLeft className="h-5 w-5" />;
           </Button>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
           <div className="flex items-center flex-1 gap-3 mx-2">;
@@ -651,6 +709,8 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage } Mobi
           </div>;
 
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           ;
           <div className="flex items-center flex-1 gap-3 mx-2">;
             <Avatar>;
@@ -664,11 +724,15 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage } Mobi
               </p>;
             </div>;
           </div>;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <div className="flex">;
             <Button variant="ghost" size="icon" onClick={startAudioCall}>;
               <Phone className="h-5 w-5" />;
             </Button>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
             <Button variant="ghost" size="icon" onClick={startVideoCall}>;
@@ -676,6 +740,8 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage } Mobi
             </Button>;
 
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             ;
             <Button variant="ghost" size="icon" onClick={startVideoCall}>;
               <Video className="h-5 w-5" />;
@@ -684,13 +750,17 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage } Mobi
             <Button variant="ghost" size="icon" onClick={startVideoCall}>;
               <Video className="h-5 w-5" />;
             </Button>;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <Button variant="ghost" size="icon">;
               <MoreVertical className="h-5 w-5" />;
             </Button>;
           </div>;
         </div>;
       </header>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       <div className="flex-1 overflow-y-auto p-4 space-y-4">;
@@ -710,6 +780,9 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage } Mobi
               )}>;
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+              )}>;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <p>{message && message.content}</p>;
               <divclassName={cn(
                 "text-xs mt-1 flex justify-end"
@@ -719,6 +792,7 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage } Mobi
                 {message && message.isMe && message && message.status && (;
                   <span className="ml-1">;
                     {message && message.status === 'read' ? '✓✓' : '✓'}
+<<<<<<< HEAD
 <<<<<<< HEAD
                   </span>;
 
@@ -760,31 +834,42 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage } Mobi
               <p>{message.content}</p>;
               <div className={cn(;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+                  </span>;
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
                 "text-xs mt-1 flex justify-end",
                 message.isMe ? "text-primary-foreground/80" : "text-muted-foreground"
               )}>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
                 "text-xs mt-1 flex justify-end";
                 message.isMe ? "text-primary-foreground/80" : "text-muted-foreground";
               )}>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 {message.timestamp}
                 {message.isMe && message.status && (
                   <span className="ml-1">
                     {message.status === 'read' ? '✓✓' : '✓'}
                   </span>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 )}
               </div>;
             </div>;
           </div>;
         ))}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       </div>;
@@ -801,10 +886,13 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage } Mobi
 <<<<<<< HEAD
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <Input
             value={newMessage}
             onChange={(e) => setNewMessage(e && e.target.value)}
             onKeyDown={handleKeyDown}
+<<<<<<< HEAD
 
             placeholder="Type a message...";
             className="flex-1";
@@ -963,3 +1051,5 @@ setNewMessage ("") contact.avatar
 }
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

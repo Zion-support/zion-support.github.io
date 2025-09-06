@@ -1,7 +1,10 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useEffect, useMemo, useState  } from 'react';
 import { useRouter  } from 'next/router';
 import ProgressBar from '../../components/learn/ProgressBar',
@@ -20,9 +23,8 @@ import CertificatePreview from '../../components/learn/CertificatePreview';
 import CoachWidget from '../../components/learn/CoachWidget';
 export default function CourseView() {;
   const router = useRouter();
-  const { courseId } = router.query as { courseId: string };
+  const { courseId } = router.query as { courseId: string }
   const [course, setCourse] = useState<any>(null);
-
   const [progress, setProgress] = useState<any>({
     percent: 0
     completedLessons: []
@@ -41,12 +43,16 @@ export default function CourseView() {;
         percent: 0
         completedLessons: []
       }
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       setProgress(cp);
       setCurrentLessonId(courseData?.course?.lessons?.[0]?.id |null);
     }
     load();
   }, [courseId]);
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   async function onFinalQuizComplete(score: number) {
@@ -96,6 +102,8 @@ export default function CourseView() {;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const currentLesson = useMemo(;
     () => course?.lessons?.find((l: any) => l && l.id === currentLessonId),;
     [course, currentLessonId];
@@ -124,10 +132,14 @@ export default function CourseView() {;
     // For demo, simply mark as completed when quiz attempted;
     if (currentLessonId) markLessonComplete(currentLessonId);  }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   async function onFinalQuizComplete(): any (score: number) {;
     const needed = course?.finalQuiz?.passThreshold || 0;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
@@ -135,6 +147,7 @@ export default function CourseView() {;
     setFinalPassed(passed);  }
 
   if (!course) return <div>Loading...</div>;
+<<<<<<< HEAD
   return (
 <<<<<<< HEAD
 
@@ -160,12 +173,15 @@ export default function CourseView() {;
               {course && course.lessons?.map((l: any) => (;
                 <li key={l && l.id}>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   <button
                     className={`w-full text-left px-3 py-2 rounded border ${currentLessonId === l && l.id ? 'bg-blue-50 dark:bg-blue-900/20' : ''}`}
                     onClick={() => setCurrentLessonId(l && l.id)}
                   >                    {l && l.title}
                   </button>;
                 </li>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -177,6 +193,8 @@ export default function CourseView() {;
 
 import {useEffect, useMemo, useState} from 'react';
 import {useRouter} from 'next/router';
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useEffect, useMemo, useState } from 'react';
 import { useRouter } from 'next/router';
 
@@ -184,6 +202,7 @@ import ProgressBar from '../../components/learn/ProgressBar';
 import Quiz from '../../components/learn/Quiz';
 import CertificatePreview from '../../components/learn/CertificatePreview';
 import CoachWidget from '../../components/learn/CoachWidget';
+<<<<<<< HEAD
 
 
   return (
@@ -534,6 +553,8 @@ import ProgressBar from '../../components/learn/ProgressBar';
 import Quiz from '../../components/learn/Quiz';
 import CertificatePreview from '../../components/learn/CertificatePreview';
 import CoachWidget from '../../components/learn/CoachWidget';
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export default function CourseView(req, res) {
   try {
   const router = useRouter();
@@ -600,37 +621,12 @@ export default function CourseView(req, res) {
   }
 }
   if (!course) return <div>Loading...</div>,
+
+
   return (
     <div className="grid lg:grid-cols-3 gap-6">
       <div className="lg:col-span-2 space-y-4">
         <div>
-          <h1 className='text-2xl font-semibold'>{course.title}</h1>
-          <div className='text-gray-500 text-sm'>
-            {course.category} • {course.level}
-          </div>
-          <div className='mt-3'>
-            <ProgressBar value={progress.percent |0} />
-            <div className='text-xs text-gray-500 mt-1'>
-              Progress: {progress.percent |0}%
-            </div>
-          </div>
-        </div>
-        <div className='grid lg:grid-cols-5 gap-4'>
-          <aside className='lg:col-span-2 border rounded p-3 h-max'>
-            <div className='font-medium mb-2'>Lessons</div>
-            <ul className='space-y-2'>
-              {course.lessons?.map((l: any) => (
-                <li key={l.id}>
-                  <button
-                    className={`w-full text-left px-3 py-2 rounded border ${currentLessonId === l.id ? 'bg-blue-50 dark:bg-blue-900/20' : ''}`}
-                    onClick={() => setCurrentLessonId(l.id)}
-                  >                    {l.title}
-                  </button>
-                </li>
-              ))}
-            </ul>
-          </aside>
-          <section className='lg:col-span-3 space-y-4'>
           <h1 className="text-2xl font-semibold">{course.title}</h1>
           <div className="text-gray-500 text-sm">{course.category} • {course.level}</div>
           <div className="mt-3">
@@ -638,12 +634,6 @@ export default function CourseView(req, res) {
             <div className="text-xs text-gray-500 mt-1">Progress: {progress.percent || 0}%</div>
           </div>
         </div>
-        <div className='grid lg:grid-cols-5 gap-4'>
-          <aside className='lg:col-span-2 border rounded p-3 h-max'>
-            <div className='font-medium mb-2'>Lessons</div>
-            <ul className='space-y-2'>
-              {course.lessons?.map((l: any) => (
-                <li key={l.id}>
                   <button
                     className={`w-full text-left px-3 py-2 rounded border ${currentLessonId === l.id ? 'bg-blue-50 dark:bg-blue-900/20' : ''}`}
                     onClick={() => setCurrentLessonId(l.id)}
@@ -666,7 +656,34 @@ export default function CourseView(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+
+            </ul>;
+          </aside>;
+
+          <section className='lg:col-span-3 space-y-4'>;
+            {currentLesson ? (;
+              <div className='border rounded p-4'>;
+                <div className='font-medium'>{currentLesson && currentLesson.title}</div>;
+                <div className='mt-2 text-sm whitespace-pre-line'>;
+                  {currentLesson && currentLesson.content}
+                </div>;
+                {currentLesson && currentLesson.quiz?.questions?.length ? (;
+                  <div className='mt-4'>;
+
+                    <Quiz
+                      questions={currentLesson && currentLesson.quiz.questions}
+                      onComplete={onModuleQuizComplete}
+                    />;
+                  </div>;
+                ) : (;
+                  <button
+                    className='mt-3 px-4 py-2 bg-green-600 text-white rounded'
+                    onClick={() => markLessonComplete(currentLesson && currentLesson.id)}
+                  >;
+                    Mark Complete;
                   </button>;
+<<<<<<< HEAD
                 </li>;
               ))  } catch (error) {
     console.error("Error:", error);
@@ -677,6 +694,8 @@ export default function CourseView(req, res) {
           </aside>
           <section className="lg:col-span-3 space-y-4">
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             {currentLesson ? (
               <div className="border rounded p-4">
                 <div className="font-medium">{currentLesson.title}</div>
@@ -687,6 +706,7 @@ export default function CourseView(req, res) {
                   </div>
                 ) : (
                   <button className="mt-3 px-4 py-2 bg-green-600 text-white rounded" onClick={() => markLessonComplete(currentLesson.id)}>Mark Complete</button>
+<<<<<<< HEAD
 <<<<<<< HEAD
                 )}
               </div>
@@ -708,11 +728,14 @@ export default function CourseView(req, res) {
               <div className="text-sm text-gray-500">Select a lesson</div>
             )}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             {course.finalQuiz?.questions?.length ? (
               <div className="border rounded p-4">
                 <div className="font-medium mb-2">Final Certification Quiz</div>
                 <Quiz questions={course.finalQuiz.questions} onComplete={onFinalQuizComplete} />
                 {finalPassed && (
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -739,11 +762,14 @@ export default function CourseView(req, res) {
   }
 }
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           </section>
         </div>
       </div>
 
       <div className="space-y-4">
+<<<<<<< HEAD
 
 
 
@@ -850,6 +876,8 @@ export default function CourseView(req, res) {
         </div>
       </div>
       <div className="space-y-4">
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <CoachWidget />
         <div className="border rounded p-3">
           <div className="font-medium">Profile Boost</div>
@@ -858,13 +886,19 @@ export default function CourseView(req, res) {
         </div>
       </div>
     </div>
-);
 
 }
   )
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
 }
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+
+
+
+
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -32,6 +33,12 @@ import OpenAI from 'openai';
 <<<<<<< HEAD
 
 =======
+=======
+
+
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import type { NextApiRequest, NextApiResponse } from 'next';
 import OpenAI from 'openai';
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
@@ -48,13 +55,19 @@ function isRateLimited(ip: string): boolean {
   if (!limited) {
     bucket.timestamps.push(now);
   }
-  ipToRequests[ip] = bucket;
-  return limited;
   ipToRequests[ip] = bucket,
   return limited
   ipToRequests[ip] = bucket;
   return limited;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  if (!limited) {
+    bucket.timestamps.push(now);
+  }
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -62,11 +75,14 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(405).json({ error: 'Method Not Allowed' })
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY })
 // In-memory simple rate limiter (per IP)
@@ -78,12 +94,15 @@ function isRateLimited(ip: string): boolean {
   const bucket = ipToRequests[ip] |{ timestamps: [] }
   // Drop old timestamps
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
   bucket.timestamps = bucket.timestamps.filter(ts => now - ts < RATE_LIMIT_WINDOW_MS)
   const limited = bucket.timestamps.length >= RATE_LIMIT_MAX_REQUESTS
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   if (!limited) {
     bucket.timestamps.push(now)
   }
@@ -96,6 +115,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
   // Auth via Bearer token
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -103,6 +123,8 @@ const authHeader = req.headers.authorization |''
   const token = authHeader.startsWith('Bearer ') ? authHeader.slice(7) : undefined
   if (!token |token !== process.env.OPERATOR_API_TOKEN) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     return res.status(401).json({ error: 'Unauthorized' })
   }
   // Rate limit
@@ -130,10 +152,12 @@ const sys = system |'You are a professional writing assistant. Write clear, conc
     return res.status(200).json({ text })
   } catch (err: any) {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 }
 
-=======
 import type { NextApiRequest, NextApiResponse } from 'next',
 import OpenAI from 'openai',
 const openai = new OpenAI ({ api_key: process.env.OPENAI_API_KEY }),
@@ -209,9 +233,8 @@ const sys = system || 'You are a professional writing assistant. Write clear, co
 
 ;
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
+<<<<<<< HEAD
 =======
 
 }
@@ -222,10 +245,13 @@ const sys = system || 'You are a professional writing assistant. Write clear, co
     return res.status(500).json({ error: 'Internal Server Error' })
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     console.error('Operator error', err),
     return res.status(500).json({ error: 'Internal Server Error' })
   };
 };
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -236,6 +262,9 @@ const sys = system || 'You are a professional writing assistant. Write clear, co
 
     console.error('Operator error', err);
     return res.status(500).json({ error: 'Internal Server Error' });
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     console.error('Operator error', err);
     return res.status(500).json({ error: 'Internal Server Error' });
   }
@@ -285,6 +314,7 @@ export default async function handler(req, res) {
   
 }
   
+<<<<<<< HEAD
 
 }
 
@@ -296,3 +326,5 @@ export default async function handler(req, res) {
 }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

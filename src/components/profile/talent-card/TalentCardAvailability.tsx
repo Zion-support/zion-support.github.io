@@ -1,29 +1,7 @@
-interface TalentCardAvailabilityProps {
-  availability_type: string;
-}
-
-export /**
- * TalentCardAvailability - Function description
- */
-function TalentCardAvailability() {
-  // Format availability status;
-  const getAvailabilityColor = (status: string) =>: any {    switch (status) {
-      case 'full - time':;
-        return 'bg - green - 500 / 20 text - green - 400';
-      case 'part - time':;
-        return 'bg - yellow - 500 / 20 text - yellow - 400';
-      case 'project - based':;
-        return 'bg - blue - 500 / 20 text - blue - 400',
-      default:;
-        return 'bg - gray - 500 / 20 text - gray - 400';
-
-    }
-  } return 'bg - gray - 500 / 20 text - gray - 400';
-
-
 import { Clock } from 'lucide-react'
 interface TalentCardAvailabilityProps {
   availabilityType: string
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -61,14 +39,19 @@ export function TalentCardAvailability({ availabilityType }: TalentCardAvailabil
         return 'bg-gray-500/20 text-gray-400'
     }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         return 'bg-blue-500/20 text-blue-400',;
       default:;
         return 'bg-gray-500/20 text-gray-400';
     };
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   }; return 'bg-gray-500/20 text-gray-400'
     }
   }
@@ -92,12 +75,22 @@ export function TalentCardAvailability({ availabilityType }: TalentCardAvailabil
   const getAvailabilityLabel = (status: string) => {
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+  }; return 'bg-gray-500/20 text-gray-400'
+    }
+  }
+  const getAvailabilityLabel = (status: string,) => {
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
   }; return 'bg-gray-500/20 text-gray-400'
     }
   }
   const getAvailabilityLabel = (status: string,) => {
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     switch (status) {
       case 'full-time':
         return 'Full-time'
@@ -108,12 +101,16 @@ export function TalentCardAvailability({ availabilityType }: TalentCardAvailabil
       default:
         return status
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   }
     >
       <Clock className='h-3 w-3' />
 
+<<<<<<< HEAD
       <span>{getAvailabilityLabel(availabilityType)}</span>
     </div>
   )
@@ -127,6 +124,11 @@ import React from "react",;
 =======
 import React from "react",;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+import React from 'react';
+
+import React from "react",;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { Clock } from 'lucide-react';
 interface TalentCardAvailabilityProps {;
   availabilityType: string;
@@ -156,6 +158,7 @@ export function TalentCardAvailability(): any ({ availabilityType }: TalentCardA
       default:;
         return 'bg-gray-500/20 text-gray-400';
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
   };        return 'bg-gray-500/20 text-gray-400';
 
@@ -231,11 +234,16 @@ ursor/fix-website-loading-errors-and-merge-6662
   return (
     <div className={`flex items-center gap-1 px-2 py-0.5 rounded-full text-xs ${getAvailabilityColor(availabilityType)}`}>
       <Clock className="h-3 w-3" />
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
       <span>{getAvailabilityLabel(availabilityType)}</span>
     </div>
   )
 }
+<<<<<<< HEAD
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

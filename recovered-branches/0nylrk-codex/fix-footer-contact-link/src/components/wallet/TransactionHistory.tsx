@@ -1,4 +1,3 @@
-
 import React from "react";
 import {useWallet} from "@/hooks/useWallet";
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
@@ -8,6 +7,7 @@ import {Badge} from "@/components/ui/badge";
 import {formatDistanceToNow} from "date-fns";
 export function TransactionHistory() {;
   const { transactions, loading } = useWallet();
+<<<<<<< HEAD
 
 <<<<<<< HEAD
   if (loading) {;
@@ -55,6 +55,8 @@ export function TransactionHistory() {;
 =======
 
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from "react",
 import { useWallet } from "@/hooks/useWallet",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
@@ -69,8 +71,13 @@ import { formatDistanceToNow } from "date-fns",
 export function TransactionHistory() {
   const { transactions, loading } = useWallet(),
 
+  if (loading) {;
+
+
+
   if (loading) {
     return (
+<<<<<<< HEAD
       <Card>
         <CardHeader>
           <CardTitle>Transaction History</CardTitle>
@@ -125,6 +132,8 @@ export function TransactionHistory() {;
   const { transactions, loading } = useWallet(),;
   if (loading) {;
     return (;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <Card>;
         <CardHeader>;
           <CardTitle>Transaction History</CardTitle>;
@@ -133,6 +142,7 @@ export function TransactionHistory() {;
       </Card>;
     );
   }
+<<<<<<< HEAD
 ;
   const earnTransactions = transactions.filter(tx => tx.transaction_type === 'earn');
   const burnTransactions = transactions.filter(tx => tx.transaction_type === 'burn');
@@ -229,6 +239,8 @@ export function TransactionHistory() {;
     </Card>
   )
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 import React from "react",;
 import { useWallet } from "@/hooks/useWallet",;
@@ -254,13 +266,6 @@ export function TransactionHistory() {;
   const burnTransactions = transactions.filter(tx => tx.transaction_type === 'burn');
   return (;
 
-    ),;
-  }
-;
-  const earnTransactions = transactions.filter(tx => tx.transaction_type === 'earn'),;
-  const burnTransactions = transactions.filter(tx => tx.transaction_type === 'burn'),;
-;
-  return (;
     <Card>;
       <CardHeader>;
         <CardTitle>Transaction History</CardTitle>;
@@ -274,6 +279,7 @@ export function TransactionHistory() {;
           </TabsList>;
           <TabsContent value="earned">;
             <ScrollArea className="h-64">;
+<<<<<<< HEAD
                   ))}
               {earnTransactions.length === 0 ? (;
                 <p className="text-center py-8 text-muted-foreground">No tokens earned yet</p>;
@@ -301,6 +307,8 @@ export function TransactionHistory() {;
 <<<<<<< HEAD
               {burnTransactions && burnTransactions.length === 0 ? (;
                 <p className="text-center py-8 text-muted-foreground">No tokens spent yet</p>;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               ) : (;
                 <div className="space-y-2 mt-2">;
                   {burnTransactions && burnTransactions.map(tx => (;
@@ -315,16 +323,19 @@ export function TransactionHistory() {;
                         -{tx && tx.amount} ZION$;
                       </Badge>;
                     </div>;
-
                   ))}
                 </div>;
               )}
+<<<<<<< HEAD
 
 =======
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   ))}
-                </div>;
+                </div>
               )}
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import React from './react';
 import { use_wallet } from '@/hooks / use_wallet';
@@ -426,10 +437,13 @@ if ( {) {
                 </div>;
               )}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             </ScrollArea>;
           </TabsContent>;
         </Tabs>;
       </CardContent>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     </Card>);
@@ -456,3 +470,5 @@ return (<Card> <CardHeader> <CardTitle>Transaction History</CardTitle> <CardDesc
 }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

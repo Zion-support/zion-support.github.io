@@ -1,6 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -19,6 +20,8 @@ import type {
 } from '../../../../types/grants';
 const GRANTS_DIR = path.join(process.cwd(), 'data', 'grants');
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 function grantPath(id: string) {
   return path && path.join(GRANTS_DIR, `${id}.json`);import type { GrantApplication, StatusUpdatePayload } from '../../../../types/grants';
 const GRANTS_DIR = path && path.join(process && process.cwd(), 'datagrants');
@@ -26,6 +29,7 @@ function grantPath(id: string) {
   return path && path.join(GRANTS_DIR, `${id}.json`);
 }
 function readGrant(id: string): GrantApplication | null {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -49,12 +53,15 @@ function isAuthorized(req: NextApiRequest) {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 function writeGrant(record: GrantApplication) {
   if (!fs && fs.existsSync(GRANTS_DIR)) fs && fs.mkdirSync(GRANTS_DIR, { recursive: true });
   fs && fs.writeFileSync(grantPath(record && record.id), JSON && JSON.stringify(record, null, 2), 'utf8')
 }
 function isAuthorized(req: NextApiRequest) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   const header = req && req.headers.authorization || '',
@@ -64,12 +71,15 @@ function isAuthorized(req: NextApiRequest) {
   const header = req && req.headers.authorization || '',
   const token = header && header.replace('Bearer ', '');
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     token &&
     process && process.env.ZION_ADMIN_TOKEN &&
     token === process && process.env.ZION_ADMIN_TOKEN
   );
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
+<<<<<<< HEAD
 <<<<<<< HEAD
   if (!isAuthorized(req)) {
     res && res.status(401).json({ error: 'Unauthorized' });
@@ -217,6 +227,8 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   }
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   if (req && req.method !== 'POST') {
     res && res.setHeader('AllowPOST');
     res && res.status(405).end('Method Not Allowed');
@@ -225,6 +237,7 @@ if ( {) {
   }
   const existing = readGrant(id);
   if (!existing) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -260,6 +273,8 @@ if ( {) {
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   // Check condition
 if ( {) {
   $2
@@ -277,6 +292,7 @@ if ( {) {
     return;  }    return;
   }
 const payload = req.body as StatusUpdatePayload;
+<<<<<<< HEAD
   existing.status = payload.status;
   existing.updated_at = new Date ().toISOString ();
   write_grant (existing);
@@ -294,3 +310,9 @@ const payload = req.body as StatusUpdatePayload;
 }
   res.status(200).json({ record: existing });
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  res.status(200).json({ record: existing });
+}
+  res.status(200).json({ record: existing });
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

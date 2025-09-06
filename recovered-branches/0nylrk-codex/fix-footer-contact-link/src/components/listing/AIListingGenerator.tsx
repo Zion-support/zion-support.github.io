@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 
@@ -6,6 +7,8 @@
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useState } from "react";
 import {useToast} from "@/hooks/use-toast";
 import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card";
@@ -15,16 +18,16 @@ import {AIListingForm} from "./AIListingForm";
 import {GeneratedContentDisplay} from "./GeneratedContentDisplay";
 import {LoadingContentSkeleton} from "./LoadingContentSkeleton";
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useState } from "react",
 import { useToast } from "@/hooks/use-toast",
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
 import { Sparkles } from "lucide-react",
 import { supabase } from "@/integrations/supabase/client",
 import { AIListingForm } from "./AIListingForm",
-import { GeneratedContentDisplay } from "./GeneratedContentDisplay";
-import { LoadingContentSkeleton } from "./LoadingContentSkeleton";
-interface GeneratedContent {
 import { GeneratedContentDisplay } from "./GeneratedContentDisplay",
 import { LoadingContentSkeleton } from "./LoadingContentSkeleton",
 interface GeneratedContent {
@@ -98,13 +101,17 @@ import { supabase } from "@/integrations/supabase/client",;
 import { AIListingForm } from "./AIListingForm",;
 import { GeneratedContentDisplay } from "./GeneratedContentDisplay",;
 import { LoadingContentSkeleton } from "./LoadingContentSkeleton",;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface GeneratedContent {;
   description: string,;
   tags: string[],;
   suggestedPrice: {;
     min: number,;
     max: number;
+<<<<<<< HEAD
 <<<<<<< HEAD
   };
   keyPoints: string[];
@@ -116,6 +123,8 @@ interface AIListingGeneratorProps {;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     title?: string;
     category?: string;
     keyFeatures?: string;
@@ -123,13 +132,17 @@ interface AIListingGeneratorProps {;
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export function AIListingGenerator(): any ({ onApplyGenerated, initialValues = {} }: AIListingGeneratorProps) {;
   const { toast } = useToast();
   const [isLoading, setIsLoading] = useState(false);
   const [generatedContent, setGeneratedContent] = useState<GeneratedContent | null>(null);
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -210,11 +223,14 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
         throw new Error(error.message);
   const handle_generate = async ({
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     title;
     category;
     key_features;
     target_audience;
   }: {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -230,19 +246,25 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     try {
       const { data, error } = await supabase.functions.invoke ('ai - listing - generator', {
         body: { title, category, key_features, target_audience }
       });
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       }
       if (data.error) {
         throw new Error(data.error)
       }
+<<<<<<< HEAD
 
 
 
@@ -252,6 +274,8 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
 =======
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       setGeneratedContent(data.generated);
       toast({
         title: "Content Generated"
@@ -264,6 +288,7 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
         description: error instanceof Error ? error.message : "Failed to generate content. Please try again."
         variant: "destructive"
       })
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -296,6 +321,8 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
         </CardHeader>
         <CardContent>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ;
       // Check condition
 if ( {) {
@@ -321,11 +348,11 @@ if ( {) {
         description: error instanceof Error ? error.message : "Failed to generate content. Please try again.",
         variant: "destructive";
       });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     } finally {
       setIsLoading (false);
     }
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -440,6 +467,8 @@ if ( {) {
             isLoading={isLoading} 
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             initialValues={initialValues}
           />;
         </CardContent>;
@@ -450,12 +479,13 @@ if ( {) {
       {generatedContent && !isLoading && (;
         <GeneratedContentDisplay content={generatedContent} onApply={handleApply} />;
       )}
-
-
-
+    </div>
+  )
+}
     </div>;
   );
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
@@ -491,6 +521,9 @@ if ( {) {
           </p>;
         </CardHeader>;
         <CardContent>;
+=======
+;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <AIListingForm;
             on_submit={handle_generate}
             is_loading={is_loading}
@@ -502,25 +535,8 @@ if ( {) {
       {generated_content && !is_loading && (
         <GeneratedContentDisplay content={generated_content} on_apply={handle_apply} />)}
     </div>);
-
-import React, { useState } from "react",;
-import { useToast } from "@/hooks/use-toast",;
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",;
-import { Sparkles } from "lucide-react",;
-import { supabase } from "@/integrations/supabase/client",;
-import { AIListingForm } from "./AIListingForm",;
-import { GeneratedContentDisplay } from "./GeneratedContentDisplay",;
-import { LoadingContentSkeleton } from "./LoadingContentSkeleton",;
-;
-interface GeneratedContent {;
-  description:string,;
-  tags:string[],;
-  suggestedPrice:{;
-    min:number,;
-    max:number;
-  },;
-  keyPoints:string[];
 }
+<<<<<<< HEAD
 ;
 interface AIListingGeneratorProps {;
   onApplyGenerated?:(content:GeneratedContent) => void,;
@@ -622,3 +638,5 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} } AILi
 }
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

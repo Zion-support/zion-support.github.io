@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -17,28 +18,19 @@ export interface Service {id: string;
   category: 'AI Services' | 'IT Services' | 'Micro SAAS' | 'Blockchain' | 'IoT & Edge' | 'Cybersecurity' | 'Cloud & DevOps' | 'Data & Analytics';
   description: string;
   features: string[];
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   pricing: {;
     starter: string;
     professional: string;
     enterprise: string;
     custom?: string;
-  },
-  technology_stack: string[],
-  benefits: string[],
-  use_cases: string[],
-  status: 'active' | 'beta' | 'coming - soon',
-  priority: number,
-  demo_url?: string,
-  documentation_url?: string,
-  contact_info: {
-    email: string,
-    phone: string,
-
     address: string;
   }
 }
 export const services: Service[] = [;
   // AI Services;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
   {
@@ -734,3 +726,5 @@ export const getCategories = () => {;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

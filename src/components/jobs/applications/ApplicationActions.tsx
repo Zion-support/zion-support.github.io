@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import Link from 'next/link'
 import {
@@ -123,6 +124,8 @@ import Link from "next/link";
             onClick={() => onStatusChange(application.id, 'rejected')}
             className='text-red-600'          >            onClick={() => onStatusChange(application.id, "hired")}
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import Link from "next/link",
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import { 
@@ -145,6 +148,9 @@ interface ApplicationActionsProps {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export function ApplicationActions({
   application;
   processingId;
@@ -181,15 +187,13 @@ export function ApplicationActions({
             onClick={() => onStatusChange(application.id, "shortlisted")}
           >
             Shortlist
+<<<<<<< HEAD
 =======
             Reject
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           </DropdownMenuItem>
-      <Button
-        variant="default"
-        size="sm"
-        asChild
-      >
           <DropdownMenuItem 
             onClick={() => onStatusChange(application.id, "interview")}
           >
@@ -211,14 +215,16 @@ export function ApplicationActions({
           </DropdownMenuItem>
         </DropdownMenuContent>
       </DropdownMenu>
-
       
 
       
       
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <Button 
         variant="default" 
         size="sm"
@@ -248,6 +254,7 @@ export function ApplicationActions({
             onClick={() => onStatusChange(application && application.id, "rejected")}
             className="text-red-600";
 
+<<<<<<< HEAD
 =======
       
       
@@ -284,6 +291,8 @@ import {;
 } from "@/components/ui/dropdown-menu",;
 import { Button } from "@/components/ui/button",;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import Link from 'next / link';
 import {
   DropdownMenu,
@@ -292,6 +301,19 @@ import {
   DropdownMenuTrigger,
 } from '@/components / ui / dropdown - menu';
 import { Button } from '@/components / ui / button';
+          Contact
+        </Link>
+      </Button>
+    </div>
+  )
+import Link from "next/link",;
+import {;
+  DropdownMenu,;
+  DropdownMenuContent,;
+  DropdownMenuItem,;
+  DropdownMenuTrigger;
+} from "@/components/ui/dropdown-menu",;
+import { Button } from "@/components/ui/button",;
 import { Eye, ChevronDown, Loader2 } from 'lucide-react';
 import { JobApplication, ApplicationStatus } from '@/types / jobs';
 interface ApplicationActionsProps {
@@ -340,11 +362,15 @@ function ApplicationActions() {
             Shortlist;
           </DropdownMenuItem>;
           <DropdownMenuItem;
+<<<<<<< HEAD
             on_click={() => onStatusChange (application.id, 'interview')}
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           >;
             Schedule Interview;
           </DropdownMenuItem>;
           <DropdownMenuItem;
+<<<<<<< HEAD
             on_click={() => onStatusChange (application.id, 'hired')}          >;
             Shortlist;
           </DropdownMenuItem>;
@@ -354,10 +380,13 @@ function ApplicationActions() {
           </DropdownMenuItem>;
           <DropdownMenuItem;
             on_click = {() => onStatusChange (application.id, "hired"), }
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           >;
             Hire;
           </DropdownMenuItem>;
           <DropdownMenuItem;
+<<<<<<< HEAD
 <<<<<<< HEAD
             on_click={() => onStatusChange (application.id, 'rejected')}
             className='text - red - 600'          >            on_click={() => onStatusChange (application.id, "hired")}
@@ -372,12 +401,15 @@ function ApplicationActions() {
 =======
             onClick={() => onStatusChange(application.id, "rejected")}
             className="text-red-600";
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           >;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
             Reject;
           </DropdownMenuItem>;
         </DropdownMenuContent>;
       </DropdownMenu>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -421,3 +453,5 @@ ursor/fix-website-loading-errors-and-merge-6662
 ;
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

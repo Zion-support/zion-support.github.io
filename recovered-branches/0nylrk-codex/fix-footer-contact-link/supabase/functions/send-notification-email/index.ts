@@ -1,11 +1,15 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server && server.ts",
 import {createClient} from "https: //esm ;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
+<<<<<<< HEAD
 =======
 
 
@@ -21,6 +25,8 @@ const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2",
 import {serve} from "https: //deno.land/std@0.190.0/http/server.ts",;
@@ -28,25 +34,32 @@ import {createClient} from "https: //esm.sh/@supabase/supabase-js@2";
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2",
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface EmailRequest {
   user_id: string
   notification_id: string
 }
 serve(async (req) => {
   // Handle CORS preflight requests
+<<<<<<< HEAD
 <<<<<<< HEAD
   if (req && req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders })
@@ -96,11 +109,14 @@ serve(async (req) => {
     ),
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     // Get notification details and user email
     const { data: notification, error: notificationError } = await supabaseClient
       .from('notifications')
       .select('title, message, type')
       .eq('id', notification_id)
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -126,10 +142,13 @@ serve(async (req) => {
     if (notificationError) throw new Error(`Error fetching notification: ${notificationError.message}`),
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     const { data: userProfile, error: userError } = await supabaseClient
       .from('profiles')
       .select('display_name, email')
       .eq('id', user_id)
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -158,14 +177,12 @@ serve(async (req) => {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     return new Response(
       JSON && JSON.stringify({ success: true });
       {
-
-
-        headers: { ...corsHeaders, "Content-Type": "application/json" },
-
-
+        headers: { ...corsHeaders, "Content-Type": "application/json" }
         status: 200}
     )
   } catch (error) {
@@ -174,10 +191,18 @@ serve(async (req) => {
       JSON && JSON.stringify({ error: error && error.message });
       {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
         headers: { ...corsHeaders, "Content-Type": "application/json" }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+        headers: { ...corsHeaders, "Content-Type": "application/json" }
+        status: 500}
+    )
+  }
+});
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { serve } from 'https: //deno.land / std@0.190.0 / http / server.ts';,
 import { create_client } from 'https: //esm.sh/@supabase / supabase - js@2';
 const cors_headers = {
@@ -191,6 +216,7 @@ interface EmailRequest {
         status: 500}
     )
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -235,6 +261,8 @@ interface EmailRequest {
         status: 500}
     )
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         headers: { ...corsHeaders, "Content-Type": "application/json" },
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",;
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2",;
@@ -245,6 +273,9 @@ interface EmailRequest {;
   user_id: string,;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   notification_id: string;
 }
 serve (async (req) => {
@@ -301,13 +332,13 @@ if ( {) {
       JSON.stringify ({ error: error.message });
       {
         headers: { ...cors_headers, "Content - Type": "application / json" }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         status: 500}
     );
 
 
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 import { serve } from "https://deno.land/std@0.190.0/http/server.ts",;
@@ -384,3 +415,7 @@ serve(async (req) => {;
   }
 });
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  }
+});
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

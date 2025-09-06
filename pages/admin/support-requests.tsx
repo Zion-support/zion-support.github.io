@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import { GetServerSideProps } from 'next';
@@ -19,6 +20,11 @@ import { GetServerSideProps } from 'next',;
 import { useState } from 'react',;
 import { readJson } from '../../utils/fsDb',;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+import { GetServerSideProps } from 'next';
+import { useState } from 'react';
+import { readJson } from '../../utils/fsDb';
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export const getServerSideProps: GetServerSideProps = async () => {
   const requests = readJson<any[]>('support/requests.json', [])
   return { props: { initialRequests: requests } }
@@ -27,8 +33,11 @@ export default function SupportRequests({ initialRequests }: { initialRequests: 
   const [requests, setRequests] = useState(initialRequests)
   async function resolve(id: string) {
     await fetch('/api/support/resolve', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ id }) })
+<<<<<<< HEAD
     setRequests((prev: any[]) => prev.map((r) => (r.id === id ? { ...r, status: 'resolved', resolvedAt: Date.now() } : r)))
 <<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 import { GetServerSideProps } from 'next',
 import { useState } from 'react',
@@ -49,9 +58,12 @@ function resolve() {
     await fetch ('/api / support / resolve', { method: 'POST', headers: { 'Content - Type': 'application / json' }, body: JSON.stringify ({ id }) }),
     set_requests ((prev: any[]) => prev.map ((r) => (r.id === id ? { ...r, status: 'resolved', resolved_at: Date.now () } : r)));
 
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 import { GetServerSideProps } from 'next';
@@ -62,6 +74,7 @@ export const getServerSideProps: GetServerSideProps = async () => {;
   return { props: { initialRequests: requests }   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -84,6 +97,8 @@ export const getServerSideProps: GetServerSideProps = async () => {;
   return { props: { initialRequests: requests }   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   }
 }
 },;
@@ -98,6 +113,7 @@ export default function SupportRequests(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 
   }
   return (
@@ -105,11 +121,14 @@ export default function SupportRequests(req, res) {
 }
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <button on_click={() => resolve (r.id)} className="enhanced - button enhanced - button - primary">Mark Resolved</button>)}
           </div>))}
       </div>;
     </div>);
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
@@ -152,6 +171,8 @@ export default function SupportRequests(req, res) {
 };
 
   return (
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <div className="space-y-6">
       <h1 className="text-2xl font-semibold">Support Requests</h1>
       <div className="grid gap-3">
@@ -172,17 +193,16 @@ export default function SupportRequests(req, res) {
             </div>
             {r.status !== 'resolved' && (
               <button onClick={() => resolve(r.id)} className="enhanced-button enhanced-button-primary">Mark Resolved</button>
-            )}
-          </div>
-        ))}
-      </div>
-    </div>
-  )
+
   );
 };
+<<<<<<< HEAD
   );
 };
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -202,6 +222,7 @@ export default function SupportRequests(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 }
 
@@ -213,3 +234,5 @@ export default function SupportRequests(req, res) {
 }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

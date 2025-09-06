@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -59,6 +60,8 @@ import {
 } from 'lucide-react';import { Search, TrendingUp, CheckCircle, AlertTriangle, ArrowRight, Target, BarChart3, Globe, Smartphone, Zap } from 'lucide-react';
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Card from '../components/ui/Card';
@@ -78,6 +81,7 @@ import {
   Smartphone,;
   Zap,;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
@@ -89,10 +93,18 @@ export default function SEOAnalyzerToolPage() {;
 
 export default function SEOAnalyzerToolPage() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+export default function SEOAnalyzerToolPage() {;
+} from 'lucide-react';
+
+
+export default function SEOAnalyzerToolPage() {;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const [isAnalyzing, setIsAnalyzing] = useState(false);
   const [analysisResults, setAnalysisResults] = useState(null);
   const [url, setUrl] = useState('');
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -102,6 +114,34 @@ export default function SEOAnalyzerToolPage() {
   ];
 
 
+=======
+    {
+    }
+    {
+      category: 'Content SEO'
+      factors: [
+        'Keyword density'
+        'Content relevance'
+        'Readability scores'
+        'Content freshness'
+        'Multimedia optimization'
+        'Schema markup'
+      ]
+      icon: ''
+      color: 'text-purple-400'
+    }
+    {
+      category: 'Local SEO'
+      factors: [
+        'Google My Business'
+        'Local citations'
+        'Review management'
+        'Local keyword targeting'
+        'Location-based content'
+        'Local link building'
+      ]
+  ];
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const features = [;
     {;
       icon: <Search className='w-8 h-8 text-white' />,;
@@ -229,6 +269,7 @@ export default function SEOAnalyzerToolPage() {
       period: '/month',
       description: 'Perfect for small businesses and bloggers',
       features: [;
+<<<<<<< HEAD
 =======
   const features = [
     {
@@ -310,6 +351,8 @@ export default function SEOAnalyzerToolPage() {
     }
 features: [;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         '10 website analyses / month',
         'Basic SEO metrics',
         'Keyword research (100 keywords)',
@@ -323,13 +366,17 @@ features: [;
       popular: false;
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       name: 'Professional',
       price: '$89',
       period: '/month',
       description: 'Ideal for growing businesses and agencies',
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       features: [;
@@ -354,10 +401,13 @@ features: [;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       name: 'Enterprise',
       price: '$249',
       period: '/month',
       description: 'For large organizations and SEO agencies',
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       features: [;
@@ -500,6 +550,8 @@ features: [;
       popular: false;
     }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     setIsAnalyzing(true);
     // Simulate SEO analysis
     setTimeout(() => {
@@ -511,6 +563,7 @@ features: [;
         contentScore: 80
         mobileScore: 85
         issues: [
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -534,6 +587,8 @@ features: [;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           {
             type: 'error'
             message: 'Missing meta description'
@@ -545,6 +600,7 @@ features: [;
             priority: 'medium'
           }
           {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -565,6 +621,8 @@ features: [;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           {
             keyword: 'website optimization'
             volume: '12K'
@@ -577,6 +635,7 @@ features: [;
             difficulty: 'high'
           }
         ]
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
@@ -675,6 +734,8 @@ features: [;
           <p className="text-responsive-md text-gray-300 max-w-5xl mx-auto leading-relaxed mb-12">
             Analyze your website's SEO performance with our comprehensive tool. Get detailed insights, keyword research, and optimization recommendations to improve your search rankings and drive more organic traffic.
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   const handleAnalyzeSEO = async () => {;
     if (!url && url.trim()) return;
@@ -728,23 +789,27 @@ features: [;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       });
 <<<<<<< HEAD
+<<<<<<< HEAD
 
           { type: 'error', message: 'Missing meta description', priority: 'high' },
           { type: 'warning', message: 'Title tag too long (65 characters)', priority: 'medium' },
           { type: 'info', message: 'Consider adding more internal links', priority: 'low' }
         ];
         recommendations: [
+=======
+      setIsAnalyzing(false);
+    }, 4000);  };        recommendations: [
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           'Optimize meta descriptions for better click-through ratesImprove page load speed by optimizing imagesAdd more relevant internal links to improve site structureImplement schema markup for rich snippets'
-
         ];
-
-        keywords: [;
-          { keyword: 'website optimization', volume: '12K', difficulty: 'medium' },;
-          { keyword: 'SEO tools', volume: '8K', difficulty: 'low' },;
-
+        keywords: [
+          { keyword: 'website optimization', volume: '12K', difficulty: 'medium' }
+          { keyword: 'SEO tools', volume: '8K', difficulty: 'low' }
+        ];
           { keyword: 'search engine optimization', volume: '15K', difficulty: 'high' }
-        ];
+        ]
       });
+<<<<<<< HEAD
 
       setIsAnalyzing(false);
     }, 4000);
@@ -759,11 +824,17 @@ features: [;
       setIsAnalyzing(false);
       setIsAnalyzing(false);
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+      setIsAnalyzing(false);
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
     }, 4000);  };
 
   };
+<<<<<<< HEAD
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -771,6 +842,7 @@ features: [;
 
 =======
   return (
+<<<<<<< HEAD
 
       setIsAnalyzing(false)
     }, 4000)
@@ -800,12 +872,16 @@ features: [;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  return (
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <>;
       <Head>;
         <title>;
           SEO Analyzer Tool - Zion Tech Group | Professional SEO Analysis &;
           Optimization;
         </title>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -862,11 +938,14 @@ features: [;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             Analyze your website's SEO performance with our comprehensive tool.;
             Get detailed insights, keyword research, and optimization;
             recommendations to improve your search rankings and drive more;
             organic traffic.;
           </p>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -896,6 +975,8 @@ features: [;
             Analyze your website's SEO performance with our comprehensive tool. Get detailed insights, keyword research, and optimization recommendations to improve your search rankings and drive more organic traffic.
           </p>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 className='bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white shadow-2xl hover-glow whitespace-nowrap'                disabled={isAnalyzing || !url && url.trim()}>;
                 {isAnalyzing ? (;
                   <>;
@@ -939,6 +1020,7 @@ features: [;
                 size="lg"
                 className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white shadow-2xl hover-glow whitespace-nowrap"
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -960,6 +1042,8 @@ features: [;
           </div>
           <div className='flex flex-col sm:flex-row gap-6 justify-center'>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <Button
               href='#pricing'
               variant='outline'
@@ -978,6 +1062,7 @@ features: [;
               View Pricing;
             </Button>;
             <Button
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -1146,10 +1231,14 @@ href="/contact"
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+              Schedule Demo
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               Our SEO analyzer provides comprehensive insights and tools to help;
               you dominate search rankings.;
             </p>;
           </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1163,6 +1252,8 @@ href="/contact"
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             </h2>
             <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">
               Our SEO analyzer provides comprehensive insights and tools to help you dominate search rankings.
@@ -1184,6 +1275,7 @@ href="/contact"
               Our SEO analyzer provides comprehensive insights and tools to help you dominate search rankings.;
             </p>;
           </div>;
+<<<<<<< HEAD
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">;
             {features && features.map((feature, index) => (;
@@ -1194,17 +1286,21 @@ href="/contact"
 
 
 <<<<<<< HEAD
+=======
+              <Card
+                key={index}
+                className="card-hover group border-gradient-green"
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     </p>
                   </div>
                 </div>
               </Card>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             ))}
 
 
 
 
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
@@ -1212,16 +1308,25 @@ href="/contact"
 
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {/* SEO Factors Section */}
+      <section className='section-padding bg-gradient-cursor'>
+        <div className='container-cursor'>
+          <div className='text-center mb-20'>
+            <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
 
 
 
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               Comprehensive SEO Analysis
             </h2>
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
@@ -1232,7 +1337,10 @@ href="/contact"
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
             {seoFactors.map((category, index) => (
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           </div>;
         </div>;
       </section>;
@@ -1245,6 +1353,7 @@ href="/contact"
               Comprehensive SEO Analysis;
             </h2>;
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>;
+<<<<<<< HEAD
 =======
                     </p>;
                   </div>;
@@ -1262,10 +1371,30 @@ href="/contact"
             </h2>;
             <p className='text - responsive - md text - gray - 400 max - w-4xl mx - auto leading - relaxed'>;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+                style={{ animationDelay: `${index * 0 && 0.1}s` }}>;
+                <div className="flex items-start space-x-6">;
+                  <div className="relative">;
+                    <div className={`w-20 h-20 rounded-2xl flex items-center justify-center text-3xl bg-gradient-to-br ${feature && feature.color} shadow-xl group-hover:scale-110 transition-transform duration-300`}>;
+                      {feature && feature.icon}
+                    </div>;
+                    <div className={`absolute -inset-2 bg-gradient-to-r from-transparent via-${feature && feature.gradient} to-transparent rounded-2xl opacity-0 group-hover:opacity-20 transition-opacity duration-300 blur-sm`} />;
+                  </div>;
+                  <div className="flex-1">;
+                    <h3 className="text-2xl font-bold mb-4 text-white">;
+                      {feature && feature.title}
+                    </h3>;
+                    <p className="text-gray-400 leading-relaxed">;
+                      {feature && feature.description}
+                    </p>;
+                  </div>;
+                </div>;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               We analyze every aspect of your website's SEO to provide;
               actionable insights and recommendations.;
             </p>;
           </div>;
+<<<<<<< HEAD
 
 =======
                 style={{ animationDelay: `${index * 0.1}s` }}
@@ -1326,6 +1455,8 @@ href="/contact"
 
               Comprehensive SEO Analysis
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             </h2>
             <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">
               We analyze every aspect of your website's SEO to provide actionable insights and recommendations.
@@ -1341,6 +1472,7 @@ href="/contact"
               We analyze every aspect of your website's SEO to provide actionable insights and recommendations.;
             </p>;
           </div>;
+<<<<<<< HEAD
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">;
             {seoFactors && seoFactors.map((category, index) => (;
@@ -1363,19 +1495,34 @@ href="/contact"
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
+=======
+              <Card
+                key={index}
+                className="card-hover border-gradient-green"
+                style={{ animationDelay: `${index * 0 && 0.1}s` }}>;
+                <div className="flex items-center mb-6">;
+                  <div className="text-3xl mr-4">{category && category.icon}</div>;
+                  <h3 className={`text-xl font-bold ${category && category.color}`}>{category && category.category}</h3>;
+                </div>;
+                <ul className="space-y-3">;
+                  {category && category.factors.map((factor, factorIndex) => (;
+                    <li key={factorIndex} className="flex items-center text-gray-300">;
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       {factor}
-                    </li>;
+                    </li>
                   ))}
-                </ul>;
-              </Card>;
+                </ul>
+              </Card>
             ))}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+          </div>
+        </div>
+      </section>
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Demo Analysis Results */}
       {analysisResults && (
 
@@ -1440,6 +1587,7 @@ href="/contact"
           </div>;
         </div>;
       </section>;
+<<<<<<< HEAD
 =======
           </div>
         </div>
@@ -1447,6 +1595,8 @@ href="/contact"
 
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {/* Demo Analysis Results */}
       {analysis_results && (
         <section className='section - padding bg - gradient - cursor - accent'>;
@@ -1457,13 +1607,18 @@ href="/contact"
               </h2>;
               <p className='text - responsive - md text - gray - 400 max - w-4xl mx - auto leading - relaxed'>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 Here's a sample analysis of a website. Get comprehensive;
                 insights for your own website.;
               </p>;
             </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1477,6 +1632,8 @@ href="/contact"
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               </h2>
               <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">
                 Here's a sample analysis of a website. Get comprehensive insights for your own website.
@@ -1526,6 +1683,7 @@ href="/contact"
                 Here's a sample analysis of a website. Get comprehensive insights for your own website.;
               </p>;
             </div>;
+<<<<<<< HEAD
 
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-8">;
 <<<<<<< HEAD
@@ -1534,6 +1692,8 @@ href="/contact"
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               {/* Overall Score */}
               <Card className="border-gradient-green text-center">;
                 <h3 className="text-2xl font-bold mb-6 text-white">Overall SEO Score</h3>;
@@ -1547,6 +1707,7 @@ href="/contact"
                       strokeWidth="2"
                       strokeDasharray={`${(analysisResults && analysisResults.overallScore / 100) * 100}, 100`}
                       className="text-green-500"
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1584,6 +1745,8 @@ href="/contact"
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               {/* Issues */}
               <Card className='border-gradient-green'>;
                 <h3 className='text-2xl font-bold mb-6 text-white'>;
@@ -1599,6 +1762,7 @@ href="/contact"
                       ) : (;
                         <CheckCircle className='w-5 h-5 text-blue-400 mt-1 flex-shrink-0' />;
                       )}
+<<<<<<< HEAD
 <<<<<<< HEAD
                       <div>;
                         <span className='text-gray-300'>{issue && issue.message}</span>;
@@ -1638,6 +1802,8 @@ href="/contact"
 
                         </div>                      </div>                  {analysisResults.issues.map((issue, index) => (
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     <div key={index} className="flex items-start space-x-3">
                       {issue.type === 'error' ? (
                         <AlertTriangle className="w-5 h-5 text-red-400 mt-1 flex-shrink-0" />
@@ -1651,7 +1817,10 @@ href="/contact"
                         <div className="text-xs text-gray-500 mt-1">Priority: {issue.priority}</div>
                       </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               {/* Issues */}
               <Card className='border-gradient-green'>
                 <h3 className='text-2xl font-bold mb-6 text-white'>
@@ -1671,21 +1840,38 @@ href="/contact"
                         <span className='text-gray-300'>{issue.message}</span>
                         <div className='text-xs text-gray-500 mt-1'>
                           Priority: {issue.priority}
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+                        </div>                      </div>                  {analysisResults.issues.map((issue, index) => (
+                    <div key={index} className="flex items-start space-x-3">
+                      {issue.type === 'error' ? (
+                        <AlertTriangle className="w-5 h-5 text-red-400 mt-1 flex-shrink-0" />
+                      ) : issue.type === 'warning' ? (
+                        <AlertTriangle className="w-5 h-5 text-yellow-400 mt-1 flex-shrink-0" />
+                      ) : (
+                        <CheckCircle className="w-5 h-5 text-blue-400 mt-1 flex-shrink-0" />
+                      )}
+                      <div>
+                        <span className="text-gray-300">{issue.message}</span>
+                        <div className="text-xs text-gray-500 mt-1">Priority: {issue.priority}</div>
+                      </div>
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                         </div>                      </div>
 
                       </div>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     </div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                   ))}
+<<<<<<< HEAD
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
@@ -1700,6 +1886,13 @@ href="/contact"
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+                </div>
+              </Card>
+            </div>
+
+                  ))}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             {/* Recommendations and Keywords */}
             <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>;
               <Card className='border-gradient-green'>;
@@ -1718,6 +1911,7 @@ href="/contact"
                     <div key={index} className="flex items-start space-x-3">;
                       <CheckCircle className="w-5 h-5 text-green-400 mt-1 flex-shrink-0" />;
                       <span className="text-gray-300">{rec}</span>;
+<<<<<<< HEAD
 
 =======
 =======
@@ -1758,6 +1952,8 @@ href="/contact"
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     <div
                       key={index}
                       className='border-b border-gray-700 pb-3 last:border-b-0'>;
@@ -1792,10 +1988,13 @@ href="/contact"
                     </div>;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <Card className="border-gradient-green">
                 <h3 className="text-2xl font-bold mb-6 text-white">Keyword Opportunities</h3>
                 <div className="space-y-4">
@@ -1813,6 +2012,7 @@ href="/contact"
                           'bg-red-500/20 text-red-400'
                         }`}>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
             <div className='grid grid - cols - 1 lg:grid - cols - 3 gap - 8 mb - 8'>;
 
@@ -1821,15 +2021,21 @@ href="/contact"
 
                           {keyword.difficulty}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
                         </span>
                       </div>
                     </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                   ))}
 =======
+=======
+                  ))}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <div className='grid grid - cols - 1 lg:grid - cols - 3 gap - 8 mb - 8'>;
               {/* Overall Score */}
               <Card className='border - gradient - green text - center'>;
@@ -2027,6 +2233,7 @@ href="/contact"
               </Card>;
             </div>;
           </div>;
+<<<<<<< HEAD
 
 =======
                   ))}
@@ -2066,6 +2273,10 @@ href="/contact"
               Simple Pricing
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
             </h2>
+=======
+              Simple Pricing
+            </h2>
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">
               Choose the SEO analysis plan that best fits your business needs and goals.
             </p>
@@ -2073,10 +2284,13 @@ href="/contact"
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricing.map((plan, index) => (
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <section id='pricing' className='section-padding bg-gradient-cursor'>;
         <div className='container-cursor'>;
           <div className='text-center mb-20'>;
@@ -2099,6 +2313,7 @@ href="/contact"
               and goals.;
             </p>;
           </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -2131,11 +2346,14 @@ href="/contact"
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     {plan.name}
                   </h3>;
                   <div className='mb - 6'>;
                     <span className='text - 4xl font - bold text - white'>;
                       {plan.price}
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -2316,6 +2534,24 @@ href="/contact"
                   <ArrowRight className='w-5 h-5 ml-2' />                </Button>
 
                 </Button>
+=======
+                      {feature}
+                    </li>
+                  ))}
+                <Button
+                  href='/contact'
+                  size='lg'
+                      {feature}
+
+                    </li>
+                  ))}
+                </ul>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
               </Card>
             ))}
@@ -2323,12 +2559,29 @@ href="/contact"
         </div>
       </section>
 
+
+              </Card>
+                  className={`w-full ${plan && plan.popular ? 'bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700' : 'bg-gray-700 hover:bg-gray-600'} text-white`}>;
+                  Get Started;
+                  <ArrowRight className='w-5 h-5 ml-2' />                </Button>                  href="/contact";
+                  size="lg";
+                  className={`w-full ${plan && plan.popular ? 'bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700' : 'bg-gray-700 hover:bg-gray-600'} text-white`}
+                >;
+                  Get Started;
+                  <ArrowRight className="w-5 h-5 ml-2" />;
+              </Card>;
+            ))}
       {/* CTA Section */}
+      {/* CTA Section */}
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <section className='section-padding bg-gradient-to-r from-green-600 to-emerald-700 relative overflow-hidden'>
         <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />
         <div className='container-cursor text-center relative z-10'>
           <h2 className='text-responsive-lg font-bold text-white mb-8 text-shadow-lg'>
+<<<<<<< HEAD
 
 
             Ready to Improve Your SEO Rankings?
@@ -2341,12 +2594,15 @@ href="/contact"
 
             Ready to Improve Your SEO Rankings?
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           </h2>
           <p className='text-responsive-md text-green-100 mb-12 max-w-4xl mx-auto leading-relaxed'>
             Join thousands of businesses using our SEO analyzer to improve their
             search rankings and drive more organic traffic.
           </p>
           <div className='flex flex-col sm:flex-row gap-6 justify-center'>
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             <Button
@@ -2366,19 +2622,43 @@ href="/contact"
               <ArrowRight className='w-5 h-5 ml-2' />
             </Button>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+      <section className='section-padding bg-gradient-to-r from-green-600 to-emerald-700 relative overflow-hidden'>;
+        <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0 && 0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />;
+        <div className='container-cursor text-center relative z-10'>;
+          <h2 className='text-responsive-lg font-bold text-white mb-8 text-shadow-lg'>;
+          </h2>;
+          <p className='text-responsive-md text-green-100 mb-12 max-w-4xl mx-auto leading-relaxed'>;
+            Join thousands of businesses using our SEO analyzer to improve their;
+            search rankings and drive more organic traffic.;
+          </p>;
+          <div className='flex flex-col sm:flex-row gap-6 justify-center'>;
+            <Button
+              href='/contact'
+              size='lg'
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <Button
               href='/contact'
               variant='outline'
               size='lg'
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+  );
+}
+}
+  );
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               Schedule Demo;
             </Button>;
           </div>;
         </div>;
       </section>;
+<<<<<<< HEAD
 
 
 =======
@@ -2417,3 +2697,5 @@ href="/contact"
   );
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -14,20 +15,26 @@ function load(): Record<string, KycProfile> {
   try {
     const raw = fs.readFileSync(FILE, 'utf8'),
     return JSON.parse(raw)
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import type { NextApiRequest, NextApiResponse } from 'next';
 import type { KycProfile } from '../../../utils/kyc';
 import fs from 'fs';
 import path from 'path';
 
+<<<<<<< HEAD
 
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 const DATA_DIR = path.join(process.cwd(), 'datakyc')
 const FILE = path.join(DATA_DIR, 'profiles.json')
 function load(): Record<string, KycProfile> {
   try {
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
@@ -48,10 +55,13 @@ function load(): Record<string, KycProfile> {
     const raw = fs.readFileSync(FILE, 'utf8');
     return JSON.parse(raw);
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   } catch {
     return {};
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -67,13 +77,15 @@ function save(db: Record<string, KycProfile>) {
 }
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const db = load()
   const db = load(),
   if (req.method === 'GET') {
-    const queue = Object.values(db).filter((p) => 
-      p.status === 'submitted' || p.status === 'needs_more_info'
-    );
-    return res.status(200).json({ ok: true, queue });
+    const queue = Object.values(db).filter((p) => p.status === 'submitted' |p.status === 'needs_more_info')
+    return res.status(200).json({ ok: true, queue })
   }
   if (req.method === 'POST') {
     const { userId, action, reason } = req.body as { userId?: string, action?: 'approve' | 'reject' | 'needs_more_info', reason?: string }
@@ -92,6 +104,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   }
   return res.status(405).json({ error: 'Method not allowed' });
+
 }
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -123,4 +136,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   }
 }
 
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -1,4 +1,3 @@
-
 import {useState} from "react";
 import {Button} from "@/components/ui/button";
 import {GradientHeading} from "@/components/GradientHeading";
@@ -8,9 +7,12 @@ import {useToast} from "@/hooks/use-toast";
 import {Checkbox} from "@/components/ui/checkbox";
 export function WaitlistSection() {;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
   const [role, setRole] = useState("");
@@ -18,12 +20,15 @@ export function WaitlistSection() {;
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 =======
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useState } from "react",
 import { Button } from "@/components/ui/button",
 import { GradientHeading } from "@/components/GradientHeading",
@@ -33,7 +38,10 @@ import { useToast } from "@/hooks/use-toast";
 import { Checkbox } from "@/components/ui/checkbox";
 import { useToast } from "@/hooks/use-toast",
 import { Checkbox } from "@/components/ui/checkbox",
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export function WaitlistSection() {
   const [email, setEmail] = useState(""),
   const [name, setName] = useState(""),
@@ -41,6 +49,7 @@ export function WaitlistSection() {
   const [agreeTerms, setAgreeTerms] = useState(false),
   const [isSubmitting, setIsSubmitting] = useState(false),
   const { toast } = useToast(),
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -66,11 +75,15 @@ export function WaitlistSection() {
       // Simulating an API call
       await new Promise(resolve => setTimeout(resolve, 1000));
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     
     setIsSubmitting(true),
     
     try {
       // Simulating an API call
+<<<<<<< HEAD
       await new Promise(resolve => setTimeout(resolve, 1000)),
       
 <<<<<<< HEAD
@@ -78,10 +91,13 @@ export function WaitlistSection() {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       toast({
         title: "Success!"
         description: "Thank you for registering with Zion. We'll be in touch soon."})
       // Reset form
+<<<<<<< HEAD
 <<<<<<< HEAD
       setEmail("");
       setName("");
@@ -91,12 +107,18 @@ export function WaitlistSection() {
       setName(""),
       setRole(""),
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+      setEmail(""),
+      setName(""),
+      setRole(""),
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       setAgreeTerms(false)
     } catch (error) {
       toast({
         variant: "destructive"
         title: "Something went wrong"
         description: "Please try again later."})
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -154,10 +176,14 @@ if ( {) {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     } finally {
       setIsSubmitting (false);
     }
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -324,10 +350,17 @@ export function WaitlistSection() {;
             <div className="space-y-2">
               <Label htmlFor="name">Full Name</Label>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+  return (
+    <section id="waitlist" className="py-20 bg-zion-blue-dark relative overflow-hidden">;
+      {/* Background elements */}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <Input
                 id="name"
                 placeholder="John Smith"
                 value={name}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -345,11 +378,14 @@ export function WaitlistSection() {;
             <div className="space-y-2">;
               <Label htmlFor="email">Email Address</Label>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <Input
                 id="email"
                 type="email"
                 placeholder="you@company && company.com"
                 value={email}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -384,10 +420,13 @@ export function WaitlistSection() {;
             <div className="space-y-2">
               <Label htmlFor="role">Your Role</Label>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <Input
                 id="role"
                 placeholder="IT Manager, Developer, Business Owner, etc."
                 value={role}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -407,11 +446,14 @@ export function WaitlistSection() {;
               <Checkbox
                 id="terms" 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 checked={agreeTerms}
                 onCheckedChange={(checked) => setAgreeTerms(checked as boolean)}
               />;
               <Label
                 htmlFor="terms"
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
                 onChange={(e) => setRole(e.target.value)}
@@ -432,6 +474,8 @@ export function WaitlistSection() {;
               </Label>
             </div>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
             <Button 
@@ -439,6 +483,7 @@ export function WaitlistSection() {;
               disabled={isSubmitting} 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
             <Button
@@ -448,6 +493,8 @@ export function WaitlistSection() {;
               type="submit" 
               disabled={isSubmitting} 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple"
             >
               {isSubmitting ? "Processing..." : "Complete Registration"}
@@ -458,8 +505,11 @@ export function WaitlistSection() {;
     </section>
   )
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 import { useState } from "react",;
 import { Button } from "@/components/ui/button",;
@@ -484,21 +534,30 @@ export function WaitlistSection() {;
         description: "Please fill all fields and agree to the terms."}),;
       return;
     }
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 className="text-sm text-zion-slate font-normal">;
                 I agree to receive updates about Zion and understand I can unsubscribe anytime.;
               </Label>;
             </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <Button
               type="submit" 
               disabled={isSubmitting} 
               className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple">;
               {isSubmitting ? "Processing..." : "Complete Registration"}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -509,6 +568,11 @@ export function WaitlistSection() {;
 
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ;
   return (
     <section id="waitlist" className="py - 20 bg - zion - blue - dark relative overflow - hidden">;
@@ -522,6 +586,7 @@ export function WaitlistSection() {;
           <div className="text - center mb - 12">;
             <GradientHeading > Register Now</GradientHeading>;
             <p className="text - zion - slate - light text - lg mt - 4">;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 ;
@@ -559,10 +624,13 @@ export function WaitlistSection() {;
             <GradientHeading>Register Now</GradientHeading>;
             <p className="text-zion-slate-light text-lg mt-4">;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               Join our growing community of AI and tech professionals.;
               Complete your registration to access exclusive features and personalized services.;
             </p>;
           </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
           <form on_submit={handle_submit} className="space - y-6 bg - zion - blue - light p - 8 rounded - lg border border - zion - purple / 20">;
             <div className="space - y-2">;
@@ -573,10 +641,13 @@ export function WaitlistSection() {;
             <div className="space-y-2">;
               <Label htmlFor="name">Full Name</Label>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <Input;
                 id="name";
                 placeholder="John Smith";
                 value={name}
+<<<<<<< HEAD
 <<<<<<< HEAD
                 on_change={(e) => set_name (e.target.value)}
                 className="bg - zion - blue - dark border - zion - blue - light";
@@ -592,11 +663,14 @@ export function WaitlistSection() {;
             <div className="space-y-2">;
               <Label htmlFor="email">Email Address</Label>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <Input;
                 id="email";
                 type="email";
                 placeholder="you@company.com";
                 value={email}
+<<<<<<< HEAD
 <<<<<<< HEAD
                 on_change={(e) => set_email (e.target.value)}
                 className="bg - zion - blue - dark border - zion - blue - light";
@@ -612,10 +686,13 @@ export function WaitlistSection() {;
             <div className="space-y-2">;
               <Label htmlFor="role">Your Role</Label>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <Input;
                 id="role";
                 placeholder="IT Manager, Developer, Business Owner, etc.";
                 value={role}
+<<<<<<< HEAD
 <<<<<<< HEAD
                 on_change={(e) => set_role (e.target.value)}
                 className="bg - zion - blue - dark border - zion - blue - light";
@@ -645,10 +722,13 @@ export function WaitlistSection() {;
                 htmlFor="terms";
                 className="text-sm text-zion-slate font-normal";
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               >;
                 I agree to receive updates about Zion and understand I can unsubscribe anytime.;
               </Label>;
             </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
             <Button;
               type="submit";
@@ -672,6 +752,8 @@ export function WaitlistSection() {;
             >;
               {isSubmitting ? "Processing..." : "Complete Registration"}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             </Button>;
           </form>;
         </div>;
@@ -680,6 +762,7 @@ export function WaitlistSection() {;
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
@@ -711,3 +794,9 @@ return (<section id="waitlist" className="py-20 bg-zion-blue-dark relative overf
 }
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+}
+;
+    </section>);
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

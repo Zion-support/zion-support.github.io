@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 interface GeneratedContent {
   description: string,
   tags: string[],
@@ -17,6 +18,8 @@ import { GeneratedContentDisplay } from "./GeneratedContentDisplay",
 import { LoadingContentSkeleton } from "./LoadingContentSkeleton";
 import {logErrorToProduction} from '@/utils/productionLogger';
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface GeneratedContent {
 
   description: string
@@ -25,12 +28,16 @@ interface GeneratedContent {
     min: number
 
     max: number
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   }
   key_points: string[];
 }
 interface AIListingGeneratorProps {
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 interface GeneratedContent {;
@@ -52,6 +59,8 @@ interface AIListingGeneratorProps {;
 
   initialValues?: {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     title?: string;
     category?: string;
     keyFeatures?: string;
@@ -59,6 +68,7 @@ interface AIListingGeneratorProps {;
   }
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   onApplyGenerated?: (content: GeneratedContent, ) => void,
@@ -88,6 +98,8 @@ function AIListingGenerator() {
     target_audience: string;
 
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIListingGeneratorProps) {
   const { toast } = useToast()
   const [isLoading, setIsLoading] = useState(false)
@@ -102,7 +114,10 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
     category: string
     keyFeatures: string
     targetAudience: string
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   }) => {
     setIsLoading (true);
     try {
@@ -116,6 +131,7 @@ if ( {) {
         throw new Error (error.message);
       }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -123,16 +139,11 @@ if ( {) {
       toast({
         title: "Content Generated"
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       if (data && (data as any).error) {
         throw new Error((data as any).error)
       }
-import { LoadingContentSkeleton } from "./LoadingContentSkeleton";
-import {logErrorToProduction} from '@/utils/productionLogger';
-      setGeneratedContent((data as any)?.generated |null)
-      setGeneratedContent((data as any)?.generated || null)
-      setGeneratedContent((data as any)?.generated |null)
-import { LoadingContentSkeleton } from "./LoadingContentSkeleton",
-import {logErrorToProduction} from '@/utils/productionLogger',
 
       setGeneratedContent((data as any)?.generated || null)
 import React, { useState } from "react",
@@ -144,7 +155,10 @@ import { AIListingForm } from "./AIListingForm",
 import { GeneratedContentDisplay } from "./GeneratedContentDisplay",
 import { LoadingContentSkeleton } from "./LoadingContentSkeleton",
 import {logErrorToProduction} from '@/utils/productionLogger',
+<<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       toast({
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         description: "AI has created optimized listing content for you."
@@ -156,27 +170,10 @@ ursor/fix-website-loading-errors-and-merge-6662
         description: error instanceof Error ? error.message : "Failed to generate content. Please try again."
         variant: "destructive"
       })
-      // Check condition
-if (.error) {) {
-  $2
-}
-        throw new Error ((data as any).error);
-      }
-      setGeneratedContent ((data as any)?.generated || null);
-      toast ({
-        title: "Content Generated",
-        description: "AI has created optimized listing content for you.";
-      });
-    } catch (error) {
-      logErrorToProduction ('Error generating content:', { data: error }),
-      toast ({
-        title: "Generation Failed",
-        description: error instanceof Error ? error.message : "Failed to generate content. Please try again.",
-        variant: "destructive";
-      });
     } finally {
       setIsLoading (false);
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -218,12 +215,15 @@ ursor/fix-website-loading-errors-and-merge-6662
   const handleApply = () => {
     if (generatedContent && onApplyGenerated) {
       onApplyGenerated(generatedContent),
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
       toast({
         title: "Content Applied"
         description: "The generated content has been applied to your listing."
       })
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 export function AIListingGenerator(): any ({ onApplyGenerated, initialValues = {} }: AIListingGeneratorProps) {;
@@ -309,6 +309,8 @@ if ( {) {
 
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <div className="space-y-6">
       <Card className="border border-zion-blue-light bg-zion-blue-dark">
@@ -322,15 +324,12 @@ if ( {) {
           </p>
         </CardHeader>
         <CardContent>
-          <AIListingForm
-          <AIListingForm 
             onSubmit = {handleGenerate,}
             isLoading = {isLoading,}
             initialValues = {initialValues,}
           />
         </CardContent>
       </Card>
-          <AIListingForm 
             onSubmit={handleGenerate} 
             isLoading={isLoading} 
 ;
@@ -343,12 +342,12 @@ if ( {) {
       logErrorToProduction('Error generating content:', { data: error }),;
       toast({;
         title: "Generation Failed",;
-        description: error instanceof Error ? error.message : "Failed to generate content. Please try again.",;
         variant: "destructive";
       });
     } finally {;
       setIsLoading(false);
     }
+<<<<<<< HEAD
   },;
   const handleApply = () => {;
     if (generatedContent && onApplyGenerated) {;
@@ -361,6 +360,8 @@ if ( {) {
   };
   return (;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <div className="space-y-6">;
       <Card className="border border-zion-blue-light bg-zion-blue-dark">;
         <CardHeader>;
@@ -374,6 +375,7 @@ if ( {) {
         </CardHeader>;
         <CardContent>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
           <AIListingForm
             onSubmit = {handleGenerate,}
@@ -385,6 +387,8 @@ if ( {) {
 
 
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <AIListingForm;
             onSubmit={handleGenerate} ;
             isLoading={isLoading} ;
@@ -392,11 +396,15 @@ if ( {) {
           />;
         </CardContent>;
       </Card>;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {isLoading && <LoadingContentSkeleton />}
       {generatedContent && !isLoading && (
         <GeneratedContentDisplay content={generatedContent} onApply={handleApply} />
       )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     <div className="space - y-6">;
@@ -462,10 +470,13 @@ category: string
 keyFeatures: string
 targetAudience: string
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }) => {
   setIsLoading (true);
 try {
   const {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   data, error;
@@ -546,46 +557,17 @@ if (error) {;
 }setGeneratedContent ( (data as any) ?.generated || null);
 toast ({;
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }catch (error) {';
-  logErrorToProduction ('Error generating content:', {;
-  data: error ;
-});
-toast ({;
-
-}finally {;
-  setIsLoading (false) ;
-
-};
-const handleApply = () => {;
-  if (generatedContent && onApplyGenerated) {;
-  onApplyGenerated (generatedContent);
-toast ({;
-
-
-};
-return (<div className="space-y-6" > <Card className="border border-zion-blue-light bg-zion-blue-dark" > <CardHeader> <CardTitle className="flex items-center text-white" > <Sparkles className="h-5 w-5 mr-2 text-zion-cyan" /> AI Listing Optimizer </CardTitle> <p className="text-sm text-zion-slate-light" > Provide basic information and let AI generate optimized, SEO-friendly content for your listing </p> </CardHeader> <CardContent> <AIListingFormonSubmit= {
-  handleGenerate 
-}isLoading= {
-  isLoading 
-}initialValues= {
-  initialValues 
-}/> </CardContent> </Card> {;
-  isLoading && <LoadingContentSkeleton /> ;
-}{;
-  generatedContent && !isLoading && (<GeneratedContentDisplaycontent= {
-  generatedContent 
-}onApply= {
-  handleApply 
-}/>) ;
-}</div>) ;
-}'";
-
+  logErrorToProduction ('Error generating content:', {
   data: error;
 });
 toast ({
 }finally {
   setIsLoading (false);
 }
+<<<<<<< HEAD
 const handleApply = () => {
   if (generatedContent && onApplyGenerated) {
   onApplyGenerated (generatedContent)
@@ -616,6 +598,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 }'";
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 
 }
@@ -628,6 +612,9 @@ ursor/fix-website-loading-errors-and-merge-6662
 }
 <<<<<<< HEAD
 ;
+<<<<<<< HEAD
 =======
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

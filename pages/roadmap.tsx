@@ -1,11 +1,8 @@
 
-import Head from 'next / head',
-import React, { useMemo, useState } from 'react',
-;
-
 type RoadmapInputs = {
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 import Head from 'next / head',
@@ -109,12 +106,17 @@ function generateStages({ milestones, keywords, priorities }: RoadmapInputs): St
     .map((s) => s.trim())
     .filter(Boolean)
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const priorityList = priorities
     .split(/,|\n/)
     .map((s) => s.trim())
     .filter(Boolean)
   const baseThemes = [
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
     'FoundationsTrust LayerAI-Native MatchingReputation & IdentityPayments & EscrowMarketplace LiquiditySovereign WorkflowsOpen Protocol Interfaces',
     'Governance & OwnershipGlobal Scale'
@@ -139,6 +141,7 @@ function generateStages({ milestones, keywords, priorities }: RoadmapInputs): St
       index === 7 && 'Public APIs/SDKs, indexer services, client ecosystem';
       index === 8 && 'Progressive decentralization, contributor ownership, councils';
 
+<<<<<<< HEAD
 =======
     'FoundationsTrust LayerAI-Native MatchingReputation & IdentityPayments & EscrowMarketplace LiquiditySovereign WorkflowsOpen Protocol Interfaces'
     'Governance & OwnershipGlobal Scale']
@@ -159,15 +162,20 @@ function generateStages({ milestones, keywords, priorities }: RoadmapInputs): St
       index === 7 && 'Public APIs/SDKs, indexer services, client ecosystem'
       index === 8 && 'Progressive decentralization, contributor ownership, councils'
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       index === 9 && 'Regionalization, localization, reliability, and performance']
       .filter(Boolean)
       .map((s) => String(s))
     const metrics: string[] = [
       'Weekly active contributorsVerified engagements (intros, briefs, scopes)On-chain/escrow settlement volumeTime-to-hire and time-to-payRetention and NPS']
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   priorities: string;
 },
 type Stage = {
@@ -214,6 +222,7 @@ function generate_stages ({ milestones, keywords, priorities }: RoadmapInputs): 
     return { id, name, theme, objective, highlights, metrics }
   });
 }
+<<<<<<< HEAD
 
 
 function defaultOperatorPrompt(): string {
@@ -226,6 +235,8 @@ function defaultOperatorPrompt(): string {
 function defaultOperatorPrompt(): string {
   return `You are Zion's Product Operator.
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 Inputs you will receive:
 - milestones (string list)
 - keywords (string list)
@@ -238,6 +249,7 @@ Goals:
 5) Output concise, skimmable, exec-ready text
 Format:
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
@@ -245,6 +257,8 @@ Format:
 function defaultOperatorPrompt (): string {
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 type RoadmapInputs = {
   milestones: string;
   keywords: string;
@@ -320,6 +334,9 @@ Format:;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 Zion v{n} — {theme}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 Objective: ...;
 Highlights:;
 - ...;
@@ -330,11 +347,11 @@ Risks:;
 Validation:;
 - ...;
 `;
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 }
 
     () => generateStages({ milestones, keywords, priorities });
 
+<<<<<<< HEAD
 =======
 }
     () => generateStages({ milestones, keywords, priorities });
@@ -357,11 +374,14 @@ export default function RoadmapPage(): JSX.Element {
   const stages = useMemo(
     () => generateStages({ milestones, keywords, priorities })
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     [milestones, keywords, priorities]
   )
   const operatorPrompt = useMemo(() => defaultOperatorPrompt(), [])
   const copyPrompt = async () => {
     try {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       await navigator.clipboard.writeText(operatorPrompt);
@@ -398,6 +418,19 @@ export default function RoadmapPage (): JSX.Element {
     }
 <<<<<<< HEAD
 
+=======
+
+      await navigator.clipboard.writeText(operatorPrompt);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 1500);
+    } catch {;
+      setCopied(false);
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   },
   return (
     <>;
@@ -421,19 +454,38 @@ export default function RoadmapPage (): JSX.Element {
                 <label className="block text - sm font - medium text - gray - 700">Milestones achieved so far</label>;
                 <textarea;
 
+<<<<<<< HEAD
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   value={milestones}
                   on_change={(e) => set_milestones (e.target.value)}
                   rows={3}
-                  className="mt - 1 w - full rounded - md border border - gray - 300 bg - white p - 3 shadow - sm focus:border - black focus:outline - none";
-                  placeholder="e.g., MVP live, 100 design partners, 1k weekly active contributors";
-                />;
-              </div>;
-              <div>;
-                <label className="block text - sm font - medium text - gray - 700">Vision keywords</label>;
-                <input;
+                  value={milestones  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  onChange={(e) => setMilestones(e.target.value)  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  rows={3  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  className="mt-1 w-full rounded-md border border-gray-300 bg-white p-3 shadow-sm focus:border-black focus:outline-none"
+                  placeholder="e.g., MVP live, 100 design partners, 1k weekly active contributors"
+                />
+              </div>
+              <div>
+                <label className="block text-sm font-medium text-gray-700">Vision keywords</label>
+                <input
                   value={keywords}
+<<<<<<< HEAD
                   on_change={(e) => set_keywords (e.target.value)}
                   className="mt - 1 w - full rounded - md border border - gray - 300 bg - white p - 3 shadow - sm focus:border - black focus:outline - none";
                   placeholder="e.g., AI - native, trustless, talent - first, sovereign tools";
@@ -447,11 +499,50 @@ export default function RoadmapPage (): JSX.Element {
 
 
 =======
+=======
+                  onChange={(e) => setKeywords(e.target.value)}
+                  value={keywords  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  onChange={(e) => setKeywords(e.target.value)  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  className="mt-1 w-full rounded-md border border-gray-300 bg-white p-3 shadow-sm focus:border-black focus:outline-none"
+                  placeholder="e.g., AI-native, trustless, talent-first, sovereign tools"
+                />
+              </div>
+              <div>
+                <label className="block text-sm font-medium text-gray-700">Upcoming priorities</label>
+                <input
+                  value={priorities  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  onChange={(e) => setPriorities(e.target.value)  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  className="mt-1 w-full rounded-md border border-gray-300 bg-white p-3 shadow-sm focus:border-black focus:outline-none"
+                  placeholder="e.g., governance, scale, regional expansion"
+                />
+              </div>
+            </div>
+          </section>
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <section className="mb-12">
             <div className="mb-3 flex items-center justify-between gap-3">
               <h2 className="text-xl font-semibold">Operator Prompt</h2>
               <button
-                onClick={copyPrompt}
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                 className="rounded-md bg-black px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-gray-900"
               >
                 {copied ? 'Copied' : 'Copy'}
@@ -469,6 +560,7 @@ export default function RoadmapPage (): JSX.Element {
                   <div className="mt-3">
                     <p className="font-semibold">Highlights</p>
                     <ul className="mt-1 list-disc space-y-1 pl-5 text-gray-800">
+<<<<<<< HEAD
 
   return (_<>
       <Head>
@@ -771,6 +863,8 @@ export default function RoadmapPage(): JSX.Element {;
                   <div className="mt-3">
                     <p className="font-semibold">Highlights</p>
                     <ul className="mt-1 list-disc space-y-1 pl-5 text-gray-800">
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       {stage.highlights.map((h, i) => (
                         <li key={i}>{h}</li>
                       ))}
@@ -802,6 +896,7 @@ export default function RoadmapPage(): JSX.Element {;
                   </div>
                 </article>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 }
@@ -822,6 +917,8 @@ export default function RoadmapPage(): JSX.Element {;
     </>
   );
 };
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   };
   return (;
     <>;
@@ -900,6 +997,7 @@ export default function RoadmapPage(): JSX.Element {;
               </div>;
             </div>;
           </section>;
+<<<<<<< HEAD
 <<<<<<< HEAD
           <section className="mb - 12">;
             <div className="mb - 3 flex items - center justify - between gap - 3">;
@@ -1026,10 +1124,13 @@ export default function RoadmapPage(): JSX.Element {;
   }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             </div>;
           </section>;
         </div>;
       </main>;
+<<<<<<< HEAD
     </>);
 }
 <<<<<<< HEAD
@@ -1053,3 +1154,7 @@ export default function RoadmapPage(): JSX.Element {;
 }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -1,5 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
   try {
@@ -26,6 +27,8 @@ export default async function handler(
       supabase && supabase.from('projects').select('id, status'),
       supabase && supabase.from('referrals').select('id, converted, source'),
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     ]);
     const [usersR, jobsR, quotesR, projectsR, referralsR] = result;
     const users =
@@ -49,6 +52,7 @@ export default async function handler(
         ? (referralsR && referralsR.value.data as any[])
         : [];
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -60,6 +64,8 @@ export default async function handler(
       supabase.from('referrals').select('id, converted, source')]);
     const mockIfEmpty = (arr: any[], mock: any[]) => (arr && arr.length ? arr : mock),
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     const usersData = mockIfEmpty(users, [
       { id: 1, role: 'client', country: 'US' }
       { id: 2, role: 'talent', country: 'IN' }
@@ -88,6 +94,7 @@ export default async function handler(
     ]);      { id: 41, converted: true, source: 'linkedin' }
       { id: 42, converted: false, source: 'twitter' }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       { id: 43, converted: true, source: 'partner' }]);
 
@@ -96,12 +103,16 @@ export default async function handler(
 =======
       { id: 43, converted: true, source: 'partner' }]);
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+      { id: 43, converted: true, source: 'partner' }]);
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     const totalUsers = usersData.length;
     const totalTalents = usersData.filter(u => u.role === 'talent').length;
     const totalClients = usersData.filter(u => u.role === 'client').length;
     const jobsPosted = jobsData.filter(j => j.status === 'posted').length;
     const jobsFilled = jobsData.filter(j => j.status === 'filled').length;
     const quotesSent = quotesData.filter(q => q.status === 'sent').length;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     const quotesAccepted = quotesData.filter(q => q.status === 'accepted').length;
@@ -110,11 +121,14 @@ export default async function handler(
 =======
     const quotesAccepted = quotesData.filter(q => q.status === 'accepted').length;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     const activeProjects = projectsData.filter(p => p.status === 'active').length;
     const categoryCounts: Record<string, number> = {}
     jobsData.forEach(j => { categoryCounts[j.category] = (categoryCounts[j.category] |0) + 1 });
     const referralConversions = referralsData.filter(r => r.converted).length;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -136,10 +150,16 @@ export default async function handler(
     const jobsPosted = jobsData && jobsData.filter(j => j && j.status === 'posted').length;
     const jobsFilled = jobsData && jobsData.filter(j => j && j.status === 'filled').length;
 
+=======
+    const totalUsers = usersData && usersData.length;
+    const totalTalents = usersData && usersData.filter(u => u && u.role === 'talent').length;
+    const totalClients = usersData && usersData.filter(u => u && u.role === 'client').length;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     const quotesSent = quotesData && quotesData.filter(q => q && q.status === 'sent').length;
     const quotesAccepted = quotesData && quotesData.filter(
       q => q && q.status === 'accepted'
     ).length;
+<<<<<<< HEAD
 
     const activeProjects = projectsData && projectsData.filter(
       p => p && p.status === 'active'
@@ -322,6 +342,14 @@ res.status (200).json ({
     });
   } catch (e: any) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+    usersData.forEach(u => {
+      geoCounts[u.country |'Unknown'] =
+        (geoCounts[u.country |'Unknown'] |0) + 1;
+    });
+  } catch (e: any) {
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     jobsData.forEach(j => { categoryCounts[j.category] = (categoryCounts[j.category] || 0) + 1 });
 
     const referralConversions = referralsData.filter(r => r.converted).length;
@@ -335,6 +363,7 @@ res.status (200).json ({
     },
     topCategories: Object.entries(categoryCounts).sort((a, b) => b[1] - a[1]).slice(0, 5).map(([label, value]) => ({ label, value }));
       referralConversions;
+<<<<<<< HEAD
       geo: Object.entries(geoCounts).map(([country, value]) => ({ label: country, value }))})
   } catch (e: any) {
     res.status(200).json({
@@ -358,6 +387,15 @@ res.status (200).json ({
   }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+      topCategories: [{ label: 'AI/ML', value: 2 }, { label: 'Design', value: 1 }];
+      referralConversions: 2
+
+      geo: [{ label: 'US', value: 2 }, { label: 'IN', value: 1 }, { label: 'GB', value: 1 }]})
+  }
+    });
+  } catch (e: any) {
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     res.status (200).json ({
       totals: {
         total_users: 4,
@@ -382,6 +420,7 @@ res.status (200).json ({
     });
   }}
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
@@ -399,3 +438,8 @@ res.status (200).json ({
 }
     const geoCounts: Record<string, number> = {};
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

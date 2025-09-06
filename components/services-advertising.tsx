@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -533,10 +534,13 @@ function ServicesAdvertisingPage() {
                   >;
                     impact.com / pricing;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   </a>;
                 </li>;
                 <li>;
                   PartnerStack:{' '}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -552,10 +556,13 @@ function ServicesAdvertisingPage() {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   </a>;
                 </li>;
                 <li>;
                   Refersion:{' '}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -780,10 +787,13 @@ function ServicesAdvertisingPage() {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               </a>;
             </li>;
           </ul>;
         </section>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -816,6 +826,8 @@ function ServicesAdvertisingPage() {
 
 
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         {/* New sections with average market prices and references */}
         <section className='space-y-6'>;
           <h2 className='text-2xl font-semibold text-white'>;
@@ -826,6 +838,7 @@ function ServicesAdvertisingPage() {
             response times.;
           </p>;
           <ul className='list-disc list-inside text-slate-300 space-y-1'>;
+<<<<<<< HEAD
             <li>Typical SMB budget: $20–$200/mo</li>;
             <li>;
               References:{' '}
@@ -4723,11 +4736,14 @@ export default function ServicesAdvertisingPage() {
             <li>;
               References: {ext('https://www && www.deque.com/axe/')},{' '}
               {ext('https://pagespeed && pagespeed.web.dev/')}
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             </li>;
           </ul>;
           <div>;
             <a
               className='text-cyan-400 underline'
+<<<<<<< HEAD
               href='/accessibility-scanner'>;
               Learn more;
             </a>;
@@ -4957,6 +4973,8 @@ export default function ServicesAdvertisingPage() {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <section id='serverless-lakehouse-starter' className='space-y-6'>;
           <h2 className='text-2xl font-semibold text-white'>;
             Serverless Lakehouse Starter;
@@ -4975,9 +4993,13 @@ export default function ServicesAdvertisingPage() {
           </ul>;
         </section>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <section id='customer-journey-orchestration' className='space-y-6'>;
           <h2 className='text-2xl font-semibold text-white'>;
             Customer Journey Orchestration;
@@ -4995,9 +5017,13 @@ export default function ServicesAdvertisingPage() {
           </ul>;
         </section>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <section id='kubernetes-runbooks-as-code' className='space-y-6'>;
           <h2 className='text-2xl font-semibold text-white'>;
             Kubernetes Runbooks as Code;
@@ -5014,9 +5040,13 @@ export default function ServicesAdvertisingPage() {
           </ul>;
         </section>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <section id='security-posture-copilot' className='space-y-6'>;
           <h2 className='text-2xl font-semibold text-white'>;
             Security Posture Copilot;
@@ -5033,9 +5063,13 @@ export default function ServicesAdvertisingPage() {
           </ul>;
         </section>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <section id='itsm-ai-agent' className='space-y-6'>;
           <h2 className='text-2xl font-semibold text-white'>ITSM AI Agent</h2>;
           <p className='text-slate-300'>;
@@ -5052,9 +5086,13 @@ export default function ServicesAdvertisingPage() {
           </ul>;
         </section>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <section id='warehouse-native-reverse-etl' className='space-y-6'>;
           <h2 className='text-2xl font-semibold text-white'>;
             Warehouse-native Reverse ETL;
@@ -5071,9 +5109,13 @@ export default function ServicesAdvertisingPage() {
           </ul>;
         </section>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <section id='data-contracts-hub' className='space-y-6'>;
           <h2 className='text-2xl font-semibold text-white'>;
             Data Contracts Hub;
@@ -5090,9 +5132,13 @@ export default function ServicesAdvertisingPage() {
           </ul>;
         </section>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <section id='ai-sales-playbook-generator' className='space-y-6'>;
           <h2 className='text-2xl font-semibold text-white'>;
             AI Sales Playbook Generator;
@@ -5109,9 +5155,13 @@ export default function ServicesAdvertisingPage() {
           </ul>;
         </section>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <section id='customer-data-platform-lite' className='space-y-6'>;
           <h2 className='text-2xl font-semibold text-white'>;
             Customer Data Platform (CDP) Lite;
@@ -5128,9 +5178,13 @@ export default function ServicesAdvertisingPage() {
           </ul>;
         </section>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <section id='data-quality-observability' className='space-y-6'>;
           <h2 className='text-2xl font-semibold text-white'>;
             Data Quality & Observability;
@@ -5147,9 +5201,13 @@ export default function ServicesAdvertisingPage() {
           </ul>;
         </section>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <section id='feature-store-starter' className='space-y-6'>;
           <h2 className='text-2xl font-semibold text-white'>;
             Feature Store Starter;
@@ -5166,9 +5224,13 @@ export default function ServicesAdvertisingPage() {
           </ul>;
         </section>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <section id='edge-ab-testing' className='space-y-6'>;
           <h2 className='text-2xl font-semibold text-white'>;
             Edge A/B & Personalization;
@@ -5185,9 +5247,13 @@ export default function ServicesAdvertisingPage() {
           </ul>;
         </section>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <section id='reverse-etl-starter' className='space-y-6'>;
           <h2 className='text-2xl font-semibold text-white'>;
             Reverse ETL Starter;
@@ -5204,9 +5270,13 @@ export default function ServicesAdvertisingPage() {
           </ul>;
         </section>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <section id='consent-preference-center' className='space-y-6'>;
           <h2 className='text-2xl font-semibold text-white'>;
             Consent & Preference Center;
@@ -5223,9 +5293,13 @@ export default function ServicesAdvertisingPage() {
           </ul>;
         </section>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <section id='vendor-risk-dashboard' className='space-y-6'>;
           <h2 className='text-2xl font-semibold text-white'>;
             Vendor Risk Dashboard;
@@ -5242,9 +5316,13 @@ export default function ServicesAdvertisingPage() {
           </ul>;
         </section>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <section id='soc2-evidence-vault' className='space-y-6'>;
           <h2 className='text-2xl font-semibold text-white'>;
             SOC 2 Evidence Vault;
@@ -5261,9 +5339,13 @@ export default function ServicesAdvertisingPage() {
           </ul>;
         </section>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <section id='ai-knowledge-base-search' className='space-y-6'>;
           <h2 className='text-2xl font-semibold text-white'>;
             AI Knowledge Base Search;
@@ -5281,9 +5363,13 @@ export default function ServicesAdvertisingPage() {
           </ul>;
         </section>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <section id='engineering-productivity-insights' className='space-y-6'>;
           <h2 className='text-2xl font-semibold text-white'>;
             Engineering Productivity Insights;
@@ -5300,9 +5386,13 @@ export default function ServicesAdvertisingPage() {
           </ul>;
         </section>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <section id='it-asset-discovery-agent' className='space-y-6'>;
           <h2 className='text-2xl font-semibold text-white'>;
             IT Asset Discovery Agent;
@@ -5320,9 +5410,13 @@ export default function ServicesAdvertisingPage() {
           </ul>;
         </section>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <section id='incident-autocomplete-copilot' className='space-y-6'>;
           <h2 className='text-2xl font-semibold text-white'>;
             Incident Autocomplete Copilot;
@@ -5339,9 +5433,13 @@ export default function ServicesAdvertisingPage() {
           </ul>;
         </section>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <section id='voice-ivr-studio' className='space-y-6'>;
           <h2 className='text-2xl font-semibold text-white'>;
             Voice IVR Studio;
@@ -5358,9 +5456,13 @@ export default function ServicesAdvertisingPage() {
           </ul>;
         </section>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <section id='ai-sales-enablement-engine' className='space-y-6'>;
           <h2 className='text-2xl font-semibold text-white'>;
             AI Sales Enablement Content Engine;
@@ -5378,9 +5480,13 @@ export default function ServicesAdvertisingPage() {
           </ul>;
         </section>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <section id='iot-device-fleet-manager' className='space-y-6'>;
           <h2 className='text-2xl font-semibold text-white'>;
             IoT Device Fleet Manager;
@@ -5398,9 +5504,13 @@ export default function ServicesAdvertisingPage() {
           </ul>;
         </section>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <section id='security-awareness-training' className='space-y-6'>;
           <h2 className='text-2xl font-semibold text-white'>;
             Security Awareness Training Platform;
@@ -5418,9 +5528,13 @@ export default function ServicesAdvertisingPage() {
           </ul>;
         </section>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <section id='vulnerability-patch-orchestrator' className='space-y-6'>;
           <h2 className='text-2xl font-semibold text-white'>;
             Vulnerability & Patch Orchestrator;
@@ -5439,9 +5553,13 @@ export default function ServicesAdvertisingPage() {
           </ul>;
         </section>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <section id='hr-onboarding-automation' className='space-y-6'>;
           <h2 className='text-2xl font-semibold text-white'>;
             HR Onboarding Automation Hub;
@@ -5460,9 +5578,13 @@ export default function ServicesAdvertisingPage() {
           </ul>;
         </section>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <section id='shopify-speed-optimizer' className='space-y-6'>;
           <h2 className='text-2xl font-semibold text-white'>;
             Shopify Speed & Core Web Vitals Optimizer;
@@ -5480,9 +5602,13 @@ export default function ServicesAdvertisingPage() {
           </ul>;
         </section>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <section id='llm-observability-tracing' className='space-y-6'>;
           <h2 className='text-2xl font-semibold text-white'>;
             LLM Observability & Tracing;
@@ -5500,9 +5626,13 @@ export default function ServicesAdvertisingPage() {
           </ul>;
         </section>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <section id='dpia-privacy-toolkit' className='space-y-6'>;
           <h2 className='text-2xl font-semibold text-white'>;
             DPIA & Privacy Impact Toolkit;
@@ -5521,9 +5651,13 @@ export default function ServicesAdvertisingPage() {
           </ul>;
         </section>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <section id='b2b-customer-portal-starter' className='space-y-6'>;
           <h2 className='text-2xl font-semibold text-white'>;
             B2B Customer Portal Starter;
@@ -5541,9 +5675,13 @@ export default function ServicesAdvertisingPage() {
           </ul>;
         </section>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <section id='policy-as-code-governance' className='space-y-6'>;
           <h2 className='text-2xl font-semibold text-white'>;
             Policy‑as‑Code Governance;
@@ -5561,9 +5699,13 @@ export default function ServicesAdvertisingPage() {
           </ul>;
         </section>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <section id='apple-mdm-suite' className='space-y-6'>;
           <h2 className='text-2xl font-semibold text-white'>;
             Apple MDM Suite (ABM/DEP);
@@ -5581,9 +5723,13 @@ export default function ServicesAdvertisingPage() {
           </ul>;
         </section>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <section id='soc2-continuous-controls' className='space-y-6'>;
           <h2 className='text-2xl font-semibold text-white'>;
             SOC 2 Continuous Controls Monitoring;
@@ -5601,9 +5747,13 @@ export default function ServicesAdvertisingPage() {
           </ul>;
         </section>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <section id='ai-red-team-testing' className='space-y-6'>;
           <h2 className='text-2xl font-semibold text-white'>;
             AI Red Team & Prompt Injection Testing;
@@ -5621,9 +5771,13 @@ export default function ServicesAdvertisingPage() {
           </ul>;
         </section>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <section id='api-monetization-dev-portal' className='space-y-6'>;
           <h2 className='text-2xl font-semibold text-white'>;
             API Monetization & Developer Portal;
@@ -5642,9 +5796,13 @@ export default function ServicesAdvertisingPage() {
           </ul>;
         </section>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <section id='consent-compliance-kit' className='space-y-6'>;
           <h2 className='text-2xl font-semibold text-white'>;
             Consent & Cookie Compliance Kit;
@@ -5664,9 +5822,13 @@ export default function ServicesAdvertisingPage() {
           </ul>;
         </section>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <section id='api-backfill-reconciliation' className='space-y-6'>;
           <h2 className='text-2xl font-semibold text-white'>;
             API Backfill & Reconciliation;
@@ -5684,9 +5846,13 @@ export default function ServicesAdvertisingPage() {
           </ul>;
         </section>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <section id='data-quality-sla-monitor' className='space-y-6'>;
           <h2 className='text-2xl font-semibold text-white'>;
             Data Quality & Freshness SLAs;
@@ -5704,9 +5870,13 @@ export default function ServicesAdvertisingPage() {
           </ul>;
         </section>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <section id='postgres-index-advisor' className='space-y-6'>;
           <h2 className='text-2xl font-semibold text-white'>;
             Postgres Index Advisor & Tuner;
@@ -5723,9 +5893,13 @@ export default function ServicesAdvertisingPage() {
           </ul>;
         </section>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <section id='gitops-drift-monitor' className='space-y-6'>;
           <h2 className='text-2xl font-semibold text-white'>;
             GitOps Policy & Drift Monitor;
@@ -5742,9 +5916,13 @@ export default function ServicesAdvertisingPage() {
           </ul>;
         </section>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <section id='soc2-readiness-scanner' className='space-y-6'>;
           <h2 className='text-2xl font-semibold text-white'>;
             SOC 2 Readiness Scanner;
@@ -5762,9 +5940,13 @@ export default function ServicesAdvertisingPage() {
           </ul>;
         </section>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <section id='cloud-asset-attack-surface' className='space-y-6'>;
           <h2 className='text-2xl font-semibold text-white'>;
             Cloud Asset Inventory & Attack Surface;
@@ -5783,9 +5965,13 @@ export default function ServicesAdvertisingPage() {
           </ul>;
         </section>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <section id='llm-red-team-simulator' className='space-y-6'>;
           <h2 className='text-2xl font-semibold text-white'>;
             LLM Red Team & Jailbreak Simulator;
@@ -5805,9 +5991,13 @@ export default function ServicesAdvertisingPage() {
           </ul>;
         </section>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <section id='affiliate-fraud-detector' className='space-y-6'>;
           <h2 className='text-2xl font-semibold text-white'>;
             Affiliate Fraud Detector;
@@ -5825,9 +6015,13 @@ export default function ServicesAdvertisingPage() {
           </ul>;
         </section>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <section id='personalization-api' className='space-y-6'>;
           <h2 className='text-2xl font-semibold text-white'>;
             Content Personalization API;
@@ -5845,9 +6039,13 @@ export default function ServicesAdvertisingPage() {
           </ul>;
         </section>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <section id='lead-enrichment-routing' className='space-y-6'>;
           <h2 className='text-2xl font-semibold text-white'>;
             Lead Enrichment & Routing Engine;
@@ -5864,9 +6062,13 @@ export default function ServicesAdvertisingPage() {
           </ul>;
         </section>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <section id='k8s-quota-cost-guard' className='space-y-6'>;
           <h2 className='text-2xl font-semibold text-white'>;
             Kubernetes Quota & Cost Guard;
@@ -5883,9 +6085,13 @@ export default function ServicesAdvertisingPage() {
           </ul>;
         </section>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <section id='ai-contract-risk-analyzer' className='space-y-6'>;
           <h2 className='text-2xl font-semibold text-white'>;
             AI Contract Risk Analyzer;
@@ -5906,9 +6112,12 @@ export default function ServicesAdvertisingPage() {
               className='text-cyan-400 underline'
               href='/services/ai-contract-risk-analyzer'>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <section id='accessibility - scanner' className='space - y-6'>;
           <h2 className='text - 2xl font - semibold text - white'>;
             Accessibility Compliance Scanner;
@@ -5932,27 +6141,11 @@ export default function ServicesAdvertisingPage() {
             </a>;
           </div>;
         </section>;
-        <section id='image - optimizer - cdn' className='space - y-6'>;
-          <h2 className='text - 2xl font - semibold text - white'>;
-            Image Optimizer CDN;
-          </h2>;
-          <p className='text - slate - 300'>;
-            On - the - fly transforms, AVIF / WebP, edge caching, signed URLs, and;
-            analytics.;
-          </p>;
-          <ul className='list - disc list - inside text - slate - 300 space - y-1'>;
-            <li > Typical SMB budget: $5–$50 / mo + bandwidth</li>;
-            <li>;
-              References: {ext ('https://www.imgix.com / pricing')}, {' '}
-              {ext ('https://cloudinary.com / pricing')}
-            </li>;
-          </ul>;
-          <div>;
-            <a className='text - cyan - 400 underline' href='/image - optimizer - cdn'>;
               Learn more;
             </a>;
           </div>;
         </section>;
+<<<<<<< HEAD
         <section id='mlops - starter' className='space - y-6'>;
           <h2 className='text - 2xl font - semibold text - white'>;
             MLOps Pipeline Starter;
@@ -7073,16 +7266,22 @@ export default function ServicesAdvertisingPage() {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 Learn more;
               </a>;
             </div>;
           </section>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
                 href='/services/multi-tenant-rate-limiter'>;
@@ -9436,6 +9635,8 @@ export default function ServicesAdvertisingPage() {
           </section>
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <section id='data-residency-geo-router' className='space-y-2'>
             <h3 className='text-xl font-semibold text-white'>
               Data Residency & Geo Routing Proxy
@@ -9449,6 +9650,7 @@ export default function ServicesAdvertisingPage() {
               <li>
                 References:{' '}
 <<<<<<< HEAD
+<<<<<<< HEAD
                 {ext ('https://docs.konghq.com / hub / kong - inc / rate - limiting/')}, {' '}
                 {ext ('https://developers.cloudflare.com / waf / rate - limits/')}
               </li>;
@@ -9459,10 +9661,13 @@ export default function ServicesAdvertisingPage() {
                 href='/services / multi - tenant - rate - limiter';
               >;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 Learn more;
               </a>;
             </div>;
           </section>;
+<<<<<<< HEAD
 
                 href='/services/data-residency-geo-router'>;
 =======
@@ -10873,6 +11078,8 @@ export default function ServicesAdvertisingPage() {
   ext ('https://valimail.com/pricing/')
 }</li> </ul> <div><a className=" text-cyan-400 underline"href=" /services/email-dmarc-monitor">Learn more</a></div> </section> </section> <a href="tel:+13024640950"className="px-4 py-2 rounded-lg bg-gradient-to-r from-cyan-500 to-blue-600 text-white">Call +1 302 464 0950</a> <a href="mailto:kleber@ziontechgroup.com"className="px-4 py-2 rounded-lg bg-gradient-to-r from-purple-500 to-pink-600 text-white">Email kleber@ziontechgroup.com</a> <a href="/pricing"className="px-4 py-2 rounded-lg border border-cyan-500/40 text-cyan-300">View Pricing</a> 				<section className="space-y-6">
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 					<h2 className="text-2xl font-semibold text-white">Employee Scheduling Suite</h2>
 					<p className="text-slate-300">Shift planning with availability, time-off, swap requests, and notifications.</p>
 					<ul className="list-disc list-inside text-slate-300 space-y-1">
@@ -11953,6 +12160,7 @@ export default function ServicesAdvertisingPage() {
 				</div>
 			</div>
 		</div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -13746,6 +13954,9 @@ export default function ServicesAdvertisingPage() {
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     </div>);
 ;
   /* Quick contact */;
@@ -15406,6 +15617,7 @@ export default function ServicesAdvertisingPage() {
   </div>),
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
@@ -15424,3 +15636,8 @@ export default function ServicesAdvertisingPage() {
 ;
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+	),
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

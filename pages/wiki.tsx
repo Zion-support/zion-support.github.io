@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -42,10 +43,14 @@ import React, { useMemo, useState } from 'react',
 import React, { useMemo, useState } from 'react';
 import React, { useMemo, useState } from 'react',;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+import React, { useMemo, useState } from 'react',;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {
   generateZionWiki,
   buildMarkdownFromWiki,
   buildWikitextFromWiki,
+<<<<<<< HEAD
 <<<<<<< HEAD
   operator_prompt,
   slugify} from '../utils / data / zion_content',
@@ -271,15 +276,12 @@ export default function WikiPage() {
           <div className=&quot;font-semibold mb-2&quot;>Operator Prompt</div>
           <pre className=&quot;overflow-auto text-xs whitespace-pre-wrap&quot;>{operatorPrompt}</pre>
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   operatorPrompt,
   slugify} from '../utils/data/zionContent',
 
-import {
-  generateZionWiki
-  buildMarkdownFromWiki
-  buildWikitextFromWiki
-  operatorPrompt
-  slugify} from '../utils/data/zionContent'
+
 function CopyButton({ text, label }: { text: string, label: string }) {
   const [copied, setCopied] = useState(false)
   return (
@@ -288,12 +290,6 @@ function CopyButton({ text, label }: { text: string, label: string }) {
         await navigator.clipboard.writeText(text)
         setCopied(true)
         setTimeout(() => setCopied(false), 1500)
-      }}
-      className="px-3 py-1 rounded border text-xs hover:bg-gray-50 dark:hover:bg-gray-900"
-    >
-      {copied ? 'Copied' : label}
-    </button>
-  )
 }
 export default function WikiPage() {
   const wiki = useMemo(() => generateZionWiki(), [])
@@ -333,7 +329,11 @@ function CopyButton({ text, label }: { text: string, label: string }) {;
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+
+
+
 }
+
 export default function WikiPage() {
   const wiki = useMemo(() => generateZionWiki(), []),
   const md = useMemo(() => buildMarkdownFromWiki(wiki), [wiki]),
@@ -347,7 +347,6 @@ export default function WikiPage() {
             <li key={s.id}>
               <a href={`#${slugify(s.title)}`} className="opacity-80 hover:opacity-100">
                 {s.title}
-              </a>
                 {s.title  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -355,18 +354,19 @@ export default function WikiPage() {
 }
               </Link>
             </li>
-          ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+          ))}
           <li>
             <a href="#references" className="opacity-80 hover:opacity-100">References</a>
             <a href="#references" className="opacity-80 hover:opacity-100">References</Link>
           </li>
         </ul>
       </aside>
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <article className="prose dark:prose-invert max-w-none">
         <h1>{wiki.title}</h1>
         <div className="not-prose border rounded p-4 bg-white/60 dark:bg-black/20 mb-4">
@@ -379,15 +379,19 @@ export default function WikiPage() {
         </div>
         <p>{wiki.intro}</p>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         {wiki.sections.map((s) => (
           <section key={s.id} id={slugify(s.title)}>
             <h2>{s.title}</h2>
             {s.paragraphs.map((p, i) => (
               <p key={i}>{p}</p>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -402,6 +406,8 @@ export default function WikiPage() {
         ))}
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -413,6 +419,7 @@ export default function WikiPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -420,6 +427,8 @@ export default function WikiPage() {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <h2 id="references">References</h2>
         <ol>
           {wiki.references.map((r, i) => (
@@ -427,10 +436,13 @@ export default function WikiPage() {
           ))}
         </ol>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <div className="not-prose mt-10 p-4 border rounded bg-white/60 dark:bg-black/20">
           <div className="flex items-center justify-between mb-2">
             <div className="font-semibold">Export</div>
@@ -440,6 +452,7 @@ export default function WikiPage() {
             </div>
           </div>
           <pre className="overflow-auto text-xs whitespace-pre-wrap">
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -457,11 +470,14 @@ export default function WikiPage() {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           </pre>
         </div>
         <div className="not-prose mt-6 p-4 border rounded bg-white/60 dark:bg-black/20">
           <div className="font-semibold mb-2">Operator Prompt</div>
           <pre className="overflow-auto text-xs whitespace-pre-wrap">{operatorPrompt}</pre>
+<<<<<<< HEAD
 <<<<<<< HEAD
         </div>
       </article>
@@ -533,6 +549,8 @@ export default function WikiPage() {
   )
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     </div>
   )
   } catch (error) {
@@ -540,9 +558,12 @@ export default function WikiPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

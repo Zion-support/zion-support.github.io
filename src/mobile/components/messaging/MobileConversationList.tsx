@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 export function MobileConversationList({
 
 =======
@@ -85,6 +86,10 @@ export function MobileConversationList({
   conversations,
   activeConversation,
 
+=======
+
+export function MobileConversationList({
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   onSelectConversation
 }: MobileConversationListProps) {
   return (
@@ -95,8 +100,6 @@ export function MobileConversationList({
           <Input placeholder='Search messages...' className='pl-9' />
         </div>
       </div>
-
-
 import React from 'react';
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -190,22 +193,24 @@ function MobileConversationList() {
         </div>;
       </div>;
 
+<<<<<<< HEAD
               'px-4',
               activeConversation === conversation && conversation.id && 'bg-primary/5'
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
             )}
             onClick={() => onSelectConversation(conversation && conversation.id)}          >;
             <div className='flex items-center gap-3 py-3 cursor-pointer'>;
               <Avatar>;
                 <AvatarImage
-
-
                 <AvatarFallback>
                   {conversation.name.charAt(0).toUpperCase()}
                 </AvatarFallback>
               </Avatar>
+<<<<<<< HEAD
 
       <div className='px-4 pb-4 space-y-2'>
         <div className='flex space-x-2'>
@@ -316,6 +321,8 @@ function MobileConversationList() {
                     ) : (
                       conversation.lastMessage
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     )}
                   </p>;
 
@@ -323,17 +330,12 @@ function MobileConversationList() {
                     <Badge className='ml-2 h-5 w-5 p-0 flex items-center justify-center rounded-full'>                      {conversation && conversation.unreadCount}                    <Badge className="ml-2 h-5 w-5 p-0 flex items-center justify-center rounded-full">;
                       {conversation && conversation.unreadCount}
                     </Badge>;
-
-
                   )}
                 </div>;
               </div>;
             </div>;
             <div className='border-t border-border ml-12'></div>          </div>            <div className="border-t border-border ml-12"></div>;
           </div>;
-
-
-
               
               <div className="flex-1 min-w-0">
                 <div className="flex justify-between items-baseline">
@@ -349,6 +351,9 @@ function MobileConversationList() {
                       ? <em>Typing...</em> 
                       : conversation.lastMessage}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 
@@ -357,6 +362,7 @@ function MobileConversationList() {
                   </p>
                   
                   {conversation.unreadCount > 0 && (
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -371,17 +377,27 @@ function MobileConversationList() {
 =======
                   </p>
                   {conversation.unreadCount > 0 && (
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     <Badge className='ml-2 h-5 w-5 p-0 flex items-center justify-center rounded-full'>                      {conversation.unreadCount}                    <Badge className="ml-2 h-5 w-5 p-0 flex items-center justify-center rounded-full">
                       {conversation.unreadCount}
                     </Badge>
                     <Badge className="ml-2 h-5 w-5 p-0 flex items-center justify-center rounded-full">
                       {conversation.unreadCount}
                     </Badge>;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+                  </p>
+                  {conversation.unreadCount > 0 && (
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   )}
                 </div>
               </div>
             </div>
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -395,13 +411,15 @@ function MobileConversationList() {
 <<<<<<< HEAD
 =======
             <div className='border-t border-border ml-12'></div>          </div>            <div className="border-t border-border ml-12"></div>
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           </div>
         ))}
       </div>
-    </div>;
-  );
-};
+    </div>
+  )
 }
+<<<<<<< HEAD
             <div className="border-t border-border ml-12"></div>
           </div>
         ))}
@@ -462,3 +480,5 @@ function MobileConversationList() {
 ;
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

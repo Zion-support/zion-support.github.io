@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -49,19 +50,26 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readState, writeState } from "../../../utils/sync/storage";
 import { Peer } from "../../../utils/sync/types";
 import { v4 as uuidv4 } from "uuid";
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
-}
 
   return res.status(200).json({ peers: state.config.peers })
 import type { NextApiRequest, NextApiResponse } from "next",;
 import { readState, writeState } from "../../../utils/sync/storage",;
 import { Peer } from "../../../utils/sync/types",;
 import { v4 as uuidv4 } from "uuid",;
+
+import type { NextApiRequest, NextApiResponse } from "next",;
+import { readState, writeState } from "../../../utils/sync/storage",;
+import { Peer } from "../../../utils/sync/types",;
+import { v4 as uuidv4 } from "uuid",;
+
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({
@@ -84,11 +92,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     existing.paused = typeof peer.paused === "boolean" ? peer.paused : existing.paused
   } else {
     state.config.peers.push({ id, baseUrl: peer.baseUrl, scope: peer.scope || state.config.scope, paused: false })
-  }
-
-  writeState(state),
-  return res.status(200).json({ peers: state.config.peers });
-};
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readState, writeState } from "../../../utils/sync/storage";
 import { Peer } from "../../../utils/sync/types";
@@ -125,7 +128,15 @@ export default function handler(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+}
+}
+}
+}
 
+
+<<<<<<< HEAD
 }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

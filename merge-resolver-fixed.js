@@ -1,7 +1,11 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 const fs = require ('fs'),
 const path = require ('path'),
 console.log ('🔧 Starting Merge Conflict Resolution'),
@@ -20,6 +24,7 @@ function fixMergeConflicts() {
 if ( {) {
   $2
 }
+<<<<<<< HEAD
       fs.writeFileSync (file_path, content, 'utf8'),
       console.log (`✅ Fixed merge conflicts in: ${path.relative (process.cwd (), file_path)}`),
 <<<<<<< HEAD
@@ -52,16 +57,26 @@ function fixMergeConflicts(filePath) {try {;
 }
 // Function to get all files recursively;
 function getAllFiles(dir, extensions) {let files = [];
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 const fs = require('fs'),;
 const path = require('path'),;
 const fs = require('fs');
 const path = require('path');
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+      fs.writeFileSync (file_path, content, 'utf8'),
+      console.log (`✅ Fixed merge conflicts in: ${path.relative (process.cwd (), file_path)}`),
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 console.log('🔧 Starting Merge Conflict Resolution'),;
 // Function to fix merge conflicts in a file;
 function fixMergeConflicts(filePath) {;
   try {;
     let content = fs.readFileSync(filePath, 'utf8'),;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -90,19 +105,17 @@ function fixMergeConflicts(filePath) {;
     let content = fs.readFileSync(filePath, 'utf8');
     const originalContent = content;
     ;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     // Remove merge conflict markers and keep HEAD version;
-    content = content.replace(/[\s\S]*?[\s\S]*?    content = content.replace(/[\s\S]*?    ;
-    if (content !== originalContent) {;
-      fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`✅ Fixed merge conflicts in:${path.relative(process.cwd(), filePath)}`);
-    const originalContent = content,;
-    // Remove merge conflict markers and keep HEAD version;
-    content = content.replace(/[\s\S]*?
-    content = content.replace(/
     const originalContent = content;
     // Remove merge conflict markers and keep HEAD version;
     content = content.replace(/[\s\S]*?[\s\S]*?[a-f0-9]+/g, ''),;
     content = content.replace(/[\s\S]*?[a-f0-9]+/g, ''),;
+
+
+    const originalContent = content;
+    // Remove merge conflict markers and keep HEAD version;
     if (content !== originalContent) {;
       fs.writeFileSync(filePath, content, 'utf8'),;
       console.log(`✅ Fixed merge conflicts in: ${path.relative(process.cwd(), filePath)}`),;
@@ -111,11 +124,16 @@ function fixMergeConflicts(filePath) {;
     return false;
   } catch (error) {;
     console.log(`❌ Error fixing ${filePath}: ${error.message}`),;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     return false;
   }
 }
+;
 // Function to get all files recursively;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 function getAllFiles(dir, extensions) {;
@@ -133,15 +151,23 @@ function getAllFiles(dir, extensions) {;
       const stat = fs.statSync(fullPath),;
   let files = [];
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+function getAllFiles(dir, extensions) {;
+  let files = [];
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   try {;
     const items = fs.readdirSync(dir);
     for (const item of items) {;
       const fullPath = path.join(dir, item);
       const stat = fs.statSync(fullPath);
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 /**
  * getAllFiles - Function description
  */
@@ -164,12 +190,16 @@ function getAllFiles() {
     }
   } catch (error) {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     // Skip directories that can't be read;
 
   }
   return files;
 }
 // Main execution;
+<<<<<<< HEAD
 
 async /**
  * main - Function description
@@ -256,6 +286,8 @@ for (const file of files) {
   return files;
 }
 // Main execution;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 async function main() {;
   console.log('🔍 Scanning for merge conflicts...');
   const files = getAllFiles(process.cwd(), ['.tsx.ts.jsx.js', '.json.md']);
@@ -264,17 +296,19 @@ async function main() {;
     try {;
       const content = fs.readFileSync(file, 'utf8');
       if (content.includes('') |content.includes('
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       } else if (extensions.some(ext => item.endsWith(ext))) {;
-        files.push(fullPath);
       }
+    } catch (error) {;
+      // Skip files that can't be read;
     }
-  } catch (error) {;
-    // Skip directories that can't be read;
   }
-  return files;
 }
 ;
+<<<<<<< HEAD
 // Main execution;
 async function main() {;
   console.log('🔍 Scanning for merge conflicts...'),;
@@ -303,11 +337,12 @@ async function main() {;
 }
 }
 }
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   let fixedCount = 0;
   for (const file of files) {;
     try {;
       const content = fs.readFileSync(file, 'utf8'),;
-      if (content.includes('') || content.includes('') || content.includes('>>>>>>>')) {;
         if (fixMergeConflicts(file)) {;
           fixedCount++;
         }
@@ -322,4 +357,8 @@ async function main() {;
 }
 ;
 main().catch(console.error),;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+main().catch(console.error),;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

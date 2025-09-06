@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from "react",
 import { useRouter } from "next/router",
 import Link from "next/link";
@@ -109,11 +110,14 @@ export function BottomNavigation() {;
                   'h-5 w-5',;
                   isActive ? 'stroke-primary' : 'stroke-muted-foreground';
                 ),;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               })}
             </div>
             <span className="text-xs mt-1">{item.label}</span>
           </Link>
         )
+<<<<<<< HEAD
       })}
     </div>
   )
@@ -164,6 +168,8 @@ export function BottomNavigation() {;
       {navItems.map((item) => {;
         const isActive = router.pathname === item.path;
         return (;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <Link;
             key={item.path} ;
             href={item.path}
@@ -184,6 +190,7 @@ export function BottomNavigation() {;
     </div>;
   );
 }
+<<<<<<< HEAD
 
 
               {React.cloneElement(item.icon as React.ReactElement, { 
@@ -209,3 +216,6 @@ export function BottomNavigation() {;
 
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

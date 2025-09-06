@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import React, { useState } from 'react'; import {
   Table
@@ -136,6 +137,8 @@ export function TeamManagement() {
 
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   // Mock team members data
   const teamMembers = [
     {
@@ -161,13 +164,6 @@ export function TeamManagement() {
       lastActive: "Never"},
     {
       id: 4,
-      name: 'Taylor Brown',
-      email: 'taylor@example.com',
-      role: 'Viewer',
-      status: 'active',
-      lastActive: '3 days ago',
-    },
-  ]
       name: "Taylor Brown",
       email: "taylor@example.com",
       role: "Viewer",
@@ -175,26 +171,16 @@ export function TeamManagement() {
       lastActive: "3 days ago"}],
 
   const handleAddMember = () => {
-const handleAddMember = () => {
     // In a real app, this would make an API call to add the member
     if (!newMemberEmail) {
       toast({
-    // In a real app, this would make an API call to add the member
-    if (!newMemberEmail) {
-      toast({
-        title: 'Email required'
-        description: 'Please enter an email address for the new team member.'
-        variant: 'destructive'
-      })
-        title: "Email required",
-        description: "Please enter an email address for the new team member.",
-        variant: "destructive"}),
       return
         title: 'Email required',
         description: 'Please enter an email address for the new team member.',
         variant: 'destructive',
       })
       return;
+<<<<<<< HEAD
     toast({
       title: 'Invitation sent'
       description: `An invitation has been sent to ${newMemberEmail}`
@@ -204,6 +190,10 @@ const handleAddMember = () => {
       description: `An invitation has been sent to ${newMemberEmail}`
       title: 'Invitation sent',
       description: `An invitation has been sent to ${newMemberEmail}`,
+=======
+    }
+    toast({
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     })
     setNewMemberEmail('')
     setIsAddingMember(false)
@@ -221,11 +211,14 @@ const handleAddMember = () => {
       title: 'Invitation resent'
       description: `A new invitation has been sent to ${memberEmail}`
     })
+<<<<<<< HEAD
   Table,
   }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         title: "Email required",
         description: "Please enter an email address for the new team member.",
         variant: "destructive"}),
@@ -233,6 +226,7 @@ const handleAddMember = () => {
     }
 
     toast({
+<<<<<<< HEAD
 <<<<<<< HEAD
 
                   onChange={(e) => setNewMemberEmail(e.target.value)}
@@ -245,6 +239,8 @@ const handleAddMember = () => {
 
 
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       title: "Invitation sent",
       description: `An invitation has been sent to ${newMemberEmail}`}),
 
@@ -265,7 +261,11 @@ const handleAddMember = () => {
       title: "Invitation resent",
       description: `A new invitation has been sent to ${memberEmail}`})
   },
+<<<<<<< HEAD
   return (
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 
@@ -293,12 +293,15 @@ const handleAddMember = () => {
                   Email
                 </Label>
                 <Input
+<<<<<<< HEAD
                   id='email'
                   type='email'
                   placeholder='colleague@company.com'
                   className='col-span-3'
                   value={newMemberEmail}
                   onChange={e => setNewMemberEmail(e.target.value)}                />
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   id="email"
                   type="email"
                   placeholder="colleague@company.com"
@@ -332,11 +335,14 @@ const handleAddMember = () => {
           </DialogContent>
         </Dialog>
       </div>
+<<<<<<< HEAD
       <div className='rounded-md border'>
         <Table>
       <div className='rounded-md border'>
 
       <div className="rounded-md border">
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
         <Table>
           <TableHeader>
@@ -349,17 +355,21 @@ const handleAddMember = () => {
             </TableRow>
           </TableHeader>
           <TableBody>
+<<<<<<< HEAD
             {teamMembers.map(member => (              <TableRow key={member.id}>
                 <TableCell>
             {teamMembers.map(member => (              <TableRow key={member.id}>
             {teamMembers.map((member) => (
               <TableRow key={member.id}>
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
                 <TableCell>
                   <div className="flex items-center gap-2">
                     <div className="h-8 w-8 rounded-full bg-muted flex items-center justify-center">
                       <span className="text-sm font-medium">
                         {member.name
+<<<<<<< HEAD
                           .split(' ')
                           .map(n => n[0])
                           .join('')}                      </span>
@@ -368,11 +378,14 @@ const handleAddMember = () => {
                           .map(n => n[0])
                           .join('')}                      </span>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                           .split(" ")
                           .map((n) => n[0])
                           .join("")}
                       </span>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
                     variant={member.status === "active" ? "default" : "outline"}
@@ -380,6 +393,8 @@ const handleAddMember = () => {
 
 
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     </div>
                     <div>
                       <div className="font-medium">{member.name}</div>
@@ -392,11 +407,14 @@ const handleAddMember = () => {
                 <TableCell>{member.role}</TableCell>
                 <TableCell>
                   <Badge
+<<<<<<< HEAD
                     variant={member.status === 'active' ? 'default' : 'outline'}                  >
                     {member.status}
                     variant={member.status === 'active' ? 'default' : 'outline'}                  >
                     variant={member.status === "active" ? "default" : "outline"}
                   >
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
                     {member.status}
                   </Badge>
@@ -406,7 +424,10 @@ const handleAddMember = () => {
                   <div className="flex justify-end gap-2">
                     {member.status === "pending" ? (
                       <Button
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                         variant="ghost"
                         size="sm"
                         onClick={() => handleResendInvite(member.email)}
@@ -414,13 +435,17 @@ const handleAddMember = () => {
                         <Mail className="h-4 w-4 mr-1" />
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 ;
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                         Resend
                       </Button>
                     ) : (
                       <Button
+<<<<<<< HEAD
 
                     )}
                         variant='ghost'
@@ -474,22 +499,30 @@ const handleAddMember = () => {
                     ) : (
                       <Button
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                         variant="ghost"
                         size="sm"
                         className="text-destructive hover:text-destructive"
 import React, { useState } from "react",;
 import {;
+<<<<<<< HEAD
 import React, { useState } from 'react';import {;
 
 import React, { useState } from "react",;
 import {;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   Table,;
   TableBody,;
   TableCell,;
   TableHead,;
   TableHeader,;
+<<<<<<< HEAD
   TableRow} from "@/components/ui/table",;
   TableRow} from "@/components/ui/table",;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {;
   Dialog,;
   DialogContent,;
@@ -497,6 +530,7 @@ import {;
   DialogFooter,;
   DialogHeader,;
   DialogTitle,;
+<<<<<<< HEAD
   DialogTrigger} from "@/components/ui/dialog",;
 import { Button } from "@/components/ui/button",;
 import { Input } from "@/components/ui/input",;
@@ -507,10 +541,13 @@ import { toast } from "@/hooks/use-toast",;
 export function TeamManagement() {;
   const [isAddingMember, setIsAddingMember] = useState(false),;
   const [newMemberEmail, setNewMemberEmail] = useState(""),;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   // Mock team members data;
   const teamMembers = [;
     {;
       id: 1,;
+<<<<<<< HEAD
       name: "Alex Johnson",;
       email: "alex@example.com",;
       role: "Admin",;
@@ -537,10 +574,13 @@ export function TeamManagement() {;
       role: "Viewer",;
       status: "active",;
       lastActive: "3 days ago"}],;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const handleAddMember = () => {;
     // In a real app, this would make an API call to add the member;
     if (!newMemberEmail) {;
       toast({;
+<<<<<<< HEAD
 
   return (
     <div className='space - y-6'>;
@@ -610,11 +650,14 @@ export function TeamManagement() {;
           <DialogTrigger asChild>;
             <Button className="gap-2">;
               <UserPlus className="h-4 w-4" />;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               Add Team Member;
             </Button>;
           </DialogTrigger>;
           <DialogContent>;
             <DialogHeader>;
+<<<<<<< HEAD
             <div className='grid gap - 4 py - 4'>;
               <div className='grid grid - cols - 4 items - center gap - 4'>;
                 <Label html_for='email' className='text - right'>;
@@ -636,10 +679,13 @@ export function TeamManagement() {;
                   id='role';
                   className='col - span - 3 flex h - 10 w - full rounded - md border border - input bg - background px - 3 py - 2 text - sm ring - offset - background file:border - 0 file:bg - transparent file:text - sm file:font - medium placeholder:text - muted - foreground focus - visible:outline - none focus - visible:ring - 2 focus - visible:ring - ring focus - visible:ring - offset - 2 disabled:cursor - not - allowed disabled:opacity - 50';
                 >;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   <option value='admin'>Admin</option>;
                   <option value='recruiter'>Recruiter</option>;
                   <option value='manager'>Manager</option>;
                   <option value='viewer'>Viewer</option>;
+<<<<<<< HEAD
               <DialogTitle>Add Team Member</DialogTitle>;
               <DialogDescription>;
                 Send an invitation to join your workspace. They'll receive an email with instructions.;
@@ -671,10 +717,13 @@ export function TeamManagement() {;
                   <option value="recruiter">Recruiter</option>;
                   <option value="manager">Manager</option>;
                   <option value="viewer">Viewer</option>;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 </select>;
               </div>;
             </div>;
             <DialogFooter>;
+<<<<<<< HEAD
               <Button variant="outline" onClick={() => setIsAddingMember(false)}>;
               <Button variant="outline" onClick={() => setIsAddingMember(false)}>;
                 Cancel;
@@ -714,10 +763,13 @@ export function TeamManagement() {;
                       <div className="font-medium">{member.name}</div>;
                       <div className="text-sm text-muted-foreground">;
                         {member.email}
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       </div>;
                     </div>;
                   </div>;
                 </TableCell>;
+<<<<<<< HEAD
                     )}
                   </div>;
                 </TableCell>;
@@ -838,11 +890,17 @@ export function TeamManagement() {;
                       >;
                         <Trash className="h-4 w-4" />;
                       </Button>;
+=======
+
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     )}
                   </div>
                 </TableCell>
               </TableRow>
             ))}
+<<<<<<< HEAD
           </TableBody>
         </Table>
       </div>
@@ -880,3 +938,5 @@ export function TeamManagement() {;
 }
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

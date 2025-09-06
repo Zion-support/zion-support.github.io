@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -21,6 +22,8 @@ class ErrorBoundary extends React.Component {
   }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from "react";
 import clsx from "clsx";
 export type EnhancedButtonProps =;
@@ -28,6 +31,7 @@ export type EnhancedButtonProps =;
     variant?: "primary" | "secondary" | "ghost";
     size?: "sm" | "md" | "lg";
     fullWidth?: boolean;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   };
@@ -126,6 +130,8 @@ export default function EnhancedButton({
     <button
 className={clsx(
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         baseStyles
         sizeStyles[size]
         variantStyles[variant]
@@ -133,6 +139,7 @@ className={clsx(
         className
       )}
       {...props}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 }
@@ -211,3 +218,7 @@ const EnhancedButton: React.FC<EnhancedButtonProps> = ({ className }) => {
 
 export default EnhancedButton;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+}
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

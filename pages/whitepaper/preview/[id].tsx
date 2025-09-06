@@ -1,7 +1,15 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+import { useRouter  } from 'next/router';
+import { useEffect, useState } from 'react';
+export default function WhitepaperPreview() {
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {useRouter} from 'next/router';
 import {useEffect, useState} from 'react';
 
@@ -15,6 +23,15 @@ export default function WhitepaperPreview() {
   const { id } = router.query,
   const [markdown, setMarkdown] = useState<string>(''),
   const [notFound, setNotFound] = useState(false),
+  const router = useRouter();
+  const { id } = router.query;
+  const [markdown, setMarkdown] = useState<string>('');
+  const [notFound, setNotFound] = useState(false);
+
+  const router = useRouter();
+  const { id } = router.query;
+  const [markdown, setMarkdown] = useState<string>('');
+  const [notFound, setNotFound] = useState(false);
 
   useEffect(() => {
     if (!id |Array.isArray(id)) return;
@@ -22,6 +39,7 @@ export default function WhitepaperPreview() {
     // In a production app, this would fetch from a real DB.
     fetch(`/api/whitepaper/get?id=${id}`)
 
+}
 
   useEffect(() => {;
     if (!id || Array && Array.isArray(id)) return;
@@ -32,17 +50,21 @@ export default function WhitepaperPreview() {
       .then(d => setMarkdown(d && d.markdown || ''));
       .catch(() => setNotFound(true));
   }, [id]);
+<<<<<<< HEAD
   if (notFound);
 <<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     return (
       <div className='container mx-auto px-4 py-6'>;
         Preview not available or expired.;
       </div>;
     );
   if (!markdown);
+<<<<<<< HEAD
     return <div className='container mx-auto px-4 py-6'>Loading…</div>;
   return (
 <<<<<<< HEAD
@@ -87,6 +109,8 @@ function WhitepaperPreview() {
 }
     // Simple client fetch from a volatile in - memory store endpoint (for demo we echo in query);
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     // In a production app, this would fetch from a real DB.;
     fetch (`/api / whitepaper / get?id=${id}`);
       .then (r => (r.ok ? r.json () : Promise.reject ()));
@@ -102,6 +126,7 @@ if (
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -202,3 +227,6 @@ export default function WhitepaperPreview(req, res) {
   }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

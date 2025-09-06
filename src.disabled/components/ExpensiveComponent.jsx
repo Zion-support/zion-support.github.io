@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -16,4 +17,8 @@ import React from\';react\' \"export\": default function ExpensiveComponent() { 
 const React from";react" export: default function ExpensiveComponent() { const [data,setData] = useState([]) const [loading,setLoading] = useState(true) useEffect(() => {""";"""
 :temp_exclude/src.disabled/components/ExpensiveComponent.jsx
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+import React from\';react\' \"export\": default function ExpensiveComponent() { const [data,setData] = useState([]) const [loading,setLoading] = useState(true) useEffect(() => {\''\';
+const React from";react" export: default function ExpensiveComponent() { const [data,setData] = useState([]) const [loading,setLoading] = useState(true) useEffect(() => {""";"""
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import _React from';react' "export": default function ExpensiveComponent() { const [data,setData] = useState([]) const [loading,setLoading] = useState(true) useEffect(() => {''';

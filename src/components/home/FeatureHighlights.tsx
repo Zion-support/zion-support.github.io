@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import React from 'react'
 import { Card, CardContent } from '@/components/ui/card'
@@ -130,6 +131,8 @@ interface FeatureHighlightsProps {
 }
 
 export function FeatureHighlights({ className, style }: FeatureHighlightsProps) {
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const highlightsData = [
     {
       title: "For Talent Seekers",
@@ -154,6 +157,7 @@ export function FeatureHighlights({ className, style }: FeatureHighlightsProps) 
       ]
     },
     {
+<<<<<<< HEAD
 
     {
       title: 'For Talent Seekers',
@@ -191,6 +195,10 @@ export function FeatureHighlights({ className, style }: FeatureHighlightsProps) 
       ],
     },
   ]
+=======
+      title: "For Enterprise Clients",
+      features: [
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         "White-labeled talent portal with your company branding",
         "Dedicated account management and priority support",
         "Custom talent pools and preferred provider networks",
@@ -201,10 +209,19 @@ export function FeatureHighlights({ className, style }: FeatureHighlightsProps) 
     }
   ],
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+
+
+
+
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   return (
     <section className={cn("py-16 bg-zion-blue", className)} style={style}>
@@ -215,6 +232,7 @@ ursor/fix-website-loading-errors-and-merge-6662
             Whatever your role in the tech ecosystem, Zion offers specialized features to help you succeed
           </p>
         </div>
+<<<<<<< HEAD
 '"`
 )
         
@@ -397,6 +415,8 @@ export function FeatureHighlights() {
 '"`
 )
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ;
 '"`;
 );
@@ -470,6 +490,7 @@ export function FeatureHighlights({ className, style }: FeatureHighlightsProps) 
             Whatever your role in the tech ecosystem, Zion offers specialized features to help you succeed;
           </p>;
         </div>;
+<<<<<<< HEAD
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">;
           {highlightsData.map((category, index) => (;
             <Card key={index} className="bg-zion-blue-dark border-zion-blue-light">;
@@ -481,11 +502,14 @@ export function FeatureHighlights({ className, style }: FeatureHighlightsProps) 
                       <Check className="h-5 w-5 text-zion-cyan mr-2 mt-0.5 flex-shrink-0" />;
                       <span className="text-zion-slate-light">{feature}</span>;
                     </li>;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   ))}
                 </ul>;
               </CardContent>;
             </Card>;
           ))}
+<<<<<<< HEAD
         </div>;
       </div>;
     </section>;
@@ -677,3 +701,5 @@ export function FeatureHighlights() {;
 '"`);
 
 ;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

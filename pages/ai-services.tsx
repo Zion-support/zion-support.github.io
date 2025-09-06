@@ -1,8 +1,12 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -30,6 +34,7 @@ import React from "react";
 import Layout from "../components/Layout";
 export default function AIServices() {
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
 <Layout
 =======
@@ -68,16 +73,21 @@ export default function AIServices() {
 
 origin/automation-improvements-final
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import Link from 'next/link',
 import Head from 'next/head';
 import { useState, useEffect  } from 'react';
 import { ContactInfo  } from '../types';
 import ErrorBoundary from '../components/ErrorBoundary';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 origin/main
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export default function AIServices() {
   const [isLoaded, setIsLoaded] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -86,7 +96,6 @@ export default function AIServices() {
               { title: 'AI Sales Intelligence', href: '/ai-sales-automation' }].map((c) => (
               <Link key={c.href} href={c.href} className="p-6 rounded-2xl bg-black/40 border border-white/10 hover:border-cyan-500/40 transition-colors">
                 <div className="text-xl font-semibold">{c.title}</div>
-                <div className="text-sm text-gray-400 mt-2">Implementation‑ready with pricing and SLAs.</div>
               </Link>
             ))}
 <<<<<<< HEAD
@@ -96,6 +105,7 @@ export default function AIServices() {
           </div>
         </div>
       </div>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -104,6 +114,8 @@ export default function AIServices() {
       </div>
 </Layout>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       description="Comprehensive AI services including machine learning, computer vision, natural language processing, and more.">;
       <div className="min-h-screen bg-gray-50 py-20">;
         <div className="container mx-auto px-4">;
@@ -144,14 +156,18 @@ function AIServices() {
           <div className="text - center">;
             <p className="text - gray - 600">;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               AI Services page is under construction.;
             </p>;
           </div>;
         </div>;
       </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -165,6 +181,8 @@ function AIServices() {
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import Link from 'next/link';
 import Head from 'next/head';
 import { useState, useEffect } from 'react';
@@ -184,8 +202,11 @@ export default function AIServices() {
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     site: 'https://ziontechgroup.com'
+<<<<<<< HEAD
   };
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const categories = [
     { id: 'all', name: 'All AI Services', count: 100 },
     { id: 'autonomous', name: 'Autonomous Agents', count: 25 },
@@ -194,8 +215,11 @@ export default function AIServices() {
     { id: 'predictive', name: 'Predictive Analytics', count: 15 },
     { id: 'automation', name: 'AI Automation', count: 15 },
     { id: 'specialized', name: 'Specialized AI', count: 10 }
+<<<<<<< HEAD
   ];
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const services = [
     {
       id: 1,
@@ -206,17 +230,26 @@ export default function AIServices() {
       price: 'Custom Pricing',
       popular: true,
       useCases: ['Process AutomationCustomer ServiceData AnalysisContent Generation']
+<<<<<<< HEAD
     };
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     {
       id: 2,
       name: 'AI-Powered Financial Trading',
       description: 'Advanced AI algorithms for automated trading, risk management, and market analysis.',
+<<<<<<< HEAD
     category: 'predictive',
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       features: ['Market AnalysisRisk AssessmentAutomated TradingReal-time Monitoring'],
       price: 'Custom Pricing',
       popular: true,
       useCases: ['Algorithmic TradingPortfolio ManagementRisk AnalysisMarket Prediction']
+<<<<<<< HEAD
     };
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     {
       id: 3,
       name: 'AI Legal Document Analysis',
@@ -226,17 +259,26 @@ export default function AIServices() {
       price: '$199/month',
       popular: false,
       useCases: ['Contract ReviewLegal ResearchCompliance MonitoringDocument Management']
+<<<<<<< HEAD
     };
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     {
       id: 4,
       name: 'AI-Powered Voice Analytics',
       description: 'Advanced voice analysis for sentiment, emotion, and intent detection in customer interactions.',
+<<<<<<< HEAD
     category: 'nlp',
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       features: ['Sentiment AnalysisEmotion DetectionIntent RecognitionReal-time Processing'],
       price: '$149/month',
       popular: true,
       useCases: ['Customer ServiceCall Center AnalyticsMarket ResearchQuality Assurance']
+<<<<<<< HEAD
     };
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     {
       id: 5,
       name: 'AI-Powered Search & Discovery',
@@ -246,17 +288,26 @@ export default function AIServices() {
       price: '$99/month',
       popular: false,
       useCases: ['Enterprise SearchE-commerceContent DiscoveryKnowledge Management']
+<<<<<<< HEAD
     };
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     {
       id: 6,
       name: 'Computer Vision Solutions',
       description: 'Advanced image and video analysis for object detection, recognition, and processing.',
+<<<<<<< HEAD
     category: 'computer-vision',
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       features: ['Object DetectionImage RecognitionVideo AnalysisReal-time Processing'],
       price: '$179/month',
       popular: true,
       useCases: ['Quality ControlSecurity MonitoringMedical ImagingAutonomous Vehicles']
+<<<<<<< HEAD
     };
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     {
       id: 7,
       name: 'Machine Learning Model Training',
@@ -266,17 +317,26 @@ export default function AIServices() {
       price: 'Custom Pricing',
       popular: false,
       useCases: ['Predictive ModelingPattern RecognitionAnomaly DetectionRecommendation Systems']
+<<<<<<< HEAD
     };
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     {
       id: 8,
       name: 'Natural Language Processing',
       description: 'Advanced NLP capabilities for text analysis, translation, and language understanding.',
+<<<<<<< HEAD
     category: 'nlp',
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       features: ['Text AnalysisLanguage TranslationSentiment AnalysisEntity Recognition'],
       price: '$129/month',
       popular: true,
       useCases: ['Content AnalysisMultilingual SupportCustomer FeedbackDocument Processing']
+<<<<<<< HEAD
     };
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     {
       id: 9,
       name: 'AI Process Automation',
@@ -286,27 +346,42 @@ export default function AIServices() {
       price: '$159/month',
       popular: false,
       useCases: ['Business Process AutomationWorkflow ManagementDecision SupportSystem Integration']
+<<<<<<< HEAD
     };
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     {
       id: 10,
       name: 'Predictive Analytics Engine',
       description: 'Advanced predictive modeling for forecasting trends, behaviors, and outcomes.',
+<<<<<<< HEAD
     category: 'predictive',
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       features: ['Trend ForecastingBehavioral AnalysisRisk PredictionScenario Modeling'],
       price: '$189/month',
       popular: true,
       useCases: ['Sales ForecastingCustomer BehaviorRisk ManagementResource Planning']
+<<<<<<< HEAD
     };
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     {
       id: 11,
       name: 'AI Content Generation',
       description: 'Intelligent content creation for marketing, documentation, and communication.',
+<<<<<<< HEAD
     category: 'specialized',
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       features: ['Content CreationMulti-format SupportBrand ConsistencyQuality Control'],
       price: '$79/month',
       popular: false,
       useCases: ['Marketing ContentTechnical DocumentationSocial MediaEmail Campaigns']
+<<<<<<< HEAD
     };
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     {
       id: 12,
       name: 'AI Chatbot Development',
@@ -317,8 +392,11 @@ export default function AIServices() {
       popular: true,
       useCases: ['Customer SupportLead GenerationInternal HelpdeskE-commerce Assistant']
     }
+<<<<<<< HEAD
   ];
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const filteredServices = selectedCategory === 'all' 
     ? services 
     : services.filter(service => service.category === selectedCategory);
@@ -326,7 +404,10 @@ export default function AIServices() {
     <>
       <Head>
         <title>AI Services - Zion Tech Group</title>
+<<<<<<< HEAD
         <meta name="description" content="Explore our 100+ advanced AI services including autonomous agents, machine learning, computer vision, NLP, and predictive analytics solutions." />
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <meta name="keywords" content="AI services, artificial intelligence, machine learning, autonomous agents, computer vision, NLP, predictive analytics" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="robots" content="index, follow" />
@@ -356,6 +437,7 @@ export default function AIServices() {
 
           {/* Category Filter */}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 }
@@ -368,6 +450,8 @@ export default function AIServices() {
 
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from 'react';
 import Head from 'next/head';
 import ErrorBoundary from '../components/ErrorBoundary';
@@ -414,15 +498,19 @@ export default function AIServices() {
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <section className="py-8 px-4">
             <div className="max-w-6xl mx-auto">
               <div className="flex flex-wrap justify-center gap-4 mb-8">
                 {categories.map((category) => (
                   <button
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -444,6 +532,8 @@ export default function AIServices() {
 
           {/* Services Grid */}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     key={category.id  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -480,6 +570,7 @@ export default function AIServices() {
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -499,6 +590,8 @@ key={category.id}
           </section>
           {/* Services Grid */}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <section className="py-16 px-4" role="main">
             <div className="max-w-7xl mx-auto">
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -512,6 +605,7 @@ key={category.id}
                       <div className="absolute -top-2 -right-2 bg-purple-600 text-white text-xs font-bold px-2 py-1 rounded-full">
                         Popular
                       </div>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -522,6 +616,8 @@ key={category.id}
                     <p className="text-slate-300 mb-4 text-sm">{service.description}</p>
                     
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -529,6 +625,7 @@ key={category.id}
 }
                     <h3 className="text-xl font-bold mb-3">{service.name}</h3>
                     <p className="text-slate-300 mb-4 text-sm">{service.description}</p>
+<<<<<<< HEAD
 )}
                     <h3 className="text-xl font-bold mb-3">{service.name}</h3>
                     <p className="text-slate-300 mb-4 text-sm">{service.description}</p>
@@ -537,6 +634,8 @@ key={category.id}
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     <div className="mb-4">
                       <h4 className="text-sm font-semibold text-purple-400 mb-2">Key Features:</h4>
                       <ul className="text-slate-400 text-sm space-y-1">
@@ -544,6 +643,7 @@ key={category.id}
                           <li key={featureIndex} className="flex items-center">
                             <span className="w-1.5 h-1.5 bg-purple-400 rounded-full mr-2 flex-shrink-0"></span>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
                             {feature}
@@ -553,6 +653,8 @@ key={category.id}
                     </div>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                             {feature  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -565,22 +667,29 @@ key={category.id}
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
                       </ul>
                     </div>
 
 
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 {feature}
                           </li>
                         ))}
                       </ul>
                     </div>
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     <div className="mb-4">
                       <h4 className="text-sm font-semibold text-green-400 mb-2">Use Cases:</h4>
                       <div className="flex flex-wrap gap-1">
                         {service.useCases.map((useCase, useCaseIndex) => (
                           <span key={useCaseIndex} className="text-xs bg-slate-800 text-slate-300 px-2 py-1 rounded">
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -597,6 +706,8 @@ key={category.id}
                     </div>
                     
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                             {useCase  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -609,11 +720,17 @@ key={category.id}
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 {useCase}
                           </span>
                         ))}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+{useCase}
+                          </span>
+                        ))}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       </div>
                     </div>
                     <div className="flex items-center justify-between mb-4">
@@ -621,14 +738,18 @@ key={category.id}
                       <span className="text-xs text-slate-500 capitalize">{service.category.replace('-', ' ')}</span>
                     </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     <button className="w-full py-2 bg-purple-600 hover:bg-purple-700 rounded-lg font-semibold transition-colors">
                       Learn More
                     </button>
                   </div>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -640,6 +761,8 @@ key={category.id}
 
           {/* AI Capabilities Section */}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -653,6 +776,7 @@ key={category.id}
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 ))}
               </div>
             </div>
@@ -663,11 +787,14 @@ key={category.id}
 {/* AI Capabilities Section */}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <section className="py-16 px-4 bg-slate-900/40">
             <div className="max-w-6xl mx-auto">
               <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
                 Our AI Capabilities
               </h2>
+<<<<<<< HEAD
 
 
 
@@ -676,6 +803,8 @@ key={category.id}
 =======
               
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
                 <div className="text-center">
                   <div className="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -686,6 +815,7 @@ key={category.id}
                   <h3 className="text-xl font-bold mb-2">Machine Learning</h3>
                   <p className="text-slate-400">Advanced ML algorithms for pattern recognition and predictive modeling</p>
                 </div>
+<<<<<<< HEAD
 
 
 
@@ -694,6 +824,8 @@ key={category.id}
 =======
                 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <div className="text-center">
                   <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
                     <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -704,6 +836,7 @@ key={category.id}
                   <h3 className="text-xl font-bold mb-2">Computer Vision</h3>
                   <p className="text-slate-400">Image and video analysis with object detection and recognition</p>
                 </div>
+<<<<<<< HEAD
 
 
 
@@ -712,6 +845,8 @@ key={category.id}
 =======
                 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <div className="text-center">
                   <div className="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
                     <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -721,6 +856,7 @@ key={category.id}
                   <h3 className="text-xl font-bold mb-2">Natural Language</h3>
                   <p className="text-slate-400">Advanced NLP for text analysis, translation, and understanding</p>
                 </div>
+<<<<<<< HEAD
 
 
 
@@ -729,6 +865,8 @@ key={category.id}
 =======
                 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <div className="text-center">
                   <div className="w-16 h-16 bg-orange-600 rounded-full flex items-center justify-center mx-auto mb-4">
                     <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -742,24 +880,26 @@ key={category.id}
             </div>
           </section>
 
-
-          {/* CTA Section */}
           {/* CTA Section */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <section className="py-16 px-4">
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-3xl md:text-4xl font-bold mb-8">
                 Ready to Harness AI Power?
               </h2>
               <p className="text-lg text-slate-300 mb-8">
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -772,12 +912,15 @@ key={category.id}
                 <Link 
                   href="/contact" 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 Contact our AI experts to discuss how our advanced artificial intelligence services
                 can transform your business operations and drive innovation.
               </p>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                 <Link
                   href="/contact"
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -789,10 +932,13 @@ Contact our AI experts to discuss how our advanced artificial intelligence servi
                 <Link 
                   href="/contact"
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   className="px-8 py-3 bg-purple-600 hover:bg-purple-700 rounded-lg font-semibold transition-colors"
                 >
                   Get AI Consultation
                 </Link>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -807,6 +953,8 @@ Contact our AI experts to discuss how our advanced artificial intelligence servi
                   href={`mailto:${contact.email}`} 
                   className="px-8 py-3 bg-slate-800 hover: bg-slate-700 border border-white/10 rounded-lg font-semibold transition-colors"
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <a
                   href={`tel:${contact.phone.replace(/[^\d+]/g,'')}`  } catch (error) {
     console.error("Error:", error);
@@ -815,11 +963,17 @@ Contact our AI experts to discuss how our advanced artificial intelligence servi
 }
                   className="px-8 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-colors"
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <a 
                   href={`tel:${contact.phone.replace(/[^\d+]/g,'')}`} 
 className="px-8 py-3 bg-blue-600 hover: bg-blue-700 rounded-lg font-semibold transition-colors"
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+<a 
+                  href={`tel:${contact.phone.replace(/[^\d+]/g,'')}`} 
+className="px-8 py-3 bg-blue-600 hover: bg-blue-700 rounded-lg font-semibold transition-colors"
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 >
                   Call {contact.phone  } catch (error) {
     console.error("Error:", error);
@@ -835,6 +989,7 @@ className="px-8 py-3 bg-blue-600 hover: bg-blue-700 rounded-lg font-semibold tra
 }
                   className="px-8 py-3 bg-slate-800 hover:bg-slate-700 border border-white/10 rounded-lg font-semibold transition-colors"
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -842,12 +997,17 @@ className="px-8 py-3 bg-blue-600 hover: bg-blue-700 rounded-lg font-semibold tra
                 >
                   Email Us
                 </a>
+=======
+                >
+                  Email Us
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               </div>
             </div>
           </section>
         </main>
       </ErrorBoundary>
     </>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -856,6 +1016,8 @@ className="px-8 py-3 bg-blue-600 hover: bg-blue-700 rounded-lg font-semibold tra
 =======
 
 >>>>>>> origin/automation-improvements-final
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 =======
 }
@@ -864,6 +1026,7 @@ className="px-8 py-3 bg-blue-600 hover: bg-blue-700 rounded-lg font-semibold tra
     </Layout>);
 }
 
+<<<<<<< HEAD
 =======
 }
 
@@ -923,6 +1086,8 @@ origin/automation-improvements-final
   }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <section className="py-16 px-4 bg-slate-900/40">;
             <div className="max-w-6xl mx-auto">;
               <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">;
@@ -1059,6 +1224,7 @@ export default function AIServicesPage(req, res) {
   }
 }
 ;
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -1066,3 +1232,5 @@ export default function AIServicesPage(req, res) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

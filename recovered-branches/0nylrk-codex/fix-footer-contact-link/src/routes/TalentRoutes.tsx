@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -27,6 +28,8 @@ import TalentProfilePage from "../pages/TalentProfilePage";
 import SavedTalentsPage from "../pages/SavedTalentsPage";
 import CreateTalentProfile from "../pages/CreateTalentProfile";
 import ProfilePage from "../pages/ProfilePage";
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { Route, Routes } from "react-router-dom",
 import { ProtectedRoute } from "../components/ProtectedRoute",
 import TalentDirectory from "../pages/TalentDirectory",
@@ -88,6 +91,7 @@ const TalentRoutes = () => {;
     <Routes>;
       {/* Talent Routes */}
 
+<<<<<<< HEAD
 const TalentRoutes = () => {;
   return (
 import { Route, Routes } from "react-router-dom",;
@@ -153,6 +157,8 @@ const TalentRoutes = () => {;
 =======
 };
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { Route, Routes } from './react-router-dom';
 import { ProtectedRoute } from '../components / ProtectedRoute';
 import TalentDirectory from "../pages / TalentDirectory";
@@ -188,11 +194,8 @@ const TalentRoutes = () =>: any {
     </Routes>);
 }
 ;
-
-},
-
-
 export default TalentRoutes;
+<<<<<<< HEAD
 ;
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -219,3 +222,5 @@ export default TalentRoutes;
 },;
 export default TalentRoutes;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

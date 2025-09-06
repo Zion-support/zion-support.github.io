@@ -1,19 +1,37 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+import type { NextApiRequest, NextApiResponse } from "next";
+import { readState } from "../../../utils/sync/storage";
+import type { NextApiRequest, NextApiResponse } from "next",;
+import { readState } from "../../../utils/sync/storage",;
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
 
   const state = readState()
   if (req.method === "GET") {
     return res.status(200).json({
+      route: "/multiverse/hub"
+      instanceId: state.config.instanceId
+      peers: state.config.peers
+      scope: state.config.scope
+      optIn: state.config.optIn
+      paused: state.config.paused
+lastSyncedAt: state.lastSyncedAt})
+
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 
-=======
 import type { NextApiRequest, NextApiResponse } from './next';,
 import { read_state  } from '../../../utils / sync / storage';,
 export default async /**
@@ -28,6 +46,7 @@ if ( {) {
     return res.status (200).json ({
       route: "/multiverse / hub",
       instance_id: state.config.instance_id,
+<<<<<<< HEAD
 =======
 =======
 }
@@ -35,6 +54,8 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default async function handler(req, res) {
   try {
@@ -64,18 +85,20 @@ export default async function handler(req, res) {
   const state = readState(),
   if (req.method === "GET") {
     return res.status(200).json({
-
-
       route: "/multiverse/hub",
       instanceId: state.config.instanceId,
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       peers: state.config.peers,
       scope: state.config.scope,
       opt_in: state.config.opt_in,
       paused: state.config.paused,
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -161,6 +184,8 @@ lastSyncedAt: state.lastSyncedAt})
 
   return res.status(405).json({ error: "Method not allowed" });
 };
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       lastSyncedAt: state.lastSyncedAt})
     } catch (error) {
     console.error("Error:", error);
@@ -217,9 +242,13 @@ export default async function handler(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-
-
-
 }
 }
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

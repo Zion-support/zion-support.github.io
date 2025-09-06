@@ -1,13 +1,17 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 const { test, expect } = require('@playwright/test')'
 test && test.describe('"Security"
   test('"HTTPS"
   test('"security"
   test('"no"
+<<<<<<< HEAD
     "await"
     const sensitivePatterns = [/passwords*[:=]s*['"][^'"
       /api[_-]?keys*[:=]s*['"][^'"
@@ -142,3 +146,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 ursor/integrate-build-improve-and-re-verify-8f7d
       /tokens*[:=]s*['"][^'"
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+      /tokens*[:=]s*['"][^'"
+      /tokens*[:=]s*['"][^'"
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -1,11 +1,16 @@
+  tokenName: string;
+  tokenSymbol: string;
 
 
 
 
 
 export interface TokenConfig {
+
+export interface TokenConfig {
   token_name: string;
   token_symbol: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 export interface TokenConfig {
@@ -13,6 +18,8 @@ export interface TokenConfig {;
   tokenName: string;
   tokenSymbol: string;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   decimals: number;
   total_supply: number;
   issue_rate: number;
@@ -20,6 +27,7 @@ export interface TokenConfig {;
   minIssueAmount: number;
   maxIssueAmount: number;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 const DATA_DIR = path && path.join(process && process.cwd(), 'data');
@@ -29,6 +37,8 @@ const STORE_FILE = path && path.join(DATA_DIR, 'token_store && token_store.json'
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 class TokenStore {
   private config: TokenConfig = {
     token_name: 'ZION$',
@@ -46,8 +56,6 @@ export interface TokenStoreData {
   transactions: TokenTransaction[];
   config: TokenConfig;
 }
-
-
 class TokenStore {
   private config: TokenConfig = {
     tokenName: 'ZION$'
@@ -58,6 +66,7 @@ class TokenStore {
     redeemRate: 1.0
     minIssueAmount: 1
     maxIssueAmount: 10000
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   }
@@ -71,6 +80,31 @@ export interface TokenStoreData {
 
 export interface TokenStoreData {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  }
+}
+export const tokenStore = new TokenStore();
+
+// Token storage utilities
+import { TokenConfig, TokenBalance } from './service';
+
+export interface TokenStorage {
+  configs: TokenConfig[];
+  balances: TokenBalance[];
+  lastUpdated: Date;
+}
+
+export class TokenStorageManager {
+  private storage: TokenStorage = {
+    configs: [],
+    balances: [],
+    lastUpdated: new Date()
+  };
+
+
+  }
+export interface TokenStoreData {
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   wallets: Record<string, Wallet>;
   transactions: TokenTransaction[];
   config: TokenConfig;
@@ -79,16 +113,54 @@ function readFromDisk(): TokenStoreData | null {
   try {
     ensureDataDir();
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+}
+
+
+}
+
+
+  async loadConfigs(): Promise<TokenConfig[]> {
+    return this.storage.configs;
+  }
+
+  async saveBalances(balances: TokenBalance[]): Promise<void> {
+    this.storage.balances = balances;
+    this.storage.lastUpdated = new Date();
+  }
+
+  async loadBalances(): Promise<TokenBalance[]> {
+    return this.storage.balances;
+  }
+
+  async getStorage(): Promise<TokenStorage> {
+    return this.storage;
+  }
+
+  async clearStorage(): Promise<void> {
+    this.storage = {
+      configs: [],
+      balances: [],
+      lastUpdated: new Date()
+    };
+  }
+}
+
+// Singleton instance
+export const tokenStorage = new TokenStorageManager();
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   set_config (new_config: Partial < TokenConfig>): void {
     this.config = { ...this.config, ...new_config }
   }
 }
 export const token_store = new TokenStore ();
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
@@ -116,3 +188,7 @@ export const tokenStore = new TokenStore();
 }
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

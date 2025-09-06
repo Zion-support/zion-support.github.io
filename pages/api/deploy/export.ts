@@ -8,6 +8,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const { id } = req.query
   if (!id |typeof id !== 'string') {
     return res.status(400).json({ error: 'Missing id' })
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -59,15 +60,32 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     id,
     exportedAt: new Date().toISOString(),
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+    id,
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     note: 'This is a stub export. Connect to persistence to return real deployment state.'},
   res.setHeader('Content-Typeapplication/json'),
   return res.status(200).json(fake);
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+
+    id,
+
+    note: 'This is a stub export. Connect to persistence to return real deployment state.'},
+  res.setHeader('Content-Typeapplication/json'),
+  return res.status(200).json(fake);
+};
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export default async function handler(req, res) {
   try {
   res.status(200).json({ message: 'Export endpoint' });
@@ -85,6 +103,7 @@ export default function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -98,18 +117,17 @@ export default function handler(req, res) {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     note: 'This is a stub export. Connect to persistence to return real deployment state.'};
   res.setHeader('Content-Typeapplication/json');
   return res.status(200).json(fake)
 }
-  return res.status(200).json(fake)
-}
-
-
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -142,3 +160,6 @@ export default function handler(req, res) {
 =======
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -1,16 +1,23 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 export interface Message {;
 
 
 =======
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export interface Message {;
 
 
 export interface Message {
+<<<<<<< HEAD
 export interface Message {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   id: string;
   role: 'user' | 'assistant';
   message: string;
@@ -18,6 +25,7 @@ export interface Message {;
   read?: boolean
 }
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -27,6 +35,8 @@ export interface Recipient {
   name: string;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export interface Recipient {;
   id: string;
   name: string;
@@ -34,10 +44,13 @@ export interface Recipient {;
   role?: string;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 export interface Message {;
   id: string,;
@@ -51,15 +64,19 @@ export interface Recipient {;
   id: string,;
   name: string,;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   avatarUrl?: string;
 
   role?: string;
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   avatar_url?: string;
@@ -77,3 +94,8 @@ export interface Recipient {;
 ;
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+export interface Recipient {
+  id: string;
+  name: string;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

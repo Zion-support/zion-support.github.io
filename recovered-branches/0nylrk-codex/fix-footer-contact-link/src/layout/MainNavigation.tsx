@@ -1,13 +1,21 @@
-
 import {Link, useLocation} from "react-router-dom";
 import {cn} from "@/lib/utils";
 import {useAuth} from "@/hooks/useAuth";
 import {MessageSquare} from "lucide-react";
 <<<<<<< HEAD
+<<<<<<< HEAD
 interface MainNavigationProps {;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+import { Link, useLocation } from "react-router-dom",
+import { cn } from "@/lib/utils",
+import { useAuth } from "@/hooks/useAuth";
+import { MessageSquare } from "lucide-react";
+import { useAuth } from "@/hooks/useAuth",
+import { MessageSquare } from "lucide-react",
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   isAdmin?: boolean;
   unreadCount?: number;
   className?: string;
@@ -18,10 +26,14 @@ export function MainNavigation(): any ({ isAdmin = false, unreadCount = 0, class
   const isAuthenticated = !!user;
   const location = useLocation();
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 
 
+<<<<<<< HEAD
 =======
 import { Link, useLocation } from "react-router-dom",
 import { cn } from "@/lib/utils",
@@ -30,12 +42,15 @@ import { MessageSquare } from "lucide-react";
 import { useAuth } from "@/hooks/useAuth",
 import { MessageSquare } from "lucide-react",
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface MainNavigationProps {
   isAdmin?: boolean,
   unreadCount?: number,
   className?: string
 }
 
+<<<<<<< HEAD
 
 export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: MainNavigationProps) {
 
@@ -55,11 +70,14 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
   const location = useLocation(),
   
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const links = [
     {
       name: "Home"
       href: "/"
       matches: (path: string) => path === "/"
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -73,10 +91,13 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
     }
     },
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     {
       name: "Marketplace"
       href: "/marketplace"
       matches: (path: string) => path.startsWith("/marketplace")
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -90,10 +111,13 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
     }
     },
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     {
       name: "Categories"
       href: "/categories"
       matches: (path: string) => path.startsWith("/categories")
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -107,10 +131,13 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
     }
     },
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     {
       name: "Talent"
       href: "/talent"
       matches: (path: string) => path.startsWith("/talent") && !path.includes("/talent-dashboard")
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -124,11 +151,14 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
     }
     },
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     {
       name: "Equipment"
       href: "/equipment"
       matches: (path: string) => path.startsWith("/equipment")
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
     }
@@ -142,11 +172,14 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
 =======
     },
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     {
       name: "Community"
       href: "/community"
       matches: (path: string) => path.startsWith("/community") |path.startsWith("/forum")
     }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -162,6 +195,8 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
   ],
   
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   // Add authenticated-only links
   if (isAuthenticated) {
     links.push({
@@ -178,6 +213,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
       matches: (path: string) => path.startsWith("/analytics")
     })
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -304,11 +340,33 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
   }
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <nav className={cn("ml-6 hidden md:flex", className)}>;
       <ul className="flex items-center gap-1">;
 
+<<<<<<< HEAD
 =======
+=======
+        {links.map((link) => (;
+          <li key={link.name}>;
+            <Link;
+              to={link.href}
+              className={cn(;
+                "inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors";
+                link.matches(location.pathname);
+                  ? "bg-zion-purple/20 text-zion-cyan";
+                  : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan";
+              )}
+            >
+              {link.name}
+            </Link>
+          </li>
+  return (
+    <nav className={cn("ml-6 hidden md:flex", className)}>;
+      <ul className="flex items-center gap-1">;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         {links && links.map((link) => (;
           <li key={link && link.name}>;
             <Link
@@ -320,6 +378,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
                   : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
               )}>;
               {link && link.name}
+<<<<<<< HEAD
 
 import { Link, useLocation } from "react-router-dom",;
 import { cn } from "@/lib/utils",;
@@ -458,34 +517,21 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className } M
                   :"text-white hover:bg-zion-purple/10 hover:text-zion-cyan";              )}
             >;
               {link.name}
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             </Link>;
           </li>;
         ))}
-        ;
         {/* Messages link with unread counter */}
         {isAuthenticated && (;
           <li>;
-
-
-                "inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors relative"
-                location && location.pathname === "/messages" || location && location.pathname === "/inbox"
-        ))}
-        {/* Messages link with unread counter */}
-        {isAuthenticated && (
-          <li>
             <Link
               to="/messages"
               className={cn(
-                "inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors relative";
-                location.pathname === "/messages" |location.pathname === "/inbox"
-
-                "inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors relative",
-                location.pathname === "/messages" || location.pathname === "/inbox"
-                "inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors relative"
-                location && location.pathname === "/messages" || location && location.pathname === "/inbox"
                   ? "bg-zion-purple/20 text-zion-cyan"
                   : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
               )}>;
+<<<<<<< HEAD
             <Link;
               to="/messages";
               className={cn(;
@@ -496,11 +542,14 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className } M
               )}
             >;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <MessageSquare className="w-4 h-4 mr-1" />;
               Messages;
               {unreadCount > 0 && (;
                 <span className="absolute -top-1 -right-1 bg-zion-purple text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">;
                   {unreadCount}
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -510,12 +559,14 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className } M
 =======
                 </span>;              )}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+                </span>;
+              )}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             </Link>;
           </li>;
-
-
-
         )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       </ul>;
@@ -528,6 +579,8 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className } M
       </ul>;
     </nav>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { Link, use_location } from './react-router-dom';
 import { cn } from '@/lib / utils';
 import { use_auth } from '@/hooks / use_auth';
@@ -639,6 +692,7 @@ if ( {) {
     </nav>);
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
   ),;}
@@ -737,3 +791,5 @@ link.matches (location.pathname) ? "bg-zion-purple/20 text-zion-cyan" : "text-wh
   )
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

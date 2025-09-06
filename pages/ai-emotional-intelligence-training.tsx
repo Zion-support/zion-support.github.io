@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -69,6 +70,8 @@ export default function AIEmotionalIntelligenceTraining() {
 			description="Dynamic coaching that improves communication, empathy, and leadership. AI evaluates tone, clarity, and sentiment to deliver tailored practice scenarios and feedback."
 			subtitle="Upgrade team EQ with measurable gains in manager effectiveness and CSAT."
 			pricePerMonthUSD={799}
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 			implementationWeeks="Implementation: 1–2 weeks"
 			roiNote="Average ROI 2–5x within 60–90 days"
 			features={[
@@ -81,18 +84,26 @@ export default function AIEmotionalIntelligenceTraining() {
 				"Privacy-first voice and text processing"
 			]}
 			industries={["Customer Support", "Sales", "HR & L&D", "Leadership"]}
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 			pricePerMonthUSD={799  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 			implementationWeeks="Implementation: 1–2 weeks"
 			roiNote="Average ROI 2–5x within 60–90 days"
 			features={[
@@ -102,6 +113,7 @@ export default function AIEmotionalIntelligenceTraining() {
 				"Team dashboards and skill gap analysis",
 				"Integrations: LMS, Slack/Teams, Gmail/Outlook",
 				"Privacy-first voice and text processing"
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -113,6 +125,8 @@ export default function AIEmotionalIntelligenceTraining() {
 		/>
 	)
 };
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 			]  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -134,4 +148,7 @@ export default function AIEmotionalIntelligenceTraining() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

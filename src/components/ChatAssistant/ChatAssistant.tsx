@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   const isGuest = !auth?.isAuthenticated
   const handleSendMessage = async (messageContent: string) => {
@@ -51,6 +52,8 @@ export interface Message {;
                     >
                 onClick = {handleModalSendConfirm,}
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 ;
 export interface ChatAssistantProps {;
@@ -198,11 +201,12 @@ export function ChatAssistant({;
     document.addEventListener('keydown', handleKeyDown),
     return () => document.removeEventListener('keydown', handleKeyDown)
   }, [isOpen, onClose]),
-ursor/fix-website-loading-errors-and-merge-6662
-
 
   useState
+<<<<<<< HEAD
 useState
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   useEffect
   useRef
   ReactNode
@@ -276,6 +280,7 @@ export function ChatAssistant({
       if (initialMessages && initialMessages.length > 0) {
         setDisplayGuestMessages(initialMessages)
         setStoredGuestMessages(initialMessages), // Persist if initialMessages are provided
+<<<<<<< HEAD
   const is_guest = !auth?.is_authenticated;
 const is_guest = !auth?.is_authenticated;
   const handleSendMessage = async (message_content: string) => {
@@ -358,6 +363,8 @@ if ( {) {
         setDisplayGuestMessages (storedGuestMessages);
       }
     }
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       } else {
         setDisplayGuestMessages(storedGuestMessages)
       }
@@ -388,12 +395,15 @@ if ( {) {
       setDisplayGuestMessages(newMessages)
       setStoredGuestMessages(newMessages), // Always update localStorage for guests
     } else {
+<<<<<<< HEAD
       const newMessages =
         valueOrFn instanceof Function ? valueOrFn(loggedInMessages) : valueOrFn
       const newMessages =
         valueOrFn instanceof Function ? valueOrFn(loggedInMessages) : valueOrFn
       const newMessages = null;
         valueOrFn instanceof Function ? valueOrFn(loggedInMessages) : valueOrFn,
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       setLoggedInMessages(newMessages)
     }
   }
@@ -455,6 +465,7 @@ if ( {) {
     return () => document.removeEventListener('keydown', handleKeyDown)
   }, [isOpen, onClose])
   if (!isOpen) return null
+<<<<<<< HEAD
   const isGuest = !auth?.isAuthenticated;
 
   const isGuest = !auth?.isAuthenticated;
@@ -625,11 +636,15 @@ export function ChatAssistant(): any ({;
   }, [isOpen, onClose]),;
   if (!isOpen) return null,;
 
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <div
       className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4"
       role="dialog"
       aria-modal="true"
+<<<<<<< HEAD
 import React, {;
   useState,;
   useEffect,;
@@ -839,6 +854,8 @@ export function ChatAssistant({;
       aria-labelledby="chat-assistant-title"
     >
       <div className="w-full max-w-xl bg-zion-blue rounded-lg shadow-xl overflow-hidden flex flex-col max-h-[80vh]">
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         {/* Header */}
         <div className="bg-zion-blue-dark p-3 flex items-center justify-between border-b border-zion-purple/20">
           <div className="flex items-center space-x-3">
@@ -861,6 +878,7 @@ export function ChatAssistant({;
             variant="ghost"
             size="icon"
             className="text-white hover:bg-zion-purple/10 rounded-full"
+<<<<<<< HEAD
             onClick = {onClose,}
 ursor/fix-website-loading-errors-and-merge-6662
 
@@ -906,6 +924,11 @@ ursor/fix-website-loading-errors-and-merge-6662
             onClick = {onClose,}
             onClick={onClose}
             aria-label="Close chat"
+=======
+
+
+            aria-label="Close chat"
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           >
             <X className="h-5 w-5" />
           </Button>
@@ -919,6 +942,7 @@ ursor/fix-website-loading-errors-and-merge-6662
         {/* Messages */}
         <div
           className="flex-1 overflow-y-auto p-4 space-y-4"
+<<<<<<< HEAD
           aria-live="polite"
         >
           {currentMessages.length === 0 ? (
@@ -974,6 +998,8 @@ ursor/fix-website-loading-errors-and-merge-6662
                       className="text-xs"
                       onClick={() => handleSendMessage(q)}
                     >;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
                       {q}
@@ -987,6 +1013,7 @@ ursor/fix-website-loading-errors-and-merge-6662
               <ChatMessage key={msg.id} role={msg.role} message={msg.message} />
             ))
           )}
+<<<<<<< HEAD
           <div ref={messagesEndRef} />
         </div>
         {/* Input */}
@@ -995,10 +1022,13 @@ ursor/fix-website-loading-errors-and-merge-6662
         </div>
       </div>
       {showGuestModal && guestMessage && (
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <div
           className="fixed inset-0 bg-black/60 z-[100] flex items-center justify-center p-4"
           role="dialog"
           aria-modal="true"
+<<<<<<< HEAD
 ;
       {showGuestModal && guestMessage && (;
         <div;
@@ -1022,6 +1052,8 @@ ursor/fix-website-loading-errors-and-merge-6662
           aria-labelledby="confirm-message-title"
         >
           <div className="bg-zion-blue-darker p-6 rounded-lg shadow-xl w-full max-w-md">
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <h3
               id="confirm-message-title"
               className="text-lg font-semibold text-white mb-4"
@@ -1034,13 +1066,12 @@ ursor/fix-website-loading-errors-and-merge-6662
             <div className="flex justify-end space-x-3">
               <Button
                 variant="outline"
-                onClick = {handleModalCancel,}
-                onClick={handleModalCancel}
                 className="text-white border-zion-purple hover:bg-zion-purple/10"
               >
                 Cancel
               </Button>
               <Button
+<<<<<<< HEAD
                 onClick = {handleModalSendConfirm,}
                 className="bg-zion-purple hover:bg-zion-purple-dark text-white"
                 onClick = {handleModalSendConfirm,}
@@ -1360,6 +1391,8 @@ return (<div className="fixed inset-0 bg-black/50 z-50 flex items-center justify
               <Button
 
                 onClick={handleModalSendConfirm}
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
                 className="bg-zion-purple hover:bg-zion-purple-dark text-white"
               >
@@ -1372,12 +1405,10 @@ return (<div className="fixed inset-0 bg-black/50 z-50 flex items-center justify
       )}
     </div>;
   );
-
-
-
-        </div>)}
-    </div>);
-}
 }
 
 }
+<<<<<<< HEAD
+=======
+;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import { Button } from '@/components/ui/button'
@@ -91,10 +92,16 @@ export function EnhancedNewsletterForm() {
 
     setIsSubmitting(true),
     try {
+=======
+
+    setIsSubmitting(true),
+    try {
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       const res = await fetch("/api/newsletter", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email: trimmed })}),
+<<<<<<< HEAD
 
       const data = await res.json().catch(() => ({})),
 
@@ -183,6 +190,8 @@ import { Mail } from 'lucide-react'
 import { useToast } from "@/hooks/use-toast",
 import {logErrorToProduction} from '@/utils/productionLogger',
 export function EnhancedNewsletterForm() {
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   const [email, setEmail] = useState(""),
   const [isSubmitting, setIsSubmitting] = useState(false),
@@ -204,13 +213,6 @@ export function EnhancedNewsletterForm() {
       return
     }
 
-    setIsSubmitting(true),
-    try {
-      const res = await fetch("/api/newsletter", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email: trimmed })}),
-
       const data = await res.json().catch(() => ({})),
 
       if (res.ok) {
@@ -218,28 +220,38 @@ export function EnhancedNewsletterForm() {
         if (data.status === 'already_subscribed') {
           toast.success(data.message || "You're already subscribed!")
         } else {
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           toast.success(data.message || 'Thanks for subscribing!')
+=======
+          toast.success(data.message || "Thanks for subscribing!")
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         }
-        setIsSubmitted(true)
-        setEmail('')
-      } else {
-        // Handle error responses
-        logErrorToProduction('Newsletter subscription failed:', { data: data })
-        toast.error(data.error || 'Subscription failed. Please try again.')
+        setIsSubmitted(true),;
+        setEmail("");
+      } else {;
+        // Handle error responses;
+        logErrorToProduction('Newsletter subscription failed:', { data: data }),;
+        toast.error(data.error || "Subscription failed. Please try again.");
       }
     } catch (err: any) {
-      logErrorToProduction('Newsletter subscription error:', { data: err })
-      toast.error('Unable to subscribe right now. Please try again later.')
+      logErrorToProduction('Newsletter subscription error:', { data: err }),
+      toast.error("Unable to subscribe right now. Please try again later.")
     } finally {
       setIsSubmitting(false)
     }
+<<<<<<< HEAD
   }
 <<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  },
+
+  return (
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           toast.success(data.message || "Thanks for subscribing!")
         }
         setIsSubmitted(true),;
@@ -277,6 +289,7 @@ export function EnhancedNewsletterForm() {
           <p className="text-zion-slate-light text-sm">Get exclusive offers, trending AI news, and early access to best deals</p>
         </div>
       </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -321,17 +334,37 @@ export function EnhancedNewsletterForm() {
 >>>>>>> main
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {isSubmitted ? (;
         <div className='text-center p-4 rounded-lg bg-zion-purple/20 border border-zion-purple/40'>;
           <p className='text-white font-medium'>Thank you for subscribing!</p>;
           <p className='text-zion-slate-light mt-1'>;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+      <div className='mt-4 flex items-center text-xs text-zion-slate-light'>;
+        <div className='flex -space-x-1 mr-2'>;
+          {[...Array(3)].map((_, i) => (;
+
+            <div
+              key={i}
+              className='h-5 w-5 rounded-full border border-zion-blue-dark bg-zion-blue flex items-center justify-center text-zion-cyan'>              {String && String.fromCharCode(65 + i)}
+            </div>;
+          ))}
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             We&apos;ll keep you updated with the latest from Zion.
           </p>
+
       
+      
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
@@ -355,10 +388,13 @@ export function EnhancedNewsletterForm() {
 >>>>>>> main
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {isSubmitted ? (
         <div className="text-center p-4 rounded-lg bg-zion-purple/20 border border-zion-purple/40">
           <p className="text-white font-medium">Thank you for subscribing!</p>
           <p className="text-zion-slate-light mt-1">We'll keep you updated with the latest from Zion.</p>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
@@ -366,6 +402,8 @@ export function EnhancedNewsletterForm() {
 >>>>>>> main
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         </div>
       ) : (
         <form onSubmit={handleSubmit} className="flex flex-col space-y-3 sm:flex-row sm:space-y-0 sm:space-x-2">
@@ -373,6 +411,7 @@ export function EnhancedNewsletterForm() {
             Email address for newsletter subscription
           </label>
           <Input
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -424,6 +463,10 @@ export function EnhancedNewsletterForm() {
 >>>>>>> main
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             type="email"
             id="enhanced-newsletter-email"
             name="email"
@@ -512,6 +555,7 @@ export function EnhancedNewsletterForm() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -525,6 +569,10 @@ export function EnhancedNewsletterForm() {
 }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
       {is_submitted ? (
         <div className='text - center p - 4 rounded - lg bg - zion - purple / 20 border border - zion - purple / 40'>;
@@ -576,6 +624,10 @@ export function EnhancedNewsletterForm() {
 
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> main
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

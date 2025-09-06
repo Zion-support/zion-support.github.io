@@ -1,4 +1,3 @@
-
 import {useState} from "react";
 import {useNavigate} from "react-router-dom";
 import {useAuth} from "@/hooks/useAuth";
@@ -11,6 +10,7 @@ import {Steps, Step} from "@/components/ui/steps";
 import {supabase} from "@/integrations/supabase/client";
 import {toast} from "@/hooks/use-toast";
 export default function Onboarding() {;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -48,6 +48,8 @@ export default function Onboarding() {;
       case "serviceProvider": return "creator";
       case "talent":;
         return "jobSeeker";
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useState } from "react",
 import { useNavigate } from "react-router-dom",
 import { useAuth } from "@/hooks/useAuth",
@@ -65,14 +67,8 @@ export default function Onboarding() {
 
   const [userType, setUserType] = useState<"serviceProvider" | "talent" | "client" | null>(null);
   const navigate = useNavigate();
-import { supabase } from "@/integrations/supabase/client",
-import { toast } from "@/hooks/use-toast",
-export default function Onboarding() {
-  const { user, updateProfile, isLoading } = useAuth(),
-  const [currentStep, setCurrentStep] = useState(0),
-  const [userType, setUserType] = useState<"serviceProvider" | "talent" | "client" | null>(null),
-  const navigate = useNavigate(),
 
+<<<<<<< HEAD
   // Convert our user types to match what's expected in the database
   const mapUserTypeToDatabase = (type: "serviceProvider" | "talent" | "client") => {
     switch (type) {
@@ -88,21 +84,28 @@ export default function Onboarding() {
   const handleUserTypeSelect = (type: "serviceProvider" | "talent" | "client") => {
     setUserType(type);
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   },
 
   const handleUserTypeSelect = (type: "serviceProvider" | "talent" | "client") => {
     setUserType(type),
     
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     // Direct to specific registration page based on user type
     if (type === "serviceProvider") {
       navigate('/service-onboarding')
       return
     } else if (type === "talent") {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -189,11 +192,18 @@ export default function Onboarding() {;
 =======
   }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+    }
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   },
+
 
   const handleProfileComplete = async (data: { displayName: string, bio: string, headline: string }) => {
     if (!user |!userType) {
       toast({
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -205,6 +215,9 @@ export default function Onboarding() {;
     }
     const dbUserType = mapUserTypeToDatabase(userType);
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         title: "Authentication Error",
         description: "Your session may have expired. Please log in again.",
         variant: "destructive"}),
@@ -215,10 +228,13 @@ export default function Onboarding() {;
     const dbUserType = mapUserTypeToDatabase(userType),
     
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     try {
       await updateProfile({
         id: user.id
@@ -227,6 +243,7 @@ export default function Onboarding() {;
         userType: dbUserType
         headline: data.headline
         profileComplete: true
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -242,11 +259,14 @@ export default function Onboarding() {;
       }),
       
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       // Update onboarding milestone
       await supabase.rpc('update_onboarding_milestone', {
         _user_id: user.id
         _milestone: 'profile_completed'
         _status: true
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -262,10 +282,13 @@ export default function Onboarding() {;
       }),
       
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       toast({
         title: 'Profile completed!'
         description: 'Your profile has been set up successfully.'})
       // Get the appropriate dashboard route based on user type
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -286,16 +309,22 @@ export default function Onboarding() {;
     } catch (error) {
       console.error('Error updating profile:', error);
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       // Redirect to dashboard
       navigate(dashboardRoute)
     } catch (error) {
       console.error('Error updating profile:', error),
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       toast({
         title: 'Error'
         description: 'There was a problem updating your profile. Please try again.'
         variant: 'destructive'})
     }
+<<<<<<< HEAD
 
 
   },
@@ -308,10 +337,13 @@ export default function Onboarding() {;
   },
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const steps = [
     { label: "Select Role", description: "Choose how you'll use the platform" }
     { label: "Create Profile", description: "Tell us about yourself" }]
   if (!user) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -320,10 +352,13 @@ export default function Onboarding() {;
     navigate('/login'),
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     return null
 
     const dbUserType = mapUserTypeToDatabase(userType);
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
       navigate('/login');
@@ -331,6 +366,8 @@ export default function Onboarding() {;
     }
     const dbUserType = mapUserTypeToDatabase(userType);
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     try {;
       await updateProfile({ ;
         id: user && user.id,;
@@ -340,26 +377,16 @@ export default function Onboarding() {;
         headline: data && data.headline,;
         profileComplete: true;
       });
-
       // Update onboarding milestone;
       await supabase && supabase.rpc('update_onboarding_milestone', {;
         _user_id: user && user.id,;
         _milestone: 'profile_completed',;
         _status: true;
       });
-
-      toast({;
-        title: 'Profile completed!',;
-        description: 'Your profile has been set up successfully.'}),;
-
       // Get the appropriate dashboard route based on user type;
       const dashboardRoute = userType === "client" ;
         ? "/client-dashboard" ;
         : "/talent-dashboard";
-
-      // Redirect to dashboard;
-      navigate(dashboardRoute);
-
     } catch (error) {;
       console && console.error('Error updating profile:', error);
       toast({;
@@ -368,17 +395,12 @@ export default function Onboarding() {;
         variant: 'destructive'});
     }
   };
-
-  const steps = [;
-    { label: "Select Role", description: "Choose how you'll use the platform" },;
-    { label: "Create Profile", description: "Tell us about yourself" }],;
-
   if (!user) {;
     navigate('/login');
     return null;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   }
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -437,78 +459,19 @@ export default function Onboarding() {;
   const mapUserTypeToDatabase = (type: "serviceProvider" | "talent" | "client") => {;
     switch (type) {;
       case "serviceProvider": return "creator",;
+=======
+      case "serviceProvider": return "creator";
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       case "talent":;
-        return "jobSeeker",;
-      case "client":;
-        return "employer",;
-      default:;
-        return "buyer";
-    }
-  },;
-  const handleUserTypeSelect = (type: "serviceProvider" | "talent" | "client") => {;
-    setUserType(type),;
-    // Direct to specific registration page based on user type;
-    if (type === "serviceProvider") {;
-      navigate('/service-onboarding'),;
-      return;
-    } else if (type === "talent") {;
-      navigate('/talent-onboarding'),;
+        return "jobSeeker";
+      navigate('/talent-onboarding');
       return;
     }
-;
-    // Continue with the onboarding flow for clients;
-    setCurrentStep(1);
-  },;
-  const handleProfileComplete = async (data: { displayName: string, bio: string, headline: string }) => {;
-    if (!user || !userType) {;
-      toast({;
-        title: "Authentication Error",;
-        description: "Your session may have expired. Please log in again.",;
-        variant: "destructive"}),;
-      navigate('/login'),;
+      navigate('/login');
       return;
     }
-;
-    const dbUserType = mapUserTypeToDatabase(userType),;
-    try {;
-      await updateProfile({;
-        id: user.id,;
-        displayName: data.displayName,;
-        bio: data.bio, // This is now valid since we added bio to UserDetails;
-        userType: dbUserType,;
-        headline: data.headline,;
-        profileComplete: true;
-      }),;
-      // Update onboarding milestone;
-      await supabase.rpc('update_onboarding_milestone', {;
-        _user_id: user.id,;
-        _milestone: 'profile_completed',;
-        _status: true;
-      }),;
-      toast({;
-        title: 'Profile completed!',;
-        description: 'Your profile has been set up successfully.'}),;
-      // Get the appropriate dashboard route based on user type;
-      const dashboardRoute = userType === "client";
-        ? "/client-dashboard";
-        : "/talent-dashboard",;
-      // Redirect to dashboard;
-      navigate(dashboardRoute);
-    } catch (error) {;
-      console.error('Error updating profile:', error),;
-      toast({;
-        title: 'Error',;
-        description: 'There was a problem updating your profile. Please try again.',;
-        variant: 'destructive'});
-    }
-  },;
-  const steps = [;
-    { label: "Select Role", description: "Choose how you'll use the platform" },;
-    { label: "Create Profile", description: "Tell us about yourself" }];
-  if (!user) {;
-    navigate('/login');
-    return null;
   }
+<<<<<<< HEAD
 ;
   return (;
 <<<<<<< HEAD
@@ -601,23 +564,25 @@ export default function Onboarding() {;
             <Steps currentStep={currentStep} className="max-w-xl mx-auto">;
               {steps && steps.map((step, index) => (;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+  return (
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <Step
                   key={index}
                   status={
                     currentStep> index;
                       ? "complete";
+            </Steps>;
+          </div>;
                       : currentStep === index;
                       ? "current";
                       : "incomplete";
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   }
                   label={step && step.label}
                   description={step && step.description}
                 />;
               ))}
+<<<<<<< HEAD
 
             </Steps>;
           </div>;
@@ -663,17 +628,21 @@ export default function Onboarding() {;
             {currentStep === 1 && (
               <div className="mt-6">
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <Button
                   variant="outline"
                   className="w-full border-zion-blue-light text-white hover:bg-zion-blue-light"
                   onClick={() => setCurrentStep(0)}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
-
-
-
 =======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
+
+
 import { useState } from './react';
 import { use_navigate } from './react-router-dom';
 import { use_auth } from '@/hooks / use_auth';
@@ -831,6 +800,7 @@ if ( {) {
                 >;
                   Back to Role Selection;
                 </Button>;
+<<<<<<< HEAD
               </div>)}
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -867,6 +837,10 @@ if ( {) {
               </div>;
             )}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+              </div>;
+            )}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           </div>;
         </div>;
       </div>;
@@ -875,6 +849,7 @@ if ( {) {
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
@@ -925,3 +900,9 @@ return null;
 }
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+}
+;
+    </>);
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

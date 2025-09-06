@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 class ErrorBoundary extends React.Component {
@@ -25,6 +26,8 @@ class ErrorBoundary extends React.Component {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useState } from "react";
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
@@ -42,6 +45,7 @@ import {SearchSuggestion} from "@/types/search";
 import {AppLayout} from "@/layout/AppLayout";
 export default function Marketplace() {;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -56,6 +60,8 @@ export default function Marketplace() {;
 
 
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useState } from "react",
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
@@ -79,6 +85,7 @@ export default function Marketplace() {
   const [selectedLocations, setSelectedLocations] = useState<string[]>([]);
   const [selectedAvailability, setSelectedAvailability] = useState<string[]>([]);
   const [selectedRating, setSelectedRating] = useState<number | null>(null);
+<<<<<<< HEAD
   const searchSuggestions: SearchSuggestion[] = generateSearchSuggestions()
   const filterOptions = generateFilterOptions();
   const navigate = useNavigate(),
@@ -88,15 +95,20 @@ export default function Marketplace() {
   const [selectedAvailability, setSelectedAvailability] = useState<string[]>([]),
   const [selectedRating, setSelectedRating] = useState<number | null>(null),
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   
   const searchSuggestions: SearchSuggestion[] = generateSearchSuggestions(),
   const filterOptions = generateFilterOptions(),
   
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   // Filter listings based on selected filters
   const filteredListings = MARKETPLACE_LISTINGS.filter(listing => {
     // Search filter
@@ -104,6 +116,7 @@ export default function Marketplace() {
         !listing.description.toLowerCase().includes(searchQuery.toLowerCase()) &&
         !listing.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))) {
       return false
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -146,6 +159,8 @@ export default function Marketplace() {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     }
     // Product type filter
     if (selectedProductTypes.length > 0 && !selectedProductTypes.includes(listing.category)) {
@@ -163,6 +178,7 @@ export default function Marketplace() {;
     if (selectedRating && (!listing.rating |listing.rating < selectedRating)) {
       return false
     }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -183,10 +199,16 @@ export default function Marketplace() {;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+    return true
+  });
+  const handleFilterChange = (filterType: string, value: string) => {
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     switch (filterType) {
       case 'productType':
         setSelectedProductTypes(prev =>
           prev.includes(value) ? prev.filter(item => item !== value) : [...prev, value]
+<<<<<<< HEAD
 <<<<<<< HEAD
         );
         break;
@@ -295,12 +317,20 @@ export default function Marketplace() {;
   },
   
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+        );
+        break;
+  },
+  
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const clearAllFilters = () => {
     setSearchQuery(""),
     setSelectedProductTypes([]),
     setSelectedLocations([]),
     setSelectedAvailability([]),
     setSelectedRating(null)
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -315,6 +345,8 @@ export default function Marketplace() {;
   },
   
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   // Handle requesting a quote
   const handleRequestQuote = (listingId: string) => {
     const listing = MARKETPLACE_LISTINGS.find(item => item.id === listingId)
@@ -322,6 +354,7 @@ export default function Marketplace() {;
       toast({
         title: "Quote Requested"
         description: `Your quote request for ${listing.title} has been sent.`
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -337,6 +370,8 @@ export default function Marketplace() {;
       }),
       
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       // Navigate to the quote request page with the listing information
       navigate("/request-quote", {
         state: {
@@ -346,6 +381,7 @@ export default function Marketplace() {;
             title: listing.title
             category: listing.category
             image: listing.images?.[0]
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -410,6 +446,8 @@ export default function Marketplace() {;
             category: listing && listing.category,;
             image: listing && listing.images?.[0];
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useState } from './react';
 import { Header } from '@/components / Header';
 import { Footer } from '@/components / Footer';
@@ -524,6 +562,7 @@ if ( {) {
             category: listing.category,
             image: listing.images?.[0];
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
@@ -553,10 +592,13 @@ if ( {) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           }
         }
       });
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -816,6 +858,10 @@ navigate("/request-quote", {state: {
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+  };
+  },
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
 
     <AppLayout>;
@@ -823,7 +869,6 @@ navigate("/request-quote", {state: {
         <div className="max-w-4xl mx-auto mb-8">;
           <h1 className="text-3xl font-bold text-white mb-4">AI & Tech Marketplace</h1>;
           <p className="text-zion-slate-light">;
-=======
 ;
   return (
     <AppLayout>;
@@ -832,21 +877,13 @@ navigate("/request-quote", {state: {
           <h1 className="text - 3xl font - bold text - white mb - 4">AI & Tech Marketplace</h1>;
           <p className="text - zion - slate - light">;
 
+  }
             Discover professional services and products for your AI and tech projects.;
             Browse our curated collection of solutions from verified providers.;
           </p>;
         </div>;
-
-              />;
-            </div>;
-            <div className="flex gap-2">;
-              <Button variant="ghost" size="icon" className="text-zion-slate-light">;
-                <Grid3X3 className="h-4 w-4" />;
-              </Button>;
-              <Button variant="ghost" size="icon" className="text-zion-slate-light">;
-                <ListFilter className="h-4 w-4" />;
-=======
         {/* Search and filter bar */}
+<<<<<<< HEAD
         <div className="bg - zion - blue - dark border border - zion - blue - light rounded - lg p - 4 mb - 8">;
           <div className="flex flex - col md:flex - row gap - 4">;
             <div className="relative flex - 1">;
@@ -897,29 +934,32 @@ navigate("/request-quote", {state: {
         <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4 mb-8">
           <div className="flex flex-col md:flex-row gap-4">
             <div className="relative flex-1">
+=======
+        <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4 mb-8">;
+          <div className="flex flex-col md:flex-row gap-4">;
+            <div className="relative flex-1">;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <EnhancedSearchInput
                 value={searchQuery}
                 onChange={setSearchQuery}
                 placeholder="Search the marketplace..."
                 searchSuggestions={searchSuggestions}
-              />
-            </div>
-            <div className="flex gap-2">
-              <Button variant="ghost" size="icon" className="text-zion-slate-light">
-                <Grid3X3 className="h-4 w-4" />
-              </Button>
-              <Button variant="ghost" size="icon" className="text-zion-slate-light">
-                <ListFilter className="h-4 w-4" />
-              </Button>
-            </div>
-          </div>
-        </div>
+              </Button>;
+            </div>;
+          </div>;
+        </div>;
         {/* Main layout with sidebar and results */}
-        <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">;
           {/* Sidebar Filters */}
-          <div className="lg:col-span-1">
+          <div className="lg: col-span-1">;
             <FilterSidebar
+        {/* Main layout with sidebar and results */}
+        <div className="grid grid - cols - 1 lg:grid - cols - 4 gap - 6">;
+          {/* Sidebar Filters */}
+          <div className="lg: col - span - 1">;
+            <FilterSidebar;
               filters={{
+<<<<<<< HEAD
                 selectedProductTypes;
                 selectedLocations;
                 selectedAvailability
@@ -931,49 +971,33 @@ navigate("/request-quote", {state: {
 <<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-                selectedRating
 =======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+                selectedRating
                 selected_locations;
                 selected_availability,
                 selected_rating;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               }}
               filter_options={filter_options}
               onFilterChange={handleFilterChange}
               onRatingChange={setSelectedRating}
               onClearFilters={clearAllFilters}
-
-            />;
-          </div>;
-
-
           {/* Main content */}
           <div className="lg:col-span-3">;
             {/* Active filters display */}
             <ActiveFiltersBar
-=======
-            />;
-          </div>;
-          {/* Main content */}
-          <div className="lg:col - span - 3">;
-            {/* Active filters display */}
-            <ActiveFiltersBar;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               selectedProductTypes={selectedProductTypes}
               selected_locations={selected_locations}
               selected_availability={selected_availability}
               selected_rating={selected_rating}
               search_query={search_query}
               onRemoveFilter={handleFilterChange}
-
-            />;
-
-
             {/* Results count */}
             <div className="mb-6">;
               <p className="text-zion-slate-light">;
                 Showing {filteredListings && filteredListings.length} results;
                 {searchQuery && ` for "${searchQuery}"`}
+<<<<<<< HEAD
 
 
             
@@ -1011,6 +1035,8 @@ navigate("/request-quote", {state: {
             </div>
             
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             {/* Display actual marketplace listings */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {filteredListings.length > 0 ? (
@@ -1028,9 +1054,12 @@ navigate("/request-quote", {state: {
                     We couldn't find any listings matching your filters. Try adjusting your search criteria.
                   </p>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               </p>;
             </div>;
 
@@ -1050,12 +1079,12 @@ navigate("/request-quote", {state: {
                   <p className="text-zion-slate-light max-w-md mx-auto mb-8">;
                     We couldn't find any listings matching your filters. Try adjusting your search criteria.;
                   </p>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                   <Button
                     onClick={clearAllFilters}
                     className="bg-zion-purple hover:bg-zion-purple-dark">;
                     Clear Filters;
                   </Button>;
+<<<<<<< HEAD
                 </div>;
               )}
 <<<<<<< HEAD
@@ -1162,10 +1191,13 @@ navigate("/request-quote", {state: {
   )
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             </div>;
           </div>;
         </div>;
       </main>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     </AppLayout>);
@@ -1265,3 +1297,5 @@ Discover professional services and products for your AI and tech projects. Brows
 }
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

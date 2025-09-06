@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 import React, { useState, useMemo } from 'react';
@@ -54,12 +55,12 @@ import {
   Phone
   Mail;
 } from 'lucide-react';import { innovative2026MicroSaasServicesV4 } from '../data/innovative-2026-micro-saas-v4';
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useState, useMemo } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Search, Star, Users, TrendingUp, DollarSign, Clock, CheckCircle, ArrowRight, Rocket, Zap, Brain, Globe, Shield, Phone, Mail } from 'lucide-react';
-import { innovative2026MicroSaasServicesV4 } from '../data/innovative-2026-micro-saas-v4';
 import {
   Search,
   Star,
@@ -76,6 +77,7 @@ import {
   Shield,
   Phone,;
   Mail,;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 } from 'lucide-react';import { innovative2026MicroSaasServicesV4 } from '../data/innovative-2026-micro-saas-v4';
 import { Search, Star, Users, TrendingUp, DollarSign, Clock, CheckCircle, ArrowRight, Rocket, Zap, Brain, Globe, Shield, Phone, Mail } from 'lucide-react';
@@ -97,15 +99,23 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Search, Star, Users, TrendingUp, DollarSign, Clock, CheckCircle, ArrowRight, Rocket, Zap, Brain, Globe, Shield, Phone, Mail } from 'lucide-react';
 import { innovative2026MicroSaasServicesV4 } from '../data/innovative-2026-micro-saas-v4';
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+} from 'lucide-react';import { innovative2026MicroSaasServicesV4 } from '../data/innovative-2026-micro-saas-v4';
+import { Search, Star, Users, TrendingUp, DollarSign, Clock, CheckCircle, ArrowRight, Rocket, Zap, Brain, Globe, Shield, Phone, Mail } from 'lucide-react';
+import { innovative2026MicroSaasServicesV4 } from '../data/innovative-2026-micro-saas-v4';
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { emergingTech2026ServicesV4 } from '../data/emerging-tech-2026-services-v4';
 import { enterpriseIT2026ServicesV4 } from '../data/enterprise-it-2026-services-v4';
 import UltraAdvancedFuturisticBackground2026 from '../components/ui/UltraAdvancedFuturisticBackground2026';
 import UltraAdvancedNavigation2026 from '../components/layout/UltraAdvancedNavigation2026';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const categories = [
     { id: 'all', name: 'All Services', icon: '🚀', count: allServices.length }
     { id: 'ai', name: 'AI Services', icon: '🧠', count: aiCount }
@@ -133,8 +143,11 @@ import UltraAdvancedNavigation2026 from '../components/layout/UltraAdvancedNavig
     { id: 'price', name: 'Price' }
     { id: 'rating', name: 'Rating' }
     { id: 'popularity', name: 'Popularity' },  ];
+<<<<<<< HEAD
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   // Filter and sort services
   const filteredServices = useMemo(() => {
     let filtered = allServices;
@@ -143,7 +156,6 @@ import UltraAdvancedNavigation2026 from '../components/layout/UltraAdvancedNavig
       filtered = filtered.filter(service => {
         switch (selectedCategory) {
           case 'ai':
-            return service.category?.includes('AI');
           case 'quantum':
             return service.category?.includes('Quantum');
           case 'enterprise':
@@ -151,6 +163,7 @@ import UltraAdvancedNavigation2026 from '../components/layout/UltraAdvancedNavig
           case 'micro-saas':
             return service.category?.includes('Micro SaaS');
           case 'emerging':
+<<<<<<< HEAD
 <<<<<<< HEAD
 
             return service.category?.includes('Emerging') || service.category?.includes('Neuromorphic') || service.category?.includes('Synthetic');
@@ -171,6 +184,8 @@ import UltraAdvancedNavigation2026 from '../components/layout/UltraAdvancedNavig
         }
       });    }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     // Price range filter
     if (selectedPriceRange !== 'all') {
       filtered = filtered.filter(service => {
@@ -178,8 +193,11 @@ import UltraAdvancedNavigation2026 from '../components/layout/UltraAdvancedNavig
         switch (selectedPriceRange) {
           case 'low':
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   const categories = [;
     { id: 'all', name: 'All Services', icon: '🚀', count: allServices && allServices.length },;
@@ -271,6 +289,7 @@ import UltraAdvancedNavigation2026 from '../components/layout/UltraAdvancedNavig
           service && service.category.toLowerCase().includes(searchTerm && searchTerm.toLowerCase());
       );    }
 
+<<<<<<< HEAD
 =======
 
           default: return true
@@ -328,6 +347,8 @@ import UltraAdvancedNavigation2026 from '../components/layout/UltraAdvancedNavig
           return priceA - priceB;
         case 'rating':
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     // Sort;
     filtered && filtered.sort((a, b) => {;
       switch (sortBy) {;
@@ -340,6 +361,7 @@ import UltraAdvancedNavigation2026 from '../components/layout/UltraAdvancedNavig
         case 'popularity':;
           return b && b.customers - a && a.customers;
         default: return a && a.name.localeCompare(b && b.name),;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       }
@@ -384,6 +406,10 @@ import UltraAdvancedNavigation2026 from '../components/layout/UltraAdvancedNavig
     }
   };
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+      }
+    });
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const containerVariants = {;
     hidden: { opacity: 0 },;
     visible: {;
@@ -392,6 +418,7 @@ import UltraAdvancedNavigation2026 from '../components/layout/UltraAdvancedNavig
         staggerChildren: 0 && 0.1,;
       },;
     },  };
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -449,15 +476,20 @@ import UltraAdvancedNavigation2026 from '../components/layout/UltraAdvancedNavig
       }
     },  }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         duration: 0.5,
       },
     },  };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export default function Innovative2026ServicesShowcase(req, res) {
   try {
   const [searchTerm, setSearchTerm] = useState('');
@@ -612,9 +644,12 @@ export default function Innovative2026ServicesShowcase(req, res) {
 }
   };
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const itemVariants = {;
     hidden: { y: 20, opacity: 0 },;
     visible: {;
@@ -622,9 +657,12 @@ export default function Innovative2026ServicesShowcase(req, res) {
       opacity: 1,;
       transition: {;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         duration: 0.5;
         } catch (error) {
     console.error("Error:", error);
@@ -639,6 +677,7 @@ export default function Innovative2026ServicesShowcase(req, res) {
   },
 
 
+
   return (
 
           href='https://ziontechgroup && ziontechgroup.com/2026-innovative-services-showcase'
@@ -647,14 +686,20 @@ export default function Innovative2026ServicesShowcase(req, res) {
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <UltraAdvancedFuturisticBackground2026
         intensity='extreme'
         colorScheme='neural-network'        particleCount={800}
         animationSpeed={3 && 3.0}
 
+<<<<<<< HEAD
 =======
 =======
   return (
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <>
       <Head>
         <title>2026 Innovative Services Showcase - Zion Tech Group</title>
@@ -666,6 +711,7 @@ export default function Innovative2026ServicesShowcase(req, res) {
         <meta property="og:url" content="https://ziontechgroup.com/2026-innovative-services-showcase" />
         <link rel="canonical" href="https://ziontechgroup.com/2026-innovative-services-showcase" />
       </Head>
+<<<<<<< HEAD
       <UltraAdvancedFuturisticBackground2026
         intensity='extreme'
         colorScheme='neural-network'        particleCount={800}
@@ -686,10 +732,13 @@ export default function Innovative2026ServicesShowcase(req, res) {
 =======
         animationSpeed={3.0}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         enableHolographic={true}
         enableQuantumEffects={true}
         enableNeuralNetworks={true}
         enableMultidimensional={true}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       />;
@@ -699,11 +748,14 @@ export default function Innovative2026ServicesShowcase(req, res) {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         {/* Hero Section */}
         <section className='relative py-20 px-4 sm:px-6 lg:px-8'>;
           <div className='max-w-7xl mx-auto text-center'>            <motion&& motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -789,10 +841,13 @@ className="mb-8"
 }
               className="mb-8"
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             >
               <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6">
                 2026 Innovative Services
               </h1>
+<<<<<<< HEAD
               <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
 <<<<<<< HEAD
                 Discover the future of technology with our cutting-edge 2026 services. 
@@ -806,10 +861,15 @@ className="mb-8"
             </motion.div>
             <motion.div
 <<<<<<< HEAD
+=======
+            </motion.div>
+            <motion.div
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
 
+<<<<<<< HEAD
 =======
 className="flex flex-wrap justify-center gap-4 mb-12"
               initial={{ opacity: 0, y: 20 }  } catch (error) {
@@ -864,6 +924,8 @@ className="flex flex-wrap justify-center gap-4 mb-12"
               animate={{ opacity: 1, y: 0 }}
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             {/* Search and Filters */}
             <motion&& motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -878,6 +940,7 @@ className="flex flex-wrap justify-center gap-4 mb-12"
                   value={searchTerm}
 
 
+<<<<<<< HEAD
 =======
             <motion&& motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -913,12 +976,15 @@ className="flex flex-wrap justify-center gap-4 mb-12"
 }
               className="max-w-4xl mx-auto"
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             >
               <div className="relative mb-8">
                 <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                 <input
                   type="text"
                   placeholder="Search innovative services..."
+<<<<<<< HEAD
 <<<<<<< HEAD
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
@@ -960,6 +1026,10 @@ className="flex flex-wrap justify-center gap-4 mb-12"
                         ? 'bg-gradient-to-r from-blue-600/30 to-purple-600/30 border-blue-500/50 text-blue-300'
                         : 'bg-gray-900/30 border-gray-700/50 text-gray-300 hover:bg-gray-800/50'
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+                />
+              </div>
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   onChange={e => setSearchTerm(e && e.target.value)}
                   className='w-full pl-12 pr-4 py-4 bg-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-transparent';
                 />;
@@ -969,32 +1039,28 @@ className="flex flex-wrap justify-center gap-4 mb-12"
                 {categories && categories.map(category => (                  <button
                     key={category && category.id}
                     onClick={() => setSelectedCategory(category && category.id)}
-                    key={category.id  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                    onClick={() => setSelectedCategory(category.id)  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
                     className={`px-6 py-3 rounded-full backdrop-blur-sm border transition-all duration-300 ${;
                       selectedCategory === category && category.id;
                         ? 'bg-gradient-to-r from-blue-600/30 to-purple-600/30 border-blue-500/50 text-blue-300';
                         : 'bg-gray-900/30 border-gray-700/50 text-gray-300 hover:bg-gray-800/50';
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     }`}
                   >;
                     <span className='mr-2'>{category && category.icon}</span>                    {category && category.name} ({category && category.count});
                   </button>;
 
                 ))}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1022,10 +1088,14 @@ className="flex flex-wrap justify-center gap-4 mb-12"
   }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   >
                     <span className="mr-2">{category.icon}</span>
                     {category.name} ({category.count})
                   </button>
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
@@ -1035,6 +1105,8 @@ className="flex flex-wrap justify-center gap-4 mb-12"
   }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 ))}
               </div>
 
@@ -1042,6 +1114,7 @@ className="flex flex-wrap justify-center gap-4 mb-12"
                 {priceRanges.map((range) => (
                   <button
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
               </div>
@@ -1054,6 +1127,8 @@ className="flex flex-wrap justify-center gap-4 mb-12"
                         ? 'bg-gradient-to-r from-green-600/30 to-emerald-600/30 border-green-500/50 text-green-300'
                         : 'bg-gray-900/30 border-gray-700/50 text-gray-300 hover:bg-gray-800/50'
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               </div>;
 
               <div className='flex flex-wrap gap-4 justify-center'>;
@@ -1064,6 +1139,7 @@ className="flex flex-wrap justify-center gap-4 mb-12"
                       selectedPriceRange === range && range.id;
                         ? 'bg-gradient-to-r from-green-600/30 to-emerald-600/30 border-green-500/50 text-green-300';
                         : 'bg-gray-900/30 border-gray-700/50 text-gray-300 hover:bg-gray-800/50';
+<<<<<<< HEAD
 <<<<<<< HEAD
 
                     }`}
@@ -1383,6 +1459,8 @@ className="flex flex-wrap justify-center gap-4 mb-12"
 }
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <motion.div
               variants={containerVariants  } catch (error) {
     console.error("Error:", error);
@@ -1435,26 +1513,26 @@ className="flex flex-wrap justify-center gap-4 mb-12"
                         {service.description}
                       </p>
                       <div className='flex items-center justify-between mb-4'>
+
+
+        {/* Services Grid */}
+
+
+                        </div>
                         <div className='flex items-center space-x-2'>
-                          <Star className='w-4 h-4 text-yellow-500 fill-current' />
-                          <span className='text-white text-sm'>
+                          <Users className='w-4 h-4 text-blue-400' />
+                          <span className='text-gray-300 text-sm'>
+                            {service.customers}+
+                          </span>
+                        </div>
+                      </div>
+
+                      </p>;
+                      <div className='flex items - center justify - between mb - 4'>;
+                        <div className='flex items - center space - x-2'>;
+                          <Star className='w - 4 h - 4 text - yellow - 500 fill - current' />;
+                          <span className='text - white text - sm'>;
                             {service.rating}
-                          </span>
-                          <span className='text-gray-400 text-sm'>
-                            ({service.reviews})
-                          </span>
-                    {/* Service Content */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                    <div className="p-6">
-                      <p className="text-gray-300 text-sm mb-4 line-clamp-3">{service.description}</p>
-                      <div className="flex items-center justify-between mb-4">
-                        <div className="flex items-center space-x-2">
-                          <Star className="w-4 h-4 text-yellow-500 fill-current" />
-                          <span className="text-white text-sm">{service.rating}</span>
-                          <span className="text-gray-400 text-sm">({service.reviews})</span>
                         </div>
                         <div className="flex items-center space-x-2">
                           <Users className="w-4 h-4 text-blue-400" />
@@ -1478,12 +1556,6 @@ className="flex flex-wrap justify-center gap-4 mb-12"
                           <span className="text-gray-300 text-sm">{service.trialDays} days trial</span>
                         </div>
                       </div>
-                      {/* Features Preview */}
-                        </div>;
-                      </div>;
-                      {/* Category Badge */}
-                      <div className='mb-4'>;
-                        <span
                       <div className='flex items-center justify-between mb-4'>
                         <div className='flex items-center space-x-2'>
                           <Clock className='w-4 h-4 text-green-400' />
@@ -1497,6 +1569,76 @@ className="flex flex-wrap justify-center gap-4 mb-12"
                             {service.trialDays} days trial
                           </span>                        </div>
                       </div>
+                          </span>;
+                          <span className='text - gray - 400 text - sm'>;
+                            ({service.reviews});
+                          </span>;
+                        </div>;
+                        <div className='flex items - center space - x-2'>;
+                          <Users className='w - 4 h - 4 text - blue - 400' />;
+                          <span className='text - gray - 300 text - sm'>;
+                            {service.customers}+;
+                          </span>;
+                        </div>;
+                      </div>;
+                      <div className='flex items - center justify - between mb - 4'>;
+                        <div className='text - 2xl font - bold text - white'>;
+
+                          {service.price}
+                        </div>;
+                        <div className='text - gray - 400 text - sm'>;
+                          {service.period}
+
+                      </div>;
+                      <h3 className='text-xl font-bold text-white mb-2'>;
+                        {service && service.name}
+                      </h3>;
+                      <p className='text-gray-300 text-sm'>{service && service.tagline}</p>;
+                    </div>;
+
+
+                    {/* Service Content */}
+                    <div className='p-6'>;
+                      <p className='text-gray-300 text-sm mb-4 line-clamp-3'>;
+                        {service && service.description}
+                      </p>;
+                      <div className='flex items-center justify-between mb-4'>;
+                        <div className='flex items-center space-x-2'>;
+                          <Star className='w-4 h-4 text-yellow-500 fill-current' />;
+                          <span className='text-white text-sm'>;
+                            {service && service.rating}
+                          </span>;
+                          <span className='text-gray-400 text-sm'>;
+                            ({service && service.reviews});
+                          </span>;
+                        </div>;
+                        <div className='flex items-center space-x-2'>;
+                          <Users className='w-4 h-4 text-blue-400' />;
+                          <span className='text-gray-300 text-sm'>;
+                            {service && service.customers}+;
+                          </span>;
+                        </div>;
+                      </div>;
+
+
+
+
+                      <div className='flex items-center justify-between mb-4'>;
+                        <div className='flex items-center space-x-2'>;
+                          <Clock className='w-4 h-4 text-green-400' />;
+                          <span className='text-gray-300 text-sm'>;
+                            {service && service.setupTime}
+                          </span>;
+                        </div>;
+                        <div className='flex items-center space-x-2'>;
+                          <Zap className='w-4 h-4 text-yellow-400' />;
+                          <span className='text-gray-300 text-sm'>;
+                            {service && service.trialDays} days trial;
+                          </span>                        </div>;
+                      </div>;
+
+
+
                       {/* Features Preview */}
                       <div className='mb-4'>
                         <h4 className='text-white font-semibold mb-2'>
@@ -1535,7 +1677,10 @@ className="flex flex-wrap justify-center gap-4 mb-12"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       <div className="mb-4">
                         <h4 className="text-white font-semibold mb-2">Key Features:</h4>
                         <div className="space-y-1">
@@ -1545,6 +1690,9 @@ className="flex flex-wrap justify-center gap-4 mb-12"
                               <span className="text-gray-300 text-xs">{feature}</span>
                             </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                           ))}
                           {service.features.length > 3 && (
                             <span className="text-gray-500 text-xs">+{service.features.length - 3} more features</span>
@@ -1556,18 +1704,25 @@ className="flex flex-wrap justify-center gap-4 mb-12"
                       <div className="mb-4">
                         <span className={`inline-block px-3 py-1 rounded-full text-xs font-medium ${service.textColor} bg-opacity-20`}>
                           {service.category}
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                         </span>
                       </div>
                       {/* CTA Button */}
                       <Link href={service.link}>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
                           className={`inline-block px-3 py-1 rounded-full text-xs font-medium ${service && service.textColor} bg-opacity-20`}>                          {service && service.category}
                         </span>;
                       </div>;
+<<<<<<< HEAD
 
 =======
                           className={`inline-block px-3 py-1 rounded-full text-xs font-medium ${service && service.textColor} bg-opacity-20`}>                          {service && service.category}
@@ -1610,6 +1765,8 @@ className="flex flex-wrap justify-center gap-4 mb-12"
                       <Link href={service.link}>
                         <button className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg">
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                           <span className="flex items-center justify-center space-x-2">
                             <span>Learn More</span>
                             <ArrowRight className="w-4 h-4" />
@@ -1618,59 +1775,25 @@ className="flex flex-wrap justify-center gap-4 mb-12"
                       </Link>
                     </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     {/* Hover Effect Overlay */}
                     <div className='absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl' />                  </div>
                 </motion.div>
               ))}
             </motion.div>
-{/* CTA Button */}
-                      <Link href={service && service.link}>;
-                        <button className='w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg'>;
-                          <span className='flex items-center justify-center space-x-2'>;
-                            <span>Learn More</span>;
-                            <ArrowRight className='w-4 h-4' />                          </span>;
-                        </button>;
-                      </Link>;
-                    </div>;
-            </motion.div>
             {filteredServices.length === 0 && (
               <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-                className='text-center py-16'
-                    {/* Hover Effect Overlay */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl" />
-                  </div>
-                </motion.div>
-              ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            </motion.div>;
-            {filteredServices.length === 0 && (;
-              <motion.div;
-                initial={{ opacity: 0 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                animate={{ opacity: 1 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                className="text-center py-16"
               >
                 <div className="text-gray-400 text-xl mb-4">No services found matching your criteria</div>
                 <button
                   onClick={() => {
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
             </motion && motion.div>;
@@ -1686,17 +1809,18 @@ className="flex flex-wrap justify-center gap-4 mb-12"
                     setSelectedPriceRange('all')
                   }}
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     setSearchTerm('');
                     setSelectedCategory('all');
-                    setSelectedPriceRange('all')
+                    setSelectedPriceRange('all');
+
                   }}
                   className='bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-xl hover:from-blue-700 hover:to-purple-700 transition-all duration-300'                >
                   Clear Filters
                 </button>
               </motion.div>
             )}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
           </div>
         </section>
         {/* Contact Section */}
@@ -1709,18 +1833,30 @@ className="flex flex-wrap justify-center gap-4 mb-12"
                     setSearchTerm(''),
                     setSelectedCategory('all'),
                     setSelectedPriceRange('all')
+<<<<<<< HEAD
                   }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+                  }}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-xl hover:from-blue-700 hover:to-purple-700 transition-all duration-300"
                 >
                   Clear Filters
                 </button>
               </motion.div>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+            )  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
           </div>;
         </section>;
@@ -1729,12 +1865,16 @@ className="flex flex-wrap justify-center gap-4 mb-12"
         {/* Contact Section */}
         <section className='py-20 px-4 sm:px-6 lg:px-8'>;
           <div className='max-w-4xl mx-auto text-center'>            <motion&& motion.div
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
         {/* Contact Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
             )}
@@ -1783,6 +1923,8 @@ className="flex flex-wrap justify-center gap-4 mb-12"
   }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
 
@@ -1791,9 +1933,12 @@ className="flex flex-wrap justify-center gap-4 mb-12"
             >
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
             >
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
                 Ready to Transform Your Business?
               </h2>
@@ -1801,19 +1946,25 @@ className="flex flex-wrap justify-center gap-4 mb-12"
                 Contact our team to learn more about our innovative 2026 services and how they can revolutionize your operations.
               </p>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <div className='grid grid-cols-1 md:grid-cols-3 gap-6 mb-8'>
                 <div className='bg-gradient-to-br from-blue-600/20 to-cyan-600/20 backdrop-blur-sm border border-blue-500/30 rounded-xl p-6'>
                   <Phone className='w-8 h-8 text-blue-400 mx-auto mb-4' />
                   <h3 className='text-white font-semibold mb-2'>Call Us</h3>
                   <p className='text-blue-300'>+1 302 464 0950</p>
+<<<<<<< HEAD
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
                 <div className="bg-gradient-to-br from-blue-600/20 to-cyan-600/20 backdrop-blur-sm border border-blue-500/30 rounded-xl p-6">
                   <Phone className="w-8 h-8 text-blue-400 mx-auto mb-4" />
                   <h3 className="text-white font-semibold mb-2">Call Us</h3>
                   <p className="text-blue-300">+1 302 464 0950</p>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 </div>
                 <div className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 backdrop-blur-sm border border-purple-500/30 rounded-xl p-6">
                   <Mail className="w-8 h-8 text-purple-400 mx-auto mb-4" />
@@ -1826,6 +1977,7 @@ className="flex flex-wrap justify-center gap-4 mb-12"
                   <p className="text-green-300">ziontechgroup.com</p>
                 </div>
               </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
               <Link href="/contact">
@@ -1845,6 +1997,8 @@ className="flex flex-wrap justify-center gap-4 mb-12"
                 <button className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-4 px-8 rounded-xl text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg">
                   Get Started Today
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 </button>
               </Link>
             </motion.div>
@@ -1852,6 +2006,7 @@ className="flex flex-wrap justify-center gap-4 mb-12"
         </section>
       </div>
     </>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
               transition={{ duration: 0 && 0.8 }}
@@ -1931,15 +2086,19 @@ className="flex flex-wrap justify-center gap-4 mb-12"
               </Link>;
             </motion.div>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           </div>;
         </section>;
       </div>;
     </>;
   );
 <<<<<<< HEAD
-
-
+<<<<<<< HEAD
 =======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
+
   )
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
@@ -2063,6 +2222,7 @@ className="flex flex-wrap justify-center gap-4 mb-12"
           </div>;
         </section>;
       </div>;
+<<<<<<< HEAD
 
     </>;
   );
@@ -2070,14 +2230,19 @@ className="flex flex-wrap justify-center gap-4 mb-12"
     </>);
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

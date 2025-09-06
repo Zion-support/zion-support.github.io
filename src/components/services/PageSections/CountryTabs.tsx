@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import { useState, useEffect  } from 'react';
 import { useState, useEffect  } from 'react';
@@ -30,12 +31,15 @@ import { useState, useEffect } from 'react',;
 import { Search } from 'lucide-react';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {;
   Pagination,;
   PaginationContent,;
   PaginationItem,;
   PaginationButton,;
   PaginationNext,;
+<<<<<<< HEAD
 <<<<<<< HEAD
   PaginationPrevious,;
 } from '@/components/ui/pagination';
@@ -45,6 +49,8 @@ import { CountryPricing } from '@/data/onsiteServicePricing';
 
 
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export function CountryTabs(): any ({;
   popularCountries,;
   filteredCountries,;
@@ -56,6 +62,7 @@ export function CountryTabs(): any ({;
   const [currentPage, setCurrentPage] = useState(1);
   const countriesPerPage = 50;
 
+<<<<<<< HEAD
   useEffect(() => {;
     setCurrentPage(1);
   }, [searchQuery]);
@@ -118,6 +125,8 @@ interface CountryTabsProps {
   searchQuery: string;
   setSearchQuery: (query: string) => void
 export function CountryTabs({
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   popularCountries
   filteredCountries
@@ -125,7 +134,11 @@ export function CountryTabs({
   onQuote
   searchQuery
   setSearchQuery
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export function CountryTabs({
   popularCountries,
   filteredCountries,
@@ -133,9 +146,12 @@ export function CountryTabs({
   onQuote,
   searchQuery,
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
   setSearchQuery,
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }: CountryTabsProps) {
   const [currentPage, setCurrentPage] = useState(1)
   const countriesPerPage = 50
@@ -152,27 +168,15 @@ export function CountryTabs({
   const paginatedCountries = filteredCountries.slice(
     (currentPage - 1) * countriesPerPage,
     currentPage * countriesPerPage
-    (currentPage - 1) * countriesPerPage
-    currentPage * countriesPerPage
   )
-  )
-  const paginatedCountries = filteredCountries.slice(
-    (currentPage - 1) * countriesPerPage,
-    currentPage * countriesPerPage
-  )
-
   setSearchQuery}: CountryTabsProps) {
   const [currentPage, setCurrentPage] = useState(1),
   const countriesPerPage = 50,
 
-  useEffect(() => {
-    setCurrentPage(1)
-  }, [searchQuery]),
-
-  const totalPages = Math.ceil(filteredCountries.length / countriesPerPage),
   const paginatedCountries = filteredCountries.slice(
     (currentPage - 1) * countriesPerPage
     currentPage * countriesPerPage
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   ),
@@ -180,10 +184,14 @@ export function CountryTabs({
 =======
   )
   ),
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <Tabs defaultValue="featured" className="w-full">
       <TabsList className="bg-zion-blue-light border border-zion-blue-light w-full max-w-md mx-auto mb-6">
         <TabsTrigger
+<<<<<<< HEAD
           value="featured"
           className="data-[state=active]:bg-zion-purple"
         >
@@ -222,12 +230,17 @@ export function CountryTabs({
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             Featured Service Locations
           </h2>
           <p className='text-zion-slate-light text-center mt-2'>
             Browse our most popular service destinations
           </p>
         </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
           className='data-[state=active]:bg-zion-purple'>;
@@ -257,6 +270,8 @@ export function CountryTabs({
           {filteredCountries
             .filter(country => popularCountries.includes(country.country))
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             .map(country => (              <CountryServiceCard
                 key = {country && country.country,}
                 country = {country,}
@@ -265,6 +280,7 @@ export function CountryTabs({
                 isPopular = {true,}
               />;
             ))}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
         </div>;
@@ -283,11 +299,14 @@ export function CountryTabs({
           <div className='relative'>
             <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate-light' />
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <Input
               type='text'
               placeholder='Search by country...'
               className='pl-10 bg-zion-blue border-zion-blue-light text-white'
               value={searchQuery}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
               onChange={e => setSearchQuery(e && e.target.value)}            />;
@@ -358,6 +377,8 @@ export function CountryTabs({
             />;
 <<<<<<< HEAD
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {filteredCountries
@@ -398,7 +419,10 @@ export function CountryTabs({
               isPopular={popularCountries.includes(country.country)}
             />;
 
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           ))}
         </div>
         {totalPages > 1 && (
@@ -408,6 +432,7 @@ export function CountryTabs({
                 <PaginationItem>
                   <PaginationPrevious
                     href={`?page=${currentPage - 1}`}
+<<<<<<< HEAD
                     onClick={e => {
                       e.preventDefault()
                       setCurrentPage(Math.max(1, currentPage - 1))
@@ -453,6 +478,12 @@ export function CountryTabs({
                     onClick={e => {;
                       e && e.preventDefault();
                       setCurrentPage(Math && Math.min(totalPages, currentPage + 1));                    }}
+=======
+                    onClick={e => {;
+                      e && e.preventDefault();
+                      setCurrentPage(Math && Math.max(1, currentPage - 1));
+                    }}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   />;
                 </PaginationItem>;
               </PaginationContent>;
@@ -597,6 +628,7 @@ function CountryTabs() {
 }
   );
 }
+<<<<<<< HEAD
 
 
                     onClick={(e) => {;
@@ -681,6 +713,8 @@ function CountryTabs() {
     </Tabs>;
   );
 }
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
                     onClick={(e) => {;
@@ -688,6 +722,9 @@ function CountryTabs() {
                       setCurrentPage(Math.max(1, currentPage - 1));
 
 
+                    onClick={(e) => {;
+                      e.preventDefault(),;
+                      setCurrentPage(Math.max(1, currentPage - 1));
                     }}
                   />;
                 </PaginationItem>;
@@ -697,12 +734,6 @@ function CountryTabs() {
                       <PaginationButton;
                         page={page}
                         isActive={page === currentPage}
-                        onClick={e => {
-                          e.preventDefault()
-                          setCurrentPage(page) }}
-                      />
-                    </PaginationItem>
-                  )
                         onClick={(e) => {;
                           e.preventDefault();
                           setCurrentPage(page);
@@ -710,23 +741,32 @@ function CountryTabs() {
                       />;
                     </PaginationItem>;
                   );
+                )}
                 <PaginationItem>;
                   <PaginationNext;
                     href={`?page=${currentPage + 1}`}
+<<<<<<< HEAD
                     onClick={(e) => {;
                       e.preventDefault();
                       setCurrentPage(Math.min(totalPages, currentPage + 1));
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     }}
-  )
-}
-  )
-}
+                  />
+                </PaginationItem>
+              </PaginationContent>
+            </Pagination>
+          </div>
+        )}
       </TabsContent>;
     </Tabs>;
   );
 }
 ;
+<<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
 ;
                     href={`?page=${currentPage + 1}`}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

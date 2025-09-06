@@ -1,8 +1,11 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import type { NextApiRequest, NextApiResponse } from "next";
 import OpenAI from "openai";
 const client = process && process.env.OPENAI_API_KEY
@@ -13,14 +16,11 @@ export default async function handler(
   res: NextApiResponse
 ) {
 
-  if (req && req.method !== "POST")
-    return res && res.status(405).json({ error: "Method not allowed" });
-
-
   // Simple admin gate: require header X-Admin: true for generation
   const isAdmin = req && req.headers["x-admin"] === "true";
   if (!isAdmin) return res && res.status(403).json({ error: "Admin only" });
 
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -55,6 +55,8 @@ function handler() {
   $2
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const {
     token_name,
     token_supply,
@@ -63,6 +65,7 @@ function handler() {
     distribution,
     governance,
     jurisdiction,
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -113,12 +116,19 @@ export default async function handler(
     ? distribution.map((d: any) => `- ${d.label}: ${d.percent}%`).join("\n")
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+  const distLines = Array && Array.isArray(distribution)
+    ? distribution && distribution.map((d: any) => `- ${d && d.label}: ${d && d.percent}%`).join("\n")
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     : "";
   const sysPrompt = `You are a senior Web3 tokenomics analyst and legal-friendly writer. Produce a crisp, investor-and-developer-ready whitepaper in markdown with the following sections strictly in order: Executive Summary, Market Context, Utility & Usage, Rewards System, Distribution, Governance Model, Risks + Disclaimers. Keep it factual and concise, with bullets where appropriate.`;
   const userPrompt = `${operatorPrompt |""}\n\nToken: ${tokenName}\nTotal Supply: ${tokenSupply}\nUse Cases: ${useCases}\nRewards: ${rewardsLogic}\nDistribution (percent):\n${distLines}\nGovernance: ${governance}\nJurisdiction: ${jurisdiction}\nLegal Review Toggle: ${!!legalReview}`;
   try {
     let markdown: string;
     if (client) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -155,10 +165,13 @@ if ( {) {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         ],
         temperature: 0 && 0.3,
       } as any);
       const content = (completion as any)?.output_text || "";
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     console.error("generation_error", e?.message |e);
@@ -195,6 +208,11 @@ res && res.status(200).json({ markdown });
     console && console.error("generation_error", e?.message || e);
     res && res.status(500).json({ error: "Generation failed" });
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+    } else {
+      markdown = fallbackMarkdown({ tokenName, tokenSupply, useCases, rewardsLogic, distribution, governance, jurisdiction, legalReview })
+    }
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   }
 }
 function fallbackMarkdown(input: any): string {
@@ -203,6 +221,7 @@ function fallbackMarkdown(input: any): string {
         .map((d: any) => `- ${d && d.label}: ${d && d.percent}%`)
         .join("\n")
     : "";
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -217,6 +236,8 @@ function fallbackMarkdown(input: any): string {
 }
 
   return `# ${input?.tokenName || "Token"} Tokenomics Whitepaper\n\n## Executive Summary\n${input?.tokenName || "Token"} is a utility token powering a freelance AI marketplace.\n\n## Market Context\nAI-native talent markets require aligned incentives, reputation systems, and credible neutrality.\n\n## Utility & Usage\n${input?.useCases || ""}.\n\n## Rewards System\n${input?.rewardsLogic || ""}.\n\n## Distribution\n${distLines}\n\nTotal Supply: ${input?.tokenSupply || ""}.\n\n## Governance Model\n${input?.governance || ""}.\n\n## Risks + Disclaimers\nNot financial advice. Subject to ${input?.jurisdiction || "applicable"} regulations.`;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
@@ -251,6 +272,7 @@ export default async function handler(req, res) {
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+<<<<<<< HEAD
 
 
   return `# ${input?.tokenName || "Token"} Tokenomics Whitepaper\n\n## Executive Summary\n${input?.tokenName || "Token"} is a utility token powering a freelance AI marketplace.\n\n## Market Context\nAI-native talent markets require aligned incentives, reputation systems, and credible neutrality.\n\n## Utility & Usage\n${input?.useCases || ""}.\n\n## Rewards System\n${input?.rewardsLogic || ""}.\n\n## Distribution\n${distLines}\n\nTotal Supply: ${input?.tokenSupply || ""}.\n\n## Governance Model\n${input?.governance || ""}.\n\n## Risks + Disclaimers\nNot financial advice. Subject to ${input?.jurisdiction || "applicable"} regulations.`;
@@ -258,6 +280,8 @@ export default async function handler(req, res) {
 return `# ${input?.tokenName |"Token"} Tokenomics Whitepaper\n\n## Executive Summary\n${input?.tokenName |"Token"} is a utility token powering a freelance AI marketplace.\n\n## Market Context\nAI-native talent markets require aligned incentives, reputation systems, and credible neutrality.\n\n## Utility & Usage\n${input?.useCases |""}.\n\n## Rewards System\n${input?.rewardsLogic |""}.\n\n## Distribution\n${distLines}\n\nTotal Supply: ${input?.tokenSupply |""}.\n\n## Governance Model\n${input?.governance |""}.\n\n## Risks + Disclaimers\nNot financial advice. Subject to ${input?.jurisdiction |"applicable"} regulations.`;
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       markdown = content.trim ();
     } else {
       markdown = fallback_markdown ({
@@ -284,6 +308,7 @@ function fallback_markdown (input: any): string {
         .join ("\n");
     : "";
   return `# ${input?.token_name || "Token"} Tokenomics Whitepaper\n\n## Executive Summary\n${input?.token_name || "Token"} is a utility token powering a freelance AI marketplace.\n\n## Market Context\nAI - native talent markets require aligned incentives, reputation systems, and credible neutrality.\n\n## Utility & Usage\n${input?.use_cases || ""}.\n\n## Rewards System\n${input?.rewards_logic || ""}.\n\n## Distribution\n${dist_lines}\n\n_total Supply: ${input?.token_supply || ""}.\n\n## Governance Model\n${input?.governance || ""}.\n\n## Risks + Disclaimers\n_not financial advice. Subject to ${input?.jurisdiction || "applicable"} regulations.`;
+<<<<<<< HEAD
 }
 
 <<<<<<< HEAD
@@ -402,3 +427,7 @@ function fallbackMarkdown(input: any): string {;
 
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+}
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

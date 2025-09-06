@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -14,6 +15,9 @@ interface TemplateListProps {
 import { useAuth } from "@/hooks/useAuth";
 =======
 
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { ContractTemplate } from "@/types/contracts",
 import { Button } from "@/components/ui/button",
 import { Loader2, Edit, Trash, Star, StarOff } from 'lucide-react'
@@ -21,10 +25,13 @@ import { useContractTemplates } from "@/hooks/useContractTemplates",
 import { Card, CardContent } from "@/components/ui/card",
 import { Separator } from "@/components/ui/separator",
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip",
+<<<<<<< HEAD
 import { useAuth } from "@/hooks/useAuth";
 ursor/fix-website-loading-errors-and-merge-6662
 // useRouter replaces the old useLocation hook from react-router
 import { useAuth } from "@/hooks/useAuth";
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useAuth } from "@/hooks/useAuth",
 
 
@@ -55,6 +62,34 @@ import { useAuth } from "@/hooks/useAuth"
   AlertDialogFooter,
   AlertDialogHeader,
   AlertDialogTitle} from "@/components/ui/alert-dialog",
+<<<<<<< HEAD
+=======
+import {
+  AlertDialog;
+  AlertDialogAction;
+  AlertDialogCancel;
+  AlertDialogContent;
+  AlertDialogDescription;
+  AlertDialogFooter;
+  AlertDialogHeader;
+  AlertDialogTitle } from '@/components / ui / alert - dialog';
+import { ContractTemplate  } from '@/types / contracts';
+import { Button  } from '@/components / ui / button';
+import { Loader2, Edit, Trash, Star, StarOff } from 'lucide-react';
+import { useContractTemplates  } from '@/hooks / useContractTemplates';
+import { Card, CardContent  } from '@/components / ui / card';
+import { Separator  } from '@/components / ui / separator';
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger  } from '@/components / ui / tooltip';
+import { use_auth  } from '@/hooks / use_auth';
+// use_router replaces the old use_location hook from react - router;
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useState } from "react"
 interface TemplateListProps {
   templates: ContractTemplate[]
@@ -91,6 +126,7 @@ export function TemplateList({
     }
     await setDefaultTemplate.mutateAsync(templateId)
   }
+<<<<<<< HEAD
 import { useAuth } from "@/hooks/useAuth",
 // useRouter replaces the old useLocation hook from react-router
 import { useRouter } from 'next/router',
@@ -239,6 +275,8 @@ export function TemplateList(): any ({;
       {templates && templates.map((template,) => (;
         <Card key={template && template.id} className={template && template.is_default ? "border-zion-purple" : ""}>;
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useState } from "react",
 interface TemplateListProps {
   templates: ContractTemplate[],
@@ -297,6 +335,8 @@ export function TemplateList({;
       router.push(`/auth/login?returnTo=${encodeURIComponent(currentPath)}`);
       return;
     }
+  if (isLoading) {;
+
     await setDefaultTemplate.mutateAsync(templateId)
   },
 
@@ -333,6 +373,7 @@ export function TemplateList({;
                   Last updated: {new Date(template.updated_at).toLocaleDateString()}
                 </p>
               </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
                 <Button
 =======
@@ -399,6 +440,10 @@ ursor/fix-website-loading-errors-and-merge-6662
                   </Button>;
                 )}
               
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <div className="flex items-center gap-2">
                 <Button
                   variant="ghost"
@@ -436,7 +481,16 @@ ursor/fix-website-loading-errors-and-merge-6662
                 <Button
                   variant="ghost"
                   size="icon"
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+
+            
+            <Separator className="my-3" />
+            
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   onClick={() => handleDeleteClick(template.id)}
                   aria-label="Delete template"
                 >
@@ -444,6 +498,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                 </Button>
               </div>
             </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
             <Button
               onClick = {() => onSelect(template),}
@@ -476,6 +531,11 @@ ursor/fix-website-loading-errors-and-merge-6662
             
             <Separator className="my-3" />
             
+=======
+            
+            <Separator className="my-3" />
+            
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <Button 
               onClick={() => onSelect(template)} 
               variant="outline" 
@@ -486,8 +546,11 @@ ursor/fix-website-loading-errors-and-merge-6662
           </CardContent>
         </Card>
       ))}
+<<<<<<< HEAD
       
       
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <AlertDialog open={!!templateToDelete} onOpenChange={() => setTemplateToDelete(null)}>
         <AlertDialogContent>
           <AlertDialogHeader>
@@ -516,12 +579,15 @@ const handleSetDefault = async (templateId: string) => {
 router.push (`/auth/login?returnTo=$ {
   encodeURIComponent (currentPath)
 }`)
+<<<<<<< HEAD
 return
 }await setDefaultTemplate.mutateAsync (templateId)
 return
 }await setDefaultTemplate.mutateAsync (templateId)
 return;
 }await setDefaultTemplate.mutateAsync (templateId) 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 <CardContent className="p-4"> <div className="flex items-center justify-between"> <div className="space-y-1"> <div className="flex items-center gap-2"> <h3 className="font-medium"> {
   template.title
@@ -541,6 +607,7 @@ return;
 }onOpenChange= {
   () => setTemplateToDelete (null) "
 }> <AlertDialogContent> <AlertDialogHeader> <AlertDialogTitle>Delete Template</AlertDialogTitle> <AlertDialogDescription> Are you sure you want to delete this template? This action cannot be undone. </AlertDialogDescription> </AlertDialogHeader> <AlertDialogFooter> <AlertDialogCancel>Cancel</AlertDialogCancel> <AlertDialogAction className="bg-destructive text-destructive-foreground hover:bg-destructive/90" onClick={
+<<<<<<< HEAD
   handleDeleteConfirm
 }> Delete </AlertDialogAction> </AlertDialogFooter> </AlertDialogContent> </AlertDialog> </div>)
 }'"}
@@ -552,6 +619,10 @@ return;
                   size="icon";
                   onClick={() => handleDeleteClick(template.id)}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+                  onClick = {() => handleDeleteClick(template && template.id),}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   aria-label="Delete template";
                 >;
                   <Trash className="h-4 w-4 text-destructive" />;
@@ -559,11 +630,15 @@ return;
               </div>;
             </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
             <Separator className="my-3" />;
 
             <Button
               onClick = {() => onSelect(template),}
+<<<<<<< HEAD
 =======
             ;
             <Separator className="my-3" />;
@@ -571,12 +646,15 @@ return;
             <Button ;
               onClick={() => onSelect(template)} ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               variant="outline" ;
               className="w-full";
             >;
               Use This Template;
             </Button>;
           </CardContent>;
+<<<<<<< HEAD
         </Card>;
       ))}
 <<<<<<< HEAD
@@ -597,6 +675,8 @@ return;
 
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ;
       <AlertDialog open={!!templateToDelete} onOpenChange={() => setTemplateToDelete(null)}>;
         <AlertDialogContent>;
@@ -608,10 +688,13 @@ return;
           </AlertDialogHeader>;
           <AlertDialogFooter>;
             <AlertDialogCancel>Cancel</AlertDialogCancel>;
+<<<<<<< HEAD
             <AlertDialogAction ;
               className="bg-destructive text-destructive-foreground hover:bg-destructive/90";
               onClick={handleDeleteConfirm}
             >;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <AlertDialogAction;
               className="bg-destructive text-destructive-foreground hover:bg-destructive/90";
               onClick={handleDeleteConfirm}
@@ -622,6 +705,7 @@ return;
         </AlertDialogContent>;
       </AlertDialog>;
     </div>;
+<<<<<<< HEAD
 };
 const handleSetDefault = async (templateId: string) => {;
   if (!user) {;
@@ -859,3 +943,8 @@ return;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 }
 ;
+=======
+  );
+}
+;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

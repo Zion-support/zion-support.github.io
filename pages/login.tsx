@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -36,11 +37,14 @@ import Layout from "./components/Layout";
 =======
 import {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import Layout from './components/Layout';
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -54,6 +58,8 @@ import Layout from "./components / Layout";
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 import {
 <<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 import {;
   Mail,;
@@ -233,6 +239,7 @@ import {;
   DizzyFace2,;
 
 } from "lucide-react";
+<<<<<<< HEAD
 =======
   DizzyFace2
 } from 'lucide-react';
@@ -431,6 +438,11 @@ import {
 } from 'lucide-react';
 origin/automation-improvements-final
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  DizzyFace2
+} from 'lucide-react';
+origin/automation-improvements-final
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   Mail
   Lock
@@ -609,6 +621,7 @@ origin/automation-improvements-final
   DizzyFace2
 } from "lucide-react";
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -638,10 +651,13 @@ function LoginPage() {
 =======
 export default function LoginPage() {
   const [formData, setFormData] = useState({
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     email: ""
     password: ""
     email: "",
     password: "",;
+
   });
   const [showPassword, setShowPassword] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
@@ -649,14 +665,18 @@ export default function LoginPage() {
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
     setFormData((prev) => ({
+<<<<<<< HEAD
       ...prev
       [name]: value
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       ...prev,
       [name]: value,
 =======
   const [error, setError] = useState('');
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -672,6 +692,8 @@ export default function LoginPage() {
 
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({
@@ -682,6 +704,7 @@ export default function LoginPage() {
 =======
       ...prev
       [name]: value
+<<<<<<< HEAD
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 =======
 
@@ -705,10 +728,13 @@ origin/automation-improvements-final
       ...prev
       [name]: value
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     }));
   }
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -728,12 +754,15 @@ origin/automation-improvements-final
 =======
     try {;
       // Simulate API call;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     setIsLoading(true);
     setError("");
     try {
       // Simulate API call
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       await new Promise((resolve) => setTimeout(resolve, 1000));
+<<<<<<< HEAD
 
       // For demo purposes, accept any email/password;
       if (formData && formData.email && formData && formData.password) {;
@@ -744,14 +773,19 @@ origin/automation-improvements-final
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         setError("Please fill in all fields");
       }
     } catch (err) {;
       setError("Login failed. Please try again.");
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     setError('');
 
     try {
@@ -768,6 +802,7 @@ origin/automation-improvements-final
     } catch (err) {
       setError('Login failed. Please try again.');
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
@@ -779,6 +814,8 @@ origin/automation-improvements-final
 =======
 =======
 origin/automation-improvements-final
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     } finally {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     } finally {;
@@ -787,6 +824,7 @@ origin/automation-improvements-final
     }
   }
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     <Layout>
@@ -809,6 +847,8 @@ origin/automation-improvements-final
         <meta name="description" content="Sign in to your Zion Tech Group account to access your dashboard and services." />
 origin/automation-improvements-final
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       </Head>
       <div className="min-h-screen bg-gray-50 flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-md w-full space-y-8">
@@ -825,6 +865,7 @@ origin/automation-improvements-final
               Sign in to your account
             </h2>
             <p className="mt-2 text-sm text-gray-600">
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -876,6 +917,11 @@ origin/automation-improvements-final
               <Link
                 href="/contact"
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+              <Link
+                href="/contact"
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 className="font-medium text-blue-600 hover:text-blue-500">;
                 contact us for access;
               </Link>;
@@ -883,9 +929,13 @@ origin/automation-improvements-final
           </motion && motion.div>;
           <motion&& motion.div
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             className="mt-8 bg-white py-8 px-6 shadow-lg rounded-lg"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -901,6 +951,7 @@ origin/automation-improvements-final
                   {error}
                 </motion && motion.div>;
               )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
                 <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
@@ -927,13 +978,18 @@ origin/automation-improvements-final
                 <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
 origin/automation-improvements-final
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   Email address
                 </label>
                 <div className="relative">
                   <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                     <Mail className="h-5 w-5 text-gray-400" />
                   </div>
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
               <div>;
                 <label
@@ -957,6 +1013,7 @@ origin/automation-improvements-final
                     className="appearance-none relative block w-full pl-10 pr-3 py-3 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-lg focus:outline-none focus:ring-blue-500 focus:border-blue-500 focus:z-10 sm:text-sm"
                     placeholder="Enter your email"
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
                   />
                 </div>
@@ -978,6 +1035,8 @@ origin/automation-improvements-final
                 <label htmlFor="password" className="block text-sm font-medium text-gray-700 mb-2">
 origin/automation-improvements-final
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   Password
                 </label>
                 <div className="relative">
@@ -1022,6 +1081,7 @@ origin/automation-improvements-final
                       <Eye className="h-5 w-5 text-gray-400 hover:text-gray-600" />;
                     )}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -1035,11 +1095,14 @@ origin/automation-improvements-final
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   <input
                     id="remember-me"
                     name="remember-me"
                     type="checkbox"
                     className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
                   />
@@ -1059,6 +1122,8 @@ origin/automation-improvements-final
                   <label htmlFor="remember-me" className="ml-2 block text-sm text-gray-900">
 origin/automation-improvements-final
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     Remember me
                   </label>
                 </div>
@@ -1072,6 +1137,7 @@ origin/automation-improvements-final
                 </div>
               </div>
               <div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -1291,6 +1357,8 @@ if ( {) {
                   <span className="px-2 bg-white text-gray-500">Or continue with</span>
 origin/automation-improvements-final
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 </div>
               </div>
               <div className="mt-6 grid grid-cols-2 gap-3">
@@ -1312,6 +1380,7 @@ origin/automation-improvements-final
             transition={{ duration: 0.8, delay: 0.4 }}
           >
             <p className="text-sm text-gray-600">
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1371,6 +1440,8 @@ origin/automation-improvements-final
 
 origin/automation-improvements-final
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <Link
                 href="/contact"
                 className="font-medium text-blue-600 hover:text-blue-500">;

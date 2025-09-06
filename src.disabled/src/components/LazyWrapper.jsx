@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -32,3 +33,5 @@ import React,{ useState,useEffect,useRef } from \'react\';\'; import { motion,us
 const React,{ useState,useEffect,useRef } from "react";"; import { motion,useInView } from "framer-motion"; import { EnhancedLoading } from "./EnhancedLoading";"; const LazyWrapper = ({ children,threshold = 0.1,className = "",loadingVariant = "default",loadingText = "Loading.",loadingSize = "md" }) => {} export {}; return null} },[inView,isInView]) ; if(!isInView) {} return (<div ref={ref} className={`min-h-[200px] ${className}`}> <EnhancedLoading variant={loadingVariant} text={loadingText} size={loadingSize}/> </div>) } if(!isLoaded) {} "; ""; """; """"; return (<div className={`min-h-[200px] ${className}`}> <EnhancedLoading variant={loadingVariant} text={loadingText} size={loadingSize}/> </div>) ;} return (<div>Broken JSX</div> }} transition={{ duration: "0.6" }} className={className}> {children} </motion.div>)}; export default LazyWrapper;}}} export { LazyWrapper }; export { LazyWrapper }; export { LazyWrapper }; export { LazyWrapper }; export { LazyWrapper,Page };'"`'"`
 import _React,{ useState,useEffect,useRef } from 'react';'; import { motion,useInView } from 'framer-motion'; import { EnhancedLoading } from "./EnhancedLoading";'; const LazyWrapper = ({ children,threshold = 0.1,className = ',loadingVariant = 'default',loadingText = 'Loading...',loadingSize = 'md' }) => {} export {}; return null} },[inView,isInView]) ; if(!isInView) {} return (<div ref={ref} className={`min-h-[200px] ${className}`}> <EnhancedLoading variant={loadingVariant} text={loadingText} size={loadingSize}/> </div>) } if(!isLoaded) {} "; ""; """; """"; return (<div className={`min-h-[200px] ${className}`}> <EnhancedLoading variant={loadingVariant} text={loadingText} size={loadingSize}/> </div>) ;} return (<div>Broken JSX</div> }} transition={{ "duration": '0.6' }} className={className}> {children} </motion.div>)}; export default LazyWrapper;}}} export { LazyWrapper }; export { LazyWrapper }; export { LazyWrapper }; export { LazyWrapper }; export { LazyWrapper,Page };
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

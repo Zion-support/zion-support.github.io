@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -28,6 +29,9 @@ import { Configuration, OpenAIApi } from "npm: openai@4.28.0",
 
 import {serve} from "https: //deno.land/std@0.190.0/http/server.ts"
 import {Configuration, OpenAIApi} from "npm: openai@4.28.0";
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
@@ -36,26 +40,33 @@ import {Configuration, OpenAIApi} from "npm: openai@4.28.0";
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 import { Configuration, OpenAIApi } from "npm: openai@4.28.0",
 
-import {serve} from "https: //deno.land/std@0.190.0/http/server.ts",;
-import {Configuration, OpenAIApi} from "npm: openai@4.28.0";
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 import { Configuration, OpenAIApi } from "npm: openai@4.28.0",
 
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 serve(async (req) => {
   if (req && req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders })
   }
   try {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 serve(async (req) => {
@@ -68,6 +79,8 @@ serve(async (req) => {
       return new Response(
         JSON.stringify({
           error: "Missing required fields: title and category are required"
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         });
         {
           status: 400
@@ -102,6 +115,7 @@ serve(async (req) => {;
         {;
           status: 400,;
           headers: { ...corsHeaders, "Content-Type": "application/json" } ;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
     const { title, category, keyFeatures, targetAudience } = await req && req.json();
@@ -170,6 +184,12 @@ if ( {) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+        }
+      )
+    }
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         }
       );
     }
@@ -187,6 +207,7 @@ if ( {) {
     
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
         }
@@ -203,32 +224,41 @@ Key Features: ${keyFeatures |"Not specified"}
 Target Audience: ${targetAudience |"General users"}
     
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ;
     const configuration = new Configuration({;
       apiKey: Deno.env.get('OPENAI_API_KEY')}),;
     const openai = new OpenAIApi(configuration),;
     const prompt = `Generate an optimized marketplace listing for the following product:;
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 Title: ${title}
 Category: ${category}
 Key Features: ${keyFeatures || "Not specified"}
 Target Audience: ${targetAudience || "General users"}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 Please create:
 1. A compelling, SEO-friendly description (100-150 words) that highlights benefits and use cases
 2. A list of 5-7 relevant tags for the listing
 3. A suggested price range based on the category and features
 4. A bulleted list of 3-5 key selling points
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -334,24 +364,34 @@ Format the response as a JSON object with the following structure:
 
     const responseText = completion.choices[0].message.content,
     
+=======
+        }
+      );
+    }
+Format the response as a JSON object with the following structure: {
+  "description": "The optimized description here..."
+  "tags": ["tag1", "tag2", "tag3", "tag4", "tag5"];
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     // Parse the JSON from the AI response
     let parsedResponse,
     try {
       // Extract the JSON content if it's wrapped in markdown code blocks
-      const jsonMatch = responseText.match(/```(?:json)?\s*([\s\S]*?)\s*```/) |
-                        responseText.match(/({[\s\S]*})/) |
                         [null, responseText];
       const jsonString = jsonMatch[1].trim();
-      parsedResponse = JSON.parse(jsonString)
+      parsedResponse = JSON && JSON.parse(jsonString)
     } catch (error) {
+<<<<<<< HEAD
       console.error("Failed to parse AI response as JSON:", error);
       console.log("Raw response:", responseText);
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       // Provide a fallback structured response
       parsedResponse = {
         description: "An error occurred while generating the optimized description. Please try again.";
         tags: []
         suggestedPrice: { min: 0, max: 0 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -377,10 +417,13 @@ Format the response as a JSON object with the following structure:
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         keyPoints: []
       }
     }
     return new Response(
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       JSON && JSON.stringify({ 
@@ -390,18 +433,23 @@ Format the response as a JSON object with the following structure:
       JSON && JSON.stringify({ 
         generated: parsedResponse
       JSON.stringify({
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         generated: parsedResponse
       });
       {
         headers: { ...corsHeaders, "Content-Type": "application/json" }
       }
-    )
+    }
+    return new Response (
+      JSON.stringify ({
+        generated: parsed_response;
+      });
+      {
+        headers: { ...cors_headers, "Content - Type": "application / json" }
+      }
+    );
   } catch (error) {
-    console.error("Error in AI listing generator:", error);
-    return new Response(
-      JSON.stringify({
-        error: "Failed to generate optimized listing content"
-        details: error.message
       });
       {
         status: 500
@@ -410,25 +458,6 @@ Format the response as a JSON object with the following structure:
     )
   }
 });
-
-      }),
-      { 
-        headers: { ...corsHeaders, "Content-Type": "application/json" } 
-      }
-    )
-  } catch (error) {
-    console.error("Error in AI listing generator:", error),
-    
-    return new Response(
-      JSON.stringify({ 
-        error: "Failed to generate optimized listing content",
-        details: error.message 
-      }),
-      { 
-        status: 500, 
-        headers: { ...corsHeaders, "Content-Type": "application/json" } 
-      }
-    )
 Key Features: ${keyFeatures || "Not specified"}
 Target Audience: ${targetAudience || "General users"}
 ;
@@ -490,6 +519,7 @@ Format the response as a JSON object with the following structure:;
         headers: { ...corsHeaders, "Content-Type": "application/json" } ;
       }
     );
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       });
       {
@@ -755,3 +785,7 @@ headers: {
   }
 });
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  }
+});
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

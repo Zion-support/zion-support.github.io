@@ -1,11 +1,24 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   variant?: 'primary' | 'secondary' | 'outline';
   size?: 'sm' | 'md' | 'lg';
-
-
+export default function Button(): any ({;
+  children,;
+  variant = 'primary',;
+  size = 'md',;
+  className = '',;
+  onClick,;
+  type = 'button',;
+  disabled = false,;
+}: ButtonProps) {;
+  const baseClasses =;
+    'inline-flex items-center justify-center font-semibold rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-slate-900';
+}
 
   const variantClasses = {;
     primary:;
@@ -27,13 +40,10 @@
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     : 'hover:scale-105 transform';
   const classes = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${disabledClasses} ${className}`;
-
-
-      >;
-
       {children}
     </button>;
   );
+<<<<<<< HEAD
 
 }  const disabledClasses = disabled ? 'opacity-50 cursor-not-allowed' : 'hover: scale-105 transform',;
 
@@ -49,6 +59,10 @@ import React from 'react';
   const classes = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${disabledClasses} ${className}`;
 
 =======
+=======
+  const classes = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${disabledClasses} ${className}`;
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   class_name?: string;
   on_click?: () => void;
   type?: 'button' | 'submit' | 'reset';
@@ -94,6 +108,7 @@ function Button() {
       className={classes}
       on_click={on_click}
       disabled={disabled}
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -103,18 +118,33 @@ function Button() {
   );
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+      {children}
+    </button>
+);
+}
+
+
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     >
       {children}
     </button>
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     </button>);
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -188,3 +218,8 @@ export default function Button({
     </button>
   );
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+    </button>);
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

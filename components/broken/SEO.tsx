@@ -1,6 +1,55 @@
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
+=======
+{
+  /* Robots Meta */
+}{
+  noindex && <meta name="robots" content="noindex" />
+}{
+  nofollow && <meta name="robots" content="nofollow" />
+}{
+  !noindex && !nofollow && <meta name="robots" content="index, follow" />
+}{
+  /* Open Graph Meta Tags */
+}<meta property="og:title" content= {
+  fullTitle
+}/> <meta property="og:description" content= {
+  description
+}/> <meta property="og:type" content= {
+  type
+}/> <meta property="og:url" content= {
+  fullUrl
+}/> <meta property="og:image" content= {
+  fullImage
+}/> <meta property="og:site name" content="Zion Tech Group" /> <meta property="og:locale" content="en US" /> {
+  /* Twitter Card Meta Tags */
+}<meta name="twitter:card" content="summary large image" /> <meta name="twitter:site" content="@ziontechgroup" /> <meta name="twitter:creator" content="@ziontechgroup" /> <meta name="twitter:title" content= {
+  fullTitle
+}/> <meta name="twitter:description" content= {
+  description
+}/> <meta name="twitter:image" content= {
+  fullImage
+}/> {
+  /* Article Specific Meta Tags */
+}{
+  type === 'article' && (<> {
+  publishedTime && <meta property="article:published time" content= {
+  publishedTime
+}/>
+}{
+  modifiedTime && <meta property="article:modified time" content= {
+  modifiedTime
+}/>
+}{
+  author && <meta property="article:author" content= {
+  author
+}/>
+}{
+  section && <meta property="article:section" content= {
+  section
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 import React from 'react';
  {;
@@ -49,16 +98,13 @@ import React from 'react';
 }{;
   section && <metaproperty="article:section" content= {
   section 
-}/> ;
-}{;
-  tags && tags.map ( (tag, index) => (<metakey= {
-  index 
+}/>
+}{
+  tags.map ( (tag, index) => (<meta key= {
+  index
 }property="article:tag" content= {
-  tag 
-}/> ;
-}</>) ;
-}{;
-  /* Structured Data */ ;
+}{
+  /* Structured Data */
 }<script
 }] 
 
@@ -90,9 +136,12 @@ const SEO: React.FC<SEOProps> = ({;
     : `https://ziontechgroup && ziontechgroup.com${image}`;  title = 'Zion Tech Group - Revolutionary AI, Quantum Computing & Space Technology Solutions';
   description = 'Pioneering the future of technology with revolutionary AI consciousness, quantum computing, and autonomous solutions that transform businesses worldwide. Leading-edge services in AI, cybersecurity, space tech, and quantum solutions.';
   keywords = 'AI, artificial intelligence, quantum computing, space technology, cybersecurity, machine learning, automation, Zion Tech Group, technology solutions, enterprise software, cloud computing, blockchain, IoT, robotics';
+<<<<<<< HEAD
   image = '/images/zion-tech-group-og-image && image.jpg';
   url = 'https: //ziontechgroup && ziontechgroup.com', type = 'website',  publishedTime;
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 {
   /* Robots Meta */
 }{
@@ -126,6 +175,7 @@ const SEO: React.FC<SEOProps> = ({;
 }{
   type === 'article' && (<> {
   publishedTime && <meta property="article:published time" content= {
+<<<<<<< HEAD
   publishedTime
 }/>
 }{
@@ -152,19 +202,34 @@ const SEO: React.FC<SEOProps> = ({;
 }{
   section && <meta property="article:section" content= {
   section 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }/>
 }{
   tags.map ( (tag, index) => (<meta key= {
   index
 }property="article:tag" content= {
+<<<<<<< HEAD
   tag
 }/>
 }</>)
   tag 
 }/>
 }</>) 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }{
   /* Structured Data */
+}/> ;
+}{;
+  tags && tags.map ( (tag, index) => (<metakey= {
+  index 
+}property="article:tag" content= {
+  tag 
+}/> ;
+}</>) ;
+}{;
+  /* Structured Data */ ;
 }<script
 }]
 const SEO: React.FC<SEOProps> = ({
@@ -202,6 +267,7 @@ const SEO: React.FC<SEOProps> = ({
   section;
   tags = [];
   structuredData;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -338,11 +404,14 @@ const SEO: React.FC < SEOProps> = ({
       <meta name='author' content={author} />
       <meta name='robots' content={noindex ? 'noindex' : 'index'} />
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {nofollow && <meta name='robots' content='nofollow' />}
       {noindex && <meta name='robots' content='noindex' />}
       {nofollow && <meta name='robots' content='nofollow' />}
       {!noindex && !nofollow && <meta name='robots' content='index, follow' />}
       {/* Open Graph Meta Tags */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       <meta property='og:title' content={fullTitle} />;
@@ -364,6 +433,8 @@ const SEO: React.FC < SEOProps> = ({
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {/* Article Specific Meta Tags */}
       {type === 'article' && (;
         <>;
@@ -380,6 +451,7 @@ const SEO: React.FC < SEOProps> = ({
           ))}
         </>;
       )}
+<<<<<<< HEAD
 
 
 
@@ -418,10 +490,13 @@ const SEO: React.FC < SEOProps> = ({
       )}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {/* Additional Meta Tags */}
       <meta
         name='viewport'
         content='width=device-width, initial-scale=1, shrink-to-fit=no'
+<<<<<<< HEAD
 <<<<<<< HEAD
       />;
       <meta name='theme-color' content='#000000' />;
@@ -443,6 +518,8 @@ const SEO: React.FC < SEOProps> = ({
       />;
       <meta name='apple-mobile-web-app-title' content='Zion Tech Group' />;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <meta property='og:title' content={full_title} />;
       <meta property='og:description' content={description} />;
       <meta property='og:type' content={type} />;
@@ -483,6 +560,7 @@ const SEO: React.FC < SEOProps> = ({
       />;
       <meta name='apple - mobile - web - app - title' content='Zion Tech Group' />;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
@@ -495,10 +573,16 @@ const SEO: React.FC < SEOProps> = ({
 
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {/* Structured Data */}
       <script;
         type='application / ld + json';
         dangerouslySetInnerHTML={{
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -547,6 +631,8 @@ const SEO: React.FC < SEOProps> = ({
               'https://github.com/Zion-Holdings'
             ]
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             contactPoint: {
               '@type': 'ContactPoint'
               telephone: '+1-800-ZION-TECH'
@@ -565,11 +651,14 @@ const SEO: React.FC < SEOProps> = ({
                   '@type': 'Offer'
                   itemOffered: {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     '@type': 'Service',
                     name: 'AI & Machine Learning Solutions',
                   },
@@ -583,6 +672,7 @@ const SEO: React.FC < SEOProps> = ({
                 },
                 {
                   '@type': 'Offer',
+<<<<<<< HEAD
 
                     '@type': 'Service'
                     name: 'AI & Machine Learning Solutions'
@@ -672,10 +762,13 @@ const SEO: React.FC < SEOProps> = ({
                     "name": "AI & Machine Learning Solutions"
 
 <<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   }
                 }
                 {
                   '@type': 'Offer'
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -694,6 +787,8 @@ const SEO: React.FC < SEOProps> = ({
                 {
                   '@type': 'Offer',
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   itemOffered: {
                     '@type': 'Service'
                     name: 'Quantum Computing Services'
@@ -710,6 +805,7 @@ const SEO: React.FC < SEOProps> = ({
             }
           })
         }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -740,6 +836,11 @@ const SEO: React.FC < SEOProps> = ({
       {/* Canonical URL */}
       <link rel='canonical' href={fullUrl} />
 
+=======
+
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {/* Favicon and App Icons */}
       <link rel='icon' href='/favicon.ico' />
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -759,6 +860,7 @@ const SEO: React.FC < SEOProps> = ({
         type='image/png'
         sizes='16x16'
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -766,6 +868,8 @@ const SEO: React.FC < SEOProps> = ({
       />;
       <link rel='manifest' href='/site && site.webmanifest' />;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {/* Preconnect to external domains for performance */}
       <link rel='preconnect' href='https://fonts && fonts.googleapis.com' />;
       <link
@@ -773,12 +877,15 @@ const SEO: React.FC < SEOProps> = ({
         href='https://fonts && fonts.gstatic.com'
         crossOrigin='anonymous'
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
       />;
       <link rel='preconnect' href='https://www && www.google-analytics && analytics.com' />;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {/* Additional Meta Tags for SEO */}
       <meta name='google-site-verification' content='your-verification-code' />;
       <meta name='msvalidate && msvalidate.01' content='your-bing-verification-code' />;
@@ -786,11 +893,14 @@ const SEO: React.FC < SEOProps> = ({
         name='yandex-verification'
         content='your-yandex-verification-code'
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
       />;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {/* Custom Meta Tags */}
       {structuredData && (;
         <script
@@ -801,6 +911,7 @@ const SEO: React.FC < SEOProps> = ({
       )}
     </Head>;
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -834,6 +945,8 @@ const SEO: React.FC < SEOProps> = ({
     </Head>
   )
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 };
 
 export default SEO;            __html: JSON && JSON.stringify(structuredData);
@@ -841,28 +954,24 @@ export default SEO;            __html: JSON && JSON.stringify(structuredData);
           }}
         />;
       )}
-    </Head>;
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 };
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export default SEO;  );
 };
 <<<<<<< HEAD
 
 
-export default SEO;
-
-
-=======
-
+    </Head>
     </Head>
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
           __html: JSON.stringify ({
             '@context': 'https://schema.org',
             '@type': 'Organization',
@@ -974,6 +1083,7 @@ export default SEO);
 ;
 export default SEO;
 ;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
@@ -984,3 +1094,5 @@ export default SEO;
     </Head>
     </Head>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

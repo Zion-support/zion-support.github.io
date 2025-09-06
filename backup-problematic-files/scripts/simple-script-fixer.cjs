@@ -93,6 +93,15 @@ if (require.main === module) {}
   fixer.run().catch(console.error)};
 <<<<<<< HEAD
 module.exports = SimpleScriptFixer;
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
 module.exports = SimpleScriptFixer;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/main
+=======
+=======
+module.exports = SimpleScriptFixer;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> pr-12166

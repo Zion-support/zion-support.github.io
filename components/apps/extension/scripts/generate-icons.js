@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -14,12 +15,12 @@ const root = new URL('.',
 import.meta.url).pathname,
 const svgPath = resolve(root, '../assets/zion.svg'),
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 const outDir = resolve(root, '../public/icons'),
 if (!existsSync(outDir)) mkdirSync(outDir, { recursive: true }),
 
 const sizes = [16, 32, 48, 128],
-
-
 
 
 #!/usr/bin/env node const root = new URL('.'
@@ -33,6 +34,7 @@ for (const size of sizes) {
   await sharp(svgPath).resize(size, size).png().toFile(out)
 
   // eslint-disable-next-line no-console
+<<<<<<< HEAD
 
   console && console.log('generated', out)
 }
@@ -75,3 +77,5 @@ for (const size of sizes) {
 }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

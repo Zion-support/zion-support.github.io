@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import React from 'react';
 interface FilterSidebarProps {
@@ -26,6 +27,8 @@ import React from 'react'
 interface FilterSidebarProps {
   className?: string;
   children?: React.ReactNode
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 
 export const FilterSidebar: React.FC<FilterSidebarProps> = ({
@@ -33,7 +36,10 @@ export const FilterSidebar: React.FC<FilterSidebarProps> = ({
   children
 },) => {  return (
     <div className={`filter-sidebar ${className |''}`}>
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {children}
     </div>);
 }
@@ -49,6 +55,7 @@ interface FilterGroup {
   options: FilterOption[];
   type: 'checkbox' | 'radio' | 'range'}
 interface FilterSidebarProps extends React.PropsWithChildren<{}> {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 export const FilterSidebar: React.FC<FilterSidebarProps> = ({ ;
@@ -83,12 +90,15 @@ export function FilterSidebar({
       {/* Mobile overlay */}
       {isOpen && (
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <div
           className="fixed inset-0 bg-black/50 z-40 lg: hidden"
           onClick={onClose}
         />
       )}
       {/* Sidebar */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       <divclassName={`
@@ -126,11 +136,17 @@ export function FilterSidebar({
                       </span>
                     </label>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   )})}
               </div>
             </div>
           ))}
         </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 <<<<<<< HEAD
 =======
@@ -171,6 +187,7 @@ function FilterSidebar() {
               </div>;
             </div>))}
         </div>;
+<<<<<<< HEAD
 
       </div>;
     </>)}
@@ -185,13 +202,18 @@ import React from 'react',;
 '"`
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       </div>;
     </>)}
 '"`;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from 'react',;
 interface FilterSidebarProps {;
   className?: string,;
@@ -209,4 +231,7 @@ export const FilterSidebar: React.FC<FilterSidebarProps> = ({;
   );
 };
 export default FilterSidebar;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

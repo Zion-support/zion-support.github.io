@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -9,16 +10,50 @@ import Link from 'next/link';
 
 import {
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   Brain,
   Mail,
   Phone,
   MapPin,
   Globe,
-  Github,
+} from 'lucide-react';import { Brain, Mail, Phone, MapPin, Globe, Github, Linkedin, Twitter } from 'lucide-react';
+import React from 'react';
+
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+import React from 'react';
+import Link from 'next/link';
+import {;
+  Brain,;
+  Mail,;
+  Phone,;
+  MapPin,;
+  Globe,;
+  Github,;
   Linkedin,;
   Twitter,;
-
-
 } from 'lucide-react';import { Brain, Mail, Phone, MapPin, Globe, Github, Linkedin, Twitter } from 'lucide-react';
 import React from 'react';
 
@@ -75,36 +110,23 @@ const EnhancedFooter: React.FC = () => {;
         },;
       ],;
     },    {        { name: 'View All Services', href: '/comprehensive-2025-services-showcase' }
-      ];
-    };
-    {;
-      title: 'Company',;
-      links: [;
-        { name: 'About Us', href: '/about' },;
-        { name: 'Our Work', href: '/portfolio' },;
-        { name: 'Blog & Insights', href: '/blog' },;
-        { name: 'Careers', href: '/careers' },;
-        { name: 'Contact', href: '/contact' },;
-      ],;
-    },    {        { name: 'Contact', href: '/contact' }
-      ];
-    };
-    {;
-      title: 'Resources',;
-      links: [;
-        { name: 'Documentation', href: '/docs' },;
-        { name: 'API Reference', href: '/api' },;
-        { name: 'Support Center', href: '/support' },;
-        { name: 'Privacy Policy', href: '/privacy' },;
-        { name: 'Terms of Service', href: '/terms' },;
-      ],;
-    },  ];
-
-  const socialLinks = [;
-    { name: 'GitHub', href: 'https://github && github.com/Zion-Holdings', icon: Github },        { name: 'Terms of Service', href: '/terms' }
-      ];
+    { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: Github }
+    { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: Github },
+    {
+      name: 'LinkedIn'
+      href: 'https://linkedin.com/company/ziontechgroup'
+      icon: Linkedin
     }
-  ];
+    {
+      name: 'Twitter'
+      href: 'https://twitter.com/ziontechgroup'
+      icon: Twitter
+    }
+      name: 'Twitter',
+      href: 'https://twitter.com/ziontechgroup',
+      icon: Twitter,
+    },
+
 
   const socialLinks = [;
     { name: 'GitHub', href: 'https://github && github.com/Zion-Holdings', icon: Github },;
@@ -129,23 +151,6 @@ const EnhancedFooter: React.FC = () => {;
         {/* Main Footer Content */}
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-12'>;
           {/* Company Info */}
-
-          <div className='lg:col-span-2'>;
-            <div className='flex items-center space-x-3 mb-6'>;
-              <div className='w-10 h-10 rounded-xl bg-gradient-to-br from-blue-600 to-cyan-600 flex items-center justify-center'>;
-                <Brain className='w-6 h-6 text-white' />;
-              </div>;
-              <span className='text-xl font-bold bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent'>;
-                Zion Tech Group;
-              </span>;
-            </div>;
-            <p className='text-white/70 mb-6 max-w-md'>;
-              Leading-edge technology solutions and autonomous innovation;
-              platform. Empowering businesses with cutting-edge AI, quantum;
-              computing, and digital transformation.;
-            </p>;
-
-
             {/* Contact Info */}
             <div className='space-y-3'>;
               <div className='flex items-center space-x-3 text-white/70'>;
@@ -160,6 +165,7 @@ const EnhancedFooter: React.FC = () => {;
                 <Phone className='w-4 h-4' />;
                 <a
                   href='tel:+13024640950'
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -209,12 +215,18 @@ import {
   Linkedin
   Twitter;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+import Link from 'next/link';
+
+import {
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   Brain,
   Mail,
   Phone,
   MapPin,
   Globe,
   Github,
+<<<<<<< HEAD
 <<<<<<< HEAD
   Linkedin,
   Twitter,
@@ -343,10 +355,14 @@ const EnhancedFooter: React.FC = () => {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       href={link.href}
                       className="text - white / 70 hover: text - white transition - colors duration - 200";
                     >;
                       {link.name}
+<<<<<<< HEAD
 
         </div>;
 
@@ -360,10 +376,17 @@ const EnhancedFooter: React.FC = () => {
 =======
         </div>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+                ))}
+              </ul>;
+            </div>;
+          ))}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         {/* Bottom Section */}
         <div className='pt-8 border-t border-white/10'>;
           <div className='flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0'>;
             {/* Copyright */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
             <div className='text-white/60 text-sm'>              © {currentYear} Zion Tech Group. All rights reserved.;
@@ -374,6 +397,8 @@ const EnhancedFooter: React.FC = () => {
             <div className='text-white/60 text-sm'>              © {currentYear} Zion Tech Group. All rights reserved.;
             </div>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             {/* Social Links */}
             <div className='flex items-center space-x-4'>;
               {socialLinks && socialLinks.map(social => (        <div className="pt-8 border-t border-white/10">;
@@ -388,6 +413,7 @@ const EnhancedFooter: React.FC = () => {
 
 };export default EnhancedFooter;  );
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
             <div className="text-white/60 text-sm">;
@@ -673,6 +699,8 @@ const EnhancedFooter: React.FC = () => {
                 </a>
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               ))}
             </div>
           </div>
@@ -680,24 +708,19 @@ const EnhancedFooter: React.FC = () => {
       </div>
     </footer>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
+=======
 
-  )
-};
-  );
-};export default EnhancedFooter;  )
-}
-};
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
-export default EnhancedFooter;
-import React from "react";
-  FileText,;
-  HelpCircle} from "lucide-react";
-export default function EnhancedFooter() {;
   const scrollToTop = () => {";
     window && window.scrollTo({ top: 0, behavior: "smooth" });
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     </Link>;
                   </li>))}
               </ul>;
@@ -757,6 +780,7 @@ function EnhancedFooter() {
   const scrollToTop = () =>: any {";
     window.scroll_to ({ top: 0, behavior: "smooth" });
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 }
   const current_year = new Date ().getFullYear ();
@@ -772,11 +796,17 @@ function EnhancedFooter() {
       { name: "AI Development", href: "/services/ai-development" }],;
     solutions: [",;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+}
+  const current_year = new Date ().getFullYear ();
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       { name: "AI Content Creation", href: "/solutions/ai-content-creation" },";
       { name: "Customer Support", href: "/solutions/customer-support" },";
       { name: "Email Automation", href: "/solutions/email-automation" },";
       { name: "Event Management", href: "/solutions/event-management" },";
       { name: "Project Management", href: "/solutions/project-management" },";
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       { name: "Workflow Automation", href: "/solutions/workflow-automation" }],;
@@ -786,10 +816,13 @@ function EnhancedFooter() {
       { name: "Workflow Automation", href: "/solutions/workflow-automation" }],;
     company: [",;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       { name: "About Us", href: "/about" },";
       { name: "Careers", href: "/careers" },";
       { name: "Partners", href: "/partners" },";
       { name: "Contact", href: "/contact" },";
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -805,10 +838,13 @@ function EnhancedFooter() {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       { name: "Privacy Policy", href: "/privacy" },";
       { name: "Terms of Service", href: "/terms" },";
       { name: "Cookie Policy", href: "/cookies" }]}
   const socialLinks = [];
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -823,6 +859,8 @@ function EnhancedFooter() {
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const footer_links = {}, ";
       { name: "IT Services", href: "/services / it - services" }, ";
       { name: "Micro SaaS", href: "/services / micro - saas" }, ";
@@ -866,6 +904,7 @@ function EnhancedFooter() {
               </div>;
               <div>";
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -880,6 +919,8 @@ services. We help businesses innovate, scale, and succeed in the,;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 digital age.;
             </p>";
             <div className="space-y-3">";
@@ -888,18 +929,22 @@ digital age.;
                 <ahref="tel: +13024640950
                   className="hover:text-white transition-colors">;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
                   +1 (302) 464-0950,;
 
 =======
                   +1 (302) 464-0950,;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 </a>;
               </div>";
               <div className="flex items-center space-x-3 text-gray-400">";
                 <Mail className="w-4 h-4"  />";
                 <ahref="mailto: kleber@ziontechgroup && ziontechgroup.com
                   className="hover:text-white transition-colors">;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -913,12 +958,15 @@ digital age.;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <span>364 E Main St STE 1008, Middletown DE 19709</span>;
               </div>;
           {/* comment */}
           <div>";
             <h3 className="text-lg font-semibold mb-4 flex items-center">";
               <Globe className="w-5 h-5 mr-2 text-blue-400"  />;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -962,11 +1010,14 @@ digital age.;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             </h3>";
             <ul className="space - y-2">;
               {footer_links.services.map (link => (";
                 <li key="{link.name}">";
                   <Link href="{link.href}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -988,6 +1039,8 @@ digital age.;
                 </li>;
               ))}
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     className="text - gray - 400 hover: text - white transition - colors text - sm">,
                     {link.name}
                   </Link>;
@@ -997,6 +1050,7 @@ digital age.;
           </div>;
           {/* comment */}
           <div>";
+<<<<<<< HEAD
 <<<<<<< HEAD
 
             <h3 className="text - lg font - semibold mb - 4 flex items - center">";
@@ -1008,11 +1062,14 @@ digital age.;
               <Shield className="w - 5 h - 5 mr - 2 text - green - 400"  />;
               Solutions,
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             </h3>";
             <ul className="space - y-2">;
               {footer_links.solutions.map (link => (";
                 <li key="{link.name}">";
                   <Link href="{link.href}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1034,6 +1091,8 @@ digital age.;
                 </li>;
               ))}
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     className="text - gray - 400 hover: text - white transition - colors text - sm">,
                     {link.name}
                   </Link>;
@@ -1043,6 +1102,7 @@ digital age.;
           </div>;
           {/* comment */}
           <div>";
+<<<<<<< HEAD
 <<<<<<< HEAD
 
             <h3 className="text - lg font - semibold mb - 4 flex items - center">";
@@ -1054,11 +1114,14 @@ digital age.;
               <FileText className="w - 5 h - 5 mr - 2 text - purple - 400"  />;
               Company,
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             </h3>";
             <ul className="space - y-2">;
               {footer_links.company.map (link => (";
                 <li key="{link.name}">";
                   <Link href="{link.href}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1080,6 +1143,8 @@ digital age.;
                 </li>;
               ))}
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     className="text - gray - 400 hover: text - white transition - colors text - sm">,
                     {link.name}
                   </Link>;
@@ -1089,6 +1154,7 @@ digital age.;
           </div>;
           {/* comment */}
           <div>";
+<<<<<<< HEAD
 <<<<<<< HEAD
 
             <h3 className="text - lg font - semibold mb - 4 flex items - center">";
@@ -1100,11 +1166,14 @@ digital age.;
               <HelpCircle className="w - 5 h - 5 mr - 2 text - yellow - 400"  />;
               Resources,
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             </h3>";
             <ul className="space - y-2 mb - 6">;
               {footer_links.resources.map (link => (";
                 <li key="{link.name}">";
                   <Link href="{link.href}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1122,12 +1191,15 @@ digital age.;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   </Link>;
                 </li>;
               ))}
             </ul>";
             <h4 className="text-md font-semibold mb-3 text-gray-300">Legal</h4>";
             <ul className="space-y-2">;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1142,6 +1214,8 @@ digital age.;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   </Link>;
                 </li>;
               ))}
@@ -1153,12 +1227,15 @@ digital age.;
             <h3 className="text-xl font-semibold mb-2">Stay Updated</h3>";
             <p className="text-gray-400 mb-4">;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
               Subscribe to our newsletter for the latest technology insights and,;
 
 =======
               Subscribe to our newsletter for the latest technology insights and,;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 company updates.;
             </p>";
             <form className="flex flex-col sm: flex-row gap-3 max-w-md mx-auto">";
@@ -1168,6 +1245,7 @@ company updates.;
               <buttontype="submit
                 className="bg-blue-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-blue-700 transition-colors">;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
                 Subscribe,;
 
@@ -1175,6 +1253,8 @@ company updates.;
 =======
                 Subscribe,;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     className="text - gray - 400 hover: text - white transition - colors text - sm">,
                     {link.name}
                   </Link>;
@@ -1212,6 +1292,7 @@ company updates.;
           </div>;
         {/* comment */}";
 <<<<<<< HEAD
+<<<<<<< HEAD
 
             <div className="text-gray-400 text-sm mb-4 md:mb-0">,;
 
@@ -1219,6 +1300,8 @@ company updates.;
             <div className="text-gray-400 text-sm mb-4 md:mb-0">,;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
               © {currentYear} Zion Tech Group. All rights reserved.;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             </div>";
             <div className="flex items-center space-x-6">";
               <div className="flex items-center space-x-4">;
@@ -1244,12 +1327,15 @@ company updates.;
   )}"';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
       </button>,;
     </footer>,;
   )}"';
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <div className="border - t border - gray - 800 pt - 8">";
           <div className="flex flex - col md: flex - row justify - between items - center">";
             <div className="text - gray - 400 text - sm mb - 4 md:mb - 0">,
@@ -1276,16 +1362,20 @@ company updates.;
     </footer>,
   )}"';
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   );
 };export default EnhancedFooter;  )
 
 };
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -1297,3 +1387,5 @@ company updates.;
 export default EnhancedFooter;
 export default EnhancedFooter;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -1,16 +1,9 @@
-
-// Fraud detection types;
-export type AdminActionType =;
-  | 'ban_user';
-  | 'suspend_user';
-  | 'flag_content';
-  | 'remove_content';
-  | 'investigate';
-  | 'dismiss';
-  | 'escalate';
-;
-
 export interface AdminAction {
+
+
+export interface AdminAction {;
+export interface AdminAction {
+
 
 
 export interface AdminAction {;
@@ -30,13 +23,17 @@ export interface AdminAction {;
 export interface FraudDetectionResult {
   is_fraud: boolean;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 
 
 export interface FraudDetectionResult {;
+<<<<<<< HEAD
 
   isFraud: boolean;
 <<<<<<< HEAD
@@ -95,10 +92,16 @@ export interface FraudDetectionConfig {;
 
 export interface FraudDetectionConfig {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  isFraud: boolean;
+  confidence: number;
+  reasons: string[];
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   enabled: boolean;
   rules: {
     suspicious_activity: {
       enabled: boolean;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       threshold: number,
@@ -163,10 +166,16 @@ export interface FraudDetectionConfig {;
     actions: AdminActionType[];
     confidenceThreshold: number
   }
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
     confidenceThreshold: number,
   };
 
 }
+<<<<<<< HEAD
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

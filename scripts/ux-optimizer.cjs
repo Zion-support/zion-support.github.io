@@ -1,5 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:scripts/ux-optimizer.cjs
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 #!/usr/bin/env node
@@ -46,6 +48,8 @@ const fs = require("fs");"const path = require("path");class UXOptimizer { const
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ========
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/scripts/ux-optimizer.cjs
+=======
+>>>>>>> origin/main
 const fs = require('fs')
 const path = require('path')
         console.log('⚡ Optimizing loading performance...')
@@ -54,6 +58,7 @@ const path = require('path')
         this.improvements.push('Accessibility improvements completed')
         console.log('� Optimizing mobile experience...')
         this.improvements.push('Mobile optimization completed')
+<<<<<<< HEAD
             "recommendations"
 =======
 <<<<<<<< HEAD:scripts/ux-optimizer.cjs
@@ -61,19 +66,35 @@ const path = require('path')
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
+=======
 ========
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/scripts/ux-optimizer.cjs
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
 
 console.log('🎨 Running UX optimization...');
 console.log('✅ UX optimization completed');
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 <<<<<<<< HEAD:scripts/ux-optimizer.cjs
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 >>>>>>> origin/main
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
+=======
 ========
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/scripts/ux-optimizer.cjs
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+=======
+>>>>>>> origin/main

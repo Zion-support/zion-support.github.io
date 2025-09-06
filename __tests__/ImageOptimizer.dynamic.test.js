@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -31,6 +32,8 @@ import _React from 'react';  import '@testing-library/jest-dom'; import ImageOpt
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from 'react'
 import { render, screen, fireEvent } from '@testing-library/react'
 import '@testing-library/jest-dom'
@@ -43,6 +46,9 @@ describe('ImageOptimizerdynamic'
   test('applies correct styling'
 const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import ImageOptimizerdynamic from "./components/ImageOptimizer.dynamic"; describe('ImageOptimizerdynamic', () => { test("renders without crashing",() => { render(<ImageOptimizerdynamic />); expect(screen.getByTestId("imageoptimizer.dynamic")).toBeInTheDocument()}); test("displays correct content",() => { render(<ImageOptimizerdynamic />)}); test("handles user interactions",() => { render(<ImageOptimizerdynamic />)}); test("applies correct styling"
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

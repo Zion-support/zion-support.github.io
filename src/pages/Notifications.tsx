@@ -1,27 +1,10 @@
 interface NotificationProps {
   type: 'message' | 'order' | 'default';
 }
-
-
-export function NotificationBadge({ type }: NotificationProps) {
-  switch (type) {
-    case 'message':
-      return <Badge className="bg-blue-500">Message</Badge>;
-    case 'order':
-      return <Badge className="bg-orange-500">Order</Badge>;
-    default:
+}
+return <Badge className="bg - blue - 500">Message</Badge>;
+      return <Badge className="bg - orange - 500">Order</Badge>;    default:;
       return <Badge variant="outline">Notification</Badge>;
-  }
-}
-
-export default function NotificationsPage() {
-  return (
-    <div className="container py-10">
-      <h1 className="text-3xl font-bold mb-6">Notifications</h1>
-      <p className="text-muted-foreground">Your notifications will appear here.</p>
-    </div>
-  );
-}
 import React, { useState, useEffect } from 'react';
 import { Bell, Check, X, AlertCircle, Info, CheckCircle } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
@@ -29,7 +12,6 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { useAuth } from '@/hooks/useAuth';
 import { toast } from '@/hooks/use-toast';
-
 
 
 
@@ -69,6 +51,7 @@ const getNotificationIcon = (;
   className: string = 'h-5 w-5') => {;
   switch (type) {;
 <<<<<<< HEAD
+<<<<<<< HEAD
     case 'message':;
       return <MessageCircle className={cn(className, 'text-blue-500')} />,;
     case 'quote_request':;
@@ -95,11 +78,14 @@ const getNotificationIcon = (;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 ;
 const getNotificationIcon = (type: string) =>: any {
   switch (type) {
     case 'message':;
+<<<<<<< HEAD
       return <Bell className="h - 4 w - 4 text - blue - 500" />;
     case 'order':;
       return <CheckCircle className="h - 4 w - 4 text - green - 500" />;
@@ -319,3 +305,25 @@ export default function NotificationsPage() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 }
 ;
+=======
+      return <Badge className="bg-blue-500">Message</Badge>,;
+    case 'quote_request':;
+      return <Badge className="bg-purple-500">Quote Request</Badge>,;
+    case 'booking_confirmation':;
+      return <Badge className="bg-green-500">Booking</Badge>,;
+    case 'hire_request':;
+      return <Badge className="bg-zion-purple">Hire Request</Badge>,;
+    case 'onboarding':;
+      return <Badge className="bg-zion-cyan">Onboarding</Badge>,;
+    case 'system':;
+      return <Badge className="bg-yellow-500">System</Badge>,;
+    case 'project_update':;
+      return <Badge className="bg-indigo-500">Project</Badge>,;
+    case 'milestone_complete':;
+      return <Badge className="bg-green-500">Milestone</Badge>,;
+    case 'order_status':;
+      return <Badge className="bg-orange-500">Order</Badge>,;
+    default:;
+      return <Badge variant="outline">Notification</Badge>;
+  }
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

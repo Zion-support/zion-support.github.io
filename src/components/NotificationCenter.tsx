@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     unreadCount
     markAsRead
@@ -9,6 +10,8 @@ unreadCount, ;
   const handleFilterChange = (newFilter: FilterType,) => {;
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useState, useEffect } from 'react',
 // Use the shared icon wrapper
 import { Bell } from 'lucide-react'
@@ -27,7 +30,11 @@ import { FilterType } from '@/components/notifications/NotificationFilter',
 export const NotificationCenter: React.FC = () => {
   const { 
     filteredNotifications,
+<<<<<<< HEAD
     unreadCount, 
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
     unreadCount, 
     markAsRead, 
@@ -44,6 +51,7 @@ export const NotificationCenter: React.FC = () => {
   const [loadedOnce, setLoadedOnce] = useState(false),
   const enqueueSnackbar = useEnqueueSnackbar(),
 
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   const handleFilterChange = (newFilter: FilterType,) => {
     setFilter(newFilter as any)
@@ -53,6 +61,8 @@ export const NotificationCenter: React.FC = () => {
 <<<<<<< HEAD
 
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   // Refresh notifications when popover opens, but avoid duplicate
   useEffect(() => {
     if (open && !loadedOnce) {
@@ -137,9 +147,12 @@ export const NotificationCenter: React.FC = () => {;
           <Bell className="h-5 w-5 text-zion-slate-light" />
           {unreadCount > 0 && (
             <span className="absolute -top-0.5 -right-0.5 flex h-5 w-5 items-center justify-center rounded-full bg-zion-cyan text-[10px] text-white font-medium">
+<<<<<<< HEAD
               {unreadCount > 9 ? '9+' : unreadCount}
             </span>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   }, [open, loadedOnce, fetchNotifications]),;
   const handleMarkAllAsRead = async () => {;
     try {;
@@ -152,12 +165,30 @@ export const NotificationCenter: React.FC = () => {;
   },;
   const handleFilterChange = (newFilter: FilterType) => {;
 <<<<<<< HEAD
+<<<<<<< HEAD
 },;
 =======
+=======
+
+  return (
+
+
+
+          )}
+        <NotificationHeader
+          unreadCount = {unreadCount,}
+          onMarkAllAsRead = {handleMarkAllAsRead,}
+        />;
+
+        <NotificationFilter
+          filter = {filter as FilterType,}
+          onFilterChange = {handleFilterChange,}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           )}
         </Button>
       </PopoverTrigger>
       <PopoverContent className="w-[350px] p-0 bg-zion-blue border-zion-blue-light max-h-[500px] flex flex-col">
+<<<<<<< HEAD
         <NotificationHeader
           unreadCount = {unreadCount,}
           onMarkAllAsRead = {handleMarkAllAsRead,}
@@ -176,6 +207,8 @@ export const NotificationCenter: React.FC = () => {;
           onFilterChange = {handleFilterChange,}
         />
         <NotificationList 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           loading = {loading,}
           error = {error,}
           notifications = {filteredNotifications,}
@@ -187,41 +220,6 @@ export const NotificationCenter: React.FC = () => {;
       </PopoverContent>
     </Popover>
   )
-              {unreadCount > 9 ? '9+' : unreadCount}
-            </span>
-        </Button>
-      </PopoverTrigger>
-      <PopoverContent className="w-[350px] p-0 bg-zion-blue border-zion-blue-light max-h-[500px] flex flex-col">
-ursor/fix-website-loading-errors-and-merge-6662
-    setFilter(newFilter as any);
-  };
-
-  return (
-
-
-
-          )}
-
-        </Button>;
-      </PopoverTrigger>;
-      <PopoverContent className="w-[350px] p-0 bg-zion-blue border-zion-blue-light max-h-[500px] flex flex-col">;
-          unreadCount = {unreadCount,}
-          onMarkAllAsRead = {handleMarkAllAsRead,}
-        />;
-
-        <NotificationFilter
-          filter = {filter as FilterType,}
-          onFilterChange = {handleFilterChange,}
-        />;
-
-
-        <NotificationList
-}
-
-}
-
-        <NotificationHeader 
-};
           unreadCount={unreadCount} 
           onMarkAllAsRead={handleMarkAllAsRead} 
         />
@@ -243,9 +241,13 @@ ursor/fix-website-loading-errors-and-merge-6662
       </PopoverContent>;
     </Popover>;
   );
+<<<<<<< HEAD
 };
         <NotificationHeader 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+},;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
     <Popover open={open} onOpenChange={(v, ) => set_open (v ?? false)}>;
       <PopoverTrigger as_child>;
@@ -279,5 +281,25 @@ ursor/fix-website-loading-errors-and-merge-6662
     </Popover>);
 },
 ;
+          unreadCount={unreadCount} 
+          onMarkAllAsRead={handleMarkAllAsRead} 
+        />
+        
+        <NotificationFilter 
+          filter={filter as FilterType} 
+          onFilterChange={handleFilterChange} 
+        />
+        
+        <NotificationList 
+          loading={loading}
+          error={error}
+          notifications={filteredNotifications}
+          onMarkAsRead={markAsRead}
+          onDismiss={dismissNotification}
+          onRetry={fetchNotifications}
+        />;
 
+<<<<<<< HEAD
         <NotificationHeader
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -12,6 +13,9 @@ import Link from './next / link';
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 interface SearchResult {
 =======
+=======
+interface SearchResult {
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 interface SearchResult {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
@@ -21,14 +25,18 @@ interface SearchResult {;
   category: string;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface SearchModalProps {
   is_open: boolean;
   on_close: () => void;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -63,6 +71,8 @@ const search_data: SearchResult[] = [;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   {
     title: "Cybersecurity"
     description: "Security audits, penetration testing, and compliance"
@@ -70,6 +80,7 @@ const search_data: SearchResult[] = [;
     category: "Services"
   }
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -128,6 +139,8 @@ const search_data: SearchResult[] = [;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   {
     title: "About Us"
     description: "Learn about Zion Tech Group and our mission"
@@ -161,6 +174,10 @@ const search_data: SearchResult[] = [;
 ];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+export default function SearchModal({ isOpen, onClose }: SearchModalProps) {
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 interface SearchModalProps {;
   isOpen: boolean;
@@ -284,6 +301,7 @@ const searchData: SearchResult[] = [;
     category: "Company",;
   },;
 ];
+<<<<<<< HEAD
 
 =======
   useEffect(() => {;
@@ -295,11 +313,14 @@ export default function SearchModal({ isOpen, onClose }: SearchModalProps) {
 
 export default function SearchModal({ isOpen, onClose }: SearchModalProps) {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const [query, setQuery] = useState("");
   const [results, setResults] = useState<SearchResult[]>([]);
   const [recentSearches, setRecentSearches] = useState<string[]>([]);
   const [selectedIndex, setSelectedIndex] = useState(0);
   const inputRef = useRef<HTMLInputElement>(null);
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -335,6 +356,8 @@ export default function SearchModal({ isOpen, onClose }: SearchModalProps) {;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       );
       setResults(filtered);
     } else {;
@@ -389,6 +412,7 @@ if ( {) {
     setSelectedIndex (0);
   }, [query]);
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
   const handleKeyDown = (e: React && React.KeyboardEvent) => {;
@@ -398,6 +422,8 @@ if ( {) {
   const handleKeyDown = (e: React && React.KeyboardEvent) => {;
     if (e && e.key === "Escape") {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       onClose();
     } else if (e && e.key === "ArrowDown") {;
       e && e.preventDefault();
@@ -408,6 +434,7 @@ if ( {) {
     } else if (e && e.key === "Enter" && results[selectedIndex]) {;
       handleResultClick(results[selectedIndex]);
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -431,6 +458,8 @@ if ( {) {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     setQuery(search);
   }
   if (!isOpen) return null;
@@ -442,6 +471,7 @@ if ( {) {
           className="fixed inset-0 bg-black bg-opacity-50 transition-opacity"
           onClick={onClose}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
         />;
 
@@ -449,6 +479,8 @@ if ( {) {
 =======
         />;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         {/* Modal */}
         <div className="relative w-full max-w-2xl bg-white rounded-lg shadow-xl">;
           {/* Search Input */}
@@ -466,6 +498,7 @@ if ( {) {
             <button
               onClick={onClose}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -478,6 +511,8 @@ if ( {) {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           {/* Results */}
           <div className="max-h-96 overflow-y-auto">;
             {query && query.trim() ? (;
@@ -578,6 +613,7 @@ if (return null) {
                           : "hover:bg - gray - 50";
                       }`}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -597,6 +633,8 @@ if (return null) {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       <button
                         key={term}
                         onClick={() => setQuery(term)}

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -67,6 +68,8 @@ const ReviewCard: React.FC<Props> = ({ review, onReport }) => {;
 =======
   return (
 :components/reviews/ReviewCard.tsx
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <div className='enhanced-card hover:shadow-lg transition-shadow'>
       <div className='flex items-center justify-between mb-2'>
         <div className='flex items-center gap-2'>
@@ -88,6 +91,7 @@ const ReviewCard: React.FC<Props> = ({ review, onReport }) => {;
           <StarRating value={review && review.rating} onChange={() => {}} readOnly size={18} />;
           <span className="text-sm text-gray-500">{new Date(review && review.createdAt).toLocaleDateString()}</span>;
         </div>;
+<<<<<<< HEAD
         <button
           className="text-xs text-red-500 hover:underline">;
           Report abuse;
@@ -110,11 +114,12 @@ const ReviewCard: React.FC<Props> = ({ review, onReport }) => {;
 
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         >
           Report abuse
         </button>
       </div>
-
       <div className='flex items-center gap-2 mb-3'>
         <span className='text-sm font-medium'>{review.authorName}</span>
         {review.categories?.wouldWorkWithAgain && (
@@ -124,14 +129,12 @@ const ReviewCard: React.FC<Props> = ({ review, onReport }) => {;
       </div>;
       <p className='text-sm leading-6'>{review && review.text}</p>;
 
-        )}
-      </div>;
-      <p className='text-sm leading-6'>{review && review.text}</p>;
       <div className='flex flex-wrap gap-2 mt-3'>;
         {typeof review && review.categories?.communication === 'number' && (;
           <span className='pill'>;
             Communication: {review && review.categories.communication}★;
           </span>;
+
         )}
         {typeof review && review.categories?.qualityOfWork === 'number' && (;
           <span className='pill'>;
@@ -146,6 +149,7 @@ const ReviewCard: React.FC<Props> = ({ review, onReport }) => {;
       </div>;
     </div>;
   );
+<<<<<<< HEAD
   return (
     <div className="enhanced-card hover: shadow-lg transition-shadow">
       <div className="flex items-center justify-between mb-2">
@@ -208,6 +212,10 @@ main:components/reviews/ReviewCard.tsx
           <span className='pill pill-success'>Would work again</span>
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         )}
+=======
+}
+};
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
       </div>;
       <p className='text-sm leading-6'>{review && review.text}</p>;
@@ -471,9 +479,12 @@ export default ReviewCard;
 :components/reviews/ReviewCard.tsx
 main:components/reviews/ReviewCard.tsx
 export default ReviewCard;
+<<<<<<< HEAD
 export default ReviewCard;
 :backup-problematic-files/reviews/ReviewCard.tsx
 main:components/reviews/ReviewCard.tsx
 export default ReviewCard;
 :backup-problematic-files/reviews/ReviewCard.tsx
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

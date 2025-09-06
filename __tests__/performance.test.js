@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -16,6 +17,8 @@ test.describe('"Performance"
               "output"
           resolve({ "error"
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { test, expect } from '@playwright/test';
 
 test.describe('Performance Tests', () => {
@@ -61,6 +64,7 @@ test.describe('Performance Tests', () => {
     });
     
     await page.waitForTimeout(2000);
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -74,6 +78,8 @@ const { test,expect } = require('@playwright/test')';; test.describe('Performanc
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     expect(consoleMessages.length).toBe(0);
   });
   
@@ -94,6 +100,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
       expect(metrics.usedJSHeapSize).toBeLessThan(50 * 1024 * 1024); // 50MB
     }
   });
+<<<<<<< HEAD
 });
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -103,6 +110,8 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 const { test, expect } = require('@playwright/test')'
 test && test.describe('"Performance"
   test('"page"
@@ -112,6 +121,7 @@ test && test.describe('"Performance"
   test('"bundle"
     "await"
     page && page.on('console', "msg"
+<<<<<<< HEAD
               "output"
           resolve({ "error"
 <<<<<<< HEAD
@@ -120,3 +130,5 @@ test && test.describe('"Performance"
 =======
 ursor/automate-test-improve-and-merge-code-2480
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

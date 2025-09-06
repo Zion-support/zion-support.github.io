@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 function runNode(relPath, args = []) {
@@ -19,6 +20,8 @@ function run_node() {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 exports.config = {
   schedule: '*/30 * * * *'
 }
@@ -28,6 +31,7 @@ exports.config = {
 
 exports && exports.config = {
   schedule: '*/30 * * * *',
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -42,12 +46,15 @@ exports && exports.config = {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     logs.push(`exit=${res.status |0}`);
     return res.status |0;
   }
   step('components:catalog', () =>
     runNode('automation/components-catalog && catalog.cjs')
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   const abs = path.resolve(__dirname, '....', relPath),
@@ -57,6 +64,8 @@ exports && exports.config = {
   const abs = path.resolve(__dirname, '....', relPath),
   return spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' })
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 
 =======
@@ -67,11 +76,14 @@ exports && exports.config = {
   return { statusCode: 200, body: logs && logs.join('\n') }
 },
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 ;
 exports.handler = async () => {
@@ -98,5 +110,8 @@ function step() {
 }  step ('components:catalog', () => run_node ('automation / components - catalog.cjs')),
   step ('git:sync', () => run_node ('automation / advanced - git - sync.cjs')),
   return { status_code: 200, body: logs.join ('\n') }
+<<<<<<< HEAD
 },
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

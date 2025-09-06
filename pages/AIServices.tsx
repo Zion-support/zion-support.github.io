@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -354,10 +355,13 @@ import React from "react";
 import Layout from "../components/Layout";
 origin/main
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export default function AIServices() {
   return (
     <Layout
       title="AI Services - Zion Tech Group"
+<<<<<<< HEAD
 <<<<<<< HEAD
       description="Comprehensive AI services including machine learning, computer vision, natural language processing, and more."
     >
@@ -1315,6 +1319,11 @@ origin/automation-improvements-final
     </Layout>;
   );
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Transform your business with cutting-edge AI solutions and services.
+            </p>
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1328,14 +1337,20 @@ origin/automation-improvements-final
     return res.status(500).json({ error: "Internal server error" });
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 }
 
+<<<<<<< HEAD
 =======
 =======
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { motion } from 'framer-motion';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -1428,6 +1443,7 @@ export default function AIServices() {
       </div>
     </Layout>
   );
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -1456,3 +1472,7 @@ origin/main
 origin/automation-improvements-final
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+}
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

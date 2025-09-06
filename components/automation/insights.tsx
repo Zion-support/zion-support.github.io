@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -10,6 +11,13 @@ return (<div> <Head><title>Automation Insights — Zion</title></Head>) )
  return (<div> <Head><title>Automation Insights — Zion</title></Head>) ) 
 }</ul> </div> </div>) 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+return (<div> <Head><title>Automation Insights — Zion</title></Head>) ) 
+ return (<div> <Head><title>Automation Insights — Zion</title></Head>) ) 
+}</ul> </div> </div>) 
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }</section>) : (<pre className="mt-3 whitespace-pre-wrap text-sm bg-gray-50 dark:bg-gray-900 p-3 rounded border border-gray-200 dark:border-gray-800" > {
   talentMd
 }</pre>)
@@ -18,6 +26,7 @@ return (<div> <Head><title>Automation Insights — Zion</title></Head>) )
 import { useEffect, useState } from 'react';
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 import Head from 'next/head';
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -37,11 +46,20 @@ export default function AutomationInsightsPage() {
 export default function AutomationInsightsPage() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 export default function AutomationInsightsPage() {
+=======
+
+import Head from 'next/head';
+
+
+
+export default function AutomationInsightsPage() {
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const [intel, setIntel] = useState<any>(null);
   const [talentMd, setTalentMd] = useState<string>('');
   useEffect(() => {
     fetch('/data/automation/market-intel.json').then((r) => r.json()).then(setIntel).catch(() => {});
     fetch('/data/automation/talent-highlights.md').then((r) => r.text()).then(setTalentMd).catch(() => {})
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
@@ -111,6 +129,8 @@ export default function AutomationInsightsPage() {;
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 return (<div> <Head><title > Automation Insights — Zion</title></Head>) );
 }</ul> </div> </div>);
 }</section>) : (<pre className="mt - 3 whitespace - pre - wrap text - sm bg - gray - 50 dark:bg - gray - 900 p - 3 rounded border border - gray - 200 dark:border - gray - 800" > {
@@ -163,6 +183,7 @@ function AutomationInsightsPage() {
           <pre className="mt - 3 whitespace - pre - wrap text - sm bg - gray - 50 dark:bg - gray - 900 p - 3 rounded border border - gray - 200 dark:border - gray - 800">{talent_md}</pre>)}
       </section>;
     </div>);
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -237,3 +258,5 @@ function AutomationInsightsPage() {
   );
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

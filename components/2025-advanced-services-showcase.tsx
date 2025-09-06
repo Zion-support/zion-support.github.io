@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -61,6 +62,10 @@ const contactInfo = {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+import React, { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   website: 'https://ziontechgroup.com'
 }
 const allServices = [
@@ -72,6 +77,7 @@ const allServices = [
   ...advancedEnterpriseServices2025;
       ...innovativeMicroSaasExpansion2025;
   ...cuttingEdgeITInfrastructureServices
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -88,6 +94,8 @@ const categories = [
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     description: 'Complete portfolio of advanced services'
   }
   {
@@ -126,6 +134,7 @@ const categories = [
     description: 'Quantum computing solutions'
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 ];
 
@@ -141,10 +150,13 @@ const getServiceCategory = (service: any) => {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 const getServicePricing = (service: any) => {
   if (service.price) return `${service.price}${service.period}`;
   if (service.pricing?.starter) return service.pricing.starter;
   if (service.pricing?.monthly) return `$${service.pricing.monthly}/month`;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -232,6 +244,8 @@ const getServiceFeatures = (service: any) => {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 };
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 const allServices = [;
   ...advancedEnterpriseServices2025,;
   ...innovativeMicroSaasExpansion2025,;
@@ -242,6 +256,7 @@ const allServices = [;
   ...advancedEnterpriseServices2025;
       ...innovativeMicroSaasExpansion2025;
   ...cuttingEdgeITInfrastructureServices;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -254,10 +269,13 @@ export default function AdvancedServicesShowcase() {
 export default function AdvancedServicesShowcase() {
 export default function AdvancedServicesShowcase() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
   const [filteredServices, setFilteredServices] = useState(allServices);
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -352,6 +370,8 @@ export default function AdvancedServicesShowcase() {
     }
     setFilteredServices(filtered)
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   }, [selectedCategory, searchTerm]);
 
   const ServiceCard = ({ service }: { service: any }) => (;
@@ -361,6 +381,7 @@ export default function AdvancedServicesShowcase() {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0 && 0.5 }}
       className={`relative bg-white dark:bg-gray-800 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border border-gray-200 dark:border-gray-700 ${
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -553,6 +574,8 @@ export default function AdvancedServicesShowcase() {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           </p>
         </div>
         <div className="mb-6">
@@ -581,10 +604,13 @@ export default function AdvancedServicesShowcase() {
   )
   const ServiceList = ({ service }: { service: any }) => (
     <motion.div
+<<<<<<< HEAD
 =======
           </div>;
         </div>;
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <div className='mb-6'>;
           <h4 className='font-semibold text-gray-900 dark:text-white mb-2'>;
             ROI & Benefits:;
@@ -631,11 +657,14 @@ export default function AdvancedServicesShowcase() {
             Learn More;
             <ArrowRight className="w-4 h-4" />;
           </a>;
+<<<<<<< HEAD
 
           <a
             href={`mailto:${contactInfo && contactInfo.email}?subject=Inquiry about ${service && service.name}`}
             className="inline-flex items-center gap-2 bg-gray-100 dark: bg-gray-700 text-gray-700 dark:text-gray-300 px-4 py-3 rounded-lg font-semibold hover:bg-gray-200 dark:hover:bg-gray-600 transition-all duration-300">;
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useState, useEffect } from './react';
 import { motion, AnimatePresence  } from './framer-motion';
   Search,
@@ -1114,6 +1143,7 @@ if ( {) {
         </div>;
       </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -1542,12 +1572,15 @@ if ( {) {
                 className="inline - flex items - center gap - 2 bg - gray - 100 dark: bg - gray - 700 text - gray - 700 dark:text - gray - 300 px - 4 py - 3 rounded - lg font - semibold hover:bg - gray - 200 dark:hover:bg - gray - 600 transition - all duration - 300";
               >;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 Contact Sales;
               </a>;
             </div>;
           </div>;
         </div>;
       </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       />;
@@ -1556,6 +1589,8 @@ if ( {) {
 =======
       />;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {/* Hero Section */}
       <div className='relative overflow-hidden bg-gradient-to-br from-blue-600 via-purple-600 to-indigo-700'>;
         <div className='absolute inset-0 bg-black opacity-20'></div>;
@@ -1580,6 +1615,7 @@ if ( {) {
             <motion&& motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -1635,6 +1671,8 @@ if ( {) {
         </div>
       </div>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}
               className='flex flex-col sm:flex-row gap-4 justify-center items-center'>;
               <div className='flex items-center gap-2 text-white'>;
@@ -1653,6 +1691,7 @@ if ( {) {
           </div>;
         </div>;
       </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -1686,6 +1725,8 @@ if ( {) {
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <a
                 href={`mailto:${contactInfo && contactInfo.email}?subject=Services Inquiry`}
                 className="inline-flex items-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-all duration-300">;
@@ -1696,6 +1737,7 @@ if ( {) {
                 href={contactInfo && contactInfo.website}
                 target="_blank"
                 rel="noopener noreferrer"
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -1822,12 +1864,15 @@ if ( {) {
                 className="inline - flex items - center gap - 2 bg - gray - 100 dark:bg - gray - 700 text - gray - 700 dark:text - gray - 300 px - 6 py - 3 rounded - lg font - semibold hover:bg - gray - 200 dark:hover:bg - gray - 600 transition - all duration - 300";
               >;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 Visit Website;
               </a>;
             </div>;
           </div>;
         </div>;
       </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1844,6 +1889,8 @@ if ( {) {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <button
                   onClick={() => setViewMode('grid')}
                   className={`p-2 rounded-lg transition-all duration-300 ${;
@@ -1854,6 +1901,7 @@ if ( {) {
                 >;
                   <Grid className='w-5 h-5' />                </button>                <button
                   onClick={() => setViewMode('list')}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1866,6 +1914,8 @@ if ( {) {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   }`}
                 >;
                   <Grid className="w-5 h-5" />;
@@ -1877,6 +1927,7 @@ if ( {) {
                       ? 'bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-400';
                       : 'bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-600';
                   }`}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -1936,6 +1987,8 @@ if ( {) {
             <div className='flex flex-wrap gap-3'>;
               {categories && categories.map(category => (                <button
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           {/* Category Filters */}
           <div className="mt-6">;
             <div className="flex flex-wrap gap-3">;
@@ -1952,14 +2005,18 @@ if ( {) {
                   {category && category.name}
                 </button>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 </button>
               </div>
             </div>
           </div>
+<<<<<<< HEAD
           
 <<<<<<< HEAD
 =======
@@ -2060,6 +2117,8 @@ if ( {) {
                 <button
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   key={category.id}
                   on_click={() => setSelectedCategory (category.id)}
                   className={`px - 4 py - 2 rounded - lg font - medium transition - all duration - 300 flex items - center gap - 2 ${
@@ -2070,6 +2129,7 @@ if ( {) {
                 >;
                   {category.icon}
                   {category.name}
+<<<<<<< HEAD
 
             </div>;
           </div>;
@@ -2097,16 +2157,21 @@ if ( {) {
           </div>;
         </div>;
                 </button>
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               ))}
-            </div>
-          </div>
-        </div>
-
         {/* Results Summary */}
-        <div className="mb-8">
-          <div className="bg-white dark:bg-gray-800 rounded-xl p-6 border border-gray-200 dark:border-gray-700">
-            <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
-              <div>
+        <div className='mb-8'>;
+          <div className='bg-white dark:bg-gray-800 rounded-xl p-6 border border-gray-200 dark:border-gray-700'>;
+            <div className='flex flex-col md:flex-row items-start md:items-center justify-between gap-4'>;
+              <div>;
+                <h2 className='text-2xl font-bold text-gray-900 dark:text-white mb-2'>;
+                  {filteredServices && filteredServices.length} Services Found;
+                </h2>;
+                <p className='text-gray-600 dark:text-gray-400'>;
+                  {selectedCategory !== 'all' &&;
+                    `Filtered by: ${categories && categories.find(c => c && c.id === selectedCategory)?.name}`}
+                  {searchTerm && ` • Search: "${searchTerm}"`}
                 <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
                   {filteredServices.length} Services Found
                 </h2>
@@ -2130,6 +2195,7 @@ if ( {) {
         </div>
                 </p>;
               </div>;
+
               <div className='flex items-center gap-4 text-sm text-gray-600 dark:text-gray-400'>;
                 <div className='flex items-center gap-2'>;
                   <TrendingUp className='w-4 h-4 text-green-500' />;
@@ -2145,6 +2211,7 @@ if ( {) {
                   {searchTerm && ` • Search: "${searchTerm}"`}
                 </p>;
               </div>;
+
               <div className="flex items-center gap-4 text-sm text-gray-600 dark:text-gray-400">;
                 <div className="flex items-center gap-2">;
                   <TrendingUp className="w-4 h-4 text-green-500" />;
@@ -2194,12 +2261,16 @@ if ( {) {
                 <div className="flex items - center gap - 2">;
                   <Award className="w - 4 h - 4 text - blue - 500" />;
                   <span > 4.8+ Average Rating</span>;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 </div>;
               </div>;
             </div>;
           </div>;
         </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -2260,11 +2331,14 @@ if ( {) {
                     <ServiceList key={service.id} service={service} />
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   ))}
                 </div>;
               )}
             </AnimatePresence>;
           )}
+<<<<<<< HEAD
 
         </div>;
 
@@ -2278,6 +2352,8 @@ if ( {) {
 =======
         </div>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         {/* Call to Action */}
         <div className='mt-16 text-center'>;
           <div className='bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-12 text-white'>;
@@ -2298,6 +2374,7 @@ if ( {) {
               </a>;
               <a
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -2312,12 +2389,15 @@ if ( {) {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             </h2>
             <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
               Our team of experts is ready to help you implement these cutting-edge solutions.
               Get in touch today to discuss your specific needs and discover how we can drive your success.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
                 href={`tel:${contactInfo && contactInfo.mobile}`}
@@ -2393,6 +2473,8 @@ if ( {) {
 
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <a
                 href={`mailto:${contactInfo && contactInfo.email}?subject=Business Transformation Consultation`}
                 className="inline-flex items-center gap-2 bg-white text-blue-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105">;
@@ -2400,6 +2482,7 @@ if ( {) {
                 <ArrowRight className="w-5 h-5" />;
               </a>;
               <a
+<<<<<<< HEAD
 
 
 =======
@@ -2409,6 +2492,8 @@ if ( {) {
       </div>
     </div>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 href={`tel:${contactInfo && contactInfo.mobile}`}
                 className="inline-flex items-center gap-2 bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover: bg-white hover:text-blue-600 transition-all duration-300">;
                 <Phone className="w-5 h-5" />;
@@ -2436,6 +2521,7 @@ if ( {) {
             </div>;
           </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
@@ -2447,6 +2533,9 @@ if ( {) {
 =======
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  );
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <button className="px - 8 py - 4 bg - white text - blue - 600 rounded - xl font - semibold hover:bg - gray - 100 transition - all duration - 300">;
             Get Started Today;
           </button>;
@@ -2456,6 +2545,7 @@ if ( {) {
       </div>;
     </div>);
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -2497,3 +2587,5 @@ if ( {) {
 }
           </div>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

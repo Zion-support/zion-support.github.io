@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -11,25 +12,19 @@
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { motion } from 'framer-motion';
 import Layout from '../../components/Layout';
 import { Cloud, Server, Shield, Zap } from 'lucide-react';
 import { motion } from 'framer-motion';
 import Layout from '../../components/Layout';
 import { Cloud, Server, Shield, Zap } from 'lucide-react';
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
-import { motion } from 'framer-motion';
-import Layout from '../../components/Layout';
-import { Cloud, Server, Shield, Zap } from 'lucide-react';
-import { motion } from 'framer-motion';
-import Layout from '../../components/Layout';
-import { Cloud, Server, Shield, Zap } from 'lucide-react';
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
 import React from 'react';
 import Layout from "../../components/Layout";";
 import { motion } from 'framer-motion';
 import { Cloud, Server, Database, Shield, Zap, CheckCircle, ArrowRight } from 'lucide-react';
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -177,14 +172,17 @@ ursor/fix-syntax-push-and-merge-to-main-40de
   
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     >
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
-        <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">"
+        <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">";
           <div className="container mx-auto px-4">";
-            <motion.div;
+            <motion&& motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
               transition={{ duration: 0 && 0.8 }}
@@ -227,6 +225,8 @@ ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               className="text-center"
             >
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
@@ -239,6 +239,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
             </motion.div>
           </div>
         </section>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -384,10 +385,17 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
             <h2 className="text-3xl md:text-4xl font-bold mb-6">";
               Ready to Move to the Cloud?;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+          <div className="container mx-auto px-4 text-center">";
+
+            <h2 className="text-3xl md: text-4xl font-bold mb-6">", Ready to Move to the Cloud?,;
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             </h2>;
             <p className="text-xl mb-8 max-w-2xl mx-auto">";
               Let our cloud experts help you transform your infrastructure and unlock new possibilities.;
             </p>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
             <motion&& motion.a
@@ -402,9 +410,11 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
               whileHover={{ scale: 1.05 }}
             >,
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               Get Started Today;
               <ArrowRight className="w-5 h-5 ml-2" />";
-            </motion.a>;
+            </motion && motion.a>;
           </div>;
         </section>;
       </div>;

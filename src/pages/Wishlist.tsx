@@ -1,9 +1,17 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 
 =======
 ;
 ;
+=======
+
+
+
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useFavorites } from '@/hooks/useFavorites',;
 import { X } from 'lucide-react';
 import { MARKETPLACE_LISTINGS } from '@/data/marketplaceData',;
@@ -30,6 +38,7 @@ export default function WishlistPage() {;
     return null, // Or a loading spinner;
   }
 ;
+<<<<<<< HEAD
 }
 
 
@@ -54,6 +63,8 @@ if ( {}) {
 }
 
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const { items, dispatch } = useCart(),;
   const addToCart = (item: { id: string, title?: string, price?: number }) => {;
     if (items.some(i => i.id === item.id)) return,;
@@ -161,5 +172,8 @@ if ( {}) {
   );
 }
 ;
+<<<<<<< HEAD
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

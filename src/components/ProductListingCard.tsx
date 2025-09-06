@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import React, { useState } from 'react';
 import { logDebug, logErrorToProduction  } from '@/utils/productionLogger';
@@ -16,6 +17,8 @@ import { DollarSign } from 'lucide-react'
 
 import { RatingStars } from '@/components/RatingStars'
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -56,7 +59,10 @@ import type { AppDispatch } from '@/store'
 import { addItem } from '@/store/cartSlice'
 import { toast } from '@/hooks/use-toast';
 import { useCurrency } from '@/hooks/useCurrency';
+<<<<<<< HEAD
 import Image from 'next/image'; // Import next/image
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 import React, { useState } from 'react';
 import { log_debug, logErrorToProduction } from '@/utils / production_logger';
@@ -72,7 +78,14 @@ import { add_item } from '@/store / cart_slice';
 import { toast } from '@/hooks / use - toast';
 import { use_currency } from '@/hooks / use_currency';
 import Image from 'next / image'; // Import next / image;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+interface ProductListingCardProps {
+  listing: ProductListing;
+  view?: 'grid' | 'list';
+  onRequestQuote?: (id: string) => void;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   detailBasePath?: string;
 import Image from 'next/image'; // Import next/image
 
@@ -84,7 +97,16 @@ import { Button } from "@/components/ui/button",
 import { ProductListing } from "@/types/listings",
 import { DollarSign } from 'lucide-react'
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+import { FavoriteButton } from '@/components/FavoriteButton'; import { useDispatch } from 'react-redux'
+import type { AppDispatch } from '@/store'
+import { addItem } from '@/store/cartSlice'
+import { toast } from '@/hooks/use-toast';
+import { useCurrency } from '@/hooks/useCurrency';
+import Image from 'next/image'; // Import next/image
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { RatingStars } from "@/components/RatingStars",
 import { FavoriteButton } from "@/components/FavoriteButton",
 import { useDispatch } from 'react-redux',
@@ -106,6 +128,7 @@ interface ProductListingCardProps {
 
 
 const ProductListingCardComponent = ({
+<<<<<<< HEAD
 <<<<<<< HEAD
       <div
         className = {isGrid ? 'block w-full' : 'block w-48 flex-shrink-0',}
@@ -133,21 +156,12 @@ const ProductListingCardComponent = ({
   ),
   const [imageError, setImageError] = useState(false),
 
+=======
+  listing,
+  view = 'grid',
+  onRequestQuote,
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const stockStatus =
-    listing.stock === undefined
-      ? 'In stock'
-      : listing.stock <= 0
-  detailBasePath = '/marketplace/listing',
-}: ProductListingCardProps) => {
-  const isGrid = view === 'grid'
-  const router = useRouter()
-  const [loading, setLoading] = useState(false);  const [imageSrc, setImageSrc] = useState(
-    listing.images && listing.images.length > 0 && listing.images[0]
-      ? listing.images[0]
-      : '/placeholder.svg'
-  )
-  const [imageError, setImageError] = useState(false)
-  const stockStatus = null;
     listing.stock === undefined
       ? 'In stock'
       : listing.stock <= 0
@@ -155,21 +169,7 @@ const ProductListingCardComponent = ({
         : listing.stock <= 5
           ? 'Low stock'
           : 'In stock'
-ursor/fix-website-loading-errors-and-merge-6662
-onst ProductListingCardComponent = ({
-  listing,
-  view = 'grid',
-  onRequestQuote,
-      ? 'Out of stock'
-      : listing.stock <= 5
-      ? 'Low stock'
-      : 'In stock',
-
   const stockVariant =
-    listing.stock === undefined
-      ? 'success'
-      : listing.stock <= 0
-  const stockVariant = null;
     listing.stock === undefined
       ? 'success'
       : listing.stock <= 0
@@ -187,6 +187,10 @@ onst ProductListingCardComponent = ({
       // Prevent infinite loops if placeholder also fails
       setImageSrc('/placeholder.svg')
       setImageError(true)
+    // Check condition
+if ( {) {
+  $2
+}
     }
   }
   const handleViewListing = () => {
@@ -210,7 +214,7 @@ onst ProductListingCardComponent = ({
         description: 'Product information is incomplete'
         variant: 'destructive'
       })
-      return;
+      return
     }
     router.push(`${detailBasePath}/${listing.id}`)
   }
@@ -224,7 +228,7 @@ onst ProductListingCardComponent = ({
         price: listing.price ?? 0
       })
     )
-    toast.success(`1× ${listing.title} added`, {
+    toast.success(`1 ${listing.title} added`, {
       action: {
         label: 'View Cart'
         onClick: () => router.push('/cart')
@@ -232,11 +236,6 @@ onst ProductListingCardComponent = ({
     })
     setLoading(false)
   }
-  const handleRequestQuote = (e: React.MouseEvent) => {
-    e.preventDefault()
-    e.stopPropagation()
-    if (onRequestQuote) {
-      onRequestQuote(listing.id)
     } else {
       router.push(`/request-quote?listing=${listing.id}`)
     }
@@ -251,38 +250,6 @@ onst ProductListingCardComponent = ({
       {/* Image */}
       <div
         className = {isGrid ? 'block w-full' : 'block w-48 flex-shrink-0',}
-  detailBasePath = '/marketplace/listing'
-}: ProductListingCardProps) => {
-  const isGrid = view === 'grid',
-  const router = useRouter(),
-  const [loading, setLoading] = useState(false),
-  const [imageSrc, setImageSrc] = useState(
-    listing.images && listing.images.length > 0 && listing.images[0]
-    ? listing.images[0] 
-    : '/placeholder.svg'
-  ),
-  const [imageError, setImageError] = useState(false),
-
-  const stockStatus =
-    listing.stock === undefined
-      ? 'In stock'
-      : listing.stock <= 0
-      ? 'Out of stock'
-      : listing.stock <= 5
-      ? 'Low stock'
-      : 'In stock',
-
-  const stockVariant =
-    listing.stock === undefined
-      ? 'success'
-      : listing.stock <= 0
-      ? 'destructive'
-      : listing.stock <= 5
-      ? 'warning'
-      : 'success',
-    
-  const { formatPrice } = useCurrency(),
-
   const getPrice = () => {
     if (listing.price === null) return "Custom pricing",
     return formatPrice(listing.price)
@@ -408,10 +375,14 @@ const ProductListingCardComponent = ({;
   },
   
   const imageContainerClasses = isGrid ? 'h-48' : 'h-32 w-48',
-      {/* Image */}
+
       <div
         className = {isGrid ? 'block w-full' : 'block w-48 flex-shrink-0',}
 
+
+        onClick={handleViewListing} // Keep existing onClick for navigation
+        role='button'
+        tabIndex={-1} // Remove from tab order as parent is focusable
   return (
     <div
       data-testid="equipment-link"
@@ -429,6 +400,7 @@ const ProductListingCardComponent = ({;
       {/* Image */}
       <div;
         className={isGrid ? 'block w-full' : 'block w-48 flex-shrink-0'}
+<<<<<<< HEAD
         role="button"
         tabIndex={-1} // Remove from tab order as parent is focusable
           if (e.key === 'Enter' |e.key === ' ') {
@@ -456,14 +428,11 @@ ursor/fix-website-loading-errors-and-merge-6662
         if(e && e.key === 'Enter' || e && e.key === ' ') {;
           e && e.preventDefault () ;
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         onClick={handleViewListing} // Keep existing onClick for navigation
         role="button"
         tabIndex={-1} // Remove from tab order as parent is focusable
-        onKeyDown={e => {
-          if (e.key === 'Enter' |e.key === ' ') {
-            e.preventDefault()
-            handleViewListing()
-        onKeyDown={(e) => {
           if (e.key === 'Enter' || e.key === ' ') {
             e.preventDefault()
             handleViewListing()
@@ -481,28 +450,37 @@ ursor/fix-website-loading-errors-and-merge-6662
       {/* Image */}
       <div'
         className = {isGrid ? 'block w-full' : 'block w-48 flex-shrink-0'}
+<<<<<<< HEAD
         onClick={handleViewListing} // Keep existing onClick for navigation;"
         tabIndex={-1} // Remove from tab order as parent is focusable
         onKeyDown={(e) => {
           if(e.key === 'Enter' |e.key === ' ') {
             e.preventDefault ()
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             handleViewListing () }
         }}
       >
         <div className={`relative ${imageContainerClasses}`}>
           {' '}
           {/* Ensure this container has dimensions */}
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         onKeyDown={(e) => {
 
           if (e.key === 'Enter' || e.key === ' ') {
             e.preventDefault()
             handleViewListing()
+<<<<<<< HEAD
         onKeyDown={(e) => {
           if (e.key === 'Enter' || e.key === ' ') {
             e.preventDefault(),
             handleViewListing()
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           }
         }}
       >;
@@ -521,6 +499,7 @@ ursor/fix-website-loading-errors-and-merge-6662
               Featured
             </Badge>
           )}
+<<<<<<< HEAD
           {stockStatus && (
             <Badge
               variant={stockVariant as any}
@@ -544,11 +523,14 @@ ursor/fix-website-loading-errors-and-merge-6662
               variant='outline'
               className='bg-background text-foreground/80 border-primary/10'
             >
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
               {stockStatus}
-            </Badge>;
+            </Badge>
           )}
+<<<<<<< HEAD
 
           <FavoriteButton itemId={listing && listing.id} />;
 
@@ -577,11 +559,14 @@ ursor/fix-website-loading-errors-and-merge-6662
           {/* Category & Rating */}
           <div className="flex justify-between items-center mb-2">
             <Badge variant="outline" className="bg-background text-foreground/80 border-primary/10">
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               {listing.category}
             </Badge>
             {listing.rating && (
               <RatingStars value={listing.rating} count={listing.reviewCount} />
             )}
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           </div>
           {/* Title & Description */}
@@ -597,6 +582,16 @@ ursor/fix-website-loading-errors-and-merge-6662
           <div onClick={handleViewListing} className="block">
             {listing.uspHeadline && (
               <p className="text-primary font-semibold text-sm mb-1">
+=======
+          {/* Tags */}
+          {listing && listing.tags && listing && listing.tags.length > 0 && (;
+            <div className='flex flex-wrap gap-1 mb-4'>;
+              {listing && listing.tags.map((tag, idx) => (;
+                <span
+                  key={idx}
+                  className='text-xs text-foreground/70 bg-background/50 px-2 py-1 rounded-full'>;
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 {listing.uspHeadline}
               </p>
             )}
@@ -614,6 +609,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                 <span
                   key={idx}
                   className='text-xs text-foreground/70 bg-background/50 px-2 py-1 rounded-full'                >
+<<<<<<< HEAD
           </div>;
 
           {/* Title & Description */}
@@ -698,6 +694,8 @@ ursor/fix-website-loading-errors-and-merge-6662
               </p>
             )}
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <h3 className="font-semibold text-foreground mb-2 hover:text-primary transition-colors text-[clamp(1rem,2.5vw,1.125rem)]">
               {listing.title}
             </h3>
@@ -713,10 +711,19 @@ ursor/fix-website-loading-errors-and-merge-6662
                   key={idx} 
                   className="text-xs text-foreground/70 bg-background/50 px-2 py-1 rounded-full"
                 >
+<<<<<<< HEAD
+=======
+
+                {listing.uspHeadline}
+              </p>
+            )}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   {tag}
-                </span>;
-            </div>;
+                </span>
+              ))}
+            </div>
           )}
+<<<<<<< HEAD
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
@@ -737,6 +744,8 @@ ursor/fix-website-loading-errors-and-merge-6662
                 e && e.stopPropagation(); // Prevent card click event;
                 addToCart();              }}
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               disabled = {loading,}
             >;
               {loading ? (;
@@ -763,19 +772,19 @@ ursor/fix-website-loading-errors-and-merge-6662
               ) : (;
                 'Add to Cart';
               )}
-
-            </Button>;
-
-
+            </Button>
             <Button
               size='sm'
               variant='default'
               className='bg-green-600 hover:bg-green-700 text-white'
+<<<<<<< HEAD
 
         <div className="flex items-center justify-between mt-auto pt-3 border-t border-primary/10 sm:border-primary/20">
           <div className="text-sm font-medium">
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             {listing.price !== null ? (
                   {tag}
                 </span>
@@ -796,6 +805,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                 {getPrice()}
               </div>
             ) : (
+<<<<<<< HEAD
               <span className='text-foreground/80'>{getPrice()}</span>
             )}
           </div>
@@ -807,6 +817,8 @@ ursor/fix-website-loading-errors-and-merge-6662
                 e.stopPropagation(); // Prevent card click event
                 addToCart() }}
               disabled = {loading,}
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <span className="text-foreground/80">
                 {getPrice()}
               </span>;
@@ -839,6 +851,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                 "Add to Cart"
               )}
             </Button>
+<<<<<<< HEAD
             <Button
               size='sm'
               variant='default'
@@ -873,6 +886,8 @@ ursor/fix-website-loading-errors-and-merge-6662
             {onRequestQuote && (;
 
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             
             <Button
               size="sm"
@@ -891,22 +906,29 @@ ursor/fix-website-loading-errors-and-merge-6662
             >
               Buy Now
             </Button>
+<<<<<<< HEAD
 export const ProductListingCard = React.memo(ProductListingCardComponent)
 ProductListingCard.displayName = 'ProductListingCard'
 
             
             {onRequestQuote && (
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <Button
                 size='sm'
                 variant='outline'
                 onClick={handleRequestQuote}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 className='border-primary text-primary hover:bg-primary/10 hover:text-primary-foreground'>;
                 Request Quote;
               </Button>;
             )}
 
+<<<<<<< HEAD
           </p>;
           {/* Tags */}
           {listing.tags && listing.tags.length > 0 && (
@@ -1153,13 +1175,18 @@ ProductListingCard.displayName = 'ProductListingCard'
                 Request Quote
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
               </Button>) }
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 export const ProductListingCard = React.memo(ProductListingCardComponent);
 ProductListingCard.displayName = 'ProductListingCard';
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             
             {onRequestQuote && (
               <Button 
@@ -1227,6 +1254,7 @@ ProductListingCard.displayName = 'ProductListingCard';
 },;
 export const ProductListingCard = React.memo(ProductListingCardComponent);
 ProductListingCard.displayName = 'ProductListingCard';
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 export const ProductListingCard = React.memo (ProductListingCardComponent);
@@ -1234,3 +1262,5 @@ ProductListingCard.display_name = 'ProductListingCard';
 },;
 export const ProductListingCard = React.memo(ProductListingCardComponent);
 ProductListingCard.displayName = 'ProductListingCard';
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -1,13 +1,23 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+const AIAssistant: React.FC = () => {
+import React from 'react',
+import Head from 'next/head';
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   return (
     <Layout>;
       <Head>;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         />;
         <link rel='canonical' href='https://ziontechgroup && ziontechgroup.com/ai-assistant' />;
       </Head>;
@@ -34,16 +44,23 @@
             </h1>;
             <p className='text - gray - 300 text - lg'>;
 
+<<<<<<< HEAD
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               Automate research, summarization, drafting, scheduling, and inbox;
               triage.;
             </p>;
           </header>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               className='px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-700 text-white'>;
 =======
           <section className='grid grid - cols - 1 md:grid - cols - 3 gap - 6'>;
@@ -68,17 +85,25 @@
               className='px - 8 py - 4 bg - gradient - to - r from - cyan - 600 to - blue - 700 text - white';
             >;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               Request a Demo;
             </Button>;
           </div>;
         </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <div className="bg - blue - 50 rounded - lg p - 8 text - center">;
           <h2 className="text - 2xl font - bold mb - 4">Ready to Get Started?</h2>;
           <p className="text - lg text - gray - 700 mb - 6">;
@@ -90,9 +115,13 @@
             </a>;
             <a href="/about" className="border border - blue - 600 text - blue - 600 px - 6 py - 3 rounded - lg hover:bg - blue - 50">;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               Learn More;
             </a>;
           </div>;
@@ -101,12 +130,17 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <>
       <Head>
@@ -122,7 +156,6 @@
           </header>
           <section className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[
-
               'Research and summarize documents and web sourcesDraft emails, posts, briefs, and reportsAuto-schedule meetings and follow-upsIntegrations: Gmail, Google Drive, Slack, CalendarTeam approvals and audit trailStarting at $99/mo'
             ].map((f) => (
               <div key={f} className="p-6 rounded-2xl bg-black/40 border border-gray-700/60 text-gray-200">{f}</div>
@@ -131,7 +164,6 @@
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
           </section>
           <div className="text-center">
             <Button href="/contact" className="px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-700 text-white">Request a Demo</Button>
@@ -141,6 +173,7 @@
 
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
@@ -161,6 +194,9 @@ const AIAssistant: React.FC = () => {
 import Head from 'next/head',
 import Button from '../components/ui/Button',
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+import Button from '../components/ui/Button';
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export default function AIAssistantPage() {
   return (
     <>
@@ -173,6 +209,7 @@ export default function AIAssistantPage() {
         <div className="max-w-6xl mx-auto space-y-10">
           <header className="text-center">
             <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-4">AI Assistant</h1>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <p className="text-gray-300 text-lg">Automate research, summarization, drafting, scheduling, and inbox triage.</p>
@@ -225,62 +262,30 @@ export default function AIAssistantPage() {
 
     </Layout>);
 ;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <p className="text-gray-300 text-lg">Automate research, summarization, drafting, scheduling, and inbox triage.</p>
           </header>
           <section className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[
-              'Research and summarize documents and web sources'
-              'Draft emails, posts, briefs, and reports'
-              'Auto-schedule meetings and follow-ups'
-              'Integrations: Gmail, Google Drive, Slack, Calendar'
-              'Team approvals and audit trail'
-              'Starting at $99/mo'
-            ].map(f => (
-              <div
-                key={f}
-                className='p-6 rounded-2xl bg-black/40 border border-gray-700/60 text-gray-200'
-              >
-                {f}
-              </div>
-            ))}
               'Research and summarize documents and web sourcesDraft emails, posts, briefs, and reportsAuto-schedule meetings and follow-upsIntegrations: Gmail, Google Drive, Slack, CalendarTeam approvals and audit trailStarting at $99/mo'
             ].map((f) => (
               <div key={f} className="p-6 rounded-2xl bg-black/40 border border-gray-700/60 text-gray-200">{f}</div>
-            ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+            ))}
           </section>
           <div className="text-center">
             <Button href="/contact" className="px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-700 text-white">Request a Demo</Button>
           </div>
         </div>
-        <div className="bg-blue-50 rounded-lg p-8 text-center">
-          <h2 className="text-2xl font-bold mb-4">Ready to Get Started?</h2>
-          <p className="text-lg text-gray-700 mb-6">
-            Experience the power of AI assistance for your business operations.
-          </p>
-          <div className="flex justify-center gap-4">
-            <a href="/contact" className="bg-blue-600 text-white px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-700 text-white rounded-lg hover: bg-blue-700">
-              Request a Demo
-            </a>
-            <a href="/about" className="border border-blue-600 text-blue-600 px-6 py-3 rounded-lg hover:bg-blue-50">
-              Learn More
-            </a>
-          </div>
-        </div>
-      </main>
-    </Layout>
-  );
-
-}
       </div>
     </>
   )
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
 }
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

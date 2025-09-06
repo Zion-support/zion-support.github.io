@@ -1,4 +1,3 @@
-
 import {useState, useEffect} from "react";
 import {AppHeader} from "@/layout/AppHeader";
 import {Footer} from "@/components/Footer";
@@ -17,6 +16,7 @@ import {ActiveProjectsCard} from "@/components/projects/ActiveProjectsCard";
 import {UpcomingInterviewsCard} from "@/components/interviews/UpcomingInterviewsCard";
 import {useIsMobile} from "@/hooks/use-mobile";
 <<<<<<< HEAD
+<<<<<<< HEAD
 function ClientDashboardContent() {;
 
 =======
@@ -32,6 +32,8 @@ function ClientDashboardContent() {;
       setSelectedJobTitle(jobs[0].title);
     }
   }, [jobs, selectedJobId]);
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useState, useEffect } from "react",
 import { AppHeader } from "@/layout/AppHeader",
 import { Footer } from "@/components/Footer",
@@ -50,7 +52,10 @@ import { ActiveProjectsCard } from "@/components/projects/ActiveProjectsCard",
 import { UpcomingInterviewsCard } from "@/components/interviews/UpcomingInterviewsCard",
 import { useIsMobile } from "@/hooks/use-mobile";
 function ClientDashboardContent() {
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const [activeTab, setActiveTab] = useState<JobStatus | "all">("all");
   const { jobs, isLoading } = useJobs();
 
@@ -58,6 +63,9 @@ function ClientDashboardContent() {
   const [selectedJobTitle, setSelectedJobTitle] = useState<string>("");
   const isMobile = useIsMobile();
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
   // Set the first job as selected when jobs are loaded (if any);
@@ -68,19 +76,21 @@ function ClientDashboardContent() {
       setSelectedJobTitle(jobs[0].title);
     }
   }, [jobs, selectedJobId]);
+<<<<<<< HEAD
 
 
 
 =======
 import { useIsMobile } from "@/hooks/use-mobile",
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 function ClientDashboardContent() {
   const [activeTab, setActiveTab] = useState<JobStatus | "all">("all"),
   const { jobs, isLoading } = useJobs(),
   const [selectedJobId, setSelectedJobId] = useState<string | null>(null),
   const [selectedJobTitle, setSelectedJobTitle] = useState<string>(""),
   const isMobile = useIsMobile(),
-
 
   // Set the first job as selected when jobs are loaded (if any)
   useEffect(() => {
@@ -89,6 +99,7 @@ function ClientDashboardContent() {
       setSelectedJobTitle(jobs[0].title)
     }
 
+<<<<<<< HEAD
   }, [jobs, selectedJobId]),
 
 
@@ -111,6 +122,8 @@ function ClientDashboardContent() {
   },
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <>
       <SEO
@@ -170,6 +183,7 @@ function ClientDashboardContent() {
           </div>
           <div>
             <div className="sticky top-4 space-y-6">
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -375,12 +389,15 @@ function ClientDashboardContent() {;
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               {/* Active Projects Card */}
               <ActiveProjectsCard />;
 
               {/* Upcoming Interviews Card */}
               <UpcomingInterviewsCard />;
 
+<<<<<<< HEAD
 =======
           ;
           <div>;
@@ -395,6 +412,8 @@ function ClientDashboardContent() {;
               <UpcomingInterviewsCard />;
               ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               {/* AI Talent Suggestions */}
               <div>;
                 <h2 className="text-xl font-semibold mb-4 flex items-center">;
@@ -402,21 +421,28 @@ function ClientDashboardContent() {;
                   AI Talent Suggestions;
                 </h2>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
                 {selectedJobId ? (;
                   <SuggestedTalents jobId={selectedJobId} />;
                 ) : (;
+<<<<<<< HEAD
 =======
                 ;
                 {selectedJobId ? (;
                   <SuggestedTalents jobId={selectedJobId} />;
                 ) :(;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   <div className="bg-muted/30 border rounded-lg p-6 text-center">;
                     <p className="text-muted-foreground">;
                       Select a job to see AI-matched talent suggestions;
                     </p>;
                   </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 )}
@@ -453,6 +479,9 @@ function ClientDashboardContent() {;
     </>
   )
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+                )}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useState, useEffect } from './react';
 import { AppHeader } from '@/layout / AppHeader';
 import { Footer } from '@/components / Footer';
@@ -572,13 +601,13 @@ if ( {) {
                       Select a job to see AI - matched talent suggestions;
                     </p>;
                   </div>)}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               </div>;
             </div>;
           </div>;
         </div>;
       </main>;
       <Footer />;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -603,6 +632,11 @@ export default function ClientDashboard() {;
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+;
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     </>);
 }
 export default /**
@@ -614,6 +648,7 @@ function ClientDashboard() {
       <ClientDashboardContent />;
     </ProtectedRoute>);
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -645,3 +680,5 @@ export default function ClientDashboard() {;
 ;
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

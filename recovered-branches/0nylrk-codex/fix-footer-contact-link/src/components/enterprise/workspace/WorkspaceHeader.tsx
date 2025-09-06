@@ -1,6 +1,6 @@
 
-:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/enterprise/workspace/WorkspaceHeader.tsx
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -15,10 +15,14 @@ import { type Company } from "./CompanyDashboard",
 import { Bell, Users, Settings } from "lucide-react",
 <<<<<<< HEAD
 =======
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 interface WorkspaceHeaderProps {
   company: Company
 }
+<<<<<<< HEAD
 export function WorkspaceHeader({ company }: WorkspaceHeaderProps) {
   return (
     <div className="space-y-6">
@@ -91,9 +95,15 @@ export function WorkspaceHeader(): any ({ company }: WorkspaceHeaderProps) {;
   return (
 
 <<<<<<< HEAD
+=======
+
+
+export function WorkspaceHeader(): any ({ company }: WorkspaceHeaderProps) {;
+  return (
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 };
 
-=======
 import React from "react",;
 import { Button } from "@/components/ui/button",;
 import { type Company } from "./CompanyDashboard",;
@@ -101,6 +111,7 @@ import { Bell, Users, Settings } from "lucide-react";
 interface WorkspaceHeaderProps {;
   company: Company;
 }
+<<<<<<< HEAD
 ;
 export function WorkspaceHeader({ company }: WorkspaceHeaderProps) {;
   return (;
@@ -193,6 +204,10 @@ export function WorkspaceHeader({ company } WorkspaceHeaderProps) {;
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
+=======
+}
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 :recovered - branches / 0nylrk - codex / fix - footer - contact - link / src / components / enterprise / workspace / WorkspaceHeader.tsx;
 import React from './react';
 import { Button } from '@/components / ui / button';
@@ -252,6 +267,7 @@ function WorkspaceHeader() {
     </div>);
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 ;
@@ -285,3 +301,5 @@ function WorkspaceHeader() {
 }
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

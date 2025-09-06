@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -34,6 +35,8 @@ import Head from 'next / head';
 import { use_router } from 'next / router';
 interface SEOHeadProps {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   title?: string;
   description?: string;
   keywords?: string;
@@ -45,6 +48,7 @@ interface SEOHeadProps {
   noindex?: boolean;
   nofollow?: boolean;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -174,11 +178,14 @@ const SEOHead: React.FC<SEOHeadProps> = ({;
 
       {/* Twitter */}
       <meta name="twitter:card" content={twitterCard} />;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <meta name="twitter:title" content={title} />;
       <meta name="twitter:description" content={description} />;
       <meta name="twitter:image" content={fullOgImage} />;
       <meta name="twitter:site" content="@ziontechgroup" />;
       <meta name="twitter:creator" content="@ziontechgroup" />;
+<<<<<<< HEAD
 
       {/* Additional SEO */}
       <meta name="theme-color" content="#1e40af" />;
@@ -302,10 +309,13 @@ const SEOHead: React.FC < SEOHeadProps> = ({
       <meta name="msapplication-TileColor" content="#1e40af" />
       <meta name="msapplication-config" content="/browserconfig.xml" />
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {/* Structured Data */}
       <script;
         type="application / ld + json";
         dangerouslySetInnerHTML={{
+<<<<<<< HEAD
 <<<<<<< HEAD
 
           __html: JSON && JSON.stringify(structuredData || defaultStructuredData)
@@ -318,6 +328,8 @@ const SEOHead: React.FC < SEOHeadProps> = ({
         }}
       />
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {/* Preconnect to external domains */}
       <link rel="preconnect" href="https://fonts && fonts.googleapis.com" />;
       <link rel="preconnect" href="https://fonts && fonts.gstatic.com" crossOrigin="anonymous" />;
@@ -325,7 +337,10 @@ const SEOHead: React.FC < SEOHeadProps> = ({
     </Head>;
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           __html: JSON.stringify (structured_data || defaultStructuredData);
         }}
       />;
@@ -336,6 +351,7 @@ const SEOHead: React.FC < SEOHeadProps> = ({
     </Head>);
 }
 ;
+<<<<<<< HEAD
 
 =======
 =======
@@ -358,3 +374,5 @@ export default SEOHead;
 
 export default SEOHead;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

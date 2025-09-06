@@ -1,7 +1,10 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readState, writeState } from "../../../lib/integrations/fileStore";
@@ -10,6 +13,7 @@ export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
+<<<<<<< HEAD
 
   try {
 <<<<<<< HEAD
@@ -21,6 +25,8 @@ export default async function handler(
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   }
   const state = readState();
   const conn = state && state.connections.find((c) => c && c.providerId === providerId);
@@ -45,10 +51,14 @@ function handler() {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     });
 
 }
 
+<<<<<<< HEAD
 =======
 =======
 
@@ -57,10 +67,13 @@ function handler() {
 =======
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
   const { provider_id } = req.body as { provider_id?: string }
@@ -84,6 +97,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       action: "resync",
     });
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { readState, writeState } from '../../../lib/integrations/fileStore';
 import { getProviderById } from '../../../lib/integrations/registry';
@@ -93,8 +108,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (!providerId || !getProviderById(providerId)) {
     return res.status(400).json({ error: 'Invalid providerId' })
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readState, writeState } from "../../../lib/integrations/fileStore";
 import { getProviderById } from "../../../lib/integrations/registry";
@@ -119,15 +137,18 @@ export default async function handler(
     const target = s.connections.find(c => c.providerId === providerId);
     if (target) target.lastSyncAt = now
   });
-  res.status(200).json({ ok: true })
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     const target = s.connections.find ((c) => c.provider_id === provider_id);
     // Check condition
 if (target.lastSyncAt = now) {
   $2
 }
+<<<<<<< HEAD
   });
   res.status (200).json ({ ok: true });
 }
@@ -154,11 +175,14 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
   const state = readState();
   const conn = state.connections.find(c => c.providerId === providerId);
   if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
@@ -188,3 +212,5 @@ export default async function handler(req, res) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

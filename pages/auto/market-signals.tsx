@@ -1,10 +1,13 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 const MarketSignals: NextPage = () => {
   return (
@@ -17,6 +20,7 @@ const MarketSignals: NextPage = () => {
         <h1 className="text-2xl font-bold">AI Market Signals Agent</h1>
         <p>Runs daily to curate relevant AI/tech market signals and trends and stores them in the repository.</p>
         <div className="space-y-2">
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -32,11 +36,14 @@ const MarketSignals: NextPage = () => {
           <Link href="/data/reports/market-signals/latest.json"><a className="text-blue-600 underline">Latest Report (JSON)</a></Link>
           <Link href="/data/reports/market-signals/latest.json"><a className="text-blue-600 underline">Latest Report (JSON)</Link></Link>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         </div>
       </main>
     </div>
   )
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
@@ -79,6 +86,12 @@ const MarketSignals: NextPage = () => {
         </div>;
       </main>;
     </div>);
+=======
+},
+export default MarketSignals,
+},
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 },
 export default MarketSignals,
 
@@ -88,4 +101,8 @@ export default MarketSignals,
 
 export default MarketSignals,;
 export default MarketSignals,
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

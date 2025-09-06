@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import Image from 'next/image';
 import { Loader2 } from 'lucide-react'
 import { useState } from 'react';
@@ -47,33 +48,25 @@ export default function YoutubeEmbed({ videoId, title, poster }: YoutubeEmbedPro
 <<<<<<< HEAD
 =======
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   return (
     <div className="relative aspect-video max-w-3xl mx-auto">
       {!loaded && (
         <>
-    <div className="relative aspect-video max-w-3xl mx-auto">
-      {!loaded && (
-        <>
-          <Image
-            src={poster}
-            alt={`${title} poster`}
-            fill
-            className='object-cover rounded'
-          />
-          <div className='absolute inset-0 flex items-center justify-center bg-black/30'>
-            <Loader2 className='h-8 w-8 animate-spin text-white' />          </div>          <Image src={poster} alt={`${title} poster`} fill className="object-cover rounded" />
-        loading='lazy'
-        onLoad={() => setLoaded(true)}
-          <Image src={poster} alt={`${title} poster`} fill className="object-cover rounded" />
           <div className="absolute inset-0 flex items-center justify-center bg-black/30">
+<<<<<<< HEAD
 <div className="absolute inset-0 flex items-center justify-center bg-black/30">
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <Loader2 className="h-8 w-8 animate-spin text-white" />
           </div>
         </>
       )}
       <iframe
         className={`absolute inset-0 w-full h-full ${loaded ? 'visible' : 'invisible'}`}
+<<<<<<< HEAD
         src={src}
         title={title}
         loading='lazy'
@@ -82,6 +75,8 @@ export default function YoutubeEmbed({ videoId, title, poster }: YoutubeEmbedPro
         title={title};
         loading='lazy';
         onLoad={() => setLoaded(true)};
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'        allowFullScreen
       />
     </div>
@@ -93,11 +88,14 @@ export default function YoutubeEmbed({ videoId, title, poster }: YoutubeEmbedPro
         loading="lazy"
         onLoad={() => setLoaded(true)}
         allow="accelerometer, autoplay, clipboard-write, encrypted-media, gyroscope, picture-in-picture"
+<<<<<<< HEAD
         loading="lazy"
         onLoad={() => setLoaded(true)}
         allow="accelerometer, autoplay, clipboard-write, encrypted-media, gyroscope, picture-in-picture"
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         src={src}
         title={title}
         loading="lazy"
@@ -107,6 +105,7 @@ export default function YoutubeEmbed({ videoId, title, poster }: YoutubeEmbedPro
       />
     </div>
   )
+<<<<<<< HEAD
         loading="lazy"
         onLoad={() => setLoaded(true)}
         allow="accelerometer, autoplay, clipboard-write, encrypted-media, gyroscope, picture-in-picture"
@@ -123,11 +122,16 @@ export default function YoutubeEmbed({ videoId, title, poster }: YoutubeEmbedPro
 ;
         loading="lazy";
         onLoad={() => setLoaded(true)}
+=======
+        loading="lazy";
+        onLoad={() => setLoaded(true)}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         allow="accelerometer, autoplay, clipboard-write, encrypted-media, gyroscope, picture-in-picture";
         allowFullScreen;
       />;
     </div>;
   );
+<<<<<<< HEAD
 }
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -181,3 +185,5 @@ function YoutubeEmbed() {
     </div>);
 }
 ;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -22,11 +23,14 @@ const fixAccessibility = () => {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     return true;
   } catch (error) {
     console && console.error('❌ Error fixing accessibility && accessibility.tsx:', error && error.message);
     return false;
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -57,11 +61,14 @@ const fixApi = () => {
     fs && fs.writeFileSync('pages/api && api.tsx', content);
     console && console.log('✅ Fixed api && api.tsx');
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     return true;
   } catch (error) {
     console && console.error('❌ Error fixing api && api.tsx:', error && error.message);
     return false;
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -85,11 +92,14 @@ const fixCareers = () => {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     return true;
   } catch (error) {
     console && console.error('❌ Error fixing careers && careers.tsx:', error && error.message);
     return false;
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -113,11 +123,14 @@ const fixSupport = () => {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     return true;
   } catch (error) {
     console && console.error('❌ Error fixing support && support.tsx:', error && error.message);
     return false;
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -141,6 +154,8 @@ const fixWebinars = () => {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     return true;
   } catch (error) {
     console && console.error('❌ Error fixing webinars && webinars.tsx:', error && error.message);
@@ -148,6 +163,7 @@ const fixWebinars = () => {
   }
 }
 // Main execution
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 const main = () => {
@@ -160,15 +176,20 @@ const main = () => {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   const fixes = [
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     fixAccessibility
     fixApi
     fixCareers
     fixSupport
     fixWebinars;
+<<<<<<< HEAD
 
   ];
   let successCount = 0;
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 #!/usr / bin / env node;
 import fs from 'fs';
 import _path from 'path';
@@ -297,6 +318,7 @@ const main = () =>: any {
     }
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   
   console && console.log(`\n✅ Fixed ${successCount}/${fixes && fixes.length} files`);
@@ -305,6 +327,8 @@ const main = () =>: any {
 =======
   console && console.log(`\n✅ Fixed ${successCount}/${fixes && fixes.length} files`);
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   if (successCount > 0) {
     console && console.log('\n📝 Adding fixed files...');
     try {
@@ -335,5 +359,8 @@ if ( {) {
   }
 }
 ;
+<<<<<<< HEAD
 main ();
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

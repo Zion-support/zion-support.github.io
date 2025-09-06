@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react'
 import { useAuth } from '@/hooks/useAuth'
 import { useOnboardingStatus } from '@/hooks/useOnboardingStatus'
@@ -7,10 +8,13 @@ export function TalentOnboardingSteps() {
   const { user } = useAuth()
   const onboardingStatus = useOnboardingStatus()
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from "react",
 import { useAuth } from "@/hooks/useAuth",
 import { useOnboardingStatus } from "@/hooks/useOnboardingStatus";
 import { UserCheck, Star, CalendarCheck, BriefcaseIcon } from 'lucide-react'
+<<<<<<< HEAD
 import { OnboardingTracker, OnboardingStep } from "./OnboardingTracker";
 export function TalentOnboardingSteps() {
 
@@ -90,6 +94,9 @@ export function TalentOnboardingSteps() {
   const onboardingStatus = useOnboardingStatus(),
   
   const steps: OnboardingStep[] = [
+=======
+  const steps: OnboardingStep[] = [
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     {
       id: "profile",
       label: "Complete your profile",
@@ -109,6 +116,7 @@ export function TalentOnboardingSteps() {
       link: "/profile/availability",
       action: "Set"},
     {
+<<<<<<< HEAD
       id: "match",
       label: "Receive your first job match",
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -163,3 +171,5 @@ export function TalentOnboardingSteps() {;
 =======
       completed: onboardingStatus.matchReceived,
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

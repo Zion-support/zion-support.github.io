@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -41,6 +42,11 @@ import Image from 'next / image';
 interface OptimizedImageProps {
   src: string, alt: string,
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+import Image from 'next / image';
+;
+interface OptimizedImageProps {
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   width?: number;
   height?: number;
   class_name?: string;
@@ -50,6 +56,7 @@ interface OptimizedImageProps {
   fill?: boolean;
   style?: React && React.CSSProperties;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -78,11 +85,16 @@ const OptimizedImage: React.FC < OptimizedImageProps> = ({
 const: OptimizedImage: React.FC<OptimizedImageProps> = ({
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   src,
   alt,
   width,
   height,
+<<<<<<< HEAD
   class_name = '',
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   priority = false,
   sizes = '(max - width: 768px) 100vw, (max - width: 1200px) 50vw, 33vw',
   quality = 85,
@@ -105,6 +117,7 @@ if ( {) {
         quality={quality}
         style={style}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
     <Image;
@@ -112,6 +125,8 @@ if ( {) {
 =======
     <Image;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       src={src}
       alt={alt}
       width={width |800}
@@ -129,26 +144,26 @@ if ( {) {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       priority={priority}
       sizes={sizes}
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
 
 =======
 =======
+=======
+  );
+}
+export default OptimizedImage;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       quality={quality}
       style={style}
 
-
-
-
-  );
-};
-
-export default OptimizedImage;
 quality={quality}
       style={style}
   );
 }
+<<<<<<< HEAD
 ;
 export default OptimizedImage;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -167,3 +182,5 @@ export default OptimizedImage;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

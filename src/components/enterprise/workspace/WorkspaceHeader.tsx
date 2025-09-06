@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React from "react",
 import { Button } from "@/components/ui/button";
@@ -11,11 +12,14 @@ import { Bell, Users, Settings } from 'lucide-react'
 interface WorkspaceHeaderProps {
   company: Company
 interface WorkspaceHeaderProps {
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { type Company } from './CompanyDashboard';
 import { Bell, Users, Settings } from 'lucide-react';
 interface WorkspaceHeaderProps {;
+<<<<<<< HEAD
   company: Company;
 
 
@@ -27,6 +31,8 @@ import React from 'react'
 import { Button } from '@/components/ui/button'
 import { type Company } from './CompanyDashboard'
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { Bell, Users, Settings } from 'lucide-react'
 interface WorkspaceHeaderProps {
   company: Company
@@ -61,6 +67,7 @@ export function WorkspaceHeader({ company }: WorkspaceHeaderProps) {
         <div className="flex items-center gap-4">
           <div className="h-12 w-12 rounded-lg bg-card flex items-center justify-center border border-border">
             <img
+<<<<<<< HEAD
 xport function WorkspaceHeader({ company }: WorkspaceHeaderProps) {
 ursor/fix-website-loading-errors-and-merge-6662
     <div className='space-y-6'>;
@@ -70,6 +77,8 @@ ursor/fix-website-loading-errors-and-merge-6662
             <img
               src={company.logoUrl |'/placeholder.svg'}
               src={company.logoUrl || '/placeholder.svg'}
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               alt={company.name}
               className='max-h-10 max-w-10'
               loading='lazy'            />
@@ -78,12 +87,13 @@ ursor/fix-website-loading-errors-and-merge-6662
             <h1 className='text-3xl font-bold tracking-tight'>
               {company.name} Workspace
             </h1>
-            <p className='text-muted-foreground'>              {company.plan} Plan · {company.teamSize} team members
+            <p className='text-muted-foreground'>              {company.plan} Plan  {company.teamSize} team members
             </p>
           </div>
         </div>
             <h1 className="text-3xl font-bold tracking-tight">{company.name} Workspace</h1>
             <p className="text-muted-foreground">
+<<<<<<< HEAD
 
 import React from "react";
 import { Button } from "@/components/ui/button";
@@ -176,6 +186,8 @@ export function WorkspaceHeader({ company }: WorkspaceHeaderProps) {
             />
           </div>
           <div>
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               src={company.logoUrl || "/placeholder.svg"}
               alt={company.name}
               className="max-h-10 max-w-10"
@@ -183,9 +195,13 @@ export function WorkspaceHeader({ company }: WorkspaceHeaderProps) {
             />
           </div>
           <div>
+<<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
             <h1 className="text-3xl font-bold tracking-tight">{company.name} Workspace</h1>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               src={company.logoUrl || "/placeholder.svg"}
               alt={company.name}
               className="max-h-10 max-w-10"
@@ -196,13 +212,17 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <h1 className="text-3xl font-bold tracking-tight">{company.name} Workspace</h1>
             <p className="text-muted-foreground">
-              {company.plan} Plan · {company.teamSize} team members
+              {company.plan} Plan  {company.teamSize} team members
             </p>
           </div>
         </div>
+<<<<<<< HEAD
         <div className='flex items-center gap-2'>
           <Button variant='outline' size='icon' aria-label='Notifications'>
             <Bell className='h-4 w-4' />
@@ -241,6 +261,12 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 =======
         
+=======
+
+
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         
         <div className="flex items-center gap-2">
           <Button variant="outline" size="icon" aria-label="Notifications">
@@ -254,8 +280,11 @@ ursor/fix-website-loading-errors-and-merge-6662
           </Button>
         </div>
       </div>
+<<<<<<< HEAD
       
       
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <div className="grid grid-cols-1 sm: grid-cols-3 gap-4">
         <div className="bg-card rounded-lg p-4 border border-border">
           <div className="text-sm text-muted-foreground">Active Job Listings</div>
@@ -290,9 +319,12 @@ ursor/fix-website-loading-errors-and-merge-6662
           <div className='text-2xl font-medium'>12</div>        </div>
       </div>
     </div>
+<<<<<<< HEAD
   )
       </div>
     </div>
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }          </Button>
           <Button variant="outline" size="icon" aria-label="Team members">
             <Users className="h-4 w-4" />
@@ -316,9 +348,13 @@ ursor/fix-website-loading-errors-and-merge-6662
           <div className="text-2xl font-medium">12</div>
         </div>
       </div>
+<<<<<<< HEAD
     </div>;
   );
 };
+=======
+  )
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import React from "react",;
@@ -340,6 +376,7 @@ export function WorkspaceHeader({ company }: WorkspaceHeaderProps) {;
               alt={company.name}
               className="max-h-10 max-w-10";
               loading="lazy";
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   );
@@ -398,6 +435,8 @@ export function WorkspaceHeader({ company }: WorkspaceHeaderProps) {;
               alt={company.name}
               className="max-h-10 max-w-10";
               loading="lazy";
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             />;
           </div>;
           <div>;
@@ -419,8 +458,11 @@ export function WorkspaceHeader({ company }: WorkspaceHeaderProps) {;
           </Button>;
         </div>;
       </div>;
+<<<<<<< HEAD
       ;
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <div className="grid grid-cols-1 sm: grid-cols-3 gap-4">;
         <div className="bg-card rounded-lg p-4 border border-border">;
           <div className="text-sm text-muted-foreground">Active Job Listings</div>;
@@ -438,6 +480,7 @@ export function WorkspaceHeader({ company }: WorkspaceHeaderProps) {;
     </div>;
   );
 }
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 export /**
  * WorkspaceHeader - Function description
@@ -549,3 +592,5 @@ function WorkspaceHeader() {
 ;
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

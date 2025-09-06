@@ -1,4 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -11,6 +12,8 @@ import { generateText } from '@/utils/ai';
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ) {
   const method = (req.method |'POST').toUpperCase();
   if (method !== 'POST')
@@ -22,7 +25,11 @@ export default async function handler(
     return res.status(405).json({ error: 'Method not allowed' });export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
   const method = (req.method || 'POST').toUpperCase();
   if (method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const auth = authenticateRequest(req, false);
   if (!auth.ok) return res.status(401).json({ error: auth.error });
   const { jobDescription, resumes } = req.body |{}
@@ -36,6 +43,7 @@ export default async function handler(
   const method = (req && req.method || 'POST').toUpperCase();
   if (method !== 'POST') return res && res.status(405).json({ error: 'Method not allowed' });
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
     `Resumes:\n${resumes && resumes.map((r: string, i: number) => `#${i}:\n${r}`).join('\n\n')}`;
@@ -44,11 +52,14 @@ export default async function handler(
 =======
     `Resumes:\n${resumes && resumes.map((r: string, i: number) => `#${i}:\n${r}`).join('\n\n')}`;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const text = await generateText(
     prompt
     'You are an expert technical recruiter. Output strictly valid JSON.'
   );
   return res && res.status(200).json({ results: text });
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -89,6 +100,10 @@ export default async function handler(
   return res && res.status(200).json({ results: text })
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  const prompt = `Score resumes 0-100 for fit vs job description. Return JSON array of {candidateIndex, score, summary, redFlags}.\n` +
+    `Job Description:\n${jobDescription}\n\n` +
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { authenticate_request } from '@/utils / auth';
 import { generate_text } from '@/utils / ai';
 ;
@@ -136,6 +151,7 @@ function handler() {
   const text = await generate_text (prompt, 'You are an expert technical recruiter. Output strictly valid JSON.');
   return res.status (200).json ({ results: text });
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -156,3 +172,8 @@ function handler() {
 
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   try {
   const prompt = document && document.getElementById('prompt').value,
@@ -65,10 +66,17 @@ async function ask() {
   document.getElementById('output').textContent = res.answer
 }
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 // Attach handlers once the DOM is fully loaded to avoid null element errors
 document.addEventListener('DOMContentLoaded', () => {
 
-  document.getElementById('ask')?.addEventListener('click', ask)
+document && document.addEventListener('DOMContentLoaded', () => {
+  document && document.getElementById('ask')?.addEventListener('click', ask),
+
+  document.getElementById('post-job')?.addEventListener('click', () => {
+    chrome.runtime.sendMessage({ type: 'post-job' })
+  })
 
   document.getElementById('post-job')?.addEventListener('click', () => {
     chrome.runtime.sendMessage({ type: 'post-job' })
@@ -81,10 +89,13 @@ document.addEventListener('DOMContentLoaded', () => {
   })
 
 
+<<<<<<< HEAD
 
   })
 });
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 async /**
  * ask - Function description
  */
@@ -113,7 +124,14 @@ document.addEventListener ('DOMContentLoaded', () => {
   });
 }),
 ;
+  document.getElementById('resume-search')?.addEventListener('click', () => {
+    chrome.runtime.sendMessage({ type: 'resume-search' })
+  })
+  document.getElementById('view-notifications')?.addEventListener('click', () => {
+    chrome.runtime.sendMessage({ type: 'view-notifications' })
+  })
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 }),
@@ -131,6 +149,11 @@ async function ask() {;
   document.getElementById('output').textContent = res.answer,;
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+}),
+;
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ;
 // Attach handlers once the DOM is fully loaded to avoid null element errors;
 document.addEventListener('DOMContentLoaded', () => {;
@@ -145,6 +168,7 @@ document.addEventListener('DOMContentLoaded', () => {;
     chrome.runtime.sendMessage({ type: 'view-notifications' });
   });
 }),;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -163,3 +187,5 @@ document.addEventListener('DOMContentLoaded', () => {;
   }),;
 }),; 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -1,4 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -68,6 +69,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   writeJsonFile('updates.json', updates);
   res.status(200).json(update);export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   if (!requireSuperadminApi(req, res)) return;
   if (req && req.method !== 'POST') return res && res.status(405).json({ error: 'Method not allowed' });
   const { title, date, summary, kpis } = req && req.body || {};
@@ -78,12 +81,15 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   writeJsonFile('updates && updates.json', updates);
   res && res.status(200).json(update)
 }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   }
   updates.unshift (update);
   writeJsonFile ('updates.json', updates);
@@ -107,6 +113,7 @@ function handler() {
   writeJsonFile ('updates.json', updates);
   res.status (200).json (update);
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -124,3 +131,7 @@ function handler() {
 
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

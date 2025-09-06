@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 
@@ -6,11 +7,14 @@
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from "react";
 import {Button} from "@/components/ui/button";
 import {Card, CardContent, CardFooter, CardHeader} from "@/components/ui/card";
 import {Badge} from "@/components/ui/badge";
 import {ArrowRight, Check, ExternalLink} from "lucide-react";
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 interface IntegrationCardProps {;
@@ -36,6 +40,8 @@ export function IntegrationCard(): any ({;
 <<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from "react",
 import { Button } from "@/components/ui/button",
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card",
@@ -43,16 +49,25 @@ import { Badge } from "@/components/ui/badge";
 import { ArrowRight, Check, ExternalLink } from "lucide-react";
 interface IntegrationCardProps {
 
-  title: string
-  description: string
-  icon: React.ReactNode
+interface IntegrationCardProps {;
+  title: string,;
+  description: string,;
+  icon: React && React.ReactNode,;
 
   status?: "connected" | "disconnected" | "pending";
   href?: string;
 import { Badge } from "@/components/ui/badge",
 import { ArrowRight, Check, ExternalLink } from "lucide-react",
 
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+export function IntegrationCard(): any ({;
+  title;
+  description;
+  icon;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface IntegrationCardProps {
   title: string,
   description: string,
@@ -60,6 +75,7 @@ interface IntegrationCardProps {
   status?: "connected" | "disconnected" | "pending",
   href?: string,
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   onConnect?: () => void
 }
@@ -72,6 +88,8 @@ interface IntegrationCardProps {
   onConnect?: () => void
 }
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export function IntegrationCard({;
   title;
   description;
@@ -88,7 +106,13 @@ export function IntegrationCard({
   icon,
   status = "disconnected",
   href,
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   onConnect}: IntegrationCardProps) {
   return (
     <Card className="overflow-hidden">
@@ -131,9 +155,12 @@ export function IntegrationCard({
             <ArrowRight className="ml-1.5 h-3.5 w-3.5" />
           </Button>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from "react",;
 import { Button } from "@/components/ui/button",;
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card",;
@@ -152,6 +179,7 @@ export function IntegrationCard({;
   title,;
   description,;
   icon,;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   status = "disconnected";
@@ -189,6 +217,16 @@ export function IntegrationCard({;
   onConnect}: IntegrationCardProps) {;
   return (;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  status = "disconnected";
+  href;
+  onConnect}: IntegrationCardProps) {;
+  status?: "connected" | "disconnected" | "pending";
+  href?: string;
+  onConnect?: () => void;
+}
+  return (
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <Card className="overflow-hidden">;
       <CardHeader className="pb-2">;
         <div className="flex justify-between items-start">;
@@ -197,6 +235,7 @@ export function IntegrationCard({;
               {icon}
             </div>;
             <div>;
+<<<<<<< HEAD
               <h3 className="font-semibold">{title}</h3>;
             </div>;
           </div>;
@@ -293,6 +332,13 @@ export function IntegrationCards() {;
   );
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+        )}
+      </CardFooter>;
+    </Card>;
+  );
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from './react';
 import { Button } from '@/components / ui / button';
 import { Card, CardContent, CardFooter, CardHeader } from '@/components / ui / card';
@@ -322,13 +368,6 @@ function IntegrationCard() {
               <h3 className="font - semibold">{title}</h3>;
             </div>;
           </div>;
-          {status === "connected" ? (
-            <Badge variant="outline" className="bg - green - 100 text - green - 800 gap - 1">;
-              <Check className="h - 3.5 w - 3.5" />;
-              <span > Connected</span>;
-            </Badge>) : status === "pending" ? (
-            <Badge variant="outline" className="bg - yellow - 100 text - yellow - 800">Pending</Badge>) : (
-            <Badge variant="outline">Not Connected</Badge>)}
         </div>;
       </CardHeader>;
       <CardContent className="pb - 4">;
@@ -356,6 +395,7 @@ function IntegrationCards() {
   return (
     <div className="grid md:grid - cols - 3 gap - 6">;
       {/* Integration cards would go here */}
+<<<<<<< HEAD
     </div>);
 }
 <<<<<<< HEAD
@@ -411,3 +451,5 @@ export function IntegrationCards() {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

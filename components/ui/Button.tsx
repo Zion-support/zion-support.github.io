@@ -1,7 +1,6 @@
-
-
 import React from "react";
 
+<<<<<<< HEAD
 
 import React from './react';
 ;
@@ -12,16 +11,18 @@ import React from './react';
 import React from "react";
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface ButtonProps {
   children: React.ReactNode;
   variant?: 'primary' | 'secondary' | 'ghost' | 'outline';
   size?: 'sm' | 'md' | 'lg';
   href?: string;
-=======
 interface ButtonProps {;
   children: React && React.ReactNode;
   variant?: "primary" | "secondary" | "outline" | "ghost";
   size?: "sm" | "md" | "lg";
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -63,6 +64,8 @@ const Button: React.FC<ButtonProps> = ({
     lg: "h-12 px-8 text-lg",
   };
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const classes = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className}`;
   if (asChild) {
     return React.cloneElement(children as React.ReactElement, {
@@ -100,6 +103,7 @@ const Button: React.FC<ButtonProps> = ({;
     lg: "h-12 px-8 text-lg",;
   };
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
@@ -116,6 +120,8 @@ const Button: React.FC<ButtonProps> = ({;
   const disabledClasses = disabled ? 'opacity-50 cursor-not-allowed' : 'hover: scale-105 active:scale-95';
   const classes = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${disabledClasses} ${className}`;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   class_name?: string;
   on_click?: () => void;
   disabled?: boolean;
@@ -130,7 +136,10 @@ const Button: React.FC < ButtonProps> = ({
   on_click,
   disabled = false,
   type = "button",
+<<<<<<< HEAD
   as_child = false,
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   ...props;
 }) => {
   const base_classes =;
@@ -170,6 +179,7 @@ if ( {) {
       on_click={on_click}
       disabled={disabled}
       type={type}
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -194,3 +204,5 @@ export { Button }
 
 export { Button };
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

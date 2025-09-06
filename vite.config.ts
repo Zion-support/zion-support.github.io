@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import path from 'node:path';
@@ -51,6 +52,8 @@ export default defineConfig({
     target: 'esnext',
     minify: 'terser',
     sourcemap: false,
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     rollupOptions: {
       output: {
         manualChunks: {
@@ -62,38 +65,20 @@ export default defineConfig({
           const name = assetInfo.name || '';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           if (/\.(css)$/.test(name)) return 'css/[name]-[hash].[ext]';
           if (/\.(png|jpe?g|gif|svg|webp|ico)$/.test(name)) return 'images/[name]-[hash].[ext]';
           if (/\.(woff2?|eot|ttf|otf)$/.test(name)) return 'fonts/[name]-[hash].[ext]';
           return 'assets/[name]-[hash].[ext]';
-        }
-      }
-    },
-    terserOptions: {
-      compress: {
-        drop_console: true,
-        drop_debugger: true,
-        pure_funcs: ['console.log', 'console.info', 'console.debug', 'console.warn'],
-        passes: 2,
-        unsafe: true,
-        unsafe_comps: true,
-        unsafe_math: true,
-        unsafe_proto: true,
-        unsafe_regexp: true,
-        unsafe_undefined: true,
-      },
-      mangle: {
-        safari10: true,
-        properties: {
-          regex: /^_/
-        }
-      }
     },
     chunkSizeWarningLimit: 1000,
     reportCompressedSize: false,
     emptyOutDir: true,
+<<<<<<< HEAD
     assetsInlineLimit: 4096,
 <<<<<<< HEAD
 =======
@@ -108,6 +93,8 @@ export default defineConfig({
 >>>>>>> 3f7c15facc9823ab5565fbace7f3bee3dce9111e
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   },
   optimizeDeps: {
     include: [
@@ -116,6 +103,7 @@ export default defineConfig({
       'react-router-dom',
       'framer-motion',
       'lucide-react',
+<<<<<<< HEAD
       'clsx',
       'tailwind-merge'
     ],
@@ -142,6 +130,8 @@ export default defineConfig({
     fs: {
       allow: ['..']
     }
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   },
   preview: {
     port: 4173,
@@ -151,7 +141,6 @@ export default defineConfig({
   define: {
     __DEV__: JSON.stringify(process.env.NODE_ENV === 'development'),
     __PROD__: JSON.stringify(process.env.NODE_ENV === 'production'),
-    'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)
   },
   envPrefix: ['VITE_', 'ZION_'],
   experimental: {
@@ -161,6 +150,7 @@ export default defineConfig({
       } else {
         return { relative: true };
       }
+<<<<<<< HEAD
     }
 <<<<<<< HEAD
 =======
@@ -186,3 +176,5 @@ export default defineConfig({
   }
 });
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

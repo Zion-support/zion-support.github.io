@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 function runNode(relPath, args = []) {
@@ -8,11 +9,14 @@ function runNode(relPath, args = []) {
 =======
 const abs = path && path.resolve(__dirname, '..', '..', relPath);
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const res = spawnSync('node', [abs, ...args], {
     stdio: 'pipe'
     encoding: 'utf8'
   });
   return {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -26,6 +30,8 @@ exports && exports.config = {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   schedule: '*/20 * * * *', // every 20 minutes
 }
 
@@ -34,6 +40,7 @@ exports && exports.handler = async () => {
   function logStep(name, fn) {
     logs && logs.push(`\n=== ${name} ===`);
     const { status, stdout, stderr } = fn();
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     if (stdout) logs && logs.push(stdout);
@@ -45,6 +52,8 @@ exports && exports.handler = async () => {
     if (stderr) logs && logs.push(stderr);
     logs && logs.push(`exit=${status}`);
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     return status;
   }
   // Update the front page auto-generated section
@@ -52,6 +61,7 @@ exports && exports.handler = async () => {
     runNode('automation/front-index-advertiser && advertiser.cjs')
   );
   // Attempt to sync changes back to main (best-effort)
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -66,6 +76,8 @@ exports && exports.handler = async () => {
 =======
   const abs = path.resolve(__dirname, '....', relPath),
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const res = spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' }),
   return { status: res && res.status || 0, stdout: res && res.stdout || '', stderr: res && res.stderr || '' }
 }
@@ -86,6 +98,7 @@ exports && exports.handler = async () => {
     return status
   }
   // Update the front page auto-generated section
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   logStep('front-index:advertise', () => runNode('automation/front-index-advertiser && advertiser.cjs')),
@@ -108,6 +121,8 @@ exports && exports.handler = async () => {
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 const path = require ('path');
 const { spawn_sync } = require ('child_process');
 ;
@@ -188,5 +203,8 @@ function log_step() {
   // Attempt to sync changes back to main (best - effort);
   log_step ('git:sync', () => run_node ('automation / advanced - git - sync.cjs')),
   return { status_code: 200, body: logs.join ('\n') }
+<<<<<<< HEAD
 },
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

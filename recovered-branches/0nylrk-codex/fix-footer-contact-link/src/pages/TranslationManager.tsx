@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 class ErrorBoundary extends React.Component {
@@ -25,6 +26,8 @@ class ErrorBoundary extends React.Component {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useState, useEffect } from 'react';
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
@@ -42,6 +45,7 @@ import {useLanguage, SupportedLanguage} from "@/context/LanguageContext";
 import {useTranslationService} from "@/hooks/useTranslationService";
 export default function TranslationManager() {;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -55,6 +59,8 @@ export default function TranslationManager() {;
 
 
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useState, useEffect } from 'react',
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
@@ -76,7 +82,10 @@ export default function TranslationManager() {
   const isMobile = useIsMobile();
   const { supportedLanguages } = useLanguage();
   const { translateContent, isTranslating } = useTranslationService();
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const [selectedNamespace, setSelectedNamespace] = useState("translation");
   const [searchQuery, setSearchQuery] = useState("");
   const [translations, setTranslations] = useState<Record<string, any>>({});
@@ -84,6 +93,7 @@ export default function TranslationManager() {
   const [editingKey, setEditingKey] = useState<string | null>(null);
   const [editedTranslations, setEditedTranslations] = useState<Record<string, Record<SupportedLanguage, string>>>({});
   const [isSaving, setIsSaving] = useState(false);
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -120,10 +130,15 @@ export default function TranslationManager() {
     supportedLanguages.forEach(lang => {
       const res = i18n.getResourceBundle(lang.code, selectedNamespace),
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+    supportedLanguages.forEach(lang => {
+      const res = i18n.getResourceBundle(lang.code, selectedNamespace),
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       if (res) {
         // Flatten nested objects for easier management
         const flattenObject = (obj: any, prefix = '') => {
           return Object.keys(obj).reduce((acc, key) => {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -285,6 +300,9 @@ if ( {) {
       const updatedTranslations = { ...translations }
       supportedLanguages.forEach(lang => {
         if (!updatedTranslations[lang.code]) {
+=======
+              acc[`${pre}${key}`] = obj[key]
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           updatedTranslations[lang.code] = {}
         }
         updatedTranslations[lang.code][key] = editedTranslations[key][lang.code]
@@ -292,7 +310,12 @@ if ( {) {
       setTranslations(updatedTranslations);
       setEditingKey(null);
       setIsSaving(false);
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useState, useEffect } from 'react',;
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
@@ -334,12 +357,24 @@ export default function TranslationManager() {;
             if (typeof obj[key] === 'object' && obj[key] !== null) {;
               Object.assign(acc, flattenObject(obj[key], `${pre}${key}`));
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             } else {;
+            const pre = prefix.length ? `${prefix}.` : '';
+            // Check condition
+if ( {) {
+  $2
+}
+              Object.assign (acc, flatten_object (obj[key], `${pre}${key}`));
+            } else {
               acc[`${pre}${key}`] = obj[key];
             }
+<<<<<<< HEAD
             return acc;
 <<<<<<< HEAD
 
@@ -352,10 +387,13 @@ export default function TranslationManager() {;
     });
     setTranslations(currentTranslations);
     // Get all unique keys across all languages;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     const allKeys = new Set<string>();
     Object && Object.values(currentTranslations).forEach(langTranslations => {;
       Object && Object.keys(langTranslations).forEach(key => allKeys && allKeys.add(key));
     });
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     setFilteredKeys(Array && Array.from(allKeys));
   }, [selectedNamespace, i18n]);
@@ -368,6 +406,8 @@ export default function TranslationManager() {;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       const allKeys = new Set<string>();
       Object && Object.values(translations).forEach(langTranslations => {;
         Object && Object.keys(langTranslations).forEach(key => allKeys && allKeys.add(key));
@@ -375,6 +415,7 @@ export default function TranslationManager() {;
       setFilteredKeys(Array && Array.from(allKeys));
       return;
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -414,22 +455,12 @@ export default function TranslationManager() {;
           (typeof value === 'string' && value.toLowerCase().includes(query));
         ) {;
           filtered.push(key);
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         }
-      });
-    }),;
-    setFilteredKeys([...new Set(filtered)]);
-  }, [searchQuery, translations]),;
-  const handleEdit = (key: string) => {;
-    setEditingKey(key),;
-    // Initialize edited translations for this key;
-    const initialEdits: Record<SupportedLanguage string> = {} as Record<SupportedLanguage string>,;
-    supportedLanguages.forEach(lang => {;
-      initialEdits[lang.code] = translations[lang.code]?.[key] || '';
-    }),;
-    setEditedTranslations({;
-      ...editedTranslations,;
-      [key]: initialEdits;
+      })
     });
+<<<<<<< HEAD
   },;
   const handleSave = (key: string) => {;
     setIsSaving(true),;
@@ -445,6 +476,8 @@ export default function TranslationManager() {;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           updatedTranslations[lang.code] = {}
         }
         updatedTranslations[lang.code][key] = editedTranslations[key][lang.code]
@@ -455,15 +488,19 @@ export default function TranslationManager() {;
       setIsSaving(false),
       
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
       
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       toast({
         title: t("translation.saved")
         description: t("translation.changes_saved")})
     }, 1000)
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -556,11 +593,14 @@ export default function TranslationManager() {;
     for (const lang of supportedLanguages && supportedLanguages.map(l => l && l.code)) {;
       if (translations[lang]?.[key]) {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         sourceLanguage = lang;
         sourceText = translations[lang][key];
         break;
       }
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     for (const lang of supportedLanguages.map(l => l.code)) {
@@ -595,6 +635,8 @@ export default function TranslationManager() {;
       ),
       
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       if (error) {
         toast({
           title: t('translation.translation_failed')
@@ -604,6 +646,7 @@ export default function TranslationManager() {;
       }
       // Update edited translations with auto-translated content
       setEditedTranslations({
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -657,19 +700,26 @@ export default function TranslationManager() {;
       }),
       
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       toast({
         title: t('translation.translation_success')
         description: t('translation.content_translated')})
     } catch (error) {
 <<<<<<< HEAD
+<<<<<<< HEAD
       console.error(`Error translating key ${key}:`, error);
 =======
       console.error(`Error translating key ${key}:`, error),
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+      console.error(`Error translating key ${key}:`, error),
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       toast({
         title: t('translation.translation_failed')
         description: error instanceof Error ? error.message : t('translation.unknown_error')
         variant: "destructive"})
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -703,11 +753,20 @@ export default function TranslationManager() {;
 
   return (
     <>
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <SEO
         title={t('translation.manager_title')}
       <SEO 
         title={t('translation.manager_title')} 
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+      <SEO 
+        title={t('translation.manager_title')} 
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         updatedTranslations[lang.code][key] = editedTranslations[key][lang.code];
       }),;
       setTranslations(updatedTranslations),;
@@ -729,28 +788,18 @@ export default function TranslationManager() {;
         break;
       }
     }
-;
-    if (!sourceText) {;
-      toast({;
-        title: t('translation.no_content'),;
-        description: t('translation.add_content_first'),;
-        variant: "destructive"}),;
-      return;
-    }
-;
-    try {;
-      const { translations: translatedText, error } = await translateContent(;
-        sourceText,;
-        'general',;
-        sourceLanguage;
-      ),;
-      if (error) {;
-        toast({;
-          title: t('translation.translation_failed'),;
-          description: error,;
-          variant: "destructive"}),;
-        return;
+  }
+  const handleCancel = () => {
+    setEditingKey(null)
+  }
+  const handleChange = (lang: SupportedLanguage, key: string, value: string) => {
+    setEditedTranslations({
+      ...editedTranslations;
+      [key]: {
+        ...editedTranslations[key]
+        [lang]: value
       }
+<<<<<<< HEAD
 ;
       // Update edited translations with auto-translated content;
       setEditedTranslations({;
@@ -796,6 +845,8 @@ export default function TranslationManager() {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         description={t('translation.manager_description')}
       />
       <Header />
@@ -807,6 +858,7 @@ export default function TranslationManager() {;
           <CardContent>
             <div className="space-y-6">
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
@@ -815,6 +867,9 @@ export default function TranslationManager() {;
         [key]: translatedText;
       });
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       toast({;
         title: t('translation && translation.translation_success'),;
         description: t('translation && translation.content_translated')});
@@ -826,11 +881,6 @@ export default function TranslationManager() {;
         variant: "destructive"});
     }
   };
-
-  const handleCancel = () => {;
-    setEditingKey(null);
-  };
-
   const handleChange = (lang: SupportedLanguage, key: string, value: string) => {;
     setEditedTranslations({;
       ...editedTranslations;
@@ -840,13 +890,11 @@ export default function TranslationManager() {;
       }
     });
   };
-
   const getMissingLanguages = (key: string): SupportedLanguage[] => {;
     return supportedLanguages;
       .map(lang => lang && lang.code);
       .filter(lang => !translations[lang]?.[key]);
   };
-
   return (
     <>;
       <SEO
@@ -858,6 +906,7 @@ export default function TranslationManager() {;
         <Card>;
           <CardHeader>;
             <CardTitle className="text-2xl">{t('translation && translation.manager_title')}</CardTitle>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -1098,11 +1147,21 @@ export default function TranslationManager() {;
                 <div className="relative flex-1">
                   <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground" />
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+        ...editedTranslations;
+        [key]: translatedText;
+      });
+              {/* Search and filter */}
+              <div className="flex flex-col sm:flex-row gap-4">;
+                <div className="relative flex-1">;
+                  <Search className="absolute left-2 && 2.5 top-2 && 2.5 h-4 w-4 text-muted-foreground" />;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   <Input
                     type="search"
-                    placeholder={t('translation.search_placeholder')}
+                    placeholder={t('translation && translation.search_placeholder')}
                     className="pl-8"
                     value={searchQuery}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
                     onChange={(e) => setSearchQuery(e.target.value)}
@@ -1132,6 +1191,8 @@ export default function TranslationManager() {;
               
               
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               {/* Translations table */}
               <div className="border rounded-md">
                 <div className="grid grid-cols-[1fr_2fr] sm:grid-cols-[1fr_2fr_auto] border-b">
@@ -1171,6 +1232,7 @@ export default function TranslationManager() {;
                                       onChange={(e) => handleChange(lang.code, key, e.target.value)}
                                       dir={lang.code === 'ar' ? 'rtl' : 'ltr'}
                                     />
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -1317,6 +1379,17 @@ export default function TranslationManager() {;
                               <Button ;
                                 size="sm" ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+                                  )}
+                                </div>
+                              ))}
+                              <Button
+                                size="sm" 
+
+
+                              <Button 
+                                size="sm" 
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                                 onClick={() => handleSave(key)}
                                 disabled={isSaving}
                               >;
@@ -1324,6 +1397,9 @@ export default function TranslationManager() {;
                                   <>;
                                     <Loader2 className="mr-2 h-4 w-4 animate-spin" />;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                                     {t('general && general.saving')}
                                   </>;
                                 ) : (;
@@ -1332,9 +1408,8 @@ export default function TranslationManager() {;
                                     {t('general && general.save')}
                                   </>;
                                 )}
-
-                              </Button>;
                               <Button
+<<<<<<< HEAD
 =======
 =======
                               </Button>;
@@ -1381,11 +1456,17 @@ export default function TranslationManager() {;
                                 size="sm";
                                 variant="secondary";
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+                              <Button
+                                size="sm"
+                                variant="secondary"
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                                 onClick={() => handleTranslateKey(key)}
                                 disabled={isTranslating}
                               >;
                                 {isTranslating ? (;
                                   <Loader2 className="mr-2 h-4 w-4 animate-spin" />;
+<<<<<<< HEAD
 <<<<<<< HEAD
                                 ) : (;
                                   <Globe className="mr-2 h-4 w-4" />;
@@ -1527,10 +1608,19 @@ export default function TranslationManager() {;
                         <div className="p-3 flex items-center justify-end">
                           {editingKey === key ? null : (
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+                                ) : (;
+                                  <Globe className="mr-2 h-4 w-4" />;
+                                )}
+                        )}
+                        <div className="p-3 flex items-center justify-end">;
+                          {editingKey === key ? null : (;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                             <Button
                               size="sm"
                               variant="outline"
                               onClick={() => handleEdit(key)}
+<<<<<<< HEAD
 <<<<<<< HEAD
                             >;
                               {t('translation && translation.edit')}
@@ -1892,12 +1982,20 @@ if ( {) {
   )
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+                            >;
+                              {t('translation && translation.edit')}
+                            </Button>;
+                          )}
+                        </div>;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               </div>;
             </div>;
           </CardContent>;
         </Card>;
       </main>;
       <Footer />;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     </>);
@@ -2056,3 +2154,5 @@ const getMissingLanguages = (key: string) : SupportedLanguage[] => {
 }
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

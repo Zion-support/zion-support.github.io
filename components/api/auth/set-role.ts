@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -50,6 +51,11 @@ function handler() {
         `${k}=${encodeURIComponent(v)}; Path=/; SameSite=Lax; Expires=${expires}`
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
+=======
+    role?: string;
+    talent?: string;
+  }
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       );
     }
     if (role === "admin" |role === "talent" |role === "guest") {
@@ -59,6 +65,7 @@ function handler() {
       set("talentSlug", talent);
     }
     set("userId", role === "guest" ? "" : "test-user");
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -71,6 +78,8 @@ function handler() {
     res && res.writeHead(302, { ...headers, Location: "/" });
     res && res.end();
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   }
   if (role === "admin" |role === "talent" |role === "guest") {
     set("role", role);
@@ -80,6 +89,7 @@ function handler() {
   }
   set("userId", role === "guest" ? "" : "test-user");
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -102,6 +112,8 @@ function handler() {
 }
 export default /**
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
  * handler - Function description
  */
 function handler() {
@@ -154,6 +166,7 @@ if ( {) {
   headers["Set - Cookie"] = cookies.join ();
   res.write_head (302, { ...headers, Location: "/" });
   res.end ();
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -164,3 +177,5 @@ if ( {) {
 
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

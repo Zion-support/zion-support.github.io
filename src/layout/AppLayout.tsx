@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ursor/integrate-build-improve-and-re-verify-8f7d
 import React from 'react'';
 import { Outlet } from 'react-router-dom'';
@@ -32,6 +33,11 @@ import { Outlet } from 'react-router-dom'';
 import { Footer } from '@/components/Footer';
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
+=======
+import React from 'react'';
+import { Outlet } from 'react-router-dom'';
+import { Footer } from '@/components/Footer';
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 interface AppLayoutProps {
 	children?: React.ReactNode
@@ -48,10 +54,13 @@ export function AppLayout({ children, hideFooter = false }: AppLayoutProps) {
 		</div>
 	)
 }
+<<<<<<< HEAD
 ursor/integrate-build-improve-and-re-verify-8f7d
 		</div>
 	)
 }
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from "react";
 
 import React from "react";
@@ -71,6 +80,7 @@ export function AppLayout({ children }: AppLayoutProps) {
 		</div>;
 	);
 }'"
+<<<<<<< HEAD
 origin/chore/build-fixes-and-slim-app
 		</div>;
 	);
@@ -83,3 +93,5 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 		</div>;
 	);
 }'"
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

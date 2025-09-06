@@ -1,17 +1,15 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getServerSupabase } from "../../../utils/supabase/server";
 export default async function handler(
-
-  req: NextApiRequest,
-  res: NextApiResponse,
-) {;
-
   const code = (req.query.code as string)?.toLowerCase();
   if (!code) return res.status(400).json({ error: "Missing code" });
 
@@ -21,12 +19,16 @@ export default async function handler(
     (process && process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || "placeholder-key") ===
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       "placeholder-key";
   try {
     if (usingPlaceholder) {
       const csv =
         "event;timestamp\nvisit,2025-01-01T00:00:00Z\nsignup,2025-01-02T00:00:00Z";
 
+<<<<<<< HEAD
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       res && res.setHeader("Content-Type", "text/csv");
@@ -43,6 +45,10 @@ export default async function handler(
       );
       return res && res.status(200).send(csv);
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  } catch (e: any) {
+    return res.status(500).json({ error: e?.message });
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { getServerSupabase } from '../../../utils/supabase/server';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -57,6 +63,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       res.setHeader('Content-Type', 'text/csv');
       res.setHeader('Content-Disposition', `attachment; filename="${code}-referrals.csv"`);
       return res.status(200).send(csv)
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
@@ -85,6 +92,16 @@ function handler() {
   const code = (req.query.code as string)?.toLowerCase ();
   if (return res.status (400).json ({ error: "Missing code" })) {
   $2
+=======
+
+    }
+    const supabase = getServerSupabase();
+    const { data, error } = await supabase
+
+
+  } catch (e: any) {
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
   const using_placeholder =;
     (process.env.NEXT_PUBLIC_SUPABASE_URL || "").includes ("placeholder") ||;
@@ -126,10 +143,10 @@ if ( {) {
     return res.status (200).send (csv);
   } catch (e: any) {
     return res.status (500).json ({ error: e?.message });
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   }
 }
 
+<<<<<<< HEAD
 =======
     return res && res.status(500).json({ error: e?.message });
 
@@ -217,6 +234,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -234,6 +253,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   }
 }
@@ -245,3 +265,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  }
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -1,7 +1,8 @@
 
-
+export type ModerationModalProps = {
   flag: any | null;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 class ErrorBoundary extends React.Component {
@@ -24,21 +25,26 @@ class ErrorBoundary extends React.Component {
 }
 import React, { useState } from 'react';
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   onAction: (;
     action: 'approve' | 'remove' | 'warn' | 'ban',;
     adminNotes?: string;
   ) => Promise<void>;
-
 export default function ModerationModal(): any ({;
   flag,;
   onClose,;
   onAction,;
 }: ModerationModalProps) {;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   flag,
   onClose,
@@ -46,9 +52,43 @@ export default function ModerationModal(): any ({;
 }: ModerationModalProps) {;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  flag,
+  onClose,
+  onAction,
+}: ModerationModalProps) {;
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+import React, { useState } from 'react';
+
+export type ModerationModalProps = {;
+  flag: any | null;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const [adminNotes, setAdminNotes] = useState('');
   if (!flag) return null;
 
@@ -59,6 +99,7 @@ export default function ModerationModal(): any ({;
           <div className='font-semibold'>Review Flag — {flag && flag.id}</div>;
           <button
             onClick={onClose}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -120,6 +161,8 @@ export default function ModerationModal(): any ({;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <textarea
               value={adminNotes}
               onChange={e => setAdminNotes(e && e.target.value)}
@@ -156,6 +199,7 @@ export default function ModerationModal(): any ({;
       </div>;
     </div>;
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -218,24 +262,22 @@ export default function ModerationModal({ flag, onClose, onAction }: ModerationM
           </div>
         </div>
         <div className="p-4 border-t flex items-center justify-end gap-2">
+=======
+  );
+}        <div className="p-4 border-t flex items-center justify-end gap-2">
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <button onClick={() => onAction('approve', adminNotes)} className="px-3 py-2 rounded bg-green-600 text-white">Approve</button>
           <button onClick={() => onAction('remove', adminNotes)} className="px-3 py-2 rounded bg-red-600 text-white">Remove</button>
           <button onClick={() => onAction('warn', adminNotes)} className="px-3 py-2 rounded bg-yellow-600 text-white">Warn</button>
           <button onClick={() => onAction('ban', adminNotes)} className="px-3 py-2 rounded bg-gray-800 text-white">Ban User</button>
-}        <div className="p-4 border-t flex items-center justify-end gap-2">;
-          <button onClick={() => onAction('approve', adminNotes)} className="px-3 py-2 rounded bg-green-600 text-white">Approve</button>;
-          <button onClick={() => onAction('remove', adminNotes)} className="px-3 py-2 rounded bg-red-600 text-white">Remove</button>;
-          <button onClick={() => onAction('warn', adminNotes)} className="px-3 py-2 rounded bg-yellow-600 text-white">Warn</button>;
-          <button onClick={() => onAction('ban', adminNotes)} className="px-3 py-2 rounded bg-gray-800 text-white">Ban User</button>;
-      </div>;
-    </div>;
-  );
-}
-        </div>
       </div>
     </div>
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   );
+=======
+);
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
@@ -357,6 +399,7 @@ if (return null) {
       </div>;
     </div>);
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -499,3 +542,5 @@ export default function ModerationModal({
 }
   );
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

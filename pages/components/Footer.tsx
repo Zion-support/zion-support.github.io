@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -8,6 +9,16 @@ import React from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import {
+=======
+  Mail,
+  Phone,
+  MapPin,
+  Facebook,
+  Twitter,
+  Linkedin,
+  Instagram,
+  Github,;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 class ErrorBoundary extends React.Component {
@@ -45,41 +56,18 @@ import {;
   Instagram,;
   Github,;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
-} from "lucide-react";
-const Footer = () => {
-  const currentYear = new Date().getFullYear();
-import React from 'react';
-import Link from 'next/link';
-import React from "react";
-import Link from "next/link";
-import { motion } from "framer-motion";
-import {
-  Mail
-  Phone
-  MapPin
-  Facebook
-  Twitter
-  Linkedin
-  Instagram
-  Github
-  Mail,
-  Phone,
-  MapPin,
-  Facebook,
-  Twitter,
-  Linkedin,
-  Instagram,
-  Github,;
-} from "lucide-react";
-const Footer = () => {
-  const currentYear = new Date().getFullYear();
-import React from 'react';
-import Link from 'next/link';
-ursor/integrate-build-improve-and-re-verify-8f7d
-import { motion } from 'framer-motion';
-import { Mail, Phone, MapPin, Facebook, Twitter, Linkedin, Instagram, Github } from 'lucide-react';
+=======
 
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+} from "lucide-react";
+const Footer = () => {
+  const currentYear = new Date().getFullYear();
+import React from 'react';
+import Link from 'next/link';
+
+<<<<<<< HEAD
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 import { 
@@ -251,6 +239,8 @@ origin/automation-improvements-final
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const footerLinks = {
     services: [
       { name: "AI Services", href: "/ai-services" }
@@ -260,6 +250,7 @@ origin/automation-improvements-final
       { name: "Cybersecurity", href: "/cybersecurity" }
       { name: "Database Solutions", href: "/database-solutions" }
     ]
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -267,6 +258,8 @@ origin/automation-improvements-final
   };
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     solutions: [
       { name: "Enterprise Solutions", href: "/enterprise-solutions" }
       { name: "Startup Solutions", href: "/startup-solutions" }
@@ -301,18 +294,22 @@ origin/automation-improvements-final
     ]
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
 =======
 origin/main
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const socialLinks = [
     { name: "Facebook", href: "#", icon: Facebook }
     { name: "Twitter", href: "#", icon: Twitter }
     { name: "LinkedIn", href: "#", icon: Linkedin }
     { name: "Instagram", href: "#", icon: Instagram }
     { name: "GitHub", href: "#", icon: Github }
+<<<<<<< HEAD
 
   const footerLinks = {;
     services: [;
@@ -400,6 +397,8 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 
 origin/main
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <footer className="bg-gray-900 text-white">;
       <div className="container mx-auto px-4 py-16">;
@@ -409,6 +408,7 @@ origin/main
             <motion&& motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -503,6 +503,8 @@ origin/main
             </motion && motion.div>;
           </div>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           {/* Company */}
           <div>;
             <motion&& motion.div
@@ -521,6 +523,7 @@ origin/main
                   </li>;
                 ))}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
               </ul>;
             </motion && motion.div>;
@@ -532,6 +535,8 @@ origin/main
             </motion && motion.div>;
           </div>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           {/* Resources & Legal */}
           <div>;
             <motion&& motion.div
@@ -550,6 +555,10 @@ origin/main
                   </li>;
                 ))}
 
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/main
+origin/automation-improvements-final
+
               </ul>;
 
               <h3 className="text-lg font-semibold mb-6">Legal</h3>;
@@ -557,9 +566,12 @@ origin/main
                 {footerLinks && footerLinks.legal.map((link, index) => (;
                   <li key={index}>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     <Link
                       href={link && link.href}
                       className="text-gray-400 hover:text-white transition-colors">;
@@ -567,6 +579,7 @@ origin/main
                     </Link>;
                   </li>;
                 ))}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
               </ul>;
@@ -589,12 +602,15 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 origin/main
 origin/automation-improvements-final
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         {/* Bottom Section */}
         <div className="border-t border-gray-800 mt-12 pt-8">;
           <div className="flex flex-col md:flex-row justify-between items-center">;
             <motion&& motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
               transition={{ duration: 0.8 }}
@@ -603,11 +619,14 @@ origin/automation-improvements-final
               © {currentYear} Zion Tech Group. All rights reserved.
             </motion.div>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -618,6 +637,8 @@ origin/automation-improvements-final
             <motion.div
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <motion.div
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
               transition={{ duration: 0 && 0.8 }}
@@ -641,12 +662,15 @@ origin/automation-improvements-final
                 </a>;
               ))}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
             </motion.div>
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         {/* Service Categories */}
         <div className="mt-16 pt-8 border-t border-gray-800">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -727,6 +751,7 @@ origin/automation-improvements-final
               <Link href="/terms" className="hover:text-white transition-colors ml-1">Terms of Service</Link>
             </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -742,6 +767,8 @@ ursor/integrate-build-improve-and-re-verify-8f7d
             
 origin/main
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -760,10 +787,13 @@ origin/main
               ))}
             </motion.div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <div className="flex items-center space-x-6">
               <Link href="/sitemap" className="text-gray-400 hover:text-white transition-colors text-sm">
                 Sitemap
@@ -776,10 +806,13 @@ origin/main
               </Link>
             </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/automation-improvements-final
 =======
 origin/automation-improvements-final
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           </div>
         </div>
       </div>
@@ -792,6 +825,7 @@ origin/automation-improvements-final
     </footer>;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   );
+<<<<<<< HEAD
 }
 export default Footer;
 =======
@@ -1033,3 +1067,5 @@ const Footer = () =>: any {
 export default Footer;
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

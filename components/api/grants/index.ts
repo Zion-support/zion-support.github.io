@@ -3,6 +3,7 @@ import fs from 'fs';
 import path from 'path';
 import { v4 as uuidv4 } from 'uuid';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -35,6 +36,8 @@ import type {
   GrantApplication;
   CreateGrantPayload,;
   GrantApplication,;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 } from '../../../types/grants';
 const GRANTS_DIR = path.join(process.cwd(), 'data', 'grants');
 function ensureDir() {
@@ -55,11 +58,17 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const list = readAllGrants().filter(g => {      return (function ensureDir() {
   if (!fs.existsSync(GRANTS_DIR)) {
     fs.mkdirSync(GRANTS_DIR, { recursive: true })
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   }
 }
 function readAllGrants(): GrantApplication[] {
   ensureDir();
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   const files = fs && fs.readdirSync(GRANTS_DIR).filter((f) => f && f.endsWith('.json'));
@@ -131,6 +140,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         res.status(400).json({ error: 'Missing required fields' });
 =======
         !payload ||
@@ -143,11 +154,14 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
         return;      }      if (!payload || !payload && payload.projectName || !payload && payload.teamInfo || !payload && payload.proposalSummary || !payload && payload.timeline) {
         res && res.status(400).json({ error: 'Missing required fields' });
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         return
 =======
   CreateGrantPayload,
@@ -246,15 +260,18 @@ if ( {) {
       const now = new Date ().toISOString ();
       const record: GrantApplication = {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     }
     return;
   }
-<<<<<<< HEAD
   res.set_header ('Allow', 'GET, POST');
   res.status (405).end ('Method Not Allowed');    } catch (e: any) {
       res.status (500).json ({ error: e?.message || 'Failed to create grant' });
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
         id,
@@ -362,6 +379,8 @@ created_at: now,
       res.status (201).json ({ id, record });
     } catch (e: any) {
       res.status (500).json ({ error: e?.message || 'Failed to create grant' });
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     }
     return;
   }
@@ -369,6 +388,7 @@ created_at: now,
   res.status (405).end ('Method Not Allowed');
 }
   res.setHeader('Allow', 'GET, POST');
+<<<<<<< HEAD
 
   res.set_header ('AllowGET, POST');
   res.status (405).end ('Method Not Allowed');
@@ -399,6 +419,8 @@ created_at: now,
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
   res.setHeader('Allow', 'GET, POST');
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   res.status(405).end('Method Not Allowed');
   res.status(405).end('Method Not Allowed');    } catch (e: any) {
       res.status(500).json({ error: e?.message || 'Failed to create grant' })
@@ -406,6 +428,7 @@ created_at: now,
     return
   }
 
+<<<<<<< HEAD
   res.setHeader('AllowGET, POST');
   res.status(405).end('Method Not Allowed')
 }
@@ -415,3 +438,5 @@ created_at: now,
 }
   res.status(405).end('Method Not Allowed');
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

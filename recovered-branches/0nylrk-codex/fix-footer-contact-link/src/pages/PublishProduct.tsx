@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 class ErrorBoundary extends React.Component {
@@ -25,6 +26,8 @@ class ErrorBoundary extends React.Component {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from "react";
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
@@ -34,6 +37,7 @@ import {Navigate} from "react-router-dom";
 import {SEO} from "@/components/SEO";
 export default function PublishProduct() {;
   const { isAuthenticated, isLoading } = useAuth();
+<<<<<<< HEAD
 
 <<<<<<< HEAD
   // Show loading while checking authentication;
@@ -73,6 +77,8 @@ export default function PublishProduct() {;
 
 =======
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from "react",
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
@@ -87,16 +93,23 @@ import { SEO } from "@/components/SEO",
 export default function PublishProduct() {
   const { isAuthenticated, isLoading } = useAuth(),
   
+
+  // Show loading while checking authentication;
+  if (isLoading) {;
+
+
+
   // Show loading while checking authentication
   if (isLoading) {
     return (
-      <div className="flex justify-center items-center min-h-screen bg-zion-blue">
-        <div className="animate-pulse text-zion-purple text-lg">
-          Loading...
-        </div>
-      </div>
-    )
+      <div className="flex justify-center items-center min-h-screen bg-zion-blue">;
+        <div className="animate-pulse text-zion-purple text-lg">;
+          Loading...;
+        </div>;
+      </div>;
+    );
   }
+<<<<<<< HEAD
   // Redirect to login if not authenticated
   if (!isAuthenticated) {
     return <Navigate to="/login" state={{ from: '/publish' }} replace />
@@ -128,6 +141,8 @@ export default function PublishProduct() {
 
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from "react",;
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
@@ -155,6 +170,7 @@ export default function PublishProduct() {;
 ;
   return (;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
   // Redirect to login if not authenticated;
@@ -163,11 +179,15 @@ export default function PublishProduct() {;
   }
   return (
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <div className="min-h-screen flex flex-col bg-zion-blue">;
       <SEO
-        title="Publish Your Product" 
+        title="Publish Your Product"
         description="Create and publish your product, service or digital asset on Zion marketplace. Reach our community of tech and AI professionals."
         keywords="publish product, sell online, digital marketplace, AI tools, tech services"
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -275,6 +295,8 @@ if ( {) {
           <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 md:p-8">;
           <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 md: p-8">;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <ProductSubmissionForm />;
           </div>;
         </div>;
@@ -284,6 +306,7 @@ if ( {) {
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
@@ -315,3 +338,9 @@ if ( {) {
 }
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+}
+;
+    </div>);
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

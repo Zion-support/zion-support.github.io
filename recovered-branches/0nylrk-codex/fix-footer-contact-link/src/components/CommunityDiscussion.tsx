@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 import React, { useState } from "react";
@@ -9,13 +10,21 @@ import { Textarea } from "@/components/ui/textarea";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { Card, CardContent } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useState } from "react",
 import { MessageCircle } from "lucide-react",
 import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
 import { Textarea } from "@/components/ui/textarea",
 import { Avatar, AvatarFallback } from "@/components/ui/avatar",
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+import { Card, CardContent } from "@/components/ui/card";
+import { Separator } from "@/components/ui/separator";
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useState } from './react';
 import { MessageCircle  } from './lucide-react';
 import { Button  } from '@/components / ui / button';
@@ -26,17 +35,22 @@ import { Card, CardContent  } from '@/components / ui / card';
 import { Separator  } from '@/components / ui / separator';
 interface DiscussionPost {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 import { Card, CardContent } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 interface DiscussionPost {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   id: number;
   author: string;
   avatar?: string;
   time: string;
   title: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -45,12 +59,15 @@ interface DiscussionPost {
 
 import { Card, CardContent } from "@/components/ui/card",
 import { Separator } from "@/components/ui/separator",
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface DiscussionPost {
   id: number,
   author: string,
   avatar?: string,
   time: string,
   title: string,
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -94,6 +111,10 @@ id: 1
     body: "Let's spark some ideas! I'm excited to see multi-modal models and open-source AI tools grow. What are you watching?"
   }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  body: string
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   {
     id: 2
     author: "David Kim"
@@ -103,22 +124,24 @@ id: 1
   }
 ];
 <<<<<<< HEAD
+<<<<<<< HEAD
 export const CommunityDiscussion: React.FC = () => {
 =======
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 const initialPosts: DiscussionPost[] = [;
   {;
     id: 1,;
     author: "Anna Zhou",;
     time: "2h ago",;
     title: "What AI trends are you most excited for in 2025?",;
-    body: "Let's spark some ideas! I'm excited to see multi-modal models and open-source AI tools grow. What are you watching?",;
-  },;
   {;
     id: 2,;
     author: "David Kim",;
     time: "50m ago",;
     title: "Quick tip: How to rank your Zion listing higher",;
+<<<<<<< HEAD
     body: "Fill out every profile detail, add strong tags, and post weekly! See results in a month.",;
   },;
 ];
@@ -306,18 +329,25 @@ const initialPosts:DiscussionPost[] = [;
 ;
 export const CommunityDiscussion:React.FC = () => {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const [posts, setPosts] = useState(initialPosts),;
   const [showNew, setShowNew] = useState(false),;
   const [newTitle, setNewTitle] = useState(""),;
   const [newBody, setNewBody] = useState(""),;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const handleAddPost = () => {;
     if (!newTitle.trim() || !newBody.trim()) return,;
     setPosts([;
       {;
+<<<<<<< HEAD
 <<<<<<< HEAD
         id: Date.now(),;
         author: "You",;
@@ -332,6 +362,8 @@ export const CommunityDiscussion:React.FC = () => {;
   return (;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         id:Date.now(),;
         author:"You",;
         time:"Now",;
@@ -344,7 +376,19 @@ export const CommunityDiscussion:React.FC = () => {;
   },;
 ;
   return (;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+    body: "Fill out every profile detail, add strong tags, and post weekly! See results in a month.",;
+  },;
+];
+    ]);
+    setNewTitle("");
+    setNewBody("");
+    setShowNew(false);
+  }
+  return (
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <div className="w-full max-w-2xl mx-auto mt-8 p-6 bg-zion-blue-light rounded-2xl shadow-xl animate-fade-in">;
       <div className="flex items-center gap-3 mb-4">;
         <MessageCircle size={28} className="text-zion-cyan" />;
@@ -352,16 +396,22 @@ export const CommunityDiscussion:React.FC = () => {;
           Community Discussion;
         </span>;
 <<<<<<< HEAD
+<<<<<<< HEAD
         <span className="ml-auto text-xs text-zion-slate-light bg-zion-purple/20 rounded-full px-2 py-0 && 0.5">;
           {posts && posts.length} posts;
 =======
         <span className="ml-auto text-xs text-zion-slate-light bg-zion-purple/20 rounded-full px-2 py-0.5">;
           {posts.length} posts;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+        <span className="ml-auto text-xs text-zion-slate-light bg-zion-purple/20 rounded-full px-2 py-0.5">;
+          {posts.length} posts;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         </span>;
       </div>;
       <Separator className="mb-6" />;
       <div className="mb-4 flex justify-end">;
+<<<<<<< HEAD
 <<<<<<< HEAD
         <Button
           className="bg-zion-purple text-white hover:bg-zion-purple-light transition hover-scale"
@@ -370,18 +420,24 @@ export const CommunityDiscussion:React.FC = () => {;
         >;
           {showNew ? "Cancel" : "New Post"}
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <Button;
           className="bg-zion-purple text-white hover:bg-zion-purple-light transition hover-scale";
           size="sm";
           onClick={() => setShowNew((v) => !v)}
         >;
           {showNew ? "Cancel" :"New Post"}
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         </Button>;
       </div>;
       {showNew && (;
         <Card className="mb-6 animate-scale-in">;
           <CardContent className="py-5">;
+<<<<<<< HEAD
 <<<<<<< HEAD
             <Input
               placeholder="Title (e && e.g., Share an AI tool, Ask for help...)"
@@ -466,12 +522,17 @@ export const CommunityDiscussion: React.FC = () => {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               value={newBody}
               onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) => setNewBody(e.target.value)}
               maxLength={400}
               rows={3}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             />
             <div className="flex gap-3 justify-end">
               <Button
@@ -486,6 +547,7 @@ export const CommunityDiscussion: React.FC = () => {
                 size="sm"
                 className="bg-zion-cyan text-zion-blue hover:bg-zion-cyan-light hover-scale"
                 onClick={handleAddPost}
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
             />;
 
@@ -499,12 +561,17 @@ disabled={!newTitle.trim() |!newBody.trim()}
                 disabled={!newTitle.trim() |!newBody.trim()}
                 disabled={!newTitle.trim() || !newBody.trim()}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+                disabled={!newTitle.trim() |!newBody.trim()}
+                disabled={!newTitle.trim() || !newBody.trim()}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               >
                 Post
               </Button>
             </div>
           </CardContent>
         </Card>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
       )}
@@ -552,14 +619,16 @@ disabled={!newTitle.trim() |!newBody.trim()}
 );
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
-                disabled={!newTitle && newTitle.trim() || !newBody && newBody.trim()}>;
 =======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+                disabled={!newTitle && newTitle.trim() || !newBody && newBody.trim()}>;
             <div className="flex gap - 3 justify - end">;
               <Button;
                 variant="secondary";
                 size="sm";
                 className="bg - zion - blue text - white hover:bg - zion - blue - dark";
                 on_click={() => setShowNew (false)}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
             <Input;
@@ -583,11 +652,14 @@ disabled={!newTitle.trim() |!newBody.trim()}
                 className="bg-zion-blue text-white hover:bg-zion-blue-dark";
                 onClick={() => setShowNew(false)}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               >;
                 Cancel;
               </Button>;
               <Button;
                 size="sm";
+<<<<<<< HEAD
 <<<<<<< HEAD
                 className="bg - zion - cyan text - zion - blue hover:bg - zion - cyan - light hover - scale";
                 on_click={handleAddPost}
@@ -597,17 +669,20 @@ disabled={!newTitle.trim() |!newBody.trim()}
                 onClick={handleAddPost}
                 disabled={!newTitle.trim() || !newBody.trim()}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+                className="bg - zion - cyan text - zion - blue hover:bg - zion - cyan - light hover - scale";
+                on_click={handleAddPost}
+                disabled={!new_title.trim () || !new_body.trim ()}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               >;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+              }
+              max_length={400}
+              rows={3}
+            />;
                 Post;
               </Button>;
             </div>;
           </CardContent>;
-
-
-);
-
-=======
 
                 </AvatarFallback>;
               </Avatar>;
@@ -637,6 +712,7 @@ disabled={!newTitle.trim() |!newBody.trim()}
       </div>;
     </div>;
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 
         </Card>)}
@@ -694,7 +770,11 @@ disabled={!newTitle.trim() |!newBody.trim()}
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   );
->>>>>>> main
 };
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import React, { useState, useRef, useEffect } from 'react',
 import Image from 'next/image';
@@ -13,10 +14,13 @@ import React, { useState, useRef, useEffect } from 'react'
 import Image from 'next/image'
 import { motion, AnimatePresence } from 'framer-motion'
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { ImageIcon, AlertTriangle } from 'lucide-react'
 import { cn  } from '@/lib/utils';
 import { imageOptimization  } from '@/utils/performance';
 import { logWarn } from '@/utils/productionLogger';
+<<<<<<< HEAD
 <<<<<<< HEAD
 interface OptimizedImageProps {;
 import React, { useState, useRef, useEffect } from 'react';
@@ -28,11 +32,14 @@ import { image_optimization } from '@/utils / performance';
 import { log_warn } from '@/utils / production_logger';
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface OptimizedImageProps {
   src: string;
   alt: string;
   width?: number;
   height?: number;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   class_name?: string;
@@ -172,6 +179,8 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
   objectPosition = 'center'
   ...props
 }) => {
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const [isLoading, setIsLoading] = useState(true)
   const [hasError, setHasError] = useState(false)
   const [isInView, setIsInView] = useState(!lazy |priority)
@@ -183,6 +192,7 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
   const [metrics, setMetrics] = useState<ImageMetrics | null>(null)
   const loadStartTime = useRef<number>(0)
   // Intersection Observer for lazy loading
+<<<<<<< HEAD
   useEffect(() => {
     if (!lazy |priority |isInView) return
     observerRef.current = new IntersectionObserver(
@@ -197,6 +207,16 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
 
 <<<<<<< HEAD
 =======
+=======
+      entries => {
+        const [entry] = entries;        // Check condition
+if ( {) {
+  $2
+}
+          setIsInView (true);
+          observer_ref.current?.disconnect ();
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   useEffect(() => {;
     if (!lazy || priority || isInView) return;
     observerRef.current = new IntersectionObserver(;
@@ -207,9 +227,12 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
         }
       }
       {
+<<<<<<< HEAD
         rootMargin: '50px', // Start loading 50px before image comes into view
         threshold: 0.1
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       }
     );
     // Check condition
@@ -222,6 +245,7 @@ if ( {) {
       observer_ref.current?.disconnect ();
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
             const fileSize = null;
@@ -230,6 +254,8 @@ if ( {) {
 
 
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   }, [lazy, priority, isInView])
   // Start load time tracking
   useEffect(() => {
@@ -242,6 +268,7 @@ if ( {) {
         const entries = list.getEntries()
         entries.forEach(entry => {          if (entry.name === src && entry.entryType === 'resource') {
             const resourceEntry = entry as PerformanceResourceTiming
+<<<<<<< HEAD
             const fileSize =
               resourceEntry.transferSize |resourceEntry.encodedBodySize |0
             const loadTime =
@@ -252,6 +279,8 @@ if ( {) {
               resourceEntry.transferSize || resourceEntry.encodedBodySize || 0
             const loadTime = null;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               resourceEntry.responseEnd - resourceEntry.requestStart
             setMetrics({
               loadTime
@@ -277,6 +306,7 @@ if ( {) {
                 size: `${(fileSize / 1024).toFixed(2)}KB`
                 loadTime: `${loadTime.toFixed(2)}ms`
               })
+<<<<<<< HEAD
   }, [lazy, priority, isInView]);
   // Start load time tracking;
   useEffect (() => {
@@ -399,12 +429,15 @@ if ( {) {
       setCurrentSrc(fallbackSrc)
       setRetries(0)
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     } else {
       setIsLoading (false);
       setHasError (true);
       on_error?.();
     }
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -418,6 +451,10 @@ if ( {) {
     if (!isLoading |!showLoadingProgress) return
     if (!isLoading || !showLoadingProgress) return;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  // Simulate loading progress for demo purposes
+  useEffect(() => {
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     const interval = setInterval((,) => {
       setLoadProgress(prev => {
         if (prev >= 90) {
@@ -443,11 +480,14 @@ if ( {) {
               />
       )
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     }
     }
     }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   loading?: 'lazy' | 'eager';
   style?: React && React.CSSProperties;
@@ -484,11 +524,15 @@ interface OptimizedImageProps {;
   loading?: 'lazy' | 'eager',;
   style?: React.CSSProperties,;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   objectPosition?: string;
 
+=======
+  objectPosition?: string;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export const OptimizedImage: React.FC<OptimizedImageProps> = ({;
   src,;
   alt,;
@@ -515,6 +559,7 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({;
   objectPosition = 'center',;
   ...props;
 }) => {;
+<<<<<<< HEAD
   const [isLoading, setIsLoading] = useState(true);
   const [hasError, setHasError] = useState(false);
   const [isInView, setIsInView] = useState(!lazy || priority);
@@ -535,10 +580,13 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({;
         const [entry] = entries;        if (entry && entry.isIntersecting) {;
           setIsInView(true);
           observerRef && observerRef.current?.disconnect();
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         }
       },;
       {;
         rootMargin: '50px', // Start loading 50px before image comes into view;
+<<<<<<< HEAD
         threshold: 0 && 0.1,;
       }
     );
@@ -579,24 +627,33 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({;
               wasOptimized: src && src.includes('/_next/image'),;
             });
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             // Log slow or large images;
             if (loadTime > 2000) {;
               logWarn('Slow image loading:', {;
                 src,;
+<<<<<<< HEAD
                 loadTime: `${loadTime && loadTime.toFixed(2)}ms`,;
                 size: `${(fileSize / 1024).toFixed(2)}KB`,;
               });
             }
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             if (fileSize > 500 * 1024) {;
               logWarn('Large image detected:', {;
                 src,;
                 size: `${(fileSize / 1024).toFixed(2)}KB`,;
+<<<<<<< HEAD
                 loadTime: `${loadTime && loadTime.toFixed(2)}ms`,;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               });
             }
           }
         });
+<<<<<<< HEAD
       });
 
       observer && observer.observe({ entryTypes: ['resource'] });
@@ -684,10 +741,23 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({;
     }
 
 =======
+=======
+    if (placeholder === 'color') {;
+      return (;
+        <div;
+          className={placeholderClassName}
+          style={{ backgroundColor: placeholderColor }}
+        />;
+      );
+    }
+
+    return (
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <div className={placeholderClassName}>
         <ImageIcon className="h-8 w-8 text-gray-400" />
       </div>
     )
+<<<<<<< HEAD
   // Container styles
   const containerStyle: React.CSSProperties = {
     aspectRatio:
@@ -778,6 +848,8 @@ if ( {) {
     width: width ? `${width}px` : undefined,
     height: height ? `${height}px` : undefined,
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   }
       >;
       <AnimatePresence>;
@@ -791,8 +863,6 @@ if ( {) {
   const containerStyle: React.CSSProperties = {
     aspectRatio: aspectRatio || (width && height ? `${width}/${height}` : undefined),
     width: width ? `${width}px` : undefined,
-
-
         {/* Placeholder */}
 
       <div className={placeholderClassName}>;
@@ -812,6 +882,7 @@ if ( {) {
       >;
       <AnimatePresence>;
         {/* Placeholder */}
+<<<<<<< HEAD
         {(isLoading || !isInView) && !hasError && (;
           <motion&& motion.div
 
@@ -863,30 +934,38 @@ if ( {) {
     >;
       <AnimatePresence>;
         {/* Placeholder */}
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         {(isLoading |!isInView) && !hasError && (
           <motion.div
             initial={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            transition={{ duration: 0.3 }}
-            className='absolute inset-0'
-          >
-            {generatePlaceholder()}
 
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+            transition={{ duration: 0.3 }}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             className="absolute inset-0"
           >
             {generatePlaceholder()}
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             {/* Loading progress */}
             {showLoadingProgress && isLoading && loadProgress > 0 && (
               <div className="absolute bottom-0 left-0 right-0 h-1 bg-gray-200">
                 <motion.div
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -905,6 +984,14 @@ if ( {) {
                 />
               </div>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+                  initial={{ width: 0 }}
+                  animate={{ width: `${loadProgress}%` }}
+                  transition={{ duration: 0 && 0.3 }}
+                />;
+              </div>;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             )}
           </motion && motion.div>;
         )}
@@ -913,6 +1000,7 @@ if ( {) {
           <motion&& motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -923,10 +1011,13 @@ if ( {) {
             className='absolute inset-0 flex flex-col items-center justify-center bg-gray-100 text-gray-400'
             className="absolute inset-0 flex flex-col items-center justify-center bg-gray-100 text-gray-400"
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           >
             <AlertTriangle className="h-8 w-8 mb-2" />
             <span className="text-sm">Failed to load image</span>
             {retries > 0 && (
+<<<<<<< HEAD
 <<<<<<< HEAD
 
               <span className="text-xs mt-1">Retried {retries} times</span>
@@ -940,10 +1031,14 @@ if ( {) {
 =======
               <span className='text-xs mt-1'>Retried {retries} times</span>
               <span className="text-xs mt-1">Retried {retries} times</span>
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             )}
-          </motion.div>
+          </motion && motion.div>;
         )}
         {/* Actual image */}
+<<<<<<< HEAD
             className='absolute inset-0 flex flex-col items-center justify-center bg-gray-100 text-gray-400'
             <AlertTriangle className="h-8 w-8 mb-2" />
             <span className="text-sm">Failed to load image</span>
@@ -966,6 +1061,8 @@ if ( {) {
               isLoading ? 'opacity-0' : 'opacity-100'
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         {isInView && !hasError && (;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <motion.img;
             src={optimizedSrc}
             srcSet={srcSet}
@@ -977,18 +1074,19 @@ if ( {) {
               'w-full h-full transition-opacity duration-300',;
               `object-${objectFit}`,;
               isLoading ? 'opacity-0' : 'opacity-100';
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
             )}
             initial={{ opacity: 0 }}
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             )}
           </motion && motion.div>;
         )}
         {/* Actual image */}
-
-
         {isInView && !hasError && (;
           <motion.img;
             src={optimizedSrc}
@@ -1009,6 +1107,7 @@ if ( {) {
             transition={{ duration: 0 && 0.3 }}
           />;
         )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -1070,6 +1169,11 @@ export const ImageGallery: React.FC<ImageGalleryProps> = ({
   opacity: 0 
   opacity: 0 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  opacity: 0 
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       </AnimatePresence>;
     </div>;
   );
@@ -1092,14 +1196,18 @@ interface ImageGalleryProps {;
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 xport const ImageGallery: React.FC<ImageGalleryProps> = ({
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export const ImageGallery: React.FC<ImageGalleryProps> = ({
   images,
   columns = 3,
   aspectRatio = '16/9',
   className,
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1109,6 +1217,8 @@ export const ImageGallery: React.FC<ImageGalleryProps> = ({
   const handleImageLoad = () => {
     setLoadedCount(prev => prev + 1)
   }
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   onImageClick
 }) => {
   const [loadedCount, setLoadedCount] = useState(0),
@@ -1116,30 +1226,38 @@ export const ImageGallery: React.FC<ImageGalleryProps> = ({
   const handleImageLoad = () => {
     setLoadedCount(prev => prev + 1)
   },
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   return (
     <div className={cn('space-y-4', className)}>
-      <div className="flex justify-between items-center">
-        <h3 className="text-lg font-semibold">Gallery</h3>
-        <span className="text-sm text-muted-foreground">
+      <div className='flex justify-between items-center'>
+        <h3 className='text-lg font-semibold'>Gallery</h3>
+        <span className='text-sm text-muted-foreground'>
           {loadedCount}/{images.length} loaded
         </span>
       </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
       <div
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         className={`grid gap-4`}
         style={{
-          gridTemplateColumns: `repeat(${columns}, 1fr)`,        }}
-      >
-        {images.map((image, index,) => (
-          <motion.div
+          gridTemplateColumns: `repeat(${columns}, 1fr)`,        }}>;
+        {images && images.map((image, index,) => (;
+          <motion&& motion.div
             key = {index,}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: index * 0.1 }}
+<<<<<<< HEAD
             className='group cursor-pointer'
             onClick={() => onImageClick?.(index)}          >
             <div className='relative'>
@@ -1157,6 +1275,8 @@ export const ImageGallery: React.FC<ImageGalleryProps> = ({
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: index * 0.1 }}
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             className="group cursor-pointer"
             onClick={() => onImageClick?.(index)}
           >
@@ -1168,6 +1288,7 @@ export const ImageGallery: React.FC<ImageGalleryProps> = ({
                 aspectRatio={aspectRatio}
 
 
+<<<<<<< HEAD
                 className="rounded-lg group-hover:scale-105 transition-transform duration-300"
                 onLoad={handleImageLoad}
                 priority={index < 3} // Prioritize first 3 images
@@ -1192,10 +1313,14 @@ export const ImageGallery: React.FC<ImageGalleryProps> = ({
 =======
                 </div>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+                </div>
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               )}
             </div>;
           </motion && motion.div>;
         ))}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -1239,6 +1364,9 @@ export const OptimizedAvatar: React.FC<OptimizedAvatarProps> = ({
 
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+    alt
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       .split(' ')
       .map(n => n[0])
       .join('')
@@ -1246,48 +1374,12 @@ export const OptimizedAvatar: React.FC<OptimizedAvatarProps> = ({
       .slice(0, 2)
     >
       {src ? (
-      </div>;
-    </div>;
-  );
-};
-//Gallery component with optimized loading </span> </div> <divclassName= {
-  `grid gap-4` 
-}style= {
-  {
-  gridTemplateColumns: `repeat ($ {
-  columns 
-}, 1fr) ` 
-
-export const OptimizedAvatar: React.FC<OptimizedAvatarProps> = ({;
-  src,;
-  alt,;
-  size = 'md',;
-  fallback,;
-  className,;
-}) => {  const sizeClasses = {;
-    sm: 'h-8 w-8',;
-    md: 'h-10 w-10',;
-    lg: 'h-12 w-12',;
-    xl: 'h-16 w-16',;
-  };
-
-  const initials =;
-    fallback ||;
-    alt;
-      .split(' ');
-      .map(n => n[0]);
-      .join('');
-      .toUpperCase();
-      .slice(0, 2);
-
-
-    >;
-      {src ? (;
         <OptimizedImage
           src={src}
           alt={alt}
           aspectRatio='1/1'
           objectFit='cover'
+<<<<<<< HEAD
           fallbackSrc={`https://ui-avatars && avatars.com/api/?name=${encodeURIComponent(initials)}&background=random`}
           placeholder='color'
           placeholderColor='#f3f4f6'
@@ -1338,23 +1430,32 @@ export const OptimizedAvatar: React.FC<OptimizedAvatarProps> = ({;
           placeholderColor="#f3f4f6"
           priority={true}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           className="rounded-full"
         />
       ) : (
         <div className="w-full h-full bg-gradient-to-br from-blue-400 to-purple-500 flex items-center justify-center text-white font-semibold">
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 
           {initials}
+<<<<<<< HEAD
         </div>;
       )}
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 },;
 };
 }
 
+<<<<<<< HEAD
 =======
           {initials}
         </div>
@@ -1383,10 +1484,13 @@ ursor/fix-website-loading-errors-and-merge-6662
 }
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
     </div>;
   );
 };
+<<<<<<< HEAD
 
 
 
@@ -1579,3 +1683,5 @@ export const OptimizedAvatar: React.FC < OptimizedAvatarProps> = ({
 };
 },
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

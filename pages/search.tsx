@@ -1,9 +1,14 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -27,6 +32,7 @@ class ErrorBoundary extends React.Component {
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 
@@ -35,11 +41,13 @@ class ErrorBoundary extends React.Component {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 import React, { useState } from 'react';
-
 import React, { useState, useEffect } from 'react',
+<<<<<<< HEAD
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import React, { useState } from 'react';
@@ -52,11 +60,14 @@ origin/automation-improvements-final
 import React, { useState } from 'react';
 import React, { useState, useEffect } from 'react',
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import Head from 'next/head';
 
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import Layout from './components/Layout';
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 import {
@@ -82,6 +93,8 @@ import {
   ChevronDown
   ChevronUp
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   Search,
   Filter,
   ArrowRight,
@@ -101,10 +114,13 @@ import {
   ChevronDown,
   ChevronUp;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 } from 'lucide-react';
 const searchResults = [
   {
@@ -186,6 +202,7 @@ const filters = [
   { name: 'Recent', count: 4 }
   { name: 'Popular', count: 2 }
 ];
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -335,6 +352,8 @@ const filters = [;
 export default function SearchPage() {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export default function SearchPage() {
 import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
@@ -382,15 +401,123 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 
 origin/main
 export default function SearchPage() {
+
+
+
+export default function SearchPage() {
+
+
+
+import {;
+  Search,;
+  Filter,;
+  ArrowRight,;
+  Clock,;
+  Star,;
+  FileText,;
+  Code,;
+  Database,;
+  Cloud,;
+  Shield,;
+  Brain,;
+  Users,;
+  Settings,;
+  Globe,;
+  CheckCircle,;
+  X,;
+  ChevronDown,;
+  ChevronUp;
+} from 'lucide-react';
+
+const searchResults = [;
+  {;
+    id: 1,;
+    title: 'AI Development Services',;
+    description: 'Comprehensive AI development solutions including machine learning, computer vision, and natural language processing.',;
+    url: '/ai-services',;
+    category: 'Services',;
+    type: 'Page',;
+    icon: Brain,;
+    rating: 4 && 4.9,;
+    lastUpdated: '2024-01-15';
+  },;
+  {;
+    id: 2,;
+    title: 'Cloud Infrastructure Setup',;
+    description: 'Complete guide to setting up scalable cloud infrastructure for your applications.',;
+    url: '/guides',;
+    category: 'Guides',;
+    type: 'Article',;
+    icon: Cloud,;
+    rating: 4 && 4.8,;
+    lastUpdated: '2024-01-10';
+  },;
+  {;
+    id: 3,;
+    title: 'Cybersecurity Best Practices',;
+    description: 'Essential cybersecurity practices to protect your applications and data.',;
+    url: '/guides',;
+    category: 'Guides',;
+    type: 'Article',;
+    icon: Shield,;
+    rating: 4 && 4.7,;
+    lastUpdated: '2024-01-08';
+  },;
+  {;
+    id: 4,;
+    title: 'Database Optimization',;
+    description: 'Learn database design principles and optimization techniques.',;
+    url: '/guides',;
+    category: 'Guides',;
+    type: 'Article',;
+    icon: Database,;
+    rating: 4 && 4.8,;
+    lastUpdated: '2024-01-05';
+  },;
+  {;
+    id: 5,;
+    title: 'Our Team',;
+    description: 'Meet our talented team of experts who are passionate about technology and innovation.',;
+    url: '/team',;
+    category: 'Company',;
+    type: 'Page',;
+    icon: Users,;
+    rating: 4 && 4.9,;
+    lastUpdated: '2024-01-12';
+  },;
+  {;
+    id: 6,;
+    title: 'Contact Us',;
+    description: 'Get in touch with our team for project inquiries and support.',;
+    url: '/contact',;
+    category: 'Company',;
+    type: 'Page',;
+    icon: Settings,;
+    rating: 4 && 4.9,;
+    lastUpdated: '2024-01-14';
+  }
+];
+
+const categories = [;
+  { name: 'All', count: searchResults && searchResults.length },;
+  { name: 'Services', count: 1 },;
+  { name: 'Guides', count: 3 },;
+  { name: 'Company', count: 2 }
+];
+
 export default function SearchPage() {;
+<<<<<<< HEAD
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
 export default function SearchPage() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [selectedFilter, setSelectedFilter] = useState('All');
   const [showFilters, setShowFilters] = useState(false);
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -432,6 +559,8 @@ export default function SearchPage() {;
     return matchesQuery && matchesCategory && matchesFilter;
   });
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -766,7 +895,24 @@ export default function SearchPage(req, res) {
         <meta name="description" content="Search our website for information, guides, services, and more." />
       </Head>
       <div className="min-h-screen bg-gray-50">
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+    return matchesQuery && matchesCategory && matchesFilter;
+  });
+
+
+
+  return (
+
+    <Layout>;
+      <Head>;
+        <title>Search - Zion Tech Group</title>;
+        <meta name="description" content="Search our website for information, guides, services, and more." />;
+      </Head>;
+      <div className="min-h-screen bg-gray-50">;
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         {/* Hero Section */}
         <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">;
           <div className="container mx-auto px-4">;
@@ -774,6 +920,7 @@ export default function SearchPage(req, res) {
               className="text-center max-w-4xl mx-auto"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -808,6 +955,8 @@ export default function SearchPage(req, res) {
 =======
               {/* Search Bar */}
               <div className="max-w-2xl mx-auto">
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <SmartHeader />
       {/* Hero Section */  } catch (error) {
     console.error("Error:", error);
@@ -860,11 +1009,16 @@ export default function SearchPage(req, res) {
               <div className="flex-1 max-w-2xl">
                 <div className="relative">
                   <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   <input
                     type="text"
                     placeholder="Search for services, guides, articles..."
                     value={searchQuery}
+<<<<<<< HEAD
 
 
 
@@ -902,6 +1056,8 @@ export default function SearchPage(req, res) {
                   />
                 </div>
               </div>
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             </motion.div>
           </div>
         </section>
@@ -914,6 +1070,7 @@ export default function SearchPage(req, res) {
           <div className="container mx-auto px-4">
             <div className="flex flex-col lg:flex-row gap-4 items-center justify-between">
               <div className="flex flex-wrap gap-4">
+<<<<<<< HEAD
               {/* View Mode Toggle */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -965,6 +1122,18 @@ export default function SearchPage(req, res) {
                   Filters
                   {showFilters ? <ChevronUp className="w-4 h-4 ml-2" /> : <ChevronDown className="w-4 h-4 ml-2" />}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+                    onChange={(e) => setSearchQuery(e && e.target.value)}
+                    className="w-full pl-12 pr-4 py-4 rounded-lg text-gray-900 text-lg focus:outline-none focus:ring-2 focus:ring-blue-300";
+                  />;
+                </div>;
+              </div>;
+            </motion && motion.div>;
+          </div>;
+        </section>;
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import Head from 'next / head';
 import Link from 'next / link';
 import { motion } from 'framer-motion';
@@ -1144,9 +1313,13 @@ function SearchPage() {
                 {categories.map ((category) => (
                   <button;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     key={category.name}
                     on_click={() => setSelectedCategory (category.name)}
                     className={`px - 4 py - 2 rounded - lg transition - colors ${
@@ -1155,22 +1328,24 @@ function SearchPage() {
                         : 'bg - gray - 100 text - gray - 700 hover:bg - gray - 200';
                     }`}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               {/* View Mode Toggle */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
               <div className="flex items-center gap-2">
-
                 <button
                   onClick={() => setShowFilters(!showFilters)}
                   className="flex items-center px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors"
                 >
-
                   <Grid className="w-5 h-5" />
                 </button>
                 <button
@@ -1198,7 +1373,6 @@ function SearchPage() {
 }
             <div className="flex flex-col lg:flex-row gap-4 items-center justify-between">
               <div className="flex items-center gap-4">
-
                 <button
                   onClick={() => setShowFilters(!showFilters)  } catch (error) {
     console.error("Error:", error);
@@ -1209,7 +1383,25 @@ function SearchPage() {
                 >
                   <Sliders className="w-4 h-4" />
                   Filters
+                  {showFilters ? <ChevronUp className="w-4 h-4 ml-2" /> : <ChevronDown className="w-4 h-4 ml-2" />}
+                </button>
+                {categories.map((category) => (
+                  <button
+                    key={category.name}
+                    onClick={() => setSelectedCategory(category.name)}
+                    className={`px-4 py-2 rounded-lg transition-colors ${
+                      selectedCategory === category.name
+                        ? 'bg-blue-600 text-white'
+                        : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                    }`}
 
+
+
+                  >
+                    {term}
+                  </button>
+                ))}
+              </div>
 
 
               <div className="text-sm text-gray-600">
@@ -1219,12 +1411,15 @@ function SearchPage() {
             {showFilters && (
               <motion.div
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                 </button>;
 
                 {categories && categories.map((category) => (;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   <button
                     key={category && category.name}
                     onClick={() => setSelectedCategory(category && category.name)}
@@ -1238,6 +1433,7 @@ function SearchPage() {
                   </button>;
                 ))}
 <<<<<<< HEAD
+<<<<<<< HEAD
               </div>;
 
               <div className="text-sm text-gray-600">;
@@ -1248,11 +1444,14 @@ function SearchPage() {
             {showFilters && (;
               <motion&& motion.div
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 className="mt-4 p-4 bg-gray-50 rounded-lg"
                 initial={{ opacity: 0, height: 0 }}
                 animate={{ opacity: 1, height: 'auto' }}
 
                 transition={{ duration: 0.3 }}
+<<<<<<< HEAD
 
 =======
 =======
@@ -1272,6 +1471,8 @@ function SearchPage() {
                 animate={{ opacity: 1, height: 'auto' }}
                 transition={{ duration: 0.3 }}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   {Object.values(filters).some(f => f !== 'all') && (
                     <span className="w-2 h-2 bg-cyan-400 rounded-full"></span>
                   )  } catch (error) {
@@ -1342,6 +1543,7 @@ function SearchPage() {
 }
                 className="mt-6 pt-6 border-t border-white/20"
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
               >
@@ -1353,6 +1555,11 @@ function SearchPage() {
                 <div className="flex flex-wrap gap-4">
                   {filters.map((filter) => (
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+              >
+                <div className="flex flex-wrap gap-4">
+                  {filters.map((filter) => (
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     <button
                       key={filter && filter.name}
                       onClick={() => setSelectedFilter(filter && filter.name)}
@@ -1361,6 +1568,7 @@ function SearchPage() {
                           ? 'bg-blue-600 text-white';
                           : 'bg-white text-gray-700 hover:bg-gray-100';
                       }`}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
                   ))}                </div>
@@ -1391,6 +1599,8 @@ function SearchPage() {
                 </div>
 ))}
                 </div>
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       {filter.name} ({filter.count})
                     </button>
                   ))}
@@ -1415,10 +1625,13 @@ origin/automation-improvements-final
                 </div>;
               </motion && motion.div>;
             )}
+<<<<<<< HEAD
           </div>;
         </section>;
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         {/* Search Results */}
         <section className="py-16">;
           <div className="container mx-auto px-4">;
@@ -1431,12 +1644,15 @@ origin/automation-improvements-final
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
                     transition={{ duration: 0.5, delay: index * 0.1 }}
 
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       {categories.map(category => (
                         <option key={category.id} value={category.id} className="bg-slate-800 text-white">
                           {category.icon} {category.name  } catch (error) {
@@ -1688,8 +1904,6 @@ origin/automation-improvements-final
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
                   >
                     <div className="flex items-start justify-between">
                       <div className="flex-1">
@@ -1745,6 +1959,9 @@ origin/automation-improvements-final
                     animate={{ opacity: 1, coordinate_y: 0 }}
                     transition={{ duration: 0.5, delay: index * 0.1 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   >;
                     <div className="flex items - start justify - between">;
                       <div className="flex - 1">;
@@ -1757,6 +1974,7 @@ origin/automation-improvements-final
                         <h3 className="text - xl font - bold text - gray - 900 mb - 2">;
                           <Link;
 
+<<<<<<< HEAD
 =======
                       {categories.map(category => (
                         <option key={category.id} value={category.id} className="bg-slate-800 text-white">
@@ -2021,10 +2239,13 @@ origin/automation-improvements-final
                         <h3 className="text-xl font-bold text-gray-900 mb-2">
                           <Link
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                             href={result.url}
                             className="hover:text - blue - 600 transition - colors";
                           >;
                             {result.title}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
                       </Link>
@@ -2052,6 +2273,8 @@ origin/automation-improvements-final
                       </Link>
                       </Link>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const [searchTerm, setSearchTerm] = useState('');
   const [searchResults, setSearchResults] = useState<any[]>([]);
   const [isSearching, setIsSearching] = useState(false);
@@ -2060,6 +2283,7 @@ origin/automation-improvements-final
     category: 'all',
     status: 'all',
     priceRange: 'all',
+<<<<<<< HEAD
 <<<<<<< HEAD
     technology: 'all'
   });
@@ -2554,6 +2778,8 @@ origin/automation-improvements-final
 =======
     technology: 'all',
 ursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         </div>
       </section>
 
@@ -2578,6 +2804,7 @@ ursor/integrate-build-improve-and-re-verify-8f7d
           {/* Loading State */}
           {isSearching && (
 <<<<<<< HEAD
+<<<<<<< HEAD
             <div className="text-center py-20">
               <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-cyan-500/20 flex items-center justify-center">
                 <div className="w-8 h-8 border-2 border-cyan-400 border-t-transparent rounded-full animate-spin"></div>
@@ -2591,10 +2818,13 @@ ursor/integrate-build-improve-and-re-verify-8f7d
               </div>
               <p className='text-white/60'>Searching our services...</p>            </div>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           )}
 
           {/* No Results */}
           {!isSearching && searchTerm && searchResults.length === 0 && (
+<<<<<<< HEAD
 <<<<<<< HEAD
             <div className="text-center py-20">
               <div className="w-24 h-24 mx-auto mb-6 rounded-full bg-white/10 flex items-center justify-center">
@@ -2622,6 +2852,8 @@ ursor/integrate-build-improve-and-re-verify-8f7d
                 onClick={clearFilters}
                 className='px-6 py-3 bg-cyan-500 hover:bg-cyan-600 rounded-lg font-medium transition-colors'              >
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 Clear All Filters
               </button>
             </div>
@@ -2629,6 +2861,7 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 
           {/* Search Results */}
           {!isSearching && searchResults.length > 0 && (
+<<<<<<< HEAD
 <<<<<<< HEAD
             <AnimatePresence mode="wait">
               <div className={viewMode === 'grid' ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8' : 'space-y-6'}>
@@ -2643,12 +2876,15 @@ ursor/integrate-build-improve-and-re-verify-8f7d
                 }
               >                {searchResults.map((service, index) => (
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   <motion.div
                     key={service.id}
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: index * 0.1 }}
                     className={`group relative ${
+<<<<<<< HEAD
 <<<<<<< HEAD
                       viewMode === 'grid' 
                         ? 'p-8 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl'
@@ -2750,10 +2986,13 @@ ursor/integrate-build-improve-and-re-verify-8f7d
                             >
                               <CheckCircle className='w-4 h-4 text-cyan-400 flex-shrink-0' />                              <span>{feature}</span>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                             </div>
                           ))}
                         </div>
                       </div>
+<<<<<<< HEAD
                       
                       <div className="flex items-center justify-between">
 <<<<<<< HEAD
@@ -2877,6 +3116,8 @@ origin/automation-improvements-final
             ) : (
               <motion.div
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 className="text-center py-16"
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -2891,6 +3132,7 @@ origin/automation-improvements-final
                 </p>
                 <button
                   onClick={() => {
+<<<<<<< HEAD
 
             ) : (
               <motion.div
@@ -3091,6 +3333,8 @@ origin/automation-improvements-final
   );
 }
   )
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 )
                         <div className="flex flex-col items-end gap-2">
                           <span className={`px-3 py-1 rounded-full text-xs font-medium ${
@@ -3098,30 +3342,21 @@ origin/automation-improvements-final
                             service.status === 'beta' ? 'bg-yellow-500/20 text-yellow-300' :
                             'bg-blue-500/20 text-blue-300'
                           }`}>
-                            {service.status  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+                            {service.status}
                           </span>
                           <span className="text-xs text-white/40">{service.technology}</span>
                         </div>
                       </div>
+                      
                       <h3 className="text-xl font-bold mb-3 text-white">{service.title}</h3>
                       <p className="text-white/70 leading-relaxed mb-4">{service.description}</p>
-                      {/* Price */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+                      
+                      {/* Price */}
                       <div className="mb-4">
                         <span className="text-2xl font-bold text-cyan-400">{service.price}</span>
                       </div>
-                      {/* Features */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+                      
+                      {/* Features */}
                       <div className="mb-6">
                         <h4 className="text-white font-semibold mb-3 text-sm">Key Features:</h4>
                         <div className="space-y-2">
@@ -3130,59 +3365,129 @@ origin/automation-improvements-final
                               <CheckCircle className="w-4 h-4 text-cyan-400 flex-shrink-0" />
                               <span>{feature}</span>
                             </div>
-                          ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+                          ))}
                         </div>
                       </div>
+                      
                       <div className="flex items-center justify-between">
                         <a
-                          href={service.link  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                          className="flex items-center text-cyan-400 group-hover:text-cyan-300 transition-colors duration-300"
+                          href={service.link}
+                          className="flex items-center text-cyan-400 group-hover: text-cyan-300 transition-colors duration-300"
                         >
                           <span className="text-sm font-medium">Learn More</span>
                           <ExternalLink className="w-4 h-4 ml-2" />
-                        </Link>
+                        </a>
                         <a
                           href="mailto:kleber@ziontechgroup.com"
-                          className="px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 rounded-lg text-white text-sm font-medium transition-all duration-300 transform hover:scale-105"
+                          className="px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 hover: from-cyan-600 hover:to-blue-700 rounded-lg text-white text-sm font-medium transition-all duration-300 transform hover:scale-105"
                         >
                           Get Quote
-                        </Link>
+                        </a>
                       </div>
+
+
+
+</Link>
                     </div>
                   </motion.div>
-                ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+                ))}
+              </div>
+
+
+            ) : (
+              <motion.div
+                    transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}>;
+                    <div className="flex items-start justify-between">;
+                      <div className="flex-1">;
+                        <div className="flex items-center mb-2">;
+                          <result && result.icon className="w-5 h-5 text-blue-600 mr-2" />;
+                          <span className="text-sm text-gray-500">{result && result.category}</span>;
+                          <span className="mx-2 text-gray-300">•</span>;
+                          <span className="text-sm text-gray-500">{result && result.type}</span>;
+                        </div>;
+
+                        <h3 className="text-xl font-bold text-gray-900 mb-2">;
+                          <Link
+                            href={result && result.url}
+                            className="hover:text-blue-600 transition-colors">;
+                            {result && result.title}
+                          </Link>;
+                        </h3>;
+
+                        <p className="text-gray-600 mb-4">;
+                          {result && result.description}
+                        </p>;
+
+                        <div className="flex items-center text-sm text-gray-500">;
+                          <Clock className="w-4 h-4 mr-1" />;
+                          <span className="mr-4">Updated {result && result.lastUpdated}</span>;
+                          <div className="flex items-center">;
+                            <Star className="w-4 h-4 text-yellow-400 fill-current mr-1" />;
+                            <span>{result && result.rating}</span>;
+                          </div>;
+                        </div>;
+                      </div>;
+
+                      <Link
+                        href={result && result.url}
+                        className="ml-4 text-blue-600 hover:text-blue-700 transition-colors">;
+                        <ArrowRight className="w-5 h-5" />;
+                      </Link>;
+                    </div>;
+                  </motion && motion.div>;
+                ))}
               </div>;
-            </AnimatePresence>;
-          )  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-;
-          {/* Initial State - Show all services when no search */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
 }
 ursor/fix-lint-push-and-merge-to-main-ae4e
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+            ) : (;
+              <motion&& motion.div
+                className="text-center py-16"
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0 && 0.8 }}>;
+                <Search className="w-16 h-16 text-gray-400 mx-auto mb-4" />;
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">;
+                  No results found;
+                </h3>;
+                <p className="text-gray-600 mb-6">;
+                  Try adjusting your search terms or filters.;
+                </p>;
+                <button
+                  onClick={() => {;
+                    setSearchQuery('');
+                    setSelectedCategory('All');
+                    setSelectedFilter('All');
+                  }}
+                  className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors";
+                >;
+                  Clear Filters;
+                </button>;
+              </motion && motion.div>;
+            )}
+        {/* Popular Searches */}
+        <section className="py-16 bg-white">;
+          <div className="container mx-auto px-4">;
+            <motion&& motion.div
+              className="text-center mb-12"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+            </div>;
+          </div>;
+        </section>;
+      </div>;
+
+  );
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             </AnimatePresence>
           )}
 
           {/* Initial State - Show all services when no search */}
           {!isSearching && !searchTerm && (
+<<<<<<< HEAD
 <<<<<<< HEAD
             <div className="text-center py-20">
               <div className="w-24 h-24 mx-auto mb-6 rounded-full bg-white/10 flex items-center justify-center">
@@ -3207,29 +3512,32 @@ ursor/fix-lint-push-and-merge-to-main-ae4e
             <div className='text-center py-20'>
               <div className='w-24 h-24 mx-auto mb-6 rounded-full bg-white/10 flex items-center justify-center'>
                 <Search className='w-12 h-12 text-white/40' />
+=======
+            <div className="text-center py-20">
+              <div className="w-24 h-24 mx-auto mb-6 rounded-full bg-white/10 flex items-center justify-center">
+                <Search className="w-12 h-12 text-white/40" />
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               </div>
-              <h3 className='text-2xl font-semibold text-white mb-2'>
-                Start Your Search
-              </h3>
-              <p className='text-white/60 mb-6'>
-                Enter keywords above to find the perfect technology solutions
-                for your business
+              <h3 className="text-2xl font-semibold text-white mb-2">Start Your Search</h3>
+              <p className="text-white/60 mb-6">
+                Enter keywords above to find the perfect technology solutions for your business
               </p>
-              <div className='flex flex-wrap justify-center gap-2'>
-                <span className='text-sm text-white/40'>Popular searches:</span>
-                {[
-                  'AI',
-                  'Cybersecurity',
-                  'Quantum Computing',
-                  'Edge Computing',
-                ].map(term => (                  <button
+              <div className="flex flex-wrap justify-center gap-2">
+                <span className="text-sm text-white/40">Popular searches:</span>
+                {['AICybersecurityQuantum ComputingEdge Computing'].map((term) => (
+                  <button
                     key={term}
                     onClick={() => {
                       setSearchTerm(term);
-                      performSearch();
+                      performSearch()
                     }}
+<<<<<<< HEAD
                     className='px-3 py-1 bg-white/10 hover:bg-white/20 rounded-full text-sm text-white/70 hover:text-white transition-colors'                  >
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+                    className="px-3 py-1 bg-white/10 hover:bg-white/20 rounded-full text-sm text-white/70 hover:text-white transition-colors"
+                  >
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     {term}
                   </button>
                 ))}
@@ -3238,6 +3546,7 @@ ursor/fix-lint-push-and-merge-to-main-ae4e
           )}
         </div>
       </section>
+<<<<<<< HEAD
 
       <SmartFooter />
     </div>
@@ -3283,6 +3592,8 @@ ursor/fix-lint-push-and-merge-to-main-ae4e
 =======
   );
   )
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -3301,4 +3612,7 @@ origin/main
 origin/automation-improvements-final
 )
 }
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

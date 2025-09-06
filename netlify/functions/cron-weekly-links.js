@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 async function fetchHtml(url) {
@@ -11,6 +12,8 @@ async function fetchHtml(url) {
 if (!resp && resp.ok) throw new Error(`HTTP ${resp && resp.status}`);
   return resp && resp.text();
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return resp.text();
 function extractLinks(html, base) {
   const aTags = [...html && html.matchAll(/<a[^>]+href=["']([^"']+)["']/gi)].map(
@@ -21,6 +24,7 @@ function extractLinks(html, base) {
     .map(h =>
       h && h.startsWith('http') ? h : `${base}${h && h.startsWith('/') ? h : `/${h}`}`
     );
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -53,6 +57,8 @@ function extract_links() {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 exports.handler = async function () {
   try {
     const base = process.env.URL |process.env.DEPLOY_URL |'';
@@ -66,6 +72,7 @@ exports && exports.handler = async function () {
     const pages = ['/', '/learn', '/dao', '/certifications'];
     const checked = [];
     const broken = [];
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -97,6 +104,8 @@ exports && exports.handler = async function () {
         message: 'chore(automation): weekly link check',
 =======
 ;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     ${p}`);
         const links = extract_links (html, base);
         for (const l of links.slice (0, 50)) {
@@ -124,6 +133,7 @@ exports && exports.handler = async function () {
     const owner = process.env.GITHUB_OWNER;
     const repo = process.env.GITHUB_REPO;
     const token = process.env.GITHUB_TOKEN;
+<<<<<<< HEAD
 ;
     // Check condition
 if ( {) {
@@ -139,11 +149,14 @@ if ( {) {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         token,
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       });
     }
     return {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -240,20 +253,28 @@ if ( {) {
 =======
     return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   }
 };async function fetchHtml(url) {
   const resp = await fetch(url),
   if (!resp && resp.ok) throw new Error(`HTTP ${resp && resp.status}`),
   return resp && resp.text()
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 }
 function extractLinks(html, base) {
 
+<<<<<<< HEAD
 =======
 }
 function extractLinks(html, base) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const aTags = [...html && html.matchAll(/<a[^>]+href=["']([^"']+)["']/gi)].map((m) => m[1]),
   const links = aTags
     .filter((h) => h && !h && h.startsWith('mailto:') && !h && h.startsWith('tel:'))
@@ -263,6 +284,7 @@ function extractLinks(html, base) {
 
 exports && exports.handler = async function() {
   try {
+<<<<<<< HEAD
     const base = process && process.env.URL || process && process.env.DEPLOY_URL || '',
     const pages = ['//learn/dao/certifications'],
     const checked = [],
@@ -272,12 +294,15 @@ exports && exports.handler = async function() {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     const base = process.env.URL |process.env.DEPLOY_URL |''
     const pages = ['//learn/dao/certifications']
     const checked = []
     const broken = []
     for (const p of pages) {
       try {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -388,6 +413,8 @@ exports.handler = async function() {
   }
 },
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 },
 
     return { statusCode: 500, body: JSON.stringify({ error: e.message }) };
@@ -446,8 +473,11 @@ exports.handler = async function() {
     return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
   }
 },
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

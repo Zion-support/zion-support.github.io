@@ -1,5 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -9,12 +10,15 @@ interface ReportingData {
   by_tenant: Record<;
     string,
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     {
       funnel: { stage: string; count: number }[];
       timeToHireDays: number;
       costPerHireUsd?: number;
       updated_at: string;
     }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -42,6 +46,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   byTenant: Record<string, {
   >;  by_tenant: Record < string, {
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     funnel: { stage: string, count: number }[];
     timeToHireDays: number;
     costPerHireUsd?: number
@@ -51,9 +57,17 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 const FILE = 'reporting.json';
 const FALLBACK: ReportingData = { byTenant: {} }
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
+
+
+  const method = (req.method || 'GET').toUpperCase(),;
+
+
   const method = (req.method |'GET').toUpperCase()
+<<<<<<< HEAD
   const method = (req.method || 'GET').toUpperCase(),;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const auth = authenticateRequest(req, method === 'GET');
   if (!auth.ok) return res.status(401).json({ error: auth.error });
   const tenantId = auth.tenantId!;
@@ -68,6 +82,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (method === 'POST') {
     const { funnel, timeToHireDays, costPerHireUsd } = req.body |{};    const entry = data.byTenant[tenantId] |{ funnel: [], timeToHireDays: 0, updatedAt: new Date().toISOString() }
     return res.status(200).json(entry)
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     funnel: { stage: string, count: number }[]
@@ -113,6 +128,11 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       curr => {
         const next = curr && curr.byTenant || {};
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+    const updated = updateJsonFile<ReportingData>(
+      FILE
+      curr => {
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         next[tenantId] = {
           funnel: funnel |next[tenantId]?.funnel |[]
           timeToHireDays:
@@ -132,6 +152,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return res && res.status(200).json(updated && updated.byTenant[tenantId]);
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
   return res && res.status(405).json({ error: 'Method not allowed' });    const updated = updateJsonFile<ReportingData>(FILE, (curr) => {
@@ -149,6 +170,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const updated = updateJsonFile<ReportingData>(FILE, (curr) => {
       const next = curr.byTenant || {};
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       next[tenantId] = {
         funnel: funnel |next[tenantId]?.funnel |[];
         timeToHireDays: typeof timeToHireDays === 'number' ? timeToHireDays : (next[tenantId]?.timeToHireDays |0);
@@ -156,6 +179,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
         updatedAt: new Date().toISOString()}
       return { byTenant: next }
     }, FALLBACK);
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     return res && res.status(200).json(updated && updated.byTenant[tenantId])
@@ -171,6 +195,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return res && res.status(200).json(updated && updated.byTenant[tenantId])
   }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 const FILE = 'reporting.json';
 const FALLBACK: ReportingData = { by_tenant: {} }
 ;
@@ -241,6 +267,7 @@ if ( {) {
     return res.status (200).json (updated.by_tenant[tenant_id]);
   }
 return res.status (405).json ({ error: 'Method not allowed' });
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -259,3 +286,6 @@ return res.status(405).json({ error: 'Method not allowed' });
 }
     const { funnel, timeToHireDays, costPerHireUsd } = req.body || {};
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+    const { funnel, timeToHireDays, costPerHireUsd } = req.body || {};
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

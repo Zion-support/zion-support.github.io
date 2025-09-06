@@ -1,13 +1,20 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useState  } from 'react';
 =======
+=======
 
-import { useState  } from 'react';
-import { useState } from 'react'
-import { Check, Copy } from 'lucide-react'
-import { cn } from "@/lib/utils";
-interface CodeBlockProps {
 
+          {language}
+        </div>;
+      )}
+
+    </div>;
+  );
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
+
+<<<<<<< HEAD
   code: string
 language?: string
 showLineNumbers?: boolean
@@ -52,17 +59,11 @@ export function CodeBlock({
 }: CodeBlockProps) {
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
-import { useState } from 'react',
-import { Check, Copy } from 'lucide-react'
-import { cn } from "@/lib/utils",
-interface CodeBlockProps {
-  code: string,
-  language?: string,
-  showLineNumbers?: boolean,
-  className?: string
-}
 
+<<<<<<< HEAD
 export function CodeBlock({ 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   code,
@@ -82,28 +83,25 @@ export function CodeBlock({
       <pre
         className={cn('p-4 overflow-auto', showLineNumbers && 'pl-12 relative')}
       >
+=======
+    >;
+      <pre;
+        className={cn ('p - 4 overflow - auto', showLineNumbers && 'pl - 12 relative')}
+      >;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         {showLineNumbers && (
           <div className='absolute left-0 top-0 bottom-0 w-8 bg-zinc-800 flex flex-col items-end pr-2 text-zinc-500'>
             {code.split('\n').map((_, i) => (
               <div key={i} className='h-6 leading-6'>                {i + 1}
               </div>
-import { useState } from 'react',
-import { Check, Copy } from 'lucide-react'
-import { cn } from "@/lib/utils",
-interface CodeBlockProps {
-  code: string,
-  language?: string,
-  showLineNumbers?: boolean,
-  className?: string
-}
-
-export function CodeBlock({ 
-  code,
-  language = 'bash',
-  showLineNumbers = false,
-  className
-}: CodeBlockProps) {
   const [copied, setCopied] = useState(false),
+
+export default CodeBlock;
+;
+}
+}
+}
+}
 
   const handleCopyClick = async () => {
     await navigator.clipboard.writeText(code),
@@ -137,6 +135,7 @@ interface CodeBlockProps {;
 }
 ;
 export function CodeBlock({;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 import { useState } from 'react';
@@ -211,15 +210,20 @@ showLineNumbers && "pl-12 relative")
   i + 1 ;
 export function CodeBlock(): any ({;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   code,;
   language = 'bash',;
   showLineNumbers = false,;
   className;
 }: CodeBlockProps) {;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   const [copied, setCopied] = useState(false);
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const [copied, setCopied] = useState(false),;
   const handleCopyClick = async () => {;
     await navigator.clipboard.writeText(code),;
@@ -242,6 +246,7 @@ export function CodeBlock(): any ({;
             {code.split('\n').map((_, i) => (;
               <div key={i} className="h-6 leading-6">;
                 {i + 1}
+<<<<<<< HEAD
 <<<<<<< HEAD
               </div>;
 ursor/fix-website-loading-errors-and-merge-6662
@@ -305,10 +310,13 @@ export function CodeBlock({ ;
         )}
         <code className='language-javascript'>{code}</code>
       </pre>
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               </div>;
             ))}
           </div>
         )}
+<<<<<<< HEAD
         <code className='language-javascript'>{code}</code>
       </pre>
       <button
@@ -393,10 +401,16 @@ export default CodeBlock;
 }
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+          {language}
+        </div>
+      )}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     </div>;
   );
 }
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
   ),;}
@@ -449,3 +463,5 @@ showLineNumbers && "pl-12 relative") ;
 '"
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 export default CodeBlock;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

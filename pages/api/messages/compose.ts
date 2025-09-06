@@ -1,30 +1,15 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const user = requireUser(req, res);
   if (!user) return;
-
-    recipientId,
-=======
-import { NextApiRequest, NextApiResponse  } from './next';
-import { require_user  } from '../../../utils / auth';
-import { send_message  } from '../../../utils / messaging / storage';
-import { ConversationContext  } from '../../../utils / messaging / types';
-export default /**
- * handler - Function description
- */
-function handler() {
-  const user = require_user (req, res);
-  // Check condition
-if (return) {
-  $2
-}
-  if (
-    return res.status (405).json ({ error: "Method not allowed" })) {
-  $2
-}
+  if (req.method !== "POST")
+    return res.status(405).json({ error: "Method not allowed" });
   const {
     recipient_id,
 
@@ -44,6 +29,7 @@ if (return) {
     context?: ConversationContext;
 
     senderId: user.id
+<<<<<<< HEAD
 =======
 import { NextApiRequest, NextApiResponse } from '[^']*';
 import { requireUser } from '[^']*';
@@ -66,12 +52,15 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
     return res.status(405).json({ error: "Method not allowed" });
   const {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     recipientId
     body
     linkUrl
     attachmentBase64
     attachmentName
     context
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -109,6 +98,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     recipient_id,
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     body,
     link_url,
     attachmentBase64,
@@ -120,6 +111,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 }
 
+<<<<<<< HEAD
 =======
     context});
 
@@ -157,6 +149,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 }
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
   const { recipientId, body, linkUrl, attachmentBase64, attachmentName, context } = req.body as {
     recipientId: string,
@@ -173,6 +167,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     body,
     linkUrl,
     attachmentBase64,
+<<<<<<< HEAD
     attachmentName,
     context
   });
@@ -211,6 +206,8 @@ export default function handler(req, res) {
     linkUrl,;
     attachmentBase64,;
     attachmentName;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     context});
   res.status(200).json({ conversation, message });
   } catch (error) {
@@ -226,6 +223,7 @@ export default function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
@@ -360,3 +358,5 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 }
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

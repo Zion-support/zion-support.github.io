@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React from 'react';
 ;
@@ -29,10 +30,11 @@ const SkeletonLoader: React.FC<SkeletonLoaderProps> = ({;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <div
           key={index}
           className={`h-4 bg-gray-200 rounded mb-2 ${
-            index === lines - 1 ? 'w-3/4' : 'w-full'
           }`}
         />;
       ))}

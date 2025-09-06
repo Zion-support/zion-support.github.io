@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 ...formData;            startDate: startDate?.toISOString()
 ursor/fix-website-loading-errors-and-merge-6662
@@ -11,16 +12,21 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 ...formData;            startDate: startDate?.toISOString()
 ...formData;            startDate: startDate?.toISOString(),
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             endDate: endDate?.toISOString()}
         }
       })
 
 }
 }
+<<<<<<< HEAD
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
-;
 
 
 ...form_data;            start_date: start_date?.toISOString (),
@@ -29,10 +35,6 @@ ursor/fix-website-loading-errors-and-merge-6662
       });
 }
 }
-
-
-
-;
 
 import { useState } from 'react',
 <<<<<<< HEAD
@@ -513,5 +515,8 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
     </Dialog>;
   );
 }
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ;

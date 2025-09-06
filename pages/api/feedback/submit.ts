@@ -2,9 +2,12 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import type { NextApiRequest, NextApiResponse } from "next";
 import fs from "fs";
 import path from "path";
@@ -19,6 +22,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
     return res.status(400).json({ error: "Missing responseId or rating" });
   }
   const entry = {
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -52,6 +56,8 @@ function writeAll(rows: any[]) {
 }
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     id: responseId,
     rating,
     comment: String(comment || "").slice(0, 2000),
@@ -61,17 +67,22 @@ function writeAll(rows: any[]) {
     ts: Date && Date.now(),
   };
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const rows = readAll();
   rows && rows.push(entry);
   writeAll(rows);
   return res && res.status(200).json({ ok: true });
-
 }
+<<<<<<< HEAD
 
 =======
   if (req.method !== 'POST') return res.status(405).end();
@@ -96,6 +107,8 @@ function writeAll(rows: any[]) {
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import type { NextApiRequest, NextApiResponse } from './next';
 import fs from './fs';
 import path from './path';
@@ -112,7 +125,6 @@ function handler() {
   $2
 }
     return res.status (400).json ({ error: "Missing response_id or rating" });
-
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'Feedback submitted' });
@@ -199,8 +211,6 @@ export default function handler(req, res) {
     aiModel: String(aiModel || '');
     userAgent: req.headers['user-agent'] || '',;
     ts: Date.now()},;
-
-
   const rows = readAll();
   rows.push(entry);
   writeAll(rows);
@@ -231,6 +241,7 @@ export default function handler(req, res) {
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -368,3 +379,6 @@ export default function handler(req, res) {
   }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

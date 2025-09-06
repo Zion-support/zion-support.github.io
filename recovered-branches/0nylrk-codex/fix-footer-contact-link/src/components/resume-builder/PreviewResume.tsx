@@ -1,8 +1,11 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 import {Resume} from '@/types/resume';
 import {PreviewHeader, ResumeBasicInfoSection, WorkExperienceSection, EducationSection, SkillsSection, CertificationsSection} from './preview';
@@ -12,7 +15,6 @@ import {PreviewHeader, ResumeBasicInfoSection, WorkExperienceSection, EducationS
 
 
 
-=======
 import { Resume } from '@/types/resume',;
 import {;
   PreviewHeader,;
@@ -26,6 +28,7 @@ interface PreviewResumeProps {;
   resume: Resume;
   onBack: () => void;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -36,6 +39,8 @@ interface PreviewResumeProps {;
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { Resume } from "@/types/resume";
 import {
   PreviewHeader,
@@ -49,23 +54,28 @@ import {
 interface PreviewResumeProps {
   resume: Resume;
   onBack: () => void;
->>>>>>> main
 }
 
 }
 
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export function PreviewResume({ resume, onBack }: PreviewResumeProps) {
   return (
     <div className="space-y-6">
       <PreviewHeader resume={resume} onBack={onBack} />
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 
 >>>>>>> main
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {/* Resume Preview */}
       <div className="bg-white text-black p-8 rounded-lg shadow-lg print-section">
         <ResumeBasicInfoSection basicInfo={resume.basic_info} />
@@ -75,6 +85,7 @@ export function PreviewResume({ resume, onBack }: PreviewResumeProps) {
         <CertificationsSection certifications={resume.certifications} />
       </div>
     </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 interface PreviewResumeProps {;
@@ -158,3 +169,6 @@ function PreviewResume() {
 ;
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

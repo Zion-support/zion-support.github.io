@@ -1,9 +1,6 @@
-import React from 'react';
-import { Button } from '@/components/ui/button';
-
-
 import { useRouter } from 'next/router'; // Changed from useNavigate
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 import React from 'react'
@@ -14,17 +11,22 @@ import { useRouter } from 'next/router'; // Changed from useNavigate
 ursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from 'react',
 import { Button } from '@/components/ui/button',
 import { useRouter } from 'next/router', // Changed from useNavigate
 import { XCircle } from 'lucide-react'
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import React from 'react',
 import { Button } from '@/components/ui/button',
 import { useRouter } from 'next/router', // Changed from useNavigate
 import { XCircle } from 'lucide-react'
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 
@@ -38,12 +40,15 @@ import { useRouter } from 'next/router', // Changed from useNavigate
 export default function PaymentCanceled() {
   const router = useRouter(), // Changed from navigate
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   
   
 
   
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -53,13 +58,17 @@ ursor/fix-website-loading-errors-and-merge-6662
             <XCircle className="h-6 w-6 text-red-600" />
           </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <h1 className="text-2xl font-bold text-white mb-2">Payment Canceled</h1>
         <p className="text-zion-slate-light mb-6">
           Your payment process was canceled. No charges have been made to your account.
         </p>
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         
         <h1 className="text-2xl font-bold text-white mb-2">Payment Canceled</h1>
@@ -68,6 +77,8 @@ ursor/fix-website-loading-errors-and-merge-6662
           Your payment process was canceled. No charges have been made to your account.
         </p>
         
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
         <div className="flex flex-col space-y-3">
@@ -82,6 +93,7 @@ ursor/fix-website-loading-errors-and-merge-6662
             Try Again
           </Button>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -91,16 +103,21 @@ ursor/fix-website-loading-errors-and-merge-6662
             className='border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white'
 export default function PaymentCanceled() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <Button 
             variant="outline";
             onClick={() => router.push('/dashboard')} // Changed to router.push;
             className='border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white';
 export default function PaymentCanceled() {;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const router = useRouter(); // Changed from navigate
   return (
     <div className='flex flex-1 bg-zion-blue items-center justify-center p-4'>
@@ -125,6 +142,7 @@ export default function PaymentCanceled() {;
             onClick={() => router.push('/dashboard')} // Changed to router.push
             className='border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white'          >
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
             Return to Dashboard
           </Button>
@@ -146,6 +164,8 @@ export default function PaymentCanceled() {;
           >
             Try Again
           </Button>
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           
           <Button 
             variant="outline"
@@ -185,27 +205,17 @@ import { useRouter } from 'next/router'; // Changed from useNavigate;
 import { XCircle } from 'lucide-react';
 import React from 'react';
           >
+          >
             Return to Dashboard
           </Button>
         </div>
         </div>
       </div>
-    </div>
-  );            className="border-zion-blue-light text-zion-slate-light hover: bg-zion-blue-light hover:text-white"
           >
+            Return to Dashboard
           </Button>
         </div>
-  )
-import React from 'react',;
       </div>
-  )
-      </div>
-  )
-}
-;
-}
-  )
-import React from 'react',;
   )
 import React from 'react',;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -229,6 +239,7 @@ export default function PaymentCanceled() {;
         </p>;
 
         <div className="flex flex-col space-y-3">;
+<<<<<<< HEAD
 <<<<<<< HEAD
           <Button
             onClick={(,) => router && router.push('/payments')} // Changed to router && router.push;
@@ -296,6 +307,8 @@ function PaymentCanceled() {
         <div className="flex flex - col space - y-3">;
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <Button;
             on_click={(, ) => router.push ('/payments')} // Changed to router.push;
             className="bg - zion - purple hover:bg - zion - purple - dark text - white";
@@ -304,6 +317,7 @@ function PaymentCanceled() {
           </Button>;
           <Button;
             variant="outline";
+<<<<<<< HEAD
 <<<<<<< HEAD
             on_click={() => router.push ('/dashboard')} // Changed to router.push;
             className='border - zion - blue - light text - zion - slate - light hover:bg - zion - blue - light hover:text - white';
@@ -345,10 +359,15 @@ function PaymentCanceled() {
             onClick={() => router.push('/dashboard')} // Changed to router.push;
             className="border-zion-blue-light text-zion-slate-light hover: bg-zion-blue-light hover:text-white";
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+            onClick={() => router.push('/dashboard')} // Changed to router.push;
+            className="border-zion-blue-light text-zion-slate-light hover: bg-zion-blue-light hover:text-white";
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           >;
             Return to Dashboard;
           </Button>;
         </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
         </div>
@@ -356,13 +375,18 @@ function PaymentCanceled() {
   );
 }
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         </div>;
       </div>;
   );
 }
+<<<<<<< HEAD
 
       </div>);
       </div>);
 }
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

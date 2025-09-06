@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { ArrowRight, Search, Users, Zap, Settings } from 'lucide-react';
 import Link from 'next / link';
 import { cn } from '@/lib / utils';interface InteractiveFeaturesProps {
@@ -35,6 +36,9 @@ import { ArrowRight, Search, Users, Zap, Settings } from 'lucide-react'
 import Link from 'next/link'
 import { ArrowRight, Search, Users, Zap, Settings } from 'lucide-react';
 import Link from 'next/link';
+=======
+  style?: React.CSSProperties;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { cn } from '@/lib/utils';interface InteractiveFeaturesProps {
   className?: string
   style?: React.CSSProperties
@@ -47,51 +51,13 @@ export function InteractiveFeatures({
   style
 }: InteractiveFeaturesProps) {
   const [openIndex, setOpenIndex] = React.useState<number | null>(null)
-  const features = [
-    {
-      title: 'AI Talent Matching'
-      description:
-        'Connect with the perfect talent using intelligent matching.'
-      details:
-        'Our algorithms analyze skills, availability and experience to deliver the best candidates for your project.'
-      icon: <Search className='h-8 w-8 text-blue-700' />
-      link: '/match'
-    }
-    {
-      title: 'Talent Directory'
-      description: 'Browse a verified database of AI and tech specialists.'
-      details:
-        'Every profile is vetted for quality and authenticity so you can hire with confidence.'
-      icon: <Users className='h-8 w-8 text-purple-700' />
-      link: '/talent'
-    }
-    {
-      title: 'Services Marketplace'
-      description:
-        'Discover professional tech and AI services for your business.'
-      details:
-        'From on-demand IT support to specialized AI development, our marketplace offers transparent pricing and reviews.'
-      icon: <Zap className='h-8 w-8 text-cyan-700' />
-      link: '/services'
-    }
-    {
-      title: 'Equipment Catalog'
-      description: 'Find specialized hardware for development and research.'
-      details:
-        'Access cutting-edge technology with flexible options to buy, rent or lease the gear you need.'
-      icon: <Settings className='h-8 w-8 text-amber-700' />
-      link: '/equipment'
-    }
-  ]
-  const handleToggle = (index: number) => {
-    setOpenIndex(prev => (prev === index ? null : index))
-  }
 import React from "react",
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
 import { ArrowRight, Search, Users, Zap, Settings } from 'lucide-react'
 import Link from "next/link",
 import { cn } from "@/lib/utils",
+<<<<<<< HEAD
 import React from 'react';
 import {
   Card,
@@ -107,6 +73,8 @@ import { cn } from '@/lib / utils';interface InteractiveFeaturesProps {
   class_name?: string,
   style?: React.CSSProperties;
 }
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface InteractiveFeaturesProps {
   className?: string,
   style?: React.CSSProperties
@@ -141,14 +109,6 @@ export function InteractiveFeatures({ className, style }: InteractiveFeaturesPro
       title: "Equipment Catalog",
       description: "Find specialized hardware for development and research.",
       details:
-        'Access cutting-edge technology with flexible options to buy, rent or lease the gear you need.',
-      icon: <Settings className='h-8 w-8 text-amber-700' />,
-      link: '/equipment',
-    },
-  ]
-  const handleToggle = (index: number) => {
-    setOpenIndex(prev => (prev === index ? null : index))
-  }
         "Access cutting-edge technology with flexible options to buy, rent or lease the gear you need.",
       icon: <Settings className="h-8 w-8 text-amber-700" />,
       link: "/equipment"}],
@@ -158,6 +118,8 @@ export function InteractiveFeatures({ className, style }: InteractiveFeaturesPro
   },
 
   return (
+
+
     <section className={cn("py-16 bg-zion-blue-dark", className)} style={style}>
       <div className="container mx-auto px-4">
         <div className="text-center mb-8">
@@ -168,6 +130,7 @@ export function InteractiveFeatures({ className, style }: InteractiveFeaturesPro
             Hover or click a card to learn more about what Zion offers
           </p>
         </div>
+<<<<<<< HEAD
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
           {features.map((feature, index) => (
             <Card
@@ -353,10 +316,13 @@ export function InteractiveFeatures({ className, style }: InteractiveFeaturesPro
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">;
           {features.map((feature, index) => (;
             <Card;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               key={index}
               onMouseEnter={() => setOpenIndex(index)}
               onMouseLeave={() => setOpenIndex(null)}
               onClick={() => handleToggle(index)}
+<<<<<<< HEAD
 
               className="cursor-pointer overflow-hidden transition-all duration-300 hover:shadow-lg"
             >
@@ -369,6 +335,8 @@ export function InteractiveFeatures({ className, style }: InteractiveFeaturesPro
               className="cursor-pointer overflow-hidden transition-all duration-300 hover:shadow-lg"
             >
               <CardHeader className="flex flex-row items-start space-x-3">
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 {feature.icon}
                 <div>
                   <CardTitle className="text-lg text-white">{feature.title}</CardTitle>
@@ -379,15 +347,21 @@ export function InteractiveFeatures({ className, style }: InteractiveFeaturesPro
               </CardHeader>
               <div
                 className={cn(
+<<<<<<< HEAD
                   'transition-all duration-300'
                   'transition-all duration-300'
                   'transition-all duration-300',
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+                  'transition-all duration-300',
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   openIndex === index
                     ? 'max-h-48 opacity-100 p-6 pt-0'
                     : 'max-h-0 opacity-0 p-0'
                 )}              >
                 <CardContent className='text-sm text-zion-slate-light p-0'>
+<<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 
@@ -408,6 +382,8 @@ ursor/fix-website-loading-errors-and-merge-6662
                       className='flex items-center gap-1'>;
                       Learn more <ArrowRight className='h-4 w-4' />;
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   "transition-all duration-300",
                   openIndex === index ? "max-h-48 opacity-100 p-6 pt-0" : "max-h-0 opacity-0 p-0"
                 )}
@@ -423,6 +399,7 @@ ursor/fix-website-loading-errors-and-merge-6662
               </div>
             </Card>
           ))}
+<<<<<<< HEAD
               className="cursor-pointer overflow-hidden transition-all duration-300 hover:shadow-lg";
             >;
               <CardHeader className="flex flex-row items-start space-x-3">;
@@ -450,6 +427,9 @@ ursor/fix-website-loading-errors-and-merge-6662
                 </CardContent>;
               </div>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export default InteractiveFeatures;
 ;
 }
@@ -464,6 +444,7 @@ ursor/fix-website-loading-errors-and-merge-6662
       </div>;
     </section>;
   );
+<<<<<<< HEAD
 
 
 
@@ -519,3 +500,5 @@ export default InteractiveFeatures;
 }
 ;
 export default InteractiveFeatures;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

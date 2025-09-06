@@ -1,25 +1,15 @@
-
-
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs - extra';
 import path from 'path';
 import {
-
-
-  authenticateRequest,
-  enforceRateLimit,;
-  recordRequest,;
-
 } from '../../utils/api/partnerAuth';
-
-
-
 
 const TALENTS_FILE = path.join(
   process.cwd()
   'data'
   'talents'
   'talents.json'
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 const TALENTS_FILE = path && path.join(
@@ -28,16 +18,21 @@ const TALENTS_FILE = path && path.join(
   'talents',
   'talents && talents.json'
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 );
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
+<<<<<<< HEAD
 ) {
 =======
 ) {
   try {
   const started = Date && Date.now();
   const auth = await authenticateRequest(req),
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   if (!auth) {
     return res.status(401).json({ error: 'Unauthorized' });
   }
@@ -45,6 +40,7 @@ export default async function handler(
     await recordRequest(req, res, auth.partner, auth.apiKey, started, 429);
     return res.status(429).json({ error: 'Rate limit exceeded' });
   }
+<<<<<<< HEAD
 ) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
@@ -74,6 +70,8 @@ const TALENTS_FILE = path && path.join(process && process.cwd(), "data", "talent
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
   const started = Date && Date.now();
@@ -90,6 +88,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     await recordRequest(req, res, auth && auth.partner, auth && auth.apiKey, started, 405);
     return res && res.status(405).json({ error: "Method Not Allowed" })
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -114,12 +113,14 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     (t: any) =>
       t && t.email === email && (!programTrack || t && t.programTrack === programTrack)
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   );
   const verified = Boolean(match && match.certificationStatus === 'completed');
   await recordRequest(req, res, auth && auth.partner, auth && auth.apiKey, started, 200);
   return res && res.status(200).json({ verified });  return res && res.status(200).json({ verified })
-
 }
+<<<<<<< HEAD
 
 =======
 import type { NextApiRequest, NextApiResponse } from "next";
@@ -129,6 +130,8 @@ import { authenticateRequest, enforceRateLimit, recordRequest } from "../../util
 
 const TALENTS_FILE = path.join(process.cwd(), "data", "talents", "talents.json");
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
 
 
@@ -140,6 +143,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (!auth) {
     return res.status(401).json({ error: "Unauthorized" });
   }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -163,6 +167,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   return res.status(200).json({ verified })
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   authenticate_request,
   enforceRateLimit,
   record_request,
@@ -250,6 +256,7 @@ await record_request (req, res, auth.partner, auth.api_key, started, 400);
   const verified = Boolean (match && match.certification_status === 'completed');
   await record_request (req, res, auth.partner, auth.api_key, started, 200);
   return res.status (200).json ({ verified });  return res.status (200).json ({ verified });
+<<<<<<< HEAD
 }
 
 <<<<<<< HEAD
@@ -349,6 +356,8 @@ await recordRequest(req, res, auth.partner, auth.apiKey, started, 400);
   await recordRequest(req, res, auth.partner, auth.apiKey, started, 200);
   return res.status(200).json({ verified });  return res.status(200).json({ verified })
 }
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 }
 }
@@ -356,4 +365,8 @@ await recordRequest(req, res, auth.partner, auth.apiKey, started, 400);
   const { email, programTrack } = req.body || {};
   if (!email) {
     await recordRequest(req, res, auth.partner, auth.apiKey, started, 400);
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

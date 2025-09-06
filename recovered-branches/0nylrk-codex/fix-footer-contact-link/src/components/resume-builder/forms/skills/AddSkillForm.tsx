@@ -1,7 +1,10 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useState  } from 'react';
 import { Button  } from '@/components/ui/button';
 import { Input  } from '@/components/ui/input';
@@ -9,7 +12,10 @@ import { Label  } from '@/components/ui/label';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue  } from '@/components/ui/select';
 import { Skill  } from '@/types/resume';
 import { AIEnhancementButton } from '@/components/resume-builder/forms/AIEnhancementButton';
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {useState} from 'react';
 import {Button} from '@/components/ui/button';
 import {Input} from '@/components/ui/input';
@@ -18,10 +24,13 @@ import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from '@/c
 import {Skill} from '@/types/resume';
 import {AIEnhancementButton} from '@/components/resume-builder/forms/AIEnhancementButton';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface AddSkillFormProps {
 
   resumeId: string
@@ -34,11 +43,14 @@ export const AddSkillForm = ({ resumeId, onAddSkill }: AddSkillFormProps) => {;
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 export const AddSkillForm = ({ resumeId, onAddSkill }: AddSkillFormProps) => {
 
 export const AddSkillForm = ({ resumeId, onAddSkill }: AddSkillFormProps) => {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const [skillName, setSkillName] = useState('');
   const [skillCategory, setSkillCategory] = useState('');
   const [proficiency, setProficiency] = useState<number>(3);
@@ -49,6 +61,7 @@ export const AddSkillForm = ({ resumeId, onAddSkill }: AddSkillFormProps) => {;
       name: skillName.trim()
       category: skillCategory |'Other'
       proficiency: proficiency}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 import React from 'react';
@@ -64,12 +77,17 @@ import {useState} from 'react';
 import React from 'react';
 import {useState} from 'react';
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   }
   const handleEnhanceSkill = (enhancedCategory: string) => {
     setSkillCategory(enhancedCategory)
   }
   };
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useState } from 'react',;
 import { Button } from '@/components/ui/button',;
 import { Input } from '@/components/ui/input',;
@@ -77,6 +95,7 @@ import { Label } from '@/components/ui/label',;
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select',;
 import { Skill } from '@/types/resume',;
 import { AIEnhancementButton } from '@/components/resume-builder/forms/AIEnhancementButton',;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 import React from 'react';
@@ -88,12 +107,15 @@ import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from '@/c
 import {Skill} from '@/types/resume';
 import {AIEnhancementButton} from '@/components/resume-builder/forms/AIEnhancementButton';
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface AddSkillFormProps {;
   resumeId: string,;
   onAddSkill: (skill: Skill) => Promise<boolean>;
 }
 ;
 export const AddSkillForm = ({ resumeId, onAddSkill }: AddSkillFormProps) => {;
+<<<<<<< HEAD
   const [skillName, setSkillName] = useState(''),;
   const [skillCategory, setSkillCategory] = useState(''),;
   const [proficiency, setProficiency] = useState<number>(3),;
@@ -110,19 +132,25 @@ export const AddSkillForm = ({ resumeId, onAddSkill }: AddSkillFormProps) => {;
     e && e.preventDefault();
     if (!skillName && skillName.trim()) return,;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     const newSkill: Skill = {;
       name: skillName.trim(),;
       category: skillCategory || 'Other',;
       proficiency: proficiency},;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     const success = await onAddSkill(newSkill);
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     const success = await onAddSkill(newSkill),;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     if (success) {;
-      setSkillName(''),;
+      setSkillName('');
       setProficiency(3);
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
   },
 
@@ -133,11 +161,14 @@ export const AddSkillForm = ({ resumeId, onAddSkill }: AddSkillFormProps) => {;
 
   },
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   
   const handleEnhanceSkill = (enhancedCategory: string) => {
     setSkillCategory(enhancedCategory)
   },
   
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -189,10 +220,14 @@ export const AddSkillForm = ({ resumeId, onAddSkill } AddSkillFormProps) => {;
   ;
   return (;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  return (
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <form onSubmit={handleSubmit} className="space-y-4">;
       <div className="flex flex-col gap-4 md:flex-row">;
         <div className="flex-1">;
           <Label htmlFor="skill-name">Skill Name</Label>;
+<<<<<<< HEAD
 <<<<<<< HEAD
           <Input
             id="skill-name"
@@ -325,6 +360,11 @@ if ( {) {
           >;
             <SelectTrigger id="skill-category">;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+                currentContent={skillName}
+                enhancementType="general";
+                onEnhanced={handleEnhanceSkill}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <SelectValue placeholder="Select category" />;
             </SelectTrigger>;
             <SelectContent>;
@@ -334,17 +374,21 @@ if ( {) {
               <SelectItem value="DevOps">DevOps</SelectItem>;
               <SelectItem value="Data Science">Data Science</SelectItem>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
               <SelectItem value="AI / ML">AI / ML</SelectItem>;
 
 =======
               <SelectItem value="AI/ML">AI/ML</SelectItem>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <SelectItem value="Management">Management</SelectItem>;
               <SelectItem value="Other">Other</SelectItem>;
             </SelectContent>;
           </Select>;
         </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
               onChange={(e) => setProficiency(Number(e && e.target.value))}
@@ -445,11 +489,21 @@ if ( {) {
               onChange={(e) => setProficiency(Number(e.target.value))}
               className="w-20";
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+}
+
+},
+};
+},
+              on_change={(e) => set_proficiency (Number (e.target.value))}
+              className="w - 20";
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             />;
             <Button type="submit">Add</Button>;
           </div>;
         </div>;
       </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     </form>);
@@ -474,3 +528,5 @@ const newSkill: Skill = {
 };
 },
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

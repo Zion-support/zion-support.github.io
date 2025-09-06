@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 import { Header } from '@/components/Header';
@@ -52,6 +53,8 @@ BarChart3,;
 
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 export default function LandingPage() {
   const { t } = useTranslation();
@@ -80,10 +83,14 @@ export default function LandingPage() {
   const { t } = useTranslation(),
   const { isRTL } = useLanguage(),
   
+
+
+
   // Tools and features showcase
 
   const toolsFeatures = [
     {
+<<<<<<< HEAD
   
 
       title: t('home.tool_ai_matcher')
@@ -91,6 +98,17 @@ export default function LandingPage() {
       icon: <Sparkles className='h-6 w-6 text-zion-cyan' />
       link: '/match'
     }
+=======
+export default /**
+ * LandingPage - Function description
+ */
+function LandingPage() {
+  const { t } = use_translation ();
+  const { isRTL } = use_language ();
+;
+  // Tools and features showcase;
+  const tools_features = [;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     {
       title: t('home.tool_talent')
       description: t('home.tool_talent_desc')
@@ -116,6 +134,7 @@ export default function LandingPage() {
       link: '/analytics'
     }
     {
+<<<<<<< HEAD
       title: 'Mobile App'
       description:
         'Take Zion with you on the go with our mobile app for iOS and Android'
@@ -273,6 +292,8 @@ function LandingPage() {
       link: '/equipment',
     },
     {
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       title: t ('home.tool_analytics'),
       description: t ('home.tool_analytics_desc'),
       icon: <BarChart3 className='h - 6 w - 6 text - zion - cyan' />,
@@ -286,30 +307,8 @@ function LandingPage() {
       link: '/mobile - launch',
     },
   ];
-;
+
   return (
-
-        title={t('home && home.seo_title')}
-        description={t('home && home.seo_description')}
-        keywords={t('home && home.seo_keywords')}
-        canonical='https://app && app.ziontechgroup.com/'      />;
-      <Header />;
-      <HeroSection />;
-
-      
-      {/* Quick Access Tools Section */}
-      <section className='py-16 bg-zion-blue-dark'>;
-        <div className='container mx-auto px-4'>;
-          <div className='text-center mb-12'>;
-            <h2 className='text-3xl font-bold bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent mb-4'>;
-              {t('home && home.explore_tools')}
-            </h2>;
-            <p className='text-zion-slate-light text-xl max-w-3xl mx-auto'>;
-              {t('home && home.tools_description')}
-            </p>;
-          </div>;
-
-
           <div
             className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto ${isRTL ? 'rtl' : ''}`}>;
             {toolsFeatures && toolsFeatures.map((feature, index) => (;
@@ -337,7 +336,6 @@ function LandingPage() {
                   <span>{t("general && general.explore")}</span>;
                   <ArrowRight className={`${isRTL ? 'ml-0 mr-2 rotate-180' : 'ml-2'} h-4 w-4`} />;
               </Link>;
-
 import { Header } from "@/components/Header";
 import { TrustedBySection } from "@/components/TrustedBySection";
 import { TestimonialCarousel } from "@/components/TestimonialCarousel";
@@ -406,9 +404,16 @@ export default function LandingPage() { const { t  } = useTranslation(),
 
 
   return (
-
-
-
+    <div className="min-h-screen bg-zion-blue text-white">
+      <SEO 
+        title={t("home.seo_title")} 
+        description={t("home.seo_description")} 
+        keywords={t("home.seo_keywords")}
+        canonical="https://app.ziontechgroup.com/"
+      />
+      <Header />
+      <HeroSection />
+      
       {/* Quick Access Tools Section */}
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
@@ -419,6 +424,7 @@ export default function LandingPage() { const { t  } = useTranslation(),
               {t("home.tools_description")}
             </p>
           </div>
+<<<<<<< HEAD
           <div
             className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto ${isRTL ? 'rtl' : ''}`}
           >
@@ -428,6 +434,8 @@ export default function LandingPage() { const { t  } = useTranslation(),
                 href={feature.link}
                 className='bg-zion-blue border border-zion-blue-light hover:border-zion-purple/50 rounded-lg p-6 transition-all duration-300'              >
                 <div className='bg-zion-blue-dark rounded-full w-12 h-12 flex items-center justify-center mb-4'>
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           
           <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto ${isRTL ? 'rtl' : ''}`}>
             {toolsFeatures.map((feature, index) => (
@@ -452,6 +460,7 @@ export default function LandingPage() { const { t  } = useTranslation(),
                   <span>{t("general.explore")}</span>
                   <ArrowRight className={`${isRTL ? 'ml-0 mr-2 rotate-180' : 'ml-2'} h-4 w-4`} />
 <<<<<<< HEAD
+<<<<<<< HEAD
 
       
 
@@ -470,6 +479,8 @@ export default function LandingPage() { const { t  } = useTranslation(),
       {/* Add the comprehensive features guide section */}
       <FeaturesGuideSection />
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <CategoriesSection />
       <BenefitsSection />
       {/* Add the comprehensive features guide section */}
@@ -485,6 +496,7 @@ export default function LandingPage() { const { t  } = useTranslation(),
         </div>;
       </section>;
 
+<<<<<<< HEAD
       <CategoriesSection />;
       <BenefitsSection />;
       <CategoriesSection />;
@@ -618,6 +630,8 @@ const LandingPage: React.FC = () => {
         </div>
       </section>
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {/* Features Section */}
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
@@ -664,27 +678,64 @@ const LandingPage: React.FC = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 bg-blue-600 text-white">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl font-bold mb-6">
-            Ready to Transform Your Business?
-          </h2>
-          <p className="text-xl mb-8 max-w-2xl mx-auto">
-            Let's discuss how our technology solutions can help your organization grow and succeed.
-          </p>
-          <Link 
-            to="/contact" 
-            className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-          >
-            Get Started Today
-          </Link>
-        </div>
-      </section>
-    </div>
+      <SEO;
+        title={t("home.seo_title")} ;
+        description={t("home.seo_description")} ;
+        keywords={t("home.seo_keywords")}
+        canonical="https://app.ziontechgroup.com/";
+      />;
+      <Header />;
+      <HeroSection />;
+      {/* Quick Access Tools Section */}
+      <section className="py-16 bg-zion-blue-dark">;
+        <div className="container mx-auto px-4">;
+          <div className="text-center mb-12">;
+            <h2 className="text-3xl font-bold bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent mb-4">;
+              {t("home.explore_tools")}
+            </h2>;
+            <p className="text-zion-slate-light text-xl max-w-3xl mx-auto">;
+              {t("home.tools_description")}
+            </p>;
+          </div>;
+          <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto ${isRTL ? 'rtl' : ''}`}>;
+            {toolsFeatures.map((feature, index) => (;
+              <Link;
+                key={index} ;
+                href={feature.link} ;
+                className="bg-zion-blue border border-zion-blue-light hover:border-zion-purple/50 rounded-lg p-6 transition-all duration-300";
+              >;
+                <div className="bg-zion-blue-dark rounded-full w-12 h-12 flex items-center justify-center mb-4">;
+                  {feature.icon}
+                </div>;
+                <h3 className="text-xl font-bold text-white mb-2">{feature.title}</h3>;
+                <p className="text-zion-slate-light mb-4">{feature.description}</p>;
+                <div className={`flex items-center text-zion-cyan ${isRTL ? 'flex-row-reverse' : ''}`}>;
+                  <span>{t("general.explore")}</span>;
+                  <ArrowRight className={`${isRTL ? 'ml-0 mr-2 rotate-180' : 'ml-2'} h-4 w-4`} />;
+                </div>;
+              </Link>;
+            ))}
+          </div>;
+        </div>;
+      </section>;
+      <CategoriesSection />;
+      <BenefitsSection />;
+      {/* Add the comprehensive features guide section */}
+      <FeaturesGuideSection />;
+      <HowItWorksSection />;
+      <FeaturedListingsSection />;
+      <TestimonialCarousel />;
+      <TrustedBySection />;
+      <BlogSection />;
+      {/* Add social share section to encourage users to spread the word */}
+      <SocialShareSection />;
+      <WaitlistSection />;
+      <FloatingCTA />;
+    </div>;
   );
-};
-
-export default LandingPage;
+}
 ;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

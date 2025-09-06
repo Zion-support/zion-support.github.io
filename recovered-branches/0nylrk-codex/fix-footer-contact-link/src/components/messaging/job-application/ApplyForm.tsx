@@ -1,5 +1,3 @@
-
-
 interface ApplyFormProps {
 
   job: Job
@@ -8,9 +6,12 @@ interface ApplyFormProps {
   onApplySuccess?: (jobId: string) => Promise<void>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useState } from 'react';
 import {Button} from "@/components/ui/button";
 import {Loader2} from "lucide-react";
@@ -22,6 +23,7 @@ import {ResumeSelector, ResumeOption} from "../resume-selector";
 import {MessageTab} from "./MessageTab";
 import {ResumeTab} from "./ResumeTab";
 import {Job} from "./types";
+<<<<<<< HEAD
 <<<<<<< HEAD
 interface ApplyFormProps {;
   job: Job,;
@@ -46,6 +48,8 @@ export function ApplyForm(): any ({ job, onClose, onApplySuccess }: ApplyFormPro
   const [selectedResumeId, setSelectedResumeId] = useState<string | null>(null);
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useState } from 'react',
 import { Button } from "@/components/ui/button",
 import { Loader2 } from "lucide-react",
@@ -55,18 +59,40 @@ import { useMessaging } from "@/context/MessagingContext",
 import { toast } from "@/hooks/use-toast",
 import { ResumeSelector, ResumeOption } from "../resume-selector",
 import { MessageTab } from "./MessageTab",
-import { ResumeTab } from "./ResumeTab";
-import { Job } from "./types";
-import { ResumeTab } from "./ResumeTab",
-import { Job } from "./types",
 interface ApplyFormProps {
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   job: Job
   onClose: () => void
 
   onApplySuccess?: (jobId: string) => Promise<void>
 }
+import React, { useState } from 'react',
+import { Button } from "@/components/ui/button",
+import { Loader2 } from "lucide-react",
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
+import { useJobApplications } from "@/hooks/useJobApplications",
+import { useMessaging } from "@/context/MessagingContext",
+import { toast } from "@/hooks/use-toast",
+import { ResumeSelector, ResumeOption } from "../resume-selector",
+import { MessageTab } from "./MessageTab",
+interface ApplyFormProps {
+
+  job: Job
+  onClose: () => void
+
+  onApplySuccess?: (jobId: string) => Promise<void>
+}
+interface ApplyFormProps {;
+  job: Job,;
+  onClose: () => void,;
+  onApplySuccess?: (jobId: string) => Promise<void>;
+}
+
+export function ApplyForm(): any ({ job, onClose, onApplySuccess }: ApplyFormProps) {;
 
 export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {;
   const { createConversation } = useMessaging();
@@ -76,10 +102,13 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {
   const { applyToJob } = useJobApplications(),
   const [message, setMessage] = useState(
     `Hi, I'm interested in your job "${job.title}" and would like to apply. I believe my skills and experience are a great match for this role.`
+  const [message, setMessage] = useState(;
+    `Hi, I'm interested in your job "${job && job.title}" and would like to apply. I believe my skills and experience are a great match for this role.`;
   );
   const [proposalLink, setProposalLink] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
   const [activeTab, setActiveTab] = useState<string>("message");
@@ -114,12 +143,18 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {
   },
   
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  const [activeTab, setActiveTab] = useState<string>("message");
+  const [selectedResume, setSelectedResume] = useState<ResumeOption | null>(null);
+  const [selectedResumeId, setSelectedResumeId] = useState<string | null>(null);
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const handleApply = async () => {
     if (!message.trim()) {
       toast({
         title: "Message required"
         description: "Please enter a message before applying."
         variant: "destructive"
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -162,11 +197,14 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {
       setIsSubmitting(true),
       
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       // First submit the application to the job applications table
       const applicationSuccess = await applyToJob(
         job.id
         message
         selectedResumeId
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -193,6 +231,8 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {
       
       if (proposalLink) {
         fullMessage += `\n\nHere's a link to my proposal: ${proposalLink}`
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useState } from 'react',;
 import { Button } from "@/components/ui/button",;
 import { Loader2 } from "lucide-react",;
@@ -251,6 +291,7 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {;
       let fullMessage = message,;
       if (proposalLink) {;
         fullMessage += `\n\nHere's a link to my proposal: ${proposalLink}`;
+<<<<<<< HEAD
 
       ),
       
@@ -259,24 +300,33 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       }
       // Add info about attached resume if available
       if (selectedResume) {
         fullMessage += `\n\nI've attached my resume: ${selectedResume.title}`
       }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
       
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
       
       
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       // Create context data for the conversation
       const contextData = {
         title: job.title
@@ -291,6 +341,7 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {;
       await createConversation(
         job.client_id;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
@@ -301,6 +352,8 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     try {;
       setIsSubmitting(true);
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
       // First submit the application to the job applications table;
       const applicationSuccess = await applyToJob(;
@@ -308,23 +361,10 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {;
         message, ;
         selectedResumeId;
       );
-
-      if (!applicationSuccess) {;
-        throw new Error("Failed to submit application");
-      }
-
-      // Format message with proposal link if provided;
-      let fullMessage = message;
-
-      if (proposalLink) {;
-        fullMessage += `\n\nHere's a link to my proposal: ${proposalLink}`;
-      }
-
       // Add info about attached resume if available;
       if (selectedResume) {;
         fullMessage += `\n\nI've attached my resume: ${selectedResume && selectedResume.title}`;
       }
-
       // Create context data for the conversation;
       const contextData = {;
         title: job && job.title,;
@@ -335,16 +375,15 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {;
           type: selectedResume && selectedResume.type;
         } : null;
       };
-
-      // Create conversation with the job client;
-      await createConversation(;
-        job && job.client_id;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+      });
+      return;
+    }
         fullMessage;
         'job';
         job && job.id;
         contextData;
       );
+<<<<<<< HEAD
 
 
 
@@ -361,6 +400,8 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {;
         await onApplySuccess(job.id)
       }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ;
       // Create context data for the conversation;
       const contextData = {;
@@ -384,6 +425,7 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {;
       if (onApplySuccess) {;
         await onApplySuccess(job.id);
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -400,16 +442,24 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {;
       }
       
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+      }
+      
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       toast({
         title: "Application sent"
         description: `Your application for "${job.title}" has been sent.`})
       onClose()
     } catch (error) {
 <<<<<<< HEAD
+<<<<<<< HEAD
       console.error("Failed to send application:", error);
 =======
       console.error("Failed to send application:", error),
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+      console.error("Failed to send application:", error),
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       toast({
         title: "Application failed"
         description: "There was an error sending your application. Please try again."
@@ -417,6 +467,7 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {;
       })
     } finally {
       setIsSubmitting(false)
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     }
@@ -436,7 +487,10 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {;
         </TabsList>
         <TabsContent value="message">
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
+;
 
       // Call onApplySuccess to update job status in the UI;
       if (onApplySuccess) {;
@@ -454,6 +508,7 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {;
         title: "Application failed",;
         description: "There was an error sending your application. Please try again.",;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
           <MessageTab
           <MessageTab 
@@ -468,10 +523,13 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {;
         title: "Application failed",;
         description: "There was an error sending your application. Please try again.";
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         variant: "destructive";
       });
     } finally {;
       setIsSubmitting(false);
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     }
@@ -486,12 +544,18 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {;
   return (
 
 =======
+=======
+
+    }
+  }
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     }
 
   },
 
 
   return (
+<<<<<<< HEAD
 
     }
   }
@@ -633,6 +697,8 @@ export function ApplyForm({ job, onClose, onApplySuccess } ApplyFormProps) {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           <MessageTab
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useState } from 'react';
 import { Button } from '@/components / ui / button';
 import { Loader2 } from './lucide-react';
@@ -766,6 +832,7 @@ if ( {) {
         <TabsContent value="message">;
           <MessageTab;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
@@ -780,10 +847,13 @@ if ( {) {
         <TabsContent value="message">;
           <MessageTab ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             message={message}
             set_message={set_message}
             proposal_link={proposal_link}
             setProposalLink={setProposalLink}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
           />;
@@ -819,10 +889,13 @@ if ( {) {
       </Tabs>
       <div className="flex flex-col-reverse sm:flex-row sm:justify-end sm:space-x-2 gap-2 sm:gap-0 mt-4">
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <Button
           type="button"
           variant="outline"
           onClick={onClose}
+<<<<<<< HEAD
 <<<<<<< HEAD
           className="border-zion-purple/30 text-white">;
           Cancel;
@@ -833,10 +906,16 @@ if ( {) {
           Cancel
         </Button>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+          className="border-zion-purple/30 text-white">;
+          Cancel;
+        </Button>;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <Button
           type="button"
           onClick={handleApply}
           disabled={isSubmitting}
+<<<<<<< HEAD
 <<<<<<< HEAD
           className="bg-zion-purple hover:bg-zion-purple-dark text-white">;
 =======
@@ -865,11 +944,14 @@ if ( {) {
           className="bg-zion-purple hover:bg-zion-purple-dark text-white";
         >;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           {isSubmitting ? (;
             <>;
               <Loader2 className="h-4 w-4 mr-2 animate-spin" />;
               Submitting...;
             </>;
+<<<<<<< HEAD
 <<<<<<< HEAD
           ) : (;
             'Submit Application';
@@ -889,6 +971,8 @@ if ( {) {
       </div>;
     </>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           />;
         </TabsContent>;
         <TabsContent value="resume">;
@@ -923,6 +1007,7 @@ if ( {) {
       </div>;
     </>);
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 
 =======
@@ -930,6 +1015,8 @@ if ( {) {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   ),; interface ApplyFormProps {
   job: Job;
 onClose: () => void;
@@ -953,6 +1040,7 @@ const [selectedResumeId, setSelectedResumeId] = useState<string | null> (null);
   toast ({
   return;
 }
+<<<<<<< HEAD
 ;
 
 }//Format message with proposal link if provided let fullMessage = message;
@@ -1026,3 +1114,5 @@ return (<> <Tabs value= {
 }
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

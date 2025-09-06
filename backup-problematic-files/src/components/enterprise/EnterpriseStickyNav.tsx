@@ -11,7 +11,6 @@ export function EnterpriseStickyNav() {;
           <button;
             className="md:hidden p-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary";
             onClick={() => setOpen(!open)}
-=======
 import { useState } from "react",;
 import { Menu } from 'lucide-react';
 import Link from "next/link",;

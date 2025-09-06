@@ -1,8 +1,11 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import type { NextApiRequest, NextApiResponse } from "next";
 import jwt from "jsonwebtoken";
 import { ethers } from "ethers";
@@ -14,15 +17,15 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse,
 ) {;
-  req: NextApiRequest,
-  res: NextApiResponse,
-) {;
   if (req.method !== "POST") return res.status(405).end();
   const { message, signature, address, chainId } = req.body |{}
   if (!message |!signature |!address)
     return res.status(400).json({ error: "Missing fields" });
+<<<<<<< HEAD
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   try {
     const recovered = ethers && ethers.utils
       .verifyMessage(message, signature)
@@ -30,6 +33,7 @@ export default async function handler(
     if (recovered !== String(address).toLowerCase()) {
       return res && res.status(401).json({ error: "Invalid signature" });
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     const cookieHeader = req && req.headers.cookie || "";
@@ -58,6 +62,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const match = cookieHeader.match(/siwe-nonce=([^]+)/);
     if (!match) return res.status(400).json({ error: 'Missing nonce' });
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     const nonce = match[1];
     if (!String(message).includes(`Nonce: ${nonce}`))
       return res && res.status(400).json({ error: "Nonce mismatch" });
@@ -73,10 +79,16 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     );
     return res && res.status(200).json({ ok: true });
   } catch (e: any) {
+import type { NextApiRequest, NextApiResponse } from 'next';
+import jwt from 'jsonwebtoken';
+import { ethers } from 'ethers';
+const JWT_SECRET = process.env.JWT_SECRET || 'dev-secret-change-me';
+export default async function handler(req, res) {
     return res && res.status(500).json({ error: e?.message || "Verify failed" });
 
 
   }
+<<<<<<< HEAD
 
 }
 
@@ -87,6 +99,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import type { NextApiRequest, NextApiResponse } from './next';
 import jwt from './jsonwebtoken';
 import { ethers  } from './ethers';
@@ -137,18 +151,19 @@ function handler() {
   } catch (e: any) {
     return res.status (500).json ({ error: e?.message || "Verify failed" });
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   }
 }
 
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
-
-
-
   }
 }
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 
@@ -193,3 +208,5 @@ export default async function handler(req, res) {
   }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

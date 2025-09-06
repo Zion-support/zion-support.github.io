@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 declare module "@radix - ui / react - hover - card";
@@ -15,10 +16,15 @@ declare module 'react - day - picker' {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+declare module '@tanstack/react-query';
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   export interface DateRange {
     from?: Date;
     to?: Date;
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -70,6 +76,9 @@ declare module "@radix-ui/react-toggle-group";
 declare module "@radix-ui/react-toggle";
 declare module '@tanstack/react-query';
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 declare module "cmdk",
 declare module "@radix-ui/react-context-menu",
 declare module "vaul",
@@ -81,6 +90,7 @@ declare module "@radix-ui/react-navigation-menu",
 declare module "react-resizable-panels",
 declare module "@radix-ui/react-toggle-group",
 declare module "@radix-ui/react-toggle",
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -97,6 +107,11 @@ declare module 'react-day-picker' {
     from?: Date,
     to?: Date
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+declare module '@tanstack/react-query',
+declare module 'react-day-picker' {
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 declare module "cmdk",;
 declare module "@radix-ui/react-context-menu",;
 declare module "vaul",;
@@ -113,6 +128,7 @@ declare module 'react-day-picker' {;
   export interface DateRange {;
     from?: Date,;
     to?: Date;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -132,6 +148,8 @@ import {FC, SVGProps} from 'react';
   export interface DateRange {;
     from?: Date;
     to?: Date
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   }
   // Minimal placeholder for the DayPicker component used in the app
   // The actual library provides full typings but we stub them here so the
@@ -139,13 +157,17 @@ import {FC, SVGProps} from 'react';
   // type definitions.
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   export const DayPicker: any
+<<<<<<< HEAD
 }
 };
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 declare module 'sonner';
 declare module 'lucide-react' {
 
 import {FC, SVGProps} from 'react';
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   export type LucideProps = SVGProps < SVGSVGElement>;
@@ -156,6 +178,8 @@ import {FC, SVGProps} from 'react';
   export type LucideProps = SVGProps<SVGSVGElement>;
   export type LucideIcon = FC<LucideProps>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   export const AlertCircle: LucideIcon;
   export const AlertTriangle: LucideIcon;
   export const Apple: LucideIcon;
@@ -348,14 +372,19 @@ import {FC, SVGProps} from 'react';
   export const XCircle: LucideIcon;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   export const Zap: LucideIcon,;
   const icons: { [key: string]: LucideIcon };
 
 
   export default icons
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
   export const Zap: LucideIcon,
@@ -367,10 +396,16 @@ import {FC, SVGProps} from 'react';
   const icons: { [key: string]: LucideIcon }
   export default icons;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  export const Zap: LucideIcon,
+  const icons: { [key: string]: LucideIcon }
+  export default icons;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 declare module 'child_process';
 declare module 'date - fns';
 declare module 'jspdf' {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   export const jsPDF: any,
@@ -413,12 +448,15 @@ declare module 'clsx' {
   export default function clsx (...classes: ClassValue[]): string;
 }
 declare module 'embla - carousel - react';
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 declare module 'framer-motion';
 declare module 'i18next';
 declare module 'i18next - browser - languagedetector';
 declare module 'react - helmet - async';
 declare module 'react - hook - form' {
   import type { ComponentType, ReactElement, ReactNode } from 'react';
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 ;
@@ -501,6 +539,8 @@ declare module 'react-hook-form' {
   export type FieldPath<TFieldValues extends FieldValues> =
     keyof TFieldValues & string
   export type Control<TFieldValues extends FieldValues = FieldValues> = any
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   export interface UseFormReturn<
 
   export interface UseFormReturn<;
@@ -519,7 +559,10 @@ declare module 'react-hook-form' {
     TFieldValues extends FieldValues = FieldValues;
   >(options: any): any
   export interface ControllerProps<
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   export function useForm<;
     TFieldValues extends FieldValues = FieldValues;
@@ -530,12 +573,15 @@ declare module 'react-hook-form' {
 
   export interface ControllerProps<;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
     TFieldValues extends FieldValues = FieldValues;
     TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>
 =======
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     TFieldValues extends FieldValues = FieldValues;
     TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>
   > {
@@ -569,35 +615,51 @@ declare module 'ws';
 declare module 'recharts';
 declare module 'next-themes';
 declare module 'tailwind-merge';
+  // Minimal generic typings to satisfy local usage without full type defs;
+  export type FieldValues = Record < string, any>;
+  export type FieldPath < TFieldValues extends FieldValues> =;
+    keyof TFieldValues & string;
+  export type Control < TFieldValues extends FieldValues = FieldValues> = any;
+  export interface UseFormReturn<;
 
-  export interface DateRange {
-    from?: Date,
-    to?: Date
-declare module "cmdk",;
-declare module "@radix-ui/react-context-menu",;
-declare module "vaul",;
-declare module "@radix-ui/react-hover-card",;
-declare module "input-otp",;
-declare module "react-markdown",;
-declare module "@radix-ui/react-menubar",;
-declare module "@radix-ui/react-navigation-menu",;
-declare module "react-resizable-panels",;
-declare module "@radix-ui/react-toggle-group",;
-declare module "@radix-ui/react-toggle",;
-declare module '@tanstack/react-query',;
-declare module 'react-day-picker' {;
-  export interface DateRange {;
-    from?: Date,;
-    to?: Date;
+    TFieldValues extends FieldValues = FieldValues;
+  > {
+    control: Control<TFieldValues>
+    handleSubmit: any
+    register: any
+    formState: any
+    [key: string]: any
   }
-;
-  // Minimal placeholder for the DayPicker component used in the app;
-  // The actual library provides full typings but we stub them here so the;
-  // TypeScript compiler can understand the imports without requiring the real;
-  // type definitions.;
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any;
-  export const DayPicker: any;
-}
+    TFieldValues extends FieldValues = FieldValues;
+    TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>
+  > {
+    name: TName
+    control?: Control<TFieldValues>
+    rules?: any
+    defaultValue?: any
+    render: (props: any) => ReactElement
+  }
+  export const Controller: ComponentType<ControllerProps<any, any>>
+    TFieldValues extends FieldValues = FieldValues;
+  > {
+    children?: ReactNode
+    [key: string]: any
+  }
+  export const FormProvider: ComponentType<FormProviderProps<any>>
+  export function useFormContext<
+    TFieldValues extends FieldValues = FieldValues
+  >(): UseFormReturn<TFieldValues>
+};
+declare module 'react-i18next';
+declare module 'react-dom/client';
+declare module 'react-dom';
+declare module 'react-beautiful-dnd';
+declare module 'react-redux';
+declare module 'semver';
+declare module 'ws';
+declare module 'recharts';
+declare module 'next-themes';
+declare module 'tailwind-merge';
 declare module 'sonner',;
 declare module 'lucide-react' {;
   import { FC, SVGProps } from 'react',;
@@ -846,16 +908,6 @@ declare module 'react-hook-form' {;
   export type FieldPath<TFieldValues extends FieldValues> =;
     keyof TFieldValues & string;
   export type Control<TFieldValues extends FieldValues = FieldValues> = any;
-
-;
-  // Minimal generic typings to satisfy local usage without full type defs;
-  export type FieldValues = Record < string, any>;
-  export type FieldPath < TFieldValues extends FieldValues> =;
-    keyof TFieldValues & string;
-  export type Control < TFieldValues extends FieldValues = FieldValues> = any;
-  export interface UseFormReturn<;
-
-
   export interface UseFormReturn<;
 
     TFieldValues extends FieldValues = FieldValues;
@@ -866,6 +918,7 @@ declare module 'react-hook-form' {;
     form_state: any;
     [key: string]: any;
   }
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   export function use_form<;
     TFieldValues extends FieldValues = FieldValues;
@@ -880,6 +933,8 @@ declare module 'react-hook-form' {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   > {
     name: TName;
     control?: Control < TFieldValues>;
@@ -887,6 +942,7 @@ declare module 'react-hook-form' {;
     default_value?: any;
     render: (props: any) => ReactElement;
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   export const Controller: ComponentType < ControllerProps < any, any>>;
@@ -906,11 +962,14 @@ declare module 'react-hook-form' {;
   export const Controller: ComponentType < ControllerProps < any, any>>;
   export interface FormProviderProps<;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     TFieldValues extends FieldValues = FieldValues;
   > {
     children?: ReactNode;
     [key: string]: any;
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1274,3 +1333,8 @@ declare module 'tailwind-merge';
 declare module 'next-themes';
 declare module 'tailwind-merge';
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+}
+declare module 'react - i18next';
+declare module 'react-dom / client';
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 export const metadata = { title: 'IT Services | Zion Tech Group' };
 =======
 export const metadata = { 
@@ -219,10 +220,13 @@ export default function ITServicesPage() {
       <Pricing />
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       <ContactSection />
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     </div>
   );
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 function FeatureCard({ title, features, icon }: { title: string; features: string[]; icon: string }) {
   return (
@@ -398,3 +402,5 @@ function ContactSection() {
   );
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -1,10 +1,14 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 import type { NextPage } from "next";
 import Head from "next/head";
 import { useState } from "react";
 import EnhancedButton from "../../components/ui/EnhancedButton";
+<<<<<<< HEAD
 =======
 import type { NextPage } from './next';
 import Head from './next / head';
@@ -38,6 +42,8 @@ import Head from './next / head';
 import { useState  } from './react';
 import EnhancedButton from "../../components / ui / EnhancedButton";
 ;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 const steps = ["Account", "Profile", "Preferences", "Preview"];
 
 import type { NextPage } from 'next';
@@ -50,6 +56,7 @@ const Onboarding: NextPage = () => {
 
 
 
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import type { NextPage } from 'next',
 import Head from 'next/head',
@@ -93,6 +100,8 @@ const Onboarding: NextPage = () => {
   const [step, setStep] = useState(0);
   const next = () => setStep((s) => Math.min(s + 1, steps.length - 1));
   const prev = () => setStep((s) => Math.max(s - 1, 0));
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import type { NextPage } from 'next',
 import Head from 'next/head',
 import { useState } from 'react',
@@ -103,13 +112,17 @@ const Onboarding: NextPage = () => {
   const next = () => setStep((s) => Math.min(s + 1, steps.length - 1)),
   const prev = () => setStep((s) => Math.max(s - 1, 0)),
   return (
+
     <div className="space-y-6">
       <Head>
         <title>Onboarding - Zion</title>
       </Head>
+
       <h1 className="text-2xl font-semibold">Get Started</h1>
+
       <div className="flex items-center gap-2 text-sm flex-wrap">
         {steps.map((label, i) => (
+<<<<<<< HEAD
           <div
             key={label}
             className={`px-3 py-1 rounded-full border ${i === step ? "bg-blue-600 text-white border-blue-600" : "opacity-80"}`}
@@ -161,6 +174,9 @@ const Onboarding: NextPage = () => {
   }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       </div>
 
       <div className="flex gap-2">
@@ -170,6 +186,9 @@ const Onboarding: NextPage = () => {
     </div>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const [step, set_step] = useState (0);
 ;
   const next = () =>: any set_step ((s) => Math.min (s + 1, steps.length - 1));
@@ -215,6 +234,7 @@ const Onboarding: NextPage = () => {
 }
 ;
 export default Onboarding;
+<<<<<<< HEAD
 ;
 
 =======
@@ -236,8 +256,15 @@ export default Onboarding,
   );
 }
 export default Onboarding;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   )
 },
 export default Onboarding,
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

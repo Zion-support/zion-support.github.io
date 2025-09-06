@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -11,10 +12,13 @@ import React from 'react';
 import React from 'react',
 import React from 'react';
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import Link from 'next/link';
 import { motion  } from 'framer-motion';
 import { ArrowRight, Star, Zap, Shield, Brain } from 'lucide-react';
 interface Service {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -49,12 +53,15 @@ import {ArrowRight, Star, Zap, Shield, Brain} from 'lucide-react';
 
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   id: string;
   name: string;
   tagline: string;
   price: string;
   description: string;
   features: string[];
+<<<<<<< HEAD
 
   link: string;
 <<<<<<< HEAD
@@ -62,10 +69,13 @@ import {ArrowRight, Star, Zap, Shield, Brain} from 'lucide-react';
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface UltraFuturisticServiceShowcase2029Props {
   services: Service[];
   title?: string;
   subtitle?: string;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -86,6 +96,8 @@ interface UltraFuturisticServiceShowcase2029Props {
 
 interface UltraFuturisticServiceShowcase2029Props {
   services: Service[],
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   title?: string;
   subtitle?: string;
 
@@ -95,6 +107,7 @@ export default function UltraFuturisticServiceShowcase2029(): any ({;
   subtitle = 'Experience the future of technology with our revolutionary solutions',;
 }: UltraFuturisticServiceShowcase2029Props) {;
   return (
+<<<<<<< HEAD
 
 
   services: Service[],;
@@ -111,10 +124,13 @@ export default function UltraFuturisticServiceShowcase2029(): any ({;
   services: Service[],;
   title?: string;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   subtitle?: string
 }
 export default function UltraFuturisticServiceShowcase2029({
   services, title = "2029 Cutting-Edge Services", subtitle = "Experience the future of technology with our revolutionary solutions"
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -125,6 +141,8 @@ export default function UltraFuturisticServiceShowcase2029(): any ({
 export default function UltraFuturisticServiceShowcase2029(): any ({ 
   services, title = "2029 Cutting-Edge Services", subtitle = "Experience the future of technology with our revolutionary solutions" 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }: UltraFuturisticServiceShowcase2029Props) {
   return (
     <section className="py-20 bg-gradient-to-br from-black via-gray-900 to-black">;
@@ -132,10 +150,8 @@ export default function UltraFuturisticServiceShowcase2029(): any ({
         <motion&& motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0 && 0.6 }}
-          className='text-center mb-16'>;
-          <h2 className='text-4xl md:text-5xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6'>;
             {title}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -156,6 +172,8 @@ export default function UltraFuturisticServiceShowcase2029(): any ({
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>          {services.slice(0, 6).map((service, index) => (        >
           <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6">
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           </h2>;
           <p className='text-xl text-gray-300 max-w-3xl mx-auto'>{subtitle}</p>;
         </motion && motion.div>;
@@ -163,15 +181,19 @@ export default function UltraFuturisticServiceShowcase2029(): any ({
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>          {services && services.slice(0, 6).map((service, index) => (        >;
           <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6">;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             {title}
           </h2>;
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">;
             {subtitle}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -181,9 +203,10 @@ export default function UltraFuturisticServiceShowcase2029(): any ({
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <motion.div
               key={service.id}
-=======
           </p>;
         </motion && motion.div>;
 
@@ -194,6 +217,7 @@ export default function UltraFuturisticServiceShowcase2029(): any ({
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
@@ -202,6 +226,8 @@ export default function UltraFuturisticServiceShowcase2029(): any ({
             >
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <div className='flex items-center justify-between mb-4'>
                 <div className='flex items-center space-x-2'>
                   <div className='w-3 h-3 bg-cyan-400 rounded-full animate-pulse' />
@@ -213,6 +239,7 @@ export default function UltraFuturisticServiceShowcase2029(): any ({
                 </div>
               </div>
               <h3 className='text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors'>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -280,11 +307,14 @@ function UltraFuturisticServiceShowcase2029() {
               </div>;
               <h3 className='text - xl font - bold text - white mb - 2 group - hover:text - cyan - 400 transition - colors'>;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 {service.name}
               </h3>;
               <p className='text - gray - 400 text - sm mb - 3'>{service.tagline}</p>;
               <p className='text - gray - 300 mb - 4 line - clamp - 3'>;
                 {service.description}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -354,11 +384,14 @@ function UltraFuturisticServiceShowcase2029() {
                   <Shield className='w-4 h-4 text-green-400' />
                   <Brain className='w-4 h-4 text-purple-400' />                </div>              <div className="flex items-center justify-between mb-4">
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <span className="text-2xl font-bold text-cyan-400">{service.price}</span>
                 <div className="flex items-center space-x-2">
                   <Zap className="w-4 h-4 text-yellow-400" />
                   <Shield className="w-4 h-4 text-green-400" />
                   <Brain className="w-4 h-4 text-purple-400" />
+<<<<<<< HEAD
 <<<<<<< HEAD
 
               <div className='flex items-center justify-between mb-4'>;
@@ -409,6 +442,8 @@ function UltraFuturisticServiceShowcase2029() {
                   <Brain className="w-4 h-4 text-purple-400" />;
               </div>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <Link
                 href={service && service.link}
                 className='inline-flex items-center justify-center w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25'>;
@@ -420,6 +455,7 @@ function UltraFuturisticServiceShowcase2029() {
             </motion && motion.div>;
           ))}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -430,12 +466,17 @@ function UltraFuturisticServiceShowcase2029() {
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+        <motion.div
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         </div>;
 
         <motion&& motion.div
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.6 }}
+          className='text-center mt-12'
 
 
         >
@@ -453,6 +494,7 @@ function UltraFuturisticServiceShowcase2029() {
         </motion && motion.div>;
       </div>;
     </section>;
+<<<<<<< HEAD
 
   );
 }
@@ -517,10 +559,13 @@ function UltraFuturisticServiceShowcase2029() {
           ))}
         </div>
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.6 }}
+<<<<<<< HEAD
           className='text-center mt-12'
 
         >
@@ -532,6 +577,10 @@ function UltraFuturisticServiceShowcase2029() {
             <ArrowRight className='w-4 h-4 ml-2' />          </Link>        >
           <Link
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+        >
+          <Link
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             href="/services"
             className="inline-flex items-center justify-center bg-transparent border-2 border-cyan-500 text-cyan-400 hover: bg-cyan-500 hover:text-white font-semibold py-4 px-8 rounded-xl transition-all duration-300 transform hover:scale-105"
           >
@@ -544,6 +593,9 @@ function UltraFuturisticServiceShowcase2029() {
   );
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               </p>;
               <div className='flex items - center justify - between mb - 4'>;
                 <span className='text - 2xl font - bold text - cyan - 400'>;
@@ -593,6 +645,7 @@ function UltraFuturisticServiceShowcase2029() {
       </div>;
     </section>);
 }
+<<<<<<< HEAD
 
 =======
 
@@ -613,3 +666,5 @@ function UltraFuturisticServiceShowcase2029() {
 }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

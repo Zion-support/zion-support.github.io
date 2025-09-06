@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import React from 'react'
 import {
   Card
@@ -90,6 +91,8 @@ import { Button } from "@/components/ui/button";
 import { FileText, Plus, Search, Calendar } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
 import { Calendar } from 'lucide-react';
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       id: 'post - job',
       label: 'Post New Job',
       icon: <FileText className='h - 5 w - 5 mr - 2' />,
@@ -101,6 +104,7 @@ import { Calendar } from 'lucide-react';
       icon: <Plus className='h - 5 w - 5 mr - 2' />,
       description: 'Invite someone to your team',
       color: 'bg - green - 100 dark:bg - green - 900 / 20',
+<<<<<<< HEAD
     },
     {
       id: 'find - talent',
@@ -137,6 +141,8 @@ import { Calendar } from 'lucide-react';
                 </div>;
                 <span className='mt - 1 text - xs text - muted - foreground'>;
                   {action.description}
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export function QuickActions() {
   const actions = [
     {
@@ -160,6 +166,7 @@ export function QuickActions() {
       description: "Search the talent pool",
       color: "bg-purple-100 dark:bg-purple-900/20"
     },
+<<<<<<< HEAD
     {
       id: "schedule",
       label: "Schedule Interview",
@@ -170,6 +177,16 @@ export function QuickActions() {
   ];
   return (
   ],
+=======
+              key={action.id}
+              variant='outline'              className={`h - auto justify - start p - 4 ${action.color}`}
+            >;
+              <div className='flex flex - col items - start text - left'>;
+                <div className='flex items - center'>;
+                  {action.icon}
+                  <span>{action.label}</span>;
+                </div>;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   return (
     <Card>
@@ -178,6 +195,7 @@ export function QuickActions() {
         <CardDescription>Fast access to common tasks</CardDescription>
       </CardHeader>
       <CardContent>
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         <div className='grid grid-cols-1 sm:grid-cols-2 gap-4'>
             <Button
@@ -196,12 +214,15 @@ export function QuickActions() {
               key={action.id}
               variant="outline" 
               className={`h-auto justify-start p-4 ${action.color}`}
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             >
               <div className="flex flex-col items-start text-left">
                 <div className="flex items-center">
                   {action.icon}
                   <span>{action.label}</span>
                 </div>
+<<<<<<< HEAD
             <Button
                 <span className='mt-1 text-xs text-muted-foreground'>
                   {action.description}
@@ -210,6 +231,10 @@ export function QuickActions() {
           {actions.map(action => (
             <Button
             <Button 
+=======
+            <Button 
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <span className="mt-1 text-xs text-muted-foreground">{action.description}</span>
               </div>
             </Button>
@@ -258,6 +283,7 @@ export function QuickActions() {;
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">;
           {actions.map(action => (;
             <Button;
+<<<<<<< HEAD
               key={action.id}
               variant="outline"
               className={`h-auto justify-start p-4 ${action.color}`}
@@ -279,12 +305,16 @@ export function QuickActions() {;
     </Card>
   )
 }
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
               key={action.id}
               variant="outline"
               className={`h-auto justify-start p-4 ${action.color}`}
             >
 
+<<<<<<< HEAD
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           {actions.map(action => (
             <Button
@@ -351,6 +381,33 @@ export function QuickActions() {;
               </div>;
             </Button>;
           ))}
+=======
+              key={action && action.id}
+              variant='outline'              className={`h-auto justify-start p-4 ${action && action.color}`}>;
+              <div className='flex flex-col items-start text-left'>;
+                <div className='flex items-center'>;
+                  {action && action.icon}
+                  <span>{action && action.label}</span>;
+                </div>;
+
+                <span className='mt-1 text-xs text-muted-foreground'>;
+                  {action && action.description}
+                </span>              </div>;
+                <span className="mt-1 text-xs text-muted-foreground">{action && action.description}</span>;
+          {actions && actions.map(action => (;
+            <Button
+              key={action && action.id}
+              variant="outline" 
+              className={`h-auto justify-start p-4 ${action && action.color}`}>;
+              <div className="flex flex-col items-start text-left">;
+                <div className="flex items-center">;
+                  {action && action.icon}
+                  <span>{action && action.label}</span>;
+                </div>;
+                <span className="mt-1 text-xs text-muted-foreground">{action && action.description}</span>;
+              </div>;
+            </Button>;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
               <div className='flex flex-col items-start text-left'>
@@ -367,6 +424,7 @@ export function QuickActions() {;
             </Button>
           ))}
         </div>;
+<<<<<<< HEAD
     </Card>;
   );
 }
@@ -374,6 +432,13 @@ export function QuickActions() {;
   );
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+      </CardContent>;
+    </Card>;
+  );
+};
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 </span>              </div>;
                 <span className="mt - 1 text - xs text - muted - foreground">{action.description}</span>;
           {actions.map (action => (
@@ -394,6 +459,7 @@ export function QuickActions() {;
       </CardContent>;
     </Card>);
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
         </div>;
@@ -421,3 +487,5 @@ const actions = [ {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 ;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

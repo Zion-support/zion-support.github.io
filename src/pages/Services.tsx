@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 import { Link } from 'react-router-dom';
@@ -173,11 +174,14 @@ const Services: React.FC = () => {
           <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-xl hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 font-semibold text-lg shadow-2xl">
             Get Started Today
           </button>
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         </div>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       </div>
     </div>
   );
+<<<<<<< HEAD
 };
 <<<<<<< HEAD
 
@@ -251,3 +255,5 @@ function CTA() {
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 export default Services;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

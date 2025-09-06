@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 }; import {
   FormField
   FormItem
@@ -26,6 +27,9 @@ import React, { useState } from "react",
 import { Control, UseFormSetValue } from "react-hook-form",
 import React, { useState } from "react",
 import { Control, UseFormSetValue } from "react-hook-form",
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {
   FormField,
   FormItem,
@@ -35,6 +39,7 @@ import {
   FormMessage
 } from "@/components/ui/form",
 import { Input } from "@/components/ui/input",
+<<<<<<< HEAD
 import { TalentRateRecommender } from "@/components/pricing/TalentRateRecommender";
 import { Card, CardContent } from "@/components/ui/card";
 <<<<<<< HEAD
@@ -44,13 +49,23 @@ import { Card, CardContent } from "@/components/ui/card";
 
   location,
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface RateOptimizationSectionProps {
+  control: Control<any>,
+  setValue: UseFormSetValue<any>,
+  skills: string[],
+  yearsExperience: number,
 
+
+<<<<<<< HEAD
   control: Control<any>
   setValue: UseFormSetValue<any>
   skills: string[]
   yearsExperience: number
   location?: string
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 import { TalentRateRecommender } from "@/components/pricing/TalentRateRecommender",
 import { Card, CardContent } from "@/components/ui/card",
@@ -61,6 +76,7 @@ interface RateOptimizationSectionProps {
   skills: string[],
   yearsExperience: number,
   location?: string,
+<<<<<<< HEAD
   location?: string
   location?: string,
   rateType: "hourly" | "fixed"
@@ -69,55 +85,27 @@ interface RateOptimizationSectionProps {
 }
 export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = ({
 
+=======
+  rateType: "hourly" | "fixed"
+}
+  rateType: "hourly" | "fixed"
+}
+export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = ({
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   control
   setValue
   skills
   yearsExperience
-  location
-  location
-  location
   control,
   setValue,
   skills,
   yearsExperience,
-}) => {
-  const handleSuggestionApplied = (rate: number) => {
-    setValue("hourlyRate", rate)
-  }
-  rateType
-},) => {
-  const handleSuggestionApplied = (rate: number,) => {
-    setValue("hourlyRate", rate)
-
-  FormMessage;
-} from '@/components / ui / form';
-import { Input  } from '@/components / ui / input';
-import { TalentRateRecommender  } from '@/components / pricing / TalentRateRecommender';
-import { Card, CardContent  } from '@/components / ui / card';
-interface RateOptimizationSectionProps {
-  control: Control < any>,
-  set_value: UseFormSetValue < any>,
-  skills: string[],
-  years_experience: number,
-  location?: string;
-  rate_type: "hourly" | "fixed";
-}
-export const RateOptimizationSection: React.FC < RateOptimizationSectionProps> = ({
-  control;
-  set_value;
-  skills;
-  years_experience;
-  location,
-  rate_type;
-}, ) => {
-  const handleSuggestionApplied = (rate: number, ) =>: any {
-    set_value ("hourly_rate", rate);
-
   location,
   rateType
 }) => {
   const handleSuggestionApplied = (rate: number) => {
     setValue("hourlyRate", rate)
+<<<<<<< HEAD
   )
 }
 "}
@@ -132,6 +120,8 @@ ursor/fix-website-loading-errors-and-merge-6662
   },
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <div className="space-y-4">
 <<<<<<< HEAD
@@ -147,6 +137,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                 type="number"
                 min="1"
                 step="0.01"
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import React, { useState } from "react",;
 import { Control, UseFormSetValue } from "react-hook-form",;
@@ -212,6 +203,8 @@ export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = (
 
           <TalentRateRecommender
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 {...field}
               />
             </FormControl>
@@ -225,24 +218,6 @@ export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = (
       <Card>
         <CardContent className="pt-4">
           <TalentRateRecommender
-            skills = {skills,}
-            yearsExperience = {yearsExperience,}
-            location = {location,}
-            onSuggestionApplied = {handleSuggestionApplied,}
-            rateType = {rateType,}
-          />
-        </CardContent>
-      </Card>
-    </div>
-  )
-}
-"}
-}
-
-  );
-};
-"};
-};
             skills={skills}
             yearsExperience={yearsExperience}
             location={location}
@@ -254,6 +229,7 @@ export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = (
     </div>;
   );
 };
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
@@ -274,3 +250,5 @@ export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = (
 }
 "},
 }
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

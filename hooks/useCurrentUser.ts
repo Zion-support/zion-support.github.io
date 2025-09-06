@@ -1,4 +1,5 @@
 import useSWR from 'swr';
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -8,6 +9,13 @@ export function useCurrentUser() {
 
 export function useCurrentUser() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+export function useCurrentUser() {
+
+export function useCurrentUser() {;
+
+export function useCurrentUser() {
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const { data, error, mutate } = useSWR('/api/auth/me', fetcher);
   return {
     user: data?.user |null
@@ -31,6 +39,7 @@ function useCurrentUser() {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
     loading: !data && !error;
+<<<<<<< HEAD
 
     error
 
@@ -63,3 +72,8 @@ export function useCurrentUser() {
 =======
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+    mutate}
+}
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

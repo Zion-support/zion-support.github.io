@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -282,6 +283,8 @@ if ( {) {
     }
 }, [variant, intensity]),
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <div className=&quot;fixed inset - 0 -z - 10 overflow - hidden & quot;>;
       <canvas;
@@ -294,12 +297,15 @@ if ( {) {
         {/* Grid overlay for cyber variant */}
         {variant === 'cyber' && (
 <<<<<<< HEAD
+<<<<<<< HEAD
 
           <div className=&quot;absolute inset - 0 bg-[linear - gradient (rgba (0, 255, 255, 0.1)_1px, transparent_1px), linear - gradient (90deg, rgba (0, 255, 255, 0.1)_1px, transparent_1px)] bg-[size:50px_50px]&quot; />)}
 
 =======
           <div className=&quot;absolute inset - 0 bg-[linear - gradient (rgba (0, 255, 255, 0.1)_1px, transparent_1px), linear - gradient (90deg, rgba (0, 255, 255, 0.1)_1px, transparent_1px)] bg-[size:50px_50px]&quot; />)}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         {/* Quantum field lines */}
 {variant === 'quantum' && (
           <div className=&quot;absolute inset - 0&quot;>;
@@ -308,6 +314,7 @@ if ( {) {
                 key={i}
                 className=&quot;absolute w - px h - full bg - gradient - to - b from - transparent via - cyan - 400 / 30 to - transparent & quot;
                 style={{
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -327,6 +334,8 @@ if ( {) {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         {/* AI neural network overlay */}
 {variant === 'ai' && (
           <div className=&quot;absolute inset - 0&quot;>;
@@ -336,6 +345,7 @@ if ( {) {
                 className=&quot;absolute w - full h - px bg - gradient - to - r from - transparent via - green - 400 / 20 to - transparent & quot;
                 style={{
                   top: `${(i + 1) * 16.67}%`}}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -349,10 +359,13 @@ if ( {) {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   delay: i * 0.8}}
               />))}
           </div>)}
       </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     </div>);
@@ -494,3 +507,5 @@ export default UltraFuturisticBackground2036;
 export default UltraFuturisticBackground2036
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

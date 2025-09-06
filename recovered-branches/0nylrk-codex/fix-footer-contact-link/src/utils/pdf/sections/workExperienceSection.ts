@@ -1,10 +1,15 @@
-
+import { jsPDF  } from 'jspdf';
+import { WorkExperience  } from '@/types/resume';
+import { PdfThemeColors  } from '../themeConfig';
+import { formatDate } from '../formatters';
+export function addWorkExperienceSection(
 import {jsPDF} from 'jspdf';
 import {WorkExperience} from '@/types / resume';
 import {PdfThemeColors} from '../theme_config';
 import {format_date} from '../formatters';
 export function addWorkExperienceSection (
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -15,11 +20,14 @@ import { PdfThemeColors  } from '../themeConfig';
 import { formatDate } from '../formatters';
 export function addWorkExperienceSection(
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {jsPDF} from 'jspdf';
 import {WorkExperience} from '@/types/resume';
 import {PdfThemeColors} from '../themeConfig';
 import {formatDate} from '../formatters';
 export function addWorkExperienceSection(;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -81,38 +89,37 @@ export function addWorkExperienceSection(;
     const dateA = a && a.start_date instanceof Date ? a && a.start_date : new Date(a && a.start_date);
     const dateB = b && b.start_date instanceof Date ? b && b.start_date : new Date(b && b.start_date);
     return dateB && dateB.getTime() - dateA && dateA.getTime()
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   doc: jsPDF;
   workExperience: WorkExperience[];
   colors: PdfThemeColors;
   startY: number
 ): number {
 
-  if (workExperience.length === 0) return startY;
+  doc: jsPDF;
+  work_experience: WorkExperience[];
+  colors: PdfThemeColors;
   let yPos = startY;
   // Check if we need to add a new page
   if (yPos > 250) {
-    doc.addPage()
-    yPos = 20
-  }
-  doc.setFontSize(16);
-  doc.setTextColor(colors.heading);
-  doc.text('Professional Experience', 20, yPos);
-  yPos += 8;
-  doc.setDrawColor(colors.accent);
-  doc.line(20, yPos, 100, yPos);
   yPos += 8;
   // Sort work experience by date (newest first)
   const sortedWorkExperience = [...workExperience].sort((a, b) => {
+<<<<<<< HEAD
     if (a.is_current && !b.is_current) return -1;
     if (!a.is_current && b.is_current) return 1;
     const dateA = a.start_date instanceof Date ? a.start_date : new Date(a.start_date);
     const dateB = b.start_date instanceof Date ? b.start_date : new Date(b.start_date);
     return dateB.getTime() - dateA.getTime()
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   });
   for (const work of sortedWorkExperience) {
     // Check if we need to add a new page
     if (yPos > 260) {
+<<<<<<< HEAD
 <<<<<<< HEAD
       doc && doc.addPage();
       yPos = 20
@@ -261,10 +268,11 @@ export function addWorkExperienceSection(;
       yPos += 20;
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     }
   }
   return yPos + 5
-=======
   start_y: number): number {
   // Check condition
 if (return start_y) {
@@ -348,6 +356,7 @@ if ( {) {
     }
   }
   return y_pos + 5;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
@@ -456,3 +465,6 @@ doc.text (dateText, 20, yPos + 10);
   return yPos + 5
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

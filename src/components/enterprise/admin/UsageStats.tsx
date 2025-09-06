@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import React from 'react';
 import { Badge } from '@/components / ui / badge';
@@ -21,24 +22,13 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { toast } from "@/hooks/use-toast"
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from '@/components/ui/card'
-import { Sparkles } from 'lucide-react'
-import { Progress } from '@/components/ui/progress'
-export function UsageStats() {
-  const handleSaveChanges = () => {
-    toast({
-      title: 'Limits updated',
-      description: 'The new usage limits have been saved successfully.',
-    })
-  }
 
+export function UsageStats() {
+
+<<<<<<< HEAD
 import React from "react",
 import { Badge } from "@/components/ui/badge",
 import { Button } from "@/components/ui/button",
@@ -79,18 +69,11 @@ import {
 import { Sparkles } from 'lucide-react'
 import { Progress } from "@/components/ui/progress",
 export function UsageStats() {
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   const handleSaveChanges = () => {
     toast({
-      title: 'Limits updated'
-      description: 'The new usage limits have been saved successfully.'
-    })
-  }
-return (
-
-      title: "Limits updated",
-      description: "The new usage limits have been saved successfully."})
-  },
 
   return (
     <div className="space-y-8">
@@ -100,6 +83,7 @@ return (
           Configure usage limits for your team to manage your subscription resources.
         </p>
       </div>
+<<<<<<< HEAD
       <div className='grid grid-cols-1 lg:grid-cols-2 gap-6'>
 ursor/fix-website-loading-errors-and-merge-6662
         <Card>
@@ -108,6 +92,8 @@ ursor/fix-website-loading-errors-and-merge-6662
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <Card>
           <CardHeader>
             <CardTitle>Job Postings</CardTitle>
@@ -138,7 +124,6 @@ ursor/fix-website-loading-errors-and-merge-6662
             <Button size="sm" onClick={handleSaveChanges}>Save Changes</Button>
           </CardFooter>
         </Card>
-        
 
 
         <Card>
@@ -171,7 +156,6 @@ ursor/fix-website-loading-errors-and-merge-6662
             <Button size="sm" onClick={handleSaveChanges}>Save Changes</Button>
           </CardFooter>
         </Card>
-        
 
 
         <Card>
@@ -204,7 +188,6 @@ ursor/fix-website-loading-errors-and-merge-6662
             <Button size="sm" onClick={handleSaveChanges}>Save Changes</Button>
           </CardFooter>
         </Card>
-        
 
 
         <Card>
@@ -247,6 +230,7 @@ ursor/fix-website-loading-errors-and-merge-6662
           </CardFooter>
         </Card>
       </div>
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       <div className='bg-muted/50 rounded-lg p-6 flex items-center justify-between'>
         <div className='flex items-center gap-4'>
@@ -262,6 +246,8 @@ ursor/fix-website-loading-errors-and-merge-6662
         <div className="flex items-center gap-4">
           <div className="h-10 w-10 rounded-full bg-primary/20 flex items-center justify-center">
             <Sparkles className="h-5 w-5 text-primary" />
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
           </div>
@@ -274,6 +260,7 @@ ursor/fix-website-loading-errors-and-merge-6662
         </div>
         <Button>Contact Us</Button>
       </div>
+<<<<<<< HEAD
     </div>;
   );
 }"};
@@ -300,6 +287,8 @@ function UsageStats() {
     </div>
   )
 }"}
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from "react",;
 import { Badge } from "@/components/ui/badge",;
 import { Button } from "@/components/ui/button",;
@@ -311,6 +300,7 @@ import {;
   CardDescription,;
   CardFooter,;
   CardHeader,;
+<<<<<<< HEAD
           Configure usage limits for your team to manage your subscription;
           resources.;
         </p>;
@@ -351,10 +341,13 @@ export function UsageStats() {;
         <Card>;
           <CardHeader>;
             <CardTitle>Job Postings</CardTitle>;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <CardDescription>;
               Set monthly limits for job postings across your organization;
             </CardDescription>;
           </CardHeader>;
+<<<<<<< HEAD
                   Monthly job posting limit;
                 </div>;
                 <Badge variant='outline'>25 / 50</Badge>;
@@ -379,11 +372,14 @@ export function UsageStats() {;
                 <div className="text-sm">New limit:</div>;
                 <div className="col-span-2">;
                   <Input type="number" min="1" defaultValue="50" />;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 </div>;
               </div>;
             </div>;
           </CardContent>;
           <CardFooter>;
+<<<<<<< HEAD
         <Card>;
           <CardHeader>;
             <CardTitle > Candidate Contacts</CardTitle>;
@@ -400,10 +396,13 @@ export function UsageStats() {;
         <Card>;
           <CardHeader>;
             <CardTitle>Candidate Contacts</CardTitle>;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <CardDescription>;
               Limit the number of direct candidate contacts per month;
             </CardDescription>;
           </CardHeader>;
+<<<<<<< HEAD
                   Monthly contact credits;
                 </div>;
                 <Badge variant='outline'>178 / 500</Badge>;
@@ -428,11 +427,14 @@ export function UsageStats() {;
                 <div className="text-sm">New limit:</div>;
                 <div className="col-span-2">;
                   <Input type="number" min="1" defaultValue="500" />;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 </div>;
               </div>;
             </div>;
           </CardContent>;
           <CardFooter>;
+<<<<<<< HEAD
         <Card>;
           <CardHeader>;
             <CardTitle > AI Features</CardTitle>;
@@ -449,10 +451,13 @@ export function UsageStats() {;
         <Card>;
           <CardHeader>;
             <CardTitle>AI Features</CardTitle>;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <CardDescription>;
               Set the AI usage limits for matching and content generation;
             </CardDescription>;
           </CardHeader>;
+<<<<<<< HEAD
           <CardContent className="space-y-4">;
             <div>;
               <div className="flex items-center justify-between mb-2">;
@@ -466,11 +471,14 @@ export function UsageStats() {;
                 <div className="text-sm">New limit:</div>;
                 <div className="col-span-2">;
                   <Input type="number" min="1" defaultValue="1000" />;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 </div>;
               </div>;
             </div>;
           </CardContent>;
           <CardFooter>;
+<<<<<<< HEAD
         <Card>;
           <CardHeader>;
             <CardTitle > Budget Controls</CardTitle>;
@@ -487,10 +495,13 @@ export function UsageStats() {;
         <Card>;
           <CardHeader>;
             <CardTitle>Budget Controls</CardTitle>;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <CardDescription>;
               Set spending caps for premium features and services;
             </CardDescription>;
           </CardHeader>;
+<<<<<<< HEAD
                     <option value='75'>75% of limit</option>;
                     <option value='80'>80% of limit</option>;
                     <option value='90'>90% of limit</option>;
@@ -518,12 +529,15 @@ export function UsageStats() {;
                     <option value="80">80% of limit</option>;
                     <option value="90">90% of limit</option>;
                     <option value="95">95% of limit</option>;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   </select>;
                 </div>;
               </div>;
             </div>;
           </CardContent>;
           <CardFooter>;
+<<<<<<< HEAD
       <div className='bg - muted / 50 rounded - lg p - 6 flex items - center justify - between'>;
         <div className='flex items - center gap - 4'>;
           <div className='h - 10 w - 10 rounded - full bg - primary / 20 flex items - center justify - center'>;
@@ -565,12 +579,17 @@ export function UsageStats() {;
           </div>;
         </div>;
         <Button>Contact Us</Button>;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       </div>;
     </div>;
   );
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
     </div>
   )
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

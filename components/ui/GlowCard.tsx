@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -33,14 +34,16 @@ export default function GlowCard(): any ({;
   children: React && React.ReactNode;
 }) {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
-    <div className="group relative rounded-xl border border-white/10 bg-white/5 backdrop-blur-md p-5 hover:bg-white/10 transition-colors">;
-      <div className="absolute -inset-px rounded-xl bg-gradient-to-r from-cyan-500/0 via-fuchsia-500/0 to-violet-500/0 group-hover:from-cyan-500/20 group-hover:via-fuchsia-500/20 group-hover:to-violet-500/20 blur-xl" />;
-      <div className="relative">;
-        <h3 className="text-lg font-semibold mb-2 tracking-wide">{title}</h3>;
-        <div className="text-sm text-gray-300 leading-relaxed">{children}</div>;
-      </div>;
-    </div>;
+    <div className="group relative rounded-xl border border-white/10 bg-white/5 backdrop-blur-md p-5 hover:bg-white/10 transition-colors">
+      <div className="absolute -inset-px rounded-xl bg-gradient-to-r from-cyan-500/0 via-fuchsia-500/0 to-violet-500/0 group-hover:from-cyan-500/20 group-hover:via-fuchsia-500/20 group-hover:to-violet-500/20 blur-xl" />
+      <div className="relative">
+        <h3 className="text-lg font-semibold mb-2 tracking-wide">{title}</h3>
+        <div className="text-sm text-gray-300 leading-relaxed">{children}</div>
+      </div>
+    </div>
   );
   return (
     <div className="group relative rounded-xl border border-white/10 bg-white/5 backdrop-blur-md p-5 hover:bg-white/10 transition-colors">;
@@ -51,6 +54,7 @@ export default function GlowCard(): any ({;
       </div>;
     </div>;
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 import React from 'react';
@@ -74,10 +78,16 @@ export default function GlowCard({
 }) {
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+}
+import React from 'react';
+export default function GlowCard({ title, children }: { title: string, children: React.ReactNode }) {
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <div className="group relative rounded-xl border border-white/10 bg-white/5 backdrop-blur-md p-5 hover:bg-white/10 transition-colors">
       <div className="absolute -inset-px rounded-xl bg-gradient-to-r from-cyan-500/0 via-fuchsia-500/0 to-violet-500/0 group-hover:from-cyan-500/20 group-hover:via-fuchsia-500/20 group-hover:to-violet-500/20 blur-xl" />
       <div className="relative">
+<<<<<<< HEAD
         <h3 className="text-lg font-semibold mb-2 tracking-wide">{title}</h3>
 <<<<<<< HEAD
         <div className="text-sm text-gray-300 leading-relaxed">{children}</div>
@@ -140,3 +150,5 @@ function GlowCard() {
 }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

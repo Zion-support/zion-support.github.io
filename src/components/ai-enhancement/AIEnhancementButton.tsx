@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
   import { useState } from 'react'
 import { Button } from '@/components/ui/button'
@@ -49,42 +50,22 @@ interface AIEnhancementButtonProps {
 
 =======
 export function AIEnhancementButton({
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 export function AIEnhancementButton({
-}
-export function AIEnhancementButton({
-
-  options
-  onEnhanced
-  buttonText = "Enhance with AI"
-  className
-  variant = "ghost"
-  size = "sm"
-  contentLength = 10
-}: AIEnhancementButtonProps) {
-  const { enhanceContent, isEnhancing } = useAIContentEnhancer()
-  const [showActions, setShowActions] = useState(false)
-  const [generatedContent, setGeneratedContent] = useState<string | null>(null)
-  options,
-  onEnhanced,
-  buttonText = "Enhance with AI",
-  className,
-  variant = "ghost",
-  size = "sm",
-  contentLength = 10
-}: AIEnhancementButtonProps) {
-  const { enhanceContent, isEnhancing } = useAIContentEnhancer(),
-  const [showActions, setShowActions] = useState(false),
-  const [generatedContent, setGeneratedContent] = useState<string | null>(null),
-  
   const handleEnhance = async () => {
+<<<<<<< HEAD
 const handleEnhance = async () => {
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     if ((!options.content |options.content.trim().length < contentLength) &&
         (!options.context |options.context.trim().length < contentLength)) {
       toast({
         title: "Not enough content"
         description: `Please enter at least ${contentLength} characters before enhancing.`
         variant: "destructive"
+<<<<<<< HEAD
       })
       return;
     }
@@ -261,10 +242,13 @@ export function AIEnhancementButton({;
       onEnhanced(generatedContent),
       setShowActions(false),
       setGeneratedContent(null),
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       toast({
         title: "Content applied"
         description: "AI-enhanced content has been applied."})
     }
+<<<<<<< HEAD
   }
   const handleRegenerate = async () => {
     await handleEnhance()
@@ -273,6 +257,9 @@ export function AIEnhancementButton({;
     setShowActions(false)
     setGeneratedContent(null)
   }
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   },
   
@@ -285,7 +272,15 @@ export function AIEnhancementButton({;
     setGeneratedContent(null)
   },
   
+<<<<<<< HEAD
   
+=======
+
+
+  if (showActions) {
+    return (
+      <div className="flex gap-2 items-center">;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   if (showActions) {
     return (
       <div className="flex gap-2 items-center">
@@ -293,16 +288,20 @@ export function AIEnhancementButton({;
           type="button"
           variant="ghost"
           size="sm"
+<<<<<<< HEAD
           onClick={handleAccept}
           className="text-green-500 hover:text-green-700 hover:bg-green-100/20"
         >
           <Check className="h-4 w-4 mr-1" />
           Apply
         </Button>
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <Button
           type="button"
           variant="ghost"
           size="sm"
+<<<<<<< HEAD
           onClick={handleRegenerate}
           className="text-blue-500 hover:text-blue-700 hover:bg-blue-100/20"
           disabled={isEnhancing}
@@ -487,20 +486,21 @@ export function AIEnhancementButton({;
   if (showActions) {;
     return (;
       <div className="flex gap-2 items-center">;
+=======
+          onClick = {handleRegenerate,}
+          className="text-blue-500 hover:text-blue-700 hover:bg-blue-100/20"
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <Button;
           type="button";
           variant="ghost";
           size="sm";
-          onClick={handleAccept}
-          className="text-green-500 hover:text-green-700 hover:bg-green-100/20";
-        >;
-          <Check className="h-4 w-4 mr-1" />;
           Apply;
         </Button>;
         <Button;
           type="button";
           variant="ghost";
           size="sm";
+<<<<<<< HEAD
           onClick={handleRegenerate}
           className="text-blue-500 hover:text-blue-700 hover:bg-blue-100/20";
           disabled={isEnhancing}
@@ -569,12 +569,15 @@ if ( {) {
           {is_enhancing ? (
             <Loader2 className="h - 4 w - 4 mr - 1 animate - spin" />) : (
             <RefreshCw className="h - 4 w - 4 mr - 1" />)}
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           Regenerate;
         </Button>;
         <Button;
           type="button";
           variant="ghost";
           size="sm";
+<<<<<<< HEAD
           on_click = {handle_cancel, }
           className="text - gray - 500 hover: text - gray - 700 hover:bg - gray - 100 / 20";
         >;
@@ -585,12 +588,15 @@ if ( {) {
   }
   return (
     <Button;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     );
   }
 ;
   return (;
     <Button;
       type="button";
+<<<<<<< HEAD
       variant={variant}
       size={size}
       className={`gap-1 ${className}`}
@@ -598,6 +604,8 @@ if ( {) {
       disabled={isEnhancing}
       type="button";
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       variant = {variant, }
       size = {size, }
       className={`gap - 1 ${class_name}`}
@@ -622,13 +630,22 @@ if ( {) {
       <span className="text-xs">{buttonText}</span>
 =======
 
+      variant={variant}
+      size={size}
+      className={`gap-1 ${className}`}
+      onClick={handleEnhance}
+      disabled={isEnhancing}
     >
+<<<<<<< HEAD
     >
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {isEnhancing ? (
         <Loader2 className="h-4 w-4 animate-spin" />
       ) : (
         <Sparkles className="h-4 w-4" />
       )}
+<<<<<<< HEAD
     </Button>;
   );
     </Button>
@@ -689,3 +706,5 @@ return ;
 ;
       <span className="text-xs">{buttonText}</span>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

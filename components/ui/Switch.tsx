@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React from './react';
 ;
@@ -9,6 +10,9 @@ import React from './react';
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 interface SwitchProps {
 =======
+=======
+interface SwitchProps {
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 interface SwitchProps {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
@@ -17,6 +21,7 @@ interface SwitchProps {;
   disabled?: boolean;
   class_name?: string;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -32,6 +37,9 @@ const Switch: React.FC < SwitchProps> = ({
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 }) => {
 =======
+=======
+}) => {
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 const Switch: React.FC<SwitchProps> = ({;
   checked = false,;
@@ -46,6 +54,7 @@ const Switch: React.FC<SwitchProps> = ({;
       role="switch";
       aria - checked={checked}
       disabled={disabled}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -69,3 +78,5 @@ export { Switch }
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

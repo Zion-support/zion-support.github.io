@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import React, { useState, Suspense } from 'react'
 import { Dialog, DialogContent, DialogTrigger } from '@/components/ui/dialog'
@@ -28,6 +29,8 @@ interface ProductGalleryProps {
           <div className='aspect-video w-full relative'>;
             <DialogTrigger asChild>;
 })
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface ProductGalleryProps {
   images: string[]
   videoUrl?: string
@@ -74,6 +77,7 @@ export function ProductGallery({
                     src={img}
                     alt={`Thumbnail image ${idx + 1}`}
                     className='w-full h-full object-cover'
+<<<<<<< HEAD
         </TabsContent>;
         {videoUrl && (;
           <TabsContent value='video' className='pt-4'>;
@@ -90,13 +94,11 @@ export function ProductGallery({
               >;
                   />
                 </div>
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               ))}
             </div>
           )}
-        </TabsContent>
-        {videoUrl && (
-          <TabsContent value='video' className='pt-4'>
-            <AspectRatio ratio={16 / 9}>
               <Suspense
                 fallback={
                   <img
@@ -112,6 +114,7 @@ export function ProductGallery({
                   width='100%'
                   height='100%'
                   controls
+<<<<<<< HEAD
         {modelUrl && (;
           <TabsContent value='model' className='pt-4'>;
             <AspectRatio ratio={16 / 9}>;
@@ -133,6 +136,8 @@ export function ProductGallery({
         {modelUrl && (
           <TabsContent value='model' className='pt-4'>
             <AspectRatio ratio={16 / 9}>
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <Suspense
                 fallback={
                   <img
@@ -147,6 +152,7 @@ export function ProductGallery({
                   src={modelUrl}
                   alt='3d model'
                   camera-controls
+<<<<<<< HEAD
   images: string[];
   video_url?: string;
   model_url?: string;
@@ -250,6 +256,8 @@ function ProductGallery() {
       </Tabs>
       {images.length > 0 && (
         <DialogContent className='max-w-3xl p-0'>
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <div
             className={`w-full h-full overflow-auto ${zoomed ? 'cursor-zoom-out' : 'cursor-zoom-in'}`}
             onClick={() => setZoomed(!zoomed)}
@@ -262,11 +270,15 @@ function ProductGallery() {
             />          </div>
         </DialogContent>
       )}
+<<<<<<< HEAD
     </Dialog>
   )
 }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     </Dialog>;
   );
 
@@ -276,8 +288,11 @@ function ProductGallery() {
 };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 ;
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useState, Suspense } from 'react',;
 import {;
   Dialog,;
@@ -297,6 +312,7 @@ interface ProductGalleryProps {;
   images: string[],;
   videoUrl?: string,;
   modelUrl?: string;
+<<<<<<< HEAD
     </Dialog>;
   );
 }
@@ -304,6 +320,8 @@ interface ProductGalleryProps {;
 
 }
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           </TabsContent>)}
       </Tabs>;
       {images.length > 0 && (
@@ -341,6 +359,7 @@ interface ProductGalleryProps {;
   videoUrl?:string,;
   modelUrl?:string;
 }
+<<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
 ;
 export function ProductGallery({ images, videoUrl, modelUrl } ProductGalleryProps) {;
@@ -479,3 +498,5 @@ export function ProductGallery({ images, videoUrl, modelUrl }: ProductGalleryPro
 ;
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

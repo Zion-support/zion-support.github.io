@@ -1,13 +1,17 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from "react";
 import {useAuth} from "@/hooks/useAuth";
 import {useOnboardingStatus} from "@/hooks/useOnboardingStatus";
 import {UserCheck, Star, CalendarCheck, BriefcaseIcon} from "lucide-react";
 import {OnboardingTracker, OnboardingStep} from "./OnboardingTracker";
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 export function TalentOnboardingSteps() {;
@@ -20,13 +24,13 @@ export function TalentOnboardingSteps() {;
 
 
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 export function TalentOnboardingSteps() {
   const { user } = useAuth(),
   const onboardingStatus = useOnboardingStatus(),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   
-=======
 import React from "react";
 import { useAuth } from "@/hooks/useAuth";
 import { useOnboardingStatus } from "@/hooks/useOnboardingStatus";
@@ -36,8 +40,11 @@ export function TalentOnboardingSteps() {
   const { user } = useAuth();
   const onboardingStatus = useOnboardingStatus();
 
+<<<<<<< HEAD
 >>>>>>> main
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const steps: OnboardingStep[] = [
     {
       id: "profile",
@@ -62,9 +69,12 @@ export function TalentOnboardingSteps() {
     },
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 id: "match"
       id: "match"
       label: "Receive your first job match"
@@ -88,42 +98,55 @@ import { OnboardingTracker, OnboardingStep } from "./OnboardingTracker",;
 export function TalentOnboardingSteps() {;
   const { user } = useAuth(),;
   const onboardingStatus = useOnboardingStatus(),;
+<<<<<<< HEAD
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const steps: OnboardingStep[] = [;
     {;
       id: "profile",;
       label: "Complete your profile",;
+<<<<<<< HEAD
       completed: onboardingStatus && onboardingStatus.profileCompleted,;
 <<<<<<< HEAD
 =======
       completed: onboardingStatus.profileCompleted,;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       link: "/profile",;
       action: "Update"},;
     {;
       id: "skills",;
       label: "Add your top skills",;
+<<<<<<< HEAD
       completed: onboardingStatus && onboardingStatus.skillsAdded,;
 <<<<<<< HEAD
 =======
       completed: onboardingStatus.skillsAdded,;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       link: "/profile/skills",;
       action: "Add Skills"},;
     {;
       id: "availability",;
       label: "Set your availability",;
+<<<<<<< HEAD
       completed: onboardingStatus && onboardingStatus.availabilitySet,;
 <<<<<<< HEAD
 =======
       completed: onboardingStatus.availabilitySet,;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       link: "/profile/availability",;
       action: "Set"},;
     {;
       id: "match",;
       label: "Receive your first job match",;
+<<<<<<< HEAD
 <<<<<<< HEAD
       completed: onboardingStatus && onboardingStatus.matchReceived,;
       link: "/talent-dashboard",;
@@ -148,19 +171,15 @@ export function TalentOnboardingSteps() {;
       action: "View Matches"}],
   
   return <OnboardingTracker steps={steps} />
-
-  return <OnboardingTracker steps={steps} />;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 =======
-      action: "View Matches",
-    },
-  ];
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   return <OnboardingTracker steps={steps} />;
->>>>>>> main
+
 }
 
-=======
+  const { user } = useAuth();
+
 import React from './react';
 import { use_auth  } from '@/hooks / use_auth';
 import { useOnboardingStatus  } from '@/hooks / useOnboardingStatus';
@@ -206,6 +225,7 @@ function TalentOnboardingSteps() {
 ;
   return <OnboardingTracker steps={steps} />;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -291,3 +311,5 @@ return <OnboardingTracker steps= {
 }
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

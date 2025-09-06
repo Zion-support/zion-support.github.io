@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 import {useEffect, useState} from 'react';
@@ -11,10 +12,13 @@ import {useEffect, useState} from 'react';
 function useCounter(): any (target: number, durationMs: number) {;
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 function useCounter(target: number, durationMs: number) {
   const [value, setValue] = useState(0);
   useEffect(() => {
 
+<<<<<<< HEAD
 import {useEffect, useState} from 'react';
 
 <<<<<<< HEAD
@@ -27,6 +31,12 @@ function useCounter(target: number, durationMs: number) {
   const [value, setValue] = useState(0);
   useEffect(() => {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+function useCounter(target: number, durationMs: number) {
+  const [value, setValue] = useState(0);
+  useEffect(() => {;
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     let start: number | null = null;
     let raf: number;    const step = (ts: number) => {;
 =======
@@ -36,6 +46,7 @@ function useCounter(target: number, durationMs: number) {
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       if (start === null) start = ts;
+<<<<<<< HEAD
 
 =======
       if (start === null) start = ts;
@@ -57,24 +68,26 @@ function useCounter(target: number, durationMs: number) {
       const progress = Math.min(1, (ts - start) / durationMs);
       setValue(Math.floor(progress * target));
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       if (progress < 1) raf = requestAnimationFrame(step);
     }
     raf = requestAnimationFrame(step);
     return () => cancelAnimationFrame(raf);
   }, [target, durationMs]);
   return value;}
-
-    }
-
     raf = requestAnimationFrame(step);
     return () => cancelAnimationFrame(raf);
   }, [target, durationMs]);
   return value;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       if (progress < 1) raf = requestAnimationFrame(step)
     };
     raf = requestAnimationFrame(step);
@@ -84,6 +97,7 @@ function useCounter(target: number, durationMs: number) {
 }
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 export default function InteractiveStats() {
 =======
@@ -99,15 +113,21 @@ export default function InteractiveStats() {;
 export default function InteractiveStats() {;
 
 export default function InteractiveStats() {
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 export default function InteractiveStats() {;
 
 export default function InteractiveStats() {;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const hires = useCounter(1200, 1200);
   const experts = useCounter(450, 1200);
   const partners = useCounter(85, 1200);
   const satisfaction = useCounter(98, 1200);
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -166,10 +186,13 @@ function InteractiveStats() {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <Stat label='Successful Hires' value={hires} suffix='+' />;
       <Stat label='AI Experts' value={experts} suffix='+' />;
       <Stat label='Partners' value={partners} suffix='+' />;
       <Stat label='Satisfaction' value={satisfaction} suffix='%' />;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -192,11 +215,14 @@ function InteractiveStats() {
   );
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 function Stat({
   label
   value
   suffix = ''
 }: {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -216,6 +242,8 @@ function Stat(): any ({ label, value, suffix = '' }: { label: string, value: num
 }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     </div>);
     </div>);
 }
@@ -242,14 +270,18 @@ function Stat() {
     </div>);
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       </div>
       <div className='text-sm text-gray-600 dark:text-gray-300'>{label}</div>
     </div>
 
+<<<<<<< HEAD
   );
 
 <<<<<<< HEAD
@@ -289,3 +321,5 @@ function Stat({
 }
   );
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

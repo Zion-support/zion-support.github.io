@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import { useRef, useState } from 'react'
 import { Button } from '@/components/ui/button'
@@ -17,6 +18,8 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Input } from "@/components/ui/input",
 import { Copy, Download, Link, Plus } from 'lucide-react'
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useRef, useState } from 'react';
 import { Button } from '@/components/ui/button';
 import {;
@@ -49,6 +52,7 @@ import {;
   SelectValue,;
 } from '@/components/ui/select';
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 export function PartnerReferralLinks() {;
   const {;
@@ -83,10 +87,13 @@ export function PartnerReferralLinks() {
     shareOnSocialMedia
   } = useReferrals()
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const [isDialogOpen, setIsDialogOpen] = useState(false);
   const [selectedCampaign, setSelectedCampaign] = useState<string>('default');
   const [customParam, setCustomParam] = useState<string>('');
   const [generatedLinks, setGeneratedLinks] = useState<;
+<<<<<<< HEAD
 <<<<<<< HEAD
     { name: string; link: string }[];
   >([]);
@@ -139,6 +146,23 @@ export function PartnerReferralLinks() {
       setGeneratedLinks(prev => [...prev, newLink])
       setIsDialogOpen(false)
       setCustomParam('')
+=======
+      }
+
+      // Add custom parameter if provided;
+      if (customParam) {;
+        url && url.searchParams.append('source', customParam);
+      }
+
+      const newLink = {;
+        name: `${selectedCampaign}${customParam ? `-${customParam}` : ''}`,;
+        link: url && url.toString(),;
+      };
+
+      setGeneratedLinks(prev => [...prev, newLink]);
+      setIsDialogOpen(false);
+      setCustomParam('');
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   };
@@ -163,20 +187,6 @@ export function PartnerReferralLinks() {
   };
 
   return (
-
-              className='flex items-center gap-2'>;
-              <Download className='h-4 w-4' />;
-    <div className='space - y-6'>;
-      <Card className='bg - zion - blue - dark border - zion - blue - light'>;
-
-import { useRef, useState } from "react",
-import { Button } from "@/components/ui/button",
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
-import { Input } from "@/components/ui/input",
-
-import { Copy, Download, Link, Plus } from 'lucide-react'
-
-
 import { useRef, useState } from "react",
 import { Button } from "@/components/ui/button",
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
@@ -189,8 +199,13 @@ import { Label } from "@/components/ui/label",
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
+=======
+import { Copy, Download, Link, Plus } from 'lucide-react'
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export function PartnerReferralLinks() {
   const { referralCode, getReferralLink, copyReferralLink, shareOnSocialMedia } = useReferrals(),
   const [isDialogOpen, setIsDialogOpen] = useState(false),
@@ -217,6 +232,7 @@ export function PartnerReferralLinks() {
       // Add custom campaign parameter if selected
       if (selectedCampaign !== "default") {
         url.searchParams.append("campaign", selectedCampaign)
+<<<<<<< HEAD
       
       // Add custom parameter if provided
       if (customParam) {
@@ -253,6 +269,12 @@ export function PartnerReferralLinks() {
     link.click()
     document.body.removeChild(link)
   }
+=======
+      }
+      
+      // Add custom parameter if provided
+      if (customParam) {
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         name: `${selectedCampaign}${customParam ? `-${customParam}` : ""}`,
         link: url.toString()
       },
@@ -284,6 +306,7 @@ export function PartnerReferralLinks() {
     link.click(),
     document.body.removeChild(link)
   },
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -360,6 +383,8 @@ export function PartnerReferralLinks() {
     link.click(),
     document.body.removeChild(link)
   },
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   return (
     <div className="space-y-6">
@@ -367,6 +392,7 @@ export function PartnerReferralLinks() {
         <CardHeader>
           <CardTitle className="flex items-center justify-between">
             <span>Your Referral Link</span>
+<<<<<<< HEAD
             <Button
               variant='outline'
               size='sm'
@@ -394,6 +420,8 @@ export function PartnerReferralLinks() {
           Custom Campaign Links
         </h3>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <Button 
               variant="outline" 
               size="sm" 
@@ -468,6 +496,7 @@ export function PartnerReferralLinks() {;
     <div className="space-y-6">;
       <Card className="bg-zion-blue-dark border-zion-blue-light">;
         <CardHeader>;
+<<<<<<< HEAD
           <CardTitle className='flex items - center justify - between'>;
             <span > Your Referral Link</span>;
             <Button;
@@ -476,6 +505,8 @@ export function PartnerReferralLinks() {;
               on_click={handleDownloadLinks}
               className='flex items - center gap - 2'            >;
               <Download className='h - 4 w - 4' />;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               Export Links;
             </Button>;
           </CardTitle>;
@@ -485,34 +516,20 @@ export function PartnerReferralLinks() {;
         </CardHeader>;
         <CardContent>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
           <div className='flex space - x-2'>;
             <Input value={base_link} read_only className='font - mono text - sm' />;
             <Button variant='outline' on_click={() => handleCopyLink (base_link)}>;
               <Copy className='h - 4 w - 4' />;
               <span className='sr - only'>Copy</span>            </Button>;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           </div>;
         </CardContent>;
       </Card>;
-      <div className='flex justify - between items - center'>;
-        <h3 className='text - lg font - semibold text - white'>;
-          Custom Campaign Links;
-        </h3>;
-        <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>;
-          <DialogTrigger as_child>;
-            <Button;
-              variant='outline';
-              size='sm';
-              className='flex items - center gap - 2';
-            >;
-              <Plus className='h - 4 w - 4' />;
-              Create New Link;
-            </Button>;
-          </DialogTrigger>;
-          <DialogContent className='sm:max - w-md bg - zion - blue border - zion - blue - light'>;
-            <DialogHeader>;
-              <DialogTitle > Create Custom Campaign Link</DialogTitle>;
 
+<<<<<<< HEAD
               <DialogDescription>;
                 Generate a trackable link for specific marketing campaigns;
               </DialogDescription>;
@@ -561,6 +578,8 @@ export function PartnerReferralLinks() {;
       <div className="flex justify-between items-center">
         <h3 className="text-lg font-semibold text-white">Custom Campaign Links</h3>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
           <DialogTrigger asChild>
             <Button variant="outline" size="sm" className="flex items-center gap-2">
@@ -575,6 +594,7 @@ export function PartnerReferralLinks() {;
                 Generate a trackable link for specific marketing campaigns
               </DialogDescription>
             </DialogHeader>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -596,6 +616,8 @@ export function PartnerReferralLinks() {;
                   <SelectTrigger id='campaign'>
                     <SelectValue placeholder='Select campaign type' />
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <div className="grid gap-4 py-4">
               <div className="grid gap-2">
                 <Label htmlFor="campaign">Campaign Type</Label>
@@ -619,6 +641,7 @@ export function PartnerReferralLinks() {;
                   </SelectContent>
                 </Select>
               </div>
+<<<<<<< HEAD
               <div className='grid gap-2'>
                 <Label htmlFor='custom'>Custom Parameter (Optional)</Label>
                 <Input
@@ -633,28 +656,25 @@ export function PartnerReferralLinks() {;
                 type='button'
                 variant='secondary'
                 onClick={() => setIsDialogOpen(false)}
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <div className="grid gap-2">
                 <Label htmlFor="custom">Custom Parameter (Optional)</Label>
                 <Input 
                   id="custom" 
                   placeholder="spring_campaign, video_123, etc." 
                   value={customParam}
-                  onChange={(e) => setCustomParam(e.target.value)}
-                />
-              </div>
-            </div>
-            <DialogFooter>
-              <Button 
-                type="button" 
-                variant="secondary" 
+                  onChange={e => setCustomParam(e && e.target.value)}                />;
+              </div>;
+            </div>;
+            <DialogFooter>;
+              <Button
+                type='button'
+                variant='secondary'
                 onClick={() => setIsDialogOpen(false)}
               >
                 Cancel
               </Button>
-              <Button 
-                type="button" 
-                onClick={handleGenerateLink}
-                className="bg-zion-purple hover:bg-zion-purple-dark"
 
               >
                 Cancel
@@ -669,25 +689,13 @@ export function PartnerReferralLinks() {;
           </DialogContent>
         </Dialog>
       </div>
-                    <span>{item.name |'Campaign Link'}</span>                  </div>
-      <div className="grid gap-4">
-        {generatedLinks.length > 0 ? (
-          generatedLinks.map((item, index) => (
-      <div className='grid gap-4'>
-        {generatedLinks.length > 0 ? (
-          generatedLinks.map((item, index) => (
-            <Card
-              key={index}
-              className='bg-zion-blue-dark border-zion-blue-light'
-            >
-              <CardHeader className='pb-2'>
-                <CardTitle className='text-base flex items-center justify-between'>
-                  <div className='flex items-center gap-2'>
-                    <Link className='h-4 w-4 text-zion-purple' />
-                    <span>{item.name |'Campaign Link'}</span>                  </div>
                     <span>{item.name || 'Campaign Link'}</span>                  </div>
 
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <div className="grid gap-4">
         {generatedLinks.length > 0 ? (
           generatedLinks.map((item, index) => (
@@ -699,11 +707,15 @@ export function PartnerReferralLinks() {;
                     <span>{item.name || "Campaign Link"}</span>
                   </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 
                 </CardTitle>
               </CardHeader>
+<<<<<<< HEAD
 =======
 ursor/fix-website-loading-errors-and-merge-6662
 
@@ -739,6 +751,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
                 </CardTitle>
               </CardHeader>
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <CardContent className="pb-4">
                 <div className="flex space-x-2">
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -753,6 +767,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
                     className="font-mono text-xs"
                   />
+<<<<<<< HEAD
                   <Button
                     variant='outline'
                     size='sm'
@@ -772,6 +787,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   </Button>
                 </div>
               </CardContent>
@@ -784,6 +801,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                 Create custom campaign links to track different marketing efforts
               </p>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
               <Button 
                 variant="outline"
@@ -795,14 +813,20 @@ ursor/fix-website-loading-errors-and-merge-6662
                 className="flex items-center gap-2";
               >;
                 <Plus className="h-4 w-4" />;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 Create First Link;
               </Button>;
             </CardContent>;
           </Card>;
+<<<<<<< HEAD
 }className="bg-zion-blue-dark border-zion-blue-light"> <CardHeader className="pb-2"> <CardTitle className="text-base flex items-center justify-between"> <div className="flex items-center gap-2"> </div> </CardTitle> </CardHeader> <CardContent className="pb-4"> <div className="flex space-x-2"> <Inputvalue= {
   item && item.link "
 }readOnly className="font-mono text-xs"/> <Button > <Copy className="h-4 w-4"/> <span className="sr-only">Copy</span> </Button> </div> </CardContent> </Card>) ) ) : (<Card className="bg-zion-blue/20 border-dashed border-zion-blue-light"> <CardContent className="flex flex-col items-center justify-center p-6"> <p className="text-zion-slate-light text-center mb-4"> Create custom campaign links to track different marketing efforts </p> <Button className="flex items-center gap-2"> <Plus className="h-4 w-4" /> Create First Link </Button> </CardContent> </Card>) ;
 }</div> </div>) ;
+=======
+        )}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }'"}
 
               <div className='grid gap - 2'>;
@@ -820,12 +844,18 @@ ursor/fix-website-loading-errors-and-merge-6662
                 variant='secondary';
                 on_click={() => setIsDialogOpen (false)}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <Button 
                 variant="outline"
                 onClick={() => setIsDialogOpen(true)}
                 className="flex items-center gap-2";
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               >;
                 Cancel;
               </Button>;
@@ -892,6 +922,7 @@ if ( {) {
   $2
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 }const new_link = {
   name: `$ {
   selected_campaign;
@@ -926,3 +957,5 @@ document.body.remove_child (link);
   );
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

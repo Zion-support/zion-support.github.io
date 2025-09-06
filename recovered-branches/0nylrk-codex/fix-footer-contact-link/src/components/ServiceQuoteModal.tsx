@@ -1,9 +1,12 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
 =======
 import { useState  } from 'react';
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {useState} from 'react';
 import {Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter} from "@/components/ui/dialog";
 import {Button} from "@/components/ui/button";
@@ -21,6 +24,7 @@ import {ProductListing} from "@/types/listings";
 import {toast} from '@/hooks/use-toast';
 import {supabase} from "@/integrations/supabase/client";
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 import { useState } from 'react',
@@ -32,6 +36,9 @@ import { useState } from 'react',
 import { useState } from 'react',
 import { useState } from 'react',
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+import { useState } from 'react',
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter } from "@/components/ui/dialog",
 import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
@@ -44,6 +51,7 @@ import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover
 import { format } from "date-fns",
 import { CalendarIcon } from "lucide-react",
 import { cn } from "@/lib/utils",
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -64,6 +72,8 @@ import { ProductListing } from "@/types/listings",
 import { toast } from '@/hooks/use-toast',
 import { supabase } from "@/integrations/supabase/client",
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface ServiceQuoteModalProps {
 
   open: boolean
@@ -83,6 +93,7 @@ const TIMELINE_OPTIONS = [
   { label: "6+ months", value: "6+months" }]
 export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteModalProps) {
   const [formData, setFormData] = useState({
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import {useState} from 'react';
@@ -133,10 +144,13 @@ export function ServiceQuoteModal(): any ({ open, onOpenChange, service }: Servi
     budget: BUDGET_RANGES[0].value
     timeframe: TIMELINE_OPTIONS[0].value})
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const [startDate, setStartDate] = useState<Date | undefined>(new Date());
   const [endDate, setEndDate] = useState<Date | undefined>(undefined);
   const [currentStep, setCurrentStep] = useState<'details' | 'timeline' | 'contact'>('details');
   const [isSubmitting, setIsSubmitting] = useState(false);
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -242,11 +256,14 @@ function ServiceQuoteModal() {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     try {
       // Call Supabase function to process the quote;
       const { data, error } = await supabase.functions.invoke ('process - quote', {
         body: {
           service: service ? {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -305,11 +322,14 @@ function ServiceQuoteModal() {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       // Show success message
       toast({
         title: "Quote Request Submitted!"
         description: "We've sent your request to the service provider. They will contact you soon."})
       // Close the modal and reset form
+<<<<<<< HEAD
 <<<<<<< HEAD
       onOpenChange(false);
       setFormData({
@@ -343,10 +363,19 @@ function ServiceQuoteModal() {
     } catch (error) {
       console.error("Error submitting quote:", error),
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+      onOpenChange(false),
+      setFormData({
+      setCurrentStep('details')
+    } catch (error) {
+      console.error("Error submitting quote:", error),
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       toast({
         title: "Error"
         description: "There was an error submitting your quote request. Please try again."
         variant: "destructive"})
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -355,6 +384,8 @@ function ServiceQuoteModal() {
       });
       if (error) throw error;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             id: service.id,
             title: service.title,
             category: service.category} : null,
@@ -364,6 +395,7 @@ function ServiceQuoteModal() {
             end_date: end_date?.toISOString ()}
         }
       });
+<<<<<<< HEAD
 ;
       // Check condition
 if (throw error) {
@@ -438,6 +470,8 @@ if (throw error) {
   },
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent className="bg-zion-blue border-zion-blue-light text-white sm:max-w-[600px]">
@@ -458,11 +492,14 @@ if (throw error) {
               <div className="space-y-2">
                 <Label htmlFor="description" className="text-white">Project Description</Label>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <Textarea
                   id="description"
                   name="description"
@@ -478,6 +515,7 @@ if (throw error) {
                 <Select
                   value={formData.budget}
                   onValueChange={(value) => setFormData(prev => ({ ...prev, budget: value }))}
+<<<<<<< HEAD
                 >
                   <SelectTrigger className="bg-zion-blue-dark border-zion-blue-light text-white">
                     <SelectValue placeholder="Select your budget range" />
@@ -760,6 +798,8 @@ export function ServiceQuoteModal({ open, onOpenChange, service } ServiceQuoteMo
               <div className="space-y-2">;
                 <Label htmlFor="description" className="text-white">Project Description</Label>;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <Textarea
                   id="description"
                   name="description"
@@ -768,6 +808,7 @@ export function ServiceQuoteModal({ open, onOpenChange, service } ServiceQuoteMo
                   placeholder="Describe your project needs in detail..."
                   className="h-32 bg-zion-blue-dark border-zion-blue-light text-white resize-none"
                   required
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -802,32 +843,45 @@ export function ServiceQuoteModal({ open, onOpenChange, service } ServiceQuoteMo
                   value={formData.budget} ;
                   onValueChange={(value) => setFormData(prev => ({ ...prev, budget: value }))}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+                  onValueChange={(value) => setFormData(prev => ({ ...prev, budget: value }))}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 >;
                   <SelectTrigger className="bg-zion-blue-dark border-zion-blue-light text-white">;
                     <SelectValue placeholder="Select your budget range" />;
                   </SelectTrigger>;
                   <SelectContent className="bg-zion-blue-dark border-zion-blue-light">;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
                     {BUDGET_RANGES.map((range) => (;
                       <SelectItem key={range.value} value={range.value} className="text-white hover:bg-zion-blue-light">;
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                         {range.label}
                       </SelectItem>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+                    {BUDGET_RANGES && BUDGET_RANGES.map((range) => (;
+                      <SelectItem key={range && range.value} value={range && range.value} className="text-white hover:bg-zion-blue-light">;
+                        {range && range.label}
+                      </SelectItem>;
                     ))}
+<<<<<<< HEAD
 =======
                     {BUDGET_RANGES.map((range) => (;
                       <SelectItem key={range.value} value={range.value} className="text-white hover:bg-zion-blue-light">;
                         {range.label}
                       </SelectItem>;                    ))}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   </SelectContent>;
                 </Select>;
               </div>;
             </div>;
           )}
+<<<<<<< HEAD
 <<<<<<< HEAD
           {/* Step 2: Timeline */}
 
@@ -850,17 +904,24 @@ export function ServiceQuoteModal({ open, onOpenChange, service } ServiceQuoteMo
                   value={formData.timeframe}
                   onValueChange={(value) => setFormData(prev => ({ ...prev, timeframe:value }))}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+                  onValueChange={(value) => setFormData(prev => ({ ...prev, timeframe: value }))}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 >;
                   <SelectTrigger className="bg-zion-blue-dark border-zion-blue-light text-white">;
                     <SelectValue placeholder="Select your timeline" />;
                   </SelectTrigger>;
                   <SelectContent className="bg-zion-blue-dark border-zion-blue-light">;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     {TIMELINE_OPTIONS && TIMELINE_OPTIONS.map((option) => (;
                       <SelectItem key={option && option.value} value={option && option.value} className="text-white hover:bg-zion-blue-light">;
                         {option && option.label}
                       </SelectItem>;
                     ))}
+<<<<<<< HEAD
 
                   </SelectContent>;
                 </Select>;
@@ -888,6 +949,8 @@ export function ServiceQuoteModal({ open, onOpenChange, service } ServiceQuoteMo
                         variant={"outline"}
                         className={cn(
                           "justify-start text-left font-normal w-full"
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                           "bg-zion-blue-dark border-zion-blue-light text-white"
                         )}>;
                         <CalendarIcon className="mr-2 h-4 w-4" />;
@@ -895,6 +958,7 @@ export function ServiceQuoteModal({ open, onOpenChange, service } ServiceQuoteMo
                       </Button>;
                     </PopoverTrigger>;
                     <PopoverContent className="w-auto p-0 bg-zion-blue-dark border-zion-blue-light">;
+<<<<<<< HEAD
 =======
                     {BUDGET_RANGES.map((range) => (;
                       <SelectItem key={range.value} value={range.value} className="text-white hover:bg-zion-blue-light">;
@@ -945,12 +1009,15 @@ export function ServiceQuoteModal({ open, onOpenChange, service } ServiceQuoteMo
                     </PopoverTrigger>
                     <PopoverContent className="w-auto p-0 bg-zion-blue-dark border-zion-blue-light">
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       <Calendar
                         mode="single"
                         selected={startDate}
                         onSelect={setStartDate}
                         initialFocus
                         className="p-3 pointer-events-auto bg-zion-blue-dark text-white"
+<<<<<<< HEAD
 <<<<<<< HEAD
 
                       />;
@@ -1016,6 +1083,8 @@ export function ServiceQuoteModal({ open, onOpenChange, service } ServiceQuoteMo
                           "justify-start text-left font-normal w-full",
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                           "bg-zion-blue-dark border-zion-blue-light text-white"
                         )}>;
                         <CalendarIcon className="mr-2 h-4 w-4" />;
@@ -1025,6 +1094,7 @@ export function ServiceQuoteModal({ open, onOpenChange, service } ServiceQuoteMo
                     <PopoverContent className="w-auto p-0 bg-zion-blue-dark border-zion-blue-light">;
                       <Calendar
                         mode="single"
+<<<<<<< HEAD
 <<<<<<< HEAD
                         selected={endDate}
                         onSelect={setEndDate}
@@ -1065,10 +1135,17 @@ export function ServiceQuoteModal({ open, onOpenChange, service } ServiceQuoteMo
 ;
           {/* Step 3:Contact */}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+                        selected={endDate}
+                        onSelect={setEndDate}
+          )}
+          {/* Step 3: Contact */}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           {currentStep === 'contact' && (;
             <div className="space-y-4">;
               <div className="space-y-2">;
                 <Label htmlFor="email" className="text-white">Contact Email</Label>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
                           "justify-start text-left font-normal w-full";
@@ -1102,16 +1179,22 @@ export function ServiceQuoteModal({ open, onOpenChange, service } ServiceQuoteMo
               <div className="space-y-2">
                 <Label htmlFor="email" className="text-white">Contact Email</Label>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <Input
                   id="email"
                   name="email"
                   type="email"
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   value={formData && formData.email}
                   onChange={handleInputChange}
                   placeholder="your@email && email.com"
                   className="bg-zion-blue-dark border-zion-blue-light text-white"
                   required
+<<<<<<< HEAD
 
 =======
                   value={formData.email}
@@ -1144,20 +1227,33 @@ export function ServiceQuoteModal({ open, onOpenChange, service } ServiceQuoteMo
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                   )}
                   {endDate && (
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     <div className="flex justify-between">
                       <span className="text-zion-slate-light">End Date:</span>
                       <span className="text-white">{format(endDate, "PPP")}</span>
                     </div>
                   )}
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
 
 =======
                 />;
-              </div>;
-
 =======
+          )}
+                </div>;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+              </div>;
+            </div>;
+
+
+
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 />;
               </div>;
                 <Input;
@@ -1172,7 +1268,10 @@ export function ServiceQuoteModal({ open, onOpenChange, service } ServiceQuoteMo
                 />;
               </div>;
 ;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <div className="bg-zion-blue-dark border border-zion-blue-light rounded-md p-4">;
                 <h3 className="font-medium text-zion-cyan mb-2">Quote Summary</h3>;
                 <div className="space-y-2 text-sm">;
@@ -1183,30 +1282,36 @@ export function ServiceQuoteModal({ open, onOpenChange, service } ServiceQuoteMo
                   <div className="flex justify-between">;
                     <span className="text-zion-slate-light">Budget:</span>;
 <<<<<<< HEAD
+<<<<<<< HEAD
                     <span className="text-white">{BUDGET_RANGES && BUDGET_RANGES.find(b => b && b.value === formData && formData.budget)?.label}</span>;
                   </div>;
                   <div className="flex justify-between">;
                     <span className="text-zion-slate-light">Timeline:</span>;
                     <span className="text-white">{TIMELINE_OPTIONS && TIMELINE_OPTIONS.find(t => t && t.value === formData && formData.timeframe)?.label}</span>;
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     <span className="text-white">{BUDGET_RANGES.find(b => b.value === formData.budget)?.label}</span>;
                   </div>;
                   <div className="flex justify-between">;
                     <span className="text-zion-slate-light">Timeline:</span>;
                     <span className="text-white">{TIMELINE_OPTIONS.find(t => t.value === formData.timeframe)?.label}</span>;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   </div>;
                   {startDate && (;
                     <div className="flex justify-between">;
                       <span className="text-zion-slate-light">Start Date:</span>;
                       <span className="text-white">{format(startDate, "PPP")}</span>;
                     </div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                   )}
                   {endDate && (;
                     <div className="flex justify-between">;
                       <span className="text-zion-slate-light">End Date:</span>;
                       <span className="text-white">{format(endDate, "PPP")}</span>;
+<<<<<<< HEAD
 <<<<<<< HEAD
                     </div>;
                   )}
@@ -1237,20 +1342,30 @@ export function ServiceQuoteModal({ open, onOpenChange, service } ServiceQuoteMo
                 </div>;
               </div>;
             </div>;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           )}
 
           <DialogFooter className="flex-col sm:flex-row sm:justify-between sm:space-x-2">
             {currentStep !== 'details' && (
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+          )}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <Button
                 type="button"
                 variant="outline"
                 onClick={prevStep}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 className="border-zion-blue-light text-white hover:bg-zion-blue-light">;
                 Previous;
               </Button>;
             )}
+<<<<<<< HEAD
 
 
             <div className={cn("flex gap-2", currentStep === 'details' && "ml-auto")}>;
@@ -1263,10 +1378,13 @@ export function ServiceQuoteModal({ open, onOpenChange, service } ServiceQuoteMo
             )}
             <div className={cn("flex gap-2", currentStep === 'details' && "ml-auto")}>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <Button
                 type="button"
                 variant="outline"
                 onClick={() => onOpenChange(false)}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1310,6 +1428,8 @@ export function ServiceQuoteModal({ open, onOpenChange, service } ServiceQuoteMo
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <Button
                   type="submit"
                   disabled={isSubmitting}
@@ -1317,6 +1437,7 @@ export function ServiceQuoteModal({ open, onOpenChange, service } ServiceQuoteMo
                   {isSubmitting ? "Submitting..." : "Submit Request"}
                 </Button>;
               )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1593,10 +1714,13 @@ export function ServiceQuoteModal({ open, onOpenChange, service } ServiceQuoteMo
   )
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             </div>;
           </DialogFooter>;
         </form>;
       </DialogContent>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     </Dialog>);
@@ -1712,3 +1836,5 @@ return (<Dialog open= {
 }
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

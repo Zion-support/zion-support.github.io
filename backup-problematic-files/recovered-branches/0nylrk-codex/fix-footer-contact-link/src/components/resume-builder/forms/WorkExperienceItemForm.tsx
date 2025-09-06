@@ -214,7 +214,6 @@ export function WorkExperienceItemForm({;
                             ) :(;
                               <span>Select date</span>;
                             )}
-=======
                           <Button;
                             variant={"outline"}
                             className={cn(;

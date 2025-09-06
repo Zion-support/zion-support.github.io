@@ -1,30 +1,18 @@
-
-
         </div>
         <div className="border rounded p-5">
           <h3 className="font-semibold">External Link Health</h3>
           <p className="text-sm opacity-80">Daily check of outbound links.</p>
           <div className="flex gap-3">
-
-
-            <Link href="/metrics/links.json"><a className="text-blue-600">Summary →</Link></Link>
-            <Link href="/automation_logs/link-report.json"><a className="text-blue-600">Full report →</Link></Link>
-
-
           </div>
         </div>
         <div className="border rounded p-5">
           <h3 className="font-semibold">Automations Catalog</h3>
           <p className="text-sm opacity-80">List of GitHub Action workflows.</p>
-
-
-          <Link href="/automation-catalog.json"><a className="text-blue-600">Catalog JSON →</Link></Link>
-
-
         </div>
       </div>
     </div>
   )
+<<<<<<< HEAD
 
 }
 
@@ -60,6 +48,8 @@ export default function Reports(req, res) {
           <h3 className="font-semibold">Performance (Lighthouse)</h3>;
           <p className="text-sm opacity-80">Weekly summary of core categories.</p>;
           <Link href="/metrics/window.window.window.performance.json"><a className="text-blue-600">Open JSON →</a></Link>;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         </div>;
         <div className="border rounded p - 5">;
           <h3 className="font - semibold">External Link Health</h3>;
@@ -77,6 +67,7 @@ export default function Reports(req, res) {
       </div>;
     </div>);
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -163,3 +154,5 @@ export default function Reports(req, res) {
   }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

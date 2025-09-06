@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   private errorStats: Map<string, ChunkErrorStats> = new Map()
   private readonly MAX_RETRIES = 3
@@ -35,10 +36,16 @@ class ChunkErrorHandler {
   constructor() {
     this.initializeGlobalHandlers()
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  private readonly CACHE_CLEAR_THRESHOLD = 2
+  constructor() {
+    this.initializeGlobalHandlers()
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   }
   private initializeGlobalHandlers(): void {
     if (typeof window === 'undefined') return
     // Handle webpack chunk loading errors
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     window && window.addEventListener('error', event => {
@@ -236,6 +243,8 @@ if (return false) {
     } else {
       this.showFatalErrorMessage()
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     }
   }
   private async attemptRecovery(
@@ -245,6 +254,7 @@ if (return false) {
     logErrorToProduction(
       `Attempting ChunkLoadError recovery #${attemptNumber}`
       undefined
+<<<<<<< HEAD
     return chunkErrorPatterns.some (
       pattern =>;
         error_message.includes (pattern) ||;
@@ -378,10 +388,13 @@ if ( {) {
     // Force a hard refresh bypassing all caches
     window.location.href = window.location.href + '?_t=' + Date.now()
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   }
   private showFatalErrorMessage(): void {
     // Create a user-friendly error message
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
   }
@@ -411,6 +424,8 @@ if ( {) {
         </p>
         <button onclick="window.location.reload()" style="
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           background: #0070f3
           color: white
           border: none
@@ -420,9 +435,13 @@ if ( {) {
           cursor: pointer
           margin-right: 1rem;        ">
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           Try Again
         </button>
         <button onclick="window.location.href='/'" style="
@@ -432,7 +451,13 @@ if ( {) {
           padding: 0.75rem 1.5rem
           border-radius: 0.5rem
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+    const errorDiv = document && document.createElement('div');
+    errorDiv && errorDiv.style.cssText = `
+    window.location.href = window.location.href + '?_t=' + Date.now()
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 /**;
  * Chunk Error Handler - Comprehensive solution for ChunkLoadError recovery;
  * Handles automatic retry, cache clearing, and graceful degradation;
@@ -575,6 +600,7 @@ class ChunkErrorHandler {;
       logErrorToProduction('Caches cleared successfully', undefined, {;
         context: 'chunkErrorRecovery',;
         action: 'cache-clear';
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     const errorDiv = document && document.createElement('div');
     errorDiv && errorDiv.style.cssText = `
@@ -592,6 +618,8 @@ class ChunkErrorHandler {;
         action: 'cache - clear - failed',
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       });
     } catch (error) {;
       logErrorToProduction('Failed to clear caches', error as Error, {;
@@ -608,7 +636,10 @@ class ChunkErrorHandler {;
   private hard_refresh (): void {
     // Force a hard refresh bypassing all caches;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     window.location.href = window.location.href + '?_t=' + Date.now();
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -616,6 +647,7 @@ class ChunkErrorHandler {;
 
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -673,6 +705,46 @@ ursor/fix-website-loading-errors-and-merge-6662
       font-family: system-ui, -apple-system, sans-serif,
     `,
 
+=======
+  }
+
+  private showFatalErrorMessage(): void {
+    // Create a user-friendly error message
+    const errorDiv = document.createElement('div'),
+    errorDiv.style.cssText = `
+      position: fixed,
+      top: 0,
+      left: 0,
+      width: 100%,
+      height: 100%,
+      background: rgba(0, 0, 0, 0.8),
+      color: white,
+      display: flex,
+      align-items: center,
+      justify-content: center,
+      z-index: 999999,
+      font-family: system-ui, -apple-system, sans-serif,
+    `,
+    const errorDiv = document.createElement('div'),
+    errorDiv.style.cssText = `
+      position: fixed,
+      top: 0,
+      left: 0,
+      width: 100%,
+      height: 100%,
+      background: rgba(0, 0, 0, 0.8),
+      color: white,
+      display: flex,
+      align-items: center,
+      justify-content: center,
+      z-index: 999999,
+      font-family: system-ui, -apple-system, sans-serif,
+    `,
+
+
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     errorDiv.innerHTML = `
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       <div style="text-align: center, padding: 2rem, max-width: 500px,">
@@ -682,6 +754,7 @@ ursor/fix-website-loading-errors-and-merge-6662
           This might be due to a poor network connection or a temporary server issue.
         </p>
         <button onclick="window.location.reload()" style="
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -714,6 +787,8 @@ ursor/fix-website-loading-errors-and-merge-6662
           border-radius: 0.5rem
           font-size: 1rem
           cursor: pointer
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           background: #0070f3,
           color: white,
           border: none,
@@ -737,17 +812,21 @@ ursor/fix-website-loading-errors-and-merge-6662
           Go Home
         </button>
       </div>
+<<<<<<< HEAD
           Go Home
         </button>
       </div>
     `
     document.body.appendChild(errorDiv)
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   }
   private delay(ms: number): Promise<void> {
     return new Promise(resolve => setTimeout(resolve, ms))
   }
   private getSessionKey(): string {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     return `${navigator.userAgent}_${window.location.origin}`
@@ -809,6 +888,12 @@ export const chunkErrorHandler = new ChunkErrorHandler()
 // Export for manual usage
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+  }
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     `,
 
     document.body.appendChild(errorDiv)
@@ -888,18 +973,17 @@ export const chunkErrorHandler = new ChunkErrorHandler()
 
 
 
+    }
+    return this.errorStats.get(sessionKey)!
+  }
   // Public method to manually trigger recovery
   public triggerRecovery(): void {
-
-    this && this.clearCaches().then(() => {
-      this && this.reloadPage();
-    });  }
-
-
+    this.clearCaches().then(() => {
       this.reloadPage()
     }) }
   // Public method to check if we're in a chunk error state
   public isInErrorState(): boolean {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     const sessionKey = this && this.getSessionKey();
@@ -943,6 +1027,13 @@ export default chunkErrorHandler
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+// Create and export singleton instance
+export const chunkErrorHandler = new ChunkErrorHandler()
+// Export for manual usage
+export default chunkErrorHandler
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
       background: rgba (0, 0, 0, 0.8);
       color: white;
@@ -971,6 +1062,7 @@ export default chunkErrorHandler
           Try Again;
         </button>;
         <button onclick="window.location.href='/'" style=";
+<<<<<<< HEAD
           background: #666;
           color: white;
           border: none;
@@ -1042,6 +1134,8 @@ export default chunkErrorHandler;
 }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ;
   // Public method to manually trigger recovery;
   public triggerRecovery(): void {;
@@ -1068,7 +1162,11 @@ export default chunkErrorHandler;
 export const chunkErrorHandler = new ChunkErrorHandler();
 // Export for manual usage;
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default chunkErrorHandler;
 =======
 export default chunkErrorHandler;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+export default chunkErrorHandler;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

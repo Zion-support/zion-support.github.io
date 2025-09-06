@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -14,6 +15,23 @@ import { FlagResult } from './types',
 
 
 <<<<<<< HEAD
+=======
+export const flagContent = async (;
+  userId: string;
+  userEmail: string | undefined;
+  contentType: FraudFlag['content_type'];
+  contentId: string;
+  contentExcerpt: string;
+  severity: FraudSeverity;
+export const flagContent = async (
+  userId: string;
+  userEmail: string | undefined;
+  contentType: FraudFlag['content_type'];
+  contentId: string;
+  contentExcerpt: string;
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 // Content flagging functionality;
 import {supabase} from '@/integrations / supabase / client';
 import {FraudSeverity, FraudFlag} from '@/types / fraud';
@@ -27,6 +45,7 @@ export const flag_content = async (
   content_type: FraudFlag['content_type'];
   content_id: string;
   content_excerpt: string;
+<<<<<<< HEAD
 =======
 // Content flagging functionality
 import { supabase  } from '@/integrations/supabase/client';
@@ -53,6 +72,8 @@ export const flagContent = async (
   contentType: FraudFlag['content_type'];
   contentId: string;
   contentExcerpt: string;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   severity: FraudSeverity;
   reason: string
   userId: string,
@@ -65,6 +86,7 @@ export const flagContent = async (
   ipAddress?: string
 ): Promise<FlagResult> => {
   try {
+<<<<<<< HEAD
 <<<<<<< HEAD
     console.log ('Flagging content for review:', {
       user_id;
@@ -84,13 +106,18 @@ export const flagContent = async (
       content_excerpt: contentExcerpt && contentExcerpt.substring(0, 200), // Limit excerpt length
 
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     // // // console.log('Flagging content for review:', {
       userId,
       contentType,
       contentId,
       reason,
       severity
+      reason;
+      severity;
     });
+<<<<<<< HEAD
     const { error } = await supabase.from('fraud_flags').insert({
       user_id: userId;
       user_email: userEmail;
@@ -98,6 +125,8 @@ export const flagContent = async (
       content_id: contentId
       content_excerpt: contentExcerpt.substring(0, 200), // Limit excerpt length
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       severity;
       reason;
       ip_address: ipAddress;
@@ -108,12 +137,15 @@ export const flagContent = async (
     return { success: true }
   } catch (error) {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
     console.error('Error flagging content:', error);
     return {
       success: false
       error: error instanceof Error ? error.message : 'Unknown error'
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     }
   }
 }
@@ -135,12 +167,6 @@ export const flagContent = async (
     
     if (error) throw error,
     
-    return { success: true }
-  } catch (error) {
-    console.error('Error flagging content:', error);
-    return { 
-      success: false, 
-      error: error instanceof Error ? error.message : 'Unknown error' 
 // Content flagging functionality;
 import { supabase } from '@/integrations/supabase/client',;
 import { FraudSeverity, FraudFlag } from '@/types/fraud',;
@@ -185,6 +211,7 @@ export const flagContent = async (;
     return {;
       success: false;
       error: error instanceof Error ? error.message : 'Unknown error';
+<<<<<<< HEAD
 
       reason;
       severity;
@@ -270,6 +297,8 @@ export const flagContent = async (;
 <<<<<<< HEAD
 
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ;
     const { error } = await supabase.from ('fraud_flags').insert ({
       user_id: user_id;
@@ -294,6 +323,7 @@ if (throw error) {
     return {
       success: false,
       error: error instanceof Error ? error.message : 'Unknown error';
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -345,3 +375,8 @@ if (throw error) {
   }
 };
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+    }
+  }
+};
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

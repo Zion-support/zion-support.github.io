@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -32,11 +33,14 @@ import React from 'react';
 import React from 'react',
 import React from 'react';
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import Head from 'next/head';
 import { useRouter  } from 'next/router';
 import { getServiceById  } from '../../data/micro-saas-services';
 import ServiceDetail from '../../components/sections/ServiceDetail',
 import Button from '../../components/ui/Button';
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -50,11 +54,25 @@ import {ArrowLeft, ExternalLink} from 'lucide-react';
 
 <<<<<<< HEAD
 import {ArrowLeft, ExternalLink} from 'lucide-react';
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 export default function ServiceDetailPage() {;
   const router = useRouter();
   const { id } = router && router.query;
 
+<<<<<<< HEAD
+=======
+export default function ServiceDetailPage() {;
+
+export default function ServiceDetailPage() {
+  const router = useRouter();
+  const { id } = router.query;
+
+import {ArrowLeft, ExternalLink} from 'lucide-react';
+export default function ServiceDetailPage() {
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   if (!id || typeof id !== 'string') {;
 
     return (
@@ -76,6 +94,7 @@ export default function ServiceDetailPage() {;
           </Button>;
         </div>;
       </div>;
+<<<<<<< HEAD
 
 =======
   
@@ -124,12 +143,15 @@ export default function ServiceDetailPage() {
         </div>
       </div>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     );
   }
   const service = getServiceById(id);
 
   if (!service) {;
     return (
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -188,10 +210,13 @@ export default function ServiceDetailPage() {
         <nav className='border-b border-gray-800 bg-black/50 backdrop-blur-sm sticky top-0 z-50'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
             <div className='flex items-center justify-between h-16'>
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <Button
                 href='/services'
                 variant='ghost'
                 size='sm'
+<<<<<<< HEAD
                 className='text-gray-400 hover:text-white'
               >
                 <ArrowLeft className='w-4 h-4 mr-2' />                Back to Services
@@ -215,12 +240,17 @@ export default function ServiceDetailPage() {
         <nav className="border-b border-gray-800 bg-black/50 backdrop-blur-sm sticky top-0 z-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex items-center justify-between h-16">
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <Button
                 href="/services"
                 variant="ghost"
                 size="sm"
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 className="text-gray-400 hover:text-white"
               >
                 <ArrowLeft className="w-4 h-4 mr-2" />
@@ -239,29 +269,38 @@ export default function ServiceDetailPage() {
             </div>
           </div>
         </nav>
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
+=======
+        {/* Service Detail Content */}
+        <ServiceDetail service={service} />
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
         {/* Service Detail Content */}
         <ServiceDetail service={service} />;
-
-
 
         {/* Related Services CTA */}
         <section className='py-16 bg-gray-900/50'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
             <h2 className='text-3xl font-bold text-white mb-6'>
-
-
-              Looking for Something Else?
-
             </h2>
             <p className='text-gray-400 mb-8 max-w-2xl mx-auto'>
               Explore our complete portfolio of micro SaaS services to find the
               perfect solution for your business needs.
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
+        {/* Related Services CTA */}
+        <section className='py-16 bg-gray-900/50'>;
+          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>;
+            <h2 className='text-3xl font-bold text-white mb-6'>;
+            </h2>;
+            <p className='text-gray-400 mb-8 max-w-2xl mx-auto'>;
+              Explore our complete portfolio of micro SaaS services to find the;
+              perfect solution for your business needs.;
+            </p>;
+            <div className='flex flex-col sm:flex-row gap-4 justify-center'>;
               <Button
                 href='/services'
                 variant='primary'
@@ -273,6 +312,7 @@ export default function ServiceDetailPage() {
                 href='/contact'
                 variant='outline'
                 size='lg'
+<<<<<<< HEAD
 
                 className='border-white/20 text-white hover:border-white/40'              >                href="/services"
                 variant="primary"
@@ -304,12 +344,17 @@ export default function ServiceDetailPage() {
         {/* Service Detail Content */}
         <ServiceDetail service={service} />
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         {/* Related Services CTA */}
         <section className='py-16 bg-gray-900/50'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
             <h2 className='text-3xl font-bold text-white mb-6'>
+<<<<<<< HEAD
 
               Looking for Something Else?
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             </h2>
             <p className='text-gray-400 mb-8 max-w-2xl mx-auto'>
               Explore our complete portfolio of micro SaaS services to find the
@@ -327,6 +372,7 @@ export default function ServiceDetailPage() {
                 href='/contact'
                 variant='outline'
                 size='lg'
+<<<<<<< HEAD
                 className='border-white/20 text-white hover:border-white/40'              >                href="/services"
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                 variant="primary"
@@ -346,6 +392,8 @@ export default function ServiceDetailPage() {
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 Get Custom Solution
               </Button>;
             </div>;
@@ -355,13 +403,21 @@ export default function ServiceDetailPage() {
     </>;
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 }
+;
+              <Button
 
+<<<<<<< HEAD
 =======
 =======
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import Head from 'next / head';
 import {use_router} from 'next / router';
 import {getServiceById} from '../../data / micro - saas - services';
@@ -531,6 +587,7 @@ if ( {) {
     </>);
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
                 Get Custom Solution
@@ -546,3 +603,5 @@ if ( {) {
 ;
               <Button
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

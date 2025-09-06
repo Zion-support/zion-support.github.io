@@ -1,5 +1,6 @@
 import { GetServerSideProps } from 'next';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
   };      permanent: true}}
@@ -32,6 +33,14 @@ export default function ApiDocsRedirect() {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+  };      permanent: true}}
+
+export default function ApiDocsRedirect() {;
+  return null;
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       destination: '/developers / docs',
       permanent: true,
     },
@@ -42,15 +51,8 @@ export default /**
  * ApiDocsRedirect - Function description
  */
 function ApiDocsRedirect() {
-export const getServerSideProps: GetServerSideProps = async () => {
-  return {
-    redirect: {
-      destination: '/developers/docs'
-      permanent: true
-    }
-  };      permanent: true}}
-}
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -76,3 +78,8 @@ export default function ApiDocsRedirect() {;
 }
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+}
+;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

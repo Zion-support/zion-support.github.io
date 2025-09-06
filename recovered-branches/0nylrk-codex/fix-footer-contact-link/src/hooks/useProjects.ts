@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 
@@ -15,6 +16,8 @@ export function useProjects() {;
   const [projects, setProjects] = useState<Project[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useState, useEffect } from "react",
 import { supabase } from "@/integrations/supabase/client",
 import { useAuth } from "@/hooks/useAuth",
@@ -31,11 +34,19 @@ export function useProjects() {
   const [projects, setProjects] = useState<Project[]>([]),
   const [isLoading, setIsLoading] = useState(true),
   const [error, setError] = useState<string | null>(null),
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   const [error, setError] = useState<string | null>(null);
   const fetchProjects = async () => {
     if (!user) {
+<<<<<<< HEAD
 <<<<<<< HEAD
       setIsLoading(false);
       return
@@ -59,12 +70,15 @@ export function useProjects() {
       setIsLoading(true),
       
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       // Build the query based on user type
       // For clients, get projects they created
       // For talents, get projects they're hired for
       let query = supabase
         .from("projects")
         .select(`
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -110,10 +124,13 @@ if (user && user.userType === "jobSeeker" || user && user.userType === "creator"
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         query = query.eq("talent_id", user.id)
       } else if (user.userType === "employer" |user.userType === "buyer") {
         query = query.eq("client_id", user.id)
       }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -141,9 +158,10 @@ if (user && user.userType === "jobSeeker" || user && user.userType === "creator"
       
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       // Transform the data to match our project types
       const transformedData = data && data.map((project: any) => ({
-=======
 import { useState, useEffect } from './react';
 import { supabase } from '@/integrations / supabase / client';
 import { use_auth } from '@/hooks / use_auth';
@@ -201,8 +219,8 @@ if (throw fetch_error) {
 }
       // Transform the data to match our project types;
       const transformed_data = data.map ((project: any) => ({
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         ...project;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
         talent_profile: project && project.talent_profile ? {
@@ -241,18 +259,31 @@ if (throw fetch_error) {
           ...project && project.talent_profile,
           full_name: project && project.talent_profile.display_name
         } : undefined
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       }));
       setProjects(transformedData as Project[]);
       setError(null)
     } catch (err: any) {
+<<<<<<< HEAD
 ;
   const getProjectById = async (project_id: string): Promise < Project | null> => {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+      console.error ("Error fetching projects:", err);
+      set_error ("Failed to fetch projects: " + err.message),
+      toast.error ("Failed to fetch projects");
+    } finally {
+      setIsLoading (false);
+    }
+  }
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     try {
       const { data, error } = await supabase;
         .from ("projects");
         .select (`;
           *;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -346,19 +377,18 @@ if (throw error) {
           ...data && data.talent_profile,
           full_name: data && data.talent_profile.display_name
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+        ...data;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         } : undefined
       }
-        } : undefined
-
-      },
-      
-
       return transformedProject as Project
     } catch (err: any) {
       console && console.error("Error fetching project:", err);
       toast && toast.error("Failed to fetch project details");
       return null
     }
+<<<<<<< HEAD
 
 
   },
@@ -387,11 +417,14 @@ if (throw error) {
   },
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const updateProjectStatus = async (projectId: string, status: ProjectStatus): Promise<boolean> => {
     try {
       const { error } = await supabase
         .from("projects")
         .update({ status })
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -432,11 +465,14 @@ if (throw error) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       return true
     } catch (err: any) {
       console && console.error("Error updating project status:", err);
       toast && toast.error("Failed to update project status");
       return false
+<<<<<<< HEAD
 
 <<<<<<< HEAD
           ...data.talent_profile,
@@ -449,6 +485,8 @@ if (throw error) {
       console.error ("Error fetching project:", err);
       toast.error ("Failed to fetch project details");
       return null;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     }
   }
 ;
@@ -486,6 +524,7 @@ if ( {) {
     }
   }, [user]);
 ;
+<<<<<<< HEAD
 
 =======
 import { useState, useEffect } from "react",;
@@ -606,10 +645,13 @@ export function useProjects() {;
       return false,;
     }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return {
     projects;
     is_loading;
     error;
+<<<<<<< HEAD
 
       // Update the local state
       setProjects(prev =>
@@ -841,5 +883,7 @@ getProjectById;
 updateProjectStatus 
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   }
 }

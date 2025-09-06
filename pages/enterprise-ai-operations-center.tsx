@@ -1,24 +1,15 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
             <div className="lg:col-span-2 p-6 bg-black/40 border border-gray-700/50 p-6 bg-black/40 border border-gray-700/50 rounded-lg backdrop-blur-sm">
               <h2 className="text-white text-xl font-semibold mb-3">Overview</h2>
-              <p className="text-slate-300">Centralized AI monitoring, performance optimization, resource and cost management, security, compliance, and analytics—designed for enterprise scale.</p>
-            </div>
-            <div className="p-6 bg-black/40 border border-gray-700/50 p-6 bg-black/40 border border-gray-700/50 rounded-lg backdrop-blur-sm">
-              <div className="text-3xl font-bold text-white text-base font-medium text-gray-400">Starting at $35,999<span >/month</span></div>
-              <div className="text-sm text-gray-400 mt-2">Trial: 30 days • Setup: 1–2 weeks</div>
-              <div className="mt-6 flex gap-3">
-
-
-                <a href="/contact" className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 text-white">Contact Sales</Link>
-                <a href="/services" className="flex-1 border border-gray-600 text-gray-200">Explore Services</Link>
-
-
               </div>
             </div>
           </div>
@@ -26,6 +17,7 @@
       </div>
     </Layout>
   )
+<<<<<<< HEAD
 
 }
 
@@ -126,11 +118,14 @@ export default function EnterpriseAIOpsPage(req, res) {
                 <a href="/contact" className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 text-white">Contact Sales</a>;
                 <a href="/services" className="flex-1 border border-gray-600 text-gray-200">Explore Services</a>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               </div>;
             </div>;
           </div>;
         </div>;
       </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
     </Layout>);
 }
@@ -149,3 +144,11 @@ export default function EnterpriseAIOpsPage(req, res) {
 
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+;
+;
+
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

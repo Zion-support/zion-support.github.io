@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import React from 'react'
 import { Card, CardContent } from '@/components/ui/card'
@@ -29,6 +30,8 @@ interface ProjectViewProps {
     id: string;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 id: string;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     title: string;
     client: {;
       name: string;
@@ -40,6 +43,7 @@ id: string;
     totalAmount: string;
     progress: number;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     description: string
   }
@@ -47,6 +51,8 @@ id: string;
 export function MobileProjectView({ project, milestones }: ProjectViewProps) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from 'react';
 import { Card, CardContent } from '@/components / ui / card';
 import { Button } from '@/components / ui / button';
@@ -79,9 +85,13 @@ import { SeverityIndicator } from "../common/SeverityIndicator",
 import { useRouter } from 'next/router',
 import { toast } from "sonner",
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface Milestone {
   id: string;
   title: string;
@@ -103,6 +113,7 @@ interface ProjectViewProps {
     total_amount: string;
     progress: number;
     description: string;
+<<<<<<< HEAD
   }
   milestones: Milestone[];
 <<<<<<< HEAD
@@ -158,6 +169,10 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {
 
 =======
   
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <div className="space-y-6 px-4 pb-24">
       <Card>
@@ -176,6 +191,7 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {
               </div>
               <Badge>{project.status}</Badge>
             </div>
+<<<<<<< HEAD
             <div className='space-y-1'>
               <div className='flex justify-between items-center text-sm'>
                 <span className="font-medium">{project.progress}%</span>
@@ -232,23 +248,35 @@ ursor/fix-website-loading-errors-and-merge-6662
             
             <div className="space-y-1">
               <div className="flex justify-between items-center text-sm">
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <span>Progress</span>
                 <span className="font-medium">{project.progress}%</span>
               </div>
               <Progress value={project.progress} className="h-2" />
             </div>
+<<<<<<< HEAD
             <div className='grid grid-cols-2 gap-3 text-sm'>
             
             <div className="grid grid-cols-2 gap-3 text-sm">
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <div>
                 <p className="text-muted-foreground">Start Date</p>
                 <p className="font-medium">{project.startDate}</p>
               </div>
               <div>
+<<<<<<< HEAD
                 <p className='text-muted-foreground'>End Date</p>
                 <p className='font-medium'>{project.endDate |'Not set'}</p>
                 <p className="text-muted-foreground">End Date</p>
                 <p className="font-medium">{project.endDate || "Not set"}</p>
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               </div>
               <div>
                 <p className="text-muted-foreground">Total Amount</p>
@@ -265,6 +293,7 @@ ursor/fix-website-loading-errors-and-merge-6662
               </div>
             </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -277,56 +306,14 @@ ursor/fix-website-loading-errors-and-merge-6662
             <div>
               <p className='text-sm text-muted-foreground mb-1'>Description</p>
               <p className='text-sm'>{project.description}</p>
+=======
+
+
+            <div>
+              <p className="text-sm text-muted-foreground mb-1">Description</p>
+              <p className="text-sm">{project.description}</p>
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             </div>
-
-                      src={project && project.client.avatar}
-                      alt={project && project.client.name}
-                    />;
-                    <AvatarFallback>{project && project.client.name[0]}</AvatarFallback>;
-                  </Avatar>;
-                  <span className='text-sm'>{project && project.client.name}</span>;
-                </div>;
-              </div>;
-              <Badge>{project && project.status}</Badge>;
-            </div>;
-
-            <div className='space-y-1'>;
-              <div className='flex justify-between items-center text-sm'>;
-                <span>Progress</span>;
-                <span className='font-medium'>{project && project.progress}%</span>;
-              </div>;
-              <Progress value={project && project.progress} className='h-2' />;
-            </div>;
-
-            <div className='grid grid-cols-2 gap-3 text-sm'>;
-              <div>;
-                <p className='text-muted-foreground'>Start Date</p>;
-                <p className='font-medium'>{project && project.startDate}</p>;
-              </div>;
-              <div>;
-                <p className='text-muted-foreground'>End Date</p>;
-                <p className='font-medium'>{project && project.endDate || 'Not set'}</p>;
-              </div>;
-              <div>;
-                <p className='text-muted-foreground'>Total Amount</p>;
-                <p className='font-medium'>{project && project.totalAmount}</p>;
-              </div>;
-              <div>;
-                <p className='text-muted-foreground'>Status</p>;
-                <p className='font-medium capitalize'>{project && project.status}</p>;
-              </div>;
-            </div>;
-
-            <div>;
-              <p className='text-sm text-muted-foreground mb-1'>Description</p>;
-              <p className='text-sm'>{project && project.description}</p>;
-            </div>;
-
-            <div className='flex gap-2'>;
-              <Button size='sm' variant='outline' className='gap-1 flex-1'>;
-                <FileText className='h-4 w-4' /> Contract;
-              </Button>;
-
               <Button
                 size='sm'
                 variant='outline'
@@ -338,12 +325,15 @@ ursor/fix-website-loading-errors-and-merge-6662
                 size='sm'
                 className='gap-1 flex-1 bg-zion-purple hover:bg-zion-purple-light'
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
                 onClick={startProjectCall}              >
                 <Video className='h-4 w-4' /> Call
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             
             <div className="flex gap-2">
               <Button size="sm" variant="outline" className="gap-1 flex-1">
@@ -369,6 +359,7 @@ ursor/fix-website-loading-errors-and-merge-6662
           </div>
         </CardContent>
       </Card>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -465,11 +456,16 @@ ursor/fix-website-loading-errors-and-merge-6662
                   <div className="flex items-center gap-2">
                     {milestone.status === "completed" ? (
                       <CheckCircle className="h-5 w-5 text-green-500" />
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     ) : (
                       <div className="h-5 w-5 rounded-full border-2 border-muted-foreground"></div>
                     )}
                     <h3 className="font-medium">{milestone.title}</h3>
                   </div>
+<<<<<<< HEAD
                   <Badge
                     variant={
                       milestone.paymentStatus === 'paid'
@@ -522,10 +518,13 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {;
                     <AvatarFallback>{project.client.name[0]}</AvatarFallback>;
                   </Avatar>;
                   <span className='text - sm'>{project.client.name}</span>;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 </div>;
               </div>;
               <Badge>{project.status}</Badge>;
             </div>;
+<<<<<<< HEAD
             <div className='space - y-1'>;
               <div className='flex justify - between items - center text - sm'>;
                 <span > Progress</span>;
@@ -571,12 +570,15 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {;
                 className='gap - 1 flex - 1 bg - zion - purple hover:bg - zion - purple - light';
                 on_click={startProjectCall}              >;
                 <Video className='h - 4 w - 4' /> Call;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               </Button>;
             </div>;
           </div>;
         </CardContent>;
       </Card>;
       <section>;
+<<<<<<< HEAD
         <h2 className='text - lg font - medium mb - 4'>Milestones</h2>;
         <div className='space - y-3'>;
           {milestones.map (milestone => (            <Card key={milestone.id}>;
@@ -593,6 +595,8 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     variant={;
                       milestone.paymentStatus === "paid" ? "default" :;
                       milestone.paymentStatus === "overdue" ? "destructive" : "outline";
@@ -606,10 +610,13 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {;
                   <div className="flex justify-between text-sm">
                     <span className="text-muted-foreground">Due Date:</span>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     <span>{milestone.dueDate}</span>
                   </div>
                   <div className="flex justify-between text-sm">
@@ -631,6 +638,7 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {;
               </CardContent>
             </Card>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
                   </Badge>;
@@ -648,6 +656,11 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {;
 }
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+                  </Badge>;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 </div>;
                 <div className='pl - 7'>;
                   <div className='flex justify - between text - sm'>;
@@ -687,6 +700,7 @@ ursor/fix-website-loading-errors-and-merge-6662
   );
 };
 }
+<<<<<<< HEAD
 }
 ursor/fix-website-loading-errors-and-merge-6662
 }
@@ -694,3 +708,5 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

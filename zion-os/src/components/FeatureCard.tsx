@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -48,6 +49,8 @@ export function FeatureCard({;
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 "use client",
 import Link from './next / link';,
 import { ReactNode  } from './react';,
@@ -60,6 +63,7 @@ interface FeatureCardProps {
   href: string,
   is_active: boolean,
   on_click: () => void;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 "use client";
@@ -74,6 +78,8 @@ interface FeatureCardProps {id: number;
   isActive: boolean;
   onClick: () => void;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 export /**
  * FeatureCard - Function description
@@ -89,6 +95,7 @@ function FeatureCard() {
   }
   return (
     <div;
+<<<<<<< HEAD
 <<<<<<< HEAD
       className={`card group cursor - pointer transition - all duration - 300 ${
         is_active ? 'scale - 105 shadow - 2xl' : 'hover:scale - 105';
@@ -149,6 +156,8 @@ export function FeatureCard({;
           e.preventDefault();
           onClick();
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         }
       }}
       tab_index={0}

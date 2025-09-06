@@ -1,22 +1,29 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useState } from './react';
 import { MapPin  } from './lucide-react';
 import { TalentCardSkills  } from './TalentCardSkills';
 
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface TalentCardContentProps {
   summary: string | undefined;
   bio: string;
   timezone: string | undefined;
+<<<<<<< HEAD
   skills: string[] | undefined
 
 import React, { useState } from "react";
@@ -52,13 +59,18 @@ export function TalentCardContent({
   skills,
 }: TalentCardContentProps) {
 >>>>>>> main
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const [isHovering, setIsHovering] = useState(false);
 
 
 skills: string[] | undefined
   skills: string[] | undefined
 }
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 export function TalentCardContent({
   summary
@@ -70,15 +82,19 @@ export function TalentCardContent({ summary, bio, timezone, skills }: TalentCard
   const [isHovering, setIsHovering] = useState(false);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const [isHovering, setIsHovering] = useState(false);
   return (
     <div>
 import React, { useState } from "react",;
 import { MapPin } from "lucide-react",;
 import { TalentCardSkills } from "./TalentCardSkills",;
+<<<<<<< HEAD
 
 interface TalentCardContentProps {;
   summary: string | undefined,;
@@ -99,6 +115,8 @@ export function TalentCardContent(): any ({ summary, bio, timezone, skills }: Ta
 import React, { useState } from "react",;
 import { MapPin } from "lucide-react",;
 import { TalentCardSkills } from "./TalentCardSkills",;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ;
 interface TalentCardContentProps {;
   summary:string | undefined,;
@@ -106,21 +124,32 @@ interface TalentCardContentProps {;
   timezone:string | undefined,;
   skills:string[] | undefined;
 }
+<<<<<<< HEAD
 ;
 export function TalentCardContent({ summary, bio, timezone, skills } TalentCardContentProps) {;
   const [isHovering, setIsHovering] = useState(false),;
 ;
   return (;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+  const [isHovering, setIsHovering] = useState(false);
+  return (
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <div>;
 
 
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+}
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {/* Location */}
       {timezone && (;
         <div className="flex items-center gap-2 text-sm text-zion-slate-light mb-3">;
@@ -128,6 +157,7 @@ export function TalentCardContent({ summary, bio, timezone, skills } TalentCardC
           <span>{timezone}</span>;
         </div>;
       )}
+<<<<<<< HEAD
 
       {/* Short bio or summary - longer on hover for desktop */}
       <div
@@ -149,11 +179,14 @@ export function TalentCardContent({ summary, bio, timezone, skills } TalentCardC
 
 >>>>>>> main
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {/* Skills */}
       <TalentCardSkills skills={skills} />
     </div>
   );
 }
+<<<<<<< HEAD
 =======
 
       {/* Short bio or summary - longer on hover for desktop */}
@@ -207,6 +240,8 @@ skills: string[] | undefined
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export /**
  * TalentCardContent - Function description
  */
@@ -234,4 +269,3 @@ function TalentCardContent() {
       <TalentCardSkills skills={skills} />;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

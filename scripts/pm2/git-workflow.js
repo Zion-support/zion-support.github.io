@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 const fs = require('fs');
 const path = require('path');
@@ -44,6 +45,8 @@ gitWorkflow.run().catch(error = > {process.exit(1)});
 // Run the git workflow monitor;
 const gitWorkflow = new GitWorkflow();
 gitWorkflow.run().catch(error = > {; process.exit(1)});
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             }).trim(),
 ,
             const commitCount = execSync(`git rev-list --count origin/${branchName}`, {,
@@ -360,6 +363,7 @@ gitWorkflow.run().catch(error => {,
   process.exit(1)
 }),
 
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
@@ -369,3 +373,9 @@ gitWorkflow.run().catch(error = > {; process.exit(1)});
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+gitWorkflow.run().catch(error = > {; process.exit(1)});
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 export function SelectResumeSection({
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -51,6 +52,10 @@ export function SelectResumeSection({
   selectedResume,
   handleResumeSelect,
   handleDownloadResume,
+=======
+
+export function SelectResumeSection({
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   isLoading
 }: SelectResumeSectionProps) {
   return (
@@ -59,6 +64,7 @@ export function SelectResumeSection({
         <p className="text-sm text-zion-slate">No saved resumes found.</p>
       ) : (
         <>
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           {resumeOptions.map(option => (            <button
               key = {option.id,}
@@ -84,6 +90,8 @@ export function SelectResumeSection({
                   : 'bg-zion-blue-dark/30 hover:bg-zion-blue-dark/50';
               }`}
               onClick={() => handleResumeSelect(option.id)}
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 
@@ -94,6 +102,11 @@ export function SelectResumeSection({
               </div>
             </button>
           ))}
+          
+
+          
+
+
           
 
           
@@ -114,6 +127,7 @@ export function SelectResumeSection({
               </div>
             </button>
           ))}
+
           {selectedResume?.type === 'ai_resume' && selectedResume.resume && (
             <ResumePreviewCard
               resume = {selectedResume.resume as Resume,}
@@ -127,6 +141,7 @@ export function SelectResumeSection({
               onDownload={handleDownloadResume}
               isLoading={isLoading}
             />;
+<<<<<<< HEAD
         </>
       )}
   )
@@ -276,20 +291,11 @@ export const SelectResumeSection: React.FC<SelectResumeSectionProps> = ({
   );
 }
 ;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           )}
         </>
       )}
-    </div>
-  )
-}}
-}
-  );
-}};
-};
-    </div>;
-  );
-}
-;
   );
 }};
 };
@@ -298,4 +304,7 @@ export const SelectResumeSection: React.FC<SelectResumeSectionProps> = ({
   );
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

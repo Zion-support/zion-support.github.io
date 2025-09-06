@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 import React from 'react';
@@ -21,6 +22,8 @@ const values = [
 const values = [;
 =======
 import {
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   UserGroupIcon
   LightBulbIcon
   GlobeAltIcon
@@ -28,15 +31,19 @@ import {
   AcademicCapIcon
   RocketLaunchIcon
 } from '@heroicons/react/24/outline'
-import React from 'react';
-
 const values = [
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   {
+<<<<<<< HEAD
     name: 'Innovation First',
     description: 'We push the boundaries of what's possible, constantly exploring new frontiers in AI and technology.',
     icon: LightBulbIcon},
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+    name: 'Innovation First'
+    description: 'We push the boundaries of what\'s possible, constantly exploring new frontiers in AI and technology.'
+    icon: LightBulbIcon}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   {
     name: 'Global Impact'
     description: 'Our solutions reach across borders, transforming industries and improving lives worldwide.'
@@ -68,6 +75,7 @@ const team = [;
     image: '/images / team / elena - petrov.jpg'},
   {
 <<<<<<< HEAD
+<<<<<<< HEAD
     name: 'James Kim',
     role: 'Chief Operations Officer',
     bio: 'Former Fortune 500 executive, specializing in scaling AI operations and enterprise deployment.',
@@ -79,11 +87,10 @@ function AboutPage() {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
-    <div className=&quot;bg - black & quot;>;
-
-
-
+    <div className="bg-black">
       {/* Hero section */}
       <div className=&quot;relative isolate px - 6 pt - 14 lg:px - 8&quot;>;
         <div className=&quot;mx - auto max - w-2xl py - 32 sm:py - 48 lg:py - 56 & quot;>;
@@ -91,18 +98,26 @@ function AboutPage() {
             <h1 className=&quot;text - 4xl font - bold tracking - tight text - white sm:text - 6xl & quot;>;
               About{' '}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
             <p className="mt-6 text-lg leading-8 text-gray-300">
               We are pioneers in artificial intelligence, quantum computing, and autonomous systems, 
 
 
+=======
+              <span className="bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">
+                Zion Tech Group
+              </span>
+            </h1>
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               dedicated to transforming industries and advancing human potential through technology.
             </p>
           </div>
         </div>
       </div>
       {/* Mission & Vision */}
+<<<<<<< HEAD
       <div className=&quot;mx-auto max-w-7xl px-6 sm:px-6 lg:px-8&quot;>
         <div className=&quot;mx-auto max-w-2xl lg:text-center&quot;>
           <h2 className=&quot;text-base font-semibold leading-7 text-blue-400&quot;>Our Purpose</h2>
@@ -139,6 +154,8 @@ function AboutPage() {
                 A future where AI and technology seamlessly enhance human capabilities, creating a more 
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 intelligent, efficient, and sustainable world for generations to come.
               </p>
             </div>
@@ -146,38 +163,12 @@ function AboutPage() {
         </div>
       </div>
       {/* Company Story */}
-      <div className=&quot;mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8&quot;>
-        <div className=&quot;mx-auto max-w-2xl lg:text-center&quot;>
-          <h2 className=&quot;text-base font-semibold leading-7 text-blue-400&quot;>Our Story</h2>
-          <p className=&quot;mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl&quot;>
-            From Research to Revolution
-          </p>
-        </div>
-
-
-        <div className="mx-auto mt-16 max-w-2xl lg:max-w-none">
-          <div className="bg-white/5 p-8 rounded-2xl backdrop-blur-sm">
-            <p className="text-lg text-gray-300 mb-6">
-              Founded in 2020 by a team of world-class AI researchers and technology entrepreneurs, 
-              Zion Tech Group emerged from a shared vision: to bridge the gap between cutting-edge 
-              research and real-world applications.
-            </p>
-            <p className="text-lg text-gray-300 mb-6">
-              What started as a small research lab has grown into a global technology powerhouse, 
-              with offices in Silicon Valley, London, Tokyo, and Singapore. Our team of 200+ 
-              researchers, engineers, and business professionals work tirelessly to push the 
-              boundaries of what's possible.
-            </p>
-            <p className="text-lg text-gray-300">
-              Today, we serve over 1,000 clients worldwide, from Fortune 500 companies to innovative 
-              startups, helping them harness the power of AI to transform their operations and 
-
-
               accelerate their growth.
             </p>
           </div>
         </div>
       </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -256,6 +247,8 @@ function AboutPage() {
         </div>;
       </div>;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {/* Values */}
       <div className=&quot;mx - auto mt - 32 max - w-7xl px - 6 sm:mt - 40 lg:px - 8&quot;>;
         <div className=&quot;mx - auto max - w-2xl lg:text - center & quot;>;
@@ -276,6 +269,7 @@ function AboutPage() {
                   <p className=&quot;flex - auto & quot;>{value.description}</p>;
                 </dd>;
               </div>))}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     name: 'James Kim'
@@ -412,21 +406,24 @@ export default function AboutPage() {
               </div>
             ))}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           </dl>;
         </div>;
       </div>;
       {/* Leadership Team */}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base font-semibold leading-7 text-blue-400">Leadership</h2>
           <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
-
-
             Meet Our Team
           </p>
           <p className="mt-6 text-lg leading-8 text-gray-300">
@@ -452,7 +449,10 @@ export default function AboutPage() {
                 <div className="group relative">
                   <h3 className="mt-3 text-lg font-semibold leading-6 text-white group-hover:text-blue-400 transition-colors duration-200">
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     {person.name}
                   </h3>;
                   <p className=&quot;mt - 2 text - sm text - blue - 400 & quot;>{person.role}</p>;
@@ -463,6 +463,7 @@ export default function AboutPage() {
         </div>;
       </div>;
       {/* CTA section */}
+<<<<<<< HEAD
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
@@ -473,6 +474,8 @@ export default function AboutPage() {
 
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             Join us in shaping the future
           </h2>
           <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-300">
@@ -495,6 +498,7 @@ export default function AboutPage() {
     </div>
   )
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -534,6 +538,8 @@ export default function AboutPage() {
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base font-semibold leading-7 text-blue-400">Leadership</h2>
           <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             Meet Our Team
           </p>
           <p className="mt-6 text-lg leading-8 text-gray-300">
@@ -569,6 +575,7 @@ export default function AboutPage() {
         </div>;
       </div>;
       {/* CTA section */}
+<<<<<<< HEAD
 <div className=&quot;mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8&quot;>
         <div className=&quot;mx-auto max-w-2xl text-center&quot;>
           <h2 className=&quot;text-3xl font-bold tracking-tight text-white sm:text-4xl&quot;>
@@ -576,6 +583,8 @@ export default function AboutPage() {
           </h2>
           <p className=&quot;mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-300&quot;>
             Ready to be part of the AI revolution? Let's discuss how we can work together to
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">

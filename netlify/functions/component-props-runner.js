@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 function runNode(relPath, args = []) {
@@ -8,11 +9,14 @@ function runNode(relPath, args = []) {
 =======
 const abs = path && path.resolve(__dirname, '..', '..', relPath);
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const res = spawnSync('node', [abs, ...args], {
     stdio: 'pipe'
     encoding: 'utf8'
   });
   return {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -26,11 +30,14 @@ const abs = path && path.resolve(__dirname, '..', '..', relPath);
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 exports && exports.handler = async () => {
   const logs = [];
   function logStep(name, fn) {
     logs && logs.push(`\n=== ${name} ===`);
     const { status, stdout, stderr } = fn();
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     if (stdout) logs && logs.push(stdout);
@@ -42,11 +49,14 @@ exports && exports.handler = async () => {
     if (stderr) logs && logs.push(stderr);
     logs && logs.push(`exit=${status}`);
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     return status;
   }
   logStep('components:generate-docs', () =>
     runNode('automation/component-props-docs && docs.cjs')
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -141,6 +151,9 @@ exports && exports.handler = async () => {
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 exports.handler = async () => {
   const logs = [],
   /**
@@ -161,5 +174,8 @@ function log_step() {
   log_step ('components:generate - docs', () => run_node ('automation / component - props - docs.cjs')),
   log_step ('git:sync', () => run_node ('automation / advanced - git - sync.cjs')),
   return { status_code: 200, body: logs.join ('\n') }
+<<<<<<< HEAD
 },
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

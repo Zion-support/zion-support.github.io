@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import {TalentCard} from "@/components/talent/TalentCard";
 import {TalentProfile} from "@/types/talent";
@@ -22,19 +23,17 @@ export interface TalentGridProps {;
 
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { TalentCard } from "@/components/talent/TalentCard";
 import { TalentProfile } from "@/types/talent";
 export interface TalentGridProps {
 
-  talents: TalentProfile[]
-  isLoading: boolean
-  onTalentClick: (id: string) => void
-  savedTalentIds: string[]
-  onToggleSave: (id: string, isSaved: boolean) => void
-  isAuthenticated: boolean
-  viewProfile?: (id: string) => void
   clearFilters?: () => void;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { TalentCard } from "@/components/talent/TalentCard",
 import { TalentProfile } from "@/types/talent",
 import {TalentCard} from "@/components/talent/TalentCard";
@@ -42,10 +41,13 @@ import {TalentProfile} from "@/types/talent";
 import { TalentCard } from "@/components/talent/TalentCard",
 import { TalentProfile } from "@/types/talent",
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export interface TalentGridProps {
   talents: TalentProfile[],
   isLoading: boolean,
@@ -53,6 +55,7 @@ export interface TalentGridProps {
   savedTalentIds: string[],
   onToggleSave: (id: string, isSaved: boolean) => void,
   isAuthenticated: boolean,
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   viewProfile?: (id: string) => void,
@@ -72,6 +75,11 @@ export interface TalentGridProps {
   clearFilters?: () => void,
   handleRequestHire?: (talent: TalentProfile) => void
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  handleRequestHire?: (talent: TalentProfile) => void
+  clearFilters?: () => void;
+  handleRequestHire?: (talent: TalentProfile) => void;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 export function TalentGrid({
   talents
@@ -80,6 +88,7 @@ export function TalentGrid({
   savedTalentIds
   onToggleSave
 
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -107,12 +116,15 @@ export function TalentGrid({
   viewProfile,
   clearFilters,
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   handleRequestHire
 }: TalentGridProps) {
 
   const handleRequestHireInternal = (talent: TalentProfile) => {
     if (handleRequestHire) {
       handleRequestHire(talent)
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -150,6 +162,10 @@ if ( {) {
     }
   }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+    } else {
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ;
   const handleViewProfile = (id: string) =>: any {
     // Check condition
@@ -158,32 +174,32 @@ if ( {) {
 }
       view_profile (id);
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
     } else {
       onTalentClick (id);
     }
 
+<<<<<<< HEAD
 =======
     } else {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       // Default implementation
-      console.log("Request to hire:", talent.id)
-    }
-  }
-  const handleViewProfile = (id: string) => {
-    if (viewProfile) {
-      viewProfile(id)
-    } else {
-      onTalentClick(id)
-    }
-  }
 
   };
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       // // // console.log("Request to hire:", talent.id)
 import { TalentCard } from "@/components/talent/TalentCard",;
 import { TalentProfile } from "@/types/talent",;
@@ -226,6 +242,7 @@ export function TalentGrid({;
     }
   },
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -239,6 +256,9 @@ export function TalentGrid({;
   
   
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   if (isLoading) {
     return <div className="py-8 text-center">
       <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-zion-cyan mx-auto mb-4"></div>
@@ -249,6 +269,7 @@ export function TalentGrid({;
     return <div className="py-8 text-center bg-zion-blue-dark rounded-lg border border-zion-blue-light p-6">
       <p className="text-zion-slate-light mb-4">No talents found matching your criteria</p>
       {clearFilters && (
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 export function TalentGrid(): any ({ ;
@@ -307,17 +328,21 @@ export function TalentGrid({ ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         <button
           onClick={clearFilters}
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           className="px-4 py-2 bg-zion-purple text-white rounded hover:bg-zion-purple-dark transition-colors"
         >
           Clear Filters
         </button>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   };
-
   const handleViewProfile = (id: string) => {;
     if (viewProfile) {;
       viewProfile(id);
@@ -325,6 +350,7 @@ export function TalentGrid({ ;
       onTalentClick(id);
     }
   };
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -342,10 +368,13 @@ export function TalentGrid({ ;
   ;
   };
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   if (isLoading) {;
     return <div className="py-8 text-center">;
       <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-zion-cyan mx-auto mb-4"></div>;
       <p className="text-zion-cyan">Loading talent profiles...</p>;
+<<<<<<< HEAD
 <<<<<<< HEAD
     </div>;
   }
@@ -359,16 +388,46 @@ export function TalentGrid({ ;
           onClick={clearFilters}
 
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     </div>,;
   }
     </div>;
   }
-;
-  if (!talents || talents.length === 0) {;
-    return <div className="py-8 text-center bg-zion-blue-dark rounded-lg border border-zion-blue-light p-6">;
-      <p className="text-zion-slate-light mb-4">No talents found matching your criteria</p>;
-      {clearFilters && (;
+          className="px-4 py-2 bg-zion-purple text-white rounded hover:bg-zion-purple-dark transition-colors"
+        >
+          Clear Filters
+        </button>
+      )}
+    </div>
+  }
+
+
+      )}
     </div>;
+  }
+
+
+
+
+
+  return (
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">;
+      {talents && talents.map((talent) => (;
+        <TalentCard
+          key={talent && talent.id}
+          talent={talent}
+          onViewProfile={() => handleViewProfile(talent && talent.id)}
+          onRequestHire={() => handleRequestHireInternal(talent)}
+          isSaved={savedTalentIds && savedTalentIds.includes(talent && talent.id)}
+          onToggleSave={onToggleSave}
+          isAuthenticated={isAuthenticated}
+        />;
+      ))}
+  }
+;
+  }
+;
   // Check condition
 if ( {) {
   $2
@@ -406,22 +465,8 @@ if ( {) {
           is_authenticated={is_authenticated}
         />))}
     </div>);
-  ),; export interface TalentGridProps {
-  talents: TalentProfile[];
-isLoading: boolean;
-onTalentClick: (id: string) => void;
-savedTalentIds: string[];
-onToggleSave: (id: string, isSaved: boolean) => void;
-isAuthenticated: boolean;
-viewProfile?: (id: string) => void;
-clearFilters?: () => void;
-handleRequestHire?: (talent: TalentProfile) => void 
-}talents, isLoading, onTalentClick, savedTalentIds, onToggleSave, isAuthenticated, viewProfile, clearFilters, handleRequestHire 
-}: TalentGridProps) {
-  const handleRequestHireInternal = (talent: TalentProfile) => {
-  if (handleRequestHire) {
-  
 }
+<<<<<<< HEAD
 };
 const handleViewProfile = (id: string) => {
   if (viewProfile) {
@@ -523,3 +568,5 @@ if (isLoading) {
 }
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

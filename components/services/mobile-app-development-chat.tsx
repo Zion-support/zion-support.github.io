@@ -1,7 +1,29 @@
 
 
+import type { NextPage } from "next";
+import Head from "next/head";
+import Link from "next/link";
+const MobileAppDevelopmentChat: NextPage = () => {;
+  return (
+    <div>;
+      <Head>;
+        <title>MobileAppDevelopmentChat - Zion Tech Solutions</title>;
+        <meta
+          name="description"
+          content="MobileAppDevelopmentChat service"
+        />{" "}
+      <main>
+        <h1>MobileAppDevelopmentChat</h1>
+        <p>Service details coming soon...</p>
+        <a href="/services">Back to Services</a>
+      </main>
+    </div>
+      </Head>;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <main>;
         <h1>MobileAppDevelopmentChat</h1>;
         <p>Service details coming soon...</p>;
@@ -14,20 +36,19 @@
 export default MobileAppDevelopmentChat;
 
 
-=======
 
+<<<<<<< HEAD
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 import type { NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
-
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
-
-
 
 const MobileAppDevelopmentChat: NextPage = () => {
   return (
@@ -35,12 +56,19 @@ const MobileAppDevelopmentChat: NextPage = () => {
       <Head>
 
         <title>MobileAppDevelopmentChat - Zion Tech Solutions</title>
+        <title>MobileAppDevelopmentChat - Zion Tech Solutions</title>
+        <title>MobileAppDevelopmentChat - Zion Tech Solutions</title>
 
+        <title>MobileAppDevelopmentChat - Zion Tech Solutions</title>
+
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import type { NextPage } from './next';
 import Head from './next / head';
 import Link from './next / link';
@@ -64,6 +92,7 @@ const MobileAppDevelopmentChat: NextPage = () => {
 ;
 export default MobileAppDevelopmentChat;
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -115,3 +144,5 @@ export default MobileAppDevelopmentChat;
         <title>MobileAppDevelopmentChat - Zion Tech Solutions</title>
         <title>MobileAppDevelopmentChat - Zion Tech Solutions</title>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

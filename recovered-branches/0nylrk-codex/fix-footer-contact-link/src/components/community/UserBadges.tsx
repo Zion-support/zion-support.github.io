@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 }
 const iconMap = {;
@@ -56,32 +57,36 @@ const icon_map = {
 export const UserBadges = ({ badges }: UserBadgesProps) => {;
 
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { Trophy, Award, BadgeCheck, Star, MessageSquare } from "lucide-react",
 import { Badge } from "@/types/community";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import { Badge } from "@/types/community",
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip",
 
+import {Trophy, Award, BadgeCheck, Star, MessageSquare} from "lucide-react";
+import {Badge} from "@/types/community";
+import {Tooltip, TooltipContent, TooltipProvider, TooltipTrigger} from "@/components/ui/tooltip";
+
+interface UserBadgesProps {;
+  badges: Badge[];
+
+}
+const iconMap = {;
 interface UserBadgesProps {
-  badges: Badge[]
+  badges: Badge[];
 }
-
-const iconMap = {
-  Trophy,
-  Award,
-  BadgeCheck,
-  Star,
-  MessageSquare
-}
-export const UserBadges = ({ badges }: UserBadgesProps) => {
-  if (!badges?.length) return null;
-},
-
+const icon_map = {
+  Trophy;
+  Award;
+  BadgeCheck;
+  Star;
+  MessageSquare;
+};
 export const UserBadges = ({ badges }: UserBadgesProps) => {;
-  if (!badges?.length) return null;
-export const UserBadges = ({ badges }: UserBadgesProps) => {
-  if (!badges?.length) return null,
 
+<<<<<<< HEAD
   return (
     <div className="flex flex-wrap gap-2">
       {badges.map((badge) => {
@@ -105,6 +110,8 @@ export const UserBadges = ({ badges }: UserBadgesProps) => {
         const IconComponent = iconMap[badge.icon as keyof typeof iconMap] || Trophy,
         
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         return (
           <TooltipProvider key={badge.id}>
             <Tooltip>
@@ -129,6 +136,7 @@ export const UserBadges = ({ badges }: UserBadgesProps) => {
           </TooltipProvider>
         )
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -326,3 +334,8 @@ export default UserBadges;
 export default UserBadges;
 export default UserBadges;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+export default UserBadges;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

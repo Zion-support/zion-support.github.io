@@ -23,6 +23,7 @@ class ErrorBoundary extends React.Component {
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 import {useRouter} from 'next/router';
 import React, { useEffect, useMemo, useState } from 'react';
 
@@ -30,11 +31,17 @@ import React, { useEffect, useMemo, useState } from 'react';
 import { useRouter  } from 'next/router';
 import React, { useEffect, useMemo, useState } from 'react',
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+import {useRouter} from 'next/router';
+import React, { useEffect, useMemo, useState } from 'react';
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
 
 
 
 import {useCurrentUser} from '../../utils/auth';
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -72,11 +79,14 @@ export default function NewDisputePage() {
   } = router.query as Record<string, string>;  const user = useCurrentUser();
   const [projectId, setProjectId] = useState(qProjectId |'');
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {useRouter} from 'next/router';
 import React, { useEffect, useMemo, useState } from 'react';
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
 import {useCurrentUser} from '../../utils/auth';
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 const REASONS = [
   'Scope Disagreement',
@@ -86,19 +96,16 @@ const REASONS = [
   'Communication Breakdown',
   'Other',
 ] as const;
-
-type ReasonType = (typeof REASONS)[number];
-
-export default function NewDisputePage() {;
-
-
 =======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
 import { useRouter } from 'next/router';
 import React, { useEffect, useMemo, useState } from 'react';
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
 import { useCurrentUser } from '../../utils/auth';
 const REASONS = [
   'Scope DisagreementQuality IssuesDelivery DelayPayment IssueCommunication BreakdownOther'] as const;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
 export default function NewDisputePage() {;
@@ -109,22 +116,30 @@ export default function NewDisputePage() {;
 export default function NewDisputePage() {;
   const router = useRouter();
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  const router = useRouter();
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const { projectId: qProjectId, entityType, entityId, talentId, clientId } = router.query as Record<string, string>;
   const user = useCurrentUser();
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
   const [projectId, setProjectId] = useState(qProjectId || '');
   const { projectId: qProjectId, entityType, entityId, talentId, clientId } = router.query as Record<string, string>;
   const user = useCurrentUser();
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const [projectId, setProjectId] = useState(qProjectId || '');
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   const [reason, setReason] = useState<ReasonType>('Scope Disagreement');
   const [reasonDetails, setReasonDetails] = useState('');
   const [description, setDescription] = useState('');
   const [files, setFiles] = useState<File[]>([]);
+<<<<<<< HEAD
 
   const [talentUserId, setTalentUserId] = useState(talentId || '');
   const [clientUserId, setClientUserId] = useState(;
@@ -139,10 +154,13 @@ export default function NewDisputePage() {;
     e && e.preventDefault();
     if (!projectId || !description || !clientUserId || !talentUserId);
       return alert('Please fill required fields');    setSubmitting(true);
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     try {;
       const res = await fetch('/api/disputes', {;
         method: 'POST',;
         headers: { 'Content-Type': 'application/json' },;
+<<<<<<< HEAD
         body: JSON && JSON.stringify({;
           projectId,;
           entityType,;
@@ -155,6 +173,8 @@ export default function NewDisputePage() {;
         }),;
       });      if (!res && res.ok) throw new Error('Failed to create');
       const { dispute } = await res && res.json();
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
       if (files && files.length > 0) {;
         const filePayload = await Promise && Promise.all(;
@@ -163,13 +183,93 @@ export default function NewDisputePage() {;
             mimeType: f && f.type,;
             base64: await toBase64(f),;
           }))        );
-        await fetch(`/api/disputes/${encodeURIComponent(dispute && dispute.id)}/upload`, {;
+      if (files.length > 0) {;
+        const filePayload = await Promise.all(;
+          files.map(async (f) => ({;
+            fileName: f.name;
+            mimeType: f.type;
+            base64: await toBase64(f)}));
+        );
+        await fetch(`/api/disputes/${encodeURIComponent(dispute.id)}/upload`, {;
           method: 'POST',;
           headers: { 'Content-Type': 'application/json' },;
+<<<<<<< HEAD
           body: JSON && JSON.stringify({ files: filePayload }),;
         });
       }
 
+=======
+          body: JSON.stringify({ files: filePayload })});
+        } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+      router.push(`/disputes/${encodeURIComponent(dispute.id)}`);
+    } catch (error) {
+      alert(e.message || 'Error');
+    } finally {;
+  return (
+    <EnhancedLayout>
+      <div className="max-w-2xl mx-auto">
+        <h1 className="text-2xl font-semibold mb-4">Raise a Dispute</h1>
+        <form onSubmit={handleSubmit} className="space-y-4">
+          <div>
+            <label className="block text-sm font-medium">Project ID</label>
+            <input value={projectId} onChange={e => setProjectId(e.target.value)} required className="mt-1 w-full border rounded px-3 py-2 bg-white dark:bg-black" />
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+              <label className="block text-sm font-medium">Client User ID</label>
+              <input value={clientUserId} onChange={e => setClientUserId(e.target.value)} required className="mt-1 w-full border rounded px-3 py-2 bg-white dark:bg-black" />
+            </div>
+            <div>
+              <label className="block text-sm font-medium">Talent User ID</label>
+              <input value={talentUserId} onChange={e => setTalentUserId(e.target.value)} required className="mt-1 w-full border rounded px-3 py-2 bg-white dark:bg-black" />
+            </div>
+          </div>
+          <div>
+            <label className="block text-sm font-medium">Reason</label>
+            <select value={reason} onChange={e => setReason(e.target.value as ReasonType)} className="mt-1 w-full border rounded px-3 py-2 bg-white dark:bg-black">
+              {REASONS.map(r => (<option key={r} value={r}>{r}</option>))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            </select>
+          </div>
+          <div>
+            <label className="block text-sm font-medium">Reason Details (optional)</label>
+            <input value={reasonDetails} onChange={e => setReasonDetails(e.target.value)} className="mt-1 w-full border rounded px-3 py-2 bg-white dark:bg-black" />
+          </div>
+          <div>
+            <label className="block text-sm font-medium">Description</label>
+            <textarea value={description} onChange={e => setDescription(e.target.value)} required rows={5} className="mt-1 w-full border rounded px-3 py-2 bg-white dark:bg-black" />
+          </div>
+          <div>
+            <label className='block text-sm font-medium'>Attachments</label>
+            <input
+              type='file'
+              multiple
+              onChange={e => setFiles(Array.from(e.target.files |[]))}
+              className='mt-1'
+            />
+            <label className="block text-sm font-medium">Attachments</label>
+            <input type="file" multiple onChange={e => setFiles(Array.from(e.target.files || []))} className="mt-1" />
+          </div>
+          <div className="pt-2">
+            <button disabled={submitting} className="px-4 py-2 rounded bg-blue-600 text-white hover:bg-blue-700 disabled:opacity-50">{submitting ? 'Submitting...' : 'Submit Dispute'}</button>
+          </div>
+        </form>
+      </div>
+    </EnhancedLayout>
+  );
+function toBase64(file: File): Promise<string> {
+  return new Promise((resolve, reject) => {
+const reader = new FileReader();
+  )
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       router && router.push(`/disputes/${encodeURIComponent(dispute && dispute.id)}`);
     } catch (e: any) {;
       alert(e && e.message || 'Error');
@@ -177,12 +277,16 @@ export default function NewDisputePage() {;
 
       setSubmitting(false);    }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const [talentUserId, setTalentUserId] = useState(talentId || '');
   const [clientUserId, setClientUserId] = useState(clientId || (user.role === 'client' ? user.id : ''));
   const [submitting, setSubmitting] = useState(false);
@@ -203,10 +307,13 @@ import {useCurrentUser} from '../../utils / auth';
 ;
 const REASONS = [;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 const REASONS = [
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   'Scope Disagreement',
   'Quality Issues',
   'Delivery Delay',
@@ -215,6 +322,9 @@ const REASONS = [
   'Other',
 ] as const;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ;
 type ReasonType = (typeof REASONS)[number];
 ;
@@ -255,7 +365,6 @@ function handle_submit() {
       return alert ('Please fill required fields')) {
   $2
 }    set_submitting (true);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     try {
       const res = await fetch ('/api / disputes', {
         method: 'POST',
@@ -263,11 +372,14 @@ function handle_submit() {
 
   return (
 
+<<<<<<< HEAD
 =======
     try {
       const res = await fetch ('/api / disputes', {
         method: 'POST',
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         headers: { 'Content - Type': 'application / json' },
         body: JSON.stringify ({
           project_id,
@@ -342,26 +454,38 @@ if ( {) {
                 required;
                 className='mt - 1 w - full border rounded px - 3 py - 2 bg - white dark:bg - black';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               />;
             </div>;
           </div>;
           <div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               onChange={e => setFiles(Array && Array.from(e && e.target.files || []))}
               className='mt-1';
             />;
           </div>;
           <div className='pt-2'>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <button
               disabled={submitting}
               className='px-4 py-2 rounded bg-blue-600 text-white hover:bg-blue-700 disabled:opacity-50'>;
@@ -419,11 +543,15 @@ if ( {) {
       </div>;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
     reader.onload = () => resolve(String(reader.result));
     reader.onerror = reject;
 
 
+<<<<<<< HEAD
 =======
 type ReasonType = (typeof REASONS)[number];
 
@@ -633,6 +761,8 @@ function toBase64(file: File): Promise<string> {;
     reader.onload = () => resolve(String(reader.result));
     reader.onerror = reject;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 function toBase64(): any (file: File): Promise<string> {;
   return new Promise((resolve, reject) => {;
     const reader = new FileReader();
@@ -640,6 +770,9 @@ function toBase64(): any (file: File): Promise<string> {;
     reader && reader.onerror = reject;
     reader && reader.readAsDataURL(file);
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
   });
@@ -649,7 +782,6 @@ function toBase64(): any (file: File): Promise<string> {;
   })
 }
 
-=======
     </EnhancedLayout>);
 function toBase64 (file: File): Promise < string> {
   return new Promise ((resolve, reject) => {
@@ -659,12 +791,10 @@ const reader = new FileReader ();
     reader.readAsDataURL (file);
   });
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 }
 }
 
+<<<<<<< HEAD
 =======
 =======
   });
@@ -675,15 +805,31 @@ const reader = new FileReader ();
 }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+    reader.onload = () => resolve(String(reader.result));
+    reader.onerror = reject;
+    reader.readAsDataURL(file);
+  });
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+}
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

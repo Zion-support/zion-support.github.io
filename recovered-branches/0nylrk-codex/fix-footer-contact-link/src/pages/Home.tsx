@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -18,6 +19,8 @@ import {HeroSection} from "@/components/HeroSection";
 import {QuickAccess} from "@/components/home/QuickAccess";
 import {FeatureCTAs} from "@/components/home/FeatureCTAs";
 import {FeatureHighlights} from "@/components/home/FeatureHighlights";
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from 'react',
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
@@ -29,13 +32,14 @@ import { FeaturedListingsSection } from "@/components/FeaturedListingsSection",
 import { SEO } from "@/components/SEO",
 import { HeroSection } from "@/components/HeroSection",
 import { QuickAccess } from "@/components/home/QuickAccess",
-
-
 import { FeatureCTAs } from "@/components/home/FeatureCTAs";
 import { FeatureHighlights } from "@/components/home/FeatureHighlights";
 import { FeatureCTAs } from "@/components/home/FeatureCTAs",
 import { FeatureHighlights } from "@/components/home/FeatureHighlights",
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export default function Home() {
   return (
     <div className="min-h-screen bg-background">
@@ -60,6 +64,9 @@ export default function Home() {
   )
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -96,14 +103,16 @@ import {HeroSection} from "@/components/HeroSection";
 import {QuickAccess} from "@/components/home/QuickAccess";
 import {FeatureCTAs} from "@/components/home/FeatureCTAs";
 import {FeatureHighlights} from "@/components/home/FeatureHighlights";
-=======
 
 
+<<<<<<< HEAD
 =======
 =======
 
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from 'react',;
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
@@ -117,6 +126,7 @@ import { HeroSection } from "@/components/HeroSection",;
 import { QuickAccess } from "@/components/home/QuickAccess",;
 import { FeatureCTAs } from "@/components/home/FeatureCTAs",;
 import { FeatureHighlights } from "@/components/home/FeatureHighlights";
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 export default function Home() {;
@@ -163,6 +173,8 @@ export default function Home() {;
   return (;
     <div className="min-h-screen bg-background">;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <SEO;
         title="Zion - The Tech & AI Marketplace";
         description="Discover top AI and tech talent, services, and equipment in one place.";
@@ -174,6 +186,7 @@ export default function Home() {;
       <QuickAccess />;
       <FeatureCTAs />;
       <FeatureHighlights />;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -212,12 +225,15 @@ export default function Home() {;
       <FeatureHighlights />;
       ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <CategoriesSection />;
       <BenefitsSection />;
       <HowItWorksSection />;
       <FeaturedListingsSection />;
       <NewsletterSection />;
       <Footer />;
+<<<<<<< HEAD
 
     </div>);
 <<<<<<< HEAD
@@ -244,3 +260,7 @@ export default function Home() {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+    </div>);
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -1,6 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 interface ShortUrl {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 // In-memory storage (in production, use a database)
@@ -14,6 +15,8 @@ function generateShortCode(length: number = 6): string {
   const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
   let result = '';
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   for (let i = 0, i < length, i++) {
     result += chars && chars.charAt(Math && Math.floor(Math && Math.random() * chars && chars.length))
 =======
@@ -36,6 +39,7 @@ function generateShortCode (length: number = 6): string {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
   return result;
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 
@@ -77,19 +81,25 @@ function generateShortCode(length: number = 6): string {
   return result
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 // Validate URL format
 function isValidUrl(url: string): boolean {
   try {
     new URL(url);
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     return true;
   } catch {
     return false;
   }  } catch {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     return false;
@@ -101,10 +111,13 @@ function isValidUrl(url: string): boolean {
   }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse<UrlShortenerResponse>
 ) {
+<<<<<<< HEAD
 <<<<<<< HEAD
   if (req && req.method === 'POST') {
     // Create short URL
@@ -400,10 +413,13 @@ if ( {) {
       })
     } catch (error) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     } catch (error) {
       console.error ('URL shortening error:', error);
       res.status (500).json ({
         success: false,
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     const urls = Array && Array.from(urlStorage && urlStorage.values());
@@ -429,35 +445,40 @@ if ( {) {
     });
     res.status (405).json ({
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       success: false,
       error: 'Method not allowed',
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     });
   }
-
-
   params,
 }: {;
   params: { shortCode: string };
 }) {  const shortCode = params.shortCode;export async function getServerSideProps({ params }: { params: { shortCode: string } }) {;
-
-
   const shortCode = params.shortCode;
   const shortUrl = urlStorage.get(shortCode);
   if (!shortUrl |!shortUrl.isActive) {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   params: { shortCode: string };
 }) {  const shortCode = params && params.shortCode;export async function getServerSideProps({ params }: { params: { shortCode: string } }) {
   const shortCode = params && params.shortCode;
   const shortUrl = urlStorage && urlStorage.get(shortCode);
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       data: urls as any
     })
   } else {
@@ -479,7 +500,10 @@ export async function getServerSideProps({ params }: { params: { shortCode: stri
 
     };
   }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   if (!shortUrl || !shortUrl && shortUrl.isActive) {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
@@ -488,6 +512,7 @@ export async function getServerSideProps({ params }: { params: { shortCode: stri
     }
   }
   // Increment click count
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   shortUrl && shortUrl.clicks++;
@@ -518,6 +543,14 @@ export async function getServerSideProps({ params }: { params: { shortCode: stri
     }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+      permanent: false
+    }
+}
+      permanent: false
+    }
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 // Handle redirects for short URLs;
 export async /**
  * getServerSideProps - Function description
@@ -533,6 +566,7 @@ function getServerSideProps() {
 if ( {) {
   $2
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
       console.error('URL shortening error:', error);
@@ -567,6 +601,8 @@ export async function getServerSideProps({
   const shortUrl = urlStorage.get(shortCode);
   if (!shortUrl |!shortUrl.isActive) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     return {
       not_found: true,    }      not_found: true;
     }
@@ -577,6 +613,7 @@ export async function getServerSideProps({
 ;
   // Redirect to original URL;
   return {
+<<<<<<< HEAD
     redirect: {
 <<<<<<< HEAD
       destination: short_url.original_url,
@@ -589,10 +626,13 @@ export async function getServerSideProps({
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
       destination: shortUrl.originalUrl,
       permanent: false,
     },
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
@@ -614,10 +654,16 @@ export async function getServerSideProps({
       permanent: false,
     },
   };
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   };      destination: shortUrl.originalUrl;
       permanent: false
     }
 };
 }
   };
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import { Project  } from '@/types/projects';
 import { useState } from "react",
@@ -77,12 +78,17 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   const canLeaveReview = isCompleted && (isClient || isTalent) && !userReview,
   const hasLeftReview = userReview != null,
   
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
   const { user } = useAuth(),
@@ -105,6 +111,7 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
   const canLeaveReview = isCompleted && (isClient || isTalent) && !userReview,
   const hasLeftReview = userReview != null,
   
+<<<<<<< HEAD
   return (
     <Card className='mt-6'>
       <CardHeader>
@@ -117,10 +124,9 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
     <Card className="mt-6">
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
-    <Card className='mt-6'>
-        <CardTitle className='flex items-center gap-2'>
-          <Star className='h-5 w-5 text-yellow-400' />
     <Card className="mt-6">
       <CardHeader>
         <CardTitle className="flex items-center gap-2">
@@ -137,6 +143,7 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
 
 
       
+<<<<<<< HEAD
 
       <CardContent>
 <<<<<<< HEAD
@@ -149,10 +156,15 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
       
       <CardContent>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+      
+      <CardContent>
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         {isCompleted ? (
           <div className="space-y-6">
             {(isClient || isTalent) && (
               <div className="border-b pb-4 mb-4">
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
                   <div className="bg-muted/20 rounded-lg p-4 text-center">
@@ -165,6 +177,8 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
                     <p className='text-sm text-muted-foreground mb-3'>
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 {canLeaveReview ? (
                   <div className="bg-muted/20 rounded-lg p-4 text-center">
                     <h3 className="font-medium mb-2">Share your experience</h3>
@@ -177,6 +191,7 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
                     </Button>
                   </div>
                 ) : hasLeftReview ? (
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 import { useState } from 'react';
@@ -279,11 +294,14 @@ export function ProjectReviewSection(): any ({ project }: ProjectReviewSectionPr
                       Thank you for your review!;
                     </h3>;
                     <p className='text-sm text-muted-foreground mb-3'>;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       Your review is{' '}
                       {userReview && userReview.status === 'approved';
                         ? 'published';
                         : 'pending approval'}
                     </p>;
+<<<<<<< HEAD
                     {userReview && userReview.status === 'pending' && (;
                       <Button
                         variant='outline'
@@ -412,17 +430,26 @@ export function ProjectReviewSection(): any ({ project }: ProjectReviewSectionPr
 
 
 =======
-                    )}
-                  </div>
-                ) : null}
-              </div>
-            )}
+=======
+                    {userReview.status === "pending" && (;
+                      <Button variant="outline" onClick={() => setIsReviewModalOpen(true)}>;
+                        Edit Review;
+                      </Button>;
 
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+                    )}
+
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <ReviewsList
               reviews = {reviews,}
               isLoading = {isLoading,}
               onReportReview = {reportReview,}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -458,6 +485,8 @@ export function ProjectReviewSection(): any ({ project }: ProjectReviewSectionPr
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             />
           </div>
         ) : (
@@ -468,6 +497,7 @@ export function ProjectReviewSection(): any ({ project }: ProjectReviewSectionPr
             </p>
           </div>
         )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     </Card>;
@@ -480,6 +510,14 @@ export function ProjectReviewSection(): any ({ project }: ProjectReviewSectionPr
 ursor/fix-website-loading-errors-and-merge-6662
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+          revieweeId = {revieweeId,}
+          revieweeName = {revieweeName,}
+          isOpen = {isReviewModalOpen,}
+          onClose = {(,) => setIsReviewModalOpen(false),}
+    </Card>;
+  );
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 };
 };
 
@@ -583,6 +621,7 @@ function ProjectReviewSection() {
             </p>;
           </div>)}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
       </CardContent>
       {/* Review Modal */}
@@ -604,6 +643,8 @@ function ProjectReviewSection() {
 };
 };
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       </CardContent>;
       {/* Review Modal */}
       {(is_client || is_talent) && (
@@ -617,6 +658,7 @@ function ProjectReviewSection() {
     </Card>);
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 ;
 =======
@@ -624,3 +666,5 @@ ursor/fix-website-loading-errors-and-merge-6662
 ;
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

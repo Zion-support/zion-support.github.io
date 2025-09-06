@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   const shareUrl =
 =======
@@ -146,6 +147,8 @@ export function SocialShareSection() {
 <<<<<<< HEAD
 
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const shareLinks = [
     {
       name: "Twitter",
@@ -166,12 +169,6 @@ export function SocialShareSection() {
       onClick: shareToLinkedIn
     },
     {
-      name: 'Copy Link',
-      icon: <Link className='h-5 w-5' aria-hidden='true' />,
-      color: 'bg-zion-blue-dark hover:bg-zion-blue-dark/80',
-      onClick: copyLinkToClipboard,
-    },
-  ]
       name: "Copy Link",
       icon: <Link className="h-5 w-5" aria-hidden="true" />,
       color: "bg-zion-blue-dark hover:bg-zion-blue-dark/80",
@@ -179,7 +176,10 @@ export function SocialShareSection() {
     }],
 
   return (
+<<<<<<< HEAD
 return (
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <section className="py-12 bg-zion-blue">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6 bg-zion-blue-light border border-zion-purple/20 rounded-lg p-6">
@@ -187,6 +187,7 @@ return (
             <h3 className="text-xl font-bold text-white mb-2">Share Zion with Your Network</h3>
             <p className="text-zion-slate-light">Help others discover the future of AI & tech marketplace</p>
           </div>
+<<<<<<< HEAD
           <div className='flex flex-wrap gap-3'>
             {shareLinks.map((link, index) => (              <Button
                 key = {index,}
@@ -216,6 +217,8 @@ return (
 }'"
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 };
 }</div> </div> </div> </section>) ;
 }'";
@@ -295,6 +298,7 @@ export function SocialShareSection() {;
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">;
         <div className="max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6 bg-zion-blue-light border border-zion-purple/20 rounded-lg p-6">;
           <div>;
+<<<<<<< HEAD
             <h3 className="text-xl font-bold text-white mb-2">Share Zion with Your Network</h3>;
             <p className="text-zion-slate-light">Help others discover the future of AI & tech marketplace</p>;
           </div>;
@@ -357,12 +361,16 @@ export function SocialShareSection() {;
         <div className='max - w-4xl mx - auto flex flex - col md:flex - row items - center justify - between gap - 6 bg - zion - blue - light border border - zion - purple / 20 rounded - lg p - 6'>;
           <div>;
             <h3 className='text - xl font - bold text - white mb - 2'>;
+=======
+            <h3 className='text-xl font-bold text-white mb-2'>;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               Share Zion with Your Network;
             </h3>;
-            <p className='text - zion - slate - light'>;
+            <p className='text-zion-slate-light'>;
               Help others discover the future of AI & tech marketplace;
             </p>;
           </div>;
+<<<<<<< HEAD
           <div className='flex flex - wrap gap - 3'>;
             {share_links.map ((link, index) => (              <Button;
                 key = {index, }
@@ -390,3 +398,18 @@ export function SocialShareSection() {;
 }'";
 }
 ;
+=======
+          <div className='flex flex-wrap gap-3'>;
+            {shareLinks && shareLinks.map((link, index) => (              <Button
+                key = {index,}
+                className={`${link && link.color} text-white`}
+                size='sm'
+                onClick={link && link.onClick}
+                aria-label={link && link.name}
+                title={link && link.name}>;
+                {link && link.icon}
+                <span className='sr-only'>{link && link.name}</span>;
+                <span aria-hidden='true'>{link && link.name}</span>;
+              </Button>;
+            ))}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

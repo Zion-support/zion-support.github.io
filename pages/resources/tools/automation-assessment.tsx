@@ -1,8 +1,11 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useState } from 'react',;
 import Head from 'next/head',;
 import Link from 'next/link',;
@@ -11,15 +14,19 @@ export default function ToolPage() {
   const [answers, setAnswers] = useState<{ [key: string]: number }>({}),
   const [showResults, setShowResults] = useState(false),
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 export default function ToolPage() {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -28,6 +35,8 @@ export default function ToolPage() {
   const [answers, setAnswers] = useState<{ [key: string]: number }>({})
   const [showResults, setShowResults] = useState(false)
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const questions = [
     {
       id: 'current-automation'
@@ -42,6 +51,7 @@ export default function ToolPage() {
       options: [
         'No expertise - team needs trainingBeginner - some basic knowledgeIntermediate - can implement basic solutionsAdvanced - can build complex systemsExpert - can innovate and lead'
       ]
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -65,14 +75,22 @@ export default function ToolPage() {
       id: 'executive-support'
       question: 'How strong is executive support for automation?'
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       options: [
         'No support - resistance to changeWeak support - some interest but no actionModerate support - willing to try pilot projectsStrong support - actively championing automationFull support - automation is strategic priority'
       ]
     }
-  ]
-  const handleAnswer = (questionId: string, value: number) => {
-    setAnswers(prev => ({ ...prev, [questionId]: value }))
+import React, { useState } from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+export default function ToolPage(req, res) {
+  try {
+  const [currentQuestion, setCurrentQuestion] = useState(0);
+  const [answers, setAnswers] = useState<{ [key: string]: number }>({});
+  const [showResults, setShowResults] = useState(false);
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -105,6 +123,12 @@ export default function ToolPage() {
     if (currentQuestion < questions.length - 1) {
       setCurrentQuestion(currentQuestion + 1)
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+  const nextQuestion = () => {
+    if (currentQuestion < questions.length - 1) {
+      setCurrentQuestion(currentQuestion + 1)
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useState } from 'react',
 import Head from 'next / head',
 import Link from 'next / link',
@@ -151,6 +175,7 @@ function ToolPage() {
         'No support - resistance to change_weak support - some interest but no action_moderate support - willing to try pilot projects_strong support - actively championing automation_full support - automation is strategic priority';
       ];
 
+<<<<<<< HEAD
 <<<<<<< HEAD
       } catch (error) {
     console.error("Error:", error);
@@ -281,6 +306,8 @@ export default function ToolPage(req, res) {
       options: [;
         'No support - resistance to changeWeak support - some interest but no actionModerate support - willing to try pilot projectsStrong support - actively championing automationFull support - automation is strategic priority';
       ];
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -320,7 +347,10 @@ export default function ToolPage(req, res) {
     setShowResults(false)
   }
   },
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   if (showResults) {
     const result = calculateScore()
     return (
@@ -334,12 +364,15 @@ export default function ToolPage(req, res) {
             <div className="max-w-4xl mx-auto">
               <nav className="mb-8">
                 <Link href="/resources" className="text-cyan-400 hover:text-cyan-300 transition-colors">
+<<<<<<< HEAD
                   ← Back to Resources
                 </Link>
               </nav>
 <<<<<<< HEAD
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <div className="text-center mb-12">
                 <h1 className="text-4xl font-bold text-white mb-4">Assessment Results</h1>
                 <p className="text-white/80 text-lg">Your automation readiness evaluation is complete</p>
@@ -351,6 +384,7 @@ export default function ToolPage(req, res) {
                   {questions.map((q, index) => (
                     <div key={q.id} className="bg-white/10 rounded-lg p-4 border border-white/20">
                       <h3 className="font-semibold text-cyan-400 mb-2">{q.question}</h3>
+<<<<<<< HEAD
 
 
 =======
@@ -377,6 +411,8 @@ export default function ToolPage(req, res) {
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <button 
                     onClick={resetAssessment}
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   <button
                     onClick={resetAssessment}
                     onClick={resetAssessment  } catch (error) {
@@ -384,6 +420,7 @@ export default function ToolPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
                     className="bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-300"
                   >
                     Retake Assessment
@@ -417,15 +454,23 @@ export default function ToolPage(req, res) {
                       <h3 className=&quot;font-semibold text-cyan-400 mb-2&quot;>{q.question}</h3>
                       <p className=&quot;text-white/80 text-sm&quot;>Score: {answers[q.id] || 0}/5</p>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+                      <p className="text-white/80 text-sm">Score: {answers[q.id] || 0}/5</p>
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     </div>
                   ))}
                 </div>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <div className="flex flex-col sm: flex-row gap-4 justify-center">
                   <button 
 
                     onClick={resetAssessment}
+<<<<<<< HEAD
 =======
 
 
@@ -435,6 +480,8 @@ export default function ToolPage(req, res) {
 
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     className="bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-300"
                   >
                     Retake Assessment
@@ -445,6 +492,7 @@ export default function ToolPage(req, res) {
 
                     href="/contact"
                     className="px-8 py-4 border border-white/20 rounded-lg text-white hover:border-cyan-400/50 transition-all duration-300"
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
                 <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;>
@@ -463,6 +511,8 @@ export default function ToolPage(req, res) {
                     href="/contact"
                     className="px-8 py-4 border border-white/20 rounded-lg text-white hover:border-cyan-400/50 transition-all duration-300"
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   >
                     Get Personalized Recommendations
                   </Link>
@@ -473,6 +523,7 @@ export default function ToolPage(req, res) {
         </div>
       </>
     )
+<<<<<<< HEAD
   }
 <<<<<<< HEAD
 
@@ -532,14 +583,19 @@ export default function ToolPage(req, res) {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               </div>
             </div>
 
 
+<<<<<<< HEAD
 =======
               </div>
             </div>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <div className="bg-gradient-to-r from-cyan-500/10 to-fuchsia-500/10 rounded-2xl p-8 border border-cyan-500/20">
               <h2 className="text-2xl font-bold mb-6 text-white">{currentQ.question}</h2>
               <div className="space-y-4 mb-8">
@@ -547,6 +603,7 @@ export default function ToolPage(req, res) {
                   <label key={index} className="flex items-center p-4 bg-white/10 rounded-lg border border-white/20 hover:border-cyan-400/50 transition-all duration-300 cursor-pointer">
                     <input
                       type="radio"
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 }
@@ -586,6 +643,8 @@ export default function ToolPage(req, res) {
                     <input
                       type="radio"
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   },;
   const resetAssessment = () => {;
     setCurrentQuestion(0);
@@ -710,12 +769,15 @@ export default function ToolPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                       className="mr-3 text-cyan-400 focus:ring-cyan-400"
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       className="mr-3 text-cyan-400 focus:ring-cyan-400"
                     />
                     <span className="text-white/90">{option}</span>
@@ -723,6 +785,7 @@ export default function ToolPage(req, res) {
                 ))}
               </div>
 
+<<<<<<< HEAD
 
               <div className="flex justify-between">
 
@@ -878,6 +941,8 @@ export default function ToolPage(req, res) {
                 <button 
                   onClick={() => setCurrentQuestion(Math.max(0, currentQuestion - 1))}
                   disabled={currentQuestion === 0}
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <button
                   onClick={() => setCurrentQuestion(Math.max(0, currentQuestion - 1))}
                   disabled={currentQuestion === 0}
@@ -891,11 +956,19 @@ export default function ToolPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   className="px-6 py-3 border border-white/20 rounded-lg text-white hover:border-cyan-400/50 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   Previous
                 </button>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -918,6 +991,8 @@ if ( {) {
                 <button
                   onClick={nextQuestion}
                   disabled={!answers[currentQ.id]}
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <button 
                   onClick={nextQuestion}
                   disabled={!answers[currentQ.id]}
@@ -931,6 +1006,7 @@ if ( {) {
         </main>
       </div>
     </>
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     const result = calculate_score (),
     return (
@@ -981,7 +1057,27 @@ if ( {) {
         </div>;
       </>);
 
+=======
+  );
+};
+                <button
+                  onClick={nextQuestion  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
+  },
+  const reset_assessment = () =>: any {
+    setCurrentQuestion (0),
+    set_answers ({}),
+    setShowResults (false);
+  },
+  // Check condition
+if ( {) {
+  $2
+}
                   className="bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   {currentQuestion === questions.length - 1 ? 'Get Results' : 'Next'  } catch (error) {
@@ -1041,6 +1137,7 @@ if ( {) {
                 >;
                   {current_question === questions.length - 1 ? 'Get Results' : 'Next'}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   );
 };
@@ -1063,6 +1160,8 @@ if ( {) {
   }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 </button>;
               </div>;
             </div>;
@@ -1070,18 +1169,23 @@ if ( {) {
         </main>;
       </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 }
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     </>;
   );
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -1089,3 +1193,7 @@ if ( {) {
 =======
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

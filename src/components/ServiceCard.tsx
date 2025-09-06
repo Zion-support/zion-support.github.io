@@ -1,11 +1,17 @@
 import React from 'react';
+<<<<<<< HEAD
 import { Card } from './ui/card';
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 interface ServiceCardProps {
   title: string;
   description: string;
+<<<<<<< HEAD
   icon: string;
   features: string[];
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   className?: string;
 }
 
@@ -13,6 +19,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
   title,
   description,
   icon,
+<<<<<<< HEAD
   features,
   className = ''
 }) => {
@@ -32,6 +39,9 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
         </ul>
       </div>
     </Card>
+=======
+    </div>
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   );
 };
 

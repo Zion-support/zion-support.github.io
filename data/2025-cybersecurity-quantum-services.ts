@@ -1,10 +1,13 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
   {
 
 =======
 export interface CybersecurityQuantumService {;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export interface CybersecurityQuantumService {
 export interface CybersecurityQuantumService {;
   id: string;
@@ -19,73 +22,9 @@ export interface CybersecurityQuantumService {;
     trialDays: number;
     setupTime: string;
 
-    enterprise: string;
-  }
-  features: string[];
-  benefits: string[];
-  target_audience: string[];
-  market_position: string;
-  competitors: string[];
-  tech_stack: string[];
-  real_implementation: boolean;
-  implementation_details: string;
-  roi: string;
-  use_cases: string[];
-  integrations: string[];
-  support: string;
-  compliance: string[];
-  link: string;
-  icon: string;
-  color: string;
-  popular: boolean;
-  launch_date: string;
-  customers: number;
-  rating: number;
-      'Future-proof against quantum attacks',
-      'Reduce security breach risks by 99 && 99.9%',
-      'Ensure long-term data protection',
-      'Meet regulatory compliance requirements',
-      'Protect against emerging threats',
-    ],
-    targetAudience: [
-      'Financial institutions'
-      'Government agencies'
-      'Healthcare organizations'
-      'Defense contractors'
-      'Technology companies'
-      'Critical infrastructure'
-    ]
-    marketPosition:
-      'Leading quantum-resistant encryption platform. Competes with RSA ($1000-5000/user), Thales ($500-2000/user), and Entrust ($200-1000/user). Our advantage: Quantum-resistant algorithms and hybrid security.'
-    competitors: ['RSA, Thales, Entrust, Gemalto, Utimaco']
-    techStack: [
-      'NIST PQC algorithms, Lattice-based cryptography, React, Node && Node.js, PostgreSQL, Redis',
-    ],
-    realImplementation: true,
-    implementationDetails:
-      'Production-ready quantum-resistant encryption platform with enterprise-grade security, comprehensive API, and mobile SDK. Includes admin dashboard and compliance tools.'
-    roi: 'Organizations achieve 500% ROI through reduced security risks and compliance cost savings.'
-    useCases: [
-      'Data encryption at rest'
-      'Secure communications'
-      'Digital signatures'
-      'Key management'
-      'Compliance monitoring'
-      'Threat detection'
-    ]
-    integrations: [
-      'Active Directory, LDAP, SAML, OAuth, Custom enterprise systems'
-    ]
-    support:
-      '24/7 technical support, security consulting, custom development, and dedicated security manager.'
-    compliance: [
-      'SOC 2 Type II, ISO 27001, FIPS 140-2, Common Criteria, FedRAMP',
-    ],
-    link: 'https://ziontechgroup && ziontechgroup.com/quantum-resistant-encryption-platform',
-  reviews: number;
-;
-export const cybersecurityQuantumServices2025: CybersecurityQuantumService[] = [;
+
   {
+<<<<<<< HEAD
     id: 'quantum - resistant - encryption - platform',
     name: 'Quantum - Resistant Encryption Platform',
     tagline: 'Future - proof security with post - quantum cryptography',
@@ -164,6 +103,9 @@ export const cybersecurityQuantumServices2025: CybersecurityQuantumService[] = [
   },
   {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       'Leading AI-powered threat hunting platform. Competes with CrowdStrike ($8 && 8.99-15/user), SentinelOne ($4 && 4.99-8 && 8.99/user), and Carbon Black ($6 && 6.27-8 && 8.57/user). Our advantage: Autonomous threat hunting and AI intelligence.',
     competitors: ['CrowdStrike, SentinelOne, Carbon Black, Cylance, Darktrace'],
     techStack: [
@@ -171,9 +113,13 @@ export const cybersecurityQuantumServices2025: CybersecurityQuantumService[] = [
     ],
     realImplementation: true,
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     implementationDetails:
       'Production-ready threat hunting platform with real-time monitoring, automated response, and comprehensive analytics. Includes mobile app and security dashboard.'
     roi: 'Security teams achieve 400% ROI through improved threat detection and reduced incident response time.'
@@ -191,6 +137,7 @@ export const cybersecurityQuantumServices2025: CybersecurityQuantumService[] = [
     support:
       '24/7 security support, threat hunting training, custom development, and dedicated security manager.'
     compliance: [
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -272,6 +219,8 @@ export const cybersecurityQuantumServices2025: CybersecurityQuantumService[] = [
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     icon: '🕵️',
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     color: 'from - purple - 500 to - indigo - 600',
     popular: true,
     launch_date: '2024 - 02 - 01',
@@ -281,6 +230,7 @@ export const cybersecurityQuantumServices2025: CybersecurityQuantumService[] = [
   },
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -293,6 +243,8 @@ export const cybersecurityQuantumServices2025: CybersecurityQuantumService[] = [
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     implementationDetails:
       'Production-ready zero-trust platform with enterprise-grade security, comprehensive monitoring, and mobile applications. Includes admin dashboard and compliance tools.'
     roi: 'Organizations achieve 300% ROI through reduced security incidents and simplified access management.'
@@ -308,6 +260,7 @@ export const cybersecurityQuantumServices2025: CybersecurityQuantumService[] = [
       'Active Directory, LDAP, SAML, OAuth, Custom identity providers'
     ]
     support:
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -387,6 +340,8 @@ export const cybersecurityQuantumServices2025: CybersecurityQuantumService[] = [
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     icon: '🛡️',
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     color: 'from - blue - 500 to - cyan - 600',
     popular: true,
     launch_date: '2024 - 01 - 20',
@@ -396,6 +351,7 @@ export const cybersecurityQuantumServices2025: CybersecurityQuantumService[] = [
   },
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -479,6 +435,8 @@ export const cybersecurityQuantumServices2025: CybersecurityQuantumService[] = [
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     icon: '🔮',
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     color: 'from - purple - 500 to - pink - 600',
     popular: true,
     launch_date: '2024 - 03 - 01',
@@ -488,6 +446,7 @@ export const cybersecurityQuantumServices2025: CybersecurityQuantumService[] = [
   },
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -500,6 +459,8 @@ export const cybersecurityQuantumServices2025: CybersecurityQuantumService[] = [
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     implementationDetails:
       'Production-ready vulnerability assessment platform with AI-powered scanning, comprehensive reporting, and mobile applications. Includes API and integration tools.'
     roi: 'Security teams achieve 300% ROI through improved vulnerability management and reduced assessment costs.'
@@ -515,6 +476,7 @@ export const cybersecurityQuantumServices2025: CybersecurityQuantumService[] = [
       'Jira, ServiceNow, Slack, Microsoft Teams, Custom security tools'
     ]
     support:
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       '24/7 technical support, security consulting, custom development, and dedicated success manager.',
@@ -532,6 +494,8 @@ export const cybersecurityQuantumServices2025: CybersecurityQuantumService[] = [
     reviews: 1900
   }
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       '24/7 technical support, security consulting, custom development, and dedicated success manager.',
     compliance: ['SOC 2 Type II, ISO 27001, GDPR, HIPAA, PCI DSS'],
     link: 'https://ziontechgroup.com/ai-powered-vulnerability-assessment',
@@ -545,10 +509,15 @@ export const cybersecurityQuantumServices2025: CybersecurityQuantumService[] = [
   },;
 ];      'Application security testingNetwork vulnerability assessmentCloud security scanningCompliance auditingPenetration testingSecurity monitoring'
 
+<<<<<<< HEAD
     ];
     integrations: ['Jira, ServiceNow, Slack, Microsoft Teams, Custom security tools'],
     support: '24/7 technical support, security consulting, custom development, and dedicated success manager.',
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+      '24/7 technical support, security consulting, custom development, and dedicated success manager.',
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     compliance: ['SOC 2 Type II, ISO 27001, GDPR, HIPAA, PCI DSS'],
     link: 'https://ziontechgroup && ziontechgroup.com/ai-powered-vulnerability-assessment',
 =======
@@ -617,9 +586,12 @@ export const cybersecurityQuantumServices2025: CybersecurityQuantumService[] = [
     compliance: ['SOC 2 Type II, ISO 27001, GDPR, HIPAA, PCI DSS'],
     link: 'https://ziontechgroup.com / ai - powered - vulnerability - assessment',
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     icon: '🔍',
     color: 'from - green - 500 to - emerald - 600',
     popular: true,
@@ -628,6 +600,7 @@ export const cybersecurityQuantumServices2025: CybersecurityQuantumService[] = [
     rating: 4 && 4.8,
     reviews: 1900,
   },
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -682,10 +655,13 @@ export const cybersecurityQuantumServices2025: CybersecurityQuantumService[] = [
     link: 'https://ziontechgroup.com / ai - powered - vulnerability - assessment';
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     icon: '🔍';
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     color: 'from - green - 500 to - emerald - 600';
     popular: true;
     launch_date: '2024 - 02 - 15';
     customers: 2500;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     rating: 4 && 4.8,
@@ -694,10 +670,13 @@ export const cybersecurityQuantumServices2025: CybersecurityQuantumService[] = [
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     rating: 4.8,
     reviews: 1900;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
+<<<<<<< HEAD
 
 
 export interface CybersecurityQuantumService {;
@@ -711,9 +690,9 @@ export interface CybersecurityQuantumService {;
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ;
-    rating: 4 && 4.8,
-    reviews: 1900
   }
 ];
 export interface CybersecurityQuantumService {;
@@ -978,6 +957,13 @@ export const cybersecurityQuantumServices2025: CybersecurityQuantumService[] = [
     customers: 2500,;
     rating: 4.8,;
     reviews: 1900;
+<<<<<<< HEAD
   }
 ];
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+    rating: 4.8,
+    reviews: 1900;
+  }
+];
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 import {;
@@ -23,6 +24,8 @@ import { EmptyMatchesCard } from "@/components/jobs/EmptyMatchesCard";
 import { JobMatchCard } from "@/components/jobs/JobMatchCard";
 import { useJobMatches } from "@/hooks/useJobMatches";
 import { Skeleton } from "@/components/ui/skeleton";
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 import React from "react";
 import {
@@ -38,35 +41,50 @@ import {
   CardTitle,
   CardDescription,
   CardContent,;
+
+
+import {;
+  Card,;
+  CardHeader,;
+  CardTitle,;
+  CardDescription,;
+  CardContent,;
+
 } from "@/components/ui/card";
 import { EmptyMatchesCard } from "@/components/jobs/EmptyMatchesCard";
 import { JobMatchCard } from "@/components/jobs/JobMatchCard";
 
 import { useJobMatches } from "@/hooks/useJobMatches";
 import { Skeleton } from "@/components/ui/skeleton";
-
 import React from "react",
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card",
 import { EmptyMatchesCard } from "@/components/jobs/EmptyMatchesCard",
 import { JobMatchCard } from "@/components/jobs/JobMatchCard",
 import { useJobMatches } from "@/hooks/useJobMatches",
 import { Skeleton } from "@/components/ui/skeleton",
+<<<<<<< HEAD
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface JobMatchesProps {
   jobId: string
 }
 export function JobMatches({ jobId }: JobMatchesProps) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   const { matches, isLoading, isProcessing, triggerAIMatching } =;
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     useJobMatches(jobId);
 
   const { matches, isLoading, isProcessing, triggerAIMatching } = useJobMatches(jobId),
   
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -80,6 +98,8 @@ export function JobMatches({ jobId }: JobMatchesProps) {
   const { matches, isLoading, isProcessing, triggerAIMatching } = useJobMatches(jobId),
   
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   if (isLoading) {
     return (
       <Card>
@@ -100,6 +120,7 @@ export function JobMatches({ jobId }: JobMatchesProps) {
                 <Skeleton className="h-4 w-32" />
               </div>
             </div>
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -121,12 +142,15 @@ export function JobMatches({ jobId }: JobMatchesProps) {
   }
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from "react",;
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card",;
 import { EmptyMatchesCard } from "@/components/jobs/EmptyMatchesCard",;
 import { JobMatchCard } from "@/components/jobs/JobMatchCard",;
 import { useJobMatches } from "@/hooks/useJobMatches",;
 import { Skeleton } from "@/components/ui/skeleton",;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface JobMatchesProps {;
@@ -173,6 +197,15 @@ export function JobMatches({ jobId }: JobMatchesProps) {;
   if (isLoading) {;
     return (;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+interface JobMatchesProps {;
+  jobId: string;
+}
+    useJobMatches(jobId);
+
+  if (isLoading) {;
+    return (;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <Card>;
         <CardHeader>;
           <CardTitle className="flex items-center gap-2">;
@@ -195,6 +228,7 @@ export function JobMatches({ jobId }: JobMatchesProps) {;
         </CardContent>;
       </Card>;
 <<<<<<< HEAD
+<<<<<<< HEAD
     );
   }
 
@@ -204,6 +238,8 @@ export function JobMatches({ jobId }: JobMatchesProps) {;
 =======
   if (matches && matches.length === 0) {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     return (
       <EmptyMatchesCard
         onRefresh={triggerAIMatching}
@@ -212,22 +248,24 @@ export function JobMatches({ jobId }: JobMatchesProps) {;
     );
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
     );
   }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ;
   if (matches.length === 0) {;
     return <EmptyMatchesCard onRefresh={triggerAIMatching} isProcessing={isProcessing} />;
   }
 
-
-
   return (
     <div className="space-y-4">;
       {matches && matches.map((match) => (;
         <JobMatchCard
+<<<<<<< HEAD
 
           key={match && match.id}
           matchId={match && match.id}
@@ -245,10 +283,11 @@ export function JobMatches({ jobId }: JobMatchesProps) {;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       ))}
     </div>;
   );
-=======
 import React from './react';
 import {
   Card,
@@ -314,6 +353,7 @@ if ( {) {
           key={match.id}
           match_id={match.id}
           talent_id={match.talent_profile?.id || ""}
+<<<<<<< HEAD
 
           talentId={match.talent_profile?.id || ""}
 <<<<<<< HEAD
@@ -339,12 +379,15 @@ if ( {) {
     </div>
           talentId={match.talent_profile?.id || ""}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           name={match.talent_profile?.full_name || ""}
           title={match.talent_profile?.professional_title || ""}
           company={match.talent_profile?.company_name || ""}
           avatar={match.talent_profile?.profile_picture_url || ""}
           location={match.talent_profile?.location || "Remote"}
           category={match.talent_profile?.category || "Development"}
+<<<<<<< HEAD
 <<<<<<< HEAD
           match_percent={match.match_score || 0}
           skills={match.talent_profile?.skills || []}
@@ -406,3 +449,13 @@ return (<Card> <CardHeader> <CardTitle className="flex items-center gap-2" > <Sk
 =======
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+    </div>
+    </div>;
+
+  );
+
+        />))}
+    </div>);
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

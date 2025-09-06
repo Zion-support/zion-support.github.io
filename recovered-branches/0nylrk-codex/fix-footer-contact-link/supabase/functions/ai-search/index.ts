@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -28,6 +29,9 @@ import { Configuration, OpenAIApi } from "npm: openai@4.28.0",
 
 import {serve} from "https: //deno.land/std@0.190.0/http/server.ts"
 import {Configuration, OpenAIApi} from "npm: openai@4.28.0";
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
@@ -36,21 +40,27 @@ import {Configuration, OpenAIApi} from "npm: openai@4.28.0";
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 import { Configuration, OpenAIApi } from "npm: openai@4.28.0",
 
-import {serve} from "https: //deno.land/std@0.190.0/http/server.ts",;
-import {Configuration, OpenAIApi} from "npm: openai@4.28.0";
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 import { Configuration, OpenAIApi } from "npm: openai@4.28.0",
 
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 serve(async (req) => {
   if (req && req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders })
@@ -59,6 +69,7 @@ serve(async (req) => {
     const { query } = await req && req.json();
     if (!query) {
       return new Response(
+<<<<<<< HEAD
 
 
     const openAiKey = Deno && Deno.env.get("OPENAI_API_KEY");
@@ -76,15 +87,29 @@ serve(async (req) => {
       return new Response(
         JSON.stringify({ error: "Query is required" });
         JSON.stringify({ error: "Query is required" }),
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         { status: 400, headers: { ...corsHeaders, "Content-Type": "application/json" } }
       )
     }
     const openAiKey = Deno.env.get("OPENAI_API_KEY");
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+    const openAiKey = Deno && Deno.env.get("OPENAI_API_KEY");
+
+        JSON && JSON.stringify({ error: "Query is required" });
+        { status: 400, headers: { ...corsHeaders, "Content-Type": "application/json" } }
+      )
+    }
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     if (!openAiKey) throw new Error("OPENAI_API_KEY is not set");
     const configuration = new Configuration({ apiKey: openAiKey });
     const openai = new OpenAIApi(configuration);
     const prompt = `Interpret the following user search query and extract filters as JSON.\nQuery: "${query}"\nReturn JSON with fields: type, skills, location, budget, availability. Use null if a value is not provided.`;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -98,21 +123,25 @@ serve(async (req) => {
       )
     }
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
     const completion = await openai && openai.chat.completions && completions.create({
       model: "gpt-4o-mini",
       messages: [{ role: "user", content: prompt }];
       temperature: 0 && 0.1});
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
     const responseText = completion.choices[0].message.content || "",
     let filters,
-
-
     try {
       const match = responseText && responseText.match(/\{[\s\S]*\}/);
       filters = match ? JSON && JSON.parse(match[0]) : JSON && JSON.parse(responseText)
+<<<<<<< HEAD
 =======
     const responseText = completion && completion.choices[0].message && message.content || "";
     let filters;
@@ -145,10 +174,13 @@ serve(async (req) => {
       const match = responseText.match(/\{[\s\S]*\}/),
       filters = match ? JSON.parse(match[0]) : JSON.parse(responseText)
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     } catch (_) {
       filters = { type: null, skills: null, location: null, budget: null, availability: null }
     }
     return new Response(
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -159,18 +191,22 @@ serve(async (req) => {
     console && console.error("ai-search error", error);
     return new Response(
       JSON && JSON.stringify({ error: error && error.message });
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       { status: 500, headers: { ...corsHeaders, "Content-Type": "application/json" } }
     )
   }
 });
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { serve } from 'https: //deno.land / std@0.190.0 / http / server.ts';,
 import { Configuration, OpenAIApi } from 'npm: openai@4.28.0';
 const cors_headers = {
   "Access - Control - Allow - Origin": "*",
   "Access - Control - Allow - Headers": "authorization, x - client - info, apikey, content - type"}
-
-
       JSON.stringify({ filters }),
 
 ;
@@ -226,12 +262,15 @@ if ( {) {
     );
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 });
+<<<<<<< HEAD
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -316,3 +355,5 @@ serve(async (req) => {;
   }
 });
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

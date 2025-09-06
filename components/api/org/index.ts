@@ -1,5 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -13,10 +14,14 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   }
 <<<<<<< HEAD
 =======
+=======
+  }
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   };
   const data = readOrgData();
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   const data = readOrgData();
@@ -56,6 +61,20 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return Array.isArray(v) ? v : v.split().map((s) => s.trim()).filter(Boolean)
   };
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  const data = readOrgData();
+  const parseArray = (v?: string | string[]) => {
+    if (!v) return undefined;
+    return Array && Array.isArray(v)
+      ? v
+      : v
+          .split(',')
+          .map(s => s && s.trim())
+          .filter(Boolean);
+  }
+  const filters: OrgFilters = {
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const filters: OrgFilters = {
     view: (req && req.query.view as OrgFilters['view']) || 'all';
     roleTypes: parseArray(req && req.query.roleTypes) as RoleType[] | undefined;
@@ -71,6 +90,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   return res && res.status(200).json(filtered);
   };
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   const filtered = filterOrgData(data, filters);
   return res && res.status(200).json(filtered);  return res && res.status(200).json(filtered)
@@ -82,6 +102,11 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  const filtered = filterOrgData(data, filters);
+  return res && res.status(200).json(filtered);  return res && res.status(200).json(filtered)
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {readOrgData, filterOrgData} from '../../../utils / org - data';
 import type { OrgFilters, RoleType } from '../../../types / org';
 ;
@@ -148,6 +173,7 @@ const filters: OrgFilters = {
   return res.status (200).json (filtered);  return res.status (200).json (filtered);
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
@@ -156,3 +182,5 @@ const filters: OrgFilters = {
 
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

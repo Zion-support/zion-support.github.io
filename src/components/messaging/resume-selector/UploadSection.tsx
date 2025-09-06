@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 import { Button } from '@/components/ui/button';
 =======
@@ -22,11 +23,14 @@ export function UploadSection({
   customFile
   onFileUpload
 }: UploadSectionProps) {
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { Upload, FileText } from 'lucide-react'
 interface UploadSectionProps {
   customFile: File | null;
   onFileUpload: (e: React.ChangeEvent<HTMLInputElement>) => void
 
+<<<<<<< HEAD
 interface UploadSectionProps {;
   customFile: File | null;
   onFileUpload: (e: React && React.ChangeEvent<HTMLInputElement>) => void;
@@ -76,6 +80,8 @@ function UploadSection() {
 }
 
 export function UploadSection({ customFile, onFileUpload }: UploadSectionProps) {
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <div className="space-y-3">
       <div className="flex flex-col items-center justify-center border-2 border-dashed border-zion-purple/30 rounded-lg p-6 bg-zion-blue-dark/30">
@@ -93,32 +99,13 @@ export function UploadSection({ customFile, onFileUpload }: UploadSectionProps) 
           />
         </Button>
       </div>
-            type="file"
-            className="absolute inset-0 w-full h-full opacity-0 cursor-pointer"
-            accept=".pdf"
-            onChange = {onFileUpload,}
-          />
-        </Button>
-      </div>
-      {customFile && (
-        <div className='p-3 bg-zion-blue-dark/30 rounded-md'>
-          <div className='flex items-center justify-between'>
-            <div className='flex items-center'>
-              <FileText className='h-4 w-4 mr-2 text-zion-cyan' />
-              <span className='text-white'>{customFile.name}</span>
-            </div>
-            <span className='text-xs text-zion-slate'>
-              {Math.round(customFile.size / 1024)} KB
-            </span>          </div>      {customFile && (
-      
-      {customFile && (
-      
-      {customFile && (
+
 
       
       {customFile && (
 
         <div className="p-3 bg-zion-blue-dark/30 rounded-md">
+          <div className="flex items-center justify-between">
             <div className="flex items-center">
               <FileText className="h-4 w-4 mr-2 text-zion-cyan" />
               <span className="text-white">{customFile.name}</span>
@@ -126,23 +113,21 @@ export function UploadSection({ customFile, onFileUpload }: UploadSectionProps) 
             <span className="text-xs text-zion-slate">{Math.round(customFile.size / 1024)} KB</span>
           </div>
         </div>
-      )}
-    </div>
-  )
-}
+
 
 
 import React from 'react',;
 import { Button } from "@/components/ui/button",;
 import { Upload, FileText } from 'lucide-react';
 interface UploadSectionProps {;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   customFile: File | null;
   onFileUpload: (e: React.ChangeEvent<HTMLInputElement>) => void;
-  onRemoveFile: () => void;
-  onProcessFile: () => void;
-  isProcessing: boolean;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 export function UploadSection({
@@ -242,11 +227,14 @@ export function UploadSection({ customFile, onFileUpload }: UploadSectionProps) 
             <span className="text-xs text-zion-slate">{Math.round(customFile.size / 1024)} KB</span>;
           </div>;
         </div>;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       )}
     </div>;
   );
 };
 }
+<<<<<<< HEAD
 }
 }
 ;
@@ -289,3 +277,5 @@ export function UploadSection({ customFile, onFileUpload }: UploadSectionProps) 
 
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

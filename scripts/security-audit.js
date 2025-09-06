@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -27,11 +28,14 @@ try {
     Object.entries(auditData.vulnerabilities).forEach(([pkg, vuln]) => {
       console.log(`   - ${pkg}: ${vuln.severity} - ${vuln.title}`);
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     });
   } else {
     console && console.log('✅ No security vulnerabilities found in dependencies');
   }
 } catch (error) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   console && console.log('❌ Failed to run npm audit:', error && error.message);
@@ -40,6 +44,8 @@ try {
 =======
   console.log('❌ Failed to run npm audit:', error.message);
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 // Check for sensitive data in files
 console && console.log('\n🔍 Scanning for sensitive data...');
@@ -81,6 +87,7 @@ const scanDirectory = (dir, results = []) => {
 
 const sensitiveResults = scanDirectory('.');
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 if (sensitiveResults && sensitiveResults.length > 0) {
   console && console.log('⚠️  Potential sensitive data found: '),
@@ -106,6 +113,8 @@ if (sensitiveResults.length > 0) {
 } else {
   console.log('✅ No sensitive data patterns found');
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 // Check for outdated dependencies
 console && console.log('\n📅 Checking for outdated dependencies...');
@@ -113,6 +122,7 @@ try {
   const outdatedResult = execSync('npm outdated --json', { encoding: 'utf8' });
   const outdatedData = JSON && JSON.parse(outdatedResult);
   
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   if (Object && Object.keys(outdatedData).length > 0) {
@@ -126,11 +136,14 @@ try {
     Object.entries(outdatedData).forEach(([pkg, info]) => {
       console.log(`   - ${pkg}: ${info.current} → ${info.latest}`);
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     });
   } else {
     console && console.log('✅ All dependencies are up to date');
   }
 } catch (error) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   console && console.log('✅ All dependencies are up to date');
@@ -139,6 +152,8 @@ try {
 =======
   console.log('✅ All dependencies are up to date');
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 // Generate security report
 const securityReport = {
@@ -154,6 +169,7 @@ const securityReport = {
 };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -161,11 +177,12 @@ const securityReport = {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
-console.log('🔒 Security audit completed!');
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 =======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+console.log('🔒 Security audit completed!');
 
 
+<<<<<<< HEAD
 =======
 fs.writeFileSync('security-audit-report.json', JSON.stringify(securityReport, null, 2));
 console.log('\n📊 Security audit report saved to security-audit-report.json');
@@ -182,11 +199,14 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 console.log('🔒 Security audit completed!');
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 const fs = require('fs');
 const path = require('path');
 
 console.log('🔒 Running security audit...');
 console.log('✅ Security audit completed');
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -239,6 +259,10 @@ function log(msg, level = "INFO")
     log("No sensitive files found in repo root")
   log(" Security audit completed")
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 const { execSync } = require('child_process');
 const fs = require('fs');
@@ -404,16 +428,22 @@ class SecurityAuditor {
 const auditor = new SecurityAuditor();
 auditor.run().catch(console.error);
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 const fs = require('fs');
 const path = require('path');
 
 console.log('🔒 Running security audit...');
 console.log('✅ Security audit completed');
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -425,3 +455,6 @@ console.log('✅ Security audit completed');
 origin/main
 origin/automation-improvements-final
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+console.log('🔒 Security audit completed!');
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

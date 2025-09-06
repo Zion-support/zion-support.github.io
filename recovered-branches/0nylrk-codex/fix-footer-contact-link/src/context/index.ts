@@ -1,7 +1,11 @@
 
-export { NotificationProvider } from './notifications / NotificationContext';
-;
+export { NotificationProvider } from './notifications/NotificationContext';
+export { AuthProvider } from './auth',;
+export { MessagingProvider } from './MessagingContext',;
+export { AuthProvider } from './auth',;
+export { MessagingProvider } from './MessagingContext',;
 
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -24,3 +28,8 @@ export { NotificationProvider } from './notifications/NotificationContext';
 export { NotificationProvider } from './notifications/NotificationContext';
 export { NotificationProvider } from './notifications/NotificationContext';
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+export { NotificationProvider } from './notifications/NotificationContext';
+export { AuthProvider } from './auth';
+export { MessagingProvider } from './MessagingContext';
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

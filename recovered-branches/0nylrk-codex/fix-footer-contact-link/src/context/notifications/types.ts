@@ -1,7 +1,4 @@
 
-
-
-
 import {Notification, as, BaseNotification} from '@/types/notifications';
 export type NotificationType =
   | 'message'
@@ -9,16 +6,20 @@ export type NotificationType =
   | 'booking_confirmation'
   | 'hire_request'
 <<<<<<< HEAD
+<<<<<<< HEAD
   | 'onboarding'
   | 'system';
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 
 export interface Notification extends BaseNotification {;
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
   | 'onboarding';
@@ -27,6 +28,8 @@ export interface Notification extends BaseNotification {
 
 export interface Notification extends BaseNotification {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   type: NotificationType;
   action_url?: string
   action_text?: string
@@ -36,6 +39,7 @@ export type FilterType =
   | 'unread'
   | 'messages'
 <<<<<<< HEAD
+<<<<<<< HEAD
   | 'onboarding'
   | 'system';
 
@@ -44,10 +48,13 @@ import {Notification, as, BaseNotification} from '@/types / notifications';
 =======
 import {Notification, as, BaseNotification} from '@/types / notifications';
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 export interface NotificationContextType {;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
   | 'onboarding';
@@ -56,11 +63,15 @@ export interface NotificationContextType {
 
 export interface NotificationContextType {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+export interface NotificationContextType {
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   notifications: Notification[];
-  filteredNotifications: Notification[];
-  unreadCount: number;
+  filtered_notifications: Notification[];
+  unread_count: number;
   loading: boolean;
   filter: FilterType;
+<<<<<<< HEAD
   markAsRead: (id: string) => Promise<void>;
   markAllAsRead: () => Promise<void>;
   dismissNotification: (id: string) => Promise<void>;
@@ -120,6 +131,8 @@ export type FilterType =;
 }
 
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   | 'system',;
 export interface NotificationContextType {;
   notifications: Notification[],;
@@ -132,10 +145,8 @@ export interface NotificationContextType {;
   dismissNotification: (id: string) => Promise<void>;
   setFilter: (filter: FilterType) => void;
   fetchNotifications: () => Promise<void>;
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
   | 'system',;
@@ -170,3 +181,5 @@ export type FilterType = | 'all' | 'unread' | 'messages' | 'onboarding' | 'syste
 }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

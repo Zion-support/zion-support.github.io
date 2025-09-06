@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 console && console.log('🔧 Starting automatic merge conflict resolution...');
@@ -7,11 +8,14 @@ console && console.log('🔧 Starting automatic merge conflict resolution...');
 =======
 console && console.log('🔧 Starting automatic merge conflict resolution...');
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 // Function to resolve conflicts by accepting the incoming changes
 function resolveConflicts() {
   try {
     // Get list of conflicted files
     const conflictedFiles = execSync('git diff --name-only --diff-filter=U', { encoding: 'utf8' }).trim().split('\n').filter(Boolean);
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     
@@ -41,10 +45,13 @@ function resolveConflicts() {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       }
     });
     // Handle deleted files (modify/delete conflicts)
     const deletedFiles = execSync('git ls-files --deleted', { encoding: 'utf8' }).trim().split('\n').filter(Boolean);
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     
@@ -61,6 +68,8 @@ function resolveConflicts() {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     return true;
   } catch (error) {
     console && console.error('❌ Error resolving conflicts:', error && error.message);
@@ -71,6 +80,7 @@ function resolveConflicts() {
 function mergePR(prBranch) {
   try {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     console && console.log(`\n🔄 Attempting to merge ${prBranch}...`);
     
@@ -78,11 +88,14 @@ function mergePR(prBranch) {
 =======
     console && console.log(`\n🔄 Attempting to merge ${prBranch}...`);
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     // Try to merge
     execSync(`git merge origin/${prBranch} --no-ff`, { stdio: 'pipe' });
     console && console.log(`✅ Successfully merged ${prBranch}`);
     return true;
   } catch (error) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     console && console.log(`⚠️  Merge conflicts detected in ${prBranch}`);
@@ -91,6 +104,8 @@ function mergePR(prBranch) {
 =======
     console && console.log(`⚠️  Merge conflicts detected in ${prBranch}`);
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     // Resolve conflicts
     if (resolveConflicts()) {
       // Commit the merge
@@ -134,6 +149,7 @@ function resolve_conflicts() {
         // Read the file content;
         let content = fs.readFileSync (file, 'utf8');
 ;
+<<<<<<< HEAD
         // Remove conflict markers and keep the incoming changes (after ([\s\S]*?)
 ;
         // Write the resolved content back;
@@ -257,6 +273,8 @@ if ( {) {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         try {
           exec_sync ('git merge --abort', { stdio: 'pipe' });
         } catch (abort_error) {
@@ -264,6 +282,7 @@ if ( {) {
         }
       }
     } catch (error) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   
@@ -278,11 +297,14 @@ if ( {) {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     execSync('git status --short', { stdio: 'inherit' });
   } catch (error) {
     console && console.error('Error getting git status:', error && error.message);
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -293,6 +315,8 @@ main().catch(console && console.error);
 main().catch(console && console.error);
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       console.error (`❌ Error processing ${branch}:`, error.message);
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     }
   }
   console.log ('\n🎉 PR merge process completed!');
@@ -305,8 +329,11 @@ main().catch(console && console.error);
     console.error ('Error getting git status:', error.message);
   }
 }
+<<<<<<< HEAD
 main ().catch (console.error);
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

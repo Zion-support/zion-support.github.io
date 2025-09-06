@@ -1,6 +1,9 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { jsPDF  } from 'jspdf';
 import { Education  } from '@/types/resume';
 import { PdfThemeColors  } from '../themeConfig';
@@ -16,13 +19,17 @@ export function addEducationSection(;
   colors: PdfThemeColors;
   startY: number
 ): number {
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   if (education && education.length === 0) return startY;
   
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   let yPos = startY;
   // Check if we need to add a new page
   if (yPos > 250) {
+<<<<<<< HEAD
 
 <<<<<<< HEAD
     doc && doc.addPage(),
@@ -91,10 +98,16 @@ if (education && education.length === 0) return startY;
     const dateB = b.start_date instanceof Date ? b.start_date : new Date(b.start_date);
     return dateB.getTime() - dateA.getTime()
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  yPos += 8;
+  // Sort education by date (newest first)
+  const sortedEducation = [...education].sort((a, b) => {
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   });
   for (const edu of sortedEducation) {
     // Check if we need to add a new page
     if (yPos > 260) {
+<<<<<<< HEAD
 <<<<<<< HEAD
       doc && doc.addPage();
       yPos = 20
@@ -176,6 +189,8 @@ if (education && education.length === 0) return startY;
 
       yPos += (descriptionLines.length * 5) + 20
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     } else {
       yPos += 20
 import { jsPDF } from 'jspdf',;
@@ -241,6 +256,7 @@ export function addEducationSection(;
       yPos += (descriptionLines.length * 5) + 20;
     } else {;
       yPos += 20;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -254,6 +270,11 @@ export function addEducationSection(;
   }
   return yPos + 5
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+    }
+  }
+  return yPos + 5
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {jsPDF} from 'jspdf';
 import {Education} from '@/types / resume';
 import {PdfThemeColors} from '../theme_config';
@@ -346,6 +367,7 @@ if ( {) {
     }
   }
   return y_pos + 5;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
@@ -453,3 +475,6 @@ doc.text (dateText, 20, yPos + 10);
   return yPos + 5
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

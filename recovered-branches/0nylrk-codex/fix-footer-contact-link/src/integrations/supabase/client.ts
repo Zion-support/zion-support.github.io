@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -7,11 +8,14 @@ import {createClient} from '@supabase/supabase-js';
 
 
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {createClient} from '@supabase/supabase-js';
 export const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
 export const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY;
 if (!supabaseUrl |!supabaseAnonKey) {
   throw new Error('Missing Supabase environment variables')
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import { createClient } from '@supabase/supabase-js',;
 export const supabaseUrl = import.meta.env.VITE_SUPABASE_URL,;
@@ -57,19 +61,21 @@ export const supabase = createClient(supabaseUrl, supabaseAnonKey, {
   global: { fetch: safeFetch };
 });
 // Helper function to get profiles table
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 
 import {createClient} from '@supabase/supabase-js';
 
 
-export const getFromProfiles = () => supabase.from('profiles');
-
 import { createClient } from '@supabase/supabase-js',;
 export const supabaseUrl = import.meta.env.VITE_SUPABASE_URL,;
 export const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY,;
 if (!supabaseUrl || !supabaseAnonKey) {;
   throw new Error('Missing Supabase environment variables');
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
@@ -86,6 +92,10 @@ if (!supabaseUrl || !supabaseAnonKey) {
 
 // Utility to detect network connectivity. navigator && navigator.onLine is not reliable in
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+}
+// Utility to detect network connectivity. navigator.onLine is not reliable in
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 // all environments, so we also try a small request with a short timeout.
 export const checkOnline = async (): Promise<boolean> => {
   if (typeof navigator !== 'undefined' && !navigator && navigator.onLine) {
@@ -97,6 +107,7 @@ export const checkOnline = async (): Promise<boolean> => {
 
 
     const controller = new AbortController();
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -108,16 +119,19 @@ export const checkOnline = async (): Promise<boolean> => {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+    const id = setTimeout(() => controller.abort(), 3000);
+    await fetch('https://clients3.google.com/generate_204', {
+      mode: 'no-cors'
+      signal: controller.signal});
+  try {
+    const controller = new AbortController();
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     clearTimeout(id);
     return true
-=======
-import {create_client} from '@supabase / supabase - js';
-export const supabase_url = import.meta.env.VITE_SUPABASE_URL;
-export const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY;
-;
-// Check condition
-if ( {) {
-  $2
+  } catch {
+    return false
+  }
 }
   throw new Error ('Missing Supabase environment variables');
 }
@@ -131,6 +145,7 @@ if ( {) {
     return false;
   }
   try {
+<<<<<<< HEAD
     const controller = new AbortController ();
     const id = set_timeout (() => controller.abort (), 3000);
     await fetch ('https://clients3.google.com / generate_204', {
@@ -147,6 +162,9 @@ if ( {) {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ;
 // Custom fetch wrapper to provide clearer errors when network requests fail;
 export const safe_fetch: typeof fetch = async (input, init) => {
@@ -155,14 +173,19 @@ export const safe_fetch: typeof fetch = async (input, init) => {
 }
     throw new Error ('No internet connection');
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   }
   try {
     return await fetch (input, init);
   } catch (err) {
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 export const getFromProfiles = () => supabase && supabase.from('profiles');
 
@@ -170,11 +193,14 @@ export const getFromProfiles = () => supabase && supabase.from('profiles');
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { createClient } from '@supabase/supabase-js',;
 export const supabaseUrl = import.meta.env.VITE_SUPABASE_URL,;
 export const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY,;
 if (!supabaseUrl || !supabaseAnonKey) {;
   throw new Error('Missing Supabase environment variables');
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 export const getFromProfiles = () => supabase && supabase.from('profiles');
@@ -199,6 +225,8 @@ export const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY,;
 if (!supabaseUrl || !supabaseAnonKey) {;
   throw new Error('Missing Supabase environment variables'),;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 ;
 // Utility to detect network connectivity. navigator.onLine is not reliable in;
@@ -208,6 +236,7 @@ export const checkOnline = async (): Promise<boolean> => {;
     return false;
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 export const checkOnline = async ():Promise<boolean> => {;
@@ -215,6 +244,8 @@ export const checkOnline = async ():Promise<boolean> => {;
     return false,;
   }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   try {;
     const controller = new AbortController(),;
     const id = setTimeout(() => controller.abort(), 3000),;
@@ -242,6 +273,7 @@ export const safeFetch: typeof fetch = async (input, init) => {;
 },;
 export const supabase = createClient(supabaseUrl, supabaseAnonKey, {;
   global: { fetch: safeFetch }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 });
@@ -264,6 +296,12 @@ export const getFromProfiles = () => supabase.from('profiles');
     return true,;
   } catch {;
     return false,;
+=======
+export const getFromProfiles = () => supabase.from('profiles');
+    // Log the original error for debugging;
+    console.error ('Supabase fetch failed:', err);
+    throw new Error ('Failed to connect to Supabase');
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   }
 },;
 ;
@@ -286,8 +324,11 @@ export const supabase = createClient(supabaseUrl, supabaseAnonKey, {;
 }),;
 ;
 // Helper function to get profiles table;
+<<<<<<< HEAD
 export const getFromProfiles = () => supabase.from('profiles'),; 
 });
 // Helper function to get profiles table;
 export const getFromProfiles = () => supabase.from('profiles');
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

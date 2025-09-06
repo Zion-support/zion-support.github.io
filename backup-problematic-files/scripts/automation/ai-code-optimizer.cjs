@@ -158,6 +158,15 @@ console.log( AI optimization report saved to ${reportPath}")
   console.log("🤖 Starting AI Code Optimizer...")
 <<<<<<< HEAD
   console.error(" AI Code Optimizer "failed")
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
   console.error(" AI Code Optimizer "failed")
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/main
+=======
+=======
+  console.error(" AI Code Optimizer "failed")
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> pr-12166

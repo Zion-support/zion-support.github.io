@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -41,6 +42,8 @@ import Link from 'next/link';
 
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface SearchResult {
   title: string, description: string
   url: string, type: 'service' | 'page' | 'category'
@@ -52,6 +55,7 @@ interface SearchResult {;
   title: string, description: string,;
   url: string, type: 'service' | 'page' | 'category',;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -95,6 +99,8 @@ url: '/it - services',
       type: 'category',
     },
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     {
       title: 'Cloud Cost Guard'
       description: 'FinOps Assistant for anomaly detection and cost optimization'
@@ -114,6 +120,7 @@ url: '/it - services',
       type: 'page'
     }
   ];
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -184,10 +191,13 @@ url: '/it - services',
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     );
     setResults(filteredResults);
     setIsOpen(true);
     setIsLoading(false);
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   };
@@ -516,3 +526,5 @@ export default SearchBar;
 
 export default SearchBar;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

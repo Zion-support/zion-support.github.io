@@ -1,8 +1,12 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import path from 'path';
 
+<<<<<<< HEAD
 // https://vitejs.dev/config/
 =======
 
@@ -10,11 +14,14 @@ import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import path from 'path';
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export default defineConfig({
   plugins: [react()],
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),
+<<<<<<< HEAD
       '@components': path.resolve(__dirname, './src/components'),
       '@pages': path.resolve(__dirname, './src/pages'),
       '@utils': path.resolve(__dirname, './src/utils'),
@@ -26,9 +33,12 @@ export default defineConfig({
     }
 =======
       '@assets': path.resolve(__dirname, './src/assets'),
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     },
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   },
+<<<<<<< HEAD
   server: {
     port: 3000,
     open: true,
@@ -54,6 +64,18 @@ export default defineConfig({
           vendor: ["react", "react-dom"],
           ui: ["framer-motion", "lucide-react"],
           router: ["react-router-dom"]
+=======
+  build: {
+    outDir: "dist",
+    sourcemap: true,
+    minify: "terser",
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          vendor: ['react', 'react-dom'],
+          ui: ['framer-motion', 'lucide-react'],
+          router: ['react-router-dom']
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         }
       }
     },
@@ -63,6 +85,7 @@ export default defineConfig({
         drop_debugger: true
       }
     }
+<<<<<<< HEAD
   }
 });
 =======
@@ -77,11 +100,17 @@ export default defineConfig({
         },
       },
     },
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   },
   optimizeDeps: {
     include: ['react', 'react-dom', 'framer-motion', 'lucide-react']
   }
+<<<<<<< HEAD
 
 })
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+});
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

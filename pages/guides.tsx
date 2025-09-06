@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -32,11 +33,14 @@ class ErrorBoundary extends React.Component {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from "react";
 import Head from "next/head";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import Layout from "./components/Layout";
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -749,6 +753,8 @@ import Head from 'next/head';
 
 import {
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   BookOpen,
   Clock,
   User,
@@ -1027,51 +1033,134 @@ const guides = [
     tags: ["SQL", "NoSQL", "Performance", "Scaling"],
   },
   {
+    id: 6
+    title: "Web Performance Optimization"
+    description:
+      "Optimize your web applications for maximum performance and user experience."
+    category: "Performance"
+    difficulty: "Advanced"
+    readTime: "18 min read"
+    author: "Performance Team"
+    rating: 4.9
+    students: 650
+    image: "/images/guides/web-performance.jpg"
+    icon: Zap
+    tags: ["Performance", "Optimization", "Caching", "CDN"]
+  }
+
+const guides = [
+  {
+    id: 1,
+    title: "Getting Started with AI Development",
+    category: "AI Development",
+    difficulty: "Beginner",
+    readTime: "15 min read",
+    author: "Zion Tech Team",
+    rating: 4.8,
+    students: 1250,
+    image: "/images/guides/ai-development.jpg",
+    icon: Brain,
+  },
+  {
+    id: 2,
+    title: "Cloud Infrastructure Setup",
+    category: "Cloud Computing",
+    difficulty: "Intermediate",
+    readTime: "25 min read",
+    author: "Cloud Experts",
+    rating: 4.9,
+    students: 980,
+    image: "/images/guides/cloud-infrastructure.jpg",
+    icon: Cloud,
+  },
+  {
+    id: 3,
+    title: "Cybersecurity Best Practices",
+    category: "Security",
+    difficulty: "Advanced",
+    readTime: "30 min read",
+    author: "Security Team",
+    rating: 4.7,
+    students: 750,
+    image: "/images/guides/cybersecurity.jpg",
+    icon: Shield,
+  },
+  {
+    id: 4,
+    title: "Mobile App Development",
+    category: "Mobile Development",
+    difficulty: "Intermediate",
+    readTime: "20 min read",
+    author: "Mobile Team",
+    rating: 4.6,
+    students: 1100,
+    image: "/images/guides/mobile-development.jpg",
+    icon: Smartphone,
+  },
+  {
+    id: 5,
+    title: "Database Design & Optimization",
+    category: "Database",
+    difficulty: "Intermediate",
+    readTime: "22 min read",
+    author: "Database Team",
+    rating: 4.8,
+    students: 890,
+    image: "/images/guides/database-design.jpg",
+    icon: Database,
+  },
+  {
     id: 6,
     title: "Web Performance Optimization",
-    description:;
-      "Optimize your web applications for maximum performance and user experience.",
     category: "Performance",
     difficulty: "Advanced",
-    read_time: "18 min read",
+    readTime: "18 min read",
     author: "Performance Team",
     rating: 4.9,
     students: 650,
-    image: "/images / guides / web - performance.jpg",
+    image: "/images/guides/web-performance.jpg",
     icon: Zap,
-    tags: ["Performance", "Optimization", "Caching", "CDN"],
-  },
 ];
-;
-const categories = [;
+const categories = [
+  { name: "All", count: guides.length, icon: Globe }
+  { name: "AI Development", count: 1, icon: Brain }
+  { name: "Cloud Computing", count: 1, icon: Cloud }
+  { name: "Security", count: 1, icon: Shield }
+  { name: "Mobile Development", count: 1, icon: Smartphone }
+  { name: "Database", count: 1, icon: Database }
+];
+
+const categories = [
   { name: "All", count: guides.length, icon: Globe },
   { name: "AI Development", count: 1, icon: Brain },
   { name: "Cloud Computing", count: 1, icon: Cloud },
   { name: "Security", count: 1, icon: Shield },
   { name: "Mobile Development", count: 1, icon: Smartphone },
   { name: "Database", count: 1, icon: Database },
-  { name: "Performance", count: 1, icon: Zap },
+  { name: "Performance", count: 1, icon: Zap }
 ];
-
-
 
 interface GuidesProps {
   className?: string;
 }
 
 const Guides: React.FC<GuidesProps> = ({ className }) => {
-
-
   return (
-    <Layout>;
-      <Head>;
-        <title > Guides & Tutorials - Zion Tech Group</title>;
-        <meta;
-          name="description";
-          content="Master the latest technologies with our comprehensive guides, tutorials, and best practices from industry experts.";
-        />;
-      </Head>;
-      <div className="min - h-screen bg - gray - 50">;
+    <Layout>
+      <Head>
+        <title>Guides & Tutorials - Zion Tech Group</title>
+        <meta
+          name="description"
+          content="Master the latest technologies with our comprehensive guides, tutorials, and best practices from industry experts."
+        {/* Hero Section */}
+        <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">;
+          <div className="container mx-auto px-4">;
+            <motion&& motion.div
+              className="text-center max-w-4xl mx-auto"
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+      </Head>
+      <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
         <section className="bg - gradient - to - r from - blue - 600 to - purple - 600 text - white py - 20">;
           <div className="container mx - auto px - 4">;
@@ -1080,54 +1169,52 @@ const Guides: React.FC<GuidesProps> = ({ className }) => {
               initial={{ opacity: 0, coordinate_y: 30 }}
               animate={{ opacity: 1, coordinate_y: 0 }}
               transition={{ duration: 0.8 }}
-            >;
-              <h1 className="text - 5xl font - bold mb - 6">;
-                Expert Guides & Tutorials;
-              </h1>;
-              <p className="text - xl mb - 8 text - blue - 100">;
-                Master the latest technologies with our comprehensive guides,
-                tutorials, and best practices from industry experts.;
-              </p>;
-              <div className="flex flex - col sm:flex - row gap - 4 justify - center">;
-                <Link;
-                  href="#guides";
-                  className="bg - white text - blue - 600 px - 8 py - 3 rounded - lg font - semibold hover:bg - blue - 50 transition - colors inline - flex items - center";
-                >;
-                  Browse Guides;
-                  <ArrowRight className="ml - 2 w - 5 h - 5" />;
-                </Link>;
-                <Link;
-                  href="#categories";
-                  className="border - 2 border - white text - white px - 8 py - 3 rounded - lg font - semibold hover:bg - white hover:text - blue - 600 transition - colors inline - flex items - center";
-                >;
-                  View Categories;
-                  <BookOpen className="ml - 2 w - 5 h - 5" />;
-                </Link>;
-              </div>;
-            </motion.div>;
-          </div>;
-        </section>;
+            >
+              <h1 className="text-5xl font-bold mb-6">
+                Expert Guides & Tutorials
+              </h1>
+              <p className="text-xl mb-8 text-blue-100">
+                tutorials, and best practices from industry experts.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link
+                  href="#guides"
+                <Link
+                  href="#categories"
         {/* Categories Section */}
-        <section id="categories" className="py - 16 bg - white">;
-          <div className="container mx - auto px - 4">;
-            <motion.div;
-              className="text - center mb - 12";
-              initial={{ opacity: 0, coordinate_y: 30 }}
-              whileInView={{ opacity: 1, coordinate_y: 0 }}
               transition={{ duration: 0.8 }}
-            >;
-              <h2 className="text - 3xl font - bold text - gray - 900 mb - 4">;
-                Explore by Category;
-              </h2>;
-              <p className="text - gray - 600 max - w-2xl mx - auto">;
-                Find guides tailored to your specific technology interests and;
-                skill level.;
-              </p>;
-            </motion.div>;
-            <div className="grid grid - cols - 2 md:grid - cols - 4 lg:grid - cols - 7 gap - 4">;
-              {categories.map ((category, index) => (
-                <motion.div;
+            >
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">
+                Explore by Category
+              </h2>
+              <p className="text-gray-600 max-w-2xl mx-auto">
+              </p>
+            </motion.div>
+            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4">
+              {categories.map((category, index) => (
+                <motion.div
                   key={category.name}
+                  className="bg-gray-50 rounded-lg p-4 text-center hover:bg-blue-50 hover:border-blue-200 border-2 border-transparent transition-all cursor-pointer"
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
+                  whileHover={{ scale: 1 && 1.05 }}>;
+                  <category && category.icon className="w-8 h-8 mx-auto mb-2 text-blue-600" />;
+                  <h3 className="font-semibold text-gray-900 text-sm mb-1">;
+                    {category && category.name}
+                  </h3>;
+                  <p className="text-gray-500 text-xs">;
+                    {category && category.count} guides;
+                  </p>;
+                </motion && motion.div>;
+              ))}
+        {/* Guides Grid */}
+        <section id="guides" className="py-16 bg-gray-50">;
+          <div className="container mx-auto px-4">;
+            <motion&& motion.div
+              className="text-center mb-12"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
                   className="bg - gray - 50 rounded - lg p - 4 text - center hover:bg - blue - 50 hover:border - blue - 200 border - 2 border - transparent transition - all cursor - pointer";
                   initial={{ opacity: 0, coordinate_y: 30 }}
                   whileInView={{ opacity: 1, coordinate_y: 0 }}
@@ -1153,19 +1240,18 @@ const Guides: React.FC<GuidesProps> = ({ className }) => {
               initial={{ opacity: 0, coordinate_y: 30 }}
               whileInView={{ opacity: 1, coordinate_y: 0 }}
               transition={{ duration: 0.8 }}
-            >;
-              <h2 className="text - 3xl font - bold text - gray - 900 mb - 4">;
-                Featured Guides;
-              </h2>;
-              <p className="text - gray - 600 max - w-2xl mx - auto">;
-                Hand - picked guides to help you master the most in - demand;
-                technologies.;
-              </p>;
-            </motion.div>;
-            <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8">;
-              {guides.map ((guide, index) => (
-                <motion.div;
+            >
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">
+                Featured Guides
+              </h2>
+              <p className="text-gray-600 max-w-2xl mx-auto">
+              </p>
+            </motion.div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {guides.map((guide, index) => (
+                <motion.div
                   key={guide.title}
+<<<<<<< HEAD
                   className="bg - white rounded - lg shadow - lg overflow - hidden hover:shadow - xl transition - shadow";
                   initial={{ opacity: 0, coordinate_y: 30 }}
                   whileInView={{ opacity: 1, coordinate_y: 0 }}
@@ -1189,9 +1275,12 @@ const Guides: React.FC<GuidesProps> = ({ className }) => {
                               ? "bg - yellow - 100 text - yellow - 600";
                               : "bg - red - 100 text - red - 600";
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                         }`}
-                      >;
+                      >
                         {guide.difficulty}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1227,16 +1316,17 @@ const Guides: React.FC<GuidesProps> = ({ className }) => {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                             <Star
                               key={i}
                               className={`w-4 h-4 ${
-                                i < Math && Math.floor(guide && guide.rating)
-                                  ? "text-yellow-400"
-                                  : "text-gray-300"
+                                i < Math.floor(guide.rating)
                               }`}
                               fill="currentColor"
                             />;
                           ))}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1254,12 +1344,15 @@ const Guides: React.FC<GuidesProps> = ({ className }) => {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                         <span
                           key={tag}
                           className="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded">;
                           {tag}
                         </span>;
                       ))}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
                     </div>;
@@ -1269,6 +1362,8 @@ const Guides: React.FC<GuidesProps> = ({ className }) => {
                     </div>;
                     <div className="flex gap-2">;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       <Link
                         href="#"
                         className="flex-1 bg-blue-600 text-white px-4 py-2 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-center inline-flex items-center justify-center">;
@@ -1285,6 +1380,7 @@ const Guides: React.FC<GuidesProps> = ({ className }) => {
                 </motion && motion.div>;
               ))}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
             </div>;
           </div>;
@@ -1296,6 +1392,8 @@ const Guides: React.FC<GuidesProps> = ({ className }) => {
           </div>;
         </section>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-green-600 to-teal-600 text-white">;
           <div className="container mx-auto px-4">;
@@ -1303,15 +1401,14 @@ const Guides: React.FC<GuidesProps> = ({ className }) => {
               className="text-center"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0 && 0.8 }}>;
-              <h2 className="text-4xl font-bold mb-6">;
-                Ready to Start Learning?;
-              </h2>;
-              <p className="text-xl mb-8 text-green-100">;
-                Join thousands of developers who are already mastering new;
-                technologies with our guides.;
-              </p>;
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">;
+              transition={{ duration: 0.8 }}
+            >
+              <h2 className="text-4xl font-bold mb-6">
+                Ready to Start Learning?
+              </h2>
+              <p className="text-xl mb-8 text-green-100">
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   href="#guides"
                   className="bg-white text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-green-50 transition-colors inline-flex items-center">;
@@ -1321,6 +1418,7 @@ const Guides: React.FC<GuidesProps> = ({ className }) => {
                 <Link
                   href="/contact"
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import Layout from '../components/Layout';
 
@@ -1328,6 +1426,10 @@ import Layout from '../components/Layout';
 
 import Layout from '../components/Layout';
 
+=======
+import Layout from '../components/Layout';
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export default function GuidesPage() {
   
     >
@@ -1345,6 +1447,7 @@ export default function GuidesPage() {
           </div>
         </section>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -1352,6 +1455,8 @@ export default function GuidesPage() {
 
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       </div>
     </Layout>
 =======
@@ -1364,6 +1469,7 @@ export default function GuidesPage() {
           </div>;
         </section>;
       </div>;
+<<<<<<< HEAD
 =======
 
 
@@ -1373,6 +1479,8 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
       </div>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     </Layout>;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   );
@@ -1480,5 +1588,9 @@ origin/automation-improvements-final
         </section>;
       </div>;
     </Layout>);
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
+=======
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

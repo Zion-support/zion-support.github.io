@@ -1,7 +1,22 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+      <Head>
+        <title>Post a Job - Zion</title>
+      </Head>
+      <h1 className='text-2xl font-semibold'>Post a Job</h1>
+      <div className='grid md:grid-cols-2 gap-6'>
+        <form className='space-y-4'>
+import type { NextPage } from 'next',
+import Head from 'next/head',
+import { useState } from 'react',
+import EnhancedButton from '../../components/ui/EnhancedButton',
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
       <Head>;
         <title>Post a Job - Zion</title>;
@@ -14,9 +29,12 @@
           <div>;
             <label className='block text-sm font-medium mb-1'>Title</label>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <input
               value={title}
               onChange={e => setTitle(e && e.target.value)}
@@ -55,6 +73,7 @@
               onClick={() => setPreview(p => !p)}
             >;
               {preview ? 'Edit' : 'Preview'}
+<<<<<<< HEAD
 
             </EnhancedButton>;
             <EnhancedButton type='submit'>Post Job</EnhancedButton>;
@@ -99,12 +118,13 @@ export default PostJob;
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 const PostJob: NextPage = () => {
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
   const [budget, setBudget] = useState('');
   const [preview, setPreview] = useState(false);
-
   return (
     <div className="space-y-6 pb-20">
       <Head>
@@ -130,36 +150,62 @@ const PostJob: NextPage = () => {
           </div>
           <div className="flex gap-2">
             <EnhancedButton type="button" variant="secondary" onClick={() => setPreview((p) => !p)}>
-              {preview ? 'Edit' : 'Preview'}
             </EnhancedButton>
             <EnhancedButton type="submit">Post Job</EnhancedButton>
           </div>
         </form>
-
-        <aside className="border rounded-md p-4">
-          <h2 className="font-semibold mb-2">Preview</h2>
-
-
-
           {preview ? (
             <div className="space-y-2">
               <div>
-
+                <div className='text-sm opacity-70'>Title</div>
+                <div className='font-medium'>{title |'Untitled job'}</div>
                 <div className="text-sm opacity-70">Title</div>
                 <div className="font-medium">{title || 'Untitled job'}</div>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               </div>
               <div>
                 <div className="text-sm opacity-70">Budget</div>
                 <div className="font-medium">{budget ? `$${budget}` : 'Not specified'}</div>
               </div>
               <div>
+            <p className='text-sm opacity-80'>
+              Click Preview to see how your job will appear to talent.
+            </p>          )}
+        </aside>
+      </div>
+    </div>
+  );
+}
+export default PostJob;
+
+                <div className="text-sm opacity-70">Description</div>
+                <p className="whitespace-pre-wrap">{description || 'No description provided.'}</p>
+              </div>
+            </div>
+          ) : (
+            <p className="text-sm opacity-80">Click Preview to see how your job will appear to talent.</p>
+          )  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+        </aside>;
+      </div>;
+    </div>;
+  );
+},;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import Head from 'next / head';
 import {useState} from 'react';
 import EnhancedButton from '../../components / ui / EnhancedButton';
@@ -242,6 +288,7 @@ import EnhancedButton from '../../components / ui / EnhancedButton';
     </div>);
 }
 ;
+<<<<<<< HEAD
 =======
 =======
 import type { NextPage } from 'next';
@@ -356,3 +403,6 @@ export default PostJob;
 },;
 export default PostJob;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+export default PostJob;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

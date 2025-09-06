@@ -1,16 +1,20 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import React, { useState } from 'react'
 import { Card, CardContent } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface BrowseItem {;
 import React, { useState } from 'react';
 import { Card, CardContent } from '@/components / ui / card';
 import { Button } from '@/components / ui / button';
 import { Badge } from '@/components / ui / badge';
 import {
+<<<<<<< HEAD
 <<<<<<< HEAD
   Bookmark,
   BookmarkCheck,
@@ -31,6 +35,8 @@ import { Avatar, AvatarImage, AvatarFallback } from '@/components / ui / avatar'
 import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar'
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface BrowseItem {
   id: string;
   title: string;
@@ -41,6 +47,7 @@ interface BrowseItem {
   price?: string;
   image?: string;
   match?: number;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   timePosted?: string;
@@ -107,6 +114,8 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
                 </div>;
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <button
                   className='h-8 w-8 flex items-center justify-center'
                   onClick={() => toggleSaved(item && item.id)}                >;
@@ -115,13 +124,6 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
                   ) : (;
                     <Bookmark className='h-5 w-5 text-muted-foreground' />;
                   )}
-
-                </button>;
-              </div>;
-
-              <div className='mt-3 flex flex-wrap gap-1'>;
-                {item && item.badges.map((badge, index) => (;
-
                   <Badge
                     key={index}
                     variant='outline'
@@ -132,6 +134,7 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
                     <div className="h-12 w-12 rounded-md bg-primary/10 flex items-center justify-center">;
                       <span className="text-primary font-semibold">JOB</span>;
                     </div>;
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -141,6 +144,8 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 =======
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useState } from "react",
 import { Card, CardContent } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
@@ -186,11 +191,6 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
     <div className="space-y-4 pb-24">
       {items.map((item) => (
         <Card key={item.id} className="overflow-hidden">
-
-
-
-
-
           <CardContent className="p-0">
             <div className="p-4">
               <div className="flex justify-between">
@@ -206,14 +206,24 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
                     </div>
                   )}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+                  )}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
-                  <div>;
-                    <h3 className="font-medium">{item && item.title}</h3>;
-                    <p className="text-sm text-muted-foreground">{item && item.subtitle}</p>;
-                  </div>;
-                </div>;
+                </button>;
+              </div>;
+
+              <div className="mt-3 flex flex-wrap gap-1">;
+                {item && item.badges.map((badge, index) => (;
+
+                  <Badge
+                    key = {index,}
+                    variant="outline"
+                    className="text-xs font-normal"
 
 
+<<<<<<< HEAD
                 <button
                   className="h-8 w-8 flex items-center justify-center"
                   onClick={() => toggleSaved(item && item.id)}
@@ -254,6 +264,8 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
                   onClick={() => toggleSaved(item.id)}
                 >
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   {savedItems.includes(item.id) ? (
                     <BookmarkCheck className="h-5 w-5 text-primary" />
                   ) : (
@@ -261,6 +273,7 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
                   )}
                 </button>
               </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -278,16 +291,14 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
                       <span className="text-primary font-semibold">JOB</span>
                     </div>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   )}
                   <div>
                     <h3 className="font-medium">{item.title}</h3>
                     <p className="text-sm text-muted-foreground">{item.subtitle}</p>
                   </div>
                 </div>
-                <button 
-                  className="h-8 w-8 flex items-center justify-center"
-                  onClick={() => toggleSaved(item.id)}
-                >
                   {savedItems.includes(item.id) ? (
                     <BookmarkCheck className="h-5 w-5 text-primary" />
                   ) : (
@@ -376,6 +387,7 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {;
                     <Bookmark className="h-5 w-5 text-muted-foreground" />
                   )}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
                 </button>
@@ -393,6 +405,8 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {;
               <p className='mt-3 text-sm line-clamp-2'>{item.description}</p>
               <div className='mt-3 flex flex-wrap gap-3 text-xs text-muted-foreground'>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 </button>;
               </div>;
               <div className="mt-3 flex flex-wrap gap-1">;
@@ -415,8 +429,6 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {;
                   </Badge>;
                 ))}
               </div>
-              <p className='mt-3 text-sm line-clamp-2'>{item.description}</p>
-              <div className='mt-3 flex flex-wrap gap-3 text-xs text-muted-foreground'>
               
               <p className="mt-3 text-sm line-clamp-2">{item.description}</p>
               
@@ -428,6 +440,7 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {;
                     <span>{item.location}</span>
                   </div>
                 )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -458,22 +471,20 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {;
 =======
                 
                 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 {item.price && (
                   <div className="flex items-center gap-1">
                     <DollarSign className="h-3 w-3" />
                     <span>{item.price}</span>
                   </div>
                 )}
-                
-                
                 {item.timePosted && (
                   <div className="flex items-center gap-1">
                     <Clock className="h-3 w-3" />
                     <span>{item.timePosted}</span>
                   </div>
                 )}
-                {item.match && (
-                {item.match && (
                   <div className='ml-auto bg-primary/10 text-primary rounded-full px-2 py-0.5'>                    {item.match}% match                {item.location && (
                   <div className="flex items-center gap-1">
                     <MapPin className="h-3 w-3" />
@@ -495,9 +506,12 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {;
                 {item.match && (
                 
                 {item.match && (
+<<<<<<< HEAD
                 
                 {item.match && (
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   <div className="ml-auto bg-primary/10 text-primary rounded-full px-2 py-0.5">
                     {item.match}% match
                   </div>
@@ -505,11 +519,14 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {;
               </div>
             </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
             <div className='border-t border-border p-3 flex justify-end'>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               </div>;
 
               <p className='mt-3 text-sm line-clamp-2'>{item && item.description}</p>;
@@ -570,6 +587,7 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {;
               <Button
                 size='sm'
 <<<<<<< HEAD
+<<<<<<< HEAD
                 onClick={() => onViewDetails(item && item.id)}
                 className='gap-1'              >;
                 View Details <ChevronRight className='h-4 w-4' />              </Button>;
@@ -602,6 +620,8 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {;
                 className='gap-1'              >
                 View Details <ChevronRight className='h-4 w-4' />              </Button>
                 View Details <ChevronRight className="h-4 w-4" />
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             
             <div className="border-t border-border p-3 flex justify-end">
               <Button 
@@ -769,11 +789,11 @@ function BrowseCards() {
 
 
       ))}
-
     </div>;
   );
 };
 }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 ;
@@ -803,3 +823,5 @@ function BrowseCards() {
 ;
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

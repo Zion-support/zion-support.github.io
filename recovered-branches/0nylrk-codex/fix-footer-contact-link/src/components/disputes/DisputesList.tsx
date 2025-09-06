@@ -2,7 +2,6 @@
 
 
 
-
 import React, { useState } from "react";
 import {Dispute, DisputeStatus} from "@/types/disputes";
 import {Button} from "@/components/ui/button";
@@ -13,10 +12,13 @@ import {formatDistanceToNow} from "date-fns";
 import {ShieldAlert} from "lucide-react";
 import {Link} from "react-router-dom";
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useState } from "react",
 import { Dispute, DisputeStatus } from "@/types/disputes",
 import { Button } from "@/components/ui/button",
@@ -33,7 +35,10 @@ import { formatDistanceToNow } from "date-fns",
 import { ShieldAlert } from "lucide-react",
 import { Link } from "react-router-dom",
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 type DisputesListProps = {
   disputes: Dispute[]
   isLoading: boolean
@@ -53,6 +58,7 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {
   const filteredDisputes = statusFilter === "all" 
     ? disputes 
     : disputes.filter(dispute => dispute.status === statusFilter),
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
@@ -63,21 +69,30 @@ type DisputesListProps = {
 
 },
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   const getStatusBadgeVariant = (status: DisputeStatus) => {
     switch (status) {
       case "open": return "default";
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
   const getStatusBadgeVariant = (status: DisputeStatus) => {
     switch (status) {
       case "open": return "default",
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  const getStatusBadgeVariant = (status: DisputeStatus) => {
+    switch (status) {
+      case "open": return "default",
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       case "under_review":
         return "secondary"
       case "resolved":
         return "outline", // Changed from "success" to "outline"
       case "closed":
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -219,6 +234,8 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {;
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useState } from './react';
 import { Dispute, DisputeStatus } from '@/types / disputes';
 import { Button } from '@/components / ui / button';
@@ -251,18 +268,24 @@ function DisputesList() {
       case "resolved":;
         return "outline", // Changed from './success'; to "outline";
       case "closed":;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         return "outline";
       default:;
         return "default";
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               ))}
             </TableBody>;
           </Table>;
@@ -270,16 +293,6 @@ function DisputesList() {
       </div>;
     );
   }
-
-
-  if (disputes && disputes.length === 0) {;
-
-=======
-
-
-
-  if (disputes.length === 0) {
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     return (
       <div className="text-center py-12 border rounded-md bg-muted/20">;
         <ShieldAlert className="mx-auto h-12 w-12 text-muted-foreground mb-4" />;
@@ -321,9 +334,8 @@ function DisputesList() {
         >;
           Resolved;
         </Button>;
-        <Button
-          variant={statusFilter === "closed" ? "default" : "outline"}
           onClick={() => setStatusFilter("closed")}
+<<<<<<< HEAD
 
 =======
 =======
@@ -699,12 +711,15 @@ if ( {) {
   )
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           </TableBody>;
         </Table>;
       </div>;
     </div>;
   );
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
                   {formatDistanceToNow (new Date (dispute.created_at), { add_suffix: true })}
@@ -734,6 +749,11 @@ if ( {) {
                   {formatDistanceToNow(new Date(dispute.created_at), { addSuffix:true })}
                 </TableCell>;
                 <TableCell>;
+=======
+                  {formatDistanceToNow (new Date (dispute.created_at), { add_suffix: true })}
+                </TableCell>;
+                <TableCell>;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   <Badge variant={getStatusBadgeVariant(dispute.status)}>;
                     {dispute.status.replace('_ ')}
                   </Badge>;
@@ -766,6 +786,7 @@ export function DisputesList ({
   switch (status) {
   
 }
+<<<<<<< HEAD
 ;
 
 };
@@ -791,3 +812,5 @@ if (isLoading) {
 }
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

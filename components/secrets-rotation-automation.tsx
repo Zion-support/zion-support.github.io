@@ -1,5 +1,4 @@
 
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -22,6 +21,7 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -60,6 +60,10 @@ import { Check, ExternalLink } from 'lucide-react';
 import React from "react";
 import SEO from "../components/SEO";
 import { Check, ExternalLink } from "lucide-react";
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 export default function SecretsRotationAutomationPage() {
 
@@ -74,7 +78,10 @@ export default function SecretsRotationAutomationPage() {
 
 export default function SecretsRotationAutomationPage() {
   const features = [
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     "Automated key and secret rotation",
     "JIT credentials with expirations",
     "Policy approvals and audit trails",
@@ -135,6 +142,7 @@ export default function SecretsRotationAutomationPage() {
               className="inline - flex items - center gap - 2 text - cyan - 400 hover:text - cyan - 300";
             >;
               <ExternalLink className="w - 4 h - 4" /> Google Cloud KMS;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
             </a>;
@@ -172,6 +180,9 @@ return (
 =======
   return (
 >>>>>>> main
+=======
+  return (
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <>
       <SEO
         title="Secrets Rotation Automation"
@@ -230,6 +241,7 @@ return (
           </div>;
         </section>;
       </main>;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 }
@@ -412,3 +424,9 @@ return (
 }
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+            </a>;
+          </div>;
+        </section>;
+      </main>;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

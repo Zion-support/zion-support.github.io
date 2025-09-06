@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
   const { sessionId, eventType, payload } = req.body as { sessionId: string, eventType: string, payload?: any };
@@ -57,6 +58,8 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 
 import { readJson, writeJson } from '../../../utils/fsDb';
 import { logSupportEventToOperator } from '../../../utils/operator';
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import type { NextApiRequest, NextApiResponse } from 'next',;
 import { readJson, writeJson } from '../../../utils/fsDb',;
 import { logSupportEventToOperator } from '../../../utils/operator',;
@@ -70,7 +73,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   writeJson('support/sessions.json', log)
   await logSupportEventToOperator({ type: eventType, sessionId, payload })
 
-  return res.status(200).json({ ok: true })
   return res.status(200).json({ ok: true });
 };
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -86,8 +88,16 @@ export default async function handler(req, res) {
   if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
   const log = readJson<any[]>('support/sessions.json', []),;
   const entry = { ts: Date.now(), sessionId, eventType, payload },;
+
+  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
+  const { sessionId, eventType, payload } = req.body as { sessionId: string, eventType: string, payload?: any };
+  if (!sessionId || !eventType) return res.status(400).json({ error: 'sessionId and eventType required' });
+
+  const log = readJson<any[]>('support/sessions.json', []);
+  const entry = { ts: Date.now(), sessionId, eventType, payload };
   log.push(entry);
   writeJson('support/sessions.json', log);
+
   await logSupportEventToOperator({ type: eventType, sessionId, payload });
   return res.status(200).json({ ok: true });
   } catch (error) {
@@ -98,10 +108,14 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
 }
 }
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+}
+}
+
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

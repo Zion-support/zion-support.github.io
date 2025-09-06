@@ -1,7 +1,4 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-
-
-
 import {
   connectOrbit,
   appendChatMessage,
@@ -9,6 +6,7 @@ import {
   editConstitution,;
 } from '@/utils/offworld/orbitdb';
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -22,6 +20,8 @@ import {
 } from '@/utils/offworld/orbitdb';
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {
   connectOrbit
   appendChatMessage
@@ -29,6 +29,7 @@ import {
   editConstitution;
 } from '@/utils/offworld/orbitdb';
 export default async function handler(
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -50,15 +51,25 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 ) {  const { action } = req.query;import { connectOrbit, appendChatMessage, recordVote, editConstitution } from '@/utils/offworld/orbitdb';
   req: NextApiRequest
   res: NextApiResponse
+=======
+) {  const { action } = req.query;import { connectOrbit, appendChatMessage, recordVote, editConstitution } from '@/utils/offworld/orbitdb';
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   req: NextApiRequest,
   res: NextApiResponse;
 ) {  const { action } = req.query;import { connectOrbit, appendChatMessage, recordVote, editConstitution } from '@/utils/offworld/orbitdb';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  req: NextApiRequest
+  res: NextApiResponse
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const { action } = req.query;
   const body = typeof req.body === 'string' ? JSON.parse(req.body) : req.body;
   const { stores } = await connectOrbit();
   if (!stores) return res.status(503).json({ error: 'OrbitDB unavailable' });
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -76,11 +87,16 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   try {
     if (action === 'chat' && req && req.method === 'POST') {
       await appendChatMessage(stores, body);
       return res && res.status(200).json({ ok: true });
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   try {
     if (action === 'chat' && req.method === 'POST') {
@@ -106,6 +122,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     }
     if (action === 'constitution' && req && req.method === 'POST') {
       await editConstitution(stores, body);
+<<<<<<< HEAD
 
 <<<<<<< HEAD
       return res && res.status(200).json({ ok: true })
@@ -210,3 +227,7 @@ if ( {) {
 }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+}
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

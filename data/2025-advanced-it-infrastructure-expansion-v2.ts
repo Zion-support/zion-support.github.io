@@ -2,14 +2,21 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export const advancedITInfrastructureExpansion2025V2 = [
   {
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     name: 'Autonomous DevOps Platform',
     description: 'Self - managing DevOps automation platform',
     category: 'Cloud & FinOps',
@@ -381,6 +388,7 @@ export const advancedITInfrastructureExpansion2025V2 = [
     ],
   },
   {
+<<<<<<< HEAD
 =======
 
 export const advancedITInfrastructureExpansion2025V2 = [
@@ -1000,6 +1008,8 @@ export const advancedITInfrastructureExpansion2025V2 = [
     description: 'Comprehensive zero-trust security platform'
     category: 'Cybersecurity'
     pricing: '$599/month'
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     features: [
       'Identity verification'
       'Access control'
@@ -1012,6 +1022,7 @@ export const advancedITInfrastructureExpansion2025V2 = [
       'Threat detection',
       'Performance monitoring',
     ],
+<<<<<<< HEAD
   },;
 ];      'Identity verificationAccess controlThreat detectionPerformance monitoring'
     ]
@@ -1273,10 +1284,19 @@ export const advancedITInfrastructureExpansion2025V2 = [
   },;
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ];      'Identity verificationAccess controlThreat detectionPerformance monitoring'
     ]
 
-];      'Identity verification_access control_threat detection_performance monitoring';
+export const advancedITInfrastructureExpansion2025V2 = [;
+  {;
+    name: 'Autonomous DevOps Platform',;
+    description: 'Self-managing DevOps automation platform',;
+    category: 'Cloud & FinOps',;
+    pricing: '$399/month',;
+    features: [;
+      'Automated deploymentSelf-healing infrastructurePerformance optimizationCost management';
     ];
 
   },;
@@ -1738,9 +1758,6 @@ export const advancedITInfrastructureExpansion2025V2 = [
     features: [;
       'Identity verificationAccess controlThreat detectionPerformance monitoring';
     ];
-
-
-
   }
 ];
 ;
@@ -2218,4 +2235,7 @@ export const advancedITInfrastructureExpansion2025V2 = [;
     ];
   }
 ];
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

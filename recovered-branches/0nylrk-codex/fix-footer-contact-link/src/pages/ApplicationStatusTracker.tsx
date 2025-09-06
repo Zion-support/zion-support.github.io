@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -8,11 +9,14 @@ import {Card, CardHeader, CardTitle, CardContent} from "@/components/ui/card";
 import {Briefcase, Inbox} from "lucide-react";
 import {ProtectedRoute} from "@/components/ProtectedRoute";
 import {useIsMobile} from "@/hooks/use-mobile";
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { AppLayout } from "@/layout/AppLayout",
 import { SEO } from "@/components/SEO",
 import { ApplicationsTracker } from "@/components/jobs/applications",
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",
 import { Briefcase, Inbox } from "lucide-react",
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
@@ -25,18 +29,26 @@ function ApplicationStatusTrackerContent() {
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { ProtectedRoute } from "@/components/ProtectedRoute";
 import { useIsMobile } from "@/hooks/use-mobile";
 function ApplicationStatusTrackerContent() {
 
-  const isMobile = useIsMobile();
 
 import { ProtectedRoute } from "@/components/ProtectedRoute",
 import { useIsMobile } from "@/hooks/use-mobile",
+
+
+
+
 function ApplicationStatusTrackerContent() {
   const isMobile = useIsMobile(),
   
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <>
       <SEO
@@ -65,6 +77,7 @@ function ApplicationStatusTrackerContent() {
       </div>
     </>
   )
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import {AppLayout} from "@/layout/AppLayout";
@@ -80,6 +93,8 @@ import {useIsMobile} from "@/hooks/use-mobile";
 =======
 =======
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 export default function ApplicationStatusTracker() {
   return (
@@ -90,7 +105,20 @@ export default function ApplicationStatusTracker() {
     </ProtectedRoute>
   )
 }
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+import {AppLayout} from "@/layout/AppLayout";
+import {SEO} from "@/components/SEO";
+import {ApplicationsTracker} from "@/components/jobs/applications";
+import {Card, CardHeader, CardTitle, CardContent} from "@/components/ui/card";
+import {Briefcase, Inbox} from "lucide-react";
+import {ProtectedRoute} from "@/components/ProtectedRoute";
+import {useIsMobile} from "@/hooks/use-mobile";
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { AppLayout } from "@/layout/AppLayout",;
 import { SEO } from "@/components/SEO",;
 import { ApplicationsTracker } from "@/components/jobs/applications",;
@@ -98,6 +126,7 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",
 import { Briefcase, Inbox } from "lucide-react",;
 import { ProtectedRoute } from "@/components/ProtectedRoute",;
 import { useIsMobile } from "@/hooks/use-mobile",;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 function ApplicationStatusTrackerContent() {;
@@ -119,6 +148,8 @@ function ApplicationStatusTrackerContent() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       />;
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <div className="container mx-auto px-4 py-8">;
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8">;
           <div>;
@@ -127,6 +158,7 @@ function ApplicationStatusTrackerContent() {;
           </div>;
         </div>;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 import { AppLayout } from "@/layout/AppLayout",;
@@ -156,6 +188,8 @@ function ApplicationStatusTrackerContent() {;
         </div>;
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <div className="grid grid-cols-1 gap-6">;
           <Card>;
             <CardHeader className="border-b bg-muted/50">;
@@ -164,9 +198,13 @@ function ApplicationStatusTrackerContent() {;
               </CardTitle>;
             </CardHeader>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
             <CardContent className={`p-${isMobile ? '3' :'6'}`}>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+            <CardContent className={`p-${isMobile ? '3' :'6'}`}>;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <CardContent className={`p-${isMobile ? '3' : '6'}`}>;
               <ApplicationsTracker />;
             </CardContent>;
@@ -174,6 +212,7 @@ function ApplicationStatusTrackerContent() {;
         </div>;
       </div>;
     </>;
+<<<<<<< HEAD
 <<<<<<< HEAD
   );
 
@@ -195,6 +234,8 @@ import { useIsMobile } from '@/hooks / use - mobile';
  */
 function ApplicationStatusTrackerContent() {
   const is_mobile = useIsMobile ();
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ;
   return (
     <>;
@@ -230,19 +271,27 @@ export default /**
 function ApplicationStatusTracker() {
   return (
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
   ),;
   );
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 ;
 export default function ApplicationStatusTracker() {;
   return (;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <ProtectedRoute>;
       <AppLayout>;
         <ApplicationStatusTrackerContent />;
       </AppLayout>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     </ProtectedRoute>);
@@ -288,3 +337,7 @@ export default function ApplicationStatusTracker() {
 }
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+    </ProtectedRoute>);
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

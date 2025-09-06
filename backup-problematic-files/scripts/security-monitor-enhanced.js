@@ -1,22 +1,22 @@
 const securityChecks = { dependencies: () => {  return true},codeScan: () => {  return true},headers: () => {  return true} }; Object.entries(securityChecks).forEach(([name,check]) => { try { const result = check(); } catch (error) { } }); 
-console.log('🔒 Enhanced Security Monitor Starting...');
+console.log(' Enhanced Security Monitor Starting...');
 const securityChecks = {
   "dependencies": () => {
-    console.log('📦 Checking dependencies for vulnerabilities...'),
+    console.log(' Checking dependencies for vulnerabilities...'),
     return true
   },
   "codeScan": () => {
-    console.log('🔍 Scanning code for security issues...'),
+    console.log(' Scanning code for security issues...'),
     return true
   },
   "headers": () => {
-    console.log('🛡️ Checking security headers...'),
     return true
   }
 };
 Object && Object.entries(securityChecks).forEach(([name, check]) => {
   try {
     const result = check();
+<<<<<<< HEAD
     console && console.log(`✅ ${name}: ${result ? 'PASS' : 'FAIL'}`);
   } catch (error) {
     console && console.log(`❌ ${name}: ERROR - ${error && error.message}`);
@@ -25,3 +25,5 @@ Object && Object.entries(securityChecks).forEach(([name, check]) => {
 console.log('🎉 Security monitoring completed!');
 console.log('🔒 Enhanced Security Monitor Starting...'); const securityChecks = { dependencies: () => { console.log('📦 Checking dependencies for vulnerabilities...'); return true},codeScan: () => { console.log('🔍 Scanning code for security issues...'); return true},headers: () => { console.log('🛡️ Checking security headers...'); return true} }; Object.entries(securityChecks).forEach(([name,check]) => { try { const result = check(); console.log(`✅ ${name}: ${result ? 'PASS' : 'FAIL'}`)} catch (error) { console.log(`❌ ${name}: ERROR - ${error.message}`)} }); console.log('🎉 Security monitoring completed!');
 console.log('🔒 Enhanced Security Monitor Starting...'); const securityChecks = { dependencies: () => { console.log('📦 Checking dependencies for vulnerabilities...'); return true},codeScan: () => { console.log('🔍 Scanning code for security issues...'); return true},headers: () => { console.log('🛡️ Checking security headers...'); return true} }; Object.entries(securityChecks).forEach(([name,check]) => { try { const result = check(); console.log(`✅ ${name}: ${result ? 'PASS' : 'FAIL'}`)} catch (error) { console.log(`❌ ${name}: ERROR - ${error.message}`)} }); console.log('🎉 Security monitoring completed!');
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 export default function EnterpriseITPage() {
@@ -93,6 +94,10 @@ export default function EnterpriseITPage() {
     { name: 'Data Pipeline Observability', href: '/data-pipeline-observability' }
     { name: 'Uptime & SLO Monitor', href: '/uptime-slo-monitor' }]
 
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <Layout>
 import React from 'react',;
@@ -104,6 +109,11 @@ import React from 'react'
 import Head from 'next/head'
 import Layout from '../components/layout/Layout'
 import { Server, CheckCircle, Database, Cloud } from 'lucide-react',
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export default function EnterpriseITPage() {
   const features = [
     'Cloud migration and landing zones with cost governanceDevOps automation, CI/CD, and platform engineeringData platforms, lineage, and quality monitoringObservability, SLOs, and incident automation'],
@@ -136,6 +146,7 @@ ursor/fix-lint-push-and-merge-to-main-ce13
             <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-4">Enterprise IT</h1>
             <p className="text-gray-300 text-lg max-w-3xl mx-auto">Ship secure, reliable platforms with measurable business outcomes.</p>
             <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -153,6 +164,8 @@ ursor/fix-lint-push-and-merge-to-main-ce13
               <a href="/contact" className="px-8 py-4">Get a Roadmap</Link>
               <a href="/market-pricing" className="px-8 py-4">See Market Pricing</Link>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             </div>
           </header>
           <section>
@@ -162,6 +175,7 @@ ursor/fix-lint-push-and-merge-to-main-ce13
                 <div key={f} className="flex items-start gap-3 p-4 rounded-xl bg-black/40 border border-gray-700/60">
                   <CheckCircle className="w-5 h-5 text-emerald-400 mt-0.5" />
                   <span className="text-gray-200">{f}</span>
+<<<<<<< HEAD
                 </div>
               ))}
             </div>
@@ -176,15 +190,21 @@ ursor/fix-lint-push-and-merge-to-main-ce13
 <<<<<<< HEAD
 
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 </a>
               ))}
             </div>
           </section>
+<<<<<<< HEAD
         </div>
       </div>
     </Layout>
   )
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   );
 };
@@ -194,6 +214,7 @@ ursor/fix-lint-push-and-merge-to-main-ce13
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
 
 }
 }
@@ -202,6 +223,8 @@ ursor/fix-lint-push-and-merge-to-main-ce13
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from 'react',
 import Head from 'next / head',
 import Layout from '../components / layout / Layout',
@@ -257,6 +280,7 @@ function EnterpriseITPage() {
                   <p className="text - gray - 300 text - sm">Learn more</p>;
                 </a>))}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   );
 };
@@ -267,22 +291,28 @@ function EnterpriseITPage() {
   }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             </div>;
           </section>;
         </div>;
       </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 }
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     </Layout>;
   );
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 
@@ -291,3 +321,5 @@ function EnterpriseITPage() {
 =======
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

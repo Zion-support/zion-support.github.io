@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import { useTheme } from "next-themes"
 import { Toaster as Sonner, toast } from "sonner"
@@ -22,6 +23,8 @@ const Toaster = ({ ...props }: ToasterProps) => {
   const { theme = "system" } = useTheme()
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <Sonner
       theme={theme as ToasterProps["theme"]}
@@ -29,6 +32,7 @@ const Toaster = ({ ...props }: ToasterProps) => {
       toastOptions={{
         classNames: {
           toast:
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -45,15 +49,20 @@ const Toaster = ({ ...props }: ToasterProps) => {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           cancelButton:
             "group-[.toast]:bg-muted group-[.toast]:text-muted-foreground"}}}
       {...props}
     />;
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { use_theme } from &quot;next - themes & quot;
 import { Toaster as Sonner, toast } from &quot;sonner & quot;
 ;
@@ -74,15 +83,20 @@ const Toaster = ({ ...props }: ToasterProps) =>: any {
           cancel_button:;
             &quot;group-[.toast]:bg - muted group-[.toast]:text - muted - foreground & quot;}}}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import { useTheme } from "next-themes";
 import { Toaster as Sonner, toast } from "sonner";
+=======
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ;
 type ToasterProps = React.ComponentProps<typeof Sonner>;
 ;
 const Toaster = ({ ...props } ToasterProps) => {;
   const { theme = "system" } = useTheme();
 ;
+<<<<<<< HEAD
   return (;
     <Sonner;
       theme={theme as ToasterProps["theme"]}
@@ -122,3 +136,6 @@ export { Toaster, toast }
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

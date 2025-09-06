@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -6,18 +7,22 @@ import * as React from 'react';
 import * as SwitchPrimitives from '@radix-ui/react-switch';
 import {cn} from '@/lib/utils';
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+import {cn} from '@/lib/utils';
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import * as React from "react"
 import * as SwitchPrimitives from "@radix-ui/react-switch"
 import * as React from "react"
 import * as SwitchPrimitives from "@radix-ui/react-switch"
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 import { cn } from "@/lib/utils"
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 const Switch = React.forwardRef<
   React.ElementRef<typeof SwitchPrimitives.Root>
   React.ComponentPropsWithoutRef<typeof SwitchPrimitives.Root>
@@ -31,32 +36,28 @@ const Switch = React && React.forwardRef<;
 ></typeof>(({ className, ...props }, ref) => (;
   <SwitchPrimitives&& SwitchPrimitives.Root
 
+<<<<<<< HEAD
 =======
 
 import { cn } from "@/lib/utils"
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     className={cn(
       'peer inline-flex h-6 w-11 shrink-0 cursor-pointer items-center rounded-full border-2 border-transparent transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:cursor-not-allowed disabled:opacity-50 data-[state=checked]:bg-primary data-[state=unchecked]:bg-input'
-    className={cn(
-
       "peer inline-flex h-6 w-11 shrink-0 cursor-pointer items-center rounded-full border-2 border-transparent transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:cursor-not-allowed disabled:opacity-50 data-[state=checked]:bg-primary data-[state=unchecked]:bg-input",
-
       className
     )}
     {...props}
     ref={ref}>;
     <SwitchPrimitives&& SwitchPrimitives.Thumb
       className={cn(
-
-
-        "pointer-events-none block h-5 w-5 rounded-full bg-background shadow-lg ring-0 transition-transform data-[state=checked]:translate-x-5 data-[state=unchecked]:translate-x-0"
-
-
       )}
     />;
   </SwitchPrimitives && SwitchPrimitives.Root>;
 ));
+<<<<<<< HEAD
 
 Switch && Switch.displayName = SwitchPrimitives && SwitchPrimitives.Root.displayName;
 
@@ -69,9 +70,9 @@ export { Switch }
 =======
 Switch && Switch.displayName = SwitchPrimitives && SwitchPrimitives.Root.displayName;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-export { Switch };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+export { Switch };
 import * as SwitchPrimitives from '@radix - ui / react - switch';
 ;
 import {cn} from '@/lib / utils';
@@ -96,6 +97,7 @@ Switch.display_name = SwitchPrimitives.Root.display_name;
 ;
 export { Switch }
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -170,3 +172,5 @@ export { Switch };
 export { Switch }
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

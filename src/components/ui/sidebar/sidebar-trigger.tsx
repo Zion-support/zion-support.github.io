@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import * as React from "react"
 import { PanelLeft } from 'lucide-react'
@@ -28,12 +29,18 @@ import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
 import { useSidebar } from "./sidebar-context"
 
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export const SidebarTrigger = React.forwardRef<
   React.ElementRef<typeof Button>
   React.ComponentProps<typeof Button>
 >((props, ref) => {
   const { toggleSidebar } = useSidebar()
+<<<<<<< HEAD
     <Button;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       ref={ref}
       data - sidebar=&quot;trigger & quot;
       variant=&quot;ghost & quot;
@@ -42,6 +49,7 @@ export const SidebarTrigger = React.forwardRef<
       on_click={(event) => {
         props.on_click?.(event);
         toggle_sidebar ();
+<<<<<<< HEAD
   return (
     <Button;
       ref={ref};
@@ -55,6 +63,8 @@ export const SidebarTrigger = React.forwardRef<
       variant="ghost"
       size="icon"
       className={cn("h-7 w-7", props.className)}
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       onClick={(event) => {
         props.onClick?.(event)
         toggleSidebar()
@@ -66,6 +76,7 @@ export const SidebarTrigger = React.forwardRef<
     </Button>
   )
 })
+<<<<<<< HEAD
 SidebarTrigger.displayName = &quot;SidebarTrigger&quot;
 ursor/fix-website-loading-errors-and-merge-6662
 SidebarTrigger.displayName = &quot;SidebarTrigger&quot;
@@ -73,3 +84,5 @@ SidebarTrigger.displayName = "SidebarTrigger"
 
 SidebarTrigger.displayName = "SidebarTrigger"
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

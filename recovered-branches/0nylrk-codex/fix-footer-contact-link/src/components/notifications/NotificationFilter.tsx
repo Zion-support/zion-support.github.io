@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React from './react';
 import { Tabs, TabsList, TabsTrigger  } from '@/components / ui / tabs';
@@ -24,6 +25,8 @@ import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from 'react';
 import {Tabs, TabsList, TabsTrigger} from '@/components/ui/tabs';
 
@@ -33,16 +36,20 @@ interface NotificationFilterProps {
   filter: FilterType,
   onFilterChange: (filter: FilterType) => void
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from 'react',;
 import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs',;
 export type FilterType = 'all' | 'unread' | 'onboarding' | 'messages' | 'system',;
 interface NotificationFilterProps {;
   filter: FilterType,;
   onFilterChange: (filter: FilterType) => void;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -57,6 +64,8 @@ export const NotificationFilter: React.FC<NotificationFilterProps> = ({
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export type FilterType =
   | "all"
   | "unread"
@@ -67,7 +76,6 @@ export type FilterType =
 interface NotificationFilterProps {
   filter: FilterType;
   onFilterChange: (filter: FilterType) => void;
->>>>>>> main
 }
 
 }
@@ -75,7 +83,10 @@ interface NotificationFilterProps {
 export const NotificationFilter: React.FC<NotificationFilterProps> = ({
   filter,
   onFilterChange,
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }) => {
   return (
     <div className="border-b border-zion-blue-light">
@@ -102,6 +113,7 @@ export const NotificationFilter: React.FC<NotificationFilterProps> = ({
         </TabsList>
       </Tabs>
     </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 import React from 'react';
@@ -139,17 +151,15 @@ export const NotificationFilter: React.FC<NotificationFilterProps> = ({;
 =======
 >>>>>>> main
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-  );
 =======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+  );
 
   )
 },
 
-=======
 
 };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 export const NotificationFilter: React.FC < NotificationFilterProps> = ({
   filter,
   onFilterChange,
@@ -182,6 +192,7 @@ export const NotificationFilter: React.FC < NotificationFilterProps> = ({
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
   ),;
@@ -201,3 +212,5 @@ export const NotificationFilter: React.FC < NotificationFilterProps> = ({
   )
 },
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -211,6 +212,8 @@ const AIBusinessIntelligence: React.FC = () => {
                 href='#demo'
 import React from 'react',
 import React from 'react';
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 import { Brain, BarChart3, TrendingUp, Users, Target, Zap;
@@ -227,11 +230,43 @@ import {
 } from 'lucide-react',
 import EnhancedNavigation from '../components/EnhancedNavigation',
 import EnhancedFooter from '../components/EnhancedFooter',
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+import React from 'react';
+
+import EnhancedNavigation from '../components/EnhancedNavigation';
+import EnhancedFooter from '../components/EnhancedFooter';
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export default function AIBusinessIntelligencePage() {
 
   const features = [
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
       icon: Brain
@@ -275,6 +310,8 @@ export default function AIBusinessIntelligencePage() {
         'Generate comprehensive reports automatically, saving hours of manual work each week.'
       color: 'from-yellow-500 to-orange-500'
     }
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   ];
 const AIBusinessIntelligence: React.FC = () => {
   const benefits = [
@@ -311,55 +348,6 @@ const AIBusinessIntelligence: React.FC = () => {
         'Predictive maintenance, quality control, and supply chain optimization'
       results: '45% reduction in downtime, 35% improvement in product quality'
     },  ];
-  const pricing = [
-    {
-      plan: 'Starter'
-      price: '$499'
-      period: '/month'
-      description: 'Perfect for small businesses getting started with AI'
-      features: [
-        'Basic predictive analytics'
-        '5 customizable dashboards'
-        'Standard reporting'
-        'Email support'
-        'Up to 10 users'
-      ]
-      popular: false
-    }
-    {
-      plan: 'Professional'
-      price: '$1,299'
-      period: '/month'
-      description: 'Advanced features for growing businesses'
-      features: [
-        'Advanced predictive analytics'
-        'Unlimited dashboards'
-        'Custom reporting'
-        'Priority support'
-        'Up to 50 users'
-        'API access'
-        'Custom integrations'
-      ]
-      popular: true
-    }
-    {
-      plan: 'Enterprise'
-      price: 'Custom'
-      period: ''
-      description: 'Full-scale solution for large organizations'
-      features: [
-        'Everything in Professional'
-        'Custom AI models'
-        'Dedicated support team'
-        'Unlimited users'
-        'On-premise deployment'
-        'Custom training'
-        'SLA guarantees'
-      ]
-      popular: false
-    }
-  ];
-
       icon: Brain,
       title: "Predictive Analytics",
       description: "Forecast future trends and customer behavior with 95% accuracy using advanced machine learning algorithms.",
@@ -385,6 +373,7 @@ const AIBusinessIntelligence: React.FC = () => {
     },
     {
       icon: Target,
+<<<<<<< HEAD
       title: "Strategic Planning",
       description: "Data-driven decision making with scenario modeling and risk assessment capabilities.",
       color: "from-indigo-500 to-purple-500"
@@ -751,15 +740,11 @@ const AIBusinessIntelligence: React.FC = () => {
       popular: false,
     },
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   ];
 ;
   return (
-    <Layout>;
-      <Head>;
-
-          content='https://ziontechgroup && ziontechgroup.com/ai-business-intelligence'
-        />      </Head>;
-
       <EnhancedNavigation />;
 
 
@@ -793,6 +778,7 @@ const AIBusinessIntelligence: React.FC = () => {
                 href='#demo'
 
 
+<<<<<<< HEAD
 =======
     }
   ];
@@ -1140,6 +1126,8 @@ export default function AIBusinessIntelligencePage(req, res) {
 }
             className="text-center"
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           >
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               AI-Powered
@@ -1149,12 +1137,15 @@ export default function AIBusinessIntelligencePage(req, res) {
             </h1>
             <p className="text-xl text-white/70 max-w-4xl mx-auto leading-relaxed mb-8">
 <<<<<<< HEAD
+<<<<<<< HEAD
               Transform raw data into actionable insights with our advanced AI platform. 
               Make data-driven decisions, predict future trends, and optimize every aspect of your business 
 =======
               Transform raw data into actionable insights with our advanced AI platform.
               Make data-driven decisions, predict future trends, and optimize every aspect of your business
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               with machine learning-powered analytics.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -1164,16 +1155,20 @@ export default function AIBusinessIntelligencePage(req, res) {
               >
                 Get Started Today
 <<<<<<< HEAD
+<<<<<<< HEAD
               </a>
 =======
               </Link>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <a
                 href="#demo"
                 className="border border-white/20 text-white hover:bg-white/10 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-200"
               >
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                 Watch Demo
+<<<<<<< HEAD
 <<<<<<< HEAD
               </a>
             </div>
@@ -1227,6 +1222,11 @@ export default function AIBusinessIntelligencePage(req, res) {
               <motion.div
                 key={feature.title}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+      {/* Features */}
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             transition={{ duration: 0 && 0.6 }}
             className='text-center mb-16'>;
             <h2 className='text-4xl font-bold text-slate-900 mb-6'>;
@@ -1237,16 +1237,13 @@ export default function AIBusinessIntelligencePage(req, res) {
               insights.;
             </p>;
             <ul className="text-sm text-gray-500 space-y-2">;
-              <li>• Sales forecasting</li>;
-              <li>• Customer behavior prediction</li>;
-              <li>• Risk assessment</li>;
-              <li>• Market trend analysis</li>;
             </ul>;
           </div>;
 
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            {features && features.map((feature, index) => (;
               <motion&& motion.div
                 key={feature && feature.title}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -1288,6 +1285,10 @@ export default function AIBusinessIntelligencePage(req, res) {
 =======
       {/* Benefits */}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+      {/* Benefits */}
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <section className="py-20 bg-slate-50">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
@@ -1398,41 +1399,51 @@ export default function AIBusinessIntelligencePage(req, res) {
                 >;
                   <feature.icon className='w - 8 h - 8 text - white' />;
                 </div>;
-                <h3 className='text - xl font - bold text - slate - 900 mb - 4'>;
-                  {feature.title}
+                <h3 className='text-xl font-bold text-slate-900 mb-4'>;
+                  {feature && feature.title}
                 </h3>;
-                <p className='text - slate - 600 leading - relaxed'>;
-                  {feature.description}
-                </p>              </motion.div>))}
+                <p className='text-slate-600 leading-relaxed'>;
+                  {feature && feature.description}
+                </p>              </motion && motion.div>;
+            ))}
           </div>;
         </div>;
+
       {/* Benefits */}
-      <section className='py - 20 bg - slate - 50'>;
-        <div className='max - w-7xl mx - auto px - 6'>;
-          <div className='grid grid - cols - 1 lg:grid - cols - 2 gap - 16 items - center'>            <motion.div;
-              initial={{ opacity: 0, coordinate_x: -20 }}
-              whileInView={{ opacity: 1, coordinate_x: 0 }}
-              transition={{ duration: 0.6 }}
-            >;
-              <h2 className='text - 4xl font - bold text - slate - 900 mb - 6'>;
+            ))}
+          </div>
+        </div>
+
+      {/* Benefits */}
+      <section className='py-20 bg-slate-50'>;
+        <div className='max-w-7xl mx-auto px-6'>;
+          <div className='grid grid-cols-1 lg:grid-cols-2 gap-16 items-center'>            <motion&& motion.div
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0 && 0.6 }}>;
+              <h2 className='text-4xl font-bold text-slate-900 mb-6'>;
                 Why Choose AI Business Intelligence?;
               </h2>;
-              <p className='text - lg text - slate - 600 leading - relaxed mb - 8'>;
-                Our AI - powered platform delivers measurable results that;
+              <p className='text-lg text-slate-600 leading-relaxed mb-8'>;
+                Our AI-powered platform delivers measurable results that;
                 directly impact your bottom line. From increased revenue to;
-                reduced costs, see the difference data - driven decisions can;
+                reduced costs, see the difference data-driven decisions can;
                 make.;
               </p>;
+<<<<<<< HEAD
               <div className='space - y-4'>                {benefits.map ((benefit, index) => (
                   <motion.div;
 <<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     key={benefit}
                     initial={{ opacity: 0, coordinate_x: -20 }}
                     whileInView={{ opacity: 1, coordinate_x: 0 }}
                     transition={{ duration: 0.6, delay: index * 0.1 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1562,11 +1573,14 @@ export default function AIBusinessIntelligencePage(req, res) {
                   </div>
                   <div className='text-slate-600'>Time Saved on Reporting</div>                </div>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               </div>
             </motion.div>
           </div>
         </div>
       </section>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
               </div>;
@@ -1607,11 +1621,14 @@ export default function AIBusinessIntelligencePage(req, res) {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {/* Use Cases */}
       <section className='py-20 bg-white'>;
         <div className='max-w-7xl mx-auto px-6'>          <motion&& motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -1652,6 +1669,8 @@ export default function AIBusinessIntelligencePage(req, res) {
               <motion.div
                 key={useCase.industry}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             transition={{ duration: 0 && 0.6 }}
             className='text-center mb-16'>;
             <h2 className='text-4xl font-bold text-slate-900 mb-6'>;
@@ -1666,6 +1685,7 @@ export default function AIBusinessIntelligencePage(req, res) {
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>            {useCases && useCases.map((useCase, index) => (;
               <motion&& motion.div
                 key={useCase && useCase.industry}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -1724,6 +1744,12 @@ export default function AIBusinessIntelligencePage(req, res) {
               <motion.div
                 key={plan.plan}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+      {/* Pricing */}
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             transition={{ duration: 0 && 0.6 }}
             className='text-center mb-16'>;
             <h2 className='text-4xl font-bold text-white mb-6'>;
@@ -1739,15 +1765,21 @@ export default function AIBusinessIntelligencePage(req, res) {
               <motion&& motion.div
                 key={plan && plan.plan}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                 className={`relative bg-white rounded-2xl p-8 ${
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -1861,18 +1893,13 @@ export default function AIBusinessIntelligencePage(req, res) {
                     {plan.plan}
                   </h3>
                   <div className='text-4xl font-bold text-slate-900 mb-2'>
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     {plan.price}
-                    <span className='text-lg text-slate-600'>
-                      {plan.period}
-                    </span>
+                    <span className="text-lg text-slate-600">{plan.period}</span>
                   </div>
-                  <p className='text-slate-600'>{plan.description}</p>
+                  <p className="text-slate-600">{plan.description}</p>
                 </div>
-                <ul className='space-y-4 mb-8'>
-                  {plan.features.map(feature => (
-                    <li key={feature} className='flex items-center space-x-3'>
-                      <CheckCircle className='w-5 h-5 text-green-500 flex-shrink-0' />
-                      <span className='text-slate-700'>{feature}</span>                    </li>
                   ))}
       </section>
       {/* Features */  } catch (error) {
@@ -2046,6 +2073,7 @@ export default function AIBusinessIntelligencePage(req, res) {
           </div>;
         </div>;
       </section>;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                 <a
                   href='/contact'
@@ -2081,6 +2109,8 @@ export default function AIBusinessIntelligencePage(req, res) {
                   ))}
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {/* Use Cases */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -2244,7 +2274,10 @@ export default function AIBusinessIntelligencePage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 </ul>
 
                 <a
@@ -2254,19 +2287,40 @@ export default function AIBusinessIntelligencePage(req, res) {
                 >
                   Get Started
 <<<<<<< HEAD
+<<<<<<< HEAD
                 </a>
               </motion.div>
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+                </a>
+              </motion.div>
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             ))}
-
+          </div>
+        </div>
+      </section>
+      {/* CTA */}
+      <section className='py-20 bg-gradient-to-r from-blue-600 to-cyan-600'>
+        <div className='max-w-4xl mx-auto px-6 text-center'>          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
           </div>;
         </div>;
       </section>;
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {/* CTA */}
       <section className='py-20 bg-gradient-to-r from-blue-600 to-cyan-600'>;
         <div className='max-w-4xl mx-auto px-6 text-center'>          <motion&& motion.div
@@ -2291,6 +2345,7 @@ export default function AIBusinessIntelligencePage(req, res) {
 
 
 
+<<<<<<< HEAD
 =======
                 </Link>
               </motion.div>
@@ -2343,6 +2398,8 @@ export default function AIBusinessIntelligencePage(req, res) {
   }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           >
             <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
             <p className="text-xl text-blue-100 mb-8">
@@ -2354,7 +2411,10 @@ export default function AIBusinessIntelligencePage(req, res) {
                 className="bg-white text-blue-600 hover:bg-blue-50 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-200 transform hover:scale-105"
               >
                 Start Free Trial
+<<<<<<< HEAD
               </a>
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <a
                 href="/contact"
                 className="border border-white/20 text-white hover:bg-white/10 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-200"
@@ -2362,17 +2422,23 @@ export default function AIBusinessIntelligencePage(req, res) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                 Schedule Demo
 <<<<<<< HEAD
+<<<<<<< HEAD
               </a>
 =======
               </Link>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             </div>
           </motion.div>
         </div>
       </section>
 <<<<<<< HEAD
+<<<<<<< HEAD
       <EnhancedFooter />
     </>
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
                 className='border border-white/20 text-white hover:bg-white/10 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-200'>;
                 Schedule Demo;
@@ -2386,22 +2452,27 @@ export default function AIBusinessIntelligencePage(req, res) {
     </>;
   );
 
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 }
 }
-
   )
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
   )
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     </span>;
                   </div>;
                   <p className='text - slate - 600'>{plan.description}</p>;
@@ -2455,6 +2526,7 @@ export default function AIBusinessIntelligencePage(req, res) {
 ;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 
@@ -2476,3 +2548,6 @@ export default function AIBusinessIntelligencePage(req, res) {
   }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -30,6 +31,8 @@ import { Check, Pencil } from "lucide-react",
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 import { Button } from "@/components/ui/button";
@@ -42,13 +45,17 @@ import {
 } from "@/components/ui/card";
 import { Textarea } from "@/components/ui/textarea";
 import { Check, Pencil } from "lucide-react";
+<<<<<<< HEAD
 >>>>>>> main
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface GeneratedDescriptionDisplayProps {
   description: string;
   onSave: (editedDescription: string) => void;
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 interface GeneratedDescriptionDisplayProps {;
@@ -56,10 +63,13 @@ interface GeneratedDescriptionDisplayProps {;
   onSave: (editedDescription: string) => void;
 }
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export function GeneratedDescriptionDisplay(): any ({ ;
   description, ;
   onSave ;
 }: GeneratedDescriptionDisplayProps) {;
+<<<<<<< HEAD
 
   const { toast } = useToast();
   const [isEditing, setIsEditing] = useState(false);
@@ -92,6 +102,8 @@ export function GeneratedDescriptionDisplay({
   onSave,
 }: GeneratedDescriptionDisplayProps) {
 >>>>>>> main
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const { toast } = useToast();
   const [isEditing, setIsEditing] = useState(false);
   const [editedDescription, setEditedDescription] = useState(description);
@@ -100,6 +112,7 @@ export function GeneratedDescriptionDisplay({
     onSave(editedDescription),
     setIsEditing(false),
     toast({
+<<<<<<< HEAD
       title: "Description Saved",
 <<<<<<< HEAD
       description: "Your edited description has been saved."
@@ -111,6 +124,8 @@ export function GeneratedDescriptionDisplay({
   };
 >>>>>>> main
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 
@@ -122,6 +137,7 @@ export function GeneratedDescriptionDisplay({
           <Button
             variant="outline"
             size="sm"
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -231,6 +247,12 @@ export function GeneratedDescriptionDisplay({ ;
             variant="outline" ;
             size="sm" ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  const { toast } = useToast();
+  const [isEditing, setIsEditing] = useState(false);
+  const [editedDescription, setEditedDescription] = useState(description);
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             onClick={() => setIsEditing(!isEditing)}
             className="border-zion-blue-light text-zion-slate-light hover:text-white";
           >;
@@ -240,21 +262,24 @@ export function GeneratedDescriptionDisplay({ ;
                 Done;
               </>;
 <<<<<<< HEAD
+<<<<<<< HEAD
             ) : (;
 =======
             ) :(;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+            ) :(;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <>;
                 <Pencil className="h-4 w-4 mr-1" />;
                 Edit;
               </>;
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             )}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useState } from './react';
 import { use_toast  } from '@/hooks / use - toast';
 import { Button  } from '@/components / ui / button';
@@ -270,6 +295,7 @@ import { Check, Pencil  } from './lucide-react';
 interface GeneratedDescriptionDisplayProps {
   description: string;
   on_save: (edited_description: string) => void;
+<<<<<<< HEAD
 =======
           </Button>
         </CardTitle>
@@ -300,6 +326,8 @@ interface GeneratedDescriptionDisplayProps {
     </Card>
   );
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 export /**
  * GeneratedDescriptionDisplay - Function description
@@ -338,11 +366,11 @@ function GeneratedDescriptionDisplay() {
                 <Pencil className="h - 4 w - 4 mr - 1" />;
                 Edit;
               </>)}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           </Button>;
         </CardTitle>;
       </CardHeader>;
       <CardContent>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       </CardContent>;
@@ -372,10 +400,13 @@ function GeneratedDescriptionDisplay() {
             className="w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover:from-zion-cyan-light hover:to-zion-cyan text-white";
           >;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             Save Changes;
           </Button>;
         </CardFooter>;
       )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -385,6 +416,8 @@ function GeneratedDescriptionDisplay() {
 }
 
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         {is_editing ? (
           <Textarea;
             value={edited_description}
@@ -406,4 +439,3 @@ function GeneratedDescriptionDisplay() {
         </CardFooter>)}
     </Card>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

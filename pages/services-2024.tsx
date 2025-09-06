@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -70,6 +71,8 @@ import {
 import React, { useState, useMemo } from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {
   Search,
   Filter,
@@ -91,13 +94,19 @@ import {;
   Brain, Atom, Cpu, Shield, Database, Cloud,;
   ArrowRight, CheckCircle, Zap, Sparkles;
 } from 'lucide-react',;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { realMicroSaasServices2024 } from '../data/2024-real-micro-saas-services';
 import { innovativeITServices2024 } from '../data/2024-innovative-it-services';
 import UltraFuturisticBackground2034 from '../components/backgrounds/UltraFuturisticBackground2034';
 import Link from 'next/link';
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 const Services2024Page: React.FC = () => {
@@ -111,6 +120,8 @@ const Services2024Page: React.FC = () => {
 <<<<<<< HEAD
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   // Combine all services;
   const allServices = [;
     ...realMicroSaasServices2024,;
@@ -153,6 +164,7 @@ const Services2024Page: React.FC = () => {
           aValue = parseFloat(a && a.price.replace(/[^0-9.]/g, ''));
           bValue = parseFloat(b && b.price.replace(/[^0-9.]/g, ''));
 
+<<<<<<< HEAD
 =======
   // Combine all services
   const allServices = [
@@ -206,15 +218,18 @@ const Services2024Page: React.FC = () => {
       }
 <<<<<<< HEAD
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           break;
         case 'rating':;
-          a_value = a.rating;
-          b_value = b.rating;
+          aValue = a && a.rating;
+          bValue = b && b.rating;
           break;
         case 'customers':;
-          a_value = parse_int (a.customers.replace (/[^0 - 9]/g, ''));
-          b_value = parse_int (b.customers.replace (/[^0 - 9]/g, ''));
+          aValue = parseInt(a && a.customers.replace(/[^0-9]/g, ''));
+          bValue = parseInt(b && b.customers.replace(/[^0-9]/g, ''));
           break;
+<<<<<<< HEAD
 
 
 =======
@@ -222,6 +237,12 @@ const Services2024Page: React.FC = () => {
         return aValue > bValue ? 1 : -1;
       } else {
         return aValue < bValue ? 1 : -1;
+=======
+        default:;
+          aValue = a && a.name.toLowerCase();
+          bValue = b && b.name.toLowerCase();
+      }
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       }
     });
     return filtered;
@@ -281,7 +302,10 @@ const Services2024Page: React.FC = () => {
       icon: CheckCircle
       count: allServices.filter(s => s.variant.includes('customer')).length
     },  ];
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const getVariantIcon = (variant: string) => {
     if (variant.includes('ai')) return Brain;
     if (variant.includes('security')) return Shield;
@@ -292,14 +316,20 @@ const Services2024Page: React.FC = () => {
     if (variant.includes('project')) return Users;
     if (variant.includes('customer')) return CheckCircle;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
     return Sparkles
   };
 
 
+<<<<<<< HEAD
 =======
     return Sparkles;  }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const getVariantColor = (variant: string) => {
     if (variant.includes('ai')) return 'from-blue-500 to-cyan-500';
     if (variant.includes('security')) return 'from-red-500 to-pink-500';
@@ -310,6 +340,7 @@ const Services2024Page: React.FC = () => {
     if (variant.includes('project')) return 'from-teal-500 to-cyan-500';
     if (variant.includes('customer')) return 'from-pink-500 to-rose-500';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -317,6 +348,8 @@ const Services2024Page: React.FC = () => {
     return 'from-gray-500 to-slate-500';  }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 const Services2024Page: React.FC = () => {;
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
@@ -392,6 +425,7 @@ const Services2024Page: React.FC = () => {;
   }
 }
   ],
+<<<<<<< HEAD
 
 
   const getVariantIcon = (variant: string) => {
@@ -507,6 +541,8 @@ const Services2024Page: React.FC = () => {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const getVariantIcon = (variant: string) => {
     if (variant.includes('ai')) return Brain,
     if (variant.includes('security')) return Shield,
@@ -531,13 +567,19 @@ const Services2024Page: React.FC = () => {;
   },
   return (
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
         />;
         <link rel='canonical' href='https://ziontechgroup && ziontechgroup.com/services-2024' />;
       </Head>;
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <>
       <Head>
         <title>2024 Revolutionary Services - Zion Tech Group</title>
@@ -545,6 +587,7 @@ const Services2024Page: React.FC = () => {;
         <meta name="keywords" content="AI services, quantum security, enterprise IT, automation, 2024 technology, Zion Tech Group" />
         <link rel="canonical" href="https://ziontechgroup.com/services-2024" />
       </Head>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -571,11 +614,16 @@ const Services2024Page: React.FC = () => {;
             <motion.div
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <UltraFuturisticBackground2034 intensity={0.8} theme='quantum' />
       <div className='relative z-10 min-h-screen'>
         {/* Hero Section */}
-        <section className='pt-32 pb-20 px-4 sm:px-6 lg:px-8'>
-          <div className='max-w-7xl mx-auto text-center'>            <motion.div
+
+        <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <motion.div
+
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -589,7 +637,10 @@ const Services2024Page: React.FC = () => {;
         <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
             <motion.div
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               initial={{ opacity: 0, y: 20 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -606,15 +657,19 @@ const Services2024Page: React.FC = () => {;
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             >
               <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500/20 to-purple-600/20 border border-cyan-500/30 rounded-full px-6 py-2 mb-8">
                 <Sparkles className="w-5 h-5 text-cyan-400" />
                 <span className="text-cyan-400 font-medium">2024 Revolutionary Services</span>
               </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
               <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
@@ -626,30 +681,45 @@ const Services2024Page: React.FC = () => {;
               <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
                 <span className="bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <h1 className='text-5xl md:text-7xl font-bold text-white mb-6'>
                 <span className='bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent'>
               <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
                 <span className="bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   Future-Ready
                 </span>
                 <br />
                 <span className='text-white'>Solutions</span>
               </h1>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
               <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500/20 to-purple-600/20 border border-cyan-500/30 rounded-full px-6 py-2 mb-8">
                 <Sparkles className="w-5 h-5 text-cyan-400" />
                 <span className="text-cyan-400 font-medium">2024 Revolutionary Services</span>
               </div>
-              
+              <h1 className='text-5xl md:text-7xl font-bold text-white mb-6'>
+                <span className='bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent'>
               <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
                 <span className="bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
+
+                  Future-Ready
+                </span>
+              </div>
                   Future-Ready
                 </span>
                 <br />
                 <span className="text-white">Solutions</span>
               </h1>
+<<<<<<< HEAD
               
 =======
 
@@ -671,16 +741,22 @@ const Services2024Page: React.FC = () => {;
                   </div>
                   <div className='text-gray-400'>Revolutionary Services</div>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed">
                 Experience the next generation of AI, quantum security, and enterprise IT solutions. 
                 Transform your business with our revolutionary 2024 service portfolio.
               </p>
+<<<<<<< HEAD
 
               {/* Stats */}
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-16">
                 <div className="text-center">
                   <div className="text-3xl font-bold text-cyan-400 mb-2">{allServices.length}</div>
                   <div className="text-gray-400">Revolutionary Services</div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -688,11 +764,14 @@ const Services2024Page: React.FC = () => {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 </div>
                 <div className="text-center">
                   <div className="text-3xl font-bold text-purple-400 mb-2">17</div>
                   <div className="text-gray-400">Service Categories</div>
                 </div>
+<<<<<<< HEAD
                 <div className="text-center">
                   <div className="text-3xl font-bold text-pink-400 mb-2">4.8</div>
                   <div className="text-gray-400">Average Rating</div>
@@ -705,10 +784,13 @@ const Services2024Page: React.FC = () => {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               </div>
             </motion.div>
           </div>
         </section>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
               transition={{ duration: 0 && 0.8 }}>;
@@ -765,12 +847,15 @@ const Services2024Page: React.FC = () => {;
 
 
         {/* Search and Filters */}
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
                     <input
                       type="text"
                       placeholder="Search services by name, features, or description..."
                       value={searchQuery}
+<<<<<<< HEAD
 =======
               transition={{ duration: 0 && 0.8 }}>;
         {/* Search and Filters */}
@@ -800,6 +885,8 @@ const Services2024Page: React.FC = () => {;
                 <div className="lg:col-span-2">
                   <div className="relative">
                     <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     <input
                       type="text"
                       placeholder="Search services by name, features, or description..."
@@ -814,6 +901,7 @@ const Services2024Page: React.FC = () => {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                   </div>
                 </div>
+<<<<<<< HEAD
 
                 {/* Sort */  } catch (error) {
     console.error("Error:", error);
@@ -829,12 +917,15 @@ const Services2024Page: React.FC = () => {;
                 </div>;
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 {/* Category Filter */}
                 <div>;
                   <select
                     value={selectedCategory}
 
 
+<<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                     ))}
 
@@ -1127,6 +1218,8 @@ if ( {) {
                     {categories.map(category => (                      <option key={category.id} value={category.id}>
                         {category.name} ({category.count})
                       </option>
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     ))}
                   </select>
                 </div>
@@ -1156,6 +1249,7 @@ if ( {) {
 }
                   </select>;
                 </div>;
+
                 {/* Sort */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1163,11 +1257,18 @@ if ( {) {
 }
                 <div className="flex space-x-2">
                   <select
-                    value={sortBy  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
+                    value={sortBy}
+                    onChange={e => setSortBy(e && e.target.value as any)}
+                    className='flex-1 px-4 py-3 bg-black/50 border border-cyan-500/30 rounded-lg text-white focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 transition-all duration-200';
+        default:;
+          a_value = a.name.toLowerCase ();
+          b_value = b.name.toLowerCase ();
+      }
+      // Check condition
+if ( {) {
+  $2
 }
+<<<<<<< HEAD
                     onChange={(e) => setSortBy(e.target.value as any)} className="flex-1 px-4 py-3 bg-black/50 border border-cyan-500/30 rounded-lg text-white focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 transition-all duration-200">
                     <option value="name">Sort by Name</option>
                     <option value="price">Sort by Price</option>
@@ -1181,12 +1282,15 @@ if ( {) {
                     className='px-4 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-200'
                   >                    {sortOrder === 'asc' ? '↑' : '↓'}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   </button>
                 </div>
               </div>
             </div>
           </div>
         </section>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1216,6 +1320,8 @@ if ( {) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   </button>;
                 </div>;
               </div>;
@@ -1223,6 +1329,9 @@ if ( {) {
           </div>;
         </section>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
         {/* Services Grid */}
         <section className='px - 4 sm:px - 6 lg:px - 8 mb - 20'>;
@@ -1254,8 +1363,11 @@ if ( {) {
                             {
                               class_name: `w - 6 h - 6 text - cyan - 400`,
 
+<<<<<<< HEAD
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                             }
                           )}
                         </div>;
@@ -1263,6 +1375,7 @@ if ( {) {
                         <div className='text - right'>;
                           <div className='text - 2xl font - bold text - cyan - 400'>;
                             {service.price}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1277,6 +1390,9 @@ if ( {) {
         <section className="px-4 sm:px-6 lg:px-8 mb-20">
           <div className="max-w-7xl mx-auto">
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             {filteredServices.length === 0 ? (
               <div className="text-center py-20">
                 <div className="text-6xl mb-4">🔍</div>
@@ -1287,6 +1403,7 @@ if ( {) {
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {filteredServices.map((service, index) => (
                   <motion.div
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1397,6 +1514,8 @@ if ( {) {
                               className: `w-6 h-6 text-cyan-400`
                             }
                           )}
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     key={service.id  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1440,6 +1559,7 @@ if ( {) {
                       </h3>
                       <p className='text-gray-300 mb-4 leading-relaxed'>                        {service.tagline}
                       </p>
+<<<<<<< HEAD
                       {/* Features */}
                       <div className='mb-6'>
                         <h4 className='text-sm font-semibold text-gray-400 mb-3 uppercase tracking-wider'>
@@ -1484,6 +1604,36 @@ if ( {) {
   }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+                      </p>
+                      <div className='flex items-start justify-between mb-4'>;
+                        <div className='w-12 h-12 bg-gradient-to-r from-cyan-500/20 to-purple-600/20 rounded-lg flex items-center justify-center'>;
+                          {React && React.createElement(;
+                            getVariantIcon(service && service.variant),;
+                            {;
+                              className: `w-6 h-6 text-cyan-400`,;
+                            }
+                          )}
+                        </div>;
+                        <div className='text-right'>;
+                          <div className='text-2xl font-bold text-cyan-400'>;
+                            {service && service.price}
+                          </div>;
+                          <div className='text-sm text-gray-400'>per month</div>                        </div>;
+                      </div>;
+
+                      {/* Service Info */}
+                      <h3 className='text-xl font-semibold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-200'>;
+                        {service && service.name}
+                      </h3>;
+                      <p className='text-gray-300 mb-4 leading-relaxed'>                        {service && service.tagline}
+                      </p>;
+
+
+
+                      {/* Features */}
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       <div className="mb-6">
                         <h4 className="text-sm font-semibold text-gray-400 mb-3 uppercase tracking-wider">Key Features</h4>
                         <div className="space-y-2">
@@ -1493,6 +1643,9 @@ if ( {) {
                               <span className="text-sm text-gray-300">{feature}</span>
                             </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 =======
                           ))  } catch (error) {
@@ -1505,6 +1658,7 @@ if ( {) {
                             <div className="text-sm text-cyan-400">
                               +{service.features.length - 3} more features
                             </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
                           </div>;
@@ -1557,6 +1711,8 @@ if ( {) {
                             <Star className='w - 4 h - 4 text - yellow - 400 fill - current' />;
                             <span className='text - sm font - semibold text - white'>;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                               {service.rating}
                             </span>;
                           </div>;
@@ -1565,6 +1721,7 @@ if ( {) {
                         <div className='text - center'>;
                           <div className='text - sm font - semibold text - white mb - 1'>;
                             {service.customers}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1591,15 +1748,21 @@ if ( {) {
   }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       <div className="grid grid-cols-3 gap-4 mb-6">
                         <div className="text-center">
                           <div className="flex items-center justify-center space-x-1 mb-1">
                             <Star className="w-4 h-4 text-yellow-400 fill-current" />
                             <span className="text-sm font-semibold text-white">{service.rating}</span>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                           </div>
                           <div className="text-xs text-gray-400">Rating</div>
                         </div>
@@ -1613,6 +1776,7 @@ if ( {) {
                         </div>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                       </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
                         </div>;
@@ -1657,6 +1821,10 @@ if ( {) {
                       {/* CTA */}
                       <div className='flex items-center justify-between'>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+                      {/* CTA */}
+                      <div className='flex items-center justify-between'>
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       {/* CTA */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1664,17 +1832,23 @@ if ( {) {
 }
                       <div className="flex items-center justify-between">
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                         <Link
                           href={service.link} className="flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors duration-200 group">
                           <span className="font-medium">Learn More</span>
                           <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-200" />
                         </Link>
                         <div className="text-xs text-gray-400 bg-gray-800/50 px-2 py-1 rounded">
+<<<<<<< HEAD
 <<<<<<< HEAD
                           {service.variant.replace('-futuristic', '').replace('- ')}
 =======
@@ -1684,16 +1858,22 @@ if ( {) {
   }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+                          {service.variant.replace('-futuristic', '').replace('- ')}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                         </div>
                       </div>
                     </div>
                   </motion.div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       <div className="grid grid-cols-3 gap-4 mb-6">;
                         <div className="text-center">;
                           <div className="flex items-center justify-center space-x-1 mb-1">;
@@ -1745,10 +1925,13 @@ if ( {) {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
           </div>;
         </section>;
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         {/* CTA Section */}
         <section className='px-4 sm:px-6 lg:px-8 mb-20'>;
           <div className='max-w-4xl mx-auto text-center'>            <motion&& motion.div
@@ -1810,6 +1993,7 @@ if ( {) {
               </p>;
 
 
+<<<<<<< HEAD
 =======
                 ))}
 </div>;
@@ -1824,6 +2008,8 @@ if ( {) {
 viewport={{ once: true }} className="bg-gradient-to-r from-cyan-500/10 to-purple-600/10 border border-cyan-500/30 rounded-2xl p-12 backdrop-blur-sm">
               <h2 className="text-4xl font-bold text-white mb-6">
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 Ready to Transform Your Business?
               </h2>
               <p className="text-xl text-gray-300 mb-8 leading-relaxed">
@@ -1831,6 +2017,7 @@ viewport={{ once: true }} className="bg-gradient-to-r from-cyan-500/10 to-purple
                 Get started today and experience the future of technology.
               </p>
               <div className="flex flex-col sm: flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <Link
@@ -1930,6 +2117,8 @@ viewport={{ once: true }} className="bg-gradient-to-r from-cyan-500/10 to-purple
               </p>
               <div className="flex flex-col sm: flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <Link
                   href="/contact" className="flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-200 shadow-lg hover:shadow-cyan-500/25 font-semibold">
                   <Zap className="w-5 h-5" />
@@ -1940,6 +2129,7 @@ viewport={{ once: true }} className="bg-gradient-to-r from-cyan-500/10 to-purple
                   <span>View Pricing Plans</span>
                   <ArrowRight className="w-4 h-4" />
                 </Link>
+<<<<<<< HEAD
 <<<<<<< HEAD
                 <Link
                   href=&quot;/pricing-2033&quot; className=&quot;flex items-center space-x-2 border border-cyan-500/30 text-cyan-400 px-8 py-4 rounded-lg hover:bg-cyan-500/10 transition-all duration-200 font-semibold&quot;>
@@ -1952,6 +2142,8 @@ viewport={{ once: true }} className="bg-gradient-to-r from-cyan-500/10 to-purple
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               </div>
             </motion.div>
           </div>
@@ -1961,6 +2153,7 @@ viewport={{ once: true }} className="bg-gradient-to-r from-cyan-500/10 to-purple
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   )
   ),
@@ -1969,6 +2162,8 @@ viewport={{ once: true }} className="bg-gradient-to-r from-cyan-500/10 to-purple
   )
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   className='flex items-center space-x-2 border border-cyan-500/30 text-cyan-400 px-8 py-4 rounded-lg hover:bg-cyan-500/10 transition-all duration-200 font-semibold'>;
                   <span>View Pricing Plans</span>;
                   <ArrowRight className='w-4 h-4' />                </Link>;
@@ -1985,6 +2180,7 @@ viewport={{ once: true }} className="bg-gradient-to-r from-cyan-500/10 to-purple
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 export default Services2024Page;
 
+<<<<<<< HEAD
 
 =======
               <div className='flex flex - col sm:flex - row items - center justify - center space - y-4 sm:space - y-0 sm:space - x-6'>;
@@ -2004,6 +2200,8 @@ export default Services2024Page;
 =======
 export default Services2024Page;
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 },
 export default Services2024Page,
         <section className="px-4 sm:px-6 lg:px-8 mb-20">;
@@ -2034,20 +2232,31 @@ export default Services2024Page,
               </p>;
               <div className="flex flex-col sm: flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">;
                 <Link;
-                  href="/contact" className="flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-200 shadow-lg hover:shadow-cyan-500/25 font-semibold">;
-                  <Zap className="w-5 h-5" />;
-                  <span>Get Started Today</span>;
+                  href='/contact';
+                  className='flex items - center space - x-2 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white px - 8 py - 4 rounded - lg hover:from - cyan - 600 hover:to - purple - 700 transition - all duration - 200 shadow - lg hover:shadow - cyan - 500 / 25 font - semibold';
+                >;
+                  <Zap className='w - 5 h - 5' />;
+                  <span > Get Started Today</span>;
                 </Link>;
                 <Link;
+<<<<<<< HEAD
                   href="/pricing-2033" className="flex items-center space-x-2 border border-cyan-500/30 text-cyan-400 px-8 py-4 rounded-lg hover:bg-cyan-500/10 transition-all duration-200 font-semibold">;
                   <span>View Pricing Plans</span>;
                   <ArrowRight className="w-4 h-4" />;
                 </Link>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+                  href='/pricing - 2033';
+                  className='flex items - center space - x-2 border border - cyan - 500 / 30 text - cyan - 400 px - 8 py - 4 rounded - lg hover:bg - cyan - 500 / 10 transition - all duration - 200 font - semibold';
+                >;
+                  <span > View Pricing Plans</span>;
+                  <ArrowRight className='w - 4 h - 4' />                </Link>;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               </div>;
             </motion.div>;
           </div>;
         </section>;
+<<<<<<< HEAD
       </div>;
 <<<<<<< HEAD
     </>),
@@ -2068,3 +2277,8 @@ export default Services2024Page;
 },;
 export default Services2024Page;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+export default Services2024Page;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -1,10 +1,15 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 const fs = require('fs');
 const path = require('path');
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 console.log('🔧 Fixing final syntax errors...');
 
@@ -148,7 +153,11 @@ module.exports = { fixFinalSyntax };
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 const fs = require('fs');
 const path = require('path');
@@ -263,3 +272,5 @@ const report = {
 fs.writeFileSync('/workspace/final-syntax-errors-fix-report.json', JSON.stringify(report, null, 2));
 console.log('📄 Report saved to final-syntax-errors-fix-report.json');
 >>>>>>> main
+=======
+>>>>>>> origin/main

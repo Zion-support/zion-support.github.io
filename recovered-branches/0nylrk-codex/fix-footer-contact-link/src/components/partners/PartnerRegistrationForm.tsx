@@ -1,7 +1,4 @@
 
-
-
-
 import {useState} from "react";
 import {z} from "zod";
 import {useForm} from "react-hook-form";
@@ -15,6 +12,7 @@ import {Textarea} from "@/components/ui/textarea";
 import {toast} from "@/hooks/use-toast";
 import {useAuth} from "@/hooks/useAuth";
 import {supabase} from "@/integrations/supabase/client";
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -37,6 +35,8 @@ export function PartnerRegistrationForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { user } = useAuth();
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useState } from "react",
 import { z } from "zod",
 import { useForm } from "react-hook-form",
@@ -50,12 +50,15 @@ import { Textarea } from "@/components/ui/textarea",
 import { toast } from "@/hooks/use-toast",
 import { useAuth } from "@/hooks/useAuth",
 import { supabase } from "@/integrations/supabase/client",
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 const partnerFormSchema = z.object({
   name: z.string().min(2, { message: "Name must be at least 2 characters." }),
   website: z.string().url({ message: "Please enter a valid URL." }).optional().or(z.literal("")),
@@ -70,13 +73,17 @@ const partnerFormSchema = z.object({
 
 type PartnerFormValues = z.infer<typeof partnerFormSchema>,
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export function PartnerRegistrationForm() {
   const [isSubmitting, setIsSubmitting] = useState(false),
   const { user } = useAuth(),
 
+<<<<<<< HEAD
 
 export function PartnerRegistrationForm() {;
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -92,6 +99,8 @@ export function PartnerRegistrationForm() {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const form = useForm<PartnerFormValues>({
     resolver: zodResolver(partnerFormSchema)
     defaultValues: {
@@ -110,6 +119,7 @@ export function PartnerRegistrationForm() {
       .from('partner_profiles')
       .select('id')
       .eq('user_id', user.id)
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 const partnerFormSchema = z && z.object({;
@@ -166,6 +176,8 @@ type PartnerFormValues = z && z.infer<typeof partnerFormSchema>;
   },
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   async function onSubmit(data: PartnerFormValues) {
     if (!user) {
       toast({
@@ -173,6 +185,7 @@ type PartnerFormValues = z && z.infer<typeof partnerFormSchema>;
         description: "You must be logged in to register as a partner."
         variant: "destructive"})
       return
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -202,11 +215,18 @@ type PartnerFormValues = z && z.infer<typeof partnerFormSchema>;
             payout_method: data.payout_method
             bio: data.bio
             status: 'pending', // Partners need approval
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           }
         ])
         .select();
       if (error) throw error;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useState } from "react",;
 import { z } from "zod",;
 import { useForm } from "react-hook-form",;
@@ -233,20 +253,26 @@ const partnerFormSchema = z.object({;
   bio: z.string().min(10, { message: "Bio must be at least 10 characters." }).max(500)}),;
 type PartnerFormValues = z.infer<typeof partnerFormSchema>,;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 export function PartnerRegistrationForm() {;
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { user } = useAuth();
 
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 type PartnerFormValues = z && z.infer<typeof partnerFormSchema>;
 export function PartnerRegistrationForm() {;
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { user } = useAuth();
+<<<<<<< HEAD
 export function PartnerRegistrationForm() {;
   const [isSubmitting, setIsSubmitting] = useState(false),;
   const { user } = useAuth(),;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const form = useForm<PartnerFormValues>({;
     resolver: zodResolver(partnerFormSchema),;
     defaultValues: {;
@@ -260,11 +286,11 @@ export function PartnerRegistrationForm() {;
       audience_size: "",;
       payout_method: "paypal",;
       bio: ""}}),;
-
   const checkExistingPartner = async () => {;
     const { data: existingPartner } = await supabase;
       .from('partner_profiles');
       .select('id');
+<<<<<<< HEAD
 <<<<<<< HEAD
       .eq('user_id', user && user.id);
       .single();
@@ -273,11 +299,14 @@ export function PartnerRegistrationForm() {;
       .eq('user_id', user.id);
       .single(),;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     if (existingPartner) {;
       toast({;
         title: "Already registered",;
         description: "You have already registered as a partner.",;
         variant: "destructive"}),;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       setIsSubmitting(false);
@@ -309,12 +338,18 @@ export function PartnerRegistrationForm() {;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+      setIsSubmitting(false);
+      return true;
+    }
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     }
     setIsSubmitting(true);
     try {;
       // Check if they already have a partner profile;
       const hasExistingPartner = await checkExistingPartner();
       if (hasExistingPartner) return;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -416,11 +451,14 @@ if (return) {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           {
             user_id: user.id
             name: data.name
             website: data.website |null
             social_media: {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -433,11 +471,14 @@ if (return) {
       const hasExistingPartner = await checkExistingPartner(),;
       if (hasExistingPartner) return,;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       // Insert new partner profile;
       const { data: newPartner, error } = await supabase;
         .from('partner_profiles');
         .insert([;
           {;
+<<<<<<< HEAD
 <<<<<<< HEAD
             user_id: user && user.id,;
             name: data && data.name,;
@@ -456,10 +497,13 @@ if (return) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           }
         ]);
         .select();
       if (error) throw error;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -503,15 +547,20 @@ if (return) {
         .single(),
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       if (!existingCode) {
         await supabase.rpc('generate_referral_code', { user_id: user.id })
       }
     } catch (error: any) {
 <<<<<<< HEAD
+<<<<<<< HEAD
       console.error('Error submitting partner application:', error);
 =======
       console.error('Error submitting partner application:', error),
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       toast({
         title: "Submission failed"
         description: error.message |"There was a problem submitting your application."
@@ -520,26 +569,30 @@ if (return) {
     } finally {
       setIsSubmitting(false)
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     }
   }
   return (
-    <Card className="bg-zion-blue-dark border-zion-blue-light">
-      <CardHeader>
-        <CardTitle>Partner Registration</CardTitle>
-        <CardDescription>Register to become a Zion AI partner and start earning rewards</CardDescription>
-      </CardHeader>
-      <CardContent>
-        <Form {...form}>
-          <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-            <div className="space-y-4">
+    <Card className="bg-zion-blue-dark border-zion-blue-light">;
+      <CardHeader>;
+        <CardTitle>Partner Registration</CardTitle>;
+        <CardDescription>Register to become a Zion AI partner and start earning rewards</CardDescription>;
+      </CardHeader>;
+      <CardContent>;
+        <Form {...form}>;
+          <form onSubmit={form && form.handleSubmit(onSubmit)} className="space-y-6">;
+            <div className="space-y-4">;
               <FormField
-                control={form.control}
+                control={form && form.control}
                 name="name"
+<<<<<<< HEAD
                 render={({ field }) => (
                   <FormItem>
                     <FormLabel>Name / Brand</FormLabel>
@@ -550,10 +603,13 @@ if (return) {
                   </FormItem>
 <<<<<<< HEAD
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         ]);
         .select(),;
       if (error) throw error,;
 
+<<<<<<< HEAD
 =======
                 )}
               />
@@ -603,6 +659,9 @@ if (return) {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     }
 <<<<<<< HEAD
+=======
+    }
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
               twitter: data.twitter || null,
               instagram: data.instagram || null,
@@ -659,6 +718,7 @@ if ( {) {
           <form on_submit={form.handle_submit (on_submit)} className="space - y-6">;
             <div className="space - y-4">;
               <FormField;
+<<<<<<< HEAD
 =======
 =======
   }
@@ -809,16 +869,18 @@ export function PartnerRegistrationForm() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 control={form.control}
                 name="name";
                 render={({ field }) => (
                   <FormItem>;
                     <FormLabel > Name / Brand</FormLabel>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                     <FormControl>;
                       <Input placeholder="Your name or brand name" {...field} />;
                     </FormControl>;
                     <FormMessage />;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
               />;
@@ -851,19 +913,27 @@ export function PartnerRegistrationForm() {;
                 control={form.control}
                 name="website";
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+                name="website"
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 render={({ field }) => (;
                   <FormItem>;
                     <FormLabel>Website (Optional)</FormLabel>;
                     <FormControl>;
 <<<<<<< HEAD
+<<<<<<< HEAD
                       <Input placeholder="https://yourwebsite && yourwebsite.com" {...field} />;
 =======
                       <Input placeholder="https://yourwebsite.com" {...field} />;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+                      <Input placeholder="https://yourwebsite && yourwebsite.com" {...field} />;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     </FormControl>;
                     <FormMessage />;
                   </FormItem>;
                 )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
               />;
@@ -873,66 +943,14 @@ export function PartnerRegistrationForm() {;
 =======
               />;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <FormField
                   control={form && form.control}
                   name="twitter"
-                control={form.control}
-                name="website"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Website (Optional)</FormLabel>
-                    <FormControl>
-                      <Input placeholder="https://yourwebsite.com" {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-              <div className="grid sm:grid-cols-2 gap-4">
-                <FormField
-                  control={form.control}
-                  name="twitter"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel>Twitter (Optional)</FormLabel>
-                      <FormControl>
-                        <Input placeholder="@username" {...field} />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-                <FormField
-                  control={form.control}
-                  name="instagram"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel>Instagram (Optional)</FormLabel>
-                      <FormControl>
-                        <Input placeholder="@username" {...field} />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-              </div>
-              <div className="grid sm:grid-cols-2 gap-4">
-                <FormField
-                  control={form.control}
-                  name="youtube"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel>YouTube (Optional)</FormLabel>
-                      <FormControl>
-                        <Input placeholder="Channel name or URL" {...field} />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
                   render={({ field }) => (;
                     <FormItem>;
                       <FormLabel>Twitter (Optional)</FormLabel>;
-=======
                   </FormItem>)}
               />;
               <FormField;
@@ -955,6 +973,7 @@ export function PartnerRegistrationForm() {;
                     <FormItem>;
                       <FormLabel > Twitter (Optional)</FormLabel>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 ;
@@ -966,10 +985,13 @@ export function PartnerRegistrationForm() {;
                     <FormItem>;
                       <FormLabel>Twitter (Optional)</FormLabel>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       <FormControl>;
                         <Input placeholder="@username" {...field} />;
                       </FormControl>;
                       <FormMessage />;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
                 />;
@@ -1001,6 +1023,8 @@ export function PartnerRegistrationForm() {;
                       </FormControl>;
                       <FormMessage />;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
                 />;
                 <FormField;
@@ -1010,11 +1034,11 @@ export function PartnerRegistrationForm() {;
                   render={({ field }) => (
                     <FormItem>;
                       <FormLabel > Instagram (Optional)</FormLabel>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                       <FormControl>;
                         <Input placeholder="@username" {...field} />;
                       </FormControl>;
                       <FormMessage />;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
                 />;
@@ -1027,13 +1051,14 @@ export function PartnerRegistrationForm() {;
               </div>;
               <div className="grid sm:grid-cols-2 gap-4">;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <FormField
                   control={form && form.control}
                   name="youtube"
                   render={({ field }) => (;
                     <FormItem>;
                       <FormLabel>YouTube (Optional)</FormLabel>;
-=======
                     </FormItem>)}
                 />;
               </div>;
@@ -1044,11 +1069,11 @@ export function PartnerRegistrationForm() {;
                   render={({ field }) => (
                     <FormItem>;
                       <FormLabel > YouTube (Optional)</FormLabel>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                       <FormControl>;
                         <Input placeholder="Channel name or URL" {...field} />;
                       </FormControl>;
                       <FormMessage />;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
                 />;
@@ -1057,13 +1082,14 @@ export function PartnerRegistrationForm() {;
 =======
                 />;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <FormField
                   control={form && form.control}
                   name="linkedin"
                   render={({ field }) => (;
                     <FormItem>;
                       <FormLabel>LinkedIn (Optional)</FormLabel>;
-=======
                     </FormItem>)}
                 />;
                 <FormField;
@@ -1072,6 +1098,7 @@ export function PartnerRegistrationForm() {;
                   render={({ field }) => (
                     <FormItem>;
                       <FormLabel > LinkedIn (Optional)</FormLabel>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -1101,10 +1128,13 @@ export function PartnerRegistrationForm() {;
                     <FormItem>;
                       <FormLabel>LinkedIn (Optional)</FormLabel>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       <FormControl>;
                         <Input placeholder="Profile URL or username" {...field} />;
                       </FormControl>;
                       <FormMessage />;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
                 />;
@@ -1113,11 +1143,12 @@ export function PartnerRegistrationForm() {;
 
               <FormField
                 control={form && form.control}
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 name="niche"
                 render={({ field }) => (;
                   <FormItem>;
                     <FormLabel>Your Niche</FormLabel>;
-=======
                     </FormItem>)}
                 />;
               </div>;
@@ -1125,9 +1156,6 @@ export function PartnerRegistrationForm() {;
                 control={form.control}
                 name="niche";
                 render={({ field }) => (
-                  <FormItem>;
-                    <FormLabel > Your Niche</FormLabel>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                     <FormControl>;
                       <Input placeholder="AI development, machine learning, tech tutorials, etc." {...field} />;
                     </FormControl>;
@@ -1135,6 +1163,7 @@ export function PartnerRegistrationForm() {;
                       What topics do you focus on in your content?;
                     </FormDescription>;
                     <FormMessage />;
+<<<<<<< HEAD
 
               />;
 
@@ -1144,6 +1173,8 @@ export function PartnerRegistrationForm() {;
               />;
               <div className="grid sm:grid-cols-2 gap-4">;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <FormField
                   control={form && form.control}
                   name="audience_size"
@@ -1151,7 +1182,6 @@ export function PartnerRegistrationForm() {;
                     <FormItem>;
                       <FormLabel>Audience Size</FormLabel>;
                       <Select onValueChange={field && field.onChange} defaultValue={field && field.value}>;
-=======
                   </FormItem>)}
               />;
               <div className="grid sm:grid - cols - 2 gap - 4">;
@@ -1159,16 +1189,13 @@ export function PartnerRegistrationForm() {;
                   control={form.control}
                   name="audience_size";
                   render={({ field }) => (
-                    <FormItem>;
-                      <FormLabel > Audience Size</FormLabel>;
-                      <Select onValueChange={field.on_change} default_value={field.value}>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                         <FormControl>;
                           <SelectTrigger>;
                             <SelectValue placeholder="Select audience size" />;
                           </SelectTrigger>;
                         </FormControl>;
                         <SelectContent>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
                 />;
@@ -1177,6 +1204,8 @@ export function PartnerRegistrationForm() {;
 =======
                 />;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <FormField
                   control={form && form.control}
                   name="payout_method"
@@ -1184,7 +1213,6 @@ export function PartnerRegistrationForm() {;
                     <FormItem>;
                       <FormLabel>Preferred Payout Method</FormLabel>;
                       <Select onValueChange={field && field.onChange} defaultValue={field && field.value}>;
-=======
                           <SelectItem value="under1k">Under 1, 000</SelectItem>;
                           <SelectItem value="1k - 10k">1, 000 - 10, 000</SelectItem>;
                           <SelectItem value="10k - 50k">10, 000 - 50, 000</SelectItem>;
@@ -1199,10 +1227,6 @@ export function PartnerRegistrationForm() {;
                   control={form.control}
                   name="payout_method";
                   render={({ field }) => (
-                    <FormItem>;
-                      <FormLabel > Preferred Payout Method</FormLabel>;
-                      <Select onValueChange={field.on_change} default_value={field.value}>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                         <FormControl>;
                           <SelectTrigger>;
                             <SelectValue placeholder="Select payout method" />;
@@ -1216,6 +1240,7 @@ export function PartnerRegistrationForm() {;
                         </SelectContent>;
                       </Select>;
                       <FormMessage />;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
                 />;
@@ -1436,12 +1461,18 @@ export function PartnerRegistrationForm() {;
             </div>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
+=======
+              <FormField
+                control={form && form.control}
+                name="bio"
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       />;
                     </FormControl>;
                     <FormDescription>;
                       Limit: 500 characters;
                     </FormDescription>;
                     <FormMessage />;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -1455,6 +1486,11 @@ export function PartnerRegistrationForm() {;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+              className="w-full bg-zion-purple hover:bg-zion-purple-dark"
+              disabled={isSubmitting}>;
+              {isSubmitting ? "Submitting..." : "Submit Application"}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   </FormItem>)}
               />;
             </div>;
@@ -1464,6 +1500,7 @@ export function PartnerRegistrationForm() {;
               disabled={is_submitting}
             >;
               {is_submitting ? "Submitting..." : "Submit Application"}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1489,22 +1526,28 @@ export function PartnerRegistrationForm() {;
             >;
               {isSubmitting ? "Submitting..." :"Submit Application"}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             </Button>;
           </form>;
         </Form>;
       </CardContent>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     </Card>);
 
 }
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             </Button>
           </form>
         </Form>
       </CardContent>
     </Card>
   )
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -1588,3 +1631,10 @@ data: existingCode
 };
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+};
+}
+
+
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

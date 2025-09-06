@@ -1,10 +1,13 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 const Chat5gTechnologyAndItsImpactOnIotChat: NextPage = () => {
   return (
@@ -16,6 +19,7 @@ const Chat5gTechnologyAndItsImpactOnIotChat: NextPage = () => {
       <main>
         <h1>5gTechnologyAndItsImpactOnIotChat</h1>
         <p>Blog content coming soon...</p>
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -43,52 +47,27 @@ const Chat5gTechnologyAndItsImpactOnIotChat: NextPage = () => {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
         <Link href="/blog"><a>Back to Blog</a></Link>
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       </main>
     </div>
   )
 }
 export default Chat5gTechnologyAndItsImpactOnIotChat;
-import type { NextPage } from 'next',
-import Head from 'next / head',
-import Link from 'next / link',
-const Chat5gTechnologyAndItsImpactOnIotChat: NextPage = () => {
-  return (
-    <div>;
-      <Head>;
-        <title > 5gTechnologyAndItsImpactOnIotChat - Zion Tech Solutions</title>;
-        <meta name="description" content="5gTechnologyAndItsImpactOnIotChat blog post" />;
-      </Head>;
-      <main>;
-        <h1 > 5gTechnologyAndItsImpactOnIotChat</h1>;
-        <p > Blog content coming soon...</p>;
-        <Link href="/blog"><a > Back to Blog</a></Link>;
-      </main>;
-    </div>);
-},
-export default Chat5gTechnologyAndItsImpactOnIotChat,
-    <div>
-      <Head>
-        <title>5gTechnologyAndItsImpactOnIotChat - Zion Tech Solutions</title>
-        <meta name=&quot;description&quot; content=&quot;5gTechnologyAndItsImpactOnIotChat blog post&quot; />
-      </Head>
-      
-      <main>
-        <h1>5gTechnologyAndItsImpactOnIotChat</h1>
-        <p>Blog content coming soon...</p>
-        <Link href=&quot;/blog&quot;><a>Back to Blog</Link></Link>
-      </main>
-    </div>
-  )
-},
+
+
 
         <Link href="/blog"><a>Back to Blog</Link></Link>
-        <Link href="/blog"><a>Back to Blog</Link></Link>
       </main>
     </div>
   )
 },
-export default Chat5gTechnologyAndItsImpactOnIotChat,
 
 export default Chat5gTechnologyAndItsImpactOnIotChat,;
 export default Chat5gTechnologyAndItsImpactOnIotChat,
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

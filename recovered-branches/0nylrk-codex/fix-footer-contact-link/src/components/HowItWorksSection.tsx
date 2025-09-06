@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import { GradientHeading } from './GradientHeading';
 import { Check, Handshake, Search, Send } from './lucide-react';
 const steps = [;
@@ -33,6 +34,8 @@ const steps = [
     description: "Publish your service, job, or equipment in minutes with our AI - powered form.";
     icon: Send},
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {GradientHeading} from "./GradientHeading";
 import {Check, Handshake, Search, Send} from "lucide-react";
 const steps = [
@@ -45,17 +48,31 @@ import {Check, Handshake, Search, Send} from "lucide-react";
 import { GradientHeading } from "./GradientHeading",
 import { Check, Handshake, Search, Send } from "lucide-react",
 
+import { GradientHeading } from './GradientHeading';
+import { Check, Handshake, Search, Send } from './lucide-react';
+const steps = [;
+
+import { GradientHeading } from "./GradientHeading",
+import { Check, Handshake, Search, Send } from "lucide-react",
+
+
+
+
 const steps = [
   {
     title: "Post",
-    description: "Publish your service, job, or equipment in minutes with our AI-powered form.",
+    description: "Publish your service, job, or equipment in minutes with our AI - powered form.";
     icon: Send},
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   {
     title: "Match"
     description: "Our AI automatically matches your needs with the perfect providers or opportunities."
     icon: Search}
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -137,6 +154,8 @@ export function HowItWorksSection() {;
                 className={`flex flex-col md:flex-row items-center ${
                   index % 2 === 0 ? "md:flex-row-reverse" : ""
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { GradientHeading } from "./GradientHeading",;
 import { Check, Handshake, Search, Send } from "lucide-react",;
 const steps = [;
@@ -158,6 +177,7 @@ const steps = [;
     icon: Check}];
 export function HowItWorksSection() {;
   return (;
+<<<<<<< HEAD
 
 =======
     icon: Check}];
@@ -190,6 +210,8 @@ const steps = [;
 export function HowItWorksSection() {;
   return (;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <section className="py-20 bg-zion-blue">;
       <div className="container mx-auto px-4">;
         <div className="text-center mb-16">;
@@ -199,6 +221,9 @@ export function HowItWorksSection() {;
           </p>;
         </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
         <div className="relative">;
           {/* Timeline line */}
@@ -206,22 +231,28 @@ export function HowItWorksSection() {;
 
           <div className="space-y-12 md:space-y-0">;
 
+<<<<<<< HEAD
 =======
         <div className="relative">;
           {/* Timeline line */}
           <div className="absolute left-4 md:left-1/2 top-0 h-full w-0.5 bg-gradient-to-b from-zion-purple via-zion-cyan to-zion-purple-light transform -translate-x-1/2 md:block hidden"></div>;
           <div className="space-y-12 md:space-y-0">;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             {steps.map((step, index) => (;
               <div;
                 key={step.title}
                 className={`flex flex-col md:flex-row items-center ${;
                   index % 2 === 0 ? "md:flex-row-reverse" : "";
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 } relative`}
               >
                 <div className="md:w-1/2 mb-6 md:mb-0 md:px-12 text-center md:text-right">
@@ -230,6 +261,7 @@ export function HowItWorksSection() {;
                       <h3 className="text-2xl font-bold text-white mb-3">{step.title}</h3>
                       <p className="text-zion-slate-light">{step.description}</p>
                     </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   ) : null}
@@ -249,6 +281,10 @@ export function HowItWorksSection() {;
                     </div>;
                   ) : null}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+                  ) : null}
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 </div>;
 
                 <div className="relative z-10 flex items-center justify-center w-12 h-12 rounded-full bg-zion-blue-light border-2 border-zion-purple mx-4 md:mx-0">;
@@ -257,10 +293,14 @@ export function HowItWorksSection() {;
 
                 <div className="md:w-1/2 md:px-12 text-center md:text-left">;
                   {index % 2 !== 0 ? (;
+                } relative`}>;
+                <div className="md:w-1/2 mb-6 md:mb-0 md:px-12 text-center md:text-right">;
+                  {index % 2 === 0 ? (;
                     <div>;
                       <h3 className="text-2xl font-bold text-white mb-3">{step && step.title}</h3>;
                       <p className="text-zion-slate-light">{step && step.description}</p>;
                     </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
                   ) : null}
@@ -326,11 +366,14 @@ export function HowItWorksSection() {;
     </section>
   )
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
           </div>;
         </div>;
       </div>;
     </section>;
+<<<<<<< HEAD
 <<<<<<< HEAD
   );
 }
@@ -338,6 +381,11 @@ export function HowItWorksSection() {;
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  );
+}
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     title: "Hire / Buy",
     description: "Connect directly with matched providers and complete your transaction securely.",
     icon: Handshake},
@@ -393,12 +441,16 @@ function HowItWorksSection() {
     </section>);
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 };
 ;
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 
@@ -444,3 +496,5 @@ icon: Handshake
 };
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import React from './react';
 import { getBadgeMeta, BadgeKey } from './badge_config';
@@ -6,19 +7,25 @@ import { getBadgeMeta, BadgeKey } from './badge_config';
 =======
 import React from './react';
 import { getBadgeMeta, BadgeKey } from './badge_config';
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface BadgeEarnedProps {
   badge: BadgeKey
 import {getBadgeMeta, BadgeKey} from "./badgeConfig";
-interface BadgeEarnedProps {;
-  badge: BadgeKey,;
-  size?: number;
+import React from "react",
+import { getBadgeMeta, BadgeKey } from "./badgeConfig",
+
+
+
 export const BadgeEarned: React.FC<BadgeEarnedProps> = ({;
+
   show_name?: boolean;
   show_desc?: boolean;
   earned_date?: string;
 }
 export const BadgeEarned: React.FC < BadgeEarnedProps> = ({
   badge;
+<<<<<<< HEAD
   size = 44;
   showDesc = false,;
   earnedDate}) => {;
@@ -56,27 +63,16 @@ export const BadgeEarned: React.FC<BadgeEarnedProps> = ({;
 export const BadgeEarned: React.FC < BadgeEarnedProps> = ({
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   badge;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   size = 44;
-
-  showDesc = false,;
-  earnedDate}) => {;
-  const meta = getBadgeMeta(badge);
-  if (!meta) return null;
-  const Icon = meta && meta.icon;
-
-
-=======
-
-
-import {getBadgeMeta, BadgeKey} from "./badgeConfig";
-
-=======
 import React from "react",
 import { getBadgeMeta, BadgeKey } from "./badgeConfig",
 
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
   size?: number;
@@ -90,6 +86,8 @@ import React from "react",
 import { getBadgeMeta, BadgeKey } from "./badgeConfig",
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface BadgeEarnedProps {
   badge: BadgeKey,
   size?: number,
@@ -99,10 +97,13 @@ interface BadgeEarnedProps {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export const BadgeEarned: React.FC<BadgeEarnedProps> = ({;
   badge;
   size = 44;
@@ -127,12 +128,16 @@ export const BadgeEarned: React.FC<BadgeEarnedProps> = ({
   const Icon = meta.icon,
 
 
+<<<<<<< HEAD
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <div className="flex flex-col items-center text-center gap-1 px-2">;
       <div
         style={{
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -213,11 +218,19 @@ export const BadgeEarned: React.FC<BadgeEarnedProps> = ({;
       {showName && (;
         <span className="text-xs font-semibold mt-1" style={{ color: meta.color }}>;
 <<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
           {meta.name}
         </span>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+        title={meta && meta.name}>;
+        <Icon color={meta && meta.color} size={size * 0 && 0.7} />;
+      </div>;
+      {showName && (;
+        <span className="text-xs font-semibold mt-1" style={{ color: meta && meta.color }}>;
+          {meta && meta.name}
+        </span>;
       )}
       {earnedDate && (;
         <span className="text-[10px] text-gray-400">;
@@ -227,6 +240,7 @@ export const BadgeEarned: React.FC<BadgeEarnedProps> = ({;
       {showDesc && (;
         <span className="text-xs text-zion-slate-light">{meta && meta.description}</span>;
       )}
+<<<<<<< HEAD
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
@@ -240,13 +254,17 @@ export const BadgeEarned: React.FC<BadgeEarnedProps> = ({;
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+}
+
+    </div>;
+  );
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     </div>;
   );
 
 
 };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
   show_name = true;
   show_desc = false,
   earned_date}) => {
@@ -286,6 +304,7 @@ if (return null) {
     </div>);
 }
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -386,3 +405,5 @@ flex flex-col items-center text-center gap-1 px-2" > <div style= {
   );
 };
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

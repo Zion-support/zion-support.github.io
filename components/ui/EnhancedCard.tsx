@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 
 class ErrorBoundary extends React.Component {
@@ -25,10 +26,13 @@ class ErrorBoundary extends React.Component {
 }
 import React from "react";
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export default function EnhancedCard(): any ({;
   children,;
   className = "",;
 }: {;
+  children: React.ReactNode;
   children: React && React.ReactNode;
   className?: string;
 }) {;
@@ -40,15 +44,19 @@ export default function EnhancedCard(): any ({;
     <div className={["card-base p-4", className].join(" ")}>{children}</div>;
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from 'react';
 export default function EnhancedCard({ children, className = '' }: { children: React.ReactNode, className?: string }) {
   return (
     <div className={["card-base p-4", className].join(' ')}>
       {children}
+<<<<<<< HEAD
     </div>
   );
 }
@@ -63,11 +71,14 @@ export default /**
  * EnhancedCard - Function description
  */
 function EnhancedCard() {
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <div className={["card - base p - 4", class_name].join (" ")}>{children}</div>);
   return (
     <div className={["card - base p - 4", class_name].join (" ")}>{children}</div>);
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -102,3 +113,5 @@ export default function EnhancedCard({
 }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

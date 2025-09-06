@@ -1,12 +1,16 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import React from 'react',
 import Head from 'next/head',
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from 'react';
 import Head from 'next/head';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 
+<<<<<<< HEAD
 import {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
@@ -35,6 +39,8 @@ class ErrorBoundary extends React.Component {
 }
 import React from 'react';
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   Rocket;
   DollarSign, ;
   Users, ;
@@ -46,6 +52,7 @@ import Head from 'next / head';
 import Card from '../components / ui / Card';
 import Button from '../components / ui / Button';
 import {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
   Rocket
@@ -66,6 +73,8 @@ import {
   Lightbulb
   BookOpen;} from 'lucide-react';import {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   Rocket,
   DollarSign,
   Users,
@@ -82,11 +91,16 @@ import {
   Zap,
   Target,
 <<<<<<< HEAD
+<<<<<<< HEAD
   Lightbulb,
   BookOpen,} from 'lucide-react';import {
 =======
 BookOpen,} from 'lucide-react';import {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  Lightbulb,
+  BookOpen,} from 'lucide-react';import {
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   Rocket;
   DollarSign,
   Users,
@@ -94,6 +108,7 @@ BookOpen,} from 'lucide-react';import {
   Mail,
   Calendar,
   Shield,
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -108,6 +123,8 @@ BookOpen,} from 'lucide-react';import {
   Shield
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   Globe;
   ArrowRight;
   Star;
@@ -117,6 +134,7 @@ BookOpen,} from 'lucide-react';import {
   Zap;
   Target;
   Lightbulb;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -175,6 +193,9 @@ export default function StartupToolsPage() {
         'Limited customization'
       ]
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       bestFor: 'B2B startups, SaaS companies, marketing teams'
     }
     {
@@ -203,6 +224,7 @@ export default function StartupToolsPage() {
       bestFor: 'E-commerce, content creators, small businesses'
     }
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -286,10 +308,13 @@ function StartupToolsPage() {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       category: 'Productivity',
       pricing: 'Free - $12 / month',
       rating: 4.8,
       users: '10M+',
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       name: 'Canva',
@@ -336,10 +361,13 @@ function StartupToolsPage() {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       category: 'Design',
       pricing: 'Free - $12.99 / month',
       rating: 4.6,
       users: '100M+',
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -591,14 +619,19 @@ icon: <DollarSign className='w - 8 h - 8 text - blue - 400' />,
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       category: 'Customer Support',
       pricing: '$39 - $999 / month',
       rating: 4.6,
       users: '25K+',
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       icon: <Users className='w - 8 h - 8 text - green - 400' />,
       color: 'bg - gradient - to - br from - green - 500 to - emerald - 600',
       features: [;
@@ -637,6 +670,7 @@ icon: <DollarSign className='w - 8 h - 8 text - blue - 400' />,
       pros: ['Great UXPowerful features_good integrations_mobile apps'],
       cons: ['ExpensiveComplex pricing_can be overwhelming'],
       best_for: 'SaaS companies, online businesses, customer support teams';
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     }
@@ -794,11 +828,14 @@ icon: <DollarSign className='w - 8 h - 8 text - blue - 400' />,
                 size="lg"
                 className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white/5"
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               >
                 Get Startup Advice
               </Button>
             </div>
           </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
           {/* Stats */}
 
@@ -839,6 +876,8 @@ icon: <DollarSign className='w - 8 h - 8 text - blue - 400' />,
               <div className='text-gray-400 text-sm'>Total Users</div>            </div>                {startupTools.length}+
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
               </div>
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <div className="text-gray-400 text-sm">Essential Tools</div>
             </div>
             <div className="text-center group">
@@ -862,6 +901,7 @@ icon: <DollarSign className='w - 8 h - 8 text - blue - 400' />,
           </div>
         </div>
       </section>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
                 className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white/5">;
@@ -1106,10 +1146,13 @@ icon: <DollarSign className='w - 8 h - 8 text - blue - 400' />,
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             </div>;
           </div>;
         </div>;
       </section>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1134,6 +1177,8 @@ icon: <DollarSign className='w - 8 h - 8 text - blue - 400' />,
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 key={category}
                 onClick={() => setSelectedCategory(category)}
                 className={`px-6 py-3 rounded-full text-sm font-medium transition-all duration-300 ${;
@@ -1143,6 +1188,7 @@ icon: <DollarSign className='w - 8 h - 8 text - blue - 400' />,
                 }`}
               >;
                 {category}
+<<<<<<< HEAD
 <<<<<<< HEAD
               </button>;
             ))}
@@ -1273,10 +1319,13 @@ icon: <DollarSign className='w - 8 h - 8 text - blue - 400' />,
             </h2>;
             <p className='text - xl text - gray - 400 max - w-4xl mx - auto leading - relaxed'>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               Beyond tools, here are additional resources to help your startup;
               succeed.;
             </p>;
           </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1290,6 +1339,8 @@ icon: <DollarSign className='w - 8 h - 8 text - blue - 400' />,
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             </h2>
             <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
               Beyond tools, here are additional resources to help your startup succeed.
@@ -1308,6 +1359,7 @@ icon: <DollarSign className='w - 8 h - 8 text - blue - 400' />,
                 Explore Communities
               </Button>
             </Card>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1370,6 +1422,8 @@ icon: <DollarSign className='w - 8 h - 8 text - blue - 400' />,
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <h3 className="text-xl font-bold mb-4 text-white">Educational Resources</h3>
               <p className="text-gray-400 mb-4">
                 Access free courses from platforms like Coursera, edX, and startup-specific learning resources.
@@ -1378,6 +1432,7 @@ icon: <DollarSign className='w - 8 h - 8 text - blue - 400' />,
                 Start Learning
               </Button>
             </Card>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -1391,6 +1446,8 @@ icon: <DollarSign className='w - 8 h - 8 text - blue - 400' />,
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <h3 className="text-xl font-bold mb-4 text-white">Growth Strategies</h3>
               <p className="text-gray-400 mb-4">
                 Learn proven growth strategies from successful entrepreneurs and growth hackers.
@@ -1403,6 +1460,7 @@ icon: <DollarSign className='w - 8 h - 8 text - blue - 400' />,
         </div>
       </section>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
                 size='sm'>                Start Learning;
 =======
@@ -1412,6 +1470,8 @@ size='sm'>                Start Learning;
               </Button>;
             </Card>;
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <Card className='text-center'>;
               <div className='w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center bg-gradient-to-br from-purple-500 to-pink-600'>;
                 <TrendingUp className='w-8 h-8 text-white' />              </div>;
@@ -1432,6 +1492,7 @@ size='sm'>                Start Learning;
                 Growth Strategies;
               </h3>;
               <p className='text-gray-400 mb-4'>;
+<<<<<<< HEAD
 =======
           <div className='grid grid - cols - 1 md:grid - cols - 3 gap - 8'>;
             <Card className='text - center'>;
@@ -1524,6 +1585,8 @@ size='sm'>                Start Learning;
               <h3 className="text - xl font - bold mb - 4 text - white">Growth Strategies</h3>;
               <p className="text - gray - 400 mb - 4">;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 Learn proven growth strategies from successful entrepreneurs and growth hackers.;
               </p>;
               <Button href="/resources" variant="outline" size="sm">;
@@ -1533,6 +1596,7 @@ size='sm'>                Start Learning;
           </div>;
         </div>;
       </section>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -1643,8 +1707,16 @@ import React from 'react';
 
 import React from 'react';
 
+=======
+}
+    </>);
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 
+import React from 'react';
+}
+
+import React from 'react';
 }
 
  export default function StartupToolsPage () {
@@ -1669,4 +1741,9 @@ return (<> <Head> <title>Startup Tools & Resources - Zion Tech Group</title> <me
 }</div> </div> </section> Additional Startup Resources </h2> <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed" > Beyond tools, here are additional resources to help your startup succeed. </p> </div> <div className="grid grid-cols-1 md:grid-cols-3 gap-8" > <Card className="text-center" > <div className="w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center bg-gradient-to-br from-blue-500 to-indigo-600" > <Users className="w-8 h-8 text-white" /> </div> <h3 className="text-xl font-bold mb-4 text-white" >Startup Communities</h3> <p className="text-gray-400 mb-4" > Join startup communities like Y Combinator Startup School, Indie Hackers, and local startup meetups. </p> <Button href="https://www.startupschool.org" variant="outline" size="sm" > Explore Communities </Button> </Card> <Card className="text-center" > <div className="w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center bg-gradient-to-br from-green-500 to-emerald-600" > <BookOpen className="w-8 h-8 text-white" /> </div> <h3 className="text-xl font-bold mb-4 text-white" >Educational Resources</h3> <p className="text-gray-400 mb-4" > Access free courses from platforms like Coursera, edX, and startup-specific learning resources. </p> <Button href="https://www.coursera.org" variant="outline" size="sm" > Start Learning </Button> </Card> <Card className="text-center" > <div className="w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center bg-gradient-to-br from-purple-500 to-pink-600" > <TrendingUp className="w-8 h-8 text-white" /> </div> <h3 className="text-xl font-bold mb-4 text-white" >Growth Strategies</h3> <p className="text-gray-400 mb-4" > Learn proven growth strategies from successful entrepreneurs and growth hackers. </p> <Button href="/resources" variant="outline" size="sm" > View Resources </Button> </Card> </div> </div> </section> Ready to Scale Your Startup? </h2> <p className="text-xl text-orange-100 mb-12 max-w-4xl mx-auto leading-relaxed" > Our startup experts can help you choose the right tools, implement growth strategies, and accelerate your business growth. </p> <Button href="/contact" variant="secondary" size="lg" className="bg-white text-orange-600 hover:bg-gray-100 shadow-2xl" > Get Startup Consultation <ArrowRight className="w-5 h-5 ml-2" /> </Button> <Button href="/saas-marketplace" variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-orange-600 shadow-2xl" > Explore More Tools </Button> </div> </div> </section> </>) 
 }
 }
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -1,8 +1,12 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
+=======
+export interface ExtraService {
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   id: string;
   name: string;
   tagline: string;
@@ -15,10 +19,7 @@
   contact_info: {
     mobile: string;
     email: string;
-
-
-    address: string;
-  };
+}
 
 
 
@@ -26,6 +27,7 @@
   }
 export const extraServices: ExtraService[] = [
   {
+<<<<<<< HEAD
 
     address: string;
 <<<<<<< HEAD
@@ -55,6 +57,8 @@ export const extra_services: ExtraService[] = [;
 export interface ExtraService {;
 export interface ExtraService {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -62,6 +66,7 @@ export interface ExtraService {
   },
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
+<<<<<<< HEAD
   id: string, name: string,
   tagline: string, price: string,
   description: string, features: string[],
@@ -176,12 +181,15 @@ export const extraServices: ExtraService[] = [
     real_implementation: true,
     contact_info: {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
     },
   },
 ];      mobile: "+1 302 464 0950";
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -208,6 +216,8 @@ export const extraServices: ExtraService[] = [
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     }
   },
   {
@@ -227,17 +237,20 @@ export const extraServices: ExtraService[] = [
     category: "Security",
     realImplementation: true,
     contactInfo: {
-
       address: "364 E Main St STE 1008 Middletown DE 19709"
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       email: "kleber@ziontechgroup.com";
       address: "364 E Main St STE 1008 Middletown DE 19709";
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     }
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 ];
@@ -297,8 +310,14 @@ export const extraServices: ExtraService[] = [
       email: "kleber@ziontechgroup.com";
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
 ];
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

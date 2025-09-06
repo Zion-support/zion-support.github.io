@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -42,6 +43,8 @@ import Link from "next/link"
 <<<<<<< HEAD
 
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export function BillingHeader() {
   return (
     <div className="space-y-2">
@@ -56,6 +59,7 @@ export function BillingHeader() {
             <Mail className="h-4 w-4" />
             Contact Billing Support
           </Button>
+<<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
           <Button variant="outline" size="sm" className="gap-1" asChild>
           <Button variant='outline' size='sm' className='gap-1' asChild>
@@ -82,6 +86,8 @@ export function BillingHeader() {
             <Mail className="h-4 w-4" />
             Contact Billing Support
           </Button>
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 
@@ -94,6 +100,7 @@ export function BillingHeader() {
           </Button>
         </div>
       </div>
+<<<<<<< HEAD
       <p className="text-muted-foreground">
         Manage your subscription, view invoice history, and update payment methods.
       </p>
@@ -232,3 +239,5 @@ function BillingHeader() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 }
 ;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

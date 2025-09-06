@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 :netlify/functions/netlify-auto-healer-runner.js
 :backup-problematic-files/netlify/functions/netlify-auto-healer-runner.js
 const path = require('path'),;
@@ -25,6 +26,8 @@ exports.handler = async () => {;
 },;
 :backup-problematic-files/netlify/functions/netlify-auto-healer-runner.js
 :backup-problematic-files/netlify/functions/netlify-auto-healer-runner.js
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 const path = require('path');
 const { spawnSync } = require('child_process');
 function runNode(relPath, args = []) {
@@ -62,6 +65,7 @@ exports.handler = async () => {
     body: logs.join('\n')
   }
 };function runNode(relPath, args = []) {
+<<<<<<< HEAD
 :netlify/functions/netlify-auto-healer-runner.js
   const abs = path.resolve(__dirname, '....', relPath)
   const res = spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' })
@@ -115,3 +119,5 @@ main:netlify/functions/netlify-auto-healer-runner.js
 }
 main:netlify/functions/netlify-auto-healer-runner.js
 :backup-problematic-files/netlify/functions/netlify-auto-healer-runner.js
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

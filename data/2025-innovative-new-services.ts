@@ -1,11 +1,15 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export interface InnovativeNewService2025 {
 
 export interface InnovativeNewService2025 {;
 
+<<<<<<< HEAD
 import { ServiceVariant } from '../types/service-variants';
 
 import { ServiceVariant  } from "../types/service-variants";
@@ -18,6 +22,10 @@ export interface InnovativeNewService2025 {;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+export interface InnovativeNewService2025 {
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   id: string;
   name: string;
   tagline: string;
@@ -48,6 +56,7 @@ export interface InnovativeNewService2025 {;
     mobile: string;
     email: string;
     address: string;
+<<<<<<< HEAD
 
     website: string;
   }
@@ -375,10 +384,13 @@ export const innovativeNewServices2025: InnovativeNewService[] = [;
     ],
     use_cases: [;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       'Algorithmic trading, Risk management, Portfolio optimization, Market analysis, Compliance monitoring',
     ],
     roi: 'Financial institutions report 800% ROI through improved trading performance and reduced risk exposure.',
     competitors: ['Bloomberg Terminal, Thomson Reuters, FactSet, Refinitiv'],
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -391,6 +403,8 @@ export const innovativeNewServices2025: InnovativeNewService[] = [;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -408,14 +422,18 @@ export const innovativeNewServices2025: InnovativeNewService[] = [;
       email: 'kleber@ziontechgroup && ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709',
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       website: 'https://ziontechgroup.com';
     }
     real_implementation: true;
     implementation_details: 'Quantum - powered financial trading platform with advanced algorithms and real - time market analysis.';
     launch_date: '2025 - 01 - 08';
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     customers: 12;
@@ -431,6 +449,8 @@ export const innovativeNewServices2025: InnovativeNewService[] = [;
   }
 ];
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export interface InnovativeNewService {
   id: string, name: string,
   tagline: string, price: string,
@@ -446,16 +466,20 @@ export interface InnovativeNewService {
   competitors: string[], marketSize: string,
   growthRate: string, variant: string,
   contactInfo: {
+<<<<<<< HEAD
       
     mobile: string, email: string,
     address: string,
     website: string
   
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     },
     realImplementation: boolean, implementationDetails: string,
   launchDate: string, customers: number,
   rating: number,
   reviews: number
+<<<<<<< HEAD
 
 }
 
@@ -492,6 +516,8 @@ export const innovativeNewServices2025: InnovativeNewService[] = [
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
     
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     },
     realImplementation: true,
     implementationDetails: 'Cloud-native SaaS platform with AI algorithms for legal document analysis, natural language processing, and risk assessment.',
@@ -509,7 +535,6 @@ export const innovativeNewServices2025: InnovativeNewService[] = [
       'Quantum key distribution (QKD)Post-quantum cryptography algorithmsEnd-to-end encryptionReal-time threat detectionMulti-channel communication supportCompliance with NIST standardsAPI for third-party integrationsAdvanced audit logging';
       'Zero-knowledge architectureGlobal quantum network access'
     ];
-    popular: true, icon: '🔐',
     color: 'from-blue-600 to-cyan-600', textColor: 'text-blue-400',
     link: 'https://ziontechgroup.com/quantum-secure-communication',
     marketPosition: 'Competes with Signal (Free), Wickr ($4.99/month). Our advantage: Quantum-resistant encryption that future-proofs against quantum attacks.',
@@ -524,11 +549,14 @@ export const innovativeNewServices2025: InnovativeNewService[] = [
     marketSize: '$8.7B quantum security market', growthRate: '45% annual growth',
     variant: 'quantum-security-enterprise',
     contactInfo: {
+<<<<<<< HEAD
       
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
     
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     },
     realImplementation: true, implementationDetails: 'Quantum-secure communication platform with hardware quantum key distribution and software post-quantum cryptography.',
     launchDate: '2025-01-10', customers: 15,
@@ -546,7 +574,6 @@ export const innovativeNewServices2025: InnovativeNewService[] = [
       'AI-powered medical image analysisDiagnostic accuracy validationPatient data integrationTreatment recommendation engineClinical decision supportHIPAA complianceMulti-modality imaging supportReal-time analysis';
       'Integration with EHR systemsMobile diagnostic tools'
     ];
-    popular: true, icon: '🏥',
     color: 'from-green-600 to-emerald-600', textColor: 'text-green-400',
     link: 'https://ziontechgroup.com/ai-healthcare-diagnostics',
     marketPosition: 'Competes with IBM Watson Health ($500/month), Google Health AI (Custom pricing). Our advantage: 95% diagnostic accuracy and seamless EHR integration.',
@@ -561,11 +588,14 @@ export const innovativeNewServices2025: InnovativeNewService[] = [
     marketSize: '$45.8B AI healthcare market', growthRate: '25% annual growth',
     variant: 'ai-healthcare-enterprise',
     contactInfo: {
+<<<<<<< HEAD
       
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
     
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     },
     realImplementation: true, implementationDetails: 'AI-powered healthcare diagnostics platform with FDA-cleared algorithms and HIPAA-compliant infrastructure.',
     launchDate: '2025-01-05', customers: 22,
@@ -583,7 +613,6 @@ export const innovativeNewServices2025: InnovativeNewService[] = [
       'AI-powered demand forecastingAutonomous inventory optimizationRoute optimization algorithmsReal-time supply chain monitoringPredictive maintenance alertsSupplier performance analyticsCost optimization recommendationsSustainability tracking';
       'Multi-warehouse managementIntegration with ERP systems'
     ];
-    popular: true, icon: '🚚',
     color: 'from-orange-600 to-red-600', textColor: 'text-orange-400',
     link: 'https://ziontechgroup.com/autonomous-supply-chain-optimization',
     marketPosition: 'Competes with SAP Supply Chain ($1,000/month), Oracle SCM ($800/month). Our advantage: Autonomous optimization reduces costs by 25% and improves efficiency by 40%.',
@@ -598,11 +627,14 @@ export const innovativeNewServices2025: InnovativeNewService[] = [
     marketSize: '$19.2B supply chain software market', growthRate: '12% annual growth',
     variant: 'supply-chain-enterprise',
     contactInfo: {
+<<<<<<< HEAD
       
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
     
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     },
     realImplementation: true, implementationDetails: 'AI-powered supply chain optimization platform with autonomous decision-making and predictive analytics.',
     launchDate: '2025-01-12', customers: 35,
@@ -620,7 +652,6 @@ export const innovativeNewServices2025: InnovativeNewService[] = [
       'Quantum-powered market analysisUltra-fast algorithmic tradingReal-time risk assessmentPortfolio optimization algorithmsMarket prediction modelsCompliance monitoringMulti-exchange integrationAdvanced analytics dashboard';
       'API for custom strategies24/7 market monitoring'
     ];
-    popular: true, icon: '📈',
     color: 'from-yellow-600 to-amber-600', textColor: 'text-yellow-400',
     link: 'https://ziontechgroup.com/quantum-financial-trading',
     marketPosition: 'Competes with Bloomberg Terminal ($2,000/month), Thomson Reuters ($1,500/month). Our advantage: Quantum algorithms provide 10x faster analysis and superior risk modeling.',
@@ -635,15 +666,19 @@ export const innovativeNewServices2025: InnovativeNewService[] = [
     marketSize: '$32.1B financial technology market', growthRate: '22% annual growth',
     variant: 'quantum-financial-enterprise',
     contactInfo: {
+<<<<<<< HEAD
       
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
     
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     },
     realImplementation: true, implementationDetails: 'Quantum-powered financial trading platform with advanced algorithms and real-time market analysis.',
     launchDate: '2025-01-08', customers: 12,
     rating: 4.9,
+<<<<<<< HEAD
     reviews: 6;
 
 
@@ -934,22 +969,20 @@ export const innovativeNewServices2025: InnovativeNewService[] = [;
     rating: 4.9,
     reviews: 6,
   },;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709'
       website: 'https://ziontechgroup.com'
     }
+    reviews: 6;
 
     realImplementation: true;
     implementationDetails: 'Quantum-powered financial trading platform with advanced algorithms and real-time market analysis.';
     launchDate: '2025-01-08';
     customers: 12;
 
-    rating: 4.9
-
-    reviews: 6
-  }
-];
 import { ServiceVariant } from '../types/service-variants',;
 export interface InnovativeNewService {;
   id: string,;
@@ -1214,4 +1247,7 @@ export const innovativeNewServices2025: InnovativeNewService[] = [;
     reviews: 6;
   }
 ];
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

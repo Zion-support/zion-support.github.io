@@ -1,6 +1,5 @@
 
 
-
 export const checkMessage = (messageContent: string): MessageAnalysisResult => {;
 
 
@@ -9,19 +8,25 @@ export const checkMessage = (messageContent: string): MessageAnalysisResult => {
 
   let severity: FraudSeverity = 'safe',
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 let severity: FraudSeverity = 'safe',
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   if (analysis && analysis.reasons.length > 0) {
     severity = analysis && analysis.reasons.length > 2 || 
               analysis && analysis.reasons.some(r => r && r.includes('payment') || r && r.includes('external')) 
       ? 'dangerous' 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-      : 'suspicious'
 =======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+      : 'suspicious'
 // Message checking functionality;
 import {FraudSeverity} from '@/types / fraud';
 import {analyze_content} from './analyze_content';
@@ -42,13 +47,13 @@ if ( {) {
               analysis.reasons.some (r => r.includes ('payment') || r.includes ('external'));
       ? 'dangerous';
       : 'suspicious';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
   return {
     ...analysis;
 
 ;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     severity
@@ -90,6 +95,11 @@ export const checkMessage = (messageContent: string): MessageAnalysisResult => {
 }
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+    severity
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 // Message checking functionality;
 import { FraudSeverity } from '@/types/fraud',;
 import { analyzeContent } from './analyzeContent',;
@@ -111,6 +121,7 @@ export const checkMessage = (messageContent: string): MessageAnalysisResult => {
   return {;
     ...analysis;
     severity;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -140,11 +151,15 @@ export const checkMessage = (messageContent:string):MessageAnalysisResult => {;
   ;
   return {;
     ...analysis,;
-    severity;
-  },;
-},; // Message checking functionality // Determine severity based on number and type of issues let severity: FraudSeverity = 'safe';
-if (analysis.reasons.length > 0) {
-  severity = analysis.reasons.length > 2 || analysis.reasons.some (r => r.includes ('payment') || r.includes ('external') ) ? 'dangerous' 
+=======
   }
 };
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+    severity;
+  }
+<<<<<<< HEAD
+};
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

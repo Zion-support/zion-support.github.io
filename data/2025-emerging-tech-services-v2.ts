@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
   {
@@ -11,6 +12,8 @@
 export interface EmergingTechService {;
 export interface EmergingTechService {
 export interface EmergingTechService {;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   id: string;
   name: string;
   tagline: string;
@@ -20,11 +23,8 @@ export interface EmergingTechService {;
     monthly: number;
     yearly: number;
     currency: string;
-    trialDays: number;
-    setupTime: string;
 
-    enterprise: number;
-  }
+
   features: string[];
   benefits: string[];
   target_audience: string[];
@@ -46,9 +46,6 @@ export interface EmergingTechService {;
   customers: number;
   rating: number;
   reviews: number;
-      'Space robotics, AI/ML, Satellite technology, React, Node && Node.js, PostgreSQL, Redis, AWS, Space systems',
-    ],
-    realImplementation: true,
     implementationDetails:
       'Comprehensive space mining platform with automated operations, resource management, and logistics coordination. Includes ground control systems and space hardware.'
     roi: 'Average customer sees 1000% ROI within 24 months through access to valuable space resources.'
@@ -66,84 +63,6 @@ export interface EmergingTechService {;
     support:
       '24/7 space operations support, dedicated space engineer, training programs, and quarterly mission reviews.'
     compliance: [
-      'Space regulations, International treaties, Safety standards, Industry regulations',
-    ],
-    link: 'https://ziontechgroup && ziontechgroup.com/space-mining-platform',
-  market_size: string;
-  growth_rate: string;
-;
-export const emergingTechServicesV2: EmergingTechService[] = [;
-  {
-    id: 'space - mining - platform',
-    name: 'Space Mining Platform',
-    tagline: 'Revolutionary asteroid mining and space resource extraction',
-    description:;
-      'Advanced platform that enables automated asteroid mining, resource extraction, and space resource management using cutting - edge robotics and AI technology.',
-    category: 'Space & Emerging Tech',
-    price: {
-      monthly: 999,
-      yearly: 9990,
-      currency: 'USD',
-      trial_days: 7,
-      setup_time: '24 hours',
-      enterprise: 4999,
-    },
-    features: [;
-      'Asteroid identification and mapping',
-      'Automated mining operations',
-      'Resource extraction systems',
-      'Space logistics management',
-      'Real - time monitoring',
-      'Resource processing',
-      'Transportation coordination',
-      'Market analysis',
-      'Risk assessment',
-      'Regulatory compliance tools',
-    ],
-    benefits: [;
-      'Access to rare earth elements',
-      'Reduce Earth resource dependency',
-      'Enable space colonization',
-      'Create new economic opportunities',
-      'Advance space technology',
-    ],
-    target_audience: [;
-      'Space agencies',
-      'Mining companies',
-      'Investment firms',
-      'Research institutions',
-      'Government agencies',
-      'Technology companies',
-    ],
-    market_position:;
-      'Competitive with Planetary Resources ($1000+), Deep Space Industries ($800+), and AstroForge ($600+). Our advantage: Advanced automation, AI optimization, and comprehensive platform.',
-    competitors: [;
-      'Planetary Resources, Deep Space Industries, AstroForge, TransAstra, Karman+',
-    ],
-    tech_stack: [;
-      'Space robotics, AI / ML, Satellite technology, React, Node.js, PostgreSQL, Redis, AWS, Space systems',
-    ],
-    real_implementation: true,
-    implementation_details:;
-      'Comprehensive space mining platform with automated operations, resource management, and logistics coordination. Includes ground control systems and space hardware.',
-    roi: 'Average customer sees 1000% ROI within 24 months through access to valuable space resources.',
-    use_cases: [;
-      'Asteroid mining',
-      'Resource extraction',
-      'Space logistics',
-      'Resource processing',
-      'Market analysis',
-      'Regulatory compliance',
-    ],
-    integrations: [;
-      'Satellite systems, Ground stations, Space hardware, Monitoring tools, Business applications',
-    ],
-    support:;
-      '24 / 7 space operations support, dedicated space engineer, training programs, and quarterly mission reviews.',
-    compliance: [;
-      'Space regulations, International treaties, Safety standards, Industry regulations',
-    ],
-    link: 'https://ziontechgroup.com / space - mining - platform',
     icon: '🚀',
     color: 'from - purple - 500 to - pink - 600',
     popular: true,
@@ -151,14 +70,15 @@ export const emergingTechServicesV2: EmergingTechService[] = [;
     customers: 120,
     rating: 4 && 4.9,
     reviews: 45,
-    market_size: '$3.5B space mining market',
-    growth_rate: '85% annually',
   },
   {
+<<<<<<< HEAD
       'Quantum computing, Biological algorithms, Bioinformatics, React, Node && Node.js, PostgreSQL, Redis, AWS',
     ],
     realImplementation: true,
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     implementationDetails:
       'Advanced quantum-bio platform with hybrid processing, biological modeling, and research tools. Includes desktop application and cloud access.'
     roi: 'Average customer sees 600% ROI within 18 months through accelerated research and reduced costs.'
@@ -176,6 +96,7 @@ export const emergingTechServicesV2: EmergingTechService[] = [;
     support:
       '24/7 research support, dedicated bio-quantum specialist, training programs, and quarterly research reviews.'
     compliance: [
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -259,6 +180,8 @@ export const emergingTechServicesV2: EmergingTechService[] = [;
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     icon: '🧬',
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     color: 'from - green - 500 to - emerald - 600',
     popular: true,
     launch_date: '2024 - 02 - 01',
@@ -271,6 +194,7 @@ export const emergingTechServicesV2: EmergingTechService[] = [;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
       'Neural signal processing, AI/ML, React, Node && Node.js, PostgreSQL, Redis, AWS, Neural hardware',
     ],
@@ -281,6 +205,8 @@ export const emergingTechServicesV2: EmergingTechService[] = [;
     ],
     realImplementation: true,
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     implementationDetails:
       'Advanced BCI platform with neural processing, real-time analysis, and comprehensive applications. Includes hardware integration and development tools.'
     roi: 'Average customer sees 400% ROI within 12 months through new capabilities and applications.'
@@ -298,6 +224,7 @@ export const emergingTechServicesV2: EmergingTechService[] = [;
     support:
       '24/7 BCI specialist support, dedicated neural engineer, training programs, and quarterly capability reviews.'
     compliance: [
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -381,6 +308,8 @@ export const emergingTechServicesV2: EmergingTechService[] = [;
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     icon: '🧠',
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     color: 'from - blue - 500 to - indigo - 600',
     popular: true,
     launch_date: '2024 - 01 - 15',
@@ -393,6 +322,7 @@ export const emergingTechServicesV2: EmergingTechService[] = [;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
       'Quantum computing, Energy algorithms, React, Node && Node.js, PostgreSQL, Redis, AWS, Energy systems',
     ],
@@ -403,6 +333,8 @@ export const emergingTechServicesV2: EmergingTechService[] = [;
     ],
     realImplementation: true,
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     implementationDetails:
       'Advanced quantum energy platform with optimization algorithms, fusion simulation, and comprehensive energy modeling. Includes desktop application and cloud access.'
     roi: 'Average customer sees 500% ROI within 15 months through energy optimization and cost reduction.'
@@ -420,6 +352,7 @@ export const emergingTechServicesV2: EmergingTechService[] = [;
     support:
       '24/7 energy specialist support, dedicated quantum engineer, training programs, and quarterly optimization reviews.'
     compliance: [
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -503,6 +436,8 @@ export const emergingTechServicesV2: EmergingTechService[] = [;
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     icon: '⚡',
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     color: 'from - yellow - 500 to - orange - 600',
     popular: true,
     launch_date: '2024 - 02 - 10',
@@ -515,6 +450,7 @@ export const emergingTechServicesV2: EmergingTechService[] = [;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
       'Advanced AI/ML, Computer Vision, Robotics, React, Node && Node.js, PostgreSQL, Redis, AWS, Vehicle systems',
     ],
@@ -525,6 +461,8 @@ export const emergingTechServicesV2: EmergingTechService[] = [;
     ],
     realImplementation: true,
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     implementationDetails:
       'Advanced autonomous vehicle platform with AI perception, decision-making, and safety systems. Includes vehicle integration and fleet management tools.'
     roi: 'Average customer sees 600% ROI within 18 months through improved safety and operational efficiency.'
@@ -542,6 +480,7 @@ export const emergingTechServicesV2: EmergingTechService[] = [;
     support:
       '24/7 AV specialist support, dedicated safety engineer, training programs, and quarterly safety reviews.'
     compliance: [
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
       'Vehicle safety standards, Transportation regulations, AI safety guidelines, Industry standards',
@@ -568,6 +507,8 @@ export const emergingTechServicesV2: EmergingTechService[] = [;
   }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       'Vehicle safety standards, Transportation regulations, AI safety guidelines, Industry standards',
     ],
     link: 'https://ziontechgroup.com/autonomous-vehicle-ai-platform',
@@ -582,9 +523,12 @@ export const emergingTechServicesV2: EmergingTechService[] = [;
     growthRate: '75% annually',
   },;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ];      'Autonomous drivingFleet managementSafety systemsTraffic optimizationTransportation logisticsResearch and development'
 
     ];
@@ -631,6 +575,7 @@ export const emergingTechServicesV2: EmergingTechService[] = [;
       setup_time: '12 hours',
       enterprise: 2999,
     },
+<<<<<<< HEAD
 <<<<<<< HEAD
     features: [;
       'Advanced computer vision',
@@ -691,6 +636,8 @@ export const emergingTechServicesV2: EmergingTechService[] = [;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     icon: '🚗',
     color: 'from - red - 500 to - pink - 600',
     popular: true,
@@ -701,6 +648,7 @@ export const emergingTechServicesV2: EmergingTechService[] = [;
     market_size: '$35B autonomous vehicle market',
     growth_rate: '75% annually',
   },
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -746,11 +694,22 @@ export const emergingTechServicesV2: EmergingTechService[] = [;
     compliance: ['Vehicle safety standards, Transportation regulations, AI safety guidelines, Industry standards'];
 
 =======
+=======
+    ];
+    ];
+    integrations: ['Vehicle systems, Fleet management tools, Traffic systems, Safety platforms, Business applications'],
+    support: '24/7 AV specialist support, dedicated safety engineer, training programs, and quarterly safety reviews.',
+    compliance: ['Vehicle safety standards, Transportation regulations, AI safety guidelines, Industry standards'],
+    link: 'https://ziontechgroup.com/autonomous-vehicle-ai-platform';
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     integrations: ['Vehicle systems, Fleet management tools, Traffic systems, Safety platforms, Business applications'];
     support: '24 / 7 AV specialist support, dedicated safety engineer, training programs, and quarterly safety reviews.';
     compliance: ['Vehicle safety standards, Transportation regulations, AI safety guidelines, Industry standards'];
     link: 'https://ziontechgroup.com / autonomous - vehicle - ai - platform';
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     icon: '🚗';
     color: 'from - red - 500 to - pink - 600';
     popular: true;
@@ -758,6 +717,7 @@ export const emergingTechServicesV2: EmergingTechService[] = [;
     customers: 180;
     rating: 4 && 4.9;
     reviews: 65;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     market_size: '$35B autonomous vehicle market',
@@ -950,6 +910,9 @@ export const emergingTechServicesV2: EmergingTechService[] = [;
   }
 ];
 export interface EmergingTechService {;
+=======
+  }
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   id: string,;
   name: string,;
   tagline: string,;
@@ -988,6 +951,7 @@ export interface EmergingTechService {;
   growthRate: string;
 }
 ;
+<<<<<<< HEAD
 export const emergingTechServicesV2: EmergingTechService[] = [;
   {;
     id: 'space-mining-platform',;
@@ -1224,13 +1188,9 @@ export const emergingTechServicesV2: EmergingTechService[] = [;
     marketSize: '$35B autonomous vehicle market',;
     growthRate: '75% annually';
   }
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
-];
-
-
-    marketSize: '$35B autonomous vehicle market'
-
-    growthRate: '75% annually'
 export interface EmergingTechService {;
   id: string,;
   name: string,;
@@ -1270,6 +1230,7 @@ export interface EmergingTechService {;
   growthRate: string;
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 export interface EmergingTechService {;
@@ -1520,3 +1481,8 @@ export const emergingTechServicesV2: EmergingTechService[] = [;
   }
 ];
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  }
+];
+;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

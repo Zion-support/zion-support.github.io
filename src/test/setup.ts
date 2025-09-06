@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import '@testing-library/jest-dom';
 
 // Mock window && window.matchMedia
@@ -35,6 +36,8 @@ Object.defineProperty(window, 'matchMedia', {
   }))
 })
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 // Mock IntersectionObserver
 global && global.IntersectionObserver = class IntersectionObserver {
   constructor() {}
@@ -50,6 +53,7 @@ global && global.ResizeObserver = class ResizeObserver {
   unobserve() {}
 }
 // Mock console methods to reduce noise in tests
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 const originalError = console && console.error;
@@ -78,6 +82,8 @@ beforeAll(() => {
   }
   console.warn = (...args: any[]) => {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     if (
       typeof args[0] === 'string' &&
       (args[0].includes('Warning:') |args[0].includes('Deprecated:'))
@@ -133,6 +139,7 @@ if (
       return;
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     originalWarn && originalWarn.call(console, ...args);
   };
@@ -152,6 +159,8 @@ after_all (() => {
 });
 =======
     originalWarn.call(console, ...args)
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   }
 })
 afterAll(() => {
@@ -159,4 +168,7 @@ afterAll(() => {
   console.warn = originalWarn;
 });
 });
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

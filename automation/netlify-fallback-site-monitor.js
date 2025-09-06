@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 }
@@ -22,6 +23,8 @@ return result;
 }catch (error) {
   console.error ('Fallback execution error:', error);
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   statusCode: 500;
 body: JSON && JSON.stringify ({
   error: 'Fallback execution failed';
@@ -29,19 +32,21 @@ body: JSON && JSON.stringify ({
 
 #!/usr/bin/env node
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 #!/usr/bin/env node
-
-
 
 // Netlify Function Fallback: site-monitor
 // This is a local fallback when the main function is unavailable
 
 exports.handler = async (_event, _context) => {
     // // // console.log('site-monitor fallback executed locally'),
+<<<<<<< HEAD
 <<<<<<< HEAD
     
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -52,6 +57,8 @@ exports.handler = async (_event, _context) => {
 
     
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     try {
         // Basic fallback logic
         const result = {
@@ -64,17 +71,15 @@ exports.handler = async (_event, _context) => {
 message: error && error.message 
 }) 
 
-};exports && exports.handler = async (_event, _context) => {
-    console && console.log('site-monitor fallback executed locally'),
-message: error.message
-})
-};exports.handler = async (_event, _context) => {
-    console.log('site-monitor fallback executed locally')
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 #!/usr/bin/env node
 =======
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 #!/usr/bin/env node
 #!/usr/bin/env node
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -83,6 +88,7 @@ message: error.message
 // This is a local fallback when the main function is unavailable
 
 exports.handler = async (_event, _context) => {
+<<<<<<< HEAD
 <<<<<<< HEAD
     console.log('site-monitor fallback executed locally'),
 
@@ -104,10 +110,15 @@ message: error.message;
 
 =======
     // // // console.log('site-monitor fallback executed locally'),
+=======
+    console.log('site-monitor fallback executed locally'),
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     
     try {
         // Basic fallback logic;
         const result = {
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         console && console.error('Fallback execution error:', error),
         return {
@@ -159,6 +170,13 @@ message: error.message;
 },
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+        console && console.error('Fallback execution error:', error),
+        return {
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 #!/usr/bin/env node;
 // Netlify Function Fallback: site-monitor;
 // This is a local fallback when the main function is unavailable;
@@ -185,6 +203,7 @@ exports.handler = async (_event, _context) => {;
             });
         }
     }
+<<<<<<< HEAD
 },;
 
 
@@ -193,3 +212,5 @@ exports.handler = async (_event, _context) => {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

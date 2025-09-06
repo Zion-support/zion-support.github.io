@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 interface SafeImageProps {
   src: string;
   alt: string;  width?: number;interface SafeImageProps {
@@ -20,6 +21,12 @@ interface SafeImageProps {;
   src: string;
   alt: string;  width?: number;interface SafeImageProps {
 interface SafeImageProps {
+=======
+import { ImageIcon } from 'lucide-react'
+interface SafeImageProps {;
+import { ImageIcon } from 'lucide-react'
+interface SafeImageProps {;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   src: string;
   alt: string;  width?: number;interface SafeImageProps {
 
@@ -39,11 +46,6 @@ interface SafeImageProps {
         <ImageIcon className='w-6 h-6' />      </div>
     )
   }
-    />
-  );        aria-label={alt}
-'use client',;
-import Image from 'next/image',;
-import { useState } from 'react',;
 'use client',;
 import Image from 'next/image',;
 import { useState } from 'react',;
@@ -117,9 +119,12 @@ export function SafeImage({
       setHasError(true)
     } else if (!hasError) {
       setHasError(true)
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     }
   }
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   // If we have an error and no fallback, show a placeholder
   if (hasError && (!fallbackSrc |currentSrc === fallbackSrc)) {
@@ -134,6 +139,7 @@ export function SafeImage({
     )
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 ;
     />;
@@ -143,11 +149,14 @@ export function SafeImage({
 ;
     />;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   );        aria-label={alt}
 'use client',;
 import Image from 'next/image',;
 import { useState } from 'react',;
 import { ImageIcon } from 'lucide-react';
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 interface SafeImageProps {;
@@ -262,10 +271,13 @@ export function SafeImage({;
   if (hasError && (!fallbackSrc || currentSrc === fallbackSrc)) {
     return (
       <div 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         className={`flex items-center justify-center bg-gray-100 text-gray-400 ${className}`}
         style={{ width, height }}
         role="img"
         aria-label={alt}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       >
@@ -280,10 +292,14 @@ export function SafeImage({;
 
 =======
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       >
       </div>
     )
   }
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     />
   ); return (
@@ -312,6 +328,11 @@ ursor/fix-website-loading-errors-and-merge-6662
     />
   ); return (
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+    />
+  ); return (
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <Image
       src = {currentSrc,}
       alt = {alt,}
@@ -322,6 +343,7 @@ ursor/fix-website-loading-errors-and-merge-6662
       priority = {priority,}
       // Add unoptimized as fallback for problematic images
       unoptimized = {hasError,}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -364,6 +386,11 @@ ursor/fix-website-loading-errors-and-merge-6662
 }
 ;
   return (;
+=======
+}
+    />;
+  );
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <Image;
       src={currentSrc}
       alt={alt}
@@ -377,6 +404,7 @@ ursor/fix-website-loading-errors-and-merge-6662
     />;
   );
 } ;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   src: string,
   alt: string,
@@ -450,3 +478,5 @@ if ( {) {
 =======
 } ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

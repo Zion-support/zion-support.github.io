@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -8,19 +9,20 @@
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 //Combine all services for comprehensive showcase const allServices = [ ...nextGenerationAIServices;
-
  //Combine all services for comprehensive showcase const allServices = [ ...nextGenerationAIServices;
-
-
-
-
+//Combine all services for comprehensive showcase const allServices = [ ...nextGenerationAIServices;
  //Combine all services for comprehensive showcase const allServices = [ ...nextGenerationAIServices;
 
 //Combine all services for comprehensive showcase const all_services = [ ...nextGenerationAIServices;
 import React from 'react';
  //Combine all services for comprehensive showcase const allServices = [ ...nextGenerationAIServices;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 //Combine all services for comprehensive showcase const all_services = [ ...nextGenerationAIServices;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 ...cuttingEdgeITServices;
@@ -31,6 +33,7 @@ import React from 'react';
 ...enterpriseITServices;
 ...realMarketServices;
 ...newVerifiedServicesQ22025 ];
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -43,10 +46,13 @@ const matches_search = service.name.toLowerCase () .includes (search_term.toLowe
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 return filtered;
 }, [all_services, selected_category, search_term, sort_by]);
 const container_variants = {
   hidden: {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -72,6 +78,8 @@ visible: {;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   {
   opacity: 0, y: 30
 }animate= {
@@ -79,6 +87,7 @@ visible: {;
   opacity: 1, y: 0
 }transition= {
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -352,6 +361,8 @@ visible: {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   {
   opacity: 0, y: 30
 }whileInView= {
@@ -359,12 +370,6 @@ visible: {
   opacity: 1, y: 0
 }transition= {
   {
-
-
-  children 
-}</a>) 
-
-
 }
 }> {
   children
@@ -378,6 +383,7 @@ const Button = ({
   className = '';
   children, onClick
 }: {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -1046,12 +1052,22 @@ const Button = ({
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  href,
+  variant = 'primary';
+  size = 'md';
+  href?: string;
+  variant?: 'primary' | 'secondary';
+  size?: 'sm' | 'md' | 'lg';
+  className?: string;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     return (
       <a href={href} className={classes}>;
         {children}
       </a>;
     );
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -1068,11 +1084,14 @@ const Button = ({
   return (
     <button onClick={onClick} className={classes}>;
       {children}
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
     </button>;
   );
 };
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -1080,6 +1099,8 @@ const Button = ({
   );
 };
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   class_name = '';
   children, on_click;
 }: {
@@ -1120,6 +1141,7 @@ if ( {) {
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
@@ -1146,3 +1168,5 @@ if ( {) {
 },
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

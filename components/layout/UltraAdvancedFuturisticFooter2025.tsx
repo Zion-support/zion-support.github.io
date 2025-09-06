@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -62,6 +63,8 @@ import { AnimatePresence } from 'framer-motion';
 
 
 import {
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   Mail
   Phone
   MapPin
@@ -79,7 +82,15 @@ import {
   BookOpen
   Briefcase
   Atom;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+} from 'lucide-react';
+
+import Link from 'next/link';
+import { AnimatePresence } from 'framer-motion';
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   Mail,
   Phone,
   MapPin,
@@ -96,9 +107,10 @@ import {
   Users,
   BookOpen,
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
-  Briefcase,;
-  Atom,;
 
 
 } from 'lucide-react';
@@ -111,6 +123,7 @@ interface FooterLink {;
   label: string;
   href: string;
   description?: string;
+<<<<<<< HEAD
 
   external?: boolean;
 ;
@@ -119,10 +132,13 @@ interface FooterLink {;
   external?: boolean;
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface FooterSection {
 interface FooterSection {;
   title: string;
   links: FooterLink[];} from 'lucide-react';
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -238,6 +254,8 @@ const footerSections: FooterSection[] = [
         description: 'Complete service portfolio'
       }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     ]
   }
   {
@@ -278,7 +296,6 @@ const footerSections: FooterSection[] = [
   {
     title: 'Solutions'
     links: [
-
       { label: 'Healthcare & Biotech', href: '/healthcare-solutions', description: 'Medical technology' }
       { label: 'Financial Services', href: '/solutions?industry=financial', description: 'Fintech solutions' }
       { label: 'Manufacturing', href: '/solutions?industry=manufacturing', description: 'Industry 4.0' }
@@ -294,6 +311,7 @@ const footerSections: FooterSection[] = [
       { label: 'Careers', href: '/careers', description: 'Join our team' }
       { label: 'Contact', href: '/contact', description: 'Get in touch' }
     ]
+<<<<<<< HEAD
 
   };
 =======
@@ -438,10 +456,13 @@ const footer_sections: FooterSection[] = [;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   {
     title: 'Resources',
     links: [;
       { label: 'Blog', href: '/blog', description: 'Industry insights' },
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -616,10 +637,13 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {
   };
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const footerSections = [
     {
       title: 'Services'
       items: [
+<<<<<<< HEAD
 
         { label: 'AI & Machine Learning', href: '/ai-services' },
         { label: 'Quantum Computing', href: '/quantum-computing' },
@@ -815,11 +839,14 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {
     {
 
       title: 'Solutions',
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       items: [
         { label: 'Enterprise Solutions', href: '/enterprise-solutions' },
         { label: 'Micro SAAS', href: '/micro-saas' },
         { label: 'IT Services', href: '/it-services' },
         { label: 'Innovation Lab', href: '/innovation-lab' },
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
         { label: 'AI & Machine Learning', href: '/ai-services' },
@@ -859,10 +886,13 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {
       title: 'Company',
       items: [
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         { label: 'About Us', href: '/about' },
         { label: 'Our Team', href: '/team' },
         { label: 'Careers', href: '/careers' },
         { label: 'Investors', href: '/investors' },
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -983,6 +1013,12 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {
     }
   }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  ];
+    visible: {
+      opacity: 1
+      transition: {
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const itemVariants = {
     hidden: { y: 20, opacity: 0 }
     visible: {
@@ -990,6 +1026,7 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {
       opacity: 1
       transition: {
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 interface FooterLink {;
   label: string,;
@@ -1010,6 +1047,8 @@ interface FooterLink {;
     },
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface FooterSection {;
   title: string,;
   links: FooterLink[];
@@ -1256,6 +1295,7 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {;
     window && window.scrollTo({ top: 0, behavior: 'smooth' });    window && window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -1356,26 +1396,37 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {;
   };
   return (
     <footer className='relative bg-gradient-to-br from-gray-900 via-purple-900 to-gray-900 text-white overflow-hidden'>;
+=======
+
+
+  return (
+    <footer className="relative bg-gradient-to-br from-gray-900 via-purple-900 to-gray-900 text-white overflow-hidden">
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {/* Animated Background Elements */}
       <div className="absolute inset-0 -z-10">
-        {/* Quantum Particle Field */}
-        {[...Array(30)].map((_, i) => (
-          <motion.div
-            key={i}  }
-        {[...Array(30)].map((_, i) => (;
-          <motion&& motion.div
-            key={i}  }
   return (
     <footer className="relative bg-gradient-to-br from-gray-900 via-purple-900 to-gray-900 text-white overflow-hidden">
       {/* Animated Background Elements */}
       <div className="absolute inset-0 -z-10">
 
 
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+  return (
+    <footer className='relative bg-gradient-to-br from-gray-900 via-purple-900 to-gray-900 text-white overflow-hidden'>;
+      {/* Animated Background Elements */}
+  return (
+    <footer className="relative bg-gradient-to-br from-gray-900 via-purple-900 to-gray-900 text-white overflow-hidden">;
+      {/* Animated Background Elements */}
+      <div className="absolute inset-0 -z-10">;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         {/* Quantum Particle Field */}
         {[...Array(30)].map((_, i) => (;
           <motion&& motion.div
             key={i}
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -1727,6 +1778,11 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {_const _scrollToTop =
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+            }}
+          />;
+        ))}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         {/* Main Footer Content */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">;
           <motion&& motion.div
@@ -1736,6 +1792,7 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {_const _scrollToTop =
             viewport={{ once: true }}
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-12">;
             {/* Company Info */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -1785,11 +1842,14 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {_const _scrollToTop =
                   <a href="https://ziontechgroup.com" className="hover:text-white transition-colors duration-200">
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     ziontechgroup.com
                   </a>
                 </div>
               </div>
             </motion.div>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
             <motion && motion.div variants={itemVariants} className="lg:col-span-2">;
@@ -1849,6 +1909,8 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {_const _scrollToTop =
                         className='text-gray-300 hover:text-white transition-colors duration-200 hover:translate-x-1 inline-block'                      >                  <span>{section.title}</span>
                 </h4>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <ul className="space-y-3">
                   {section.items.map((item) => (
                     <li key={item.label}>
@@ -1968,6 +2030,9 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {_const _scrollToTop =
                       <Link;
                         href={item.href}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                         className='text - gray - 300 hover:text - white transition - colors duration - 200 hover:translate - x-1 inline - block'                      >                  <span>{section.title}</span>;
                 </h4>;
                 <ul className="space - y-3">;
@@ -1975,12 +2040,16 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {_const _scrollToTop =
                     <li key={item.label}>;
                       <Link;
 
+<<<<<<< HEAD
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                         href={item.href}
                         className="text - gray - 300 hover:text - white transition - colors duration - 200 hover:translate - x-1 inline - block";
                       >;
                         {item.label}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
           </motion && motion.div>;
@@ -1991,10 +2060,47 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {_const _scrollToTop =
                         {item.label}
                       </Link>
                     </li>
+=======
+            {/* Footer Sections */}
+            {footerSections && footerSections.map((section, index) => (;
+              <motion && motion.div key={section && section.title} variants={itemVariants}>;
+                <h4 className='text-lg font-semibold text-white mb-6 flex items-center space-x-2'>;
+                  {section && section.title === 'Services' && (;
+                    <Briefcase className='w-5 h-5 text-cyan-400' />;
+                  )}
+                  {section && section.title === 'Solutions' && (;
+                    <Zap className='w-5 h-5 text-purple-400' />;
+                  )}
+                  {section && section.title === 'Company' && (;
+                    <Users className='w-5 h-5 text-pink-400' />;
+                  )}
+                  {section && section.title === 'Resources' && (;
+                    <BookOpen className='w-5 h-5 text-blue-400' />;
+                  )}
+                  <span>{section && section.title}</span>;
+                </h4>;
+                <ul className='space-y-3'>;
+                  {section && section.items.map(item => (;
+                    <li key={item && item.label}>;
+                      <Link
+                        href={item && item.href}
+                        className='text-gray-300 hover:text-white transition-colors duration-200 hover:translate-x-1 inline-block'>                  <span>{section && section.title}</span>;
+                </h4>;
+                <ul className="space-y-3">;
+                  {section && section.items.map((item) => (;
+                    <li key={item && item.label}>;
+                      <Link
+                        href={item && item.href}
+                        className="text-gray-300 hover:text-white transition-colors duration-200 hover:translate-x-1 inline-block">;
+                        {item && item.label}
+                      </Link>;
+                    </li>;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   ))}
-                </ul>
-              </motion.div>
+                </ul>;
+              </motion && motion.div>;
             ))}
+<<<<<<< HEAD
           </motion.div>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
@@ -2012,11 +2118,14 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {_const _scrollToTop =
           {/* Social Links & Newsletter */}
           <motion.div
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+          {/* Social Links & Newsletter */}
+          <motion&& motion.div
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.6 }}
             viewport={{ once: true }}
-
 
           >
             <div className='flex flex-col lg:flex-row items-center justify-between gap-8'>
@@ -2031,6 +2140,7 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {_const _scrollToTop =
                     rel='noopener noreferrer'
                     className='w-10 h-10 bg-gray-800/50 hover:bg-gradient-to-r hover:from-cyan-500 hover:to-purple-500 rounded-xl flex items-center justify-center text-gray-300 hover:text-white transition-all duration-200 hover:scale-110'
                     whileHover={{ y: -2 }}
+<<<<<<< HEAD
 
             className="mt-16 pt-12 border-t border-gray-800/50"
           >
@@ -2043,6 +2153,8 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {_const _scrollToTop =
           >
             <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               {/* Social Links */}
               <div className="flex items-center space-x-6">;
                 <span className="text-gray-400 font-medium">Follow Us:</span>;
@@ -2050,6 +2162,7 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {_const _scrollToTop =
                   <motion&& motion.a
                     key={social && social.label}
                     href={social && social.href}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
             className='mt-16 pt-12 border-t border-gray-800/50'
@@ -2079,10 +2192,13 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {_const _scrollToTop =
                     key={social.label}
                     href={social.href}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-10 h-10 bg-gray-800/50 hover:bg-gradient-to-r hover:from-cyan-500 hover:to-purple-500 rounded-xl flex items-center justify-center text-gray-300 hover:text-white transition-all duration-200 hover:scale-110"
                     whileHover={{ y: -2 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -2098,27 +2214,14 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {_const _scrollToTop =
                   computing, and future technology.;
                 </p>;
                 <div className='flex space-x-2'>;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   <input
                     type='email'
                     placeholder='Enter your email'
                     className='flex-1 px-4 py-3 bg-gray-800/50 border border-gray-700/50 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent'
                   />;
                   <motion&& motion.button
-                    className='px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-xl font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-200'                    whileHover={{ scale: 1 && 1.05 }}                </p>;
-                <div className="flex space-x-2">;
-                    whileTap={{ scale: 0.95 }}
-                  >
-                    <social.icon className="w-5 h-5" />
-                  </motion.a>
-                ))}
-              </div>
-                    <social.icon className='w-5 h-5' />                  </motion.a>
-
-                  </motion.a>
-
-                ))}
-              </div>
-
               {/* Newsletter Signup */}
               <div className='flex-1 max-w-md'>
                 <h5 className='text-lg font-semibold text-white mb-3'>
@@ -2127,7 +2230,6 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {_const _scrollToTop =
                 <p className='text-gray-400 text-sm mb-4'>
                   Get the latest insights on AI consciousness, quantum
                   computing, and future technology.
-
                 </p>
                 <div className='flex space-x-2'>
                   <input
@@ -2136,6 +2238,7 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {_const _scrollToTop =
                     className='flex-1 px-4 py-3 bg-gray-800/50 border border-gray-700/50 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent'
                   />
                   <motion.button
+<<<<<<< HEAD
                     className='px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-xl font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-200'                    whileHover={{ scale: 1.05 }}                </p>
                 <div className="flex space-x-2">
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -2170,6 +2273,8 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {_const _scrollToTop =
                     className='px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-xl font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-200'                    whileHover={{ scale: 1.05 }}
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                   >
@@ -2180,13 +2285,14 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {_const _scrollToTop =
             </div>
           </motion.div>
         </div>
-
-
                     whileHover={{ scale: 1 && 1.05 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 whileHover={{ scale: 1 && 1.05 }}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     whileTap={{ scale: 0 && 0.95 }}>;
                     Subscribe;
                   </motion && motion.button>;
@@ -2195,6 +2301,7 @@ whileHover={{ scale: 1 && 1.05 }}
             </div>;
           </motion && motion.div>;
         </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
@@ -2209,6 +2316,12 @@ whileHover={{ scale: 1 && 1.05 }}
 
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         {/* Bottom Bar */}
         <motion&& motion.div
 =======
@@ -2295,32 +2408,38 @@ whileHover={{ scale: 1 && 1.05 }}
         {/* Bottom Bar */}
         <motion.div;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
         {/* Bottom Bar */}
         <motion.div
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0 && 0.6 }}
           viewport={{ once: true }}
 
-
         >
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6'>
             <div className='flex flex-col md:flex-row items-center justify-between gap-4'>
               <div className='text-gray-400 text-sm'>
+<<<<<<< HEAD
                 © 2024 Zion Tech Group. All rights reserved.
 <<<<<<< HEAD
 =======
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           className='border-t border-gray-800/50 bg-gray-900/50 backdrop-blur-xl'>;
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6'>;
             <div className='flex flex-col md:flex-row items-center justify-between gap-4'>;
               <div className='text-gray-400 text-sm'>;
+<<<<<<< HEAD
                 © 2024 Zion Tech Group. All rights reserved. |;
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
@@ -2333,11 +2452,14 @@ whileHover={{ scale: 1 && 1.05 }}
               <div className='text-gray-400 text-sm'>
                 © 2024 Zion Tech Group. All rights reserved.
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <Link
                   href='/privacy'
                   className='hover:text-white transition-colors duration-200 ml-2'>;
                   Privacy Policy;
                 </Link>{' '}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
                   className='hover:text-white transition-colors duration-200 ml-2'
@@ -2392,6 +2514,8 @@ whileHover={{ scale: 1 && 1.05 }}
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   <Rocket className="w-4 h-4 text-pink-400" />
                   <span>Space Technology</span>
                 </div>
@@ -2400,6 +2524,7 @@ whileHover={{ scale: 1 && 1.05 }}
           </div>
         </motion.div>
       </div>
+<<<<<<< HEAD
 
                 |;
 <<<<<<< HEAD
@@ -2409,16 +2534,21 @@ whileHover={{ scale: 1 && 1.05 }}
                 <Link
                   href='/terms'
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   className='hover:text-white transition-colors duration-200 ml-2'>;
                   Terms of Service;
                 </Link>;
               </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <div className='flex items-center space-x-4 text-gray-400 text-sm'>;
                 <span>Powered by</span>;
                 <div className='flex items-center space-x-2'>;
@@ -2476,6 +2606,7 @@ whileHover={{ scale: 1 && 1.05 }}
             </div>;
           </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -2513,6 +2644,8 @@ export default UltraAdvancedFuturisticFooter2025;
         className='fixed bottom-8 right-8 w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-full shadow-2xl hover:shadow-purple-500/25 transition-all duration-200 z-50'        whileHover={{ scale: 1.1, y: -2 }}
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         whileHover={{ scale: 1.1, y: -2 }}
         whileTap={{ scale: 0.9 }}
         initial={{ opacity: 0, scale: 0 }}
@@ -2520,10 +2653,26 @@ export default UltraAdvancedFuturisticFooter2025;
         transition={{ duration: 0.3, delay: 1 }}
       >
 <<<<<<< HEAD
+<<<<<<< HEAD
         <ArrowUp className="w-6 h-6 mx-auto" />
       </motion.button>
+=======
+export default UltraAdvancedFuturisticFooter2025;      </motion.button>
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     </footer>
+  )
+}
+export default UltraAdvancedFuturisticFooter2025;
 
+export default UltraAdvancedFuturisticFooter2025;
+export default UltraAdvancedFuturisticFooter2025;
+
+};
+
+
+};
+
+export default UltraAdvancedFuturisticFooter2025;
         </motion.div>;
       </div>;
       {/* Scroll to Top Button */}
@@ -2547,6 +2696,7 @@ export default UltraAdvancedFuturisticFooter2025;      </motion.button>;
 ;
 export default UltraAdvancedFuturisticFooter2025;
 ;
+<<<<<<< HEAD
 
 =======
   );
@@ -2577,3 +2727,5 @@ export default UltraAdvancedFuturisticFooter2025;
 export default UltraAdvancedFuturisticFooter2025;
 export default UltraAdvancedFuturisticFooter2025;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

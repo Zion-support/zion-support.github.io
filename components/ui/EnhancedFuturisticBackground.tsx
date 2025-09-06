@@ -1,10 +1,14 @@
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }let particles: Particle[] = [];
 let connections: Connection[] = [];
 // Initialize particles ctx.fill_style = colors.primary;
 ctx.font = `$ {
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -44,6 +48,8 @@ interface EnhancedFuturisticBackgroundProps {
 =======
 animationSpeed?: number
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 import React from 'react';
  const colorSchemes = {;
@@ -73,11 +79,14 @@ const EnhancedFuturisticBackground: React.FC<;
   particleCount = 100,;
   animationSpeed = 1,}) => {const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> = ({;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   font_size;
 }px monospace`;
 ;
@@ -90,6 +99,7 @@ const EnhancedFuturisticBackground: React.FC<;
   color_scheme = 'quantum',
   particle_count = 100,
   animation_speed = 1, }) => {const EnhancedFuturisticBackground: React.FC < EnhancedFuturisticBackgroundProps> = ({
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
@@ -339,12 +349,15 @@ const EnhancedFuturisticBackground: React.FC<
       x: number;
       y: number;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       vx: number;
       vy: number;
       size: number;
       color: string;
       opacity: number;
       life: number;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     // Enhanced particle system
@@ -362,12 +375,15 @@ const EnhancedFuturisticBackground: React.FC<
 max_life: number;      coordinate_x: number,
       coordinate_y: number,
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       vx: number,
       vy: number,
       size: number,
       color: string,
       opacity: number,
       life: number,
+<<<<<<< HEAD
 <<<<<<< HEAD
 
         this.color = colors.particles[Math.floor(Math.random() * colors.particles.length)];
@@ -405,6 +421,8 @@ this.color = colors.particles[Math.floor(Math.random() * colors.particles.length
         this.life = Math.random() * 100;
         this.maxLife = 100
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       update() {
         this.x += this.vx;
         this.y += this.vy;
@@ -416,7 +434,6 @@ this.color = colors.particles[Math.floor(Math.random() * colors.particles.length
         if (this.y > canvas.height) this.y = 0;
         // Fade out near end of life
         if (this.life < 20) {
-
           this.opacity *= 0.95
 
         }
@@ -424,21 +441,24 @@ this.color = colors.particles[Math.floor(Math.random() * colors.particles.length
 
           this.opacity *= 0.95;        }
 
-
         }
       }
 
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       draw() {
         ctx.save();
         ctx.globalAlpha = this.opacity;
 
         
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
           this.opacity *= 0.95;        }          this.opacity *= 0.95
@@ -451,19 +471,25 @@ this.color = colors.particles[Math.floor(Math.random() * colors.particles.length
         ctx.save();
         ctx.globalAlpha = this.opacity;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         // Create gradient for particle
         const gradient = ctx.createRadialGradient(this.x, this.y, 0, this.x, this.y, this.size);
         gradient.addColorStop(0, this.color);
         gradient.addColorStop(1, 'transparent');
 <<<<<<< HEAD
+<<<<<<< HEAD
         
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         ctx.fillStyle = gradient;
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
         ctx.fill();
+<<<<<<< HEAD
 <<<<<<< HEAD
 
         
@@ -474,6 +500,8 @@ this.color = colors.particles[Math.floor(Math.random() * colors.particles.length
 
 =======
         ctx.restore();
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       }
       isDead() {
         return this.life <= 0 |this.opacity < 0.01;      }
@@ -483,7 +511,11 @@ this.color = colors.particles[Math.floor(Math.random() * colors.particles.length
 
       }
       isDead() {
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         return this.life <= 0 || this.opacity < 0.01
       }
 
@@ -492,24 +524,29 @@ this.color = colors.particles[Math.floor(Math.random() * colors.particles.length
         return this.life <= 0 || this.opacity < 0.01;      }        
 
         ctx.restore()
-
         return this.life <= 0 || this.opacity < 0.01;      }
 
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       }
       isDead() {
         return this.life <= 0 |this.opacity < 0.01
     }
+<<<<<<< HEAD
 
 
     // Connection lines between particles
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       max_life: number,
         this.coordinate_x = Math.random () * canvas.width;
         this.coordinate_y = Math.random () * canvas.height;
@@ -553,6 +590,7 @@ if ( {) {
 }
           this.opacity *= 0.95;        }          this.opacity *= 0.95;
         }
+<<<<<<< HEAD
 =======
         return this.life <= 0 || this.opacity < 0.01
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -584,6 +622,10 @@ if ( {) {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+      }
+    }
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         );
         if (distance < 150) {
           ctx.save();
@@ -594,6 +636,7 @@ if ( {) {
           ctx.moveTo(this.p1.x, this.p1.y);
           ctx.lineTo(this.p2.x, this.p2.y);
           ctx.stroke();
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -729,6 +772,8 @@ if ( {) {
 =======
           ctx.restore()
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ;
       constructor (p1: Particle, p2: Particle) {
         this.p1 = p1;
@@ -766,15 +811,19 @@ if ( {) {
     }
           ctx.restore ();
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         }
       }
     }
     let particles: Particle[] = [];
     let connections: Connection[] = [];
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -811,6 +860,8 @@ if ( {) {
 =======
       for (let i = 0, i < columns, i++) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         drops[i] = 1
       }
       const drawMatrix = () => {
@@ -818,6 +869,7 @@ if ( {) {
         ctx.fillRect(0, 0, canvas.width, canvas.height);
         ctx.fillStyle = colors.primary;
         ctx.font = `${fontSize}px monospace`;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -846,6 +898,8 @@ if ( {) {
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ;
     // Initialize particles;
     for (let index = 0; i < settings.particle_count; i++) {
@@ -892,6 +946,7 @@ if (> 0.975) {) {
           }
           drops[i]++;
         }
+<<<<<<< HEAD
 
 
         for (let i = 0, i < drops.length, i++) {
@@ -911,6 +966,8 @@ if (> 0.975) {) {
           if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
             drops[i] = 0
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       };
 
       return drawMatrix;    };          ctx && ctx.fillText(text, i * fontSize, drops[i] * fontSize);
@@ -922,6 +979,7 @@ if (> 0.975) {) {
           drops[i]++;
         }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     };
 
@@ -929,6 +987,8 @@ if (> 0.975) {) {
 =======
     };
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     const drawMatrix = matrixRain();
     // Main animation loop
     const animate = () => {
@@ -941,16 +1001,20 @@ if (> 0.975) {) {
       particles.forEach(particle => {
         particle.update();
 <<<<<<< HEAD
+<<<<<<< HEAD
 
         particle.draw()
 
 =======
         particle.draw()
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       });
       // Remove dead particles and add new ones
       particles = particles.filter(particle => !particle.isDead());
       while (particles.length < settings.particleCount) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -986,10 +1050,13 @@ if (> 0.975) {) {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       connections = [];
       for (let i = 0; i < particles && particles.length; i++) {;
         for (let j = i + 1; j < particles && particles.length; j++) {        particles && particles.push(new Particle());
       }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -998,12 +1065,15 @@ if (> 0.975) {) {
 =======
       // Create connections between nearby particles;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       connections = [];
       for (let i = 0; i < particles && particles.length; i++) {;
         for (let j = i + 1; j < particles && particles.length; j++) {;
           const distance = Math && Math.sqrt(;
             Math && Math.pow(particles[i].x - particles[j].x, 2) +;
               Math && Math.pow(particles[i].y - particles[j].y, 2);
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1348,6 +1418,9 @@ ctx && ctx.restore();
       }
       // Create connections between nearby particles
       connections = [];
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       for (let i = 0; i < particles.length; i++) {
         for (let j = i + 1; j < particles.length; j++) {
           const distance = Math.sqrt(
@@ -1364,8 +1437,8 @@ ctx && ctx.restore();
 
       }
 
-      // Create connections between nearby particles
-      connections = [];
+
+
 
           }
         }
@@ -1389,29 +1462,15 @@ ctx && ctx.restore();
           ctx.lineTo(x - size, y + size);
           ctx.lineTo(x + size, y + size);
           ctx.closePath();
-          ctx.stroke();
         } else {
-          // Draw square
-          ctx.strokeRect(x - size, y - size, size * 2, size * 2);
+          // Draw square;
+          ctx.stroke_rect (x - size, y - size, size * 2, size * 2);
         }
-        ctx.restore();
-      }
-      // Respect reduced motion
-      const prefersReduced = window.matchMedia(
-        '(prefers-reduced-motion: reduce)'
-      ).matches;
-      if (prefersReduced) {
-        // Slow down updates
-        setTimeout(() => {
-          animationRef.current = requestAnimationFrame(animate);
-        }, 100);
-      } else {
-        animationRef.current = requestAnimationFrame(animate);      }        } else {
-          // Draw square
-          ctx.strokeRect(x - size, y - size, size * 2, size * 2)
         }
-        ctx.restore()
+
+        ctx && ctx.restore();
       }
+<<<<<<< HEAD
       // Respect reduced motion
       const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches
       if (prefersReduced) {
@@ -1428,18 +1487,19 @@ ctx && ctx.restore();
       if (animationRef && animationRef.current) {;
         cancelAnimationFrame(animationRef && animationRef.current);
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       }
       window && window.removeEventListener('resize', resizeCanvas);
     };  }, [colorScheme, intensity, particleCount, animationSpeed]);        cancelAnimationFrame(animationRef && animationRef.current);
       }
       window && window.removeEventListener('resize', resizeCanvas);
     }
-
-
   return (
     <div className={`relative min-h-screen ${className}`}>;
       <canvas
         ref={canvasRef}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -1499,12 +1559,15 @@ if ( {) {
         ref={canvas_ref}
         className='fixed inset - 0 w - full h - full pointer - events - none z - 0';
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         style={{ background: 'transparent' }}
       />;
       {/* Overlay gradient */}
       <div;
         className='fixed inset - 0 pointer - events - none z - 0';
         style={{
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -1527,6 +1590,8 @@ if ( {) {
         }}
       />;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {/* Content */}
       <div className='relative z-10'>{children}</div>;
     </div>;
@@ -1539,8 +1604,11 @@ export default EnhancedFuturisticBackground;
 export default EnhancedFuturisticBackground;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           background: `radial - gradient (circle at 50% 50%, transparent 0%, rgba (0, 0, 0, 0.3) 100%)`,
         }}
       />;
@@ -1551,6 +1619,7 @@ export default EnhancedFuturisticBackground;
 ;
 export default EnhancedFuturisticBackground;
 ;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
@@ -1558,3 +1627,5 @@ export default EnhancedFuturisticBackground;
 export default EnhancedFuturisticBackground;
 export default EnhancedFuturisticBackground;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

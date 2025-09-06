@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 
@@ -8,17 +9,23 @@
 import React from "react";
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
 import {Badge} from "@/components/ui/badge";
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from "react",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { Badge } from "@/components/ui/badge",
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export function RecentActivity() {
   // Mock activity data
 
   const activities = [
     {
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -29,11 +36,14 @@ export function RecentActivity() {
       target: "Senior React Developer"
       timestamp: "1h ago"
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       id: "act-1",
       user: "Michael Chen",
       action: "posted a new job",
       target: "Senior React Developer",
       timestamp: "1h ago",
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -45,6 +55,13 @@ export function RecentActivity() {
     }
     },
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+      type: "job"
+    }
+    },
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     {
       id: "act-2"
       user: "Sarah Wilson"
@@ -52,6 +69,7 @@ export function RecentActivity() {
       target: "5 candidates for UI/UX Designer"
       timestamp: "3h ago"
       type: "candidate"
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -65,6 +83,8 @@ export function RecentActivity() {
     }
     },
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     {
       id: "act-3"
       user: "David Johnson"
@@ -72,6 +92,7 @@ export function RecentActivity() {
       target: "Alex Morgan"
       timestamp: "Yesterday"
       type: "interview"
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -85,6 +106,8 @@ export function RecentActivity() {
     }
     },
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     {
       id: "act-4"
       user: "Emily Davis"
@@ -93,6 +116,7 @@ export function RecentActivity() {
       timestamp: "2d ago"
       type: "comment"
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 import React from "react";
@@ -184,11 +208,19 @@ import React from "react",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Badge } from "@/components/ui/badge",;
 ;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
+
+
 import React from "react",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Badge } from "@/components/ui/badge",;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export function RecentActivity() {;
   // Mock activity data;
   const activities = [;
@@ -200,10 +232,13 @@ export function RecentActivity() {;
       timestamp: "1h ago",;
       type: "job";
 <<<<<<< HEAD
+<<<<<<< HEAD
     };
 =======
     },;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     {;
       id: "act-2",;
       user: "Sarah Wilson",;
@@ -212,10 +247,13 @@ export function RecentActivity() {;
       timestamp: "3h ago",;
       type: "candidate";
 <<<<<<< HEAD
+<<<<<<< HEAD
     };
 =======
     },;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     {;
       id: "act-3",;
       user: "David Johnson",;
@@ -224,10 +262,13 @@ export function RecentActivity() {;
       timestamp: "Yesterday",;
       type: "interview";
 <<<<<<< HEAD
+<<<<<<< HEAD
     };
 =======
     },;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     {;
       id: "act-4",;
       user: "Emily Davis",;
@@ -237,26 +278,24 @@ export function RecentActivity() {;
       type: "comment";
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
   ];
 
   const getBadgeForType = (type: string) => {;
     switch (type) {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       case "job": return <Badge variant="outline" className="bg-blue-100 text-blue-800 border-blue-200">Job</Badge>;
       case "candidate":;
         return <Badge variant="outline" className="bg-green-100 text-green-800 border-green-200">Candidate</Badge>;
       case "interview":;
         return <Badge variant="outline" className="bg-purple-100 text-purple-800 border-purple-200">Interview</Badge>;
-
-      case "comment":;
-        return <Badge variant="outline" className="bg-amber-100 text-amber-800 border-amber-200">Comment</Badge>,;
-      default:;
-        return <Badge variant="outline">Activity</Badge>;
-
     }
   }
 
   return (
+<<<<<<< HEAD
 =======
       id:"act-1",;
       user:"Michael Chen",;
@@ -314,6 +353,8 @@ export function RecentActivity() {;
   };
   return (;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <Card>;
       <CardHeader>;
         <CardTitle>Recent Activity</CardTitle>;
@@ -321,6 +362,7 @@ export function RecentActivity() {;
       </CardHeader>;
       <CardContent className="p-0">;
         <div className="divide-y divide-border">;
+<<<<<<< HEAD
 <<<<<<< HEAD
           {activities && activities.map((activity) => (;
             <div key={activity && activity.id} className="p-4 flex items-start gap-3">;
@@ -350,11 +392,17 @@ export function RecentActivity() {;
                     {getBadgeForType(activity.type)}
                     <span className="text-xs text-muted-foreground">{activity.timestamp}</span>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+          {activities && activities.map((activity) => (;
+            <div key={activity && activity.id} className="p-4 flex items-start gap-3">;
+              <div className="w-8 h-8 rounded-full bg-muted flex items-center justify-center">;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   </div>;
                 </div>;
               </div>;
             </div>;
           ))}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
         </div>;
@@ -475,6 +523,8 @@ function RecentActivity() {
         <div className="p-3 text-center border-t border-border">;
           <button className="text-sm text-blue-500 font-medium hover: text-blue-700">;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             View All Activity;
           </button>;
         </div>;
@@ -483,6 +533,7 @@ function RecentActivity() {
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
@@ -543,3 +594,9 @@ default:
 }
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+}
+;
+    </Card>);
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

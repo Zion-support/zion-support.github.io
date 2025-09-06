@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 import React, { useState } from 'react'
@@ -45,12 +46,16 @@ import {;
 <<<<<<< HEAD
 =======
 
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface AIEnhancementPanelProps {
   title: string;
   defaultOptions: AIEnhancementOptions;
   onApply: (content: string) => void;
   onClose?: () => void;
   showInstructions?: boolean;
+<<<<<<< HEAD
   initialContent?: string
 export function AIEnhancementPanel({
 
@@ -74,6 +79,8 @@ export function AIEnhancementPanel({
       setGeneratedContent(result)
     }
   }
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { Textarea } from '@/components/ui/textarea';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -95,6 +102,7 @@ export function AIEnhancementPanel({;
   onClose,;
   showInstructions = true,;
 
+<<<<<<< HEAD
             value={options && options.content}
             onChange={e => handleInputChange(e, 'content')}          />;
         </div>;
@@ -129,17 +137,22 @@ export function AIEnhancementPanel({;
 
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const handleInputChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
     field: keyof AIEnhancementOptions
   ) => {
     setOptions({
+<<<<<<< HEAD
       ...options
       [field]: e.target.value
       [field]: e.target.value,
       ...options
       [field]: e.target.value
       ...options,
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     })
   }
   const handleApply = () => {
@@ -151,11 +164,12 @@ export function AIEnhancementPanel({;
     setCopied(true)
     setTimeout(() => setCopied(false), 2000)
   }
-      ...options,
-      [field]: e.target.value})
-  },
 
-      ...options,
+
+  const handleCopy = () => {
+    navigator.clipboard.writeText(generatedContent),
+    setCopied(true),
+    setTimeout(() => setCopied(false), 2000)
       [field]: e.target.value})
   },
 
@@ -171,11 +185,14 @@ export function AIEnhancementPanel({;
     setTimeout(() => setCopied(false), 2000)
   },
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   return (
 
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   return (
     <Card className="w-full max-w-2xl mx-auto">
@@ -190,6 +207,7 @@ export function AIEnhancementPanel({;
         <div className="space-y-2">
           <label className="text-sm font-medium">Content to enhance</label>
           <Textarea
+<<<<<<< HEAD
             placeholder='Enter your content to enhance...'
             className='min-h-[100px]'
             value={options.content}
@@ -205,6 +223,8 @@ export function AIEnhancementPanel({;
             onChange={e => handleInputChange(e, 'context')}          />
         </div>
           disabled={isEnhancing |(!options.content && !options.context)}        >
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             placeholder="Enter your content to enhance..."
             className="min-h-[100px]"
             value={options.content}
@@ -233,6 +253,7 @@ export function AIEnhancementPanel({;
           <div className="space-y-2">
             <label className="text-sm font-medium">Special instructions (optional)</label>
             <Input
+<<<<<<< HEAD
               placeholder="E.g., 'Make it more conversational' or 'Focus on leadership skills'"
               value={options.instructions}
               onChange={e => handleInputChange(e, 'instructions')}            />
@@ -243,14 +264,16 @@ export function AIEnhancementPanel({;
           onClick={handleGenerate}
           className='w-full'
           disabled={isEnhancing |(!options.content && !options.context)}        >
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           disabled={isEnhancing || (!options.content && !options.context)}        >
 
               onChange={(e) => handleInputChange(e, 'instructions')}
             />;
           </div>;
         )}
-
         {/* Generate button */}
+<<<<<<< HEAD
         <Button 
           onClick={handleGenerate} 
           className="w-full" 
@@ -259,6 +282,9 @@ export function AIEnhancementPanel({;
 ursor/fix-website-loading-errors-and-merge-6662
           {isEnhancing ? (
               <Loader2 className='mr-2 h-4 w-4 animate-spin' />
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
           {isEnhancing ? (
@@ -273,6 +299,7 @@ ursor/fix-website-loading-errors-and-merge-6662
             </>
           )}
         </Button>
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           disabled={isEnhancing || (!options && options.content && !options && options.context)}>;
           {isEnhancing ? (;
@@ -325,6 +352,8 @@ ursor/fix-website-loading-errors-and-merge-6662
                 onClick={handleCopy}
                 className="h-8"
               >
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 {copied ? (
                   <><Check className="h-4 w-4 mr-1" /> Copied</>
                 ) : (
@@ -335,16 +364,14 @@ ursor/fix-website-loading-errors-and-merge-6662
             <div className="relative">
               <Textarea
                 value={generatedContent}
-                onChange={e => setGeneratedContent(e.target.value)}
-                className='min-h-[200px]'              />
-                onChange={(e) => setGeneratedContent(e.target.value)}
-                className="min-h-[200px]"
-              />
             </div>
           </div>
         )}
       </CardContent>
+<<<<<<< HEAD
       
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
       {generatedContent && (
@@ -353,6 +380,7 @@ ursor/fix-website-loading-errors-and-merge-6662
             <Button variant="outline" onClick={onClose}>
               Cancel
             </Button>
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       </CardContent>;
 
@@ -375,6 +403,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 }
     </Card>;
   );
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
@@ -475,6 +505,10 @@ ursor/fix-website-loading-errors-and-merge-6662
     </Card>;
   );
 };
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <Button onClick={handleApply}>;
             Apply to Form;
           </Button>;
@@ -483,5 +517,8 @@ ursor/fix-website-loading-errors-and-merge-6662
     </Card>;
   );
 }
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 ;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

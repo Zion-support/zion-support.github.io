@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 
 
 
@@ -58,6 +59,8 @@ export default function Custom404() {
   return (
     <>
       <Head>
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <title>404 - Page Not Found</title>
       </Head>
       <div className="min-h-screen bg-slate-950 text-white flex flex-col items-center justify-center py-12">
@@ -77,12 +80,25 @@ export default function Custom404() {
             Go back home
           >
             Go Home
+
+
+
+
           </Link>
         </main>
       </div>
-    </>;
+    </>
   );
+import Head from 'next / head';
+import Link from 'next / link';
+;
+export default /**
+ * Custom404 - Function description
+ */
+function Custom404() {
+
 }
+
 
   } catch (error) {
     console.error("Error:", error);
@@ -93,25 +109,6 @@ import type { NextPage } from 'next';
 import Head from 'next/head';
 const NotFoundPage: NextPage = () => {
   return (
-    <div>
-      <Head>
-        <title>404 - Zion Tech Solutions</title>
-        <meta name="description" content="404 page" />
-      </Head>
-      <main>
-        <h1>404</h1>
-        <p>This page is under construction.</p>
-      </main>
-    </div>
-  );
-};
-export default NotFoundPage;
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-export default function Custom404(req, res) {
-  try {
-  return (;
     <>;
       <Head>;
         <title>404 - Page Not Found | Zion Tech Group</title>;
@@ -132,6 +129,7 @@ export default function Custom404(req, res) {
             Go Home;
           </Link>;
         </div>;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       </main>;
     </>;
@@ -150,3 +148,6 @@ export default function Custom404(req, res) {
 }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

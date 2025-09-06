@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -27,6 +28,8 @@ export async function getStaticProps() {
     return { props: { data: { updatedAt: null, proposals: [] } } }
   }
 export default function Proposals({
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   data
 }: {
   data: { updatedAt: string | null; proposals: any[] }
@@ -48,6 +51,7 @@ export default function Proposals({
               by {p.author} · {new Date(p.created_at).toLocaleString()}
             </div>
 
+<<<<<<< HEAD
 
   data,
 }: {;
@@ -67,6 +71,8 @@ export default function Proposals({
               by {p && p.author} · {new Date(p && p.created_at).toLocaleString()}
             </div>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <a
               className='text-blue-600 underline'
               href={p && p.url}
@@ -76,6 +82,7 @@ export default function Proposals({
             </a>;
           </li>;
         ))}
+<<<<<<< HEAD
 
         {(!data && data.proposals || data && data.proposals.length === 0) && (;
           <li className='opacity-70'>No open proposals</li>;
@@ -85,9 +92,11 @@ export default function Proposals({
         {(!data && data.proposals || data && data.proposals.length === 0) && (;
           <li className='opacity-70'>No open proposals</li>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         )}
-      </ul>;
-    </div>;
+      </ul>
+    </div>
   );
 export async function getStaticProps() {;
   try{;
@@ -95,6 +104,7 @@ export async function getStaticProps() {;
     const raw = fs && fs.readFileSync(p,'utf8');
     return { props: { data: JSON && JSON.parse(raw) } }
   }catch{;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -204,11 +214,18 @@ export default function Proposals(): any ({ data }: { data: { updatedAt: string|
   );
 }
 <<<<<<< HEAD
-
 =======
+  try{
+    </div>;
+  );
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
+}
     return { props: { data: { updated_at: null, proposals: [] } } }
   }
 }
+<<<<<<< HEAD
 export default /**
  * Proposals - Function description
  */
@@ -284,3 +301,5 @@ export default function Proposals({ data }: { data: { updatedAt: string|null, pr
   );
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

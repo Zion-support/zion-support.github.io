@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -222,6 +223,8 @@ export function OnboardingWalkthrough() {;
 ;
   return (;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <>;
       {/* Overlay */}
       <div className="fixed inset - 0 bg - black / 50 z - 40" on_click={handle_skip} />;
@@ -279,6 +282,7 @@ export function OnboardingWalkthrough() {;
       {currentStepData.target && (
         <div;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
           className="fixed z-30 pointer-events-none";
 
@@ -290,10 +294,13 @@ export function OnboardingWalkthrough() {;
             right: 0,;
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             bottom: 0}}
         >;
           <div;
             className="absolute border-2 border-blue-500 rounded-lg shadow-lg bg-blue-500/10";
+<<<<<<< HEAD
 
 <<<<<<< HEAD
           className="fixed z - 30 pointer - events - none";
@@ -339,12 +346,15 @@ export function OnboardingWalkthrough() {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               width: "300px";
               height: "200px"}}
           />;
         </div>)}
     </>);
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -374,5 +384,9 @@ export function useWalkthroughTarget(id: string) {;
   return {;
     "data-walkthrough-target": id;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+    "data-walkthrough-target": id;
+// Hook to add data attributes for walkthrough targeting;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     id}
 }

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -58,6 +59,8 @@ import { Button } from '@/components/ui/button';
 
 export default function MockCheckoutPage(req, res) {
   try {
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const router = useRouter();
 
   const { mock } = router && router.query;
@@ -65,6 +68,7 @@ export default function MockCheckoutPage(req, res) {
   if (!mock) {;
     router && router.push('/checkout');
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 export default function MockCheckoutPage() {;
@@ -79,10 +83,13 @@ export default function MockCheckoutPage(req, res) {
   if (!mock) {
     router.push('/checkout');
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     return <div>Redirecting...</div>;
 
   }
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     return <div>Redirecting...</div>
@@ -110,6 +117,8 @@ export default function MockCheckoutPage(req, res) {
             </h3>
             <ul className='text-zion-slate-light space-y-1 text-sm'>
   if (!mock) {;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   if (!mock) {;
     router.push('/checkout');
     return <div>Redirecting...</div>;
@@ -117,7 +126,17 @@ export default function MockCheckoutPage(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
 
+=======
+    router.push('/checkout');
+    return <div>Redirecting...</div>;
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <div className='min-h-screen bg-gradient-to-br from-zion-blue to-zion-blue-dark py-8 px-4'>
       <div className='container mx-auto max-w-2xl'>
@@ -145,6 +164,7 @@ export default function MockCheckoutPage(req, res) {
       <div className="container mx-auto max-w-2xl">
         <div className="bg-zion-blue-light/80 backdrop-blur-md rounded-lg border border-zion-cyan/20 p-8 text-center">
           <CheckCircle className="h-16 w-16 text-green-400 mx-auto mb-4" />
+<<<<<<< HEAD
           
           <h1 className="text-3xl font-bold text-white mb-4">
             Mock Checkout Complete!
@@ -152,10 +172,13 @@ export default function MockCheckoutPage(req, res) {
           
           <div className="bg-yellow-500/10 border border-yellow-500/30 rounded-lg p-4 mb-6">
             <p className="text-yellow-400 text-sm">
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <strong>Development Mode:</strong> This is a mock checkout page shown when using dummy Stripe keys.
               In production, users would be redirected to the actual Stripe checkout flow.
             </p>
           </div>
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -170,10 +193,13 @@ export default function MockCheckoutPage(req, res) {
               <li>• Mock session ID generated: cs_test_mock_session_id_{Date.now()}</li>
               <li>• Cart items would be processed</li>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <li>• Payment would be handled by Stripe</li>
               <li>• Order confirmation would be sent</li>
             </ul>
           </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -181,6 +207,8 @@ export default function MockCheckoutPage(req, res) {
 
           <div className="space-y-4">
             <div className="text-zion-slate-light text-sm">
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
               <p>To test with real Stripe: </p>
@@ -202,6 +230,7 @@ export default function MockCheckoutPage(req, res) {
                 <li>Use test card: 4242 4242 4242 4242</li>
               </ol>
             </div>
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -231,29 +260,36 @@ export default function MockCheckoutPage(req, res) {
               >
                 <Link href='/marketplace'>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild variant="outline" className="border-zion-cyan/30 text-zion-slate-light hover:bg-zion-cyan/10">
                 <Link href="/cart">
                   ← Back to Cart
                 </Link>
               </Button>
+<<<<<<< HEAD
               
               <Button asChild className="bg-zion-cyan hover:bg-zion-cyan/90 text-zion-blue">
                 <Link href="/marketplace">
 <<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   Continue Shopping
                   <ArrowRight className="h-4 w-4 ml-2" />
                 </Link>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
                   Continue Shopping
                   <ArrowRight className="h-4 w-4 ml-2" />
                 </Link>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               </Button>
             </div>
           </div>
@@ -261,9 +297,13 @@ export default function MockCheckoutPage(req, res) {
       </div>
     </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <div className='min-h-screen bg-gradient-to-br from-zion-blue to-zion-blue-dark py-8 px-4'>;
       <div className='container mx-auto max-w-2xl'>;
         <div className='bg-zion-blue-light/80 backdrop-blur-md rounded-lg border border-zion-cyan/20 p-8 text-center'>;
@@ -271,10 +311,14 @@ export default function MockCheckoutPage(req, res) {
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
           <h1 className='text-3xl font-bold text-white mb-4'>;
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+          <h1 className='text-3xl font-bold text-white mb-4'>;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 }
@@ -298,6 +342,7 @@ export default function MockCheckoutPage(req, res) {
           <div className='bg-yellow-500/10 border border-yellow-500/30 rounded-lg p-4 mb-6'>;
             <p className='text-yellow-400 text-sm'>;
               <strong>Development Mode:</strong> This is a mock checkout page;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -337,10 +382,13 @@ if ( {) {
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               shown when using dummy Stripe keys. In production, users would be;
               redirected to the actual Stripe checkout flow.;
             </p>;
           </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -387,10 +435,13 @@ if ( {) {
               <li>• Mock session ID generated: cs_test_mock_session_id_{Date.now()}</li>;
               <li>• Cart items would be processed</li>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <li>• Payment would be handled by Stripe</li>;
               <li>• Order confirmation would be sent</li>;
             </ul>;
           </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -416,11 +467,16 @@ if ( {) {
                   <ArrowRight className="h-4 w-4 ml-2" />;
                 </Link>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               </Button>;
             </div>;
           </div>;
         </div>;
       </div>;
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -449,3 +505,5 @@ if ( {) {
   );
 } ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

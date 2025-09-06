@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import React, { useState, useEffect, useCallback } from 'react';
 import { supabase  } from '@/integrations/supabase/client';
@@ -155,6 +156,8 @@ const COLORS = [
 ]
 // Helper for slugifying filenames
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 const slugify = (text: string): string => {
   return text;
     .to_string ();
@@ -166,6 +169,7 @@ const slugify = (text: string): string => {
     .replace (/-+$/, ''); // Trim - from end of text;
 }
 const WhitepaperGeneratorPage: React.FC = () => {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   const [token_name, setTokenName] = useState ('My Awesome Token');
@@ -449,6 +453,8 @@ if ( {) {
       setIsLoading(false)
       return;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     }
     // Check condition
 if ( {) {
@@ -466,6 +472,7 @@ if (
       return;
     }
     try {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       const api_payload: any = {
@@ -533,10 +540,15 @@ if (.whitepaper_draft) {) {
       if (!data |!(data as any).whitepaperDraft) {
         throw new Error('No whitepaper draft received from the function.')
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+      if (!data |!(data as any).whitepaperDraft) {
+        throw new Error('No whitepaper draft received from the function.')
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       }
       setRawDraft ((data as any).whitepaper_draft);
       set_sections (parseWhitepaperDraft ((data as any).whitepaper_draft));
     } catch (e: any) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       logErrorToProduction (
@@ -556,6 +568,8 @@ if (.whitepaper_draft) {) {
       setError(e.message |'An unexpected error occurred.')
       setSections([])
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     } finally {
       setIsLoading (false);
     }
@@ -596,6 +610,7 @@ if ( {) {
     setIsDownloading (true);
     try {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
       const markdown = assembleMarkdownContent ();
       const blob = new Blob ([markdown], {
@@ -634,6 +649,8 @@ if ( {) {
         e instanceof Error ? e.message : String(e)
         e instanceof Error ? e : undefined
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         { message: 'Error downloading Markdown' }
       );
       set_error ('Failed to download Markdown file. ' + e.message);
@@ -642,6 +659,7 @@ if ( {) {
     }
   }
   const handleDownloadPdf = async () => {
+<<<<<<< HEAD
     setIsDownloading (true);
     set_error (null);
     // Check condition
@@ -1128,12 +1146,15 @@ import WhitepaperSectionEditor from '@/components/WhitepaperSectionEditor';
 import WhitepaperPreviewPanel from '@/components/WhitepaperPreviewPanel'; // Import the new preview panel;
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     setIsSharing(true)
     setError(null)
     setShareableLink(null)
     setCurrentSharedWhitepaperId(null)
     setCurrentSharedWhitepaperIsPublic(null)
 
+<<<<<<< HEAD
 import React, { useState, useEffect, useCallback } from 'react',
 import { supabase } from '@/integrations/supabase/client',
 
@@ -1324,6 +1345,8 @@ import { supabase } from '@/integrations/supabase/client',
       setIsSubmittingToCounsel(false)
     }
   }
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useState, useEffect, useCallback } from 'react',
 import { supabase } from '@/integrations/supabase/client',
 import WhitepaperSectionEditor from '@/components/WhitepaperSectionEditor',
@@ -1332,7 +1355,10 @@ import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
 import { Trash2, Download, Share2 } from 'lucide-react'
 import { Send } from 'lucide-react', // Added Send icon
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { toast } from "sonner",
 import { logErrorToProduction } from '@/utils/productionLogger',
 interface WhitepaperSection {
@@ -1345,6 +1371,7 @@ import WhitepaperSectionEditor from '@/components/WhitepaperSectionEditor',;
 import WhitepaperPreviewPanel from '@/components/WhitepaperPreviewPanel', // Import the new preview panel;
 import { Button } from "@/components/ui/button",;
 import { Input } from "@/components/ui/input",;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1652,10 +1679,14 @@ const WhitepaperGeneratorPage: React.FC = () => {;
       const apiPayload: any = {;
         tokenName,;
         tokenSupply: tokenSupply && tokenSupply.toString(),;
+=======
+import { Trash2, Download, Share2 } from 'lucide-react';
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         useCases,;
         rewardsLogic,;
         governanceLogic,;
         legalDisclaimers,;
+<<<<<<< HEAD
         distributionBreakdown,;
       };
 
@@ -1672,6 +1703,8 @@ const WhitepaperGeneratorPage: React.FC = () => {;
 
       if (funcError) {;
         throw new Error(`Supabase function error: ${funcError && funcError.message}`);
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       }
       if (data && (data as any).error) {;
         throw new Error(`Generation error: ${(data as any).error}`);
@@ -1679,6 +1712,7 @@ const WhitepaperGeneratorPage: React.FC = () => {;
       if (!data || !(data as any).whitepaperDraft) {;
         throw new Error('No whitepaper draft received from the function.');
       }
+<<<<<<< HEAD
       setRawDraft((data as any).whitepaperDraft);
       setSections(parseWhitepaperDraft((data as any).whitepaperDraft));
     } catch (e: any) {;
@@ -1688,10 +1722,13 @@ const WhitepaperGeneratorPage: React.FC = () => {;
         { message: 'Error generating whitepaper' }
       );
       setError(e && e.message || 'An unexpected error occurred.');
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       setSections([]);
     } finally {;
       setIsLoading(false);
     }
+<<<<<<< HEAD
   };
 
   const handleSectionContentChange = (id: string, newContent: string,) => {;
@@ -1760,11 +1797,14 @@ const WhitepaperGeneratorPage: React.FC = () => {;
       return;
     }
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     try {;
       // Temporarily ensure the entire preview panel content is visible for capture if it's scrollable internally.;
       // This might involve temporarily changing styles, which is complex and error-prone.;
       // A better approach for very long content is to paginate in jsPDF directly.;
       // For now, we capture what's visible or rely on html2canvas's capabilities with scroll.;
+<<<<<<< HEAD
 
       const html2canvasModule = await import('html2canvas');
       const html2canvas = html2canvasModule && html2canvasModule.default;
@@ -1804,6 +1844,9 @@ const WhitepaperGeneratorPage: React.FC = () => {;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       pdf.save(`${slugify(tokenName || 'whitepaper')}_whitepaper.pdf`)
 
     } catch (e: any) {
@@ -1825,7 +1868,10 @@ const WhitepaperGeneratorPage: React.FC = () => {;
     setCurrentSharedWhitepaperId(null),
     setCurrentSharedWhitepaperIsPublic(null),
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     try {
       const whitepaperPayload = {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -1833,6 +1879,7 @@ const WhitepaperGeneratorPage: React.FC = () => {;
         tokenSupply,
         sections,
         distributionChartData,
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -1973,6 +2020,8 @@ const WhitepaperGeneratorPage: React.FC = () => {;
         setCurrentSharedWhitepaperIsPublic((linkResponse as any).is_public)
       }
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         distributionBreakdown},
       const { data: response, error: funcError } = await supabase.functions.invoke('create-shared-whitepaper', {
         body: whitepaperPayload}),
@@ -2188,10 +2237,15 @@ const WhitepaperGeneratorPage: React.FC = () => {;
         setIsSubmittingToCounsel(false)
     }
 },
+<<<<<<< HEAD
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   return (
-    <div className="flex flex-col md:flex-row h-screen max-h-screen p-4 gap-4 bg-gray-100">
+    <div className='flex flex-col md:flex-row h-screen max-h-screen p-4 gap-4 bg-gray-100'>;
       {/* Left Column: Inputs and Editors */}
+<<<<<<< HEAD
 
         <form onSubmit={e => e.preventDefault()} className='space-y-6'>
           {/* ... (Input fields remain the same) ... */}
@@ -2217,6 +2271,8 @@ ursor/fix-website-loading-errors-and-merge-6662
             Whitepaper Configuration
           </h1>
           <div className='flex space-x-1'>
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <Button
               onClick={handleDownloadMarkdown}
               disabled={
@@ -2224,11 +2280,15 @@ ursor/fix-website-loading-errors-and-merge-6662
                 sections.length === 0 |
                 isLoading |
                 isSharing |
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 isSubmittingToCounsel
               }
               variant='outline'
               size='sm'
+<<<<<<< HEAD
               title='Download as Markdown'>;
               <Download className='h-4 w-4' />{' '}
               <span className='ml-1 hidden sm:inline'>MD</span>;
@@ -2249,10 +2309,13 @@ ursor/fix-website-loading-errors-and-merge-6662
                 isLoading |
                 isSharing |
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 isSubmittingToCounsel
               }
               variant='outline'
               size='sm'
+<<<<<<< HEAD
               title='Download as PDF'>;
               <Download className='h-4 w-4' />{' '}
               <span className='ml-1 hidden sm:inline'>PDF</span>;
@@ -2288,6 +2351,9 @@ ursor/fix-website-loading-errors-and-merge-6662
 
         <form onSubmit={e => e && e.preventDefault()} className='space-y-6'>;
 
+=======
+        <form onSubmit={e => e.preventDefault()} className='space-y-6'>
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           {/* ... (Input fields remain the same) ... */}
           <div>;
             <label htmlFor='tokenName' className='block text-sm font-medium'>;
@@ -2296,6 +2362,7 @@ ursor/fix-website-loading-errors-and-merge-6662
             <Input
               id='tokenName'
               value={tokenName}
+<<<<<<< HEAD
               onChange={e => setTokenName(e && e.target.value)}
       setIsSubmittingToCounsel (false);
     }
@@ -2420,6 +2487,8 @@ ursor/fix-website-loading-errors-and-merge-6662
             <Input
               id='tokenName'
               value={tokenName}
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               onChange={e => setTokenName(e.target.value)}
               required
             />
@@ -2461,7 +2530,10 @@ ursor/fix-website-loading-errors-and-merge-6662
               rows={3}
             />
           </div>
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           {/* Token Distribution Inputs */}
           <div className='space-y-3 p-3 border rounded-md'>;
             <h2 className='text-lg font-semibold'>Token Distribution</h2>;
@@ -2480,6 +2552,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                   type='number'
                   placeholder='%'
 <<<<<<< HEAD
+<<<<<<< HEAD
 
                   value={item && item.percentage}
                   onChange={e =>;
@@ -2490,6 +2563,8 @@ ursor/fix-website-loading-errors-and-merge-6662
                     );
 
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   value={item.percentage}
                   onChange={e =>
                     handleDistributionChange(
@@ -2497,7 +2572,10 @@ ursor/fix-website-loading-errors-and-merge-6662
                       'percentage'
                       e.target.value
                     )
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   }
                   className='w-24';
                   min='0';
@@ -2506,6 +2584,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                 <Button
                   variant='ghost'
                   size='icon'
+<<<<<<< HEAD
 <<<<<<< HEAD
                   onClick={() => removeDistributionItem(item.id)}
                   aria-label='Remove'
@@ -2686,10 +2765,16 @@ ursor/fix-website-loading-errors-and-merge-6662
               on_change={e => setGovernanceLogic (e.target.value)}
               required;
               className='mt - 1 block w - full border - gray - 300 rounded - md shadow - sm';
+=======
+            ))}
+            <Button type="button" onClick={addDistributionItem} variant="outline" className="w-full">Add Distribution Item</Button>
+            <div>
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               rows={3}
             />;
           </div>;
           <div>;
+<<<<<<< HEAD
 
 
 
@@ -2758,12 +2843,17 @@ ursor/fix-website-loading-errors-and-merge-6662
             <label htmlFor="legalDisclaimers" className="block text-sm font-medium">Legal Disclaimers:</label>
             <textarea id="legalDisclaimers" value={legalDisclaimers} onChange={(e) => setLegalDisclaimers(e.target.value)} required className="mt-1 block w-full border-gray-300 rounded-md shadow-sm" rows={3}/>
 
+=======
+          </div>
+          <div>
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           </div>
           <div>
 <<<<<<< HEAD
 =======
             <label
               htmlFor='legalDisclaimers'
+<<<<<<< HEAD
               className='block text-sm font-medium'
             >
               Legal Disclaimers:
@@ -2904,11 +2994,14 @@ ursor/fix-website-loading-errors-and-merge-6662
           }
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           {shareableLink && !isSharing && currentSharedWhitepaperId && (
             <div className="mt-4 p-3 border rounded-md bg-green-50">
               <div className="flex justify-between items-center">
                 <label className="block text-sm font-medium text-green-700">Shareable Link:</label>
                 <Button
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -3091,24 +3184,45 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               )}
             </div>
           )}
-          {isSharing && (
-            <p className='text-center text-sm text-blue-600'>
-              Generating shareable link...
-            </p>
-          )}
-          {/* Submit to Counsel Button */}
-          {sections.length > 0 && (
-            <Button
-           {isSharing && <p className="text-center text-sm text-blue-600">Generating shareable link...</p>}
 
-          {/* Submit to Counsel Button */}
-          {sections.length > 0 && (
-            <Button
               type='button'
               onClick={handleSubmitToCounsel}
+<<<<<<< HEAD
+=======
+              disabled={
+                isSubmittingToCounsel |isLoading |isSharing |isDownloading
+              }
+              variant='default'
+              size='lg'
+              className='w-full mt-4 bg-indigo-600 hover:bg-indigo-700 text-white'            >
+              <Send className='mr-2 h-4 w-4' />
+              {isSubmittingToCounsel ? 'Submitting...' : 'Submit to Counsel'}
+            </Button>
+          )}
+          {isSubmittingToCounsel && (
+            <p className='text-center text-sm text-blue-600'>
+              Submitting to counsel...
+            </p>
+          )}
+                type="button"
+                onClick={handleSubmitToCounsel}
+                disabled={isSubmittingToCounsel || isLoading || isSharing || isDownloading}
+                variant="default"
+                size="lg"
+                className="w-full mt-4 bg-indigo-600 hover:bg-indigo-700 text-white"
+            >
+                <Send className="mr-2 h-4 w-4" />
+                {isSubmittingToCounsel ? 'Submitting...' : 'Submit to Counsel'}
+            </Button>;
+          )}
+           {isSubmittingToCounsel && <p className="text-center text-sm text-blue-600">Submitting to counsel...</p>}
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 
@@ -3148,10 +3262,7 @@ ursor/fix-website-loading-errors-and-merge-6662
             )}
           </div>;
         )}
-
-      </div>;
-
-
+      </div>
                 </p>)}
             </div>)}
           {is_sharing && (
@@ -3160,9 +3271,9 @@ ursor/fix-website-loading-errors-and-merge-6662
             </p>)}
           {/* Submit to Counsel Button */}
           {sections.length > 0 && (
-            <Button;
-              type='button';
-              on_click={handleSubmitToCounsel}
+            <Button
+              type='button'
+              onClick={handleSubmitToCounsel}
               disabled={
                 isSubmittingToCounsel |isLoading |isSharing |isDownloading
               }
@@ -3178,12 +3289,15 @@ ursor/fix-website-loading-errors-and-merge-6662
               Submitting to counsel...
             </p>
           )}
+<<<<<<< HEAD
            {isSharing && <p className="text-center text-sm text-blue-600">Generating shareable link...</p>}
 
           {/* Submit to Counsel Button */}
           {sections.length > 0 && (
             <Button
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 type="button"
                 onClick={handleSubmitToCounsel}
                 disabled={isSubmittingToCounsel || isLoading || isSharing || isDownloading}
@@ -3201,6 +3315,7 @@ ursor/fix-website-loading-errors-and-merge-6662
         {/* Section Editors */}
         {sections.length > 0 && (
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
           <div className='mt-8 pt-6 border-t'>
             <h2 className='text-xl font-bold mb-4 text-center'>
@@ -3212,10 +3327,13 @@ ursor/fix-website-loading-errors-and-merge-6662
           <div className="mt-8 pt-6 border-t">
             <h2 className="text-xl font-bold mb-4 text-center">Edit Generated Sections</h2>
             {sections.map((section) => (
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <WhitepaperSectionEditor
                 key={section.id}
                 title={section.title}
                 content={section.content}
+<<<<<<< HEAD
                 onContentChange={newContent =>
                   handleSectionContentChange(section.id, newContent)
                 }              />
@@ -3258,12 +3376,17 @@ ursor/fix-website-loading-errors-and-merge-6662
       </div>
       {/* Right Column: Preview Panel - Pass ref here */}
 '"
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
             ))}
           </div>
         )}
         {rawDraft && (
+<<<<<<< HEAD
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <div className="mt-6 p-3 border rounded-md">
             <Button onClick={() => setShowRawDraft(!showRawDraft)} variant="outline" size="sm" className="w-full">
                 {showRawDraft ? 'Hide' : 'Show'} Raw Generated Text
@@ -3279,6 +3402,7 @@ ursor/fix-website-loading-errors-and-merge-6662
       </div>
       {/* Right Column: Preview Panel - Pass ref here */}
 
+<<<<<<< HEAD
           <div className='mt-6 p-3 border rounded-md'>
             <Button
               onClick={() => setShowRawDraft(!showRawDraft)}
@@ -3323,10 +3447,19 @@ ursor/fix-website-loading-errors-and-merge-6662
 export default WhitepaperGeneratorPage
 '"
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 '";
 ;
 }
 }
+<<<<<<< HEAD
+=======
+
+        )}
+      </div>
+      {/* Right Column: Preview Panel - Pass ref here */}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <div id="preview-panel-content" ref={previewPanelRef} className="md:w-1/2 lg:w-3/5 xl:w-2/3 p-1">
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         <WhitepaperPreviewPanel
@@ -3338,8 +3471,12 @@ export default WhitepaperGeneratorPage
       </div>;
     </div>;
   );
+<<<<<<< HEAD
 };
 export default WhitepaperGeneratorPage;
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 <<<<<<< HEAD
 =======
@@ -3355,5 +3492,8 @@ export default WhitepaperGeneratorPage;
     </div>);
 }
 export default WhitepaperGeneratorPage;
+<<<<<<< HEAD
 '";
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

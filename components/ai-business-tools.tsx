@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -14,10 +15,13 @@ import Head from 'next/head',
 import React from 'react';
 import Head from 'next/head';
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 
 import {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -98,11 +102,12 @@ import React from 'react';
   FileText, ;
   BarChart3, ;
   Users, ;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import Head from 'next / head';
 import Card from '../components / ui / Card';
 import Button from '../components / ui / Button';
 import {
-
   Brain,
   MessageSquare,
   Image,
@@ -116,6 +121,13 @@ import {
   Check,
   ExternalLink,
   TrendingUp,
+  Brain;
+  MessageSquare
+  Image
+  Video
+  FileText
+  BarChart3
+  Users
 
 
 
@@ -127,10 +139,13 @@ import {
   BarChart3,
   Users,
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   Zap;
   ArrowRight;
   Star;
@@ -138,6 +153,7 @@ import {
   ExternalLink;
   TrendingUp;
   Shield;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -192,6 +208,8 @@ export default function AIBusinessToolsPage() {
       ]
       cons: ['Sometimes inaccurate', 'Limited context', 'Privacy concerns']
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       bestFor: 'Content creators, developers, researchers'
     }
     {
@@ -259,6 +277,7 @@ export default function AIBusinessToolsPage() {
       bestFor: 'Marketing teams, content creators, businesses'
     }
     {
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -268,6 +287,8 @@ export default function AIBusinessToolsPage() {
       name: 'Synthesia',
       description: 'AI video generation platform that creates professional videos with AI avatars and voice synthesis.',
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   Globe;
 export default /**
  * AIBusinessToolsPage - Function description
@@ -376,13 +397,17 @@ function AIBusinessToolsPage() {
       users: '50K+',
       icon: <Video className='w - 8 h - 8 text - red - 400' />,      description: 'AI video generation platform that creates professional videos with AI avatars and voice synthesis.',
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       category: 'AI Video',
       pricing: '$30 - $89 / month',
       rating: 4.5,
       users: '50K+',
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -448,6 +473,16 @@ function AIBusinessToolsPage() {
       best_for: 'Training departments, marketers, educators',
     },
     {
+=======
+        'Data-driven insights'
+        'Content optimization'
+        'Competitor analysis'
+        'Good support'
+      ]
+      cons: ['Expensive', 'Complex interface', 'Steep learning curve']
+      bestFor: 'SEO specialists, content marketers, businesses'
+    }
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       name: 'Copy.ai',
       description:;
         'AI copywriting tool that generates marketing copy, product descriptions, and creative content for businesses.',
@@ -511,13 +546,18 @@ function AIBusinessToolsPage() {
       users: '100K+',
       icon: <Video className='w - 8 h - 8 text - blue - 400' />,      description: 'AI video maker that transforms text content into engaging videos for social media and marketing.',
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       category: 'AI Video',
       pricing: 'Free - $79 / month',
       rating: 4.3,
       users: '100K+',
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -550,13 +590,18 @@ function AIBusinessToolsPage() {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       category: 'AI SEO',
       pricing: '$59 - $199 / month',
       rating: 4.6,
       users: '25K+',
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         'Data-driven insights',
         'Content optimization',
         'Competitor analysis',
@@ -565,8 +610,6 @@ function AIBusinessToolsPage() {
       cons: ['Expensive', 'Complex interface', 'Steep learning curve'],
       bestFor: 'SEO specialists, content marketers, businesses',
     },;
-
-
   ];
   const categories = [
     'All'
@@ -585,6 +628,7 @@ function AIBusinessToolsPage() {
     ? aiTools
     : aiTools.filter(tool => tool.category === selectedCategory);
 
+<<<<<<< HEAD
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 export default function AIBusinessToolsPage() {;
@@ -855,6 +899,8 @@ export default function AIBusinessToolsPage() {;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <>;
       <Head>;
@@ -870,6 +916,7 @@ export default function AIBusinessToolsPage() {;
         <meta
           property='og:description'
           content='Expert-curated selection of AI-powered business tools and SaaS services.'
+<<<<<<< HEAD
 <<<<<<< HEAD
 
         />;
@@ -919,18 +966,17 @@ export default function AIBusinessToolsPage() {;
 
 =======
             <div className='flex flex-col sm:flex-row gap-6 justify-center items-center mb-20'>;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <Button
                 href='#tools'
                 size='lg'
                 className='animate-scale-in shadow-2xl shadow-green-500/25 hover:shadow-green-500/40'
-                style={{ animationDelay: '0 && 0.2s' }}>;
-                Explore AI Tools;
-                <ArrowRight className='w-5 h-5 ml-2' />;
-              </Button>;
               <Button
                 href='/contact'
                 variant='outline'
                 size='lg'
+<<<<<<< HEAD
                 className='animate-scale-in border-white/20 hover:border-white/40 hover:bg-white/5'                style={{ animationDelay: '0 && 0.4s' }}                href="/contact"
 
 export default function AIBusinessToolsPage() {_const _aiTools = [
@@ -1323,12 +1369,15 @@ export default function AIBusinessToolsPage() {_const _aiTools = [
 =======
                 className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white/5"
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               >
                 Get AI Consultation
               </Button>
             </div>
           </div>
           {/* Stats */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
           <div
@@ -1377,6 +1426,10 @@ export default function AIBusinessToolsPage() {_const _aiTools = [
                 {aiTools.length}+
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
               </div>
+=======
+                {aiTools.length}+
+              </div>
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <div className="text-gray-400 text-sm">AI Tools</div>
             </div>
             <div className="text-center group">
@@ -1400,6 +1453,7 @@ export default function AIBusinessToolsPage() {_const _aiTools = [
           </div>
         </div>
       </section>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
                 className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white/5">;
@@ -1612,10 +1666,13 @@ export default function AIBusinessToolsPage() {_const _aiTools = [
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             </div>;
           </div>;
         </div>;
       </section>;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -1649,6 +1706,8 @@ export default function AIBusinessToolsPage() {_const _aiTools = [
               <button
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 key={category}
                 onClick={() => setSelectedCategory(category)}
                 className={`px-6 py-3 rounded-full text-sm font-medium transition-all duration-300 ${;
@@ -1658,6 +1717,7 @@ export default function AIBusinessToolsPage() {_const _aiTools = [
                 }`}
               >;
                 {category}
+<<<<<<< HEAD
 <<<<<<< HEAD
               </button>;
             ))}
@@ -1672,8 +1732,16 @@ export default function AIBusinessToolsPage() {_const _aiTools = [
 
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {/* Tools Grid */}
-
+      <section id='tools' className='py-24 bg-black'>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+          <div className='text-center mb-20'>
+            <h2 className='text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight'>
+              {selectedCategory === 'All'
+                ? 'All AI Tools'
+                : `${selectedCategory} Tools`}
 
             <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>
               {selectedCategory === 'All'
@@ -1683,6 +1751,7 @@ export default function AIBusinessToolsPage() {_const _aiTools = [
           </div>
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
             {filteredTools.map((tool, index) => (
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
             <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>;
@@ -1695,6 +1764,8 @@ export default function AIBusinessToolsPage() {_const _aiTools = [
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>;
             {filteredTools && filteredTools.map((tool, index) => (;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <Card
                 key={index}
                 className='group border border-gray-800 hover:border-green-500/30 hover:bg-gray-900/80 transition-all duration-300 hover:-translate-y-1'
@@ -1702,6 +1773,7 @@ export default function AIBusinessToolsPage() {_const _aiTools = [
                 <div className='flex items-start space-x-6'>;
                   <div className='relative'>;
                     <div
+<<<<<<< HEAD
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
@@ -1756,25 +1828,41 @@ export default function AIBusinessToolsPage() {_const _aiTools = [
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       {tool.icon}
-                    </div>;
-                  </div>;
-                  <div className='flex - 1'>;
-                    <div className='flex items - center justify - between mb - 2'>;
-                      <h3 className='text - 2xl font - bold text - white group - hover:text - green - 400 transition - colors duration - 300'>;
+                    </div>
+                  </div>
+                  <div className='flex-1'>
+                    <div className='flex items-center justify-between mb-2'>
+                      <h3 className='text-2xl font-bold text-white group-hover:text-green-400 transition-colors duration-300'>
                         {tool.name}
-                      </h3>;
-                      <div className='flex items - center space - x-2'>;
-                        <Star className='w - 4 h - 4 text - yellow - 400 fill - current' />;
-                        <span className='text - sm text - gray - 300'>;
+                      </h3>
+                      <div className='flex items-center space-x-2'>
+                        <Star className='w-4 h-4 text-yellow-400 fill-current' />
+                        <span className='text-sm text-gray-300'>
                           {tool.rating}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+                        </span>
+                      </div>
+                    </div>
+                    <div className='flex items-center space-x-4 mb-3 text-sm text-gray-400'>
+                      <span className='px-2 py-1 bg-gray-800 rounded-full'>
+                        {tool.category}
+                      </span>
+                      <span>{tool.users} users</span>
+                      <span className='text-green-400'>{tool.pricing}</span>
+                    </div>
+                    <p className='text-gray-400 leading-relaxed mb-4'>
+                      {tool.description}
+                    </p>
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     <div className='mb-4'>
                       <h4 className='text-sm font-semibold text-gray-300 mb-2'>
                         Key Features:
@@ -1783,9 +1871,12 @@ export default function AIBusinessToolsPage() {_const _aiTools = [
                         {tool.features
                           .slice(0, 4)
                           .map((feature, featureIndex) => (
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       className={`w-20 h-20 rounded-2xl flex items-center justify-center text-3xl bg-gradient-to-br ${tool && tool.color} shadow-xl group-hover:scale-110 transition-transform duration-300`}>;
                       {tool && tool.icon}
                     </div>;
@@ -1831,6 +1922,7 @@ export default function AIBusinessToolsPage() {_const _aiTools = [
                               {feature}
                             </div>;
                           ))}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
                       </div>;
@@ -2015,10 +2107,13 @@ export default function AIBusinessToolsPage() {_const _aiTools = [
                     </div>
                     <div className='flex items-center justify-between'>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       <Button
                         href={tool.website}
                         variant='outline'
                         size='sm'
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
                         className='group-hover:border-green-500 group-hover:text-green-400'
@@ -2045,20 +2140,26 @@ export default function AIBusinessToolsPage() {_const _aiTools = [
         </div>
       </section>
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
       {/* AI Benefits Section */}
       <section className='py-24 bg-gray-900'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <div className='text-center mb-20'>
             <h2 className='text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight'>
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
       {/* AI Benefits Section */}
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -2118,6 +2219,10 @@ export default function AIBusinessToolsPage() {_const _aiTools = [
               Why Choose AI Tools?
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
             </h2>
+=======
+              Why Choose AI Tools?
+            </h2>
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
               AI-powered tools are revolutionizing how businesses operate, create content, and serve customers.
             </p>
@@ -2154,6 +2259,7 @@ export default function AIBusinessToolsPage() {_const _aiTools = [
         </div>
       </section>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                         className='group-hover:border-green-500 group-hover:text-green-400'>;
@@ -2165,6 +2271,9 @@ export default function AIBusinessToolsPage() {_const _aiTools = [
 
 className='group-hover:border-green-500 group-hover:text-green-400'>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+                        className='group-hover:border-green-500 group-hover:text-green-400'>;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                         Visit Website;
                         <ExternalLink className='w-4 h-4 ml-2' />;
                       </Button>;
@@ -2302,6 +2411,7 @@ className='group-hover:border-green-500 group-hover:text-green-400'>;
               </p>;
             </Card>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -2363,11 +2473,14 @@ className='group-hover:border-green-500 group-hover:text-green-400'>;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               </p>;
             </Card>;
           </div>;
         </div>;
       </section>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -2475,3 +2588,12 @@ className='group-hover:border-green-500 group-hover:text-green-400'>;
   );
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+    </>);
+}
+  );
+}
+}
+    </>);
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

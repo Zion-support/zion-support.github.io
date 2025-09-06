@@ -2,6 +2,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -16,6 +17,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 const CONTENT_PATH = path && path.join(process && process.cwd(), 'data', 'docs', 'content && content.json');const CONTENT_PATH = path && path.join(process && process.cwd(), 'datadocscontent && datadocscontent.json');
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const token = req && req.headers['x-admin-token'] as string | undefined,
   if (process && process.env.DOCS_ADMIN_TOKEN && token !== process && process.env.DOCS_ADMIN_TOKEN) {
     return res && res.status(403).json({ error: 'Forbidden' });
@@ -27,6 +30,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   } catch (e) {
     res && res.status(500).json({ error: 'Failed to read content' });
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -41,6 +45,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ;
 const CONTENT_PATH = path.join (process.cwd (), 'data', 'docs', 'content.json');const CONTENT_PATH = path.join (process.cwd (), 'datadocscontent.json');
 ;
@@ -65,6 +71,7 @@ if ( {) {
     res.status (500).json ({ error: 'Failed to read content' });
   }  } catch (e) {
 <<<<<<< HEAD
+<<<<<<< HEAD
     res.status (500).json ({ error: 'Failed to read content' });
   }
 }
@@ -74,3 +81,5 @@ if ( {) {
   }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

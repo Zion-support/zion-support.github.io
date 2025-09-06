@@ -1,6 +1,9 @@
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import EnhancedServiceCard from './ui/EnhancedServiceCard';
 import PerformanceMonitor from './PerformanceMonitor';
 import UltraFuturisticBackground from './ui/UltraFuturisticBackground';
@@ -10,6 +13,7 @@ import UltraFuturisticBackground from './ui/UltraFuturisticBackground';
 import EnhancedServiceCard from './ui / EnhancedServiceCard';
 import PerformanceMonitor from './PerformanceMonitor';
 import UltraFuturisticBackground from './ui / UltraFuturisticBackground';
+<<<<<<< HEAD
 =======
 //Import our enhanced components import EnhancedNavigation from './layout/EnhancedNavigation';
 import EnhancedServiceCard from './ui/EnhancedServiceCard';
@@ -18,6 +22,8 @@ import UltraFuturisticBackground from './ui/UltraFuturisticBackground';
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 //Import service data window.addEventListener ('mousemove', handleMouseMove);
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 //Combine all revolutionary services const allRevolutionaryServices = [ ...revolutionary2044AdvancedMicroSaas;
 ...revolutionary2044ITServices;
 ...revolutionary2044AIServices;
@@ -42,9 +48,6 @@ const EnhancedHomepage: React.FC<EnhancedHomepageProps> = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-
-
-
 };
 visible: {
   opacity: 1, transition: {
@@ -54,6 +57,7 @@ visible: {
 }
 }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -106,8 +110,12 @@ import EnhancedServiceCard from './ui/EnhancedServiceCard';
 <<<<<<< HEAD
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import PerformanceMonitor from './PerformanceMonitor';
+
 import UltraFuturisticBackground from './ui/UltraFuturisticBackground';
+<<<<<<< HEAD
 
 =======
 import PerformanceMonitor from './PerformanceMonitor';
@@ -156,11 +164,14 @@ const EnhancedHomepage: React.FC = () => {;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       clearInterval(interval);
       clearTimeout(performanceTimer);
       window && window.removeEventListener('mousemove', handleMouseMove);
     }
   }, []);
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -172,6 +183,8 @@ const EnhancedHomepage: React.FC = () => {;
   // Combine all revolutionary services;
   const allRevolutionaryServices = [;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 //Filter services by category //Animation variants const container_variants = {
   hidden: {
   opacity: 0;
@@ -237,6 +250,7 @@ const EnhancedHomepage: React.FC = () => {
 ;
   // Combine all revolutionary services;
   const allRevolutionaryServices = [;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -312,11 +326,14 @@ const EnhancedHomepage: React.FC = () => {
   // Combine all revolutionary services
   const allRevolutionaryServices = [
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     ...revolutionary2044AdvancedMicroSaas;
     ...revolutionary2044ITServices;
     ...revolutionary2044AIServices;
     ...realEnterpriseMicroSaas2025;
     ...innovativeITServicesExpansion2025V3;
+<<<<<<< HEAD
 <<<<<<< HEAD
     ...innovativeAIServicesExpansion2025V3;
     ...innovative2025ITInfrastructureServices;
@@ -516,12 +533,15 @@ if (return allRevolutionaryServices) {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     setSelectedCategory(categoryId);
     const category = categories && categories.find(cat => cat && cat.id === categoryId);
     if (category) {;
       setColorScheme(category && category.scheme);
     }
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -541,6 +561,10 @@ if (return allRevolutionaryServices) {
 =======
   return (
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  return (
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <>;
       <Head>;
         <title>Zion Tech Group - Revolutionary 2045 Technology Solutions</title>;
@@ -571,21 +595,20 @@ if (return allRevolutionaryServices) {
         {/* Hero Section */}
         <motion&& motion.section 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           className="relative min-h-screen flex items-center justify-center px-4 lg: px-8 pt-20"
           variants={heroVariants}
           initial="hidden"
           animate="visible">;
           <div className="relative z-10 text-center max-w-6xl mx-auto">;
             {/* Main Heading */}
-
-
-            
-
             <motion.p 
-
               className="text-xl md:text-2xl lg:text-3xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed"
               variants={itemVariants}
             >
@@ -606,18 +629,24 @@ if (return allRevolutionaryServices) {
               Quantum Computing, and Autonomous Solutions;
             </motion && motion.p>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
             {/* CTA Buttons */}
             <motion&& motion.div 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             {/* CTA Buttons */}
             <motion&& motion.div 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
@@ -626,6 +655,7 @@ if (return allRevolutionaryServices) {
               <Link href="/services">;
                 <motion&& motion.button
                   className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold rounded-xl text-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -674,10 +704,13 @@ if (return allRevolutionaryServices) {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           {/* Floating Elements */}
           <motion&& motion.div
             className="absolute top-20 left-10 text-cyan-400/20"
             variants={floatingVariants}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -952,18 +985,27 @@ if ( {) {
             >;
               {categories.map ((category) => (
                 <motion.button;
+=======
+            <motion.div 
+              className="flex flex-wrap justify-center gap-4 mb-12"
+              variants={itemVariants}
+            >
+              {categories.map((category) => (
+                <motion.button
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   key={category.id}
-                  on_click={() => handleCategoryChange (category.id)}
-                  className={`px - 6 py - 3 rounded - xl font - medium transition - all duration - 300 transform hover:scale - 105 ${
-                    selected_category === category.id;
-                      ? 'bg - gradient - to - r ' + category.color + ' text - white shadow - 2xl';
-                      : 'bg - gray - 800 / 50 text - gray - 300 hover:bg - gray - 700 / 50 border border - gray - 600';
+                  onClick={() => handleCategoryChange(category.id)}
+                  className={`px-6 py-3 rounded-xl font-medium transition-all duration-300 transform hover:scale-105 ${
+                    selectedCategory === category.id
+                      ? 'bg-gradient-to-r ' + category.color + ' text-white shadow-2xl'
+                      : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 border border-gray-600'
                   }`}
-                  while_hover={{ scale: 1.05 }}
-                  while_tap={{ scale: 0.95 }}
-                >;
-                  <category.icon className="inline - block w - 5 h - 5 mr - 2" />;
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  <category.icon className="inline-block w-5 h-5 mr-2" />
                   {category.name}
+<<<<<<< HEAD
                 </motion.button>))}
             </motion.div>;
           </div>;
@@ -1339,19 +1381,25 @@ const EnhancedHomepage: React.FC = () => {
           <div className="max-w-6xl mx-auto">;
             <motion&& motion.h2 
               className="text-3xl md:text-4xl font-bold text-center text-white mb-12"
+=======
+                </motion.button>
+              ))}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               variants={itemVariants}>;
-              Featured Revolutionary Services;
+              Explore Our Revolutionary Services;
             </motion && motion.h2>;
 
             <motion&& motion.div 
 
-=======
 
+<<<<<<< HEAD
             <motion.div 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
             <motion.div
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             
             <motion.div 
               className="flex flex-wrap justify-center gap-4 mb-12"
@@ -1387,19 +1435,31 @@ const EnhancedHomepage: React.FC = () => {
           animate="visible"
         >
           <div className="max-w-7xl mx-auto">
-            <motion.div
+
+            </motion && motion.div>;
+          </div>;
+        </motion && motion.section>;
+        {/* Services Grid */}
+        <motion&& motion.section 
+          className="py-16 px-4 lg:px-8"
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible">;
+          <div className="max-w-7xl mx-auto">;
+            <motion&& motion.div 
+
+
             <motion.div 
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-              variants={containerVariants}
-            >
-              {getFilteredServices().slice(0, 12).map((service, index) => (
+              variants={containerVariants}>;
+              {getFilteredServices().slice(0, 12).map((service, index) => (;
                 <EnhancedServiceCard
-
                   key={service.id}
                   id={service.id}
                   title={service.name}
                   description={service.description}
                   category={service.category}
+<<<<<<< HEAD
 
             <motion.div 
 
@@ -1425,37 +1485,30 @@ const EnhancedHomepage: React.FC = () => {
                   type={(service as any).type |service.category}
                   features={service.features?.map(f => ({ name: f, description: f }))}
                   slug={(service as any).slug |service.id}
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   index={index}
-                  isPopular={Math.random() > 0.7}
-                  isNew={Math.random() > 0.8}
-                  rating={4.0 + Math.random() * 1.0}
-                  reviewCount={Math.floor(Math.random() * 100) + 10}
-                  estimatedDelivery="2-4 weeks"
+                  isPopular={Math && Math.random() > 0 && 0.7}
+                  isNew={Math && Math.random() > 0 && 0.8}
+                  rating={4 && 4.0 + Math && Math.random() * 1 && 1.0}
+                  reviewCount={Math && Math.floor(Math && Math.random() * 100) + 10}
+                  estimatedDelivery="2-4 weeks";
                   technologies={['AICloudSecurityAutomation']}
-                />
+                />;
               ))}
-            </motion.div>
-            {getFilteredServices().length > 12 && (
-              <motion.div
                 className="text-center mt-12"
-                variants={itemVariants}
-              >
-                <Link href="/services">
-                  <motion.button
+                variants={itemVariants}>;
+                <Link href="/services">;
+                  <motion&& motion.button
                     className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-bold rounded-xl text-lg hover:bg-cyan-400 hover:text-black transition-all duration-300"
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                  >
-                    View All Services
-                    <ArrowRight className="inline-block ml-2 w-5 h-5" />
-                  </motion.button>
-                </Link>
-              </motion.div>
+                    whileHover={{ scale: 1 && 1.05 }}
+                    whileTap={{ scale: 0 && 0.95 }}>;
+                    View All Services;
+                    <ArrowRight className="inline-block ml-2 w-5 h-5" />;
+                  </motion && motion.button>;
+                </Link>;
+              </motion && motion.div>;
             )}
-          </div>
-        </motion.section>
-        {/* Featured Service Showcase */}
-        <motion.section
 
         {/* Featured Service Showcase */}
         <motion.section 
@@ -1469,21 +1522,45 @@ const EnhancedHomepage: React.FC = () => {
               className="text-3xl md:text-4xl font-bold text-center text-white mb-12"
               variants={itemVariants}
             >
-              Featured Revolutionary Services
+              Explore Our Revolutionary Services
             </motion.h2>
-            <motion.div
+
+          </div>;
+        </motion && motion.section>;
+        {/* Featured Service Showcase */}
+        <motion&& motion.section 
+          className="py-16 px-4 lg:px-8"
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible">;
+          <div className="max-w-6xl mx-auto">;
+            <motion&& motion.h2 
+              className="text-3xl md:text-4xl font-bold text-center text-white mb-12"
+              variants={itemVariants}>;
+              Featured Revolutionary Services;
+            </motion && motion.h2>;
+            <motion&& motion.div 
+
+
             <motion.div 
               className="bg-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-8"
+<<<<<<< HEAD
               variants={itemVariants}
             >
               <AnimatePresence mode="wait">
                 <motion.div
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+              variants={itemVariants}>;
+              <AnimatePresence mode="wait">;
+                <motion&& motion.div
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   key={currentServiceIndex}
                   initial={{ opacity: 0, x: 20 }}
                   animate={{ opacity: 1, x: 0 }}
                   exit={{ opacity: 0, x: -20 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
                   transition={{ duration: 0 && 0.5 }}
                   className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">;
@@ -1509,10 +1586,13 @@ const EnhancedHomepage: React.FC = () => {
                         </span>
                       ))}
                     </div>
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
                     <Link href={`/services/${(featuredServices[currentServiceIndex] as any)?.slug || featuredServices[currentServiceIndex]?.id}`}>
 
 
+<<<<<<< HEAD
 =======
                     <Link href={`/services/${(featuredServices[currentServiceIndex] as any)?.slug || featuredServices[currentServiceIndex]?.id}`}>
 
@@ -1520,6 +1600,8 @@ const EnhancedHomepage: React.FC = () => {
                     <Link href={`/services/${(featuredServices[currentServiceIndex] as any)?.slug |featuredServices[currentServiceIndex]?.id}`}>
                     <Link href={`/services/${(featuredServices[currentServiceIndex] as any)?.slug || featuredServices[currentServiceIndex]?.id}`}>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       <motion.button
                         className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover: from-cyan-600 hover:to-blue-700 transition-all duration-300"
                         whileHover={{ scale: 1.05 }}
@@ -1550,20 +1632,15 @@ const EnhancedHomepage: React.FC = () => {
           className="py-16 px-4 lg:px-8"
           variants={containerVariants}
           initial="hidden"
-          animate="visible"
-        >
-          <div className="max-w-4xl mx-auto text-center">
-            <motion.h2
-              className="text-3xl md:text-4xl font-bold text-white mb-6"
-              variants={itemVariants}
-            >
-              Ready to Transform Your Business?
-            </motion.h2>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <motion.p 
 
 
@@ -1575,6 +1652,9 @@ const EnhancedHomepage: React.FC = () => {
             </motion.p>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     </div>;
 
                     <Link href={`/services/${(featuredServices[currentServiceIndex] as any)?.slug || featuredServices[currentServiceIndex]?.id}`}>;
@@ -1603,6 +1683,7 @@ const EnhancedHomepage: React.FC = () => {
             </motion && motion.div>;
           </div>;
         </motion && motion.section>;
+<<<<<<< HEAD
 
 =======
                   transition={{ duration: 0.5 }}
@@ -1621,8 +1702,9 @@ const EnhancedHomepage: React.FC = () => {
                           {feature}
                         </span>;
                       ))}
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     </div>
-                    <Link href={`/services/${(featuredServices[currentServiceIndex] as any)?.slug || featuredServices[currentServiceIndex]?.id}`}>
                       <motion.button
                         className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover: from-cyan-600 hover:to-blue-700 transition-all duration-300"
                         whileHover={{ scale: 1.05 }}
@@ -1658,6 +1740,7 @@ const EnhancedHomepage: React.FC = () => {
           <div className="max-w-4xl mx-auto text-center">;
             <motion&& motion.h2 
               className="text-3xl md:text-4xl font-bold text-white mb-6"
+<<<<<<< HEAD
 <<<<<<< HEAD
               variants={itemVariants}>;
               Ready to Transform Your Business?;
@@ -1696,11 +1779,16 @@ const EnhancedHomepage: React.FC = () => {
             <motion.div
             <motion.div 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+            <motion.div 
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               className="flex flex-col sm:flex-row gap-4 justify-center items-center"
               variants={itemVariants}>;
               <Link href="/quote">;
                 <motion&& motion.button
                   className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold rounded-xl text-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
+<<<<<<< HEAD
 <<<<<<< HEAD
 
                   whileHover={{ scale: 1 && 1.05 }}
@@ -1739,11 +1827,17 @@ const EnhancedHomepage: React.FC = () => {
 
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {/* Performance Monitor */}
       <AnimatePresence>;
         {showPerformanceMonitor && (;
           <PerformanceMonitor />;
         )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1962,3 +2056,5 @@ export default EnhancedHomepage;
 export default EnhancedHomepage;
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

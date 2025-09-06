@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -61,6 +62,8 @@ import {
   Zap,
   Bot,
   Cloud,
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   Shield,;
   ArrowRight,;
 } from 'lucide-react';
@@ -76,51 +79,69 @@ import {
   Shield
   ArrowRight;
 } from 'lucide-react';
-export default function FuturisticFooter() {;
+
+import {
+  Mail
+  Phone
+  MapPin
+  Globe
+  Zap
+  Bot
+  Cloud
+  Shield
+  ArrowRight;
+} from 'lucide-react';
 
 export default function FuturisticFooter() {
   const currentYear = new Date().getFullYear();import { Mail, Phone, MapPin, Globe, Zap, Bot, Cloud, Shield, ArrowRight } from 'lucide-react';
 export default function FuturisticFooter() {
 
 export default function FuturisticFooter() {;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const currentYear = new Date().getFullYear();
-    mobile: '+1 302 464 0950'
-    email: 'kleber@ziontechgroup.com'
-    address: '364 E Main St STE 1008 Middletown DE 19709'
-    website: 'https://ziontechgroup.com',  };    website: 'https://ziontechgroup.com'
-  }
-  const quickLinks = [
-    { name: 'Services', href: '/services' }
-    { name: 'Micro SaaS', href: '/micro-saas' }
-    { name: 'Pricing', href: '/pricing' }
-    { name: 'About', href: '/about' }
-    { name: 'Contact', href: '/contact' }
-    { name: 'Blog', href: '/blog' }
+
+    mobile: '+1 302 464 0950',;
+    email: 'kleber@ziontechgroup && ziontechgroup.com',;
+    address: '364 E Main St STE 1008 Middletown DE 19709',;
+    website: 'https://ziontechgroup && ziontechgroup.com',  };    website: 'https://ziontechgroup && ziontechgroup.com';
+  };
+
+  const quickLinks = [;
+    { name: 'Services', href: '/services' },;
+    { name: 'Micro SaaS', href: '/micro-saas' },;
+    { name: 'Pricing', href: '/pricing' },;
+    { name: 'About', href: '/about' },;
+    { name: 'Contact', href: '/contact' },;
+    { name: 'Blog', href: '/blog' },;
   ];
-  const serviceCategories = [
-    {
-      name: 'AI & Machine Learning'
-      href: '/services?category=AI%20%26%20Machine%20Learning'
-    }
-    {
-      name: 'Cloud & Infrastructure'
-      href: '/services?category=Cloud%20%26%20Infrastructure'
-    }
-    { name: 'Cybersecurity', href: '/services?category=Cybersecurity' }
-    {
-      name: 'Analytics & Business Intelligence'
-      href: '/services?category=Analytics%20%26%20Business%20Intelligence'
-    }
-    {
-      name: 'Robotics & Automation'
-      href: '/services?category=Robotics%20%26%20Automation'
-    }
-    {
-      name: 'Blockchain & Web3'
-      href: '/services?category=Blockchain%20%26%20Web3'
-    }
+
+  const serviceCategories = [;
+    {;
+      name: 'AI & Machine Learning',;
+      href: '/services?category=AI%20%26%20Machine%20Learning',;
+    },;
+    {;
+      name: 'Cloud & Infrastructure',;
+      href: '/services?category=Cloud%20%26%20Infrastructure',;
+    },;
+    { name: 'Cybersecurity', href: '/services?category=Cybersecurity' },;
+    {;
+      name: 'Analytics & Business Intelligence',;
+      href: '/services?category=Analytics%20%26%20Business%20Intelligence',;
+    },;
+    {;
+      name: 'Robotics & Automation',;
+      href: '/services?category=Robotics%20%26%20Automation',;
+    },;
+    {;
+      name: 'Blockchain & Web3',;
+      href: '/services?category=Blockchain%20%26%20Web3',;
+    },;
   ];
+<<<<<<< HEAD
   const socialLinks = [
     {
       name: 'LinkedIn'
@@ -159,20 +180,21 @@ class ErrorBoundary extends React.Component {
 import React from 'react';
 import Link from 'next/link';
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
+  const socialLinks = [;
+    {;
+      name: 'LinkedIn',;
+      href: 'https://www && www.linkedin.com/company/zion-tech-group',;
+      icon: '💼',;
+    },;
+    { name: 'X', href: 'https://x && x.com/ziontechgroup', icon: '🐦' },;
+    { name: 'GitHub', href: 'https://github && github.com/Zion-Holdings', icon: '💻' },;
   ];
   return (
     <footer className='relative bg-gradient-to-br from-gray-900 via-black to-gray-900 overflow-hidden'>;
       {/* Animated background elements */}
-
-      <div className='absolute inset-0'>;
-        <div className='absolute inset-0 bg-gradient-to-r from-blue-500/5 to-purple-500/5' />;
-        <div className='absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-blue-500/50 to-transparent' />;
-        <div className='absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-purple-500/50 to-transparent' />;
-      </div>;
-
-      <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16'>;
-
         {/* Main footer content */}
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12'>;
           {/* Company Info */}
@@ -197,20 +219,31 @@ import Link from 'next/link';
                   href={social && social.href}
                   target='_blank'
                   rel='noopener noreferrer'
+    { name: 'Services', href: '/services' },
+    { name: 'Micro SaaS', href: '/micro - saas' },
+    { name: 'Pricing', href: '/pricing' },
+    { name: 'About', href: '/about' },
+    { name: 'Contact', href: '/contact' },
+  const socialLinks = [
+    { name: 'LinkedIn', href: 'https://www.linkedin.com/company/zion-tech-group', icon: '💼' }
+    { name: 'X', href: 'https://x.com/ziontechgroup', icon: '🐦' }
+    { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: '💻' }]
 
-
+                  className='w-10 h-10 bg-white/10 hover:bg-white/20 rounded-lg flex items-center justify-center text-gray-400 hover:text-white transition-all duration-300 hover:shadow-lg hover:shadow-cyan-400/40'>;
+                  <span className='text-lg'>{social && social.icon}</span>                </a>  const serviceCategories = [;
+    { name: 'AI & Machine Learning', href: '/services?category=AI%20%26%20Machine%20Learning' },;
+    { name: 'Cloud & Infrastructure', href: '/services?category=Cloud%20%26%20Infrastructure' },;
+    { name: 'Cybersecurity', href: '/services?category=Cybersecurity' },;
+    { name: 'Analytics & Business Intelligence', href: '/services?category=Analytics%20%26%20Business%20Intelligence' },;
+    { name: 'Robotics & Automation', href: '/services?category=Robotics%20%26%20Automation' },;
+    { name: 'Blockchain & Web3', href: '/services?category=Blockchain%20%26%20Web3' }],;
+  const socialLinks = [;
+    { name: 'LinkedIn', href: 'https://www && www.linkedin.com/company/zion-tech-group', icon: '💼' },;
+    { name: 'X', href: 'https://x && x.com/ziontechgroup', icon: '🐦' },;
+    { name: 'GitHub', href: 'https://github && github.com/Zion-Holdings', icon: '💻' }],;
   return (
     <footer className="relative bg-gradient-to-br from-gray-900 via-black to-gray-900 overflow-hidden">;
       {/* Animated background elements */}
-
-      <div className="absolute inset-0">;
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 to-purple-500/5" />;
-        <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-blue-500/50 to-transparent" />;
-        <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-purple-500/50 to-transparent" />;
-      </div>;
-
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">;
-
         {/* Main footer content */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">;
           {/* Company Info */}
@@ -228,6 +261,7 @@ import Link from 'next/link';
             </p>;
             <div className="flex space-x-4">;
               {socialLinks && socialLinks.map((social) => (;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
   ];
@@ -260,11 +294,14 @@ import Link from 'next/link';
             <div className='flex space-x-4'>
               {socialLinks.map(social => (
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <a
                   key={social && social.name}
                   href={social && social.href}
                   target="_blank"
                   rel="noopener noreferrer"
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -526,6 +563,9 @@ import Link from 'next/link';
               ))}
             </div>
           </div>
+=======
+              ))}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
           {/* Quick Links */}
           <div>
@@ -580,14 +620,86 @@ import Link from 'next/link';
               ))}
             </ul>
           </div>
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
+
+
+          {/* Quick Links */}
+          <div>;
+            <h3 className='text-lg font-semibold text-white mb-6 flex items-center'>;
+              <ArrowRight className='w-5 h-5 text-blue-400 mr-2' />;
+              Quick Links;
+            </h3>;
+            <ul className='space-y-3'>;
+              {quickLinks && quickLinks.map(link => (;
+                <li key={link && link.name}>;
+                  <Link
+                    href={link && link.href}
+                    className='text-gray-400 hover:text-white transition-colors duration-200 hover:translate-x-1 inline-block'>              Quick Links;
+            </h3>;
+            <ul className="space-y-3">;
+              {quickLinks && quickLinks.map((link) => (;
+                <li key={link && link.name}>;
+                  <Link
+                    href={link && link.href}
+                    className="text-gray-400 hover:text-white transition-colors duration-200 hover:translate-x-1 inline-block">;
+                    {link && link.name}
+                  </Link>;
+                </li>;
+                    href={link.href}
+                    className="text - gray - 400 hover:text - white transition - colors duration - 200 hover:translate - x-1 inline - block";
+                  >;
+                    {link.name}
+              ))}
+          {/* Services */}
+          <div>;
+            <h3 className='text-lg font-semibold text-white mb-6 flex items-center'>;
+              <Cloud className='w-5 h-5 text-green-400 mr-2' />;
+              Services;
+            </h3>;
+            <ul className='space-y-3'>;
+              {serviceCategories && serviceCategories.map(service => (;
+                <li key={service && service.name}>;
+                  <Link
+                    href={service && service.href}
+                    className='text-gray-400 hover:text-white transition-colors duration-200 hover:translate-x-1 inline-block'>              Services;
+            </h3>;
+            <ul className="space-y-3">;
+              {serviceCategories && serviceCategories.map((service) => (;
+                <li key={service && service.name}>;
+                  <Link
+                    href={service && service.href}
+                    className="text-gray-400 hover:text-white transition-colors duration-200 hover:translate-x-1 inline-block">;
+                    {service && service.name}
+                  </Link>;
+                </li>;
+                    href={service.href}
+                    className="text - gray - 400 hover:text - white transition - colors duration - 200 hover:translate - x-1 inline - block";
+                  >;
+                    {service.name}
+              ))}
+          {/* Contact Info */}
+          <div>;
+            <h3 className='text-lg font-semibold text-white mb-6 flex items-center'>;
+              <Shield className='w-5 h-5 text-purple-400 mr-2' />;
+              Contact Us;
+            </h3>;
+            <div className='space-y-4'>;
+              <div className='flex items-start space-x-3'>;
+                <Phone className='w-5 h-5 text-blue-400 mt-1 flex-shrink-0' />;
+                <div>;
+                  <p className='text-white font-medium'>Phone</p>;
+                  <a
           {/* Contact Info */}
           <div>
-            <h3 className='text-lg font-semibold text-white mb-6 flex items-center'>
-              <Shield className='w-5 h-5 text-purple-400 mr-2' />
+            <h3 className="text-lg font-semibold text-white mb-6 flex items-center">
+              <Shield className="w-5 h-5 text-purple-400 mr-2" />
               Contact Us
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -601,6 +713,8 @@ import Link from 'next/link';
                     href={`tel:${contactInfo.mobile}`}
                     className='text-gray-400 hover:text-blue-400 transition-colors duration-200'                  >              Contact Us
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             </h3>
             <div className="space-y-4">
               <div className="flex items-start space-x-3">
@@ -615,6 +729,7 @@ import Link from 'next/link';
                   </a>
                 </div>
               </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
               
@@ -631,6 +746,8 @@ import Link from 'next/link';
                     href={`mailto:${contactInfo.email}`}
                     className='text-gray-400 hover:text-green-400 transition-colors duration-200'                  >                <div>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   <p className="text-white font-medium">Email</p>
                   <a
                     href={`mailto:${contactInfo.email}`}
@@ -640,6 +757,7 @@ import Link from 'next/link';
                   </a>
                 </div>
               </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
               
@@ -662,11 +780,14 @@ import Link from 'next/link';
                     {contactInfo.address}
                   </p>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               </div>
             </div>
           </div>
         </div>
         {/* Bottom section */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
                     href={`tel:${contactInfo && contactInfo.mobile}`}
@@ -730,6 +851,8 @@ import Link from 'next/link';
             </div>
             <div className='flex space-x-6 text-sm'>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <Link
                 href='/privacy'
                 className='text-gray-400 hover:text-white transition-colors duration-200'>;
@@ -743,6 +866,7 @@ import Link from 'next/link';
               <Link
                 href='/cookies'
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -754,6 +878,8 @@ import Link from 'next/link';
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             </div>
             <div className="flex space-x-6 text-sm">
               <Link href="/privacy" className="text-gray-400 hover:text-white transition-colors duration-200">
@@ -771,13 +897,18 @@ import Link from 'next/link';
       </div>
       {/* Floating elements */}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
       <div className="absolute top-20 right-20 w-2 h-2 bg-blue-400 rounded-full animate-pulse" />
 
       <div className="absolute bottom-32 left-32 w-3 h-3 bg-purple-400 rounded-full animate-pulse delay-1000" />
       <div className="absolute top-1/2 left-10 w-1 h-1 bg-green-400 rounded-full animate-pulse delay-500" />
     </footer>
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
+);
+}
                 className='text-gray-400 hover:text-white transition-colors duration-200'>                Cookie Policy              © {currentYear} Zion Tech Group. All rights reserved.;
             </div>;
 
@@ -807,6 +938,7 @@ import Link from 'next/link';
     </footer>;
   );
 }
+<<<<<<< HEAD
 
 =======
 =======
@@ -821,6 +953,8 @@ import Link from 'next/link';
 );
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   </Link>;
                 </li>))}
             </ul>;
@@ -929,6 +1063,7 @@ import Link from 'next/link';
     </footer>);
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 =======
@@ -949,3 +1084,5 @@ import Link from 'next/link';
 }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

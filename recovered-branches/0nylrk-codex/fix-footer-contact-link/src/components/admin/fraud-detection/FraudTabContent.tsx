@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import React from './react';
 import { AlertTriangle, AlertCircle, CheckCircle } from './lucide-react';
@@ -17,18 +18,14 @@ interface FraudTabContentProps {
   tabValue: string
 }
 import React from "react";
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { AlertTriangle, AlertCircle, CheckCircle } from "lucide-react";
 import {AlertTriangle, AlertCircle, CheckCircle} from "lucide-react";
 import React from "react",
 import { AlertTriangle, AlertCircle, CheckCircle } from "lucide-react",
 
 interface FraudTabContentProps {
-  tabValue: string
-}
-export const FraudTabContent: React.FC<FraudTabContentProps> = ({ tabValue }) => {
-  switch(tabValue) {
-    case 'pending':
-      return (
 
         <div className="bg-amber-50 dark: bg-amber-950/20 p-8 rounded-lg text-center">
           <AlertTriangle className="mx-auto h-12 w-12 text-amber-500 mb-4" />
@@ -36,6 +33,7 @@ export const FraudTabContent: React.FC<FraudTabContentProps> = ({ tabValue }) =>
           <p className="text-muted-foreground">
             This tab will show fraud flags that are still pending admin review.
           </p>
+<<<<<<< HEAD
 import React from './react';
 import { AlertTriangle, AlertCircle, CheckCircle } from './lucide-react';
 
@@ -113,13 +111,18 @@ export const FraudTabContent:React.FC<FraudTabContentProps> = ({ tabValue }) => 
         </div>
 
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         </div>;
       );
         </div>
       );
       ),
     
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     case 'dangerous':
       return (
         <div className="bg-red-50 dark:bg-red-950/20 p-8 rounded-lg text-center">
@@ -130,6 +133,7 @@ export const FraudTabContent:React.FC<FraudTabContentProps> = ({ tabValue }) => 
           </p>
         </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -143,6 +147,11 @@ export const FraudTabContent:React.FC<FraudTabContentProps> = ({ tabValue }) => 
       ),
     
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+      );
+      ),
+    
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     case 'actioned':
       return (
         <div className="bg-green-50 dark:bg-green-950/20 p-8 rounded-lg text-center">
@@ -158,6 +167,7 @@ export const FraudTabContent:React.FC<FraudTabContentProps> = ({ tabValue }) => 
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -168,6 +178,10 @@ export const FraudTabContent:React.FC<FraudTabContentProps> = ({ tabValue }) => 
 }
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from "react",;
 import { AlertTriangle, AlertCircle, CheckCircle } from "lucide-react",;
 interface FraudTabContentProps {;
@@ -188,6 +202,10 @@ export const FraudTabContent: React.FC<FraudTabContentProps> = ({ tabValue }) =>
       ),;
     case 'dangerous':;
       return (;
+interface FraudTabContentProps {
+  tab_value: string;
+}
+      return (
         <div className="bg-red-50 dark:bg-red-950/20 p-8 rounded-lg text-center">;
           <AlertCircle className="mx-auto h-12 w-12 text-red-500 mb-4" />;
           <h3 className="text-xl font-medium mb-4">Dangerous Flags</h3>;
@@ -195,6 +213,7 @@ export const FraudTabContent: React.FC<FraudTabContentProps> = ({ tabValue }) =>
             This tab shows high-priority dangerous flags requiring immediate attention.;
           </p>;
         </div>;
+<<<<<<< HEAD
       ),;
 <<<<<<< HEAD
 
@@ -286,9 +305,12 @@ export const FraudTabContent: React.FC < FraudTabContentProps> = ({ tab_value })
 case 'dangerous': return (<div className="bg-red-50 dark:bg-red-950/20 p-8 rounded-lg text-center" > <AlertCircle className="mx-auto h-12 w-12 text-red-500 mb-4" /> <h3 className="text-xl font-medium mb-4" >Dangerous Flags</h3> <p className="text-muted-foreground" > This tab shows high-priority dangerous flags requiring immediate attention. </p> </div>);
 case 'actioned': return (<div className="bg-green-50 dark:bg-green-950/20 p-8 rounded-lg text-center" > <CheckCircle className="mx-auto h-12 w-12 text-green-500 mb-4" /> <h3 className="text-xl font-medium mb-4" >Actioned Flags</h3> <p className="text-muted-foreground" > This tab shows flags where action has already been taken. </p> </div>);
 default: 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       );
-    default:;
-      return null;
   }
 };
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

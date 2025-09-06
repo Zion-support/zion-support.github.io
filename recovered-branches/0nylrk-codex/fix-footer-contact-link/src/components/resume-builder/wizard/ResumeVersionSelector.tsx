@@ -1,9 +1,12 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 
@@ -15,6 +18,7 @@ import {Dialog, DialogContent, DialogFooter, DialogHeader, DialogTitle} from '@/
 import {Save, ChevronDown, Plus, Loader2} from 'lucide-react';
 import {Resume} from '@/types/resume';
 import {useResume} from '@/hooks/useResume';
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -42,11 +46,14 @@ import { Resume } from "@/types/resume";
 import { useResume } from "@/hooks/useResume";
 >>>>>>> main
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface ResumeVersionSelectorProps {
   currentResume: Resume;
-  onResumeChange: (resumeId: string) => void;
+  onResumeChange: (resumeId: string) => void
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeVersionSelectorProps) {;
@@ -62,12 +69,15 @@ export function ResumeVersionSelector({
 }: ResumeVersionSelectorProps) {
 >>>>>>> main
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const { createResume, fetchResume } = useResume();
   const [saveDialogOpen, setSaveDialogOpen] = useState(false);
   const [newResumeTitle, setNewResumeTitle] = useState("");
   const [existingResumes, setExistingResumes] = useState<Resume[]>([]);
   const [isLoading, setIsLoading] = useState(false);
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   const handleCreateNewVersion = async () => {;
@@ -90,6 +100,8 @@ export function ResumeVersionSelector({
 
 =======
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const handleCreateNewVersion = async () => {
     if (newResumeTitle.trim()) {
       setIsLoading(true);
@@ -99,11 +111,14 @@ export function ResumeVersionSelector({
         onResumeChange(resumeId);
         setSaveDialogOpen(false);
 <<<<<<< HEAD
+<<<<<<< HEAD
         setNewResumeTitle('')
 
 
         setNewResumeTitle('')
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useState } from 'react',;
 import {;
   DropdownMenu,;
@@ -139,6 +154,7 @@ export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeV
         setSaveDialogOpen(false);
         setNewResumeTitle('');
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -165,53 +181,14 @@ export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeV
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         setNewResumeTitle("");
->>>>>>> main
       }
       setIsLoading(false);
     }
-},
-      }
-      setIsLoading(false);
-    }
-  },
   };
   },
-
-  return (
-    <div className="flex items-center gap-2">
-      <span className="text-sm text-muted-foreground">Resume:</span>
-      <DropdownMenu>
-        <DropdownMenuTrigger asChild>
-          <Button variant="outline" size="sm" className="gap-2">
-            {currentResume?.basic_info?.title || "My Resume"}
-            <ChevronDown className="h-4 w-4" />
-          </Button>
-        </DropdownMenuTrigger>
-        <DropdownMenuContent align="end">
-          {existingResumes.map((resume) => (
-            <DropdownMenuItem
-              key={resume.id}
-              onClick={() => onResumeChange(resume.id!)}
-              className="cursor-pointer"
-            >
-              {resume.basic_info.title}
-            </DropdownMenuItem>
-          ))}
-          <DropdownMenuSeparator />
-          <DropdownMenuItem
-            onClick={() => setSaveDialogOpen(true)}
-            className="cursor-pointer"
-          >
-            <Plus className="h-4 w-4 mr-2" />
-            Save as new version
-          </DropdownMenuItem>
-        </DropdownMenuContent>
-      </DropdownMenu>
-<<<<<<< HEAD
-=======
-
->>>>>>> main
       <Dialog open={saveDialogOpen} onOpenChange={setSaveDialogOpen}>
         <DialogContent className="sm:max-w-md">
           <DialogHeader>
@@ -231,6 +208,7 @@ export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeV
             <Button
               onClick={handleCreateNewVersion}
               disabled={!newResumeTitle.trim() || isLoading}
+<<<<<<< HEAD
 
             <Button variant="outline" onClick={() => setSaveDialogOpen(false)}>
               Cancel
@@ -242,6 +220,8 @@ onClick={handleCreateNewVersion}
               disabled={!newResumeTitle.trim() || isLoading}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               className="gap-2"
             >
               {isLoading && <Loader2 className="h-4 w-4 animate-spin" />}
@@ -252,6 +232,7 @@ onClick={handleCreateNewVersion}
         </DialogContent>
       </Dialog>
     </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     <div className="flex items-center gap-2">;
@@ -425,3 +406,5 @@ if ( {) {
 ;
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

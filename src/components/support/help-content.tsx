@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 export const HELP_CATEGORIES: HelpCategory[] = [
   {
 =======
@@ -35,6 +36,10 @@ export const HELP_CATEGORIES: HelpCategory[] = [
 xport const HELP_CATEGORIES: HelpCategory[] = [
   {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+export const HELP_CATEGORIES: HelpCategory[] = [
+  {
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     id: "getting-started",
     name: "Getting Started",
     description: "Learn the basics of using the Zion AI Marketplace",
@@ -53,6 +58,7 @@ xport const HELP_CATEGORIES: HelpCategory[] = [
         content: "A complete profile helps you get the most out of Zion AI Marketplace. Follow these steps to set up your profile:\n\n1. Navigate to the Profile section from your dashboard\n2. Upload a professional profile picture\n3. Add your basic information including location and contact details\n4. Write a compelling bio that highlights your expertise or requirements\n5. For talent users: Add your skills, experience, and portfolio items\n6. For client users: Add information about your company or projects\n\nA complete profile increases your visibility on the platform and helps our AI matching system connect you with the right opportunities or talent.",
         lastUpdated: "2023-11-18",
         tags: ["profile", "setup"]
+<<<<<<< HEAD
       };
       {
         id: "platform-navigation",
@@ -64,6 +70,8 @@ xport const HELP_CATEGORIES: HelpCategory[] = [
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       }
     ]
   },
@@ -183,6 +191,7 @@ xport const HELP_CATEGORIES: HelpCategory[] = [
       },
       {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -197,6 +206,8 @@ id: 'dispute-prevention',
       },
     ],;
   },;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         id: "dispute-prevention",
         title: "Tips for preventing disputes",
         content: "The best way to handle disputes is to prevent them from happening. Here are some best practices:\n\n1. Always create clear, detailed contracts with specific deliverables\n2. Break large projects into smaller milestones with clear acceptance criteria\n3. Maintain regular communication through the platform's messaging system\n4. Address concerns immediately rather than letting them accumulate\n5. Document all important decisions and changes to the original agreement\n6. Use the platform's time tracking tools for hourly projects\n7. Provide and request feedback throughout the project, not just at the end\n\nBy following these guidelines, you can significantly reduce the risk of disputes and ensure a smooth working relationship.",
@@ -233,6 +244,7 @@ export const HELP_CATEGORIES: HelpCategory[] = [;
         lastUpdated: "2023-12-01",;
         tags: ["navigation", "interface"];
       }
+<<<<<<< HEAD
     ]
   },
   {
@@ -395,6 +407,8 @@ export const HELP_CATEGORIES: HelpCategory[] = [;
         lastUpdated: "2023-12-01",;
         tags: ["navigation", "interface"];
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {
         id: 'complete-profile'
         title: 'Completing your profile'
@@ -411,6 +425,7 @@ export const HELP_CATEGORIES: HelpCategory[] = [;
         lastUpdated: '2023-12-01'
         tags: ['navigation', 'interface']
       }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     ]
@@ -676,3 +691,6 @@ export const HELP_CATEGORIES: HelpCategory[] = [;
 ];
 ];
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+];
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

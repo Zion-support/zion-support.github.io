@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import * as React from &quot;react & quot;
 <<<<<<< HEAD
 =======
@@ -53,22 +54,12 @@ const Pagination = ({ className, ...props }: React.ComponentProps<&quot;nav&quot
 
 import { cn } from "@/lib/utils"
 import { ButtonProps, buttonVariants } from "@/components/ui/button"
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 const Pagination = ({ className, ...props }: React.ComponentProps<"nav">) => (
   <nav
-    role=&quot;navigation&quot;
-    aria-label=&quot;pagination&quot;
-    className={cn(&quot;mx-auto flex w-full justify-center&quot; className)}
-    role="navigation"
-    aria-label="pagination"
-    className={cn("mx-auto flex w-full justify-center", className)}
-const PaginationContent = React.forward_ref<;
-  HTMLUListElement,
-  React.ComponentProps<&quot;ul & quot;>;
->(({ class_name, ...props }, ref) => (
-  <ul;
-    ref={ref}
-    className={cn (&quot;flex flex - row items - center gap - 1&quot;, class_name)}
     {...props}
 <<<<<<< HEAD
 
@@ -86,34 +77,14 @@ const PaginationItem = React.forwardRef<
 =======
   />
 )
-Pagination.displayName = &quot;Pagination&quot;
-const PaginationContent = React.forwardRef<
-  HTMLUListElement
-  React.ComponentProps<&quot;ul&quot;>
-Pagination.displayName = "Pagination"
-
-const PaginationContent = React.forwardRef<
-  HTMLUListElement,
-  React.ComponentProps<"ul">
 >(({ className, ...props }, ref) => (
   <ul
     ref={ref}
-    className={cn(&quot;flex flex-row items-center gap-1&quot; className)}
-    className={cn("flex flex-row items-center gap-1", className)}
-    className={cn("flex flex-row items-center gap-1", className)}
     {...props}
 />
 ))
-PaginationContent.displayName = &quot;PaginationContent&quot;
-const PaginationItem = React.forwardRef<
-  HTMLLIElement
-  React.ComponentProps<&quot;li&quot;>
-PaginationContent.displayName = "PaginationContent"
-
-const PaginationItem = React.forwardRef<
-  HTMLLIElement,
-  React.ComponentProps<"li">
 >(({ className, ...props }, ref) => (
+<<<<<<< HEAD
   <li ref={ref} className={cn("&quot; className)} {...props} />
   <li ref={ref} className={cn("", className)} {...props} />
   <li ref={ref} className={cn("", className)} {...props} />
@@ -142,12 +113,16 @@ type PaginationLinkProps = {
 } & React.ComponentProps<"a">
 
 
+=======
+))
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface PaginationButtonProps
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   page: number
   isActive?: boolean
 }
 const PaginationLink = ({
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -199,29 +174,34 @@ PaginationLink.displayName = "PaginationLink"
 
   className,
   isActive,
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
   ...props
 }: PaginationLinkProps) => (
   <a
-    aria-current={isActive ? &quot;page" : undefined}
+    aria-current={isActive ? "page" : undefined}
     className={cn(
       buttonVariants({
 
 
 
         variant: isActive ? "outline" : "ghost",
-
+        variant: isActive ? "outline" : "ghost",
         size}),
       className
     {...props}
   />
 )
+<<<<<<< HEAD
 PaginationLink.displayName = &quot;PaginationLink&quot;
 PaginationLink.displayName = &quot;PaginationLink&quot;
 PaginationLink.displayName = "PaginationLink"
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 const PaginationButton = React.forwardRef<HTMLButtonElement PaginationButtonProps>(
   ({ page, isActive, className, ...props }, ref) => (
     <button
@@ -230,6 +210,7 @@ const PaginationButton = React.forwardRef<HTMLButtonElement PaginationButtonProp
       aria-label={`Page ${page}`}
       aria-current={isActive ? 'page' : undefined}
       className={cn(;
+<<<<<<< HEAD
 <<<<<<< HEAD
         className;
       )}
@@ -241,6 +222,8 @@ ursor/fix-website-loading-errors-and-merge-6662
         isActive && 'bg-green-600 text-white';
         buttonVariants({ variant: 'ghost', size: 'icon' }),;
         isActive && 'bg-green-600 text-white',;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
         className;
@@ -267,6 +250,7 @@ const PaginationPrevious = ({
   </PaginationLink>
 )
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 PaginationPrevious.displayName = "PaginationPrevious"
@@ -279,6 +263,8 @@ PaginationPrevious.displayName = &quot;PaginationPrevious&quot;
 PaginationPrevious.displayName = "PaginationPrevious"
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 const PaginationNext = ({
   className
   ...props
@@ -294,6 +280,7 @@ const PaginationNext = ({
   </PaginationLink>
 )
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 PaginationNext.displayName = "PaginationNext"
@@ -306,6 +293,8 @@ PaginationNext.displayName = &quot;PaginationNext&quot;
 PaginationNext.displayName = "PaginationNext"
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 const PaginationEllipsis = ({
   className
   ...props
@@ -319,6 +308,7 @@ const PaginationEllipsis = ({
     <span className="sr-only&quot;>More pages</span>
   </span>
 )
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 PaginationEllipsis.displayName = &quot;PaginationEllipsis"
@@ -437,3 +427,5 @@ export {
   PaginationLink,
   PaginationButton,
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

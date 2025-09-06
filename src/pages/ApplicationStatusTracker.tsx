@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   const isMobile = null;
 import { SEO } from "@/components/SEO",
@@ -11,11 +12,14 @@ function ApplicationStatusTrackerContent() {
   const isMobile = useIsMobile(),
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 return (
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <>;
       <SEO
         title='Application Status Tracker | Zion AI Marketplace'
         description='Track the status of your job applications in the Zion AI marketplace.'
 
+<<<<<<< HEAD
   const isMobile = useIsMobile();
 
 
@@ -37,6 +41,8 @@ function ApplicationStatusTrackerContent() {
       <div className='container mx-auto px-4 py-8'>
         <div className='flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8'>
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { SEO } from "@/components/SEO",
 import { ApplicationsTracker } from "@/components/jobs/applications",
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",
@@ -50,10 +56,12 @@ function ApplicationStatusTrackerContent() {
 
 
   return (
+    <>
       <SEO 
         title="Application Status Tracker | Zion AI Marketplace" 
         description="Track the status of your job applications in the Zion AI marketplace." 
       />
+<<<<<<< HEAD
       <div className='container mx-auto px-4 py-8'>
         <div className='flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8'>
 ursor/fix-website-loading-errors-and-merge-6662
@@ -62,12 +70,16 @@ ursor/fix-website-loading-errors-and-merge-6662
       
       <div className="container mx-auto px-4 py-8">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8">
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
           <div>
+            <h1 className={`text-${isMobile ? '2xl' : '3xl'} font-bold`}>Application Status Tracker</h1>
             <p className="text-muted-foreground mt-1">Track where you stand in the hiring process</p>
           </div>
         </div>
+<<<<<<< HEAD
         <div className='grid grid-cols-1 gap-6'>
           <Card>
             <CardHeader className='border-b bg-muted/50'>
@@ -77,13 +89,20 @@ ursor/fix-website-loading-errors-and-merge-6662
 
               <CardTitle className="flex items-center text-lg">
                 <Inbox className="mr-2 h-5 w-5" /> Your Applications
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
+        <div className="grid grid-cols-1 gap-6">
           <Card>
             <CardHeader className="border-b bg-muted/50">
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <Card>
             <CardHeader className='border-b bg-muted/50'>
               <CardTitle className='flex items-center text-lg'>
@@ -108,6 +127,7 @@ ursor/fix-website-loading-errors-and-merge-6662
         </div>
       </div>
     </>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
   )
@@ -165,11 +185,14 @@ function ApplicationStatusTrackerContent() {;
 ;
 export default function ApplicationStatusTracker() {;
   return (;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <ProtectedRoute>;
       <ApplicationStatusTrackerContent />;
     </ProtectedRoute>;
   );
 }
+<<<<<<< HEAD
 
   );
 }
@@ -229,4 +252,6 @@ function ApplicationStatusTracker() {
       <ApplicationStatusTrackerContent />;
     </ProtectedRoute>);
 }
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ;

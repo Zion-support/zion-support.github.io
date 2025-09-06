@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -15,6 +16,8 @@ export function getUserFromRequest(req: any): User | null {
       id: 'user-1'
       email: 'user@example.com'
       role: 'client'
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       name: 'Test User'
     }
   }
@@ -25,12 +28,18 @@ export function assertTalentOrClientForOffer(
   offer: { clientId: string; talentSlug: string }
   req: NextApiRequest,;
   offer: { clientId: string; talentSlug: string },
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   talentSlugHeader?: string
 ): DemoUser {
   const u = getDemoUser(req);
   if (u && u.role === 'client' && u && u.id === offer && offer.clientId) return u;
   if (
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     u && u.role === 'talent' &&
@@ -40,10 +49,13 @@ export function assertTalentOrClientForOffer(
     u.role === 'talent' &&
     (u.talentSlug |talentSlugHeader) === offer.talentSlug
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   )
     return u;
   const err = new Error('Not authorized for this offer');
   // @ts-ignore
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
   err.statusCode = 403;
@@ -60,6 +72,38 @@ export function assertTalentOrClientForOffer(
 
 
 
+=======
+
+
+
+
+
+// Marketplace authentication utilities
+export interface MarketplaceUser {
+  id: string;
+  role: 'client' | 'talent' | 'admin';
+  email: string;
+  name: string;
+  slug: string;
+  isVerified: boolean;
+  profile?: {
+    bio?: string;
+    skills?: string[];
+    experience?: string;
+    portfolio?: string[];
+    hourlyRate?: number;
+    availability?: 'available' | 'busy' | 'unavailable';
+  };
+  business?: {
+    name: string;
+    industry: string;
+    size: 'startup' | 'small' | 'medium' | 'large' | 'enterprise';
+    website?: string;
+  };
+  createdAt: string;
+  lastActiveAt: string;
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 export interface AuthContext {
   user: MarketplaceUser | null;
@@ -68,6 +112,7 @@ export interface AuthContext {
   sessionId?: string;
 }
 
+<<<<<<< HEAD
 class MarketplaceAuth {
   private users: Map<string, MarketplaceUser> = new Map();
   private sessions: Map<string, { userId: string; expiresAt: number }> = new Map();
@@ -127,199 +172,62 @@ export interface MarketplaceUser {
       }
     }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-    return null;
-  }
+=======
 
-  async getUserBySlug(slug: string): Promise<MarketplaceUser | null> {
-    for (const user of this.users.values()) {
-      if (user.slug === slug) {
-        return user;
-      }
-    }
-    return null;
-  }
 
-  async updateUser(id: string, updates: Partial<MarketplaceUser>): Promise<MarketplaceUser | null> {
-    const user = this.users.get(id);
-    if (!user) return null;
 
-    const updatedUser = {
-      ...user,
-      ...updates,
-      lastActiveAt: new Date().toISOString()
-    };
-
-    this.users.set(id, updatedUser);
-    return updatedUser;
-  }
-
-  async deleteUser(id: string): Promise<boolean> {
-    return this.users.delete(id);
-  }
-
-  // Authentication
-  async authenticateUser(email: string, password: string): Promise<MarketplaceUser | null> {
-    const user = await this.getUserByEmail(email);
-    if (!user) return null;
-
-    // In a real app, you would verify the password hash here
-    // For now, we'll just check if the user exists
-    return user;
-  }
-
-  async createSession(userId: string, expiresInHours: number = 24): Promise<string> {
-    const sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
-    const expiresAt = Date.now() + (expiresInHours * 60 * 60 * 1000);
-
-    this.sessions.set(sessionId, { userId, expiresAt });
-    return sessionId;
-  }
-
-  async validateSession(sessionId: string): Promise<MarketplaceUser | null> {
-    const session = this.sessions.get(sessionId);
-    if (!session || Date.now() > session.expiresAt) {
-      this.sessions.delete(sessionId);
-      return null;
-    }
-
-    return this.getUser(session.userId);
-  }
-
-  async destroySession(sessionId: string): Promise<boolean> {
-    return this.sessions.delete(sessionId);
-  }
-
-  // Authorization
-  async hasPermission(userId: string, permission: string): Promise<boolean> {
-    const user = await this.getUser(userId);
-    if (!user) return false;
-
-    const permissions = this.getUserPermissions(user);
-    return permissions.includes(permission);
-  }
-
-  private getUserPermissions(user: MarketplaceUser): string[] {
-    const basePermissions = ['read:profile', 'update:own_profile'];
-    
-    switch (user.role) {
-      case 'client':
-        return [
-          ...basePermissions,
-          'create:project',
-          'read:own_projects',
-          'update:own_projects',
-          'create:offer',
-          'read:offers',
-          'update:own_offers',
-          'read:talent_profiles',
-          'create:message',
-          'read:messages'
-        ];
-      case 'talent':
-        return [
-          ...basePermissions,
-          'read:projects',
-          'apply:projects',
-          'read:own_applications',
-          'update:own_applications',
-          'read:offers',
-          'update:own_offers',
-          'create:message',
-          'read:messages',
-          'update:availability'
-        ];
-      case 'admin':
-        return [
-          ...basePermissions,
-          'admin:all',
-          'read:all_projects',
-          'update:all_projects',
-          'delete:all_projects',
-          'read:all_offers',
-          'update:all_offers',
-          'delete:all_offers',
-          'read:all_users',
-          'update:all_users',
-          'delete:all_users',
-          'moderate:content'
-        ];
-      default:
-        return basePermissions;
-    }
-  }
-
-  // Utility methods
-  async getAuthContext(sessionId?: string): Promise<AuthContext> {
-    if (!sessionId) {
-      return {
-        user: null,
-        isAuthenticated: false,
-        permissions: []
-      };
-    }
-
-    const user = await this.validateSession(sessionId);
-    if (!user) {
-      return {
-        user: null,
-        isAuthenticated: false,
-        permissions: []
-      };
-    }
-
-    return {
-      user,
-      isAuthenticated: true,
-      permissions: this.getUserPermissions(user),
-      sessionId
-    };
-  }
-
-  async requireAuth(sessionId?: string): Promise<MarketplaceUser> {
-    const context = await this.getAuthContext(sessionId);
-    if (!context.isAuthenticated || !context.user) {
-      throw new Error('Authentication required');
-    }
-    return context.user;
-  }
-
-  async requireRole(sessionId: string, requiredRole: MarketplaceUser['role']): Promise<MarketplaceUser> {
-    const user = await this.requireAuth(sessionId);
-    if (user.role !== requiredRole) {
-      throw new Error(`Role '${requiredRole}' required`);
-    }
-    return user;
-  }
-
-  async requirePermission(sessionId: string, permission: string): Promise<MarketplaceUser> {
-    const user = await this.requireAuth(sessionId);
-    const hasPermission = await this.hasPermission(user.id, permission);
-    if (!hasPermission) {
-      throw new Error(`Permission '${permission}' required`);
-    }
-    return user;
-  }
-
-  // Cleanup
-  async cleanupExpiredSessions(): Promise<number> {
-    let removedCount = 0;
-    const now = Date.now();
-
-    for (const [sessionId, session] of this.sessions) {
-      if (now > session.expiresAt) {
-        this.sessions.delete(sessionId);
-        removedCount++;
-      }
-    }
-
-    return removedCount;
-  }
-
-  async clearAll(): Promise<void> {
-    this.users.clear();
-    this.sessions.clear();
-  }
+export function getUserFromRequest (req: any): User | null {
+  // Mock implementation - in production, this would extract user from JWT or session;
+  const auth_header = req.headers.authorization;
+  if () {) {
+  $2
 }
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+    return null;
+  }
+  const token = auth_header.substring (7);
+  // Check condition
+if ( {) {
+  $2
+}
+    return {
+      id: 'user - 1',
+      email: 'user@example.com',
+      role: 'client',
+      name: 'Test User';
+    }
+  }
+  return null;
+}
+export function assertTalentOrClientForOffer (
+  req: NextApiRequest,
+  offer: { client_id: string; talent_slug: string },
+  talentSlugHeader?: string): DemoUser {
+  const u = getDemoUser (req);
+  // Check condition
+if (return u) {
+  $2
+}
+  // Check condition
+if (=== offer.talent_slug) {
+  $2
+}
+  );
+    return u;
+  const err = new Error ('Not authorized for this offer');
+  // @ts - ignore;
+  err.status_code = 403;
+  throw err;export function require_auth (req: any): User {
+  const user = getUserFromRequest (req);
+  // Check condition
+if ( {) {
+  $2
+}
+    throw new Error ('Authentication required'),
+  }
+  return user;
+}
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
@@ -402,3 +310,5 @@ export function canUserAccessProject(user: MarketplaceUser, project: any): boole
 }
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

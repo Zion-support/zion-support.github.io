@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -61,6 +62,8 @@ export default async function handler(
         anonymous?: boolean;
       };
 >>>>>>> main
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
     if (!projectId || !fromRole || !fromId) {
       return res.status(400).json({ error: "Missing required fields" });
@@ -71,7 +74,10 @@ export default async function handler(
     if (!text || String(text).trim().length === 0) {
       return res.status(400).json({ error: "Review text is required" });
     }
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 import type { NextApiRequest, NextApiResponse } from './next';
 import { v4 as uuidv4  } from './uuid';
@@ -99,14 +105,18 @@ if ( {) {
         from_role: "client" | "talent";
         from_id: string;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         rating: number;
         text: string;
         categories?: Review["categories"];
         anonymous?: boolean;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
       };
 =======
@@ -116,14 +126,13 @@ if ( {) {
       return res.status(400).json({ error: "Rating must be between 1 and 5" });
     }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     }
     const project = await findProjectById(projectId);
     if (!project) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -157,6 +166,8 @@ if ( {) {
 
 
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       return res.status(404).json({ error: "Project not found" });
     }
     if (project.status !== "Completed") {
@@ -178,6 +189,7 @@ if ( {) {
     const existing = await hasExistingReview(projectId, fromRole, fromId);
     if (existing) {
       return res.status(409).json({
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         error: "You have already submitted a review for this project",
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
@@ -202,10 +214,13 @@ if ( {) {
     }
       .json({ message: "Review submitted", reviewId: review && review.id });
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   } catch (error: any) {
     return res
       .status(500)
       .json({ error: "Internal server error", details: error?.message });
+<<<<<<< HEAD
   }
 }
 =======
@@ -234,35 +249,14 @@ if ( {) {
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-
-      id: uuidv4(),
-      projectId,
-    fromRole,
-      fromId,
-    toRole,
-      toId,
-    rating,
-      text: String(text).trim(),
+=======
+      rating,
+      text: String (text).trim (),
       categories,
-      anonymous: Boolean(anonymous),
-      approved: false, // requires admin approval
-      reported: false,
-      reports: [],
 
-      removed: false,
-      createdAt: now,
-    };
+      reported: false, reports: [],
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
-    await upsertReview(review);
-
-    return res
-      .status(201)
-      .json({ message: "Review submitted", reviewId: review.id });
-  } catch (error: any) {
-<<<<<<< HEAD
-    return res.status(500).json({ error: 'Internal server error', details: error?.message })
-
-      anonymous: Boolean (anonymous),
       approved: false, // requires admin approval;
       reported: false,
       reports: [],
@@ -279,6 +273,7 @@ if ( {) {
     return res;
       .status (500);
       .json ({ error: "Internal server error", details: error?.message });
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -301,25 +296,21 @@ if ( {) {
 }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 =======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
     return res
       .status(500)
       .json({ error: "Internal server error", details: error?.message });
->>>>>>> main
   }
 }
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

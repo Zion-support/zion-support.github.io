@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -24,23 +25,29 @@ import {cn} from "@/lib/utils";
 import { QuoteRequestSteps } from "../QuoteRequestForm",
 import { CheckIcon } from "@/components/icons",
 import { cn } from "@/lib/utils",
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface StepProgressProps {
   currentStep: QuoteRequestSteps
 }
-export function StepProgress({ currentStep }: StepProgressProps) {
-  const steps: { id: QuoteRequestSteps, label: string }[] = [
 
     { id: "service", label: "Service" }
     { id: "details", label: "Details" }
     { id: "timeline", label: "Timeline" }
     { id: "budget", label: "Budget" }
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     { id: "service", label: "Service" },
     { id: "details", label: "Details" },
     { id: "timeline", label: "Timeline" },
     { id: "budget", label: "Budget" },
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     { id: "summary", label: "Summary" };
   ];
     { id: "summary", label: "Summary" }
@@ -54,21 +61,16 @@ export function StepProgress({ currentStep }: StepProgressProps) {
   }
   ],
 
-  const getStepStatus = (stepId: QuoteRequestSteps) => {
-    const stepOrder = steps.findIndex(s => s.id === stepId),
-    const currentStepOrder = steps.findIndex(s => s.id === currentStep),
-    
-    if (stepOrder < currentStepOrder) return "complete",
-    if (stepOrder === currentStepOrder) return "current",
-    return "upcoming"
-  },
-
+    { id: "summary", label: "Summary" }
 
     { id: "service", label: "Service" },
     { id: "details", label: "Details" },
     { id: "timeline", label: "Timeline" },
     { id: "budget", label: "Budget" },
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
   return (
@@ -84,14 +86,19 @@ export function StepProgress({ currentStep }: StepProgressProps) {
       <div className="flex justify-between relative">
         {steps.map((step) => {
 <<<<<<< HEAD
+<<<<<<< HEAD
           const status = getStepStatus(step.id);
 =======
           const status = getStepStatus(step.id),
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+          const status = getStepStatus(step.id),
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           return (
             <div key={step.id} className="flex flex-col items-center relative">
               <div
                 className={cn(
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -129,6 +136,8 @@ export function StepProgress(): any ({ currentStep }: StepProgressProps) {;
       </div>
     </div>
   )
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
                   "text-xs mt-2 font-medium",
                   status === "complete" ? "text-zion-cyan" : 
@@ -143,8 +152,12 @@ interface StepProgressProps {;
 ;
 export function StepProgress({ currentStep }: StepProgressProps) {;
 
+<<<<<<< HEAD
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+export function StepProgress(): any ({ currentStep }: StepProgressProps) {;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const steps: { id: QuoteRequestSteps, label: string }[] = [;
     { id: "service", label: "Service" },;
     { id: "details", label: "Details" },;
@@ -152,6 +165,9 @@ export function StepProgress({ currentStep }: StepProgressProps) {;
     { id: "budget", label: "Budget" },;
     { id: "summary", label: "Summary" }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   ];
 
   const getStepStatus = (stepId: QuoteRequestSteps) => {;
@@ -185,18 +201,24 @@ export function StepProgress({ currentStep }: StepProgressProps) {;
                   status === "complete" ? "bg-zion-purple text-white" : 
                   status === "current" ? "bg-zion-cyan border-2 border-zion-purple" : 
 
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
                   "w-8 h-8 rounded-full flex items-center justify-center z-10 transition-colors",
                   status === "complete" ? "bg-zion-purple text-white" : 
                   status === "current" ? "bg-zion-cyan border-2 border-zion-purple" : 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   "bg-zion-blue-light text-zion-slate-light"
                 )}>;
                 {status === "complete" ? (;
@@ -204,6 +226,7 @@ export function StepProgress({ currentStep }: StepProgressProps) {;
                 ) : (;
                   <span className="text-xs">{steps && steps.findIndex(s => s && s.id === step && step.id) + 1}</span>;
                 )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -219,6 +242,8 @@ export function StepProgress({ currentStep }: StepProgressProps) {;
                   status === "complete" ? "text-zion-cyan" : 
                   status === "current" ? "text-white" : 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   "text-zion-slate-light"
                 )}>;
                 {step && step.label}
@@ -227,6 +252,7 @@ export function StepProgress({ currentStep }: StepProgressProps) {;
           );
         })}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -234,9 +260,9 @@ export function StepProgress({ currentStep }: StepProgressProps) {;
     </div>;
   );
 
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+}
 import { QuoteRequestSteps } from '../QuoteRequestForm';
 import { CheckIcon } from '@/components / icons';
 import { cn } from '@/lib / utils';
@@ -255,6 +281,7 @@ function StepProgress() {
     { id: "summary", label: "Summary" }
   ];
 ;
+<<<<<<< HEAD
   const getStepStatus = (step_id: QuoteRequestSteps) =>: any {
     const step_order = steps.find_index (string => s.id === step_id);
     const currentStepOrder = steps.find_index (string => s.id === current_step);
@@ -391,3 +418,5 @@ export function StepProgress({ currentStep } StepProgressProps) {;
 }
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

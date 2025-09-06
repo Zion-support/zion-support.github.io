@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -21,6 +22,10 @@ export interface Notification {;
 
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   id: string;
   type: "success" | "error" | "warning" | "info";
   title?: string;
@@ -28,6 +33,7 @@ export interface Notification {;
   duration?: number;
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -102,6 +108,8 @@ interface NotificationSystemProps {
 
           key;
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 const getNotificationStyles = (type: Notification["type"]): string => {
   const baseStyles = "border-l-4";
@@ -147,24 +155,35 @@ export function NotificationProvider({ children }: { children: ReactNode }) {
       setToasts((prev) => prev.filter((t) => t.id !== id))
     }, 3000)
   }, [])
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     success: "bg-green-50 border-green-400 text-green-800",
     error: "bg-red-50 border-red-400 text-red-800",
     warning: "bg-yellow-50 border-yellow-400 text-yellow-800",
     info: "bg-blue-50 border-blue-400 text-blue-800",
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   };
   return `${baseStyles} ${typeStyles[type]}`;
 };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from 'react';
 
 interface Notification {
@@ -172,6 +191,7 @@ interface Notification {
   type: 'success' | 'error' | 'warning' | 'info';
   title?: string;
   message: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 export default function NotificationSystem({
@@ -204,11 +224,14 @@ const NotificationContext = createContext<NotificationContextValue>({ notify: ()
 export function useToast() {
   return useContext(NotificationContext)
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 
 export function NotificationProvider({ children }: { children: ReactNode }) {
   const [toasts, setToasts] = useState<Toast[]>([]),
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 const NotificationSystem: React.FC<NotificationSystemProps> = ({
   notifications,
@@ -258,6 +281,12 @@ export default function NotificationSystem({
   return (
     <div className="fixed top-4 right-4 z-50 space-y-2">
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  if (notifications.length === 0) return null;
+
+  return (
+    <div className={`fixed top-4 right-4 z-50 space-y-2 ${className}`}>
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {notifications.map((notification) => (
         <div
           key={notification.id}
@@ -266,13 +295,12 @@ export default function NotificationSystem({
           <div className="flex items-start justify-between">
             <div className="flex-1">
               {notification.title && (
-                <h4 className="font-medium mb-1">{notification.title}</h4>
-              )}
               <p className="text-sm">{notification.message}</p>
             </div>
             {onDismiss && (
               <button
                 onClick={() => onDismiss(notification.id)}
+<<<<<<< HEAD
                 className="ml-2 text-gray-400 hover:text-gray-600"
               >
                 ×
@@ -284,16 +312,20 @@ export default function NotificationSystem({
       ))}
     </div>
   );
+=======
+        <div
+          key={notification && notification.id}
+          className={`max-w-sm w-full border rounded-lg p-4 shadow-lg ${getNotificationStyles(notification && notification.type)}`}>;
+          <div className="flex items-start justify-between">;
+            <div className="flex-1">;
+              {notification && notification.title && (;
+                <h4 className="font-medium mb-1">{notification && notification.title}</h4>;
+              )}
+}
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
-const getNotificationStyles = (type: Notification["type"]): string => {
-  const base_styles = "border - l-4";
-  const type_styles = {
-    success: "bg - green - 50 border - green - 400 text - green - 800",
-    error: "bg - red - 50 border - red - 400 text - red - 800",
-    warning: "bg - yellow - 50 border - yellow - 400 text - yellow - 800",
-    info: "bg - blue - 50 border - blue - 400 text - blue - 800",
-  }
-  return `${base_styles} ${type_styles[type]}`;
+}
 }
 ;
 export default function NotificationSystem ({
@@ -355,6 +387,7 @@ if (return null) {
                 <h4 className="font - medium mb - 1">{notification.title}</h4>)}
               <p className="text - sm">{notification.message}</p>;
             </div>;
+<<<<<<< HEAD
             {on_dismiss && (
               <button;
                 on_click={() => on_dismiss (notification.id)}
@@ -379,11 +412,14 @@ if (return null) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 }
 
 
 
+<<<<<<< HEAD
       ))}
     </div>;
   );
@@ -393,3 +429,5 @@ if (return null) {
 }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

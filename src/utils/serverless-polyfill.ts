@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 declare global {
 
 
@@ -28,6 +29,9 @@ declare global {
   var __assign: any;
   var __rest: any;
   var __decorate: any;
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   var webpackChunk_N_E: any[]
@@ -39,39 +43,28 @@ declare global {
   var __rest: any
   var __decorate: any
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   var __awaiter: any
-}
-
 // CRITICAL: Self polyfill - must be first
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 if (typeof self === 'undefined') {
   if (typeof global !== 'undefined') {
     (global as any).self = global
     if (typeof globalThis !== 'undefined') {
       (globalThis as any).self = global
-  var __awaiter: any;
-// CRITICAL: Self polyfill - must be first;
-// Check condition
-if ( {) {
-  $2
-}
-  // Check condition
-if ( {) {
-  $2
-}
-    (global as any).self = global;
-    // Check condition
-if ( {) {
-  $2
-}
-      (global_this as any).self = global;
     }
   } else // Check condition
 if ( {) {
@@ -88,10 +81,13 @@ if ( {) {
     (global_this as any).self = {}
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 // Ensure self is properly referenced
 const selfRef: any =
   typeof self !== 'undefined'
@@ -103,8 +99,8 @@ const selfRef: any =
         : typeof window !== 'undefined'
           ? window
           : {}
-
 // CRITICAL: Webpack chunk array polyfill
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 if (!selfRef && selfRef.webpackChunk_N_E) {
@@ -118,12 +114,13 @@ if (typeof webpackChunk_N_E === 'undefined') {
 =======
 if (!selfRef.webpackChunk_N_E) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   selfRef.webpackChunk_N_E = []
-}
-
 // Ensure webpack chunk array is properly initialized
 if (typeof webpackChunk_N_E === 'undefined') {
   (globalThis as any).webpackChunk_N_E = selfRef.webpackChunk_N_E
+<<<<<<< HEAD
 // TypeScript helper polyfills for runtime
 const tsHelpers = {
   __extends: function (d: any, b: any) {
@@ -348,10 +345,13 @@ const tsHelpers = {
           t[p] = s[p]
       }
       return t
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     }
   }(),
   
   __rest: function (s: any, e: string[]) {
+<<<<<<< HEAD
     let t: any = {}
     for (let p in s) if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0)
       t[p] = s[p]
@@ -376,13 +376,15 @@ const tsHelpers = {
   }
 
 
+=======
+
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           t[symbol] = s[symbol]
       }
     }
     return t
-
-  },
-
   __decorate: function (
     decorators: any[]
     target: any
@@ -390,9 +392,12 @@ const tsHelpers = {
     desc?: any
   ) {
     let c = arguments.length
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     let c = arguments && arguments.length,
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       r =
         c < 3
           ? target
@@ -411,6 +416,7 @@ const tsHelpers = {
       for (let i = decorators && decorators.length - 1; i >= 0; i--)
         if ((d = decorators[i]))
 <<<<<<< HEAD
+<<<<<<< HEAD
 
           r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return (c > 3 && r && key && Object && Object.defineProperty(target, key, r), r);
@@ -427,13 +433,12 @@ const tsHelpers = {
 
   }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  },
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   __awaiter: function (thisArg: any, _arguments: any, P: any, generator: any) {
-  
-  __decorate: function (decorators: any[], target: any, key?: string | symbol, desc?: any) {
-    let c = arguments.length, r = c < 3 ? target : desc === null ? desc = (key ? Object.getOwnPropertyDescriptor(target, key) : undefined) : desc, d,
-    if (typeof Reflect === "object" && typeof (Reflect as any).decorate === "function") r = (Reflect as any).decorate(decorators, target, key, desc),
-    else for (let i = decorators.length - 1, i >= 0, i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r,
-    return c > 3 && r && key && Object.defineProperty(target, key, r), r
   },
   
   __awaiter: function (thisArg: any, _arguments: any, P: any, generator: any) {
@@ -447,6 +452,7 @@ const tsHelpers = {
     return new (P |(P = Promise))(function (resolve: any, reject: any) {
       function fulfilled(value: any) {
         try {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
   },
@@ -501,26 +507,12 @@ if (< 0 &&) {
   $2
 }
           Object.prototype.propertyIsEnumerable.call (s, symbol));
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           t[symbol] = s[symbol];
       }
     }
     return t;
-  },;
-  __decorate: function (decorators: any[], target: any, key?: string | symbol, desc?: any) {;
-    let c = arguments.length, r = c < 3 ? target : desc === null ? desc = (key ? Object.getOwnPropertyDescriptor(target, key) : undefined) : desc, d,;
-    if (typeof Reflect === "object" && typeof (Reflect as any).decorate === "function") r = (Reflect as any).decorate(decorators, target, key, desc),;
-    else for (let i = decorators.length - 1, i >= 0, i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r,;
-    return c > 3 && r && key && Object.defineProperty(target, key, r), r;
-  },;
-  __awaiter: function (thisArg: any, _arguments: any, P: any, generator: any) {;
-    function adopt(value: any) { return value instanceof P ? value : new P(function (resolve: any) { resolve(value) }) }
-    return new (P || (P = Promise))(function (resolve: any, reject: any) {;
-      function fulfilled(value: any) { try { step(generator.next(value)) } catch (e) { reject(e) } }
-      function rejected(value: any) { try { step(generator["throw"](value)) } catch (e) { reject(e) } }
-      function step(result: any) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected) }
-      step((generator = generator.apply(thisArg, _arguments || [])).next());
-    });
-}
     );
       r = (Reflect as any).decorate (decorators, target, key, desc);
     else;
@@ -549,58 +541,30 @@ function adopt() {
 function fulfilled() {
         try {
           step (generator.next (value));
+          step(generator.next(value))
         } catch (e) {
-          reject (e);
+          reject(e)
         }
       }
-      /**
- * rejected - Function description
- */
-function rejected() {
+      function rejected(value: any) {
         try {
-          step (generator['throw'](value));
+          step(generator['throw'](value))
         } catch (e) {
-          reject (e);
+          reject(e)
         }
       }
-
-        result && result.done
-          ? resolve(result && result.value)
-          : adopt(result && result.value).then(fulfilled, rejected);
+      function step(result: any) {
+        result.done
+          ? resolve(result.value)
+          : adopt(result.value).then(fulfilled, rejected)
       }
-      step((generator = generator && generator.apply(thisArg, _arguments || [])).next());
-
-      /**
- * step - Function description
- */
-function step() {
-        result.done;
-          ? resolve (result.value);
-          : adopt (result.value).then (fulfilled, rejected);
-      }
-      step ((generator = generator.apply (this_arg, _arguments || [])).next ());
-    });
-  },
-};
-
-
-}return t;
-};
-};
-awaiter: function (thisArg: any, arguments: any, P: any, generator: any) {;
-  function adopt (value: any) {;
-  return value instanceof P ? value : new P (function (resolve: any) {;
-  resolve (value) ;
-}) ;
-}return new (P || (P = Promise) ) (function (resolve: any, reject: any) {;
-  step ( (generator = generator && generator.apply (thisArg, arguments || []) ) .next () );
-
-});
-
       step((generator = generator.apply(thisArg, _arguments |[])).next())
     })
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 //CRITICAL: Webpack chunk array polyfill if (throw new TypeError ("Class extends value " + String (b) + "is not a constructor or null")) {
   $2
@@ -614,25 +578,24 @@ awaiter: function (this_arg: any, arguments: any, P: any, generator: any) {
  */
 function adopt() {
   return value instanceof P ? value : new P (function (resolve: any) {
-
-  resolve (value);
-});
-}return new (P || (P = Promise) ) (function (resolve: any, reject: any) {
-  step ( (generator = generator.apply (this_arg, arguments || []) ) .next () );
-});
-// Error prevention for common webpack issues;
+  resolve (value)
+})
+}return new (P |(P = Promise) ) (function (resolve: any, reject: any) {
+  step ( (generator = generator.apply (thisArg, arguments |[]) ) .next () )
+})
+// Error prevention for common webpack issues
 try {
-  // Prevent webpack chunk loading errors;
-  // Check condition
-if ( {) {
-  $2
-}
-    const original_push = self_ref.webpackChunk_N_E.push;
-    self_ref.webpackChunk_N_E.push = function (chunk: any) {
-
+  // Prevent webpack chunk loading errors
+  if (
+    selfRef.webpackChunk_N_E &&
+    typeof selfRef.webpackChunk_N_E.push === 'function'
+  ) {
+    const originalPush = selfRef.webpackChunk_N_E.push
+    selfRef.webpackChunk_N_E.push = function (chunk: any) {
       try {
         return original_push.call (this, chunk);
       } catch (error) {
+<<<<<<< HEAD
 
     const originalPush = selfRef && selfRef.webpackChunk_N_E.push;
     selfRef && selfRef.webpackChunk_N_E.push = function (chunk: any) {
@@ -644,6 +607,47 @@ if ( {) {
 
         console.warn ('Webpack chunk loading error prevented:', error);
 =======
+=======
+        console.warn('Webpack chunk loading error prevented:', error)
+        return 0
+    function adopt(value: any) { return value instanceof P ? value : new P(function (resolve: any) { resolve(value) }) }
+    return new (P || (P = Promise))(function (resolve: any, reject: any) {
+      function fulfilled(value: any) { try { step(generator.next(value)) } catch (e) { reject(e) } }
+      function rejected(value: any) { try { step(generator["throw"](value)) } catch (e) { reject(e) } }
+      function step(result: any) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected) }
+      step((generator = generator.apply(thisArg, _arguments || [])).next())
+    })
+  }(),;
+  __rest: function (s: any, e: string[]) {;
+    let t: any = {},;
+    for (let p in s) if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0);
+      t[p] = s[p],;
+    if (s != null && typeof Object.getOwnPropertySymbols === "function") {;
+      const symbols = Object.getOwnPropertySymbols(s),;
+      for (let i = 0, i < symbols.length, i++) {;
+        const symbol = symbols[i],;
+        if (symbol && e.indexOf(symbol as any) < 0 && Object.prototype.propertyIsEnumerable.call(s, symbol));
+          t[symbol] = s[symbol];
+      }
+    }
+    return t;
+  },;
+  __decorate: function (decorators: any[], target: any, key?: string | symbol, desc?: any) {;
+    let c = arguments.length, r = c < 3 ? target : desc === null ? desc = (key ? Object.getOwnPropertyDescriptor(target, key) : undefined) : desc, d,;
+    if (typeof Reflect === "object" && typeof (Reflect as any).decorate === "function") r = (Reflect as any).decorate(decorators, target, key, desc),;
+    else for (let i = decorators.length - 1, i >= 0, i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r,;
+    return c > 3 && r && key && Object.defineProperty(target, key, r), r;
+  },;
+  __awaiter: function (thisArg: any, _arguments: any, P: any, generator: any) {;
+    function adopt(value: any) { return value instanceof P ? value : new P(function (resolve: any) { resolve(value) }) }
+    return new (P || (P = Promise))(function (resolve: any, reject: any) {;
+      function fulfilled(value: any) { try { step(generator.next(value)) } catch (e) { reject(e) } }
+      function rejected(value: any) { try { step(generator["throw"](value)) } catch (e) { reject(e) } }
+      function step(result: any) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected) }
+      step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+  }
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 },;
 // Inject TypeScript helpers into global scope;
 Object.keys(tsHelpers).forEach(helper => {;
@@ -664,11 +668,15 @@ try {;
         return originalPush.call(this, chunk);
       } catch (error) {;
         console.warn('Webpack chunk loading error prevented:', error),;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         return 0;
       }
     }
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 } catch (e) {
 
@@ -680,6 +688,8 @@ if (typeof window !== 'undefined') {
   window && window.onerror = function (message, source, lineno, colno, error) {
 
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 } catch (e) {;
   // Silently handle any errors in error prevention setup;
 }
@@ -696,13 +706,10 @@ if (typeof window !== 'undefined') {;
           message.includes('__extends') ||;
           message.includes('getInitialProps')) {;
         return true, // Suppress error;
-    }
-  }
-        console.warn ('Webpack chunk loading error prevented:', error);
-        return 0;
       }
     }
   }
+<<<<<<< HEAD
 } catch (e) {
   // Silently handle any errors in error prevention setup
 // Global error suppression for common serverless issues
@@ -961,6 +968,8 @@ if (process.env.NODE_ENV === 'development') {
   setTimeout((,) => verifyPolyfills(), 100)
 }
 export default {}, // Ensure this can be imported as a module
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 ;
 // Node.js environment polyfills (for SSR/build time);
@@ -981,6 +990,7 @@ if (typeof global !== 'undefined' && typeof window === 'undefined') {;
     }
   });
 }
+<<<<<<< HEAD
 export const verifyPolyfills = () => {
   const checks = {
     selfDefined: typeof self !== 'undefined',
@@ -1037,30 +1047,33 @@ export default {}, // Ensure this can be imported as a module;
 =======
 
 export default {}, // Ensure this can be imported as a module;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 // Export a verification function for testing
 export const verifyPolyfills = () => {
   const checks = {
-    selfDefined: typeof self !== 'undefined',
+    selfDefined: typeof self !== 'undefined'
     webpackChunkDefined:
-      typeof webpackChunk_N_E !== 'undefined' ||
+      typeof webpackChunk_N_E !== 'undefined' |
       (typeof self !== 'undefined' &&
-        typeof self.webpackChunk_N_E !== 'undefined'),
-    tsHelpersDefined:
-      typeof __extends !== 'undefined' && typeof __assign !== 'undefined',
-    errorHandlersSet: typeof window !== 'undefined' && window.onerror !== null,
-  }
-  console.log('Serverless polyfill verification:', checks)
-  return Object.values(checks).every(Boolean)
-}
-//Inject TypeScript helpers into global scope //Error prevention for common webpack issues try {';
-  //Prevent webpack chunk loading errors if (selfRef.webpackChunk N E && typeof selfRef.webpackChunk N E.push === 'function') {;
+
 export default {}; // Ensure this can be imported as a module
-  
+
 }, // Ensure this can be imported as a module'"
+
 // Auto-verify in development
-if (process.env.NODE_ENV === 'development') {
+
+if (process && process.env.NODE_ENV === 'development') {
   setTimeout((,) => verifyPolyfills(), 100)
+
+}
+
+export default {}, // Ensure this can be imported as a module
+// Export a verification function for testing
+export const verifyPolyfills = () => {
+  const checks = {
+    selfDefined: typeof self !== 'undefined',
     webpackChunkDefined: typeof webpackChunk_N_E !== 'undefined' || (typeof self !== 'undefined' && typeof self.webpackChunk_N_E !== 'undefined'),
     tsHelpersDefined: typeof __extends !== 'undefined' && typeof __assign !== 'undefined',
     errorHandlersSet: typeof window !== 'undefined' && window.onerror !== null
@@ -1089,8 +1102,10 @@ export const verifyPolyfills = () => {;
 if (process.env.NODE_ENV === 'development') {;
   setTimeout(() => verifyPolyfills(), 100);
 }
+export default {}, // Ensure this can be imported as a module;
 
 export default {}, // Ensure this can be imported as a module;
+<<<<<<< HEAD
 ;
 }
 }
@@ -1100,3 +1115,5 @@ export default {}, // Ensure this can be imported as a module;
 }
 export default {}, // Ensure this can be imported as a module;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

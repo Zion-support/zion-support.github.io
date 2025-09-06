@@ -1,13 +1,11 @@
 
-export default function SiteHealth() {
-
-
 
 
 export default function SiteHealth() {
 
 
   return (
+<<<<<<< HEAD
 
     <div className="relative min-h-screen overflow-hidden bg-slate-950 text-white">
       <Head>
@@ -101,11 +99,14 @@ export default function SiteHealth() {
         </nav>
       </header>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <div className="hidden gap-6 md:flex text-white/80">
             <Link href="/"><a>Home</a></Link>
             <Link href="/automation"><a>Automations</a></Link>
             <Link href="/reports/seo"><a>SEO Audit</a></Link>
             <Link href="/reports/ai-trends"><a>AI Trends</a></Link>
+<<<<<<< HEAD
 
     <div className='relative min-h-screen overflow-hidden bg-slate-950 text-white'>;
       <Head>;
@@ -189,10 +190,13 @@ export default function SiteHealth() {
           </p>
           <div className='mt-8 flex flex-wrap justify-center gap-3'>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <a
               href='/site-health'
               target='_blank'
               rel='noopener'
+<<<<<<< HEAD
 <<<<<<< HEAD
 
           </div>
@@ -281,10 +285,13 @@ export default function SiteHealth() {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               </Link>
             ))}
           </div>
         </section>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
               className='rounded-xl border border-white/20 bg-white/5 px-6 py-3 font-semibold backdrop-blur-md hover:bg-white/10'>;
@@ -549,10 +556,13 @@ import Head from 'next / head';
                   Get Started
                 </a>
               </Link>
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <a
                 href='/site-health'
                 target='_blank'
                 rel='noopener'
+<<<<<<< HEAD
                 className='rounded-xl border border-white/20 bg-white/5 px-6 py-3 font-semibold backdrop-blur-md hover:bg-white/10'
               >
                 View Pipelines
@@ -578,6 +588,8 @@ import Head from 'next / head';
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <section className='mx - auto max - w-7xl px - 6 pb - 24'>;
           <div className='animated - border relative overflow - hidden rounded - 3xl border border - white / 10 bg - gradient - to - r from - fuchsia - 600 / 20 via - violet - 600 / 20 to - cyan - 600 / 20 p - 8 text - center backdrop - blur - xl'>;
             <h3 className='text - 2xl font - bold'>;
@@ -612,6 +624,7 @@ import Head from 'next / head';
       </main>;
     </div>);
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 =======
@@ -629,3 +642,5 @@ import Head from 'next / head';
         </nav>
       </header>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

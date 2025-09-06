@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Edit, Trash2 } from 'lucide-react'
 =======
 import { format  } from 'date-fns';
@@ -12,6 +13,9 @@ import { EducationItemProps } from './types'; import { Edit, Trash2 } from 'luci
 
 import { format  } from 'date-fns';
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+import { Edit, Trash2 } from 'lucide-react'
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 import { Button } from '@/components/ui/button'
 import { EducationItemProps } from './types'
@@ -21,6 +25,7 @@ export function EducationItem({
   onDelete
 }: EducationItemProps) {
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 import { format } from 'date-fns';
@@ -175,11 +180,16 @@ import { EducationItemProps } from './types';
             >
               <Trash2 className="h-4 w-4" />
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             </Button>
           </div>
         </div>
         {education.description && (
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
               onClick={() => onDelete(education && education.id!)}
@@ -202,6 +212,7 @@ import { EducationItemProps } from './types';
     </Card>;
   );
 };
+<<<<<<< HEAD
 
           <p className="text-sm mt-3 line-clamp-2">{education.description}</p>
         )}
@@ -221,11 +232,14 @@ import { EducationItemProps } from './types';
     </Card>;
   );
 };
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <p className="text-sm mt-3 line-clamp-2">{education.description}</p>
         )}
       </CardContent>;
     </Card>;
   );
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           <p className="text-sm mt-3 line-clamp-2">{education.description}</p>
         )}
@@ -313,3 +327,7 @@ function EducationItem() {
 }
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+}
+;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

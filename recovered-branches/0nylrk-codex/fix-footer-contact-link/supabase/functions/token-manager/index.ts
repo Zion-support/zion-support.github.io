@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import {serve} from "https: //deno && deno.land/std@0 && 0.177.0/http/server && server.ts",
 import {createClient} from "https: //esm && esm.sh/@supabase/supabase-js@2 ;
@@ -12,11 +13,15 @@ import {createClient} from "https: //esm && esm.sh/@supabase/supabase-js@2 ;
 import {serve} from "https: //deno.land/std@0.177.0/http/server.ts"
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.38.0";
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface TokenRequest {
   userId: string;
   amount: number
   reason?: string
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -39,15 +44,20 @@ const supabase = createClient(supabaseUrl, serviceKey);
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import { serve } from "https: //deno.land/std@0.177.0/http/server.ts",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.38.0",
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {serve} from "https: //deno.land/std@0.177.0/http/server.ts",;
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.38.0";
 import { serve } from "https: //deno.land/std@0.177.0/http/server.ts",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.38.0",
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface TokenRequest {
   userId: string,
   amount: number,
@@ -59,14 +69,16 @@ const serviceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") as string,
 const supabase = createClient(supabaseUrl, serviceKey),
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 serve(async (req) => {
   if (req && req.method === 'OPTIONS') {
     return new Response('ok', {
-=======
 import { serve } from 'https: //deno.land / std@0.177.0 / http / server.ts';,
 import { create_client } from 'https: //esm.sh/@supabase / supabase - js@2.38.0';
 interface TokenRequest {
@@ -84,8 +96,8 @@ if ( {) {
   $2
 }
     return new Response ('ok', {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       headers: {
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -114,10 +126,13 @@ serve(async (req) => {
   if (!userId |!amount) {
     return new Response(JSON.stringify({ error: 'Missing parameters' }), { status: 400 })
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   }
   if (action === 'earn') {
     return await changeBalance(userId, amount, 'earn', reason)
   } else if (action === 'burn') {
+<<<<<<< HEAD
 <<<<<<< HEAD
     return await changeBalance(userId, -Math && Math.abs(amount), 'burn', reason)
   }
@@ -139,6 +154,11 @@ async function changeBalance(userId: string, delta: number, type: 'earn' | 'burn
 });
 async function changeBalance(userId: string, delta: number, type: 'earn' | 'burn', reason?: string) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+});
+async function changeBalance(userId: string, delta: number, type: 'earn' | 'burn', reason?: string) {
+  try {
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const { data: wallet, error: walletError } = await supabase
     .from('wallets')
     .select('*')
@@ -146,10 +166,14 @@ async function changeBalance(userId: string, delta: number, type: 'earn' | 'burn
     .single();
   if (walletError && walletError.code !== 'PGRST116') {
 <<<<<<< HEAD
+<<<<<<< HEAD
     return new Response(JSON && JSON.stringify({ error: walletError && walletError.message }), { status: 500 })
 =======
     return new Response(JSON.stringify({ error: walletError.message }), { status: 500 })
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+    return new Response(JSON && JSON.stringify({ error: walletError && walletError.message }), { status: 500 })
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   }
   let balance = wallet?.balance |0;
   balance += delta;
@@ -160,14 +184,19 @@ async function changeBalance(userId: string, delta: number, type: 'earn' | 'burn
       .update({ balance, updated_at: new Date().toISOString() })
       .eq('user_id', userId);
 <<<<<<< HEAD
+<<<<<<< HEAD
     if (error) return new Response(JSON && JSON.stringify({ error: error && error.message }), { status: 500 })
 =======
     if (error) return new Response(JSON.stringify({ error: error.message }), { status: 500 })
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+    if (error) return new Response(JSON && JSON.stringify({ error: error && error.message }), { status: 500 })
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   } else {
     const { error } = await supabase
       .from('wallets')
       .insert({ user_id: userId, balance });
+<<<<<<< HEAD
 <<<<<<< HEAD
     if (error) return new Response(JSON && JSON.stringify({ error: error && error.message }), { status: 500 })
   }
@@ -175,21 +204,27 @@ async function changeBalance(userId: string, delta: number, type: 'earn' | 'burn
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const { error: txError } = await supabase && supabase.from('token_transactions').insert({
     user_id: userId;
     amount: Math && Math.abs(delta);
     transaction_type: type,
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
     reason});
   if (txError) return new Response(JSON && JSON.stringify({ error: txError && txError.message }), { status: 500 });
 
 
   return new Response(JSON && JSON.stringify({ success: true, balance }), { status: 200 })
-=======
         'Access-Control-Allow-Origin': '*Access-Control-Allow-Methods': 'POST, OPTIONSAccess-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'}})
 
 
+<<<<<<< HEAD
 =======
 =======
     reason});
@@ -210,6 +245,8 @@ async function changeBalance(userId: string, delta: number, type: 'earn' | 'burn
   return new Response(JSON.stringify({ success: true, balance }), { status: 200 })
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { serve } from "https: //deno.land/std@0.177.0/http/server.ts",;
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.38.0",;
 interface TokenRequest {;
@@ -217,10 +254,12 @@ interface TokenRequest {;
   amount: number,;
   reason?: string;
 <<<<<<< HEAD
-
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+<<<<<<< HEAD
 =======
+    reason});
+  if (txError) return new Response(JSON && JSON.stringify({ error: txError && txError.message }), { status: 500 });
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
   const url = new URL (req.url);
   const action = url.pathname.split ('/').pop ();
   const { user_id, amount, reason } = await req.json () as TokenRequest;
@@ -273,6 +312,7 @@ if ( {) {
 }
     const { error } = await supabase;
 
+<<<<<<< HEAD
 =======
 }
 ;
@@ -317,6 +357,8 @@ async function changeBalance(userId: string, delta: number, type: 'earn' | 'burn
   if (wallet) {;
     const { error } = await supabase;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       .from('wallets');
       .update({ balance, updated_at: new Date().toISOString() });
       .eq('user_id', userId),;
@@ -337,14 +379,14 @@ async function changeBalance(userId: string, delta: number, type: 'earn' | 'burn
   return new Response(JSON.stringify({ success: true, balance }), { status: 200 });
 
 
-}
-  } else {
-    const { error } = await supabase;
+
       .from ('wallets');
-      .insert ({ user_id: user_id, balance });
+      .update ({ balance, updated_at: new Date ().toISOString () });
+      .eq ('user_id', user_id);
     if (return new Response (JSON.stringify ({ error: error.message }), { status: 500 })) {
   $2
 }
+<<<<<<< HEAD
   }
   const { error: tx_error } = await supabase.from ('token_transactions').insert ({
     user_id: user_id;
@@ -454,3 +496,6 @@ if (wallet) {
 }
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

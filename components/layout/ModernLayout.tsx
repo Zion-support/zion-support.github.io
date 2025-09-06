@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import Head from './next / head';
 import { ReactNode } from './react';
@@ -12,6 +13,10 @@ import { ReactNode } from './react';
 type ModernLayoutProps = {
   children: ReactNode
 =======
+=======
+type ModernLayoutProps = {
+  children: ReactNode
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 type ModernLayoutProps = {;
   children: ReactNode,;
@@ -21,6 +26,7 @@ type ModernLayoutProps = {;
   keywords?: string;
   canonical?: string;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 }
 ;
@@ -29,6 +35,8 @@ type ModernLayoutProps = {;
 }
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 const ModernLayout = ({
 =======
 const ModernLayout = ({;
@@ -39,6 +47,7 @@ const ModernLayout = ({;
   keywords = "AI services, IT solutions, micro SaaS, digital transformation, cloud computing, cybersecurity";
   canonical;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 }: ModernLayoutProps) => {;
 
@@ -46,6 +55,8 @@ const ModernLayout = ({;
 =======
 }: ModernLayoutProps) => {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }: ModernLayoutProps) =>: any {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   return (
@@ -54,6 +65,7 @@ const ModernLayout = ({;
         <title>{title}</title>;
         <meta name="description" content={description} />;
         <meta name="keywords" content={keywords} />;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -84,6 +96,8 @@ const ModernLayout = ({;
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <meta name="viewport" content="width = device - width, initial - scale = 1" />;
         <meta name="author" content="Zion Tech Group" />;
         <meta name="robots" content="index, follow" />;

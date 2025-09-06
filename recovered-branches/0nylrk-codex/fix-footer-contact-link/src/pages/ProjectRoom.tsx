@@ -1,9 +1,9 @@
 
 
-
   const { projectId } = useParams() as { projectId: string },;
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 import React, { useState } from 'react';
@@ -22,6 +22,8 @@ export default function ProjectRoom() {
   const { projectId } = useParams() as { projectId: string }
   const { projectId } = useParams() as { projectId: string },;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const [activeTab, setActiveTab] = useState('chat');
   const [isInCall, setIsInCall] = useState(false);
   const [callParticipants, setCallParticipants] = useState<Array<{
@@ -43,6 +45,7 @@ export default function ProjectRoom() {
       isMuted: false
     }
   ]);
+<<<<<<< HEAD
 <<<<<<< HEAD
   const startVideoCall = () => {
 =======
@@ -113,6 +116,9 @@ import {toast} from 'sonner';
   
   
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const startVideoCall = () => {
     setIsInCall(true),
     toast.success("Video call started", {
@@ -122,6 +128,7 @@ import {toast} from 'sonner';
     if (activeTab !== 'video') {
       setActiveTab('video')
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   },
@@ -173,26 +180,18 @@ import {toast} from 'sonner';
   }
   },
   
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const endVideoCall = () => {
     setIsInCall(false),
     toast.info("Video call ended", {
       description: "Call duration and participants will be logged"
     })
-  }
-  const simulateUserJoining = () => {
-    // This is just for demo purposes - in a real app, this would be handled by the video call service
-    const mockUsers = [
-      { id: 'user-2', name: 'Alex Chen', isVideoEnabled: true, isMuted: false }
-      { id: 'user-3', name: 'Taylor Kim', isVideoEnabled: false, isMuted: true }
-      { id: 'user-4', name: 'Jordan Smith', isVideoEnabled: true, isMuted: false, isScreenSharing: true }
-    ];
-    const randomUser = mockUsers[Math.floor(Math.random() * mockUsers.length)];
-    if (!callParticipants.find(p => p.id === randomUser.id)) {
       setCallParticipants(prev => [...prev, randomUser]);
-      toast(`${randomUser.name} joined the call`)
+      toast(`${randomUser && randomUser.name} joined the call`);
     }
-  }
 
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   },
   
@@ -348,6 +347,8 @@ import {toast} from 'sonner';
       toast(`${randomUser.name} joined the call`)
     }
   };
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   ]),;
   const startVideoCall = () => {;
     setIsInCall(true),;
@@ -371,121 +372,13 @@ import {toast} from 'sonner';
       { id: 'user-2', name: 'Alex Chen', isVideoEnabled: true, isMuted: false },;
       { id: 'user-3', name: 'Taylor Kim', isVideoEnabled: false, isMuted: true },;
       { id: 'user-4', name: 'Jordan Smith', isVideoEnabled: true, isMuted: false, isScreenSharing: true }
-    ],;
-    const randomUser = mockUsers[Math.floor(Math.random() * mockUsers.length)],;
-    if (!callParticipants.find(p => p.id === randomUser.id)) {;
-      setCallParticipants(prev => [...prev, randomUser]);
-      toast(`${randomUser.name} joined the call`);
-    }
-  },
-
-  };
-  const endVideoCall = () => {;
-    setIsInCall(false);
-    toast && toast.info("Video call ended", {;
-      description: "Call duration and participants will be logged";
-    });
-  };
-  const simulateUserJoining = () => {;
-    // This is just for demo purposes - in a real app, this would be handled by the video call service;
-    const mockUsers = [;
-      { id: 'user-2', name: 'Alex Chen', isVideoEnabled: true, isMuted: false },;
-      { id: 'user-3', name: 'Taylor Kim', isVideoEnabled: false, isMuted: true },;
-      { id: 'user-4', name: 'Jordan Smith', isVideoEnabled: true, isMuted: false, isScreenSharing: true }
-    ];
-    const randomUser = mockUsers[Math && Math.floor(Math && Math.random() * mockUsers && mockUsers.length)];
-    if (!callParticipants && callParticipants.find(p => p && p.id === randomUser && randomUser.id)) {;
-
-  },
   
-  const simulateUserJoining = () => {
-    // This is just for demo purposes - in a real app, this would be handled by the video call service
-    const mockUsers = [
-      { id: 'user-2', name: 'Alex Chen', isVideoEnabled: true, isMuted: false },
-      { id: 'user-3', name: 'Taylor Kim', isVideoEnabled: false, isMuted: true },
-
-  
-      setCallParticipants(prev => [...prev, randomUser]);
-      toast(`${randomUser && randomUser.name} joined the call`);
-    }
-  };
   return (
-
-import React, { useState } from 'react',;
-import { useParams } from 'react-router-dom',;
-import { Header } from '@/components/Header',;
-import { Footer } from '@/components/Footer',;
-import { SEO } from '@/components/SEO',;
-import { Button } from '@/components/ui/button',;
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card',;
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs',;
-import { MessageSquare, FileText, Video, Calendar, Users, Settings, X } from 'lucide-react',;
-import { VideoCallRoom } from '@/components/video/VideoCallRoom',;
-import { toast } from 'sonner',;
-;
-export default function ProjectRoom() {;
-  const { projectId } = useParams() as { projectId:string },;
-  const [activeTab, setActiveTab] = useState('chat'),;
-  const [isInCall, setIsInCall] = useState(false),;
-  const [callParticipants, setCallParticipants] = useState<Array<{;
-    id:string,;
-    name:string,;
-    avatar?:string,;
-    isMuted?:boolean,;
-    isVideoEnabled?:boolean,;
-    isScreenSharing?:boolean,;
-    isHost?:boolean;
-  }>>([;
-    {;
-      id:'user-1',;
-      name:'You',;
-      isHost:true,;
-      isVideoEnabled:true,;
-      isMuted:false;
-    }
-  ]),;
-  ;
-  const startVideoCall = () => {;
-    setIsInCall(true),;
-    toast.success("Video call started", {;
-      description:"Others can join with the project room link";
-    }),;
-    // Switch to video tab if not already there;
-    if (activeTab !== 'video') {;
-      setActiveTab('video'),;
-    }
-  },;
-  ;
-  const endVideoCall = () => {;
-    setIsInCall(false),;
-    toast.info("Video call ended", {;
-      description:"Call duration and participants will be logged";
-    }),;
-  },;
-  ;
-  const simulateUserJoining = () => {;
-    // This is just for demo purposes - in a real app, this would be handled by the video call service;
-    const mockUsers = [;
-      { id:'user-2', name:'Alex Chen', isVideoEnabled:true, isMuted:false },;
-      { id:'user-3', name:'Taylor Kim', isVideoEnabled:false, isMuted:true },;
-      { id:'user-4', name:'Jordan Smith', isVideoEnabled:true, isMuted:false, isScreenSharing:true }
-    ],;
-    ;
-    const randomUser = mockUsers[Math.floor(Math.random() * mockUsers.length)],;
-    ;
-    if (!callParticipants.find(p => p.id === randomUser.id)) {;
-      setCallParticipants(prev => [...prev, randomUser]),;
-      toast(`${randomUser.name} joined the call`),;
-    }
-  },;
-  ;
-  return (;
     <>;
       <SEO title={`Project Room - ${projectId}`} description="Collaborate on your project" />;
       <Header />;
       <main className="container mx-auto py-8">;
         <div className="flex justify-between items-center mb-6">;
-          <h1 className="text-3xl font-bold">Project Room:{projectId}</h1>;
           <div className="flex gap-2">;
             {isInCall && (;
               <Button variant="destructive" className="flex items-center gap-2">;
@@ -493,183 +386,9 @@ export default function ProjectRoom() {;
                 End Call;
               </Button>;
             )}
-            <Button variant="outline">Invite Team Member</Button>;
-          </div>;
-        </div>;
-        ;
-        <Tabs value={activeTab} onValueChange={setActiveTab} className="space-y-4">;
-          <TabsList className="grid grid-cols-6 md:w-fit">;
-            <TabsTrigger value="chat" className="flex items-center gap-2">;
-              <MessageSquare className="h-4 w-4" />;
-              <span className="hidden sm:inline">Chat</span>;
-            </TabsTrigger>;
-            <TabsTrigger value="files" className="flex items-center gap-2">;
-              <FileText className="h-4 w-4" />;
-              <span className="hidden sm:inline">Files</span>;
-            </TabsTrigger>;
-            <TabsTrigger value="video" className="flex items-center gap-2">;
-              <Video className="h-4 w-4" />;
-              <span className="hidden sm:inline">Video</span>;
-              {isInCall && (;
-                <span className="relative flex h-2 w-2">;
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>;
-                  <span className="relative inline-flex rounded-full h-2 w-2 bg-red-500"></span>;
-                </span>;
-              )}
-  
-  return (
-    <>
-      <SEO title={`Project Room - ${projectId}`} description="Collaborate on your project" />
-      <Header />
-      <main className="container mx-auto py-8">
-        <div className="flex justify-between items-center mb-6">
-          <h1 className="text-3xl font-bold">Project Room: {projectId}</h1>
-          <div className="flex gap-2">
-            {isInCall && (
-              <Button variant="destructive" className="flex items-center gap-2">
-                <X className="h-4 w-4" />
-                End Call
-              </Button>
-            )}
-            <Button variant="outline">Invite Team Member</Button>
-          </div>
-        </div>
-        <Tabs value={activeTab} onValueChange={setActiveTab} className="space-y-4">
-          <TabsList className="grid grid-cols-6 md:w-fit">
-            <TabsTrigger value="chat" className="flex items-center gap-2">
-              <MessageSquare className="h-4 w-4" />
-              <span className="hidden sm:inline">Chat</span>
-            </TabsTrigger>
-            <TabsTrigger value="files" className="flex items-center gap-2">
-              <FileText className="h-4 w-4" />
-              <span className="hidden sm:inline">Files</span>
-            </TabsTrigger>
-            <TabsTrigger value="video" className="flex items-center gap-2">
-              <Video className="h-4 w-4" />
-              <span className="hidden sm:inline">Video</span>
-              {isInCall && (
-                <span className="relative flex h-2 w-2">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
-                  <span className="relative inline-flex rounded-full h-2 w-2 bg-red-500"></span>
-                </span>
-              )}
-            </TabsTrigger>
-            <TabsTrigger value="calendar" className="flex items-center gap-2">
-              <Calendar className="h-4 w-4" />
-              <span className="hidden sm:inline">Calendar</span>
-            </TabsTrigger>
-            <TabsTrigger value="team" className="flex items-center gap-2">
-              <Users className="h-4 w-4" />
-              <span className="hidden sm:inline">Team</span>
-            </TabsTrigger>
-            <TabsTrigger value="settings" className="flex items-center gap-2">
-              <Settings className="h-4 w-4" />
-              <span className="hidden sm:inline">Settings</span>
-            </TabsTrigger>
-          </TabsList>
-          <TabsContent value="chat" className="space-y-4">
-            <Card>
-              <CardHeader>
-                <CardTitle>Project Chat</CardTitle>
-                <CardDescription>Communicate with your team members</CardDescription>
-              </CardHeader>
-              <CardContent className="h-[400px]">
-                <div className="flex items-center justify-center h-full">
-                  <p className="text-muted-foreground">Chat functionality will be implemented soon</p>
-                </div>
-              </CardContent>
-            </Card>
-          </TabsContent>
-          <TabsContent value="files" className="space-y-4">
-            <Card>
-              <CardHeader>
-                <CardTitle>Project Files</CardTitle>
-                <CardDescription>Manage documents and files</CardDescription>
-              </CardHeader>
-              <CardContent className="h-[400px]">
-                <div className="flex items-center justify-center h-full">
-                  <p className="text-muted-foreground">File management will be implemented soon</p>
-                </div>
-              </CardContent>
-            </Card>
-          </TabsContent>
-          <TabsContent value="video" className="space-y-4">
-            <Card>
-              <CardHeader>
-                <CardTitle>Video Meetings</CardTitle>
-                <CardDescription>Schedule and join video calls</CardDescription>
-              </CardHeader>
-              <CardContent className="min-h-[400px] p-4">
-                {isInCall ? (
-                  <div className="space-y-4">
-            </TabsTrigger>;
-            <TabsTrigger value="calendar" className="flex items-center gap-2">;
-              <Calendar className="h-4 w-4" />;
-              <span className="hidden sm:inline">Calendar</span>;
-            </TabsTrigger>;
-            <TabsTrigger value="team" className="flex items-center gap-2">;
-              <Users className="h-4 w-4" />;
-              <span className="hidden sm:inline">Team</span>;
-            </TabsTrigger>;
-            <TabsTrigger value="settings" className="flex items-center gap-2">;
-              <Settings className="h-4 w-4" />;
-              <span className="hidden sm:inline">Settings</span>;
-            </TabsTrigger>;
-          </TabsList>;
-          ;
-          <TabsContent value="chat" className="space-y-4">;
-            <Card>;
-              <CardHeader>;
-                <CardTitle>Project Chat</CardTitle>;
-                <CardDescription>Communicate with your team members</CardDescription>;
-              </CardHeader>;
-              <CardContent className="h-[400px]">;
-                <div className="flex items-center justify-center h-full">;
-                  <p className="text-muted-foreground">Chat functionality will be implemented soon</p>;
-                </div>;
-              </CardContent>;
-            </Card>;
-          </TabsContent>;
-          ;
-          <TabsContent value="files" className="space-y-4">;
-            <Card>;
-              <CardHeader>;
-                <CardTitle>Project Files</CardTitle>;
-                <CardDescription>Manage documents and files</CardDescription>;
-              </CardHeader>;
-              <CardContent className="h-[400px]">;
-                <div className="flex items-center justify-center h-full">;
-                  <p className="text-muted-foreground">File management will be implemented soon</p>;
-                </div>;
-              </CardContent>;
-            </Card>;
-          </TabsContent>;
-          ;
-          <TabsContent value="video" className="space-y-4">;
-            <Card>;
-              <CardHeader>;
-                <CardTitle>Video Meetings</CardTitle>;
-                <CardDescription>Schedule and join video calls</CardDescription>;
-              </CardHeader>;
-              <CardContent className="min-h-[400px] p-4">;
-                {isInCall ? (;
-                  <div className="space-y-4">;
-
-                    <VideoCallRoom 
-
                       roomId={`project-${projectId}`}
                       participants={callParticipants}
                       onLeave={endVideoCall}
-
-                    />;
-
-
-                    <VideoCallRoom ;
-                      roomId={`project-${projectId}`}
-                      participants={callParticipants}
-                      onLeave={endVideoCall}
-                    />;
-                    ;
                     {/* This button is just for demo/testing purposes */}
                     <div className="flex justify-center mt-4">;
                       <Button variant="outline" onClick={simulateUserJoining} className="text-sm">;
@@ -677,7 +396,6 @@ export default function ProjectRoom() {;
                       </Button>;
                     </div>;
                   </div>;
-                ) :(;
                   <div className="flex flex-col items-center justify-center h-[400px] space-y-4">;
                     <p className="text-muted-foreground">Start a video call with your team</p>;
                     <div className="flex gap-2">;
@@ -692,6 +410,7 @@ export default function ProjectRoom() {;
                     </div>;
                   </div>;
                 )}
+<<<<<<< HEAD
                     <VideoCallRoom
                     <VideoCallRoom 
                       roomId={`project-${projectId}`}
@@ -818,35 +537,9 @@ function ProjectRoom() {
     // Check condition
 if ( {) {
   $2
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
-      setActiveTab ('video');
-    }
-  }
-;
-  const endVideoCall = () =>: any {
-    setIsInCall (false);
-    toast.info ("Video call ended", {
-      description: "Call duration and participants will be logged";
-    });
-  }
-;
-  const simulateUserJoining = () =>: any {
-    // This is just for demo purposes - in a real app, this would be handled by the video call service;
-    const mock_users = [;
-      { id: 'user - 2', name: 'Alex Chen', isVideoEnabled: true, is_muted: false },
-      { id: 'user - 3', name: 'Taylor Kim', isVideoEnabled: false, is_muted: true },
-      { id: 'user - 4', name: 'Jordan Smith', isVideoEnabled: true, is_muted: false, isScreenSharing: true }
-    ];
-;
-    const random_user = mock_users[Math.floor (Math.random () * mock_users.length)];
-;
-    if () {) {
-  $2
-}
-      setCallParticipants (prev => [...prev, random_user]);
-      toast (`${random_user.name} joined the call`);
-    }
-  }
 ;
   return (
     <>;
@@ -906,12 +599,16 @@ if ( {) {
                 <div className="flex items - center justify - center h - full">;
                   <p className="text - muted - foreground">Chat functionality will be implemented soon</p>;
 
+<<<<<<< HEAD
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 </div>;
               </CardContent>;
             </Card>;
           </TabsContent>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
           <TabsContent value="files" className="space - y-4">;
@@ -1027,6 +724,8 @@ if ( {) {
                 <div className="flex items-center justify-center h-full">;
                   <p className="text-muted-foreground">Settings will be implemented soon</p>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 </div>;
               </CardContent>;
             </Card>;
@@ -1034,6 +733,7 @@ if ( {) {
         </Tabs>;
       </main>;
       <Footer />;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     </>);
@@ -1076,3 +776,5 @@ return (<> End Call </Button>)
 ;
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

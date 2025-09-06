@@ -1,6 +1,9 @@
+<<<<<<< HEAD
 import React from 'react'
 import ServiceCard from '../components/ServiceCard'
 import Card from '../components/Card'
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 const Services: React.FC = () => {
   return (
@@ -15,6 +18,7 @@ const Services: React.FC = () => {
             and drive innovation across all sectors.
           </p>
         </div>
+<<<<<<< HEAD
         {/* Main Services */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           <ServiceCard
@@ -52,6 +56,8 @@ const Services: React.FC = () => {
         {/* Service Categories */}
         <div className="mb-16">
           <h2 className="text-4xl font-bold text-center mb-12">Service Categories</h2>
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <Card
               title="Consulting Services"
@@ -79,11 +85,14 @@ const Services: React.FC = () => {
             />
           </div>
         </div>
+<<<<<<< HEAD
 
         {/* Industry Solutions */}
         <div className="text-center">
           <h2 className="text-4xl font-bold mb-12">Industry Solutions</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8">
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <div className="text-center">
               <div className="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl">🏥</span>

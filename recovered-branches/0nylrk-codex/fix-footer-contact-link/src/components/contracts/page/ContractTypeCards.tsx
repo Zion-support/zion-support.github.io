@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -37,11 +38,14 @@ import {
   CardHeader
   CardTitle
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   Card,
   CardContent,
   CardDescription,
   CardFooter,
   CardHeader,
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 interface ContractTypeCardsProps {;
@@ -66,13 +70,13 @@ interface ContractTypeCardsProps {
   CardTitle,;
 } from "@/components/ui/card";
 import { FileText, ShieldCheck } from "lucide-react";
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 import { Button } from "@/components/ui/button",
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 import { FileText, ShieldCheck } from "lucide-react",
 
-import { FileText, ShieldCheck } from "lucide-react";
-interface ContractTypeCardsProps {
   onStandardClick: () => void;
   onSmartClick: () => void
 }
@@ -80,17 +84,23 @@ export function ContractTypeCards({
   onStandardClick
   onSmartClick
 }: ContractTypeCardsProps) {
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   onStandardClick: () => void,
   onSmartClick: () => void
 }
 
 export function ContractTypeCards({ onStandardClick, onSmartClick }: ContractTypeCardsProps) {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <div className="grid md:grid-cols-2 gap-6 mb-10">
       <Card>
@@ -118,6 +128,7 @@ export function ContractTypeCards({ onStandardClick, onSmartClick }: ContractTyp
         </CardFooter>
       </Card>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -131,6 +142,8 @@ export function ContractTypeCards({ onStandardClick, onSmartClick }: ContractTyp
       
       
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <Card>
         <CardHeader className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-t-lg">
           <div className="flex justify-between items-center">
@@ -158,6 +171,7 @@ export function ContractTypeCards({ onStandardClick, onSmartClick }: ContractTyp
         <CardFooter>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
   CardTitle,
@@ -169,11 +183,15 @@ interface ContractTypeCardsProps {;
   onSmartClick: () => void
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export function ContractTypeCards(): any ({;
   onStandardClick,;
   onSmartClick,;
 }: ContractTypeCardsProps) {;
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -193,6 +211,8 @@ export function ContractTypeCards(): any ({;
   );
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <Button 
             className="w-full bg-gradient-to-r from-blue-600 to-indigo-600" 
 import { Button } from "@/components/ui/button",;
@@ -205,6 +225,7 @@ interface ContractTypeCardsProps {;
 ;
 export function ContractTypeCards({ onStandardClick, onSmartClick }: ContractTypeCardsProps) {;
   return (;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -220,11 +241,14 @@ interface ContractTypeCardsProps {;
 export function ContractTypeCards({ onStandardClick, onSmartClick } ContractTypeCardsProps) {;
   return (;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <div className="grid md:grid-cols-2 gap-6 mb-10">;
       <Card>;
         <CardHeader>;
           <CardTitle className="flex items-center gap-2">;
             <FileText className="h-5 w-5" />;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 export /**
@@ -240,6 +264,15 @@ function ContractTypeCards() {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+} from "@/components/ui/card";
+
+interface ContractTypeCardsProps {
+interface ContractTypeCardsProps {;
+  onStandardClick: () => void;
+  onSmartClick: () => void
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             Standard Contracts;
           </CardTitle>;
           <CardDescription>;
@@ -247,6 +280,7 @@ function ContractTypeCards() {
           </CardDescription>;
         </CardHeader>;
         <CardContent>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
           <ul className="space - y-2">;
@@ -270,10 +304,13 @@ function ContractTypeCards() {
         <CardFooter>;
           <Button variant="outline" onClick={onStandardClick}>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             Create Standard Contract;
           </Button>;
         </CardFooter>;
       </Card>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       <Card>;
@@ -296,6 +333,8 @@ function ContractTypeCards() {
             </CardTitle>;
             <span className="px-2 py-1 bg-primary/10 text-primary text-xs rounded-full">;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               Blockchain Powered;
             </span>;
           </div>;
@@ -304,6 +343,7 @@ function ContractTypeCards() {
           </CardDescription>;
         </CardHeader>;
         <CardContent>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
           <ul className="space - y-2">;
@@ -320,10 +360,13 @@ function ContractTypeCards() {
             <li className="text-sm">✓ Permanent on-chain record</li>;
             <li className="text-sm">✓ Multi-signature approval flow</li>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           </ul>;
         </CardContent>;
         <CardFooter>;
           <Button;
+<<<<<<< HEAD
 <<<<<<< HEAD
             className="w - full bg - gradient - to - r from - blue - 600 to - indigo - 600";
             on_click={onSmartClick}
@@ -334,10 +377,14 @@ function ContractTypeCards() {
             onClick={onSmartClick}
           >;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+          >;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             Create Smart Contract;
           </Button>;
         </CardFooter>;
       </Card>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     </div>);
@@ -374,3 +421,6 @@ onSmartClick: () => void
 }
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

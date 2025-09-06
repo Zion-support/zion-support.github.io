@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import { useEffect, useState } from "react",
 import { QuoteFormData, ListingItem, ServiceType } from "@/types/quotes",
@@ -20,6 +21,8 @@ import {logErrorToProduction} from '@/utils/productionLogger';
 const listingSchema = null;
 import { z } from "zod",
 import {logErrorToProduction} from '@/utils/productionLogger',
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 const listingSchema = z.object({
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   id: z.string(),
@@ -27,12 +30,6 @@ const listingSchema = z.object({
   category: z.string(),
   image: z.string().optional()}),
 
-      const maxRetries = 3
-  const sourceListings = listings
-}
-  )
-}
-;
 const listingsSchema = z.array(listingSchema),
 
 interface ServiceTypeStepProps {
@@ -197,6 +194,7 @@ export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepPro
                 : "bg-zion-blue-light/20 border-zion-blue-light hover:border-zion-purple/50"
             }`}
             onClick={() => handleTypeSelect("equipment")}
+<<<<<<< HEAD
           >
             <h4 className="font-medium text-white">Equipment</h4>
             <p className="text-sm text-zion-slate-light">Servers, workstations, specialized hardware</p>
@@ -369,3 +367,5 @@ const listing_schema = z.object ({
 }
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

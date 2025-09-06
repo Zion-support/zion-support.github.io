@@ -1,28 +1,38 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { UserProfile, UserDetails  } from '@/types/auth';
 import { Message, Conversation, ConversationContextData  } from '@/types/messaging';
 import { useConversationState  } from './useConversationState';
 import { useConversations  } from './useConversations';
 import { useMessages } from './useMessages';
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {UserProfile, UserDetails} from '@/types/auth';
 import {Message, Conversation, ConversationContextData} from '@/types/messaging';
 import {useConversationState} from './useConversationState';
 import {useConversations} from './useConversations';
 import {useMessages} from './useMessages';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 // Allow either UserProfile or UserDetails
 
 type UserWithProfile = UserProfile | UserDetails | null;
 /**
  * Hook that combines all messaging operations
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 import {UserProfile, UserDetails} from '@/types / auth';
@@ -30,6 +40,8 @@ import {Message, Conversation, ConversationContextData} from '@/types / messagin
 import {useConversationState} from './useConversationState';
 import {use_conversations} from './use_conversations';
 import {use_messages} from './use_messages';
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 // Allow either UserProfile or UserDetails;
 type UserWithProfile = UserProfile | UserDetails | null;
 ;
@@ -38,11 +50,7 @@ type UserWithProfile = UserProfile | UserDetails | null;
 */;
 export /**
  * useMessagingOperations - Function description
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
  */
-function useMessagingOperations() {
-  // State management;
-  const {
     messages;
     set_messages;
     active_messages;
@@ -53,6 +61,7 @@ function useMessagingOperations() {
     setUnreadCount;
     active_conversation;
     setActiveConversation;
+<<<<<<< HEAD
 
 =======
  */
@@ -133,12 +142,15 @@ import { useMessages } from './useMessages',;
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   const {
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     fetch_conversations;
     create_conversation;
   } = use_conversations (
     user;
     set_conversations;
     setUnreadCount;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     setIsLoading);
@@ -150,6 +162,8 @@ import { useMessages } from './useMessages',;
 ;
   // Messages management;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const {
     load_messages;
     send_message;
@@ -164,6 +178,7 @@ import { useMessages } from './useMessages',;
     setUnreadCount;
     setIsLoading;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     fetch_conversations);
 ;
@@ -172,6 +187,8 @@ import { useMessages } from './useMessages',;
     fetch_conversations);
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return {
     // State;
     messages;
@@ -183,6 +200,7 @@ import { useMessages } from './useMessages',;
     setUnreadCount;
     active_conversation;
     setActiveConversation;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -285,3 +303,7 @@ export function useMessagingOperations(user: UserWithProfile) {;
   }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  }
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

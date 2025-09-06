@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 /**;
 * Helper script to update icon imports across the codebase;
 *;
@@ -25,6 +26,8 @@ const glob = require ('glob'),
  *
  * Usage: * 1. Run: node scripts/update-icon-imports.js
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
  * 2. This will find and replace lucide-react icon imports with imports from our custom icons package
  */
 
@@ -34,6 +37,7 @@ const glob = require('glob')
 // Helper to replace imports in a file
 function updateIconImportsInFile(filePath) {
   try {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -51,10 +55,13 @@ function updateIconImportsInFile(filePath) {
     const updatedContent = content.replace(
       /import\s+{([^}]*)}\s+from\s+['"]lucide-react['"]/g
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       'import {$1} from "@/components/icons"'
     )
     // Only write if changes were made
     if (content !== updatedContent) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -71,6 +78,8 @@ function updateIconImportsInFile(filePath) {
       return true
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 /**;
  * Helper script to update icon imports across the codebase;
  *;
@@ -94,6 +103,7 @@ function updateIconImportsInFile(filePath) {;
       fs.writeFileSync(filePath, updatedContent, 'utf8'),;
       // // // console.log(`✅ Updated imports in ${filePath}`),;
       return true;
+<<<<<<< HEAD
 
 
       fs && fs.writeFileSync(filePath, updatedContent, 'utf8'),
@@ -116,12 +126,17 @@ function updateIconImportsInFile(filePath) {;
     return false
   } catch (err) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+    }
+    return false
+  } catch (err) {
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
-    console.error(`❌ Error processing ${filePath}:`, err)
 
     return false
   }
 }
+<<<<<<< HEAD
 
 
 
@@ -144,31 +159,43 @@ files && files.forEach(file => {
 
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 // Find all TypeScript/JavaScript/JSX/TSX files
 
 const files = glob.sync('src/**/*.{js,jsx,ts,tsx}')
 let updatedFiles = 0
 files.forEach(file => {
   const updated = updateIconImportsInFile(file)
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   if (updated) updatedFiles++
 })
 console.log(`\n🎉 Updated icon imports in ${updatedFiles} files`)
 console.log(`\nℹ️ Make sure to run 'npm install glob' if needed to support this script`);
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 console && console.log(`\n🎉 Updated icon imports in ${updatedFiles} files`),
 console && console.log(`\nℹ️ Make sure to run 'npm install glob' if needed to support this script`),
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
 console && console.log(`\n🎉 Updated icon imports in ${updatedFiles} files`),
 console && console.log(`\nℹ️ Make sure to run 'npm install glob' if needed to support this script`),
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
  * updateIconImportsInFile - Function description
  */
 function updateIconImportsInFile() {
@@ -207,9 +234,12 @@ console.log (`\n🎉 Updated icon imports in ${updated_files} files`),
 console.log (`\nℹ️ Make sure to run 'npm install glob' if needed to support this script`),
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 console.log(`\n🎉 Updated icon imports in ${updatedFiles} files`),
 console.log(`\nℹ️ Make sure to run 'npm install glob' if needed to support this script`),;
@@ -217,6 +247,7 @@ console.log(`\nℹ️ Make sure to run 'npm install glob' if needed to support t
 
 // // // console.log(`\n🎉 Updated icon imports in ${updatedFiles} files`),
 // // // console.log(`\nℹ️ Make sure to run 'npm install glob' if needed to support this script`),
+<<<<<<< HEAD
 
 /**;
  * Helper script to update icon imports across the codebase;
@@ -260,6 +291,8 @@ console.log(`\nℹ️ Make sure to run 'npm install glob' if needed to support t
 ;
 // // // console.log(`\n🎉 Updated icon imports in ${updatedFiles} files`),
 // // // console.log(`\nℹ️ Make sure to run 'npm install glob' if needed to support this script`),
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ;
 // Find all TypeScript/JavaScript/JSX/TSX files;
 const files = glob.sync('src/**/*.{js,jsx,ts,tsx}'),;
@@ -270,6 +303,7 @@ files.forEach(file => {;
 }),;
 // // // console.log(`\n🎉 Updated icon imports in ${updatedFiles} files`),;
 // // // console.log(`\nℹ️ Make sure to run 'npm install glob' if needed to support this script`);
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -300,3 +334,5 @@ files.forEach (file => {
 if (updated) updatedFiles++ 
 });
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

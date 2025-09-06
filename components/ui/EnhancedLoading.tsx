@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 class ErrorBoundary extends React.Component {
@@ -31,6 +32,8 @@ class ErrorBoundary extends React.Component {
 
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from "react";
 type EnhancedLoadingProps = {;
   lines?: number;
@@ -42,11 +45,8 @@ export default function EnhancedLoading(): any ({ lines = 3 }: EnhancedLoadingPr
       {Array && Array.from({ length: lines }).map((_, idx) => (;
         <div key={idx} className="skeleton h-4 rounded" />;
       ))}
-
-import React from './react';
-type EnhancedLoadingProps = {
-  lines?: number;
 }
+<<<<<<< HEAD
 ;
 export default /**
  * EnhancedLoading - Function description
@@ -80,3 +80,5 @@ function EnhancedLoading() {
 }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

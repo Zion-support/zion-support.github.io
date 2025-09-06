@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import {useState} from 'react';
 import { supabase } from '@/integrations / supabase / client';
@@ -6,15 +7,26 @@ import { TalentProfile } from '@/types / talent';
 <<<<<<< HEAD
 
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useState  } from 'react';
 import { supabase } from "@/integrations/supabase/client",
 import { toast } from "@/hooks/use-toast";
 import { TalentProfile } from "@/types/talent";
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+import {useState} from 'react';
+import { supabase } from '@/integrations / supabase / client';
+import { toast } from '@/hooks / use - toast';
+import { TalentProfile } from '@/types / talent';
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export interface HireRequestData {
   talent: {
     id: string;
     full_name: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     professional_title: string,
@@ -55,6 +67,11 @@ export interface HireRequestData {
     budgetMin: number
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
+=======
+  project: {
+    overview: string;
+    timeline: string;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {useState} from 'react';
 import {supabase} from "@/integrations/supabase/client";
 import {toast} from "@/hooks/use-toast";
@@ -64,10 +81,13 @@ export interface HireRequestData {
     id: string;
     full_name: string;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useState } from 'react',
 import { supabase } from "@/integrations/supabase/client",
 import { toast } from "@/hooks/use-toast",
@@ -77,9 +97,12 @@ export interface HireRequestData {
     id: string,
     full_name: string,
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     professional_title: string,
     email?: string
   },
@@ -99,6 +122,7 @@ export interface HireRequestData {
 
 export function useHireRequest() {;
 
+<<<<<<< HEAD
     budgetMax: number
   }
 }
@@ -113,6 +137,8 @@ export function useHireRequest() {
 
 export function useHireRequest() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const [error, setError] = useState<string | null>(null);
@@ -121,6 +147,7 @@ export function useHireRequest() {;
     setError(null)
     try {
       // Call the edge function to process the hire request
+<<<<<<< HEAD
 <<<<<<< HEAD
       const { data: response, error } = await supabase && supabase.functions.invoke('process-hire-request', {
         body: requestData
@@ -150,36 +177,57 @@ export function useHireRequest() {;
 =======
       const { data: response, error } = await supabase.functions.invoke('process-hire-request', {
         body: requestData
+=======
+    budget_min: number,
+    budget_max: number;
+  }
+}
+export /**
+ * useHireRequest - Function description
+ */
+function useHireRequest() {
+  const [is_submitting, setIsSubmitting] = useState (false);
+  const [error, set_error] = useState < string | null>(null);
+;
+  const submitHireRequest = async (request_data: HireRequestData) => {
+    setIsSubmitting (true);
+    set_error (null),
+    try {
+      // Call the edge function to process the hire request;
+      const { data: response, error } = await supabase.functions.invoke ('process - hire - request', {
+        body: request_data;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       });
-      }),
-      
-      if (error) throw error;
-      // Show success message
-      toast({
-        title: "Request Submitted"
-        description: `Your request to hire ${requestData.talent.full_name} has been sent successfully.`});
-      return { success: true, requestId: response?.request_id }
-    } catch (error) {
-      console.error("Error submitting hire request:", error);
-      const errorMessage = error instanceof Error
-        ? error.message
-        : "There was a problem submitting your request. Please try again.";
+;
+      // Check condition
+if (throw error) {
+  $2
+}
+      // Show success message;
+      toast ({
         title: "Request Submitted",
-        description: `Your request to hire ${requestData.talent.full_name} has been sent successfully.`}),
-      
-      return { success: true, requestId: response?.request_id }
+        description: `Your request to hire ${request_data.talent.full_name} has been sent successfully.`});
+;
+      return { success: true, request_id: response?.request_id }
     } catch (error) {
-      console.error("Error submitting hire request:", error),
-      
-      const errorMessage = error instanceof Error 
-        ? error.message 
-        : "There was a problem submitting your request. Please try again.",
-      
-      setError(errorMessage);
-      toast({
+      console.error ("Error submitting hire request:", error);
+;
+      const error_message = error instanceof Error;
+        ? error.message;
+        : "There was a problem submitting your request. Please try again.";
+;
+      set_error (error_message);
+;
+      toast ({
         title: "Error";
-        description: errorMessage
+        description: error_message,
         variant: "destructive"});
+;
+      return { success: false, error: error_message }
+    } finally {
+      setIsSubmitting (false);
+    }
+  }
         title: "Error",
         description: errorMessage,
         variant: "destructive"}),
@@ -193,7 +241,6 @@ export function useHireRequest() {;
     submitHireRequest;
     isSubmitting;
 
-    error
   }
 }
         title: "Error",
@@ -260,6 +307,7 @@ export function useHireRequest() {;
     submitHireRequest;
     isSubmitting;
     error;
+<<<<<<< HEAD
 
         title: "Request Submitted",
         description: `Your request to hire ${requestData && requestData.talent.full_name} has been sent successfully.`});
@@ -532,10 +580,15 @@ isSubmitting;
 error 
 }
 }
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   }
 }
 ;
   }
 }
+<<<<<<< HEAD
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

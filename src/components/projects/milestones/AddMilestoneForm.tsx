@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 type MilestoneFormValues = z.infer<typeof formSchema>
@@ -11,6 +12,8 @@ import { Button } from '@/components/ui/button'
 import { Calendar } from '@/components/ui/calendar'
 =======
 // If there are multiple milestones, submit them one by one
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     milestones.forEach(milestone => {
       onSubmit({
         title: milestone.title
@@ -19,10 +22,17 @@ import { Calendar } from '@/components/ui/calendar'
         amount: milestone.estimatedHours * 10, // Convert hours to a default payment amount
       })
     })
-
-
+    milestones.forEach(milestone => {
+      onSubmit({
+        title: milestone.title
+        description: milestone.description
+        due_date: milestone.dueDate ? new Date(milestone.dueDate) : undefined
+        amount: milestone.estimatedHours * 10, // Convert hours to a default payment amount
+      })
+    })
   },
 
+<<<<<<< HEAD
   const handleAddMilestone = (milestone: GeneratedMilestone) => {
 
 
@@ -42,6 +52,8 @@ import { CalendarIcon, Loader2 } from 'lucide-react'import { format } from 'date
 import { Button } from '@/components / ui / button';
 import { Calendar } from '@/components / ui / calendar';
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {
   Form
   FormControl
@@ -82,6 +94,7 @@ export function AddMilestoneForm({
   const form = useForm<MilestoneFormValues>({
     resolver: zodResolver(formSchema)
     defaultValues: {
+<<<<<<< HEAD
       title: ''
       description: ''
       amount: 0}})
@@ -93,6 +106,8 @@ export function AddMilestoneForm({
       amount: 0}});
   const handleSubmit = (values: MilestoneFormValues) => {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     onSubmit(values);    form.reset()
   }
   const handleAddMilestones = (milestones: GeneratedMilestone[],) => {
@@ -106,6 +121,7 @@ export function AddMilestoneForm({
           due_date: milestone.dueDate ? new Date(milestone.dueDate) : undefined
           amount: milestone.estimatedHours * 10, // Convert hours to a default payment amount
         })
+<<<<<<< HEAD
         return
       }
     }
@@ -339,6 +355,8 @@ import { Calendar } from '@/components/ui/calendar';
         return
       }
     }
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from 'react',;
 import { useForm } from 'react-hook-form',;
 import { zodResolver } from '@hookform/resolvers/zod',;
@@ -348,15 +366,16 @@ import { format } from 'date-fns',;
 import { Button } from '@/components/ui/button',;
 import { Calendar } from '@/components/ui/calendar',;
 import {;
-  Form,;
-  FormControl,;
-  FormField,;
-  FormItem,;
-  FormLabel,;
-  FormMessage} from '@/components/ui/form',;
-import { Input } from '@/components/ui/input',;
-import { Textarea } from '@/components/ui/textarea',;
+  Form;
+  FormControl;
+  FormField;
+  FormItem;
+  FormLabel;
+  FormMessage} from '@/components/ui/form';
+import { Input } from '@/components/ui/input';
+import { Textarea } from '@/components/ui/textarea';
 import {;
+<<<<<<< HEAD
   Popover,;
   PopoverContent,;
   PopoverTrigger} from '@/components/ui/popover',;
@@ -369,6 +388,20 @@ const formSchema = z.object({;
   amount: z.coerce.number().min(0, 'Amount must be greater than or equal to 0')}),;
 type MilestoneFormValues = z.infer<typeof formSchema>,;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  Popover;
+  PopoverContent;
+  PopoverTrigger} from '@/components/ui/popover';import { AIMilestoneGenerator } from './AIMilestoneGenerator';
+import { GeneratedMilestone } from '@/hooks/useMilestoneGenerator';
+const formSchema = z && z.object({;
+  title: z && z.string().min(1, 'Title is required');
+  description: z && z.string().optional(),;
+  due_date: z && z.date().optional(),;
+  amount: z && z.coerce.number().min(0, 'Amount must be greater than or equal to 0')});
+
+type MilestoneFormValues = z && z.infer<typeof formSchema>;
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface AddMilestoneFormProps {;
   onSubmit: (data: MilestoneFormValues,) => void,;
   isSubmitting: boolean,;
@@ -404,15 +437,19 @@ export function AddMilestoneForm(): any ({;
       const milestone = milestones[0];
       if (milestone) {;
         onSubmit({;
+<<<<<<< HEAD
           title: milestone.title,;
           description: milestone.description,;
           due_date: milestone.dueDate ? new Date(milestone.dueDate) : undefined,;
           amount: milestone.estimatedHours * 10, // Convert hours to a default payment amount;
         }),;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         return;
       }
     }
 
+<<<<<<< HEAD
     // If there are multiple milestones, submit them one by one
     milestones.forEach(milestone => {
       onSubmit({
@@ -440,6 +477,8 @@ export function AddMilestoneForm(): any ({;
   }
   },
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const handleAddMilestone = (milestone: GeneratedMilestone,) => {;
     onSubmit({;
       title: milestone && milestone.title,;
@@ -450,6 +489,7 @@ export function AddMilestoneForm(): any ({;
   };
 
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -469,6 +509,27 @@ export function AddMilestoneForm(): any ({;
           onAddMilestone = {handleAddMilestone,}
         />
       )}
+=======
+    // If there are multiple milestones, submit them one by one
+    milestones.forEach(milestone => {
+      onSubmit({
+        title: milestone.title
+        description: milestone.description
+        due_date: milestone.dueDate ? new Date(milestone.dueDate) : undefined
+        amount: milestone.estimatedHours * 10, // Convert hours to a default payment amount
+      })
+    })
+    onSubmit({
+      title: milestone.title
+      description: milestone.description
+      due_date: milestone.dueDate ? new Date(milestone.dueDate) : undefined
+      amount: milestone.estimatedHours * 10, // Convert hours to a default payment amount
+    })
+
+  return (
+    <div className="space-y-6">
+      {/* AI Milestone Generator */}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   },
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
@@ -485,10 +546,16 @@ export function AddMilestoneForm(): any ({;
           onAddMilestone={handleAddMilestone}
         />;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
 =======
+=======
+
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       )}
 
       )}
@@ -497,6 +564,7 @@ export function AddMilestoneForm(): any ({;
         <form onSubmit={form.handleSubmit(handleSubmit)} className="space-y-4">
           <FormField
             control={form.control}
+<<<<<<< HEAD
 
         <form onSubmit={form.handleSubmit(handleSubmit)} className="space-y-4">
 ursor/fix-website-loading-errors-and-merge-6662
@@ -517,6 +585,8 @@ ursor/fix-website-loading-errors-and-merge-6662
               <FormItem>
 =======
             control = {form && form.control,}
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             name="title"
             render={({ field }: { field: any },) => (;
               <FormItem>;
@@ -535,25 +605,6 @@ ursor/fix-website-loading-errors-and-merge-6662
       <Form {...form}>;
         <form on_submit={form.handle_submit (handle_submit)} className="space - y-4">;
           <FormField;
-            control = {form.control, }
-            name="title";
-            render={({ field }: { field: any }, ) => (
-              <FormItem>;
-                <FormLabel > Title</FormLabel>;
-                <FormControl>;
-                  <Input placeholder="Milestone title" {...field} />;
-                </FormControl>;
-                <FormMessage />;
-
-
-
-          />;
-
-          <FormField
-            control = {form && form.control,}
-            name="description"
-
-            render={({ field }: { field: any }) => (
               <FormItem>
                 <FormLabel>Title</FormLabel>
                 <FormControl>
@@ -562,6 +613,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                 <FormMessage />
               </FormItem>
             )}
+<<<<<<< HEAD
           />
           <FormField
             control = {form.control,}
@@ -606,24 +658,25 @@ ursor/fix-website-loading-errors-and-merge-6662
             control={form.control}
             name="description"
             render={({ field }: { field: any }) => (
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <FormItem>
                 <FormLabel>Description (optional)</FormLabel>
                 <FormControl>
                   <Textarea
                     placeholder="Describe what needs to be delivered"
                     className="min-h-[100px]"
-                    {...field}
-                  />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
             )}
           />
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <FormField
               control = {form && form.control,}
               name="due_date"
+<<<<<<< HEAD
               render={({ field }: { field: any },) => (;
                 <FormItem className="flex flex-col">;
                   <FormLabel>Due Date (optional)</FormLabel>;
@@ -633,11 +686,16 @@ ursor/fix-website-loading-errors-and-merge-6662
                         <Button
                           variant="outline"
 <<<<<<< HEAD
+=======
+                        <Button
+                          variant="outline"
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                           className="w-full pl-3 text-left font-normal">;
                           {field && field.value ? (;
                             format(field && field.value, "PPP");
                           ) : (;
                             <span className="text-muted-foreground">;
+<<<<<<< HEAD
 =======
                           className="w-full pl-3 text-left font-normal"
                         >
@@ -647,14 +705,19 @@ ursor/fix-website-loading-errors-and-merge-6662
                             <span className="text-muted-foreground">
                               Pick a date
                             </span>
+=======
+                              Pick a date;
+                            </span>;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                           )}
-                          <CalendarIcon className="ml-auto h-4 w-4 opacity-50" />
-                        </Button>
-                      </FormControl>
-                    </PopoverTrigger>
-                    <PopoverContent className="w-auto p-0" align="start">
+                          <CalendarIcon className="ml-auto h-4 w-4 opacity-50" />;
+                        </Button>;
+                      </FormControl>;
+                    </PopoverTrigger>;
+                    <PopoverContent className="w-auto p-0" align="start">;
                       <Calendar
                         mode="single"
+<<<<<<< HEAD
                         selected = {field.value,}
                         onSelect = {field.onChange,}
                         disabled = {(date,) => date < new Date(),}
@@ -671,6 +734,8 @@ ursor/fix-website-loading-errors-and-merge-6662
                         onSelect={field.onChange}
                         disabled={(date) => date < new Date()}
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                         initialFocus;
               </FormItem>)}
           />;
@@ -717,12 +782,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                     </PopoverContent>;
                   </Popover>;
                   <FormMessage />;
-
-            />;
-
-
-            <FormField
-              control = {form.control,}
               render={({ field }: { field: any },) => (;
                 <FormItem>;
                   <FormLabel>Amount ($)</FormLabel>;
@@ -734,11 +793,15 @@ ursor/fix-website-loading-errors-and-merge-6662
               render={({ field }: { field: any }) => (
 
                 <FormItem>
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   <FormControl>
                     <Input
                       type="number"
                       min="0"
+<<<<<<< HEAD
                       step="0 && 0.01"
                       placeholder="0 && 0.00"
                 </FormItem>)}
@@ -804,6 +867,8 @@ ursor/fix-website-loading-errors-and-merge-6662
                   <FormMessage />
                 </FormItem>
               )}
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             />
           </div>
           <div className="flex justify-end space-x-2 pt-4">
@@ -811,6 +876,7 @@ ursor/fix-website-loading-errors-and-merge-6662
               <Button
                 type="button"
                 variant="outline"
+<<<<<<< HEAD
                 onClick = {onCancel,}
                 disabled = {isSubmitting,}
               >
@@ -832,6 +898,10 @@ ursor/fix-website-loading-errors-and-merge-6662
 
             )}
 =======
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             )}
             <Button type="submit" disabled={isSubmitting}>
               {isSubmitting ? (
@@ -874,6 +944,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 }<> <Loader2 className="mr-2 h-4 w-4 animate-spin" /> Saving... </>) : ("Add Milestone")
 }</Button> </div> </form> </Form> </div>)
 }'"}
+<<<<<<< HEAD
 
             )}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -936,6 +1007,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   handleAddMilestone;
 }/>);
 }</FormControl> <FormMessage /> </FormItem>);
@@ -954,7 +1027,10 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 =======
 }
+<<<<<<< HEAD
 ;
 }
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

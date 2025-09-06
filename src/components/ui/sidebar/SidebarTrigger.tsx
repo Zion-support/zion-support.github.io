@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import React from 'react'
 import { Button } from '@/components/ui/button'
@@ -8,6 +9,8 @@ import { cn } from "@/lib/utils";
 interface SidebarTriggerProps extends React.HTMLAttributes<HTMLButtonElement> {
   className?: string
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from 'react';
 import { Button } from '@/components/ui/button';
 
@@ -17,6 +20,7 @@ import { Button } from '@/components/ui/button';
 };
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 import React from "react",
 import { Button } from "@/components/ui/button",
@@ -47,6 +51,8 @@ export function SidebarTrigger({ className, ...props }: SidebarTriggerProps) { c
 }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { Menu, X } from 'lucide-react';
 import { useSidebar } from './sidebar-context';
 import { cn } from '@/lib/utils';
@@ -60,6 +66,7 @@ export function SidebarTrigger(): any ({ className, ...props }: SidebarTriggerPr
       <span className='sr-only'>Toggle Sidebar</span>;
     </Button>;
   );
+<<<<<<< HEAD
 };
 };
 
@@ -97,3 +104,5 @@ export function SidebarTrigger({ className, ...props }: SidebarTriggerProps) {;
 
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

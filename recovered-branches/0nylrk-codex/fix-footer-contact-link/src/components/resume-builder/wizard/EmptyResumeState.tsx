@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -19,12 +20,17 @@ import { FilePlus } from "lucide-react",
 import { EmptyResumeProps } from "./types",
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { FilePlus } from "lucide-react";
 import { EmptyResumeProps } from "./types";
+<<<<<<< HEAD
 >>>>>>> main
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export const EmptyResumeState = ({ onCreateClick }: EmptyResumeProps) => {
   return (
     <Card className="w-full max-w-2xl mx-auto">
@@ -42,6 +48,7 @@ export const EmptyResumeState = ({ onCreateClick }: EmptyResumeProps) => {
       </CardContent>
     </Card>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import {Card, CardContent} from "@/components/ui/card";
 import {Button} from "@/components/ui/button";
@@ -57,6 +64,8 @@ import {EmptyResumeProps} from "./types";
 <<<<<<< HEAD
 =======
 >>>>>>> main
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   );
 };
 
@@ -64,7 +73,11 @@ import {EmptyResumeProps} from "./types";
 }
 
 };
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   )
 },
 import { Card, CardContent } from "@/components/ui/card",;
@@ -74,6 +87,7 @@ import { EmptyResumeProps } from "./types",;
 
 export const EmptyResumeState = ({ onCreateClick }: EmptyResumeProps) => {;
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -85,11 +99,14 @@ import { EmptyResumeProps } from "./types",;
 export const EmptyResumeState = ({ onCreateClick } EmptyResumeProps) => {;
   return (;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <Card className="w-full max-w-2xl mx-auto">;
       <CardContent className="py-8">;
         <div className="text-center">;
           <h2 className="text-2xl font-bold mb-2">Create Your Resume</h2>;
           <p className="text-muted-foreground mb-6">Create a professional resume to showcase your skills and experience</p>;
+<<<<<<< HEAD
 <<<<<<< HEAD
           <Button
             onClick={onCreateClick}
@@ -119,10 +136,13 @@ export const EmptyResumeState = ({ onCreateClick }: EmptyResumeProps) =>: any {
           >;
             <FilePlus className="h-4 w-4" />;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             Create Resume;
           </Button>;
         </div>;
       </CardContent>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -152,3 +172,5 @@ export default EmptyResumeState;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

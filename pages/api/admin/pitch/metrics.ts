@@ -1,17 +1,20 @@
 
-
 import type { NextApiRequest, NextApiResponse } from "next";
 import { ensureAdminFromApi } from "../../../../utils/auth";
 export default async function handler(
+<<<<<<< HEAD
   req: NextApiRequest
   res: NextApiResponse
 ) {
 
 <<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   const { allowed } = await ensureAdminFromApi(req);
   if (!allowed) return res.status(403).json({ error: 'Forbidden' });
   // TODO: Replace with real data sources (e.g., Supabase, GA4, internal DB)
+<<<<<<< HEAD
 
 =======
 import type { NextApiRequest, NextApiResponse } from './next';
@@ -77,6 +80,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 =======
   res.status(200).json(data);
 >>>>>>> main
+=======
+
+  res.status(200).json(data);
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
   // TODO: Replace with real data sources (e.g., Supabase, GA4, internal DB);
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -87,8 +94,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     yoyGrowth: 1.85
     completedProjects: 3275
     globalReach: ["USEUAPACLATAM"]
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   try {
   const { allowed } = await ensureAdminFromApi(req);
   if (!allowed) return res && res.status(403).json({ error: "Forbidden" });
@@ -96,6 +101,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const data = {
 
 
+<<<<<<< HEAD
     ],
 
 
@@ -134,3 +140,6 @@ res.status (200).json (data);
 
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

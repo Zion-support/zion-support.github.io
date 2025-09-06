@@ -1,10 +1,20 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
+=======
+import { ProductListingCard } from "@/components/ProductListingCard",
+import { GradientHeading } from "@/components/GradientHeading",
+import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
+import { Button } from "@/components/ui/button",
+import { Link } from "react-router-dom",
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { ProductListingCard } from '@/components / ProductListingCard';
 import { GradientHeading } from '@/components / GradientHeading';
 import { Button } from '@/components / ui / button';
 import { Link } from './react-router-dom';
 
+<<<<<<< HEAD
 =======
 
 
@@ -13,6 +23,8 @@ import { Link } from './react-router-dom';
 =======
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface FeaturedListingsSectionProps {
   show_title?: boolean;
 }
@@ -22,6 +34,7 @@ export /**
 function FeaturedListingsSection() {
   const featured_listings = [;
     {
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -73,11 +86,14 @@ export function FeaturedListingsSection({ showTitle = true }: FeaturedListingsSe
       rating: 4.8,
       reviewCount: 124,
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       author: {
         name: "TechAI Labs"
         id: "tech-ai-labs"
         avatarUrl: "https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=64&h=64&fit=crop&auto=format"
       }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -114,10 +130,13 @@ export function FeaturedListingsSection({ showTitle = true }: FeaturedListingsSe
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       author: {
         name: "VisualAI"
         id: "visual-ai"
       }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -131,11 +150,14 @@ export function FeaturedListingsSection({ showTitle = true }: FeaturedListingsSe
     }
     },
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     {
       id: "fullstack-ai-dev"
       title: "Full-Stack AI Development"
       description: "End-to-end development for AI-powered applications"
       price: null, // Custom pricing
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -160,10 +182,13 @@ export function FeaturedListingsSection({ showTitle = true }: FeaturedListingsSe
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       author: {
         name: "DataMinds Consulting"
         id: "dataminds-consulting"
       }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -185,11 +210,14 @@ import {Link} from "react-router-dom";
       price: 1299
       currency: "$"
       category: "APIs"
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       tags: ["API", "Sentiment", "Analytics"];
       images: ["https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"]
       createdAt: "2024-01-05T11:15:00.000Z"
       rating: 4.6
       reviewCount: 72
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     },
     {
@@ -361,6 +389,8 @@ export function FeaturedListingsSection({ showTitle = true }: FeaturedListingsSe
         id: "social-ai";
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       id: "advanced - nlp - model",
       title: "Advanced NLP Model for Text Analysis",
       description: "State - of - the - art natural language processing with 98% accuracy",
@@ -427,11 +457,11 @@ export function FeaturedListingsSection({ showTitle = true }: FeaturedListingsSe
       author: {
         name: "SocialAI",
         id: "social - ai";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       }
     }];
 ;
   return (
+<<<<<<< HEAD
 
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">;
@@ -444,6 +474,8 @@ export function FeaturedListingsSection({ showTitle = true }: FeaturedListingsSe
             <ProductListingCard
               key={listing && listing.id}
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <section id="featured" className="py - 12 px - 4 bg - zion - blue - dark">;
       <div className="container mx - auto">;
         {show_title && (
@@ -457,6 +489,7 @@ export function FeaturedListingsSection({ showTitle = true }: FeaturedListingsSe
           </div>)}
         <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 4 gap - 6">;
           {featured_listings.map ((listing) => (
+<<<<<<< HEAD
 <<<<<<< HEAD
             <ProductListingCard;
               key={listing.id}
@@ -588,6 +621,10 @@ export function FeaturedListingsSection({ showTitle = true } FeaturedListingsSec
           {featuredListings.map((listing) => (
             <ProductListingCard
               key={listing.id}
+=======
+            <ProductListingCard;
+              key={listing.id}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               listing={listing}
               view="grid"
               onRequestQuote={() => {}}
@@ -605,28 +642,38 @@ export function FeaturedListingsSection({ showTitle = true } FeaturedListingsSec
       </div>
     </section>
   )
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+}
+
+              view="grid"
+              onRequestQuote={() => {}}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         </div>;
 
         <div className="mt-10 text-center">;
           <Button
             className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple text-white px-8 py-6"
             asChild>;
-=======
             />))}
         </div>;
         <div className="mt - 10 text - center">;
           <Button;
             className="bg - gradient - to - r from - zion - purple to - zion - purple - dark hover: from - zion - purple - light hover:to - zion - purple text - white px - 8 py - 6";
             as_child;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
             />;
@@ -644,8 +691,10 @@ export function FeaturedListingsSection({ showTitle = true } FeaturedListingsSec
             className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple text-white px-8 py-6";
             asChild;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           >;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+              onRequestQuote={() => {}}
             <Link to="/marketplace">View All Listings</Link>;
           </Button>;
         </div>;
@@ -654,6 +703,7 @@ export function FeaturedListingsSection({ showTitle = true } FeaturedListingsSec
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
@@ -684,3 +734,9 @@ export function FeaturedListingsSection({ showTitle = true } FeaturedListingsSec
 }
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+}
+;
+    </section>);
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

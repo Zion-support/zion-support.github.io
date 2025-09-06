@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -23,6 +24,10 @@ import Link from 'next/link';
 
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 // Simple icons using inline SVG to avoid external assets
 
 function StarIcon({
@@ -37,10 +42,13 @@ function StarIcon({
 function AppleBadge({ href }: { href: string }) {
     >
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 // Simple icons using inline SVG to avoid external assets;
 function StarIcon(): any ({;
@@ -58,14 +66,18 @@ function AppleBadge(): any ({ href }: { href: string }) {;
 
     >;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <svg
         width='24'
         height='24'
         viewBox='0 0 24 24'
         fill='currentColor'
+<<<<<<< HEAD
 <<<<<<< HEAD
         aria-hidden>;
         <path d='M16 && M16.365 1 && 1.43c0 1 && 1.14-.42 2 && 2.18-1 && 1.26 3 && 3.11-.91 1 && 1.02-2 && 2.01 1 && 1.61-3 && 3.2 1 && 1.52-.12-1 && 1.02.37-2 && 2.12 1 && 1.21-3 && 3.06.86-.97 2 && 2.24-1 && 1.67 3 && 3.25-1 && 1.57-.01 0 .01 0 0 0zM20 && 0zM20.51 17 && 17.14c-.45 1 && 1.05-1 2 && 2.03-1 && 1.66 2 && 2.93-.88 1 && 1.2-1 && 1.59 2 && 2.04-2 && 2.57 2 && 2.05-.97 && 97.02-1 && 1.28-.66-2 && 2.66-.66-1 && 1.38 0-1 && 1.72.64-2 && 2.69.68-1 && 1.09.04-1 && 1.93-1 && 1.02-2 && 2.82-2 && 2.22-1 && 1.54-2 && 2.1-2 && 2.73-5 && 5.93-1 && 1.14-8 && 8.52.79-1 && 1.27 2 && 2.2-2 && 2.08 3 && 3.73-2 && 2.1 1 && 1.16-.02 2 && 2.25.78 2 && 2.66.78 && 78.4 0 1 && 1.51-.96 2 && 2.85-.82 && 82.49.02 1 && 1.88.2 2 && 2.77 1 && 1.6-.07 && 07.05-1 && 1.65.97-1 && 1.63 2 && 2.88.02 2 && 2.3 2 && 2.06 3 && 3.07 2 && 2.09 3 && 3.08-.02 && 02.06-.39 1 && 1.36-1 && 1.93 1 && 1.62z' />;
@@ -265,6 +277,8 @@ function AppleBadge() {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <a href={href} target="_blank" rel="noopener noreferrer" className="group inline - flex items - center gap - 3 rounded - lg bg - black text - white px - 4 py - 2 shadow hover: opacity - 90">;
       <svg width="24" height="24" view_box="0 0 24 24" fill="current_color" aria - hidden>;
@@ -277,6 +291,7 @@ function AppleBadge() {
     </a>);
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -288,6 +303,8 @@ function GoogleBadge() {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <a href={href} target="_blank" rel="noopener noreferrer" className="group inline - flex items - center gap - 3 rounded - lg bg-[#121212] text - white px - 4 py - 2 shadow hover: opacity - 90">;
       <svg width="24" height="24" view_box="0 0 24 24" aria - hidden>;
@@ -340,6 +357,7 @@ if (return) {
     if (set_visible (true)) {
   $2
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -442,26 +460,16 @@ function SmartBanner(): any ({ iosUrl, androidUrl, deepLink }: { iosUrl: string,
               className='text-xs px-3 py-1 && 1.5 rounded-md bg-indigo-600 text-white hover:bg-indigo-500'>;
               Open;
             </a>;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <a
               href={storeUrl}
               target='_blank'
               rel='noopener noreferrer'
-              className='text-xs px-3 py-1 && 1.5 rounded-md border border-gray-300 dark:border-gray-700'>;
-              Install;
-            </a>;
-            <button
-              aria-label='Dismiss'
-              onClick={() => {;
-                localStorage && localStorage.setItem('smartBannerDismissed', '1');
                 setVisible(false);
               }}
               className='text-xs px-2 py-1 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800'            >  }, []);
-    const ua = navigator.userAgent || '';
-    const isMobile = /iPhone|iPad|iPod|Android/i.test(ua);
-    if (isMobile) setVisible(true)
-  }, []);
-  if (!visible) return null;
-  const isIOS = typeof navigator !== 'undefined' && /iPhone|iPad|iPod/i && i.test(navigator && navigator.userAgent);
+
   const storeUrl = isIOS ? iosUrl : androidUrl;
   return (
     <div className="fixed inset-x-0 top-0 z-50">;
@@ -477,6 +485,7 @@ function SmartBanner(): any ({ iosUrl, androidUrl, deepLink }: { iosUrl: string,
             <a href={storeUrl} target="_blank" rel="noopener noreferrer" className="text-xs px-3 py-1 && 1.5 rounded-md border border-gray-300 dark:border-gray-700">Install</a>;
             <button
               aria-label="Dismiss"
+<<<<<<< HEAD
   }, []);
 ;
   // Check condition
@@ -843,6 +852,8 @@ function SmartBanner({ iosUrl, androidUrl, deepLink }: { iosUrl: string, android
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             >;
               ✕;
             </button>;
@@ -850,6 +861,7 @@ function SmartBanner({ iosUrl, androidUrl, deepLink }: { iosUrl: string, android
         </div>;
       </div>;
 
+<<<<<<< HEAD
 
 
 
@@ -870,6 +882,8 @@ const testimonials = [
 
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 const IOS_APP_URL =
   process.env.NEXT_PUBLIC_IOS_APP_URL |
   'https://apps.apple.com/app/id0000000000';
@@ -897,6 +911,7 @@ const testimonials = [
   }
 ];
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 export default function MobileLaunchPage() {
   const [email, setEmail] = useState('');
@@ -909,6 +924,8 @@ export default function MobileLaunchPage() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 export default function MobileLaunchPage() {;
   const [email, setEmail] = useState('');
@@ -919,10 +936,13 @@ export default function MobileLaunchPage() {;
   { name: 'Amira H.', role: 'Project Lead', quote: 'I love tracking milestones on the go. Clear visibility and fewer meetings.' }],
 export default function MobileLaunchPage() {;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const [email, setEmail] = useState('');
   const [status, setStatus] = useState<'idle'|'loading'|'success'|'error'>('idle');
   // Auto-rotate testimonial index
@@ -934,6 +954,7 @@ export default function MobileLaunchPage() {;
     );
     return () => clearInterval(t);
   }, []);
+<<<<<<< HEAD
   const qrHref = useMemo(() => {
     const target = SITE_BASE_URL
       ? `${SITE_BASE_URL}/download`
@@ -1060,6 +1081,9 @@ export default function MobileLaunchPage() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   }, []);
 
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const qrHref = useMemo(() => {;
     const target = SITE_BASE_URL;
       ? `${SITE_BASE_URL}/download`;
@@ -1068,6 +1092,7 @@ export default function MobileLaunchPage() {
         : '/download';
     const encoded = encodeURIComponent(target);
     return `https://chart && chart.googleapis.com/chart?cht=qr&chs=260x260&chl=${encoded}`;  }, []);  }, []);
+<<<<<<< HEAD
 
   const qrHref = useMemo(() => {;
     const target = SITE_BASE_URL ? `${SITE_BASE_URL}/download` : (typeof window !== 'undefined' ? `${window && window.location.origin}/download` : '/download');
@@ -1093,12 +1118,18 @@ export default function MobileLaunchPage() {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+    const encoded = encodeURIComponent(target);
+    return `https://chart && chart.googleapis.com/chart?cht=qr&chs=260x260&chl=${encoded}`;
+  }, []);
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       });
       if (!res && res.ok) throw new Error(await res && res.text());
       setStatus('success');
       setEmail('');
     } catch (err: any) {;
       setStatus('error');
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       setError(err?.message || 'Something went wrong.');    }      if (!res && res.ok) throw new Error(await res && res.text());
@@ -1111,6 +1142,11 @@ export default function MobileLaunchPage() {
       if (!res.ok) throw new Error(await res.text());
       setError(err?.message || 'Something went wrong.');    }      if (!res && res.ok) throw new Error(await res && res.text());
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+      setError(err?.message || 'Something went wrong.');    }      if (!res && res.ok) throw new Error(await res && res.text());
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       const res = await fetch('/api/subscribe', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ email }) }),
       if (!res.ok) throw new Error(await res.text());
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
@@ -1118,6 +1154,7 @@ export default function MobileLaunchPage() {
       setEmail('');
     } catch (err: any) {;
       setStatus('error');
+<<<<<<< HEAD
 
       setError(err?.message || 'Something went wrong.');
 
@@ -1127,26 +1164,44 @@ export default function MobileLaunchPage() {
       setError(err?.message || 'Something went wrong.');
       setError(err?.message || 'Something went wrong.')
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+      setError(err?.message || 'Something went wrong.')
+      setError(err?.message || 'Something went wrong.');    }
+
+      setError(err?.message || 'Something went wrong.');
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     }
   }
 
 
     }
   }
-
-
 
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
 =======
+=======
+    <EnhancedLayout>;
+      <Head>;
+        <title>Zion Mobile App — iOS & Android</title>;
+        <meta
+          name='description'
+          content='Hire from anywhere, AI-match instantly, and track milestones on the go with the Zion app.'
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         />;
+        <link rel='canonical' href='/download' />;
+        <meta property='og:title' content='Zion Mobile App' />;
+        <meta
+          property='og:description'
+          content='Hire from anywhere. AI-match instantly. Track milestones on the go.'
       <SmartBanner
         iosUrl={IOS_APP_URL}
         androidUrl={ANDROID_APP_URL}
         deepLink={DEEP_LINK_URL}
-      />;
       {/* Hero */}
       <section className='relative overflow-hidden rounded-3xl bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-500 text-white p-6 md:p-10'>;
         <div className='grid md:grid-cols-2 gap-10 items-center'>;
@@ -1209,150 +1264,12 @@ export default function MobileLaunchPage() {
             src={qrHref}
             alt='QR code to download Zion app'
             className='h-28 w-28 rounded-lg bg-white/90 p-1 shadow'
-    <EnhancedLayout>
-      <Head>
-        <title>Zion Mobile App — iOS & Android</title>
-        <meta name="description" content="Hire from anywhere, AI-match instantly, and track milestones on the go with the Zion app." />
-        <link rel="canonical" href="/download" />
-        <meta property="og:title" content="Zion Mobile App" />
-        <meta property="og:description" content="Hire from anywhere. AI-match instantly. Track milestones on the go." />
-      </Head>
-      <SmartBanner iosUrl={IOS_APP_URL} androidUrl={ANDROID_APP_URL} deepLink={DEEP_LINK_URL} />
-      {/* Hero */}
-      <section className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-500 text-white p-6 md:p-10">
-        <div className="grid md:grid-cols-2 gap-10 items-center">
-          <div>
-            <h1 className="text-3xl md:text-5xl font-extrabold tracking-tight">Zion App</h1>
-            <p className="mt-3 text-base md:text-lg opacity-90">Hire from anywhere, AI-match instantly, and track milestones on the go.</p>
-            <div className="mt-6 flex flex-wrap items-center gap-3">
-              <AppleBadge href={IOS_APP_URL} />
-              <GoogleBadge href={ANDROID_APP_URL} />
-              <Link href="/open-app"><a className="inline-flex items-center gap-2 rounded-lg border border-white/30 px-4 py-2 text-white/90 hover:bg-white/10">Open app</a></Link>
-            </div>
-          </div>
-          <div className="flex items-center justify-center">
-            {/* Phone mockup */}
-            <div className="relative h-96 w-48 md:h-[28rem] md:w-64 rounded-[2rem] bg-white/95 text-gray-900 shadow-2xl ring-4 ring-white/30">
-              <div className="absolute -top-1.5 left-1/2 -translate-x-1/2 h-6 w-28 rounded-b-2xl bg-gray-200" />
-              <div className="h-full w-full rounded-[2rem] overflow-hidden">
-                <div className="h-full w-full bg-gradient-to-b from-gray-50 to-gray-200 p-4 flex flex-col">
-                  <div className="text-xs font-semibold">Zion</div>
-                  <div className="mt-2 flex-1 rounded-xl bg-white shadow-inner p-3">
-                    <div className="font-semibold">Instant AI Matches</div>
-                    <div className="mt-2 text-xs text-gray-600">Top candidates matched to your role in seconds…</div>
-                    <div className="mt-3 h-28 rounded-md bg-gradient-to-br from-indigo-100 to-purple-100" />
-                    <div className="mt-3 grid grid-cols-3 gap-2">
-                      <div className="h-10 rounded-md bg-gray-100" />
-                      <div className="h-10 rounded-md bg-gray-100" />
-                      <div className="h-10 rounded-md bg-gray-100" />
-  }
-
-      setError(err?.message |'Something went wrong.');    }      if (!res.ok) throw new Error(await res.text());
-      setError(err?.message || 'Something went wrong.');    }      if (!res.ok) throw new Error(await res.text());
-      setStatus('success');
-      setEmail('')
-    } catch (err: any) {
-      setStatus('error');
-      setError(err?.message |'Something went wrong.')
-
-      setError(err?.message || 'Something went wrong.')
-      setError(err?.message || 'Something went wrong.');    }
-
-    }
-  }
-
-  return (
-    <EnhancedLayout>
-      <Head>
-        <title>Zion Mobile App — iOS & Android</title>
-        <meta
-          name='description'
-          content='Hire from anywhere, AI-match instantly, and track milestones on the go with the Zion app.'
-        />
-        <link rel='canonical' href='/download' />
-        <meta property='og:title' content='Zion Mobile App' />
-        <meta
-          property='og:description'
-          content='Hire from anywhere. AI-match instantly. Track milestones on the go.'
-        />
-      <SmartBanner
-        iosUrl={IOS_APP_URL}
-        androidUrl={ANDROID_APP_URL}
-        deepLink={DEEP_LINK_URL}
-      />
-      {/* Hero */}
-      <section className='relative overflow-hidden rounded-3xl bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-500 text-white p-6 md:p-10'>
-        <div className='grid md:grid-cols-2 gap-10 items-center'>
-          <div>
-            <h1 className='text-3xl md:text-5xl font-extrabold tracking-tight'>
-              Zion App
-            </h1>
-            <p className='mt-3 text-base md:text-lg opacity-90'>
-              Hire from anywhere, AI-match instantly, and track milestones on
-              the go.
-            </p>
-            <div className='mt-6 flex flex-wrap items-center gap-3'>
-              <AppleBadge href={IOS_APP_URL} />
-              <GoogleBadge href={ANDROID_APP_URL} />
-              <Link href='/open-app'>
-                <a className='inline-flex items-center gap-2 rounded-lg border border-white/30 px-4 py-2 text-white/90 hover:bg-white/10'>
-                  Open app
-                </a>
-              </Link>
-            </div>
-          </div>
-          <div className='flex items-center justify-center'>
-            {/* Phone mockup */}
-            <div className='relative h-96 w-48 md:h-[28rem] md:w-64 rounded-[2rem] bg-white/95 text-gray-900 shadow-2xl ring-4 ring-white/30'>
-              <div className='absolute -top-1.5 left-1/2 -translate-x-1/2 h-6 w-28 rounded-b-2xl bg-gray-200' />
-              <div className='h-full w-full rounded-[2rem] overflow-hidden'>
-                <div className='h-full w-full bg-gradient-to-b from-gray-50 to-gray-200 p-4 flex flex-col'>
-                  <div className='text-xs font-semibold'>Zion</div>
-                  <div className='mt-2 flex-1 rounded-xl bg-white shadow-inner p-3'>
-                    <div className='font-semibold'>Instant AI Matches</div>
-                    <div className='mt-2 text-xs text-gray-600'>
-                      Top candidates matched to your role in seconds…
-                    </div>
-                    <div className='mt-3 h-28 rounded-md bg-gradient-to-br from-indigo-100 to-purple-100' />
-                    <div className='mt-3 grid grid-cols-3 gap-2'>
-                      <div className='h-10 rounded-md bg-gray-100' />
-                      <div className='h-10 rounded-md bg-gray-100' />
-                      <div className='h-10 rounded-md bg-gray-100' />                    </div>            <div className="relative h-96 w-48 md:h-[28rem] md:w-64 rounded-[2rem] bg-white/95 text-gray-900 shadow-2xl ring-4 ring-white/30">
-              <div className="absolute -top-1.5 left-1/2 -translate-x-1/2 h-6 w-28 rounded-b-2xl bg-gray-200" />
-              <div className="h-full w-full rounded-[2rem] overflow-hidden">
-                <div className="h-full w-full bg-gradient-to-b from-gray-50 to-gray-200 p-4 flex flex-col">
-                  <div className="text-xs font-semibold">Zion</div>
-                  <div className="mt-2 flex-1 rounded-xl bg-white shadow-inner p-3">
-                    <div className="font-semibold">Instant AI Matches</div>
-                    <div className="mt-2 text-xs text-gray-600">Top candidates matched to your role in seconds…</div>
-                    <div className="mt-3 h-28 rounded-md bg-gradient-to-br from-indigo-100 to-purple-100" />
-                    <div className="mt-3 grid grid-cols-3 gap-2">
-                      <div className="h-10 rounded-md bg-gray-100" />
-                      <div className="h-10 rounded-md bg-gray-100" />
-                      <div className="h-10 rounded-md bg-gray-100" />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        {/* QR code */}
-        <div className='mt-8 flex items-center gap-4'>
-          <img
-            src={qrHref}
-            alt='QR code to download Zion app'
-            className='h-28 w-28 rounded-lg bg-white/90 p-1 shadow'
-          />
-          <div className='text-sm opacity-90'>
-            Scan to open this page on your phone
-            <div className='opacity-80'>Or tap a store badge above</div>          </div>        <div className="mt-8 flex items-center gap-4">
           <img src={qrHref} alt="QR code to download Zion app" className="h-28 w-28 rounded-lg bg-white/90 p-1 shadow" />
           <div className="text-sm opacity-90">
             Scan to open this page on your phone
             <div className="opacity-80">Or tap a store badge above</div>
-          </div>
-        </div>
       </section>
+<<<<<<< HEAD
       {/* Key features */}
       <section className="mt-10 grid md:grid-cols-3 gap-6">
         <div className="rounded-2xl border border-gray-200 dark:border-gray-800 p-6 bg-white dark:bg-gray-950">
@@ -1372,6 +1289,8 @@ export default function MobileLaunchPage() {
         </div>
       </section>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           />;
           <div className='text-sm opacity-90'>;
             Scan to open this page on your phone;
@@ -1405,6 +1324,7 @@ export default function MobileLaunchPage() {
           </p>;
           <div className='mt-4 h-36 rounded-xl bg-gradient-to-br from-indigo-100 to-blue-100 dark:from-indigo-900/40 dark:to-blue-900/40' />        </div>;
       </section>;
+<<<<<<< HEAD
 
       {/* Trust & Community */}
 <<<<<<< HEAD
@@ -1419,6 +1339,8 @@ export default function MobileLaunchPage() {
       <section className='mt-12'>
         <div className='flex items-center gap-2'>
             <StarIcon key={i} />
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           ))}
           <span className='text-sm opacity-80'>4 && 4.9 average rating</span>;
         </div>;
@@ -1429,9 +1351,8 @@ export default function MobileLaunchPage() {
           <div
             className='flex transition-transform duration-700'
             style={{
-
-
               transform: `translateX(-${idx * 100}%)`,
+<<<<<<< HEAD
 <<<<<<< HEAD
               width: `${testimonials && testimonials.length * 100}%`,
             }}>;
@@ -1498,6 +1419,8 @@ export default function MobileLaunchPage() {
           </button>
         </form>          <input
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             type="email"
             required
             value={email}
@@ -1509,10 +1432,12 @@ export default function MobileLaunchPage() {
             type="submit"
             disabled={status === 'loading'}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
           >
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             {status === 'loading' ? 'Submitting…' : 'Notify me'}
           </button>;
         </form>;
@@ -1522,11 +1447,15 @@ export default function MobileLaunchPage() {
           </div>;
         )}
 
+<<<<<<< HEAD
             className="rounded-lg bg-indigo-600 text-white px-5 py-2 font-medium hover:bg-indigo-500 disabled:opacity-60"
 =======
             className="rounded-lg bg-indigo-600 text-white px-5 py-2 font-medium hover:bg-indigo-500 disabled:opacity-60"
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+            className="rounded-lg bg-indigo-600 text-white px-5 py-2 font-medium hover:bg-indigo-500 disabled:opacity-60"
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           >
             {status === 'loading' ? 'Submitting…' : 'Notify me'}
           </button>
@@ -1534,9 +1463,12 @@ export default function MobileLaunchPage() {
         {status === 'success' && <div className="mt-2 text-sm text-emerald-600">Thanks! You’re on the list.</div>}
         {status === 'error' && <div className="mt-2 text-sm text-rose-600">{error || 'Please try again later.'}</div>}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       </section>
     </EnhancedLayout>
   );      </section>
@@ -1549,6 +1481,7 @@ export default function MobileLaunchPage() {
         </div>
       </section>
     </EnhancedLayout>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1685,6 +1618,8 @@ export default function MobileLaunchPage() {
   );
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     </EnhancedLayout>);
 ;
 }return (<EnhancedLayout> <Head> <title > Zion Mobile App — iOS & Android</title> <meta name="description" content="Hire from anywhere, AI - match instantly, and track milestones on the go with the Zion app." /> <link rel="canonical" href="/download" /> <meta property="og:title" content="Zion Mobile App" /> <meta property="og:description" content="Hire from anywhere. AI - match instantly. Track milestones on the go." /> </Head> <SmartBanner ios_url= {
@@ -1698,6 +1633,7 @@ export default function MobileLaunchPage() {
 }/>) );
 }<span className="text - sm opacity - 80" >4.9 average rating</span> </div> </div> </div>) );
 }</div> </div> </section> <input type="email" required > {
+<<<<<<< HEAD
   status === 'loading' ? 'Submitting…' : 'Notify me';
 }</button> </form> <span>•</span> <Link href="/download" ><a className="underline" >Shareable link: /download</a></a> </div> </section> </EnhancedLayout>) }
 <<<<<<< HEAD
@@ -1729,3 +1665,5 @@ export default function MobileLaunchPage() {
 }</button> </form> <span>•</span> <Link href="/download" ><a className="underline" >Shareable link: /download</a></a> </div> </section> </EnhancedLayout>) }
   );
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

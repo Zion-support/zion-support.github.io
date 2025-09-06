@@ -1,10 +1,13 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import EmptyState from '../../components/ui/EmptyState';
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 const Dashboard: NextPage = () => {
   return (
@@ -13,6 +16,7 @@ const Dashboard: NextPage = () => {
         <title>Dashboard - Zion</title>
       </Head>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       <h1 className="text-2xl font-semibold">Dashboard</h1>
@@ -54,6 +58,8 @@ const Dashboard: NextPage = () => {
           icon={<span>🧰</span>}
           primaryAction={{ label: 'Post a job', href: '/jobs/post' }}
           secondaryAction={{ label: 'Explore talent', href: '/talent' }}
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           icon={<span>🧰</span>  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -76,11 +82,23 @@ const Dashboard: NextPage = () => {
         <h2 className="text-lg font-semibold mb-2">Messages</h2>
         <EmptyState
           title="No messages yet"
-          description="When conversations start, they’ll show up here."
+          icon={<span>💬</span>  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+          primaryAction={{ label: 'Browse services', href: '/services' }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import type { NextPage } from 'next',
 import Head from 'next / head',
 import EmptyState from '../../components / ui / EmptyState',
@@ -101,6 +119,7 @@ const Dashboard: NextPage = () => {
           secondary_action={{ label: 'Explore talent', href: '/talent' }}
         />;
       </section>;
+<<<<<<< HEAD
 
 =======
         <h2 className=&quot;text-lg font-semibold mb-2&quot;>Messages</h2>
@@ -143,10 +162,13 @@ export default Dashboard,;
         />;
       </section>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     </div>;
   );
 },;
 export default Dashboard;
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -154,3 +176,5 @@ export default Dashboard;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

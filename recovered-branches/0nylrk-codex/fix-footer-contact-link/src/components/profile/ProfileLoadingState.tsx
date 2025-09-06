@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 import React from 'react',
@@ -42,8 +43,9 @@ function ProfileLoadingState() {
 import React from 'react',
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from "react";
->>>>>>> main
 export function ProfileLoadingState() {
   return (
     <div className="min-h-screen bg-zion-blue flex justify-center items-center p-4">
@@ -53,6 +55,7 @@ export function ProfileLoadingState() {
     </div>
   );
 }
+<<<<<<< HEAD
 ;
 
 
@@ -76,3 +79,5 @@ export function ProfileLoadingState() {;
 }
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

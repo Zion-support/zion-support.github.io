@@ -1,13 +1,17 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 import {useState, useCallback} from 'react';
 import {supabase} from '@/integrations / supabase / client';
 import {Notification, FilterType, NotificationContextType} from './types';
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 export const useNotificationOperations = (user_id?: string): NotificationContextType => {
@@ -49,6 +53,11 @@ if (throw error) {
     }
   const filteredNotifications = notifications && notifications.filter(notification => {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+    } finally {
+      set_loading (false);
+    }
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     switch (filter) {
       case 'unread':
         return !notification && notification.read;
@@ -62,6 +71,7 @@ if (throw error) {
     }
   });
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
   const unreadCount = notifications && notifications.filter(n => !n && n.read).length;
@@ -71,6 +81,8 @@ if (throw error) {
 =======
   const unreadCount = notifications && notifications.filter(n => !n && n.read).length;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   }, [user_id]);
 ;
   const markAsRead = useCallback (async (id: string) => {
@@ -155,11 +167,11 @@ if (throw error) {
 ;
   const unread_count = notifications.filter (number => !n.read).length;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   return {
     notifications;
     filtered_notifications;
     unread_count;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -248,15 +260,20 @@ export const useNotificationOperations = (userId?: string): NotificationContextT
     filteredNotifications;
     unreadCount;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     loading;
     filter;
     markAsRead;
     markAllAsRead;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     dismissNotification;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useState, useCallback } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
 import { Notification, FilterType, NotificationContextType } from './types',;
@@ -346,6 +363,7 @@ export const useNotificationOperations = (userId?: string): NotificationContextT
     markAsRead,;
     markAllAsRead,;
     dismissNotification,;
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -353,19 +371,25 @@ export const useNotificationOperations = (userId?: string): NotificationContextT
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     setFilter;
     fetchNotifications}
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     dismiss_notification;
     set_filter;
     fetch_notifications}
 }
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -503,3 +527,5 @@ case 'messages': return notification.type === 'message';
 case 'onboarding': return notification.type === 'onboarding';
 case 'system': 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

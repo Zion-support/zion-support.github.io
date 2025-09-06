@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     id: 'ai-automation-manufacturing',
     title: 'AI-Powered Manufacturing Automation',
@@ -36,6 +37,8 @@ export default function ResourceCaseStudyPage() {
   }
   },
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <>
       <Head>
@@ -46,6 +49,7 @@ export default function ResourceCaseStudyPage() {
       <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">
         <main className="container mx-auto px-6 py-12">
           <div className="max-w-4xl mx-auto">
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -61,6 +65,8 @@ export default function ResourceCaseStudyPage() {
 <<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <nav className="mb-8">
 
               <Link href="/resources" className="text-cyan-400 hover: text-cyan-300 transition-colors">
@@ -68,6 +74,7 @@ export default function ResourceCaseStudyPage() {
                 ← Back to Resources
               </Link>
             </nav>
+<<<<<<< HEAD
 
 
 =======
@@ -109,12 +116,15 @@ export default function ResourceCaseStudyPage() {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 </span>
               </div>
               <h1 className="text-4xl font-bold text-white mb-4">{caseStudy.title}</h1>
               <p className="text-xl text-cyan-400 font-semibold mb-4">{caseStudy.company}</p>
               <p className="text-white/80 text-lg max-w-3xl mx-auto">{caseStudy.description}</p>
             </header>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -132,12 +142,15 @@ export default function ResourceCaseStudyPage() {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <section className="mb-12">
               <h2 className="text-2xl font-semibold mb-6 text-green-400">Key Results</h2>
               <div className="bg-green-500/10 rounded-lg p-6 border border-green-500/20">
                 <p className="text-white/90 text-lg">{caseStudy.results}</p>
               </div>
             </section>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -155,12 +168,15 @@ export default function ResourceCaseStudyPage() {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <section className="mb-12">
               <h2 className="text-2xl font-semibold mb-6 text-blue-400">Detailed Analysis</h2>
               <div className="space-y-6">
                 <div className="bg-blue-500/10 rounded-lg p-6 border border-blue-500/20">
                   <h3 className="text-xl font-semibold text-blue-400 mb-3">Implementation Strategy</h3>
                   <p className="text-white/90">
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -170,30 +186,44 @@ export default function ResourceCaseStudyPage() {
 =======
 =======
                     Our approach involved deploying autonomous AI systems across three key areas: predictive maintenance,
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     Our approach involved deploying autonomous AI systems across three key areas: predictive maintenance
                     quality control, and production optimization. Each system was designed to work independently while
 
                     Our approach involved deploying autonomous AI systems across three key areas: predictive maintenance,
                     quality control, and production optimization. Each system was designed to work independently while
+<<<<<<< HEAD
                     Our approach involved deploying autonomous AI systems across three key areas: predictive maintenance,
                     quality control, and production optimization. Each system was designed to work independently while
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     Our approach involved deploying autonomous AI systems across three key areas: predictive maintenance, 
                     quality control, and production optimization. Each system was designed to work independently while 
                     Our approach involved deploying autonomous AI systems across three key areas: predictive maintenance,
                     quality control, and production optimization. Each system was designed to work independently while
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+                    Our approach involved deploying autonomous AI systems across three key areas: predictive maintenance, 
+                    quality control, and production optimization. Each system was designed to work independently while 
+                    Our approach involved deploying autonomous AI systems across three key areas: predictive maintenance,
+                    quality control, and production optimization. Each system was designed to work independently while
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     sharing data for comprehensive insights.
                   </p>
                 </div>
                 <div className="bg-purple-500/10 rounded-lg p-6 border border-purple-500/20">
                   <h3 className="text-xl font-semibold text-purple-400 mb-3">Technology Stack</h3>
                   <p className="text-white/90">
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -210,12 +240,15 @@ export default function ResourceCaseStudyPage() {
                     We utilized advanced machine learning algorithms, computer vision systems, IoT sensors, and
                     predictive analytics to create a comprehensive automation solution that could adapt to changing
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     production requirements.
                   </p>
                 </div>
                 <div className="bg-yellow-500/10 rounded-lg p-6 border border-yellow-500/20">
                   <h3 className="text-xl font-semibold text-yellow-400 mb-3">Business Impact</h3>
                   <p className="text-white/90">
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -232,36 +265,47 @@ export default function ResourceCaseStudyPage() {
                     The implementation resulted in significant improvements across all key metrics, with the most
                     notable being the 40% increase in production efficiency and 60% reduction in unplanned downtime.
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     These improvements directly translated to increased profitability and customer satisfaction.
                   </p>
                 </div>
               </div>
             </section>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
 =======
             {/* Related Resources */}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <section className="mb-12">
               <h2 className="text-2xl font-semibold mb-6 text-fuchsia-400">Related Resources</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <Link 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             {/* Related Resources */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <section className="mb-12">
               <h2 className="text-2xl font-semibold mb-6 text-fuchsia-400">Related Resources</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -270,10 +314,14 @@ export default function ResourceCaseStudyPage() {
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   href="/case-studies/ai-automation-manufacturing"
                   className="bg-fuchsia-500/10 rounded-lg p-6 border border-fuchsia-500/20 hover:border-fuchsia-400/50 transition-all duration-300"
                 >
@@ -284,12 +332,16 @@ export default function ResourceCaseStudyPage() {
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
                 <Link
                 <Link 
                 <Link
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   href="/resources/whitepapers/autonomous-systems-guide.pdf"
                   className="bg-cyan-500/10 rounded-lg p-6 border border-cyan-500/20 hover:border-cyan-400/50 transition-all duration-300"
                 >
@@ -298,6 +350,7 @@ export default function ResourceCaseStudyPage() {
                 </Link>
               </div>
             </section>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -315,10 +368,13 @@ export default function ResourceCaseStudyPage() {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <section className="text-center">
               <div className="bg-gradient-to-r from-cyan-500/10 to-fuchsia-500/10 rounded-2xl p-8 border border-cyan-500/20">
                 <h2 className="text-2xl font-bold mb-4 text-white">Ready to Implement Similar Solutions?</h2>
                 <p className="text-white/80 mb-6 max-w-2xl mx-auto">
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -330,6 +386,8 @@ export default function ResourceCaseStudyPage() {
                 </p>
                 <div className="flex flex-col sm: flex-row gap-4 justify-center">
                   <Link 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   This resource demonstrates the real impact of AI automation in manufacturing.
                   Let's discuss how we can help you achieve similar results.
                 </p>
@@ -338,21 +396,30 @@ export default function ResourceCaseStudyPage() {
 
 
 
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     href="/contact"
                     className="bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-300"
                   >
                     Get Started
                   </Link>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 
                     href="/resources"
                     className="px-8 py-4 border border-white/20 rounded-lg text-white hover:border-cyan-400/50 transition-all duration-300"
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
                   <Link
@@ -361,6 +428,8 @@ export default function ResourceCaseStudyPage() {
                     href="/resources"
                     className="px-8 py-4 border border-white/20 rounded-lg text-white hover:border-cyan-400/50 transition-all duration-300"
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   >
                     Explore More Resources
                   </Link>
@@ -372,11 +441,24 @@ export default function ResourceCaseStudyPage() {
       </div>
     </>
 <<<<<<< HEAD
-
+<<<<<<< HEAD
 =======
+  )
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+export default function ResourceCaseStudyPage(req, res) {
+  try {
+  const caseStudy = {;
+    id: 'ai-automation-manufacturing';
+    title: 'AI-Powered Manufacturing Automation';
+    company: 'Global Manufacturing Corp';
+    industry: 'Manufacturing';
+    results: '40% increase in production efficiency, 60% reduction in downtime',;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
 }
 
-=======
 import React from 'react',
 import Head from 'next / head',
 import Link from 'next / link',
@@ -434,6 +516,7 @@ function ResourceCaseStudyPage() {
                   <h3 className="text - xl font - semibold text - blue - 400 mb - 3">Implementation Strategy</h3>;
                   <p className="text - white / 90">;
                     Our approach involved deploying autonomous AI systems across three key areas: predictive maintenance,
+<<<<<<< HEAD
 =======
 }
 
@@ -516,10 +599,13 @@ export default function ResourceCaseStudyPage(req, res) {
                   <p className="text-white/90">;
                     Our approach involved deploying autonomous AI systems across three key areas: predictive maintenance;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     quality control, and production optimization. Each system was designed to work independently while;
                     sharing data for comprehensive insights.;
                   </p>;
                 </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
                 <div className="bg - purple - 500 / 10 rounded - lg p - 6 border border - purple - 500 / 20">;
                   <h3 className="text - xl font - semibold text - purple - 400 mb - 3">Technology Stack</h3>;
@@ -529,11 +615,14 @@ export default function ResourceCaseStudyPage(req, res) {
                   <h3 className="text-xl font-semibold text-purple-400 mb-3">Technology Stack</h3>;
                   <p className="text-white/90">;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     We utilized advanced machine learning algorithms, computer vision systems, IoT sensors, and;
                     predictive analytics to create a comprehensive automation solution that could adapt to changing;
                     production requirements.;
                   </p>;
                 </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
                 <div className="bg - yellow - 500 / 10 rounded - lg p - 6 border border - yellow - 500 / 20">;
                   <h3 className="text - xl font - semibold text - yellow - 400 mb - 3">Business Impact</h3>;
@@ -543,6 +632,8 @@ export default function ResourceCaseStudyPage(req, res) {
                   <h3 className="text-xl font-semibold text-yellow-400 mb-3">Business Impact</h3>;
                   <p className="text-white/90">;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     The implementation resulted in significant improvements across all key metrics, with the most;
                     notable being the 40% increase in production efficiency and 60% reduction in unplanned downtime.;
                     These improvements directly translated to increased profitability and customer satisfaction.;
@@ -550,6 +641,7 @@ export default function ResourceCaseStudyPage(req, res) {
                 </div>;
               </div>;
             </section>;
+<<<<<<< HEAD
 <<<<<<< HEAD
             {/* Related Resources */}
             <section className="mb - 12">;
@@ -625,16 +717,21 @@ export default function ResourceCaseStudyPage(req, res) {
                     href="/contact";
                     className="bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-300";
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   >;
                     Get Started;
                   </Link>;
                   <Link;
                     href="/resources";
 <<<<<<< HEAD
+<<<<<<< HEAD
                     className="px - 8 py - 4 border border - white / 20 rounded - lg text - white hover:border - cyan - 400 / 50 transition - all duration - 300";
 =======
                     className="px-8 py-4 border border-white/20 rounded-lg text-white hover:border-cyan-400/50 transition-all duration-300";
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   >;
                     Explore More Resources;
                   </Link>;
@@ -643,6 +740,7 @@ export default function ResourceCaseStudyPage(req, res) {
             </section>;
           </div>;
         </main>;
+<<<<<<< HEAD
       </div>;
     </>);
 }
@@ -667,3 +765,7 @@ export default function ResourceCaseStudyPage(req, res) {
 }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

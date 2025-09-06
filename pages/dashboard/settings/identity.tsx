@@ -1,8 +1,11 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useEffect, useState } from 'react',;
 import Head from 'next/head',;
 import type { KycProfile } from '../../../utils/kyc',;
@@ -11,8 +14,6 @@ export default function IdentitySettingsPage() {
   const [userId, setUserId] = useState('demo-user'),
   const [profile, setProfile] = useState<KycProfile | null>(null),
   const [error, setError] = useState(''),
-
-
 
 import React, { useEffect, useState } from 'react';
 
@@ -25,6 +26,7 @@ export default function IdentitySettingsPage() {
   const [profile, setProfile] = useState<KycProfile | null>(null)
   const [error, setError] = useState('')
   async function load() {
+<<<<<<< HEAD
 
 
     try {
@@ -85,12 +87,13 @@ export default function IdentitySettingsPage() {
       if (data.ok) setProfile(data.profile)
       else setError(data.error |'Not found')
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     } catch (e) {
-
-      set_error ('Failed to fetch');
-
+      setError('Failed to fetch')
     }
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -141,6 +144,8 @@ export default function IdentitySettingsPage() {
 =======
 }
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useEffect, useState } from 'react';
 import Head from 'next/head';
 import type { KycProfile } from '../../../utils/kyc';
@@ -151,6 +156,11 @@ export default function IdentitySettingsPage(req, res) {
   const [profile, setProfile] = useState<KycProfile | null>(null);
   const [error, setError] = useState('');
   async function load() {;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     try {
       const res = await fetch(`/api/kyc/status?userId=${encodeURIComponent(userId)}`);
       const data = await res.json();
@@ -163,6 +173,7 @@ export default function IdentitySettingsPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 
     } catch (error) {
     console.error("Error:", error);
@@ -192,6 +203,8 @@ export default function IdentitySettingsPage(req, res) {
         <a href="/verify" className="inline-block rounded bg-blue-600 text-white px-4 py-2">Go to verification</a>
         {error && <div className="mt-3 text-sm text-red-600">{error}</div>}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <ProfileBadges profile={profile || undefined} />
         </div>
         <div className="mb-4 text-sm text-gray-600">
@@ -200,10 +213,13 @@ export default function IdentitySettingsPage(req, res) {
   );
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           Status: {profile ? profile.status : 'not_started'} • AML: {profile ? profile.amlStatus : 'unknown'  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -224,6 +240,7 @@ export default function IdentitySettingsPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 }
 
@@ -235,3 +252,5 @@ export default function IdentitySettingsPage(req, res) {
 }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

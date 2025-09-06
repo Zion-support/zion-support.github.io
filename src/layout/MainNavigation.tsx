@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -66,17 +67,19 @@ if ( {) {
   Wallet
 } from 'lucide-react'
 import { LanguageSelector } from '@/components/header/LanguageSelector'
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface MainNavigationProps {
   isAdmin?: boolean
   unreadCount?: number
   className?: string
-
 }
 interface MainNavigationProps {
   isAdmin?: boolean
   unreadCount?: number
   className?: string
 export function MainNavigation({
+<<<<<<< HEAD
 
   HoverCard
   HoverCardTrigger
@@ -125,6 +128,8 @@ export function MainNavigation({
   unreadCount = 0,;
   className;
 }: MainNavigationProps) {;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false); // Add state
   const { user } = useAuth()
   const isAuthenticated = !!user
@@ -139,7 +144,10 @@ export function MainNavigation({
       e.preventDefault()
       setLoginOpen(true)
       return;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     }
     setIsMobileMenuOpen (false);
   }
@@ -149,6 +157,7 @@ export function MainNavigation({
       href: '/'
       matches: (path: string) => path === '/',    }
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 class ErrorBoundary extends React.Component {
@@ -223,6 +232,8 @@ import { LoginModal } from '@/components/auth/LoginModal';
       matches: (path: string) =>
         path.startsWith('/community') |path.startsWith('/forum')
     }
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   ]
   const links = baseLinks.map(link => ({
     ...link
@@ -261,23 +272,6 @@ import { LoginModal } from '@/components/auth/LoginModal';
         className={cn('navbar', className)}
         role='navigation'
         aria-label='Main navigation'      >
-import Link from "next/link",
-import { useRouter } from "next/router",
-import { useState } from "react",
-import { cn } from "@/lib/utils",
-import { useAuth } from "@/hooks/useAuth",
-import { useTranslation } from "react-i18next",
-import { useFavorites } from "@/hooks/useFavorites",
-import { useCart } from "@/context/CartContext",
-import { Heart, MessageSquare, CreditCard, ShoppingCart, Wallet } from 'lucide-react'
-import { LanguageSelector } from '@/components/header/LanguageSelector',
-import { HoverCard, HoverCardTrigger, HoverCardContent } from '@/components/ui/hover-card',
-import { MiniCartPreview } from '@/components/cart/MiniCartPreview',
-import { LoginModal } from '@/components/auth/LoginModal',
-interface MainNavigationProps {
-  isAdmin?: boolean,
-  unreadCount?: number,
-  className?: string
 import Link from "next/link",;
 import { useRouter } from "next/router",;
 import { useState } from "react",;
@@ -291,12 +285,16 @@ import { LanguageSelector } from '@/components/header/LanguageSelector',;
 import { HoverCard, HoverCardTrigger, HoverCardContent } from '@/components/ui/hover-card',;
 import { MiniCartPreview } from '@/components/cart/MiniCartPreview',;
 import { LoginModal } from '@/components/auth/LoginModal',;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface MainNavigationProps {;
   isAdmin?: boolean,;
   unreadCount?: number,;
   className?: string;
 }
+<<<<<<< HEAD
 
 interface MainNavigationProps {;
   isAdmin?: boolean;
@@ -327,10 +325,13 @@ export function MainNavigation(): any ({;
     setIsMobileMenuOpen(false);
   };
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const baseLinks = [;
     {;
       key: 'home',;
       href: '/',;
+<<<<<<< HEAD
       matches: (path: string) => path === '/',    },;
     {;
       key: 'marketplace',;
@@ -385,22 +386,31 @@ export function MainNavigation(): any ({;
 
 
 =======
+=======
+      href: '/analytics',;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       matches: (path: string) => path.startsWith('/analytics');
     });
   }
   
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <>;
       <button
         className='navbar-toggler md:hidden ml-auto mr-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary' // Added ml-auto and mr-4 for positioning
         onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
         aria-expanded={isMobileMenuOpen}
+<<<<<<< HEAD
         aria-controls='main-navbar-collapse';
         aria-label='Toggle navigation'      >;
         <span className='navbar-toggler-icon'></span>;
       </button>;
       <nav
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         className={cn('navbar', className)}
         role='navigation'
         aria-label='Main navigation'>;
@@ -410,6 +420,7 @@ export function MainNavigation(): any ({;
 <<<<<<< HEAD
           id='main-navbar-collapse'
           className={cn(
+<<<<<<< HEAD
 
 
 
@@ -427,6 +438,9 @@ export function MainNavigation(): any ({;
           id="main-navbar-collapse"
           className={cn(
 
+=======
+        <div
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           id="main-navbar-collapse"
           className={cn(
           <ul className='navbar-nav flex flex-col md:flex-row md:items-center md:gap-1'>
@@ -435,43 +449,6 @@ export function MainNavigation(): any ({;
             {links.map(link => (
               <li key={link.name} className='nav-item'>
                 <Link
-            "navbar-collapse",
-            { "open": isMobileMenuOpen },
-            "w-full md:flex md:w-auto", // Handles visibility and desktop layout
-            !isMobileMenuOpen && "hidden" // Explicitly hide when not open and on mobile
-          )}
-        >
-          <ul className="navbar-nav flex flex-col md:flex-row md:items-center md:gap-1"> {/* Added navbar-nav and flex direction classes */}
-            {links.map((link) => (
-              <li key={link.name} className="nav-item">
-                <Link 
-ursor/fix-website-loading-errors-and-merge-6662
-        <div
-          id="main-navbar-collapse"
-          className={cn(
-                    'nav-link'
-                    'inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary'
-        <div
-          id="main-navbar-collapse"
-          className={cn(
-            'navbar-collapse'
-            { open: isMobileMenuOpen }
-            'w-full md:flex md:w-auto', // Handles visibility and desktop layout
-            !isMobileMenuOpen && 'hidden' // Explicitly hide when not open and on mobile
-          )}
-        >
-          <ul className='navbar-nav flex flex-col md:flex-row md:items-center md:gap-1'>
-            {' '}
-            {/* Added navbar-nav and flex direction classes */}
-            {links.map(link => (
-              <li key={link.name} className='nav-item'>
-                <Link
-            "navbar-collapse",
-            { "open": isMobileMenuOpen },
-            "w-full md:flex md:w-auto", // Handles visibility and desktop layout
-            !isMobileMenuOpen && "hidden" // Explicitly hide when not open and on mobile
-          )}
-        >
           <ul className="navbar-nav flex flex-col md:flex-row md:items-center md:gap-1"> {/* Added navbar-nav and flex direction classes */}
             {links.map((link) => (
               <li key={link.name} className="nav-item">
@@ -480,15 +457,19 @@ ursor/fix-website-loading-errors-and-merge-6662
                   aria-label={link.name}
                   onClick={() => setIsMobileMenuOpen(false)}
                   className={cn(
+<<<<<<< HEAD
                     'nav-link'
                     'inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary'
                     'nav-link',
                     'inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary',
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     link.matches(router.pathname)
                       ? 'bg-zion-purple/20 text-zion-cyan'
                       : 'text-white hover:bg-zion-purple/10 hover:text-zion-cyan'
                   )}                >
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -539,10 +520,16 @@ ursor/fix-website-loading-errors-and-merge-6662
                     <span className='absolute -top-1 -right-1 bg-zion-purple text-white text-xs rounded-full h-4 w-4 flex items-center justify-center'>;
 
 =======
+=======
+
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   {link.name}
                 </Link>
               </li>
             ))}
+<<<<<<< HEAD
             {/* Wishlist link */}
             {isAuthenticated && (
               <li className='nav-item'>
@@ -566,6 +553,8 @@ ursor/fix-website-loading-errors-and-merge-6662
                   )}
                 </Link>;
               </li>;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             )}
             {/* Wallet link */}
             {isAuthenticated && (;
@@ -574,6 +563,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                   href='/wallet'
                   aria-label='Wallet'
                   onClick={() => setIsMobileMenuOpen(false)}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
                   className={cn(;
@@ -599,6 +589,8 @@ ursor/fix-website-loading-errors-and-merge-6662
                 </Link>
               </li>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             )}
             {/* Messages link */}
             {isAuthenticated && (;
@@ -607,6 +599,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                   href='/messages'
                   aria-label='Messages'
                   onClick={() => setIsMobileMenuOpen(false)}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
                   className={cn(;
@@ -620,6 +613,8 @@ ursor/fix-website-loading-errors-and-merge-6662
                   {unreadCount > 0 && (;
                     <span className='absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full h-4 w-4 flex items-center justify-center'>;
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       {unreadCount > 9 ? '9+' : unreadCount}
                     </span>;
                   )}
@@ -634,6 +629,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                     href='/cart'
                     aria-label={t('nav && nav.cart')}
                     onClick={handleCartClick}
+<<<<<<< HEAD
                     className={cn(
 
                       'nav-link',
@@ -1208,11 +1204,16 @@ export default function Page() {; []);
 
 <<<<<<< HEAD
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   >
                     <ShoppingCart className="w-4 h-4 mr-1" />
                     {t('nav.cartCart')}
                     {cartCount > 0 && (
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }`};
 ;
                           {link.name}'`;
@@ -1223,13 +1224,8 @@ export default function Page() {; []);
                           <div className="ml-4 mt-2 space-y-1">
                             {link.children.map((child: unknown (
                               <Link
-                          {link.name}'`;
-                          <ChevronDown className={`w - 4 h - 4 transition - transform ${active_dropdown === link.key ? 'rotate - 180' : ''}`}  />                        </button>;
-                        {active_dropdown === link.key && (";
-                          <div className="ml - 4 mt - 2 space - y-1">;
-                            {link.children.map ((child: unknown (
-                              <Link;
                                 key={child.key}
+<<<<<<< HEAD
                                 to={child.href}`;
                                 className={`block px - 4 py - 2 text - sm text - zion - slate - light hover:text - white hover:bg - white / 10 rounded - md transition - colors ${is_active (child) ? 'text - zion - cyan bg - zion - cyan / 10' : ''`;
 }`}
@@ -1498,17 +1494,22 @@ export default function Page() { [])
                       <Link
                         to={link.href}`
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                         className={`block px-4 py-3 text-sm font-medium rounded-md transition-colors ${isActive(link)
                             ? 'bg-zion-cyan text-white''
                             : 'text-zion-slate-light hover:text-white hover:bg-white/10'`
 }`}
                         onClick={: unknown setIsMobileMenuOpen(false)}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
                         {link.name}
                       </Link>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       <span className="absolute -top-1 -right-1 bg-zion-purple text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
                   >;
                     <ShoppingCart className="w-4 h-4 mr-1" />;
@@ -1517,6 +1518,7 @@ export default function Page() { [])
                       <span className="absolute -top-1 -right-1 bg-zion-purple text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">;
                         {cartCount}
                       </span>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -1527,6 +1529,11 @@ export default function Page() { [])
 ursor/fix-website-loading-errors-and-merge-6662
 
 
+=======
+
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     )}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                 </HoverCardTrigger>
@@ -1543,6 +1550,7 @@ ursor/fix-website-loading-errors-and-merge-6662
       </nav>
       <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />
     </>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -1598,3 +1606,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 ;
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  )
+}
+;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

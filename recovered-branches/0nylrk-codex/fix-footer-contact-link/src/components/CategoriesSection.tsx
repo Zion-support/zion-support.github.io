@@ -1,4 +1,8 @@
 
+import {GradientHeading} from "./GradientHeading";
+import {Link} from "react-router-dom";
+import {Briefcase, HardDrive, Lightbulb, Users} from "lucide-react";
+const categories = [
 import { GradientHeading } from './GradientHeading';
 import { Link } from './react-router-dom';
 import { Briefcase, HardDrive, Lightbulb, Users } from './lucide-react';
@@ -11,17 +15,16 @@ const categories = [;
     color: "from - purple - 500 to - indigo - 600"},
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   {
     title: "Talents"
     description: "Connect with AI experts, developers, and tech specialists";
-
-    icon: <Users className="w - 10 h - 10" />,
-    link: "/talent",
-    color: "from - cyan - 500 to - blue - 600"},
-
   {
     title: "Equipment"
     description: "Rent or buy specialized hardware, servers, and devices";
+<<<<<<< HEAD
 
 
 =======
@@ -52,16 +55,21 @@ import {GradientHeading} from "./GradientHeading";
 import {Link} from "react-router-dom";
 import {Briefcase, HardDrive, Lightbulb, Users} from "lucide-react";
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { GradientHeading } from "./GradientHeading",
 import { Link } from "react-router-dom",
 import { Briefcase, HardDrive, Lightbulb, Users } from "lucide-react",
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 const categories = [
   {
     title: "Services",
@@ -82,10 +90,13 @@ const categories = [
     link: "/equipment",
     color: "from-amber-500 to-orange-600"},
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   {
     title: "Innovation"
     description: "Discover cutting-edge solutions and tech breakthroughs"
@@ -95,6 +106,7 @@ const categories = [
 const specialServices = [
   {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -102,11 +114,14 @@ const specialServices = [
     link: "/it-onsite-services"
     title: "IT Onsite Services"
     link: "/it-onsite-services"
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   }
 ];
 
 interface CategoriesSectionProps {
   showTitle?: boolean
+<<<<<<< HEAD
 
 
   {
@@ -125,15 +140,20 @@ const categories = [;
     description: "On-demand IT support, consulting, development, and more";
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
     title: "IT Onsite Services",
     link: "/it-onsite-services"
 import { GradientHeading } from "./GradientHeading",;
 import { Link } from "react-router-dom",;
 import { Briefcase, HardDrive, Lightbulb, Users } from "lucide-react",;
+
+
 const categories = [;
   {;
     title: "Services",;
+<<<<<<< HEAD
     description: "On-demand IT support, consulting, development, and more",;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     icon: <Briefcase className="w-10 h-10" />,;
@@ -174,22 +194,28 @@ const specialServices = [;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+    description: "On-demand IT support, consulting, development, and more";
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   }
 ];
 
 interface CategoriesSectionProps {;
   showTitle?: boolean;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 
-
-export function CategoriesSection(): any ({ showTitle = true }: CategoriesSectionProps) {;
-
+export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) {
+}
   return (
+<<<<<<< HEAD
 =======
 }
 export function CategoriesSection(): any ({ showTitle = true }: CategoriesSectionProps) {;
@@ -243,6 +269,8 @@ interface CategoriesSectionProps {;
 export function CategoriesSection({ showTitle = true } CategoriesSectionProps) {;
   return (;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <section className="py-20 bg-zion-blue">;
       <div className="container mx-auto px-4">;
         {showTitle && (;
@@ -253,6 +281,7 @@ export function CategoriesSection({ showTitle = true } CategoriesSectionProps) {
             </p>;
           </div>;
         )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     icon: <HardDrive className="w - 10 h - 10" />,
@@ -314,11 +343,14 @@ function CategoriesSection() {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 key={service.title}
                 to={service.link}
                 className="px - 6 py - 3 bg - zion - blue - light hover:bg - zion - blue - dark border border - zion - purple / 20 hover:border - zion - purple / 50 rounded - full text - zion - cyan transition - all duration - 300";
               >;
                 {service.title}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -359,11 +391,10 @@ function CategoriesSection() {
               </Link>;
             ))}
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 };
-
-=======
-
           </div>;
         </div>;
 
@@ -371,7 +402,6 @@ function CategoriesSection() {
           <Link
             to="/categories" 
             className="text-zion-cyan border-b border-zion-cyan hover: border-zion-cyan-dark transition-colors">;
-=======
               </Link>))}
           </div>;
         </div>;
@@ -379,6 +409,7 @@ function CategoriesSection() {
           <Link;
             to="/categories";
             className="text - zion - cyan border - b border - zion - cyan hover: border - zion - cyan - dark transition - colors";
+<<<<<<< HEAD
 =======
         ;
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">;
@@ -491,12 +522,14 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
             to="/categories";
             className="text-zion-cyan border-b border-zion-cyan hover: border-zion-cyan-dark transition-colors";
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           >;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             View All Categories →;
           </Link>;
         </div>;
       </div>;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
     </section>);
@@ -554,3 +587,5 @@ interface CategoriesSectionProps {
 =======
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

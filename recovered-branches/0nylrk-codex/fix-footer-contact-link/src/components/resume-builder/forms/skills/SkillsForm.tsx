@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -15,6 +16,8 @@ import {use_resume} from '@/hooks / use_resume';
 
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useState  } from 'react';
 import { Skill  } from '@/types/resume';
 import { Button  } from '@/components/ui/button';
@@ -26,15 +29,23 @@ import { AddSkillForm  } from './AddSkillForm';
 import { BulkAddSkills } from './BulkAddSkills';
 export function SkillsForm({ resumeId, skills, onComplete, onBack }: SkillsFormProps) {
 import {useState} from 'react';
+<<<<<<< HEAD
 import {Skill} from '@/types/resume';
 import {Button} from '@/components/ui/button';
 import {Alert, AlertDescription} from '@/components/ui/alert';
 import {useResume} from '@/hooks/useResume';
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+import {Skill} from '@/types / resume';
+import {Button} from '@/components / ui / button';
+import {Alert, AlertDescription} from '@/components / ui / alert';
+import {use_resume} from '@/hooks / use_resume';
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {SkillsFormProps} from './types';
 import {SkillsList} from './SkillsList';
 import {AddSkillForm} from './AddSkillForm';
 import {BulkAddSkills} from './BulkAddSkills';
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 export function SkillsForm({ resumeId, skills, onComplete, onBack }: SkillsFormProps) {;
@@ -43,10 +54,13 @@ export function SkillsForm({ resumeId, skills, onComplete, onBack }: SkillsFormP
 =======
 export function SkillsForm({ resumeId, skills, onComplete, onBack }: SkillsFormProps) {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const { addSkill, deleteSkill, fetchResume } = useResume();
 
   const [error, setError] = useState<string | null>(null);
   const [localSkills, setLocalSkills] = useState<Skill[]>(skills);
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
   const handleAddSkill = async (data: Skill) => {
@@ -92,6 +106,9 @@ export function SkillsForm({ resumeId, skills, onComplete, onBack }: SkillsFormP
     try {;
       setError(null),;
       const success = await addSkill(resumeId, data),;
+=======
+      const success = await addSkill(resumeId, data);
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       if (success) {;
         // Refresh the skills list;
         await refreshSkills();
@@ -101,7 +118,11 @@ export function SkillsForm({ resumeId, skills, onComplete, onBack }: SkillsFormP
       setError(err.message |'An error occurred')
       return false
     }
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 
@@ -113,11 +134,14 @@ export function SkillsForm({ resumeId, skills, onComplete, onBack }: SkillsFormP
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   }
   };
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const handleDeleteSkill = async (id: string, category: string = 'Other') => {
     if (confirm('Are you sure you want to delete this skill?')) {
       const success = await deleteSkill(id)
@@ -129,6 +153,7 @@ export function SkillsForm({ resumeId, skills, onComplete, onBack }: SkillsFormP
   }
   const refreshSkills = async () => {
     try {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -170,18 +195,23 @@ export function SkillsForm({ resumeId, skills, onComplete, onBack }: SkillsFormP
   const refreshSkills = async () => {;
     try {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+      const resumeData = await fetchResume(resumeId);
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       const resumeData = await fetchResume(resumeId);
       if (resumeData && resumeData.skills) {;
         setLocalSkills(resumeData.skills);
 
 
 
+
       }
-
-    } catch (err: any) {;
-      setError(err && err.message || 'Failed to refresh skills');
-
+      const resumeData = await fetchResume(resumeId);
+      if (resumeData && resumeData.skills) {;
+        setLocalSkills(resumeData.skills);
+      }
     }
+<<<<<<< HEAD
 
 
   },
@@ -246,11 +276,21 @@ export function SkillsForm({ resumeId, skills, onComplete, onBack }: SkillsFormP
       setError(err.message |'Failed to refresh skills')
     }
   }
-  },
+=======
   };
   },
 
+  }
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+  },
+
+  };
+  },
+
+
   return (
+<<<<<<< HEAD
     <div className="space-y-6">
       <div>
         <h2 className="text-xl font-semibold mb-2">Skills</h2>
@@ -293,6 +333,8 @@ export function SkillsForm({ resumeId, skills, onComplete, onBack }: SkillsFormP
 
 
 }
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export /**
  * SkillsForm - Function description
  */
@@ -301,6 +343,7 @@ function SkillsForm() {
   const [error, set_error] = useState < string | null>(null);
   const [local_skills, setLocalSkills] = useState < Skill[]>(skills);
 ;
+<<<<<<< HEAD
   const handleAddSkill = async (data: Skill) => {
     try {
       set_error (null),
@@ -485,3 +528,5 @@ return (<div className="space-y-6" > <div> <h2 className="text-xl font-semibold 
 }
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

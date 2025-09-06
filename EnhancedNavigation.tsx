@@ -1,10 +1,13 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 ;
 
 =======
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 const EnhancedNavigation: React.FC = () => {
   const [is_open, setIsOpen] = useState (false);
   const navigation_items = [;
@@ -13,6 +16,7 @@ const EnhancedNavigation: React.FC = () => {
     { name: 'About', href: '/about' },
     { name: 'Contact', href: '/contact' }
   ];
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -32,11 +36,14 @@ const EnhancedNavigation: React.FC = () => {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 key={item.name}
                 href={item.href}
                 className="text - gray - 700 hover:text - blue - 600 transition - colors";
               >;
                 {item.name}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -59,12 +66,15 @@ const EnhancedNavigation: React.FC = () => {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   key={item.name}
                   href={item.href}
                   className="block text - gray - 700 hover:text - blue - 600 py - 2";
                   on_click={() => setIsOpen (false)}
                 >;
                   {item.name}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -100,6 +110,8 @@ import _React,{ useState } from 'react'; import Link from 'next/link'; import { 
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 </Link>))}
             </div>;
           </div>)}
@@ -107,5 +119,8 @@ import _React,{ useState } from 'react'; import Link from 'next/link'; import { 
     </nav>);
 }
 ;
+<<<<<<< HEAD
 export default EnhancedNavigation;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

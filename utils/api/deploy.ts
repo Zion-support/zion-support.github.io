@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -15,19 +16,28 @@ import fs from "fs";
 import path from "path";
 import { DeployInput, DeployResult, DeployLogEntry, GeneratedAsset } from "../types/zion";
 function toSlug(name: string): string {return name;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import fs from "fs",;
 import path from "path",;
 import { DeployInput, DeployResult, DeployLogEntry, GeneratedAsset } from "../types/zion",;
 import fs from "fs";
 import path from "path";
 import { DeployInput, DeployResult, DeployLogEntry, GeneratedAsset } from "../types/zion";
+
+
+
 function toSlug(name: string): string {;
   return name;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     .toLowerCase();
     .replace(/[^a-z0-9]+/g, "-");
     .replace(/(^-|-$)+/g, "");
     .slice(0, 64);
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -275,6 +285,8 @@ export async function performDeploy(input: DeployInput): Promise<DeployResult> {
     );
     assets.push({ kind: "file", path: trailerScriptPath, description: "Trailer script" });
   }
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ;
   // Schedule launch stream (/summit);
   ensureDir(eventsDir),;
@@ -327,7 +339,10 @@ export async function performDeploy(input: DeployInput): Promise<DeployResult> {
   const gptDir = path.join(process.cwd(), "data", "zion-gpt"),;
   const daoDir = path.join(process.cwd(), "data", "dao"),;
   const tokenDir = path.join(process.cwd(), "data", "token"),;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   ensureDir(baseDir);
   const configPath = path.join(baseDir, "config.json");
   writeTextFile(configPath, JSON.stringify({ ...input, instanceSlug, version, createdAt: nowIso() }, null, 2)),;
@@ -421,6 +436,7 @@ export async function performDeploy(input: DeployInput): Promise<DeployResult> {
     );
     assets.push({ kind: "file", path: roadmapPath, description: "Public roadmap" });
     writeTextFile(;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 import fs from './fs';,
@@ -624,20 +640,28 @@ if ( {) {
     config_path,
     assets,
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     logs;
     summary;
     version}
 }
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       changelogPath,;
       `# Changelog\n\n- ${nowIso()}: Genesis deployment initialized for ${input.instanceName}.\n`;
     ),;
     assets.push({ kind: "file", path: changelogPath, description: "Changelog" });
     } catch (error) {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
@@ -669,9 +693,6 @@ if ( {) {
   }
 }
 ;
-  // Schedule launch stream (/summit);
-  ensureDir(eventsDir);
-  const summitEventPath = path.join(eventsDir, `summit-${instanceSlug}.json`);
   writeTextFile(;
     summitEventPath;
     JSON.stringify(;
@@ -681,48 +702,6 @@ if ( {) {
       null;
       2;
     );
-  );
-  assets.push({ kind: "event", path: summitEventPath, description: "Launch stream scheduled" });
-  // 4. Activate Public Pages (record intent);
-  const pagesActivationPath = path.join(baseDir, "pages.json");
-  const defaultNationRoute = `/nation/${toSlug(input.defaultLanguage |"default")}`;
-  writeTextFile(;
-    pagesActivationPath;
-    JSON.stringify(;
-      {activate: [;
-          "/about";
-          "/manifesto";
-          "/constitution";
-          "/partners";
-          "/academy";
-          "/marketplace";
-          "/dao";
-          defaultNationRoute]}
-      null;
-      2;
-    );
-  );
-    summitEventPath,;
-    JSON.stringify(;
-      {;
-        name: `${input.instanceName} Summit`,;
-        route: "/summit",;
-        scheduledAt: new Date(Date.now() + 7 * 24 * 60 * 60 * 1000).toISOString()},;
-      null,;
-      2;
-    );
-  ),;
-  assets.push({ kind: "event", path: summitEventPath, description: "Launch stream scheduled" }),;
-  // 4. Activate Public Pages (record intent);
-  const pagesActivationPath = path.join(baseDir, "pages.json"),;
-  const defaultNationRoute = `/nation/${toSlug(input.defaultLanguage || "default")}`,;
-  writeTextFile(;
-    pagesActivationPath,;
-    JSON.stringify(;
-      {;
-        activate: [;
-          "/about",;
-          "/manifesto",;
   assets.push({ kind: "event", path: summitEventPath, description: "Launch stream scheduled" });
   // 4. Activate Public Pages (record intent);
   const pagesActivationPath = path.join(baseDir, "pages.json");
@@ -744,13 +723,6 @@ if ( {) {
       2;
     );
   ),;
-  assets.push({ kind: "config", path: pagesActivationPath, description: "Public pages activation record" });
-  // Optional modules markers;
-  const optionalModules = Object.entries(input.modules);
-    .filter(([key, val]) => val && ["globalMap", "franchiseOnboarding", "referralAmbassadors", "grantPortal", "trailer", "bookStore"].includes(key));
-    .map(([key]) => key);
-  if (optionalModules.length > 0) {const optionalPath = path.join(baseDir, "optional-modules.json");
-    writeTextFile(optionalPath, JSON.stringify({ enabled: optionalModules }, null, 2));
   assets.push({ kind: "config", path: pagesActivationPath, description: "Public pages activation record" }),;
   assets.push({ kind: "config", path: pagesActivationPath, description: "Public pages activation record" });
   // Optional modules markers;
@@ -798,11 +770,15 @@ if ( {) {
     logs;
     summary;
     version  } catch (error) {
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 ;
   if (input.modules.bookBuilder) {;
@@ -866,12 +842,16 @@ if ( {) {
 }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-
 }
+<<<<<<< HEAD
 }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

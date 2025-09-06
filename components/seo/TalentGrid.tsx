@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -21,12 +22,15 @@ class ErrorBoundary extends React.Component {
   }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from "react";
 import { TALENT_PROFILES } from "../../data/talent";
 import type { TalentProfile } from "../../data/talent";
 type Props = {;
   region?: string;
   service?: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -65,6 +69,12 @@ export default function TalentGrid(): any ({ region, service }: Props) {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   );
 
+=======
+};
+
+function matchesRegion(): any (profile: TalentProfile, region?: string) {;
+  if (!region) return true;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   if (items && items.length === 0) {;
     return (
       <div className="text-sm text-gray-400">;
@@ -105,6 +115,7 @@ export default function TalentGrid(): any ({ region, service }: Props) {;
             ${p && p.hourlyRateUsd}/hr • {p && p.availability}
           </div>;
         </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -171,6 +182,8 @@ export default function TalentGrid({ region, service }: Props) {
   );
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from './react';
 import { TALENT_PROFILES  } from '../../data / talent';
 import type { TalentProfile } from "../../data / talent";
@@ -203,16 +216,10 @@ if (return true) {
     profile.title.toLowerCase ().includes (s) ||;
     profile.skills.some ((sk) => sk.toLowerCase ().includes (s)));
 }
-export default /**
- * TalentGrid - Function description
- */
-function TalentGrid() {
-  const items = React.useMemo (
-    () =>;
-      TALENT_PROFILES.filter (
-        (p) => matches_region (p, region) && matches_service (p, service),
-      ),
-    [region, service],
+export default function TalentGrid({ region, service }: Props) {
+  const items = React.useMemo(
+    () =>
+      TALENT_PROFILES.filter(
   );
 ;
   // Check condition
@@ -255,6 +262,7 @@ if ( {) {
               </span>))}
           </div>;
           <div className="mt - 3 text - sm">;
+<<<<<<< HEAD
             ${p.hourlyRateUsd}/hr • {p.availability}
           </div>;
         </div>))}
@@ -268,3 +276,5 @@ if ( {) {
 =======
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

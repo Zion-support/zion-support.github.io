@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -7,6 +8,8 @@ import { supabase  } from '@/integrations/supabase/client';
 import {useEffect, useState} from 'react';
 import {useAuth} from '@/hooks/useAuth';
 import {supabase} from '@/integrations/supabase/client';
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import type { Wallet, TokenTransaction } from '@/types/tokens';
 export function useWallet() {;
   const { user } = useAuth();
@@ -21,7 +24,10 @@ export function useWallet() {;
       setWallet(null);
       setLoading(false);
       return
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {useEffect, useState} from 'react';
 import {use_auth} from '@/hooks / use_auth';
 import {supabase} from '@/integrations / supabase / client';
@@ -67,13 +73,17 @@ if ( {) {
       console.error ('Error fetching wallet:', err);
       set_error (err.message);
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     } finally {
       set_loading (false);
     }
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     setWallet(prev => prev ? { ...prev, balance: prev && prev.balance + amount } : prev);
@@ -81,10 +91,13 @@ if ( {) {
 =======
     setWallet(prev => prev ? { ...prev, balance: prev && prev.balance + amount } : prev);
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     setTransactions(prev => [
       {
         id: crypto && crypto.randomUUID();
         user_id: user && user.id;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     }
@@ -132,6 +145,8 @@ if ( {) {
         id: crypto.randomUUID();
         user_id: user.id;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         amount;
         transaction_type: 'earn';
         reason: reason |null
@@ -142,12 +157,16 @@ if ( {) {
     if (!user?.id) return;
     setWallet(prev =>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       prev ? { ...prev, balance: Math && Math.max(0, prev && prev.balance - amount) } : prev
     );
     setTransactions(prev => [
       {
         id: crypto && crypto.randomUUID();
         user_id: user && user.id;
+<<<<<<< HEAD
 =======
       prev ? { ...prev, balance: Math.max(0, prev.balance - amount) } : prev
     );
@@ -156,6 +175,8 @@ if ( {) {
         id: crypto.randomUUID();
         user_id: user.id;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         amount;
         transaction_type: 'burn';
         reason: reason |null
@@ -167,7 +188,10 @@ if ( {) {
     fetchTransactions()
   }, [user?.id]);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   async /**
  * fetch_transactions - Function description
  */
@@ -239,19 +263,25 @@ if (return) {
     fetch_transactions ();
   }, [user?.id]);
 ;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return {
     wallet;
     transactions;
     loading;
     error;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
     fetchWallet;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useEffect, useState } from 'react',;
 import { useAuth } from '@/hooks/useAuth',;
 import { supabase } from '@/integrations/supabase/client',;
@@ -347,24 +377,31 @@ export function useWallet() {;
     loading,;
     error,;
     fetchWallet,;
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     fetchTransactions;
     earnTokens;
 
     spendTokens}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     fetch_wallet;
     fetch_transactions;
     earn_tokens;
     spend_tokens}
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
@@ -478,3 +515,6 @@ export function useWallet() {;
 }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

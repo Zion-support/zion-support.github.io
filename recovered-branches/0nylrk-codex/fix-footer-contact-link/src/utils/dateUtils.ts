@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -18,6 +19,10 @@ import { format } from "date-fns",
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+import {format} from "date-fns";
+import { format } from "date-fns",
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 /**
  * Formats a date string into a readable format
  * @param dateString ISO date string to format
@@ -26,9 +31,12 @@ import { format } from "date-fns",
 
 export const formatDate = (dateString: string): string => {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { format } from './date - fns';
 /**;
 * Formats a date string into a readable format;
@@ -40,12 +48,11 @@ export const format_date = (date_string: string): string => {
     return format (new Date (date_string), 'PP');
   } catch (e) {
 
-;
-
     return dateString
 
   };
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -58,6 +65,8 @@ export const format_date = (date_string: string): string => {
 
   };
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { format } from "date-fns",;
 /**;
  * Formats a date string into a readable format;
@@ -70,6 +79,7 @@ export const formatDate = (dateString: string): string => {;
   } catch (e) {;
     return dateString;
   }
+<<<<<<< HEAD
 };
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -77,3 +87,5 @@ export const formatDate = (dateString: string): string => {;
 =======
 };
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

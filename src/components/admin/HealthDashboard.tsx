@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 import React, { useState, useEffect } from 'react'
@@ -7,6 +8,8 @@ import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -43,6 +46,7 @@ import {;
   Activity,;
 } from 'lucide-react';
 interface HealthData {;
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components / ui / card';
 import { Badge } from '@/components / ui / badge';
@@ -50,6 +54,13 @@ import { Button } from '@/components / ui / button';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components / ui / tabs';
 <<<<<<< HEAD
 =======
+=======
+import React, { useState, useEffect } from 'react'
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
+import { Badge } from '@/components/ui/badge'
+import { Button } from '@/components/ui/button'
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {
   AlertTriangle
   CheckCircle
@@ -65,17 +76,23 @@ interface HealthData {
   uptime: number;
   version: string;
   environment: string;
+<<<<<<< HEAD
   metrics: {
     errorRate: number;
     criticalErrors: number;
     responseTime: number;
     memoryUsage: number
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   }
   health: {
     status: string;
     score: number;
     issues: string[];
+<<<<<<< HEAD
     recommendations: string[]
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   }
   errors: {
     summary: {
@@ -83,9 +100,12 @@ interface HealthData {
       critical: number;
       high: number;
       medium: number;
+<<<<<<< HEAD
       low: number
     }
     topErrors: Array<{
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       patternId: string;
       description: string;
       occurrences: number;
@@ -93,6 +113,7 @@ interface HealthData {
       solution?: string
     }>
     byCategory: { [category: string]: number }
+<<<<<<< HEAD
       low: number;
     }
     top_errors: Array<{
@@ -277,13 +298,18 @@ const HealthDashboard: React.FC = () => {;
   },
 
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 
   if (loading) {
+<<<<<<< HEAD
       <div className='flex items-center justify-center p-8'>
         <div className='animate-spin rounded-full h-8 w-8 border-b-2 border-gray-900'></div>
   if (loading) {
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     return (
       <div className="flex items-center justify-center p-8">
         <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-gray-900"></div>
@@ -304,12 +330,15 @@ ursor/fix-website-loading-errors-and-merge-6662
         </CardContent>
       </Card>
     )
+<<<<<<< HEAD
   if (!healthData) return null
   if (!healthData) return null
   }
   if (!healthData) return null
   }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 
@@ -341,6 +370,7 @@ ursor/fix-website-loading-errors-and-merge-6662
   if (!healthData) return null
   if (!healthData) return null,
 
+
   return (
 <<<<<<< HEAD
 
@@ -354,6 +384,7 @@ ursor/fix-website-loading-errors-and-merge-6662
         </div>
         <div className="flex items-center space-x-2">
           <Button
+<<<<<<< HEAD
             variant='outline'
             size='sm'
             onClick={() => setAutoRefresh(!autoRefresh)}          >
@@ -362,6 +393,8 @@ ursor/fix-website-loading-errors-and-merge-6662
             size='sm'
             onClick={() => setAutoRefresh(!autoRefresh)}          >
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             variant="outline"
             size="sm"
             onClick={() => setAutoRefresh(!autoRefresh)}
@@ -439,6 +472,7 @@ ursor/fix-website-loading-errors-and-merge-6662
           <TabsTrigger value="metrics">Metrics</TabsTrigger>
           <TabsTrigger value="recommendations">Recommendations</TabsTrigger>
         </TabsList>
+<<<<<<< HEAD
         <TabsContent value='overview' className='space-y-4'>
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-4'>
             <Card>
@@ -447,6 +481,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 
         <TabsContent value="overview" className="space-y-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
             <Card>
               <CardHeader>
@@ -482,8 +518,11 @@ ursor/fix-website-loading-errors-and-merge-6662
               </CardHeader>
               <CardContent>
                 {healthData.health.issues.length > 0 ? (
+<<<<<<< HEAD
                   <ul className='space-y-2'>
                     {healthData.health.issues.map((issue, index) => (
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       <li key={index} className="text-sm text-red-600 flex items-start">
                         <span className="w-2 h-2 bg-red-400 rounded-full mt-1.5 mr-2 flex-shrink-0"></span>
 ;
@@ -542,59 +581,6 @@ ursor/fix-website-loading-errors-and-merge-6662
             <span>Failed to load health data: {error}</span>;
           </div>;
           <Button onClick={fetchHealthData} className='mt-4'>;
-                  <ul className="space-y-2">
-                    {healthData.health.issues.map((issue, index) => (
-                      <li key={index} className="text-sm text-red-600 flex items-start">
-                        <span className="w-2 h-2 bg-red-400 rounded-full mt-1.5 mr-2 flex-shrink-0"></span>
-;
-    return undefined;
-  }, [autoRefresh]),;
-  const getStatusIcon = (status: string) => {;
-    switch (status) {;
-      case 'healthy':;
-        return <CheckCircle className="w-5 h-5 text-green-500" />,;
-      case 'warning':;
-        return <AlertTriangle className="w-5 h-5 text-yellow-500" />,;
-      case 'critical':;
-        return <XCircle className="w-5 h-5 text-red-500" />,;
-      default:;
-        return <Activity className="w-5 h-5 text-gray-500" />;
-    }
-  },;
-  const getStatusBadge = (status: string) => {;
-    const variant = status === 'healthy' ? 'default' :;
-                   status === 'warning' ? 'secondary' : 'destructive',;
-    return (;
-      <Badge variant={variant} className="ml-2">;
-        {status.toUpperCase()}
-      </Badge>;
-    );
-  },;
-  const formatUptime = (seconds: number) => {;
-    const hours = Math.floor(seconds / 3600),;
-    const minutes = Math.floor((seconds % 3600) / 60),;
-    return `${hours}h ${minutes}m`;
-  },;
-  const formatBytes = (bytes: number) => {;
-    return `${bytes.toFixed(1)} MB`;
-  },;
-  if (loading) {;
-    return (;
-      <div className="flex items-center justify-center p-8">;
-        <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-gray-900"></div>;
-      </div>;
-    );
-  }
-;
-  if (error) {;
-    return (;
-      <Card className="border-red-200 bg-red-50">;
-        <CardContent className="p-6">;
-          <div className="flex items-center text-red-600">;
-            <XCircle className="w-5 h-5 mr-2" />;
-            <span>Failed to load health data: {error}</span>;
-          </div>;
-          <Button onClick={fetchHealthData} className="mt-4">;
             Retry;
           </Button>;
         </CardContent>;
@@ -614,6 +600,7 @@ ursor/fix-website-loading-errors-and-merge-6662
           <Button
             variant='outline'
             size='sm'
+<<<<<<< HEAD
 
             onClick={() => setAutoRefresh(!autoRefresh)}          >;
             {autoRefresh ? 'Disable' : 'Enable'} Auto-refresh;
@@ -743,13 +730,18 @@ ursor/fix-website-loading-errors-and-merge-6662
                       <li key={index} className="text-sm text-red-600 flex items-start">;
                         <span className="w-2 h-2 bg-red-400 rounded-full mt-1.5 mr-2 flex-shrink-0"></span>;
                         {issue}
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       </li>
                     ))}
                   </ul>
                 ) : (
                   <p className="text-green-600 text-sm">No issues detected</p>
                 )}
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               </CardContent>
             </Card>
           </div>
@@ -757,47 +749,17 @@ ursor/fix-website-loading-errors-and-merge-6662
         <TabsContent value='errors' className='space-y-4'>
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-4'>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 ursor/fix-website-loading-errors-and-merge-6662
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
         <TabsContent value="errors" className="space-y-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
 
 
-            <Card>
-                <CardTitle>Error Summary</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className='grid grid-cols-2 gap-4'>
-                  <div className='text-center'>
-                    <p className='text-2xl font-bold text-red-600'>
-                      {healthData.errors.summary.critical}
-                    </p>
-                    <p className='text-sm text-gray-600'>Critical</p>
-                  </div>
-                  <div className='text-center'>
-                    <p className='text-2xl font-bold text-orange-600'>
-                      {healthData.errors.summary.high}
-                    </p>
-                    <p className='text-sm text-gray-600'>High</p>
-                  </div>
-                  <div className='text-center'>
-                    <p className='text-2xl font-bold text-yellow-600'>
-                      {healthData.errors.summary.medium}
-                    </p>
-                    <p className='text-sm text-gray-600'>Medium</p>
-                  </div>
-                  <div className='text-center'>
-                    <p className='text-2xl font-bold text-gray-600'>
-                      {healthData.errors.summary.low}
-                    </p>
-                    <p className='text-sm text-gray-600'>Low</p>
-        <TabsContent value='errors' className='space-y-4'>
-          <div className='grid grid-cols-1 lg:grid-cols-2 gap-4'>
-
-        <TabsContent value="errors" className="space-y-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
             <Card>
               <CardHeader>
                 <CardTitle>Error Summary</CardTitle>
@@ -829,10 +791,13 @@ ursor/fix-website-loading-errors-and-merge-6662
               </CardHeader>
               <CardContent>
                 {healthData.errors.topErrors.length > 0 ? (
+<<<<<<< HEAD
                   <div className='space-y-2'>
                     {healthData.errors.topErrors
                       .slice(0, 5)
                       .map((error, index) => (
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                         <div
                           key={index}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -841,41 +806,37 @@ ursor/fix-website-loading-errors-and-merge-6662
                             {error && error.description}
                           </p>;
                           <p className='text-xs text-gray-600'>;
-                            {error && error.occurrences} occurrences • {error && error.severity}
+                            {error && error.occurrences} occurrences  {error && error.severity}
                           </p>;
                         </div>;
                       ))}                  </div>;
                 ) : (;
                   <p className='text-gray-600 text-sm'>No recurring errors</p>;
 
-                  <div className="space-y-2">
-                    {healthData.errors.topErrors.slice(0, 5).map((error, index) => (
-                      <div key={index} className="border-l-4 border-red-400 pl-3 py-1">
-                        <p className="text-sm font-medium">{error.description}</p>
-                        <p className="text-xs text-gray-600">
-                          {error.occurrences} occurrences • {error.severity}
-                        </p>;
-                      </div>;
-                    ))}
-                  </div>
 
                 ) : (
                   <p className="text-gray-600 text-sm">No recurring errors</p>
                 )}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               </CardContent>
             </Card>
           </div>
         </TabsContent>
         <TabsContent value='metrics' className='space-y-4'>
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4'>
+<<<<<<< HEAD
               <CardHeader className="pb-2">
                 <CardTitle className="text-sm">Error Rate</CardTitle>
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
         <TabsContent value="metrics" className="space-y-4">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -932,11 +893,15 @@ export default HealthDashboard;
                   {formatBytes(healthData.metrics.memoryUsage)}
                 </p>
                 <p className='text-xs text-gray-600'>JavaScript heap</p>
-        <TabsContent value='metrics' className='space-y-4'>
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4'>
+                ) : (
+                  <p className="text-gray-600 text-sm">No recurring errors</p>
+                )}
+              </CardContent>
+            </Card>
+          </div>
+        </TabsContent>
 
-        <TabsContent value="metrics" className="space-y-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+
             <Card>
               <CardHeader className="pb-2">
                 <CardTitle className="text-sm">Error Rate</CardTitle>
@@ -975,20 +940,13 @@ export default HealthDashboard;
             </Card>
           </div>
         </TabsContent>
-        <TabsContent value='recommendations' className='space-y-4'>
-ursor/fix-website-loading-errors-and-merge-6662
-          <Card>
-        <TabsContent value='recommendations' className='space-y-4'>
-
-        <TabsContent value="recommendations" className="space-y-4">
-
-
           <Card>
             <CardHeader>
               <CardTitle>Improvement Recommendations</CardTitle>
             </CardHeader>
             <CardContent>
               {healthData.health.recommendations.length > 0 ? (
+<<<<<<< HEAD
 export default HealthDashboard
 export default HealthDashboard
 
@@ -1024,6 +982,8 @@ export default HealthDashboard;
                       <CheckCircle className="w-4 h-4 text-green-500 mt-0.5 mr-2 flex-shrink-0" />
                       <span className="text-sm">{rec}</span>
                     </li>
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   ))}
                 </ul>
               ) : (
@@ -1031,12 +991,21 @@ export default HealthDashboard;
               )}
 
 
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+export default HealthDashboard, ;
+export default HealthDashboard;
+}
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       const response = await fetch ('/api / admin / health');
       // Check condition
 if ( {) {
   $2
 }
+<<<<<<< HEAD
         throw new Error (`HTTP ${response.status}`);
       }
       const data = await response.json ();
@@ -1393,10 +1362,13 @@ if (return null) {
 
 
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             </CardContent>;
           </Card>;
         </TabsContent>;
       </Tabs>;
+<<<<<<< HEAD
 
 
 
@@ -1406,3 +1378,6 @@ if (return null) {
 export default HealthDashboard;
 export default HealthDashboard,
 export default HealthDashboard,
+=======
+export default HealthDashboard;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

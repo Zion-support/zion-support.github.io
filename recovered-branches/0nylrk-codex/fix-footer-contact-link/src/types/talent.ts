@@ -1,8 +1,11 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 export interface TalentProfile {
 export interface TalentProfile {;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   id: string;
   user_id: string;
   full_name: string;
@@ -11,31 +14,6 @@ export interface TalentProfile {;
   bio?: string;
   summary?: string;
   location?: string;
-  skills?: string[];
-  hourly_rate?: number;
-  years_experience?: number;
-  availability_type?: string;
-  timezone?: string;
-  average_rating?: number;
-  rating_count?: number;
-  is_verified?: boolean;
-  key_projects?: {
-
-    title: string
-
-    description: string
-  }[]
-}
-export interface TalentProfileFilters {
-
-export interface TalentProfileFilters {;
-  search?: string;
-  skills?: string[],
-  availabilities?: string[],
-  regions?: string[],
-  priceRange?: [number, number],
-  experienceRange?: [number, number]
-}
     title: string,
     description: string;
   }[];
@@ -43,6 +21,7 @@ export interface TalentProfileFilters {;
 export interface TalentProfileFilters {
   search?: string;
   skills?: string[];
+<<<<<<< HEAD
   availabilities?: string[];
   regions?: string[];
   price_range?: [number, number];
@@ -106,6 +85,8 @@ export interface TalentProfileFilters {
   price_range?: [number, number];
   experience_range?: [number, number];
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 export interface HireRequest {
   id: string;
@@ -115,6 +96,7 @@ export interface HireRequest {
   project_description: string;
   budget: {
     min: number;
+<<<<<<< HEAD
 
     max: number,
     currency: string;
@@ -152,6 +134,8 @@ export interface HireRequest {;
   status: 'pending' | 'accepted' | 'rejected' | 'completed';
   createdAt: string;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   }
   timeline: {
     start_date: string;
@@ -161,11 +145,14 @@ export interface HireRequest {;
   status: 'pending' | 'accepted' | 'rejected' | 'completed',
   created_at: string;
 
+}
+
 
 export interface TalentProfile {;
 
 }
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -229,3 +216,6 @@ export interface HireRequest {;
 }
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

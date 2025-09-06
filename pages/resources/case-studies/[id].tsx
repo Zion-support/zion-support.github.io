@@ -1,5 +1,3 @@
-
-
 import React from 'react',;
 import Head from 'next/head',;
 import Link from 'next/link',;
@@ -14,21 +12,11 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-
-      id: 'ai-automation-manufacturing',
-      title: 'AI-Powered Manufacturing Automation',
-      company: 'Global Manufacturing Corp',
-      industry: 'Manufacturing',
-      results: '40% increase in production efficiency, 60% reduction in downtime',
-    description: 'How we implemented autonomous AI systems to revolutionize manufacturing processes.',
-      fullContent: `
-        <h2>Executive Summary</h2>
-        <p>This case study demonstrates how autonomous AI systems can transform traditional manufacturing operations,
-
         delivering significant improvements in efficiency, quality, and cost reduction.</p>
         <h2>Background</h2>
         <p>Global Manufacturing Corp was facing significant challenges with their traditional manufacturing processes.
         High downtime, inefficient production scheduling, and quality control issues were impacting their bottom line
+<<<<<<< HEAD
 <<<<<<< HEAD
         and preventing them from meeting growing customer demands.</p>
         <h2>Challenge</h2>
@@ -86,6 +74,9 @@ export default function CaseStudyResourcePage() {
         <p>We implemented a comprehensive AI automation system that included:</p>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
+=======
+        and preventing them from meeting growing customer demands.</p>
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <ul>
           <li><strong>Predictive Maintenance:</strong> AI algorithms that predict equipment failures before they occur</li>
           <li><strong>Real-time Production Optimization:</strong> Dynamic scheduling and resource allocation</li>
@@ -116,11 +107,11 @@ export default function CaseStudyResourcePage() {
           <li>Gradual implementation reduces resistance and improves adoption</li>
           <li>Continuous monitoring and optimization is essential for long-term success</li>
         </ul>
-        <h2>Conclusion</h2>
         <p>The AI automation implementation at Global Manufacturing Corp demonstrates the transformative potential
         of autonomous systems in traditional industries. The results exceeded expectations and positioned the company
         as a leader in smart manufacturing.</p>
       `
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -251,12 +242,15 @@ function CaseStudyResourcePage() {
       `;
     },
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     {
       id: 'cloud - infrastructure - optimization',
       title: 'Cloud Infrastructure Optimization',
       company: 'E - commerce Platform',
       industry: 'Technology',
       results: '50% reduction in cloud costs, 99.9% uptime achieved',
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -328,6 +322,8 @@ function CaseStudyResourcePage() {
       description: 'Building self-healing, auto-scaling cloud infrastructure.'
       fullContent: `
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <h2>Executive Summary</h2>
         <p>This case study demonstrates how intelligent cloud infrastructure optimization can dramatically
         reduce costs while improving performance and reliability for high-traffic applications.</p>
@@ -377,6 +373,7 @@ function CaseStudyResourcePage() {
         optimal performance and cost efficiency.</p>
       `
     }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -390,14 +387,19 @@ function CaseStudyResourcePage() {
   const caseStudy = caseStudies.find(study => study.id === id)
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export default function CaseStudyResourcePage(req, res) {
   try {
   const router = useRouter();
@@ -579,6 +581,7 @@ export default function CaseStudyResourcePage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -595,6 +598,10 @@ export default function CaseStudyResourcePage(req, res) {
   ],
   const caseStudy = caseStudies.find(study => study.id === id),
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  ],
+  const caseStudy = caseStudies.find(study => study.id === id),
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   if (!caseStudy) {
     return (
       <>
@@ -612,12 +619,16 @@ export default function CaseStudyResourcePage(req, res) {
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
               <Link
               <Link 
               <Link
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 href="/resources"
                 className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-300"
               >
@@ -630,6 +641,7 @@ export default function CaseStudyResourcePage(req, res) {
     )
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -642,6 +654,8 @@ export default function CaseStudyResourcePage(req, res) {
 }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <>
       <Head>
@@ -661,6 +675,7 @@ export default function CaseStudyResourcePage(req, res) {
             <header className="mb-12">
               <div className="mb-6">
                 <span className="px-3 py-1 bg-cyan-400/20 text-cyan-400 text-sm rounded-full border border-cyan-400/30">
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -678,6 +693,8 @@ export default function CaseStudyResourcePage(req, res) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 </span>
               </div>
               <h1 className="text-4xl font-bold mb-4 text-white">{caseStudy.title}</h1>
@@ -689,6 +706,7 @@ export default function CaseStudyResourcePage(req, res) {
               <p className="text-green-400 font-semibold text-lg">{caseStudy.results}</p>
             </div>
             <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20 mb-12">
+<<<<<<< HEAD
 
 
 
@@ -702,6 +720,8 @@ export default function CaseStudyResourcePage(req, res) {
             </div>
             <div className="text-center">
               <Link 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <div
                 className="prose prose-invert max-w-none"
                 dangerouslySetInnerHTML={{ __html: caseStudy.fullContent }}
@@ -714,7 +734,14 @@ export default function CaseStudyResourcePage(req, res) {
             </div>
             <div className="text-center">
               <Link
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 href="/contact"
                 className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-300"
               >
@@ -726,11 +753,17 @@ export default function CaseStudyResourcePage(req, res) {
       </div>
     </>
 <<<<<<< HEAD
-
+<<<<<<< HEAD
 =======
+  )
+  ];
+  const caseStudy = caseStudies.find(study => study.id === id);
+  if (!caseStudy) {;
+    return (;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
 }
 
-=======
       description: 'Building self - healing, auto - scaling cloud infrastructure.',
       full_content: `;
         <h2 > Executive Summary</h2>;
@@ -798,6 +831,7 @@ if ( {) {
             <div className="max - w-4xl mx - auto text - center">;
               <h1 className="text - 4xl font - bold mb - 6 text - white">Case Study Resource Not Found</h1>;
               <p className="text - xl text - white / 80 mb - 8">;
+<<<<<<< HEAD
 =======
 }
 
@@ -818,10 +852,13 @@ if ( {) {
               <h1 className="text-4xl font-bold mb-6 text-white">Case Study Resource Not Found</h1>;
               <p className="text-xl text-white/80 mb-8">;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 The case study resource you're looking for doesn't exist.;
               </p>;
               <Link;
                 href="/resources";
+<<<<<<< HEAD
 <<<<<<< HEAD
                 className="inline - flex items - center gap - 2 bg - gradient - to - r from - cyan - 400 to - fuchsia - 400 text - white px - 8 py - 4 rounded - lg font - semibold hover: from - cyan - 500 hover:to - fuchsia - 500 transition - all duration - 300";
 =======
@@ -829,10 +866,13 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
               >;
                 ← Back to Resources;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               </Link>;
             </div>;
           </main>;
         </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
       </>);
   }
@@ -934,12 +974,15 @@ if ( {) {
                 href="/contact";
                 className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-300";
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               >;
                 Get Started with Your Project;
               </Link>;
             </div>;
           </div>;
         </main>;
+<<<<<<< HEAD
       </div>;
     </>);
 }
@@ -964,3 +1007,7 @@ if ( {) {
 }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

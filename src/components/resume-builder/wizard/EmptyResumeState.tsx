@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -49,17 +50,26 @@ export const EmptyResumeState = ({ onCreateClick }: EmptyResumeProps) => {
             className="gap-2"
           >
             <FilePlus className="h-4 w-4" />
+=======
+      <CardContent className="py-8">
+        <div className="text-center">
+          <h2 className="text-2xl font-bold mb-2">Create Your Resume</h2>
+          <p className="text-muted-foreground mb-6">Create a professional resume to showcase your skills and experience</p>
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
           </Button>
       </CardContent>
     </Card>
   )
+<<<<<<< HEAD
 }
 }
 "}
   )
 }
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     <Card className='w-full max-w-2xl mx-auto'>;
@@ -85,6 +95,7 @@ import { EmptyResumeProps } from "./types",;
 export const EmptyResumeState = ({ onCreateClick }: EmptyResumeProps) => {;
   return (;
     <Card className="w-full max-w-2xl mx-auto">;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -101,14 +112,19 @@ export const EmptyResumeState = ({ onCreateClick }: EmptyResumeProps) => {;
   return (;
     <Card className="w-full max-w-2xl mx-auto">;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <CardContent className="py-8">;
         <div className="text-center">;
           <h2 className="text-2xl font-bold mb-2">Create Your Resume</h2>;
           <p className="text-muted-foreground mb-6">Create a professional resume to showcase your skills and experience</p>;
+<<<<<<< HEAD
           <Button
             onClick = {onCreateClick,}
             className="gap-2">;
             <FilePlus className="h-4 w-4" />;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           </Button>;
         </div>;
       </CardContent>;
@@ -123,7 +139,8 @@ export const EmptyResumeState = ({ onCreateClick }: EmptyResumeProps) => {;
   );
 };
 
-
+  );
+};
 
 import { Card, CardContent } from '@/components / ui / card';
 import { Button } from '@/components / ui / button';
@@ -155,5 +172,8 @@ export const EmptyResumeState = ({ onCreateClick }: EmptyResumeProps) =>: any { 
 }
 "},
   );
+<<<<<<< HEAD
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

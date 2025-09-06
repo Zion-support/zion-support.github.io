@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState, useMemo } from 'react';
 import {;
   onsiteServicePricing,;
@@ -88,13 +89,15 @@ export function ITServicePricingTable() {
   const sortedData = useMemo(() => {
     let filteredData = [...onsiteServicePricing],
     
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     // Filter by search query
-    
     if (searchQuery) {
       filteredData = filteredData.filter(item => 
         item.country.toLowerCase().includes(searchQuery.toLowerCase())
       )
     }
+<<<<<<< HEAD
     // Sort data
     filteredData.sort((a, b) => {
       if (a[sortConfig.key] < b[sortConfig.key]) {
@@ -140,6 +143,8 @@ export function ITServicePricingTable() {
 
 
         return sortConfig.direction === "ascending" ? -1 : 1
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       }
       if (a[sortConfig.key] > b[sortConfig.key]) {
         return sortConfig.direction === "ascending" ? 1 : -1
@@ -160,18 +165,27 @@ export function ITServicePricingTable() {
   },
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+    }
+    // Sort data
+    filteredData.sort((a, b) => {
+      if (a[sortConfig.key] < b[sortConfig.key]) {
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4 w-full">
       <div className="flex items-center mb-6">
         <div className="relative flex-1">
           <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate-light" />
           <Input
+<<<<<<< HEAD
 <<<<<<< HEAD
 
             placeholder="Search by country..."
@@ -225,6 +239,12 @@ export function ITServicePricingTable() {
                   variant='ghost'
                   onClick={() => handleSort('country')}
                   className='hover:bg-zion-blue-dark p-0 flex items-center space-x-1 text-zion-cyan hover:text-zion-cyan-light'                >
+=======
+
+        <Table>
+          <TableHeader className="bg-zion-blue">
+            <TableRow>
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <TableHead className="text-zion-cyan font-medium">
                 <Button 
                   variant="ghost" 
@@ -234,6 +254,7 @@ export function ITServicePricingTable() {
                   <span>Country</span>
                   <ArrowUpDown className="h-4 w-4" />
                 </Button>
+<<<<<<< HEAD
 <<<<<<< HEAD
               </TableHead>
 =======
@@ -269,6 +290,9 @@ export function ITServicePricingTable() {
                   onClick={() => handleSort("pricePerIncident")}
                   className="hover:bg-zion-blue-dark p-0 flex items-center justify-end space-x-1 w-full text-zion-cyan hover:text-zion-cyan-light"
                 >
+=======
+              </TableHead>
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   <span>Price Per Incident</span>
                   <ArrowUpDown className="h-4 w-4" />
                 </Button>
@@ -277,25 +301,6 @@ export function ITServicePricingTable() {
           </TableHeader>
           <TableBody className="bg-zion-blue-dark">
             {sortedData.length > 0 ? (
-              sortedData.map(item => (
-                <TableRow
-                  key={item.country}
-                  className='border-b border-zion-blue-light hover:bg-zion-blue/50'
-                >
-                  <TableCell className='flex items-center space-x-2'>
-                    <Globe className='h-4 w-4 text-zion-purple' />
-                    <span className='text-white'>{item.country}</span>
-                  </TableCell>
-                  <TableCell className='text-right font-medium text-white'>
-                    ${item.pricePerIncident.toFixed(2)}                  </TableCell>
-              sortedData.map((item) => (
-                <TableRow key={item.country} className="border-b border-zion-blue-light hover:bg-zion-blue/50">
-                  <TableCell className="flex items-center space-x-2">
-                    <Globe className="h-4 w-4 text-zion-purple" />
-                    <span className="text-white">{item.country}</span>
-                  </TableCell>
-                  <TableCell className="text-right font-medium text-white">${item.pricePerIncident.toFixed(2)}</TableCell>
-
                 </TableRow>
               ))
             ) : (
@@ -304,18 +309,6 @@ export function ITServicePricingTable() {
                   No countries match your search
                 </TableCell>
               </TableRow>
-            )}
-          </TableBody>
-        </Table>
-      </div>
-    </div>
-  )
-}
-      </div>;
-    </div>;
-  );
-};
-
 import { useState, useMemo } from "react",;
 import { onsiteServicePricing, CountryPricing } from "@/data/onsiteServicePricing",;
 import { Input } from "@/components/ui/input",;
@@ -411,12 +404,10 @@ export function ITServicePricingTable() {;
               ));
             ) : (;
               <TableRow>;
-                <TableCell colSpan={2} className="text-center py-10 text-zion-slate-light">;
                   No countries match your search;
                 </TableCell>;
               </TableRow>;
             )}
-
           </TableBody>;
         </Table>;
       </div>;
@@ -424,6 +415,7 @@ export function ITServicePricingTable() {;
   );
 }
 ;
+<<<<<<< HEAD
 ;
 
 
@@ -457,3 +449,5 @@ export function ITServicePricingTable() {;
 }
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

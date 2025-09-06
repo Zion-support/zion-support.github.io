@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useEffect, useState } from 'react';
 import { Header  } from '@/components/Header';
 import { NextSeo  } from '@/components/NextSeo';
@@ -18,6 +19,8 @@ import { NextSeo  } from '@/components/NextSeo';
 import React, { useEffect, useState } from 'react'
 import { Header } from '@/components/Header'
 import { NextSeo } from '@/components/NextSeo'
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { Globe, MapPin } from 'lucide-react'
 
 import {
@@ -28,13 +31,17 @@ import {
 } from '@/components/ui/tooltip'
 
 interface Instance {
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   id: number;
   name: string;
   lat: number;
   lng: number;
   talent: number;
   governance: 'admin' | 'hybrid' | 'vote';
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   region: string;
@@ -125,6 +132,8 @@ interface FeedItem {
 export default function GlobalMapPage() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const [feed, setFeed] = useState<FeedItem[]>([])
   useEffect((,) => {
     const interval = setInterval((,) => {
@@ -134,6 +143,7 @@ export default function GlobalMapPage() {
         'New franchise deployed: Zion Indonesia'
       ]
       const id = Date.now()
+<<<<<<< HEAD
 <<<<<<< HEAD
       const text =
         messages[Math.floor(Math.random() * messages.length)] |
@@ -145,6 +155,8 @@ export default function GlobalMapPage() {
       const text = null;
         messages[Math.floor(Math.random() * messages.length)] ||
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         'System update in progress'
       setFeed(f => [{ id, text }, ...f].slice(0, 5))
     }, 5000)
@@ -158,12 +170,16 @@ export default function GlobalMapPage() {
     return { x, y }
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
   const topRegions = INSTANCES.sort((a, b) => b.talent - a.talent).slice(0, 5)
   const topRegions = INSTANCES.sort((a, b) => b.talent - a.talent).slice(0, 5)
   const topRegions = INSTANCES.sort((a, b) => b.talent - a.talent).slice(0, 5)
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 import React, { useEffect, useState } from 'react',;
@@ -217,9 +233,12 @@ const INSTANCES: Instance[] = [;
 interface FeedItem {;
   id: number,;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   text: string;
 
 export default function GlobalMapPage() {;
@@ -250,16 +269,25 @@ export default function GlobalMapPage() {;
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   const topRegions = INSTANCES.sort((a, b) => b.talent - a.talent).slice(0, 5),
 
 
 
 =======
   const topRegions = INSTANCES.sort((a, b) => b.talent - a.talent).slice(0, 5),
+=======
+
+
+
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
       <NextSeo title="Global Zion Map" description="Overview of Zion deployments" />
       <Header />
 
+<<<<<<< HEAD
   const topRegions = INSTANCES.sort((a, b) => b.talent - a.talent).slice(0, 5),
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
@@ -296,6 +324,8 @@ export default function GlobalMapPage() {;
               return (
 
 <<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
       <main className="py-10 container mx-auto space-y-8">
         <h1 className="text-3xl font-bold">Global Instances</h1>
@@ -306,6 +336,18 @@ export default function GlobalMapPage() {;
               const { x, y } = project(i.lat, i.lng),
               const color = i.governance === 'admin' ? 'bg-red-500' : i.governance === 'hybrid' ? 'bg-yellow-500' : 'bg-green-500',
               return (
+<<<<<<< HEAD
+=======
+      <main className="py-10 container mx-auto space-y-8">
+        <h1 className="text-3xl font-bold">Global Instances</h1>
+        <div className="flex flex-col lg:flex-row gap-8">
+          <div className="relative" style={{ width, height }}>
+            <Globe className="w-full h-full text-secondary" />
+            {INSTANCES.map((i) => {
+              const { x, y } = project(i.lat, i.lng),
+              const color = i.governance === 'admin' ? 'bg-red-500' : i.governance === 'hybrid' ? 'bg-yellow-500' : 'bg-green-500',
+              return (
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <TooltipProvider key={i.id}>
                   <Tooltip>
 =======
@@ -331,6 +373,7 @@ export default function GlobalMapPage() {;
                   </Tooltip>
                 </TooltipProvider>
               )
+<<<<<<< HEAD
       />;
       <Header />;
       <main className='py-10 container mx-auto space-y-8'>;
@@ -375,10 +418,13 @@ export default function GlobalMapPage() {;
             <section>
 
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             })}
           </div>
           <div className="flex-1 space-y-6">
             <section>
+<<<<<<< HEAD
               <h2 className='text-xl font-semibold mb-2'>
                 Top Regions by Talent
               </h2>
@@ -386,22 +432,28 @@ export default function GlobalMapPage() {;
                 {topRegions.map(r => (
                   <li key={r.id} className='flex justify-between border-b pb-1'>                    <span>{r.region}</span>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <h2 className="text-xl font-semibold mb-2">Top Regions by Talent</h2>
               <ul className="space-y-1">
                 {topRegions.map((r) => (
                   <li key={r.id} className="flex justify-between border-b pb-1">
                     <span>{r.region}</span>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     <span>{r.talent}</span>
                   </li>
                 ))}
               </ul>
             </section>
             <section>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
               <h2 className='text-xl font-semibold mb-2'>Live Feed</h2>
@@ -419,6 +471,8 @@ export default function GlobalMapPage() {;
   )
 }
 }
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 ;
 }
@@ -433,6 +487,7 @@ export default function GlobalMapPage() {;
           </div>;
         </div>;
       </main>;
+<<<<<<< HEAD
     </div>;
   );
 }
@@ -586,3 +641,6 @@ function project() {
 ;
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

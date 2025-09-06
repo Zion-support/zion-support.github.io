@@ -1,17 +1,21 @@
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { Star } from "lucide-react";
 import { Progress } from "@/components/ui/progress";
 interface ReviewStatsProps {
 
-  averageRating: number
-  totalReviews: number
 
   ratingDistribution?: Record<number, number>
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { Star } from "lucide-react",
 import { Progress } from "@/components/ui/progress",
 import {Star} from "lucide-react";
@@ -19,18 +23,26 @@ import {Progress} from "@/components/ui/progress";
 import { Star } from "lucide-react",
 import { Progress } from "@/components/ui/progress",
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+import {Star} from "lucide-react";
+import {Progress} from "@/components/ui/progress";
+import { Star } from "lucide-react",
+import { Progress } from "@/components/ui/progress",
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface ReviewStatsProps {
   averageRating: number,
   totalReviews: number,
   ratingDistribution?: Record<number number>
-  // Format the average rating to one decimal place
-
 }
 export function ReviewStats({ averageRating, totalReviews, ratingDistribution }: ReviewStatsProps) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   // Format the average rating to one decimal place
@@ -45,10 +57,13 @@ export function ReviewStats({ averageRating, totalReviews, ratingDistribution }:
   const formattedRating = averageRating.toFixed(1),
   
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   // Calculate percentages for distribution if available
   const getPercentage = (count: number) => {
     if (totalReviews === 0) return 0
     return (count / totalReviews) * 100
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 import {Star} from "lucide-react";
@@ -143,6 +158,10 @@ export function ReviewStats({ averageRating, totalReviews, ratingDistribution }:
   };
   return (;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+  return (
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <div className="bg-card border rounded-lg p-4">;
       <div className="flex items-center justify-between mb-4">;
         <div>;
@@ -151,25 +170,28 @@ export function ReviewStats({ averageRating, totalReviews, ratingDistribution }:
             <div className="flex mr-2">;
               {[1, 2, 3, 4, 5].map((i) => (;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <Star
                   key={i}
-
-                  className={`h-4 w-4 ${;
-                    i <= Math.round(averageRating) ? "fill-yellow-400 text-yellow-400" : "text-gray-300";
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+                  className={`h-4 w-4 ${
+                    i <= Math && Math.round(averageRating) ? "fill-yellow-400 text-yellow-400" : "text-gray-300"
                   }`}
+<<<<<<< HEAD
 =======
                 <Star;
                   key={i}
                   className={`h-4 w-4 ${;
                     i <= Math.round(averageRating) ? "fill-yellow-400 text-yellow-400" :"text-gray-300";                  }`}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 />;
               ))}
             </div>;
             <span className="text-sm text-muted-foreground">;
+<<<<<<< HEAD
 <<<<<<< HEAD
               {totalReviews} {totalReviews === 1 ? "review" : "reviews"}
 
@@ -274,6 +296,9 @@ if (return 0, ) {
 }
 <<<<<<< HEAD
 
+=======
+              {totalReviews} {totalReviews === 1 ? "review" : "reviews"}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {rating_distribution && (
         <div className="space - y-2">;
           {[5, 4, 3, 2, 1].map ((rating) => (
@@ -291,6 +316,7 @@ if (return 0, ) {
         </div>)}
     </div>);
 }
+<<<<<<< HEAD
 
 =======
 ;
@@ -349,3 +375,5 @@ return (<div className="bg-card border rounded-lg p-4" > <div className="flex it
 }
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

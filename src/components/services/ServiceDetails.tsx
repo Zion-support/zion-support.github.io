@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
@@ -9,11 +10,14 @@ interface ServiceDetailsProps {
 }
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 // Component to show service details for the selected country
 export function ServiceDetails({ country }: ServiceDetailsProps) {
   // Get datacenters for regions (simplified - in production this would come from a real database)
 
   const getDatacenters = (country: string): string[] => {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   Card,
@@ -176,6 +180,8 @@ function ServiceDetails() {
   }
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {;
   Card,;
   CardContent,;
@@ -184,23 +190,6 @@ import {;
   CardHeader,;
   CardTitle,;
 } from '@/components/ui/card';
-
-    const dataCenters: Record<string string[]> = {
-      "United States": ["New York", "Los Angeles", "Chicago", "Dallas", "Seattle"],
-      "United Kingdom": ["London", "Manchester", "Birmingham"],
-      "Germany": ["Frankfurt", "Berlin", "Munich"],
-      "Japan": ["Tokyo", "Osaka"],
-      "Australia": ["Sydney", "Melbourne", "Perth"],
-      "Singapore": ["Singapore Central"],
-      "Canada": ["Toronto", "Montreal", "Vancouver"],
-      // Default for other countries
-      default: ['Major metropolitan areas'],
-    }
-    return (
-      dataCenters[country] ||
-      dataCenters['default'] || ['Major metropolitan areas']
-    )
-  }
       "default": ["Major metropolitan areas"]
     },
     
@@ -218,6 +207,7 @@ import {;
       "Australia": "https://source.unsplash.com/featured/900x700/?datacenter,australia",
       "Singapore": "https://source.unsplash.com/featured/900x700/?datacenter,singapore",
       // Default placeholder
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -252,6 +242,8 @@ import {;
     )
   }
   const datacenters = getDatacenters(country)
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       "default": "https://source.unsplash.com/featured/900x700/?datacenter"
     },
     
@@ -281,7 +273,10 @@ import {;
   
   const datacenters = getDatacenters(country),
   
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <Card className="bg-zion-blue-dark border-zion-blue-light">
       <CardHeader>
@@ -303,9 +298,12 @@ import {;
           />
         </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
         
         <div className="space-y-4">
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
           <div>
 =======
@@ -322,6 +320,7 @@ import {;
               Service Locations
             </h4>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
             <div className='grid grid-cols-2 md:grid-cols-3 gap-2'>
@@ -333,6 +332,8 @@ import {;
               <Clock className="mr-2 h-4 w-4 text-zion-purple" />
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <div className="grid grid-cols-2 md:grid-cols-3 gap-2">
               {datacenters.map((dc, idx) => (
                 <div 
@@ -341,6 +342,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                 >
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Server, Clock, MapPin } from 'lucide-react';
+<<<<<<< HEAD
 import Image from 'next/image';
 interface ServiceDetailsProps {;
   country: string;
@@ -423,11 +425,14 @@ export function ServiceDetails(): any ({ country }: ServiceDetailsProps) {;
     );
   };
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const datacenters = getDatacenters(country);
 
   return (
     <Card className='bg-zion-blue-dark border-zion-blue-light'>;
       <CardHeader>;
+<<<<<<< HEAD
         <CardTitle className='text-white flex items-center'>;
           <Server className='mr-2 h-5 w-5 text-zion-cyan' />;
           IT Onsite Service in {country}
@@ -481,12 +486,20 @@ export function ServiceDetails(): any ({ country }: ServiceDetailsProps) {;
                   key={idx} ;
                   className="bg-zion-blue p-2 rounded border border-zion-blue-light text-center text-zion-slate-light";
                 >;
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   {dc}
                 </div>
               ))}
             </div>
           </div>
+<<<<<<< HEAD
           
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <div>
             <h4 className="text-lg font-medium text-white mb-2 flex items-center">
               <Clock className="mr-2 h-4 w-4 text-zion-purple" />
@@ -497,6 +510,7 @@ export function ServiceDetails(): any ({ country }: ServiceDetailsProps) {;
               {getRegionalInstructions(country)}
             </p>
           </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -511,6 +525,8 @@ export function ServiceDetails(): any ({ country }: ServiceDetailsProps) {;
           <div className="bg-zion-blue rounded-lg p-4 border border-zion-blue-light">
             <h4 className="text-lg font-medium text-white mb-2">What's Included</h4>
             <ul className="list-disc list-inside text-zion-slate-light space-y-1">
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
               <li>Transportation to your site</li>
@@ -525,6 +541,7 @@ export function ServiceDetails(): any ({ country }: ServiceDetailsProps) {;
           </div>
         </div>
       </CardContent>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -545,10 +562,13 @@ export function ServiceDetails(): any ({ country }: ServiceDetailsProps) {;
         <p className="text-sm text-zion-slate-light">
           For custom enterprise needs or multi-site services in {country}, please contact our enterprise team for tailored pricing.
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         </p>
       </CardFooter>
     </Card>
   )
+<<<<<<< HEAD
 <<<<<<< HEAD
 
             </div>;
@@ -596,10 +616,13 @@ export function ServiceDetails(): any ({ country }: ServiceDetailsProps) {;
   timezone
 }) . `+ `Response times are typically within 4 hours for metropolitan areas. `+ `Please have site access permissions and contact details ready for our technicians. `+ `For remote locations, additional travel fees may apply.`
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 };
 }operate during business hours (8AM-6PM $ {;
   timezone ;
 }) . `+ `Response times are typically within 4 hours for metropolitan areas. `+ `Please have site access permissions and contact details ready for our technicians. `+ `For remote locations, additional travel fees may apply.` ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 };";
 return (<Card className="bg-zion-blue-dark border-zion-blue-light" > <CardHeader> </CardDescription> </CardHeader> <CardContent className="space-y-4" > <div className="overflow-hidden rounded-lg mb-4 relative h-48" > <Image /> </div> <div className="space-y-4" > <div> <h4 className="text-lg font-medium text-white mb-2 flex items-center" > <MapPin className="mr-2 h-4 w-4 text-zion-purple" /> Service Locations </h4> <divkey= {
@@ -613,6 +636,8 @@ return (<Card className="bg-zion-blue-dark border-zion-blue-light" > <CardHeader
 =======
 ;
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 };"
 return (<Card className="bg-zion-blue-dark border-zion-blue-light" > <CardHeader> </CardDescription> </CardHeader> <CardContent className="space-y-4" > <div className="overflow-hidden rounded-lg mb-4 relative h-48" > <Image /> </div> <div className="space-y-4" > <div> <h4 className="text-lg font-medium text-white mb-2 flex items-center" > <MapPin className="mr-2 h-4 w-4 text-zion-purple" /> Service Locations </h4> <div key= {
   idx "
@@ -621,6 +646,7 @@ return (<Card className="bg-zion-blue-dark border-zion-blue-light" > <CardHeader
 }</div>) ) "
 }</div> </div> <div> <h4 className="text-lg font-medium text-white mb-2 flex items-center" > <Clock className="mr-2 h-4 w-4 text-zion-purple" /> Service Instructions </h4> </p> </div> <div className="bg-zion-blue rounded-lg p-4 border border-zion-blue-light" > <h4 className="text-lg font-medium text-white mb-2" >What's Included</h4> <ul className="list-disc list-inside text-zion-slate-light space-y-1" > <li>Transportation to your site</li> <li>First hour of onsite technical support</li> <li>Basic hardware diagnosis</li> <li>Network connectivity troubleshooting</li> <li>Equipment installation assistance</li> </ul> </div> </div> </CardContent> </p> </CardFooter> </Card>)
 }'"}
+<<<<<<< HEAD
 ;
 }
 ;
@@ -707,3 +733,5 @@ return (<Card className="bg - zion - blue - dark border - zion - blue - light" >
 =======
 }'"}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

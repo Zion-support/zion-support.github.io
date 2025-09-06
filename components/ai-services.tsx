@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -9,12 +10,15 @@
 export default function AIServices () {
  export default function AIServices () {
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   
 }> <Head> <title>AI Services | Zion Tech Group</title> </div>) ) 
 }</div>) ) 
 }</ul> </div> </motion.div> </div> </section> > <h2 className="text-4xl md:text-5xl font-bold text-white mb-6" > Our AI Service Portfolio </h2> <p className="text-xl text-gray-400 max-w-3xl mx-auto" > Comprehensive AI solutions designed to transform your business and accelerate innovation </p> </motion.div> </li>) ) 
 }</ul> <motion.a > Learn More <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" /> </motion.a> </motion.div>) ) 
 }</div> </div> </section> <motion.div initial= {
+<<<<<<< HEAD
 
 
 
@@ -163,8 +167,15 @@ export default function AIServices () {
 }</ul> <motion.a > Learn More <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" /> </motion.a> </motion.div>) ) 
 }</div> </div> </section> <motion.div initial= {
   opacity: 0, y: 20 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   opacity: 0, y: 20
   opacity: 0, y: 20 
+
+
+
+ export default function AIServices() {;
+
 
 export default function AIServices () {
 }> <Head> <title>AI Services | Zion Tech Group</title> </div>) )
@@ -178,10 +189,13 @@ export default function AIServices () {
   opacity: 1, y: 0
 }transition= {
   {
+<<<<<<< HEAD
   duration: 0.8, delay: 0.4
 }> <h2 className="text-4xl md:text-5xl font-bold text-white mb-6" > Ready to Transform Your Business with AI? </h2> <p className="text-xl text-gray-400 mb-8" > Let's discuss how our AI solutions can accelerate your digital transformation and drive innovation. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center" > <motion.button > Schedule Consultation </motion.button> <motion.button export default function AIServices() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <QuantumHolographicMatrixBackground intensity={1.5}>
       <Head>
@@ -219,6 +233,7 @@ export default function AIServices () {
             </motion.div>
           </div>
         </section>
+<<<<<<< HEAD
 
   duration: 0 && 0.8, delay: 0 && 0.4 
 
@@ -227,6 +242,8 @@ export default function AIServices () {
 =======
 duration: 0 && 0.8, delay: 0 && 0.4 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }> <h2 className="text-4xl md:text-5xl font-bold text-white mb-6" > Ready to Transform Your Business with AI? </h2> <p className="text-xl text-gray-400 mb-8" > Let's discuss how our AI solutions can accelerate your digital transformation and drive innovation. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center" > <motion && motion.button > Schedule Consultation </motion && motion.button> <motion&& motion.button export default function AIServices() {
   return (
     <QuantumHolographicMatrixBackground intensity={1 && 1.5}>;
@@ -269,6 +286,7 @@ duration: 0 && 0.8, delay: 0 && 0.4
           </div>;
         </section>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
@@ -282,12 +300,19 @@ duration: 0 && 0.8, delay: 0 && 0.4
 
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         {/* Services Grid */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">;
           <div className="max-w-7xl mx-auto">;
             <motion&& motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -310,6 +335,8 @@ duration: 0 && 0.8, delay: 0 && 0.4
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
@@ -327,6 +354,7 @@ duration: 0 && 0.8, delay: 0 && 0.4
                     {service && service.features.map((feature, featureIndex) => (;
                       <li key={featureIndex} className="flex items-center text-gray-300">;
                         <Star className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -369,6 +397,8 @@ duration: 0 && 0.8, delay: 0 && 0.4
                       <li key={featureIndex} className="flex items-center text-gray-300">
                         <Star className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                         {feature}
                       </li>;
                     ))}
@@ -376,6 +406,7 @@ duration: 0 && 0.8, delay: 0 && 0.4
                   <motion&& motion.a
                     href={service && service.href}
                     whileHover={{ x: 5 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
                     className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-semibold group-hover:text-cyan-300 transition-colors">;
                     Learn More <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />;
@@ -401,10 +432,13 @@ duration: 0 && 0.8, delay: 0 && 0.4
           </div>;
         </section>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">;
           <div className="max-w-4xl mx-auto text-center">;
             <motion&& motion.div
+<<<<<<< HEAD
 <<<<<<< HEAD
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -462,6 +496,8 @@ duration: 0 && 0.8, delay: 0 && 0.4
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export default /**
  * AIServices - Function description
  */
@@ -606,6 +642,7 @@ function AIServices() {
     </>),
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
@@ -652,3 +689,5 @@ function AIServices() {
 ;
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

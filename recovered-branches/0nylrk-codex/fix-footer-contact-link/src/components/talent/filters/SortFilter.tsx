@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -13,21 +14,23 @@ import {SortFilterProps} from "@/types/filters";
 =======
 =======
 >>>>>>> main
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
-<<<<<<< HEAD
   SelectValue} from "@/components/ui/select",
 import { SortFilterProps } from "@/types/filters",
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-=======
   SelectValue,
 } from "@/components/ui/select";
 import { SortFilterProps } from "@/types/filters";
+<<<<<<< HEAD
 >>>>>>> main
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export function SortFilter({ sortOption, setSortOption }: SortFilterProps) {
   return (
     <div className="mb-6">
@@ -48,6 +51,7 @@ export function SortFilter({ sortOption, setSortOption }: SortFilterProps) {
       </Select>
     </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
 import {SortFilterProps} from "@/types/filters";
@@ -58,6 +62,8 @@ export function SortFilter(): any ({ sortOption, setSortOption }: SortFilterProp
   )
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {;
   Select,;
   SelectContent,;
@@ -67,7 +73,10 @@ import {;
 import { SortFilterProps } from "@/types/filters";
 export function SortFilter({ sortOption, setSortOption }: SortFilterProps) {;
   return (;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <div className="mb-6">;
       <label className="text-sm font-medium text-zion-slate-light mb-2 block">;
         Sort by;
@@ -80,12 +89,8 @@ export function SortFilter({ sortOption, setSortOption }: SortFilterProps) {;
           <SelectItem value="relevance">Relevance</SelectItem>;
           <SelectItem value="rating">Highest Rating</SelectItem>;
           <SelectItem value="experience">Most Experienced</SelectItem>;
-          <SelectItem value="price-low">Price: Low to High</SelectItem>;
-          <SelectItem value="price-high">Price: High to Low</SelectItem>;
-        </SelectContent>;
-      </Select>;
-    </div>;
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 
@@ -98,6 +103,10 @@ export function SortFilter({ sortOption, setSortOption }: SortFilterProps) {;
 }
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+}
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   Select,
   SelectContent,
   SelectItem,
@@ -128,6 +137,7 @@ function SortFilter() {
       </Select>;
     </div>);
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -162,3 +172,9 @@ function SortFilter() {
 }
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+  )
+
+import {
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

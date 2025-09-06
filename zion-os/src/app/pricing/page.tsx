@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -238,15 +239,12 @@ const servicePricing: ServicePricing[] = [;
         description: "Advanced security assessment",;
         features: ["Advanced testing", "Custom compliance", "Ongoing monitoring", "Security training", "Incident response", "Dedicated support"],;
         cta: "Contact Sales",;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         ctaLink: "mailto:kleber@ziontechgroup.com";
       }
     ];
   }
-],;
-const categories = ["All", "Core Platform", "AI Services", "IT Services", "E-commerce & Services"],;
-export default function PricingPage() {;
-  const [selectedCategory, setSelectedCategory] = useState("All");
-
   const filteredServices = selectedCategory === "All";
     ? servicePricing;
     : servicePricing.filter(service => service.category === selectedCategory);
@@ -256,9 +254,12 @@ export default function PricingPage() {;
         <h1 className="text-4xl font-bold">Pricing & Plans</h1>;
         <p className="text-xl opacity-80 max-w-3xl mx-auto">;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 "use client",
 import { useState  } from './react';,
 interface PricingTier {
@@ -270,6 +271,7 @@ interface PricingTier {
   popular?: boolean,
   cta: string,
   cta_link: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 "use client";
@@ -283,6 +285,8 @@ interface PricingTier {name: string;
   cta: string;
   ctaLink: string;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 interface ServicePricing {
   service_name: string,
@@ -510,6 +514,7 @@ const service_pricing: ServicePricing[] = [;
       }
     ];
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 ],
 const categories = ["All", "Core Platform", "AI Services", "IT Services", "E - commerce & Services"],
@@ -949,6 +954,8 @@ export default function PricingPage() {;
         <h1 className="text-4xl font-bold">Pricing & Plans</h1>;
         <p className="text-xl opacity-80 max-w-3xl mx-auto">;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           Choose the perfect plan for your business needs. All plans include our core features with transparent pricing and no hidden fees.;
         </p>;
       </div>;
@@ -958,6 +965,7 @@ export default function PricingPage() {;
           {categories.map (category => (
             <button;
               key={category}
+<<<<<<< HEAD
 
               on_click={() => setSelectedCategory (category)}
               className={`px - 4 py - 2 rounded - md text - sm font - medium transition - colors ${
@@ -974,6 +982,8 @@ export default function PricingPage() {;
                   ? 'bg-blue-600 text-white';
                   : 'text-gray-300 hover:text-white hover:bg-zinc-700';
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               }`}
             >;
               {category}
@@ -1015,6 +1025,7 @@ export default function PricingPage() {;
             <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 6">;
               {service.tiers.map ((tier, tier_index) => (
                 <div;
+<<<<<<< HEAD
 
                   key={tier_index}
                   className={`relative border rounded - lg p - 6 ${
@@ -1031,6 +1042,8 @@ export default function PricingPage() {;
                       ? 'border-blue-500 bg-blue-500/10';
                       : 'border-white/10';
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   }`}
                 >;
                   {tier.popular && (
@@ -1038,6 +1051,7 @@ export default function PricingPage() {;
                       <span className="bg - blue - 500 text - white px - 3 py - 1 rounded - full text - xs font - medium">;
                         Most Popular;
                       </span>;
+<<<<<<< HEAD
 
                     </div>)}
                   <div className="text - center space - y-4">;
@@ -1054,6 +1068,8 @@ export default function PricingPage() {;
                   <div className="text-center space-y-4">;
                     <h3 className="text-xl font-semibold">{tier.name}</h3>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     <div>;
                       <span className="text - 3xl font - bold">{tier.price}</span>;
                       <span className="text - lg opacity - 80">{tier.period}</span>;
@@ -1069,6 +1085,7 @@ export default function PricingPage() {;
                   </ul>;
                   <div className="mt - 6">;
                     <a;
+<<<<<<< HEAD
 
                       href={tier.cta_link}
                       className={`block w - full text - center py - 3 px - 4 rounded - lg font - medium transition - colors ${
@@ -1085,6 +1102,8 @@ export default function PricingPage() {;
                           ? 'bg-blue-600 hover:bg-blue-700 text-white';
                           : 'bg-zinc-700 hover:bg-zinc-600 text-white';
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       }`}
                     >;
                       {tier.cta}

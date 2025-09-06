@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import Link from 'next/link'
 
 
@@ -18,6 +19,8 @@ import { Button } from "./ui/button",
 import { fireEvent } from '@/lib/analytics',
 import { Users, Zap, Settings, MessageSquare, Sparkles, ArrowRight, BarChart3, Plus, HelpCircle } from 'lucide-react'
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import Link from 'next/link'
 import { GradientHeading } from './GradientHeading'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
@@ -45,6 +48,7 @@ import { Zap } from 'lucide-react'
 export function FeaturesGuideSection() {
   const features = [
     {
+<<<<<<< HEAD
       id: 'ai-matcher'
       title: 'AI Matcher'
       description:
@@ -59,6 +63,10 @@ export function FeaturesGuideSection() {
       link: '/match'
       buttonText: 'Try AI Matcher'
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         'Navigate to the AI Matcher page from the homepage or marketplace',
         'Fill in your project requirements and specifications',
         'Review the AI-recommended matches tailored to your needs',
@@ -329,9 +337,12 @@ export function FeaturesGuideSection() {
   const features = [
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import Link from 'next/link';
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       id: "ai-matcher",
       title: "AI Matcher",
       description: "Find the perfect match for your project needs with our intelligent AI-powered matching system.",
@@ -585,8 +596,11 @@ export function FeaturesGuideSection() {;
       ],;
       link: "/help";
       buttonText: "View Resources";
+<<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
     }
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     }
     {
       id: 'talent-directory'
@@ -711,12 +725,15 @@ ursor/fix-website-loading-errors-and-merge-6662
               <TabsTrigger
                 key={feature.id}
                 value={feature.id}
+<<<<<<< HEAD
                 className='data-[state=active]:bg-zion-blue-light data-[state=active]:text-zion-cyan'              >                className="data-[state=active]:bg-zion-blue-light data-[state=active]:text-zion-cyan"
       id: "ai-matcher",
       title: "AI Matcher",
       description: "Find the perfect match for your project needs with our intelligent AI-powered matching system.",
       icon: <Sparkles className = "h-10 w-10 text-zion-cyan" />,
                 className='data-[state=active]:bg-zion-blue-light data-[state=active]:text-zion-cyan'              >                className="data-[state=active]:bg-zion-blue-light data-[state=active]:text-zion-cyan"
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       instructions: [
         "Navigate to the AI Matcher page from the homepage or marketplace"
         "Fill in your project requirements and specifications"
@@ -1260,6 +1277,7 @@ function FeaturesGuideSection() {
               <TabsTrigger;
                 key={feature.id}
                 value={feature.id}
+<<<<<<< HEAD
     }
   ]
 
@@ -1309,6 +1327,8 @@ function FeaturesGuideSection() {
             ))}
           </TabsList>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 className='data-[state = active]:bg - zion - blue - light data-[state = active]:text - zion - cyan'              >                className="data-[state = active]:bg - zion - blue - light data-[state = active]:text - zion - cyan";
       instructions: [;
         "Navigate to the AI Matcher page from the homepage or marketplace";
@@ -1417,24 +1437,31 @@ function FeaturesGuideSection() {
       ];
 
 
+<<<<<<< HEAD
                 className="data-[state=active]:bg-zion-blue-light data-[state=active]:text-zion-cyan";
               >;
 
 
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 {feature.title}
               </TabsTrigger>
             ))}
           </TabsList>
+<<<<<<< HEAD
 
           <TabsList className="grid grid-cols-2 md:grid-cols-4 gap-2 bg-zion-blue rounded-lg p-1">
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             {features.slice(4).map(feature => (
               <TabsTrigger
                 key={feature.id}
                 value={feature.id}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
+<<<<<<< HEAD
           <TabsList className="grid grid-cols-2 md:grid-cols-4 gap-2 bg-zion-blue rounded-lg p-1">
             {features.slice(4).map(feature => (
               <TabsTrigger 
@@ -1657,6 +1684,14 @@ export function FeaturesGuideSection() {;
                   </h3>;
                   <p className='text - zion - slate - light mb - 6'>;
                     {feature.description}
+=======
+                className="data-[state=active]:bg-zion-blue-light data-[state=active]:text-zion-cyan"
+              >
+                {feature.title}
+              </TabsTrigger>
+            ))}
+          </TabsList>
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           {features.map(feature => (
             <TabsContent key={feature.id} value={feature.id} className="mt-8">
               <div className="bg-zion-blue rounded-lg border border-zion-blue-light p-6 md:p-8 flex flex-col md:flex-row gap-8">
@@ -1668,6 +1703,7 @@ export function FeaturesGuideSection() {;
                   <p className="text-zion-slate-light mb-6">{feature.description}</p>
                   <Button
                     className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple"
+<<<<<<< HEAD
                   >
                     <Link href={feature.link}>
                       {feature.buttonText}
@@ -1688,12 +1724,15 @@ export function FeaturesGuideSection() {;
         <div className='mt-12 text-center'>
               <ArrowRight className='ml-2 h-4 w-4' />            </Link>              <ArrowRight className="ml-2 h-4 w-4" />
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <div className="md:w-2/3 bg-zion-blue-dark p-6 rounded-lg">
                   <h4 className="text-xl font-semibold text-white mb-4">How to Use</h4>
                   <ol className="list-decimal list-inside space-y-3 pl-4">
                     {feature.instructions.map((instruction, idx,) => (
                       <li key={idx} className="text-zion-slate-light">
                         <span className="text-zion-cyan mr-2">{idx + 1}.</span>
+<<<<<<< HEAD
                       </li>
 
 
@@ -1712,6 +1751,8 @@ export function FeaturesGuideSection() {;
                     {feature.instructions.map((instruction, idx,) => (
                       <li key={idx} className="text-zion-slate-light">
                         <span className="text-zion-cyan mr-2">{idx + 1}.</span>
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <section className="py-20 bg-zion-blue-dark">;
       <div className="container mx-auto px-4">;
         <div className="text-center mb-12">;
@@ -1789,6 +1830,7 @@ export function FeaturesGuideSection() {;
                       <li key={idx} className="text-zion-slate-light">;
                         <span className="text-zion-cyan mr-2">{idx + 1}.</span>;
                       </li>;
+<<<<<<< HEAD
                     ))}
           </TabsList>;
 ;
@@ -1833,6 +1875,8 @@ export function FeaturesGuideSection() {;
                         <span className="text-zion-cyan mr-2">{idx + 1}.</span>
                         {instruction}
                       </li>;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     ))}
                   </ol>
                 </div>
@@ -1840,6 +1884,7 @@ export function FeaturesGuideSection() {;
             </TabsContent>
           ))}
         </Tabs>
+<<<<<<< HEAD
         <div className='mt-12 text-center'>
 ursor/fix-website-loading-errors-and-merge-6662
         <div className="mt-12 text-center">
@@ -1847,6 +1892,8 @@ ursor/fix-website-loading-errors-and-merge-6662
         <div className='mt-12 text-center'>
         
         <div className="mt-12 text-center">
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
           <Button
@@ -1855,12 +1902,15 @@ ursor/fix-website-loading-errors-and-merge-6662
             asChild
           >
             <Link
+<<<<<<< HEAD
               href='/marketplace'              onClick={() => fireEvent('explore_marketplace_click')}
               href="/marketplace"
               onClick = {() => fireEvent('explore_marketplace_click'),}
             >
               Explore Full Marketplace
               <ArrowRight className="ml-2 h-4 w-4" />
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 
@@ -1868,6 +1918,7 @@ ursor/fix-website-loading-errors-and-merge-6662
         </div>
       </div>
     </section>
+<<<<<<< HEAD
   );
 };
 
@@ -1900,6 +1951,8 @@ ursor/fix-website-loading-errors-and-merge-6662
     </section>;
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   );
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -1960,12 +2013,15 @@ ursor/fix-website-loading-errors-and-merge-6662
     </section>);
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
   );
 }
 
   )
 }
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   ),;}
  import { ;
   {;
@@ -2009,5 +2065,8 @@ const features = [ {;
 }
 
   )
+<<<<<<< HEAD
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

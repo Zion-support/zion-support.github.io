@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -12,6 +13,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   const { id } = req.query,
   if (typeof id !== 'string') return res.status(400).json({ error: 'Invalid id' }),
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   if (req.method === 'GET') {
     const flag = await getFlagById(id),
@@ -28,12 +31,16 @@ import { getFlagById } from '../../../../../utils/moderationDb';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
 
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const user = parseUserFromRequest(req)
   try { ensureAdmin(user) } catch (e: any) { return res.status(e.statusCode |403).json({ error: 'Forbidden' }) }
   const { id } = req.query
   if (typeof id !== 'string') return res.status(400).json({ error: 'Invalid id' })
   if (req.method === 'GET') {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -68,6 +75,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const { id } = req.query;
     if (typeof id !== 'string') return res.status(400).json({ error: 'Invalid id' });
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     if (req.method === 'GET') {
       const flag = await getFlagById(id);
       if (!flag) return res.status(404).json({ error: 'Not found' });
@@ -81,4 +90,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

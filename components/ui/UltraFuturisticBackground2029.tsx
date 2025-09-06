@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -29,11 +30,14 @@ import { motion } from 'framer-motion';
 =======
 interface Particle {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   x: number;
   y: number;
 =======
   coordinate_x: number;
   coordinate_y: number;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -43,6 +47,8 @@ interface Particle {
   x: number;
   y: number;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   vx: number;
   vy: number;
   size: number;
@@ -50,6 +56,7 @@ interface Particle {
   color: string;
   type: 'energy' | 'data' | 'quantum' | 'neon';
   life: number;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -93,10 +100,17 @@ export default function UltraFuturisticBackground2029({
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  children: React.ReactNode;
+  children,
+}: {;
+  children: React.ReactNode;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }) {  const canvasRef = useRef<HTMLCanvasElement>(null);
   const particlesRef = useRef<Particle[]>([]);
   const energyFieldsRef = useRef<EnergyField[]>([]);
   const animationRef = useRef<number | undefined>(undefined);
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });interface Particle {;
@@ -111,6 +125,8 @@ export default function UltraFuturisticBackground2029({
   life: number,;
   maxLife: number;
 }
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 interface EnergyField {;
   x: number,;
@@ -123,15 +139,19 @@ interface EnergyField {;
 
 export default function UltraFuturisticBackground2029(): any ({ children }: { children: React && React.ReactNode }) {;
 
+<<<<<<< HEAD
 =======
 =======
 export default function UltraFuturisticBackground2029(): any ({ children }: { children: React && React.ReactNode }) {;
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 export default function UltraFuturisticBackground2029({ children }: { children: React.ReactNode }) {;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
@@ -161,11 +181,14 @@ export default function UltraFuturisticBackground2029({ children }: { children: 
 
 export default function UltraFuturisticBackground2029({ children }: { children: React.ReactNode }) {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const particlesRef = useRef<Particle[]>([]);
   const energyFieldsRef = useRef<EnergyField[]>([]);
   const animationRef = useRef<number | undefined>(undefined);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 interface Particle {
@@ -195,6 +218,8 @@ function UltraFuturisticBackground2029() {  const canvas_ref = useRef < HTMLCanv
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   vx: number,
   vy: number,
   size: number,
@@ -202,7 +227,10 @@ function UltraFuturisticBackground2029() {  const canvas_ref = useRef < HTMLCanv
   color: string,
   type: 'energy' | 'data' | 'quantum' | 'neon',
   life: number,
+<<<<<<< HEAD
   max_life: number;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 interface EnergyField {
   coordinate_x: number,
@@ -212,6 +240,7 @@ interface EnergyField {
   color: string,
   pulse: number;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       canvas.height = window.innerHeight
@@ -232,10 +261,13 @@ interface EnergyField {
       canvas.height = window.innerHeight;    };      canvas.height = window.innerHeight
     }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     resizeCanvas();
     window.addEventListener('resize', resizeCanvas);
     // Mouse move handler for interactive effects
     const handleMouseMove = (e: MouseEvent) => {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       setMousePosition({ x: e.clientX, y: e.clientY })
@@ -246,11 +278,14 @@ interface EnergyField {
       setMousePosition({ x: e.clientX, y: e.clientY });    };      setMousePosition({ x: e.clientX, y: e.clientY })
     }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     window.addEventListener('mousemove', handleMouseMove);
     // Initialize particles with different types
     const initParticles = () => {
       const particles: Particle[] = [];
       const colors = {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
         energy: ['#00ffff#ff00ff#ffff00#00ff00'],
@@ -270,10 +305,13 @@ interface EnergyField {
         data: ['#0080ff#8000ff#ff0080#80ff00']
         quantum: ['#ff8000#8000ff#00ffff#ff0080']
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         neon: ['#ff0066#00ffff#ffff00#ff00ff']
       }
       for (let i = 0, i < 150, i++) {
         const type = ['energydataquantumneon'][Math.floor(Math.random() * 4)] as keyof typeof colors;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
         particles.push({
@@ -304,10 +342,13 @@ interface EnergyField {
     // Initialize energy fields
     const initEnergyFields = () => {          life: Math.random() * 100
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           maxLife: 100
         })
       }
       particlesRef.current = particles
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     };
@@ -363,12 +404,15 @@ interface EnergyField {
       }
       energyFieldsRef.current = fields
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     initParticles();
     initEnergyFields();
     // Animation loop
     const animate = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       // Update and draw energy fields
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       energyFieldsRef.current.forEach((field) => {
@@ -407,6 +451,8 @@ interface EnergyField {
         ctx.arc(field.x, field.y, field.radius, 0, Math.PI * 2);
         ctx.fill();      });        field.pulse += 0.02;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         const pulseIntensity = Math.sin(field.pulse) * 0.3 + 0.7;
         // Create radial gradient for energy field
         const gradient = ctx.createRadialGradient(field.x, field.y, 0, field.x, field.y, field.radius);
@@ -425,17 +471,21 @@ interface EnergyField {
           particle.life = particle.maxLife;
           particle.x = Math.random() * canvas.width;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
           particle.y = Math.random() * canvas.height
 
 =======
           particle.y = Math.random() * canvas.height;        }          particle.y = Math.random() * canvas.height
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         }
         // Interactive particle behavior based on mouse position
         const dx = mousePosition.x - particle.x;
         const dy = mousePosition.y - particle.y;
         const distance = Math.sqrt(dx * dx + dy * dy);
+<<<<<<< HEAD
 <<<<<<< HEAD
 
         
@@ -446,10 +496,13 @@ interface EnergyField {
           particle.vx += (dx / distance) * force * 0.01;
           particle.vy += (dy / distance) * force * 0.01;        }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         if (distance < 200) {
           const force = (200 - distance) / 200;
           particle.vx += (dx / distance) * force * 0.01;
           particle.vy += (dy / distance) * force * 0.01
+<<<<<<< HEAD
 <<<<<<< HEAD
 
         }
@@ -457,6 +510,8 @@ interface EnergyField {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         particle.x += particle.vx;
         particle.y += particle.vy;
         // Wrap around edges
@@ -466,6 +521,7 @@ interface EnergyField {
         if (particle.y > canvas.height) particle.y = 0;
         // Draw particle with type-specific effects
         ctx.save();
+<<<<<<< HEAD
 <<<<<<< HEAD
 
         
@@ -854,19 +910,22 @@ if (particle.coordinate_y = 0) {
           particle && particle.x = Math && Math.random() * canvas && canvas.width;
           particle && particle.y = Math && Math.random() * canvas && canvas.height;        }          particle && particle.y = Math && Math.random() * canvas && canvas.height;
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             break;
           case 'data':;
             // Data particles with digital effect;
-            ctx.globalCompositeOperation = 'multiply';
+            ctx && ctx.globalCompositeOperation = 'multiply';
             break;
           case 'quantum':;
             // Quantum particles with uncertainty effect;
-            ctx.globalCompositeOperation = 'overlay';
-            ctx.shadow_color = particle.color;
-            ctx.shadow_blur = 10;
+            ctx && ctx.globalCompositeOperation = 'overlay';
+            ctx && ctx.shadowColor = particle && particle.color;
+            ctx && ctx.shadowBlur = 10;
             break;
           case 'neon':;
             // Neon particles with bright glow;
+<<<<<<< HEAD
             ctx.shadow_color = particle.color;
             ctx.shadow_blur = 20;
             ctx.globalCompositeOperation = 'lighter';
@@ -930,10 +989,13 @@ if (particle.coordinate_y = 0) {
         ctx.fillStyle = particle.color + Math.floor(currentOpacity * 255).toString(16).padStart(2, '0');
         ctx.fill();
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         ctx.restore();
         // Draw connections between nearby particles
         particlesRef.current.forEach((otherParticle, otherIndex) => {
           if (index === otherIndex) return;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
             break;        }
@@ -1010,6 +1072,8 @@ if ( {) {
         ctx.beginPath();          const distance = Math.sqrt(
             Math.pow(particle.x - otherParticle.x, 2) +
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             Math.pow(particle.y - otherParticle.y, 2)
           );
           if (distance < 120) {
@@ -1019,6 +1083,7 @@ if ( {) {
             ctx.beginPath();
             ctx.moveTo(particle.x, particle.y);
             ctx.lineTo(otherParticle.x, otherParticle.y);
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -1115,10 +1180,13 @@ if ( {) {
       const time = Date.now() * 0.001;
       for (let i = 0; i < 5; i++) {      for (let i = 0, i < 5, i++) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         const waveX = (canvas.width / 6) * (i + 1);
         const waveY = canvas.height / 2;
         const amplitude = 50;
         const frequency = 0.01;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
         
@@ -1132,10 +1200,13 @@ if ( {) {
         ctx.lineWidth = 2;
         ctx.beginPath();
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         for (let x = 0, x < canvas.width, x += 2) {
           const y = waveY + amplitude * Math.sin(frequency * x + time + i) * Math.sin(frequency * x * 0.5 + time * 0.7);
           if (x === 0) {
             ctx.moveTo(x, y)
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 ;
@@ -1183,6 +1254,8 @@ if ( {) {
         for (let coordinate_x = 0, x < canvas.width, x += 2) {
           const coordinate_y = wave_y + amplitude * Math.sin (frequency * x + time + i) * Math.sin (frequency * x * 0.5 + time * 0.7);
           // Check condition
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 if ( {) {
   $2
 }
@@ -1192,6 +1265,7 @@ if ( {) {
             ctx.line_to (x, y);
           }
         }
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -1244,11 +1318,14 @@ if ( {) {
         const x2 = Math.random() * canvas.width;
         const y2 = Math.random() * canvas.height;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       for (let i = 0, i < 20, i++) {
         const x1 = Math.random() * canvas.width;
         const y1 = Math.random() * canvas.height;
         const x2 = Math.random() * canvas.width;
         const y2 = Math.random() * canvas.height;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
         
@@ -1262,11 +1339,14 @@ if ( {) {
       }
       animationRef.current = requestAnimationFrame(animate);    };        ctx.beginPath();
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         ctx.moveTo(x1, y1);
         ctx.lineTo(x2, y2);
         ctx.stroke()
       }
       animationRef.current = requestAnimationFrame(animate)
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     };
@@ -1275,11 +1355,14 @@ if ( {) {
 =======
     }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     animate();
     return () => {
       window.removeEventListener('resize', resizeCanvas);
       window.removeEventListener('mousemove', handleMouseMove);
       if (animationRef.current) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -1360,20 +1443,26 @@ if ( {) {
 =======
         cancelAnimationFrame(animationRef.current);
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       }
     }
   }, [mousePosition]);
   return (
 <<<<<<< HEAD
+<<<<<<< HEAD
     <div className='relative w-full h-full overflow-hidden'>;
 =======
     <div className='relative w-full h-full overflow-hidden'>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {/* Animated background canvas */}
       <canvas
         ref={canvasRef}
         className='absolute inset-0 w-full h-full pointer-events-none'
         style={{ zIndex: -1 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       />;
@@ -1462,10 +1551,13 @@ if ( {) {
             scale: [1, 1.2, 1]
             opacity: [0.2, 0.4, 0.2],          }}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           transition={{
             duration: 8
             repeat: Infinity
             ease: 'easeInOut',      }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1488,11 +1580,14 @@ if ( {) {
   return (
     <div className="relative w-full h-full overflow-hidden">
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {/* Animated background canvas */}
       <canvas
         ref={canvasRef}
         className="absolute inset-0 w-full h-full pointer-events-none"
         style={{ zIndex: -1 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       />;
@@ -1554,10 +1649,13 @@ if ( {) {
             ease: 'easeInOut'
           }}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           transition={{
             duration: 6
             repeat: Infinity
             ease: 'easeInOut',          }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1673,10 +1771,13 @@ if ( {) {
             opacity: [0.2, 0.4, 0.2]
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           }}
           transition={{
             duration: 8,
             repeat: Infinity,
+<<<<<<< HEAD
 <<<<<<< HEAD
             ease: "easeInOut"
           }}
@@ -1714,10 +1815,15 @@ ease: "easeInOut"
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+            ease: "easeInOut"
+          }}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           transition={{
             duration: 12
             repeat: Infinity
             ease: 'easeInOut',          }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1745,10 +1851,13 @@ ease: "easeInOut"
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           }}
           transition={{
             duration: 6,
             repeat: Infinity,
+<<<<<<< HEAD
 <<<<<<< HEAD
             ease: "easeInOut"
           }}
@@ -1762,6 +1871,10 @@ ease: "easeInOut"
         />;
         <motion&& motion.div
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+            ease: "easeInOut"
+          }}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           className="absolute bottom-32 left-1/4 w-40 h-40 border border-purple-400 opacity-20 transform rotate-45"
 =======
         />;
@@ -1774,6 +1887,7 @@ ease: "easeInOut"
             duration: 12,
             repeat: Infinity,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
         />
         <motion.div
@@ -1785,12 +1899,15 @@ ease: "easeInOut"
             duration: 6
             repeat: Infinity
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             ease: 'easeInOut',          }}
         />;
         <motion.div;
           className="absolute bottom - 32 left - 1/4 w - 40 h - 40 border border - purple - 400 opacity - 20 transform rotate - 45";
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           animate={{
+<<<<<<< HEAD
 <<<<<<< HEAD
 
             duration: 12
@@ -1812,10 +1929,13 @@ ease: "easeInOut"
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           transition={{
             duration: 10
             repeat: Infinity
             ease: 'easeInOut',          }}          }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1865,6 +1985,10 @@ ease: "easeInOut"
             duration: 10,
             repeat: Infinity,
 <<<<<<< HEAD
+=======
+
+          }}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
           }}
@@ -1886,8 +2010,8 @@ ease: "easeInOut"
       <div className='absolute inset-0 bg-gradient-to-tl from-transparent via-transparent to-blue-900/10 pointer-events-none' />;
 
 
-=======
       <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-black/20 pointer-events-none" />
+<<<<<<< HEAD
 =======
       <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-black/20 pointer-events-none" />
 <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-black/20 pointer-events-none" />
@@ -1895,6 +2019,10 @@ ease: "easeInOut"
       <div className="absolute inset-0 bg-gradient-to-tl from-transparent via-transparent to-blue-900/10 pointer-events-none" />
       
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+      <div className="absolute inset-0 bg-gradient-to-tl from-transparent via-transparent to-blue-900/10 pointer-events-none" />
+      
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {/* Content */}
 <<<<<<< HEAD
 
@@ -1904,6 +2032,7 @@ ease: "easeInOut"
   );      {/* Content */}
       <div className="relative z-10">;
         {children}
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       </div>;
     </div>;
@@ -1916,6 +2045,8 @@ ease: "easeInOut"
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             ease: 'easeInOut',            ease: "easeInOut";
           }}
         />;
@@ -1931,6 +2062,7 @@ ease: "easeInOut"
       </div>;
     </div>);
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -1963,6 +2095,8 @@ ease: "easeInOut"
       <div className='absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-black/20 pointer-events-none' />
       <div className='absolute inset-0 bg-gradient-to-tl from-transparent via-transparent to-blue-900/10 pointer-events-none' />
       {/* Content */}
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <div className='relative z-10'>{children}</div>
     </div>
   );      {/* Content */}
@@ -1973,4 +2107,7 @@ ease: "easeInOut"
   )
 }
   );
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

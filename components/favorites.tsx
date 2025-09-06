@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -9,18 +10,36 @@ import Head from 'next/head';
 
 import Link from 'next/link';
 import { TALENT_PROFILES } from '../data/talent';
+=======
+export default function FavoritesPage() {
+
+export default function FavoritesPage() {;
+  const { favorites, remove } = useFavorites();
+  const profiles = useMemo(
+    () => TALENT_PROFILES.filter(t => favorites.includes(t.slug))
+    [favorites]
+  );  const profiles = useMemo(() => TALENT_PROFILES.filter((t) => favorites.includes(t.slug)), [favorites]);
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
   const storageKey = 'zion_favorites';
   const [favorites, setFavorites] = useState<string[]>([]);
-
-
+  useEffect(() => {;
+    try {;
+      const raw = localStorage && localStorage.getItem(storageKey);
+      if (raw) setFavorites(JSON && JSON.parse(raw));    } catch {}
+  }, []);
+  }, []);
+  const remove = (slug: string) =>: any set_favorites ((prev) => prev.filter ((s) => s !== slug)),
+  return { favorites, remove }
+}
 
   return (
     <div>
       <Head>
         <title>Favorites — Zion AI Marketplace</title>
       </Head>
+<<<<<<< HEAD
 
 
       <div className="mb-6 text-sm text-gray-500 dark:text-gray-400">
@@ -57,6 +76,8 @@ function useFavorites() {
   return { favorites, remove };
 }
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export default function FavoritesPage() {;
   const { favorites, remove } = useFavorites();
   const profiles = useMemo(;
@@ -160,14 +181,18 @@ function FavoritesPage() {
             </Link>;
           </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         </div>) : (
         <div className='grid grid - cols - 1 sm:grid - cols - 2 lg:grid - cols - 3 gap - 6'>;
           {profiles.map (t => (
             <div;
               key={t.slug}
+<<<<<<< HEAD
               className='rounded - xl border border - gray - 200 dark:border - gray - 800 p - 5 bg - white / 70 dark:bg - black / 40';
             >;
               <div className='flex items - center justify - between'>;
@@ -200,6 +225,8 @@ function FavoritesPage() {
           </ol>
         </nav>
       </div>
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
     </div>;
@@ -207,7 +234,10 @@ function FavoritesPage() {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     </div>
   );
 }
@@ -245,6 +275,7 @@ function FavoritesPage() {
         </div>)}
     </div>);
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -401,3 +432,5 @@ export default function FavoritesPage() {;
         </nav>
       </div>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

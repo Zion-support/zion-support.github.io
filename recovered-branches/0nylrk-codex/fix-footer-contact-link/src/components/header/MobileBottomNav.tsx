@@ -1,9 +1,9 @@
-
 import React from "react";
 import {Link, useLocation} from "react-router-dom";
 import {Home, Search, BriefcaseIcon, MessageSquare, User, MessageCircle} from "lucide-react";
 import {cn} from "@/lib/utils";
 import {useAuth} from "@/hooks/useAuth";
+<<<<<<< HEAD
 <<<<<<< HEAD
 interface MobileBottomNavProps {;
   unreadCount?: number;
@@ -22,6 +22,8 @@ export function MobileBottomNav(): any ({ unreadCount = 0 }: MobileBottomNavProp
 
 
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from "react",
 import { Link, useLocation } from "react-router-dom",
 import { Home, Search, BriefcaseIcon, MessageSquare, User, MessageCircle } from "lucide-react",
@@ -29,11 +31,20 @@ import { cn } from "@/lib/utils";
 import { useAuth } from "@/hooks/useAuth";
 import { cn } from "@/lib/utils",
 import { useAuth } from "@/hooks/useAuth",
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+}
+export function MobileBottomNav(): any ({ unreadCount = 0 }: MobileBottomNavProps) {;
+  const location = useLocation();
+  const { user } = useAuth();
+  const isAuthenticated = !!user;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface MobileBottomNavProps {
   unreadCount?: number
 }
 
+<<<<<<< HEAD
 
 export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
 
@@ -44,6 +55,8 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {;
   const location = useLocation();
   const { user } = useAuth();
   const isAuthenticated = !!user;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
   const location = useLocation();
   const { user } = useAuth();
@@ -52,18 +65,24 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
   const { user } = useAuth(),
   const isAuthenticated = !!user,
 
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const navItems = [
     {
       name: "Home"
       href: "/"
       icon: Home
       matches: (path: string) => path === "/"
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
 =======
     }
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     {
       name: "Browse"
       href: "/talent"
@@ -71,6 +90,7 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
       matches: (path: string) => path.startsWith("/talent") |path.startsWith("/categories") |path.startsWith("/marketplace")
     }
     {
+<<<<<<< HEAD
       name: "Community"
       href: "/community"
       icon: MessageCircle
@@ -95,6 +115,8 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     {
       name: "Messages"
       href: "/messages"
@@ -102,6 +124,7 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
       matches: (path: string) => path.startsWith("/messages") |path.startsWith("/inbox")
       badge: unreadCount
       authRequired: true
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -115,6 +138,8 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
     }
     },
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     {
       name: "Dashboard"
       href: "/dashboard"
@@ -122,6 +147,7 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
       matches: (path: string) => path.startsWith("/dashboard")
       authRequired: true
     }
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -257,23 +283,31 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {;
   const visibleItems = navItems && navItems.filter(item => ;
     !item && item.authRequired || (item && item.authRequired && isAuthenticated);
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   );
   return (
     <nav className="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-zion-blue-dark/95 backdrop-blur-md border-t border-zion-purple/20">;
       <div className="flex justify-around items-center h-16">;
+<<<<<<< HEAD
 
               "flex flex-col items-center justify-center w-full h-full px-1 py-1"
               item && item.matches(location && location.pathname)
 
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         {visibleItems && visibleItems.map(item => (;
           <Link
             key={item && item.name}
             to={item && item.href}
             className={cn(
+<<<<<<< HEAD
               "flex flex-col items-center justify-center w-full h-full px-1 py-1"
               item && item.matches(location && location.pathname)
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 ? "text-zion-cyan"
                 : "text-white/70 hover:text-white"
             )}>;
@@ -283,6 +317,7 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {;
                 <span className="absolute -top-2 -right-2 bg-zion-purple text-white text-xs rounded-full h-4 w-4 flex items-center justify-center">;
                   {item && item.badge > 9 ? '9+' : item && item.badge}
                 </span>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -298,6 +333,8 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {;
     <nav className="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-zion-blue-dark/95 backdrop-blur-md border-t border-zion-purple/20">;
       <div className="flex justify-around items-center h-16">;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         {visibleItems.map(item => (;
           <Link;
             key={item.name}
@@ -313,17 +350,20 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {;
               <item.icon className="h-5 w-5 mb-1" />;
               {item.badge && item.badge > 0 && (;
                 <span className="absolute -top-2 -right-2 bg-zion-purple text-white text-xs rounded-full h-4 w-4 flex items-center justify-center">;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   {item.badge > 9 ? '9+' : item.badge}
                 </span>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               )}
             </div>;
             <span className="text-xs font-medium">{item && item.name}</span>;
           </Link>;
         ))}
+<<<<<<< HEAD
 
       </div>;
     </nav>;
@@ -416,6 +456,8 @@ export function MobileBottomNav({ unreadCount = 0 } MobileBottomNavProps) {;
       </div>;
     </nav>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from './react';
 import { Link, use_location } from './react-router-dom';
 import { Home, Search, BriefcaseIcon, MessageSquare, User, MessageCircle } from './lucide-react';
@@ -498,6 +540,7 @@ function MobileBottomNav() {
     </nav>);
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
   ),;}
@@ -562,3 +605,5 @@ return ({
   )
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

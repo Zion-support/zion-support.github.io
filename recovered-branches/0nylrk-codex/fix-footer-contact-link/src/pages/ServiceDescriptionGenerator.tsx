@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 class ErrorBoundary extends React.Component {
@@ -25,6 +26,8 @@ class ErrorBoundary extends React.Component {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useState } from "react";
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
@@ -34,6 +37,7 @@ import {SEO} from "@/components/SEO";
 import {useAuth} from "@/hooks/useAuth";
 import {Navigate} from "react-router-dom";
 export default function ServiceDescriptionGenerator() {;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -49,6 +53,8 @@ export default function ServiceDescriptionGenerator() {;
 =======
   const { isAuthenticated, isLoading } = useAuth();
   const [generatedDescription, setGeneratedDescription] = useState<string | null>(null);
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useState } from "react",
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
@@ -67,7 +73,10 @@ export default function ServiceDescriptionGenerator() {
   const { isAuthenticated, isLoading } = useAuth(),
   const [generatedDescription, setGeneratedDescription] = useState<string | null>(null),
   
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   // Show loading while checking authentication
   if (isLoading) {
     return (
@@ -86,6 +95,7 @@ export default function ServiceDescriptionGenerator() {
     setGeneratedDescription(editedDescription)
     // Here you could also save to database if needed
 
+<<<<<<< HEAD
 
   },
 
@@ -96,6 +106,8 @@ export default function ServiceDescriptionGenerator() {
   },
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <div className="min-h-screen flex flex-col bg-zion-blue">
       <SEO
@@ -114,10 +126,13 @@ export default function ServiceDescriptionGenerator() {
             <ServiceDescriptionForm onDescriptionGenerated={setGeneratedDescription} />
             {generatedDescription && (
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
               <GeneratedDescriptionDisplay
               <GeneratedDescriptionDisplay 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useState } from "react",;
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
@@ -129,6 +144,7 @@ import { Navigate } from "react-router-dom",;
 export default function ServiceDescriptionGenerator() {;
   const { isAuthenticated, isLoading } = useAuth(),;
   const [generatedDescription, setGeneratedDescription] = useState<string | null>(null),;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
   // Show loading while checking authentication;
@@ -157,6 +173,11 @@ export default function ServiceDescriptionGenerator() {;
   if (isLoading) {;
     return (;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  // Show loading while checking authentication;
+  if (isLoading) {;
+    return (
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <div className="flex justify-center items-center min-h-screen bg-zion-blue">;
         <div className="animate-pulse text-zion-purple text-lg">;
           Loading...;
@@ -165,14 +186,18 @@ export default function ServiceDescriptionGenerator() {;
     );
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   // Redirect to login if not authenticated;
   if (!isAuthenticated) {;
     return <Navigate to="/login" state={{ from: '/service-description-generator' }} replace />;
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   const handleDescriptionSave = (editedDescription: string) => {;
@@ -218,6 +243,8 @@ export default function ServiceDescriptionGenerator() {;
         description="Generate professional service descriptions using AI";
         keywords="service description, AI content, professional description generator";
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       />;
       <Header />;
       <main className="flex-1 p-6 md:p-10">;
@@ -228,12 +255,18 @@ export default function ServiceDescriptionGenerator() {;
           </p>;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
           <div className="space-y-8">;
             <ServiceDescriptionForm onDescriptionGenerated={setGeneratedDescription} />;
 
             {generatedDescription && (;
+=======
+  const { isAuthenticated, isLoading } = useAuth();
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
+  const [generatedDescription, setGeneratedDescription] = useState<string | null>(null);
               <GeneratedDescriptionDisplay
+<<<<<<< HEAD
 =======
 
               <GeneratedDescriptionDisplay 
@@ -252,10 +285,13 @@ export default function ServiceDescriptionGenerator() {;
             {generatedDescription && (;
               <GeneratedDescriptionDisplay ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 description={generatedDescription}
                 onSave={handleDescriptionSave}
               />;
             )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -371,3 +407,5 @@ min-h-screen flex flex-col bg-zion-blue"> <SEO title=" Service Description Gener
   )
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

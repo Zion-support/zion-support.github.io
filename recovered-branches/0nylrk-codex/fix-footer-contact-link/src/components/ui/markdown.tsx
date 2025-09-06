@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 
@@ -8,12 +9,17 @@
 import React from "react";
 import ReactMarkdown from "react-markdown";
 import {cn} from "@/lib/utils";
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from "react",
 import ReactMarkdown from "react-markdown";
 import { cn } from "@/lib/utils";
 import ReactMarkdown from "react-markdown",
 import { cn } from "@/lib/utils",
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface MarkdownProps {
   content: string;
   className?: string
@@ -24,8 +30,15 @@ export function Markdown({ content, className }: MarkdownProps) {
       <ReactMarkdown>{content}</ReactMarkdown>
     </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import {cn} from "@/lib/utils";
+=======
+  )
+import React from "react",;
+import ReactMarkdown from "react-markdown",;
+import { cn } from "@/lib/utils",;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface MarkdownProps {;
   content: string,;
   className?: string;
@@ -38,12 +51,15 @@ export function Markdown(): any ({ content, className }: MarkdownProps) {;
     </div>;
   );
 }
+<<<<<<< HEAD
 
 =======
 =======
 }
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from './react';
 import ReactMarkdown from './react - markdown';
 import { cn  } from '@/lib / utils';
@@ -61,6 +77,7 @@ function Markdown() {
     </div>);
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
@@ -70,10 +87,15 @@ function Markdown() {
 
   )
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+  )
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   )
 
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 ;
 
@@ -114,3 +136,6 @@ export function Markdown({ content, className }: MarkdownProps) {;
 ;
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

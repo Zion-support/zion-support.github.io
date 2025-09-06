@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -24,6 +25,8 @@ type TalentFormValues = z.infer<typeof talentProfileSchema>,
 type CategoryType = 'programming' | 'devops' | 'platforms' | 'softSkills' | 'other',
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface CategorizedSkills {
   programming: string[]
   devops: string[]
@@ -49,9 +52,12 @@ import {supabase} from "@/integrations/supabase/client";
 import {AspectRatio} from "@/components/ui/aspect-ratio";
 import {useAuth} from "@/hooks/useAuth";
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useState } from "react",
 import { useForm } from "react-hook-form",
 import { zodResolver } from "@hookform/resolvers/zod",
@@ -69,25 +75,11 @@ import {
   FormField;
   FormItem;
   FormLabel;
-import { Badge } from "@/components/ui/badge",
-import { Separator } from "@/components/ui/separator",
-import {
-  Form,
-  FormControl,
-  FormDescription,
-  FormField,
-  FormItem,
-  FormLabel,
   FormMessage} from "@/components/ui/form",
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 import { X, Sparkles, Upload, Clock, Check, Briefcase, MapPin, UserRound } from "lucide-react",
 import { toast } from "@/components/ui/use-toast",
 import { supabase } from "@/integrations/supabase/client",
-import { AspectRatio } from "@/components/ui/aspect-ratio";
-import { useAuth } from "@/hooks/useAuth";
-import { AspectRatio } from "@/components/ui/aspect-ratio",
-import { useAuth } from "@/hooks/useAuth",
-// Define form schema
 
 const talentProfileSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters long"),
@@ -115,7 +107,10 @@ interface CategorizedSkills {
   platforms: string[]
   softSkills: string[]
   other: string[]
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useState } from "react",;
 import { useForm } from "react-hook-form",;
 import { zodResolver } from "@hookform/resolvers/zod",;
@@ -140,6 +135,7 @@ import { toast } from "@/components/ui/use-toast",;
 import { supabase } from "@/integrations/supabase/client",;
 import { AspectRatio } from "@/components/ui/aspect-ratio",;
 import { useAuth } from "@/hooks/useAuth",;
+<<<<<<< HEAD
 // Define form schema;
 const talentProfileSchema = z.object({;
   name: z.string().min(2, "Name must be at least 2 characters long"),;
@@ -163,6 +159,8 @@ type CategoryType = 'programming' | 'devops' | 'platforms' | 'softSkills' | 'oth
 type TalentFormValues = z.infer<typeof talentProfileSchema>,;
 type CategoryType = 'programming' | 'devops' | 'platforms' | 'softSkills' | 'other',;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface CategorizedSkills {;
   programming: string[],;
   devops: string[],;
@@ -174,6 +172,7 @@ interface EnhancedProfile {
   summary: string
   categorizedSkills: CategorizedSkills
 }
+<<<<<<< HEAD
 
 
 export function TalentRegistrationForm() {
@@ -183,12 +182,15 @@ export function TalentRegistrationForm() {
 =======
 export function TalentRegistrationForm() {
   // Remove the useToast() hook since we're importing the toast function directly
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const { user } = useAuth();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [skillTags, setSkillTags] = useState<string[]>([]);
   const [isGenerating, setIsGenerating] = useState(false);
   const [generatedContent, setGeneratedContent] = useState<EnhancedProfile | null>(null);
   const [uploadedAvatar, setUploadedAvatar] = useState<string | null>(null);
+<<<<<<< HEAD
 
 export function TalentRegistrationForm() {
   // Remove the useToast() hook since we're importing the toast function directly;
@@ -207,6 +209,8 @@ export function TalentRegistrationForm() {
   const [uploadedAvatar, setUploadedAvatar] = useState<string | null>(null),
   
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   // Initialize form with default values
   const form = useForm<TalentFormValues>({
     resolver: zodResolver(talentProfileSchema)
@@ -223,41 +227,11 @@ export function TalentRegistrationForm() {
   const handleAddSkill = () => {
     const skillInput = form.getValues("skills"),
     if (skillInput && !skillTags.includes(skillInput)) {
-      setSkillTags([...skillTags, skillInput]),
-      form.setValue("skills", "")
-    }
-
-  }
-  // Handle removing skill tags
-  const handleRemoveSkill = (skill: string) => {
-    setSkillTags(skillTags.filter((s) => s !== skill))
-  }
-  },
-
-  // Handle removing skill tags
-  const handleRemoveSkill = (skill: string) => {
-    setSkillTags(skillTags.filter((s) => s !== skill))
-  },
-
   // Handle key press in skills input (add on enter)
   const handleSkillKeyPress = (e: React.KeyboardEvent) => {
     if (e.key === "Enter") {
       e.preventDefault()
       handleAddSkill()
-  };
-
-    }
-  }
-  // Handle avatar upload
-  const handleAvatarUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const file = e.target.files?.[0];
-    if (file) {
-      const reader = new FileReader()
-      reader.onloadend = () => {
-        setUploadedAvatar(reader.result as string)
-      }
-      reader.readAsDataURL(file)
-    }
   }
   // Generate enhanced profile with AI
   const generateEnhancedProfile = async () => {
@@ -273,6 +247,7 @@ export function TalentRegistrationForm() {;
   const [isGenerating, setIsGenerating] = useState(false),;
   const [generatedContent, setGeneratedContent] = useState<EnhancedProfile | null>(null),;
   const [uploadedAvatar, setUploadedAvatar] = useState<string | null>(null),;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -290,6 +265,9 @@ export function TalentRegistrationForm() {;
   const [generatedContent, setGeneratedContent] = useState<EnhancedProfile | null>(null);
   const [uploadedAvatar, setUploadedAvatar] = useState<string | null>(null);
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   // Initialize form with default values;
   const form = useForm<TalentFormValues>({;
     resolver: zodResolver(talentProfileSchema),;
@@ -302,6 +280,7 @@ export function TalentRegistrationForm() {;
       hourlyRate: "",;
       availability: "available",;
       enhancedProfile: true}}),;
+<<<<<<< HEAD
 
   // Handle adding skill tags;
   const handleAddSkill = () => {;
@@ -309,10 +288,13 @@ export function TalentRegistrationForm() {;
     const skillInput = form && form.getValues("skills");
     if (skillInput && !skillTags && skillTags.includes(skillInput)) {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       setSkillTags([...skillTags, skillInput]);
       form && form.setValue("skills", "");
     }
 
+<<<<<<< HEAD
 =======
     const skillInput = form.getValues("skills"),;
     if (skillInput && !skillTags.includes(skillInput)) {;
@@ -320,6 +302,8 @@ export function TalentRegistrationForm() {;
       form.setValue("skills", "");
     }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   },;
   // Handle removing skill tags;
   const handleRemoveSkill = (skill: string) => {;
@@ -343,17 +327,17 @@ export function TalentRegistrationForm() {;
       reader.readAsDataURL(file);
     }
   },
-    const formData = form.getValues();
-    if (!formData.bio |formData.bio.length < 20) {
+
+
+
 
   // Generate enhanced profile with AI
   const generateEnhancedProfile = async () => {
-    const formData = form.getValues(),
-    if (!formData.bio || formData.bio.length < 20) {
       toast({
         title: "More information needed"
         description: "Please provide at least a detailed bio before generating enhanced content."})
       return
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -371,6 +355,8 @@ export function TalentRegistrationForm() {;
       e && e.preventDefault(),;
       handleAddSkill();
     }
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   };
 
   // Handle avatar upload;
@@ -385,10 +371,14 @@ export function TalentRegistrationForm() {;
     }
   };
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
   },;
@@ -397,36 +387,15 @@ export function TalentRegistrationForm() {;
   const generateEnhancedProfile = async () => {;
     const formData = form && form.getValues();
     if (!formData && formData.bio || formData && formData.bio.length < 20) {;
-    }
-    try {
-      setIsGenerating(true);
-      // Call the Supabase Edge Function
-      const { data, error } = await supabase.functions.invoke('talent-profile-enhancer', {
-        body: {
-          talentData: {
-            name: formData.name
-            title: formData.title
-            bio: formData.bio
-            skills: skillTags
-            location: formData.location
-          }
-        }
-      });
-      if (error) {
-        throw new Error(error.message)
-      }
-      setGeneratedContent(data as EnhancedProfile);
-  },;
-  // Generate enhanced profile with AI;
-  const generateEnhancedProfile = async () => {;
-    const formData = form.getValues(),;
-    if (!formData.bio || formData.bio.length < 20) {;
       toast({;
         title: "More information needed",;
         description: "Please provide at least a detailed bio before generating enhanced content."}),;
       return;
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
     try {;
       setIsGenerating(true);
@@ -447,12 +416,16 @@ export function TalentRegistrationForm() {;
       if (error) {;
         throw new Error(error.message);
 
+<<<<<<< HEAD
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
       }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 ;
@@ -553,50 +526,19 @@ const talentProfileSchema = z.object ({
   availability: z.enum (["available", "limited", "unavailable"]);
   enhanced_profile: z.boolean ().default (true)}),
 type TalentFormValues = z.infer < typeof talentProfileSchema>;
+=======
+      }
+      setGeneratedContent(data as EnhancedProfile);
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ;
-type CategoryType = 'programming' | 'devops' | 'platforms' | 'soft_skills' | 'other';
-;
-interface CategorizedSkills {
-  programming: string[],
-  devops: string[],
-  platforms: string[],
-  soft_skills: string[],
-  other: string[];
-}
-interface EnhancedProfile {
-  summary: string,
-  categorized_skills: CategorizedSkills;
-}
-export /**
- * TalentRegistrationForm - Function description
- */
-function TalentRegistrationForm() {
-  // Remove the use_toast () hook since we're importing the toast function directly;
-  const { user } = use_auth ();
-  const [is_submitting, setIsSubmitting] = useState (false);
-  const [skill_tags, setSkillTags] = useState < string[]>([]);
-  const [is_generating, setIsGenerating] = useState (false);
-  const [generated_content, setGeneratedContent] = useState < EnhancedProfile | null>(null);
-  const [uploaded_avatar, setUploadedAvatar] = useState < string | null>(null);
-;
-  // Initialize form with default values;
-  const form = use_form < TalentFormValues>({
-    resolver: zod_resolver (talentProfileSchema),
-    default_values: {
-      name: user?.display_name || "",
-      title: "",
-      bio: "",
-      location: "",
-      skills: "",
-      hourly_rate: "",
-      availability: "available",
-      enhanced_profile: true}}),
-  // Handle adding skill tags;
-  const handleAddSkill = () =>: any {
-    const skill_input = form.get_values ("skills");
-    if () {) {
+  // Apply generated content to form;
+  const applyGeneratedContent = () =>: any {
+    // Check condition
+if ( {) {
   $2
 }
+<<<<<<< HEAD
       setSkillTags ([...skill_tags, skill_input]);
       form.set_value ("skills", "");
     }
@@ -882,15 +824,40 @@ export function TalentRegistrationForm() {;
   const getCategoryColor = (category: CategoryType) => {
     switch (category) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+      form.set_value ("bio", generated_content.summary);
+;
+      // Extract all skills from categorized skills and properly type cast them;
+      const allCategorizedSkills = generated_content.categorized_skills;
+      const new_skills: string[] = [],
+      // Safely extract and flatten skills from each category;
+      Object.values (allCategorizedSkills).for_each (category_skills => {
+        if () {) {
+  $2
+}
+          category_skills.for_each (skill => {
+            if () {) {
+  $2
+}
+              new_skills.push (skill);
+            }
+          });
+        }
+      });
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       case 'programming': return 'bg-blue-500/20 hover:bg-blue-500/30 text-blue-500';
       case 'devops': return 'bg-green-500/20 hover:bg-green-500/30 text-green-500';
       case 'platforms': return 'bg-amber-500/20 hover:bg-amber-500/30 text-amber-500';
       case 'softSkills': return 'bg-purple-500/20 hover:bg-purple-500/30 text-purple-500';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
   };
 
+<<<<<<< HEAD
 =======
 =======
       case 'other': return 'bg-gray-500/20 hover:bg-gray-500/30 text-gray-500'
@@ -899,6 +866,8 @@ export function TalentRegistrationForm() {;
   }
   };
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       }),;
       if (newSkills.length > 0) {;
         setSkillTags([...skillTags, ...newSkills]);
@@ -917,7 +886,12 @@ export function TalentRegistrationForm() {;
     }
   },
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
   // Send notification email
@@ -980,6 +954,7 @@ export function TalentRegistrationForm() {;
                 bio: values.bio
                 skills: skillTags
                 location: values.location
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
@@ -1045,6 +1020,8 @@ if ( {) {
   const sendEnhancementNotification = async (userId: string, email: string) => {;
     try {;
       await supabase && supabase.functions.invoke('send-email', {;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               }
             }
           });
@@ -1061,32 +1038,16 @@ if ( {) {
                     aiSkills.push(skill)
   },;
   // Send notification email;
-  const sendEnhancementNotification = async (userId: string, email: string) => {;
-    try {;
-      await supabase.functions.invoke('send-email', {;
-        body: {;
-          to: email,;
-          subject: "Your Zion Talent Profile Has Been Enhanced",;
-          html: `;
-          <div style="font-family: Arial, sans-serif, max-width: 600px, margin: 0 auto,">;
-            <h2 style="color: #6D28D9,">Profile Enhancement Complete</h2>;
-            <p>Your profile has been enhanced with AI. You're now more discoverable to recruiters and companies!</p>;
-            <p>We've added a professional summary and categorized your skills to help you stand out.</p>;
-            <p>You can review and edit these enhancements in your profile dashboard.</p>;
-            <div style="margin-top: 30px, padding-top: 20px, border-top: 1px solid #eee,">;
-              <p style="color: #666, font-size: 12px,">© ${new Date().getFullYear()} Zion Marketplace</p>;
-            </div>;
-          </div>;
-          `;
-  };
-  // Handle form submission;
-  const onSubmit = async (values: TalentFormValues) => {;
-    if (skillTags && skillTags.length === 0) {;
+  const sendEnhancementNotification = async (user_id: string, email: string) => {
+    try {
+      await supabase.functions.invoke ('send - email', {
+        body: {
         }
       });
     } catch (error) {;
-      console.error("Failed to send notification email:", error);
+      console && console.error("Failed to send notification email:", error);
     }
+<<<<<<< HEAD
   },;
   // Handle form submission;
   const onSubmit = async (values: TalentFormValues) => {;
@@ -1144,6 +1105,8 @@ if ( {) {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     try {
       // For actual implementation with Supabase;
       // Check condition
@@ -1152,6 +1115,7 @@ if ( {) {
 }
         throw new Error ("User not authenticated");
       }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1227,6 +1191,8 @@ if ( {) {
                     aiSkills && aiSkills.push(skill);
 
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               talent_data: {
                 name: values.name,
                 title: values.title,
@@ -1246,6 +1212,7 @@ if ( {) {
             const categorized_skills = (ai_data as EnhancedProfile).categorized_skills;
             const ai_skills: string[] = [],
             // Extract skills from each category and ensure they're strings;
+<<<<<<< HEAD
 
             Object.values(categorizedSkills).forEach(categorySkills => {;
               if (Array.isArray(categorySkills)) {;
@@ -1325,6 +1292,8 @@ if ( {) {
             // Create a unique set of skills;
             finalSkills = [...new Set([...skillTags, ...aiSkills])];
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             Object.values (categorized_skills).for_each (category_skills => {
               if () {) {
   $2
@@ -1339,6 +1308,7 @@ if ( {) {
                 });
               }
             });
+<<<<<<< HEAD
             // Create a unique set of skills;
             finalSkills = [...new Set([...skillTags, ...aiSkills])];
           }
@@ -1357,27 +1327,30 @@ if ( {) {
             // Create a unique set of skills;
             finalSkills = [...new Set([...skillTags, ...aiSkills])];
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           }
         } catch (error) {
           console.error("Error enhancing profile:", error),
           // Continue with submission even if enhancement fails
           finalSummary = ""
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         } catch (error) {;
           console && console.error("Error enhancing profile:", error);
           // Continue with submission even if enhancement fails;
           finalSummary = "";
-
-
-
         }
       } else if (generatedContent) {;
         finalSummary = generatedContent && generatedContent.summary;
       }
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -1404,6 +1377,8 @@ if ( {) {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       // Create the talent profile
       // In a real implementation, this would save to Supabase
       setTimeout(() => {
@@ -1415,6 +1390,7 @@ if ( {) {
           sendEnhancementNotification(user.id, userEmail)
         }
         setIsSubmitting(false)
+<<<<<<< HEAD
 
 
       }, 1500),
@@ -1427,6 +1403,8 @@ if ( {) {
       }, 1500),
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       // Here would be the actual code to save the profile to Supabase
       /*
       const { error } = await supabase
@@ -1442,6 +1420,7 @@ if ( {) {
           hourly_rate: Number(values.hourlyRate)
           availability_status: values.availability
           // Other fields would be handled here
+<<<<<<< HEAD
 
 
       // Get user email for notification;
@@ -1623,11 +1602,14 @@ if ( {) {
 =======
       console.error("Error creating profile:", error),
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       toast({
         title: "Error Creating Profile"
         description: error.message |"There was an error creating your profile. Please try again."
         variant: "destructive"})
       setIsSubmitting(false)
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       */;
@@ -1640,10 +1622,13 @@ if ( {) {
         variant: "destructive"}),;
       setIsSubmitting(false);
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     }
   }
 
   return (
+<<<<<<< HEAD
 
 =======
 
@@ -1754,6 +1739,10 @@ if ( {) {
 ;
   return (;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  };
+  return (;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <div className="max-w-4xl mx-auto p-4 md:p-6">;
       <Card className="bg-zion-blue-dark border-zion-blue-light">;
         <CardHeader>;
@@ -1762,6 +1751,7 @@ if ( {) {
             Showcase your skills and experience to potential clients and employers.;
           </CardDescription>;
         </CardHeader>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
         <Form {...form}>;
@@ -1777,11 +1767,14 @@ if ( {) {
           <form onSubmit={form.handleSubmit(onSubmit)}>;
             <CardContent className="space-y-8">;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               {/* Basic Information */}
               <div className="space-y-4">;
                 <h3 className="text-lg font-medium text-white">Basic Information</h3>;
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">;
                   <div className="col-span-1">;
+<<<<<<< HEAD
 <<<<<<< HEAD
                     <FormField
                       control={form && form.control}
@@ -1791,6 +1784,11 @@ if ( {) {
                       control={form.control}
                       name="name";
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+                    <FormField
+                      control={form && form.control}
+                      name="name"
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       render={({ field }) => (;
                         <FormItem>;
                           <FormLabel className="text-zion-slate-light">Full Name</FormLabel>;
@@ -1798,10 +1796,12 @@ if ( {) {
                             <div className="relative">;
                               <UserRound className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                               <Input
                                 className="pl-10 bg-zion-blue border-zion-blue-light text-white"
                                 placeholder="Your full name"
-=======
 ;
             // Create a unique set of skills;
             final_skills = [...new Set ([...skill_tags, ...ai_skills])];
@@ -1898,6 +1898,7 @@ if (throw error) {
                               <Input;
                                 className="pl - 10 bg - zion - blue border - zion - blue - light text - white";
                                 placeholder="Your full name";
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
                     />;
@@ -1910,10 +1911,13 @@ if (throw error) {
                                 className="pl-10 bg-zion-blue border-zion-blue-light text-white";
                                 placeholder="Your full name";
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                                 {...field}
                               />;
                             </div>;
                           </FormControl>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
                     />;
@@ -1936,6 +1940,11 @@ if (throw error) {
                       control={form.control}
                       name="title";
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+                    <FormField
+                      control={form && form.control}
+                      name="title"
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       render={({ field }) => (;
                         <FormItem>;
                           <FormLabel className="text-zion-slate-light">Professional Title</FormLabel>;
@@ -1943,10 +1952,12 @@ if (throw error) {
                             <div className="relative">;
                               <Briefcase className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                               <Input
                                 className="pl-10 bg-zion-blue border-zion-blue-light text-white"
                                 placeholder="e && e.g., Senior Software Developer"
-=======
                           <FormMessage className="text - red - 400" />;
                         </FormItem>)}
                     />;
@@ -1964,6 +1975,7 @@ if (throw error) {
                               <Input;
                                 className="pl - 10 bg - zion - blue border - zion - blue - light text - white";
                                 placeholder="e.g., Senior Software Developer";
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
                     />;
@@ -1976,10 +1988,13 @@ if (throw error) {
                                 className="pl-10 bg-zion-blue border-zion-blue-light text-white";
                                 placeholder="e.g., Senior Software Developer";
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                                 {...field}
                               />;
                             </div>;
                           </FormControl>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
                     />;
@@ -2002,6 +2017,11 @@ if (throw error) {
                       control={form.control}
                       name="location";
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+                    <FormField
+                      control={form && form.control}
+                      name="location"
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       render={({ field }) => (;
                         <FormItem>;
                           <FormLabel className="text-zion-slate-light">Location</FormLabel>;
@@ -2009,16 +2029,12 @@ if (throw error) {
                             <div className="relative">;
                               <MapPin className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                               <Input
                                 className="pl-10 bg-zion-blue border-zion-blue-light text-white"
                                 placeholder="City, State/Province, Country"
-=======
-                          <FormMessage className="text - red - 400" />;
-                        </FormItem>)}
-                    />;
-                  </div>;
-                  <div className="col - span - 1">;
-                    <FormField;
                       control={form.control}
                       name="location";
                       render={({ field }) => (
@@ -2030,6 +2046,7 @@ if (throw error) {
                               <Input;
                                 className="pl - 10 bg - zion - blue border - zion - blue - light text - white";
                                 placeholder="City, State / Province, Country";
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
                     />;
@@ -2042,10 +2059,13 @@ if (throw error) {
                                 className="pl-10 bg-zion-blue border-zion-blue-light text-white";
                                 placeholder="City, State/Province, Country";
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                                 {...field}
                               />;
                             </div>;
                           </FormControl>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
                     />;
@@ -2068,6 +2088,11 @@ if (throw error) {
                       control={form.control}
                       name="hourlyRate";
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+                    <FormField
+                      control={form && form.control}
+                      name="hourlyRate"
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       render={({ field }) => (;
                         <FormItem>;
                           <FormLabel className="text-zion-slate-light">Hourly Rate (USD)</FormLabel>;
@@ -2075,10 +2100,12 @@ if (throw error) {
                             <div className="relative">;
                               <span className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate">$</span>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                               <Input
                                 className="pl-8 bg-zion-blue border-zion-blue-light text-white"
                                 placeholder="e && e.g., 85"
-=======
                           <FormMessage className="text - red - 400" />;
                         </FormItem>)}
                     />;
@@ -2096,16 +2123,20 @@ if (throw error) {
                               <Input;
                                 className="pl - 8 bg - zion - blue border - zion - blue - light text - white";
                                 placeholder="e.g., 85";
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
                               <Input;
                                 className="pl-8 bg-zion-blue border-zion-blue-light text-white";
                                 placeholder="e.g., 85";
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                                 {...field}
                               />;
                             </div>;
                           </FormControl>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
                     />;
@@ -2122,6 +2153,8 @@ if (throw error) {
                 </div>;
                 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 {/* Upload Avatar */}
                 <div className="space-y-2">;
                   <FormLabel className="text-zion-slate-light">Profile Picture</FormLabel>;
@@ -2129,6 +2162,7 @@ if (throw error) {
                     <div className="relative w-24 h-24 rounded-full overflow-hidden bg-zion-blue-light border border-zion-blue-light">;
                       {uploadedAvatar ? (;
                         <AspectRatio ratio={1/1}>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
         <Form {...form}>;
@@ -2235,10 +2269,13 @@ if (throw error) {
                       {uploadedAvatar ? (
                         <AspectRatio ratio={1/1}>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                           <img
                             src={uploadedAvatar}
                             alt="Avatar preview"
                             className="w-full h-full object-cover"
+<<<<<<< HEAD
 <<<<<<< HEAD
                           />;
                         </AspectRatio>;
@@ -2278,10 +2315,13 @@ if (throw error) {
                       <Upload className="mr-2 h-4 w-4" />
                       <span>Upload Photo</span>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       <input
                         type="file"
                         accept="image/*"
                         className="hidden"
+<<<<<<< HEAD
 <<<<<<< HEAD
                         onChange={handleAvatarUpload}
 
@@ -2339,16 +2379,21 @@ if (throw error) {
                   </div>;
                   <p className="text-sm text-zion-slate">;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     For best results, use an image at least 400x400 pixels in JPG, PNG, or GIF format.;
                   </p>;
                 </div>;
               </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
 ;
               <Separator className="bg-zion-blue-light/50" />;
 ;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               {/* Bio Section */}
               <div className="space-y-4">;
                 <h3 className="text-lg font-medium text-white">Professional Bio</h3>;
@@ -2363,6 +2408,7 @@ if (throw error) {
                           className="h-32 min-h-[128px] bg-zion-blue border-zion-blue-light text-white";
                           placeholder="Describe your professional background, expertise, and the value you bring to clients...";
                           {...field}
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                         />;
                       </FormControl>;
@@ -2380,6 +2426,8 @@ if (throw error) {
 <<<<<<< HEAD
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 {/* AI Enhancement Option */}
                 <FormField
                   control={form && form.control}
@@ -2387,6 +2435,7 @@ if (throw error) {
                   render={({ field }) => (;
                     <FormItem className="flex flex-row items-center justify-between p-3 border border-zion-blue-light bg-zion-blue/30 rounded-md">;
                       <div className="space-y-0 && 0.5">;
+<<<<<<< HEAD
 =======
                 ;
                 {/* AI Enhancement Option */}
@@ -2397,13 +2446,18 @@ if (throw error) {
                     <FormItem className="flex flex-row items-center justify-between p-3 border border-zion-blue-light bg-zion-blue/30 rounded-md">;
                       <div className="space-y-0.5">;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                         <FormLabel className="text-white flex items-center">;
                           <Sparkles className="w-4 h-4 mr-2 text-zion-purple" />;
                           AI Profile Enhancement;
                         </FormLabel>;
                         <FormDescription className="text-zion-slate-light">;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <Separator className="bg - zion - blue - light / 50" />;
               {/* Bio Section */}
               <div className="space - y-4">;
@@ -2412,6 +2466,7 @@ if (throw error) {
                   control={form.control}
                   name="bio";
                   render={({ field }) => (
+<<<<<<< HEAD
                     <FormItem>;
                       <FormLabel className="text - zion - slate - light">About Yourself</FormLabel>;
                       <FormControl>;
@@ -2442,10 +2497,13 @@ if (throw error) {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                           Let AI help optimize your profile for better visibility and engagement;
                         </FormDescription>;
                       </div>;
                       <FormControl>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
                 />;
@@ -2515,11 +2573,14 @@ if (throw error) {
                 {form.watch("enhancedProfile") && (
                   <div className="flex justify-end">
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     <Button
                       type="button"
                       variant="outline"
                       className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
                       onClick={generateEnhancedProfile}
+<<<<<<< HEAD
 <<<<<<< HEAD
                       disabled={isGenerating}>;
                       <Sparkles className="mr-2 h-4 w-4" />;
@@ -2559,6 +2620,12 @@ if (throw error) {
 =======
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+                      {isGenerating ? "Generating..." : "Generate Enhanced Profile"}
+                    </Button>;
+                  </div>;
+                )}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 {/* Generated Content Display */}
                 {generatedContent && (;
                   <div className="bg-zion-blue-light/20 border border-zion-blue-light rounded-md p-4">;
@@ -2567,6 +2634,7 @@ if (throw error) {
                         <Sparkles className="w-4 h-4 mr-2 text-zion-purple" />;
                         AI-Generated Content;
                       </h4>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
                       disabled={isGenerating}
@@ -2586,10 +2654,13 @@ if (throw error) {
                         AI-Generated Content
                       </h4>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       <Button
                         type="button"
                         size="sm"
                         className="bg-zion-purple hover:bg-zion-purple-dark text-white"
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -2621,6 +2692,8 @@ if (throw error) {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                                 <Badge
                                   className={`w-fit ${getCategoryColor(category as CategoryType)}`}>;
                                   {category}
@@ -2631,6 +2704,7 @@ if (throw error) {
                                       key={skill}
                                       className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none">;
                                       {skill}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
                       <Button;
@@ -2667,6 +2741,8 @@ if (throw error) {
                                       className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none";
                                     >;                                      {skill}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                                     </Badge>;
                                   ))}
                                 </div>;
@@ -2679,6 +2755,7 @@ if (throw error) {
                   </div>;
                 )}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
               </div>;
 
@@ -2691,11 +2768,14 @@ if (throw error) {
               <Separator className="bg-zion-blue-light/50" />;
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               {/* Skills and Availability */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">;
                 {/* Skills Section */}
                 <div className="space-y-4">;
                   <h3 className="text-lg font-medium text-white">Skills & Expertise</h3>;
+<<<<<<< HEAD
 <<<<<<< HEAD
                   <FormField
                     control={form && form.control}
@@ -2705,16 +2785,23 @@ if (throw error) {
                     control={form.control}
                     name="skills";
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+                  <FormField
+                    control={form && form.control}
+                    name="skills"
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     render={({ field }) => (;
                       <FormItem>;
                         <FormLabel className="text-zion-slate-light">Skills</FormLabel>;
                         <div className="flex gap-2">;
                           <FormControl>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                             <Input
                               className="flex-1 bg-zion-blue border-zion-blue-light text-white"
                               placeholder="Add a skill..."
-=======
                         <Switch;
                           checked={field.value}
                           onCheckedChange={field.on_change}
@@ -2801,16 +2888,20 @@ if (throw error) {
                             <Input;
                               className="flex - 1 bg - zion - blue border - zion - blue - light text - white";
                               placeholder="Add a skill...";
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
                             <Input;
                               className="flex-1 bg-zion-blue border-zion-blue-light text-white";
                               placeholder="Add a skill...";
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                               {...field}
                               onKeyDown={handleSkillKeyPress}
                             />;
                           </FormControl>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
                   />;
@@ -2818,6 +2909,8 @@ if (throw error) {
                   <div className="flex flex-wrap gap-2 mt-2">;
                     {skillTags && skillTags.map(skill => (;
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       <Badge
                         key={skill}
                         className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none pl-2 pr-1 py-1 && 1.5 flex items-center gap-1">;
@@ -2834,17 +2927,13 @@ if (throw error) {
                     {skillTags && skillTags.length === 0 && (;
                       <p className="text-zion-slate text-sm italic">No skills added yet</p>;
                     )}
-
-                  </div>;
-                </div>;
-
-
                 {/* Availability Section */}
                 <div className="space-y-4">;
                   <h3 className="text-lg font-medium text-white">Availability</h3>;
                   <FormField
                     control={form && form.control}
                     name="availability"
+<<<<<<< HEAD
 =======
                           <Button;
                             type="button";
@@ -2890,12 +2979,15 @@ if (throw error) {
                     control={form.control}
                     name="availability";
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     render={({ field }) => (;
                       <FormItem className="space-y-4">;
                         <FormLabel className="text-zion-slate-light">Current Status</FormLabel>;
                         <FormControl>;
                           <div className="space-y-2">;
                             <div className="flex items-center space-x-2">;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
                         onClick={applyGeneratedContent}
@@ -3009,10 +3101,13 @@ if (throw error) {
                           <div className="space-y-2">
                             <div className="flex items-center space-x-2">
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                               <input
                                 type="radio"
                                 id="available"
                                 value="available"
+<<<<<<< HEAD
 <<<<<<< HEAD
 
                                 checked={field && field.value === "available"}
@@ -3050,10 +3145,13 @@ if (throw error) {
                             </div>
                             <div className="flex items-center space-x-2">
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                               <input
                                 type="radio"
                                 id="limited"
                                 value="limited"
+<<<<<<< HEAD
 <<<<<<< HEAD
 
                                 checked={field && field.value === "limited"}
@@ -3093,10 +3191,13 @@ if (throw error) {
                             </div>
                             <div className="flex items-center space-x-2">
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                               <input
                                 type="radio"
                                 id="unavailable"
                                 value="unavailable"
+<<<<<<< HEAD
 <<<<<<< HEAD
                                 checked={field && field.value === "unavailable"}
                                 onChange={() => field && field.onChange("unavailable")}
@@ -3183,10 +3284,13 @@ if (throw error) {
 ;
                             <div className="flex items-center space-x-2">;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                               <input;
                                 type="radio";
                                 id="unavailable";
                                 value="unavailable";
+<<<<<<< HEAD
                                 checked={field.value === "unavailable"}
 <<<<<<< HEAD
                                 on_change={() => field.on_change ("unavailable")}
@@ -3202,12 +3306,17 @@ if (throw error) {
                               <label htmlFor="unavailable" className="text-white flex items-center gap-2">;
                                 <div className="h-2 w-2 rounded-full bg-red-500"></div>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                                 Currently Unavailable;
                               </label>;
                             </div>;
                           </div>;
                         </FormControl>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
                   />;
 
@@ -3215,6 +3324,7 @@ if (throw error) {
                     <FormLabel className="text-zion-slate-light">Availability Message</FormLabel>;
                     <Textarea
                       placeholder="Describe your availability, working hours, or when you'll be available next..."
+<<<<<<< HEAD
 =======
                                 checked={field.value === "unavailable"}
                                 onChange={() => field.onChange("unavailable")}
@@ -3564,3 +3674,5 @@ return (<div className="max-w-4xl mx-auto p-4 md:p-6"> <Card className="bg-zion-
 }
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

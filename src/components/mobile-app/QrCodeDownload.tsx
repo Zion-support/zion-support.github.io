@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -24,6 +25,8 @@ import { AppStoreButtons } from "./AppStoreButtons",
 import React from "react",
 import { QrCode } from 'lucide-react'
 import { AppStoreButtons } from "./AppStoreButtons",
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export const QrCodeDownload: React.FC = () => {
   // App store links - these would come from environment variables in production
   const appStoreUrl = "#", // Replace with actual App Store URL
@@ -41,20 +44,13 @@ export const QrCodeDownload: React.FC = () => {
                 Scan the QR code with your phone camera to download the app instantly, or use the buttons below to get it from your app store of choice.
               </p>
               
-
-              <AppStoreButtons 
-              <AppStoreButtons
-                className="mb-8"
-                appStoreUrl = {appStoreUrl,}
-                googlePlayUrl = {googlePlayUrl,}
-              />
-              
               <AppStoreButtons 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                 className="mb-8" 
                 appStoreUrl={appStoreUrl}
                 googlePlayUrl={googlePlayUrl}
               />
+<<<<<<< HEAD
 <<<<<<< HEAD
 
               
@@ -68,14 +64,19 @@ export const QrCodeDownload: React.FC = () => {
 =======
               
               
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
               <div className="flex gap-2 items-center text-sm text-gray-400">
                 <span>Compatible with iOS 14+ and Android 8.0+</span>
               </div>
             </div>
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
             
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
             <div className="flex-shrink-0">
@@ -83,6 +84,7 @@ export const QrCodeDownload: React.FC = () => {
               <div className="bg-white dark: bg-zion-blue-dark p-6 rounded-xl shadow-lg">
                 <div className="w-48 h-48 flex items-center justify-center bg-white dark:bg-zion-blue rounded-lg">
                   <QrCode className="w-full h-full p-4" />
+<<<<<<< HEAD
 
   // App store links - these would come from environment variables in production;
   const appStoreUrl = "#", // Replace with actual App Store URL;
@@ -135,6 +137,8 @@ import { QrCode } from 'lucide-react'import { AppStoreButtons } from "./AppStore
               <div className="bg-white dark:bg-zion-blue-dark p-6 rounded-xl shadow-lg">
                 <div className="w-48 h-48 flex items-center justify-center bg-white dark:bg-zion-blue rounded-lg">
                   <QrCode className="w-full h-full p-4" />
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   {/* This would be replaced with an actual QR code in production */}
                 </div>
                 <p className="text-center text-sm mt-2 text-zion-blue-dark font-medium">
@@ -146,16 +150,11 @@ import { QrCode } from 'lucide-react'import { AppStoreButtons } from "./AppStore
         </div>
       </div>
     </section>
-  );
-};
-";
-}
-"
-
 },
 import React from "react",;
 import { QrCode } from 'lucide-react';
 import { AppStoreButtons } from "./AppStoreButtons",;
+<<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
             
             
@@ -186,12 +185,17 @@ import React from "react",;
 import { QrCode } from 'lucide-react';
 import { AppStoreButtons } from "./AppStoreButtons",;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export const QrCodeDownload: React.FC = () => {;
   // App store links - these would come from environment variables in production;
   const appStoreUrl = "#", // Replace with actual App Store URL;
   const googlePlayUrl = "#", // Replace with actual Google Play URL;
+<<<<<<< HEAD
 
   return (
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <section className="py-16 bg-gradient-to-b from-zion-blue to-zion-blue-dark">;
       <div className="container mx-auto px-4">;
         <div className="max-w-5xl mx-auto">;
@@ -203,6 +207,7 @@ export const QrCodeDownload: React.FC = () => {;
               <p className="text-lg text-gray-300 mb-8">;
                 Scan the QR code with your phone camera to download the app instantly, or use the buttons below to get it from your app store of choice.;
               </p>;
+<<<<<<< HEAD
 
               <AppStoreButtons
                 className="mb-8" 
@@ -218,6 +223,8 @@ export const QrCodeDownload: React.FC = () => {;
 
             <div className="flex-shrink-0">;
               <div className="bg-white dark: bg-zion-blue-dark p-6 rounded-xl shadow-lg">;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <div className="w-48 h-48 flex items-center justify-center bg-white dark:bg-zion-blue rounded-lg">;
                   <QrCode className="w-full h-full p-4" />;
                   {/* This would be replaced with an actual QR code in production */}
@@ -234,7 +241,13 @@ export const QrCodeDownload: React.FC = () => {;
   );
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+
+"
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 ";
                   {/* This would be replaced with an actual QR code in production */}
@@ -250,4 +263,7 @@ export const QrCodeDownload: React.FC = () => {;
     </section>
 
   )
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

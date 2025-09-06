@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -11,12 +12,17 @@
 import Link from 'next / link';
 export type Course = {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+export type Course = {
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   id: string;
   title: string;
   duration_minutes: number;
   level: string;
   is_free: boolean;
   category: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -107,6 +113,8 @@ export default function CourseCard({ course }: { course: Course }) {
   );
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   certification_badge: string,
   description?: string;
 export default /**
@@ -122,7 +130,6 @@ function CourseCard() {
         </span>;
       </div>;
       <div className='text - xs text - gray - 500 mt - 1'>;
-        {course.category} • {course.level} •{' '}
         {Math.round (course.duration_minutes / 60)}h          {course.is_free ? 'Free' : 'Paid'}
         </span>;
       </div>;
@@ -147,6 +154,7 @@ function CourseCard() {
       </div>;
     </div>);
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -169,3 +177,8 @@ function CourseCard() {
 }
   );
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+  );
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -16,6 +17,8 @@ export function ServiceProcessSteps() {
       </h2>
 
 >>>>>>> main
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <div className="grid grid-cols-1 md: grid-cols-4 gap-8">
         <div className="bg-zion-blue-dark p-6 rounded-lg border border-zion-blue-light relative">
           <div className="absolute -top-4 -left-4 w-8 h-8 rounded-full bg-zion-purple flex items-center justify-center text-white font-bold">
@@ -26,10 +29,6 @@ export function ServiceProcessSteps() {
             Choose the country where you need onsite IT support services.
           </p>
         </div>
-<<<<<<< HEAD
-=======
-
->>>>>>> main
         <div className="bg-zion-blue-dark p-6 rounded-lg border border-zion-blue-light relative">
           <div className="absolute -top-4 -left-4 w-8 h-8 rounded-full bg-zion-purple flex items-center justify-center text-white font-bold">
             2
@@ -41,10 +40,6 @@ export function ServiceProcessSteps() {
             Complete the secure payment for your selected location.
           </p>
         </div>
-<<<<<<< HEAD
-=======
-
->>>>>>> main
         <div className="bg-zion-blue-dark p-6 rounded-lg border border-zion-blue-light relative">
           <div className="absolute -top-4 -left-4 w-8 h-8 rounded-full bg-zion-purple flex items-center justify-center text-white font-bold">
             3
@@ -55,10 +50,6 @@ export function ServiceProcessSteps() {
             team.
           </p>
         </div>
-<<<<<<< HEAD
-=======
-
->>>>>>> main
         <div className="bg-zion-blue-dark p-6 rounded-lg border border-zion-blue-light relative">
           <div className="absolute -top-4 -left-4 w-8 h-8 rounded-full bg-zion-purple flex items-center justify-center text-white font-bold">
             4
@@ -74,6 +65,7 @@ export function ServiceProcessSteps() {
       </div>
     </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
   )
 <<<<<<< HEAD
 =======
@@ -84,6 +76,8 @@ export function ServiceProcessSteps() {;
     <div className="my-20">;
       <h2 className="text-2xl font-bold text-white text-center mb-12">How Our IT Onsite Service Works</h2>;
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <div className="grid grid-cols-1 md: grid-cols-4 gap-8">;
         <div className="bg-zion-blue-dark p-6 rounded-lg border border-zion-blue-light relative">;
           <div className="absolute -top-4 -left-4 w-8 h-8 rounded-full bg-zion-purple flex items-center justify-center text-white font-bold">1</div>;
@@ -91,30 +85,42 @@ export function ServiceProcessSteps() {;
           <p className="text-zion-slate-light">Choose the country where you need onsite IT support services.</p>;
         </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
         ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <div className="bg-zion-blue-dark p-6 rounded-lg border border-zion-blue-light relative">;
           <div className="absolute -top-4 -left-4 w-8 h-8 rounded-full bg-zion-purple flex items-center justify-center text-white font-bold">2</div>;
           <h3 className="text-lg font-bold text-white mb-3">Purchase Service</h3>;
           <p className="text-zion-slate-light">Complete the secure payment for your selected location.</p>;
         </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
         ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <div className="bg-zion-blue-dark p-6 rounded-lg border border-zion-blue-light relative">;
           <div className="absolute -top-4 -left-4 w-8 h-8 rounded-full bg-zion-purple flex items-center justify-center text-white font-bold">3</div>;
           <h3 className="text-lg font-bold text-white mb-3">Provide Details</h3>;
           <p className="text-zion-slate-light">Share your site information and technical requirements with our team.</p>;
         </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
         ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <div className="bg-zion-blue-dark p-6 rounded-lg border border-zion-blue-light relative">;
           <div className="absolute -top-4 -left-4 w-8 h-8 rounded-full bg-zion-purple flex items-center justify-center text-white font-bold">4</div>;
           <h3 className="text-lg font-bold text-white mb-3">Service Delivery</h3>;
@@ -124,17 +130,22 @@ export function ServiceProcessSteps() {;
     </div>;
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   );
->>>>>>> main
 }
 
 }
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export /**
  * ServiceProcessSteps - Function description
  */
@@ -167,6 +178,7 @@ function ServiceProcessSteps() {
     </div>);
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 ;
@@ -181,3 +193,5 @@ function ServiceProcessSteps() {
 }
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

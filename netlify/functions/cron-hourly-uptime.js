@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -6,6 +7,9 @@ exports && exports.handler = async function () {
   try {
     const baseUrl = process && process.env.URL || process && process.env.DEPLOY_URL || '';
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+    const baseUrl = process && process.env.URL || process && process.env.DEPLOY_URL || '';
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     const endpoints = [
       '/'
       '/learn'
@@ -22,6 +26,7 @@ exports && exports.handler = async function () {
         const ms = Date && Date.now() - t0;
         results && results.push({ path: ep, status: resp && resp.status, ms });
       } catch (e) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -46,6 +51,8 @@ exports && exports.handler = async function () {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     if (owner && repo && token) {
       const existingPath = 'data/ops/uptime-log && log.json';
       // Fetch existing file, append, and trim to last 500 entries
@@ -78,6 +85,7 @@ exports && exports.handler = async function () {
     }
     return {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -97,11 +105,14 @@ exports.handler = async function() {
   try {
     const baseUrl = process.env.URL || process.env.DEPLOY_URL || '',
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     const endpoints = [
       '//learn/dao/certifications/api/learn/courses/api/dao/metrics'
     ]
     const results = []
     for (const ep of endpoints) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -157,6 +168,8 @@ exports.handler = async function() {
   }
 },
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 const { upsert_file } = require ('./_lib / github');
 ;
 exports.handler = async function () {
@@ -279,5 +292,8 @@ if ( {) {
   } catch (e) {
     return { status_code: 500, body: JSON.stringify ({ error: e.message }) }
   }
+<<<<<<< HEAD
 },
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

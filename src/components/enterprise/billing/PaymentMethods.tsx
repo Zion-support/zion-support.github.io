@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -14,10 +15,14 @@ import {
 import { Button } from '@/components/ui/button'
 <<<<<<< HEAD
 =======
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from "react",
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
 import { CreditCard, Plus, Trash } from 'lucide-react'
+<<<<<<< HEAD
 import { CreditCard, Plus, Trash } from 'lucide-react'
 
 
@@ -26,10 +31,16 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 import { CreditCard, Plus, Trash } from 'lucide-react'
+=======
+
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from "react"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card'
+<<<<<<< HEAD
 xport function PaymentMethods() {
 ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
@@ -43,11 +54,14 @@ import { CreditCard, Plus, Trash } from 'lucide-react'
 
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export function PaymentMethods() {
   // Mock payment methods
 
   const paymentMethods = [
     {
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       id: 'pm-1'
       type: 'credit_card'
@@ -68,6 +82,8 @@ export function PaymentMethods() {
   ]
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       id: 'pm-1',
       type: 'credit_card',
       brand: 'Visa',
@@ -79,8 +95,12 @@ export function PaymentMethods() {
       brand: "Visa",
       last4: "4242",
       expMonth: 12,
+<<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
       expYear: 2025,
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 
@@ -93,6 +113,7 @@ ursor/fix-website-loading-errors-and-merge-6662
       last4: "8888",
       expMonth: 4,
       expYear: 2026,
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       isDefault: false,
     },
@@ -118,10 +139,16 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
 
+=======
+      isDefault: false}
+  ],
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <Card>
       <CardHeader>
         <CardTitle>Payment Methods</CardTitle>
+<<<<<<< HEAD
         <CardDescription>Manage your payment methods for automatic billing</CardDescription>
 
         <CardDescription>
@@ -131,6 +158,8 @@ ursor/fix-website-loading-errors-and-merge-6662
       <CardContent className='space-y-4'>
         {paymentMethods.map(method => (
           <div            key={method.id}
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <CardContent className="space-y-4">
         {paymentMethods.map((method,) => (
           <div
@@ -195,9 +224,13 @@ export function PaymentMethods() {;
         {paymentMethods.map((method) => (
           <div 
             key={method.id}
+<<<<<<< HEAD
             className={`flex items-center justify-between p-4 rounded-lg border ${
 
               method.isDefault ? "bg-muted border-primary" : "border-border";
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             className={`flex items-center justify-between p-4 rounded-lg border ${
               method.isDefault ? "bg-muted border-primary" : "border-border"
             }`}
@@ -210,6 +243,7 @@ export function PaymentMethods() {;
                 <p className="font-medium">
                   {method.brand} •••• {method.last4}
                   {method.isDefault && (
+<<<<<<< HEAD
                     <span className='ml-2 text-xs rounded-full bg-primary/20 text-primary px-2 py-0.5'>                      Default
                     </span>
                   )}
@@ -231,10 +265,13 @@ export function PaymentMethods() {;
 }
 =======
                     <span className="ml-2 text-xs rounded-full bg-primary/20 text-primary px-2 py-0.5">
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       Default
                     </span>
                   )}
                 </p>
+<<<<<<< HEAD
                 <p className='text-sm text-muted-foreground'>                <p className="text-sm text-muted-foreground">
                 <p className="text-sm text-muted-foreground">
             <div className='flex gap-2'>
@@ -245,6 +282,8 @@ export function PaymentMethods() {;
               )}
               <Button size='sm' variant='ghost' className='text-destructive'>
                 <Trash className='h-4 w-4' />              </Button>              {!method.isDefault && (
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
                   Expires {method.expMonth}/{method.expYear}
@@ -253,6 +292,7 @@ export function PaymentMethods() {;
             </div>
 
 
+<<<<<<< HEAD
             <div className="flex gap-2">
               {!method.isDefault && (
 
@@ -275,6 +315,28 @@ export function PaymentMethods() {;
 
         <Button className="gap-1">
 
+=======
+                <Button size="sm" variant="ghost">Set Default</Button>
+              )}
+              <Button size='sm' variant='ghost' className='text-destructive'>;
+                <Trash className='h-4 w-4' />              </Button>              {!method && method.isDefault && (;
+                <Button size="sm" variant="ghost">Set Default</Button>;
+              )}
+              <Button size="sm" variant="ghost" className="text-destructive">;
+                <Trash className="h-4 w-4" />;
+              </Button>;
+            </div>;
+          </div>;
+        ))}
+
+        <Button className="gap-1">
+
+
+        <Button className="gap-1">
+
+      </CardContent>
+      <CardFooter>
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <Plus className="h-4 w-4" />
           Add Payment Method
         </Button>
@@ -283,19 +345,30 @@ export function PaymentMethods() {;
   );
 };
         <Button className="gap-1">
+<<<<<<< HEAD
           <Plus className="h-4 w-4" />
         <Button className="gap-1">
         <Button className="gap-1">
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <Plus className="h-4 w-4" />
           Add Payment Method
         </Button>
       </CardFooter>
     </Card>
+<<<<<<< HEAD
   )
 }
 }
 
 
+=======
+
+
+
+
+  )
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from "react",;
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
@@ -369,11 +442,14 @@ export function PaymentMethods() {;
         ))}
       </CardContent>;
       <CardFooter>;
+<<<<<<< HEAD
         <Button className='gap-1'>;
           <Plus className='h-4 w-4' />          Add Payment Method        <Button className="gap-1">;
       </CardContent>;
       <CardFooter>;
         <Button className="gap-1">;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <Plus className="h-4 w-4" />;
           Add Payment Method;
         </Button>;
@@ -381,6 +457,7 @@ export function PaymentMethods() {;
     </Card>;
   );
 }
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
   );
@@ -492,3 +569,5 @@ function PaymentMethods() {
     </Card>);
 }
 ;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

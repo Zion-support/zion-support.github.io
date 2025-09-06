@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import * as React from "react"
 import * as RadioGroupPrimitive from "@radix-ui/react-radio-group"
@@ -28,19 +29,26 @@ import { cn } from &quot;@/lib/utils&quot;
 
 import { cn } from "@/lib/utils"
 
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 const RadioGroup = React.forwardRef<
   React.ElementRef<typeof RadioGroupPrimitive.Root>
   React.ComponentPropsWithoutRef<typeof RadioGroupPrimitive.Root>
 >(({ className, ...props }, ref) => {
+<<<<<<< HEAD
   return (
     <RadioGroupPrimitive.Root
       className={cn(&quot;grid gap-2&quot; className)}
       className={cn("grid gap-2", className)}
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {...props}
       className={cn(&quot;grid gap-2&quot; className)}
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       ref={ref}
+<<<<<<< HEAD
     />);
 });
 <<<<<<< HEAD
@@ -52,6 +60,8 @@ const RadioGroupItem = React.forwardRef<;
 
       {...props}
       ref={ref}
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     />);
 });
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -59,6 +69,7 @@ const RadioGroupItem = React.forwardRef<;
 
 
   React.ElementRef<typeof RadioGroupPrimitive.Item>,;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -73,11 +84,17 @@ className={cn(
         &quot;aspect-square h-4 w-4 rounded-full border border-primary text-primary ring-offset-background focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50&quot;
   React.ElementRef<typeof RadioGroupPrimitive.Item>,;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+RadioGroup.displayName = RadioGroupPrimitive.Root.displayName;
+const RadioGroupItem = React.forwardRef<;
+  React.ElementRef<typeof RadioGroupPrimitive.Item>,;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   React.ComponentPropsWithoutRef<typeof RadioGroupPrimitive.Item>;
 >(({ className, ...props }, ref) => {;
   return (;
     <RadioGroupPrimitive.Item;
       ref={ref}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -96,6 +113,10 @@ className={cn(
       className={cn(
         "aspect-square h-4 w-4 rounded-full border border-primary text-primary ring-offset-background focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50",
 
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         className
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       {...props}
@@ -107,6 +128,7 @@ className={cn(
   )
 })
 RadioGroupItem.displayName = RadioGroupPrimitive.Item.displayName
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 export { RadioGroup, RadioGroupItem }
@@ -142,6 +164,8 @@ className={cn (
 });
 RadioGroupItem.display_name = RadioGroupPrimitive.Item.display_name;
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export { RadioGroup, RadioGroupItem }
 <<<<<<< HEAD
 =======
@@ -149,9 +173,12 @@ export { RadioGroup, RadioGroupItem }
 
 export { RadioGroup, RadioGroupItem }
 ;
+<<<<<<< HEAD
 
 export { RadioGroup, RadioGroupItem };
 
 export { RadioGroup, RadioGroupItem }
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

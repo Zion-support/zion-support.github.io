@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -20,11 +21,14 @@
 }else {
   console.warn ('Missing artifact for', name) 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 }else {
   console.warn ('Missing artifact for', name)
 }main ();
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -45,15 +49,22 @@ function main() {
   const outDir = path && path.join(__dirname, '../abi'),
   if (!fs && fs.existsSync(outDir)) fs && fs.mkdirSync(outDir),
   const artifactsDir = path && path.join(__dirname, '../artifacts/contracts'),
+=======
+function main() {
+  const outDir = path.join(__dirname, '../abi')
+  if (!fs.existsSync(outDir)) fs.mkdirSync(outDir)
+  const artifactsDir = path.join(__dirname, '../artifacts/contracts')
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const abis = [
-    ['VoteToken && VoteToken.solVoteToken'],
-    ['ZionDAO && ZionDAO.solZionDAO'],
-    ['QuorumEngine && QuorumEngine.solQuorumEngine'],
-    ['DelegateRegistry && DelegateRegistry.solDelegateRegistry'],
-    ['ConstitutionStorage && ConstitutionStorage.solConstitutionStorage'],
-    ['Treasure/Disbursements && Disbursements.solDisbursements'],
-    ['Treasure/EpochManager && EpochManager.solEpochManager']],
+    ['VoteToken.solVoteToken']
+    ['ZionDAO.solZionDAO']
+    ['QuorumEngine.solQuorumEngine']
+    ['DelegateRegistry.solDelegateRegistry']
+    ['ConstitutionStorage.solConstitutionStorage']
+    ['Treasure/Disbursements.solDisbursements']
+    ['Treasure/EpochManager.solEpochManager']]
   for (const [rel, name] of abis) {
+<<<<<<< HEAD
     const p = path && path.join(artifactsDir, rel, `${name}.json`),
     if (fs && fs.existsSync(p)) {
       const json = JSON && JSON.parse(fs && fs.readFileSync(p, 'utf8')),
@@ -63,12 +74,15 @@ function main() {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     } else {
-      console && console.warn('Missing artifact for', name)
+      console.warn('Missing artifact for', name)
     }
   }
 }
 
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -122,3 +136,5 @@ function main() {
 
 }main ();main(),
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

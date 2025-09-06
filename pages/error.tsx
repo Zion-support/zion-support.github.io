@@ -1,11 +1,3 @@
-
-
-      <Head>
-        <title>Authentication Error - Zion Tech Marketplace</title>
-        <meta name="description" content="Authentication error page" />
-      </Head>
-
-
             </div>
             <CardTitle className=&quot;text-2xl font-bold&quot;>Authentication Error</CardTitle>
             <p className=&quot;text-sm text-muted-foreground&quot;>
@@ -23,13 +15,6 @@
                 <li>• Network connectivity issues</li>
                 <li>• Temporary service unavailability</li>
               </ul>
-
-
-              <div className="pt-4 space-y-2">
-                <Button asChild className="w-full">
-                  <Link href="/auth/login">
-
-
                     Try Again
                   </Link>
                 </Button>
@@ -39,12 +24,6 @@
                   </Link>
                 </Button>
               </div>
-
-
-              <div className="text-center text-sm text-muted-foreground pt-4">
-                Need help? <Link href="/contact" className="hover:text-primary">Contact Support</Link>
-
-
               </div>
             </div>
           </CardContent>
@@ -112,6 +91,7 @@ function ErrorPage() {
     </>);
 
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -197,10 +177,13 @@ export default function ErrorPage() {
   )
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 }
@@ -213,3 +196,5 @@ export default function ErrorPage() {
 }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

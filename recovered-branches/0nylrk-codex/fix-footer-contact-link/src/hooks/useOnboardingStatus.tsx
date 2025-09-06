@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 
@@ -8,12 +9,17 @@
 import {useState, useEffect} from "react";
 import {useAuth} from "./useAuth";
 import {supabase} from "@/integrations/supabase/client";
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useState, useEffect } from "react",
 import { useAuth } from "./useAuth";
 import { supabase } from "@/integrations/supabase/client";
 import { useAuth } from "./useAuth",
 import { supabase } from "@/integrations/supabase/client",
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface OnboardingStatus {
 
   profileCompleted: boolean
@@ -26,17 +32,28 @@ interface OnboardingStatus {
   responseReceived: boolean
 }
 
+<<<<<<< HEAD
 
 
 
 
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export function useOnboardingStatus() {;
   const { user } = useAuth();
 export function useOnboardingStatus() {
   const { user } = useAuth(),
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const [status, setStatus] = useState<OnboardingStatus>({
 
     profileCompleted: false
@@ -47,6 +64,7 @@ export function useOnboardingStatus() {
     inviteSent: false
 
     responseReceived: false
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -75,12 +93,15 @@ export function useOnboardingStatus() {
       if (!user) return,
       
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       try {
         // Get user onboarding progress from database
         const { data, error } = await supabase
           .from('user_onboarding')
           .select('*')
           .eq('user_id', user.id)
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -147,6 +168,8 @@ export function useOnboardingStatus() {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         }
         if (data) {
           setStatus({
@@ -158,6 +181,7 @@ export function useOnboardingStatus() {;
             inviteSent: data.talent_invited |false
             responseReceived: data.quote_received |false
           })
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 import {useState, useEffect} from "react";
@@ -222,11 +246,14 @@ export function useOnboardingStatus() {;
       if (!user) return,;
       ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       try {;
         // Get user onboarding progress from database;
         const { data, error } = await supabase;
           .from('user_onboarding');
           .select('*');
+<<<<<<< HEAD
 <<<<<<< HEAD
           .eq('user_id', user && user.id);
           .single();
@@ -287,6 +314,11 @@ export function useOnboardingStatus() {;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+      } catch (err) {;
+        console && console.error("Error in onboarding status hook:", err);
+      }
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useState, useEffect } from './react';
 import { use_auth } from './use_auth';
 import { supabase } from '@/integrations / supabase / client';
@@ -314,6 +346,7 @@ function useOnboardingStatus() {
     response_received: false;
   });
 ;
+<<<<<<< HEAD
   useEffect (() => {
     const fetchOnboardingStatus = async () => {
       // Check condition
@@ -462,3 +495,5 @@ return status;
 }
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

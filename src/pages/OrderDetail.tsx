@@ -1,4 +1,5 @@
 import Link from 'next/link';
+<<<<<<< HEAD
 
 import { useAuth } from '@/hooks/useAuth';
 
@@ -24,6 +25,8 @@ import Link from 'next/link';
 
 import { useAuth } from '@/hooks/useAuth';
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface OrderItem {
   id: string;
   name: string;
@@ -46,6 +49,7 @@ interface Order {
     zip_code: string;
     country: string;
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   payment_method: {
@@ -112,6 +116,8 @@ const getStatusColor = (status: string) => {
   }
 }
 const getStatusIcon = (status: string) => {
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   switch (status) {
     case 'delivered':
       return <CheckCircle className="h-4 w-4" />;
@@ -122,6 +128,7 @@ const getStatusIcon = (status: string) => {
     default:
       return <Clock className="h-4 w-4" />;
   }
+<<<<<<< HEAD
 }
 export default function OrderDetail() {
 <<<<<<< HEAD
@@ -132,6 +139,8 @@ export default function OrderDetail() {
 
 export default function OrderDetail() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const router = useRouter();
   const { user } = useAuth();
   const [order, setOrder] = useState<Order | null>(null);
@@ -145,31 +154,13 @@ export default function OrderDetail() {;
       status: 'shipped'
       total: 299.99
       items: [
-;
-export default /**
- * OrderDetail - Function description
- */
-function OrderDetail() {
-  const router = use_router ();
-  const { user } = use_auth ();
-  const [order, set_order] = useState < Order | null>(null);
-  const [loading, set_loading] = useState (true);
-;
-  useEffect (() => {
-    // Mock data - replace with actual API call;
-    const mock_order: Order = {
-      id: router.query.id as string || '1',
-      order_id: 'ORD - 2024 - 001',
-      date: '2024 - 01 - 15',
-      status: 'shipped',
-      total: 299.99,
-      items: [;
         {
           id: '1'
           name: 'Premium Web Development Service'
           quantity: 1
           price: 299.99
         }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 export default function OrderDetailPage() {;
@@ -221,12 +212,15 @@ export default function OrderDetailPage() {;
       }
       trackingNumber: 'TRK123456789'
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     }
     setOrder(mockOrder);
     setLoading(false);
   }, [router.query.id]);
   if (loading) {
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   const handleCopySummary = async () => {;
@@ -280,6 +274,8 @@ if ( {) {
 }
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     return (
       <div className="container mx - auto px - 4 py - 8">;
         <div className="animate - pulse">;
@@ -292,12 +288,15 @@ if ( {) {
       </div>);
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   if (isLoading || !order) {;
 =======
   if (!order) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     return (
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <div className="container mx-auto px-4 py-8">
         <div className="text-center">
           <h1 className="text-2xl font-bold mb-4">Order not found</h1>
@@ -307,15 +306,17 @@ if ( {) {
               Back to orders
             </Button>
           </Link>
-        </div>
-      </div>
     );
   }
   return (
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <div className="container mx-auto px-4 py-8">
       <div className="mb-6">
         <Link href="/orders">
@@ -326,9 +327,13 @@ if ( {) {
         </Link>
         <h1 className="text-3xl font-bold">Order Details</h1>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         {/* Order Summary */}
@@ -523,6 +528,7 @@ if ( {) {
                 </div>;
                 {order.status === 'shipped' && (
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
                   <div className="flex items-center space-x-3">
                     <div className="w-3 h-3 bg-green-500 rounded-full"></div>
@@ -616,6 +622,14 @@ if ( {) {
 
 
 
+=======
+                  <div className="flex items - center space - x-3">;
+                    <div className="w - 3 h - 3 bg - green - 500 rounded - full"></div>;
+                    <span className="text - sm">Shipped</span>;
+                  </div>)}
+                {order.status === 'delivered' && (
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   <div className="flex items - center space - x-3">;
                     <div className="w - 3 h - 3 bg - green - 500 rounded - full"></div>;
                     <span className="text - sm">Delivered</span>;
@@ -641,8 +655,8 @@ if ( {) {
         </div>;
       </div>;
     </div>);
-;
 }
+<<<<<<< HEAD
 
 
 =======
@@ -672,6 +686,8 @@ if ( {) {
 
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import Link from 'next/link',;
 import { useRouter } from 'next/router',;
 import { Button } from '@/components/ui/button',;
@@ -746,6 +762,7 @@ export default function OrderDetailPage() {;
     )
   }
 
+<<<<<<< HEAD
     <div className="container mx-auto px-4 py-8">
       <div className="mb-6">
         <Link href="/orders">
@@ -1121,3 +1138,5 @@ ursor/fix-website-loading-errors-and-merge-6662
 ;
   return (
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

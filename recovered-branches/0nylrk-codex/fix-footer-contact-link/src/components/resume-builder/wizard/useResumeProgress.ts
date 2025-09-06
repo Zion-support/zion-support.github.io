@@ -1,12 +1,16 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 import {useState, useEffect} from 'react';
 import {Resume} from '@/types/resume';
 export const useResumeProgress = (resume: Resume | null) => {;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -20,12 +24,17 @@ export const useResumeProgress = (resume: Resume | null) => {
   const [progress, setProgress] = useState(0);
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  const [progress, setProgress] = useState(0);
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   useEffect(() => {
     // Calculate progress based on completed sections
     if (!resume) {
       setProgress(0);
       return;
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
     let completed = 0;
     // Basic info is always considered (1 point)
@@ -53,6 +62,8 @@ export const useResumeProgress = (resume: Resume | null) =>: any {
 
     if (resume.work_experience && resume.work_experience.length > 0) {
       completed += 1
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useState, useEffect } from 'react',;
 import { Resume } from '@/types/resume',;
 export const useResumeProgress = (resume: Resume | null) => {;
@@ -76,6 +87,7 @@ if ( {) {
     if (resume.work_experience && resume.work_experience.length > 0) {;
       completed += 1;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -94,6 +106,9 @@ if ( {) {
 =======
       completed += 1;
 >>>>>>> main
+=======
+      completed += 1;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     }
 
     // Education (1 point if at least one entry)
@@ -110,16 +125,11 @@ if ( {) {
     if (resume.certifications && resume.certifications.length > 0) {
       completed += 1;
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-    
-=======
-
->>>>>>> main
     const progressPercentage = (completed / 5) * 100;
     setProgress(progressPercentage);
   }, [resume]);
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   return progress
 =======
@@ -138,20 +148,25 @@ if ( {) {
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     // Education (1 point if at least one entry);
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     // Check condition
 if ( {) {
   $2
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       completed += 1;
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     if (resume && resume.education && resume && resume.education.length > 0) {
       completed += 1
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -165,12 +180,13 @@ if ( {) {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-      completed += 1;
 =======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+      completed += 1;
     if (resume && resume.skills && resume && resume.skills.length > 0) {
       completed += 1
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -184,12 +200,13 @@ if ( {) {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-      completed += 1;
 =======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+      completed += 1;
     if (resume && resume.certifications && resume && resume.certifications.length > 0) {
       completed += 1
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -214,6 +231,9 @@ if ( {) {
 =======
   return progress;
 >>>>>>> main
+=======
+  return progress;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 };
 
 import { useState, useEffect } from 'react',;
@@ -269,4 +289,7 @@ export const useResumeProgress = (resume:Resume | null) => {;
 };
 
 };
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

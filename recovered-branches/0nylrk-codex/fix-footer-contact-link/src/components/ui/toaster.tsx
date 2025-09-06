@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -19,16 +20,30 @@ import {Toaster, as, SonnerToaster} from "sonner";
 import * as React from "react",
 import { Toaster as SonnerToaster } from "sonner",
 <<<<<<< HEAD
+=======
+import { Toaster as SonnerToaster } from "sonner";
+import * as React from "react",
+import { Toaster as SonnerToaster } from "sonner",
+import {Toaster, as, SonnerToaster} from "sonner";
+import * as React from "react",
+import { Toaster as SonnerToaster } from "sonner",
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+import * as React from "react",
+import { Toaster as SonnerToaster } from "sonner",
+
+import {Toaster, as, SonnerToaster} from "sonner";
+import * as React from "react",
+import { Toaster as SonnerToaster } from "sonner",
+
 export function Toaster() {
   return (
 
-=======
 import {Toaster, as, SonnerToaster} from "sonner";
 export function Toaster() {;
   return (
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 import {Toaster, as, SonnerToaster} from "sonner";
@@ -38,6 +53,8 @@ export function Toaster() {
   return (
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <SonnerToaster
       position="top-right"
       toastOptions={{
@@ -51,6 +68,7 @@ export function Toaster() {
         descriptionClassName: "text-zion-slate-light"}}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -62,6 +80,10 @@ export function Toaster() {
   )
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import * as React from "react",;
 import { Toaster as SonnerToaster } from "sonner",;
 export function Toaster() {;
@@ -77,12 +99,15 @@ export function Toaster() {;
         duration: 4000;
         descriptionClassName: "text-zion-slate-light"}}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     />;
   );
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 }
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 import * as React from './react';
 import { Toaster, as, SonnerToaster } from './sonner';
@@ -103,6 +128,7 @@ function Toaster() {
         descriptionClassName: "text - zion - slate - light"}}
     />);
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 
 =======
@@ -121,3 +147,6 @@ function Toaster() {
 }
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

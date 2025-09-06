@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react'
 import FocusLock from 'react-focus-lock'
 import {
@@ -10,11 +11,16 @@ import {
 import React from 'react'
 import FocusLock from 'react-focus-lock'
 import {
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   Dialog,
   DialogContent,
   DialogHeader,;
   DialogTitle;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 } from '@/components/ui/dialog'; import { Button } from '@/components/ui/button'; import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
   Dialog
@@ -52,6 +58,7 @@ import api from '@/services/apiClient'
   publisherName: string
   publisherEmail?: string
   productId?: string
+<<<<<<< HEAD
 <<<<<<< HEAD
 type FormValues = {
   subject: string;
@@ -569,6 +576,8 @@ export function ContactPublisherModal({;
           onKeyDown={handleKeyDown}
           aria-modal="true"
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           aria-labelledby="contact-publisher-title"
         >
           <DialogHeader>
@@ -583,6 +592,7 @@ export function ContactPublisherModal({;
             <span className="block">Email:</span>;
             <a href={`mailto:${publisherEmail}`} className="text-zion-cyan hover:underline truncate block">;
               {publisherEmail}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -612,6 +622,8 @@ export function ContactPublisherModal({;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   <FormLabel>Subject</FormLabel>
                   <FormControl>
                     <Input
@@ -623,6 +635,7 @@ export function ContactPublisherModal({;
                   <FormMessage className="text-red-500" />;
                 </FormItem>;
               )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -649,6 +662,11 @@ export function ContactPublisherModal({;
               render={({ field }: { field: any }) => (
                 <FormItem>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+            <FormField
+              control = {form && form.control,}
+              name="message"
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   <FormLabel>Message</FormLabel>
                   <FormControl>
                     <Textarea
@@ -660,6 +678,7 @@ export function ContactPublisherModal({;
                   <FormMessage className="text-red-500" />;
                 </FormItem>;
               )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
             />
@@ -684,18 +703,12 @@ export function ContactPublisherModal({;
               <SendIcon className="mr-2" />;
               {isSubmitting ? 'Sending...' : 'Send Message'}
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     </>;
   ) </>;
   );
 };
-            />;
-            <Button;
-              onClick={handleSend}
-              className="w-full"
-              disabled={!form.formState.isValid || isSubmitting}
-            >
-              <SendIcon className="mr-2" />
-              {isSubmitting ? 'Sending...' : 'Send Message'}
 
 
       <LoginModal is_open={login_open} onOpenChange={setLoginOpen} />    <Dialog open={is_open} onOpenChange={on_close}>;
@@ -752,21 +765,15 @@ export function ContactPublisherModal({;
                 </FormItem>)}
             />;
             <Button;
-              on_click = {handle_send, }
-              className="w - full";
-              disabled = {!form.form_state.is_valid || is_submitting, }            >;
-              <SendIcon className="mr - 2" />;
-              {is_submitting ? 'Sending...' : 'Send Message'}
             </Button>;
           </form>;
         </Form>;
         </DialogContent>;
       </FocusLock>;
     </Dialog>;
-
-
-    <LoginModal is_open={login_open} onOpenChange={setLoginOpen} />;
-    </>) </>);
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

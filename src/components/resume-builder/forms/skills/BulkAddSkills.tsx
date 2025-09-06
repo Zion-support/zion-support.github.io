@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
           
 
@@ -74,6 +75,10 @@ export const BulkAddSkills = ({ resumeId, onSuccess }: BulkAddSkillsProps) => {;
       setError('Please enter some skills to categorize'),;
       return;
     }
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ;
     setError(null),;
     try {;
@@ -137,15 +142,12 @@ export const BulkAddSkills = ({ resumeId, onSuccess }: BulkAddSkillsProps) => {;
     } catch (err: any) {
       setError(err.message |'Failed to categorize skills')
     }
-  }
-  }
-  },
-
   return (
     <div className="bg-muted/40 p-6 rounded-lg">
       <h3 className="text-md font-medium mb-4">Bulk Add & AI Categorization</h3>
       <div className="space-y-4">
         <div className="space-y-2">
+<<<<<<< HEAD
         <Button
           onClick = {handleCategorizeSkills,}
           disabled = {isEnhancing |!bulkSkills.trim(),}
@@ -177,20 +179,12 @@ ursor/fix-website-loading-errors-and-merge-6662
           <Textarea
             className="min-h-24"
             placeholder="Python, React, TypeScript, Project Management, Communication..."
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             value = {bulkSkills,}
             onChange = {(e,) => setBulkSkills(e.target.value),}
           />
         </div>
-        <Button
-          onClick = {handleCategorizeSkills,}
-          disabled = {isEnhancing |!bulkSkills.trim(),}
-          <label className="text-sm font-medium">Enter multiple skills (comma separated)</label>
-          <Textarea 
-            className="min-h-24"
-            placeholder="Python, React, TypeScript, Project Management, Communication..."
-        <Button 
-          onClick = {handleCategorizeSkills,}
-          disabled = {isEnhancing || !bulkSkills.trim(),}
             value={bulkSkills}
             onChange={(e) => setBulkSkills(e.target.value)}
           />;
@@ -206,6 +200,7 @@ ursor/fix-website-loading-errors-and-merge-6662
           )}
           Categorize with AI
         </Button>
+<<<<<<< HEAD
         <p className="text-xs text-muted-foreground mt-1">
           AI will identify skills and categorize them automatically. This may take a moment to process.
         </p>
@@ -225,14 +220,51 @@ ursor/fix-website-loading-errors-and-merge-6662
         {error && <Alert variant="destructive"><AlertDescription>{error}</AlertDescription></Alert>}
       </div>
     </div>
-  )
+=======
+        {error && <Alert variant="destructive"><AlertDescription>{error}</AlertDescription></Alert>}
+      </div>;
+    </div>);
 }
+
+            onChange = {(e,) => setBulkSkills(e && e.target.value),}
+          />;
+        </div>;
+
+        <Button
+          onClick = {handleCategorizeSkills,}
+          disabled = {isEnhancing || !bulkSkills && bulkSkills.trim(),}
+          className="gap-2">;
+          {isEnhancing ? (;
+            <Loader2 className="h-4 w-4 animate-spin" />;
+          ) : (;
+            <Sparkles className="h-4 w-4" />;
+          )}
+          Categorize with AI;
+        </Button>;
+
+        <p className="text-xs text-muted-foreground mt-1">;
+          AI will identify skills and categorize them automatically. This may take a moment to process.;
+        </p>;
+
+        
+        <p className="text-xs text-muted-foreground mt-1">
+          AI will identify skills and categorize them automatically. This may take a moment to process.
+        </p>
+        
+        {error && <Alert variant="destructive"><AlertDescription>{error}</AlertDescription></Alert>}
+
 '"
 
+'";
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+  )
 },
+<<<<<<< HEAD
 },
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 '"
 
 '";
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -1,4 +1,3 @@
-
 import {useState, useEffect} from "react";
 import {useSearchParams} from "react-router-dom";
 import {AppLayout} from "@/layout/AppLayout";
@@ -16,6 +15,7 @@ import {ServiceIncludes} from "@/components/services/PageSections/ServiceInclude
 import {EnterpriseCallToAction} from "@/components/services/PageSections/EnterpriseCallToAction";
 export default function ITOnsiteServicesPage() {;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   const [searchParams] = useSearchParams();
   const [selectedCountry, setSelectedCountry] = useState<CountryPricing | null>(null),
@@ -27,6 +27,8 @@ export default function ITOnsiteServicesPage() {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const [searchParams] = useSearchParams();
   const [selectedCountry, setSelectedCountry] = useState<CountryPricing | null>(null);
   const [searchQuery, setSearchQuery] = useState("");
@@ -60,12 +62,17 @@ import { EnterpriseCallToAction } from "@/components/services/PageSections/Enter
 export default function ITOnsiteServicesPage() {
   const [searchParams] = useSearchParams(),
   const [selectedCountry, setSelectedCountry] = useState<CountryPricing | null>(null),
+<<<<<<< HEAD
   const [searchQuery, setSearchQuery] = useState(""),
   
   // Check for success parameter in URL
   const success = searchParams.get("success"),
   
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  const [searchQuery, setSearchQuery] = useState("");
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   // Show success toast if redirected from successful payment
   useEffect(() => {
     if (success === "true") {
@@ -73,6 +80,7 @@ export default function ITOnsiteServicesPage() {
         title: "Payment Successful"
         description: "Your IT onsite service request has been received. Our team will contact you shortly."})
     }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -91,6 +99,8 @@ export default function ITOnsiteServicesPage() {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   // Filter countries based on search query
   const filteredCountries = onsiteServicePricing
     .filter(country =>
@@ -98,6 +108,7 @@ export default function ITOnsiteServicesPage() {
     )
     .sort((a, b) => {
       // First, sort by popular status
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -125,6 +136,8 @@ export default function ITOnsiteServicesPage() {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const handleCountrySelect = (country: CountryPricing) => {
     setSelectedCountry(country)
     // Scroll to the service details section
@@ -132,6 +145,7 @@ export default function ITOnsiteServicesPage() {
       document.getElementById('service-details')?.scrollIntoView({ behavior: 'smooth' })
     }, 100)
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -254,19 +268,18 @@ export default function ITOnsiteServicesPage() {;
   };
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <AppLayout>;
       <section className="py-16 bg-zion-blue">;
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">;
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           {/* Hero Section with Features */}
 
           <PageHero />;
 
           {/* Country Selection Tabs */}
+<<<<<<< HEAD
           <div className="mb-12">;
 
             <CountryTabs
@@ -348,11 +361,19 @@ export default function ITOnsiteServicesPage() {;
             <CountryTabs
             <CountryTabs 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+          <div className="mb-12">
+            <CountryTabs
+            <CountryTabs 
+          {/* Hero Section with Features */}
+            <CountryTabs
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               popularCountries={popularCountries}
               filteredCountries={filteredCountries}
               handleCountrySelect={handleCountrySelect}
               searchQuery={searchQuery}
               setSearchQuery={setSearchQuery}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
             />;
@@ -363,10 +384,13 @@ export default function ITOnsiteServicesPage() {;
             />
           </div>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           {/* Service Details Section */}
           <ServiceDetailsSection
             selectedCountry={selectedCountry}
             setSelectedCountry={setSelectedCountry}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
           />;
@@ -472,16 +496,10 @@ function ITOnsiteServicesPage() {
   const [search_params] = useSearchParams ();
   const [selected_country, setSelectedCountry] = useState < CountryPricing | null>(null);
   const [search_query, setSearchQuery] = useState ("");
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ;
-  // Check for success parameter in URL;
-  const success = search_params.get ("success");
-;
-  // Show success toast if redirected from successful payment;
-  useEffect (() => {
-    // Check condition
-if ( {) {
-  $2
-}
       toast ({
         title: "Payment Successful",
         description: "Your IT onsite service request has been received. Our team will contact you shortly."});
@@ -564,6 +582,7 @@ if (return 1) {
       <QuoteFormSection />;
     </AppLayout>);
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -611,3 +630,6 @@ if (return 1) {
 ;
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

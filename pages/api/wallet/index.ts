@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -54,6 +55,8 @@ export default function handler(_req: NextApiRequest, _res: NextApiResponse) {_c
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getWalletSummary } from "../../../utils/token/service";
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import type { NextApiRequest, NextApiResponse } from 'next';
 import {getWalletSummary} from '../../../utils/token/service';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {;
@@ -62,11 +65,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   if (!userId |typeof userId !== 'string') {
     return res.status(400).json({ error: 'Missing userId' });
 
-  }
-  try {
-    const summary = null;
-    return res.status(200).json(summary)
-  } catch (err: any) {
     return res.status(500).json({ error: err.message |'Unknown error' });
   }
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -86,6 +84,16 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+import type { NextApiRequest, NextApiResponse } from 'next';
+import {getWalletSummary} from '../../../utils / token / service';
+export default /**
+ * handler - Function description
+ */
+function handler() {
+  const { user_id } = req.query;
+  // Check condition
+if ( {) {
+  $2
 }
   } catch (error) {
     console.error("Error:", error);
@@ -96,60 +104,18 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const summary = getWalletSummary(userId),
     return res.status(200).json(summary)
   } catch (err: any) {
-    return res.status(500).json({ error: err.message || "Unknown error" })
-import type { NextApiRequest, NextApiResponse } from "next";
-import { getWalletSummary } from "../../../utils/token/service";
-export default function handler(req, res) {
-  try {
-  const { userId } = req.query;
-  if (!userId || typeof userId !== "string") {;
-    return res.status(400).json({ error: "Missing userId" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  try {
-    const summary = getWalletSummary(userId);
-    return res.status(200).json(summary);
-  } catch (error) {
-    return res.status(500).json({ error: err.message || "Unknown error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
   }
 }
   }
 
 
 }
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+    return res.status (500).json ({ error: err.message || 'Unknown error' });
+  }
+
+import type { NextApiRequest, NextApiResponse } from 'next';
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

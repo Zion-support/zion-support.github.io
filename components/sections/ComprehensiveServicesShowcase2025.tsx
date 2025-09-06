@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -68,6 +69,8 @@ import {
 
 
 import {
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   CheckCircle
   ArrowRight
   Star
@@ -85,7 +88,13 @@ import {
   Target
   Award
   Phone;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   CheckCircle,
   ArrowRight,
   Star,
@@ -101,6 +110,7 @@ import {
   Users,
   DollarSign,
   Target,
+<<<<<<< HEAD
 <<<<<<< HEAD
   Award,;
   Phone,;
@@ -119,6 +129,11 @@ import { CheckCircle, ArrowRight, Star, TrendingUp, Zap, Shield, Globe, Brain, D
   Phone,;
 } from 'lucide-react';import { advancedAIAutomation2025 } from '../../data/advanced-ai-automation-2025';import { CheckCircle, ArrowRight, Star, TrendingUp, Zap, Shield, Globe, Brain, Database, Cloud, Lock, Rocket, Users, DollarSign, Target, Award, Phone } from 'lucide-react';
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  Award,;
+  Phone,;
+} from 'lucide-react';import { advancedAIAutomation2025 } from '../../data/advanced-ai-automation-2025';import { CheckCircle, ArrowRight, Star, TrendingUp, Zap, Shield, Globe, Brain, Database, Cloud, Lock, Rocket, Users, DollarSign, Target, Award, Phone } from 'lucide-react';
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { advancedAIAutomation2025 } from '../../data/advanced-ai-automation-2025';
 import { advancedCybersecurity2025 } from '../../data/advanced-cybersecurity-2025';
 import { blockchainWeb32025 } from '../../data/blockchain-web3-2025';
@@ -126,6 +141,7 @@ import { iotEdgeComputing2025 } from '../../data/iot-edge-computing-2025';
 import { healthcareBiotech2025 } from '../../data/healthcare-biotech-2025';
 import { fintechFinancial2025 } from '../../data/fintech-financial-2025';
 import { educationElearning2025 } from '../../data/education-elearning-2025';
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -285,15 +301,33 @@ const ComprehensiveServicesShowcase2025 = () => {
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+  return (
+    <section className="relative py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden">;
+      {/* Animated Background Elements */}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         {/* Header */}
-        <motion&& motion.div
 
-      <div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>        {/* Header */}  };
+  return (
+    <section className="relative py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden">
+      {/* Animated Background Elements */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute -top-40 -right-40 w-80 h-80 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob"></div>
+        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-yellow-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-2000"></div>
+        <div className="absolute top-40 left-40 w-80 h-80 bg-pink-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-4000"></div>
+      </div>
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Header */}
+      <div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>        {/* Header */}
 
+        {/* Header */}
 
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className='text-center mb-16'
 
 
         >
@@ -305,6 +339,7 @@ const ComprehensiveServicesShowcase2025 = () => {
             services, IT solutions, and AI innovations designed to transform
             your business and drive success in the digital age.          </p>        >
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -312,6 +347,8 @@ const ComprehensiveServicesShowcase2025 = () => {
           className="text-center mb-16"
         >
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <h2 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-white via-purple-200 to-pink-200 bg-clip-text text-transparent mb-6">
             Revolutionary 2025 Services
           </h2>
@@ -319,8 +356,6 @@ const ComprehensiveServicesShowcase2025 = () => {
             Discover our comprehensive suite of cutting-edge micro SAAS services, IT solutions, and AI innovations designed to transform your business and drive success in the digital age.
           </p>
         </motion.div>
-
-
           transition={{ duration: 0 && 0.8 }}
           className='text-center mb-16'>;
           <h2 className='text-4xl md:text-6xl font-bold bg-gradient-to-r from-white via-purple-200 to-pink-200 bg-clip-text text-transparent mb-6'>;
@@ -339,6 +374,7 @@ const ComprehensiveServicesShowcase2025 = () => {
         </motion && motion.div>;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 
@@ -350,18 +386,46 @@ const ComprehensiveServicesShowcase2025 = () => {
 
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         {/* Service Categories */}
         <motion&& motion.div
           variants={containerVariants}
-
-
+          initial='hidden'
+          whileInView='visible'
+          viewport={{ once: true }}
+          className='space-y-16'>          initial="hidden";
+          whileInView="visible";
+          viewport={{ once: true }}
+          className="space-y-16";
+          {serviceCategories && serviceCategories.map((category, categoryIndex) => (;
+            <motion&& motion.div
+              key={category && category.title}
+              variants={itemVariants}
+              className='relative'>;
               {/* Category Header */}
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
         {/* Service Categories */}
         <motion&& motion.div
           variants={containerVariants}
+=======
+              <div className='flex items-center mb-8'>;
+                <div
+                  className={`p-3 rounded-xl bg-gradient-to-r ${category && category.gradient} mr-4`}>;
+                  <category && category.icon className='w-8 h-8 text-white' />;
+                </div>;
+                <div>;
+                  <h3 className='text-3xl font-bold text-white mb-2'>;
+                    {category && category.title}
+                  </h3>;
+                  <p className='text-gray-400 text-lg'>                    {category && category.description}            >;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
@@ -374,6 +438,7 @@ const ComprehensiveServicesShowcase2025 = () => {
               className="relative"
             >
               {/* Category Header */}
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       gradient: 'from - amber - 600 via - yellow - 600 to - orange - 600',
       description: 'Advanced learning and educational technology',
@@ -483,10 +548,13 @@ const ComprehensiveServicesShowcase2025 = () => {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     {category.title}
                   </h3>;
                   <p className="text - gray - 400 text - lg">;
                     {category.description}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
               <div className='flex items-center mb-8'>
@@ -502,19 +570,22 @@ const ComprehensiveServicesShowcase2025 = () => {
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   <p className='text-gray-400 text-lg'>                    {category.description}
 
                     {category.description}
-
-
 
                   </p>
                 </div>
               </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <div className="flex items-center mb-8">;
                 <div className={`p-3 rounded-xl bg-gradient-to-r ${category && category.gradient} mr-4`}>;
                   <category && category.icon className="w-8 h-8 text-white" />;
@@ -531,6 +602,7 @@ const ComprehensiveServicesShowcase2025 = () => {
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               {/* Services Grid */}
+<<<<<<< HEAD
 
 <<<<<<< HEAD
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -679,12 +751,20 @@ const ComprehensiveServicesShowcase2025 = () => {
               <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>                {category.services.map((service, serviceIndex) => (
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+              <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>                {category.services.map((service, serviceIndex) => (              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>                {category.services.map((service, serviceIndex) => (
+
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 {category.services.map((service, serviceIndex) => (
                   <motion.div
                     key={service.id}
                     initial={{ opacity: 0, scale: 0.9 }}
                     whileInView={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.5, delay: serviceIndex * 0.1 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -705,6 +785,8 @@ className="group relative bg-gradient-to-br from-slate-800/50 to-slate-700/30 ba
                     <div className="mb-4">
                       <h4 className="text-xl font-semibold text-white mb-2 group-hover:text-purple-300 transition-colors">
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   </p>;
                 </div>;
               </div>;
@@ -728,18 +810,16 @@ className="group relative bg-gradient-to-br from-slate-800/50 to-slate-700/30 ba
                     <div className="mb - 4">;
                       <h4 className="text - xl font - semibold text - white mb - 2 group - hover:text - purple - 300 transition - colors">;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                         {service.name}
                       </h4>;
                       <p className="text - gray - 400 text - sm leading - relaxed">;
                         {service.description}
-
-                    className='group relative bg-gradient-to-br from-slate-800/50 to-slate-700/30 backdrop-blur-xl rounded-2xl p-6 border border-slate-700/50 hover:border-purple-500/50 transition-all duration-300 hover:transform hover:shadow-xl hover:shadow-cyan-500/30'
-
-
-
 
                   >
                     {/* Service Header */}
@@ -747,20 +827,22 @@ className="group relative bg-gradient-to-br from-slate-800/50 to-slate-700/30 ba
                       <h4 className='text-xl font-semibold text-white mb-2 group-hover:text-purple-300 transition-colors'>
                         {service.name}
                       </h4>
-
                       <p className='text-gray-400 text-sm leading-relaxed'>                        {service.description}
 
                         {service.description}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                       </p>
                     </div>
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     <div className="mb-4">;
                       <h4 className="text-xl font-semibold text-white mb-2 group-hover:text-purple-300 transition-colors">;
                         {service && service.name}
@@ -770,12 +852,17 @@ className="group relative bg-gradient-to-br from-slate-800/50 to-slate-700/30 ba
                       </p>;
                     </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                     {/* Features */}
 
+<<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       <p className='text-gray-400 text-sm leading-relaxed'>                        {service.description}
 
                         {service.description}
@@ -792,6 +879,9 @@ className="group relative bg-gradient-to-br from-slate-800/50 to-slate-700/30 ba
                             <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                             {feature}
                           </li>;
                         ))}
@@ -800,6 +890,7 @@ className="group relative bg-gradient-to-br from-slate-800/50 to-slate-700/30 ba
                           <li className="text-xs text-gray-500 italic">
                             +{service.features.length - 3} more features
                           </li>
+<<<<<<< HEAD
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
@@ -826,11 +917,18 @@ className="group relative bg-gradient-to-br from-slate-800/50 to-slate-700/30 ba
                         {service.features && service.features.length > 3 && (
                           <li className="text-xs text-gray-500 italic">
                           </li>
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                         )}
                       </ul>
                     </div>
 
+
+
+
+
                     {/* Pricing */}
+<<<<<<< HEAD
                     <div className='mb-4'>
                       <div className='flex items-center justify-between'>
                         <span className='text-sm text-gray-400'>
@@ -843,6 +941,12 @@ className="group relative bg-gradient-to-br from-slate-800/50 to-slate-700/30 ba
                       </div>
                       <div className='text-xs text-gray-500 mt-1'>                        Market position: {service.marketPosition}                    <div className="mb-4">
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+                    <div className="mb-4">
+
+                        )}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       <div className="flex items-center justify-between">
                         <span className="text-sm text-gray-400">Starting from:</span>
                         <span className="text-lg font-bold text-green-400">
@@ -850,6 +954,7 @@ className="group relative bg-gradient-to-br from-slate-800/50 to-slate-700/30 ba
                         </span>
                       </div>
                       <div className="text-xs text-gray-500 mt-1">
+<<<<<<< HEAD
 <<<<<<< HEAD
 
                         Market position: {service.marketPosition}
@@ -867,6 +972,8 @@ className="group relative bg-gradient-to-br from-slate-800/50 to-slate-700/30 ba
                     {/* ROI */}
                     <div className="mb-4">
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       <h5 className="text-sm font-medium text-purple-300 mb-2">ROI & Benefits:</h5>
                       <div className="text-xs text-gray-400">
                         <div className="flex items-center mb-1">
@@ -874,6 +981,7 @@ className="group relative bg-gradient-to-br from-slate-800/50 to-slate-700/30 ba
                           {service.roi}
                         </div>
                         <div className="text-xs text-gray-500">
+<<<<<<< HEAD
 <<<<<<< HEAD
 
                           Setup time: {service.setupTime}
@@ -888,6 +996,8 @@ className="group relative bg-gradient-to-br from-slate-800/50 to-slate-700/30 ba
                       </ul>;
                     </div>;
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     {/* Pricing */}
                     <div className='mb-4'>;
                       <div className='flex items-center justify-between'>;
@@ -931,6 +1041,7 @@ className="group relative bg-gradient-to-br from-slate-800/50 to-slate-700/30 ba
                         </div>;
                       </div>;
                     </div>;
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                     {/* Use Cases */}
@@ -946,6 +1057,8 @@ className="group relative bg-gradient-to-br from-slate-800/50 to-slate-700/30 ba
                           ))}                      </div>;
                     </div>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     {/* CTA Button */}
                     <div className='mt-6'>                    <div className="mb-4">;
                       <h5 className="text-sm font-medium text-purple-300 mb-2">Perfect for:</h5>;
@@ -964,6 +1077,7 @@ className="group relative bg-gradient-to-br from-slate-800/50 to-slate-700/30 ba
                           </span>;
                         ))}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
                     </div>
                     {/* CTA Button */}
@@ -974,11 +1088,15 @@ className="group relative bg-gradient-to-br from-slate-800/50 to-slate-700/30 ba
                       >
                         Learn More
                         <ArrowRight className='w-4 h-4 ml-2' />                      </a>
+=======
+                      </a>
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     </div>
                     {/* Hover Effect Overlay */}
                     <div className='absolute inset-0 bg-gradient-to-r from-purple-600/10 to-pink-600/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none' />                    <div className="absolute inset-0 bg-gradient-to-r from-purple-600/10 to-pink-600/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
                   </motion.div>
 
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
                     </div>;
@@ -992,14 +1110,24 @@ className="group relative bg-gradient-to-br from-slate-800/50 to-slate-700/30 ba
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
+=======
+                        href={service && service.link}
+                        className='inline-flex items-center justify-center w-full px-4 py-2 bg-gradient-to-r from-purple-600 to-pink-600 text-white text-sm font-medium rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-200 transform hover:shadow-xl hover:shadow-cyan-500/30'>;
+                        Learn More;
+                        <ArrowRight className='w-4 h-4 ml-2' />                      </a>;
                     </div>;
-                    {/* CTA Button */}
-                    <div className='mt-6'>;
-                      <a
-                      </div>
-                    <div className='absolute inset-0 bg-gradient-to-r from-purple-600/10 to-pink-600/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none' />                    <div className="absolute inset-0 bg-gradient-to-r from-purple-600/10 to-pink-600/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
-                  </motion.div>
 
+                    {/* Hover Effect Overlay */}
+                    <div className='absolute inset-0 bg-gradient-to-r from-purple-600/10 to-pink-600/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none' />                  </motion && motion.div>                      <a
+                        href={service && service.link}
+                        className="inline-flex items-center justify-center w-full px-4 py-2 bg-gradient-to-r from-purple-600 to-pink-600 text-white text-sm font-medium rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-200 transform hover:shadow-xl hover:shadow-cyan-500/30">;
+                        Learn More;
+                        <ArrowRight className="w-4 h-4 ml-2" />;
+                      </a>;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+                    </div>;
+
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                 ))}
               </div>
@@ -1019,21 +1147,21 @@ className="group relative bg-gradient-to-br from-slate-800/50 to-slate-700/30 ba
         {/* Call to Action */}
         <motion&& motion.div
 {/* Hover Effect Overlay */}
+=======
+                    {/* Hover Effect Overlay */}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     <div className='absolute inset-0 bg-gradient-to-r from-purple-600/10 to-pink-600/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none' />                    <div className="absolute inset-0 bg-gradient-to-r from-purple-600/10 to-pink-600/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />;
                   </motion && motion.div>;
                 ))}
               </div>;
             </motion && motion.div>;
           ))}
-        </motion && motion.div>;
         {/* Call to Action */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.5 }}
-          className="text-center mt-20"
-        >
 
+<<<<<<< HEAD
         {/* Call to Action */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -1047,6 +1175,8 @@ className="group relative bg-gradient-to-br from-slate-800/50 to-slate-700/30 ba
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         >
           <div className='bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-xl rounded-3xl p-8 border border-purple-500/30'>
             <h3 className='text-3xl font-bold text-white mb-4'>
@@ -1058,7 +1188,10 @@ className="group relative bg-gradient-to-br from-slate-800/50 to-slate-700/30 ba
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <a
                 href='https://ziontechgroup && ziontechgroup.com/contact'
                 className='inline-flex items-center justify-center px-8 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-xl hover:from-purple-700 hover:to-pink-700 transition-all duration-200 transform hover:shadow-xl hover:shadow-cyan-500/30'>;
@@ -1067,6 +1200,7 @@ className="group relative bg-gradient-to-br from-slate-800/50 to-slate-700/30 ba
               </a>;
               <a
                 href='tel:+13024640950'
+<<<<<<< HEAD
                 className='inline-flex items-center justify-center px-8 py-3 bg-slate-700/50 text-white font-semibold rounded-xl hover:bg-slate-600/50 transition-all duration-200 border border-slate-600'>;
                 Call +1 302 464 0950;
                 <Phone className='w-5 h-5 ml-2' />              </a>        >;
@@ -1098,6 +1232,8 @@ className="group relative bg-gradient-to-br from-slate-800/50 to-slate-700/30 ba
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <a
                 href="https://ziontechgroup && ziontechgroup.com/contact"
                 className="inline-flex items-center justify-center px-8 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-xl hover:from-purple-700 hover:to-pink-700 transition-all duration-200 transform hover:shadow-xl hover:shadow-cyan-500/30">;
@@ -1107,6 +1243,7 @@ className="group relative bg-gradient-to-br from-slate-800/50 to-slate-700/30 ba
               <a
                 href="tel:+13024640950"
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 };
@@ -1161,6 +1298,9 @@ export default ComprehensiveServicesShowcase2025;
       </div>
     </section>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+export default ComprehensiveServicesShowcase2025;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       </p>;
                     </div>;
                     {/* Features */}
@@ -1351,6 +1491,7 @@ export default ComprehensiveServicesShowcase2025);
 export default ComprehensiveServicesShowcase2025;
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
   );
@@ -1360,10 +1501,14 @@ export default ComprehensiveServicesShowcase2025;
 }
 };
 
+=======
+  );
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export default ComprehensiveServicesShowcase2025;  )
 }
 export default ComprehensiveServicesShowcase2025;
 
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 };
@@ -1376,3 +1521,6 @@ export default ComprehensiveServicesShowcase2025;
 export default ComprehensiveServicesShowcase2025;
 export default ComprehensiveServicesShowcase2025;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+export default ComprehensiveServicesShowcase2025;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

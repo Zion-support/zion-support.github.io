@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -33,10 +34,13 @@ import Head from 'next/head';
 export default function AccountSettingsPage() {
   const [user, setUser] = useState<{ address: string, chain: 'evm' | 'sol' } | null>(null);
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const [user, setUser] = useState<{;
     address: string;
     chain: 'evm' | 'sol';
   } | null>(null);  const [displayWeb3, setDisplayWeb3] = useState<boolean>(false);
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -66,11 +70,17 @@ export default function AccountSettingsPage(req, res) {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export default function AccountSettingsPage(req, res) {
   try {
   const [user, setUser] = useState<{ address: string, chain: 'evm' | 'sol' } | null>(null),;
   const [displayWeb3, setDisplayWeb3] = useState<boolean>(false);
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const [ens, setEns] = useState('');
   const [lens, setLens] = useState('');
   const [ceramic, setCeramic] = useState('');
@@ -79,6 +89,7 @@ export default function AccountSettingsPage(req, res) {
   const [backupCid, setBackupCid] = useState('');
   const [restoreCid, setRestoreCid] = useState('');
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -88,6 +99,8 @@ export default function AccountSettingsPage(req, res) {
       typeof window !== 'undefined';
         ? window && window.localStorage.getItem('zion-web3-user');
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         : null;
     if (saved) setUser(JSON && JSON.parse(saved));
     const pref =;
@@ -95,6 +108,7 @@ export default function AccountSettingsPage(req, res) {
         ? window && window.localStorage.getItem('zion-web3-display');
         : null;
     setDisplayWeb3(pref === 'true');  }, []);
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -115,6 +129,8 @@ export default function AccountSettingsPage(req, res) {
   };
   const linkDID = async () => {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const saveDisplayPref = (val: boolean) => {;
     setDisplayWeb3(val),;
     if (typeof window !== 'undefined');
@@ -122,30 +138,19 @@ export default function AccountSettingsPage(req, res) {
 
   const linkDID = async () => {;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     if (!user) return;
     setLinking(true);
     setStatus(null);
     try {;
       const nonceRes = await fetch('/api/auth/nonce');
-
-
-      const { nonce } = await nonceRes && nonceRes.json();
-      const payload = {;
-        ens,;
-        lens,;
-        ceramic,;
-        farcaster,;
-        address: user && user.address,;
-        chain: user && user.chain,;
-        nonce,;
-        ts: Date && Date.now(),;
-      };
-      const msg = `Link Web3 identities to Zion account\n${JSON && JSON.stringify(payload)}`;
       // Sign message with connected wallet if possible (best effort);
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
@@ -223,6 +228,7 @@ if (return) {
         } else if (user && user.chain === 'sol' && (window as any).solana?.isPhantom) {;
           const enc = new TextEncoder().encode(msg);
 <<<<<<< HEAD
+<<<<<<< HEAD
 
           const { signature: sig } = await (window as any).solana && solana.signMessage(;
             enc,;
@@ -233,10 +239,13 @@ if (return) {
             enc,;
             'utf8';
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           );
           const bs58 = (await import('bs58')).default;
           signature = bs58 && bs58.encode(sig);        }
       } catch {}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -459,10 +468,13 @@ const data = await res.json();
       );      const data = await res.json();
       if (!res.ok) throw new Error(data?.error |'Restore failed');
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       const { user: u, preferences, did } = data;
       if (u) setUser(u);
       if (preferences) saveDisplayPref(!!preferences.displayWeb3);
       if (did) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
         headers: { 'Content - Type': 'application / json' },
@@ -518,6 +530,8 @@ const data = await res.json();
       if (u) setUser(u);
       if (preferences) saveDisplayPref(!!preferences.displayWeb3);
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       }
       const res = await fetch ('/api / backup / upload', {
         method: 'POST',
@@ -532,14 +546,18 @@ const data = await res.json();
       set_status ('Backup saved to decentralized storage');
     } catch (e: any) {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     } catch (e: any) {;
       setStatus(e?.message || 'Linking failed');
     } finally {;
       setLinking(false);    }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -564,6 +582,8 @@ const data = await res.json();
     }
 };
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const doBackup = async () => {;
     setStatus(null);
     try {;
@@ -609,11 +629,15 @@ const data = await res.json();
       setStatus(e?.message || 'Restore failed');    }
   };
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         setFarcaster(did.farcaster || '');
         } catch (error) {
     console.error("Error:", error);
@@ -625,9 +649,12 @@ const data = await res.json();
   return (
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   return (
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   className={`absolute left-0 top-0 w-6 h-6 bg-white rounded-full transition-transform ${displayWeb3 ? 'translate-x-4' : ''}`}></span>              </span>;
             </label>;
           </div>;
@@ -637,9 +664,13 @@ const data = await res.json();
           <h2 className='font-semibold mb-2'>Link Web3 identities</h2>;
           <div className='grid grid-cols-1 gap-3'>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <input
               value={ens}
               onChange={e => setEns(e && e.target.value)}
@@ -668,6 +699,7 @@ const data = await res.json();
               onClick={linkDID}
               disabled={linking}
               className='rounded-md bg-black text-white dark:bg-white dark:text-black px-4 py-2'>;
+<<<<<<< HEAD
               {linking ? 'Linking…' : 'Link & Verify'}
 <<<<<<< HEAD
 
@@ -688,6 +720,8 @@ const data = await res.json();
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <button
               onClick={doBackup}
               className='rounded-md bg-emerald-600 text-white px-4 py-2'>;
@@ -706,6 +740,7 @@ const data = await res.json();
             <input
               value={restoreCid}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -715,34 +750,11 @@ const data = await res.json();
             />;
             <button onClick={doRestore} className='rounded-md border px-4 py-2'>;
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       set_status (e?.message || 'Backup failed');    }
   }
-;
-  const do_restore = async () => {
-    set_status (null);
-    try {
-      const res = await fetch (
-        `/api / backup / restore?cid=${encodeURIComponent (restore_cid || backup_cid)}`);      const data = await res.json ();
-      if (throw new Error (data?.error || 'Restore failed')) {
-  $2
 }
-      const { user: u, preferences, did } = data;
-      if (set_user (u)) {
-  $2
-}
-      if (saveDisplayPref (!!preferences.displayWeb3)) {
-  $2
-}
-      // Check condition
-if ( {) {
-  $2
-}
-        set_ens (did.ens || '');
-        set_lens (did.lens || '');
-        set_ceramic (did.ceramic || '');
-        set_farcaster (did.farcaster || '');
-      }
-      set_status ('Profile restored from backup');
     } catch (e: any) {
       set_status (e?.message || 'Restore failed');    }
   }
@@ -846,13 +858,18 @@ if ( {) {
             />;
             <button on_click={do_restore} className='rounded - md border px - 4 py - 2'>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               Restore profile;
             </button>;
           </div>;
         </section>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -873,6 +890,9 @@ if ( {) {
       setStatus(e?.message || 'Restore failed');    }
   };
 
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     } catch (error) {
       setStatus(e?.message || 'Restore failed');
       } catch (error) {
@@ -904,6 +924,7 @@ if ( {) {
             </label>
           </div>
         </section>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -966,6 +987,8 @@ if ( {) {
             )}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         <section className="rounded-xl border p-5">
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <h2 className="font-semibold mb-2">Link Web3 identities</h2>
           <div className="grid grid-cols-1 gap-3">
             <input value={ens} onChange={(e) => setEns(e.target.value)} placeholder="ENS (e.g. vitalik.eth)" className="w-full rounded-md border px-3 py-2" />
@@ -982,20 +1005,26 @@ if ( {) {
           <div className="flex flex-wrap items-center gap-3">
             <button onClick={doBackup} className="rounded-md bg-emerald-600 text-white px-4 py-2">Create Backup</button>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             {backupCid && <span className="text-xs">CID: <code className="bg-gray-100 dark:bg-neutral-800 px-2 py-1 rounded">{backupCid}</code></span>  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           </div>
           <div className="mt-4 flex gap-2">
             <input value={restoreCid} onChange={(e) => setRestoreCid(e.target.value)} placeholder="Enter CID to restore" className="flex-1 rounded-md border px-3 py-2" />
@@ -1012,6 +1041,7 @@ if ( {) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -1050,6 +1080,8 @@ if ( {) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       </div>
     </>
   )
@@ -1058,4 +1090,9 @@ if ( {) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

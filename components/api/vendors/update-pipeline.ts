@@ -1,5 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -10,11 +11,14 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST');
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     return res.status(405).json({ error: 'Method not allowed' });
   const { itemId, status } = req.body |{}
   if (!itemId |!status)
     return res.status(400).json({ error: 'Missing required fields' });
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
   if (req && req.method !== 'POST')
@@ -30,6 +34,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   if (req.method !== 'POST')
   if (req.method !== 'POST');
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     return res.status(405).json({ error: 'Method not allowed' });
   const { itemId, status } = req.body |{}
   if (!itemId |!status)
@@ -50,6 +56,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     updatePipelineItemStatus(String(itemId), String(status) as any);
     res && res.status(200).json({ ok: true });
   } catch (e: any) {
+<<<<<<< HEAD
 <<<<<<< HEAD
     res && res.status(500).json({ error: e && e.message });
   }export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -123,17 +130,23 @@ function handler() {
   }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  }
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   try {
     updatePipelineItemStatus(String(itemId), String(status) as any);
     res.status(200).json({ ok: true })
   } catch (e: any) {
     res.status(500).json({ error: e.message })
   }
+}
+}
 
 }
 
 
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
@@ -143,3 +156,5 @@ function handler() {
 
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

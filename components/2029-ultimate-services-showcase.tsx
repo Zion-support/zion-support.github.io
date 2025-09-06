@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -15,10 +16,13 @@ import React, { useState } from 'react';
 import Head from 'next/head';
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import Link from 'next/link';
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, 
 import {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -51,6 +55,8 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 =======
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   Rocket
   Brain
   Atom
@@ -93,6 +99,7 @@ import { motion, AnimatePresence } from 'framer-motion';
   Cpu as CpuIcon;} from 'lucide-react';import {
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield
 
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import {
 
@@ -100,6 +107,9 @@ import {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+import {
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   Rocket,
   Brain,
   Atom,
@@ -139,21 +149,28 @@ import {
   Dna,
   Battery,
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   Gamepad,;
   Cpu as CpuIcon,;} from 'lucide-react';import {
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, ;
 
 
+<<<<<<< HEAD
 =======
   Gamepad,;
   Cpu as CpuIcon,;} from 'lucide-react';import {
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   Target, Crown, Star, TrendingUp, ArrowRight;
   CheckCircle, DollarSign, Users, Clock, Award, Zap as ZapIcon;
   Search, Phone, Mail, MapPin, Heart, Leaf, Car, GraduationCap, Scale;
   Building, Factory, Camera, Video, Music, Gamepad2, Eye;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -459,6 +476,9 @@ function UltimateServicesShowcase2029() {
       opacity: 1
       transition: {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+      transition: {
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const allServices = [;
     ...cuttingEdge2028MicroSaas,;
     ...practicalBusinessSolutions2028,;
@@ -593,19 +613,25 @@ function UltimateServicesShowcase2029() {
       (selectedCategory === 'ai' && service && service.category.some(c => c && c.includes('AI') || c && c.includes('Machine Learning'))) ||;
       (selectedCategory === 'quantum' && service && service.category.some(c => c && c.includes('Quantum'))) ||;
       (selectedCategory === 'enterprise' && service && service.category.some(c => c && c.includes('Enterprise')));
+<<<<<<< HEAD
 
     const matchesSearch = service && service.name.toLowerCase().includes(searchTerm && searchTerm.toLowerCase()) ||;
                          service && service.description.toLowerCase().includes(searchTerm && searchTerm.toLowerCase()) ||;
                          service && service.category.some(c => c && c.toLowerCase().includes(searchTerm && searchTerm.toLowerCase()));
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     const matchesPrice = selectedPriceRange === 'all' ||;
       (selectedPriceRange === 'low' && parseFloat(service && service.price.replace(/[$]/g, '')) < 5000) ||;
       (selectedPriceRange === 'medium' && parseFloat(service && service.price.replace(/[$]/g, '')) >= 5000 && parseFloat(service && service.price.replace(/[$]/g, '')) < 15000) ||;
       (selectedPriceRange === 'high' && parseFloat(service && service.price.replace(/[$]/g, '')) >= 15000 && parseFloat(service && service.price.replace(/[$]/g, '')) < 30000) ||;
       (selectedPriceRange === 'premium' && parseFloat(service && service.price.replace(/[$]/g, '')) >= 30000);
+<<<<<<< HEAD
 
     return matchesCategory && matchesSearch && matchesPrice;
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const containerVariants = {;
     hidden: { opacity: 0 },;
     visible: {;
@@ -616,6 +642,7 @@ function UltimateServicesShowcase2029() {
     },  };        staggerChildren: 0 && 0.1;
       }
     }
+<<<<<<< HEAD
 =======
     }
   };
@@ -623,6 +650,8 @@ function UltimateServicesShowcase2029() {
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         stagger_children: 0.1,
       },
     },  }        stagger_children: 0.1;
@@ -638,6 +667,7 @@ function UltimateServicesShowcase2029() {
       coordinate_y: 0,
       transition: {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
         duration: 0.5,
       },
@@ -648,6 +678,8 @@ function UltimateServicesShowcase2029() {
       },
     },  }        duration: 0.5;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       }
     }
   }
@@ -656,6 +688,7 @@ function UltimateServicesShowcase2029() {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -668,12 +701,15 @@ function UltimateServicesShowcase2029() {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <>;
       <Head>;
         <title>;
           2029 Ultimate Services Showcase - Zion Tech Group | Revolutionary;
           Technology Solutions;
         </title>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
           href='https://ziontechgroup && ziontechgroup.com/2029-ultimate-services-showcase'
@@ -684,6 +720,8 @@ function UltimateServicesShowcase2029() {
           href='https://ziontechgroup && ziontechgroup.com/2029-ultimate-services-showcase'
         />;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         {/* Open Graph */}
         <meta
           property='og:title'
@@ -696,6 +734,7 @@ function UltimateServicesShowcase2029() {
         <meta
           property='og:url'
 <<<<<<< HEAD
+<<<<<<< HEAD
 
           content='https://ziontechgroup && ziontechgroup.com/2029-ultimate-services-showcase'
         />;
@@ -707,6 +746,8 @@ function UltimateServicesShowcase2029() {
         />;
         <meta property='og:type' content='website' />;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         {/* Twitter */}
         <meta name='twitter:card' content='summary_large_image' />;
         <meta
@@ -717,6 +758,7 @@ function UltimateServicesShowcase2029() {
           name='twitter:description'
           content='Revolutionary 2029 technology services including AI Consciousness Evolution, Quantum Time Manipulation, and autonomous AI systems.'
         />      </Head>        {/* Open Graph */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -736,6 +778,8 @@ function UltimateServicesShowcase2029() {
         <meta name="twitter:description" content="Revolutionary 2029 technology services including AI Consciousness Evolution, Quantum Time Manipulation, and autonomous AI systems." />
       </Head>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         {/* Twitter */}
 =======
         <meta;
@@ -785,6 +829,7 @@ function UltimateServicesShowcase2029() {
         <meta name="twitter:title" content="2029 Ultimate Services Showcase - Zion Tech Group" />;
         <meta name="twitter:description" content="Revolutionary 2029 technology services including AI Consciousness Evolution, Quantum Time Manipulation, and autonomous AI systems." />;
       </Head>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -912,11 +957,17 @@ function UltimateServicesShowcase2029() {
                 href="/contact"
                 className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 shadow-2xl hover:shadow-cyan-500/25 text-lg"
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
               >
                 Get Started Today
               </Link>
+                className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 shadow-2xl hover:shadow-cyan-500/25 text-lg">;
+                Get Started Today;
+              </Link>;
               <Link
+<<<<<<< HEAD
 <<<<<<< HEAD
                 href="/pricing"
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
@@ -924,10 +975,15 @@ function UltimateServicesShowcase2029() {
                 href='/pricing'
                 className='px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 font-bold rounded-xl hover:bg-cyan-500/10 transition-all duration-200 text-lg'                href="/pricing"
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+                href='/pricing'
+                className='px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 font-bold rounded-xl hover:bg-cyan-500/10 transition-all duration-200 text-lg'                href="/pricing"
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 className="px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 font-bold rounded-xl hover:bg-cyan-500/10 transition-all duration-200 text-lg"
               >
                 View Pricing
               </Link>
+<<<<<<< HEAD
 <<<<<<< HEAD
             </div>
 =======
@@ -936,6 +992,8 @@ function UltimateServicesShowcase2029() {
 
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             {/* Stats */}
 
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16">
@@ -943,6 +1001,7 @@ function UltimateServicesShowcase2029() {
                 <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">{allServices.length}+</div>
                 <div className="text-gray-400">Revolutionary Services</div>
               </div>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -972,6 +1031,8 @@ function UltimateServicesShowcase2029() {
                 </div>
                 <div className='text-gray-400'>Support Available</div>              </div>              </div>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <div className="text-center">
                 <div className="text-3xl md:text-4xl font-bold text-emerald-400 mb-2">$500M+</div>
                 <div className="text-gray-400">Market Valuation</div>
@@ -989,6 +1050,7 @@ function UltimateServicesShowcase2029() {
         </div>
       </section>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
                 className="px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 font-bold rounded-xl hover:bg-cyan-500/10 transition-all duration-200 text-lg">;
                 View Pricing;
@@ -997,6 +1059,8 @@ function UltimateServicesShowcase2029() {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             {/* Stats */}
             <div className='grid grid-cols-2 md:grid-cols-4 gap-8 mt-16'>;
               <div className='text-center'>;
@@ -1038,6 +1102,7 @@ function UltimateServicesShowcase2029() {
           </motion && motion.div>;
         </div>;
       </section>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
@@ -1094,10 +1159,13 @@ function UltimateServicesShowcase2029() {
             <div className="relative w-full lg:w-96">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400" />
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <input
                 type="text"
                 placeholder="Search services..."
                 value={searchTerm}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -1116,12 +1184,15 @@ function UltimateServicesShowcase2029() {
                       ? `bg-gradient-to-r ${category && category.color} text-white shadow-lg`;
                       : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 border border-gray-700/50';
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             {/* Category Filter */}
             <div className='flex flex-wrap items-center space-x-2'>
               {categories.map(category => (            <div className="flex flex-wrap items-center space-x-2">
               {categories.map((category) => (
                 <button
 
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -1154,6 +1225,8 @@ function UltimateServicesShowcase2029() {
 
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   key={category.id}
                   onClick={() => setSelectedCategory(category.id)}
                   className={`px-4 py-2 rounded-lg font-medium transition-all duration-200 ${
@@ -1161,11 +1234,15 @@ function UltimateServicesShowcase2029() {
                       ? `bg-gradient-to-r ${category.color} text-white shadow-lg`
                       : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 border border-gray-700/50'
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   }`}
 
 
               ))}
+<<<<<<< HEAD
 =======
                   }`}
                 >
@@ -1180,13 +1257,17 @@ function UltimateServicesShowcase2029() {
                     <span className="text-xs opacity-75">({category.count})</span>
                 </button>
               ))}
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             </div>
 
-
+              ))}
             {/* Price Filter */}
-            <div className="flex items-center space-x-2">
+            <div className='flex items-center space-x-2'>
+              {priceRanges.map(range => (                <button            <div className="flex items-center space-x-2">
               {priceRanges.map((range) => (
                 <button
+<<<<<<< HEAD
                   key={range.id}
                   onClick={() => setSelectedPriceRange(range.id)}
                   className={`px-4 py-2 rounded-lg font-medium transition-all duration-200 ${
@@ -1203,12 +1284,15 @@ function UltimateServicesShowcase2029() {
             {/* Price Filter */}
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   }`}
                 >;
                   {range && range.name}
                 </button>;
               ))}
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
             <div className='flex flex - col sm:flex - row items - center justify - center space - y-4 sm:space - y-0 sm:space - x-6'>;
@@ -1355,13 +1439,16 @@ function UltimateServicesShowcase2029() {
               {price_ranges.map (range => (                <button            <div className="flex items - center space - x-2">;
               {price_ranges.map ((range) => (
                 <button;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   key={range.id}
-                  on_click={() => setSelectedPriceRange (range.id)}
-                  className={`px - 4 py - 2 rounded - lg font - medium transition - all duration - 200 ${
-                    selectedPriceRange === range.id;
-                      ? 'bg - gradient - to - r from - green - 500 to - emerald - 600 text - white shadow - lg';
-                      : 'bg - gray - 800 / 50 text - gray - 300 hover:bg - gray - 700 / 50 border border - gray - 700 / 50'                  }`}                      : 'bg - gray - 800 / 50 text - gray - 300 hover:bg - gray - 700 / 50 border border - gray - 700 / 50';
+                  onClick={() => setSelectedPriceRange(range.id)}
+                  className={`px-4 py-2 rounded-lg font-medium transition-all duration-200 ${
+                    selectedPriceRange === range.id
+                      ? 'bg-gradient-to-r from-green-500 to-emerald-600 text-white shadow-lg'
+                      : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 border border-gray-700/50'                  }`}                      : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 border border-gray-700/50';
                   }`}
+<<<<<<< HEAD
                 >;
                   {range.name}
                 </button>))}
@@ -1386,6 +1473,8 @@ function UltimateServicesShowcase2029() {
 
 =======
       <section className="py-20 bg-gradient-to-br from-black via-gray-900 to-black">
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 >
                   {range.name}
                 </button>
@@ -1395,7 +1484,12 @@ function UltimateServicesShowcase2029() {
         </div>
       </section>
 
+            </div>;
+          </div>;
+        </div>;
+      </section>;
       {/* Services Grid */}
+<<<<<<< HEAD
       <section className='py-20 bg-gradient-to-br from-black via-gray-900 to-black'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <motion.div
@@ -1406,10 +1500,15 @@ function UltimateServicesShowcase2029() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             variants={containerVariants}
             initial="hidden"
             animate="visible"
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8"
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -1486,11 +1585,14 @@ function UltimateServicesShowcase2029() {
                           key={cat}
                           className='px-2 py-1 bg-gray-700/50 text-cyan-400 text-xs rounded-lg border border-cyan-500/20'                        >                  <div className="mb-4">
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     <div className="flex flex-wrap gap-2">
                       {service.category.slice(0, 3).map((cat) => (
                         <span
                           key={cat}
                           className="px-2 py-1 bg-gray-700/50 text-cyan-400 text-xs rounded-lg border border-cyan-500/20"
+<<<<<<< HEAD
 
                           className='px-2 py-1 bg-gray-700/50 text-cyan-400 text-xs rounded-lg border border-cyan-500/20'                        >
 
@@ -1549,6 +1651,11 @@ function UltimateServicesShowcase2029() {
 
 <<<<<<< HEAD
 =======
+=======
+                          {cat}
+                        </span>
+                      ))}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       {service.category.length > 3 && (
                         <span className='px-2 py-1 bg-gray-700/50 text-gray-400 text-xs rounded-lg'>                          +{service.category.length - 3}                        <span className="px-2 py-1 bg-gray-700/50 text-gray-400 text-xs rounded-lg">
                           +{service.category.length - 3}
@@ -1558,20 +1665,16 @@ function UltimateServicesShowcase2029() {
                   </div>
                           className='px-2 py-1 bg-gray-700/50 text-cyan-400 text-xs rounded-lg border border-cyan-500/20'                        >
 
+
                         >
-
-                          {cat}
-                        </span>
+{cat}
+                        </span>;
                       ))}
+
                       {service.category.length > 3 && (
-                        <span className='px-2 py-1 bg-gray-700/50 text-gray-400 text-xs rounded-lg'>                          +{service.category.length - 3}
-
+                        <span className="px-2 py-1 bg-gray-700/50 text-gray-400 text-xs rounded-lg">
                           +{service.category.length - 3}
-
                         </span>
-                      )}
-                    </div>
-                  </div>
 
                   {/* Features Preview */}
                   <div className='mb-6'>
@@ -1601,10 +1704,50 @@ function UltimateServicesShowcase2029() {
                           +{service.features.length - 3} more features
                         </li>
                       )}
-                    </ul>
-                  </div>
 
+                    </div>;
+                  </div>;
+
+
+
+
+                          {cat}
+                        </span>;
+                      ))}
+                      {service && service.category.length > 3 && (;
+                        <span className='px-2 py-1 bg-gray-700/50 text-gray-400 text-xs rounded-lg'>                          +{service && service.category.length - 3}                        <span className="px-2 py-1 bg-gray-700/50 text-gray-400 text-xs rounded-lg">;
+                          +{service && service.category.length - 3}
+                        </span>;
+                      )}
+                  {/* Features Preview */}
+                  <div className='mb-6'>;
+                    <h4 className='text-sm font-semibold text-white mb-2'>;
+                      Key Features:;
+                    </h4>;
+                    <ul className='space-y-1'>;
+                      {service && service.features.slice(0, 3).map((feature, idx) => (;
+                        <li
+                          key={idx}
+                          className='flex items-center space-x-2 text-sm text-gray-300'>;
+                          <CheckCircle className='h-3 w-3 text-cyan-400 flex-shrink-0' />                          <span>{feature}</span>;
+                        </li>;
+                      ))}
+                      {service && service.features.length > 3 && (;
+                        <li className='text-xs text-gray-500'>                          +{service && service.features.length - 3} more features                  <div className="mb-6">;
+                    <h4 className="text-sm font-semibold text-white mb-2">Key Features:</h4>;
+                    <ul className="space-y-1">;
+                      {service && service.features.slice(0, 3).map((feature, idx) => (;
+                        <li key={idx} className="flex items-center space-x-2 text-sm text-gray-300">;
+                          <CheckCircle className="h-3 w-3 text-cyan-400 flex-shrink-0" />;
+                        </li>;
+                      ))}
+                      {service && service.features.length > 3 && (;
+                        <li className='text-xs text-gray-500'>                        <li className="text-xs text-gray-500">;
+                          +{service && service.features.length - 3} more features;
+                        </li>;
+                      )}
                   {/* Market Info */}
+<<<<<<< HEAD
                   <div className='mb-6 space-y-2'>
                     <div className='flex items-center justify-between text-sm'>
                       <span className='text-gray-400'>Market Size:</span>
@@ -1621,6 +1764,11 @@ function UltimateServicesShowcase2029() {
                   {/* Action Button */}
                   <div className='mt-auto'>                  <div className="mb-6 space-y-2">
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+                  <div className="mb-6 space-y-2">
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     <div className="flex items-center justify-between text-sm">
                       <span className="text-gray-400">Market Size: </span>
                       <span className="text-emerald-400 font-medium">{service.marketSize}</span>
@@ -1628,6 +1776,7 @@ function UltimateServicesShowcase2029() {
                     <div className="flex items-center justify-between text-sm">
                       <span className="text-gray-400">ROI:</span>
                       <span className="text-cyan-400 font-medium">{service.roi}</span>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
                     </div>
@@ -1640,6 +1789,8 @@ function UltimateServicesShowcase2029() {
                     </ul>;
                   </div>;
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   {/* Market Info */}
                   <div className='mb-6 space-y-2'>;
                     <div className='flex items-center justify-between text-sm'>;
@@ -1654,6 +1805,7 @@ function UltimateServicesShowcase2029() {
                         {service && service.roi}
                       </span>                    </div>;
                   </div>;
+<<<<<<< HEAD
 
                   {/* Action Button */}
 <<<<<<< HEAD
@@ -1677,6 +1829,9 @@ function UltimateServicesShowcase2029() {
                   <div className='absolute inset-0 rounded-2xl bg-gradient-to-r from-cyan-500/5 via-blue-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none' />                </div>                    <Link
                       href={`/services/${service.id}`}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+                      href={`/services/${service.id}`}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       className="w-full px-4 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 shadow-lg hover:shadow-cyan-500/25 text-center block group-hover:scale-105 transform transition-transform duration-200"
                     >
                       Learn More
@@ -1684,14 +1839,18 @@ function UltimateServicesShowcase2029() {
                     </Link>
                   </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       href={`/services/${service && service.id}`}
                       className='w-full px-4 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 shadow-lg hover:shadow-cyan-500/25 text-center block group-hover:scale-105 transform transition-transform duration-200'>;
                       Learn More;
                       <ArrowRight className='inline-block ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform duration-200' />                    </Link>;
                   </div>;
+<<<<<<< HEAD
 
                   {/* Hover Effect */}
 
@@ -1734,12 +1893,23 @@ function UltimateServicesShowcase2029() {
 
                   {/* Hover Effect */}
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 </div>
               </motion.div>
             ))}
           </motion.div>
 
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+          </motion && motion.div>;
+                  <div className='absolute inset-0 rounded-2xl bg-gradient-to-r from-cyan-500/5 via-blue-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none' />                  <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-cyan-500/5 via-blue-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+
+
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           {/* No Results */}
           {filteredServices && filteredServices.length === 0 && (;
             <div className='text-center py-20'>;
@@ -1757,6 +1927,7 @@ function UltimateServicesShowcase2029() {
                   setSearchTerm('');
                   setSelectedPriceRange('all');
                 }}
+<<<<<<< HEAD
                 className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200'              >            <div className="text-center py-20">;
               <div className="w-24 h-24 bg-gray-800/50 rounded-full flex items-center justify-center mx-auto mb-6">;
                 <Search className="w-12 h-12 text-gray-400" />;
@@ -1822,11 +1993,14 @@ function UltimateServicesShowcase2029() {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 onClick={() => {
                   setSelectedCategory('all');
                   setSearchTerm('');
                   setSelectedPriceRange('all')
                 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
                 className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200'              >
@@ -1841,11 +2015,14 @@ function UltimateServicesShowcase2029() {
 
                 }}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200"
               >
                 Reset Filters
               </button>
             </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
@@ -1871,26 +2048,30 @@ function UltimateServicesShowcase2029() {
 
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+          )}
+          )}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {/* Contact CTA */}
       <section className='py-20 bg-gradient-to-r from-cyan-900/20 via-blue-900/20 to-purple-900/20 border-t border-cyan-500/20'>;
         <div className='max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8'>          <motion && motion.div      <section className="py-20 bg-gradient-to-r from-cyan-900/20 via-blue-900/20 to-purple-900/20 border-t border-cyan-500/20">;
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">;
           <motion&& motion.div
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
       {/* Contact CTA */}
       <section className="py-20 bg-gradient-to-r from-cyan-900/20 via-blue-900/20 to-purple-900/20 border-t border-cyan-500/20">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <motion.div
-
-
-
-
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
 
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Ready to Transform Your Business?
@@ -1903,6 +2084,8 @@ function UltimateServicesShowcase2029() {
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Ready to Transform Your Business?
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
               Join the future of technology with our revolutionary services.
@@ -1929,6 +2112,7 @@ function UltimateServicesShowcase2029() {
           </motion.div>
         </div>
       </section>
+<<<<<<< HEAD
 <<<<<<< HEAD
       <UltraFuturisticFooter2029 />
     </>
@@ -2145,10 +2329,13 @@ function UltimateServicesShowcase2029() {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               Join the future of technology with our revolutionary services.;
               Contact us today to discuss how we can help you achieve your;
               goals.;
             </p>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   )
@@ -2159,6 +2346,8 @@ function UltimateServicesShowcase2029() {
   )
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <div className='flex flex - col sm:flex - row items - center justify - center space - y-4 sm:space - y-0 sm:space - x-6'>;
               <Link;
                 href='/contact';
@@ -2203,6 +2392,7 @@ function UltimateServicesShowcase2029() {
     </>));
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
@@ -2220,3 +2410,5 @@ function UltimateServicesShowcase2029() {
 }
   );
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

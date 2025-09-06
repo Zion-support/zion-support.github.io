@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -45,6 +46,8 @@ import {
   Cloud
   XCircle
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   Code,
   Check,
   Globe,
@@ -55,10 +58,13 @@ import {
   Cloud,
   XCircle,;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 } from "lucide-react";
 export default function APIPage() {
   const apiEndpoints = [
@@ -111,6 +117,7 @@ export default function APIPage() {
     "model": "gpt-4"
     "temperature": 0.7
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React from './react';
 import MainLayout from "../src / components / layout / MainLayout";
@@ -145,6 +152,8 @@ function APIPage() {
 export default function APIPage() {
   const apiEndpoints = [
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     {
       id: "auth",
       title: "Authentication",
@@ -191,6 +200,7 @@ export default function APIPage() {
   -H "Content - Type: application / json" \\;
   -d '{
 <<<<<<< HEAD
+<<<<<<< HEAD
     "message": "Hello, how can you help me?",
     "model": "gpt - 4",
     "temperature": 0.7;
@@ -209,15 +219,20 @@ export default function APIPage() {
       ]
     }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   }'`,
         },
       ],
     },;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   ];
 ;
   const response_examples = {
@@ -227,6 +242,7 @@ export default function APIPage() {
       data: {
         message: "Request successful"
         data: {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -241,12 +257,15 @@ export default function APIPage() {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     error: {
       status: 400
       error: {
         code: "VALIDATION_ERROR"
         message: "Invalid request parameters"
         details: {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -374,6 +393,8 @@ export default function APIPage() {;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <MainLayout
       title="API Documentation - Zion Tech Group"
@@ -381,6 +402,7 @@ export default function APIPage() {;
       keywords="API documentation, REST API, AI API, cloud API, developer resources">;
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
         {/* Hero Section */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -423,6 +445,8 @@ export default function APIPage() {;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         {/* Quick Start */}
         <section className="py-20 bg-white">;
           <div className="container mx-auto px-4">;
@@ -430,6 +454,7 @@ export default function APIPage() {;
               className="text-center mb-16"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -562,6 +587,8 @@ export default function APIPage() {;
                   className="text - center";
                   initial={{ opacity: 0, coordinate_y: 30 }}
                   whileInView={{ opacity: 1, coordinate_y: 0 }}
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   transition={{ duration: 0.8 }}
                   viewport={{ once: true }}
                 >;
@@ -598,6 +625,7 @@ export default function APIPage() {;
                   whileInView={{ opacity: 1, coordinate_y: 0 }}
                   transition={{ duration: 0.8, delay: 0.2 }}
                   viewport={{ once: true }}
+<<<<<<< HEAD
                 >;
                   <div className="bg - green - 100 w - 16 h - 16 rounded - full flex items - center justify - center mx - auto mb - 4">;
                     <Zap className="w - 8 h - 8 text - green - 600" />;
@@ -635,6 +663,8 @@ export default function APIPage() {;
             <div className="max-w-4xl mx-auto">;
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">;
                 <motion&& motion.div
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   className="bg-white border border-gray-200 rounded-lg p-6"
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -723,6 +753,7 @@ export default function APIPage() {;
                   whileInView={{ opacity: 1, coordinate_y: 0 }}
                   transition={{ duration: 0.8, delay: 0.1 }}
                   viewport={{ once: true }}
+<<<<<<< HEAD
                 >;
                   <div className="flex items - center mb - 4">;
                     <XCircle className="w - 6 h - 6 text - red - 500 mr - 3" />;
@@ -750,6 +781,8 @@ export default function APIPage() {;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import Head from 'next/head';
 import Layout from '../components/Layout';
 
@@ -771,6 +804,7 @@ export default function APIPage() {
         </section>
       </div>
     </Layout>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -799,6 +833,8 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
   );
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         {/* CTA Section */}
         <section className="py - 20 bg - gradient - to - r from - indigo - 600 to - purple - 600 text - white">;
           <div className="container mx - auto px - 4">;
@@ -835,5 +871,9 @@ origin/automation-improvements-final
         </section>;
       </div>;
     </MainLayout>);
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
+=======
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

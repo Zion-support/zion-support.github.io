@@ -1,6 +1,7 @@
 export const metadata = { 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   title: 'Data Analytics Solutions | Zion Tech Group',
   description: 'Advanced data analytics solutions including business intelligence, data visualization, predictive analytics, and data engineering. Turn data into actionable insights.'
 =======
@@ -12,10 +13,15 @@ export const metadata = {
   description: 'Comprehensive data analytics services including business intelligence, data visualization, predictive analytics, and data science solutions for data-driven decision making.',
   keywords: 'data analytics, business intelligence, data visualization, predictive analytics, data science, machine learning, data consulting'
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  title: 'Advanced Data Analytics & BI | Zion Tech Group',
+  description: 'Transform your data into actionable insights with advanced analytics, real-time dashboards, and AI-powered business intelligence solutions.'
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 };
 
 export default function DataAnalyticsPage() {
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
     <div className="animate-fade-in">
 <<<<<<< HEAD
@@ -300,10 +306,13 @@ export default function DataAnalyticsPage() {
 
       <CTASection />
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     </div>
   );
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 function DataServiceCard({ title, description, features, price, icon }: { 
 =======
@@ -763,11 +772,14 @@ function Plan({ name, price, features }: { name: string; price: string; features
             : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
         }`}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       >
         Get Started
       </a>
     </div>
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 
@@ -836,3 +848,5 @@ function CTASection() {
 =======
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 }
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

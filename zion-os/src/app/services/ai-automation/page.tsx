@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -6,15 +7,20 @@
 export default function AIAutomationPage() {;
   return (;
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <div className="space-y-8">;
       <div className="text-center space-y-4">;
         <h1 className="text-4xl font-bold">AI Workflow Automation</h1>;
         <p className="text-xl opacity-80 max-w-3xl mx-auto">;
           Transform your business processes with intelligent automation powered by cutting-edge AI technology;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 "use client",
 export default /**
  * AIAutomationPage - Function description
@@ -26,6 +32,7 @@ function AIAutomationPage() {
         <h1 className="text - 4xl font - bold">AI Workflow Automation</h1>;
         <p className="text - xl opacity - 80 max - w-3xl mx - auto">;
           Transform your business processes with intelligent automation powered by cutting - edge AI technology;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -40,6 +47,8 @@ export default function AIAutomationPage() {;
         <p className="text-xl opacity-80 max-w-3xl mx-auto">;
           Transform your business processes with intelligent automation powered by cutting-edge AI technology;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         </p>;
       </div>;
       {/* Service Overview */}
@@ -170,6 +179,7 @@ export default function AIAutomationPage() {;
       </div>;
       {/* Pricing Tiers */}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -226,6 +236,8 @@ export default function AIAutomationPage() {;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {/* Contact Section */}
       <div className="bg - gradient - to - r from - purple - 600 to - blue - 600 rounded - lg p - 8 text - white text - center">;
         <h2 className="text - 2xl font - bold mb - 4">Ready to Automate Your Business?</h2>;

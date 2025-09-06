@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 :components/ContentCategorizer.tsx
@@ -14,6 +15,8 @@ import {;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   BarChart3, Globe, Database, Cpu, Rocket, Brain;
 } from 'lucide-react';
 interface ContentItem {id: string;
@@ -47,6 +50,7 @@ interface ContentItem {
   source: string,
   type: 'report' | 'update' | 'insight' | 'guide' | 'security' | 'feature'
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -54,6 +58,8 @@ interface ContentItem {
 :backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
 :backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 interface ContentCategory {id: string;
   name: string;
@@ -63,6 +69,7 @@ interface ContentCategory {id: string;
   count: number;
   subcategories?: string[];
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -90,6 +97,8 @@ const ContentCategorizer: React.FC = () => {;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   // Sample content data - in a real implementation, this would come from an API;
   const contentItems: ContentItem[] = [;
     {;
@@ -104,6 +113,7 @@ const ContentCategorizer: React.FC = () => {;
       tags: ['seojson-ldschemaaudit'];
       source: 'autonomous-auditor';
       type: 'report';
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -178,6 +188,8 @@ const ContentCategorizer: React.FC = () => {;
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 const ContentCategorizer: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState(''),
@@ -268,6 +280,7 @@ const contentItems: ContentItem[] = [
       source: 'behavior-analyzer',
       type: 'insight'
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -275,6 +288,8 @@ const contentItems: ContentItem[] = [
 :backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
 :backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     }
     {id: '2';
       title: 'Security Vulnerability Scan Results';
@@ -416,6 +431,7 @@ const contentItems: ContentItem[] = [
     { id: 'medium', name: 'Medium Priority', color: 'text-yellow-400' }
     { id: 'low', name: 'Low Priority', color: 'text-red-400' }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 :components/ContentCategorizer.tsx
@@ -443,6 +459,8 @@ const contentItems: ContentItem[] = [
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       return matchesSearch && matchesCategory && matchesSubcategory && matchesType && matchesRelevance;
     });
     // Sort items;
@@ -451,6 +469,7 @@ const contentItems: ContentItem[] = [
         case 'date':;
           comparison = new Date(a.date).getTime() - new Date(b.date).getTime();
           break;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -464,6 +483,8 @@ const contentItems: ContentItem[] = [
           comparison = a.title.localeCompare(b.title);
           break;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   ],
 
   const filteredItems = useMemo(() => {
@@ -492,6 +513,7 @@ filtered.sort((a, b) => {
           comparison = a.title.localeCompare(b.title),
           break
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -499,6 +521,8 @@ filtered.sort((a, b) => {
 :backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
 :backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       }
       return sortOrder === 'asc' ? comparison : -comparison;
     });
@@ -546,6 +570,7 @@ type=&quot;text&quot;
           {/* Category Filter */}          <div>
             <label className=&quot;block text-sm font-medium text-white/70 mb-2&quot;>Category</label>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 :components/ContentCategorizer.tsx
@@ -571,11 +596,14 @@ value={selectedCategory}
 :backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
 :backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               {categories.map(category => (
                 <option key={category.id} value={category.id}>
                   {category.name} ({category.count})
                 </option>
               ))}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -597,6 +625,8 @@ value={selectedCategory}
 :backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
 :backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <label className=&quot;block text-sm font-medium text-white/70 mb-2&quot;>Subcategory</label>
             <select,
 value={selectedSubcategory}
@@ -606,6 +636,7 @@ value={selectedSubcategory}
               <option value=&quot;all&quot;>All Subcategories</option>
               {selectedCategory !== 'all' && categories.find(c => c.id === selectedCategory)?.subcategories?.map(sub => (
                 <option key={sub} value={sub}>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -632,6 +663,8 @@ value={selectedSubcategory}
 :backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
 :backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <label className=&quot;block text-sm font-medium text-white/70 mb-2&quot;>Content Type</label>
             <select,
 value={selectedType}
@@ -642,6 +675,7 @@ value={selectedType}
                   {type.name}
                 </option>;
               ))}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -663,6 +697,8 @@ value={selectedType}
 :backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
 :backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <label className=&quot;block text-sm font-medium text-white/70 mb-2&quot;>Relevance</label>
             <select,
 value={selectedRelevance}
@@ -677,6 +713,7 @@ value={selectedRelevance}
           </div>;
         </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 ;
 
@@ -688,6 +725,8 @@ value={selectedRelevance}
 :backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
 :backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         {/* Sort Controls and Clear Filters */}
 <div className=&quot;flex flex-wrap items-center justify-between gap-4&quot;>
           <div className=&quot;flex items-center gap-4&quot;>
@@ -704,6 +743,7 @@ value={sortBy}
               <button,
 onClick={() => setSortOrder(sortOrder === 'asc' ? 'desc' : 'asc')}
                 className=&quot;p-1 bg-white/5 border border-white/10 rounded hover:bg-white/10 transition-colors duration-200&quot;              >
+<<<<<<< HEAD
                 {sortOrder === 'asc' ? '↑' : '↓'}
 <<<<<<< HEAD
 
@@ -731,14 +771,19 @@ onClick={clearAllFilters}
 :backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
 :backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             Clear All Filters
           </button>
         </div>
       </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 :components/ContentCategorizer.tsx
       {/* Category Pills */}
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <div>
         <div className=&quot;flex flex-wrap gap-2&quot;>
           {categories.map(category => (
@@ -759,6 +804,7 @@ onClick={clearAllFilters}
           ))}
         </div>;
       </div>;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
@@ -789,6 +835,8 @@ key={category.id}
 :backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
 :backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {/* Results Summary */}
 <div className=&quot;text-sm text-white/60&quot;>
         Showing {filteredItems.length} of {contentItems.length} items
@@ -797,6 +845,7 @@ key={category.id}
         {selectedType !== 'all' && ` of type ${contentTypes.find(t => t.id === selectedType)?.name}`}
       </div>;
       {/* Content Grid */}
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -804,6 +853,8 @@ key={category.id}
 :components/ContentCategorizer.tsx
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   {item.type}
                 </div>;
               </div>;
@@ -847,6 +898,7 @@ key={category.id}
               </div>;
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -854,6 +906,8 @@ key={category.id}
 :backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
 :backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               {/* Title and Description */}
 <h3 className=&quot;text-lg font-semibold text-white mb-2 group-hover:text-cyan-300 transition-colors duration-200&quot;>
                 {item.title}
@@ -861,6 +915,7 @@ key={category.id}
               <p className=&quot;text-sm text-white/75 mb-4 leading-relaxed&quot;>
                 {item.desc}
               </p>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 ;
@@ -873,6 +928,8 @@ key={category.id}
 :backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
 :backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               {/* Tags */}
 <div className=&quot;flex flex-wrap gap-1 mb-4&quot;>
                 {item.tags.slice(0, 3).map((tag, index) => (
@@ -880,6 +937,7 @@ key={category.id}
                     {tag}
                   </span>;
                 ))}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -904,6 +962,8 @@ key={category.id}
 :backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
 :backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               {/* Metadata */}
 <div className=&quot;flex items-center justify-between text-xs text-white/50 mb-4&quot;>
                 <span className=&quot;flex items-center gap-1&quot;>
@@ -921,6 +981,7 @@ key={category.id}
                   Source: {item.source}
                 </span>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
                 <a 
                   href={item.href} 
@@ -934,6 +995,8 @@ key={category.id}
                   href={item.href} 
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         })}
       </div>;
                 <a,
@@ -946,7 +1009,7 @@ href={item.href}
                   className=&quot;inline-flex items-center gap-2 text-cyan-300 hover:text-cyan-200 transition-colors duration-200 text-sm font-medium&quot;
                 >
                   Open Content
-                  <span aria-hidden>→</span>
+                  <span aria-hidden></span>
                 </a>
               </div>
             </div>
@@ -955,6 +1018,7 @@ href={item.href}
       </div>;
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -962,10 +1026,12 @@ href={item.href}
 :backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
 :backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {/* No Results */}
 {filteredItems.length === 0 && (
         <div className=&quot;text-center py-12&quot;>
-          <div className=&quot;text-white/40 text-6xl mb-4&quot;>🔍</div>
+          <div className=&quot;text-white/40 text-6xl mb-4&quot;></div>
           <h3 className=&quot;text-xl font-semibold text-white/70 mb-2&quot;>No content found</h3>
           <p className=&quot;text-white/50 mb-4&quot;>            Try adjusting your search terms or filters to find what you're looking for.
           </p>

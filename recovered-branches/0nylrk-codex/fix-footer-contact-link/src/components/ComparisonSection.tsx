@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -6,6 +7,8 @@ import { GradientHeading } from "./GradientHeading",
 import { Button } from "./ui/button",
 import { CheckCircle2 } from "lucide-react";
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {
   Table
   TableBody
@@ -14,6 +17,7 @@ import {
   TableHeader
   TableRow
 } from "./ui/table";
+<<<<<<< HEAD
 export function ComparisonSection() {
   return (
     <section className="py-20 bg-zion-blue-dark">
@@ -53,6 +57,11 @@ import { Button } from "./ui/button",
 import { CheckCircle2 } from "lucide-react",
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "./ui/table",
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
           </p>
         </div>
@@ -62,6 +71,7 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from ".
               <TableHeader>
                 <TableRow className="border-b border-zion-purple/20">
                   <TableHead className="text-white">Service</TableHead>
+<<<<<<< HEAD
 <<<<<<< HEAD
                   <TableHead className="text-white text-center">
                     Traditional Providers
@@ -77,10 +87,16 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from ".
                   <TableHead className="text-white text-center">With Zion</TableHead>
                   <TableHead className="text-white text-center">Savings</TableHead>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+                  <TableHead className="text-white text-center">Traditional Providers</TableHead>
+                  <TableHead className="text-white text-center">With Zion</TableHead>
+                  <TableHead className="text-white text-center">Savings</TableHead>
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 </TableRow>
               </TableHeader>
               <TableBody>
                 {[
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 import { GradientHeading  } from './GradientHeading';
@@ -142,6 +158,8 @@ function ComparisonSection() {
                     savings: "45%"
                   }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   {
                     service: "IT Equipment"
                     traditional: "Full Purchase"
@@ -149,6 +167,7 @@ function ComparisonSection() {
                     savings: "60%"
                   }
                   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -254,6 +273,8 @@ function ComparisonSection() {
             
             
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white whitespace-nowrap">
               Calculate Your Savings
             </Button>
@@ -261,9 +282,12 @@ function ComparisonSection() {
         </div>
       </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
     </section>
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   );
 }
   )
@@ -271,7 +295,11 @@ import { GradientHeading } from "./GradientHeading",;
 import { Button } from "./ui/button",;
 import { CheckCircle2 } from "lucide-react",;
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "./ui/table",;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { GradientHeading } from "./GradientHeading";
 import { Button } from "./ui/button";
 import { CheckCircle2 } from "lucide-react";
@@ -287,6 +315,7 @@ import {;
 export function ComparisonSection() {;
   return (
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 import { GradientHeading } from "./GradientHeading",;
@@ -299,11 +328,14 @@ export function ComparisonSection() {;
 export function ComparisonSection() {;
   return (;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <section className="py-20 bg-zion-blue-dark">;
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">;
         <div className="text-center mb-12">;
           <GradientHeading>Compare & Save</GradientHeading>;
           <p className="mt-4 text-zion-slate-light text-xl max-w-2xl mx-auto">;
+<<<<<<< HEAD
 <<<<<<< HEAD
             See how Zion can drastically reduce your IT costs compared to;
             traditional providers;
@@ -319,12 +351,15 @@ export function ComparisonSection() {;
           </p>;
         </div>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <div className="max-w-4xl mx-auto">;
           <div className="bg-zion-blue-light rounded-lg border border-zion-purple/20 overflow-hidden">;
             <Table>;
               <TableHeader>;
                 <TableRow className="border-b border-zion-purple/20">;
                   <TableHead className="text-white">Service</TableHead>;
+<<<<<<< HEAD
 <<<<<<< HEAD
                   <TableHead className="text-white text-center">;
                     Traditional Providers;
@@ -343,10 +378,13 @@ export function ComparisonSection() {;
                   <TableHead className="text-white text-center">With Zion</TableHead>;
                   <TableHead className="text-white text-center">Savings</TableHead>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 </TableRow>;
               </TableHeader>;
               <TableBody>;
                 {[;
+<<<<<<< HEAD
 <<<<<<< HEAD
                   {;
                     service: "Server Hosting",;
@@ -409,20 +447,26 @@ export function ComparisonSection() {;
                     <TableCell className="text-center text-zion-cyan font-semibold">{item.zion}</TableCell>;
                     <TableCell className="text-center text-green-400 font-bold">{item.savings}</TableCell>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   </TableRow>;
                 ))}
               </TableBody>;
             </Table>;
           </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <div className="mt-8 flex justify-between items-center bg-zion-blue p-6 rounded-lg border border-zion-purple/20">;
             <div className="flex items-start">;
               <CheckCircle2 className="mr-2 h-6 w-6 text-green-400 flex-shrink-0 mt-1" />;
               <p className="text-white">;
+<<<<<<< HEAD
 <<<<<<< HEAD
                 <span className="font-bold">Total Annual Savings: </span>;
                 <span className="text-green-400 font-bold text-xl">;
@@ -447,11 +491,14 @@ export function ComparisonSection() {;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   Results may vary based on specific requirements and service;
                   levels;
                 </span>;
               </p>;
             </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
             <Button className="bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple text - white whitespace - nowrap">;
@@ -466,11 +513,14 @@ export function ComparisonSection() {;
             </div>;
             <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white whitespace-nowrap">;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               Calculate Your Savings;
             </Button>;
           </div>;
         </div>;
       </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -503,3 +553,8 @@ export function ComparisonSection() {;
 }
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  );
+}
+;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

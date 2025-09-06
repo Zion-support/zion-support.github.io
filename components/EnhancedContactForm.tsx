@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
  setErrors (newErrors);
@@ -13,6 +14,11 @@
 }
 setIsSubmitting (true);
 <<<<<<< HEAD
+=======
+ setErrors (newErrors);
+}
+setIsSubmitting (true);
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 const handleInputBlur = (name: keyof FormData) => {;
   //Validate individual field on blur if (formData[name] && errors[name]) {;
@@ -29,6 +35,7 @@ const handleInputBlur = (name: keyof FormData) => {;
 }placeholder="Tell us about your project and requirements..." /> {;
   errors && errors.message && (<motion&& motion.p initial= {
 
+<<<<<<< HEAD
 =======
 const handleInputBlur = (name: keyof FormData) => {
   //Validate individual field on blur if (formData[name] && errors[name]) {
@@ -44,10 +51,13 @@ const handleInputBlur = (name: keyof FormData) => {
 }placeholder="Tell us about your project and requirements..." /> {
   errors.message && (<motion.p initial= {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   {
   opacity: 0, y: -10
 }animate= {
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   opacity: 1, y: 0 
@@ -90,28 +100,29 @@ const EnhancedContactForm: React.FC = () => {
   const services = [
     'AI & Machine LearningQuantum ComputingCybersecurityCloud InfrastructureData AnalyticsDigital TransformationOther'
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   ];
-
-
-
-
+  const validateForm = (): boolean => {
+    const newErrors: FormErrors = {}
+    if (!formData.name.trim()) {
+      newErrors.name = 'Name is required'
+    } else if (formData.name.trim().length < 2) {
+      newErrors.name = 'Name must be at least 2 characters long'
+    }
 
     if (!formData.email.trim()) {
       newErrors.email = 'Email is required'
     } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
       newErrors.email = 'Please enter a valid email address'
     }
-
-
-
-
-
     if (!formData.message.trim()) {
       newErrors.message = 'Message is required'
     } else if (formData.message.trim().length < 10) {
       newErrors.message = 'Message must be at least 10 characters long'
     } else if (formData.message.trim().length > 1000) {
       newErrors.message = 'Message must be less than 1000 characters'
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -158,6 +169,10 @@ const EnhancedContactForm: React.FC = () => {
     }
     setErrors(newErrors);
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+    setErrors(newErrors);
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     return Object && Object.keys(newErrors).length === 0;
   };
 
@@ -165,13 +180,18 @@ const EnhancedContactForm: React.FC = () => {
     e && e.preventDefault();
     if (!validateForm()) {;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       showError('Validation ErrorPlease fix the errors in the form');
       return;
     }
     setIsSubmitting(true);
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -194,6 +214,8 @@ const EnhancedContactForm: React.FC = () => {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       });
       setErrors({});
     } catch (error) {;
@@ -202,6 +224,7 @@ const EnhancedContactForm: React.FC = () => {
     } finally {;
       setIsSubmitting(false);
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   };
@@ -233,6 +256,8 @@ const EnhancedContactForm: React.FC = () => {
   };
   if (isSubmitted) {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     return (
       <motion&& motion.div
         initial={{ opacity: 0, scale: 0 && 0.9 }}
@@ -258,6 +283,7 @@ const EnhancedContactForm: React.FC = () => {
     <div className="max-w-4xl mx-auto">;
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">;
         {/* Contact Information */}
+<<<<<<< HEAD
 
         <div className="space-y-8">;
           <div>;
@@ -569,6 +595,8 @@ if ( {) {
                       ? 'border-red-500/50 bg-red-500/10 focus:border-red-400 focus:bg-red-500/20' ;
                       : 'border-white/20 bg-white/5 focus:border-cyan-400 focus:bg-white/10';
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   } text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-cyan-400/20`}
                   placeholder="Enter your full name";
                 />;
@@ -582,6 +610,7 @@ if ( {) {
                   </motion && motion.p>;
                 )}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -593,6 +622,8 @@ if ( {) {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   Email Address *
                 ">;
                   Email Address *;
@@ -604,6 +635,7 @@ if ( {) {
                   value={formData && formData.email}
                   onChange={handleInputChange}
                   onBlur={() => handleInputBlur('email')}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
                   className={`w-full px-4 py-3 rounded-xl border transition-all duration-300 ${
@@ -624,6 +656,8 @@ if ( {) {
                       ? 'border-red-500/50 bg-red-500/10 focus:border-red-400 focus:bg-red-500/20' ;
                       : 'border-white/20 bg-white/5 focus:border-cyan-400 focus:bg-white/10';
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   } text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-cyan-400/20`}
                   placeholder="Enter your email address";
                 />;
@@ -636,6 +670,7 @@ if ( {) {
                     {errors && errors.email}
                   </motion && motion.p>;
                 )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -650,6 +685,8 @@ if ( {) {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   Company
                 ">;
                   Company;
@@ -663,6 +700,7 @@ if ( {) {
                   className="w-full px-4 py-3 rounded-xl border border-white/20 bg-white/5 text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-cyan-400/20 focus:border-cyan-400 focus:bg-white/10 transition-all duration-300"
                   placeholder="Enter your company name"
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -675,6 +713,8 @@ if ( {) {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   Service Interest
                 ">;
                   Service Interest;
@@ -692,6 +732,7 @@ if ( {) {
                     </option>;
                   ))}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -705,6 +746,8 @@ if ( {) {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 Message *
               ">;
                 Message *;
@@ -716,6 +759,7 @@ if ( {) {
                 value={formData && formData.message}
                 onChange={handleInputChange}
                 onBlur={() => handleInputBlur('message')}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
                 className={`w-full px-4 py-3 rounded-xl border transition-all duration-300 resize-none ${
@@ -736,6 +780,8 @@ if ( {) {
                     ? 'border-red-500/50 bg-red-500/10 focus:border-red-400 focus:bg-red-500/20' ;
                     : 'border-white/20 bg-white/5 focus:border-cyan-400 focus:bg-white/10';
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 } text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-cyan-400/20`}
                 placeholder="Tell us about your project and requirements...";
               />;
@@ -749,6 +795,7 @@ if ( {) {
                 </motion && motion.p>;
               )}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
             </div>;
 
@@ -756,10 +803,13 @@ if ( {) {
 =======
             </div>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <button
               type="submit"
               disabled={isSubmitting}
               className={`w-full py-4 px-8 rounded-xl font-semibold text-lg transition-all duration-300 transform ${
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -774,6 +824,10 @@ if ( {) {
                 isSubmitting
                   ? 'bg-gray-600 cursor-not-allowed'
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+                isSubmitting
+                  ? 'bg-gray-600 cursor-not-allowed'
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   : 'bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 hover:scale-105'
               } flex items-center justify-center gap-3`}>;
               {isSubmitting ? (;
@@ -787,6 +841,7 @@ if ( {) {
                   Send Message;
                 </>;
               )}
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -1211,3 +1266,7 @@ export default EnhancedContactForm;
 export default EnhancedContactForm;
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+}
+export default EnhancedContactForm;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

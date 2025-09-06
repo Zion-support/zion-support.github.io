@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import React from 'react'
 import { Heart } from 'lucide-react'
@@ -54,6 +55,8 @@ interface TalentCardSaveButtonProps {
 }
 
 xport function TalentCardSaveButton({
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export function TalentCardSaveButton({
   profileId,
   profileName,
@@ -61,21 +64,6 @@ export function TalentCardSaveButton({
   onToggleSave,
   isAuthenticated
 }: TalentCardSaveButtonProps) {
-  const { toast } = useToast()
-  const router = useRouter()
-  // Using router.asPath for current path
-  const [localIsSaved, setLocalIsSaved] = React.useState(isSaved)
-  // Handle save toggle
-  const handleSaveToggle = (e: React.MouseEvent) => {
-    e.stopPropagation()
-    if (!isAuthenticated) {
-      toast({
-        title: 'Authentication required',
-        description: 'Please log in to save talents to your favorites',
-        variant: 'destructive',
-      })
-      const returnTo = encodeURIComponent(router.asPath)
-      router.push(`/auth/login?returnTo=${returnTo}`)
   const { toast } = useToast(),
   const router = useRouter(),
   // Using router.asPath for current path
@@ -134,15 +122,20 @@ export function TalentCardSaveButton({;
 
 =======
       return;
-      return;
     }
+<<<<<<< HEAD
 }
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     setLocalIsSaved(!localIsSaved)
     if (onToggleSave) {
       onToggleSave(profileId, !localIsSaved)
     }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     toast({
       title: localIsSaved ? 'Removed from favorites' : 'Added to favorites'
       description: localIsSaved
@@ -152,53 +145,11 @@ export function TalentCardSaveButton({;
     })
   }
     >
-  isAuthenticated: boolean;
-export function TalentCardSaveButton(): any ({;
-  profileId,;
-  profileName,;
-  isSaved,;
-  onToggleSave,;
-  isAuthenticated,;
-}: TalentCardSaveButtonProps) {;
-  const { toast } = useToast();
-  const router = useRouter();
-  // Using router && router.asPath for current path;
-  const [localIsSaved, setLocalIsSaved] = React && React.useState(isSaved);
-
-  // Handle save toggle;
-  const handleSaveToggle = (e: React && React.MouseEvent) => {;
-    e && e.stopPropagation();
-    if (!isAuthenticated) {;
-      toast({;
-        title: 'Authentication required',;
-        description: 'Please log in to save talents to your favorites',;
-        variant: 'destructive',;
-      });
-      const returnTo = encodeURIComponent(router && router.asPath);
-      router && router.push(`/auth/login?returnTo=${returnTo}`);
-      return;
-    }
-
-    setLocalIsSaved(!localIsSaved);
-    if (onToggleSave) {;
-      onToggleSave(profileId, !localIsSaved);
-    }
-
-    toast({;
-      title: localIsSaved ? 'Removed from favorites' : 'Added to favorites',;
-      description: localIsSaved;
-        ? `${profileName} has been removed from your favorites`;
-        : `${profileName} has been added to your favorites`,;
-      variant: 'default',;
-    });
-  };
-
-
-    >;
       <Heart
         className={cn(
           'h-4 w-4 transition-colors'
           localIsSaved ? 'fill-red-500 text-red-500' : 'text-zion-slate'
+<<<<<<< HEAD
         )}      />
 
     </button>
@@ -211,6 +162,10 @@ export function TalentCardSaveButton(): any ({;
 }
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }variant: "default" 
 }) 
 };
@@ -228,6 +183,7 @@ export function TalentCardSaveButton(): any ({;
     })
   },
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -279,6 +235,8 @@ if ( {) {
       title: localIsSaved ? 'Removed from favorites' : 'Added to favorites',
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <button 
       className="absolute top-2 right-2 z-10 p-2 rounded-full bg-zion-blue-dark/80 hover:bg-zion-blue-light/30 transition-colors"
@@ -296,7 +254,10 @@ if ( {) {
 ;
     toast({;
       title: localIsSaved ? "Removed from favorites" : "Added to favorites",;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       description: localIsSaved;
         ? `${profile_name} has been removed from your favorites`;
         : `${profile_name} has been added to your favorites`,
@@ -313,6 +274,7 @@ if ( {) {
 });
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 ;
 ;
@@ -321,3 +283,5 @@ if ( {) {
 
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

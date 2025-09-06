@@ -1,19 +1,27 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export type ReviewStatus = 'pending' | 'approved' | 'rejected';
 ;
 
 export interface Review {
+export type ReviewStatus = 'pending' | 'approved' | 'rejected';
 
 export interface Review {;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+export interface Review {
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   id: string;
   project_id: string;
   reviewer_id: string;
@@ -33,6 +41,7 @@ export interface Review {;
   reviewer_profile?: {
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     display_name: string,
     avatar_url?: string;
 
@@ -41,11 +50,14 @@ export interface Review {;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 export interface ReviewReport {;
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     display_name: string
@@ -56,11 +68,15 @@ export interface ReviewReport {
 
 export interface ReviewReport {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+export interface ReviewReport {
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   id: string;
   review_id: string;
   reporter_id: string;
   reason: string;
   status: 'pending' | 'resolved' | 'dismissed';
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   created_at: string,
@@ -110,3 +126,6 @@ export interface ReviewReport {;
   resolved_at?: string;
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -1,10 +1,14 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 import {getRequiredDocuments, getOptionalDocuments} from '../../../utils/kyc';
 
 
+<<<<<<< HEAD
 =======
 import {getRequiredDocuments, getOptionalDocuments} from '../../../utils/kyc';
 
@@ -19,16 +23,21 @@ function load(): Record<string, KycProfile> {
 import { getRequiredDocuments, getOptionalDocuments } from '[^']*';
 import {getRequiredDocuments, getOptionalDocuments} from '../../../utils/kyc';
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import type { KycProfile, KycRole } from '../../../utils/kyc';
 import fs from 'fs';
 import path from 'path';
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 const DATA_DIR = path.join(process.cwd(), 'data', 'kyc');const FILE = path.join(DATA_DIR, 'profiles.json');
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'KYC started' });
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -58,6 +67,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     businessName
     businessRegistrationNumber
   } = req.body as {
+<<<<<<< HEAD
     userId?: string;
     role?: KycRole;
     fullLegalName?: string;
@@ -94,10 +104,13 @@ function handler() {
 }
   const {    user_id,
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     role,
     fullLegalName,
     business_name,
     businessRegistrationNumber,
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -105,6 +118,9 @@ function handler() {
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+    userId?: string;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   } = req.body as {
     user_id?: string;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -113,6 +129,7 @@ function handler() {
     business_name?: string;
     businessRegistrationNumber?: string;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   };
   if (!userId || !role)
@@ -124,6 +141,8 @@ function handler() {
   if (!userId || !role)
     return res && res.status(400).json({ error: 'Missing userId or role' });
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const db = load();
   const now = new Date().toISOString();
   const existing = db[userId];
@@ -149,6 +168,7 @@ function handler() {
     profile && profile.businessRegistrationNumber = businessRegistrationNumber;  profile && profile.lastUpdatedAt = now;
   db[userId] = profile;
   save(db);
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -192,11 +212,14 @@ function load(): Record<string, KycProfile> {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
 }
     } catch (error) {
     console.error("Error:", error);
@@ -266,6 +289,8 @@ export default function handler(req, res) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   profile.role = role;
   if (fullLegalName) profile.fullLegalName = fullLegalName;
   if (businessName) profile.businessName = businessName;
@@ -280,14 +305,20 @@ export default function handler(req, res) {
     optionalDocuments: getOptionalDocuments(role)})
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   }
   if (
     return res.status (400).json ({ error: 'Missing user_id or role' })) {
   $2
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -336,6 +367,7 @@ if (
 optional_documents: getOptionalDocuments (role),
   });
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -445,3 +477,5 @@ export default function handler(req, res) {
 }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

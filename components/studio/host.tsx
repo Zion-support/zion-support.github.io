@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -43,16 +44,24 @@ export default function StudioHostPage() {
   const [persona, setPersona] = useState<PersonaConfig>({
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     voice: 'Visionary'
     language: 'English'
     voice: 'Visionary',
     language: 'English',;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   });
   const [inviteeName, setInviteeName] = useState('');
   const [inviteeBio, setInviteeBio] = useState('');
   const [topic, setTopic] = useState('');
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -83,20 +92,28 @@ export default function StudioHostPage() {
   const [persona, setPersona] = useState<PersonaConfig>({ voice: 'Visionary', language: 'English' })
   const [persona, setPersona] = useState<PersonaConfig>({ voice: 'Visionary', language: 'English' }),;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+export default function StudioHostPage() {;
+  const [persona, setPersona] = useState<PersonaConfig>({ voice: 'Visionary', language: 'English' }),;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const [inviteeName, setInviteeName] = useState('');
   const [inviteeBio, setInviteeBio] = useState('');
   const [topic, setTopic] = useState('');
   const [operatorPrompt, setOperatorPrompt] = useState('Generate a 15-minute podcast script interviewing the founder of a global decentralized talent protocol called Zion. Include visionary and technical questions, plus a CTA.');
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const [generating, setGenerating] = useState(false);
   const [episode, setEpisode] = useState<any>(null);
   const [synthesizing, setSynthesizing] = useState(false);
   const [publishing, setPublishing] = useState(false);
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -161,6 +178,8 @@ function StudioHostPage() {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     } catch (e) {
       console.error (e);
       alert ('Failed to generate episode');
@@ -168,6 +187,7 @@ function StudioHostPage() {
       set_generating (false);
     }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     }
 
@@ -251,6 +271,9 @@ if (return) {
       alert ('Failed to update RSS');
     } finally {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  return (
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <div className='space-y-8'>;
       <h1 className='text-3xl font-bold'>Podcast Studio Host</h1>;
 
@@ -293,6 +316,7 @@ if (return) {
           </div>;
           <div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -306,10 +330,13 @@ if (return) {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               }
             />;
           </div>;
           <div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -327,6 +354,8 @@ if (return) {
           <div>
             <label className='block text-sm font-medium'>Invitee Name</label>
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               value={persona && persona.cloneStyleText || ''}
               onChange={e =>;
                 setPersona({ ...persona, cloneStyleText: e && e.target.value });
@@ -391,6 +420,7 @@ if (return) {
             <label className="block text-sm font-medium" htmlFor="input-Voice">Voice</label>;
             <select
               className="mt-1 w-full border rounded p-2"
+<<<<<<< HEAD
 
             <textarea className="mt-1 w-full border rounded p-2" rows={3} placeholder="Paste representative writing or notes to clone tone" value={persona.cloneStyleText || ''} onChange={(e) => setPersona({ ...persona, cloneStyleText: e.target.value })} />
           </div>
@@ -411,6 +441,8 @@ if (return) {
         <h2 className="text-xl font-semibold">Episode Generator</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <div>
             <label className="block text-sm font-medium" htmlFor="input-Invitee Name">Invitee Name</label>
             <input className="mt-1 w-full border rounded p-2" value={inviteeName} onChange={(e) => setInviteeName(e.target.value)} />
@@ -434,12 +466,15 @@ if (return) {
       </section>
       {episode && (
 <<<<<<< HEAD
+<<<<<<< HEAD
 
         <section className="space-y-4">
 
 =======
         <section className="space-y-4">
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <h2 className="text-xl font-semibold">Episode Draft</h2>
           <div className="border rounded p-4 space-y-3">
             <p className="text-sm text-gray-600">ID: {episode.id}</p>
@@ -447,6 +482,7 @@ if (return) {
             <div>
               <h4 className="font-semibold">Questions</h4>
               <ol className="list-decimal list-inside space-y-1">
+<<<<<<< HEAD
 <<<<<<< HEAD
 
                 {episode.questions?.map((q: string, idx: number) => (
@@ -456,6 +492,8 @@ if (return) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                   <li key={idx}>{q}</li>
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               value={persona && persona.voice}
               onChange={(e) => setPersona({ ...persona, voice: e && e.target.value as any })}
             >;
@@ -514,6 +552,7 @@ if (return) {
               <h4 className="font-semibold">Questions</h4>;
               <ol className="list-decimal list-inside space-y-1">;
                   <li key={idx}>{q}</li>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 ))}
@@ -1026,6 +1065,8 @@ if (return) {
 =======
               <div className='flex gap-3'>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 {episode.audio.mp3Url && (
                   <a;
                     href={episode.audio.mp3Url}
@@ -1042,6 +1083,7 @@ if (return) {
                   </a>)}
                 {episode.audio.mp4Url && (
                   <a;
+<<<<<<< HEAD
                     href={episode.audio.mp4Url}
 <<<<<<< HEAD
                     className='text - blue - 600 underline';
@@ -1060,16 +1102,42 @@ if (return) {
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 disabled={publishing}
               >                {publishing ? 'Publishing…' : 'Update RSS'}
               </button>
             </div>
+<<<<<<< HEAD
 
 ;
 
 <<<<<<< HEAD
 =======
 =======
+=======
+            {episode.audio && (
+              <div className='flex gap-3'>
+                {episode.audio.mp3Url && (
+                  <a
+                    href={episode.audio.mp3Url}
+                    className='text-blue-600 underline'
+                  >
+                    Download MP3
+                  </a>
+                )}
+                {episode.audio.wavUrl && (
+                  <a
+                    href={episode.audio.wavUrl}
+                    className='text-blue-600 underline'
+                  >
+                    Download WAV
+                  </a>
+                )}
+                {episode.audio.mp4Url && (
+                  <a
+                    href={episode.audio.mp4Url}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     className='text-blue-600 underline'
                   >
                     Download MP4
@@ -1085,14 +1153,20 @@ if (return) {
     </div>
   );
 }
+
 ;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             {episode.audio && (
 
                 {publishing ? 'Publishing…' : 'Update RSS'}
               </button>
             </div>
             {episode.audio && (
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -1100,3 +1174,5 @@ if (return) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

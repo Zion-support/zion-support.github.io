@@ -23,6 +23,7 @@ class ErrorBoundary extends React.Component {
 }
 import React, { useState } from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 export type ProposalType =;
@@ -33,18 +34,25 @@ export type ProposalType =;
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 export type ProposalForm = {;
 
 
 
 export type ProposalForm = {;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 export type ProposalForm = {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   targetInstitution: string;
 =======
 ;
@@ -52,6 +60,7 @@ export type ProposalForm = {
   target_institution: string;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   type: ProposalType;
+<<<<<<< HEAD
   regional_scope: string;
   budgetOrGoals: string;
   supporting_multiverses: string;
@@ -131,16 +140,12 @@ export type ProposalForm = {
 export type ProposalForm = {;
   targetInstitution: string;
   type: ProposalType;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   regionalScope: string;
   budgetOrGoals: string;
   supportingMultiverses: string;
   language?: string;
-  customPrompt?: string;};export type ProposalForm = {
-  targetInstitution: string
-  type: ProposalType
-  regionalScope: string
-  budgetOrGoals: string
-  supportingMultiverses: string
   targetInstitution: string,
   type: ProposalType,
   regionalScope: string,
@@ -158,23 +163,54 @@ export default function ProposalGenerator() {
     supportingMultiverses: ''
     language: 'English'
     customPrompt:
-      'Write a proposal for the UN Development Program on integrating Zion into their Digital Labor Initiative. Include metrics, social outcomes, and DAO-based governance logic.'
+
+
+  language?: string;
+  customPrompt?: string
+}
+export type ProposalType = 'Workforce Dev' | 'AI Ethics' | 'Digital ID' | 'Education';
+export type ProposalForm = {
+  targetInstitution: string,
+  custom_prompt?: string;}export type ProposalForm = {
+  target_institution: string,
+  type: ProposalType,
+  regional_scope: string,
+  budgetOrGoals: string,
+  supporting_multiverses: string,
+  language?: string;
+};
+export default function ProposalGenerator() {;
+  const [form, setForm] = useState<ProposalForm>({;
+    targetInstitution: 'UNDP',;
+    type: 'Workforce Dev',;
+    regionalScope: 'Global',;
+    budgetOrGoals: '',;
+    supportingMultiverses: '',;
+    language: 'English',;
+    customPrompt:;
       'Write a proposal for the UN Development Program on integrating Zion into their Digital Labor Initiative. Include metrics, social outcomes, and DAO-based governance logic.',;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   });
   const [isGenerating, setIsGenerating] = useState(false);
   const [draftMarkdown, setDraftMarkdown] = useState('');
   const [draftJson, setDraftJson] = useState<any>(null);
 <<<<<<< HEAD
+<<<<<<< HEAD
   const [exportLinks, setExportLinks] = useState<{;
 =======
   const [exportLinks, setExportLinks] = useState<{
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     pdfUrl?: string;
     jsonUrl?: string;
     mdUrl?: string;
   } | null>(null);
   const [statusMessage, setStatusMessage] = useState('');
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -203,10 +239,13 @@ export default function ProposalGenerator() {
   ) {
     setForm(prev => ({ ...prev, [key]: value }));  }  const [isGenerating, setIsGenerating] = useState(false);
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const [draftMarkdown, setDraftMarkdown] = useState('');
   const [draftJson, setDraftJson] = useState<any>(null);
   const [exportLinks, setExportLinks] = useState<{ pdfUrl?: string, jsonUrl?: string, mdUrl?: string } | null>(null);
   const [statusMessage, setStatusMessage] = useState('');
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -250,11 +289,14 @@ export default function ProposalGenerator() {
       setDraftMarkdown(data.markdown |'');
       setDraftJson(data.json |null);
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       setStatusMessage('Draft ready. You can edit and export.')
     } catch (e: any) {
       console.error(e);
       setStatusMessage('Failed to generate. You can edit manually and export.')
     } finally {
+<<<<<<< HEAD
       setIsGenerating(false)
 <<<<<<< HEAD
     }
@@ -262,10 +304,15 @@ export default function ProposalGenerator() {
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+    }
+  }
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     } finally {
 
       setIsGenerating(false);    }
 
+<<<<<<< HEAD
 
     }
   }
@@ -278,17 +325,23 @@ export default function ProposalGenerator() {
 async function handleExport() {
       setIsGenerating(false);    }
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     }
   }
 
   async function handleExport() {
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     setStatusMessage('Exporting to PDF/Markdown/JSON...');
     try {
       const res = await fetch('/api/proposals/export', {
         method: 'POST'
         headers: { 'Content-Type': 'application/json' }
         body: JSON.stringify({
+<<<<<<< HEAD
 <<<<<<< HEAD
 
           markdown: draftMarkdown,
@@ -309,11 +362,14 @@ async function handleExport() {
       setStatusMessage('Export failed');    }      const data = await res.json();
       setExportLinks({ pdfUrl: data.pdfUrl, jsonUrl: data.jsonUrl, mdUrl: data.mdUrl })
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       setStatusMessage('Exported. Files saved.')
     } catch (e) {
       console.error(e);
       setStatusMessage('Export failed')
     }
+<<<<<<< HEAD
   }
 <<<<<<< HEAD
 =======
@@ -322,10 +378,13 @@ async function handleExport() {
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       setStatusMessage('Export failed');    }
 
     }
 
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -340,10 +399,16 @@ async function handleExport() {
   }
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  }
+
+  }
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   async function handleSubmitBridge() {
     setStatusMessage('Submitting via bridge (email/IPFS/signature)...');
     try {
       const res = await fetch('/api/proposals/submit', {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     } finally {;
@@ -367,6 +432,8 @@ async function handleExport() {
       console.error(e);
       setStatusMessage('Submission failed')
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     }
   }
 
@@ -422,6 +489,14 @@ async function handleExport() {
       setStatusMessage('Submission failed');    }
   }
   return (
+        <div className='space-y-4'>      const data = await res.json();
+      setStatusMessage(`Submitted. Status: ${data.status |'queued'}. IPFS: ${data.ipfsCid |'N/A'}`)
+    } catch (e) {
+      console.error(e);
+        <div className='space-y-4'>      const data = await res.json();
+      setStatusMessage(`Submitted. Status: ${data.status |'queued'}. IPFS: ${data.ipfsCid |'N/A'}`)
+    } catch (e) {
+      console.error(e);
 
     <div className='space-y-6'>;
       <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>;
@@ -431,19 +506,23 @@ async function handleExport() {
       console && console.error(e);
       setStatusMessage('Submission failed');
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     }
   }
   return (
-    <div className='space-y-6'>;
-      <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>;
-        <div className='space-y-4'>;
-          <div>;
-            <label className='block text-sm font-medium'>;
-              Target institution;
-            </label>;
+    <div className='space-y-6'>
+      <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
+        <div className='space-y-4'>
+          <div>
+            <label className='block text-sm font-medium'>
+              Target institution
+            </label>
             <input
               className='w-full border rounded px-3 py-2'
               value={form && form.targetInstitution}
@@ -537,6 +616,7 @@ async function handleExport() {
           <div className='flex gap-2'>;
             <button
               className='px-4 py-2 bg-blue-600 text-white rounded disabled:opacity-50'              onClick={handleGenerate}            <input
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -678,6 +758,37 @@ async function handleExport() {
             <input
 
 =======
+=======
+            <textarea
+              className="w-full border rounded px-3 py-2 min-h-[80px]"
+              value={form && form.budgetOrGoals}
+              onChange={(e) => handleChange('budgetOrGoals', e && e.target.value)}
+              placeholder="$5M for pilot, goals: 10k workers onboarded, 70% female youth, etc.";
+            />;
+          </div>;
+          <div>;
+            <label className="block text-sm font-medium" htmlFor="input-Supporting multiverse(s)">Supporting multiverse(s)</label>;
+            <input
+              className="w-full border rounded px-3 py-2"
+              value={form && form.supportingMultiverses}
+              onChange={(e) => handleChange('supportingMultiverses', e && e.target.value)}
+              placeholder="Eg. Zion && Zion.ai, Zion && Zion.ID, Zion && Zion.Work";
+            />;
+          </div>;
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
+            <div>;
+              <label className="block text-sm font-medium" htmlFor="input-Language">Language</label>;
+              <input
+                className="w-full border rounded px-3 py-2"
+                value={form && form.language}
+                onChange={(e) => handleChange('language', e && e.target.value)}
+                placeholder="English / French / Spanish / Arabic / ...";
+              />;
+            </div>;
+            <div>;
+              <label className="block text-sm font-medium" htmlFor="input-GPT Prompt Assist">GPT Prompt Assist</label>;
+              <textarea
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 className="w-full border rounded px-3 py-2 min-h-[80px]"
                 value={form && form.customPrompt}
                 onChange={(e) => handleChange('customPrompt', e && e.target.value)}
@@ -686,18 +797,17 @@ async function handleExport() {
           </div>;
           <div className="flex gap-2">;
             <button
-              className="px-4 py-2 bg-blue-600 text-white rounded disabled:opacity-50"
               onClick={handleGenerate}
               disabled={isGenerating}>;
               {isGenerating ? 'Generating...' : 'Generate Draft'}
             </button>;
             <button
-              className="px-4 py-2 bg-emerald-600 text-white rounded"
               onClick={handleExport}
               disabled={!draftMarkdown}>;
               Export (PDF/JSON/MD);
             </button>;
             <button
+<<<<<<< HEAD
               className="px-4 py-2 bg-purple-600 text-white rounded"
             />
           </div>
@@ -839,24 +949,31 @@ async function handleExport() {
               className='px-4 py-2 bg-blue-600 text-white rounded disabled:opacity-50'              onClick={handleGenerate}
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               onClick={handleGenerate}
-              disabled={isGenerating}
-            >
+              disabled={isGenerating}>;
               {isGenerating ? 'Generating...' : 'Generate Draft'}
-            </button>
+            </button>;
             <button
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
 =======
               className='px-4 py-2 bg-emerald-600 text-white rounded'              onClick={handleExport}              className="px-4 py-2 bg-emerald-600 text-white rounded"
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               onClick={handleExport}
-              disabled={!draftMarkdown}
-            >
-              Export (PDF/JSON/MD)
-            </button>
+              disabled={!draftMarkdown}>;
+              Export (PDF/JSON/MD);
+            </button>;
             <button
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -871,49 +988,58 @@ async function handleExport() {
           </div>
           {statusMessage && (
             <p className='text-sm text-gray-600'>{statusMessage}</p>
+=======
+
+
+              disabled={!draftMarkdown}>;
+              Submit Bridge;
+            </button>;
+          </div>;
+          {statusMessage && (;
+            <p className='text-sm text-gray-600'>{statusMessage}</p>;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           )}
-          {exportLinks && (
-            <div className='text-sm space-y-1'>
-              {exportLinks.pdfUrl && (
-                <div>
+          {exportLinks && (;
+            <div className='text-sm space-y-1'>;
+              {exportLinks && exportLinks.pdfUrl && (;
+                <div>;
                   <a
                     className='text-blue-600 underline'
-                    href={exportLinks.pdfUrl}
+                    href={exportLinks && exportLinks.pdfUrl}
                     target='_blank'
-                    rel='noreferrer'
-                  >
-                    PDF
-                  </a>                </div>
+                    rel='noreferrer'>;
+                    PDF;
+                  </a>                </div>;
               )}
-              {exportLinks.mdUrl && (
-                <div>          {exportLinks && (
-            <div className="text-sm space-y-1">
-              {exportLinks.pdfUrl && (
-                <div>
-                  <a className="text-blue-600 underline" href={exportLinks.pdfUrl} target="_blank" rel="noreferrer">PDF</a>
-                </div>
+              {exportLinks && exportLinks.mdUrl && (;
+                <div>          {exportLinks && (;
+            <div className="text-sm space-y-1">;
+              {exportLinks && exportLinks.pdfUrl && (;
+                <div>;
+                  <a className="text-blue-600 underline" href={exportLinks && exportLinks.pdfUrl} target="_blank" rel="noreferrer">PDF</a>;
+                </div>;
               )}
-              {exportLinks.mdUrl && (
-                <div>
+              {exportLinks && exportLinks.mdUrl && (;
+                <div>;
                   <a
                     className='text-blue-600 underline'
-                    href={exportLinks.mdUrl}
+                    href={exportLinks && exportLinks.mdUrl}
                     target='_blank'
-                    rel='noreferrer'
-                  >
-                    Markdown
-                  </a>                </div>
+                    rel='noreferrer'>;
+                    Markdown;
+                  </a>                </div>;
               )}
-              {exportLinks.jsonUrl && (
-                <div>                  <a className="text-blue-600 underline" href={exportLinks.mdUrl} target="_blank" rel="noreferrer">Markdown</a>
-                </div>
+              {exportLinks && exportLinks.jsonUrl && (;
+                <div>                  <a className="text-blue-600 underline" href={exportLinks && exportLinks.mdUrl} target="_blank" rel="noreferrer">Markdown</a>;
+                </div>;
               )}
-              {exportLinks.jsonUrl && (
-                <div>
+              {exportLinks && exportLinks.jsonUrl && (;
+                <div>;
                   <a
                     className='text-blue-600 underline'
-                    href={exportLinks.jsonUrl}
+                    href={exportLinks && exportLinks.jsonUrl}
                     target='_blank'
+<<<<<<< HEAD
                     rel='noreferrer'
                   >
                     JSON
@@ -949,18 +1075,36 @@ async function handleExport() {
         </div>
         <div className="space-y-2">
           <label className="block text-sm font-medium" htmlFor="input-Draft (Markdown)">Draft (Markdown)</label>
+=======
+                    rel='noreferrer'>;
+                    JSON;
+                  </a>                </div>                  <a className="text-blue-600 underline" href={exportLinks && exportLinks.jsonUrl} target="_blank" rel="noreferrer">JSON</a>;
+                </div>;
+              )}
+            </div>;
+          )}
+        </div>;
+        <div className='space-y-2'>;
+          <label className='block text-sm font-medium'>Draft (Markdown)</label>;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <textarea
-
+            className='w-full border rounded px-3 py-2 min-h-[520px] font-mono'
+            value={draftMarkdown}
+            onChange={e => setDraftMarkdown(e && e.target.value)}          />          <textarea
             className="w-full border rounded px-3 py-2 min-h-[520px] font-mono"
             value={draftMarkdown}
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             onChange={(e) => setDraftMarkdown(e && e.target.value)}
           />;
         </div>;
       </div>;
     </div>;
+<<<<<<< HEAD
   );
 =======
 =======
@@ -971,6 +1115,14 @@ async function handleExport() {
           )}
         </div>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+            onChange={(e) => setDraftMarkdown(e.target.value)}
+          />
+        </div>
+      </div>
+    </div>
+  );
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   );
 
@@ -1345,6 +1497,7 @@ function handleSubmitBridge() {
     </div>);
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
         <div className='space-y-2'>
@@ -1367,3 +1520,5 @@ function handleSubmitBridge() {
   );
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

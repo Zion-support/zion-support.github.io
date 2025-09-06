@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import Link from 'next/link';
 export default function ContactPage() {
@@ -25,11 +26,14 @@ export default function ContactPage() {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {/* Contact Form & Info */}
       <section className=&quot;py - 20 & quot;>;
         <div className=&quot;max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8&quot;>;
           <div className=&quot;grid grid - cols - 1 lg:grid - cols - 2 gap - 12 & quot;>;
             {/* Contact Form */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -131,10 +135,13 @@ export default function ContactPage() {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     rows={5}
                     required;
                     className="w - full px - 4 py - 3 border border - gray - 300 rounded - lg focus:ring - 2 focus:ring - blue - 500 focus:border - transparent & quot;
                     placeholder=&quot;Tell us about your project or inquiry...&quot;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -210,6 +217,8 @@ export default function ContactPage() {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               {/* Social Media Links */}
               <div>;
                 <h3 className="font - semibold text - gray - 900 mb - 4">Follow Us</h3>;
@@ -235,6 +244,7 @@ export default function ContactPage() {
           </div>;
         </div>;
       </section>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 import Link from 'next/link';
@@ -449,6 +459,8 @@ export default function ContactPage() {
         </div>
       </section>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {/* FAQ Section */}
       <section className="py - 20 bg - gray - 50">;
         <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8">;

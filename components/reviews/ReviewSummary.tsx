@@ -1,27 +1,29 @@
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <div className='enhanced-card flex items-center justify-between'>import React from 'react';
-=======
 import React from 'react';
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 import type { ReviewsSummary } from '../../types/reviews';
-=======
 </div> </div> </div>) }
 ;
 const ReviewSummary: React.FC < Props> = ({ summary }) => {
   return (
     <div className='enhanced - card flex items - center justify - between'>import React from 'react';
 import type { ReviewsSummary } from '../../types / reviews';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 import StarRating from './StarRating';
 import {Star} from 'lucide-react';
+<<<<<<< HEAD
 
 type Props = {;
   summary: ReviewsSummary;
 
 const ReviewSummary: React.FC<Props> = ({ summary }) => {;
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <div className='enhanced-card flex items-center justify-between'>;
       <div>;
@@ -41,6 +43,7 @@ const ReviewSummary: React.FC<Props> = ({ summary }) => {;
       </div>;
     </div>;
   );
+<<<<<<< HEAD
 
 };
 
@@ -49,6 +52,8 @@ const ReviewSummary: React.FC<Props> = ({ summary }) => {
     <div className="enhanced-card flex items-center justify-between">
       <div>
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <div className="flex items-center gap-3">
           <span className="text-2xl font-semibold">{summary.averageRating.toFixed(1)}</span>
           <StarRating value={Math.round(summary.averageRating)} onChange={() => {}} readOnly />
@@ -59,6 +64,7 @@ const ReviewSummary: React.FC<Props> = ({ summary }) => {
         </div>
       </div>
     </div>
+<<<<<<< HEAD
 
 };
 
@@ -85,6 +91,11 @@ export default ReviewSummary;
 
 
 =======
+=======
+};
+
+export default ReviewSummary;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   summary: ReviewsSummary;
 const ReviewSummary: React.FC < Props> = ({ summary }) => {
   return (
@@ -125,4 +136,7 @@ export default ReviewSummary);
 ;
 export default ReviewSummary;
 ;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -16,6 +17,8 @@ import {format, isAfter, parseISO, startOfDay} from "date-fns";
 function InterviewsContent() {
   const { interviews, isLoading, fetchInterviews } = useInterviews();
   const [activeTab, setActiveTab] = useState("upcoming");
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useEffect, useState } from "react",
 import { useInterviews } from "@/hooks/useInterviews",
 import { Interview } from "@/types/interview",
@@ -26,6 +29,7 @@ import { SEO } from "@/components/SEO",
 import { ProtectedRoute } from "@/components/ProtectedRoute",
 import { InterviewCard } from "@/components/interviews/InterviewCard",
 import { Button } from "@/components/ui/button",
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
@@ -34,6 +38,8 @@ import { Button } from "@/components/ui/button",
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { Calendar, Clock, Video } from "lucide-react";
 import { format, isAfter, parseISO, startOfDay } from "date-fns";
 function InterviewsContent() {
@@ -46,17 +52,23 @@ function InterviewsContent() {
   const { interviews, isLoading, fetchInterviews } = useInterviews(),
   const [activeTab, setActiveTab] = useState("upcoming"),
   
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   useEffect(() => {
     // Modified to handle Promise<Interview[]> return type
 
     const loadInterviews = async () => {
       await fetchInterviews()
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
 =======
     }
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     loadInterviews()
   }, []);
   // Filter interviews based on status and date
@@ -64,6 +76,7 @@ function InterviewsContent() {
   const today = startOfDay(now);
   const upcomingInterviews = interviews
     .filter((interview) => {
+<<<<<<< HEAD
       const interviewDate = parseISO(interview.scheduled_date);
       return isAfter(interviewDate, now) &&
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -85,16 +98,21 @@ function InterviewsContent() {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         ['confirmedrequested'].includes(interview.status)
     })
     .sort((a, b) =>
       parseISO(a.scheduled_date).getTime() - parseISO(b.scheduled_date).getTime()
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
 =======
     );
   const pendingInterviews = interviews.filter(interview =>
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     interview.status === 'requested'
   );
   const pastInterviews = interviews.filter(interview => {
@@ -104,6 +122,7 @@ function InterviewsContent() {
   });
   // Group interviews by date
   const groupInterviewsByDate = (interviews: Interview[]) => {
+<<<<<<< HEAD
     const grouped: Record<string, Interview[]> = {}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     ),
@@ -125,10 +144,13 @@ function InterviewsContent() {
 
 <<<<<<< HEAD
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     interviews.forEach((interview) => {
       const dateKey = format(parseISO(interview.scheduled_date), 'yyyy-MM-dd');
       if (!grouped[dateKey]) {
         grouped[dateKey] = []
+<<<<<<< HEAD
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -249,6 +271,8 @@ function InterviewsContent() {;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     return Object.entries(groupedInterviews)
       .sort(([dateA], [dateB]) =>
         parseISO(dateA).getTime() - parseISO(dateB).getTime()
@@ -261,6 +285,7 @@ function InterviewsContent() {;
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {interviews.map((interview) => (
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -343,6 +368,8 @@ function InterviewsContent() {;
   const renderInterviewGroups = (groupedInterviews: Record<string, Interview[]>) => {;
     return Object && Object.entries(groupedInterviews);
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useEffect, useState } from "react",;
 import { useInterviews } from "@/hooks/useInterviews",;
 import { Interview } from "@/types/interview",;
@@ -404,18 +431,8 @@ function InterviewsContent() {;
       }
       grouped[dateKey].push(interview),;
     }),;
-    ;
-    return grouped,;
-  },;
-  ;
-  const upcomingGrouped = groupInterviewsByDate(upcomingInterviews),;
-  const pendingGrouped = groupInterviewsByDate(pendingInterviews),;
-  const pastGrouped = groupInterviewsByDate(pastInterviews),;
-;
-  const renderInterviewGroups = (groupedInterviews:Record<string Interview[]>) => {;
-    return Object.entries(groupedInterviews);
-      .sort(([dateA], [dateB]) => ;
     return grouped;
+<<<<<<< HEAD
   },;
   const upcomingGrouped = groupInterviewsByDate(upcomingInterviews),;
   const pendingGrouped = groupInterviewsByDate(pendingInterviews),;
@@ -424,6 +441,17 @@ function InterviewsContent() {;
     return Object.entries(groupedInterviews);
       .sort(([dateA], [dateB]) =>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  };
+
+  const upcomingGrouped = groupInterviewsByDate(upcomingInterviews);
+  const pendingGrouped = groupInterviewsByDate(pendingInterviews);
+  const pastGrouped = groupInterviewsByDate(pastInterviews);
+
+  const renderInterviewGroups = (groupedInterviews: Record<string, Interview[]>) => {;
+    return Object && Object.entries(groupedInterviews);
+      .sort(([dateA], [dateB]) => ;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         parseISO(dateA).getTime() - parseISO(dateB).getTime();
       );
       .map(([date, interviews]) => (;
@@ -438,13 +466,17 @@ function InterviewsContent() {;
                 key={interview && interview.id} 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
               <InterviewCard 
                 key={interview.id} 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
@@ -452,6 +484,11 @@ function InterviewsContent() {;
               <InterviewCard
                 key={interview && interview.id} 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+      }
+      grouped[dateKey].push(interview);
+    });
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 interview={interview}
                 onRefresh={async () => {;
                   await fetchInterviews();
@@ -459,6 +496,7 @@ function InterviewsContent() {;
               />;
             ))}
 
+<<<<<<< HEAD
 
   },
 
@@ -481,6 +519,8 @@ function InterviewsContent() {;
   },
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <>
       <SEO
@@ -505,6 +545,7 @@ function InterviewsContent() {;
                   {upcomingInterviews.length}
                 </span>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
               )}
@@ -515,6 +556,8 @@ function InterviewsContent() {;
                 <span className="ml-2 bg-amber-500 rounded-full px-2 py-0.5 text-xs">
                   {pendingInterviews.length}
                 </span>
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               )}
             </TabsTrigger>
             <TabsTrigger value="past">Past</TabsTrigger>
@@ -563,6 +606,7 @@ function InterviewsContent() {;
                 <p className="text-muted-foreground">Your interview history will appear here.</p>
               </div>
             )}
+<<<<<<< HEAD
           </TabsContent>
         </Tabs>
       </main>
@@ -583,6 +627,8 @@ export default function Interviews() {
     </ProtectedRoute>
   )
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           </div>;
         </div>;
       ));
@@ -612,7 +658,6 @@ export default function Interviews() {
                 <span className="ml-2 bg-primary rounded-full px-2 py-0 && 0.5 text-xs">;
                   {upcomingInterviews && upcomingInterviews.length}
                 </span>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               )}
             </TabsTrigger>;
             <TabsTrigger value="pending">;
@@ -622,6 +667,7 @@ export default function Interviews() {
                   {pendingInterviews && pendingInterviews.length}
                 </span>;
               )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -685,6 +731,8 @@ export default function Interviews() {
 =======
             )}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useEffect, useState } from './react';
 import { use_interviews } from '@/hooks / use_interviews';
 import { Interview } from '@/types / interview';
@@ -849,6 +897,7 @@ if ( {) {
                 <p className="text - muted - foreground">Your interview history will appear here.</p>;
               </div>)}
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
             {interviews.map((interview) => (;
@@ -949,12 +998,25 @@ if ( {) {
               </div>;
             )}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           </TabsContent>;
         </Tabs>;
       </main>;
       <Footer />;
+}
+export default function Interviews() {
+  return (
+    <ProtectedRoute>
+      <InterviewsContent />
+    </ProtectedRoute>
+  )
+}
+
+
 
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -962,6 +1024,10 @@ if ( {) {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           </TabsContent>;
         </Tabs>;
       </main>;
@@ -971,6 +1037,7 @@ if ( {) {
 }
 ;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 export default function Interviews() {;
   return (
@@ -986,6 +1053,9 @@ export default function Interviews() {;
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     </>);
 }
 export default /**
@@ -997,6 +1067,7 @@ function Interviews() {
       <InterviewsContent />;
     </ProtectedRoute>);
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -1014,3 +1085,5 @@ export default function Interviews() {;
 ;
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

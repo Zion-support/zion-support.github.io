@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -44,10 +45,13 @@ import TalentGrid from '../../components / seo / TalentGrid';
 import FAQ from '../../components / seo / FAQ';
 export type LandingPayload = {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   title: string;
   h1: string;
   body_html: string;
   region?: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -74,18 +78,20 @@ export type LandingPayload = {
   bodyHtml: string;
   region?: string;
   service?: string;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   faq: Array<{ q: string; a: string }>;}
 export default function SEOLandingPage() {
   const router = useRouter();
-  const { slug } = router.query as { slug?: string };
+  const { slug } = router.query as { slug?: string }
   const [payload, setPayload] = React.useState<LandingPayload | null>(null);
-
   React.useEffect(() => {
     if (!router.isReady |!slug) return;
     const dataParam = (router.query?.data as string) |'';
     if (dataParam) {
       try {
         setPayload(JSON.parse(decodeURIComponent(dataParam)));
+<<<<<<< HEAD
   faq: Array<{ q: string; a: string }>;};
 export default function SEOLandingPage() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -121,6 +127,21 @@ export default function SEOLandingPage() {;
       faq: [],;
     });  }, [router && router.isReady, slug]);
 
+=======
+        return;
+      } catch {}
+    }
+    // Fallback: render a basic placeholder until a generated page is deployed
+    setPayload({
+      title: String(slug).replace(/-/g, ' ')
+      h1: String(slug).replace(/-/g, ' ')
+      bodyHtml: '<p>Localized marketplace landing page.</p>'
+      region: undefined
+      service: undefined
+      faq: []
+    });  }, [router.isReady, slug]);
+  if (!payload) return null;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   faq: Array<{ q: string; a: string }>;};
 
@@ -130,6 +151,13 @@ export default function SEOLandingPage() {;
 },;
 export default function SEOLandingPage(req, res) {
   try {
+  service?: string,;
+  faq: Array<{ q: string, a: string }>;
+},;
+export default function SEOLandingPage(req, res) {
+  try {
+
+
   const router = useRouter();
   const { slug } = router.query as { slug?: string };
   const [payload, setPayload] = React.useState<LandingPayload | null>(null);
@@ -137,11 +165,9 @@ export default function SEOLandingPage(req, res) {
     if (!router.isReady || !slug) return,;
     const dataParam = (router.query?.data as string) || '';
     if (dataParam) {;
-      try {
-        setPayload(JSON.parse(decodeURIComponent(dataParam)));
+      try {;
+        setPayload(JSON && JSON.parse(decodeURIComponent(dataParam)));
         return;
-      } catch {}
-    }
       } catch {  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -154,18 +180,30 @@ export default function SEOLandingPage(req, res) {
 }
     // Fallback: render a basic placeholder until a generated page is deployed
     setPayload({ title: String(slug).replace(/-/g, ' '), h1: String(slug).replace(/-/g, ' '), bodyHtml: '<p>Localized marketplace landing page.</p>', region: undefined, service: undefined, faq: [] })
-  }, [router.isReady, slug]),
-  if (!payload) return null,
-  return (
-    <div className="max-w-4xl mx-auto">
-      <head>
-        <title>{payload.title}</title>
-        <meta name="description" content={`${payload.title} • Zion Marketplace`} />
-      </head>
+      <div
+        className='prose dark:prose-invert max-w-none'
+        dangerouslySetInnerHTML={{ __html: payload.bodyHtml }}
+      />
+      <div className='mt-8'>
+        <h2 className='text-lg font-semibold mb-2'>Featured Talent</h2>        <TalentGrid region={payload.region} service={payload.service} />
+      </div>
+      <FAQ items={payload.faq} />
+    </div>
+
+}
+      <h1 className="text-2xl font-semibold mb-4">{payload.h1}</h1>
+      <div className="prose dark:prose-invert max-w-none" dangerouslySetInnerHTML={{ __html: payload.bodyHtml }} />
+      <div className="mt-8">
+        <h2 className="text-lg font-semibold mb-2">Featured Talent</h2>
+        <TalentGrid region={payload.region} service={payload.service} />
+
         return
       } catch {}
     }
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 
@@ -173,10 +211,13 @@ export default function SEOLandingPage(req, res) {
     setPayload({ title: String(slug).replace(/-/g, ' '), h1: String(slug).replace(/-/g, ' '), bodyHtml: '<p>Localized marketplace landing page.</p>', region: undefined, service: undefined, faq: [] })
   }, [router.isReady, slug]);
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   if (!payload) return null;
 
@@ -186,8 +227,6 @@ export default function SEOLandingPage(req, res) {
       </div>
       <FAQ items={payload.faq} />
     </div>
-
-
         dangerouslySetInnerHTML={{ __html: payload && payload.bodyHtml }}
       />;
 
@@ -199,6 +238,7 @@ export default function SEOLandingPage(req, res) {
     </div>;
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -208,6 +248,8 @@ export default function SEOLandingPage(req, res) {
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   faq: Array<{ q: string; array: string }>;}
 ;
 export default /**
@@ -269,6 +311,7 @@ if (return null) {
     </div>);
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
@@ -295,12 +338,16 @@ if (return null) {
       <FAQ items={payload.faq} />
     </div>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+);
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   )
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -308,3 +355,5 @@ if (return null) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

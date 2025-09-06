@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react'
 import {Button} from '@/components/ui/button'
 import Link from 'next/link'
@@ -76,6 +77,9 @@ export function ProjectActions(): any ({;
       {isTalent && !isUnderDispute && (;
         <Button onClick={onAddMilestone}>Add Milestone</Button>;
 
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export function ProjectActions({
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   projectId,
@@ -93,16 +97,20 @@ export function ProjectActions({
       {isUnderDispute && disputeId ? (
         <Button variant="outline" asChild>
           <Link href={`/dashboard/disputes/${disputeId}`}>
+<<<<<<< HEAD
             <ShieldAlert className='h-4 w-4 mr-2' />            View Active Dispute
           </Link>
         </Button>
       ) : (
         <RaiseDisputeButton projectId={projectId} variant='outline' />            <ShieldAlert className="h-4 w-4 mr-2" />
             <ShieldAlert className="h-4 w-4 mr-2" />
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             View Active Dispute
           </Link>
         </Button>
       ) : (
+<<<<<<< HEAD
             <ShieldAlert className='h-4 w-4 mr-2' />            View Active Dispute
           </Link>
         </Button>
@@ -114,10 +122,22 @@ export function ProjectActions({
     </div>
   )
 }
+=======
+
+
+
+    </div>;
+  );
+};
+
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <RaiseDisputeButton 
           projectId={projectId}
           variant="outline"
         />
+<<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
 
     </div>;
@@ -149,12 +169,15 @@ ursor/fix-website-loading-errors-and-merge-6662
           projectId={projectId}
           variant="outline"
         />
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       )}
       {isTalent && !isUnderDispute && (;
         <Button onClick={onAddMilestone}>;
           Add Milestone;
         </Button>;
       )}
+<<<<<<< HEAD
     </div>;
   );
 }
@@ -201,3 +224,5 @@ function ProjectActions() {
     </div>);
 }
 ;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

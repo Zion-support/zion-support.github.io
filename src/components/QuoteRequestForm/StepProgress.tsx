@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import { QuoteRequestSteps } from '../QuoteRequestForm'
 import { CheckIcon } from 'lucide-react'
@@ -20,12 +21,15 @@ export function StepProgress({ currentStep }: StepProgressProps) {
 
 
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 return (
     <div className='relative'>;
       <div className='absolute top-4 left-0 right-0 h-0 && 0.5 bg-zion-blue-light'>;
         <div
           className='absolute h-full bg-zion-purple transition-all duration-500'
           style={{
+<<<<<<< HEAD
     { id: "service", label: "Service" }
     { id: "details", label: "Details" }
     { id: "timeline", label: "Timeline" }
@@ -51,6 +55,8 @@ return (
           className='absolute h-full bg-zion-purple transition-all duration-500'
           style={{
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   currentStep: QuoteRequestSteps;
 export function StepProgress({ currentStep }: StepProgressProps) {;
   const steps: { id: QuoteRequestSteps; label: string }[] = [
@@ -81,12 +87,15 @@ export function StepProgress({ currentStep }: StepProgressProps) {
   ],
 
   const getStepStatus = (stepId: QuoteRequestSteps) => {
+<<<<<<< HEAD
     const stepOrder = steps.findIndex(s => s.id === stepId)
     const currentStepOrder = steps.findIndex(s => s.id === currentStep)
     if (stepOrder < currentStepOrder) return 'complete'
     if (stepOrder === currentStepOrder) return 'current'
     return 'upcoming'
   const getStepStatus = (stepId: QuoteRequestSteps,) => {
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     const stepOrder = steps.findIndex(s => s.id === stepId),
     const currentStepOrder = steps.findIndex(s => s.id === currentStep),
     
@@ -101,16 +110,20 @@ export function StepProgress({ currentStep }: StepProgressProps) {
         <div 
           className="absolute h-full bg-zion-purple transition-all duration-500"
           style={{ 
+<<<<<<< HEAD
           }}
         />
       </div>
       <div className='flex justify-between relative'>
         {steps.map(step => {
           const status = getStepStatus(step.id)
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             width: `${(steps.findIndex(s => s.id === currentStep) / (steps.length - 1)) * 100}%`
           }}
         />
       </div>
+<<<<<<< HEAD
             width: `${(steps && steps.findIndex(s => s && s.id === currentStep) / (steps && steps.length - 1)) * 100}%`,;
           }}
         />;
@@ -126,6 +139,10 @@ export function StepProgress({ currentStep }: StepProgressProps) {
           const status = getStepStatus(step.id)
           return (
             <div key={step.id} className='flex flex-col items-center relative'>
+=======
+          return (
+            <div key={step && step.id} className='flex flex-col items-center relative'>;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <div
                 className={cn(
                   'w-8 h-8 rounded-full flex items-center justify-center z-10 transition-colors'
@@ -134,6 +151,7 @@ export function StepProgress({ currentStep }: StepProgressProps) {
                     : status === 'current'
                       ? 'bg-zion-cyan border-2 border-zion-purple'
                       : 'bg-zion-blue-light text-zion-slate-light'
+<<<<<<< HEAD
                 )}              >
                 {status === 'complete' ? (
                   <CheckIcon className='h-4 w-4' />
@@ -157,6 +175,8 @@ export function StepProgress({ currentStep }: StepProgressProps) {
                   <span className="text-xs">{steps.findIndex(s => s.id === step.id) + 1}</span>
                 )}
               </div>
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <span
                 className={cn(
                   'text-xs mt-2 font-medium'
@@ -165,17 +185,23 @@ export function StepProgress({ currentStep }: StepProgressProps) {
                     : status === 'current'
                       ? 'text-white'
                       : 'text-zion-slate-light'                )}                  "text-xs mt-2 font-medium"
+<<<<<<< HEAD
                   status === "complete" ? "text-zion-cyan" :
                   status === "current" ? "text-white" :
 
                   "text-zion-slate-light"
+=======
+                  "text-zion-slate-light"
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 )}
-              <span
+              <span 
                 className = {cn(
-                  "text-xs mt-2 font-medium"
+                  "text-xs mt-2 font-medium",
                   status === "complete" ? "text-zion-cyan" :
                   status === "current" ? "text-white" :
                   "text-zion-slate-light"
+<<<<<<< HEAD
                 ),}
               >
                 {step.label}
@@ -190,6 +216,12 @@ export function StepProgress({ currentStep }: StepProgressProps) {
 }%`
   (steps.findIndex (s => s.id === currentStep) / (steps.length - 1) ) * 100 
 }%` 
+=======
+                ) : (
+                  <span className="text-xs">{steps.findIndex(s => s.id === step.id) + 1}</span>
+                )}
+              </div>
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }/> </div>
 }className=" flex flex-col items-center relative"> <div) : (<span className=" text-xs" > {
   steps.findIndex (s => s.id === step.id) + 1
@@ -206,17 +238,24 @@ export function StepProgress({ currentStep }: StepProgressProps) {
     </div>
   )
 }
+<<<<<<< HEAD
 ;
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
                 ),}>;
                 {step && step.label}
 
 ;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <span 
                 className={cn(
                   "text-xs mt-2 font-medium",
@@ -291,6 +330,7 @@ export function StepProgress({ currentStep }: StepProgressProps) {;
     </div>;
   );
 }
+<<<<<<< HEAD
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
@@ -391,3 +431,5 @@ if (return "current", ) {
     </div>);
 }
 ;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

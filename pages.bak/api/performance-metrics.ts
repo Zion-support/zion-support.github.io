@@ -1,10 +1,13 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import type { NextApiRequest,NextApiResponse } from 'next'; interface PerformanceMetrics { lcp?: number; fid?: number; cls?: number; fcp?: number; ttfb?: number; timestamp: string, url: string, userAgent: string} export default function handler(req: NextApiRequest,res: NextApiResponse) { if (req && req.method !== 'POST') { return res && res.status(405).json({ message: 'Method not allowed' })} try { const metrics: PerformanceMetrics = req && req.body,  res && res.status(200).json({ message: 'Performance metrics recorded successfully' })} catch (error) { console && console.error('Error processing performance metrics:',error); res && res.status(500).json({ message: 'Internal server error' })} }
 
 =======
 import type { NextApiRequest,NextApiResponse } from 'next'; interface PerformanceMetrics { lcp?: number; fid?: number; cls?: number; fcp?: number; ttfb?: number; timestamp: string, url: string, userAgent: string} export default function handler(req: NextApiRequest,res: NextApiResponse) { if (req && req.method !== 'POST') { return res && res.status(405).json({ message: 'Method not allowed' })} try { const metrics: PerformanceMetrics = req && req.body,  res && res.status(200).json({ message: 'Performance metrics recorded successfully' })} catch (error) { console && console.error('Error processing performance metrics:',error); res && res.status(500).json({ message: 'Internal server error' })} }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import type { NextApiRequest, NextApiResponse } from 'next';
 interface PerformanceMetrics {
   lcp?: number;
@@ -34,6 +37,7 @@ export default function handler("req": NextApiRequest, "res": NextApiResponse) {
     // In a real application, you "would": // 1. Send to analytics service (Google Analytics, Mixpanel, etc.)
     // 2. Store in database for performance monitoring
     // 3. Set up alerts for poor performance metrics
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -75,3 +79,5 @@ import type { NextApiRequest,NextApiResponse } from 'next'; interface Performanc
 import type { NextApiRequest,NextApiResponse } from 'next'; interface PerformanceMetrics { lcp?: number; fid?: number; cls?: number; fcp?: number; ttfb?: number; timestamp: string; url: string; userAgent: string} export default function handler(req: NextApiRequest,res: NextApiResponse) { if (req.method !== 'POST') { return res.status(405).json({ message: 'Method not allowed' })} try { const metrics: PerformanceMetrics = req.body; console.log('Performance Metrics:',{ lcp: metrics.lcp,fid: metrics.fid,cls: metrics.cls,fcp: metrics.fcp,ttfb: metrics.ttfb,timestamp: metrics.timestamp,url: metrics.url,userAgent: metrics.userAgent }); res.status(200).json({ message: 'Performance metrics recorded successfully' })} catch (error) { console.error('Error processing performance metrics:',error); res.status(500).json({ message: 'Internal server error' })} }
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

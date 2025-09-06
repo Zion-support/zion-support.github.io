@@ -1,4 +1,8 @@
-
+import { LegacyRef, Ref } from "react";
+// A type that safely handles all possible reference types
+export type SafeRef<T> = LegacyRef<T> | Ref<T>;
+import {LegacyRef, Ref} from "react";
+// A type that safely handles all possible reference types
 import { LegacyRef, Ref } from './react';
 // A type that safely handles all possible reference types;
 export type SafeRef < T> = LegacyRef < T> | Ref < T>;
@@ -8,6 +12,7 @@ import {LegacyRef, Ref} from "react";
 // A type that safely handles all possible reference types
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 import { LegacyRef, Ref } from "react";
@@ -16,12 +21,15 @@ export type SafeRef<T> = LegacyRef<T> | Ref<T>;
 import {LegacyRef, Ref} from "react";
 // A type that safely handles all possible reference types
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { LegacyRef, Ref } from "react",
 
 // A type that safely handles all possible reference types
 export type SafeRef<T> = LegacyRef<T> | Ref<T>,
 import { LegacyRef, Ref } from "react",;
 // A type that safely handles all possible reference types;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -34,3 +42,6 @@ export type SafeRef<T> = LegacyRef<T> | Ref<T>;
 export type SafeRef<T> = LegacyRef<T> | Ref<T>;
 export type SafeRef<T> = LegacyRef<T> | Ref<T>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+export type SafeRef<T> = LegacyRef<T> | Ref<T>;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

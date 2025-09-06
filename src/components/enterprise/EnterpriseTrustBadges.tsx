@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import React from "react";
 import { Shield, Lock, Award, CheckCircle } from 'lucide-react'
@@ -5,6 +6,8 @@ import React from 'react'
 import { Shield, Lock, Award, CheckCircle } from 'lucide-react'
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export function EnterpriseTrustBadges() {
   return (
     <section className='py-10 px-4 md:px-6 border-t border-b border-border'>
@@ -33,6 +36,7 @@ export function EnterpriseTrustBadges() {
           <div className='flex items-center justify-center gap-2 p-4 rounded-lg border border-border'>
             <CheckCircle className='h-5 w-5 text-primary' />
             <span className='font-medium'>HIPAA Compliant</span>          </div>
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           <div className="flex items-center justify-center gap-2 p-4 rounded-lg border border-border">
             <CheckCircle className="h-5 w-5 text-primary" />
@@ -50,6 +54,8 @@ export function EnterpriseTrustBadges() {
 import React from "react",
 import { Shield, Lock, Award, CheckCircle } from 'lucide-react'
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 
@@ -80,6 +86,7 @@ export function EnterpriseTrustBadges() {
           </div>
         </div>
       </div>
+<<<<<<< HEAD
     </section>;
   );
 };
@@ -131,6 +138,8 @@ export function EnterpriseTrustBadges() {;
     </section>
   )
 }
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from "react";
 import { Shield, Lock, Award, CheckCircle } from 'lucide-react';
 export function EnterpriseTrustBadges() {;
@@ -162,6 +171,7 @@ export function EnterpriseTrustBadges() {;
       </div>;
     </section>;
   );
+<<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   );
@@ -245,3 +255,5 @@ function EnterpriseTrustBadges() {
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 }
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

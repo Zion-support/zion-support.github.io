@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import Head from './next / head';
 ;
@@ -9,6 +10,9 @@ import Head from './next / head';
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 interface SEOHeadProps {
 =======
+=======
+interface SEOHeadProps {
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 interface SEOHeadProps {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
@@ -22,6 +26,7 @@ interface SEOHeadProps {;
   structured_data?: object;
   no_index?: boolean;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -40,6 +45,8 @@ const SEOHead: React.FC < SEOHeadProps> = ({
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }) => {
   const full_title = title.includes ("Zion Tech Group");
     ? title;
@@ -47,6 +54,7 @@ const SEOHead: React.FC < SEOHeadProps> = ({
   const fullCanonicalUrl = canonical_url;
     ? `https://ziontechgroup.com${canonical_url}`;
     : "https://ziontechgroup.com";
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -103,6 +111,8 @@ const SEOHead: React.FC<SEOHeadProps> = ({;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <Head>;
       {/* Basic Meta Tags */}
@@ -113,6 +123,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({;
       <meta
         name="robots"
         content={noIndex ? "noindex,nofollow" : "index,follow"}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -161,12 +172,15 @@ const SEOHead: React.FC<SEOHeadProps> = ({;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {/* Preconnect to external domains */}
       <link rel="preconnect" href="https://fonts && fonts.googleapis.com" />;
       <link
         rel="preconnect"
         href="https://fonts && fonts.gstatic.com"
         crossOrigin="anonymous"
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       />;
@@ -178,6 +192,8 @@ const SEOHead: React.FC<SEOHeadProps> = ({;
       />;
       <link rel="preconnect" href="https://www && www.google-analytics && analytics.com" />;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ;
   const defaultStructuredData = {
     "@context": "https://schema.org",
@@ -265,6 +281,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({;
         type="application / ld + json";
         dangerouslySetInnerHTML={{
 <<<<<<< HEAD
+<<<<<<< HEAD
 
           __html: JSON && JSON.stringify(structuredData || defaultStructuredData),
         }}
@@ -277,6 +294,8 @@ const SEOHead: React.FC<SEOHeadProps> = ({;
         }}
       />;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           __html: JSON.stringify (structured_data || defaultStructuredData),
         }}
       />;
@@ -285,6 +304,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({;
       <script;
         type="application / ld + json";
         dangerouslySetInnerHTML={{
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -312,11 +332,14 @@ const SEOHead: React.FC<SEOHeadProps> = ({;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             },
           }),
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         }}
       />;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -330,3 +353,5 @@ export default SEOHead;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -1,9 +1,12 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
 import type { NextPage } from 'next';
 import Head from 'next/head';
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 import type { NextPage } from 'next',
 import Head from 'next/head',
@@ -14,12 +17,16 @@ const BlockchainSolutions: NextPage = () => {
         <title>BlockchainSolutions - Zion Tech Solutions</title>
         <meta name="description" content="BlockchainSolutions page" />
       </Head>
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <main>
         <h1>BlockchainSolutions</h1>
         <p>This page is under construction.</p>
       </main>
     </div>
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -27,6 +34,16 @@ const BlockchainSolutions: NextPage = () => {
   )
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  )
+}
+export default BlockchainSolutions;
+
+},
+export default BlockchainSolutions,
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <main>;
         <h1>BlockchainSolutions</h1>;
         <p>This page is under construction.</p>;
@@ -38,11 +55,16 @@ const BlockchainSolutions: NextPage = () => {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 export default BlockchainSolutions;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import Head from 'next / head';
       <main>;
         <h1 > BlockchainSolutions</h1>;
@@ -53,6 +75,7 @@ import Head from 'next / head';
 ;
 export default BlockchainSolutions;
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -77,3 +100,7 @@ export default BlockchainSolutions;
 },
 export default BlockchainSolutions,
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

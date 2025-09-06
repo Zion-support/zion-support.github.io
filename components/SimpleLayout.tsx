@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 
@@ -70,6 +71,8 @@ interface SimpleLayoutProps {
   description?: string
   children: React.ReactNode
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 export default /**
  * SimpleLayout - Function description
@@ -81,6 +84,7 @@ function SimpleLayout() {,
         <title>{title}</title>,
         {description && <meta name="description" content={description} />}
       </Head>,
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       {children};
@@ -105,3 +109,5 @@ export default function SimpleLayout({ title, description, children }: SimpleLay
     </>)
 };
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -18,6 +19,8 @@ import { cn } from "@/lib/utils";
 <<<<<<< HEAD
 =======
 import { cn } from "@/lib/utils",
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface ApplicationProgressProps {
 
   status: ApplicationStatus
@@ -28,6 +31,7 @@ export function ApplicationProgress({ status, className }: ApplicationProgressPr
   // Define the progress value based on status
 
   const getProgressValue = () => {
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import { ApplicationStatus  } from '@/types / jobs';
 import { Progress  } from '@/components / ui / progress';
@@ -77,6 +81,8 @@ function ApplicationProgress() {
     <div className={cn("w-full space-y-2", className)}>
       <Progress value={progressValue} className="h-2" />
       
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
       <div className="flex justify-between text-xs text-muted-foreground">
@@ -110,6 +116,7 @@ function ApplicationProgress() {
 function StatusIcon({ status, current }: { status: ApplicationStatus, current: ApplicationStatus }) {
   // Helper to determine if this step is active, completed, or inactive
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -135,14 +142,16 @@ function StatusIcon({ status, current }: { status: ApplicationStatus, current: A
 
   const currentRank = statusRank[current],
 <<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 
 
 
-  const currentRank = statusRank[current],
   const statusRank_ = statusRank[status],
 
+<<<<<<< HEAD
   if (currentRank < statusRank_) {
     // This step is complete
 =======
@@ -155,6 +164,8 @@ function StatusIcon({ status, current }: { status: ApplicationStatus, current: A
 
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   if (currentRank < statusRank_) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     return <CheckCircle2 className="h-4 w-4 text-green-500" />
@@ -162,6 +173,7 @@ function StatusIcon({ status, current }: { status: ApplicationStatus, current: A
     // This is the current step
     return <CircleDot className="h-4 w-4 text-blue-500" />
   } else {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 import { CheckCircle2, Circle, CircleDot } from 'lucide-react'import { cn } from "@/lib/utils";
@@ -174,15 +186,21 @@ import { CheckCircle2, Circle, CircleDot } from 'lucide-react'import { cn } from
     return <Circle className="h-4 w-4 text-muted-foreground/50" />
   }
 }
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { ApplicationStatus } from "@/types/jobs",;
 import { Progress } from "@/components/ui/progress",;
 import { CheckCircle2, Circle, CircleDot } from 'lucide-react';
 import { cn } from "@/lib/utils",;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface ApplicationProgressProps {;
   status: ApplicationStatus,;
   className?: string;
 }
+<<<<<<< HEAD
 
 export function ApplicationProgress(): any ({ status, className }: ApplicationProgressProps) {;
   // Define the progress value based on status;
@@ -325,3 +343,5 @@ if ( {) {
     // This step is upcoming
     return <Circle className="h-4 w-4 text-muted-foreground/50" />
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

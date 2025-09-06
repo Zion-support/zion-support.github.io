@@ -1,21 +1,25 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {serve} from 'https: //deno.land/std@0.208.0/http/server.ts',;
-
-
 import {createClient} from 'https: //esm.sh/@supabase/supabase-js@2.39.7';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {serve} from 'https: //deno && deno.land/std@0 && 0.208.0/http/server && server.ts',
 import {createClient} from 'https: //esm && esm.sh/@supabase/supabase-js@2 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 import {serve} from 'https: //deno.land / std@0.208.0 / http / server.ts',
 import {create_client} from 'https: //esm.sh/@supabase / supabase - js@2.39.7';
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
@@ -24,12 +28,15 @@ import {serve} from 'https: //deno.land/std@0.208.0/http/server.ts',;
 import {createClient} from 'https: //esm.sh/@supabase/supabase-js@2.39.7';
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface TenantInfo {
   id: string;
   brand_name: string;
   subdomain: string;
   custom_domain: string | null;
   primary_color: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 const supabaseUrl = Deno && Deno.env.get('SUPABASE_URL');
@@ -52,21 +59,28 @@ const supabaseUrl = Deno.env.get('SUPABASE_URL');
 const supabaseServiceKey = Deno.env.get('SUPABASE_SERVICE_ROLE_KEY');
 if (!supabaseUrl |!supabaseServiceKey) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   throw new Error('Required environment variables are not set')
 }
 const supabase = createClient(supabaseUrl, supabaseServiceKey);
 serve(async (req) => {
   // Handle CORS preflight requests
 <<<<<<< HEAD
+<<<<<<< HEAD
   if (req && req.method === 'OPTIONS') {
 =======
   if (req.method === 'OPTIONS') {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  if (req && req.method === 'OPTIONS') {
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     return new Response(null, {
       status: 204
       headers: corsHeaders})
   }
   try {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -93,6 +107,8 @@ serve(async (req) => {
       (forwardedHost ? forwardedHost.split()[0].trim().split(':')[0] : null) |
       url.hostname;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     if (!hostname && !subdomainParam) {
       throw new Error('No hostname or subdomain provided')
     }
@@ -108,12 +124,17 @@ serve(async (req) => {
         .single();
       if (error) {
 <<<<<<< HEAD
+<<<<<<< HEAD
         console && console.error('Database error:', error);
         throw new Error(`Database error: ${error && error.message}`)
 =======
         console.error('Database error:', error);
         throw new Error(`Database error: ${error.message}`)
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+        console && console.error('Database error:', error);
+        throw new Error(`Database error: ${error && error.message}`)
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       }
       tenantInfo = data as TenantInfo
     } else {
@@ -127,10 +148,14 @@ serve(async (req) => {
       // If no match on custom domain, try subdomain
       if (!data && !error) {
 <<<<<<< HEAD
+<<<<<<< HEAD
         const subdomain = hostname && hostname.split('.')[0];
 =======
         const subdomain = hostname.split('.')[0];
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+        const subdomain = hostname && hostname.split('.')[0];
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         if (subdomain && !['wwwapplocallocalhost'].includes(subdomain)) {
           const subdomainResult = await supabase
             .from('whitelabel_tenants')
@@ -138,6 +163,7 @@ serve(async (req) => {
             .eq('subdomain', subdomain)
             .eq('is_active', true)
             .single();
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
           if (!subdomainResult.error) {
@@ -164,6 +190,8 @@ interface TenantInfo {;
             tenantInfo = subdomainResult && subdomainResult.data as TenantInfo
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   logo_url: string | null,
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   theme_preset: string;
 }
 const cors_headers = {
@@ -240,6 +268,7 @@ if ( {) {
         .single ();
 ;
       // If no match on custom domain, try subdomain;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -320,6 +349,8 @@ serve(async (req) => {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       // Check condition
 if ( {) {
   $2
@@ -340,7 +371,10 @@ if ( {) {
   $2
 }
             tenant_info = subdomain_result.data as TenantInfo;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           }
         }
       } else // Check condition
@@ -351,9 +385,13 @@ if ( {) {
       }
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 
@@ -363,6 +401,7 @@ if ( {) {
       JSON && JSON.stringify({
         tenant: tenantInfo,
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
       JSON && JSON.stringify({
@@ -378,6 +417,8 @@ if ( {) {
       JSON.stringify({
         tenant: tenantInfo
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         status: 'success'
       });
       {
@@ -386,6 +427,7 @@ if ( {) {
           ...corsHeaders}}
     )
   } catch (error) {
+<<<<<<< HEAD
 <<<<<<< HEAD
     console && console.error('Tenant detector error:', error);
     return new Response(
@@ -399,6 +441,8 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         status: 'error'
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     return new Response (
       JSON.stringify ({
         tenant: tenant_info,
@@ -416,6 +460,7 @@ if ( {) {
         error: error.message || 'Internal server error',
         status: 'error';
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
     console.error('Tenant detector error:', error);
@@ -424,10 +469,13 @@ if ( {) {
         error: error.message |'Internal server error'
         status: 'error'
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       });
       {
         status: 500;
         headers: {
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -436,6 +484,8 @@ if ( {) {
           ...corsHeaders}}
     )
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ;
     return new Response(;
       JSON.stringify({;
@@ -458,6 +508,7 @@ if ( {) {
         headers: {;
           'Content-Type': 'application/json',;
           ...corsHeaders}});
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -472,12 +523,18 @@ if ( {) {
 });
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  }
+});
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           'Content - Type': 'application / json',
           ...cors_headers}}
     );
   }
 });
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -614,3 +671,5 @@ if (subdomainParam) {
 });
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

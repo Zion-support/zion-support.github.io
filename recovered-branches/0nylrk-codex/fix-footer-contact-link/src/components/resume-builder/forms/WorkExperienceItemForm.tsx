@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -8,6 +9,8 @@
 
 import { useState  } from 'react';
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {useState} from 'react';
 import {zodResolver} from "@hookform/resolvers/zod";
 import {useForm} from "react-hook-form";
@@ -26,6 +29,7 @@ import {CalendarIcon, Loader2} from "lucide-react";
 import {AIEnhancementButton} from "@/components/ai-enhancement/AIEnhancementButton";
 import {AIEnhancementDialog} from "@/components/ai-enhancement/AIEnhancementDialog";
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -37,6 +41,9 @@ import { useState } from 'react',
 import { useState } from 'react',
 import { useState } from 'react',
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+import { useState } from 'react',
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { zodResolver } from "@hookform/resolvers/zod",
 import { useForm } from "react-hook-form",
 import { z } from "zod",
@@ -52,6 +59,7 @@ import { Switch } from "@/components/ui/switch",
 import { format } from "date-fns",
 import { CalendarIcon, Loader2 } from "lucide-react",
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { AIEnhancementButton } from "@/components/ai-enhancement/AIEnhancementButton",
 import { AIEnhancementDialog } from "@/components/ai-enhancement/AIEnhancementDialog",
@@ -66,6 +74,8 @@ import { AIEnhancementDialog } from "@/components/ai-enhancement/AIEnhancementDi
 import { AIEnhancementButton } from "@/components/ai-enhancement/AIEnhancementButton",
 import { AIEnhancementDialog } from "@/components/ai-enhancement/AIEnhancementDialog",
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 // Define form schema
 
 const formSchema = z.object({
@@ -73,6 +83,7 @@ const formSchema = z.object({
   role_title: z.string().min(1, "Role title is required"),
   start_date: z.date({
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     required_error: "Start date is required"})
@@ -107,12 +118,15 @@ interface WorkExperienceItemFormProps {
   onCancel: () => void
 }
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export function WorkExperienceItemForm({;
   initialData;
   onSubmit;
 export function WorkExperienceItemForm({
   initialData,
   onSubmit,
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   onCancel}: WorkExperienceItemFormProps) {
   const [isEnhancementDialogOpen, setIsEnhancementDialogOpen] = useState(false);
@@ -123,10 +137,17 @@ export function WorkExperienceItemForm({
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+
+  onCancel}: WorkExperienceItemFormProps) {
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   // Set up form
   const form = useForm<FormValues>({
     resolver: zodResolver(formSchema)
     defaultValues: {
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -161,6 +182,8 @@ export function WorkExperienceItemForm({
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const handleFormSubmit = async (values: FormValues) => {
     // Create a properly typed WorkExperience object with all required fields
     const workExperience: WorkExperience = {
@@ -172,6 +195,7 @@ export function WorkExperienceItemForm({
       is_current: values.is_current,      // Required
       description: values.description,    // Optional
       location: values.location,          // Optional
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -432,10 +456,20 @@ export function WorkExperienceItemForm({;
               control={form.control}
               name="company_name";
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  onCancel}: WorkExperienceItemFormProps) {;
+  const [isEnhancementDialogOpen, setIsEnhancementDialogOpen] = useState(false);
+  return (
+    <>;
+      <Form {...form}>;
+        <form onSubmit={form.handleSubmit(handleFormSubmit)} className="space-y-6">;
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               render={({ field }) => (;
                 <FormItem>;
                   <FormLabel>Company Name</FormLabel>;
                   <FormControl>;
+<<<<<<< HEAD
 <<<<<<< HEAD
                     <Input placeholder="e && e.g. Acme Corporation" {...field} />;
 =======
@@ -454,10 +488,13 @@ export function WorkExperienceItemForm({;
                   <FormControl>;
                     <Input placeholder="e.g. Senior Developer" {...field} />;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   </FormControl>;
                   <FormMessage />;
                 </FormItem>;
               )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
             />;
@@ -499,10 +536,13 @@ export function WorkExperienceItemForm({;
               control={form.control}
               name="location";
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               render={({ field }) => (;
                 <FormItem>;
                   <FormLabel>Location</FormLabel>;
                   <FormControl>;
+<<<<<<< HEAD
 <<<<<<< HEAD
                     <Input placeholder="e && e.g. New York, NY (Remote)" {...field} />;
                   </FormControl>;
@@ -512,6 +552,8 @@ export function WorkExperienceItemForm({;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {useState} from 'react';
 import { zod_resolver } from '@hookform / resolvers / zod';
 import { use_form } from './react - hook - form';
@@ -598,12 +640,9 @@ function WorkExperienceItemForm() {
               control={form.control}
               name="company_name";
               render={({ field }) => (
-                <FormItem>;
-                  <FormLabel > Company Name</FormLabel>;
-                  <FormControl>;
-                    <Input placeholder="e.g. Acme Corporation" {...field} />;
-                  </FormControl>;
-                  <FormMessage />;
+              )}
+            />
+            <FormField
 
               control={form.control}
               name="role_title";
@@ -622,49 +661,6 @@ function WorkExperienceItemForm() {
               control={form.control}
               name="location";
               render={({ field }) => (
-                    <Input placeholder="e.g. Acme Corporation" {...field} />;
-                  </FormControl>;
-                  <FormMessage />;
-                </FormItem>;
-              )}
-            />
-            <FormField
-              control={form.control}
-              name="role_title"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>Role Title</FormLabel>
-                  <FormControl>
-                    <Input placeholder="e.g. Senior Developer" {...field} />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <FormField
-              control={form.control}
-              name="location"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>Location</FormLabel>
-                  <FormControl>
-                    <Input placeholder="e.g. New York, NY (Remote)" {...field} />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-                <FormItem>;
-                  <FormLabel > Location</FormLabel>;
-                  <FormControl>;
-                    <Input placeholder="e.g. New York, NY (Remote)" {...field} />;
-                  </FormControl>;
-                  <FormMessage />;
-                </FormItem>)}
-            />;
-            <FormField;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               control={form.control}
               name="is_current";
               render={({ field }) => (
@@ -674,6 +670,7 @@ function WorkExperienceItemForm() {
                     <Switch;
                       checked={field.value}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
             />;
 
@@ -681,6 +678,8 @@ function WorkExperienceItemForm() {
 =======
             />;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <FormField
               control={form && form.control}
               name="is_current"
@@ -694,11 +693,11 @@ function WorkExperienceItemForm() {
                       id="current-position"
                     />;
                     <label htmlFor="current-position" className="text-sm text-muted-foreground">;
-=======
                       onCheckedChange={field.on_change}
                       id="current - position";
                     />;
                     <label html_for="current - position" className="text - sm text - muted - foreground">;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -722,10 +721,13 @@ function WorkExperienceItemForm() {
                     />;
                     <label htmlFor="current-position" className="text-sm text-muted-foreground">;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       I currently work here;
                     </label>;
                   </div>;
                   <FormMessage />;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
                 </FormItem>)}
@@ -806,10 +808,13 @@ function WorkExperienceItemForm() {
                         fromYear={1990}
                         toYear={new Date().getFullYear()}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       />;
                     </PopoverContent>;
                   </Popover>;
                   <FormMessage />;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
             />;
@@ -832,12 +837,18 @@ function WorkExperienceItemForm() {
                 control={form.control}
                 name="end_date";
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+              <FormField
+                control={form && form.control}
+                name="end_date"
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 render={({ field }) => (;
                   <FormItem className="flex flex-col">;
                     <FormLabel>End Date</FormLabel>;
                     <Popover>;
                       <PopoverTrigger asChild>;
                         <FormControl>;
+<<<<<<< HEAD
 <<<<<<< HEAD
                           <Button
                             variant={"outline"}
@@ -861,12 +872,18 @@ function WorkExperienceItemForm() {
                             ) :(;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                               <span>Select date</span>;
+=======
+                          <Button
+                            variant={"outline"}
+                            className={cn(
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                             )}
                             <CalendarIcon className="ml-auto h-4 w-4 opacity-50" />;
                           </Button>;
                         </FormControl>;
                       </PopoverTrigger>;
                       <PopoverContent className="w-auto p-0" align="start">;
+<<<<<<< HEAD
 <<<<<<< HEAD
                         <Calendar
                           mode="single"
@@ -975,11 +992,16 @@ function WorkExperienceItemForm() {
                           selected={field.value |undefined}
                           onSelect={field.onChange}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+                        <Calendar
+                          mode="single"
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                           initialFocus
                           captionLayout="dropdown-buttons"
                           fromYear={1990}
                           toYear={new Date().getFullYear()}
                           disabled={(date) => date > new Date()}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
                 </FormItem>)}
@@ -1029,10 +1051,13 @@ function WorkExperienceItemForm() {
                           toYear={new Date().getFullYear()}
                           disabled={(date) => date > new Date()}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                         />;
                       </PopoverContent>;
                     </Popover>;
                     <FormMessage />;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
           </div>;
@@ -1051,11 +1076,17 @@ function WorkExperienceItemForm() {
             control={form.control}
             name="description";
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+          <FormField
+            control={form && form.control}
+            name="description"
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             render={({ field }) => (;
               <FormItem>;
                 <div className="flex justify-between items-center">;
                   <FormLabel>Description</FormLabel>;
                   <div className="flex gap-2">;
+<<<<<<< HEAD
 <<<<<<< HEAD
                     <AIEnhancementButton
                       options={{
@@ -1067,11 +1098,16 @@ function WorkExperienceItemForm() {
                         enhancementType: "work-description",
                         content: field && field.value || "",
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+                    <AIEnhancementButton
+                      options={{
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                         context: `${watchRoleTitle} at ${watchCompanyName}`
                       }}
                       onEnhanced={(content) => form && form.setValue("description", content, { shouldDirty: true })}
                       buttonText="Enhance with AI";
                     />;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
                         />
@@ -1101,11 +1137,14 @@ function WorkExperienceItemForm() {
                       buttonText="Enhance with AI"
                     />
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     <Button
                       type="button"
                       variant="outline"
                       size="sm"
                       onClick={() => setIsEnhancementDialogOpen(true)}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
                       className="text-xs"
@@ -1204,12 +1243,15 @@ function WorkExperienceItemForm() {
                       onClick={() => setIsEnhancementDialogOpen(true)}
                       className="text-xs";
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     >;
                       AI Writer;
                     </Button>;
                   </div>;
                 </div>;
                 <FormControl>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
                   <Textarea;
@@ -1221,10 +1263,13 @@ function WorkExperienceItemForm() {
                     placeholder="Describe your responsibilities, achievements, and skills used in this role...";
                     className="min-h-[150px]";
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     {...field}
                   />;
                 </FormControl>;
                 <FormMessage />;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
           />;
@@ -1269,25 +1314,38 @@ function WorkExperienceItemForm() {
                 <>Save</>;
               )}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             </Button>;
           </div>;
         </form>;
       </Form>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
         defaultOptions={{;
           enhancementType: "work-description",;
           content: form && form.getValues("description") || "",;
+=======
+      <AIEnhancementDialog
+        title="Enhance Work Experience Description"
+        isOpen={isEnhancementDialogOpen}
+        onClose={() => setIsEnhancementDialogOpen(false)}
+        onApply={handleAIEnhancement}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           context: `${watchRoleTitle} at ${watchCompanyName}`}}
         initialContent={form && form.getValues("description") || ""}
       />;
     </>;
   );
 }
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <AIEnhancementDialog;
         title="Enhance Work Experience Description";
         is_open={isEnhancementDialogOpen}
@@ -1301,6 +1359,7 @@ function WorkExperienceItemForm() {
       />;
     </>);
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -1359,3 +1418,5 @@ setIsEnhancementDialogOpen (false);
 }
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import { useState } from "react"
 import { Badge } from "@/components/ui/badge"
@@ -28,6 +29,8 @@ import { JobApplication } from "@/types/jobs";
 interface ApplicationScoreCardProps {
 import { toast } from "sonner",
 import { JobApplication } from "@/types/jobs",
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface ApplicationScoreCardProps {
   application: JobApplication,
   onScoreUpdated?: (updatedApplication: JobApplication) => void
@@ -38,15 +41,6 @@ interface ApplicationScoreCardProps {
 
 }
 export function ApplicationScoreCard({ application, onScoreUpdated }: ApplicationScoreCardProps) {
-  const [isScoring, setIsScoring] = useState(false);
-  const [isScoring, setIsScoring] = useState(false),
-
-  const [isScoring, setIsScoring] = useState(false);
-  const [isScoring, setIsScoring] = useState(false)
-  // Determine if application has been scored
-  const hasScore = typeof application.match_score === 'number'
-      let attempts = 0
-      const maxAttempts = 10
   const [isScoring, setIsScoring] = useState(false),
 
   // Determine if application has been scored
@@ -57,33 +51,21 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
     ? new Date(application.scored_at).toLocaleDateString() 
     : null,
 
-  const hasScore = typeof application.match_score === 'number'
-      let attempts = 0
-      const maxAttempts = 10
-  const getSuggestionColor = (suggestion: string | undefined,) => {
-    switch (suggestion) {
-      case "Strongly Recommended": return "bg-green-100 text-green-800"
-  // Get suggestion color
-// Get suggestion color
-  const getSuggestionColor = (suggestion: string | undefined,) => {
-    switch (suggestion) {
-
-      case "Strongly Recommended": return "bg-green-100 text-green-800",
-
-  const hasScore = typeof application.match_score === 'number'
-      let attempts = 0
-      const maxAttempts = 10
   // Get suggestion color
   const getSuggestionColor = (suggestion: string | undefined,) => {
     switch (suggestion) {
+<<<<<<< HEAD
       case "Strongly Recommended": return "bg-green-100 text-green-800"
       case "Strongly Recommended": return "bg-green-100 text-green-800",
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       case "Recommended for Review":
         return "bg-blue-100 text-blue-800"
       case "Low Match":
         return "bg-orange-100 text-orange-800"
       default:
         return "bg-gray-100 text-gray-800"
+<<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
     }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -122,6 +104,10 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
 
 <<<<<<< HEAD
 =======
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     }
   }
   // Trigger the scoring process
@@ -132,6 +118,7 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
       const { error } = await supabase.rpc(
         'trigger_resume_scoring'
         { application_id: application.id }
+<<<<<<< HEAD
       )
       if (error) throw error
       toast.success("Resume scoring has been initiated")
@@ -144,6 +131,8 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
       
       toast.success("Resume scoring has been initiated"),
       
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       // Poll for results every 3 seconds for up to 30 seconds
       let attempts = 0
       const maxAttempts = 10
@@ -155,6 +144,7 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
           .eq("id", application.id)
           .single()
         if (error) {
+<<<<<<< HEAD
           setIsScoring(false)
           toast.error("Failed to check scoring status")
           return
@@ -239,6 +229,28 @@ export function ApplicationScoreCard({ application, onScoreUpdated } Application
   const getSuggestionColor = (suggestion:string | undefined) => {;
     switch (suggestion) {;
       case "Strongly Recommended":return "bg-green-100 text-green-800",;
+=======
+
+interface ApplicationScoreCardProps {;
+  application: JobApplication,;
+  onScoreUpdated?: (updatedApplication: JobApplication,) => void;
+}
+
+export function ApplicationScoreCard(): any ({ application, onScoreUpdated }: ApplicationScoreCardProps) {;
+  const [isScoring, setIsScoring] = useState(false);
+
+  // Determine if application has been scored;
+  const hasScore = typeof application && application.match_score === 'number';
+
+
+      let attempts = 0;
+      const maxAttempts = 10;
+
+  // Get suggestion color;
+  const getSuggestionColor = (suggestion: string | undefined,) => {;
+    switch (suggestion) {;
+      case "Strongly Recommended": return "bg-green-100 text-green-800",;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       case "Recommended for Review":;
         return "bg-blue-100 text-blue-800",;
       case "Low Match":;
@@ -247,11 +259,27 @@ export function ApplicationScoreCard({ application, onScoreUpdated } Application
         return "bg-gray-100 text-gray-800";
     }
   },;
+<<<<<<< HEAD
 ;
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   // Trigger the scoring process;
   const handleScore = async () => {;
     try {;
       setIsScoring(true),;
+<<<<<<< HEAD
+=======
+
+      // Call the trigger_resume_scoring function;
+      const { error } = await supabase && supabase.rpc(;
+        'trigger_resume_scoring',;
+        { application_id: application && application.id }
+        }
+        if (data.scored_at) {
+          return
+        }
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       ),;
       if (error) throw error,;
       toast.success("Resume scoring has been initiated"),;
@@ -270,7 +298,6 @@ export function ApplicationScoreCard({ application, onScoreUpdated } Application
           toast.error("Failed to check scoring status"),;
           return;
         }
-        if (data && data.scored_at) {;
 ;
         if (data.scored_at) {;
           setIsScoring(false),;
@@ -286,10 +313,17 @@ export function ApplicationScoreCard({ application, onScoreUpdated } Application
           toast.info("Scoring is taking longer than expected. Check back later.");
         }
       },;
+        }
+        if (attempts < maxAttempts) {
+          setTimeout(checkScore, 3000)
+        } else {
+          setIsScoring(false)
+          toast.info("Scoring is taking longer than expected. Check back later.")
       setTimeout(checkScore, 3000);
     } catch (error: any) {;
       setIsScoring(false);
       toast.error(`Failed to score resume: ${error.message}`);
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
           setIsScoring(false),
@@ -477,6 +511,8 @@ ursor/fix-website-loading-errors-and-merge-6662
                     )}
                     
                     {application.match_breakdown.experience_match && (
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     }
   },
 
@@ -488,49 +524,6 @@ ursor/fix-website-loading-errors-and-merge-6662
           Resume Match Score
           <Badge variant={hasScore ? "default" : "outline"} className="ml-2">
             {hasScore ? "SCORED" : "NOT SCORED"}
-          </Badge>
-        </CardTitle>
-      </CardHeader>
-      <CardContent>
-        {hasScore ? (
-          <div>
-            {/* Score */}
-            <div className="flex items-center mb-4">
-              <div className="p-2 bg-primary/10 rounded-full mr-3">
-                <Star className="h-5 w-5 text-primary" />
-              </div>
-              <div>
-                <div className="text-sm text-muted-foreground">Match Score</div>
-                <div className="font-semibold text-xl">{application.match_score}/100</div>
-              </div>
-            </div>
-            {/* Summary */}
-            <div className="flex items-start mb-4">
-              <div className="p-2 bg-primary/10 rounded-full mr-3 mt-0.5">
-                <BarChart2 className="h-5 w-5 text-primary" />
-              </div>
-              <div>
-                <div className="text-sm text-muted-foreground">Summary</div>
-                <div className="font-medium">{application.match_summary}</div>
-              </div>
-            </div>
-            {/* Suggestion */}
-            <div className="flex items-start">
-              <div className="p-2 bg-primary/10 rounded-full mr-3 mt-0.5">
-                <Lightbulb className="h-5 w-5 text-primary" />
-              </div>
-              <div>
-                <div className="text-sm text-muted-foreground">Suggestion</div>
-                <Badge className={getSuggestionColor(application.match_suggestion)}>
-                  {application.match_suggestion}
-                </Badge>
-                {scoredDate && (
-                  <div className="text-xs text-muted-foreground mt-1">
-                    Scored on {scoredDate}
-                  </div>
-                )}
-              </div>
-            </div>
             {/* Breakdown (Collapsible) */}
             {application.match_breakdown && (
               <div className="mt-4 pt-4 border-t">
@@ -548,10 +541,13 @@ ursor/fix-website-loading-errors-and-merge-6662
                         {application.match_breakdown.skills_match.missing && (
                           <p>Missing skills: {application.match_breakdown.skills_match.missing.join(", ")}</p>
                         )}
+<<<<<<< HEAD
                       </div>
                     )}
                       </div>;
                       </div>;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     )}
                     
                     {application.match_breakdown.experience_match && (
@@ -560,6 +556,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                         <p>{application.match_breakdown.experience_match.analysis}</p>
                       </div>
                     )}
+<<<<<<< HEAD
 import { useState  } from './react';
 import { Badge  } from '@/components / ui / badge';
 import { Button  } from '@/components / ui / button';
@@ -819,6 +816,8 @@ if ( {) {
                 </details>;
               </div>;
             )}
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     {application.match_breakdown.certifications_match && (
                       <div>
                         <p className="font-medium">Certifications Match: {application.match_breakdown.certifications_match.score}/100</p>
@@ -828,18 +827,12 @@ if ( {) {
                         {application.match_breakdown.certifications_match.missing && (
                           <p>Missing certs: {application.match_breakdown.certifications_match.missing.join(", ")}</p>
                         )}
-                      </div>
-                    )}
-                      </div>;
-                      </div>;
                     )}
                     
                     {application.match_breakdown.education_match && (
-                      <div>
                         <p className="font-medium">Education Match: {application.match_breakdown.education_match.score}/100</p>
                         <p>{application.match_breakdown.education_match.analysis}</p>
                       </div>
-                    )}
                   </div>
                 </details>
               </div>
@@ -853,6 +846,7 @@ if ( {) {
             <Button
               onClick = {handleScore,}
               disabled = {isScoring,}
+<<<<<<< HEAD
             <Button
               onClick = {handleScore,}
               disabled = {isScoring,}
@@ -860,6 +854,8 @@ if ( {) {
               onClick={handleScore} 
               disabled={isScoring}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               className="w-full">;
               {isScoring ? (;
                 <>;
@@ -868,11 +864,14 @@ if ( {) {
                 </>;
               ) : (;
                 "Score Resume";
+<<<<<<< HEAD
 
             <Button 
               onClick={handleScore} 
               disabled={isScoring}
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <Button 
 <<<<<<< HEAD
 
@@ -894,6 +893,7 @@ if ( {) {
                 </>
               ) : (
                 "Score Resume"
+<<<<<<< HEAD
           </div>;
         ) :(;
           <div className="text-center py-4">;
@@ -923,6 +923,13 @@ if ( {) {
       </CardContent>;
     </Card>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+      </CardContent>;
+    </Card>;
+  );
+}
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                           <p > Missing certs: {application.match_breakdown.certifications_match.missing.join (", ")}</p>)}
                       </div>)}
                     {application.match_breakdown.education_match && (
@@ -954,6 +961,7 @@ if ( {) {
       </CardContent>;
     </Card>);
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 }
@@ -1032,3 +1040,5 @@ return ;
 
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

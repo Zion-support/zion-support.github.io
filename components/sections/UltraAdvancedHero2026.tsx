@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -80,6 +81,20 @@ import {
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
+=======
+  ArrowRight
+  Star
+  TrendingUp
+  Zap
+  Brain
+  Rocket
+  Globe
+  Sparkles
+  CheckCircle
+  Phone
+  Mail
+  MapPin;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   ArrowRight,
   Star,
   TrendingUp,
@@ -90,11 +105,39 @@ import {
   Sparkles,
   CheckCircle,
   Phone,
-
   Mail,;
   MapPin,;
+} from 'lucide-react';
+import { aiAutonomousServices2026 } from '../../data/2026-ai-autonomous-services';
+import { quantumSpaceTechServices2026 } from '../../data/2026-quantum-space-tech-services';
+import { metaverseDigitalRealityServices2026 } from '../../data/2026-metaverse-digital-reality-services';
+import { quantumSpaceTechServices2026 } from '../../data/2026-quantum-space-tech-services';
+import { metaverseDigitalRealityServices2026 } from '../../data/2026-metaverse-digital-reality-services';
+export default function UltraAdvancedHero2026() {
+  const totalServices = aiAutonomousServices2026.length + quantumSpaceTechServices2026.length + metaverseDigitalRealityServices2026.length;
+  const contactInfo = {
+    phone: '+1 302 464 0950'
+    email: 'kleber@ziontechgroup.com'
+    address: '364 E Main St STE 1008 Middletown DE 19709'
+
+  };
 
 
+  const containerVariants = {
+    hidden: { opacity: 0 }
+import {motion} from 'framer-motion';
+import Link from 'next / link';
+import {
+  ArrowRight,
+  Star,
+  TrendingUp,
+  Zap,
+  Brain,
+  Rocket,
+  Globe,
+  Sparkles,
+  CheckCircle,
+  Phone,
 } from 'lucide-react';
 import { aiAutonomousServices2026 } from '../../data / 2026 - ai - autonomous - services';
 import { quantumSpaceTechServices2026 } from '../../data / 2026 - quantum - space - tech - services';
@@ -133,6 +176,7 @@ function UltraAdvancedHero2026() {
       opacity: 1
       transition: {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   };
 
@@ -140,12 +184,15 @@ function UltraAdvancedHero2026() {
 =======
   };
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const itemVariants = {
     hidden: { opacity: 0, y: 30 }
     visible: {
       opacity: 1
       y: 0
       transition: {
+<<<<<<< HEAD
 
 
         duration: 0.8,
@@ -232,6 +279,8 @@ export default function UltraAdvancedHero2026() {;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           variants={containerVariants}
           initial='hidden'
           animate='visible'
@@ -239,6 +288,7 @@ export default function UltraAdvancedHero2026() {;
           {/* Badge */}
           <motion&& motion.div
             variants={itemVariants}
+<<<<<<< HEAD
 
             className='inline-flex items-center space-x-2 bg-gradient-to-r from-purple-600/20 to-pink-600/20 px-4 py-2 rounded-full border border-purple-500/30'>;
             <Sparkles className='w-5 h-5 text-purple-400' />;
@@ -255,16 +305,29 @@ export default function UltraAdvancedHero2026() {;
 
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           {/* Main Heading */}
           <motion&& motion.h1
             variants={itemVariants}
+            className='text-5xl md:text-7xl lg:text-8xl font-black leading-tight'
+          >
+            <span className='bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent'>
+              The Future
+            </span>
+            <br />
+            <span className='text-white'>is Now</span>
+          </motion.h1>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
           {/* Main Heading */}
           <motion&& motion.h1
             variants={itemVariants}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             className='text-5xl md:text-7xl lg:text-8xl font-black leading-tight'>;
             <span className='bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent'>;
               The Future;
@@ -272,6 +335,7 @@ export default function UltraAdvancedHero2026() {;
             <br />;
             <span className='text-white'>is Now</span>;
           </motion && motion.h1>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -286,6 +350,13 @@ export default function UltraAdvancedHero2026() {;
 
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           {/* Subheading */}
           <motion&& motion.p
             variants={itemVariants}
@@ -296,18 +367,11 @@ export default function UltraAdvancedHero2026() {;
               {' '}
               1000% ROI guaranteed;
             </span>{' '}
-
-            with our revolutionary solutions.;
-          </motion && motion.p>;
-
-
-
-
-
           {/* Service Statistics */}
           <motion&& motion.div
             variants={itemVariants}
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
             with our revolutionary solutions.;
@@ -316,6 +380,8 @@ export default function UltraAdvancedHero2026() {;
           <motion&& motion.div
             variants={itemVariants}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         stagger_children: 0.1,
       },
     },  }        stagger_children: 0.1;
@@ -396,9 +462,13 @@ export default function UltraAdvancedHero2026() {;
             <div className='text - center p - 4 bg - gradient - to - br from - purple - 800 / 20 to - purple - 900 / 20 backdrop - blur - xl border border - purple - 500 / 20 rounded - 2xl'>;
               <div className='text - 3xl font - bold text - purple - 400'>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 {aiAutonomousServices2026.length}
               </div>;
               <div className='text - gray - 300 text - sm'>;
@@ -414,6 +484,7 @@ export default function UltraAdvancedHero2026() {;
             <div className='text - center p - 4 bg - gradient - to - br from - pink - 800 / 20 to - pink - 900 / 20 backdrop - blur - xl border border - pink - 500 / 20 rounded - 2xl'>;
               <div className='text - 3xl font - bold text - pink - 400'>;
                 {metaverseDigitalRealityServices2026.length}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -479,11 +550,14 @@ export default function UltraAdvancedHero2026() {;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           variants={containerVariants}
           initial="hidden"
           animate="visible"
           className="space-y-8">;
           {/* Badge */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
           <motion && motion.div variants={itemVariants} className="inline-flex items-center space-x-2 bg-gradient-to-r from-purple-600/20 to-pink-600/20 px-4 py-2 rounded-full border border-purple-500/30">;
@@ -1012,6 +1086,8 @@ export default function UltraAdvancedHero2026() {;
           {/* Key Benefits */}
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             </div>
             <div className='flex items-center space-x-3 p-4 bg-gradient-to-r from-green-600/20 to-emerald-600/20 backdrop-blur-xl border border-green-500/20 rounded-xl'>
               <CheckCircle className='w-6 h-6 text-green-400 flex-shrink-0' />
@@ -1019,6 +1095,7 @@ export default function UltraAdvancedHero2026() {;
                 24/7 Autonomous Operation
               </span>            </div>
           </motion.div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1032,6 +1109,8 @@ export default function UltraAdvancedHero2026() {;
           {/* Call to Action Buttons */}
           <motion.div            variants={itemVariants}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto"
           >
             <div className="flex items-center space-x-3 p-4 bg-gradient-to-r from-blue-600/20 to-cyan-600/20 backdrop-blur-xl border border-blue-500/20 rounded-xl">
@@ -1047,6 +1126,7 @@ export default function UltraAdvancedHero2026() {;
               <span className="text-gray-200 font-medium">24/7 Autonomous Operation</span>
             </div>
           </motion.div>
+<<<<<<< HEAD
           {/* Call to Action Buttons */}
 <<<<<<< HEAD
 
@@ -1083,6 +1163,8 @@ export default function UltraAdvancedHero2026() {;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6"
           >
             <Link
@@ -1095,6 +1177,7 @@ export default function UltraAdvancedHero2026() {;
             </Link>
             <Link
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
             <Link 
@@ -1104,10 +1187,15 @@ export default function UltraAdvancedHero2026() {;
             <Link 
             <Link 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               href="/contact"
               className="inline-flex items-center px-8 py-4 border-2 border-purple-500/50 text-purple-300 font-bold text-lg rounded-2xl hover:bg-purple-500/10 hover:border-purple-400 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30"
             >
               <Zap className="w-6 h-6 mr-3" />
+              Get Started Today
+            </Link>
+          </motion.div>
 
             className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6";
           >;
@@ -1127,6 +1215,7 @@ export default function UltraAdvancedHero2026() {;
             </Link>;
           </motion && motion.div>;
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -1220,6 +1309,9 @@ className='mt-12 p-6 bg-gradient-to-r from-purple-900/20 via-pink-900/20 to-cyan
                     {contactInfo && contactInfo.address}
                   </div>                </div>            variants={itemVariants}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+          {/* Contact Information */}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             className="mt-12 p-6 bg-gradient-to-r from-purple-900/20 via-pink-900/20 to-cyan-900/20 backdrop-blur-xl border border-purple-500/20 rounded-2xl max-w-4xl mx-auto"
           >
             <h3 className="text-2xl font-bold text-white mb-6">Ready to Transform Your Business?</h3>
@@ -1253,7 +1345,6 @@ className='mt-12 p-6 bg-gradient-to-r from-purple-900/20 via-pink-900/20 to-cyan
               </div>
             </div>
           </motion.div>
-
             className='mt-12 p-6 bg-gradient-to-r from-purple-900/20 via-pink-900/20 to-cyan-900/20 backdrop-blur-xl border border-purple-500/20 rounded-2xl max-w-4xl mx-auto'>;
             <h3 className='text-2xl font-bold text-white mb-6'>;
               Ready to Transform Your Business?;
@@ -1324,11 +1415,8 @@ className='mt-12 p-6 bg-gradient-to-r from-purple-900/20 via-pink-900/20 to-cyan
             </div>;
           </motion && motion.div>;
 
-
-
-
-
           {/* Trust Indicators */}
+<<<<<<< HEAD
 
           <motion.div 
             variants={itemVariants}
@@ -1362,12 +1450,15 @@ className='mt-12 p-6 bg-gradient-to-r from-purple-900/20 via-pink-900/20 to-cyan
             <div className='flex items-center space-x-2'>
               <Zap className='w-5 h-5 text-purple-400' />              <span>24/7 Support</span>            <div className="flex items-center space-x-2">
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <Zap className="w-5 h-5 text-purple-400" />
               <span>24/7 Support</span>
             </div>
           </motion.div>
         </motion.div>
       </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
             className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-8 text-gray-400'>;
@@ -1643,12 +1734,15 @@ className='mt-12 p-6 bg-gradient-to-r from-purple-900/20 via-pink-900/20 to-cyan
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           }}
           transition={{
             duration: 6
             repeat: Infinity
             ease: 'easeInOut'
           }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1665,6 +1759,8 @@ className='mt-12 p-6 bg-gradient-to-r from-purple-900/20 via-pink-900/20 to-cyan
             y: [0, 20, 0]
             rotate: [0, -5, 0]
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           className='absolute top - 20 right - 20 text - 6xl opacity - 20';
         >;
           🚀;
@@ -1681,6 +1777,7 @@ className='mt-12 p-6 bg-gradient-to-r from-purple-900/20 via-pink-900/20 to-cyan
             ease: 'easeInOut'
           }}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -1696,6 +1793,8 @@ className='mt-12 p-6 bg-gradient-to-r from-purple-900/20 via-pink-900/20 to-cyan
             y: [0, -15, 0]
             rotate: [0, 3, 0]
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           className='absolute bottom - 20 left - 20 text - 6xl opacity - 20';
         >;
           ⚛️;
@@ -1712,6 +1811,7 @@ className='mt-12 p-6 bg-gradient-to-r from-purple-900/20 via-pink-900/20 to-cyan
             ease: 'easeInOut'
           }}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -1727,6 +1827,8 @@ className='mt-12 p-6 bg-gradient-to-r from-purple-900/20 via-pink-900/20 to-cyan
             y: [0, 15, 0]
             rotate: [0, -3, 0]
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           className='absolute top - 1/3 left - 10 text - 5xl opacity - 20';
         >;
           🧠;
@@ -1743,6 +1845,7 @@ className='mt-12 p-6 bg-gradient-to-r from-purple-900/20 via-pink-900/20 to-cyan
             ease: 'easeInOut'
           }}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -1751,6 +1854,8 @@ className='mt-12 p-6 bg-gradient-to-r from-purple-900/20 via-pink-900/20 to-cyan
           animate={{ 
             y: [0, -20, 0];
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           className='absolute bottom-1/3 right-10 text-5xl opacity-20'>        <motion&& motion.div
           animate={{ 
             y: [0, -20, 0]
@@ -1762,6 +1867,7 @@ className='mt-12 p-6 bg-gradient-to-r from-purple-900/20 via-pink-900/20 to-cyan
             repeat: Infinity
             ease: "easeInOut"
           }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1777,6 +1883,8 @@ className='mt-12 p-6 bg-gradient-to-r from-purple-900/20 via-pink-900/20 to-cyan
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             rotate: [0, -5, 0]
           }}
           transition={{
@@ -1784,6 +1892,7 @@ className='mt-12 p-6 bg-gradient-to-r from-purple-900/20 via-pink-900/20 to-cyan
             repeat: Infinity
             ease: "easeInOut"
           }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1799,6 +1908,8 @@ className='mt-12 p-6 bg-gradient-to-r from-purple-900/20 via-pink-900/20 to-cyan
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             rotate: [0, 3, 0]
           }}
           transition={{
@@ -1806,6 +1917,7 @@ className='mt-12 p-6 bg-gradient-to-r from-purple-900/20 via-pink-900/20 to-cyan
             repeat: Infinity
             ease: "easeInOut"
           }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1821,11 +1933,14 @@ className='mt-12 p-6 bg-gradient-to-r from-purple-900/20 via-pink-900/20 to-cyan
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             rotate: [0, -3, 0]
           }}
           transition={{
             duration: 9
             repeat: Infinity
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -1839,6 +1954,9 @@ className='mt-12 p-6 bg-gradient-to-r from-purple-900/20 via-pink-900/20 to-cyan
 <<<<<<< HEAD
 =======
   )
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
@@ -1901,10 +2019,9 @@ className='mt-12 p-6 bg-gradient-to-r from-purple-900/20 via-pink-900/20 to-cyan
       </div>;
     </section>));
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
   );
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -1962,3 +2079,5 @@ className='mt-12 p-6 bg-gradient-to-r from-purple-900/20 via-pink-900/20 to-cyan
 }
   );
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

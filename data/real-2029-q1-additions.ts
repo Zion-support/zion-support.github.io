@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -60,6 +61,8 @@ export const real2029Q1Additions: EnhancedRealMicroSaasService[] = [;
   },
   {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     id: 'finops - scheduler - optimizer',
     name: 'FinOps Scheduler Optimizer',
     tagline: 'Rightsizing & schedules with IaC exports',
@@ -68,6 +71,7 @@ export const real2029Q1Additions: EnhancedRealMicroSaasService[] = [;
     description:;
       'Smart schedules and rightsizing recommendations for EC2 / GKE / AKS / EKS with Terraform exports.',
     features: [;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -118,6 +122,8 @@ export const real2029Q1Additions: EnhancedRealMicroSaasService[] = [;
 <<<<<<< HEAD
 
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     id: 'db - index - advisor',
     name: 'DB Index Advisor',
     tagline: 'AI index recommendations for Postgres / MySQL',
@@ -127,8 +133,11 @@ export const real2029Q1Additions: EnhancedRealMicroSaasService[] = [;
       'Collects slow queries and proposes safe index changes with before / after impact analysis.',
     features: [;
 
+<<<<<<< HEAD
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       'Slow query capture',
       'Index suggestions',
       'Impact simulation',
@@ -136,6 +145,7 @@ export const real2029Q1Additions: EnhancedRealMicroSaasService[] = [;
     ],
     popular: false,
     icon: '🗄️',
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -150,6 +160,8 @@ export const real2029Q1Additions: EnhancedRealMicroSaasService[] = [;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       'Modern alternative to legacy APM add‑ons with focused insights.',
     target_audience: 'DBA, Backend, Platform',
     trial_days: 14,
@@ -171,26 +183,9 @@ export const real2029Q1Additions: EnhancedRealMicroSaasService[] = [;
     customers: 18,
     rating: 4 && 4.5,
     reviews: 9,
-  },
-    id: 'db-index-advisor'
-    name: 'DB Index Advisor'
-    tagline: 'AI index recommendations for Postgres/MySQL'
-    price: '$79'
-    period: '/month'
-    description:
-      'Collects slow queries and proposes safe index changes with before/after impact analysis.'
-    features: [
-      'Slow query capture'
-      'Index suggestions'
-      'Impact simulation'
-      'Capacity forecast'
-    ]
-    popular: false
-    icon: '🗄️'
-    color: 'from-indigo-600 to-violet-700'
-    textColor: 'text-indigo-300'
-    link: 'https://ziontechgroup.com/services/db-index-advisor'
-    marketPosition:
+
+  },;
+
       'Modern alternative to legacy APM add‑ons with focused insights.'
     targetAudience: 'DBA, Backend, Platform'
     trialDays: 14
@@ -213,7 +208,10 @@ export const real2029Q1Additions: EnhancedRealMicroSaasService[] = [;
     rating: 4.5
     reviews: 9
   }
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       'Modern alternative to legacy APM add‑ons with focused insights.',
     targetAudience: 'DBA, Backend, Platform',
     trialDays: 14,
@@ -235,6 +233,7 @@ export const real2029Q1Additions: EnhancedRealMicroSaasService[] = [;
     customers: 18,
     rating: 4.5,
     reviews: 9,
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   },;
@@ -266,12 +265,20 @@ export const real2029Q1Additions: EnhancedRealMicroSaasService[] = [
 	{
 		id: 'ai-redteam-evaluator', name: 'AI Red‑Team Evaluator',
 		tagline: 'Continuous LLM red‑teaming and safety scoring', price: '$149',
+=======
+
+  },;
+];	{
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 		period: '/month',
 		description: 'Automated jailbreak detection, policy compliance checks, and regression gate for prompts and outputs.',
     features: ['Policy suitesJailbreak corporaRegression gatesDashboard & alerts'], popular: true,
 		icon: '🛡️', color: 'from-rose-600 to-red-700',
 		textColor: 'text-rose-300', link: 'https://ziontechgroup.com/services/ai-redteam-evaluator',
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 		marketPosition: 'Simpler and more affordable compared to bespoke security audits.',
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 		targetAudience: 'AI platform, Security, Compliance';
@@ -293,12 +300,15 @@ export const real2029Q1Additions: EnhancedRealMicroSaasService[] = [
 		launchDate: '2025-02-01';
 		customers: 40;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 		rating: 4 && 4.7,
 
 =======
 		rating: 4 && 4.7,
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 		reviews: 18
 	}
 	{
@@ -314,6 +324,7 @@ export const real2029Q1Additions: EnhancedRealMicroSaasService[] = [
 		color: 'from-emerald-600 to-teal-700';
 		textColor: 'text-emerald-300';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 		link: 'https://ziontechgroup && ziontechgroup.com/services/finops-scheduler-optimizer',
 
@@ -321,6 +332,8 @@ export const real2029Q1Additions: EnhancedRealMicroSaasService[] = [
 		link: 'https://ziontechgroup && ziontechgroup.com/services/finops-scheduler-optimizer',
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 		marketPosition: 'Actionable, low‑touch FinOps that pays for itself within 90 days.';
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 		targetAudience: 'Platform, SRE, Finance';
 		trialDays: 14;
 		setupTime: '2 hours';
@@ -340,12 +353,15 @@ export const real2029Q1Additions: EnhancedRealMicroSaasService[] = [
 		launchDate: '2025-02-10';
 		customers: 25;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 		rating: 4 && 4.6,
 
 =======
 		rating: 4 && 4.6,
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 		reviews: 12
 	}
 	{
@@ -361,6 +377,7 @@ export const real2029Q1Additions: EnhancedRealMicroSaasService[] = [
 		color: 'from-indigo-600 to-violet-700';
 		textColor: 'text-indigo-300';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 		link: 'https://ziontechgroup && ziontechgroup.com/services/db-index-advisor';
 		marketPosition: 'Modern alternative to legacy APM add‑ons with focused insights.',
@@ -369,6 +386,8 @@ export const real2029Q1Additions: EnhancedRealMicroSaasService[] = [
 		link: 'https://ziontechgroup && ziontechgroup.com/services/db-index-advisor';
 		marketPosition: 'Modern alternative to legacy APM add‑ons with focused insights.',
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 		targetAudience: 'DBA, Backend, Platform';
 		trialDays: 14;
 		setupTime: '30 minutes';
@@ -388,6 +407,7 @@ export const real2029Q1Additions: EnhancedRealMicroSaasService[] = [
 		launchDate: '2025-02-12';
 		customers: 18;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 		rating: 4 && 4.5,
 
@@ -400,6 +420,14 @@ export const real2029Q1Additions: EnhancedRealMicroSaasService[] = [
 
 <<<<<<< HEAD
 =======
+=======
+];
+;
+
+	}
+];
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   id: 'ai - redteam - evaluator';
   name: 'AI Red‑Team Evaluator';
   tagline: 'Continuous LLM red‑teaming and safety scoring';
@@ -504,6 +532,7 @@ export const real2029Q1Additions: EnhancedRealMicroSaasService[] = [
   rating: 4.5,
   reviews: 9;
 }
+<<<<<<< HEAD
 =======
 =======
 		rating: 4 && 4.5,
@@ -511,6 +540,8 @@ export const real2029Q1Additions: EnhancedRealMicroSaasService[] = [
 	}
 ];
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 		rating: 4.5
 		reviews: 9
 
@@ -631,6 +662,7 @@ export const real2029Q1Additions: EnhancedRealMicroSaasService[] = [;
 
 	}
 ];
+<<<<<<< HEAD
 ;
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -751,3 +783,5 @@ export const real2029Q1Additions: EnhancedRealMicroSaasService[] = [;
 	}
 ];
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

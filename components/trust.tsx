@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -35,10 +36,13 @@ export default function TrustPage() {
   const [showLogic, setShowLogic] = useState<boolean>(false);
   useEffect(() => {
 import React, { useEffect, useState } from 'react';
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import EnhancedLayout from '../components/layout/EnhancedLayout';
 import TrustBadge from '../components/ui/TrustBadge';
 import TrustRadar from '../components/ui/TrustRadar';
 import RiskIndicator from '../components/ui/RiskIndicator';
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -53,6 +57,10 @@ export default function TrustPage() {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const [loading, setLoading] = useState<boolean>(true);
   const [showLogic, setShowLogic] = useState<boolean>(false);
   useEffect(() => {
@@ -63,6 +71,7 @@ export default function TrustPage() {;
   }, []);
   useEffect(() => {
     async function load() {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
@@ -80,12 +89,15 @@ export default function TrustPage() {;
     const u = params.get('user');
     if (u) setUserId(u)
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   }, []);
 
   useEffect(() => {;
     async function load() {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       setLoading(true);
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -111,14 +123,17 @@ export default function TrustPage() {;
       setLoading(true);
       const res = await fetch(
         `/api/trust/${encodeURIComponent(userId)}?analyze=true`
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       );
-      const json = await res.json();
+      const json = await res && res.json();
       setData(json);
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       setLoading(false);
     }
     load();
   }, [userId]);
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -189,11 +204,13 @@ export default function TrustPage() {;
     alert('Appeal submitted');
     form.reset();  }
   return (
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <EnhancedLayout>    await fetch('/api/trust/appeal', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ userId, message, contactEmail }) });
     alert('Appeal submitted');
 
-    form.reset()
-    <EnhancedLayout>
+
+    form && form.reset();
 
   }
   return (
@@ -203,12 +220,16 @@ export default function TrustPage() {;
           <h1 className='text-2xl font-semibold'>Trust & Reputation</h1>
           <div className='flex items-center gap-3'>
             <label className='text-sm inline-flex items-center gap-2'>
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <input
                 type='checkbox'
                 checked={showLogic}
                 onChange={() => setShowLogic(!showLogic)}
               />{' '}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     <EnhancedLayout>
@@ -218,10 +239,13 @@ export default function TrustPage() {;
               Transparent logic
             </label>          </div>      <div className="space-y-6">
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <div className="flex items-center justify-between">
           <h1 className="text-2xl font-semibold">Trust & Reputation</h1>
           <div className="flex items-center gap-3">
             <label className="text-sm inline-flex items-center gap-2"><input type="checkbox" checked={showLogic} onChange={() => setShowLogic(!showLogic)} /> Transparent logic</label>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
           </div>
@@ -284,6 +308,8 @@ export default function TrustPage() {;
                         </span>                      </li>                <RiskIndicator status={data.riskLevel} />
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
               </div>
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <div className="bg-white dark:bg-gray-900 rounded border p-4">
                 <h2 className="font-medium mb-2">Trust Metrics</h2>
                 <TrustRadar metrics={(data.components |[]).map((c: any) => ({ label: c.key, value: Math.round(c.raw * 100) }))} />
@@ -294,6 +320,7 @@ export default function TrustPage() {;
                   <ul className="space-y-1">
                     {data.components.map((c: any) => (
                       <li key={c.key} className="flex justify-between">
+<<<<<<< HEAD
 <<<<<<< HEAD
                         <span>{c.key}</span>
                         <span>{Math.round(c.raw * 100)} / weighted {c.weighted.toFixed(3)}</span>
@@ -334,6 +361,8 @@ export default function TrustPage() {;
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
   }
@@ -342,10 +371,16 @@ export default function TrustPage() {;
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+                      </li>
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     ))}
                   </ul>;
                 </div>;
@@ -354,6 +389,7 @@ export default function TrustPage() {;
                 <div className='bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded p-3 text-sm whitespace-pre-wrap'>                  <strong>Operator GPT Analysis:</strong> {data && data.reasonSummary}
                 </div>;
               )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -473,11 +509,14 @@ export default function TrustPage() {;
                       </li>
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     ))}
                   </ul>
                 </div>
               )}
               {data.reasonSummary && (
+<<<<<<< HEAD
                 <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded p-3 text-sm whitespace-pre-wrap">
 
             </div>
@@ -491,10 +530,13 @@ export default function TrustPage() {;
               )}
             </div>                <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded p-3 text-sm whitespace-pre-wrap">
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   <strong>Operator GPT Analysis:</strong> {data.reasonSummary}
                 </div>
               )}
             </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       </div>;
@@ -504,56 +546,39 @@ export default function TrustPage() {;
 
 =======
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <div className='space-y-4'>
               <div className='bg-white dark:bg-gray-900 rounded border p-4 space-y-3'>
                 <h3 className='font-medium'>Peer Review</h3>
                 <button
                   className='text-sm px-3 py-1 rounded bg-green-600 text-white'
                   onClick={() => submitPeer('endorse')}
-                >
-                  Endorse
-                </button>
-                <button
-                  className='text-sm px-3 py-1 rounded bg-red-600 text-white'
-                  onClick={() => submitPeer('flag')}
-                >
-                  Flag
-                </button>
-              </div>
-              {data.total < 70 && (
-                <div className='bg-white dark:bg-gray-900 rounded border p-4 space-y-3'>
-                  <h3 className='font-medium'>Appeal Score</h3>
-                  <form onSubmit={submitAppeal} className='space-y-2'>
                     <input
                       name='email'
                       type='email'
                       placeholder='Contact email'
                       className='w-full border rounded px-2 py-1 text-sm'
-                    />
                     <textarea
                       name='message'
                       placeholder='Explain why your score should be reconsidered'
                       className='w-full border rounded px-2 py-1 text-sm'
                       rows={4}
                       required
-                    />
-                    <button
-                      className='text-sm px-3 py-1 rounded bg-blue-600 text-white'
-                      type='submit'
-                    >
-                      Submit Appeal
-                    </button>                  </form>                <div className="bg-white dark:bg-gray-900 rounded border p-4 space-y-3">
-                  <h3 className="font-medium">Appeal Score</h3>
-                  <form onSubmit={submitAppeal} className="space-y-2">
-                    <input name="email" type="email" placeholder="Contact email" className="w-full border rounded px-2 py-1 text-sm" />
-                    <textarea name="message" placeholder="Explain why your score should be reconsidered" className="w-full border rounded px-2 py-1 text-sm" rows={4} required />
-                    <button className="text-sm px-3 py-1 rounded bg-blue-600 text-white" type="submit">Submit Appeal</button>
-                </div>
+
+      </div>;
+    </EnhancedLayout>;
+  );
+}
+
               )}
             </div>;
           </div>;
         )}
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   );
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
@@ -765,6 +790,7 @@ function submit_appeal() {
     </EnhancedLayout>);
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
@@ -783,3 +809,6 @@ function submit_appeal() {
               )}
             </div>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

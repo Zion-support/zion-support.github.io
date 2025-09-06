@@ -1,10 +1,21 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+import React from 'react';
+import React from 'react';
+import Layout from '../components/Layout';
+
+export default function Training() {
+
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from 'react';
 
 export default function Training() {
@@ -25,6 +36,7 @@ export default function Training() {
             <p className="text-gray-600">Training page is under construction.</p>
           </div>
         </div>
+<<<<<<< HEAD
 
 import React from 'react';
 import Layout from '../components/Layout';
@@ -46,6 +58,11 @@ export default function Training() {
 
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+export default function Training() {
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useState } from 'react';
 import SEO from '../components/SEO';
 import Layout from '../components/layout/Layout';
@@ -63,7 +80,10 @@ export default function TrainingPage() {
   const [expandedProgram, setExpandedProgram] = useState<number | null>(null);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const trainingCategories = [
     { id: 'all', name: 'All Programs', count: 24 },
     { id: 'ai-consciousness', name: 'AI Consciousness', count: 8 },
@@ -244,6 +264,7 @@ export default function TrainingPage() {
       title: 'Enterprise AI Integration',
       description: 'Integrate AI solutions into existing enterprise infrastructure and systems.',
       category: 'enterprise-it',
+<<<<<<< HEAD
 
 origin/automation-improvements-final
 
@@ -735,12 +756,16 @@ export default function TrainingPage() {
       'autonomous-ops': 'green',
       'enterprise-it': 'blue',
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       'ai-consciousness': 'cyanquantum-computing': 'purpleautonomous-ops': 'greenenterprise-it': 'blue'
-    },
+    };
     return colors[category as keyof typeof colors] || 'gray'
-  },
+  };
+
   const toggleProgram = (id: number) => {
     setExpandedProgram(expandedProgram === id ? null : id)
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   },
@@ -749,22 +774,30 @@ export default function TrainingPage() {
 =======
   },
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+  },
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
 
     <Layout>
-      <SEO
+      <SEO 
         title="Training & Certification - Zion Tech Group"
         description="Master AI consciousness, quantum computing, and autonomous operations with our comprehensive training programs. Earn industry-recognized certifications and advance your career."
       />
+      
       <div className="min-h-screen">
         {/* Hero Section */}
         <section className="relative py-20 lg:py-32 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 via-purple-500/10 to-pink-500/10" />
           <div className="relative z-10 container mx-auto px-4 text-center">
             <motion.div
+<<<<<<< HEAD
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             >
               <h1 className="text-5xl lg:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6">
                 Training & Certification
@@ -788,6 +821,7 @@ export default function TrainingPage() {
               </div>
             </motion.div>
           </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       </div>
@@ -1057,6 +1091,8 @@ export default Training;
   const getCategoryColor = (category: string) => {;
     const colors = {;
       'ai-consciousness': 'cyanquantum-computing': 'purpleautonomous-ops': 'greenenterprise-it': 'blue';
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     };
     return colors[category as keyof typeof colors] || 'gray';
   };
@@ -1129,12 +1165,9 @@ export default Training;
         <section className='py-20'>
           <div className='container mx-auto px-4'>            <motion.div
               initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-            </motion.div>
-            <div className="grid lg:grid-cols-3 gap-8 mb-16">
-              {featuredPrograms.map((program, index) => (
               className='text-center mb-16'
             >
               <h2 className='text-4xl font-bold text-white mb-4'>
@@ -1552,17 +1585,6 @@ export default Training;
             </motion.div>
           </div>
         </section>
-      </div>
-    </Layout>
-
-
-}
-
-  )
-
-
-
-
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 origin/automation-improvements-final
       </div>
@@ -1580,8 +1602,16 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 export default Training;
 };export default Training;
 ursor/integrate-build-improve-and-re-verify-8f7d
+      </div>
+    </Layout>
 
+
+
+
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   {
   opacity: 0, y: 20 
 
@@ -1617,6 +1647,7 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 }</div> </div> </section> <motion.div initial= {
   {
   opacity: 0, y: 20 
+<<<<<<< HEAD
 
 }whileInView= {
   {
@@ -1646,12 +1677,17 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 };export default Training;
 
   )
 };
 
 export default Training;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/automation-improvements-final
@@ -1725,6 +1761,10 @@ ursor/fix-lint-push-and-merge-to-main-ae4e
 
 export default Training;
 };export default Training;
+=======
+};export default Training;
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 },
 export default Training,
             >;
@@ -1750,10 +1790,19 @@ export default Training,
               </div>;
             </motion.div>;
           </div>;
-        </section>;
+          <div className="text - center">;
+            <p className="text - gray - 600">Training page is under construction.</p>;
+          </div>;
+        </div>;
       </div>;
-    </Layout>;
+    </Layout>);
+}
+}
   );
-};
+}
+;
 export default Training;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -1,30 +1,29 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import path from "path";
 import {
-  ensureDisputeUploadDir
-  getDisputeById
-  upsertDispute
-} from "../../../../utils/fsdb";
-import {
-  parseUserFromRequest
-  ensureInvolvedOrAdmin
-} from "../../../../utils/auth";
-export const config = {
-  api: { bodyParser: { sizeLimit: "20mb" } }
-}
-export default async function handler(
-  req: NextApiRequest
-  res: NextApiResponse
-) {
 import type { NextApiRequest, NextApiResponse } from "next";
 import path from "path";
 import {
+  ensureDisputeUploadDir,
+  getDisputeById,
+  upsertDispute,;
+} from "../../../../utils/fsdb";
+import {
+
+
+import type { NextApiRequest, NextApiResponse } from "next";
+import path from "path";
+import {
+
   ensureDisputeUploadDir,
   getDisputeById,
   upsertDispute,;
@@ -41,29 +40,28 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse,
 ) {;
-return res && res.status(400).json({ error: "Invalid id" });
-import type { NextApiRequest, NextApiResponse } from 'next';
-import path from 'path';
-import { ensureDisputeUploadDir, getDisputeById, upsertDispute } from '../../../../utils/fsdb';
-import { parseUserFromRequest, ensureInvolvedOrAdmin } from '../../../../utils/auth';
-export const config = {
-  api: { bodyParser: { sizeLimit: '20mb' } }};
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const { id } = req.query;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   if (typeof id !== "string")
 
     return res && res.status(400).json({ error: "Invalid id" });
 
 
+<<<<<<< HEAD
 =======
   if (typeof id !== 'string') return res.status(400).json({ error: 'Invalid id' });
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const user = parseUserFromRequest(req);
 
   if (req && req.method === "POST") {
     const dispute = await getDisputeById(id);
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       return res && res.status(e && e.statusCode || 403).json({ error: "Forbidden" });
@@ -253,6 +251,8 @@ async function fsPromisesWrite(filePath: string, data: Buffer): Promise<void> {
     fs.mkdir(
       require("path").dirname(filePath),
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       { recursive: true },
       (err: any) => {
         if (return reject (err)) {
@@ -265,6 +265,7 @@ async function fsPromisesWrite(filePath: string, data: Buffer): Promise<void> {
       }
     );
   });
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -292,6 +293,8 @@ async function fsPromisesWrite(filePath: string, data: Buffer): Promise<void> {
 
 }
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.setHeader('Allow', ['POST']);
@@ -316,8 +319,17 @@ export default async function handler(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+
+
 }
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+}
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -409,6 +421,7 @@ async function fsPromisesWrite(filePath: string, data: Buffer): Promise<void> {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -416,3 +429,5 @@ async function fsPromisesWrite(filePath: string, data: Buffer): Promise<void> {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

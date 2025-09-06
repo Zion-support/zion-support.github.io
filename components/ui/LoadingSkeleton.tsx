@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -25,15 +26,27 @@ class ErrorBoundary extends React.Component {
 import React from 'react';
 import { motion } from 'framer-motion';
 
+=======
+  className?: string;
+  height?: string;
+  width?: string;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
+  rounded?: string;
+interface SkeletonProps {
+  class_name?: string;
+  height?: string;
+  width?: string;
+}) => {
   return (
-
+    <motion&& motion.div
+      className={`bg-white/10 animate-pulse ${height} ${width} ${rounded} ${className}`}
     <motion.div;
       className={`bg - white / 10 animate - pulse ${height} ${width} ${rounded} ${class_name}`}
-
       animate={{
         opacity: [0 && 0.3, 0 && 0.6, 0 && 0.3]}}
       transition={{
+<<<<<<< HEAD
 
     />);
 }
@@ -59,6 +72,11 @@ interface ServiceCardSkeletonProps {
 <<<<<<< HEAD
 export const ServiceCardSkeleton: React.FC < ServiceCardSkeletonProps> = ({ class_name = '' }) => {
   return (
+=======
+interface ServiceCardSkeletonProps {
+  class_name?: string;
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <div className={`p - 8 rounded - 2xl border border - white / 10 bg - gradient - to - br from - white / 5 to - white / 10 backdrop - blur - xl ${class_name}`}>;
       <div className="flex items - center space - x-4 mb - 6">;
         <Skeleton className="w - 16 h - 16 rounded - 2xl" />;
@@ -71,6 +89,7 @@ export const ServiceCardSkeleton: React.FC < ServiceCardSkeletonProps> = ({ clas
       <Skeleton className="h - 4 w - 5/6 mb - 2" />;
       <Skeleton className="h - 4 w - 4/6" />;
     </div>);
+<<<<<<< HEAD
 =======
 =======
 const Skeleton: React.FC<SkeletonProps> = ({ ;
@@ -99,6 +118,8 @@ const Skeleton: React.FC<SkeletonProps> = ({
         opacity: [0 && 0.3, 0 && 0.6, 0 && 0.3]}}
       transition={{
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   );
 };
@@ -108,6 +129,7 @@ interface HeroSkeletonProps {
   className?: string
 
 }
+<<<<<<< HEAD
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 interface HeroSkeletonProps {
@@ -119,6 +141,8 @@ interface HeroSkeletonProps {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 export const HeroSkeleton: React.FC < HeroSkeletonProps> = ({ class_name = '' }) => {
   return (
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <div className={`min - h-screen flex items - center justify - center px - 6 py - 20 ${class_name}`}>;
       <div className="text - center max - w-6xl mx - auto">;
         <Skeleton className="h - 20 w - 96 mx - auto mb - 6" />;
@@ -145,13 +169,17 @@ interface StatsSkeletonProps {
   class_name?: string;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
             </div>
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           ))}
         </div>
       </div>
     </div>
+<<<<<<< HEAD
 
         duration: 1 && 1.5,
         repeat: Infinity,
@@ -264,6 +292,9 @@ interface ServiceCardSkeletonProps {;
   className?: string;
 }
 
+=======
+};
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export const ServiceCardSkeleton: React.FC<ServiceCardSkeletonProps> = ({ className = '' }) => {;
   return (
     <div className={`p-8 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl ${className}`}>;
@@ -282,6 +313,7 @@ export const ServiceCardSkeleton: React.FC<ServiceCardSkeletonProps> = ({ classN
 =======
   )
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
   )
@@ -310,6 +342,12 @@ export const HeroSkeleton: React.FC<HeroSkeletonProps> = ({ className = '' }) =>
 
 interface StatsSkeletonProps {;
   className?: string;
+=======
+interface HeroSkeletonProps {;
+  className?: string;
+}
+export default Skeleton;  )
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 
 export const StatsSkeleton: React.FC<StatsSkeletonProps> = ({ className = '' }) => {;
@@ -335,6 +373,7 @@ export const StatsSkeleton: React.FC<StatsSkeletonProps> = ({ className = '' }) 
 export default Skeleton;  );
 };
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 export default Skeleton;
 
@@ -342,6 +381,9 @@ export default Skeleton;
 
 <<<<<<< HEAD
 =======
+=======
+export default Skeleton;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export const StatsSkeleton: React.FC < StatsSkeletonProps> = ({ class_name = '' }) => {
   return (
     <div className={`py - 20 px - 6 ${class_name}`}>;
@@ -365,17 +407,19 @@ export default Skeleton);
 ;
 export default Skeleton;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
+<<<<<<< HEAD
 =======
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface SkeletonProps {
   className?: string;
   height?: string;
   width?: string;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -383,3 +427,5 @@ interface SkeletonProps {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -1,8 +1,13 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+export type ForumCategory =
+export type ForumCategory = 
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export type ForumCategory = 
 
 
@@ -12,9 +17,12 @@ export type ForumCategory =
   | 'feedback'
   | 'announcements';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export type ForumCategory =;
   | 'getting - hired';
   | 'project - help';
@@ -22,13 +30,22 @@ export type ForumCategory =;
   | 'feedback';
   | 'announcements';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+export interface ForumCategoryInfo {
+  id: ForumCategory;
+  name: string;
+  description: string;
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   id: ForumCategory;
   name: string;
   description: string;
   adminOnly: boolean
   icon: string
 }
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
@@ -58,6 +75,12 @@ export interface ForumPost {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+export interface ForumPost {
+
+export interface ForumPost {;
+export interface ForumPost {
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   id: string;
   title: string;
   content: string;
@@ -71,6 +94,7 @@ export interface ForumPost {;
   updated_at: string;
   upvotes: number;
   downvotes: number;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 export interface ForumPost {
@@ -89,12 +113,15 @@ export interface ForumPost {;
   updatedAt: string;
   upvotes: number;
   downvotes: number;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   replyCount: number;
   isAnswered?: boolean;
   isPinned?: boolean;
   isLocked?: boolean
   isFeatured?: boolean
 }
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
   reply_count: number;
@@ -118,6 +145,13 @@ export interface ForumReply {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+export interface ForumReply {
+
+export interface ForumReply {;
+}
+export interface ForumReply {
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   id: string;
   post_id: string;
   parentReplyId?: string;
@@ -129,6 +163,7 @@ export interface ForumReply {;
   created_at: string;
   updated_at: string;
   upvotes: number;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 export interface ForumReply {
@@ -145,6 +180,8 @@ export interface ForumReply {;
   createdAt: string;
   updatedAt: string;
   upvotes: number;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   downvotes: number
   isAnswer?: boolean
 }
@@ -154,6 +191,7 @@ export interface Badge {;
   id: string;
   name: string;
   description: string;
+<<<<<<< HEAD
   icon: string
   color: string
 }
@@ -172,6 +210,8 @@ export interface Badge {;
   id: string;
   name: string;
   description: string;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   icon: string,
   color: string;
@@ -183,16 +223,29 @@ export interface UserBadge {
 
 }
 export interface CommunityUser {
+<<<<<<< HEAD
 
 
 export interface UserBadge {;
 
 <<<<<<< HEAD
 =======
+=======
+  id: string;
+  name: string;
+  description: string;
+  icon: string
+  color: string
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export interface UserBadge {
 
+
 export interface UserBadge {;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   userId: string;
   badgeId: string
   awardedAt: string
@@ -202,17 +255,28 @@ export interface UserBadge {;
 export interface CommunityUser {;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 export interface CommunityUser {
 
 export interface CommunityUser {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+}
+export interface Badge {
+  id: string;
+  name: string;
+  description: string;
+}
+export interface CommunityUser {
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   id: string;
   name: string;
   avatar?: string;
   role: string;
   reputation: number;
+<<<<<<< HEAD
 <<<<<<< HEAD
   post_count: number;
   reply_count: number;
@@ -308,3 +372,9 @@ export interface CommunityUser {;
 ;
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  post_count: number;
+  reply_count: number;
+  badges: Badge[];
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

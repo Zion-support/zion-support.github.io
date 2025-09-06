@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -208,6 +209,8 @@ export function MilestoneAssistant(props: MilestoneAssistantProps) {;
       <div className="assistant - header" style={{ display: "flex", gap: 12, align_items: "center" }}>;
         <button on_click={generate} disabled={loading || is_disabled}>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           {loading ? "Generating..." : "💡 Generate AI Milestones"}
         </button>;
         <label style={{ display: "flex", gap: 6, align_items: "center" }}>;
@@ -215,6 +218,7 @@ export function MilestoneAssistant(props: MilestoneAssistantProps) {;
           Auto - add to Milestone Tracker;
         </label>;
       </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       {error && <div style={{ color: "#b00", marginTop: 8 }}>{error}</div>}
@@ -236,12 +240,15 @@ export function MilestoneAssistant(props: MilestoneAssistantProps) {;
       {error && <div style={{ color: "#b00", marginTop: 8 }}>{error}</div>}
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <div style={{ marginTop: 12 }}>;
         {items.length === 0 && !loading && (;
           <div style={{ color: "#666" }}>No suggestions yet. Click "Generate" above.</div>;
         )}
         {items.map((item, idx) => (;
           <div key={idx} className="milestone-item" style={{ border: "1px solid #ddd", borderRadius: 8, marginBottom: 8 }}>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -256,11 +263,14 @@ export function MilestoneAssistant(props: MilestoneAssistantProps) {;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <div;
               className="milestone - summary";
               style={{ padding: 12, cursor: "pointer", display: "flex", justify_content: "space - between", align_items: "center" }}
               on_click={() => setExpandedIdx (expanded_idx === idx ? null : idx)}
             >;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -283,15 +293,16 @@ export function MilestoneAssistant(props: MilestoneAssistantProps) {;
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+                <span style={{ background: "#eef7ff", color: "#1677ff", padding: "2px 6px", borderRadius: 4, fontSize: 12 }}>;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <div style={{ display: "flex", gap: 8, align_items: "center" }}>;
                 <span style={{ font_weight: 600 }}>{item.title || `Milestone ${idx + 1}`}</span>;
                 <span style={{ background: "#eef7ff", color: "#1677ff", padding: "2px 6px", border_radius: 4, font_size: 12 }}>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   AI Suggested;
                 </span>;
               </div>;
               <div style={{ font_size: 12, color: "#555" }}>;
-                Due: {new Date (item.suggestedDueDateIso).toLocaleDateString ()} · ~{item.estimatedEffortHours}h;
               </div>;
             </div>;
             {expanded_idx === idx && (
@@ -309,6 +320,7 @@ export function MilestoneAssistant(props: MilestoneAssistantProps) {;
                   <textarea;
                     value={item.description}
                     on_change={(e) => update_item (idx, { description: e.target.value })}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 import React, { useMemo, useState } from "react",;
@@ -449,11 +461,17 @@ export function MilestoneAssistant(props:MilestoneAssistantProps) {;
                     value={item.description}
                     onChange={(e) => updateItem(idx, { description: e.target.value })}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     rows={3}
                     placeholder="Description";
                   />;
                 </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+                <div style={{ display:"grid", gap:6 }}>;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <div style={{ display: "grid", gap: 6 }}>;
                   <label > Suggested due date</label>;
                   <input;
@@ -464,6 +482,7 @@ export function MilestoneAssistant(props:MilestoneAssistantProps) {;
                 </div>;
                 <div style={{ display: "grid", gap: 6 }}>;
                   <label > Estimated effort (hours)</label>;
+<<<<<<< HEAD
 =======
                 <div style={{ display:"grid", gap:6 }}>;
                 <div style={{ display: "grid", gap: 6 }}>;
@@ -477,10 +496,13 @@ export function MilestoneAssistant(props:MilestoneAssistantProps) {;
                 <div style={{ display: "grid", gap: 6 }}>;
                   <label>Estimated effort (hours)</label>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   <input;
                     type="number";
                     min={1}
                     value={item.estimatedEffortHours}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -495,6 +517,8 @@ export function MilestoneAssistant(props:MilestoneAssistantProps) {;
 =======
                     on_change={(e) => update_item (idx, { estimatedEffortHours: Math.max (1, parse_int (e.target.value || "0", 10)) })}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   />;
                 </div>;
                 <div style={{ display: "flex", justify_content: "space - between", margin_top: 8 }}>;
@@ -504,6 +528,7 @@ export function MilestoneAssistant(props:MilestoneAssistantProps) {;
               </div>)}
           </div>))}
       </div>;
+<<<<<<< HEAD
     </div>);
 <<<<<<< HEAD
 }
@@ -680,3 +705,6 @@ export default MilestoneAssistant;
 ;
 export default MilestoneAssistant;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+export default MilestoneAssistant;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

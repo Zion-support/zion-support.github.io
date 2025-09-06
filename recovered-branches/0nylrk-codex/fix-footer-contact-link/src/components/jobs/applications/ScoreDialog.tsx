@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -8,19 +9,22 @@
 import {Dialog, DialogContent, DialogHeader, DialogTitle} from "@/components/ui/dialog";
 import {JobApplication} from "@/types/jobs";
 import {ApplicationScoreCard} from "../ApplicationScoreCard";
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {
   Dialog;
   DialogContent;
   DialogHeader;
   DialogTitle
 } from "@/components/ui/dialog",
-
-
 import { JobApplication } from "@/types/jobs";
 import { ApplicationScoreCard } from "../ApplicationScoreCard";
 import { JobApplication } from "@/types/jobs",
 import { ApplicationScoreCard } from "../ApplicationScoreCard",
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface ScoreDialogProps {
 
   open: boolean
@@ -31,6 +35,37 @@ interface ScoreDialogProps {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+export function ScoreDialog({;
+  open;
+  onOpenChange;
+  application;
+export function ScoreDialog({
+  open,
+  onOpenChange,
+  application,
+  onScoreUpdated
+}: ScoreDialogProps) {
+  return (
+    <Dialog open={open} onOpenChange={onOpenChange}>
+      <DialogContent className="sm:max-w-md">
+        <DialogHeader>
+          <DialogTitle>Application Match Score</DialogTitle>
+        </DialogHeader>
+        {application && (
+          <ApplicationScoreCard
+          <ApplicationScoreCard 
+import {;
+  Dialog,;
+  DialogContent,;
+  DialogHeader,;
+  DialogTitle;
+} from "@/components/ui/dialog",;
+import { JobApplication } from "@/types/jobs",;
+import { ApplicationScoreCard } from "../ApplicationScoreCard",;
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {Dialog, DialogContent, DialogHeader, DialogTitle} from "@/components/ui/dialog";
 import {JobApplication} from "@/types/jobs";
 import {ApplicationScoreCard} from "../ApplicationScoreCard";
@@ -57,6 +92,7 @@ export function ScoreDialog(): any ({;
 }: ScoreDialogProps) {
   return (
 
+<<<<<<< HEAD
 =======
 export function ScoreDialog({;
   open;
@@ -70,12 +106,15 @@ export function ScoreDialog({
 }: ScoreDialogProps) {
   return (
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent className="sm:max-w-md">
         <DialogHeader>
           <DialogTitle>Application Match Score</DialogTitle>
         </DialogHeader>
         {application && (
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -129,14 +168,17 @@ export function ScoreDialog({;
   return (;
   return (;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <Dialog open={open} onOpenChange={onOpenChange}>;
       <DialogContent className="sm:max-w-md">;
         <DialogHeader>;
           <DialogTitle>Application Match Score</DialogTitle>;
         </DialogHeader>;
         {application && (;
-
           <ApplicationScoreCard
+<<<<<<< HEAD
 
           <ApplicationScoreCard 
 
@@ -146,10 +188,13 @@ export function ScoreDialog({;
           <ApplicationScoreCard
           <ApplicationScoreCard ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             application={application}
             onScoreUpdated={onScoreUpdated}
           />;
         )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       </DialogContent>;
@@ -162,6 +207,8 @@ export function ScoreDialog({;
       </DialogContent>;
     </Dialog>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components / ui / dialog';
 import { JobApplication } from '@/types / jobs';
 import { ApplicationScoreCard } from '../ApplicationScoreCard';
@@ -189,6 +236,7 @@ function ScoreDialog() {
       </DialogContent>;
     </Dialog>);
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -225,3 +273,5 @@ onScoreUpdated
   )
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

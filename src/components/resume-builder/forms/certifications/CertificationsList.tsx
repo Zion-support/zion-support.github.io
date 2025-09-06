@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import { Certification  } from '@/types/resume';
 import { Card, CardContent  } from '@/components/ui/card';
@@ -30,6 +31,8 @@ export function CertificationsList({
   onDelete
 }: CertificationsListProps) {  if (certifications.length === 0) {
 export function CertificationsList({ certifications, onEdit, onDelete }: CertificationsListProps) {
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface CertificationsListProps {
   certifications: Certification[]
   onEdit: (cert: Certification) => void
@@ -39,11 +42,14 @@ interface CertificationsListProps {
 export function CertificationsList({ certifications, onEdit, onDelete }: CertificationsListProps) {
   if (certifications.length === 0) {
     return null
+<<<<<<< HEAD
 import { Certification } from '@/types/resume',;
 import { Card, CardContent } from '@/components/ui/card',;
 import { Button } from '@/components/ui/button',;
 import { Edit, Trash2 } from 'lucide-react';
 import { format } from 'date-fns',;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface CertificationsListProps {;
   certifications: Certification[];
   onEdit: (cert: Certification) => void;
@@ -65,6 +71,7 @@ interface CertificationsListProps {;
   onDelete: (id: string) => void;
 }
 
+<<<<<<< HEAD
   return (
     <div className="space-y-4">
       <h3 className="text-md font-medium">Added Certifications</h3>
@@ -105,10 +112,13 @@ interface CertificationsListProps {;
                     <> · Expires: {typeof cert.expiration_date === 'string'
                       ? cert.expiration_date
                       : format(cert.expiration_date, 'MMM yyyy')}
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <div>
                 <h4 className="font-medium">{cert.name}</h4>
                 <p className="text-sm text-muted-foreground">{cert.issuing_organization}</p>
                 <p className="text-xs text-muted-foreground mt-1">
+<<<<<<< HEAD
 <<<<<<< HEAD
                   Issued: {cert.issue_date ? (typeof cert.issue_date === 'string'
                     ? cert.issue_date
@@ -138,6 +148,11 @@ interface CertificationsListProps {;
                   variant="ghost"
                   size="icon"
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+                <Button
+                  variant='ghost'
+                  size='icon'
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   onClick={() => onEdit(cert)}
                   aria-label='Edit certification'                  variant="ghost"
                   size="icon"
@@ -145,7 +160,11 @@ interface CertificationsListProps {;
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+                  href = {cert && cert.credential_url,}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { Certification } from '@/types/resume',;
 import { Card, CardContent } from '@/components/ui/card',;
 import { Button } from '@/components/ui/button',;
@@ -199,6 +218,7 @@ export function CertificationsList({ certifications, onEdit, onDelete }: Certifi
                   <Edit className="h-4 w-4" />
                 </Button>
                 <Button
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import { Certification } from '@/types/resume';
 import { Card, CardContent } from '@/components/ui/card';
@@ -243,6 +263,8 @@ interface CertificationsListProps {
                 <a
                   href = {cert && cert.credential_url,}
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   variant="ghost"
                   size="icon"
                   onClick={() => onDelete(cert.id!)}
@@ -262,15 +284,19 @@ interface CertificationsListProps {
                   View credential
                 </a>;
               </p>;
+<<<<<<< HEAD
                 >
                   View credential
                 </Link>
               </p>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             )}
           </CardContent>;
         </Card>;
       ))}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     </div>;
@@ -381,3 +407,5 @@ if ( {) {
 }
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

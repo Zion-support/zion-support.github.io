@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 import Head from 'next/head';
@@ -274,6 +275,13 @@ export default function FutureOfWork() {
 }
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+import React from 'react',
+export default function FutureOfWork() {
+  return (
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import Head from 'next / head';
 import Link from 'next / link';
 import React from 'react',
@@ -287,9 +295,13 @@ function FutureOfWork() {
       <Head>;
         <title>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         />;
         <meta name='twitter:card' content='summary_large_image' />;
       </Head>;
@@ -464,13 +476,18 @@ function FutureOfWork() {
                 </ul>;
                 <p className='text - white / 90 mb - 4'>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   This collaboration model has proven to be 40% more effective;
                   than either humans or AI working alone.;
                 </p>;
               </section>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -576,10 +593,18 @@ function FutureOfWork() {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+                  valuable in the modern workplace.;
+                </p>;
+              </section>;
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   Our workplace design principles ensure that AI systems enhance;
                   rather than disrupt human workflows.;
                 </p>;
               </section>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -642,6 +667,8 @@ function FutureOfWork() {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     Explore Solutions;
                   </Link>;
                 </div>;
@@ -650,6 +677,7 @@ function FutureOfWork() {
           </div>;
         </main>;
       </div>;
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -1180,3 +1208,5 @@ export default function FutureOfWork(req, res) {
 }
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

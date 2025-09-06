@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Button  } from '@/components/ui/button';
@@ -51,6 +52,12 @@ import { Share, Users } from 'lucide-react'
 import { useRouter } from 'next/router'; // Changed from useNavigate
 export default function ReferralsPage() {
 <<<<<<< HEAD
+=======
+import { useRouter } from 'next/router'; // Changed from useNavigate
+
+
+export default function ReferralsPage() {
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const router = useRouter(); // Changed from navigate
   const { isAuthenticated } = useAuth();
   const {
@@ -64,8 +71,11 @@ export default function ReferralsPage() {
     shareOnSocialMedia} = useReferrals();
 
 
+<<<<<<< HEAD
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   const router = useRouter(); // Changed from navigate
   const { isAuthenticated } = useAuth()
@@ -93,6 +103,7 @@ export default function ReferralsPage() {
     if (!isAuthenticated) {
       toast({
 <<<<<<< HEAD
+<<<<<<< HEAD
 
         title: "Authentication required",
         description: "Please login to access the referral program",
@@ -114,6 +125,8 @@ export default function ReferralsPage() {
   return (
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <div className="container max-w-7xl py-10">
 
 
@@ -135,19 +148,6 @@ import { toast } from '@/hooks/use-toast'
 import { Share, Users } from 'lucide-react'
 import { useRouter } from 'next/router', // Changed from useNavigate
 import {
-
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from '@/components/ui/card';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { useRouter } from 'next/router'; // Changed from useNavigate
-export default function ReferralsPage() {;
-  const router = useRouter(); // Changed from navigate
-  const { isAuthenticated } = useAuth()
-
 import { useEffect } from 'react',
 import { useAuth } from '@/hooks/useAuth',
 import { useReferrals } from '@/hooks/useReferrals',
@@ -167,32 +167,7 @@ import { useRouter } from 'next/router', // Changed from useNavigate
 export default function ReferralsPage() {
   const router = useRouter(), // Changed from navigate
   const { isAuthenticated } = useAuth(),
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from '@/components/ui/card';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { useRouter } from 'next/router'; // Changed from useNavigate
-export default function ReferralsPage() {;
-  const router = useRouter(); // Changed from navigate
-  const { isAuthenticated } = useAuth()
-import { useEffect } from 'react',
-import { useAuth } from '@/hooks/useAuth',
-import { useReferrals } from '@/hooks/useReferrals',
-import { ReferralStats } from '@/components/referrals/ReferralStats',
-import { ReferralLink } from '@/components/referrals/ReferralLink',
-import { ReferralTable } from '@/components/referrals/ReferralTable',
-import { RewardsCard } from '@/components/referrals/RewardsCard',
-import { ReferralGuide } from '@/components/referrals/ReferralGuide',
-import { ReferralLeaderboard } from '@/components/referrals/ReferralLeaderboard',
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
-import { Button } from '@/components/ui/button',
-import { toast } from '@/hooks/use-toast',
-import { Share, Users } from 'lucide-react'
-import { useRouter } from 'next/router', // Changed from useNavigate
+
 
   const {
     isLoading,
@@ -202,6 +177,7 @@ import { useRouter } from 'next/router', // Changed from useNavigate
     stats,
     getReferralLink,
     copyReferralLink,
+<<<<<<< HEAD
     shareOnSocialMedia,
   } = useReferrals()
   useEffect(() => {
@@ -240,6 +216,8 @@ import { useRouter } from 'next/router', // Changed from useNavigate
         </div>
         <Button className='flex items-center gap-2' onClick={copyReferralLink}>
           <Share className='h-4 w-4' />          Share Referral Link    <div className="container max-w-7xl py-10">
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     shareOnSocialMedia} = useReferrals(),
 
   useEffect(() => {
@@ -250,28 +228,12 @@ import { useRouter } from 'next/router', // Changed from useNavigate
         variant: "destructive"}),
       router.push("/login"), // Changed to router.push
     }
-  }, [isAuthenticated, router]); // Changed navigate to router in dependencies
-  const referralLink = getReferralLink()
-  return (
-    <div className='container max-w-7xl py-10'>
-      <div className='mb-8 flex flex-col md:flex-row justify-between md:items-center gap-4'>
-        <div>
-          <h1 className='text-3xl font-bold tracking-tight'>
-            Referral Program
-          </h1>
-          <p className='text-muted-foreground mt-1'>
-            Invite others to Zion AI Marketplace and earn rewards
-          </p>
-        </div>
-        <Button className='flex items-center gap-2' onClick={copyReferralLink}>
-          <Share className='h-4 w-4' />          Share Referral Link    <div className="container max-w-7xl py-10">
-    shareOnSocialMedia} = useReferrals(),
+  }, [isAuthenticated, router]), // Changed navigate to router in dependencies
 
   const referralLink = getReferralLink(),
 
   return (
     <div className="container max-w-7xl py-10">
-ursor/fix-website-loading-errors-and-merge-6662
       <div className="mb-8 flex flex-col md:flex-row justify-between md:items-center gap-4">
           <h1 className="text-3xl font-bold tracking-tight">Referral Program</h1>
           <p className="text-muted-foreground mt-1">
@@ -284,6 +246,7 @@ ursor/fix-website-loading-errors-and-merge-6662
         </Button>
       </div>
       <ReferralStats stats={stats} isLoading={isLoading} />
+<<<<<<< HEAD
       <div className='grid gap-6 mt-6 lg:grid-cols-3'>
         <div className='lg:col-span-2 space-y-6'>
           <ReferralLink
@@ -292,6 +255,8 @@ ursor/fix-website-loading-errors-and-merge-6662
             onShare={shareOnSocialMedia}          />
           <Tabs defaultValue='referrals' className='w-full'>
             <TabsList className='w-full grid grid-cols-2'>
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <TabsTrigger
                 value='referrals'
                 className='flex items-center gap-2'>;
@@ -310,7 +275,6 @@ ursor/fix-website-loading-errors-and-merge-6662
             </TabsContent>;
             <TabsContent value='rewards' className='p-0 mt-6'>              <RewardsCard rewards={rewards} isLoading={isLoading} />;
             <TabsContent value="rewards" className="p-0 mt-6">;
-
       
       <div className="grid gap-6 mt-6 lg:grid-cols-3">
         <div className="lg:col-span-2 space-y-6">
@@ -318,12 +282,18 @@ ursor/fix-website-loading-errors-and-merge-6662
             referralLink={referralLink} 
             onCopy={copyReferralLink} 
             onShare={shareOnSocialMedia}
+<<<<<<< HEAD
           />
           
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <Tabs defaultValue="referrals" className="w-full">
             <TabsList className="w-full grid grid-cols-2">
               <TabsTrigger value="referrals" className="flex items-center gap-2">
                 <Users className="h-4 w-4" />
+
+
+
                 Your Referrals
               </TabsTrigger>
               <TabsTrigger value="rewards" className="flex items-center gap-2">
@@ -334,12 +304,12 @@ ursor/fix-website-loading-errors-and-merge-6662
             <TabsContent value="referrals" className="p-0 border rounded-md mt-6">
               <ReferralTable referrals={referrals} isLoading={isLoading} />
             </TabsContent>
-            <TabsContent value='rewards' className='p-0 mt-6'>              <RewardsCard rewards={rewards} isLoading={isLoading} />
 
 
 
 
             <TabsContent value="rewards" className="p-0 mt-6">
+<<<<<<< HEAD
             onShare={shareOnSocialMedia}
           />
           <Tabs defaultValue="referrals" className="w-full">
@@ -365,6 +335,11 @@ ursor/fix-website-loading-errors-and-merge-6662
         <div className='space-y-6'>          <ReferralGuide />        <div className="space-y-6">
 ursor/fix-website-loading-errors-and-merge-6662
         <div className="space-y-6">
+=======
+            </TabsContent>
+          </Tabs>
+        </div>
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 
@@ -372,8 +347,8 @@ ursor/fix-website-loading-errors-and-merge-6662
         </div>
       </div>
     </div>
-
   )
+<<<<<<< HEAD
 }, [isAuthenticated, router]), //Changed navigate to router in dependencies return (<div className="container max-w-7xl py-10" > <div className="mb-8 flex flex-col md:flex-row justify-between md:items-center gap-4" > <div> <h1 className="text-3xl font-bold tracking-tight" >Referral Program</h1> <p className="text-muted-foreground mt-1" > Invite others to Zion AI Marketplace and earn rewards </p> </div> Share Referral Link </Button> </div> <ReferralStats stats= {
   stats
 }isLoading= {
@@ -389,6 +364,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 }
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useEffect } from 'react',;
 import { useAuth } from '@/hooks/useAuth',;
 import { useReferrals } from '@/hooks/useReferrals',;
@@ -448,9 +425,12 @@ export default function ReferralsPage() {;
             onCopy={copyReferralLink} ;
             onShare={shareOnSocialMedia}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           />;
 
           <Tabs defaultValue="referrals" className="w-full">;
@@ -472,6 +452,7 @@ export default function ReferralsPage() {;
             </TabsContent>;
           </Tabs>;
         </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
         <div className='space-y-6'>          <ReferralGuide />        <div className="space-y-6">;
@@ -621,10 +602,13 @@ if ( {) {
 =======
         <div className="space-y-6">;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <ReferralGuide />;
           <ReferralLeaderboard />;
         </div>;
       </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   );
@@ -650,3 +634,5 @@ if ( {) {
 }
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -44,6 +45,8 @@ import Link from "next/link",;
 export function Navigation() {;
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false),;
   const [isSearchOpen, setIsSearchOpen] = useState(false),;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   return (;
@@ -224,6 +227,7 @@ export function Navigation() {;
               </svg>;
             </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
           </div>;
         )}
@@ -240,6 +244,8 @@ export function Navigation() {;
 ;
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
           <div className="lg:hidden animate - fade - in">;
@@ -317,6 +323,7 @@ export function Navigation() {;
         </div>;
       </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 }
@@ -331,3 +338,5 @@ export function Navigation() {;
 }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

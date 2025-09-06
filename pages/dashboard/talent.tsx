@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 ] as const;
@@ -55,6 +56,8 @@ export default function TalentDashboard() {;
 =======
 import EnhancedCard from '../../components/ui/EnhancedCard',
 import EnhancedButton from '../../components/ui/EnhancedButton';
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 import {useEffect, useState} from 'react';
 const STEPS = [
@@ -62,7 +65,6 @@ const STEPS = [
   { key: 'skills', label: 'Skills added' }
   { key: 'availability', label: 'Availability set' }
   { key: 'match', label: 'First match received' }
-
 ] as const;
 type StepKey = (typeof STEPS)[number]['key'];
 
@@ -75,20 +77,6 @@ const STEPS = [
 type StepKey = typeof STEPS[number]['key'];
 
 export default function TalentDashboard() {
-  const [completed, setCompleted] = useState<Record<StepKey, boolean>>({ profile: false, skills: false, availability: false, match: false }),
-  useEffect(() => {
-    try {
-      const raw = window.localStorage.getItem('onboarding.talent');
-      if (raw) setCompleted(JSON.parse(raw))
-    } catch {}
-
-  }, []);
-  useEffect(() => {
-
-] as const;
-type StepKey = (typeof STEPS)[number]['key'];
-export default function TalentDashboard() {
-  const [completed, setCompleted] = useState<Record<StepKey, boolean>>({
     profile: false
     skills: false
     availability: false
@@ -101,6 +89,7 @@ export default function TalentDashboard() {
   useEffect(() => {
     try {
       const raw = window.localStorage.getItem('onboarding.talent');
+<<<<<<< HEAD
       if (raw) setCompleted(JSON.parse(raw));    } catch {}
   }, []);
   useEffect(() => {
@@ -127,6 +116,50 @@ const STEPS = [;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     setCompleted(c => ({ ...c, [key]: !c[key] }));
 
+=======
+      if (raw) setCompleted(JSON.parse(raw))
+    } catch {}
+
+  }, []);
+  useEffect(() => {
+
+
+export default function TalentDashboard() {;
+  const [completed, setCompleted] = useState<Record<StepKey, boolean>>({;
+    profile: false,;
+    skills: false,;
+    availability: false,;
+    match: false,;
+  });
+
+  useEffect(() => {;
+    try {;
+      const raw = window && window.localStorage.getItem('onboarding && onboarding.talent');
+      if (raw) setCompleted(JSON && JSON.parse(raw));    } catch {}
+  }, []);
+
+  useEffect(() => {;
+    try {;
+      window && window.localStorage.setItem(;
+        'onboarding && onboarding.talent',;
+        JSON && JSON.stringify(completed);
+      );
+    } catch {}
+  }, [completed]);
+
+  const progress = Math && Math.round(;
+    (Object && Object.values(completed).filter(Boolean).length / STEPS && STEPS.length) * 100;
+  );
+
+  const toggle = (key: StepKey) =>;
+
+    setCompleted(c => ({ ...c, [key]: !c[key] }));
+
+import { useEffect, useState } from 'react';
+const STEPS = [;
+  { key: 'profile', label: 'Profile completed' },;
+  { key: 'skills', label: 'Skills added' },;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <div className='space-y-4'>;
       <EnhancedCard>;
@@ -144,9 +177,13 @@ const STEPS = [;
             className='h-2 rounded bg-blue-600'
             style={{ width: `${progress}%` }}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           />        </div>;
       </EnhancedCard>;
 
@@ -157,9 +194,13 @@ const STEPS = [;
             <li key={s && s.key} className='flex items-center justify-between'>;
               <div className='flex items-center gap-2'>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <span
                   className={`inline-flex h-5 w-5 items-center justify-center rounded-full border ${completed[s && s.key] ? 'bg-emerald-500 text-white border-emerald-500' : 'border-gray-300 dark:border-gray-700'}`}>;
                   {completed[s && s.key] ? '✓' : ''}
@@ -183,10 +224,14 @@ const STEPS = [;
                 </EnhancedButton>              )}
             </li>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     try { window.localStorage.setItem('onboarding.talent', JSON.stringify(completed)) } catch {}
   }, [completed]);
 
@@ -194,6 +239,7 @@ const STEPS = [;
 
   const toggle = (key: StepKey) => setCompleted((c) => ({ ...c, [key]: !c[key] }));
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -227,6 +273,11 @@ export default function TalentDashboard(req, res) {
   const progress = Math.round((Object.values(completed).filter(Boolean).length / STEPS.length) * 100),
   const toggle = (key: StepKey) => setCompleted((c) => ({ ...c, [key]: !c[key] })),
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <div className="space-y-4">
       <EnhancedCard>
@@ -256,8 +307,8 @@ export default function TalentDashboard(req, res) {
               ) : (
 
 
-
 }
+
 
                 <EnhancedButton onClick={() => toggle(s.key)} variant="secondary" className="text-xs py-1 px-2">{s.key === 'skills' ? 'Add skills' : 'Mark done'}</EnhancedButton>
               )  } catch (error) {
@@ -272,16 +323,22 @@ export default function TalentDashboard(req, res) {
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         </ul>;
       </EnhancedCard>;
     </div>;
   );
 
 
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   )
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
@@ -382,6 +439,7 @@ function TalentDashboard() {
     </div>);
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
@@ -449,11 +507,14 @@ export default function TalentDashboard() {
     </div>;
   );
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -461,3 +522,5 @@ export default function TalentDashboard() {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -13,7 +13,8 @@ const Input = React.forwardRef<HTMLInputElement React.ComponentProps<"input">>(;
         )}
         ref={ref}
         {...props}
-      />);
+      />;
+    );
   }
 );
 Input.displayName = "Input";

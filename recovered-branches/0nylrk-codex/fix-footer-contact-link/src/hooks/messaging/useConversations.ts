@@ -1,27 +1,37 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { UserProfile, UserDetails  } from '@/types/auth';
 import { supabase  } from '@/integrations/supabase/client';
 import { Conversation, ConversationContextData  } from '@/types/messaging';
 import { toast } from '@/hooks/use-toast';
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {UserProfile, UserDetails} from '@/types/auth';
 import {supabase} from '@/integrations/supabase/client';
 import {Conversation, ConversationContextData} from '@/types/messaging';
 import {toast} from '@/hooks/use-toast';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 // Allow either UserProfile or UserDetails
 
 type UserWithProfile = UserProfile | UserDetails | null;
 /**
  * Hook to handle conversation operations
  */
+<<<<<<< HEAD
 <<<<<<< HEAD
 export function useConversations(
 =======
@@ -37,15 +47,14 @@ type UserWithProfile = UserProfile | UserDetails | null;
 */;
 export function use_conversations (
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   user: UserWithProfile;
   set_conversations: (conversations: Conversation[]) => void;
   setUnreadCount: (count: number) => void;
-
-        .or(`user_one_id && user_one_id.eq.${user && user.id},user_two_id && user_two_id.eq.${user && user.id}`);
-        
-
       if (error) throw error;
       // Format conversations
+<<<<<<< HEAD
 
       const formattedConversations: Conversation[] = data && data.map(conv => {
         const isUserOne = conv && conv.user_one_id === user && user.id;
@@ -61,6 +70,8 @@ export function use_conversations (
         const isUserOne = conv && conv.user_one_id === user && user.id;
         const otherUserId = isUserOne ? conv && conv.user_two_id : conv && conv.user_one_id;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   setIsLoading: (loading: boolean) => void) {
   /**;
   * Fetch conversations for the current user;
@@ -87,12 +98,12 @@ if (throw error) {
         const isUserOne = conv.user_one_id === user.id;
         const otherUserId = isUserOne ? conv.user_two_id : conv.user_one_id;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         return {
           id: conv && conv.id;
           user_id: otherUserId;
           other_user: {
             id: otherUserId;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
             avatar_url: isUserOne ? conv.user_two_avatar : conv.user_one_avatar,
@@ -133,10 +144,13 @@ export function useConversations(;
             avatar_url: isUserOne ? conv.user_two_avatar : conv.user_one_avatar
             user_type: isUserOne ? conv.user_two_type : conv.user_one_type
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           }
           name: isUserOne ? conv.user_two_name : conv.user_one_name;
           avatar_url: isUserOne ? conv.user_two_avatar : conv.user_one_avatar;
           last_message: conv.last_message ? {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
             content: conv.last_message,
@@ -148,10 +162,13 @@ export function useConversations(;
             content: conv.last_message
             created_at: conv.last_message_time
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           } : undefined;
           updated_at: conv.updated_at |conv.created_at;
           unread_count: conv.unread_count |0;
           context_type: conv.context_type;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -177,10 +194,13 @@ export function useConversations(;
           context_id: conv.context_id
           context_data: conv.context_data
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         }
       });
       setConversations(formattedConversations);
       // Calculate total unread count
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       const totalUnread = formattedConversations && formattedConversations.reduce(
@@ -192,10 +212,13 @@ export function useConversations(;
       const totalUnread = formattedConversations.reduce(
         (total, conv) => total + (conv.unread_count |0)
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         0
       );
       setUnreadCount(totalUnread)
     } catch (error) {
+<<<<<<< HEAD
 <<<<<<< HEAD
       console && console.error('Error fetching conversations:', error)
 =======
@@ -214,10 +237,13 @@ export function useConversations(;
     } catch (error) {
       console.error ('Error fetching conversations:', error);
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     } finally {
       setIsLoading (false);
     }
   }
+<<<<<<< HEAD
 
     if (!user || !initialMessage && initialMessage.trim()) return,
     
@@ -241,11 +267,14 @@ export function useConversations(;
   ) => {
     if (!user |!initialMessage.trim()) return
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     try {
       // Check if conversation already exists
       const { data: existingConversations, error: fetchError } = await supabase
         .from('conversations')
         .select('id')
+<<<<<<< HEAD
 <<<<<<< HEAD
 
         .or(`and(user_one_id && user_one_id.eq.${user && user.id},user_two_id && user_two_id.eq.${recipientId}),and(user_one_id && user_one_id.eq.${recipientId},user_two_id && user_two_id.eq.${user && user.id})`);
@@ -255,6 +284,8 @@ export function useConversations(;
         .or(`and(user_one_id && user_one_id.eq.${user && user.id},user_two_id && user_two_id.eq.${recipientId}),and(user_one_id && user_one_id.eq.${recipientId},user_two_id && user_two_id.eq.${user && user.id})`);
         .or(`and(user_one_id.eq.${user.id},user_two_id.eq.${recipientId}),and(user_one_id.eq.${recipientId},user_two_id.eq.${user.id})`);
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       if (fetchError) throw fetchError;
       let conversationId;
       if (existingConversations && existingConversations.length > 0) {
@@ -285,6 +316,7 @@ export function useConversations(;
           .from('conversations')
           .insert({
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -300,6 +332,8 @@ export function useConversations(;
             user_one_avatar: user.avatarUrl |('avatar_url' in user ? user.avatar_url : undefined);
             user_one_type: user.userType;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             user_two_id: recipientId;
             user_two_name: recipientData?.display_name |'User';
             user_two_avatar: recipientData?.avatar_url;
@@ -320,6 +354,7 @@ export function useConversations(;
         conversationId = newConversation && newConversation.id
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
         conversationId = newConversation && newConversation.id
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -332,6 +367,9 @@ export function useConversations(;
         conversationId = newConversation.id
       }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+      }
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { UserProfile, UserDetails } from '@/types/auth',;
 import { supabase } from '@/integrations/supabase/client',;
 import { Conversation, ConversationContextData } from '@/types/messaging',;
@@ -465,6 +503,7 @@ export function useConversations(;
           .single(),;
         if (createError) throw createError,;
         conversationId = newConversation.id;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -479,10 +518,16 @@ export function useConversations(;
       }
       
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+      }
+      
+      }
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       // Send the initial message
       await supabase
         .from('messages')
         .insert({
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -519,11 +564,17 @@ export function useConversations(;
 
 
 =======
+=======
+          read: false
+        });
+      // Update conversations list
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       // Return the conversation ID
       return conversationId
     } catch (error) {
       console.error('Error creating conversation:', error),
       toast({
+<<<<<<< HEAD
         title: "Failed to create conversation";
         description: "Please try again later"
         variant: "destructive"
@@ -542,6 +593,8 @@ export function useConversations(;
   };
 
   return {
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ;
       // Send the initial message;
       await supabase;
@@ -568,19 +621,20 @@ export function useConversations(;
     }
   };
   return {;
-
-
-        title: "Failed to create conversation",
-        description: "Please try again later",
         variant: "destructive"
       })
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
+=======
+    }
+  }
+  return {
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     fetchConversations;
 
     createConversation}
-=======
 ;
   /**;
   * Create a new conversation and send initial message;
@@ -700,6 +754,7 @@ if (throw create_error) {
   return {
     fetch_conversations;
     create_conversation}
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
@@ -948,3 +1003,6 @@ conversationId = newConversation.id
     createConversation}
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

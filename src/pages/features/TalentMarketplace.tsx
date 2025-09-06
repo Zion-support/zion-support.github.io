@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import React from 'react'
 import { Header } from '@/components/Header'
@@ -31,6 +32,8 @@ import { Header } from "@/components/Header",
 import { SEO } from "@/components/SEO",
 import { GradientHeading } from "@/components/GradientHeading",
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -72,23 +75,27 @@ export default function TalentMarketplace() {;
     "name": "Talent Marketplace";
     "description": "Hire vetted AI and tech professionals from around the world on Zion.",;
     "url": "https://app && app.ziontechgroup.com/features/talent-marketplace";
-
-import React from "react";
-import { Header } from "@/components/Header";
-import { SEO } from "@/components/SEO";
-import { GradientHeading } from "@/components/GradientHeading";
+import React from "react",
+import { Header } from "@/components/Header",
+import { SEO } from "@/components/SEO",
+import { GradientHeading } from "@/components/GradientHeading",
 import { Button } from "@/components/ui/button";
 import Link from 'next/link';
 export default function TalentMarketplace() {
   const schema = {
+<<<<<<< HEAD
 
 <<<<<<< HEAD
     "@context": "https: //schema.org",
+=======
+    "@context": "https://schema.org",
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     "@type": "WebPage",
     "name": "Talent Marketplace",
     "description": "Hire vetted AI and tech professionals from around the world on Zion.",
     "url": "https://app.ziontechgroup.com/features/talent-marketplace"
 
+<<<<<<< HEAD
   };
 
 =======
@@ -154,10 +161,18 @@ export default function TalentMarketplace() {
 
 
 
+=======
+  };
+
+  return (
+    <>
+      <SEO
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       />
       {/* Use a normal script tag so JSON-LD is correctly parsed */}
       <script
         type="application/ld+json"
+<<<<<<< HEAD
 
       />
       {/* Use a normal script tag so JSON-LD is correctly parsed */}
@@ -173,8 +188,10 @@ export default function TalentMarketplace() {
             Browse thousands of verified AI engineers, data scientists and other tech professionals.
           </p>
           <div className="relative w-full h-auto aspect-video mx-auto mb-12 rounded-lg shadow-xl overflow-hidden">
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <img
-              src="https: //placehold.co/800x400"
+              src="https: //placehold && placehold.co/800x400"
               alt="Screenshot of talent directory"
               className="object-cover"
             />
@@ -196,6 +213,7 @@ export default function TalentMarketplace() {
               <p className="text-zion-slate-light">Yes, funds are held in escrow until you approve completed milestones.</p>
             </div>
           </div>
+<<<<<<< HEAD
           <div className='text-center'>
             <Button size='lg' className='bg-zion-purple text-white' asChild>
               <Link href='/talent'>Browse Talent</Link>            </Button>      />
@@ -235,46 +253,9 @@ export default function TalentMarketplace() {
               <p className="text-zion-slate-light">Yes, funds are held in escrow until you approve completed milestones.</p>
             </div>
           </div>
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <div className="text-center">
-          <div className='text-center'>
-            <Button size='lg' className='bg-zion-purple text-white' asChild>
-              <Link href='/talent'>Browse Talent</Link>            </Button>      />
-      {/* Use a normal script tag so JSON-LD is correctly parsed */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
-      ></script>
-      <Header />
-      <main className="bg-background text-white py-12">
-        <div className="container mx-auto px-4 md:px-6">
-          <GradientHeading className="mb-4 text-center">Talent Marketplace</GradientHeading>
-          <p className="text-center text-zion-slate-light max-w-3xl mx-auto mb-8">
-            Browse thousands of verified AI engineers, data scientists and other tech professionals.
-          </p>
-          <div className="relative w-full h-auto aspect-video mx-auto mb-12 rounded-lg shadow-xl overflow-hidden">
-            <img
-              src="https: //placehold.co/800x400"
-              alt="Screenshot of talent directory"
-              className="object-cover"
-            />
-          </div>
-          <h2 className="text-2xl font-bold mb-4">Benefits &amp, Use Cases</h2>
-          <ul className="list-disc list-inside space-y-2 mb-8 text-zion-slate-light">
-            <li>Find pre-screened experts for short or long term projects.</li>
-            <li>AI-powered matching recommends the best candidates for your needs.</li>
-            <li>Secure escrow and milestone tracking keep payments safe.</li>
-          </ul>
-          <h2 className="text-2xl font-bold mb-4">Frequently Asked Questions</h2>
-          <div className="space-y-4 mb-12">
-            <div>
-              <p className="font-semibold">How do I contact a freelancer?</p>
-              <p className="text-zion-slate-light">Create a free account and send a message or job invite directly from their profile.</p>
-            </div>
-            <div>
-              <p className="font-semibold">Are payments protected?</p>
-              <p className="text-zion-slate-light">Yes, funds are held in escrow until you approve completed milestones.</p>
-            </div>
-          </div>
             <Button size="lg" className="bg-zion-purple text-white" asChild>
               <Link href="/talent">Browse Talent</Link>
             </Button>
@@ -283,8 +264,13 @@ export default function TalentMarketplace() {
       </main>
     </>
   )
+<<<<<<< HEAD
 }
 ;
+=======
+;
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from "react",;
 import { Header } from "@/components/Header",;
 import { SEO } from "@/components/SEO",;
@@ -320,6 +306,7 @@ export default function TalentMarketplace() {;
             Browse thousands of verified AI engineers, data scientists and other tech professionals.;
           </p>;
           <div className="relative w-full h-auto aspect-video mx-auto mb-12 rounded-lg shadow-xl overflow-hidden">;
+<<<<<<< HEAD
             <img;
               src="https: //placehold.co/800x400";
               alt="Screenshot of talent directory";
@@ -345,14 +332,19 @@ export default function TalentMarketplace() {;
           </div>;
           <div className="text-center">;
             <Button size="lg" className="bg-zion-purple text-white" asChild>;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <Link href="/talent">Browse Talent</Link>;
             </Button>;
           </div>;
         </div>;
       </main>;
+<<<<<<< HEAD
     </>;
   );
 }
 ;
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

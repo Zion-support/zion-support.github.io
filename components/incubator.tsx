@@ -1,9 +1,12 @@
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
 =======
 export default function IncubatorPage() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <EnhancedLayout>;
       <div className='max-w-3xl'>;
@@ -33,6 +36,7 @@ export default function IncubatorPage() {;
           <Link href={{ pathname: '/grants', query: { program: 'incubator' } }}><a className="px-4 py-2 border rounded">View Incubator Projects</a></Link>;
       </div>;
     </EnhancedLayout>;
+<<<<<<< HEAD
 
   );
 }
@@ -49,15 +53,20 @@ export default function IncubatorPage() {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export default function IncubatorPage() {
   return (
     <EnhancedLayout>
       <div className="max-w-3xl">
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import Link from 'next/link';
 import EnhancedLayout from '../components/layout/EnhancedLayout';
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export default function IncubatorPage() {
   return (
     <EnhancedLayout>
@@ -92,6 +101,9 @@ export default function IncubatorPage() {
     </EnhancedLayout>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import Link from 'next / link';
 import EnhancedLayout from '../components / layout / EnhancedLayout';
 export default /**
@@ -126,6 +138,7 @@ function IncubatorPage() {
           <Link href={{ pathname: '/grants', query: { program: 'incubator' } }}><a className="px - 4 py - 2 border rounded">View Incubator Projects</a></Link>;
       </div>;
     </EnhancedLayout>);
+<<<<<<< HEAD
 }
 
 =======
@@ -142,3 +155,5 @@ function IncubatorPage() {
 }
   );
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

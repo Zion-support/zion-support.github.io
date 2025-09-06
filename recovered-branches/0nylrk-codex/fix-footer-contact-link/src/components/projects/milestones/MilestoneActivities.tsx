@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import {supabase} from '@/integrations / supabase / client';
 import {Card, CardContent, CardHeader, CardTitle} from '@/components / ui / card';
@@ -8,11 +9,14 @@ import {Skeleton} from '@/components / ui / skeleton';
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface MilestoneActivitiesProps {
   project_id: string;
 }
 interface Activity {
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 import React, { useState, useEffect } from 'react';
@@ -27,6 +31,8 @@ interface MilestoneActivitiesProps {
 interface Activity {
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   id: string
   milestone_id: string
   user_id: string
@@ -38,14 +44,18 @@ interface Activity {
 
   milestone: {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 export function MilestoneActivities({ projectId }: MilestoneActivitiesProps) {;
   const [activities, setActivities] = useState<Activity[]>([]);
 
 
+<<<<<<< HEAD
 =======
     title: string
   }
@@ -62,6 +72,8 @@ export function MilestoneActivities({ projectId }: MilestoneActivitiesProps) {
 export function MilestoneActivities({ projectId }: MilestoneActivitiesProps) {;
   const [activities, setActivities] = useState<Activity[]>([]);
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
     async function fetchActivities() {
@@ -80,6 +92,7 @@ export function MilestoneActivities({ projectId }: MilestoneActivitiesProps) {;
         if (error) throw error;
         setActivities(data |[])
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -253,6 +266,11 @@ export function MilestoneActivities({ projectId }: MilestoneActivitiesProps) {;
         console.error('Error fetching milestone activities:', err);
       } finally {;
         setIsLoading(false);
+=======
+      } catch (err) {
+        console.error('Error fetching milestone activities:', err)
+      } finally {
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       }
     }
     if (projectId) {
@@ -263,31 +281,29 @@ export function MilestoneActivities({ projectId }: MilestoneActivitiesProps) {;
     switch (activity.action) {
       case 'created':
 
-        return 'created a new milestone'
-
-      case 'status_changed':
-        return `changed status from ${activity.previous_status |'none'} to ${activity.new_status}`;
-      case 'updated':
-        return 'updated milestone details';
-      case 'deliverable_added':
-        return 'added a deliverable';
-      default:
-        return activity.action.replace(/_/g, ' ')
+    if (projectId) {;
+      fetchActivities();
     }
-  }
+
+
+
   }, [projectId]),;
   function getActivityDescription(activity: Activity): string {;
     switch (activity.action) {;
+
       case 'created':;
         return 'created a new milestone',;
       case 'status_changed':;
-        return `changed status from ${activity.previous_status || 'none'} to ${activity.new_status}`,;
+        return `changed status from ${activity && activity.previous_status || 'none'} to ${activity && activity.new_status}`;
       case 'updated':;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+        setIsLoading (false);
+      }
+    }
         return 'updated milestone details';
       case 'deliverable_added':;
         return 'added a deliverable';
       default:;
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -326,6 +342,8 @@ export function MilestoneActivities({ projectId }: MilestoneActivitiesProps) {;
   }
 
         return activity.action.replace(/_/g, ' ');
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     }
   }
 
@@ -349,12 +367,11 @@ export function MilestoneActivities({ projectId }: MilestoneActivitiesProps) {;
     )
   }
 
-
   if (activities.length === 0) {
-    return (
         return activity && activity.action.replace(/_/g, ' ');
     }
   }
+<<<<<<< HEAD
   if (isLoading) {;
     return (
 
@@ -464,6 +481,8 @@ export function MilestoneActivities({ projectId } MilestoneActivitiesProps) {;
 
   if (activities.length === 0) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     return (
       <div className="space-y-4">;
         {[1, 2, 3].map((i) => (;
@@ -480,6 +499,7 @@ export function MilestoneActivities({ projectId } MilestoneActivitiesProps) {;
           </Card>;
         ))}
       </div>;
+<<<<<<< HEAD
     );
   }
 
@@ -492,11 +512,14 @@ export function MilestoneActivities({ projectId } MilestoneActivitiesProps) {;
   if (activities.length === 0) {;
     return (;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <Card>;
         <CardContent className="p-6 text-center">;
           <p className="text-muted-foreground py-8">No activity found for this project</p>;
         </CardContent>;
       </Card>;
+<<<<<<< HEAD
 <<<<<<< HEAD
     );
   }
@@ -538,6 +561,8 @@ export function MilestoneActivities({ projectId } MilestoneActivitiesProps) {;
                     <span className="font-medium">{activity && activity.created_by_profile?.display_name}</span>;
                     <span className="text-muted-foreground text-sm">;
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       {getActivityDescription(activity)}
                     </span>;
                     <span className="text-muted-foreground text-xs">;
@@ -548,6 +573,7 @@ export function MilestoneActivities({ projectId } MilestoneActivitiesProps) {;
                     <span className="font-medium">{activity && activity.milestone?.title}</span>;
                     {activity && activity.comment && (;
                       <span className="ml-2 text-muted-foreground">"{activity && activity.comment}"</span>;
+<<<<<<< HEAD
 =======
                     <span className="font-medium">{activity.created_by_profile?.display_name}</span>;
                     <span className="text-muted-foreground text-sm">;
@@ -562,11 +588,14 @@ export function MilestoneActivities({ projectId } MilestoneActivitiesProps) {;
                     {activity.comment && (;
                       <span className="ml-2 text-muted-foreground">"{activity.comment}"</span>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     )}
                   </p>;
                 </div>;
               </div>;
             ))}
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -630,6 +659,8 @@ export function MilestoneActivities({ projectId } MilestoneActivitiesProps) {;
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     // Check condition
 if ( {) {
   $2
@@ -638,6 +669,7 @@ if ( {) {
     }
   }, [project_id]);
 ;
+<<<<<<< HEAD
 
 
 
@@ -755,3 +787,5 @@ default: return activity.action.replace (/ /g, ' ')
 }
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

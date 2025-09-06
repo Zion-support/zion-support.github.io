@@ -1,9 +1,13 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 import {createClient} from '@supabase/supabase-js';
 
 
+<<<<<<< HEAD
 =======
 import {createClient} from '@supabase/supabase-js';
 
@@ -11,6 +15,8 @@ import {createClient} from '@supabase/supabase-js';
 import { createClient  } from '@supabase/supabase-js';
 import {createClient} from '@supabase/supabase-js';
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import fs from 'fs/promises';
 import { createReadStream  } from 'fs';
 import path from 'path',
@@ -22,9 +28,12 @@ const {
   OPENAI_API_KEY
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 } = process.env
 if (!SUPABASE_URL |!SUPABASE_SERVICE_ROLE_KEY |!OPENAI_API_KEY) {
   console.error('Missing env vars: SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY, OPENAI_API_KEY')
@@ -43,6 +52,7 @@ const {;
 if (!SUPABASE_URL || !SUPABASE_SERVICE_ROLE_KEY || !OPENAI_API_KEY) {;
   console.error('Missing env vars: SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY, OPENAI_API_KEY'),;
   process.exit(1);
+<<<<<<< HEAD
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 }
@@ -111,6 +121,8 @@ function buildTrainingPairs(records) {
 
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 const supabase = createClient(SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY)
 async function fetchData() {
@@ -129,17 +141,6 @@ function stripPii(text) {
   if (!text) return text
   let result = text
   // Emails
-  result = result.replace(/\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2}\b/gi, '[email]')
-
-  // US-style phone numbers
-  result = result.replace(/\b\(?\d{3}\)?[-.\s]?\d{3}[-.\s]?\d{4}\b/g, '[phone]')
-  // Naive full name removal (two capitalized words)
-
-  result = result.replace(/\b[A-Z][a-z]+\s+[A-Z][a-z]+\b/g, '[name]')
-
-  return result
-}
-
 function buildTrainingPairs(records) {
 
   const pairs = []
@@ -149,6 +150,7 @@ function buildTrainingPairs(records) {
 
       completion: stripPii(job.description)
     })
+<<<<<<< HEAD
   }
   for (const resume of records.resumes) {
     pairs.push({
@@ -180,6 +182,8 @@ async function saveJsonl(pairs, filePath) {;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
       prompt: `Summarize the candidate with skills: ${stripPii(resume.skills)}`
 
@@ -192,6 +196,7 @@ async function saveJsonl(pairs, filePath) {;
       prompt: stripPii(log.question)
 
       completion: stripPii(log.answer)
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -221,11 +226,14 @@ function buildTrainingPairs(records) {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     })
   }
   return pairs
 }
 async function saveJsonl(pairs, filePath) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   try {
@@ -330,6 +338,8 @@ async function createFineTune(filePath) {
   }),
   const job = await jobRes.json(),
   console.log('Fine-tune job created:', job.id)
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   // // // console.log('Fine-tune job created:', job.id)
 ;
 async function createFineTune(filePath) {;
@@ -359,6 +369,7 @@ async function createFineTune(filePath) {;
   }),;
   const job = await jobRes.json(),;
   // // // console.log('Fine-tune job created:', job.id);
+<<<<<<< HEAD
   }),
   const job = await jobRes && jobRes.json(),
   console && console.log('Fine-tune job created:', job && job.id)
@@ -519,6 +530,8 @@ main ().catch ((err) => {
 =======
 =======
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 async function main() {
 
@@ -531,8 +544,14 @@ async function main() {
 main().catch((err) => {
   console.error('Training workflow failed', err)
 
+<<<<<<< HEAD
 });
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 main().catch((err) => {
@@ -540,14 +559,24 @@ main().catch((err) => {
 }),
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+main().catch((err) => {
+  console.error('Training workflow failed', err)
+}),
+;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ;
 main().catch((err) => {;
   console.error('Training workflow failed', err);
 });
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -714,3 +743,5 @@ await createFineTune ('training-data.jsonl')
   console.error ('Training workflow failed', err) 
 });
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

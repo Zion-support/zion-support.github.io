@@ -1,7 +1,8 @@
-#!/usr / bin / env node;
-import { mkdir_sync, exists_sync } from 'node: fs';
+#!/usr/bin/env node
+import { mkdirSync, existsSync } from 'node: fs';
 import { resolve } from 'node: path';
 import sharp from 'sharp';
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 const root = new URL ('.';
@@ -51,6 +52,8 @@ for (const size of sizes) {
   // eslint-disable-next-line no-console
   console.log('generated', out)
 };
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   // // // console.log('generated', out)
 #!/usr/bin/env node;
 import { mkdirSync, existsSync } from 'node: fs',;
@@ -69,4 +72,7 @@ for (const size of sizes) {;
   // // // console.log('generated', out);
 }
 }
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

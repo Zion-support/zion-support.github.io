@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -11,21 +12,39 @@ import { GradientHeading } from "./GradientHeading",
 import { useState } from "react",
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { GradientHeading } from "./GradientHeading";
 import { useState } from "react";
 import { GradientHeading } from "./GradientHeading",
 import { useState } from "react",
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {GradientHeading} from "./GradientHeading";
 import {useState} from "react";
 import { GradientHeading } from "./GradientHeading",
 import { useState } from "react",
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+import { GradientHeading } from "./GradientHeading",
+import { useState } from "react",
+
+import {GradientHeading} from "./GradientHeading";
+import {useState} from "react";
+import { GradientHeading } from "./GradientHeading",
+import { useState } from "react",
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 // Real company logos for trusted partners - with more reliable image URLs
 
 const trustedCompanies = [
@@ -33,6 +52,7 @@ const trustedCompanies = [
     name: "NVIDIA"
     logo: "/logos/nvidia-logo.svg"
     alt: "NVIDIA logo"
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -46,10 +66,13 @@ const trustedCompanies = [
   }
   },
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   {
     name: "American Express"
     logo: "/logos/amex-logo.svg"
     alt: "American Express logo"
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -63,10 +86,13 @@ const trustedCompanies = [
   }
   },
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   {
     name: "Walt Disney"
     logo: "/logos/disney-logo.svg"
     alt: "Walt Disney logo"
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -80,10 +106,13 @@ const trustedCompanies = [
   }
   },
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   {
     name: "AMD"
     logo: "/logos/amd-logo.svg"
     alt: "AMD logo"
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -97,10 +126,13 @@ const trustedCompanies = [
   }
   },
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   {
     name: "Apple"
     logo: "/logos/apple-logo.svg"
     alt: "Apple logo"
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -114,10 +146,13 @@ const trustedCompanies = [
   }
   },
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   {
     name: "EA Games"
     logo: "/logos/ea-logo.svg"
     alt: "EA Games logo"
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -131,10 +166,13 @@ const trustedCompanies = [
   }
   },
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   {
     name: "Louis Vuitton"
     logo: "/logos/lv-logo.svg"
     alt: "Louis Vuitton logo"
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -148,10 +186,13 @@ const trustedCompanies = [
   }
   },
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   {
     name: "Nike"
     logo: "/logos/nike-logo.svg"
     alt: "Nike logo"
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -165,10 +206,13 @@ const trustedCompanies = [
   }
   },
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   {
     name: "Pandora"
     logo: "/logos/pandora-logo.svg"
     alt: "Pandora logo"
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -182,10 +226,13 @@ const trustedCompanies = [
   }
   },
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   {
     name: "Huawei"
     logo: "/logos/huawei-logo.svg"
     alt: "Huawei logo"
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -199,10 +246,13 @@ const trustedCompanies = [
   }
   },
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   {
     name: "Johnson & Johnson"
     logo: "/logos/jnj-logo.svg"
     alt: "Johnson & Johnson logo"
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -216,10 +266,13 @@ const trustedCompanies = [
   }
   },
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   {
     name: "Universal"
     logo: "/logos/universal-logo.svg"
     alt: "Universal Studios logo"
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -233,10 +286,13 @@ const trustedCompanies = [
   }
   },
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   {
     name: "Ubisoft"
     logo: "/logos/ubisoft-logo.svg"
     alt: "Ubisoft logo"
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -250,10 +306,13 @@ const trustedCompanies = [
   }
   },
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   {
     name: "Bayer"
     logo: "/logos/bayer-logo.svg"
     alt: "Bayer logo"
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -267,10 +326,13 @@ const trustedCompanies = [
   }
   },
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   {
     name: "Avaya"
     logo: "/logos/avaya-logo.svg"
     alt: "Avaya logo"
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -284,10 +346,13 @@ const trustedCompanies = [
   }
   },
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   {
     name: "Silicon Valley Bank"
     logo: "/logos/svb-logo.svg"
     alt: "Silicon Valley Bank logo"
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -301,10 +366,13 @@ const trustedCompanies = [
   }
   },
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   {
     name: "Dell"
     logo: "/logos/dell-logo.svg"
     alt: "Dell logo"
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -318,10 +386,13 @@ const trustedCompanies = [
   }
   },
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   {
     name: "Lenovo"
     logo: "/logos/lenovo-logo.svg"
     alt: "Lenovo logo"
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -335,11 +406,14 @@ const trustedCompanies = [
   }
   },
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   {
     name: "Citi Bank"
     logo: "/logos/citi-logo.svg"
     alt: "Citi Bank logo"
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
   }
@@ -353,11 +427,14 @@ const trustedCompanies = [
 =======
   },
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   {
     name: "Thomson Reuters"
     logo: "/logos/thomson-reuters-logo.svg"
     alt: "Thomson Reuters logo"
   }
+<<<<<<< HEAD
 
 
 ],
@@ -380,12 +457,15 @@ export function TrustedBySection() {
   const [failedLogos, setFailedLogos] = useState<Record<string boolean>>({}),
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const handleImageError = (companyName: string) => {
     setFailedLogos(prev => ({
       ...prev
       [companyName]: true
     }))
 
+<<<<<<< HEAD
 
   },
 
@@ -396,6 +476,8 @@ export function TrustedBySection() {
   },
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <section className="py-16 bg-zion-blue-dark">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -416,6 +498,7 @@ export function TrustedBySection() {
                 </div>
               ) : (
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import {GradientHeading} from "./GradientHeading";
 import {useState} from "react";
@@ -431,10 +514,13 @@ import {useState} from "react";
 import { GradientHeading } from "./GradientHeading",;
 import { useState } from "react",;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 // Real company logos for trusted partners - with more reliable image URLs;
 const trustedCompanies = [;
   {;
     name: "NVIDIA",;
+<<<<<<< HEAD
 <<<<<<< HEAD
     logo: "/logos/nvidia-logo && logo.svg",;
     alt: "NVIDIA logo";
@@ -779,12 +865,15 @@ export function TrustedBySection() {;
   };
   return (;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <section className="py-16 bg-zion-blue-dark">;
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">;
         <div className="text-center mb-12">;
           <GradientHeading className="mb-2">Trusted By Industry Leaders</GradientHeading>;
           <p className="text-zion-slate-light">Join the growing network of companies relying on Zion's marketplace</p>;
         </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 items-center max-w-7xl mx-auto">;
@@ -798,15 +887,20 @@ export function TrustedBySection() {;
                   {company && company.name}
                 </div>;
               ) : (;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <img
                   src={company && company.logo} 
                   alt={company && company.alt} 
 
+<<<<<<< HEAD
 =======
                 <img
                   src={company && company.logo} 
                   alt={company && company.alt} 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   className="max-h-10 max-w-full opacity-70 group-hover:opacity-100 transition-opacity duration-300 filter invert"
                   onError={() => handleImageError(company && company.name)}
                 />;
@@ -821,6 +915,7 @@ export function TrustedBySection() {;
               )}
             </div>;
           ))}
+<<<<<<< HEAD
 
         </div>;
 <<<<<<< HEAD
@@ -851,9 +946,23 @@ export function TrustedBySection() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
+        </div>
+        <div className="text-center mt-10">
+          <p className="text-zion-slate-light text-sm">And many more enterprises worldwide...</p>
+        </div>
+      </div>
+    </section>
+  )
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+}
+}
+                  className="max-h-10 max-w-full opacity-70 group-hover:opacity-100 transition-opacity duration-300 filter invert"
+                  onError={() => handleImageError(company && company.name)}
+                />;
+              )}
+            </div>;
+          ))}
 import { GradientHeading } from './GradientHeading';
 import { useState } from './react';
 // Real company logos for trusted partners - with more reliable image URLs;
@@ -961,6 +1070,7 @@ const trusted_companies = [;
 ];
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -1041,3 +1151,5 @@ function TrustedBySection() {
 }
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

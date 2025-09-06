@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -33,75 +34,68 @@ interface DeploymentUpdate {;
   governanceType?: string,;
   domain?: string,;
   progress?: number,;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   actions?: {;
-    label: string,;
-    action: 'deploy' | 'view' | 'retry' | 'configure' | 'dismiss',;
+    label: string;
+    action: 'deploy' | 'view' | 'retry' | 'configure' | 'dismiss';
     href?: string;
   }[];
 }
-;
-interface DeploymentNotificationProps {;
-  updates: DeploymentUpdate[],;
-  onDismiss?: (id: string) => void,;
+interface DeploymentNotificationProps {updates: DeploymentUpdate[];
+  onDismiss?: (id: string) => void;
   onAction?: (id: string, action: string) => void;
 }
-;
-export default function DeploymentNotification({;
-  updates,;
-  onDismiss,;
+export default function DeploymentNotification({updates;
+  onDismiss;
   onAction;
-}: DeploymentNotificationProps) {;
-  const [expanded, setExpanded] = useState<string | null>(null),;
+}: DeploymentNotificationProps) {const [expanded, setExpanded] = useState<string | null>(null);
   const getUpdateIcon = (type: string) => {;
     switch (type) {;
-      case 'deployment_started': return <Activity className="w-5 h-5 text-blue-400" />,;
-      case 'deployment_completed': return <CheckCircle className="w-5 h-5 text-green-400" />,;
-      case 'deployment_failed': return <AlertCircle className="w-5 h-5 text-red-400" />,;
-      case 'instance_ready': return <Rocket className="w-5 h-5 text-purple-400" />,;
-      case 'update_available': return <Clock className="w-5 h-5 text-yellow-400" />,;
+      case 'deployment_started': return <Activity className="w-5 h-5 text-blue-400" />;
+      case 'deployment_completed': return <CheckCircle className="w-5 h-5 text-green-400" />;
+      case 'deployment_failed': return <AlertCircle className="w-5 h-5 text-red-400" />;
+      case 'instance_ready': return <Rocket className="w-5 h-5 text-purple-400" />;
+      case 'update_available': return <Clock className="w-5 h-5 text-yellow-400" />;
       default: return <Rocket className="w-5 h-5 text-gray-400" />;
     }
-  },;
-  const getUpdateColor = (type: string) => {;
-    switch (type) {;
-      case 'deployment_started': return 'border-blue-500/30 bg-blue-500/10',;
-      case 'deployment_completed': return 'border-green-500/30 bg-green-500/10',;
-      case 'deployment_failed': return 'border-red-500/30 bg-red-500/10',;
-      case 'instance_ready': return 'border-purple-500/30 bg-purple-500/10',;
-      case 'update_available': return 'border-yellow-500/30 bg-yellow-500/10',;
+  }
+  const getUpdateColor = (type: string) => {switch (type) {;
+      case 'deployment_started': return 'border-blue-500/30 bg-blue-500/10';
+      case 'deployment_completed': return 'border-green-500/30 bg-green-500/10';
+      case 'deployment_failed': return 'border-red-500/30 bg-red-500/10';
+      case 'instance_ready': return 'border-purple-500/30 bg-purple-500/10';
+      case 'update_available': return 'border-yellow-500/30 bg-yellow-500/10';
       default: return 'border-white/20 bg-white/5';
     }
-  },;
-  const getVerticalIcon = (vertical: string) => {;
-    switch (vertical) {;
-      case "HEALTH": return <Shield className="w-4 h-4 text-blue-400" />,;
-      case "EDUCATION": return <Building2 className="w-4 h-4 text-green-400" />,;
-      case "LAW": return <Shield className="w-4 h-4 text-purple-400" />,;
-      case "GOV": return <Users className="w-4 h-4 text-red-400" />,;
+  }
+  const getVerticalIcon = (vertical: string) => {switch (vertical) {;
+      case "HEALTH": return <Shield className="w-4 h-4 text-blue-400" />;
+      case "EDUCATION": return <Building2 className="w-4 h-4 text-green-400" />;
+      case "LAW": return <Shield className="w-4 h-4 text-purple-400" />;
+      case "GOV": return <Users className="w-4 h-4 text-red-400" />;
       default: return <Globe className="w-4 h-4 text-gray-400" />;
     }
-  },;
-  const getGovernanceIcon = (type: string) => {;
-    switch (type) {;
-      case "ADMIN": return <Users className="w-4 h-4 text-yellow-400" />,;
-      case "DAO_LITE": return <Users className="w-4 h-4 text-blue-400" />,;
-      case "DAO_FULL": return <Zap className="w-4 h-4 text-purple-400" />,;
+  }
+  const getGovernanceIcon = (type: string) => {switch (type) {;
+      case "ADMIN": return <Users className="w-4 h-4 text-yellow-400" />;
+      case "DAO_LITE": return <Users className="w-4 h-4 text-blue-400" />;
+      case "DAO_FULL": return <Zap className="w-4 h-4 text-purple-400" />;
       default: return <Users className="w-4 h-4 text-gray-400" />;
     }
-  },;
-  const formatTimestamp = (timestamp: string) => {;
-    const date = new Date(timestamp),;
-    const now = new Date(),;
-    const diffInMinutes = Math.floor((now.getTime() - date.getTime()) / (1000 * 60)),;
-    if (diffInMinutes < 1) return 'Just now',;
-    if (diffInMinutes < 60) return `${diffInMinutes}m ago`,;
-    if (diffInMinutes < 1440) return `${Math.floor(diffInMinutes / 60)}h ago`,;
+  }
+  const formatTimestamp = (timestamp: string) => {const date = new Date(timestamp);
+    const now = new Date();
+    const diffInMinutes = Math.floor((now.getTime() - date.getTime()) / (1000 * 60));
+    if (diffInMinutes < 1) return 'Just now';
+    if (diffInMinutes < 60) return `${diffInMinutes}m ago`;
+    if (diffInMinutes < 1440) return `${Math.floor(diffInMinutes / 60)}h ago`;
     return date.toLocaleDateString();
-  },;
-  const handleAction = (updateId: string, action: string) => {;
-    if (onAction) {;
+  }
+  const handleAction = (updateId: string, action: string) => {if (onAction) {;
       onAction(updateId, action);
     }
+<<<<<<< HEAD
   },;
   if (updates.length === 0) return null,;
 
@@ -149,6 +143,8 @@ import {Rocket;
   Building2;
   Users;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   Zap;
 } from './lucide-react';,
 interface DeploymentUpdate {
@@ -239,6 +235,7 @@ if ( {) {
 }
       on_action (update_id, action);
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
   },
   // Check condition
@@ -353,6 +350,8 @@ export default function DeploymentNotification({;
     }
   },;
   if (updates.length === 0) return null,;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (;
     <div className="fixed top-4 right-4 z-50 space-y-3 max-w-md">;
       {updates.map((update) => (;
@@ -382,6 +381,7 @@ export default function DeploymentNotification({;
             </button>;
           </div>;
           {/* Instance Details (if available) */}
+<<<<<<< HEAD
 
           {update.instance_name && (
             <div className="mb - 3 p - 3 bg - white / 10 rounded - lg border border - white / 20">;
@@ -405,6 +405,8 @@ export default function DeploymentNotification({;
                   {getVerticalIcon(update.vertical |'GENERAL')}
                   {getVerticalIcon(update.vertical || 'GENERAL')}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 </div>;
                 <span className="font - medium text - white text - sm">;
                   {update.instance_name}
@@ -425,6 +427,7 @@ export default function DeploymentNotification({;
                   </span>)}
               </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
             </div>;
           )}
@@ -441,6 +444,8 @@ export default function DeploymentNotification({;
 ;
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           {/* Progress Bar (for deployment updates) */}
           {update.progress !== undefined && (
             <div className="mb - 3 space - y-2">;
@@ -455,6 +460,7 @@ export default function DeploymentNotification({;
                 ></div>;
               </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
             </div>;
           )}
@@ -471,12 +477,15 @@ export default function DeploymentNotification({;
 ;
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           {/* Action Buttons */}
           {update.actions && update.actions.length > 0 && (
             <div className="flex gap - 2 pt - 2 border - t border - white / 20">;
               {update.actions.map ((action, index) => (
                 <button;
                   key={index}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
                   onClick={() => handleAction(update.id, action.action)}
@@ -500,6 +509,8 @@ export default function DeploymentNotification({;
                   className={`flex-1 flex items-center justify-center gap-2 px-3 py-2 text-xs font-medium rounded-lg transition-all duration-200 ${action.action === 'deploy' |action.action === 'retry';
                   className={`flex-1 flex items-center justify-center gap-2 px-3 py-2 text-xs font-medium rounded-lg transition-all duration-200 ${;
                     action.action === 'deploy' || action.action === 'retry';
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       ? 'bg-blue-600 hover:bg-blue-700 text-white';
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                       : action.action === 'view';
@@ -512,6 +523,7 @@ export default function DeploymentNotification({;
                   {action.action === 'retry' && <Rocket className="w - 3 h - 3" />}
                   {action.action === 'configure' && <Settings className="w - 3 h - 3" />}
                   <span>{action.label}</span>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
                 </button>;
@@ -532,6 +544,8 @@ export default function DeploymentNotification({;
 ;
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           {/* Timestamp */}
           <div className="absolute bottom - 2 right - 4 text - xs text - white / 60">;
             {format_timestamp (update.timestamp)}
@@ -539,6 +553,7 @@ export default function DeploymentNotification({;
         </div>))}
     </div>);
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -657,6 +672,8 @@ export function DeploymentNotificationExample() {;
   };
   return (;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <DeploymentNotification;
       updates={updates}
       on_dismiss={handle_dismiss}

@@ -6,7 +6,10 @@
 
 type Tx = {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -33,11 +36,16 @@ import React, { useEffect, useMemo, useState } from 'react';
 import Badges from './Badges';
 
 type Tx = {;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+type Tx = {
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   id: string;
   type: 'earn' | 'burn' | 'issue' | 'revoke' | 'redeem';
   amount: number;
   reason: string;
+<<<<<<< HEAD
 
 };
 
@@ -50,6 +58,8 @@ function getUserId(): any (): string {;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   if (typeof window === 'undefined') return 'demo-user';
   const fromStorage = window && window.localStorage.getItem('zion_user_id');
   if (fromStorage) return fromStorage;
@@ -70,6 +80,7 @@ export default function WalletPanel() {;
   type: "earn" | "burn" | "issue" | "revoke" | "redeem"
   amount: number
   reason: string
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -112,15 +123,20 @@ function WalletPanel() {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   id: string,
   type: "earn" | "burn" | "issue" | "revoke" | "redeem",
   amount: number,
   reason: string,
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export default function WalletPanel() {;
   const [summary, setSummary] = useState<Summary | null>(null);
   const [tab, setTab] = useState<'earnings' | 'spending' | 'redeem'>(;
@@ -133,14 +149,19 @@ export default function WalletPanel() {;
   createdAt: string;
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 type Summary = {;
   wallet: { userId: string, balance: number },;
   transactions: Tx[],;
   config: { usdPerToken: number, symbol: string }
 };
+<<<<<<< HEAD
 function getUserId(): any (): string {;
 <<<<<<< HEAD
 
@@ -208,10 +229,14 @@ export default function WalletPanel() {
 
 export default function WalletPanel() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  if (typeof window === "undefined") return "demo-user";
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const [summary, setSummary] = useState<Summary | null>(null);
   const [tab, setTab] = useState<"earnings" | "spending" | "redeem">("earnings");
   const [ethAddress, setEthAddress] = useState<string | null>(null);
   const userId = useMemo(() => getUserId(), []);
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -252,6 +277,8 @@ export default function WalletPanel() {;
     ['burn', 'revoke', 'redeem'].includes(t.type)  );  }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   useEffect(() => {
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     refresh()
   }, []);
   const balance = summary?.wallet.balance ?? 0;
@@ -261,6 +288,7 @@ export default function WalletPanel() {;
   );
   const spending = (summary?.transactions |[]).filter((t) =>
     ["burn", "revoke", "redeem"].includes(t.type)
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -299,10 +327,13 @@ export default function WalletPanel() {;
   );
   const nextBadgeThreshold = useMemo(() => {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     if (balance < 50) return 50;
     if (balance < 200) return 200;
     if (balance < 500) return 500;
     if (balance < 1000) return 1000;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -392,6 +423,8 @@ if ( {) {
       alert(`Redeemed ${amount} ${symbol} for $${data.usd} credit.`);
       refresh()
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     }
   }
   async function redeem(amount: number) {
@@ -409,6 +442,7 @@ if ( {) {
     };
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -417,6 +451,8 @@ if ( {) {
 =======
   return (      refresh();
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     }
   }
   return (
@@ -468,13 +504,17 @@ if ( {) {
               <div className='text - sm text - gray - 500'>Balance</div>;
               <div className='text - 2xl font - semibold'>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 {balance} {symbol}
               </div>;
             </div>;
           </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -520,6 +560,8 @@ if ( {) {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <button
             onClick={() => setTab('earnings')}
             className={`px-3 py-1 rounded border ${tab === 'earnings' ? 'bg-gray-100' : ''}`}
@@ -547,6 +589,7 @@ if ( {) {
                 <div className='flex gap-2 items-center'>;
                   <span
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -566,6 +609,8 @@ if ( {) {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             ))}
             {(tab === 'earnings' ? earnings : spending).length === 0 && (;
               <div className='text-sm text-gray-500'>No transactions yet.</div>;
@@ -598,9 +643,12 @@ if ( {) {
                 className='px-3 py-1 rounded border'
                 onClick={() => redeem(500)}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <button;
             on_click={connect_wallet}
             className='px - 3 py - 1 text - sm rounded border';
@@ -703,6 +751,7 @@ if ( {) {
                 Redeem 500;
               </button>;
             </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -857,10 +906,13 @@ export default function WalletPanel() {
     try {
       const accounts = await eth.request({ method: "eth_requestAccounts" })
       setEthAddress(accounts?.[0] |null)
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     } catch (e) {
       console.error(e)
     }
   }
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       </div>;
     </div>;
@@ -880,6 +932,12 @@ export default function WalletPanel() {
   );
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+}
+
+  );
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <div className='text - xs text - gray - 500'>;
               Coming soon: Redeem for branded perks and courses.;
             </div>          </div>            <div className="text - xs text - gray - 500">Coming soon: Redeem for branded perks and courses.</div>;
@@ -888,11 +946,15 @@ export default function WalletPanel() {
     </div>);
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
-}
+          </div>
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
@@ -1036,18 +1098,17 @@ export default function WalletPanel() {
               Coming soon: Redeem for branded perks and courses.
             </div>          </div>            <div className="text-xs text-gray-500">Coming soon: Redeem for branded perks and courses.</div>
           </div>
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         )}
       </div>
     </div>
 );
 }
 
-          </div>
-
-        )}
-      </div>
-    </div>
-  );
 }
 }
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -1,6 +1,7 @@
 import type { GetServerSideProps } from 'next';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default function VendorProfilePage({ vendor }: Props) {
@@ -43,6 +44,8 @@ export default function VendorProfilePage(): any ({ vendor }: Props) {;
 import { FormEvent, useState } from 'react';
 import type { Vendor } from '../../utils/vendor-types';
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 type Props = { vendor: Vendor | null };type Props = { vendor: Vendor | null }
 type Props = { vendor: Vendor | null };
 
@@ -51,9 +54,20 @@ export default function VendorProfilePage({ vendor }: Props) {;
 type Props = { vendor: Vendor | null };
 
 export default function VendorProfilePage({ vendor }: Props) {
+<<<<<<< HEAD
   const [message, setMessage] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
   if (!vendor) return <div className='text-gray-500'>Vendor not found.</div>;  if (!vendor) return <div className="text-gray-500">Vendor not found.</div>;
+=======
+type Props = { vendor: Vendor | null };type Props = { vendor: Vendor | null },
+export default function VendorProfilePage({ vendor }: Props) {;
+type Props = { vendor: Vendor | null };
+
+
+export default function VendorProfilePage({ vendor }: Props) {
+  const [message, setMessage] = useState<string | null>(null);
+  const [loading, setLoading] = useState(false);
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   async function submitLead(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
     const form = e.currentTarget;
@@ -62,6 +76,7 @@ export default function VendorProfilePage({ vendor }: Props) {
     setLoading(true);
     setMessage(null)
     try {
+<<<<<<< HEAD
       const res = await fetch('/api/vendors/lead', {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         method: 'POST',
@@ -136,6 +151,8 @@ function submit_lead() {
     <div className="space-y-8">
       <div className="flex items-center gap-4">
         {vendor.logoUrl ? (
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           // eslint-disable-next-line @next/next/no-img-element
           <img src={vendor.logoUrl} alt={vendor.name} className="w-16 h-16 rounded" />
         ) : (
@@ -150,6 +167,7 @@ function submit_lead() {
         </div>
       </div>
       <div>
+<<<<<<< HEAD
         <h2 className="text-lg font-medium mb-2">About</h2>
         <p className="text-sm text-gray-700 dark:text-gray-300 whitespace-pre-line">{vendor.about || 'No description provided.'}</p>
       </div>
@@ -287,6 +305,8 @@ function submit_lead() {
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>
             {vendor.sampleProjects.map(sp => (
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <div
                 key={p && p.id}
                 className='border border-gray-200 dark:border-gray-800 rounded p-4'>;
@@ -303,6 +323,7 @@ function submit_lead() {
         </div>;
       )}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -316,6 +337,8 @@ function submit_lead() {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <div
                 key={sp && sp.id}
                 className='border border-gray-200 dark:border-gray-800 rounded overflow-hidden'>;
@@ -339,6 +362,7 @@ function submit_lead() {
                 ) : (;
                   <div className="w-full h-40 bg-gray-100 dark:bg-gray-900" />;
                 )}
+<<<<<<< HEAD
                 <div className="p-3">;
                   <div className="font-medium">{sp && sp.title}</div>;
                   <div className="text-sm text-gray-500">{sp && sp.description}</div>;
@@ -430,6 +454,8 @@ export const getServerSideProps: GetServerSideProps<Props> = async ctx => {;
   }
 
   return (
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
         </div>
       </div>
@@ -443,13 +469,28 @@ export const getServerSideProps: GetServerSideProps<Props> = async ctx => {;
 
                 </div>
 
+        </div>
+      </div>
+
+      <div>
+
+      </div>
+
+      {vendor.packages && vendor.packages.length > 0 && (
+        <div>
+
+                </div>
+
+            ))}
+          </div>;
+        </div>;
+      )}
+
               </div>
             ))}
           </div>
         </div>
       )}
-            {loading ? 'Submitting...' : 'Send'}
-          </button>
 
       <div>
         <h2 className='text-lg font-medium mb-2'>Request a Quote</h2>
@@ -459,14 +500,17 @@ export const getServerSideProps: GetServerSideProps<Props> = async ctx => {;
             required
             placeholder='What do you need?'
             className='w-full border rounded px-3 py-2 bg-transparent'
-          />
+          />;
           <button
             disabled={loading}
-            className='px-4 py-2 rounded bg-black text-white dark:bg-white dark:text-black'
-          >
+            className='px-4 py-2 rounded bg-black text-white dark:bg-white dark:text-black'>;
             {loading ? 'Submitting...' : 'Send'}
-          </button>
+          </button>;
           {message && <div className='text-sm'>{message}</div>}
+            ))}
+          </div>
+        </div>
+      )}
         </form>
       </div>
       <div className='text-center text-xs text-gray-500'>Powered by Zion</div>
@@ -486,6 +530,7 @@ export const getServerSideProps: GetServerSideProps<Props> = async ctx => {;
 };            {loading ? 'Submitting...' : 'Send'}
           </button>
           {message && <div className="text-sm">{message}</div>}
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         </form>;
       </div>;
@@ -652,11 +697,20 @@ export const getServerSideProps: GetServerSideProps < Props> = async (ctx) => {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 =======
+=======
+        </form>
+      </div>
+      <div className="text-center text-xs text-gray-500">Powered by Zion</div>
+    </div>
+  );
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export const getServerSideProps: GetServerSideProps<Props> = async (ctx) => {
   const slug = String(ctx.params?.slug |'');
 
 export const getServerSideProps: GetServerSideProps<Props> = async (ctx) => {;
   const slug = String(ctx.params?.slug || '');
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         </form>
       </div>
@@ -664,19 +718,30 @@ export const getServerSideProps: GetServerSideProps<Props> = async (ctx) => {;
     </div>
   );
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const { getVendorBySlug } = await import('../../utils/vendor-store');
   const vendor = slug ? getVendorBySlug(slug) |null : null;
   return { props: { vendor } }
 }
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const vendor = slug ? getVendorBySlug(slug) || null : null;
   return { props: { vendor } };
 };
 };
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+};
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -31,10 +32,13 @@ import { SORT_OPTIONS } from "@/data/sortOptions";
 import { SortDesc, ChevronDown } from "lucide-react";
 >>>>>>> main
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
+<<<<<<< HEAD
 <<<<<<< HEAD
   DropdownMenuTrigger,
 } from '@/components / ui / dropdown - menu';
@@ -95,9 +99,10 @@ export function SortDropdown(): any ({ sortOption, setSortOption }: SortDropdown
   DropdownMenuTrigger} from "@/components/ui/dropdown-menu",
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
->>>>>>> main
 
 interface SortDropdownProps {
   sortOption: string;
@@ -119,6 +124,7 @@ export function SortDropdown(): any ({ sortOption, setSortOption }: SortDropdown
           <ChevronDown className="h-4 w-4 ml-2 opacity-50" />
         </Button>
       </DropdownMenuTrigger>
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       <DropdownMenuContent
         align="start"
@@ -163,6 +169,8 @@ export function SortDropdown(): any ({ sortOption, setSortOption }: SortDropdown
           <ChevronDown className="h-4 w-4 ml-2 opacity-50" />
         </Button>
       </DropdownMenuTrigger>
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <DropdownMenuContent
         align="start"
         className="w-[200px] bg-zion-blue-dark border-zion-blue-light"
@@ -172,6 +180,7 @@ export function SortDropdown(): any ({ sortOption, setSortOption }: SortDropdown
             key={option.value}
             onClick={() => setSortOption(option.value)}
             className={`text-white hover:bg-zion-blue-light/30 cursor-pointer ${
+<<<<<<< HEAD
 
               sortOption === option.value ? "bg-zion-purple/20 text-zion-purple" : ""
 
@@ -194,6 +203,8 @@ export function SortDropdown(): any ({ sortOption, setSortOption }: SortDropdown
                 ? "bg-zion-purple/20 text-zion-purple"
                 : ""
 >>>>>>> main
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             }`}
           >
             {option.label}
@@ -201,9 +212,6 @@ export function SortDropdown(): any ({ sortOption, setSortOption }: SortDropdown
         ))}
       </DropdownMenuContent>
     </DropdownMenu>
-<<<<<<< HEAD
-  )
-=======
 import React from "react",;
 import { Button } from "@/components/ui/button",;
 import { SORT_OPTIONS } from "@/data/sortOptions",;
@@ -216,37 +224,12 @@ import {;
 interface SortDropdownProps {;
   sortOption: string;
   setSortOption: (option: string) => void;
-=======
   );
->>>>>>> main
-}
-;
-  ),;}
- import {
-  DropdownMenu;
-DropdownMenuContent;
-DropdownMenuItem;
-interface SortDropdownProps {
-  sortOption: string;
-setSortOption: (option: string) => void 
-}sortOption, setSortOption 
-}: SortDropdownProps) {
-  return (<DropdownMenu> <DropdownMenuTrigger asChild> <Button variant="outline" className="w-full justify-between border-zion-blue-light text-white" > <div className="flex items-center gap-2" > <SortDesc className="h-4 w-4 text-zion-purple" /> {
-  SORT OPTIONS.find (opt => opt.value === sortOption) ?.label || "Sort by" 
-}</div> <ChevronDown className="h-4 w-4 ml-2 opacity-50" /> </Button> </DropdownMenuTrigger> <DropdownMenuContent align="start" className="w-[200px] bg-zion-blue-dark border-zion-blue-light" > {
-  SORT OPTIONS.map ( (option) => (<DropdownMenuItem key= {
-  option.value 
-}> {
-  option.label 
-}</DropdownMenuItem>) ) 
-}</DropdownMenuContent> </DropdownMenu>) 
-}
-}
-}
-;
 
-  );
-}
+
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

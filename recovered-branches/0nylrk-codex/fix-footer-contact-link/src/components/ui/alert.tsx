@@ -1,9 +1,12 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
 =======
 import * as React from 'react';
 import {cva, type, VariantProps} from 'class-variance-authority';
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {cn} from '@/lib/utils';
 const alertVariants = cva(
   'relative w-full rounded-lg border p-4 [&>svg~*]:pl-7 [&>svg+div]:translate-y-[-3px] [&>svg]:absolute [&>svg]:left-4 [&>svg]:top-4 [&>svg]:text-foreground'
@@ -20,16 +23,22 @@ const alertVariants = cva(
     }
   }
 );
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import * as React from "react"
 import { cva, type VariantProps } from "class-variance-authority"
 import * as React from "react"
 import { cva, type VariantProps } from "class-variance-authority"
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 import { cn } from "@/lib/utils"
 
@@ -46,15 +55,18 @@ const alertVariants = cva(
 )
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 const Alert = React.forwardRef<
   HTMLDivElement
   React.HTMLAttributes<HTMLDivElement> & VariantProps<typeof alertVariants>
->(({ className, variant, ...props }, ref) => (
   <div
     ref={ref}
+<<<<<<< HEAD
     role="alert"
     className={cn(alertVariants({ variant }), className)}
     {...props}
@@ -117,12 +129,14 @@ const Alert = React.forward_ref<;
   <div;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     ref={ref}
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     role='alert';
     className={cn (alert_variants ({ variant }), class_name)}
     {...props}
-
   />
 
+<<<<<<< HEAD
 =======
 
 ));
@@ -131,12 +145,15 @@ const AlertTitle = React.forwardRef<
   HTMLParagraphElement
   React.HTMLAttributes<HTMLHeadingE</HTMLHeadingElement>lement>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ))
 Alert.displayName = "Alert"
 
 const AlertTitle = React.forwardRef<
   HTMLParagraphElement,
   React.HTMLAttributes<HTMLHeadingElement>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -171,11 +188,14 @@ const AlertTitle = React.forward_ref<;
 
 =======
 >(({ className, ...props }, ref) => (
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   <h5
     ref={ref}
     className={cn('mb-1 font-medium leading-none tracking-tight', className)}
     {...props}
   />
+<<<<<<< HEAD
 ));
 AlertTitle.displayName = 'AlertTitle';
 const AlertDescription = React.forwardRef<
@@ -202,20 +222,14 @@ const AlertDescription = React && React.forwardRef<;
   React && React.HTMLAttr</HTMLParagraphElement>ibutes<HTMLParagraphElement>;
 >(({ className, ...props }, ref) => (;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-  <div
 =======
-  />));
-AlertTitle.display_name = 'AlertTitle';
-;
-const AlertDescription = React.forward_ref<;
-  HTMLParagraphElement,
-  React.HTMLAttr</HTMLParagraphElement > ibutes < HTMLParagraphElement>;
->(({ class_name, ...props }, ref) => (
-  <div;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+  <div
     ref={ref}
-    className={cn ('text - sm [&_p]:leading - relaxed', class_name)}
+    className={cn('text-sm [&_p]:leading-relaxed', className)}
     {...props}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -228,11 +242,21 @@ export { Alert, AlertTitle, AlertDescription };
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+))
+AlertDescription.displayName = "AlertDescription"
+
+export { Alert, AlertTitle, AlertDescription };
+export { Alert, AlertTitle, AlertDescription }
+;
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   />));
 AlertDescription.display_name = 'AlertDescription';
 ;
 export { Alert, AlertTitle, AlertDescription }
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -332,3 +356,5 @@ export { Alert, AlertTitle, AlertDescription };
 export { Alert, AlertTitle, AlertDescription }
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

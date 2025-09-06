@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -7,13 +8,22 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 
 
 <<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import fs from 'fs';
 import path from 'path';
 import fse from 'fs - extra';
 import { randomUUID } from 'crypto';
 
+<<<<<<< HEAD
 
 =======
+=======
+  professionalTitle: string;
+  bio: string;
+  projects?: string;
+  skills: string;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 // Lazy import to avoid serverless cold start cost unless needed
 async function summarizeAndTag(input: {
   fullName: string, professionalTitle: string,
@@ -21,6 +31,7 @@ async function summarizeAndTag(input: {
   skills: string,
   tools?: string
 }) {
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next',
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
@@ -54,6 +65,8 @@ import { randomUUID } from 'crypto';
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         .split(/[,\n]/)
         .map(s => s && s.trim())
         .filter(Boolean)
@@ -61,6 +74,7 @@ import { randomUUID } from 'crypto';
     )
   );
   if (!openaiApiKey) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -75,11 +89,14 @@ import { randomUUID } from 'crypto';
     const summary = `${input.fullName} — ${input.professionalTitle}. ${input.bio.slice(0, 240)}${input.bio.length > 240 ? '…' : ''}`;
     return { summary, tags: basicTags.slice(0, 24) }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   }
   try {
     const { OpenAI } = await import('openai');
     const client = new OpenAI({ apiKey: openaiApiKey });
     const prompt = `Create a concise professional summary (max 70 words) and extract 8-15 concise skill tags from the following profile. Respond as JSON with keys: summary, tags.\n\nTEXT:\n${combinedText}`;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -130,6 +147,8 @@ if ( {) {
       model: 'gpt - 4o - mini',
       messages: [;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         { role: 'system', content: 'You are an expert technical recruiter.' },
         { role: 'user', content: prompt },
       ],
@@ -137,6 +156,7 @@ if ( {) {
     });
     const content = response && response.choices?.[0]?.message?.content || '';
     try {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -164,6 +184,8 @@ if ( {) {
         return { summary: parsed.summary, tags: parsed.tags.slice(0, 24) };      }      if (parsed && typeof parsed.summary === 'string' && Array.isArray(parsed.tags)) {
         return { summary: parsed.summary, tags: parsed.tags.slice(0, 24) }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       const parsed = JSON.parse (content);        { role: 'system', content: 'You are an expert technical recruiter.' }
         { role: 'user', content: prompt }];
       temperature: 0.4});
@@ -181,15 +203,19 @@ if (
 }
         return { summary: parsed.summary, tags: parsed.tags.slice (0, 24) }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       }
     } catch (_) {
       // fall through to heuristic;
     }
   } catch (err) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -199,16 +225,21 @@ if (
   const fallbackSummary = `${input.fullName} — ${input.professionalTitle}. ${input.bio.slice(0, 240)}${input.bio.length > 240 ? '…' : ''}`;
   return { summary: fallbackSummary, tags: basicTags.slice(0, 24) }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   if (req && req.method !== 'POST') {
     res && res.setHeader('Allow', 'POST');
     return res && res.status(405).json({ error: 'Method not allowed' });  }  }
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   const fallbackSummary = `${input && input.fullName} — ${input && input.professionalTitle}. ${input && input.bio.slice(0, 240)}${input && input.bio.length > 240 ? '…' : ''}`;
   return { summary: fallbackSummary, tags: basicTags && basicTags.slice(0, 24) }
@@ -253,6 +284,7 @@ if ( {) {
   try {
     const id = randomUUID ();
     const {
+<<<<<<< HEAD
 
 
 =======
@@ -270,13 +302,18 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const id = randomUUID()
 
     const {
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       fullName,
       professionalTitle,
       profilePicture,
-full_name,
+      full_name,
       professional_title,
       profile_picture,
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       bio,
       projects,
       yearsOfExperience,
@@ -284,6 +321,7 @@ full_name,
       tools,
       availability,
       timezone,
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       const ext = path.extname(profilePicture.name) |'.png';
@@ -311,10 +349,13 @@ fullName;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     const uploadsDir = path && path.join(process && process.cwd(), 'public', 'uploads');
     const dataDir = path && path.join(process && process.cwd(), 'data', 'talent-submissions');
     await fse && fse.ensureDir(uploadsDir);
     await fse && fse.ensureDir(dataDir);
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -322,6 +363,15 @@ fullName;
 
 =======
       const ext = path && path.extname(cvFile && cvFile.name) || '.pdf';
+=======
+      const filename = `${id}-profile${ext}`;
+      const filePath = path && path.join(uploadsDir, filename);
+      const base64Data = profilePicture && profilePicture.base64.split(',')[1];
+        await fse && fse.writeFile(filePath, Buffer && Buffer.from(base64Data, 'base64'));
+        savedProfileImagePath = `/uploads/${filename}`;
+      }
+    }
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       const filename = `${id}-cv${ext}`;
       const filePath = path && path.join(uploadsDir, filename);
       const base64Data = cvFile && cvFile.base64.split(',')[1];
@@ -329,23 +379,27 @@ fullName;
         await fse && fse.writeFile(filePath, Buffer && Buffer.from(base64Data, 'base64'));
         savedCvPath = `/uploads/${filename}`;      }
     }
-    const { summary, tags } = await summarizeAndTag({      const base64Data = cvFile && cvFile.base64.split()[1];
     const uploadsDir = path.join(process.cwd(), 'publicuploads');
     const dataDir = path.join(process.cwd(), 'datatalent-submissions');
     await fse.ensureDir(uploadsDir);
     await fse.ensureDir(dataDir);
+
     let savedProfileImagePath: string | null = null,
     if (profilePicture?.base64 && profilePicture?.name) {
       const ext = path.extname(profilePicture.name) || '.png';
       const filename = `${id}-profile${ext}`;
       const filePath = path.join(uploadsDir, filename);
       const base64Data = profilePicture.base64.split()[1];
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       if (base64Data) {
         await fse.writeFile(filePath, Buffer.from(base64Data, 'base64'));
         savedProfileImagePath = `/uploads/${filename}`
       }
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -534,15 +588,28 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     },
     ai: {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+      if (base64Data) {
+        await fse && fse.writeFile(filePath, Buffer && Buffer.from(base64Data, 'base64'));
+        savedCvPath = `/uploads/${filename}`
+      ai: {
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         summary;
         tags}};
 
     const perRecordPath = path && path.join(dataDir, `${id}.json`);
     await fse && fse.writeJSON(perRecordPath, record, { spaces: 2 });
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
+    const aggregatePath = path && path.join(
+      process && process.cwd(),
+      'data',
+      'talent-submissions && submissions.json'
     );    let aggregate: any[] = [];
     if (fs && fs.existsSync(aggregatePath)) {
       try {
@@ -553,6 +620,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       try {
         const content = await fse && fse.readJSON(aggregatePath);
         if (Array && Array.isArray(content)) aggregate = content;        if (Array && Array.isArray(content)) aggregate = content
+<<<<<<< HEAD
 
 =======
 =======
@@ -584,11 +652,14 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     let aggregate: any[] = [];
     if () {) {
   $2
 }
       try {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
         const content = await fse.readJSON (aggregate_path);
@@ -603,10 +674,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         const content = await fse.readJSON(aggregatePath);
         if (Array.isArray(content)) aggregate = content;        if (Array.isArray(content)) aggregate = content
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       } catch (_) {
         // ignore;
       }
     }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -616,15 +690,14 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
     return res.status(200).json({ ok: true, id, summary, tags })
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   } catch (error) {
     return res && res.status(500).json({ error: 'Internal server error' });
   }    return res && res.status(200).json({ ok: true, id, summary, tags })
   } catch (error) {
-
-    return res && res.status(500).json({ error: 'Internal server error' })
-  };
-
 }
+<<<<<<< HEAD
 
 
 =======
@@ -642,6 +715,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   };
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     aggregate.push (record);
     await fse.writeJSON (aggregate_path, aggregate, { spaces: 2 });
 ;
@@ -654,6 +729,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   } catch (error) {
     return res.status (500).json ({ error: 'Internal server error' });
 }
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -674,3 +750,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
   }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+}
+  }
+  }
+  }
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

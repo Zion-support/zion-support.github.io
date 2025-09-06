@@ -3,6 +3,7 @@ import fs from 'fs';
 import path from 'path';
 import {v4, as, uuidv4} from 'uuid';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 function ensureDir() {
@@ -21,10 +22,13 @@ function grantPath(id: string) {
   return path.join(GRANTS_DIR, `${id}.json`);function ensureDir() {
   if (!fs.existsSync(GRANTS_DIR)) fs.mkdirSync(GRANTS_DIR, { recursive: true })
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 function grantPath(id: string) {
   return path && path.join(GRANTS_DIR, `${id}.json`);
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -44,6 +48,8 @@ function readGrant(id: string): GrantApplication | null {
   return JSON.parse(fs.readFileSync(p, 'utf8')) as GrantApplication
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 function writeGrant(record: GrantApplication) {
   ensureDir();
   fs && fs.writeFileSync(
@@ -53,6 +59,7 @@ function writeGrant(record: GrantApplication) {
     'utf8'
   );
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 import type { GrantApplication, VotePayload } from '../../../types / grants';
@@ -128,12 +135,15 @@ if ( {) {
   if (!payload?.grantId || !payload?.voter || !payload?.choice) {
     res && res.status(400).json({ error: 'Missing fields' });
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     return;
 function writeGrant(record: GrantApplication) {
   ensureDir();
   fs && fs.writeFileSync(grantPath(record && record.id), JSON && JSON.stringify(record, null, 2), 'utf8')
 }
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
+<<<<<<< HEAD
 <<<<<<< HEAD
   if (req && req.method !== 'POST') {
     res && res.setHeader('AllowPOST');
@@ -176,22 +186,32 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 =======
   if (!payload?.grantId || !payload?.voter || !payload?.choice) {
   if (!payload?.grantId |!payload?.voter |!payload?.choice) {
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   if (!payload?.grantId || !payload?.voter || !payload?.choice) {
     res.status(400).json({ error: 'Missing fields' });
     return
   }
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const g = readGrant(payload.grantId);
   if (!g) return res.status(404).json({ error: 'Grant not found' });
   const vote = { id: uuidv4(), voter: payload.voter, choice: payload.choice, createdAt: new Date().toISOString() }
   g.votes = [...(g.votes |[]), vote];
   g.updatedAt = new Date().toISOString();
   writeGrant(g);
+<<<<<<< HEAD
 
   res.status(200).json({ record: g })
 }
 
 <<<<<<< HEAD
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     id: uuidv4(),
     voter: payload && payload.voter,
     choice: payload && payload.choice,
@@ -210,11 +230,14 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res && res.status(200).json({ record: g })
 }
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   // Check condition
 if ( {) {
   $2
@@ -271,6 +294,7 @@ if ( {) {
   g.updated_at = new Date ().toISOString ();
   write_grant (g);
   res.status (200).json ({ record: g });
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -287,10 +311,19 @@ if ( {) {
   if (!payload?.grantId || !payload?.voter || !payload?.choice) {
     res.status(400).json({ error: 'Missing fields' });
 
+=======
+
+  if (!payload?.grantId || !payload?.voter || !payload?.choice) {
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 }
 }
 }
 }
     res.status(400).json({ error: 'Missing fields' });
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

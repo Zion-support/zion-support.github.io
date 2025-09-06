@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 class ErrorBoundary extends React.Component {
@@ -25,6 +26,8 @@ class ErrorBoundary extends React.Component {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useState, useEffect } from "react";
 import {useParams, useNavigate} from "react-router-dom";
 import {TalentProfile} from "@/components/profile/TalentProfile";
@@ -42,6 +45,7 @@ import {useAuth} from "@/hooks/useAuth";
 import {UserProfile} from "@/types/auth";
 import {toast} from "@/hooks/use-toast";
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default function TalentProfilePage() {;
   // Cast to specify the expected route param type since useParams may be untyped;
   const { id } = useParams() as { id?: string };
@@ -51,6 +55,8 @@ export default function TalentProfilePage() {
   // Cast to specify the expected route param type since useParams may be untyped;
   const { id } = useParams() as { id?: string };
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const navigate = useNavigate();
   const { profile, isLoading, error } = useTalentProfile(id);
   const [isHireModalOpen, setIsHireModalOpen] = useState(false);
@@ -58,10 +64,13 @@ export default function TalentProfilePage() {
   const { userDetails } = useAuthStatus();
   const { isAuthenticated, user } = useAuth();
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useState, useEffect } from "react",
 import { useParams, useNavigate } from "react-router-dom",
 import { TalentProfile } from "@/components/profile/TalentProfile",
@@ -81,6 +90,8 @@ import { toast } from "@/hooks/use-toast";
 export default function TalentProfilePage() {
   // Cast to specify the expected route param type since useParams may be untyped
 
+
+
   const { id } = useParams() as { id?: string }
   const navigate = useNavigate();
   const { profile, isLoading, error } = useTalentProfile(id);
@@ -98,7 +109,10 @@ export default function TalentProfilePage() {
   const [isMessageModalOpen, setIsMessageModalOpen] = useState(false),
   const { userDetails } = useAuthStatus(),
   const { isAuthenticated, user } = useAuth(),
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   // Create a compatible UserProfile from UserDetails or the authenticated user
   const userProfile: UserProfile = user ? {
@@ -119,6 +133,7 @@ export default function TalentProfilePage() {
     createdAt: new Date().toISOString(), // Default value since userDetails doesn't have this property
     updatedAt: new Date().toISOString(), // Default value since userDetails doesn't have this property
     role: '' // Default empty string since userDetails doesn't have this property
+<<<<<<< HEAD
 
 
   },
@@ -131,6 +146,8 @@ export default function TalentProfilePage() {
   },
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   // Handle loading error gracefully
   useEffect(() => {
     if (error) {
@@ -138,6 +155,7 @@ export default function TalentProfilePage() {
         title: "Error loading profile"
         description: "There was a problem loading this talent profile. Please try again."
         variant: "destructive"})
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -209,10 +227,13 @@ export default function TalentProfilePage() {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   }
   if (error |!profile) {
     return <ProfileErrorState error={error} />
   }
+<<<<<<< HEAD
 
 
 
@@ -222,6 +243,8 @@ export default function TalentProfilePage() {;
 =======
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const handleRequestHire = () => {
     if (!isAuthenticated) {
       toast({
@@ -232,6 +255,7 @@ export default function TalentProfilePage() {;
       return
     }
     setIsHireModalOpen(true)
+<<<<<<< HEAD
 
 
   },
@@ -244,6 +268,8 @@ export default function TalentProfilePage() {;
   },
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const handleMessageTalent = () => {
     if (!isAuthenticated) {
       toast({
@@ -254,6 +280,7 @@ export default function TalentProfilePage() {;
       return
     }
     setIsMessageModalOpen(true)
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -273,6 +300,8 @@ export default function TalentProfilePage() {;
         profile={profile} 
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ;
   const handleRequestHire = () => {;
     if (!isAuthenticated) {;
@@ -300,6 +329,7 @@ export default function TalentProfilePage() {;
     <div className="min-h-screen bg-zion-blue pb-12">;
       <TalentProfile;
         profile={profile} ;
+<<<<<<< HEAD
 
   },
 
@@ -310,6 +340,8 @@ export default function TalentProfilePage() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         onRequestHire={handleRequestHire}
         onMessageTalent={handleMessageTalent}
       />
@@ -326,10 +358,13 @@ export default function TalentProfilePage() {;
             Hire Now
           </Button>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   // Create a compatible UserProfile from UserDetails or the authenticated user;
   const userProfile: UserProfile = user ? {;
     id: user && user.id || '',;
@@ -351,6 +386,7 @@ export default function TalentProfilePage() {;
     role: '' // Default empty string since userDetails doesn't have this property;
   };
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 import React, { useState, useEffect } from "react",;
@@ -402,11 +438,16 @@ export default function TalentProfilePage() {;
   },;
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   // Handle loading error gracefully;
   useEffect(() => {;
     if (error) {;
       toast({;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         title: "Error loading profile",;
         description: "There was a problem loading this talent profile. Please try again.",;
         variant: "destructive"});
@@ -449,6 +490,7 @@ export default function TalentProfilePage() {;
     <div className="min-h-screen bg-zion-blue pb-12">;
       <TalentProfile
         profile={profile} 
+<<<<<<< HEAD
 =======
         title:"Error loading profile",;
         description:"There was a problem loading this talent profile. Please try again.",;
@@ -493,11 +535,16 @@ export default function TalentProfilePage() {;
       <TalentProfile ;
         profile={profile} ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         onRequestHire={handleRequestHire}
         onMessageTalent={handleMessageTalent}
       />;
       <BackToDirectoryButton />;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
       {/* Sticky action buttons that appear when scrolling */}
       <StickyAction>;
@@ -509,13 +556,17 @@ export default function TalentProfilePage() {;
             <Handshake className="mr-2 h-4 w-4" />;
             Hire Now;
           </Button>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <Button
             size="sm"
             variant="outline"
             className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
             onClick={handleMessageTalent}
@@ -684,10 +735,13 @@ if ( {) {
           >;
             <MessageSquare className="mr-2 h-4 w-4" />;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             Message;
           </Button>;
         </div>;
       </StickyAction>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -699,6 +753,8 @@ if ( {) {
       
       
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {/* Request to Hire Modal */}
       <HireRequestModal
         talent={profile}
@@ -706,11 +762,14 @@ if ( {) {
         onClose={() => setIsHireModalOpen(false)}
         userDetails={userProfile}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
       />;
 
 
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {/* Request to Hire Modal */}
       <HireRequestModal;
         talent={profile}
@@ -718,16 +777,15 @@ if ( {) {
         on_close={() => setIsHireModalOpen (false)}
         user_details={user_profile}
       />;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       {/* Message Talent Modal */}
       <MessageTalentModal;
         talent={profile}
-
         is_open={isMessageModalOpen}
         on_close={() => setIsMessageModalOpen (false)}
       />;
     </div>);
 }
+<<<<<<< HEAD
 
 =======
 ;
@@ -844,3 +902,5 @@ const handleMessageTalent = () => {
 }
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

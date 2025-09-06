@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -293,6 +294,8 @@ export default async function handler(_req: NextApiRequest, _res: NextApiRespons
 
   return res.status(200).json({ status: "created", version, eventId: event.eventId })
   return res.status(200).json({_status: "created", _version, _eventId: event.eventId});
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import type { NextApiRequest, NextApiResponse } from "next",;
 import { readState, writeState, upsertEvent } from "../../../utils/sync/storage",;
 import { signPayload } from "../../../utils/sync/signature",;
@@ -302,7 +305,9 @@ import { nextVersionFor } from "../../../utils/sync/versioning",;
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" }),
 
-}
+
+import type { NextApiRequest, NextApiResponse } from "next";
+import { readState, writeState, upsertEvent } from "../../../utils/sync/storage";
 
 import { signPayload } from "../../../utils/sync/signature";
 import axios from "axios";
@@ -343,13 +348,15 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     version,
     timestamp: Date.now()},
 
-  upsertEvent(state, event),
-  writeState(state),
 
-  const body = { ...event, propagate: false },
-  const headers: Record<string, string> = {},
-  const sig = signPayload(body),
-  if (sig) headers["x-zion-signature"] = sig,
+
+  upsertEvent(state, event);
+  writeState(state);
+
+  const body = { ...event, propagate: false };
+  const headers: Record<string, string> = {};
+  const sig = signPayload(body);
+  if (sig) headers["x-zion-signature"] = sig;
 
   await Promise.all(
     state.config.peers
@@ -362,8 +369,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       })
   ),
 
-  return res.status(200).json({ status: "created", version, eventId: event.eventId });
-};
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default async function handler(req, res) {
   try {
@@ -388,57 +393,16 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  const { personId, fromNation, toNation, role, startDate, endDate } = req.body as {
-    personId: string, fromNation: string, toNation: string, role: string, startDate: string, endDate?: string
-  },
-  if (!personId || !fromNation || !toNation || !role || !startDate) {
-    return res.status(400).json({ error: "personId, fromNation, toNation, role, startDate required" })
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  const entityKey = `${personId}:${startDate}`,
-  const version = nextVersionFor(state, entityKey),
-  const event = {
-    eventId: uuidv4(),
-    type: "talent_mobility" as const,
-    payload: { id: entityKey, personId, fromNation, toNation, role, startDate, endDate },
-    originInstanceId: state.config.instanceId,
-    version,
-    timestamp: Date.now()},
-  upsertEvent(state, event),
-  writeState(state),
-  const body = { ...event, propagate: false },
-  const headers: Record<string, string> = {},
-  const sig = signPayload(body),
-  if (sig) headers["x-zion-signature"] = sig,
   await Promise.all(
     state.config.peers
       .filter((p) => !p.paused)
       .map(async (peer) => {
-        const url = new URL("/api/sync/publish", peer.baseUrl).toString()
-        try {
-          await axios.post(url, body, { headers, timeout: 5000 })
-        } catch {}
-      })
-  )
 
+<<<<<<< HEAD
   return res.status(200).json({ status: "created", version, eventId: event.eventId })
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         const url = new URL("/api/sync/publish", peer.baseUrl).toString(),
         try {
           await axios.post(url, body, { headers, timeout: 5000 })
@@ -551,6 +515,7 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -558,3 +523,5 @@ export default async function handler(req, res) {
 }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

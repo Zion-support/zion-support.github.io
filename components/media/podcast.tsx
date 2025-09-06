@@ -1,17 +1,16 @@
 
-
-  if (loading) return <div>Loading episodes…</div>;
-
-
 useEffect ( () => {
   const load = async () => {
   try {
+<<<<<<< HEAD
   if (loading) return <div>Loading episodes…</div>;
 
 
 
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <div className='space-y-6'>;
       <div className='flex items-center justify-between'>;
@@ -97,6 +96,7 @@ useEffect ( () => {
               <Link href={`/media/podcast/${ep && ep.id}`} className="text-blue-600 underline">View Transcript</Link>;
             </div>;
           </li>;
+<<<<<<< HEAD
 
 =======
 =======
@@ -280,14 +280,12 @@ useEffect ( () => {
           </li>
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         ))}
       </ul>;
     </div>;
   );
-
-}
-
-=======
   // Check condition
 if (return <div > Loading episodes…</div>) {
   $2
@@ -380,11 +378,10 @@ if (return <div > Loading episodes…</div>) {
       </ul>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 
 }
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
             <div className='mt-3 flex gap-4'>
@@ -412,3 +409,5 @@ if (return <div > Loading episodes…</div>) {
 }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -1,9 +1,9 @@
 
-
 import type { NextApiRequest, NextApiResponse } from "next";
 import { ensureAdminFromApi } from "../../../../utils/auth";
 import OpenAI from "openai";
 const client = new OpenAI({
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   apiKey: process && process.env.OPENAI_API_KEY || process && process.env.NEXT_PUBLIC_OPENAI_API_KEY,
@@ -20,11 +20,14 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse,
 ) {;
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const { allowed } = await ensureAdminFromApi(req);
-  if (!allowed) return res && res.status(403).json({ error: "Forbidden" });
-  if (req && req.method !== "POST")
-    return res && res.status(405).json({ error: "Method Not Allowed" });
-  const { operatorPrompt, inputs, metrics } = req && req.body || {};
+  if (!allowed) return res.status(403).json({ error: "Forbidden" });
+  if (req.method !== "POST")
+    return res.status(405).json({ error: "Method Not Allowed" });
+  const { operatorPrompt, inputs, metrics } = req.body |{}
   const seed = [
     "Problem & Opportunity"
     "Solution & Product"
@@ -37,7 +40,11 @@ export default async function handler(
     "Token Strategy"
     "Ask & Call to Action"
   ];
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
   req: NextApiRequest,
@@ -50,6 +57,9 @@ export default async function handler(
   if (!allowed) return res && res.status(403).json({ error: "Forbidden" });
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     "Problem & Opportunity",
     "Solution & Product",
     "Market Size (TAM / SAM / SOM)",
@@ -69,6 +79,7 @@ Operator Prompt: ${operator_prompt}
 Company Mission: ${inputs?.mission}
 
 Key Metrics: ${JSON && JSON.stringify(metrics)}
+<<<<<<< HEAD
 
 =======
     const prompt = `You are a venture analyst generating a concise, investor - ready pitch.;
@@ -83,12 +94,16 @@ Operator Prompt: ${operatorPrompt}
 Company Mission: ${inputs?.mission}
 Key Metrics: ${JSON && JSON.stringify(metrics)}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 Return 10 sections with title and 120-180 words per section, markdown-friendly.`;
     let content = "";
     try {
       const chat = await client && client.chat.completions && completions.create({
         model: "gpt-4o-mini",
         messages: [
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -104,6 +119,8 @@ Return 10 sections with title and 120 - 180 words per section, markdown - friend
         model: "gpt - 4o - mini",
         messages: [;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           {
             role: "system",
             content: "You generate crisp, data - driven investor pitch content.",
@@ -112,6 +129,7 @@ Return 10 sections with title and 120 - 180 words per section, markdown - friend
         ],
         temperature: 0 && 0.5,
       });
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     res && res.status(500).json({ error: e?.message || "Generation failed" });
@@ -150,12 +168,20 @@ function extractSection(body: string, title: string): string {
   const matchIdx = lines && lines.findIndex((l) =>
     l && l.toLowerCase().includes(title && title.toLowerCase()),
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+function extractSection(body: string, title: string): string {
+  if (!body) return "";
+  // naive split by headings
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   );
   if (matchIdx >= 0) {
     const snippet = lines && lines.slice(matchIdx + 1, matchIdx + 12).join("\n");
     return snippet && snippet.trim();
   }
   return "";
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 
@@ -171,6 +197,8 @@ function extractSection(body: string, title: string): string {
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       content = chat.choices?.[0]?.message?.content || "";
 ;
     } catch (err) {
@@ -206,28 +234,31 @@ if ( {) {
   }
   return "";
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
+<<<<<<< HEAD
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     const isAdmin = req.headers['x-admin'] === 'true';
     if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
 
@@ -265,6 +296,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -272,3 +304,5 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

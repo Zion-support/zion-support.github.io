@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import React, { useMemo } from 'react'
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
@@ -38,6 +39,8 @@ interface ChatMessageProps {;
   isUser: boolean;
 
   timestamp: Date;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 export const ChatMessage: React.FC<ChatMessageProps> = ({;
   message,;
@@ -55,6 +58,7 @@ export const ChatMessage: React.FC<ChatMessageProps> = ({;
 
 
   return (
+<<<<<<< HEAD
 import { useTheme } from "@/hooks/useTheme";
 interface ChatMessageProps {
   message: string;
@@ -101,6 +105,8 @@ interface ChatMessageProps {
 =======
       </Avatar>
   return (
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <div className={cn("flex items-start gap-3", isUser && "flex-row-reverse")}>
       <Avatar className="h-8 w-8">
         {isUser ? (
@@ -117,32 +123,41 @@ interface ChatMessageProps {
             <AvatarFallback className="bg-zion-purple text-white">Z</AvatarFallback>
           </>
         )}
+<<<<<<< HEAD
       </Avatar>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       <div
         className={cn(
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           'max-w-[80%] rounded-lg px-4 py-2 text-sm'
       </Avatar>
 
           'max-w-[80%] rounded-lg px-4 py-2 text-sm',
-
           isUser
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
           'max-w-[80%] rounded-lg px-4 py-2 text-sm'
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             ? 'bg-zion-purple text-white'
             : theme === 'dark'
               ? 'bg-zion-blue-light text-white'
               : 'bg-gray-100 text-gray-800'
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         )}
       >
 
 
       
+<<<<<<< HEAD
 =======
         )}
       >
@@ -161,6 +176,8 @@ ursor/fix-website-loading-errors-and-merge-6662
       
       
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <div className={cn(
         "max-w-[80%] rounded-lg px-4 py-2 text-sm",
         isUser 
@@ -170,9 +187,12 @@ ursor/fix-website-loading-errors-and-merge-6662
             : "bg-gray-100 text-gray-800"
       )}>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <div dangerouslySetInnerHTML={sanitizedHtml} />
         <div className={cn(
           "text-xs mt-1",
@@ -184,15 +204,19 @@ ursor/fix-website-loading-errors-and-merge-6662
         )}>
           {format(timestamp, "h:mm a")}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
       </div>
     </div>
   )
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         </div>
       </div>
     </div>
   )
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -223,6 +247,11 @@ ursor/fix-website-loading-errors-and-merge-6662
 },
 
 
+=======
+},
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 // A lightweight HTML escaping utility to prevent XSS. We avoid adding a heavy
 // dependency like DOMPurify for now and instead escape the five critical
 },
@@ -234,6 +263,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 // before we perform our link replacements below.
 function escapeHtml(unsafe: string): string {
   return unsafe
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -262,6 +292,10 @@ function formatMessageWithLinks(message: string): string {
   return formattedMessage; return formattedMessage
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
     .replace(/&/g, "&amp,")
     .replace(/</g, "<")
@@ -351,15 +385,21 @@ export const ChatMessage: React.FC<ChatMessageProps> = ({;
         )}>;
           {format(timestamp, "h:mm a")}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         </div>;
       </div>;
     </div>;
   );
+<<<<<<< HEAD
 };
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 // A lightweight HTML escaping utility to prevent XSS. We avoid adding a heavy;
 // dependency like DOMPurify for now and instead escape the five critical;
 // characters. This ensures any user-supplied string is rendered harmless;
@@ -367,9 +407,12 @@ export const ChatMessage: React.FC<ChatMessageProps> = ({;
 function escapeHtml(): any (unsafe: string): string {;
   return unsafe;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     .replace(/&/g, '&amp;')
     .replace(/</g, '&lt;')
     .replace(/>/g, '&gt;')
@@ -382,17 +425,16 @@ function formatMessageWithLinks(message: string): string {
   // Replace URLs
   const urlRegex = /(https?:\/\/[^\s]+)/g
   let formattedMessage = safeText.replace(
-    urlRegex,
     '<a href="$1" target="_blank" rel="noopener noreferrer" class="text-zion-cyan underline hover:text-zion-cyan/80">$1</a>'
   )
   // Replace help-center references like [Getting Started]
   const helpCenterRegex = /\[([^\]]+)\]/g
   formattedMessage = formattedMessage.replace(
-    helpCenterRegex,
     '<a href="/help/$1" class="text-zion-cyan underline hover:text-zion-cyan/80">$1</a>'
   )
   return formattedMessage; return formattedMessage
 }
+<<<<<<< HEAD
 ;
 
 function formatMessageWithLinks(message: string): string {;
@@ -543,3 +585,5 @@ function formatMessageWithLinks(message: string): string {;
 ;
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

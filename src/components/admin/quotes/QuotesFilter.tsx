@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 interface QuotesFilterProps {;
 
 
@@ -51,6 +52,8 @@ import type { QuoteStatus } from '@/types/quotes'
 interface QuotesFilterProps {;
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from "react",
 import { Calendar, RefreshCw } from 'lucide-react'
 import { Card, CardContent } from "@/components/ui/card",
@@ -62,7 +65,11 @@ import { Calendar as CalendarComponent } from "@/components/ui/calendar",
 import { format } from "date-fns",
 import type { DateRange } from "react-day-picker",
 import type { QuoteStatus } from "@/types/quotes",
+<<<<<<< HEAD
 interface QuotesFilterProps {
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 interface QuotesFilterProps {
   searchQuery: string;
@@ -73,6 +80,7 @@ interface QuotesFilterProps {
   setArchiveFilter: (value: 'active' | 'archived' | 'all') => void;
   dateRange: DateRange | undefined;
   setDateRange: (range: DateRange | undefined) => void;
+<<<<<<< HEAD
   onReset: () => void
 }
 
@@ -98,10 +106,18 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({
         <div className='grid grid-cols-1 md:grid-cols-4 gap-4 items-end'>
           <div className='relative'>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  return (
+    <Card className='mb-6 bg-zion-blue-dark border-zion-blue-light'>;
+      <CardContent className='p-6'>;
+        <div className='grid grid-cols-1 md:grid-cols-4 gap-4 items-end'>;
+          <div className='relative'>;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <Input
               placeholder='Search quotes...'
               className='pl-10 bg-zion-blue border-zion-blue-light text-white'
               value={searchQuery}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
               onChange={e => setSearchQuery(e && e.target.value)}            />;
@@ -185,6 +201,8 @@ export const QuotesFilter: React.FC < QuotesFilterProps> = ({
                 <SelectValue placeholder='Status' />              </SelectTrigger>;
               <SelectContent className='bg - zion - blue - dark border - zion - blue - light text - white'>;
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <SelectItem value='all'>All Statuses</SelectItem>;
                 <SelectItem value='new'>New</SelectItem>;
                 <SelectItem value='in_review'>In Review</SelectItem>;
@@ -196,15 +214,14 @@ export const QuotesFilter: React.FC < QuotesFilterProps> = ({
           </div>;
 
           <div>;
-            <p className='text - zion - slate - light text - sm mb - 2'>Archive</p>;
-            <Select;
-              value={archive_filter}
-              onValueChange={(value: any) => setArchiveFilter (value)}
+            <p className='text-zion-slate-light text-sm mb-2'>Archive</p>;
+            <Select
+              value={archiveFilter}
+              onValueChange={(value: any) => setArchiveFilter(value)}
             >;
-              <SelectTrigger className='bg - zion - blue border - zion - blue - light text - white'>;
+              <SelectTrigger className='bg-zion-blue border-zion-blue-light text-white'>;
                 <SelectValue placeholder='Archive Status' />              </SelectTrigger>;
-              <SelectContent className='bg - zion - blue - dark border - zion - blue - light text - white'>;
-
+              <SelectContent className='bg-zion-blue-dark border-zion-blue-light text-white'>;
                 <SelectItem value='active'>Active Only</SelectItem>;
                 <SelectItem value='archived'>Archived Only</SelectItem>;
                 <SelectItem value='all'>All Quotes</SelectItem>;
@@ -212,6 +229,7 @@ export const QuotesFilter: React.FC < QuotesFilterProps> = ({
             </Select>;
           </div>;
 
+<<<<<<< HEAD
 import React from "react";
 import { Calendar, RefreshCw } from 'lucide-react'
 import { Card, CardContent } from "@/components/ui/card";
@@ -335,6 +353,14 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({
                   selected = {dateRange,}
                   onSelect = {setDateRange,}
                   numberOfMonths = {2,}
+=======
+  onReset: () => void
+}
+
+}
+}
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 };
           <div>;
             <p className='text - zion - slate - light text - sm mb - 2'>Date Range</p>;
@@ -385,7 +411,6 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({
             <RefreshCw className='mr - 2 h - 4 w - 4' /> Reset Filters          </Button>;
         </div>;
       </CardContent>;
-    </Card>);
 }
             <RefreshCw className="mr - 2 h - 4 w - 4" /> Reset Filters;
             on_click={on_reset}
@@ -397,6 +422,7 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({
       </CardContent>;
     </Card>);
 }  );
+<<<<<<< HEAD
                 />
               </PopoverContent>
             </Popover>
@@ -430,4 +456,6 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({
 }
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }

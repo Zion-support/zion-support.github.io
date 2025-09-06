@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
 =======
@@ -22,6 +23,8 @@ import { QuickReplyButton } from "./QuickReplyButton"
 import { Send, Loader2 } from 'lucide-react'import { useTheme } from "@/hooks/useTheme"
 import React, { useState, useRef, useEffect } from "react",
 import { logDebug, logErrorToProduction } from '@/utils/productionLogger',
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { Button } from "@/components/ui/button",
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import { ScrollArea } from "@/components/ui/scroll-area",
@@ -30,6 +33,7 @@ import { toast } from "@/components/ui/use-toast",
 import { cn } from "@/lib/utils",
 import { ChatMessage } from "./ChatMessage",
 import { QuickReplyButton } from "./QuickReplyButton";
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 import React, { useState, useRef, useEffect } from './react';
@@ -60,12 +64,13 @@ import { Send, Loader2 } from 'lucide-react'
 import { useTheme } from "@/hooks/useTheme";
 // Define suggested quick replies
 import { useTheme } from "@/hooks/useTheme",
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 // Define suggested quick replies
 const QUICK_REPLIES = [
   { id: "hire", text: "How do I hire?" },
   { id: "match", text: "How do I get matched?" },
   { id: "billing", text: "Billing help" }],
-
 
 const QUICK_REPLIES = [
   { id: "hire", text: "How do I hire?" }
@@ -77,119 +82,10 @@ type Message = {
   sender: "user" | "bot"
   timestamp: Date
 }
-export function ChatBotPanel() {
-  const [messages, setMessages] = useState<Message[]>([
-    {
-import { useTheme } from "@/hooks/useTheme";
-// Define suggested quick replies
-const QUICK_REPLIES = [
-  { id: "hire", text: "How do I hire?" },
-  { id: "match", text: "How do I get matched?" },
-  { id: "billing", text: "Billing help" }],
-
-
-const QUICK_REPLIES = [
-  { id: "hire", text: "How do I hire?" }
-  { id: "match", text: "How do I get matched?" }
-  { id: "billing", text: "Billing help" }]
-      id: "welcome"
-      content: "Hi! How can I help you?"
-      sender: "bot"
-      timestamp: new Date()}])
-export function ChatBotPanel() {
-  const [messages, setMessages] = useState<Message[]>([
-    {
-      id: "welcome",
-      content: "Hi! How can I help you?",
-      sender: "bot",
-      timestamp: new Date()}]),
-  const [inputValue, setInputValue] = useState("")
-  const [isLoading, setIsLoading] = useState(false)
-  const [failedAttempts, setFailedAttempts] = useState(0)
-  const scrollAreaRef = useRef<HTMLDivElement>(null)
-  const inputRef = useRef<HTMLInputElement>(null)
-  const { theme } = useTheme()
-      id: "welcome",
-      content: "Hi! How can I help you?",
-      sender: "bot",
-      timestamp: new Date()}]),
-  const [inputValue, setInputValue] = useState(""),
-  const [isLoading, setIsLoading] = useState(false),
-  const [failedAttempts, setFailedAttempts] = useState(0),
-  const scrollAreaRef = useRef<HTMLDivElement>(null),
-  const inputRef = useRef<HTMLInputElement>(null),
-  const { theme } = useTheme(),
-
-      id: "welcome"
-      content: "Hi! How can I help you?"
-      sender: "bot"
-      timestamp: new Date()}])
-
-
-export function ChatBotPanel() {
-  const [messages, setMessages] = useState<Message[]>([
-    {
-      id: "welcome",
-      content: "Hi! How can I help you?",
-      sender: "bot",
-      timestamp: new Date()}]),
-  const [inputValue, setInputValue] = useState("")
-  const [isLoading, setIsLoading] = useState(false)
-  const [failedAttempts, setFailedAttempts] = useState(0)
-  const scrollAreaRef = useRef<HTMLDivElement>(null)
-  const inputRef = useRef<HTMLInputElement>(null)
-  const { theme } = useTheme()
-      id: "welcome",
-      content: "Hi! How can I help you?",
-      sender: "bot",
-      timestamp: new Date()}]),
-  const [inputValue, setInputValue] = useState(""),
-  const [isLoading, setIsLoading] = useState(false),
-  const [failedAttempts, setFailedAttempts] = useState(0),
-  const scrollAreaRef = useRef<HTMLDivElement>(null),
-  const inputRef = useRef<HTMLInputElement>(null),
-  const { theme } = useTheme(),
-
   // Auto-scroll to bottom when messages change
   useEffect(() => {
     if (scrollAreaRef.current) {
       scrollAreaRef.current.scrollTop = scrollAreaRef.current.scrollHeight
-  useEffect(() => {
-    if (scrollAreaRef.current) {
-      scrollAreaRef.current.scrollTop = scrollAreaRef.current.scrollHeight
-    }
-  }, [messages])
-  // Focus input when component mounts
-  useEffect((,) => {
-    if (inputRef.current) {
-      inputRef.current.focus()
-    }
-  }, [])
-  const handleSendMessage = async (text: string = inputValue) => {
-    if (!text.trim()) return
-      timestamp: new Date()}
-        timestamp: new Date()}
-        description: "We're having trouble connecting to our support service."})
-      id: `bot-escalation-${Date.now()}`
-      content: "I'm having trouble understanding your request. Would you like to speak with a human support agent or send an email to our support team?"
-      sender: "bot"
-      timestamp: new Date()}
-  const handleQuickReply = (text: string,) => {
-    handleSendMessage(text)
-  }
-
-  )
-}
-  )
-}
-    if (!text.trim()) return;
-      timestamp: new Date()},
-    
-        timestamp: new Date()},
-      
-        description: "We're having trouble connecting to our support service."}),
-            
-
 import React, { useState, useRef, useEffect } from "react",;
 import { logDebug, logErrorToProduction } from '@/utils/productionLogger',;
 import { Button } from "@/components/ui/button",;
@@ -212,7 +108,6 @@ type Message = {;
   content: string,;
   sender: "user" | "bot",;
   timestamp: Date;
-},;
 export function ChatBotPanel() {;
   const [messages, setMessages] = useState<Message[]>([;
     {;
@@ -220,125 +115,6 @@ export function ChatBotPanel() {;
       content: "Hi! How can I help you?",;
       sender: "bot",;
       timestamp: new Date()}]),;
-  const [inputValue, setInputValue] = useState(""),;
-  const [isLoading, setIsLoading] = useState(false),;
-  const [failedAttempts, setFailedAttempts] = useState(0),;
-  const scrollAreaRef = useRef<HTMLDivElement>(null),;
-  const inputRef = useRef<HTMLInputElement>(null),;
-  const { theme } = useTheme(),;
-  // Auto-scroll to bottom when messages change;
-  useEffect(() => {;
-    if (scrollAreaRef.current) {;
-      scrollAreaRef.current.scrollTop = scrollAreaRef.current.scrollHeight;
-    }
-  }, [messages]),;
-  // Focus input when component mounts;
-  useEffect(() => {;
-    if (inputRef.current) {;
-      inputRef.current.focus();
-    }
-  }, []),
-
-  const handleSendMessage = async (text: string = inputValue) => {
-    if (!text.trim()) return,
-    
-    const userMessage: Message = {
-      id: `user-${Date.now()}`,
-      content: text,
-      sender: "user",
-      timestamp: new Date()},
-    
-    setMessages((prev) => [...prev, userMessage]),
-    setInputValue(""),
-    setIsLoading(true),
-    
-    try {
-      // Call the OpenAI-powered support function
-      const response = await sendToAIAssistant(text),
-      
-      const botMessage: Message = {
-        id: `bot-${Date.now()}`,
-        content: response.message || "Sorry, I couldn't process your request. Please try again.",
-        sender: "bot",
-        timestamp: new Date()},
-      
-      setMessages((prev) => [...prev, botMessage]),
-      
-      // Check if the request was successful
-      if (!response.success) {
-        setFailedAttempts((prev) => prev + 1),
-        
-        // After 3 failed attempts, suggest escalation
-        if (failedAttempts >= 2) {
-          suggestEscalation()
-  }, []),;
-  const handleSendMessage = async (text: string = inputValue) => {;
-    if (!text.trim()) return,;
-    const userMessage: Message = {;
-      id: `user-${Date.now()}`,;
-      content: text,;
-      sender: "user",;
-      timestamp: new Date()},;
-    setMessages((prev) => [...prev, userMessage]),;
-    setInputValue(""),;
-    setIsLoading(true),;
-    try {;
-      // Call the OpenAI-powered support function;
-      const response = await sendToAIAssistant(text),;
-      const botMessage: Message = {;
-        id: `bot-${Date.now()}`,;
-        content: response.message || "Sorry, I couldn't process your request. Please try again.",;
-        sender: "bot",;
-        timestamp: new Date()},;
-      setMessages((prev) => [...prev, botMessage]),;
-      // Check if the request was successful;
-      if (!response.success) {;
-        setFailedAttempts((prev) => prev + 1),;
-        // After 3 failed attempts, suggest escalation;
-        if (failedAttempts >= 2) {;
-          suggestEscalation();
-        }
-      } else {;
-        // Reset failed attempts if successful;
-        setFailedAttempts(0);
-      }
-    } catch (error) {
-      logErrorToProduction("Error in AI chat", error as Error, { component: 'ChatBotPanel' }),
-      toast({
-        variant: "destructive",
-        title: "Communication Error",
-        description: "We're having trouble connecting to our support service."}),
-      
-      setFailedAttempts((prev) => prev + 1),
-      if (failedAttempts >= 2) {
-        suggestEscalation()
-    } catch (error) {;
-      logErrorToProduction("Error in AI chat", error as Error, { component: 'ChatBotPanel' }),;
-      toast({;
-        variant: "destructive",;
-        title: "Communication Error",;
-        description: "We're having trouble connecting to our support service."}),;
-      setFailedAttempts((prev) => prev + 1),;
-      if (failedAttempts >= 2) {;
-        suggestEscalation();
-      }
-    } finally {;
-      setIsLoading(false);
-    }
-  },
-
-        description: "We're having trouble connecting to our support service."}),
-      id: `bot - escalation-${Date.now ()}`,
-      content: "I'm having trouble understanding your request. Would you like to speak with a human support agent or send an email to our support team?",
-      sender: "bot",
-      timestamp: new Date ()},
-  const handleQuickReply = (text: string, ) =>: any {
-    handleSendMessage (text);
-  }
-  );
-}
-  );
-}
   const sendToAIAssistant = async (message: string) => {
     try {
       const response = await fetch("https://ziontechgroup.functions.supabase.co/functions/v1/ai-chat", {
@@ -379,13 +155,17 @@ export function ChatBotPanel() {;
 
   const suggestEscalation = () => {
     const escalationMessage: Message = {
+<<<<<<< HEAD
 
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       id: `bot-escalation-${Date.now()}`,
       content: 
         "I'm having trouble understanding your request. Would you like to speak with a human support agent or send an email to our support team?",
       sender: "bot",
+<<<<<<< HEAD
   const logSupportEscalation = async () => {
     try {
       // Send the conversation to the backend for logging
@@ -413,6 +193,8 @@ export function ChatBotPanel() {;
       id: `bot-escalation-${Date.now()}`,
         "I'm having trouble understanding your request. Would you like to speak with a human support agent or send an email to our support team?",
       sender: "bot",
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       timestamp: new Date()},
     
     setMessages((prev) => [...prev, escalationMessage]),
@@ -440,6 +222,7 @@ export function ChatBotPanel() {;
 
   const handleQuickReply = (text: string) => {
     handleSendMessage(text)
+<<<<<<< HEAD
   }
   );
 };
@@ -724,3 +507,5 @@ ursor/fix-website-loading-errors-and-merge-6662
 ;
     handleSendMessage(text)
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

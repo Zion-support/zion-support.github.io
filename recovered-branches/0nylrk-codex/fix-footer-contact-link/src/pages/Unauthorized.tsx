@@ -1,15 +1,17 @@
-
 import {Link} from "react-router-dom";
 import {Button} from "@/components/ui/button";
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
 import {ShieldAlert} from "lucide-react";
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { Link } from "react-router-dom",
 import { Button } from "@/components/ui/button",
 import { Header } from "@/components/Header",
@@ -17,7 +19,10 @@ import { Footer } from "@/components/Footer";
 import { ShieldAlert } from "lucide-react";
 import { Footer } from "@/components/Footer",
 import { ShieldAlert } from "lucide-react",
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export default function Unauthorized() {
   return (
     <>
@@ -52,6 +57,7 @@ export default function Unauthorized() {
       <Footer />
     </>
   )
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -59,16 +65,21 @@ export default function Unauthorized() {
 =======
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { Link } from "react-router-dom",;
 import { Button } from "@/components/ui/button",;
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
 import { ShieldAlert } from "lucide-react";
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export default function Unauthorized() {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
+<<<<<<< HEAD
 =======
 
 import { Link } from "react-router-dom",;
@@ -82,6 +93,8 @@ export default function Unauthorized() {;
 export default function Unauthorized() {;
   return (;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <>;
       <Header />;
       <div className="min-h-screen bg-zion-blue flex flex-col items-center justify-center px-4 py-12">;
@@ -96,6 +109,7 @@ export default function Unauthorized() {;
             You don't have permission to access this page. This could be because your account doesn't have the required permissions or you need to complete your profile.;
           </p>;
           <div className="flex flex-col gap-3">;
+<<<<<<< HEAD
 <<<<<<< HEAD
             <Link
               to="/"
@@ -160,12 +174,15 @@ function Unauthorized() {
               className="w-full border border-zion-blue-light text-zion-slate-light hover:bg-zion-blue hover:text-white px-4 py-2 rounded inline-flex items-center justify-center";
             >;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               Login with Different Account;
             </Link>;
           </div>;
         </div>;
       </div>;
       <Footer />;
+<<<<<<< HEAD
 
     </>);
 <<<<<<< HEAD
@@ -192,3 +209,7 @@ function Unauthorized() {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+    </>);
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

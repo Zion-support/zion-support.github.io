@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -25,10 +26,13 @@ const Jobs: NextPage = () => {
       unit_text: 'YEAR'},
     hiring_organization: {
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       name: 'Zion Tech Solutions',
       same_as: 'https://ziontechgroup.netlify.app',
       logo: 'https://ziontechgroup.netlify.app / logo.png'},
     jobLocationType: 'TELECOMMUTE'} as const,
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -150,6 +154,9 @@ const Jobs: NextPage = () => {
 export default Jobs;
 
 export default Jobs,;
+=======
+  return (
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         datePosted={job.datePosted  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -190,21 +197,31 @@ export default Jobs,;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+        valid_through={job.valid_through}
+        base_salary={job.base_salary}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       />;
       <main>;
-        <h1>Jobs</h1>;
+        <h1 > Jobs</h1>;
         <p>{job.title}</p>;
         <p>{job.description}</p>;
       </main>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     </div>;
   );
 },;
 export default Jobs;
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -212,3 +229,5 @@ export default Jobs;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

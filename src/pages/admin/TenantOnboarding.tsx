@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -50,6 +51,9 @@ export default function TenantOnboarding() {
   const [isSubmitting, setIsSubmitting] = useState(false),
   const [formData, setFormData] = useState({
 const [formData, setFormData] = useState({
+=======
+  const [formData, setFormData] = useState({
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
     brand_name: ""
     subdomain: ""
@@ -61,12 +65,15 @@ const [formData, setFormData] = useState({
     custom_domain: ""
 
     is_co_branded: true
+<<<<<<< HEAD
   });
   // Check if user has admin role
   const isAdmin = null;
   });
   // Check if user has admin role
   const isAdmin = null;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   })
   // Check if user has admin role
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -162,7 +169,10 @@ const [formData, setFormData] = useState({
     }
   },
 
+<<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   return (
       <SEO 
@@ -374,6 +384,7 @@ ursor/fix-website-loading-errors-and-merge-6662
       </main>
     </>
   )
+<<<<<<< HEAD
 }
 ursor/fix-website-loading-errors-and-merge-6662
 }
@@ -399,6 +410,8 @@ class ErrorBoundary extends React.Component {
     
     return this.props.children;
   }
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
@@ -417,6 +430,7 @@ import {toast} from "sonner";
 import {supabase} from "@/integrations/supabase/client";
 import {Switch} from "@/components/ui/switch";
 import {logErrorToProduction} from '@/utils/productionLogger';
+<<<<<<< HEAD
 
 import React, { useState } from "react",;
 import { Header } from "@/components/Header",;
@@ -437,6 +451,8 @@ export default function TenantOnboarding() {;
   const { user } = useAuth();
   const [activeTab, setActiveTab] = useState("company");
   const [isSubmitting, setIsSubmitting] = useState(false);
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const [formData, setFormData] = useState({;
     brand_name: "",;
     subdomain: "",;
@@ -447,6 +463,7 @@ export default function TenantOnboarding() {;
     industry: "",;
     custom_domain: "",;
     is_co_branded: true;
+<<<<<<< HEAD
   });
 
   // Check if user has admin role;
@@ -503,3 +520,5 @@ function TenantOnboarding() {
 =======
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

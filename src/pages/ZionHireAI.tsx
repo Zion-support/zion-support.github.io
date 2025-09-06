@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -85,10 +86,13 @@ export default function ZionHireAI() {
     <>
 
     <>;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
       <SEO
         title='Zion Hire AI - White-labeled AI Recruiting Assistant'
         description='Empower your company with AI-powered recruiting tools. Streamline hiring, improve matches, and enhance candidate experience.'
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -157,6 +161,8 @@ export default function ZionHireAI() { const { isWhitelabel, brandName, primaryC
   const { isAuthenticated  } = useAuth(),
 
   
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from "react",
 import { Header } from "@/components/Header",
 import { SEO } from "@/components/SEO",
@@ -183,6 +189,7 @@ export default function ZionHireAI() {
         description="Empower your company with AI-powered recruiting tools. Streamline hiring, improve matches, and enhance candidate experience."
       />
       <Header />
+<<<<<<< HEAD
 <<<<<<< HEAD
       <main className="flex-1">
         {/* Hero Section */}
@@ -211,6 +218,10 @@ export default function ZionHireAI() {
         <section 
           className="relative bg-gradient-to-br from-zion-blue to-zion-blue-dark py-16 md:py-24"
           style={primaryColor ? { backgroundImage: `linear-gradient(to bottom right, ${primaryColor}, rgba(25, 33, 52, 1))` } : {}}
+=======
+      <main className="flex-1">
+        {/* Hero Section */}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         >
           <div className="container mx-auto px-4 md:px-6">
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -255,6 +266,7 @@ export default function ZionHireAI() {
               <div className="relative hidden md:block">
                 <div className="absolute -top-8 -left-8 w-72 h-72 bg-zion-purple/20 rounded-full filter blur-3xl"></div>
                 <img
+<<<<<<< HEAD
                   src="https://placehold.co/600x400/192134/9b87f5?text=Zion+Hire+AI"
                   alt="Zion Hire AI Dashboard"
                   className="relative z-10 rounded-lg shadow-xl"
@@ -263,6 +275,8 @@ export default function ZionHireAI() {
 =======
                 />
                 />
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
               </div>
@@ -270,6 +284,7 @@ export default function ZionHireAI() {
           </div>
         </section>
         {/* Features Section */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -345,6 +360,8 @@ ursor/fix-website-loading-errors-and-merge-6662
             
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
               <Card className="bg-card border border-border">
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 
@@ -356,6 +373,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
+<<<<<<< HEAD
                   <ul className="space-y-2 text-sm">
                     <li className="flex items-center">
                       <span className="bg-green-100 text-green-800 text-xs font-medium mr-2 px-2 py-0.5 rounded">AI</span>
@@ -371,6 +389,8 @@ ursor/fix-website-loading-errors-and-merge-6662
                       </span>                      <span>Industry-specific templates</span>                    <li className="flex items-center">
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                     <li className="flex items-center">
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
                       <span className="bg-blue-100 text-blue-800 text-xs font-medium mr-2 px-2 py-0.5 rounded">Template</span>
@@ -382,6 +402,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                   </ul>
                 </CardContent>
               </Card>
+<<<<<<< HEAD
 <<<<<<< HEAD
               size='lg'
               className='bg-zion-purple hover:bg-zion-purple-light text-white'
@@ -422,17 +443,23 @@ ursor/fix-website-loading-errors-and-merge-6662
               <Card className="bg-card border border-border">
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <CardHeader>
                   <PenTool className="h-10 w-10 text-zion-purple mb-2" />
                   <CardTitle>Resume Screener</CardTitle>
                   <CardDescription>
+<<<<<<< HEAD
                     Automatically evaluate and score candidate resumes against job requirements.
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
                   <ul className="space-y-2 text-sm">
                     <li className="flex items-center">
                       <span className="bg-green-100 text-green-800 text-xs font-medium mr-2 px-2 py-0.5 rounded">AI</span>
+<<<<<<< HEAD
                       <span>Identify skill matches</span>
                     </li>
                     <li className="flex items-center">
@@ -522,6 +549,8 @@ ursor/fix-website-loading-errors-and-merge-6662
                       <span>Experience verification</span>
                     </li>
                     <li className="flex items-center">
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       <span className="bg-amber-100 text-amber-800 text-xs font-medium mr-2 px-2 py-0.5 rounded">Data</span>
                       <span>Performance tracking</span>
 
@@ -540,10 +569,13 @@ ursor/fix-website-loading-errors-and-merge-6662
                   </ul>
                 </CardContent>
               </Card>
+<<<<<<< HEAD
               <Card className='bg-card border border-border'>                <CardHeader>
               
               <Card className="bg-card border border-border">
                 <CardHeader>
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   <Users className="h-10 w-10 text-zion-purple mb-2" />
                   <CardTitle>Candidate Matchmaker</CardTitle>
                   <CardDescription>
@@ -560,13 +592,17 @@ ursor/fix-website-loading-errors-and-merge-6662
                       <span className="bg-green-100 text-green-800 text-xs font-medium mr-2 px-2 py-0.5 rounded">AI</span>
                       <span>Culture fit prediction</span>
                     </li>
+<<<<<<< HEAD
                     <li className="flex items-center">
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       <span className="bg-amber-100 text-amber-800 text-xs font-medium mr-2 px-2 py-0.5 rounded">Data</span>
                       <span>Performance tracking</span>
                     </li>
                   </ul>
                 </CardContent>
               </Card>
+<<<<<<< HEAD
 
               
               <Card className="bg-card border border-border">
@@ -612,11 +648,14 @@ ursor/fix-website-loading-errors-and-merge-6662
                 <CardHeader>
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               
               <Card className="bg-card border border-border">
                 <CardHeader>
 
                   <Globe className="h-10 w-10 text-zion-purple mb-2" />
+                  <CardTitle>Embeddable Widget</CardTitle>
                   <CardDescription>
                     Add an AI assistant to your careers page to answer applicant questions.
                   </CardDescription>
@@ -631,6 +670,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                       <span className="bg-purple-100 text-purple-800 text-xs font-medium mr-2 px-2 py-0.5 rounded">Custom</span>
                       <span>Customizable branding</span>
                     </li>
+<<<<<<< HEAD
                     <li className='flex items-center'>
                       <span className='bg-blue-100 text-blue-800 text-xs font-medium mr-2 px-2 py-0.5 rounded'>
                         Code
@@ -638,6 +678,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 ursor/fix-website-loading-errors-and-merge-6662
                     <li className="flex items-center">
                     <li className="flex items-center">
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
                       <span className="bg-blue-100 text-blue-800 text-xs font-medium mr-2 px-2 py-0.5 rounded">Code</span>
@@ -645,6 +687,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                   </ul>
                 </CardContent>
               </Card>
+<<<<<<< HEAD
               <Card className='bg-card border border-border'>
 ursor/fix-website-loading-errors-and-merge-6662
                 <CardHeader>
@@ -683,6 +726,8 @@ ursor/fix-website-loading-errors-and-merge-6662
               <Card className="bg-card border border-border">
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <CardHeader>
                   <BarChart3 className="h-10 w-10 text-zion-purple mb-2" />
                   <CardTitle>Advanced Analytics</CardTitle>
@@ -691,6 +736,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
+<<<<<<< HEAD
                   <ul className="space-y-2 text-sm">
                     <li className="flex items-center">
                       <span className="bg-amber-100 text-amber-800 text-xs font-medium mr-2 px-2 py-0.5 rounded">Data</span>
@@ -705,6 +751,8 @@ ursor/fix-website-loading-errors-and-merge-6662
                         Data
                       </span>                      <span>Cost per hire analysis</span>                    <li className="flex items-center">
                     <li className="flex items-center">
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
                       <span className="bg-amber-100 text-amber-800 text-xs font-medium mr-2 px-2 py-0.5 rounded">Data</span>
@@ -713,9 +761,14 @@ ursor/fix-website-loading-errors-and-merge-6662
                   </ul>
                 </CardContent>
               </Card>
+<<<<<<< HEAD
               <Card className='bg-card border border-border'>
                   <Shield className="h-10 w-10 text-zion-purple mb-2" />
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <CardHeader>
                   <Shield className='h-10 w-10 text-zion-purple mb-2' />
                   <CardDescription>
@@ -724,15 +777,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <ul className="space-y-2 text-sm">
-                    <li className="flex items-center">
-                      <span className="bg-purple-100 text-purple-800 text-xs font-medium mr-2 px-2 py-0.5 rounded">Custom</span>
-                      <span>Custom logo and colors</span>
-                    </li>
-                    <li className="flex items-center">
-                      <span className="bg-purple-100 text-purple-800 text-xs font-medium mr-2 px-2 py-0.5 rounded">Custom</span>
-                      <span>Co-branded or white-labeled</span>
-                    </li>
                     <li className='flex items-center'>
                       <span className='bg-purple-100 text-purple-800 text-xs font-medium mr-2 px-2 py-0.5 rounded'>
                         Custom
@@ -745,6 +789,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                       </span>
                       <span>Co-branded or white-labeled</span>
                     </li>
+<<<<<<< HEAD
 
               
               <Card className="bg-card border border-border">
@@ -776,6 +821,8 @@ ursor/fix-website-loading-errors-and-merge-6662
               <Card className='bg-card border border-border'>
               
               <Card className="bg-card border border-border">
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <CardHeader>
                   <Shield className="h-10 w-10 text-zion-purple mb-2" />
                   <CardTitle>White-Labeled Platform</CardTitle>
@@ -793,6 +840,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                       <span className="bg-purple-100 text-purple-800 text-xs font-medium mr-2 px-2 py-0.5 rounded">Custom</span>
                       <span>Co-branded or white-labeled</span>
                     </li>
+<<<<<<< HEAD
                     <li className='flex items-center'>
                       <span className='bg-blue-100 text-blue-800 text-xs font-medium mr-2 px-2 py-0.5 rounded'>
                         Access
@@ -815,6 +863,8 @@ ursor/fix-website-loading-errors-and-merge-6662
                     </li>
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     <li className="flex items-center">
                       <span className="bg-blue-100 text-blue-800 text-xs font-medium mr-2 px-2 py-0.5 rounded">Access</span>
                     <li className="flex items-center">
@@ -826,8 +876,8 @@ ursor/fix-website-loading-errors-and-merge-6662
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
+<<<<<<< HEAD
         <section className='bg-zion-blue-dark py-16'>
           <div className='container mx-auto px-4 md:px-6 text-center'>
             <h2 className='text-3xl font-bold text-white mb-4'>
@@ -837,6 +887,8 @@ ursor/fix-website-loading-errors-and-merge-6662
               Join leading companies using Zion Hire AI to find better talent
               faster, reduce time-to-hire, and improve candidate experience.
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <section className="bg-zion-blue-dark py-16">
           <div className="container mx-auto px-4 md: px-6 text-center">
             <h2 className="text-3xl font-bold text-white mb-4">Ready to transform your hiring process?</h2>
@@ -848,6 +900,7 @@ ursor/fix-website-loading-errors-and-merge-6662
             </p>
             <Button 
               size="lg" 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -865,12 +918,18 @@ ursor/fix-website-loading-errors-and-merge-6662
             >
 
 
+=======
+              className="bg-zion-purple hover: bg-zion-purple-light text-white"
+              asChild
+            >
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <Link href="/enterprise/demo">
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
               </Link>
             </Button>
           </div>
         </section>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -893,6 +952,8 @@ ursor/fix-website-loading-errors-and-merge-6662
     </>
   )
 }
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from "react",;
 import { Header } from "@/components/Header",;
 import { SEO } from "@/components/SEO",;
@@ -954,7 +1015,10 @@ export default function ZionHireAI() {;
                 <div className="absolute -top-8 -left-8 w-72 h-72 bg-zion-purple/20 rounded-full filter blur-3xl"></div>;
                 <img;
                   src="https://placehold.co/600x400/192134/9b87f5?text=Zion+Hire+AI";
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   alt="Zion Hire AI Dashboard";
                   className="relative z-10 rounded-lg shadow-xl";
                   loading="lazy";
@@ -962,6 +1026,7 @@ export default function ZionHireAI() {;
             </div>;
           </div>;
         </section>;
+<<<<<<< HEAD
 
         {/* Features Section */}
         <section className='py-16 bg-background'>;
@@ -1005,11 +1070,14 @@ export default function ZionHireAI() {;
                         Template;
                       </span>                      <span>Industry-specific templates</span>                    <li className="flex items-center">;
                       <span className="bg-blue-100 text-blue-800 text-xs font-medium mr-2 px-2 py-0 && 0.5 rounded">Template</span>;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       <span>Industry-specific templates</span>;
                     </li>;
                   </ul>;
                 </CardContent>;
               </Card>;
+<<<<<<< HEAD
 
               <Card className='bg-card border border-border'>;
                 <CardHeader>;
@@ -1102,6 +1170,8 @@ export default function ZionHireAI() {;
                       <span className='bg-blue-100 text-blue-800 text-xs font-medium mr-2 px-2 py-0 && 0.5 rounded'>;
                         Code;
                       </span>                      <span>Simple JavaScript snippet</span>                <CardHeader>;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   <PenTool className="h-10 w-10 text-zion-purple mb-2" />;
                   <CardTitle>Resume Screener</CardTitle>;
                   <CardDescription>;
@@ -1111,6 +1181,7 @@ export default function ZionHireAI() {;
                 <CardContent>;
                   <ul className="space-y-2 text-sm">;
                     <li className="flex items-center">;
+<<<<<<< HEAD
                       <span className="bg-green-100 text-green-800 text-xs font-medium mr-2 px-2 py-0 && 0.5 rounded">AI</span>;
                       <span>Identify skill matches</span>;
                     </li>;
@@ -1120,13 +1191,18 @@ export default function ZionHireAI() {;
                     </li>;
                     <li className="flex items-center">;
                       <span className="bg-purple-100 text-purple-800 text-xs font-medium mr-2 px-2 py-0 && 0.5 rounded">Custom</span>;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       <span>Customizable scoring criteria</span>;
                     </li>;
                   </ul>;
                 </CardContent>;
               </Card>;
+<<<<<<< HEAD
 
               <Card className='bg-card border border-border'>                <CardHeader>;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   <Users className="h-10 w-10 text-zion-purple mb-2" />;
                   <CardTitle>Candidate Matchmaker</CardTitle>;
                   <CardDescription>;
@@ -1136,6 +1212,7 @@ export default function ZionHireAI() {;
                 <CardContent>;
                   <ul className="space-y-2 text-sm">;
                     <li className="flex items-center">;
+<<<<<<< HEAD
                       <span className="bg-green-100 text-green-800 text-xs font-medium mr-2 px-2 py-0 && 0.5 rounded">AI</span>;
                       <span>Relevancy scoring</span>;
                     </li>;
@@ -1148,13 +1225,18 @@ export default function ZionHireAI() {;
                         Data;
                       </span>                    <li className="flex items-center">;
                       <span className="bg-amber-100 text-amber-800 text-xs font-medium mr-2 px-2 py-0 && 0.5 rounded">Data</span>;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       <span>Performance tracking</span>;
                     </li>;
                   </ul>;
                 </CardContent>;
               </Card>;
+<<<<<<< HEAD
 
               <Card className='bg-card border border-border'>                <CardHeader>;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   <Globe className="h-10 w-10 text-zion-purple mb-2" />;
                   <CardTitle>Embeddable Widget</CardTitle>;
                   <CardDescription>;
@@ -1164,6 +1246,7 @@ export default function ZionHireAI() {;
                 <CardContent>;
                   <ul className="space-y-2 text-sm">;
                     <li className="flex items-center">;
+<<<<<<< HEAD
                       <span className="bg-green-100 text-green-800 text-xs font-medium mr-2 px-2 py-0 && 0.5 rounded">AI</span>;
                       <span>Instant FAQ responses</span>;
                     </li>;
@@ -1176,11 +1259,14 @@ export default function ZionHireAI() {;
                         Code;
                       </span>                    <li className="flex items-center">;
                       <span className="bg-blue-100 text-blue-800 text-xs font-medium mr-2 px-2 py-0 && 0.5 rounded">Code</span>;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       <span>Simple JavaScript snippet</span>;
                     </li>;
                   </ul>;
                 </CardContent>;
               </Card>;
+<<<<<<< HEAD
 
               <Card className='bg-card border border-border'>;
                 <CardHeader>;
@@ -1209,11 +1295,14 @@ export default function ZionHireAI() {;
                         Data;
                       </span>                      <span>Cost per hire analysis</span>                    <li className="flex items-center">;
                       <span className="bg-amber-100 text-amber-800 text-xs font-medium mr-2 px-2 py-0 && 0.5 rounded">Data</span>;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       <span>Cost per hire analysis</span>;
                     </li>;
                   </ul>;
                 </CardContent>;
               </Card>;
+<<<<<<< HEAD
 
               <Card className='bg-card border border-border'>;
                 <CardHeader>;
@@ -1242,6 +1331,8 @@ export default function ZionHireAI() {;
                       <span className='bg-blue-100 text-blue-800 text-xs font-medium mr-2 px-2 py-0 && 0.5 rounded'>;
                         Access;
                       </span>                      <span>Team roles & permissions</span>                <CardHeader>;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   <Shield className="h-10 w-10 text-zion-purple mb-2" />;
                   <CardTitle>White-Labeled Platform</CardTitle>;
                   <CardDescription>;
@@ -1251,6 +1342,7 @@ export default function ZionHireAI() {;
                 <CardContent>;
                   <ul className="space-y-2 text-sm">;
                     <li className="flex items-center">;
+<<<<<<< HEAD
                       <span className="bg-purple-100 text-purple-800 text-xs font-medium mr-2 px-2 py-0 && 0.5 rounded">Custom</span>;
                       <span>Custom logo and colors</span>;
                     </li>;
@@ -1260,6 +1352,8 @@ export default function ZionHireAI() {;
                     </li>;
                     <li className="flex items-center">;
                       <span className="bg-blue-100 text-blue-800 text-xs font-medium mr-2 px-2 py-0 && 0.5 rounded">Access</span>;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       <span>Team roles & permissions</span>;
                     </li>;
                   </ul>;
@@ -1268,6 +1362,7 @@ export default function ZionHireAI() {;
             </div>;
           </div>;
         </section>;
+<<<<<<< HEAD
 
         {/* CTA Section */}
         <section className='bg-zion-blue-dark py-16'>;
@@ -1619,22 +1714,28 @@ export default function ZionHireAI() {;
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
             <Button;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               size="lg";
               className="bg - zion - purple hover: bg - zion - purple - light text - white";
               as_child;
             >;
+<<<<<<< HEAD
 <<<<<<< HEAD
               <Link href="/enterprise / demo">;
 
 =======
               <Link href="/enterprise/demo">;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 Schedule a Demo;
               </Link>;
             </Button>;
           </div>;
         </section>;
       </main>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   );
@@ -1649,3 +1750,9 @@ export default function ZionHireAI() {;
     </>);
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+    </>);
+}
+;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -1,5 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -19,6 +20,13 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST');
     return res.status(405).json({ error: 'Method not allowed' });
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  if (req.method !== 'POST')
+  if (req.method !== 'POST');
+    return res.status(405).json({ error: 'Method not allowed' });
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const {
     slug
     name
@@ -31,10 +39,13 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!slug |!name)
     return res.status(400).json({ error: 'Missing required fields' });
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   if (req && req.method !== 'POST')
     return res && res.status(405).json({ error: 'Method not allowed' });
   const {
@@ -43,6 +54,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     services_offered,
     team_size,
     about,
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -84,16 +96,18 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     res && res.status(201).json({ vendor })
 <<<<<<< HEAD
 
+=======
+    const vendor = registerVendor({
+      slug;
+      name;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   } catch (e: any) {
     res && res.status(500).json({ error: e && e.message });
   }
-
-      verificationDocs: Array && Array.isArray(verificationDocs) ? verificationDocs : [],
-      caseStudies: Array && Array.isArray(caseStudies) ? caseStudies : [],
-
     });
     res && res.status(201).json({ vendor });
   } catch (e: any) {
+<<<<<<< HEAD
 
     res && res.status(500).json({ error: e && e.message });
   }    res && res.status(500).json({ error: e && e.message })
@@ -111,6 +125,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     res && res.status(201).json({ vendor });
   } catch (e: any) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     verification_docs,
     case_studies,
   } = req.body || {}
@@ -149,6 +165,7 @@ verification_docs: Array.is_array (verification_docs) ? verification_docs : [],
     res.status (500).json ({ error: e.message });
   }    res.status (500).json ({ error: e.message });
 <<<<<<< HEAD
+<<<<<<< HEAD
   }
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -159,3 +176,7 @@ verification_docs: Array.is_array (verification_docs) ? verification_docs : [],
   }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  }
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

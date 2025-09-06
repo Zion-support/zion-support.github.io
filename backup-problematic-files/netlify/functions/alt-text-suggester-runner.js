@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 :netlify/functions/alt-text-suggester-runner.js
 :backup-problematic-files/netlify/functions/alt-text-suggester-runner.js
 const path = require('path'),;
@@ -26,6 +27,8 @@ exports.handler = async () => {;
 },;
 :backup-problematic-files/netlify/functions/alt-text-suggester-runner.js
 :backup-problematic-files/netlify/functions/alt-text-suggester-runner.js
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 const path = require('path');
 const { spawnSync } = require('child_process');
 function runNode(relPath, args = []) {
@@ -51,6 +54,7 @@ exports.handler = async () => {
   step('alt-text:suggest', () => runNode('automation/alt-text-suggester.cjs'));
   step('git:sync', () => runNode('automation/advanced-git-sync.cjs'));
   return { statusCode: 200, body: logs.join('\n') }
+<<<<<<< HEAD
 
 
 :netlify/functions/alt-text-suggester-runner.js
@@ -66,3 +70,5 @@ main:netlify/functions/alt-text-suggester-runner.js
 :netlify/functions/alt-text-suggester-runner.js
 main:netlify/functions/alt-text-suggester-runner.js
 :backup-problematic-files/netlify/functions/alt-text-suggester-runner.js
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

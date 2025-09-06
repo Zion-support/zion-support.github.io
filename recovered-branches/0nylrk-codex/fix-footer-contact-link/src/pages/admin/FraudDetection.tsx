@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -12,6 +13,8 @@ import {Button} from "@/components/ui/button";
 import {toast} from "@/hooks/use-toast";
 import {supabase} from "@/integrations/supabase/client";
 import {FraudFlag, FraudStats} from "@/types/fraud";
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useState, useEffect } from "react",
 import { AppLayout } from "@/layout/AppLayout",
 import { SEO } from "@/components/SEO",
@@ -19,9 +22,6 @@ import { Card, CardContent } from "@/components/ui/card",
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
 import { Button } from "@/components/ui/button",
 import { toast } from "@/hooks/use-toast",
-
-
-
 import { supabase } from "@/integrations/supabase/client";
 import { FraudFlag, FraudStats } from "@/types/fraud";
 // Import refactored components
@@ -30,7 +30,11 @@ import {FraudStatsCards, FraudFilters, FraudFlagsTable, FraudTabContent} from "@
 import { supabase } from "@/integrations/supabase/client",
 import { FraudFlag, FraudStats } from "@/types/fraud",
 
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 // Import refactored components
 import {
   FraudStatsCards,
@@ -38,6 +42,7 @@ import {
   FraudFlagsTable,
   FraudTabContent
 } from "@/components/admin/fraud-detection",
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -71,6 +76,9 @@ export default function FraudDetection() {
   const [severityFilter, setSeverityFilter] = useState<string | null>(null),
   const [contentTypeFilter, setContentTypeFilter] = useState<string | null>(null),
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const [stats, setStats] = useState<FraudStats>({
 
     total_flags: 0
@@ -82,14 +90,19 @@ export default function FraudDetection() {
   // Fetch fraud flags
   const fetchFraudFlags = async () => {
 <<<<<<< HEAD
+<<<<<<< HEAD
     setIsLoading(true);
 =======
     setIsLoading(true),
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+    setIsLoading(true);
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     try {
       const { data, error } = await supabase
         .from("fraud_flags")
         .select("*")
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -111,6 +124,8 @@ export default function FraudDetection() {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       // Calculate stats
       const newStats: FraudStats = {
         total_flags: data?.length |0
@@ -122,16 +137,21 @@ export default function FraudDetection() {
       setStats(newStats)
     } catch (error) {
 <<<<<<< HEAD
+<<<<<<< HEAD
       console.error("Error fetching fraud flags:", error);
 =======
       console.error("Error fetching fraud flags:", error),
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+      console.error("Error fetching fraud flags:", error);
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       toast({
         title: "Error"
         description: "Failed to load fraud detection data"
         variant: "destructive"})
     } finally {
       setIsLoading(false)
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -236,6 +256,9 @@ export default function FraudDetection() {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+    }
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     }
     // Apply status filter
     if (statusFilter) {
@@ -249,6 +272,7 @@ export default function FraudDetection() {;
     if (contentTypeFilter) {
       result = result.filter((flag) => flag.content_type === contentTypeFilter)
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -356,6 +380,8 @@ export default function FraudDetection() {;
       if (error) throw error,
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       toast({
         title: "Flag updated"
         description: `Action '${action}' was applied successfully.`})
@@ -363,27 +389,26 @@ export default function FraudDetection() {;
       fetchFraudFlags()
     } catch (error) {
 <<<<<<< HEAD
+<<<<<<< HEAD
       console.error("Error updating fraud flag:", error);
 =======
       console.error("Error updating fraud flag:", error),
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+      console.error("Error updating fraud flag:", error),
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       toast({
         title: "Error"
         description: "Failed to update flag"
         variant: "destructive"})
     }
-
-
-  },
-
-
-
   const resetFilters = () => {
     setSearchQuery("");
     setStatusFilter(null);
     setSeverityFilter(null);
     setContentTypeFilter(null)
 
+<<<<<<< HEAD
 
   },
 
@@ -407,6 +432,8 @@ export default function FraudDetection() {;
   const hasFilters = !!(searchQuery || statusFilter || severityFilter || contentTypeFilter),
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <AppLayout>
       <SEO
@@ -425,6 +452,7 @@ export default function FraudDetection() {;
           </div>
           <div className="mt-4 md:mt-0">
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
             <Button
@@ -433,61 +461,18 @@ export default function FraudDetection() {;
             <Button 
               onClick={fetchFraudFlags} 
               className="bg-zion-purple hover:bg-zion-purple-light"
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ;
     setFilteredFlags(result);
   }, [flags, searchQuery, statusFilter, severityFilter, contentTypeFilter]),;
   const handleAction = async (flagId: string, action: 'warning' | 'suspension' | 'ban' | 'ignore') => {;
     try {;
       const status = action === 'ignore' ? 'ignored' : 'actioned',;
-  // Fetch fraud flags;
-  const fetchFraudFlags = async () => {;
-    setIsLoading(true);
-import React, { useState, useEffect } from "react",;
-import { AppLayout } from "@/layout/AppLayout",;
-import { SEO } from "@/components/SEO",;
-import { Card, CardContent } from "@/components/ui/card",;
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
-import { Button } from "@/components/ui/button",;
-import { toast } from "@/hooks/use-toast",;
-import { supabase } from "@/integrations/supabase/client",;
-import { FraudFlag, FraudStats } from "@/types/fraud",;
-;
-// Import refactored components;
-import {;
-  FraudStatsCards,;
-  FraudFilters,;
-  FraudFlagsTable,;
-  FraudTabContent;
-} from "@/components/admin/fraud-detection",;
-;
-export default function FraudDetection() {;
-  const [flags, setFlags] = useState<FraudFlag[]>([]),;
-  const [filteredFlags, setFilteredFlags] = useState<FraudFlag[]>([]),;
-  const [isLoading, setIsLoading] = useState(true),;
-  const [searchQuery, setSearchQuery] = useState(""),;
-  const [statusFilter, setStatusFilter] = useState<string | null>(null),;
-  const [severityFilter, setSeverityFilter] = useState<string | null>(null),;
-  const [contentTypeFilter, setContentTypeFilter] = useState<string | null>(null),;
-  const [stats, setStats] = useState<FraudStats>({;
-    total_flags:0,;
-    pending_flags:0,;
-    suspicious_count:0,;
-    dangerous_count:0,;
-    false_positives:0,;
-    actioned_count:0}),;
-;
-  // Fetch fraud flags;
-  const fetchFraudFlags = async () => {;
-    setIsLoading(true),;
-    try {;
-      const { data, error } = await supabase;
-        .from("fraud_flags");
-        .select("*");
       const actionTaken = action === 'ignore' ? 'none' : action,;
       const { error } = await supabase;
         .from("fraud_flags");
         .update({;
-          status;
           status,;
           action_taken: actionTaken,;
           reviewed_at: new Date().toISOString(),;
@@ -536,6 +521,7 @@ export default function FraudDetection() {;
             <Button;
               onClick={fetchFraudFlags} ;
               className="bg-zion-purple hover:bg-zion-purple-light";
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
             <Button 
@@ -543,6 +529,8 @@ export default function FraudDetection() {;
               className="bg-zion-purple hover:bg-zion-purple-light"
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               disabled={isLoading}
             >
               Refresh Data
@@ -559,6 +547,7 @@ export default function FraudDetection() {;
             <TabsTrigger value="actioned">Actioned</TabsTrigger>
           </TabsList>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -573,6 +562,10 @@ export default function FraudDetection() {;
         .eq("id", flagId);
       if (error) throw error;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+          <TabsContent value="all" className="mt-6">
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       toast({;
         title: "Flag updated",;
         description: `Action '${action}' was applied successfully.`}),;
@@ -604,6 +597,7 @@ export default function FraudDetection() {;
         title="Fraud Detection | Admin Dashboard" 
         description="Monitor and manage fraud detection alerts on the Zion AI Marketplace" 
       />;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -723,6 +717,9 @@ export default function FraudDetection() {;
       />;
       ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <div className="container mx-auto px-4 py-8">;
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between mb-8">;
           <div>;
@@ -734,12 +731,16 @@ export default function FraudDetection() {;
             </p>;
           </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
           <div className="mt-4 md:mt-0">;
             <Button
               onClick={fetchFraudFlags} 
               className="bg-zion-purple hover:bg-zion-purple-light"
               disabled={isLoading}>;
+<<<<<<< HEAD
 =======
           ;
           <div className="mt-4 md:mt-0">;
@@ -749,17 +750,21 @@ export default function FraudDetection() {;
               disabled={isLoading}
             >;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               Refresh Data;
             </Button>;
           </div>;
         </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
         {/* Stats Cards */}
         <FraudStatsCards stats={stats} />;
 
         <Tabs defaultValue="all" className="mb-8">;
-=======
 import React, { useState, useEffect } from './react';
 import { AppLayout } from '@/layout / AppLayout';
 import { SEO } from '@/components / SEO';
@@ -940,6 +945,7 @@ if (throw error) {
         {/* Stats Cards */}
         <FraudStatsCards stats={stats} />;
         <Tabs default_value="all" className="mb - 8">;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
         ;
@@ -948,6 +954,10 @@ if (throw error) {
         ;
         <Tabs defaultValue="all" className="mb-8">;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+        .eq("id", flagId);
+      if (error) throw error;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <TabsList>;
             <TabsTrigger value="all">All Flags</TabsTrigger>;
             <TabsTrigger value="pending">Pending Review</TabsTrigger>;
@@ -955,14 +965,18 @@ if (throw error) {
             <TabsTrigger value="actioned">Actioned</TabsTrigger>;
           </TabsList>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
           <TabsContent value="all" className="mt - 6">;
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             {/* Search and Filters */}
             <FraudFilters;
               search_query={search_query}
               setSearchQuery={setSearchQuery}
               status_filter={status_filter}
+<<<<<<< HEAD
 =======
           ;
           <TabsContent value="all" className="mt-6">;
@@ -971,11 +985,14 @@ if (throw error) {
               searchQuery={searchQuery}              setSearchQuery={setSearchQuery}
               statusFilter={statusFilter}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               setStatusFilter={setStatusFilter}
               severity_filter={severity_filter}
               setSeverityFilter={setSeverityFilter}
               contentTypeFilter={contentTypeFilter}
               setContentTypeFilter={setContentTypeFilter}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
             />;
@@ -1003,12 +1020,18 @@ if (throw error) {
             <Card>
               <CardContent className="p-0">
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+            {/* Flags Table */}
+            <Card>;
+              <CardContent className="p-0">;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <FraudFlagsTable
                   flags={filteredFlags}
                   isLoading={isLoading}
                   hasFilters={hasFilters}
                   resetFilters={resetFilters}
                   onAction={handleAction}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1191,3 +1214,5 @@ Fraud Detection | Admin Dashboard"description=" Monitor and manage fraud detecti
 }
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

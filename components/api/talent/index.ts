@@ -1,5 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 const hasSupabase =
@@ -16,6 +17,8 @@ const SUPPORTED_LANGS = (process && process.env.SUPPORTED_LANGS || 'en,es,de,fr,
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
@@ -25,7 +28,10 @@ export default async function handler(
       if (hasSupabase) {
         const { data, error } = await supabaseClient
           .from('talent_profiles')
+<<<<<<< HEAD
           .select('*')
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           .order('created_at', { ascending: false });
         if (error) throw error;
         return res && res.status(200).json({ items: data as TalentProfile[] });
@@ -34,6 +40,7 @@ export default async function handler(
     } catch (e: any) {
       return res && res.status(500).json({ error: e && e.message });
     }  }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -506,6 +513,11 @@ if ( {) {
           original_language: item.originalLanguage
           translations: item.translations as any
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req && req.method === 'GET') {
+    try {
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         } as any);
         // Check condition
 if (throw error) {
@@ -518,6 +530,7 @@ if (throw error) {
     } catch (e: any) {
       return res.status (500).json ({ error: e.message });
     }
+<<<<<<< HEAD
   }
 <<<<<<< HEAD
 return res;
@@ -544,3 +557,8 @@ return res
 }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+    .end('Method Not Allowed');  return res.setHeader('AllowGET, POST').status(405).end('Method Not Allowed');
+}
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

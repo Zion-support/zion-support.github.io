@@ -1,4 +1,11 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import React from 'react',;
+import SEO from '../components/SEO',;
+import React from 'react';
+import SEO from '../components/SEO';
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 export default function AccessibilityScannerPage() {
@@ -17,11 +24,8 @@ export default function AccessibilityScannerPage() {
 			</section>
 		</>
 	)
-
-=======
 }
 
-=======
 import React from 'react',
 import SEO from '../components / SEO',
 export default /**
@@ -43,12 +47,10 @@ return (
   </section>;
   </>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 }
 ;
+<<<<<<< HEAD
 
 =======
 =======
@@ -83,10 +85,13 @@ export default function AccessibilityScannerPage() {
 }
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 }
@@ -99,3 +104,5 @@ export default function AccessibilityScannerPage() {
 }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

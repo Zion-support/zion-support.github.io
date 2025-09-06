@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { useEffect, useCallback } from 'react';
 
@@ -19,11 +20,14 @@ import { useEffect, useCallback  } from './react';
 ;
 // Define MessageEvent if not available;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface Event {
   type: string;
   target: EventTarget | null;
 }
 type EventListener = (event: Event) => void;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 ;
@@ -31,6 +35,8 @@ type EventListener = (event: Event) => void;
 =======
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface EventTarget {
   addEventListener (type: string, listener: EventListener): void;
   removeEventListener (type: string, listener: EventListener): void;
@@ -44,12 +50,15 @@ interface MessagePort {
   close (): void;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 interface MessageEvent < T = any> extends Event {
 
 =======
 interface MessageEvent < T = any> extends Event {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   data: T;
   origin: string;
   lastEventId: string;
@@ -60,6 +69,7 @@ interface MessageChannelHandlerProps {
   on_message?: (message: unknown) => void;
   on_error?: (error: Error) => void;
 }
+<<<<<<< HEAD
 
 export /**
  * useMessageChannelHandler - Function description
@@ -75,6 +85,8 @@ function useMessageChannelHandler() {
   const handleMessage = useCallback(
     (event: MessageEvent<unknown>) => {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       try {
         // Check condition
 if ( {) {
@@ -89,6 +101,7 @@ if ( {) {
 }
           on_error (error as Error);
         }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -100,6 +113,8 @@ if ( {) {
     try {
       if (onMessage) {
         onMessage(event && event.data);
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       }
     } catch (error) {
       if (onError) {
@@ -115,6 +130,7 @@ if ( {) {
     [onMessage, onError]
   );
   useEffect(() => {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -182,3 +198,5 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 origin/main
 origin/automation-improvements-final
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

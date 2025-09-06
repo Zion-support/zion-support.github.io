@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 class ErrorBoundary extends React.Component {
@@ -25,6 +26,8 @@ class ErrorBoundary extends React.Component {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useEffect } from 'react';
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
@@ -33,6 +36,7 @@ import {Button} from "@/components/ui/button";
 import {useNavigate} from "react-router-dom";
 import {toast} from "sonner";
 export default function Profile() {;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
   const { user, isLoading, logout } = useAuth();
@@ -174,6 +178,8 @@ export default function Profile() {;
                     logout();
   const { user, isLoading, logout } = useAuth();
   const navigate = useNavigate();
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useEffect } from 'react',
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
@@ -189,6 +195,12 @@ export default function Profile() {
   const { user, isLoading, logout } = useAuth(),
   const navigate = useNavigate(),
 
+  const { user, isLoading, logout } = useAuth();
+
+
+
+
+
   const navigate = useNavigate();
   useEffect(() => {
     if (!isLoading && !user) {
@@ -199,37 +211,36 @@ export default function Profile() {
   }, [user, isLoading, navigate]),
 
   if (isLoading) {
+  useEffect(() => {;
+    if (!isLoading && !user) {;
+      toast && toast.error("Please log in to view your profile");
+      navigate("/login?redirect=/profile");
+    }
+  }, [user, isLoading, navigate]);
     return (
-      <>
-        <Header />
-        <div className="min-h-screen bg-zion-blue flex items-center justify-center">
-          <div className="animate-pulse text-white">Loading profile...</div>
-        </div>
-        <Footer />
-      </>
-    )
+      <>;
+        <Header />;
+        <div className="min-h-screen bg-zion-blue flex items-center justify-center">;
+          <div className="animate-pulse text-white">Loading profile...</div>;
+        </div>;
+        <Footer />;
+      </>;
+    );
   }
-  if (!user) {
-    return (
-      <>
-        <Header />
-        <div className="min-h-screen bg-zion-blue flex items-center justify-center">
-          <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 max-w-md">
-            <h1 className="text-xl font-bold text-white mb-4">Please log in</h1>
-            <p className="text-zion-slate mb-4">You need to be logged in to view your profile.</p>
             <Button
               onClick={() => navigate("/login?redirect=/profile")}
-              className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple text-white"
-            >
-              Go to Login
-            </Button>
-          </div>
-        </div>
-        <Footer />
-      </>
-    )
+              className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple text-white";
+            >;
+              Go to Login;
+            </Button>;
+          </div>;
+        </div>;
+        <Footer />;
+      </>;
+    );
   }
   return (
+<<<<<<< HEAD
     <>
       <Header />
       <div className="min-h-screen bg-zion-blue">
@@ -256,6 +267,8 @@ export default function Profile() {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     navigate("/")
                   }}
                   variant="outline"
@@ -271,6 +284,7 @@ export default function Profile() {
       <Footer />
     </>
   )
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -442,6 +456,8 @@ if ( {) {
                   variant="outline";
                   className="border-zion-blue-light text-zion-slate-light hover: bg-zion-blue-light hover:text-white";
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 >;
                   Logout;
                 </Button>;
@@ -451,6 +467,7 @@ if ( {) {
         </div>;
       </div>;
       <Footer />;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     </>);
@@ -484,3 +501,5 @@ return (<> <Header /> <div className="min-h-screen bg-zion-blue flex items-cente
 }
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

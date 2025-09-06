@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -9,6 +10,8 @@ import {Card, CardContent, CardHeader, CardTitle, CardDescription} from "@/compo
 import {useAuth} from "@/hooks/useAuth";
 import {MessageSquare, Briefcase, Code, FileText, Megaphone} from "@/components/icons";
 import {ForumCategory, ForumCategoryInfo} from "@/types/community";
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { Link } from "react-router-dom",
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { useAuth } from "@/hooks/useAuth";
@@ -21,23 +24,20 @@ import {
   FileText;
   Megaphone
 } from "@/components/icons",
-
-
-
-
 import { ForumCategory, ForumCategoryInfo } from "@/types/community";
 const categories: ForumCategoryInfo[] = [
   {
 
-    id: "getting-hired"
-    name: "Getting Hired"
-    description: "Tips, strategies, and questions about getting hired on the platform.";
-    adminOnly: false
 
     icon: "Briefcase"
   }
 import { ForumCategory, ForumCategoryInfo } from "@/types/community",
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 const categories: ForumCategoryInfo[] = [
   {
@@ -48,10 +48,13 @@ const categories: ForumCategoryInfo[] = [
     icon: "Briefcase"
   },
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   {
 
     id: "project-help"
@@ -60,6 +63,7 @@ const categories: ForumCategoryInfo[] = [
     adminOnly: false
 
     icon: "MessageSquare"
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -76,18 +80,23 @@ const categories: ForumCategoryInfo[] = [
   }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   },
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   {
     id: "ai-tools",
     name: "AI Tools Discussion",
     description: "Discuss AI tools, frameworks, and best practices.",
     adminOnly: false,
     icon: "Code"
+<<<<<<< HEAD
   },
 <<<<<<< HEAD
 
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   {
 
     id: "feedback"
@@ -96,6 +105,7 @@ const categories: ForumCategoryInfo[] = [
     adminOnly: false
 
     icon: "FileText"
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -109,6 +119,8 @@ const categories: ForumCategoryInfo[] = [
   }
   },
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   {
 
     id: "announcements"
@@ -117,6 +129,7 @@ const categories: ForumCategoryInfo[] = [
     adminOnly: true
     icon: "Megaphone"
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 import {Link} from "react-router-dom";
@@ -281,6 +294,8 @@ const categories: ForumCategoryInfo[] = [;
 const iconMap = {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { Link } from './react-router-dom';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components / ui / card';
 import { use_auth } from '@/hooks / use_auth';
@@ -325,11 +340,11 @@ const categories: ForumCategoryInfo[] = [;
 ];
 ;
 const icon_map = {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   Briefcase;
   MessageSquare;
   Code;
   FileText;
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -358,6 +373,8 @@ export const ForumCategories = () => {;
       {visibleCategories && visibleCategories.map((category) => {;
         const Icon = iconMap[category && category.icon as keyof typeof iconMap],;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         return (
           <Link key={category && category.id} to={`/community/category/${category && category.id}`}>;
             <Card className="h-full transition-all hover:shadow-md hover:border-zion-purple/50 cursor-pointer">;
@@ -374,6 +391,7 @@ export const ForumCategories = () => {;
           </Link>;
         );
       })}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     </div>;
@@ -516,3 +534,8 @@ export const ForumCategories = () => {;
 };
 export default ForumCategories;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+export default ForumCategories;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

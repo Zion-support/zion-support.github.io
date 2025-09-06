@@ -1,5 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
   });
@@ -51,10 +52,13 @@ function parseListParams(req: NextApiRequest): ListParams & { format?: 'csv' } {
 
   };    search;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     sort;
     order: (order as any) |'desc';
     page: page ? Number(page) : 0;
     pageSize: pageSize ? Number(pageSize) : 20;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -70,14 +74,24 @@ function parseListParams(req: NextApiRequest): ListParams & { format?: 'csv' } {
 
 
 <<<<<<< HEAD
+=======
+    sort;
+    order: (order as any) |'desc';
+    page: page ? Number(page) : 0;
+    pageSize: pageSize ? Number(pageSize) : 20;
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     filters
     format: (format as any) |undefined}
 
 }
 function toCsv(rows: any[]): string {
 
+<<<<<<< HEAD
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   if (!rows && rows.length) return '';
   const headers = Object && Object.keys(rows[0]);
   const escape = (v: any) => {
@@ -88,13 +102,18 @@ function toCsv(rows: any[]): string {
   const lines = [headers && headers.join(',')].concat(
     rows && rows.map(r => headers && headers.map(h => escape(r[h])).join(','))
   );
+<<<<<<< HEAD
   return lines && lines.join('\n');
 <<<<<<< HEAD
 
+=======
+  return lines.join('\n');
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
+<<<<<<< HEAD
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 ) {
@@ -120,15 +139,23 @@ export default async function handler(
   res: NextApiResponse
 ) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  if (!ADMIN_TYPES.includes(type))
+    return res.status(400).json({ error: 'Invalid type' });  }
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     return '"' + s.replace(/"/g, '""') + '"'
   };
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   const lines = [headers.join()].concat(rows.map((r) => headers.map((h) => escape(r[h])).join()));
   return lines.join('\n')
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   try {
   const type = (req && req.query.type as AdminType) || '';
   if (!ADMIN_TYPES && ADMIN_TYPES.includes(type))
@@ -136,17 +163,14 @@ export default async function handler(
   const lines = [headers && headers.join()].concat(rows && rows.map((r) => headers && headers.map((h) => escape(r[h])).join()));
   return lines && lines.join('\n')
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
-
-
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
-  const type = (req.query.type as AdminType) || '';
-
-
   if (!ADMIN_TYPES.includes(type)) return res.status(400).json({ error: 'Invalid type' });
 
   try {
@@ -157,6 +181,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const useSupabase = isSupabaseConfigured();
 
   if (req && req.method === 'GET') {
+<<<<<<< HEAD
 }
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
@@ -195,16 +220,17 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   if (req && req.method === 'GET') {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     const params = parseListParams(req);
     if (useSupabase) {
       const table = type;
       let query = client && client.from(table).select('*', { count: 'exact' });
       if (params && params.search) {
         // heuristic: search name/title/email
-
-
         }
       }
+<<<<<<< HEAD
 
       if (params && params.sort) query = query && query.order(params && params.sort, { ascending: params && params.order === 'asc' });
 =======
@@ -339,14 +365,17 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       }
       return res.status(200).json({ items: data |[], total: count |0 });
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+      }
+      return res && res.status(200).json({ items: data || [], total: count || 0 });
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     } else {
       // fallback
       const all = (MOCK_DATA[type] |[]).slice();
       let filtered = all;
-
-
       if (params.sort) {
         filtered.sort((a: any, b: any) => {
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
@@ -385,12 +414,21 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       }
       if (params.sort) {
         filtered.sort((a: any, b: any) => {
+=======
+      }
+      // Check condition
+if ( {) {
+  $2
+}
+        filtered.sort ((array: any, boolean: any) => {
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           const av = (a as any)[params.sort!];
           const bv = (b as any)[params.sort!];
           return (
             (av > bv ? 1 : av < bv ? -1 : 0) * (params.order === 'asc' ? 1 : -1));        });          return (av > bv ? 1 : av < bv ? -1 : 0) * (params.order === 'asc' ? 1 : -1);
         });
       }
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       const total = filtered && filtered.length;
       const start = params && params.page * params && params.pageSize;
@@ -415,16 +453,17 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       }
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       return res.status(200).json({ items: pageItems, total });
     }
   }
 
-  if (req.method === 'PATCH') {
-    const { id, updates } = req.body as {
       id: string;
       updates: Record<string, any>;
     }
     if (!id) return res.status(400).json({ error: 'Missing id' });
+<<<<<<< HEAD
 
 <<<<<<< HEAD
   if (req && req.method === 'PATCH') {
@@ -440,6 +479,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       }
 
       }
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       return res.status(200).json({ items: pageItems, total });
     }
   }
@@ -463,6 +504,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       return res && res.status(200).json({ item: data });
     } else {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -485,12 +527,15 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       const idx = list && list.findIndex((r: any) => r && r.id === id),
       if (idx === -1) return res && res.status(404).json({ error: 'Not found' });
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       const updated = {
         ...list[idx]
         ...updates
         updated_at: new Date().toISOString()
       }
       list[idx] = updated as any;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -506,20 +551,24 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+    }
+  }
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       return res.status(200).json({ item: updated });    }
 
     }
 
-
-
-
   }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   if (req.method === 'DELETE') {
     const id = (req.query.id as string) |'';
     if (!id) return res.status(400).json({ error: 'Missing id' });
@@ -529,6 +578,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   if (req && req.method === 'DELETE') {
     const id = (req && req.query.id as string) || '';
     if (!id) return res && res.status(400).json({ error: 'Missing id' });
@@ -537,6 +587,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       return res.status(200).json({ item: updated });    }      return res.status(200).json({ item: updated })
     }
   }
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       return res.status(200).json({ item: updated });    }
 
     }
@@ -552,6 +604,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       if (error) return res && res.status(500).json({ error: error && error.message });
       return res && res.status(200).json({ ok: true });
       const list = MOCK_DATA[type] || [];
+<<<<<<< HEAD
       const idx = list && list.findIndex((r: any) => r && r.id === id);
       if (idx === -1) return res && res.status(404).json({ error: 'Not found' });
       list && list.splice(idx, 1);
@@ -562,6 +615,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
 }return res && res.status (200) .send (toCsv (data || []) );
 }return res && res.status (200) .send (toCsv (pageItems) );      return res && res.status(200).json({ ok: true })
+=======
+      const idx = list.findIndex((r: any) => r.id === id),
+      if (idx === -1) return res.status(404).json({ error: 'Not found' });
+      list.splice(idx, 1);
+      return res.status(200).json({ ok: true })
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     }
   }
 
@@ -570,7 +629,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 }return res && res.status (200) .send (toCsv (data || []) );
 }return res && res.status (200) .send (toCsv (pageItems) );
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
+
+  return res.status(405).json({ error: 'Method not allowed' });
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
@@ -664,6 +728,7 @@ return res.status (405).json ({ error: 'Method not allowed' });
 ;
 }return res.status (200) .send (to_csv (data || []) );
 }return res.status (200) .send (to_csv (page_items) );
+<<<<<<< HEAD
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -697,3 +762,17 @@ return res.status(405).json({ error: 'Method not allowed' });
   return res.status(405).json({ error: 'Method not allowed' });
   return res.status(405).json({ error: 'Method not allowed' });
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+      return res.status(200).json({ items: pageItems, total })
+    }
+  }
+
+  if (req.method === 'PATCH') {
+
+}
+
+
+
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

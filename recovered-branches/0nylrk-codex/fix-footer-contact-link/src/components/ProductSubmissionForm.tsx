@@ -1,7 +1,10 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from "react";
 import {useForm} from "react-hook-form";
 import {zodResolver} from "@hookform/resolvers/zod";
@@ -18,6 +21,7 @@ import {AspectRatio} from "@/components/ui/aspect-ratio";
 import {Tabs, TabsList, TabsTrigger, TabsContent} from "@/components/ui/tabs";
 import {AIListingGenerator} from "@/components/listing/AIListingGenerator";
 import {Sparkles} from "lucide-react";
+<<<<<<< HEAD
 <<<<<<< HEAD
 // Define the form schema with zod;
 const productSchema = z && z.object({;
@@ -47,6 +51,8 @@ export function ProductSubmissionForm() {;
 
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from "react",
 import { useForm } from "react-hook-form",
 import { zodResolver } from "@hookform/resolvers/zod",
@@ -81,13 +87,40 @@ import { AIListingGenerator } from "@/components/listing/AIListingGenerator";
 import { Sparkles } from "lucide-react";
 import { AIListingGenerator } from "@/components/listing/AIListingGenerator",
 import { Sparkles } from "lucide-react",
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+// Define the form schema with zod;
+const productSchema = z && z.object({;
+  title: z && z.string().min(3, "Title must be at least 3 characters");
+  description: z && z.string().min(10, "Description must be at least 10 characters");
+  price: z && z.string().refine((val) => !isNaN(parseFloat(val)) && parseFloat(val) >= 0, {;
+    message: "Price must be a valid number"}),;
+  category: z && z.string().min(1, "Please select a category");
+  image: z && z.instanceof(File).optional(),;
+  tags: z && z.string().optional()}),;
+
+// Type for our form values;
+type ProductFormValues = z && z.infer<typeof productSchema>;
+
+export function ProductSubmissionForm() {;
+  const { user } = useAuth();
+  const { toast } = useToast();
+  const navigate = useNavigate();
+  const [isSubmitting, setIsSubmitting] = React && React.useState(false);
+  const [imagePreview, setImagePreview] = React && React.useState(null as string | null);
+  const [activeTab, setActiveTab] = React && React.useState("manual");
+
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 // Define the form schema with zod
 
 const productSchema = z.object({
   title: z.string().min(3, "Title must be at least 3 characters"),
   description: z.string().min(10, "Description must be at least 10 characters"),
   price: z.string().refine((val) => !isNaN(parseFloat(val)) && parseFloat(val) >= 0, {
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -132,6 +165,8 @@ export function ProductSubmissionForm() {
   const [activeTab, setActiveTab] = React.useState("manual"),
   
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   // Initialize the form
   const form = useForm<ProductFormValues>({
     resolver: zodResolver(productSchema)
@@ -149,6 +184,7 @@ export function ProductSubmissionForm() {
       const reader = new FileReader(),
       reader.onloadend = () => {
         setImagePreview(reader.result as string)
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -174,6 +210,8 @@ export function ProductSubmissionForm() {
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   // Apply AI-generated content to the form
   const handleApplyGenerated = (content: any) => {
@@ -188,39 +226,6 @@ export function ProductSubmissionForm() {
     setActiveTab("manual")
   },
 
-  // Handle form submission
-  const onSubmit = async (values: ProductFormValues) => {
-    if (!user) {
-      toast({
-        title: "Authentication Required"
-        description: "You must be logged in to publish products"
-        variant: "destructive"})
-      return
-    }
-    setIsSubmitting(true);
-
-    setIsSubmitting(true),
-    
-    try {
-      // Create the product listing
-      const productData = {
-        title: values.title
-        description: values.description
-        price: parseFloat(values.price)
-        category: values.category
-        currency: "USD", // Default currency
-        tags: values.tags ? values.tags.split(',').map(tag => tag.trim()) : [],
-        author: {
-          name: user.displayName |"Anonymous Creator"
-          id: user.id}
-        createdAt: new Date().toISOString()}
-      const { data: productRecord, error: productError } = await supabase
-        .from('product_listings')
-        .insert([productData])
-        .select('id')
-        .single();
-      if (productError) {
-        throw new Error(productError.message)
       }
       // If we have an image, upload it
       if (values.image) {
@@ -291,6 +296,7 @@ export function ProductSubmissionForm() {;
   const [isSubmitting, setIsSubmitting] = React.useState(false),;
   const [imagePreview, setImagePreview] = React.useState(null as string | null),;
   const [activeTab, setActiveTab] = React.useState("manual"),;
+<<<<<<< HEAD
 
       },
       reader.readAsDataURL(file)
@@ -298,6 +304,8 @@ export function ProductSubmissionForm() {;
   },
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   // Initialize the form;
   const form = useForm<ProductFormValues>({;
     resolver: zodResolver(productSchema),;
@@ -308,6 +316,9 @@ export function ProductSubmissionForm() {;
       category: "",;
       tags: ""}}),;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 
@@ -320,6 +331,7 @@ export function ProductSubmissionForm() {;
         variant: "destructive"})
       return
     }
+<<<<<<< HEAD
 =======
   // Handle image upload preview;
   const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {;
@@ -422,6 +434,8 @@ export function ProductSubmissionForm() {;
         if (updateError) {;
           throw new Error(updateError.message);
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
     setIsSubmitting(true),
@@ -451,13 +465,6 @@ export function ProductSubmissionForm() {;
         }
       }
       
-
-        }
-      }
-      
-        }
-      }
-      
       // Show success message
       toast({
         title: "Product Published!"
@@ -471,6 +478,7 @@ export function ProductSubmissionForm() {;
         variant: "destructive"})
     } finally {
       setIsSubmitting(false)
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -584,6 +592,8 @@ export function ProductSubmissionForm() {;
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <FormField
               control={form.control}
               name="title"
@@ -599,9 +609,13 @@ export function ProductSubmissionForm() {;
                   <FormMessage />
                 </FormItem>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ;
       // Show success message;
       toast({;
@@ -619,6 +633,7 @@ export function ProductSubmissionForm() {;
     }
   };
   return (;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -791,6 +806,9 @@ export function ProductSubmissionForm() {;
 ;
   return (;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">;
       <TabsList className="grid grid-cols-2 mb-6">;
         <TabsTrigger value="manual" className="data-[state=active]:bg-zion-purple/20 data-[state=active]:text-zion-purple">;
@@ -802,18 +820,24 @@ export function ProductSubmissionForm() {;
         </TabsTrigger>;
       </TabsList>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
       <TabsContent value="manual">;
         <Form {...form}>;
           <form onSubmit={form && form.handleSubmit(onSubmit)} className="space-y-6">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+    }
+    setIsSubmitting(true);
+    }
+  }
+  return (
             <FormField
               control={form && form.control}
               name="title"
               render={({ field }) => (;
                 <FormItem>;
                   <FormLabel>Product Title</FormLabel>;
-=======
 import React from './react';
 import { use_form } from './react - hook - form';
 import { zod_resolver } from '@hookform / resolvers / zod';
@@ -1002,6 +1026,7 @@ if ( {) {
               render={({ field }) => (
                 <FormItem>;
                   <FormLabel > Product Title</FormLabel>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
             />;
@@ -1019,6 +1044,8 @@ if ( {) {
                 <FormItem>;
                   <FormLabel>Product Title</FormLabel>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   <FormControl>;
                     <Input placeholder="Enter product title" {...field} />;
                   </FormControl>;
@@ -1027,11 +1054,14 @@ if ( {) {
                   </FormDescription>;
                   <FormMessage />;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
                 </FormItem>;
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               )}
 
             />;
@@ -1040,6 +1070,7 @@ if ( {) {
             <FormField
               control={form && form.control}
               name="description"
+<<<<<<< HEAD
 
               render={({ field }) => (;
                 <FormItem>;
@@ -1070,6 +1101,8 @@ if ( {) {
                       className="min-h-32" ;
                       {...field} ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     />;
                   </FormControl>;
                   <FormDescription>;
@@ -1077,7 +1110,18 @@ if ( {) {
                   </FormDescription>;
                   <FormMessage />;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+              <FormField
+                control={form && form.control}
+                name="price"
+                render={({ field }) => (;
+                  <FormItem>;
+                    <FormLabel>Price (USD)</FormLabel>;
+                    <FormControl>;
+                      <Input type="number" min="0" step="0 && 0.01" placeholder="0 && 0.00" {...field} />;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 </FormItem>)}
             />;
             <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 6">;
@@ -1089,6 +1133,7 @@ if ( {) {
                     <FormLabel > Price (USD)</FormLabel>;
                     <FormControl>;
                       <Input type="number" min="0" step="0.01" placeholder="0.00" {...field} />;
+<<<<<<< HEAD
 
 =======
                 </FormItem>;
@@ -1105,11 +1150,14 @@ if ( {) {
                     <FormControl>;
                       <Input type="number" min="0" step="0.01" placeholder="0.00" {...field} />;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     </FormControl>;
                     <FormDescription>;
                       Set your price in USD;
                     </FormDescription>;
                     <FormMessage />;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
               />;
@@ -1126,15 +1174,22 @@ if ( {) {
                 control={form.control}
                 name="category";
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+              <FormField
+                control={form && form.control}
+                name="category"
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 render={({ field }) => (;
                   <FormItem>;
                     <FormLabel>Category</FormLabel>;
                     <FormControl>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       <select
                         className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm"
                         {...field}>;
-=======
                   </FormItem>)}
               />;
               <FormField;
@@ -1147,6 +1202,7 @@ if ( {) {
                       <select;
                         className="flex h - 10 w - full rounded - md border border - input bg - background px - 3 py - 2 text - base ring - offset - background placeholder:text - muted - foreground focus - visible:outline - none focus - visible:ring - 2 focus - visible:ring - ring focus - visible:ring - offset - 2 disabled:cursor - not - allowed disabled:opacity - 50 md:text - sm";
                         {...field}
+<<<<<<< HEAD
                       >;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -1155,6 +1211,8 @@ if ( {) {
                         {...field}
                       >;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                         <option value="">Select a category</option>;
                         <option value="digital_product">Digital Product</option>;
                         <option value="service">Service</option>;
@@ -1166,18 +1224,20 @@ if ( {) {
                     </FormControl>;
                     <FormMessage />;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
               />;
             </div>;
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <FormField
               control={form && form.control}
               name="tags"
               render={({ field }) => (;
                 <FormItem>;
                   <FormLabel>Tags</FormLabel>;
-=======
                   </FormItem>)}
               />;
             </div>;
@@ -1187,6 +1247,7 @@ if ( {) {
               render={({ field }) => (
                 <FormItem>;
                   <FormLabel > Tags</FormLabel>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
             />;
@@ -1204,10 +1265,13 @@ if ( {) {
                 <FormItem>;
                   <FormLabel>Tags</FormLabel>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   <FormControl>;
                     <Input placeholder="Enter tags separated by commas" {...field} />;
                   </FormControl>;
                   <FormDescription>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
             />;
@@ -1254,6 +1318,11 @@ if ( {) {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+            <FormField
+              control={form && form.control}
+              name="image"
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                           className="w-full h-full object-cover"
                         />;
                       </AspectRatio>;
@@ -1261,6 +1330,7 @@ if ( {) {
                   )}
                 </FormItem>;
               )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
             />;
@@ -1473,13 +1543,17 @@ if ( {) {
             title:form.getValues("title"),;
             category:form.getValues("category");
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           }}
         />;
       </TabsContent>;
     </Tabs>;
 <<<<<<< HEAD
-  );
+<<<<<<< HEAD
 =======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+  );
                     Add relevant tags to help users find your product (e.g., ai, productivity, design);
                   </FormDescription>;
                   <FormMessage />;
@@ -1537,6 +1611,7 @@ if ( {) {
         />;
       </TabsContent>;
     </Tabs>);
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
   ),; import {
@@ -1609,4 +1684,6 @@ return (<Tabs value= {
     </Tabs>
   )
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -9,20 +10,27 @@
 try {;
   const res = await fetch ('/api/summit/register', {;
   name: 'Gov Partner';
+=======
+const partners: Partner[] = [ {
+  name: 'Gov Partner'
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 {
-  name: 'Venture Partner';
+  name: 'Venture Partner'
 }
 {
-  name: 'University Partner';
+  name: 'University Partner'
 }];
-const on_submit = async (e: React.FormEvent) => {
-  e.prevent_default ();
-set_submitting (true);
-set_result (null);
+const onSubmit = async (e: React.FormEvent) => {
+  e.preventDefault ();
+setSubmitting (true);
+setResult (null);
 try {
-  const res = await fetch ('/api / summit / register', {
+  const res = await fetch ('/api/summit/register', {
+
+
   method: 'POST';
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 headers: {;
   'Content-Type': 'application/json' ;
@@ -30,12 +38,15 @@ headers: {;
 body: JSON && JSON.stringify ({;
   ...form, source: 'summit-page' ;
 }) ;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 });
-const data = await res && res.json ();
-if (!res && res.ok) throw new Error (data?.error || 'Failed');
-setResult ({;
-  ok: true ;
+const data = await res.json ();
+if (!res.ok) throw new Error (data?.error |'Failed');
+setResult ({
+  ok: true
 });
+<<<<<<< HEAD
 setForm ({;
   name: '', email: '', role: '', country: '' ;
 }) ;
@@ -49,12 +60,15 @@ setForm ({;
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 
 export default function SummitPage() {;
   const [platform, setPlatform] = React && React.useState<;
     'youtube' | 'twitch' | 'twitter';
+<<<<<<< HEAD
 
 
 
@@ -64,10 +78,13 @@ export default function SummitPage() {;
   const [platform, setPlatform] = React && React.useState<;
     'youtube' | 'twitch' | 'twitter';
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   >('youtube');
   const [embedId, setEmbedId] = React && React.useState<string>('dQw4w9WgXcQ');
   const { isPast, days, hours, minutes, seconds } =;
     useCountdown(EVENT_START_ISO);
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -84,21 +101,27 @@ export default function SummitPage() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   const [form, setForm] = React.useState({
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     name: '',
     email: '',
     role: '',
     country: '',
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   });
   const [submitting, setSubmitting] = React && React.useState(false);
   const [result, setResult] = React && React.useState<{;
     ok?: boolean;
     error?: string;
   } | null>(null);
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -124,6 +147,8 @@ export default function SummitPage() {;
       bio: 'Part of the "Powered by Zion" alumni network advancing AI governance.',;
       twitter: 'https://twitter && twitter.com',;
     },;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   ];
 
   const partners: Partner[] = [;
@@ -131,17 +156,23 @@ export default function SummitPage() {;
     { name: 'Venture Partner' },;
     { name: 'University Partner' },;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   ];
   const onSubmit = async (e: React && React.FormEvent) => {;
     e && e.preventDefault();
 
+<<<<<<< HEAD
 =======
 =======
   ];
   const onSubmit = async (e: React && React.FormEvent) => {;
     e && e.preventDefault();
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import Head from 'next/head';
 import React from 'react';
 type Speaker = {
@@ -188,9 +219,12 @@ export default function SummitPage() {
   const [embedId, setEmbedId] = React.useState<string>('dQw4w9WgXcQ');
   const { isPast, days, hours, minutes, seconds } = useCountdown(EVENT_START_ISO);
   const [form, setForm] = React.useState({ name: '', email: '', role: '', country: '' }),
+<<<<<<< HEAD
   const [submitting, setSubmitting] = React.useState(false);
   const [result, setResult] = React.useState<{ ok?: boolean, error?: string } | null>(null);
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const speakers: Speaker[] = [
     {
       name: 'Featured Speaker: Your Name',
@@ -231,6 +265,7 @@ function SummitPage() {
   const { is_past, days, hours, minutes, seconds } =;
     use_countdown (EVENT_START_ISO);
   const [form, set_form] = React.useState ({
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -288,10 +323,13 @@ export default function SummitPage() {
     role: ''
     country: ''
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     name: '',
     email: '',
     role: '',
     country: '',
+<<<<<<< HEAD
   });
 <<<<<<< HEAD
   const [submitting, set_submitting] = React.useState (false);
@@ -436,6 +474,8 @@ export default function SummitPage() {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     setResult(null),;
     try {;
       const res = await fetch('/api/summit/register', {;
@@ -451,6 +491,7 @@ export default function SummitPage() {
       setResult({ error: err?.message || 'Unexpected error' });
     } finally {;
       setSubmitting(false);    }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -512,11 +553,17 @@ export default function SummitPage() {
 }
   },
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  const livestreamEmbed = () => {;
+    if (platform === 'youtube') {;
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const livestreamEmbed = () => {
     if (platform === 'youtube') {
       return (
         <iframe
           className="w-full aspect-video rounded-lg border border-gray-200 dark:border-gray-800"
+<<<<<<< HEAD
 <<<<<<< HEAD
           src={`https://www.youtube.com/embed/${embedId}`}
           title="YouTube livestream"
@@ -646,6 +693,17 @@ if (platform === 'twitch') {
           </p>;
           <div className='mt-6 flex flex-wrap gap-3'>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+      </Head>
+      <section className='relative overflow-hidden rounded-xl bg-gradient-to-br from-cyber-dark to-cyber-blue text-white p-8 md:p-12 shadow-neon-blue'>
+        <div className='max-w-4xl'>
+          <p className='uppercase tracking-widest text-neon-blue'>
+            Zion Global Summit 2025
+          </p>
+          <h1 className='mt-2 text-3xl md:text-5xl font-extrabold'>
+          </p>
+          <div className='mt-6 flex flex-wrap gap-3'>
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <a
               href='#register'
               className='inline-flex items-center px-4 py-2 rounded-md bg-neon-blue text-black font-semibold shadow-neon-blue'>;
@@ -658,6 +716,7 @@ if (platform === 'twitch') {
             </a>;
             <a
               href='#agenda'
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -725,6 +784,8 @@ if (platform === 'twitch') {
           <ol className="space-y-3 list-decimal list-inside">
             <li>Opening Keynote — Launching Zion Protocol</li>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <li>Panel 1 — The Future of Digital Nations</li>
             <li>Panel 2 — ZionDAO in Action</li>
             <li>Demo — ZionGPT Live</li>
@@ -732,10 +793,13 @@ if (platform === 'twitch') {
           </ol>
         </section>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         <section className="p-6 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black">
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <h2 className="text-2xl font-bold mb-4">Event Info</h2>
           <ul className="space-y-2">
             <li><span className="font-medium">Date:</span> Nov 12, 2025</li>
@@ -743,6 +807,7 @@ if (platform === 'twitch') {
             <li><span className="font-medium">Location:</span> Hybrid (Virtual + In‑Person)</li>
             <li><span className="font-medium">Tagline:</span> AI, Talent, Trust — Globalized</li>
           </ul>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
         </section>
@@ -886,6 +951,11 @@ if ( {) {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+        </section>
+      </div>
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <section
         id='speakers'
         className='mt-8 p-6 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black'>;
@@ -900,6 +970,7 @@ if ( {) {
                   src={s && s.avatarUrl}
                   alt={s && s.name}
                   className='w-14 h-14 rounded-full border border-gray-200 dark:border-gray-800'
+<<<<<<< HEAD
 <<<<<<< HEAD
                 />;
                 <div>;
@@ -952,12 +1023,15 @@ if ( {) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <div>
                   <div className="font-semibold">{s.name}</div>
                   <div className="text-sm opacity-70">{s.title}</div>
                 </div>
               </div>
               <p className="mt-3 text-sm">{s.bio}</p>
+<<<<<<< HEAD
               <div className="mt-3 flex gap-3 text-sm">
 <<<<<<< HEAD
                 {s.twitter && <a className="underline" href={s.twitter} target="_blank" rel="noreferrer">Twitter</a>}
@@ -974,6 +1048,8 @@ if ( {) {
       </section>;
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <section
         id='partners'
         className='mt-8 p-6 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black'>;
@@ -981,6 +1057,7 @@ if ( {) {
           <h2 className='text-2xl font-bold'>Partners</h2>;
           <a
             href='#register'
+<<<<<<< HEAD
             className='px-4 py-2 rounded-md bg-black text-white dark:bg-white dark:text-black border border-gray-200 dark:border-gray-800'>;
             Become a Sponsor;
           </a>;
@@ -1014,12 +1091,15 @@ if ( {) {
           <a href="#register" className="px-4 py-2 rounded-md bg-black text-white dark:bg-white dark:text-black border border-gray-200 dark:border-gray-800">Become a Sponsor</Link>
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         </div>
         <div className="mt-6 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4">
           {partners.map((p) => (
             <div key={p.name} className="h-16 rounded-md border border-dashed border-gray-300 dark:border-gray-700 flex items-center justify-center text-sm opacity-70">
               {p.logoUrl ? <img src={p.logoUrl} alt={p.name} className="max-h-12" /> : p.name}
             </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
@@ -1038,10 +1118,13 @@ if ( {) {
           <h2 className='text-2xl font-bold'>Livestream</h2>;
           <div className='flex flex-wrap items-center gap-2'>;
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <section id="livestream" className="mt-8 p-6 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black">
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
           <h2 className="text-2xl font-bold">Livestream</h2>
           <div className="flex flex-wrap items-center gap-2">
+<<<<<<< HEAD
 
             <select
               aria-label='Platform'
@@ -1055,6 +1138,8 @@ if ( {) {
         </div>;
       </section>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <section;
         id='speakers';
         className='mt - 8 p - 6 rounded - lg border border - gray - 200 dark:border - gray - 800 bg - white dark:bg - black';
@@ -1143,6 +1228,7 @@ if ( {) {
               <option value='twitter'>Twitter</option>;
             </select>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
             <input;
               aria - label='Embed ID';
@@ -1153,6 +1239,8 @@ if ( {) {
               aria - label='Embed ID';
               className='px - 3 py - 2 rounded border border - gray - 300 dark:border - gray - 700 bg - transparent';
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               placeholder={
                 platform === 'youtube';
                   ? 'YouTube Video ID';
@@ -1160,6 +1248,7 @@ if ( {) {
                     ? 'Twitch Channel';
                     : 'Twitter Broadcast ID';
               }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1173,6 +1262,8 @@ if ( {) {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <section
         id='register'
         className='mt-8 p-6 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black'>;
@@ -1180,11 +1271,6 @@ if ( {) {
         <form onSubmit={onSubmit} className='grid md:grid-cols-2 gap-4'>;
           <div>;
             <label className='block text-sm mb-1'>Name</label>;
-
-      <section id="register" className="mt-8 p-6 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black">
-        <h2 className="text-2xl font-bold mb-4">Register</h2>
-        <form onSubmit={onSubmit} className="grid md:grid-cols-2 gap-4">
-
           <div>
             <label className="block text-sm mb-1">Name</label>
             <input
@@ -1235,6 +1321,7 @@ if ( {) {
               </span>;
             )}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -1259,6 +1346,8 @@ if ( {) {
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <section id="livestream" className="mt-8 p-6 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black">
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
           <h2 className="text-2xl font-bold">Livestream</h2>
@@ -1346,6 +1435,12 @@ if ( {) {
         </form>
       </section>
 
+<<<<<<< HEAD
+=======
+}
+}
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <section className="mt-8 p-6 rounded-lg border border-gray-200 dark: border-gray-800 bg-white dark:bg-black">
         <h2 className="text-xl font-semibold">AI Session Summaries (Optional)</h2>
         <p className="text-sm opacity-70 mt-2">Auto-generated summaries and ZionGPT moderation prompts coming soon.</p>
@@ -1436,6 +1531,7 @@ if ( {) {
           Auto - generated summaries and ZionGPT moderation prompts coming soon.;
         </p>;
       </section>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -2072,3 +2168,5 @@ export default function SummitPage(req, res) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

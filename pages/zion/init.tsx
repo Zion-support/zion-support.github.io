@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
   marketplace: true,
@@ -15,6 +16,8 @@
 
 =======
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 const InitPage: NextPage = () => {
   const [state, setState] = useState<DeployFormState> ({
   instanceName: '', defaultLanguage: 'en', deploymentRegion: 'us-east-1', tokenActivation: true, governanceMode: 'Hybrid', branding: {
@@ -64,11 +67,23 @@ const InitPage: NextPage = () => {
       [group]: { ...prev[group], [key]: !prev[group][key] }
     }));  }
 
-setState((prev) => ({
+
+  marketplace: true,
+  gpt: true,
+  academy: true,
+  token: true,
+  dao: true,
+
+    setState((prev) => ({
       ...prev;
       [group]: { ...prev[group], [key]: !prev[group][key] }}))
   };
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setSubmitting(true);
@@ -76,6 +91,7 @@ setState((prev) => ({
     setResult(null)
     try {
       const res = await fetch('/api/deploy/genesis', {
+<<<<<<< HEAD
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -202,6 +218,8 @@ import React from 'react';
   instanceName: '', defaultLanguage: 'en', deploymentRegion: 'us-east-1', tokenActivation: true, governanceMode: 'Hybrid', branding: {;
   logoUrl: '', primaryColor: '#4f46e5', secondaryColor: '#0ea5e9', subdomain: '' };
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 const defaultModules: DeployFormState['modules'] = {;
   marketplace: true,;
   gpt: true,;
@@ -258,6 +276,7 @@ const InitPage: NextPage = () => {;
       const res = await fetch('/api/deploy/genesis', {;
         method: 'POST',;
         headers: { 'Content-Type': 'application/json' },;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
         body: JSON.stringify(state)}),;
@@ -365,6 +384,8 @@ const InitPage: NextPage = () => {;
       const json = await res.json();
       if (!res.ok) throw new Error(json?.error |'Deployment failed');
       setResult(json);
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     } catch (err: any) {
       setError(err.message |'Unexpected error');
     } finally {
@@ -386,8 +407,23 @@ const InitPage: NextPage = () => {;
   }
 }
   },
+
+
+
+      const json = await res.json();
+      if (!res.ok) throw new Error(json?.error |'Deployment failed');
+      setResult(json);
+
+    } catch (error) {
+      setError(err.message || 'Unexpected error');
+    } catch (error) {
+      setError(err.message || 'Unexpected error');
+
   return (
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <form
         onSubmit={handleSubmit}
         className='grid grid-cols-1 gap-6 max-w-4xl'>;
@@ -490,6 +526,7 @@ const InitPage: NextPage = () => {
           </div>;
           <div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -505,10 +542,13 @@ const InitPage: NextPage = () => {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               }
             />;
           </div>;
           <div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -525,10 +565,13 @@ const InitPage: NextPage = () => {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               }
             />;
           </div>;
           <div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -581,6 +624,8 @@ const InitPage: NextPage = () => {
                     tokenActivation: !state.tokenActivation
                   })
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 }
               />;
               <label htmlFor='token' className='text-sm'>;
@@ -608,19 +653,25 @@ const InitPage: NextPage = () => {
           </div>;
           <div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
             >              <option>Admin</option>
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <div className="space-y-8">
       <div>
         <h1 className="text-2xl font-bold">Genesis Deploy</h1>
         <p className="text-sm text-gray-600 dark:text-gray-400">Initialize a full Zion OS instance from a single control panel.</p>
       </div>
+<<<<<<< HEAD
 
       <form onSubmit={handleSubmit} className="grid grid-cols-1 gap-6 max-w-4xl">
         <section className="grid grid-cols-1 md:grid-cols-2 gap-4">
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
           <div>
             <label className="block text-sm font-medium">Instance Name</label>
@@ -635,9 +686,6 @@ const InitPage: NextPage = () => {
             <input className="mt-1 w-full rounded-md border border-gray-300 dark:border-gray-700 bg-white/60 dark:bg-black/40 px-3 py-2" value={state.deploymentRegion} onChange={(e) => setState({ ...state, deploymentRegion: e.target.value })} />
           </div>
           <div>
-
-
-
             <label className="block text-sm font-medium">Token Activation</label>
             <div className="mt-2 flex items-center gap-3">
               <input id="token" type="checkbox" checked={state.tokenActivation} onChange={() => setState({ ...state, tokenActivation: !state.tokenActivation })} />
@@ -645,6 +693,7 @@ const InitPage: NextPage = () => {
             </div>
           </div>
           <div>
+<<<<<<< HEAD
 <<<<<<< HEAD
             <label className="block text-sm font-medium">Governance Mode</label>
             <select className="mt-1 w-full rounded-md border border-gray-300 dark:border-gray-700 bg-white/60 dark:bg-black/40 px-3 py-2" value={state.governanceMode} onChange={(e) => setState({ ...state, governanceMode: e.target.value as GovernanceMode })}>
@@ -675,12 +724,17 @@ const InitPage: NextPage = () => {
             <select className="mt-1 w-full rounded-md border border-gray-300 dark:border-gray-700 bg-white/60 dark:bg-black/40 px-3 py-2" value={state.governanceMode} onChange={(e) => setState({ ...state, governanceMode: e.target.value as GovernanceMode })}>
               <option>Admin</option>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <option>DAO</option>
               <option>Hybrid</option>
             </select>
           </div>
         </section>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
               value={state && state.governanceMode}
               onChange={e =>;
@@ -700,12 +754,15 @@ const InitPage: NextPage = () => {
         <section className='grid grid-cols-1 md:grid-cols-2 gap-4'>;
           <div>;
             <label className='block text-sm font-medium'>Logo URL</label>;
+<<<<<<< HEAD
 =======
               value={state && state.governanceMode}
         <section className='grid grid-cols-1 md:grid-cols-2 gap-4'>
           <div>
             <label className='block text-sm font-medium'>Logo URL</label>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <input
               className='mt-1 w-full rounded-md border border-gray-300 dark:border-gray-700 bg-white/60 dark:bg-black/40 px-3 py-2'
               value={state && state.branding.logoUrl}
@@ -715,11 +772,14 @@ const InitPage: NextPage = () => {
                   branding: { ...state && state.branding, logoUrl: e && e.target.value },;
                 });
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               }
             />;
           </div>;
@@ -728,6 +788,7 @@ const InitPage: NextPage = () => {
             <input
               type='color'
               className='mt-1 w-20 h-10 p-1 rounded-md border border-gray-300 dark:border-gray-700 bg-white/60 dark:bg-black/40'
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -766,10 +827,13 @@ const InitPage: NextPage = () => {
                   branding: { ...state.branding, logo_url: e.target.value },
                 });
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               }
             />;
           </div>;
           <div>;
+<<<<<<< HEAD
 
             <label className='block text - sm font - medium'>Primary Color</label>;
             <input;
@@ -785,10 +849,13 @@ const InitPage: NextPage = () => {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               }
             />;
           </div>;
           <div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -817,10 +884,13 @@ const InitPage: NextPage = () => {
                   },
                 });
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               }
             />;
           </div>;
           <div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -842,6 +912,8 @@ const InitPage: NextPage = () => {
               {Object && Object.keys(state && state.modules).map(key => (;
                 <label key={key} className='flex items-center gap-3 text-sm'>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   <input
                     type='checkbox'
                     checked={state && state.modules[key]}
@@ -863,10 +935,14 @@ const InitPage: NextPage = () => {
                   />                  <span>/{key}</span>;
                 </label>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 
@@ -890,6 +966,7 @@ const InitPage: NextPage = () => {
           </div>
         </section>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
         <section className='grid grid-cols-1 md:grid-cols-2 gap-4'>
@@ -903,6 +980,8 @@ const InitPage: NextPage = () => {
                     checked={state.modules[key]}
                     onChange={() => handleToggle('modules', key)}
                   />                  <span>/{key}</span>
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <section className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
             <label className="block text-sm font-medium">Logo URL</label>
@@ -942,12 +1021,15 @@ const InitPage: NextPage = () => {
                   <input type="checkbox" checked={state.modules[key]} onChange={() => handleToggle('modules', key)} />
                   <span>/{key}</span>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 </label>
               ))}
             </div>
@@ -960,6 +1042,7 @@ const InitPage: NextPage = () => {
                   <input type="checkbox" checked={state.bonusModules[key]} onChange={() => handleToggle('bonusModules', key)} />
                   <span>/{key}</span>
                 </label>
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
@@ -985,6 +1068,8 @@ const InitPage: NextPage = () => {
         <div className='flex items-center gap-3'>;
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <button
             disabled={submitting}
             className='inline-flex items-center px-4 py-2 rounded-md bg-indigo-600 text-white hover:bg-indigo-700 disabled:opacity-60'>;
@@ -993,6 +1078,7 @@ const InitPage: NextPage = () => {
           </button>;
           {error && <span className='text-sm text-red-500'>{error}</span>}        </div>;
       </form>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -1116,6 +1202,8 @@ export default InitPage;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 };
@@ -1151,6 +1239,11 @@ export default InitPage;
 }
     </div>;
   );
-},;
+}
 export default InitPage;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -47,12 +47,12 @@ export default function EnhancedServicesShowcase() {;
   ],;
 ;
   const categories = [;
-    { id:'all', name:'All Services', icon:'🚀', count:allServices.length },;
-    { id:'next-gen-ai', name:'ArrowRight-Gen AI', icon:'🧠', count:nextGenerationAIServices.length },;
-    { id:'cutting-edge-it', name:'Cutting-Edge IT', icon:'⚡', count:cuttingEdgeITServices.length },;
-    { id:'innovative-saas', name:'Innovative SaaS', icon:'💻', count:innovativeMicroSaasV2Services.length },;
-    { id:'quantum-space', name:'Quantum & Space', icon:'⚛️', count:quantumSpaceServices.length },;
-    { id:'enterprise', name:'Enterprise IT', icon:'🏢', count:enterpriseITServices.length }
+    { id:'all', name:'All Services', icon:'', count:allServices.length },;
+    { id:'next-gen-ai', name:'ArrowRight-Gen AI', icon:'', count:nextGenerationAIServices.length },;
+    { id:'cutting-edge-it', name:'Cutting-Edge IT', icon:'', count:cuttingEdgeITServices.length },;
+    { id:'innovative-saas', name:'Innovative SaaS', icon:'', count:innovativeMicroSaasV2Services.length },;
+    { id:'quantum-space', name:'Quantum & Space', icon:'', count:quantumSpaceServices.length },;
+    { id:'enterprise', name:'Enterprise IT', icon:'', count:enterpriseITServices.length }
   ],;
 ;
   const sortOptions = [;
@@ -133,19 +133,19 @@ export default function EnhancedServicesShowcase() {;
 ;
   const featuredServices = [;
     {;
-      title:'🚀 ArrowRight-Generation AI Services',;
+      title:' ArrowRight-Generation AI Services',;
       description:'Revolutionary AI platforms that push the boundaries of what\'s possible',;
       services:nextGenerationAIServices.slice(0, 3),;
       color:'from-purple-500 to-pink-600';
     },;
     {;
-      title:'⚡ Cutting-Edge IT Infrastructure',;
+      title:' Cutting-Edge IT Infrastructure',;
       description:'Advanced infrastructure solutions for the modern enterprise',;
       services:cuttingEdgeITServices.slice(0, 3),;
       color:'from-blue-500 to-cyan-600';
     },;
     {;
-      title:'💻 Innovative Micro SaaS Solutions',;
+      title:' Innovative Micro SaaS Solutions',;
       description:'Creative and practical SaaS tools for every business need',;
       services:innovativeMicroSaasV2Services.slice(0, 3),;
       color:'from-green-500 to-emerald-600';
@@ -487,7 +487,7 @@ export default function EnhancedServicesShowcase() {;
 ;
             {filteredServices.length === 0 && (;
               <div className="text-center py-16">;
-                <div className="text-6xl mb-4">🔍</div>;
+                <div className="text-6xl mb-4"></div>;
                 <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>;
                 <p className="text-gray-400 mb-6">Try adjusting your search criteria or browse all categories</p>;
                 <Button ;
@@ -607,6 +607,7 @@ const Button = ({ ;
     <button onClick={onClick} className={classes}>;
       {children}
     </button>;
+<<<<<<< HEAD
 :temp_conflicts/pages/enhanced-services-showcase.tsx
   );
 };
@@ -616,3 +617,5 @@ const Button = ({ ;
   ),;
 },
 :backup-problematic-files/temp_conflicts/pages/enhanced-services-showcase.tsx
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

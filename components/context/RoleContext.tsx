@@ -1,6 +1,21 @@
-
+import React, {
+  createContext
+  useContext
+  useEffect
+  useMemo
+  useState;
+  createContext,
+  useContext,
+  useEffect,
+  useMemo,;
+  useState,;
+import React, {
 
 <<<<<<< HEAD
+
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, {;
   createContext,;
   useContext,;
@@ -16,14 +31,20 @@ type RoleContextValue = {;
   setRole: (role: UserRole) => void;}
 const RoleContext = createContext<RoleContextValue | undefined>(undefined);
 
+<<<<<<< HEAD
 export const RoleProvider: React.FC<{ children: React.ReactNode }> = ({
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   children,;
 
 
+export const RoleProvider: React.FC<{ children: React && React.ReactNode }> = ({;
+  children,;
 }) => {  const [role, setRole] = useState<UserRole>('client');
+<<<<<<< HEAD
   useEffect(() => {
 <<<<<<< HEAD
 =======
@@ -39,14 +60,12 @@ import React, { createContext, useContext, useEffect, useMemo, useState } from '
   useMemo,
   useState,
 } from 'react';
+=======
+
+  useEffect(() => {;
+    try {import React, { createContext, useContext, useEffect, useMemo, useState } from 'react';
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export type UserRole = 'client' | 'talent';
-;
-type RoleContextValue = {
-  role: UserRole;
-  set_role: (role: UserRole) => void;}
-;
-const RoleContext = create_context < RoleContextValue | undefined>(undefined);
-;
 export const RoleProvider: React.FC<{ children: React.ReactNode }> = ({
   children,
 }) => {  const [role, set_role] = useState < UserRole>('client');
@@ -59,9 +78,13 @@ export type UserRole = 'client' | 'talent';
 ;
 type RoleContextValue = {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   role: UserRole;
   set_role: (role: UserRole) => void;  role: UserRole,
   set_role: (role: UserRole) => void;
@@ -70,16 +93,19 @@ type RoleContextValue = {
 const RoleContext = create_context < RoleContextValue | undefined>(undefined);
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 export const RoleProvider: React.FC<{ children: React.ReactNode }> = ({
 
 
   children,
 }) => {export const RoleProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {;
-
   const [role, setRole] = useState<UserRole>('client');
   useEffect(() => {
     try {
+<<<<<<< HEAD
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
@@ -148,15 +174,43 @@ export const RoleProvider: React.FC<{ children: React && React.ReactNode }> = ({
       }
     } catch {}
   }, []);
+=======
+      const saved =
+        typeof window !== 'undefined'
+          ? window.localStorage.getItem('zion_user_role')
+          : null;
+      if (saved === 'client' |saved === 'talent') {
+        setRole(saved);      }      const saved = typeof window !== 'undefined' ? window.localStorage.getItem('zion_user_role') : null;
+      if (saved === 'client' |saved === 'talent') {
+        setRole(saved)
+  children
+}) => {export const RoleProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+      }
+    } catch {}
+  }, []);
+
+  useEffect(() => {;
+    try {;
+      if (typeof window !== 'undefined') {;
+        window && window.localStorage.setItem('zion_user_role', role);      }        window && window.localStorage.setItem('zion_user_role', role);
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   useEffect(() => {
     try {
       if (typeof window !== 'undefined') {
         window.localStorage.setItem('zion_user_role', role)
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+        window.localStorage.setItem('zion_user_role', role);      }
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       }
     } catch {}
   }, [role]);
   const value = useMemo(() => ({ role, setRole }), [role]);
+<<<<<<< HEAD
 
 
   return <RoleContext && RoleContext.Provider value={value}>{children}</RoleContext && RoleContext.Provider>;};  return <RoleContext && RoleContext.Provider value={value}>{children}</RoleContext && RoleContext.Provider>;
@@ -166,6 +220,8 @@ export const RoleProvider: React.FC<{ children: React && React.ReactNode }> = ({
   return <RoleContext && RoleContext.Provider value={value}>{children}</RoleContext && RoleContext.Provider>;};  return <RoleContext && RoleContext.Provider value={value}>{children}</RoleContext && RoleContext.Provider>;
   return <RoleContext.Provider value={value}>{children}</RoleContext.Provider>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 };
 
 export function useRole(): any (): RoleContextValue {;
@@ -173,11 +229,22 @@ export function useRole(): any (): RoleContextValue {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   if (!ctx) throw new Error('useRole must be used within RoleProvider');
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+  return ctx;  return ctx
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
+  if (!ctx) throw new Error('useRole must be used within RoleProvider');
+  return ctx;  return ctx;
+}
 
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return ctx
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
@@ -227,6 +294,7 @@ const ctx = useContext (RoleContext);
 }
   return ctx;  return ctx;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -352,3 +420,5 @@ const ctx = useContext(RoleContext);
 }
   return ctx;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -1,14 +1,23 @@
-
 import React from "react";
 import {Badge} from "@/components/ui/badge";
 import {Button} from "@/components/ui/button";
 import {TalentProfile} from "@/types/talent";
 import {SmartContractInfo} from "@/types/smart-contracts";
 <<<<<<< HEAD
+<<<<<<< HEAD
 interface ContractPreviewProps {;
   contractContent?: string;
   generatedContract?: string, // Added to support both naming conventions;
 =======
+=======
+import React from "react",
+import { Badge } from "@/components/ui/badge",
+import { Button } from "@/components/ui/button",
+import { TalentProfile } from "@/types/talent";
+import { SmartContractInfo } from "@/types/smart-contracts";
+import { TalentProfile } from "@/types/talent",
+import { SmartContractInfo } from "@/types/smart-contracts",
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from './react';
 import { Badge } from '@/components / ui / badge';
 import { Button } from '@/components / ui / button';
@@ -18,15 +27,21 @@ interface ContractPreviewProps {
   contract_content?: string;
   generated_contract?: string, // Added to support both naming conventions;
 
+<<<<<<< HEAD
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   status?: 'draft' | 'ready' | 'pending';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   talent?: TalentProfile;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   on_deploy?: () => void;
   on_sign?: () => void;
   on_close?: () => void;
@@ -42,6 +57,7 @@ function ContractPreview() {
 ;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -56,10 +72,15 @@ import { SmartContractInfo } from "@/types/smart-contracts";
 import { TalentProfile } from "@/types/talent",
 import { SmartContractInfo } from "@/types/smart-contracts",
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface ContractPreviewProps {
   contractContent?: string,
   generatedContract?: string, // Added to support both naming conventions
   status?: 'draft' | 'ready' | 'pending',
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -69,10 +90,13 @@ interface ContractPreviewProps {
   onClose?: () => void;
   deployStatus?: string;
   deploymentInfo?: SmartContractInfo | null
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 export function ContractPreview({
   contractContent;
 
+<<<<<<< HEAD
   generatedContract
   status = 'ready'
   onDeploy
@@ -103,11 +127,15 @@ export function ContractPreview({
   
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  talent?: TalentProfile;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <div className="space - y-4">;
       <div className="flex justify - between items - center mb - 4">;
         <h2 className="text - 2xl font - bold">Contract Preview</h2>;
         {status === 'ready' ? (
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -244,6 +272,8 @@ export function ContractPreview({ ;
         {status === 'ready' ? (;
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <Badge
             variant="secondary"
             className="text-sm bg-green-100 text-green-800">;
@@ -257,20 +287,13 @@ export function ContractPreview({ ;
           </Badge>;
         ) : (;
           <Badge variant="outline">Draft</Badge>;
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         )}
-
-      </div>;
-
-
       {/* Contract content */}
       <div className="border rounded-lg p-6 bg-muted/50">;
         {/* Render the contract content as markdown or formatted text */}
         <div className="prose prose-sm max-w-none prose-headings:font-semibold prose-headings:text-foreground prose-p:text-muted-foreground">;
           {displayContent}
+<<<<<<< HEAD
 
         </div>;
       </div>;
@@ -314,6 +337,8 @@ export function ContractPreview({ ;
         </div>;      )}
       ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {/* Actions */}
       <div className="flex justify-end space-x-3 mt-4">;
         {onClose && (;
@@ -321,6 +346,7 @@ export function ContractPreview({ ;
             Close;
           </Button>;
         )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
         ) : (;
@@ -366,6 +392,8 @@ export function ContractPreview({ ;
         
         
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         {status === 'ready' && onDeploy && (
           <Button variant="outline" onClick={onDeploy}>
             Deploy on Blockchain
@@ -374,6 +402,7 @@ export function ContractPreview({ ;
       </div>
     </div>
   )
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 =======
@@ -403,6 +432,9 @@ export function ContractPreview({ ;
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
+=======
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <Badge;
             variant="secondary";
             className="text - sm bg - green - 100 text - green - 800";
@@ -449,6 +481,7 @@ export function ContractPreview({ ;
       </div>;
     </div>);
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
   ),;}
@@ -493,3 +526,5 @@ deploymentInfo
 }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

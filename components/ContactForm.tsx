@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -100,6 +101,8 @@ const ContactForm: React.FC = () => {;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       setSubmitStatus('success');
     } catch {;
       setSubmitStatus('error');
@@ -108,6 +111,7 @@ const ContactForm: React.FC = () => {;
     }
   }
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -416,10 +420,13 @@ const ContactForm: React.FC = () => {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <option value="consulting">Consulting</option>;
             <option value="other">Other</option>;
           </select>;
         </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
           />;
@@ -430,6 +437,8 @@ const ContactForm: React.FC = () => {
           />;
         </div>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <button
           type="submit"
           disabled={isSubmitting}
@@ -446,6 +455,7 @@ const ContactForm: React.FC = () => {
       </form>;
     </div>;
   );
+<<<<<<< HEAD
 
 <<<<<<< HEAD
         <div>;
@@ -502,3 +512,5 @@ export default ContactForm;
 
 export default ContactForm;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

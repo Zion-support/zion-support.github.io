@@ -1,10 +1,8 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ;
-
-interface ImportMetaEnv {
-  readonly VITE_APP_TITLE: string,
-  readonly VITE_SUPABASE_URL: string,
-  readonly VITE_SUPABASE_ANON_KEY: string,
   // add more env variables as needed;
 }
 interface ImportMeta {
@@ -15,6 +13,7 @@ interface ImportMeta {
 declare module 'vitest / config' {
   export { define_config } from 'vite';
 }
+<<<<<<< HEAD
 declare module '@vitejs/plugin-react - swc' {
   import { Plugin } from 'vite',
   export default function reactSWC (): Plugin;
@@ -104,6 +103,8 @@ declare module 'vitest/config' {;
 ;
 declare module '@vitejs/plugin-react-swc' {;
   import { Plugin } from 'vite',;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   export default function reactSWC(): Plugin;
 }
 ;
@@ -112,6 +113,7 @@ declare module 'path' {;
   export function join(...paths: string[]): string,;
   export function dirname(path: string): string;
 }
+<<<<<<< HEAD
 ;
 declare module 'lovable-tagger' {;
   import { Plugin } from 'vite',;
@@ -133,6 +135,8 @@ declare module 'lovable-tagger' {;
 }
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 declare let __dirname: string,
 declare let process: {
   env: {
@@ -147,6 +151,7 @@ declare let process: {;
     [key: string]: string | undefined,;
     NODE_ENV: 'development' | 'production' | 'test';
     PORT?: string;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -162,3 +167,7 @@ declare let process: {;
   }
 };
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  }
+};
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

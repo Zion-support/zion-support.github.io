@@ -1,6 +1,9 @@
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import FeedbackModal from "../../components/ui/FeedbackModal";
@@ -17,6 +20,7 @@ export default function ProjectPage() {
     // For talent view demo, swap role and provide slug
     // "x-demo-user-role": "talent"
     // "x-demo-talent-slug": "ava-chen"} as Record<string, string>
+<<<<<<< HEAD
 =======
 
 import { useEffect, useState } from "react",;
@@ -43,6 +47,8 @@ import { useEffect, useState } from "react",
 import { useRouter } from "next/router",
 import FeedbackModal from "../../components/ui/FeedbackModal",
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export default function ProjectPage() {
   const router = useRouter(),
   const { projectId } = router.query as { projectId?: string },
@@ -51,23 +57,26 @@ export default function ProjectPage() {
   const [error, setError] = useState<string | null>(null),
   const [note, setNote] = useState(""),
 
-
   const headers = {
     "x-demo-user-role": "client",
     "x-demo-user-id": "client-1",
     // For talent view demo, swap role and provide slug
     // "x-demo-user-role": "talent",
     // "x-demo-talent-slug": "ava-chen"} as Record<string, string>,
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   useEffect(() => {
     async function load() {
       if (!projectId) return
       try {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -119,6 +128,8 @@ if (return, ) {
 }
         set_project (json.project);
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       } catch (e: any) {
         set_error (e.message);
       } finally {
@@ -135,6 +146,7 @@ if (return, ) {
   }
 }
     load()
+<<<<<<< HEAD
 
 =======
         setLoading(true)
@@ -354,6 +366,8 @@ if ( {) {
       headers: { "Content-Type": "application/json", ...headers }
       body: JSON.stringify({ id: projectId, action: "add_note", content: note })})
     const json = await res.json()
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   }, [projectId]),
   const [showFeedback, setShowFeedback] = useState(false),
   async function addNote() {
@@ -366,7 +380,6 @@ if ( {) {
       setProject(json.project)
       setNote("")
       setShowFeedback(true)
-    }
   }
   async function markCompleted() {
     const res = await fetch(`/api/marketplace/projects`, {
@@ -377,8 +390,17 @@ if ( {) {
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+
+
+
   }
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
     } catch (error) {
     console.error("Error:", error);
@@ -386,43 +408,23 @@ if ( {) {
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
   return (
     <div className="max-w-4xl mx-auto p-6 space-y-6">
 
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   async function markCompleted() {
     const res = await fetch(`/api/marketplace/projects`, {
       method: "PATCH",
       headers: { "Content-Type": "application/json", ...headers },
       body: JSON.stringify({ id: projectId, action: "mark_completed" })}),
-  return (
-    <div className="max-w-4xl mx-auto p-6 space-y-6">
-      {_loading && <div>Loading…</div>}
-      {_error && <div className="text-red-600">{error}</div>}
-      {_project && (
     const json = await res.json(),
     if (json.ok) {
       setProject(json.project)
 
       setShowFeedback(true)
-      } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-  return (
-    <div className="max-w-4xl mx-auto p-6 space-y-6">
-      {loading && <div>Loading…</div>}
-      {error && <div className="text-red-600">{error}</div>}
-}
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  return (
-    <div className="max-w-4xl mx-auto p-6 space-y-6">
-      {loading && <div>Loading…</div>}
-      {error && <div className="text-red-600">{error}</div>}
       {loading && <div>Loading…</div>  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -433,28 +435,37 @@ if ( {) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {project && (
         <div className="space-y-6">
           <div className="flex items-center gap-3">
             <h1 className="text-2xl font-semibold">Project Kickoff</h1>
             <span className={`px-2 py-0.5 rounded text-xs ${project.status === "ACTIVE" ? "bg-emerald-100 text-emerald-700" : "bg-gray-200"}`}>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               {project.status  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             </span>
           </div>
-
           <section className="rounded border p-4">
             <h2 className="font-medium mb-2">Project Summary</h2>
             <div className="text-sm">
@@ -462,22 +473,27 @@ if ( {) {
               <div><b>Talent</b>: {project.talentSlug}</div>
               <div><b>Start</b>: {new Date(project.startDateIso).toLocaleDateString()}</div>
               <div className="mt-2">{project.summary}</div>
+<<<<<<< HEAD
 =======
               <div><b>Client</b>: {_project.clientId}</div>
               <div><b>Talent</b>: {_project.talentSlug}</div>
               <div><b>Start</b>: {_new Date(project.startDateIso).toLocaleDateString()}</div>
               <div className="mt-2">{_project.summary}</div>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             </div>
           </section>
-
           <section className="rounded border p-4">
             <h2 className="font-medium mb-2">Timeline</h2>
             <ul className="list-disc pl-6 space-y-1 text-sm">
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             </span>;
           </div>;
           <section className="rounded border p - 4">;
@@ -493,6 +509,7 @@ if ( {) {
             <h2 className="font - medium mb - 2">Timeline</h2>;
             <ul className="list - disc pl - 6 space - y-1 text - sm">;
               {project.timeline?.length ? (
+<<<<<<< HEAD
 
                 project.timeline.map((m: any) => (
                   <li key={m.id}>
@@ -663,6 +680,8 @@ export default function ProjectPage(req, res) {
               {project.timeline?.length ? (;
                 project.timeline.map((m: any) => (;
                   <li key={m.id}>;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     <span className="font-medium">{m.title}</span>;
                     {m.dueDateIso && <span> • due {new Date(m.dueDateIso).toLocaleDateString()}</span>  } catch (error) {
     console.error("Error:", error);
@@ -689,14 +708,18 @@ export default function ProjectPage(req, res) {
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             </ul>
           </section>
           <section className="rounded border p-4">
             <h2 className="font-medium mb-2">Documents</h2>
             <ul className="list-disc pl-6 space-y-1 text-sm">
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -732,17 +755,23 @@ export default function ProjectPage(req, res) {
                       <a href={d.url} className="text-indigo-600 underline" target="_blank" rel="noreferrer">{d.name}</Link>
                     ) : (
                       <span>{d.name}</span>
+=======
+              {project.documents?.length ? (
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     <span className="text-gray-500"> • uploaded {new Date(d.uploadedAtIso).toLocaleString()}</span>
                   </li>
                 ))
@@ -757,6 +786,7 @@ export default function ProjectPage(req, res) {
               {project.notes?.length ? (
                 project.notes.map((n: any) => (
                   <div key={n.id} className="text-sm">
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -774,11 +804,14 @@ export default function ProjectPage(req, res) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     <span className="text-gray-500"> • {new Date(n.createdAtIso).toLocaleString()}</span>
                   </div>
                 ))
               ) : (
                 <div className="text-sm text-gray-600">No notes yet.</div>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -796,6 +829,8 @@ export default function ProjectPage(req, res) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             </div>
             <div className="flex gap-2">
               <input value={note} onChange={(e) => setNote(e.target.value)} placeholder="Add a note" className="flex-1 border rounded px-3 py-2" />
@@ -805,6 +840,7 @@ export default function ProjectPage(req, res) {
           <div className="flex justify-end">
             {project.status !== "COMPLETED" && (
               <button onClick={markCompleted} className="px-4 py-2 rounded bg-emerald-600 text-white">Mark as Completed</button>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -876,6 +912,8 @@ export default function ProjectPage(req, res) {
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   );
 };
@@ -921,6 +959,7 @@ export default function ProjectPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 }
 
@@ -932,3 +971,5 @@ export default function ProjectPage(req, res) {
 }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

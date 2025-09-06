@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import { logInfo } from '@/utils/productionLogger'
 import { MessageSquare, Briefcase, Code, FileText, Megaphone, Search } from 'lucide-react'
@@ -47,36 +48,26 @@ const categoriesInfo: Record<string ForumCategoryInfo> = {
     adminOnly: false,
     icon: "Briefcase"
   },
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   "project-help": {
     id: "project-help"
     name: "Project Help"
     description: "Get help with your ongoing projects and collaboration."
     adminOnly: false
     icon: "MessageSquare"
-  }
-  "ai-tools": {
-    id: "ai-tools"
-    name: "AI Tools Discussion"
-    description: "Discuss AI tools, frameworks, and best practices."
-    adminOnly: false
-    icon: "Code"
-  }
-  },
-  "ai-tools": {
-    id: "ai-tools",
-    name: "AI Tools Discussion",
-    description: "Discuss AI tools, frameworks, and best practices.",
-    adminOnly: false,
-    icon: "Code"
-  },
   "feedback": {
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 "feedback": {
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     id: "feedback"
     name: "Feedback & Feature Requests"
     description: "Share your feedback and suggest new features."
     adminOnly: false
     icon: "FileText"
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -86,6 +77,8 @@ ursor/fix-website-loading-errors-and-merge-6662
   }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   },
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
   "announcements": {
@@ -97,6 +90,7 @@ ursor/fix-website-loading-errors-and-merge-6662
     description: "Official announcements from the Zion team."
     adminOnly: true
     icon: "Megaphone"
+<<<<<<< HEAD
 import { log_info } from '@/utils / production_logger';
 import { MessageSquare, Briefcase, Code, FileText, Megaphone, Search } from 'lucide-react';
 // Mock category data;
@@ -139,6 +133,8 @@ function CategoryContent({
   categoryId,
   category,
   IconComponent,
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
   user}: {
@@ -150,6 +146,7 @@ function CategoryContent({
   IconComponent: React.ComponentType<any>
   user: any
 }) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -166,6 +163,11 @@ function CategoryContent({
     index === self.findIndex(p => p.id === post.id)
   )
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const [searchQuery, setSearchQuery] = useState(""),
   const { featuredPosts, recentPosts } = useCommunity(),
 
@@ -173,15 +175,19 @@ function CategoryContent({
   const categoryPosts = [
     ...featuredPosts.filter(post => post.categoryId === categoryId),
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     ...recentPosts.filter(post => post.categoryId === categoryId)
-  ].filter((post, index, self) => 
+  ].filter((post, index, self,) =>
     // Remove duplicates by id
     index === self.findIndex(p => p.id === post.id)
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -197,6 +203,8 @@ function CategoryContent({
 
   )
   ),
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   // Apply search filter
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -206,6 +214,7 @@ function CategoryContent({
         post.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))
       )
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -214,6 +223,8 @@ function CategoryContent({
   const { isFollowed, follow, unfollow } = useFollowedCategories()
   const { toast } = useToast()
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const handleFollow = () => {
     if (!user) {
       toast({ title: 'Login required', description: 'Please sign in to follow this category' }),
@@ -225,11 +236,14 @@ function CategoryContent({
   const { toast } = useToast(),
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const handleFollow = () => {
     if (!user) {
       toast({ title: 'Login required', description: 'Please sign in to follow this category' })
@@ -240,8 +254,6 @@ import React from 'react';
 import { logInfo } from '@/utils/productionLogger';
 import { MessageSquare, Briefcase, Code, FileText, Megaphone, Search } from 'lucide-react';
 import { logInfo } from '@/utils/productionLogger';
-
-
 import { useState, useEffect } from "react",;
 import Link from "next/link",;
 import { useRouter } from "next/router",;
@@ -269,13 +281,17 @@ const categoriesInfo: Record<string, ForumCategoryInfo> = {;
     description: "Tips, strategies, and questions about getting hired on the platform.";
     adminOnly: false,;
     icon: "Briefcase";
+<<<<<<< HEAD
   };
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   "project-help": {;
     id: "project-help",;
     name: "Project Help",;
     description: "Get help with your ongoing projects and collaboration.",;
     adminOnly: false,;
     icon: "MessageSquare";
+<<<<<<< HEAD
   };
   "ai-tools": {;
     id: "ai-tools",;
@@ -284,13 +300,18 @@ const categoriesInfo: Record<string, ForumCategoryInfo> = {;
     adminOnly: false,;
     icon: "Code";
   };
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   "feedback": {;
     id: "feedback",;
     name: "Feedback & Feature Requests",;
     description: "Share your feedback and suggest new features.",;
     adminOnly: false,;
     icon: "FileText";
+<<<<<<< HEAD
   };
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   "announcements": {;
     id: "announcements",;
     name: "Announcements",;
@@ -298,6 +319,7 @@ const categoriesInfo: Record<string, ForumCategoryInfo> = {;
     adminOnly: true,;
     icon: "Megaphone";
   }
+<<<<<<< HEAD
 };
 
 const iconMap = {;
@@ -364,12 +386,16 @@ function CategoryContent(): any ({;
 =======
       return;
       return;
+=======
+      return;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     }
     if (isFollowed(categoryId)) {
       unfollow(categoryId)
     } else {
       follow(categoryId)
     }
+<<<<<<< HEAD
   )
 }
   }
@@ -384,12 +410,30 @@ function CategoryContent(): any ({;
 }
   },;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  );
+}
+;
+export default function ForumCategoryPage() {;
+  const router = useRouter(),;
+  const { categoryId } = router.query as { categoryId: string },;
+  const { user } = useAuth(),;
+  // Check if the category exists and user has access;
+  const category = categoryId ? categoriesInfo[categoryId] : null,;
+  const IconComponent = category ? iconMap[category.icon as keyof typeof iconMap] : null,;
+  // Check access for admin-only categories;
+  const hasAccess = category && (;
+    !category.adminOnly ||;
+    (user && (user.userType === 'admin' || user.role === 'admin'));
+  );
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   logInfo('CategoryContent - categoryId:', { data: categoryId }),;
   logInfo('CategoryContent - categoryPosts:', { data: categoryPosts }),;
   logInfo('CategoryContent - filteredPosts:', { data: filteredPosts }),;
   const category = categoryId ? categoriesInfo[categoryId] : null;
   const IconComponent = category ? iconMap[category && category.icon as keyof typeof iconMap] : null;
 
+<<<<<<< HEAD
 }
   );
 
@@ -451,6 +495,8 @@ function CategoryContent(): any ({;
   );
 };
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 /**
  * CategoryContent - Function description
  */
@@ -479,9 +525,13 @@ function CategoryContent() {
 if ( {) {
   $2
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       toast ({ title: 'Login required', description: 'Please sign in to follow this category' }),
       return;
     }
@@ -491,6 +541,7 @@ if ( {) {
       unfollow (category_id);
     } else {
       follow (category_id);
+<<<<<<< HEAD
     }
   }
   log_info ('CategoryContent - category_id:', { data: category_id }),
@@ -522,6 +573,8 @@ export default function ForumCategoryPage() {;
     !category.adminOnly ||;
     (user && (user.userType === 'admin' || user.role === 'admin'));
   );
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   useEffect(() => {;
     // Add a small delay to ensure router is ready;
     if (categoryId && category) {;
@@ -570,5 +623,8 @@ export default function ForumCategoryPage() {;
   );
 }
 ;
+<<<<<<< HEAD
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

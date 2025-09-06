@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import {useState, useEffect} from 'react';
 import {use_form} from 'react - hook - form';
@@ -12,6 +13,8 @@ import { use_auth } from '@/hooks / use_auth';
 <<<<<<< HEAD
 =======
 import {useState, useEffect} from 'react';
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useState, useEffect  } from 'react';
 import { useForm  } from 'react-hook-form';
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -20,7 +23,10 @@ import { toast } from "sonner";
 import { useNavigate  } from 'react-router-dom';
 import { jobSchema, JobSchemaType  } from './validation';
 import { useAuth } from "@/hooks/useAuth";
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {useState, useEffect} from 'react';
 import {useForm} from 'react-hook-form';
 import {zodResolver} from "@hookform/resolvers/zod";
@@ -38,10 +44,13 @@ export const useJobForm = ({ jobId, onSuccess }: JobPostingProps) => {;
   const { user } = useAuth();
   const navigate = useNavigate();
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useState, useEffect } from 'react',
 import { useForm } from 'react-hook-form',
 import { zodResolver } from "@hookform/resolvers/zod",
@@ -50,16 +59,20 @@ import { toast } from "sonner",
 import { useNavigate } from 'react-router-dom',
 import { jobSchema, JobSchemaType } from './validation',
 import { useAuth } from "@/hooks/useAuth",
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export interface JobPostingProps {
   job_id?: string;
   on_success?: () => void;
 }
+<<<<<<< HEAD
 
 
   const { user } = useAuth(),
@@ -116,6 +129,8 @@ export const useJobForm = ({ job_id, on_success }: JobPostingProps) =>: any {
     resolver: zodResolver(jobSchema),
     defaultValues: {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       title: '';
       company: '';
       location: '';
@@ -132,6 +147,7 @@ export const useJobForm = ({ job_id, on_success }: JobPostingProps) =>: any {
       is_remote: false;
       category: '';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
       toast && toast.error("You must be logged in to post a job");
       navigate("/login"),
@@ -146,10 +162,13 @@ export const useJobForm = ({ job_id, on_success }: JobPostingProps) =>: any {
       toast.error("You must be logged in to post a job");
       navigate("/login")
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       return
     }
     setIsLoading(true);
     try {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       const publishedDate = startDate ? startDate && startDate.toString() : '';
@@ -160,10 +179,13 @@ export const useJobForm = ({ job_id, on_success }: JobPostingProps) =>: any {
       const publishedDate = startDate ? startDate.toString() : '';
       const expiryDate = endDate ? endDate.toString() : '';
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       const jobData = {
         ...values;
         published_date: publishedDate;
         expiry_date: expiryDate;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
         is_remote: isRemote,
@@ -174,11 +196,14 @@ export const useJobForm = ({ job_id, on_success }: JobPostingProps) =>: any {
         is_remote: isRemote
         user_id: user.id}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       if (onSuccess) {
         onSuccess()
       }
       return jobData
     } catch (error: any) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -203,6 +228,8 @@ export const useJobForm = ({ job_id, on_success }: JobPostingProps) =>: any {
     submitJob
   }
 }
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
       title: '',
       company: '',
@@ -229,23 +256,6 @@ export const useJobForm = ({ job_id, on_success }: JobPostingProps) =>: any {
       toast.error("You must be logged in to post a job"),
       navigate("/login"),
       return
-    }
-
-    setIsLoading(true);
-
-    try {
-      const publishedDate = startDate ? startDate.toString() : '';
-      const expiryDate = endDate ? endDate.toString() : '';
-
-      const jobData = {
-        ...values;
-        published_date: publishedDate;
-        expiry_date: expiryDate;
-        is_remote: isRemote,
-        user_id: user.id};
-
-      if (onSuccess) {
-        onSuccess()
 import { useState, useEffect } from 'react',;
 import { useForm } from 'react-hook-form',;
 import { zodResolver } from "@hookform/resolvers/zod",;
@@ -308,6 +318,7 @@ export const useJobForm = ({ jobId, onSuccess }: JobPostingProps) => {;
         user_id: user.id},;
       if (onSuccess) {;
         onSuccess();
+<<<<<<< HEAD
 
 export const useJobForm = ({ job_id, on_success }: JobPostingProps) =>: any {
   const { user } = use_auth ();
@@ -375,6 +386,9 @@ export const useJobForm = ({ job_id, on_success }: JobPostingProps) =>: any {
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+      throw error
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       status: '',
       external_apply_link: ''}
     mode: "on_change"});
@@ -407,6 +421,7 @@ if ( {) {
   $2
 }
         on_success ();
+<<<<<<< HEAD
 
       title: '',
       company: '',
@@ -438,31 +453,36 @@ if ( {) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       }
       return job_data;
     } catch (error: any) {
       console.error ("Error in job form submission:", error);
       toast.error (error.message || "Failed to process form");
       throw error;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     } finally {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 ;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
+      setIsLoading (false);
+    }
+  }
   return {
     form;
     is_loading;
     start_date;
     setStartDate;
-
-    end_date,
-
     setEndDate;
     is_remote;
     setIsRemote;
     initial_values;
     setInitialValues;
+<<<<<<< HEAD
     submit_job;
 =======
       setIsLoading(false)
@@ -499,6 +519,8 @@ if ( {) {
     initialValues;
     setInitialValues;
     submitJob
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ;
       return jobData;
     } catch (error: any) {;
@@ -521,28 +543,12 @@ if ( {) {
     initialValues,;
     setInitialValues;
     submitJob;
-
-;
-
-  return {
-    form;
-    is_loading;
-    start_date;
-    setStartDate;
-
-    end_date,
-
-    setEndDate;
-    is_remote;
-    setIsRemote;
-    initial_values;
-    setInitialValues;
     submit_job;
-      setIsLoading(false)
-
-
+  }
+};
   }
 }
+<<<<<<< HEAD
 
 ;
 
@@ -551,3 +557,5 @@ if ( {) {
   }
 };
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

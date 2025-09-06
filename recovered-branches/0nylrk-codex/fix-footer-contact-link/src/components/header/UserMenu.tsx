@@ -1,10 +1,7 @@
-
-import { Link } from "react-router-dom",
-import { useAuth } from "@/hooks/useAuth",
-import { useToast } from "@/hooks/use-toast",
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 import { Link  } from './react-router-dom';
 import { use_auth  } from '@/hooks / use_auth';
@@ -57,10 +54,14 @@ function UserMenu() {
   const { toast } = use_toast ();
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+import {
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const handleSignOut = async () => {
     try {
       await logout ();
     } catch (error) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -86,13 +87,15 @@ export function UserMenu() {;
         description: "There was an error signing you out. Please try again.",;
         variant: "destructive",;
 <<<<<<< HEAD
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
       });
     }
   }
-=======
-      toast({
 
+<<<<<<< HEAD
 =======
   DropdownMenuTrigger,;
 } from "@/components/ui/dropdown-menu";
@@ -143,6 +146,8 @@ export function UserMenu() {
     }
   }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   if (!user) {;
     return (
       <div className="hidden md: flex items-center space-x-4">;
@@ -152,6 +157,7 @@ export function UserMenu() {
         <Link
           to="/signup"
           className="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 bg-zion-purple text-white hover:bg-zion-purple-light h-10 px-4 py-2">;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -192,11 +198,14 @@ export function UserMenu() {;
           className="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 bg-zion-purple text-white hover:bg-zion-purple-light h-10 px-4 py-2";
         >;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           Register;
         </Link>;
       </div>;
     );
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
   return (
 
@@ -241,12 +250,15 @@ export function UserMenu() {;
             <AvatarImage src={user.avatarUrl || ""} alt={user.displayName || "User Avatar"} />
             <AvatarFallback>{user.displayName?.charAt(0).toUpperCase() || "U"}</AvatarFallback>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           </Avatar>
           <span className="sr-only">Open user menu</span>
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
         <div className="grid gap-2 px-2 py-2">
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -267,6 +279,8 @@ export function UserMenu() {;
           <div className="text-sm font-medium leading-none">{user.displayName || "User"}</div>
           <div className="text-muted-foreground text-xs leading-none">{user.email}</div>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         </div>
         <DropdownMenuSeparator />
         <DropdownMenuItem asChild>
@@ -286,6 +300,7 @@ export function UserMenu() {;
       </DropdownMenuContent>
     </DropdownMenu>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
               src={user && user.avatarUrl || ""}
               alt={user && user.displayName || "User Avatar"}
@@ -298,11 +313,15 @@ export function UserMenu() {;
 =======
 ;
   return (;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <DropdownMenu>;
       <DropdownMenuTrigger asChild>;
         <Button variant="ghost" className="h-8 w-8 rounded-full">;
           <Avatar className="h-8 w-8">;
+            <AvatarImage
   );
+<<<<<<< HEAD
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   )
@@ -401,6 +420,8 @@ export function UserMenu() {;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       toast ({
         title: "Error signing out",
         description: "There was an error signing you out. Please try again.",
@@ -469,6 +490,7 @@ if ( {) {
       </DropdownMenuContent>;
     </DropdownMenu>);
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 }
 =======
@@ -509,3 +531,6 @@ const handleSignOut = async () => {
 }
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

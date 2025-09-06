@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -16,6 +17,8 @@ import {Badge} from "@/components/ui/badge";
 import {Search, Filter} from "lucide-react";
 import {AppLayout} from "@/layout/AppLayout";
 import {SEO} from "@/components/SEO";
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useState } from "react",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { Input } from "@/components/ui/input",
@@ -25,13 +28,14 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table",
 import { Badge } from "@/components/ui/badge",
 import { Search, Filter } from "lucide-react",
-
-
 import { AppLayout } from "@/layout/AppLayout";
 import { SEO } from "@/components/SEO";
 import { AppLayout } from "@/layout/AppLayout",
 import { SEO } from "@/components/SEO",
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 // Mock data for support requests
 
 const MOCK_SUPPORT_REQUESTS = [
@@ -45,6 +49,7 @@ const MOCK_SUPPORT_REQUESTS = [
     createdAt: "2023-12-15T14:30:00Z"
     lastUpdated: "2023-12-15T15:45:00Z"
     category: "authentication"
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -58,6 +63,8 @@ const MOCK_SUPPORT_REQUESTS = [
   }
   },
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   {
     id: "SR-1002"
     user: "sarah.smith@company.co"
@@ -68,6 +75,7 @@ const MOCK_SUPPORT_REQUESTS = [
     createdAt: "2023-12-14T09:15:00Z"
     lastUpdated: "2023-12-15T13:20:00Z"
     category: "billing"
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -81,6 +89,8 @@ const MOCK_SUPPORT_REQUESTS = [
   }
   },
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   {
     id: "SR-1003"
     user: "tech.guru@startup.io"
@@ -91,6 +101,7 @@ const MOCK_SUPPORT_REQUESTS = [
     createdAt: "2023-12-15T11:00:00Z"
     lastUpdated: "2023-12-15T11:00:00Z"
     category: "billing"
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -104,6 +115,8 @@ const MOCK_SUPPORT_REQUESTS = [
   }
   },
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   {
     id: "SR-1004"
     user: "developer@codelab.dev"
@@ -114,6 +127,7 @@ const MOCK_SUPPORT_REQUESTS = [
     createdAt: "2023-12-13T16:45:00Z"
     lastUpdated: "2023-12-13T16:45:00Z"
     category: "api"
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -127,6 +141,8 @@ const MOCK_SUPPORT_REQUESTS = [
   }
   },
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   {
     id: "SR-1005"
     user: "maria.rodriguez@design.co"
@@ -137,6 +153,7 @@ const MOCK_SUPPORT_REQUESTS = [
     createdAt: "2023-12-12T10:30:00Z"
     lastUpdated: "2023-12-15T09:15:00Z"
     category: "disputes"
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -150,6 +167,8 @@ const MOCK_SUPPORT_REQUESTS = [
   }
   },
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   {
     id: "SR-1006"
     user: "alex.wong@datacompany.com"
@@ -160,6 +179,7 @@ const MOCK_SUPPORT_REQUESTS = [
     createdAt: "2023-12-08T13:20:00Z"
     lastUpdated: "2023-12-15T08:30:00Z"
     category: "verification"
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -173,6 +193,8 @@ const MOCK_SUPPORT_REQUESTS = [
   }
   },
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   {
     id: "SR-1007"
     user: "jamie.taylor@tech.org"
@@ -184,6 +206,7 @@ const MOCK_SUPPORT_REQUESTS = [
     lastUpdated: "2023-12-13T11:25:00Z"
     category: "profile"
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 class ErrorBoundary extends React.Component {
@@ -233,10 +256,13 @@ import {SEO} from "@/components/SEO";
 
 ];
 export default function SupportRequests() {
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const [searchQuery, setSearchQuery] = useState("");
   const [statusFilter, setStatusFilter] = useState<string | null>(null);
   const [priorityFilter, setPriorityFilter] = useState<string | null>(null);
   const [categoryFilter, setCategoryFilter] = useState<string | null>(null);
+<<<<<<< HEAD
 ],
 
 export default function SupportRequests() {;
@@ -251,6 +277,8 @@ export default function SupportRequests() {
   const [categoryFilter, setCategoryFilter] = useState<string | null>(null),
   
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   // Apply filters to the request data
   const filteredRequests = MOCK_SUPPORT_REQUESTS.filter(request => {
     // Apply search query filter
@@ -260,9 +288,12 @@ export default function SupportRequests() {
         !request.id.toLowerCase().includes(searchQuery.toLowerCase())) {
       return false
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useState } from "react",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Input } from "@/components/ui/input",;
@@ -275,18 +306,24 @@ import { Search, Filter } from "lucide-react",;
 import { AppLayout } from "@/layout/AppLayout",;
 import { SEO } from "@/components/SEO",;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 // Mock data for support requests;
 const MOCK_SUPPORT_REQUESTS = [;
   {;
     id: "SR-1001",;
 <<<<<<< HEAD
+<<<<<<< HEAD
     user: "john && john.doe@example && example.com",;
 =======
     user: "john.doe@example.com",;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     userId: "user-123",;
     issue: "Cannot access account after password reset",;
     status: "open",;
@@ -294,6 +331,7 @@ const MOCK_SUPPORT_REQUESTS = [;
     createdAt: "2023-12-15T14:30:00Z",;
     lastUpdated: "2023-12-15T15:45:00Z",;
     category: "authentication";
+<<<<<<< HEAD
 <<<<<<< HEAD
   };
   {;
@@ -305,6 +343,8 @@ const MOCK_SUPPORT_REQUESTS = [;
     id: "SR-1002",;
     user: "sarah.smith@company.co",;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     userId: "user-456",;
     issue: "Payment failed but funds were deducted",;
     status: "in-progress",;
@@ -312,6 +352,7 @@ const MOCK_SUPPORT_REQUESTS = [;
     createdAt: "2023-12-14T09:15:00Z",;
     lastUpdated: "2023-12-15T13:20:00Z",;
     category: "billing";
+<<<<<<< HEAD
 <<<<<<< HEAD
   };
   {;
@@ -323,6 +364,8 @@ const MOCK_SUPPORT_REQUESTS = [;
     id: "SR-1003",;
     user: "tech.guru@startup.io",;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     userId: "user-789",;
     issue: "Unable to download invoice PDF",;
     status: "open",;
@@ -330,6 +373,7 @@ const MOCK_SUPPORT_REQUESTS = [;
     createdAt: "2023-12-15T11:00:00Z",;
     lastUpdated: "2023-12-15T11:00:00Z",;
     category: "billing";
+<<<<<<< HEAD
 <<<<<<< HEAD
   };
   {;
@@ -341,10 +385,13 @@ const MOCK_SUPPORT_REQUESTS = [;
     id: "SR-1004",;
     user: "developer@codelab.dev",;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     userId: "user-235",;
     issue: "API integration documentation is outdated",;
     status: "open",;
     priority: "low",;
+<<<<<<< HEAD
 <<<<<<< HEAD
     createdAt: "2023-12-13T16:45:00Z", ;
     lastUpdated: "2023-12-13T16:45:00Z",;
@@ -362,6 +409,8 @@ const MOCK_SUPPORT_REQUESTS = [;
     id: "SR-1005",;
     user: "maria.rodriguez@design.co",;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     userId: "user-567",;
     issue: "Dispute with freelancer over delivered work quality",;
     status: "in-progress",;
@@ -369,6 +418,7 @@ const MOCK_SUPPORT_REQUESTS = [;
     createdAt: "2023-12-12T10:30:00Z",;
     lastUpdated: "2023-12-15T09:15:00Z",;
     category: "disputes";
+<<<<<<< HEAD
 <<<<<<< HEAD
   };
   {;
@@ -380,6 +430,8 @@ const MOCK_SUPPORT_REQUESTS = [;
     id: "SR-1006",;
     user: "alex.wong@datacompany.com",;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     userId: "user-890",;
     issue: "Profile verification pending for over 7 days",;
     status: "resolved",;
@@ -387,6 +439,7 @@ const MOCK_SUPPORT_REQUESTS = [;
     createdAt: "2023-12-08T13:20:00Z",;
     lastUpdated: "2023-12-15T08:30:00Z",;
     category: "verification";
+<<<<<<< HEAD
 <<<<<<< HEAD
   };
   {;
@@ -398,6 +451,8 @@ const MOCK_SUPPORT_REQUESTS = [;
     id: "SR-1007",;
     user: "jamie.taylor@tech.org",;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     userId: "user-345",;
     issue: "Cannot upload portfolio images",;
     status: "resolved",;
@@ -407,6 +462,7 @@ const MOCK_SUPPORT_REQUESTS = [;
     category: "profile";
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 ];
 
 export default function SupportRequests() {;
@@ -415,6 +471,8 @@ export default function SupportRequests() {;
 ],;
 export default function SupportRequests() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const [searchQuery, setSearchQuery] = useState(""),;
   const [statusFilter, setStatusFilter] = useState<string | null>(null),;
   const [priorityFilter, setPriorityFilter] = useState<string | null>(null),;
@@ -428,11 +486,14 @@ export default function SupportRequests() {;
         !request.id.toLowerCase().includes(searchQuery.toLowerCase())) {;
       return false;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     }
     // Apply status filter
     if (statusFilter && request.status !== statusFilter) {
@@ -446,6 +507,7 @@ export default function SupportRequests() {;
     if (categoryFilter && request.category !== categoryFilter) {
       return false
     }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -493,6 +555,11 @@ export default function SupportRequests() {;
   },
   
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+    return true
+  });
+  // Count by status for the summary dashboard
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <AppLayout>
       <SEO
@@ -551,6 +618,7 @@ export default function SupportRequests() {;
           </TabsList>
           <TabsContent value="all" className="mt-6">
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
@@ -560,6 +628,9 @@ export default function SupportRequests() {;
   const [priorityFilter, setPriorityFilter] = useState<string | null>(null);
   const [categoryFilter, setCategoryFilter] = useState<string | null>(null);
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   // Apply filters to the request data;
   const filteredRequests = MOCK_SUPPORT_REQUESTS && MOCK_SUPPORT_REQUESTS.filter(request => {;
     // Apply search query filter;
@@ -569,43 +640,35 @@ export default function SupportRequests() {;
         !request && request.id.toLowerCase().includes(searchQuery && searchQuery.toLowerCase())) {;
       return false;
     }
-
     // Apply status filter;
     if (statusFilter && request && request.status !== statusFilter) {;
       return false;
     }
-
     // Apply priority filter;
     if (priorityFilter && request && request.priority !== priorityFilter) {;
       return false;
     }
-
     // Apply category filter;
     if (categoryFilter && request && request.category !== categoryFilter) {;
       return false;
     }
-
-    return true;
-  });
-
   // Count by status for the summary dashboard;
   const openCount = MOCK_SUPPORT_REQUESTS && MOCK_SUPPORT_REQUESTS.filter(r => r && r.status === 'open').length;
   const inProgressCount = MOCK_SUPPORT_REQUESTS && MOCK_SUPPORT_REQUESTS.filter(r => r && r.status === 'in-progress').length;
   const resolvedCount = MOCK_SUPPORT_REQUESTS && MOCK_SUPPORT_REQUESTS.filter(r => r && r.status === 'resolved').length;
   const totalCount = MOCK_SUPPORT_REQUESTS && MOCK_SUPPORT_REQUESTS.length;
-
   const resetFilters = () => {;
     setSearchQuery("");
     setStatusFilter(null);
     setPriorityFilter(null);
     setCategoryFilter(null);
   };
-
   return (
     <AppLayout>;
       <SEO
         title="Support Requests | Admin Dashboard"
         description="Manage and track user support requests and issues"
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -755,6 +818,8 @@ export default function SupportRequests() {;
         title="Support Requests | Admin Dashboard";
         description="Manage and track user support requests and issues";
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       />;
       <div className="container mx-auto px-4 py-8">;
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between mb-8">;
@@ -767,10 +832,13 @@ export default function SupportRequests() {;
             </p>;
           </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
           ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <div className="mt-4 md:mt-0">;
             <Button className="bg-zion-purple hover:bg-zion-purple-light">;
               New Support Case;
@@ -778,10 +846,13 @@ export default function SupportRequests() {;
           </div>;
         </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
         ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         {/* Status Cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">;
           <Card>;
@@ -791,10 +862,13 @@ export default function SupportRequests() {;
             </CardHeader>;
           </Card>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
           ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <Card>;
             <CardHeader className="pb-2">;
               <CardTitle className="text-2xl font-bold">{inProgressCount}</CardTitle>;
@@ -802,10 +876,13 @@ export default function SupportRequests() {;
             </CardHeader>;
           </Card>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
           ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <Card>;
             <CardHeader className="pb-2">;
               <CardTitle className="text-2xl font-bold">{resolvedCount}</CardTitle>;
@@ -813,10 +890,13 @@ export default function SupportRequests() {;
             </CardHeader>;
           </Card>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
           ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <Card>;
             <CardHeader className="pb-2">;
               <CardTitle className="text-2xl font-bold">{totalCount}</CardTitle>;
@@ -825,10 +905,13 @@ export default function SupportRequests() {;
           </Card>;
         </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
         ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <Tabs defaultValue="all" className="mb-8">;
           <TabsList>;
             <TabsTrigger value="all">All Requests</TabsTrigger>;
@@ -837,16 +920,20 @@ export default function SupportRequests() {;
             <TabsTrigger value="need-response">Need Response</TabsTrigger>;
           </TabsList>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
           ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           <TabsContent value="all" className="mt-6">;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             {/* Search and Filters */}
             <div className="flex flex-col md:flex-row gap-4 mb-6">;
               <div className="relative flex-1">;
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />;
+<<<<<<< HEAD
 <<<<<<< HEAD
                 <Input
                   placeholder="Search by ID, user or issue..."
@@ -864,16 +951,24 @@ export default function SupportRequests() {;
                 />
               </div>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+                <Input
+                  placeholder="Search by ID, user or issue..."
+                  value={searchQuery}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
               <Select value={statusFilter || ""} onValueChange={value => setStatusFilter(value || null)}>
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
               <Select value={statusFilter |""} onValueChange={value => setStatusFilter(value |null)}>
               <Select value={statusFilter || ""} onValueChange={value => setStatusFilter(value || null)}>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <SelectTrigger className="w-[180px]">
                   <SelectValue placeholder="Status" />
                 </SelectTrigger>
@@ -886,10 +981,14 @@ export default function SupportRequests() {;
               </Select>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
               <Select value={priorityFilter || ""} onValueChange={value => setPriorityFilter(value || null)}>
 
 
+<<<<<<< HEAD
 =======
               <Select value={priorityFilter || ""} onValueChange={value => setPriorityFilter(value || null)}>
 
@@ -897,6 +996,8 @@ export default function SupportRequests() {;
               <Select value={priorityFilter |""} onValueChange={value => setPriorityFilter(value |null)}>
               <Select value={priorityFilter || ""} onValueChange={value => setPriorityFilter(value || null)}>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <SelectTrigger className="w-[180px]">
                   <SelectValue placeholder="Priority" />
                 </SelectTrigger>
@@ -909,10 +1010,14 @@ export default function SupportRequests() {;
               </Select>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
               <Select value={categoryFilter || ""} onValueChange={value => setCategoryFilter(value || null)}>
 
 
+<<<<<<< HEAD
 =======
               <Select value={categoryFilter || ""} onValueChange={value => setCategoryFilter(value || null)}>
 
@@ -920,6 +1025,8 @@ export default function SupportRequests() {;
               <Select value={categoryFilter |""} onValueChange={value => setCategoryFilter(value |null)}>
               <Select value={categoryFilter || ""} onValueChange={value => setCategoryFilter(value || null)}>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <SelectTrigger className="w-[180px]">
                   <SelectValue placeholder="Category" />
                 </SelectTrigger>
@@ -968,6 +1075,7 @@ export default function SupportRequests() {;
                               ? 'secondary'
                               : 'outline'
                           }>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1178,6 +1286,8 @@ export default function SupportRequests() {;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                             {request.status}
                           </Badge>
                         </TableCell>
@@ -1188,7 +1298,10 @@ export default function SupportRequests() {;
                               : request.priority === 'medium'
                               ? 'default'
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                               : 'outline'
                           }>;
                             {request && request.status}
@@ -1200,7 +1313,6 @@ export default function SupportRequests() {;
                               ? 'destructive' 
                               : request && request.priority === 'medium' 
                               ? 'default' 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                               : 'outline'
                           }>;
                             {request && request.priority}
@@ -1209,6 +1321,7 @@ export default function SupportRequests() {;
                         <TableCell>{request && request.category}</TableCell>;
                         <TableCell>{new Date(request && request.createdAt).toLocaleDateString()}</TableCell>;
                         <TableCell>{new Date(request && request.lastUpdated).toLocaleDateString()}</TableCell>;
+<<<<<<< HEAD
 =======
                     {filteredRequests.map((request) => (;
                       <TableRow key={request.id}>;
@@ -1241,10 +1354,13 @@ export default function SupportRequests() {;
                         <TableCell>{new Date(request.createdAt).toLocaleDateString()}</TableCell>;
                         <TableCell>{new Date(request.lastUpdated).toLocaleDateString()}</TableCell>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                         <TableCell>;
                           <Button variant="ghost" size="sm">View</Button>;
                           <Button variant="ghost" size="sm">Assign</Button>;
                         </TableCell>;
+<<<<<<< HEAD
                       </TableRow>;
                     ))}
 <<<<<<< HEAD
@@ -1716,3 +1832,5 @@ if ( {) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

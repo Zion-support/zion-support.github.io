@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 import {useEffect} from 'react';
@@ -10,15 +11,20 @@ export default function WhitepaperGeneratorRedirect() {;
 import { useEffect  } from 'react';
 import { useRouter } from 'next/router';
 export default function WhitepaperGeneratorRedirect() {
-
+=======
 
 import {useEffect} from 'react';
 import {useRouter} from 'next/router';
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
 export default function WhitepaperGeneratorRedirect() {;
+<<<<<<< HEAD
 import {useEffect} from 'react';
 import {useRouter} from 'next/router';
 export default function WhitepaperGeneratorRedirect() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const router = useRouter();
   useEffect(() => {;
     router && router.replace('/tokenomics');
@@ -26,19 +32,25 @@ export default function WhitepaperGeneratorRedirect() {;
   }, [router]);
   return null;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 }
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useEffect } from 'react';
 import { useRouter } from 'next/router';
 export default function WhitepaperGeneratorRedirect() {
@@ -62,6 +74,7 @@ router.replace ('/tokenomics');
   }, [router]);
   return null;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 ;
@@ -78,11 +91,14 @@ export default function WhitepaperGeneratorRedirect(req, res) {
   }, [router]);
   return null;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -90,3 +106,5 @@ export default function WhitepaperGeneratorRedirect(req, res) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

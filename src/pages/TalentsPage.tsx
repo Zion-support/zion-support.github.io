@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useRouter  } from 'next/router';
 import { useState, useEffect, useCallback, useMemo  } from 'react';
 import { motion, AnimatePresence  } from 'framer-motion';
@@ -25,6 +26,8 @@ let filteredTalents = allTalents
     }
 }
 ;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 import { useRouter } from 'next/router',
 import { useState, useEffect, useCallback, useMemo } from 'react',
@@ -41,6 +44,7 @@ import { Card, CardContent, CardHeader, CardTitle  } from '@/components/ui/card'
 import Spinner from '@/components/ui/spinner';
 // Market insights component for talents
 const TalentMarketInsights: React.FC<{ stats: any }> = ({ stats }) => (
+<<<<<<< HEAD
   <Card className;
   <Card className;
   <Card className="bg-gradient-to-r from-green-900/20 to-blue-900/20 border-green-700/30 mb-6">
@@ -457,6 +461,8 @@ export default function TalentsPage() {;
     return () => window.removeEventListener('scroll', handleScroll)
   }, []),
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   // Loading state
   if (loading && talents.length === 0) {
     return (
@@ -478,6 +484,7 @@ export default function TalentsPage() {;
     )
   }
 
+<<<<<<< HEAD
 
 
     }
@@ -646,3 +653,5 @@ export default function TalentsPage() {;
 }
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

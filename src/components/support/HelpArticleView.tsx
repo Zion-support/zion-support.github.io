@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -23,12 +24,17 @@ export function HelpArticleView({ articleId }: HelpArticleViewProps) {
   const [feedbackGiven, setFeedbackGiven] = useState<"helpful" | "not-helpful" | null>(null);
 import { HELP_CATEGORIES } from "./help-content";
 import { HELP_CATEGORIES } from "./help-content",
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface HelpArticleViewProps {
   articleId: string
 }
 export function HelpArticleView({ articleId }: HelpArticleViewProps) {
+<<<<<<< HEAD
   const [feedbackGiven, setFeedbackGiven] = useState<"helpful" | "not-helpful" | null>(null);
   const [feedbackGiven, setFeedbackGiven] = useState<"helpful" | "not-helpful" | null>(null)
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   // Find the article in all categories
   let article = null;
   for (const category of HELP_CATEGORIES) {
@@ -45,10 +51,13 @@ export function HelpArticleView({ articleId }: HelpArticleViewProps) {
   const handleFeedback = (type: "helpful" | "not-helpful") => {
     setFeedbackGiven(type)
   return new Date(date).toLocaleDateString("en-US", {
+<<<<<<< HEAD
     year: "numeric"
     month: "long"
     day: "numeric", })
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 export function HelpArticleView(): any ({ articleId }: HelpArticleViewProps) {;
@@ -59,6 +68,7 @@ export function HelpArticleView(): any ({ articleId }: HelpArticleViewProps) {;
     month: "long",;
     day: "numeric", });
 };
+<<<<<<< HEAD
 <<<<<<< HEAD
 ;
 export function HelpArticleView({ articleId }: HelpArticleViewProps) {;
@@ -113,10 +123,15 @@ function HelpArticleView() {
   let article;
 <<<<<<< HEAD
 =======
+=======
+}
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const [feedbackGiven, setFeedbackGiven] = useState<"helpful" | "not-helpful" | null>(null),
   
   // Find the article in all categories
   let article,
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   for (const category of HELP_CATEGORIES) {
     const found = category.articles.find (array => a.id === article_id);
@@ -154,3 +169,19 @@ ursor/fix-website-loading-errors-and-merge-6662
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 ;
+=======
+  for (const category of HELP_CATEGORIES) {
+    const found = category.articles.find(a => a.id === articleId),
+    if (found) {
+      article = found,
+      break
+import React, { useState } from "react",;
+import { Button } from "@/components/ui/button",;
+import { Card } from "@/components/ui/card",;
+import { ThumbsUp, ThumbsDown } from 'lucide-react';
+import { toast } from "@/components/ui/use-toast",;
+import { HELP_CATEGORIES } from "./help-content",;
+interface HelpArticleViewProps {;
+  articleId: string;
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import React, { useState } from 'react';
 import { useToast } from '@/hooks/use-toast';
@@ -27,19 +28,26 @@ import {
 import { Textarea } from '@/components/ui/textarea'
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useState } from "react",
 import { useToast } from "@/hooks/use-toast",
 import { Button } from "@/components/ui/button",
 import { Card, CardContent, CardHeader, CardTitle, CardFooter } from "@/components/ui/card",
 import { Textarea } from "@/components/ui/textarea",
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+import { Check, Pencil } from 'lucide-react'
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface GeneratedDescriptionDisplayProps {;
   description: string;
-  onSave: (editedDescription: string) => void;interface GeneratedDescriptionDisplayProps {;
-  description: string,;
-  onSave: (editedDescription: string,) => void;
+  onSave: (editedDescription: string) => void;interface GeneratedDescriptionDisplayProps {
+  description: string
+  onSave: (editedDescription: string,) => void
 }
+<<<<<<< HEAD
 import { Check, Pencil } from 'lucide-react'
 interface GeneratedDescriptionDisplayProps {;
   description: string;
@@ -64,6 +72,17 @@ export function GeneratedDescriptionDisplay({
     })
   }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+export function GeneratedDescriptionDisplay(): any ({;
+  description,;
+  onSave,;
+}: GeneratedDescriptionDisplayProps) {;
+  const { toast } = useToast();
+  const [isEditing, setIsEditing] = useState(false);
+  const [editedDescription, setEditedDescription] = useState(description);
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const handleSave = () => {;
     onSave(editedDescription);
     setIsEditing(false);
@@ -74,10 +93,21 @@ export function GeneratedDescriptionDisplay({
   };
 
   return (
+<<<<<<< HEAD
     <Card className="border border-zion-blue-light bg-zion-blue-dark">
       <CardHeader>
         <CardTitle className="text-white flex items-center justify-between">
           Generated Description
+=======
+
+
+
+
+
+
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 export function GeneratedDescriptionDisplay({ 
   description, 
@@ -115,11 +145,14 @@ export function GeneratedDescriptionDisplay({
       <CardHeader>
         <CardTitle className="text-white flex items-center justify-between">
           Generated Description
+<<<<<<< HEAD
           <Button
             variant='outline'
             size='sm'
             onClick={() => setIsEditing(!isEditing)}
             className='border-zion-blue-light text-zion-slate-light hover:text-white'          >
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <Button 
             variant="outline" 
             size="sm" 
@@ -137,6 +170,7 @@ export function GeneratedDescriptionDisplay({
                 <Pencil className="h-4 w-4 mr-1" />
                 Edit
               </>
+<<<<<<< HEAD
             )}
           </Button>
         </CardTitle>
@@ -149,6 +183,8 @@ export function GeneratedDescriptionDisplay({
             className='bg-zion-blue border border-zion-blue-light text-white min-h-[300px] resize-none'          />
         ) : (
           <div className='bg-zion-blue p-4 rounded-md text-white min-h-[300px] whitespace-pre-wrap'>
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useState } from "react",;
 import { useToast } from "@/hooks/use-toast",;
 import { Button } from "@/components/ui/button",;
@@ -179,14 +215,13 @@ export function GeneratedDescriptionDisplay({;
   return (;
     <Card className="border border-zion-blue-light bg-zion-blue-dark">;
       <CardHeader>;
-        <CardTitle className="text-white flex items-center justify-between">;
+        <CardTitle className='text-white flex items-center justify-between'>;
           Generated Description;
-          <Button;
-            variant="outline";
-            size="sm";
+          <Button
+            variant='outline'
+            size='sm'
             onClick={() => setIsEditing(!isEditing)}
-            className="border-zion-blue-light text-zion-slate-light hover:text-white";
-          >;
+            className='border-zion-blue-light text-zion-slate-light hover:text-white'          >;
             {isEditing ? (;
               <>;
                 <Check className='h-4 w-4 mr-1' />;
@@ -221,6 +256,7 @@ export function GeneratedDescriptionDisplay({;
       </CardHeader>;
       <CardContent>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
         {isEditing ? (;
@@ -233,6 +269,8 @@ export function GeneratedDescriptionDisplay({;
         ) : (
           <div className="bg-zion-blue p-4 rounded-md text-white min-h-[300px] whitespace-pre-wrap">
 <<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 =======
@@ -241,6 +279,7 @@ export function GeneratedDescriptionDisplay({;
           </div>;
         )}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -248,18 +287,24 @@ export function GeneratedDescriptionDisplay({;
             {editedDescription}
           </div>
         )}
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       </CardContent>
       {isEditing && (
         <CardFooter>
           <Button
             onClick={handleSave}
             className='w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover:from-zion-cyan-light hover:to-zion-cyan text-white'          >
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       </CardContent>;
       {isEditing && (;
         <CardFooter>;
           <Button
             onClick={handleSave}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
             className="w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover:from-zion-cyan-light hover:to-zion-cyan text-white"
@@ -270,10 +315,19 @@ export function GeneratedDescriptionDisplay({;
             className="w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover:from-zion-cyan-light hover:to-zion-cyan text-white"
           >
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+            className="w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover:from-zion-cyan-light hover:to-zion-cyan text-white"
+          >
+            {editedDescription}
+          </div>
+        )}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             Save Changes
           </Button>
         </CardFooter>
       )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -292,10 +346,13 @@ export function GeneratedDescriptionDisplay({;
 }'"
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }className="w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover:from-zion-cyan-light hover:to-zion-cyan text-white" > Save Changes </Button> </CardFooter>) 
 }</Card>) 
 }'";
 };
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     </Card>;
@@ -324,3 +381,9 @@ export function GeneratedDescriptionDisplay({;
 =======
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+    </Card>;
+  );
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

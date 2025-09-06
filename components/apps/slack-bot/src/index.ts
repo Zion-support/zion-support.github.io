@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -23,9 +24,10 @@ const app = new App({
   signingSecret: process.env.SLACK_SIGNING_SECRET
   appToken: process.env.SLACK_APP_LEVEL_TOKEN
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   socketMode: true,});
-
-
 function helpText(): string {
   return [  token: process && process.env.SLACK_BOT_TOKEN;
   signingSecret: process && process.env.SLACK_SIGNING_SECRET;
@@ -34,6 +36,7 @@ function helpText(): string {
 });
 function helpText(): string {
   return [
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -146,6 +149,8 @@ if ( {) {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         response_type: 'ephemeral',
         text: `Here is a draft job post for *${role}*:\n\n${data && data.description}`,
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
@@ -153,18 +158,22 @@ if ( {) {
       return;
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
       const q = rest && rest.join(' ') || 'AI researcher in Brazil';
 
 =======
       const q = rest && rest.join(' ') || 'AI researcher in Brazil';
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       const res = await fetch(
         `${apiBase}/talent/search?q=${encodeURIComponent(q)}`
         {
           headers: { 'x-user-id': userId }
         }
       );
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -183,10 +192,13 @@ if ( {) {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       });
       return;
     }
     if (sub === 'track-project') {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       const name = rest && rest.join(' ') || 'Kleber';
@@ -194,6 +206,8 @@ if ( {) {
 =======
       const name = rest && rest.join(' ') || 'Kleber';
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       const res = await fetch(
         `${apiBase}/projects/${encodeURIComponent(name)}/track`
         {
@@ -210,6 +224,7 @@ if ( {) {
       }
       await respond({
 <<<<<<< HEAD
+<<<<<<< HEAD
 
         response_type: 'ephemeral',
         text: `*${data && data.project.name}* – status: ${data && data.project.status}\nMilestones: ${JSON && JSON.stringify(data && data.project.milestones)}`,
@@ -218,12 +233,15 @@ if ( {) {
         response_type: 'ephemeral',
         text: `*${data && data.project.name}* – status: ${data && data.project.status}\nMilestones: ${JSON && JSON.stringify(data && data.project.milestones)}`,
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       });
       return;
     }
     await respond({ response_type: 'ephemeral', text: helpText() });
   } catch (err: any) {
     await respond({
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -330,6 +348,8 @@ if ( {) {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       const res = await fetch(`${apiBase}/projects/${encodeURIComponent(name)}/track`, {
         headers: { 'x-user-id': userId }
       });
@@ -338,11 +358,11 @@ if ( {) {
         await respond({ response_type: 'ephemeral', text: 'Project not found.' });
         return
       }
-      await respond({ response_type: 'ephemeral', text: `*${data && data.project.name}* – status: ${data && data.project.status}\nMilestones: ${JSON && JSON.stringify(data && data.project.milestones)}` });
       return
     }
     await respond({ response_type: 'ephemeral', text: helpText() })
   } catch (err: any) {
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -376,10 +396,16 @@ if ( {) {
 })();
 
   console.log(`⚡️ Zion Slack bot running on port ${port}`)
+=======
+  }
+});
+(async () => {
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 })();
 
   console.log(`⚡️ Zion Slack bot running on port ${port}`);
 })();
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -391,6 +417,10 @@ if ( {) {
   console.log(`⚡️ Zion Slack bot running on port ${port}`)
 })();
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  console.log(`⚡️ Zion Slack bot running on port ${port}`);
+})();
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       const data = (await res.json ()) as any;
       await respond ({ response_type: 'ephemeral', text: `Here is a draft job post for *${role}*:\n\n${data.description}` });
       return;
@@ -440,6 +470,7 @@ if ( {) {
 console.log (`⚡️ Zion Slack bot running on port ${port}`);
 })();  console.log (`⚡️ Zion Slack bot running on port ${port}`);
 })();
+<<<<<<< HEAD
 ;
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -458,3 +489,5 @@ console.log(`⚡️ Zion Slack bot running on port ${port}`);
   console.log(`⚡️ Zion Slack bot running on port ${port}`);
 })();
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -6,12 +7,15 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {useState} from "react";
 import {Link} from "react-router-dom";
 import {DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger} from "@/components/ui/dropdown-menu";
 import {Button} from "@/components/ui/button";
 import {Eye, ChevronDown, Loader2} from "lucide-react";
 import {JobApplication, ApplicationStatus} from "@/types/jobs";
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -28,6 +32,10 @@ import { Link } from "react-router-dom",
 import { useState } from "react",
 import { Link } from "react-router-dom",
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+import { useState } from "react",
+import { Link } from "react-router-dom",
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { 
   DropdownMenu;
   DropdownMenuContent;
@@ -35,6 +43,7 @@ import {
   DropdownMenuTrigger
 } from "@/components/ui/dropdown-menu",
 import { Button } from "@/components/ui/button",
+<<<<<<< HEAD
 
 
 import { Eye, ChevronDown, Loader2 } from "lucide-react",
@@ -51,6 +60,8 @@ import { Eye, ChevronDown, Loader2 } from "lucide-react",
 import { JobApplication, ApplicationStatus } from "@/types/jobs",
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface ApplicationActionsProps {
 
   application: JobApplication
@@ -61,6 +72,9 @@ interface ApplicationActionsProps {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {useState} from "react";
 import {Link} from "react-router-dom";
 import {DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger} from "@/components/ui/dropdown-menu";
@@ -77,7 +91,10 @@ interface ApplicationActionsProps {;
 
 export function ApplicationActions(): any ({;
 
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export function ApplicationActions({;
   application;
   processingId;
@@ -86,6 +103,7 @@ export function ApplicationActions({
   application,
   processingId,
   onViewApplication,
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   application;
   processingId;
@@ -131,11 +149,19 @@ export function ApplicationActions({
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  onStatusChange;
+}: ApplicationActionsProps) {;
+  onStatusChange
+}: ApplicationActionsProps) {
+  return (
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             size="sm"
             disabled={processingId === application && application.id}>;
             {processingId === application && application.id ? (;
               <Loader2 className="h-4 w-4 animate-spin" />;
             ) : (;
+<<<<<<< HEAD
 <<<<<<< HEAD
               <>Status <ChevronDown className="h-4 w-4 ml-1" /></>;
             )}
@@ -240,6 +266,10 @@ export function ApplicationActions({;
         </DropdownMenuContent>
       </DropdownMenu>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+              <>Status <ChevronDown className="h-4 w-4 ml-1" /></>;
+            )}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
       <Button 
@@ -247,12 +277,15 @@ export function ApplicationActions({;
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
       <Button
         variant="default"
       <Button 
         variant="default" 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         size="sm"
         asChild
       >
@@ -262,6 +295,7 @@ export function ApplicationActions({;
       </Button>
     </div>
   )
+<<<<<<< HEAD
 <<<<<<< HEAD
 
           </Button>;
@@ -421,11 +455,14 @@ export function ApplicationActions({;
             onClick={() => onStatusChange(application.id, "rejected")}
             className="text-red-600";
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           >;
             Reject;
           </DropdownMenuItem>;
         </DropdownMenuContent>;
       </DropdownMenu>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       <Button;
@@ -466,3 +503,5 @@ export function ApplicationActions({;
 }
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 class ErrorBoundary extends React.Component {
@@ -25,6 +26,8 @@ class ErrorBoundary extends React.Component {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useState } from "react";
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
@@ -34,15 +37,19 @@ import {Card, CardContent} from "@/components/ui/card";
 import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
 import {Navigate} from "react-router-dom";
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import type { QuoteRequest } from "@/types/quotes";
 
 import {ProtectedRoute} from "@/components/ProtectedRoute";
 import {QuoteDetails} from "@/components/quotes/QuoteDetails";
 import {ExportToCSV} from "@/components/quotes/ExportToCSV";
 import {QuoteStatusCards, QuotesFilter, QuotesTable} from "@/components/admin/quotes";
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -60,6 +67,8 @@ export default function QuoteManager() {;
 
 =======
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useState } from "react",
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
@@ -72,18 +81,10 @@ import {
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
 import { Navigate } from "react-router-dom",
 import type { QuoteRequest } from "@/types/quotes";
-import type { QuoteRequest } from "@/types/quotes";
 
-import {ProtectedRoute} from "@/components/ProtectedRoute";
-import {QuoteDetails} from "@/components/quotes/QuoteDetails";
-import {ExportToCSV} from "@/components/quotes/ExportToCSV";
-import {QuoteStatusCards, QuotesFilter, QuotesTable} from "@/components/admin/quotes";
-export default function QuoteManager() {;
-export default function QuoteManager() {
-  const { user } = useAuth();
-  const isAdmin = user?.userType === 'admin';
   const [selectedQuote, setSelectedQuote] = useState<QuoteRequest | null>(null);
   const [showDetails, setShowDetails] = useState(false);
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import React, { useState } from './react';
 import { Header } from '@/components / Header';
@@ -124,6 +125,8 @@ function QuoteManager() {
     setDateRange;
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import type { QuoteRequest } from "@/types/quotes",
 import { ProtectedRoute } from "@/components/ProtectedRoute",
 import { QuoteDetails } from "@/components/quotes/QuoteDetails",
@@ -133,7 +136,10 @@ import {
   QuotesFilter,
   QuotesTable
 } from "@/components/admin/quotes",
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 export default function QuoteManager() {
   const { user } = useAuth(),
@@ -143,9 +149,12 @@ export default function QuoteManager() {
   const [showDetails, setShowDetails] = useState(false),
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const {
     quotes,
     isLoading,
@@ -161,6 +170,7 @@ export default function QuoteManager() {
     updateStatus,
     toggleArchive,
     deleteQuote
+<<<<<<< HEAD
 
   } = useAdminQuotes(),
 
@@ -172,6 +182,8 @@ export default function QuoteManager() {
   } = useAdminQuotes(),
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   // Count quotes by status
   const statusCounts = {
     new: quotes.filter(q => q.status === 'new').length
@@ -179,30 +191,11 @@ export default function QuoteManager() {
     accepted: quotes.filter(q => q.status === 'accepted').length
     responded: quotes.filter(q => q.status === 'responded').length
     closed: quotes.filter(q => q.status === 'closed').length
-
-
-  },
-
-
-  const handleViewDetails = (quote: QuoteRequest) => {
-    setSelectedQuote(quote)
-    setShowDetails(true)
-
-  },
-
-
-
   const handleResetFilters = () => {
     setStatusFilter('all');
     setArchiveFilter('all');
     setSearchQuery('');
     setDateRange({ from: undefined, to: undefined })
-
-
-  },
-
-
-
   if (!isAdmin) {
     return <Navigate to="/unauthorized" replace />
 
@@ -229,9 +222,9 @@ export default function QuoteManager() {
 
   if (!isAdmin) {;
     return <Navigate to="/unauthorized" replace />;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   }
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
   }
@@ -276,15 +269,22 @@ export default function QuoteManager() {
 
             
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+            
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useState } from "react",;
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
 import { useAdminQuotes } from "@/hooks/useAdminQuotes",;
 import { useAuth } from "@/hooks/useAuth",;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import { ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+import { ;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {;
   Card,;
   CardContent;
@@ -306,7 +306,10 @@ export default function QuoteManager() {;
   const [selectedQuote, setSelectedQuote] = useState<QuoteRequest | null>(null),;
   const [showDetails, setShowDetails] = useState(false),;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ;
 export default function QuoteManager() {;
   const { user } = useAuth(),;
@@ -315,7 +318,10 @@ export default function QuoteManager() {;
   const [selectedQuote, setSelectedQuote] = useState<QuoteRequest | null>(null),;
   const [showDetails, setShowDetails] = useState(false),;
 ;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const {;
     quotes,;
     isLoading,;
@@ -345,7 +351,10 @@ export default function QuoteManager() {;
     setShowDetails(true);
   },;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ;
   // Count quotes by status;
   const statusCounts = {;
@@ -361,7 +370,10 @@ export default function QuoteManager() {;
     setShowDetails(true);
   },;
 ;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const handleResetFilters = () => {;
     setStatusFilter('all'),;
     setArchiveFilter('all'),;
@@ -374,6 +386,7 @@ export default function QuoteManager() {;
 ;
   return (;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
     setDateRange({ from:undefined, to:undefined }),;
@@ -385,6 +398,8 @@ export default function QuoteManager() {;
 ;
   return (;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <ProtectedRoute adminOnly>;
       <div>;
         <Header />;
@@ -397,6 +412,7 @@ export default function QuoteManager() {;
               </div>;
               <ExportToCSV quotes={quotes} filename="zion-quote-requests" />;
             </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -417,6 +433,49 @@ export default function QuoteManager() {;
             {/* Status Summary Cards */}
             <QuoteStatusCards statusCounts={statusCounts} />
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+            {/* Status Summary Cards */}
+            <QuoteStatusCards statusCounts={statusCounts} />;
+
+import React, { useState } from './react';
+import { Header } from '@/components / Header';
+import { Footer } from '@/components / Footer';
+import { useAdminQuotes } from '@/hooks / useAdminQuotes';
+import { use_auth } from '@/hooks / use_auth';
+import { Card, CardContent } from '@/components / ui / card';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components / ui / tabs';
+import { Navigate } from './react-router-dom';
+import type { QuoteRequest } from "@/types / quotes";
+import { ProtectedRoute } from '@/components / ProtectedRoute';
+import { QuoteDetails } from '@/components / quotes / QuoteDetails';
+import { ExportToCSV } from '@/components / quotes / ExportToCSV';
+import { QuoteStatusCards, QuotesFilter, QuotesTable } from '@/components / admin / quotes';
+;
+export default /**
+ * QuoteManager - Function description
+ */
+function QuoteManager() {
+  const { user } = use_auth ();
+  const is_admin = user?.user_type === 'admin';
+;
+  const [selected_quote, setSelectedQuote] = useState < QuoteRequest | null>(null);
+  const [show_details, setShowDetails] = useState (false);
+;
+  const {
+    quotes;
+    is_loading;
+    error;
+    status_filter;
+    setStatusFilter;
+    archive_filter;
+    setArchiveFilter;
+    search_query;
+    setSearchQuery;
+    date_range;
+    setDateRange;
+  }
+  return (
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             {/* Filters */}
             <QuotesFilter
               searchQuery={searchQuery}
@@ -428,6 +487,7 @@ export default function QuoteManager() {;
               dateRange={dateRange}
               setDateRange={setDateRange}
               onReset={handleResetFilters}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
             />;
@@ -485,11 +545,14 @@ export default function QuoteManager() {;
                   <QuotesTable
                     quotes={quotes.filter(quote => !quote.is_archived)}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     isLoading={isLoading}
                     updateStatus={updateStatus}
                     toggleArchive={toggleArchive}
                     deleteQuote={deleteQuote}
                     onViewDetails={handleViewDetails}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
                   />;
@@ -502,6 +565,13 @@ export default function QuoteManager() {;
                   <QuotesTable
                     quotes={quotes && quotes.filter(quote => quote && quote.is_archived)}
                     isArchived={true}
+=======
+                    isLoading={isLoading}
+                    updateStatus={updateStatus}
+                    toggleArchive={toggleArchive}
+                    deleteQuote={deleteQuote}
+                    onViewDetails={handleViewDetails}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
                   />;
                 </Card>;
@@ -511,6 +581,7 @@ export default function QuoteManager() {;
         </div>;
 
 
+<<<<<<< HEAD
 =======
 
 
@@ -556,10 +627,13 @@ export default function QuoteManager() {;
           </div>
         </div>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         {/* Quote Details Modal */}
         <QuoteDetails
           quote={selectedQuote}
           isOpen={showDetails}
+<<<<<<< HEAD
           onClose={() => {
             setShowDetails(false);
 
@@ -577,6 +651,8 @@ export default function QuoteManager() {;
             setShowDetails(false);
             setSelectedQuote(null);
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           }}
         />
         <Footer />
@@ -584,19 +660,12 @@ export default function QuoteManager() {;
     </ProtectedRoute>
   )
 <<<<<<< HEAD
-}
+<<<<<<< HEAD
 =======
-            setSelectedQuote(null);
-          }}
-        />;
-
-        <Footer />;
-      </div>;
-    </ProtectedRoute>;
-  );
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
+          onClose={() => {;
+            setShowDetails(false);
     update_status;
     toggle_archive;
     delete_quote;
@@ -704,6 +773,7 @@ if ( {) {
       </div>;
     </ProtectedRoute>);
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
             setShowDetails(false),;
@@ -780,3 +850,5 @@ const [showDetails, setShowDetails] = useState (false);
 }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

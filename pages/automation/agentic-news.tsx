@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -44,6 +45,8 @@ function AgenticNewsPage() {
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
 // @ts-ignore
 import data from '../../data/agentic-news.json';
@@ -61,21 +64,23 @@ export default function AgenticNewsPage() {
     <EnhancedLayout>
       <div className="max-w-5xl mx-auto py-10">
         <h1 className="text-3xl font-bold">Agentic News</h1>
+<<<<<<< HEAD
         <p className="mt-2 text-sm text-gray-600 dark:text-gray-300">Updated at {data?.generatedAt |'—'}</p>
         <ul className="mt-6 space-y-4">
           {items.map((it, idx) => (
             <li key={idx} className="p-4 border border-gray-200 dark:border-gray-800 rounded-lg">
               <a className="font-medium underline" href={it.url} target="_blank" rel="noreferrer">{it.title}</a>
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <p className="mt-2 text-sm text-gray-600 dark:text-gray-300">Updated at {data?.generatedAt || '—'}</p>
         <ul className="mt-6 space-y-4">
           {items.map((it, idx) => (
             <li key={idx} className="p-4 border border-gray-200 dark:border-gray-800 rounded-lg">
-              <a className="font-medium underline" href={it.url} target="_blank" rel="noreferrer">{it.title}</a>
-              <div className="mt-1 text-xs text-gray-500 dark:text-gray-400">{it.source}</div>
             </li>
           ))}
         </ul>
       </div>
+<<<<<<< HEAD
     </EnhancedLayout>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
@@ -90,6 +95,8 @@ export default function AgenticNewsPage() {
 };
               <a className="font-medium underline" href={it.url} target="_blank" rel="noreferrer">{it.title}</Link>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <div className="mt-1 text-xs text-gray-500 dark:text-gray-400">{it.source}</div>
             </li>
           ))  } catch (error) {
@@ -106,6 +113,7 @@ export default function AgenticNewsPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 }
 
@@ -117,3 +125,5 @@ export default function AgenticNewsPage() {
 }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

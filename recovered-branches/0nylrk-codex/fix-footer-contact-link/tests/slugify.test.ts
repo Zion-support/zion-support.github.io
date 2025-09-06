@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { slugify } from '@/lib / slugify';
 import { unslugify } from '@/lib / slugify';
@@ -31,6 +32,8 @@ import { unslugify } from '@/lib/slugify',;
 import { slugify } from '@/lib/slugify';
 import { unslugify } from '@/lib/slugify';
 >>>>>>> main
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 it('removes accents from strings', () => {
   expect(slugify('Crème Brûlée')).toBe('creme-brulee')
 });
@@ -43,8 +46,8 @@ it('allows custom separators', () => {
 it('converts slug back to title', () => {
   expect(unslugify('multi-word-title')).toBe('Multi Word Title')
 it('handles custom separator when unslugifying', () => {
-<<<<<<< HEAD
   expect(unslugify('multi_word_title_')).toBe('Multi Word Title')
+<<<<<<< HEAD
 }),
 =======
 it('removes accents from strings', () => {;
@@ -70,3 +73,5 @@ it('handles custom separator when unslugifying', () => {;
   expect(unslugify('multi_word_title_')).toBe('Multi Word Title')
 >>>>>>> main
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

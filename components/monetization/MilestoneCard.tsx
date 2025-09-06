@@ -13,6 +13,17 @@ class ErrorBoundary extends React.Component {
     console.error('Error caught by boundary:', error, errorInfo);
   }
   
+<<<<<<< HEAD
+=======
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
@@ -22,6 +33,7 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React, { useState } from 'react';
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -141,6 +153,9 @@ import { Milestone } from '../../utils/types/milestones';
 
 
 type Props = {
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   milestone: Milestone;
   projectId: string;
   role: 'client' | 'talent' | 'admin';
@@ -162,6 +177,7 @@ export default function MilestoneCard({
   role
   onAction
 }: Props) {
+<<<<<<< HEAD
   milestone,
   projectId,
   role,
@@ -173,12 +189,18 @@ export default function MilestoneCard({
     role !== 'talent' && milestone.status === 'Pending';
   const canTalentSubmit =
     (role === 'talent' |role === 'admin') &&
+=======
+  milestone: Milestone;
+  project_id: string;
+  role: 'client' | 'talent' | 'admin';
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     milestone.status === 'In Progress';
-  const canClientApprove =
+  const canClientApprove =;
     role !== 'talent' && milestone.status === 'Submitted';
-  const canClientMarkPaid =
+  const canClientMarkPaid =;
     role !== 'talent' && milestone.status === 'Approved';
   return (
+<<<<<<< HEAD
     <div className='border rounded-lg p-4 bg-white shadow-sm'>
       <div className='flex items-start justify-between'>
         <div>
@@ -188,6 +210,16 @@ export default function MilestoneCard({
           </p>
         </div>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+    <div className='border rounded-lg p-4 bg-white shadow-sm'>;
+      <div className='flex items-start justify-between'>;
+        <div>;
+          <h3 className='text-lg font-semibold'>{milestone && milestone.title}</h3>;
+          <p className='text-sm text-gray-600'>;
+            Due: {new Date(milestone && milestone.dueDate).toLocaleDateString()}
+          </p>;
+        </div>;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <button
           className='text-sm text-blue-600'
           onClick={() => setExpanded(v => !v)}
@@ -214,6 +246,7 @@ type Props = {
       <div className='mt - 3'>;
         <div className='flex items - center gap - 2'>type Props = {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   milestone: Milestone,
   project_id: string,
@@ -223,6 +256,8 @@ type Props = {
 
 export default function MilestoneCard({ milestone, projectId, role, onAction }: Props) {;
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   const [expanded, setExpanded] = useState(false);
   const currentIndex = statusSteps.findIndex((s) => s === milestone.status);
@@ -230,6 +265,7 @@ export default function MilestoneCard({ milestone, projectId, role, onAction }: 
   const canTalentSubmit = (role === 'talent' |role === 'admin') && milestone.status === 'In Progress';
   const canClientApprove = role !== 'talent' && milestone.status === 'Submitted';
   const canClientMarkPaid = role !== 'talent' && milestone.status === 'Approved';
+<<<<<<< HEAD
 =======
 =======
   milestone: Milestone,
@@ -239,6 +275,8 @@ export default function MilestoneCard({ milestone, projectId, role, onAction }: 
         </button>;
       </div>;
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <div className='mt-3'>;
         <div className='flex items-center gap-2'>type Props = {;
   milestone: Milestone,;
@@ -246,6 +284,7 @@ export default function MilestoneCard({ milestone, projectId, role, onAction }: 
   role: 'client' | 'talent' | 'admin',;
   onAction: (action: 'in_progress' | 'submitted' | 'approved' | 'paid', milestoneId: string) => Promise<void> | void;
 };
+<<<<<<< HEAD
 
 const statusSteps = ['PendingIn ProgressSubmittedApprovedPaid'] as const;
 
@@ -254,10 +293,13 @@ export default function MilestoneCard(): any ({ milestone, projectId, role, onAc
 
   const currentIndex = statusSteps && statusSteps.findIndex((s) => s === milestone && milestone.status);
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const canClientMarkInProgress = role !== 'talent' && milestone && milestone.status === 'Pending';
   const canTalentSubmit = (role === 'talent' || role === 'admin') && milestone && milestone.status === 'In Progress';
   const canClientApprove = role !== 'talent' && milestone && milestone.status === 'Submitted';
   const canClientMarkPaid = role !== 'talent' && milestone && milestone.status === 'Approved';
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
@@ -306,6 +348,9 @@ export default function MilestoneCard({ milestone, projectId, role, onAction }: 
         <button className="text-sm text-blue-600" onClick={() => setExpanded((v) => !v)}>
           {expanded ? 'Hide' : 'Details'}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <div
 =======
   on_action: (action: 'in_progress' | 'submitted' | 'approved' | 'paid', milestone_id: string) => Promise < void> | void;
@@ -347,6 +392,7 @@ function MilestoneCard() {
                   'h - 2 w - 2 rounded - full ' +;
                   (idx <= current_index ? 'bg - green - 600' : 'bg - gray - 300')                }
                 title={step}
+<<<<<<< HEAD
               />;
 
 <<<<<<< HEAD
@@ -363,6 +409,9 @@ function MilestoneCard() {
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+            <div key={step} className="flex items-center">
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <div
 =======
               {idx < status_steps.length - 1 && (          {status_steps.map ((step, idx) => (
@@ -370,6 +419,7 @@ function MilestoneCard() {
               <div;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 className={
+<<<<<<< HEAD
                   'h - 2 w - 2 rounded - full ' + (idx <= current_index ? 'bg - green - 600' : 'bg - gray - 300');
                 }
                 title={step}
@@ -440,25 +490,43 @@ function MilestoneCard() {
                 className={
                   'h-2 w-2 rounded-full ' + (idx <= currentIndex ? 'bg-green-600' : 'bg-gray-300')
 
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 }
                 title={step}
               />
               {idx < statusSteps.length - 1 && (
                 <div
                   className={
-                    'h-0.5 w-8 ' +
-                    (idx < currentIndex ? 'bg-green-600' : 'bg-gray-300')
+                    'h - 0.5 w - 8 ' +;
+                    (idx < current_index ? 'bg - green - 600' : 'bg - gray - 300');
                   }
                 />              )}
             </div>
           ))}
         </div>                <div className={'h-0.5 w-8 ' + (idx < currentIndex ? 'bg-green-600' : 'bg-gray-300')} />
 
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+                  'h - 2 w - 2 rounded - full ' + (idx <= current_index ? 'bg - green - 600' : 'bg - gray - 300');
+                }
+                title={step}
+      {expanded && (
+        <div className='mt - 4 space - y-2 text - sm text - gray - 800'>          {milestone.description && <p>{milestone.description}</p>}
+          <div > Amount: ${milestone.amount_usd.to_fixed (2)}</div>;
+          {milestone.attachments && milestone.attachments.length > 0 && (
+                }
+                title={step}
+              />
+              {idx < statusSteps.length - 1 && (
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               )}
             </div>
           ))}
         </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
         <div className="mt-2 text-xs text-gray-700">Status: {milestone.status}</div>
 
@@ -491,10 +559,13 @@ function MilestoneCard() {
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     <a
                       className='text-blue-600 underline'
                       href={a && a.url}
                       target='_blank'
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -534,10 +605,13 @@ function MilestoneCard() {
                       rel='noreferrer'
                     >                      {a.label |a.url}              <div className="font-medium">Attachments</div>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <ul className="list-disc ml-5">
                 {milestone.attachments.map((a) => (
                   <li key={a.id}>
                     <a className="text-blue-600 underline" href={a.url} target="_blank" rel="noreferrer">
+<<<<<<< HEAD
 <<<<<<< HEAD
 
                       {a.label || a.url}
@@ -561,6 +635,8 @@ function MilestoneCard() {
                       {a.label || a.url}
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     </a>
                   </li>
 =======
@@ -572,17 +648,21 @@ function MilestoneCard() {
                     </a>;
                   </li>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 ))}
-              </ul>;
-            </div>;
+              </ul>
+            </div>
           )}
-        </div>;
+        </div>
       )}
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -616,6 +696,9 @@ function MilestoneCard() {
           <button
             className='px-3 py-1 text-sm rounded bg-indigo-600 text-white hover:bg-indigo-700'            onClick={() => onAction('in_progress', milestone.id)}      <div className="mt-4 flex flex-wrap gap-2">
         {canClientMarkInProgress && (
+=======
+          <button
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <button
             className="px-3 py-1 text-sm rounded bg-indigo-600 text-white hover:bg-indigo-700"
 
@@ -625,7 +708,39 @@ function MilestoneCard() {
             className='px-3 py-1 text-sm rounded bg-indigo-600 text-white hover:bg-indigo-700'            onClick={() => onAction('in_progress', milestone.id)}
 
             onClick={() => onAction('in_progress', milestone.id)}
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+        </div>
+      )}
+            className='px-3 py-1 text-sm rounded bg-indigo-600 text-white hover:bg-indigo-700'            onClick={() => onAction('in_progress', milestone.id)}      <div className="mt-4 flex flex-wrap gap-2">
+        {canClientMarkInProgress && (
+          <button
+            className="px-3 py-1 text-sm rounded bg-indigo-600 text-white hover:bg-indigo-700"
+            className='px-3 py-1 text-sm rounded bg-indigo-600 text-white hover:bg-indigo-700'            onClick={() => onAction('in_progress', milestone.id)}
+
+            className='px-3 py-1 text-sm rounded bg-indigo-600 text-white hover:bg-indigo-700'            onClick={() => onAction('in_progress', milestone && milestone.id)}      <div className="mt-4 flex flex-wrap gap-2">;
+        {canClientMarkInProgress && (;
+          <button
+            className="px-3 py-1 text-sm rounded bg-indigo-600 text-white hover:bg-indigo-700">;
+            Mark In Progress;
+          </button>;
+
+      <div className="mt-4 flex flex-wrap gap-2">
+        {canClientMarkInProgress && (
+          <button
+            className="px-3 py-1 text-sm rounded bg-indigo-600 text-white hover:bg-indigo-700"
+            onClick={() => onAction('in_progress', milestone.id)}
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
           >
             Mark In Progress
@@ -634,6 +749,7 @@ function MilestoneCard() {
         )}
         {canTalentSubmit && (;
           <button
+<<<<<<< HEAD
 <<<<<<< HEAD
 
         )}
@@ -649,12 +765,15 @@ function MilestoneCard() {
             onClick={() => onAction('submitted', milestone.id)}
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           >
             Submit Work
           </button>
         )}
         {canClientApprove && (
           <button
+<<<<<<< HEAD
 
 
             className='px-3 py-1 text-sm rounded bg-green-600 text-white hover:bg-green-700'            onClick={() => onAction('approved', milestone.id)}
@@ -674,12 +793,15 @@ className="px-3 py-1 text-sm rounded bg-green-600 text-white hover:bg-green-700"
             onClick={() => onAction('approved', milestone.id)}
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           >
             Approve
           </button>
         )}
         {canClientMarkPaid && (
           <button
+<<<<<<< HEAD
 
 
             className='px-3 py-1 text-sm rounded bg-slate-700 text-white hover:bg-slate-800'            onClick={() => onAction('paid', milestone.id)}
@@ -699,6 +821,8 @@ className="px-3 py-1 text-sm rounded bg-slate-700 text-white hover:bg-slate-800"
             onClick={() => onAction('paid', milestone.id)}
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           >
             Mark as Paid
           </button>
@@ -707,7 +831,11 @@ className="px-3 py-1 text-sm rounded bg-slate-700 text-white hover:bg-slate-800"
     </div>
 
 
+        )}
+      </div>
+    </div>
   );
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -716,6 +844,9 @@ className="px-3 py-1 text-sm rounded bg-slate-700 text-white hover:bg-slate-800"
 );
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <div>        <div className="mt - 2 text - xs text - gray - 700">Status: {milestone.status}</div>;
       </div>;
       {expanded && (
@@ -776,6 +907,7 @@ className="px-3 py-1 text-sm rounded bg-slate-700 text-white hover:bg-slate-800"
       </div>;
     </div>);
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -790,3 +922,6 @@ className="px-3 py-1 text-sm rounded bg-slate-700 text-white hover:bg-slate-800"
   );
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

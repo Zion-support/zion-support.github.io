@@ -1,9 +1,13 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   for (const p of PROVIDERS) {
     const conn = state.connections.find(c => c.providerId === p.id)
     connections[p.id] = conn |{ providerId: p.id, status: 'disconnected' }
+<<<<<<< HEAD
 
   }
   res.status(200).json({ connections })
@@ -17,6 +21,9 @@
 
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import type { NextApiRequest, NextApiResponse } from 'next',
 import { read_state } from '../../../lib / integrations / file_store',
 import { PROVIDERS } from '../../../lib / integrations / registry',
@@ -35,6 +42,7 @@ function handler() {
   }
   res.status (200).json ({ connections });
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
@@ -120,3 +128,7 @@ export default function handler(req, res) {
 }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

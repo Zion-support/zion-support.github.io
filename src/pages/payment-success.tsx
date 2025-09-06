@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { Button  } from '@/components/ui/button';
 import { useRouter } from 'next/router', // Changed from useNavigate
@@ -33,6 +34,8 @@ export default function PaymentSuccess() {;
 =======
 import React from 'react',
 import { Button } from '@/components/ui/button',
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useRouter } from 'next/router', // Changed from useNavigate
 import { CheckCircle2 } from 'lucide-react'
 import { useTranslation } from 'react-i18next',
@@ -40,13 +43,17 @@ export default function PaymentSuccess() {
   const router = useRouter(), // Changed from navigate
   const { t } = useTranslation(),
   
+<<<<<<< HEAD
   
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <div className="min-h-screen bg-zion-blue flex flex-col items-center justify-center p-4">
       <div className="max-w-md w-full bg-zion-blue-dark rounded-xl p-8 border border-zion-blue-light shadow-lg text-center">
         <div className="inline-flex h-12 w-12 rounded-full bg-green-100 mb-4 items-center justify-center">
           <CheckCircle2 className="h-6 w-6 text-green-600" />
         </div>
+<<<<<<< HEAD
         <h1 className='text-2xl font-bold text-white mb-2'>
           {t('errors.payment_success_title')}
         </h1>
@@ -69,12 +76,15 @@ ursor/fix-website-loading-errors-and-merge-6662
           <Button 
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             onClick={() => router.push('/dashboard')} // Changed to router.push
 <<<<<<< HEAD
             className='bg-zion-purple hover:bg-zion-purple-dark text-white'
           >
             {t('errors.go_to_dashboard')}
           </Button>
+<<<<<<< HEAD
 
 
 class ErrorBoundary extends React.Component {
@@ -144,6 +154,53 @@ class ErrorBoundary extends React.Component {
           <Button
           <Button 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+import React from 'react';
+import { Button } from '@/components/ui/button';
+import { useRouter } from 'next/router'; // Changed from useNavigate;
+import { CheckCircle2 } from 'lucide-react';import { useTranslation } from 'react-i18next';
+
+import React from 'react';
+import { Button } from '@/components/ui/button';
+import { useRouter } from 'next/router', // Changed from useNavigate;
+import { CheckCircle2 } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
+import React from 'react';
+import { Button } from '@/components/ui/button';
+import { useRouter } from 'next/router', // Changed from useNavigate;
+import { CheckCircle2 } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
+export default function PaymentSuccess() {;
+  const router = useRouter(); // Changed from navigate;
+  const { t } = useTranslation();
+
+import React from 'react',
+import { Button } from '@/components/ui/button',
+import { useRouter } from 'next/router', // Changed from useNavigate
+import { CheckCircle2 } from 'lucide-react'
+import { useTranslation } from 'react-i18next',
+export default function PaymentSuccess() {
+  const router = useRouter(), // Changed from navigate
+  const { t } = useTranslation(),
+  
+  return (
+    <div className='min-h-screen bg-zion-blue flex flex-col items-center justify-center p-4'>;
+      <div className='max-w-md w-full bg-zion-blue-dark rounded-xl p-8 border border-zion-blue-light shadow-lg text-center'>;
+        <div className='inline-flex h-12 w-12 rounded-full bg-green-100 mb-4 items-center justify-center'>;
+          <CheckCircle2 className='h-6 w-6 text-green-600' />;
+        </div>;
+
+        <h1 className='text-2xl font-bold text-white mb-2'>;
+          {t('errors && errors.payment_success_title')}
+        </h1>;
+
+        <p className='text-zion-slate-light mb-6'>;
+          {t('errors && errors.payment_success_message')}
+        </p>;
+
+        <div className='flex flex-col space-y-3'>;
+          <Button
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             variant="outline"
             onClick={() => router.push('/')} // Changed to router.push
             className="border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white"
@@ -182,14 +239,16 @@ class ErrorBoundary extends React.Component {
           <Button
 
 ;
-
           
           <Button 
+<<<<<<< HEAD
 
 ;
           
           <Button 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             variant="outline"
             onClick={() => router && router.push('/')} // Changed to router && router.push;
             className="border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white";
@@ -201,6 +260,7 @@ class ErrorBoundary extends React.Component {
     </div>;
   );
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -272,3 +332,5 @@ function PaymentSuccess() {
 }
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

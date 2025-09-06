@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -22,11 +23,14 @@ export interface TalentCardProps {
 }
 export function TalentCard({
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {Button} from "@/components/ui/button";
 import {Card} from "@/components/ui/card";
 import {Star, MapPin, Clock, ArrowRight, CheckCircle2} from "lucide-react";
 import {Link} from "react-router-dom";
 import {TalentProfile} from "@/types/talent";
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 import { Button } from "@/components/ui/button",
@@ -44,6 +48,8 @@ export interface TalentCardProps {
 }
 
 export function TalentCard({;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   talent;
   onViewProfile;
   onRequestHire;
@@ -88,10 +94,13 @@ import { Card } from "@/components/ui/card",;
 import { Star, MapPin, Clock, ArrowRight, CheckCircle2 } from "lucide-react",;
 import { Link } from "react-router-dom",;
 import { TalentProfile } from "@/types/talent",;
+<<<<<<< HEAD
 
 
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export interface TalentCardProps {;
   talent: TalentProfile,;
   onViewProfile: (id: string) => void,;
@@ -101,20 +110,30 @@ export interface TalentCardProps {;
   isAuthenticated: boolean;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 export function TalentCard(): any ({;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+export function TalentCard(): any ({;
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   talent;
   onViewProfile;
   onRequestHire;
   isSaved;
   onToggleSave;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   isAuthenticated;
 }: TalentCardProps) {;
   const handleViewProfile = () => {;
@@ -129,6 +148,7 @@ export function TalentCard(): any ({;
     if (onRequestHire) {;
       onRequestHire(talent);
     }
+<<<<<<< HEAD
   };
 <<<<<<< HEAD
 =======
@@ -148,26 +168,17 @@ export function TalentCard(): any ({;
   const skills = talent && talent.skills?.slice(0, 5) || [];
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+
+  // Extract skills - limit to 5 for display
+  const skills = talent.skills?.slice(0, 5) || [],
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   return (
     <Card className="overflow-hidden transition-all hover:shadow-lg border-zion-blue-light bg-zion-blue cursor-pointer" onClick={handleViewProfile}>;
       <div className="p-6">;
         <div className="flex items-start">;
           {/* Avatar */}
-
-          <div className="relative mr-4">;
-            <div className="w-16 h-16 rounded-full overflow-hidden bg-zion-blue-dark border border-zion-blue-light">;
-              {talent && talent.profile_picture_url ? (;
-                <img
-                  src={talent && talent.profile_picture_url} 
-                  alt={talent && talent.full_name} 
-                  className="w-full h-full object-cover" 
-                />;
-              ) : (;
-                <div className="w-full h-full flex items-center justify-center text-zion-slate-light text-xl font-bold">;
-                  {talent && talent.full_name?.charAt(0) || "T"}
-                </div>;
-
               )}
             </div>;
             {talent && talent.is_verified && (;
@@ -175,14 +186,11 @@ export function TalentCard(): any ({;
                 <CheckCircle2 className="w-5 h-5 text-zion-cyan" />;
               </div>;
             )}
-
-          </div>;
-
-
           {/* Main Info */}
           <div className="flex-1">;
             <div className="flex justify-between items-start">;
               <h3 className="text-lg font-bold text-white">{talent && talent.full_name}</h3>;
+<<<<<<< HEAD
 =======
   return (
 
@@ -276,10 +284,13 @@ export function TalentCard({;
             <div className="flex justify-between items-start">
               <h3 className="text-lg font-bold text-white">{talent.full_name}</h3>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <Button
                 variant="ghost"
                 size="sm"
                 className="p-1 h-auto text-zion-slate-light hover:text-zion-cyan"
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
                 onClick={handleToggleSave}
@@ -311,6 +322,8 @@ export function TalentCard({;
             
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             {/* Location & Availability */}
             <div className="mt-2 flex flex-wrap gap-3 text-sm">;
               {talent && talent.location && (;
@@ -323,6 +336,7 @@ export function TalentCard({;
                 <div className="flex items-center text-zion-slate-light">;
                   <Clock className="h-4 w-4 mr-1" />;
                   <span>{talent && talent.availability_type}</span>;
+<<<<<<< HEAD
 <<<<<<< HEAD
                 </div>;
               )}
@@ -391,12 +405,17 @@ export function TalentCard({;
             <div className="flex flex-wrap gap-2">;
               {skills && skills.map((skill, index) => (;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+                </div>;
+              )}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <span
                   key={index}
                   className="px-2 py-1 text-xs rounded-full bg-zion-blue-light text-zion-slate-light">;
                   {skill}
                 </span>;
               ))}
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -489,10 +508,13 @@ export function TalentCard({;
                 className="bg-zion-purple hover:bg-zion-purple-light text-white">;
                 </span>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               )}
             </div>;
           </div>;
         )}
+<<<<<<< HEAD
 
 
 
@@ -686,22 +708,30 @@ if ( {) {
             {talent.hourly_rate ? (;
               <div className="text-white font-bold">;
                 ${talent.hourly_rate}
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <span className="text-zion-slate-light font-normal">/hr</span>;
               </div>;
               className="text-zion-cyan hover:text-white hover:bg-zion-blue-light";
             >;
               View <ArrowRight className="ml-1 h-4 w-4" />;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             </Button>;
           </div>;
         </div>;
       </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     </Card>);
 }
 
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     </Card>;
   );}
  export interface TalentCardProps {
@@ -756,22 +786,19 @@ isAuthenticated: boolean
             ) : (;
               <div className="text-zion-slate-light">Rate not specified</div>;
             )}
-          </div>
-          <div className="flex items-center gap-2">
-            {isAuthenticated && (
               <Button
                 size="sm"
                 variant="secondary"
                 onClick={handleRequestHire}
-                className="bg-zion-purple hover:bg-zion-purple-light text-white"
-              >
-                Hire
-              </Button>
+                className="bg-zion-purple hover:bg-zion-purple-light text-white">;
+                Hire;
+              </Button>;
             )}
             <Button
               size="sm"
               variant="ghost"
               onClick={handleViewProfile}
+<<<<<<< HEAD
               className="text-zion-cyan hover: text-white hover:bg-zion-blue-light"
             >
               View <ArrowRight className="ml-1 h-4 w-4" />
@@ -783,3 +810,5 @@ isAuthenticated: boolean
   )
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

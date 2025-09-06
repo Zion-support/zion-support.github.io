@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -20,6 +21,8 @@ import type { UserProfile } from "@/types/auth";
 import {toast} from "@/hooks/use-toast";
 import {trackReferral, checkUrlForReferralCode} from "@/utils/referralUtils";
 import {cleanupAuthState} from "@/utils/authUtils";
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useState, useEffect } from "react",
 import { supabase } from "@/integrations/supabase/client",
 import type { UserProfile } from "@/types/auth";
@@ -32,15 +35,37 @@ import { trackReferral, checkUrlForReferralCode } from "@/utils/referralUtils",
 import { cleanupAuthState } from "@/utils/authUtils",
 export function useAuthOperations(
 
-  setUser: React.Dispatch<React.SetStateAction<UserProfile | null>>
+  setUser: React && React.Dispatch<React && React.SetStateAction<UserProfile | null>>,
+  setIsLoading: React && React.Dispatch<React && React.SetStateAction<boolean>>
 
+<<<<<<< HEAD
   setIsLoading: React.Dispatch<React.SetStateAction<boolean>>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ) {
   // Check for referral code in URL when the hook is first used
   useEffect(() => {
+    checkUrlForReferralCode();
+  }, []);
+    checkUrlForReferralCode()
+  }, []),
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+  const login = async ({ email, password }: { email: string, password: string }) => {
+    setIsLoading (true);
+    try {
+      // Clean up any stale auth state before login
+      cleanupAuthState();
+      const { data, error } = await supabase.auth.signInWithPassword({
+) {
+  // Check for referral code in URL when the hook is first used
+  useEffect(() => {
+    checkUrlForReferralCode()
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useState, useEffect } from './react';
 import { supabase } from '@/integrations / supabase / client';
 import type { UserProfile } from "@/types / auth";
@@ -54,20 +79,23 @@ function useAuthOperations() {
   // Check for referral code in URL when the hook is first used;
   useEffect (() => {
     checkUrlForReferralCode ();
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   }, []);
 ;
-
-    checkUrlForReferralCode()
-  }, []),
-
-
   const login = async ({ email, password }: { email: string, password: string }) => {
     setIsLoading (true);
     try {
+        email;
+        password});
+      if (error) {
+        toast({
 
+<<<<<<< HEAD
       
       const { data, error } = await supabase && supabase.auth.signInWithPassword({
 
@@ -86,10 +114,16 @@ function useAuthOperations() {
       cleanupAuthState();
       const { data, error } = await supabase.auth.signInWithPassword({
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+      // Clean up any stale auth state before login
+      cleanupAuthState();
+      const { data, error } = await supabase.auth.signInWithPassword({
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         email;
         password});
       if (error) {
         toast({
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
       // Clean up any stale auth state before login;
@@ -139,12 +173,15 @@ if ( {) {
           description: error && error.message});
         return { data: null, error: error && error.message }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       }
 
       toast ({
         title: "Login successful!",
         description: `Welcome back, ${email}!`});
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       return { data, error: null }
@@ -161,16 +198,17 @@ if ( {) {
     } catch (error) {
       toast ({
         return { data: null, error: error.message }
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       }
-      toast({
-        title: "Login successful!"
-        description: `Welcome back, ${email}!`});
       return { data, error: null }
     } catch (error) {
-      toast({
+      toast ({
         variant: "destructive";
         title: "Oh no! Something went wrong."
         description: "Failed to sign in. Please check your credentials."});
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         title: "Login successful!",
         description: `Welcome back, ${email}!`}),
@@ -184,10 +222,13 @@ if ( {) {
 
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       return { data: null, error: "Failed to sign in." }
     } finally {
       setIsLoading (false);
     }
+<<<<<<< HEAD
 
 ;
 
@@ -219,10 +260,16 @@ if ( {) {
     try {
       const { data, error } = await supabase.auth.sign_up ({
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  const signup = async ({ email, password, display_name }) => {
+    setIsLoading (true);
+    try {
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         email;
         password;
         options: {
           data: {
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -261,6 +308,10 @@ if ( {) {
           variant: "destructive";
           title: "Error during signup"
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+          variant: "destructive";
+          title: "Error during signup"
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             display_name: display_name}}}),
 
       if (error) {
@@ -268,23 +319,36 @@ if ( {) {
           variant: "destructive",
           title: "Error during signup",
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+          description: error.message}),
+        return { data: null, error: error.message }
+          variant: "destructive",
+          title: "Error during signup",
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
           description: error.message});
         return { data: null, error: error.message }
+<<<<<<< HEAD
 =======
 =======
           variant: "destructive";
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           title: "Error during signup",
           description: error && error.message});
         return { data: null, error: error && error.message }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       // Add this after successful signup;
       // Check condition
 if ( {) {
@@ -293,6 +357,7 @@ if ( {) {
         // Track referral if there was a referral code;
         await track_referral (data.user.id, email);
       }
+<<<<<<< HEAD
       toast ({
         title: "Signup successful!",
         description: `Welcome, ${display_name}! Please check your email to verify your account.`});
@@ -318,11 +383,18 @@ if ( {) {
         // Track referral if there was a referral code
         await trackReferral(data.user.id, email)
       }
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       toast({
         title: "Signup successful!"
         description: `Welcome, ${display_name}! Please check your email to verify your account.`});
+;
+
+          variant: "destructive";
+      }
       return { data, error: null }
     } catch (error) {
+<<<<<<< HEAD
       toast({
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         variant: "destructive";
@@ -346,29 +418,20 @@ if ( {) {
 <<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+      toast ({
+        variant: "destructive";
+        title: "Oh no! Something went wrong."
+        description: "Failed to sign up. Please try again."});
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       return { data: null, error: "Failed to sign up." }
     } finally {
       setIsLoading (false);
     }
-
-;
-
-=======
-
-  },
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-  const logout = async () => {
-    setIsLoading (true);
-    try {
-
-      const { error } = await supabase && supabase.auth.signOut();
-=======
-
       const { error } = await supabase.auth.signOut(),
 
 
+<<<<<<< HEAD
 =======
 
 ;
@@ -393,10 +456,13 @@ if ( {) {
     try {
       const { error } = await supabase && supabase.auth.signOut();
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       if (error) {
         toast({
           variant: "destructive";
           title: "Oh no! Something went wrong.",
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
           description: error && error.message})
@@ -407,26 +473,19 @@ if ( {) {
   }
   },
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
-  const logout = async () => {
-    setIsLoading(true),
-    try {
-      const { error } = await supabase.auth.signOut();
-      if (error) {
-        toast({
-          variant: "destructive";
-          title: "Oh no! Something went wrong."
-      const { error } = await supabase.auth.signOut(),
 
-      if (error) {
-        toast({
-          variant: "destructive",
-          title: "Oh no! Something went wrong.",
           description: error.message})
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       } else {
         setUser(null), // Clear the user state upon successful logout
         toast({
@@ -435,14 +494,35 @@ if ( {) {
       }
     } catch (error) {
 <<<<<<< HEAD
+<<<<<<< HEAD
       console && console.error("Logout failed:", error);
+=======
+  const resetPassword = async (email: string) => {
+    setIsLoading(true)
+    try {
+      const { data, error } = await supabase.auth.resetPasswordForEmail(email, {
+          variant: "destructive";
+          title: "Oh no! Something went wrong.",
+          description: error.message}),
+        return { data: null, error: error.message }
+      }
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       toast({
+        title: "Password reset email sent!"
+        description: `Please check your email (${email}) for instructions on how to reset your password.`});
+;
 
+<<<<<<< HEAD
 =======
         variant: "destructive";
         title: "Logout failed"
         description: "There was an issue logging you out. Please try again."})
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+        variant: "destructive";
+        title: "Logout failed"
+        description: "There was an issue logging you out. Please try again."})
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       const { error } = await supabase.auth.sign_out ();
 ;
       // Check condition
@@ -466,13 +546,17 @@ if ( {) {
         title: "Logout failed",
         description: "There was an issue logging you out. Please try again."});
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     } finally {
       setIsLoading (false);
     }
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       const { data, error } = await supabase && supabase.auth.resetPasswordForEmail(email, {
@@ -553,12 +637,20 @@ if ( {) {
 ;
 <<<<<<< HEAD
 
+=======
+          variant: "destructive";
+          title: "Oh no! Something went wrong.",
+          description: error && error.message});
+        return { data: null, error: error && error.message }
+      }
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       return { data, error: null }
     } catch (error) {
       toast ({
         variant: "destructive";
         title: "Oh no! Something went wrong."
         description: "Failed to send reset password email. Please try again."});
+<<<<<<< HEAD
 =======
           description: error.message}),
 =======
@@ -606,14 +698,19 @@ if ( {) {
 <<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       return { data: null, error: "Failed to send reset password email." }
     } finally {
       setIsLoading (false);
     }
+<<<<<<< HEAD
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   },
 
 
@@ -624,6 +721,7 @@ if ( {) {
 
       if (!profileData || !profileData && profileData.id) {
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
   }
@@ -640,11 +738,14 @@ if ( {) {
     try {
       if (!profileData |!profileData.id) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         throw new Error("Profile data or user ID is missing.")
       }
       const { error } = await supabase
         .from("profiles")
         .update({
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -753,6 +854,8 @@ if ( {) {
         .eq("id", profileData.id);
       if (error) {
         toast({
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           variant: "destructive";
           title: "Failed to update profile"
           description: error.message});
@@ -760,8 +863,6 @@ if ( {) {
           variant: "destructive",
           title: "Failed to update profile",
           description: error.message});
-        return { error: error.message };
-        return { error: error.message }
       }
       // Optimistically update the local user state
       setUser((prevUser) => {
@@ -772,7 +873,10 @@ if ( {) {
       // Optimistically update the local user state;
       setUser((prevUser) => {;
         if (prevUser) {;
+
+
           return { ...prevUser, ...profileData }
+<<<<<<< HEAD
         }
         return prevUser
 <<<<<<< HEAD
@@ -864,15 +968,18 @@ if ( {) {
         provider: "google"});
 ;
       // Check condition
+=======
+      // Optimistically update the local user state;
+      set_user ((prev_user) => {
+        // Check condition
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 if ( {) {
   $2
 }
-        toast ({
-          variant: "destructive";
-          title: "Oh no! Something went wrong.",
-          description: error.message});
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+          return { ...prev_user, ...profile_data }
+        }
       }
+<<<<<<< HEAD
     } finally {
       setIsLoading (false);
     }
@@ -890,24 +997,30 @@ if ( {) {
 
 <<<<<<< HEAD
 =======
+=======
+        }
+        return prev_user;
+      });
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         variant: "destructive";
         title: "Profile update failed"
         description: "There was an issue updating your profile. Please try again."});
-        variant: "destructive",
-        title: "Profile update failed",
-        description: "There was an issue updating your profile. Please try again."}),
       return { error: "Failed to update profile." }
     } finally {
-      setIsLoading(false)
+      setIsLoading (false);
     }
+<<<<<<< HEAD
   }
   },
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const loginWithGoogle = async () => {
     setIsLoading(true),
     try {
       const { data, error } = await supabase.auth.signInWithOAuth({
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -923,6 +1036,8 @@ if ( {) {
     }
   }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         provider: "google"}),
 
       if (error) {
@@ -930,6 +1045,7 @@ if ( {) {
           variant: "destructive",
           title: "Oh no! Something went wrong.",
           description: error.message})
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -964,6 +1080,8 @@ if ( {) {
       setIsLoading(false)
     }
   };
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         return prevUser;
       }),;
       toast({;
@@ -997,10 +1115,10 @@ if ( {) {
     }
   },
 
-        provider: "google"}),
+
 
   const loginWithFacebook = async () => {
-    setIsLoading(true),
+    setIsLoading (true);
     try {
       const { data, error } = await supabase.auth.signInWithOAuth({
         provider: "facebook"});
@@ -1009,7 +1127,10 @@ if ( {) {
           variant: "destructive";
           title: "Oh no! Something went wrong."
           description: error.message})
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         provider: "facebook"}),
 
       if (error) {
@@ -1018,9 +1139,12 @@ if ( {) {
           title: "Oh no! Something went wrong.",
           description: error.message})
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   },;
   const loginWithFacebook = async () => {;
     setIsLoading(true),;
@@ -1033,17 +1157,12 @@ if ( {) {
           title: "Oh no! Something went wrong.",;
           description: error.message});
 
-          title: "Oh no! Something went wrong.",
-          description: error && error.message})
-
-;
-  const loginWithFacebook = async () => {
+  }
+  const loginWithGoogle = async () => {
     setIsLoading (true);
     try {
-          title: "Oh no! Something went wrong.",
-          description: error && error.message})
       const { data, error } = await supabase.auth.signInWithOAuth ({
-        provider: "facebook"});
+        provider: "google"});
 ;
       // Check condition
 if ( {) {
@@ -1053,15 +1172,29 @@ if ( {) {
           variant: "destructive";
           title: "Oh no! Something went wrong.",
           description: error.message});
-      const { data, error } = await supabase.auth.signInWithOAuth({
-
-        provider: "facebook"}),
       }
     } finally {
-      setIsLoading(false)
+      setIsLoading (false);
     }
   }
-  },
+      }
+    } finally {
+      setIsLoading (false);
+    }
+  const loginWithTwitter = async () => {
+    setIsLoading (true);
+    try {
+      const { data, error } = await supabase.auth.signInWithOAuth ({
+        provider: "twitter"});
+;
+      // Check condition
+if ( {) {
+  $2
+}
+        toast ({
+          variant: "destructive";
+          title: "Oh no! Something went wrong.",
+          description: error.message});
   };
   },
 
@@ -1082,11 +1215,15 @@ if ( {) {
           variant: "destructive",
           title: "Oh no! Something went wrong.",
           description: error.message})
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       }
     } finally {
       setIsLoading (false);
     }
+<<<<<<< HEAD
 
 ;
 
@@ -1201,23 +1338,29 @@ if ( {) {
     } finally {
       setIsLoading(false)
     }
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   }
   },
   };
   },
 
+  }
   const loginWithWeb3 = async () => {
-    setIsLoading(true),
+    setIsLoading (true);
     try {
       const ethereum = (window as any).ethereum,
       if (!ethereum) {
         throw new Error("Web3 wallet not found")
       }
+<<<<<<< HEAD
       const accounts = await ethereum.request({ method: 'eth_requestAccounts' });
       const address = accounts[0];
       await ethereum.request({
         method: 'personal_sign'
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         params: [address, address]
       });
       // Fix: Create a proper UserProfile object
@@ -1231,6 +1374,7 @@ if ( {) {
         updatedAt: new Date().toISOString()
       } as UserProfile);
       toast({ title: 'Wallet connected', description: address })
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
       const accounts = await ethereum.request ({ method: 'eth_requestAccounts' });
@@ -1266,10 +1410,16 @@ if ( {) {
         description: error?.message || 'Unable to connect wallet';
       });
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+    } catch (error: any) {
+      toast ({
+        variant: 'destructive';
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     } finally {
       setIsLoading (false);
     }
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 ;
@@ -1287,10 +1437,13 @@ if ( {) {
     }
   }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return {
     login;
     signup;
     logout;
+<<<<<<< HEAD
 <<<<<<< HEAD
     reset_password;
     update_profile;
@@ -1317,6 +1470,9 @@ if ( {) {
     updateProfile;
     loginWithGoogle;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+    loginWithGoogle;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   },;
   const loginWithWeb3 = async () => {;
     setIsLoading(true),;
@@ -1360,13 +1516,17 @@ if ( {) {
     updateProfile,;
     loginWithGoogle,;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     loginWithFacebook;
     loginWithTwitter;
 
     loginWithWeb3}
+<<<<<<< HEAD
 
 =======
 
@@ -1886,3 +2046,5 @@ loginWithWeb3
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

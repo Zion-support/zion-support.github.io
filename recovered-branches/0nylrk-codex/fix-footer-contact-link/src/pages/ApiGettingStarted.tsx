@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 
@@ -7,21 +8,27 @@
 import React from "react";
 import ApiDocsLayout from "@/components/developers/ApiDocsLayout";
 import {CodeBlock} from "@/components/developers/CodeBlock";
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export function ApiGettingStarted() {
   const authExample = `curl -X GET \\
   https: //api.zionai.com/v1/jobs \\
   -H "Authorization: Bearer YOUR_API_KEY"`,;
 const quickStartJs = `import axios from 'axios';
+<<<<<<< HEAD
 import React from "react",
 import ApiDocsLayout from "@/components/developers/ApiDocsLayout";
 import { CodeBlock } from "@/components/developers/CodeBlock";
 import ApiDocsLayout from "@/components/developers/ApiDocsLayout",
 import { CodeBlock } from "@/components/developers/CodeBlock",
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export function ApiGettingStarted() {
 
   const authExample = `curl -X GET \\
   https: //api.zionai.com/v1/jobs \\
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 import React from './react';
@@ -59,6 +66,8 @@ const response = await axios.get('https://api.zionai.com/v1/jobs', {
 
 
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   -H "Authorization: Bearer YOUR_API_KEY"`
 const quickStartJs = `import axios from 'axios';
   -H "Authorization: Bearer YOUR_API_KEY"`,
@@ -67,27 +76,28 @@ const quickStartJs = `import axios from 'axios';
   -H "Authorization: Bearer YOUR_API_KEY"`,
 
   const quickStartJs = `import axios from 'axios',
-
-
-  -H "Authorization: Bearer YOUR_API_KEY"`,
-
-  const quickStartJs = `import axios from 'axios',
 const response = await axios.get('https://api.zionai.com/v1/jobs', {
   headers: {
-    Authorization: \`Bearer \${API_KEY}\`
+    Authorization: \`Bearer \${API_KEY}\`;
   }
 });
 console.log(response.data),`;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }),
 
 // // // console.log(response.data),`,
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <ApiDocsLayout>
       <div className="max-w-3xl prose prose-invert">
@@ -100,6 +110,7 @@ console.log(response.data),`;
         </p>
         <h2>Authentication</h2>
         <p>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -116,6 +127,8 @@ console.log(response.data),`;
           All API requests must include your API key in the Authorization header. 
           You can generate API keys in the <a href="/developers/portal" className="text-zion-cyan">Developer Portal</Link>.
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         </p>
         <CodeBlock code={authExample} language="bash" showLineNumbers={false} />
         <div className="bg-yellow-900/20 border border-yellow-700/50 rounded-md p-4 my-6">
@@ -155,14 +168,19 @@ console.log(response.data),`;
           >
             Download Postman Collection
 <<<<<<< HEAD
+<<<<<<< HEAD
           </a>
 =======
           </Link>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+          </Link>
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         </div>
       </div>
     </ApiDocsLayout>
   )
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -473,3 +491,10 @@ quotes, and projects. Our RESTful API lets you integrate Zion's features into yo
 ;
 export default ApiGettingStarted;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+});
+}
+
+
+export default ApiGettingStarted;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

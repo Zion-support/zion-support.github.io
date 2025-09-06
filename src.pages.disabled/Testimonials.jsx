@@ -24,6 +24,7 @@ class ErrorBoundary extends React.Component {
 import React from 'react';
 interface TestimonialsProps {
   // Add props here as needed
+<<<<<<< HEAD
 
 
 }
@@ -32,6 +33,8 @@ interface TestimonialsProps {
 =======
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export default function Testimonials({ }: TestimonialsProps) {
   return (
     <div>
@@ -39,6 +42,7 @@ export default function Testimonials({ }: TestimonialsProps) {
       <p>This component is currently under development.</p>
     </div>
   );
+<<<<<<< HEAD
 
 
 
@@ -59,11 +63,29 @@ ursor/add-new-services-and-deploy-updates-0462
 
 
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 :src.pages.disabled/Testimonials.jsx
 }
 }
 }
 }
 }
+<<<<<<< HEAD
 :temp_exclude/src.pages.disabled/Testimonials.jsx
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+}
+
+
+
+
+
+
+:src.pages.disabled/Testimonials.jsx
+}
+}
+}
+}
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

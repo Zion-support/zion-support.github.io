@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 {/* Honeypot field */}
       <input
 
@@ -125,56 +126,13 @@ export function FooterNewsletter(): React.ReactElement {
 
     setIsSubmitting(true),
     const uniqueToastIdBase = `newsletter-toast-${Date.now()}`, // Generate a base for unique ID
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
     try {
       const res = await fetch('/api/newsletter', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email: trimmedEmail }),
-      })
-      const data = await res.json().catch(() => ({})); // Ensure data is an object even on parse error
-      if (res.ok) {
-        if (data.status === 'already_subscribed') {
-          toast.success(data.message || "You're already subscribed!", {
-            id: `${uniqueToastIdBase}-already-subscribed`,
-          })
-        } else {
-          toast.success(
-            data.message || 'Successfully subscribed to newsletter!',
-            { id: `${uniqueToastIdBase}-success` }
-          )
-        }
-        setEmail('')
-        // setEmailError(''); // Already cleared if regex passed
-      } else {
-        logErrorToProduction('Newsletter subscription failed:', { data: data })
-        // Use a more specific error message if available from API, otherwise generic
-        const errorMessage = null;
-          data.error || 'Subscription failed. Please try again.'
-        toast.error(errorMessage, { id: `${uniqueToastIdBase}-api-error` })
-      }
-    } catch (err: any) {
-      logErrorToProduction('Newsletter subscription error:', { data: err })
-      toast.error('Unable to subscribe right now. Please try again later.', {
-        id: `${uniqueToastIdBase}-catch-error`,
-      })
-    } finally {
-      setIsSubmitting(false)
-    }
-  }
-      >
-      <label htmlFor='newsletter-email' className='sr-only'>
-        Email address for newsletter subscription
-      </label>
-      <Input
-        type='email'
-        id='newsletter-email'
-        name='newsletterEmail'
-        placeholder='Enter your email'
-        className='flex-grow bg-zion-blue-light dark:bg-zion-blue-dark text-black dark:text-white border-zion-purple/20 focus:border-zion-purple focus:ring-zion-purple placeholder-opacity-50 placeholder:text-center'
-        value={email}
-        onChange={e => setEmail(e.target.value)}
-        autoComplete='email'        required
         body: JSON.stringify({ email: trimmedEmail })
       }),
 
@@ -208,27 +166,10 @@ export function FooterNewsletter(): React.ReactElement {;
     const trimmedEmail = email.trim(),;
     if (!EMAIL_REGEX.test(trimmedEmail)) {;
       setEmailError("Please enter a valid email address."),;
-// // // // // // // console && console.error('Newsletter subscription failed:', error) ;
-} finally {;
-      setIsSubmitting(false) ;
-      // console && console.error('Newsletter subscription failed:', error)} finally {;
-  const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  const lastSubmit = useRef(0);
-  const handleSubmit = async (e: React && React.FormEvent) => {;
-    e && e.preventDefault();
-    if (honeypot) return; // ignore bots;
-    const now = Date && Date.now();
-    if (now - lastSubmit && lastSubmit.current < 1000) return;
-    lastSubmit && lastSubmit.current = now;
-    const trimmedEmail = email && email.trim();
-    if (!EMAIL_REGEX && EMAIL_REGEX.test(trimmedEmail)) {;
-      setEmailError('Please enter a valid email address.');
       return;
     } else {;
       setEmailError("");
     }
-    setIsSubmitting(true);
-    const uniqueToastIdBase = `newsletter-toast-${Date && Date.now()}`; // Generate a base for unique ID;
 ;
     setIsSubmitting(true),;
     const uniqueToastIdBase = `newsletter-toast-${Date.now()}`, // Generate a base for unique ID;
@@ -242,14 +183,6 @@ export function FooterNewsletter(): React.ReactElement {;
       if (res.ok) {;
         if (data.status === 'already_subscribed') {;
           toast.success(data.message || "You're already subscribed!", { id: `${uniqueToastIdBase}-already-subscribed` });
-        body: JSON && JSON.stringify({ email: trimmedEmail }),;
-      });
-      const data = await res && res.json().catch(() => ({})); // Ensure data is an object even on parse error;
-      if (res && res.ok) {;
-        if (data && data.status === 'already_subscribed') {;
-          toast && toast.success(data && data.message || "You're already subscribed!", {;
-            id: `${uniqueToastIdBase}-already-subscribed`,;
-          });
         } else {;
           toast.success(data.message || 'Successfully subscribed to newsletter!', { id: `${uniqueToastIdBase}-success` });
         }
@@ -263,13 +196,6 @@ export function FooterNewsletter(): React.ReactElement {;
       }
     } catch (err: any) {;
       logErrorToProduction('Newsletter subscription error:', { data: err });
-      toast && toast.error('Unable to subscribe right now. Please try again later.', {;
-        id: `${uniqueToastIdBase}-catch-error`,;
-      });
-    } finally {;
-      setIsSubmitting(false);
-    }
-  };
       toast.error('Unable to subscribe right now. Please try again later.', { id: `${uniqueToastIdBase}-catch-error` });
     } finally {;
       setIsSubmitting(false);
@@ -286,10 +212,6 @@ export function FooterNewsletter(): React.ReactElement {;
       <label htmlFor="newsletter-email" className="sr-only">
         Email address for newsletter subscription
       </label>
-      >;
-      <label htmlFor='newsletter-email' className='sr-only'>;
-        Email address for newsletter subscription;
-      </label>;
       <Input
         type="email"
         id="newsletter-email"
@@ -304,6 +226,7 @@ export function FooterNewsletter(): React.ReactElement {;
       {emailError && <p className="text-red-500 text-sm mt-1">{emailError}</p>}
       {/* Honeypot field */}
       <input
+<<<<<<< HEAD
 
 
       {/* Honeypot field */}
@@ -314,10 +237,13 @@ export function FooterNewsletter(): React.ReactElement {;
         value={honeypot}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         onChange={e => setHoneypot(e && e.target.value)}
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         tabIndex={-1}
         autoComplete='off';
         style={{ display: 'none' }}
       />;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       <Button
@@ -369,6 +295,11 @@ export function FooterNewsletter(): React.ReactElement {;
 }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+        value={honeypot}
+        onChange={e => setHoneypot(e.target.value)}
+        tabIndex={-1}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         autoComplete="off"
         style={{ display: 'none' }}
       />
@@ -380,6 +311,7 @@ export function FooterNewsletter(): React.ReactElement {;
       >;
         {isSubmitting ? (;
           <>;
+<<<<<<< HEAD
             <Loader2 className='h-4 w-4 mr-2 animate-spin' />;
 <<<<<<< HEAD
 =======
@@ -494,6 +426,9 @@ export function FooterNewsletter():React.ReactElement {;
           <>;
             <Loader2 className="h-4 w-4 mr-2 animate-spin" />;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+            <Loader2 className="h-4 w-4 mr-2 animate-spin" />;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             Subscribing...;
           </>;
         ) : (;
@@ -502,11 +437,16 @@ export function FooterNewsletter():React.ReactElement {;
       </Button>;
     </form>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   );
-
 } ;
+<<<<<<< HEAD
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 } ;
 
 import React, { useState, useRef } from 'react';
@@ -629,57 +569,9 @@ if ( {) {
           'Subscribe')}
       </Button>;
     </form>);
-  ),;} 
- ;
-}setIsSubmitting (true);
-const uniqueToastIdBase = `newsletter-toast-$ {;
-  Date.now () ;
-}`, //Generate a base for unique ID try {;
-  const res = await fetch ('/api/newsletter', {';
-  method: 'POST';
-headers: {';
-  'Content-Type': 'application/json' ;
-};
-body: JSON.stringify ({;
-  email: trimmedEmail ;
-}) ;
-});
-const data = await res.json () .catch ( () => ({;
-  ;
-}) ), //Ensure data is an object even on parse error if (res.ok) {';
-  if (data.status === 'already subscribed') {;
-  ;
-}else {';
-  toast.success (data.message || 'Successfully subscribed to newsletter!', {;
-  id: `$ {;
-  uniqueToastIdBase ;
-}-success` ;
-}) ';
-}setEmail ('');';
-//setEmailError (''), //Already cleared if regex passed ;
-}else {';
-  logErrorToProduction ('Newsletter subscription failed:', {;
-  data: data ;
-});';
-//Use a more specific error message if available from API, otherwise generic const errorMessage = data.error || 'Subscription failed. Please try again.';
-toast.error (errorMessage, {;
-  id: `$ {;
-  uniqueToastIdBase ;
-}-api-error` ;
-}) ;
 }
-}catch (err: any) {';
-  logErrorToProduction ('Newsletter subscription error:', {;
-  data: err ;
-});';
-toast.error ('Unable to subscribe right now. Please try again later.', {;
-  id: `$ {;
-  uniqueToastIdBase ;
-}-catch-error` ;
-}) ;
-}finally {;
-  setIsSubmitting (false) ;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 =======
@@ -696,3 +588,6 @@ return (<form id="footer-newsletter-form" aria-label="Newsletter sign-up" onSubm
 } ;
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

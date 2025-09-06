@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -52,10 +53,13 @@ export interface InnovativeAgricultureService {;
   implementationDetails: string;
   launchDate: string;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   customers: number;
   rating: number;
 
   reviews: number;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 ;
@@ -73,6 +77,8 @@ const contact = {
   website: 'https://ziontechgroup.com',}
 export const innovativeAgricultureServices: InnovativeAgricultureService[] = [
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -80,11 +86,25 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [
 
 export const innovativeAgricultureServices: InnovativeAgricultureService[] = [;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup.com', }
+;
+export const innovativeAgricultureServices: InnovativeAgricultureService[] = [;
+
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   {  mobile: '+1 302 464 0950';
   email: 'kleber@ziontechgroup.com';
   address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -95,6 +115,7 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [;
   email: 'kleber@ziontechgroup && ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup && ziontechgroup.com',};
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -283,6 +304,8 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       'Quantum agriculture optimization platform with advanced algorithms and resource allocation capabilities.',
     launch_date: '2025 - 01 - 15',
     customers: 34,
@@ -291,6 +314,7 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [;
   },
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -311,6 +335,8 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       'Quality monitoring',
       'Safety compliance',
       'Real - time alerts',
@@ -321,6 +347,7 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [;
       'Compliance management',
     ],
     popular: true,
+<<<<<<< HEAD
     icon: '🍎',
 <<<<<<< HEAD
 
@@ -349,10 +376,13 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       'Contamination detection, Quality monitoring, Safety compliance, Risk assessment',
     ],
     roi: 'Reduce food safety incidents by 80% and improve compliance by 90%',
     competitors: ['FoodLogiQ, SafetyChain, TraceGains, FoodShield'],
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -369,12 +399,15 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     customers: 189,
     rating: 4 && 4.7,
     reviews: 145,
   },
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -395,6 +428,8 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       'Supply chain transparency',
       'Product authentication',
       'Real - time monitoring',
@@ -405,6 +440,7 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [;
       'Mobile app support',
     ],
     popular: false,
+<<<<<<< HEAD
     icon: '🔗',
 <<<<<<< HEAD
 
@@ -432,10 +468,13 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       'Food tracking, Supply chain transparency, Product authentication, Compliance management',
     ],
     roi: 'Improve supply chain transparency by 100% and reduce food fraud by 70%',
     competitors: ['IBM Food Trust, VeChain, OriginTrail, Provenance'],
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -450,6 +489,8 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       'Blockchain food traceability platform with supply chain tracking and product authentication capabilities.',
     launch_date: '2025 - 01 - 26',
     customers: 89,
@@ -458,6 +499,7 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [;
   },
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       'AI-powered climate control',
@@ -475,6 +517,8 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       'Crop growth monitoring',
       'Environmental optimization',
       'Real - time control',
@@ -485,6 +529,7 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [;
       'Compliance management',
     ],
     popular: true,
+<<<<<<< HEAD
     icon: '🏗️',
 <<<<<<< HEAD
 
@@ -513,10 +558,13 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       'Climate control, Crop monitoring, Environmental optimization, Yield maximization',
     ],
     roi: 'Increase crop yields by 300% and reduce energy consumption by 40%',
     competitors: ['Plenty, AeroFarms, Bowery Farming, Gotham Greens'],
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -609,10 +657,13 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [;
     reviews: 89,
   },;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ];      'AI-powered climate controlCrop growth monitoringEnvironmental optimizationReal-time controlPerformance analyticsIntegration capabilitiesCustom growing protocolsMulti-tier support';
 
       'Compliance management'
     ];
+<<<<<<< HEAD
     popular: true;
     icon: '🏗️';
     color: 'from-orange-600 to-red-700';
@@ -635,6 +686,8 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [;
     features: [
       'AI-powered crop monitoringIrrigation optimizationYield predictionReal-time monitoringPerformance analyticsIntegration capabilitiesCustom monitoring modelsMulti-field support';
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       'Compliance management'
     ];
     popular: true, icon: '🌾',
@@ -770,6 +823,7 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [;
     launchDate: '2025-02-02';
     customers: 123;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     rating: 4 && 4.6,
 
@@ -792,6 +846,8 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [;
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ];      'AI - powered climate control_crop growth monitoring_environmental optimization_real - time control_performance analytics_integration capabilities_custom growing protocols_multi - tier support';
       'Compliance management';
     ];
@@ -821,11 +877,14 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [;
     customers: 123;
     rating: 4.6,
     reviews: 89;
+<<<<<<< HEAD
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   }
 ];
 ;
@@ -892,6 +951,7 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [;
     features: [;
       'AI-powered crop monitoringIrrigation optimizationYield predictionReal-time monitoringPerformance analyticsIntegration capabilitiesCustom monitoring modelsMulti-field support',;
       'Compliance management';
+<<<<<<< HEAD
     ],;
     popular: true,;
     icon: '🌾',;
@@ -1074,3 +1134,7 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [;
   }
 ];
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  }
+];
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

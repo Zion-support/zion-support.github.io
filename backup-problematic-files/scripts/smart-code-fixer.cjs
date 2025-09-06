@@ -1,3 +1,4 @@
+<<<<<<< HEAD:backup-problematic-files/scripts/smart-code-fixer.cjs
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -16,13 +17,31 @@
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:scripts/smart-code-fixer.cjs
+>>>>>>> origin/main
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
+<<<<<<< HEAD
+<<<<<<< HEAD:backup-problematic-files/scripts/smart-code-fixer.cjs
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> pr-12166
 console.log('🔧 Smart Code Fixer');
 console.log('=====');
 <<<<<<< HEAD
@@ -30,16 +49,22 @@ console.log('=====');
 =======
 <<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:scripts/smart-code-fixer.cjs
 
 console.log('🔧 Smart Code Fixer');
 console.log('=====');
 
+<<<<<<< HEAD:backup-problematic-files/scripts/smart-code-fixer.cjs
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -49,9 +74,20 @@ console.log('=====');
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:scripts/smart-code-fixer.cjs
+>>>>>>> origin/main
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 // Function to fix unescaped entities only in JSX content
 function fixUnescapedEntities(content) {
   // Only replace single quotes that are not in import statements or string literals
@@ -84,6 +120,7 @@ function fixSpecificIssues(content, filePath) {
     content = content.replace(/import Link from 'next\/link'/, '// import Link from \'next/link\';');
     modified = true;
   }
+<<<<<<< HEAD:backup-problematic-files/scripts/smart-code-fixer.cjs
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -146,9 +183,21 @@ function fixFiles() {
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+<<<<<<< HEAD
+=======
+=======
+
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:scripts/smart-code-fixer.cjs
+>>>>>>> origin/main
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   // Fix console.log statements in production files
   if (filePath.includes('pages/') || filePath.includes('components/')) {
     content = content.replace(/console\.log\([^)]*\);?/g, '');
@@ -156,6 +205,7 @@ function fixFiles() {
       modified = true;
     }
   }
+<<<<<<< HEAD:backup-problematic-files/scripts/smart-code-fixer.cjs
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -185,9 +235,21 @@ function runBuildTest() {
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+<<<<<<< HEAD
+=======
+=======
+
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:scripts/smart-code-fixer.cjs
+>>>>>>> origin/main
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   // Fix missing semicolons
   content = content.replace(/([^;}])\n\s*}/g, '$1;\n}');
   if (content !== content.replace(/([^;}])\n\s*}/g, '$1;\n}')) {
@@ -266,6 +328,7 @@ function findFiles(dir, extensions = ['.js', '.jsx', '.ts', '.tsx']) {
 function main() {
   const targetDir = process.cwd();
   console.log(`🔍 Scanning directory: ${targetDir}`);
+<<<<<<< HEAD:backup-problematic-files/scripts/smart-code-fixer.cjs
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -317,9 +380,21 @@ function main() {
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+<<<<<<< HEAD
+=======
+=======
+  
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:scripts/smart-code-fixer.cjs
+>>>>>>> origin/main
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const files = findFiles(targetDir);
   console.log(`📁 Found ${files.length} files to process`);
   let fixedCount = 0;
@@ -347,6 +422,7 @@ function main() {
 if (require.main === module) {
   main();
 }
+<<<<<<< HEAD:backup-problematic-files/scripts/smart-code-fixer.cjs
 <<<<<<< HEAD
 module.exports = { processFile, fixSpecificIssues, fixUnescapedEntities };
 =======
@@ -366,6 +442,19 @@ module.exports = { processFile, fixSpecificIssues, fixUnescapedEntities };
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+<<<<<<< HEAD
+=======
+=======
+
+module.exports = { processFile, fixSpecificIssues, fixUnescapedEntities };
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:scripts/smart-code-fixer.cjs
+>>>>>>> origin/main
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

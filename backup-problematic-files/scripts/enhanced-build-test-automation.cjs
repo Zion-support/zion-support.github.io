@@ -50,6 +50,15 @@ const path = require("path")
       this.log(`� Build automation "failed": ${error.message}`, "error"`)
 <<<<<<< HEAD
       return { "success": false, "error"}
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
       return { "success": false, "error"}
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/main
+=======
+=======
+      return { "success": false, "error"}
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> pr-12166

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 import { useState } from 'react'
@@ -52,23 +53,11 @@ import { AIEnhancementButton } from "@/components/ai-enhancement/AIEnhancementBu
 import { AIEnhancementDialog } from "@/components/ai-enhancement/AIEnhancementDialog",
 
 const formSchema = z.object({
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 // Define form schema
 
 const formSchema = z.object({
-  company_name: z.string().min(1, 'Company name is required')
-  role_title: z.string().min(1, 'Role title is required')
-  start_date: z.date({
-    required_error: 'Start date is required'
-  })
-  end_date: z.date().optional()
-  is_current: z.boolean().default(false)
-  description: z.string().optional()
-  location: z.string().optional()
-    required_error: "Start date is required"}),
-  end_date: z.date().optional(),
-  is_current: z.boolean().default(false),
-  description: z.string().optional(),
-  location: z.string().optional(),
 })
 type FormValues = z.infer<typeof formSchema>
 interface WorkExperienceItemFormProps {
@@ -81,13 +70,6 @@ export function WorkExperienceItemForm({
   onCancel
 }: WorkExperienceItemFormProps) {
   const [isEnhancementDialogOpen, setIsEnhancementDialogOpen] = useState(false)
-  company_name: z.string().min(1, "Company name is required"),
-  role_title: z.string().min(1, "Role title is required"),
-  start_date: z.date({
-    required_error: "Start date is required"}),
-  end_date: z.date().optional(),
-  is_current: z.boolean().default(false),
-  description: z.string().optional(),
   location: z.string().optional()}),
 
 type FormValues = z.infer<typeof formSchema>,
@@ -105,6 +87,7 @@ export function WorkExperienceItemForm({
   const [isEnhancementDialogOpen, setIsEnhancementDialogOpen] = useState(false),
 
   // Set up form
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 // Set up form
   const form = useForm<FormValues>({
@@ -129,6 +112,12 @@ export function WorkExperienceItemForm({
       location: initialData?.location |''
     }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  const form = useForm<FormValues>({
+    resolver: zodResolver(formSchema)
+    defaultValues: {
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useState } from 'react';
 import { zod_resolver } from '@hookform / resolvers / zod';
 import { use_form } from 'react - hook - form';
@@ -160,12 +149,15 @@ import { format } from 'date - fns';
       end_date: initialData?.end_date ? new Date(initialData.end_date) : undefined,
       is_current: initialData?.is_current || false,
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   return (
 =======
       description: initialData?.description || '',
       location: initialData?.location || '',
     },
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   })
   const { isSubmitting } = form.formState
   const watchIsCurrent = form.watch('is_current')
@@ -187,6 +179,29 @@ import { format } from 'date - fns';
       start_date: initialData?.start_date ? new Date(initialData.start_date) : new Date(),
       end_date: initialData?.end_date ? new Date(initialData.end_date) : undefined,
       is_current: initialData?.is_current || false,
+  })
+  const { isSubmitting } = form.formState
+  const watchIsCurrent = form.watch('is_current')
+  const watchRoleTitle = form.watch('role_title')
+  const watchCompanyName = form.watch('company_name')
+  const handleFormSubmit = async (values: FormValues,) => {
+    // Create a properly typed WorkExperience object with all required fields
+    const workExperience: WorkExperience = {
+      id: initialData?.id
+      company_name: values.company_name, // Required
+      role_title: values.role_title, // Required
+      start_date: values.start_date, // Required
+      end_date: values.end_date, // Optional
+      is_current: values.is_current, // Required
+      description: values.description, // Optional
+      location: values.location, // Optional
+    }
+    await onSubmit(workExperience)
+  }
+  const handleAIEnhancement = (content: string) => {
+    form.setValue('description', content, { shouldDirty: true })
+    setIsEnhancementDialogOpen(false)
+  }
       description: initialData?.description || "",
       location: initialData?.location || ""}}),
   
@@ -216,13 +231,19 @@ import { format } from 'date - fns';
     setIsEnhancementDialogOpen(false)
   },
 
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+  return (
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <>
       <Form {...form}>
         <form onSubmit={form.handleSubmit(handleFormSubmit)} className="space-y-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <FormField
               control={form.control}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
               name="company_name"
@@ -235,11 +256,14 @@ import { format } from 'date - fns';
               name='company_name'
               render={({ field }: { field: any }) => (                <FormItem>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   <FormControl>
                     <Input placeholder="e.g. Acme Corporation" {...field} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
               )}
@@ -251,6 +275,8 @@ import { format } from 'date - fns';
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useState } from 'react',;
 import { zodResolver } from "@hookform/resolvers/zod",;
 import { useForm } from "react-hook-form",;
@@ -330,6 +356,7 @@ function WorkExperienceItemForm() {
     setIsEnhancementDialogOpen (false);
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 import { useState } from 'react';
@@ -392,6 +419,8 @@ import { format } from 'date-fns';
     setIsEnhancementDialogOpen(false)
   },
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <>
       <Form {...form}>
@@ -399,17 +428,13 @@ import { format } from 'date-fns';
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <FormField
               control={form.control}
-              name='company_name'
-              render={({ field }: { field: any }) => (                <FormItem>
-              name="company_name"
-              render={({ field }: { field: any }) => (
-                <FormItem>
                   <FormLabel>Company Name</FormLabel>
                   <FormControl>
                     <Input placeholder="e.g. Acme Corporation" {...field} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
+<<<<<<< HEAD
               )}
             />
             <FormField
@@ -587,6 +612,8 @@ export function WorkExperienceItemForm(): any ({;
               render={({ field }: { field: any }) => (
                 <FormItem>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   <FormLabel>Role Title</FormLabel>
                   <FormControl>
                     <Input placeholder="e.g. Senior Developer" {...field} />
@@ -595,6 +622,7 @@ export function WorkExperienceItemForm(): any ({;
                 </FormItem>
               )}
             />
+<<<<<<< HEAD
           </div>
 
 
@@ -616,6 +644,8 @@ export function WorkExperienceItemForm(): any ({;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   <FormLabel>Location</FormLabel>
                   <FormControl>
                     <Input placeholder="e.g. New York, NY (Remote)" {...field} />
@@ -623,6 +653,7 @@ export function WorkExperienceItemForm(): any ({;
                   <FormMessage />
                 </FormItem>
               )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -667,6 +698,8 @@ ursor/fix-website-loading-errors-and-merge-6662
                       className='text-sm text-muted-foreground'
                     >
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             />;
             <FormField;
               control={form.control}
@@ -677,6 +710,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                     <Switch;
                       aria - label='Current position';
                       checked={field.value}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -690,6 +724,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       I currently work here
                     </label>
                   </div>
@@ -697,26 +733,19 @@ ursor/fix-website-loading-errors-and-merge-6662
                 </FormItem>
               )}
 
-            />;
-          </div>;
-
-
-
-          <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>;
-            <FormField
-
               control={form.control}
               name="start_date"
               render={({ field }: { field: any }) => (
                 <FormItem className="flex flex-col">
                   <FormLabel>Start Date</FormLabel>
-
-
+            />
+          </div>
                   <Popover>
                     <PopoverTrigger asChild>
                       <FormControl>
                         <Button
 
+<<<<<<< HEAD
 <<<<<<< HEAD
                           variant={"outline"}
                           className={cn(
@@ -787,18 +816,24 @@ ursor/fix-website-loading-errors-and-merge-6662
                             !field.value && "text-muted-foreground"
                           )}
                         >
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                           {field.value ? (
                             format(field.value, "MMM yyyy")
                           ) : (
                             <span>Select date</span>
                           )}
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                           <CalendarIcon className="ml-auto h-4 w-4 opacity-50" aria-hidden="true" />
                         </Button>
                       </FormControl>
                     </PopoverTrigger>
                     <PopoverContent className="w-auto p-0" align="start">
                       <Calendar
+<<<<<<< HEAD
 <<<<<<< HEAD
 
                         mode="single"
@@ -837,11 +872,14 @@ ursor/fix-website-loading-errors-and-merge-6662
                         toYear={new Date().getFullYear()}
                       />;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     </PopoverContent>;
                   </Popover>;
                   <FormMessage />;
                 </FormItem>;
               )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
             />;
@@ -870,13 +908,14 @@ ursor/fix-website-loading-errors-and-merge-6662
                     <FormLabel>End Date</FormLabel>
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     <Popover>
                       <PopoverTrigger asChild>
                         <FormControl>
                           <Button
-
-                            variant={"outline"}
                             className={cn(
+<<<<<<< HEAD
 =======
             />;
             {!watchIsCurrent && (;
@@ -893,12 +932,15 @@ ursor/fix-website-loading-errors-and-merge-6662
                             variant={'outline'}
                             className={cn(
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                               "w-full pl-3 text-left font-normal",
                               !field.value && "text-muted-foreground"
                             )}
                           >
 
                             {field.value ? (
+<<<<<<< HEAD
                               format(field.value, 'MMM yyyy')
 <<<<<<< HEAD
                             ) : (
@@ -966,22 +1008,28 @@ ursor/fix-website-loading-errors-and-merge-6662
                             )}
                           >
                             {field.value ? (
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                               format(field.value, "MMM yyyy")
                             ) : (
                               <span>Select date</span>
                             )}
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                           initialFocus
                           captionLayout='dropdown-buttons'
                           fromYear={1990}
                           toYear={new Date().getFullYear()}
                           disabled={date => date > new Date()}                        />;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                             <CalendarIcon className="ml-auto h-4 w-4 opacity-50" aria-hidden="true" />
                           </Button>
                         </FormControl>
                       </PopoverTrigger>
                       <PopoverContent className="w-auto p-0" align="start">
                         <Calendar
+<<<<<<< HEAD
 <<<<<<< HEAD
 
                           mode="single"
@@ -1019,11 +1067,16 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                           disabled={(date) => date > new Date()}
                         />;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       </PopoverContent>;
                     </Popover>;
                     <FormMessage />;
                   </FormItem>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 
@@ -1033,10 +1086,14 @@ ursor/fix-website-loading-errors-and-merge-6662
               />;
             )}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
           </div>;
 
 
+=======
+          </div>
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <FormField
             control={form && form.control}
             name='description'
@@ -1044,6 +1101,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                 <div className='flex justify-between items-center'>;
                   <FormLabel>Description</FormLabel>;
                   <div className='flex gap-2'>;
+<<<<<<< HEAD
                     <AIEnhancementButton
                       options={{
 =======
@@ -1058,6 +1116,19 @@ ursor/fix-website-loading-errors-and-merge-6662
                           shouldDirty: true,;
                         });
 
+=======
+                )}
+              />
+            )}
+                  <FormLabel>Description</FormLabel>
+                  <div className="flex gap-2">
+                    <AIEnhancementButton
+                      options={{
+                      onEnhanced={content =>
+                        form.setValue('description', content, {
+                          shouldDirty: true
+                        })
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       }
                       buttonText='Enhance with AI';
                     />;
@@ -1123,49 +1194,17 @@ ursor/fix-website-loading-errors-and-merge-6662
                   </div>;
                 </div>;
                 <FormControl>;
-
-                  <Textarea;
-                    placeholder='Describe your responsibilities, achievements, and skills used in this role...';
-                    className='min - h-[150px]';
-
+                  <Textarea
+                    placeholder='Describe your responsibilities, achievements, and skills used in this role...'
+                    className='min-h-[150px]'
                     {...field}
                   />;
                 </FormControl>;
                 <FormMessage />;
-
-
-          </div>;
-          <FormField;
-            control={form.control}
-            name="description"
-            render={({ field }: { field: any }) => (
-              <FormItem>
-                <div className="flex justify-between items-center">
                   <FormLabel>Description</FormLabel>
                   <div className="flex gap-2">
                     <AIEnhancementButton
                       options={{
-                        enhancementType: 'work-description'
-                        content: field.value |''
-                        context: `${watchRoleTitle} at ${watchCompanyName}`
-                      }}
-                      onEnhanced={content =>
-                        form.setValue('description', content, {
-                          shouldDirty: true
-                        })
-                      }
-                      buttonText='Enhance with AI'
-                    />
-                    <Button
-                      type='button'
-                      variant='outline'
-                      size='sm'
-                      onClick={() => setIsEnhancementDialogOpen(true)}
-                      className='text-xs'                    >
-                        enhancementType: "work-description",
-                        content: field.value || "",
-                        context: `${watchRoleTitle} at ${watchCompanyName}`
-                      }}
                       onEnhanced={(content) => form.setValue("description", content, { shouldDirty: true })}
                       buttonText="Enhance with AI"
                     />
@@ -1183,6 +1222,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                 <FormControl>
                   <Textarea
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
                     placeholder='Describe your responsibilities, achievements, and skills used in this role...'
@@ -1193,6 +1233,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                     placeholder="Describe your responsibilities, achievements, and skills used in this role..."
                     className="min-h-[150px]"
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
                     {...field}
                   />
@@ -1201,6 +1243,7 @@ ursor/fix-website-loading-errors-and-merge-6662
               </FormItem>
             )}
           />
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1214,6 +1257,8 @@ ursor/fix-website-loading-errors-and-merge-6662
           <div className="flex justify-end gap-2">
             <Button type="button" variant="outline" onClick={onCancel}>
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               Cancel
             </Button>
             <Button type='submit' disabled={isSubmitting}>
@@ -1229,6 +1274,7 @@ ursor/fix-website-loading-errors-and-merge-6662
           </div>
         </form>
       </Form>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
         title='Enhance Work Experience Description'
@@ -1272,18 +1318,19 @@ ursor/fix-website-loading-errors-and-merge-6662
                   Saving...;
                 </>) : (
                 <>Save</>)}
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             </Button>;
           </div>;
         </form>;
       </Form>;
 
 
-        title="Enhance Work Experience Description"
-
 
         isOpen={isEnhancementDialogOpen}
         onClose={() => setIsEnhancementDialogOpen(false)}
         onApply={handleAIEnhancement}
+<<<<<<< HEAD
 
 
           enhancementType: 'work-description',
@@ -1297,6 +1344,13 @@ ursor/fix-website-loading-errors-and-merge-6662
           content: form.getValues('description') || '',
           context: `${watchRoleTitle} at ${watchCompanyName}`,
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+      <AIEnhancementDialog
+        isOpen={isEnhancementDialogOpen}
+        onClose={() => setIsEnhancementDialogOpen(false)}
+        onApply={handleAIEnhancement}
+        defaultOptions={{
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         }}
         initialContent={form.getValues('description') |''}      />
 
@@ -1309,26 +1363,8 @@ location: z.string () .optional ()
 type FormValues = z.infer<typeof formSchema>
 //Create a properly typed WorkExperience object with all required fields const workExperience: WorkExperience = {
   await onSubmit (workExperience)
-      <AIEnhancementDialog;
-        title='Enhance Work Experience Description';
-        is_open={isEnhancementDialogOpen}
-        on_close={() => setIsEnhancementDialogOpen (false)}
-        on_apply={handleAIEnhancement}
-        default_options={{
-          enhancement_type: 'work - description',
-          content: form.get_values ('description') || '',
-          context: `${watchRoleTitle} at ${watchCompanyName}`,
-        }}
-        initial_content={form.get_values ('description') || ''}      />;
-    </>);
-is current: z.boolean () .default (false);
-description: z.string () .optional ();
-location: z.string () .optional ();
-});
-type FormValues = z.infer < typeof form_schema>;
-//Create a properly typed WorkExperience object with all required fields const work_experience: WorkExperience = {
-  await on_submit (work_experience);
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 setIsEnhancementDialogOpen (false);
 }
@@ -1424,6 +1460,8 @@ setIsEnhancementDialogOpen (false)
 }<CalendarIcon className="ml-auto h-4 w-4 opacity-50" aria-hidden="true" /> </Button> </FormControl> </PopoverTrigger> <PopoverContent className="w-auto p-0" align="start" > <Calendar /> </PopoverContent> </Popover> <FormMessage /> </FormItem>)
 }/> {
   !watchIsCurrent && (<FormField control= {
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   form.control
 }<FormLabel>End Date</FormLabel> <Popover> <PopoverTrigger asChild> <FormControl> <Button) : (<span>Select date</span>) "
 }<CalendarIcon className="ml-auto h-4 w-4 opacity-50" aria-hidden="true" /> </Button> </FormControl> </PopoverTrigger> <PopoverContent className="w-auto p-0" align="start" > <Calendar /> </PopoverContent> </Popover> <FormMessage /> </FormItem>)
@@ -1431,6 +1469,7 @@ setIsEnhancementDialogOpen (false)
 }</div> <FormField <FormLabel>Description</FormLabel> <div className="flex gap-2" > <AIEnhancementButton > AI Writer </Button> </div> </div> <FormControl> <Textarea placeholder="Describe your responsibilities, achievements, and skills used in this role..." className="min-h-[150px]" {
   ...field
 }/> </FormControl> <FormMessage /> </FormItem>) "
+<<<<<<< HEAD
 }/> <> <Loader2 className="mr-2 h-4 w-4 animate-spin" /> Saving... </>) : (<>Save</>)
 }</Button> </div> </form> </Form> <AIEnhancementDialog /> </>)
 }"
@@ -1446,6 +1485,8 @@ setIsEnhancementDialogOpen (false)
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           enhancementType: "work-description",
           content: form.getValues("description") || "",
           context: `${watchRoleTitle} at ${watchCompanyName}`}}
@@ -1455,7 +1496,10 @@ setIsEnhancementDialogOpen (false)
   )
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 ;
 =======
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

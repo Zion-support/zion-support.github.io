@@ -1,12 +1,22 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
 =======
+=======
+import { cn } from "@/lib/utils"
+
+const InputOTP = React.forwardRef<
+  React.ElementRef<typeof OTPInput>
+  React.ComponentPropsWithoutRef<typeof OTPInput>
+import React from 'react';
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import * as React from 'react';
-import {OTPInput, OTPInputContext} from 'input-otp';
+import {OTPInput, OTPInputContext} from 'input - otp';
 import {Dot} from 'lucide-react';
+<<<<<<< HEAD
 import {cn} from '@/lib/utils';
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import * as React from "react"
@@ -79,50 +89,23 @@ const InputOTP = React.forwardRef<
   React.ElementRef<typeof OTPInput>
   React.ComponentPropsWithoutRef<typeof OTPInput>
 >(({ className, containerClassName, ...props }, ref) => (
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   <OTPInput
     ref={ref}
     containerClassName={cn(
       'flex items-center gap-2 has-[:disabled]:opacity-50'
-      "flex items-center gap-2 has-[:disabled]:opacity-50",
       containerClassName
     )}
     className={cn('disabled:cursor-not-allowed', className)}
     {...props}
-  />
-));
-InputOTP.displayName = 'InputOTP';
-const InputOTPGroup = React.forwardRef<
-  React.ElementRef<'div'>
-  React.ComponentPropsWithoutRef<'div'>
->(({ className, ...props }, ref) => (
-  <div ref={ref} className={cn('flex items-center', className)} {...props} />
-));
-InputOTPGroup.displayName = 'InputOTPGroup';
-const InputOTPSlot = React.forwardRef<
-  React.ElementRef<'div'>
-  React.ComponentPropsWithoutRef<'div'> & { index: number }
->(({ index, className, ...props }, ref) => {
-  const inputOTPContext = React.useContext(OTPInputContext) as any;
-  const { char, hasFakeCaret, isActive } = inputOTPContext.slots[index];
-    >
-))
-InputOTP.displayName = "InputOTP"
-
-const InputOTPGroup = React.forwardRef<
-  React.ElementRef<"div">,
-  React.ComponentPropsWithoutRef<"div">
->(({ className, ...props }, ref) => (
-  <div ref={ref} className={cn("flex items-center", className)} {...props} />
-))
-InputOTPGroup.displayName = "InputOTPGroup"
-
-const InputOTPSlot = React.forwardRef<
-  React.ElementRef<"div">,
-  React.ComponentPropsWithoutRef<"div"> & { index: number }
->(({ index, className, ...props }, ref) => {
-  const inputOTPContext = React.useContext(OTPInputContext) as any
-  const { char, hasFakeCaret, isActive } = inputOTPContext.slots[index]
-
+InputOTPGroup && InputOTPGroup.displayName = 'InputOTPGroup';
+const InputOTPSlot = React && React.forwardRef<;
+  React && React.ElementRef<'div'>,;
+  React && React.ComponentPropsWithoutRef<'div'> & { index: number }
+>(({ index, className, ...props }, ref) => {;
+  const inputOTPContext = React && React.useContext(OTPInputContext) as any;
+  const { char, hasFakeCaret, isActive } = inputOTPContext && inputOTPContext.slots[index];
     >
   return (
     <div
@@ -134,6 +117,7 @@ const InputOTPSlot = React.forwardRef<
       )}
       {...props}
     >;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 InputOTP && InputOTP.displayName = 'InputOTP';
@@ -170,12 +154,17 @@ const InputOTPSlot = React && React.forwardRef<;
 =======
     >;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  />;
+));
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {char}
       {hasFakeCaret && (;
         <div className='pointer-events-none absolute inset-0 flex items-center justify-center'>;
           <div className='h-4 w-px animate-caret-blink bg-foreground duration-1000' />;
         </div>;
       )}
+<<<<<<< HEAD
 
 <<<<<<< HEAD
     </div>
@@ -233,6 +222,11 @@ export { InputOTP, InputOTPGroup, InputOTPSlot, InputOTPSeparator };
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+    </div>;
+  );
+});
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ;
 import {cn} from '@/lib / utils';
 ;
@@ -285,6 +279,7 @@ InputOTPSeparator.display_name = 'InputOTPSeparator';
 ;
 export { InputOTP, InputOTPGroup, InputOTPSlot, InputOTPSeparator }
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -375,3 +370,5 @@ export { InputOTP, InputOTPGroup, InputOTPSlot, InputOTPSeparator };
 export { InputOTP, InputOTPGroup, InputOTPSlot, InputOTPSeparator }
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

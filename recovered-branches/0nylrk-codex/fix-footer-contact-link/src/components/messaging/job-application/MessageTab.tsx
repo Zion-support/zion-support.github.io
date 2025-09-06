@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 export function MessageTab(): any ({;
   message,;
@@ -38,6 +39,8 @@ export interface MessageTabProps {;
   proposalLink: string;
   setProposalLink: (link: string) => void;
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from 'react',
 import { Textarea } from "@/components/ui/textarea",
 import { Input } from "@/components/ui/input";
@@ -65,12 +68,15 @@ export interface MessageTabProps {
 
 export function MessageTab({ message, setMessage, proposalLink, setProposalLink }: MessageTabProps) {
   return (
-    <div className="space-y-4">
-      <div>
-        <Label htmlFor="message" className="text-white">Application Message</Label>
+    <div className="space-y-4">;
+      <div>;
+        <Label htmlFor="message" className="text-white">;
+          Application Message;
+        </Label>;
         <Textarea
           id="message"
           value={message}
+<<<<<<< HEAD
           onChange={(e) => setMessage(e.target.value)}
           className="h-32 bg-zion-blue-dark/20 border-zion-purple/30 text-white"
           placeholder="Write a message to the job poster..."
@@ -127,10 +133,15 @@ export function MessageTab({ message, setMessage, proposalLink, setProposalLink 
       <div>
         <Label htmlFor="proposalLink" className="text-white">Link to Proposal/Portfolio (Optional)</Label>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+      <div>
+        <Label htmlFor="proposalLink" className="text-white">Link to Proposal/Portfolio (Optional)</Label>
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <Input
           id="proposalLink"
           type="url"
           value={proposalLink}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -142,6 +153,8 @@ export function MessageTab({ message, setMessage, proposalLink, setProposalLink 
     </div>;
   );
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from './react';
 import { Textarea  } from '@/components / ui / textarea';
 import { Input  } from '@/components / ui / input';
@@ -171,6 +184,7 @@ function MessageTab() {
         />;
       </div>;
       <div>;
+<<<<<<< HEAD
         <Label html_for="proposal_link" className="text - white">;
           Link to Proposal / Portfolio (Optional);
         </Label>;
@@ -209,6 +223,8 @@ function MessageTab() {
     </div>
   );
 }
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   )
 import React from 'react',;
 import { Textarea } from "@/components/ui/textarea",;
@@ -234,8 +250,6 @@ export function MessageTab({ message, setMessage, proposalLink, setProposalLink 
           placeholder="Write a message to the job poster...";
         />;
       </div>;
-}
-      ;
       <div>;
         <Label htmlFor="proposalLink" className="text-white">Link to Proposal/Portfolio (Optional)</Label>;
         <Input;
@@ -244,30 +258,6 @@ export function MessageTab({ message, setMessage, proposalLink, setProposalLink 
           value={proposalLink}
           onChange={(e) => setProposalLink(e.target.value)}
           className="bg-zion-blue-dark/20 border-zion-purple/30 text-white";
-    </div>
-
-    </div>;
-  );
-}
-
-
-          placeholder="https://...";
-        />;
-      </div>;
-    </div>;
-  );}
- export interface MessageTabProps {
-  message: string;
-setMessage: (message: string) => void;
-proposalLink: string;
-setProposalLink: (link: string) => void 
-}export function MessageTab ({
-  message, setMessage, proposalLink, setProposalLink 
-}: MessageTabProps) {
-  return (<div className="space-y-4" > message"className=" text-white">Application Message</Label> <Textarea id=" message"value= {
-  message 
-}/> </div> <div> <Label htmlFor=" proposalLink"className=" text-white">Link to Proposal/Portfolio (Optional) </Label> <Input className="bg-zion-blue-dark/20 border-zion-purple/30 text-white"placeholder="https: //..." 
-}
           placeholder="https: //...";
         />;
       </div>;
@@ -275,4 +265,14 @@ setProposalLink: (link: string) => void
   );
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+    </div>;
+  );
+}
+
+
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

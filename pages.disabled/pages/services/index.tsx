@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -22,12 +23,15 @@ class ErrorBoundary extends React.Component {
 }
 ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 const categories = [\'AI Services\', \'IT Services\', \'Development\', \'Security\'];
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3, Cpu, Headphones, Calendar, Send, Layers } from 'lucide-react';
 const categories = ['AI Services', 'IT Services', 'Development', 'Security'];
+<<<<<<< HEAD
 
 
 
@@ -38,6 +42,8 @@ const categories = ['AI Services', 'IT Services', 'Development', 'Security'];
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export default function ServicesIndex() {
   const services = [
     {
@@ -104,6 +110,7 @@ export default function ServicesIndex() {
         <meta name=\"description\" content=\"Comprehensive technology services including AI, development, automation, and more.\" />
       </Head>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -130,6 +137,8 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             {services.map((service, index) => (
               <div key={index} className=\"bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow p-6\">
                 <div className=\"flex items-center mb-4\">
@@ -138,6 +147,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                   </div>
                   <h3 className=\"text-xl font-semibold text-gray-900\">{service.name}</h3>
                 </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -151,6 +161,8 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   {service.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className=\"flex items-center text-sm text-gray-600\">
                       <Check className=\"w-4 h-4 text-green-500 mr-2\" />
@@ -267,6 +279,7 @@ export default function ServicesIndex() {;
               </div>;
             ))}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 ursor/fix-syntax-push-and-merge-to-main-40de
           <div className=\"text-center mt-16\">
@@ -298,6 +311,8 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 href=\"/contact\"
                 className=\"bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors\">;
                 Get Free Consultation;
@@ -313,6 +328,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
       </div>;
     </>;
   );
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -327,3 +343,5 @@ ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

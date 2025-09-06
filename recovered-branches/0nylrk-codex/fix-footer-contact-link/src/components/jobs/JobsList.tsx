@@ -1,4 +1,3 @@
-
 import {useState, useEffect} from "react";
 import {useAuth} from "@/hooks/useAuth";
 import {supabase} from "@/integrations/supabase/client";
@@ -9,6 +8,7 @@ import {Badge} from "@/components/ui/badge";
 import {Loader2, Edit, X, Eye} from "lucide-react";
 import {format} from "date-fns";
 import {Link} from "react-router-dom";
+<<<<<<< HEAD
 <<<<<<< HEAD
 interface JobsListProps {;
 
@@ -27,6 +27,8 @@ export function JobsList(): any ({ filter, onSelectJob }: JobsListProps) {;
 
 
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useState, useEffect } from "react",
 import { useAuth } from "@/hooks/useAuth",
 import { supabase } from "@/integrations/supabase/client",
@@ -39,6 +41,7 @@ import { format } from "date-fns";
 import { Link } from "react-router-dom";
 import { format } from "date-fns",
 import { Link } from "react-router-dom",
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 interface JobsListProps {
   filter?: JobStatus,
@@ -66,12 +69,14 @@ export function JobsList({ filter, onSelectJob }: JobsListProps) {;
   const [jobs, setJobs] = useState<Job[]>([]);
   const [isLoading, setIsLoading] = useState(true);
 export function JobsList({ filter, onSelectJob }: JobsListProps) {
+=======
+  filter?: JobStatus;
+  onSelectJob?: (jobId: string, jobTitle: string) => void;
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const { user } = useAuth();
   const [jobs, setJobs] = useState<Job[]>([]),
   const [isLoading, setIsLoading] = useState(true);
-  const { user } = useAuth(),
-  const [jobs, setJobs] = useState<Job[]>([]),
-  const [isLoading, setIsLoading] = useState(true),
 
   useEffect(() => {
 
@@ -79,7 +84,10 @@ export function JobsList({ filter, onSelectJob }: JobsListProps) {
       if (!user) return;
       if (!user) return,
 
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       try {
         let query = supabase
           .from("jobs")
@@ -88,6 +96,7 @@ export function JobsList({ filter, onSelectJob }: JobsListProps) {
           .order("created_at", { ascending: false })
         if (filter) {
           query = query.eq("status", filter)
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -155,12 +164,14 @@ export function JobsList(): any ({ filter, onSelectJob }: JobsListProps) {;
     fetchJobs();
   }, [user, filter]);
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   if (isLoading) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     return (
       <div className="flex justify-center items-center p-8">;
         <Loader2 className="h-8 w-8 animate-spin text-primary" />;
       </div>;
+<<<<<<< HEAD
     );
   }
 
@@ -437,12 +448,21 @@ export function JobsList({ filter, onSelectJob }: JobsListProps) {;
         return "bg-green-100 text-green-800",;
     }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+    ),;
+    );
+  }
+          }
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           className={`overflow-hidden cursor-pointer transition-shadow hover:shadow-md ${
             onSelectJob ? "cursor-pointer" : ""
           }`}
           onClick={() => onSelectJob?.(job && job.id, job && job.title)}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   },;
 ;
   return (;
@@ -454,11 +474,15 @@ export function JobsList({ filter, onSelectJob }: JobsListProps) {;
             onSelectJob ? "cursor-pointer" :"";
           }`}
           onClick={() => onSelectJob?.(job.id, job.title)}
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         >;
           <CardHeader className="p-4">;
             <div className="flex justify-between items-start">;
               <div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
                 <CardTitle className="text-xl">{job && job.title}</CardTitle>;
                 <CardDescription className="mt-1">;
@@ -468,6 +492,8 @@ export function JobsList({ filter, onSelectJob }: JobsListProps) {;
               <Badge className={getStatusColor(job && job.status)}>;
                 {job && job.status.replace("_", " ").toUpperCase()}
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <CardTitle className="text-xl">{job.title}</CardTitle>;
                 <CardDescription className="mt-1">;
                   Posted {format(new Date(job.created_at), "PPP")}
@@ -475,12 +501,16 @@ export function JobsList({ filter, onSelectJob }: JobsListProps) {;
               </div>;
               <Badge className={getStatusColor(job.status)}>;
                 {job.status.replace("_", " ").toUpperCase()}
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               </Badge>;
             </div>;
           </CardHeader>;
           <CardContent className="p-4 pt-0">;
             <p className="line-clamp-3 text-sm text-muted-foreground mb-2">;
+<<<<<<< HEAD
 <<<<<<< HEAD
               {job && job.description}
             </p>;
@@ -511,6 +541,8 @@ export function JobsList({ filter, onSelectJob }: JobsListProps) {;
             <Button variant="outline" size="sm" asChild>;
               <Link to={`/jobs/${job && job.id}`}>;
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       case "closed":;
         return "bg-gray-100 text-gray-800";
       default:;
@@ -543,21 +575,99 @@ export function JobsList({ filter, onSelectJob }: JobsListProps) {;
           <CardContent className="p-4 pt-0">
             <p className="line-clamp-3 text-sm text-muted-foreground mb-2">
               {job.description}
+        setJobs(data as Job[]);
+      } catch (error) {;
+        console && console.error("Error fetching jobs:", error);
+      } finally {;
+        setIsLoading(false);
+      }
+    return (
+      <div className="flex justify-center items-center p-8">;
+        <Loader2 className="h-8 w-8 animate-spin text-primary" />;
+      </div>;
+    );
+  }
+          }
+        </p>;
+        <Button asChild className="mt-4">;
+          <Link to="/post-job">Post Your First Job</Link>;
+        </Button>;
+      </div>;
+    );
+  }
+      case "new": return "bg-blue-100 text-blue-800";
+      case "in_progress":;
+        return "bg-yellow-100 text-yellow-800";
+      case "filled":;
+        return "bg-green-100 text-green-800";
+    }
+  }
+
+  return (
+          className={`overflow-hidden cursor-pointer transition-shadow hover:shadow-md ${
+            onSelectJob ? "cursor-pointer" : ""
+          }`}
+          onClick={() => onSelectJob?.(job && job.id, job && job.title)}
+        >;
+          <CardHeader className="p-4">;
+            <div className="flex justify-between items-start">;
+              <div>;
+                <CardTitle className="text-xl">{job && job.title}</CardTitle>;
+                <CardDescription className="mt-1">;
+                  Posted {format(new Date(job && job.created_at), "PPP")}
+                </CardDescription>;
+              </div>;
+              <Badge className={getStatusColor(job && job.status)}>;
+                {job && job.status.replace("_", " ").toUpperCase()}
+              </Badge>;
+            </div>;
+          </CardHeader>;
+          <CardContent className="p-4 pt-0">;
+            <p className="line-clamp-3 text-sm text-muted-foreground mb-2">;
+              {job && job.description}
             </p>;
             <div className="flex flex-wrap gap-1 mt-2">;
+<<<<<<< HEAD
               {job.skills.slice(0, 3).map((skill, index) => (;
               <Link to={`/jobs/${job.id}`}>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+              {job && job.skills.slice(0, 3).map((skill, index) => (;
+                <Badge key={index} variant="outline" className="text-xs">;
+                  {skill}
+                </Badge>;
+              ))}
+              {job && job.skills.length > 3 && (;
+                <Badge variant="outline" className="text-xs">;
+                  +{job && job.skills.length - 3} more;
+                </Badge>;
+              )}
+            </div>;
+            <div className="mt-3 text-sm">;
+              <span className="font-medium">Budget:</span> ${job && job.budget.min} - ${job && job.budget.max}
+            </div>;
+            <div className="mt-1 text-sm">;
+              <span className="font-medium">Deadline:</span> {format(new Date(job && job.deadline), "PPP")}
+            </div>;
+          </CardContent>;
+          <CardFooter className="flex justify-between p-4 pt-0 gap-2">;
+            <Button variant="outline" size="sm" asChild>;
+              <Link to={`/jobs/${job && job.id}`}>;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <Eye className="h-4 w-4 mr-1" /> View Details;
               </Link>;
             </Button>;
             <div className="flex gap-2">;
               <Button variant="outline" size="sm" asChild>;
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <Link to={`/jobs/${job && job.id}/edit`}>;
 =======
                 <Link to={`/jobs/${job.id}/edit`}>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+                <Link to={`/jobs/${job && job.id}/edit`}>;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   <Edit className="h-4 w-4" />;
                 </Link>;
               </Button>;
@@ -569,12 +679,15 @@ export function JobsList({ filter, onSelectJob }: JobsListProps) {;
         </Card>;
       ))}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     </div>;
   );
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useState, useEffect } from './react';
 import { use_auth } from '@/hooks / use_auth';
 import { supabase } from '@/integrations / supabase / client';
@@ -597,6 +710,7 @@ function JobsList() {
   const [jobs, set_jobs] = useState < Job[]>([]);
   const [is_loading, setIsLoading] = useState (true);
 ;
+<<<<<<< HEAD
 
 
 
@@ -607,6 +721,8 @@ function JobsList() {
       // Check condition
 if (return) {
   $2
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
       try {
         let query = supabase;
@@ -766,6 +882,7 @@ setJobs (data as Job[])
 }finally {
   setIsLoading (false) 
 }
+<<<<<<< HEAD
 };
 }, [user, filter]);
 {
@@ -843,3 +960,5 @@ return (<div className="grid gap-6 md:grid-cols-2" > {
 }
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import { cn } from "@/lib/utils";
 import { SafeRef } from "@/types/ref-types";
@@ -9,10 +10,14 @@ import { ChevronDown } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { SafeRef } from '@/types/ref-types';
 interface SidebarGroupProps extends React && React.HTMLAttributes<HTMLDivElement> {;
+=======
+interface SidebarGroupProps extends React.HTMLAttributes<HTMLDivElement> {
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   title?: string;
   icon?: React && React.ReactNode;
   defaultExpanded?: boolean;
   showChevron?: boolean
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -51,6 +56,8 @@ interface SidebarGroupProps extends React.HTMLAttributes<HTMLDivElement> {
   defaultExpanded?: boolean;
   showChevron?: boolean
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 const SidebarGroup = forwardRef<HTMLDivElement, SidebarGroupProps>(
   (
     {
@@ -65,7 +72,10 @@ const SidebarGroup = forwardRef<HTMLDivElement, SidebarGroupProps>(
     ref
   ) => {
     const [expanded, setExpanded] = React.useState(defaultExpanded)
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         ref={ref as SafeRef<HTMLDivElement>}
         className={cn('px-3 py-2', className)}        {...props}
       >;
@@ -73,6 +83,7 @@ const SidebarGroup = forwardRef<HTMLDivElement, SidebarGroupProps>(
           <button
             type='button'
             className='flex w-full items-center justify-between rounded-md px-2 py-1 text-sm font-medium text-muted-foreground hover:bg-secondary/30'
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -116,16 +127,21 @@ const SidebarGroup = forwardRef<HTMLDivElement SidebarGroupProps>(;
             onClick={() => setExpanded(!expanded)}          >;
             <div className='flex items-center gap-2'>;
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               {icon}
 <<<<<<< HEAD
               <span>{title}</span>;
             </div>;
             {showChevron && (;
               <ChevronDown
+<<<<<<< HEAD
 
 
                 className={cn("h-4 w-4 transition-transform", expanded ? "rotate-0" : "-rotate-90")}
               />
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 =======
@@ -139,6 +155,7 @@ const SidebarGroup = forwardRef<HTMLDivElement SidebarGroupProps>(;
                 )}              />
           </button>
         )}
+<<<<<<< HEAD
 SidebarGroup.displayName = 'SidebarGroup'
 export { SidebarGroup }
 
@@ -172,6 +189,11 @@ ursor/fix-website-loading-errors-and-merge-6662
       </div>
     )
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+        <div className={cn('mt-1', !expanded && 'hidden')}>{children}</div>
+      </div>
+    )
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   }
 )
 SidebarGroup.displayName = 'SidebarGroup'
@@ -215,6 +237,7 @@ const SidebarGroup = forward_ref < HTMLDivElement, SidebarGroupProps>(
               {icon}
               <span>{title}</span>;
             </div>;
+<<<<<<< HEAD
             {show_chevron && (
               <ChevronDown;
                 className={cn (
@@ -237,6 +260,23 @@ SidebarGroup.displayName = 'SidebarGroup';
 export { SidebarGroup };
 }
 
+=======
+            {showChevron && (;
+              <ChevronDown
+                className={cn("h-4 w-4 transition-transform", expanded ? "rotate-0" : "-rotate-90")}
+              />
+            )}
+          </button>;
+        )}
+export { SidebarGroup }
+
+SidebarGroup.displayName = 'SidebarGroup';
+export { SidebarGroup };
+}
+            )}
+          </button>
+        )}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <div className={cn("mt-1", !expanded && "hidden")}>{children}</div>
       </div>
     )
@@ -252,7 +292,11 @@ export { SidebarGroup },
 ),;
 SidebarGroup.displayName = "SidebarGroup",;
 <<<<<<< HEAD
+<<<<<<< HEAD
 export { SidebarGroup };
 =======
 export { SidebarGroup };
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+export { SidebarGroup };
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 import {;
@@ -21,19 +22,25 @@ import {
 
 import React from "react";
 import {
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   Card
   CardContent
   CardDescription
   CardFooter
   CardHeader
   CardTitle
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   Card,
   CardContent,
   CardDescription,
   CardFooter,
   CardHeader,
   CardTitle,;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -50,15 +57,12 @@ import { CreditCard, Plus, Trash } from "lucide-react";
 <<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 } from "@/components/ui/card";
 
 import { Button } from "@/components/ui/button";
 import { CreditCard, Plus, Trash } from "lucide-react";
-export function PaymentMethods() {
-  // Mock payment methods
-
-  const paymentMethods = [
-    {
       id: "pm-1"
       type: "credit_card"
       brand: "Visa"
@@ -77,7 +81,10 @@ export function PaymentMethods() {
       isDefault: false
     }
   ];
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       id: "pm-1",
       type: "credit_card",
       brand: "Visa",
@@ -87,10 +94,13 @@ export function PaymentMethods() {
       isDefault: true,
     },
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 import React from "react",
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
@@ -98,11 +108,14 @@ import { Button } from "@/components/ui/button",
 import { CreditCard, Plus, Trash } from "lucide-react",
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     {
       id: "pm-2",
       type: "credit_card",
@@ -111,6 +124,7 @@ import { CreditCard, Plus, Trash } from "lucide-react",
       expMonth: 4,
       expYear: 2026,
 
+<<<<<<< HEAD
       isDefault: false}
   ],
 
@@ -124,6 +138,8 @@ import { CreditCard, Plus, Trash } from "lucide-react",
   ],
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <Card>
       <CardHeader>
@@ -174,6 +190,7 @@ import { CreditCard, Plus, Trash } from "lucide-react",
         </Button>
       </CardFooter>
     </Card>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -184,16 +201,21 @@ import { CreditCard, Plus, Trash } from "lucide-react",
   );
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   )
 import React from "react",;
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
 import { CreditCard, Plus, Trash } from "lucide-react",;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export function PaymentMethods() {;
   // Mock payment methods;
   const paymentMethods = [;
@@ -205,11 +227,16 @@ export function PaymentMethods() {;
       expMonth: 12,;
       expYear: 2025,;
 <<<<<<< HEAD
+<<<<<<< HEAD
       isDefault: true,;
     },;
 =======
       isDefault: true},;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+      isDefault: true,;
+    },;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     {;
       id: "pm-2",;
       type: "credit_card",;
@@ -217,11 +244,12 @@ export function PaymentMethods() {;
       last4: "8888",;
       expMonth: 4,;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       expYear: 2026,;
       isDefault: false,;
     },;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 import React from './react';
 import {
   Card,
@@ -257,22 +285,25 @@ function PaymentMethods() {
       exp_year: 2026,
       is_default: false,
     },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   ];
 ;
   return (
     <Card>;
       <CardHeader>;
+<<<<<<< HEAD
 
         <CardTitle > Payment Methods</CardTitle>;
 
 =======
         <CardTitle > Payment Methods</CardTitle>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <CardDescription>;
           Manage your payment methods for automatic billing;
         </CardDescription>;
       </CardHeader>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -283,6 +314,9 @@ function PaymentMethods() {
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  );
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <CardContent className="space - y-4">;
         {payment_methods.map ((method) => (
           <div;
@@ -325,6 +359,7 @@ function PaymentMethods() {
           Add Payment Method;
         </Button>;
       </CardFooter>;
+<<<<<<< HEAD
     </Card>);
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -410,3 +445,7 @@ function PaymentMethods() {
 }
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+}
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

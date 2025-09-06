@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import Link from 'next/link';
 import { useRouter  } from 'next/router';
 import { Home, Search, BriefcaseIcon, MessageSquare, User, X, MessageCircle } from 'lucide-react'
@@ -147,6 +148,9 @@ export function MobileMenu({ unreadCount = 0, onClose, openLoginModal }: MobileM
 =======
               }
 }
+=======
+              }
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               onClose(), // Close mobile menu on any click
             }}
           >
@@ -167,6 +171,7 @@ export function MobileMenu({ unreadCount = 0, onClose, openLoginModal }: MobileM
       </div>
     </div>
   )
+<<<<<<< HEAD
 }
 }
 ;
@@ -176,10 +181,16 @@ export function MobileMenu({ unreadCount = 0, onClose, openLoginModal }: MobileM
 }
 ;
 
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 name: item.key === 'explore' ? t ('general.explore') : t (`nav.${item.key}`)})),  );
 }
   );
 }
 
 }
+<<<<<<< HEAD
 ;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
