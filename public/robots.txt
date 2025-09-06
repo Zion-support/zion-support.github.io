@@ -1,61 +1,26 @@
 User-agent: *
 Allow: /
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+Sitemap: https://ziontechgroup.com/sitemap.xml
+
+
 # Sitemap
 Sitemap: https://ziontechgroup.com/sitemap.xml
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-# Sitemaps
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 Sitemap: https://ziontechgroup.com/sitemap.xml
 
-<<<<<<< HEAD
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-=======
-# Sitemap
-Sitemap: https://ziontechgroup.com/sitemap.xml
 
-<<<<<<< HEAD
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 # Disallow admin and private areas
 Disallow: /admin/
 Disallow: /api/
 Disallow: /_next/
-Disallow: /private/
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-# Allow important pages
-Allow: /services/
-Allow: /ai-services/
-Allow: /it-services/
-Allow: /micro-saas/
-Allow: /industries/
-Allow: /blog/
-Allow: /resources/
-Allow: /guides/
-
-# Crawl delay
-=======
 # Crawl-delay for respectful crawling
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
 Crawl-delay: 1
-=======
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+
+
+
 Disallow: /test/
 Disallow: /temp/
 
@@ -67,55 +32,16 @@ Allow: /about
 Allow: /contact
 Allow: /blog/
 Allow: /careers/
-=======
-=======
-<<<<<<< HEAD
->>>>>>> origin/main
-Sitemap: https://zion.app/sitemap.xml
 
-# Crawl-delay for respectful crawling
-Crawl-delay: 1
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-=======
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
+
+
 Sitemap: https://ziontechgroup.com/sitemap.xml
 
-<<<<<<< HEAD
-# Crawl-delay for respectful crawling
-Crawl-delay: 1
-=======
-<<<<<<< HEAD
-# Disallow admin and private areas
-Disallow: /admin/
-Disallow: /api/
-Disallow: /_next/
-Disallow: /private/
-Disallow: /test/
-Disallow: /temp/
 
-# Allow important pages
-Allow: /services/
-Allow: /solutions/
-Allow: /industries/
-Allow: /about
-Allow: /contact
-Allow: /blog/
-Allow: /careers/
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
-Sitemap: https://ziontechgroup.com/sitemap.xml
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45
-=======
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
->>>>>>> origin/main
-=======
+
+
+
+
 # Sitemap
 Sitemap: https://ziontechgroup.com/sitemap.xml
 
@@ -134,11 +60,8 @@ Allow: /about
 Allow: /services
 Allow: /contact
 Allow: /pricing
->>>>>>> d1825bf80d0f4576e032e91c766dd295d0eb83f4
-<<<<<<< HEAD
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-=======
+
+
 
 # Allow important pages
 Allow: /services/
@@ -151,16 +74,19 @@ Allow: /resources/
 Allow: /guides/
 
 # Crawl delay
-=======
+
 # Crawl-delay for respectful crawling
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
 Crawl-delay: 1
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-=======
+
+
+
 
 # Allow important pages
 Allow: /services/
 Allow: /about/
 Allow: /contact/
->>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
+
+Disallow: /temp_*/
+Disallow: /*.backup.*
+
