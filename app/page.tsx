@@ -76,6 +76,24 @@ import Link from 'next/link';
             description="Advanced analytics and BI solutions that transform data into actionable insights."
             icon="📊"
           />
+          <Card
+            title="AI-Powered CRM"
+            href="/services/ai-powered-crm"
+            description="Revolutionary CRM with AI automation that boosts sales by 300% and predicts customer behavior."
+            icon="🎯"
+          />
+          <Card
+            title="AI Content Optimizer"
+            href="/services/ai-content-optimizer"
+            description="AI-powered content creation that increases engagement by 400% and automates SEO optimization."
+            icon="✍️"
+          />
+          <Card
+            title="Cybersecurity Suite"
+            href="/services/cybersecurity-suite"
+            description="Enterprise-grade security solutions with 24/7 monitoring and threat detection."
+            icon="🔒"
+          />
         </div>
       </section>
 
