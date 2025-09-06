@@ -44,17 +44,23 @@ const vagueScammyJobPhrases = [
 function containsSuspiciousHost(text: string): boolean {
   const lower = text.toLowerCase();
   return suspiciousLinkHosts.some(host => lower.includes(host));
+}
 
 function containsSuspiciousPhrase(text: string): string[] {
   const lower = text.toLowerCase();
   return suspiciousPhrases.filter(p => lower.includes(p));
+}
 
 function containsVagueJobClaims(text: string): string[] {
   const lower = text.toLowerCase();
   const reasons: string[] = [];
-  "`);
-  }
+  vagueScammyJobPhrases.forEach(phrase => {
+    if (lower.includes(phrase)) {
+      reasons.push(`Contains suspicious job phrase: "${phrase}"`);
+    }
+  });
   return reasons;
+}
 
 export interface HeuristicDeps {
   countEventsByIp: (

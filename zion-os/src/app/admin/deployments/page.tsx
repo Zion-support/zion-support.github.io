@@ -22,7 +22,7 @@ import {
   RefreshCw,
   Pause,
   StopCircle,
-  MapPin,;
+  MapPin,
 } from 'lucide-react';
 
 interface Deployment {

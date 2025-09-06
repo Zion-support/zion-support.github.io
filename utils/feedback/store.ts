@@ -1,4 +1,7 @@
 // Mock feedback store utility
+import fs from 'fs';
+import path from 'path';
+
 export function tryWriteToFirestore(doc: any): Promise<boolean> {
   // Mock implementation - in a real app, this would write to Firestore
   return Promise.resolve(true);
@@ -21,6 +24,7 @@ function ensureDataFile(): void {
   if (!fs.existsSync(DATA_DIR)) fs.mkdirSync(DATA_DIR, { recursive: true });
   if (!fs.existsSync(DB_PATH))
     fs.writeFileSync(DB_PATH, JSON.stringify({ items: [] }, null, 2), 'utf-8');
+}
 
 export function saveFeedbackFallback(rec: FeedbackRecord): FeedbackRecord {
   ensureDataFile();
@@ -30,3 +34,4 @@ export function saveFeedbackFallback(rec: FeedbackRecord): FeedbackRecord {
   items.push(rec);
   fs.writeFileSync(DB_PATH, JSON.stringify({ items }, null, 2), 'utf-8');
   return rec;
+}

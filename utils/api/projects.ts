@@ -5,7 +5,7 @@ import {
   Project,
   Milestone,
   MilestoneStatus,
-  isMilestoneStatus,;
+  isMilestoneStatus,
 } from '../types/milestones';
 import { CurrentUser } from './auth';
 export interface Milestone {

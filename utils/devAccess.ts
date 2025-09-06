@@ -9,6 +9,7 @@ export interface DevIdentity {
   isAuthenticated: boolean;
   roles: DevRole[];
   userId?: string;
+}
 
 export function getGitStatus(): { connected: boolean; branch?: string } {
   try {

@@ -61,6 +61,7 @@ module.exports = {
     "scripts/",
     "*.report.json",
     "temp_*/",
+    "temp_exclude/",
     "test_build/",
     "tests.disabled/",
     "pages.disabled/",

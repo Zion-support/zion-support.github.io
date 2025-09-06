@@ -5,6 +5,7 @@ export function getDesignMap() {
     pages: [],
     styles: []
   };
+}
 
 export type TokenSet = {
   colors: Record<string, string>;
