@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import React from 'react';
 import type { AppProps } from 'next/app';
@@ -346,3 +347,17 @@ origin/automation-improvements-final
 =======
 }
 >>>>>>> main
+=======
+import React from 'react';
+import type { AppProps } from 'next/app';
+import Layout from '../components/layout/Layout';
+import '../styles/globals.css';
+
+export default function App({ Component, pageProps }: AppProps) {
+  return (
+    <Layout>
+      <Component {...pageProps} />
+    </Layout>
+  );
+}
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-bf80
