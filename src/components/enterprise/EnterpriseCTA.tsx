@@ -1,8 +1,15 @@
+<<<<<<< HEAD
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Calendar, ArrowRight } from 'lucide-react';
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
+=======
+
+import React from "react";
+import { Button } from "@/components/ui/button";
+import { Calendar, ArrowRight } from 'lucide-react';
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 export function EnterpriseCTA() {
   return (
     <section id='contact' className='py-20 px-4 md:px-6'>

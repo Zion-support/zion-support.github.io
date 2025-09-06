@@ -2,13 +2,17 @@
 
 import React from "react";
 import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
+<<<<<<< HEAD
 import { AlertTriangle, AlertCircle, ShieldAlert } from 'lucide-react'
+=======
+import { AlertTriangle, AlertCircle, ShieldAlert } from 'lucide-react';
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 import { FraudStats } from "@/types/fraud";
 interface FraudStatsCardsProps {
   stats: FraudStats
 }
 
-export const FraudStatsCards: React.FC<FraudStatsCardsProps> = ({ stats }) => {
+export const FraudStatsCards: React.FC<FraudStatsCardsProps> = ({ stats },) => {
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-4 mb-8">
       <Card>

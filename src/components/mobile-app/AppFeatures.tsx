@@ -1,5 +1,12 @@
+<<<<<<< HEAD
 };
 
+=======
+
+import React from "react";
+import { Brain, Clock, Award, Zap } from 'lucide-react';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 const features = [
   {
     icon: <Brain className="h-10 w-10 text-zion-cyan" />,
@@ -35,8 +42,13 @@ export const AppFeatures: React.FC = () => {
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<<<<<<< HEAD
           {features.map((feature, index) => (
             <Card key={index} className="bg-zion-blue-dark border-zion-purple/30 hover: border-zion-cyan transition-colors duration-300">
+=======
+          {features.map((feature, index,) => (
+            <Card key={index} className="bg-zion-blue-dark border-zion-purple/30 hover:border-zion-cyan transition-colors duration-300">
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
               <CardHeader>
                 <div className="mb-4">{feature.icon}</div>
                 <CardTitle className="text-white">{feature.title}</CardTitle>

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
@@ -11,6 +12,14 @@ import {
 } from '@/components/ui/card';
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
+=======
+
+import React from "react";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import { ArrowRight } from 'lucide-react';
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 interface GeneratedContent {
   description: string;
 tags: string[];
@@ -41,6 +50,7 @@ export function GeneratedContentDisplay({
         </div>
 
         <div>
+<<<<<<< HEAD
           <h3 className='text-sm font-medium text-zion-slate-light mb-2'>
             Tags
           </h3>
@@ -51,6 +61,11 @@ export function GeneratedContentDisplay({
                 className='bg-zion-purple/20 text-zion-purple hover:bg-zion-purple/30'
               >                {tag}
 =======
+=======
+          <h3 className="text-sm font-medium text-zion-slate-light mb-2">Tags</h3>
+          <div className="flex flex-wrap gap-2">
+            {content.tags.map((tag, index,) => (
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
               <Badge key={index} className="bg-zion-purple/20 text-zion-purple hover:bg-zion-purple/30">
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                 {tag}
@@ -79,9 +94,13 @@ export function GeneratedContentDisplay({
 =======
           <h3 className="text-sm font-medium text-zion-slate-light mb-2">Key Selling Points</h3>
           <ul className="list-disc pl-5 text-white space-y-1">
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
             {content.keyPoints.map((point, index) => (
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+            {content.keyPoints.map((point, index,) => (
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
               <li key={index}>{point}</li>
             ))}
           </ul>
@@ -89,6 +108,7 @@ export function GeneratedContentDisplay({
       </CardContent>
       <CardFooter>
         <Button
+<<<<<<< HEAD
           onClick={onApply}
           className='w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover:from-zion-cyan-light hover:to-zion-cyan text-white'
         >
@@ -99,6 +119,9 @@ export function GeneratedContentDisplay({
   );
 }
 =======
+=======
+          onClick = {onApply,}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
           className="w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover: from-zion-cyan-light hover:to-zion-cyan text-white"
         >
           Apply to My Listing
@@ -109,7 +132,12 @@ export function GeneratedContentDisplay({
     </Card>
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 }
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+};
+;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b

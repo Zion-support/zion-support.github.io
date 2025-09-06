@@ -14,7 +14,7 @@ const mockSentry = {
   captureEvent: noop,
   addBreadcrumb: noop,
   configureScope: noop,
-  withScope: (callback: (...args: any[]) => any) => callback(mockScope),
+  withScope: (callback: (...args: any[],) => any) => callback(mockScope),
   setUser: noop,
   setTag: noop,
   setTags: noop,
@@ -28,13 +28,14 @@ const mockSentry = {
   startTransaction: () => mockTransaction,
   finishTransaction: noop,
   // Error boundary and React integration
-  ErrorBoundary: ({ children }: any) => children,
-  withErrorBoundary: (component: any) => component,
+  ErrorBoundary: ({ children }: any,) => children,
+  withErrorBoundary: (component: any,) => component,
   showReportDialog: noop,
 
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   // Browser-specific methods
   onLoad: noop,
+<<<<<<< HEAD
   wrap: (fn: (...args: any[]) => any) => fn,
 
   // Server-specific methods (Node.js)
@@ -50,8 +51,18 @@ const mockSentry = {
         next(),
   },
 
+=======
+  wrap: (fn: (...args: any[],) => any) => fn,
+  
+  // Server-specific methods (Node.js)
+  Handlers: {
+    requestHandler: () => (_req: any, _res: any, next: (...args: any[],) => any) => next(),
+    errorHandler: () => (_err: any, _req: any, _res: any, next: (...args: any[],) => any) => next(),
+    tracingHandler: () => (_req: any, _res: any, next: (...args: any[],) => any) => next()},
+  
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
   // Next.js specific
-  withSentryConfig: (config: any) => config,
+  withSentryConfig: (config: any,) => config,
   SentryWebpackPlugin: class SentryWebpackPlugin {
     constructor() {}
     apply() {}
@@ -140,9 +151,14 @@ const mockHub = {
   setExtras: noop,
   setContext: noop,
   configureScope: noop,
+<<<<<<< HEAD
   withScope: (callback: (...args: any[]) => any) => callback(mockScope),
   startTransaction: () => mockTransaction,
 };
+=======
+  withScope: (callback: (...args: any[],) => any) => callback(mockScope),
+  startTransaction: () => mockTransaction},
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 
 // Export default mock that covers all Sentry packages
 export default mockSentry;

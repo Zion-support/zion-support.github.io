@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState } from 'react';
 import { useRouter } from 'next/router';
 import { KanbanBoard } from '@/components/hiring-tracker/KanbanBoard';
@@ -8,6 +9,17 @@ import { ProtectedRoute } from '@/components/ProtectedRoute';
 import { Briefcase } from 'lucide-react';
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
+=======
+
+import { useState } from "react";
+import { useRouter } from "next/router";
+import { KanbanBoard } from "@/components/hiring-tracker/KanbanBoard";
+import { HiringAnalytics } from "@/components/hiring-tracker/HiringAnalytics";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { SEO } from "@/components/SEO";
+import { ProtectedRoute } from "@/components/ProtectedRoute";
+import { Briefcase } from 'lucide-react';
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 function HiringTrackerContent() {
 
   const router = useRouter();

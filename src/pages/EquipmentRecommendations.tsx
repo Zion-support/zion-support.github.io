@@ -3,6 +3,7 @@ import { ProductListingCard } from '@/components/ProductListingCard';
 import { useAuth } from '@/hooks/useAuth';
 import { fetchRecommendations } from '@/api/recommendations';
 import type { ProductListing } from '@/types/listings';
+<<<<<<< HEAD
 import {
   Dialog,
   DialogContent,
@@ -10,10 +11,14 @@ import {
   DialogTitle,;
 } from '@/components/ui/dialog';
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 import { Button } from '@/components/ui/button';
 import { Loader2 } from 'lucide-react';
 import Link from 'next/link';
 import { ErrorState } from '@/components/jobs/applications';
+<<<<<<< HEAD
 
 export default function EquipmentRecommendations() {
   const { isAuthenticated, user } = useAuth();
@@ -21,15 +26,29 @@ export default function EquipmentRecommendations() {
   const [loading, setLoading] = useState<boolean>(false);
   const [error, setError] = useState<boolean>(false);
   useEffect(() => {
+=======
+export default function EquipmentRecommendations() {
+  const { isAuthenticated, user } = useAuth(),
+  const [listings, setListings] = useState<ProductListing[]>([]),
+  const [loading, setLoading] = useState<boolean>(false),
+  const [error, setError] = useState<boolean>(false),
+
+  useEffect((,) => {
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
     if (isAuthenticated && user?.id) {
       setLoading(true);
       fetchRecommendations(user.id)
         .then(setListings)
+<<<<<<< HEAD
         .catch(() => setError(true))
         .finally(() => setLoading(false));    }
 =======
         .finally(() => setLoading(false))
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+=======
+        .catch((,) => setError(true))
+        .finally((,) => setLoading(false))
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
     }
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   }, [isAuthenticated, user]);
@@ -86,7 +105,7 @@ export default function EquipmentRecommendations() {
           <div key={listing.id} className='break-inside-avoid mb-4'>            <ProductListingCard listing={listing} />
       {error && <ErrorState error="Failed to load recommendations." />}
       <div className="columns-1 sm:columns-2 md:columns-3 lg:columns-4 gap-4 space-y-4">
-        {listings.map((listing) => (
+        {listings.map((listing,) => (
           <div key={listing.id} className="break-inside-avoid mb-4">
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
             <ProductListingCard listing={listing} />

@@ -13,11 +13,15 @@ import { CreditCard, Plus, Trash } from 'lucide-react';
 import React from "react";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+<<<<<<< HEAD
 import { CreditCard, Plus, Trash } from 'lucide-react'
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+import { CreditCard, Plus, Trash } from 'lucide-react';
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 export function PaymentMethods() {
   // Mock payment methods
   const paymentMethods = [
@@ -50,10 +54,17 @@ export function PaymentMethods() {
         </CardDescription>
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       </CardHeader>
+<<<<<<< HEAD
       <CardContent className='space-y-4'>
         {paymentMethods.map(method => (
           <div
             key={method.id}
+=======
+      <CardContent className="space-y-4">
+        {paymentMethods.map((method,) => (
+          <div 
+            key = {method.id,}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
             className={`flex items-center justify-between p-4 rounded-lg border ${
               method.isDefault ? 'bg-muted border-primary' : 'border-border'
             }`}

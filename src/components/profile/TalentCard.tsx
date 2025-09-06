@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { Star, MapPin, Clock, ArrowRight, CheckCircle2 } from 'lucide-react';
@@ -14,6 +15,24 @@ export interface TalentCardProps {
   isSaved: boolean;
   onToggleSave: (id: string, isSaved: boolean) => void;
   isAuthenticated: boolean;
+=======
+import { Button } from "@/components/ui/button";
+import { Card } from "@/components/ui/card";
+import { Star, MapPin, Clock, ArrowRight, CheckCircle2 } from 'lucide-react';
+import Link from "next/link";
+import { TalentProfile } from "@/types/talent";
+import Image from 'next/image', // Import next/image
+import React, { useState } from 'react', // Import React and useState
+
+export interface TalentCardProps {
+  talent: TalentProfile,
+  onViewProfile: (id: string,) => void,
+  onRequestHire: (talent: TalentProfile,) => void,
+  isSaved: boolean,
+  onToggleSave: (id: string, isSaved: boolean,) => void,
+  isAuthenticated: boolean
+}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 
 export function TalentCard({
   talent,
@@ -35,9 +54,15 @@ export function TalentCard({
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   };
 
+<<<<<<< HEAD
   const handleRequestHire = (e: React.MouseEvent) => {
     e.preventDefault();
     e.stopPropagation();
+=======
+  const handleRequestHire = (e: React.MouseEvent,) => {
+    e.preventDefault(),
+    e.stopPropagation(),
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
     if (onRequestHire) {
       onRequestHire(talent);    }
 =======
@@ -47,9 +72,15 @@ export function TalentCard({
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   };
 
+<<<<<<< HEAD
   const handleToggleSave = (e: React.MouseEvent) => {
     e.preventDefault();
     e.stopPropagation();
+=======
+  const handleToggleSave = (e: React.MouseEvent,) => {
+    e.preventDefault(),
+    e.stopPropagation(),
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
     if (onToggleSave) {
       onToggleSave(talent.id, !isSaved);
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -69,9 +100,15 @@ export function TalentCard({
               {/* Added relative for Image */}
               {talent.profile_picture_url && !avatarError ? (
                 <Image
+<<<<<<< HEAD
                   src={talent.profile_picture_url}
                   alt={talent.full_name || 'Talent Avatar'}
                   fill={true}
+=======
+                  src = {talent.profile_picture_url,}
+                  alt = {talent.full_name || 'Talent Avatar',}
+                  fill = {true,}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
                   style={{ objectFit: 'cover' }}
                   className='rounded-full' // Make sure image itself is rounded if fill is used in a rounded container                  onError={() => setAvatarError(true)}
                   priority={false}
@@ -80,9 +117,14 @@ export function TalentCard({
                 <div className='w-full h-full flex items-center justify-center text-zion-slate-light text-xl font-bold'>                  {talentNameInitial}
 =======
                   className="rounded-full" // Make sure image itself is rounded if fill is used in a rounded container
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                   onError={() => setAvatarError(true)}
                   priority={false}
+=======
+                  onError = {(,) => setAvatarError(true),}
+                  priority = {false,}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
                 />
               ) : (
 <<<<<<< HEAD
@@ -109,10 +151,17 @@ export function TalentCard({
                 {talent.full_name}
               </h3>
               <Button
+<<<<<<< HEAD
                 variant='ghost'
                 size='sm'
                 className='p-1 h-auto text-zion-slate-light hover:text-zion-cyan'
                 onClick={handleToggleSave}
+=======
+                variant="ghost"
+                size="sm"
+                className="p-1 h-auto text-zion-slate-light hover:text-zion-cyan"
+                onClick = {handleToggleSave,}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
               >
                 <Star
                   className={`h-5 w-5 ${isSaved ? 'fill-yellow-400 text-yellow-400' : ''}`}
@@ -158,6 +207,7 @@ export function TalentCard({
 
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
         {skills.length > 0 && (
+<<<<<<< HEAD
           <div className='mt-4'>
             <div className='flex flex-wrap gap-2'>
               {skills.map((skill, index) => (
@@ -165,6 +215,13 @@ export function TalentCard({
                   key={index}
                   className='px-2 py-1 text-xs rounded-full bg-zion-blue-light text-zion-slate-light'                >
 =======
+=======
+          <div className="mt-4">
+            <div className="flex flex-wrap gap-2">
+              {skills.map((skill, index,) => (
+                <span 
+                  key = {index,}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
                   className="px-2 py-1 text-xs rounded-full bg-zion-blue-light text-zion-slate-light"
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                 >
@@ -201,11 +258,17 @@ export function TalentCard({
           <div className='flex items-center gap-2'>
             {isAuthenticated && (
               <Button
+<<<<<<< HEAD
                 size='sm'
                 variant='secondary'
                 onClick={handleRequestHire}
                 className='bg-zion-purple hover:bg-zion-purple-light text-white'              >
 =======
+=======
+                size="sm"
+                variant="secondary"
+                onClick = {handleRequestHire,}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
                 className="bg-zion-purple hover:bg-zion-purple-light text-white"
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
               >
@@ -214,11 +277,18 @@ export function TalentCard({
               </Button>
             )}
             <Button
+<<<<<<< HEAD
               size='sm'
               variant='ghost'
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
               onClick={handleViewProfile}
               className='text-zion-cyan hover:text-white hover:bg-zion-blue-light'
+=======
+              size="sm"
+              variant="ghost"
+              onClick = {handleViewProfile,}
+              className="text-zion-cyan hover: text-white hover:bg-zion-blue-light"
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
             >
               View <ArrowRight className='ml-1 h-4 w-4' />            </Button>
 =======

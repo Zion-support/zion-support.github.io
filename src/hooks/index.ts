@@ -1,7 +1,12 @@
 import { useState } from 'react';
 
+<<<<<<< HEAD
 export const useLocalStorage = (key: string, initialValue: unknown) => {
   const [ storedValue, setStoredValue ] = useState(() => {
+=======
+export const useLocalStorage = (key: string, initialValue: unknown,) => {
+  const [storedValue, setStoredValue] = useState((,) => {
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
     try {
     const item = window.localStorage.getItem(key),
     return item ? JSON.parse(item) : initialValue
@@ -11,7 +16,7 @@ export const useLocalStorage = (key: string, initialValue: unknown) => {
     }
   });
 
-  const setValue = (value: unknown) => {
+  const setValue = (value: unknown,) => {
     try {
       const valueToStore = value instanceof Function ? value(storedValue) : value;
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

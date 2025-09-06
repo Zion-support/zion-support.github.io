@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 
 interface TalentRateRecommenderProps {
@@ -6,10 +7,30 @@ interface TalentRateRecommenderProps {
   yearsExperience: number,
   location?: string;
   onSuggestionApplied: (value: number) => void,
+=======
+import React, { useState } from "react";
+import { Button } from "@/components/ui/button";
+import {logErrorToProduction} from '@/utils/productionLogger';
+import { 
+  getTalentRateSuggestion,
+  PricingSuggestion,
+  TalentRateParams,
+  trackPricingSuggestion
+} from "@/services/pricingSuggestionService",
+import { PricingSuggestionBox } from "./PricingSuggestionBox";
+import { useAuth } from "@/hooks/useAuth";
+import { Sparkles } from 'lucide-react';
+interface TalentRateRecommenderProps {
+  skills: string[],
+  yearsExperience: number,
+  location?: string,
+  onSuggestionApplied: (value: number,) => void,
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
   rateType: "hourly" | "fixed"
 }
 
 export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({
+<<<<<<< HEAD
   skills;
   yearsExperience;
   location;
@@ -18,6 +39,16 @@ export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({
   const [isLoading, setIsLoading] = useState(false);
   const [suggestion, setSuggestion] = useState<PricingSuggestion | null>(null);
   const { user } = useAuth();
+=======
+  skills,
+  yearsExperience,
+  location,
+  onSuggestionApplied,
+  rateType},) => {
+  const [isLoading, setIsLoading] = useState(false),
+  const [suggestion, setSuggestion] = useState<PricingSuggestion | null>(null),
+  const { user } = useAuth(),
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 
   const generateSuggestion = async () => {
     if (skills.length === 0 || yearsExperience <= 0) {
@@ -67,23 +98,24 @@ export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({
           <Button
             type="button"
             variant="outline"
-            onClick={generateSuggestion}
-            disabled={skills.length === 0 || yearsExperience <= 0}
+            onClick = {generateSuggestion,}
+            disabled = {skills.length === 0 || yearsExperience <= 0,}
             className="w-full"
           >
             <Sparkles className="h-4 w-4 mr-2" /> Optimize Rate with AI
           </Button>
         ) : (
           <PricingSuggestionBox
-            suggestion={suggestion}
-            isLoading={isLoading}
-            onApplySuggestion={handleApplySuggestion}
-            rateType={rateType}
+            suggestion = {suggestion,}
+            isLoading = {isLoading,}
+            onApplySuggestion = {handleApplySuggestion,}
+            rateType = {rateType,}
           />
         )}
       </div>
     </div>
   )
+<<<<<<< HEAD
 };
 return (<div className="space-y-4" > <div> {";
   !suggestion && !isLoading ? (<Button type="button" variant="outline" onClick={;
@@ -103,3 +135,7 @@ return (<div className="space-y-4" > <div> {";
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+},
+;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b

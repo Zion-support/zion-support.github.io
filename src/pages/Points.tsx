@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+<<<<<<< HEAD
 import {
   Gift,
   Star,
@@ -25,11 +26,26 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 import { Button } from '@/components/ui/button';
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+import { Gift, Star, Users, ShoppingBag, MessageSquare, TrendingUp, History } from 'lucide-react';
+import { useAuth } from '@/hooks/useAuth';
+import { usePoints } from '@/hooks/usePoints';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 import { Badge } from '@/components/ui/badge';
 import { ScrollArea } from '@/components/ui/scroll-area';
 import { formatDistanceToNow } from 'date-fns';
 import Link from 'next/link';
 import { LoginModal } from '@/components/auth/LoginModal';
+<<<<<<< HEAD
+=======
+export default function PointsPage() {
+  const { isAuthenticated, user } = useAuth(),
+  const { ledger, balance, loading, fetchLedger } = usePoints(),
+  const [loginOpen, setLoginOpen] = useState(false),
+  const [redeeming, setRedeeming] = useState(false),
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 export default function PointsPage() {
@@ -149,6 +165,7 @@ export default function PointsPage() {
               Earn points for every action you take and redeem them for
               exclusive rewards!
             </p>
+<<<<<<< HEAD
             <Button onClick={() => setLoginOpen(true)} size='lg'>              Join Now to Start Earning
             </Button>
           </div>
@@ -156,6 +173,9 @@ export default function PointsPage() {
 =======
             <Button onClick={() => setLoginOpen(true)} size="lg">
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+=======
+            <Button onClick={(,) => setLoginOpen(true)} size="lg">
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
               Join Now to Start Earning
             </Button>
           </div>
@@ -182,6 +202,7 @@ export default function PointsPage() {
                   Multiple ways to accumulate rewards
                 </CardDescription>
               </CardHeader>
+<<<<<<< HEAD
               <CardContent className='space-y-4'>
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                 {earningOpportunities.map((opportunity, index) => (
@@ -195,6 +216,15 @@ export default function PointsPage() {
                       <p className='text-sm text-muted-foreground'>
                         {opportunity.description}
                       </p>
+=======
+              <CardContent className="space-y-4">
+                {earningOpportunities.map((opportunity, index,) => (
+                  <div key={index} className="flex items-start gap-3 p-3 rounded-lg border">
+                    <div className="text-primary mt-1">{opportunity.icon}</div>
+                    <div className="flex-1">
+                      <h4 className="font-medium">{opportunity.title}</h4>
+                      <p className="text-sm text-muted-foreground">{opportunity.description}</p>
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
                     </div>
                     <Badge variant='secondary'>{opportunity.points}</Badge>                  </div>
 =======
@@ -221,6 +251,7 @@ export default function PointsPage() {
                   What you can redeem your points for
                 </CardDescription>
               </CardHeader>
+<<<<<<< HEAD
               <CardContent className='space-y-4'>
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                 {upcomingRewards.map((reward, index) => (
@@ -228,6 +259,11 @@ export default function PointsPage() {
                     key={index}
                     className='flex items-center justify-between p-3 rounded-lg border'
                   >
+=======
+              <CardContent className="space-y-4">
+                {upcomingRewards.map((reward, index,) => (
+                  <div key={index} className="flex items-center justify-between p-3 rounded-lg border">
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
                     <div>
                       <h4 className='font-medium'>{reward.title}</h4>
                       <p className='text-sm text-muted-foreground'>
@@ -316,6 +352,7 @@ export default function PointsPage() {
               More ways to boost your point balance
             </CardDescription>
           </CardHeader>
+<<<<<<< HEAD
           <CardContent className='space-y-4'>
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
             {earningOpportunities.map((opportunity, index) => (
@@ -329,6 +366,15 @@ export default function PointsPage() {
                   <p className='text-sm text-muted-foreground'>
                     {opportunity.description}
                   </p>
+=======
+          <CardContent className="space-y-4">
+            {earningOpportunities.map((opportunity, index,) => (
+              <div key={index} className="flex items-start gap-3 p-3 rounded-lg border">
+                <div className="text-primary mt-1">{opportunity.icon}</div>
+                <div className="flex-1">
+                  <h4 className="font-medium">{opportunity.title}</h4>
+                  <p className="text-sm text-muted-foreground">{opportunity.description}</p>
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
                 </div>
                 <div className='text-right'>
                   <Badge variant='secondary' className='mb-1'>
@@ -364,6 +410,7 @@ export default function PointsPage() {
               Redeem your points for these rewards
             </CardDescription>
           </CardHeader>
+<<<<<<< HEAD
           <CardContent className='space-y-4'>
             {upcomingRewards.map(reward => (
               <div
@@ -371,6 +418,11 @@ export default function PointsPage() {
                 className='flex items-center justify-between p-3 rounded-lg border'
               >
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+          <CardContent className="space-y-4">
+            {upcomingRewards.map((reward,) => (
+              <div key={reward.id} className="flex items-center justify-between p-3 rounded-lg border">
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
                 <div>
                   <h4 className='font-medium'>{reward.title}</h4>
                   <p className='text-sm text-muted-foreground'>
@@ -382,11 +434,15 @@ export default function PointsPage() {
                     {reward.cost} pts
                   </Badge>
                   {balance >= reward.cost ? (
+<<<<<<< HEAD
                     <Button
                       size='sm'
                       onClick={() => handleRedeem(reward)}
                       disabled={redeeming}
                     >
+=======
+                    <Button size="sm" onClick={(,) => handleRedeem(reward)} disabled={redeeming}>
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
                       {redeeming ? 'Processing...' : 'Redeem'}
                     </Button>
                   ) : (
@@ -443,12 +499,17 @@ export default function PointsPage() {
                       </p>
                     </div>
                     <Badge
+<<<<<<< HEAD
                       variant='outline'
                       className={
                         entry.delta >= 0
                           ? 'bg-green-100 text-green-800'
                           : 'bg-red-100 text-red-800'
                       }
+=======
+                      variant="outline"
+                      className = {entry.delta >= 0 ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800',}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
                     >
                       {entry.delta >= 0 ? '+' : ''}                      {entry.delta} pts
                     </Badge>

@@ -5,6 +5,14 @@ import { Star } from 'lucide-react';
 import { cn } from '@/lib/utils';
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
+<<<<<<< HEAD
+=======
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
+import { AspectRatio } from "@/components/ui/aspect-ratio";
+import { Badge } from "@/components/ui/badge";
+import { Star } from 'lucide-react';
+import { cn } from "@/lib/utils";
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 interface ProfileHeroProps {
   name: string;
   title: string;  avatarUrl?: string;
@@ -49,7 +57,7 @@ export function ProfileHero({
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
           {coverImageUrl ? (
             <img
-              src={coverImageUrl}
+              src = {coverImageUrl,}
               alt={`${name} cover`}
 <<<<<<< HEAD
               className='w-full h-full object-cover'
@@ -101,12 +109,19 @@ export function ProfileHero({
                 <h1 className="text-2xl md:text-3xl font-bold text-white">{name}</h1>
                 <Badge 
                   variant="outline" 
+<<<<<<< HEAD
                   className={cn(
                     "ml-2 border-zion-purple/50 text-zion-cyan";
                     profileType === 'service' ? "bg-zion-purple/10" : "bg-zion-cyan/10"
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                   )}
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+                  className = {cn(
+                    "ml-2 border-zion-purple/50 text-zion-cyan",
+                    profileType === 'service' ? "bg-zion-purple/10" : "bg-zion-cyan/10"
+                  ),}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
                 >
                   {profileType === 'service' ? 'Service Provider' : 'Talent'}
                 </Badge>
@@ -154,8 +169,13 @@ export function ProfileHero({
       </div>
     </div>
   );
+<<<<<<< HEAD
 }
 =======
 }
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+};
+;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b

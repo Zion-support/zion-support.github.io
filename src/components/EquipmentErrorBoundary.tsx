@@ -1,10 +1,16 @@
 import React from 'react';
 import { AlertTriangle, RefreshCw } from 'lucide-react';
+<<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { logErrorToProduction } from '@/utils/productionLogger';
 
+=======
+import { Button } from '@/components/ui/button';
+import { Card, CardContent } from '@/components/ui/card';
+import {logErrorToProduction} from '@/utils/productionLogger';
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 interface Props {
   children: React.ReactNode;
 
@@ -23,10 +29,15 @@ export class EquipmentErrorBoundary extends React.Component<Props, State> {
 
 export class EquipmentErrorBoundary extends React.Component<Props, State> {
   constructor(props: Props) {
+<<<<<<< HEAD
     super(props);
 <<<<<<< HEAD
     this.state = { hasError: false };
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+    super(props),
+    this.state = { hasError: false ,}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
   }
 
   static getDerivedStateFromError(error: Error): State {
@@ -58,12 +69,19 @@ export class EquipmentErrorBoundary extends React.Component<Props, State> {
                 be a temporary issue.
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
               </p>
+<<<<<<< HEAD
               <div className='flex gap-2 justify-center'>
                 <Button
                   onClick={() =>
                     this.setState({ hasError: false, error: undefined })
                   }
                   variant='outline'
+=======
+              <div className="flex gap-2 justify-center">
+                <Button 
+                  onClick={(,) => this.setState({ hasError: false, error: undefined })} 
+                  variant="outline"
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
                 >
                   <RefreshCw className='h-4 w-4 mr-2' />
                   Try Again

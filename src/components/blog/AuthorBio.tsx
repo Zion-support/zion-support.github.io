@@ -1,5 +1,6 @@
 import React from 'react';
 import type { BlogAuthor } from '@/types/blog';
+<<<<<<< HEAD
 
 interface AuthorBioProps {
   author: BlogAuthor;
@@ -8,6 +9,8 @@ export function AuthorBio({ author }: AuthorBioProps) {
   return (
     <div className='mt-12 flex flex-col md:flex-row bg-zion-blue-light dark:bg-zion-blue-dark border border-zion-blue rounded-lg p-6'>
 =======
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 interface AuthorBioProps {
   author: BlogAuthor
 }
@@ -20,12 +23,21 @@ export function AuthorBio({ author }: AuthorBioProps) {
     <div className='mt-12 flex flex-col md:flex-row bg-zion-blue-light dark:bg-zion-blue-dark border border-zion-blue rounded-lg p-6'>
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       <img
+<<<<<<< HEAD
         src={author.avatarUrl}
         alt={author.name}
         className='w-16 h-16 rounded-full mr-4 mb-4 md:mb-0'
         onError={e => {
           const target = e.currentTarget as HTMLImageElement;
           target.src = '/images/blog-placeholder.svg';
+=======
+        src = {author.avatarUrl,}
+        alt = {author.name,}
+        className="w-16 h-16 rounded-full mr-4 mb-4 md: mb-0"
+        onError={(e,) => {
+          const target = e.currentTarget as HTMLImageElement,
+          target.src = '/images/blog-placeholder.svg'
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
         }}
       />
       <div>

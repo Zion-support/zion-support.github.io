@@ -2,6 +2,11 @@ import { Trophy } from 'lucide-react';
 import { Progress } from '@/components/ui/progress';
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
+<<<<<<< HEAD
+=======
+import { Trophy } from 'lucide-react';
+import { Progress } from "@/components/ui/progress";
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 interface ReputationDisplayProps {
   reputation: number;
   size?: 'sm' | 'md' | 'lg';
@@ -13,9 +18,13 @@ export const ReputationDisplay = ({
 export const ReputationDisplay = ({ 
   reputation;
   size = 'md' 
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 }: ReputationDisplayProps) => {
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+}: ReputationDisplayProps,) => {
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
   // Calculate next milestone
   const currentLevel = Math.floor(reputation / 100);
   const nextMilestone = (currentLevel + 1) * 100;

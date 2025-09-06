@@ -1,5 +1,23 @@
 
+<<<<<<< HEAD
 =======
+=======
+import { useEffect } from 'react';
+import { useAuth } from '@/hooks/useAuth';
+import { useReferrals } from '@/hooks/useReferrals';
+import { ReferralStats } from '@/components/referrals/ReferralStats';
+import { ReferralLink } from '@/components/referrals/ReferralLink';
+import { ReferralTable } from '@/components/referrals/ReferralTable';
+import { RewardsCard } from '@/components/referrals/RewardsCard';
+import { ReferralGuide } from '@/components/referrals/ReferralGuide';
+import { ReferralLeaderboard } from '@/components/referrals/ReferralLeaderboard';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Button } from '@/components/ui/button';
+import { toast } from '@/hooks/use-toast';
+import { Share, Users } from 'lucide-react';
+import { useRouter } from 'next/router', // Changed from useNavigate
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -52,7 +70,7 @@ export default function ReferralsPage() {
 
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 
-  useEffect(() => {
+  useEffect((,) => {
     if (!isAuthenticated) {
       toast({
 <<<<<<< HEAD
@@ -92,6 +110,7 @@ export default function ReferralsPage() {
       </div>
 
       <ReferralStats stats={stats} isLoading={isLoading} />
+<<<<<<< HEAD
 
       <div className='grid gap-6 mt-6 lg:grid-cols-3'>
         <div className='lg:col-span-2 space-y-6'>
@@ -100,6 +119,15 @@ export default function ReferralsPage() {
             onCopy={copyReferralLink}
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
             onShare={shareOnSocialMedia}
+=======
+      
+      <div className="grid gap-6 mt-6 lg:grid-cols-3">
+        <div className="lg:col-span-2 space-y-6">
+          <ReferralLink 
+            referralLink = {referralLink,}
+            onCopy = {copyReferralLink,}
+            onShare = {shareOnSocialMedia,}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
           />
 
           <Tabs defaultValue='referrals' className='w-full'>
@@ -158,5 +186,9 @@ export default function ReferralsPage() {
 }'"
 =======
 }
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { useState, useRef } from 'react';
@@ -6,6 +7,14 @@ import { useToast } from '@/hooks/use-toast';
 import { logErrorToProduction } from '@/utils/productionLogger';
 
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { useState, useRef } from "react";
+import { Mail } from 'lucide-react';
+import { useToast } from "@/hooks/use-toast";
+import {logErrorToProduction} from '@/utils/productionLogger';
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 export function EnhancedNewsletterForm() {
   const [email, setEmail] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -15,11 +24,19 @@ export function EnhancedNewsletterForm() {
 
   const lastSubmit = useRef(0);
 
+<<<<<<< HEAD
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     const now = Date.now();
     if (now - lastSubmit.current < 1000) return;
     lastSubmit.current = now;
+=======
+  const handleSubmit = async (e: React.FormEvent,) => {
+    e.preventDefault(),
+    const now = Date.now(),
+    if (now - lastSubmit.current < 1000) return,
+    lastSubmit.current = now,
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 
     const trimmed = email.trim();
     if (!EMAIL_REGEX.test(trimmed)) {
@@ -35,7 +52,11 @@ export function EnhancedNewsletterForm() {
         body: JSON.stringify({ email: trimmed }),
       });
 
+<<<<<<< HEAD
       const data = await res.json().catch(() => ({}));
+=======
+      const data = await res.json().catch((,) => ({})),
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 
       if (res.ok) {
         // Handle different success statuses
@@ -90,6 +111,7 @@ export function EnhancedNewsletterForm() {
             Email address for newsletter subscription
           </label>
           <Input
+<<<<<<< HEAD
             type='email'
             id='enhanced-newsletter-email'
             name='email'
@@ -106,11 +128,28 @@ export function EnhancedNewsletterForm() {
             type='submit'
             disabled={isSubmitting}
             className='bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white hover:from-zion-purple-light hover:to-zion-purple'
+=======
+            type="email"
+            id="enhanced-newsletter-email"
+            name="email"
+            placeholder="Enter your email"
+            className="flex-grow bg-zion-blue-dark text-white border-zion-purple/20 focus:border-zion-purple focus:ring-zion-purple"
+            value = {email,}
+            onChange = {(e: React.ChangeEvent<HTMLInputElement>,) => setEmail(e.target.value),}
+            autoComplete="email"
+            required
+          />
+          <Button 
+            type="submit" 
+            disabled = {isSubmitting,}
+            className="bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white hover:from-zion-purple-light hover:to-zion-purple"
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
           >
             {isSubmitting ? 'Subscribing...' : 'Subscribe'}
           </Button>
         </form>
       )}
+<<<<<<< HEAD
 
       <div className='mt-4 flex items-center text-xs text-zion-slate-light'>
         <div className='flex -space-x-1 mr-2'>
@@ -119,6 +158,13 @@ export function EnhancedNewsletterForm() {
               key={i}
               className='h-5 w-5 rounded-full border border-zion-blue-dark bg-zion-blue flex items-center justify-center text-zion-cyan'
             >
+=======
+      
+      <div className="mt-4 flex items-center text-xs text-zion-slate-light">
+        <div className="flex -space-x-1 mr-2">
+          {[...Array(3)].map((_, i,) => (
+            <div key={i} className="h-5 w-5 rounded-full border border-zion-blue-dark bg-zion-blue flex items-center justify-center text-zion-cyan">
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
               {String.fromCharCode(65 + i)}
             </div>
           ))}

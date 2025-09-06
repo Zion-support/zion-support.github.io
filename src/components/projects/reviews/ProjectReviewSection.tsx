@@ -1,4 +1,5 @@
 import { Project } from '@/types/projects';
+<<<<<<< HEAD
 
 import { useState } from 'react';
 import { Star } from 'lucide-react';
@@ -15,6 +16,16 @@ import { LeaveReviewModal } from '@/components/reviews/LeaveReviewModal';
 import { useReviews } from '@/hooks/useReviews';
 import { useAuth } from '@/hooks/useAuth';
 
+=======
+import { useState } from "react";
+import { Star } from 'lucide-react';
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { ReviewsList } from "@/components/reviews/ReviewsList";
+import { LeaveReviewModal } from "@/components/reviews/LeaveReviewModal";
+import { useReviews } from "@/hooks/useReviews";
+import { useAuth } from "@/hooks/useAuth";
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 interface ProjectReviewSectionProps {
   project: Project;
 
@@ -65,7 +76,7 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
                     <p className='text-sm text-muted-foreground mb-3'>
                       Your review will help build a trustworthy community
                     </p>
-                    <Button onClick={() => setIsReviewModalOpen(true)}>
+                    <Button onClick={(,) => setIsReviewModalOpen(true)}>
                       Leave Review
                     </Button>
                   </div>
@@ -80,11 +91,16 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
                         ? 'published'
                         : 'pending approval'}
                     </p>
+<<<<<<< HEAD
                     {userReview.status === 'pending' && (
                       <Button
                         variant='outline'
                         onClick={() => setIsReviewModalOpen(true)}
                       >
+=======
+                    {userReview.status === "pending" && (
+                      <Button variant="outline" onClick={(,) => setIsReviewModalOpen(true)}>
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
                         Edit Review
                       </Button>
                     )}
@@ -94,9 +110,9 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
             )}
 
             <ReviewsList
-              reviews={reviews}
-              isLoading={isLoading}
-              onReportReview={reportReview}
+              reviews = {reviews,}
+              isLoading = {isLoading,}
+              onReportReview = {reportReview,}
             />
           </div>
         ) : (
@@ -115,11 +131,11 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
       {/* Review Modal */}
       {(isClient || isTalent) && (
         <LeaveReviewModal
-          projectId={project.id}
-          revieweeId={revieweeId}
-          revieweeName={revieweeName}
-          isOpen={isReviewModalOpen}
-          onClose={() => setIsReviewModalOpen(false)}
+          projectId = {project.id,}
+          revieweeId = {revieweeId,}
+          revieweeName = {revieweeName,}
+          isOpen = {isReviewModalOpen,}
+          onClose = {(,) => setIsReviewModalOpen(false),}
         />
       )}
     </Card>

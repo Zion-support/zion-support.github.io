@@ -10,10 +10,26 @@ import { Alert, AlertDescription } from '@/components/ui/alert';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { format } from 'date-fns';
 
+<<<<<<< HEAD
 import { CertificationsList } from './CertificationsList';
 import { CertificationFormFields } from './CertificationFormFields';
 import { CertificationFormValues, certificationSchema } from './types';
 
+=======
+import { useState } from 'react';
+import { useForm } from 'react-hook-form';
+import { Button } from '@/components/ui/button';
+import { Form } from '@/components/ui/form';
+import { Certification } from '@/types/resume';
+import { Loader2 } from 'lucide-react';
+import { useResume } from '@/hooks/useResume';
+import { Alert, AlertDescription } from '@/components/ui/alert';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { format } from 'date-fns';
+import { CertificationsList } from './CertificationsList';
+import { CertificationFormFields } from './CertificationFormFields';
+import { CertificationFormValues, certificationSchema } from './types';
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 interface CertificationsFormProps {
   resumeId: string;
   certifications: Certification[];
@@ -54,7 +70,7 @@ export function CertificationsForm({
     },
   });
 
-  const handleAddOrUpdate = async (data: CertificationFormValues) => {
+  const handleAddOrUpdate = async (data: CertificationFormValues,) => {
     try {
       setError(null);
       let success;
@@ -88,9 +104,16 @@ export function CertificationsForm({
     } catch (err: any) {
       setError(err.message || 'An error occurred');
     }
+<<<<<<< HEAD
   };
   const handleEdit = (cert: Certification) => {
     setEditingId(cert.id!);
+=======
+  },
+
+  const handleEdit = (cert: Certification,) => {
+    setEditingId(cert.id!),
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
     form.reset({
       ...cert,
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -99,7 +122,7 @@ export function CertificationsForm({
     });
   };
 
-  const handleDelete = async (id: string) => {
+  const handleDelete = async (id: string,) => {
     if (confirm('Are you sure you want to delete this certification?')) {
       await deleteCertification(id);
     }
@@ -118,10 +141,17 @@ export function CertificationsForm({
       </div>
 
       {certifications.length > 0 && (
+<<<<<<< HEAD
         <CertificationsList
           certifications={certifications}
           onEdit={handleEdit}
           onDelete={handleDelete}
+=======
+        <CertificationsList 
+          certifications = {certifications,}
+          onEdit = {handleEdit,}
+          onDelete = {handleDelete,}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
         />
       )}
 

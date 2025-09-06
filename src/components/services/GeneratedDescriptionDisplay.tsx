@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { useToast } from '@/hooks/use-toast';
 import { Button } from '@/components/ui/button';
@@ -15,6 +16,19 @@ import { Check, Pencil } from 'lucide-react';
 interface GeneratedDescriptionDisplayProps {
   description: string;
   onSave: (editedDescription: string) => void;
+=======
+
+import React, { useState } from "react";
+import { useToast } from "@/hooks/use-toast";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle, CardFooter } from "@/components/ui/card";
+import { Textarea } from "@/components/ui/textarea";
+import { Check, Pencil } from 'lucide-react';
+interface GeneratedDescriptionDisplayProps {
+  description: string,
+  onSave: (editedDescription: string,) => void
+}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 
 export function GeneratedDescriptionDisplay({
   description,
@@ -38,11 +52,19 @@ export function GeneratedDescriptionDisplay({
       <CardHeader>
         <CardTitle className='text-white flex items-center justify-between'>
           Generated Description
+<<<<<<< HEAD
           <Button
             variant='outline'
             size='sm'
             onClick={() => setIsEditing(!isEditing)}
             className='border-zion-blue-light text-zion-slate-light hover:text-white'
+=======
+          <Button 
+            variant="outline" 
+            size="sm" 
+            onClick = {(,) => setIsEditing(!isEditing),}
+            className="border-zion-blue-light text-zion-slate-light hover:text-white"
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
           >
             {isEditing ? (
               <>
@@ -61,9 +83,15 @@ export function GeneratedDescriptionDisplay({
       <CardContent>
         {isEditing ? (
           <Textarea
+<<<<<<< HEAD
             value={editedDescription}
             onChange={e => setEditedDescription(e.target.value)}
             className='bg-zion-blue border border-zion-blue-light text-white min-h-[300px] resize-none'
+=======
+            value = {editedDescription,}
+            onChange = {(e,) => setEditedDescription(e.target.value),}
+            className="bg-zion-blue border border-zion-blue-light text-white min-h-[300px] resize-none"
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
           />
         ) : (
           <div className='bg-zion-blue p-4 rounded-md text-white min-h-[300px] whitespace-pre-wrap'>
@@ -73,9 +101,15 @@ export function GeneratedDescriptionDisplay({
       </CardContent>
       {isEditing && (
         <CardFooter>
+<<<<<<< HEAD
           <Button
             onClick={handleSave}
             className='w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover:from-zion-cyan-light hover:to-zion-cyan text-white'
+=======
+          <Button 
+            onClick = {handleSave,}
+            className="w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover:from-zion-cyan-light hover:to-zion-cyan text-white"
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
           >
             Save Changes
           </Button>
@@ -97,5 +131,9 @@ export function GeneratedDescriptionDisplay({
 }'"
 =======
 }
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b

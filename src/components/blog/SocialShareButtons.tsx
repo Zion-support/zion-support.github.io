@@ -2,7 +2,10 @@ import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Twitter, Facebook, Linkedin, Link as LinkIcon } from 'lucide-react';
 import { toast } from '@/hooks/use-toast';
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 interface SocialShareButtonsProps {
   title: string;
 
@@ -38,9 +41,15 @@ export function SocialShareButtons({ title }: SocialShareButtonsProps) {
     if (typeof window === 'undefined') return;
     navigator.clipboard
       .writeText(window.location.href)
+<<<<<<< HEAD
       .then(() => toast.success('Link copied to clipboard'))
       .catch(() => toast.error('Failed to copy link'));
   };
+=======
+      .then((,) => toast.success('Link copied to clipboard'))
+      .catch((,) => toast.error('Failed to copy link'))
+  },
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 
   const buttons = [
     {
@@ -66,6 +75,7 @@ export function SocialShareButtons({ title }: SocialShareButtonsProps) {
   ];
 
   return (
+<<<<<<< HEAD
     <div className='mt-12 flex flex-wrap gap-2'>
       {buttons.map(btn => (
         <Button
@@ -75,6 +85,11 @@ export function SocialShareButtons({ title }: SocialShareButtonsProps) {
           onClick={btn.onClick}
           aria-label={btn.label}
         >
+=======
+    <div className="mt-12 flex flex-wrap gap-2">
+      {buttons.map((btn,) => (
+        <Button key={btn.label} variant="outline" size="sm" onClick={btn.onClick} aria-label={btn.label}>
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
           {btn.icon}
           <span>{btn.label}</span>
         </Button>

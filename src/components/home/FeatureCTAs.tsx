@@ -28,6 +28,17 @@ import {
 import { cn } from '@/lib/utils';
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
+<<<<<<< HEAD
+=======
+import React from "react";
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import Link from "next/link";
+import { useTranslation } from "react-i18next";
+import { ArrowRight, Users, Zap, Settings, Search, MessageSquare, Smartphone, Calendar, BookOpen, Code, Building, Clock } from 'lucide-react';
+import { cn } from "@/lib/utils";
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 interface FeatureCTAsProps {
   className?: string;
   style?: React.CSSProperties;
@@ -254,7 +265,17 @@ export function FeatureCTAs({ className, style }: FeatureCTAsProps) {
     },
   ];
 
+<<<<<<< HEAD
   
+=======
+  return (
+    <section
+      className = {cn(
+        "py-16 bg-gradient-to-b from-background to-background/90",
+        className
+      ),}
+      style = {style,}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
     >
       <div className='container mx-auto px-4'>
         <div className='mb-12 text-center'>
@@ -265,6 +286,7 @@ export function FeatureCTAs({ className, style }: FeatureCTAsProps) {
             {t('home.features_subheading')}
           </p>
         </div>
+<<<<<<< HEAD
 
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
           {features.map((feature, index) => (
@@ -274,6 +296,14 @@ export function FeatureCTAs({ className, style }: FeatureCTAsProps) {
             >
               <CardHeader className='pb-2'>
                 <div className='flex justify-between items-start'>
+=======
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {features.map((feature, index,) => (
+            <Card key={index} className="overflow-hidden transition-all duration-300 hover:shadow-lg hover:border-primary/50">
+              <CardHeader className="pb-2">
+                <div className="flex justify-between items-start">
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
                   {feature.icon}
                   {feature.badge && (
                     <Badge
@@ -323,7 +353,7 @@ export function FeatureCTAs({ className, style }: FeatureCTAsProps) {
                 <Button asChild className='w-full gap-1'>
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                   <Link
-                    href={feature.link}
+                    href = {feature.link,}
                     aria-label={`${t('general.explore')} ${t(`features.${feature.key}`)}`}
                     className='cursor-pointer'
                     {...(feature.key === 'ai_talent_matching' && {

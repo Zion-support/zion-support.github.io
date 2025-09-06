@@ -1,9 +1,17 @@
+<<<<<<< HEAD
 import React from 'react';
 import { useOnboardingStatus } from '@/hooks/useOnboardingStatus';
 import { PlusCircle, SendIcon, InboxIcon } from 'lucide-react';
 import { OnboardingTracker, OnboardingStep } from './OnboardingTracker';
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
+=======
+
+import React from "react";
+import { useOnboardingStatus } from "@/hooks/useOnboardingStatus";
+import { PlusCircle, SendIcon, InboxIcon } from 'lucide-react';
+import { OnboardingTracker, OnboardingStep } from "./OnboardingTracker";
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 export function ClientOnboardingSteps() {
   const onboardingStatus = useOnboardingStatus();
 

@@ -1,7 +1,11 @@
 };
 
 import React from "react";
+<<<<<<< HEAD
 import { QrCodeIcon } from 'lucide-react'
+=======
+import { QrCodeIcon } from 'lucide-react';
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 import { AppStoreButtons } from "./AppStoreButtons";
 import { logInfo } from '@/utils/productionLogger';
 export const DownloadSection: React.FC = () => {
@@ -23,10 +27,10 @@ export const DownloadSection: React.FC = () => {
               
               <AppStoreButtons 
                 className="mb-8" 
-                appStoreUrl={appStoreUrl}
-                googlePlayUrl={googlePlayUrl}
-                onAppStoreClick={() => logInfo("App Store button clicked")}
-                onGooglePlayClick={() => logInfo("Google Play button clicked")}
+                appStoreUrl = {appStoreUrl,}
+                googlePlayUrl = {googlePlayUrl,}
+                onAppStoreClick = {(,) => logInfo("App Store button clicked"),}
+                onGooglePlayClick = {() => logInfo("Google Play button clicked"),}
               />
               
               <div className="text-sm text-gray-400">

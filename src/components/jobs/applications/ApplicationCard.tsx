@@ -23,6 +23,19 @@ import { ApplicationProgress } from './ApplicationProgress';
 import { toast } from 'sonner';
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
+<<<<<<< HEAD
+=======
+import { useState } from "react";
+import { formatDistanceToNow } from "date-fns";
+import { JobApplication } from "@/types/jobs";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { FileText, MessageSquare, HelpCircle, Calendar, ExternalLink, Download } from 'lucide-react';
+import Link from "next/link";
+import { StatusBadge } from "./StatusBadge";
+import { ApplicationProgress } from "./ApplicationProgress";
+import { toast } from "sonner";
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 interface ApplicationCardProps {
   application: JobApplication;
 
@@ -235,5 +248,9 @@ default: return (<Card className="overflow-hidden" > <CardHeader className="pb-3
 }"
 =======
 }
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b

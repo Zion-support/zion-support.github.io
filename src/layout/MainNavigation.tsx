@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useState } from 'react';
@@ -22,6 +23,26 @@ import {
 } from '@/components/ui/hover-card';
 import { MiniCartPreview } from '@/components/cart/MiniCartPreview';
 import { LoginModal } from '@/components/auth/LoginModal';
+=======
+import Link from "next/link";
+import { useRouter } from "next/router";
+import { useState } from "react";
+import { cn } from "@/lib/utils";
+import { useAuth } from "@/hooks/useAuth";
+import { useTranslation } from "react-i18next";
+import { useFavorites } from "@/hooks/useFavorites";
+import { useCart } from "@/context/CartContext";
+import { Heart, MessageSquare, CreditCard, ShoppingCart, Wallet } from 'lucide-react';
+import { LanguageSelector } from '@/components/header/LanguageSelector';
+import { HoverCard, HoverCardTrigger, HoverCardContent } from '@/components/ui/hover-card';
+import { MiniCartPreview } from '@/components/cart/MiniCartPreview';
+import { LoginModal } from '@/components/auth/LoginModal';
+interface MainNavigationProps {
+  isAdmin?: boolean,
+  unreadCount?: number,
+  className?: string
+}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 
 interface MainNavigationProps {
   isAdmin?: boolean;
@@ -43,7 +64,7 @@ export function MainNavigation({
   const router = useRouter(); // Changed from useLocation
   const { t } = useTranslation();
 
-  const handleCartClick = (e: React.MouseEvent) => {
+  const handleCartClick = (e: React.MouseEvent,) => {
     if (!isAuthenticated) {
       e.preventDefault();
       setLoginOpen(true);
@@ -56,32 +77,53 @@ export function MainNavigation({
     {
       key: 'home',
       href: '/',
+<<<<<<< HEAD
       matches: (path: string) => path === '/',
+=======
+      matches: (path: string,) => path === '/'
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
     },
     {
       key: 'marketplace',
       href: '/marketplace',
+<<<<<<< HEAD
       matches: (path: string) => path.startsWith('/marketplace'),
+=======
+      matches: (path: string,) => path.startsWith('/marketplace')
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
     },
     {
       key: 'categories',
       href: '/categories',
+<<<<<<< HEAD
       matches: (path: string) => path.startsWith('/categories'),
+=======
+      matches: (path: string,) => path.startsWith('/categories')
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
     },
     {
       key: 'talent',
       href: '/talent',
+<<<<<<< HEAD
       matches: (path: string) =>
         path.startsWith('/talent') && !path.includes('/talent-dashboard'),
+=======
+      matches: (path: string,) => path.startsWith('/talent') && !path.includes('/talent-dashboard')
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
     },
     {
       key: 'equipment',
       href: '/equipment',
+<<<<<<< HEAD
       matches: (path: string) => path.startsWith('/equipment'),
+=======
+      matches: (path: string,) => path.startsWith('/equipment')
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
     },
     {
       key: 'community',
       href: '/community',
+<<<<<<< HEAD
       matches: (path: string) =>
         path.startsWith('/community') || path.startsWith('/forum'),
     },
@@ -91,6 +133,11 @@ export function MainNavigation({
     ...link,
     name: t(`nav.${link.key}`),
   }));
+=======
+      matches: (path: string,) => path.startsWith('/community') || path.startsWith('/forum')
+    }
+  ],
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 
   // Add authenticated-only links
   if (isAuthenticated) {
@@ -98,11 +145,16 @@ export function MainNavigation({
       key: 'dashboard',
       name: t('nav.dashboard'),
       href: '/dashboard',
+<<<<<<< HEAD
       matches: (path: string) =>
         path === '/dashboard' ||
         path === '/client-dashboard' ||
         path === '/talent-dashboard',
     });
+=======
+      matches: (path: string,) => path === '/dashboard' || path === '/client-dashboard' || path === '/talent-dashboard'
+    })
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
   }
 
   // Add admin-only links
@@ -111,25 +163,44 @@ export function MainNavigation({
       key: 'analytics',
       name: t('nav.analytics'),
       href: '/analytics',
+<<<<<<< HEAD
       matches: (path: string) => path.startsWith('/analytics'),
     });
+=======
+      matches: (path: string,) => path.startsWith('/analytics')
+    })
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
   }
 
   return (
     <>
       <button
+<<<<<<< HEAD
         className='navbar-toggler md:hidden ml-auto mr-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary' // Added ml-auto and mr-4 for positioning
         onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
         aria-expanded={isMobileMenuOpen}
         aria-controls='main-navbar-collapse'
         aria-label='Toggle navigation'
+=======
+        className="navbar-toggler md:hidden ml-auto mr-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary" // Added ml-auto and mr-4 for positioning
+        onClick = {(,) => setIsMobileMenuOpen(!isMobileMenuOpen),}
+        aria-expanded = {isMobileMenuOpen,}
+        aria-controls="main-navbar-collapse"
+        aria-label="Toggle navigation"
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
       >
         <span className='navbar-toggler-icon'></span>
       </button>
       <nav
+<<<<<<< HEAD
         className={cn('navbar', className)}
         role='navigation'
         aria-label='Main navigation'
+=======
+        className = {cn("navbar", className),}
+        role="navigation"
+        aria-label="Main navigation"
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
       >
         <div
           id='main-navbar-collapse'
@@ -140,6 +211,7 @@ export function MainNavigation({
             !isMobileMenuOpen && 'hidden' // Explicitly hide when not open and on mobile
           )}
         >
+<<<<<<< HEAD
           <ul className='navbar-nav flex flex-col md:flex-row md:items-center md:gap-1'>
             {' '}
             {/* Added navbar-nav and flex direction classes */}
@@ -156,6 +228,22 @@ export function MainNavigation({
                       ? 'bg-zion-purple/20 text-zion-cyan'
                       : 'text-white hover:bg-zion-purple/10 hover:text-zion-cyan'
                   )}
+=======
+          <ul className="navbar-nav flex flex-col md:flex-row md:items-center md:gap-1"> {/* Added navbar-nav and flex direction classes */}
+            {links.map((link,) => (
+              <li key={link.name} className="nav-item">
+                <Link 
+                  href = {link.href,}
+                  aria-label = {link.name,}
+                  onClick = {(,) => setIsMobileMenuOpen(false),}
+                  className = {cn(
+                    "nav-link",
+                    "inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary",
+                    link.matches(router.pathname)
+                      ? "bg-zion-purple/20 text-zion-cyan"
+                      : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
+                  ),}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
                 >
                   {link.name}
                 </Link>
@@ -163,6 +251,7 @@ export function MainNavigation({
             ))}
             {/* Wishlist link */}
             {isAuthenticated && (
+<<<<<<< HEAD
               <li className='nav-item'>
                 <Link
                   href='/wishlist'
@@ -175,6 +264,20 @@ export function MainNavigation({
                       ? 'bg-zion-purple/20 text-zion-cyan'
                       : 'text-white hover:bg-zion-purple/10 hover:text-zion-cyan'
                   )}
+=======
+              <li className="nav-item">
+                <Link 
+                  href="/wishlist"
+                  aria-label="Wishlist"
+                  onClick = {(,) => setIsMobileMenuOpen(false),}
+                  className = {cn(
+                    "nav-link",
+                    "relative inline-flex h-9 w-9 items-center justify-center rounded-md transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary",
+                    router.pathname === "/wishlist"
+                      ? "bg-zion-purple/20 text-zion-cyan"
+                      : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
+                  ),}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
                 >
                   <Heart className='w-4 h-4' />
                   {count > 0 && (
@@ -187,6 +290,7 @@ export function MainNavigation({
             )}
             {/* Wallet link */}
             {isAuthenticated && (
+<<<<<<< HEAD
               <li className='nav-item'>
                 <Link
                   href='/wallet'
@@ -199,6 +303,20 @@ export function MainNavigation({
                       ? 'bg-zion-purple/20 text-zion-cyan'
                       : 'text-white hover:bg-zion-purple/10 hover:text-zion-cyan'
                   )}
+=======
+              <li className="nav-item">
+                <Link 
+                  href="/wallet"
+                  aria-label="Wallet"
+                  onClick = {(,) => setIsMobileMenuOpen(false),}
+                  className = {cn(
+                    "nav-link",
+                    "relative inline-flex h-9 w-9 items-center justify-center rounded-md transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary",
+                    router.pathname === "/wallet"
+                      ? "bg-zion-purple/20 text-zion-cyan"
+                      : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
+                  ),}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
                 >
                   <Wallet className='w-4 h-4' />
                 </Link>
@@ -206,6 +324,7 @@ export function MainNavigation({
             )}
             {/* Messages link */}
             {isAuthenticated && (
+<<<<<<< HEAD
               <li className='nav-item'>
                 <Link
                   href='/messages'
@@ -218,6 +337,20 @@ export function MainNavigation({
                       ? 'bg-zion-purple/20 text-zion-cyan'
                       : 'text-white hover:bg-zion-purple/10 hover:text-zion-cyan'
                   )}
+=======
+              <li className="nav-item">
+                <Link 
+                  href="/messages"
+                  aria-label="Messages"
+                  onClick = {(,) => setIsMobileMenuOpen(false),}
+                  className = {cn(
+                    "nav-link",
+                    "relative inline-flex h-9 w-9 items-center justify-center rounded-md transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary",
+                    router.pathname === "/messages"
+                      ? "bg-zion-purple/20 text-zion-cyan"
+                      : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
+                  ),}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
                 >
                   <MessageSquare className='w-4 h-4' />
                   {unreadCount > 0 && (
@@ -233,16 +366,24 @@ export function MainNavigation({
               <HoverCard openDelay={100}>
                 <HoverCardTrigger asChild>
                   <Link
+<<<<<<< HEAD
                     href='/cart'
                     aria-label={t('nav.cart')}
                     onClick={handleCartClick}
                     className={cn(
                       'nav-link',
                       'inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors relative focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary',
+=======
+                    href="/cart"
+                    aria-label = {t('nav.cart'),}
+                    onClick = {handleCartClick,}
+                    className = {cn(
+                      'nav-linkinline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors relative focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary',
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
                       router.pathname.startsWith('/cart')
                         ? 'bg-zion-purple/20 text-zion-cyan'
                         : 'text-white hover:bg-zion-purple/10 hover:text-zion-cyan'
-                    )}
+                    ),}
                   >
                     <ShoppingCart className='w-4 h-4 mr-1' />
                     {t('nav.cart', 'Cart')}

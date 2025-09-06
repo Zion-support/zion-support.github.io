@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { useWallet } from '@/hooks/useWallet';
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -9,6 +10,13 @@ import {
   CardTitle,;
 } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
+=======
+
+import React, { useState } from "react";
+import { useWallet } from "@/hooks/useWallet";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 import { Gift, ArrowRight, ExternalLink } from 'lucide-react';
 import {
   Dialog,
@@ -56,12 +64,21 @@ export function RedeemTokensCard() {
   const { wallet, spendTokens } = useWallet();
   const [open, setOpen] = useState(false);
 
+<<<<<<< HEAD
   const handleRedeem = async (option: RewardOption) => {
     if (!wallet || wallet.balance < option.cost) return;
 
     await spendTokens(option.cost, `Redeemed: ${option.title}`);
     setOpen(false);
   };
+=======
+  const handleRedeem = async (option: RewardOption,) => {
+    if (!wallet || wallet.balance < option.cost) return,
+    
+    await spendTokens(option.cost, `Redeemed: ${option.title}`),
+    setOpen(false)
+  },
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 
   return (
     <Card>
@@ -86,18 +103,25 @@ export function RedeemTokensCard() {
                 {wallet?.balance || 0} ZION$.
               </DialogDescription>
             </DialogHeader>
+<<<<<<< HEAD
             <div className='space-y-4 py-4'>
               {REWARD_OPTIONS.map(option => (
                 <div
                   key={option.id}
                   className='flex justify-between items-center border-b pb-4'
                 >
+=======
+            <div className="space-y-4 py-4">
+              {REWARD_OPTIONS.map((option,) => (
+                <div key={option.id} className="flex justify-between items-center border-b pb-4">
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
                   <div>
                     <h3 className='font-medium'>{option.title}</h3>
                     <p className='text-sm text-muted-foreground'>
                       {option.description}
                     </p>
                   </div>
+<<<<<<< HEAD
                   <div className='flex flex-col items-end gap-1'>
                     <span className='text-sm font-bold'>
                       {option.cost} ZION$
@@ -111,6 +135,15 @@ export function RedeemTokensCard() {
                       }
                       disabled={!wallet || wallet.balance < option.cost}
                       onClick={() => handleRedeem(option)}
+=======
+                  <div className="flex flex-col items-end gap-1">
+                    <span className="text-sm font-bold">{option.cost} ZION$</span>
+                    <Button 
+                      size="sm" 
+                      variant = {wallet && wallet.balance >= option.cost ? "default" : "outline",}
+                      disabled = {!wallet || wallet.balance < option.cost,}
+                      onClick = {(,) => handleRedeem(option),}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
                     >
                       Redeem <ArrowRight className='ml-1 h-3 w-3' />
                     </Button>

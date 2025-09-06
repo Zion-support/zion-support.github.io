@@ -15,6 +15,17 @@ import { Badge } from '@/components/ui/badge';
 import CodeBlock from './CodeBlock';
 import { logInfo } from '@/utils/productionLogger';
 
+<<<<<<< HEAD
+=======
+import { useState } from "react";
+import { BookOpen, Terminal } from 'lucide-react';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Alert, AlertDescription } from "@/components/ui/alert";
+import { Badge } from "@/components/ui/badge";
+import CodeBlock from "./CodeBlock";
+import { logInfo } from '@/utils/productionLogger';
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 interface EndpointParam {
   name: string;
 type: string;
@@ -113,13 +124,14 @@ export function ApiDocumentation() {
                   description: 'Filter by job status (new, active, closed)',
                 },
               ]}
-              codeExamples={{
+              codeExamples = {{
                 curl: `curl -X GET "https://api.ziontechgroup.com/v1/jobs?limit=10&category=development" \\
   -H "Authorization: Bearer YOUR_API_KEY" \\
   -H "Content-Type: application/json"`,
                 javascript: `const response = await fetch('https://api.ziontechgroup.com/v1/jobs?limit=10&category=development', {
   method: 'GET',
   headers: {
+<<<<<<< HEAD
     'Authorization': 'Bearer YOUR_API_KEY',
     'Content-Type': 'application/json'
   }
@@ -131,12 +143,18 @@ python: `import requests headers = {';
 }job id ';
 }';
 headers=headers) data = response.json () print (data) ` ;
+=======
+    'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
+  ,}
+}),
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 
 }responseExamples= {;
   {;
   success: ` {;
   ;
 
+<<<<<<< HEAD
 }` ;
 }';
 }/> <EndpointSection deadline: '2025-06-30T23:59:59Z' ;
@@ -170,6 +188,11 @@ data=json.dumps (payload) ) data = response.json () print (data) ` ;
 headers: {';
   'Authorization': 'Bearer YOUR API KEYContent-Type': 'application/json' ;
 
+=======
+headers = {
+    'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
+,}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 response = requests.get(
     'https://api.ziontechgroup.com/v1/jobs',
     params={'limit': 10, 'category': 'development'},
@@ -209,6 +232,7 @@ print(data)`,
             />
 
             <EndpointSection
+<<<<<<< HEAD
               method='GET'
               endpoint='/api/jobs/:id'
               description='Get detailed information about a specific job.'
@@ -220,6 +244,14 @@ print(data)`,
                   description: 'The job ID',
                   required: true,
                 },
+=======
+              method="GET"
+              endpoint="/api/jobs/:id"
+              description="Get detailed information about a specific job."
+              note=""
+              params = {[
+                { name: "id", type: "string", description: "The job ID", required: true ,}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
               ]}
               codeExamples={{
                 curl: `curl -X GET "https://api.ziontechgroup.com/v1/jobs/job_abc123" \\
@@ -232,6 +264,7 @@ const response = await fetch(\`https://api.ziontechgroup.com/v1/jobs/\${jobId}\`
     'Authorization': 'Bearer YOUR_API_KEY',
     'Content-Type': 'application/json'
   }
+<<<<<<< HEAD
 });
 const data = await response.json ();
 logInfo (data), `;
@@ -241,6 +274,17 @@ python: `import requests headers = {';
 }';
 headers=headers) data = response.json () print (data) ` ;
 
+=======
+}),
+
+const data = await response.json(),
+logInfo(data),`,
+                python: `import requests
+
+headers = {
+    'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
+,}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 job_id = 'job_abc123'
 response = requests.get(
     f'https://api.ziontechgroup.com/v1/jobs/{job_id}',
@@ -366,6 +410,7 @@ logInfo(data);`,
 import json
 
 headers = {
+<<<<<<< HEAD
     'Authorization': 'Bearer YOUR_API_KEY',
     'Content-Type': 'application/json'
 ;
@@ -374,6 +419,19 @@ headers = {
 }/> </TabsContent> <TabsContent value=" quotes"className=" space-y-6"> <EndpointSection response = requests.post ('https: //api.ziontechgroup.com/v1/quotes';
 headers=headers;
 data=json.dumps (payload) ) data = response.json () print (data) ` ;
+=======
+    'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
+,}
+payload = {
+    'title': 'Senior React Developerdescription': 'We need an experienced React developer...category': 'developmentskills': ['reacttypescriptnode.js'],
+    'budget': {
+        'min': 5000,
+        'max': 10000,
+        'currency': 'USD'
+    },
+    'deadline': '2025-06-30T23:59:59Z'
+}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 
 response = requests.post(
     'https://api.ziontechgroup.com/v1/jobs',
@@ -436,26 +494,37 @@ print(data)`,
                   description: 'Filter by availability status',
                 },
               ]}
-              codeExamples={{
+              codeExamples = {{
                 curl: `curl -X GET "https://api.ziontechgroup.com/v1/talent?skills=react,typescript" \\
   -H "Authorization: Bearer YOUR_API_KEY" \\
   -H "Content-Type: application/json"`,
                 javascript: `const response = await fetch('https://api.ziontechgroup.com/v1/talent?skills=react,typescript', {
   method: 'GET',
   headers: {
+<<<<<<< HEAD
     'Authorization': 'Bearer YOUR_API_KEY',
     'Content-Type': 'application/json'
   }
 });
+=======
+    'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
+  ,}
+}),
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 
 const data = await response.json();
 logInfo(data);`,
                 python: `import requests
 
 headers = {
+<<<<<<< HEAD
     'Authorization': 'Bearer YOUR_API_KEY',
     'Content-Type': 'application/json'
 
+=======
+    'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
+,}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 response = requests.get(
     'https://api.ziontechgroup.com/v1/talent',
     params={'skills': 'react,typescript'},
@@ -489,6 +558,7 @@ print(data)`,
             />
 
             <EndpointSection
+<<<<<<< HEAD
               method='GET'
               endpoint='/api/talent/:id'
               description='Get detailed information about a specific talent profile.'
@@ -500,6 +570,14 @@ print(data)`,
                   description: 'The talent ID',
                   required: true,
                 },
+=======
+              method="GET"
+              endpoint="/api/talent/:id"
+              description="Get detailed information about a specific talent profile."
+              note=""
+              params = {[
+                { name: "id", type: "string", description: "The talent ID", required: true ,}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
               ]}
               codeExamples={{
                 curl: `curl -X GET "https://api.ziontechgroup.com/v1/talent/talent_abc123" \\
@@ -519,9 +597,14 @@ logInfo(data);`,
                 python: `import requests
 
 headers = {
+<<<<<<< HEAD
     'Authorization': 'Bearer YOUR_API_KEY',
     'Content-Type': 'application/json'
 
+=======
+    'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
+,}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 talent_id = 'talent_abc123'
 response = requests.get(
     f'https://api.ziontechgroup.com/v1/talent/{talent_id}',
@@ -531,7 +614,7 @@ response = requests.get(
 data = response.json()
 print(data)`,
               }}
-              responseExamples={{
+              responseExamples = {{
                 success: `{
   "data": {
     "id": "talent_abc123",
@@ -549,7 +632,7 @@ print(data)`,
         "description": "Built a modern e-commerce platform using React...",
         "technologies": ["react", "redux", "node.js"],
         "image_url": "https://example.com/portfolio/123.jpg"
-      }
+      ,}
     ],
     "certifications": [
       {
@@ -663,9 +746,14 @@ logInfo(data);`,
 import json
 
 headers = {
+<<<<<<< HEAD
     'Authorization': 'Bearer YOUR_API_KEY',
     'Content-Type': 'application/json'
 
+=======
+    'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
+,}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 payload = {
     'talent_id': 'talent_abc123',
     'project_name': 'E-commerce Website Redesign',
@@ -674,9 +762,14 @@ payload = {
     'timeline': '2-3 months',
     'budget_min': 8000,
     'budget_max': 12000,
+<<<<<<< HEAD
     'requester_name': 'John Doe',
     'requester_email': 'john@example.com'
 
+=======
+    'requester_name': 'John Doerequester_email': 'john@example.com'
+,}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 response = requests.post(
     'https://api.ziontechgroup.com/v1/quotes',
     headers=headers,
@@ -686,7 +779,7 @@ response = requests.post(
 data = response.json()
 print(data)`,
               }}
-              responseExamples={{
+              responseExamples = {{
                 success: `{
   "data": {
     "id": "quote_def456",
@@ -703,8 +796,13 @@ print(data)`,
     "requester_email": "john@example.com",
     "status": "new",
     "created_at": "2025-05-16T14:30:15Z"
+<<<<<<< HEAD
   }
 }`,
+=======
+  ,}
+}`
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
               }}
             />
 
@@ -732,26 +830,37 @@ print(data)`,
                     'Filter by status (new, viewed, replied, archived)',
                 },
               ]}
-              codeExamples={{
+              codeExamples = {{
                 curl: `curl -X GET "https://api.ziontechgroup.com/v1/quotes" \\
   -H "Authorization: Bearer YOUR_API_KEY" \\
   -H "Content-Type: application/json"`,
                 javascript: `const response = await fetch('https://api.ziontechgroup.com/v1/quotes', {
   method: 'GET',
   headers: {
+<<<<<<< HEAD
     'Authorization': 'Bearer YOUR_API_KEY',
     'Content-Type': 'application/json'
   };
 });
+=======
+    'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
+  ,}
+}),
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 
 const data = await response.json();
 logInfo(data);`,
                 python: `import requests
 
 headers = {
+<<<<<<< HEAD
     'Authorization': 'Bearer YOUR_API_KEY',
     'Content-Type': 'application/json'
 
+=======
+    'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
+,}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 response = requests.get(
     'https://api.ziontechgroup.com/v1/quotes',
     headers=headers
@@ -808,10 +917,16 @@ print(data)`,
                 header. This signature is an HMAC SHA-256 hash of the request
                 body using your webhook secret as the key.
               </p>
+<<<<<<< HEAD
 
               <CodeBlock;
                 code={`import crypto from 'crypto';
 
+=======
+              
+              <CodeBlock
+                code = {`import crypto from 'crypto',
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 // Function to verify webhook signature
 function verifyWebhookSignature(payload, signature, secret) {
   const hmac = crypto.createHmac('sha256', secret);
@@ -819,6 +934,7 @@ function verifyWebhookSignature(payload, signature, secret) {
   return crypto.timingSafeEqual(
     Buffer.from(signature),
     Buffer.from(expectedSignature)
+<<<<<<< HEAD
   );
 
 // Example usage in Express.js
@@ -826,6 +942,15 @@ app.post('/webhook', express.raw({type: 'application/json'}), (req, res) => {
   const signature = req.headers['x-zion-signature'];
   const payload = req.body.toString();
   const webhookSecret = process.env.WEBHOOK_SECRET;
+=======
+  )
+,}
+// Example usage in Express.js
+app.post('/webhook', express.raw({type: 'application/json'}), (req, res,) => {
+  const signature = req.headers['x-zion-signature'],
+  const payload = req.body.toString(),
+  const webhookSecret = process.env.WEBHOOK_SECRET,
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
   
   if (!verifyWebhookSignature(payload, signature, webhookSecret)) {
     return res.status(401).send('Invalid signature');
@@ -836,10 +961,17 @@ app.post('/webhook', express.raw({type: 'application/json'}), (req, res) => {
   logInfo('Received valid webhook:', { data: event });
   
   // Respond to acknowledge receipt
+<<<<<<< HEAD
   res.status(200).send('Webhook received');
 });`}
                 language='javascript'
                 showLineNumbers={true}
+=======
+  res.status(200).send('Webhook received')
+}),`}
+                language="javascript"
+                showLineNumbers = {true,}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
               />
 
               <h4 className='text-md font-semibold mt-6 mb-2'>Event Types</h4>
@@ -898,7 +1030,7 @@ app.post('/webhook', express.raw({type: 'application/json'}), (req, res) => {
               </p>
 
               <CodeBlock
-                code={`{
+                code = {`{
   "event_type": "new_application",
   "event_id": "evt_abc123def456",
   "timestamp": "2025-05-16T15:30:00Z",
@@ -909,10 +1041,15 @@ app.post('/webhook', express.raw({type: 'application/json'}), (req, res) => {
     "applied_at": "2025-05-16T15:28:30Z",
     "status": "new",
     "match_score": 85
-  }
+  ,}
 }`}
+<<<<<<< HEAD
                 language='json'
                 showLineNumbers={true}
+=======
+                language="json"
+                showLineNumbers = {true,}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
               />
             </div>
           </TabsContent>
@@ -1038,7 +1175,7 @@ app.post('/webhook', express.raw({type: 'application/json'}), (req, res) => {
               </p>
 
               <CodeBlock
-                code={`{
+                code = {`{
   "error": {
     "code": "invalid_request",
     "message": "The request was invalid",
@@ -1046,7 +1183,7 @@ app.post('/webhook', express.raw({type: 'application/json'}), (req, res) => {
       {
         "field": "project_name",
         "message": "Project name is required"
-      }
+      ,}
     ]
   }
 }`}
@@ -1109,6 +1246,7 @@ function EndpointSection({
   const [activeTab, setActiveTab] = useState('curl');
 
   return (
+<<<<<<< HEAD
     <div className='border border-zinc-800 rounded-md'>
       <div className='p-4'>
         <div className='flex items-center'>
@@ -1123,6 +1261,22 @@ function EndpointSection({
                     ? 'border-yellow-500 text-yellow-400 font-mono'
                     : 'border-red-500 text-red-400 font-mono'
             }
+=======
+    <div className="border border-zinc-800 rounded-md">
+      <div className="p-4">
+        <div className="flex items-center">
+          <Badge 
+            variant="outline" 
+            className = {
+              method === 'GET' 
+                ? "border-green-500 text-green-400 font-mono" 
+                : method === 'POST' 
+                ? "border-blue-500 text-blue-400 font-mono"
+                : method === 'PUT'
+                ? "border-yellow-500 text-yellow-400 font-mono"
+                : "border-red-500 text-red-400 font-mono"
+            ,}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
           >
             {method}
           </Badge>
@@ -1149,6 +1303,7 @@ function EndpointSection({
               </tr>
             </thead>
             <tbody>
+<<<<<<< HEAD
               {params.map((param, index) => (
                 <tr
                   key={index}
@@ -1157,6 +1312,11 @@ function EndpointSection({
                   }
                 >
                   <td className='py-2 font-mono text-sm'>
+=======
+              {params.map((param, index,) => (
+                <tr key={index} className={index < params.length - 1 ? "border-b border-zinc-800" : ""}>
+                  <td className="py-2 font-mono text-sm">
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
                     {param.name}
                     {param.required && <span className='text-red-500'>*</span>}
                   </td>
@@ -1172,19 +1332,27 @@ function EndpointSection({
       )}
 
       {codeExamples && (
+<<<<<<< HEAD
         <div className='border-t border-zinc-800 p-4'>
           <div className='flex items-center mb-2'>
             <h4 className='font-medium'>Request Example</h4>
             <div className='ml-auto flex border border-zinc-700 rounded-md overflow-hidden'>
               {Object.keys(codeExamples).map(lang => (
+=======
+        <div className="border-t border-zinc-800 p-4">
+          <div className="flex items-center mb-2">
+            <h4 className="font-medium">Request Example</h4>
+            <div className="ml-auto flex border border-zinc-700 rounded-md overflow-hidden">
+              {Object.keys(codeExamples).map((lang,) => (
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
                 <button
-                  key={lang}
+                  key = {lang,}
                   className={`px-3 py-1 text-xs font-medium ${
                     activeTab === lang
                       ? 'bg-zinc-700 text-white'
                       : 'text-zinc-400 hover:bg-zinc-800'
                   }`}
-                  onClick={() => setActiveTab(lang)}
+                  onClick = {(,) => setActiveTab(lang),}
                 >
                   {lang === 'curl'
                     ? 'cURL'
@@ -1195,17 +1363,32 @@ function EndpointSection({
               ))}
             </div>
           </div>
+<<<<<<< HEAD
           <CodeBlock
             code={codeExamples[activeTab] || '// Code example not available'}
             language={activeTab === 'curl' ? 'bash' : activeTab}
+=======
+          <CodeBlock 
+            code = {codeExamples[activeTab] || "// Code example not available",}
+            language = {activeTab === "curl" ? "bash" : activeTab,}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
           />
         </div>
       )}
 
       {responseExamples && (
+<<<<<<< HEAD
         <div className='border-t border-zinc-800 p-4'>
           <h4 className='font-medium mb-2'>Response</h4>
           <CodeBlock code={responseExamples.success} language='json' />
+=======
+        <div className="border-t border-zinc-800 p-4">
+          <h4 className="font-medium mb-2">Response</h4>
+          <CodeBlock
+            code = {responseExamples.success,}
+            language="json"
+          />
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
         </div>
       )}
     </div>

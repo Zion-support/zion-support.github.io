@@ -20,6 +20,16 @@ import {
 } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
+<<<<<<< HEAD
+=======
+import { useState, useEffect } from 'react';
+import { useRouter } from 'next/router';
+import { useAuth } from '@/hooks/useAuth';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
+import { Rocket, FileText, Users, Calendar, Eye, MessageSquare } from 'lucide-react';
+import { cn } from '@/lib/utils';
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 interface WizardStep {
   title: string;
   description: string;
@@ -160,18 +170,33 @@ export function OnboardingWizard({
       <CardContent>
         <div className='flex items-center mb-6'>
           {/* Step dots */}
+<<<<<<< HEAD
           <div className='flex items-center justify-center flex-1'>
             {steps.map((_, index) => (
               <div
                 key={index}
                 className={cn(
                   'h-2 w-2 rounded-full mx-1',
+=======
+          <div className="flex items-center justify-center flex-1">
+            {steps.map((_, index,) => (
+              <div
+                key = {index,}
+                className = {cn(
+                  "h-2 w-2 rounded-full mx-1",
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
                   index === currentStep
                     ? 'bg-zion-purple scale-125'
                     : index < currentStep
+<<<<<<< HEAD
                       ? 'bg-zion-cyan'
                       : 'bg-zion-blue-light'
                 )}
+=======
+                    ? "bg-zion-cyan"
+                    : "bg-zion-blue-light"
+                ),}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
               />
             ))}
           </div>
@@ -191,17 +216,28 @@ export function OnboardingWizard({
       </CardContent>
       <CardFooter className='flex flex-col space-y-2'>
         <Button
+<<<<<<< HEAD
           className='w-full bg-zion-purple hover:bg-zion-purple-light'
           onClick={handleAction}
+=======
+          className="w-full bg-zion-purple hover:bg-zion-purple-light"
+          onClick = {handleAction,}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
         >
           {steps[currentStep]?.action.text}
         </Button>
 
         {steps[currentStep]?.skipText && (
           <Button
+<<<<<<< HEAD
             variant='ghost'
             className='text-zion-slate-light hover:text-white'
             onClick={handleSkip}
+=======
+            variant="ghost"
+            className="text-zion-slate-light hover:text-white"
+            onClick = {handleSkip,}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
           >
             {steps[currentStep]?.skipText}
           </Button>
@@ -211,5 +247,9 @@ export function OnboardingWizard({
   );
 =======
 }
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b

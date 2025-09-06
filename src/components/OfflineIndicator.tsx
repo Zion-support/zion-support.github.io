@@ -1,13 +1,17 @@
 import { useState, useEffect } from 'react';
 import { WifiOff, Wifi } from 'lucide-react';
+<<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 import { Alert, AlertDescription } from '@/components/ui/alert';
 
+=======
+import { Alert, AlertDescription } from '@/components/ui/alert';
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 export const OfflineIndicator = () => {
   const [isOnline, setIsOnline] = useState(true);
   const [showOfflineAlert, setShowOfflineAlert] = useState(false);
 
-  useEffect(() => {
+  useEffect((,) => {
     const updateOnlineStatus = () => {
       const online = navigator.onLine;
       setIsOnline(online);
@@ -16,10 +20,14 @@ export const OfflineIndicator = () => {
         setShowOfflineAlert(true);
       } else if (showOfflineAlert) {
         // Show brief "back online" message then hide
+<<<<<<< HEAD
         setTimeout(() => setShowOfflineAlert(false), 3000);      }
 =======
         setTimeout(() => setShowOfflineAlert(false), 3000)
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+=======
+        setTimeout((,) => setShowOfflineAlert(false), 3000)
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
       }
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     };

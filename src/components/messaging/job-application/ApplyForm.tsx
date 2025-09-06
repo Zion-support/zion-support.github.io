@@ -3,7 +3,11 @@
 
 import React, { useState } from 'react';
 import { Button } from "@/components/ui/button";
+<<<<<<< HEAD
 import { Loader2 } from 'lucide-react'
+=======
+import { Loader2 } from 'lucide-react';
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { useJobApplications } from "@/hooks/useJobApplications";
 import { useMessaging } from "@/context/MessagingContext";
@@ -16,7 +20,7 @@ import {logErrorToProduction} from '@/utils/productionLogger';
 interface ApplyFormProps {
   job: Job,
   onClose: () => void,
-  onApplySuccess?: (jobId: string) => Promise<void>
+  onApplySuccess?: (jobId: string,) => Promise<void>
 }
 
 export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {
@@ -31,8 +35,13 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {
   const [selectedResume, setSelectedResume] = useState<ResumeOption | null>(null);
   const [selectedResumeId, setSelectedResumeId] = useState<string | null>(null);
   
+<<<<<<< HEAD
   const handleResumeSelected = (resume: ResumeOption) => {
     setSelectedResume(resume);
+=======
+  const handleResumeSelected = (resume: ResumeOption,) => {
+    setSelectedResume(resume),
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
     setSelectedResumeId(resume.id)
   };
   
@@ -132,17 +141,17 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {
         
         <TabsContent value="message">
           <MessageTab 
-            message={message}
-            setMessage={setMessage}
-            proposalLink={proposalLink}
-            setProposalLink={setProposalLink}
+            message = {message,}
+            setMessage = {setMessage,}
+            proposalLink = {proposalLink,}
+            setProposalLink = {setProposalLink,}
           />
         </TabsContent>
         
         <TabsContent value="resume">
           <ResumeTab 
-            onResumeSelected={handleResumeSelected}
-            selectedResumeId={selectedResumeId} 
+            onResumeSelected = {handleResumeSelected,}
+            selectedResumeId = {selectedResumeId,}
           />
         </TabsContent>
       </Tabs>
@@ -151,15 +160,15 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {
         <Button
           type="button"
           variant="outline"
-          onClick={onClose}
+          onClick = {onClose,}
           className="border-zion-purple/30 text-white"
         >
           Cancel
         </Button>
         <Button
           type="button" 
-          onClick={handleApply}
-          disabled={isSubmitting}
+          onClick = {handleApply,}
+          disabled = {isSubmitting,}
           className="bg-zion-purple hover:bg-zion-purple-dark text-white"
         >
           {isSubmitting ? (

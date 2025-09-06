@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useRef, useState } from 'react';
 import { Button } from '@/components/ui/button';
 import {
@@ -31,6 +32,18 @@ import {
 } from '@/components/ui/select';
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
+=======
+import { useRef, useState } from "react";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { Copy, Download, Link, Plus } from 'lucide-react';
+import { toast } from "@/hooks/use-toast";
+import { useReferrals } from "@/hooks/useReferrals";
+import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
+import { Label } from "@/components/ui/label";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 export function PartnerReferralLinks() {
   const {
     referralCode,
@@ -46,10 +59,17 @@ export function PartnerReferralLinks() {
   >([]);
 
   // Get the base referral link
+<<<<<<< HEAD
   const baseLink = getReferralLink();
 
   const handleCopyLink = (link: string) => {
     navigator.clipboard.writeText(link);
+=======
+  const baseLink = getReferralLink(),
+  
+  const handleCopyLink = (link: string,) => {
+    navigator.clipboard.writeText(link),
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
     toast({
       title: 'Link copied!',
       description: 'The referral link has been copied to your clipboard',
@@ -107,11 +127,19 @@ export function PartnerReferralLinks() {
         <CardHeader>
           <CardTitle className='flex items-center justify-between'>
             <span>Your Referral Link</span>
+<<<<<<< HEAD
             <Button
               variant='outline'
               size='sm'
               onClick={handleDownloadLinks}
               className='flex items-center gap-2'
+=======
+            <Button 
+              variant="outline" 
+              size="sm" 
+              onClick = {handleDownloadLinks,}
+              className="flex items-center gap-2"
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
             >
               <Download className='h-4 w-4' />
               Export Links
@@ -122,11 +150,23 @@ export function PartnerReferralLinks() {
           </CardDescription>
         </CardHeader>
         <CardContent>
+<<<<<<< HEAD
           <div className='flex space-x-2'>
             <Input value={baseLink} readOnly className='font-mono text-sm' />
             <Button variant='outline' onClick={() => handleCopyLink(baseLink)}>
               <Copy className='h-4 w-4' />
               <span className='sr-only'>Copy</span>
+=======
+          <div className="flex space-x-2">
+            <Input
+              value = {baseLink,}
+              readOnly
+              className="font-mono text-sm"
+            />
+            <Button variant="outline" onClick={(,) => handleCopyLink(baseLink)}>
+              <Copy className="h-4 w-4" />
+              <span className="sr-only">Copy</span>
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
             </Button>
           </div>
         </CardContent>
@@ -154,12 +194,21 @@ export function PartnerReferralLinks() {
                 Generate a trackable link for specific marketing campaigns
               </DialogDescription>
             </DialogHeader>
+<<<<<<< HEAD
             <div className='grid gap-4 py-4'>
               <div className='grid gap-2'>
                 <Label htmlFor='campaign'>Campaign Type</Label>
                 <Select
                   value={selectedCampaign}
                   onValueChange={setSelectedCampaign}
+=======
+            <div className="grid gap-4 py-4">
+              <div className="grid gap-2">
+                <Label htmlFor="campaign">Campaign Type</Label>
+                <Select 
+                  value = {selectedCampaign,}
+                  onValueChange = {setSelectedCampaign,}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
                 >
                   <SelectTrigger id='campaign'>
                     <SelectValue placeholder='Select campaign type' />
@@ -174,6 +223,7 @@ export function PartnerReferralLinks() {
                   </SelectContent>
                 </Select>
               </div>
+<<<<<<< HEAD
               <div className='grid gap-2'>
                 <Label htmlFor='custom'>Custom Parameter (Optional)</Label>
                 <Input
@@ -181,10 +231,20 @@ export function PartnerReferralLinks() {
                   placeholder='spring_campaign, video_123, etc.'
                   value={customParam}
                   onChange={e => setCustomParam(e.target.value)}
+=======
+              <div className="grid gap-2">
+                <Label htmlFor="custom">Custom Parameter (Optional)</Label>
+                <Input 
+                  id="custom" 
+                  placeholder="spring_campaign, video_123, etc." 
+                  value = {customParam,}
+                  onChange = {(e,) => setCustomParam(e.target.value),}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
                 />
               </div>
             </div>
             <DialogFooter>
+<<<<<<< HEAD
               <Button
                 type='button'
                 variant='secondary'
@@ -196,6 +256,19 @@ export function PartnerReferralLinks() {
                 type='button'
                 onClick={handleGenerateLink}
                 className='bg-zion-purple hover:bg-zion-purple-dark'
+=======
+              <Button 
+                type="button" 
+                variant="secondary" 
+                onClick = {() => setIsDialogOpen(false),}
+              >
+                Cancel
+              </Button>
+              <Button 
+                type="button" 
+                onClick = {handleGenerateLink,}
+                className="bg-zion-purple hover:bg-zion-purple-dark"
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
               >
                 Generate Link
               </Button>
@@ -206,6 +279,7 @@ export function PartnerReferralLinks() {
 
       <div className='grid gap-4'>
         {generatedLinks.length > 0 ? (
+<<<<<<< HEAD
           generatedLinks.map((item, index) => (
             <Card
               key={index}
@@ -216,20 +290,36 @@ export function PartnerReferralLinks() {
                   <div className='flex items-center gap-2'>
                     <Link className='h-4 w-4 text-zion-purple' />
                     <span>{item.name || 'Campaign Link'}</span>
+=======
+          generatedLinks.map((item, index,) => (
+            <Card key={index} className="bg-zion-blue-dark border-zion-blue-light">
+              <CardHeader className="pb-2">
+                <CardTitle className="text-base flex items-center justify-between">
+                  <div className="flex items-center gap-2">
+                    <Link className="h-4 w-4 text-zion-purple" />
+                    <span>{item.name || "Campaign Link"}</span>
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
                   </div>
                 </CardTitle>
               </CardHeader>
               <CardContent className='pb-4'>
                 <div className='flex space-x-2'>
                   <Input
-                    value={item.link}
+                    value = {item.link,}
                     readOnly
                     className='font-mono text-xs'
                   />
+<<<<<<< HEAD
                   <Button
                     variant='outline'
                     size='sm'
                     onClick={() => handleCopyLink(item.link)}
+=======
+                  <Button 
+                    variant="outline" 
+                    size="sm" 
+                    onClick = {(,) => handleCopyLink(item.link),}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
                   >
                     <Copy className='h-4 w-4' />
                     <span className='sr-only'>Copy</span>
@@ -245,10 +335,17 @@ export function PartnerReferralLinks() {
                 Create custom campaign links to track different marketing
                 efforts
               </p>
+<<<<<<< HEAD
               <Button
                 variant='outline'
                 onClick={() => setIsDialogOpen(true)}
                 className='flex items-center gap-2'
+=======
+              <Button 
+                variant="outline"
+                onClick = {(,) => setIsDialogOpen(true),}
+                className="flex items-center gap-2"
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
               >
                 <Plus className='h-4 w-4' />
                 Create First Link

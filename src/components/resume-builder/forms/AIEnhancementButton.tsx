@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/button';
 import { Sparkles, Loader2 } from 'lucide-react';
 import { useResumeEnhancer } from '@/hooks/useResumeEnhancer';
 
+<<<<<<< HEAD
 interface AIEnhancementButtonProps {
   currentContent: string;
   enhancementType:
@@ -15,6 +16,20 @@ interface AIEnhancementButtonProps {
   onEnhanced: (enhancedContent: string) => void;
   buttonText?: string;
   className?: string;
+=======
+import { useState } from 'react';
+import { Button } from '@/components/ui/button';
+import { Sparkles, Loader2 } from 'lucide-react';
+import { useResumeEnhancer } from '@/hooks/useResumeEnhancer';
+interface AIEnhancementButtonProps {
+  currentContent: string,
+  enhancementType: 'summary' | 'work-description' | 'skill-categorization' | 'general',
+  context?: string,
+  onEnhanced: (enhancedContent: string,) => void,
+  buttonText?: string,
+  className?: string
+}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 
 export function AIEnhancementButton({
   currentContent,
@@ -46,6 +61,17 @@ export function AIEnhancementButton({
   };
 
   
+<<<<<<< HEAD
+=======
+  return (
+    <Button
+      type="button"
+      variant="ghost"
+      size="sm"
+      className={`h-6 gap-1 text-primary hover:text-primary ${className}`}
+      onClick = {handleEnhance,}
+      disabled = {isEnhancing,}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
     >
       {isEnhancing ? (
         <Loader2 className='h-3 w-3 animate-spin' />

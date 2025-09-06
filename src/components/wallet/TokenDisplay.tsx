@@ -12,6 +12,15 @@ import { Button } from '@/components/ui/button';
 import Skeleton from '@/components/ui/skeleton';
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
+<<<<<<< HEAD
+=======
+import React from "react";
+import { BadgeDollarSign } from 'lucide-react';
+import { useWallet } from "@/hooks/useWallet";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import Skeleton from "@/components/ui/skeleton";
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 export function TokenDisplay() {
   const { wallet, loading } = useWallet();
 

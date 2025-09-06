@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import {
   Card,
   CardContent,
@@ -7,6 +8,11 @@ import {
 } from '@/components/ui/card';
 import { Award } from 'lucide-react';
 
+=======
+
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Award } from 'lucide-react';
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 interface LeaderboardEntry {
   rank: number;
   name: string;
@@ -52,12 +58,20 @@ export function ReferralLeaderboard() {
         <CardDescription>Top referrers this month</CardDescription>
       </CardHeader>
       <CardContent>
+<<<<<<< HEAD
         <div className='space-y-2'>
           {leaderboardData.map(entry => (
             <div
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
               key={entry.rank}
               className='flex justify-between items-center p-2 rounded-md hover:bg-muted/50 transition-colors'
+=======
+        <div className="space-y-2">
+          {leaderboardData.map((entry,) => (
+            <div 
+              key = {entry.rank,}
+              className="flex justify-between items-center p-2 rounded-md hover:bg-muted/50 transition-colors"
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
             >
               <div className='flex items-center gap-3'>
                 <div

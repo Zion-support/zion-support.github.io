@@ -3,7 +3,11 @@
 
 import React, { useState, useEffect } from "react";
 import { safeStorage } from "@/utils/safeStorage";
+<<<<<<< HEAD
 import { X, ArrowRight } from 'lucide-react'
+=======
+import { X, ArrowRight } from 'lucide-react';
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 import Link from "next/link";
 import { useIsMobile } from "@/hooks/use-mobile";
 interface SmartAppBannerProps {
@@ -20,16 +24,28 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
   appStoreUrl = "/download",
   googlePlayUrl = "/download",
   delay = 1500
+<<<<<<< HEAD
 }) => {
   const [isVisible, setIsVisible] = useState(false);
   const isMobile = useIsMobile();
+=======
+},) => {
+  const [isVisible, setIsVisible] = useState(false),
+  const isMobile = useIsMobile(),
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
   
-  useEffect(() => {
+  useEffect((,) => {
     // Only show banner on mobile devices and if it hasn't been dismissed
     if (isMobile && !safeStorage.getItem("smartBannerDismissed")) {
+<<<<<<< HEAD
       const timer = setTimeout(() => {
         setIsVisible(true);
       }, delay);
+=======
+      const timer = setTimeout((,) => {
+        setIsVisible(true)
+      }, delay),
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
       
       return () => clearTimeout(timer);
     }

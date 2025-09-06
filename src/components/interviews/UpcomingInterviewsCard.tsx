@@ -10,12 +10,25 @@ import { Avatar } from '@/components/ui/avatar';
 import { logErrorToProduction } from '@/utils/productionLogger';
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
+<<<<<<< HEAD
+=======
+import React, { useEffect, useState } from "react";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { useInterviews } from "@/hooks/useInterviews";
+import { Interview } from "@/types/interview";
+import { format, isPast, parseISO } from "date-fns";
+import Link from "next/link";
+import { Calendar, Clock, Video } from 'lucide-react';
+import { Avatar } from "@/components/ui/avatar";
+import {logErrorToProduction} from '@/utils/productionLogger';
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 export function UpcomingInterviewsCard() {
   const { fetchInterviews } = useInterviews();
   const [upcomingInterviews, setUpcomingInterviews] = useState<Interview[]>([]);
   const [isLoading, setIsLoading] = useState(true);
 
-  useEffect(() => {
+  useEffect((,) => {
     const loadInterviews = async () => {
       setIsLoading(true);
       try {
@@ -28,10 +41,15 @@ export function UpcomingInterviewsCard() {
               interview.status === 'confirmed' &&
               !isPast(parseISO(interview.scheduled_date))
           )
+<<<<<<< HEAD
           .sort(
             (a, b) =>
               parseISO(a.scheduled_date).getTime() -
               parseISO(b.scheduled_date).getTime()
+=======
+          .sort((a, b,) => 
+            parseISO(a.scheduled_date).getTime() - parseISO(b.scheduled_date).getTime()
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
           )
           .slice(0, 3); // Take only the next 3 interviews
 
@@ -124,9 +142,15 @@ export function UpcomingInterviewsCard() {
                 <Avatar className='h-10 w-10 bg-zion-purple/10'>
                   {interview.client_avatar || interview.talent_avatar ? (
                     <img
+<<<<<<< HEAD
                       src={interview.client_avatar || interview.talent_avatar}
                       alt={interview.client_name || interview.talent_name}
                       loading='lazy'
+=======
+                      src = {interview.client_avatar || interview.talent_avatar,}
+                      alt = {interview.client_name || interview.talent_name,}
+                      loading="lazy"
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
                     />
                   ) : (
                     <div className='flex h-full w-full items-center justify-center bg-zion-purple/20 text-zion-purple font-medium'>

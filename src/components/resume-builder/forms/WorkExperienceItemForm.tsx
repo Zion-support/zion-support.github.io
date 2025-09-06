@@ -1,4 +1,5 @@
 import { useState } from 'react';
+<<<<<<< HEAD
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
@@ -27,6 +28,24 @@ import { CalendarIcon, Loader2 } from 'lucide-react';
 import { AIEnhancementButton } from '@/components/ai-enhancement/AIEnhancementButton';
 import { AIEnhancementDialog } from '@/components/ai-enhancement/AIEnhancementDialog';
 
+=======
+import { zodResolver } from "@hookform/resolvers/zod";
+import { useForm } from "react-hook-form";
+import { z } from "zod";
+import { WorkExperience } from "@/types/resume";
+import { Button } from "@/components/ui/button";
+import { Calendar } from "@/components/ui/calendar";
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
+import { Input } from "@/components/ui/input";
+import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
+import { Textarea } from "@/components/ui/textarea";
+import { cn } from "@/lib/utils";
+import { Switch } from "@/components/ui/switch";
+import { format } from "date-fns";
+import { CalendarIcon, Loader2 } from 'lucide-react';
+import { AIEnhancementButton } from "@/components/ai-enhancement/AIEnhancementButton";
+import { AIEnhancementDialog } from "@/components/ai-enhancement/AIEnhancementDialog";
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 // Define form schema
 const formSchema = z.object({
   company_name: z.string().min(1, 'Company name is required'),
@@ -43,9 +62,16 @@ const formSchema = z.object({
 type FormValues = z.infer<typeof formSchema>;
 
 interface WorkExperienceItemFormProps {
+<<<<<<< HEAD
   initialData?: WorkExperience;
   onSubmit: (data: WorkExperience) => Promise<void>;
   onCancel: () => void;
+=======
+  initialData?: WorkExperience,
+  onSubmit: (data: WorkExperience,) => Promise<void>,
+  onCancel: () => void
+}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 
 export function WorkExperienceItemForm({
   initialData,
@@ -77,7 +103,7 @@ export function WorkExperienceItemForm({
   const watchRoleTitle = form.watch('role_title');
   const watchCompanyName = form.watch('company_name');
 
-  const handleFormSubmit = async (values: FormValues) => {
+  const handleFormSubmit = async (values: FormValues,) => {
     // Create a properly typed WorkExperience object with all required fields
     const workExperience: WorkExperience = {
       id: initialData?.id,
@@ -93,10 +119,17 @@ export function WorkExperienceItemForm({
     await onSubmit(workExperience);
   };
 
+<<<<<<< HEAD
   const handleAIEnhancement = (content: string) => {
     form.setValue('description', content, { shouldDirty: true });
     setIsEnhancementDialogOpen(false);
   };
+=======
+  const handleAIEnhancement = (content: string,) => {
+    form.setValue("description", content, { shouldDirty: true }),
+    setIsEnhancementDialogOpen(false)
+  },
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 
   return (
     <>
@@ -107,9 +140,15 @@ export function WorkExperienceItemForm({
         >
           <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
             <FormField
+<<<<<<< HEAD
               control={form.control}
               name='company_name'
               render={({ field }: { field: any }) => (
+=======
+              control = {form.control,}
+              name="company_name"
+              render={({ field }: { field: any },) => (
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
                 <FormItem>
                   <FormLabel>Company Name</FormLabel>
                   <FormControl>
@@ -121,9 +160,15 @@ export function WorkExperienceItemForm({
             />
 
             <FormField
+<<<<<<< HEAD
               control={form.control}
               name='role_title'
               render={({ field }: { field: any }) => (
+=======
+              control = {form.control,}
+              name="role_title"
+              render={({ field }: { field: any },) => (
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
                 <FormItem>
                   <FormLabel>Role Title</FormLabel>
                   <FormControl>
@@ -137,9 +182,15 @@ export function WorkExperienceItemForm({
 
           <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
             <FormField
+<<<<<<< HEAD
               control={form.control}
               name='location'
               render={({ field }: { field: any }) => (
+=======
+              control = {form.control,}
+              name="location"
+              render={({ field }: { field: any },) => (
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
                 <FormItem>
                   <FormLabel>Location</FormLabel>
                   <FormControl>
@@ -154,17 +205,31 @@ export function WorkExperienceItemForm({
             />
 
             <FormField
+<<<<<<< HEAD
               control={form.control}
               name='is_current'
               render={({ field }: { field: any }) => (
                 <FormItem className='flex flex-col'>
+=======
+              control = {form.control,}
+              name="is_current"
+              render={({ field }: { field: any },) => (
+                <FormItem className="flex flex-col">
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
                   <FormLabel>Current Position</FormLabel>
                   <div className='flex items-center gap-2 h-10'>
                     <Switch
+<<<<<<< HEAD
                       aria-label='Current position'
                       checked={field.value}
                       onCheckedChange={field.onChange}
                       id='current-position'
+=======
+                      aria-label="Current position"
+                      checked = {field.value,}
+                      onCheckedChange = {field.onChange,}
+                      id="current-position"
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
                     />
                     <label
                       htmlFor='current-position'
@@ -181,20 +246,35 @@ export function WorkExperienceItemForm({
 
           <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
             <FormField
+<<<<<<< HEAD
               control={form.control}
               name='start_date'
               render={({ field }: { field: any }) => (
                 <FormItem className='flex flex-col'>
+=======
+              control = {form.control,}
+              name="start_date"
+              render={({ field }: { field: any },) => (
+                <FormItem className="flex flex-col">
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
                   <FormLabel>Start Date</FormLabel>
                   <Popover>
                     <PopoverTrigger asChild>
                       <FormControl>
                         <Button
+<<<<<<< HEAD
                           variant={'outline'}
                           className={cn(
                             'w-full pl-3 text-left font-normal',
                             !field.value && 'text-muted-foreground'
                           )}
+=======
+                          variant = {"outline",}
+                          className = {cn(
+                            "w-full pl-3 text-left font-normal",
+                            !field.value && "text-muted-foreground"
+                          ),}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
                         >
                           {field.value ? (
                             format(field.value, 'MMM yyyy')
@@ -210,6 +290,7 @@ export function WorkExperienceItemForm({
                     </PopoverTrigger>
                     <PopoverContent className='w-auto p-0' align='start'>
                       <Calendar
+<<<<<<< HEAD
                         mode='single'
                         selected={field.value}
                         onSelect={field.onChange}
@@ -217,6 +298,15 @@ export function WorkExperienceItemForm({
                         captionLayout='dropdown-buttons'
                         fromYear={1990}
                         toYear={new Date().getFullYear()}
+=======
+                        mode="single"
+                        selected = {field.value,}
+                        onSelect = {field.onChange,}
+                        initialFocus
+                        captionLayout="dropdown-buttons"
+                        fromYear = {1990,}
+                        toYear = {new Date().getFullYear(),}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
                       />
                     </PopoverContent>
                   </Popover>
@@ -227,20 +317,35 @@ export function WorkExperienceItemForm({
 
             {!watchIsCurrent && (
               <FormField
+<<<<<<< HEAD
                 control={form.control}
                 name='end_date'
                 render={({ field }: { field: any }) => (
                   <FormItem className='flex flex-col'>
+=======
+                control = {form.control,}
+                name="end_date"
+                render={({ field }: { field: any },) => (
+                  <FormItem className="flex flex-col">
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
                     <FormLabel>End Date</FormLabel>
                     <Popover>
                       <PopoverTrigger asChild>
                         <FormControl>
                           <Button
+<<<<<<< HEAD
                             variant={'outline'}
                             className={cn(
                               'w-full pl-3 text-left font-normal',
                               !field.value && 'text-muted-foreground'
                             )}
+=======
+                            variant = {"outline",}
+                            className = {cn(
+                              "w-full pl-3 text-left font-normal",
+                              !field.value && "text-muted-foreground"
+                            ),}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
                           >
                             {field.value ? (
                               format(field.value, 'MMM yyyy')
@@ -256,6 +361,7 @@ export function WorkExperienceItemForm({
                       </PopoverTrigger>
                       <PopoverContent className='w-auto p-0' align='start'>
                         <Calendar
+<<<<<<< HEAD
                           mode='single'
                           selected={field.value || undefined}
                           onSelect={field.onChange}
@@ -264,6 +370,16 @@ export function WorkExperienceItemForm({
                           fromYear={1990}
                           toYear={new Date().getFullYear()}
                           disabled={date => date > new Date()}
+=======
+                          mode="single"
+                          selected = {field.value || undefined,}
+                          onSelect = {field.onChange,}
+                          initialFocus
+                          captionLayout="dropdown-buttons"
+                          fromYear = {1990,}
+                          toYear = {new Date().getFullYear(),}
+                          disabled = {(date,) => date > new Date(),}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
                         />
                       </PopoverContent>
                     </Popover>
@@ -275,9 +391,15 @@ export function WorkExperienceItemForm({
           </div>
 
           <FormField
+<<<<<<< HEAD
             control={form.control}
             name='description'
             render={({ field }: { field: any }) => (
+=======
+            control = {form.control,}
+            name="description"
+            render={({ field }: { field: any },) => (
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
               <FormItem>
                 <div className='flex justify-between items-center'>
                   <FormLabel>Description</FormLabel>
@@ -288,6 +410,7 @@ export function WorkExperienceItemForm({
                         content: field.value || '',
                         context: `${watchRoleTitle} at ${watchCompanyName}`,
                       }}
+<<<<<<< HEAD
                       onEnhanced={content =>
                         form.setValue('description', content, {
                           shouldDirty: true,
@@ -301,6 +424,17 @@ export function WorkExperienceItemForm({
                       size='sm'
                       onClick={() => setIsEnhancementDialogOpen(true)}
                       className='text-xs'
+=======
+                      onEnhanced={(content,) => form.setValue("description", content, { shouldDirty: true })}
+                      buttonText="Enhance with AI"
+                    />
+                    <Button
+                      type="button"
+                      variant="outline"
+                      size="sm"
+                      onClick = {() => setIsEnhancementDialogOpen(true),}
+                      className="text-xs"
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
                     >
                       AI Writer
                     </Button>
@@ -337,6 +471,7 @@ export function WorkExperienceItemForm({
       </Form>
 
       <AIEnhancementDialog
+<<<<<<< HEAD
         title='Enhance Work Experience Description'
         isOpen={isEnhancementDialogOpen}
         onClose={() => setIsEnhancementDialogOpen(false)}
@@ -347,6 +482,17 @@ export function WorkExperienceItemForm({
           context: `${watchRoleTitle} at ${watchCompanyName}`,
         }}
         initialContent={form.getValues('description') || ''}
+=======
+        title="Enhance Work Experience Description"
+        isOpen = {isEnhancementDialogOpen,}
+        onClose = {() => setIsEnhancementDialogOpen(false),}
+        onApply = {handleAIEnhancement,}
+        defaultOptions={{
+          enhancementType: "work-description",
+          content: form.getValues("description") || "",
+          context: `${watchRoleTitle} at ${watchCompanyName}`}}
+        initialContent = {form.getValues("description") || "",}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
       />
     </>
   );

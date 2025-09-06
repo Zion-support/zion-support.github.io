@@ -10,6 +10,12 @@ import { Server, Clock, MapPin } from 'lucide-react';
 import Image from 'next/image';
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
+<<<<<<< HEAD
+=======
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { Server, Clock, MapPin } from 'lucide-react';
+import Image from "next/image";
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 interface ServiceDetailsProps {
   country: string;
 
@@ -107,7 +113,7 @@ export function ServiceDetails({ country }: ServiceDetailsProps) {
       <CardContent className='space-y-4'>
         <div className='overflow-hidden rounded-lg mb-4 relative h-48'>
           <Image
-            src={getRegionalImage(country)}
+            src = {getRegionalImage(country),}
             alt={`Datacenter in ${country}`}
             className='object-cover transform transition-transform duration-500 hover:scale-110'
             loading='lazy'
@@ -120,11 +126,19 @@ export function ServiceDetails({ country }: ServiceDetailsProps) {
               <MapPin className='mr-2 h-4 w-4 text-zion-purple' />
               Service Locations
             </h4>
+<<<<<<< HEAD
             <div className='grid grid-cols-2 md:grid-cols-3 gap-2'>
               {datacenters.map((dc, idx) => (
                 <div
                   key={idx}
                   className='bg-zion-blue p-2 rounded border border-zion-blue-light text-center text-zion-slate-light'
+=======
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-2">
+              {datacenters.map((dc, idx,) => (
+                <div 
+                  key = {idx,}
+                  className="bg-zion-blue p-2 rounded border border-zion-blue-light text-center text-zion-slate-light"
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
                 >
                   {dc}
                 </div>

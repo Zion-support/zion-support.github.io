@@ -1,15 +1,23 @@
 
+<<<<<<< HEAD
 type MilestoneFormValues = z.infer<typeof formSchema>;
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 import React from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
+<<<<<<< HEAD
 import { CalendarIcon, Loader2 } from 'lucide-react'
+=======
+import { CalendarIcon, Loader2 } from 'lucide-react';
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 import { format } from 'date-fns';
 import { Button } from '@/components/ui/button';
 import { Calendar } from '@/components/ui/calendar';
 import {
+<<<<<<< HEAD
   Form;
   FormControl;
   FormField;
@@ -22,6 +30,20 @@ import {
   Popover;
   PopoverContent;
   PopoverTrigger} from '@/components/ui/popover';
+=======
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage} from '@/components/ui/form',
+import { Input } from '@/components/ui/input';
+import { Textarea } from '@/components/ui/textarea';
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger} from '@/components/ui/popover',
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 import { AIMilestoneGenerator } from './AIMilestoneGenerator';
 import { GeneratedMilestone } from '@/hooks/useMilestoneGenerator';
 const formSchema = z.object({
@@ -33,7 +55,7 @@ const formSchema = z.object({
 type MilestoneFormValues = z.infer<typeof formSchema>;
 
 interface AddMilestoneFormProps {
-  onSubmit: (data: MilestoneFormValues) => void,
+  onSubmit: (data: MilestoneFormValues,) => void,
   isSubmitting: boolean,
   onCancel?: () => void;
   projectScope?: string;
@@ -57,12 +79,18 @@ export function AddMilestoneForm({
       title: '',
       description: '',
       amount: 0}}),
+<<<<<<< HEAD
   const handleSubmit = (values: MilestoneFormValues) => {
     onSubmit(values);
+=======
+
+  const handleSubmit = (values: MilestoneFormValues,) => {
+    onSubmit(values),
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
     form.reset()
   };
 
-  const handleAddMilestones = (milestones: GeneratedMilestone[]) => {
+  const handleAddMilestones = (milestones: GeneratedMilestone[],) => {
     // If there's only one milestone, submit it directly
     if (milestones.length === 1) {
       const milestone = milestones[0];
@@ -88,7 +116,7 @@ export function AddMilestoneForm({
     })
   };
 
-  const handleAddMilestone = (milestone: GeneratedMilestone) => {
+  const handleAddMilestone = (milestone: GeneratedMilestone,) => {
     onSubmit({
       title: milestone.title,
       description: milestone.description,
@@ -102,21 +130,21 @@ export function AddMilestoneForm({
       {/* AI Milestone Generator */}
       {projectScope && projectStartDate && (
         <AIMilestoneGenerator
-          scope={projectScope}
-          startDate={projectStartDate}
-          endDate={projectEndDate}
-          projectType={projectType}
-          onAddMilestones={handleAddMilestones}
-          onAddMilestone={handleAddMilestone}
+          scope = {projectScope,}
+          startDate = {projectStartDate,}
+          endDate = {projectEndDate,}
+          projectType = {projectType,}
+          onAddMilestones = {handleAddMilestones,}
+          onAddMilestone = {handleAddMilestone,}
         />
       )}
 
       <Form {...form}>
         <form onSubmit={form.handleSubmit(handleSubmit)} className="space-y-4">
           <FormField
-            control={form.control}
+            control = {form.control,}
             name="title"
-            render={({ field }: { field: any }) => (
+            render={({ field }: { field: any },) => (
               <FormItem>
                 <FormLabel>Title</FormLabel>
                 <FormControl>
@@ -128,9 +156,9 @@ export function AddMilestoneForm({
           />
 
           <FormField
-            control={form.control}
+            control = {form.control,}
             name="description"
-            render={({ field }: { field: any }) => (
+            render={({ field }: { field: any },) => (
               <FormItem>
                 <FormLabel>Description (optional)</FormLabel>
                 <FormControl>
@@ -147,9 +175,9 @@ export function AddMilestoneForm({
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <FormField
-              control={form.control}
+              control = {form.control,}
               name="due_date"
-              render={({ field }: { field: any }) => (
+              render={({ field }: { field: any },) => (
                 <FormItem className="flex flex-col">
                   <FormLabel>Due Date (optional)</FormLabel>
                   <Popover>
@@ -173,9 +201,9 @@ export function AddMilestoneForm({
                     <PopoverContent className="w-auto p-0" align="start">
                       <Calendar
                         mode="single"
-                        selected={field.value}
-                        onSelect={field.onChange}
-                        disabled={(date) => date < new Date()}
+                        selected = {field.value,}
+                        onSelect = {field.onChange,}
+                        disabled = {(date,) => date < new Date(),}
                         initialFocus
                       />
                     </PopoverContent>
@@ -186,9 +214,9 @@ export function AddMilestoneForm({
             />
 
             <FormField
-              control={form.control}
+              control = {form.control,}
               name="amount"
-              render={({ field }: { field: any }) => (
+              render={({ field }: { field: any },) => (
                 <FormItem>
                   <FormLabel>Amount ($)</FormLabel>
                   <FormControl>
@@ -211,8 +239,8 @@ export function AddMilestoneForm({
               <Button
                 type="button"
                 variant="outline"
-                onClick={onCancel}
-                disabled={isSubmitting}
+                onClick = {onCancel,}
+                disabled = {isSubmitting,}
               >
                 Cancel
               </Button>

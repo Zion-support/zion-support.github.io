@@ -3,6 +3,7 @@ import { Button } from '@/components/ui/button';
 import { useRouter } from 'next/router'; // Changed from useNavigate
 import { CheckCircle2 } from 'lucide-react';import { useTranslation } from 'react-i18next';
 
+<<<<<<< HEAD
 =======
 
 import React from 'react';
@@ -12,6 +13,13 @@ import { CheckCircle2 } from 'lucide-react'
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 import { useTranslation } from 'react-i18next';
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+import React from 'react';
+import { Button } from '@/components/ui/button';
+import { useRouter } from 'next/router', // Changed from useNavigate
+import { CheckCircle2 } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 export default function PaymentSuccess() {
   const router = useRouter(); // Changed from navigate
   const { t } = useTranslation();

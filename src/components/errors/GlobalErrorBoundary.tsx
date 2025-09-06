@@ -17,6 +17,17 @@ import * as Sentry from '@sentry/nextjs';
 import { logErrorToProduction } from '@/utils/productionLogger';
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
+<<<<<<< HEAD
+=======
+import React, { Component, ErrorInfo, ReactNode } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { AlertTriangle, RefreshCw, Home, Bug, Send, Clipboard } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
+import * as Sentry from '@sentry/nextjs';
+import {logErrorToProduction} from '@/utils/productionLogger';
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 interface ErrorBoundaryState {
   hasError: boolean;
   error: Error | null;
@@ -27,6 +38,7 @@ interface ErrorBoundaryState {
   showDetails: boolean;
 
 interface ErrorBoundaryProps {
+<<<<<<< HEAD
   children: ReactNode;
   fallback?: ReactNode;
   onError?: (error: Error, errorInfo: ErrorInfo) => void;
@@ -34,6 +46,16 @@ interface ErrorBoundaryProps {
   maxRetries?: number;
   showReportButton?: boolean;
   context?: string;
+=======
+  children: ReactNode
+  fallback?: ReactNode
+  onError?: (error: Error, errorInfo: ErrorInfo,) => void
+  enableRetry?: boolean
+  maxRetries?: number
+  showReportButton?: boolean
+  context?: string
+}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 
 export class GlobalErrorBoundary extends Component<
   ErrorBoundaryProps,
@@ -59,8 +81,12 @@ export class GlobalErrorBoundary extends Component<
     };  }
 =======
       showDetails: false
+<<<<<<< HEAD
     }
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+=======
+    ,}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
   }
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
@@ -95,10 +121,15 @@ export class GlobalErrorBoundary extends Component<
       userAgent: typeof window !== 'undefined' ? navigator.userAgent : 'SSR',
       url: typeof window !== 'undefined' ? window.location.href : 'SSR',
       userId: this.getUserId(),
+<<<<<<< HEAD
       buildInfo: this.getBuildInfo(),
     };
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
+=======
+      buildInfo: this.getBuildInfo()
+    ,}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
     // Log to console in development
     if (process.env.NODE_ENV === 'development') {
       console.group('🚨 Error Boundary Caught Error');
@@ -109,12 +140,18 @@ export class GlobalErrorBoundary extends Component<
     }
 
     // Report to Sentry
+<<<<<<< HEAD
     Sentry.withScope(scope => {
       scope.setTag(
         'errorBoundary',
         this.props.context || 'GlobalErrorBoundary'
       );
       scope.setLevel('error');
+=======
+    Sentry.withScope((scope,) => {
+      scope.setTag('errorBoundary', this.props.context || 'GlobalErrorBoundary')
+      scope.setLevel('error')
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
       scope.setContext('errorInfo', {
         componentStack: errorInfo.componentStack,
         retryCount: this.state.retryCount,
@@ -259,8 +296,12 @@ export class GlobalErrorBoundary extends Component<
     const retryDelay = Math.pow(2, this.state.retryCount) * 1000 // Exponential backoff
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
+<<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     const timeout = setTimeout(() => {
+=======
+    const timeout = setTimeout((,) => {
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
       this.setState({
         hasError: false,
         error: null,
@@ -291,11 +332,16 @@ export class GlobalErrorBoundary extends Component<
       componentStack: this.state.errorInfo?.componentStack,
       timestamp: new Date().toISOString(),
       url: typeof window !== 'undefined' ? window.location.href : 'unknown',
+<<<<<<< HEAD
       userAgent:
         typeof window !== 'undefined' ? navigator.userAgent : 'unknown',
     };
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
+=======
+      userAgent: typeof window !== 'undefined' ? navigator.userAgent : 'unknown'
+    ,}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
     try {
       await navigator.clipboard.writeText(
         JSON.stringify(errorDetails, null, 2)
@@ -418,8 +464,12 @@ export class GlobalErrorBoundary extends Component<
 =======
                 <div className="flex items-center justify-center gap-2 mt-2">
                   <Badge 
+<<<<<<< HEAD
                     variant={severity === 'critical' ? 'destructive' : severity === 'high' ? 'destructive' : 'secondary'}
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+=======
+                    variant = {severity === 'critical' ? 'destructive' : severity === 'high' ? 'destructive' : 'secondary',}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
                   >
                     {severity.toUpperCase()}
                   </Badge>
@@ -583,15 +633,21 @@ export class GlobalErrorBoundary extends Component<
 export const useErrorBoundary = () => {
   const [error, setError] = React.useState<Error | null>(null);
 
-  React.useEffect(() => {
+  React.useEffect((,) => {
     if (error) {
       throw error;
     }
   }, [error]);
 
+<<<<<<< HEAD
   const captureError = React.useCallback((error: Error) => {
     setError(error);
   }, []);
+=======
+  const captureError = React.useCallback((error: Error,) => {
+    setError(error)
+  }, [])
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 
   return { captureError };
 };
@@ -604,8 +660,8 @@ export const useErrorBoundary = () => {
 export const withErrorBoundary = <P extends object>(
   Component: React.ComponentType<P>,
   errorBoundaryProps?: Omit<ErrorBoundaryProps, 'children'>
-) => {
-  const WrappedComponent = (props: P) => (
+,) => {
+  const WrappedComponent = (props: P,) => (
     <GlobalErrorBoundary {...errorBoundaryProps}>
       <Component {...props} />
     </GlobalErrorBoundary>

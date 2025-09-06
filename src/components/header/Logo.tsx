@@ -3,6 +3,12 @@ import React from 'react';
 import Link from 'next/link';
 import { useWhitelabel } from '@/context/WhitelabelContext';
 
+<<<<<<< HEAD
+=======
+import React from 'react';
+import Link from 'next/link';
+import { useWhitelabel } from '@/context/WhitelabelContext';
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 interface LogoProps {
   customLogo?: string;
 

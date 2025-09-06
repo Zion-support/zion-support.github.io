@@ -19,6 +19,15 @@ import {
 import Link from 'next/link';
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
+<<<<<<< HEAD
+=======
+import React from "react";
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import { ChevronRight, FileText, Image, Clock, Zap, BookOpen } from 'lucide-react';
+import Link from "next/link";
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 export function TalentDashboard() {
   return (
     <div className='space-y-6 px-4 pb-24'>

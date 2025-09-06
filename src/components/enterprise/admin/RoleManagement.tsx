@@ -1,16 +1,28 @@
+<<<<<<< HEAD
 import React from 'react';
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+
+import React from "react";
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 import {
   Table,
   TableBody,
   TableCell,
   TableHead,
   TableHeader,
+<<<<<<< HEAD
   TableRow,;
 } from '@/components/ui/table';
 import { Badge } from '@/components/ui/badge';
 import { Switch } from '@/components/ui/switch';
 import { toast } from '@/hooks/use-toast';
+=======
+  TableRow} from "@/components/ui/table",
+import { Badge } from "@/components/ui/badge";
+import { Switch } from "@/components/ui/switch";
+import { toast } from "@/hooks/use-toast";
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 import { InfoIcon } from 'lucide-react';
 import {
   Tooltip,
@@ -80,11 +92,15 @@ export function RoleManagement() {
     },
   ];
 
+<<<<<<< HEAD
   const handlePermissionChange = (
     _memberId: number,
     permission: string,
     value: boolean
   ) => {
+=======
+  const handlePermissionChange = (_memberId: number, permission: string, value: boolean,) => {
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
     // In a real app, this would make an API call to update permissions
     toast({
       title: 'Permission updated',
@@ -102,6 +118,7 @@ export function RoleManagement() {
   return (
     <div className='space-y-6'>
       <div>
+<<<<<<< HEAD
         <h3 className='text-xl font-medium mb-4'>Role Permissions</h3>
         <div className='grid grid-cols-1 md:grid-cols-4 gap-4 mb-6'>
           {Object.entries(roleDescriptions).map(([role, description]) => (
@@ -113,6 +130,14 @@ export function RoleManagement() {
                 <Badge variant={role === 'Admin' ? 'default' : 'outline'}>
                   {role}
                 </Badge>
+=======
+        <h3 className="text-xl font-medium mb-4">Role Permissions</h3>
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-6">
+          {Object.entries(roleDescriptions).map(([role, description],) => (
+            <div key={role} className="bg-card rounded-lg p-4 border border-border">
+              <div className="flex items-center gap-2 mb-2">
+                <Badge variant={role === "Admin" ? "default" : "outline"}>{role}</Badge>
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
               </div>
               <p className='text-sm text-muted-foreground'>{description}</p>
             </div>
@@ -204,7 +229,11 @@ export function RoleManagement() {
             </TableRow>
           </TableHeader>
           <TableBody>
+<<<<<<< HEAD
             {teamMembers.map(member => (
+=======
+            {teamMembers.map((member,) => (
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
               <TableRow key={member.id}>
                 <TableCell>
                   <div className='font-medium'>{member.name}</div>
@@ -213,9 +242,15 @@ export function RoleManagement() {
                   </div>
                 </TableCell>
                 <TableCell>
+<<<<<<< HEAD
                   <select
                     className='w-full h-9 rounded-md border border-input bg-background px-3 py-1 text-sm shadow-sm transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring'
                     defaultValue={member.role}
+=======
+                  <select 
+                    className="w-full h-9 rounded-md border border-input bg-background px-3 py-1 text-sm shadow-sm transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
+                    defaultValue = {member.role,}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
                   >
                     <option value='Admin'>Admin</option>
                     <option value='Recruiter'>Recruiter</option>
@@ -225,6 +260,7 @@ export function RoleManagement() {
                 </TableCell>
                 <TableCell className='text-center'>
                   <Switch
+<<<<<<< HEAD
                     aria-label='View candidates'
                     checked={member.permissions.viewCandidates}
                     onCheckedChange={checked =>
@@ -234,10 +270,18 @@ export function RoleManagement() {
                         checked
                       )
                     }
+=======
+                    aria-label="View candidates"
+                    checked = {member.permissions.viewCandidates,}
+                    onCheckedChange = {(checked,) =>
+                      handlePermissionChange(member.id, "viewCandidates", checked)
+                    ,}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
                   />
                 </TableCell>
                 <TableCell className='text-center'>
                   <Switch
+<<<<<<< HEAD
                     aria-label='Edit candidates'
                     checked={member.permissions.editCandidates}
                     onCheckedChange={checked =>
@@ -247,33 +291,64 @@ export function RoleManagement() {
                         checked
                       )
                     }
+=======
+                    aria-label="Edit candidates"
+                    checked = {member.permissions.editCandidates,}
+                    onCheckedChange = {(checked,) =>
+                      handlePermissionChange(member.id, "editCandidates", checked)
+                    ,}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
                   />
                 </TableCell>
                 <TableCell className='text-center'>
                   <Switch
+<<<<<<< HEAD
                     aria-label='Create jobs'
                     checked={member.permissions.createJobs}
                     onCheckedChange={checked =>
                       handlePermissionChange(member.id, 'createJobs', checked)
                     }
+=======
+                    aria-label="Create jobs"
+                    checked = {member.permissions.createJobs,}
+                    onCheckedChange = {(checked,) =>
+                      handlePermissionChange(member.id, "createJobs", checked)
+                    ,}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
                   />
                 </TableCell>
                 <TableCell className='text-center'>
                   <Switch
+<<<<<<< HEAD
                     aria-label='Manage team'
                     checked={member.permissions.manageTeam}
                     onCheckedChange={checked =>
                       handlePermissionChange(member.id, 'manageTeam', checked)
                     }
+=======
+                    aria-label="Manage team"
+                    checked = {member.permissions.manageTeam,}
+                    onCheckedChange = {(checked,) =>
+                      handlePermissionChange(member.id, "manageTeam", checked)
+                    ,}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
                   />
                 </TableCell>
                 <TableCell className='text-center'>
                   <Switch
+<<<<<<< HEAD
                     aria-label='View billing'
                     checked={member.permissions.viewBilling}
                     onCheckedChange={checked =>
                       handlePermissionChange(member.id, 'viewBilling', checked)
                     }
+=======
+                    aria-label="View billing"
+                    checked = {member.permissions.viewBilling,}
+                    onCheckedChange = {(checked,) =>
+                      handlePermissionChange(member.id, "viewBilling", checked)
+                    ,}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
                   />
                 </TableCell>
               </TableRow>
@@ -285,5 +360,9 @@ export function RoleManagement() {
   );
 =======
 }
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b

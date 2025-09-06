@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import Link from 'next/link';
 import { GradientHeading } from './GradientHeading';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
@@ -18,15 +19,21 @@ export function FeaturesGuideSection() {
   const features = [
     {
 =======
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 import Link from "next/link";
 import { GradientHeading } from "./GradientHeading";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Button } from "./ui/button";
 import { fireEvent } from '@/lib/analytics';
+<<<<<<< HEAD
 import { Users, Zap, Settings, MessageSquare, Sparkles, ArrowRight, BarChart3, Plus, HelpCircle } from 'lucide-react'
 import { Zap } from 'lucide-react';
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
+=======
+import { Users, Zap, Settings, MessageSquare, Sparkles, ArrowRight, BarChart3, Plus, HelpCircle } from 'lucide-react';
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 export function FeaturesGuideSection() {
   const features = [
     {
@@ -171,11 +178,17 @@ export function FeaturesGuideSection() {
         <Tabs defaultValue='ai-matcher' className='w-full max-w-5xl mx-auto'>
           <TabsList className='grid grid-cols-2 md:grid-cols-4 gap-2 bg-zion-blue rounded-lg p-1 mb-8'>
             {features.slice(0, 4).map(feature => (
+<<<<<<< HEAD
               <TabsTrigger
                 key={feature.id}
                 value={feature.id}
                 className='data-[state=active]:bg-zion-blue-light data-[state=active]:text-zion-cyan'              >
 =======
+=======
+              <TabsTrigger 
+                key = {feature.id,}
+                value = {feature.id,}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
                 className="data-[state=active]:bg-zion-blue-light data-[state=active]:text-zion-cyan"
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
               >
@@ -187,11 +200,17 @@ export function FeaturesGuideSection() {
           <TabsList className='grid grid-cols-2 md:grid-cols-4 gap-2 bg-zion-blue rounded-lg p-1'>
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
             {features.slice(4).map(feature => (
+<<<<<<< HEAD
               <TabsTrigger
                 key={feature.id}
                 value={feature.id}
                 className='data-[state=active]:bg-zion-blue-light data-[state=active]:text-zion-cyan'              >
 =======
+=======
+              <TabsTrigger 
+                key = {feature.id,}
+                value = {feature.id,}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
                 className="data-[state=active]:bg-zion-blue-light data-[state=active]:text-zion-cyan"
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
               >
@@ -235,6 +254,7 @@ export function FeaturesGuideSection() {
                     </Link>
                   </Button>
                 </div>
+<<<<<<< HEAD
 
                 <div className='md:w-2/3 bg-zion-blue-dark p-6 rounded-lg'>
                   <h4 className='text-xl font-semibold text-white mb-4'>
@@ -245,6 +265,13 @@ export function FeaturesGuideSection() {
                       <li key={idx} className='text-zion-slate-light'>
                         <span className='text-zion-cyan mr-2'>{idx + 1}.</span>                        {instruction}
 =======
+=======
+                
+                <div className="md:w-2/3 bg-zion-blue-dark p-6 rounded-lg">
+                  <h4 className="text-xl font-semibold text-white mb-4">How to Use</h4>
+                  <ol className="list-decimal list-inside space-y-3 pl-4">
+                    {feature.instructions.map((instruction, idx,) => (
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
                       <li key={idx} className="text-zion-slate-light">
                         <span className="text-zion-cyan mr-2">{idx + 1}.</span>
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
@@ -267,8 +294,13 @@ export function FeaturesGuideSection() {
             asChild
           >
             <Link
+<<<<<<< HEAD
               href='/marketplace'
               onClick={() => fireEvent('explore_marketplace_click')}
+=======
+              href="/marketplace"
+              onClick = {() => fireEvent('explore_marketplace_click'),}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
             >
               Explore Full Marketplace
               <ArrowRight className='ml-2 h-4 w-4' />            </Link>
@@ -281,9 +313,14 @@ export function FeaturesGuideSection() {
         </div>
       </div>
     </section>
+<<<<<<< HEAD
   );
 }
 =======
 }
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+  )
+};
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b

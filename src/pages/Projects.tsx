@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { useProjects } from '@/hooks/useProjects';
 import { SEO } from '@/components/SEO';
@@ -18,6 +19,18 @@ import { Clock, Briefcase } from 'lucide-react';
 
 function ProjectsContent() { const { projects, isLoading  } = useProjects(),
 
+=======
+import React from "react";
+import { useProjects } from "@/hooks/useProjects";
+import { SEO } from "@/components/SEO";
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import Link from "next/link";
+import { Clock, Briefcase } from 'lucide-react';
+function ProjectsContent() {
+  const { projects, isLoading } = useProjects(),
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 
   return (
     <>
@@ -44,9 +57,14 @@ function ProjectsContent() { const { projects, isLoading  } = useProjects(),
         ) : projects.length === 0 ? (
           <p>You don't have any projects yet.</p>
         ) : (
+<<<<<<< HEAD
           <div className='grid gap-6'>
             {projects.map(project => (
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+          <div className="grid gap-6">
+            {projects.map((project,) => (
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
               <Card key={project.id}>
                 <CardHeader>
                   <CardTitle className='flex items-center gap-2'>

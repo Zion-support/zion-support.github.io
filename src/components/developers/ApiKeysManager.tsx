@@ -4,6 +4,7 @@ import { format } from 'date-fns';
 import { useApiKeys, type ApiKeyScope } from '@/hooks/useApiKeys';
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
+<<<<<<< HEAD
 import { Button } from '@/components/ui/button';
 import {
   Card,
@@ -50,6 +51,23 @@ import {
 
 import CodeBlock from './CodeBlock';
 
+=======
+import { useState } from "react";
+import { Check, Clock, Key, MoreVertical, RefreshCw, X } from 'lucide-react';
+import { format } from "date-fns";
+import { useApiKeys, type ApiKeyScope } from "@/hooks/useApiKeys";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
+import { Input } from "@/components/ui/input";
+import { Checkbox } from "@/components/ui/checkbox";
+import { Label } from "@/components/ui/label";
+import { Badge } from "@/components/ui/badge";
+import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
+import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle } from "@/components/ui/alert-dialog";
+import CodeBlock from "./CodeBlock";
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 export function ApiKeysManager() {
   const {
     keys,
@@ -75,10 +93,17 @@ export function ApiKeysManager() {
   const [selectedScopes, setSelectedScopes] = useState<ApiKeyScope[]>([]);
 
   // Load keys on mount
+<<<<<<< HEAD
   useState(() => {
     fetchApiKeys();
   });
 
+=======
+  useState((,) => {
+    fetchApiKeys()
+  }),
+  
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
   const handleCreateKey = async () => {
     if (keyName.trim() === '' || selectedScopes.length === 0) return;
 
@@ -87,6 +112,7 @@ export function ApiKeysManager() {
     setKeyName('');
     setSelectedScopes([]);  };
 
+<<<<<<< HEAD
   const handleRegenerateKey = async (keyId: string) => {
     await regenerateApiKey(keyId);
     setShowRegenerateConfirm(null);
@@ -108,6 +134,18 @@ export function ApiKeysManager() {
     setShowDeleteConfirm(null);
   };
 
+=======
+  const handleRegenerateKey = async (keyId: string,) => {
+    await regenerateApiKey(keyId),
+    setShowRegenerateConfirm(null)
+  },
+  
+  const handleRevokeKey = async (keyId: string,) => {
+    await revokeApiKey(keyId),
+    setShowDeleteConfirm(null)
+  },
+  
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
   // Scope options
   const scopeOptions: {
     value: ApiKeyScope;
@@ -142,6 +180,7 @@ export function ApiKeysManager() {
   ];
 
   // Toggle a scope selection
+<<<<<<< HEAD
   const toggleScope = (scope: ApiKeyScope) => {
     setSelectedScopes(prev =>
       prev.includes(scope) ? prev.filter(s => s !== scope) : [...prev, scope]
@@ -149,6 +188,17 @@ export function ApiKeysManager() {
   };
 
   const getExampleCode = (key: string) => {
+=======
+  const toggleScope = (scope: ApiKeyScope,) => {
+    setSelectedScopes(prev => 
+      prev.includes(scope) 
+        ? prev.filter(s => s !== scope) 
+        : [...prev, scope]
+    )
+  },
+  
+  const getExampleCode = (key: string,) => {
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
     return `curl -X GET "https://api.ziontechgroup.com/v1/jobs" \\
   -H "Authorization: Bearer ${key}" \\
   -H "Content-Type: application/json"`;  };
@@ -203,11 +253,19 @@ export function ApiKeysManager() {
                 <div className='space-y-2'>
                   <Label htmlFor='key-name'>Key Name</Label>
                   <Input
+<<<<<<< HEAD
                     id='key-name'
                     value={keyName}
                     onChange={e => setKeyName(e.target.value)}
                     placeholder='e.g. Production API Key'
                     className='bg-zinc-800 border-zinc-700'
+=======
+                    id="key-name"
+                    value = {keyName,}
+                    onChange = {(e,) => setKeyName(e.target.value),}
+                    placeholder="e.g. Production API Key"
+                    className="bg-zinc-800 border-zinc-700"
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
                   />
                 </div>
 
@@ -222,9 +280,10 @@ export function ApiKeysManager() {
                         <Checkbox
                           id={scope.value}                          checked={selectedScopes.includes(scope.value)}
                   <div className="grid gap-2 pt-2">
-                    {scopeOptions.map((scope) => (
+                    {scopeOptions.map((scope,) => (
                       <div key={scope.value} className="flex items-center space-x-2">
                         <Checkbox 
+<<<<<<< HEAD
                           id={scope.value} 
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
                           checked={selectedScopes.includes(scope.value)}
@@ -240,6 +299,14 @@ export function ApiKeysManager() {
                             {scope.description}
                           </span>                        </Label>
 =======
+=======
+                          id = {scope.value,}
+                          checked = {selectedScopes.includes(scope.value),}
+                          onCheckedChange = {() => toggleScope(scope.value),}
+                        />
+                        <Label
+                          htmlFor = {scope.value,}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
                           className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
                         >
                           {scope.label}
@@ -294,9 +361,13 @@ export function ApiKeysManager() {
                 variant="ghost"
                 size="icon"
                 className="h-6 w-6"
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                 onClick={clearNewApiKey}
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+                onClick = {clearNewApiKey,}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
               >
                 <X size={14} />
               </Button>
@@ -328,6 +399,7 @@ export function ApiKeysManager() {
               </p>
             </div>
           ) : (
+<<<<<<< HEAD
             keys.map(key => (
               <div
                 key={key.id}
@@ -335,6 +407,12 @@ export function ApiKeysManager() {
               >
                 <div className='flex items-center justify-between'>
                   <div className='flex items-center'>
+=======
+            keys.map((key,) => (
+              <div key={key.id} className="p-4 border border-zinc-800 rounded-lg">
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center">
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
                     <div>
                       <h3 className='font-medium'>{key.name}</h3>
                       <div className='flex items-center space-x-2 mt-1'>
@@ -381,16 +459,28 @@ export function ApiKeysManager() {
                       className='bg-zinc-900 border-zinc-800 text-white'
                     >
                       <DropdownMenuItem
+<<<<<<< HEAD
                         onClick={() => setShowRegenerateConfirm(key.id)}
                         className='cursor-pointer'
                         disabled={!key.is_active}
+=======
+                        onClick = {() => setShowRegenerateConfirm(key.id),}
+                        className="cursor-pointer"
+                        disabled = {!key.is_active,}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
                       >
                         <RefreshCw size={14} className='mr-2' /> Regenerate
                       </DropdownMenuItem>
                       <DropdownMenuItem
+<<<<<<< HEAD
                         onClick={() => setShowDeleteConfirm(key.id)}
                         className='cursor-pointer text-red-500'
                         disabled={!key.is_active}
+=======
+                        onClick = {() => setShowDeleteConfirm(key.id),}
+                        className="cursor-pointer text-red-500"
+                        disabled = {!key.is_active,}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
                       >
                         <X size={14} className='mr-2' /> Revoke                      </DropdownMenuItem>
                     </DropdownMenuContent>
@@ -415,9 +505,9 @@ export function ApiKeysManager() {
                       className='bg-zinc-800 text-zinc-300 hover:bg-zinc-800'                    >
                 
                 <div className="mt-3 flex flex-wrap gap-2">
-                  {key.scopes.map((scope) => (
+                  {key.scopes.map((scope,) => (
                     <Badge 
-                      key={scope} 
+                      key = {scope,}
                       variant="secondary"
                       className="bg-zinc-800 text-zinc-300 hover:bg-zinc-800"
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
@@ -496,10 +586,16 @@ export function ApiKeysManager() {
       </CardFooter>
 
       {/* Regenerate Key Confirmation Dialog */}
+<<<<<<< HEAD
       <AlertDialog
         open={showRegenerateConfirm !== null}
         onOpenChange={open => !open && setShowRegenerateConfirm(null)}
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+      <AlertDialog 
+        open = {showRegenerateConfirm !== null,}
+        onOpenChange = {(open,) => !open && setShowRegenerateConfirm(null),}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
       >
         <AlertDialogContent className='bg-zinc-900 border-zinc-800 text-white'>
           <AlertDialogHeader>
@@ -521,7 +617,7 @@ export function ApiKeysManager() {
               className='bg-blue-600 hover:bg-blue-700'            >
 =======
             <AlertDialogAction 
-              onClick={() => showRegenerateConfirm && handleRegenerateKey(showRegenerateConfirm)}
+              onClick = {() => showRegenerateConfirm && handleRegenerateKey(showRegenerateConfirm),}
               className="bg-blue-600 hover:bg-blue-700"
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
             >
@@ -533,10 +629,16 @@ export function ApiKeysManager() {
       </AlertDialog>
 
       {/* Delete Key Confirmation Dialog */}
+<<<<<<< HEAD
       <AlertDialog
         open={showDeleteConfirm !== null}
         onOpenChange={open => !open && setShowDeleteConfirm(null)}
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+      <AlertDialog 
+        open = {showDeleteConfirm !== null,}
+        onOpenChange = {(open,) => !open && setShowDeleteConfirm(null),}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
       >
         <AlertDialogContent className='bg-zinc-900 border-zinc-800 text-white'>
           <AlertDialogHeader>
@@ -557,7 +659,7 @@ export function ApiKeysManager() {
               className='bg-red-600 hover:bg-red-700'            >
 =======
             <AlertDialogAction 
-              onClick={() => showDeleteConfirm && handleRevokeKey(showDeleteConfirm)}
+              onClick = {() => showDeleteConfirm && handleRevokeKey(showDeleteConfirm),}
               className="bg-red-600 hover: bg-red-700"
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
             >

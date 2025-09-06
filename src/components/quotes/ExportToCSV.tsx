@@ -3,14 +3,24 @@ import { Download } from 'lucide-react';
 import type { QuoteRequest } from '@/types/quotes';
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
+<<<<<<< HEAD
+=======
+import { Button } from "@/components/ui/button";
+import { Download } from 'lucide-react';
+import type { QuoteRequest } from "@/types/quotes";
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 interface ExportToCSVProps {
   quotes: QuoteRequest[];
   filename?: string;
 
+<<<<<<< HEAD
 export const ExportToCSV = ({
   quotes,
   filename = 'quote-requests',
 }: ExportToCSVProps) => {
+=======
+export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSVProps,) => {
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
   const handleExport = () => {
     // Define CSV Headers
     const headers = [
@@ -76,6 +86,7 @@ export const ExportToCSV = ({
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     // Download file and clean up
+<<<<<<< HEAD
     link.click();
     setTimeout(() => {
       document.body.removeChild(link);
@@ -91,14 +102,26 @@ export const ExportToCSV = ({
 };
 '"
   };
+=======
+    link.click(),
+    setTimeout((,) => {
+      document.body.removeChild(link),
+      URL.revokeObjectURL(url)
+    }, 100)
+  },
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
   
   return (
     <Button 
       variant="outline" 
-      onClick={handleExport}
+      onClick = {handleExport,}
       className="flex items-center gap-2"
+<<<<<<< HEAD
       disabled={quotes.length === 0}
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      disabled = {quotes.length === 0,}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
     >
       <Download size={16} />
       Export CSV
@@ -109,6 +132,11 @@ export const ExportToCSV = ({
 '"
 =======
   )
+<<<<<<< HEAD
 };
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+},
+;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b

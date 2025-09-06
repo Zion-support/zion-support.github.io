@@ -15,11 +15,15 @@ export function QuickActions() {
 import React from "react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+<<<<<<< HEAD
 import { FileText, Plus, Search, Calendar } from 'lucide-react'
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
 import { Calendar } from 'lucide-react';
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 
+=======
+import { FileText, Plus, Search, Calendar } from 'lucide-react';
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 export function QuickActions() {
   const actions = [
     {
@@ -65,9 +69,15 @@ export function QuickActions() {
         <div className='grid grid-cols-1 sm:grid-cols-2 gap-4'>
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
           {actions.map(action => (
+<<<<<<< HEAD
             <Button
               key={action.id}
               variant='outline'
+=======
+            <Button 
+              key = {action.id,}
+              variant="outline" 
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
               className={`h-auto justify-start p-4 ${action.color}`}
             >
               <div className='flex flex-col items-start text-left'>

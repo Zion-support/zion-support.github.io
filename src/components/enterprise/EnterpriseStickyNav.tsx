@@ -1,8 +1,14 @@
+<<<<<<< HEAD
 import { useState } from 'react';
 import { Menu } from 'lucide-react';
 import Link from 'next/link';
 
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+import { useState } from "react";
+import { Menu } from 'lucide-react';
+import Link from "next/link";
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 export function EnterpriseStickyNav() {
 
   const [ open, setOpen ] = useState(false),
@@ -12,10 +18,17 @@ export function EnterpriseStickyNav() {
       <div className='container mx-auto px-4 md:px-6'>
         <div className='flex items-center justify-between h-12'>
           <button
+<<<<<<< HEAD
             className='md:hidden p-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary'
             onClick={() => setOpen(!open)}
             aria-label='Toggle navigation'
             aria-expanded={open}
+=======
+            className="md:hidden p-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+            onClick = {(,) => setOpen(!open),}
+            aria-label="Toggle navigation"
+            aria-expanded = {open,}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
           >
             <Menu className='h-6 w-6' />
           </button>
@@ -64,7 +77,11 @@ export function EnterpriseStickyNav() {
     </nav>
   );
 }
+<<<<<<< HEAD
 =======
 }
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b

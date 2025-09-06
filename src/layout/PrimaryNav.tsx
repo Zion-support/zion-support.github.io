@@ -20,6 +20,19 @@ import { Menu, X } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { CartDrawer } from '@/components/cart/CartDrawer';
 import { LoginModal } from '@/components/auth/LoginModal';
+<<<<<<< HEAD
+=======
+export function PrimaryNav() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false),
+  const [loginOpen, setLoginOpen] = useState(false),
+  const { user } = useAuth(),
+  const isLoggedIn = !!user,
+  const isMobile = useIsMobile(),
+  const { t } = useTranslation(),
+  const router = useRouter(),
+  const [query, setQuery] = useState(''),
+  const suggestions = generateSearchSuggestions(),
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 
 export function PrimaryNav() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -40,13 +53,20 @@ export function PrimaryNav() {
     // context not available
   }
 
+<<<<<<< HEAD
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     const trimmed = query.trim();
+=======
+  const handleSubmit = (e: React.FormEvent,) => {
+    e.preventDefault(),
+    const trimmed = query.trim(),
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
     if (trimmed) {
       logDebug('PrimaryNav search submit:', { query: trimmed });
       router
         .push(`/search?q=${encodeURIComponent(trimmed)}`)
+<<<<<<< HEAD
         .then(() => setQuery(''))
         .catch(err =>
           logErrorToProduction('Search navigation failed', err, {
@@ -54,6 +74,10 @@ export function PrimaryNav() {
             component: 'PrimaryNav',
           })
         );
+=======
+        .then((,) => setQuery(''))
+        .catch((err,) => logErrorToProduction('Search navigation failed', err, { query: trimmed, component: 'PrimaryNav' }))
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
     }
   };
 
@@ -69,10 +93,15 @@ export function PrimaryNav() {
           <Logo />
 
           {/* Navigation - hidden on mobile and tablets, shown on desktop */}
+<<<<<<< HEAD
           <div className='hidden lg:block order-1 flex-shrink-0'>
             <ResponsiveNavigation
               openLoginModal={returnToPath => setLoginOpen(true)}
             />
+=======
+          <div className="hidden lg:block order-1 flex-shrink-0">
+            <ResponsiveNavigation openLoginModal={(returnToPath,) => setLoginOpen(true)} />
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
           </div>
 
           {/* Actions container with responsive layout */}
@@ -84,12 +113,19 @@ export function PrimaryNav() {
               style={{ width: 'clamp(12rem, 20vw, 16rem)' }}
             >
               <EnhancedSearchInput
+<<<<<<< HEAD
                 value={query}
                 onChange={setQuery}
                 onSelectSuggestion={sugg => {
                   logDebug('PrimaryNav search suggestion selected:', {
                     suggestion: sugg,
                   });
+=======
+                value = {query,}
+                onChange = {setQuery,}
+                onSelectSuggestion={(sugg,) => {
+                  logDebug('PrimaryNav search suggestion selected:', { suggestion: sugg }),
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
                   // Handle different suggestion types with proper navigation
                   if (sugg.id) {
                     // Product listings with IDs go to product detail page
@@ -119,7 +155,7 @@ export function PrimaryNav() {
                     });
                   }
                 }}
-                searchSuggestions={suggestions}
+                searchSuggestions = {suggestions,}
               />
             </form>
 
@@ -140,12 +176,21 @@ export function PrimaryNav() {
               {!isLoggedIn && (
                 <>
                   <Link
+<<<<<<< HEAD
                     href='/auth/login'
                     className='text-sm hover:text-primary whitespace-nowrap'
                     data-testid='login-link'
                     onClick={e => {
                       e.preventDefault();
                       setLoginOpen(true);
+=======
+                    href="/auth/login"
+                    className="text-sm hover: text-primary whitespace-nowrap"
+                    data-testid="login-link"
+                    onClick={(e,) => {
+                      e.preventDefault(),
+                      setLoginOpen(true)
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
                     }}
                   >
                     {t('auth.login')}
@@ -168,12 +213,21 @@ export function PrimaryNav() {
             <LanguageSelector />
             {!isLoggedIn && (
               <Link
+<<<<<<< HEAD
                 href='/auth/login'
                 className='text-sm hover:text-primary'
                 data-testid='login-link'
                 onClick={e => {
                   e.preventDefault();
                   setLoginOpen(true);
+=======
+                href="/auth/login"
+                className="text-sm hover:text-primary"
+                data-testid="login-link"
+                onClick={(e,) => {
+                  e.preventDefault(),
+                  setLoginOpen(true)
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
                 }}
               >
                 {t('auth.login')}
@@ -184,10 +238,17 @@ export function PrimaryNav() {
 
           {/* Mobile menu button */}
           <button
+<<<<<<< HEAD
             className='lg:hidden p-2 rounded focus:outline-none flex-shrink-0'
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-expanded={mobileMenuOpen}
             aria-label={t('general.toggle_mobile_menu')}
+=======
+            className="lg:hidden p-2 rounded focus:outline-none flex-shrink-0"
+            onClick = {() => setMobileMenuOpen(!mobileMenuOpen),}
+            aria-expanded = {mobileMenuOpen,}
+            aria-label = {t('general.toggle_mobile_menu'),}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
           >
             {mobileMenuOpen ? (
               <X className='h-6 w-6' />
@@ -200,15 +261,27 @@ export function PrimaryNav() {
       {mobileMenuOpen && (
         <div className='lg:hidden fixed inset-0 z-60 pt-16'>
           <div
+<<<<<<< HEAD
             className='absolute inset-0 bg-black/50 backdrop-blur-sm'
             onClick={() => setMobileMenuOpen(false)}
             aria-hidden='true'
+=======
+            className="absolute inset-0 bg-black/50 backdrop-blur-sm"
+            onClick = {(,) => setMobileMenuOpen(false),}
+            aria-hidden="true"
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
           />
           <div className='relative bg-card border-t border-primary/20 max-h-[calc(100vh-4rem)] overflow-y-auto'>
             <MobileMenu
+<<<<<<< HEAD
               unreadCount={unreadCount}
               onClose={() => setMobileMenuOpen(false)}
               openLoginModal={returnToPath => setLoginOpen(true)}
+=======
+              unreadCount = {unreadCount,}
+              onClose = {() => setMobileMenuOpen(false),}
+              openLoginModal = {(returnToPath,) => setLoginOpen(true),}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
             />
           </div>
         </div>

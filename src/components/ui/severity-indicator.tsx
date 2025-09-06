@@ -1,4 +1,10 @@
 
+<<<<<<< HEAD
+=======
+import React from "react";
+import { cn } from "@/lib/utils";
+import { AlertTriangle, AlertCircle, CheckCircle } from 'lucide-react';
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 interface SeverityIndicatorProps {
   severity: "safe" | "suspicious" | "dangerous",
   showIcon?: boolean;

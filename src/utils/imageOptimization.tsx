@@ -1,3 +1,4 @@
+<<<<<<< HEAD
  const observer = new IntersectionObserver ( ([entry]) => {;
   if (entry && entry.isIntersecting) {;
   return () => observer.disconnect () ;
@@ -10,15 +11,41 @@
 }` ;
 };
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+import React, { useState, useRef, useEffect } from 'react';
+import Image from 'next/image';
+import { cn } from '@/lib/utils';
+interface OptimizedImageProps {
+  src: string,
+  alt: string,
+  width?: number,
+  height?: number,
+  className?: string,
+  priority?: boolean,
+  placeholder?: 'blur' | 'empty',
+  blurDataURL?: string,
+  quality?: number,
+  sizes?: string,
+  onLoad?: () => void,
+  onError?: () => void,
+  fallbackSrc?: string,
+  lazy?: boolean
+}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 
   const imgRef = useRef<HTMLDivElement>(null);
 
   // Intersection Observer for lazy loading
+<<<<<<< HEAD
   useEffect(() => {
     if (!lazy || priority || isInView) return;
+=======
+  useEffect((,) => {
+    if (!lazy || priority || isInView) return,
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 
     const observer = new IntersectionObserver(
-      ([entry]) => {
+      ([entry],) => {
         if (entry && entry.isIntersecting) {
           setIsInView(true);
           observer.disconnect();
@@ -37,7 +64,7 @@
   }, [lazy, priority, isInView]);
 
   // Generate WebP-compatible src
-  const getOptimizedSrc = (originalSrc: string) => {
+  const getOptimizedSrc = (originalSrc: string,) => {
     // If it's already optimized or external, return as-is
     if (
       originalSrc.startsWith('http') ||
@@ -79,6 +106,7 @@
     ).toString('base64')}`;
   };
 
+<<<<<<< HEAD
   
     >
       {isInView && !hasError && (
@@ -94,9 +122,28 @@
           onLoad={handleLoad}
           onError={handleError}
           className={cn(
+=======
+  return (
+    <div
+      ref = {imgRef,}
+      className = {cn('relative overflow-hidden', className),}
+      style={{ width, height }}
+    >
+      {isInView && !hasError && (
+        <Image
+          src = {getOptimizedSrc(src),}
+          alt = {alt,}
+          width = {width,}
+          height = {height,}
+          priority = {priority,}
+          blurDataURL = {placeholder === 'blur' ? generateBlurDataURL() : undefined,}
+          onLoad = {handleLoad,}
+          onError = {handleError,}
+          className = {cn(
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
             'transition-opacity duration-300',
             isLoading ? 'opacity-0' : 'opacity-100'
-          )}
+          ),}
           {...props}
         />
       )}
@@ -111,10 +158,17 @@
         <div className='absolute inset-0 bg-gray-100 dark:bg-gray-800 flex items-center justify-center'>
           {fallbackSrc ? (
             <img
+<<<<<<< HEAD
               src={fallbackSrc}
               alt={alt}
               className='max-w-full max-h-full object-contain'
               onLoad={handleLoad}
+=======
+              src = {fallbackSrc,}
+              alt = {alt,}
+              className="max-w-full max-h-full object-contain"
+              onLoad = {handleLoad,}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
             />
           ) : (
             <div className='text-gray-400 text-center'>
@@ -147,6 +201,7 @@ export function withImageOptimization<P extends { src: string; alt: string }>(
   Component: React.ComponentType<P>
 ) {
   return function OptimizedComponent(props: P) {
+<<<<<<< HEAD
     const { src, alt, ...otherProps } = props;
 
     return <OptimizedImage src={src} alt={alt} {...(otherProps as any)} />;
@@ -173,6 +228,36 @@ export function getImageDimensions(
     img.src = src;
   });
 =======
+=======
+    const { src, alt, ...otherProps } = props,
+    
+    return (
+      <OptimizedImage
+        src = {src,}
+        alt = {alt,}
+        {...(otherProps as any)}
+      />
+    )
+  }
+}
+
+// Utility to preload critical images
+export function preloadImage(src: string): Promise<void> {
+  return new Promise((resolve, reject,) => {
+    const img = new window.Image(),
+    img.onload = () => resolve(),
+    img.onerror = reject,
+    img.src = src
+  })
+}
+
+// Utility to get image dimensions
+export function getImageDimensions(src: string): Promise<{ width: number, height: number }> {
+  return new Promise((resolve, reject,) => {
+    const img = new window.Image(),
+    img.onload = () => resolve({ width: img.naturalWidth, height: img.naturalHeight }),
+    img.onerror = reject,
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
     img.src = src
   })
 } 

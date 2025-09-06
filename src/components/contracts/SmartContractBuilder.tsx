@@ -1,10 +1,26 @@
+<<<<<<< HEAD
 
+=======
+import { useState } from "react";
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
+import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
+import { Button } from "@/components/ui/button";
+import { Save } from 'lucide-react';
+import { TalentProfile } from "@/types/talent";
+import { ContractForm, ContractFormValues } from "./components/ContractForm";
+import { ContractPreview } from "./components/ContractPreview";
+import { TemplateManager } from "./templates/TemplateManager";
+import { DeploymentOptions, SmartContractInfo } from "@/types/smart-contracts";
+import { useSmartContracts } from "@/hooks/useSmartContracts";
+import { toast } from "sonner";
+import {logErrorToProduction} from '@/utils/productionLogger';
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 interface SmartContractBuilderProps {
   isOpen: boolean,
   onClose: () => void,
   talent: TalentProfile,
   clientName: string,
-  onContractGenerated?: (contractContent: string) => void
+  onContractGenerated?: (contractContent: string,) => void
 }
 
 export function SmartContractBuilder({
@@ -29,7 +45,7 @@ export function SmartContractBuilder({
   
   const { deploySmartContract } = useSmartContracts();
 
-  const handleLoadTemplate = (templateData: ContractFormValues) => {
+  const handleLoadTemplate = (templateData: ContractFormValues,) => {
     setFormValues(templateData)
   };
 
@@ -58,7 +74,7 @@ export function SmartContractBuilder({
   };
 
   // Modified to match the expected interface
-  const handleFormSubmit = (contract: string) => {
+  const handleFormSubmit = (contract: string,) => {
     // This should be a function that takes a string (contract content)
     // Since we need to adapt the interface, we'll implement the simplest solution that works
     if (onContractGenerated) {
@@ -85,7 +101,7 @@ export function SmartContractBuilder({
               <Button 
                 variant="outline" 
                 size="sm"
-                onClick={() => setTemplateManagerOpen(true)}
+                onClick = {(,) => setTemplateManagerOpen(true),}
                 className="flex gap-1"
               >
                 <Save className="h-4 w-4" />
@@ -96,11 +112,11 @@ export function SmartContractBuilder({
           
           <TabsContent value="form" className="pt-4">
             <ContractForm 
-              talent={talent}
-              clientName={clientName}
-              initialValues={formValues}
-              onFormValuesChange={setFormValues}
-              onContractGenerated={handleFormSubmit}
+              talent = {talent,}
+              clientName = {clientName,}
+              initialValues = {formValues,}
+              onFormValuesChange = {setFormValues,}
+              onContractGenerated = {handleFormSubmit,}
             />
           </TabsContent>
           
@@ -108,17 +124,17 @@ export function SmartContractBuilder({
             {generatedContract && (
               <div>
                 <ContractPreview 
-                  generatedContract={generatedContract}
-                  talent={talent}
-                  onClose={onClose}
-                  deploymentInfo={deploymentInfo}
+                  generatedContract = {generatedContract,}
+                  talent = {talent,}
+                  onClose = {onClose,}
+                  deploymentInfo = {deploymentInfo,}
                 />
                 
                 {!deploymentInfo && deployOptions.deployToChain && (
                   <div className="mt-6 flex justify-center">
                     <Button 
-                      onClick={handleDeployContract}
-                      disabled={deployStatus === 'deploying'}
+                      onClick = {handleDeployContract,}
+                      disabled = {deployStatus === 'deploying',}
                       className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700"
                     >
                       {deployStatus === 'deploying' ? 'Deploying...' : 'Deploy to Blockchain'}
@@ -131,10 +147,10 @@ export function SmartContractBuilder({
         </Tabs>
         
         <TemplateManager
-          isOpen={templateManagerOpen}
-          onClose={() => setTemplateManagerOpen(false)}
-          onSelectTemplate={handleLoadTemplate}
-          currentValues={formValues}
+          isOpen = {templateManagerOpen,}
+          onClose = {() => setTemplateManagerOpen(false),}
+          onSelectTemplate = {handleLoadTemplate,}
+          currentValues = {formValues,}
         />
       </DialogContent>
     </Dialog>

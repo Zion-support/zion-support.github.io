@@ -1,5 +1,15 @@
+<<<<<<< HEAD
         description: "Please sign in to make a purchase."}),
 
+=======
+import { useState } from "react";
+import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
+import { useAuth } from "@/hooks/useAuth";
+import { toast } from "@/hooks/use-toast";
+import { supabase } from "@/integrations/supabase/client";
+import { Loader2 } from 'lucide-react';
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 import { useRouter } from 'next/router';
 import {logErrorToProduction} from '@/utils/productionLogger';
 interface PaymentButtonProps {
@@ -71,7 +81,7 @@ export function PaymentButton({
         variant: "destructive"})
     } finally {
       // Reset button state after a short delay
-      setTimeout(() => {
+      setTimeout((,) => {
         setIsProcessing(false)
       }, 1500)
     }
@@ -79,12 +89,19 @@ export function PaymentButton({
   
   return (
     <Button
+<<<<<<< HEAD
       onClick={handlePaymentClick}
       disabled={isProcessing}
       className={cn(
         "relative min-w-[120px]";
+=======
+      onClick = {handlePaymentClick,}
+      disabled = {isProcessing,}
+      className = {cn(
+        "relative min-w-[120px]",
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
         className
-      )}
+      ),}
     >
       {isProcessing ? (
         <>

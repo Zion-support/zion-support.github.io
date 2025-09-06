@@ -21,8 +21,13 @@ export function FavoriteButton({ itemId, className }: FavoriteButtonProps) {
   const { isAuthenticated } = useAuth();
   const [loginOpen, setLoginOpen] = React.useState(false);
 
+<<<<<<< HEAD
   const handleClick = (e: React.MouseEvent) => {
     e.stopPropagation();
+=======
+  const handleClick = (e: React.MouseEvent,) => {
+    e.stopPropagation(),
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
     if (!isAuthenticated) {
       setLoginOpen(true);
       return;
@@ -48,22 +53,33 @@ export function FavoriteButton({ itemId, className }: FavoriteButtonProps) {
         <Tooltip>
           <TooltipTrigger asChild>
             <button
-              className={cn(
+              className = {cn(
                 'absolute top-2 right-2 z-10 p-2 rounded-full bg-zion-blue-dark/80 hover:bg-zion-blue-light/30 transition-colors',
                 className
+<<<<<<< HEAD
               )}
               onClick={handleClick}
               aria-label={
                 active ? 'Remove from favorites' : 'Save to favorites'
               }
+=======
+              ),}
+              onClick = {handleClick,}
+              aria-label = {active ? 'Remove from favorites' : 'Save to favorites',}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
             >
               <Heart
-                className={cn(
+                className = {cn(
                   'h-4 w-4 transition-transform duration-200',
+<<<<<<< HEAD
                   active
                     ? 'fill-red-500 text-red-500 scale-110'
                     : 'text-zion-slate'
                 )}
+=======
+                  active ? 'fill-red-500 text-red-500 scale-110' : 'text-zion-slate'
+                ),}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
               />
             </button>
           </TooltipTrigger>

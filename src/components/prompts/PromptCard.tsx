@@ -1,18 +1,30 @@
 import { useState } from 'react';
 import { Copy, Send } from 'lucide-react';
+<<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 import { Button } from '@/components/ui/button';
 import type { Prompt } from '@/types/prompts';
 
+=======
+import { Button } from '@/components/ui/button';
+import type { Prompt } from '@/types/prompts';
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 interface PromptCardProps {
   prompt: Prompt;
 
 export function PromptCard({ prompt }: PromptCardProps) {
   const [copied, setCopied] = useState(false);
   const handleCopy = () => {
+<<<<<<< HEAD
     navigator.clipboard.writeText(prompt.text);
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);  };
+=======
+    navigator.clipboard.writeText(prompt.text),
+    setCopied(true),
+    setTimeout((,) => setCopied(false), 2000)
+  },
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 
   const handleSend = () => {
     const encoded = encodeURIComponent(prompt.text);

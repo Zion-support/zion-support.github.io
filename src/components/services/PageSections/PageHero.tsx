@@ -1,7 +1,13 @@
+<<<<<<< HEAD
 import { GradientHeading } from '@/components/GradientHeading';
 import { Clock, Map, DollarSign } from 'lucide-react';
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
+=======
+
+import { GradientHeading } from "@/components/GradientHeading";
+import { Clock, Map, DollarSign } from 'lucide-react';
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 export function PageHero() {
   return (
     <div className='text-center mb-12'>

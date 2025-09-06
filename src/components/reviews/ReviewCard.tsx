@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState } from 'react';
 import { formatDistanceToNow } from 'date-fns';
 import { Star, Flag, User } from 'lucide-react';
@@ -6,11 +7,24 @@ import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import {  Dialog,
+=======
+
+import { useState } from "react";
+import { formatDistanceToNow } from "date-fns";
+import { Star, Flag, User } from 'lucide-react';
+import { Review } from "@/types/reviews";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import {
+  Dialog,
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
   DialogContent,
   DialogDescription,
   DialogFooter,
   DialogHeader,
   DialogTitle,
+<<<<<<< HEAD
   DialogTrigger,;
 } from '@/components/ui/dialog';
 import { Textarea } from '@/components/ui/textarea';
@@ -29,6 +43,14 @@ const success = await onReport (review.id, reportReason);
 setIsReporting (false);
 if (success) {;
   ;
+=======
+  DialogTrigger} from "@/components/ui/dialog",
+import { Textarea } from "@/components/ui/textarea";
+interface ReviewCardProps {
+  review: Review,
+  onReport: (reviewId: string, reason: string,) => Promise<boolean>
+}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 
 export function ReviewCard({ review, onReport }: ReviewCardProps) {
   const [reportReason, setReportReason] = useState('');
@@ -46,6 +68,7 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {
       setReportReason('');
       setIsReportDialogOpen(false);
     }
+<<<<<<< HEAD
   };
 
   const renderStars = (rating?: number) => {
@@ -68,6 +91,30 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {
       .split(' ')
       .map(n => n[0])
       .join('')
+=======
+  },
+  
+  const renderStars = (rating?: number,) => {
+    if (!rating) return null,
+    
+    return (
+      <div className="flex">
+        {[1, 2, 3, 4, 5].map((star,) => (
+          <Star
+            key = {star,}
+            className={`h-4 w-4 ${star <= rating ? "fill-yellow-400 text-yellow-400" : "text-gray-300"}`}
+          />
+        ))}
+      </div>
+    )
+  },
+  
+  const getInitials = (name: string,) => {
+    return name
+      .split(" ")
+      .map((n,) => n[0])
+      .join("")
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
       .toUpperCase()
       .substring(0, 2);
   };
@@ -172,9 +219,15 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {
             )}
 
             {review.would_work_again !== undefined && (
+<<<<<<< HEAD
               <Badge
                 variant={review.would_work_again ? 'default' : 'secondary'}
                 className={`${review.would_work_again ? 'bg-green-100 text-green-800 hover:bg-green-200' : 'bg-gray-100 text-gray-800 hover:bg-gray-200'}`}
+=======
+              <Badge 
+                variant = {review.would_work_again ? "default" : "secondary",}
+                className={`${review.would_work_again ? "bg-green-100 text-green-800 hover:bg-green-200" : "bg-gray-100 text-gray-800 hover:bg-gray-200"}`}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
               >
                 {review.would_work_again
                   ? 'Would work again'
@@ -217,10 +270,17 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {
             </DialogHeader>
 
             <Textarea
+<<<<<<< HEAD
               placeholder='Why are you reporting this review?'
               value={reportReason}
               onChange={e => setReportReason(e.target.value)}
               className='min-h-[100px]'
+=======
+              placeholder="Why are you reporting this review?"
+              value = {reportReason,}
+              onChange = {(e,) => setReportReason(e.target.value),}
+              className="min-h-[100px]"
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
             />
 
             <DialogFooter>
@@ -230,9 +290,15 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {
               >
                 Cancel
               </Button>
+<<<<<<< HEAD
               <Button
                 onClick={handleReport}
                 disabled={!reportReason.trim() || isReporting}
+=======
+              <Button 
+                onClick = {handleReport,}
+                disabled = {!reportReason.trim() || isReporting,}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
               >
                 {isReporting ? 'Submitting...' : 'Submit Report'}              </Button>
 =======

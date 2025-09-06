@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { ServiceLandingTemplate } from '@/components/services/ServiceLandingTemplate';
 import { Phone, ShieldCheck, Clock } from 'lucide-react';
@@ -10,6 +11,11 @@ import { ServiceLandingTemplate } from "@/components/services/ServiceLandingTemp
 import { Phone, ShieldCheck, Clock } from 'lucide-react'
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
+=======
+import React from "react";
+import { ServiceLandingTemplate } from "@/components/services/ServiceLandingTemplate";
+import { Phone, ShieldCheck, Clock } from 'lucide-react';
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 export default function ITSupportPage() {
   const benefits = [
     {
@@ -51,7 +57,20 @@ export default function ITSupportPage() {
     },
   ];
 
+<<<<<<< HEAD
   
+=======
+  return (
+    <ServiceLandingTemplate
+      title="IT Support Services"
+      subtitle="Reliable assistance to keep your business technology operating smoothly."
+      heroImage="https://placehold.co/600x300/192134/9b87f5?text=IT+Support"
+      description="From troubleshooting to onsite repairs, Zion provides comprehensive IT support designed for businesses of all sizes."
+      benefits = {benefits,}
+      testimonials = {testimonials,}
+      ctaText="Get IT Support"
+      ctaLink="/request-quote"
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
     />
   );
 =======

@@ -12,6 +12,7 @@ import {
 import { useWebhooks, type WebhookEventType } from '@/hooks/useWebhooks';
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
+<<<<<<< HEAD
 import { Button } from '@/components/ui/button';
 import {
   Card,
@@ -60,6 +61,24 @@ import {
   SelectValue,;
 } from '@/components/ui/select';
 
+=======
+import { useState, useEffect } from "react";
+import { format } from "date-fns";
+import { Globe, MoreVertical, PlayCircle, Plus, RefreshCw, Webhook, X } from 'lucide-react';
+import { useWebhooks, type WebhookEventType } from "@/hooks/useWebhooks";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
+import { Input } from "@/components/ui/input";
+import { Checkbox } from "@/components/ui/checkbox";
+import { Label } from "@/components/ui/label";
+import { Badge } from "@/components/ui/badge";
+import { Switch } from "@/components/ui/switch";
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
+import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle } from "@/components/ui/alert-dialog";
+import { ScrollArea } from "@/components/ui/scroll-area";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 export function WebhooksManager() {
   const {    webhooks,
     webhooks,
@@ -91,9 +110,15 @@ export function WebhooksManager() {
     useState<WebhookEventType>('new_application');
 
   // Load webhooks on mount
+<<<<<<< HEAD
   useEffect(() => {
     fetchWebhooks();
   }, []);
+=======
+  useEffect((,) => {
+    fetchWebhooks()
+  }, []),
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 
   const handleCreateWebhook = async () => {
     if (
@@ -103,6 +128,7 @@ export function WebhooksManager() {
     )
       return;
 
+<<<<<<< HEAD
     await createWebhook(
       webhookName,
       webhookUrl,
@@ -148,6 +174,21 @@ export function WebhooksManager() {
     setShowTestResult(true);
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   };
+=======
+  const handleToggleStatus = async (webhookId: string, currentStatus: boolean,) => {
+    await toggleWebhook(webhookId, !currentStatus)
+  },
+
+  const handleDeleteWebhook = async (webhookId: string,) => {
+    await deleteWebhook(webhookId),
+    setShowDeleteConfirm(null)
+  },
+
+  const handleTestWebhook = async (webhookId: string,) => {
+    await testWebhook(webhookId, testEventType),
+    setShowTestResult(true)
+  },
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 
   const resetWebhookForm = () => {
     setWebhookName('');
@@ -185,11 +226,21 @@ export function WebhooksManager() {
   ];
 
   // Toggle an event selection
+<<<<<<< HEAD
   const toggleEvent = (event: WebhookEventType) => {
     setSelectedEvents(prev =>
       prev.includes(event) ? prev.filter(e => e !== event) : [...prev, event]
     );
   };
+=======
+  const toggleEvent = (event: WebhookEventType,) => {
+    setSelectedEvents(prev => 
+      prev.includes(event) 
+        ? prev.filter(e => e !== event) 
+        : [...prev, event]
+    )
+  },
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 
   return (
     <Card className='bg-zinc-900 border-zinc-800 text-white'>
@@ -228,22 +279,38 @@ export function WebhooksManager() {
                 <div className='space-y-2'>
                   <Label htmlFor='webhook-name'>Webhook Name</Label>
                   <Input
+<<<<<<< HEAD
                     id='webhook-name'
                     value={webhookName}
                     onChange={e => setWebhookName(e.target.value)}
                     placeholder='e.g. Application Notifications'
                     className='bg-zinc-800 border-zinc-700'
+=======
+                    id="webhook-name"
+                    value = {webhookName,}
+                    onChange = {(e,) => setWebhookName(e.target.value),}
+                    placeholder="e.g. Application Notifications"
+                    className="bg-zinc-800 border-zinc-700"
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
                   />
                 </div>
 
                 <div className='space-y-2'>
                   <Label htmlFor='webhook-url'>Endpoint URL</Label>
                   <Input
+<<<<<<< HEAD
                     id='webhook-url'
                     value={webhookUrl}
                     onChange={e => setWebhookUrl(e.target.value)}
                     placeholder='https://example.com/webhook'
                     className='bg-zinc-800 border-zinc-700'
+=======
+                    id="webhook-url"
+                    value = {webhookUrl,}
+                    onChange = {(e,) => setWebhookUrl(e.target.value),}
+                    placeholder="https://example.com/webhook"
+                    className="bg-zinc-800 border-zinc-700"
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
                   />
                   <p className='text-xs text-zinc-500'>
                     The URL where webhook payloads will be sent when events
@@ -254,6 +321,7 @@ export function WebhooksManager() {
                 <div className='space-y-2'>
                   <Label htmlFor='webhook-secret'>Secret Key (Optional)</Label>
                   <Input
+<<<<<<< HEAD
                     id='webhook-secret'
                     type='password'
                     value={webhookSecret}
@@ -261,6 +329,15 @@ export function WebhooksManager() {
                     placeholder='Enter secret key'
                     aria-label='Secret key'
                     className='bg-zinc-800 border-zinc-700'
+=======
+                    id="webhook-secret"
+                    type="password"
+                    value = {webhookSecret,}
+                    onChange = {(e,) => setWebhookSecret(e.target.value),}
+                    placeholder="Enter secret key"
+                    aria-label="Secret key"
+                    className="bg-zinc-800 border-zinc-700"
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
                   />
                   <p className='text-xs text-zinc-500'>
                     Used to verify webhook payload signatures. Keep it secret
@@ -279,9 +356,10 @@ export function WebhooksManager() {
                         <Checkbox
                           id={event.value}                          checked={selectedEvents.includes(event.value)}
                   <div className="grid gap-2 pt-2">
-                    {eventOptions.map((event) => (
+                    {eventOptions.map((event,) => (
                       <div key={event.value} className="flex items-center space-x-2">
                         <Checkbox 
+<<<<<<< HEAD
                           id={event.value} 
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
                           checked={selectedEvents.includes(event.value)}
@@ -297,6 +375,14 @@ export function WebhooksManager() {
                             {event.description}
                           </span>                        </Label>
 =======
+=======
+                          id = {event.value,}
+                          checked = {selectedEvents.includes(event.value),}
+                          onCheckedChange = {() => toggleEvent(event.value),}
+                        />
+                        <Label
+                          htmlFor = {event.value,}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
                           className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
                         >
                           {event.label}
@@ -359,12 +445,18 @@ export function WebhooksManager() {
               </p>
             </div>
           ) : (
+<<<<<<< HEAD
             webhooks.map(webhook => (
               <div
                 key={webhook.id}
                 className='p-4 border border-zinc-800 rounded-lg'
               >
                 <div className='flex items-center justify-between'>
+=======
+            webhooks.map((webhook,) => (
+              <div key={webhook.id} className="p-4 border border-zinc-800 rounded-lg">
+                <div className="flex items-center justify-between">
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
                   <div>
                     <h3 className='font-medium'>{webhook.name}</h3>
                     <div className='flex items-center text-sm text-zinc-400 mt-1'>
@@ -376,11 +468,17 @@ export function WebhooksManager() {
                   <div className='flex items-center space-x-2'>
                     <div className='flex items-center mr-2'>
                       <Switch
+<<<<<<< HEAD
                         aria-label='Toggle webhook'
                         checked={webhook.is_active}
                         onCheckedChange={() =>
                           handleToggleStatus(webhook.id, webhook.is_active)
                         }
+=======
+                        aria-label="Toggle webhook"
+                        checked = {webhook.is_active,}
+                        onCheckedChange = {(,) => handleToggleStatus(webhook.id, webhook.is_active),}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
                       />
                       <span className='ml-2 text-sm'>
                         {webhook.is_active ? 'Active' : 'Inactive'}
@@ -402,14 +500,24 @@ export function WebhooksManager() {
                         className='bg-zinc-900 border-zinc-800 text-white'
                       >
                         <DropdownMenuItem
+<<<<<<< HEAD
                           onClick={() => setShowTestDialog(webhook.id)}
                           className='cursor-pointer'
+=======
+                          onClick = {() => setShowTestDialog(webhook.id),}
+                          className="cursor-pointer"
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
                         >
                           <PlayCircle size={14} className='mr-2' /> Test
                         </DropdownMenuItem>
                         <DropdownMenuItem
+<<<<<<< HEAD
                           onClick={() => setShowDeleteConfirm(webhook.id)}
                           className='cursor-pointer text-red-500'
+=======
+                          onClick = {() => setShowDeleteConfirm(webhook.id),}
+                          className="cursor-pointer text-red-500"
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
                         >
                           <X size={14} className='mr-2' /> Delete                        </DropdownMenuItem>
 =======
@@ -421,6 +529,7 @@ export function WebhooksManager() {
                     </DropdownMenu>
                   </div>
                 </div>
+<<<<<<< HEAD
 
                 <div className='mt-3 flex flex-wrap gap-2'>
                   {webhook.event_types.map((event: WebhookEventType) => (
@@ -428,8 +537,13 @@ export function WebhooksManager() {
                       key={event}
                       variant='secondary'
                       className='bg-zinc-800 text-zinc-300 hover:bg-zinc-800'                    >
+=======
+                
+                <div className="mt-3 flex flex-wrap gap-2">
+                  {webhook.event_types.map((event: WebhookEventType,) => (
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
                     <Badge 
-                      key={event} 
+                      key = {event,}
                       variant="secondary"
                       className="bg-zinc-800 text-zinc-300 hover:bg-zinc-800"
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
@@ -500,9 +614,14 @@ export function WebhooksManager() {
         onOpenChange={open => {
 =======
       <Dialog 
+<<<<<<< HEAD
         open={showTestDialog !== null} 
         onOpenChange={(open) => {
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+=======
+        open = {showTestDialog !== null,}
+        onOpenChange = {(open,) => {
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
           if (!open) {
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
             setShowTestDialog(null);
@@ -516,8 +635,12 @@ export function WebhooksManager() {
         <DialogContent className='bg-zinc-900 border-zinc-800 text-white'>
 =======
               clearTestResult()
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
             }
+=======
+            ,}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
           }
         }}
       >
@@ -537,10 +660,15 @@ export function WebhooksManager() {
                 <div className='space-y-2'>
                   <Label htmlFor='test-event-type'>Event Type</Label>
                   <Select
+<<<<<<< HEAD
                     value={testEventType}
                     onValueChange={value =>
                       setTestEventType(value as WebhookEventType)
                     }
+=======
+                    value = {testEventType,}
+                    onValueChange = {(value,) => setTestEventType(value as WebhookEventType),}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
                   >
                     <SelectTrigger className='bg-zinc-800 border-zinc-700'>
                       <SelectValue placeholder='Select an event type' />
@@ -549,8 +677,12 @@ export function WebhooksManager() {
                       {eventOptions.map(option => (                        <SelectItem key={option.value} value={option.value}>
 =======
                     <SelectContent className="bg-zinc-900 border-zinc-800">
+<<<<<<< HEAD
                       {eventOptions.map((option) => (
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+=======
+                      {eventOptions.map((option,) => (
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
                         <SelectItem key={option.value} value={option.value}>
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                           {option.label}
@@ -605,13 +737,17 @@ export function WebhooksManager() {
                   <div className="flex items-center justify-between">
                     <Label>Response Status</Label>
                     <Badge
-                      className={
+                      className = {
                         testResult && testResult.status >= 200 && testResult.status < 300
                           ? "bg-green-700"
                           : "bg-red-700"
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                       }
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+                      ,}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
                     >
                       {testResult?.status} {testResult?.statusText}
                     </Badge>
@@ -639,6 +775,7 @@ export function WebhooksManager() {
 
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
               <DialogFooter>
+<<<<<<< HEAD
                 <Button
                   variant='default'
                   onClick={() => {
@@ -647,6 +784,13 @@ export function WebhooksManager() {
                     clearTestResult();
                   }}
                 >
+=======
+                <Button variant="default" onClick={(,) => {
+                  setShowTestDialog(null),
+                  setShowTestResult(false),
+                  clearTestResult()
+                }}>
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
                   Close
                 </Button>
                 <Button
@@ -671,10 +815,16 @@ export function WebhooksManager() {
       </Dialog>
 
       {/* Delete Webhook Confirmation Dialog */}
+<<<<<<< HEAD
       <AlertDialog
         open={showDeleteConfirm !== null}
         onOpenChange={open => !open && setShowDeleteConfirm(null)}
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+      <AlertDialog 
+        open = {showDeleteConfirm !== null,}
+        onOpenChange = {(open,) => !open && setShowDeleteConfirm(null),}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
       >
         <AlertDialogContent className='bg-zinc-900 border-zinc-800 text-white'>
           <AlertDialogHeader>
@@ -695,7 +845,7 @@ export function WebhooksManager() {
               className='bg-red-600 hover:bg-red-700'            >
 =======
             <AlertDialogAction 
-              onClick={() => showDeleteConfirm && handleDeleteWebhook(showDeleteConfirm)}
+              onClick = {() => showDeleteConfirm && handleDeleteWebhook(showDeleteConfirm),}
               className="bg-red-600 hover: bg-red-700"
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
             >

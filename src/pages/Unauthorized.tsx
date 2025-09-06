@@ -5,6 +5,14 @@ import { ShieldAlert } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
+<<<<<<< HEAD
+=======
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import { Header } from "@/components/Header";
+import { ShieldAlert } from 'lucide-react';
+import { useTranslation } from "react-i18next";
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 export default function Unauthorized() {
   const { t } = useTranslation();
   return (

@@ -15,11 +15,27 @@ import { useProjects } from '@/hooks/useProjects';
 import { Project } from '@/types/projects';
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
+<<<<<<< HEAD
 export function ActiveProjectsCard() {
   const { projects, isLoading } = useProjects();
   const [activeProjects, setActiveProjects] = useState<Project[]>([]);
 
   useEffect(() => {
+=======
+import { useEffect, useState } from "react";
+import Link from "next/link";
+import { BriefcaseIcon, Clock } from 'lucide-react';
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { useProjects } from "@/hooks/useProjects";
+import { Project } from "@/types/projects";
+export function ActiveProjectsCard() {
+  const { projects, isLoading } = useProjects(),
+  const [activeProjects, setActiveProjects] = useState<Project[]>([]),
+  
+  useEffect((,) => {
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
     if (projects && !isLoading) {
       const active = projects
         .filter(p => ['offer_accepted', 'in_progress'].includes(p.status))
@@ -140,6 +156,7 @@ export function ActiveProjectsCard() {
       <CardContent className='space-y-4'>
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
         {activeProjects.map(project => (
+<<<<<<< HEAD
           <div key={project.id} className='border rounded-md p-3'>
             <div className='flex justify-between items-start mb-2'>
               <h3 className='font-medium text-sm'>{project.job?.title}</h3>
@@ -152,6 +169,14 @@ export function ActiveProjectsCard() {
                     ? 'bg-blue-100 text-blue-800 hover:bg-blue-100'
                     : ''
                 }
+=======
+          <div key={project.id} className="border rounded-md p-3">
+            <div className="flex justify-between items-start mb-2">
+              <h3 className="font-medium text-sm">{project.job?.title}</h3>
+              <Badge 
+                variant = {project.status === "in_progress" ? "default" : "outline",}
+                className = {project.status === "in_progress" ? "bg-blue-100 text-blue-800 hover:bg-blue-100" : "",}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
               >
                 {project.status === 'offer_accepted'
                   ? 'Starting'

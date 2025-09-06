@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+<<<<<<< HEAD
 import {
   Card,
   CardContent,
@@ -17,6 +18,12 @@ import {
   Search,;
 } from 'lucide-react';
 
+=======
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
+import { CheckCircle, AlertCircle, TrendingUp, Zap, Shield, Search } from 'lucide-react';
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 interface PerformanceMetrics {
   buildSize: string;
   pageCount: number;
@@ -96,7 +103,7 @@ const PerformanceDashboard: React.FC = () => {
     },
   ];
 
-  const getStatusIcon = (status: string) => {
+  const getStatusIcon = (status: string,) => {
     switch (status) {
       case 'completed':
         return <CheckCircle className='h-4 w-4 text-green-500' />;
@@ -109,7 +116,7 @@ const PerformanceDashboard: React.FC = () => {
     }
   };
 
-  const getImpactColor = (impact: string) => {
+  const getImpactColor = (impact: string,) => {
     switch (impact) {
       case 'high':
         return 'bg-red-100 text-red-800';
@@ -122,7 +129,7 @@ const PerformanceDashboard: React.FC = () => {
     }
   };
 
-  const getCategoryIcon = (category: string) => {
+  const getCategoryIcon = (category: string,) => {
     switch (category) {
       case 'performance':
         return <Zap className='h-4 w-4' />;
@@ -220,6 +227,7 @@ const PerformanceDashboard: React.FC = () => {
           </CardDescription>
         </CardHeader>
         <CardContent>
+<<<<<<< HEAD
           <div className='space-y-4'>
             {completedImprovements.map(improvement => (
               <div
@@ -227,6 +235,12 @@ const PerformanceDashboard: React.FC = () => {
                 className='flex items-start space-x-3 p-3 border rounded-lg'
               >
                 <div className='flex-shrink-0 mt-1'>
+=======
+          <div className="space-y-4">
+            {completedImprovements.map((improvement,) => (
+              <div key={improvement.id} className="flex items-start space-x-3 p-3 border rounded-lg">
+                <div className="flex-shrink-0 mt-1">
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
                   {getCategoryIcon(improvement.category)}
                 </div>
                 <div className='flex-1 min-w-0'>

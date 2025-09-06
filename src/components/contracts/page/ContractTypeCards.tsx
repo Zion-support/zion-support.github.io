@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Button } from '@/components/ui/button';
 import {
   Card,
@@ -10,6 +11,12 @@ import {
 import { FileText, ShieldCheck } from 'lucide-react';
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
+=======
+
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { FileText, ShieldCheck } from 'lucide-react';
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 interface ContractTypeCardsProps {
   onStandardClick: () => void;
   onSmartClick: () => void;
@@ -110,9 +117,13 @@ export function ContractTypeCards({
         <CardFooter>
           <Button 
             className="w-full bg-gradient-to-r from-blue-600 to-indigo-600" 
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
             onClick={onSmartClick}
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+            onClick = {onSmartClick,}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
           >
             Create Smart Contract
           </Button>
@@ -121,7 +132,11 @@ export function ContractTypeCards({
     </div>
   );
 }
+<<<<<<< HEAD
 =======
 }
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b

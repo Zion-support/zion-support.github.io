@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import Image from 'next/image';
 import { GradientHeading } from '@/components/GradientHeading';
@@ -9,6 +10,20 @@ import axios from 'axios';
 import { Loader2 } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { logErrorToProduction } from '@/utils/productionLogger';
+=======
+import React, { useState } from "react";
+import Image from "next/image";
+import { GradientHeading } from "@/components/GradientHeading";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { useToast } from "@/hooks/use-toast";
+import axios from "axios";
+import { Loader2 } from 'lucide-react';
+import { useTranslation } from "react-i18next";
+import {logErrorToProduction} from '@/utils/productionLogger';
+export function ITServiceRequestHero() {
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 export function ITServiceRequestHero() {
@@ -22,8 +37,13 @@ export function ITServiceRequestHero() {
   const { toast } = useToast();
   const { t } = useTranslation();
 
+<<<<<<< HEAD
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+=======
+  const handleSubmit = async (e: React.FormEvent,) => {
+    e.preventDefault(),
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 
     if (!name || !email || !location) {
       toast({
@@ -84,17 +104,31 @@ export function ITServiceRequestHero() {
         <div className='bg-zion-blue-light p-6 rounded-lg shadow-lg w-full max-w-md md:ml-auto'>
           <div className='flex flex-col md:flex-row items-center gap-4'>
             <Image
+<<<<<<< HEAD
               src='/logos/zion-logo.png'
               alt='Zion logo'
               width={200}
               height={200}
               className='w-full h-auto md:w-40'
+=======
+              src="/logos/zion-logo.png"
+              alt="Zion logo"
+              width = {200,}
+              height = {200,}
+              className="w-full h-auto md:w-40"
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
             />
             <form onSubmit={handleSubmit} className='space-y-4 flex-1'>
               <Input
+<<<<<<< HEAD
                 value={name}
                 onChange={e => setName(e.target.value)}
                 className='bg-zion-blue-dark border-zion-blue-light focus:border-zion-purple focus:ring-zion-purple text-white'
+=======
+                value = {name,}
+                onChange = {(e,) => setName(e.target.value),}
+                className="bg-zion-blue-dark border-zion-blue-light focus:border-zion-purple focus:ring-zion-purple text-white"
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
                 required
               />
               <p className='text-xs text-zion-slate-light'>
@@ -104,10 +138,17 @@ export function ITServiceRequestHero() {
                 )}
               </p>
               <Input
+<<<<<<< HEAD
                 type='email'
                 value={email}
                 onChange={e => setEmail(e.target.value)}
                 className='bg-zion-blue-dark border-zion-blue-light focus:border-zion-purple focus:ring-zion-purple text-white'
+=======
+                type="email"
+                value = {email,}
+                onChange = {(e,) => setEmail(e.target.value),}
+                className="bg-zion-blue-dark border-zion-blue-light focus:border-zion-purple focus:ring-zion-purple text-white"
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
                 required
               />
               <p className='text-xs text-zion-slate-light'>
@@ -117,9 +158,15 @@ export function ITServiceRequestHero() {
                 )}
               </p>
               <Input
+<<<<<<< HEAD
                 value={phone}
                 onChange={e => setPhone(e.target.value)}
                 className='bg-zion-blue-dark border-zion-blue-light focus:border-zion-purple focus:ring-zion-purple text-white'
+=======
+                value = {phone,}
+                onChange = {(e,) => setPhone(e.target.value),}
+                className="bg-zion-blue-dark border-zion-blue-light focus:border-zion-purple focus:ring-zion-purple text-white"
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
               />
               <p className='text-xs text-zion-slate-light'>
                 {t(
@@ -128,17 +175,29 @@ export function ITServiceRequestHero() {
                 )}
               </p>
               <Input
+<<<<<<< HEAD
                 value={company}
                 onChange={e => setCompany(e.target.value)}
                 className='bg-zion-blue-dark border-zion-blue-light focus:border-zion-purple focus:ring-zion-purple text-white'
+=======
+                value = {company,}
+                onChange = {(e,) => setCompany(e.target.value),}
+                className="bg-zion-blue-dark border-zion-blue-light focus:border-zion-purple focus:ring-zion-purple text-white"
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
               />
               <p className='text-xs text-zion-slate-light'>
                 {t('onsite_form.company_helper', 'Who do you represent?')}
               </p>
               <Input
+<<<<<<< HEAD
                 value={location}
                 onChange={e => setLocation(e.target.value)}
                 className='bg-zion-blue-dark border-zion-blue-light focus:border-zion-purple focus:ring-zion-purple text-white'
+=======
+                value = {location,}
+                onChange = {(e,) => setLocation(e.target.value),}
+                className="bg-zion-blue-dark border-zion-blue-light focus:border-zion-purple focus:ring-zion-purple text-white"
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
                 required
               />
               <p className='text-xs text-zion-slate-light'>
@@ -148,9 +207,15 @@ export function ITServiceRequestHero() {
                 )}
               </p>
               <Textarea
+<<<<<<< HEAD
                 value={details}
                 onChange={e => setDetails(e.target.value)}
                 className='bg-zion-blue-dark border-zion-blue-light focus:border-zion-purple focus:ring-zion-purple text-white min-h-[80px]'
+=======
+                value = {details,}
+                onChange = {(e,) => setDetails(e.target.value),}
+                className="bg-zion-blue-dark border-zion-blue-light focus:border-zion-purple focus:ring-zion-purple text-white min-h-[80px]"
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
               />
               <p className='text-xs text-zion-slate-light'>
                 {t(
@@ -159,9 +224,15 @@ export function ITServiceRequestHero() {
                 )}
               </p>
               <Button
+<<<<<<< HEAD
                 type='submit'
                 disabled={isSubmitting}
                 className='w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-lg py-3 px-6 transition-transform hover:scale-105'
+=======
+                type="submit"
+                disabled = {isSubmitting,}
+                className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-lg py-3 px-6 transition-transform hover:scale-105"
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
               >
                 {isSubmitting && (
                   <Loader2 className='mr-2 h-4 w-4 animate-spin' />

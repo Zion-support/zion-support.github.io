@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+<<<<<<< HEAD
 import {
   AlertTriangle,
   ExternalLink,
@@ -14,6 +15,11 @@ import { Button } from '@/components/ui/button';
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 import { Alert, AlertDescription } from '@/components/ui/alert';
 
+=======
+import { AlertTriangle, ExternalLink, RefreshCw, Settings, CheckCircle } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { Alert, AlertDescription } from '@/components/ui/alert';
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 interface AuthConfigurationErrorProps {
   onRetry?: () => void;
   showSetupButton?: boolean;
@@ -102,21 +108,35 @@ export function AuthConfigurationError({
           <div className='flex flex-col sm:flex-row gap-3 mb-6'>
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
             {showSetupButton && (
+<<<<<<< HEAD
               <Button
                 onClick={() =>
                   window.open('/AUTH0_SETUP_GUIDE_ISSUE_1.md', '_blank')
                 }
                 className='bg-blue-600 hover:bg-blue-700 text-white flex-1'
+=======
+              <Button 
+                onClick = {(,) => window.open('/AUTH0_SETUP_GUIDE_ISSUE_1.md_blank'),}
+                className="bg-blue-600 hover:bg-blue-700 text-white flex-1"
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
               >
                 <Settings className='w-4 h-4 mr-2' />
                 Setup Guide
               </Button>
             )}
+<<<<<<< HEAD
 
             <Button
               onClick={handleRefresh}
               variant='outline'
               className='flex-1'
+=======
+            
+            <Button 
+              onClick = {handleRefresh,}
+              variant="outline" 
+              className="flex-1"
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
             >
               <RefreshCw className='w-4 h-4 mr-2' />              Check Again
 =======
@@ -316,7 +336,7 @@ export function AuthConfigurationError({
           <p>
             For detailed instructions, see{' '}
             <button 
-              onClick={() => window.open('/AUTH0_SETUP_GUIDE_ISSUE_1.md_blank')}
+              onClick = {() => window.open('/AUTH0_SETUP_GUIDE_ISSUE_1.md_blank'),}
               className="text-blue-600 hover: underline"
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
             >

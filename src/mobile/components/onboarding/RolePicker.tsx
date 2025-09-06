@@ -4,18 +4,37 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Briefcase, Users, Check } from 'lucide-react';
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
+<<<<<<< HEAD
 type UserRole = 'talent' | 'client' | null;
 
 interface RolePickerProps {
   onSelect: (role: UserRole) => void;
+=======
+import React, { useState } from "react";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { Briefcase, Users, Check } from 'lucide-react';
+type UserRole = "talent" | "client" | null,
+
+interface RolePickerProps {
+  onSelect: (role: UserRole,) => void
+}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 
 export function RolePicker({ onSelect }: RolePickerProps) {
   const [selectedRole, setSelectedRole] = useState<UserRole>(null);
 
+<<<<<<< HEAD
   const handleSelect = (role: UserRole) => {
     setSelectedRole(role);
     onSelect(role);
   };
+=======
+  const handleSelect = (role: UserRole,) => {
+    setSelectedRole(role),
+    onSelect(role)
+  },
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 
   return (
     <div className='space-y-4 px-4'>
@@ -31,7 +50,7 @@ export function RolePicker({ onSelect }: RolePickerProps) {
               ? 'border-primary bg-primary/5'
               : 'border-border hover:border-primary/40'
           }`}
-          onClick={() => handleSelect('talent')}
+          onClick = {(,) => handleSelect('talent'),}
         >
           <CardContent className='p-5'>
             <div className='flex items-center'>
@@ -57,7 +76,7 @@ export function RolePicker({ onSelect }: RolePickerProps) {
               ? 'border-primary bg-primary/5'
               : 'border-border hover:border-primary/40'
           }`}
-          onClick={() => handleSelect('client')}
+          onClick = {() => handleSelect('client'),}
         >
           <CardContent className='p-5'>
             <div className='flex items-center'>

@@ -4,6 +4,13 @@ import { Checkbox } from '@/components/ui/checkbox';
 import { SkillsFilterProps } from '@/types/filters';
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
+<<<<<<< HEAD
+=======
+import { ChevronDown, ChevronUp } from 'lucide-react';
+import { Button } from "@/components/ui/button";
+import { Checkbox } from "@/components/ui/checkbox";
+import { SkillsFilterProps } from "@/types/filters";
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 // Common skills in AI and tech
 const POPULAR_SKILLS = [
   'Machine Learning',
@@ -34,8 +41,13 @@ export function SkillsFilter({
   return (
     <div className='mb-6 border-b border-zion-blue-light pb-6'>
       <button
+<<<<<<< HEAD
         onClick={toggleSection}
         className='flex w-full items-center justify-between text-white font-medium'
+=======
+        onClick = {toggleSection,}
+        className="flex w-full items-center justify-between text-white font-medium"
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
       >
         <span>Skills</span>
         {expanded ? (
@@ -57,11 +69,17 @@ export function SkillsFilter({
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
               <Checkbox
                 id={`skill-${skill}`}
+<<<<<<< HEAD
                 checked={selectedSkills.includes(skill)}
                 onCheckedChange={() => toggleSkill(skill)}
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                 className='border-zion-slate-light data-[state=checked]:bg-zion-purple data-[state=checked]:border-zion-purple'
+=======
+                checked = {selectedSkills.includes(skill),}
+                onCheckedChange = {() => toggleSkill(skill),}
+                className="border-zion-slate-light data-[state=checked]:bg-zion-purple data-[state=checked]:border-zion-purple"
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
               />
               <label
                 htmlFor={`skill-${skill}`}

@@ -1,7 +1,11 @@
     updateJobMatchStatus, 
 
 import { useAuth } from "@/hooks/useAuth";
+<<<<<<< HEAD
 import { Loader2 } from 'lucide-react'
+=======
+import { Loader2 } from 'lucide-react';
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 import { Badge } from "@/components/ui/badge";
 import { useJobSuggestions } from "@/hooks/useJobSuggestions";
 import { JobMatchesCard } from "./JobMatchesCard";
@@ -23,14 +27,25 @@ export function SuggestedJobs({ talentId }: SuggestedJobsProps) {
     } 
   } = useJobSuggestions(currentTalentId);
 
+<<<<<<< HEAD
   const handleApply = (matchId: string, jobId: string) => {
     updateJobMatchStatus(matchId, 'applied');
+=======
+  const handleApply = (matchId: string, jobId: string,) => {
+    updateJobMatchStatus(matchId, 'applied'),
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
     // In a real app, this might redirect to application form or open a modal
   };
 
+<<<<<<< HEAD
   const handleDecline = (matchId: string) => {
     updateJobMatchStatus(matchId, 'declined');
   };
+=======
+  const handleDecline = (matchId: string,) => {
+    updateJobMatchStatus(matchId, 'declined')
+  },
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 
   if (isLoading) {
     return (
@@ -59,10 +74,10 @@ export function SuggestedJobs({ talentId }: SuggestedJobsProps) {
           <div className="grid gap-4 md:grid-cols-2">
             {newMatches.map(match => (
               <JobMatchesCard 
-                key={match.id} 
-                match={match} 
-                onApply={handleApply} 
-                onDecline={handleDecline} 
+                key = {match.id,}
+                match = {match,}
+                onApply = {handleApply,}
+                onDecline = {handleDecline,}
               />
             ))}
           </div>
@@ -79,10 +94,10 @@ export function SuggestedJobs({ talentId }: SuggestedJobsProps) {
           <div className="grid gap-4 md:grid-cols-2">
             {viewedMatches.map(match => (
               <JobMatchesCard 
-                key={match.id} 
-                match={match} 
-                onApply={handleApply} 
-                onDecline={handleDecline} 
+                key = {match.id,}
+                match = {match,}
+                onApply = {handleApply,}
+                onDecline = {handleDecline,}
               />
             ))}
           </div>
@@ -99,11 +114,11 @@ export function SuggestedJobs({ talentId }: SuggestedJobsProps) {
           <div className="grid gap-4 md:grid-cols-2">
             {appliedMatches.map(match => (
               <JobMatchesCard 
-                key={match.id} 
-                match={match} 
-                onApply={handleApply} 
-                onDecline={handleDecline}
-                showApplied={true}
+                key = {match.id,}
+                match = {match,}
+                onApply = {handleApply,}
+                onDecline = {handleDecline,}
+                showApplied = {true,}
               />
             ))}
           </div>

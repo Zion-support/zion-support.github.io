@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState } from 'react';
 import { MatchResultItem } from '@/lib/ai-matchmaking';
 import { Card, CardContent } from '@/components/ui/card';
@@ -15,6 +16,24 @@ interface AIMatchingResultsProps {
   isLoading?: boolean;
   projectDescription?: string;
   serviceType?: string;
+=======
+import { useState } from "react";
+import { MatchResultItem } from "@/lib/ai-matchmaking";
+import { Card, CardContent } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { BarChart3, BriefcaseIcon, Monitor, User } from 'lucide-react';
+import Skeleton from "@/components/ui/skeleton";
+import { cn } from "@/lib/utils";
+interface AIMatchingResultsProps {
+  matches: MatchResultItem[],
+  onSelectMatch?: (match: MatchResultItem,) => void,
+  isLoading?: boolean,
+  projectDescription?: string,
+  serviceType?: string
+}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 
 export function AIMatchingResults({
   matches,
@@ -40,6 +59,7 @@ export function AIMatchingResults({
   };
 
   // Get the icon for a category
+<<<<<<< HEAD
   const getCategoryIcon = (category: string) => {
     const lowerCategory = category.toLowerCase();
     if (lowerCategory.includes('talent')) return User;
@@ -47,6 +67,15 @@ export function AIMatchingResults({
     return BriefcaseIcon;
   };
 
+=======
+  const getCategoryIcon = (category: string,) => {
+    const lowerCategory = category.toLowerCase(),
+    if (lowerCategory.includes("talent")) return User,
+    if (lowerCategory.includes("equipment")) return Monitor,
+    return BriefcaseIcon
+  },
+  
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
   if (isLoading) {
     return (
       <div className='space-y-4'>
@@ -115,6 +144,7 @@ export function AIMatchingResults({
             Equipment ({categories.equipment.length})
           </TabsTrigger>
         </TabsList>
+<<<<<<< HEAD
 
         {Object.entries(categories).map(([tab, items]) => (
           <TabsContent key={tab} value={tab} className='mt-4 space-y-3'>
@@ -123,6 +153,19 @@ export function AIMatchingResults({
                 const CategoryIcon = getCategoryIcon(match.category);
                 
                     onClick={() => onSelectMatch && onSelectMatch(match)}
+=======
+        
+        {Object.entries(categories).map(([tab, items],) => (
+          <TabsContent key={tab} value={tab} className="mt-4 space-y-3">
+            {items.length > 0 ? (
+              items.map((match,) => {
+                const CategoryIcon = getCategoryIcon(match.category),
+                return (
+                  <Card 
+                    key = {match.id,}
+                    className="bg-zion-blue-dark border-zion-blue-light overflow-hidden transition-all hover:border-zion-purple/50 cursor-pointer"
+                    onClick = {(,) => onSelectMatch && onSelectMatch(match),}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
                   >
                     <div className='flex'>
                       <div
@@ -175,6 +218,7 @@ export function AIMatchingResults({
                                 </div>
                               )}
                             </div>
+<<<<<<< HEAD
 
                             <div className='mt-2 flex flex-wrap gap-1'>
                               <Badge variant='outline'>{match.category}</Badge>
@@ -186,6 +230,18 @@ export function AIMatchingResults({
                                       {skill}
                                     </Badge>
                                   ))}
+=======
+                            
+                            <div className="mt-2 flex flex-wrap gap-1">
+                              <Badge variant="outline">
+                                {match.category}
+                              </Badge>
+                              {match.skills && match.skills.slice(0, 3).map((skill: string, i: number,) => (
+                                <Badge key={i} variant="outline">
+                                  {skill}
+                                </Badge>
+                              ))}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
                             </div>
                           </div>
                         </div>

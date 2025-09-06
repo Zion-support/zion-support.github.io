@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { SEO } from '@/components/SEO';
 import { GradientHeading } from '@/components/GradientHeading';
 import { Button } from '@/components/ui/button';
@@ -7,6 +8,15 @@ import Link from 'next/link';
 import { CAREER_JOBS } from '@/data/careersJobs';
 
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+import { SEO } from "@/components/SEO";
+import { GradientHeading } from "@/components/GradientHeading";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import Link from "next/link";
+import { CAREER_JOBS } from "@/data/careersJobs";
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 export default function Careers() {
   const applyEmail = 'careers@ziontechgroup.com';
   const jobs = CAREER_JOBS;
@@ -157,6 +167,7 @@ export default function Careers() {
               />
             </div>
           </div>
+<<<<<<< HEAD
 
           <div className='mb-24'>
             <h2 className='text-3xl font-bold text-white mb-12 text-center'>
@@ -169,6 +180,15 @@ export default function Careers() {
                   className='bg-zion-blue-dark p-8 rounded-lg border border-zion-blue-light'
                 >
                   <div className='bg-zion-blue inline-flex p-4 rounded-full mb-4'>
+=======
+          
+          <div className="mb-24">
+            <h2 className="text-3xl font-bold text-white mb-12 text-center">Our Benefits</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {benefits.map((benefit, index,) => (
+                <div key={index} className="bg-zion-blue-dark p-8 rounded-lg border border-zion-blue-light">
+                  <div className="bg-zion-blue inline-flex p-4 rounded-full mb-4">
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
                     {benefit.icon}
                   </div>
                   <h3 className='text-xl font-bold text-white mb-3'>
@@ -212,6 +232,7 @@ export default function Careers() {
                   Operations
                 </TabsTrigger>
               </TabsList>
+<<<<<<< HEAD
 
               {Object.entries(jobs).map(([department, jobList]) => (
                 <TabsContent
@@ -226,6 +247,15 @@ export default function Careers() {
                     >
                       <CardContent className='p-6'>
                         <div className='flex flex-col md:flex-row md:items-center md:justify-between'>
+=======
+              
+              {Object.entries(jobs).map(([department, jobList],) => (
+                <TabsContent key={department} value={department} className="space-y-6">
+                  {jobList.map((job, index,) => (
+                    <Card key={index} className="bg-zion-blue-dark border border-zion-blue-light hover:border-zion-purple transition-colors">
+                      <CardContent className="p-6">
+                        <div className="flex flex-col md:flex-row md:items-center md:justify-between">
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
                           <div>
                             <h3 className='text-xl font-bold text-white mb-2'>
                               {job.title}

@@ -4,6 +4,13 @@ import { Download, Settings } from 'lucide-react';
 import { useCompanyWorkspace } from '@/hooks/useCompanyWorkspace';
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
+<<<<<<< HEAD
+=======
+import React from "react";
+import { Button } from "@/components/ui/button";
+import { Download, Settings } from 'lucide-react';
+import { useCompanyWorkspace } from "@/hooks/useCompanyWorkspace";
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 export function AdminHeader() {
   // const { user } = useAuth(); // Unused but available
   const { company } = useCompanyWorkspace();
@@ -67,10 +74,17 @@ export function AdminHeader() {
         <div className='flex items-center gap-4'>
           <div className='h-12 w-12 rounded-lg bg-card flex items-center justify-center'>
             <img
+<<<<<<< HEAD
               src={company?.logoUrl || '/placeholder.svg'}
               alt={company?.name || 'Company'}
               className='max-h-10 max-w-10'
               loading='lazy'
+=======
+              src = {company?.logoUrl || "/placeholder.svg",}
+              alt = {company?.name || "Company",}
+              className="max-h-10 max-w-10"
+              loading="lazy"
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
             />
           </div>
           <div>

@@ -1,6 +1,17 @@
 
+<<<<<<< HEAD
 
 
+=======
+import { useState } from "react";
+import { GradientHeading } from "@/components/GradientHeading";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { toast } from "@/components/ui/use-toast";
+import z from "zod";
+import { Mail } from 'lucide-react';
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 export function ContactSection() {
   const [formData, setFormData] = useState({
     name: "",
@@ -18,6 +29,7 @@ export function ContactSection() {
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+<<<<<<< HEAD
   ) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
@@ -26,6 +38,16 @@ export function ContactSection() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+=======
+  ,) => {
+    const { name, value } = e.target,
+    setFormData((prev,) => ({ ...prev, [name]: value })),
+    setErrors((prev,) => ({ ...prev, [name]: undefined }))
+  },
+
+  const handleSubmit = (e: React.FormEvent,) => {
+    e.preventDefault(),
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 
     const schema = z.object({
       name: z.string().min(2, "Name is required");
@@ -56,21 +78,37 @@ export function ContactSection() {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(formData)})
+<<<<<<< HEAD
       .then(async (res) => {
         setIsSubmitting(false);
         if (!res.ok) {
           const data = await res.json().catch(() => ({}));
+=======
+      .then(async (res,) => {
+        setIsSubmitting(false),
+        if (!res.ok) {
+          const data = await res.json().catch((,) => ({})),
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
           throw new Error(data.error || "Failed to send message")
         }
         toast({
           title: "Message Sent",
           description: "We've received your message and will get back to you soon."}),
+<<<<<<< HEAD
         setSubmitted(true);
         setTimeout(() => setSubmitted(false), 2000);
         setFormData({ name: "", email: "", subject: "", message: "" })
       })
       .catch((err) => {
         setIsSubmitting(false);
+=======
+        setSubmitted(true),
+        setTimeout((,) => setSubmitted(false), 2000),
+        setFormData({ name: "", email: "", subject: "", message: "" })
+      })
+      .catch((err,) => {
+        setIsSubmitting(false),
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
         toast({
           title: "Submission Error",
           description: err.message,
@@ -117,8 +155,8 @@ export function ContactSection() {
                     <Input
                       id="name"
                       name="name"
-                      value={formData.name}
-                      onChange={handleChange}
+                      value = {formData.name,}
+                      onChange = {handleChange,}
                       className={`w-full rounded-md bg-zion-blue-dark border-zion-blue-light text-white ${errors.name ? 'border-red-500 focus-visible:ring-red-500' : ''}`}
                       required
                     />
@@ -136,8 +174,8 @@ export function ContactSection() {
                       id="email"
                       name="email"
                       type="email"
-                      value={formData.email}
-                      onChange={handleChange}
+                      value = {formData.email,}
+                      onChange = {handleChange,}
                       className={`w-full rounded-md bg-zion-blue-dark border-zion-blue-light text-white ${errors.email ? 'border-red-500 focus-visible:ring-red-500' : ''}`}
                       required
                     />
@@ -155,8 +193,8 @@ export function ContactSection() {
                   <Input
                     id="subject"
                     name="subject"
-                    value={formData.subject}
-                    onChange={handleChange}
+                    value = {formData.subject,}
+                    onChange = {handleChange,}
                     className={`w-full rounded-md bg-zion-blue-dark border-zion-blue-light text-white ${errors.subject ? 'border-red-500 focus-visible:ring-red-500' : ''}`}
                     required
                   />
@@ -173,9 +211,9 @@ export function ContactSection() {
                   <Textarea
                     id="message"
                     name="message"
-                    rows={4}
-                    value={formData.message}
-                    onChange={handleChange}
+                    rows = {4,}
+                    value = {formData.message,}
+                    onChange = {handleChange,}
                     className={`w-full rounded-md bg-zion-blue-dark border-zion-blue-light text-white ${errors.message ? 'border-red-500 focus-visible:ring-red-500' : ''}`}
                     required
                   />
@@ -187,7 +225,7 @@ export function ContactSection() {
                   <Button
                     type="submit"
                     className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white"
-                    disabled={isSubmitting}
+                    disabled = {isSubmitting,}
                   >
                     {isSubmitting ? 'Sending...' : 'Send Message'}
                   </Button>

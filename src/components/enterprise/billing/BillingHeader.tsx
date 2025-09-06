@@ -4,6 +4,13 @@ import { Download, Mail, BarChart3 } from 'lucide-react';
 import Link from 'next/link';
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
+<<<<<<< HEAD
+=======
+import React from "react";
+import { Button } from "@/components/ui/button";
+import { Download, Mail, BarChart3 } from 'lucide-react';
+import Link from "next/link";
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 export function BillingHeader() {
   return (
     <div className='space-y-2'>

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import {
   LucideIcon,
   BadgeCheck,
@@ -9,6 +10,10 @@ import {
 } from 'lucide-react';
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
+=======
+
+import { LucideIcon, BadgeCheck, Award, Star, Trophy, BadgePlus, BadgeDollarSign } from 'lucide-react';
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 export type BadgeKey =
   | 'first_listing'
   | 'top_contributor'
@@ -76,10 +81,15 @@ export const badgeList: BadgeMeta[] = [
   },
 ];
 
+<<<<<<< HEAD
 export const getBadgeMeta = (key: BadgeKey) =>
   badgeList.find(b => b.key === key);
 =======
   badgeList.find((b) => b.key === key);
+=======
+export const getBadgeMeta = (key: BadgeKey,) =>
+  badgeList.find((b,) => b.key === key),
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

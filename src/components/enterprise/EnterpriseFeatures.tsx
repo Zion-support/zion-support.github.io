@@ -1,7 +1,13 @@
+<<<<<<< HEAD
 import React from 'react';
 import { Users, Shield, Briefcase, Award, Settings, Globe } from 'lucide-react';
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
+=======
+
+import React from "react";
+import { Users, Shield, Briefcase, Award, Settings, Globe } from 'lucide-react';
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 const features = [
   {
     title: 'Private Hiring Portal',
@@ -55,11 +61,19 @@ export function EnterpriseFeatures() {
           </p>
         </div>
 
+<<<<<<< HEAD
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
           {features.map(feature => (
             <div
               key={feature.title}
               className='bg-card rounded-lg p-6 shadow-sm border border-border transition-all hover:shadow-md'
+=======
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {features.map((feature,) => (
+            <div
+              key = {feature.title,}
+              className="bg-card rounded-lg p-6 shadow-sm border border-border transition-all hover:shadow-md"
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
             >
               <div className='h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center mb-5'>
                 <feature.icon className='h-6 w-6 text-primary' />

@@ -1,8 +1,16 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 import { useRouter } from 'next/router';
 import { useDisputes } from '@/hooks/useDisputes';
 import { logErrorToProduction } from '@/utils/productionLogger';
+=======
+
+import React, { useState, useEffect } from "react";
+import { useRouter } from 'next/router';
+import { useDisputes } from "@/hooks/useDisputes";
+import {logErrorToProduction} from '@/utils/productionLogger';
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 import {
   Dispute,
   disputeReasonLabels,
@@ -31,6 +39,21 @@ import { ArrowDown, Check, MessageSquare, Download } from 'lucide-react';
 import { useAuth } from '@/hooks/useAuth';
 import { toast } from 'sonner';
 
+<<<<<<< HEAD
+=======
+import { Button } from "@/components/ui/button";
+import { Textarea } from "@/components/ui/textarea";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Separator } from "@/components/ui/separator";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { format, formatDistanceToNow } from "date-fns";
+import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
+import { ArrowDown, Check, MessageSquare, Download } from 'lucide-react';
+import { useAuth } from "@/hooks/useAuth";
+import { toast } from "sonner";
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 export function DisputeDetail() {
   const router = useRouter();
   const { disputeId } = router.query as { disputeId?: string };
@@ -60,10 +83,17 @@ export function DisputeDetail() {
   const [activeTab, setActiveTab] = useState('overview');
 
   // Check if user is admin (placeholder - implement proper admin check)
+<<<<<<< HEAD
   const isAdmin = user?.userType === 'admin';
 
   useEffect(() => {
     if (!disputeId) return;
+=======
+  const isAdmin = user?.userType === "admin",
+  
+  useEffect((,) => {
+    if (!disputeId) return,
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 
     const loadDisputeData = async () => {
       setIsLoading(true);
@@ -89,8 +119,13 @@ export function DisputeDetail() {
     loadDisputeData();
   }, [disputeId, getDisputeById, getDisputeMessages, router]);
 
+<<<<<<< HEAD
   const handleStatusChange = async (status: DisputeStatus) => {
     if (!disputeId) return;
+=======
+  const handleStatusChange = async (status: DisputeStatus,) => {
+    if (!disputeId) return,
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 
     const success = await updateDisputeStatus(disputeId, status);
     if (success) {
@@ -158,17 +193,21 @@ export function DisputeDetail() {
     return (
       <div className='p-8 text-center'>
         <p>Dispute not found</p>
+<<<<<<< HEAD
         <Button
           onClick={() => router.push('/dashboard/disputes')}
           className='mt-4'
         >
+=======
+        <Button onClick={(,) => router.push("/dashboard/disputes")} className="mt-4">
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
           Back to Disputes
         </Button>
       </div>
     );
   }
 
-  const getStatusBadgeVariant = (status: DisputeStatus) => {
+  const getStatusBadgeVariant = (status: DisputeStatus,) => {
     switch (status) {
       case 'open':
         return 'default';
@@ -208,8 +247,13 @@ export function DisputeDetail() {
           >
             Back to List
           </Button>
+<<<<<<< HEAD
           {isAdmin && dispute?.status === 'open' && (
             <Button onClick={() => handleStatusChange('under_review')}>
+=======
+          {isAdmin && dispute?.status === "open" && (
+            <Button onClick={(,) => handleStatusChange("under_review")}>
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
               Start Review
             </Button>
           )}
@@ -367,9 +411,18 @@ export function DisputeDetail() {
                     ) : (
                       messages
                         .filter(msg => !msg.is_admin_note)
+<<<<<<< HEAD
                         .map(msg => {
                           const isCurrentUser = user?.id === msg.user_id;
                           
+=======
+                        .map((msg,) => {
+                          const isCurrentUser = user?.id === msg.user_id,
+                          return (
+                            <div
+                              key = {msg.id,}
+                              className={`flex ${isCurrentUser ? 'justify-end' : 'justify-start'}`}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
                             >
                               <div
                                 className={`max-w-[80%] ${
@@ -416,11 +469,19 @@ export function DisputeDetail() {
                 <CardFooter>
                   <div className='w-full space-y-4'>
                     <Textarea
+<<<<<<< HEAD
                       placeholder='Type your message here...'
                       value={message}
                       onChange={e => setMessage(e.target.value)}
                       className='min-h-[100px]'
                       disabled={isSending}
+=======
+                      placeholder="Type your message here..."
+                      value = {message,}
+                      onChange = {(e,) => setMessage(e.target.value),}
+                      className="min-h-[100px]"
+                      disabled = {isSending,}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
                     />
                     <div className='flex justify-end'>
                       <Button
@@ -465,6 +526,7 @@ export function DisputeDetail() {
                   </CardHeader>
                   <CardContent className='space-y-6'>
                     <div>
+<<<<<<< HEAD
                       <h3 className='font-medium mb-2'>Change Status</h3>
                       <div className='flex gap-2'>
                         <Button
@@ -485,6 +547,28 @@ export function DisputeDetail() {
                           variant='outline'
                           onClick={() => handleStatusChange('closed')}
                           disabled={dispute.status === 'closed'}
+=======
+                      <h3 className="font-medium mb-2">Change Status</h3>
+                      <div className="flex gap-2">
+                        <Button 
+                          variant="outline" 
+                          onClick = {(,) => handleStatusChange("open"),}
+                          disabled = {dispute.status === "open",}
+                        >
+                          Mark as Open
+                        </Button>
+                        <Button 
+                          variant="outline" 
+                          onClick = {() => handleStatusChange("under_review"),}
+                          disabled = {dispute.status === "under_review",}
+                        >
+                          Mark as Under Review
+                        </Button>
+                        <Button 
+                          variant="outline" 
+                          onClick = {() => handleStatusChange("closed"),}
+                          disabled = {dispute.status === "closed",}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
                         >
                           Close Dispute
                         </Button>
@@ -496,6 +580,7 @@ export function DisputeDetail() {
                         <h3 className='font-medium mb-2'>Resolve Dispute</h3>
                         <div className='space-y-4'>
                           <Textarea
+<<<<<<< HEAD
                             placeholder='Enter resolution summary...'
                             value={resolution.summary}
                             onChange={e =>
@@ -505,6 +590,12 @@ export function DisputeDetail() {
                               })
                             }
                             className='min-h-[100px]'
+=======
+                            placeholder="Enter resolution summary..."
+                            value = {resolution.summary,}
+                            onChange={(e,) => setResolution({ ...resolution, summary: e.target.value })}
+                            className="min-h-[100px]"
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
                           />
 
                           <div className='grid grid-cols-2 gap-4'>
@@ -513,6 +604,7 @@ export function DisputeDetail() {
                                 Resolution Type
                               </label>
                               <select
+<<<<<<< HEAD
                                 className='w-full p-2 border rounded'
                                 value={resolution.resolution_type || ''}
                                 onChange={e =>
@@ -522,6 +614,11 @@ export function DisputeDetail() {
                                       .value as ResolutionType,
                                   })
                                 }
+=======
+                                className="w-full p-2 border rounded"
+                                value = {resolution.resolution_type || "",}
+                                onChange={(e,) => setResolution({ ...resolution, resolution_type: e.target.value as ResolutionType })}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
                               >
                                 <option value='client_favor'>
                                   In Client's Favor
@@ -547,6 +644,7 @@ export function DisputeDetail() {
                       <div className='space-y-4 max-h-[300px] overflow-y-auto p-2'>
                         {messages
                           .filter(msg => msg.is_admin_note)
+<<<<<<< HEAD
                           .map(msg => (
                             <div
                               key={msg.id}
@@ -576,6 +674,20 @@ export function DisputeDetail() {
                                     new Date(msg.created_at),
                                     'MMM d, h:mm a'
                                   )}
+=======
+                          .map((msg,) => (
+                          <div key={msg.id} className="bg-yellow-50 border-l-4 border-yellow-200 p-4 dark:bg-yellow-900/20 dark:border-yellow-900">
+                            <div className="flex items-center justify-between mb-2">
+                              <div className="flex items-center gap-2">
+                                <Avatar className="h-6 w-6">
+                                  <AvatarImage src={msg.user_profile?.avatar_url} alt={msg.user_profile?.display_name || "Admin avatar"} />
+                                  <AvatarFallback>
+                                    {msg.user_profile?.display_name?.[0] || 'A'}
+                                  </AvatarFallback>
+                                </Avatar>
+                                <span className="text-sm font-medium">
+                                  {msg.user_profile?.display_name || 'Admin'}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
                                 </span>
                               </div>
                               <p className='whitespace-pre-wrap text-sm'>
@@ -595,14 +707,21 @@ export function DisputeDetail() {
 
                       <div className='space-y-4'>
                         <Textarea
+<<<<<<< HEAD
                           placeholder='Add an admin note (only visible to administrators)...'
                           value={adminNote}
                           onChange={e => setAdminNote(e.target.value)}
+=======
+                          placeholder="Add an admin note (only visible to administrators)..."
+                          value = {adminNote,}
+                          onChange = {(e,) => setAdminNote(e.target.value),}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
                         />
                         <Button
                           variant='outline'
                           onClick={() => {
                             if (adminNote.trim()) {
+<<<<<<< HEAD
                               addDisputeMessage(
                                 disputeId!,
                                 adminNote,
@@ -613,6 +732,12 @@ export function DisputeDetail() {
                                 );
                                 setAdminNote('');
                               });
+=======
+                              addDisputeMessage(disputeId!, adminNote, true).then((,) => {
+                                getDisputeMessages(disputeId!).then(setMessages),
+                                setAdminNote("")
+                              })
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
                             }
                           }}
                         >

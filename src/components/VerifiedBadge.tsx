@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 import React from 'react';
 import { CheckCircle } from 'lucide-react';
@@ -8,6 +9,12 @@ import {
   TooltipTrigger,;
 } from '@/components/ui/tooltip';
 
+=======
+
+import React from 'react';
+import { CheckCircle } from 'lucide-react';
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 interface VerifiedBadgeProps {
   verified: boolean;
   size?: 'sm' | 'md' | 'lg';

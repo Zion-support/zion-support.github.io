@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Image, { type ImageProps } from 'next/image';
 import { cn } from '@/lib/utils';
+<<<<<<< HEAD
 
 interface ImageWithRetryProps extends Omit<ImageProps, 'src' | 'alt'> {
   src: string;  alt?: string;
@@ -9,6 +10,8 @@ interface ImageWithRetryProps extends Omit<ImageProps, 'src' | 'alt'> {
   /** CSS class for the retry button */
   retryClassName?: string;
 =======
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 interface ImageWithRetryProps extends Omit<ImageProps, 'src' | 'alt'> {
   src: string,
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
@@ -71,11 +74,11 @@ export function ImageWithRetry({
       <Image
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
         {...props}
-        src={currentSrc}
-        alt={alt}
-        onError={handleError}
-        className={cn(className)}
-        fill={fill}
+        src = {currentSrc,}
+        alt = {alt,}
+        onError = {handleError,}
+        className = {cn(className),}
+        fill = {fill,}
       />
       {failed && (
         <button
@@ -87,9 +90,14 @@ export function ImageWithRetry({
           )}        >
 =======
           type="button"
+<<<<<<< HEAD
           onClick={handleRetry}
           className={cn('absolute bottom-1 right-1 text-xs underline', retryClassName)}
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+=======
+          onClick = {handleRetry,}
+          className = {cn('absolute bottom-1 right-1 text-xs underline', retryClassName),}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
         >
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
           Retry

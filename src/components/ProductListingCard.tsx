@@ -1,17 +1,27 @@
 import React, { useState } from 'react';
 import { logDebug, logErrorToProduction } from '@/utils/productionLogger';
 import { useRouter } from 'next/router';
+<<<<<<< HEAD
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { ProductListing } from '@/types/listings';
 import { DollarSign } from 'lucide-react';
 import { RatingStars } from '@/components/RatingStars';
 import { FavoriteButton } from '@/components/FavoriteButton';
+=======
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { ProductListing } from "@/types/listings";
+import { DollarSign } from 'lucide-react';
+import { RatingStars } from "@/components/RatingStars";
+import { FavoriteButton } from "@/components/FavoriteButton";
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 import { useDispatch } from 'react-redux';
 import type { AppDispatch } from '@/store';
 import { addItem } from '@/store/cartSlice';
 import { toast } from '@/hooks/use-toast';
 import { useCurrency } from '@/hooks/useCurrency';
+<<<<<<< HEAD
 import Image from 'next/image'; // Import next/image
 
 interface ProductListingCardProps {
@@ -19,16 +29,34 @@ interface ProductListingCardProps {
   view?: 'grid' | 'list';
   onRequestQuote?: (id: string) => void;
   detailBasePath?: string;
+=======
+import Image from 'next/image', // Import next/image
+
+interface ProductListingCardProps {
+  listing: ProductListing,
+  view?: 'grid' | 'list',
+  onRequestQuote?: (id: string,) => void,
+  detailBasePath?: string
+}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 
 const ProductListingCardComponent = ({
   listing,
   view = 'grid',
   onRequestQuote,
+<<<<<<< HEAD
   detailBasePath = '/marketplace/listing',
 }: ProductListingCardProps) => {
   const isGrid = view === 'grid';
   const router = useRouter();
   const [loading, setLoading] = useState(false);
+=======
+  detailBasePath = '/marketplace/listing'
+}: ProductListingCardProps,) => {
+  const isGrid = view === 'grid',
+  const router = useRouter(),
+  const [loading, setLoading] = useState(false),
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
   const [imageSrc, setImageSrc] = useState(
     listing.images && listing.images.length > 0 && listing.images[0]
       ? listing.images[0]
@@ -111,6 +139,7 @@ const ProductListingCardComponent = ({
     toast.success(`1× ${listing.title} added`, {
       action: {
         label: 'View Cart',
+<<<<<<< HEAD
         onClick: () => router.push('/cart'),
       },
     });
@@ -136,30 +165,69 @@ const ProductListingCardComponent = ({
           e.preventDefault();
           handleViewListing();
         }
+=======
+        onClick: (,) => router.push('/cart')}}),
+    setLoading(false)
+  },
+  
+  const handleRequestQuote = (e: React.MouseEvent,) => {
+    e.preventDefault(),
+    e.stopPropagation(),
+    
+    if (onRequestQuote) {
+      onRequestQuote(listing.id)
+    } else {
+      router.push(`/request-quote?listing=${listing.id}`)
+    }
+  },
+  
+  const imageContainerClasses = isGrid ? 'h-48' : 'h-32 w-48',
+
+  return (
+    <div
+      data-testid="equipment-link"
+      className={`bg-card/70 backdrop-blur-md border border-primary/10 sm:border-primary/20 rounded-lg overflow-hidden flex ${isGrid ? 'flex-col' : 'flex-row'} cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary hover:animate-glowing-border transition-all duration-300`}
+      onClick = {handleViewListing,}
+      tabIndex = {0,}
+      role="button"
+      onKeyDown = {(e,) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault(),
+          handleViewListing()
+        ,}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
       }}
     >
       {/* Image */}
       <div
-        className={isGrid ? 'block w-full' : 'block w-48 flex-shrink-0'}
+        className = {isGrid ? 'block w-full' : 'block w-48 flex-shrink-0',}
         onClick={handleViewListing} // Keep existing onClick for navigation
         role='button'
         tabIndex={-1} // Remove from tab order as parent is focusable
+<<<<<<< HEAD
         onKeyDown={e => {
           if (e.key === 'Enter' || e.key === ' ') {
             e.preventDefault();
             handleViewListing();
           }
+=======
+        onKeyDown = {(e,) => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault(),
+            handleViewListing()
+          ,}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
         }}
       >
         <div className={`relative ${imageContainerClasses}`}>
           {' '}
           {/* Ensure this container has dimensions */}
           <Image
-            src={imageSrc}
-            alt={listing.title}
-            fill={true}
+            src = {imageSrc,}
+            alt = {listing.title,}
+            fill = {true,}
             style={{ objectFit: 'cover' }}
-            onError={handleImageError}
+            onError = {handleImageError,}
             priority={false} // Assuming these are not LCP images
             sizes={
               isGrid
@@ -174,8 +242,13 @@ const ProductListingCardComponent = ({
           )}
           {stockStatus && (
             <Badge
+<<<<<<< HEAD
               variant={stockVariant as any}
               className='absolute top-2 left-2'
+=======
+              variant = {stockVariant as any,}
+              className="absolute top-2 left-2"
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
             >
               {stockStatus}
             </Badge>
@@ -219,11 +292,19 @@ const ProductListingCardComponent = ({
 
           {/* Tags */}
           {listing.tags && listing.tags.length > 0 && (
+<<<<<<< HEAD
             <div className='flex flex-wrap gap-1 mb-4'>
               {listing.tags.map((tag, idx) => (
                 <span
                   key={idx}
                   className='text-xs text-foreground/70 bg-background/50 px-2 py-1 rounded-full'
+=======
+            <div className="flex flex-wrap gap-1 mb-4">
+              {listing.tags.map((tag, idx,) => (
+                <span 
+                  key = {idx,}
+                  className="text-xs text-foreground/70 bg-background/50 px-2 py-1 rounded-full"
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
                 >
                   {tag}
                 </span>
@@ -247,13 +328,21 @@ const ProductListingCardComponent = ({
 
           <div className='flex gap-2'>
             <Button
+<<<<<<< HEAD
               size='sm'
               className='bg-primary hover:bg-primary/80 text-primary-foreground'
               onClick={e => {
                 e.stopPropagation(); // Prevent card click event
                 addToCart();
+=======
+              size="sm"
+              className="bg-primary hover: bg-primary/80 text-primary-foreground"
+              onClick={(e,) => {
+                e.stopPropagation(), // Prevent card click event
+                addToCart()
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
               }}
-              disabled={loading}
+              disabled = {loading,}
             >
               {loading ? (
                 <>
@@ -285,11 +374,19 @@ const ProductListingCardComponent = ({
             </Button>
 
             <Button
+<<<<<<< HEAD
               size='sm'
               variant='default'
               className='bg-green-600 hover:bg-green-700 text-white'
               onClick={e => {
                 e.stopPropagation(); // Prevent card click event
+=======
+              size="sm"
+              variant="default"
+              className="bg-green-600 hover: bg-green-700 text-white"
+              onClick={(e,) => {
+                e.stopPropagation(), // Prevent card click event
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
                 // Add to cart first, then redirect to checkout
                 dispatch(
                   addItem({
@@ -300,17 +397,25 @@ const ProductListingCardComponent = ({
                 );
                 router.push('/checkout');
               }}
-              disabled={loading}
+              disabled = {loading,}
             >
               Buy Now
             </Button>
 
             {onRequestQuote && (
+<<<<<<< HEAD
               <Button
                 size='sm'
                 variant='outline'
                 onClick={handleRequestQuote}
                 className='border-primary text-primary hover:bg-primary/10 hover:text-primary-foreground'
+=======
+              <Button 
+                size="sm"
+                variant="outline" 
+                onClick = {handleRequestQuote,}
+                className="border-primary text-primary hover:bg-primary/10 hover:text-primary-foreground"
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
               >
                 Request Quote
               </Button>

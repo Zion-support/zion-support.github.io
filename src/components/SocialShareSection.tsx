@@ -4,6 +4,13 @@ import { toast } from './ui/use-toast';
 import { useTranslation } from 'react-i18next';
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
+<<<<<<< HEAD
+=======
+import { Button } from "./ui/button";
+import { Twitter, Facebook, Linkedin, Link } from 'lucide-react';
+import { toast } from "./ui/use-toast";
+import { useTranslation } from 'react-i18next';
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 export function SocialShareSection() {
   const { t } = useTranslation();
 
@@ -39,15 +46,20 @@ export function SocialShareSection() {
   };
 
   const copyLinkToClipboard = () => {
+<<<<<<< HEAD
     navigator.clipboard
       .writeText(window.location.href)
       .then(() => {
+=======
+    navigator.clipboard.writeText(window.location.href)
+      .then((,) => {
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
         toast({
           title: 'Link Copied!',
           description: 'The link has been copied to your clipboard',
         });
       })
-      .catch(() => {
+      .catch((,) => {
         toast({
           title: t('errors.failed_to_copy'),
           description: 'Please try again or copy the URL manually',
@@ -95,15 +107,27 @@ export function SocialShareSection() {
               Help others discover the future of AI & tech marketplace
             </p>
           </div>
+<<<<<<< HEAD
           <div className='flex flex-wrap gap-3'>
             {shareLinks.map((link, index) => (
+=======
+          <div className="flex flex-wrap gap-3">
+            {shareLinks.map((link, index,) => (
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
               <Button
-                key={index}
+                key = {index,}
                 className={`${link.color} text-white`}
+<<<<<<< HEAD
                 size='sm'
                 onClick={link.onClick}
                 aria-label={link.name}
                 title={link.name}
+=======
+                size="sm"
+                onClick = {link.onClick,}
+                aria-label = {link.name,}
+                title = {link.name,}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
               >
                 {link.icon}
                 <span className='sr-only'>{link.name}</span>
@@ -128,5 +152,9 @@ export function SocialShareSection() {
 }'"
 =======
 }
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b

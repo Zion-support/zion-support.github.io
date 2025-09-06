@@ -3,6 +3,12 @@ import { Briefcase, Star, User } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
+<<<<<<< HEAD
+=======
+import { useState } from "react";
+import { Briefcase, Star, User } from 'lucide-react';
+import { Button } from "@/components/ui/button";
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 interface UserTypeOption {
   id: 'serviceProvider' | 'talent' | 'client';
   name: string;
@@ -10,8 +16,14 @@ interface UserTypeOption {
   icon: React.ElementType;
 
 interface UserTypeSelectionProps {
+<<<<<<< HEAD
   onSelect: (userType: 'serviceProvider' | 'talent' | 'client') => void;
   selectedType: string | null;
+=======
+  onSelect: (userType: "serviceProvider" | "talent" | "client",) => void,
+  selectedType: string | null
+}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 
 export function UserTypeSelection({
   onSelect,
@@ -46,6 +58,7 @@ export function UserTypeSelection({
           This helps us personalize your experience
         </p>
       </div>
+<<<<<<< HEAD
 
       <div className='grid gap-4 md:grid-cols-3'>
         {userTypes.map(type => {
@@ -55,6 +68,19 @@ export function UserTypeSelection({
           
               onClick={() => onSelect(type.id)}
               variant='outline'
+=======
+      
+      <div className="grid gap-4 md: grid-cols-3">
+        {userTypes.map((type,) => {
+          const Icon = type.icon,
+          const isSelected = selectedType === type.id,
+          
+          return (
+            <Button
+              key = {type.id,}
+              onClick = {(,) => onSelect(type.id),}
+              variant="outline"
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
               className={`h-auto flex flex-col items-center justify-center p-6 space-y-3 border ${
                 isSelected
                   ? 'border-zion-purple bg-zion-purple/10 text-zion-purple'

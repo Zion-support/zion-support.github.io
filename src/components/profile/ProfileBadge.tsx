@@ -3,7 +3,14 @@ import { BadgeCheck, Star, Clock, Award } from 'lucide-react';
 import { cn } from '@/lib/utils';
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
+<<<<<<< HEAD
 type BadgeType = 'verified' | 'featured' | 'new' | 'top-rated';
+=======
+import React from "react";
+import { BadgeCheck, Star, Clock, Award } from 'lucide-react';
+import { cn } from "@/lib/utils";
+type BadgeType = 'verified' | 'featured' | 'new' | 'top-rated',
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 
 interface ProfileBadgeProps {
   type: BadgeType;

@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 
 
+=======
+import { useRouter } from 'next/router', // Changed from useParams
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
@@ -14,20 +18,31 @@ export default function ProductPage() {
   const { id: rawId } = router.query,
   const id = typeof rawId === 'string' ? rawId : undefined;
   const [product, setProduct] = useState(
+<<<<<<< HEAD
     NEW_PRODUCTS.find((p) => p.id === id) || null
   );
   const { items, dispatch } = useCart();
   const [adding, setAdding] = useState(false);
+=======
+    NEW_PRODUCTS.find((p,) => p.id === id) || null
+  ),
+  const { items, dispatch } = useCart(),
+  const [adding, setAdding] = useState(false),
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 
-  useEffect(() => {
+  useEffect((,) => {
     // Update product if id changes and is available from router.query
     if (id) {
+<<<<<<< HEAD
       const foundProduct = NEW_PRODUCTS.find((p) => p.id === id);
+=======
+      const foundProduct = NEW_PRODUCTS.find((p,) => p.id === id),
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
       setProduct(foundProduct || null)
     }
   }, [id]);
 
-  useEffect(() => {
+  useEffect((,) => {
     const fetchProduct = async () => {
       if (!id) return;
       try {
@@ -64,25 +79,32 @@ export default function ProductPage() {
     dispatch({
       type: 'ADD_ITEM',
       payload: { id: product.id, name: product.title, price: product.price ?? 0, quantity: 1 }
+<<<<<<< HEAD
     });
     toast.success(`1× ${product.title} added`);
     setTimeout(() => setAdding(false), 500)
   };
+=======
+    }),
+    toast.success(`1× ${product.title} added`),
+    setTimeout((,) => setAdding(false), 500)
+  },
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 
   return (
     <>
       <SEO
-        title={product.title}
-        description={product.description}
-        ogImage={product.images?.[0]}
+        title = {product.title,}
+        description = {product.description,}
+        ogImage = {product.images?.[0],}
       />
       <div className="min-h-screen bg-zion-blue p-6 text-white">
         <h1 className="text-2xl font-bold mb-4">{product.title}</h1>
         {product.images?.length ? (
           <div className="mb-4 relative w-full h-64">
             <Image
-              src={product.images[0] || '/placeholder.svg'}
-              alt={product.title}
+              src = {product.images[0] || '/placeholder.svg',}
+              alt = {product.title,}
               className="object-cover rounded-md"
             />
           </div>
@@ -121,5 +143,9 @@ product.title ;
 }'
 =======
 }
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b

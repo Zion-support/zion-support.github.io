@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Card, CardContent } from '@/components/ui/card';
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 import { Badge } from '@/components/ui/badge';
@@ -5,11 +6,20 @@ import { ProfileProject } from '@/types/profile';
 import { AspectRatio } from '@/components/ui/aspect-ratio';
 import { FileText } from 'lucide-react';
 
+=======
+
+import { Card, CardContent } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { ProfileProject } from "@/types/profile";
+import { AspectRatio } from "@/components/ui/aspect-ratio";
+import { FileText } from 'lucide-react';
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 interface ProfileProjectsProps {
   projects: ProfileProject[];
 
 export function ProfileProjects({ projects }: ProfileProjectsProps) {
   return (
+<<<<<<< HEAD
     <div className='bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-8'>
       <h3 className='text-xl font-bold text-white mb-4'>Projects</h3>
 
@@ -19,13 +29,28 @@ export function ProfileProjects({ projects }: ProfileProjectsProps) {
             key={project.id}
             className='bg-zion-blue border-zion-blue-light overflow-hidden hover:border-zion-purple/40 transition-colors duration-300'
           >
+=======
+    <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-8">
+      <h3 className="text-xl font-bold text-white mb-4">Projects</h3>
+      
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        {projects.map((project,) => (
+          <Card key={project.id} className="bg-zion-blue border-zion-blue-light overflow-hidden hover:border-zion-purple/40 transition-colors duration-300">
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
             {project.imageUrl ? (
               <AspectRatio ratio={16 / 9}>
                 <img
+<<<<<<< HEAD
                   src={project.imageUrl}
                   alt={project.title}
                   className='w-full h-full object-cover'
                   loading='lazy'
+=======
+                  src = {project.imageUrl,}
+                  alt = {project.title,}
+                  className="w-full h-full object-cover"
+                  loading="lazy"
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
                 />
               </AspectRatio>
             ) : (
@@ -41,6 +66,7 @@ export function ProfileProjects({ projects }: ProfileProjectsProps) {
               </p>
 
               {project.tags && project.tags.length > 0 && (
+<<<<<<< HEAD
                 <div className='flex flex-wrap gap-1 mb-2'>
                   {project.tags.map((tag, i) => (
                     <Badge
@@ -49,6 +75,10 @@ export function ProfileProjects({ projects }: ProfileProjectsProps) {
                       className='text-xs border-zion-slate-dark text-zion-slate-light'
                     >                      {tag}
 =======
+=======
+                <div className="flex flex-wrap gap-1 mb-2">
+                  {project.tags.map((tag, i,) => (
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
                     <Badge key={i} variant="outline" className="text-xs border-zion-slate-dark text-zion-slate-light">
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                       {tag}

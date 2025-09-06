@@ -23,6 +23,19 @@ import {
 import { toast } from 'sonner';
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
+<<<<<<< HEAD
+=======
+import React, { useEffect, useState } from "react";
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { ClickableBadge } from "@/components/ui/clickable-badge";
+import { PlusCircle, Save, Trash } from 'lucide-react';
+import { useWebhooks, WebhookEventType } from "@/hooks/useWebhooks";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { toast } from "sonner";
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 export function WebhookManager() {
   const {
     webhooks,
@@ -41,6 +54,7 @@ export function WebhookManager() {
     url: '',
     selectedEvent: '' as WebhookEventType,
     eventTypes: [] as WebhookEventType[],
+<<<<<<< HEAD
     secret: '',
   });
 
@@ -55,6 +69,22 @@ export function WebhookManager() {
     fetchWebhooks();
   }, []);
 
+=======
+    secret: ""
+  }),
+  
+  const eventOptions: { value: WebhookEventType, label: string }[] = [
+    { value: "new_application", label: "New Application Received" },
+    { value: "quote_received", label: "Quote Request Received" },
+    { value: "milestone_approved", label: "Milestone Approved" },
+    { value: "talent_hired", label: "Talent Hired" }
+  ],
+  
+  useEffect((,) => {
+    fetchWebhooks()
+  }, []),
+  
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
   const handleAddEvent = () => {
     if (!newWebhook.selectedEvent) return;
 
@@ -66,11 +96,19 @@ export function WebhookManager() {
     setNewWebhook({
       ...newWebhook,
       eventTypes: [...newWebhook.eventTypes, newWebhook.selectedEvent],
+<<<<<<< HEAD
       selectedEvent: '' as WebhookEventType,
     });
   };
 
   const handleRemoveEvent = (event: WebhookEventType) => {
+=======
+      selectedEvent: "" as WebhookEventType
+    })
+  },
+  
+  const handleRemoveEvent = (event: WebhookEventType,) => {
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
     setNewWebhook({
       ...newWebhook,
       eventTypes: newWebhook.eventTypes.filter(e => e !== event),
@@ -100,6 +138,7 @@ export function WebhookManager() {
       url: '',
       selectedEvent: '' as WebhookEventType,
       eventTypes: [],
+<<<<<<< HEAD
       secret: '',
     });
   };
@@ -111,6 +150,16 @@ export function WebhookManager() {
     await testWebhook(webhookId, eventType);
   };
 
+=======
+      secret: ""
+    })
+  },
+  
+  const handleTestWebhook = async (webhookId: string, eventType: WebhookEventType,) => {
+    await testWebhook(webhookId, eventType)
+  },
+  
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
   return (
     <div className='space-y-8'>
       <Card>
@@ -121,6 +170,7 @@ export function WebhookManager() {
             Zion.
           </CardDescription>
         </CardHeader>
+<<<<<<< HEAD
         <CardContent className='space-y-4'>
           <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
             <div className='space-y-2'>
@@ -144,6 +194,27 @@ export function WebhookManager() {
                 onChange={e =>
                   setNewWebhook({ ...newWebhook, url: e.target.value })
                 }
+=======
+        <CardContent className="space-y-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="space-y-2">
+              <Label htmlFor="webhook-name">Webhook Name</Label>
+              <Input 
+                id="webhook-name" 
+                placeholder="e.g., Job Postings Webhook"
+                value = {newWebhook.name,}
+                onChange={(e,) => setNewWebhook({...newWebhook, name: e.target.value})}
+              />
+            </div>
+            
+            <div className="space-y-2">
+              <Label htmlFor="webhook-url">URL</Label>
+              <Input 
+                id="webhook-url" 
+                placeholder="https://example.com/webhook"
+                value = {newWebhook.url,}
+                onChange={(e,) => setNewWebhook({...newWebhook, url: e.target.value})}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
               />
             </div>
           </div>
@@ -152,9 +223,15 @@ export function WebhookManager() {
             <Label>Events</Label>
             <div className='flex flex-wrap gap-2 mb-2'>
               {newWebhook.eventTypes.map(event => (
+<<<<<<< HEAD
                 <ClickableBadge
                   key={event}
                   onRemove={() => handleRemoveEvent(event)}
+=======
+                <ClickableBadge 
+                  key = {event,}
+                  onRemove = {(,) => handleRemoveEvent(event),}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
                 >
                   {eventOptions.find(e => e.value === event)?.label || event}
                 </ClickableBadge>
@@ -162,6 +239,7 @@ export function WebhookManager() {
             </div>
             <div className='flex space-x-2'>
               <Select
+<<<<<<< HEAD
                 value={newWebhook.selectedEvent}
                 onValueChange={value =>
                   setNewWebhook({
@@ -169,6 +247,10 @@ export function WebhookManager() {
                     selectedEvent: value as WebhookEventType,
                   })
                 }
+=======
+                value = {newWebhook.selectedEvent,}
+                onValueChange={(value,) => setNewWebhook({...newWebhook, selectedEvent: value as WebhookEventType})}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
               >
                 <SelectTrigger className='w-full'>
                   <SelectValue placeholder='Select event' />
@@ -186,6 +268,7 @@ export function WebhookManager() {
               </Button>
             </div>
           </div>
+<<<<<<< HEAD
 
           <div className='space-y-2'>
             <Label htmlFor='webhook-secret'>Secret (optional)</Label>
@@ -196,6 +279,16 @@ export function WebhookManager() {
               onChange={e =>
                 setNewWebhook({ ...newWebhook, secret: e.target.value })
               }
+=======
+          
+          <div className="space-y-2">
+            <Label htmlFor="webhook-secret">Secret (optional)</Label>
+            <Input 
+              id="webhook-secret" 
+              placeholder="A secret key to verify the webhook source"
+              value = {newWebhook.secret,}
+              onChange={(e,) => setNewWebhook({...newWebhook, secret: e.target.value})}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
             />
             <p className='text-xs text-muted-foreground'>
               If provided, this secret will be used to sign the webhook payload.
@@ -239,6 +332,7 @@ export function WebhookManager() {
                           {webhook.is_active ? 'Active' : 'Inactive'}
                         </span>
                       </div>
+<<<<<<< HEAD
                       <div className='flex-shrink-0'>
                         <Button
                           variant='outline'
@@ -246,6 +340,13 @@ export function WebhookManager() {
                           onClick={() =>
                             toggleWebhook(webhook.id, !webhook.is_active)
                           }
+=======
+                      <div className="flex-shrink-0">
+                        <Button 
+                          variant="outline" 
+                          size="sm"
+                          onClick = {(,) => toggleWebhook(webhook.id, !webhook.is_active),}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
                         >
                           {webhook.is_active ? 'Disable' : 'Enable'}
                         </Button>
@@ -256,12 +357,20 @@ export function WebhookManager() {
                 <CardContent className='py-2'>
                   <div className='flex flex-col space-y-2'>
                     <div>
+<<<<<<< HEAD
                       <Label className='text-sm'>Events</Label>
                       <div className='flex flex-wrap gap-2 mt-1'>
                         {webhook.event_types.map((event: WebhookEventType) => (
                           <ClickableBadge key={event} variant='secondary'>
                             {eventOptions.find(e => e.value === event)?.label ||
                               event}
+=======
+                      <Label className="text-sm">Events</Label>
+                      <div className="flex flex-wrap gap-2 mt-1">
+                        {webhook.event_types.map((event: WebhookEventType,) => (
+                          <ClickableBadge key={event} variant="secondary">
+                            {eventOptions.find(e => e.value === event)?.label || event}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
                           </ClickableBadge>
                         ))}
                       </div>
@@ -275,24 +384,39 @@ export function WebhookManager() {
                 </CardContent>
                 <CardFooter className='flex justify-between pt-2'>
                   <Button
+<<<<<<< HEAD
                     variant='outline'
                     size='sm'
                     onClick={() => deleteWebhook(webhook.id)}
+=======
+                    variant="outline"
+                    size="sm"
+                    onClick = {() => deleteWebhook(webhook.id),}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
                   >
                     <Trash className='h-4 w-4 mr-2' /> Delete
                   </Button>
 
                   <Select
+<<<<<<< HEAD
                     onValueChange={value =>
                       handleTestWebhook(webhook.id, value as WebhookEventType)
                     }
+=======
+                    onValueChange = {(value,) => handleTestWebhook(webhook.id, value as WebhookEventType),}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
                   >
                     <SelectTrigger className='w-[180px]'>
                       <SelectValue placeholder='Test webhook' />
                     </SelectTrigger>
                     <SelectContent>
+<<<<<<< HEAD
                       <SelectItem value='test_event'>Test (generic)</SelectItem>
                       {webhook.event_types.map((event: WebhookEventType) => (
+=======
+                      <SelectItem value="test_event">Test (generic)</SelectItem>
+                      {webhook.event_types.map((event: WebhookEventType,) => (
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
                         <SelectItem key={event} value={event}>
                           Test{' '}
                           {eventOptions.find(e => e.value === event)?.label ||

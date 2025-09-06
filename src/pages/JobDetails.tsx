@@ -1,9 +1,14 @@
 import React, { useState, useEffect } from 'react';
+<<<<<<< HEAD
 import { useRouter } from 'next/router'; // Changed from useParams, useNavigate
+=======
+import { useRouter } from 'next/router', // Changed from useParams, useNavigate
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 import { Header } from '@/components/Header';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
+<<<<<<< HEAD
 import {
   Calendar,
   Clock,
@@ -12,6 +17,9 @@ import {
   Users,
   Briefcase,;
 } from 'lucide-react';
+=======
+import { Calendar, Clock, DollarSign, Tag, Users, Briefcase } from 'lucide-react';
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 import { formatDistanceToNow } from 'date-fns';
 import { toast } from 'sonner';
 import { useAuth } from '@/hooks/useAuth';
@@ -20,7 +28,10 @@ import { ApplyToJobModal } from '@/components/messaging/job-application';
 import { SEO } from '@/components/SEO';
 import { useWhitelabel } from '@/context/WhitelabelContext';
 import { JobDetailsSkeleton } from '@/components/jobs';
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 interface Job {
   id: string;
   title: string;
@@ -48,10 +59,17 @@ export default function JobDetails() {
 
   const [isApplyModalOpen, setIsApplyModalOpen] = useState(false);
 
+<<<<<<< HEAD
   const formatBudget = (budget: any) => {
     if (!budget) return 'Not specified';
     return `$${budget.min} - $${budget.max}`;
   };
+=======
+  const formatBudget = (budget: any,) => {
+    if (!budget) return "Not specified",
+    return `$${budget.min} - $${budget.max}`
+  },
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 
   if (isLoading) {
     return <JobDetailsSkeleton />;
@@ -61,12 +79,19 @@ export default function JobDetails() {
     return (
       <>
         <Header />
+<<<<<<< HEAD
         <div className='container mx-auto px-4 py-16 text-center'>
           <h1 className='text-2xl font-bold mb-4'>Job Not Found</h1>
           <p className='mb-8'>
             The job you're looking for doesn't exist or has been removed.
           </p>
           <Button onClick={() => router.push('/careers')}>View All Jobs</Button>
+=======
+        <div className="container mx-auto px-4 py-16 text-center">
+          <h1 className="text-2xl font-bold mb-4">Job Not Found</h1>
+          <p className="mb-8">The job you're looking for doesn't exist or has been removed.</p>
+          <Button onClick={(,) => router.push('/careers')}>View All Jobs</Button>
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
         </div>
       </>
     );
@@ -93,10 +118,17 @@ export default function JobDetails() {
     setIsApplyModalOpen(true);
   };
 
+<<<<<<< HEAD
   const handleApplySuccess = async (appliedJobId: string) => {
     toast.success('Application submitted successfully!');
     setIsApplyModalOpen(false);
   };
+=======
+  const handleApplySuccess = async (appliedJobId: string,) => {
+    toast.success("Application submitted successfully!"),
+    setIsApplyModalOpen(false)
+  },
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 
   const isOwnJob = user?.id === job.client_id;
 
@@ -104,15 +136,24 @@ export default function JobDetails() {
     <>
       <SEO
         title={`${job.title} - ${isWhitelabel ? brandName : 'Zion AI Marketplace'}`}
-        description={job.description.substring(0, 160)}
+        description = {job.description.substring(0, 160),}
       />
       <Header />
+<<<<<<< HEAD
       <main className='container mx-auto px-4 py-8'>
         <div className='mb-6'>
           <Button
             variant='outline'
             size='sm'
             onClick={() => router.push('/careers')}
+=======
+      <main className="container mx-auto px-4 py-8">
+        <div className="mb-6">
+          <Button 
+            variant="outline" 
+            size="sm"
+            onClick = {() => router.push('/careers'),}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
           >
             ← Back to Jobs
           </Button>
@@ -147,12 +188,19 @@ export default function JobDetails() {
                 </div>
 
                 <div>
+<<<<<<< HEAD
                   <h3 className='font-semibold text-lg mb-3'>
                     Required Skills
                   </h3>
                   <div className='flex flex-wrap gap-2'>
                     {job.skills?.map((skill: string, i: number) => (
                       <Badge key={i} variant='secondary'>
+=======
+                  <h3 className="font-semibold text-lg mb-3">Required Skills</h3>
+                  <div className="flex flex-wrap gap-2">
+                    {job.skills?.map((skill: string, i: number,) => (
+                      <Badge key={i} variant="secondary">
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
                         {skill}
                       </Badge>
                     ))}
@@ -194,10 +242,17 @@ export default function JobDetails() {
                 </div>
 
                 {!isOwnJob && (
+<<<<<<< HEAD
                   <Button
                     className='w-full mt-4'
                     onClick={handleApply}
                     disabled={isOwnJob}
+=======
+                  <Button 
+                    className="w-full mt-4" 
+                    onClick = {handleApply,}
+                    disabled = {isOwnJob,}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
                   >
                     Apply Now
                   </Button>
@@ -225,10 +280,16 @@ export default function JobDetails() {
             description: job.description,
             company_name: job.company_name ?? 'Company',
             budget: formatBudget(job.budget),
+<<<<<<< HEAD
             client_id: job.client_id,
           }}
           isOpen={isApplyModalOpen}
           onClose={() => setIsApplyModalOpen(false)}
+=======
+            client_id: job.client_id}}
+          isOpen = {isApplyModalOpen,}
+          onClose = {() => setIsApplyModalOpen(false),}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
         />
       )}
     </>

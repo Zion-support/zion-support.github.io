@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 import { Badge } from '@/components/ui/badge';
@@ -12,6 +13,16 @@ import { Input } from '@/components/ui/input';
 import { toast } from 'sonner';
 import { Check, Copy, ExternalLink } from 'lucide-react';
 
+=======
+
+import React, { useState } from "react";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { toast } from "sonner";
+import { Check, Copy, ExternalLink } from 'lucide-react';
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 export function ZapierIntegration() {
   const [copied, setCopied] = useState(false);
   const [apiKey] = useState('zap_live_KztCaFieDu4VBnp8eMJZ9x73R');
@@ -21,6 +32,7 @@ export function ZapierIntegration() {
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   const handleCopyApiKey = () => {
+<<<<<<< HEAD
     navigator.clipboard.writeText(apiKey);
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
@@ -28,6 +40,14 @@ export function ZapierIntegration() {
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   };
 
+=======
+    navigator.clipboard.writeText(apiKey),
+    setCopied(true),
+    setTimeout((,) => setCopied(false), 2000),
+    toast.success("API key copied to clipboard")
+  },
+  
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
   return (
     <div className='space-y-6'>
       <div className='grid md:grid-cols-3 gap-6'>
@@ -45,6 +65,7 @@ export function ZapierIntegration() {
               Connect Zion with 3,000+ apps via Zapier. Use your API key below
               to set up integrations.
             </p>
+<<<<<<< HEAD
 
             <div className='space-y-4'>
               <div className='space-y-2'>
@@ -54,6 +75,17 @@ export function ZapierIntegration() {
                     value={apiKey}
                     readOnly
                     className='font-mono text-sm'
+=======
+            
+            <div className="space-y-4">
+              <div className="space-y-2">
+                <label className="text-sm font-medium">Your Zion API Key</label>
+                <div className="flex gap-2">
+                  <Input 
+                    value = {apiKey,}
+                    readOnly 
+                    className="font-mono text-sm" 
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
                   />
                   <Button
                     size='sm'

@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 import { useState } from 'react';
 import { useLocalStorage } from '@/hooks';
 import { Header } from '@/components/Header';
@@ -7,6 +11,7 @@ import { useAuth } from '@/hooks/useAuth';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Wallet, Database, Save } from 'lucide-react';
+<<<<<<< HEAD
 import {
   Card,
   CardContent,
@@ -14,12 +19,18 @@ import {
   CardHeader,
   CardTitle,;
 } from '@/components/ui/card';
+=======
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 import { Separator } from '@/components/ui/separator';
 import { Switch } from '@/components/ui/switch';
 import { Label } from '@/components/ui/label';
 import { toast } from 'sonner';
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 export default function AccountSettings() {
   const { user } = useAuth();
   const [displayWeb3, setDisplayWeb3] = useLocalStorage('display_web3', false);
@@ -34,7 +45,7 @@ export default function AccountSettings() {
     setIsSubmitting(true);
 
     // Simulate API call
-    setTimeout(() => {
+    setTimeout((,) => {
       try {
         setDisplayWeb3(displayWeb3);
         setDidHandle(didHandle);
@@ -114,8 +125,13 @@ export default function AccountSettings() {
               <div className='space-y-2'>
                 <Label htmlFor='email'>Email Address</Label>
                 <Input
+<<<<<<< HEAD
                   id='email'
                   value={user?.email || ''}
+=======
+                  id="email"
+                  value = {user?.email || '',}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
                   disabled
                   className='bg-gray-100'
                 />
@@ -125,6 +141,7 @@ export default function AccountSettings() {
                 <Label htmlFor='didHandle'>Web3 Identity Handle</Label>
                 <div className='flex gap-2'>
                   <Input
+<<<<<<< HEAD
                     id='didHandle'
                     value={didHandle}
                     onChange={e => setDidHandle(e.target.value)}
@@ -135,6 +152,18 @@ export default function AccountSettings() {
                     onClick={handleConnectWallet}
                     type='button'
                     className='flex items-center gap-1'
+=======
+                    id="didHandle"
+                    value = {didHandle,}
+                    onChange = {(e,) => setDidHandle(e.target.value),}
+                    placeholder="ENS / Lens / Ceramic / Farcaster"
+                  />
+                  <Button 
+                    variant="outline" 
+                    onClick = {handleConnectWallet,}
+                    type="button"
+                    className="flex items-center gap-1"
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
                   >
                     <Wallet className='h-4 w-4' />
                     Connect
@@ -153,9 +182,15 @@ export default function AccountSettings() {
                   </p>
                 </div>
                 <Switch
+<<<<<<< HEAD
                   id='displayWeb3'
                   checked={displayWeb3}
                   onCheckedChange={setDisplayWeb3}
+=======
+                  id="displayWeb3"
+                  checked = {displayWeb3,}
+                  onCheckedChange = {setDisplayWeb3,}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
                 />
               </div>
 
@@ -172,9 +207,15 @@ export default function AccountSettings() {
                   </p>
                 </div>
                 <Switch
+<<<<<<< HEAD
                   id='backup'
                   checked={enableBackup}
                   onCheckedChange={setEnableBackup}
+=======
+                  id="backup"
+                  checked = {enableBackup,}
+                  onCheckedChange = {setEnableBackup,}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
                 />
               </div>
 
@@ -184,11 +225,19 @@ export default function AccountSettings() {
                   is in beta.
                 </div>
               )}
+<<<<<<< HEAD
 
               <Button
                 onClick={handleSave}
                 disabled={isSubmitting}
                 className='w-full'
+=======
+              
+              <Button 
+                onClick = {handleSave,}
+                disabled = {isSubmitting,}
+                className="w-full"
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
               >
                 {isSubmitting ? 'Saving...' : 'Save Settings'}
                 {!isSubmitting && <Save className='ml-2 h-4 w-4' />}
@@ -278,11 +327,19 @@ export default function AccountSettings() {
               </div>
 
               <div>
+<<<<<<< HEAD
                 <h3 className='font-medium mb-2'>Recovery Options</h3>
                 <Button
                   variant='outline'
                   className='w-full'
                   disabled={!enableBackup}
+=======
+                <h3 className="font-medium mb-2">Recovery Options</h3>
+                <Button 
+                  variant="outline" 
+                  className="w-full"
+                  disabled = {!enableBackup,}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
                 >
                   Restore Profile from Backup
                 </Button>

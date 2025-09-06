@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { CategoryCard } from '@/components/CategoryCard';
 import { GradientHeading } from '@/components/GradientHeading';
 import ErrorBoundary from '@/components/GlobalErrorBoundary'; // Import ErrorBoundary
@@ -12,6 +13,12 @@ import { Briefcase, HardDrive, Lightbulb, Users } from 'lucide-react'
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+import { CategoryCard } from "@/components/CategoryCard";
+import { GradientHeading } from "@/components/GradientHeading";
+import ErrorBoundary from "@/components/GlobalErrorBoundary", // Import ErrorBoundary
+import { Briefcase, HardDrive, Lightbulb, Users } from 'lucide-react';
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 // Reusing the categories array from CategoriesSection.tsx
 // Ideally, this would come from a shared data source or API
 const categories = [
@@ -81,6 +88,7 @@ export default function AllCategoriesPage() {
             {categories.map(category => (
 =======
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+<<<<<<< HEAD
             {categories.map((category) => (
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
               <CategoryCard
@@ -89,6 +97,14 @@ export default function AllCategoriesPage() {
                 title={category.title}
                 description={category.description}
                 icon={category.icon}
+=======
+            {categories.map((category,) => (
+              <CategoryCard
+                key = {category.title,}
+                title = {category.title,}
+                description = {category.description,}
+                icon = {category.icon,}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
                 // The CategoryCard itself is a Link to its specific category page
                 // So we don't pass the category.link to a 'to' prop here directly
                 // The 'link' in the categories array above is used by CategoryCard's internal Link

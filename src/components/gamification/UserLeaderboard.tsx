@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import {
   Card,
   CardContent,
@@ -8,6 +9,10 @@ import {
 import { Trophy } from 'lucide-react';
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
+=======
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Trophy } from 'lucide-react';
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 export interface LeaderboardEntry {
   name: string;
   points: number;
@@ -39,12 +44,20 @@ export function UserLeaderboard({ entries }: UserLeaderboardProps) {
       </CardHeader>
       <CardContent>
 <<<<<<< HEAD
+<<<<<<< HEAD
         <div className='space-y-2'>
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
           {entries.map((e, idx) => (
             <div
               key={e.name}
               className='flex justify-between items-center p-2 rounded-md hover:bg-muted/50'
+=======
+        <div className="space-y-2">
+          {entries.map((e, idx,) => (
+            <div
+              key = {e.name,}
+              className="flex justify-between items-center p-2 rounded-md hover:bg-muted/50"
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
             >
               <span className='font-medium'>
                 {idx + 1}. {e.name}

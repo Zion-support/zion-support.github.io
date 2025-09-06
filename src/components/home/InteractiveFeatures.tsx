@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import {
   Card,
@@ -10,6 +11,18 @@ import { Button } from '@/components/ui/button';
 import { ArrowRight, Search, Users, Zap, Settings } from 'lucide-react';
 import Link from 'next/link';
 import { cn } from '@/lib/utils';
+=======
+import React from "react";
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { ArrowRight, Search, Users, Zap, Settings } from 'lucide-react';
+import Link from "next/link";
+import { cn } from "@/lib/utils";
+interface InteractiveFeaturesProps {
+  className?: string,
+  style?: React.CSSProperties
+}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 interface InteractiveFeaturesProps {
@@ -59,9 +72,15 @@ export function InteractiveFeatures({
     },
   ];
 
+<<<<<<< HEAD
   const handleToggle = (index: number) => {
     setOpenIndex(prev => (prev === index ? null : index));
   };
+=======
+  const handleToggle = (index: number,) => {
+    setOpenIndex((prev,) => (prev === index ? null : index))
+  },
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 
   return (
     <section className={cn('py-16 bg-zion-blue-dark', className)} style={style}>
@@ -74,6 +93,7 @@ export function InteractiveFeatures({
             Hover or click a card to learn more about what Zion offers
           </p>
         </div>
+<<<<<<< HEAD
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
           {features.map((feature, index) => (
             <Card
@@ -82,6 +102,16 @@ export function InteractiveFeatures({
               onMouseLeave={() => setOpenIndex(null)}
               onClick={() => handleToggle(index)}
               className='cursor-pointer overflow-hidden transition-all duration-300 hover:shadow-lg'
+=======
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {features.map((feature, index,) => (
+            <Card
+              key = {index,}
+              onMouseEnter = {(,) => setOpenIndex(index),}
+              onMouseLeave = {() => setOpenIndex(null),}
+              onClick = {() => handleToggle(index),}
+              className="cursor-pointer overflow-hidden transition-all duration-300 hover:shadow-lg"
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
             >
               <CardHeader className='flex flex-row items-start space-x-3'>
                 {feature.icon}
@@ -95,12 +125,19 @@ export function InteractiveFeatures({
                 </div>
               </CardHeader>
               <div
+<<<<<<< HEAD
                 className={cn(
                   'transition-all duration-300',
                   openIndex === index
                     ? 'max-h-48 opacity-100 p-6 pt-0'
                     : 'max-h-0 opacity-0 p-0'
                 )}
+=======
+                className = {cn(
+                  "transition-all duration-300",
+                  openIndex === index ? "max-h-48 opacity-100 p-6 pt-0" : "max-h-0 opacity-0 p-0"
+                ),}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
               >
                 <CardContent className='text-sm text-zion-slate-light p-0'>
                   <p>{feature.details}</p>

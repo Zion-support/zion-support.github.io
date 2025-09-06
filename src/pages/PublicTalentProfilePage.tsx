@@ -1,9 +1,23 @@
 
+<<<<<<< HEAD
 import { logErrorToProduction } from '@/utils/productionLogger';
 import { Star, MapPin, Clock, Link as LinkIcon, Github, Twitter, Linkedin, CheckCircle2 } from 'lucide-react'
 import { Badge } from '@/components/ui/badge';
 import { Star } from 'lucide-react';
 
+=======
+import { useState, useEffect } from "react";
+import { useRouter } from "next/router";
+import { supabase } from "@/integrations/supabase/client";
+import { toast } from "@/components/ui/use-toast";
+import { SEO } from "@/components/SEO";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { HireNowCTA } from "@/components/profile/HireNowCTA";
+import { logErrorToProduction } from '@/utils/productionLogger';
+import { Star, MapPin, Clock, Link as LinkIcon, Github, Twitter, Linkedin, CheckCircle2 } from 'lucide-react';
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 export default function ProfilePage() {
   // useParams may be untyped in this environment, so avoid passing a
   // type argument and cast the result instead to prevent TS2347 errors.
@@ -13,7 +27,7 @@ export default function ProfilePage() {
   const [isLoading, setIsLoading] = useState(true);
   const [isError, setIsError] = useState(false);
 
-  useEffect(() => {
+  useEffect((,) => {
     const fetchProfile = async () => {
       setIsLoading(true);
       setIsError(false);
@@ -66,7 +80,7 @@ export default function ProfilePage() {
     <>
       <SEO
         title={`${profileData.full_name} | Talent Profile`}
-        description={profileData.bio || "View the profile of this talented individual."}
+        description = {profileData.bio || "View the profile of this talented individual.",}
       />
       <div className="container mx-auto px-4 py-8">
         <div className="grid grid-cols-12 gap-6">
@@ -124,7 +138,7 @@ export default function ProfilePage() {
                 <div className="mt-4">
                   <h4 className="text-lg font-bold text-white mb-2">Skills</h4>
                   <div className="flex flex-wrap gap-2">
-                    {profileData.skills.map((skill: string, index: number) => (
+                    {profileData.skills.map((skill: string, index: number,) => (
                       <Badge key={skill + index} variant="secondary">{skill}</Badge>
                     ))}
                   </div>
@@ -143,10 +157,10 @@ export default function ProfilePage() {
               <h2 className="text-xl font-bold text-white mb-3">Portfolio</h2>
               <div className="space-y-3">
                 {profileData.portfolio_links && profileData.portfolio_links.length > 0 ? (
-                  profileData.portfolio_links.map((link: string, index: number) => (
+                  profileData.portfolio_links.map((link: string, index: number,) => (
                     <a
-                      key={link + index}
-                      href={link}
+                      key = {link + index,}
+                      href = {link,}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="flex items-center text-zion-cyan hover:text-white transition-colors"
@@ -173,7 +187,7 @@ export default function ProfilePage() {
               <div className="flex space-x-4">
                 {profileData.github_link && (
                   <a
-                    href={profileData.github_link}
+                    href = {profileData.github_link,}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-zion-cyan hover:text-white transition-colors"
@@ -185,7 +199,7 @@ export default function ProfilePage() {
                 )}
                 {profileData.twitter_link && (
                   <a
-                    href={profileData.twitter_link}
+                    href = {profileData.twitter_link,}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-zion-cyan hover:text-white transition-colors"
@@ -197,7 +211,7 @@ export default function ProfilePage() {
                 )}
                 {profileData.linkedin_link && (
                   <a
-                    href={profileData.linkedin_link}
+                    href = {profileData.linkedin_link,}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-zion-cyan hover:text-white transition-colors"

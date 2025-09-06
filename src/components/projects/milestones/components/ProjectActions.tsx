@@ -5,6 +5,14 @@ import Link from 'next/link';
 import { ShieldAlert } from 'lucide-react';
 import { RaiseDisputeButton } from '@/components/disputes/RaiseDisputeButton';
 
+<<<<<<< HEAD
+=======
+import React from 'react';
+import { Button } from '@/components/ui/button';
+import Link from 'next/link';
+import { ShieldAlert } from 'lucide-react';
+import { RaiseDisputeButton } from '@/components/disputes/RaiseDisputeButton';
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 interface ProjectActionsProps {
   projectId: string;
   isUnderDispute: boolean;
@@ -37,15 +45,27 @@ export function ProjectActions({
         </Button>
       ) : (
 <<<<<<< HEAD
+<<<<<<< HEAD
         <RaiseDisputeButton projectId={projectId} variant='outline' />
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+        <RaiseDisputeButton 
+          projectId = {projectId,}
+          variant="outline"
+        />
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
       )}
       {isTalent && !isUnderDispute && (
         <Button onClick={onAddMilestone}>Add Milestone</Button>
       )}
     </div>
   );
+<<<<<<< HEAD
 =======
 }
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+};
+;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b

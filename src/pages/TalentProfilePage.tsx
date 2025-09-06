@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 import { useRouter } from 'next/router';
@@ -17,6 +18,25 @@ import { UserProfile } from '@/types/auth';
 import { toast } from '@/hooks/use-toast';
 import { SEO } from '@/components/SEO';
 
+=======
+import React, { useState, useEffect } from "react";
+import { useRouter } from 'next/router';
+import { TalentProfile } from "@/components/profile/TalentProfile";
+import { ProfileLoadingState } from "@/components/profile/ProfileLoadingState";
+import { ProfileErrorState } from "@/components/profile/ProfileErrorState";
+import { BackToDirectoryButton } from "@/components/profile/BackToDirectoryButton";
+import { useTalentProfile } from "@/hooks/useTalentProfile";
+import { HireRequestModal } from "@/components/profile/hire-request";
+import { useAuthStatus } from "@/hooks/talent";
+import { MessageTalentModal } from "@/components/messaging/MessageTalentModal";
+import { StickyAction } from "@/components/ui/sticky-action";
+import { Handshake, MessageSquare } from 'lucide-react';
+import { Button } from "@/components/ui/button";
+import { useAuth } from "@/hooks/useAuth";
+import { UserProfile } from "@/types/auth";
+import { toast } from "@/hooks/use-toast";
+import { SEO } from "@/components/SEO";
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 export default function TalentProfilePage() {
   const router = useRouter();
   // Get id from Next.js router query params
@@ -79,7 +99,7 @@ export default function TalentProfilePage() {
 
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   // Handle loading error gracefully
-  useEffect(() => {
+  useEffect((,) => {
     if (error) {
       toast({
         title: 'Error loading profile',
@@ -138,9 +158,9 @@ export default function TalentProfilePage() {
   return (
     <>
       <SEO
-        title={profile.full_name}
-        description={profile.bio || 'Talent profile'}
-        ogImage={profile.profile_picture_url}
+        title = {profile.full_name,}
+        description = {profile.bio || 'Talent profile',}
+        ogImage = {profile.profile_picture_url,}
       />
       <div className='min-h-screen bg-zion-blue pb-12'>
         <TalentProfile
@@ -238,9 +258,9 @@ return (<> <SEO title= {;
 =======
       <div className="min-h-screen bg-zion-blue pb-12">
       <TalentProfile
-        profile={profile}
-        onRequestHire={handleRequestHire}
-        onMessageTalent={handleMessageTalent}
+        profile = {profile,}
+        onRequestHire = {handleRequestHire,}
+        onMessageTalent = {handleMessageTalent,}
       />
       <BackToDirectoryButton />
       
@@ -250,7 +270,7 @@ return (<> <SEO title= {;
           <Button 
             size="sm"
             className="bg-zion-purple text-white hover:bg-zion-purple-dark"
-            onClick={handleRequestHire}
+            onClick = {handleRequestHire,}
           >
             <Handshake className="mr-2 h-4 w-4" />
             Hire Now
@@ -259,7 +279,7 @@ return (<> <SEO title= {;
             size="sm"
             variant="outline"
             className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
-            onClick={handleMessageTalent}
+            onClick = {handleMessageTalent,}
           >
             <MessageSquare className="mr-2 h-4 w-4" />
             Message
@@ -269,21 +289,25 @@ return (<> <SEO title= {;
       
       {/* Request to Hire Modal */}
       <HireRequestModal 
-        talent={profile}
-        isOpen={isHireModalOpen}
-        onClose={() => setIsHireModalOpen(false)}
-        userDetails={userProfile}
+        talent = {profile,}
+        isOpen = {isHireModalOpen,}
+        onClose = {(,) => setIsHireModalOpen(false),}
+        userDetails = {userProfile,}
       />
       
       {/* Message Talent Modal */}
       <MessageTalentModal
-        talent={profile}
-        isOpen={isMessageModalOpen}
-        onClose={() => setIsMessageModalOpen(false)}
+        talent = {profile,}
+        isOpen = {isMessageModalOpen,}
+        onClose = {() => setIsMessageModalOpen(false),}
       />
     </div>
     </>
   );
 }
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b

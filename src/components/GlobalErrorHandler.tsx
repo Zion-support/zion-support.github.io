@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, {
   createContext,
   useContext,
@@ -6,10 +7,14 @@ import React, {
   ReactNode,;
 } from 'react';
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+import React, { createContext, useContext, useState, useCallback, ReactNode } from 'react';
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 import { toast } from '@/hooks/use-toast';
 import { Button } from '@/components/ui/button';
 import { RefreshCw, AlertTriangle, Wifi, WifiOff, Shield } from 'lucide-react';
 import * as Sentry from '@sentry/nextjs';
+<<<<<<< HEAD
 import { logErrorToProduction } from '@/utils/productionLogger';
 
 interface ErrorContextType {
@@ -18,13 +23,23 @@ interface ErrorContextType {
   showNetworkError: (retryAction?: () => void) => void;
   showAuthError: (loginAction?: () => void) => void;
   clearAllErrors: () => void;
+=======
+import {logErrorToProduction} from '@/utils/productionLogger';
+interface ErrorContextType {
+  reportError: (error: Error, context?: any,) => void,
+  showRetryableError: (error: Error, retryAction?: (,) => void) => void,
+  showNetworkError: (retryAction?: (,) => void) => void,
+  showAuthError: (loginAction?: (,) => void) => void,
+  clearAllErrors: () => void
+}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 
 }, []);
 
 export function GlobalErrorHandler({ children }: GlobalErrorHandlerProps) {
   const [retryCount, setRetryCount] = useState<Record<string, number>>({});
 
-  const reportError = useCallback((error: Error, context?: any) => {
+  const reportError = useCallback((error: Error, context?: any,) => {
     // Log to console for development
     if (process.env.NODE_ENV === 'development') {
       logErrorToProduction('Global Error Handler:', error, context);
@@ -32,7 +47,11 @@ export function GlobalErrorHandler({ children }: GlobalErrorHandlerProps) {
 
     // Report to Sentry for production
     if (process.env.NODE_ENV === 'production') {
+<<<<<<< HEAD
       Sentry.withScope(scope => {
+=======
+      Sentry.withScope((scope,) => {
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
         if (context) {
           scope.setContext('errorContext', context);
         }
@@ -42,10 +61,16 @@ export function GlobalErrorHandler({ children }: GlobalErrorHandlerProps) {
     }
   }, []);
 
+<<<<<<< HEAD
   const showRetryableError = useCallback(
     (error: Error, retryAction?: () => void) => {
       const errorKey = error.message;
       const currentRetryCount = retryCount[errorKey] || 0;
+=======
+  const showRetryableError = useCallback((error: Error, retryAction?: (,) => void) => {
+    const errorKey = error.message,
+    const currentRetryCount = retryCount[errorKey] || 0,
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 
       reportError(error, { retryCount: currentRetryCount });
 
@@ -71,9 +96,15 @@ export function GlobalErrorHandler({ children }: GlobalErrorHandlerProps) {
     [retryCount, reportError]
   );
 
+<<<<<<< HEAD
   const showNetworkError = useCallback((retryAction?: () => void) => {
     const isOnline = typeof navigator !== 'undefined' ? navigator.onLine : true;
 
+=======
+  const showNetworkError = useCallback((retryAction?: (,) => void) => {
+    const isOnline = typeof navigator !== 'undefined' ? navigator.onLine : true,
+    
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
     toast({
       title: isOnline ? 'Connection Issue' : 'No Internet Connection',
       description: isOnline
@@ -89,7 +120,7 @@ export function GlobalErrorHandler({ children }: GlobalErrorHandlerProps) {
     });
   }, []);
 
-  const showAuthError = useCallback((loginAction?: () => void) => {
+  const showAuthError = useCallback((loginAction?: (,) => void) => {
     toast({
       title: 'Authentication Required',
       description: 'Please log in to continue with this action.',
@@ -103,8 +134,13 @@ export function GlobalErrorHandler({ children }: GlobalErrorHandlerProps) {
     });
   }, []);
 
+<<<<<<< HEAD
   const clearAllErrors = useCallback(() => {
     setRetryCount({});
+=======
+  const clearAllErrors = useCallback((,) => {
+    setRetryCount({}),
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
     // Clear any active toasts would go here if the toast system supports it
   }, []);
 
@@ -179,12 +215,48 @@ export function useErrorHandler() {
   const { reportError, showRetryableError, showNetworkError, showAuthError } =
     useGlobalErrorHandler();
 
+<<<<<<< HEAD
   const handleApiError = useCallback(
     (error: any, retryAction?: () => void) => {
       if (error.response?.status === 401 || error.response?.status === 403) {
         showAuthError();
       } else if (error.code === 'NETWORK_ERROR' || !navigator.onLine) {
         showNetworkError(retryAction);
+=======
+  const handleApiError = useCallback((error: any, retryAction?: (,) => void) => {
+    if (error.response?.status === 401 || error.response?.status === 403) {
+      showAuthError()
+    } else if (error.code === 'NETWORK_ERROR' || !navigator.onLine) {
+      showNetworkError(retryAction)
+    } else {
+      showRetryableError(error, retryAction)
+    }
+  }, [showRetryableError, showNetworkError, showAuthError]),
+
+  const handleAsyncOperation = useCallback(async <T>(
+    operation: (,) => Promise<T>,
+    options?: {
+      onError?: (error: Error,) => void,
+      retryAction?: () => void,
+      successMessage?: string
+    }
+  ): Promise<T | null> => {
+    try {
+      const result = await operation(),
+      
+      if (options?.successMessage) {
+        toast({
+          title: "Success",
+          description: options.successMessage})
+      }
+      
+      return result
+    } catch (error: any) {
+      reportError(error),
+      
+      if (options?.onError) {
+        options.onError(error)
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
       } else {
         showRetryableError(error, retryAction);
       }

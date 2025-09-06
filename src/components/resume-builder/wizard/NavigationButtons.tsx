@@ -2,6 +2,7 @@ import { Button } from '@/components/ui/button';
 import { Loader2 } from 'lucide-react';
 import { NavigationButtonsProps } from './types';
 
+<<<<<<< HEAD
 
 import { Button } from "@/components/ui/button";
 import { Loader2 } from 'lucide-react'
@@ -13,6 +14,18 @@ export const NavigationButtons = ({
   backLabel = "Back";
   nextLabel = "Next";
   isLoading = false}: NavigationButtonsProps) => {
+=======
+import { Button } from "@/components/ui/button";
+import { Loader2 } from 'lucide-react';
+import { NavigationButtonsProps } from "./types";
+export const NavigationButtons = ({
+  onBack,
+  onNext,
+  isNextDisabled = false,
+  backLabel = "Back",
+  nextLabel = "Next",
+  isLoading = false}: NavigationButtonsProps,) => {
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
   return (
     <div className="flex justify-between">
       {onBack && (

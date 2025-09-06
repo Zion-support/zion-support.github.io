@@ -1,6 +1,11 @@
+<<<<<<< HEAD
 import { Check } from 'lucide-react';
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
+=======
+
+import { Check } from 'lucide-react';
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 export function ServiceIncludes() {
   return (
     <div className='bg-zion-blue-dark rounded-lg border border-zion-blue-light p-8 my-20'>

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { cn } from '@/lib/utils';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
@@ -5,6 +6,14 @@ import { StarIcon } from 'lucide-react';
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 import Image from 'next/image'; // Import next/image
 import React, { useState } from 'react'; // Import useState
+=======
+import { cn } from "@/lib/utils";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { StarIcon } from 'lucide-react';
+import Image from 'next/image', // Import next/image
+import React, { useState } from 'react', // Import useState
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 
 interface ListingScoreCardProps {
   title: string;
@@ -42,12 +51,21 @@ export function ListingScoreCard({
           {' '}
           {/* Added relative for Image layout fill */}
           <Image
+<<<<<<< HEAD
             src={image}
             alt={title}
             className='object-cover transition-transform duration-300 group-hover:scale-105'
             onError={() => setMainImageError(true)}
             priority={false}
             sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw' // General sizes
+=======
+            src = {image,}
+            alt = {title,}
+            className="object-cover transition-transform duration-300 group-hover:scale-105"
+            onError = {(,) => setMainImageError(true),}
+            priority = {false,}
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" // General sizes
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
           />
         </div>
       )}
@@ -86,6 +104,7 @@ export function ListingScoreCard({
         </p>
 
         {rating > 0 && (
+<<<<<<< HEAD
           <div className='flex items-center gap-1 mb-4'>
             <div className='flex'>
               {[1, 2, 3, 4, 5].map(star => (
@@ -97,6 +116,19 @@ export function ListingScoreCard({
                       ? 'text-zion-cyan fill-zion-cyan'
                       : 'text-zion-slate-light'
                   )}
+=======
+          <div className="flex items-center gap-1 mb-4">
+            <div className="flex">
+              {[1, 2, 3, 4, 5].map((star,) => (
+                <StarIcon 
+                  key = {star,}
+                  className = {cn(
+                    "h-4 w-4", 
+                    star <= Math.round(rating) 
+                      ? "text-zion-cyan fill-zion-cyan" 
+                      : "text-zion-slate-light"
+                  ),}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
                 />
               ))}
             </div>
@@ -107,6 +139,7 @@ export function ListingScoreCard({
         )}
 
         {tags && tags.length > 0 && (
+<<<<<<< HEAD
           <div className='flex flex-wrap gap-2 mb-4'>
             {tags.map((tag, i) => (
               <Badge
@@ -114,6 +147,11 @@ export function ListingScoreCard({
                 variant='outline'
                 className='border-zion-slate-dark text-zion-slate-light'
               >
+=======
+          <div className="flex flex-wrap gap-2 mb-4">
+            {tags.map((tag, i,) => (
+              <Badge key={i} variant="outline" className="border-zion-slate-dark text-zion-slate-light">
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
                 {tag}
               </Badge>
             ))}
@@ -131,11 +169,19 @@ export function ListingScoreCard({
                 {' '}
                 {/* Added relative and overflow-hidden */}
                 <Image
+<<<<<<< HEAD
                   src={authorImage}
                   alt={author}
                   className='object-cover rounded-full'
                   onError={() => setAuthorImageError(true)}
                   priority={false}
+=======
+                  src = {authorImage,}
+                  alt = {author,}
+                  className="object-cover rounded-full"
+                  onError = {(,) => setAuthorImageError(true),}
+                  priority = {false,}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
                 />
               </div>
             ) : (

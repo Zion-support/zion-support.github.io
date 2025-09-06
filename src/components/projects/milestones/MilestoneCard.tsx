@@ -15,6 +15,7 @@ import { useDisputeCheck } from '@/hooks/useDisputeCheck';
 import { DisputeStatusBadge } from '@/components/disputes/DisputeStatusBadge';
 import { RaiseDisputeButton } from '@/components/disputes/RaiseDisputeButton';
 
+<<<<<<< HEAD
 interface MilestoneCardProps {
   id: string;
   projectId: string;
@@ -25,6 +26,28 @@ interface MilestoneCardProps {
   dueDate?: string;
   onApprove?: (id: string) => Promise<void>;
   onReject?: (id: string) => Promise<void>;
+=======
+import React from 'react';
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { format } from 'date-fns';
+import { Check, ArrowDown, X } from 'lucide-react';
+import { useDisputeCheck } from '@/hooks/useDisputeCheck';
+import { DisputeStatusBadge } from '@/components/disputes/DisputeStatusBadge';
+import { RaiseDisputeButton } from '@/components/disputes/RaiseDisputeButton';
+interface MilestoneCardProps {
+  id: string,
+  projectId: string,
+  title: string,
+  description?: string,
+  amount: number,
+  status: string,
+  dueDate?: string,
+  onApprove?: (id: string,) => Promise<void>,
+  onReject?: (id: string,) => Promise<void>
+}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 
 export function MilestoneCard({
   id,
@@ -112,25 +135,43 @@ export function MilestoneCard({
       <CardFooter className='pt-2 flex justify-between'>
         <div>
           {status !== 'completed' && status !== 'rejected' && (
+<<<<<<< HEAD
             <RaiseDisputeButton
               projectId={projectId}
               milestoneId={id}
               variant='ghost'
               size='sm'
+=======
+            <RaiseDisputeButton 
+              projectId = {projectId,}
+              milestoneId = {id,}
+              variant="ghost"
+              size="sm"
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
             />
           )}
         </div>
 
         <div className='flex gap-2'>
           {status === 'pending' && onReject && !isUnderDispute && (
+<<<<<<< HEAD
             <Button variant='outline' size='sm' onClick={() => onReject(id)}>
               <X className='h-4 w-4 mr-1' /> Reject
+=======
+            <Button variant="outline" size="sm" onClick={(,) => onReject(id)}>
+              <X className="h-4 w-4 mr-1" /> Reject
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
             </Button>
           )}
 
           {status === 'pending' && onApprove && !isUnderDispute && (
+<<<<<<< HEAD
             <Button variant='default' size='sm' onClick={() => onApprove(id)}>
               <Check className='h-4 w-4 mr-1' /> Approve
+=======
+            <Button variant="default" size="sm" onClick={(,) => onApprove(id)}>
+              <Check className="h-4 w-4 mr-1" /> Approve
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
             </Button>
           )}
 
@@ -148,7 +189,11 @@ export function MilestoneCard({
     </Card>
   );
 }
+<<<<<<< HEAD
 =======
 }
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b

@@ -2,7 +2,11 @@
 
 import React from "react";
 import Link from "next/link";
+<<<<<<< HEAD
 import { ArrowRight, Phone } from 'lucide-react'
+=======
+import { ArrowRight, Phone } from 'lucide-react';
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 import { Button } from "@/components/ui/button";
 import { AppStoreButtons } from "./AppStoreButtons";
 export const MobileAppHero: React.FC = () => {
@@ -24,8 +28,8 @@ export const MobileAppHero: React.FC = () => {
             
             <div className="mb-8">
               <AppStoreButtons 
-                appStoreUrl={appStoreUrl}
-                googlePlayUrl={googlePlayUrl}
+                appStoreUrl = {appStoreUrl,}
+                googlePlayUrl = {googlePlayUrl,}
               />
             </div>
             

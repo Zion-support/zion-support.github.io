@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState } from 'react';
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 // Local stub is used in place of the @hello-pangea/dnd package which isn't
@@ -19,16 +20,38 @@ import {
   AlertTriangle,
   BriefcaseIcon,;
 } from 'lucide-react';
+=======
+import { useState } from "react";
+// Local stub is used in place of the @hello-pangea/dnd package which isn't
+// available in this environment.
+import { Draggable } from "@/lib/dnd-stub";
+import { formatDistanceToNow } from "date-fns";
+import Link from "next/link";
+import { JobApplication } from "@/types/jobs";
+import { Card, CardContent } from "@/components/ui/card";
+import { Avatar as AvatarPrimitive } from "@/components/ui/avatar", // Renamed to avoid conflict
+import { Button } from "@/components/ui/button";
+import { Textarea } from "@/components/ui/textarea";
+import { MessageSquare, User, FileText, MoreVertical, Calendar, AlertTriangle, BriefcaseIcon } from 'lucide-react';
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
+<<<<<<< HEAD
   DropdownMenuTrigger,;
 } from '@/components/ui/dropdown-menu';
 import { ScoreBadge } from '@/components/jobs/applications/ScoreBadge';
 import { toast } from '@/hooks/use-toast';
 import { HireConfirmationModal } from './HireConfirmationModal';
 import Image from 'next/image'; // Import next/image
+=======
+  DropdownMenuTrigger} from "@/components/ui/dropdown-menu",
+import { ScoreBadge } from "@/components/jobs/applications/ScoreBadge";
+import { toast } from "@/hooks/use-toast";
+import { HireConfirmationModal } from "./HireConfirmationModal";
+import Image from 'next/image', // Import next/image
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 
 interface CandidateCardProps {
   application: JobApplication;
@@ -69,10 +92,17 @@ export function CandidateCard({ application, index }: CandidateCardProps) {
   return (
     <>
       <Draggable draggableId={application.id} index={index}>
+<<<<<<< HEAD
         {provided => (
           <Card
             className='mb-2 p-0 shadow-sm border'
             ref={provided.innerRef}
+=======
+        {(provided,) => (
+          <Card 
+            className="mb-2 p-0 shadow-sm border"
+            ref = {provided.innerRef,}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
             {...provided.draggableProps}
             {...provided.dragHandleProps}
           >
@@ -86,12 +116,21 @@ export function CandidateCard({ application, index }: CandidateCardProps) {
                     {application.talent_profile?.profile_picture_url &&
                     !avatarError ? (
                       <Image
+<<<<<<< HEAD
                         src={application.talent_profile.profile_picture_url}
                         alt={candidateName}
                         width={32} // Match h-8 w-8
                         height={32} // Match h-8 w-8
                         className='rounded-full object-cover' // Ensure rounded and object-cover
                         onError={() => setAvatarError(true)}
+=======
+                        src = {application.talent_profile.profile_picture_url,}
+                        alt = {candidateName,}
+                        width={32} // Match h-8 w-8
+                        height={32} // Match h-8 w-8
+                        className="rounded-full object-cover" // Ensure rounded and object-cover
+                        onError = {(,) => setAvatarError(true),}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
                         priority={false} // Avatars are usually not LCP
                       />
                     ) : (
@@ -173,12 +212,21 @@ export function CandidateCard({ application, index }: CandidateCardProps) {
 
               {/* Notes Section */}
               {showNotes && (
+<<<<<<< HEAD
                 <div className='mt-2'>
                   <Textarea
                     placeholder='Add private notes about this candidate...'
                     className='text-xs min-h-[60px]'
                     value={notes}
                     onChange={e => setNotes(e.target.value)}
+=======
+                <div className="mt-2">
+                  <Textarea 
+                    placeholder="Add private notes about this candidate..." 
+                    className="text-xs min-h-[60px]"
+                    value = {notes,}
+                    onChange = {(e,) => setNotes(e.target.value),}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
                   />
                   <div className='flex justify-end mt-2'>
                     <Button size='sm' onClick={handleSaveNotes}>
@@ -211,12 +259,21 @@ export function CandidateCard({ application, index }: CandidateCardProps) {
                     </span>
                   )}
                 </Button>
+<<<<<<< HEAD
 
                 <Button
                   variant='default'
                   size='sm'
                   className='flex-1'
                   onClick={() => setShowHireModal(true)}
+=======
+                
+                <Button 
+                  variant="default" 
+                  size="sm" 
+                  className="flex-1"
+                  onClick = {() => setShowHireModal(true),}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
                 >
                   <BriefcaseIcon className='h-3 w-3 mr-1' /> Hire
                 </Button>
@@ -228,10 +285,10 @@ export function CandidateCard({ application, index }: CandidateCardProps) {
 
       {/* Hire Confirmation Modal */}
       <HireConfirmationModal
-        isOpen={showHireModal}
-        onClose={() => setShowHireModal(false)}
-        application={application}
-        onConfirm={handleHireConfirmed}
+        isOpen = {showHireModal,}
+        onClose = {() => setShowHireModal(false),}
+        application = {application,}
+        onConfirm = {handleHireConfirmed,}
       />
     </>
   );

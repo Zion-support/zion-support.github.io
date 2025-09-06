@@ -1,7 +1,11 @@
 
 import { ApplicationStatus } from "@/types/jobs";
 import { Progress } from "@/components/ui/progress";
+<<<<<<< HEAD
 import { CheckCircle2, Circle, CircleDot } from 'lucide-react'
+=======
+import { CheckCircle2, Circle, CircleDot } from 'lucide-react';
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 import { cn } from "@/lib/utils";
 interface ApplicationProgressProps {
   status: ApplicationStatus,

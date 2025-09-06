@@ -1,7 +1,13 @@
+<<<<<<< HEAD
 import React from 'react';
 import { Shield, Lock, Award, CheckCircle } from 'lucide-react';
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
+=======
+
+import React from "react";
+import { Shield, Lock, Award, CheckCircle } from 'lucide-react';
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 export function EnterpriseTrustBadges() {
   return (
     <section className='py-10 px-4 md:px-6 border-t border-b border-border'>

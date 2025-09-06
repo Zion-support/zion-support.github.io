@@ -7,6 +7,7 @@ import { Input } from '@/components/ui/input';
 import { cn } from '@/lib/utils';
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
+<<<<<<< HEAD
 interface Conversation {
   id: string;
 name: string;
@@ -19,6 +20,30 @@ isTyping?: boolean ;
   conversations: Conversation[];
   activeConversation?: string;
   onSelectConversation: (id: string) => void;
+=======
+import React from "react";
+import { Card } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Search } from 'lucide-react';
+import { Input } from "@/components/ui/input";
+import { cn } from "@/lib/utils";
+interface Conversation {
+  id: string,
+  name: string,
+  avatar?: string,
+  lastMessage: string,
+  timestamp: string,
+  unreadCount: number,
+  isTyping?: boolean
+}
+
+interface MobileConversationListProps {
+  conversations: Conversation[],
+  activeConversation?: string,
+  onSelectConversation: (id: string,) => void
+}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 
 export function MobileConversationList({
   conversations,
@@ -50,6 +75,7 @@ export function MobileConversationList({
           </Badge>
         </div>
       </div>
+<<<<<<< HEAD
 
       <div className='space-y-2 pb-24'>
         {conversations.map(conversation => (
@@ -60,6 +86,18 @@ export function MobileConversationList({
               activeConversation === conversation.id && 'bg-primary/5'
             )}
             onClick={() => onSelectConversation(conversation.id)}
+=======
+      
+      <div className="space-y-2 pb-24">
+        {conversations.map((conversation,) => (
+          <div
+            key = {conversation.id,}
+            className = {cn(
+              "px-4",
+              activeConversation === conversation.id && "bg-primary/5"
+            ),}
+            onClick = {() => onSelectConversation(conversation.id),}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
           >
             <div className='flex items-center gap-3 py-3 cursor-pointer'>
               <Avatar>

@@ -1,8 +1,15 @@
+<<<<<<< HEAD
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Sparkles, RefreshCcw } from 'lucide-react';
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
+=======
+
+import { Card } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Sparkles, RefreshCcw } from 'lucide-react';
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 export interface EmptyMatchesCardProps {
   onRefresh: () => void;
   isProcessing: boolean;
@@ -20,7 +27,15 @@ export function EmptyMatchesCard({
       <p className='text-muted-foreground mb-6'>
         Run AI matching to find talents that match this job&apos;s requirements.
       </p>
+<<<<<<< HEAD
       <Button onClick={onRefresh} disabled={isProcessing} className='mx-auto'>
+=======
+      <Button 
+        onClick = {onRefresh,}
+        disabled = {isProcessing,}
+        className="mx-auto"
+      >
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
         {isProcessing ? (
           <>
             <RefreshCcw className='mr-2 h-4 w-4 animate-spin' />            Processing...
@@ -48,7 +63,11 @@ export function EmptyMatchesCard({
     </Card>
   );
 }
+<<<<<<< HEAD
 =======
 }
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b

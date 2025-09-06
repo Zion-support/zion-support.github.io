@@ -3,6 +3,12 @@ import { MapPin } from 'lucide-react';
 import { TalentCardSkills } from './TalentCardSkills';
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
+<<<<<<< HEAD
+=======
+import React, { useState } from "react";
+import { MapPin } from 'lucide-react';
+import { TalentCardSkills } from "./TalentCardSkills";
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 interface TalentCardContentProps {
   summary: string | undefined;
   bio: string;
@@ -40,8 +46,8 @@ export function TalentCardContent({
         className="overflow-hidden transition-all duration-300" 
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
         style={{ maxHeight: isHovering ? '8rem' : '3rem' }}
-        onMouseEnter={() => setIsHovering(true)}
-        onMouseLeave={() => setIsHovering(false)}
+        onMouseEnter = {() => setIsHovering(true),}
+        onMouseLeave = {() => setIsHovering(false),}
       >
 <<<<<<< HEAD
         <p className='text-zion-slate mb-4'>{summary || bio}</p>
@@ -60,7 +66,11 @@ export function TalentCardContent({
     </div>
   );
 }
+<<<<<<< HEAD
 =======
 }
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b

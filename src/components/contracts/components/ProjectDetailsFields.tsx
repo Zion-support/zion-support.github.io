@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { format } from 'date-fns';
 import { CalendarIcon } from 'lucide-react';
 import { UseFormReturn, ControllerRenderProps } from 'react-hook-form';
@@ -21,6 +22,26 @@ import { Calendar } from '@/components/ui/calendar';
 import { ContractFormValues } from './ContractForm';
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
+=======
+
+import { format } from "date-fns";
+import { CalendarIcon } from 'lucide-react';
+import { UseFormReturn, ControllerRenderProps } from "react-hook-form";
+import { 
+  FormField,
+  FormItem, 
+  FormLabel, 
+  FormControl, 
+  FormDescription, 
+  FormMessage 
+} from "@/components/ui/form",
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Button } from "@/components/ui/button";
+import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
+import { Calendar } from "@/components/ui/calendar";
+import { ContractFormValues } from "./ContractForm";
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 interface ProjectDetailsFieldsProps {
   form: UseFormReturn<ContractFormValues>;
 =======
@@ -33,6 +54,7 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {
   return (
     <>
       <FormField
+<<<<<<< HEAD
         control={form.control}
         name='projectName'
         render={({
@@ -45,8 +67,11 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {
             <FormControl>
               <Input placeholder='AI Website Development' {...field} />            </FormControl>
 =======
+=======
+        control = {form.control,}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
         name="projectName"
-        render={({ field }: { field: ControllerRenderProps<ContractFormValues, "projectName"> }) => (
+        render={({ field }: { field: ControllerRenderProps<ContractFormValues, "projectName"> },) => (
           <FormItem>
             <FormLabel>Project Name</FormLabel>
             <FormControl>
@@ -75,10 +100,14 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {
 =======
       
       <FormField
-        control={form.control}
+        control = {form.control,}
         name="scopeSummary"
+<<<<<<< HEAD
         render={({ field }: { field: ControllerRenderProps<ContractFormValues, "scopeSummary"> }) => (
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+=======
+        render={({ field }: { field: ControllerRenderProps<ContractFormValues, "scopeSummary"> },) => (
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
           <FormItem>
             <FormLabel>Scope Summary</FormLabel>
             <FormControl>
@@ -116,9 +145,9 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {
       
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <FormField
-          control={form.control}
+          control = {form.control,}
           name="startDate"
-          render={({ field }: { field: ControllerRenderProps<ContractFormValues, "startDate"> }) => (
+          render={({ field }: { field: ControllerRenderProps<ContractFormValues, "startDate"> },) => (
             <FormItem className="flex flex-col">
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
               <FormLabel>Start Date</FormLabel>
@@ -127,9 +156,14 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {
                 <PopoverTrigger asChild>
                   <FormControl>
                     <Button
+<<<<<<< HEAD
                       variant={'outline'}
                       className={`w-full pl-3 text-left font-normal ${!field.value && 'text-muted-foreground'}`}
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+                      variant = {"outline",}
+                      className={`w-full pl-3 text-left font-normal ${!field.value && "text-muted-foreground"}`}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
                     >
                       {field.value ? (
                         format(field.value, 'PPP')
@@ -142,6 +176,7 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {
                 </PopoverTrigger>
                 <PopoverContent className='w-auto p-0' align='start'>
                   <Calendar
+<<<<<<< HEAD
                     mode='single'
                     selected={field.value}
                     onSelect={field.onChange}
@@ -149,6 +184,12 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {
 =======
                     disabled={(date) => date < new Date()}
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+=======
+                    mode="single"
+                    selected = {field.value,}
+                    onSelect = {field.onChange,}
+                    disabled = {(date,) => date < new Date(),}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
                     initialFocus
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                   />
@@ -171,9 +212,9 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {
 =======
         
         <FormField
-          control={form.control}
+          control = {form.control,}
           name="endDate"
-          render={({ field }: { field: ControllerRenderProps<ContractFormValues, "endDate"> }) => (
+          render={({ field }: { field: ControllerRenderProps<ContractFormValues, "endDate"> },) => (
             <FormItem className="flex flex-col">
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
               <FormLabel>End Date (Optional)</FormLabel>
@@ -182,9 +223,14 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {
                 <PopoverTrigger asChild>
                   <FormControl>
                     <Button
+<<<<<<< HEAD
                       variant={'outline'}
                       className={`w-full pl-3 text-left font-normal ${!field.value && 'text-muted-foreground'}`}
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+                      variant = {"outline",}
+                      className={`w-full pl-3 text-left font-normal ${!field.value && "text-muted-foreground"}`}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
                     >
                       {field.value ? (
                         format(field.value, 'PPP')
@@ -197,6 +243,7 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {
                 </PopoverTrigger>
                 <PopoverContent className='w-auto p-0' align='start'>
                   <Calendar
+<<<<<<< HEAD
                     mode='single'
                     selected={field.value || undefined}
                     onSelect={field.onChange}
@@ -204,6 +251,12 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {
 =======
                     disabled={(date) => date < form.getValues("startDate")}
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+=======
+                    mode="single"
+                    selected = {field.value || undefined,}
+                    onSelect = {field.onChange,}
+                    disabled = {(date,) => date < form.getValues("startDate"),}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
                     initialFocus
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                   />

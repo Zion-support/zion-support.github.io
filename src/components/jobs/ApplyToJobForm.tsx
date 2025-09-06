@@ -1,4 +1,8 @@
+<<<<<<< HEAD
     
+=======
+import { useState } from "react";
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 import { useRouter } from 'next/router';
 import { useJobApplications } from "@/hooks/useJobApplications";
 import { useResume } from "@/hooks/useResume";
@@ -8,7 +12,11 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Alert, AlertDescription } from "@/components/ui/alert";
+<<<<<<< HEAD
 import { AlertCircle, FileText, Loader2 } from 'lucide-react'
+=======
+import { AlertCircle, FileText, Loader2 } from 'lucide-react';
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 import { formatDistanceToNow } from "date-fns";
 import { Job } from "@/types/jobs";
 import { toast } from "sonner";
@@ -29,8 +37,13 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [error, setError] = useState<string | null>(null);
   
+<<<<<<< HEAD
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+=======
+  const handleSubmit = async (e: React.FormEvent,) => {
+    e.preventDefault(),
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
     
     if (!user) {
       toast.error("You must be logged in to apply");
@@ -89,9 +102,9 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
           <Label htmlFor="coverLetter">Cover Letter</Label>
           <Textarea
             id="coverLetter"
-            value={coverLetter}
-            onChange={(e) => setCoverLetter(e.target.value)}
-            rows={6}
+            value = {coverLetter,}
+            onChange = {(e,) => setCoverLetter(e.target.value),}
+            rows = {6,}
             placeholder="Introduce yourself and explain why you are a good fit for this job..."
             className="mt-1"
           />
@@ -109,15 +122,15 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
             </div>
           ) : resumes && resumes.length > 0 ? (
             <Select
-              value={selectedResumeId}
-              onValueChange={setSelectedResumeId}
+              value = {selectedResumeId,}
+              onValueChange = {setSelectedResumeId,}
             >
               <SelectTrigger className="mt-1">
                 <SelectValue placeholder="Select a resume" />
               </SelectTrigger>
               <SelectContent>
                 <SelectItem value="">No resume</SelectItem>
-                {resumes.map((resume) => {
+                {resumes.map((resume,) => {
                   if (resume.id) {
                     return (
                       <SelectItem key={resume.id} value={resume.id}>
@@ -139,7 +152,7 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
                 variant="outline" 
                 size="sm" 
                 type="button"
-                onClick={() => router.push("/dashboard/talent/portfolio")}
+                onClick = {(,) => router.push("/dashboard/talent/portfolio"),}
               >
                 Create Resume
               </Button>
@@ -154,7 +167,7 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
             type="file"
             accept=".pdf"
             className="mt-1"
-            onChange={(e) => setResumeFile(e.target.files?.[0] || null)}
+            onChange = {(e,) => setResumeFile(e.target.files?.[0] || null),}
           />
         </div>
       </div>
@@ -163,7 +176,7 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
         <Button
           type="button"
           variant="outline"
-          disabled={isSubmitting}
+          disabled = {isSubmitting,}
           onClick={() => {
             if (onSuccess) onSuccess();
           }}

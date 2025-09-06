@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { GradientHeading } from './GradientHeading';
 import { Button } from './ui/button';
 import { CheckCircle2 } from 'lucide-react';
@@ -11,6 +12,13 @@ import {
 } from './ui/table';
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
+=======
+
+import { GradientHeading } from "./GradientHeading";
+import { Button } from "./ui/button";
+import { CheckCircle2 } from 'lucide-react';
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "./ui/table";
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 export function ComparisonSection() {
   return (
     <section className='py-20 bg-zion-blue-dark'>
@@ -51,6 +59,7 @@ export function ComparisonSection() {
               </TableHeader>
               <TableBody>
                 {[
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                   {
@@ -99,6 +108,13 @@ export function ComparisonSection() {
 <<<<<<< HEAD
                     </TableCell>                  </TableRow>
                   { service: "Marketplace Listings", traditional: "$99/mo", zion: "Free", savings: "100%" }].map((item, index) => (
+=======
+                  { service: "Server Hosting", traditional: "$1,200/mo", zion: "$650/mo", savings: "45%" },
+                  { service: "IT Equipment", traditional: "Full Purchase", zion: "Flexible Rental", savings: "60%" },
+                  { service: "24/7 Support", traditional: "$2,500/mo", zion: "$950/mo", savings: "62%" },
+                  { service: "Storage Solutions", traditional: "$800/mo", zion: "$350/mo", savings: "56%" },
+                  { service: "Marketplace Listings", traditional: "$99/mo", zion: "Free", savings: "100%" }].map((item, index,) => (
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
                   <TableRow key={index} className="border-b border-zion-blue">
                     <TableCell className="font-medium text-white">{item.service}</TableCell>
                     <TableCell className="text-center text-zion-slate-light">{item.traditional}</TableCell>

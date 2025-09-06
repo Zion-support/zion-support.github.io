@@ -12,6 +12,16 @@ import { Loader2, Info, ThumbsUp } from 'lucide-react';
 import { PricingSuggestion } from '@/services/pricingSuggestionService';
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
+<<<<<<< HEAD
+=======
+import React from "react";
+import { Button } from "@/components/ui/button";
+import { TooltipProvider, Tooltip, TooltipTrigger, TooltipContent } from "@/components/ui/tooltip";
+import { Card, CardContent } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Loader2, Info, ThumbsUp } from 'lucide-react';
+import { PricingSuggestion } from "@/services/pricingSuggestionService";
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 interface PricingSuggestionBoxProps {
   suggestion: PricingSuggestion | null;
   isLoading: boolean;
@@ -22,8 +32,12 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({
   suggestion,
   isLoading,
   onApplySuggestion,
+<<<<<<< HEAD
   rateType,
 }) => {
+=======
+  rateType},) => {
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
   if (isLoading) {
     return (
       <Card className='border border-dashed border-muted'>
@@ -110,10 +124,16 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({
               <TooltipTrigger asChild>
                 <Button
 <<<<<<< HEAD
+<<<<<<< HEAD
                   variant='default'
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                   onClick={onApplySuggestion}
                   className='w-full'
+=======
+                  variant="default"
+                  onClick = {onApplySuggestion,}
+                  className="w-full"
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
                 >
                   <ThumbsUp className='h-4 w-4 mr-2' /> Apply Suggestion                </Button>
 =======

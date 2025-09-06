@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { Header } from '@/components/Header';
 import { SEO } from '@/components/SEO';
@@ -6,6 +7,14 @@ import { Button } from '@/components/ui/button';
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 import Link from 'next/link';
 
+=======
+import React from "react";
+import { Header } from "@/components/Header";
+import { SEO } from "@/components/SEO";
+import { GradientHeading } from "@/components/GradientHeading";
+import { Button } from "@/components/ui/button";
+import Link from 'next/link';
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 export default function TalentMarketplace() {
   const schema = {
     '@context': 'https://schema.org',

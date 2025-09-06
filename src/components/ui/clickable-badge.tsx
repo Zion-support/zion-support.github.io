@@ -4,10 +4,21 @@ import { cn } from '@/lib/utils';
 import { badgeVariants } from '@/components/ui/badge-variants';
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
+<<<<<<< HEAD
 export interface ClickableBadgeProps
   extends React.HTMLAttributes<HTMLDivElement> {
   onRemove?: () => void;
   variant?: 'default' | 'secondary' | 'destructive' | 'outline';
+=======
+import React from "react";
+import { X } from 'lucide-react';
+import { cn } from "@/lib/utils";
+import { badgeVariants } from "@/components/ui/badge-variants";
+export interface ClickableBadgeProps extends React.HTMLAttributes<HTMLDivElement> {
+  onRemove?: () => void,
+  variant?: "default" | "secondary" | "destructive" | "outline"
+}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 
 export function ClickableBadge({
   children,
@@ -37,11 +48,18 @@ export function ClickableBadge({
       {onRemove && (
         <button
 <<<<<<< HEAD
+<<<<<<< HEAD
           type='button'
           onClick={e => {
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
             e.stopPropagation();
             onRemove();
+=======
+          type="button"
+          onClick={(e,) => {
+            e.stopPropagation(),
+            onRemove()
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
           }}
           className='ml-1 rounded-full p-0.5 hover:bg-background/20'
           aria-label='Remove'

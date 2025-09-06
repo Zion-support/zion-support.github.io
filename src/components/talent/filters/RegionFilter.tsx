@@ -3,6 +3,12 @@ import { Checkbox } from '@/components/ui/checkbox';
 import { RegionFilterProps } from '@/types/filters';
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
+<<<<<<< HEAD
+=======
+import { ChevronDown, ChevronUp } from 'lucide-react';
+import { Checkbox } from "@/components/ui/checkbox";
+import { RegionFilterProps } from "@/types/filters";
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 const REGION_OPTIONS = [
   { id: 'North America', label: 'North America' },
   { id: 'Europe', label: 'Europe' },
@@ -22,8 +28,13 @@ export function RegionFilter({
   return (
     <div className='mb-6 border-b border-zion-blue-light pb-6'>
       <button
+<<<<<<< HEAD
         onClick={toggleSection}
         className='flex w-full items-center justify-between text-white font-medium'
+=======
+        onClick = {toggleSection,}
+        className="flex w-full items-center justify-between text-white font-medium"
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
       >
         <span>Region</span>
         {expanded ? (
@@ -45,11 +56,17 @@ export function RegionFilter({
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
               <Checkbox
                 id={`region-${region.id}`}
+<<<<<<< HEAD
                 checked={selectedRegions.includes(region.id)}
                 onCheckedChange={() => toggleRegion(region.id)}
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                 className='border-zion-slate-light data-[state=checked]:bg-zion-purple data-[state=checked]:border-zion-purple'
+=======
+                checked = {selectedRegions.includes(region.id),}
+                onCheckedChange = {() => toggleRegion(region.id),}
+                className="border-zion-slate-light data-[state=checked]:bg-zion-purple data-[state=checked]:border-zion-purple"
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
               />
               <label
                 htmlFor={`region-${region.id}`}

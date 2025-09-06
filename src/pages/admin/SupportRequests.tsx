@@ -29,6 +29,19 @@ import { Search, Filter } from 'lucide-react';
 import { SEO } from '@/components/SEO';
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
+<<<<<<< HEAD
+=======
+import React, { useState } from "react";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
+import { Badge } from "@/components/ui/badge";
+import { Search, Filter } from 'lucide-react';
+import { SEO } from "@/components/SEO";
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 // Mock data for support requests
 const MOCK_SUPPORT_REQUESTS = [
   {
@@ -238,10 +251,17 @@ export default function SupportRequests() {
               <div className='relative flex-1'>
                 <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400' />
                 <Input
+<<<<<<< HEAD
                   placeholder='Search by ID, user or issue...'
                   value={searchQuery}
                   onChange={e => setSearchQuery(e.target.value)}
                   className='pl-10'
+=======
+                  placeholder="Search by ID, user or issue..."
+                  value = {searchQuery,}
+                  onChange = {(e,) => setSearchQuery(e.target.value),}
+                  className="pl-10"
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
                 />
               </div>
 
@@ -320,7 +340,11 @@ export default function SupportRequests() {
                     </TableRow>
                   </TableHeader>
                   <TableBody>
+<<<<<<< HEAD
                     {filteredRequests.map(request => (
+=======
+                    {filteredRequests.map((request,) => (
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
                       <TableRow key={request.id}>
                         <TableCell className='font-medium'>
                           {request.id}

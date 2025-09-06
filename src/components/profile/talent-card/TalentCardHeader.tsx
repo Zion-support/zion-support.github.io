@@ -4,6 +4,13 @@ import { TalentCardAvatar } from './TalentCardAvatar';
 import { TalentCardAvailability } from './TalentCardAvailability';
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
+<<<<<<< HEAD
+=======
+import React from "react";
+import { BadgeCheck } from 'lucide-react';
+import { TalentCardAvatar } from "./TalentCardAvatar";
+import { TalentCardAvailability } from "./TalentCardAvailability";
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 interface TalentCardHeaderProps {
   fullName: string;
   professionalTitle: string;

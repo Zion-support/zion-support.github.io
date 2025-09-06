@@ -22,6 +22,26 @@ import {
 import { useCurrency } from '@/hooks/useCurrency';
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
+<<<<<<< HEAD
+=======
+import { useState } from "react";
+import { useAuth } from "@/hooks/useAuth";
+import { ChatWidget } from "@/components/ChatWidget";
+import { useRouter } from "next/router";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import Skeleton from "@/components/ui/skeleton";
+import ImageWithRetry from '@/components/ui/ImageWithRetry';
+import { Star, MessageSquare, Brain, Shield } from 'lucide-react';
+import { cn } from "@/lib/utils";
+import Link from 'next/link';
+import { MARKETPLACE_LISTINGS } from "@/data/marketplaceData";
+import { toast } from "@/hooks/use-toast";
+import { PaymentButton } from "@/components/transactions/PaymentButton";
+import { ProfileContact } from "@/components/profile/ProfileContact";
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
+import { useCurrency } from '@/hooks/useCurrency';
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 export default function ListingDetail() {
   // useParams may be untyped in this environment, so avoid passing a
   // type argument and cast the result instead to prevent TS2347 errors.
@@ -106,6 +126,7 @@ export default function ListingDetail() {
                 <div className='aspect-[16/9] w-full relative'>
                   {listing.images && listing.images.length > 0 ? (
                     <ImageWithRetry
+<<<<<<< HEAD
                       src={
                         listing.images[selectedImageIndex] ||
                         listing.images[0] ||
@@ -114,6 +135,12 @@ export default function ListingDetail() {
                       alt={listing.title}
                       className='object-cover'
                       fallbackSrc='/placeholder.svg'
+=======
+                      src = {listing.images[selectedImageIndex] || listing.images[0] || "/placeholder.svg",}
+                      alt = {listing.title,}
+                      className="object-cover"
+                      fallbackSrc="/placeholder.svg"
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
                     />
                   ) : (
                     <div className='w-full h-full flex items-center justify-center bg-zion-blue-light/20'>
@@ -125,6 +152,7 @@ export default function ListingDetail() {
                 </div>
 
                 {listing.images && listing.images.length > 1 && (
+<<<<<<< HEAD
                   <div className='flex p-4 gap-2 overflow-x-auto'>
                     {listing.images.map((image, index) => (
                       <div
@@ -141,9 +169,20 @@ export default function ListingDetail() {
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                         )}
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+                  <div className="flex p-4 gap-2 overflow-x-auto">
+                    {listing.images.map((image, index,) => (
+                      <div 
+                        key = {index,}
+                        onClick = {(,) => setSelectedImageIndex(index),}
+                        className = {cn(
+                          "w-20 h-20 flex-shrink-0 cursor-pointer rounded overflow-hidden border-2",
+                          index === selectedImageIndex ? "border-zion-purple" : "border-transparent"
+                        ),}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
                       >
                         <ImageWithRetry
-                          src={image}
+                          src = {image,}
                           alt={`${listing.title} - image ${index + 1}`}
                           className='object-cover'
                           fallbackSrc='/placeholder.svg'                        />
@@ -213,6 +252,7 @@ export default function ListingDetail() {
 
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                 {/* Tags */}
+<<<<<<< HEAD
                 <div className='mt-8'>
                   <h3 className='text-xl font-bold text-white mb-4'>Tags</h3>
                   <div className='flex flex-wrap gap-2'>
@@ -223,6 +263,12 @@ export default function ListingDetail() {
                         className='border-zion-slate-dark text-zion-slate-light py-1 px-3'
                       >                        {tag}
 =======
+=======
+                <div className="mt-8">
+                  <h3 className="text-xl font-bold text-white mb-4">Tags</h3>
+                  <div className="flex flex-wrap gap-2">
+                    {listing.tags.map((tag, i,) => (
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
                       <Badge key={i} variant="outline" className="border-zion-slate-dark text-zion-slate-light py-1 px-3">
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                         {tag}
@@ -267,6 +313,7 @@ export default function ListingDetail() {
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                 {listing.rating && (
+<<<<<<< HEAD
                   <div className='flex items-center gap-2 mb-6'>
                     <div className='flex items-center'>
                       {[...Array(5)].map((_, i) => (
@@ -288,6 +335,17 @@ export default function ListingDetail() {
                             i < Math.floor(listing.rating!) ? "text-zion-cyan fill-zion-cyan" : "text-zion-slate-light"
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                           )}
+=======
+                  <div className="flex items-center gap-2 mb-6">
+                    <div className="flex items-center">
+                      {[...Array(5)].map((_, i,) => (
+                        <Star
+                          key = {i,}
+                          className = {cn(
+                            "h-5 w-5",
+                            i < Math.floor(listing.rating!) ? "text-zion-cyan fill-zion-cyan" : "text-zion-slate-light"
+                          ),}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
                         />
                       ))}
                     </div>
@@ -333,6 +391,7 @@ export default function ListingDetail() {
                   {listing.price !== null ? (
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                     <PaymentButton
+<<<<<<< HEAD
                       amount={listing.price}
                       serviceId={listing.id}
                       providerId={listing.author.id}
@@ -340,6 +399,14 @@ export default function ListingDetail() {
                       className='w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-6'
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                       onPaymentInitiated={() => {
+=======
+                      amount = {listing.price,}
+                      serviceId = {listing.id,}
+                      providerId = {listing.author.id,}
+                      buttonText="Buy Now"
+                      className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-6"
+                      onPaymentInitiated={(,) => {
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
                         toast({
                           title: 'Payment Processing',
                           description: 'Redirecting to secure checkout...',
@@ -347,20 +414,36 @@ export default function ListingDetail() {
                       }}
                     />
                   ) : (
+<<<<<<< HEAD
                     <Button
                       onClick={handleContact}
                       disabled={isLoading}
                       className='w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-6'
+=======
+                    <Button 
+                      onClick = {handleContact,}
+                      disabled = {isLoading,}
+                      className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-6"
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
                     >
                       {isLoading ? 'Processing...' : 'Request Quote'}
                     </Button>
                   )}
+<<<<<<< HEAD
 
                   <Button
                     variant='outline'
                     onClick={handleContact}
                     disabled={isLoading}
                     className='w-full border-zion-purple text-zion-cyan hover:bg-zion-purple/10'
+=======
+                  
+                  <Button 
+                    variant="outline" 
+                    onClick = {handleContact,}
+                    disabled = {isLoading,}
+                    className="w-full border-zion-purple text-zion-cyan hover:bg-zion-purple/10"
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
                   >
                     <MessageSquare className='h-4 w-4 mr-2' />
                     Contact Publisher
@@ -376,6 +459,7 @@ export default function ListingDetail() {
                     {listing.author.avatarUrl ? (
                       <div className='relative h-12 w-12 rounded-full overflow-hidden'>
                         <ImageWithRetry
+<<<<<<< HEAD
                           src={listing.author.avatarUrl}
                           alt={listing.author.name}
                           className='object-cover'
@@ -388,6 +472,13 @@ export default function ListingDetail() {
                       </div>
                     ) : (
 =======
+=======
+                          src = {listing.author.avatarUrl,}
+                          alt = {listing.author.name,}
+                          className="object-cover"
+                          onError={(e,) => {
+                            const target = e.target as HTMLImageElement,
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
                             target.src = "https: //ui-avatars.com/api/?name=" + encodeURIComponent(listing.author.name)
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                           }}
@@ -441,10 +532,10 @@ export default function ListingDetail() {
       </div>
 
       <ChatWidget
-        roomId={listing.id}
-        recipientId={listing.author.id}
-        isOpen={isChatOpen}
-        onClose={() => setIsChatOpen(false)}
+        roomId = {listing.id,}
+        recipientId = {listing.author.id,}
+        isOpen = {isChatOpen,}
+        onClose = {() => setIsChatOpen(false),}
       />
 
       {/* Contact Dialog */}
@@ -458,9 +549,13 @@ export default function ListingDetail() {
           </DialogHeader>
           <ProfileContact
             email={listing.author.email} // TypeScript now knows this might be undefined
+<<<<<<< HEAD
             profileName={listing.author.name}
             profileType='service'          />
 =======
+=======
+            profileName = {listing.author.name,}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
             profileType="service"
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
           />

@@ -2,12 +2,17 @@ import React from 'react';
 import Link from 'next/link';
 import { ErrorBoundary, FallbackProps } from 'react-error-boundary';
 import { AlertTriangle, Home, RefreshCw, Settings } from 'lucide-react';
+<<<<<<< HEAD
 import { logErrorToProduction } from '@/utils/productionLogger';
 import {
   logInfo,
   logErrorToProduction as prodLogError,;
 } from '@/utils/productionLogger';
 
+=======
+import {logErrorToProduction} from '@/utils/productionLogger';
+import { logInfo, logErrorToProduction as prodLogError } from '@/utils/productionLogger';
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 interface PageErrorFallbackProps extends FallbackProps {
   pageName?: string;
 
@@ -79,10 +84,17 @@ function PageErrorFallback({
           )}
 
           {/* Action Buttons */}
+<<<<<<< HEAD
           <div className='flex flex-col sm:flex-row gap-3 mb-6'>
             <button
               onClick={handleRefresh}
               className='flex-1 bg-blue-600 hover:bg-blue-700 text-white flex items-center justify-center px-4 py-2 rounded-lg font-medium transition-colors'
+=======
+          <div className="flex flex-col sm:flex-row gap-3 mb-6">
+            <button 
+              onClick = {handleRefresh,}
+              className="flex-1 bg-blue-600 hover:bg-blue-700 text-white flex items-center justify-center px-4 py-2 rounded-lg font-medium transition-colors"
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
             >
               <RefreshCw className='w-4 h-4 mr-2' />
               Try Again
@@ -151,6 +163,7 @@ export default function PageErrorBoundary({
   pageName,
   fallback,
 }: PageErrorBoundaryProps) {
+<<<<<<< HEAD
   const handleError = (error: Error, errorInfo: React.ErrorInfo) => {
     prodLogError(
       `PageErrorBoundary caught error on ${pageName || 'unknown page'}:`,
@@ -177,6 +190,28 @@ export default function PageErrorBoundary({
 
   
       onReset={() => {
+=======
+  const handleError = (error: Error, errorInfo: React.ErrorInfo,) => {
+    prodLogError(`PageErrorBoundary caught error on ${pageName || 'unknown page'}:`, error),
+    
+    logErrorToProduction(error instanceof Error ? error.message : String(error), error instanceof Error ? error : undefined, {
+      page: pageName || 'unknown',
+      componentStack: errorInfo.componentStack || undefined,
+      errorBoundary: 'PageErrorBoundary',
+      timestamp: new Date().toISOString()
+    })
+  },
+
+  const FallbackComponent = fallback || ((props: FallbackProps,) => (
+    <PageErrorFallback {...props} pageName={pageName} />
+  )),
+
+  return (
+    <ErrorBoundary
+      FallbackComponent = {FallbackComponent,}
+      onError = {handleError,}
+      onReset={(,) => {
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
         // Reset any application state if needed
         logInfo(`Resetting error boundary for ${pageName || 'page'}`);
       }}

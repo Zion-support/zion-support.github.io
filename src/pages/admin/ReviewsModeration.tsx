@@ -15,6 +15,18 @@ import { toast } from '@/components/ui/use-toast';
 import { logErrorToProduction } from '@/utils/productionLogger';
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
+<<<<<<< HEAD
+=======
+import { SEO } from "@/components/SEO";
+import { ReviewsModerationTable } from "@/components/admin/reviews/ReviewsModerationTable";
+import { ProtectedRoute } from "@/components/ProtectedRoute";
+import { useState, useEffect } from "react";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Star, AlertTriangle } from 'lucide-react';
+import { toast } from "@/components/ui/use-toast";
+import { logErrorToProduction } from '@/utils/productionLogger';
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 function ReviewsModerationContent() {
   const [activeTab, setActiveTab] = useState('pending');
   const [reviews, setReviews] = useState([]);
@@ -57,11 +69,17 @@ function ReviewsModerationContent() {
     }
   };
 
+<<<<<<< HEAD
   useEffect(() => {
 <<<<<<< HEAD
     fetchReviews();
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   }, [activeTab]);
+=======
+  useEffect((,) => {
+    fetchReviews()
+  }, [activeTab]),
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 
   const handleRefresh = () => {
     fetchReviews();
@@ -120,11 +138,17 @@ function ReviewsModerationContent() {
               
               <TabsContent value="pending" className="mt-0">
                 <ReviewsModerationTable 
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                   reviews={reviews}
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                   isLoading={isLoading}
                   onRefresh={handleRefresh}
+=======
+                  reviews = {reviews,}
+                  isLoading = {isLoading,}
+                  onRefresh = {handleRefresh,}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
                 />
               </TabsContent>
 

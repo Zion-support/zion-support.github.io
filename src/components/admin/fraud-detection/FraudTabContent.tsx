@@ -1,14 +1,25 @@
+<<<<<<< HEAD
 import React from 'react';
 import { AlertTriangle, AlertCircle, CheckCircle } from 'lucide-react';
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
+=======
+
+import React from "react";
+import { AlertTriangle, AlertCircle, CheckCircle } from 'lucide-react';
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 interface FraudTabContentProps {
   tabValue: string;
 
+<<<<<<< HEAD
 export const FraudTabContent: React.FC<FraudTabContentProps> = ({
   tabValue,
 }) => {
   switch (tabValue) {
+=======
+export const FraudTabContent: React.FC<FraudTabContentProps> = ({ tabValue },) => {
+  switch(tabValue) {
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
     case 'pending':
       return (
         <div className='bg-amber-50 dark:bg-amber-950/20 p-8 rounded-lg text-center'>

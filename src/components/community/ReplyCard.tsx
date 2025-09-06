@@ -1,6 +1,10 @@
 
 import { formatDistanceToNow } from "date-fns";
+<<<<<<< HEAD
 import { ThumbsUp, ThumbsDown, CheckCircle } from 'lucide-react'
+=======
+import { ThumbsUp, ThumbsDown, CheckCircle } from 'lucide-react';
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
@@ -20,7 +24,7 @@ export const ReplyCard = ({
   onMarkAnswer, 
   canMarkAnswer = false;
   className
-}: ReplyCardProps) => {
+}: ReplyCardProps,) => {
   const timeAgo = formatDistanceToNow(new Date(reply.createdAt), { addSuffix: true }),
 
   return (

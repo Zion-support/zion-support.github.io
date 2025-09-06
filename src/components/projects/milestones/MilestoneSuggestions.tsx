@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
@@ -29,6 +30,24 @@ interface MilestoneSuggestionsProps {
   endDate?: Date;
   projectType: string;
   onMilestonesGenerated?: (milestones: GeneratedMilestone[]) => void;
+=======
+
+import React, { useState } from 'react';
+import { Button } from '@/components/ui/button';
+import { GeneratedMilestone, MilestoneInput, useMilestoneGenerator } from '@/hooks/useMilestoneGenerator';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Loader2, Sparkles, Check } from 'lucide-react';
+import { Badge } from '@/components/ui/badge';
+import { format, parseISO } from 'date-fns';
+interface MilestoneSuggestionsProps {
+  projectName: string,
+  scopeSummary: string,
+  startDate: Date,
+  endDate?: Date,
+  projectType: string,
+  onMilestonesGenerated?: (milestones: GeneratedMilestone[],) => void
+}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 
 export function MilestoneSuggestions({
   projectName,
@@ -63,7 +82,7 @@ export function MilestoneSuggestions({
     }
   };
 
-  const formatDate = (dateString: string) => {
+  const formatDate = (dateString: string,) => {
     try {
       return format(parseISO(dateString), 'MMM dd, yyyy');
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -76,10 +95,17 @@ export function MilestoneSuggestions({
     <div className='space-y-4'>
       {!showSuggestions && (
         <Button
+<<<<<<< HEAD
           variant='outline'
           onClick={handleGenerateMilestones}
           disabled={isGenerating || !scopeSummary || !startDate}
           className='w-full'
+=======
+          variant="outline"
+          onClick = {handleGenerateMilestones,}
+          disabled = {isGenerating || !scopeSummary || !startDate,}
+          className="w-full"
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
         >
           {isGenerating ? (
             <>
@@ -126,12 +152,20 @@ export function MilestoneSuggestions({
           </CardHeader>
           <CardContent>
 <<<<<<< HEAD
+<<<<<<< HEAD
             <div className='space-y-3'>
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
               {generatedMilestones.map((milestone, index) => (
                 <div key={index} className='p-3 border rounded-lg bg-muted/10'>
                   <div className='flex items-center justify-between mb-1'>
                     <div className='font-medium flex items-center'>
+=======
+            <div className="space-y-3">
+              {generatedMilestones.map((milestone, index,) => (
+                <div key={index} className="p-3 border rounded-lg bg-muted/10">
+                  <div className="flex items-center justify-between mb-1">
+                    <div className="font-medium flex items-center">
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
                       {milestone.title}
                       <Badge variant='secondary' className='ml-2 text-xs'>
                         AI Suggested

@@ -1,8 +1,27 @@
+<<<<<<< HEAD
 import React from 'react';
 import { cn } from '@/lib/utils';
 import { Badge } from '@/components/ui/badge';
 import Link from 'next/link';
 import Image from 'next/image';
+=======
+import React from "react";
+import { cn } from "@/lib/utils";
+import { Badge } from "@/components/ui/badge";
+import Link from "next/link";
+import Image from "next/image";
+interface ListingCardProps {
+  id?: string,
+  title: string,
+  description: string,
+  images?: string[],
+  category: string,
+  tags?: string[],
+  author?: { name: string, id?: string, avatarUrl?: string, email?: string },
+  className?: string,
+  profileType?: 'service' | 'talent'
+}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 interface ListingCardProps {
@@ -32,15 +51,33 @@ export function ListingCard({
   const profileId =
     id || (profileType === 'service' ? 'service-provider-1' : 'talent-1');
 
+<<<<<<< HEAD
   
+=======
+  return (
+    <Link
+      href={`/profile/${profileId}`}
+      tabIndex = {0,}
+      className = {cn(
+        "flex flex-col overflow-hidden rounded-lg border border-zion-blue-light bg-zion-blue hover:border-zion-purple/50 transition-all duration-300 group cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zion-purple",
+        className
+      ),}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
     >
       {images && images.length > 0 && images[0] && (
         <div className='h-48 w-full overflow-hidden relative'>
           <Image
+<<<<<<< HEAD
             src={images[0]}
             alt={title}
             className='object-cover transition-transform duration-300 group-hover:scale-105'
             loading='lazy'
+=======
+            src = {images[0],}
+            alt = {title,}
+            className="object-cover transition-transform duration-300 group-hover:scale-105"
+            loading="lazy"
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
           />
         </div>
       )}
@@ -59,6 +96,7 @@ export function ListingCard({
         <p className='text-zion-slate mb-4 flex-grow'>{description}</p>
 
         {tags && tags.length > 0 && (
+<<<<<<< HEAD
           <div className='flex flex-wrap gap-2 mb-4'>
             {tags.map((tag, i) => (
               <Badge
@@ -67,6 +105,10 @@ export function ListingCard({
                 className='border-zion-slate-dark text-zion-slate-light'
               >                {tag}
 =======
+=======
+          <div className="flex flex-wrap gap-2 mb-4">
+            {tags.map((tag, i,) => (
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
               <Badge key={i} variant="outline" className="border-zion-slate-dark text-zion-slate-light">
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                 {tag}

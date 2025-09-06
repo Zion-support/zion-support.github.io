@@ -3,6 +3,7 @@
 import Image from 'next/image';
 import { useState } from 'react';
 import { ImageIcon } from 'lucide-react';
+<<<<<<< HEAD
 
 interface SafeImageProps {
   src: string;
@@ -10,6 +11,8 @@ interface SafeImageProps {
 =======
 import { ImageIcon } from 'lucide-react'
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 interface SafeImageProps {
   src: string,
   alt: string,
@@ -54,7 +57,16 @@ export function SafeImage({
 
   // If we have an error and no fallback, show a placeholder
   if (hasError && (!fallbackSrc || currentSrc === fallbackSrc)) {
+<<<<<<< HEAD
     
+=======
+    return (
+      <div 
+        className={`flex items-center justify-center bg-gray-100 text-gray-400 ${className}`}
+        style={{ width, height }}
+        role="img"
+        aria-label = {alt,}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
       >
         <ImageIcon className='w-6 h-6' />      </div>
     );
@@ -77,15 +89,15 @@ export function SafeImage({
 =======
   return (
     <Image
-      src={currentSrc}
-      alt={alt}
-      width={width}
-      height={height}
-      className={className}
-      onError={handleError}
-      priority={priority}
+      src = {currentSrc,}
+      alt = {alt,}
+      width = {width,}
+      height = {height,}
+      className = {className,}
+      onError = {handleError,}
+      priority = {priority,}
       // Add unoptimized as fallback for problematic images
-      unoptimized={hasError}
+      unoptimized = {hasError,}
     />
   );
 } 

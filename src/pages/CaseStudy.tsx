@@ -4,6 +4,7 @@ import { CASE_STUDIES } from '@/data/case-studies';
 import { SEO } from '@/components/SEO';
 import { Button } from '@/components/ui/button';
 import { ArrowLeft } from 'lucide-react';
+<<<<<<< HEAD
 import {  Breadcrumb,
   BreadcrumbList,
   BreadcrumbItem,
@@ -18,6 +19,21 @@ export default function CaseStudy() {
   const router = useRouter();
   const slug = router.query.slug as string;
   const study = CASE_STUDIES.find(s => s.slug === slug);  const breadcrumbs = getBreadcrumbsForPath(`/case-studies/${slug}`);
+=======
+import {
+  Breadcrumb,
+  BreadcrumbList,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbSeparator} from '@/components/ui/breadcrumb',
+import BreadcrumbJsonLd from '@/components/BreadcrumbJsonLd';
+import { getBreadcrumbsForPath } from '@/utils/routeUtils';
+export default function CaseStudy() {
+  const router = useRouter(),
+  const slug = router.query.slug as string,
+  const study = CASE_STUDIES.find((s,) => s.slug === slug),
+  const breadcrumbs = getBreadcrumbsForPath(`/case-studies/${slug}`),
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 
   if (!study) {
     return (
@@ -103,7 +119,7 @@ export default function CaseStudy() {
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
           </Button>
           <img
-            src={study.companyLogo}
+            src = {study.companyLogo,}
             alt={`${study.company} logo`}
             className='h-12 mb-4'
             loading='lazy'
@@ -142,7 +158,11 @@ export default function CaseStudy() {
     </>
   );
 }
+<<<<<<< HEAD
 =======
 }
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b

@@ -16,6 +16,19 @@ import { useRouter } from 'next/router';
 import { toast } from 'sonner';
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
+<<<<<<< HEAD
+=======
+import React from "react";
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
+import { CheckCircle, ChevronRight, FileText, MessageSquare, Video } from 'lucide-react';
+import { Progress } from "@/components/ui/progress";
+import { SeverityIndicator } from "../common/SeverityIndicator";
+import { useRouter } from 'next/router';
+import { toast } from "sonner";
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 interface Milestone {
   id: string;
   title: string;
@@ -118,18 +131,33 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {
               <Button size='sm' variant='outline' className='gap-1 flex-1'>
                 <FileText className='h-4 w-4' /> Contract
               </Button>
+<<<<<<< HEAD
               <Button
                 size='sm'
                 variant='outline'
                 className='gap-1 flex-1'
                 onClick={messageClient}
+=======
+              <Button 
+                size="sm" 
+                variant="outline" 
+                className="gap-1 flex-1"
+                onClick = {messageClient,}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
               >
                 <MessageSquare className='h-4 w-4' /> Message
               </Button>
+<<<<<<< HEAD
               <Button
                 size='sm'
                 className='gap-1 flex-1 bg-zion-purple hover:bg-zion-purple-light'
                 onClick={startProjectCall}
+=======
+              <Button 
+                size="sm" 
+                className="gap-1 flex-1 bg-zion-purple hover:bg-zion-purple-light"
+                onClick = {startProjectCall,}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
               >
                 <Video className='h-4 w-4' /> Call
               </Button>
@@ -139,9 +167,15 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {
       </Card>
 
       <section>
+<<<<<<< HEAD
         <h2 className='text-lg font-medium mb-4'>Milestones</h2>
         <div className='space-y-3'>
           {milestones.map(milestone => (
+=======
+        <h2 className="text-lg font-medium mb-4">Milestones</h2>
+        <div className="space-y-3">
+          {milestones.map((milestone,) => (
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
             <Card key={milestone.id}>
               <CardContent className='p-4'>
                 <div className='flex justify-between items-start mb-2'>
@@ -153,6 +187,7 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {
                     )}
                     <h3 className='font-medium'>{milestone.title}</h3>
                   </div>
+<<<<<<< HEAD
                   <Badge
                     variant={
                       milestone.paymentStatus === 'paid'
@@ -161,6 +196,13 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {
                           ? 'destructive'
                           : 'outline'
                     }
+=======
+                  <Badge 
+                    variant = {
+                      milestone.paymentStatus === "paid" ? "default" : 
+                      milestone.paymentStatus === "overdue" ? "destructive" : "outline"
+                    ,}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
                   >
                     {milestone.paymentStatus}
                   </Badge>

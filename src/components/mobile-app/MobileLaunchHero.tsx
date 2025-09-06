@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import Link from 'next/link';
 import { ArrowRight, Smartphone } from 'lucide-react';
@@ -6,6 +7,15 @@ import { AppStoreButtons } from './AppStoreButtons';
 import { Card, CardContent } from '@/components/ui/card';
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
+=======
+
+import React from "react";
+import Link from "next/link";
+import { ArrowRight, Smartphone } from 'lucide-react';
+import { Button } from "@/components/ui/button";
+import { AppStoreButtons } from "./AppStoreButtons";
+import { Card, CardContent } from "@/components/ui/card";
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 export const MobileLaunchHero: React.FC = () => {
   // App store links - these would come from environment variables in production
   const appStoreUrl = '#'; // Replace with actual App Store URL
@@ -37,9 +47,14 @@ export const MobileLaunchHero: React.FC = () => {
             
             <div className="mb-8">
               <AppStoreButtons 
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                 appStoreUrl={appStoreUrl}
                 googlePlayUrl={googlePlayUrl}
+=======
+                appStoreUrl = {appStoreUrl,}
+                googlePlayUrl = {googlePlayUrl,}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
               />
             </div>
 <<<<<<< HEAD

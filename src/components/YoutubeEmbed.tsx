@@ -1,7 +1,16 @@
 import Image from 'next/image';
 import { Loader2 } from 'lucide-react';
+<<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 import { useState } from 'react';
+=======
+import { useState } from 'react';
+interface YoutubeEmbedProps {
+  videoId: string,
+  title: string,
+  poster: string
+}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 
 interface YoutubeEmbedProps {
   videoId: string;
@@ -39,6 +48,7 @@ export default function YoutubeEmbed({
       )}
       <iframe
         className={`absolute inset-0 w-full h-full ${loaded ? 'visible' : 'invisible'}`}
+<<<<<<< HEAD
         src={src}
         title={title}
         loading='lazy'
@@ -49,8 +59,12 @@ export default function YoutubeEmbed({
   );
 }
 =======
+=======
+        src = {src,}
+        title = {title,}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
         loading="lazy"
-        onLoad={() => setLoaded(true)}
+        onLoad = {() => setLoaded(true),}
         allow="accelerometer, autoplay, clipboard-write, encrypted-media, gyroscope, picture-in-picture"
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
         allowFullScreen
@@ -60,5 +74,9 @@ export default function YoutubeEmbed({
 <<<<<<< HEAD
 =======
 }
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b

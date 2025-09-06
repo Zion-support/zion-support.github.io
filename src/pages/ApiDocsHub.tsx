@@ -11,6 +11,13 @@ import {
 import ApiDocsLayout from '@/components/developers/ApiDocsLayout';
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
+<<<<<<< HEAD
+=======
+import React from "react";
+import Link from "next/link";
+import { ArrowRight, BookOpen, Code, Webhook, AlertCircle, Zap } from 'lucide-react';
+import ApiDocsLayout from "@/components/developers/ApiDocsLayout";
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 export function ApiDocsHub() {
   const sections = [
     {
@@ -62,12 +69,21 @@ export function ApiDocsHub() {
           our API as quickly as possible.
         </p>
 
+<<<<<<< HEAD
         <div className='grid gap-6 md:grid-cols-2'>
           {sections.map(section => (
             <Link
               key={section.path}
               href={section.path}
               className='block p-6 rounded-lg bg-zinc-900 border border-zinc-800 hover:border-zinc-700 transition-all'
+=======
+        <div className="grid gap-6 md:grid-cols-2">
+          {sections.map((section,) => (
+            <Link
+              key = {section.path,}
+              href = {section.path,}
+              className="block p-6 rounded-lg bg-zinc-900 border border-zinc-800 hover:border-zinc-700 transition-all"
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
             >
               <div
                 className={`w-12 h-12 rounded-full bg-gradient-to-r ${section.color} flex items-center justify-center mb-4`}

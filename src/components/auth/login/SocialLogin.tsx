@@ -5,6 +5,14 @@ import { useState } from 'react';
 import { openAuthPopup } from '@/api/authSocial';
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
+<<<<<<< HEAD
+=======
+import { Facebook, Twitter, Loader2 } from 'lucide-react';
+import { Button } from "@/components/ui/button";
+import { Web3Login } from "./Web3Login";
+import { useState } from "react";
+import { openAuthPopup } from "@/api/authSocial";
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 export function SocialLogin() {
   const [isLoading, setIsLoading] = useState(false);
 
@@ -28,11 +36,19 @@ export function SocialLogin() {
 
       <div className='mt-6 grid grid-cols-4 gap-3'>
         <Button
+<<<<<<< HEAD
           type='button'
           variant='outline'
           className='w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan'
           onClick={handleGoogle}
           disabled={isLoading}
+=======
+          type="button"
+          variant="outline"
+          className="w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan"
+          onClick = {handleGoogle,}
+          disabled = {isLoading,}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
         >
           <span className='sr-only'>Sign in with Google</span>
           {isLoading ? (
@@ -64,21 +80,37 @@ export function SocialLogin() {
           )}
         </Button>
         <Button
+<<<<<<< HEAD
           type='button'
           variant='outline'
           className='w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan'
           onClick={() => openAuthPopup('facebook')}
           disabled={isLoading}
+=======
+          type="button"
+          variant="outline"
+          className="w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan"
+          onClick = {() => openAuthPopup('facebook'),}
+          disabled = {isLoading,}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
         >
           <span className='sr-only'>Sign in with Facebook</span>
           <Facebook className='h-5 w-5' />
         </Button>
         <Button
+<<<<<<< HEAD
           type='button'
           variant='outline'
           className='w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan'
           onClick={() => openAuthPopup('twitter')}
           disabled={isLoading}
+=======
+          type="button"
+          variant="outline"
+          className="w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan"
+          onClick = {() => openAuthPopup('twitter'),}
+          disabled = {isLoading,}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
         >
           <span className='sr-only'>Sign in with Twitter</span>
           <Twitter className='h-5 w-5' />
@@ -89,5 +121,9 @@ export function SocialLogin() {
   );
 =======
 }
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b

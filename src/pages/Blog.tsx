@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
@@ -22,6 +23,24 @@ import { Search } from 'lucide-react';
 import { fetchWithRetry } from '@/utils/fetchWithRetry';
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
 
+=======
+import { useState, useEffect } from "react";
+import Link from "next/link";
+import { useRouter } from "next/router";
+import { useDebounce } from "@/hooks/useDebounce";
+import { GradientHeading } from "@/components/GradientHeading";
+import { SEO } from "@/components/SEO";
+import { Card, CardContent, CardFooter } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Select, SelectValue, SelectTrigger, SelectContent, SelectItem } from "@/components/ui/select";
+import { BlogPost } from "@/types/blog";
+import { generateRandomBlogPost } from "@/utils/generateRandomBlogPost";
+import { BLOG_POSTS } from "@/data/blog-posts";
+import { Search } from 'lucide-react';
+import { fetchWithRetry } from '@/utils/fetchWithRetry';
+import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 // Categories for filtering
 const CATEGORIES = [
   'All Categories',
@@ -46,7 +65,7 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
   const router = useRouter();
 
   // Reset state when navigating away to avoid cross-page leakage
-  useEffect(() => {
+  useEffect((,) => {
     return () => {
       setSearchQuery('');
       setSelectedCategory('All Categories');
@@ -54,14 +73,23 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
     };
   }, [router.asPath, initialPosts]);
 
+<<<<<<< HEAD
   // useEffect(() => {
   //   const interval = setInterval(() => {
   //     setPosts(prev => [...prev, generateRandomBlogPost()]);
   //   }, 120000); // every 2 minutes
   //   return () => clearInterval(interval);
   // }, []);
+=======
+  // useEffect((,) => {
+  //   const interval = setInterval((,) => {
+  //     setPosts(prev => [...prev, generateRandomBlogPost()]),
+  //   }, 120000), // every 2 minutes
+  //   return () => clearInterval(interval),
+  // }, []),
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 
-  useEffect(() => {
+  useEffect((,) => {
     const fetchPosts = async () => {
       setIsLoading(true);
       try {
@@ -114,6 +142,7 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
           </div>
 
           {/* Featured Post Section - Only show if there are featured posts */}
+<<<<<<< HEAD
           {featuredPosts.length > 0 &&
             (() => {
               const featuredPost = featuredPosts[0];
@@ -147,6 +176,51 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
                       </h3>
                       <p className='text-zion-slate-light mb-6'>
                         {featuredPost.excerpt}
+=======
+          {featuredPosts.length > 0 && ((,) => {
+            const featuredPost = featuredPosts[0],
+            if (!featuredPost) return null,
+            
+            return (
+            <div className="mb-16">
+              <h2 className="text-2xl font-bold text-white mb-6">Featured Article</h2>
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <div className="aspect-video overflow-hidden rounded-lg">
+                  <img
+                    src = {featuredPost.featuredImage,}
+                    alt = {featuredPost.featuredImageAlt || featuredPost.title,}
+                    className="object-cover w-full h-full hover: scale-105 transition-transform duration-300"
+                    onError={(e,) => {
+                      const target = e.currentTarget as HTMLImageElement,
+                      target.src = "/images/blog-placeholder.svg"
+                    }}
+                  />
+                </div>
+                <div className="flex flex-col justify-center">
+                  <span className="text-sm text-zion-cyan bg-zion-blue-dark px-3 py-1 rounded-full inline-block mb-2">
+                    {featuredPost.category}
+                  </span>
+                  <h3 className="text-3xl font-bold text-white mb-4">
+                    {featuredPost.title}
+                  </h3>
+                  <p className="text-zion-slate-light mb-6">
+                    {featuredPost.excerpt}
+                  </p>
+                  <div className="flex items-center mb-6">
+                    <img
+                      src = {featuredPost.author.avatarUrl,}
+                      alt = {featuredPost.author.name,}
+                      className="w-10 h-10 rounded-full mr-3"
+                      onError={(e,) => {
+                        const target = e.currentTarget as HTMLImageElement,
+                        target.src = "/images/blog-placeholder.svg"
+                      }}
+                    />
+                    <div>
+                      <p className="text-white font-medium">{featuredPost.author.name}</p>
+                      <p className="text-sm text-zion-slate-light">
+                        {featuredPost.publishedDate} • {featuredPost.readTime}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
                       </p>
                       <div className='flex items-center mb-6'>
                         <img
@@ -188,11 +262,19 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
               <div className='relative'>
                 <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate' />
                 <Input
+<<<<<<< HEAD
                   type='text'
                   placeholder='Search articles...'
                   value={searchQuery}
                   onChange={e => setSearchQuery(e.target.value)}
                   className='pl-10 bg-zion-blue border border-zion-blue-light text-white'
+=======
+                  type="text"
+                  placeholder="Search articles..."
+                  value = {searchQuery,}
+                  onChange = {(e,) => setSearchQuery(e.target.value),}
+                  className="pl-10 bg-zion-blue border border-zion-blue-light text-white"
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
                 />
               </div>
 
@@ -206,6 +288,7 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
                 >
                   <SelectValue placeholder='Select Category' />
                 </SelectTrigger>
+<<<<<<< HEAD
                 <SelectContent className='bg-zion-blue-dark border border-zion-blue-light'>
                   {CATEGORIES.map(category => (
                     <SelectItem
@@ -213,6 +296,11 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
                       value={category}
                       className='text-white'
                     >
+=======
+                <SelectContent className="bg-zion-blue-dark border border-zion-blue-light">
+                  {CATEGORIES.map((category,) => (
+                    <SelectItem key={category} value={category} className="text-white">
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
                       {category}
                     </SelectItem>
                   ))}
@@ -228,13 +316,19 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
 
           {/* Blog Posts Grid */}
           {!isLoading && filteredPosts.length > 0 ? (
+<<<<<<< HEAD
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
               {filteredPosts.map(post => (
+=======
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {filteredPosts.map((post,) => (
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
                 <Card
-                  key={post.id}
+                  key = {post.id,}
                   asChild
                   className='bg-zion-blue-dark border border-zion-blue-light hover:border-zion-purple transition-all duration-300 group-hover:shadow-lg'
                 >
+<<<<<<< HEAD
                   <Link href={`/blog/${post.slug}`} className='block group'>
                     <div className='aspect-[16/9] relative overflow-hidden'>
                       <img
@@ -244,6 +338,43 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
                         onError={e => {
                           const target = e.currentTarget as HTMLImageElement;
                           target.src = '/images/blog-placeholder.svg';
+=======
+                  <Link href={`/blog/${post.slug}`} className="block group">
+                  <div className="aspect-[16/9] relative overflow-hidden">
+                    <img
+                      src = {post.featuredImage,}
+                      alt = {post.featuredImageAlt || post.title,}
+                      className="object-cover w-full h-full hover: scale-105 transition-transform duration-300"
+                      onError={(e,) => {
+                        const target = e.currentTarget as HTMLImageElement,
+                        target.src = "/images/blog-placeholder.svg"
+                      }}
+                    />
+                  </div>
+                  <CardContent className="p-6">
+                    <div className="flex items-center justify-between mb-3">
+                      <span className="text-xs text-zion-cyan bg-zion-blue px-3 py-1 rounded-full">
+                        {post.category}
+                      </span>
+                      <div className="text-xs text-zion-slate-light">
+                        {post.publishedDate} • {post.readTime}
+                      </div>
+                    </div>
+                    <h3 className="text-xl font-bold text-white mb-3">
+                      {post.title}
+                    </h3>
+                    <p className="text-zion-slate-light mb-4 line-clamp-3">
+                      {post.excerpt}
+                    </p>
+                    <div className="flex items-center">
+                      <img
+                        src = {post.author.avatarUrl,}
+                        alt = {post.author.name,}
+                        className="w-8 h-8 rounded-full mr-2"
+                        onError={(e,) => {
+                          const target = e.currentTarget as HTMLImageElement,
+                          target.src = "/images/blog-placeholder.svg"
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
                         }}
                       />
                     </div>
@@ -298,10 +429,17 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
                 Try adjusting your search or filter criteria
               </p>
               <Button
+<<<<<<< HEAD
                 variant='outline'
                 onClick={() => {
                   setSearchQuery('');
                   setSelectedCategory('All Categories');
+=======
+                variant="outline"
+                onClick={(,) => {
+                  setSearchQuery(""),
+                  setSelectedCategory("All Categories")
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
                 }}
                 className='border-zion-purple text-zion-purple hover:bg-zion-purple/10'
               >

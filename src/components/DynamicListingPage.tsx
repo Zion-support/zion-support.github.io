@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState, useEffect } from 'react';
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 import { useRouter } from 'next/router';
@@ -5,12 +6,21 @@ import { GradientHeading } from '@/components/GradientHeading';
 import { ProductListingCard } from '@/components/ProductListingCard';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
+=======
+import { useState, useEffect } from "react";
+import { useRouter } from 'next/router';
+import { GradientHeading } from "@/components/GradientHeading";
+import { ProductListingCard } from "@/components/ProductListingCard";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
 import {
   Select,
   SelectValue,
   SelectTrigger,
   SelectContent,
+<<<<<<< HEAD
   SelectItem,;
 } from '@/components/ui/select';
 import { Checkbox } from '@/components/ui/checkbox';
@@ -21,6 +31,21 @@ import { ProductListing, ListingView } from '@/types/listings';
 import { Search, Filter, LayoutGrid, List, Star } from 'lucide-react';
 import { toast } from '@/hooks/use-toast';
 import { captureException } from '@/utils/sentry';
+=======
+  SelectItem} from "@/components/ui/select",
+import { Checkbox } from "@/components/ui/checkbox";
+import Skeleton from "react-loading-skeleton";
+import "react-loading-skeleton/dist/skeleton.css",
+import { Slider } from "@/components/ui/slider";
+import { ProductListing, ListingView } from "@/types/listings";
+import { Search, Filter, LayoutGrid, List, Star } from 'lucide-react';
+import { toast } from "@/hooks/use-toast";
+import { captureException } from "@/utils/sentry";
+interface PriceRange {
+  min: number,
+  max: number
+}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 
 interface PriceRange {
   min: number;
@@ -46,12 +71,20 @@ export function DynamicListingPage({
   listings: allListings,
   categoryFilters,
   initialPrice = { min: 0, max: 10000 },
+<<<<<<< HEAD
   detailBasePath = '/marketplace/listing',
 }: DynamicListingPageProps) {
   const router = useRouter();
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
   const toggleCategory = (category: string) => {
+=======
+  detailBasePath = "/marketplace/listing"}: DynamicListingPageProps) {
+  const router = useRouter(),
+  const [searchQuery, setSearchQuery] = useState(""),
+  const [selectedCategories, setSelectedCategories] = useState<string[]>([]),
+  const toggleCategory = (category: string,) => {
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
     setSelectedCategories(prev =>
       prev.includes(category)
         ? prev.filter(c => c !== category)
@@ -80,6 +113,7 @@ export function DynamicListingPage({
   const [sortOption, setSortOption] = useState('newest');
 
   const brandOptions = Array.from(
+<<<<<<< HEAD
     new Set(allListings.map(l => l.brand).filter(Boolean))
   );
   const availabilityOptions = Array.from(
@@ -92,6 +126,20 @@ export function DynamicListingPage({
       const max = Math.max(...listingsWithPrice.map(l => l.price || 0));
       setPriceRange({ min: 0, max });
       setCurrentPriceFilter([0, max]);
+=======
+    new Set(allListings.map((l,) => l.brand).filter(Boolean)),
+  ),
+  const availabilityOptions = Array.from(
+    new Set(allListings.map((l,) => l.availability).filter(Boolean)),
+  ),
+
+  useEffect((,) => {
+    const listingsWithPrice = allListings.filter((l,) => l.price !== null),
+    if (listingsWithPrice.length > 0) {
+      const max = Math.max(...listingsWithPrice.map((l,) => l.price || 0)),
+      setPriceRange({ min: 0, max }),
+      setCurrentPriceFilter([0, max])
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
     }
   }, [allListings]);
 
@@ -99,23 +147,41 @@ export function DynamicListingPage({
     [number, number]
   >([0, initialPrice.max]);
 
+<<<<<<< HEAD
   const handleSliderChange = (values: number[]) => {
     const [min, max] = values.map(Number);
     if (min == null || max == null || isNaN(min) || isNaN(max)) return;
     setCurrentPriceFilter([min, max]);
   };
+=======
+  const handleSliderChange = (values: number[],) => {
+    const [min, max] = values.map(Number),
+    if (min == null || max == null || isNaN(min) || isNaN(max)) return,
+    setCurrentPriceFilter([min, max])
+  },
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 
   let filteredListings: ProductListing[] = [];
   try {
+<<<<<<< HEAD
     filteredListings = allListings.filter(listing => {
+=======
+    filteredListings = allListings.filter((listing,) => {
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
       const matchesSearch =
         !searchQuery ||
         listing.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
         listing.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
         (listing.tags &&
+<<<<<<< HEAD
           listing.tags.some((tag: string) =>
             tag.toLowerCase().includes(searchQuery.toLowerCase())
           ));
+=======
+          listing.tags.some((tag: string,) =>
+            tag.toLowerCase().includes(searchQuery.toLowerCase()),
+          )),
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 
       const matchesBrand =
         selectedBrand === 'all' ||
@@ -124,6 +190,7 @@ export function DynamicListingPage({
       const matchesSpecs =
         !specQuery ||
         (listing.specifications &&
+<<<<<<< HEAD
           listing.specifications.some(s =>
             s.toLowerCase().includes(specQuery.toLowerCase())
           )) ||
@@ -131,6 +198,15 @@ export function DynamicListingPage({
           listing.tags.some(tag =>
             tag.toLowerCase().includes(specQuery.toLowerCase())
           ));
+=======
+          listing.specifications.some((s,) =>
+            s.toLowerCase().includes(specQuery.toLowerCase()),
+          )) ||
+        (listing.tags &&
+          listing.tags.some((tag,) =>
+            tag.toLowerCase().includes(specQuery.toLowerCase()),
+          )),
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 
       const matchesAvailability =
         selectedAvailability === 'all' ||
@@ -157,9 +233,15 @@ export function DynamicListingPage({
         matchesBrand &&
         matchesSpecs &&
         matchesAvailability
+<<<<<<< HEAD
       );
     });
     filteredListings.sort((a, b) => {
+=======
+      )
+    }),
+    filteredListings.sort((a, b,) => {
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
       switch (sortOption) {
         case 'price-asc':
           return (a.price || 0) - (b.price || 0);
@@ -179,6 +261,7 @@ export function DynamicListingPage({
     logErrorToProduction('Listing filter error:', { data: error });
   }
 
+<<<<<<< HEAD
   const handleRequestQuote = (listingId: string) => {
     setIsLoading(true);
 
@@ -186,6 +269,15 @@ export function DynamicListingPage({
 
     setTimeout(() => {
       setIsLoading(false);
+=======
+  const handleRequestQuote = (listingId: string,) => {
+    setIsLoading(true),
+
+    const listing = allListings.find((item,) => item.id === listingId),
+
+    setTimeout((,) => {
+      setIsLoading(false),
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
       if (listing) {
         toast({
           title: 'Quote Requested',
@@ -238,9 +330,15 @@ export function DynamicListingPage({
                     <div key={filter.value} className='flex items-center'>
                       <Checkbox
                         id={`cat-${filter.value}`}
+<<<<<<< HEAD
                         checked={selectedCategories.includes(filter.value)}
                         onCheckedChange={() => toggleCategory(filter.value)}
                         className='border-zion-slate-light data-[state=checked]:bg-zion-purple data-[state=checked]:border-zion-purple'
+=======
+                        checked = {selectedCategories.includes(filter.value),}
+                        onCheckedChange = {() => toggleCategory(filter.value),}
+                        className="border-zion-slate-light data-[state=checked]:bg-zion-purple data-[state=checked]:border-zion-purple"
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
                       />
                       <label
                         htmlFor={`cat-${filter.value}`}
@@ -259,8 +357,8 @@ export function DynamicListingPage({
                     Brand
                   </label>
                   <Select
-                    value={selectedBrand}
-                    onValueChange={(value: string) => setSelectedBrand(value)}
+                    value = {selectedBrand,}
+                    onValueChange = {(value: string,) => setSelectedBrand(value),}
                   >
                     <SelectTrigger className='bg-zion-blue border border-zion-blue-light text-white'>
                       <SelectValue placeholder='Select Brand' />
@@ -269,12 +367,17 @@ export function DynamicListingPage({
                       <SelectItem value='all' className='text-white'>
                         All Brands
                       </SelectItem>
+<<<<<<< HEAD
                       {brandOptions.map(b => (
                         <SelectItem
                           key={b || 'unknown-brand'}
                           value={b || ''}
                           className='text-white'
                         >
+=======
+                      {brandOptions.map((b,) => (
+                        <SelectItem key={b || 'unknown-brand'} value={b || ''} className="text-white">
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
                           {b || 'N/A'}
                         </SelectItem>
                       ))}
@@ -288,6 +391,7 @@ export function DynamicListingPage({
                   Specifications
                 </label>
                 <Input
+<<<<<<< HEAD
                   type='text'
                   placeholder='Search specifications...'
                   value={specQuery}
@@ -295,6 +399,15 @@ export function DynamicListingPage({
                     setSpecQuery(e.target.value)
                   }
                   className='bg-zion-blue border border-zion-blue-light text-white'
+=======
+                  type="text"
+                  placeholder="Search specifications..."
+                  value = {specQuery,}
+                  onChange = {(e: React.ChangeEvent<HTMLInputElement>,) =>
+                    setSpecQuery(e.target.value)
+                  ,}
+                  className="bg-zion-blue border border-zion-blue-light text-white"
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
                 />
               </div>
 
@@ -304,10 +417,10 @@ export function DynamicListingPage({
                     Availability
                   </label>
                   <Select
-                    value={selectedAvailability}
-                    onValueChange={(value: string) =>
+                    value = {selectedAvailability,}
+                    onValueChange = {(value: string,) =>
                       setSelectedAvailability(value)
-                    }
+                    ,}
                   >
                     <SelectTrigger className='bg-zion-blue border border-zion-blue-light text-white'>
                       <SelectValue placeholder='Select Availability' />
@@ -316,12 +429,17 @@ export function DynamicListingPage({
                       <SelectItem value='all' className='text-white'>
                         All
                       </SelectItem>
+<<<<<<< HEAD
                       {availabilityOptions.map(a => (
                         <SelectItem
                           key={a || 'unknown-availability'}
                           value={a || ''}
                           className='text-white'
                         >
+=======
+                      {availabilityOptions.map((a,) => (
+                        <SelectItem key={a || 'unknown-availability'} value={a || ''} className="text-white">
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
                           {a || 'N/A'}
                         </SelectItem>
                       ))}
@@ -336,6 +454,7 @@ export function DynamicListingPage({
                 </label>
                 <div className='mt-6 px-2'>
                   <Slider
+<<<<<<< HEAD
                     aria-label='Price range'
                     defaultValue={[0, priceRange.max]}
                     min={0}
@@ -344,6 +463,16 @@ export function DynamicListingPage({
                     value={currentPriceFilter}
                     onValueChange={handleSliderChange}
                     className='mb-4'
+=======
+                    aria-label="Price range"
+                    defaultValue = {[0, priceRange.max],}
+                    min = {0,}
+                    max = {priceRange.max,}
+                    step = {priceRange.max / 100,}
+                    value = {currentPriceFilter,}
+                    onValueChange = {handleSliderChange,}
+                    className="mb-4"
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
                   />
                   <div className='flex justify-between text-sm text-zion-slate-light'>
                     <span>${currentPriceFilter[0].toLocaleString()}</span>
@@ -356,6 +485,7 @@ export function DynamicListingPage({
                 <label className='text-sm font-medium text-zion-slate-light block mb-2'>
                   Minimum Rating
                 </label>
+<<<<<<< HEAD
                 <div className='flex flex-wrap gap-2'>
                   {[null, 3, 4, 5].map(rating => (
                     <Button
@@ -365,8 +495,19 @@ export function DynamicListingPage({
                       onClick={() => {
                         logInfo('Rating selected:', { data: rating });
                         setSelectedRating(rating);
+=======
+                <div className="flex flex-wrap gap-2">
+                  {[null, 3, 4, 5].map((rating,) => (
+                    <Button
+                      key = {rating === null ? "any" : rating,}
+                      variant="outline"
+                      size="sm"
+                      onClick={(,) => {
+                        logInfo('Rating selected:', { data: rating }),
+                        setSelectedRating(rating)
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
                       }}
-                      aria-pressed={selectedRating === rating}
+                      aria-pressed = {selectedRating === rating,}
                       className={`{
                         selectedRating === rating
                           ? "bg-zion-purple/30 border-zion-purple text-zion-purple"
@@ -376,11 +517,19 @@ export function DynamicListingPage({
                       {rating === null ? (
                         'Any'
                       ) : (
+<<<<<<< HEAD
                         <div className='flex items-center'>
                           {[...Array(rating)].map((_, i) => (
                             <Star
                               key={i}
                               className='h-3 w-3 fill-zion-cyan text-zion-cyan'
+=======
+                        <div className="flex items-center">
+                          {[...Array(rating)].map((_, i,) => (
+                            <Star
+                              key = {i,}
+                              className="h-3 w-3 fill-zion-cyan text-zion-cyan"
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
                             />
                           ))}
                           <span className='ml-1'>& Up</span>
@@ -416,12 +565,21 @@ export function DynamicListingPage({
                 <div className='relative flex-grow'>
                   <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4' />
                   <Input
+<<<<<<< HEAD
                     type='text'
                     placeholder='Search listings...'
                     value={searchQuery}
                     onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
                       logInfo('Search query:', { data: e.target.value });
                       setSearchQuery(e.target.value);
+=======
+                    type="text"
+                    placeholder="Search listings..."
+                    value = {searchQuery,}
+                    onChange={(e: React.ChangeEvent<HTMLInputElement>,) => {
+                      logInfo('Search query:', { data: e.target.value }),
+                      setSearchQuery(e.target.value)
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
                     }}
                     className='pl-10 bg-zion-blue border border-zion-blue-light text-white'
                   />
@@ -448,12 +606,21 @@ export function DynamicListingPage({
                     </SelectContent>
                   </Select>
                   <Button
+<<<<<<< HEAD
                     variant='outline'
                     size='icon'
                     onClick={() => setView(isGrid ? 'list' : 'grid')}
                     aria-label={isGrid ? 'List view' : 'Grid view'}
                     title={isGrid ? 'List view' : 'Grid view'}
                     className='border-zion-blue-light text-zion-slate-light focus-visible:ring-zion-purple'
+=======
+                    variant="outline"
+                    size="icon"
+                    onClick = {() => setView(isGrid ? "list" : "grid"),}
+                    aria-label = {isGrid ? "List view" : "Grid view",}
+                    title = {isGrid ? "List view" : "Grid view",}
+                    className="border-zion-blue-light text-zion-slate-light focus-visible:ring-zion-purple"
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
                   >
                     {ToggleViewIcon}
                     <span className='sr-only'>
@@ -475,6 +642,7 @@ export function DynamicListingPage({
 
             {isLoading ? (
               <div
+<<<<<<< HEAD
                 className={
                   view === 'grid'
                     ? 'grid grid-cols-1 md:grid-cols-2 gap-6'
@@ -485,6 +653,18 @@ export function DynamicListingPage({
                   <div
                     key={i}
                     className='rounded-lg overflow-hidden border border-zion-blue-light'
+=======
+                className = {
+                  view === "grid"
+                    ? "grid grid-cols-1 md:grid-cols-2 gap-6"
+                    : "flex flex-col gap-6"
+                ,}
+              >
+                {[1, 2, 3, 4].map((i,) => (
+                  <div
+                    key = {i,}
+                    className="rounded-lg overflow-hidden border border-zion-blue-light"
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
                   >
                     <Skeleton height={192} width='100%' />
                     <div className='p-4'>
@@ -502,6 +682,7 @@ export function DynamicListingPage({
               </div>
             ) : filteredListings.length > 0 ? (
               <div
+<<<<<<< HEAD
                 className={
                   view === 'grid'
                     ? 'grid grid-cols-1 md:grid-cols-2 gap-6'
@@ -509,12 +690,21 @@ export function DynamicListingPage({
                 }
               >
                 {filteredListings.map(listing => (
+=======
+                className = {
+                  view === "grid"
+                    ? "grid grid-cols-1 md:grid-cols-2 gap-6"
+                    : "flex flex-col gap-6"
+                ,}
+              >
+                {filteredListings.map((listing,) => (
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
                   <ProductListingCard
-                    key={listing.id}
-                    listing={listing}
-                    view={view}
-                    onRequestQuote={handleRequestQuote}
-                    detailBasePath={detailBasePath}
+                    key = {listing.id,}
+                    listing = {listing,}
+                    view = {view,}
+                    onRequestQuote = {handleRequestQuote,}
+                    detailBasePath = {detailBasePath,}
                   />
                 ))}
               </div>
@@ -527,6 +717,7 @@ export function DynamicListingPage({
                   Try adjusting your filters or search query
                 </p>
                 <Button
+<<<<<<< HEAD
                   variant='outline'
                   onClick={() => {
                     setSearchQuery('');
@@ -536,6 +727,17 @@ export function DynamicListingPage({
                     setSelectedBrand('all');
                     setSpecQuery('');
                     setSelectedAvailability('all');
+=======
+                  variant="outline"
+                  onClick={(,) => {
+                    setSearchQuery(""),
+                    clearCategories(),
+                    setCurrentPriceFilter([0, priceRange.max]),
+                    setSelectedRating(null),
+                    setSelectedBrand("all"),
+                    setSpecQuery(""),
+                    setSelectedAvailability("all")
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
                   }}
                   className='border-zion-purple text-zion-purple hover:bg-zion-purple/10'
                 >

@@ -1,9 +1,17 @@
+<<<<<<< HEAD
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { type Company } from './CompanyDashboard';
 import { Bell, Users, Settings } from 'lucide-react';
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
+=======
+
+import React from "react";
+import { Button } from "@/components/ui/button";
+import { type Company } from "./CompanyDashboard";
+import { Bell, Users, Settings } from 'lucide-react';
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 interface WorkspaceHeaderProps {
   company: Company;
 
@@ -14,10 +22,17 @@ export function WorkspaceHeader({ company }: WorkspaceHeaderProps) {
         <div className='flex items-center gap-4'>
           <div className='h-12 w-12 rounded-lg bg-card flex items-center justify-center border border-border'>
             <img
+<<<<<<< HEAD
               src={company.logoUrl || '/placeholder.svg'}
               alt={company.name}
               className='max-h-10 max-w-10'
               loading='lazy'
+=======
+              src = {company.logoUrl || "/placeholder.svg",}
+              alt = {company.name,}
+              className="max-h-10 max-w-10"
+              loading="lazy"
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
             />
           </div>
           <div>

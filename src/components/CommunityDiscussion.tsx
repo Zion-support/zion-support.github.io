@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { MessageCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -8,6 +9,16 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Separator } from '@/components/ui/separator';
 
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+import React, { useState } from "react";
+import { MessageCircle } from 'lucide-react';
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Avatar, AvatarFallback } from "@/components/ui/avatar";
+import { Card, CardContent } from "@/components/ui/card";
+import { Separator } from "@/components/ui/separator";
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 interface DiscussionPost {
   id: number;
   author: string;
@@ -88,9 +99,15 @@ export const CommunityDiscussion: React.FC = () => {
       <Separator className='mb-6' />
       <div className='mb-4 flex justify-end'>
         <Button
+<<<<<<< HEAD
           className='bg-zion-purple text-white hover:bg-zion-purple-light transition hover-scale'
           size='sm'
           onClick={() => setShowNew(v => !v)}
+=======
+          className="bg-zion-purple text-white hover:bg-zion-purple-light transition hover-scale"
+          size="sm"
+          onClick = {(,) => setShowNew((v,) => !v),}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
         >
           {showNew ? 'Cancel' : 'New Post'}
         </Button>
@@ -99,6 +116,7 @@ export const CommunityDiscussion: React.FC = () => {
         <Card className='mb-6 animate-scale-in'>
           <CardContent className='py-5'>
             <Input
+<<<<<<< HEAD
               placeholder='Title (e.g., Share an AI tool, Ask for help...)'
               className='mb-3 bg-zion-blue-light text-black placeholder:text-zion-slate'
               value={newTitle}
@@ -125,6 +143,21 @@ export const CommunityDiscussion: React.FC = () => {
               }
               maxLength={400}
               rows={3}
+=======
+              placeholder="Title (e.g., Share an AI tool, Ask for help...)"
+              className="mb-3 bg-zion-blue-light text-black placeholder:text-zion-slate"
+              value = {newTitle,}
+              onChange = {(e: React.ChangeEvent<HTMLInputElement>,) => setNewTitle(e.target.value),}
+              maxLength = {80,}
+            />
+            <Textarea
+              placeholder="What's on your mind?"
+              className="mb-4 bg-zion-blue-light text-black placeholder:text-zion-slate min-h-[70px]"
+              value = {newBody,}
+              onChange = {(e: React.ChangeEvent<HTMLTextAreaElement>,) => setNewBody(e.target.value),}
+              maxLength = {400,}
+              rows = {3,}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
             />
             <div className='flex gap-3 justify-end'>
               <Button
@@ -135,9 +168,13 @@ export const CommunityDiscussion: React.FC = () => {
                 variant="secondary"
                 size="sm"
                 className="bg-zion-blue text-white hover:bg-zion-blue-dark"
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                 onClick={() => setShowNew(false)}
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+                onClick = {() => setShowNew(false),}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
               >
                 Cancel
               </Button>
@@ -147,10 +184,15 @@ export const CommunityDiscussion: React.FC = () => {
 =======
                 size="sm"
                 className="bg-zion-cyan text-zion-blue hover:bg-zion-cyan-light hover-scale"
+<<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                 onClick={handleAddPost}
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                 disabled={!newTitle.trim() || !newBody.trim()}
+=======
+                onClick = {handleAddPost,}
+                disabled = {!newTitle.trim() || !newBody.trim(),}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
               >
                 Post
               </Button>
@@ -173,14 +215,14 @@ export const CommunityDiscussion: React.FC = () => {
                     .join('')                    .toUpperCase()
 =======
       <div className="flex flex-col gap-6">
-        {posts.map((post) => (
+        {posts.map((post,) => (
           <Card key={post.id} className="bg-zion-blue border-zion-slate-dark shadow-lg">
             <CardContent className="py-4 flex gap-4">
               <Avatar>
                 <AvatarFallback>
                   {post.author
                     .split(" ")
-                    .map((s) => s[0])
+                    .map((s,) => s[0])
                     .join("")
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                     .toUpperCase()

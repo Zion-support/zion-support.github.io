@@ -1,5 +1,8 @@
 import React from 'react';
+<<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 interface FilterSidebarProps {
   className?: string;
   children?: React.ReactNode
@@ -8,7 +11,7 @@ interface FilterSidebarProps {
 export const FilterSidebar: React.FC<FilterSidebarProps> = ({ 
   className;
   children 
-}) => {
+},) => {
   return (
     <div className={`filter-sidebar ${className || ''}`}>
       {children}

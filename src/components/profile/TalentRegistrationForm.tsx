@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -9,6 +10,18 @@ import { Switch } from '@/components/ui/switch';
 import { Badge } from '@/components/ui/badge';
 import { Separator } from '@/components/ui/separator';
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+import React, { useState } from "react";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { z } from "zod";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Switch } from "@/components/ui/switch";
+import { Badge } from "@/components/ui/badge";
+import { Separator } from "@/components/ui/separator";
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 import { logWarn, logErrorToProduction } from '@/utils/productionLogger';
 import {
   Form,
@@ -17,6 +30,7 @@ import {
   FormField,
   FormItem,
   FormLabel,
+<<<<<<< HEAD
   FormMessage,;
 } from '@/components/ui/form';
 import {
@@ -58,6 +72,26 @@ const talentProfileSchema = z.object({
   availability: z.enum(['available', 'limited', 'unavailable']),
   enhancedProfile: z.boolean().default(true),
 });
+=======
+  FormMessage} from "@/components/ui/form",
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { X, Sparkles, Upload, Clock, Check, Briefcase, MapPin, UserRound } from 'lucide-react';
+import { toast } from "@/components/ui/use-toast";
+import { supabase } from "@/integrations/supabase/client";
+import { AspectRatio } from "@/components/ui/aspect-ratio";
+import { useAuth } from "@/hooks/useAuth";
+// Define form schema
+const talentProfileSchema = z.object({
+  name: z.string().min(2, "Full Name must be at least 2 characters long"),
+  title: z.string().min(5, "Professional title is required"),
+  bio: z.string().min(50, "Bio must be at least 50 characters long").max(1000, "Bio cannot exceed 1000 characters"),
+  location: z.string().min(2, "Location is required"),
+  skills: z.string().min(2, "Enter at least one skill"),
+  hourlyRate: z.string().refine((val,) => !isNaN(Number(val)), {
+    message: "Hourly rate must be a number"}),
+  availability: z.enum(["available", "limited", "unavailable"]),
+  enhancedProfile: z.boolean().default(true)}),
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 
 type TalentFormValues = z.infer<typeof talentProfileSchema>;
 
@@ -122,6 +156,7 @@ export function TalentRegistrationForm() {
   };
 
   // Handle removing skill tags
+<<<<<<< HEAD
   const handleRemoveSkill = (skill: string) => {
     setSkillTags(skillTags.filter(s => s !== skill));
   };
@@ -131,12 +166,28 @@ export function TalentRegistrationForm() {
     if (e.key === 'Enter') {
       e.preventDefault();
       handleAddSkill();
+=======
+  const handleRemoveSkill = (skill: string,) => {
+    setSkillTags(skillTags.filter((s,) => s !== skill))
+  },
+
+  // Handle key press in skills input (add on enter)
+  const handleSkillKeyPress = (e: React.KeyboardEvent,) => {
+    if (e.key === "Enter") {
+      e.preventDefault(),
+      handleAddSkill()
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
     }
   };
 
   // Handle avatar upload
+<<<<<<< HEAD
   const handleAvatarUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
+=======
+  const handleAvatarUpload = (e: React.ChangeEvent<HTMLInputElement>,) => {
+    const file = e.target.files?.[0],
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
     if (file) {
       const reader = new FileReader();
       reader.onloadend = () => {
@@ -258,7 +309,7 @@ export function TalentRegistrationForm() {
   };
 
   // Get category color
-  const getCategoryColor = (category: CategoryType) => {
+  const getCategoryColor = (category: CategoryType,) => {
     switch (category) {
       case 'programming':
         return 'bg-blue-500/20 hover:bg-blue-500/30 text-blue-500';
@@ -276,7 +327,7 @@ export function TalentRegistrationForm() {
   };
 
   // Send notification email
-  const sendEnhancementNotification = async (userId: string, email: string) => {
+  const sendEnhancementNotification = async (userId: string, email: string,) => {
     try {
       await supabase.functions.invoke('send-email', {
         body: {
@@ -303,7 +354,7 @@ export function TalentRegistrationForm() {
   };
 
   // Handle form submission
-  const onSubmit = async (values: TalentFormValues) => {
+  const onSubmit = async (values: TalentFormValues,) => {
     if (skillTags.length === 0) {
       toast({
         title: 'Skills required',
@@ -378,7 +429,7 @@ export function TalentRegistrationForm() {
 
       // Create the talent profile
       // In a real implementation, this would save to Supabase
-      setTimeout(() => {
+      setTimeout((,) => {
         toast({
           title: 'Profile Created Successfully',
           description:
@@ -449,9 +500,15 @@ export function TalentRegistrationForm() {
                 <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
                   <div className='col-span-1'>
                     <FormField
+<<<<<<< HEAD
                       control={form.control}
                       name='name'
                       render={({ field }: { field: any }) => (
+=======
+                      control = {form.control,}
+                      name="name"
+                      render={({ field }: { field: any },) => (
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
                         <FormItem>
                           <FormLabel className='text-zion-slate-light'>
                             Full Name
@@ -474,9 +531,15 @@ export function TalentRegistrationForm() {
 
                   <div className='col-span-1'>
                     <FormField
+<<<<<<< HEAD
                       control={form.control}
                       name='title'
                       render={({ field }: { field: any }) => (
+=======
+                      control = {form.control,}
+                      name="title"
+                      render={({ field }: { field: any },) => (
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
                         <FormItem>
                           <FormLabel className='text-zion-slate-light'>
                             Professional Title
@@ -499,9 +562,15 @@ export function TalentRegistrationForm() {
 
                   <div className='col-span-1'>
                     <FormField
+<<<<<<< HEAD
                       control={form.control}
                       name='location'
                       render={({ field }: { field: any }) => (
+=======
+                      control = {form.control,}
+                      name="location"
+                      render={({ field }: { field: any },) => (
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
                         <FormItem>
                           <FormLabel className='text-zion-slate-light'>
                             Location
@@ -524,9 +593,15 @@ export function TalentRegistrationForm() {
 
                   <div className='col-span-1'>
                     <FormField
+<<<<<<< HEAD
                       control={form.control}
                       name='hourlyRate'
                       render={({ field }: { field: any }) => (
+=======
+                      control = {form.control,}
+                      name="hourlyRate"
+                      render={({ field }: { field: any },) => (
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
                         <FormItem>
                           <FormLabel className='text-zion-slate-light'>
                             Hourly Rate (USD)
@@ -560,10 +635,17 @@ export function TalentRegistrationForm() {
                       {uploadedAvatar ? (
                         <AspectRatio ratio={1 / 1}>
                           <img
+<<<<<<< HEAD
                             src={uploadedAvatar}
                             alt='Avatar preview'
                             className='w-full h-full object-cover'
                             loading='lazy'
+=======
+                            src = {uploadedAvatar,}
+                            alt="Avatar preview"
+                            className="w-full h-full object-cover"
+                            loading="lazy"
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
                           />
                         </AspectRatio>
                       ) : (
@@ -577,10 +659,17 @@ export function TalentRegistrationForm() {
                       <Upload className='mr-2 h-4 w-4' />
                       <span>Upload Photo</span>
                       <input
+<<<<<<< HEAD
                         type='file'
                         accept='image/*'
                         className='hidden'
                         onChange={handleAvatarUpload}
+=======
+                        type="file"
+                        accept="image/*"
+                        className="hidden"
+                        onChange = {handleAvatarUpload,}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
                       />
                     </label>
                   </div>
@@ -599,9 +688,15 @@ export function TalentRegistrationForm() {
                   Professional Bio
                 </h3>
                 <FormField
+<<<<<<< HEAD
                   control={form.control}
                   name='bio'
                   render={({ field }: { field: any }) => (
+=======
+                  control = {form.control,}
+                  name="bio"
+                  render={({ field }: { field: any },) => (
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
                     <FormItem>
                       <FormLabel className='text-zion-slate-light'>
                         About Yourself
@@ -623,6 +718,7 @@ export function TalentRegistrationForm() {
 
                 {/* AI Enhancement Option */}
                 <FormField
+<<<<<<< HEAD
                   control={form.control}
                   name='enhancedProfile'
                   render={({ field }: { field: any }) => (
@@ -630,6 +726,15 @@ export function TalentRegistrationForm() {
                       <div className='space-y-0.5'>
                         <FormLabel className='text-white flex items-center'>
                           <Sparkles className='w-4 h-4 mr-2 text-zion-purple' />
+=======
+                  control = {form.control,}
+                  name="enhancedProfile"
+                  render={({ field }: { field: any },) => (
+                    <FormItem className="flex flex-row items-center justify-between p-3 border border-zion-blue-light bg-zion-blue/30 rounded-md">
+                      <div className="space-y-0.5">
+                        <FormLabel className="text-white flex items-center">
+                          <Sparkles className="w-4 h-4 mr-2 text-zion-purple" />
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
                           AI Profile Enhancement
                         </FormLabel>
                         <FormDescription className='text-zion-slate-light'>
@@ -639,10 +744,17 @@ export function TalentRegistrationForm() {
                       </div>
                       <FormControl>
                         <Switch
+<<<<<<< HEAD
                           aria-label='AI profile enhancement'
                           checked={field.value}
                           onCheckedChange={field.onChange}
                           className='data-[state=checked]:bg-zion-purple'
+=======
+                          aria-label="AI profile enhancement"
+                          checked = {field.value,}
+                          onCheckedChange = {field.onChange,}
+                          className="data-[state=checked]:bg-zion-purple"
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
                         />
                       </FormControl>
                     </FormItem>
@@ -652,11 +764,19 @@ export function TalentRegistrationForm() {
                 {form.watch('enhancedProfile') && (
                   <div className='flex justify-end'>
                     <Button
+<<<<<<< HEAD
                       type='button'
                       variant='outline'
                       className='border-zion-purple text-zion-purple hover:bg-zion-purple/10'
                       onClick={generateEnhancedProfile}
                       disabled={isGenerating}
+=======
+                      type="button"
+                      variant="outline"
+                      className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
+                      onClick = {generateEnhancedProfile,}
+                      disabled = {isGenerating,}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
                     >
                       <Sparkles className='mr-2 h-4 w-4' />
                       {isGenerating
@@ -675,10 +795,17 @@ export function TalentRegistrationForm() {
                         AI-Generated Content
                       </h4>
                       <Button
+<<<<<<< HEAD
                         type='button'
                         size='sm'
                         className='bg-zion-purple hover:bg-zion-purple-dark text-white'
                         onClick={applyGeneratedContent}
+=======
+                        type="button"
+                        size="sm"
+                        className="bg-zion-purple hover:bg-zion-purple-dark text-white"
+                        onClick = {applyGeneratedContent,}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
                       >
                         <Check className='mr-1 h-3 w-3' /> Apply
                       </Button>
@@ -696,6 +823,7 @@ export function TalentRegistrationForm() {
 
                       {generatedContent.categorizedSkills && (
                         <div>
+<<<<<<< HEAD
                           <h5 className='text-zion-slate-light text-sm mb-1'>
                             Categorized Skills
                           </h5>
@@ -707,16 +835,30 @@ export function TalentRegistrationForm() {
                                 key={category}
                                 className='flex items-center gap-2'
                               >
+=======
+                          <h5 className="text-zion-slate-light text-sm mb-1">Categorized Skills</h5>
+                          <div className="flex flex-wrap gap-2 mt-1">
+                            {Object.entries(generatedContent.categorizedSkills).map(([category, skills],) => (
+                              <div key={category} className="flex items-center gap-2">
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
                                 <Badge
                                   className={`w-fit ${getCategoryColor(category as CategoryType)}`}
                                 >
                                   {category}
                                 </Badge>
+<<<<<<< HEAD
                                 <div className='flex flex-wrap gap-1'>
                                   {skills.map((skill: string) => (
                                     <Badge
                                       key={skill}
                                       className='bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none'
+=======
+                                <div className="flex flex-wrap gap-1">
+                                  {skills.map((skill: string,) => (
+                                    <Badge
+                                      key = {skill,}
+                                      className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none"
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
                                     >
                                       {skill}
                                     </Badge>
@@ -742,9 +884,15 @@ export function TalentRegistrationForm() {
                     Skills & Expertise
                   </h3>
                   <FormField
+<<<<<<< HEAD
                     control={form.control}
                     name='skills'
                     render={({ field }: { field: any }) => (
+=======
+                    control = {form.control,}
+                    name="skills"
+                    render={({ field }: { field: any },) => (
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
                       <FormItem>
                         <FormLabel className='text-zion-slate-light'>
                           Skills
@@ -755,14 +903,21 @@ export function TalentRegistrationForm() {
                               className='flex-1 bg-zion-blue border-zion-blue-light text-white'
                               placeholder='Add a skill...'
                               {...field}
-                              onKeyDown={handleSkillKeyPress}
+                              onKeyDown = {handleSkillKeyPress,}
                             />
                           </FormControl>
                           <Button
+<<<<<<< HEAD
                             type='button'
                             variant='outline'
                             className='border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white'
                             onClick={handleAddSkill}
+=======
+                            type="button"
+                            variant="outline"
+                            className="border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white"
+                            onClick = {handleAddSkill,}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
                           >
                             Add
                           </Button>
@@ -778,6 +933,7 @@ export function TalentRegistrationForm() {
                   <div className='flex flex-wrap gap-2 mt-2'>
                     {skillTags.map(skill => (
                       <Badge
+<<<<<<< HEAD
                         key={skill}
                         className='bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none pl-2 pr-1 py-1.5 flex items-center gap-1'
                       >
@@ -786,6 +942,16 @@ export function TalentRegistrationForm() {
                           type='button'
                           onClick={() => handleRemoveSkill(skill)}
                           className='rounded-full hover:bg-zion-purple-dark/20 p-0.5'
+=======
+                        key = {skill,}
+                        className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none pl-2 pr-1 py-1.5 flex items-center gap-1"
+                      >
+                        {skill}
+                        <button
+                          type="button"
+                          onClick = {(,) => handleRemoveSkill(skill),}
+                          className="rounded-full hover:bg-zion-purple-dark/20 p-0.5"
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
                         >
                           <X className='h-3 w-3' />
                         </button>
@@ -805,6 +971,7 @@ export function TalentRegistrationForm() {
                     Availability
                   </h3>
                   <FormField
+<<<<<<< HEAD
                     control={form.control}
                     name='availability'
                     render={({ field }: { field: any }) => (
@@ -812,16 +979,32 @@ export function TalentRegistrationForm() {
                         <FormLabel className='text-zion-slate-light'>
                           Current Status
                         </FormLabel>
+=======
+                    control = {form.control,}
+                    name="availability"
+                    render={({ field }: { field: any },) => (
+                      <FormItem className="space-y-4">
+                        <FormLabel className="text-zion-slate-light">Current Status</FormLabel>
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
                         <FormControl>
                           <div className='space-y-2'>
                             <div className='flex items-center space-x-2'>
                               <input
+<<<<<<< HEAD
                                 type='radio'
                                 id='available'
                                 value='available'
                                 checked={field.value === 'available'}
                                 onChange={() => field.onChange('available')}
                                 className='text-zion-purple focus:ring-zion-purple'
+=======
+                                type="radio"
+                                id="available"
+                                value="available"
+                                checked = {field.value === "available",}
+                                onChange = {(,) => field.onChange("available"),}
+                                className="text-zion-purple focus:ring-zion-purple"
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
                               />
                               <label
                                 htmlFor='available'
@@ -834,12 +1017,21 @@ export function TalentRegistrationForm() {
 
                             <div className='flex items-center space-x-2'>
                               <input
+<<<<<<< HEAD
                                 type='radio'
                                 id='limited'
                                 value='limited'
                                 checked={field.value === 'limited'}
                                 onChange={() => field.onChange('limited')}
                                 className='text-zion-purple focus:ring-zion-purple'
+=======
+                                type="radio"
+                                id="limited"
+                                value="limited"
+                                checked = {field.value === "limited",}
+                                onChange = {() => field.onChange("limited"),}
+                                className="text-zion-purple focus:ring-zion-purple"
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
                               />
                               <label
                                 htmlFor='limited'
@@ -852,12 +1044,21 @@ export function TalentRegistrationForm() {
 
                             <div className='flex items-center space-x-2'>
                               <input
+<<<<<<< HEAD
                                 type='radio'
                                 id='unavailable'
                                 value='unavailable'
                                 checked={field.value === 'unavailable'}
                                 onChange={() => field.onChange('unavailable')}
                                 className='text-zion-purple focus:ring-zion-purple'
+=======
+                                type="radio"
+                                id="unavailable"
+                                value="unavailable"
+                                checked = {field.value === "unavailable",}
+                                onChange = {() => field.onChange("unavailable"),}
+                                className="text-zion-purple focus:ring-zion-purple"
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
                               />
                               <label
                                 htmlFor='unavailable'
@@ -886,10 +1087,17 @@ export function TalentRegistrationForm() {
                 >
                   Save as Draft
                 </Button>
+<<<<<<< HEAD
                 <Button
                   type='submit'
                   className='bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white'
                   disabled={isSubmitting}
+=======
+                <Button 
+                  type="submit"
+                  className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white"
+                  disabled = {isSubmitting,}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
                 >
                   {isSubmitting ? 'Creating Profile...' : 'Create Profile'}
                 </Button>

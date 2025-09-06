@@ -13,15 +13,22 @@ import {
   FormField,
   FormItem,
   FormLabel,
+<<<<<<< HEAD
   FormMessage,;
 } from '@/components/ui/form';
+=======
+  FormMessage} from '@/components/ui/form',
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 import { WorkExperience } from '@/types/resume';
 import { Loader2, Edit, Trash2 } from 'lucide-react';
 import { useResume } from '@/hooks/useResume';
 import { Alert, AlertDescription } from '@/components/ui/alert';
 import { Card, CardContent } from '@/components/ui/card';
 import { AIEnhancementButton } from '@/components/resume-builder/forms/AIEnhancementButton';
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 // Define schema for form validation
 const workExperienceSchema = z.object({
   company_name: z.string().min(1, 'Company name is required'),
@@ -75,7 +82,7 @@ export function WorkExperienceForm({
     },
   });
 
-  const handleAddOrUpdate = async (data: WorkExperienceFormValues) => {
+  const handleAddOrUpdate = async (data: WorkExperienceFormValues,) => {
     try {
       setError(null);
       let success;
@@ -110,9 +117,16 @@ export function WorkExperienceForm({
     } catch (err: any) {
       setError(err.message || 'An error occurred');
     }
+<<<<<<< HEAD
   };
   const handleEdit = (work: WorkExperience) => {
     setEditingId(work.id!);
+=======
+  },
+
+  const handleEdit = (work: WorkExperience,) => {
+    setEditingId(work.id!),
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
     form.reset({
       ...work,
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -124,15 +138,21 @@ export function WorkExperienceForm({
     });
   };
 
-  const handleDelete = async (id: string) => {
+  const handleDelete = async (id: string,) => {
     if (confirm('Are you sure you want to delete this work experience?')) {
       await deleteWorkExperience(id);
     }
   };
 
+<<<<<<< HEAD
   const handleEnhanceDescription = (enhancedContent: string) => {
     form.setValue('description', enhancedContent);
   };
+=======
+  const handleEnhanceDescription = (enhancedContent: string,) => {
+    form.setValue('description', enhancedContent)
+  },
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 
   return (
     <div className='space-y-6'>
@@ -144,12 +164,21 @@ export function WorkExperienceForm({
       </div>
 
       {workExperiences.length > 0 && (
+<<<<<<< HEAD
         <div className='space-y-4'>
           <h3 className='text-md font-medium'>Added Experience</h3>
           {workExperiences.map(work => (
             <Card key={work.id} className='bg-muted/40'>
               <CardContent className='pt-6'>
                 <div className='flex justify-between'>
+=======
+        <div className="space-y-4">
+          <h3 className="text-md font-medium">Added Experience</h3>
+          {workExperiences.map((work,) => (
+            <Card key={work.id} className="bg-muted/40">
+              <CardContent className="pt-6">
+                <div className="flex justify-between">
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
                   <div>
                     <h4 className='font-medium'>{work.role_title}</h4>
                     <p className='text-sm text-muted-foreground'>
@@ -176,18 +205,32 @@ export function WorkExperienceForm({
                   </div>
                   <div className='flex gap-2'>
                     <Button
+<<<<<<< HEAD
                       variant='ghost'
                       size='icon'
                       onClick={() => handleEdit(work)}
                       aria-label='Edit experience'
+=======
+                      variant="ghost"
+                      size="icon"
+                      onClick = {() => handleEdit(work),}
+                      aria-label="Edit experience"
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
                     >
                       <Edit className='h-4 w-4' />
                     </Button>
                     <Button
+<<<<<<< HEAD
                       variant='ghost'
                       size='icon'
                       onClick={() => handleDelete(work.id!)}
                       aria-label='Delete experience'
+=======
+                      variant="ghost"
+                      size="icon"
+                      onClick = {() => handleDelete(work.id!),}
+                      aria-label="Delete experience"
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
                     >
                       <Trash2 className='h-4 w-4' />
                     </Button>
@@ -216,9 +259,15 @@ export function WorkExperienceForm({
           >
             <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
               <FormField
+<<<<<<< HEAD
                 control={form.control}
                 name='company_name'
                 render={({ field }: { field: any }) => (
+=======
+                control = {form.control,}
+                name="company_name"
+                render={({ field }: { field: any },) => (
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
                   <FormItem>
                     <FormLabel>Company Name</FormLabel>
                     <FormControl>
@@ -230,9 +279,15 @@ export function WorkExperienceForm({
               />
 
               <FormField
+<<<<<<< HEAD
                 control={form.control}
                 name='role_title'
                 render={({ field }: { field: any }) => (
+=======
+                control = {form.control,}
+                name="role_title"
+                render={({ field }: { field: any },) => (
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
                   <FormItem>
                     <FormLabel>Job Title</FormLabel>
                     <FormControl>
@@ -249,6 +304,7 @@ export function WorkExperienceForm({
 
             <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
               <FormField
+<<<<<<< HEAD
                 control={form.control}
                 name='start_date'
                 render={({ field }: { field: any }) => (
@@ -256,6 +312,19 @@ export function WorkExperienceForm({
                     <FormLabel>Start Date</FormLabel>
                     <FormControl>
                       <Input type='date' {...field} value={field.value || ''} />
+=======
+                control = {form.control,}
+                name="start_date"
+                render={({ field }: { field: any },) => (
+                  <FormItem>
+                    <FormLabel>Start Date</FormLabel>
+                    <FormControl>
+                      <Input 
+                        type="date" 
+                        {...field} 
+                        value = {field.value || '',}
+                      />
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -264,14 +333,21 @@ export function WorkExperienceForm({
 
               <div className='space-y-4'>
                 <FormField
+<<<<<<< HEAD
                   control={form.control}
                   name='is_current'
                   render={({ field }: { field: any }) => (
                     <FormItem className='flex flex-row items-start space-x-3 space-y-0 py-2'>
+=======
+                  control = {form.control,}
+                  name="is_current"
+                  render={({ field }: { field: any },) => (
+                    <FormItem className="flex flex-row items-start space-x-3 space-y-0 py-2">
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
                       <FormControl>
                         <Checkbox
-                          checked={field.value}
-                          onCheckedChange={field.onChange}
+                          checked = {field.value,}
+                          onCheckedChange = {field.onChange,}
                         />
                       </FormControl>
                       <div className='space-y-1 leading-none'>
@@ -283,6 +359,7 @@ export function WorkExperienceForm({
 
                 {!form.watch('is_current') && (
                   <FormField
+<<<<<<< HEAD
                     control={form.control}
                     name='end_date'
                     render={({ field }: { field: any }) => (
@@ -293,6 +370,18 @@ export function WorkExperienceForm({
                             type='date'
                             {...field}
                             value={field.value || ''}
+=======
+                    control = {form.control,}
+                    name="end_date"
+                    render={({ field }: { field: any },) => (
+                      <FormItem>
+                        <FormLabel>End Date</FormLabel>
+                        <FormControl>
+                          <Input 
+                            type="date" 
+                            {...field} 
+                            value = {field.value || '',}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
                           />
                         </FormControl>
                         <FormMessage />
@@ -304,6 +393,7 @@ export function WorkExperienceForm({
             </div>
 
             <FormField
+<<<<<<< HEAD
               control={form.control}
               name='location'
               render={({ field }: { field: any }) => (
@@ -312,6 +402,39 @@ export function WorkExperienceForm({
                   <FormControl>
                     <Input
                       placeholder='San Francisco, CA (Remote)'
+=======
+              control = {form.control,}
+              name="location"
+              render={({ field }: { field: any },) => (
+                <FormItem>
+                  <FormLabel>Location (Optional)</FormLabel>
+                  <FormControl>
+                    <Input placeholder="San Francisco, CA (Remote)" {...field} />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+
+            <FormField
+              control = {form.control,}
+              name="description"
+              render={({ field }: { field: any },) => (
+                <FormItem>
+                  <FormLabel className="flex justify-between">
+                    <span>Job Description</span>
+                    <AIEnhancementButton
+                      currentContent = {field.value || '',}
+                      enhancementType="work-description"
+                      context={`Role: ${form.getValues('role_title')} at ${form.getValues('company_name')}`}
+                      onEnhanced = {handleEnhanceDescription,}
+                    />
+                  </FormLabel>
+                  <FormControl>
+                    <Textarea
+                      placeholder="Describe your responsibilities and accomplishments..."
+                      className="min-h-[100px]"
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
                       {...field}
                     />
                   </FormControl>

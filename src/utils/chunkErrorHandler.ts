@@ -4,7 +4,10 @@
  */
 
 import { logErrorToProduction } from './productionLogger';
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 interface ChunkErrorStats {
   errorCount: number;
   lastErrorTime: number;
@@ -25,6 +28,7 @@ class ChunkErrorHandler {
     if (typeof window === 'undefined') return;
 
     // Handle webpack chunk loading errors
+<<<<<<< HEAD
     window.addEventListener('error', event => {
       this.handleScriptError(event);
     });
@@ -33,6 +37,16 @@ class ChunkErrorHandler {
     window.addEventListener('unhandledrejection', event => {
       this.handlePromiseRejection(event);
     });
+=======
+    window.addEventListener('error', (event,) => {
+      this.handleScriptError(event)
+    }),
+
+    // Handle unhandled promise rejections (async chunk loading)
+    window.addEventListener('unhandledrejection', (event,) => {
+      this.handlePromiseRejection(event)
+    })
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
   }
 
   private handleScriptError(event: ErrorEvent): void {
@@ -272,9 +286,15 @@ class ChunkErrorHandler {
 
   // Public method to manually trigger recovery
   public triggerRecovery(): void {
+<<<<<<< HEAD
     this.clearCaches().then(() => {
       this.reloadPage();
     });
+=======
+    this.clearCaches().then((,) => {
+      this.reloadPage()
+    })
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
   }
 
   // Public method to check if we're in a chunk error state

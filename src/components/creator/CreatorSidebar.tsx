@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 import {
   Bell,
@@ -8,6 +9,10 @@ import {
   Settings,
   Users,;
 } from 'lucide-react';
+=======
+
+import { Bell, FileText, Home, Mail, Search, Settings, Users } from 'lucide-react';
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 import {
   Sidebar,
   SidebarContent,

@@ -9,6 +9,7 @@ import { ReferralReward } from '@/types/referrals';
 import { formatDate } from '@/utils/referralUtils';
 import { BadgeDollarSign, Badge } from 'lucide-react';
 
+<<<<<<< HEAD
 interface RewardsCardProps {
   rewards: ReferralReward[];
   isLoading: boolean;
@@ -21,6 +22,12 @@ import { BadgeDollarSign, Badge } from 'lucide-react'
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
 
+=======
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { ReferralReward } from "@/types/referrals";
+import { formatDate } from "@/utils/referralUtils";
+import { BadgeDollarSign, Badge } from 'lucide-react';
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 interface RewardsCardProps {
   rewards: ReferralReward[],
   isLoading: boolean
@@ -103,10 +110,17 @@ export function RewardsCard({ rewards, isLoading }: RewardsCardProps) {
         </CardDescription>
       </CardHeader>
       <CardContent>
+<<<<<<< HEAD
         <div className='space-y-4'>
           {rewards.map((reward, index) => (
             <div
               key={reward.id}
+=======
+        <div className="space-y-4">
+          {rewards.map((reward, index,) => (
+            <div 
+              key = {reward.id,}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
               className={`flex justify-between items-start ${
                 index !== rewards.length - 1 ? 'border-b pb-3' : ''
               }`}

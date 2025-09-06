@@ -5,9 +5,13 @@ import { mutate } from 'swr';
 import { Button } from '@/components/ui/button';
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
 import { RefreshCcw, AlertCircle } from 'lucide-react';
+<<<<<<< HEAD
 import { logErrorToProduction } from '@/utils/productionLogger';
 
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+import {logErrorToProduction} from '@/utils/productionLogger';
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 interface MarketplaceErrorFallbackProps extends FallbackProps {
   // Additional props if needed
 
@@ -30,7 +34,7 @@ function MarketplaceErrorFallback({ error, resetErrorBoundary }: MarketplaceErro
   const handleRetry = async () => {
     try {
       // Re-call SWR mutate('*') to refresh all cached data
-      await mutate(() => true, undefined, { revalidate: true }),
+      await mutate((,) => true, undefined, { revalidate: true }),
       resetErrorBoundary()
     } catch (retryError) {
       logErrorToProduction('Error during retry:', { data: retryError }),
@@ -54,6 +58,7 @@ function MarketplaceErrorFallback({ error, resetErrorBoundary }: MarketplaceErro
               'An unexpected error occurred while loading marketplace content.'}
           </AlertDescription>
         </Alert>
+<<<<<<< HEAD
 
         <div className='flex flex-col space-y-2'>
           <Button onClick={handleRetry} className='w-full' variant='default'>
@@ -69,6 +74,21 @@ function MarketplaceErrorFallback({ error, resetErrorBoundary }: MarketplaceErro
           </Button>
         </div>
 =======
+=======
+        
+        <div className="flex flex-col space-y-2">
+          <Button 
+            onClick = {handleRetry,}
+            className="w-full"
+            variant="default"
+          >
+            <RefreshCcw className="mr-2 h-4 w-4" />
+            Retry
+          </Button>
+          
+          <Button 
+            onClick = {(,) => window.location.reload(),}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
             variant="outline"
             className="w-full"
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
@@ -106,6 +126,7 @@ function MarketplaceErrorFallback({ error, resetErrorBoundary }: MarketplaceErro
 interface MarketplaceErrorBoundaryProps {
   children: React.ReactNode;
 
+<<<<<<< HEAD
 export function MarketplaceErrorBoundary({
   children,
 }: MarketplaceErrorBoundaryProps) {
@@ -114,6 +135,21 @@ export function MarketplaceErrorBoundary({
     logErrorToProduction('MarketplaceErrorBoundary caught an error:', error, {
       componentStack: errorInfo.componentStack,
     });
+=======
+export function MarketplaceErrorBoundary({ children }: MarketplaceErrorBoundaryProps) {
+  const handleError = (error: Error, errorInfo: React.ErrorInfo,) => {
+    // Log boundary errors to Sentry
+    logErrorToProduction('MarketplaceErrorBoundary caught an error:', error, { componentStack: errorInfo.componentStack }),
+    
+    Sentry.withScope((scope,) => {
+      scope.setTag('errorBoundarymarketplace'),
+      scope.setContext('errorInfo', {
+        componentStack: errorInfo.componentStack || undefined}),
+      scope.setLevel('error'),
+      Sentry.captureException(error)
+    })
+  },
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
 
     Sentry.withScope(scope => {
       scope.setTag('errorBoundary', 'marketplace');
@@ -132,9 +168,14 @@ export function MarketplaceErrorBoundary({
 } 
   return (
     <ErrorBoundary 
+<<<<<<< HEAD
       FallbackComponent={MarketplaceErrorFallback}
       onError={handleError}
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+      FallbackComponent = {MarketplaceErrorFallback,}
+      onError = {handleError,}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-b31b
     >
       {children}
     </ErrorBoundary>
