@@ -55,10 +55,9 @@ export default function GuestCheckoutModal(): any ({;
     }
   },
 
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 
   return (
@@ -187,7 +186,7 @@ export default function GuestCheckoutModal(): any ({;
               Email Address
             </Label>
             <Input
-<<<<<<< HEAD
+
               id='guest-email'
               type='email'
               value={email || ''}
@@ -261,10 +260,7 @@ export default function GuestCheckoutModal(): any ({;
               disabled={isSubmitting || !email || !address}
               className="bg-zion-cyan hover:bg-zion-cyan/90 text-zion-blue"
             >
-=======
 
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               {isSubmitting ? (
                 'Processing...'
               ) : (
@@ -273,10 +269,9 @@ export default function GuestCheckoutModal(): any ({;
                   Continue to Payment
                 </>
               )}
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
               disabled={isSubmitting || !email || !address}
               className='bg-zion-cyan hover:bg-zion-cyan/90 text-zion-blue'>;

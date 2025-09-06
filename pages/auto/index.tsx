@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -28,24 +28,22 @@ const AutoIndex: NextPage = () => {
           <li className="border rounded p-4">
             <h2 className="font-semibold text-lg"><Link href="/auto/seo-audit">Autonomous SEO Auditor</Link></h2>
             <p className="text-sm text-gray-600">Scans pages for SEO gaps and commits a report for fixes.</p>
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
           </li>
         </ul>
       </main>
     </div>
-<<<<<<< HEAD
-  ),
-};
+
 
   )
 }
 export default AutoIndex;
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 },
 export default AutoIndex,
@@ -78,17 +76,11 @@ const AutoIndex: NextPage = () => {;
         </ul>;
       </main>;
     </div>;
-<<<<<<< HEAD
+
   );
 },;
-=======
-  ),;
-};
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 export default AutoIndex;

@@ -1,24 +1,11 @@
 
-<<<<<<< HEAD
+
 import React from 'react';
 import { CheckCircle  } from 'lucide-react';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
 interface VerifiedBadgeProps {
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-  verified: boolean,
-  size?: 'sm' | 'md' | 'lg'
-}
-
-export function VerifiedBadge({ verified, size = 'sm' }: VerifiedBadgeProps) {;
-  if (!verified) return null;
-<<<<<<< HEAD
-=======
-
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React from 'react',;
 import { CheckCircle } from 'lucide-react',;
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip',;

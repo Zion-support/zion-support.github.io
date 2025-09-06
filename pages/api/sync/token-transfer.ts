@@ -1,14 +1,6 @@
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from "next",;
-import { readState, writeState, upsertEvent } from "../../../utils/sync/storage",;
-import { signPayload } from "../../../utils/sync/signature",;
-import axios from "axios",;
-import { v4 as uuidv4 } from "uuid",;
-import { nextVersionFor } from "../../../utils/sync/versioning",;
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" }),
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
@@ -26,7 +18,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (!state.config.optIn |state.config.paused) {
     return res.status(403).json({ error: "Sync disabled for this instance" })
   }
-<<<<<<< HEAD
+
   const { txId, token, amount, fromSubnet, toSubnet, timestamp } = req.body as {
     txId: string
     token: string
@@ -34,21 +26,14 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     fromSubnet: string
     toSubnet: string
     timestamp?: number
-=======
 
-  };
-
-  if (!txId || !token || typeof amount !== "number" || !fromSubnet || !toSubnet) {
-    return res.status(400).json({ error: "txId, token, amount, fromSubnet, toSubnet required" })
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
   if (!txId |!token |typeof amount !== "number" |!fromSubnet |!toSubnet) {
     return res.status(400).json({ error: "txId, token, amount, fromSubnet, toSubnet required" })
   }
   const version = nextVersionFor(state, txId)
   const event = {
-<<<<<<< HEAD
+
     eventId: uuidv4()
     type: "token_transfer" as const
     payload: { id: txId, txId, token, amount, fromSubnet, toSubnet, timestamp: timestamp |Date.now() }
@@ -91,10 +76,10 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
   const { txId, token, amount, fromSubnet, toSubnet, timestamp } = req.body as {
     txId: string,
     token: string,
@@ -103,15 +88,8 @@ export default async function handler(req, res) {
     toSubnet: string,
     timestamp?: number
   },
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
@@ -121,9 +99,10 @@ export default async function handler(req, res) {
       .filter((p) => !p.paused)
       .map(async (peer) => {
 
-<<<<<<< HEAD
+
   return res.status(200).json({ status: "created", version, eventId: event.eventId });
 };
+
   if (!txId || !token || typeof amount !== "number" || !fromSubnet || !toSubnet) {
     return res.status(400).json({ error: "txId, token, amount, fromSubnet, toSubnet required" })
     } catch (error) {
@@ -157,8 +136,7 @@ export default async function handler(req, res) {
     state.config.peers
       .filter((p) => !p.paused)
       .map(async (peer) => {
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
         const url = new URL("/api/sync/publish", peer.baseUrl).toString()
         try {
           await axios.post(url, body, { headers, timeout: 5000 })
@@ -282,11 +260,11 @@ export default async function handler(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD
-}
-}
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+}
+}
+
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+

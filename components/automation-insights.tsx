@@ -9,24 +9,19 @@ export default function AutomationInsightsPage() {
       id: 'ai-automation-2025'
       title: 'AI Automation Trends 2025'
       description:
-<<<<<<< HEAD
+
         'Discover the latest trends in AI automation that are reshaping industries worldwide.',      category: 'Trends'
       readTime: '8 min read'
       featured: true
     }
-=======
 
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         'Discover the latest trends in AI automation that are reshaping industries worldwide.',      category: 'Trends',
       readTime: '8 min read',
       featured: true;
     };
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
     {
       id: 'autonomous-systems'
       title: 'Building Autonomous Systems'
@@ -114,107 +109,7 @@ export default function AutomationInsightsPage() {
       label: 'Pages Generated'
       description: 'Content created autonomously'
     },  ];      description: 'Content created autonomously'
-=======
 
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-import React from 'react';
-
-
-    <>;
-      <Head>;
-        <title>;
-          Automation Insights | Zion Tech Group - AI Automation Expertise;
-        </title>;
-
-        />;
-        <meta name='twitter:card' content='summary_large_image' />;
-
-
-      <div className='min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white'>;
-        <main className='container mx-auto px-6 py-12'>;
-          <section className='text-center mb-16'>;
-            <h1 className='text-5xl font-extrabold mb-6 bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent'>;
-              Automation Insights;
-            </h1>;
-            <p className='text-xl text-white/80 max-w-3xl mx-auto'>;
-
-  return (
-    <>
-      <Head>
-        <title>
-          Automation Insights | Zion Tech Group - AI Automation Expertise
-        </title>
-        <meta
-          name='description'
-          content="Explore Zion Tech Group's automation insights, trends, and expertise in building autonomous systems."
-        />
-        <meta
-          property='og:title'
-          content='Automation Insights | Zion Tech Group'
-        />
-        <meta
-          property='og:description'
-          content='Expert insights on AI automation, autonomous systems, and industry trends.'
-        />
-        <meta name='twitter:card' content='summary_large_image' />
-      <div className='min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white'>
-        <main className='container mx-auto px-6 py-12'>
-          <section className='text-center mb-16'>
-            <h1 className='text-5xl font-extrabold mb-6 bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent'>
-              Automation Insights
-            </h1>
-            <p className='text-xl text-white/80 max-w-3xl mx-auto'>
-              Deep insights into AI automation, autonomous systems, and the
-              future of intelligent technology
-            </p>
-          </section>
-          <section className='mx-auto max-w-7xl'>
-            {/* Success Metrics */}
-            <div className='bg-white/10 backdrop-blur-xl rounded-2xl p-8 mb-16'>
-              <h2 className='text-3xl font-bold mb-8 text-center text-cyan-400'>
-                Our Automation Success
-              </h2>
-              <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
-                {successMetrics.map((item, index) => (
-                  <div key={index} className='text-center'>
-                    <div className='text-4xl font-bold text-fuchsia-400 mb-2'>
-                      {item.metric}
-                    </div>
-                    <div className='text-lg font-semibold text-white mb-1'>
-                      {item.label}
-                    </div>
-                    <div className='text-sm text-white/70'>
-                      {item.description}
-                    </div>                  </div>                  <div key={index} className="text-center">
-                    <div className="text-4xl font-bold text-fuchsia-400 mb-2">{item.metric}</div>
-                    <div className="text-lg font-semibold text-white mb-1">{item.label}</div>
-                    <div className="text-sm text-white/70">{item.description}</div>
-                ))}
-              </div>
-            </div>
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               Deep insights into AI automation, autonomous systems, and the;
               future of intelligent technology;
             </p>;
@@ -224,16 +119,11 @@ import React from 'react';
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 ))}
 
-<<<<<<< HEAD
-=======
-              </div>;
-            </div>;
 
 
-            {/* Automation Trends */}
 
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
             {/* Automation Trends */}
             <div className='mb-16'>
               <h2 className='text-3xl font-bold mb-8 text-center text-fuchsia-400'>
@@ -241,12 +131,13 @@ import React from 'react';
               </h2>
               <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
 
-<<<<<<< HEAD
-=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
                 {automationTrends.map((trend, index) => (
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   <div
@@ -287,17 +178,22 @@ import React from 'react';
 
                     </Link>
 
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
                   </div>
                 ))}
               </div>
             </div>
 
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
             {/* Automation Tools & Frameworks */}
             <div className='mb-16'>
               <h2 className='text-3xl font-bold mb-8 text-center text-green-400'>
@@ -332,19 +228,13 @@ import React from 'react';
               </div>
             </div>
 
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             {/* Automation Tools & Frameworks */}
 
@@ -359,6 +249,7 @@ import React from 'react';
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
             {/* Call to Action */}
             <div className='bg-gradient-to-r from-cyan-400/20 to-fuchsia-400/20 backdrop-blur-xl rounded-2xl p-8 text-center'>
               <h2 className='text-3xl font-bold mb-4 text-white'>
@@ -368,12 +259,13 @@ import React from 'react';
                 Let our experts help you build the automation systems of the
                 future
 
-<<<<<<< HEAD
-=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
               </p>
               <div className='flex flex-wrap justify-center gap-4'>
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -407,45 +299,23 @@ import React from 'react';
         </main>
       </div>
     </>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
+
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-                  View Case Studies;
-                </Link>;
-              </div>;
-            </div>;
-          </section>;
-        </main>;
-      </div>;
-
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-);
-<<<<<<< HEAD
-=======
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
-  );
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-}
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 }
     </>);
 }
-<<<<<<< HEAD
+
   );
 }
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba

@@ -19,12 +19,7 @@ class ErrorBoundary extends React.Component {
 }
 import React, { useState } from 'react';
 
-<<<<<<< HEAD
 
-};
-export default function MilestoneForm(): any ({ onSubmit }: Props) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 type Props = {
   onSubmit: (payload: {
     title: string;
@@ -32,26 +27,9 @@ type Props = {
     dueDate: string;
     amountUsd: number;
   }) => Promise<void> | void;};  onSubmit: (payload: { title: string, description?: string, dueDate: string, amountUsd: number }) => Promise<void> | void
-<<<<<<< HEAD
-}
-export default function MilestoneForm({ onSubmit }: Props) {
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
-  }) => Promise<void> | void;};  onSubmit: (payload: { title: string, description?: string, dueDate: string, amountUsd: number }) => Promise<void> | void
-<<<<<<< HEAD
-}
-export default function MilestoneForm({ onSubmit }: Props) {
-};
 
-export default function MilestoneForm({ onSubmit }: Props) {;
-=======
 
-};
-
-export default function MilestoneForm({ onSubmit }: Props) {;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
   const [dueDate, setDueDate] = useState('');
@@ -108,24 +86,7 @@ export default function MilestoneForm({ onSubmit }: Props) {;
       </div>;
       <div>;
 
-=======
-    <form onSubmit={handleSubmit} className="space-y-4">
-      {error && <div className="text-red-600 text-sm">{error}</div>}
-      <div>
-        <label className="block text-sm font-medium" htmlFor="input-Title">Title</label>
-        <input
-          className="mt-1 w-full rounded border px-3 py-2"
-          value={title}
-          onChange={(e) => setTitle(e.target.value)}
-          placeholder="Phase 1 – Backend Setup"
-          required
-        />
-      </div>
-      <div>
-        <label className="block text-sm font-medium" htmlFor="input-Description">Description</label>
-        <textarea
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
           className="mt-1 w-full rounded border px-3 py-2"
           value={description}
           onChange={(e) => setDescription(e && e.target.value)}
@@ -147,7 +108,7 @@ export default function MilestoneForm({ onSubmit }: Props) {;
           on_change={e => set_description (e.target.value)}
           placeholder='Describe deliverables...';
           rows={3}
-<<<<<<< HEAD
+
         />;
       </div>;
       <div className='grid grid - cols - 1 md:grid - cols - 2 gap - 4'>;
@@ -176,17 +137,7 @@ export default function MilestoneForm({ onSubmit }: Props) {;
         </div>;
         <div>;
 
-=======
-        />
-      </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <div>
-          <label className="block text-sm font-medium" htmlFor="input-Due Date">Due Date</label>
-          <input
-            type="date"
-            className="mt-1 w-full rounded border px-3 py-2"
-            value={dueDate}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
             onChange={(e) => setDueDate(e.target.value)}
             required
           />
@@ -209,71 +160,12 @@ export default function MilestoneForm({ onSubmit }: Props) {;
         </div>;
       </div>;
 
-=======
-            onChange={(e) => setAmountUsd(e.target.value)}
-            placeholder="3000"
-            required
-          />
-        </div>
-      </div>
-      <button
-        type="submit"
-        className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 disabled:opacity-50"
-        disabled={loading}
-      >
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
         {loading ? 'Adding...' : 'Add Milestone'}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-      </button>;
-    </form>;
-=======
-      </button>
-    </form>
-<<<<<<< HEAD
-);
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
-
-      </button>;
-    </form>;
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-  );
-=======
 
   );
 
-}
-=======
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-}
-  );
-}
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-      <button;
-        type='submit';
-        className='bg - blue - 600 text - white px - 4 py - 2 rounded hover:bg - blue - 700 disabled:opacity - 50'        disabled={loading}        type="submit";
-        className="bg - blue - 600 text - white px - 4 py - 2 rounded hover:bg - blue - 700 disabled:opacity - 50";
-        disabled={loading}
-      >;
-        {loading ? 'Adding...' : 'Add Milestone'}
-      </button>;
-    </form>);
-}
-<<<<<<< HEAD
-  );
-}
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba

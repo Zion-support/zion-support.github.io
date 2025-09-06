@@ -1,10 +1,5 @@
-<<<<<<< HEAD
-import type { BookProject } from '../book/bookTypes',;
-export function buildPrintableHtml(project: BookProject): string {;
-  const { meta, chapters, visuals } = project,;
-  const quotesHtml = visuals.quoteCallouts;
-    .map((q) => `<blockquote class="quote"><p>${escapeHtml(q.text)}</p>${q.attribution ? `<cite>${escapeHtml(q.attribution)}</cite>` : ''}</blockquote>`);
-    .join('\n'),;
+
+
 import type { BookProject } from '../book/bookTypes';
 export function buildPrintableHtml(project: BookProject): string {const { meta, chapters, visuals } = project;
 export function buildPrintableHtml(project: BookProject): string {;
@@ -12,12 +7,10 @@ export function buildPrintableHtml(project: BookProject): string {;
   const quotesHtml = visuals.quoteCallouts;
     .map((q) => `<blockquote class="quote"><p>${escapeHtml(q.text)}</p>${q.attribution ? `<cite>${escapeHtml(q.attribution)}</cite>` : ''}</blockquote>`);
     .join('\n');
-=======
 
 
 
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
   const chapterHtml = chapters;
     .map(;
       (c) => `;
@@ -26,14 +19,8 @@ export function buildPrintableHtml(project: BookProject): string {;
         <div class="content">${paragraphize(c.content)}</div>;
       </section>;
     `);
-<<<<<<< HEAD
-    .join('\n\n'),;
-  const visualsHtml = [;
-    ...visuals.timelineImages,;
-    ...visuals.daoVoteCharts,;
-    ...visuals.uiScreens];
-    .map((src) => `<figure class="visual"><img src="${src}" /></figure>`) // base64 ok;
-    .join('\n'),;
+
+
     .join('\n\n');
   const visualsHtml = [;
     ...visuals.timelineImages;
@@ -41,30 +28,19 @@ export function buildPrintableHtml(project: BookProject): string {;
     ...visuals.uiScreens];
     .map((src) => `<figure class="visual"><img src="${src}" /></figure>`) // base64 ok;
     .join('\n');
-=======
 
 
 
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
   const barcode = meta.isbn ? `<img class="barcode" src="/api/barcode/isbn?code=${encodeURIComponent(meta.isbn)}" />` : '';
-=======
-    .join ('\n\n'),
-  const visuals_html = [;
-    ...visuals.timeline_images,
-    ...visuals.daoVoteCharts,
-    ...visuals.ui_screens];
-    .map ((src) => `<figure class="visual"><img src="${src}" /></figure>`) // base64 ok;
-    .join ('\n'),
-  const barcode = meta.isbn ? `<img class="barcode" src="/api / barcode / isbn?code=${encodeURIComponent (meta.isbn)}" />` : '';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
   return `<!doctype html>;
 <html>;
 <head>;
 <meta charset="utf-8" />;
 <title>${escapeHtml(meta.title)}</title>;
 <style>;
-<<<<<<< HEAD
+
   @page { margin: 1in }
   body { font-family: ui-serif, Georgia, Cambria, 'Times New Roman', Times, serif, color: #111 }
   .cover { break-after: page, display: flex, flex-direction: column, justify-content: center, height: 90vh }
@@ -101,19 +77,8 @@ function paragraphize(text: string): string {if (!text) return '';
     .map((p) => `<p>${escapeHtml(p)}</p>`);
     .join('\n');
 }
-function escapeHtml(s: string): string {return s;
-;
-function escapeHtml(s: string): string {;
-  return s;
-=======
 
 
-;
-function escapeHtml(s: string): string {;
-  return s;
-
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   @page { margin: 1in   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -239,13 +204,12 @@ function escapeHtml(s: string): string {;
 ;
 function paragraphize(text: string): string {;
   if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
-<<<<<<< HEAD
-=======
 
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
     .replace(/&/g, '&amp,');
     .replace(/</g, '<');
     .replace(/>/g, '>');
@@ -255,11 +219,11 @@ function paragraphize(text: string): string {;
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD
-}
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+}
+
+
 }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+

@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 export interface TalentCardProps {
   talent: TalentProfile
   onViewProfile: (id: string) => void
@@ -20,16 +20,7 @@ export interface TalentCardProps {
   onToggleSave: (id: string, isSaved: boolean,) => void,
   isAuthenticated: boolean
 }
-=======
-export interface TalentCardProps {
-  talent: TalentProfile;
-  onViewProfile: (id: string) => void;
-  onRequestHire: (talent: TalentProfile) => void;
-  is_saved: boolean;
-  onToggleSave: (id: string, is_saved: boolean) => void;
-  is_authenticated: boolean;
-export interface TalentCardProps {
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
       onViewProfile(talent.id)
 
@@ -52,7 +43,7 @@ export interface TalentCardProps {
       onToggleSave(talent.id, !isSaved)
     if (onToggleSave) {
 
-<<<<<<< HEAD
+
               {talent.profile_picture_url && !avatarError ? (
                 <Image
                   src={talent.profile_picture_url}
@@ -72,11 +63,7 @@ export interface TalentCardProps {
                 <div className='w-full h-full flex items-center justify-center text-zion-slate-light text-xl font-bold'>                  src={talent.profile_picture_url} 
 import { Button } from "@/components/ui/button",;
 import { Card } from "@/components/ui/card",;
-=======
 
-import { Button } from '@/components/ui/button';
-import { Card } from '@/components/ui/card';
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { Star, MapPin, Clock, ArrowRight, CheckCircle2 } from 'lucide-react';
 import Link from "next/link",;
 import { TalentProfile } from "@/types/talent",;
@@ -137,10 +124,9 @@ export function TalentCard({;
                   fill={true}                  style={{ objectFit: 'cover' }}
                   className='rounded-full' // Make sure image itself is rounded if fill is used in a rounded container                  onError={() => setAvatarError(true)}
                   priority={false}
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
                 />;
               ) : (;
                 <div className='w-full h-full flex items-center justify-center text-zion-slate-light text-xl font-bold'>                  {talentNameInitial}
@@ -190,7 +176,7 @@ export interface TalentCardProps {
                   className="rounded-full" // Make sure image itself is rounded if fill is used in a rounded container
                   onError={() => setAvatarError(true)}
                   priority={false}
-<<<<<<< HEAD
+
                 />
               ) : (
                 <div className="w-full h-full flex items-center justify-center text-zion-slate-light text-xl font-bold">
@@ -239,9 +225,7 @@ export interface TalentCardProps {
                 size="sm"
                 className="p-1 h-auto text-zion-slate-light hover:text-zion-cyan"
                 onClick={handleToggleSave}
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               >
                 <Star className={`h-5 w-5 ${isSaved ? "fill-yellow-400 text-yellow-400" : ""}`} />
                 <span className="sr-only">{isSaved ? "Saved" : "Save"}</span>
@@ -264,10 +248,9 @@ export interface TalentCardProps {
             <div className="mt-2 flex flex-wrap gap-3 text-sm">
               {talent.location && (
                 <div className="flex items-center text-zion-slate-light">
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 
 

@@ -3,10 +3,9 @@ return (
 
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 
         <Card>
@@ -42,10 +41,9 @@ return (
           </CardFooter>
         </Card>
         
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 
         <Card>
@@ -81,10 +79,9 @@ return (
           </CardFooter>
         </Card>
         
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 
         <Card>
@@ -118,10 +115,9 @@ return (
           </CardFooter>
         </Card>
         
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 
         <Card>
@@ -175,10 +171,9 @@ return (
         <div className="flex items-center gap-4">
           <div className="h-10 w-10 rounded-full bg-primary/20 flex items-center justify-center">
             <Sparkles className="h-5 w-5 text-primary" />
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 
           </div>
@@ -192,7 +187,7 @@ return (
         </div>
         <Button>Contact Us</Button>
       </div>
-<<<<<<< HEAD
+
     </div>;
   );
 }"};
@@ -204,9 +199,7 @@ import { Badge } from "@/components/ui/badge",;
 import { Button } from "@/components/ui/button",;
 import { Input } from "@/components/ui/input",;
 import { toast } from "@/hooks/use-toast",;
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import {;
   Card,;
   CardContent,;

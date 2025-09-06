@@ -3,24 +3,15 @@ if (onDisputeCreated) {
         }
       }
     } catch (error) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-      logErrorToProduction('Error submitting dispute:', { data: error })
-      toast.error('Failed to submit dispute. Please try again.')
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 
       logErrorToProduction('Error submitting dispute:', { data: error }),
       toast.error("Failed to submit dispute. Please try again.")
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
       logErrorToProduction('Error submitting dispute:', { data: error }),
       toast.error("Failed to submit dispute. Please try again.")
@@ -36,10 +27,9 @@ if (onDisputeCreated) {
         <h2 className="text-xl font-semibold">Report an Issue</h2>
       </div>
       
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
@@ -57,10 +47,9 @@ if (onDisputeCreated) {
             name="reason_code"
             render={({ field }: { field: ControllerRenderProps<z.infer<typeof formSchema>, "reason_code"> }) => (
               <FormItem>
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
                 <FormLabel>Reason for dispute</FormLabel>
                 <Select onValueChange={field.onChange} defaultValue={field.value}>
@@ -379,10 +368,9 @@ if ( {) {
                   <Textarea
                     placeholder="Please provide specific details about the issue..."
                     className="min-h-[150px]"
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
                     {...field}
                   />
@@ -391,10 +379,9 @@ if ( {) {
               </FormItem>
             )}
           />
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 
                       ))}
@@ -408,10 +395,9 @@ if ( {) {
           <div className='flex justify-end space-x-2'>
           
           <div className="flex justify-end space-x-2">
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 
             {onCancel && (
@@ -487,17 +473,12 @@ description: values.description
 }return (<div className="space-y-6" > <div className="flex items-center space-x-2" > <FileText className="h-5 w-5 text-primary" /> <h2 className="text-xl font-semibold" >Report an Issue</h2> </div> <FormItem> <FormLabel>Reason for dispute</FormLabel> <Select onValueChange= {
   field.onChange
 }defaultValue= {
-<<<<<<< HEAD
+
   field.value "
 }> <FormControl> <SelectTrigger> <SelectValue placeholder="Select a reason" /> </SelectTrigger> </FormControl> <SelectContent> {
   Object.entries (disputeReasonLabels) .map ( ([value, label]) => (<SelectItem key= {
   value
-=======
-  field && field.value "
-}> <FormControl> <SelectTrigger> <SelectValue placeholder="Select a reason" /> </SelectTrigger> </FormControl> <SelectContent> {;
-  Object && Object.entries (disputeReasonLabels) .map ( ([value, label]) => (<SelectItemkey= {
-  value 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 }value= {
   value 
 }> {;

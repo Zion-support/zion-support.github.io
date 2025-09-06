@@ -5,11 +5,8 @@ return (
         className='flex w-full items-center justify-between text-white font-medium'      >
         className="flex w-full items-center justify-between text-white font-medium"
       >
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         <span>Availability</span>
         {expanded ? (
           <ChevronUp className="h-4 w-4 text-zion-slate-light" />
@@ -42,10 +39,9 @@ function AvailabilityFilter() {
 
 
       
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
       {expanded && (
         <div className='mt - 4 space - y-2'>;
@@ -110,11 +106,10 @@ export function AvailabilityFilter({ selectedAvailability, toggleAvailability, e
                 id={`availability-${option.id}`}
                 checked={selectedAvailability.includes(option.id)}
                 onCheckedChange={() => toggleAvailability(option.id)}
-<<<<<<< HEAD
+
   { id: "full_time", label: "Full-time" },
   { id: "part_time", label: "Part-time" },
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
                 className="border-zion-slate-light data-[state=checked]:bg-zion-purple data-[state=checked]:border-zion-purple"
               />
               <label
@@ -203,10 +198,9 @@ import { AvailabilityFilterProps } from "@/types/filters",;
 const AVAILABILITY_OPTIONS = [;
   { id: "full_time", label: "Full-time" },;
   { id: "part_time", label: "Part-time" },;
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 
   { id: "project", label: "Project-based" }
@@ -237,7 +231,7 @@ export function AvailabilityFilter({ selectedAvailability, toggleAvailability, e
                 className='border-zion-slate-light data-[state=checked]:bg-zion-purple data-[state=checked]:border-zion-purple'              />
               <label
                 htmlFor={`availability-${option.id}`}
-<<<<<<< HEAD
+
                 className='ml-2 text-sm text-zion-slate-light cursor-pointer'
               >                {option.label}                className="ml-2 text-sm text-zion-slate-light cursor-pointer"
                htmlFor="input-
@@ -261,18 +255,15 @@ export function AvailabilityFilter({ selectedAvailability, toggleAvailability, e
 }</div>)
 }</div>)
 }"}
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   option.label 
 }</label> </div>) ) 
 }</div>) ;
 }</div>) ;
 }"};
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
                 className="ml-2 text-sm text-zion-slate-light cursor-pointer";
               >;

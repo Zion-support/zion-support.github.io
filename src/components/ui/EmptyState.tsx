@@ -10,7 +10,7 @@ interface EmptyStateProps {
   onRetry?: () => void;
   showRetry?: boolean;
 
-<<<<<<< HEAD
+
 export function EmptyState({
   text = 'No items available'
   description
@@ -36,9 +36,7 @@ export function EmptyState({
   description,
   onRetry,
   showRetry = false,
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   icon
 }: EmptyStateProps) {
   return (
@@ -122,20 +120,18 @@ export function EmptyState({;
 
       )}
       {showRetry && onRetry && (;
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
           onClick={onRetry}
           variant="outline"
           className="flex items-center gap-2"
         >
           <RefreshCw className="h-4 w-4" />
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 
 
@@ -144,10 +140,9 @@ export function EmptyState({;
       )}
     </div>;
   );
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 } 
 

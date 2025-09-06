@@ -1,13 +1,5 @@
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from 'next',;
-import { Octokit } from '@octokit/rest',;
-const GITHUB_TOKEN = process.env.GITHUB_TOKEN || '',
-const REPO = process.env.GITHUB_REPO || 'Zion-Holdings/zion.app',
 
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') {
-    res.setHeader('AllowPOST'),
-    return res.status(405).json({ error: 'Method not allowed' })
+
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { Octokit } from '@octokit/rest';
 
@@ -30,45 +22,15 @@ export default async function handler(req, res) {
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
   }
 }
 ;
   try {
-    const { app, severity, message, stack, metadata } = req.body || {},
-    const title = `[Autoheal] ${app || 'app'} crash: ${message?.slice(0, 64) || 'Unknown'}`,
 
-    const octokit = new Octokit({ auth: GITHUB_TOKEN || undefined }),
-    const [owner, repo] = REPO.split('/'),
-    const body = `Auto-healing alert
 
-App: ${app}
-Severity: ${severity}
-Message: ${message}
-
-Stack:\n\n${stack || 'n/a'}
-
-Metadata:\n\n${'```\n' + JSON.stringify(metadata || {}, null, 2) + '\n```'}
-`,
-
-    const issue = await octokit.issues.create({ owner, repo, title, body, labels: ['autohealbug'] }),
-    // trigger workflow dispatch
-    try {
-      await octokit.actions.createWorkflowDispatch({
-        owner,
-        repo,
-        workflow_id: 'autoheal.yml',
-        ref: 'dev',
-inputs: { issue_number: String(issue.data.number) }} as any)
-    } catch (e) {
-      // ignore if missing
-    }
-
-return res.status(200).json({ ok: true, issue: issue.data.number })
-  } catch (e) {
-    console.error(e),
-    return res.status(500).json({ error: 'Failed to process webhook' })
-  };
-};
     const { app, severity, message, stack, metadata } = req.body || {};
     const title = `[Autoheal] ${app || 'app'} crash: ${message?.slice(0, 64) || 'Unknown'}`,;
     const octokit = new Octokit({ auth: GITHUB_TOKEN || undefined });
@@ -112,10 +74,7 @@ Metadata:\n\n${'```\n' + JSON.stringify(metadata || {}, null, 2) + '\n```'  } ca
         ref: 'dev';
         inputs: { issue_number: String(issue.data.number) }} as any);
     } catch (error) {
-=======
 
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     } catch (e) {
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       // ignore if missing;
@@ -123,32 +82,9 @@ Metadata:\n\n${'```\n' + JSON.stringify(metadata || {}, null, 2) + '\n```'  } ca
 
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
 
   }
 }
-;
-<<<<<<< HEAD
-    return res.status(200).json({ ok: true, issue: issue.data.number });
-  } catch (error) {
-    console.error(e);
-    return res.status(500).json({ error: 'Failed to process webhook' });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  }
-}
-=======
-  try {
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba

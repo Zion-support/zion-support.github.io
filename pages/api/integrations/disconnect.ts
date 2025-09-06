@@ -1,15 +1,11 @@
-<<<<<<< HEAD
+
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { writeState } from '[^']*';
 import { getProviderById } from '[^']*';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   if (req.method !== "POST")
-import type { NextApiRequest, NextApiResponse } from "next";
-import { writeState } from "../../../lib/integrations/fileStore";
-import { getProviderById } from "../../../lib/integrations/registry";
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== "POST");
+
     return res.status(405).json({ error: "Method not allowed" });
   const { providerId } = req.body as { providerId?: string }
   if (!providerId |!getProviderById(providerId)) {
@@ -25,25 +21,17 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       providerId: providerId as any
       level: "info"
       action: "disconnect"
-=======
 
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     });
   });
 
-}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-import type { NextApiRequest, NextApiResponse } from 'next';
+}
+
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
 import type { NextApiRequest, NextApiResponse } from 'next';
-=======
 
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { writeState } from '../../../lib/integrations/fileStore';
 import { getProviderById } from '../../../lib/integrations/registry';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -66,11 +54,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba

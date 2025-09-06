@@ -1,20 +1,15 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
 
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 import {useState} from 'react';
 import {supabase} from '@/integrations / supabase / client';
 import {use_auth} from '@/hooks / use_auth';
 import {toast} from 'sonner';
 import {Milestone, MilestoneStatus} from './types';
 import {useRecordActivity} from './useRecordActivity';
-<<<<<<< HEAD
+
 export const useUpdateMilestone = () => {
   const { user } = useAuth();
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -23,19 +18,14 @@ export const useUpdateMilestone = () => {
     if (!user) return false;
     try {
       setIsSubmitting(true);
-=======
 
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export const useUpdateMilestone = () => {;
   const { user } = useAuth();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { recordMilestoneActivity } = useRecordActivity();
-<<<<<<< HEAD
-=======
 
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 import { useState } from 'react',
 import { supabase } from '@/integrations/supabase/client',
 import { useAuth } from '@/hooks/useAuth',
@@ -121,35 +111,7 @@ export const useUpdateMilestone = () => {
       toast && toast.error("Failed to update milestone: " + err && err.message),
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       return false
-=======
-;
-  const update_milestone = async (milestone_id: string, data: Partial < Milestone>) => {
-    // Check condition
-if (return false) {
-  $2
-}
-    try {
-      setIsSubmitting (true),
-      const { error } = await supabase;
-        .from ('project_milestones');
-        .update (data);
-        .eq ('id', milestone_id);
-;
-      // Check condition
-if (throw error) {
-  $2
-}
-      // Create activity record;
-      await recordMilestoneActivity (milestone_id, 'updated', null, 'updated_milestone details updated');
-;
-      toast.success ("Milestone updated successfully");
-;
-      return true;
-    } catch (err: any) {
-      console.error ("Error updating milestone:", err);
-      toast.error ("Failed to update milestone: " + err.message),
-      return false;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
     } finally {
 
 ;
@@ -158,14 +120,11 @@ if (throw error) {
     updateMilestoneStatus;
     update_milestone;
     is_submitting;
-=======
-      setIsSubmitting(false)
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 }
 
-<<<<<<< HEAD
+
         .eq('id', milestoneId),
       
       if (error) throw error,
@@ -182,13 +141,7 @@ if (throw error) {
       return false
     } finally {
       setIsSubmitting(false)
-    }
-  };
-  
-  return {
-    updateMilestoneStatus;
-    updateMilestone;
-    isSubmitting
+
 import { useState } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
 import { useAuth } from '@/hooks/useAuth',;
@@ -255,9 +208,9 @@ export const useUpdateMilestone = () => {;
     updateMilestoneStatus,;
     updateMilestone;
     isSubmitting;
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
   }
 };
-=======
-;
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

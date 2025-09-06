@@ -1,12 +1,6 @@
 
-<<<<<<< HEAD
-import React from "react";
-import {Button} from "@/components/ui/button";
-import {TooltipProvider, Tooltip, TooltipTrigger, TooltipContent} from "@/components/ui/tooltip";
-import {Card, CardContent} from "@/components/ui/card";
-import {Badge} from "@/components/ui/badge";
-import {Loader2, Info, ThumbsUp} from "lucide-react";
-import {PricingSuggestion} from "@/services/pricingSuggestionService";
+
+
 import React from "react",
 import { Button } from "@/components/ui/button",
 import { TooltipProvider, Tooltip, TooltipTrigger, TooltipContent } from "@/components/ui/tooltip",
@@ -16,12 +10,13 @@ import { Loader2, Info, ThumbsUp } from "lucide-react";
 import { PricingSuggestion } from "@/services/pricingSuggestionService";
 import { Loader2, Info, ThumbsUp } from "lucide-react",
 import { PricingSuggestion } from "@/services/pricingSuggestionService",
-=======
 
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 interface PricingSuggestionBoxProps {
 
   suggestion: PricingSuggestion | null
@@ -30,32 +25,12 @@ interface PricingSuggestionBoxProps {
 
   rateType: "hourly" | "fixed"
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
-export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({;
-  suggestion;
-  isLoading;
+
 export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({
   suggestion;
   isLoading;
-=======
 
-import React from "react";
-import {Button} from "@/components/ui/button";
-import {TooltipProvider, Tooltip, TooltipTrigger, TooltipContent} from "@/components/ui/tooltip";
-import {Card, CardContent} from "@/components/ui/card";
-import {Badge} from "@/components/ui/badge";
-import {Loader2, Info, ThumbsUp} from "lucide-react";
-import {PricingSuggestion} from "@/services/pricingSuggestionService";
-=======
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   onApplySuggestion
   suggestion,
@@ -103,52 +78,22 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({;
           <div className="text-center">;
             <Loader2 className="h-10 w-10 animate-spin text-muted-foreground mx-auto mb-4" />;
             <p className="text-sm text-muted-foreground">;
-=======
-import React from './react';
-import { Button } from '@/components / ui / button';
-import { TooltipProvider, Tooltip, TooltipTrigger, TooltipContent } from '@/components / ui / tooltip';
-import { Card, CardContent } from '@/components / ui / card';
-import { Badge } from '@/components / ui / badge';
-import { Loader2, Info, ThumbsUp } from './lucide-react';
-import { PricingSuggestion } from '@/services / pricingSuggestionService';
-interface PricingSuggestionBoxProps {
-  suggestion: PricingSuggestion | null,
-  is_loading: boolean,
-  onApplySuggestion: () => void,
-  rate_type: "hourly" | "fixed";
-}
-export const PricingSuggestionBox: React.FC < PricingSuggestionBoxProps> = ({
-  suggestion;
-  is_loading;
-  onApplySuggestion,
-  rate_type}) => {
-  // Check condition
-if ( {) {
-  $2
-}
-    return (
-      <Card className="border border - dashed border - muted">;
-        <CardContent className="flex items - center justify - center p - 6">;
-          <div className="text - center">;
-            <Loader2 className="h - 10 w - 10 animate - spin text - muted - foreground mx - auto mb - 4" />;
-            <p className="text - sm text - muted - foreground">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
               Generating optimal pricing suggestion...;
             </p>;
           </div>;
         </CardContent>;
-<<<<<<< HEAD
+
       </Card>;
     );
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
   }
   if (!suggestion) {
     return null
   }
-=======
 
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 
 
@@ -205,23 +150,9 @@ if ( {) {
       </CardContent>
     </Card>
   )
-<<<<<<< HEAD
-}
-
-};
-=======
 
 
-  if (!suggestion) {;
-    return null;
-  }
 
-=======
-
-};
-
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 },
 ;
 
@@ -267,55 +198,7 @@ if ( {) {
               </TooltipTrigger>;
               <TooltipContent>;
                 <p>Apply this suggestion to your pricing field</p>;
-=======
-      </Card>);
-  }
-  // Check condition
-if ( {) {
-  $2
-}
-    return null;
-  }
-  const confidence_color = {
-    High: "bg - green - 100 text - green - 800",
-    Medium: "bg - yellow - 100 text - yellow - 800",
-    Low: "bg - red - 100 text - red - 800"}[suggestion.confidence],
-  return (
-    <Card className="border - 2 border - dashed border - muted - foreground / 20">;
-      <CardContent className="p - 5 space - y-4">;
-        <div className="flex items - center justify - between">;
-          <h4 className="font - semibold">AI Suggested Price</h4>;
-          <Badge variant="outline" className={confidence_color}>;
-            {suggestion.confidence} confidence;
-          </Badge>;
-        </div>;
-        <div className="bg - muted / 50 rounded - md p - 3 text - center">;
-          <span className="text - 2xl font - bold">;
-            ${suggestion.min_rate.to_fixed (0)} - ${suggestion.max_rate.to_fixed (0)}
-          </span>;
-          <span className="text - sm text - muted - foreground ml - 1">;
-            {rate_type === "hourly" ? "/hour" : " total"}
-          </span>;
-        </div>;
-        <div className="flex items - start space - x-2 text - sm text - muted - foreground">;
-          <Info className="h - 4 w - 4 flex - shrink - 0 mt - 1" />;
-          <p>{suggestion.explanation}</p>;
-        </div>;
-        <div className="flex items - center justify - between">;
-          <TooltipProvider>;
-            <Tooltip>;
-              <TooltipTrigger as_child>;
-                <Button;
-                  variant="default";
-                  on_click={onApplySuggestion}
-                  className="w - full";
-                >;
-                  <ThumbsUp className="h - 4 w - 4 mr - 2" /> Apply Suggestion;
-                </Button>;
-              </TooltipTrigger>;
-              <TooltipContent>;
-                <p > Apply this suggestion to your pricing field</p>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
               </TooltipContent>;
             </Tooltip>;
           </TooltipProvider>;
@@ -329,13 +212,6 @@ if ( {) {
 }
 ;
 
-=======
 
-export default PricingSuggestionBox;
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+

@@ -1,8 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
- 
- 
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 }function getAllServices () : Service[] {
   return enhancedRealMicroSaasServices .concat (extraServices as Service[], additionalEnhancedServices as Service[]) .concat (newlyAddedServices as unknown as Service[]) .concat (curatedMarketServices as Service[]) .concat (new2025Services as unknown as Service[]) .concat (marketValidatedServices as unknown as Service[]) .concat (moreRealServices2025 as unknown as Service[]) .concat (verified2025Additions as unknown as Service[]) .concat (realServicesQ12025 as unknown as Service[])
 }return {
@@ -17,6 +16,8 @@ fallback: false
   service: Service
 }) {
   return (<Layout> <Head> <title> {
+
+
   service.name
 }| Zion Tech Group</title>
 }
@@ -26,26 +27,22 @@ null;
 }</ul> </div>) )
 }</ul> </div> <div>) )
 2) 
-=======
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }function getAllServices () : Service[] {
 
 
 2) 
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
   service.name 
 }| Zion Tech Group</title> ;
 };
 null;
-<<<<<<< HEAD
+
 2)
 2) 
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 }/> </Head> </li>) ) 
 }</ul> </div>) ) 
@@ -72,26 +69,21 @@ null;
   /* Market Position & ROI */
 }<div className="p-6 bg-black/40 border border-gray-700/50 rounded-lg" > <h3 className="text-white font-semibold mb-3" >Market & ROI</h3> <div className="space-y-3 text-sm text-gray-300" > {
   service.marketPosition && <p className="leading-relaxed" ><span className="text-gray-400" >Position:</span> {
-<<<<<<< HEAD
+
   service.marketPosition
 }</p>
 }{
   service.roi && <p className="leading-relaxed" ><span className="text-gray-400" >ROI:</span> {
   service.roi
-=======
 
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   service.marketPosition 
 }</p>
 }{
   service.roi && <p className="leading-relaxed" ><span className="text-gray-400" >ROI:</span> {
   service.roi 
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 }</p>
 }{
   service.competitors?.length ? () : null
@@ -108,12 +100,13 @@ export default ServiceDetail
 };
 export default ServiceDetail 
 export default ServiceDetail
-<<<<<<< HEAD
+
 };
 ;
 }
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+

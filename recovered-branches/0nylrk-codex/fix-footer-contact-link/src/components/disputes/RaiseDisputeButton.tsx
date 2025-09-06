@@ -1,21 +1,8 @@
 
-<<<<<<< HEAD
+
 import React, { useState } from "react";
-import { Button } from "@/components/ui/button";
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-import {Button} from "@/components/ui/button";
-import {Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogOverlay} from "@/components/ui/dialog";
-import {DisputeForm} from "./DisputeForm";
-import {useNavigate} from "react-router-dom";
-import {ShieldAlert} from "lucide-react";
-<<<<<<< HEAD
-=======
-
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
 import { 
@@ -54,10 +41,11 @@ interface RaiseDisputeButtonProps {;
   const navigate = useNavigate();
 import { useNavigate } from "react-router-dom",
 import { ShieldAlert } from "lucide-react",
-<<<<<<< HEAD
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 interface RaiseDisputeButtonProps {
   projectId: string,
   milestoneId?: string,
@@ -104,11 +92,13 @@ export function RaiseDisputeButton({
               Please provide details about the issue you're experiencing with this project.
             </DialogDescription>
           </DialogHeader>
-<<<<<<< HEAD
+
+
+
           <DisputeForm
           
           <DisputeForm 
-          <DisputeForm 
+
 import React, { useState } from "react",;
 import { Button } from "@/components/ui/button",;
 import {;
@@ -136,16 +126,7 @@ export function RaiseDisputeButton({;
   variant = "outline",;
   size,;
   className;
-=======
 
-
-export function RaiseDisputeButton(): any ({ ;
-  projectId;
-  milestoneId, ;
-  variant = "outline", ;
-  size;
-  className ;
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }: RaiseDisputeButtonProps) {;
   const [isDialogOpen, setIsDialogOpen] = useState(false);
   const navigate = useNavigate();
@@ -171,64 +152,8 @@ export function RaiseDisputeButton(): any ({ ;
         <DialogContent className="sm:max-w-[550px]">;
           <DialogHeader>;
             <DialogTitle>Raise a Dispute</DialogTitle>;
-=======
-import React, { useState } from './react';
-import { Button } from '@/components / ui / button';
-import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogOverlay } from '@/components / ui / dialog';
-import { DisputeForm } from './DisputeForm';
-import { use_navigate } from './react-router-dom';
-import { ShieldAlert } from './lucide-react';
-interface RaiseDisputeButtonProps {
-  project_id: string,
-  milestone_id?: string;
-  variant?: "default" | "outline" | "secondary" | "destructive" | "ghost" | "link";
-  size?: "default" | "sm" | "lg" | "icon";
-  class_name?: string;
-}
-export /**
- * RaiseDisputeButton - Function description
- */
-function RaiseDisputeButton() {
-  const [isDialogOpen, setIsDialogOpen] = useState (false);
-  const navigate = use_navigate ();
-;
-  const handleDisputeCreated = (dispute_id: string) =>: any {
-    setIsDialogOpen (false),
-    navigate (`/dashboard / disputes/${dispute_id}`);
-  }
-;
-  return (
-    <>;
-      <Button;
-        variant={variant}
-        size={size}
-        className={class_name}
-        on_click={() => setIsDialogOpen (true)}
-      >;
-        <ShieldAlert className="h - 4 w - 4 mr - 2" />;
-        Raise Dispute;
-      </Button>;
-      <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>;
-        <DialogContent className="sm:max - w-[550px]">;
-          <DialogHeader>;
-            <DialogTitle > Raise a Dispute</DialogTitle>;
 
-            <DialogDescription>;
-              Please provide details about the issue you're experiencing with this project.;
-            </DialogDescription>;
-          </DialogHeader>;
-<<<<<<< HEAD
-          <DisputeForm;
-=======
-
-
-          
-          <DisputeForm 
-=======
-          <DisputeForm 
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
             projectId={projectId}
             milestoneId={milestoneId}
             onDisputeCreated={handleDisputeCreated}
@@ -241,15 +166,4 @@ function RaiseDisputeButton() {
   );
 }
 
-=======
-          <DisputeForm;
-            project_id={project_id}
-            milestone_id={milestone_id}
-            onDisputeCreated={handleDisputeCreated}
-            on_cancel={() => setIsDialogOpen (false)}
-          />;
-        </DialogContent>;
-      </Dialog>;
-    </>);
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+

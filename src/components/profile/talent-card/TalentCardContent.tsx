@@ -2,7 +2,7 @@ summary: string | undefined;
   bio: string;
   timezone: string | undefined;
   skills: string[] | undefined
-<<<<<<< HEAD
+
 <<<<<<< HEAD
 
 export function TalentCardContent({
@@ -12,17 +12,7 @@ export function TalentCardContent({
   skills
 }: TalentCardContentProps) {
   const [isHovering, setIsHovering] = useState(false)
-=======
 
-
-export function TalentCardContent(): any ({;
-  summary,;
-  bio,;
-  timezone,;
-  skills,;
-}: TalentCardContentProps) {;
-  const [isHovering, setIsHovering] = useState(false);
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   return (
     <div>
@@ -44,17 +34,15 @@ export function TalentCardContent(): any ({;
       </div>          <span>{timezone}</span>;
         </div>;
       )}
-<<<<<<< HEAD
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
       {/* Short bio or summary - longer on hover for desktop */}
       <div
         className="overflow-hidden transition-all duration-300" 
         style={{ maxHeight: isHovering ? '8rem' : '3rem' }}
         onMouseEnter = {() => setIsHovering(true),}
         onMouseLeave = {() => setIsHovering(false),}
-<<<<<<< HEAD
+
       >
         <p className='text-zion-slate mb-4'>{summary |bio}</p>
       </div>
@@ -97,42 +85,12 @@ export function TalentCardContent({ summary, bio, timezone, skills }: TalentCard
         </div>
       )}
 ;
-=======
-      >;
-        <p className='text-zion-slate mb-4'>{summary || bio}</p>;
-      </div>;
-        <p className="text-zion-slate mb-4">;
-          {summary || bio}
-        </p>;
-      </div>;
 
-      <TalentCardSkills skills={skills} />;
-    </div>;
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       {/* Short bio or summary - longer on hover for desktop */}
       <div 
         className="overflow-hidden transition-all duration-300" 
         style={{ maxHeight: isHovering ? '8rem' : '3rem' }}
-<<<<<<< HEAD
-        onMouseEnter = {() => setIsHovering(true),}
-        onMouseLeave = {() => setIsHovering(false),}
-      >
-        <p className='text-zion-slate mb-4'>{summary || bio}</p>
-      </div>
-        <p className="text-zion-slate mb-4">
-          {summary || bio}
-        </p>
-      </div>
-      <TalentCardSkills skills={skills} />
-    </div>;
-  );
-};
-        onMouseEnter={() => setIsHovering(true)}
-        onMouseLeave={() => setIsHovering(false)}
-      >
-        <p className="text-zion-slate mb-4">
-=======
+
 
 import React, { useState } from 'react';
 import { MapPin } from 'lucide-react';
@@ -176,7 +134,7 @@ function TalentCardContent() {
         <p className='text - zion - slate mb - 4'>{summary || bio}</p>;
       </div>;
         <p className="text - zion - slate mb - 4">;
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
           {summary || bio}
         </p>;
       </div>;

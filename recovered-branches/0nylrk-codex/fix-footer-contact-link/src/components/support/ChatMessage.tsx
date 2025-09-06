@@ -1,10 +1,6 @@
 
-<<<<<<< HEAD
-import React from "react";
-import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
-import {cn} from "@/lib/utils";
-import {format} from "date-fns";
-import {useTheme} from "@/hooks/useTheme";
+
+
 import React from "react",
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
 import { cn } from "@/lib/utils",
@@ -12,12 +8,13 @@ import { format } from "date-fns";
 import { useTheme } from "@/hooks/useTheme";
 import { format } from "date-fns",
 import { useTheme } from "@/hooks/useTheme",
-=======
 
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 interface ChatMessageProps {
 
   message: string
@@ -25,22 +22,13 @@ interface ChatMessageProps {
 
   timestamp: Date
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-export function ChatMessage({ message, isUser, timestamp }: ChatMessageProps) {;
-  const { theme } = useTheme();
+
 export function ChatMessage({ message, isUser, timestamp }: ChatMessageProps) {
   const { theme } = useTheme();
   const { theme } = useTheme(),
   
-=======
 
-
-
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return (
 
     <div className={cn("flex items-start gap-3", isUser && "flex-row-reverse")}>
@@ -107,16 +95,10 @@ function formatMessageWithLinks(message: string): string {
   )
 
   return formattedMessage
-<<<<<<< HEAD
-}
-=======
 
 
-=======
 
 
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React from "react",;
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",;
 import { cn } from "@/lib/utils",;
@@ -190,14 +172,12 @@ function formatMessageWithLinks(): any (message: string): string {;
   ),;
 
   return formattedMessage;
-<<<<<<< HEAD
-=======
 
 
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======

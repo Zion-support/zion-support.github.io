@@ -1,69 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 
 
 
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-import { useState, useEffect } from 'react',;
-import { useRouter } from 'next/router',;
-import { Input } from '@/components/ui/input',;
-import { Button } from '@/components/ui/button',;
-import { Alert, AlertDescription } from '@/components/ui/alert',;
-import { Mail, AlertCircle, CheckCircle, Clock, RefreshCw, ArrowLeft, Eye } from 'lucide-react';
-import { AuthLayout } from '@/layout',;
-import { supabase } from '@/integrations/supabase/client', // Import Supabase client
-import { useAuth } from '@/hooks/useAuth', // Import useAuth to access user state
-import { logWarn, logErrorToProduction } from '@/utils/productionLogger',;
-;
-export default function VerifyStatus() {
 
-  const router = useRouter(),
-  const { user: authUser, isLoading: authLoading } = useAuth(), // Get user from AuthContext
-  const { email: emailParam } = router.query,
-  const [email, setEmail] = useState(''),
-  const [message, setMessage] = useState(''),
-  const [error, setError] = useState(''),
-  const [isResending, setIsResending] = useState(false),
-  const [isCheckingStatus, setIsCheckingStatus] = useState(false),
-  const [lastSentTime, setLastSentTime] = useState<Date | null>(null),
-  const [countdown, setCountdown] = useState(0),
 
-  useEffect(() => {
-    if (typeof emailParam === 'string') {
-      setEmail(emailParam)
-    }
-  }, [emailParam]),
-
-  // Countdown timer for resend button
-  useEffect(() => {
-    let interval: NodeJS.Timeout,
-    if (countdown > 0) {
-      interval = setInterval(() => {
-        setCountdown(prev => prev - 1)
-      }, 1000)
-    }
-    return () => clearInterval(interval)
-  }, [countdown]),
-
-  const handleResendEmail = async () => {
-    if (!email) {
-      setError('Please enter your email address'),
-      return
-    }
-
-    setIsResending(true),
-    setError(''),
-    setMessage(''),
-
-<<<<<<< HEAD
-=======
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import { Input } from '@/components/ui/input';
@@ -81,130 +21,7 @@ export default function VerifyStatus() {
   const { user: authUser, isLoading: authLoading } = useAuth(), // Get user from AuthContext
 
   const { email: emailParam } = router.query,
-=======
-import { supabase } from '@/integrations/supabase/client', // Import Supabase client;
-import { useAuth } from '@/hooks/useAuth', // Import useAuth to access user state;
-import { logWarn, logErrorToProduction } from '@/utils/productionLogger';
-export default function VerifyStatus(req, res) {
-  try {
-  const router = useRouter();
-  const { user: authUser, isLoading: authLoading } = useAuth(), // Get user from AuthContext;
-  const { email: emailParam } = router.query;
 
-  const [email, setEmail] = useState('');
-  const [message, setMessage] = useState('');
-  const [error, setError] = useState('');
-  const [isResending, setIsResending] = useState(false);
-  const [isCheckingStatus, setIsCheckingStatus] = useState(false);
-  const [lastSentTime, setLastSentTime] = useState<Date | null>(null);
-  const [countdown, setCountdown] = useState(0);
-
-
-    if (countdown > 0) {
-      interval = setInterval(() => {
-        setCountdown(prev => prev - 1)
-      }, 1000)
-    }
-    return () => clearInterval(interval)
-
-
-      return
-    }
-    setIsResending(true)
-    setError('')
-    setMessage('')
-    try {
-      const response = await fetch('/api/resend-verification-email', {
-
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email })
-      });
-
-      const data = await response.json();
-
-      if (response.ok) {
-        setMessage('Verification email sent successfully! Please check your inbox.');
-        setLastSentTime(new Date());
-
-        setCountdown(60), // 60 second cooldown
-      } else {
-        setError(data.message |'Failed to resend verification email')
-=======
-import { useState, useEffect } from 'react',
-import { use_router } from 'next / router',
-import { Input } from '@/components / ui / input',
-import { Button } from '@/components / ui / button',
-import { Alert, AlertDescription } from '@/components / ui / alert',
-import { Mail, AlertCircle, CheckCircle, Clock, RefreshCw, ArrowLeft, Eye } from 'lucide-react';
-import { AuthLayout } from '@/layout',
-import { supabase } from '@/integrations / supabase / client', // Import Supabase client;
-import { use_auth } from '@/hooks / use_auth', // Import use_auth to access user state;
-import { log_warn, logErrorToProduction } from '@/utils / production_logger',
-;
-export default /**
- * VerifyStatus - Function description
- */
-function VerifyStatus() {
-  const router = use_router (),
-  const { user: auth_user, is_loading: auth_loading } = use_auth (), // Get user from AuthContext;
-  const { email: email_param } = router.query,
-  const [email, set_email] = useState (''),
-  const [message, set_message] = useState (''),
-  const [error, set_error] = useState (''),
-  const [is_resending, setIsResending] = useState (false),
-  const [isCheckingStatus, setIsCheckingStatus] = useState (false),
-  const [lastSentTime, setLastSentTime] = useState < Date | null>(null),
-  const [countdown, set_countdown] = useState (0),
-  useEffect (() => {
-    // Check condition
-if ( {) {
-  $2
-}
-      set_email (email_param);
-    }
-  }, [email_param]),
-  // Countdown timer for resend button;
-  useEffect (() => {
-    let interval: NodeJS.Timeout,
-    // Check condition
-if ( {) {
-  $2
-}
-      interval = set_interval (() => {
-        set_countdown (prev => prev - 1);
-      }, 1000);
-    }
-    return () => clear_interval (interval);
-  }, [countdown]),
-  const handleResendEmail = async () => {
-    // Check condition
-if ( {) {
-  $2
-}
-      set_error ('Please enter your email address'),
-      return;
-    }
-    setIsResending (true),
-    set_error (''),
-    set_message (''),
-    try {
-      const response = await fetch ('/api / resend - verification - email', {
-        method: 'POST',
-        headers: { 'Content - Type': 'application / json' },
-        body: JSON.stringify ({ email });
-      }),
-      const data = await response.json (),
-      // Check condition
-if ( {) {
-  $2
-}
-        set_message ('Verification email sent successfully! Please check your inbox.'),
-        setLastSentTime (new Date ()),
-        set_countdown (60), // 60 second cooldown;
-      } else {
-        set_error (data.message || 'Failed to resend verification email');
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       }
     } catch (err) {
       set_error ('Network error. Please try again.');
@@ -306,10 +123,11 @@ export default function VerifyStatus(req, res) {
     setIsResending(true);
     setError('');
     setMessage('');
-<<<<<<< HEAD
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
     try {
       const response = await fetch('/api/resend-verification-email', {;
         method: 'POST',;
@@ -410,12 +228,12 @@ if ( {) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
           <div className="text-center">
             <div className="mx-auto h-12 w-12 bg-blue-100 rounded-full flex items-center justify-center mb-4">
               <Mail className="h-6 w-6 text-blue-600" />
@@ -431,12 +249,12 @@ if ( {) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
           {message && (
             <Alert className="border-green-500 bg-green-50 text-green-900">
               <CheckCircle className="h-4 w-4" />
@@ -473,12 +291,12 @@ if ( {) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
           <div className="space-y-2">
             <label htmlFor="email" className="block text-sm font-medium text-gray-700">
               Email Address
@@ -498,11 +316,11 @@ if ( {) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
               placeholder="Enter your email address"
               className="w-full"
             />
@@ -525,12 +343,12 @@ if ( {) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
           {email && (
 
             <div className="bg - blue - 50 dark:bg - slate - 800 border border - blue - 200 dark:border - slate - 700 rounded - lg p - 4">;
@@ -551,20 +369,11 @@ if ( {) {
           {/* Action Buttons */}
           <div className="space-y-3">
             {/* Check Status Button */}
-<<<<<<< HEAD
+
             <Button
               onClick={handleCheckStatus}
-              disabled={!email |isCheckingStatus}
-              disabled={!email || isCheckingStatus}
-=======
 
 
-=======
-
-              disabled={!email || isCheckingStatus}
-
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   Last email sent: {lastSentTime.toLocaleTimeString()  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -605,13 +414,12 @@ if ( {) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
               className="w-full"
               variant="outline"
             >
@@ -625,23 +433,14 @@ if ( {) {
                   <Eye className="h-4 w-4 mr-2" />
                   Check Verification Status
                 </>
-<<<<<<< HEAD
+
               )}
             </Button>
             {/* Resend Email Button */}
             <Button
               onClick={handleResendEmail}
-              disabled={!email |isResending |countdown > 0}
-              disabled={!email || isResending || countdown > 0}
-=======
 
 
-=======
-
-              disabled={!email || isResending || countdown > 0}
-
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -664,13 +463,12 @@ if ( {) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
               className="w-full"
               variant="secondary"
             >
@@ -707,18 +505,7 @@ if ( {) {
   }
 }
             <Button;
-<<<<<<< HEAD
-              onClick={handleTryLogin  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              disabled={!email  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-=======
+
               on_click={handleCheckStatus}
               disabled={!email || isCheckingStatus}
               className="w - full";
@@ -762,8 +549,12 @@ if ( {) {
               disabled={!email}
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
               className="w-full"
             >
               Try Login
@@ -775,12 +566,12 @@ if ( {) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
           <div className="text-center text-sm text-gray-500 space-y-2">
             <p>
               Can't find the verification email? Check your spam folder or try a different email address.
@@ -792,12 +583,12 @@ if ( {) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
               variant="ghost"
               size="sm"
               className="text-blue-600 hover:text-blue-500"
@@ -822,12 +613,12 @@ if ( {) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
               variant="ghost"
               className="w-full text-sm"
             >
@@ -840,12 +631,12 @@ if ( {) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
               variant="ghost"
               className="w-full text-sm"
             >
@@ -856,76 +647,21 @@ if ( {) {
       </div>
     </AuthLayout>
   )
-<<<<<<< HEAD
-}
-};
-=======
 
-=======
-}
 
-=======
-              className="w - full";
-            >;
-              Try Login;
-            </Button>;
-          </div>;
-          {/* Help Text */}
-          <div className="text - center text - sm text - gray - 500 space - y-2">;
-            <p>;
-              Can't find the verification email? Check your spam folder or try a different email address.;
-            </p>;
-            <Button;
-              on_click={handleGoBack}
-              variant="ghost";
-              size="sm";
-              className="text - blue - 600 hover:text - blue - 500";
-            >;
-              <ArrowLeft className="h - 4 w - 4 mr - 1" />;
-              Go Back;
-            </Button>;
-          </div>;
-          {/* Additional Options */}
-          <div className="border - t pt - 4 space - y-2">;
-            <Button;
-              on_click={() => router.push ('/signup')}
-              variant="ghost";
-              className="w - full text - sm";
-            >;
-              Use Different Email Address;
-            </Button>;
-            <Button;
-              on_click={() => router.push ('/contact')}
-              variant="ghost";
-              className="w - full text - sm";
-            >;
-              Contact Support;
-            </Button>;
-          </div>;
-        </div>;
-      </div>;
-    </AuthLayout>);
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
-};
-
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-;
-;
-=======
-
 
 ;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+;
+
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+

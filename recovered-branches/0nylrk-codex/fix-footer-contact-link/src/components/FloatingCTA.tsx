@@ -27,15 +27,7 @@ export function FloatingCTA() {
       const threshold = 600, // Show CTA after scrolling 600px
 
       if (scrollPosition > threshold && !isClosed) {
-=======
 
-  useEffect(() => {;
-    const handleScroll = () => {;
-      const scrollPosition = window && window.scrollY;
-      const threshold = 600; // Show CTA after scrolling 600px;
-
-      if (scrollPosition > threshold && !isClosed) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         setIsVisible(true);
       } else {;
         setIsVisible(false);
@@ -223,12 +215,6 @@ if (return null) {
     </div>);
 
 }
-=======
-}
-;
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+

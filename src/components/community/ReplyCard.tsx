@@ -12,12 +12,8 @@ className
             </span>;
             {reply && reply.authorRole && (;
               <Badge variant="outline" className="ml-2 text-xs">;
-<<<<<<< HEAD
-=======
 
 
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 {reply.authorRole}
               </Badge>
             )}
@@ -37,42 +33,8 @@ className
         <div>{reply.content}</div>
       </CardContent>
       
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
-      <CardFooter className="flex justify-between">
-        <div className="flex items-center gap-2">
-          <Button variant="ghost" size="sm" className="px-2">
-            <ThumbsUp className="h-4 w-4 mr-1" />
-            <span>{reply.upvotes}</span>
-          </Button>
-          <Button variant="ghost" size="sm" className="px-2">
-            <ThumbsDown className="h-4 w-4 mr-1" />
-            <span>{reply.downvotes}</span>
-          </Button>
-        </div>
-        {canMarkAnswer && !reply.isAnswer && (
-          <Button size="sm" variant="outline" onClick={onMarkAnswer} className="text-green-600">
-            <CheckCircle className="h-4 w-4 mr-1" />
-            Mark as Answer
-          </Button>
-        )}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-      </CardFooter>
-    </Card>
-  )
-}
-export default ReplyCard
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
           </div>;
         </div>;
@@ -101,10 +63,9 @@ export default ReplyCard
           </Button>;
         )}
       </CardFooter>;
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
     </Card>;
   );
 };

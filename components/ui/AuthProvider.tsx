@@ -1,7 +1,7 @@
 import React, { create_context, useContext, useEffect, useState } from 'react';
 ;
 type UserRole = 'talent' | 'client';
-<<<<<<< HEAD
+
 type AuthContextType = {
   role: UserRole;
   setRole: (role: UserRole) => void;
@@ -17,30 +17,19 @@ const AuthContext = createContext<AuthContextType>({ role: 'talent', setRole: ()
   useEffect(() => {
     try {
       const stored = window.localStorage.getItem('userRole') as UserRole | null;
-      if (stored === 'talent' |stored === 'client') {
-        setRoleState(stored);      }        setRoleState(stored)
-      if (stored === 'talent' || stored === 'client') {
-        setRoleState(stored);      }
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
       if (stored === 'talent' || stored === 'client') {
         setRoleState(stored);      }        setRoleState(stored)
         setRoleState(stored);      }
 
-<<<<<<< HEAD
-=======
-
-=======
-      if (stored === 'talent' || stored === 'client') {
-
-        setRoleState(stored);      }
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
       }
     } catch {}
   }, []);
@@ -53,42 +42,7 @@ const AuthContext = createContext<AuthContextType>({ role: 'talent', setRole: ()
   return (    try {
       window.localStorage.setItem('userRole', r);
       document.cookie = `userRole=${r}, path=/, max-age=${60 * 60 * 24 * 365}`
-=======
 
-type AuthContextType = {;
-  role: UserRole;
-  setRole: (role: UserRole) => void;
-};
-const AuthContext = createContext<AuthContextType>({;
-  role: 'talent',;
-  setRole: () => {},;
-});  role: UserRole,;
-  setRole: (role: UserRole) => void;
-};
-const AuthContext = createContext<AuthContextType>({ role: 'talent', setRole: () => {} }),;
-  const [role, setRoleState] = useState<UserRole>('talent');
-  useEffect(() => {;
-    try {;
-      const stored = window && window.localStorage.getItem('userRole') as UserRole | null;
-      if (stored === 'talent' || stored === 'client') {;
-        setRoleState(stored);      }        setRoleState(stored);
-
-=======
-
-type AuthContextType = {
-  role: UserRole,
-  setRole: (role: UserRole) => void
-};
-const AuthContext = createContext<AuthContextType>({ role: 'talent', setRole: () => {} }),
-export function AuthProvider({ children }: { children: React.ReactNode }) {
-  const [role, setRoleState] = useState<UserRole>('talent');
-  useEffect(() => {
-    try {
-      const stored = window.localStorage.getItem('userRole') as UserRole | null;
-      if (stored === 'talent' || stored === 'client') {
-        setRoleState(stored)
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       }
     } catch {}
   }, []);
@@ -99,7 +53,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     } catch {}
   }
 
-<<<<<<< HEAD
+
 
     try { 
       window.localStorage.setItem('userRole', r);
@@ -157,36 +111,9 @@ export function useAuth() {;
   return useContext(AuthContext);
 }
 
-=======
-    <AuthContext.Provider value={{ role, set_role }}>;
-      {children}
-    </AuthContext.Provider>
-  );
-export function useAuth() {
-  return useContext(AuthContext);    <AuthContext.Provider value={{ role, setRole }}>{children}</AuthContext.Provider>
-  )
-}
-export function useAuth() {
 
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-  return (
-    <AuthContext.Provider value={{ role, setRole }}>
-      {children}
-    </AuthContext.Provider>
-  );
-<<<<<<< HEAD
-export function useAuth() {
-  return useContext(AuthContext);    <AuthContext.Provider value={{ role, setRole }}>{children}</AuthContext.Provider>
-  )
-}
-export function useAuth() {
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 export function useAuth() {;
   return useContext(AuthContext);    <AuthContext.Provider value={{ role, setRole }}>{children}</AuthContext.Provider>
@@ -194,17 +121,15 @@ export function useAuth() {;
 }
 
 export function useAuth() {;
-<<<<<<< HEAD
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 return useContext(AuthContext);
 }
   return (
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+

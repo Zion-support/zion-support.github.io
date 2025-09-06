@@ -1,8 +1,6 @@
 
-<<<<<<< HEAD
-import React from 'react';
-import {Button} from "@/components/ui/button";
-import {Star} from "lucide-react";
+
+
 import React from 'react',
 import { Button } from "@/components/ui/button";
 import { Star } from "lucide-react";
@@ -12,45 +10,26 @@ interface SaveTalentButtonProps {
   isSaved: boolean
 import { Button } from "@/components/ui/button",
 import { Star } from "lucide-react",
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 interface SaveTalentButtonProps {
   talentId: string,
   onSave: (talentId: string) => void,
   isSaved: boolean
-<<<<<<< HEAD
-import React from 'react',;
-import { Button } from "@/components/ui/button",;
-import { Star } from "lucide-react",;
-interface SaveTalentButtonProps {;
-  talentId: string,;
-  onSave: (talentId: string) => void;
-  isSaved: boolean;
-=======
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 }
 export function SaveTalentButton({
   talentId
   onSave
   isSaved
 }: SaveTalentButtonProps) {
-=======
-import React from 'react';
-import {Button} from "@/components/ui/button";
-import {Star} from "lucide-react";
-interface SaveTalentButtonProps {;
-  talentId: string,;
-  onSave: (talentId: string) => void,;
-  isSaved: boolean;
-}
 
-export function SaveTalentButton(): any ({ talentId, onSave, isSaved }: SaveTalentButtonProps) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <Button
       onClick={() => onSave(talentId)}
@@ -69,15 +48,10 @@ export function SaveTalentButton(): any ({ talentId, onSave, isSaved }: SaveTale
     >
       <Star className={`h-4 w-4 ${isSaved ? 'fill-current' : ''} mr-1`} />
       {isSaved ? 'Saved' : 'Save'}
-<<<<<<< HEAD
+
     </Button>;
   );
 }
-    </Button>
-  )
-}
-;
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba

@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 import type { NextApiRequest, NextApiResponse } from "next";
 import fs from "fs";
 import path from "path";
@@ -7,12 +7,7 @@ export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
-  try {
-    const raw = null;
-=======
 
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     res.status(200).json({ items })
     const raw = fs && fs.readFileSync(REQUESTS_PATH, "utf-8");
     const items = JSON && JSON.parse(raw);
@@ -37,21 +32,15 @@ function handler() {
     res.status (200).json ({ items: [] });
   }
   try {
-<<<<<<< HEAD
-  try {;
+
+
     const raw = fs.readFileSync(REQUESTS_PATH, "utf-8");
     const items = JSON.parse(raw);
     res.status(200).json({ items });
-=======
-    const raw = fs.readFileSync (REQUESTS_PATH, "utf - 8");
-    const items = JSON.parse (raw);
-    res.status (200).json ({ items });
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
   } catch {
     res.status (200).json ({ items: [] });
 
   }
 }
-=======
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+

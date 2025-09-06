@@ -1,12 +1,16 @@
 import Link from 'next/link';
 import ContentCategorizer from '../../components/ContentCategorizer';
 
+
 export default function ReportsIndex() {
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
 
 export default function ReportsIndex() {;
-<<<<<<< HEAD
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 export default function ReportsIndex() {
   return (
     <div className="min-h-screen bg-slate-950 text-white">
@@ -32,11 +36,8 @@ export default function ReportsIndex() {
             href='/'
             className='inline-flex items-center gap-2 text-cyan-300 hover:text-cyan-200 transition-colors duration-200'
           >            ← Back to home        <div className="mt-12 text-center">
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-export default function ReportsIndex() {
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
+
   return (
     <div className='min-h-screen bg-slate-950 text-white'>;
       <main className='container mx-auto px-4 py-12 max-w-7xl'>;
@@ -64,11 +65,7 @@ export default function ReportsIndex() {
 
   );
 }
-=======
-        <div className="mt-12 text-center">
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         {/* Content Categorizer Component */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -81,27 +78,22 @@ export default function ReportsIndex() {
   }
 }
         <div className="mt-12 text-center">
-<<<<<<< HEAD
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
           <Link href="/" className="inline-flex items-center gap-2 text-cyan-300 hover: text-cyan-200 transition-colors duration-200">
             ← Back to home
           </Link>
         </div>
       </main>
-<<<<<<< HEAD
+
     </div>
-  );
-}
-    </div>;
   );
 }
 
-}
-    </div>
   )
         <div className="mt-12 text-center">;
           <Link href="/" className="inline-flex items-center gap-2 text-cyan-300 hover: text-cyan-200 transition-colors duration-200">;
@@ -117,14 +109,13 @@ export default function ReportsIndex() {
   }
 }
 ;
-=======
+
 
     </div>);
 }
 
-=======
 
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba

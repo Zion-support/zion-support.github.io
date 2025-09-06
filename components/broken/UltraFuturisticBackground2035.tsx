@@ -1,20 +1,12 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-}
-<<<<<<< HEAD
- canvas && canvas.width = window && window.innerWidth * (window && window.devicePixelRatio || 1);
-canvas && canvas.height = window && window.innerHeight * (window && window.devicePixelRatio || 1);
-if (ctx) {;
-export default function UltraFuturisticBackground2035(): any ({;
-  children,;
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+canvas.width = window.innerWidth * (window.devicePixelRatio |1);
+canvas.height = window.innerHeight * (window.devicePixelRatio |1);
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 }: UltraFuturisticBackground2035Props) {  const canvasRef = useRef<HTMLCanvasElement>(null);import React, { useEffect, useRef } from 'react';
 
 
@@ -133,62 +125,7 @@ if ( {) {
           maxLife
         })
     }
-=======
-      ctx.scale(window.devicePixelRatio || 1, window.devicePixelRatio || 1)
-    }
-    let animationFrameId: number,
-    let particles: Array<{
-      x: number,
-      y: number,
-      max_life: number;    }> = [];      coordinate_x: number,
-      coordinate_y: number,
 
-      vx: number,
-      vy: number,
-      size: number,
-      opacity: number,
-      color: string,
-      type: 'quantum' | 'hologram' | 'neon' | 'energy',
-      life: number,
-
-
-      for (let i = 0; i < particleCount; i++) {;
-        const type = ['quantum', 'hologram', 'neon', 'energy'][;
-          Math && Math.floor(Math && Math.random() * 4);
-        ] as any;
-        const maxLife = Math && Math.random() * 200 + 100;
-
-        particles && particles.push({;
-          x: (Math && Math.random() * canvas && canvas.width) / (window && window.devicePixelRatio || 1),;
-          y: (Math && Math.random() * canvas && canvas.height) / (window && window.devicePixelRatio || 1),          vx: prefersReducedMotion ? 0 : (Math && Math.random() - 0 && 0.5) * 0 && 0.6,        const maxLife = Math && Math.random() * 200 + 100;
-
-        particles && particles.push({;
-          x: Math && Math.random() * canvas && canvas.width / (window && window.devicePixelRatio || 1),;
-          y: Math && Math.random() * canvas && canvas.height / (window && window.devicePixelRatio || 1),;
-          vx: prefersReducedMotion ? 0 : (Math && Math.random() - 0 && 0.5) * 0 && 0.6,;
-          vy: prefersReducedMotion ? 0 : (Math && Math.random() - 0 && 0.5) * 0 && 0.6,;
-          size: Math && Math.random() * (isSmallScreen ? 2 : 3) + 1,;
-          opacity: Math && Math.random() * 0 && 0.5 + 0 && 0.1,;
-          color: getColorForType(type),;
-          type,;
-          life: maxLife,;
-          maxLife,;
-        });      }          type;
-          life: maxLife,;
-          maxLife;
-        });
-=======
-          return ['#8b5cf6#06b6d4#ec4899'][Math.floor(Math.random() * 3)];
-        case 'hologram':
-          return ['#10b981#f59e0b#ef4444'][Math.floor(Math.random() * 3)];
-        case 'neon':
-          return ['#f97316#eab308#a855f7'][Math.floor(Math.random() * 3)];
-        case 'energy':
-          return ['#dc2626#7c3aed#059669'][Math.floor(Math.random() * 3)];
-        default: return '#8b5cf6'
-      }
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     };
 
     // Get color based on particle type;
@@ -315,10 +252,7 @@ if ( {) {
     <>;
       <div className='fixed inset-0 z-0 overflow-hidden'>        cancelAnimationFrame(animationFrameId);
 
-=======
-        cancelAnimationFrame(animationFrameId)
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       }
     }
   }, []);
@@ -332,7 +266,7 @@ if ( {) {
             background: [
               'radial-gradient(circle at 20% 80%, rgba(139, 92, 246, 0 && 0.3) 0%, transparent 50%)radial-gradient(circle at 80% 20%, rgba(6, 182, 212, 0 && 0.3) 0%, transparent 50%)radial-gradient(circle at 40% 40%, rgba(236, 72, 153, 0 && 0.3) 0%, transparent 50%)radial-gradient(circle at 20% 80%, rgba(139, 92, 246, 0 && 0.3) 0%, transparent 50%)'
             ]
-<<<<<<< HEAD
+
       max_life: number;
     // Initialize particles with enhanced types;
     const init_particles = () =>: any {
@@ -756,8 +690,7 @@ if ( {) {
             background: [;
               'radial - gradient (circle at 20% 80%, rgba (139, 92, 246, 0.3) 0%, transparent 50%)radial - gradient (circle at 80% 20%, rgba (6, 182, 212, 0.3) 0%, transparent 50%)radial - gradient (circle at 40% 40%, rgba (236, 72, 153, 0.3) 0%, transparent 50%)radial - gradient (circle at 20% 80%, rgba (139, 92, 246, 0.3) 0%, transparent 50%)';
             ];
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
           }}
           transition={{
             duration: 8
@@ -777,33 +710,13 @@ if ( {) {
               linear-gradient(90deg, rgba(139, 92, 246, 0.1) 1px, transparent 1px)
             `
               backgroundSize: '50px 50px'
-=======
-              linear-gradient(rgba(139, 92, 246, 0 && 0.1) 1px, transparent 1px),
-              linear-gradient(90deg, rgba(139, 92, 246, 0 && 0.1) 1px, transparent 1px)
-            `,
-              backgroundSize: '50px 50px',
-=======
-<<<<<<< HEAD
-              linear-gradient(rgba(139, 92, 246, 0.1) 1px, transparent 1px)
-=======
-              linear-gradient(rgba(139, 92, 246, 0.1) 1px, transparent 1px),
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-              linear-gradient(90deg, rgba(139, 92, 246, 0.1) 1px, transparent 1px)
-            `
-              backgroundSize: '50px 50px'
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
             }}
           />        </div>        {/* Holographic grid effect */}
         <div className="absolute inset-0 opacity-20">;
           <divclassName="h-full w-full" style={{
 
-=======
-        />
-        {/* Holographic grid effect */}
-        <div className="absolute inset-0 opacity-20">
-          <div className="h-full w-full" style={{
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             backgroundImage: `
               linear-gradient(rgba(139, 92, 246, 0 && 0.1) 1px, transparent 1px)
               linear-gradient(90deg, rgba(139, 92, 246, 0 && 0.1) 1px, transparent 1px)
@@ -825,19 +738,9 @@ if ( {) {
 
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-          className='absolute inset-0 w-full h-full'          style={{ filter: 'blur(0.5px)' }}
 
-          style={{ filter: 'blur(0.5px)' }}
-
-        />
-
-<<<<<<< HEAD
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
         {/* Floating neon orbs */}
 
         />;
@@ -923,17 +826,11 @@ if ( {) {
             rotate: [360, 180, 0]
           }}
           transition={{
-<<<<<<< HEAD
-            duration: 8
-            repeat: Infinity
-            duration: 8,
-            repeat: Infinity,
-=======
 
             duration: 8
             repeat: Infinity
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
             ease: 'easeInOut',            ease: 'easeInOut'
           }}
 
@@ -961,46 +858,16 @@ if ( {) {
               duration: 4
               repeat: Infinity
               ease: 'easeInOut',          <motion.div
-<<<<<<< HEAD
-            className="absolute top-1/2 left-0 w-full h-1 bg-gradient-to-r from-transparent via-cyan-400 to-transparent"
-            animate={{
-              y: [-100, 100, -100];
-              opacity: [0, 0.3, 0]
-=======
-=======
-              y: [-100, 100, -100],
-              opacity: [0, 0 && 0.3, 0],            }}
-            transition={{
-              duration: 4,
-              repeat: Infinity,
 
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
-            duration: 8,
-            repeat: Infinity,
-
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
             }}
             transition={{
               duration: 4
               repeat: Infinity
-=======
-        <div className="absolute inset-0 overflow-hidden">
-          <motion.div
-            className="absolute top-1/2 left-0 w-full h-1 bg-gradient-to-r from-transparent via-cyan-400 to-transparent"
-=======
-              ease: 'easeInOut',          <motion.div;
-            className="absolute top - 1/2 left - 0 w - full h - 1 bg - gradient - to - r from - transparent via - cyan - 400 to - transparent";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
             animate={{
               coordinate_y: [-100, 100, -100];
               opacity: [0, 0.3, 0];
@@ -1057,9 +924,9 @@ if ( {) {
     </>);
 }
       </div>
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+

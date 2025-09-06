@@ -147,7 +147,7 @@ const ContentCategorizer: React.FC = () => {;
       tags: ['analyticsuser-behaviorengagementoptimization'],;
       source: 'behavior-analyzer',;
       type: 'insight';
-<<<<<<< HEAD
+
 
 const ContentCategorizer: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState(''),
@@ -681,12 +681,7 @@ key={category.id}
       {/* Content Grid */}
 :components/ContentCategorizer.tsx
 
-=======
-<<<<<<< HEAD:components/ContentCategorizer.tsx
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                   {item.type}
                 </div>;

@@ -1,15 +1,9 @@
 import { FileText, CheckCircle2, Clock, ShieldAlert } from 'lucide-react';
-<<<<<<< HEAD
+
 import Link from 'next/link'; // Changed from react-router-dom
 import { useAuth } from '@/hooks/useAuth';
 import { useGetOrdersQuery } from '@/hooks/useOrders';
-=======
 
-import Link from 'next / link'; // Changed from react-router-dom;
-import { use_auth } from '@/hooks / use_auth';
-import { useGetOrdersQuery } from '@/hooks / use_orders';
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import {
 
   Table
@@ -20,27 +14,12 @@ import {
 
 
 
-<<<<<<< HEAD
-=======
-=======
-import { FileText, CheckCircle2, Clock, ShieldAlert } from 'lucide-react'
-import Link from 'next/link', // Changed from react-router-dom
-import { useAuth } from '@/hooks/useAuth',
-import { useGetOrdersQuery } from '@/hooks/useOrders',
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-import {
-  Table,
-  TableBody,
-  TableCell,
-<<<<<<< HEAD
-  TableHead,;
-  TableHeader;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 } from '@/components/ui/table';
 import { Badge } from '@/components/ui/badge';
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 export default function OrdersPage() {;
 
@@ -78,7 +57,7 @@ export default function OrdersPage() {;
       default:;
         return status;
     }
-<<<<<<< HEAD
+
   }
 import { FileText, CheckCircle2, Clock, ShieldAlert } from 'lucide-react'
 import Link from 'next/link', // Changed from react-router-dom
@@ -102,10 +81,7 @@ export default function OrdersPage() {
 
 
   const getStatusBadge = (status: string) => {
-=======
 
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     switch (status) {
       case 'in_escrow':
         return (
@@ -178,10 +154,9 @@ export default function OrdersPage() {
           icon={<FileText className="h-10 w-10" />}
           title="No Orders"
           description="You haven't purchased anything yet."
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 
         />
@@ -202,10 +177,9 @@ export default function OrdersPage() {
             {orders.map((order) => (
               <TableRow key={order.orderId}>
                 <TableCell className="font-medium">{order.orderId}</TableCell>
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 
                 <TableCell>{formatDate(order.date)}</TableCell>

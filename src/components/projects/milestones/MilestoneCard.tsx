@@ -150,7 +150,7 @@ interface MilestoneCardProps {
             {dueDate && (;
               <p className="text-sm text-muted-foreground">;
   dueDate?: string,
-<<<<<<< HEAD
+
   onApprove?: (id: string,) => Promise<void>,
   onReject?: (id: string,) => Promise<void>
 }
@@ -205,10 +205,7 @@ export function MilestoneCard({;
     }
   }
   
-=======
 
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return (
     <Card>
       <CardHeader className="pb-2">
@@ -222,15 +219,13 @@ export function MilestoneCard({;
                 Due: {format(new Date(dueDate), 'MMM d, yyyy')}
               </p>;
             )}
-<<<<<<< HEAD
-          </div>  }
-=======
+
 
       default: return 'bg-gray-500'
     };
   }
   
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
   return (
     <Card>
       <CardHeader className="pb-2">
@@ -238,30 +233,11 @@ export function MilestoneCard({;
           <div>
             <CardTitle className="text-xl">{title}</CardTitle>
             {dueDate && (
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-              <p className='text-sm text-muted-foreground'>                Due: {format(new Date(dueDate), 'MMM d, yyyy')}
-              </p>
-            )}
-          </div>  }
-  return (
-    <Card>
-      <CardHeader className="pb-2">
-        <div className="flex justify-between items-start">
-          <div>
-            <CardTitle className="text-xl">{title}</CardTitle>
-            {dueDate && (
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
               <p className="text-sm text-muted-foreground">
                 Due: {format(new Date(dueDate), 'MMM d, yyyy')}
               </p>
@@ -277,60 +253,15 @@ export function MilestoneCard({;
             </Badge>
             
             {isUnderDispute && disputeStatus && (
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
-              <DisputeStatusBadge status={disputeStatus} />
-            )}
-          </div>
-        </div>
-      </CardHeader>
-<<<<<<< HEAD
-      <CardContent className='pb-2'>
-        {description && <p className='text-muted-foreground'>{description}</p>}
-        <div className='mt-4'>
-          <p className='text-xl font-bold'>${amount.toFixed(2)}</p>
         </div>
       </CardContent>
       <CardFooter className='pt-2 flex justify-between'>
         <div>
           {status !== 'completed' && status !== 'rejected' && (
-            <RaiseDisputeButton
-              projectId={projectId}
-              milestoneId={id}
-              variant='ghost'
-              size='sm'            <RaiseDisputeButton
-              projectId = {projectId,}
-              milestoneId = {id,}
-=======
 
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-      
-      <CardContent className="pb-2">
-        {description && (
-          <p className="text-muted-foreground">{description}</p>
-        )}
-        <div className="mt-4">
-          <p className="text-xl font-bold">${amount.toFixed(2)}</p>
-
-
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-        </div>
-      </CardContent>
-      <CardFooter className='pt-2 flex justify-between'>
-        <div>
-          {status !== 'completed' && status !== 'rejected' && (
-<<<<<<< HEAD
             <RaiseDisputeButton 
               projectId={projectId} 
               milestoneId={id} 
@@ -417,12 +348,7 @@ export function MilestoneCard({;
               Actions frozen due to dispute
             </Button>
           </div>;
-=======
 
-              className={`capitalize ${getStatusBadgeColor()} text-white`}>;
-              {status && status.replace('_', ' ')}
-            </Badge>;
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           <div className="flex gap-2">;
             <Badge variant="outline" className={`capitalize ${getStatusBadgeColor()} text-white`}>;
               {status && status.replace('_ ')}
@@ -531,10 +457,9 @@ export function MilestoneCard({;
     </Card>;
   );
 }
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
   );
 }

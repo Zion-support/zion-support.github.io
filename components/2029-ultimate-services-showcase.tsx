@@ -8,7 +8,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, 
 import {
-<<<<<<< HEAD
+
   Rocket
   Brain
   Atom
@@ -51,41 +51,7 @@ import {
   Cpu as CpuIcon;} from 'lucide-react';import {
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield
 
-=======
 
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-import React, { useState } from 'react';
-import Head from 'next / head';
-import Link from 'next / link';
-import { motion, AnimatePresence } from 'framer-motion';
-
-=======
-import {
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   Rocket,
   Brain,
@@ -125,19 +91,13 @@ import {
   Satellite,
   Dna,
   Battery,
-<<<<<<< HEAD
 
-  Gamepad,;
-  Cpu as CpuIcon,;} from 'lucide-react';import {
-  Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, ;
-=======
 
   Gamepad,;
   Cpu as CpuIcon,;} from 'lucide-react';import {
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, ;
 
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
   Target, Crown, Star, TrendingUp, ArrowRight;
   CheckCircle, DollarSign, Users, Clock, Award, Zap as ZapIcon;
   Search, Phone, Mail, MapPin, Heart, Leaf, Car, GraduationCap, Scale;
@@ -446,17 +406,14 @@ export default function UltimateServicesShowcase2029() {
                 href="/contact"
                 className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 shadow-2xl hover:shadow-cyan-500/25 text-lg"
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
+
               >
                 Get Started Today
               </Link>
@@ -469,14 +426,13 @@ export default function UltimateServicesShowcase2029() {
               </Link>
             </div>
 
-<<<<<<< HEAD
-=======
 
 
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
             {/* Stats */}
 
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16">
@@ -501,7 +457,7 @@ export default function UltimateServicesShowcase2029() {
           </motion.div>
         </div>
       </section>
-<<<<<<< HEAD
+
 className="px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 font-bold rounded-xl hover:bg-cyan-500/10 transition-all duration-200 text-lg">;
                 View Pricing;
               </Link>;
@@ -563,15 +519,7 @@ className="px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 font-bold rounded
             <div className="relative w-full lg:w-96">;
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400" />;
 
-=======
-      <section className="py-16 bg-gray-900/50 border-b border-cyan-500/20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col lg:flex-row items-center justify-between space-y-6 lg:space-y-0">
-            {/* Search */}
-            <div className="relative w-full lg:w-96">
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400" />
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               <input
                 type="text"
                 placeholder="Search services..."
@@ -580,13 +528,7 @@ className="px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 font-bold rounded
 
             {/* Category Filter */}
 
-=======
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full pl-10 pr-4 py-3 bg-gray-800/50 border border-gray-700/50 rounded-xl text-gray-300 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50 transition-all duration-200"
-              />
-            </div>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
             {/* Category Filter */}
             <div className="flex flex-wrap items-center space-x-2">
               {categories.map((category) => (
@@ -599,19 +541,11 @@ className="px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 font-bold rounded
                     selectedCategory === category && category.id;
                       ? `bg-gradient-to-r ${category && category.color} text-white shadow-lg`;
                       : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 border border-gray-700/50';
-=======
-            {/* Category Filter */}
-            <div className='flex flex-wrap items-center space-x-2'>
-              {categories.map(category => (            <div className="flex flex-wrap items-center space-x-2">
-              {categories.map((category) => (
-                <button
 
-<<<<<<< HEAD
-=======
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
                   key={category.id}
                   onClick={() => setSelectedCategory(category.id)}
                   className={`px-4 py-2 rounded-lg font-medium transition-all duration-200 ${
@@ -625,21 +559,16 @@ className="px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 font-bold rounded
               ))}
             </div>
 
-<<<<<<< HEAD
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
             {/* Price Filter */}
             <div className='flex items-center space-x-2'>
               {priceRanges.map(range => (                <button            <div className="flex items-center space-x-2">
               {priceRanges.map((range) => (
                 <button
-=======
-            </div>;
 
-
-=======
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             {/* Price Filter */}
 
@@ -650,152 +579,7 @@ className="px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 font-bold rounded
                 </button>;
               ))}
 
-=======
-            <div className='flex flex - col sm:flex - row items - center justify - center space - y-4 sm:space - y-0 sm:space - x-6'>;
-              <Link;
-                href='/contact';
-                className='px - 8 py - 4 bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white font - bold rounded - xl hover:from - cyan - 600 hover:to - blue - 700 transition - all duration - 200 shadow - 2xl hover:shadow - cyan - 500 / 25 text - lg'              >;
-                Get Started Today;
-              </Link>;
-              <Link;
-                href='/pricing';
-                className='px - 8 py - 4 border - 2 border - cyan - 500 / 50 text - cyan - 400 font - bold rounded - xl hover:bg - cyan - 500 / 10 transition - all duration - 200 text - lg'              >          >;
-            <div className="flex items - center justify - center space - x-2 mb - 6">;
-              <div className="w - 16 h - 16 bg - gradient - to - br from - cyan - 400 via - blue - 500 to - purple - 600 rounded - 2xl flex items - center justify - center shadow - 2xl">;
-                <Rocket className="w - 9 h - 9 text - white" />;
-              </div>;
-              <div className="w - 16 h - 16 bg - gradient - to - br from - emerald - 400 via - teal - 500 to - cyan - 600 rounded - 2xl flex items - center justify - center shadow - 2xl">;
-                <Brain className="w - 9 h - 9 text - white" />;
-              </div>;
-              <div className="w - 16 h - 16 bg - gradient - to - br from - indigo - 400 via - purple - 500 to - violet - 600 rounded - 2xl flex items - center justify - center shadow - 2xl">;
-                <Atom className="w - 9 h - 9 text - white" />;
-              </div>;
-            </div>;
-            <h1 className="text - 5xl md:text - 7xl font - bold text - white mb - 6">;
-              <span className="bg - gradient - to - r from - cyan - 400 via - blue - 500 to - purple - 600 bg - clip - text text - transparent">;
-                2029 Ultimate;
-              </span>;
-              <br />;
-              <span className="bg - gradient - to - r from - emerald - 400 via - teal - 500 to - cyan - 600 bg - clip - text text - transparent">;
-                Services Showcase;
-              </span>;
-            </h1>;
-            <p className="text - xl md:text - 2xl text - gray - 300 mb - 8 max - w-3xl mx - auto leading - relaxed">;
-              Experience the future of technology with our revolutionary AI consciousness, quantum computing, space technology, and autonomous systems. Transform your business with innovations that define tomorrow.;
-            </p>;
-            <div className="flex flex - col sm:flex - row items - center justify - center space - y-4 sm:space - y-0 sm:space - x-6">;
-              <Link;
-                href="/contact";
-                className="px - 8 py - 4 bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white font - bold rounded - xl hover:from - cyan - 600 hover:to - blue - 700 transition - all duration - 200 shadow - 2xl hover:shadow - cyan - 500 / 25 text - lg";
-              >;
-                Get Started Today;
-              </Link>;
-              <Link;
-                href='/pricing';
-                className='px - 8 py - 4 border - 2 border - cyan - 500 / 50 text - cyan - 400 font - bold rounded - xl hover:bg - cyan - 500 / 10 transition - all duration - 200 text - lg'                href="/pricing";
-                className="px - 8 py - 4 border - 2 border - cyan - 500 / 50 text - cyan - 400 font - bold rounded - xl hover:bg - cyan - 500 / 10 transition - all duration - 200 text - lg";
-              >;
-                View Pricing;
-              </Link>;
-            </div>;
-            {/* Stats */}
-            <div className='grid grid - cols - 2 md:grid - cols - 4 gap - 8 mt - 16'>;
-              <div className='text - center'>;
-                <div className='text - 3xl md:text - 4xl font - bold text - cyan - 400 mb - 2'>;
-                  {all_services.length}+;
-                </div>;
-                <div className='text - gray - 400'>Revolutionary Services</div>;
-              </div>;
-              <div className='text - center'>;
-                <div className='text - 3xl md:text - 4xl font - bold text - emerald - 400 mb - 2'>;
-                  $500M+;
-                </div>;
-                <div className='text - gray - 400'>Market Valuation</div>;
-              </div>;
-              <div className='text - center'>;
-                <div className='text - 3xl md:text - 4xl font - bold text - purple - 400 mb - 2'>;
-                  99.9%;
-                </div>;
-                <div className='text - gray - 400'>Success Rate</div>;
-              </div>;
-              <div className='text - center'>;
-                <div className='text - 3xl md:text - 4xl font - bold text - blue - 400 mb - 2'>;
-                  24 / 7;
-                </div>;
-                <div className='text - gray - 400'>Support Available</div>              </div>              </div>;
-              <div className="text - center">;
-                <div className="text - 3xl md:text - 4xl font - bold text - emerald - 400 mb - 2">$500M+</div>;
-                <div className="text - gray - 400">Market Valuation</div>;
-              </div>;
-              <div className="text - center">;
-                <div className="text - 3xl md:text - 4xl font - bold text - purple - 400 mb - 2">99.9%</div>;
-                <div className="text - gray - 400">Success Rate</div>;
-              </div>;
-              <div className="text - center">;
-                <div className="text - 3xl md:text - 4xl font - bold text - blue - 400 mb - 2">24 / 7</div>;
-                <div className="text - gray - 400">Support Available</div>;
-              </div>;
-            </div>;
-          </motion.div>;
-        </div>;
-      </section>;
-      {/* Filters Section */}
-      <section className='py - 16 bg - gray - 900 / 50 border - b border - cyan - 500 / 20'>;
-        <div className='max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8'>;
-          <div className='flex flex - col lg:flex - row items - center justify - between space - y-6 lg:space - y-0'>;
-            {/* Search */}
-            <div className='relative w - full lg:w - 96'>;
-              <Search className='absolute left - 3 top - 1/2 transform -translate - y-1 / 2 h - 5 w - 5 text - gray - 400' />;
-              <input;
-                type='text';
-                placeholder='Search services...';
-                value={search_term}
-                on_change={e => setSearchTerm (e.target.value)}
-                className='w - full pl - 10 pr - 4 py - 3 bg - gray - 800 / 50 border border - gray - 700 / 50 rounded - xl text - gray - 300 placeholder - gray - 500 focus:outline - none focus:ring - 2 focus:ring - cyan - 500 / 50 focus:border - cyan - 500 / 50 transition - all duration - 200'              />;
-            </div>;
-            {/* Category Filter */}
-            <div className='flex flex - wrap items - center space - x-2'>;
-              {categories.map (category => (                <button            {/* Search */}
-            <div className="relative w - full lg:w - 96">;
-              <Search className="absolute left - 3 top - 1/2 transform -translate - y-1 / 2 h - 5 w - 5 text - gray - 400" />;
-              <input;
-                type="text";
-                placeholder="Search services...";
-                value={search_term}
-                on_change={(e) => setSearchTerm (e.target.value)}
-                className="w - full pl - 10 pr - 4 py - 3 bg - gray - 800 / 50 border border - gray - 700 / 50 rounded - xl text - gray - 300 placeholder - gray - 500 focus:outline - none focus:ring - 2 focus:ring - cyan - 500 / 50 focus:border - cyan - 500 / 50 transition - all duration - 200";
-              />;
-            </div>;
-            {/* Category Filter */}
-            <div className='flex flex - wrap items - center space - x-2'>;
-              {categories.map (category => (            <div className="flex flex - wrap items - center space - x-2">;
-              {categories.map ((category) => (
-                <button;
-                  key={category.id}
-                  on_click={() => setSelectedCategory (category.id)}
-                  className={`px - 4 py - 2 rounded - lg font - medium transition - all duration - 200 ${
-                    selected_category === category.id;
-                      ? `bg - gradient - to - r ${category.color} text - white shadow - lg`;
-                      : 'bg - gray - 800 / 50 text - gray - 300 hover:bg - gray - 700 / 50 border border - gray - 700 / 50';
-                  }`}
-                >;
-                  <div className='flex items - center space - x-2'>;
-                    <category.icon className='h - 4 w - 4' />;
-                    <span>{category.name}</span>;
-                    <span className='text - xs opacity - 75'>;
-                      ({category.count});
-                    </span>                  </div>                  <div className="flex items - center space - x-2">;
-                    <category.icon className="h - 4 w - 4" />;
-                    <span>{category.name}</span>;
-                    <span className="text - xs opacity - 75">({category.count})</span>;
-                </button>))}
-            </div>;
-            {/* Price Filter */}
-            <div className='flex items - center space - x-2'>;
-              {price_ranges.map (range => (                <button            <div className="flex items - center space - x-2">;
-              {price_ranges.map ((range) => (
-                <button;
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
                   key={range.id}
                   onClick={() => setSelectedPriceRange(range.id)}
                   className={`px-4 py-2 rounded-lg font-medium transition-all duration-200 ${
@@ -812,19 +596,11 @@ className="px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 font-bold rounded
         </div>
       </section>
 
-<<<<<<< HEAD
-=======
-            </div>;
-          </div>;
-        </div>;
-      </section>;
 
 
 
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
       {/* Services Grid */}
 
 
@@ -836,17 +612,7 @@ className="px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 font-bold rounded
 
                   {/* Categories */}
 
-=======
-                  <div className="mb-4">
-=======
-                  <div className='mb-4'>
-                    <div className='flex flex-wrap gap-2'>
-                      {service.category.slice(0, 3).map(cat => (
-                        <span
-                          key={cat}
-<<<<<<< HEAD
-                          className='px-2 py-1 bg-gray-700/50 text-cyan-400 text-xs rounded-lg border border-cyan-500/20'                        >                  <div className="mb-4">
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
                     <div className="flex flex-wrap gap-2">
                       {service.category.slice(0, 3).map((cat) => (
                         <span
@@ -870,13 +636,9 @@ className="px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 font-bold rounded
                         </span>;
                       ))}
 
-=======
-                      {service.category.length > 3 && (
-                        <span className="px-2 py-1 bg-gray-700/50 text-gray-400 text-xs rounded-lg">
-                          +{service.category.length - 3}
-                        </span>
 
-<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
                   {/* Features Preview */}
                   <div className='mb-6'>
                     <h4 className='text-sm font-semibold text-white mb-2'>
@@ -904,35 +666,23 @@ className="px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 font-bold rounded
                         <li className='text-xs text-gray-500'>                        <li className="text-xs text-gray-500">
                           +{service.features.length - 3} more features
                         </li>
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                       )}
                     </ul>
                   </div>
 
-<<<<<<< HEAD
-=======
+
                     </div>;
                   </div>;
 
 
-=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-                  {/* Features Preview */}
-
-
-                      )}
-
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
                   {/* Market Info */}
 
                   <div className="mb-6 space-y-2">
@@ -983,9 +733,7 @@ className="px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 font-bold rounded
                       <ArrowRight className="inline-block ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform duration-200" />
                     </Link>
                   </div>
-=======
-                    </Link>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
                   </div>
                       href={`/services/${service && service.id}`}
                       className='w-full px-4 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 shadow-lg hover:shadow-cyan-500/25 text-center block group-hover:scale-105 transform transition-transform duration-200'>;
@@ -1002,43 +750,29 @@ className="px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 font-bold rounded
 
                   {/* Hover Effect */}
 
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-                </div>
-              </motion.div>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             ))}
           </motion.div>
 
           </motion && motion.div>;
-=======
-                  <div className='absolute inset-0 rounded-2xl bg-gradient-to-r from-cyan-500/5 via-blue-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none' />                  <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-cyan-500/5 via-blue-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
-=======
 
 
-=======
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+                </div>
+              </motion.div>
+            ))}
+          </motion.div>
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
+
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
           {/* No Results */}
           {filteredServices && filteredServices.length === 0 && (;
             <div className='text-center py-20'>;
@@ -1056,7 +790,7 @@ className="px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 font-bold rounded
                   setSearchTerm('');
                   setSelectedPriceRange('all');
                 }}
-<<<<<<< HEAD
+
                 className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200'              >            <div className="text-center py-20">;
               <div className="w-24 h-24 bg-gray-800/50 rounded-full flex items-center justify-center mx-auto mb-6">;
                 <Search className="w-12 h-12 text-gray-400" />;
@@ -1078,30 +812,11 @@ className="px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 font-bold rounded
               </button>;
             </div>;
 
-=======
-                  <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-cyan-500/5 via-blue-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
-                </div>
-              </motion.div>
-            ))}
-          </motion.div>
 
-          {/* No Results */}
-          {filteredServices.length === 0 && (
-            <div className="text-center py-20">
-              <div className="w-24 h-24 bg-gray-800/50 rounded-full flex items-center justify-center mx-auto mb-6">
-                <Search className="w-12 h-12 text-gray-400" />
-              </div>
-              <h3 className="text-2xl font-bold text-white mb-4">No services found</h3>
-              <p className="text-gray-400 mb-8">Try adjusting your search criteria or browse all services</p>
-                className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200'              >
-
-              <button
-<<<<<<< HEAD
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
                 onClick={() => {
                   setSelectedCategory('all');
                   setSearchTerm('');
@@ -1118,39 +833,26 @@ className="px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 font-bold rounded
         </div>
       </section>
 
-<<<<<<< HEAD
-=======
+
         </div>;
       </section>;
 
 
-=======
 
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
       {/* Contact CTA */}
       <section className='py-20 bg-gradient-to-r from-cyan-900/20 via-blue-900/20 to-purple-900/20 border-t border-cyan-500/20'>;
         <div className='max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8'>          <motion && motion.div      <section className="py-20 bg-gradient-to-r from-cyan-900/20 via-blue-900/20 to-purple-900/20 border-t border-cyan-500/20">;
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">;
           <motion&& motion.div
-=======
-
-      {/* Contact CTA */}
-      <section className="py-20 bg-gradient-to-r from-cyan-900/20 via-blue-900/20 to-purple-900/20 border-t border-cyan-500/20">
-        <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-          <motion.div
-
-<<<<<<< HEAD
-=======
 
 
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
 
@@ -1404,9 +1106,9 @@ Join the future of technology with our revolutionary services.
   )
 }
   );
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+

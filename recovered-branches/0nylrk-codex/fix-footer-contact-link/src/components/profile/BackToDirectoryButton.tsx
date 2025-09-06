@@ -1,21 +1,19 @@
 
-<<<<<<< HEAD
-import React from 'react';
-import {Button} from "@/components/ui/button";
-import {Link} from "react-router-dom";
-import {ArrowLeft} from "lucide-react";
+
+
 import React from 'react',
 import { Button } from "@/components/ui/button",
 import { Link } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom",
 import { ArrowLeft } from "lucide-react",
-=======
 
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 export function BackToDirectoryButton() {
   return (
     <div className="container mx-auto px-4 md: px-6 mb-12">
@@ -29,22 +27,18 @@ export function BackToDirectoryButton() {
         </Link>
       </Button>
     </div>
-<<<<<<< HEAD
+
+
+
   );
 }
   )
-  )
+
 import React from 'react',;
 import { Button } from "@/components/ui/button",;
 import { Link } from "react-router-dom",;
 import { ArrowLeft } from "lucide-react";
-=======
 
-import React from 'react';
-import {Button} from "@/components/ui/button";
-import {Link} from "react-router-dom";
-import {ArrowLeft} from "lucide-react";
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export function BackToDirectoryButton() {;
   return (
     <div className="container mx-auto px-4 md: px-6 mb-12">;
@@ -58,9 +52,8 @@ export function BackToDirectoryButton() {;
   );
 }
 ;
-<<<<<<< HEAD
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba

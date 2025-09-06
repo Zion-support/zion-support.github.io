@@ -5,20 +5,7 @@
 };
 };
       setLoading(false)}
-=======
-      set_loading (false)}
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-      setLoading(false)};
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
 ;
   return { data, loading, error, execute }}
 }
@@ -28,21 +15,12 @@ origin/main
 };import { useState, useEffect } from 'react';
 
 interface ApiState<T> {
-=======
-}import { useState, useEffect } from 'react';
-;
-interface ApiState < T> {
-=======
-<<<<<<< HEAD
->>>>>>> origin/main
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+
+
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 };import { useState, useEffect } from 'react';
-<<<<<<< HEAD
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
 interface ApiState<T> {
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   data: T | null;
@@ -50,29 +28,12 @@ interface ApiState<T> {
   error: string | null;
 }
 
-<<<<<<< HEAD
+
 export function useApi<T>(url: string, options?: RequestInit) {
   const [state, setState] = useState<ApiState<T>>({
-    data: null
-    loading: true
-    error: null
-    data: null,
-    loading: true,
-    error: null,;
+
   });
-=======
-export function use_api < T>(url: string, options?: RequestInit) {
-  const [state, set_state] = useState < ApiState < T>>({
-    data: null,
-    loading: true,
-    error: null,
 
-=======
-
-    data: null,
-    loading: true,
-    error: null,;
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   });
@@ -137,11 +98,9 @@ import { useState, useEffect, useCallback } from 'react';
 
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/automation-improvements-final
+
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
 }
 interface UseApiProps {
   // Add props here as needed
@@ -172,7 +131,7 @@ interface UseApiOptions {
 export const use_api = <T = any>(
   api_function: (...args: any[]) => Promise < T>,
   options: UseApiOptions = {}
-<<<<<<< HEAD
+
 ) => {
   const [loading, set_loading] = useState (false);
   const [error, set_error] = useState < any>(null);
@@ -203,20 +162,8 @@ export default useApi;
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
 import { useState,useEffect,useCallback } from 'react'; interface UseApiOptions { immediate?: boolean; onSuccess?: (data: any) => void; onError?: (error: any) => void} } export const useApi = <T = any>( apiFunction: (...args: any[]) => Promise<T>,options: UseApiOptions = {} ) => { const [data,setData] = useState<T | null>(null); const [loading,setLoading] = useState(false); const [error,setError] = useState<any>(null); const execute = useCallback(async (...args: any[]) => { try { setLoading(true); setError(null); const result = await apiFunction(...args); setData(result); options.onSuccess?.(result); return result} catch (err) { setError(err); options.onError?.(err); throw err} finally { setLoading(false)} },[apiFunction,options]); useEffect(() => { if (options.immediate) { execute()} },[execute,options.immediate]); return { data,loading,error,execute }}; export default useApi;
-=======
-  }, [execute, options && options.immediate]);
-  return { data, loading, error, execute }};
-export default useApi;
-<<<<<<< HEAD
-import { useState,useEffect,useCallback } from 'react'; interface UseApiOptions { immediate?: boolean; onSuccess?: (data: any) => void; onError?: (error: any) => void} } export const useApi = <T = any>( apiFunction: (...args: any[]) => Promise<T>,options: UseApiOptions = {} ) => { const [data,setData] = useState<T | null>(null); const [loading,setLoading] = useState(false); const [error,setError] = useState<any>(null); const execute = useCallback(async (...args: any[]) => { try { setLoading(true); setError(null); const result = await apiFunction(...args); setData(result); options && options.onSuccess?.(result); return result} catch (err) { setError(err); options && options.onError?.(err); throw err} finally { setLoading(false)} },[apiFunction,options]); useEffect(() => { if (options && options.immediate) { execute()} },[execute,options && options.immediate]); return { data,loading,error,execute }}; export default useApi;
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/automation-improvements-final
+
+
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 import { useState,useEffect,useCallback } from 'react'; interface UseApiOptions { immediate?: boolean; onSuccess?: (data: any) => void; onError?: (error: any) => void} } export const useApi = <T = any>( apiFunction: (...args: any[]) => Promise<T>,options: UseApiOptions = {} ) => { const [data,setData] = useState<T | null>(null); const [loading,setLoading] = useState(false); const [error,setError] = useState<any>(null); const execute = useCallback(async (...args: any[]) => { try { setLoading(true); setError(null); const result = await apiFunction(...args); setData(result); options.onSuccess?.(result); return result} catch (err) { setError(err); options.onError?.(err); throw err} finally { setLoading(false)} },[apiFunction,options]); useEffect(() => { if (options.immediate) { execute()} },[execute,options.immediate]); return { data,loading,error,execute }}; export default useApi;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -227,18 +174,14 @@ export default function UseApi({ }: UseApiProps) {
       <p>This component is currently under development.</p>
     </div>;
   );
-<<<<<<< HEAD
-}
-}
-ursor/add-new-services-and-deploy-updates-0462
+
+
+
 interface ApiState<T> {
   data: T | null, loading: boolean,
   error: string | null,
 origin/automation-improvements-final
-=======
 
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 }
 export function useApi<T>(
@@ -276,12 +219,9 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 origin/main
 origin/automation-improvements-final
 }
-<<<<<<< HEAD
-=======
 
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
   }, [api_function, options]);
   useEffect (() => {
     // Check condition
@@ -289,34 +229,21 @@ if ( {) {
   $2
 }
 }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
+
+
+
+
+
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
 
->>>>>>> origin/main
-=======
->>>>>>> origin/automation-improvements-final
-=======
-}
 
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-}
-=======
-}
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+

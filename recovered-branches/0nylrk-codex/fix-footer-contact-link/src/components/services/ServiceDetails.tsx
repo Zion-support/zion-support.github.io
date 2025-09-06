@@ -1,47 +1,21 @@
 
-<<<<<<< HEAD
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { Server, Clock, MapPin } from "lucide-react";
-import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
-import {Server, Clock, MapPin} from "lucide-react";
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
-import { Server, Clock, MapPin } from "lucide-react",
 
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 interface ServiceDetailsProps {
   country: string
 }
 // Component to show service details for the selected country
 export function ServiceDetails({ country }: ServiceDetailsProps) {
   // Get datacenters for regions (simplified - in production this would come from a real database)
-=======
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components / ui / card';
-import { Server, Clock, MapPin } from './lucide-react';
 
-=======
-
-
-import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
-import {Server, Clock, MapPin} from "lucide-react";
-
-=======
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
-import { Server, Clock, MapPin } from "lucide-react",
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   const getDatacenters = (country: string): string[] => {
     const dataCenters: Record<string, string[]> = {;
 
-=======
-// Component to show service details for the selected country;
-export /**
- * ServiceDetails - Function description
- */
-function ServiceDetails() {
-  // Get datacenters for regions (simplified - in production this would come from a real database);
-  const get_datacenters = (country: string): string[] => {
-    const data_centers: Record < string, string[]> = {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
       "United States": ["New York", "Los Angeles", "Chicago", "Dallas", "Seattle"];
       "United Kingdom": ["London", "Manchester", "Birmingham"];
       "Germany": ["Frankfurt", "Berlin", "Munich"];
@@ -120,26 +94,7 @@ function ServiceDetails() {
       <CardHeader>
         <CardTitle className="text-white flex items-center">
           <Server className="mr-2 h-5 w-5 text-zion-cyan" />
-=======
-      "default": "Local timezone";
-    };
 
-    const timezone = timeZones[country] || timeZones["default"];
-
-    return `Our technicians in ${country} operate during business hours (8AM-6PM ${timezone}). ` +;
-           `Response times are typically within 4 hours for metropolitan areas. ` +;
-           `Please have site access permissions and contact details ready for our technicians. ` +;
-           `For remote locations, additional travel fees may apply.`;
-  };
-
-  const datacenters = getDatacenters(country);
-
-  return (
-    <Card className="bg-zion-blue-dark border-zion-blue-light">;
-      <CardHeader>;
-        <CardTitle className="text-white flex items-center">;
-          <Server className="mr-2 h-5 w-5 text-zion-cyan" /> ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           IT Onsite Service in {country}
         </CardTitle>;
         <CardDescription className="text-zion-slate-light">;
@@ -259,12 +214,12 @@ export function ServiceDetails({ country }: ServiceDetailsProps) {;
                   key={idx} ;
                   className="bg-zion-blue p-2 rounded border border-zion-blue-light text-center text-zion-slate-light";
                 >;
-<<<<<<< HEAD
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
                   {dc}
                 </div>;
               ))}

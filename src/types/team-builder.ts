@@ -4,8 +4,9 @@ project_name: string, goals: string,
   talent_filters?: { verified_only?: boolean; regions?: string[] }
 
 
-<<<<<<< HEAD
+
 export interface ProjectBrief {
+<<<<<<< HEAD
 <<<<<<< HEAD
   projectName: string, goals: string
   timeline: string, budget: string
@@ -36,6 +37,7 @@ export interface ProjectBrief {;
   talentFilters?: { verifiedOnly?: boolean, regions?: string[] }
 
 <<<<<<< HEAD
+
 
 
 

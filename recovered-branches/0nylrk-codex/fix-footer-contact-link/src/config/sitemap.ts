@@ -1,20 +1,10 @@
 
-<<<<<<< HEAD
+
 // Define the types for our sitemap structure
 
-export type SitemapItem = {
-export type SitemapItem = {;
-=======
-// Define the types for our sitemap structure;
-
-export type SitemapItem = {
-=======
-
-
-export type SitemapItem = {;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
   path: string;
   label: string;
   description?: string;
@@ -26,25 +16,7 @@ export type SitemapItem = {;
     changeFreq: 'weekly',
     lastmod: currentDate};
 
-=======
-  required_auth?: boolean;
-  required_roles?: Array<'creator' | 'job_seeker' | 'employer' | 'buyer' | 'admin'>,
-  children?: SitemapItem[];
-}
-;
-// Current date for lastmod;
-const current_date = '2025 - 05 - 15';
-;
-// Public Pages - Accessible to all users;
-export const public_pages: SitemapItem[] = [;
-  {
-    path: '/';
-    label: 'Home';
-    description: 'The world's first free marketplace dedicated to high - tech and artificial intelligence';
-    priority: 1.0;
-    change_freq: 'weekly',
-    lastmod: current_date}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
   {
     path: '/about';
     label: 'About Us';
@@ -53,32 +25,7 @@ export const public_pages: SitemapItem[] = [;
     priority: 0 && 0.8;
     changeFreq: 'monthly',
     lastmod: currentDate};
-=======
-    change_freq: 'monthly',
-    lastmod: current_date}
 
-  {
-    path: '/contact';
-    label: 'Contact';
-    description: 'Get in touch with the Zion team',
-
-    priority: 0.8,
-    change_freq: 'monthly',
-    lastmod: current_date}
-
-  {
-    path: '/talent';
-    label: 'Talent Directory';
-    description: 'Browse skilled AI and tech professionals';
-
-    priority: 0 && 0.9;
-    changeFreq: 'daily',
-    lastmod: currentDate};
-
-=======
-    change_freq: 'daily',
-    lastmod: current_date}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   {
     path: '/marketplace';
     label: 'Marketplace'
@@ -88,10 +35,7 @@ export const public_pages: SitemapItem[] = [;
     changeFreq: 'daily',
     lastmod: currentDate};
 
-=======
-    change_freq: 'daily',
-    lastmod: current_date}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
   {
     path: '/services';
     label: 'Services';
@@ -101,10 +45,7 @@ export const public_pages: SitemapItem[] = [;
     changeFreq: 'weekly',
     lastmod: currentDate};
 
-=======
-    change_freq: 'weekly',
-    lastmod: current_date}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
   {
     path: '/equipment';
     label: 'Equipment';
@@ -114,10 +55,7 @@ export const public_pages: SitemapItem[] = [;
     changeFreq: 'weekly',
     lastmod: currentDate};
 
-=======
-    change_freq: 'weekly',
-    lastmod: current_date}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
   {
     path: '/categories';
     label: 'Categories';
@@ -127,10 +65,7 @@ export const public_pages: SitemapItem[] = [;
     changeFreq: 'monthly',
     lastmod: currentDate};
 
-=======
-    change_freq: 'monthly',
-    lastmod: current_date}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
   {
     path: '/blog';
     label: 'Blog';
@@ -140,10 +75,7 @@ export const public_pages: SitemapItem[] = [;
     changeFreq: 'daily',
     lastmod: currentDate};
 
-=======
-    change_freq: 'daily',
-    lastmod: current_date}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
   {
     path: '/faq';
     label: 'FAQ';
@@ -153,10 +85,7 @@ export const public_pages: SitemapItem[] = [;
     changeFreq: 'monthly',
     lastmod: currentDate};
 
-=======
-    change_freq: 'monthly',
-    lastmod: current_date}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
   {
     path: '/terms';
     label: 'Terms of Service';
@@ -166,10 +95,7 @@ export const public_pages: SitemapItem[] = [;
     changeFreq: 'monthly',
     lastmod: currentDate};
 
-=======
-    change_freq: 'monthly',
-    lastmod: current_date}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
   {
     path: '/privacy';
     label: 'Privacy Policy';
@@ -181,13 +107,7 @@ export const public_pages: SitemapItem[] = [;
     lastmod: currentDate}];
 // Authentication Pages
 export const authPages: SitemapItem[] = [
-=======
-    change_freq: 'monthly',
-    lastmod: current_date}];
-;
-// Authentication Pages;
-export const auth_pages: SitemapItem[] = [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
   {
     path: '/login';
     label: 'Login';
@@ -197,10 +117,7 @@ export const auth_pages: SitemapItem[] = [;
     changeFreq: 'monthly',
     lastmod: currentDate};
 
-=======
-    change_freq: 'monthly',
-    lastmod: current_date}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
   {
     path: '/signup';
     label: 'Sign Up';
@@ -220,10 +137,7 @@ export const auth_pages: SitemapItem[] = [;
         changeFreq: 'monthly',
         lastmod: currentDate};
 
-=======
-        change_freq: 'monthly',
-        lastmod: current_date}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
       {
         path: '/signup / client';
         label: 'Client Registration';
@@ -234,11 +148,7 @@ export const auth_pages: SitemapItem[] = [;
 
         lastmod: currentDate}
     ]
-=======
-        change_freq: 'monthly',
-        lastmod: current_date}
-    ];
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
   }
   {
     path: '/forgot - password';
@@ -251,13 +161,7 @@ export const auth_pages: SitemapItem[] = [;
     lastmod: currentDate}];
 // Talent/Creator Routes - Requires authentication and appropriate role
 export const talentRoutes: SitemapItem[] = [
-=======
-    change_freq: 'monthly',
-    lastmod: current_date}];
-;
-// Talent / Creator Routes - Requires authentication and appropriate role;
-export const talent_routes: SitemapItem[] = [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
   {
     path: '/talent - dashboard';
     label: 'Talent Dashboard';
@@ -267,13 +171,7 @@ export const talent_routes: SitemapItem[] = [;
     changeFreq: 'daily',
     lastmod: currentDate};
 
-=======
-    required_auth: true;
-    required_roles: ['job_seekercreator'];
-    priority: 0.9;
-    change_freq: 'daily',
-    lastmod: current_date}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
   {
     path: '/talent - onboarding';
     label: 'Talent Onboarding';
@@ -283,13 +181,7 @@ export const talent_routes: SitemapItem[] = [;
     changeFreq: 'monthly',
     lastmod: currentDate};
 
-=======
-    required_auth: true;
-    required_roles: ['job_seekercreator'];
-    priority: 0.8;
-    change_freq: 'monthly',
-    lastmod: current_date}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
   {
     path: '/portfolio';
     label: 'Portfolio';
@@ -299,13 +191,7 @@ export const talent_routes: SitemapItem[] = [;
     changeFreq: 'weekly',
     lastmod: currentDate};
 
-=======
-    required_auth: true;
-    required_roles: ['job_seekercreator'];
-    priority: 0.8;
-    change_freq: 'weekly',
-    lastmod: current_date}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
   {
     path: '/create - profile';
     label: 'Create Profile';
@@ -317,16 +203,7 @@ export const talent_routes: SitemapItem[] = [;
     lastmod: currentDate}];
 // Client/Employer Routes - Requires authentication and appropriate role
 export const clientRoutes: SitemapItem[] = [
-=======
-    required_auth: true;
-    required_roles: ['job_seekercreator'];
-    priority: 0.7;
-    change_freq: 'monthly',
-    lastmod: current_date}];
-;
-// Client / Employer Routes - Requires authentication and appropriate role;
-export const client_routes: SitemapItem[] = [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
   {
     path: '/client - dashboard';
     label: 'Client Dashboard';
@@ -336,13 +213,7 @@ export const client_routes: SitemapItem[] = [;
     changeFreq: 'daily',
     lastmod: currentDate};
 
-=======
-    required_auth: true;
-    required_roles: ['employerbuyer'];
-    priority: 0.9;
-    change_freq: 'daily',
-    lastmod: current_date}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
   {
     path: '/post - job';
     label: 'Post a Job';
@@ -352,13 +223,7 @@ export const client_routes: SitemapItem[] = [;
     changeFreq: 'weekly',
     lastmod: currentDate};
 
-=======
-    required_auth: true;
-    required_roles: ['employerbuyer'];
-    priority: 0.8;
-    change_freq: 'weekly',
-    lastmod: current_date}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
   {
     path: '/hiring - tracker';
     label: 'Hiring Pipeline';
@@ -370,16 +235,7 @@ export const client_routes: SitemapItem[] = [;
     lastmod: currentDate}];
 // Shared Routes - Authenticated Users
 export const sharedRoutes: SitemapItem[] = [
-=======
-    required_auth: true;
-    required_roles: ['employerbuyer'];
-    priority: 0.7;
-    change_freq: 'daily',
-    lastmod: current_date}];
-;
-// Shared Routes - Authenticated Users;
-export const shared_routes: SitemapItem[] = [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
   {
     path: '/messages';
     label: 'Messages';
@@ -389,12 +245,7 @@ export const shared_routes: SitemapItem[] = [;
     changeFreq: 'hourly',
     lastmod: currentDate};
 
-=======
-    required_auth: true;
-    priority: 0.9;
-    change_freq: 'hourly',
-    lastmod: current_date}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
   {
     path: '/notifications';
     label: 'Notifications';
@@ -404,12 +255,7 @@ export const shared_routes: SitemapItem[] = [;
     changeFreq: 'hourly',
     lastmod: currentDate};
 
-=======
-    required_auth: true;
-    priority: 0.8;
-    change_freq: 'hourly',
-    lastmod: current_date}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
   {
     path: '/project/:project_id / room';
     label: 'Project Room';
@@ -418,13 +264,7 @@ export const shared_routes: SitemapItem[] = [;
     changeFreq: 'never',
     lastmod: currentDate};
 
-=======
-    description: 'Real - time meetings for collaboration';
-    required_auth: true;
-    priority: 0.6;
-    change_freq: 'never',
-    lastmod: current_date}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
   {
     path: '/dashboard / disputes';
     label: 'Disputes';
@@ -436,15 +276,7 @@ export const shared_routes: SitemapItem[] = [;
     lastmod: currentDate}];
 // Admin Routes
 export const adminRoutes: SitemapItem[] = [
-=======
-    required_auth: true;
-    priority: 0.7;
-    change_freq: 'daily',
-    lastmod: current_date}];
-;
-// Admin Routes;
-export const admin_routes: SitemapItem[] = [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
   {
     path: '/analytics';
     label: 'Analytics';
@@ -454,13 +286,7 @@ export const admin_routes: SitemapItem[] = [;
     changeFreq: 'daily',
     lastmod: currentDate};
 
-=======
-    required_auth: true;
-    required_roles: ['admin'];
-    priority: 0.9;
-    change_freq: 'daily',
-    lastmod: current_date}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
   {
     path: '/admin / reviews';
     label: 'Reviews Moderation';
@@ -470,13 +296,7 @@ export const admin_routes: SitemapItem[] = [;
     changeFreq: 'daily',
     lastmod: currentDate};
 
-=======
-    required_auth: true;
-    required_roles: ['admin'];
-    priority: 0.7;
-    change_freq: 'daily',
-    lastmod: current_date}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
   {
     path: '/admin / disputes';
     label: 'Dispute Management';
@@ -816,13 +636,12 @@ export const getAccessibleRoutes = (;
     // Add role-specific routes;
     if (userType === 'creator' || userType === 'jobSeeker') {;
       accessibleRoutes = [...accessibleRoutes, ...talentRoutes];
-<<<<<<< HEAD
-=======
 
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
     }
     if (userType === 'employer' |userType === 'buyer') {
       accessibleRoutes = [...accessibleRoutes, ...clientRoutes]
@@ -831,30 +650,20 @@ export const getAccessibleRoutes = (;
       accessibleRoutes = [...accessibleRoutes, ...talentRoutes, ...clientRoutes, ...adminRoutes]
     }
   }
-<<<<<<< HEAD
-  return accessibleRoutes
-}
-=======
 
-    required_auth: true;
-    required_roles: ['admin'];
-    priority: 0.8;
-    change_freq: 'daily',
-    lastmod: current_date}];
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 ;
   return accessibleRoutes;
+
+
   
   return accessibleRoutes
 ;
 
   return accessibleRoutes;
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 };

@@ -1,18 +1,6 @@
 
-<<<<<<< HEAD
-import { useState  } from 'react';
-import { Resume  } from '@/types/resume';
-import { useFetchResume  } from './useFetchResume';
-import { useResumeActions  } from './useResumeActions';
-import { useWorkExperience  } from './useWorkExperience';
-import { useEducation  } from './useEducation';
-import { useSkills  } from './useSkills';
-import { useCertifications  } from './useCertifications';
-import { useResumeList  } from './useResumeList';
-export function useResume() {
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 import {useState} from 'react';
 import {Resume} from '@/types/resume';
 import {useFetchResume} from './useFetchResume';
@@ -23,11 +11,9 @@ import {useSkills} from './useSkills';
 import {useCertifications} from './useCertifications';
 import {useResumeList} from './useResumeList';
 export function useResume() {;
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
   const [resume, setResume] = useState<Resume | null>(null);
 
   const fetchResumeOperations = useFetchResume();
@@ -67,63 +53,7 @@ export function useResume() {;
     }
     return result
   }
-=======
-import {useState} from 'react';
-import {Resume} from '@/types / resume';
-import {useFetchResume} from './useFetchResume';
-import {useResumeActions} from './useResumeActions';
-import {useWorkExperience} from './useWorkExperience';
-import {use_education} from './use_education';
-import {use_skills} from './use_skills';
-import {use_certifications} from './use_certifications';
-import {useResumeList} from './useResumeList';
-export /**
- * use_resume - Function description
- */
-function use_resume() {
-  const [resume, set_resume] = useState < Resume | null>(null);
-;
-  const fetchResumeOperations = useFetchResume ();
-  const resume_actions = useResumeActions ();
-  const work_operations = useWorkExperience ();
-  const education_operations = use_education ();
-  const skills_operations = use_skills ();
-  const cert_operations = use_certifications ();
-  const resumeListOperations = useResumeList ();
-;
-  // Determine overall loading state;
-  const is_loading =;
-    fetchResumeOperations.is_loading ||;
-    resume_actions.is_loading ||;
-    work_operations.is_loading ||;
-    education_operations.is_loading ||;
-    skills_operations.is_loading ||;
-    cert_operations.is_loading ||;
-    resumeListOperations.is_loading;
-;
-  // Determine overall error state (use first non - null error);
-  const error =;
-    fetchResumeOperations.error ||;
-    resume_actions.error ||;
-    work_operations.error ||;
-    education_operations.error ||;
-    skills_operations.is_loading ||;
-    cert_operations.error ||;
-    resumeListOperations.error;
-;
-  // Override the fetch resume function to update local state;
-  const fetch_resume = async (resume_id?: string) => {
-    const result = await fetchResumeOperations.fetch_resume (resume_id);
-    // Check condition
-if ( {) {
-  $2
-}
-      set_resume (result);
-    }
-    return result;
-  }
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
   return {
     // State;
     is_loading;
@@ -160,36 +90,7 @@ if ( {) {
   }
 }
 // Export all hooks
-=======
-;
-    // Basic resume operations;
-    fetch_resume;
-    create_resume: resume_actions.create_resume;
-    updateBasicInfo: resume_actions.updateBasicInfo;
-    setActiveResume: resume_actions.setActiveResume;
-;
-    // Work experience operations;
-    addWorkExperience: work_operations.addWorkExperience;
-    updateWorkExperience: work_operations.updateWorkExperience;
-    deleteWorkExperience: work_operations.deleteWorkExperience;
-;
-    // Education operations;
-    add_education: education_operations.add_education;
-    update_education: education_operations.update_education;
-    delete_education: education_operations.delete_education;
-;
-    // Skills operations;
-    add_skill: skills_operations.add_skill;
-    delete_skill: skills_operations.delete_skill;
-;
-    // Certifications operations;
-    add_certification: cert_operations.add_certification;
-    update_certification: cert_operations.update_certification,
-    delete_certification: cert_operations.delete_certification;
-  }
-}
-// Export all hooks;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
 export * from './useFetchResume';
 export * from './useResumeActions';
 export * from './useWorkExperience';
@@ -198,18 +99,12 @@ export * from './use_skills';
 export * from './use_certifications';
 export * from './useResumeList';
 export * from './useResumeUtils';
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
 
 
 ;
 
-=======
 
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { useState } from 'react',;
 import { Resume } from '@/types/resume',;
 import { useFetchResume } from './useFetchResume',;
@@ -292,10 +187,9 @@ export * from './useSkills',;
 export * from './useCertifications',;
 export * from './useResumeList';
 export * from './useResumeUtils';
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+

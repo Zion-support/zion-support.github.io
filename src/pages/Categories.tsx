@@ -10,9 +10,7 @@ interface CategoryType {
   name: string;
   slug: string;
   icon: string
-<<<<<<< HEAD
-}
-=======
+
 
 
 class ErrorBoundary extends React.Component {
@@ -42,7 +40,7 @@ class ErrorBoundary extends React.Component {
     fallbackData: initialCategories}),;
   const categories = data || [];
   const isLoading = !data && !error;
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 
       logErrorToProduction ('Categories API error:', { data: response.status_text }),
@@ -173,7 +171,7 @@ const Categories: React.FC = () => {}
 export default Categories"";
 ";
   )}
-<<<<<<< HEAD
+
 export: default Categories
 export default Categories," ]
 export default Categories"")))))))))
@@ -227,13 +225,7 @@ const fetcher = async (url: string): Promise<CategoryType[]> => {;
 export interface CategoriesProps {;
   categories?: CategoryType[];
 }
-=======
 
-export: default Categories,;
-export default Categories," ];
-export default Categories"")))))))));
-}
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 const Categories: React.FC: = () => {, ";
   const categories = [];

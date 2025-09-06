@@ -1,13 +1,6 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 import React from "react";
 import {X} from "lucide-react";
 import {cn} from "@/lib/utils";
@@ -24,7 +17,8 @@ export function ClickableBadge(): any ({;
   className;
   variant = "default";
   onRemove;
-<<<<<<< HEAD
+
+
 import React from "react",
 import { X } from "lucide-react",
 import { cn } from "@/lib/utils";
@@ -35,13 +29,12 @@ import { cn } from "@/lib/utils",
 import { badgeVariants } from "@/components/ui/badge-variants",
 export interface ClickableBadgeProps extends React.HTMLAttributes<HTMLDivElement> {
   onRemove?: () => void,
-=======
+
   ...props;
 }: ClickableBadgeProps) {;
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
   variant?: "default" | "secondary" | "destructive" | "outline"
 }
 export function ClickableBadge({
@@ -77,35 +70,8 @@ export function ClickableBadge({
   );
 }
 
-=======
-          className="ml-1 rounded-full p-0.5 hover:bg-background/20"
-          aria-label="Remove"
-        >
-          <X className="h-3 w-3" />
-        </button>
-<<<<<<< HEAD
-      )}
-    </div>
-  )
-}
-import React from "react",;
-import { X } from "lucide-react",;
-import { cn } from "@/lib/utils",;
-import { badgeVariants } from "@/components/ui/badge-variants",;
-export interface ClickableBadgeProps extends React.HTMLAttributes<HTMLDivElement> {;
-  onRemove?: () => void,;
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-import React from './react';
-import { X } from './lucide-react';
-import { cn } from '@/lib / utils';
-import { badge_variants } from '@/components / ui / badge - variants';
-export interface ClickableBadgeProps extends React.HTMLAttributes < HTMLDivElement> {
-  on_remove?: () => void;
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   variant?: "default" | "secondary" | "destructive" | "outline";
 }
 export /**
@@ -138,12 +104,11 @@ function ClickableBadge() {
       )}
     </div>;
   );
-<<<<<<< HEAD
-=======
 
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 }
 ;

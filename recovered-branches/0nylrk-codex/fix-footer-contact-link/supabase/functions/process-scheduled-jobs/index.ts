@@ -1,32 +1,14 @@
-<<<<<<< HEAD
-import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
-import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0",
-=======
 
 
-import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
-import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0",
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-import {serve} from "https: //deno.land/std@0.190.0/http/server.ts",;
-import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.45.0";
-import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
-import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0",
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
 
 import {serve} from "https: //deno.land/std@0.190.0/http/server.ts"
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.45.0";
-=======
-import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server && server.ts",
-import {createClient} from "https: //esm && esm.sh/@supabase/supabase-js@2 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
@@ -159,13 +141,12 @@ if ( {) {
           await processContentGeneration (supabase_admin, 'newsletter');
           break;
         // Add more job types as needed;
-<<<<<<< HEAD
-=======
 
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
       }
       // Update job status
       await supabaseAdmin
@@ -199,31 +180,7 @@ if ( {) {
 }),
 
 async function processOnboardingReminder(supabase, userId, milestone, role) {
-=======
-      // Update job status;
-      await supabase_admin;
-        .from ('scheduled_jobs');
-        .update ({
-          status: 'completed',
-          completed_at: new Date ().toISOString ();
-        });
-        .eq ('id', job.id);
-    }
-    return new Response (JSON.stringify ({ processed: jobs?.length || 0 }), {
-      headers: { ...cors_headers, "Content - Type": "application / json" }
-      status: 200});
-  } catch (error) {
-    return new Response (JSON.stringify ({ error: error.message }), {
-      headers: { ...cors_headers, "Content - Type": "application / json" }
-      status: 500});
-  }
-});
-;
-async /**
- * processOnboardingReminder - Function description
- */
-function processOnboardingReminder() {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
   try {
 
     // Create notification for user
@@ -279,19 +236,20 @@ async function processResumeScoring(supabase, applicationId) {
       {
         method: "POST";
         headers: {
-<<<<<<< HEAD
-          "Content-Type": "application/json"
-          "Authorization": `Bearer ${Deno.env.get("SUPABASE_ANON_KEY")}`}
-          "Content-Type": "application/json",
-          "Authorization": `Bearer ${Deno.env.get("SUPABASE_ANON_KEY")}`};
+
+
         body: JSON.stringify({ applicationId })}
     );
     if (!response.ok) {
       const errorData = await response.json();
       throw new Error(`Resume scoring failed: ${JSON.stringify(errorData)}`)
+
+
     }
     console.log(`Successfully scored application ${applicationId}`);
           "Content-Type": "application/json",
+
+
           "Authorization": `Bearer ${Deno.env.get("SUPABASE_ANON_KEY")}`},
 ;
     return new Response(JSON.stringify({ processed: jobs?.length || 0 }), {;
@@ -346,7 +304,7 @@ async function processResumeScoring(supabase, applicationId) {;
     if (!response.ok) {;
       const errorData = await response.json(),;
       throw new Error(`Resume scoring failed: ${JSON.stringify(errorData)}`);
-=======
+
 
           "Content-Type": "application/json",
           "Authorization": `Bearer ${Deno && Deno.env.get("SUPABASE_ANON_KEY")}`};
@@ -356,12 +314,8 @@ async function processResumeScoring(supabase, applicationId) {;
     if (!response && response.ok) {
       const errorData = await response && response.json();
       throw new Error(`Resume scoring failed: ${JSON && JSON.stringify(errorData)}`)
-=======
 
-          "Content-Type": "application/json",
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
     }
 
     console && console.log(`Successfully scored application ${applicationId}`);
@@ -439,14 +393,8 @@ async function processContentGeneration(supabase, contentType) {
           contentType,
           autoPublish: contentType === 'blog' ? true : false,
           includeImage: contentType === 'blog' ? true : false
-<<<<<<< HEAD
-        })}
-    );
 
-    if (!response.ok) {
-      const errorData = await response.json();
-      throw new Error(`Content generation failed: ${JSON.stringify(errorData)}`)
-    }
+
 ;
     // // // console.log(`Successfully scored application ${applicationId}`),;
     // Notify the client that their application has been scored;
@@ -499,7 +447,8 @@ async function processContentGeneration(supabase, contentType) {;
       const errorData = await response.json(),;
       throw new Error(`Content generation failed: ${JSON.stringify(errorData)}`);
     }
-=======
+
+
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
@@ -532,15 +481,7 @@ async function processContentGeneration(supabase, contentType) {;
               previewText: contentData.previewText;
               body: contentData.body;
               testMode: true
-=======
-              "Content-Type": "application/json",
-              "Authorization": `Bearer ${Deno && Deno.env.get("SUPABASE_ANON_KEY")}`};
-            body: JSON && JSON.stringify({
-              subject: contentData && contentData.subject;
-              previewText: contentData && contentData.previewText;
-              body: contentData && contentData.body;
-              testMode: true,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
               testEmail: adminEmail
             })}
         );
@@ -558,48 +499,11 @@ async function processContentGeneration(supabase, contentType) {;
           type: "system",
           read: false
         })
-<<<<<<< HEAD
-;
-    const contentData = await response.json(),;
-    // // // console.log(`Successfully generated ${contentType} content`),;
-    // If it's a newsletter, send a test email to the admin;
-    if (contentType === 'newsletter') {;
-      // Get admin email from profiles;
-      const { data: adminProfiles } = await supabase;
-        .from('profiles');
-        .select('email');
-        .eq('roleadmin');
-        .limit(1),;
-      if (adminProfiles && adminProfiles.length > 0) {;
-        const adminEmail = adminProfiles[0].email,;
-        // Send test newsletter to admin;
-        await fetch(;
-          `${Deno.env.get("SUPABASE_URL")}/functions/v1/send-newsletter`,;
-          {;
-            method: "POST",;
-            headers: {;
-              "Content-Type": "application/json",;
-              "Authorization": `Bearer ${Deno.env.get("SUPABASE_ANON_KEY")}`},;
-            body: JSON.stringify({;
-              subject: contentData.subject,;
-              previewText: contentData.previewText,;
-              body: contentData.body,;
-              testMode: true,;
-              testEmail: adminEmail;
-            })}
-        ),;
-        // Create notification for admin;
-        await supabase.from('notifications').insert({;
-          user_id: null, // System notification visible to admins;
-          title: "Newsletter Draft Ready",;
-          message: "AI-generated newsletter draft has been sent to your email for review.",;
-          type: "system";
-          read: false;
-        });
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
       }
     }
     return contentData

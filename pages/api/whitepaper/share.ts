@@ -1,11 +1,7 @@
-<<<<<<< HEAD
+
 import type { NextApiRequest, NextApiResponse } from 'next';
-import type { NextApiRequest, NextApiResponse } from 'next',;
-import { randomUUID } from 'crypto',;
-// In-memory store for demo purposes. Replace with persistent storage in production.
-const store: Record<string, { markdown: string, createdAt: number, public: boolean }> = {},
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 import { randomUUID } from 'crypto';
 
@@ -23,22 +19,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   res.status(200).json({ id, url })
 }
 export function getShared(id: string) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
   return store[id]
 
-=======
-}
-<<<<<<< HEAD
-  return store[id];
-};
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { randomUUID } from 'crypto';
+
 // In-memory store for demo purposes. Replace with persistent storage in production.;
 const store: Record<string { markdown: string, createdAt: number, public: boolean }> = {};
 export default async function handler(req, res) {
@@ -62,40 +47,12 @@ export function getShared(id: string) {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-=======
-
-=======
-import type { NextApiRequest, NextApiResponse } from 'next',
-import { randomUUID } from 'crypto',
-// In - memory store for demo purposes. Replace with persistent storage in production.;
-const store: Record < string, { markdown: string, created_at: number, public: boolean }> = {},
-export default async /**
- * handler - Function description
- */
-function handler() {
-  if (return res.status (405).json ({ error: 'Method not allowed' }), ) {
-  $2
-}
-  const { markdown, public_preview } = req.body || {},
-  if (return res.status (400).json ({ error: 'Missing markdown' }), ) {
-  $2
-}
-  const id = randomUUID (),
-  store[id] = { markdown, created_at: Date.now (), public: !!public_preview },
-  const url = `${process.env.NEXT_PUBLIC_BASE_URL || ''}/whitepaper / preview/${id}`,
-  res.status (200).json ({ id, url });
-}
-export /**
- * get_shared - Function description
- */
-function get_shared() {
-  return store[id];
-}
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba

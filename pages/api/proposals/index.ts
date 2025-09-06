@@ -9,18 +9,9 @@ async function ensureStore() {
   try {
 
     const raw = await fs.readFile(FILE_PATH, "utf8");
-import type { NextApiRequest, NextApiResponse } from 'next';
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  res.status(200).json({ message: 'API endpoint' });
-import type { NextApiRequest, NextApiResponse } from 'next';
-import fs from 'fs-extra';
-import path from 'path';
-const FILE_PATH = path.join(process.cwd(), 'dataproposalsindex.json'),;
-async function ensureStore() {;
-  await fs.ensureFile(FILE_PATH);
-  try {
-    const raw = await fs.readFile(FILE_PATH, 'utf8');
 
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
     if (!raw) await fs.writeJson(FILE_PATH, { items: [] }, { spaces: 2 });
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   } catch {
@@ -28,10 +19,14 @@ async function ensureStore() {;
   }
 }
 
+
+
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
+
+
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -55,6 +50,9 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse,
 ) {;
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
   await ensureStore();
   if (req.method === "GET") {
     const data = await fs.readJson(FILE_PATH);
@@ -120,12 +118,16 @@ if ( {) {
       target_institution: body.target_institution,
       regional_scope: body.regional_scope,
       type: body.type,
+
       status: body.status || "Draft",
       created_at: new Date ().toISOString (),
     }
     data.items.unshift (item);
     await fs.write_json (FILE_PATH, data, { spaces: 2 });
     return res.status (201).json (item);
+
+}
+
   }
 
 
@@ -150,4 +152,8 @@ if ( {) {
 }
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba

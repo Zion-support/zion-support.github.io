@@ -1,8 +1,5 @@
-<<<<<<< HEAD
-import { useEffect, useMemo, useState  } from 'react';
-import Head from 'next/head';
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 
   id: string;
@@ -28,29 +25,14 @@ function StatusIcon(): any ({;
     </span>;
   );
 import { useEffect, useMemo, useState } from 'react';
-<<<<<<< HEAD
-=======
-import Head from 'next/head';
-interface ProviderMeta { id: string, name: string, category: 'crm' | 'ats', description?: string }
-interface ConnectionMap { [providerId: string]: any }
 
 
-interface ConnectionMap {;
-  [key: string]: boolean,;
-
-
-=======
-
-import { useEffect, useMemo, useState } from 'react';
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React, { useState } from 'react';
 import { useEffect, useMemo, useState } from 'react';
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 import Head from 'next/head';
 interface ProviderMeta { id: string, name: string, category: 'crm' | 'ats', description?: string   } catch (error) {
     console.error("Error:", error);
@@ -182,20 +164,7 @@ export default function AdminIntegrationsPage() {
       await new Promise(r => setTimeout(r, 500));
       await fetch('/api/integrations/connect', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ providerId, syncRules }) });
       await refresh();
-<<<<<<< HEAD
-    } finally {
-      setLoading(false);
-    }  }
 
-
-
-  const grouped = useMemo(
-    () => ({
-      crm: providers.filter(p => p.category === 'crm'),
-      ats: providers.filter(p => p.category === 'ats'),
-    }),
-    [providers]
-  );
 
     } finally { setLoading(false);   } catch (error) {
     console.error("Error:", error);
@@ -241,11 +210,12 @@ export default function AdminIntegrationsPage() {
     crm: providers.filter(p => p.category === 'crm'),
     ats: providers.filter(p => p.category === 'ats')
   }), [providers]);
-=======
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
   function Card({ p }: { p: ProviderMeta }) {
     const conn = connections[p.id] |{ status: 'disconnected' }
     const isConnected = conn.status === 'connected';
@@ -268,7 +238,7 @@ export default function AdminIntegrationsPage() {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD
+
 }
           {isConnected && (
             <>
@@ -314,20 +284,16 @@ export default function AdminIntegrationsPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
   function RulesModal() {
     if (!selected) return null,
     const provider = providers.find(p => p.id === selected)!,
     const isCrm = provider.category === 'crm',
-=======
 
-  async function resync(providerId: string) {
-    setLoading(true);
-    try {
-      await fetch('/api/integrations/resync', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ providerId }) }),
-      await refresh()
-    } finally { setLoading(false) }
-  }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
   const grouped = useMemo(;
     () => ({;
@@ -384,18 +350,7 @@ export default function AdminIntegrationsPage() {
                             pushNotesMode: 'manual',;
                           });
 
-=======
-                    <label className='flex items - center gap - 2'>;
-                      <input;
-                        type='radio';
-                        name='push_notes';
-                        checked={sync_rules.pushNotesMode === 'manual'}
-                        on_change={() =>;
-                          setSyncRules ({
-                            ...sync_rules,
-                            pushNotesMode: 'manual',
-                          });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
                         }
                       />{' '}
                       Manual only
@@ -494,7 +449,7 @@ export default function AdminIntegrationsPage() {
             </li>;
             <li>;
               Talent Matched → GET{' '}
-<<<<<<< HEAD
+
               <code>
                 /api/integrations/zapier/talent-matched?since=TIMESTAMP
               </code>
@@ -576,10 +531,10 @@ export default function AdminIntegrationsPage() {
             <li>New Zion Job Posted → GET <code>/api/integrations/zapier/jobs-posted?since=TIMESTAMP</code></li>
             <li>Talent Matched → GET <code>/api/integrations/zapier/talent-matched?since=TIMESTAMP</code></li>
           </ul>
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
         </section>
 
         <section>
@@ -609,9 +564,8 @@ function ManualOverrideForm() {;
     if (res && res.ok) setMessage('Saved');
     else setMessage('Error');
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-  }
+
+
   )
   } catch (error) {
     console.error("Error:", error);
@@ -632,7 +586,7 @@ function ManualOverrideForm() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-=======
+
   }
   return (
     <div className='rounded-lg border border-gray-200 dark:border-gray-800 p-4 bg-white/60 dark:bg-black/40 max-w-xl'>;
@@ -675,8 +629,12 @@ function ManualOverrideForm() {
     </div>;
   );
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
   return (
     <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4 bg-white/60 dark:bg-black/40 max-w-xl">
       <div className="grid grid-cols-1 gap-3">
@@ -691,154 +649,19 @@ function ManualOverrideForm() {
         </div>
       </div>
     </div>
-<<<<<<< HEAD
-);
 
-=======
-<<<<<<< HEAD
-);
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 
-      </div>);  }
-  return (
-    <>;
-      <Head>;
-        <title > Admin Integrations • Zion</title>;
-      </Head>;
-      <main className='container mx - auto px - 4 py - 8'>;
-        <h1 className='text - 2xl font - semibold mb - 2'>Integrations</h1>;
-        <p className='text - sm text - gray - 600 mb - 6'>;
-          Connect your CRM and ATS to sync contacts, applicants, and activity.;
-        </p>;
-        <section className='mb - 8'>;
-          <h2 className='text - lg font - semibold mb - 3'>CRM</h2>;
-          <div className='grid grid - cols - 1 sm:grid - cols - 2 lg:grid - cols - 3 gap - 4'>;
-            {grouped.crm.map (p => (
-              <Card key={p.id} p={p} />))}
-          </div>;
-        </section>;
-        <section className='mb - 10'>;
-          <h2 className='text - lg font - semibold mb - 3'>ATS</h2>;
-          <div className='grid grid - cols - 1 sm:grid - cols - 2 lg:grid - cols - 3 gap - 4'>;
-            {grouped.ats.map (p => (
-              <Card key={p.id} p={p} />))}
-          </div>;
-        </section>;
-        <section className='mb - 10'>;
-          <h2 className='text - lg font - semibold mb - 2'>Zapier</h2>;
-          <div className='text - sm text - gray - 600'>Polling endpoints:</div>;
-          <ul className='list - disc pl - 6 text - sm mt - 2'>;
-            <li>;
-              New Zion Job Posted → GET{' '}
-              <code>/api / integrations / zapier / jobs - posted?since = TIMESTAMP</code>;
-            </li>;
-            <li>;
-              Talent Matched → GET{' '}
-              <code>;
-                /api / integrations / zapier / talent - matched?since = TIMESTAMP;
-              </code>;
-            </li>          </ul>;
-        </section>;
-        <section>;
-          <h2 className='text - lg font - semibold mb - 2'>Manual Overrides</h2>          <ManualOverrideForm />;
-        </section>;
-      </main>;
-      <RulesModal />;
-    </>);
-/**
- * ManualOverrideForm - Function description
- */
-function ManualOverrideForm() {
-  const [job_id, setJobId] = useState ('');
-  const [disableCrmSync, setDisableCrmSync] = useState (false);
-  const [disableAtsSync, setDisableAtsSync] = useState (false);
-  const [message, set_message] = useState ('');
-;
-  async /**
- * save - Function description
- */
-function save() {
-    set_message ('');
-    const res = await fetch ('/api / integrations / overrides', {
-      method: 'POST',
-      headers: { 'Content - Type': 'application / json' },
-      body: JSON.stringify ({ job_id, disableCrmSync, disableAtsSync }),
-    });
-    if (set_message ('Saved')) {
-  $2
-}
-    else set_message ('Error');
-  }
-  return (
-    <div className='rounded - lg border border - gray - 200 dark:border - gray - 800 p - 4 bg - white / 60 dark:bg - black / 40 max - w-xl'>;
-      <div className='grid grid - cols - 1 gap - 3'>;
-        <label className='text - sm'>;
-          Job / Post ID;
-          <input;
-            value={job_id}
-            on_change={e => setJobId (e.target.value)}
-            placeholder='job_123';
-            className='w - full mt - 1 px - 3 py - 2 rounded border bg - transparent';
-          />;
-        </label>;
-        <label className='flex items - center gap - 2 text - sm'>;
-          <input;
-            type='checkbox';
-            checked={disableCrmSync}
-            on_change={e => setDisableCrmSync (e.target.checked)}
-          />{' '}
-          Disable CRM sync;
-        </label>;
-        <label className='flex items - center gap - 2 text - sm'>;
-          <input;
-            type='checkbox';
-            checked={disableAtsSync}
-            on_change={e => setDisableAtsSync (e.target.checked)}
-          />{' '}
-          Disable ATS sync;
-        </label>;
-        <div className='flex items - center gap - 2'>;
-          <button;
-            on_click={save}
-            className='px - 3 py - 1.5 rounded bg - black text - white text - sm';
-          >;
-            Save Override;
-          </button>;
-          <div className='text - sm text - gray - 500'>{message}</div>;
-        </div>;
-      </div>;
-    </div>);
-;
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
-}
-}
-}
-}
-}
-}
-<<<<<<< HEAD
-=======
-
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   ),
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+

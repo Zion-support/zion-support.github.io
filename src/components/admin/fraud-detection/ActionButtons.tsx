@@ -2,7 +2,7 @@
         <Eye className="h-4 w-4" />
       </Button>
       <Button
-<<<<<<< HEAD
+
         variant='ghost'
         size='icon'
         title='Send Warning'
@@ -47,62 +47,12 @@
   )
 }
 
-=======
-<<<<<<< HEAD
-        variant='ghost'
-        size='icon'
-        title='Send Warning'
-        aria-label='Send warning'
-        onClick={() => onAction(flagId, 'warning')}
-        disabled={status === 'actioned' |status === 'ignored'}      >
-        <Info className='h-4 w-4' />
-      </Button>
-      <Button
-        variant='ghost'
-        size='icon'
-        title='Suspend User'
-        aria-label='Suspend user'
-        onClick={() => onAction(flagId, 'suspension')}
-        disabled={status === 'actioned' |status === 'ignored'}      >
-        <AlertTriangle className='h-4 w-4' />
-      </Button>
-      <Button
-        variant='ghost'
-        size='icon'
-        title='Ban User'
-        aria-label='Ban user'
-        onClick={() => onAction(flagId, 'ban')}
-        disabled={status === 'actioned' |status === 'ignored'}      >
-        <Ban className='h-4 w-4' />
-      </Button>
-      {status === 'pending' && (
-        <Button
-          variant='ghost'
-          size='sm'          onClick={() => onAction(flagId, 'ignore')}          variant="ghost"
-          size="sm"
-          onClick={() => onAction(flagId, 'ignore')}
-          onClick = {(,) => onAction(flagId, 'ignore'),}
-        >
-          Ignore
-        </Button>
-      )}
-    </div>
-  )
-<<<<<<< HEAD
-}
-'"}
-  )
-}
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 };
 '"},;
   );
 };
-<<<<<<< HEAD
 
-=======
 
 
 };
@@ -110,7 +60,7 @@
   );
 };
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
         variant="ghost"
         size="icon"
@@ -157,10 +107,9 @@
 
   );
 };
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 
 

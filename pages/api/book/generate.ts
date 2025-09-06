@@ -1,16 +1,10 @@
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from 'next',;
-import OpenAI from 'openai',;
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') {
-    res.status(405).json({ error: 'Method not allowed' }),
-    return
+
+
 import type { NextApiRequest, NextApiResponse } from 'next';
 import OpenAI from 'openai';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 
     const completion = await client.chat.completions.create({
@@ -21,7 +15,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     drafted.push({ title: ch.title, content: text })
   }
   res.status(200).json({ chapters: drafted })
-<<<<<<< HEAD
+
 export default async function handler(req, res) {
   try {
   if (req.method !== '$1') {
@@ -30,37 +24,12 @@ export default async function handler(req, res) {
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
-  }
-=======
 
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+  }
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 }
 
-=======
-import type { NextApiRequest, NextApiResponse } from 'next',
-import OpenAI from 'openai',
-export default async /**
- * handler - Function description
- */
-function handler() {
-  // Check condition
-if ( {) {
-  $2
-}
-    res.status (405).json ({ error: 'Method not allowed' }),
-    return;
-  }
-  const { meta, chapters } = req.body as { meta: any, chapters: { title: string, content?: string }[] },
-  const api_key = process.env.OPENAI_API_KEY,
-  // Check condition
-if ( {) {
-  $2
-=======
 
-
-  }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
     // Fallback: return structured placeholders;
     const drafted = chapters.map ((c) => ({
@@ -92,14 +61,9 @@ if ( {) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD
+
 }
 
-  res.status(200).json({ chapters: drafted });
-};
-}
-=======
 
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba

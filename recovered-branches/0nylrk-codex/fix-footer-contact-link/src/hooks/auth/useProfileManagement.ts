@@ -1,20 +1,19 @@
 
-<<<<<<< HEAD
-import {supabase} from "@/integrations/supabase/client";
-import {toast} from "@/hooks/use-toast";
-import type { UserProfile } from "@/types/auth";
+
+
 import { supabase } from "@/integrations/supabase/client",
 import { toast } from "@/hooks/use-toast";
 import type { UserProfile } from "@/types/auth";
 
 import { toast } from "@/hooks/use-toast",
 import type { UserProfile } from "@/types/auth",
-=======
 
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 export const useProfileManagement = (setIsLoading: (loading: boolean) => void) => {
   const updateProfile = async (data: Partial<UserProfile>) => {
     try {
@@ -46,16 +45,12 @@ export const useProfileManagement = (setIsLoading: (loading: boolean) => void) =
       setIsLoading(true),;
       if (!data.id) {;
       }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
       // Update profiles table
       const { error: profileError } = await supabase
@@ -149,9 +144,7 @@ if ( {) {
       return { error }
     } finally {
       setIsLoading(false)
-<<<<<<< HEAD
-    }
-  };
+
 
 ;
       // Update profiles table;
@@ -189,8 +182,9 @@ if ( {) {
       setIsLoading(false);
     }
   };
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
   return { updateProfile }
 };

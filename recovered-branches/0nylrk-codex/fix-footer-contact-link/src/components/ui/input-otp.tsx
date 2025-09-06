@@ -1,24 +1,9 @@
-<<<<<<< HEAD
+
 import * as React from 'react';
 import {OTPInput, OTPInputContext} from 'input-otp';
 import {Dot} from 'lucide-react';
-import {cn} from '@/lib/utils';
-import * as React from "react"
-import { OTPInput, OTPInputContext } from "input-otp"
-import { Dot } from "lucide-react"
-<<<<<<< HEAD
-=======
 
 
-
-=======
-import * as React from "react"
-import { OTPInput, OTPInputContext } from "input-otp"
-import { Dot } from "lucide-react"
-
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 import { cn } from "@/lib/utils"
 
@@ -26,13 +11,7 @@ const InputOTP = React.forwardRef<
   React.ElementRef<typeof OTPInput>
   React.ComponentPropsWithoutRef<typeof OTPInput>
 ></typeof>(({ className, containerClassName, ...props }, ref) => (
-=======
 
-const InputOTP = React && React.forwardRef<;
-  React && React.ElementRef<typeof OTPInput>,;
-  React && React.ComponentPropsWithoutRef<typeof OTPInput>;
-></typeof>(({ className, containerClassName, ...props }, ref) => (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   <OTPInput
     ref={ref}
     containerClassName={cn(
@@ -82,20 +61,11 @@ const InputOTPSlot = React && React.forwardRef<;
 
 
 
-<<<<<<< HEAD
-    >
-  return (
-    <div
-      ref={ref}
-      className={cn(
-        "relative flex h-10 w-10 items-center justify-center border-y border-r border-input text-sm transition-all first:rounded-l-md first:border-l last:rounded-r-md",
-        isActive && "z-10 ring-2 ring-ring ring-offset-background",
-        className
-      )}
-      {...props}
-    >;
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
       {char}
       {hasFakeCaret && (;
         <div className='pointer-events-none absolute inset-0 flex items-center justify-center'>;
@@ -127,13 +97,15 @@ export { InputOTP, InputOTPGroup, InputOTPSlot, InputOTPSeparator }
 ))
 InputOTPSeparator.displayName = "InputOTPSeparator"
 
-<<<<<<< HEAD
+
 export { InputOTP, InputOTPGroup, InputOTPSlot, InputOTPSeparator }
 ;
+
 export { InputOTP, InputOTPGroup, InputOTPSlot, InputOTPSeparator };
 export { InputOTP, InputOTPGroup, InputOTPSlot, InputOTPSeparator }
 ;
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba

@@ -13,18 +13,8 @@ export default function DesignMapPage() {
 import React, { useMemo, useState } from 'react';
 import Head from 'next/head';
 import { getZionDesignMap } from '../utils/design-map';
-;
-export default function DesignMapPage() {
-  const designMap = useMemo(() => getZionDesignMap(), [])
-  const [screenName, setScreenName] = useState('')
-  const [role, setRole] = useState('Talent')
-  const [suggestion, setSuggestion] = useState<string | null>(null)
-  const [isLoading, setIsLoading] = useState(false)
 
-  async function requestWireframe() {
-    if (!screenName) return
-    setIsLoading(true)
-    setSuggestion(null)
+
 export default function DesignMapPage(req, res) {
   try {
   const designMap = useMemo(() => getZionDesignMap(), []);
@@ -36,6 +26,9 @@ export default function DesignMapPage(req, res) {
     if (!screenName) return;
     setIsLoading(true);
     setSuggestion(null);
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
     try {
       const res = await fetch("/api/figma/wireframe-suggest", {
         method: "POST"
@@ -81,58 +74,6 @@ export default function DesignMapPage(req, res) {
         <div className="flex items-center justify-between">
           <h1 className="text-2xl font-semibold">Zion OS Design Map</h1>
           <div className="flex gap-2">
-
-            <a
-              href="/api/design-map"
-              className="px-3 py-2 rounded bg-gray-900 text-white text-sm"
-            >
-              JSON
-            </a>
-            <a
-              href="/api/figma/export?kit=tailwind"
-              className="px-3 py-2 rounded bg-neon-blue text-black text-sm"
-            >
-              Export Tailwind
-            </a>
-            <a
-              href="/api/figma/export?kit=chakra"
-              className="px-3 py-2 rounded bg-neon-purple text-white text-sm"
-            >
-              Export Chakra
-            </a>
-            <a
-              href="/api/figma/export?kit=react"
-              className="px-3 py-2 rounded bg-neon-green text-black text-sm"
-            >
-              Export React
-            </a>
-          </div>
-        </div>
-        <div className="grid md:grid-cols-2 gap-6">
-          <MapColumn
-            title="Foundations"
-            sections={designMap.products.foundations}
-          />
-          <MapColumn title="Talent UI" sections={designMap.products.talent} />
-          <MapColumn title="Client UI" sections={designMap.products.client} />
-          <MapColumn
-            title="AI Tools UI"
-            sections={designMap.products.aiTools}
-          />
-          <MapColumn title="DAO & Token UI" sections={designMap.products.dao} />
-          <MapColumn
-            title="Admin Console"
-            sections={designMap.products.admin}
-          />
-          <MapColumn
-            title="Mobile Layouts"
-            sections={designMap.products.mobile}
-          />
-
-            <a href="/api/design-map" className="px-3 py-2 rounded bg-gray-900 text-white text-sm">JSON</a>
-            <a href="/api/figma/export?kit=tailwind" className="px-3 py-2 rounded bg-neon-blue text-black text-sm">Export Tailwind</a>
-            <a href="/api/figma/export?kit=chakra" className="px-3 py-2 rounded bg-neon-purple text-white text-sm">Export Chakra</a>
-            <a href="/api/figma/export?kit=react" className="px-3 py-2 rounded bg-neon-green text-black text-sm">Export React</a>
 
 
             <a href="/api/design-map" className="px-3 py-2 rounded bg-gray-900 text-white text-sm">JSON</Link>
@@ -219,26 +160,22 @@ function MapColumn({
   }[];
 }) {
             <button onClick={requestWireframe} className="px-3 py-2 rounded bg-gray-900 text-white text-sm disabled:opacity-60" disabled={isLoading || !screenName}>
-              {isLoading ? 'Generating…' : 'GPT Wireframe Suggestion'}
+
+
               {isLoading ? 'Generating…' : 'GPT Wireframe Suggestion'  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
             </button>
           </div>
           {suggestion && (
             <pre className="mt-4 text-xs whitespace-pre-wrap p-3 rounded bg-gray-50 dark:bg-gray-900/40 border border-gray-200 dark:border-gray-800">{suggestion}</pre>
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-          )}
-        </div>
-      </section>
-    </>
-
-  )
           )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -253,7 +190,8 @@ function MapColumn({
     return res.status(500).json({ error: "Internal server error" });
   }
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 }
 
 /**
@@ -275,29 +213,14 @@ function MapColumn() {
             <div className="font-medium mb-2">{s.title}</div>
             <div className="flex flex-wrap gap-2">
               {s.items.map((i) => (
+
+
                 <span
                   key={i.id}
                   className="text-xs px-2 py-1 rounded border border-gray-200 dark:border-gray-800"
                 >
-                <span key={i.id} className="text-xs px-2 py-1 rounded border border-gray-200 dark:border-gray-800">
 
-                  {i.title}
-                </span>
-              ))}
-            </div>
-          </div>
-        ))}
-      </div>
-    </div>
 
-  );
-          <div key={s.id} className="rounded-lg border border-gray-200 dark:border-gray-800 p-4 bg-white/60 dark:bg-black/40">
-            <div className="font-medium mb-2">{s.title}</div>
-            <div className="flex flex-wrap gap-2">
-              {s.items.map((i) => (
-                <span key={i.id} className="text-xs px-2 py-1 rounded border border-gray-200 dark:border-gray-800">
-  )
-};
                   {i.title  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -323,8 +246,14 @@ function MapColumn() {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+
 }
 }
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+}
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba

@@ -50,39 +50,5 @@ const supabaseConfig: SupabaseConfig = {
 };
 export const supabase = createSupabaseClient(supabaseConfig);
 
-=======
-    sign_in: (email: string, password: string) => null,
-    sign_out: () => null,
-    get_user: () => null;
-  },
-  from: (table: string) => ({
-    select: (columns: string) => ({
-      eq: (column: string, value: any) => ({
-        single: () => null;
-      });
-    }),
-    insert: (data: any) => ({
-      select: (columns: string) => ({
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-        single: () => null;
-      });
-    });
-  });
-=======
-        single: () => null
-      })
-    })
-<<<<<<< HEAD
-  })
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-}
-  });
-};
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba

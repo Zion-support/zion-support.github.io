@@ -1,35 +1,13 @@
 
-<<<<<<< HEAD
-import { useState  } from 'react';
-import { TalentProfile } from '@/types/talent';
-export function useUIState() {
-import {useState} from 'react';
-import {TalentProfile} from '@/types/talent';
-export function useUIState() {;
-=======
-
-import {useState} from 'react';
-import {TalentProfile} from '@/types/talent';
-export function useUIState() {;
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
   const [isMobileFilterOpen, setIsMobileFilterOpen] = useState(false);
   const [isHireModalOpen, setIsHireModalOpen] = useState(false);
   const [selectedTalent, setSelectedTalent] = useState<TalentProfile | null>(null),
   const [expandedSections, setExpandedSections] = useState({
-=======
-import {useState} from 'react';
-import {TalentProfile} from '@/types / talent';
-export /**
- * useUIState - Function description
- */
-function useUIState() {
-  const [isMobileFilterOpen, setIsMobileFilterOpen] = useState (false);
-  const [isHireModalOpen, setIsHireModalOpen] = useState (false);
-  const [selected_talent, setSelectedTalent] = useState < TalentProfile | null>(null);
-  const [expanded_sections, setExpandedSections] = useState ({
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
     skills: true;
     availability: true;
     region: true;
@@ -93,19 +71,15 @@ export function useUIState() {;
     setIsHireModalOpen,;
     selectedTalent,;
     setSelectedTalent,;
-<<<<<<< HEAD
-=======
 
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
     expandedSections;
     toggleSection;
 
-=======
-    expanded_sections;
-    toggle_section;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
     closeMobileFilter}
 }

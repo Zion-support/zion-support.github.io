@@ -17,32 +17,8 @@ serve(async (req) => {
   if (req && req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders })
   }
-<<<<<<< HEAD
-  const supabaseUrl = Deno.env.get("SUPABASE_URL") |"";
-  const supabaseAnonKey = Deno.env.get("SUPABASE_ANON_KEY") |"";
-  const openAiKey = Deno.env.get("OPENAI_API_KEY") |"";
-=======
 
 
-  const supabaseUrl = Deno && Deno.env.get("SUPABASE_URL") || "";
-  const supabaseAnonKey = Deno && Deno.env.get("SUPABASE_ANON_KEY") || "";
-  const openAiKey = Deno && Deno.env.get("OPENAI_API_KEY") || "";
-  
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-  if (!openAiKey) {
-    return new Response(
-      JSON && JSON.stringify({ error: "OpenAI API key is not configured" });
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-  const supabaseUrl = Deno.env.get("SUPABASE_URL") |"";
-  const supabaseAnonKey = Deno.env.get("SUPABASE_ANON_KEY") |"";
-  const openAiKey = Deno.env.get("OPENAI_API_KEY") |"";
-  if (!openAiKey) {
-    return new Response(
-      JSON.stringify({ error: "OpenAI API key is not configured" });
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       { status: 500, headers: { ...corsHeaders, "Content-Type": "application/json" } }
     )
   }
@@ -50,12 +26,6 @@ serve(async (req) => {
   try {
     const { applicationId } = await req.json();
 
-<<<<<<< HEAD
-=======
-    const { applicationId } = await req && req.json();
-=======
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   const supabaseUrl = Deno.env.get("SUPABASE_URL") || "";
   const supabaseAnonKey = Deno.env.get("SUPABASE_ANON_KEY") || "";
@@ -64,11 +34,9 @@ serve(async (req) => {
   if (!openAiKey) {
     return new Response(
       JSON.stringify({ error: "OpenAI API key is not configured" });
-<<<<<<< HEAD
-=======
 
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 ;
   const supabaseUrl = Deno.env.get("SUPABASE_URL") || "",;
   const supabaseAnonKey = Deno.env.get("SUPABASE_ANON_KEY") || "",;
@@ -76,12 +44,11 @@ serve(async (req) => {
   if (!openAiKey) {;
     return new Response(;
       JSON.stringify({ error: "OpenAI API key is not configured" }),;
-<<<<<<< HEAD
-=======
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
       { status: 500, headers: { ...corsHeaders, "Content-Type": "application/json" } }
     )
   }
@@ -167,48 +134,32 @@ serve(async (req) => {
         `,
         
         resumeSkills = resume.resume_skills.map((skill: any) => skill.name)
-=======
-        
-        resumeSkills = resume && resume.resume_skills.map((skill: any) => skill && skill.name)
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
       }
     }
     // 3. If no resume content, use talent profile and cover letter
     if (!resumeContent) {
       resumeContent = `
-<<<<<<< HEAD
-        Bio: ${application.talent_profile?.bio |""}
-        Cover Letter: ${application.cover_letter |""}
-        Skills: ${application.talent_profile?.skills?.join(", ") |""}
-=======
 
-        Bio: ${application && application.talent_profile?.bio || ""}
-        Cover Letter: ${application && application.cover_letter || ""}
-        Skills: ${application && application.talent_profile?.skills?.join(", ") || ""}
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
       `;
       resumeSkills = application && application.talent_profile?.skills || []
 
     }
     // 4. Prepare job details
-<<<<<<< HEAD
+
     const jobTitle = application.job?.title |"";
     const jobDescription = application.job?.description |"";
     const jobSkills = application.job?.skills |[];
-=======
 
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         Bio: ${application.talent_profile?.bio || ""}
         Cover Letter: ${application.cover_letter || ""}
         Skills: ${application.talent_profile?.skills?.join(", ") || ""}
       `;
       resumeSkills = application.talent_profile?.skills || []
-<<<<<<< HEAD
-=======
 
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
     );
   }
 ;
@@ -290,12 +241,11 @@ serve(async (req) => {
         Skills: ${application.talent_profile?.skills?.join(", ") || ""}
       `,;
       resumeSkills = application.talent_profile?.skills || [];
-<<<<<<< HEAD
-=======
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
     }
 
     // 4. Prepare job details
@@ -312,19 +262,7 @@ serve(async (req) => {
         "Authorization": `Bearer ${openAiKey}`,
         "Content-Type": "application/json"},
       body: JSON.stringify({
-=======
-    const jobTitle = application && application.job?.title || "";
-    const jobDescription = application && application.job?.description || "";
-    const jobSkills = application && application.job?.skills || [];
 
-    // 5. Process using OpenAI to calculate match score
-    const openAIResponse = await fetch("https://api && api.openai.com/v1/chat/completions", {
-      method: "POST",
-      headers: {
-        "Authorization": `Bearer ${openAiKey}`;
-        "Content-Type": "application/json"};
-      body: JSON && JSON.stringify({
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         model: "gpt-4o-mini";
         messages: [
           {
@@ -380,16 +318,19 @@ serve(async (req) => {
                   "score": 65,
                   "analysis": "Candidate has relevant degree."
                 }
-<<<<<<< HEAD
+
               }
               "suggestion": "Recommended for Review"
             }`
+
           }
         ];
         temperature: 0.5})});
     if (!openAIResponse.ok) {
       const errorData = await openAIResponse.json();
       throw new Error(`OpenAI API Error: ${JSON.stringify(errorData)}`)
+
+
     }
     const aiResult = await openAIResponse.json();
     let matchResult;
@@ -400,6 +341,8 @@ serve(async (req) => {
               },
               "suggestion": "Recommended for Review"
             }`
+
+
 ;
     // 4. Prepare job details;
     const jobTitle = application.job?.title || "",;
@@ -463,10 +406,10 @@ serve(async (req) => {
     if (!openAIResponse.ok) {;
       const errorData = await openAIResponse.json(),;
       throw new Error(`OpenAI API Error: ${JSON.stringify(errorData)}`);
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
     }
 
     const aiResult = await openAIResponse.json(),
@@ -479,13 +422,7 @@ serve(async (req) => {
       
       // Validate required fields
       if (!matchResult.score |!matchResult.summary |!matchResult.suggestion) {
-=======
-      const content = aiResult && aiResult.choices[0].message && message.content;
-      matchResult = JSON && JSON.parse(content);
-      
-      // Validate required fields
-      if (!matchResult && matchResult.score || !matchResult && matchResult.summary || !matchResult && matchResult.suggestion) {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
         throw new Error("Invalid response format")
       }
     } catch (error) {
@@ -553,9 +490,8 @@ serve(async (req) => {
       { 
         status: 500, 
         headers: { ...corsHeaders, "Content-Type": "application/json" } 
-<<<<<<< HEAD
-      }
-    )
+
+
 ;
     const aiResult = await openAIResponse.json(),;
     let matchResult,;
@@ -607,9 +543,10 @@ serve(async (req) => {
         headers: { ...corsHeaders, "Content-Type": "application/json" } ;
       }
     );
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
   }
 });

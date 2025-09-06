@@ -2,17 +2,11 @@
 import React from "react";
 
 
-<<<<<<< HEAD
+
 import { QuoteStatusBadge } from "./QuoteStatusBadge";
 import type { QuoteRequest } from "@/types/quotes";
-import { format } from "date-fns";
-import {format} from "date-fns";
-=======
 
-import {format} from "date-fns";
 
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React from "react",
 import { 
   Dialog,
@@ -28,20 +22,19 @@ import { Separator } from "@/components/ui/separator",
 import { QuoteStatusBadge } from "./QuoteStatusBadge",
 import type { QuoteRequest } from "@/types/quotes",
 import { format } from "date-fns",
-<<<<<<< HEAD
-=======
 
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 interface QuoteDetailsProps {
   quote: QuoteRequest | null;
   isOpen: boolean;
   onClose: () => void
 }
 
-<<<<<<< HEAD
+
 export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {;
   if (!quote) return null;
   const formatDate = (dateString?: string) => {
@@ -51,16 +44,8 @@ export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {
     } catch (e) {
       return dateString;
     }
-  }
-  };
-=======
-import {format} from "date-fns";
-=======
 
-  };
 
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React from "react",;
 import {;
   Dialog,;
@@ -133,13 +118,9 @@ if (return "Not specified") {
     }
 
   },
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 
 
-
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -223,98 +204,10 @@ if (return "Not specified") {
       </DialogContent>
     </Dialog>
   );
-};
 
-<<<<<<< HEAD
-  )
-},
-};
-},
-=======
-=======
-      return date_string;
-    }
-  }
-;
-  return (
-    <Dialog open={is_open} onOpenChange={(open) => !open && on_close ()}>;
-      <DialogContent className="max - w-3xl max - h-[90vh] overflow - y-auto">;
-        <DialogHeader>;
-          <DialogTitle className="text - 2xl flex items - center justify - between">;
-            <span>{quote.project_name}</span>;
-            <QuoteStatusBadge status={quote.status} />;
-          </DialogTitle>;
-          <DialogDescription>;
-            Quote request submitted on {format_date (quote.created_at)}
-          </DialogDescription>;
-        </DialogHeader>;
-        <Separator className="my - 4" />;
-        <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 6">;
-          <Card>;
-            <CardContent className="pt - 6">;
-              <h3 className="text - lg font - medium mb - 3">;
-                Requester Information;
-              </h3>;
-              <div className="space - y-2">;
-                <div className="flex items - center gap - 2">;
-                  <User className="h - 4 w - 4 text - gray - 500" />;
-                  <span>{quote.requester_name}</span>;
-                </div>;
-                <div className="flex items - center gap - 2">;
-                  <Mail className="h - 4 w - 4 text - gray - 500" />;
-                  <span>{quote.requester_email}</span>;
-                </div>;
-              </div>;
-            </CardContent>;
-          </Card>;
-          <Card>;
-            <CardContent className="pt - 6">;
-              <h3 className="text - lg font - medium mb - 3">Project Timeline</h3>;
-              <div className="space - y-2">;
-                <div className="flex items - center gap - 2">;
-                  <Calendar className="h - 4 w - 4 text - gray - 500" />;
-                  <span > Start date: {format_date (quote.start_date)}</span>;
-                </div>;
-                <div className="flex items - center gap - 2">;
-                  <Clock className="h - 4 w - 4 text - gray - 500" />;
-                  <span > Timeline: {quote.timeline}</span>;
-                </div>;
-              </div>;
-            </CardContent>;
-          </Card>;
-        </div>;
-        <Card className="mt - 6">;
-          <CardContent className="pt - 6">;
-            <h3 className="text - lg font - medium mb - 3">Project Details</h3>;
-            <p className="mb - 4">{quote.project_summary}</p>;
-            {quote.project_description && (
-              <>;
-                <h4 className="font - medium mt - 4">Additional Details</h4>;
-                <p>{quote.project_description}</p>;
-              </>)}
-            <div className="mt - 6 flex items - center gap - 2">;
-              <DollarSign className="h - 4 w - 4 text - gray - 500" />;
-              <span className="font - medium">Budget: </span>;
-              {quote.budget_display ||;
-                (quote.budget_min && quote.budget_max;
-                  ? `$${quote.budget_min} - $${quote.budget_max}`;
-                  : quote.budget_min;
-                    ? `$${quote.budget_min}`;
-                    : "Not specified")}
-            </div>;
-          </CardContent>;
-        </Card>;
-        <div className="mt - 6 flex justify - end">;
-          <Button on_click={on_close}>Close</Button>;
-        </div>;
-      </DialogContent>;
-    </Dialog>);
 }
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
-  )
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba

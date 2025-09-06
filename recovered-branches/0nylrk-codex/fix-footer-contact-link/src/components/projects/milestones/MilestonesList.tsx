@@ -1,20 +1,8 @@
 
-<<<<<<< HEAD
+
 import React, { useState } from 'react';
-import { Milestone, MilestoneStatus, MilestoneActivity  } from '@/hooks/useMilestones';
-import { useAuth  } from '@/hooks/useAuth';
-import { MilestoneCard  } from './MilestoneCard';
-import { AddMilestoneForm  } from './AddMilestoneForm';
-import { Button  } from '@/components/ui/button';
-import { Card, CardContent  } from '@/components/ui/card';
-// lucide-react doesn't export PlusIcon, use our icon wrapper
-import { Plus  } from '@/components/icons';
-import { EmptyState } from '@/components/ui/empty-state';
-interface MilestonesListProps {
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import {Milestone, MilestoneStatus, MilestoneActivity} from '@/hooks/useMilestones';
 import {useAuth} from '@/hooks/useAuth';
 import {MilestoneCard} from './MilestoneCard';
@@ -48,11 +36,9 @@ export const MilestonesList: React.FC<MilestonesListProps> = ({;
   onDeleteMilestone;
   onUploadDeliverable;
   isSubmitting;
-<<<<<<< HEAD
-=======
 
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 import React, { useState } from 'react',;
 import { Milestone, MilestoneStatus, MilestoneActivity } from '@/hooks/useMilestones',;
 import { useAuth } from '@/hooks/useAuth',;
@@ -173,43 +159,7 @@ export const MilestonesList: React.FC<MilestonesListProps> = ({
       />;
     );
   }
-=======
-        }
-      />
-    )
-  }
 
-  return (
-    <div className="space-y-6">;
-      {isClient && !showAddForm && (;
-        <div className="flex justify-end">;
-          <Button onClick={() => setShowAddForm(true)}>;
-            <Plus className="h-4 w-4 mr-2" />;
-            Add Milestone;
-          </Button>;
-        </div>;
-      )}
-      {showAddForm && (
-        <Card>
-          <CardContent className="pt-6">
-            <h3 className="text-lg font-medium mb-4">Create New Milestone</h3>
-            <AddMilestoneForm
-            <AddMilestoneForm 
-              onSubmit={handleSubmit}
-              isSubmitting={isSubmitting}
-              onCancel={() => setShowAddForm(false)}
-            />;
-          </CardContent>;
-        </Card>;
-      )}
-      
-      <div className="space-y-4">
-        {milestones.map((milestone) => (
-=======
-
-      <div className="space-y-4">;
-        {milestones && milestones.map((milestone) => (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           <MilestoneCard
             key={milestone && milestone.id}
             id={milestone && milestone.id}
@@ -223,28 +173,14 @@ export const MilestonesList: React.FC<MilestonesListProps> = ({
             onReject={onReject}
           />;
         ))}
-<<<<<<< HEAD
+
       </div>
     </div>
   )
-}
-
-      </div>;
-    </div>;
-  );
-=======
 
 
-
-
-=======
-      </div>;
-    </div>;
-  );
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 };

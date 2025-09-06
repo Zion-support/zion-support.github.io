@@ -1,8 +1,7 @@
 import { Calendar, Clock, Video } from 'lucide-react'
 import { format, isAfter, parseISO, startOfDay } from "date-fns";
 function InterviewsContent() {
-<<<<<<< HEAD
-=======
+
 
 
 import React, { useEffect, useState } from 'react';
@@ -282,7 +281,7 @@ function InterviewsContent() {;
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
   return (
     <>;
 
@@ -316,11 +315,8 @@ function InterviewsContent() {;
               Upcoming
               {upcomingInterviews.length > 0 && (
                 <span className="ml-2 bg-primary rounded-full px-2 py-0.5 text-xs">
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   {upcomingInterviews.length}
                 </span>
               )}
@@ -330,10 +326,9 @@ function InterviewsContent() {;
               {pendingInterviews.length > 0 && (
                 <span className='ml-2 bg-amber-500 rounded-full px-2 py-0.5 text-xs'>
                 <span className="ml-2 bg-amber-500 rounded-full px-2 py-0.5 text-xs">
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
                   {pendingInterviews.length}
                 </span>
@@ -344,10 +339,9 @@ function InterviewsContent() {;
           <TabsContent value='upcoming' className='space-y-6'>
           
           <TabsContent value="upcoming" className="space-y-6">
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 
             {isLoading ? (
@@ -367,10 +361,9 @@ function InterviewsContent() {;
           <TabsContent value='pending' className='space-y-6'>
           
           <TabsContent value="pending" className="space-y-6">
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 
             {isLoading ? (
@@ -390,10 +383,9 @@ function InterviewsContent() {;
           <TabsContent value='past' className='space-y-6'>
           
           <TabsContent value="past" className="space-y-6">
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 
             {isLoading ? (

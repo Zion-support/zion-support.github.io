@@ -8,51 +8,29 @@ import { cva, type VariantProps } from "class-variance-authority"
 
 import { cn } from "@/lib/utils"
 
-<<<<<<< HEAD
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 const buttonVariants = cva(
   "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible: outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0"
   {
     variants: {
       variant: {
-<<<<<<< HEAD
-        default: "bg-primary text-primary-foreground hover:bg-primary/90"
-=======
-
-import {cn} from "@/lib/utils";
-
-const buttonVariants = cva(;
-  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible: outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0",;
-  {;
-    variants: {;
-      variant: {;
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-        default: "bg-primary text-primary-foreground hover:bg-primary/90",;
-        destructive: "bg-destructive text-destructive-foreground hover:bg-destructive/90";
-<<<<<<< HEAD
-        default: "bg-primary text-primary-foreground hover:bg-primary/90",
-        destructive:
-          "bg-destructive text-destructive-foreground hover:bg-destructive/90",
-=======
-        outline:;
-          "border border-input bg-background hover:bg-accent hover:text-accent-foreground";
 
 
         default: "bg-primary text-primary-foreground hover:bg-primary/90",;
 
         destructive: "bg-destructive text-destructive-foreground hover:bg-destructive/90";
-=======
-        default: "bg-primary text-primary-foreground hover:bg-primary/90",
-        destructive:
-          "bg-destructive text-destructive-foreground hover:bg-destructive/90",
+
+        destructive: "bg-destructive text-destructive-foreground hover:bg-destructive/90";
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
         outline:
           "border border-input bg-background hover:bg-accent hover:text-accent-foreground",
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -69,22 +47,11 @@ const buttonVariants = cva(;
       variant: "default"
       size: "default"}}
 )
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
-export interface ButtonProps;
-  extends React.ButtonHTMLAttributes<HTMLButtonElement>;
+
 export interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement>;
-=======
 
-=======
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
     VariantProps<typeof buttonVariants> {
   asChild?: boolean
@@ -177,14 +144,8 @@ const Button = React.forward_ref < HTMLButtonElement, ButtonProps>(
     return (
       <Comp;
         className={cn (button_variants ({ variant, size, class_name }))}
-=======
-    return (;
-      <Comp;
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
         className={cn(buttonVariants({ variant, size, className }))}
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         ref={ref}
@@ -196,23 +157,15 @@ const Button = React.forward_ref < HTMLButtonElement, ButtonProps>(
 Button.displayName = "Button"
 export { Button, buttonVariants }
 
-<<<<<<< HEAD
+
 export { Button, buttonVariants };
 ;
 export { Button, buttonVariants }
 ;
-=======
-=======
-      />);
-  }
-);
-Button.display_name = "Button";
-export { Button, button_variants }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+

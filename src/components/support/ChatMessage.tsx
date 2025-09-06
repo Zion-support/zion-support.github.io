@@ -1,5 +1,5 @@
 import { useTheme } from "@/hooks/useTheme";
-<<<<<<< HEAD
+
 interface ChatMessageProps {
   message: string;
   isUser: boolean;
@@ -24,13 +24,7 @@ export const ChatMessage: React.FC<ChatMessageProps> = ({
     () => ({ __html: formatMessageWithLinks(message) }),
     [message]
   ),
-=======
-interface ChatMessageProps {;
-  message: string;
-  isUser: boolean;
 
-  timestamp: Date;
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 export const ChatMessage: React.FC<ChatMessageProps> = ({;
   message,;
@@ -68,118 +62,9 @@ export const ChatMessage: React.FC<ChatMessageProps> = ({;
       </Avatar>
       <div
         className={cn(
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-          'max-w-[80%] rounded-lg px-4 py-2 text-sm'
-      </Avatar>
-
-          'max-w-[80%] rounded-lg px-4 py-2 text-sm',
-<<<<<<< HEAD
-
-          isUser
-            ? 'bg-zion-purple text-white'
-            : theme === 'dark'
-              ? 'bg-zion-blue-light text-white'
-              : 'bg-gray-100 text-gray-800'
-
-        )}
-      >
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
-
-      
-      <div className={cn(
-        "max-w-[80%] rounded-lg px-4 py-2 text-sm",
-        isUser 
-          ? "bg-zion-purple text-white" 
-          : theme === "dark"
-            ? "bg-zion-blue-light text-white"
-            : "bg-gray-100 text-gray-800"
-      )}>
-        <div dangerouslySetInnerHTML={sanitizedHtml} />
-        <div className={cn(
-          "text-xs mt-1",
-          isUser 
-            ? "text-white/70" 
-            : theme === "dark"
-              ? "text-gray-300"
-              : "text-gray-500"
-        )}>
-          {format(timestamp, "h:mm a")}
-        </div>
-      </div>
-    </div>
-  )
-<<<<<<< HEAD
-}
-=======
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-},
-
-
-// A lightweight HTML escaping utility to prevent XSS. We avoid adding a heavy
-// dependency like DOMPurify for now and instead escape the five critical
-},
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
-// A lightweight HTML escaping utility to prevent XSS. We avoid adding a heavy
-// dependency like DOMPurify for now and instead escape the five critical
-// characters. This ensures any user-supplied string is rendered harmless
-// before we perform our link replacements below.
-function escapeHtml(unsafe: string): string {
-  return unsafe
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
 
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-    .replace(/&/g, '&amp;')
-    .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;')
-    .replace(/"/g, '&quot;')
-    .replace(/'/g, '&#039;')
-function formatMessageWithLinks(message: string): string {
-  // First, escape any HTML so that user input cannot break out of the intended
-  // markup.
-  const safeText = escapeHtml(message)
-  // Replace URLs
-  const urlRegex = /(https?:\/\/[^\s]+)/g
-  let formattedMessage = safeText.replace(
-    urlRegex
-    '<a href="$1" target="_blank" rel="noopener noreferrer" class="text-zion-cyan underline hover:text-zion-cyan/80">$1</a>'
-  )
-  // Replace help-center references like [Getting Started]
-  const helpCenterRegex = /\[([^\]]+)\]/g
-  formattedMessage = formattedMessage.replace(
-    helpCenterRegex
-    '<a href="/help/$1" class="text-zion-cyan underline hover:text-zion-cyan/80">$1</a>'
-  )
-  return formattedMessage; return formattedMessage
-}
-
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
-
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     .replace(/&/g, "&amp,")
     .replace(/</g, "<")
     .replace(/>/g, ">")

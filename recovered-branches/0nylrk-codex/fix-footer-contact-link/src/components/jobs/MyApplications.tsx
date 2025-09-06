@@ -1,13 +1,6 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 import {useState} from "react";
 import {useJobApplications} from "@/hooks/useJobApplications";
 import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card";
@@ -19,7 +12,8 @@ import {Link} from "react-router-dom";
 import {ApplicationStatus} from "@/types/jobs";
 export function MyApplications() {;
   const { applications, isLoading, error } = useJobApplications();
-<<<<<<< HEAD
+
+
 import { useState } from "react",
 import { useJobApplications } from "@/hooks/useJobApplications",
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
@@ -31,31 +25,7 @@ import { Link } from "react-router-dom";
 import { ApplicationStatus } from "@/types/jobs";
 export function MyApplications() {
   const { applications, isLoading, error } = useJobApplications();
-=======
 
-  const getStatusBadge = (status: ApplicationStatus) => {;
-    switch (status) {;
-
-=======
-import { useState } from './react';
-import { useJobApplications } from '@/hooks / useJobApplications';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components / ui / card';
-import { Badge } from '@/components / ui / badge';
-import { Button } from '@/components / ui / button';
-import { Loader2, MessageSquare, ExternalLink } from './lucide-react';
-import { formatDistanceToNow } from './date - fns';
-import { Link } from './react-router-dom';
-import { ApplicationStatus } from '@/types / jobs';
-export /**
- * MyApplications - Function description
- */
-function MyApplications() {
-  const { applications, is_loading, error } = useJobApplications ();
-;
-  const getStatusBadge = (status: ApplicationStatus) =>: any {
-=======
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 import { Link } from "react-router-dom",
 import { ApplicationStatus } from "@/types/jobs",
@@ -111,7 +81,7 @@ export function MyApplications() {
       </Card>
     )
   }
-<<<<<<< HEAD
+
   return (
     <div className="grid gap-4 md:grid-cols-2">
       {applications.map((application) => (
@@ -131,15 +101,8 @@ export function MyApplications() {
             <div className="space-y-3">
               {application.cover_letter && (
                 <p className="text-sm text-muted-foreground line-clamp-2 mb-2">
-                  {application.cover_letter}
-                </p>
-              )}
-=======
 
 
-
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { useState } from "react",;
 import { useJobApplications } from "@/hooks/useJobApplications",;
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",;
@@ -218,12 +181,11 @@ export function MyApplications() {;
             <div className="space-y-3">;
               {application.cover_letter && (;
                 <p className="text-sm text-muted-foreground line-clamp-2 mb-2">;
-<<<<<<< HEAD
-=======
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
                   {application.cover_letter}
                 </p>
               )}
@@ -239,12 +201,7 @@ export function MyApplications() {;
                     <ExternalLink className="h-3 w-3 mr-1" /> View Job
                   </Link>
                 </Button>
-<<<<<<< HEAD
-                <Button
-                  variant="default"
-                <Button 
-                  variant="default" 
-=======
+
 
 
   return (
@@ -284,13 +241,9 @@ export function MyApplications() {;
                 <Button
                   variant="default" 
 
-=======
 
-                <Button 
-                  variant="default" 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
                   size="sm"
                   className="text-xs"
                   asChild>;

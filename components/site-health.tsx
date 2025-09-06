@@ -1,19 +1,14 @@
 import Head from 'next/head';
 
 export default function SiteHealth() {
-<<<<<<< HEAD
-=======
-
-=======
 
 
 
-export default function SiteHealth() {
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
   return (
 
     <div className="relative min-h-screen overflow-hidden bg-slate-950 text-white">
@@ -355,60 +350,7 @@ import Head from 'next / head';
 
   );
 }
-=======
 
-        <section className="mx-auto max-w-7xl px-6 pb-16">
-          <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Artifacts</h2>
-          <div className="mx-auto mt-6 max-w-4xl grid grid-cols-1 gap-4 sm: grid-cols-2">
-            <a href="/reports/seo/latest.json" className="rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur-xl hover:border-cyan-400/30">Latest SEO Report JSON ↗</a>
-            <a href="/reports/seo/index.html" className="rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur-xl hover:border-cyan-400/30">SEO Audit Dashboard →</a>
-          </div>
-        </section>
-<section className="mx-auto max-w-7xl px-6 pb-24">
-=======
-        <section className='mx-auto max-w-7xl px-6 pb-16'>
-          <h2 className='text-center text-2xl font-bold tracking-wide text-white/90'>
-            Artifacts
-          </h2>
-          <div className='mx-auto mt-6 max-w-4xl grid grid-cols-1 gap-4 sm:grid-cols-2'>
-            <a
-              href='/reports/seo/latest.json'
-              className='rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur-xl hover:border-cyan-400/30'
-            >
-              Latest SEO Report JSON ↗
-            </a>
-            <a
-              href='/reports/seo/index.html'
-              className='rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur-xl hover:border-cyan-400/30'
-            >
-              SEO Audit Dashboard →
-            </a>
-          </div>
-        </section>
-        <section className='mx-auto max-w-7xl px-6 pb-24'>
-          <div className='animated-border relative overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-r from-fuchsia-600/20 via-violet-600/20 to-cyan-600/20 p-8 text-center backdrop-blur-xl'>
-            <h3 className='text-2xl font-bold'>
-              Keep quality high — continuously
-            </h3>
-            <p className='mx-auto mt-2 max-w-2xl text-white/80'>
-              Automations enforce guardrails and publish transparent artifacts
-              for every run.
-            </p>
-            <div className='mt-6 flex flex-wrap justify-center gap-3'>
-              <Link href='/automation'>
-                <a className='rounded-xl bg-white/90 px-6 py-3 font-semibold text-slate-900 hover:bg-white'>
-                  Get Started
-                </a>
-              </Link>
-              <a
-                href='/site-health'
-                target='_blank'
-                rel='noopener'
-                className='rounded-xl border border-white/20 bg-white/5 px-6 py-3 font-semibold backdrop-blur-md hover:bg-white/10'
-              >
-                View Pipelines
-              </a>            </div>        <section className="mx-auto max-w-7xl px-6 pb-24">
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           <div className="animated-border relative overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-r from-fuchsia-600/20 via-violet-600/20 to-cyan-600/20 p-8 text-center backdrop-blur-xl">
             <h3 className="text-2xl font-bold">Keep quality high — continuously</h3>
             <p className="mx-auto mt-2 max-w-2xl text-white/80">Automations enforce guardrails and publish transparent artifacts for every run.</p>
@@ -458,13 +400,6 @@ import Head from 'next / head';
     </div>);
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
-        </nav>
-      </header>
-<<<<<<< HEAD
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+

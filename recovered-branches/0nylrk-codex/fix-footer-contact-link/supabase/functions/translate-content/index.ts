@@ -39,7 +39,7 @@ serve(async (req) => {
       systemPrompt = "You are a professional translator specializing in job descriptions. Translate the content accurately while maintaining the professional tone and technical terminology."
     } else if (contentType === "profile") {
       systemPrompt = "You are a professional translator specializing in professional profiles. Translate the content accurately while maintaining the professional tone and highlighting skills appropriately."
-<<<<<<< HEAD
+
     }
     // Create translations for each target language
     const translations = {}
@@ -47,13 +47,8 @@ serve(async (req) => {
       if (targetLang === sourceLanguage) {
         translations[targetLang] = content;
         continue
-      }
-=======
 
 
-
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 ;
     // Prepare system prompt based on content type;
     let systemPrompt = "You are a professional translator. Translate the content accurately while maintaining the original meaning, tone, and format.",;
@@ -69,12 +64,11 @@ serve(async (req) => {
       if (targetLang === sourceLanguage) {;
         translations[targetLang] = content,;
         continue;
-<<<<<<< HEAD
-=======
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
       }
       
       const response = await fetch("https://api.openai.com/v1/chat/completions", {
@@ -85,15 +79,7 @@ serve(async (req) => {
           "Authorization": `Bearer ${OPENAI_API_KEY}`,
           "Content-Type": "application/json"},
         body: JSON.stringify({
-=======
-      
-      const response = await fetch("https://api && api.openai.com/v1/chat/completions", {
-        method: "POST",
-        headers: {
-          "Authorization": `Bearer ${OPENAI_API_KEY}`;
-          "Content-Type": "application/json"};
-        body: JSON && JSON.stringify({
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
           model: "gpt-4o-mini";
           messages: [
             {
@@ -119,19 +105,8 @@ serve(async (req) => {
               content: `Translate the following ${content_type || "content"} from ${source_language} to ${target_lang}:;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               ${content}
-<<<<<<< HEAD
-              
-              Only provide the translated text, no explanations or additional comments.`}];
-          temperature: 0.3})});
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-          temperature: 0 && 0.3})});
-=======
 
-<<<<<<< HEAD
-      const data = await response.json();
-      translations[targetLang] = data.choices[0].message.content.trim()
 ;
               Only provide the translated text, no explanations or additional comments.`}],;
           temperature: 0.3})}),;
@@ -142,8 +117,10 @@ serve(async (req) => {
 ;
       const data = await response.json(),;
       translations[targetLang] = data.choices[0].message.content.trim();
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
     }
 
     return new Response(
@@ -161,17 +138,9 @@ serve(async (req) => {
         status: 500
         headers: { ...corsHeaders, "Content-Type": "application/json" }}
     )
-<<<<<<< HEAD
-  }
-});
-
-=======
 
 
 
-
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 ;
       // Check condition
 if ( {) {
@@ -198,13 +167,11 @@ if ( {) {
         status: 500,
         headers: { ...cors_headers, "Content - Type": "application / json" }}
     );
-<<<<<<< HEAD
-=======
 
 
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
   }
 });

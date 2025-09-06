@@ -1,23 +1,14 @@
 
-<<<<<<< HEAD
-import { jsPDF  } from 'jspdf';
-import { Certification  } from '@/types/resume';
-import { PdfThemeColors  } from '../themeConfig';
-import { formatDate } from '../formatters';
-export function addCertificationsSection(
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 import {jsPDF} from 'jspdf';
 import {Certification} from '@/types/resume';
 import {PdfThemeColors} from '../themeConfig';
 import {formatDate} from '../formatters';
 export function addCertificationsSection(;
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
   doc: jsPDF;
   certifications: Certification[];
   colors: PdfThemeColors;
@@ -51,7 +42,7 @@ export function addCertificationsSection(;
       yPos = 20
     }
 
-<<<<<<< HEAD
+
       doc.text(`${issueDate}${expirationText}`, 20, yPos + 10)
 import { jsPDF } from 'jspdf',;
 import { Certification } from '@/types/resume',;
@@ -96,75 +87,14 @@ export function addCertificationsSection(;
       const expirationText = cert.expiration_date ? ` - ${formatDate(cert.expiration_date)}` : '';
       doc.setFontSize(10);
       doc.text(`${issueDate}${expirationText}`, 20, yPos + 10);
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
     }
     yPos += 16
   }
   return yPos
-=======
-import {jsPDF} from 'jspdf';
-import {Certification} from '@/types / resume';
-import {PdfThemeColors} from '../theme_config';
-import {format_date} from '../formatters';
-export function addCertificationsSection (
-  doc: jsPDF;
-  certifications: Certification[];
-  colors: PdfThemeColors;
-  start_y: number): number {
-  // Check condition
-if (return start_y) {
-  $2
-}
-  let y_pos = start_y;
-;
-  // Check if we need to add a new page;
-  // Check condition
-if ( {) {
-  $2
-}
-    doc.add_page (),
-    y_pos = 20;
-  }
-  doc.setFontSize (16);
-  doc.setTextColor (colors.heading);
-  doc.text ('Certifications', 20, y_pos);
-  y_pos += 8;
-;
-  doc.setDrawColor (colors.accent);
-  doc.line (20, y_pos, 80, y_pos);
-  y_pos += 8;
-;
-  for (const cert of certifications) {
-    // Check if we need to add a new page;
-    // Check condition
-if ( {) {
-  $2
-}
-      doc.add_page ();
-      y_pos = 20;
-    }
-    doc.setFontSize (12);
-    doc.setTextColor (colors.subheading);
-    doc.text (cert.name, 20, y_pos);
-;
-    doc.setFontSize (11);
-    doc.setTextColor (colors.text);
-    doc.text (cert.issuing_organization, 20, y_pos + 5);
-;
-    // Check condition
-if ( {) {
-  $2
-}
-      const issue_date = format_date (cert.issue_date);
-      const expiration_text = cert.expiration_date ? ` - ${format_date (cert.expiration_date)}` : '';
-      doc.setFontSize (10);
-      doc.text (`${issue_date}${expiration_text}`, 20, y_pos + 10);
-    }
-    y_pos += 16;
-  }
-  return y_pos;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
 }

@@ -19,20 +19,8 @@ class ErrorBoundary extends React.Component {
 }
 import React from 'react';
 
-<<<<<<< HEAD
-import {
-  Star
-  Quote
-  Users
-  Award
-  TrendingUp
-  CheckCircle;
-=======
 
-=======
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   Star,
   Quote,
@@ -41,8 +29,8 @@ import {
 
   TrendingUp,;
   CheckCircle,;
-<<<<<<< HEAD
-=======
+
+
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -277,33 +265,14 @@ const EnhancedTestimonialsSection: React.FC = () => {_const testimonials: Testim
 
                 <div className="flex items-center gap-4">
                   <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full flex items-center justify-center text-white font-semibold text-sm">
-=======
-                <div className="flex items-center gap-1 mb-4">
-                  {renderStars(testimonial.rating)}
-                </div>
-                {/* Testimonial Text */}
-                <p className='text-white/80 text-sm leading-relaxed mb-6'>                <p className="text-white/80 text-sm leading-relaxed mb-6">
-=======
 
-                {/* Author Info */}
 
-                  {renderStars(testimonial.rating)}
-                </div>
-
-                {/* Testimonial Text */}
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
                   "{testimonial.content}"
                 </p>
                 {/* Author Info */}
-<<<<<<< HEAD
-                <div className='flex items-center gap-4'>
-                  <div className='w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full flex items-center justify-center text-white font-semibold text-sm'>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
                     {testimonial.avatar}
                   </div>
                   <div className="flex-1">
@@ -319,22 +288,9 @@ const EnhancedTestimonialsSection: React.FC = () => {_const testimonials: Testim
 
                   <span className="inline-block px-3 py-1 bg-blue-500/20 text-blue-300 text-xs rounded-full border border-blue-500/30">
                     {testimonial.category}
-=======
-        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
-          {testimonials.map(testimonial => (
 
-<<<<<<< HEAD
-          ))}
-        </div>
-
-        {/* Testimonials Grid */}
-        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
-          {testimonials.map(testimonial => (
-
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
             <div
               key={testimonial.id}
               className='group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-blue-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl'
@@ -375,11 +331,11 @@ const EnhancedTestimonialsSection: React.FC = () => {_const testimonials: Testim
 
                 {/* Testimonial Text */}
 
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
                   "{testimonial.content}"
                 </p>
                 {/* Author Info */}
@@ -413,16 +369,16 @@ const EnhancedTestimonialsSection: React.FC = () => {_const testimonials: Testim
 
                     {testimonial.category}
 
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
                   </span>
                 </div>
               </div>
-<<<<<<< HEAD
+
 <div className="flex items-center gap-1 mb-4">;
                   {renderStars(testimonial && testimonial.rating)}
                 </div>;
@@ -478,31 +434,22 @@ const EnhancedTestimonialsSection: React.FC = () => {_const testimonials: Testim
               innovation journey.;
             </p>;
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>;
-=======
-              <div className='absolute inset-0 bg-gradient-to-br from-blue-500/0 via-blue-400/5 to-cyan-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl' />            </div>              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/0 via-blue-400/5 to-cyan-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl" />
-            </div>
-          ))}
-        </div>
 
-          ))}
-        </div>
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
         {/* CTA Section */}
         <div className='text-center mt-16'>
           <div className='bg-gradient-to-r from-blue-600/20 to-cyan-600/20 rounded-3xl p-8 border border-blue-500/20'>
             <h3 className='text-2xl font-bold text-white mb-4'>
 
-<<<<<<< HEAD
-=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
               Ready to Join Our Success Stories?
             </h3>
             <p className='text-white/70 mb-6 max-w-2xl mx-auto'>
@@ -522,18 +469,12 @@ const EnhancedTestimonialsSection: React.FC = () => {_const testimonials: Testim
 
               <div className="absolute inset-0 bg-gradient-to-br from-blue-500/0 via-blue-400/5 to-cyan-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl" />
             </div>
-<<<<<<< HEAD
-          ))}
-        </div>
-=======
+
 
           ))}
         </div>
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* CTA Section */}
         <div className="text-center mt-16">
@@ -581,7 +522,7 @@ const EnhancedTestimonialsSection: React.FC = () => {_const testimonials: Testim
             </div>
           </div>
         </div>
-<<<<<<< HEAD
+
 className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10">;
                     </div>                  </div>;
                 </div>;
@@ -648,66 +589,22 @@ className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full f
         </div>;
 
         {/* Trust Indicators */}
-        <div className='mt - 16 text - center'>;
-          <div className='inline - flex items - center gap - 8 text - white / 60 text - sm'>;
-            <div className='flex items - center gap - 2'>;
-              <CheckCircle className='w - 4 h - 4 text - green - 400' />;
-              <span > Enterprise - grade security</span>;
-            </div>              <span > Enterprise - grade security</span>;
-            </div>;
-            <div className="flex items - center gap - 2">;
-              <TrendingUp className="w - 4 h - 4 text - blue - 400" />;
-              <span > Proven ROI</span>;
-            </div>;
-            <div className='flex items - center gap - 2'>;
-              <TrendingUp className='w - 4 h - 4 text - blue - 400' />;
-              <span > Proven ROI</span>;
-            </div>;
-            <div className='flex items - center gap - 2'>;
-              <Users className='w - 4 h - 4 text - purple - 400' />              <span > Global support</span>            <div className="flex items - center gap - 2">;
-              <Users className="w - 4 h - 4 text - purple - 400" />;
-              <span > Global support</span>;
 
-            </div>;
-          </div>;
-        </div>;
-      </div>;
-
-
-};
-export default EnhancedTestimonialsSection;  );
-};
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default EnhancedTestimonialsSection;
 
 
-=======
-    </section>);
-}
-;
-export default EnhancedTestimonialsSection);
-}
-;
-export default EnhancedTestimonialsSection;
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-  );
-}
-};
+
 
 export default EnhancedTestimonialsSection;  )
 }
 export default EnhancedTestimonialsSection;
 
-<<<<<<< HEAD
+
 export default EnhancedTestimonialsSection;
-export default EnhancedTestimonialsSection;
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+

@@ -1,7 +1,7 @@
 function ClientDashboardContent() {;
   const [activeTab, setActiveTab] = useState<JobStatus | "all">("all");
   const { jobs, isLoading } = useJobs();
-<<<<<<< HEAD
+
   const [selectedJobId, setSelectedJobId] = useState<string | null>(null),
   const [selectedJobTitle, setSelectedJobTitle] = useState<string>(""),
   const isMobile = null;
@@ -97,12 +97,7 @@ function ClientDashboardContent() {;
   const [selectedJobTitle, setSelectedJobTitle] = useState<string>(""),;
   const isMobile = useIsMobile(),;
   const onboardingStatus = useOnboardingStatus(),;
-=======
-  const [selectedJobId, setSelectedJobId] = useState<string | null>(null);
-  const [selectedJobTitle, setSelectedJobTitle] = useState<string>("");
-  const isMobile = useIsMobile();
-  const onboardingStatus = useOnboardingStatus();
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
   const showAdvanced =;
     onboardingStatus && onboardingStatus.jobPosted &&;
     onboardingStatus && onboardingStatus.inviteSent &&;
@@ -230,10 +225,9 @@ if ( {) {
             </Button>;
           </div>;
         </div>;
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 
 
@@ -257,10 +251,9 @@ if ( {) {
                 <TabsTrigger value="closed" className={isMobile ? 'flex-1' : ''}>Closed</TabsTrigger>
               </TabsList>
               
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 
               <TabsContent value="all" className="mt-0">
@@ -280,7 +273,7 @@ if ( {) {
               </TabsContent>
             </Tabs>
           </div>
-<<<<<<< HEAD
+
           <div>
             <div className="sticky top-4 space-y-6">
               {/* Active Projects Card */}
@@ -355,46 +348,7 @@ return (<> <SEO title="Client Dashboard | Zion AI Marketplace" description="Mana
           
           <div>
             <div className="sticky top-4 space-y-6">
-=======
 
-        {/* New Onboarding Steps */}
-        <div className="mb - 8">;
-          <ClientOnboardingSteps />;
-          {show_advanced && (
-            <div className="mt - 6">;
-              <AdvancedOnboardingSteps />;
-            </div>)}
-        </div>;
-        <div className="grid grid - cols - 1 lg:grid - cols - 3 gap - 8">;
-          <div className="lg:col - span - 2">;
-            <Tabs default_value="all" onValueChange={(value, ) => setActiveTab (value as JobStatus | "all")}>;
-              <TabsList className={`mb - 6 ${is_mobile ? 'w - full' : ''}`}>;
-                <TabsTrigger value="all" className={is_mobile ? 'flex - 1' : ''}>All</TabsTrigger>;
-                <TabsTrigger value="new" className={is_mobile ? 'flex - 1' : ''}>New</TabsTrigger>;
-                <TabsTrigger value="in_progress" className={is_mobile ? 'flex - 1' : ''}>Active</TabsTrigger>;
-                <TabsTrigger value="filled" className={is_mobile ? 'flex - 1' : ''}>Filled</TabsTrigger>;
-                <TabsTrigger value="closed" className={is_mobile ? 'flex - 1' : ''}>Closed</TabsTrigger>;
-              </TabsList>;
-              <TabsContent value="all" className="mt - 0">;
-                <JobsList onSelectJob={handleJobSelect} />;
-              </TabsContent>;
-              <TabsContent value="new" className="mt - 0">;
-                <JobsList filter="new" onSelectJob={handleJobSelect} />;
-              </TabsContent>;
-              <TabsContent value="in_progress" className="mt - 0">;
-                <JobsList filter="in_progress" onSelectJob={handleJobSelect} />;
-              </TabsContent>;
-              <TabsContent value="filled" className="mt - 0">;
-                <JobsList filter="filled" onSelectJob={handleJobSelect} />;
-              </TabsContent>;
-              <TabsContent value="closed" className="mt - 0">;
-                <JobsList filter="closed" onSelectJob={handleJobSelect} />;
-              </TabsContent>;
-            </Tabs>;
-          </div>;
-          <div>;
-            <div className="sticky top - 4 space - y-6">;
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               {/* Active Projects Card */}
               <ActiveProjectsCard />;
               {/* Upcoming Interviews Card */}

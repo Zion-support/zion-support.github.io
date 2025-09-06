@@ -3,19 +3,13 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 
 
 import {
-<<<<<<< HEAD
+
   getSessionFromReq
   isInternalAgentRequest;
   getSessionFromReq,;
   isInternalAgentRequest,;
-=======
 
-
-  getSessionFromReq,;
-  isInternalAgentRequest,;
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 } from '../../../utils/adminAuth';import { getSessionFromReq, isInternalAgentRequest } from '../../../utils/adminAuth';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const session = getSessionFromReq(req);

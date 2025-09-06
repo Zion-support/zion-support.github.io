@@ -27,68 +27,8 @@ import { useRouterReady, useRouteChange } from '@/hooks/useRouterReady';
 import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput";
 import { generateSearchSuggestions } from "@/data/marketplaceData";
 
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { useEffect, useState } from "react";
-import { useRouter  } from 'next/router';
-import { useRouterReady, useRouteChange  } from '@/hooks/useRouterReady';
-import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput",
-import { generateSearchSuggestions } from "@/data/marketplaceData",
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-import { SearchSuggestion } from "@/types/search";
-import {logErrorToProduction} from '@/utils/productionLogger';
-import {
-  Tabs;
-  TabsContent;
-  TabsList;
-<<<<<<< HEAD
-  TabsTrigger} from "@/components/ui/tabs",
-import { Loader2 } from 'lucide-react'
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-  const pageKey = `search-${routeKey}-${router.asPath}`
-import { useRouter } from 'next/router'
-import { useRouterReady, useRouteChange } from '@/hooks/useRouterReady'
-import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput"
-import { generateSearchSuggestions } from "@/data/marketplaceData"
-import { SearchSuggestion } from "@/types/search"
-import {logErrorToProduction} from '@/utils/productionLogger'
-import {
-  Tabs
-  TabsContent
-  TabsList
-  TabsTrigger} from "@/components/ui/tabs"
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
-import { useEffect, useState } from "react",
-import { useRouter } from 'next/router',
-import { useRouterReady, useRouteChange } from '@/hooks/useRouterReady',
-import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput",
-import { generateSearchSuggestions } from "@/data/marketplaceData",
-import { SearchSuggestion } from "@/types/search",
-import {logErrorToProduction} from '@/utils/productionLogger',
-import {
-  Tabs,
-  TabsContent,
-  TabsList,
-  TabsTrigger} from "@/components/ui/tabs",
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-import { Loader2 } from 'lucide-react'
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -128,8 +68,7 @@ interface SearchResult {
   description: string
 }
 function highlight(text: string, term: string) {
-<<<<<<< HEAD
-=======
+
 
 
   TabsTrigger} from "@/components/ui/tabs";
@@ -397,7 +336,7 @@ export default function SearchPage() {;
     }
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
   },;
   const handleSubmit = (e: React.FormEvent) => {;
     e.preventDefault(),;
@@ -407,10 +346,7 @@ export default function SearchPage() {;
   },
 
 
-<<<<<<< HEAD
 
-
-=======
   const handleSubmit = (e: React && React.FormEvent) => {;
     e && e.preventDefault();    if (query && query.trim()) {;
       router && router.push(`/search?q=${encodeURIComponent(query && query.trim())}`);
@@ -420,7 +356,7 @@ export default function SearchPage() {;
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
   return (
     <div key={pageKey}>
       <main className="container mx-auto px-4 py-8">
@@ -440,10 +376,9 @@ export default function SearchPage() {;
               router.push(`/search?q=${encodeURIComponent(searchTerm)}`);
             }}
             searchSuggestions={suggestions}
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 
             placeholder="Search talent, jobs, and projects..."
@@ -575,7 +510,7 @@ export default function SearchPage() {;
             </TabsContent>
           </Tabs>
         )}
-<<<<<<< HEAD
+
       </main>
     </div>
   )
@@ -591,13 +526,7 @@ if (query.trim () ) {
   setResults ([])
 return
 return;
-=======
 
-
-return;
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }setLoading (true)
 try {
   const res = await fetch (`/api/search?query=$ {
@@ -835,7 +764,7 @@ router.push (`/search?q=$ {
           transition={{ duration: 0.6, delay: 0.4 }}
           className="max - w-6xl mx -auto">
           {/* Results Count */}
-<<<<<<< HEAD
+
           <div  className="mb-6">
             <p className="text-slate -300">
               {searchQuery ? `Found ${filteredResults.length} results for "${searchQuery}"` : `Showing ${filteredResults.length} items`}
@@ -870,10 +799,7 @@ router.push (`/search?q=$ {
     </>
   )
 }
-=======
 
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 ;
 
 

@@ -1,11 +1,5 @@
-<<<<<<< HEAD
-import { useState, useEffect  } from 'react';
-import { supabase } from "@/integrations/supabase/client";
-=======
 
-import {useState, useEffect} from 'react';
-import { supabase } from '@/integrations / supabase / client';
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 interface PricingSuggestionAnalytics {
   total_suggestions: number;
   acceptance_rate: number;
@@ -20,30 +14,17 @@ interface PricingSuggestionAnalytics {
     actual_value?: number;
     accepted: boolean;
 
-<<<<<<< HEAD
+
     createdAt: string
     type: 'client' | 'talent'
   }[];
   isLoading: boolean
 import { useState, useEffect } from 'react',
 import { supabase } from "@/integrations/supabase/client",
-import {useState, useEffect} from 'react';
-import {supabase} from "@/integrations/supabase/client";
-import { useState, useEffect } from 'react',
-import { supabase } from "@/integrations/supabase/client",
-=======
-
-import { useState, useEffect } from 'react',
-import { supabase } from "@/integrations/supabase/client",
-=======
-import {useState, useEffect} from 'react';
-import {supabase} from "@/integrations/supabase/client";
-=======
-import { useState, useEffect } from 'react',
-import { supabase } from "@/integrations/supabase/client",
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 interface PricingSuggestionAnalytics {
   totalSuggestions: number,
   acceptanceRate: number,
@@ -174,14 +155,12 @@ export function usePricingSuggestionAnalytics(days = 30) {
     fetchAnalytics()
   }, [days]);
 
-<<<<<<< HEAD
-  return analytics
-};
-=======
+
+
+
 };
 
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
         console.error("Error fetching pricing suggestion analytics:", error),
         setAnalytics({
           ...analytics,
@@ -284,14 +263,11 @@ if (throw error) {
   }, [days]);
 ;
   return analytics;
-<<<<<<< HEAD
-}
-}
-=======
-
 
 }
+}
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba

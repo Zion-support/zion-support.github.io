@@ -16,7 +16,7 @@ function TransactionHistory() {
 if (return []) {
   $2
 }
-<<<<<<< HEAD
+
 export function TransactionHistory() {
   const { user } = useAuth();
   const { toast } = useToast();
@@ -640,20 +640,6 @@ export function TransactionHistory() {;
         )}
       </div>;
     </div>;
-=======
-          provider:profiles ! provider_id (display_name);
-      query = query.order ('created_at', { ascending: false }),
-    },
-              const is_client = user?.id === transaction.user_id;              const is_pending =;
-                transaction.status === 'pending' || transaction.status === 'in_escrow';
-              const isInEscrow = transaction.in_escrow;
-              const can_release = !is_client && is_pending && isInEscrow;
-              const can_cancel = is_client && is_pending;
-              const can_refund = is_client && transaction.status === 'released';
-              const counterparty_name = is_client;
-                ? transaction.provider?.display_name || 'Service Provider';
-                : 'Client';
-}
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
   );
 }

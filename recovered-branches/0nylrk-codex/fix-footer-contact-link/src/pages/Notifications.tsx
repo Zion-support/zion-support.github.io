@@ -1,6 +1,5 @@
 
-<<<<<<< HEAD
-=======
+
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -23,21 +22,9 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React, { useState } from 'react';
 import {AppHeader} from "@/layout/AppHeader";
 import {Footer} from "@/components/Footer";
@@ -72,12 +59,11 @@ import { Skeleton } from "@/components/ui/skeleton",
 import { SEO } from "@/components/SEO",
 import { useNavigate } from "react-router-dom",
 import { cn } from "@/lib/utils",
-<<<<<<< HEAD
-=======
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 const getNotificationIcon = (type: NotificationType, className: string = "h-5 w-5") => {
   switch (type) {
     case 'message':
@@ -193,61 +179,23 @@ const getNotificationIcon = (type: NotificationType, className: string = "h-5 w-
       return <Bell className={cn(className, "text-gray-500")} />;
 
   }
-=======
-    case 'system':;
-      return <Badge className="bg-yellow-500">System</Badge>,;
-    default:;
-      return <Badge variant="outline">Notification</Badge>;
-  }
-};
-
-const NotificationCard: React.FC<{;
-  notification: {;
-    id: string,;
-    title: string,;
-    message: string,;
-    type: NotificationType,;
-    read: boolean,;
-    created_at: string,;
-    action_url?: string;
-    action_text?: string;
-  };
-  onMarkAsRead: (id: string) => Promise<void>,;
-  onDismiss: (id: string) => Promise<void>;
-}> = ({ notification, onMarkAsRead, onDismiss }) => {;
-  const navigate = useNavigate();
-
-  const handleAction = () => {;
-
-    if (!notification.read) {;
-      onMarkAsRead(notification.id);
-<<<<<<< HEAD
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
     }
 
     if (notification && notification.action_url) {;
       navigate(notification && notification.action_url);
     }
-<<<<<<< HEAD
-  }
-  },
-=======
 
 
-  },
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   };
   },
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
   
   return (
     <divclassName={cn(
@@ -325,96 +273,7 @@ export default function NotificationsPage() {
 
     filteredNotifications;
     unreadCount;
-=======
-    action_text?: string;
-  }
-  onMarkAsRead: (id: string) => Promise < void>,
-  on_dismiss: (id: string) => Promise < void>;
-}> = ({ notification, onMarkAsRead, on_dismiss }) => {
-  const navigate = use_navigate ();
-;
-  const handle_action = () =>: any {
-    // Check condition
-if ( {) {
-  $2
-}
-      onMarkAsRead (notification.id);
-    }
-    // Check condition
-if ( {) {
-  $2
-}
-      navigate (notification.action_url);
-    }
-  }
-;
-  return (
-    <div className={cn (
-      "border rounded - lg shadow - sm p - 4 mb - 3 group transition - colors";
-      notification.read ? "border - zion - blue - light bg - zion - blue - dark / 10" : "border - zion - cyan bg - zion - blue - dark / 30")}>;
-      <div className="flex items - start gap - 4">;
-        <div className="mt - 1">;
-          {getNotificationIcon (notification.type, "h - 6 w - 6")}
-        </div>;
-        <div className="flex - 1">;
-          <div className="flex justify - between">;
-            <div className="flex flex - col">;
-              <h3 className="font - medium text - white">{notification.title}</h3>;
-              <div className="flex items - center gap - 2 mb - 2">;
-                {getNotificationTypeBadge (notification.type)}
-                <span className="text - xs text - zion - slate - light">;
-                  {formatDistanceToNow (new Date (notification.created_at), { add_suffix: true })}
-                </span>;
-                {!notification.read && (
-                  <Badge variant="outline" className="bg - zion - cyan bg - opacity - 20 text - zion - cyan text - xs">New</Badge>)}
-              </div>;
-            </div>;
-            <div className="flex items - center gap - 2">;
-              {!notification.read && (
-                <Button;
-                  variant="ghost";
-                  size="sm";
-                  className="h - 8 w - 8 p - 0";
-                  on_click={() => onMarkAsRead (notification.id)}
-                >;
-                  <Check className="h - 4 w - 4 text - green - 400" />;
-                  <span className="sr - only">Mark as read</span>;
-                </Button>)}
-              <Button;
-                variant="ghost";
-                size="sm";
-                className="h - 8 w - 8 p - 0";
-                on_click={() => on_dismiss (notification.id)}
-              >;
-                <Trash2 className="h - 4 w - 4 text - red - 400" />;
-                <span className="sr - only">Dismiss</span>;
-              </Button>;
-            </div>;
-          </div>;
-          <p className="text - zion - slate - light mb - 3">{notification.message}</p>;
-          {notification.action_url && notification.action_text && (
-            <Button;
-              variant="outline";
-              size="sm";
-              className="mt - 1 text - zion - cyan border - zion - cyan hover:bg - zion - cyan hover:text - black";
-              on_click={handle_action}
-            >;
-              {notification.action_text}
-              <ChevronRight className="ml - 1 h - 4 w - 4" />;
-            </Button>)}
-        </div>;
-      </div>;
-    </div>);
-}
-;
-export default /**
- * NotificationsPage - Function description
- */
-function NotificationsPage() {
-  const {
-    filtered_notifications;
-    unread_count;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
     markAsRead;
     markAllAsRead;
     dismiss_notification;

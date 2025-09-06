@@ -1,12 +1,5 @@
-<<<<<<< HEAD
-=======
 
 
-
-
-
-import React from 'react';
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import {useState} from "react";
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
@@ -16,7 +9,7 @@ import {Button} from "@/components/ui/button";
 import {Input} from "@/components/ui/input";
 import {Select, SelectTrigger, SelectContent, SelectItem} from "@/components/ui/select";
 import {Search, Filter, ArrowDownAZ, ArrowUpZA} from "lucide-react";
-<<<<<<< HEAD
+
 import { useState } from "react",
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
@@ -117,7 +110,7 @@ export function CategoryListingPage({
 import { Select, SelectTrigger, SelectContent, SelectItem } from "@/components/ui/select",
 import { Search, Filter, ArrowDownAZ, ArrowUpZA } from "lucide-react",
 
-=======
+
 
 // Example listing type;
 interface Listing {;
@@ -126,19 +119,8 @@ interface Listing {;
   description: string,;
   category: string,;
 
-=======
-import { useState } from './react';
-import { Header } from '@/components / Header';
-import { Footer } from '@/components / Footer';
-import { GradientHeading } from '@/components / GradientHeading';
-import { ListingScoreCard } from '@/components / ListingScoreCard';
-import { Button } from '@/components / ui / button';
-import { Input } from '@/components / ui / input';
-import { Select, SelectTrigger, SelectContent, SelectItem } from '@/components / ui / select';
-import { Search, Filter, ArrowDownAZ, ArrowUpZA } from './lucide-react';
-// Example listing type;
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 // Example listing type
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface Listing {
@@ -148,47 +130,8 @@ interface Listing {
   category: string,
 
 
-=======
-  subcategory?: string,
-  image?: string,
-  tags?: string[],
-  author?: string,
-  authorImage?: string,
-  aiScore?: number,
-  rating?: number,
-  reviewCount?: number,
-  price?: number | null,
-  createdAt: string
-<<<<<<< HEAD
-import { useState } from "react",;
-import { Header } from "@/components/Header",;
-import { Footer } from "@/components/Footer",;
-import { GradientHeading } from "@/components/GradientHeading",;
-import { ListingScoreCard } from "@/components/ListingScoreCard",;
-import { Button } from "@/components/ui/button",;
-import { Input } from "@/components/ui/input",;
-import { Select, SelectTrigger, SelectContent, SelectItem } from "@/components/ui/select",;
-import { Search, Filter, ArrowDownAZ, ArrowUpZA } from "lucide-react",;
-// Example listing type;
-interface Listing {;
-  id: string,;
-  title: string,;
-  description: string,;
-  category: string,;
-  subcategory?: string,;
-  image?: string,;
-  tags?: string[],;
-  author?: string,;
-  authorImage?: string,;
-  aiScore?: number,;
-  rating?: number,;
-  reviewCount?: number,;
-  price?: number | null,;
-  createdAt: string;
-=======
 
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 }
 ;
 
@@ -199,23 +142,8 @@ interface CategoryListingPageProps {;
   sortOptions?: { label: string, value: string }[],;
   filterOptions?: { label: string, value: string }[];
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
-  return (
-    <>
-      <Header />
-      <div className="min-h-screen bg-zion-blue py-12 px-4">
-        <div className="container mx-auto">
-          <div className="text-center mb-12">
-            <GradientHeading>{title}</GradientHeading>
-            <p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto">
 ;
 export function CategoryListingPage({;
   title,;
@@ -278,12 +206,12 @@ export function CategoryListingPage({;
           <div className="text-center mb-12">;
             <GradientHeading>{title}</GradientHeading>;
             <p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto">;
-=======
 
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
               {description}
 
             </p>;
@@ -299,7 +227,7 @@ export function CategoryListingPage({;
                   type="text"
                   placeholder="Search listings..."
                   value={searchQuery}
-<<<<<<< HEAD
+
                   onChange={(e: React.ChangeEvent<HTMLInputElement>) => setSearchQuery(e.target.value)}
                   className="pl-10 bg-zion-blue border border-zion-blue-light text-white"
                 />
@@ -311,21 +239,7 @@ export function CategoryListingPage({;
                       <ArrowDownAZ className="mr-2 h-4 w-4" />
                     ) : selectedSort === 'z-a' ? (
                       <ArrowUpZA className="mr-2 h-4 w-4" />
-=======
 
-                  onChange={(e: React && React.ChangeEvent<HTMLInputElement>) => setSearchQuery(e && e.target.value)}
-                  className="pl-10 bg-zion-blue border border-zion-blue-light text-white";
-                />;
-              </div>;
-
-              <Select value={selectedSort} onValueChange={setSelectedSort}>;
-                <SelectTrigger className="bg-zion-blue border border-zion-blue-light text-white">;
-                  <div className="flex items-center">;
-                    {selectedSort === 'a-z' ? (;
-                      <ArrowDownAZ className="mr-2 h-4 w-4" />;
-                    ) : selectedSort === 'z-a' ? (;
-                      <ArrowUpZA className="mr-2 h-4 w-4" />;
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                     ) : null}
                     <span>
                       {sortOptions.find(option => option.value === selectedSort)?.label |'Sort By'}
@@ -367,38 +281,17 @@ export function CategoryListingPage({;
             </p>
           </div>
 
-<<<<<<< HEAD
-=======
-                </SelectContent>;
-              </Select>;
-            </div>;
-          </div>;
 
 
 
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
           {/* Listings Grid */}
           {processedListings.length > 0 ? (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {processedListings.map((listing) => (
                 <ListingScoreCard
-=======
-          {/* Results Count */}
-          <div className="mb - 6">;
-            <p className="text - zion - slate - light">;
-              Showing {processed_listings.length} results;
-              {search_query && ` for "${search_query}"`}
-            </p>;
-          </div>;
-          {/* Listings Grid */}
-          {processed_listings.length > 0 ? (
-            <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6">;
-              {processed_listings.map ((listing) => (
-                <ListingScoreCard;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
                   key={listing.id}
                   title={listing.title}
                   description={listing.description}
@@ -448,39 +341,17 @@ export function CategoryListingPage({;
                 Clear all filters
               </Button>
             </div>
-<<<<<<< HEAD
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
           )}
         </div>;
       </div>;
       <Footer />;
     </>;
   );
-=======
-                  review_count={listing.review_count}
-                />))}
-            </div>) : (
-            <div className="text - center py - 20">;
-              <h3 className="text - xl font - bold text - white mb - 2">No listings found</h3>;
-              <p className="text - zion - slate - light mb - 6">Try adjusting your filters or search query</p>;
-              <Button;
-                variant="outline";
-                on_click={() => {
-                  setSearchQuery ("");
-                  setSelectedFilter (filter_options[0].value);
-                }}
-                className="border - zion - purple text - zion - purple hover:bg - zion - purple / 10";
-              >;
-                Clear all filters;
-              </Button>;
-            </div>)}
-        </div>;
-      </div>;
-      <Footer />;
-    </>);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
 }

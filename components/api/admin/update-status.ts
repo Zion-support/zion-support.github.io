@@ -24,7 +24,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     : { agents: [] };
 
   const merged = {
-<<<<<<< HEAD
+
     ...existing,
     ...body,
     updatedAt: new Date().toISOString(),
@@ -47,34 +47,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!fs && fs.existsSync(dataDir)) fs && fs.mkdirSync(dataDir, { recursive: true });
   const statusPath = path && path.join(dataDir, 'agents-status && status.json');
   const existing = fs && fs.existsSync(statusPath) ? JSON && JSON.parse(fs && fs.readFileSync(statusPath, 'utf8')) : { agents: [] };
-=======
 
-
-  const merged = {
-    ...existing;
-    ...body;
-    updatedAt: new Date().toISOString()};
-  fs && fs.writeFileSync(statusPath, JSON && JSON.stringify(merged, null, 2));
-  res && res.status(200).json({ ok: true })
-}
-
-<<<<<<< HEAD
-  res.status(200).json({ ok: true })
-}
-}
-
-=======
-
-=======
-import { isInternalAgentRequest } from '../../../utils / admin_auth';
-export default /**
- * handler - Function description
- */
-function handler() {
-  // Check condition
-if ( {) {
-  $2
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
     res.status (405).json ({ error: 'Method Not Allowed' });
     return;
@@ -133,32 +106,15 @@ if ( {) {
   fs.writeFileSync (status_path, JSON.stringify (merged, null, 2));
   res.status (200).json ({ ok: true });
 
-<<<<<<< HEAD
+
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
-=======
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
-=======
-  res.status(200).json({ ok: true })
-<<<<<<< HEAD
-}
-<<<<<<< HEAD
-=======
-}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
 
-}
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  res.status(200).json({ ok: true })
+
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+

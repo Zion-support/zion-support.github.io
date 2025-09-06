@@ -1,95 +1,8 @@
 // Mock source map utility
 export function getSourceMapWithExistence() {
   return {
-<<<<<<< HEAD
-<<<<<<< HEAD
-    nodes: []
-    edges: []
-  }
-    nodes: [],
-    edges: [];
-  };
-=======
-    nodes: []
-    edges: []
-  }
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-}
-export function getGitStatus() {
-  return {
-<<<<<<< HEAD
-    connected: false
-    branch: 'main'
-  }
-}
-
-  return nodes && nodes.map(markExistenceRecursive);
 
 
-function buildZionSourceMap(): SourceNode[] {
-  return [
-    {
-      id: 'src',
-      name: 'src',
-      type: 'directory',
-      path: 'src',
-      exists: false,
-      children: [
-        {
-          id: 'components',
-          name: 'components',
-          type: 'directory',
-          path: 'src/components',
-          exists: false
-        },
-        {
-          id: 'pages',
-          name: 'pages',
-          type: 'directory',
-          path: 'src/pages',
-          exists: false
-        },
-        {
-          id: 'utils',
-          name: 'utils',
-          type: 'directory',
-          path: 'src/utils',
-          exists: false
-        }
-      ]
-    }
-  ];
-}
-
-function markExistenceRecursive(node: SourceNode): SourceNode {
-  const exists = fs.existsSync(node.path);
-  return {
-    ...node,
-    exists,
-    children: node.children?.map(markExistenceRecursive)
-  };
-}
-
-=======
-export function getSourceMapWithExistence(): SourceNode[] {
-  const nodes = buildZionSourceMap();
-  return nodes.map(markExistenceRecursive);
-}
-export interface DeployTemplateResult {
-<<<<<<< HEAD
-=======
-=======
-
-    nodes: [],
-    edges: [];
-  };
-
-}
-export function getGitStatus() {
-  return {
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     connected: false,
     branch: 'main';
   };
@@ -101,11 +14,10 @@ export function getSourceMapWithExistence(): SourceNode[] {;
 }
 
 export interface DeployTemplateResult {;
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
   createdPaths: string[];
   skippedPaths: string[];
 >>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
@@ -144,51 +56,17 @@ export function deployBasicTemplateForPath(
     skippedPaths.push(readmeFile);
   }
 
-  return { createdPaths, skippedPaths }
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
   return { createdPaths, skippedPaths };
 
 }
-=======
-  return { createdPaths, skippedPaths }
 
-=======
-
-
-  created_paths: string[];
-  skipped_paths: string[];
-;
-export function ensure_directory (dir_path: string): void {
-  if () {) {
-  $2
-}
-}
-}
-    const readme = `# ${path.basename (absolute_dir)}\n\n_this module is part of the Zion OS modular source tree. Customize as needed.\n`;
-    fs.writeFileSync (readme_file, readme);
-    created_paths.push (readme_file);
-  } else {
-    skipped_paths.push (readme_file);
-  }
-  return { created_paths, skipped_paths }
-;
-
-<<<<<<< HEAD
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba

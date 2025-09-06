@@ -49,17 +49,7 @@ import { Slider } from '@/components / ui / slider';
 import { Switch } from '@/components / ui / switch';
 import { Input } from '@/components / ui / input';
 import {
-<<<<<<< HEAD
-  Select
-  SelectContent
-  SelectItem
-  SelectTrigger
-  SelectValue
-} from '@/components/ui/select'
-import { X, Filter } from 'lucide-react'
 
-
-=======
   Select,
   SelectContent,
   SelectItem,
@@ -76,7 +66,7 @@ import { X, Filter } from 'lucide-react';
 } from '@/components / ui / sheet';
 import { Badge } from '@/components / ui / badge';
 import { Label } from '@/components / ui / label';
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 interface BrowseFiltersProps {
   type: 'jobs' | 'talents';
 export /**
@@ -209,18 +199,14 @@ import { Slider } from "@/components/ui/slider",
 import { Switch } from "@/components/ui/switch",
 import { Input } from "@/components/ui/input",
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
-<<<<<<< HEAD
-=======
 
 
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { X, Filter } from 'lucide-react'
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetFooter, SheetTrigger } from "@/components/ui/sheet",
 import { Badge } from "@/components/ui/badge",
 import { Label } from "@/components/ui/label",
 interface BrowseFiltersProps {
-<<<<<<< HEAD
+
   type: 'jobs' | 'talents'
 export function BrowseFilters({ type }: BrowseFiltersProps) {
   const [activeFilters, setActiveFilters] = useState<string[]>([])
@@ -258,10 +244,7 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {;
     setActiveFilters(activeFilters.filter(f => f !== filter))
   },
   
-=======
 
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return (
     <div className="space-y-3">
       <div className="flex justify-between items-center px-4">
@@ -282,10 +265,9 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {;
               
               <div className="py-6 space-y-6">
                 {type === "jobs" ? (
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
                   <>
                     <div className="space-y-2">
@@ -300,10 +282,9 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {;
                     <div className='space-y-2'>
                     
                     <div className="space-y-2">
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
                       <Label>Experience Level</Label>
                       <div className="flex gap-2 flex-wrap">
@@ -344,10 +325,9 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {;
                         className="my-4"
                       />
                       <div className="flex justify-between text-xs text-muted-foreground">
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
                         <span>0+ years</span>
                         <span>20+ years</span>
@@ -375,10 +355,9 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {;
                 <div className='space-y-2'>
                 
                 <div className="space-y-2">
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 
                   <Label>Salary Range</Label>
@@ -391,10 +370,9 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {;
                 <div className='space-y-2'>
                 
                 <div className="space-y-2">
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 
                   <Label>Skills</Label>
@@ -434,10 +412,9 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {;
 
                 
                 <div className="flex items-center justify-between">
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 
                   <Label>Only show verified profiles</Label>
@@ -445,10 +422,9 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {;
                 </div>
               </div>
               
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 
               <SheetFooter>
@@ -458,10 +434,9 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {;
             </SheetContent>
           </Sheet>
           
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 
           <Select>
@@ -474,10 +449,9 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {;
               <SelectItem value="salary">Highest Pay</SelectItem>
             </SelectContent>
           </Select>
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
                       className='cursor-pointer hover:bg-primary/5 justify-start'>;
                       Node && Node.js;
@@ -584,10 +558,9 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {;
     </div>;
   );
 };
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
           
           {activeFilters.map((filter) => (

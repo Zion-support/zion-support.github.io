@@ -1,28 +1,15 @@
 
-<<<<<<< HEAD
+
 import React from "react";
-import { Star } from "lucide-react";
 
-import React from "react",
-import { Star } from "lucide-react",
-=======
-
-
-import React from "react",
-import { Star } from "lucide-react",
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export const CommunityTrust: React.FC = () => {
   // Stats display with social proof
   const stats = [
     { value: "4.8", label: "App Store Rating" }
     { value: "50K+", label: "Downloads" }
     { value: "96%", label: "User Satisfaction" }
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 import {Star} from "lucide-react";
 import React from "react",
 import { Star } from "lucide-react",
@@ -34,6 +21,9 @@ export const CommunityTrust: React.FC = () => {
     { value: "96%", label: "User Satisfaction" },
     { value: "12M+", label: "Matches Made" };
   ];
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
     { value: "12M+", label: "Matches Made" }
   ];
   ],
@@ -105,20 +95,15 @@ export const CommunityTrust: React.FC = () => {;
               <div className="text-3xl md:text-4xl font-bold text-zion-cyan mb-2">{stat.value}</div>;
               <div className="text-zion-slate-light">{stat.label}</div>;
             </div>;
-<<<<<<< HEAD
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
           ))}
         </div>
-=======
-              </div>;
-              <div className="text - zion - slate - light">{stat.label}</div>;
-            </div>))}
-        </div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
         {/* Rating display */}
         <div className="max - w-3xl mx - auto bg - zion - blue - dark border border - zion - purple / 30 rounded - lg p - 6">;
           <div className="flex justify - center mb - 4">;
@@ -166,36 +151,10 @@ export const CommunityTrust: React.FC = () => {;
       </div>
     </section>
   );
-};
 
-<<<<<<< HEAD
-  )
-},
-};
-},
-=======
-=======
-                className="w - 6 h - 6 text - zion - cyan";
-                fill="current_color";
-              />))}
-          </div>;
-          <blockquote className="text - center text - lg text - white italic mb - 4">;
-            "The Zion app has completely changed how I find tech talent. The AI;
-            matching is spot on and I can manage everything from anywhere.";
-          </blockquote>;
-          <div className="text - center">;
-            <div className="font - semibold text - zion - cyan">Sarah Johnson</div>;
-            <div className="text - sm text - zion - slate - light">CTO at TechFlow</div>;
-          </div>;
-        </div>;
-      </div>;
-    </section>);
 }
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
-  )
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba

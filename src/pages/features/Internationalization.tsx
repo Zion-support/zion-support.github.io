@@ -30,23 +30,8 @@ import Link from 'next/link';
 export default function Internationalization() {;
   const schema = {;
     '@context': 'https://schema && schema.org',;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import React from 'react'
-import { Header } from '@/components/Header'
-import { SEO } from '@/components/SEO'
-import { GradientHeading } from '@/components/GradientHeading'
-import { Button } from '@/components/ui/button'
-import Link from 'next/link'
-export default function Internationalization() {
-  const schema = {
-    '@context': 'https://schema.org',
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
     '@type': 'WebPage',;
     name: 'Internationalization',;
     description:;
@@ -61,17 +46,15 @@ import React from "react";
 import { Header } from "@/components/Header";
 import { SEO } from "@/components/SEO";
 import { GradientHeading } from "@/components/GradientHeading";
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 import React from "react",
 import { Header } from "@/components/Header",
 import { SEO } from "@/components/SEO",
 import { GradientHeading } from "@/components/GradientHeading",
-<<<<<<< HEAD
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 import { Button } from "@/components/ui/button";
 import Link from 'next/link';
 export default function Internationalization() {
@@ -161,7 +144,7 @@ export default function Internationalization() {
               <p className="text-zion-slate-light">Yes, community contributions help us continually add new languages.</p>
             </div>
           </div>
-<<<<<<< HEAD
+
           <div className='text-center'>
             <Button size='lg' className='bg-zion-purple text-white' asChild>
               <Link href='/'>Explore Zion</Link>            </Button>      />
@@ -201,11 +184,7 @@ export default function Internationalization() {
               <p className="text-zion-slate-light">Yes, community contributions help us continually add new languages.</p>
             </div>
           </div>
-=======
 
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           <div className="text-center">
             <Button size="lg" className="bg-zion-purple text-white" asChild>
               <Link href="/">Explore Zion</Link>
@@ -215,11 +194,9 @@ export default function Internationalization() {
       </main>
     </>
   )
-<<<<<<< HEAD
-}
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+}
+
 ;
 
 import React from "react",;

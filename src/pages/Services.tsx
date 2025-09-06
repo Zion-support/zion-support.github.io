@@ -1,4 +1,5 @@
 import React from 'react';
+
 import { Link } from 'react-router-dom';
 
 import { 
@@ -172,6 +173,7 @@ const Services = () => {
             >
               View Pricing
             </Link>
+
           </div>
         </div>
 
@@ -274,6 +276,7 @@ const Services = () => {
       </div>
     </div>
   );
+
 };
 
 
@@ -312,4 +315,5 @@ function ServiceCard({
 }
 
 export default ServicesPage;
+
 

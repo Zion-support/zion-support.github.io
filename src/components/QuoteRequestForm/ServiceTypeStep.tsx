@@ -1,6 +1,6 @@
 }
 
-<<<<<<< HEAD
+
 
 export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepProps) {
   const [searchQuery, setSearchQuery] = useState(""),
@@ -186,8 +186,7 @@ const listingSchema = z.object({
       const maxRetries = 3
   const sourceListings = listings
 }
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
   )
 }

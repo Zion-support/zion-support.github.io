@@ -15,14 +15,13 @@ return (
 
   )
 
-<<<<<<< HEAD
+
 import React from 'react',;
 import { useRouter } from 'next/router',;
 import { Button } from '@/components/ui/button';
 import { ArrowLeft } from 'lucide-react';
 interface ProjectHeaderProps {;
   title: string;
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 }
 ;

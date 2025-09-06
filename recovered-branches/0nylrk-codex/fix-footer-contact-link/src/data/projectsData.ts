@@ -1,9 +1,5 @@
-<<<<<<< HEAD
-import { Project } from "@/types/projects";
-export const PROJECTS: Project[] = [
-  {
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 
     talent_profile: {
@@ -24,14 +20,16 @@ export const PROJECTS: Project[] = [
 ];
 import { Project } from "@/types/projects",
 export const PROJECTS: Project[] = [
+
+
 import { Project } from '@/types/projects';
 import { Project } from "@/types/projects",
 export const PROJECTS: Project[] = [
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
   {
     id: "project-1",
     client_id: "client-1",
@@ -48,18 +46,8 @@ export const PROJECTS: Project[] = [
       description: "Develop dashboards using React and integrate ML models"
     },
     talent_profile: {
-<<<<<<< HEAD
-      full_name: 'Alexandra Chen',
-      professional_title: 'Senior AI Engineer',
-    },
-  },
-];
-}];      title: "AI Dashboard Development";
-      description: "Develop dashboards using React and integrate ML models"
-    };
-    talent_profile: {
-      full_name: "Alexandra Chen";
-      professional_title: "Senior AI Engineer"
+
+
       full_name: "Alexandra Chen",
       professional_title: "Senior AI Engineer"
 import { Project } from "@/types/projects",;
@@ -82,11 +70,11 @@ export const PROJECTS: Project[] = [;
     talent_profile: {;
       full_name: "Alexandra Chen";
       professional_title: "Senior AI Engineer";
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
     }
   }
 ];

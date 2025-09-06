@@ -24,70 +24,10 @@ export function ApplicationsTracker() {
 
 
 
-=======
-import { useState } from "react",
-import { useJobApplications } from "@/hooks/useJobApplications",
-import { ApplicationCard } from "./ApplicationCard",
-import { LoadingState } from "./LoadingState",
-import { EmptyState } from "./EmptyState",
-import { ErrorState } from "./ErrorState",
-import { Button } from "@/components/ui/button",
-import { ApplicationStatus } from "@/types/jobs",
-export function ApplicationsTracker() {
-  const { applications, isLoading, error } = useJobApplications(),
-  const [statusFilter, setStatusFilter] = useState<ApplicationStatus | 'all'>('all'),
-  
-  if (isLoading) {
-    return <LoadingState />;
-  }
-  if (error) {
-
-    return <ErrorState error={error} />;
-  }
-  if (applications.length === 0) {
-    return <EmptyState />;
-  }
-  const filteredApplications =
-    statusFilter === "all"
-      ? applications
-      : applications.filter((app) => app.status === statusFilter);
-
-    return <LoadingState />
-import { useState } from "react",;
-import { useJobApplications } from "@/hooks/useJobApplications",;
-import { ApplicationCard } from "./ApplicationCard",;
-import { LoadingState } from "./LoadingState",;
-import { EmptyState } from "./EmptyState",;
-import { ErrorState } from "./ErrorState",;
-import { Button } from "@/components/ui/button",;
-import { ApplicationStatus } from "@/types/jobs",;
-export function ApplicationsTracker() {;
-  const { applications, isLoading, error } = useJobApplications(),;
-  const [statusFilter, setStatusFilter] = useState<ApplicationStatus | 'all'>('all');
-  if (isLoading) {;
-    return <LoadingState />;
-  }
-;
-
-  if (error) {;
-    return <ErrorState error={error} />;
-  }
-
-  if (applications && applications.length === 0) {;
-    return <EmptyState />;
-  }
-
-  
-  const filteredApplications = statusFilter === 'all' 
-    ? applications
-    : applications.filter(app => app.status === statusFilter),
-  
-<<<<<<< HEAD
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
   return (
     <div className="space-y-6">;
       <div className="flex flex-wrap gap-2">;
@@ -142,24 +82,24 @@ export function ApplicationsTracker() {;
         </Button>
       </div>
       
-<<<<<<< HEAD
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
       <div className="grid gap-4 md:grid-cols-1 lg:grid-cols-2">
         {filteredApplications.map((application) => (
           <ApplicationCard key={application.id} application={application} />
         ))}
       </div>
       
-<<<<<<< HEAD
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
       {filteredApplications.length === 0 && (
         <div className="text-center p-8">
           <p className="text-muted-foreground">
@@ -167,32 +107,10 @@ export function ApplicationsTracker() {;
           </p>
         </div>
 
-=======
-import { useState  } from './react';
-import { useJobApplications  } from '@/hooks / useJobApplications';
-import { ApplicationCard  } from './ApplicationCard';
-import { LoadingState  } from './LoadingState';
-import { EmptyState  } from './EmptyState';
-import { ErrorState  } from './ErrorState';
-import { Button  } from '@/components / ui / button';
-import { ApplicationStatus  } from '@/types / jobs';
-export /**
- * ApplicationsTracker - Function description
- */
-function ApplicationsTracker() {
-  const { applications, is_loading, error } = useJobApplications ();
-  const [status_filter, setStatusFilter] = useState < ApplicationStatus | "all">(
-    "all",
-=======
-      )}
-    </div>
-    </div>;
-<<<<<<< HEAD
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
   );
 ;
   // Check condition

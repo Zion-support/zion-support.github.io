@@ -19,43 +19,15 @@ class ErrorBoundary extends React.Component {
 }
 import React, { useEffect, useState, useCallback } from 'react';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-
-=======
 import {
-<<<<<<< HEAD
-  Zap
-  Clock
-  TrendingUp
-  Activity
-  Gauge
-  Cpu
-  Database
-  Network;
-=======
-  Zap,
-  Clock,
-  TrendingUp,
-  Activity,
-  Gauge,
-  Cpu,
-  Database,;
-  Network,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 } from 'lucide-react';
 interface PerformanceMetrics {;
   loadTime: number;
-=======
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   Zap,
   Clock,
   TrendingUp,
@@ -65,10 +37,9 @@ interface PerformanceMetrics {;
 
   Database,;
   Network,;
-<<<<<<< HEAD
+
 } from 'lucide-react';
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 
 } from 'lucide-react';
@@ -300,238 +271,7 @@ if ( {) {
           font-family: 'Orbitron';
           font-display: swap;
 
-=======
-          font-family: 'Inter',
-          font-display: swap
 
-        }
-        @font-face {;
-          font-family: 'Orbitron';
-
-;
-  // Optimize fonts;
-  const optimize_fonts = useCallback (async () => {
-    setIsOptimizing (true);
-    setOptimizationStatus ('Optimizing fonts...');
-;
-    try {
-      // Add font - display: swap to improve font loading;
-      const style = document.create_element ('style'),
-      style.text_content = `;
-        @font - face {
-          font - family: 'Inter';
-          font - display: swap;
-        }
-        @font - face {
-          font - family: 'JetBrains Mono';        }
-        @font - face {
-          font - family: 'JetBrains Mono',
-          font - display: swap;
-        }
-        @font - face {
-          font - family: 'Orbitron';
-          font - display: swap;
-        }
-        @font - face {
-          font - family: 'Orbitron';
-          font - display: swap;        }          font - family: 'Orbitron',
-          font - display: swap;
-
-        }
-
-        @font-face {
-          font-family: 'Orbitron',
-          font-display: swap
-        }
-
-      `;
-
-
-          font-display: swap;        }          font-family: 'Orbitron',;
-          font-display: swap;
-        }
-      `;
-      document && document.head.appendChild(style);
-      setOptimizationStatus('Font optimization complete');
-
-
-      await new Promise(resolve => setTimeout(resolve, 800));
-    } catch (error) {;
-      setOptimizationStatus('Font optimization failed');
-      console && console.error('Font optimization error:', error);
-    } finally {;
-      setIsOptimizing(false);    }      // Simulate optimization delay;
-      await new Promise(resolve => setTimeout(resolve, 800));
-    } catch (error) {;
-      setOptimizationStatus('Font optimization failed');
-      console && console.error('Font optimization error:', error);
-    } finally {;
-      setIsOptimizing(false);
-
-=======
-      
-      // Simulate optimization delay
-      await new Promise(resolve => setTimeout(resolve, 800))
-      document.head.append_child (style);
-;
-      setOptimizationStatus ('Font optimization complete');
-;
-      // Simulate optimization delay;
-      await new Promise (resolve => set_timeout (resolve, 800));
-    } catch (error) {
-      setOptimizationStatus ('Font optimization failed');
-      console.error ('Font optimization error:', error);
-    } finally {
-      setIsOptimizing (false);    }      // Simulate optimization delay;
-      await new Promise (resolve => set_timeout (resolve, 800));
-
-    } catch (error) {
-      setOptimizationStatus ('Font optimization failed');
-      console.error ('Font optimization error:', error);
-    } finally {
-
-
-  // Optimize CSS and JavaScript;
-  const optimizeCode = useCallback(async () => {;
-    setIsOptimizing(true);
-    setOptimizationStatus('Optimizing code...');
-    try {;
-      // Add resource hints for critical resources;
-      const preloadLinks = [;
-        {;
-          rel: 'preload',;
-          href: '/fonts/inter-var && var.woff2',;
-          as: 'font',;
-          type: 'font/woff2',;
-          crossorigin: 'anonymous',;
-        },;
-        {;
-          rel: 'preload',;
-          href: '/fonts/jetbrains-mono-var && var.woff2',;
-          as: 'font',;
-          type: 'font/woff2',;
-          crossorigin: 'anonymous',;
-        },      ];        { rel: 'preload', href: '/fonts/inter-var && var.woff2', as: 'font', type: 'font/woff2', crossorigin: 'anonymous' },;
-        { rel: 'preload', href: '/fonts/jetbrains-mono-var && var.woff2', as: 'font', type: 'font/woff2', crossorigin: 'anonymous' }
-        { rel: 'preload', href: '/fonts/inter-var.woff2', as: 'font', type: 'font/woff2', crossorigin: 'anonymous' },
-        { rel: 'preload', href: '/fonts/jetbrains-mono-var.woff2', as: 'font', type: 'font/woff2', crossorigin: 'anonymous' }
-
-      ];
-      preloadLinks && preloadLinks.forEach(linkAttrs => {;
-      setIsOptimizing (false);
-    }
-  }, []);
-;
-  // Optimize CSS and JavaScript;
-  const optimize_code = useCallback (async () => {
-    setIsOptimizing (true);
-    setOptimizationStatus ('Optimizing code...');
-;
-    try {
-      // Add resource hints for critical resources;
-      const preload_links = [;
-        {
-          rel: 'preload',
-          href: '/fonts / inter - var.woff2',
-          as: 'font',
-          type: 'font / woff2',
-          crossorigin: 'anonymous',
-        },
-        {
-          rel: 'preload',
-          href: '/fonts / jetbrains - mono - var.woff2',
-          as: 'font',
-          type: 'font / woff2',
-          crossorigin: 'anonymous',
-        },      ];        { rel: 'preload', href: '/fonts / inter - var.woff2', as: 'font', type: 'font / woff2', crossorigin: 'anonymous' },
-        { rel: 'preload', href: '/fonts / jetbrains - mono - var.woff2', as: 'font', type: 'font / woff2', crossorigin: 'anonymous' }
-      ];
-;
-      preload_links.for_each (link_attrs => {
-import React, { useEffect } from 'react;
-import Head from 'next / head;
-interface PerformanceOptimizerProps {preload_images?: string[];
-  preload_fonts?: string[];
-  criticalCSS?: string;
-}
-
-
-const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({;
-preloadImages = [], preloadFonts = [;
-    'https: //fonts && fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap;
-  ], criticalCSS'}) => {;
-  useEffect(() => {;
-
-    // Performance monitoring;
-    if (typeof window !== 'undefined' && 'performance' in window) {'      // Monitor Core Web Vitals'      const observer = new PerformanceObserver((list) => {;
-        for (const entry of list && list.getEntries()) {;
-if (entry && entry.entryType === 'largest-contentful-paint') {'            console && console.log('LCP: ', entry && entry.startTime);
-'          }'          if (entry && entry.entryType === 'first-input') {'            console && console.log('FID: ', entry && entry.processingStart - entry && entry.startTime);'          }'          if (entry && entry.entryType === 'layout-shift') {'            if (!(entry as any).hadRecentInput) {'              console && console.log('CLS: ', (entry as any).value);'            }'          }}
-      });
-
-      try {;
-        observer && observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] });
-
-'      } catch (e) {'        // Fallback for browsers that don&apos;t support all entry types;
-        console && console.log('Performance monitoring not fully supported');
-'      }';
-      // Resource hints for better performance;
-
-const PerformanceOptimizer: React.FC < PerformanceOptimizerProps> = ({
-preload_images = [], preload_fonts = [;
-    'https: //fonts.googleapis.com / css2?family = Inter:wght@300;400;500;600;700;800;900 & display = swap;
-  ], criticalCSS'}) => {
-  useEffect (() => {
-    // Performance monitoring;
-    if ( {'      // Monitor Core Web Vitals'      const observer = new PerformanceObserver ((list) => {) {
-  $2
-}
-        for (const entry of list.get_entries ()) {
-if ( {'            console.log ('LCP: ', entry.start_time)) {
-  $2
-}
-'          }'          if ( {'            console.log ('FID: ', entry.processing_start - entry.start_time)) {
-  $2
-}'          }'          if ( {'            if (!(entry as any).hadRecentInput) {'              console.log ('CLS: ', (entry as any).value)) {
-  $2
-}'            }'          }}
-      });
-      try {
-        observer.observe ({ entry_types: ['largest - contentful - paint', 'first - input', 'layout - shift'] });
-'      } catch (e) {'        // Fallback for browsers that don & apos;t support all entry types;
-        console.log ('Performance monitoring not fully supported');
-'      }';
-      // Resource hints for better performance;
-      const addResourceHint = (href: string, as: string, type?: string) =>: any {
-        const link = document.create_element ('link');
-        Object.entries (link_attrs).for_each (([key, value]) => {
-          // Check condition
-if ( {) {
-  $2
-}
-            link.set_attribute (key, value as string);
-
-          } else {
-      const addResourceHint = (href: string, as: string, type?: string) => {;
-        const link = document && document.createElement('link');
-        Object && Object.entries(linkAttrs).forEach(([key, value]) => {;
-          if (key === 'crossorigin') {;
-            link && link.setAttribute(key, value as string);
-          } else {;
-            (link as any)[key] = value;
-          }
-        });
-
-
-      await new Promise(resolve => setTimeout(resolve, 1200));
-    } catch (error) {;
-      setOptimizationStatus('Code optimization failed');
-
-      console.error('Code optimization error:', error)
-    } finally {
-      setIsOptimizing(false)
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     }
   }, []);
 
@@ -581,28 +321,7 @@ if ( {) {
             if (lcp > 2500) { // LCP should be under 2 && 2.5s;
               console && console.warn('LCP is too slow:', lcp);
 
-=======
-      
-      // Monitor for performance issues
-=======
-  }, [optimizeImages, optimizeFonts, optimizeCode, measurePerformance]);
-  // Initialize performance monitoring
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      // Measure initial performance
-      window.addEventListener('load', measurePerformance);
-      // Monitor for performance issues
-      const observer = new PerformanceObserver(list => {
-        for (const entry of list.getEntries()) {
-          if (entry.entryType === 'largest-contentful-paint') {
-            const lcp = entry.startTime;
-            if (lcp > 2500) {
-              // LCP should be under 2.5s
-              console.warn('LCP is too slow:', lcp);            }
-          }
-        }
-      });      // Monitor for performance issues
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
       const observer = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
           if (entry.entryType === 'largest-contentful-paint') {
@@ -610,95 +329,7 @@ if ( {) {
             if (lcp > 2500) { // LCP should be under 2.5s
               console.warn('LCP is too slow:', lcp)
 
-=======
-        document.head.append_child (link);
-      });
-;
-      setOptimizationStatus ('Code optimization complete');
-;
-      // Simulate optimization delay;
-      await new Promise (resolve => set_timeout (resolve, 1200));
-    } catch (error) {
-      setOptimizationStatus ('Code optimization failed');
-      console.error ('Code optimization error:', error);
-    } finally {
-      setIsOptimizing (false);    }      setIsOptimizing (false);
-    }
-  }, []);
-;
-  // Run all optimizations;
-  const runAllOptimizations = useCallback (async () => {
-    setIsOptimizing (true);
-    setOptimizationStatus ('Starting comprehensive optimization...');
-;
-    try {
-      await optimize_images ();
-      await optimize_fonts ();
-      await optimize_code ();
-;
-      setOptimizationStatus ('All optimizations complete!');
-;
-      // Re - measure performance after optimization;
-      set_timeout (() => {
-        measure_performance ();
-      }, 500);
-    } catch (error) {
-      setOptimizationStatus ('Optimization failed');
-      console.error ('Optimization error:', error);
-    } finally {
-      setIsOptimizing (false);    }      setOptimizationStatus ('All optimizations complete!');
-;
-      // Re - measure performance after optimization;
-      set_timeout (() => {
-        measure_performance ();
-      }, 500);
-    } catch (error) {
-      setOptimizationStatus ('Optimization failed');
-      console.error ('Optimization error:', error);
-    } finally {
-      setIsOptimizing (false);
-    }
-  }, [optimize_images, optimize_fonts, optimize_code, measure_performance]);
-;
-  // Initialize performance monitoring;
-  useEffect (() => {
-    // Check condition
-if ( {) {
-  $2
-}
-      // Measure initial performance;
-      window.addEventListener ('load', measure_performance);
-;
-      // Monitor for performance issues;
-      const observer = new PerformanceObserver (list => {
-        for (const entry of list.get_entries ()) {
-          // Check condition
-if ( {) {
-  $2
-}
-            const lcp = entry.start_time;
-            // Check condition
-if ( {) {
-  $2
-}
-              // LCP should be under 2.5s;
-              console.warn ('LCP is too slow:', lcp);            }
-          }
-        }
-      });      // Monitor for performance issues;
-      const observer = new PerformanceObserver ((list) => {
-        for (const entry of list.get_entries ()) {
-          // Check condition
-if ( {) {
-  $2
-}
-            const lcp = entry.start_time;
-            // Check condition
-if ( { // LCP should be under 2.5s) {
-  $2
-}
-              console.warn ('LCP is too slow:', lcp);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             }
           }
@@ -748,19 +379,10 @@ if ( { // LCP should be under 2.5s) {
     return Math && Math.max(0, score);  };    ;
     return Math && Math.max(0, score);
 
-=======
-    
-    return Math.max(0, score)
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   };
   const getPerformanceGrade = (score: number): string => {;
-=======
-    return Math.max(0, score);  }
-    return Math.max(0, score)
-  }
-  const getPerformanceGrade = (score: number): string => {
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
     if (score >= 90) return 'A';
     if (score >= 80) return 'B';
     if (score >= 70) return 'C';
@@ -799,15 +421,7 @@ if ( { // LCP should be under 2.5s) {
           {showMetrics ? 'Hide' : 'Show'} Metrics
         </button>
       </div>
-<<<<<<< HEAD
-          className='text-sm text-cyan-400 hover:text-cyan-300 transition-colors duration-300'          className="text-sm text-cyan-400 hover:text-cyan-300 transition-colors duration-300";
-        >;
-          {showMetrics ? 'Hide' : 'Show'} Metrics;
-        </button>;
-      </div>;
-      {/* Performance Score */}
 
-=======
       <div className="mb-6">
         <div className="flex items-center justify-between mb-2">
           <span className="text-white/70">Performance Score</span>
@@ -826,32 +440,16 @@ if ( { // LCP should be under 2.5s) {
         <div className="w-full bg-white/10 rounded-full h-3">
           <motion.div
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
             className="h-3 bg-gradient-to-r from-red-500 via-yellow-500 to-green-500 rounded-full"
             initial={{ width: 0 }}
             animate={{ width: `${performanceScore}%` }}
             transition={{ duration: 1, ease: "easeOut" }}
 
 
-=======
-          />
-        </div>
-        <div className="text-right mt-1">
-          <span className="text-sm text-white/60">{performanceScore}/100</span>
-        </div>
-      </div>
-          <span className='text-sm text-white/60'>{performanceScore}/100</span>        </div>
 
-        </div>
-
-      </div>
-
-<<<<<<< HEAD
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
       {/* Metrics Display */}
       {showMetrics && (;
         <motion&& motion.div
@@ -860,11 +458,13 @@ if ( { // LCP should be under 2.5s) {
           exit={{ opacity: 0, height: 0 }}
           className='grid grid-cols-2 md:grid-cols-3 gap-4 mb-6'
 
-<<<<<<< HEAD
-        >
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+        >
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
           <div className='text-center p-3 rounded-lg bg-white/5 border border-white/10'>
             <Clock className='w-6 h-6 text-blue-400 mx-auto mb-2' />
             <div className='text-lg font-bold text-white'>
@@ -967,34 +567,11 @@ if ( { // LCP should be under 2.5s) {
       {/* Optimization Controls */}
       <div className='space-y-3'>        <button      <div className="space-y-3">;
 
-=======
-          </div>
-        </motion.div>
-      )}
-<<<<<<< HEAD
-      {/* Optimization Controls */}
-      <div className='space-y-3'>        <button      <div className="space-y-3">
-        <button
 
 
-      {/* Optimization Controls */}
-      <div className='space-y-3'>        <button      <div className="space-y-3">
-        <button
-      <div className='space-y-3'>        <button
 
-        <button
-
-=======
-
-        <button
-=======
-
-
-      {/* Optimization Controls */}
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
           onClick={runAllOptimizations}
           disabled={isOptimizing}
           className={`w-full px-4 py-3 rounded-lg font-semibold text-white transition-all duration-300 ${
@@ -1083,32 +660,16 @@ key={`preload-font-${index}`}          rel="preload""          as="style""      
       <div className="mt-6 pt-4 border-t border-white/10">
         <h4 className="text-sm font-semibold text-white/80 mb-3">Performance Tips</h4>
         <ul className="text-xs text-white/60 space-y-1">
-=======
-=======
 
-        )}
-      </div>
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
       {/* Performance Tips */}
       <div className="mt-6 pt-4 border-t border-white/10">
         <h4 className="text-sm font-semibold text-white/80 mb-3">Performance Tips</h4>
         <ul className="text-xs text-white/60 space-y-1">
-=======
 
 
-        )}
-      </div>
-
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       {/* Performance Tips */}
       <div className='mt-6 pt-4 border-t border-white/10'>
         <h4 className='text-sm font-semibold text-white/80 mb-3'>
@@ -1119,12 +680,12 @@ key={`preload-font-${index}`}          rel="preload""          as="style""      
         <ul className="text-xs text-white/60 space-y-1">
         <ul className='text-xs text-white/60 space-y-1'>          <li>• Use WebP images for better compression</li>
 
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
           <li>• Use WebP images for better compression</li>
           <li>• Implement lazy loading for images</li>
           <li>• Minimize CSS and JavaScript bundles</li>
@@ -1332,11 +893,7 @@ if (return 'D') {
       </div>;
     </div>);
 }export default PerformanceOptimizer;}
-=======
-  );
-<<<<<<< HEAD
-};export default PerformanceOptimizer;}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
       // Preload critical resources;
       preloadImages.forEach(image => {addResourceHint(image, 'image');
 '      });';
@@ -1344,24 +901,9 @@ if (return 'D') {
 '      });'    }}, [preloadImages, preloadFonts]);
   return (;
     <Head>;
-<<<<<<< HEAD
-      {/* Critical CSS inlined for above - the - fold content */}
-      {criticalCSS && (
-        <style dangerouslySetInnerHTML={{ __html: criticalCSS }} />)}
-<<<<<<< HEAD
-=======
-      {/* Critical CSS inlined for above-the-fold content */}
-      {criticalCSS && (;
-        <style dangerouslySetInnerHTML={{ __html: criticalCSS }} />;
-      )}
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 {/* Preload critical resources */}
       {preload_images.map ((image, index) => (
         <link;
@@ -1494,15 +1036,10 @@ export default PerformanceOptimizer;
 };export default PerformanceOptimizer;
 
 export default PerformanceOptimizer;
-<<<<<<< HEAD
+
 export default PerformanceOptimizer;
-=======
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-  );
 
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba

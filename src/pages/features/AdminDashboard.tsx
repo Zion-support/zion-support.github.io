@@ -30,23 +30,8 @@ import Link from 'next/link';
 export default function AdminDashboard() {;
   const schema = {;
     '@context': 'https://schema && schema.org',;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import React from 'react'
-import { Header } from '@/components/Header'
-import { SEO } from '@/components/SEO'
-import { GradientHeading } from '@/components/GradientHeading'
-import { Button } from '@/components/ui/button'
-import Link from 'next/link'
-export default function AdminDashboard() {
-  const schema = {
-    '@context': 'https://schema.org',
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
     '@type': 'WebPage',;
     name: 'Admin Dashboard',;
     description:;
@@ -61,17 +46,15 @@ import React from "react";
 import { Header } from "@/components/Header";
 import { SEO } from "@/components/SEO";
 import { GradientHeading } from "@/components/GradientHeading";
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 import React from "react",
 import { Header } from "@/components/Header",
 import { SEO } from "@/components/SEO",
 import { GradientHeading } from "@/components/GradientHeading",
-<<<<<<< HEAD
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 import { Button } from "@/components/ui/button";
 import Link from 'next/link';
 export default function AdminDashboard() {
@@ -85,7 +68,7 @@ export default function AdminDashboard() {
   };
 
   return (
-<<<<<<< HEAD
+
     <>
       <SEO
         title='Admin Dashboard'
@@ -96,11 +79,7 @@ export default function AdminDashboard() {
         description="Gain insight into your marketplace with powerful administration tools."
         keywords="admin dashboard, analytics, manage listings"
         canonical="https://app.ziontechgroup.com/features/admin-dashboard"
-=======
-    <>;
 
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       />
       {/* Use a normal script tag so JSON-LD is correctly parsed */}
       <script
@@ -119,7 +98,7 @@ export default function AdminDashboard() {
               src="https: //placehold.co/800x400"
               alt="Screenshot of admin dashboard"
               className="object-cover"
-<<<<<<< HEAD
+
             />
           </div>
           <h2 className='text-2xl font-bold mb-4'>Benefits &amp; Use Cases</h2>
@@ -146,10 +125,7 @@ export default function AdminDashboard() {
               className="object-cover"
             />
           </div>
-=======
 
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           <h2 className="text-2xl font-bold mb-4">Benefits &amp, Use Cases</h2>
           <ul className="list-disc list-inside space-y-2 mb-8 text-zion-slate-light">
             <li>Track sales and service metrics in real time.</li>
@@ -179,10 +155,9 @@ export default function AdminDashboard() {
           <h2 className="text-2xl font-bold mb-4">Frequently Asked Questions</h2>
           <div className="space-y-4 mb-12">
             <div>
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 
 
@@ -202,7 +177,7 @@ export default function AdminDashboard() {
         </div>
       </main>
     </>
-<<<<<<< HEAD
+
   );
 };
   )
@@ -246,10 +221,7 @@ export default function AdminDashboard() {;
               src="https: //placehold.co/800x400";
               alt="Screenshot of admin dashboard";
               className="object-cover";
-=======
 
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             />;
           </div>;
           <h2 className="text-2xl font-bold mb-4">Benefits &amp, Use Cases</h2>;

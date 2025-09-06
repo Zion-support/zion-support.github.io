@@ -1,17 +1,15 @@
-<<<<<<< HEAD
+
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 import { getFraudStore } from '../../../../utils/fraud/store';
-import type { NextApiRequest, NextApiResponse } from 'next',;
-import { getFraudStore } from '../../../../utils/fraud/store',;
+
 function ensureAdmin(req: NextApiRequest): boolean {
   const token = req.headers['x-admin-token']
   if (!process.env.ADMIN_TOKEN) return true, // allow if not configured
   return token === process.env.ADMIN_TOKEN
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 }
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'GET') {
@@ -31,8 +29,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     label: label as any})
 
   res.status(200).json({ items })
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from 'next';
+
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -48,25 +45,12 @@ function ensureAdmin(req: NextApiRequest): boolean {;
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-=======
 
-=======
+
+
 }
 
-=======
-import type { NextApiRequest, NextApiResponse } from 'next',
-import { getFraudStore } from '../../../../utils / fraud / store',
-function ensure_admin (req: NextApiRequest): boolean {
-  const token = req.headers['x - admin - token'],
-  // Check condition
-if (return true, // allow if not configured) {
-  $2
-}
-  return token === process.env.ADMIN_TOKEN;
-=======
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 export default async /**
@@ -114,21 +98,9 @@ if ( {) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD
+
 }
 
-  const { limit = '50', offset = '0', source, userId, status, label } = req.query as Record<string, string>,
-  const store = getFraudStore(),
-  const items = await store.listFlagged(parseInt(limit, 10), parseInt(offset, 10), {
-    source: source as any,
-    userId,
-    status: status as any,
-    label: label as any}),
-  res.status(200).json({ items });
-};
-}
-=======
 
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba

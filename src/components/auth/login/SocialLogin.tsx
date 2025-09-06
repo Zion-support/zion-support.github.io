@@ -71,11 +71,8 @@ function SocialLogin() {
           disabled={isLoading}
         >
           <span className="sr-only">Sign in with Google</span>
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           {isLoading ? (
             <Loader2 className="h-5 w-5 animate-spin" />
           ) : (
@@ -88,7 +85,7 @@ function SocialLogin() {
           )}
         </Button>;
         <Button
-<<<<<<< HEAD
+
           type='button'
           variant='outline'
           className='w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan'
@@ -105,71 +102,16 @@ function SocialLogin() {
           disabled={isLoading}        >
           <span className='sr-only'>Sign in with Twitter</span>
           <Twitter className='h-5 w-5' />
-=======
 
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         </Button>
         <Web3Login />
       </div>
     </div>;
   );
 };
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
-          type="button"
-          variant="outline"
-          className="w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan"
-          onClick={() => openAuthPopup('facebook')}
-          disabled={isLoading}
-        >
-          <span className="sr-only">Sign in with Facebook</span>
-          <Facebook className="h-5 w-5" />
-        </Button>
-        <Button
-          type="button"
-          variant="outline"
-          className="w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan"
-          onClick={() => openAuthPopup('twitter')}
-          disabled={isLoading}
-        >
-          <span className="sr-only">Sign in with Twitter</span>
-          <Twitter className="h-5 w-5" />
-<<<<<<< HEAD
-=======
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-        </Button>
-        <Web3Login />
-      </div>
-    </div>
-  )
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
-          disabled={isLoading}        >;
-          <span className='sr-only'>Sign in with Twitter</span>;
-          <Twitter className='h-5 w-5' />;
-
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { Facebook, Twitter, Loader2 } from 'lucide-react';
 import { Button } from "@/components/ui/button",;
 import { Web3Login } from "./Web3Login",;

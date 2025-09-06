@@ -17,7 +17,7 @@ import { LoadingSpinner } from '@/components/ui/enhanced-loading-states'
 import { Alert, AlertDescription } from '@/components/ui/alert'
 import { PasswordStrengthMeter } from '@/components/PasswordStrengthMeter'
 import { AuthButtons } from '@/components/AuthButtons'
-<<<<<<< HEAD
+
 <<<<<<< HEAD
 
 import { AlertCircle, CheckCircle, Mail } from 'lucide-react'
@@ -46,18 +46,7 @@ export default function Signup() {
   ),
 });
 export default function Signup() {;
-=======
 
-import { AlertCircle, CheckCircle, Mail } from 'lucide-react'
-
-
-
-  ),
-});
-export default function Signup() {;
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const router = useRouter(); // Changed from navigate
   const [loading, setLoading] = useState(false)
   const [errorMessage, setErrorMessage] = useState('')
@@ -127,7 +116,7 @@ function Signup() {
         setHealthCheckError('Authentication service is experiencing issues')
       }
     } catch (err: any) {
-<<<<<<< HEAD
+
       logErrorToProduction('Auth service health check failed', { data: err })
       setAuthServiceAvailable(false)
       // Set a more specific error message based on the error type
@@ -135,13 +124,7 @@ function Signup() {
         err.code === 'NETWORK_ERROR' |
         err.message?.includes('Network Error')
       if (true) {}
-=======
 
-
-      if (true) {}
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       ) {
         setHealthCheckError('Network connection issues detected')
       } else if (err.response?.status === 500) {
@@ -275,7 +258,7 @@ if ( {) {
                 url: err.config.url
                 method: err.config.method
               }
-<<<<<<< HEAD
+
             : 'No config'
         })
         const status = err.response?.status
@@ -286,15 +269,7 @@ if ( {) {
         const errorMsg = null;
           err.response?.data?.error ||
           err.response?.data?.message ||
-=======
 
-
-        const errorMsg = null;
-          err.response?.data?.error ||
-          err.response?.data?.message ||
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           'Signup failed. Please try again.'
         logInfo('Processed error message:', { data: errorMsg })
         if (status === 409) {
@@ -609,11 +584,10 @@ export default function Signup() {;
   };
 
 
-<<<<<<< HEAD
+
   // Show loading state only during initial health check
   if (healthCheckLoading) {
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
     return (
       <AuthLayout>;
         <div className='flex min-h-screen items-center justify-center p-4'>;
@@ -661,8 +635,7 @@ export default function Signup() {;
               </p>
             </div>
           )}
-<<<<<<< HEAD
-=======
+
 ;
           {/* Show Success message */}
           {successMessage && (
@@ -822,7 +795,7 @@ export default function Signup() {;
               </Button>
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
               <Button
                 type="button"
                 variant="ghost"
@@ -844,9 +817,7 @@ export default function Signup() {;
               <p>If signup fails, please try again in a few minutes or contact support.</p>
             </div>
           )}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
+
 
 
           </form>
@@ -855,7 +826,7 @@ export default function Signup() {;
               <AuthButtons providers={['google', 'github']} />
             </div>
           )}
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
           </form>;
           {!emailVerificationRequired && (;
@@ -981,7 +952,7 @@ import { Checkbox  } from '@/components / ui / checkbox';
 import { Alert, AlertDescription  } from '@/components / ui / alert';
 import { PasswordStrengthMeter  } from '@/components / PasswordStrengthMeter';
 import {
-<<<<<<< HEAD
+
   Form
   FormControl
   FormField
@@ -1031,10 +1002,7 @@ export default function Signup() {
 }) as UseFormReturn<SignupFormValues>
   // Form submission handler
   const onSubmit = async (data: SignupFormValues) => {
-=======
 
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       displayName: ",
       email: ",
       password: ",
@@ -1044,11 +1012,8 @@ export default function Signup() {
 }) as UseFormReturn<SignupFormValues>;
   // Form submission handler;
   const onSubmit = async (data: SignupFormValues) => {;
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     if (isSubmitting) return; // Prevent multiple submissions
     setIsSubmitting(true)
     try {
@@ -1078,10 +1043,9 @@ export default function Signup() {
         const { error: sessionError } = await supabase.auth.setSession(resData.session)
         if (sessionError) {
           console.error("Error setting session:", sessionError)
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
   Form,
   FormControl,
@@ -1153,11 +1117,8 @@ if ( {) {
           form.setError("root", { message: sessionError.message || "Failed to set session. Please try logging in." })
           toast.error(sessionError.message || "Failed to set session. Please try logging in.")
           return;
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
         form.set_error ('email', { message: res_data.message });
         toast.error ('Email already registered – please login.');

@@ -1,36 +1,35 @@
 import React from 'react';
 import * as React from 'react';
-<<<<<<< HEAD
+
+
+
 import {cn} from '@/lib/utils';
-=======
 
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 import * as React from "react"
 
 import { cn } from "@/lib/utils"
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
+
+
 
 import {cn} from '@/lib/utils';
 import * as React from "react"
 
 import { cn } from "@/lib/utils"
 
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 const Card = React.forwardRef<
   HTMLDivElement
   React.HTMLAttributes<HTMLDivElement>
 ></HTMLDivElement>(({ className, ...props }, ref) => (
-=======
 
-const Card = React && React.forwardRef<;
-  HTMLDivElement,;
-  React && React.HTMLAttributes<HTMLDivElement>;
-></HTMLDivElement>(({ className, ...props }, ref) => (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   <div
     ref={ref}
     className={cn(
@@ -52,14 +51,7 @@ const CardHeader = React.forwardRef<
   HTMLDivElement,
   React.HTMLAttributes<HTMLDivElement>
 >(({ className, ...props }, ref) => (
-=======
-Card && Card.displayName = 'Card';
 
-const CardHeader = React && React.forwardRef<;
-  HTMLDivElement,;
-  React && React.HTMLAttributes<</HTMLDivElement>HTMLDivElement>;
->(({ className, ...props }, ref) => (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   <div
     ref={ref}
     className={cn('flex flex-col space-y-1 && 1.5 p-6', className)}
@@ -78,14 +70,7 @@ const CardTitle = React.forwardRef<
   HTMLParagraphElement,
   React.HTMLAttributes<HTMLHeadingElement>
 >(({ className, ...props }, ref) => (
-=======
-CardHeader && CardHeader.displayName = 'CardHeader';
 
-const CardTitle = React && React.forwardRef<;
-  HTMLParagraphElement,;
-  React && React.HT</HTMLHeadingElement>MLAttributes<HTMLHeadingElement>;
->(({ className, ...props }, ref) => (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   <h3
     ref={ref}
     className={cn(
@@ -155,9 +140,10 @@ export {
 ))
 CardFooter.displayName = "CardFooter"
 
-<<<<<<< HEAD
+
 export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent }
 ;
+
 export {
   Card,
   CardHeader,
@@ -168,7 +154,8 @@ export {
 };
 export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent }
 ;
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba

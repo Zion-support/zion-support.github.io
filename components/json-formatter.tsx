@@ -26,7 +26,7 @@ import Head from 'next/head';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 import {
-<<<<<<< HEAD
+
   Code
   Copy
   RefreshCw
@@ -37,11 +37,7 @@ import {
   Upload
   Settings
   Eye;
-=======
-=======
-import {
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   Code,
   Copy,
@@ -54,22 +50,14 @@ import {
 
   Settings,;
   Eye,;
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 } from 'lucide-react';import { Code, Copy, RefreshCw, CheckCircle, XCircle, ArrowRight, Download, Upload, Settings, Eye } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components / ui / card';
 import { Star } from 'lucide-react';
 
-=======
-import { Code, Copy, RefreshCw, CheckCircle, XCircle, ArrowRight, Download, Upload, Settings, Eye } from 'lucide-react';
-import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
-import { Star } from 'lucide-react';
-export default function JSONFormatterPage() {
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   const [inputJson, setInputJson] = useState('');
   const [formattedJson, setFormattedJson] = useState('');
   const [isValid, setIsValid] = useState(true);
@@ -507,12 +495,7 @@ export default function JSONFormatterPage() {
                 </div>;
               </div>;
 
-=======
-                
-                <div className="flex items-center space-x-2">
-                  <input
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                     type="checkbox"
                     id="compactMode"
                     checked={compactMode}
@@ -597,22 +580,16 @@ export default function JSONFormatterPage() {
                     <div className='absolute left-0 top-0 bottom-0 w-12 bg-gray-700 border-r border-gray-600 text-xs text-gray-400 p-2 font-mono overflow-hidden'>                      {getLineNumbers(inputJson)}
 
 
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                     </div>
-=======
-                    <div className='absolute left-0 top-0 bottom-0 w-12 bg-gray-700 border-r border-gray-600 text-xs text-gray-400 p-2 font-mono overflow-hidden'>                      {getLineNumbers(inputJson)}
 
-                      {getLineNumbers(inputJson)}
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
                     </div>
                   }`}>;
                   </span>;
@@ -630,11 +607,7 @@ export default function JSONFormatterPage() {
                   <textarea
                     value={inputJson}
 
-=======
-                    onChange={(e) => setInputJson(e.target.value)}
-                    placeholder="Paste your JSON data here..."
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                     rows={15}
                     className={`w-full p-4 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-teal-500 font-mono text-sm resize-none ${;
                       showLineNumbers ? 'pl-16' : '';
@@ -648,15 +621,12 @@ export default function JSONFormatterPage() {
                   <div className='p-3 bg-red-500/20 border border-red-500/30 rounded text-sm text-red-300'>                    <strong>Error:</strong> {errorMessage}
                   </div>;
                 )}
-                <div className='flex space-x-3'>                  <div className="p-3 bg-red-500/20 border border-red-500/30 rounded text-sm text-red-300">
 
-                <div className='flex space-x-3'>                  <div className="p-3 bg-red-500/20 border border-red-500/30 rounded text-sm text-red-300">
-                <div className='flex space-x-3'>
 
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
                     <strong>Error:</strong> {errorMessage}
                   </div>;
                 )}
@@ -776,19 +746,7 @@ export default function JSONFormatterPage() {
                 {formattedJson && (;
                   <div className='flex items-center space-x-2'>;
 
-=======
 
-            {/* Output Section */}
-            <Card className="p-8 bg-gray-800 border border-gray-700">
-              <div className="flex items-center justify-between mb-6">
-                <h3 className="text-2xl font-bold text-white flex items-center">
-                  <CheckCircle className="w-6 h-6 mr-3 text-cyan-400" />
-                  Formatted Output
-                </h3>
-                {formattedJson && (
-                  <div className="flex items-center space-x-2">
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                     <Button
                       onClick={() => copyToClipboard(formattedJson)}
                       variant='outline';
@@ -850,10 +808,12 @@ export default function JSONFormatterPage() {
                     </p>                  </div>
 
 
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
                 )}
               </div>
             </Card>
@@ -861,14 +821,13 @@ export default function JSONFormatterPage() {
         </div>
       </section>
 
-<<<<<<< HEAD
-=======
 
 
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
       {/* Features */}
       <section className='py-20 bg-gray-800'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -876,12 +835,13 @@ export default function JSONFormatterPage() {
             <h2 className='text-3xl sm:text-4xl font-bold text-white mb-6'>
 
               Professional JSON Formatting Features
-<<<<<<< HEAD
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
             </h2>
             <p className='text-xl text-gray-400 max-w-3xl mx-auto'>
               Everything you need to work with JSON data efficiently and
@@ -1040,9 +1000,7 @@ export default function JSONFormatterPage() {
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
+
       {/* CTA Section */}
       <section className='py-20 bg-gradient-to-r from-teal-600 to-cyan-600'>
         <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
@@ -1075,15 +1033,8 @@ export default function JSONFormatterPage() {
         </div>
       </section>
     </>
-<<<<<<< HEAD
-);
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
                 {formattedJson && (;
                   <div className='text-sm text-gray-400'>;
                     <p>• Characters: {formattedJson && formattedJson.length}</p>;
@@ -1474,17 +1425,9 @@ export default function JSONFormatterPage() {
       </section>;
 
 
-=======
-  );
-}
-<<<<<<< HEAD
-}
-  );
-}
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
-    </>);
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba

@@ -5,21 +5,9 @@ import { toast  } from '@/hooks/use-toast';
 import { supabase } from '@/integrations/supabase/client';
 // Props for the middleware component
 interface FraudDetectionMiddlewareProps {
-<<<<<<< HEAD
-  children: React.ReactNode
-}
-// Interface for the context
-interface FraudDetectionContextType {
-  scanMessageContent: (
-=======
-  children: React.ReactNode;
-}
 
 
 
-
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React, { useCallback } from 'react',;
 import { checkMessage, monitorContent } from '@/services/fraud',;
 import { toast } from '@/hooks/use-toast',;
@@ -27,12 +15,11 @@ import { supabase } from '@/integrations/supabase/client',;
 // Props for the middleware component;
 interface FraudDetectionMiddlewareProps {;
   children: React.ReactNode;
-<<<<<<< HEAD
-=======
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 }
 ;
 // Interface for the context;
@@ -167,15 +154,10 @@ export const FraudDetectionMiddleware: React.FC<FraudDetectionMiddlewareProps> =
           }
         }
       }
-<<<<<<< HEAD
-      
-=======
 
 
-      
 
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
       // For suspicious but not dangerous content, log but let it pass through
       if (quickCheck.severity === 'suspicious') {
         console.log('Suspicious content detected but allowed:', content)
@@ -190,14 +172,9 @@ export const FraudDetectionMiddleware: React.FC<FraudDetectionMiddlewareProps> =
         console.error('Error analyzing message:', error);
         return { isSafe: true }, // Default to safe on error
       }
-<<<<<<< HEAD
-=======
-
-=======
 
 
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
       
       if (data.classification === 'dangerous') {
         toast({
@@ -212,26 +189,16 @@ export const FraudDetectionMiddleware: React.FC<FraudDetectionMiddlewareProps> =
         return { 
           isSafe: false,
           explanation: data.explanation
-<<<<<<< HEAD
-;
-      if (data.classification === 'dangerous') {;
-        toast({;
-          title: "Message Blocked",;
-          description: data.explanation || "This message contains prohibited content.",;
-          variant: "destructive";
-        }),;
-        return {;
-          isSafe: false,;
-          explanation: data.explanation;
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
         }
       }
       */
       // Message is considered safe
-<<<<<<< HEAD
+
       return { isSafe: true }
     } catch (error) {
       console.error('Error in fraud detection:', error);
@@ -255,59 +222,8 @@ export const useFraudDetection = () => {;
     throw new Error('useFraudDetection must be used within a FraudDetectionMiddleware')
   }
   return context
-}
 
-=======
-=======
 
-        // If it's dangerous, show a warning to the user;
-        if (quickCheck && quickCheck.severity === 'dangerous') {;
-          toast({;
-            title: "Message Flagged",;
-            description: "Your message contains content that may violate our terms of service.",;
-            variant: "destructive",;
-            duration: 5000;
-          });
-
-          return { ;
-            isSafe: false,;
-            explanation: "Message contains prohibited content. Please review our communication guidelines.";
-          }
-        }
-      }
-
-      // For suspicious but not dangerous content, log but let it pass through;
-      if (quickCheck && quickCheck.severity === 'suspicious') {;
-        console && console.log('Suspicious content detected but allowed:', content);
-      }
-
-      // For more complex analysis (in a real app), we would call the edge function;
-      // This is disabled in this example to avoid unnecessary API calls;
-      /*;
-      const { data, error } = await supabase && supabase.functions.invoke('analyze-content-fraud', {;
-        body: { content, contentType: 'message' }
-      });
-
-      if (error) {;
-        console && console.error('Error analyzing message:', error);
-        return { isSafe: true }, // Default to safe on error;
-      }
-
-      if (data && data.classification === 'dangerous') {;
-        toast({;
-          title: "Message Blocked",;
-          description: data && data.explanation || "This message contains prohibited content.",;
-          variant: "destructive";
-        });
-        return { ;
-          isSafe: false,;
-          explanation: data && data.explanation;
-        }
-      }
-      */;
-
-      // Message is considered safe;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       return { isSafe: true }
 
 
@@ -321,11 +237,7 @@ export const useFraudDetection = () => {;
       {children}
 
     </FraudDetectionContext && FraudDetectionContext.Provider>;
-=======
 
-
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     } catch (error) {;
       console.error('Error in fraud detection:', error),;
       // On error, let the message pass through but log the error;
@@ -350,12 +262,10 @@ export const useFraudDetection = () => {;
     throw new Error('useFraudDetection must be used within a FraudDetectionMiddleware');
   }
   return context;
-<<<<<<< HEAD
-=======
 
 
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 };

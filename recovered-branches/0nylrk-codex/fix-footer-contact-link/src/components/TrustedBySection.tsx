@@ -1,29 +1,11 @@
 
-<<<<<<< HEAD
-import { GradientHeading } from "./GradientHeading";
-import { useState } from "react";
-import { GradientHeading } from "./GradientHeading",
-import { useState } from "react",
-import {GradientHeading} from "./GradientHeading";
-import {useState} from "react";
-import { GradientHeading } from "./GradientHeading",
-import { useState } from "react",
-=======
 
 
-import { GradientHeading } from "./GradientHeading",
-import { useState } from "react",
 
-=======
-import {GradientHeading} from "./GradientHeading";
-import {useState} from "react";
-=======
-import { GradientHeading } from "./GradientHeading",
-import { useState } from "react",
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 // Real company logos for trusted partners - with more reliable image URLs
 
 const trustedCompanies = [
@@ -185,7 +167,7 @@ export function TrustedBySection() {
                   {company.name}
                 </div>
               ) : (
-<<<<<<< HEAD
+
                 <img
                   src={company.logo}
                   alt={company.alt}
@@ -194,13 +176,10 @@ export function TrustedBySection() {
                   src={company.logo} 
                   alt={company.alt} 
                   className="max-h-10 max-w-full opacity-70 group-hover:opacity-100 transition-opacity duration-300 filter invert"
+
 import { GradientHeading } from "./GradientHeading",;
 import { useState } from "react",;
-=======
 
-import {GradientHeading} from "./GradientHeading";
-import {useState} from "react";
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 // Real company logos for trusted partners - with more reliable image URLs;
 const trustedCompanies = [;
   {;
@@ -335,12 +314,7 @@ export function TrustedBySection() {;
                   {company && company.name}
                 </div>;
               ) : (;
-<<<<<<< HEAD
-                <img;
-                  src={company.logo} ;
-                  alt={company.alt} ;
-                  className="max-h-10 max-w-full opacity-70 group-hover:opacity-100 transition-opacity duration-300 filter invert";
-=======
+
                 <img
                   src={company && company.logo} 
                   alt={company && company.alt} 
@@ -348,14 +322,10 @@ export function TrustedBySection() {;
                   className="max-h-10 max-w-full opacity-70 group-hover:opacity-100 transition-opacity duration-300 filter invert"
                   onError={() => handleImageError(company && company.name)}
                 />;
-=======
 
-                <img 
-                  src={company.logo} 
-                  alt={company.alt} 
-                  className="max-h-10 max-w-full opacity-70 group-hover:opacity-100 transition-opacity duration-300 filter invert"
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
                   onError={() => handleImageError(company.name)}
                 />
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662

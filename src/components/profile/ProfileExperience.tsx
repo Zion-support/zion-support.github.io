@@ -5,38 +5,8 @@
               </div>
             </div>
             
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
-            <div>
-              <h4 className="text-white font-medium">{exp.role}</h4>
-              <div className="text-zion-cyan mb-1">{exp.company}</div>
-              <div className="text-sm text-zion-slate-light mb-2">
-                {exp.startDate} - {exp.current ? 'Present' : exp.endDate}
-              </div>
-              <p className='text-zion-slate'>{exp.description}</p>            </div>              <p className="text-zion-slate">{exp.description}</p>
-            </div>
-          </div>
-        ))}
-      </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-    </div>
-
-=======
-    </div>;
-  );
-};
-}
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
-    </div>
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 import { ProfileExperience as ProfileExperienceType } from '@/types/profile';
 

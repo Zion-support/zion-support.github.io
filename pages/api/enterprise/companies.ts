@@ -1,13 +1,10 @@
-<<<<<<< HEAD
+
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { store } from '[^']*';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   if (req.method === "GET") {
-import type { NextApiRequest, NextApiResponse } from "next";
-import { store } from "../../../utils/data/enterpriseStore";
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method === "GET") {;
+
     const companies = store.listCompanies();
     return res.status(200).json(companies);
   }
@@ -25,8 +22,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   }
   res.setHeader("Allow", "GET,POST");
   return res.status(405).end("Method Not Allowed");
-}
-import type { NextApiRequest, NextApiResponse } from 'next';
+
+
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ companies: [] });
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -97,22 +94,13 @@ export default function handler(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-}
-}
-=======
-
 
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
-    return res.status (201).json (created);
-  }
-  res.set_header ("Allow", "GET, POST");
-  return res.status (405).end ("Method Not Allowed");
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba

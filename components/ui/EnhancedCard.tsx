@@ -21,19 +21,18 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React from "react";
-<<<<<<< HEAD
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
+
 export default function EnhancedCard(): any ({;
   children,;
   className = "",;
 }: {;
-<<<<<<< HEAD
+
+
   children: React.ReactNode;
-=======
-  children: React && React.ReactNode;
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
   className?: string;
 }) {;
   return (

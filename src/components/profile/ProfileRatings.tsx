@@ -9,7 +9,7 @@ import { ReviewsList } from "@/components/reviews/ReviewsList",
 import { useReviews } from "@/hooks/useReviews",
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-<<<<<<< HEAD
+
 interface ProfileRatingsProps {
 
   userId: string
@@ -76,8 +76,7 @@ export function ProfileRatings({
   return (
 import { Button } from "@/components/ui/button",
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 interface ProfileRatingsProps {
   userId: string,
@@ -115,19 +114,16 @@ export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: P
 
 
   return (
-<<<<<<< HEAD
+
     <div className='space-y-6'>
       <div className='flex flex-col md:flex-row gap-6'>
-=======
-    <div className='space-y-6'>;
-      <div className='flex flex-col md:flex-row gap-6'>;
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
         <div className='md:w-1/3'>          <ReviewStats
 
 
 
   return (
-<<<<<<< HEAD
+
 import { Button } from "@/components/ui/button",
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
 
@@ -213,16 +209,7 @@ export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: P
             
             <TabsContent value="positive">
               <ReviewsList
-=======
-    <div className="space-y-6">;
-      <div className="flex flex-col md:flex-row gap-6">;
-        <div className="md:w-1/3">;
-          <ReviewStats
-            averageRating={averageRating}
-            totalReviews={ratingCount}
 
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             ratingDistribution={ratingDistribution}
           />
         </div>
@@ -272,10 +259,8 @@ export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: P
             
             <TabsContent value="positive">
               <ReviewsList
-<<<<<<< HEAD
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
                 reviews={reviews.filter((r) => r.rating >= 4)}
                 isLoading={isLoading}
                 onReportReview={reportReview}
@@ -298,78 +283,17 @@ export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: P
                 reviews={reviews.filter((r) => r.rating < 4)}
                 isLoading={isLoading}
                 onReportReview={reportReview}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
-              />;
-            </TabsContent>;
-
-            <TabsContent value='critical'>;
-              <ReviewsList
-                reviews={reviews && reviews.filter(r => r && r.rating < 4)}                reviews={reviews && reviews.filter((r) => r && r.rating < 4)}
-
-            <TabsContent value="critical">;
-
-              <ReviewsList
-                reviews={reviews && reviews.filter((r) => r && r.rating < 4)}
-                isLoading={isLoading}
-                onReportReview={reportReview}
 
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-              />
-            </TabsContent>
-          </Tabs>
-        </div>
-      </div>
-    </div>
-  )
-}, [reviews])
-//Fetch reviews when component mounts return (<div className="space-y-6" > <div className="flex flex-col md:flex-row gap-6" > <div className="md:w-1/3" > <ReviewStats averageRating= {
-  averageRating
-}totalReviews= {
-  ratingCount
-}ratingDistribution= {
-  ratingDistribution "
-}/> </div> </TabsList> <TabsContent value="all" > <ReviewsList reviews= {
-  reviews
-}isLoading= {
-  isLoading
-}onReportReview= {
-  reportReview "
-}/> </TabsContent> <TabsContent value="positive" > <ReviewsList reviews= {
-  reviews.filter ( (r) => r.rating >= 4)
-}isLoading= {
-  isLoading
-}onReportReview= {
-  reportReview "
-}/> </TabsContent> <TabsContent value="critical" > <ReviewsList reviews= {
-  reviews.filter ( (r) => r.rating < 4)
-}isLoading= {
-  isLoading
-}onReportReview= {
-<<<<<<< HEAD
-  reportReview
-}/> </TabsContent> </Tabs> </div> </div> </div>)
-}"}
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   reportReview ;
 }/> </TabsContent> </Tabs> </div> </div> </div>) ;
 }"};
 }
 }
 }
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 
 import { useState, useEffect } from 'react';

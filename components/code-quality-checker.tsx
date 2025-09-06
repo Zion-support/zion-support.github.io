@@ -28,12 +28,10 @@ import {
   Shield,
   Clock,;
   TrendingUp,;
-<<<<<<< HEAD
-} from 'lucide-react';import { Code, CheckCircle, AlertTriangle, Zap, BarChart3, ArrowRight, Play, Shield, Clock, TrendingUp } from 'lucide-react';
-export default function CodeQualityCheckerPage() {;
+
+
 } from 'lucide-react';
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 export default function CodeQualityCheckerPage() {
   const [isAnalyzing, setIsAnalyzing] = useState(false);
@@ -143,14 +141,9 @@ export default function CodeQualityCheckerPage() {
     { name: 'C++', icon: '⚙️', features: ['Clang - tidy_static analysis_memory leak detection'] },
     { name: 'Go', icon: '🟢', features: ['Golangci - lint_go vet_performance analysis'] },
     { name: 'PHP', icon: '🐘', features: ['PHPStanPHP CS FixerSecurity analysis'] }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-  ];
 
-  ];
-
-=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
@@ -198,33 +191,7 @@ export default function CodeQualityCheckerPage() {
       color: 'bg-gradient-to-br from-purple-500 to-indigo-600',;
       gradient: 'from-purple-400 to-indigo-500',;
     },;
-=======
-        '100 code analyses/monthBasic quality metrics5 programming languagesEmail supportBasic reportingCommunity rules'
-      ];
-      popular: false
-    };
-    {
-=======
-  const pricing = [;
-    {
-      name: 'Developer',
-      price: '$29',
-      period: '/month',
-      description: 'Perfect for individual developers and small projects',
-      features: [;
-        '100 code analyses / month',
-        'Basic quality metrics',
-        '5 programming languages',
-        'Email support',
-        'Basic reporting',
-        'Community rules',
-      ],
-      popular: false,
-    },    {        '100 code analyses / month_basic quality metrics5 programming languages_email support_basic reporting_community rules';
-      ];
-      popular: false;
-    }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
       name: 'Team',
       price: '$79',
       period: '/month',
@@ -394,24 +361,7 @@ export default function CodeQualityCheckerPage() {
           'Add proper error handling for better robustness',;
           'Consider adding JSDoc comments for better documentation',;
         ],;
-=======
-          securityScore: '92%'
-        }
-=======
-            type: 'error',
-            message: 'Missing semicolon at end of statement',
-            line: 18,
-            severity: 'high',
-          },
-        ],
 
-        metrics: {
-          complexity: 'Medium',
-          maintainability: 'Good',
-          testCoverage: '85%',
-          securityScore: '92%',
-        },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         recommendations: [
           'Use const for immutable variables to improve code clarity'
           'Break down large functions into smaller, more focused functions'
@@ -544,25 +494,7 @@ export default function CodeQualityCheckerPage() {
             </Button>;
             <Button
 
-=======
 
-          <div className="flex flex-col sm:flex-row gap-6 justify-center">
-            <Button
-              href="#pricing"
-              variant="outline"
-              size="lg"
-              className="border-teal-500 text-teal-400 hover:bg-teal-500 hover:text-white shadow-2xl"
-            >
-              View Pricing
-            </Button>
-            <Button
-href="/contact"
-              variant="outline"
-              size="lg"
-              className="border-gray-500 text-gray-400 hover:bg-gray-500 hover:text-white shadow-2xl"
-            >
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               Schedule Demo
 
             </Button>;
@@ -701,13 +633,7 @@ href="/contact"
           </div>;
         </div>;
       </section>;
-=======
-              Schedule Demo
-            </Button>
-          </div>
-        </div>
-      </section>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
       {/* Features Section */}
       <section className='section - padding bg - gradient - cursor - accent'>;
         <div className='container - cursor'>;
@@ -770,17 +696,13 @@ href="/contact"
                       {feature.description}
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
                     </p>
                   </div>
                 </div>
@@ -792,13 +714,8 @@ href="/contact"
         </div>
       </section>
 
-<<<<<<< HEAD
-=======
 
 
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       {/* Supported Languages Section */}
       <section className='section-padding bg-gradient-cursor'>
@@ -806,13 +723,8 @@ href="/contact"
           <div className='text-center mb-20'>
             <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
 
-<<<<<<< HEAD
-=======
 
 
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               Multi-Language Support
             </h2>
@@ -823,44 +735,10 @@ href="/contact"
           </div>
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
             {supportedLanguages.map((language, index) => (
-=======
-          </div>;
-        </div>;
-      </section>;
-      {/* Supported Languages Section */}
-      <section className='section-padding bg-gradient-cursor'>;
-        <div className='container-cursor'>;
-          <div className='text-center mb-20'>;
-            <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>;
-              Multi-Language Support;
-            </h2>;
-            <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>;
-              We support a wide range of programming languages with;
-              language-specific analysis rules and best practices.;
-            </p>;
-          </div>;
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>;
-            {supportedLanguages && supportedLanguages.map((language, index) => (;
-=======
-                      {feature.icon}
-                    </div>
-                    <div className={`absolute -inset-2 bg-gradient-to-r from-transparent via-${feature.gradient} to-transparent rounded-2xl opacity-0 group-hover:opacity-20 transition-opacity duration-300 blur-sm`} />
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-2xl font-bold mb-4 text-white">
-                      {feature.title}
-                    </h3>
-                    <p className="text-gray-400 leading-relaxed">
-                      {feature.description}
-=======
 
-                      {feature.description}
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
                     </p>
                   </div>
                 </div>
@@ -869,26 +747,18 @@ href="/contact"
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Supported Languages Section */}
       <section className='section-padding bg-gradient-cursor'>
         <div className='container-cursor'>
           <div className='text-center mb-20'>
             <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               Multi-Language Support
             </h2>
@@ -940,7 +810,7 @@ href="/contact"
               <Card
                 key={index}
                 className="card-hover border-gradient-teal"
-<<<<<<< HEAD
+
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <div className="text-center mb-4">
@@ -951,10 +821,7 @@ href="/contact"
                   {language.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-gray-300 text-sm">
                       <CheckCircle className="w-4 h-4 text-teal-400 mr-3 flex-shrink-0" />
-=======
 
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                       {feature}
                     </li>
                   ))}
@@ -965,13 +832,8 @@ href="/contact"
         </div>
       </section>
 
-<<<<<<< HEAD
-=======
 
 
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       {/* Demo Analysis Results */}
       {analysisResults && (
@@ -1054,19 +916,11 @@ href="/contact"
           </div>;
         </div>;
       </section>;
-=======
-          </div>
-        </div>
-      </section>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
       {/* Demo Analysis Results */}
       {analysis_results && (
         <section className='section - padding bg - gradient - cursor - accent'>;
@@ -1173,14 +1027,13 @@ href="/contact"
                 </div>
               </Card>
 
-<<<<<<< HEAD
-=======
 
 
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
               {/* Quality Metrics */}
               <Card className='border-gradient-teal'>
                 <h3 className='text-2xl font-bold mb-6 text-white'>
@@ -1193,14 +1046,13 @@ href="/contact"
                       {analysisResults.metrics.complexity}
                     </span>
 
-<<<<<<< HEAD
-=======
 
 
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
                   </div>
                   <div className='flex justify-between items-center'>
                     <span className='text-gray-400'>Maintainability</span>
@@ -1247,33 +1099,10 @@ href="/contact"
                     <CheckCircle className="w-5 h-5 text-teal-400 mt-1 flex-shrink-0" />
                     <span className="text-gray-300">{rec}</span>
                   </div>
-=======
-            {/* Recommendations */}
-            <Card className='border-gradient-teal'>
-              <h3 className='text-2xl font-bold mb-6 text-white'>
-                Improvement Recommendations
-              </h3>
-              <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
-                {analysisResults.recommendations.map((rec, index) => (
-                  <div key={index} className='flex items-start space-x-3'>
-                    <CheckCircle className='w-5 h-5 text-teal-400 mt-1 flex-shrink-0' />
-                    <span className='text-gray-300'>{rec}</span>                  </div>            <Card className="border-gradient-teal">
-              <h3 className="text-2xl font-bold mb-6 text-white">Improvement Recommendations</h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                {analysisResults.recommendations.map((rec, index) => (
-                  <div key={index} className="flex items-start space-x-3">
-                    <CheckCircle className="w-5 h-5 text-teal-400 mt-1 flex-shrink-0" />
-                    <span className="text-gray-300">{rec}</span>
-                    <span className='text-gray-300'>{rec}</span>                  </div>
-
-                  </div>
-
-<<<<<<< HEAD
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
                 ))}
               </div>
             </Card>
@@ -1287,17 +1116,14 @@ href="/contact"
           <div className='text-center mb-20'>
             <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
               Simple Pricing
             </h2>
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
@@ -1314,8 +1140,7 @@ href="/contact"
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricing.map((plan, index) => (
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
       <section id='pricing' className='section-padding bg-gradient-cursor'>;
         <div className='container-cursor'>;
           <div className='text-center mb-20'>;
@@ -1519,100 +1344,7 @@ href="/contact"
                     <span className='text - 4xl font - bold text - white'>;
                       {plan.price}
 
-=======
 
-                className={`card-hover border-gradient-teal ${plan.popular ? 'ring-2 ring-teal-500 scale-105' : ''}`}
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                {plan.popular && (
-
-                  <div className='absolute -top-4 left-1/2 transform -translate-x-1/2'>
-                    <span className='bg-gradient-to-r from-teal-500 to-cyan-600 text-white px-4 py-2 rounded-full text-sm font-medium'>                      Most Popular
-                    </span>
-                  </div>
-                )}                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-
-                    <span className="bg-gradient-to-r from-teal-500 to-cyan-600 text-white px-4 py-2 rounded-full text-sm font-medium">
-                      Most Popular
-                    </span>
-                  </div>
-                )}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
-
-                <div className='text-center mb-8'>;
-                  <h3 className='text-2xl font-bold text-white mb-4'>;
-                    {plan && plan.name}
-                  </h3>;
-                  <div className='mb-6'>;
-                    <span className='text-4xl font-bold text-white'>;
-                      {plan && plan.price}
-                    </span>;
-                    <span className='text-gray-400'>{plan && plan.period}</span>;
-                  </div>;
-                  <p className='text-gray-400'>{plan && plan.description}</p>;
-                </div>;
-<<<<<<< HEAD
-                <ul className='space-y-4 mb-8'>;
-                  {plan && plan.features.map((feature, featureIndex) => (;
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
-                <div className='text-center mb-8'>
-                  <h3 className='text-2xl font-bold text-white mb-4'>
-                    {plan.name}
-                  </h3>
-                  <div className='mb-6'>
-                    <span className='text-4xl font-bold text-white'>
-                      {plan.price}
-                    </span>
-                    <span className='text-gray-400'>{plan.period}</span>
-                  </div>
-                  <p className='text-gray-400'>{plan.description}</p>
-                </div>
-                <ul className='space-y-4 mb-8'>
-                  {plan.features.map((feature, featureIndex) => (
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
-
-                <ul className='space-y-4 mb-8'>;
-                  {plan && plan.features.map((feature, featureIndex) => (;
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-                    <li
-                      key={featureIndex}
-                      className='flex items-center text-gray-300'>;
-                      <CheckCircle className='w-5 h-5 text-teal-400 mr-3 flex-shrink-0' />                      {feature}                  </div>;
-                  <p className="text-gray-400">{plan && plan.description}</p>;
-                </div>;
-                <ul className="space-y-4 mb-8">;
-                  {plan && plan.features.map((feature, featureIndex) => (;
-                    <li key={featureIndex} className="flex items-center text-gray-300">;
-                      <CheckCircle className="w-5 h-5 text-teal-400 mr-3 flex-shrink-0" />;
-
-                      {feature}
-<<<<<<< HEAD
-
-
-                      {feature}
-
-=======
-                    </li>;
-=======
-
-
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-                    </li>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   ))}
 
                 </ul>;
@@ -1622,26 +1354,14 @@ href="/contact"
                   href='/contact'
                   size='lg'
 
-=======
-                      {feature}
-=======
-<<<<<<< HEAD
 
-                      {feature}
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-                      {feature}
 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     </li>
                   ))}
                 </ul>
-<<<<<<< HEAD
-<Button
-                  href="/contact"
-=======
+
                 <Button
                   href="/contact"
                   size="lg"
@@ -1653,37 +1373,21 @@ href="/contact"
 
                 </Button>
 
-<<<<<<< HEAD
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
 
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               </Card>
             ))}
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               </Card>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
@@ -1698,6 +1402,7 @@ href="/contact"
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
       {/* CTA Section */}
       <section className='section-padding bg-gradient-to-r from-teal-600 to-cyan-700 relative overflow-hidden'>
         <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />
@@ -1705,11 +1410,13 @@ href="/contact"
           <h2 className='text-responsive-lg font-bold text-white mb-8 text-shadow-lg'>
 
             Ready to Improve Your Code Quality?
-<<<<<<< HEAD
-=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
           </h2>
           <p className='text-responsive-md text-teal-100 mb-12 max-w-4xl mx-auto leading-relaxed'>
             Join thousands of developers using our code quality checker to write
@@ -1728,7 +1435,7 @@ href="/contact"
               href='/contact'
               variant='outline'
               size='lg'
-<<<<<<< HEAD
+
               className='border-white text-white hover:bg-white hover:text-teal-600 shadow-2xl'            >              href="/contact"
               variant="outline"
               size="lg"
@@ -1740,10 +1447,7 @@ href="/contact"
       </section>
     </>
 );
-=======
 
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               Schedule Demo;
             </Button>;
           </div>;
@@ -1751,28 +1455,12 @@ href="/contact"
       </section>;
 
 
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
   );
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-    </>);
-=======
-<<<<<<< HEAD
-);
-<<<<<<< HEAD
-=======
-  );
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
-  );
-}
-=======
-    </>);
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba

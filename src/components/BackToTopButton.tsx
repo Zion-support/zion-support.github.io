@@ -11,7 +11,7 @@ function BackToTopButton() {
       set_visible (window.scroll_y > 400);
 =======
 import { ArrowUp } from 'lucide-react'
-<<<<<<< HEAD
+
 <<<<<<< HEAD
 import { useEffect, useState } from "react";
 export function BackToTopButton() {
@@ -21,15 +21,7 @@ export function BackToTopButton() {
   return (
     <button
       aria-label="Back to top"
-=======
-import { useEffect, useState } from 'react'
-import { useEffect, useState } from "react"
-export function BackToTopButton() {
-  const [visible, setVisible] = useState(false)
-  useEffect((,) => {
-    const updateVisibility = () => {
-      setVisible(window.scrollY > 400)
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
     }
     update_visibility ();
     window.addEventListener ('scroll', update_visibility);

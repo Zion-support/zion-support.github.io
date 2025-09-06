@@ -1,9 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readJson, writeJson } from "../../../utils/fsDb";
 import { tagOperatorSession } from "../../../utils/operator";
@@ -51,15 +48,11 @@ function handler() {
   }
   requests.push(record);
   writeJson("support/requests.json", requests);
-<<<<<<< HEAD
+
   await tagOperatorSession(sessionId, tag ?? "escalate");
   return res.status(200).json({ ok: true, id });
 }
 
-import type { NextApiRequest, NextApiResponse } from 'next';
-export default async function handler(req, res) {
-  try {
-  res.status(200).json({ message: 'Session escalated' });
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { readJson, writeJson } from '../../../utils/fsDb';
 import { tagOperatorSession } from '../../../utils/operator';
@@ -75,7 +68,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   await tagOperatorSession(sessionId, tag ?? 'escalate');
   return res.status(200).json({ ok: true, id })
 }
-=======
+
 
   };
   if (!sessionId) return res && res.status(400).json({ error: "Missing sessionId" });
@@ -91,9 +84,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 }
 
     created_at: Date.now (),
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -104,10 +96,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   await tagOperatorSession (session_id, tag ?? "escalate");
   return res.status (200).json ({ ok: true, id });
 }
-<<<<<<< HEAD
-=======
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba

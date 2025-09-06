@@ -1,6 +1,6 @@
 
 
-<<<<<<< HEAD
+
 import Head from 'next/head';
 import Layout from '../components/layout/Layout';
 export default function EmailDmarcAnalyzerPage() {
@@ -32,8 +32,10 @@ export default function EmailDmarcAnalyzerPage() {
           <div className="flex gap-3">
             <a href="/contact" className="px-6 py-3 rounded-xl bg-gradient-to-r from-amber-600 to-orange-700 text-white">Start from $39/mo</Link>
             <a href="/market-pricing" className="px-6 py-3 rounded-xl border border-gray-700 text-gray-200">See market pricing</Link>
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
           </div>
         </div>
       </div>
@@ -66,7 +68,7 @@ export default function EmailDmarcAnalyzerPage(req, res) {
   }
 }
 
-<<<<<<< HEAD
+
           </div>;
           <div className="flex gap-3">;
             <a href="/contact" className="px-6 py-3 rounded-xl bg-gradient-to-r from-amber-600 to-orange-700 text-white">Start from $39/mo</a>;
@@ -81,10 +83,8 @@ export default function EmailDmarcAnalyzerPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-;
-;
-=======
-;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba

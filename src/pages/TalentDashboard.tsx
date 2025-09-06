@@ -33,11 +33,10 @@ import { ProjectOfferBanner } from '@/components/projects/ProjectOfferBanner';
 import { UpcomingInterviewsCard } from '@/components/interviews/UpcomingInterviewsCard';
 function TalentDashboardContent() {;
 =======
-<<<<<<< HEAD
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
+
+
+
 import { useState, useEffect } from 'react'
 import { Button } from '@/components/ui/button'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
@@ -70,22 +69,7 @@ import { useOnboardingStatus } from '@/hooks/useOnboardingStatus'
 import { MyApplications } from '@/components/jobs/MyApplications'
 import { ProjectOfferBanner } from '@/components/projects/ProjectOfferBanner'
 import { UpcomingInterviewsCard } from '@/components/interviews/UpcomingInterviewsCard'
-<<<<<<< HEAD
-=======
-function TalentDashboardContent() {
-  const { user } = useAuth()
-  const [activeTab, setActiveTab] = useState('job-matches')
-  const onboardingStatus = useOnboardingStatus()
-  const showAdvanced = null;
-    onboardingStatus.profileCompleted &&
-    onboardingStatus.skillsAdded &&
-    onboardingStatus.availabilitySet &&
-    onboardingStatus.matchReceived
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
-function TalentDashboardContent() {
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   const { user } = useAuth();
   const [activeTab, setActiveTab] = useState("job-matches");
   const onboardingStatus = null;
@@ -117,10 +101,9 @@ function TalentDashboardContent() {
     onboardingStatus.availabilitySet &&
     onboardingStatus.matchReceived,
 
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 
 
@@ -156,10 +139,9 @@ function TalentDashboardContent() {
         <div className='grid grid-cols-1 lg:grid-cols-3 gap-8'>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 
           <div>
@@ -219,10 +201,9 @@ function TalentDashboardContent() {
                   <Button className="w-full" asChild>
                     <Link href="/messages">
                       <MessageSquare className="h-4 w-4 mr-2" />
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 
                       Messages
@@ -234,11 +215,8 @@ function TalentDashboardContent() {
 
 
             
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             {/* New Onboarding Progress Tracker */}
             <TalentOnboardingSteps />
             {showAdvanced && (
@@ -457,10 +435,9 @@ function TalentDashboardContent() {
 
             
             <Card className="mt-8">
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 
               <CardHeader>
@@ -499,10 +476,9 @@ function TalentDashboardContent() {
               <TabsList className="mb-6">
                 <TabsTrigger value="job-matches" className="flex items-center">
                   <BriefcaseIcon className="h-4 w-4 mr-2" />
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 
                   AI Job Matches
@@ -520,10 +496,9 @@ function TalentDashboardContent() {
               </TabsContent>
               
               <TabsContent value="applications" className="mt-0">
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 
                 <MyApplications />
@@ -544,10 +519,9 @@ function TalentDashboardContent() {
                 <Card className="bg-muted/30">
                   <CardContent className="pt-6 text-center">
                     <p className="text-muted-foreground">
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 
                       You haven't saved any jobs yet.
@@ -564,10 +538,9 @@ function TalentDashboardContent() {
       </main>
     </>
   )
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
             <div className='mt-8'>;
               <UpcomingInterviewsCard />;
@@ -653,10 +626,9 @@ function TalentDashboardContent() {
     </ProtectedRoute>;
   );
 };
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 }
 ;

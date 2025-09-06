@@ -1,15 +1,7 @@
 
-<<<<<<< HEAD
+
 import React, { useState } from 'react';
-import {
-  Dialog;
-  DialogContent;
-  DialogDescription;
-  DialogHeader;
-=======
 
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React, { useState } from 'react',
 import {
   Dialog,
@@ -34,13 +26,11 @@ export interface HireConfirmationModalProps {
   application?: JobApplication;
   onConfirm: () => void
 
-<<<<<<< HEAD
+
   isSubmitting?: boolean
 }
 export function HireConfirmationModal({
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import {Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle} from "@/components/ui/dialog";
 import {Button} from "@/components/ui/button";
 import {Input} from "@/components/ui/input";
@@ -61,6 +51,9 @@ export interface HireConfirmationModalProps {;
 }
 
 export function HireConfirmationModal({ ;
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
   isOpen;
 
 export function HireConfirmationModal({ ;
@@ -79,7 +72,7 @@ export function HireConfirmationModal({ ;
   const [updateAvailability, setUpdateAvailability] = useState(true);
   const [isLoading, setIsLoading] = useState(false);
   const { user } = useAuth();
-<<<<<<< HEAD
+
   // Get talent information from either candidateData or application
   const talentData = candidateData |(application?.talent_profile as TalentProfile);
   const handleHireCandidate = async () => {
@@ -89,29 +82,8 @@ export function HireConfirmationModal({ ;
         description: 'Please fill in both project name and description.'
         variant: 'destructive'})
       return
-=======
 
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-import React, { useState } from 'react',
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogHeader,
-  DialogTitle} from "@/components/ui/dialog",
-import { Button } from "@/components/ui/button",
-import { Input } from "@/components/ui/input",
-import { Label } from "@/components/ui/label",
-import { Textarea } from "@/components/ui/textarea",
-import { toast } from "@/hooks/use-toast",
-import { supabase } from "@/integrations/supabase/client",
-import { TalentProfile } from "@/types/talent",
-<<<<<<< HEAD
-=======
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { useAuth } from "@/hooks/useAuth",
 import { JobApplication } from "@/types/jobs",
 export interface HireConfirmationModalProps {
@@ -168,13 +140,12 @@ export function HireConfirmationModal({;
         description: 'Please fill in both project name and description.',;
         variant: 'destructive'}),;
       return;
-<<<<<<< HEAD
-=======
 
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
     }
     if (!user) {
       toast({
@@ -189,11 +160,7 @@ export function HireConfirmationModal({;
         description: 'Talent information is missing.'
         variant: 'destructive'})
       return
-<<<<<<< HEAD
-    }
-<<<<<<< HEAD
 
-=======
 
 
   // Get talent information from either candidateData or application;
@@ -224,13 +191,8 @@ export function HireConfirmationModal({;
       return;
 
     }
-=======
-    }
 
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     setIsLoading(true);
 
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from '@/components / ui / dialog';
@@ -370,70 +332,7 @@ if ( {) {
               variant: 'destructive'}),;
 
             setIsLoading(false);
-=======
-            client_id: user.id,
-            talent_id: talent_data.user_id,
-            job_id: application?.job_id || null,
-            title: project_name,
-            description: project_description,
-            status: 'active',
-            payment_terms: 'hourly'}]);
-        .select ();
-        .single ();
-;
-      // Check condition
-if ( {) {
-  $2
-}
-        toast ({
-          title: 'Error creating project',
-          description: project_error.message,
-          variant: 'destructive'}),
-        setIsLoading (false);
-        return;
-      }
-      // Create a new hiring record;
-      const { error: hiring_error } = await supabase;
-        .from ('hiring_records');
-        .insert ([;
-          {
-            client_id: user.id,
-            talent_id: talent_data.user_id,
-            project_id: project_data.id,
-            hire_date: new Date ().toISOString (),
-            status: 'active'}]),
-      // Check condition
-if ( {) {
-  $2
-}
-        toast ({
-          title: 'Error creating hiring record',
-          description: hiring_error.message,
-          variant: 'destructive'}),
-        setIsLoading (false);
-        return;
-      }
-      // Update the availability status;
-      // Check condition
-if ( {) {
-  $2
-}
-        try {
-          const { error: availability_error } = await supabase;
-            .from ('talent_profiles');
-            .update ({ availability_type: 'unavailable' });
-            .eq ('id', talent_data.id);
-;
-          // Check condition
-if ( {) {
-  $2
-}
-            toast ({
-              title: 'Error updating availability',
-              description: availability_error.message,
-              variant: 'destructive'}),
-            setIsLoading (false);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
             return;
           }
 
@@ -462,15 +361,11 @@ if ( {) {
     } finally {
       setIsLoading(false)
     }
-<<<<<<< HEAD
+
   }
   };
-=======
 
-  };
 
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 ;
     setIsLoading(true),;
     // Create a new project;
@@ -560,14 +455,11 @@ if ( {) {
     }
 
   },
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
   return (
 

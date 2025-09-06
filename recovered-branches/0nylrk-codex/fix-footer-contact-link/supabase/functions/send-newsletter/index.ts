@@ -1,21 +1,14 @@
 
-<<<<<<< HEAD
-=======
+
 import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server && server.ts",
 import {Resend} from "npm: resend@2 ;
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
-=======
-import { serve } from 'https: //deno.land / std@0.190.0 / http / server.ts';,
-import { Resend } from 'npm: resend@2.0.0';
-const cors_headers = {
-  "Access - Control - Allow - Origin": "*",
-  "Access - Control - Allow - Headers": "authorization, x - client - info, apikey, content - type"}
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
 interface SendNewsletterRequest {
   subject: string;
   preview_text: string;
@@ -23,19 +16,16 @@ interface SendNewsletterRequest {
   testMode?: boolean
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 import { Resend } from "npm: resend@2.0.0",
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 import {serve} from "https: //deno.land/std@0.190.0/http/server.ts",;
 import {Resend} from "npm: resend@2.0.0";
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 import { Resend } from "npm: resend@2.0.0",
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
@@ -116,9 +106,8 @@ serve(async (req) => {
     console.error("Error in send-newsletter function:", error),
     
     return new Response(JSON.stringify({ error: error.message }), {
-<<<<<<< HEAD
-      headers: { ...corsHeaders, "Content-Type": "application/json" };
-      status: 500})
+
+
       headers: { ...corsHeaders, "Content-Type": "application/json" },
       status: 500})
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",;
@@ -174,9 +163,10 @@ serve(async (req) => {;
     return new Response(JSON.stringify({ error: error.message }), {;
       headers: { ...corsHeaders, "Content-Type": "application/json" },;
       status: 500});
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
   }
 });

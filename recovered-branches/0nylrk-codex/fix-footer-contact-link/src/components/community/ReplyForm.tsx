@@ -1,5 +1,5 @@
 
-<<<<<<< HEAD
+
 import { useState } from "react",
 import { useForm } from "react-hook-form",
 import { useState } from "react";
@@ -8,16 +8,6 @@ import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import {
 
-  Form
-  FormControl
-  FormField
-  FormItem
-  FormMessage
-  Form,
-  FormControl,
-  FormField,
-  FormItem,
-FormMessage,;
 } from "@/components/ui/form";
 
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
@@ -43,8 +33,8 @@ export const ReplyForm = ({ onSubmit, parentId }: ReplyFormProps) => {;
     } finally {
       setIsSubmitting(false);
     }
-  }
-  };
+
+
 
 import { useState } from "react",
 import { useForm } from "react-hook-form",
@@ -66,9 +56,7 @@ import { useState } from "react",;
 import { useForm } from "react-hook-form",;
 import { Button } from "@/components/ui/button",;
 import { Textarea } from "@/components/ui/textarea",;
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import {;
   Form,;
   FormControl,;
@@ -89,45 +77,7 @@ import { use_form  } from './react - hook - form';
 import { Button  } from '@/components / ui / button';
 import { Textarea  } from '@/components / ui / textarea';
 import {
-=======
-import { useState } from "react";
-import { useForm } from "react-hook-form";
 
-import { Button } from "@/components/ui/button";
-import { Textarea } from "@/components/ui/textarea";
-import {
-
-
-  Form,
-  FormControl,
-  FormField,
-  FormItem,
-
-
-interface ReplyFormValues {;
-
-  content: string;
-}
-
-FormMessage,;
-
-} from "@/components/ui/form";
-
-import { Card, CardContent, CardFooter } from "@/components/ui/card";
-
-  };
-
-
-=======
-
-  const form = useForm<ReplyFormValues>({;
-    defaultValues: {;
-      content: "",;
-    },;
-  });
-
-  const handleSubmit = async (values: ReplyFormValues) => {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     setIsSubmitting(true);
     try {;
       (await onSubmit(values && values.content), form && form.reset());
@@ -136,13 +86,9 @@ import { Card, CardContent, CardFooter } from "@/components/ui/card";
     }
 
   },
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 
 
-
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -165,11 +111,11 @@ import { Card, CardContent, CardFooter } from "@/components/ui/card";
                           : "Join the discussion...";
                       }
                       placeholder={parentId ? "Write your reply..." : "Join the discussion..."}
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
                       className="min-h-[100px] resize-y"
                       {...field}
                     />
@@ -194,11 +140,13 @@ export default ReplyForm;
   )
 },
 
-<<<<<<< HEAD
+
 export default ReplyForm,
+
 export default ReplyForm;
 export default ReplyForm,
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba

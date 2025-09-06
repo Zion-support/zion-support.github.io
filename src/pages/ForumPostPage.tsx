@@ -2,7 +2,7 @@ export default function ForumPostPage() {
   // Using `useParams` without type arguments avoids issues when TypeScript
   // can't determine the generic type for the helper from React Router.
   // Cast the result instead to provide the expected shape.
-<<<<<<< HEAD
+
   const router = useRouter()
   const postId = router.query.postId as string
   const { user } = useAuth()
@@ -24,8 +24,7 @@ export default function ForumPostPage() {
   const timeAgo = formatDistanceToNow(new Date(post.createdAt), { addSuffix: true })
   const formattedDate = format(new Date(post.createdAt), "MMMM d, yyyy 'at' h: mm a")
 }
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 
 class ErrorBoundary extends React.Component {
@@ -40,7 +39,7 @@ class ErrorBoundary extends React.Component {
 
   const isAdminOrMod = user?.userType === 'admin' || user?.role === 'admin'
       return;
-<<<<<<< HEAD
+
 
   const router = useRouter(),
   const postId = router.query.postId as string,
@@ -178,10 +177,7 @@ class ErrorBoundary extends React.Component {
     if (!isAdminOrMod) return;
     if (!isAdminOrMod) return,
     
-=======
 
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     setPost({ ...post, isPinned: !post.isPinned }),
     
     toast({
@@ -190,16 +186,13 @@ class ErrorBoundary extends React.Component {
   },
 
   const handleLockPost = () => {
-<<<<<<< HEAD
+
     if (!isAdminOrMod) return,
     
     if (!isAdminOrMod) return;
     if (!isAdminOrMod) return,
     
-=======
 
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     setPost({ ...post, isLocked: !post.isLocked }),
     
     toast({

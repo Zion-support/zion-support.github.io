@@ -1,27 +1,12 @@
 
-<<<<<<< HEAD
+
 import { useState } from "react",
 import { TALENT_PROFILES } from "@/data/talentData",
 import { JOB_POSTS } from "@/data/jobsData";
 import { PROJECTS } from "@/data/projectsData";
 export interface SearchResult {
-import {useState} from "react";
-import {TALENT_PROFILES} from "@/data/talentData";
-import {JOB_POSTS} from "@/data/jobsData";
-import {PROJECTS} from "@/data/projectsData";
-export interface SearchResult {;
-=======
 
-
-
-
-
-import { useState } from './react';
-import { TALENT_PROFILES } from '@/data / talent_data';
-import { JOB_POSTS } from '@/data / jobs_data';
-import { PROJECTS } from '@/data / projects_data';
-export interface SearchResult {
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
   id: string;
   type: "talent" | "job" | "project";
   title: string,
@@ -33,18 +18,10 @@ interface SearchFilters {
   skills?: string[] | null;
   location?: string | null;
   budget?: { min: number, max: number } | null;
-<<<<<<< HEAD
+
   availability?: string | null
 }
-export function useAISearch() {
-  const [results, setResults] = useState<SearchResult[]>([]),
-  const [loading, setLoading] = useState(false);
 
-export function useAISearch() {;
-  const [results, setResults] = useState<SearchResult[]>([]);
-  const [loading, setLoading] = useState(false);
-import { useState } from "react",
-import { TALENT_PROFILES } from "@/data/talentData",
 import { JOB_POSTS } from "@/data/jobsData",
 import { PROJECTS } from "@/data/projectsData",
 export interface SearchResult {
@@ -75,21 +52,12 @@ export function useAISearch() {
   const [results, setResults] = useState<SearchResult[]>([]),
   const [loading, setLoading] = useState(false),
 
-=======
-  availability?: string | null;
-}
 
 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
-=======
-export /**
- * useAISearch - Function description
- */
-function useAISearch() {
-  const [results, set_results] = useState < SearchResult[]>([]);
-  const [loading, set_loading] = useState (false);
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const search = async (query: string) => {
     setLoading(true),
@@ -137,28 +105,7 @@ function useAISearch() {
       if (!filters.type |filters.type === "project" |filters.type === "all") {
         PROJECTS.forEach((p) => {
           items.push({ id: p.id, type: "project", title: p.job?.title |"Project", description: p.scope_summary })
-=======
-      };
 
-      if (!filters && filters.type || filters && filters.type === "talent" || filters && filters.type === "all") {
-        TALENT_PROFILES && TALENT_PROFILES.forEach((t) => {
-          if (filters && filters.location && !t && t.location?.toLowerCase().includes(filters && filters.location.toLowerCase())) return;
-          if (!matchSkill(t && t.skills)) return;
-          items && items.push({ id: t && t.id, type: "talent", title: t && t.full_name, description: t && t.professional_title })
-        })
-      }
-
-      if (!filters && filters.type || filters && filters.type === "job" || filters && filters.type === "all") {
-        JOB_POSTS && JOB_POSTS.forEach((j) => {
-          if (!matchSkill(j && j.skills)) return;
-          items && items.push({ id: j && j.id, type: "job", title: j && j.title, description: j && j.description })
-        })
-      }
-
-      if (!filters && filters.type || filters && filters.type === "project" || filters && filters.type === "all") {
-        PROJECTS && PROJECTS.forEach((p) => {
-          items && items.push({ id: p && p.id, type: "project", title: p && p.job?.title || "Project", description: p && p.scope_summary })
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         })
       }
       setResults(items)
@@ -170,33 +117,9 @@ function useAISearch() {
     }
   }
 
-<<<<<<< HEAD
-  return { results, loading, search }
-}
-=======
-      const response = await fetch (
-        "https://ziontechgroup.functions.supabase.co / functions / v1 / ai - search";
-        {
-          method: "POST",
-          headers: { "Content - Type": "application / json" }
-          body: JSON.stringify ({ query })}
-      );
-      const data = await response.json ();
-      const filters: SearchFilters = data.filters || {}
-;
-      const items: SearchResult[] = [];
-      const match_skill = (skills: string[] | undefined) =>: any {
-        // Check condition
-if (return true, ) {
-  $2
-}
-        return skills?.some ((s) =>;
-          filters.skills!.some ((f) => s.toLowerCase ().includes (f.toLowerCase ())));
-=======
 
 
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 ;
 export function useAISearch() {;
   const [results, setResults] = useState<SearchResult[]>([]),;
@@ -271,12 +194,11 @@ if ( {) {
     }
 
   };
-<<<<<<< HEAD
-=======
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
   return { results, loading, search }
 }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662

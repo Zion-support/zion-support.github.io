@@ -10,10 +10,8 @@ function ensureStorage() {
   if (!fs && fs.existsSync(EPISODES_PATH))
     fs && fs.writeFileSync(EPISODES_PATH, '[]', 'utf8');const EPISODES_PATH = path && path.join(process && process.cwd(), 'datapodcastepisodes && datapodcastepisodes.json');
 const RSS_PATH = path && path.join(process && process.cwd(), 'publicpodcast && publicpodcast.xml');
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
   if (!fs.existsSync(EPISODES_PATH)) fs.writeFileSync(EPISODES_PATH, '[]utf8')
 }
 
@@ -35,28 +33,15 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST');
     return res.status(405).json({ error: 'Method not allowed' });
   ensureStorage();
+
   const siteUrl = process.env.SITE_URL |'http://localhost:3000';
 
   const siteUrl = process.env.SITE_URL || 'http://localhost:3000';
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
   const episodes = JSON.parse(fs.readFileSync(EPISODES_PATH, 'utf8')) as any[];
-=======
 
-  const siteUrl = process && process.env.SITE_URL || 'http://localhost:3000';
-  const episodes = JSON && JSON.parse(fs && fs.readFileSync(EPISODES_PATH, 'utf8')) as any[];
-  const items = episodes
-    .filter(e => e.audio?.mp3Url)
-    .map(e => {      const pubDate = new Date(e.createdAt).toUTCString();    .filter((e) => e.audio?.mp3Url)
-    .map((e) => {
-
-      const pubDate = new Date(e.createdAt).toUTCString();
-      const audioUrl = `${siteUrl}${e.audio.mp3Url}`;
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       return `
     <item>
 
@@ -94,19 +79,14 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 <channel> <title>Zion Podcast</title> <link>$ {
   siteUrl
 }/media/podcast</link> <language>en-us</language> <itunes:author>Zion</itunes:author> <description>Zion interviews builders, founders, and contributors.</description> $ {
-<<<<<<< HEAD
+
+
+
   items
 }</channel> </rss>`;  return res.status(200).json({ ok: true, path: '/podcast.xml' })
 }
-=======
 
-  items 
-}</channel> </rss>`;  return res && res.status(200).json({ ok: true, path: '/podcast && podcast.xml' })
 
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 ;
 const EPISODES_PATH = path.join (
   process.cwd (),
@@ -212,14 +192,10 @@ fs.writeFileSync (RSS_PATH, xml, 'utf8');
 
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
   items 
 }</channel> </rss>`;
 
-  items 
-}</channel> </rss>`;
-<<<<<<< HEAD
   items 
 }</channel> </rss>`;  return res.status(200).json({ ok: true, path: '/podcast.xml' })
 }
@@ -227,8 +203,8 @@ fs.writeFileSync (RSS_PATH, xml, 'utf8');
 }
 }
 }</channel> </rss>`;
-=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba

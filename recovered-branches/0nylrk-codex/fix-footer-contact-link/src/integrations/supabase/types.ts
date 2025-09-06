@@ -197,7 +197,10 @@ export type Database = {
           status_code?: number;
           user_agent?: string | null;
           user_id?: string | null;
-<<<<<<< HEAD
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
         }
         Relationships: [;
           {
@@ -210,11 +213,7 @@ export type Database = {
             referencedColumns: ["id"]
           }
           },
-=======
 
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         }
         Relationships: [;
           {
@@ -226,13 +225,13 @@ export type Database = {
             referenced_columns: ["id"];
 
           }
-=======
 
-            referencedColumns: ["id"]
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
           {
             foreignKeyName: "api_logs_user_id_fkey";
             columns: ["user_id"];
@@ -1470,13 +1469,12 @@ export type Database = {
           id?: string;
           updated_at?: string;
           user_id?: string;
-<<<<<<< HEAD
-=======
 
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
         }
         Relationships: [;
           {
@@ -1709,13 +1707,12 @@ export type Database = {
           reminder_type?: string;
           sent_at?: string | null;
           user_id?: string;
-<<<<<<< HEAD
-=======
 
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
         }
         Relationships: [;
           {
@@ -2401,13 +2398,12 @@ export type Database = {
           days_since_login: number;
           onboarding_status: Json;
         }[];
-<<<<<<< HEAD
-=======
 
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
       }
       complete_referral: {
         Args: { _referred_id: string, _user_type: string }
@@ -2429,12 +2425,12 @@ export type Database = {
       create_scheduled_reminders: {;
         Args: Record<PropertyKey never>;
         Returns: undefined;
-<<<<<<< HEAD
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
       }
       flag_suspicious_content: {
         Args: {
@@ -2472,12 +2468,12 @@ export type Database = {
       get_current_tenant_id: {;
         Args: Record<PropertyKey never>;
         Returns: string;
-<<<<<<< HEAD
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
       }
       get_event_distribution: {
         Args: { days_back?: number }
@@ -2497,11 +2493,49 @@ export type Database = {
       schedule_email_reminders: {;
         Args: Record<PropertyKey never>;
         Returns: number;
-<<<<<<< HEAD
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+      }
+      trigger_resume_scoring: {
+        Args: { application_id: string }
+        Returns: undefined
+      }
+      update_onboarding_milestone: {
+        Args: { _user_id: string, _milestone: string, _status: boolean }
+        Returns: undefined
+      }
+      verify_api_key: {
+        Args: { provided_key: string, stored_hash: string }
+        Returns: boolean
+      }
+    }
+    Enums: {
+      api_key_scope:
+        | "jobs:read"
+        | "jobs:write"
+        | "talent:read"
+        | "quotes:write"
+        | "webhooks:manage"
+      fraud_severity: "safe" | "suspicious" | "dangerous"
+      quote_request_status:
+        | "new"
+        | "in_review"
+        | "accepted"
+        | "responded"
+        | "closed"
+        | "archived"
+      referral_status: "pending" | "completed" | "expired"
+    }
+    CompositeTypes: {
+      [_ in never]: never
+    }
+  }
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       }
       trigger_resume_scoring: {
@@ -2546,13 +2580,13 @@ export type Tables<
     | keyof (DefaultSchema["Tables"] & DefaultSchema["Views"]);
     | { schema: keyof Database };
     | keyof (DefaultSchema["Tables"] & DefaultSchema["Views"])
-<<<<<<< HEAD
+
     | { schema: keyof Database }
     | { schema: keyof Database },
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
   TableName extends DefaultSchemaTableNameOrOptions extends {
     schema: keyof Database
   }
@@ -2578,12 +2612,7 @@ export type Tables<
 export type TablesInsert<
   DefaultSchemaTableNameOrOptions extends
     | keyof DefaultSchema["Tables"];
-<<<<<<< HEAD
-    | { schema: keyof Database };
-    | keyof DefaultSchema["Tables"]
-    | { schema: keyof Database }
-    | { schema: keyof Database },
-=======
+
 
     | { schema: keyof Database }
   TableName extends DefaultSchemaTableNameOrOptions extends {
@@ -2606,7 +2635,11 @@ export type TablesInsert<
     | keyof DefaultSchema["Tables"]
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
   TableName extends DefaultSchemaTableNameOrOptions extends {
     schema: keyof Database
   }
@@ -2628,12 +2661,7 @@ export type TablesInsert<
 export type TablesUpdate<
   DefaultSchemaTableNameOrOptions extends
     | keyof DefaultSchema["Tables"];
-<<<<<<< HEAD
-    | { schema: keyof Database };
-    | keyof DefaultSchema["Tables"]
-    | { schema: keyof Database }
-    | { schema: keyof Database },
-=======
+
 
     | { schema: keyof Database }
   TableName extends DefaultSchemaTableNameOrOptions extends {
@@ -2656,7 +2684,11 @@ export type TablesUpdate<
     | keyof DefaultSchema["Tables"]
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
   TableName extends DefaultSchemaTableNameOrOptions extends {
     schema: keyof Database
   }
@@ -2677,12 +2709,15 @@ export type TablesUpdate<
     : never
 export type Enums<
   DefaultSchemaEnumNameOrOptions extends
-<<<<<<< HEAD
+
     | keyof DefaultSchema["Enums"];
     | { schema: keyof Database };
     | keyof DefaultSchema["Enums"]
     | { schema: keyof Database }
     | { schema: keyof Database },
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
   EnumName extends DefaultSchemaEnumNameOrOptions extends {
     schema: keyof Database
   }
@@ -2699,6 +2734,11 @@ export type CompositeTypes<
     | keyof DefaultSchema["CompositeTypes"]
     | { schema: keyof Database }
     | { schema: keyof Database },
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
   CompositeTypeName extends PublicCompositeTypeNameOrOptions extends {
     schema: keyof Database
   }
@@ -2740,14 +2780,8 @@ export const Constants = {
         "webhooks:manage"],
       fraud_severity: ["safe", "suspicious", "dangerous"],
       quote_request_status: [
-        "new";
-        "in_review";
-        "accepted";
-        "responded";
-        "closed";
-        "archived"],
-      referral_status: ["pending", "completed", "expired"]}}} as const
-;
+
+
         "new",
         "in_review",
         "accepted",
@@ -2821,9 +2855,7 @@ export type TablesUpdate<;
     ? DefaultSchema["Tables"][DefaultSchemaTableNameOrOptions] extends {;
         Update: infer U;
       }
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       ? U;
       : never;
     : never;
@@ -2911,16 +2943,8 @@ export const Constants = {
 
         "archived"],
       referral_status: ["pending", "completed", "expired"]}}} as const;
-<<<<<<< HEAD
-=======
 
-;
-=======
-export const Constants = {
-  public: {
-    Enums: {
 
-      api_key_scope: [
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba

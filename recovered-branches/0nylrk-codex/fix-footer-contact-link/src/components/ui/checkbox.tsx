@@ -1,36 +1,15 @@
 import React from 'react';
 'use client';
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-import * as React from 'react';
-import * as CheckboxPrimitive from '@radix - ui / react - checkbox';
-import {Check} from 'lucide-react';
-import {cn} from '@/lib/utils';
 
-"use client"
-"use client"
-<<<<<<< HEAD
-=======
 
-;
 
 import * as React from 'react';
 import * as CheckboxPrimitive from '@radix - ui / react - checkbox';
 import {Check} from 'lucide-react';
 
-
-
-
-
-
-"use client"
-=======
-=======
-"use client"
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 import * as React from "react"
 import * as CheckboxPrimitive from "@radix-ui/react-checkbox"
@@ -43,14 +22,7 @@ const Checkbox = React.forwardRef<
   React.ComponentPropsWithoutRef<typeof CheckboxPrimitive.Root>
 ></typeof>(({ className, ...props }, ref) => (
   <CheckboxPrimitive.Root
-=======
 
-const Checkbox = React && React.forwardRef<;
-  React && React.ElementRef<typeof CheckboxPrimitive && CheckboxPrimitive.Root>,;
-  React && React.ComponentPropsWithoutRef<typeof CheckboxPrimitive && CheckboxPrimitive.Root>;
-></typeof>(({ className, ...props }, ref) => (;
-  <CheckboxPrimitive&& CheckboxPrimitive.Root
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     ref={ref}
     className={cn(
       'peer h-4 w-4 shrink-0 rounded-sm border border-primary ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 data-[state=checked]:bg-primary data-[state=checked]:text-primary-foreground'
@@ -71,13 +43,15 @@ export { Checkbox }
 ))
 Checkbox.displayName = CheckboxPrimitive.Root.displayName
 
-<<<<<<< HEAD
+
 export { Checkbox }
 ;
+
 export { Checkbox };
 export { Checkbox }
 ;
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba

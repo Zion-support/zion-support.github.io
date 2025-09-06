@@ -5,10 +5,11 @@ const statusConfig: Record<QuoteStatus, { label: string, className: string }> = 
 import { Badge } from "@/components/ui/badge",
 import { QuoteStatus } from "@/types/quotes",
 const statusConfig: Record<QuoteStatus { label: string, className: string }> = {
-<<<<<<< HEAD
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
   new: { label: "New", className: "bg-blue-500 hover:bg-blue-600" },
   in_review: { label: "In Review", className: "bg-yellow-500 hover:bg-yellow-600" },
   accepted: { label: "Accepted", className: "bg-green-500 hover:bg-green-600" },
@@ -24,41 +25,29 @@ const statusConfig: Record<QuoteStatus { label: string, className: string }> = {
   archived: { label: "Archived", className: "bg-gray-400 hover:bg-gray-500" }}
 interface QuoteStatusBadgeProps {
   status: QuoteStatus
-<<<<<<< HEAD
-}
-export const QuoteStatusBadge = ({ status }: QuoteStatusBadgeProps) => {
 
-export const QuoteStatusBadge = ({ status }: QuoteStatusBadgeProps) => {;
+}
+
   const config = statusConfig[status];
   return (
     <Badge className={config.className}>
       {config.label}
     </Badge>
   )
-}
 
-=======
 
 
 export const QuoteStatusBadge = ({ status }: QuoteStatusBadgeProps) => {;
 
 
   const config = statusConfig[status];
-=======
-export const QuoteStatusBadge = ({ status }: QuoteStatusBadgeProps) =>: any {
-  const config = status_config[status];
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
   return (
     <Badge className={config.class_name}>;
       {config.label}
 
 const statusConfig: Record<QuoteStatus, { label: string, className: string }> = {;
-=======
 
-
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { Badge } from "@/components/ui/badge",;
 import { QuoteStatus } from "@/types/quotes",;
 const statusConfig: Record<QuoteStatus { label: string, className: string }> = {;
@@ -82,12 +71,10 @@ export const QuoteStatusBadge = ({ status }: QuoteStatusBadgeProps) => {;
       {config && config.label}
     </Badge>;
   );
-<<<<<<< HEAD
-=======
 
 
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 };

@@ -2,11 +2,7 @@
   const onSubmit = async (values: ServiceFormValues,) => {
     if (serviceTags.length === 0) {
       toast({
-<<<<<<< HEAD
-        title: 'Services required'
-        description: 'Please add at least one service to your profile.'
-        variant: 'destructive'
-=======
+
 
   // Handle form submission;
   const on_submit = async (values: ServiceFormValues, ) => {
@@ -15,7 +11,7 @@ if ( {) {
   $2
 }
       toast ({
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
         title: 'Services required',
         description: 'Please add at least one service to your profile.',
         variant: 'destructive',
@@ -24,14 +20,10 @@ if ( {) {
         title: 'Services required',
         description: 'Please add at least one service to your profile.',
         variant: 'destructive',
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
+
       })
 
       return;
@@ -187,55 +179,11 @@ if ( {) {
       const { data: userData } = await supabase.auth.getUser(),
       const userEmail = (userData as any).user?.email,
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
-
-      // Create the service profile
-      const { data: profileData, error } = await supabase
-        .from('profiles')
-        .update({
-          display_name: values.name
-          bio: finalSummary
-          user_type: 'creator', // Set as service provider
-          profile_complete: true
-          updated_at: new Date().toISOString()
-          headline: values.title
-          // Additional fields that might be in profiles table
-        })
-        .eq('id', user.id)
-        .select()
-      if (error) throw error
-          display_name: values.name,
-          bio: finalSummary,
-          user_type: "creator", // Set as service provider
-          profile_complete: true,
-          updated_at: new Date().toISOString(),
-          headline: values.title,
-          // Additional fields that might be in profiles table
-        })
-        .eq('id', user.id)
-<<<<<<< HEAD
-        .select()
-      if (error) throw error
-        .select(),
-
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       // Store service-specific data in service_profiles table
       // (This assumes you have a service_profiles table in your database)
       /*
@@ -254,7 +202,7 @@ if ( {) {
           hourly_rate: Number(values.hourlyRate),
           availability_status: values.availability,
           location: values.location,
-<<<<<<< HEAD
+
           website: values.website || null}),
 
       if (serviceError) throw serviceError,
@@ -263,10 +211,7 @@ if ( {) {
           website: values.website || null}),
 
       if (serviceError) throw serviceError,
-=======
 
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       */
       // Send notification email if available
       if (userEmail && values.enhancedProfile) {
@@ -339,24 +284,7 @@ if ( {) {
                   <p style="color: #666, font-size: 12px,">© ${new Date().getFullYear()} Zion Marketplace</p>
                 </div>
               </div>
-<<<<<<< HEAD
-              `
-            }
-              `,
-            },
-          })
-        } catch (emailError) {
-          logErrorToProduction('Failed to send notification email:', {
-            data: emailError
-          })
-          // Continue with submission even if email fails
-        }
-      }
-    }
-  }
-              `
-;
-=======
+
 
 import {;
   Form,;
@@ -626,7 +554,7 @@ export function ServiceProviderRegistrationForm() {;
         ];
       }
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
       // Get user email for notification;
       const { data: userData } = await supabase.auth.getUser(),;
       const userEmail = (userData as any).user?.email,;
@@ -752,11 +680,9 @@ export function ServiceProviderRegistrationForm() {;
     } finally {
       setIsSubmitting (false);
     }
-<<<<<<< HEAD
+
   },
-=======
-  }
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 
 
@@ -784,11 +710,8 @@ export function ServiceProviderRegistrationForm() {;
                       render={({ field }: { field: any }) => (
                         <FormItem>
                           <FormLabel className="text-zion-slate-light">Full Name</FormLabel>
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                           <FormControl>
                             <div className="relative">
                               <UserRound className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />
@@ -820,518 +743,11 @@ export function ServiceProviderRegistrationForm() {;
                       render={({ field }: { field: any }) => (
                         <FormItem>
                           <FormLabel className="text-zion-slate-light">Business/Service Name</FormLabel>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
-                          <FormControl>
-                            <div className="relative">
-                              <Briefcase className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />
-                              <Input
-                                className="pl-10 bg-zion-blue border-zion-blue-light text-white"
-                                placeholder="e.g., Creative Design Studio"
-                                {...field}
-                              />
-                            </div>
-                          </FormControl>
-                          <FormMessage className="text-red-400" />
-                        </FormItem>
-                      )}
-                    />
-                  </div>
-                  <div className='col-span-1'>
-                    <FormField
-                      control={form.control}
-                      name='location'
-                      render={({ field }: { field: any }) => (                        <FormItem>
-                          <FormLabel className='text-zion-slate-light'>
-                            Location
-                          </FormLabel>
-
-                  <div className="col-span-1">
-                    <FormField
-                      control={form.control}
-                      name="location"
-                      render={({ field }: { field: any }) => (
-                        <FormItem>
-                          <FormLabel className="text-zion-slate-light">Location</FormLabel>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
-                          <FormControl>
-                            <div className="relative">
-                              <MapPin className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />
-                              <Input
-                                className="pl-10 bg-zion-blue border-zion-blue-light text-white"
-                                placeholder="City, State/Province, Country"
-                                {...field}
-                              />
-                            </div>
-                          </FormControl>
-                          <FormMessage className="text-red-400" />
-                        </FormItem>
-                      )}
-                    />
-                  </div>
-                  <div className='col-span-1'>
-                    <FormField
-                      control={form.control}
-                      name='website'
-                      render={({ field }: { field: any }) => (                        <FormItem>
-                          <FormLabel className='text-zion-slate-light'>
-                            Website (optional)
-                          </FormLabel>
-
-                  <div className="col-span-1">
-                    <FormField
-                      control={form.control}
-                      name="website"
-                      render={({ field }: { field: any }) => (
-                        <FormItem>
-                          <FormLabel className="text-zion-slate-light">Website (optional)</FormLabel>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
-                          <FormControl>
-                            <div className="relative">
-                              <Globe className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />
-                              <Input
-                                className="pl-10 bg-zion-blue border-zion-blue-light text-white"
-                                placeholder="https://yourwebsite.com"
-                                {...field}
-                              />
-                            </div>
-                          </FormControl>
-                          <FormMessage className="text-red-400" />
-                        </FormItem>
-                      )}
-                    />
-                  </div>
-                </div>
-                {/* Upload Avatar */}
-                <div className='space-y-2'>
-                  <FormLabel className='text-zion-slate-light'>
-                    Profile Picture
-                  </FormLabel>
-                  <div className='flex items-center gap-6'>
-                    <div className='relative w-24 h-24 rounded-full overflow-hidden bg-zion-blue-light border border-zion-blue-light'>
-;
-      toast({;
-        title: "Profile Created Successfully",;
-        description: "Your service provider profile has been published and is now visible in the directory."}),;
-      // Redirect to service provider dashboard or profile page;
-      setTimeout(() => {;
-        router.push('/service-dashboard');
-      }, 1500);
-    } catch (error: any) {;
-      logErrorToProduction('Error creating profile:', { data: error }),;
-      toast({;
-        title: "Error Creating Profile",;
-        description: error.message || "There was an error creating your profile. Please try again.";
-        variant: "destructive"});
-    } finally {;
-      setIsSubmitting(false);
-    }
-  };
-  return (;
-    <div className="max-w-4xl mx-auto p-4 md:p-6">;
-      <Card className="bg-zion-blue-dark border-zion-blue-light">;
-        <CardHeader>;
-          <CardTitle className='text-2xl text-white'>;
-            Create Your Service Provider Profile;
-          </CardTitle>;
-          <CardDescription className='text-zion-slate'>;
-            Showcase your services and expertise to potential clients.;
-          </CardDescription>;
-        </CardHeader>;
-
-        <Form {...form}>;
-          <form onSubmit={form && form.handleSubmit(onSubmit)}>;
-            <CardContent className='space-y-8'>;
-              {/* Basic Information */}
-              <div className="space-y-4">
-                <h3 className="text-lg font-medium text-white">Basic Information</h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div className="col-span-1">
-                    <FormField
-                      control={form.control}
-<<<<<<< HEAD
-                />;
-                {/* AI Enhancement Option */}
-                <FormField;
-=======
-                      name='name';
-                      render={({ field }: { field: any }) => (                        <FormItem>;
-                          <FormLabel className='text - zion - slate - light'>;
-                            Full Name;
-                          </FormLabel>;
-                          <FormControl>;
-                            <div className='relative'>;
-
-                              <UserRound className='absolute left - 3 top - 1/2 transform -translate - y-1 / 2 text - zion - slate h - 4 w - 4' />;
-                              <Input;
-                                className='pl - 10 bg - zion - blue border - zion - blue - light text - white';
-                                placeholder='Your full name';
-
-                                {...field}
-                              />;
-                            </div>;
-                          </FormControl>;
-
-                    />;
-                  </div>;
-
-                  <div className='col-span-1'>;
-
-                    <FormField
-                      control={form && form.control}
-                      name='title'
-                      render={({ field }: { field: any }) => (                        <FormItem>;
-                          <FormLabel className='text-zion-slate-light'>;
-                            Business/Service Name;
-                          </FormLabel>;
-                          <FormControl>;
-                            <div className='relative'>;
-                              <Briefcase className='absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4' />;
-                              <Input
-                                className='pl-10 bg-zion-blue border-zion-blue-light text-white'
-                                placeholder='e && e.g., Creative Design Studio'
-                          <FormMessage className='text - red - 400' />;
-                        </FormItem>)}
-                    />;
-                  </div>;
-                  <div className='col - span - 1'>;
-                    <FormField;
-                      control={form.control}
-                      name='title';
-                      render={({ field }: { field: any }) => (                        <FormItem>;
-                          <FormLabel className='text - zion - slate - light'>;
-                            Business / Service Name;
-                          </FormLabel>;
-                          <FormControl>;
-                            <div className='relative'>;
-                              <Briefcase className='absolute left - 3 top - 1/2 transform -translate - y-1 / 2 text - zion - slate h - 4 w - 4' />;
-                              <Input;
-                                className='pl - 10 bg - zion - blue border - zion - blue - light text - white';
-                                placeholder='e.g., Creative Design Studio';
-                                {...field}
-                              />;
-                            </div>;
-                          </FormControl>;
-
-                    />;
-                  </div>;
-
-                  <div className='col-span-1'>;
-
-                    <FormField
-                      control={form && form.control}
-                      name='location'
-                      render={({ field }: { field: any }) => (                        <FormItem>;
-                          <FormLabel className='text-zion-slate-light'>;
-                          <FormMessage className='text - red - 400' />;
-                        </FormItem>)}
-                    />;
-                  </div>;
-                  <div className='col - span - 1'>;
-                    <FormField;
-                      control={form.control}
-                      name='location';
-                      render={({ field }: { field: any }) => (                        <FormItem>;
-                          <FormLabel className='text - zion - slate - light'>;
-                            Location;
-                          </FormLabel>;
-                          <FormControl>;
-                            <div className='relative'>;
-
-                              <MapPin className='absolute left - 3 top - 1/2 transform -translate - y-1 / 2 text - zion - slate h - 4 w - 4' />;
-                              <Input;
-                                className='pl - 10 bg - zion - blue border - zion - blue - light text - white';
-                                placeholder='City, State / Province, Country';
-
-                                {...field}
-                              />;
-                            </div>;
-                          </FormControl>;
-
-                    />;
-                  </div>;
-
-                  <div className='col-span-1'>;
-
-                    <FormField
-                      control={form && form.control}
-                      name='website'
-                      render={({ field }: { field: any }) => (                        <FormItem>;
-                          <FormLabel className='text-zion-slate-light'>;
-                          <FormMessage className='text - red - 400' />;
-                        </FormItem>)}
-                    />;
-                  </div>;
-                  <div className='col - span - 1'>;
-                    <FormField;
-                      control={form.control}
-                      name='website';
-                      render={({ field }: { field: any }) => (                        <FormItem>;
-                          <FormLabel className='text - zion - slate - light'>;
-                            Website (optional);
-                          </FormLabel>;
-                          <FormControl>;
-                            <div className='relative'>;
-
-                              <Globe className='absolute left - 3 top - 1/2 transform -translate - y-1 / 2 text - zion - slate h - 4 w - 4' />;
-                              <Input;
-                                className='pl - 10 bg - zion - blue border - zion - blue - light text - white';
-                                placeholder='https://yourwebsite.com';
-
-                                {...field}
-                              />;
-                            </div>;
-                          </FormControl>;
-
-                    />;
-                  </div>;
-                </div>;
 
 
-                {/* Upload Avatar */}
-
-                    </div>;
-
-                    <label className='flex items-center justify-center px-4 py-2 rounded-md bg-zion-purple hover:bg-zion-purple-dark text-white cursor-pointer transition-colors'>;
-                      <Upload className='mr-2 h-4 w-4' />;
-                      <span>Upload Photo</span>;
-
-                      <input
-                        type='file'
-                        accept='image/*'
-                        className='hidden'
-
-                <div className="space-y-2">
-                  <FormLabel className="text-zion-slate-light">Profile Picture</FormLabel>
-                  <div className="flex items-center gap-6">
-                    <div className="relative w-24 h-24 rounded-full overflow-hidden bg-zion-blue-light border border-zion-blue-light">
-
-
-                      {uploadedAvatar ? (
-                        <AspectRatio ratio={1/1}>
-                          <img
-                            src={uploadedAvatar}
-
-                            alt="Avatar preview"
-                            className="w-full h-full object-cover"
-                            loading="lazy"
-                          />
-
-                        </AspectRatio>
-                      ) : (
-                        <div className="flex items-center justify-center h-full">
-                          <UserRound className="h-10 w-10 text-zion-slate opacity-50" />
-                        </div>
-                      )}
-                    </div>
-
-
-                    <label className="flex items-center justify-center px-4 py-2 rounded-md bg-zion-purple hover:bg-zion-purple-dark text-white cursor-pointer transition-colors">
-                      <Upload className="mr-2 h-4 w-4" />
-                      <span>Upload Photo</span>
-                      <input
-                        type="file"
-                        accept="image/*"
-                        className="hidden"
-                        onChange={handleAvatarUpload}
-                      />
-
-                    </label>
-                  </div>
-                  <p className='text-sm text-zion-slate'>
-                    For best results, use an image at least 400x400 pixels in
-                    JPG, PNG, or GIF format.
-                  </p>
-                </div>
-              </div>
-
-                        onChange={handleAvatarUpload}                      />;
-                    </label>;
-                  </div>;
-                  <p className='text-sm text-zion-slate'>;
-                          <FormMessage className='text - red - 400' />;
-                        </FormItem>)}
-                    />;
-                  </div>;
-                </div>;
-                {/* Upload Avatar */}
-                <div className='space - y-2'>;
-                  <FormLabel className='text - zion - slate - light'>;
-                    Profile Picture;
-                  </FormLabel>;
-                  <div className='flex items - center gap - 6'>;
-                    <div className='relative w - 24 h - 24 rounded - full overflow - hidden bg - zion - blue - light border border - zion - blue - light'>;
-                      {uploaded_avatar ? (
-                        <AspectRatio ratio={1 / 1}>;
-                          <img;
-                            src={uploaded_avatar}
-                            alt='Avatar preview';
-                            className='w - full h - full object - cover';
-                            loading='lazy'                          />;
-                        </AspectRatio>) : (
-                        <div className='flex items - center justify - center h - full'>;
-                          <UserRound className='h - 10 w - 10 text - zion - slate opacity - 50' />;
-                        </div>)}
-                    </div>;
-                    <label className='flex items - center justify - center px - 4 py - 2 rounded - md bg - zion - purple hover:bg - zion - purple - dark text - white cursor - pointer transition - colors'>;
-                      <Upload className='mr - 2 h - 4 w - 4' />;
-                      <span > Upload Photo</span>;
-                      <input;
-                        type='file';
-                        accept='image/*';
-                        className='hidden';
-                        on_change={handleAvatarUpload}                      />;
-                    </label>;
-                  </div>;
-                  <p className='text - sm text - zion - slate'>;
-
-                    For best results, use an image at least 400x400 pixels in;
-                    JPG, PNG, or GIF format.;
-                  </p>;
-                </div>;
-              </div>;
-
-
-
-              <Separator className="bg-zion-blue-light/50" />
-
-
-
-              {/* Bio Section */}
-              <div className='space-y-4'>;
-                <h3 className='text-lg font-medium text-white'>;
-                  Service Description;
-                </h3>;
-                <FormField
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-                  control={form.control}
-                  name="enhancedProfile"
-                  render={({ field }: { field: any }) => (
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-                    <FormItem>
-                      <FormLabel className="text-zion-slate-light">About Your Services</FormLabel>
-
-
-                      <FormControl>
-                        <Textarea
-                          className='h-32 min-h-[128px] bg-zion-blue border-zion-blue-light text-white'
-                          placeholder='Describe your services, expertise, and what sets you apart from others...'
-                          {...field}
-
-                        />;
-                      </FormControl>;
-                      <FormMessage className='text-red-400' />;
-                      <FormDescription className='text-zion-slate'>;
-                        {field && field.value?.length || 0}/1000 characters;
-                      </FormDescription>;
-                    </FormItem>;
-                  )}
-                />;
-
-
-                {/* AI Enhancement Option */}
-                <FormField
-                  control={form && form.control}
-                  name='enhancedProfile'
-                  render={({ field }: { field: any }) => (;
-                    <FormItem className='flex flex-row items-center justify-between p-3 border border-zion-blue-light bg-zion-blue/30 rounded-md'>;
-                      <div className='space-y-0 && 0.5'>;
-                        <FormLabel className='text-white flex items-center'>;
-                          <Sparkles className='w-4 h-4 mr-2 text-zion-purple' />                          AI Profile Enhancement;
-                        </FormLabel>;
-                        <FormDescription className='text-zion-slate-light'>;
-              <Separator className='bg - zion - blue - light / 50' />;
-              {/* Bio Section */}
-              <div className='space - y-4'>;
-                <h3 className='text - lg font - medium text - white'>;
-                  Service Description;
-                </h3>;
-                <FormField;
-                  control={form.control}
-                  name='bio';
-                  render={({ field }: { field: any }) => (                    <FormItem>;
-                      <FormLabel className='text - zion - slate - light'>;
-                        About Your Services;
-                      </FormLabel>;
-                      <FormControl>;
-                        <Textarea;
-                          className='h - 32 min - h-[128px] bg - zion - blue border - zion - blue - light text - white';
-                          placeholder='Describe your services, expertise, and what sets you apart from others...';
-                          {...field}
-                        />;
-                      </FormControl>;
-                      <FormMessage className='text - red - 400' />;
-                      <FormDescription className='text - zion - slate'>;
-                        {field.value?.length || 0}/1000 characters;
-                      </FormDescription>;
-                    </FormItem>)}
-                />;
-                {/* AI Enhancement Option */}
-                <FormField;
-                  control={form.control}
-                  name='enhanced_profile';
-                  render={({ field }: { field: any }) => (
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-                    <FormItem className='flex flex - row items - center justify - between p - 3 border border - zion - blue - light bg - zion - blue / 30 rounded - md'>;
-                      <div className='space - y-0.5'>;
-                        <FormLabel className='text - white flex items - center'>;
-                          <Sparkles className='w - 4 h - 4 mr - 2 text - zion - purple' />                          AI Profile Enhancement;
-                        </FormLabel>;
-                        <FormDescription className='text - zion - slate - light'>;
-                          Let AI help optimize your service description for;
-                          better visibility and client engagement;
-                        </FormDescription>;
-                      </div>;
-                      <FormControl>;
-
-                />;
-
-                {form && form.watch('enhancedProfile') && (;
-                  <div className='flex justify-end'>;
-
-                    <Button
-                      type='button'
-                      variant='outline'
-                      className='border-zion-purple text-zion-purple hover:bg-zion-purple/10'
-                      onClick={generateEnhancedProfile}
-                      disabled={isGenerating}                    >
-                      <Sparkles className='mr-2 h-4 w-4' />
-                      {isGenerating
-                        ? 'Generating...'
-                        : 'Generate Enhanced Profile'}
-                    </Button>;
-                  </div>;
-
-
-<<<<<<< HEAD
-=======
-                    <FormItem className="flex flex-row items-center justify-between p-3 border border-zion-blue-light bg-zion-blue/30 rounded-md">
-                      <div className="space-y-0.5">
-                        <FormLabel className="text-white flex items-center">
-                          <Sparkles className="w-4 h-4 mr-2 text-zion-purple" />
-                          AI Profile Enhancement
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
                         </FormLabel>
                         <FormDescription className="text-zion-slate-light">
                           Let AI help optimize your service description for better visibility and client engagement
@@ -1348,16 +764,15 @@ export function ServiceProviderRegistrationForm() {;
                           onCheckedChange={field.onChange}
                           className="data-[state=checked]:bg-zion-purple"
                         />
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
                       </FormControl>
                     </FormItem>
                   )}
                 />
-<<<<<<< HEAD
+
                 {form.watch('enhancedProfile') && (
                   <div className='flex justify-end'>
                     <Button
@@ -1382,10 +797,7 @@ export function ServiceProviderRegistrationForm() {;
                     >
                       <Sparkles className="mr-2 h-4 w-4" />
                       {isGenerating ? "Generating..." : "Generate Enhanced Profile"}
-=======
 
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                     </Button>
                   </div>
                 )}
@@ -1416,10 +828,9 @@ export function ServiceProviderRegistrationForm() {;
                     </div>
                     
                     <div className="space-y-4">
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 
                       <div>
@@ -1474,10 +885,9 @@ export function ServiceProviderRegistrationForm() {;
 
               <Separator className="bg-zion-blue-light/50" />
 
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
               {/* Services and Availability */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -1498,11 +908,8 @@ export function ServiceProviderRegistrationForm() {;
                       <FormItem>
                         <FormLabel className="text-zion-slate-light">Services</FormLabel>
                         <div className="flex gap-2">
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                           <FormControl>
                             <Input
                               className="flex-1 bg-zion-blue border-zion-blue-light text-white"
@@ -1679,10 +1086,9 @@ export function ServiceProviderRegistrationForm() {;
                             className="border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white"
                             onClick={handleAddService}
                           >
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
                             Add
                           </Button>
@@ -1694,7 +1100,7 @@ export function ServiceProviderRegistrationForm() {;
                       </FormItem>
                     )}
                   />
-<<<<<<< HEAD
+
                   <div className='flex flex-wrap gap-2 mt-2'>
                     {serviceTags.map(service => (
                       <Badge
@@ -1721,10 +1127,7 @@ export function ServiceProviderRegistrationForm() {;
                           className="rounded-full hover:bg-zion-purple-dark/20 p-0.5"
                         >
                           <X className="h-3 w-3" />
-=======
 
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                         </button>
                       </Badge>
                     ))}
@@ -1761,11 +1164,8 @@ export function ServiceProviderRegistrationForm() {;
                     render={({ field }: { field: any }) => (
                       <FormItem>
                         <FormLabel className="text-zion-slate-light">Starting Rate (USD)</FormLabel>
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                         <FormControl>
                           <div className="relative">
                             <span className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate">$</span>
@@ -1903,11 +1303,8 @@ export function ServiceProviderRegistrationForm() {;
                               />
                               <label htmlFor="unavailable" className="text-white flex items-center gap-2">
                                 <div className="h-2 w-2 rounded-full bg-red-500"></div>
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                                 Currently Unavailable
                               </label>
                             </div>
@@ -1929,11 +1326,8 @@ export function ServiceProviderRegistrationForm() {;
 
             <CardFooter className="border-t border-zion-blue-light pt-6">
               <div className="flex flex-col sm:flex-row gap-4 w-full sm:justify-between">
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 <Button
                   type="button"
                   variant="outline"
@@ -1954,10 +1348,9 @@ export function ServiceProviderRegistrationForm() {;
                   disabled={isSubmitting}
                 >
                   {isSubmitting ? "Creating Profile..." : "Create Service Profile"}
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
                 </Button>
               </div>
@@ -2028,7 +1421,7 @@ try {
   data: aiData '
 }= await supabase.functions.invoke ('service-profile-enhancer', {
   body: {
-<<<<<<< HEAD
+
   providerData: {
   name: values.name, title: values.title, bio: values.bio,  services: serviceTags, location: values.location
 })
@@ -2050,15 +1443,7 @@ if (error) throw error
   new Date () .getFullYear () 
 }Zion Marketplace</p>
 }//Continue with submission even if email fails 
-=======
 
-
-  new Date () .getFullYear () 
-}Zion Marketplace</p>
-}//Continue with submission even if email fails 
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }//Redirect to service provider dashboard or profile page setTimeout ( () => {'
   router.push ('/service-dashboard')
 }, 1500)

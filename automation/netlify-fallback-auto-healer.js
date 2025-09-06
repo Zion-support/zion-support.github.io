@@ -9,27 +9,17 @@ fallback: true
 }
 return result;
 }catch (error) {
-<<<<<<< HEAD
-  console.error ('Fallback execution error:', error);
-=======
-
-  console && console.error ('Fallback execution error:', error);
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   statusCode: 500;
 body: JSON && JSON.stringify ({
   error: 'Fallback execution failed';
 
 
 #!/usr/bin/env node
-#!/usr/bin/env node
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 // Netlify Function Fallback: auto-healer
 // This is a local fallback when the main function is unavailable
@@ -46,37 +36,7 @@ exports.handler = async (_event, _context) => {
                 message: 'auto-healer executed locally as fallback'
                 timestamp: new Date().toISOString()
 
-=======
-message: error && error.message 
-}) 
 
-<<<<<<< HEAD
-};exports && exports.handler = async (_event, _context) => {
-    console && console.log('auto-healer fallback executed locally'),
-=======
-        console.error('Fallback execution error:', error)
-        return {
-            statusCode: 500
-            body: JSON.stringify({
-                error: 'Fallback execution failed'
-
-                message: error.message
-            })
-<<<<<<< HEAD
-        }
-    }
-<<<<<<< HEAD
-
-}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-
-=======
-#!/usr/bin/env node
-=======
-=======
-#!/usr/bin/env node
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 // Netlify Function Fallback: auto-healer
 // This is a local fallback when the main function is unavailable
@@ -102,22 +62,15 @@ exports.handler = async (_event, _context) => {
             })
         }
     }
-<<<<<<< HEAD
+
+
 
 }
 
 },
 ;
-=======
 
 
-
-},
-
-;
-
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 #!/usr/bin/env node;
 // Netlify Function Fallback: auto-healer;
 // This is a local fallback when the main function is unavailable;
@@ -145,10 +98,9 @@ exports.handler = async (_event, _context) => {;
         }
     }
 },;
-<<<<<<< HEAD
-=======
 
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba

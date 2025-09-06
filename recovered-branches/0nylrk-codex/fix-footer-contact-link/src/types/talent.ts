@@ -1,7 +1,6 @@
 
-<<<<<<< HEAD
-export interface TalentProfile {
-export interface TalentProfile {;
+
+
   id: string;
   user_id: string;
   full_name: string;
@@ -25,9 +24,8 @@ export interface TalentProfile {;
     description: string
   }[]
 }
-export interface TalentProfileFilters {
 
-export interface TalentProfileFilters {;
+
   search?: string;
   skills?: string[],
   availabilities?: string[],
@@ -35,9 +33,8 @@ export interface TalentProfileFilters {;
   priceRange?: [number, number],
   experienceRange?: [number, number]
 }
-export interface HireRequest {
 
-export interface HireRequest {;
+
   id: string;
   clientId: string;
   talentId: string;
@@ -59,8 +56,8 @@ export interface HireRequest {;
   status: 'pending' | 'accepted' | 'rejected' | 'completed'
 
   createdAt: string
-}
-export interface TalentProfile {;
+
+
   id: string,;
   user_id: string,;
   full_name: string,;
@@ -79,9 +76,7 @@ export interface TalentProfile {;
   is_verified?: boolean,;
   key_projects?: {;
     title: string,;
-=======
-    title: string,
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
     description: string;
   }[];
 }
@@ -105,16 +100,7 @@ export interface HireRequest {
 
     max: number,
     currency: string;
-<<<<<<< HEAD
-  },;
-  timeline: {;
-    startDate: string,;
-    endDate?: string,;
-    estimatedDuration?: string;
-  },;
-  status: 'pending' | 'accepted' | 'rejected' | 'completed';
-  createdAt: string;
-=======
+
   }
   timeline: {
     start_date: string;
@@ -125,11 +111,7 @@ export interface HireRequest {
   created_at: string;
 
 }
-=======
 
-
-export interface TalentProfile {;
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 }
 ;

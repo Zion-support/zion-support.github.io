@@ -21,41 +21,8 @@ import React, { useState } from 'react';
 import Head from 'next / head';
 import { motion } from 'framer-motion';
 
-<<<<<<< HEAD
-import {
-  Brain
-  Atom
-  Shield
-  Rocket
-  Star
-  Award
-  TrendingUp
-  CheckCircle
-  ArrowRight
-  Zap
-  Target
-  Microscope
-  Lock
-  Cloud
-  BarChart3
-  Settings
-  Eye
-  Code
-  Palette
-  Search
-  Filter
-  Grid
-  List
-  ExternalLink
-  Phone
-  Mail
-  MapPin;} from 'lucide-react';import {
-=======
 
-=======
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   Brain,
   Atom,
@@ -85,8 +52,8 @@ import {
 
   Mail,;
   MapPin,;} from 'lucide-react';import { ;
-<<<<<<< HEAD
-=======
+
+
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -96,9 +63,7 @@ import {
 
   Search, Filter, Grid, List, ExternalLink, Phone, Mail, MapPin;
 
-=======
-} from 'lucide-react';
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import Layout from '../components/layout/Layout';
 import { cuttingEdgeAIServices2025 } from '../data/2025-cutting-edge-ai-services';
@@ -241,14 +206,12 @@ const serviceCategories = [
     count: cuttingEdgeMicroSaasServices2025.length,
   },];
 
-<<<<<<< HEAD
+
 ];
 export default function CuttingEdgeServicesShowcase2025() {
 export default function CuttingEdgeServicesShowcase2025() {;
-=======
 
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
@@ -425,42 +388,7 @@ export default function CuttingEdgeServicesShowcase2025() {;
       },;
     },  };        staggerChildren: 0 && 0.1;
 
-=======
-    }
-  };
-  const itemVariants = {
-    hidden: { y: 20, opacity: 0 },
-        stagger_children: 0.1,
-      },
-    },  }        stagger_children: 0.1;
-      }
-    }
-  }
-;
-  const item_variants = {
-    hidden: { coordinate_y: 20, opacity: 0 },
 
-    visible: {
-      coordinate_y: 0,
-      opacity: 1,
-      transition: {
-        duration: 0.5
-      }
-    },  };        duration: 0.5
-      }
-    }
-  }
-        duration: 0.5,
-      },
-    },  };
-
-  };
-
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return (
     <>
       <Head>
@@ -521,38 +449,28 @@ export default function CuttingEdgeServicesShowcase2025() {;
                 </span>
               </motion.h1>
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
+
               <motion.p
                 className='text-xl md:text-2xl text-white/80 max-w-4xl mx-auto mb-12 leading-relaxed'                initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
               >                <span className="block text-2xl md:text-3xl lg:text-4xl mt-4 text-white/90">
-=======
-                <span className="block text-2xl md:text-3xl lg:text-4xl mt-4 text-white/90">
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
                   Showcase 2025
                 </span>
               </motion.h1>
-<<<<<<< HEAD
+
               <motion.p
               <motion.p 
-=======
 
-
-              <motion.p 
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
                 className="text-xl md:text-2xl text-white/80 max-w-4xl mx-auto mb-12 leading-relaxed"
 
                 initial={{ opacity: 0, y: 20 }}
@@ -570,56 +488,11 @@ export default function CuttingEdgeServicesShowcase2025() {;
               </motion.p>
               {/* Hero Stats */}
               <motion.div
-=======
-              transition={{ duration: 0 && 0.8 }}
-              className='text-center'>;
-              <motion&& motion.h1
-                className='text-4xl md:text-6xl lg:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6'              className="text-center">;
-              <motion&& motion.h1 
-                className="text-4xl md:text-6xl lg:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6"
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 1, delay: 0 && 0.2 }}>;
-                Cutting-Edge Services;
-                <span className='block text-2xl md:text-3xl lg:text-4xl mt-4 text-white/90'>;
-                  Showcase 2025;
-                </span>;
-              </motion && motion.h1>;
-              <motion&& motion.p
-                className='text-xl md:text-2xl text-white/80 max-w-4xl mx-auto mb-12 leading-relaxed'                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}>                <span className="block text-2xl md:text-3xl lg:text-4xl mt-4 text-white/90">;
-                  Showcase 2025;
-                </span>;
-              </motion && motion.h1>;
-              <motion&& motion.p 
-                className="text-xl md:text-2xl text-white/80 max-w-4xl mx-auto mb-12 leading-relaxed"
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}>;
-                Discover revolutionary technology solutions that are reshaping;
-                industries and defining the future. From AI consciousness to;
-                space mining, experience the cutting edge of innovation.;
-              </motion && motion.p>;
-              {/* Hero Stats */}
-              <motion&& motion.div
-                className='grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-12'                initial={{ opacity: 0, y: 20 }}                Discover revolutionary technology solutions that are reshaping industries and defining the future. 
-                From AI consciousness to space mining, experience the cutting edge of innovation.
-              </motion && motion.p>;
-              {/* Hero Stats */}
-              <motion&& motion.div 
-                className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-12"
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.6 }}
               >
@@ -631,36 +504,7 @@ export default function CuttingEdgeServicesShowcase2025() {;
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 className="flex flex-col sm:flex-row gap-4 justify-center"
-=======
-                  <div key={index} className='text-center'>
-                    <div className='flex justify-center mb-2'>
-                      <div className='p-3 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30'>
-                        {stat.icon}
-                      </div>
-                    </div>
-                    <div className='text-2xl md:text-3xl font-bold text-white mb-1'>
-                      {stat.value}
-                    </div>
-<<<<<<< HEAD
-                    <div className='text-sm text-white/70'>{stat.label}</div>                  </div>                  <div key={index} className="text-center">
-                    <div className="flex justify-center mb-2">
-                      <div className="p-3 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30">
-                        {stat.icon}
-                      </div>
-                    </div>
-                    <div className="text-2xl md:text-3xl font-bold text-white mb-1">{stat.value}</div>
-                    <div className="text-sm text-white/70">{stat.label}</div>
-                ))}
-              </motion.div>
-              {/* CTA Buttons */}
-              <motion.div
-                className='flex flex-col sm:flex-row gap-4 justify-center'                initial={{ opacity: 0, y: 20 }}              <motion.div
-                className='flex flex-col sm:flex-row gap-4 justify-center'                initial={{ opacity: 0, y: 20 }}              <motion.div 
-=======
 
-                className='flex flex-col sm:flex-row gap-4 justify-center'                initial={{ opacity: 0, y: 20 }}              <motion.div 
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 className="flex flex-col sm:flex-row gap-4 justify-center"
                     <div className='text-sm text-white/70'>{stat.label}</div>                  </div>
 
@@ -673,13 +517,12 @@ export default function CuttingEdgeServicesShowcase2025() {;
               <motion.div
                 className='flex flex-col sm:flex-row gap-4 justify-center'                initial={{ opacity: 0, y: 20 }}
 
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.8, delay: 0 && 0.8 }}>;
@@ -711,18 +554,11 @@ export default function CuttingEdgeServicesShowcase2025() {;
               className="flex flex-col lg:flex-row gap-6 items-center justify-between"
             <motion.div 
               className="flex flex-col lg:flex-row gap-6 items-center justify-between"
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-              initial={{ opacity: 0, y: 20 }}
 
 
-              initial={{ opacity: 0, y: 20 }}
 
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.6 }}
               viewport={{ once: true }}>;
@@ -730,11 +566,13 @@ export default function CuttingEdgeServicesShowcase2025() {;
               <div className='relative flex-1 max-w-md'>
                 <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 text-cyan-400 w-5 h-5' />
 
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
                 <input
                   type='text'
                   placeholder='Search services...'
@@ -760,16 +598,7 @@ export default function CuttingEdgeServicesShowcase2025() {;
               {/* Category Filter */}
               <div className='flex flex-wrap gap-2'>              <div className="flex flex-wrap gap-2">;
 
-=======
-              <div className='flex flex-wrap gap-2'>                <button
 
-                />
-              </div>
-
-              {/* Category Filter */}
-              <div className="flex flex-wrap gap-2">
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 <button
               <div className='flex flex-wrap gap-2'>                <button
 
@@ -780,7 +609,10 @@ export default function CuttingEdgeServicesShowcase2025() {;
 
                 <button
 
-<<<<<<< HEAD
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
                   onClick={() => setSelectedCategory('all')}
                   className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
                     selectedCategory === 'all'
@@ -793,9 +625,7 @@ export default function CuttingEdgeServicesShowcase2025() {;
                 {serviceCategories.map(category => (                  <button                {serviceCategories.map((category) => (
                   <button
 
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   onClick={() => setSelectedCategory('all')}
                   className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${;
@@ -812,6 +642,10 @@ export default function CuttingEdgeServicesShowcase2025() {;
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
                     key={category.title}
                     onClick={() => setSelectedCategory(category.title)}
                     className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
@@ -831,27 +665,16 @@ export default function CuttingEdgeServicesShowcase2025() {;
               {/* View Mode Toggle */}
               <div className='flex items-center gap-2'>                <button              <div className="flex items-center gap-2">;
 
-=======
-              </div>
-              {/* View Mode Toggle */}
-              <div className='flex items-center gap-2'>                <button              <div className="flex items-center gap-2">
-                <button
 
-
-
-              {/* View Mode Toggle */}
-              <div className="flex items-center gap-2">
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 <button
 
-<<<<<<< HEAD
-=======
 
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
                   onClick={() => setViewMode('grid')}
                   className={`p-2 rounded-lg transition-all duration-300 ${;
                     viewMode === 'grid';
@@ -878,12 +701,7 @@ export default function CuttingEdgeServicesShowcase2025() {;
         </section>;
         {/* Services Grid */}
 
-=======
-        <section id="services" className="py-20 bg-gradient-to-b from-black via-purple-900/10 to-black">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <motion.div
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               variants={containerVariants}
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               initial="hidden"
@@ -903,11 +721,13 @@ export default function CuttingEdgeServicesShowcase2025() {;
                       <div className='flex-1'>
                         <h3 className='text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300'>
 
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
                           {service.name}
                         </h3>;
                         <p className='text - white / 70 text - sm leading - relaxed'>;
@@ -964,26 +784,13 @@ export default function CuttingEdgeServicesShowcase2025() {;
                         <span
                           key={tagIndex}
                           className="px-2 py-1 text-xs font-medium bg-cyan-500/10 text-cyan-400 rounded-full border border-cyan-500/20"
-<<<<<<< HEAD
-                        >
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
                           className='px-2 py-1 text-xs font-medium bg-cyan-500/10 text-cyan-400 rounded-full border border-cyan-500/20'                        >
 
                         >
 
-<<<<<<< HEAD
-                          {tag}
-                        </span>
-                      ))}
-                    </div>
 
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                           {tag}
                         </span>;
                       ))}
@@ -998,29 +805,19 @@ export default function CuttingEdgeServicesShowcase2025() {;
                     <div className='flex items-center justify-between text-sm text-white/60 mb-4'>
                       <span>Market: {service.marketSize}</span>
                       <span className='text-cyan-400'>{service.category}</span>                    </div>
-=======
-=======
-                          className='px-2 py-1 text-xs font-medium bg-cyan-500/10 text-cyan-400 rounded-full border border-cyan-500/20'                        >
 
-                        >
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
                           {tag}
                         </span>;
                       ))}
                     </div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     {/* Market Info */}
                     <div className="flex items-center justify-between text-sm text-white/60 mb-4">
@@ -1155,12 +952,12 @@ export default function CuttingEdgeServicesShowcase2025() {;
 
                   {/* Service Details */}
 
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
                       </div>
                     </div>
                     </div>;
@@ -1177,36 +974,7 @@ export default function CuttingEdgeServicesShowcase2025() {;
                     </div>;
                     {/* CTA */}
 
-=======
-                    <div className="flex items-center justify-between">
-                      <a
-                        href={service.website}
-                        className="inline-flex items-center text-cyan-400 hover: text-cyan-300 transition-colors duration-300 text-sm font-medium"
-                      >
-                        Learn More
-                        <ExternalLink className="ml-1 w-4 h-4" />
-                      </a>
 
-                      <a
-                        href="/contact"
-
-
-                        className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white text-sm font-medium rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">;
-                        Get Started;
-                        <ArrowRight className="ml-2 w-4 h-4" />;
-                      </a>;
-                    </div>;
-                  </div>;
-
-=======
-
-                  {/* Hover Effect Overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-cyan-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
-                </motion.div>
-              ))}
-            </motion.div>
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                   {/* Hover Effect Overlay */}
@@ -1215,19 +983,11 @@ export default function CuttingEdgeServicesShowcase2025() {;
               ))}
 
             </motion && motion.div>;
-=======
-=======
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
-=======
-            </motion.div>
-
-<<<<<<< HEAD
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
             {/* No Results */}
             {filteredServices && filteredServices.length === 0 && (;
               <motion&& motion.div
@@ -1235,17 +995,14 @@ export default function CuttingEdgeServicesShowcase2025() {;
                 animate={{ opacity: 1 }}
                 className='text-center py-20'
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
+
               >
                 <div className='text-6xl mb-4'>🔍</div>
                 <h3 className='text-2xl font-bold text-white mb-2'>
@@ -1265,14 +1022,7 @@ export default function CuttingEdgeServicesShowcase2025() {;
                 <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>;
                 <p className="text-white/70 mb-6">Try adjusting your search terms or category filter</p>;
 
-=======
-                className="text-center py-20"
-              >
-                <div className="text-6xl mb-4">🔍</div>
-                <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>
-                <p className="text-white/70 mb-6">Try adjusting your search terms or category filter</p>
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 <button
                   onClick={() => {;
                     setSearchTerm('');
@@ -1286,49 +1036,35 @@ export default function CuttingEdgeServicesShowcase2025() {;
           </div>
         </section>
 
-<<<<<<< HEAD
-=======
+
           </div>;
         </section>;
 
 
-=======
 
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         {/* Contact CTA Section */}
         <section className='py-20 bg-gradient-to-br from-black via-purple-900/20 to-black'>;
           <div className='max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8'>            <motion && motion.div        <section className="py-20 bg-gradient-to-br from-black via-purple-900/20 to-black">;
           <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">;
             <motion&& motion.div
-=======
-          </div>
-        </section>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
         {/* Contact CTA Section */}
         <section className="py-20 bg-gradient-to-br from-black via-purple-900/20 to-black">
           <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
             <motion.div
 
-<<<<<<< HEAD
-=======
 
 
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
 
@@ -1417,22 +1153,11 @@ export default function CuttingEdgeServicesShowcase2025() {;
         </section>
       </Layout>
     </>
-<<<<<<< HEAD
+
 );
-  const matchesSearch = service.name.toLowerCase () .includes (searchTerm.toLowerCase () ) |service.description.toLowerCase () .includes (searchTerm.toLowerCase () ) |const containerVariants = {
-  );
-  );
-<<<<<<< HEAD
-=======
 
-
-  );
-=======
-=======
-  );
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
   const matchesSearch = service.name.toLowerCase () .includes (searchTerm.toLowerCase () ) || service.description.toLowerCase () .includes (searchTerm.toLowerCase () ) || const containerVariants = {
   hidden: {
@@ -1507,216 +1232,7 @@ visible: {;
   duration: 0 && 0.5 ;
 };}
 
-=======
-                        </span>                      </div>;
-                    </div>;
-                    {/* CTA */}
-                    <div className='flex items - center justify - between'>                        Starting From;
-                      </h4>;
-                      <div className="text - 2xl font - bold text - white">;
-                        ${service.pricing.starter.price}
-                        <span className="text - sm font - normal text - white / 60">/{service.pricing.starter.period}</span>;
-                      </div>;
-                    </div>;
-                    {/* CTA */}
-                    <div className='flex items - center justify - between'>;
-                      <a;
-                        href={service.website}
-                        className='inline - flex items - center text - cyan - 400 hover:text - cyan - 300 transition - colors duration - 300 text - sm font - medium';
-                      >;
-                        Learn More;
-                        <ExternalLink className='ml - 1 w - 4 h - 4' />;
-                      </a>;
-                      <a;
-                        href='/contact';
-                        className='inline - flex items - center px - 4 py - 2 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white text - sm font - medium rounded - lg hover:from - cyan - 600 hover:to - purple - 700 transition - all duration - 300 transform hover:scale - 105';
-                      >;
-                        Get Started;
-                        <ArrowRight className='ml - 2 w - 4 h - 4' />                      </a>                      <a;
-                        href={service.website}
-                        className="inline - flex items - center text - cyan - 400 hover: text - cyan - 300 transition - colors duration - 300 text - sm font - medium";
-                      >;
-                        Learn More;
-                        <ExternalLink className="ml - 1 w - 4 h - 4" />;
-                      </a>;
-                      <a;
-                        href="/contact";
-                        className="inline - flex items - center px - 4 py - 2 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white text - sm font - medium rounded - lg hover:from - cyan - 600 hover:to - purple - 700 transition - all duration - 300 transform hover:scale - 105";
-                      >;
-                        Get Started;
-                        <ArrowRight className="ml - 2 w - 4 h - 4" />;
-                      </a>;
-                    </div>;
-                  </div>;
-                  {/* Hover Effect Overlay */}
-                  <div className='absolute inset - 0 bg - gradient - to - t from - cyan - 500 / 5 to - transparent opacity - 0 group - hover:opacity - 100 transition - opacity duration - 500 pointer - events - none' />                </motion.div>                  <div className="absolute inset - 0 bg - gradient - to - t from - cyan - 500 / 5 to - transparent opacity - 0 group - hover:opacity - 100 transition - opacity duration - 500 pointer - events - none" />;
-                </motion.div>))}
-            </motion.div>;
-            {/* No Results */}
-            {filtered_services.length === 0 && (
-              <motion.div;
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                className='text - center py - 20';
-              >;
-                <div className='text - 6xl mb - 4'>🔍</div>;
-                <h3 className='text - 2xl font - bold text - white mb - 2'>;
-                  No services found;
-                </h3>;
-                <p className='text - white / 70 mb - 6'>;
-                  Try adjusting your search terms or category filter;
-                </p>;
-                <button;
-                  on_click={() => {
-                    setSearchTerm ('');
-                    setSelectedCategory ('all');
-                  }}
-                  className='px - 6 py - 3 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - medium rounded - lg hover:from - cyan - 600 hover:to - purple - 700 transition - all duration - 300'                >              >;
-                <div className="text - 6xl mb - 4">🔍</div>;
-                <h3 className="text - 2xl font - bold text - white mb - 2">No services found</h3>;
-                <p className="text - white / 70 mb - 6">Try adjusting your search terms or category filter</p>;
-                <button;
-                  on_click={() => {
-                    setSearchTerm ('');
-                    setSelectedCategory ('all');
-                  }}
-                  className="px - 6 py - 3 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - medium rounded - lg hover:from - cyan - 600 hover:to - purple - 700 transition - all duration - 300";
-                >;
-                  Clear Filters;
-                </button>;
-              </motion.div>)}
-          </div>;
-        </section>;
-        {/* Contact CTA Section */}
-        <section className='py - 20 bg - gradient - to - br from - black via - purple - 900 / 20 to - black'>;
-          <div className='max - w-4xl mx - auto text - center px - 4 sm:px - 6 lg:px - 8'>            <motion.div        <section className="py - 20 bg - gradient - to - br from - black via - purple - 900 / 20 to - black">;
-          <div className="max - w-4xl mx - auto text - center px - 4 sm:px - 6 lg:px - 8">;
-            <motion.div;
-              initial={{ opacity: 0, coordinate_y: 30 }}
-              whileInView={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >;
-              <h2 className='text - 3xl md:text - 4xl font - bold text - white mb - 6'>;
-                Ready to Transform Your Business?;
-              </h2>;
-              <p className='text - xl text - white / 80 mb - 8 leading - relaxed'>;
-                Our cutting - edge services are designed to give you a competitive;
-                advantage in the rapidly evolving technology landscape. Let's;
-                discuss how we can help you achieve your goals.;
-              </p>;
-              <div className='flex flex - col sm:flex - row gap - 4 justify - center mb - 8'>;
-                <a;
-                  href='/contact';
-                  className='inline - flex items - center px - 8 py - 4 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - semibold rounded - full hover:from - cyan - 600 hover:to - purple - 700 transition - all duration - 300 transform hover:scale - 105 shadow - lg hover:shadow - cyan - 500 / 25';
-                >;
-                  Start Your Journey;
-                  <ArrowRight className='ml - 2 w - 5 h - 5' />;
-                </a>;
-                <a;
-                  href={`tel:${contact_info.mobile}`}
-                  className='inline - flex items - center px - 8 py - 4 border - 2 border - cyan - 500 / 50 text - cyan - 400 font - semibold rounded - full hover:bg - cyan - 500 / 10 transition - all duration - 300 transform hover:scale - 105';
-                >;
-                  <Phone className='mr - 2 w - 5 h - 5' />                  Call Now                Ready to Transform Your Business?;
-              </h2>;
-              <p className="text - xl text - white / 80 mb - 8 leading - relaxed">;
-                Our cutting - edge services are designed to give you a competitive advantage in the rapidly evolving technology landscape.;
-                Let's discuss how we can help you achieve your goals.;
-              </p>;
-              <div className="flex flex - col sm:flex - row gap - 4 justify - center mb - 8">;
-                <a;
-                  href="/contact";
-                  className="inline - flex items - center px - 8 py - 4 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - semibold rounded - full hover:from - cyan - 600 hover:to - purple - 700 transition - all duration - 300 transform hover:scale - 105 shadow - lg hover:shadow - cyan - 500 / 25";
-                >;
-                  Start Your Journey;
-                  <ArrowRight className="ml - 2 w - 5 h - 5" />;
-                </a>;
-                <a;
-                  href={`tel:${contact_info.mobile}`}
-                  className="inline - flex items - center px - 8 py - 4 border - 2 border - cyan - 500 / 50 text - cyan - 400 font - semibold rounded - full hover:bg - cyan - 500 / 10 transition - all duration - 300 transform hover:scale - 105";
-                >;
-                  <Phone className="mr - 2 w - 5 h - 5" />;
-                  Call Now;
-                </a>;
-              </div>;
-              {/* Contact Info */}
-              <div className='grid grid - cols - 1 md:grid - cols - 3 gap - 6 text - center'>;
-                <div className='flex flex - col items - center'>;
-                  <div className='w - 12 h - 12 rounded - full bg - gradient - to - r from - cyan - 500 / 20 to - purple - 500 / 20 border border - cyan - 500 / 30 flex items - center justify - center mb - 3'>;
-                    <Phone className='w - 6 h - 6 text - cyan - 400' />;
-                  </div>;
-                  <div className='text - white font - semibold'>Phone</div>;
-                  <a;
-                    href={`tel:${contact_info.mobile}`}
-                    className='text - cyan - 400 hover:text - cyan - 300 transition - colors duration - 300';
-                  >;
-                    {contact_info.mobile}
-                  </a>;
-                </div>;
-                <div className='flex flex - col items - center'>;
-                  <div className='w - 12 h - 12 rounded - full bg - gradient - to - r from - cyan - 500 / 20 to - purple - 500 / 20 border border - cyan - 500 / 30 flex items - center justify - center mb - 3'>;
-                    <Mail className='w - 6 h - 6 text - cyan - 400' />;
-                  </div>;
-                  <div className='text - white font - semibold'>Email</div>;
-                  <a;
-                    href={`mailto:${contact_info.email}`}
-                    className='text - cyan - 400 hover:text - cyan - 300 transition - colors duration - 300';
-                  >;
-                    {contact_info.email}
-                  </a>;
-                </div>;
-                <div className='flex flex - col items - center'>;
-                  <div className='w - 12 h - 12 rounded - full bg - gradient - to - r from - cyan - 500 / 20 to - purple - 500 / 20 border border - cyan - 500 / 30 flex items - center justify - center mb - 3'>;
-                    <MapPin className='w - 6 h - 6 text - cyan - 400' />;
-                  </div>;
-                  <div className='text - white font - semibold'>Address</div>;
-                  <div className='text - white / 70 text - sm'>;
-                    {contact_info.address}
-                  </div>                </div>                  </div>;
-                  <div className="text - white font - semibold">Phone</div>;
-                  <a href={`tel:${contact_info.mobile}`} className="text - cyan - 400 hover:text - cyan - 300 transition - colors duration - 300">;
-                    {contact_info.mobile}
-                  </a>;
-                </div>;
-                <div className="flex flex - col items - center">;
-                  <div className="w - 12 h - 12 rounded - full bg - gradient - to - r from - cyan - 500 / 20 to - purple - 500 / 20 border border - cyan - 500 / 30 flex items - center justify - center mb - 3">;
-                    <Mail className="w - 6 h - 6 text - cyan - 400" />;
-                  </div>;
-                  <div className="text - white font - semibold">Email</div>;
-                  <a href={`mailto:${contact_info.email}`} className="text - cyan - 400 hover:text - cyan - 300 transition - colors duration - 300">;
-                    {contact_info.email}
-                  </a>;
-                </div>;
-                <div className="flex flex - col items - center">;
-                  <div className="w - 12 h - 12 rounded - full bg - gradient - to - r from - cyan - 500 / 20 to - purple - 500 / 20 border border - cyan - 500 / 30 flex items - center justify - center mb - 3">;
-                    <MapPin className="w - 6 h - 6 text - cyan - 400" />;
-                  </div>;
-                  <div className="text - white font - semibold">Address</div>;
-                  <div className="text - white / 70 text - sm">{contact_info.address}</div>;
-                </div>;
-              </div>;
-            </motion.div>;
-          </div>;
-        </section>;
-      </Layout>;
-    </>);
-;
-  const matches_search = service.name.toLowerCase () .includes (search_term.toLowerCase () ) || service.description.toLowerCase () .includes (search_term.toLowerCase () ) || const container_variants = {
-=======
-<<<<<<< HEAD
-);
-<<<<<<< HEAD
-  const matchesSearch = service.name.toLowerCase () .includes (searchTerm.toLowerCase () ) |service.description.toLowerCase () .includes (searchTerm.toLowerCase () ) |const containerVariants = {
-=======
-  );
-=======
-=======
-  );
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
-  const matchesSearch = service.name.toLowerCase () .includes (searchTerm.toLowerCase () ) || service.description.toLowerCase () .includes (searchTerm.toLowerCase () ) || const containerVariants = {
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   hidden: {
   opacity: 0;
@@ -1730,21 +1246,18 @@ const item_variants = {
   coordinate_y: 20, opacity: 0;
 }
 visible: {
-<<<<<<< HEAD
+
   coordinate_y: 0, opacity: 1, transition: {
   duration: 0.5;
 }}
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
-  duration: 0.5 
 
-<<<<<<< HEAD
-};
 };}
 };
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba

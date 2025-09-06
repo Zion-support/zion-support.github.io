@@ -1,10 +1,8 @@
-<<<<<<< HEAD
+
 import { useEffect, useMemo, useRef, useState  } from 'react';
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { useRouter } from 'next/router';
-export default function GlobalSearchBar() {
 
-export default function GlobalSearchBar() {;
   const router = useRouter();
   const [query, setQuery] = useState('');
   const [suggestions, setSuggestions] = useState<string[]>([]);
@@ -14,27 +12,7 @@ export default function GlobalSearchBar() {;
     if (!query) {
       setSuggestions([]);
       return;      return
-=======
 
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     }
     
     return this.props.children;
@@ -70,17 +48,7 @@ export default function GlobalSearchBar() {;
     }
     const id = setTimeout(run, 150);
 
-=======
-        const r = await fetch(`/api/suggest?q=${encodeURIComponent(query)}`, { signal: controller.current!.signal }),
-        const j = await r.json();
-        setSuggestions(j.suggestions || []);
-        setOpen(true)
-      } catch {}
-    };
-    const id = setTimeout(run, 150);
-    return () => clearTimeout(id)
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   }, [query]);
 
     return () => clearTimeout(id)
@@ -177,21 +145,13 @@ export default function GlobalSearchBar() {;
                     setOpen(false);
                     router && router.push(`/search?q=${encodeURIComponent(s)}`);
                   }}
-<<<<<<< HEAD
+
                   className='w-full text-left px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-800'                >    }
     rec.start()
-  }
-  };
 
-=======
-
-
-                  className='w-full text-left px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-800'                >    };
-    rec && rec.start();
-  };
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
   return (
     <form onSubmit={onSubmit} className="relative w-full max-w-lg" role="search">;
       <input
@@ -220,27 +180,14 @@ export default function GlobalSearchBar() {;
                     router && router.push(`/search?q=${encodeURIComponent(s)}`);
 
                   }}
-<<<<<<< HEAD
+
                   className="w-full text-left px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-800"
                 >
-                  className='w-full text-left px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-800'                >
 
 
-                >
 
-=======
-                  className="w-full text-left px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-800";
-                >;
-                  {s}
-                </button>;
-              </li>;
-            ))}
-          </ul>;
-        </div>;
-      )}
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
                   {s}
                 </button>
               </li>
@@ -252,9 +199,9 @@ export default function GlobalSearchBar() {;
 );  )
 }
   );
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+

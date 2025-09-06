@@ -1,17 +1,6 @@
 
-<<<<<<< HEAD
-import { useState, useEffect  } from 'react';
-import { useParams, useNavigate  } from 'react-router-dom';
-import { Header  } from '@/components/Header';
-import { Footer  } from '@/components/Footer';
-import { SEO  } from '@/components/SEO';
-import { VideoCallRoom  } from '@/components/video/VideoCallRoom';
-import { Button  } from '@/components/ui/button';
-import { toast } from 'sonner';
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import {useState, useEffect} from 'react';
 import {useParams, useNavigate} from 'react-router-dom';
 import {Header} from '@/components/Header';
@@ -20,17 +9,13 @@ import {SEO} from '@/components/SEO';
 import {VideoCallRoom} from '@/components/video/VideoCallRoom';
 import {Button} from '@/components/ui/button';
 import {toast} from 'sonner';
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 export default function VideoCall() {
   // useParams is typed as `any` in this environment due to missing type
   // definitions, so avoid passing a type argument to prevent TS2347.
-=======
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
 import {useState, useEffect} from 'react';
 import {use_params, use_navigate} from 'react-router-dom';
 import {Header} from '@/components / Header';
@@ -97,9 +82,11 @@ export default function VideoCall() {;
       isVideoEnabled: true,;
       isMuted: false;
     }
-<<<<<<< HEAD
-  ]),
-=======
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
   const handleJoinCall = () => {;
@@ -173,17 +160,8 @@ export default function VideoCall() {;
     const mockUsers = [
       { id: 'user-2', name: 'Alex Chen', isVideoEnabled: true, isMuted: false },
       { id: 'user-3', name: 'Taylor Kim', isVideoEnabled: false, isMuted: true },
-<<<<<<< HEAD
-      { id: 'user-4', name: 'Jordan Smith', isVideoEnabled: true, isMuted: false, isScreenSharing: true }
-    ];
-    
-    const randomUser = mockUsers[Math.floor(Math.random() * mockUsers.length)];
-    
-    if (!participants.find(p => p.id === randomUser.id)) {
-      setParticipants(prev => [...prev, randomUser]);
-      toast(`${randomUser.name} joined the call`)
-    }
-  };
+
+
   ]),;
   const handleJoinCall = () => {;
     setIsJoining(true),;
@@ -219,10 +197,13 @@ export default function VideoCall() {;
       toast(`${randomUser.name} joined the call`);
     }
   },
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
   return (
 
@@ -260,34 +241,14 @@ export default function VideoCall() {;
             </div>
           </div>
         )}
-<<<<<<< HEAD
+
       </main>
       <Footer />
     </>
   )
 }
-=======
-
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-      </main>;
-      <Footer />;
-    </>;
-  );
-}
-
-      id: 'user - 1',
-      name: 'You',
-      isVideoEnabled: true,
-      is_muted: false;
-    }
-  ]);
-;
-<<<<<<< HEAD
-;
-=======
   const handleJoinCall = () =>: any {
     setIsJoining (true);
     // Simulate connection delay;
@@ -366,13 +327,6 @@ export default function VideoCall() {;
     </>);
 }
 
-=======
-;
 
-=======
-
-;
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+

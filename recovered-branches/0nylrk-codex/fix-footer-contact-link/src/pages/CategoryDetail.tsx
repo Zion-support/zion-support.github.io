@@ -1,21 +1,6 @@
 
-<<<<<<< HEAD
-import {useParams, Link} from "react-router-dom";
-import {Header} from "@/components/header/Header";
-import {Footer} from "@/components/Footer";
-import {GradientHeading} from "@/components/GradientHeading";
-import {ProductListingCard} from "@/components/ProductListingCard";
-import {useState, useEffect} from "react";
-import {Brain, PenLine, BarChart, Eye, Bot, Mic, Code, Briefcase} from "lucide-react";
-import {MARKETPLACE_LISTINGS} from "@/data/listingData";
-import {useNavigate} from "react-router-dom";
-import {toast} from "@/hooks/use-toast";
-export default function CategoryDetail() {
-  // Cast to specify the expected route param type since useParams may be untyped;
-  const { slug } = useParams() as { slug?: string };
-  const navigate = useNavigate();
-  const [isLoading, setIsLoading] = useState(true);
-  const [listings, setListings] = useState(MARKETPLACE_LISTINGS);
+
+
 import { useParams, Link } from "react-router-dom",
 import { Header } from "@/components/header/Header",
 import { Footer } from "@/components/Footer",
@@ -40,12 +25,13 @@ export default function CategoryDetail() {
   const navigate = useNavigate(),
   const [isLoading, setIsLoading] = useState(true),
   const [listings, setListings] = useState(MARKETPLACE_LISTINGS),
-=======
 
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
   const [category, setCategory] = useState<{title: string, description: string, icon: JSX.Element}>({
     title: ""
     description: ""
@@ -521,37 +507,27 @@ if ( {) {
             category: listing.category,
             image: listing.images?.[0];
 
-=======
-            id: listing.id,;
-            title: listing.title,;
-            category: listing.category;
-            image: listing.images?.[0];
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
           }
         }
       });
     }
-<<<<<<< HEAD
-  }
-  },
-=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
   },
 
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
   };
   },
 
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

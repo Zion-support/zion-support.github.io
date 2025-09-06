@@ -1,56 +1,22 @@
 
-<<<<<<< HEAD
-import {
-  FormField
-  FormItem
-  FormLabel
-  FormControl
-  FormMessage
-} from "@/components/ui/form";
-import { Input } from "@/components/ui/input";
-
-import { Control } from "react-hook-form";
-import { BasicInfoFormData } from "./schema";
-=======
-
-  FormField,
-  FormItem,
-  FormLabel,
-  FormControl,
-  FormMessage,
-} from '@/components / ui / form';
-import { Input  } from '@/components / ui / input';
-import { Control  } from './react - hook - form';
-import { BasicInfoFormData  } from './schema';
-
-interface ContactFieldsProps {
-  control: Control < BasicInfoFormData>;
-}
-
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import {FormField, FormItem, FormLabel, FormControl, FormMessage} from "@/components/ui/form";
 import {Input} from "@/components/ui/input";
 import {Control} from "react-hook-form";
 import {BasicInfoFormData} from "./schema";
-<<<<<<< HEAD
-=======
 
 
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form",
 import { Input } from "@/components/ui/input",
 import { Control } from "react-hook-form",
 import { BasicInfoFormData } from "./schema",
-<<<<<<< HEAD
-=======
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 interface ContactFieldsProps {
   control: Control<BasicInfoFormData>;
 }
@@ -111,12 +77,12 @@ function ContactFields() {
             </FormControl>
             <FormMessage />
           </FormItem>
-<<<<<<< HEAD
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
         )}
 
       />;
@@ -190,47 +156,11 @@ function ContactFields() {
             <FormMessage />;
           </FormItem>;
         )}
-<<<<<<< HEAD
+
       />
     </div>
-  );
-}
-  )
-}
-;
-=======
 
-      />;
-    </div>;
-  );
-}
 
-=======
-              />;
-            </FormControl>;
-            <FormMessage />;
-          </FormItem>)}
-      />;
-      <FormField;
-        control={control}
-        name="github";
-        render={({ field }) => (
-          <FormItem>;
-            <FormLabel > GitHub</FormLabel>;
-            <FormControl>;
-              <Input placeholder="https://github.com / username" {...field} />;
-            </FormControl>;
-            <FormMessage />;
-          </FormItem>)}
-      />;
-    </div>);
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
-  )
-}
-;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba

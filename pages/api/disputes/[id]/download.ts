@@ -1,15 +1,12 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 import type { NextApiRequest, NextApiResponse } from "next";
 import fs from "fs";
 import path from "path";
 import { getDisputeById } from "../../../../utils/fsdb";
 import {
-<<<<<<< HEAD
+
   parseUserFromRequest
   ensureInvolvedOrAdmin
 } from "../../../../utils/auth";
@@ -19,33 +16,9 @@ export default async function handler(
   res: NextApiResponse
 ) {
   const { id, fileName } = req.query as { id?: string; fileName?: string }
-  parseUserFromRequest,
-  ensureInvolvedOrAdmin,;
-} from "../../../../utils/auth";
 
-export default async function handler(
-  req: NextApiRequest,
-  res: NextApiResponse,
-) {;
-  const { id, fileName } = req.query as { id?: string; fileName?: string };
-=======
 
-  const { id, fileName } = req && req.query as { id?: string; fileName?: string };
-
-=======
-
-  parseUserFromRequest,
-  ensureInvolvedOrAdmin,;
-} from "../../../../utils/auth";
-
-export default async function handler(
-  req: NextApiRequest,
-  res: NextApiResponse,
-) {;
-  const { id, fileName } = req.query as { id?: string; fileName?: string };
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
   if (
     !id |
     !fileName |
@@ -53,42 +26,7 @@ export default async function handler(
     typeof fileName !== "string"
   ) {
 
-=======
-    return res.status(400).json({ error: "Invalid parameters" });
-  }
 
-  const user = parseUserFromRequest(req);
-  const dispute = await getDisputeById(id);
-  if (!dispute) return res.status($1).json({ $2 });
-  try {
-    ensureInvolvedOrAdmin(user, dispute.clientUserId, dispute.talentUserId);
-  } catch (e: any) {
-    return res.status(e.statusCode |403).json({ error: "Forbidden" });
-  }
-  const att = dispute.attachments.find((a) => a.fileName === fileName);
-  if (!att) return res.status($1).json({ $2 });
-  const stat = fs.statSync(att.path);
-  res.setHeader("Content-Type", att.mimeType);
-  res.setHeader("Content-Length", String(stat.size));
-  res.setHeader(
-    "Content-Disposition"
-    `attachment; filename="${path.basename(att.fileName)}"`
-  );
-  const stream = fs.createReadStream(att.path);
-  stream.pipe(res);
-}
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-import type { NextApiRequest, NextApiResponse } from 'next';
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  res.status(200).json({ message: 'Download endpoint' });
-=======
-
-
-
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
@@ -105,7 +43,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   const user = parseUserFromRequest(req);
   const dispute = await getDisputeById(id);
-<<<<<<< HEAD
+
   if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
     ensureInvolvedOrAdmin(user, dispute.clientUserId, dispute.talentUserId);
   } catch (error) {
@@ -151,10 +89,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-=======
-  if (!dispute) return res && res.status($1).json({ $2 });
-  try {
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba

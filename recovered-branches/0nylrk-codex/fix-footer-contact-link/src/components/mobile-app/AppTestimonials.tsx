@@ -1,14 +1,7 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-=======
-
-
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 import React from "react";
 import {Star} from "lucide-react";
 import {Card, CardContent, CardFooter} from "@/components/ui/card";
@@ -16,13 +9,12 @@ import React from "react",
 import { Star } from "lucide-react",
 import { Card, CardContent, CardFooter } from "@/components/ui/card",
 
-<<<<<<< HEAD
-=======
 
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 const testimonials = [
   {
     name: "Alex Johnson"
@@ -74,40 +66,7 @@ export const AppTestimonials: React.FC = () => {
                   {Array.from({ length: 5 }).map((_, i) => (
 
 
-=======
-                    <Star
-                      key={i}
-                      className={`h-5 w-5 ${i < testimonial.rating ? "text-yellow-400 fill-yellow-400" : "text-gray-400"}`}
-                    />
-                  ))}
-                </div>
-                <p className="text-gray-200 mb-6">"{testimonial.text}"</p>
-              </CardContent>
-              <CardFooter className="border-t border-zion-purple/20 pt-4">
-                <div className="flex items-center">
-                  <div className="h-10 w-10 rounded-full overflow-hidden mr-4">
-                    <img src={testimonial.avatar} alt={testimonial.name} className="h-full w-full object-cover" />
-                  </div>
-                  <div>
-                    <p className="font-semibold text-white">{testimonial.name}</p>
-                    <p className="text-sm text-gray-400">{testimonial.role}</p>
-                  </div>
-                </div>
-              </CardFooter>
-            </Card>
-<<<<<<< HEAD
-          ))}
-        </div>
-      </div>
-    </section>
-  )
-}
 
-=======
-
-
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React from "react",;
 import { Star } from "lucide-react",;
 import { Card, CardContent, CardFooter } from "@/components/ui/card",;

@@ -1,25 +1,21 @@
 
 import React from "react";
 import {
-<<<<<<< HEAD
+
   Dialog
   DialogContent
   DialogDescription
   DialogHeader
   DialogTitle
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   Dialog,
   DialogContent,
   DialogDescription,
   DialogHeader,
 DialogTitle,;
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 } from "@/components/ui/dialog";
 import { ApplyForm } from "./ApplyForm";
 import { ApplyToJobModalProps } from "./types";
@@ -39,62 +35,19 @@ export function ApplyToJobModal({
             Complete your application for this position
           </DialogDescription>
         </DialogHeader>
-<<<<<<< HEAD
+
         <ApplyForm
           job={job}
           onClose={onClose}
           onApplySuccess={onApplySuccess}
         />
       </DialogContent>
-    </Dialog>
-=======
-
-import {;
-  Dialog,;
-  DialogContent,;
-  DialogDescription,;
-  DialogHeader,;
-  DialogTitle,;
-} from "@/components/ui/dialog";
-import { ApplyForm } from "./ApplyForm";
-import { ApplyToJobModalProps } from "./types";
-export function ApplyToJobModal(): any ({;
-  job,;
-  isOpen,;
-  onClose,;
-  onApplySuccess,;
-}: ApplyToJobModalProps) {;
-  return (
-    <Dialog open={isOpen} onOpenChange={onClose}>;
-      <DialogContent className="sm:max-w-[600px]">;
-        <DialogHeader>;
-          <DialogTitle>Apply to Job: {job && job.title}</DialogTitle>;
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
-=======
-import React from './react';
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogHeader,
-  DialogTitle,
-} from '@/components / ui / dialog';
-import { ApplyForm  } from './ApplyForm';
-import { ApplyToJobModalProps  } from './types';
-export /**
- * ApplyToJobModal - Function description
- */
-function ApplyToJobModal() {
-  return (
-    <Dialog open={is_open} onOpenChange={on_close}>;
-      <DialogContent className="sm:max - w-[600px]">;
-        <DialogHeader>;
-          <DialogTitle > Apply to Job: {job.title}</DialogTitle>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
+
+
           <DialogDescription>;
             Complete your application for this position;
           </DialogDescription>;
@@ -108,14 +61,11 @@ function ApplyToJobModal() {
         />;
       </DialogContent>;
     </Dialog>;
-<<<<<<< HEAD
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
   );
-=======
-    </Dialog>);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
 }

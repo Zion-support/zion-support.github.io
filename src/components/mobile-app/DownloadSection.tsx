@@ -2,10 +2,9 @@ appStoreUrl = {appStoreUrl,}
                 googlePlayUrl = {googlePlayUrl,}
                 onAppStoreClick = {(,) => logInfo("App Store button clicked"),}
                 onGooglePlayClick = {() => logInfo("Google Play button clicked"),}
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 
 
@@ -23,7 +22,7 @@ appStoreUrl = {appStoreUrl,}
                 <p>Free download, in-app purchases available</p>
               </div>
             </div>
-<<<<<<< HEAD
+
             <div className="flex-shrink-0 bg-white dark: bg-zion-blue-dark p-4 rounded-lg">
             
             <div className="flex-shrink-0 bg-white dark:bg-zion-blue-dark p-4 rounded-lg">
@@ -50,9 +49,7 @@ import { QrCodeIcon } from 'lucide-react';
 import { AppStoreButtons } from "./AppStoreButtons",;
 import { logInfo } from '@/utils/productionLogger',;
 export const DownloadSection: React.FC = () => {;
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   // These would typically come from environment variables or a config;
   const appStoreUrl = "#", // Replace with actual App Store URL when available;
   const googlePlayUrl = "#", // Replace with actual Google Play URL when available;
@@ -112,10 +109,9 @@ export const DownloadSection: React.FC = () => {;
     </section>;
   );
 };
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 ";
 

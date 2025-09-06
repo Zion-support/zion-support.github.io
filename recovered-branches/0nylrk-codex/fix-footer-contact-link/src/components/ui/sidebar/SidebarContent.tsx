@@ -1,26 +1,18 @@
 
-<<<<<<< HEAD
+
 import React from "react";
-import { cn } from "@/lib/utils";
-import React from "react",
-import { cn } from "@/lib/utils",
+
 import {cn} from "@/lib/utils";
 import React from "react",
 import { cn } from "@/lib/utils",
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 interface SidebarContentProps extends React.HTMLAttributes<HTMLDivElement> {
   className?: string,
   children?: React.ReactNode
-=======
 
-
-import React from "react",
-import { cn } from "@/lib/utils",
-
-
-=======
-import {cn} from "@/lib/utils";
-interface SidebarContentProps extends React && React.HTMLAttributes<HTMLDivElement> {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   className?: string;
   children?: React && React.ReactNode;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -32,18 +24,11 @@ export function SidebarContent(): any ({ className, children, ...props }: Sideba
   return (
 
     <div className={cn("flex-1 px-2 py-4", className)} {...props}>
-<<<<<<< HEAD
+
       {children}
     </div>
-  );
-}
-  )
-=======
 
-  )
 
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React from "react",;
 import { cn } from "@/lib/utils",;
 interface SidebarContentProps extends React.HTMLAttributes<HTMLDivElement> {;
@@ -61,9 +46,8 @@ export function SidebarContent({ className, children, ...props }: SidebarContent
   );
 }
 ;
-<<<<<<< HEAD
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba

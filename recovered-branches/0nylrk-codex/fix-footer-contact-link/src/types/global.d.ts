@@ -1,20 +1,11 @@
 
-<<<<<<< HEAD
-import { ReactNode } from 'react';
-import {ReactNode} from 'react';
-=======
-
-import {ReactNode} from 'react';
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 // Extend FeatureCardProps to include key for mapping
 declare module '@/components/FeatureCard' {
-=======
-import {ReactNode} from 'react';
-// Extend FeatureCardProps to include key for mapping;
-declare module '@/components / FeatureCard' {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
   export interface FeatureCardProps {
     title: string;
     description: string;
@@ -108,10 +99,11 @@ declare module '@/components / ProductListingCard' {
     view: any;
     onRequestQuote: (listing_id: string) => void,
     key?: string | number;
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
   }
 }

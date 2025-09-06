@@ -1,29 +1,19 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 import type { NextApiRequest, NextApiResponse } from "next";
 import nodemailer from "nodemailer";
 import crypto from "crypto";
 import {
-<<<<<<< HEAD
+
   getProposal
   updateProposalMeta
   updateArtifacts
   getProposal,
   updateProposalMeta,
   updateArtifacts,;
-=======
 
-
-  getProposal,
-  updateProposalMeta,
-  updateArtifacts,;
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 } from "../../../utils/data/proposals";
 async function submitByEmail(
   to: string
@@ -31,13 +21,8 @@ async function submitByEmail(
   text: string
   attachments: any[] = []
 ) {
-<<<<<<< HEAD
-=======
 
-=======
 
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
@@ -48,45 +33,43 @@ import crypto from 'crypto';
 import { getProposal, updateProposalMeta, updateArtifacts } from '../../../utils/data/proposals';
 
 async function submitByEmail(to: string, subject: string, text: string, attachments: any[] = []) {;
-<<<<<<< HEAD
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
   const host = process.env.EMAIL_HOST;
   const port = Number(process.env.EMAIL_PORT |587);
   const user = process.env.EMAIL_USER;
   const pass = process.env.EMAIL_PASS;
-<<<<<<< HEAD
+
   const from = process.env.EMAIL_FROM |user;
   if (!host |!user |!pass) throw new Error("Email not configured");
   const from = process.env.EMAIL_FROM || user;
   if (!host || !user || !pass) throw new Error("Email not configured");
+
   const transporter = nodemailer.createTransport({
     host
     port
     secure: port === 465
     auth: { user, pass }
   });
+
   if (!host || !user || !pass) throw new Error('Email not configured');
   const transporter = nodemailer.createTransport({ host, port, secure: port === 465, auth: { user, pass } });
   await transporter.sendMail({ from, to, subject, text, attachments });
 }
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  await transporter.sendMail({ from, to, subject, text, attachments });
+}
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
 
-export default async function handler(
-  req: NextApiRequest,
-  res: NextApiResponse,
-) {;
   if (req.method !== "POST") return res.status($1).json({ $2 });
   try {
     const { id, channels = ["email"], emailTo, delegateNote } = req.body |{}
@@ -119,35 +102,15 @@ export default async function handler(
   } catch (error: any) {
     return res
       .status(500)
+
+
       .json({ error: error?.message |"Submission failed" });
 import type { NextApiRequest, NextApiResponse } from 'next';
 import nodemailer from 'nodemailer';
 import crypto from 'crypto';
 import { getProposal, updateProposalMeta, updateArtifacts } from '../../../utils/data/proposals';
 async function submitByEmail(to: string, subject: string, text: string, attachments: any[] = []) {
-=======
 
-  const host = process && process.env.EMAIL_HOST;
-  const port = Number(process && process.env.EMAIL_PORT || 587);
-  const user = process && process.env.EMAIL_USER;
-  const pass = process && process.env.EMAIL_PASS;
-  const from = process && process.env.EMAIL_FROM || user;
-  if (!host || !user || !pass) throw new Error("Email not configured");
-  const transporter = nodemailer && nodemailer.createTransport({
-=======
-import type { NextApiRequest, NextApiResponse } from './next';
-import nodemailer from './nodemailer';
-import crypto from './crypto';
-import {
-  get_proposal,
-  updateProposalMeta,
-  update_artifacts,
-} from '../../../utils / data / proposals';
-async /**
- * submitByEmail - Function description
- */
-function submitByEmail() {
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const host = process.env.EMAIL_HOST;
   const port = Number (process.env.EMAIL_PORT || 587);
   const user = process.env.EMAIL_USER;
@@ -167,14 +130,11 @@ function submitByEmail() {
 
   try {
 
-<<<<<<< HEAD
+
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') return res.status($1).json({$2});
-      .json({ error: error?.message || "Submission failed" });
-;
-export default async function handler(req, res) {
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
   try {
     const { id, channels = ['email'], emailTo, delegateNote } = req.body || {};
     if (!id) return res.status(400).json({ error: 'id is required' });
@@ -209,46 +169,10 @@ export default async function handler(req, res) {
       .json({ error: error?.message |"Submission failed" });
   }
 }
-=======
-      const hash = crypto.createHash('sha256').update(JSON.stringify(meta)).digest('hex');
-      ensRecordHash = `0x${hash}`;
-      updateArtifacts(id, { ensRecordHash })
-    } catch {}
 
-    const updated = updateProposalMeta(id, (m) => ({ ...m, status: 'Submitted' }));
-    return res.status(200).json({ meta: updated })
-  } catch (error: any) {
-    return res.status(500).json({ error: error?.message || 'Submission failed' })
-  }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-}
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
-  const from = process.env.EMAIL_FROM || user;
-
-  await transporter.sendMail({ from, to, subject, text, attachments });
 }
 
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
 
-  }
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
   } catch (error) {
     console.error("Error:", error);
@@ -268,8 +192,8 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba

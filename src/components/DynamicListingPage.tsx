@@ -6,10 +6,9 @@ export function DynamicListingPage({
   listings: allListings,
   categoryFilters,
   initialPrice = { min: 0, max: 10000 },
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
       prev.includes(category)
         ? prev.filter(c => c !== category)
@@ -17,7 +16,7 @@ export function DynamicListingPage({
     )
 
 
-<<<<<<< HEAD
+
   },
   const clearCategories = () => setSelectedCategories([]),
   const [view, setView] = useState<ListingView>("grid"),
@@ -133,22 +132,18 @@ interface DynamicListingPageProps {;
   const clearCategories = () => setSelectedCategories([])
   const [view, setView] = useState<ListingView>('grid')
   const isGrid = view === 'grid'
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
   },
   const clearCategories = () => setSelectedCategories([]),
   const [view, setView] = useState<ListingView>("grid"),
   const isGrid = view === "grid",
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   // Swap icons to match action
   const ToggleViewIcon = isGrid ? (
     <List className='h-4 w-4' />
   ) : (
-<<<<<<< HEAD
+
     <LayoutGrid className='h-4 w-4' />
   )
   const [isLoading, setIsLoading] = useState(false)
@@ -181,18 +176,12 @@ interface DynamicListingPageProps {;
     const [min, max] = values.map(Number)
     if (min == null |max == null |isNaN(min) |isNaN(max)) return
     if (min == null || max == null || isNaN(min) || isNaN(max)) return;
-=======
 
-
-    if (min == null || max == null || isNaN(min) || isNaN(max)) return;
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     setCurrentPriceFilter([min, max])
   }
   let filteredListings: ProductListing[] = []
   try {
-<<<<<<< HEAD
+
     filteredListings = allListings.filter(listing => {      const matchesSearch =
         !searchQuery |
         listing.title.toLowerCase().includes(searchQuery.toLowerCase()) |
@@ -204,12 +193,9 @@ interface DynamicListingPageProps {;
       const matchesBrand =
         selectedBrand === 'all' |
         (listing.brand && listing.brand === selectedBrand)
-=======
 
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     filteredListings = allListings.filter(listing => {      const matchesSearch = null;
-<<<<<<< HEAD
+
 
     <LayoutGrid className="h-4 w-4" />
   ),
@@ -253,17 +239,13 @@ interface DynamicListingPageProps {;
     filteredListings = allListings.filter((listing) => {
       const matchesSearch =
 <<<<<<< HEAD
-=======
 
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         !searchQuery ||
         listing.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
         listing.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
         (listing.tags &&
           listing.tags.some((tag: string) =>
-<<<<<<< HEAD
+
             tag.toLowerCase().includes(searchQuery.toLowerCase())
           ))
       const matchesBrand = null;
@@ -291,8 +273,7 @@ interface DynamicListingPageProps {;
           listing.price <= currentPriceFilter[1])
       const matchesRating = null;
             tag.toLowerCase().includes(searchQuery.toLowerCase()))),
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 
       const matchesSpecs =
@@ -331,14 +312,12 @@ interface DynamicListingPageProps {;
           listing.price <= currentPriceFilter[1])
           listing.price <= currentPriceFilter[1]),
 
-<<<<<<< HEAD
+
       const matchesRating =
         selectedRating === null |
         (listing.rating !== undefined && listing.rating >= selectedRating)
       const matchesRating =
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         selectedRating === null ||
         (listing.rating !== undefined && listing.rating >= selectedRating),
 
@@ -369,25 +348,19 @@ interface DynamicListingPageProps {;
     capture_exception (error);
     logErrorToProduction ('Listing filter error:', { data: error });
   }
-<<<<<<< HEAD
+
   const handleRequestQuote = (listingId: string) => {
     setIsLoading(true)
     const listing = allListings.find(item => item.id === listingId)
     setTimeout(() => {
-=======
 
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   const handleRequestQuote = (listingId: string) => {;
     setIsLoading(true);
     const listing = allListings.find(item => item.id === listingId);
     setTimeout(() => {;
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       setIsLoading(false);      if (listing) {
         toast({
           title: 'Quote Requested'
@@ -621,10 +594,9 @@ export function DynamicListingPage(): any ({;
           description: `Your quote request for ${listing && listing.title} has been sent.`,;
         });
 
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
         router.push ('/request - quote');
 
@@ -637,7 +609,7 @@ export function DynamicListingPage(): any ({;
         const quoteData = {
           serviceType: categorySlug
           specificItem: {
-<<<<<<< HEAD
+
             id: listing.id
             title: listing.title
             category: listing.category
@@ -676,12 +648,7 @@ export function DynamicListingPage(): any ({;
       }
     }, 500)
   },
-=======
 
-            id: listing.id,
-            title: listing.title,
-            category: listing.category,
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   return (
     <div className="min-h-screen bg-zion-blue py-12 px-4">
@@ -710,10 +677,9 @@ export function DynamicListingPage(): any ({;
 
               <div className="mb-6">
                 <label className="text-sm font-medium text-zion-slate-light block mb-2">
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 
                   Categories
@@ -729,11 +695,8 @@ export function DynamicListingPage(): any ({;
                         className='border-zion-slate-light data-[state=checked]:bg-zion-purple data-[state=checked]:border-zion-purple'                      />
                         className="border-zion-slate-light data-[state=checked]:bg-zion-purple data-[state=checked]:border-zion-purple"
                       />
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                       <label
                         htmlFor={`cat-${filter.value}`}
                         className="ml-2 text-sm text-zion-slate-light cursor-pointer"
@@ -799,11 +762,8 @@ export function DynamicListingPage(): any ({;
                         htmlFor={`cat-${filter.value}`}
                         className="ml-2 text-sm text-zion-slate-light cursor-pointer";
                       >;
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                         {filter.label}
                       </label>
                     </div>
@@ -840,10 +800,9 @@ export function DynamicListingPage(): any ({;
                         <SelectItem key={b || 'unknown-brand'} value={b || ''} className="text-white">
                           {b || 'N/A'}
                         </SelectItem>;
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
                       ))}
                     </SelectContent>;
@@ -859,18 +818,14 @@ export function DynamicListingPage(): any ({;
                   Specifications;
                 </label>;
                 <Input
-<<<<<<< HEAD
+
                   type="text"
                   placeholder="Search specifications..."
                   type='text'
                   placeholder='Search specifications...'
                   type="text"
                   placeholder="Search specifications..."
-=======
 
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   value={specQuery}
                   onChange={(e: React && React.ChangeEvent<HTMLInputElement>) =>;
                     setSpecQuery(e && e.target.value);
@@ -878,10 +833,9 @@ export function DynamicListingPage(): any ({;
                   className='bg-zion-blue border border-zion-blue-light text-white'                />
                   className="bg-zion-blue border border-zion-blue-light text-white"
                 />
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 
               </div>
@@ -910,10 +864,9 @@ export function DynamicListingPage(): any ({;
                     onValueChange={(value: string) =>;
                       setSelectedAvailability(value);
                     }
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
                   >
                     <SelectTrigger className="bg-zion-blue border border-zion-blue-light text-white">
@@ -934,10 +887,9 @@ export function DynamicListingPage(): any ({;
                         <SelectItem key={a || 'unknown-availability'} value={a || ''} className="text-white">
                           {a || 'N/A'}
                         </SelectItem>;
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
                       ))}
                     </SelectContent>;
@@ -961,11 +913,8 @@ export function DynamicListingPage(): any ({;
                   <Slider
                     aria-label='Price range'
                     aria-label="Price range"
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                     defaultValue={[0, priceRange.max]}
                     min={0}
                     max={priceRange && priceRange.max}
@@ -977,10 +926,9 @@ export function DynamicListingPage(): any ({;
                     className="mb-4"
                   />
                   <div className="flex justify-between text-sm text-zion-slate-light">
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 
                     <span>${currentPriceFilter[0].toLocaleString()}</span>
@@ -1035,10 +983,9 @@ export function DynamicListingPage(): any ({;
                         setSelectedRating(rating)
                       }}
                       aria-pressed={selectedRating === rating}
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
                       className={`{
                         selectedRating === rating
@@ -1060,10 +1007,9 @@ export function DynamicListingPage(): any ({;
                               key={i}
                               className="h-3 w-3 fill-zion-cyan text-zion-cyan"
                             />
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
                           ))}
                           <span className='ml-1'>& Up</span>;
@@ -1093,10 +1039,9 @@ export function DynamicListingPage(): any ({;
                   setSelectedBrand("all"),
                   setSpecQuery(""),
                   setSelectedAvailability("all")
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 
                 }}
@@ -1339,10 +1284,9 @@ export function DynamicListingPage(): any ({;
                 </div>
 
                 <div className="flex items-center gap-2 ml-auto">
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 
                   <Select value={sortOption} onValueChange={setSortOption}>
@@ -1439,10 +1383,9 @@ export function DynamicListingPage(): any ({;
                     title={isGrid ? "List view" : "Grid view"}
                     className="border-zion-blue-light text-zion-slate-light focus-visible:ring-zion-purple"
                   >
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 
                     {ToggleViewIcon}
@@ -1458,10 +1401,9 @@ export function DynamicListingPage(): any ({;
 
             <div className="mb-6">
               <p className="text-zion-slate-light">
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 
                 Showing {filteredListings.length} results
@@ -1504,11 +1446,8 @@ export function DynamicListingPage(): any ({;
                   view === "grid"
                     ? "grid grid-cols-1 md:grid-cols-2 gap-6"
                     : "flex flex-col gap-6"
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 }
               >
                 {[1, 2, 3, 4].map(i => (
@@ -1535,10 +1474,9 @@ export function DynamicListingPage(): any ({;
                       <div className="flex justify-between items-center pt-4">
                         <Skeleton height={24} width="25%" />
                         <Skeleton height={32} width="25%" />
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
                       </div>
                     </div>
@@ -1573,7 +1511,7 @@ export function DynamicListingPage(): any ({;
                     onRequestQuote={handleRequestQuote}
                     detailBasePath={detailBasePath}
                   />;
-<<<<<<< HEAD
+
 <<<<<<< HEAD
 
 
@@ -1598,21 +1536,7 @@ export function DynamicListingPage(): any ({;
                     setSpecQuery('')
                     setSelectedAvailability('all') }}
                   className='border-zion-purple text-zion-purple hover:bg-zion-purple/10'
-=======
 
-
-                ))}
-              </div>;
-            ) : (;
-              <div className='text-center py-20'>;
-                <h3 className='text-xl font-bold text-white mb-2'>;
-                  No listings found;
-                </h3>;
-                <p className='text-zion-slate-light mb-6'>;
-                  Try adjusting your filters or search query;
-                </p>;
-                <Button
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -1627,10 +1551,9 @@ export function DynamicListingPage(): any ({;
                     setSelectedAvailability("all")
                   }}
                   className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 
 

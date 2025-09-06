@@ -1,21 +1,14 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-}
-) )
-}</ul> </section> <section>) )
-}</ul> </section> </div>)
-};
-) ) 
-}</ul> </section> <section>) ) 
-}</ul> </section> </div>)
-export default function KnowledgeGraph({ report }: Props) {;
+
  
 };
 ) ) 
 }</ul> </section> <section>) ) 
 }</ul> </section> </div>) 
-=======
+
+
+  if (!report) return <div>No knowledge graph yet.</div>;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -114,14 +107,6 @@ export default function KnowledgeGraph({ report }: Props) {
           {report.topTerms.map((t, i) => (
             <li key={i} className=&quot;px-2 py-1 rounded bg-gray-100 dark:bg-gray-800&quot;>{t.term} <span className=&quot;text-gray-500&quot;>({t.count})</span></li>
 =======
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
-  );
-}
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

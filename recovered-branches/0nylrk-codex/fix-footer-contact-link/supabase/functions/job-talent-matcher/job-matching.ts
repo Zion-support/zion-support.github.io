@@ -1,41 +1,19 @@
 
-<<<<<<< HEAD
-
-import {createClient} from "https: //esm.sh/@supabase/supabase-js@2"
-import {JobData, MatchResult} from "./types.ts";
-import {normalizeSkillsWithAI, findBestMatches} from "./ai-matcher.ts";
-// Initialize the Supabase client
-const supabaseUrl = Deno.env.get("SUPABASE_URL") |"";
-const supabaseAnonKey = Deno.env.get("SUPABASE_ANON_KEY") |"";
-const supabase = createClient(supabaseUrl, supabaseAnonKey);
-import {createClient} from "https: //esm.sh/@supabase/supabase-js@2",;
-import {JobData, MatchResult} from "./types.ts";
-import {normalizeSkillsWithAI, findBestMatches} from "./ai-matcher.ts";
-=======
-import {createClient} from "https: //esm && esm.sh/@supabase/supabase-js@2",
-import {JobData, MatchResult} from "./types ;
-import {normalizeSkillsWithAI, findBestMatches} from "./ai-matcher ;
-
-=======
 
 
-import {createClient} from "https: //esm.sh/@supabase/supabase-js@2",;
-import {JobData, MatchResult} from "./types.ts";
-import {normalizeSkillsWithAI, findBestMatches} from "./ai-matcher.ts";
 
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2",
 import { JobData, MatchResult } from "./types.ts",
 import { normalizeSkillsWithAI, findBestMatches } from "./ai-matcher.ts",
 
-<<<<<<< HEAD
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 // Initialize the Supabase client
 const supabaseUrl = Deno.env.get("SUPABASE_URL") || "",
 const supabaseAnonKey = Deno.env.get("SUPABASE_ANON_KEY") || "",
 const supabase = createClient(supabaseUrl, supabaseAnonKey),
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 /**
  * Main function to process job-talent matching
@@ -126,11 +104,8 @@ export async function storeMatchResults(jobId: string, matchedTalents: MatchResu
         _type: "job_match",
         _related_id: jobId
       })
-<<<<<<< HEAD
-    }
-  });
-  
-  await Promise.all(matchInsertPromises)
+
+
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2",;
 import { JobData, MatchResult } from "./types.ts",;
 import { normalizeSkillsWithAI, findBestMatches } from "./ai-matcher.ts",;
@@ -196,12 +171,12 @@ export async function storeMatchResults(jobId: string, matchedTalents: MatchResu
     }
   });
   await Promise.all(matchInsertPromises);
-=======
 
-}
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 ;
   await Promise.all (matchInsertPromises);
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 }
 ;

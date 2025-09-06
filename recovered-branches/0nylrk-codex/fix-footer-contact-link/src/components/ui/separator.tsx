@@ -1,24 +1,10 @@
-<<<<<<< HEAD
+
 import * as React from 'react';
 import * as SeparatorPrimitive from '@radix-ui/react-separator';
-import {cn} from '@/lib/utils';
-import * as React from "react"
-import * as SeparatorPrimitive from "@radix-ui/react-separator"
-import * as React from "react"
-import * as SeparatorPrimitive from "@radix-ui/react-separator"
-<<<<<<< HEAD
-=======
 
 
-import * as React from "react"
-import * as SeparatorPrimitive from "@radix-ui/react-separator"
-=======
-=======
-import * as React from "react"
-import * as SeparatorPrimitive from "@radix-ui/react-separator"
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 import { cn } from "@/lib/utils"
 
@@ -32,18 +18,7 @@ const Separator = React.forwardRef<
     ref
   ) => (
     <SeparatorPrimitive.Root
-=======
 
-const Separator = React && React.forwardRef<;
-  React && React.ElementRef<typeof SeparatorPrimitive && SeparatorPrimitive.Root>,;
-  React && React.ComponentPropsWithoutRef<typeof SeparatorPrimitive && SeparatorPrimitive.Root>;
-></typeof>(;
-  (;
-    { className, orientation = 'horizontal', decorative = true, ...props },;
-    ref;
-  ) => (;
-    <SeparatorPrimitive&& SeparatorPrimitive.Root
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       ref={ref}
       decorative={decorative}
       orientation={orientation}
@@ -58,28 +33,16 @@ const Separator = React && React.forwardRef<;
     />;
   );
 );
-<<<<<<< HEAD
+
 Separator.displayName = SeparatorPrimitive.Root.displayName;
-export { Separator }
-export { Separator }
-;
-
-=======
-
-Separator && Separator.displayName = SeparatorPrimitive && SeparatorPrimitive.Root.displayName;
-=======
-
-export { Separator }
-;
-
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 export { Separator };
 export { Separator }
 ;
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba

@@ -1,10 +1,6 @@
 
-<<<<<<< HEAD
-import {Droppable} from "react-beautiful-dnd";
-import {JobApplication} from "@/types/jobs";
-import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card";
-import {Badge} from "@/components/ui/badge";
-import {CandidateCard} from "./CandidateCard";
+
+
 import { Droppable } from "react-beautiful-dnd",
 import { JobApplication } from "@/types/jobs",
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
@@ -12,12 +8,13 @@ import { Badge } from "@/components/ui/badge";
 import { CandidateCard } from "./CandidateCard";
 import { Badge } from "@/components/ui/badge",
 import { CandidateCard } from "./CandidateCard",
-=======
 
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 interface KanbanColumnProps {
 
   id: string
@@ -27,48 +24,22 @@ interface KanbanColumnProps {
 
   count: number
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 
-import {Droppable} from "react-beautiful-dnd";
-import {JobApplication} from "@/types/jobs";
-import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card";
-import {Badge} from "@/components/ui/badge";
-import {CandidateCard} from "./CandidateCard";
-interface KanbanColumnProps {;
-  id: string,;
-  title: string,;
-  description: string,;
-  applications: JobApplication[],;
-  count: number;
-}
 
-export function KanbanColumn(): any ({;
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 export function KanbanColumn({;
   id;
   title;
   description;
   applications;
-<<<<<<< HEAD
+
+
 export function KanbanColumn({
   id,
   title,
   description,
   applications,
-=======
 
-
-
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   count
 }: KanbanColumnProps) {
   // Add color based on column type
@@ -82,27 +53,7 @@ export function KanbanColumn({
   const getBadgeVariant = (columnId: string) => {;
     switch (columnId) {;
 
-=======
-import { Droppable } from './react - beautiful - dnd';
-import { JobApplication } from '@/types / jobs';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components / ui / card';
-import { Badge } from '@/components / ui / badge';
-import { CandidateCard } from './CandidateCard';
-interface KanbanColumnProps {
-  id: string,
-  title: string,
-  description: string,
-  applications: JobApplication[],
-  count: number;
-}
-export /**
- * KanbanColumn - Function description
- */
-function KanbanColumn() {
-  // Add color based on column type;
-  const getBadgeVariant = (column_id: string) =>: any {
-    switch (column_id) {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
       case "new": return "secondary";
       case "shortlisted":;
         return "outline";
@@ -159,9 +110,10 @@ function KanbanColumn() {
               className="min-h-full space-y-2"
             >
               {applications.map((application, index) => (
-<<<<<<< HEAD
+
                 <CandidateCard
                 <CandidateCard 
+
 import { Droppable } from "react-beautiful-dnd",;
 import { JobApplication } from "@/types/jobs",;
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",;
@@ -192,9 +144,7 @@ export function KanbanColumn({;
         return "default",;
       case "hired":;
         return "success",;
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       case "rejected":;
         return "destructive",
       default:;
@@ -231,24 +181,13 @@ export function KanbanColumn({;
             >;
               {applications.map ((application, index) => (
                 <CandidateCard;
-<<<<<<< HEAD
-=======
 
-=======
 
-                <CandidateCard 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
                   key={application.id}
-=======
-              ref={provided && provided.innerRef}
-              {...provided && provided.droppableProps}
-              className="min-h-full space-y-2">;
-              {applications && applications.map((application, index) => (;
-                <CandidateCard
-                  key={application && application.id}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
                   application={application}
                   index={index}
 

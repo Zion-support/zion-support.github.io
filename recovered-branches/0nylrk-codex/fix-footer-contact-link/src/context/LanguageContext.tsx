@@ -1,30 +1,22 @@
 import React, { createContext, useState, useContext, useEffect, ReactNode } from 'react';
 
-<<<<<<< HEAD
+
 import {useTranslation} from 'react-i18next';
 import {supabase} from '../integrations/supabase/client';
 import {toast} from '../components/ui/use-toast';
 export type SupportedLanguage = 'en' | 'es' | 'pt' | 'ar';
 export type LanguageContextType = {
-  currentLanguage: SupportedLanguage
-  changeLanguage: (lang: SupportedLanguage) => Promise<void>
-  isRTL: boolean
-  supportedLanguages: { code: SupportedLanguage, name: string, flag: string }[]
-}
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
   currentLanguage: SupportedLanguage,
   changeLanguage: (lang: SupportedLanguage) => Promise<void>,
   isRTL: boolean,
   supportedLanguages: { code: SupportedLanguage, name: string, flag: string }[];
 };
 
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 const supportedLanguages = [
   { code: 'en' as SupportedLanguage, name: 'English', flag: '🇺🇸' }
   { code: 'es' as SupportedLanguage, name: 'Español', flag: '🇪🇸' }
@@ -37,33 +29,10 @@ const defaultLanguageContext: LanguageContextType = {
   isRTL: false
   supportedLanguages
 }
-=======
 
-export type LanguageContextType = {;
-  currentLanguage: SupportedLanguage,;
-  changeLanguage: (lang: SupportedLanguage) => Promise<void>,;
-  isRTL: boolean,;
-  supportedLanguages: { code: SupportedLanguage, name: string, flag: string }[];
-};
-
-const supportedLanguages = [;
-  { code: 'en' as SupportedLanguage, name: 'English', flag: '🇺🇸' },;
-  { code: 'es' as SupportedLanguage, name: 'Español', flag: '🇪🇸' },;
-  { code: 'pt' as SupportedLanguage, name: 'Português', flag: '🇧🇷' },;
-  { code: 'ar' as SupportedLanguage, name: 'العربية', flag: '🇸🇦' }
-];
-
-const defaultLanguageContext: LanguageContextType = {;
-  currentLanguage: 'en',;
-  changeLanguage: async () => {},;
-  isRTL: false,;
-  supportedLanguages;
-};
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 const LanguageContext = createContext(defaultLanguageContext);
 export const useLanguage = (): LanguageContextType => useContext(LanguageContext);
-<<<<<<< HEAD
+
 interface LanguageProviderProps {
   children: ReactNode
   authState?: {
@@ -71,24 +40,16 @@ interface LanguageProviderProps {
     user: { id?: string } | null
   }
 }
-export const LanguageProvider: React.FC<LanguageProviderProps> = ({
-  children
-  authState = { isAuthenticated: false, user: null }
-}) => {
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 export const LanguageProvider: React.FC<LanguageProviderProps> = ({ 
   children, 
   authState = { isAuthenticated: false, user: null } 
 }) => {;
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
   const { i18n, t } = useTranslation();
   const { isAuthenticated, user } = authState;
   const [currentLanguage, setCurrentLanguage] = useState<SupportedLanguage>(
@@ -266,29 +227,24 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({ ;
             .eq('id', user && user.id);
 
           if (error) {;
-<<<<<<< HEAD
-            console.error('Error updating language preference:', error);
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
+            console.error('Error updating language preference:', error);
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
           }
         } catch (err) {;
           console && console.error('Error syncing language with profile:', err);
         }
       }
-<<<<<<< HEAD
-    }
-    };
-    
-=======
 
 
-    };
-    
 
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
     syncLanguageWithProfile()
   }, [currentLanguage, isAuthenticated, user]);
   const changeLanguage = async (lang: SupportedLanguage) => {
@@ -338,46 +294,28 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({ ;
         if (error) {;
 
           console.error('Error updating language preference:', error);
-<<<<<<< HEAD
-=======
 
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
         }
       }
     } catch (err) {;
       console && console.error('Error changing language:', err);
     }
-<<<<<<< HEAD
-  }
-  };
-  
-=======
 
 
-  };
-  
 
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
   return (
     <LanguageContext.Provider
       value={{
         currentLanguage
         changeLanguage
         isRTL;
-=======
-  };
 
-  return (
-    <LanguageContext&& LanguageContext.Provider 
-      value={{ 
-        currentLanguage, 
-        changeLanguage, 
-        isRTL
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         supportedLanguages
   },;
   return (;
@@ -387,34 +325,36 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({ ;
         changeLanguage,;
         isRTL;
         supportedLanguages;
-<<<<<<< HEAD
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
       }}
     >
       {children}
     </LanguageContext.Provider>
   )
+
 }
 
 };
     </LanguageContext.Provider>;
   );
 };
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
       }}
     >
       {children}
 
 };
 
-=======
-    </LanguageContext.Provider>;
-  );
-};
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba

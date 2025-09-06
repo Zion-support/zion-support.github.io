@@ -1,9 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 import type { NextApiRequest, NextApiResponse } from "next";
 import OpenAI from "openai";
 const client = process && process.env.OPENAI_API_KEY
@@ -33,14 +30,7 @@ export default async function handler(
     governance,
     jurisdiction,
 
-=======
-  const { tokenName, tokenSupply, useCases, rewardsLogic, distribution, governance, jurisdiction, operatorPrompt, legalReview } = req.body || {};
 
-  const distLines = Array.isArray(distribution)
-    ? distribution.map((d: any) => `- ${d.label}: ${d.percent}%`).join('\n')
-    : '';
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
   const distLines = Array && Array.isArray(distribution)
     ? distribution && distribution.map((d: any) => `- ${d && d.label}: ${d && d.percent}%`).join("\n")
@@ -57,59 +47,7 @@ export default async function handler(
         input: [
           { role: "system", content: sysPrompt },
           { role: "user", content: userPrompt },
-=======
-    operator_prompt,
-    legal_review,
-  } = req.body || {}
-;
-  const dist_lines = Array.is_array (distribution);
-    ? distribution.map ((d: any) => `- ${d.label}: ${d.percent}%`).join ("\n");
-    : "";
-;
-  const sys_prompt = `You are a senior Web3 tokenomics analyst and legal - friendly writer. Produce a crisp, investor - and - developer - ready whitepaper in markdown with the following sections strictly in order: Executive Summary, Market Context, Utility & Usage, Rewards System, Distribution, Governance Model, Risks + Disclaimers. Keep it factual and concise, with bullets where appropriate.`;
-  const user_prompt = `${operator_prompt || ""}\n\n_token: ${token_name}\n_total Supply: ${token_supply}\n_use Cases: ${use_cases}\n_rewards: ${rewards_logic}\n_distribution (percent):\n${dist_lines}\n_governance: ${governance}\n_jurisdiction: ${jurisdiction}\n_legal Review Toggle: ${!!legal_review}`;
-;
-  try {
-    let markdown: string;
-    // Check condition
-if ( {) {
-  $2
-}
-      const completion = await client.responses.create ({
-        model: "gpt - 4.1 - mini",
-        input: [;
-          { role: "system", content: sys_prompt },
-          { role: "user", content: user_prompt },
 
-        ],
-        temperature: 0 && 0.3,
-      } as any);
-      const content = (completion as any)?.output_text || "";
-
-    console.error("generation_error", e?.message |e);
-    res.status(500).json({ error: "Generation failed" });
-=======
-=======
-      const completion = await client.responses.create({
-        model: 'gpt-4.1-mini',
-        input: [
-          { role: 'system', content: sysPrompt },
-          { role: 'user', content: userPrompt }
-        ],
-        temperature: 0.3
-      } as any);
-      const content = (completion as any)?.output_text || '';
-      markdown = content.trim()
-    } else {
-      markdown = fallbackMarkdown({ tokenName, tokenSupply, useCases, rewardsLogic, distribution, governance, jurisdiction, legalReview })
-    }
-
-
-    res && res.status(200).json({ markdown });
-  } catch (e: any) {
-    console && console.error("generation_error", e?.message || e);
-    res && res.status(500).json({ error: "Generation failed" });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   }
 }
@@ -119,11 +57,12 @@ function fallbackMarkdown(input: any): string {
         .map((d: any) => `- ${d && d.label}: ${d && d.percent}%`)
         .join("\n")
     : "";
-<<<<<<< HEAD
+
   return `# ${input?.tokenName |"Token"} Tokenomics Whitepaper\n\n## Executive Summary\n${input?.tokenName |"Token"} is a utility token powering a freelance AI marketplace.\n\n## Market Context\nAI-native talent markets require aligned incentives, reputation systems, and credible neutrality.\n\n## Utility & Usage\n${input?.useCases |""}.\n\n## Rewards System\n${input?.rewardsLogic |""}.\n\n## Distribution\n${distLines}\n\nTotal Supply: ${input?.tokenSupply |""}.\n\n## Governance Model\n${input?.governance |""}.\n\n## Risks + Disclaimers\nNot financial advice. Subject to ${input?.jurisdiction |"applicable"} regulations.`;
 }
 
   return `# ${input?.tokenName || "Token"} Tokenomics Whitepaper\n\n## Executive Summary\n${input?.tokenName || "Token"} is a utility token powering a freelance AI marketplace.\n\n## Market Context\nAI-native talent markets require aligned incentives, reputation systems, and credible neutrality.\n\n## Utility & Usage\n${input?.useCases || ""}.\n\n## Rewards System\n${input?.rewardsLogic || ""}.\n\n## Distribution\n${distLines}\n\nTotal Supply: ${input?.tokenSupply || ""}.\n\n## Governance Model\n${input?.governance || ""}.\n\n## Risks + Disclaimers\nNot financial advice. Subject to ${input?.jurisdiction || "applicable"} regulations.`;
+
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
@@ -158,33 +97,8 @@ export default async function handler(req, res) {
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
-=======
 
 
-=======
-
-  return `# ${input?.tokenName || "Token"} Tokenomics Whitepaper\n\n## Executive Summary\n${input?.tokenName || "Token"} is a utility token powering a freelance AI marketplace.\n\n## Market Context\nAI-native talent markets require aligned incentives, reputation systems, and credible neutrality.\n\n## Utility & Usage\n${input?.useCases || ""}.\n\n## Rewards System\n${input?.rewardsLogic || ""}.\n\n## Distribution\n${distLines}\n\nTotal Supply: ${input?.tokenSupply || ""}.\n\n## Governance Model\n${input?.governance || ""}.\n\n## Risks + Disclaimers\nNot financial advice. Subject to ${input?.jurisdiction || "applicable"} regulations.`;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-      markdown = content.trim ();
-    } else {
-      markdown = fallback_markdown ({
-        token_name,
-        token_supply,
-        use_cases,
-        rewards_logic,
-        distribution,
-        governance,
-        jurisdiction,
-        legal_review,
-      });
-    }
-    res.status (200).json ({ markdown });
-  } catch (e: any) {
-    console.error ("generation_error", e?.message || e);
-    res.status (500).json ({ error: "Generation failed" });
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 }
 function fallback_markdown (input: any): string {
@@ -245,10 +159,9 @@ function fallbackMarkdown(input: any): string {;
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD
-=======
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 }

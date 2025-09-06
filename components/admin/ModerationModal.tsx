@@ -1,9 +1,6 @@
-<<<<<<< HEAD
-import React, { useState } from 'react';
-export type ModerationModalProps = {;
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+import React, { useState } from 'react';
+
 
 export type ModerationModalProps = {
   flag: any | null;
@@ -12,40 +9,12 @@ export type ModerationModalProps = {
     action: 'approve' | 'remove' | 'warn' | 'ban',;
     adminNotes?: string;
   ) => Promise<void>;
-<<<<<<< HEAD
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-export default function ModerationModal(): any ({;
-  flag,;
-  onClose,;
-  onAction,;
-}: ModerationModalProps) {;
 
-=======
-<<<<<<< HEAD
-export default function ModerationModal({
-<<<<<<< HEAD
-  flag
-  onClose
-  onAction
-}: ModerationModalProps) {
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 
-  flag,
-  onClose,
-  onAction,
-}: ModerationModalProps) {;
-=======
 
-  flag,
-  onClose,
-  onAction,
-}: ModerationModalProps) {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
   const [adminNotes, setAdminNotes] = useState('');
   if (!flag) return null;
   return (
@@ -330,12 +299,6 @@ if (return null) {
 
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
-  );
-<<<<<<< HEAD
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+

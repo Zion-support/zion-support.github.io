@@ -10,41 +10,24 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { toast } from "@/hooks/use-toast";
 import {
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-  Card
-  CardContent
-  CardDescription
-  CardFooter
-  CardHeader
-  CardTitle
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   Card,
   CardContent,
   CardDescription,
   CardFooter,
   CardHeader,
 CardTitle,;
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 } from "@/components/ui/card";
 import { Sparkles } from "lucide-react";
 import { Progress } from "@/components/ui/progress";
 export function UsageStats() {
   const handleSaveChanges = () => {
     toast({
-<<<<<<< HEAD
-      title: "Limits updated"
-      description: "The new usage limits have been saved successfully."
-      title: "Limits updated",
-      description: "The new usage limits have been saved successfully.",;
-=======
+
 
 import {;
   Card,;
@@ -62,13 +45,9 @@ export function UsageStats() {;
       title: "Limits updated",;
       description: "The new usage limits have been saved successfully.",;
 
-=======
 
-      title: "Limits updated",
-      description: "The new usage limits have been saved successfully.",;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
     });
   }
 
@@ -107,12 +86,12 @@ export function UsageStats() {;
           </CardFooter>
         </Card>
         
-<<<<<<< HEAD
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
         <Card>
           <CardHeader>
             <CardTitle>Candidate Contacts</CardTitle>
@@ -146,12 +125,12 @@ export function UsageStats() {;
           </CardFooter>
         </Card>
         
-<<<<<<< HEAD
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
         <Card>
           <CardHeader>
             <CardTitle>AI Features</CardTitle>
@@ -183,12 +162,12 @@ export function UsageStats() {;
           </CardFooter>
         </Card>
         
-<<<<<<< HEAD
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
         <Card>
           <CardHeader>
             <CardTitle>Budget Controls</CardTitle>
@@ -232,12 +211,12 @@ export function UsageStats() {;
         </Card>
       </div>
       
-<<<<<<< HEAD
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
       <div className="bg-muted/50 rounded-lg p-6 flex items-center justify-between">
         <div className="flex items-center gap-4">
           <div className="h-10 w-10 rounded-full bg-primary/20 flex items-center justify-center">
@@ -254,16 +233,9 @@ export function UsageStats() {;
         <Button>Contact Us</Button>
       </div>
     </div>
-<<<<<<< HEAD
-  );
-}
-=======
-
-=======
 
 
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
   )
 import React from "react",;
 import { Slider } from "@/components/ui/slider",;
@@ -292,40 +264,7 @@ export function UsageStats() {;
       <div>;
         <h3 className="text-xl font-medium mb-4">Usage Limits & Settings</h3>;
         <p className="text-muted-foreground mb-6">;
-=======
-import React from './react';
-import { Slider  } from '@/components / ui / slider';
-import { Badge  } from '@/components / ui / badge';
-import { Button  } from '@/components / ui / button';
-import { Input  } from '@/components / ui / input';
-import { toast  } from '@/hooks / use - toast';
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from '@/components / ui / card';
-import { Sparkles  } from './lucide-react';
-import { Progress  } from '@/components / ui / progress';
-export /**
- * UsageStats - Function description
- */
-function UsageStats() {
-  const handleSaveChanges = () =>: any {
-    toast ({
-      title: "Limits updated",
-      description: "The new usage limits have been saved successfully.",
-    });
-  }
-;
-  return (
-    <div className="space - y-8">;
-      <div>;
-        <h3 className="text - xl font - medium mb - 4">Usage Limits & Settings</h3>;
-        <p className="text - muted - foreground mb - 6">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
           Configure usage limits for your team to manage your subscription;
           resources.;
         </p>;
@@ -510,17 +449,13 @@ function UsageStats() {
             </p>;
           </div>;
         </div>;
-<<<<<<< HEAD
+
         <Button>Contact Us</Button>;
       </div>;
     </div>;
-=======
 
 
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
   );
 }
 ;

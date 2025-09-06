@@ -12,22 +12,7 @@ const AccessibilityEnhancer: React.FC = () => {;
       left: 6px, background: #000,;
       color: #fff, padding: 8px,;
       text-decoration: none, z-index: 1000,;
-=======
-<<<<<<< HEAD
-import React, { useEffect } from 'react';
-const AccessibilityEnhancer: React.FC = () => {
-  useEffect(() => {
-    // Add skip link for keyboard navigation
-    const skipLink = document.createElement('a');
-    skipLink.href = '#main-content';
-    skipLink.textContent = 'Skip to main content'
-    skipLink.className = 'sr-only focus: not-sr-only'
-    skipLink.style.cssText = `
-      position: absolute, top: -40px
-      left: 6px, background: #000
-      color: #fff, padding: 8px
-      text-decoration: none, z-index: 1000
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
     `;
     document && document.body.insertBefore(skipLink, document && document.body.firstChild);
     // Focus management;
@@ -377,73 +362,9 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
                 {size && size.charAt(0).toUpperCase()}
               </button>;
             ))}
-<<<<<<< HEAD
-          </div>
-        </div>
-      </div>
-      {/* Skip to main content link */}
-      <a
-        href="#main-content"
-        className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50"
-      >
-        Skip to main content
-      </a>
-      {/* Screen reader only content */}
-      <div className="sr-only">
-        <h1>Zion Tech Group - Technology Solutions Provider</h1>
-        <p>
-          Leading technology solutions provider helping businesses transform their digital presence with cutting-edge AI, quantum
-          computing, blockchain infrastructure, and innovative development services.
-        </p>
-      </div>
-      {/* Main content */}
-      <div id="main-content">{children}</div>
-    </>
-  );
-}
-export default AccessibilityEnhancer;
-=======
-
-          </div>;
-        </div>;
-      </div>;
-=======
-
 
 export default AccessibilityEnhancer;
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-};
 
-
-      {/* Skip to main content link */}
-      <a
-        href="#main-content"
-        className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50">;
-        Skip to main content;
-      </a>;
-      {/* Screen reader only content */}
-      <div className="sr-only">;
-        <h1>Zion Tech Group - Technology Solutions Provider</h1>;
-        <p>;
-          Leading technology solutions provider helping businesses transform their digital presence with cutting-edge AI, quantum;
-          computing, blockchain infrastructure, and innovative development services.;
-        </p>;
-      </div>;
-      {/* Main content */}
-      <div id="main-content">{children}</div>;
-    </>;
-  );
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-}
-export default AccessibilityEnhancer;
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-export default AccessibilityEnhancer;
-<<<<<<< HEAD
 ;
   const toggleHighContrast = () =>: any {
     const new_value = !isHighContrast;
@@ -510,8 +431,7 @@ export default AccessibilityEnhancer;
 }
 ;
 export default AccessibilityEnhancer;
-<<<<<<< HEAD
-=======
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba

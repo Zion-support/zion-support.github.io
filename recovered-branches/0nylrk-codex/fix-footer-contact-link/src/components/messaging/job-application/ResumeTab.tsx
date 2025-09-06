@@ -1,8 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-import React from 'react',
-import React from "react";
+
 import { ResumeSelector, ResumeOption } from "../resume-selector";
 import { Button } from "@/components/ui/button";
 export interface ResumeTabProps {;
@@ -32,22 +29,18 @@ export function ResumeTab({
   return (
     <div className="space-y-4">
       <ResumeSelector onResumeSelected={handleResumeSelected} />
+
+
       {onApply && (
         <div className="mt-6">
           <Button
             onClick={onApply}
             disabled={!selectedResumeId |isSubmitting}
 
-import React from 'react',
+
 import { ResumeSelector, ResumeOption } from "../resume-selector",
 import { Button } from "@/components/ui/button",
-=======
 
-
-import React from './react';
-import { ResumeSelector, ResumeOption  } from '../resume - selector';
-import { Button  } from '@/components / ui / button';
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export interface ResumeTabProps {
 
   selectedResumeId?: string | null;
@@ -86,86 +79,28 @@ export function ResumeTab(): any ({;
             {isSubmitting ? "Submitting..." : "Submit Application"}
           </Button>
           
-<<<<<<< HEAD
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
           {!selectedResumeId && (
             <p className="text-sm text-muted-foreground mt-2">
               Please select a resume to continue
             </p>
-=======
-    <div className="space-y-4">;
-      <ResumeSelector onResumeSelected={handleResumeSelected} />;
 
-      {onApply && (;
-        <div className="mt-6">;
-          <Button
-            onClick={onApply}
-            disabled={!selectedResumeId || isSubmitting}
-            className="w-full">;
-            {isSubmitting ? "Submitting..." : "Submit Application"}
-          </Button>;
-
-          {!selectedResumeId && (;
-            <p className="text-sm text-muted-foreground mt-2">;
-              Please select a resume to continue;
-            </p>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           )}
         </div>;
       )}
     </div>
     </div>;
-<<<<<<< HEAD
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
   );
-=======
-  on_apply?: () => Promise < void>;
-  is_submitting?: boolean;
-}
-export /**
- * ResumeTab - Function description
- */
-function ResumeTab() {
-  const handleResumeSelected = (resume: ResumeOption) =>: any {
-    // Check condition
-if ( {) {
-  $2
-}
-      onResumeSelected (resume);
-    }
-    // Check condition
-if ( {) {
-  $2
-}
-      onSelectResume (resume.id);
-    }
-  }
-;
-  return (
-    <div className="space - y-4">;
-      <ResumeSelector onResumeSelected={handleResumeSelected} />;
-      {on_apply && (
-        <div className="mt - 6">;
-          <Button;
-            on_click={on_apply}
-            disabled={!selectedResumeId || is_submitting}
-            className="w - full";
-          >;
-            {is_submitting ? "Submitting..." : "Submit Application"}
-          </Button>;
-          {!selectedResumeId && (
-            <p className="text - sm text - muted - foreground mt - 2">;
-              Please select a resume to continue;
-            </p>)}
-        </div>)}
-    </div>);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
 }

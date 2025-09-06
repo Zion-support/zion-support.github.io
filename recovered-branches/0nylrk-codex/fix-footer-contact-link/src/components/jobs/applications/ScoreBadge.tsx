@@ -15,16 +15,14 @@ interface ScoreBadgeProps {
   application: JobApplication
 }
 
-<<<<<<< HEAD
+
 export function ScoreBadge({ application }: ScoreBadgeProps) {
   const score = application.match_score || 0,
   
-=======
-=======
 
 
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
   // Determine color based on score
   let className = "text-gray-700 bg-gray-100",
   if (score >= 80) className = "text-green-700 bg-green-100",
@@ -95,12 +93,6 @@ if (class_name = "text - orange - 700 bg - orange - 100") {
     </span>);
 
 }
-=======
-}
-;
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+

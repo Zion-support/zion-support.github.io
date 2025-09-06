@@ -241,204 +241,19 @@ export default function EquipmentDetail() {;
         setLoading(false)
       }
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
-
-import { useState, useEffect } from "react",
-import { useRouter } from 'next/router',
-import { NextSeo } from '@/components/NextSeo',
-import { Badge } from "@/components/ui/badge",
-import { Button } from "@/components/ui/button",
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
-import { AspectRatio } from "@/components/ui/aspect-ratio",
-import { ShoppingCart, Star, Truck, Shield, RotateCcw, Clock, AlertTriangle, ArrowLeft } from 'lucide-react'
-import { toast } from "@/hooks/use-toast",
-import { useAuth } from "@/hooks/useAuth",
-import { getStripe } from "@/utils/getStripe",
-import { useCart } from '@/context/CartContext',
-import { ImageWithRetry } from '@/components/ui/ImageWithRetry',
-import { equipmentListings } from '@/data/equipmentData',
-import { ProductListing } from '@/types/listings',
-import { motion } from 'framer-motion',
-import { useCurrency } from '@/hooks/useCurrency',
-import {logErrorToProduction} from '@/utils/productionLogger',
-interface EquipmentSpecification {
-  name: string,
-  value: string
-import { useState, useEffect } from "react",;
-import { useRouter } from 'next/router',;
-import { NextSeo } from '@/components/NextSeo',;
-import { Badge } from "@/components/ui/badge",;
-import { Button } from "@/components/ui/button",;
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
-import { AspectRatio } from "@/components/ui/aspect-ratio",;
-import { ShoppingCart, Star, Truck, Shield, RotateCcw, Clock, AlertTriangle, ArrowLeft } from 'lucide-react';
-import { toast } from "@/hooks/use-toast",;
-import { useAuth } from "@/hooks/useAuth",;
-import { getStripe } from "@/utils/getStripe",;
-import { useCart } from '@/context/CartContext',;
-import { ImageWithRetry } from '@/components/ui/ImageWithRetry',;
-import { equipmentListings } from '@/data/equipmentData',;
-import { ProductListing } from '@/types/listings',;
-import { motion } from 'framer-motion',;
-import { useCurrency } from '@/hooks/useCurrency',;
-import {logErrorToProduction} from '@/utils/productionLogger',;
-interface EquipmentSpecification {;
-  name: string,;
-  value: string;
-}
-;
-interface EquipmentDetails {;
-  id: string,;
-  name: string,;
-  description: string,;
-  brand: string,;
-  category: string,;
-  subcategory?: string,;
-  images: string[],;
-  price: number,;
-  currency: string,;
-  rating?: number,;
-  reviewCount?: number,;
-  inStock: boolean,;
-  expectedShipping?: string,;
-  specifications: EquipmentSpecification[],;
-  features: string[],;
-  warranty?: string,;
-  returnPolicy?: string;
-}
-;
-// Convert ProductListing to EquipmentDetails format;
-function convertProductListingToEquipmentDetails(item: ProductListing): EquipmentDetails {;
-  return {;
-    id: item.id,;
-    name: item.title,;
-    description: item.description,;
-    brand: item.brand || 'Unknown',;
-    category: item.category,;
-    subcategory: item.subcategory,;
-    images: item.images || ['https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500'],;
-    price: item.price || 0,;
-    currency: item.currency || '$',;
-    rating: item.rating,;
-    reviewCount: item.reviewCount,;
-    inStock: item.availability === 'In Stock' || !item.availability,;
-    expectedShipping: item.availability || 'In Stock',;
-    specifications: (item.specifications || []).map((spec) => ({;
-      name: spec,;
-      value: '';
-    })),;
-    features: item.tags || [],;
-    warranty: '1 Year Manufacturer Warranty',;
-    returnPolicy: '30-day return policy';
-  }
-}
-;
-// Build sample data from the shared equipment listings;
-export const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } =;
-  equipmentListings.reduce((acc, item) => {;
-    acc[item.id] = convertProductListingToEquipmentDetails(item),;
-    return acc;
-  }, {} as { [key: string]: EquipmentDetails }),;
-export default function EquipmentDetail() {;
-  const router = useRouter(),;
-  const { id } = router.query as { id?: string },;
-  const { isAuthenticated, user } = useAuth(),;
-  const { items, dispatch } = useCart(),;
-  const { formatPrice } = useCurrency(),;
-  const [selectedImageIndex, setSelectedImageIndex] = useState(0),;
-  const [quantity, setQuantity] = useState(1),;
-  const [isAdding, setIsAdding] = useState(false),;
-  const [loading, setLoading] = useState(true),;
-  const [error, setError] = useState<string | null>(null),;
-  const [equipment, setEquipment] = useState<EquipmentDetails | undefined>(),;
-  useEffect(() => {;
-    async function loadEquipment() {;
-      if (!id) {;
-        setLoading(false),;
-        setError('No equipment ID provided'),;
-        return;
-      }
-;
-      try {;
-        setLoading(true),;
-        setError(null),;
-        // Try to find in static data first;
-        const equipmentFromSample = SAMPLE_EQUIPMENT[id],;
-        if (equipmentFromSample) {;
-          setEquipment(equipmentFromSample),;
-          setLoading(false),;
-          return;
-        }
-;
-        // Try to get from sessionStorage (for dynamically generated equipment);
-        if (typeof window !== 'undefined') {;
-          try {;
-            const stored = sessionStorage.getItem(`equipment:${id}`),;
-            if (stored) {;
-              const storedData = JSON.parse(stored),;
-              // Check if it's already in EquipmentDetails format or needs conversion;
-              let equipmentData: EquipmentDetails,;
-              if (storedData.name) {;
-                // Already in EquipmentDetails format;
-                equipmentData = storedData;
-              } else {;
-                // It's a ProductListing, convert it;
-                equipmentData = convertProductListingToEquipmentDetails(storedData as ProductListing);
-              }
-;
-              setEquipment(equipmentData),;
-              setLoading(false),;
-              return;
-            }
-          } catch (storageError) {;
-            logErrorToProduction('Error reading from sessionStorage:', { data: storageError });
-          }
-        }
-;
-        // If not found anywhere, set error;
-        setError('Equipment not found'),;
-        setLoading(false);
-      } catch (error) {;
-        logErrorToProduction('Error loading equipment:', { data: error }),;
-        setError('Failed to load equipment details'),;
-        setLoading(false);
-      }
-    }
-
-    loadEquipment()
-  }, [id]),
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   const handleAddToCart = async () => {
     if (!equipment |!isAuthenticated) {
       toast({
-<<<<<<< HEAD
+
         title: 'Authentication Required'
         description: 'Please log in to add items to cart'
         variant: 'destructive'
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         title: 'Authentication Required',
         description: 'Please log in to add items to cart',
         variant: 'destructive',
@@ -449,77 +264,10 @@ export default function EquipmentDetail() {;
 
 
     setIsAdding(true),
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
-
-    try {
-      dispatch({
-        type: 'ADD_ITEM'
-        payload: {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
-    load_equipment ();
-  }, [id]);
-  const handleAddToCart = async () => {
-    // Check condition
-if ( {) {
-  $2
-}
-      toast ({
-        title: 'Authentication Required',
-        description: 'Please log in to add items to cart',
-        variant: 'destructive',
-      });
-      return;
-    }
-<<<<<<< HEAD
-  }
-  const inCart = items.some(item => item.id === equipment?.id)
           quantity}}),
 
-      toast({
-        title: "Added to Cart",
-        description: `${equipment.name} has been added to your cart.`})
-=======
-    setIsAdding (true);
-    try {
-      dispatch ({
-        type: 'ADD_ITEM',
-        payload: {
-          id: equipment.id,
-          name: equipment.name,
-          price: equipment.price,
-          quantity,
-        },
-      });
-      toast ({
-        title: 'Added to Cart',
-        description: `${equipment.name} has been added to your cart.`,
-      });
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-    } catch (error) {
-      toast ({
-        title: 'Error',
-        description: 'Failed to add item to cart. Please try again.',
-        variant: 'destructive',
-      });
-
-    } finally {
-      setIsAdding(false)
-    }
-
-<<<<<<< HEAD
-          id: equipment.id,
-          name: equipment.name,
-          price: equipment.price,
-          quantity}}),
 
       toast({
         title: "Added to Cart",
@@ -536,41 +284,11 @@ if ( {) {
 
   const inCart = items.some(item => item.id === equipment?.id),
 
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-          id: equipment.id,
-          name: equipment.name,
-          price: equipment.price,
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-          quantity}}),
 
-<<<<<<< HEAD
-      toast({
-        title: "Added to Cart",
-        description: `${equipment.name} has been added to your cart.`})
-    } catch (error) {
-      toast({
-        title: "Error",
-        description: "Failed to add item to cart. Please try again.",
-        variant: "destructive"})
-    } finally {
-      setIsAdding(false)
-    }
-  },
 
-  const inCart = items.some(item => item.id === equipment?.id),
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
   // Loading state
   if (loading) {
     return (
@@ -726,7 +444,7 @@ if ( {) {
               <h1 className="text-3xl font-bold text-white mb-4">
                 {error === 'Equipment not found' ? 'Equipment Not Found' : 'Something went wrong'}
               </h1>
-<<<<<<< HEAD
+
               <p className='text-zion-slate-light mb-8 max-w-md mx-auto'>
                 {error === 'Equipment not found'
                   ? "The equipment you're looking for doesn't exist or has been removed."
@@ -763,11 +481,7 @@ if ( {) {
                   onClick={() => router.push('/equipment')}
                   className="bg-zion-cyan hover: bg-zion-cyan/90 text-zion-blue"
                 >
-=======
 
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   Browse Equipment
                 </Button>
               </div>
@@ -783,26 +497,8 @@ if ( {) {
         title={`${equipment.name} - Zion Marketplace`}
         description = {equipment.description,}
         openGraph={{
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-          title: `${equipment && equipment.name} - Zion Marketplace`,
-          description: equipment && equipment.description,
-          images:
-            equipment && equipment.images.length> 0 && equipment && equipment.images[0];
-              ? [{ url: equipment && equipment.images[0] }];
-              : undefined,;
-=======
-          title: `${equipment.name} - Zion Marketplace`
-          description: equipment.description
-          images:
-            equipment.images.length > 0 && equipment.images[0]
-              ? [{ url: equipment.images[0] }]
-<<<<<<< HEAD
-              : undefined
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
               : undefined,
@@ -918,8 +614,7 @@ if ( {) {
           images: equipment.images.length > 0 && equipment.images[0] ? [{ url: equipment.images[0] }] : undefined;
 <<<<<<< HEAD
 <<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 
         }}
@@ -944,10 +639,9 @@ if ( {) {
               onClick={() => router.push('/equipment')}
               className="text-zion-cyan hover:text-white transition-colors"
             >
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 
               Equipment
@@ -969,10 +663,9 @@ if ( {) {
 
 
           <div className="grid lg:grid-cols-2 gap-12">
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
             {/* Images */}
             <motion.div 
@@ -1022,11 +715,8 @@ if ( {) {
                         src={image}
                         alt={`${equipment.name} view ${index + 1}`}
                         className="object-cover"
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                       />
                     </button>
                   ))}
@@ -1041,10 +731,9 @@ if ( {) {
               className='space-y-6'
             <motion.div 
               className="space-y-6"
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 
               initial={{ opacity: 0, x: 20 }}
@@ -1076,10 +765,9 @@ if ( {) {
               <div className="space-y-2">
                 <div className="flex items-center gap-2 mb-2">
                   <Badge variant="secondary" className="bg-zion-cyan/10 text-zion-cyan border-zion-cyan/20">
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
                     {equipment.category}
                   </Badge>
@@ -1112,10 +800,9 @@ if ( {) {
                             i < Math.floor(equipment.rating!);
                               ? 'text-yellow-400 fill-current';
                               : 'text-zion-slate-light';
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
                           }`}
                         />;
@@ -1132,77 +819,7 @@ if ( {) {
 
 
               {/* Price */}
-<<<<<<< HEAD
-;
 
-;
-                {/* Return Policy */}
-                {equipment.returnPolicy && (
-                  <div className="flex gap-3 text-zion-slate-light">
-                    <RotateCcw className="h-5 w-5 text-zion-cyan flex-shrink-0" />
-                    <div>
-                      <p className="text-white text-sm font-medium">Returns</p>
-                      <p className="text-xs">{equipment.returnPolicy}</p>
-                    </div>
-                  </div>
-                )}
-              </div>
-            </motion.div>
-          </div>
-        </div>
-      </div>
-    </>
-  )
-}finally {
-  setIsAdding (false)
-}
-const inCart = items.some (item => item.id === equipment?.id)
-return (<> <NextSeo title="Loading Equipment..." /> <div className="min-h-screen bg-zion-blue py-12 px-4" > <div className="container mx-auto" > <div className="text-center py-20" > <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-zion-cyan mx-auto mb-4" ></div> <p className="text-zion-slate-light" >Loading equipment details...</p> </div> </div> </div> </> //Error state if (error |!equipment) {'"
-  return (<> <NextSeo title="Equipment Not Found" description="The equipment you're looking for doesn't exist or has been removed." /> <div className="min-h-screen bg-zion-blue py-12 px-4" > <div className="container mx-auto" > <motion.div </p> <div className="space-x-4" > <Button > <ArrowLeft className="h-4 w-4 mr-2" /> Go Back </Button> <Button
-}return (<> <NextSeo title= {
-  `$ {
-  equipment.name
-}- Zion Marketplace`
-}description= {
-  equipment.description
-}openGraph= {
-  {
-  title: `$ {
-  equipment.name
-}- Zion Marketplace`, description: equipment.description, images: equipment.images.length > 0 && equipment.images[0] ? [ {
-  url: equipment.images[0]
-}] : undefined
-}/> key= {
-  index
-}onClick={
-  () => setSelectedImageIndex (index)
-}className= {
-  `aspect-square rounded-md overflow-hidden border-2 transition-all $ {'
-  selectedImageIndex === index ? 'border-zion-cyan' : 'border-transparent hover:border-zion-slate-light'
-}`
-}> <ImageWithRetry /> </button>) )
-}</div>)
-}</motion.div> {
-  /* Product Details */
-}<motion.div <Star key= {
-  i
-}className= {
-  `h-4 w-4 $ {'
-  i < Math.floor (equipment.rating!) ? 'text-yellow-400 fill-current' : 'text-zion-slate-light'
-}`
-}/>) )
-}</div> </span> </div>)
-}</div> </span> </div> </div> </div>) )
-}</div> </div>) "
-}> + </Button> </div> </div> <Button <div> <p className="text-white text-sm font-medium" >Free Shipping</p> <p className="text-xs" >For orders over $100 within the US</p> </div> </div> <div> <p className="text-white text-sm font-medium" >Warranty</p> <p className="text-xs" > {
-  equipment.warranty
-}</p> </div> </div>) "
-}<div> <p className="text-white text-sm font-medium" >Returns</p> <p className="text-xs" > {
-  equipment.returnPolicy
-}</p> </div> </div>)
-}</div> </motion.div> </div> </div> </div> </>)
-}'"}
-=======
               <div className='bg-zion-blue-light rounded-lg p-4'>;
                 <div className='text-3xl font-bold text-zion-cyan mb-2'>;
                   {formatPrice(equipment && equipment.price)}
@@ -1613,16 +1230,15 @@ if ( {) {
                 )}
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
   equipment.returnPolicy 
 }</p> </div> </div>) 
 }</div> </motion.div> </div> </div> </div> </>) 
 }'"};
 ;
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 
               </div>;

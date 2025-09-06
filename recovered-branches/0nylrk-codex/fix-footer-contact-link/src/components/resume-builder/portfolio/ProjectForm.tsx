@@ -1,26 +1,6 @@
 
-<<<<<<< HEAD
-import { useState  } from 'react';
-import { useForm  } from 'react-hook-form';
-import { zodResolver  } from '@hookform/resolvers/zod';
-import { z  } from 'zod';
-import { Button  } from '@/components/ui/button';
-import { Input  } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
-import { Form;
-  FormControl;
-  FormField;
-  FormItem;
-  FormLabel;
-  FormMessage } from '@/components/ui/form';
-import { Loader2, Link, FileImage, Github, Edit  } from 'lucide-react';
-import { PortfolioProject  } from '@/types/resume';
-import { usePortfolio  } from '@/hooks/usePortfolio';
-import { useAuth } from '@/hooks/useAuth';
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import {useState} from 'react';
 import {useForm} from 'react-hook-form';
 import {zodResolver} from '@hookform/resolvers/zod';
@@ -33,11 +13,9 @@ import {Loader2, Link, FileImage, Github, Edit} from 'lucide-react';
 import {PortfolioProject} from '@/types/resume';
 import {usePortfolio} from '@/hooks/usePortfolio';
 import {useAuth} from '@/hooks/useAuth';
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 // Define schema for form validation
 
 const projectSchema = z.object({
@@ -47,45 +25,17 @@ const projectSchema = z.object({
   image_url: z.string().optional()
   github_url: z
     .union([z.string().url('Please enter a valid URL'), z.literal('')])
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-import {useState} from 'react';
-import {use_form} from 'react - hook - form';
-import {zod_resolver} from '@hookform / resolvers / zod';
-import {z} from 'zod';
-import {Button} from '@/components / ui / button';
-import {Input} from '@/components / ui / input';
-import {Textarea} from '@/components / ui / textarea';
-import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from '@/components / ui / form';
-import {Loader2, Link, FileImage, Github, Edit} from 'lucide-react';
 
-  pdf_url: z && z.string().optional()}),;
 
-type ProjectFormValues = z && z.infer<typeof projectSchema>;
-
-interface ProjectFormProps {;
-  project?: PortfolioProject;
-  onSuccess: () => void,;
-  onCancel: () => void;
 }
-<<<<<<< HEAD
+
 export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) {
 
 
 export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) {;
-=======
-
-export function ProjectForm(): any ({ project, onSuccess, onCancel }: ProjectFormProps) {;
-
-=======
 
 
-export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) {;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
   const { user } = useAuth();
   const { addProject, updateProject } = usePortfolio();
   const [isLoading, setIsLoading] = useState(false);
@@ -210,42 +160,20 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
 
         onSuccess();
         form && form.reset();
-=======
-;
-      if (success) {;
-        onSuccess();
-        form.reset();
-<<<<<<< HEAD
-=======
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
       }
     } catch (error) {;
       console && console.error('Error saving project:', error);
     } finally {;
       setIsLoading(false);
     }
-<<<<<<< HEAD
-  }
 
-  },
-=======
+
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-  };
-  },
-<<<<<<< HEAD
-=======
-=======
-  };
-=======
-  },
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   
   return (
     <Form {...form}>;

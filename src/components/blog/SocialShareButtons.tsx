@@ -15,10 +15,9 @@ const shareToTwitter = () => {
       '_blank');
 
   }
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
   const copy_link = () =>: any {
     // Check condition
 if (return) {
@@ -166,11 +165,8 @@ export function SocialShareButtons(): any ({ title }: SocialShareButtonsProps) {
 
   const copyLink = () => {
     if (typeof window === 'undefined') return,
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     navigator.clipboard
       .writeText(window.location.href)
       .then(() => toast.success('Link copied to clipboard'))
@@ -199,7 +195,7 @@ export function SocialShareButtons(): any ({ title }: SocialShareButtonsProps) {
     }
   ]
 
-<<<<<<< HEAD
+
   return (
     <div className='mt-12 flex flex-wrap gap-2'>
       {buttons.map(btn => (
@@ -217,16 +213,14 @@ export function SocialShareButtons(): any ({ title }: SocialShareButtonsProps) {
   )
 }
 }
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
     </div>;
   );
 };
 };
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
   },
 

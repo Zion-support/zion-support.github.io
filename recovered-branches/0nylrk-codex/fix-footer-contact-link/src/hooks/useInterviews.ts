@@ -1,17 +1,6 @@
 
-<<<<<<< HEAD
-import { useState  } from 'react';
-import { useAuth } from "@/hooks/useAuth";
-import { supabase  } from '@/integrations/supabase/client';
-import { Interview, InterviewRequest, InterviewResponse  } from '@/types/interview';
-import { toast  } from '@/components/ui/use-toast';
-export function useInterviews() {
-  const [interviews, setInterviews] = useState<Interview[]>([]);
-  const [isLoading, setIsLoading] = useState(false);
-  const [error, setError] = useState<string | null>(null),
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 import {useState} from 'react';
 import {useAuth} from "@/hooks/useAuth";
 import {supabase} from '@/integrations/supabase/client';
@@ -21,7 +10,8 @@ export function useInterviews() {;
   const [interviews, setInterviews] = useState<Interview[]>([]);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
-<<<<<<< HEAD
+
+
   const { user } = useAuth();
 import { useState } from 'react',
 import { useAuth } from "@/hooks/useAuth",
@@ -33,8 +23,7 @@ export function useInterviews() {
   const [isLoading, setIsLoading] = useState(false),
   const [error, setError] = useState<string | null>(null),
   const { user } = useAuth(),
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
   // Request an interview as a client
 
@@ -107,7 +96,7 @@ export function useInterviews() {
       return null
     } finally {
       setIsLoading(false)
-<<<<<<< HEAD
+
     }
   }
   // Fetch interviews for the current user (as client or talent)
@@ -116,13 +105,8 @@ export function useInterviews() {
       setInterviews([]);
       return []
     }
-    setIsLoading(true);
-    setError(null);
-=======
 
 
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { useState } from 'react',;
 import { useAuth } from "@/hooks/useAuth",;
 import { supabase } from '@/integrations/supabase/client',;
@@ -154,14 +138,9 @@ if ( {) {
       set_interviews ([]);
       return [];
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
 
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
     setIsLoading(true),
     setError(null),
@@ -300,35 +279,14 @@ if ( {) {
         .from('interviews')
         .select('*')
         .eq('id', interviewId)
-<<<<<<< HEAD
+
         .single();
       if (fetchError) {
+
         console.error("Error fetching interview:", fetchError);
         setError(fetchError.message);
         return false
-=======
 
-    setIsLoading (true);
-    set_error (null);
-;
-    try {
-      // Update the interview status;
-      const { error: update_error } = await supabase;
-        .from ('interviews');
-        .update ({
-          status: response.status,
-          updated_at: new Date ().toISOString ();
-        });
-        .eq ('id', interview_id);
-;
-      // Check condition
-if ( {) {
-  $2
-}
-        console.error ("Error responding to interview:", update_error);
-        set_error (update_error.message);
-        return false;
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       }
       // Get the interview to notify the client;
       const { data: interview, error: fetch_error } = await supabase;
@@ -362,10 +320,13 @@ if ( {) {
         title = 'Interview Rescheduled';
         message = `Your interview has been rescheduled to ${response.alternative_date |'a new time'}`
       }
-<<<<<<< HEAD
+
+
+
         .single(),
 
       if (fetchError) {
+
         console.error("Error fetching interview:", fetchError),
         setError(fetchError.message),
         return false
@@ -476,9 +437,6 @@ if ( {) {
         message = `Your interview has been rescheduled to ${response.alternative_date || 'a new time'}`;
       }
 
-=======
-=======
-
 
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -564,7 +522,7 @@ if ( {) {
   ) => {
     try {
       await supabase.from('notifications').insert({
-<<<<<<< HEAD
+
         user_id: userId;
         type;
         title;
@@ -572,6 +530,7 @@ if ( {) {
         related_id: relatedId})
     } catch (error) {
       console.error("Error creating notification:", error)
+
     }
   }
   // Cancel an interview (either client or talent can cancel)
@@ -589,6 +548,8 @@ if ( {) {
       if (fetchError) {
         setError(fetchError.message);
         return false
+
+
       }
         user_id: userId,
         type,
@@ -597,6 +558,8 @@ if ( {) {
         related_id: relatedId})
     } catch (error) {
       console.error("Error creating notification:", error)
+
+
 ;
       await createInterviewNotification(;
         interview.client_id,;
@@ -650,17 +613,17 @@ if ( {) {
       if (fetchError) {;
         setError(fetchError.message),;
         return false;
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
       }
 
       // Check if user is part of this interview
       if (interview && interview.client_id !== user && user.id && interview && interview.talent_id !== user && user.id) {
         setError("You don't have permission to cancel this interview");
         return false
-<<<<<<< HEAD
+
       }
       // Update the interview status
       const { error: updateError } = await supabase
@@ -674,24 +637,8 @@ if ( {) {
         setError(updateError.message);
         return false
       }
-      // Determine who to notify
-      const notifyUserId = interview.client_id === user.id
-        ? interview.talent_id
-        : interview.client_id;
-
-=======
-
-      const notifyUserId = interview && interview.client_id === user && user.id
-        ? interview && interview.talent_id
-        : interview && interview.client_id;
 
 
-=======
-
-
-
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 ;
       // Check if user is part of this interview;
       if (interview.client_id !== user.id && interview.talent_id !== user.id) {;
@@ -712,12 +659,11 @@ if ( {) {
         return false;
       }
 
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
       // Determine who to notify
       const notifyUserId = interview.client_id === user.id
         ? interview.talent_id
@@ -828,18 +774,8 @@ if ( {) {
     error;
     request_interview;
     fetch_interviews;
-=======
-  },;
-  return {;
-    interviews,;
-    isLoading,;
-    error,;
-    requestInterview,;
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
     fetchInterviews;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     respondToInterview;

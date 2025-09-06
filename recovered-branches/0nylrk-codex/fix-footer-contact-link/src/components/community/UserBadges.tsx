@@ -1,16 +1,13 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-import {Trophy, Award, BadgeCheck, Star, MessageSquare} from "lucide-react";
-import {Badge} from "@/types/community";
-import {Tooltip, TooltipContent, TooltipProvider, TooltipTrigger} from "@/components/ui/tooltip";
+
+
 import { Trophy, Award, BadgeCheck, Star, MessageSquare } from "lucide-react",
 import { Badge } from "@/types/community";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import { Badge } from "@/types/community",
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip",
 
-=======
+
 import {Trophy, Award, BadgeCheck, Star, MessageSquare} from "lucide-react";
 import {Badge} from "@/types/community";
 import {Tooltip, TooltipContent, TooltipProvider, TooltipTrigger} from "@/components/ui/tooltip";
@@ -18,17 +15,14 @@ import {Tooltip, TooltipContent, TooltipProvider, TooltipTrigger} from "@/compon
 interface UserBadgesProps {;
   badges: Badge[];
 
+
+interface UserBadgesProps {
+  badges: Badge[]
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 }
 
 const iconMap = {;
-=======
-import { Trophy, Award, BadgeCheck, Star, MessageSquare } from './lucide-react';
-import { Badge } from '@/types / community';
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components / ui / tooltip';
-=======
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface UserBadgesProps {
@@ -147,10 +141,9 @@ export const UserBadges = ({ badges }: UserBadgesProps) => {;
     </div>;
   );
 };
-<<<<<<< HEAD
-=======
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 export default UserBadges;

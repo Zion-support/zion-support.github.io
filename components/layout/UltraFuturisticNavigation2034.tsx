@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 
 import {
-<<<<<<< HEAD
+
   Menu
   X
   ChevronDown
@@ -112,40 +112,7 @@ import {
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield
   Microscope, DollarSign, Home, Users, Briefcase
 
-=======
 
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-import React, { useState, useEffect } from 'react';
-import Link from 'next / link';
-import { motion, AnimatePresence } from 'framer-motion';
-
-=======
-import {
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   Menu,
   X,
@@ -248,14 +215,7 @@ import {
   Twitter,
   Facebook,
   Instagram,
-<<<<<<< HEAD
 
-  Youtube,;
-  Github,;} from 'lucide-react';import {
-  Menu, X, ChevronDown, Search, Phone, Mail, MapPin, 
-  Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, 
-  Microscope, DollarSign, Home, Users, Briefcase, ;
-=======
 
   Youtube,;
   Github,;} from 'lucide-react';import {
@@ -263,8 +223,7 @@ import {
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, 
   Microscope, DollarSign, Home, Users, Briefcase, ;
 
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
   BookOpen, MessageCircle, Star, TrendingUp, Target;
   Layers, Cpu, Database, Cloud, Lock, ShieldCheck;
   Earth, Factory, Car, Building, GraduationCap, Scale;
@@ -276,10 +235,7 @@ import {
   Laptop, Watch, Headphones, Speaker, Mic, ;
   Keyboard, Mouse, CpuIcon, DatabaseIcon, ;
 
-=======
-  Laptop, Watch, Headphones, Speaker, Mic,
-  Keyboard, Mouse, CpuIcon, DatabaseIcon,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
   CloudIcon, LockIcon, ShieldIcon, GlobeIcon;
   ZapIcon, SparklesIcon, BrainIcon, AtomIcon;
   HeartIcon, RocketIcon, ShieldIcon as ShieldIcon2;
@@ -520,13 +476,7 @@ import {
       { name: 'AI Climate Modeling', href: '/ai - climate - modeling - platform', description: 'Predict climate change with AI', price: '$1, 299 / month' }
     ];
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-];
-
-];
-=======
 
     title: '🏙️ Enterprise IT Solutions',
     icon: CpuIcon,
@@ -647,7 +597,8 @@ import {
     color: 'from - orange - 600 via - red - 600 to - pink - 600',
     description: 'Breakthrough research solutions',
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 const quickLinks = [
   { name: 'Home', href: '/', icon: Home }
@@ -658,43 +609,7 @@ const quickLinks = [
   { name: 'Case Studies', href: '/case-studies', icon: FileText }
   { name: 'Blog', href: '/blog', icon: MessageCircle }
   { name: 'Contact', href: '/contact', icon: MessageCircle },];  { name: 'Contact', href: '/contact', icon: MessageCircle }
-=======
-];
-const quickLinks = [
-    services: [;
-      {
-        name: 'Quantum DNA Computing',
-        href: '/quantum - dna - computing - platform',
-        description: 'DNA - based quantum computation',
-        price: '$35, 999 / month',
-      },
-      {
-        name: 'Space Mining Automation',
-        href: '/space - mining - automation - platform',
-        description: 'Automated asteroid mining',
-        price: '$45, 999 / month',
-      },
-      {
-        name: 'Metaverse AI Development',
-        href: '/metaverse - ai - development - platform',
-        description: 'Build immersive virtual worlds',
-        price: '$2, 999 / month',
-      },
-      {
-        name: 'Holographic Event Platform',
-        href: '/holographic - event - platform',
-        description: 'Immersive holographic experiences',
-        price: '$2, 999 / month',
-      },
-    ],
-  }, ];      { name: 'Quantum DNA Computing', href: '/quantum - dna - computing - platform', description: 'DNA - based quantum computation', price: '$35, 999 / month' }
-      { name: 'Space Mining Automation', href: '/space - mining - automation - platform', description: 'Automated asteroid mining', price: '$45, 999 / month' }
-      { name: 'Metaverse AI Development', href: '/metaverse - ai - development - platform', description: 'Build immersive virtual worlds', price: '$2, 999 / month' }
-      { name: 'Holographic Event Platform', href: '/holographic - event - platform', description: 'Immersive holographic experiences', price: '$2, 999 / month' }
-    ];
-  }
-const quick_links = [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
   { name: 'Home', href: '/', icon: Home },
   { name: 'Services', href: '/services', icon: Briefcase },
   { name: 'Solutions', href: '/solutions', icon: Target },
@@ -703,21 +618,10 @@ const quick_links = [;
   { name: 'Case Studies', href: '/case - studies', icon: FileText },
   { name: 'Blog', href: '/blog', icon: MessageCircle },
 
-=======
-  { name: 'Contact', href: '/contact', icon: MessageCircle }, ];  { name: 'Contact', href: '/contact', icon: MessageCircle }
-];
-;
-const company_links = [;
 
-  { name: 'About Us', href: '/about', icon: Users },
-  { name: 'Careers', href: '/careers', icon: Briefcase },
-  { name: 'News', href: '/news', icon: FileText },
-  { name: 'Partners', href: '/partners', icon: Handshake },
-  { name: 'Support', href: '/support', icon: LifeBuoy },
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   { name: 'Status', href: '/status', icon: Activity }
 ];
-<<<<<<< HEAD
+
 const socialLinks = [
   {
     name: 'LinkedIn'
@@ -756,17 +660,9 @@ const socialLinks = [
 const certifications = [
   'ISO 27001 CertifiedSOC 2 Type II CompliantGDPR CompliantHIPAA CompliantPCI DSS Level 1FedRAMP AuthorizedQuantum Security CertifiedAI Ethics Compliant'
 ];
-export default function UltraFuturisticNavigation2034() {
-
-export default function UltraFuturisticNavigation2034() {;
-=======
 
 
-
-export default function UltraFuturisticNavigation2034() {;
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
   const [isOpen, setIsOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -878,17 +774,14 @@ export default function UltraFuturisticNavigation2034() {;
               <Phone className='w-4 h-4 text-cyan-400' />
               <span className='hover:text-cyan-400 transition-colors'>
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
+
                 {contactInfo.mobile}
               </span>
             </div>
@@ -904,27 +797,7 @@ export default function UltraFuturisticNavigation2034() {;
               </span>
             </div>
           </div>                {contactInfo.mobile}
-=======
-      <div className="bg-gradient-to-r from-cyan-900 via-blue-900 to-purple-900 text-white py-2 px-4 text-sm">
-        <div className="max-w-7xl mx-auto flex flex-wrap items-center justify-between">
-          <div className="flex items-center space-x-6">
-            <div className="flex items-center space-x-2">
-              <Phone className="w-4 h-4 text-cyan-400" />
-              <span className="hover:text-cyan-400 transition-colors">
-=======
-      <div className='bg-gradient-to-r from-cyan-900 via-blue-900 to-purple-900 text-white py-2 px-4 text-sm'>
-        <div className='max-w-7xl mx-auto flex flex-wrap items-center justify-between'>
-          <div className='flex items-center space-x-6'>
-            <div className='flex items-center space-x-2'>
-              <Phone className='w-4 h-4 text-cyan-400' />
-              <span className='hover:text-cyan-400 transition-colors'>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 {contactInfo.mobile}
@@ -959,10 +832,8 @@ export default function UltraFuturisticNavigation2034() {;
           </div>
         </div>
       </div>
-<<<<<<< HEAD
-=======
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
+
       <div className='bg-gradient-to-r from-cyan-900 via-blue-900 to-purple-900 text-white py-2 px-4 text-sm'>;
         <div className='max-w-7xl mx-auto flex flex-wrap items-center justify-between'>;
           <div className='flex items-center space-x-6'>;
@@ -1041,14 +912,13 @@ export default function UltraFuturisticNavigation2034() {;
               transition={{ duration: 0.5 }}
               className='flex items-center space-x-3'
 
-<<<<<<< HEAD
-=======
 
 
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
             >
               <div className='relative'>
                 <div className='w-12 h-12 bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500 rounded-xl flex items-center justify-center'>
@@ -1125,29 +995,21 @@ export default function UltraFuturisticNavigation2034() {;
                   key={link.name}
                   href={link.href}
                   className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 font-medium"
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
+
                   {link.name}
                 </Link>
               ))}
-=======
-=======
 
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 >
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   {link.name}
                 </Link>
               ))}
-<<<<<<< HEAD
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-              
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
+
               {/* Services Dropdown */}
               <div className="relative group">
                 <button className="flex items-center space-x-1 text-gray-300 hover:text-cyan-400 transition-colors duration-200 font-medium">
@@ -1396,18 +1258,10 @@ function UltraFuturisticNavigation2034() {
                             <Link;
                               key={service.name}
                               href={service.href}
-<<<<<<< HEAD
-                              className="block text-xs text-gray-300 hover:text-cyan-400 transition-colors"
 
 
-<<<<<<< HEAD
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
+
                               className='block text - xs text - gray - 300 hover:text - cyan - 400 transition - colors'                            >              {/* Services Dropdown */}
               <div className="relative group">;
                 <button className="flex items - center space - x-1 text - gray - 300 hover:text - cyan - 400 transition - colors duration - 200 font - medium">;
@@ -1434,7 +1288,8 @@ function UltraFuturisticNavigation2034() {
                               {service.name}
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
                             >
                               {service.name}
                             </Link>
@@ -1450,11 +1305,7 @@ function UltraFuturisticNavigation2034() {
                       className='flex items-center justify-center w-full px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200'>;
                       View All Services;
                       <ArrowRight className='w-4 h-4 ml-2' />                    </Link>                    <Link
-=======
-                  </div>
-                  <div className="mt-4 pt-4 border-t border-cyan-500/20">
-                    <Link
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
                       href="/services"
 
                 href="/contact"
@@ -1530,22 +1381,14 @@ function UltraFuturisticNavigation2034() {
           </div>
         </div>
 
-<<<<<<< HEAD
-=======
-
-              </button>;
-            </div>;
-          </div>;
-        </div>;
-
-
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
         {/* Mobile Menu */}
         <AnimatePresence>;
           {isOpen && (;
@@ -1553,7 +1396,7 @@ function UltraFuturisticNavigation2034() {
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
-<<<<<<< HEAD
+
               transition={{ duration: 0.3 }}
               className='lg:hidden bg-black/95 backdrop-blur-xl border-t border-cyan-500/20'
             >
@@ -1579,101 +1422,11 @@ function UltraFuturisticNavigation2034() {
                   </Link>
                 ))}
 
-                {/* Mobile Services Accordion */}
-                {serviceCategories.map(category => (
-                  <div
-                    key={category.title}
-                    className='border-b border-cyan-500/20 pb-4'
-                  >
-                    <button
-                      onClick={() => toggleDropdown(category.title)}
-                      className='flex items-center justify-between w-full text-left text-gray-300 hover:text-cyan-400 transition-colors duration-200 font-medium'
-                    >
-                      <span>{category.title}</span>
-                      <ChevronDown
-                        className={`w-4 h-4 transition-transform duration-200 ${
-                          activeDropdown === category.title ? 'rotate-180' : ''
-                        }`}
-                      />                    </button>                {/* Mobile Services Accordion */}
-                {serviceCategories.map((category) => (
-                  <div key={category.title} className="border-b border-cyan-500/20 pb-4">
-                    <button
-                      onClick={() => toggleDropdown(category.title)}
-                      className="flex items-center justify-between w-full text-left text-gray-300 hover:text-cyan-400 transition-colors duration-200 font-medium"
-                    >
-                      <span>{category.title}</span>
-                      <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${
-                        activeDropdown === category.title ? 'rotate-180' : ''
-                      }`} />
-
-=======
-              transition={{ duration: 0.3 }}
-              className='lg:hidden bg-black/95 backdrop-blur-xl border-t border-cyan-500/20'
-            >
-              <div className='px-4 py-6 space-y-4'>
-                {quickLinks.map(link => (                  <Link
-                    key={link.name}
-                    href={link.href}
-                    onClick={() => setIsOpen(false)}
-                    className='block text-gray-300 hover:text-cyan-400 transition-colors duration-200 font-medium'                  >
-                    {link.name}
-                  </Link>
-                ))}
-              className="lg:hidden bg-black/95 backdrop-blur-xl border-t border-cyan-500/20"
-            >
-              <div className="px-4 py-6 space-y-4">
-                {quickLinks.map((link) => (
-                    key={link.name}
-                    href={link.href}
-                    onClick={() => setIsOpen(false)}
-                    className='block text-gray-300 hover:text-cyan-400 transition-colors duration-200 font-medium'                    className="block text-gray-300 hover:text-cyan-400 transition-colors duration-200 font-medium"
-                  >
-                    {link.name}
-                  </Link>
-                ))}
-<<<<<<< HEAD
-=======
-
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
-                {/* Mobile Services Accordion */}
-                {serviceCategories.map(category => (
-                  <div
-                    key={category.title}
-                    className='border-b border-cyan-500/20 pb-4'
-                  >
-                    <button
-                      onClick={() => toggleDropdown(category.title)}
-                      className='flex items-center justify-between w-full text-left text-gray-300 hover:text-cyan-400 transition-colors duration-200 font-medium'
-                    >
-                      <span>{category.title}</span>
-                      <ChevronDown
-                        className={`w-4 h-4 transition-transform duration-200 ${
-                          activeDropdown === category.title ? 'rotate-180' : ''
-                        }`}
-                      />                    </button>                {/* Mobile Services Accordion */}
-                {serviceCategories.map((category) => (
-                  <div key={category.title} className="border-b border-cyan-500/20 pb-4">
-                    <button
-                      onClick={() => toggleDropdown(category.title)}
-                      className="flex items-center justify-between w-full text-left text-gray-300 hover:text-cyan-400 transition-colors duration-200 font-medium"
-                    >
-                      <span>{category.title}</span>
-                      <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${
-                        activeDropdown === category.title ? 'rotate-180' : ''
-                      }`} />
-=======
-<<<<<<< HEAD
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                     </button>
                     <AnimatePresence>
                       {activeDropdown === category.title && (
@@ -1772,75 +1525,7 @@ function UltraFuturisticNavigation2034() {
                   href="/contact"
                   onClick={() => setIsOpen(false)}
                   className="block w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 font-medium text-center";
-=======
-                          className='mt - 3 ml - 4 space - y-2';
-                        >;
-                          {category.services.map (service => (                            <Link;
-                              key={service.name}
-                              href={service.href}
-                              on_click={() => setIsOpen (false)}
-                              className='block text - sm text - gray - 400 hover:text - cyan - 400 transition - colors'                            >                          className="mt - 3 ml - 4 space - y-2";
-                        >;
-                          {category.services.map ((service) => (
-                            <Link;
-                              key={service.name}
-                              href={service.href}
-                              on_click={() => setIsOpen (false)}
-                              className='block text - sm text - gray - 400 hover:text - cyan - 400 transition - colors'                              className="block text - sm text - gray - 400 hover:text - cyan - 400 transition - colors";
-                            >;
-                              {service.name}
-                            </Link>))}
-                        </motion.div>)}
-                    </AnimatePresence>;
-                  </div>))}
-                <Link;
-                  href='/contact';
-                  on_click={() => setIsOpen (false)}
-                  className='block w - full px - 6 py - 3 bg - gradient - to - r from - cyan - 500 to - blue - 500 text - white rounded - lg hover:from - cyan - 600 hover:to - blue - 600 transition - all duration - 200 font - medium text - center'                >                <Link;
-                  href="/contact";
-                  on_click={() => setIsOpen (false)}
-                  className="block w - full px - 6 py - 3 bg - gradient - to - r from - cyan - 500 to - blue - 500 text - white rounded - lg hover:from - cyan - 600 hover:to - blue - 600 transition - all duration - 200 font - medium text - center";
-                >;
-                  Get Started;
-                </Link>;
-              </div>;
 
-=======
-                
-                <Link
-=======
-                          className='mt-3 ml-4 space-y-2'
-                        >
-                          {category.services.map(service => (                            <Link
-                              key={service.name}
-                              href={service.href}
-                              onClick={() => setIsOpen(false)}
-                              className='block text-sm text-gray-400 hover:text-cyan-400 transition-colors'                            >                          className="mt-3 ml-4 space-y-2"
-                        >
-                          {category.services.map((service) => (
-                            <Link
-                              key={service.name}
-                              href={service.href}
-                              onClick={() => setIsOpen(false)}
-                              className='block text-sm text-gray-400 hover:text-cyan-400 transition-colors'                              className="block text-sm text-gray-400 hover:text-cyan-400 transition-colors"
-                            >
-                              {service.name}
-                            </Link>
-                          ))}
-                        </motion.div>
-                      )}
-                    </AnimatePresence>
-                  </div>
-                ))}
-<<<<<<< HEAD
-=======
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-                <Link
-                  href='/contact'
-                  onClick={() => setIsOpen(false)}
-                  className='block w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 font-medium text-center'                >                <Link
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   href="/contact"
                   onClick={() => setIsOpen(false)}
                   className="block w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 font-medium text-center"
@@ -1859,9 +1544,7 @@ function UltraFuturisticNavigation2034() {
     </>
         </AnimatePresence>;
       </nav>;
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
       {/* Spacer for fixed navigation */}
       <div className='h-20'></div>;
@@ -1872,23 +1555,12 @@ function UltraFuturisticNavigation2034() {
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   );
-<<<<<<< HEAD
-=======
+
 
 }
 
-=======
-            </motion.div>)}
-        </AnimatePresence>;
-      </nav>;
-      {/* Spacer for fixed navigation */}
-      <div className='h - 20'></div>;
-    </>);      <div className="h - 20"></div>;
-    </>);
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+

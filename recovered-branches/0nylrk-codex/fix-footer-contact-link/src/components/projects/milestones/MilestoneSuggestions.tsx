@@ -1,5 +1,5 @@
 
-<<<<<<< HEAD
+
 import React, { useState } from 'react';
 import { Button  } from '@/components/ui/button';
 import { GeneratedMilestone, MilestoneInput, useMilestoneGenerator  } from '@/hooks/useMilestoneGenerator';
@@ -8,29 +8,8 @@ import { Loader2, Sparkles, Check  } from 'lucide-react';
 import { Badge  } from '@/components/ui/badge';
 import { format, parseISO } from 'date-fns';
 interface MilestoneSuggestionsProps {
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-  projectName: string,
-  scopeSummary: string,
-  startDate: Date,
-  endDate?: Date;
-  projectType: string,
-  onMilestonesGenerated?: (milestones: GeneratedMilestone[]) => void
-}
-
-export function MilestoneSuggestions({;
-  projectName;
-  scopeSummary;
-  startDate;
-  endDate;
-  projectType;
-<<<<<<< HEAD
-=======
-
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React, { useState } from 'react',;
 import { Button } from '@/components/ui/button',;
 import { GeneratedMilestone, MilestoneInput, useMilestoneGenerator } from '@/hooks/useMilestoneGenerator',;
@@ -86,7 +65,7 @@ export function MilestoneSuggestions({
       setShowSuggestions(true),
       if (onMilestonesGenerated) {
         onMilestonesGenerated(milestones)
-<<<<<<< HEAD
+
       }
     }
   }
@@ -96,14 +75,8 @@ export function MilestoneSuggestions({
     } catch (error) {
       return dateString
     }
-  }
-  };
-=======
 
-  };
 
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 ;
 export function MilestoneSuggestions({;
   projectName,;
@@ -196,14 +169,11 @@ if ( {) {
     }
 
   },
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
   return (
     <div className="space-y-4">;

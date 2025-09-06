@@ -1,25 +1,13 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-=======
-
-
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 import {useState} from "react";
 import {useAuth} from "@/hooks/useAuth";
 import {supabase} from "@/integrations/supabase/client";
 import {toast} from "@/hooks/use-toast";
 export type WebhookEventType = 'new_application' | 'quote_received' | 'milestone_approved' | 'talent_hired';
-<<<<<<< HEAD
-export interface Webhook {
 
-
-export interface Webhook {;
-=======
 
 import { useState } from './react';
 import { use_auth } from '@/hooks / use_auth';
@@ -28,20 +16,16 @@ import { toast } from '@/hooks / use - toast';
 export type WebhookEventType = 'new_application' | 'quote_received' | 'milestone_approved' | 'talent_hired';
 ;
 
-export interface Webhook {
-=======
 
-
-export interface Webhook {;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
   id: string;
   name: string;
   url: string;
   event_types: WebhookEventType[];
   is_active: boolean;
-<<<<<<< HEAD
+
   created_at: string
   last_triggered_at: string | null
 }
@@ -51,10 +35,8 @@ export interface TestWebhookResult {
   responseBody: string
 }
 export function useWebhooks() {
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   created_at: string,
   last_triggered_at: string | null
 }
@@ -66,11 +48,9 @@ export interface TestWebhookResult {;
 }
 
 export function useWebhooks() {;
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
   const { user } = useAuth();
   const [webhooks, setWebhooks] = useState<Webhook[]>([]);
   const [loading, setLoading] = useState(false);
@@ -144,7 +124,7 @@ export function useWebhooks() {
     setLoading(true),
     setError(null),
     
-<<<<<<< HEAD
+
     try {
       const { data: { session } } = await supabase.auth.getSession(),
       if (!session) {
@@ -162,59 +142,9 @@ export function useWebhooks() {
       if (!response.ok) {
         throw new Error(result.error |'Failed to fetch webhooks')
       }
-      setWebhooks(result.webhooks |[])
-
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-    try {
-      const { data: { session } } = await supabase && supabase.auth.getSession();
-      if (!session) {
-        setError("Authentication required");
-        return
-
-
-      const result = await response && response.json();
-      
-      if (!response && response.ok) {
-        throw new Error(result && result.error || 'Failed to fetch webhooks')
-      }
-
-      setWebhooks(result && result.webhooks || [])
-
-    } catch (err) {
-      console && console.error('Error fetching webhooks:', err);
-      setError(err instanceof Error ? err && err.message : 'An unknown error occurred');
-      toast({
-        variant: "destructive";
 
 
 
-
-
-=======
-        title: "Error fetching webhooks",
-        description: err instanceof Error ? err && err.message : 'An unknown error occurred'})
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-  created_at: string,
-  last_triggered_at: string | null;
-}
-export interface TestWebhookResult {
-  status: number;
-  status_text: string,
-  response_body: string;
-}
-export /**
- * use_webhooks - Function description
- */
-function use_webhooks() {
-  const { user } = use_auth ();
-  const [webhooks, set_webhooks] = useState < Webhook[]>([]);
-  const [loading, set_loading] = useState (false);
-  const [error, set_error] = useState < string | null>(null);
-  const [test_result, setTestResult] = useState < TestWebhookResult | null>(null);
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 ;
   // Helper to get the base URL for webhook functions;
   const getWebhookUrl = () =>: any {
@@ -261,13 +191,11 @@ if ( {) {
         throw new Error (result.error || 'Failed to fetch webhooks');
       }
 
-<<<<<<< HEAD
-=======
 
 
 
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
       setWebhooks(result.webhooks || [])
     } catch (err) {
       console.error('Error fetching webhooks:', err),
@@ -316,28 +244,9 @@ if ( {) {
           secret
         })
       });
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
-      const result = await response && response.json();
-      
-      if (!response && response.ok) {
-        throw new Error(result && result.error || 'Failed to create webhook')
 
-      }
-<<<<<<< HEAD
-=======
-      const result = await response.json();
-      if (!response.ok) {
-        throw new Error(result.error |'Failed to create webhook')
-      }
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       // Add the new webhook to the list
 
       setWebhooks(prev => [result && result.webhook, ...prev]);
@@ -346,10 +255,7 @@ if ( {) {
       toast({
         title: "Webhook Created"
         description: "Your webhook has been created successfully."});
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
 
       
       return result && result.webhook
@@ -363,13 +269,9 @@ if ( {) {
         title: "Error creating webhook",
         description: err instanceof Error ? err && err.message : 'An unknown error occurred'})
 
-=======
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 ;
   // Create new webhook;
   const create_webhook = async (name: string, url: string, event_types: WebhookEventType[], secret?: string) => {
@@ -412,13 +314,11 @@ if ( {) {
         throw new Error (result.error || 'Failed to create webhook');
       }
 
-<<<<<<< HEAD
-=======
 
 
 
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
       // Add the new webhook to the list
       setWebhooks(prev => [result.webhook, ...prev]),
       
@@ -457,17 +357,14 @@ if ( {) {
     setLoading(true),
     setError(null),
     
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     try {
       const { data: { session } } = await supabase && supabase.auth.getSession();
       if (!session) {
         setError("Authentication required");
         return
-<<<<<<< HEAD
+
       }
       const response = await fetch(`${getWebhookUrl()}/toggle`, {
         method: 'POST'
@@ -476,26 +373,8 @@ if ( {) {
           'Content-Type': 'application/json'
         }
         body: JSON.stringify({ webhookId, isActive })
-=======
-
-        };
-        body: JSON && JSON.stringify({ webhookId, isActive })
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-      });
-
-      const result = await response && response.json();
-      
-      if (!response && response.ok) {
-        throw new Error(result && result.error || 'Failed to update webhook')
-
-      }
-
-<<<<<<< HEAD
-=======
 
 
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 ;
       // Add the new webhook to the list;
       setWebhooks(prev => [result.webhook, ...prev]),;
@@ -539,13 +418,12 @@ if ( {) {
         throw new Error(result.error || 'Failed to update webhook');
       }
 
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
       // Update the webhook in the list
       setWebhooks(prev => prev.map(webhook =>
         webhook.id === webhookId ? { ...webhook, is_active: isActive } : webhook
@@ -587,17 +465,14 @@ if ( {) {
     setLoading(true),
     setError(null),
     
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     try {
       const { data: { session } } = await supabase && supabase.auth.getSession();
       if (!session) {
         setError("Authentication required");
         return
-<<<<<<< HEAD
+
       }
       const response = await fetch(`${getWebhookUrl()}/delete`, {
         method: 'POST'
@@ -606,11 +481,7 @@ if ( {) {
           'Content-Type': 'application/json'
         }
         body: JSON.stringify({ webhookId })
-=======
 
-        };
-        body: JSON && JSON.stringify({ webhookId })
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       });
 
       const result = await response && response.json();
@@ -619,15 +490,14 @@ if ( {) {
         throw new Error(result && result.error || 'Failed to delete webhook')
 
       }
-<<<<<<< HEAD
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
+
     try {
       const { data: { session } } = await supabase.auth.getSession(),
       if (!session) {
         setError("Authentication required"),
         return
-<<<<<<< HEAD
+
       }
       const response = await fetch(`${getWebhookUrl()}/delete`, {
         method: 'POST'
@@ -641,10 +511,9 @@ if ( {) {
       if (!response.ok) {
         throw new Error(result.error |'Failed to delete webhook')
       }
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
+
       // Remove the webhook from the list
 
       setWebhooks(prev => prev && prev.filter(webhook => webhook && webhook.id !== webhookId));
@@ -653,15 +522,9 @@ if ( {) {
       toast({
         title: "Webhook Deleted"
         description: "The webhook has been deleted successfully."});
-<<<<<<< HEAD
-
-=======
-=======
 
 
 
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 ;
       // Update the webhook in the list;
       setWebhooks(prev => prev.map(webhook =>;
@@ -707,12 +570,11 @@ if ( {) {
         throw new Error(result.error || 'Failed to delete webhook');
       }
 
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
       // Remove the webhook from the list
       setWebhooks(prev => prev.filter(webhook => webhook.id !== webhookId)),
       
@@ -750,17 +612,14 @@ if ( {) {
     setError(null),
     setTestResult(null),
     
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     try {
       const { data: { session } } = await supabase && supabase.auth.getSession();
       if (!session) {
         setError("Authentication required");
         return
-<<<<<<< HEAD
+
       }
       const response = await fetch(`${getWebhookUrl()}/test`, {
         method: 'POST'
@@ -769,11 +628,7 @@ if ( {) {
           'Content-Type': 'application/json'
         }
         body: JSON.stringify({ webhookId, eventType })
-=======
 
-        };
-        body: JSON && JSON.stringify({ webhookId, eventType })
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       });
 
       const result = await response && response.json();
@@ -782,15 +637,14 @@ if ( {) {
         throw new Error(result && result.error || 'Failed to test webhook')
 
       }
-<<<<<<< HEAD
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
+
     try {
       const { data: { session } } = await supabase.auth.getSession(),
       if (!session) {
         setError("Authentication required"),
         return
-<<<<<<< HEAD
+
       }
       const response = await fetch(`${getWebhookUrl()}/test`, {
         method: 'POST'
@@ -804,10 +658,9 @@ if ( {) {
       if (!response.ok) {
         throw new Error(result.error |'Failed to test webhook')
       }
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
+
       // Store test result
       setTestResult({
 
@@ -816,15 +669,9 @@ if ( {) {
         responseBody: result && result.responseBody
 
       });
-<<<<<<< HEAD
-
-=======
-=======
 
 
 
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 ;
       // Remove the webhook from the list;
       setWebhooks(prev => prev.filter(webhook => webhook.id !== webhookId)),;
@@ -869,12 +716,11 @@ if ( {) {
         throw new Error(result.error || 'Failed to test webhook');
       }
 
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
       // Store test result
       setTestResult({
         status: result.status,
@@ -905,11 +751,9 @@ if ( {) {
         title: "Error testing webhook"
         description: err instanceof Error ? err.message : 'An unknown error occurred'})
     } finally {
-<<<<<<< HEAD
+
       setLoading(false)
-=======
-      set_loading (false);
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
     }
   }
 
@@ -920,15 +764,8 @@ if ( {) {
     loading;
     error;
 
-<<<<<<< HEAD
-    clearTestResult: () => setTestResult(null)
-  }
-}
-        variant: "destructive",
-        title: "Error testing webhook",
-        description: err instanceof Error ? err.message : 'An unknown error occurred'})
-    } finally {
-      setLoading(false)
+
+
 ;
       // Store test result;
       setTestResult({;
@@ -966,7 +803,7 @@ if ( {) {
     deleteWebhook;
     testWebhook;
     clearTestResult: () => setTestResult(null);
-=======
+
     test_result;
     fetch_webhooks;
     create_webhook;
@@ -977,10 +814,8 @@ if ( {) {
 
   }
 }
-=======
 
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
   }
 }
 ;

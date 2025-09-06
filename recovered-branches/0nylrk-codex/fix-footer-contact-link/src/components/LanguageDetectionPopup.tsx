@@ -1,33 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-import { useState, useEffect } from "react";
-import { useTranslation } from "react-i18next";
-import {
-  AlertDialog
-  AlertDialogAction
-  AlertDialogCancel
-  AlertDialogContent
-  AlertDialogDescription
-  AlertDialogFooter
-  AlertDialogHeader
-  AlertDialogTitle
-} from "../components/ui/alert-dialog";
-import {
-  useLanguage
-  SupportedLanguage
-  LanguageContextType
-import { useState, useEffect } from "react";
-import { useTranslation } from "react-i18next";
-import {
-=======
 
 
-
-import { useState, useEffect } from "react";
-import { useTranslation } from "react-i18next";
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   AlertDialog,
   AlertDialogAction,
   AlertDialogCancel,
@@ -41,32 +13,12 @@ import {
   useLanguage,
   SupportedLanguage,
   LanguageContextType,;
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 } from "../context/LanguageContext";
 export function LanguageDetectionPopup() {
-=======
-import {;
-  AlertDialog,;
-  AlertDialogAction,;
-  AlertDialogCancel,;
-  AlertDialogContent,;
-  AlertDialogDescription,;
-  AlertDialogFooter,;
-  AlertDialogHeader,;
-  AlertDialogTitle,;
-} from "../components/ui/alert-dialog";
-import {;
-  useLanguage,;
-  SupportedLanguage,;
-  LanguageContextType,;
-} from "../context/LanguageContext";
 
-export function LanguageDetectionPopup() {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   const [open, setOpen] = useState(false);
   const { t } = useTranslation();
   const { changeLanguage, currentLanguage, supportedLanguages } =;
@@ -102,23 +54,9 @@ export function LanguageDetectionPopup() {;
   const languageName =;
     supportedLanguages && supportedLanguages.find((lang) => lang && lang.code === detectedLanguage)?.name ||;
     detectedLanguage;
-<<<<<<< HEAD
-  const handleAccept = async () => {
-    await changeLanguage(detectedLanguage);
-    setOpen(false);
-  }
-=======
-
-  const handleAccept = async () => {;
-
-    await changeLanguage(detectedLanguage);
-    setOpen(false);
-  }
-=======
 
 
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 import { useState, useEffect } from 'react',;
 import { useTranslation } from 'react-i18next',;
 import {;
@@ -155,13 +93,9 @@ export function LanguageDetectionPopup() {;
   if (!detectedLanguage) return null,
 
   const languageName = supportedLanguages.find(lang => lang.code === detectedLanguage)?.name || detectedLanguage,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
   const handleAccept = async () => {
     await changeLanguage(detectedLanguage),
@@ -186,7 +120,7 @@ export function LanguageDetectionPopup() {;
           </AlertDialogCancel>
           <AlertDialogAction
             onClick={handleAccept}
-<<<<<<< HEAD
+
             className="bg-zion-purple text-white hover:bg-zion-purple-dark"
           >
             {t("general.yes")}
@@ -194,18 +128,8 @@ export function LanguageDetectionPopup() {;
         </AlertDialogFooter>
       </AlertDialogContent>
     </AlertDialog>
-  );
-}
-);
-=======
-            className="bg-zion-purple text-white hover:bg-zion-purple-dark">;
-            {t("general && general.yes")}
-=======
 
-);
 
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             {t('general.no')}
           </AlertDialogCancel>;
           <AlertDialogAction;
@@ -219,47 +143,9 @@ export function LanguageDetectionPopup() {;
       </AlertDialogContent>;
     </AlertDialog>;
   );
-<<<<<<< HEAD
-=======
-
-import { useState, useEffect  } from './react';
-import { use_translation  } from './react - i18next';
-import {
-  AlertDialog,
-  AlertDialogAction,
-  AlertDialogCancel,
-  AlertDialogContent,
-  AlertDialogDescription,
-  AlertDialogFooter,
-  AlertDialogHeader,
-  AlertDialogTitle,
-} from '../components / ui / alert - dialog';
-import {
-  use_language,
-  SupportedLanguage,
-  LanguageContextType,
-} from '../context / LanguageContext';
-export /**
- * LanguageDetectionPopup - Function description
- */
-function LanguageDetectionPopup() {
-  const [open, set_open] = useState (false);
-  const { t } = use_translation ();
-  const { change_language, current_language, supported_languages } =;
-    use_language () as LanguageContextType;
-  const [detected_language, setDetectedLanguage] =;
-    useState < SupportedLanguage | null>(null);
-;
-  useEffect (() => {
-    // Check if this is first visit;
-    const has_visited = local_storage.get_item ("zion_has_visited");
-    // Check condition
-if (return) {
-  $2
-=======
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 }

@@ -1,22 +1,6 @@
 
-<<<<<<< HEAD
-import {useState} from "react";
-import {useParams, Link} from "react-router-dom";
-import {AppLayout} from "@/layout/AppLayout";
-import {SEO} from "@/components/SEO";
-import {Button} from "@/components/ui/button";
-import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
-import {Badge} from "@/components/ui/badge";
-import {Card, CardContent} from "@/components/ui/card";
-import {Separator} from "@/components/ui/separator";
-import {Alert, AlertDescription} from "@/components/ui/alert";
-import {ThumbsUp, ThumbsDown, Calendar, Flag, Edit, Trash2, Pin, Lock, CheckCircle} from "lucide-react";
-import {formatDistanceToNow, format} from "date-fns";
-import {ForumPost, ForumReply} from "@/types/community";
-import {useAuth} from "@/hooks/useAuth";
-import ReplyCard from "@/components/community/ReplyCard";
-import ReplyForm from "@/components/community/ReplyForm";
-import {useToast} from "@/hooks/use-toast";
+
+
 import { useState } from "react",
 import { useParams, Link } from "react-router-dom",
 import { AppLayout } from "@/layout/AppLayout",
@@ -37,10 +21,10 @@ import { useToast } from "@/hooks/use-toast";
 // Mock data for a forum post
 import ReplyForm from "@/components/community/ReplyForm",
 import { useToast } from "@/hooks/use-toast",
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 // Mock data for a forum post
 const mockPost: ForumPost = {
   id: "1",
@@ -280,74 +264,7 @@ export default function ForumPostPage() {
         title: "Permission denied"
         description: "Only the original poster or moderators can mark answers"
         variant: "destructive"
-=======
 
-  const handleUpvote = () => {;
-    if (!user) {;
-      toast({;
-        title: "Authentication required",;
-        description: "Please sign in to vote on posts"}),;
-      return;
-    }
-
-    setPost({ ...post, upvotes: post && post.upvotes + 1 }),;
-    toast({;
-      title: "Vote recorded",;
-      description: "You upvoted this post"});
-  };
-
-  const handleDownvote = () => {;
-    if (!user) {;
-      toast({;
-        title: "Authentication required",;
-        description: "Please sign in to vote on posts"}),;
-      return;
-    }
-
-    setPost({ ...post, downvotes: post && post.downvotes + 1 }),;
-    toast({;
-      title: "Vote recorded",;
-      description: "You downvoted this post"});
-  };
-
-  const handleSubmitReply = async (content: string) => {;
-    if (!user) {;
-      toast({;
-        title: "Authentication required",;
-        description: "Please sign in to reply"}),;
-      return;
-    }
-
-    // Create a new reply;
-    const newReply: ForumReply = {;
-      id: `reply${Date && Date.now()}`,;
-      postId: post && post.id,;
-      content;
-      authorId: user && user.id || 'unknown',;
-      authorName: user && user.displayName || 'Anonymous',;
-      authorAvatar: user && user.avatarUrl,;
-      createdAt: new Date().toISOString(),;
-      updatedAt: new Date().toISOString(),;
-      upvotes: 0,;
-      downvotes: 0;
-    };
-
-    setReplies([...replies, newReply]);
-    setPost({ ...post, replyCount: post && post.replyCount + 1 }),;
-
-    toast({;
-      title: "Reply posted",;
-      description: "Your reply has been added to the discussion"});
-  };
-
-  const handleMarkAsAnswer = (replyId: string) => {;
-    // Only post author or admin can mark an answer;
-    if (!isAuthor && !isAdminOrMod) {;
-      toast({;
-        title: "Permission denied",;
-        description: "Only the original poster or moderators can mark answers",;
-        variant: "destructive";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       });
       return;
     }
@@ -702,12 +619,12 @@ export default function ForumPostPage() {;
                   <div className="font-medium text-lg">{post.authorName}</div>;
                   {post.authorRole && (;
                     <Badge variant="outline" className="mt-1">;
-<<<<<<< HEAD
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
                       {post.authorRole}
                     </Badge>
                   )}
@@ -724,105 +641,7 @@ export default function ForumPostPage() {;
             <div className="flex flex-wrap gap-2 mb-6">
               {post.tags.map(tag => (
                 <Badge key={tag} variant="outline" className="bg-zion-purple/10 hover:bg-zion-purple/20">
-=======
 
-    setReplies(updatedReplies);
-    setPost({ ...post, isAnswered: true }),;
-
-    toast({;
-      title: "Answer marked",;
-      description: "The reply has been marked as the accepted answer"});
-  };
-
-  const handleReportPost = () => {;
-    if (!user) {;
-      toast({;
-        title: "Authentication required",;
-        description: "Please sign in to report content"}),;
-      return;
-    }
-
-    toast({;
-      title: "Report submitted",;
-      description: "A moderator will review this content"});
-  };
-
-  const handlePinPost = () => {;
-    if (!isAdminOrMod) return;
-
-    setPost({ ...post, isPinned: !post && post.isPinned }),;
-
-    toast({;
-      title: post && post.isPinned ? "Post unpinned" : "Post pinned",;
-      description: post && post.isPinned ? "The post has been unpinned" : "The post has been pinned to the top"});
-  };
-
-  const handleLockPost = () => {;
-    if (!isAdminOrMod) return;
-
-    setPost({ ...post, isLocked: !post && post.isLocked }),;
-
-    toast({;
-      title: post && post.isLocked ? "Post unlocked" : "Post locked",;
-      description: post && post.isLocked ? "Comments are now allowed" : "Comments are now disabled"});
-  };
-
-  const timeAgo = formatDistanceToNow(new Date(post && post.createdAt), { addSuffix: true }),;
-  const formattedDate = format(new Date(post && post.createdAt), "MMMM d, yyyy 'at' h: mm a"),;
-
-  return (
-    <AppLayout>;
-      <SEO
-        title={`${post && post.title} | Community Forum | Zion AI Marketplace`}
-        description={post && post.content.substring(0, 160)}
-        keywords={`community, forum, discussion, ${post && post.tags.join()}`}
-      />;
-
-      <div className="container py-8">;
-        <div className="flex items-center gap-3 mb-6">;
-          <Link to="/community" className="text-sm text-muted-foreground hover:text-foreground">;
-            Forum;
-          </Link>;
-          <span className="text-muted-foreground">/</span>;
-          <Link to={`/community/category/${post && post.categoryId}`} className="text-sm text-muted-foreground hover:text-foreground">;
-            {post && post.categoryId.split('-').map(word => word && word.charAt(0).toUpperCase() + word && word.slice(1)).join(' ')}
-          </Link>;
-          <span className="text-muted-foreground">/</span>;
-          <span className="text-sm font-medium truncate max-w-[200px]">{post && post.title}</span>;
-        </div>;
-
-        <Card>;
-          <CardContent className="p-6">;
-            <div className="flex justify-between items-start mb-6">;
-              <div className="flex items-center gap-4">;
-                <Avatar className="h-12 w-12">;
-                  <AvatarImage src={post && post.authorAvatar} />;
-                  <AvatarFallback>{post && post.authorName.charAt(0)}</AvatarFallback>;
-                </Avatar>;
-                <div>;
-                  <div className="font-medium text-lg">{post && post.authorName}</div>;
-                  {post && post.authorRole && (;
-                    <Badge variant="outline" className="mt-1">;
-                      {post && post.authorRole}
-                    </Badge>;
-                  )}
-                </div>;
-              </div>;
-
-              <div className="flex items-center text-sm text-muted-foreground">;
-                <Calendar className="h-4 w-4 mr-1" />;
-                <time dateTime={post && post.createdAt} title={formattedDate}>;
-                  {timeAgo}
-                </time>;
-              </div>;
-            </div>;
-
-            <h1 className="text-2xl font-bold mb-2">{post && post.title}</h1>;
-
-            <div className="flex flex-wrap gap-2 mb-6">;
-              {post && post.tags.map(tag => (;
-                <Badge key={tag} variant="outline" className="bg-zion-purple/10 hover:bg-zion-purple/20">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                   {tag}
                 </Badge>;
               ))}

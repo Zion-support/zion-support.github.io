@@ -1,6 +1,5 @@
-<<<<<<< HEAD
-export interface InnovativeAIService {
-export interface InnovativeAIService {;
+
+
   id: string;
   name: string;
   tagline: string;
@@ -12,8 +11,7 @@ export interface InnovativeAIService {;
     currency: string;
     trialDays: number;
     setupTime: string;
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 
   {
@@ -359,7 +357,7 @@ export interface InnovativeAIService {;
     support:
       '24/7 compliance support, dedicated ethics specialist, training programs, and quarterly compliance reviews.'
     compliance: [
-<<<<<<< HEAD
+
       'GDPR, CCPA, SOC 2 Type II, ISO 27001, AI ethics standards, Industry regulations'
     ]
     link: 'https://ziontechgroup.com/ai-ethics-governance-platform'
@@ -373,9 +371,7 @@ export interface InnovativeAIService {;
     marketSize: '$15B AI governance market'
     growthRate: '28% annually'
   }
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       'GDPR, CCPA, SOC 2 Type II, ISO 27001, AI ethics standards, Industry regulations',
     ],
     link: 'https://ziontechgroup.com/ai-ethics-governance-platform',
@@ -503,107 +499,10 @@ export interface InnovativeAIService {;
     growth_rate: '28% annually',
   },
 
-=======
-  id: string, name: string,
-  tagline: string, description: string,
-  category: string,
-  price: {
-    monthly: number, yearly: number,
-    currency: string, trialDays: number,
-    setupTime: string,
-    enterprise: number
-    },
-    features: string[], benefits: string[],
-  targetAudience: string[], marketPosition: string,
-  competitors: string[], techStack: string[],
-  realImplementation: boolean, implementationDetails: string,
-  roi: string, useCases: string[],
-  integrations: string[], support: string,
-  compliance: string[], link: string,
-  icon: string, color: string,
-  popular: boolean, launchDate: string,
-  customers: number, rating: number,
-  reviews: number, marketSize: string,
-  growthRate: string
-}
 
-
-=======
-];      'AI bias detection_ethical compliance_governance automation_risk assessment_audit preparation_policy enforcement';
-    ];
-
-    integrations: ['AI platforms, Compliance systems, Governance tools, Business applications, Reporting systems'];
-    support: '24 / 7 compliance support, dedicated ethics specialist, training programs, and quarterly compliance reviews.';
-    compliance: ['GDPR, CCPA, SOC 2 Type II, ISO 27001, AI ethics standards, Industry regulations'];
-
-    icon: '⚖️';
-    color: 'from - yellow - 500 to - orange - 600';
-    popular: true;
-    launch_date: '2024 - 01 - 15';
-    customers: 950;
-    rating: 4 && 4.6;
-    reviews: 220;
-
-    market_size: '$15B AI governance market',
-    growth_rate: '28% annually';
-
-<<<<<<< HEAD
-    growthRate: '28% annually'
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-  }
-
-];
-
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-  id: string,;
-  name: string,;
-  tagline: string,;
-  description: string,;
-  category: string,;
-  price: {;
-    monthly: number,;
-    yearly: number,;
-    currency: string,;
-    trialDays: number,;
-    setupTime: string,;
-    enterprise: number;
-  },;
-  features: string[],;
-  benefits: string[],;
-  targetAudience: string[],;
-  marketPosition: string,;
-  competitors: string[],;
-  techStack: string[],;
-  realImplementation: boolean,;
-  implementationDetails: string,;
-  roi: string,;
-  useCases: string[],;
-  integrations: string[],;
-  support: string,;
-  compliance: string[],;
-  link: string,;
-  icon: string,;
-  color: string,;
-  popular: boolean,;
-  launchDate: string,;
-  customers: number,;
-  rating: number,;
-  reviews: number,;
-  marketSize: string,;
-  growthRate: string;
-}
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
-export interface InnovativeAIService {;
-<<<<<<< HEAD
   id: string,;
   name: string,;
   tagline: string,;
@@ -877,8 +776,9 @@ export const innovativeAIServicesV2: InnovativeAIService[] = [;
     reviews: 220,;
     marketSize: '$15B AI governance market',;
     growthRate: '28% annually';
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
   }
 ];

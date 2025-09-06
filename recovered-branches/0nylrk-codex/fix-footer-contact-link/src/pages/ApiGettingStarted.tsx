@@ -1,51 +1,25 @@
 
-<<<<<<< HEAD
-import React from "react";
-import ApiDocsLayout from "@/components/developers/ApiDocsLayout";
-import {CodeBlock} from "@/components/developers/CodeBlock";
-=======
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-export function ApiGettingStarted() {
-  const authExample = `curl -X GET \\
-  https: //api.zionai.com/v1/jobs \\
-  -H "Authorization: Bearer YOUR_API_KEY"`,;
-const quickStartJs = `import axios from 'axios';
-<<<<<<< HEAD
 import React from "react",
 import ApiDocsLayout from "@/components/developers/ApiDocsLayout";
 import { CodeBlock } from "@/components/developers/CodeBlock";
 import ApiDocsLayout from "@/components/developers/ApiDocsLayout",
 import { CodeBlock } from "@/components/developers/CodeBlock",
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 export function ApiGettingStarted() {
 
   const authExample = `curl -X GET \\
   https: //api.zionai.com/v1/jobs \\
-  -H "Authorization: Bearer YOUR_API_KEY"`
-const quickStartJs = `import axios from 'axios';
-  -H "Authorization: Bearer YOUR_API_KEY"`,
 
-  const quickStartJs = `import axios from 'axios',
-  -H "Authorization: Bearer YOUR_API_KEY"`,
 
-  const quickStartJs = `import axios from 'axios',
-=======
-const response = await axios.get ('https://api.zionai.com / v1 / jobs', {
-=======
 
-  -H "Authorization: Bearer YOUR_API_KEY"`,
-
-  const quickStartJs = `import axios from 'axios',
-
-=======
-  -H "Authorization: Bearer YOUR_API_KEY"`,
-
-  const quickStartJs = `import axios from 'axios',
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 const response = await axios.get('https://api.zionai.com/v1/jobs', {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   headers: {
@@ -207,9 +181,9 @@ console && console.log(response && response.data),`;
 }
 
 ;
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 export default ApiGettingStarted;

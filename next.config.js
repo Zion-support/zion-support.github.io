@@ -11,17 +11,30 @@ const nextConfig = {
   },
   pageExtensions: ["tsx", "ts", "jsx", "js"],
   trailingSlash: true,
+
+  
+  // Performance optimizations
+  experimental: {
+    scrollRestoration: true,
+    optimizeCss: true,
+    optimizePackageImports: ['lucide-react', '@radix-ui/react-icons', 'framer-motion']
+  },
+  
+  // Image optimization
   images: {
-    domains: [
-      "localhost",
-      "ziontechgroup.com",
-      "images.unsplash.com",
-      "via.placeholder.com"
-    ],
-    formats: ["image/webp", "image/avif"],
+    unoptimized: true,
+    domains: ["localhost", "ziontechgroup.com", "images.unsplash.com", "via.placeholder.com"],
+    formats: ['image/webp', 'image/avif'],
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
-    minimumCacheTTL: 31536000
+    minimumCacheTTL: 31536000, // 1 year
+    dangerouslyAllowSVG: true,
+    contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
+  },
+  
+  env: {
+    CUSTOM_KEY: process.env.CUSTOM_KEY,
+
   },
   experimental: {
     optimizeCss: true,
@@ -66,6 +79,7 @@ const nextConfig = {
           "**/apps/**"
         ],
         poll: 1000,
+
         aggregateTimeout: 300
       }
     }
@@ -82,6 +96,7 @@ const nextConfig = {
         },
       };
     }
+
 
     // Exclude apps directory from compilation
     config.module.rules.push({
@@ -117,10 +132,7 @@ const nextConfig = {
       }
     ];
   }
+
 }
 
-<<<<<<< HEAD
-export default nextConfig;
-=======
-export default nextConfig
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+

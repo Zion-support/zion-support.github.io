@@ -34,24 +34,21 @@ export function ProjectActions(): any ({;
       {isUnderDispute && disputeId ? (
         <Button variant="outline" asChild>
           <Link href={`/dashboard/disputes/${disputeId}`}>
-<<<<<<< HEAD
+
             <ShieldAlert className='h-4 w-4 mr-2' />            View Active Dispute
           </Link>
         </Button>
       ) : (
         <RaiseDisputeButton projectId={projectId} variant='outline' />            <ShieldAlert className="h-4 w-4 mr-2" />
             <ShieldAlert className="h-4 w-4 mr-2" />
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             View Active Dispute
           </Link>
         </Button>
       ) : (
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 
 

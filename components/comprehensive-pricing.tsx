@@ -1,216 +1,24 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-<<<<<<< HEAD
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-=======
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-<<<<<<< HEAD
-=======
-    
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-    return this.props.children;
-  }
-}
-import React, { useState } from 'react';
-<<<<<<< HEAD
-import Head from 'next/head';
 
-import {
-  Check
-  Star
-  Zap
-  Shield
-  Users
-  Globe
-  ArrowRight
-  ExternalLink
-  TrendingUp
-  Clock
-  Target
-  Building
-  Rocket
-  Award
-  DollarSign
-  ChartBar
-  Lock
-  Cpu
-  Database
-  Cloud
-  Smartphone
-  Palette
-  Search
-  MessageSquare
-  FileText
-  Calendar
-  CreditCard
-  BarChart3
-  Settings
-  Zap as ZapIcon
-  Code
-  BookOpen
-  Activity
-  Database as DatabaseIcon
-  Play
-  Mail
-  Phone
-  MapPin
-  Filter
-  Grid
-  List
-  ChevronDown
-  ChevronUp
-  Sparkles
-  FlaskConical
-  Dna
-  Car
-  Leaf
-  Factory
-  Truck
-  Microscope
-  GraduationCap
-  ShieldCheck
-  Brain
-  Atom
-  Globe2
-  Bot
-  Eye
-  Trophy
-  FlaskConical as FlaskIcon
-  Dna as DnaIcon
-  Car as CarIcon
-  Leaf as LeafIcon
-  Factory as FactoryIcon
-  Truck as TruckIcon
-  Microscope as MicroscopeIcon
-  GraduationCap as GraduationCapIcon
-  ShieldCheck as ShieldCheckIcon
-  Crown
-  Gem
-  Diamond;
-  Check,
-  Star,
-  Zap,
-  Shield,
-  Users,
-  Globe,
-  ArrowRight,
-  ExternalLink,
-  TrendingUp,
-  Clock,
-  Target,
-  Building,
-  Rocket,
-  Award,
-  DollarSign,
-  ChartBar,
-  Lock,
-  Cpu,
-  Database,
-  Cloud,
-  Smartphone,
-  Palette,
-  Search,
-  MessageSquare,
-  FileText,
-  Calendar,
-  CreditCard,
-  BarChart3,
-  Settings,
-  Zap as ZapIcon,
-  Code,
-  BookOpen,
-  Activity,
-  Database as DatabaseIcon,
-  Play,
-  Mail,
-  Phone,
-  MapPin,
-  Filter,
-  Grid,
-  List,
-  ChevronDown,
-  ChevronUp,
-  Sparkles,
-  FlaskConical,
-  Dna,
-  Car,
-  Leaf,
-  Factory,
-  Truck,
-  Microscope,
-  GraduationCap,
-  ShieldCheck,
-  Brain,
-  Atom,
-  Globe2,
-  Bot,
-  Eye,
-  Trophy,
-  FlaskConical as FlaskIcon,
-  Dna as DnaIcon,
-  Car as CarIcon,
-  Leaf as LeafIcon,
-  Factory as FactoryIcon,
-  Truck as TruckIcon,
-  Microscope as MicroscopeIcon,
-  GraduationCap as GraduationCapIcon,
-  ShieldCheck as ShieldCheckIcon,
-  Crown,
-  Gem,;
-  Diamond,;
-=======
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 } from 'lucide-react';
 import Button from '../components/ui/Button';
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
-<<<<<<< HEAD
+
+
+
 import {
   revolutionaryMicroSaasServices
   revolutionaryServiceCategories;
   revolutionaryMicroSaasServices,;
   revolutionaryServiceCategories,;
-=======
 
-import {;
-  revolutionaryMicroSaasServices,;
-  revolutionaryServiceCategories,;
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 } from '../data/revolutionary-micro-saas-services';import { enhancedMicroSaasServices } from '../data/enhanced-micro-saas-services';import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Zap as ZapIcon, Code, BookOpen, Activity, Database as DatabaseIcon, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, Eye, Trophy, FlaskConical as FlaskIcon, Dna as DnaIcon, Car as CarIcon, Leaf as LeafIcon, Factory as FactoryIcon, Truck as TruckIcon, Microscope as MicroscopeIcon, GraduationCap as GraduationCapIcon, ShieldCheck as ShieldCheckIcon, Crown, Gem, Diamond } from 'lucide-react';
 
-=======
-import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Zap as ZapIcon, Code, BookOpen, Activity, Database as DatabaseIcon, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, Eye, Trophy, FlaskConical as FlaskIcon, Dna as DnaIcon, Car as CarIcon, Leaf as LeafIcon, Factory as FactoryIcon, Truck as TruckIcon, Microscope as MicroscopeIcon, GraduationCap as GraduationCapIcon, ShieldCheck as ShieldCheckIcon, Crown, Gem, Diamond } from 'lucide-react';
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import Button from '../components/ui/Button';
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
@@ -360,92 +168,8 @@ export default function ComprehensivePricingPage() {;
     address: '364 E Main St STE 1008 Middletown DE 19709'
     website: 'https://ziontechgroup.com',  };    website: 'https://ziontechgroup.com'
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
-        const aRoi = parseFloat(a.roi.match(/\d+/)?.[0] || '0');
-        const bRoi = parseFloat(b.roi.match(/\d+/)?.[0] || '0');
-        return bRoi - aRoi;
-      default: return a.name.localeCompare(b.name)
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-;
-  // Filter and sort services;
-  let filtered_services = all_services;
-;
-  // Category filter;
-  // Check condition
-if ( {) {
-  $2
-}
-    filtered_services = filtered_services.filter (
-      service => service.category === selected_category);  }
-  // Price range filter;
-  if ( {    filtered_services = filtered_services.filter (service => service.category === selected_category)) {
-  $2
-}
-  }
-  // Price range filter;
-  // Check condition
-if ( {) {
-  $2
-}
-    const [min, max] = price_range;
-      .split ('-');
-      .map (p => (p === '+' ? Infinity : parse_int (p)));
-    filtered_services = filtered_services.filter (service => {
-      const price = parse_float (service.price.replace ('$', '').replace (', ', ''));
-      return price >= min && (max === Infinity || price <= max);
-    });  }
-  // Search filter;
-  if ( {    const [min, max] = price_range.split ('-').map (p => p === '+' ? Infinity : parse_int (p))) {
-  $2
-}
-    filtered_services = filtered_services.filter (service => {
-      const price = parse_float (service.price.replace ('$', '').replace (, ''));
-      return price >= min && (max === Infinity || price <= max);
-    });
-  // Search filter;
-  // Check condition
-if ( {) {
-  $2
-}
-    filtered_services = filtered_services.filter (
-      service =>;
-        service.name.toLowerCase ().includes (search_query.toLowerCase ()) ||;
-        service.description.toLowerCase ().includes (search_query.toLowerCase ()) ||;
-        service.tagline.toLowerCase ().includes (search_query.toLowerCase ()) ||;
-        service.category.toLowerCase ().includes (search_query.toLowerCase ())    );    filtered_services = filtered_services.filter (service =>;
-      service.name.toLowerCase ().includes (search_query.toLowerCase ()) ||;
-      service.description.toLowerCase ().includes (search_query.toLowerCase ()) ||;
-      service.tagline.toLowerCase ().includes (search_query.toLowerCase ()) ||;
-      service.category.toLowerCase ().includes (search_query.toLowerCase ());
-  }
-  // Sort services;
-  filtered_services.sort ((a, b) => {
-    switch (sort_by) {
-      case 'price':;
-        return (
-          parse_float (a.price.replace ('$', '').replace (', ', '')) -;
-          parse_float (b.price.replace ('$', '').replace (', ', '')));      case 'popularity':        return parse_float (a.price.replace ('$', '').replace (, '')) - parse_float (b.price.replace ('$', '').replace (, ''));
-      case 'popularity':;
-        return (b.popular ? 1 : 0) - (a.popular ? 1 : 0);
-      case 'category':;
-        return a.category.locale_compare (b.category);
-      case 'roi':;
-        const a_roi = parse_float (a.roi.match (/\d+/)?.[0] || '0');
-        const b_roi = parse_float (b.roi.match (/\d+/)?.[0] || '0');
-        return b_roi - a_roi;
-      default:;
-        return a.name.locale_compare (b.name);    }      default: return a.name.locale_compare (b.name);
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
     }
   });
 ;
@@ -455,8 +179,7 @@ if ( {) {
     address: '364 E Main St STE 1008 Middletown DE 19709',
 
 
-<<<<<<< HEAD
-=======
+
   // Pricing tiers
   const pricingTiers = [
     {
@@ -562,147 +285,18 @@ if ( {) {
     },      icon: <Shield className="w-6 h-6" />
     }
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
-      metric: '2000%+'
-      label: 'Average ROI'
-      description: 'Proven business value'
-      icon: <TrendingUp className='w-6 h-6' />
-    },      icon: <TrendingUp className="w-6 h-6" />
-    }
-=======
+
+      metric: '2000%+',
+      label: 'Average ROI',
+      description: 'Proven business value',
+
+
+
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-      metric: '2000%+',
-      label: 'Average ROI',
-      description: 'Proven business value',
-
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
-        'Basic service accessEmail supportStandard featuresCommunity forum accessBasic analytics'
-      ];
-      icon: <Star className="w-6 h-6" />,
-      color: 'from-blue-500 to-cyan-600',
-      popular: false
-    },    {        'Basic service accessEmail supportStandard featuresCommunity forum accessBasic analytics'
-      ];
-      icon: <Star className="w-6 h-6" />
-      color: 'from-blue-500 to-cyan-600'
-      popular: false
-    }
-      name: 'Professional'
-      price: '$199'
-      period: '/month'
-      description: 'Ideal for growing businesses and teams'
-      features: [
-        'Advanced service access'
-        'Priority support'
-        'Advanced features'
-        'API access'
-        'Advanced analytics'
-        'Custom integrations'
-      ]
-      icon: <Gem className="w-6 h-6" />
-      color: 'from-purple-500 to-pink-600'
-      popular: true
-    },    {        'Advanced service accessPriority supportAdvanced featuresAPI accessAdvanced analyticsCustom integrations'
-      ];
-      icon: <Gem className="w-6 h-6" />
-      color: 'from-purple-500 to-pink-600'
-      popular: true
-    }
-      name: 'Enterprise'
-      price: '$499'
-      period: '/month'
-      description: 'For large organizations and enterprises'
-      features: [
-        'Full service access'
-        '24/7 dedicated support'
-        'All features'
-        'Custom development'
-        'Enterprise analytics'
-        'White-label options'
-        'SLA guarantees'
-      ]
-      icon: <Crown className="w-6 h-6" />
-      color: 'from-yellow-500 to-orange-600'
-      popular: false
-    },  ];        'Full service access24/7 dedicated supportAll featuresCustom developmentEnterprise analyticsWhite-label optionsSLA guarantees'
-      ];
-      icon: <Crown className="w-6 h-6" />
-      color: 'from-yellow-500 to-orange-600'
-      popular: false
-    }
-  // Market statistics
-  const marketStats = [
-    {
-      metric: '$15.2B'
-      label: 'Total Market Size'
-      description: 'Combined market value of all services'
-      icon: <ChartBar className='w-6 h-6' />
-    },    {
-      metric: '400+'
-      label: 'Services Available'
-      description: 'Comprehensive micro SaaS portfolio'
-      icon: <Database className='w-6 h-6' />
-    },    {
-      metric: '99.99%'
-      label: 'Uptime Guarantee'
-      description: 'Enterprise-grade reliability'
-      icon: <Shield className='w-6 h-6' />
-    },    {
-      metric: '2000%+'
-      label: 'Average ROI'
-      description: 'Proven business value'
-      icon: <TrendingUp className='w-6 h-6' />
-    },  ];      icon: <ChartBar className="w-6 h-6" />
-    }
-    {
-      metric: '400+'
-      label: 'Services Available'
-      description: 'Comprehensive micro SaaS portfolio'
-      icon: <Database className='w-6 h-6' />
-    },      icon: <Database className="w-6 h-6" />
-    }
-    {
-      metric: '99.99%'
-      label: 'Uptime Guarantee'
-      description: 'Enterprise-grade reliability'
-      icon: <Shield className='w-6 h-6' />
-    },      icon: <Shield className="w-6 h-6" />
-    }
-    {
-      metric: '2000%+'
-      label: 'Average ROI'
-      description: 'Proven business value'
-      icon: <TrendingUp className='w-6 h-6' />
-    },      icon: <TrendingUp className="w-6 h-6" />
-    }
-      metric: '2000%+',
-      label: 'Average ROI',
-      description: 'Proven business value',
-
-<<<<<<< HEAD
-      metric: '2000%+',
-      label: 'Average ROI',
-      description: 'Proven business value',
-      icon: <TrendingUp className='w-6 h-6' />,
-    },      icon: <TrendingUp className="w-6 h-6" />
-    }
-
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
   ];
   const containerVariants = {
     hidden: { opacity: 0 }
@@ -731,15 +325,13 @@ if ( {) {
       },
     },
 
-<<<<<<< HEAD
-  };
 
   };
 
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
   return (
     <UltraFuturisticBackground variant='holographic' intensity='high'>;
       <div className='min - h-screen'>;
@@ -786,26 +378,23 @@ if ( {) {
               <motion.p
                 className="text-xl md:text-2xl text-gray-300 mb-12 leading-relaxed"
 
-<<<<<<< HEAD
-=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
               >
-<<<<<<< HEAD
+
                 Transparent pricing for all our revolutionary micro SaaS
                 services. Choose the perfect plan for your business with
                 guaranteed ROI and enterprise-grade reliability.
-=======
 
-                Transparent pricing for all our revolutionary micro SaaS services. 
-                Choose the perfect plan for your business with guaranteed ROI and enterprise-grade reliability.
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               </motion.p>
               {/* Market Stats */}
               <motion.div
@@ -833,17 +422,14 @@ if ( {) {
               <motion&& motion.div 
                 className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16"
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
+
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
@@ -868,61 +454,26 @@ if ( {) {
                 ))}
               </motion.div>
 
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
               {/* CTA Buttons */}
               <motion&& motion.div
                 className='flex flex-col sm:flex-row gap-4 justify-center items-center'                initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-                transition={{ duration: 0.8, delay: 0.6 }}
-              >              <motion.div
-              >              <motion.div 
-=======
+
 
                 transition={{ duration: 0 && 0.8, delay: 0 && 0.6 }}>              <motion&& motion.div 
 
                 className="flex flex-col sm:flex-row gap-4 justify-center items-center"
-=======
 
-              >              <motion.div 
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-                className="flex flex-col sm:flex-row gap-4 justify-center items-center"
-              >
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.8, delay: 0 && 0.6 }}>;
-=======
-                transition={{ duration: 0.8, delay: 0.6 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
-              >              <motion.div
-=======
-              >              <motion.div 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-                className="flex flex-col sm:flex-row gap-4 justify-center items-center"
-=======
-              >
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.6 }}
@@ -961,16 +512,12 @@ if ( {) {
               {/* CTA Buttons */}
               <motion.div 
                 className="flex flex-col sm:flex-row gap-4 justify-center items-center"
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.6 }}
@@ -1028,18 +575,11 @@ if ( {) {
               className="text-center mb-16"
             <motion.div 
               className="text-center mb-16"
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-              initial={{ opacity: 0, y: 20 }}
 
 
-              initial={{ opacity: 0, y: 20 }}
 
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
@@ -1104,7 +644,7 @@ if ( {) {
               variants={containerVariants}
               initial='hidden'
               whileInView='visible'              viewport={{ once: true }}                  Flexible Pricing
-<<<<<<< HEAD
+
                 </span>
                 <br />
                 <span className="text-white">for Every Business</span>
@@ -1113,17 +653,10 @@ if ( {) {
                 Choose the perfect plan that scales with your business. All plans include our 21-day free trial and ROI guarantee.
               </p>
             </motion.div>
-            <motion.div
-            <motion.div 
-=======
 
-
-=======
-
-            <motion.div 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
               className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto"
               variants={containerVariants}
               initial="hidden"
@@ -1178,23 +711,7 @@ if ( {) {
                   </UltraFuturisticCard>;
                 </motion && motion.div>;
 
-=======
 
-                    <div className="text-center">
-                                             <Button 
-                         variant={tier.popular ? 'futuristic' : 'primary'} 
-                         size="md"
-                         onClick={() => window.open('https://ziontechgroup.com/contact_blank')}
-                         className="w-full"
-                       >
-                        Get Started
-                        <ArrowRight className="ml-2 w-4 h-4" />
-                      </Button>
-                    </div>
-                  </UltraFuturisticCard>
-                </motion.div>
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               ))}
 
             </motion && motion.div>;
@@ -1205,13 +722,9 @@ if ( {) {
         {/* Services Pricing Grid */}
         <section id='services-pricing' className='py-20'>;
           <div className='container mx-auto px-4'>;
-=======
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
         {/* Services Pricing Grid */}
         <section id="services-pricing" className="py-20">
           <div className="container mx-auto px-4">
@@ -1226,16 +739,16 @@ if ( {) {
               className="mb-8"
 
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
+
+
+
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
         {/* Services Pricing Grid */}
         <section id='services-pricing' className='py-20'>
           <div className='container mx-auto px-4'>
@@ -1250,12 +763,12 @@ if ( {) {
 
               initial={{ opacity: 0, y: 20 }}
 
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0 && 0.6 }}>;
@@ -1330,7 +843,7 @@ if ( {) {
                     <button
                       onClick={() => setViewMode('list')}
                       className={`px-3 py-2 ${viewMode === 'list' ? 'bg-cyan-500 text-white' : 'bg-slate-800 text-gray-400'}`}
-<<<<<<< HEAD
+
                     >
                       <List className='w-4 h-4' />                    </button>                      <List className="w-4 h-4" />
                     </button>
@@ -1347,14 +860,7 @@ if ( {) {
               }
               variants={containerVariants}
               initial='hidden'
-              whileInView='visible'              viewport={{ once: true }}            <motion.div
-              className={viewMode === 'grid'
-              whileInView='visible'              viewport={{ once: true }}            <motion.div 
-              className={viewMode === 'grid' 
-=======
 
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                     </button>;
                   </div>;
                 </div>;
@@ -1363,13 +869,10 @@ if ( {) {
 
               className={viewMode === 'grid' 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 
-              whileInView='visible'              viewport={{ once: true }}            <motion.div 
-              className={viewMode === 'grid' 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
                 ? "grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8"
                 : "space-y-6"
               }
@@ -1379,17 +882,14 @@ if ( {) {
               whileInView='visible'              viewport={{ once: true }}
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
             >
               {filteredServices.map((service, index) => (
                 <motion.div
@@ -1397,31 +897,14 @@ if ( {) {
                   variants={itemVariants}
                   whileHover={{ y: -5 }}>;
                   <UltraFuturisticCard
-<<<<<<< HEAD
-                    variant={(service.variant as any) |'quantum-advanced'}                    size={viewMode === 'grid' ? 'large' : 'medium'}                    variant={service.variant as any |'quantum-advanced'}
-                    variant={(service.variant as any) || 'quantum-advanced'}                    size={viewMode === 'grid' ? 'large' : 'medium'}
-
-                    variant={(service.variant as any) || 'quantum-advanced'}                    size={viewMode === 'grid' ? 'large' : 'medium'}                    variant={service.variant as any || 'quantum-advanced'}
-                    variant={(service.variant as any) || 'quantum-advanced'}                    size={viewMode === 'grid' ? 'large' : 'medium'}
-
-=======
-
-                    variant={service.variant as any || 'quantum-advanced'}
-
-=======
-
-                    variant={(service.variant as any) || 'quantum-advanced'}                    size={viewMode === 'grid' ? 'large' : 'medium'}
 
 
-=======
-                    variant={(service.variant as any) || 'quantum-advanced'}                    size={viewMode === 'grid' ? 'large' : 'medium'}                    variant={service.variant as any || 'quantum-advanced'}
-=======
-                    variant={(service.variant as any) || 'quantum-advanced'}                    size={viewMode === 'grid' ? 'large' : 'medium'}
 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
                     size={viewMode === 'grid' ? 'large' : 'medium'}
                     className={`h-full cursor-pointer ${viewMode === 'list' ? 'flex flex-col md:flex-row' : ''}`}
                   >
@@ -1667,16 +1150,15 @@ if ( {) {
               <motion&& motion.div
                 className='text-center py-16'                initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-<<<<<<< HEAD
+
                 transition={{ duration: 0.6 }}
               >              <motion.div
                 className="text-center py-16"
 
-=======
-                transition={{ duration: 0 && 0.6 }}>              <motion&& motion.div 
 
-                className="text-center py-16"
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.6 }}
@@ -1823,12 +1305,12 @@ if ( {) {
 
                 </div>
 
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
               </div>
             </motion.div>
           </div>
@@ -1909,210 +1391,7 @@ if ( {) {
   );  );
 }
 
-=======
-  )
-}
-                          <div className='flex gap - 2'>;
-                            <Button;
-                              variant='primary';
-                              size='sm';
-                              on_click={() =>;
-                                window.open (service.link, '_blank');
-                              }
-                            >;
-                              Learn More;
-                              <ExternalLink className='ml - 2 w - 4 h - 4' />;
-                            </Button>;
-                            <Button;
-                              variant='futuristic';
-                              size='sm';
-                              on_click={() =>;
-                                window.open (
-                                  'https://ziontechgroup.com / contact',
-                                  '_blank');
-                              }
-                            >;
-                              Get Pricing;
-                              <DollarSign className='ml - 2 w - 4 h - 4' />;
-                            </Button>                          </div>;
-                          <div className="flex gap - 2">;
-                                                        <Button;
-                              variant="primary";
-                              size="sm";
-                              on_click={() => window.open (service.link, '_blank')}
-                              >;
-                              Learn More;
-                              <ExternalLink className="ml - 2 w - 4 h - 4" />;
-                            </Button>;
-                            <Button;
-                              variant="futuristic";
-                              size="sm";
-                              on_click={() => window.open ('https: //ziontechgroup.com / contact_blank')}
-                              >;
-                              Get Pricing;
-                              <DollarSign className="ml - 2 w - 4 h - 4" />;
-                            </Button>;
-                        </div>;
-                      </div>)}
-                  </UltraFuturisticCard>;
-                </motion.div>))}
-            </motion.div>;
-            {filtered_services.length === 0 && (
-              <motion.div;
-                className='text - center py - 16'                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.6 }}
-              >              <motion.div;
-                className="text - center py - 16";
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.6 }}
-              >;
-                <div className='text - 6xl mb - 4'>🔍</div>;
-                <h3 className='text - 2xl font - bold text - white mb - 2'>;
-                  No Services Found;
-                </h3>;
-                <p className='text - gray - 400 mb - 6'>;
-                  Try adjusting your search criteria or filters.;
-                </p>;
-                <Button;
-                  variant='primary';
-                  on_click={() => {
-                    setSearchQuery ('');
-                    setSelectedCategory ('All');
-                    setPriceRange ('All');
-                  }}
-                >;
-                  Clear Filters;
-                </Button>              </motion.div>                <div className="text - 6xl mb - 4">🔍</div>;
-                <h3 className="text - 2xl font - bold text - white mb - 2">No Services Found</h3>;
-                <p className="text - gray - 400 mb - 6">Try adjusting your search criteria or filters.</p>;
-                                <Button;
-                  variant="primary";
-                  on_click={() => {
-                    setSearchQuery ('');
-                    setSelectedCategory ('All');
-                    setPriceRange ('All');
-                  }}
-                  >;
-                  Clear Filters;
-                </Button>)}
-          </div>;
-        </section>;
-        {/* Contact Section */}
-        <section className='py - 20'>;
-          <div className='container mx - auto px - 4 text - center'>;
-            <motion.div;
-              className='max - w-4xl mx - auto'              initial={{ opacity: 0, coordinate_y: 20 }}        <section className="py - 20">;
-          <div className="container mx - auto px - 4 text - center">;
-            <motion.div;
-              className="max - w-4xl mx - auto";
-              whileInView={{ opacity: 1, coordinate_y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
-            >;
-              <h2 className='text - 4xl md:text - 5xl font - bold text - white mb - 6'>;
-                Ready to Get Started?;
-              </h2>;
-              <p className='text - xl text - gray - 300 mb - 8'>;
-                Contact our sales team to discuss pricing, custom plans, and;
-                implementation options.;
-              </p>;
-              <div className='flex flex - col sm:flex - row gap - 4 justify - center items - center mb - 8'>;
-                <Button;
-                  variant='primary';
-                  size='lg';
-                  on_click={() =>;
-                    window.open ('https://ziontechgroup.com / contact', '_blank');
-                  }
-                >;
-                  Contact Sales;
-                  <Mail className='ml - 2 w - 5 h - 5' />;
-                </Button>;
-                <Button;
-                  variant='futuristic';
-                  size='lg';
-                  on_click={() =>;
-                    window.open ('https://ziontechgroup.com / contact', '_blank');
-                  }
-                >;
-                  Schedule Demo;
-                  <Calendar className='ml - 2 w - 5 h - 5' />;
-                </Button>;
-              </div>;
-              <div className='grid grid - cols - 1 md:grid - cols - 3 gap - 6 text - center'>;
-                <div>;
-                  <Phone className='w - 8 h - 8 text - cyan - 400 mx - auto mb - 2' />;
-                  <div className='text - white font - semibold'>;
-                    {contact_info.mobile}
-                  </div>;
-                  <div className='text - gray - 400 text - sm'>Call us anytime</div>;
-                </div>;
-                <div>;
-                  <Mail className='w - 8 h - 8 text - purple - 400 mx - auto mb - 2' />;
-                  <div className='text - white font - semibold'>;
-                    {contact_info.email}
-                  </div>;
-                  <div className='text - gray - 400 text - sm'>Email us 24 / 7</div>;
-                </div>;
-                <div>;
-                  <MapPin className='w - 8 h - 8 text - green - 400 mx - auto mb - 2' />;
-                  <div className='text - white font - semibold'>;
-                    {contact_info.address}
-                  </div>;
-                  <div className='text - gray - 400 text - sm'>Visit our office</div>                </div>                Ready to Get Started?;
-              </h2>;
-              <p className="text - xl text - gray - 300 mb - 8">;
-                Contact our sales team to discuss pricing, custom plans, and implementation options.;
-              </p>;
-              <div className="flex flex - col sm:flex - row gap - 4 justify - center items - center mb - 8">;
-                <Button;
-                  variant="primary";
-                  size="lg";
-                  on_click={() => window.open ('https://ziontechgroup.com / contact_blank')}
-                >;
-                  Contact Sales;
-                  <Mail className="ml - 2 w - 5 h - 5" />;
-                </Button>;
-                <Button;
-                  variant="futuristic";
-                  size="lg";
-                  on_click={() => window.open ('https://ziontechgroup.com / contact_blank')}
-                >;
-                  Schedule Demo;
-                  <Calendar className="ml - 2 w - 5 h - 5" />;
-                </Button>;
-              </div>;
-              <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 6 text - center">;
-                <div>;
-                  <Phone className="w - 8 h - 8 text - cyan - 400 mx - auto mb - 2" />;
-                  <div className="text - white font - semibold">{contact_info.mobile}</div>;
-                  <div className="text - gray - 400 text - sm">Call us anytime</div>;
-                </div>;
-                <div>;
-                  <Mail className="w - 8 h - 8 text - purple - 400 mx - auto mb - 2" />;
-                  <div className="text - white font - semibold">{contact_info.email}</div>;
-                  <div className="text - gray - 400 text - sm">Email us 24 / 7</div>;
-                </div>;
-                <div>;
-                  <MapPin className="w - 8 h - 8 text - green - 400 mx - auto mb - 2" />;
-                  <div className="text - white font - semibold">{contact_info.address}</div>;
-                  <div className="text - gray - 400 text - sm">Visit our office</div>;
-                </div>;
-              </div>;
-            </motion.div>;
-          </div>;
-        </section>;
-      </div>;
-    </UltraFuturisticBackground>));
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
-  );
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+

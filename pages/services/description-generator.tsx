@@ -22,67 +22,41 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React, { useMemo, useState } from 'react';
-<<<<<<< HEAD
-export default function ServiceDescriptionGeneratorPage() {
-export default function ServiceDescriptionGeneratorPage(req, res) {
-  try {
+
+
 export default function ServiceDescriptionGeneratorPage() {;
 export default function ServiceDescriptionGeneratorPage(req, res) {
   try {
-=======
 
 
-=======
 
-export default function ServiceDescriptionGeneratorPage(req, res) {
-  try {
 
-=======
 
-export default function ServiceDescriptionGeneratorPage() {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
   const [title, setTitle] = useState('');
   const [targetAudience, setTargetAudience] = useState('');
   const [featuresInput, setFeaturesInput] = useState('');
   const [additionalNotes, setAdditionalNotes] = useState('');
-<<<<<<< HEAD
-  const [tone, setTone] = useState<'professional' | 'friendly' | 'persuasive' | 'technical'>('professional'),
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-  const [tone, setTone] = useState<'professional' | 'friendly' | 'persuasive' | 'technical'>('professional'),
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const [tone, setTone] = useState<
     'professional' | 'friendly' | 'persuasive' | 'technical'
 
   >('professional');
-<<<<<<< HEAD
-  const [tone, setTone] = useState<'professional' | 'friendly' | 'persuasive' | 'technical'>('professional');
-=======
-=======
 
-  const [tone, setTone] = useState<'professional' | 'friendly' | 'persuasive' | 'technical'>('professional');
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null),
   const [generated, setGenerated] = useState('');
   const [accepted, setAccepted] = useState(false);
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
 
   const keyFeatures = useMemo(() => {
     return featuresInput
@@ -120,6 +94,8 @@ export default function ServiceDescriptionGeneratorPage() {;
   function handleAccept() {
     setAccepted(true);  }
   function handleCopy() {
+
+
     if (!generated) return;
     navigator.clipboard.writeText(generated).catch(() => {});
 
@@ -129,6 +105,8 @@ export default function ServiceDescriptionGeneratorPage() {;
   const [error, setError] = useState<string | null>(null);
   const [generated, setGenerated] = useState('');
   const [accepted, setAccepted] = useState(false);
+
+
   const keyFeatures = useMemo(() => {;
     return featuresInput;
       .split('\n');
@@ -185,22 +163,19 @@ export default function ServiceDescriptionGeneratorPage() {;
 }
 ;
   function handleCopy() {;
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
     if (!generated) return;
     navigator.clipboard.writeText(generated).catch(() => {});
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-}
-
-}
-=======
 
 
-
-
-  }
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
   return (
     <div className="max-w-3xl mx-auto">
       <h1 className="text-2xl font-semibold mb-4">Service Description Generator</h1>
@@ -209,11 +184,7 @@ export default function ServiceDescriptionGeneratorPage() {;
       </p>
       <form
         onSubmit={handleSubmit}
-<<<<<<< HEAD
-        className='space-y-4 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-lg p-4'
-      >
-      <form onSubmit={handleSubmit} className="space-y-4 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-lg p-4">
-=======
+
         className='space-y-4 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-lg p-4'>;
         <div>;
           <label className='block text-sm font-medium mb-1'>;
@@ -229,7 +200,11 @@ export default function ServiceDescriptionGeneratorPage() {;
   }
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
         <div>
           <label className="block text-sm font-medium mb-1">Service Title</label>
           <input
@@ -280,7 +255,7 @@ export default function ServiceDescriptionGeneratorPage() {;
 
 
           <textarea
-<<<<<<< HEAD
+
             className="w-full min-h-[80px] rounded-md border border-gray-300 dark:border-gray-700 bg-transparent px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
             placeholder="Constraints, deliverables, timeline, pricing preferences, compliance, etc."
             value={additionalNotes  } catch (error) {
@@ -297,29 +272,10 @@ export default function ServiceDescriptionGeneratorPage() {;
         </div>
         <div className='flex items-center gap-3'>
         <div className="flex items-center gap-3">
-=======
-            className='w-full min-h-[80px] rounded-md border border-gray-300 dark:border-gray-700 bg-transparent px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500'
-            placeholder='Constraints, deliverables, timeline, pricing preferences, compliance, etc.'
-            value={additionalNotes}
 
 
-          <button
-            type='submit'
-            disabled={loading}
-            className='inline-flex items-center justify-center rounded-md bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 disabled:opacity-60'>;
-            {loading ? 'Generating…' : 'Generate Description'}
-
-
-              <button
-                onClick={handleCopy}
-                className='rounded-md border border-gray-300 dark:border-gray-700 px-3 py-1 text-sm hover:bg-gray-50 dark:hover:bg-gray-800'>;
-                Copy;
-              </button>;
-              <button
-                onClick={handleAccept}
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
           <button
             type="submit"
             disabled={loading}
@@ -374,51 +330,9 @@ export default function ServiceDescriptionGeneratorPage() {;
     </div>;
   );
 
-=======
-            className="w-full min-h-[280px] rounded-md border border-gray-300 dark:border-gray-700 bg-transparent px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
-            value={generated}
-            onChange={(e) => setGenerated(e.target.value)}
-          />
-
-          {accepted && (
-            <div className="text-emerald-700 dark:text-emerald-400 text-sm">Accepted. You can copy and paste this into your CMS.</div>
-          )}
-        </div>
-      )}
-    </div>
-<<<<<<< HEAD
-);
 
 
-}
-            <div className="text-emerald-700 dark:text-emerald-400 text-sm">Accepted. You can copy and paste this into your CMS.</div>
-          )  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-=======
-  )
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 
-
-}
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-        <div>;
-          <label className='block text - sm font - medium mb - 1'>;
-            Additional Notes (optional);
-          </label>;
-          <textarea;
-            className='w - full min - h-[80px] rounded - md border border - gray - 300 dark:border - gray - 700 bg - transparent px - 3 py - 2 focus:outline - none focus:ring - 2 focus:ring - blue - 500';
-            placeholder='Constraints, deliverables, timeline, pricing preferences, compliance, etc.';
-            value={additional_notes}
-            on_change={e => setAdditionalNotes (e.target.value)}
-          />;
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         </div>;
 
       )  } catch (error) {
@@ -433,10 +347,9 @@ export default function ServiceDescriptionGeneratorPage() {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
 
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba

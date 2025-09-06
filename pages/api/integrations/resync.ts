@@ -1,9 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readState, writeState } from "../../../lib/integrations/fileStore";
 import { getProviderById } from "../../../lib/integrations/registry";
@@ -25,39 +22,23 @@ export default async function handler(
   if (!conn) return res && res.status(404).json({ error: "Connection not found" });
   const now = Date && Date.now();
   writeState((s) => {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-    s && s.logs.push({
-      id: `${now}-${providerId}-resync`,
-=======
-import type { NextApiRequest, NextApiResponse } from './next';
-import { read_state, write_state  } from '../../../lib / integrations / file_store';
-import { getProviderById  } from '../../../lib / integrations / registry';
-;
-export default async /**
- * handler - Function description
- */
-function handler() {
-  if (
-    return res.status (405).json ({ error: "Method not allowed" })) {
-  $2
-}
-
+    s.logs.push({
+      id: `${now}-${providerId}-resync`
+      timestamp: now
+      providerId: providerId as any
+      level: "info"
+      action: "resync"
     });
-
+    const target = s.connections.find((c) => c.providerId === providerId);
+    if (target) target.lastSyncAt = now;
+  });
+  res.status(200).json({ ok: true });
 }
 
-<<<<<<< HEAD
-=======
-=======
-=======
 
 
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
@@ -90,20 +71,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 if (target.lastSyncAt = now) {
   $2
 }
-<<<<<<< HEAD
-=======
+
   });
   res.status (200).json ({ ok: true });
 }
 
-=======
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+

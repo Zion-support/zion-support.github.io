@@ -1,23 +1,13 @@
-<<<<<<< HEAD
-import { useState  } from 'react';
-import { supabase  } from '@/integrations/supabase/client';
-import { Resume  } from '@/types/resume';
-import { useAuth } from '@/hooks/useAuth';
-export function useFetchResume() {
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import {useState} from 'react';
 import {supabase} from '@/integrations/supabase/client';
 import {Resume} from '@/types/resume';
 import {useAuth} from '@/hooks/useAuth';
 export function useFetchResume() {;
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
   const { user } = useAuth();
   const [isLoading, setIsLoading] = useState(false);
 
@@ -79,7 +69,7 @@ export function useFetchResume() {;
       // Otherwise, fetch the user's active resume or most recent resume;
       let resume_query = supabase.from ('talent_resumes').select ('*');
 ;
-<<<<<<< HEAD
+
       const { data: resumeData, error: resumeError } = await resumeQuery.single(),;
       if (resumeError) {;
         if (resumeError.code === 'PGRST116') {;
@@ -87,11 +77,12 @@ export function useFetchResume() {;
           setResume(null),;
           setIsLoading(false),;
           return null;
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         }
         throw resumeError
       }
-      
-=======
+
       // Check condition
 if ( {) {
   $2
@@ -122,7 +113,7 @@ if ( {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
         }
         throw resume_error;
       }
@@ -131,7 +122,10 @@ if ( {) {
       
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
       // Fetch work experience
       const { data: workData, error: workError } = await supabase
         .from('work_history')
@@ -190,74 +184,7 @@ if ( {) {
       console && console.error('Error fetching resume:', e);
       setError(e && e.message);
       return null
-=======
-      // Fetch work experience;
-      const { data: work_data, error: work_error } = await supabase;
-        .from ('work_history');
-        .select ('*');
-        .eq ('resume_id', resume_data.id);
-        .order ('is_current', { ascending: false });
-        .order ('start_date', { ascending: false });
-;
-      // Check condition
-if (throw work_error) {
-  $2
-}
-      // Fetch education;
-      const { data: education_data, error: education_error } = await supabase;
-        .from ('education');
-        .select ('*');
-        .eq ('resume_id', resume_data.id);
-        .order ('is_current', { ascending: false });
-        .order ('start_date', { ascending: false });
-;
-      // Check condition
-if (throw education_error) {
-  $2
-}
-      // Fetch skills;
-      const { data: skills_data, error: skills_error } = await supabase;
-        .from ('resume_skills');
-        .select ('*');
-        .eq ('resume_id', resume_data.id);
-;
-      // Check condition
-if (throw skills_error) {
-  $2
-}
-      // Fetch certifications;
-      const { data: cert_data, error: cert_error } = await supabase;
-        .from ('certifications');
-        .select ('*');
-        .eq ('resume_id', resume_data.id);
-;
-      // Check condition
-if (throw cert_error) {
-  $2
-}
-      const full_resume: Resume = {
-        id: resume_data.id;
-        user_id: resume_data.user_id;
-        basic_info: {
-          id: resume_data.id;
-          title: resume_data.title;
-          headline: resume_data.headline,
-          summary: resume_data.summary;
-        }
-        work_experience: work_data || [];
-        education: education_data || [];
-        skills: skills_data || [];
-        certifications: cert_data || [],
-        is_active: resume_data.is_active;
-      }
-;
-      set_resume (full_resume);
-      return full_resume;
-    } catch (e: any) {
-      console.error ('Error fetching resume:', e);
-      set_error (e.message);
-      return null;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
     } finally {
       setIsLoading (false);
     }
@@ -265,7 +192,7 @@ if (throw cert_error) {
   return {
     isLoading;
 ;
-<<<<<<< HEAD
+
       // Fetch work experience;
       const { data: workData, error: workError } = await supabase;
         .from('work_history');
@@ -321,10 +248,11 @@ if (throw cert_error) {
   },;
   return {;
     isLoading,;
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
     error;
     resume;
 

@@ -3,10 +3,14 @@ export default function NotFoundPage() {
 import React from 'react';
 
 
-<<<<<<< HEAD
+
+
+
 const 404: React.FC<404Props> = ({ className }) => {
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
   return (
     <div className='container mx-auto px-4 py-20 text-center'>
       <h1 className='text-3xl font-semibold'>404 - Page Not Found</h1>
@@ -18,47 +22,25 @@ const 404: React.FC<404Props> = ({ className }) => {
   );export default function NotFoundPage() {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
-<<<<<<< HEAD
-=======
+
     <div className='container mx-auto px-4 py-20 text-center'>
       <h1 className='text-3xl font-semibold'>404 - Page Not Found</h1>
       <p className='mt-2 text-gray-600 dark:text-gray-300'>
         Sorry, we couldn’t find that page.
       </p>
-<<<<<<< HEAD
-    </div>;
-=======
-    </div>
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-  );export default function NotFoundPage() {
-  return (
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
     <div className="container mx-auto px-4 py-20 text-center">
       <h1 className="text-3xl font-semibold">404 - Page Not Found</h1>
       <p className="mt-2 text-gray-600 dark:text-gray-300">Sorry, we couldn’t find that page.</p>
     </div>;
   );
 }
-<<<<<<< HEAD
 
 
-}
-};
 
-export default 404;
-=======
-
-=======
-
-
-}
-
-=======
-};
-
-export default 404;
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba

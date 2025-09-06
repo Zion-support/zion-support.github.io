@@ -14,10 +14,9 @@ export function PartnerLeaderboard() {
       badges: ["gold", "trending"]
     }
     },
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 
     {
@@ -30,10 +29,9 @@ export function PartnerLeaderboard() {
       badges: ["silver"]
     }
     },
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 
     {
@@ -46,10 +44,9 @@ export function PartnerLeaderboard() {
       badges: ["bronze"]
     }
     },
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 
     {
@@ -60,7 +57,7 @@ export function PartnerLeaderboard() {
       referrals: 98
       earnings: 2450
       badges: []
-<<<<<<< HEAD
+
     }
     {
       id: "5"
@@ -120,9 +117,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",;
 import { Badge } from "@/components/ui/badge",;
 import { Crown, Medal, Trophy } from 'lucide-react';
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface LeaderboardEntry {;
   id: string,;
   rank: number,;

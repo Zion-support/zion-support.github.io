@@ -3,7 +3,7 @@
 interface TimelineStepProps {
   formData: QuoteFormData
   updateFormData: (data: Partial<QuoteFormData>) => void
-<<<<<<< HEAD
+
 
 
 import { format } from "date-fns",
@@ -21,8 +21,7 @@ interface TimelineStepProps {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 
 export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {
@@ -30,7 +29,7 @@ export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {
 
     <div className='space-y-6'>
       <div>
-<<<<<<< HEAD
+
         <h3 className='text-xl font-semibold text-white mb-4'>
           When do you need this?
         </h3>
@@ -40,8 +39,7 @@ export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {
     <div className="space-y-6">
       <div>
 <<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
               className={`flex-1 p-4 rounded-lg border-2 cursor-pointer transition-colors ${
                 formData && formData.timeline === 'fixed'
@@ -63,10 +61,9 @@ export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {
             </div>
             
             <div 
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
               className={`flex-1 p-4 rounded-lg border-2 cursor-pointer transition-colors ${
                 formData && formData.timeline === 'flexible'
@@ -84,10 +81,9 @@ export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {
           
           {formData.timeline === "fixed" && (
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 
               <div>
@@ -161,11 +157,8 @@ function TimelineStep() {
                       className={cn(
                         "w-full justify-start text-left font-normal bg-zion-blue border border-zion-blue-light hover:bg-zion-blue-dark",
                         !formData.startDate && "text-zion-slate-light"
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                       )}
                     >
                       <CalendarIcon className="mr-2 h-4 w-4" />
@@ -183,20 +176,18 @@ function TimelineStep() {
                       onSelect={(date) => updateFormData({ startDate: date })}
                       initialFocus
                       className="p-3 pointer-events-auto"
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
                     />
                   </PopoverContent>
                 </Popover>
               </div>
               
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 
               <div>
@@ -206,7 +197,7 @@ function TimelineStep() {
                 <Popover>
                   <PopoverTrigger asChild>
                     <Button
-<<<<<<< HEAD
+
                       variant='outline'
                       className={cn(
                         'w-full justify-start text-left font-normal bg-zion-blue border border-zion-blue-light hover:bg-zion-blue-dark'
@@ -217,8 +208,7 @@ function TimelineStep() {
                         format(formData.endDate, 'PPP')
                       ) : (
                         <span>Pick a date</span>
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
                       selected={formData && formData.startDate}
                       onSelect={date => updateFormData({ startDate: date })}                      initialFocus;
@@ -278,11 +268,8 @@ function TimelineStep() {
                         date < (formData && formData.startDate || new Date());
 
                       mode="single"
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                       selected={formData.endDate}
                       onSelect={date => updateFormData({ endDate: date })}
                       initialFocus

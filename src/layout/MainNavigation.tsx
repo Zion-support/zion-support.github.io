@@ -2,35 +2,7 @@ interface MainNavigationProps {
   isAdmin?: boolean
   unreadCount?: number
   className?: string
-<<<<<<< HEAD
-}
-interface MainNavigationProps {
-  isAdmin?: boolean
-  unreadCount?: number
-  className?: string
-export function MainNavigation({
-  isAdmin = false
-  unreadCount = 0
-  className
-}: MainNavigationProps) {
-  isAdmin = false,;
-  unreadCount = 0,;
-  className;
-}: MainNavigationProps) {;
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false); // Add state
-  const { user } = useAuth()
-  const isAuthenticated = !!user
-  const [loginOpen, setLoginOpen] = useState(false)
-  const { count } = useFavorites()
-  const { items } = useCart()
-  const cartCount = items.length
-  const router = useRouter(); // Changed from useLocation
-  const { t } = useTranslation()
-  const handleCartClick = (e: React.MouseEvent,) => {
-    if (!isAuthenticated) {
-      e.preventDefault()
-      setLoginOpen(true)
-=======
+
 
 import Link from 'next / link';
 import { use_router } from 'next / router';
@@ -85,7 +57,7 @@ if ( {) {
 }
       e.prevent_default ();
       setLoginOpen (true);
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
       return;
 
     }
@@ -116,7 +88,7 @@ class ErrorBoundary extends React.Component {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-<<<<<<< HEAD
+
   ]
   const links = baseLinks.map(link => ({
     ...link
@@ -185,39 +157,7 @@ import { LanguageSelector } from '@/components/header/LanguageSelector',;
 import { HoverCard, HoverCardTrigger, HoverCardContent } from '@/components/ui/hover-card',;
 import { MiniCartPreview } from '@/components/cart/MiniCartPreview',;
 import { LoginModal } from '@/components/auth/LoginModal',;
-=======
-    
-    return this.props.children;
-  }
-}
-import React from 'react';
-import Link from 'next/link';
-import { useRouter } from 'next/router';
-import { useState } from 'react';
-import { cn } from '@/lib/utils';
-import { useAuth } from '@/hooks/useAuth';
-import { useTranslation } from 'react-i18next';
-import { useFavorites } from '@/hooks/useFavorites';
-import { useCart } from '@/context/CartContext';
-import {;
-  Heart,;
-  MessageSquare,;
-  CreditCard,;
-  ShoppingCart,;
-  Wallet,;
-} from 'lucide-react';
-import { LanguageSelector } from '@/components/header/LanguageSelector';
-import {;
-  HoverCard,;
-  HoverCardTrigger,;
-  HoverCardContent,;
-} from '@/components/ui/hover-card';
-import { MiniCartPreview } from '@/components/cart/MiniCartPreview';
-import { LoginModal } from '@/components/auth/LoginModal';import { LanguageSelector } from '@/components/header/LanguageSelector';
-import { HoverCard, HoverCardTrigger, HoverCardContent } from '@/components/ui/hover-card';
-import { MiniCartPreview } from '@/components/cart/MiniCartPreview';
-import { LoginModal } from '@/components/auth/LoginModal';
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 interface MainNavigationProps {;
   isAdmin?: boolean,;
   unreadCount?: number,;
@@ -301,7 +241,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
         className="navbar-toggler md:hidden ml-auto mr-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary" // Added ml-auto and mr-4 for positioning
         onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
         aria-expanded={isMobileMenuOpen}
-<<<<<<< HEAD
+
         aria-controls="main-navbar-collapse"
         aria-label="Toggle navigation"
       >
@@ -309,13 +249,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
       </button>
       <nav
 <<<<<<< HEAD
-=======
-        aria-controls='main-navbar-collapse';
-        aria-label='Toggle navigation'      >;
-        <span className='navbar-toggler-icon'></span>;
-      </button>;
-      <nav
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
         className={cn('navbar', className)}
         role='navigation'
         aria-label='Main navigation'>;
@@ -324,7 +258,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
         <div
           id="main-navbar-collapse"
           className={cn(
-<<<<<<< HEAD
+
             'navbar-collapse'
             { open: isMobileMenuOpen }
             'w-full md:flex md:w-auto', // Handles visibility and desktop layout
@@ -347,29 +281,18 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
             {links.map((link) => (
               <li key={link.name} className="nav-item">
                 <Link 
-=======
 
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   href={link.href}
                   aria-label={link.name}
 
                   onClick={() => setIsMobileMenuOpen(false)}
-<<<<<<< HEAD
+
                   className={cn(
                     'nav-link'
                     'inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary'
                     'nav-link',
                     'inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary',
-=======
 
-
-                    'nav-link',
-                    'inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary',
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                     link.matches(router.pathname)
                       ? 'bg-zion-purple/20 text-zion-cyan'
                       : 'text-white hover:bg-zion-purple/10 hover:text-zion-cyan'
@@ -382,10 +305,9 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
                       : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
                   )}
                 >;
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 
 
@@ -998,16 +920,13 @@ export default function Page() {; []);
                         ? 'bg-zion-purple/20 text-zion-cyan';
                         : 'text-white hover:bg-zion-purple/10 hover:text-zion-cyan';
                     )}
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   >
                     <ShoppingCart className="w-4 h-4 mr-1" />
                     {t('nav.cartCart')}
                     {cartCount > 0 && (
-<<<<<<< HEAD
+
                       <span className='absolute -top-1 -right-1 bg-zion-purple text-white text-xs rounded-full h-5 w-5 flex items-center justify-center'>
                         {cartCount}
                       </span>
@@ -1164,17 +1083,14 @@ export default function Page() { [])
 }`}
                           {link.name}'`
                           <ChevronDown className={`w-4 h-4 transition-transform ${activeDropdown === link.key ? 'rotate-180' : ''}`}  />                        </button>
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }`};
 ;
                           {link.name}'`;
                           <ChevronDown className={`w-4 h-4 transition-transform ${activeDropdown === link.key ? 'rotate-180' : ''}`}  />                        </button>;
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
                         {activeDropdown === link.key && (;"
                           <div className="ml-4 mt-2 space-y-1">
@@ -1278,10 +1194,9 @@ export default function Page() { [])
                       <span className="absolute -top-1 -right-1 bg-zion-purple text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">;
                         {cartCount}
                       </span>;
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 
 

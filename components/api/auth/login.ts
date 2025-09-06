@@ -1,15 +1,15 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
+
+
+
 import {
   createSessionCookie
   validateCredentials;
   createSessionCookie,;
   validateCredentials,;
+
 } from '../../../utils/auth-utils';import { createSessionCookie, validateCredentials } from '../../../utils/auth-utils';
-=======
 
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {;
     return res.status(405).json({ error: 'Method not allowed' });
@@ -56,11 +56,7 @@ if ( {) {
   res.set_header ('Set - Cookie', cookie);
   return res.status (200).json ({ ok: true });
 
-<<<<<<< HEAD
+
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
-}
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

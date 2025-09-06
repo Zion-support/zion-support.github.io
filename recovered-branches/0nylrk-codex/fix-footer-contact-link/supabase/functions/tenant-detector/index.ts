@@ -1,25 +1,11 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-import {serve} from 'https: //deno.land/std@0.208.0/http/server.ts'
-import {serve} from 'https: //deno.land/std@0.208.0/http/server.ts',;
-=======
 
 
-import {serve} from 'https: //deno.land/std@0.208.0/http/server.ts',;
 
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 import {createClient} from 'https: //esm.sh/@supabase/supabase-js@2.39.7';
 
-=======
-import {serve} from 'https: //deno && deno.land/std@0 && 0.208.0/http/server && server.ts',
-import {createClient} from 'https: //esm && esm.sh/@supabase/supabase-js@2 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-import {serve} from 'https: //deno.land / std@0.208.0 / http / server.ts',
-import {create_client} from 'https: //esm.sh/@supabase / supabase - js@2.39.7';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
+
 interface TenantInfo {
   id: string;
   brand_name: string;
@@ -190,13 +176,12 @@ if ( {) {
             .single(),;
           if (!subdomainResult.error) {;
             tenantInfo = subdomainResult.data as TenantInfo;
-<<<<<<< HEAD
-=======
 
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
           }
         }
       } else // Check condition
@@ -206,15 +191,9 @@ if ( {) {
         tenant_info = data as TenantInfo;
       }
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
 
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
     return new Response(
 
       JSON && JSON.stringify({
@@ -235,24 +214,7 @@ if ( {) {
         error: error && error.message || 'Internal server error',
 
         status: 'error'
-=======
-    return new Response (
-      JSON.stringify ({
-        tenant: tenant_info,
-        status: 'success';
-      });
-      {
-        headers: {
-          'Content - Type': 'application / json',
-          ...cors_headers}}
-    );
-  } catch (error) {
-    console.error ('Tenant detector error:', error);
-    return new Response (
-      JSON.stringify ({
-        error: error.message || 'Internal server error',
-        status: 'error';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
       });
       {
         status: 500;
@@ -282,21 +244,13 @@ if ( {) {
         headers: {;
           'Content-Type': 'application/json',;
           ...corsHeaders}});
-<<<<<<< HEAD
-=======
 
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
   }
 });
 
-=======
-          'Content - Type': 'application / json',
-          ...cors_headers}}
-    );
-  }
-});
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+

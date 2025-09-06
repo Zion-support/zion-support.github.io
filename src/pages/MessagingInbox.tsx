@@ -5,7 +5,7 @@ import { ProtectedRoute } from '@/components / ProtectedRoute';
 import { ConversationsList, ConversationDetailView } from '@/components / messaging';
 import { useIsMobile } from '@/hooks / use - mobile';
 import { toast } from 'sonner';
-<<<<<<< HEAD
+
 import { Button } from '@/components/ui/button';
 import { LoadingSpinner } from '@/components/ui/enhanced-loading-states';
 import { useRouter } from 'next/router'; // Changed from react-router-dom
@@ -21,43 +21,17 @@ import { useIsMobile  } from '@/hooks/use-mobile';
 import { toast  } from 'sonner';
 import { Button  } from '@/components/ui/button';
 import { LoadingSpinner  } from '@/components/ui/enhanced-loading-states';
-=======
 
-import { useRouter } from 'next/router', // Changed from react-router-dom;
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import {logErrorToProduction} from '@/utils/productionLogger';
 export default function MessagingInbox() {;
 import { useRouter } from 'next/router'; // Changed from react-router-dom
 
 import {logErrorToProduction} from '@/utils/productionLogger';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-import React, { useEffect, useState } from 'react',
-import { MessageSquare, Video } from 'lucide-react'
-import { useMessaging } from '@/context/MessagingContext',
-import { ProtectedRoute } from '@/components/ProtectedRoute',
-import { ConversationsList, ConversationDetailView } from '@/components/messaging',
-import { useIsMobile } from '@/hooks/use-mobile',
-import { toast } from 'sonner',
-import { Button } from '@/components/ui/button',
-import { LoadingSpinner } from '@/components/ui/enhanced-loading-states',
-import { useRouter } from 'next/router', // Changed from react-router-dom
-import {logErrorToProduction} from '@/utils/productionLogger',
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 export default function MessagingInbox() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 
 export default function MessagingInbox() {
@@ -78,7 +52,7 @@ export default function MessagingInbox() {
   useEffect((,) => {
   const { 
     conversations,
-<<<<<<< HEAD
+
     activeConversation, ;
     setActiveConversation;
     markAsRead;
@@ -100,10 +74,7 @@ export default function MessagingInbox() {
   const [activeCall, setActiveCall] = useState<string | null>(null),
   
   useEffect(() => {
-=======
 
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     // Fetch conversations when component mounts
     const loadData = async () => {
 import { Button } from '@/components / ui / button';
@@ -132,17 +103,14 @@ function MessagingInbox() {
       try {
         await fetchConversations()
       } catch (error) {
-<<<<<<< HEAD
+
         logErrorToProduction('Failed to load conversations:', { data: error })
         toast.error("Failed to load messages. Please try again.")
       }
     }
     loadData()
   }, [fetchConversations]);
-=======
 
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     };
     
     loadData()
@@ -156,10 +124,9 @@ function MessagingInbox() {
     
     const roomId = `msg-${activeConversation.id}`;
     setActiveCall(roomId);
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
     },
     
@@ -171,7 +138,7 @@ function MessagingInbox() {
       toast.error("Please select a conversation first"),
       return
     }
-<<<<<<< HEAD
+
     const roomId = `msg-${activeConversation.id}`;
     setActiveCall(roomId);
     // Show toast notification
@@ -181,8 +148,7 @@ function MessagingInbox() {
     // Navigate to video call page
     router.push(`/call/${roomId}`), // Changed from navigate
   }
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
     
     const roomId = `msg-${activeConversation.id}`,
@@ -190,16 +156,15 @@ function MessagingInbox() {
     
     const roomId = `msg-${activeConversation.id}`,
     setActiveCall(roomId),
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
     
     // Show toast notification
     toast.success("Starting video call", {
       description: "Initializing video call connection..."
-<<<<<<< HEAD
+
     });
     
     // Navigate to video call page
@@ -210,10 +175,7 @@ function MessagingInbox() {
     // Navigate to video call page
     router.push(`/call/${roomId}`), // Changed from navigate
   },
-=======
 
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   
   return (
     <ProtectedRoute>
@@ -224,10 +186,9 @@ function MessagingInbox() {
               <MessageSquare className="h-6 w-6" />
               Messages
             </h1>
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 
   useEffect((,) => {;
@@ -245,10 +206,9 @@ function MessagingInbox() {
             )}
           </div>
           
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
           <div className="bg-zion-blue-light/10 rounded-lg shadow-lg border border-zion-purple/20 overflow-hidden">
             <div className={`flex flex-col md:flex-row h-[${isMobile ? '85vh' : '75vh'}]`}>
@@ -259,16 +219,14 @@ function MessagingInbox() {
                 </div>
               ) : (
                 <ConversationsList
-<<<<<<< HEAD
+
                   conversations = {conversations,}
                   activeConversation = {activeConversation,}
                   setActiveConversation = {setActiveConversation,}
                   markAsRead = {markAsRead,}
                 />
               )}
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               
 
 import React, { useEffect, useState } from 'react',;
@@ -358,10 +316,9 @@ export default function MessagingInbox() {;
               )}
 
 ;
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 
 

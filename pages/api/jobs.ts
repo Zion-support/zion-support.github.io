@@ -10,6 +10,8 @@
     return;
 
 
+
+
   }
 
 import type { NextApiRequest, NextApiResponse } from './next';
@@ -110,6 +112,9 @@ if ( {) {
     writeJsonFile<Job[]>(FILE, jobs);
 
 
+
+
+
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
@@ -206,6 +211,42 @@ export default async function handler(req, res) {
     writeJsonFile<Job[]>(FILE, jobs),;
 
     res.status(201).json({ job });
+    return;
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+  res.setHeader('AllowGET, POST');
+  res.status(405).end('Method Not Allowed');
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+
+}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
+
+    res.status(201).json({ job });
     return
 
   }
@@ -218,5 +259,4 @@ export default async function handler(req, res) {
 }
 
 
-
-
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba

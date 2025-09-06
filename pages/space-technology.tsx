@@ -1,8 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 import React from 'react';
 import Layout from '../components/layout/Layout';
@@ -18,7 +15,7 @@ import {
   Music, Film, BookOpenCheck, Building, MessageCircle
   Sparkles, ArrowRight, CheckCircle, Star, Globe, Satellite
 } from 'lucide-react'
-<<<<<<< HEAD
+
 const SpaceTechnologyPage: React.FC = () => {
   const spaceServices = [
     {
@@ -114,14 +111,7 @@ const SpaceTechnologyPage: React.FC = () => {
       icon: <Heart className="w-6 h-6" />
     }
   ]
-=======
-=======
-import React from 'react',
-import Layout from '../components / layout / Layout',
-import SEO from '../components / SEO',
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React from 'react',;
 import Layout from '../components/layout/Layout',;
 import SEO from '../components/SEO',;
@@ -134,11 +124,9 @@ import {
   Video, Headphones, Code, Database, Network, Server, 
   Monitor, Smartphone, Camera, Gamepad2, Palette, 
   Music, Film, BookOpenCheck, Building, MessageCircle, 
-<<<<<<< HEAD
-=======
 
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 import React from 'react',
 import Layout from '../components/layout/Layout',
 import SEO from '../components/SEO',
@@ -152,13 +140,11 @@ import {
   Video, Headphones, Code, Database, Network, Server,
   Monitor, Smartphone, Camera, Gamepad2, Palette,
   Music, Film, BookOpenCheck, Building, MessageCircle,
-<<<<<<< HEAD
-=======
 
 
 
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
   Sparkles, ArrowRight, CheckCircle, Star, Globe, Satellite
 } from 'lucide-react',
 const SpaceTechnologyPage: React.FC = () => {
@@ -222,17 +208,17 @@ const SpaceTechnologyPage: React.FC = () => {
       period: 'month',
       popular: false,
       icon: <Building className="w-8 h-8" />
-<<<<<<< HEAD
-    }
+
+
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
   ],
   const spaceCapabilities = [
     {
@@ -264,29 +250,27 @@ const SpaceTechnologyPage: React.FC = () => {
       title: 'Sustainable Development',
       description: 'Eco-friendly space infrastructure',
       icon: <Heart className="w-6 h-6" />
-<<<<<<< HEAD
-    }
+
+
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
   ],
   return (
     <Layout>
-<<<<<<< HEAD
-      <SEO
-      <SEO 
-      <SEO
-=======
 
+      <SEO
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
         title="Space Technology Solutions - Zion Tech Group"
         description="Revolutionary space technology solutions for the future. From resource mining to autonomous systems, explore the final frontier."
         keywords="space technology, space mining, AI space systems, brain-computer interface, autonomous vehicles, quantum space communications"
@@ -298,11 +282,11 @@ const SpaceTechnologyPage: React.FC = () => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
         <section className="min-h-[60vh] flex items-center justify-center px-4 py-20">
           <div className="text-center max-w-4xl mx-auto">
             <motion.div
@@ -330,15 +314,18 @@ const SpaceTechnologyPage: React.FC = () => {
                 Pioneering the future of space exploration with cutting-edge technology and intelligent systems
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-<<<<<<< HEAD
+
                 <a
                   href="/contact"
                 <a 
                   href="/contact" 
+
                   className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-700 transition-all duration-300 transform hover:scale-105"
                 >
                   Get Started
                 </a>
+
+
                 <a 
                   href="/contact" 
                 <a
@@ -346,20 +333,17 @@ const SpaceTechnologyPage: React.FC = () => {
                   className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-700 transition-all duration-300 transform hover:scale-105"
                 >
                   Get Started
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
                 </Link>
                 <a
                   href="/contact"
-=======
 
 
-
-                <a
-                  href="/contact"
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
                   className="px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-black transition-all duration-300 transform hover:scale-105"
                 >
                   Schedule Demo
@@ -405,12 +389,12 @@ const SpaceTechnologyPage: React.FC = () => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
@@ -453,11 +437,11 @@ const SpaceTechnologyPage: React.FC = () => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
                   className="bg-gradient-to-br from-gray-800 to-gray-900 p-6 rounded-xl border border-gray-700 hover:border-purple-500 transition-all duration-300"
                 >
                   <div className="flex items-center mb-4">
@@ -468,12 +452,12 @@ const SpaceTechnologyPage: React.FC = () => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
                     </div>
                     <h3 className="text-xl font-semibold text-white">{capability.title}</h3>
                   </div>
@@ -527,12 +511,12 @@ const SpaceTechnologyPage: React.FC = () => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
@@ -615,11 +599,11 @@ const SpaceTechnologyPage: React.FC = () => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
                     </div>
                     <h3 className="text-2xl font-bold text-white mb-2">{service.name}</h3>
                     <p className="text-gray-300 mb-4">{service.description}</p>
@@ -630,12 +614,12 @@ const SpaceTechnologyPage: React.FC = () => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
                       <span className="text-lg text-gray-400">/{service.period}</span>
                     </div>
                   </div>
@@ -643,22 +627,12 @@ const SpaceTechnologyPage: React.FC = () => {
                     {service.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-gray-300">
                         <CheckCircle className="w-5 h-5 text-purple-400 mr-3 flex-shrink-0" />
-<<<<<<< HEAD
+
                         {feature}
                       </li>
                     ))}
-                  </ul>
-                  <a 
-                    href="/contact" 
-=======
 
 
-                  </ul>
-                  <a 
-                    href="/contact" 
-
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                         {feature  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -673,13 +647,12 @@ const SpaceTechnologyPage: React.FC = () => {
                   </ul>
                   <a
                     href="/contact"
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
                     className="w-full block text-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-700 transition-all duration-300"
                   >
                     Get Started
@@ -703,11 +676,11 @@ const SpaceTechnologyPage: React.FC = () => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
         <section className="py-20 px-4 bg-gradient-to-b from-gray-900 to-black">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
@@ -740,15 +713,18 @@ const SpaceTechnologyPage: React.FC = () => {
                 Join the space revolution and be part of humanity's next great adventure
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-<<<<<<< HEAD
+
                 <a
                   href="/contact"
                 <a 
                   href="/contact" 
+
                   className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-700 transition-all duration-300 transform hover:scale-105"
                 >
                   Start Your Space Journey
                 </a>
+
+
                 <a 
                   href="/contact" 
                 <a
@@ -756,20 +732,17 @@ const SpaceTechnologyPage: React.FC = () => {
                   className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-700 transition-all duration-300 transform hover:scale-105"
                 >
                   Start Your Space Journey
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
                 </Link>
                 <a
                   href="/contact"
-=======
 
 
-
-                <a
-                  href="/contact"
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
                   className="px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-black transition-all duration-300 transform hover:scale-105"
                 >
                   Schedule Consultation
@@ -784,16 +757,11 @@ const SpaceTechnologyPage: React.FC = () => {
 }
 export default SpaceTechnologyPage;
 
-<<<<<<< HEAD
+
 },
 
-export default SpaceTechnologyPage,;
-;
-;
 export default SpaceTechnologyPage,
-=======
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
             >;
               <h2 className="text - 4xl md: text - 5xl font - bold mb - 6 bg - gradient - to - r from - purple - 400 to - pink - 500 bg - clip - text text - transparent">;
                 Ready to Explore Space?;
@@ -819,21 +787,14 @@ export default SpaceTechnologyPage,
           </div>;
         </section>;
       </main>;
-<<<<<<< HEAD
+
     </Layout>;
   );
 },;
 export default SpaceTechnologyPage;
-=======
-    </Layout>);
-},
-export default SpaceTechnologyPage,
-;
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
-},
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba

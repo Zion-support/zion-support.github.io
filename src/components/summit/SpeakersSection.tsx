@@ -7,19 +7,14 @@ interface Speaker {
   linkedin?: string
 }
 interface Speaker {
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   name: string,
   title: string,
   avatar: string,
   twitter?: string
-<<<<<<< HEAD
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 import Image from "next/image",
 import { Twitter, Linkedin } from 'lucide-react'
 
@@ -28,11 +23,10 @@ interface Speaker {
   title: string,
   avatar: string,
   twitter?: string,
-<<<<<<< HEAD
+
   linkedin?: string
 }
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 
   name: string,
@@ -40,7 +34,7 @@ interface Speaker {
   avatar: string,
   twitter?: string
 
-<<<<<<< HEAD
+
 import Image from "next/image",
 import { Twitter, Linkedin } from 'lucide-react'
 
@@ -49,8 +43,7 @@ interface Speaker {
   title: string,
   avatar: string,
   twitter?: string,
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
   linkedin?: string
 }
 
@@ -62,9 +55,7 @@ interface Speaker {
   linkedin?: string
 }
 const speakers: Speaker[] = [
-<<<<<<< HEAD
-  {
-=======
+
   {
 
 
@@ -321,4 +312,4 @@ export function SpeakersSection() {;
     </section>);
 }
 ;
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+

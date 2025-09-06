@@ -1,30 +1,6 @@
 
-<<<<<<< HEAD
-=======
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 import React, { useState } from "react";
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
@@ -34,9 +10,7 @@ import {SEO} from "@/components/SEO";
 import {useAuth} from "@/hooks/useAuth";
 import {Navigate} from "react-router-dom";
 export default function ServiceDescriptionGenerator() {;
-<<<<<<< HEAD
-  const { isAuthenticated, isLoading } = useAuth();
-  const [generatedDescription, setGeneratedDescription] = useState<string | null>(null);
+
 import React, { useState } from "react",
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
@@ -46,9 +20,7 @@ import { SEO } from "@/components/SEO",
 import { useAuth } from "@/hooks/useAuth";
 import { Navigate } from "react-router-dom";
 export default function ServiceDescriptionGenerator() {
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const { isAuthenticated, isLoading } = useAuth();
 
   const [generatedDescription, setGeneratedDescription] = useState<string | null>(null);
@@ -95,9 +67,10 @@ export default function ServiceDescriptionGenerator() {
           <div className="space-y-8">
             <ServiceDescriptionForm onDescriptionGenerated={setGeneratedDescription} />
             {generatedDescription && (
-<<<<<<< HEAD
+
               <GeneratedDescriptionDisplay
               <GeneratedDescriptionDisplay 
+
 import React, { useState } from "react",;
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
@@ -109,10 +82,7 @@ import { Navigate } from "react-router-dom",;
 export default function ServiceDescriptionGenerator() {;
   const { isAuthenticated, isLoading } = useAuth(),;
   const [generatedDescription, setGeneratedDescription] = useState<string | null>(null),;
-=======
 
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   // Show loading while checking authentication;
   if (isLoading) {;
     return (
@@ -153,17 +123,13 @@ export default function ServiceDescriptionGenerator() {;
             <ServiceDescriptionForm onDescriptionGenerated={setGeneratedDescription} />;
 
             {generatedDescription && (;
-<<<<<<< HEAD
-              <GeneratedDescriptionDisplay;
-=======
 
-              <GeneratedDescriptionDisplay
-=======
 
-              <GeneratedDescriptionDisplay 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
                 description={generatedDescription}
                 onSave={handleDescriptionSave}
               />;

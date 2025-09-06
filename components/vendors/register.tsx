@@ -1,19 +1,10 @@
-<<<<<<< HEAD
+
 import { FormEvent, useState } from 'react';
 import {FormEvent, useState} from 'react';
-export default function VendorRegisterPage() {;
-=======
 
-import {FormEvent, useState} from 'react';
 
-export default function VendorRegisterPage() {;
 
-=======
-
-import {FormEvent, useState} from 'react';
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState<string | null>(null);
   async function onSubmit(): any (e: FormEvent<HTMLFormElement>) {;
@@ -47,23 +38,7 @@ import {FormEvent, useState} from 'react';
       const data = await res && res.json();
       if (!res && res.ok) throw new Error(data?.error || 'Failed to submit');
 
-=======
-          slug: String(payload.slug),
-          name: String(payload.name),
-          servicesOffered: String(payload.servicesOffered || '')
-            .split()
-            .map(s => s.trim())
-            .filter(Boolean);
-          teamSize: Number(payload.teamSize || 0),
-          about: String(payload.about || ''),
-          verificationDocs: String(payload.verificationDocs || '')
-            .split()
-            .map(s => s.trim())
-            .filter(Boolean)
-          caseStudies: []
-        })
-      });
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
       const data = await res.json();
       if (!res.ok) throw new Error(data?.error || 'Failed to submit');
       setMessage('Application submitted. Await approval.');
@@ -73,22 +48,8 @@ import {FormEvent, useState} from 'react';
     } finally {;
       setLoading(false);    }
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-  return (
-
-=======
 
 
-=======
-
-  return (
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return (            .map(s => s.trim())
             .filter(Boolean);
           teamSize: Number(payload.teamSize |0)
@@ -103,66 +64,8 @@ import {FormEvent, useState} from 'react';
       setMessage('Application submitted. Await approval.');
 
       form.reset()
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
-import {FormEvent, useState} from 'react';
-export default /**
- * VendorRegisterPage - Function description
- */
-function VendorRegisterPage() {
-  const [loading, set_loading] = useState (false);
-  const [message, set_message] = useState < string | null>(null);
-;
-  async /**
- * on_submit - Function description
- */
-function on_submit() {
-    e.prevent_default ();
-    set_loading (true);
-    set_message (null);
-    const form = e.current_target;
-    const form_data = new FormData (form);
-    const payload = Object.from_entries (form_data.entries ()),
-    try {
-      const res = await fetch ('/api / vendors / register', {
-        method: 'POST',
-        headers: { 'Content - Type': 'application / json' },
-        body: JSON.stringify ({
-          slug: String (payload.slug),
-          name: String (payload.name),
-          services_offered: String (payload.services_offered || '');
-            .split (', ');
-            .map (string => s.trim ());
-            .filter (Boolean),
-          team_size: Number (payload.team_size || 0),
-          about: String (payload.about || ''),
-          verification_docs: String (payload.verification_docs || '');
-            .split (', ');
-            .map (string => s.trim ());
-            .filter (Boolean),
-          case_studies: [],
-        }),
-      });
-      const data = await res.json ();
-      if (throw new Error (data?.error || 'Failed to submit')) {
-  $2
-}
-      set_message ('Application submitted. Await approval.');
-      form.reset ();
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
 
-  return (
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (            .map(s => s.trim())
             .filter(Boolean);
           teamSize: Number(payload.teamSize |0)
@@ -175,8 +78,7 @@ function on_submit() {
       const data = await res.json();
       if (!res.ok) throw new Error(data?.error |'Failed to submit');
       setMessage('Application submitted. Await approval.');
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
 
       form.reset()
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -186,6 +88,7 @@ function on_submit() {
       setLoading(false)
     }
   }
+
 
   return (
     <div className='max-w-2xl mx-auto space-y-6'>
@@ -257,43 +160,13 @@ function on_submit() {
 );
 }
 
-    }
-=======
-    } catch (err: any) {
-      set_message (err.message);
-    } finally {
-      set_loading (false);    }
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-  }
 
-
-  return (            .map(s => s && s.trim());
-            .filter(Boolean);
-          teamSize: Number(payload && payload.teamSize || 0),;
-          about: String(payload && payload.about || ''),;
-          verificationDocs: String(payload && payload.verificationDocs || '');
-            .split();
-            .map(s => s && s.trim());
-            .filter(Boolean);
-          caseStudies: []})}),;
-      const data = await res && res.json();
-      if (!res && res.ok) throw new Error(data?.error || 'Failed to submit');
-      setMessage('Application submitted. Await approval.');
-      form && form.reset();
-    } catch (err: any) {;
-      setMessage(err && err.message);
-    } finally {;
-      setLoading(false);
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     }
   }
-<<<<<<< HEAD
+
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 
   );
@@ -404,15 +277,8 @@ function on_submit() {
 
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+

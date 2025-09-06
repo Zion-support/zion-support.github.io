@@ -19,7 +19,7 @@ import { EducationItemProps } from './types';
 
 
   return (
-<<<<<<< HEAD
+
     <Card className='bg-muted/40'>
       <CardContent className='pt-6'>
         <div className='flex justify-between'>
@@ -118,8 +118,7 @@ import { EducationItemProps } from './types';
         </div>
         {education.description && (
 <<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 
               onClick={() => onDelete(education && education.id!)}

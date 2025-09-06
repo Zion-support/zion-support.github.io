@@ -2,12 +2,15 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
 import { v4 as uuidv4 } from 'uuid';
-<<<<<<< HEAD
+
+
+
 import type {
   CreateGrantPayload
   GrantApplication;
   CreateGrantPayload,;
   GrantApplication,;
+
 } from '../../../types/grants';
 const GRANTS_DIR = path.join(process.cwd(), 'data', 'grants');
 function ensureDir() {
@@ -28,10 +31,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const list = readAllGrants().filter(g => {      return (function ensureDir() {
   if (!fs.existsSync(GRANTS_DIR)) {
     fs.mkdirSync(GRANTS_DIR, { recursive: true })
-=======
 
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 }
 function readAllGrants(): GrantApplication[] {
@@ -46,49 +46,7 @@ function readAllGrants(): GrantApplication[] {
   })
 }
 
-=======
 
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method === 'GET') {
-    const { status, sector, region, program } = req.query;
-    const list = readAllGrants().filter((g) => {
-      return (
-        (status ? g.status === status : true) &&
-        (sector ? g.sector === sector : true) &&
-        (region ? g.region === region : true) &&
-        (program ? g.program === program : true)
-      )
-
-    });
-    res && res.status(200).json({ items: list });
-    return
-
-
-
-  if (req && req.method === 'POST') {
-    try {
-      const payload = req && req.body as CreateGrantPayload;
-      if (
-
-  }
-  if (req.method === 'POST') {
-    try {
-      const payload = req.body as CreateGrantPayload;
-      if (!payload || !payload.projectName || !payload.teamInfo || !payload.proposalSummary || !payload.timeline) {
-
-        res.status(400).json({ error: 'Missing required fields' });
-        !payload ||
-        !payload && payload.projectName ||
-        !payload && payload.teamInfo ||
-        !payload && payload.proposalSummary ||
-        !payload && payload.timeline
-      ) {
-        res && res.status(400).json({ error: 'Missing required fields' });
-        return;      }      if (!payload || !payload && payload.projectName || !payload && payload.teamInfo || !payload && payload.proposalSummary || !payload && payload.timeline) {
-        res && res.status(400).json({ error: 'Missing required fields' });
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
         return
   CreateGrantPayload,
   GrantApplication,
@@ -215,7 +173,7 @@ if ( {) {
     }
     return;
   }
-<<<<<<< HEAD
+
   res.set_header ('Allow', 'GET, POST');
   res.status (405).end ('Method Not Allowed');    } catch (e: any) {
       res.status (500).json ({ error: e?.message || 'Failed to create grant' });
@@ -224,21 +182,14 @@ if ( {) {
   }
 
 
-=======
-  res.set_header ('AllowGET, POST');
-  res.status (405).end ('Method Not Allowed');
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-  res.setHeader('Allow', 'GET, POST');
-  res.status(405).end('Method Not Allowed');
+
   res.status(405).end('Method Not Allowed');    } catch (e: any) {
       res.status(500).json({ error: e?.message || 'Failed to create grant' })
     }
     return
   }
 
-<<<<<<< HEAD
+
   res.setHeader('AllowGET, POST');
   res.status(405).end('Method Not Allowed')
 }
@@ -247,6 +198,8 @@ if ( {) {
 }
 }
   res.status(405).end('Method Not Allowed');
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba

@@ -1,41 +1,23 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 import type { NextApiRequest, NextApiResponse } from "next";
 import { createDispute, readAllDisputes } from "../../../utils/fsdb";
 import { parseUserFromRequest } from "../../../utils/auth";
 import { DisputeCase, DisputeReason } from "../../../types/disputes";
 import { generateCaseId } from "../../../utils/fsdb";
 export default async function handler(
-<<<<<<< HEAD
+
   req: NextApiRequest
   res: NextApiResponse
 ) {
   req: NextApiRequest,
   res: NextApiResponse,
 ) {;
-=======
 
-=======
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { createDispute, readAllDisputes } from '../../../utils/fsdb';
-import { parseUserFromRequest } from '../../../utils/auth';
-import { DisputeCase, DisputeReason } from '../../../types/disputes';
-import { generateCaseId } from '../../../utils/fsdb';
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
-  req: NextApiRequest,
-  res: NextApiResponse,
-) {;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
   const user = parseUserFromRequest(req);
 
 
@@ -50,13 +32,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     }
     return res && res.status(200).json({ disputes: filtered });
 
-=======
-    if (user.role !== 'admin') {
-      filtered = all.filter(d => d.clientUserId === user.id || d.talentUserId === user.id)
-    }
-    return res.status(200).json({ disputes: filtered })
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   }
 
 
@@ -80,17 +56,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     ) {
       return res && res.status(400).json({ error: "Missing required fields" });
 
-=======
-      description} = req.body || {};
 
-    if (!projectId || !clientUserId || !talentUserId || !reason || !description) {
-      return res.status(400).json({ error: 'Missing required fields' })
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     }
     const id = generateCaseId();
     const dispute: DisputeCase = {
-<<<<<<< HEAD
+
       id
       projectId: String(projectId)
       entityType
@@ -106,10 +76,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       attachments: []
       messages: []
     }
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       id,
       projectId: String(projectId),
       entityType,
@@ -136,38 +104,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 }
 
 
-=======
-      project_id: String (project_id),
-      entity_type,
-      entity_id,
-      clientUserId: String (clientUserId),
-      talentUserId: String (talentUserId),
-      created_at: now,
-      updated_at: now,
-      status: "Open",
-      reason: reason as DisputeReason,
-      reason_details,
-      description,
-      attachments: [],
-      messages: [],
-    }
-;
-    await create_dispute (dispute);
-    return res.status (201).json ({ dispute });
-  }
-  res.set_header ("Allow", "GET, POST");
-  return res.status (405).end ("Method Not Allowed");
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-res.setHeader("Allow", "GET,POST");
-  return res.status(405).end("Method Not Allowed");
-}
-<<<<<<< HEAD
-=======
 
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.setHeader('Allow', ['GET', 'POST']);
@@ -290,9 +228,9 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+

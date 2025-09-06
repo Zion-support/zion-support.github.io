@@ -22,43 +22,23 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React, { useEffect, useMemo, useState } from 'react';
-<<<<<<< HEAD
+
 import Head from 'next/head';
 export default function AccountSettingsPage() {
-  const [user, setUser] = useState<{ address: string, chain: 'evm' | 'sol' } | null>(null);
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-  const [user, setUser] = useState<{;
-    address: string;
-    chain: 'evm' | 'sol';
-  } | null>(null);  const [displayWeb3, setDisplayWeb3] = useState<boolean>(false);
-<<<<<<< HEAD
-=======
-
-
-=======
-export default function AccountSettingsPage() {
-  const [user, setUser] = useState<{ address: string, chain: 'evm' | 'sol' } | null>(null),
-  const [displayWeb3, setDisplayWeb3] = useState<boolean>(false);
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default function AccountSettingsPage(req, res) {
   try {
   const [user, setUser] = useState<{ address: string, chain: 'evm' | 'sol' } | null>(null),;
   const [displayWeb3, setDisplayWeb3] = useState<boolean>(false);
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
   const [ens, setEns] = useState('');
   const [lens, setLens] = useState('');
   const [ceramic, setCeramic] = useState('');
@@ -112,69 +92,7 @@ export default function AccountSettingsPage(req, res) {
       const msg = `Link Web3 identities to Zion account\n${JSON.stringify(payload)}`;
       // Sign message with connected wallet if possible (best effort);
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-import Head from 'next / head';
-export default /**
- * AccountSettingsPage - Function description
- */
-function AccountSettingsPage() {
-  const [user, set_user] = useState<{
-    address: string;
-    chain: 'evm' | 'sol';
-  } | null>(null);  const [displayWeb3, setDisplayWeb3] = useState < boolean>(false);
-  const [ens, set_ens] = useState ('');
-  const [lens, set_lens] = useState ('');
-  const [ceramic, set_ceramic] = useState ('');
-  const [farcaster, set_farcaster] = useState ('');
-  const [linking, set_linking] = useState (false);
-  const [backup_cid, setBackupCid] = useState ('');
-  const [restore_cid, setRestoreCid] = useState ('');
-  const [status, set_status] = useState < string | null>(null);
-;
-  useEffect (() => {
-    const saved =;
-      typeof window !== 'undefined';
-        ? window.local_storage.get_item ('zion - web3 - user');
-        : null;
-    if (set_user (JSON.parse (saved))) {
-  $2
-}
-    const pref =;
-      typeof window !== 'undefined';
-        ? window.local_storage.get_item ('zion - web3 - display');
-        : null;
-    setDisplayWeb3 (pref === 'true');  }, []);
-;
-  const saveDisplayPref = (val: boolean) =>: any {
-    setDisplayWeb3 (val),
-    if (
-      window.local_storage.set_item ('zion - web3 - display', String (val))) {
-  $2
-}  }
-;
-  const linkDID = async () => {
-    // Check condition
-if (return) {
-  $2
-}
-    set_linking (true);
-    set_status (null);
-    try {
-      const nonce_res = await fetch ('/api / auth / nonce');
-      const { nonce } = await nonce_res.json ();
-      const payload = {
-        ens,
-        lens,
-        ceramic,
-        farcaster,
-        address: user.address,
-        chain: user.chain,
-        nonce,
-        ts: Date.now (),
-      }
-      const msg = `Link Web3 identities to Zion account\n${JSON.stringify (payload)}`;
-      // Sign message with connected wallet if possible (best effort);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
       let signature: string | null = null;
       try {;
         if (user && user.chain === 'evm' && (window as any).ethereum) {;
@@ -398,124 +316,7 @@ if (return) {
   };
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
-=======
-        setFarcaster(did.farcaster || '');
-        } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-      setStatus('Profile restored from backup');
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-  return (
-
-                  className={`absolute left-0 top-0 w-6 h-6 bg-white rounded-full transition-transform ${displayWeb3 ? 'translate-x-4' : ''}`}></span>              </span>;
-            </label>;
-          </div>;
-        </section>;
-
-        <section className='rounded-xl border p-5'>;
-          <h2 className='font-semibold mb-2'>Link Web3 identities</h2>;
-          <div className='grid grid-cols-1 gap-3'>;
-
-            <input
-              value={ens}
-              onChange={e => setEns(e && e.target.value)}
-              placeholder='ENS (e && e.g. vitalik && vitalik.eth)';
-              className='w-full rounded-md border px-3 py-2';
-            />;
-            <input
-              value={lens}
-              onChange={e => setLens(e && e.target.value)}
-              placeholder='Lens handle (e && e.g. alice && alice.lens)';
-              className='w-full rounded-md border px-3 py-2';
-            />;
-            <input
-              value={ceramic}
-              onChange={e => setCeramic(e && e.target.value)}
-              placeholder='Ceramic DID (did:3:...)';
-              className='w-full rounded-md border px-3 py-2';
-            />;
-            <input
-              value={farcaster}
-              onChange={e => setFarcaster(e && e.target.value)}
-              placeholder='Farcaster handle (e && e.g. @alice)';
-              className='w-full rounded-md border px-3 py-2';
-            />;
-            <button
-              onClick={linkDID}
-              disabled={linking}
-              className='rounded-md bg-black text-white dark:bg-white dark:text-black px-4 py-2'>;
-              {linking ? 'Linking…' : 'Link & Verify'}
-
-            </button>;
-          </div>;
-        </section>;
-
-        <section className='rounded-xl border p-5'>;
-          <h2 className='font-semibold mb-2'>Decentralized Backup</h2>;
-          <p className='text-sm text-gray-500 mb-3'>;
-            Back up talent profiles, resume, and project reviews to IPFS/Arweave;
-            (via Web3 && Web3.Storage). Opt-in only.;
-          </p>;
-          <div className='flex flex-wrap items-center gap-3'>;
-
-            <button
-              onClick={doBackup}
-              className='rounded-md bg-emerald-600 text-white px-4 py-2'>;
-              Create Backup;
-            </button>;
-            {backupCid && (;
-              <span className='text-xs'>;
-                CID:{' '}
-                <code className='bg-gray-100 dark:bg-neutral-800 px-2 py-1 rounded'>;
-                  {backupCid}
-                </code>;
-              </span>;
-            )}
-          </div>;
-          <div className='mt-4 flex gap-2'>;
-            <input
-              value={restoreCid}
-
-              onChange={e => setRestoreCid(e && e.target.value)}
-              placeholder='Enter CID to restore';
-              className='flex-1 rounded-md border px-3 py-2';
-            />;
-            <button onClick={doRestore} className='rounded-md border px-4 py-2'>;
-=======
-      set_status (e?.message || 'Backup failed');    }
-  }
-;
-  const do_restore = async () => {
-    set_status (null);
-    try {
-      const res = await fetch (
-        `/api / backup / restore?cid=${encodeURIComponent (restore_cid || backup_cid)}`);      const data = await res.json ();
-      if (throw new Error (data?.error || 'Restore failed')) {
-  $2
-}
-      const { user: u, preferences, did } = data;
-      if (set_user (u)) {
-  $2
-}
-      if (saveDisplayPref (!!preferences.displayWeb3)) {
-  $2
-}
-      // Check condition
-if ( {) {
-  $2
-}
-        set_ens (did.ens || '');
-        set_lens (did.lens || '');
-        set_ceramic (did.ceramic || '');
-        set_farcaster (did.farcaster || '');
-      }
-      set_status ('Profile restored from backup');
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     } catch (e: any) {
       set_status (e?.message || 'Restore failed');    }
   }
@@ -625,7 +426,7 @@ if ( {) {
         </section>;
 
 
-<<<<<<< HEAD
+
     } catch (error) {
       setStatus(e?.message || 'Restore failed');
       } catch (error) {
@@ -634,10 +435,13 @@ if ( {) {
   }
 }
   },
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
   return (
-=======
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
     <>
       <Head>
         <title>Account Settings — Zion</title>
@@ -738,33 +542,25 @@ if ( {) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
           </div>
           <div className="mt-4 flex gap-2">
             <input value={restoreCid} onChange={(e) => setRestoreCid(e.target.value)} placeholder="Enter CID to restore" className="flex-1 rounded-md border px-3 py-2" />
             <button onClick={doRestore} className="rounded-md border px-4 py-2">Restore profile</button>
           </div>
         </section>
-<<<<<<< HEAD
+
         {status && <div className='text-sm text-gray-600'>{status}</div>}
       </div>
     </>
 );
 
-}
-=======
 
-
-
-}
-
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         {status && <div className="text-sm text-gray-600">{status}</div>  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -775,18 +571,16 @@ if ( {) {
     </>
   )
 }
-<<<<<<< HEAD
-=======
+
 
         {status && <div className='text - sm text - gray - 600'>{status}</div>}
       </div>;
     </>);
 ;
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+

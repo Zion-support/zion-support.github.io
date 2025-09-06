@@ -1,58 +1,9 @@
-<<<<<<< HEAD
-import { createWriteStream } from 'fs';
-import { join } from 'path';
-;
-const generateSitemap = () => {;
-  const sitemap = `<?xml version="1.0" encoding="UTF-8"?>;
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">;
-  <url>;
-    <loc>https://ziontechgroup.com/</loc>;
-    <lastmod>${new Date().toISOString()}</lastmod>;
-    <changefreq>daily</changefreq>;
-    <priority>1.0</priority>;
-  </url>;
-  <url>;
-    <loc>https://ziontechgroup.com/about</loc>;
-    <lastmod>${new Date().toISOString()}</lastmod>;
-    <changefreq>weekly</changefreq>;
-    <priority>0.8</priority>;
-  </url>;
-  <url>;
-    <loc>https://ziontechgroup.com/services</loc>;
-    <lastmod>${new Date().toISOString()}</lastmod>;
-    <changefreq>weekly</changefreq>;
-    <priority>0.8</priority>;
-  </url>;
-  <url>;
-    <loc>https://ziontechgroup.com/contact</loc>;
-    <lastmod>${new Date().toISOString()}</lastmod>;
-    <changefreq>monthly</changefreq>;
-    <priority>0.6</priority>;
-  </url>;
-</urlset>`;
-;
-  const sitemapPath = join(process.cwd(), 'public', 'sitemap.xml');
-  const writeStream = createWriteStream(sitemapPath);
-  writeStream.write(sitemap);
-  writeStream.end();
-;
-  console.log('Sitemap generated successfully at:', sitemapPath);
-};
-;generateSitemap();
-};
-;
-=======
-
-
-=======
 
 
 
-=======
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 import { createWriteStream } from 'fs',
 import { join } from 'path',
 import fs from 'fs'; import path from 'path'; import { fileURLToPath } from 'url'; const __filename = fileURLToPath(import.meta.url); const __dirname = path.dirname(__filename); const baseUrl = 'https: const pages = [ '','/about','/services','/services/ai-services','/services/micro-saas','/services/it-services','/contact',]; const generateSitemap = () => { const sitemap = `<?xml version="1.0" encoding="UTF-8"?> <urlset xmlns="http: ${pages.map(page => ` <url> <loc>${baseUrl}${page}</loc> <lastmod>${new Date().toISOString().split('T')[0]}</lastmod> <changefreq>weekly</changefreq> <priority>${page === '' ? '1.0' : '0.8'}</priority> </url>`).join('\n')} </urlset>`; const outDir = path.join(__dirname,'..','out'); if (!fs.existsSync(outDir)) { fs.mkdirSync(outDir,{ recursive: true })} fs.writeFileSync(path.join(outDir,'sitemap.xml'),sitemap); }; generateSitemap();
@@ -113,24 +64,17 @@ import fs from 'fs'; import path from 'path'; const __filename = fileURLToPath(i
     <priority>0.6</priority>
   </url>
 </urlset>`,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
 
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
   const sitemapPath = join(process.cwd(), 'publicsitemap.xml'),
   const writeStream = createWriteStream(sitemapPath),
   writeStream.write(sitemap),
   writeStream.end(),
 
-<<<<<<< HEAD
-  console.log('Sitemap generated successfully at:', sitemapPath)
-},
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 generateSitemap(),
 const fs = require('fs');
@@ -358,7 +302,9 @@ const generateSitemap = () => {;
   console.log('Sitemap generated successfully at:', sitemapPath);
 },;
 generateSitemap();
-<<<<<<< HEAD
+
+
+
 ursor/automate-test-improve-and-merge-code-4094
 #!/usr/bin/env node
 console.log('🗺️  Generating sitemap...');
@@ -374,31 +320,13 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/main
 origin/automation-improvements-final
-=======
-
-
-=======
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-};
-,
-generateSitemap(),
 
 
 
 
-=======
 
->>>>>>> origin/automation-improvements-final
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
-=======
-console && console.log('🗺️  Generating sitemap...');
-console && console.log('✅ Sitemap generation completed');
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba

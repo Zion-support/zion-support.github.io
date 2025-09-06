@@ -1,13 +1,6 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 import {Header} from "@/components/header";
 import {Footer} from "@/components/Footer";
 import {JobPostingForm} from "@/components/jobs";
@@ -17,9 +10,10 @@ import {useAuth} from "@/hooks/useAuth";
 import {Navigate} from "react-router-dom";
 import {useIsMobile} from "@/hooks/use-mobile";
 export default function PostJob() {;
-<<<<<<< HEAD
+
   const { isAuthenticated, isLoading } = useAuth();
   const isMobile = useIsMobile();
+
 import { Header } from "@/components/header",
 import { Footer } from "@/components/Footer",
 import { JobPostingForm } from "@/components/jobs",
@@ -29,9 +23,7 @@ import { useAuth } from "@/hooks/useAuth",
 import { Navigate } from "react-router-dom";
 import { useIsMobile } from "@/hooks/use-mobile";
 export default function PostJob() {
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const { isAuthenticated, isLoading } = useAuth();
 
   const isMobile = useIsMobile();
@@ -50,7 +42,7 @@ export default function PostJob() {
     )
   }
   return (
-<<<<<<< HEAD
+
     <>
       <SEO
         title="Post a Job | Zion AI Marketplace"
@@ -75,13 +67,8 @@ export default function PostJob() {
       {isMobile && <div className="h-16"></div>}
     </>
   )
-}
-=======
-=======
 
 
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { Header } from "@/components/header",;
 import { Footer } from "@/components/Footer",;
 import { JobPostingForm } from "@/components/jobs",;
@@ -113,43 +100,7 @@ export default function PostJob() {;
         <Card className="border shadow-md">;
           <CardHeader>;
             <CardTitle className={`text-${isMobile ? '2xl' : '3xl'} font-bold`}>Post a Job</CardTitle>;
-=======
-import { Header } from '@/components / header';
-import { Footer } from '@/components / Footer';
-import { JobPostingForm } from '@/components / jobs';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components / ui / card';
-import { SEO } from '@/components / SEO';
-import { use_auth } from '@/hooks / use_auth';
-import { Navigate } from './react-router-dom';
-import { useIsMobile } from '@/hooks / use - mobile';
-export default /**
- * PostJob - Function description
- */
-function PostJob() {
-  const { is_authenticated, is_loading } = use_auth ();
-  const is_mobile = useIsMobile ();
-;
-  // Check condition
-if ( {) {
-  $2
-}
-    return (
-      <div className="flex items - center justify - center min - h-screen">;
-        <div className="animate - pulse">Loading...</div>;
-      </div>);
-  }
-  return (
-    <>;
-      <SEO;
-        title="Post a Job | Zion AI Marketplace";
-        description="Post a job to find the perfect AI talent for your project.";
-      />;
-      <Header />;
-      <main className={`container mx - auto px-${is_mobile ? '2' : '4'} py-${is_mobile ? '6' : '12'} max - w-4xl`}>;
-        <Card className="border shadow - md">;
-          <CardHeader>;
-            <CardTitle className={`text-${is_mobile ? '2xl' : '3xl'} font - bold`}>Post a Job</CardTitle>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
             <CardDescription>;
               Fill out the form below to post your job and find the perfect talent.;
             </CardDescription>;
@@ -161,16 +112,12 @@ if ( {) {
       </main>;
       <Footer />;
       {/* Add extra bottom padding on mobile to account for the bottom nav */}
-<<<<<<< HEAD
+
       {isMobile && <div className="h-16"></div>}
     </>;
   );
-=======
 
 
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 }
 ;

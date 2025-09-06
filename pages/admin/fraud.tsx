@@ -1,14 +1,9 @@
-<<<<<<< HEAD
+
 import React, { useEffect, useMemo, useState } from 'react';
-import React, { useEffect, useMemo, useState } from 'react',;
-;
-import React, { useEffect, useMemo, useState } from 'react';
-=======
 
 
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 interface FraudItem {
 
 
@@ -33,32 +28,7 @@ export default function FraudAdminPage() {
     try {
 
 
-=======
-export default /**
- * FraudAdminPage - Function description
- */
-function FraudAdminPage() {
-  const [items, set_items] = useState < FraudItem[]>([]),
-  const [admin_token, setAdminToken] = useState < string>(''),
-  const [loading, set_loading] = useState < boolean>(false),
-  const [error, set_error] = useState < string | null>(null),
-  useEffect (() => {
-    const saved = local_storage.get_item ('admin - token') || '',
-    setAdminToken (saved);
-  }, []),
-  const fetch_items = async () => {
-    set_loading (true),
-    set_error (null),
-    try {
-      const res = await fetch ('/api / fraud / admin / list', { headers: admin_token ? { 'x - admin - token': admin_token } : {} }),
-      const json = await res.json (),
-      if (throw new Error (json.error || 'Failed to load'), ) {
-  $2
-}
-      set_items (json.items || []);
-    } catch (e: any) {
-      set_error (e.message || 'Failed to load');
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
     } finally {
 
       set_loading (false);
@@ -153,27 +123,21 @@ function FraudAdminPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
         />
         <button className="bg-blue-600 text-white px-3 py-1 rounded" onClick={onSaveToken}>Save</button>
         <button className="bg-gray-200 px-3 py-1 rounded" onClick={fetchItems}>Refresh</button>
       </div>
-<<<<<<< HEAD
+
       {loading && <div>Loading...</div>}
       {error && <div className="text-red-600">{error}</div>}
 
-=======
 
-
-
-
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       {loading && <div>Loading...</div>  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -184,13 +148,12 @@ function FraudAdminPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
 
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
       <div className="overflow-x-auto">
         <table className="min-w-full border">
           <thead>
@@ -221,12 +184,12 @@ function FraudAdminPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
                   </div>
                 </td>
                 <td className="p-2 border">
@@ -256,10 +219,10 @@ function FraudAdminPage() {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD
-}
-}
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+}
+}
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba

@@ -7,7 +7,7 @@ import { Trophy } from 'lucide-react'
 } from '@/components / ui / card';
 import { Trophy } from 'lucide-react';
 export interface LeaderboardEntry {
-<<<<<<< HEAD
+
   name: string
   points: number
 interface UserLeaderboardProps {
@@ -15,17 +15,14 @@ interface UserLeaderboardProps {
   entries: LeaderboardEntry[]
 }
 export interface LeaderboardEntry {
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   name: string,
   points: number
 }
 
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 
 export function UserLeaderboard({ entries }: UserLeaderboardProps) {
@@ -43,10 +40,8 @@ export interface LeaderboardEntry {;
 
 interface UserLeaderboardProps {;
   entries: LeaderboardEntry[];
-<<<<<<< HEAD
-=======
-  entries: LeaderboardEntry[];
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 }
 
 export interface LeaderboardEntry {;
@@ -60,10 +55,9 @@ interface UserLeaderboardProps {;
 
 export function UserLeaderboard(): any ({ entries }: UserLeaderboardProps) {;
   return (
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 
           <Trophy className="h-5 w-5" /> Leaderboard
@@ -81,10 +75,9 @@ export function UserLeaderboard(): any ({ entries }: UserLeaderboardProps) {;
           {entries.map((e, idx) => (
             <div
               key={e.name}
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 
 

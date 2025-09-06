@@ -2,31 +2,18 @@ export function RoleManagement() {
   // Mock team members data
   const teamMembers = [
 import React from 'react';
-<<<<<<< HEAD
-=======
-=======
-import React from 'react'
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 import {
   Table,
   TableBody,
   TableCell,
   TableHead,
   TableHeader,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
   TableRow,
 } from '@/components / ui / table';
 import { Badge } from '@/components / ui / badge';
@@ -36,285 +23,10 @@ import { toast } from '@/hooks / use - toast'; import { InfoIcon } from 'lucide-
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-} from '@/components / ui / tooltip';
-export /**
- * RoleManagement - Function description
- */
-function RoleManagement() {
-  // Mock team members data;
-  const team_members = [;
-    {
-      id: 1
-      name: 'Alex Johnson'
-      email: 'alex@example.com'
-      role: 'Admin'
-      permissions: {
-        viewCandidates: true
-        editCandidates: true
-        createJobs: true
-        manageTeam: true
-        viewBilling: true
-        manageBilling: true
-      }
-    }
-    {
-      id: 2
-      name: 'Jamie Smith'
-      email: 'jamie@example.com'
-      role: 'Recruiter'
-      permissions: {
-
-        view_candidates: true,
-        edit_candidates: true,
-        create_jobs: true,
-        manage_team: false,
-        view_billing: false,
-        manage_billing: false,
-      },
-    },
-
-    {
-      id: 3
-      name: 'Sam Williams'
-      email: 'sam@example.com'
-      role: 'Manager'
-      permissions: {
-
-        view_candidates: true,
-        edit_candidates: false,
-        create_jobs: true,
-        manage_team: false,
-        view_billing: true,
-        manage_billing: false,
-      },
-    },
-
-    {
-      id: 4
-      name: 'Taylor Brown'
-      email: 'taylor@example.com'
-      role: 'Viewer'
-      permissions: {
-
-        view_candidates: true,
-        edit_candidates: false,
-        create_jobs: false,
-        manage_team: false,
-        view_billing: false,
-        manage_billing: false,
-      },
-    },
-  ];
-  const handlePermissionChange = (
-    _memberId: number,
-    permission: string,
-    value: boolean) =>: any {    // In a real app, this would make an API call to update permissions;
-    toast ({
-      title: 'Permission updated',
-      description: `Permission ${permission} has been ${value ? 'granted' : 'revoked'}.`,
-    });
-  }
-  const role_descriptions: Record < string, string> = {
-    Admin: 'Full access to all features and settings',
-    Recruiter: 'Can manage candidates and job postings',
-    Manager: 'Can view candidates and create jobs',
-    Viewer: 'Read - only access to candidates',
-
-  }
-import React from 'react';
-import {;
-  Table,;
-  TableBody,;
-  TableCell,;
-  TableHead,;
-  TableHeader,;
-  TableRow,;
-} from '@/components/ui/table';
-import { Badge } from '@/components/ui/badge';
-import { Switch } from '@/components/ui/switch';
-import { toast } from '@/hooks/use-toast';import { InfoIcon } from 'lucide-react';
-import {;
-  Tooltip,;
-  TooltipContent,;
-  TooltipProvider,;
-  TooltipTrigger,;
-} from '@/components/ui/tooltip';
-
-export function RoleManagement() {;
-  // Mock team members data;
-  const teamMembers = [;
-    {;
-      id: 1,;
-      name: 'Alex Johnson',;
-      email: 'alex@example && example.com',;
-      role: 'Admin',;
-      permissions: {;
-        viewCandidates: true,;
-        editCandidates: true,;
-        createJobs: true,;
-        manageTeam: true,;
-        viewBilling: true,;
-        manageBilling: true,;
-      },;
-    },;
-    {;
-      id: 2,;
-      name: 'Jamie Smith',;
-      email: 'jamie@example && example.com',;
-      role: 'Recruiter',;
-      permissions: {;
-        viewCandidates: true,;
-        editCandidates: true,;
-        createJobs: true,;
-        manageTeam: false,;
-        viewBilling: false,;
-        manageBilling: false,;
-      },;
-    },;
-    {;
-      id: 3,;
-      name: 'Sam Williams',;
-      email: 'sam@example && example.com',;
-      role: 'Manager',;
-      permissions: {;
-        viewCandidates: true,;
-        editCandidates: false,;
-        createJobs: true,;
-        manageTeam: false,;
-        viewBilling: true,;
-        manageBilling: false,;
-      },;
-    },;
-    {;
-      id: 4,;
-      name: 'Taylor Brown',;
-      email: 'taylor@example && example.com',;
-      role: 'Viewer',;
-      permissions: {;
-        viewCandidates: true,;
-        editCandidates: false,;
-        createJobs: false,;
-        manageTeam: false,;
-        viewBilling: false,;
-        manageBilling: false,;
-      },;
-    },;
-  ];
-
-  const handlePermissionChange = (;
-    _memberId: number,;
-    permission: string,;
-    value: boolean;
-  ) => {    // In a real app, this would make an API call to update permissions;
-    toast({;
-      title: 'Permission updated',;
-      description: `Permission ${permission} has been ${value ? 'granted' : 'revoked'}.`,;
-    });
-  };
-
-  const roleDescriptions: Record<string, string> = {;
-    Admin: 'Full access to all features and settings',;
-    Recruiter: 'Can manage candidates and job postings',;
-    Manager: 'Can view candidates and create jobs',;
-    Viewer: 'Read-only access to candidates',;
-  };
-
-  return (
 
 
-      id: 1,
-      name: "Alex Johnson",
-      email: "alex@example.com",
-      role: "Admin",
-      permissions: {
-        viewCandidates: true,
-        editCandidates: true,
-        createJobs: true,
-        manageTeam: true,
-        viewBilling: true,
-        manageBilling: true}},
-    {
-      id: 2,
-      name: "Jamie Smith",
-      email: "jamie@example.com",
-      role: "Recruiter",
-      permissions: {
-        viewCandidates: true,
-        editCandidates: true,
-        createJobs: true,
-        manageTeam: false,
-        viewBilling: false,
-        manageBilling: false}},
-    {
-      id: 3,
-      name: "Sam Williams",
-      email: "sam@example.com",
-      role: "Manager",
-      permissions: {
-        viewCandidates: true,
-        editCandidates: false,
-        createJobs: true,
-        manageTeam: false,
-        viewBilling: true,
-        manageBilling: false}},
-    {
-      id: 4,
-      name: "Taylor Brown",
-      email: "taylor@example.com",
-      role: "Viewer",
-      permissions: {
-        viewCandidates: true,
-        editCandidates: false,
-        createJobs: false,
-        manageTeam: false,
-        viewBilling: false,
-<<<<<<< HEAD
-        manageBilling: false,
-      },
-    },
-  ]
-  const handlePermissionChange = (
-    _memberId: number,
-    permission: string,
-    value: boolean
-  ) => {    // In a real app, this would make an API call to update permissions
-    toast({
-      title: 'Permission updated',
-      description: `Permission ${permission} has been ${value ? 'granted' : 'revoked'}.`,
-    })
-  }
-  const roleDescriptions: Record<string, string> = {
-    Admin: 'Full access to all features and settings',
-    Recruiter: 'Can manage candidates and job postings',
-    Manager: 'Can view candidates and create jobs',
-    Viewer: 'Read-only access to candidates',
-  }
-        manageBilling: false}}],
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
-
-  const roleDescriptions: Record<string string> = {
-    "Admin": "Full access to all features and settings",
-    "Recruiter": "Can manage candidates and job postings",
-    "Manager": "Can view candidates and create jobs",
-    "Viewer": "Read-only access to candidates"},
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return (
     <div className="space-y-6">
       <div>
@@ -338,10 +50,9 @@ export function RoleManagement() {;
                 <Badge variant={role === "Admin" ? "default" : "outline"}>{role}</Badge>
               </div>
               <p className="text-sm text-muted-foreground">{description}</p>
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
             </div>
           ))}
@@ -350,10 +61,9 @@ export function RoleManagement() {;
       <div className='rounded-md border'>
 
       <div className="rounded-md border">
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 
         <Table>
@@ -442,10 +152,9 @@ export function RoleManagement() {;
             {teamMembers.map(member => (              <TableRow key={member.id}>
             {teamMembers.map((member) => (
               <TableRow key={member.id}>
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 
                 <TableCell>
@@ -465,11 +174,8 @@ export function RoleManagement() {;
                     <option value="Recruiter">Recruiter</option>
                     <option value="Manager">Manager</option>
                     <option value="Viewer">Viewer</option>
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   </select>
                 </TableCell>
                 <TableCell className="text-center">
@@ -827,10 +533,9 @@ export function RoleManagement() {;
                 <TableCell className="text-center">;
                   <Switch;
                     aria-label="View candidates";
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 
                     checked={member.permissions.viewCandidates}
@@ -895,7 +600,7 @@ export function RoleManagement() {;
                 <TableCell className='text-center'>;
                   <Switch
                     aria-label='View billing'
-<<<<<<< HEAD
+
 
                     checked={member.permissions.viewBilling}
 <<<<<<< HEAD
@@ -911,17 +616,14 @@ export function RoleManagement() {;
     </div>
   )
 }
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       </div>;
     </div>;
   );
 };
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
                     onCheckedChange={(checked) =>;
                       handlePermissionChange(member.id, "viewBilling", checked);

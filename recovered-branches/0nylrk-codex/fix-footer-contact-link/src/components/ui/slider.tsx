@@ -1,24 +1,10 @@
-<<<<<<< HEAD
+
 import * as React from 'react';
 import * as SliderPrimitive from '@radix-ui/react-slider';
-import {cn} from '@/lib/utils';
-import * as React from "react"
-import * as SliderPrimitive from "@radix-ui/react-slider"
-import * as React from "react"
-import * as SliderPrimitive from "@radix-ui/react-slider"
-<<<<<<< HEAD
-=======
 
 
-import * as React from "react"
-import * as SliderPrimitive from "@radix-ui/react-slider"
-=======
-=======
-import * as React from "react"
-import * as SliderPrimitive from "@radix-ui/react-slider"
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 import { cn } from "@/lib/utils"
 
@@ -27,14 +13,7 @@ const Slider = React.forwardRef<
   React.ComponentPropsWithoutRef<typeof SliderPrimitive.Root>
 ></typeof>(({ className, ...props }, ref) => (
   <SliderPrimitive.Root
-=======
 
-const Slider = React && React.forwardRef<;
-  React && React.ElementRef<typeof SliderPrimitive && SliderPrimitive.Root>,;
-  React && React.ComponentPropsWithoutRef<typeof SliderPrimitive && SliderPrimitive.Root>;
-></typeof>(({ className, ...props }, ref) => (;
-  <SliderPrimitive&& SliderPrimitive.Root
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     ref={ref}
     className={cn(
       'relative flex w-full touch-none select-none items-center'
@@ -54,13 +33,15 @@ export { Slider }
 ))
 Slider.displayName = SliderPrimitive.Root.displayName
 
-<<<<<<< HEAD
+
 export { Slider }
 ;
+
 export { Slider };
 export { Slider }
 ;
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba

@@ -1,8 +1,5 @@
 
 
-
-
-
 import js from "@eslint/js";
 import globals from "globals";
 import reactHooks from "eslint-plugin-react-hooks";
@@ -12,6 +9,9 @@ import tsparser from "@typescript-eslint/parser";
 import react from "eslint-plugin-react";
 import jsxA11y from "eslint-plugin-jsx-a11y";
 
+
+
+import js from '@eslint/js';
 
 
 
@@ -292,6 +292,76 @@ import jsxA11y from 'eslint-plugin-jsx-a11y';
 origin/automation-improvements-final
 
 
+
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+export default [
+  {
+
+    ignores: [
+      "node_modules/",
+      ".next/",
+      "out/",
+      "dist/",
+      "build/",
+      "coverage/",
+      "*.config.js",
+      "*.config.cjs",
+      "*.config.mjs",
+      "scripts/",
+      "automation/",
+      "pm2-automation/",
+      "pages.disabled/",
+      "pages.disabled_auto/",
+      "pages.disabled_full/",
+      "pages.corrupted.*/",
+      "pages.broken/",
+      "pages.bak/",
+      "pages.blog.disabled/",
+      "pages._archive_corrupted/",
+      "pages._quarantine/",
+      "pages-disabled/",
+      "pages-quarantine/",
+      "pages.__backup/",
+      "pages-backup/",
+      "tests.disabled/",
+      "components.disabled/",
+      "zion-os.disabled/",
+      "zion_academy/",
+      "temp_backup/",
+      "temp_broken_files/",
+      "test_build/",
+      "*.test.js",
+      "*.test.ts",
+      "*.test.tsx",
+      "*.spec.js",
+      "*.spec.ts",
+      "*.spec.tsx"
+    ]
+  },
+  js.configs.recommended,
+  {
+    files: ["**/*.{js,jsx}"],
+    languageOptions: {
+      ecmaVersion: 2021,
+      sourceType: "module",
+      globals: {
+        ...globals.browser,
+        ...globals.node,
+        React: "readonly",
+        jest: "readonly",
+        describe: "readonly",
+        it: "readonly",
+        test: "readonly",
+        expect: "readonly",
+        beforeEach: "readonly",
+        afterEach: "readonly",
+        beforeAll: "readonly",
+        afterAll: "readonly"
+      },
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
       parserOptions: {
         ecmaVersion: 'latest',
         sourceType: 'module',
@@ -302,6 +372,7 @@ origin/automation-improvements-final
       }
     },
     plugins: {
+
 
       react,
       "react-hooks": reactHooks
@@ -565,7 +636,21 @@ origin/automation-improvements-final
       'working-automation-suite.cjs'
     ]
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+
+
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+
+  }
+];
+
+>>>>>>> origin/automation-improvements-final
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba

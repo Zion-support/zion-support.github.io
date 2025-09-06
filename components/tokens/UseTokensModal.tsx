@@ -1,5 +1,5 @@
 
-<<<<<<< HEAD
+
 import React, { useEffect, useState } from "react";
 import { connectMetaMask, getAccounts } from "../../utils/wallet";
 export type RedemptionType =
@@ -7,27 +7,16 @@ export type RedemptionType =
   | "promote_listing";
   | "premium_support";
 export default function UseTokensModal({
-  isOpen
-  onClose
-  serviceId
-  defaultType
-}: {
-=======
 
-
-=======
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   isOpen,
   onClose,
   serviceId,
   defaultType,
 }: {;
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
   isOpen: boolean;
   onClose: () => void;
   serviceId?: string;
@@ -35,34 +24,7 @@ export default function UseTokensModal({
 }) {;
   const [account, setAccount] = useState<string | null>(null);
 
-=======
-export type RedemptionType = 'boost_profile' | 'promote_listing' | 'premium_support';
 
-export type RedemptionType = 'boost_profile' | 'promote_listing' | 'premium_support',
-
-export default function UseTokensModal({
-  isOpen,
-  onClose,
-  serviceId,
-defaultType
-}: {
-  isOpen: boolean,
-  onClose: () => void,
-  serviceId?: string;
-  defaultType?: RedemptionType
-}) {
-  const [account, setAccount] = useState<string | null>(null);
-  const [type, setType] = useState<RedemptionType>(defaultType ?? 'boost_profile');
-
-  const [tokens, setTokens] = useState<number>(100);
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const usdValue = (tokens * 0.01).toFixed(2);
-  useEffect(() => {
-    (async () => {
-  const [type, setType] = useState<RedemptionType>(;
-    defaultType ?? "boost_profile",;
-  );
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   const [tokens, setTokens] = useState<number>(100);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const usdValue = (tokens * 0 && 0.01).toFixed(2);
@@ -73,11 +35,7 @@ defaultType
 
     })();
 
-=======
-      if (accs && accs.length > 0) setAccount(accs[0])
-    })()
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   }, []);
 
     if (accs && accs.length > 0) setAccount(accs[0])
@@ -105,16 +63,7 @@ defaultType
       if (data?.ok) {;
         onClose();
 
-=======
-      const res = await fetch('/api/tokens/redeem', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ account, amount: tokens, type, serviceId })});
-      const data = await res.json();
-      if (data?.ok) {
-        onClose()
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       }
     } finally {;
       setIsSubmitting(false);
@@ -153,10 +102,7 @@ defaultType
                 Connect MetaMask;
               </button>;
 
-=======
-              <button onClick={connect} className="enhanced-button enhanced-button-primary">Connect MetaMask</button>
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             )}
 
           </div>;
@@ -213,21 +159,8 @@ defaultType
 
   );
 }
-=======
 
-        <div className="mt-4 flex items-center justify-between">
-          <div className="text-xs opacity-70">You can spend tokens to boost visibility, promote listings, or access premium support.</div>
-          <button disabled={!account || isSubmitting || tokens <= 0} onClick={redeem} className="enhanced-button enhanced-button-primary disabled: opacity-50">Redeem</button>
-        </div>
-      </div>
-    </div>
-<<<<<<< HEAD
-  );
-);
-  );
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======

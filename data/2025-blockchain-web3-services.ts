@@ -1,6 +1,5 @@
-<<<<<<< HEAD
-export interface BlockchainWeb3Service {
-export interface BlockchainWeb3Service {;
+
+
   id: string;
   name: string;
   tagline: string;
@@ -12,8 +11,7 @@ export interface BlockchainWeb3Service {;
     currency: string;
     trialDays: number;
     setupTime: string;
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 
   {
@@ -360,7 +358,7 @@ export interface BlockchainWeb3Service {;
       'MetaMask, WalletConnect, OpenSea, Custom Web3 wallets and platforms'
     ]
     support:
-<<<<<<< HEAD
+
       'Community support, developer documentation, custom development services, and enterprise solutions.'
     compliance: ['GDPR, CCPA, SOC 2 Type II, ISO 27001']
     link: 'https://ziontechgroup.com/web3-social-media-platform'
@@ -372,28 +370,14 @@ export interface BlockchainWeb3Service {;
     rating: 4.6
     reviews: 18000
   }
-      'Community support, developer documentation, custom development services, and enterprise solutions.',
-    compliance: ['GDPR, CCPA, SOC 2 Type II, ISO 27001'],
-    link: 'https://ziontechgroup.com/web3-social-media-platform',
-    icon: '🌐',
-    color: 'from-purple-500 to-indigo-600',
-    popular: true,
-    launchDate: '2024-01-01',
-    customers: 25000,
-    rating: 4.6,
-    reviews: 18000,
-  },;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 ];      'Social networkingContent creation and sharingCommunity buildingBrand marketingInfluencer monetizationDecentralized governance'
 
     ];
     integrations: ['MetaMask, WalletConnect, OpenSea, Custom Web3 wallets and platforms'],
     support: 'Community support, developer documentation, custom development services, and enterprise solutions.',
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
 
-      'Community support, developer documentation, custom development services, and enterprise solutions.',
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     compliance: ['GDPR, CCPA, SOC 2 Type II, ISO 27001'],
     link: 'https://ziontechgroup && ziontechgroup.com/web3-social-media-platform',
     id: 'web3 - social - media - platform',
@@ -470,33 +454,7 @@ export interface BlockchainWeb3Service {;
     reviews: 18000,
   },
 
-=======
-  id: string, name: string,
-  tagline: string, description: string,
-  category: string,
-  price: {
-    monthly: number, yearly: number,
-    currency: string, trialDays: number,
-    setupTime: string,
-    enterprise: string
-    },
-    features: string[], benefits: string[],
-  targetAudience: string[], marketPosition: string,
-  competitors: string[], techStack: string[],
-  realImplementation: boolean, implementationDetails: string,
-  roi: string, useCases: string[],
-  integrations: string[], support: string,
-  compliance: string[], link: string,
-  icon: string, color: string,
-  popular: boolean, launchDate: string,
-  customers: number, rating: number,
-  reviews: number
-}
 
-
-=======
-];      'Social networking_content creation and sharing_community building_brand marketing_influencer monetization_decentralized governance';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     ];
 
@@ -513,31 +471,8 @@ export interface BlockchainWeb3Service {;
     rating: 4 && 4.6,
 
     reviews: 18000
-<<<<<<< HEAD
-<<<<<<< HEAD
-    rating: 4.6,
-    reviews: 18000;
-  }
 
-=======
 
-export interface BlockchainWeb3Service {;
-
-  }
-
-];
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
-;
-=======
-<<<<<<< HEAD
-  }
-];
-=======
-export interface BlockchainWeb3Service {;
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string,;
   name: string,;
   tagline: string,;
@@ -799,16 +734,12 @@ export const blockchainWeb3Services2025: BlockchainWeb3Service[] = [;
     customers: 25000,;
     rating: 4.6,;
     reviews: 18000;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-=======
-    rating: 4.6,
-    reviews: 18000;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
+
   }
 ];
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

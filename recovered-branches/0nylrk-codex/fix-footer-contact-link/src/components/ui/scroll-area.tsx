@@ -18,12 +18,12 @@ const ScrollArea = React.forwardRef<
     <ScrollAreaPrimitive.Viewport className=&quot;h-full w-full rounded-[inherit]&quot;>
   >
     <ScrollAreaPrimitive.Viewport className="h-full w-full rounded-[inherit]">
-<<<<<<< HEAD
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
       {children}
     </ScrollAreaPrimitive.Viewport>
     <ScrollBar />
@@ -57,8 +57,7 @@ const ScrollBar = React.forwardRef<
   </ScrollAreaPrimitive.ScrollAreaScrollbar>
 ))
 ScrollBar.displayName = ScrollAreaPrimitive.ScrollAreaScrollbar.displayName
-<<<<<<< HEAD
-=======
+
 
     </ScrollAreaPrimitive.Viewport>;
     <ScrollBar />;
@@ -85,26 +84,18 @@ const ScrollBar = React.forward_ref<;
   </ScrollAreaPrimitive.ScrollAreaScrollbar>));
 ScrollBar.display_name = ScrollAreaPrimitive.ScrollAreaScrollbar.display_name;
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-export { ScrollArea, ScrollBar }
-
 
 export { ScrollArea, ScrollBar }
-;
-<<<<<<< HEAD
-export { ScrollArea, ScrollBar };
+
 
 export { ScrollArea, ScrollBar }
 ;
-=======
 
-=======
-export { ScrollArea, ScrollBar };
-=======
 
-export { ScrollArea, ScrollBar }
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 ;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
