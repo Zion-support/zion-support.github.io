@@ -3,28 +3,17 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-<<<<<<< HEAD
-    "dev": "vite",
-    "build": "vite build",
-    "prebuild": "echo \"Starting build...\"",
-    "export": "vite build",
-    "start": "vite preview --port 4173",
-    "postbuild": "echo \"Build completed\"",
-    "lint": "eslint .",
-=======
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
->>>>>>> f6b849a806966ab0803a1eba10ab812addf04f56
     "lint:fix": "eslint . --fix",
     "lint:check": "eslint . --max-warnings 0",
     "type-check": "tsc --noEmit",
     "test": "jest --config jest.config.cjs",
-<<<<<<< HEAD
+    "test:watch": "jest --watch --config jest.config.cjs",
+    "test:coverage": "jest --coverage --config jest.config.cjs",
     "test:smoke": "jest --config jest.config.smoke.cjs --passWithNoTests",
-    "test:watch": "jest --watch --config jest.config.ts",
-    "test:coverage": "jest --coverage --config jest.config.ts",
     "test:unit": "jest -c jest.config.ts --runInBand",
     "verify": "npm run type-check && npm run build && npm run test:smoke",
     "check": "npm run lint && npm run type-check && npm run test:smoke",
@@ -53,52 +42,34 @@
     "prod:pm2": "pm2 start ecosystem.config.cjs --env production"
   },
   "dependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-router-dom": "^6.8.1",
     "@radix-ui/react-accordion": "^1.1.2",
     "@radix-ui/react-dialog": "^1.0.5",
-    "lucide-react": "^0.263.1",
-    "clsx": "^1.2.1",
-    "tailwind-merge": "^1.14.0"
-  },
-  "devDependencies": {
-    "@types/react": "^18.2.15",
-    "@types/react-dom": "^18.2.7",
-    "@typescript-eslint/eslint-plugin": "^6.0.0",
-    "@typescript-eslint/parser": "^6.0.0",
-    "@vitejs/plugin-react": "^4.0.3",
-    "autoprefixer": "^10.4.14",
-    "eslint": "^8.45.0",
-    "eslint-plugin-jsx-a11y": "^6.7.1",
-    "eslint-plugin-react": "^7.33.0",
-    "eslint-plugin-react-hooks": "^4.6.0",
-    "jest": "^29.6.2",
-    "postcss": "^8.4.27",
-    "tailwindcss": "^3.3.3",
-    "typescript": "^5.1.6",
-    "vite": "^4.4.5"
-  }
-=======
-    "test:watch": "jest --watch --config jest.config.cjs",
-    "test:coverage": "jest --coverage --config jest.config.cjs"
-  },
-  "dependencies": {
-    "next": "^15.5.2",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
     "@types/node": "^22.10.2",
     "@types/react": "^18.3.17",
     "@types/react-dom": "^18.3.5",
-    "typescript": "^5.9.2",
-    "tailwindcss": "^3.4.17",
     "autoprefixer": "^10.4.20",
-    "postcss": "^8.5.0"
+    "clsx": "^1.2.1",
+    "framer-motion": "^12.23.12",
+    "lucide-react": "^0.263.1",
+    "next": "^15.5.2",
+    "postcss": "^8.5.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.8.1",
+    "tailwind-merge": "^1.14.0",
+    "tailwindcss": "^3.4.17",
+    "typescript": "^5.9.2"
   },
   "devDependencies": {
+    "@types/jest": "^29.5.14",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
     "eslint": "^9.17.0",
     "eslint-config-next": "^15.5.2",
-    "@types/jest": "^29.5.14",
+    "eslint-plugin-jsx-a11y": "^6.7.1",
+    "eslint-plugin-react": "^7.33.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "ignore-loader": "^0.1.2",
     "jest": "^29.7.0",
     "jest-environment-jsdom": "^29.7.0"
   },
@@ -108,5 +79,4 @@
   },
   "author": "Zion Tech Group",
   "license": "MIT"
->>>>>>> f6b849a806966ab0803a1eba10ab812addf04f56
 }
