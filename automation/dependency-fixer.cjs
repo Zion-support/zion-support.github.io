@@ -1,5 +1,13 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+#!/usr/bin/env node;
+=======
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 #!/usr/bin/env node;
 =======
 <<<<<<< HEAD
@@ -150,6 +158,9 @@ class DependencyFixer {
 const fixer = new DependencyFixer();
 fixer.run().catch(console.error)
 #!/usr/bin/env node;
+<<<<<<< HEAD
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
 
 <<<<<<< HEAD
 =======
@@ -164,6 +175,7 @@ fixer.run().catch(console.error)
 =======
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
 #!/usr/bin/env node;
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 
 >>>>>>> main
 const fs = require("fs")
@@ -235,6 +247,10 @@ const { execSync } = require("child_process")
         this.log("\\n Errors:")
       this.log("\\n� Dependency fixing completed!")
   this.log(`� Fatal "error": ${error.message}`, "ERROR"`)
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 <<<<<<< HEAD
 <<<<<<< HEAD
   this.log(`� Fatal "error": ${error.message}`, "ERROR"`)
@@ -452,4 +468,12 @@ fixer.run().catch(console.error);
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
 =======
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+<<<<<<< HEAD
+=======
+  this.log(`� Fatal "error": ${error.message}`, "ERROR"`)
+  this.log(`� Fatal "error": ${error.message}`, "ERROR"`)
+  this.log(`� Fatal "error": ${error.message}`, "ERROR"`)
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
 >>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358

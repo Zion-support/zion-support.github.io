@@ -1,22 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-import React from 'react';
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-import {Button} from "@/components/ui/button";
-import {Input} from "@/components/ui/input";
-import {useState} from "react";
-export function NewsletterForm() {;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { useState } from "react";
+export function NewsletterForm() {
   const [email, setEmail] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -26,78 +11,12 @@ export function NewsletterForm() {;
     setIsSubmitting(true);
 <<<<<<< HEAD
 
-
-
-=======
-=======
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { useState } from "react";
-export function NewsletterForm() {
->>>>>>> main
-  const [email, setEmail] = useState("");
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
-const [email, setEmail] = useState("");
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
-import { Button } from "@/components/ui/button",
-import { Input } from "@/components/ui/input";
-import { useState } from "react";
-
-import { Button } from "@/components/ui/button",
-import { Input } from "@/components/ui/input";
-import { useState } from "react";
-import { Input } from "@/components/ui/input",
-import { useState } from "react",
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-export function NewsletterForm() {
-  const [email, setEmail] = useState(""),
-  const [isSubmitting, setIsSubmitting] = useState(false),
-  const [isSubmitted, setIsSubmitted] = useState(false),
-
-<<<<<<< HEAD
-
-  const handleSubmit = (e: React.FormEvent) => {
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-    e.preventDefault(),
-    setIsSubmitting(true),
-    
-    // Simulate API call
-    setTimeout(() => {
-<<<<<<< HEAD
-      setIsSubmitting(false),
-      setIsSubmitted(true),
-      setEmail("")
-    }, 1000)
-  },
-<<<<<<< HEAD
-=======
-=======
-    e.preventDefault();
-    setIsSubmitting(true);
-
     // Simulate API call
     setTimeout(() => {
       setIsSubmitting(false);
       (setIsSubmitted(true), setEmail(""));
     }, 1000);
   };
->>>>>>> main
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   return (
     <div className="w-full max-w-md mx-auto">
@@ -113,15 +32,6 @@ export function NewsletterForm() {
           onSubmit={handleSubmit}
           className="flex flex-col space-y-3 sm:flex-row sm:space-y-0 sm:space-x-2"
         >
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <Input
             type="email"
             placeholder="Enter your email"

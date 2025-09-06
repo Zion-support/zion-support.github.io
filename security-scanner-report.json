@@ -1,0 +1,58 @@
+{
+  "timestamp": "2025-09-06T04:54:57.277Z",
+  "totalDuration": 1254,
+  "results": {
+    "dependencyAudit": {
+      "success": false,
+      "vulnerabilities": 0,
+      "fixes": []
+    },
+    "codeSecurity": {
+      "success": true,
+      "issues": [],
+      "fixes": []
+    },
+    "headersSecurity": {
+      "success": true,
+      "headers": [
+        "X-Content-Type-Options",
+        "X-Frame-Options",
+        "X-XSS-Protection",
+        "Referrer-Policy",
+        "Permissions-Policy",
+        "Strict-Transport-Security"
+      ],
+      "recommendations": [
+        "Implement security headers middleware",
+        "Configure Content Security Policy",
+        "Set up HTTPS redirect",
+        "Implement rate limiting"
+      ]
+    },
+    "contentSecurityPolicy": {
+      "success": true,
+      "policy": "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://api.zion.app; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self'",
+      "recommendations": [
+        "Implement CSP in middleware",
+        "Set up CSP violation reporting",
+        "Test CSP with different browsers",
+        "Consider using nonce-based CSP for inline scripts"
+      ]
+    },
+    "authenticationSecurity": {
+      "success": true,
+      "checks": [],
+      "recommendations": [
+        "Consider implementing authentication system",
+        "Add user registration and login functionality"
+      ]
+    }
+  },
+  "summary": {
+    "dependenciesAudited": false,
+    "codeScanned": true,
+    "headersConfigured": true,
+    "cspConfigured": true,
+    "authChecked": true
+  }
+}

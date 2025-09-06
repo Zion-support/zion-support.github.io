@@ -145,8 +145,17 @@ class ErrorFixerAutomation {
 
       // Check for common corruption patterns
       const corruptionPatterns = [
+<<<<<<< HEAD:backup-problematic-files/temp_broken_files/automation/error-fixer-automation.cjs
+<<<<<<< HEAD:automation/error-fixer-automation.cjs
         />>>>>>> cursor/,
         /""',';';'/,
+=======
+        /        /""',';';'/,
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6:backup-problematic-files/temp_broken_files/automation/error-fixer-automation.cjs
+=======
+        />>>>>>> cursor/,
+        /""',';';'/,
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358:automation/error-fixer-automation.cjs
         /';';';'/,
         /""';';';'/,
         /,\s*$/,

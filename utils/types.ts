@@ -24,14 +24,19 @@ export interface Application {;
 
 
   id: string;
-
-  job_id: string;
-  talent_slug: string;
-  status: 'applied' | 'skipped' | 'pending';
+  jobId: string;
+  talentSlug: string;
+  status: "applied" | "skipped" | "pending";
   createdAtIso: string;
 }
 export type UserRole = 'admin' | 'user' | 'guest';
 
+<<<<<<< HEAD
+export type UserRole = "admin" | "user" | "guest";
+=======
+<<<<<<< HEAD
+export type UserRole = "admin" | "user" | "guest";
+=======
 <<<<<<< HEAD
 
 
@@ -81,3 +86,5 @@ export type UserRole = 'admin' | 'user' | 'guest';
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
