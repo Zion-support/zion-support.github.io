@@ -1,9 +1,9 @@
 import React, { Suspense, lazy, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { Header } from './components/Header';
-import { Footer } from './components/Footer';
+import Header from './components/Header';
+import Footer from './components/Footer';
 import Sidebar from './components/Sidebar';
-import { PerformanceMonitor } from './components/PerformanceMonitor';
+import PerformanceMonitor from './components/PerformanceMonitor';
 import ErrorBoundary from './components/ErrorBoundary';
 
 // Lazy load pages
