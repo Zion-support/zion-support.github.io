@@ -3,46 +3,81 @@
 
 import Link from 'next/link';
 
+
 export const metadata = {
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+>>>>>>> origin/final-merged-improvements
 };
 
 export default function ServicesOverviewPage() {
   return (
-    <div className="animate-fade-in">
-      <div className="text-center mb-16">
 
-        <h1 className="text-4xl font-bold text-gray-900 mb-6">
-          Our Services
-        </h1>
-        <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-
-          Product engineering and AI-first consulting to deliver measurable
-
-          outcomes for your business.
-
-        </p>
-      </div>
-
-
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+    <div className="animate-fade-in">;
+      {" "}
+      <div className="text-center mb-16">;
+        {" "}
+        <h1 className="text-4xl font-bold text-gray-900 mb-6">;
+          Our Services;
+        </h1>{" "}
+        <p className="text-xl text-gray-600 max-w-3xl mx-auto">;
+          {" "}
+          Product engineering and AI-first consulting to deliver measurable;
+          outcomes for your business.{" "}
+        </p>{" "}
+      </div>{" "}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">;
+        {" "}
         <ServiceCard
           href="/services/micro-saas"
-          title="Micro SaaS Solutions"
-          description="Complete micro SaaS development from concept to scale with proven revenue models"
+          title="Micro SaaS"
+          description="End-to-end product development with billing,auth,and analytics"
           bullets={[
-
-
-
-            "AI-powered tools",
-            "Billing & subscriptions", 
+            "Foundational architecture"
+            "Billing + subscriptions"
+            "Growth analytics"
+=======
+import Link from './next / link';
+export const metadata = {
+  title: "Services | Zion Tech Group",
+  description:;
+    "Comprehensive AI, micro SaaS, and IT services to help your business scale and succeed.",
+}
+export default /**
+ * ServicesOverviewPage - Function description
+ */
+function ServicesOverviewPage() {
+  return (
+    <div className="animate - fade - in">;
+      {" "}
+      <div className="text - center mb - 16">;
+        {" "}
+        <h1 className="text - 4xl font - bold text - gray - 900 mb - 6">;
+          Our Services;
+        </h1>{" "}
+        <p className="text - xl text - gray - 600 max - w-3xl mx - auto">;
+          {" "}
+          Product engineering and AI - first consulting to deliver measurable;
+          outcomes for your business.{" "}
+        </p>{" "}
+      </div>{" "}
+      <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 8 mb - 16">;
+        {" "}
+        <ServiceCard;
+          href="/services / micro - saas";
+          title="Micro SaaS";
+          description="End - to - end product development with billing, auth, and analytics";
+          bullets={[;
+            "Foundational architecture",
+            "Billing + subscriptions",
 
             "Growth analytics",
             "Market validation"
 
 
           ]}
+
           icon="🚀"
         />
         <ServiceCard
@@ -264,6 +299,7 @@ export default function ServicesOverviewPage() {
         />
       </div>
       <CTA />
+
 
     </div>
   );

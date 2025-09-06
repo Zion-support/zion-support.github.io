@@ -2,6 +2,7 @@
 
 
 
+
 export const metadata = { 
   title: 'IT Services | Zion Tech Group',
   description: 'Comprehensive IT services including cloud migration, DevOps, cybersecurity, infrastructure management, and enterprise solutions for modern businesses.',
@@ -243,3 +244,5 @@ function Pricing() {
     </section>
   );
 
+
+>>>>>>> origin/final-merged-improvements

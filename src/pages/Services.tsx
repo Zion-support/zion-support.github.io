@@ -3,7 +3,28 @@ import React from 'react';
 
 
 
+
+
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+
+
+const ServiceCard = ({ title, description, icon, gradient, index }) => (
+  <motion.div 
+    className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 group"
+    initial={{ opacity: 0, y: 30 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.6, delay: index * 0.1 }}
+    viewport={{ once: true }}
+    whileHover={{ scale: 1.05 }}
+  >
+    <div className={`w-16 h-16 bg-gradient-to-r ${gradient} rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
+      <div className="text-2xl">{icon}</div>
+    </div>
+    <h3 className="text-2xl font-bold text-gray-900 mb-4">{title}</h3>
+    <p className="text-gray-600 leading-relaxed">{description}</p>
+  </motion.div>
+);
 
 
 import { 
@@ -22,6 +43,7 @@ import {
 } from 'lucide-react';
 
 const Services = () => {
+
   const services = [
     {
 
@@ -157,51 +179,68 @@ const Services = () => {
   return (
 
         </div>
+
         {/* Main Services */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           <ServiceCard
             title="AI & Machine Learning"
             description="Transform your business with cutting-edge AI solutions including machine learning, natural language processing, and computer vision."
             icon="🤖"
+            gradient="from-blue-500 to-purple-500"
+            index={0}
           />
           <ServiceCard
             title="Cybersecurity"
             description="Protect your digital assets with advanced security solutions, threat detection, and compliance management."
             icon="🔒"
+            gradient="from-red-500 to-pink-500"
+            index={1}
           />
           <ServiceCard
             title="Cloud Infrastructure"
             description="Scale your operations with robust cloud solutions, migration services, and infrastructure optimization."
             icon="☁️"
+            gradient="from-green-500 to-blue-500"
+            index={2}
           />
           <ServiceCard
             title="Digital Transformation"
             description="Modernize your business processes with comprehensive digital transformation strategies and implementation."
             icon="🚀"
+            gradient="from-purple-500 to-pink-500"
+            index={3}
           />
           <ServiceCard
             title="Data Analytics"
             description="Unlock insights from your data with advanced analytics, business intelligence, and reporting solutions."
             icon="📊"
+            gradient="from-orange-500 to-red-500"
+            index={4}
           />
           <ServiceCard
             title="IoT Solutions"
             description="Connect and manage your devices with Internet of Things solutions for smart operations and monitoring."
             icon="🌐"
+            gradient="from-cyan-500 to-blue-500"
+            index={5}
           />
         </div>
 
         {/* Service Categories */}
         <div className="mb-16">
+
           <h2 className="text-4xl font-bold text-center mb-12">Service Categories</h2>
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <Card
               title="Consulting Services"
               description="Strategic technology consulting to help you make informed decisions about your digital future."
             />
             <Card
+
               title="Implementation"
               description="End-to-end implementation of technology solutions tailored to your specific business needs."
+
             />
             <Card
               title="Support & Maintenance"
@@ -209,11 +248,13 @@ const Services = () => {
             />
             <Card
               title="Training & Education"
+
               description="Comprehensive training programs to help your team master new technologies and processes."
             />
             <Card
               title="Custom Development"
               description="Bespoke software development solutions designed specifically for your unique requirements."
+
             />
             <Card
               title="Integration Services"
@@ -224,19 +265,24 @@ const Services = () => {
 
         {/* Industry Solutions */}
         <div className="text-center">
+
           <h2 className="text-4xl font-bold mb-12">Industry Solutions</h2>
+
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8">
             <div className="text-center">
               <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl font-bold text-blue-600">1</span>
               </div>
+
               <h3 className="text-xl font-semibold text-gray-900 mb-2">Discovery</h3>
               <p className="text-gray-600">We analyze your business needs and challenges to understand your goals.</p>
+
             </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl font-bold text-purple-600">2</span>
               </div>
+
               <h3 className="text-xl font-semibold text-gray-900 mb-2">Strategy</h3>
               <p className="text-gray-600">We develop a comprehensive strategy tailored to your specific requirements.</p>
             </div>
@@ -255,6 +301,7 @@ const Services = () => {
               <p className="text-gray-600">We provide ongoing support and optimization to ensure your success.</p>
             </div>
             <div className="text-center">
+
               <div className="w-16 h-16 bg-yellow-500 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl">🎓</span>
               </div>
@@ -346,6 +393,7 @@ const Services = () => {
         </div>
 
         {/* CTA Section */}
+
         <div className="text-center mt-16">
           <h2 className="text-3xl font-bold mb-4">Ready to Transform Your Business?</h2>
           <p className="text-xl text-gray-300 mb-8">
@@ -365,6 +413,7 @@ const Services = () => {
               Call: +1 302 464 0950
             </a>
           </div>
+
 
 
         </div>

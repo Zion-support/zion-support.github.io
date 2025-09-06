@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 
+
 /* CSS Custom Properties for Accessibility and Performance */
 :root {
   /* Font sizes with accessibility support */
@@ -47,6 +48,7 @@ body {
   margin: 0;
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
 
+
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -56,11 +58,10 @@ body {
   background-color: #ffffff;
 }
 
-<<<<<<< HEAD
 
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
 /* Accessibility improvements */
 @media (prefers-reduced-motion: reduce) {
   *,
@@ -71,10 +72,9 @@ body {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
 }
 
 /* Focus styles for better accessibility */
@@ -361,11 +361,9 @@ body {
   .animate-bounce {
     animation: none;
   }
-<<<<<<< HEAD
+
 }
 
 
 
-=======
-}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+

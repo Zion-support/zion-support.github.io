@@ -7,8 +7,10 @@ module.exports = {
 
 
 
+
     './src/**/*.{js,ts,jsx,tsx}',
     './app/**/*.{js,ts,jsx,tsx,mdx}', // Added for Next.js app directory compatibility
+
 
 
 
@@ -25,6 +27,7 @@ module.exports = {
           500: '#3b82f6',
           600: '#2563eb',
           700: '#1d4ed8',
+
 
 
       },
@@ -67,6 +70,7 @@ module.exports = {
         spin: {
           '0%': { transform: 'rotate(0deg)' },
           '100%': { transform: 'rotate(360deg)' },
+
         },
       },
       fontFamily: {
@@ -102,6 +106,7 @@ module.exports = {
 
 
   },
+
   plugins: [
     require('@tailwindcss/forms'),
     require('@tailwindcss/typography'),
@@ -111,4 +116,5 @@ module.exports = {
     require('@tailwindcss/aspect-ratio')
   ]
 };
+
 

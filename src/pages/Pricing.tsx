@@ -2,6 +2,7 @@
 
 
 import React from 'react';
+
 import { Link } from 'react-router-dom';
 import { Check, Star, Phone, Mail, MapPin } from 'lucide-react';
 
@@ -19,10 +20,12 @@ const Pricing = () => {
         'Monthly Support (10 hours)',
         'Email Support',
         'Basic Analytics'
+
       ],
       popular: false
     },
     {
+
       name: 'Professional',
       price: '$7,500',
       period: '/month',
@@ -36,11 +39,13 @@ const Pricing = () => {
         'Advanced Analytics',
         'Custom Integrations',
         'Performance Monitoring'
+
       ],
       popular: true
     },
     {
       name: 'Enterprise',
+
       price: '$15,000',
       period: '/month',
       description: 'Complete solution for large organizations',
@@ -109,10 +114,12 @@ const Pricing = () => {
         'Real-time Monitoring',
         'Training & Documentation'
       ]
+
     }
   ];
 
   return (
+
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
       {/* Hero Section */}
       <div className="container mx-auto px-4 py-16">
@@ -219,9 +226,11 @@ const Pricing = () => {
                     <li key={idx} className="flex items-center text-sm">
                       <Check className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                       <span className="text-gray-300">{feature}</span>
+
                     </li>
                   ))}
                 </ul>
+
 
                 <Link
                   to="/contact"
@@ -278,9 +287,11 @@ const Pricing = () => {
               className="border border-blue-600 text-blue-400 hover:bg-blue-600 hover:text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-200"
             >
               Call Now
+
             </a>
 
           </div>
+
         </section>
 
         {/* FAQ Section */}
@@ -328,6 +339,7 @@ const Pricing = () => {
       </main>
 
       <Footer />
+
 
     </div>
   );
