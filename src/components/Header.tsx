@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Button from './Button';
+import ThemeToggle from './ThemeToggle';
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -34,6 +35,7 @@ const Header: React.FC = () => {
                    <Link to="/contact" className="text-gray-300 hover:text-white transition-colors">
                      Contact
                    </Link>
+                   <ThemeToggle />
                    <Button variant="outline" size="small">
                      Get Started
                    </Button>
@@ -73,10 +75,13 @@ const Header: React.FC = () => {
               <Link to="/contact" className="text-gray-300 hover:text-white transition-colors">
                 Contact
               </Link>
-              <Button variant="outline" size="small" className="w-full">
-                Get Started
-              </Button>
-            </nav>
+                 <div className="flex items-center justify-center space-x-4">
+                   <ThemeToggle />
+                   <Button variant="outline" size="small" className="flex-1">
+                     Get Started
+                   </Button>
+                 </div>
+               </nav>
           </div>
         )}
       </div>
