@@ -4,21 +4,42 @@ import './globals.css';
 
 export const metadata = {
   title: 'Zion Tech Group — AI, Micro SaaS, and IT Services',
-  description: 'Enterprise-grade AI, micro SaaS, and IT solutions. Build faster with Zion Tech Group.',
-  keywords: 'AI services, micro SaaS, IT services, cloud migration, DevOps, SRE, enterprise software',
-  authors: [{ name: 'Zion Tech Group' }],
+  description: 'Enterprise-grade AI, micro SaaS, and IT solutions. Build faster with Zion Tech Group. Specializing in AI applications, cloud migration, DevOps, and emerging technologies.',
+  keywords: 'AI services, micro SaaS, IT services, cloud migration, DevOps, SRE, enterprise software, quantum computing, IoT, AR/VR, blockchain solutions, mobile development',
+  authors: [{ name: 'Zion Tech Group', url: 'https://ziontechgroup.com' }],
+  creator: 'Zion Tech Group',
+  publisher: 'Zion Tech Group',
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  metadataBase: new URL('https://ziontechgroup.com'),
+  alternates: {
+    canonical: '/',
+  },
   openGraph: {
     title: 'Zion Tech Group — AI, Micro SaaS, and IT Services',
-    description: 'Enterprise-grade AI, micro SaaS, and IT solutions. Build faster with Zion Tech Group.',
+    description: 'Enterprise-grade AI, micro SaaS, and IT solutions. Build faster with Zion Tech Group. Specializing in AI applications, cloud migration, DevOps, and emerging technologies.',
     url: 'https://ziontechgroup.com',
     siteName: 'Zion Tech Group',
     locale: 'en_US',
     type: 'website',
+    images: [
+      {
+        url: '/og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Zion Tech Group - AI, Micro SaaS, and IT Services',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Zion Tech Group — AI, Micro SaaS, and IT Services',
     description: 'Enterprise-grade AI, micro SaaS, and IT solutions. Build faster with Zion Tech Group.',
+    creator: '@ziontechgroup',
+    images: ['/og-image.jpg'],
   },
   robots: {
     index: true,
@@ -30,6 +51,9 @@ export const metadata = {
       'max-image-preview': 'large',
       'max-snippet': -1,
     },
+  },
+  verification: {
+    google: 'your-google-verification-code',
   },
 };
 
@@ -95,8 +119,62 @@ function Footer() {
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Zion Tech Group",
+    "url": "https://ziontechgroup.com",
+    "logo": "https://ziontechgroup.com/logo.png",
+    "description": "Enterprise-grade AI, micro SaaS, and IT solutions. Specializing in AI applications, cloud migration, DevOps, and emerging technologies.",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "364 E Main St STE 1008",
+      "addressLocality": "Middletown",
+      "addressRegion": "DE",
+      "postalCode": "19709",
+      "addressCountry": "US"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+1-302-464-0950",
+      "contactType": "customer service",
+      "email": "kleber@ziontechgroup.com"
+    },
+    "sameAs": [
+      "https://ziontechgroup.com"
+    ],
+    "service": [
+      {
+        "@type": "Service",
+        "name": "AI Services",
+        "description": "LLM applications, RAG systems, agents, fine-tuning, evals, and MLOps"
+      },
+      {
+        "@type": "Service",
+        "name": "Micro SaaS Development",
+        "description": "End-to-end product development with billing, auth, and analytics"
+      },
+      {
+        "@type": "Service",
+        "name": "IT Services",
+        "description": "Cloud migration, DevOps, SRE, and security solutions"
+      },
+      {
+        "@type": "Service",
+        "name": "Emerging Technologies",
+        "description": "Quantum Computing, IoT, AR/VR, and next-generation solutions"
+      }
+    ]
+  };
+
   return (
     <html lang="en">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        />
+      </head>
       <body className="min-h-screen bg-white text-gray-900">
         <Header />
         <main className="max-w-6xl mx-auto px-4 py-6 min-h-screen">
