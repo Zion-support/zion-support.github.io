@@ -1,226 +1,156 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import ServiceCard from '../components/ServiceCard';
-import Card from '../components/Card';
-import Button from '../components/Button';
+import React from 'react';
+import { Link } from 'react-router-dom';
 
-const Services: React.FC = () => {
-  const [selectedCategory, setSelectedCategory] = useState('all');
-
-  const serviceCategories = [
-    { id: 'all', name: 'All Services', icon: '🌟' },
-    { id: 'ai', name: 'AI & ML', icon: '🤖' },
-    { id: 'cloud', name: 'Cloud', icon: '☁️' },
-    { id: 'security', name: 'Security', icon: '🔒' },
-    { id: 'development', name: 'Development', icon: '💻' }
-  ];
-
-  const services = [
-    {
-      id: 'ai',
-      title: 'AI & Machine Learning',
-      description: 'Cutting-edge AI solutions to automate processes, gain insights, and drive intelligent decision-making.',
-      features: ['Natural Language Processing', 'Computer Vision', 'Predictive Analytics', 'Chatbots & Virtual Assistants'],
-      price: 'From $5,000/month'
-    },
-    {
-      id: 'cloud',
-      title: 'Cloud Infrastructure',
-      description: 'Scalable cloud solutions that grow with your business and ensure maximum uptime and security.',
-      features: ['AWS/Azure/GCP Migration', 'Container Orchestration', 'Auto-scaling', 'Disaster Recovery'],
-      price: 'From $3,000/month'
-    },
-    {
-      id: 'security',
-      title: 'Cybersecurity',
-      description: 'Comprehensive security solutions to protect your data, systems, and digital assets from threats.',
-      features: ['Penetration Testing', 'Security Audits', 'Threat Monitoring', 'Compliance Management'],
-      price: 'From $2,500/month'
-    },
-    {
-      id: 'development',
-      title: 'Custom Development',
-      description: 'Bespoke software development solutions designed specifically for your unique requirements.',
-      features: ['Web Applications', 'Mobile Apps', 'API Development', 'System Integration'],
-      price: 'From $4,000/month'
-    },
-    {
-      id: 'ai',
-      title: 'Data Analytics',
-      description: 'Advanced analytics and business intelligence solutions to unlock insights from your data.',
-      features: ['Data Visualization', 'Real-time Dashboards', 'Machine Learning Models', 'Data Warehousing'],
-      price: 'From $3,500/month'
-    },
-    {
-      id: 'cloud',
-      title: 'Digital Transformation',
-      description: 'End-to-end digital transformation services to modernize your business processes and operations.',
-      features: ['Process Automation', 'Legacy System Migration', 'Change Management', 'Training & Support'],
-      price: 'From $6,000/month'
-    }
-  ];
-
-  const filteredServices = selectedCategory === 'all' 
-    ? services 
-    : services.filter(service => service.id === selectedCategory);
-
+export default function Services() {
   return (
-    <div className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white min-h-screen">
-      <div className="container mx-auto px-4 py-16">
-        <motion.div
-          className="text-center mb-16"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-        >
-          <h1 className="text-5xl font-extrabold mb-6">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50 py-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-16">
+          <h1 className="text-5xl font-bold text-gray-900 mb-6">
             Our Services
           </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Comprehensive technology solutions designed to transform your business 
-            and drive innovation across all sectors.
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Comprehensive AI, micro SaaS, and IT services to help your business scale and succeed.
           </p>
-        </motion.div>
-
-        {/* Category Filter */}
-        <motion.div
-          className="flex flex-wrap justify-center gap-4 mb-12"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-        >
-          {serviceCategories.map((category) => (
-            <button
-              key={category.id}
-              onClick={() => setSelectedCategory(category.id)}
-              className={`px-6 py-3 rounded-full transition-all duration-300 ${
-                selectedCategory === category.id
-                  ? 'bg-blue-500 text-white shadow-lg'
-                  : 'bg-slate-700 text-gray-300 hover:bg-slate-600'
-              }`}
-            >
-              <span className="mr-2">{category.icon}</span>
-              {category.name}
-            </button>
-          ))}
-        </motion.div>
-
-        {/* Main Services */}
-        <motion.div
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16"
-          layout
-        >
-          {filteredServices.map((service, index) => (
-            <motion.div
-              key={service.title}
-              layout
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-            >
-              <Card className="h-full hover:shadow-2xl transition-all duration-300">
-                <div className="p-6">
-                  <h3 className="text-xl font-semibold mb-3">{service.title}</h3>
-                  <p className="text-gray-300 mb-4">{service.description}</p>
-                  
-                  <div className="mb-4">
-                    <h4 className="font-semibold mb-2 text-blue-400">Key Features:</h4>
-                    <ul className="text-sm text-gray-300 space-y-1">
-                      {service.features.map((feature, idx) => (
-                        <li key={idx} className="flex items-center">
-                          <span className="w-2 h-2 bg-blue-400 rounded-full mr-2"></span>
-                          {feature}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                  
-                  <div className="flex justify-between items-center">
-                    <span className="text-lg font-bold text-green-400">{service.price}</span>
-                    <Button variant="outline" size="sm">
-                      Learn More
-                    </Button>
-                  </div>
-                </div>
-              </Card>
-            </motion.div>
-          ))}
-        </motion.div>
-
-        {/* Industry Focus */}
-        <div className="text-center mb-16">
-          <h2 className="text-3xl font-bold mb-8">Industries We Serve</h2>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
-            <div className="text-center">
-              <div className="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl">🏥</span>
-              </div>
-              <h3 className="text-lg font-semibold">Healthcare</h3>
-            </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl">🏦</span>
-              </div>
-              <h3 className="text-lg font-semibold">Finance</h3>
-            </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl">🏭</span>
-              </div>
-              <h3 className="text-lg font-semibold">Manufacturing</h3>
-            </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-red-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl">🛒</span>
-              </div>
-              <h3 className="text-lg font-semibold">Retail</h3>
-            </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-yellow-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl">🎓</span>
-              </div>
-              <h3 className="text-lg font-semibold">Education</h3>
-            </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-indigo-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl">🏛️</span>
-              </div>
-              <h3 className="text-lg font-semibold">Government</h3>
-            </div>
-          </div>
         </div>
 
-        {/* Why Choose Us */}
-        <div className="text-center">
-          <h2 className="text-3xl font-bold mb-8">Why Choose Zion Tech Group?</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl">⚡</span>
-              </div>
-              <h3 className="text-xl font-semibold mb-2">Fast Delivery</h3>
-              <p className="text-gray-300">Rapid development and deployment of solutions to meet your timeline.</p>
-            </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl">🔒</span>
-              </div>
-              <h3 className="text-xl font-semibold mb-2">Secure & Reliable</h3>
-              <p className="text-gray-300">Enterprise-grade security and reliability in all our solutions.</p>
-            </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl">🎯</span>
-              </div>
-              <h3 className="text-xl font-semibold mb-2">Expert Team</h3>
-              <p className="text-gray-300">Experienced professionals with deep expertise in cutting-edge technologies.</p>
-            </div>
-          </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          <ServiceCard
+            href="/services/micro-saas"
+            title="Micro SaaS"
+            description="End-to-end product development with billing, auth, and analytics"
+            bullets={[
+              "Foundational architecture",
+              "Billing + subscriptions",
+              "Growth analytics",
+            ]}
+            icon="🚀"
+          />
+          <ServiceCard
+            href="/services/ai-services"
+            title="AI Services"
+            description="LLM applications, RAG systems, and MLOps pipelines"
+            bullets={["RAG and agents", "Evals + guardrails", "MLOps pipelines"]}
+            icon="🤖"
+          />
+          <ServiceCard
+            href="/services/it-services"
+            title="IT Services"
+            description="Cloud migration, DevOps, and security solutions"
+            bullets={["Cloud migration", "DevOps + SRE", "Security"]}
+            icon="⚙️"
+          />
+          <ServiceCard
+            href="/services/automation-tools"
+            title="Business Automation"
+            description="Intelligent automation tools that streamline operations and boost productivity"
+            bullets={["Workflow orchestration", "RPA solutions", "AI-driven process optimization", "Custom automation development"]}
+            icon="⚡"
+          />
+          <ServiceCard
+            href="/services/ai-customer-insights"
+            title="AI Customer Insights"
+            description="Transform customer data into actionable insights with AI-powered analytics"
+            bullets={["Predictive analytics", "Sentiment analysis", "Customer journey mapping", "Real-time dashboards"]}
+            icon="🧠"
+          />
+          <ServiceCard
+            href="/services/automated-workflow-builder"
+            title="Workflow Automation"
+            description="Build powerful business automation workflows without coding"
+            bullets={["Visual workflow designer", "500+ integrations", "AI optimization", "Real-time monitoring"]}
+            icon="⚡"
+          />
+          <ServiceCard
+            href="/services/ai-document-processor"
+            title="AI Document Processor"
+            description="Intelligent document processing with OCR and data extraction"
+            bullets={["Smart OCR engine", "AI data extraction", "Automated workflows", "99% accuracy"]}
+            icon="📄"
+          />
+          <ServiceCard
+            href="/services/cybersecurity-suite"
+            title="Cybersecurity Suite"
+            description="Comprehensive security solutions with threat detection and monitoring"
+            bullets={["Threat detection", "Vulnerability assessment", "Compliance management", "24/7 SOC monitoring"]}
+            icon="🛡️"
+          />
+          <ServiceCard
+            href="/services/ai-chatbot-platform"
+            title="AI Chatbot Platform"
+            description="Build intelligent chatbots with natural language processing"
+            bullets={["NLP capabilities", "Multi-channel deployment", "Machine learning", "Visual builder"]}
+            icon="🤖"
+          />
+          <ServiceCard
+            href="/services/ai-predictive-analytics"
+            title="AI Predictive Analytics"
+            description="Leverage machine learning for accurate forecasting and strategic decision-making"
+            bullets={["Demand forecasting", "Risk modeling", "Resource optimization", "Market trend analysis"]}
+            icon="📈"
+          />
         </div>
+
+        <CTA />
       </div>
     </div>
   );
-};
+}
 
-export default Services;
+interface ServiceCardProps {
+  href: string;
+  title: string;
+  description: string;
+  bullets: string[];
+  icon: string;
+}
+
+function ServiceCard({ href, title, description, bullets, icon }: ServiceCardProps) {
+  return (
+    <Link
+      to={href}
+      className="group border border-gray-200 rounded-xl p-8 block hover:border-blue-300 hover:shadow-lg transition-all duration-200 bg-white"
+    >
+      <div className="text-4xl mb-4">{icon}</div>
+      <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+        {title}
+      </h3>
+      <p className="text-gray-600 mb-4 leading-relaxed">{description}</p>
+      <ul className="text-gray-600 space-y-2">
+        {bullets.map((bullet) => (
+          <li key={bullet} className="flex items-center">
+            <span className="text-blue-500 mr-2">•</span> {bullet}
+          </li>
+        ))}
+      </ul>
+    </Link>
+  );
+}
+
+function CTA() {
+  return (
+    <div className="bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 rounded-xl p-8 text-center">
+      <h3 className="text-2xl font-bold text-gray-900 mb-4">
+        Ready to Get Started?
+      </h3>
+      <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
+        Talk to our experts about your project. We'll help you choose the right
+        service and create a custom solution for your business needs.
+      </p>
+      <div className="flex flex-col sm:flex-row gap-4 justify-center">
+        <a
+          href="tel:+13024640950"
+          className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+        >
+          Call +1 302 464 0950
+        </a>
+        <a
+          href="mailto:kleber@ziontechgroup.com"
+          className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors"
+        >
+          Email Us
+        </a>
+      </div>
+    </div>
+  );
+}
