@@ -160,7 +160,7 @@ function createAdvancedCaching() {
   
   const cachingFiles = {
     'cache/redis-cache.js': `// Redis-based caching system
-export class RedisCache {
+class RedisCache {
   constructor(redisClient) {
     this.client = redisClient;
     this.defaultTTL = 3600; // 1 hour
@@ -313,7 +313,7 @@ export class MemoryCache {
 }
 
 export const memoryCache = new MemoryCache();
-  `
+  `;
   };
 
   Object.entries(cachingFiles).forEach(([filename, content]) => {
