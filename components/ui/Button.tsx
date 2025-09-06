@@ -18,7 +18,7 @@ const Button: React.FC<ButtonProps> = ({
   className = "",
   onClick,
   disabled = false,
-type = "button",
+  type = "button",
   asChild = false,
   ...props
 }) => {
@@ -33,7 +33,7 @@ type = "button",
   };
 
   const sizeClasses = {
-sm: "h-8 px-3 text-xs",
+    sm: "h-8 px-3 text-xs",
     md: "h-10 px-4 py-2",
     lg: "h-12 px-8 text-lg",
   };

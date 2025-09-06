@@ -32,28 +32,21 @@ jest.mock("next/image", () => {
 });
 
 // Mock Next.js Link component
-<<<<<<< HEAD
-jest.mock("next/link", () => {
-  return function MockedLink({ children, href, ...props }) {
+jest.mock("next/link", () => ({
+  _esModule: true,
+  default: ({ children, href, ...props }) => {
     return (
       <a href={href} {...props}>
         {children}
       </a>
     );
-  };
-});
-=======
-jest.mock('next/link', () => ({
-  _esModule: true,
-  default: ({ children, href, ...props }) => {
-    return <a href={href} {...props}>{children}</a>;
   },
 }));
 
 // Mock window.matchMedia
-Object.defineProperty(window, 'matchMedia', {
+Object.defineProperty(window, "matchMedia", {
   writable: true,
-  value: jest.fn().mockImplementation(query => ({
+  value: jest.fn().mockImplementation((query) => ({
     matches: false,
     media: query,
     onchange: null,
@@ -61,8 +54,8 @@ Object.defineProperty(window, 'matchMedia', {
     removeListener: jest.fn(), // deprecated
     addEventListener: jest.fn(),
     removeEventListener: jest.fn(),
-    dispatchEvent: jest.fn()
-  }))
+    dispatchEvent: jest.fn(),
+  })),
 });
 
 // Mock IntersectionObserver
@@ -86,4 +79,3 @@ beforeEach(() => {
   // Reset all mocks before each test
   jest.clearAllMocks();
 });
->>>>>>> cursor/automate-test-improve-and-merge-code-88cd

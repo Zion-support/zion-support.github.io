@@ -1,10 +1,10 @@
-import React from 'react';
-import { render, screen } from '@testing-library/react';
-import '@testing-library/jest-dom';
-import PerformanceMonitor from '../components/PerformanceMonitor.dynamic';
-describe('PerformanceMonitor', () => {
-  test('renders without crashing', () => {
+import React from "react";
+import { render, screen } from "@testing-library/react";
+import "@testing-library/jest-dom";
+import PerformanceMonitor from "../components/PerformanceMonitor.dynamic";
+describe("PerformanceMonitor", () => {
+  test("renders without crashing", () => {
     render(<PerformanceMonitor />);
-    expect(screen.getByTestId('performance-monitor')).toBeInTheDocument();
+    expect(screen.getByTestId("performance-monitor")).toBeInTheDocument();
   });
 });

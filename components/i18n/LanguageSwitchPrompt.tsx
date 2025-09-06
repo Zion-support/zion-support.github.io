@@ -68,5 +68,5 @@ export default function LanguageSwitchPrompt() {
         </div>
       </div>
     </div>
-);
+  );
 }

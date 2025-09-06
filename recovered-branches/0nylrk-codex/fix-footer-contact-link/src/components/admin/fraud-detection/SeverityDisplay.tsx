@@ -13,5 +13,5 @@ export const SeverityDisplay: React.FC<SeverityDisplayProps> = ({
       showIcon={true}
       showText={true}
     />
-);
+  );
 };

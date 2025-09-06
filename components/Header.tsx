@@ -71,7 +71,7 @@ export default function Header() {
       icon: Shield,
     },
     {
-title: "Performance Optimization",
+      title: "Performance Optimization",
       description: "Speed and efficiency improvements",
       href: "/services/performance",
       icon: Zap,
@@ -98,7 +98,7 @@ title: "Performance Optimization",
       icon: Heart,
     },
     {
-title: "Educational Platforms",
+      title: "Educational Platforms",
       description: "Learning management systems",
       href: "/solutions/education",
       icon: GraduationCap,
