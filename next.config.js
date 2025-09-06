@@ -141,4 +141,4 @@ const nextConfig = {
   serverExternalPackages: ['sharp']
 };
 
-module.exports = nextConfig;
+export default nextConfig;
