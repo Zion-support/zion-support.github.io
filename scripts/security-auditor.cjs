@@ -270,19 +270,14 @@ if (require.main === module) {
   const auditor = new SecurityAuditor();
   auditor.run()
     .then((report) => {
-      
-      
-      
+
       process.exit(0)})
     .catch((error) => {
       console.error('\n💥 Security Auditor "failed": ', error.message);
       process.exit(1)})}
 
 module.exports = SecurityAuditor;
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
+
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')

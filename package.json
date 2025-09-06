@@ -260,7 +260,11 @@
     "improve:comprehensive": "node automation/comprehensive-app-improvement-suite.cjs",
     "improve:continuous": "node automation/continuous-improvement-orchestrator.cjs",
     "automation:comprehensive": "node automation/comprehensive-app-improvement-suite.cjs",
-    "automation:continuous": "node automation/continuous-improvement-orchestrator.cjs"
+    "automation:continuous": "node automation/continuous-improvement-orchestrator.cjs",
+    "automation:enhanced": "node automation/enhanced-master-orchestrator.cjs",
+    "automation:test": "node automation/intelligent-test-automation.cjs",
+    "automation:performance": "node automation/performance-monitor-optimizer.cjs",
+    "automation:ultimate": "node automation/ultimate-automation-runner.cjs"
   },
   "pm2": {
     "ecosystem": "ecosystem.maintenance.cjs"
@@ -377,6 +381,7 @@
     "eslint-plugin-jsx-a11y": "^6.10.2",
     "eslint-plugin-react": "^7.37.5",
     "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-react-refresh": "^0.4.20",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^30.1.3",
     "jest-environment-jsdom": "^30.1.2",

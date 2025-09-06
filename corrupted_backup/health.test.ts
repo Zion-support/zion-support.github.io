@@ -11,13 +11,11 @@ export default function Health.test({ }: Health.testProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 }
-=======
+
 }
-=======
+
 }
-=======
+
 }

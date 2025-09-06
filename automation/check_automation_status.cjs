@@ -80,12 +80,6 @@
     );
     fs.writeFileSync(reportPath, JSON.stringify(statusReport, null, 2));
 
-    
-    
-    
-    
-    
-
     return statusReport;
   } catch (error) {
     console.error('❌ Error checking automation "status": ', error.message);
@@ -108,10 +102,7 @@ if (require.main === module) {
 }
 
 module.exports = { checkAutomationStatus };
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
+
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')

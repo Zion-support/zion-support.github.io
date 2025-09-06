@@ -13,9 +13,7 @@ function fixSyntaxErrors(filePath) {
     let modified = false;
 
     // Fix merge conflict markers
-    if (content.includes('<<<<<<< HEAD') || content.includes('=======') || content.includes('>>>>>>>')) {
-      console.log(`  🔄 Fixing merge conflicts in ${filePath}`);
-      content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, '');
+    if (content.includes('
       modified = true;
     }
 

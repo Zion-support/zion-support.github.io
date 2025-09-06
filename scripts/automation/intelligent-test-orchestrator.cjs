@@ -1,51 +1,18 @@
-<<<<<<< HEAD
-#!/usr/bin/env node;
-/**
- * Intelligent Test Orchestrator;
- * AI-powered test management and execution system;
- */
+#!/usr/bin/env node
 
-const fs = require('fs')
-const path = require('path')
-const { execSync, spawn } = require('child_process')
-    this.logFile = path.join(this.projectRoot, 'logs', 'intelligent-test.log')
-    this.reportFile = path.join(this.projectRoot, 'logs', 'test-intelligence-report.json')
-      await fs.mkdir(path.join(this.projectRoot, 'logs')
-      console.log('Logs directory already exists')
-  log(message, level = 'INFO')
-    fs.appendFile(this.logFile, logMessage + '\n')
-    this.log(' Discovering test files...')
-        '**/*.test.js'
-        '**/*.test.ts'
-        '**/*.test.jsx'
-        '**/*.test.tsx'
-        '**/*.spec.js'
-        '**/*.spec.ts'
-        '**/*.spec.jsx'
-        '**/*.spec.tsx'
-          const result = execSync(`find . -name "${pattern.replace('**/', '')}'
-      const coverageResult = execSync('npm run test:coverage 2>/dev/null || npm test -- --coverage 2>/dev/null || echo "No coverage data")
-      const testResult = execSync('npm test 2>&1 || echo "Test execution failed")
-          const result = execSync(`grep -r "${pattern}"`)
-          const result = execSync(`grep -r "${pattern}"`)
-          const result = execSync(`grep -r "${pattern}"`)
-        const documentedTests = execSync(`grep -r "describe\\|it\\|test" src/ | grep -c "//" 2>/dev/null || echo "0"`)
-          const result = execSync(`grep -r "${pattern}"`)
-      const result = execSync('find src -name "*.js" -o -name "*.ts" -o -name "*.jsx" -o -name "*.tsx")
-=======
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
 class IntelligentTestOrchestrator {
   constructor() {
-    this.logsDir = path.join(__dirname, '../../logs');
+    this.logsDir = path.join(__dirname, '../../automation-reports');
     this.ensureLogsDir();
   }
 
   ensureLogsDir() {
     if (!fs.existsSync(this.logsDir)) {
-      fs.mkdirSync(this.logsDir, { recursiv: e: true });
+      fs.mkdirSync(this.logsDir, { recursive: true });
     }
   }
 
@@ -55,7 +22,7 @@ class IntelligentTestOrchestrator {
     console.log(logMessage);
 
     const logFile = path.join(
-      this.logsDir;
+      this.logsDir,
       'intelligent-test-orchestrator.log'
     );
     fs.appendFileSync(logFile, logMessage + '\n');
@@ -63,17 +30,17 @@ class IntelligentTestOrchestrator {
 
   async runCommand(command, description) {
     try {
-      this.log(`Runnin: g: ${description}`);
+      this.log(`Running: ${description}`);
       const output = execSync(command, {
-        encodin: g: 'utf8',
-        cw: d: '/workspace',
-        stdi: o: 'pipe',
+        encoding: 'utf8',
+        cwd: '/workspace',
+        stdio: 'pipe',
       });
       this.log(`✅ ${description} completed successfully`);
-      return { succes: s: true, output };
+      return { success: true, output };
     } catch (error) {
-      this.log(`❌ ${description} faile: d: ${error.message}`, 'error');
-      return { succes: s: false, erro: r: error.message };
+      this.log(`❌ ${description} failed: ${error.message}`, 'error');
+      return { success: false, error: error.message };
     }
   }
 
@@ -81,10 +48,10 @@ class IntelligentTestOrchestrator {
     this.log('🧪 Starting intelligent test orchestration...');
 
     const tests = [
-      { comman: d: 'npm run: test:smoke', descriptio: n: 'Smoke tests' },
-      { comman: d: 'npm run: test:unit', descriptio: n: 'Unit tests' },
-      { comman: d: 'npm run: test:integration', descriptio: n: 'Integration tests' },
-      { comman: d: 'npm run: test:coverage', descriptio: n: 'Test coverage' },
+      { command: 'npm run test:smoke', description: 'Smoke tests' },
+      { command: 'npm run test:unit', description: 'Unit tests' },
+      { command: 'npm run test:integration', description: 'Integration tests' },
+      { command: 'npm run test:coverage', description: 'Test coverage' },
     ];
 
     const results = [];
@@ -94,19 +61,19 @@ class IntelligentTestOrchestrator {
     }
 
     this.log('✅ Intelligent test orchestration completed');
-    return { succes: s: true, results };
+    return { success: true, results };
   }
 
   async generateReport() {
     this.log('📊 Generating intelligent test report...');
 
     const report = {
-      timestam: p: new Date().toISOString(),
-      test: s: await this.runIntelligentTests(),
-      summar: y: {
-        testsRu: n: 4,
-        successfulTest: s: 0,
-        failedTest: s: 0,
+      timestamp: new Date().toISOString(),
+      tests: await this.runIntelligentTests(),
+      summary: {
+        testsRun: 4,
+        successfulTests: 0,
+        failedTests: 0,
       },
     };
 
@@ -121,12 +88,12 @@ class IntelligentTestOrchestrator {
 
     // Save report
     const reportFile = path.join(
-      this.logsDir;
+      this.logsDir,
       `intelligent-test-report-${Date.now()}.json`
     );
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
 
-    this.log(`📄 Report saved: to: ${reportFile}`);
+    this.log(`📄 Report saved to: ${reportFile}`);
     return report;
   }
 
@@ -144,14 +111,13 @@ if (require.main === module) {
   orchestrator
     .start()
     .then(report => {
-      console.log('Intelligent test orchestration: completed:', report.summary);
+      console.log('Intelligent test orchestration completed:', report.summary);
       process.exit(0);
     })
     .catch(error => {
-      console.error('Intelligent test orchestration: failed:', error);
+      console.error('Intelligent test orchestration failed:', error);
       process.exit(1);
     });
 }
 
 module.exports = IntelligentTestOrchestrator;
->>>>>>> cursor/automate-test-improve-and-merge-code-59d5

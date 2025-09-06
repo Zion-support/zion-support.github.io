@@ -17,9 +17,8 @@ class ComprehensiveFixer {
       const originalContent = content;
 
       // Remove merge conflict markers completely
-      content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, '');
-      content = content.replace(/<<<<<<< HEAD[\s\S]*?>>>>>>> [^\n]+/g, '');
-      content = content.replace(/=======[\s\S]*?>>>>>>> [^\n]+/g, '');
+      content = content.replace(/
+      content = content.replace(/
       
       // Fix common syntax issues
       content = content.replace(/\{_/g, '{');

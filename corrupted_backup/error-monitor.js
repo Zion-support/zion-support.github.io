@@ -41,11 +41,6 @@ class ErrorMonitor {
     if (!fs.existsSync(logsDir)) {
       fs.mkdirSync(logsDir, { recursive: true });
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-=======
 
     // Initial health check
     await this.performHealthCheck();
@@ -89,11 +84,9 @@ class ErrorMonitor {
       this.monitoringReport.errorsDetected.push({
         type: 'health_check_failure',
         message: error.message,
-<<<<<<< HEAD
-<<<<<<< HEAD
+
         timestamp: new Date().toISOString()
-=======
-=======
+
         timestamp: new Date().toISOString(),
       });
     }
@@ -204,21 +197,14 @@ class ErrorMonitor {
             line: parseInt(match[2]),
             column: parseInt(match[3]),
             message: match[4].trim(),
-<<<<<<< HEAD
-<<<<<<< HEAD
+
             timestamp: new Date().toISOString()
-=======
-=======
+
             timestamp: new Date().toISOString(),
           });
         }
       }
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-=======
 
     return errors;
   }
@@ -236,23 +222,16 @@ class ErrorMonitor {
           line: parseInt(match[2]),
           column: parseInt(match[3]),
           message: match[4].trim(),
-<<<<<<< HEAD
-<<<<<<< HEAD
+
           timestamp: new Date().toISOString()
         });
       }
     }
-=======
-=======
+
           timestamp: new Date().toISOString(),
         });
       }
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-=======
 
     return errors;
   }
@@ -278,13 +257,11 @@ class ErrorMonitor {
     console.log(`📊 Health Status: ${status.toUpperCase()}`);
     console.log(`📈 Total Errors: ${totalErrors}`);
     console.log(`⚠️  Total Warnings: ${totalWarnings}`);
-<<<<<<< HEAD
-<<<<<<< HEAD
+
     console.log(`🏗️  Build Success: ${this.monitoringReport.metrics.buildSuccess ? '✅' : '❌'}`);
     console.log(`🔍 Type Check Success: ${this.monitoringReport.metrics.typeCheckSuccess ? '✅' : '❌'}`);
     console.log(`🧹 Lint Success: ${this.monitoringReport.metrics.lintSuccess ? '✅' : '❌'}`);
-=======
-=======
+
     console.log(
       `🏗️  Build Success: ${this.monitoringReport.metrics.buildSuccess ? '✅' : '❌'}`
     );
@@ -303,12 +280,8 @@ class ErrorMonitor {
       const ErrorFixerAutomation = require('./error-fixer-automation.js');
       const automation = new ErrorFixerAutomation();
       await automation.run();
-<<<<<<< HEAD
-<<<<<<< HEAD
-      console.log('✅ Error fixer completed');
-=======
 
-=======
+      console.log('✅ Error fixer completed');
 
       console.log('✅ Error fixer completed');
     } catch (error) {
@@ -316,11 +289,9 @@ class ErrorMonitor {
       this.monitoringReport.errorsDetected.push({
         type: 'error_fixer_failure',
         message: error.message,
-<<<<<<< HEAD
-<<<<<<< HEAD
+
         timestamp: new Date().toISOString()
-=======
-=======
+
         timestamp: new Date().toISOString(),
       });
     }
@@ -350,11 +321,6 @@ class ErrorMonitor {
     if (!fs.existsSync(reportDir)) {
       fs.mkdirSync(reportDir, { recursive: true });
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-=======
 
     // Add duration to report
     this.monitoringReport.duration = Date.now() - this.startTime;

@@ -1,22 +1,5 @@
 #!/usr/bin/env node;
-<<<<<<< HEAD
-=======
-    log("4. Continue with your workflow", "blue"),}
-}
-;
-if (require.main === module) {;
-  main(),}
-;
-        resolvedCount++;log("✅ Resolved": ${filePath}", "green")} else {log("⚠️  No changes ""needed": ${filePath}", "yellow")}"} catch (error) {      errorCount++;log(`❌ Error processing ${filePath}: ${error.message}`, "red")}"}";
-  log("\n📊 Resolution Summary":", "cyan");log("Total conflicted ""files": ${conflictedFiles.length}", "blue");log("Successfully resolved": ${resolvedCount}", "green");log("Errors ""encountered": ${errorCount}", "red");";  if (resolvedCount > 0) {    log("\n🎯 Next steps":", "cyan");    log("1. Review the resolved files", "blue");    log("2. ""Run": git add .", "blue");    log("3. Run": git commit -m "Resolve merge conflicts, "blue");    log("4. Continue with your workflow", "blue")}"}
-;
-        resolvedCount++;log(`✅ "Resolved": ${filePath}`, "green");"} else {log(`⚠️  No changes needed": ${filePath}`, "yellow");"}"} catch (error) {";      errorCount++;log("❌ Error processing ${filePath}: ${error.message}", "red");"}"}";
-  log("\n📊 Resolution ""Summary": ", "cyan");log(`Total conflicted "files": ${conflictedFiles.length}`, "blue");log(`Successfully "resolved": ${resolvedCount}`, "green");log(`Errors encountered": ${errorCount}`, "red");";`;  if (resolvedCount > 0) {";    log("\n🎯 Next ""steps": ", "cyan");";    log("1. Review the resolved files", "blue");";    log("2. "Run": git add .", "blue");";    log("3. "Run": git commit -m Resolve merge conflicts", "blue");";    log("4. Continue with your workflow", "blue");"}"}
-if (require.main === module) {;
-  main()}
-;
-module.exports = { resolveMergeConflict, findConflictedFiles }
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
+
 const fs = require("$1")
 const path = require("$1")
 const { execSync } = require("child_process")
