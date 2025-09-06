@@ -1,16 +1,16 @@
 
-
-
+import js from '@eslint/js';
+import globals from 'globals';
+import reactHooks from 'eslint-plugin-react-hooks';
+import reactRefresh from 'eslint-plugin-react-refresh';
+import tseslint from '@typescript-eslint/eslint-plugin';
+import tsparser from '@typescript-eslint/parser';
+import react from 'eslint-plugin-react';
+import jsxA11y from 'eslint-plugin-jsx-a11y';
 
 export default [
   {
-
-    files: ['**/*.{js,jsx,ts,tsx}'],
-
-
-    files: ["**/*.{js,jsx,ts,tsx}"],
-
-
+    files: ['src/App.tsx', 'src/main.tsx', 'src/components/Header.tsx', 'src/components/Footer.tsx', 'src/components/Sidebar.tsx', 'src/components/PerformanceMonitor.tsx', 'src/components/ErrorBoundary.tsx', 'src/pages/Home.tsx', 'src/pages/About.tsx', 'src/pages/Services.tsx', 'src/pages/Pricing.tsx', 'src/pages/Contact.tsx'],
 
     ignores: [
       '.next/**',
@@ -20,7 +20,9 @@ export default [
       'node_modules/**',
 
 
+
       '.eslintrc.js',
+
 
 
       'coverage/**',
@@ -38,6 +40,7 @@ export default [
       '**/*.temp.*',
       '**/*.test.*',
       '**/*.spec.*',
+
 
 
       '**/test-utils.*',
@@ -180,6 +183,7 @@ export default [
 
 
 
+
       '**/zion-os/**',
       '**/zion-website/**',
       '**/zion-academy/**',
@@ -191,23 +195,29 @@ export default [
       '**/static/**',
 
       'temp_exclude/**',
-      'temp_working/**',
-      'test_build/**',
+      'temp_backup/**',
+      'temp_broken_files/**',
+      'temp_components/**',
+      'temp_conflicts/**',
+
       'tests/**',
       'types/**',
       'utils/**',
       'ultimate-*.cjs',
+
       'test-next.js',
       'vite.config.ts',
       'src_backup_temp/**',
       'temp-backup/**',
       'temp_components/**',
       'temp_conflicts/**',
+
       'supabase/**',
       'start-dev.js',
       'structural-fix.js',
       'super-syntax-fixer.cjs',
       'system-monitor.cjs',
+
 
     ],
   },
@@ -499,11 +509,13 @@ origin/automation-improvements-final
 
       },
 
+
       parser: tsparser,
       parserOptions: {
         ecmaVersion: 'latest',
         sourceType: 'module',
         ecmaFeatures: {
+
           jsx: true
         }
 
@@ -541,6 +553,7 @@ origin/automation-improvements-final
 
 
 
+
         describe: 'readonly',
         it: 'readonly',
         test: 'readonly',
@@ -549,10 +562,12 @@ origin/automation-improvements-final
         afterEach: 'readonly',
         beforeAll: 'readonly',
 
+
         afterAll: 'readonly'
       }
     },
     plugins: {
+
 
 
       '@typescript-eslint': tseslint,
@@ -560,7 +575,9 @@ origin/automation-improvements-final
       'react-hooks': reactHooks,
       'react-refresh': reactRefresh,
 
+
       'jsx-a11y': jsxA11y
+
 
 
     },
@@ -570,6 +587,7 @@ origin/automation-improvements-final
       ...reactHooks.configs.recommended.rules,
       ...jsxA11y.configs.recommended.rules,
 
+
       'react-refresh/only-export-components': [
         'warn',
 
@@ -578,10 +596,12 @@ origin/automation-improvements-final
 
 
 
+
       '@typescript-eslint/no-unused-vars': 'warn',
       '@typescript-eslint/no-explicit-any': 'warn',
       'react-hooks/exhaustive-deps': 'warn',
       'no-undef': 'off',
+
 
 
 
@@ -620,6 +640,7 @@ origin/automation-improvements-final
     }
 
 
+
   },
   {
     files: [
@@ -628,7 +649,9 @@ origin/automation-improvements-final
       '**/automation/**/*.js',
 
 
+
       '**/pm2/**/*.js'
+
 
 
     ],
@@ -645,6 +668,7 @@ origin/automation-improvements-final
         __dirname: 'readonly',
         __filename: 'readonly',
         Buffer: 'readonly',
+
 
 
         global: 'readonly'
@@ -668,6 +692,7 @@ origin/automation-improvements-final
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 

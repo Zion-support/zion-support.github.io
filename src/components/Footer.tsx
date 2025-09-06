@@ -3,13 +3,19 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 
-
-import { ChevronUp } from 'lucide-react';
+export const Footer: React.FC = () => {
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  };
 
 
 
 const Footer: React.FC = () => {
   return (
+
     <footer className="bg-gray-900 text-white py-8">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
@@ -63,10 +69,12 @@ const Footer: React.FC = () => {
             <h4 className="text-lg font-semibold text-white mb-4">Company</h4>
             <ul className="space-y-2">
               <li><Link to="/about" className="text-gray-400 hover:text-white transition-colors">About Us</Link></li>
+
               <li><Link to="/contact" className="text-gray-400 hover:text-white transition-colors">Contact</Link></li>
               <li><Link to="/pricing" className="text-gray-400 hover:text-white transition-colors">Pricing</Link></li>
             </ul>
           </div>
+
           
           <div>
             <h4 className="text-lg font-semibold text-white mb-4">Legal</h4>
@@ -120,4 +128,5 @@ const Footer: React.FC = () => {
 };
 
 export default Footer;
+
 

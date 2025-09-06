@@ -2,6 +2,7 @@
 
 
 
+
 export const metadata = { 
   title: 'Micro SaaS Development | Zion Tech Group',
   description: 'Complete micro SaaS development services including AI-powered tools, productivity apps, marketing automation, and business intelligence solutions.',
@@ -503,3 +504,5 @@ function Pricing() {
     </section>
   );
 
+
+>>>>>>> origin/final-merged-improvements

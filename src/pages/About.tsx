@@ -1,4 +1,6 @@
 import React from 'react';
+import { motion } from 'framer-motion';
+
 
 
           </p>
@@ -66,12 +68,15 @@ import React from 'react';
 
       <Footer />
 
+
     </div>
   );
 
 
 };
 
+
 export default About;
+
 
 

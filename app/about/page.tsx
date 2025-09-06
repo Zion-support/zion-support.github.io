@@ -1,6 +1,8 @@
 
 
 
+
+
 export const metadata = {;
   title: "About | Zion Tech Group",;
   description:;
@@ -9,6 +11,9 @@ export const metadata = {;
 
 
 
+
+
+>>>>>>> origin/final-merged-improvements
 };
 
 export default function AboutPage() {

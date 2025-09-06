@@ -1,30 +1,36 @@
 
+import React, { useState } from 'react';
+import { useToast } from '../components/ui/use-toast';
+import { motion } from 'framer-motion';
 
 
 const Contact: React.FC = () => {
+  const { toast } = useToast();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
 
+
     company: '',
 
     phone: '',
+
     service: '',
     message: ''
   });
   const [isSubmitted, setIsSubmitted] = useState(false);
 
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }));
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+
     // Handle form submission
     console.log('Form submitted:', formData);
     alert('Thank you for your message! We will get back to you soon.');
@@ -124,6 +130,7 @@ const Contact: React.FC = () => {
                 <div>
                   <label htmlFor="phone" className="block text-sm font-medium text-gray-300 mb-2">
                     Phone Number
+
                   </label>
                   <input
                     type="tel"
@@ -131,6 +138,7 @@ const Contact: React.FC = () => {
                     name="phone"
                     value={formData.phone}
                     onChange={handleChange}
+
                     className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     placeholder="+1 (555) 123-4567"
                   />
@@ -219,6 +227,7 @@ const Contact: React.FC = () => {
                     <h3 className="text-lg font-semibold mb-1">Address</h3>
                     <p className="text-gray-300">{contactInfo.address}</p>
                     <p className="text-sm text-gray-400">Visit us for in-person consultations</p>
+
                   </div>
                 </div>
               </div>
@@ -266,6 +275,7 @@ const Contact: React.FC = () => {
                 >
                   View Pricing
                 </Link>
+
 
               </div>
             </div>
@@ -326,6 +336,7 @@ const Contact: React.FC = () => {
           </form>
         </div>
       </div>
+
 
 
 

@@ -1,3 +1,4 @@
+
 import React, { useEffect, useState } from 'react';
 
 
@@ -41,5 +42,6 @@ export const PerformanceMonitor: React.FC = () => {
 
     </div>
   );
+
 };
 
