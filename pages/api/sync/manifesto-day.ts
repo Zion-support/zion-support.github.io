@@ -78,6 +78,7 @@ export default async function handler(req, res) {
   if (!state.config.optIn || state.config.paused) {
     return res.status(403).json({ error: "Sync disabled for this instance" })
   }
+<<<<<<< HEAD
 }
   } catch (error) {
     console.error("Error:", error);
@@ -101,6 +102,45 @@ export default async function handler(req, res) {
     originInstanceId: state.config.instanceId
     version
     timestamp: timestamp |Date.now()
+=======
+
+  const { milestoneId, title, timestamp } = req.body as { milestoneId: string, title: string, timestamp?: number };
+  if (!milestoneId || !title) return res.status(400).json({ error: "milestoneId, title required" });
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+  const version = nextVersionFor(state, milestoneId);
+  const event = {
+
+      id: milestoneId,
+      subjectId: milestoneId,
+=======
+import type { NextApiRequest, NextApiResponse } from './next';
+import {
+  read_state,
+  write_state,
+  upsert_event,
+} from '../../../utils / sync / storage';
+import { sign_payload  } from '../../../utils / sync / signature';
+import axios from './axios';
+import { v4, as, uuidv4  } from './uuid';
+import { nextVersionFor  } from '../../../utils / sync / versioning';
+export default async /**
+ * handler - Function description
+ */
+function handler() {
+  if (
+    return res.status (405).json ({ error: "Method not allowed" })) {
+  $2
+}
+  const state = read_state ();
+  // Check condition
+if ( {) {
+  $2
+}
+    return res.status (403).json ({ error: "Sync disabled for this instance" });
+>>>>>>> cursor/expand-services-advertise-and-build-project-5c86
   }
   const { milestone_id, title, timestamp } = req.body as {
     milestone_id: string;

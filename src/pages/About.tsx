@@ -3,6 +3,7 @@ import React from 'react';
 
 const About: React.FC = () => {
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
       <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
@@ -135,20 +136,36 @@ const About: React.FC = () => {
           <h2 className="text-3xl font-bold text-white mb-6">Ready to Work With Us?</h2>
           <p className="text-xl text-blue-100 mb-8">
             Let's discuss how Zion Tech Group can help transform your business with cutting-edge technology solutions.
+=======
+    <div className="min-h-screen bg-white py-20">
+      <div className="container mx-auto px-4">
+        <h1 className="text-4xl font-bold text-gray-900 mb-8">About Zion Tech Group</h1>
+        <div className="prose max-w-4xl">
+          <p className="text-lg text-gray-600 mb-6">
+            Zion Tech Group is a leading technology solutions provider specializing in AI-powered micro SaaS applications, 
+            intelligent automation, and cutting-edge IT services. We help businesses transform and scale through innovative 
+            technology solutions.
+>>>>>>> cursor/expand-services-advertise-and-build-project-5c86
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="mailto:kleber@ziontechgroup.com"
-              className="bg-white text-blue-600 px-8 py-4 rounded-xl hover:bg-gray-100 transition-all duration-300 font-semibold text-lg shadow-2xl"
-            >
-              Contact Us
-            </a>
-            <a
-              href="tel:+13024640950"
-              className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-xl hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold text-lg"
-            >
-              Call Us
-            </a>
+          <p className="text-lg text-gray-600 mb-6">
+            Our team of expert developers, AI specialists, and IT professionals work together to deliver solutions that 
+            drive real business results. From concept to deployment, we provide end-to-end support for your technology needs.
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
+            <div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">Our Mission</h3>
+              <p className="text-gray-600">
+                To empower businesses with AI-driven solutions that automate processes, enhance productivity, 
+                and drive exponential growth through innovative technology.
+              </p>
+            </div>
+            <div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">Our Vision</h3>
+              <p className="text-gray-600">
+                To be the world's leading provider of intelligent business solutions that transform 
+                how companies operate and compete in the digital age.
+              </p>
+            </div>
           </div>
         </div>
       </div>

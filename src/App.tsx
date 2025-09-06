@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState, Suspense } from 'react';
 =======
 import React from 'react';
@@ -13,6 +14,19 @@ import PerformanceMonitor from './components/PerformanceMonitor';
 import Button from './components/Button';
 import Card from './components/Card';
 import ServiceCard from './components/ServiceCard';
+=======
+import React from 'react'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import Button from './components/Button'
+import Card from './components/Card'
+import ServiceCard from './components/ServiceCard'
+import { Header } from './components/Header'
+import Footer from './components/Footer'
+import About from './pages/About'
+import Services from './pages/Services'
+import Contact from './pages/Contact'
+import Pricing from './pages/Pricing'
+>>>>>>> cursor/expand-services-advertise-and-build-project-5c86
 
 // Lazy load pages
 const Home = React.lazy(() => import('./pages/Home'));
@@ -73,6 +87,7 @@ const HomePage = () => (
           <Card title="Security" description="Robust protection for all your data." />
           <Card title="Support" description="24/7 dedicated customer assistance." />
 <<<<<<< HEAD
+<<<<<<< HEAD
         </div>
       </div>
     </div>
@@ -115,10 +130,39 @@ function App() {
       </Router>
     </ErrorBoundary>
   );
+=======
+        </div>
+      </div>
+    </div>
+  </div>
+)
+
+function App() {
+  return (
+    <Router>
+      <div className="min-h-screen flex flex-col">
+        <Header onMenuClick={() => {}} />
+        <main className="flex-1">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/services" element={<Services />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/pricing" element={<Pricing />} />
+          </Routes>
+        </main>
+        <Footer />
+      </div>
+    </Router>
+  )
+>>>>>>> cursor/expand-services-advertise-and-build-project-5c86
 }
 
 <<<<<<< HEAD
 export default App;
+<<<<<<< HEAD
 =======
 export default App;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-5c86

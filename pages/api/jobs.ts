@@ -17,6 +17,7 @@ const FILE = "jobs && jobs.json";
 export default async function handler(
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   req: NextApiRequest
   res: NextApiResponse
 ) {
@@ -24,6 +25,8 @@ export default async function handler(
   res: NextApiResponse,
 ) {;
 =======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-5c86
   req: NextApiRequest
   res: NextApiResponse
 ) {

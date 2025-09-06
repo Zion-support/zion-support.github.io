@@ -1,4 +1,11 @@
+<<<<<<< HEAD
 import Link from 'next/link';
+=======
+<<<<<<< HEAD
+=======
+import Link from 'next/link';
+>>>>>>> cursor/expand-services-advertise-and-build-project-2140
+>>>>>>> cursor/expand-services-advertise-and-build-project-5c86
 
 export default function HomePage() {
   return (
@@ -31,12 +38,29 @@ export default function HomePage() {
       </section>
 
       <section className="py-12">
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+
+          <Card 
+            title="Micro SaaS" 
+            href="/services/micro-saas" 
+            description="End-to-end product engineering with billing, auth, analytics and growth." 
+            icon="🚀" 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-5c86
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <Card
             title="Micro SaaS"
             href="/services/micro-saas"
             description="End-to-end product engineering with billing, auth, analytics and growth."
             icon="🚀"
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-2140
+>>>>>>> cursor/expand-services-advertise-and-build-project-5c86
           />
           <Card
             title="AI Services"
@@ -88,6 +112,42 @@ export default function HomePage() {
             description="Cloud migration, architecture, and optimization across AWS, Azure, and GCP."
             icon="☁️"
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+          />
+          <Card
+            title="Business Automation"
+            href="/services/automation-tools"
+            description="Intelligent automation tools that streamline operations and boost productivity by 300%."
+            icon="⚡"
+          />
+          <Card
+            title="AI Copilots"
+            href="/services/ai-copilots"
+            description="Intelligent assistants that enhance productivity and automate complex tasks."
+            icon="🧠"
+          />
+          <Card
+            title="Data Analytics"
+            href="/services/data-analytics"
+            description="Advanced analytics and BI solutions that transform data into actionable insights."
+            icon="📊"
+          />
+          <Card
+            title="AI-Powered CRM"
+            href="/services/ai-powered-crm"
+            description="Revolutionary CRM with AI automation that boosts sales by 300% and predicts customer behavior."
+            icon="🎯"
+          />
+          <Card
+            title="AI Content Optimizer"
+            href="/services/ai-content-optimizer"
+            description="AI-powered content creation that increases engagement by 400% and automates SEO optimization."
+            icon="✍️"
+          />
+          <Card
+            title="Cybersecurity Suite"
+            href="/services/cybersecurity-suite"
+            description="Enterprise-grade security solutions with 24/7 monitoring and threat detection."
+            icon="🔒"
           />
         </div>
       </section>
@@ -142,4 +202,12 @@ function FeatureCard({ title, description }: { title: string; description: strin
       <p className="text-gray-600">{description}</p>
     </div>
   );
+<<<<<<< HEAD
 }
+=======
+}
+<<<<<<< HEAD
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-2140
+>>>>>>> cursor/expand-services-advertise-and-build-project-5c86

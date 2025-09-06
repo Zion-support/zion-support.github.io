@@ -45,6 +45,17 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
     const all = await readReviews();
     // Include reviews where both sides have submitted and both are approved and not removed
+<<<<<<< HEAD
+=======
+
+
+    const filtered = all && all.filter((r) => {
+      if (r && r.removed || !r && r.approved) return false;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+      const matchesTarget =
+        r && r.toRole === (targetType as "talent" | "client") && r && r.toId === targetId;
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-5c86
     const filtered = all.filter((r) => {
       if (r.removed |!r.approved) return false;
       const matchesTarget =
@@ -151,6 +162,19 @@ if (author_name = "Anonymous") {
     }
 ;
     return res.status (200).json ({ summary, reviews: public_reviews });
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+  } catch (error: any) {
+
+    return res;
+      .status (500);
+      .json ({ error: "Internal server error", details: error?.message });
+  }
+
+=======
+}
+>>>>>>> cursor/expand-services-advertise-and-build-project-5c86
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   } catch (error: any) {
     return res.status(500).json({ error: 'Internal server error', details: error?.message })

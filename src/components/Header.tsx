@@ -1,15 +1,25 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Menu, X, ChevronDown, Phone, Mail, MapPin } from 'lucide-react';
 =======
 import Button from './Button';
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 const Header: React.FC = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+=======
+import { Menu, X } from 'lucide-react';
 
+interface HeaderProps {
+  onMenuClick: () => void;
+}
+
+export const Header: React.FC<HeaderProps> = ({ onMenuClick }) => {
+>>>>>>> cursor/expand-services-advertise-and-build-project-5c86
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+<<<<<<< HEAD
   const navigation = [
     { name: 'Home', href: '/' },
     { name: 'About', href: '/about' },
@@ -35,47 +45,27 @@ const Header: React.FC = () => {
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
   const toggleDropdown = (name: string) => {
     setActiveDropdown(activeDropdown === name ? null : name);
+=======
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+    onMenuClick();
+>>>>>>> cursor/expand-services-advertise-and-build-project-5c86
   };
 
   return (
-    <header className="bg-white shadow-lg sticky top-0 z-50">
-      {/* Top Bar */}
-      <div className="bg-blue-900 text-white py-2">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-col md:flex-row justify-between items-center text-sm">
-            <div className="flex items-center space-x-6 mb-2 md:mb-0">
-              <div className="flex items-center space-x-2">
-                <Phone className="w-4 h-4" />
-                <span>+1 302 464 0950</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <Mail className="w-4 h-4" />
-                <span>kleber@ziontechgroup.com</span>
-              </div>
-            </div>
-            <div className="flex items-center space-x-2">
-              <MapPin className="w-4 h-4" />
-              <span>364 E Main St STE 1008, Middletown, DE 19709</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Main Navigation */}
-      <nav className="container mx-auto px-4 py-4">
-        <div className="flex justify-between items-center">
+    <header className="bg-gray-900 text-white shadow-lg fixed w-full top-0 z-40">
+      <div className="container mx-auto px-4">
+        <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
-            <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-xl">Z</span>
+            <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
+              <span className="text-white font-bold text-lg">Z</span>
             </div>
-            <div>
-              <h1 className="text-2xl font-bold text-gray-900">Zion Tech Group</h1>
-              <p className="text-sm text-gray-600">AI & Technology Solutions</p>
-            </div>
+            <span className="text-xl font-bold">Zion Tech Group</span>
           </Link>
 
           {/* Desktop Navigation */}
+<<<<<<< HEAD
 <<<<<<< HEAD
           <div className="hidden lg:flex items-center space-x-8">
             {navigation.map((item) => (
@@ -137,18 +127,29 @@ const Header: React.FC = () => {
             </Button>
           </nav>
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+          <nav className="hidden md:flex items-center space-x-8">
+            <Link to="/" className="hover:text-blue-400 transition-colors">Home</Link>
+            <Link to="/about" className="hover:text-blue-400 transition-colors">About</Link>
+            <Link to="/services" className="hover:text-blue-400 transition-colors">Services</Link>
+            <Link to="/pricing" className="hover:text-blue-400 transition-colors">Pricing</Link>
+            <Link to="/contact" className="hover:text-blue-400 transition-colors">Contact</Link>
+          </nav>
+>>>>>>> cursor/expand-services-advertise-and-build-project-5c86
 
           {/* Mobile Menu Button */}
           <button
             onClick={toggleMenu}
-            className="lg:hidden p-2 text-gray-700 hover:text-blue-600 transition-colors duration-200"
+            className="md:hidden p-2 rounded-lg hover:bg-gray-800 transition-colors"
+            aria-label="Toggle menu"
           >
-            {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
+<<<<<<< HEAD
 <<<<<<< HEAD
           <div className="lg:hidden mt-4 border-t border-gray-200 pt-4">
             {navigation.map((item) => (
@@ -232,3 +233,19 @@ export default Header;
 =======
 export default Header;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+          <div className="md:hidden py-4 border-t border-gray-700">
+            <nav className="flex flex-col space-y-4">
+              <Link to="/" className="hover:text-blue-400 transition-colors">Home</Link>
+              <Link to="/about" className="hover:text-blue-400 transition-colors">About</Link>
+              <Link to="/services" className="hover:text-blue-400 transition-colors">Services</Link>
+              <Link to="/pricing" className="hover:text-blue-400 transition-colors">Pricing</Link>
+              <Link to="/contact" className="hover:text-blue-400 transition-colors">Contact</Link>
+            </nav>
+          </div>
+        )}
+      </div>
+    </header>
+  );
+};
+>>>>>>> cursor/expand-services-advertise-and-build-project-5c86

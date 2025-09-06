@@ -281,7 +281,15 @@ function MapColumn({
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
+<<<<<<< HEAD
 function MapColumn({ title, sections }: { title: string, sections: { id: string, title: string, items: { id: string, title: string }[] }[] }) {
+=======
+/**
+ * MapColumn - Function description
+ */
+function MapColumn() {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-5c86
   return (
 <<<<<<< HEAD
     <div className="space-y-3">

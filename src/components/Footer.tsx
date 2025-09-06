@@ -1,31 +1,49 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+<<<<<<< HEAD
 import { ChevronUp } from 'lucide-react';
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-5c86
 
 const Footer: React.FC = () => {
-  const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    });
-  };
-
   return (
-    <footer className="bg-gray-900 text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <footer className="bg-gray-900 text-white py-8">
+      <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          {/* Company Info */}
           <div>
             <h3 className="text-lg font-semibold mb-4">Zion Tech Group</h3>
-            <p className="text-gray-400 mb-4">
-              Leading technology solutions for modern businesses. We provide comprehensive micro SaaS, AI, IT, blockchain, and data analytics services.
+            <p className="text-gray-300">
+              Leading technology solutions provider for modern businesses.
             </p>
-            <div className="space-y-2">
-              <p className="text-gray-400 text-sm">📧 kleber@ziontechgroup.com</p>
-              <p className="text-gray-400 text-sm">📞 +1 302 464 0950</p>
-              <p className="text-gray-400 text-sm">📍 364 E Main St STE 1008, Middletown DE 19709</p>
+          </div>
+          
+          <div>
+            <h3 className="text-lg font-semibold mb-4">Services</h3>
+            <ul className="space-y-2">
+              <li><Link to="/services" className="text-gray-300 hover:text-white transition-colors">AI Services</Link></li>
+              <li><Link to="/services" className="text-gray-300 hover:text-white transition-colors">IT Solutions</Link></li>
+              <li><Link to="/services" className="text-gray-300 hover:text-white transition-colors">Cloud Services</Link></li>
+            </ul>
+          </div>
+          
+          <div>
+            <h3 className="text-lg font-semibold mb-4">Company</h3>
+            <ul className="space-y-2">
+              <li><Link to="/about" className="text-gray-300 hover:text-white transition-colors">About</Link></li>
+              <li><Link to="/contact" className="text-gray-300 hover:text-white transition-colors">Contact</Link></li>
+              <li><Link to="/pricing" className="text-gray-300 hover:text-white transition-colors">Pricing</Link></li>
+            </ul>
+          </div>
+          
+          <div>
+            <h3 className="text-lg font-semibold mb-4">Contact</h3>
+            <div className="space-y-2 text-gray-300">
+              <p>Email: info@ziontechgroup.com</p>
+              <p>Phone: +1 (555) 123-4567</p>
+              <p>Address: 123 Tech Street, Innovation City</p>
             </div>
           </div>
+<<<<<<< HEAD
 
           {/* Services */}
           <div>
@@ -66,35 +84,24 @@ const Footer: React.FC = () => {
               <li><Link to="/blog" className="text-gray-400 hover:text-white transition-colors">Blog</Link></li>
             </ul>
           </div>
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-5c86
         </div>
-
-        {/* Bottom Section */}
-        <div className="border-t border-gray-800 mt-8 pt-8 flex flex-col sm:flex-row justify-between items-center">
-          <div className="text-gray-400 text-sm">
-            © 2024 Zion Tech Group. All rights reserved.
-          </div>
-          <div className="flex space-x-6 mt-4 sm:mt-0">
-            <Link to="/privacy" className="text-gray-400 hover:text-white transition-colors text-sm">Privacy Policy</Link>
-            <Link to="/terms" className="text-gray-400 hover:text-white transition-colors text-sm">Terms of Service</Link>
-            <Link to="/cookies" className="text-gray-400 hover:text-white transition-colors text-sm">Cookie Policy</Link>
-          </div>
+        
+        <div className="border-t border-gray-700 mt-8 pt-8 text-center text-gray-300">
+          <p>&copy; 2024 Zion Tech Group. All rights reserved.</p>
         </div>
-
-        {/* Back to Top Button */}
-        <button
-          onClick={scrollToTop}
-          className="fixed bottom-8 right-8 bg-cyan-600 hover:bg-cyan-700 text-white p-3 rounded-full shadow-lg transition-all duration-300 z-50"
-          aria-label="Back to top"
-        >
-          <ChevronUp className="w-5 h-5" />
-        </button>
       </div>
     </footer>
   );
 };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default Footer;
 =======
 export default Footer;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+export default Footer;
+>>>>>>> cursor/expand-services-advertise-and-build-project-5c86

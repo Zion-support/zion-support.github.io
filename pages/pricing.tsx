@@ -6,6 +6,7 @@ import React, { useState } from 'react',
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React from 'react';
 
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 import Head from 'next/head';
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
@@ -86,6 +87,7 @@ const PricingPage: React.FC = () => {
 }
 export default PricingPage;
 
+<<<<<<< HEAD
 origin/cursor/integrate-build-improve-and-re-verify-242d
 import React from 'react';
 =======
@@ -96,6 +98,10 @@ import React from 'react';
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
+=======
+=======
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
+>>>>>>> cursor/expand-services-advertise-and-build-project-5c86
 import React from 'react';
 import Head from 'next/head';
 <<<<<<< HEAD
@@ -106,6 +112,7 @@ import Head from 'next/head';
 =======
 >>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
 import React from 'react';
+<<<<<<< HEAD
 =======
 import {
   Check,
@@ -510,6 +517,10 @@ import React from 'react';
 import Head from 'next/head';
 
 origin/automation-improvements-final
+=======
+import Head from 'next / head';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-5c86
 import {
   Check
   Star
@@ -779,7 +790,10 @@ export default function PricingPage() {
     ...innovativeMicroSaasV2Services
   ];
 
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-5c86
   // Enhanced service categories with pricing
   const serviceCategories = [
     {
@@ -1888,7 +1902,10 @@ export default function PricingPage() {;
                         <Check className='w-5 h-5 text-green-400 mr-3 mt-0 && 0.5 flex-shrink-0' />;
                         <span className='text-gray-300'>{feature}</span>;
                       </li>;
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-5c86
                     ))}
                   </ul>;
 
@@ -1899,6 +1916,7 @@ export default function PricingPage() {;
 =======
                     href={tier.name === 'Enterprise' ? '/contact' : '/services'}
                     variant={tier.ctaVariant}
+<<<<<<< HEAD
 <<<<<<< HEAD
                     size='lg'
                     className='w-full'
@@ -1922,6 +1940,8 @@ export default function PricingPage() {;
                     size="lg"
                     className="w-full"
 =======
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-5c86
                     size="lg"
                     className="w-full"
                   >
@@ -2361,11 +2381,15 @@ export default function PricingPage() {;
                   <div className="text-2xl font-bold text-cyan-400 mb-2">{service.price}</div>
                   <div className="text-sm text-gray-400">{service.category}</div>
                 </div>
+<<<<<<< HEAD
                 <Button
                   href={service.link}
                   variant='primary'
                   size='sm'
                   className='w-full'
+=======
+                
+>>>>>>> cursor/expand-services-advertise-and-build-project-5c86
                 <div className="mb-4">
                   <div className="text-xs text-gray-400 mb-2">Key Features:</div>
                   <ul className="text-xs text-gray-300 space-y-1">
@@ -3049,4 +3073,16 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 origin/automation-improvements-final
   );
 }
+<<<<<<< HEAD
 }
+=======
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+=======
+  )
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+    </UltraFuturisticBackground>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/expand-services-advertise-and-build-project-5c86

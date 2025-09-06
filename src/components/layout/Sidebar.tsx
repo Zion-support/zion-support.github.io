@@ -1,8 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const Sidebar: React.FC = () => {;
+interface SidebarProps {
+  isOpen?: boolean;
+  onClose?: () => void;
+}
+
+const Sidebar: React.FC<SidebarProps> = ({ isOpen = false, onClose }) => {
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
     <aside className="hidden lg:block w-64 bg-white shadow-lg min-h-screen">
       <div className="p-6">
@@ -35,28 +41,39 @@ export default Sidebar
       <div className="p-6">;
         <h2 className="text-xl font-bold text-gray-900 mb-6">Navigation</h2>;
         <nav className="space-y-2">;
+=======
+    <div className={`fixed left-0 top-0 h-full w-80 bg-white shadow-lg z-40 ${isOpen ? 'block' : 'hidden lg:block'}`}>
+      <div className="p-6">
+        <h2 className="text-xl font-bold text-gray-900 mb-6">Navigation</h2>
+        <nav className="space-y-2">
+>>>>>>> cursor/expand-services-advertise-and-build-project-5c86
           <Link
             to="/"
-            className="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors">;
-            Home;
-          </Link>;
+            className="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors"
+          >
+            Home
+          </Link>
           <Link
             to="/about"
-            className="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors">;
-            About;
-          </Link>;
+            className="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors"
+          >
+            About
+          </Link>
           <Link
             to="/services"
-            className="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors">;
-            Services;
-          </Link>;
+            className="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors"
+          >
+            Services
+          </Link>
           <Link
             to="/contact"
-            className="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors">;
-            Contact;
-          </Link>;
+            className="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors"
+          >
+            Contact
+          </Link>
           <Link
             to="/pricing"
+<<<<<<< HEAD
             className="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors">;
             Pricing;
           </Link>;
@@ -280,4 +297,16 @@ import React from 'react';
 };
   );
 };
+=======
+            className="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors"
+          >
+            Pricing
+          </Link>
+        </nav>
+      </div>
+    </div>
+  );
+};
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-5c86
 export default Sidebar;

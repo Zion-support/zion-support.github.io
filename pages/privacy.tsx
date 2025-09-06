@@ -918,7 +918,9 @@ origin/automation-improvements-final
                 <h3 className="text-xl font-semibold mb-4">
                   Usage Information
                 </h3>
+=======
                 <h3 className="text-xl font-semibold mb-4">Usage Information</h3>
+<<<<<<< HEAD
 <<<<<<< HEAD
 origin/automation-improvements-final
                 <h3 className="text-xl font-semibold mb-4">
@@ -927,6 +929,9 @@ origin/automation-improvements-final
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> cursor/expand-services-advertise-and-build-project-5c86
                 <ul className="list-disc pl-6 mb-6">
                   <li>How you use our services</li>
                   <li>Device information</li>
@@ -1129,13 +1134,18 @@ origin/automation-improvements-final
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 <p className="text-sm text-gray-600 mt-8">
+=======
                 <p className="text-sm text-gray-600 mt-8">
+<<<<<<< HEAD
 <<<<<<< HEAD
 origin/automation-improvements-final
 <p className="text-sm text-gray-600 mt-8">
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> cursor/expand-services-advertise-and-build-project-5c86
                   Last updated: January 2024
                 </p>
               </div>

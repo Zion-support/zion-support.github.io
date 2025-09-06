@@ -1,8 +1,11 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-5c86
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 const Pricing: React.FC = () => {
+<<<<<<< HEAD
   const pricingPlans = [
     {
       name: "Starter",
@@ -140,16 +143,20 @@ class ErrorBoundary extends React.Component {
     }
   ];
 
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-5c86
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
-      {/* Hero Section */}
-      <div className="bg-gradient-to-r from-blue-600 to-purple-600 py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-5xl font-bold text-white mb-6">Pricing Plans</h1>
-          <p className="text-xl text-blue-100 max-w-3xl mx-auto">
-            Transparent pricing for all your technology needs. Choose the plan that fits your business.
+    <div className="min-h-screen bg-white py-20">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-16">
+          <h1 className="text-4xl font-bold text-gray-900 mb-6">
+            Pricing Plans
+          </h1>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Choose the perfect plan for your business needs. All plans include our core services with flexible options.
           </p>
         </div>
+<<<<<<< HEAD
       </div>
 
 <<<<<<< HEAD
@@ -199,9 +206,57 @@ class ErrorBoundary extends React.Component {
               </div>
             ))}
           </div>
+=======
+        
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+          <PricingCard
+            name="Starter"
+            price="$2,500"
+            period="month"
+            description="Perfect for small businesses getting started with AI and automation"
+            features={[
+              "Basic AI services",
+              "Micro SaaS development",
+              "IT support",
+              "Email support",
+              "Monthly reports"
+            ]}
+            isPopular={false}
+          />
+          <PricingCard
+            name="Professional"
+            price="$7,500"
+            period="month"
+            description="Ideal for growing businesses that need advanced AI and automation"
+            features={[
+              "Advanced AI services",
+              "Custom micro SaaS",
+              "Full IT services",
+              "Priority support",
+              "Weekly reports",
+              "API access"
+            ]}
+            isPopular={true}
+          />
+          <PricingCard
+            name="Enterprise"
+            price="$25,000"
+            period="month"
+            description="Complete solution for large enterprises with complex needs"
+            features={[
+              "Full AI suite",
+              "White-label solutions",
+              "Dedicated team",
+              "24/7 support",
+              "Custom integrations",
+              "SLA guarantee"
+            ]}
+            isPopular={false}
+          />
+>>>>>>> cursor/expand-services-advertise-and-build-project-5c86
         </div>
-      </div>
 
+<<<<<<< HEAD
       {/* Monthly Service Packages */}
       <div className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -319,18 +374,25 @@ class ErrorBoundary extends React.Component {
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl font-bold text-white mb-6">Ready to Get Started?</h2>
           <p className="text-xl text-blue-100 mb-8">Contact us today for a free consultation and custom quote.</p>
+=======
+        <div className="text-center">
+          <h2 className="text-2xl font-bold text-gray-900 mb-6">Ready to Get Started?</h2>
+          <p className="text-gray-600 mb-8">
+            Contact us today to discuss your specific needs and get a custom quote.
+          </p>
+>>>>>>> cursor/expand-services-advertise-and-build-project-5c86
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              to="/contact"
-              className="bg-white text-blue-600 px-8 py-4 rounded-xl hover:bg-gray-100 transition-all duration-300 font-semibold text-lg shadow-2xl"
-            >
-              Get Free Consultation
-            </Link>
             <a
               href="tel:+13024640950"
-              className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-xl hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold text-lg"
+              className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
             >
-              Call Us Now
+              Call +1 302 464 0950
+            </a>
+            <a
+              href="mailto:kleber@ziontechgroup.com"
+              className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors"
+            >
+              Email Us
             </a>
           </div>
         </div>
@@ -339,6 +401,7 @@ class ErrorBoundary extends React.Component {
   );
 };
 
+<<<<<<< HEAD
 =======
   );
 }
@@ -346,4 +409,57 @@ class ErrorBoundary extends React.Component {
 };
 ;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+function PricingCard({
+  name,
+  price,
+  period,
+  description,
+  features,
+  isPopular
+}: {
+  name: string;
+  price: string;
+  period: string;
+  description: string;
+  features: string[];
+  isPopular: boolean;
+}) {
+  return (
+    <div className={`border rounded-xl p-8 ${isPopular ? 'border-blue-500 bg-blue-50' : 'border-gray-200'}`}>
+      {isPopular && (
+        <div className="text-center mb-4">
+          <span className="bg-blue-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
+            Most Popular
+          </span>
+        </div>
+      )}
+      <h3 className="text-2xl font-bold text-gray-900 mb-2">{name}</h3>
+      <div className="mb-4">
+        <span className="text-4xl font-bold text-gray-900">{price}</span>
+        <span className="text-gray-600">/{period}</span>
+      </div>
+      <p className="text-gray-600 mb-6">{description}</p>
+      <ul className="space-y-3 mb-8">
+        {features.map((feature, index) => (
+          <li key={index} className="flex items-center">
+            <span className="text-green-500 mr-3">✓</span>
+            {feature}
+          </li>
+        ))}
+      </ul>
+      <button 
+        className={`w-full py-3 px-4 rounded-lg font-semibold transition-colors ${
+          isPopular 
+            ? 'bg-blue-600 text-white hover:bg-blue-700' 
+            : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
+        }`}
+      >
+        Get Started
+      </button>
+    </div>
+  );
+}
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-5c86
 export default Pricing;
