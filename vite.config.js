@@ -4,21 +4,21 @@ import path from 'path'
 
 export default defineConfig({
   plugins: [react()],
-  resolve: {
-    alias: {
-      '@': path.resolve(__dirname, './src'),
-    },
+  server: {
+    port: 3000,
+    open: true,
+    host: true
   },
   build: {
-    outDir: "dist",
+    outDir: 'dist',
     sourcemap: true,
-    minify: "terser",
+    minify: 'terser',
     rollupOptions: {
       output: {
         manualChunks: {
-          vendor: ["react", "react-dom"],
-          ui: ["framer-motion", "lucide-react"],
-          router: ["react-router-dom"]
+          vendor: ['react', 'react-dom'],
+          ui: ['framer-motion', 'lucide-react'],
+          router: ['react-router-dom']
         }
       }
     },
@@ -29,11 +29,17 @@ export default defineConfig({
       }
     }
   },
-  server: {
-    port: 3000,
-    open: true,
-  },
   optimizeDeps: {
-    include: ["react", "react-dom", "framer-motion", "lucide-react"]
+    include: ['react', 'react-dom', 'framer-motion', 'lucide-react']
+  },
+  resolve: {
+    alias: {
+      '@': path.resolve(__dirname, './'),
+      '@/components': path.resolve(__dirname, './components'),
+      '@/lib': path.resolve(__dirname, './lib'),
+      '@/utils': path.resolve(__dirname, './utils'),
+      '@/hooks': path.resolve(__dirname, './hooks'),
+      '@/types': path.resolve(__dirname, './types')
+    }
   }
 })
