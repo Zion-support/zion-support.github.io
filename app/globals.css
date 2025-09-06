@@ -48,12 +48,11 @@ body {
 }
 
 @layer utilities {
-<<<<<<< HEAD
   .focus-visible:focus {
     @apply outline-none ring-2 ring-blue-500 ring-offset-2;
-=======
+  }
+  
   .text-balance {
     text-wrap: balance;
->>>>>>> 3355446c491e527b29697d580cc54457b0d965fc
   }
 }

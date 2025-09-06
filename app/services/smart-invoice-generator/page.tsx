@@ -94,7 +94,7 @@ export default function SmartInvoiceGeneratorPage() {
   );
 }
 
-function FeatureCard({
+/* function FeatureCard({
   icon,
   title,
   description,
@@ -257,4 +257,4 @@ function TestimonialCard({
       </div>
     </div>
   );
-}
+} */

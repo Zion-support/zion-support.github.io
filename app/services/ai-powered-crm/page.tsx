@@ -45,72 +45,144 @@ export default function AIPoweredCRMPage() {
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <FeatureCard
-            icon="🎯"
-            title="Intelligent Lead Scoring"
-            description="AI-powered lead qualification with 95% accuracy"
-            benefits={[
-              "Predictive customer lifetime value analysis",
-              "Automated lead nurturing sequences",
-              "Real-time conversion probability scoring",
-              "Behavioral pattern recognition"
-            ]}
-          />
-          <FeatureCard
-            icon="🤖"
-            title="Smart Sales Automation"
-            description="Automated follow-up sequences based on behavior"
-            benefits={[
-              "AI-generated personalized email campaigns",
-              "Intelligent meeting scheduling and reminders",
-              "Dynamic pricing optimization",
-              "Automated task assignment"
-            ]}
-          />
-          <FeatureCard
-            icon="📊"
-            title="Predictive Analytics"
-            description="Advanced forecasting with machine learning"
-            benefits={[
-              "Churn prediction and prevention strategies",
-              "Revenue optimization recommendations",
-              "Customer segmentation and targeting",
-              "Sales pipeline forecasting"
-            ]}
-          />
-          <FeatureCard
-            icon="💡"
-            title="Sales Intelligence"
-            description="Real-time customer insights and behavior tracking"
-            benefits={[
-              "Competitive analysis and market intelligence",
-              "Performance analytics and reporting",
-              "Custom dashboard and KPI monitoring",
-              "AI-powered sales coaching"
-            ]}
-          />
-          <FeatureCard
-            icon="🔄"
-            title="Workflow Automation"
-            description="Streamline repetitive tasks and processes"
-            benefits={[
-              "Automated data entry and updates",
-              "Smart document generation",
-              "Integration with existing tools",
-              "Custom workflow creation"
-            ]}
-          />
-          <FeatureCard
-            icon="📱"
-            title="Mobile-First Design"
-            description="Access your CRM anywhere, anytime"
-            benefits={[
-              "Native mobile applications",
-              "Offline data synchronization",
-              "Push notifications and alerts",
-              "Voice-to-text data entry"
-            ]}
-          />
+          <div className="bg-white p-6 rounded-lg shadow-md">
+            <div className="text-3xl mb-4">🎯</div>
+            <h3 className="text-xl font-semibold text-gray-900 mb-3">Intelligent Lead Scoring</h3>
+            <p className="text-gray-600 mb-4">AI-powered lead qualification with 95% accuracy</p>
+            <ul className="space-y-2">
+              <li className="text-sm text-gray-600 flex items-center">
+                <span className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2"></span>
+                Predictive customer lifetime value analysis
+              </li>
+              <li className="text-sm text-gray-600 flex items-center">
+                <span className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2"></span>
+                Automated lead nurturing sequences
+              </li>
+              <li className="text-sm text-gray-600 flex items-center">
+                <span className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2"></span>
+                Real-time conversion probability scoring
+              </li>
+              <li className="text-sm text-gray-600 flex items-center">
+                <span className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2"></span>
+                Behavioral pattern recognition
+              </li>
+            </ul>
+          </div>
+          <div className="bg-white p-6 rounded-lg shadow-md">
+            <div className="text-3xl mb-4">🤖</div>
+            <h3 className="text-xl font-semibold text-gray-900 mb-3">Smart Sales Automation</h3>
+            <p className="text-gray-600 mb-4">Automated follow-up sequences based on behavior</p>
+            <ul className="space-y-2">
+              <li className="text-sm text-gray-600 flex items-center">
+                <span className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2"></span>
+                AI-generated personalized email campaigns
+              </li>
+              <li className="text-sm text-gray-600 flex items-center">
+                <span className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2"></span>
+                Intelligent meeting scheduling and reminders
+              </li>
+              <li className="text-sm text-gray-600 flex items-center">
+                <span className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2"></span>
+                Dynamic pricing optimization
+              </li>
+              <li className="text-sm text-gray-600 flex items-center">
+                <span className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2"></span>
+                Automated task assignment
+              </li>
+            </ul>
+          </div>
+          <div className="bg-white p-6 rounded-lg shadow-md">
+            <div className="text-3xl mb-4">📊</div>
+            <h3 className="text-xl font-semibold text-gray-900 mb-3">Predictive Analytics</h3>
+            <p className="text-gray-600 mb-4">Advanced forecasting with machine learning</p>
+            <ul className="space-y-2">
+              <li className="text-sm text-gray-600 flex items-center">
+                <span className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2"></span>
+                Churn prediction and prevention strategies
+              </li>
+              <li className="text-sm text-gray-600 flex items-center">
+                <span className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2"></span>
+                Revenue optimization recommendations
+              </li>
+              <li className="text-sm text-gray-600 flex items-center">
+                <span className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2"></span>
+                Customer segmentation and targeting
+              </li>
+              <li className="text-sm text-gray-600 flex items-center">
+                <span className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2"></span>
+                Sales pipeline forecasting
+              </li>
+            </ul>
+          </div>
+          <div className="bg-white p-6 rounded-lg shadow-md">
+            <div className="text-3xl mb-4">💡</div>
+            <h3 className="text-xl font-semibold text-gray-900 mb-3">Sales Intelligence</h3>
+            <p className="text-gray-600 mb-4">Real-time customer insights and behavior tracking</p>
+            <ul className="space-y-2">
+              <li className="text-sm text-gray-600 flex items-center">
+                <span className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2"></span>
+                Competitive analysis and market intelligence
+              </li>
+              <li className="text-sm text-gray-600 flex items-center">
+                <span className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2"></span>
+                Performance analytics and reporting
+              </li>
+              <li className="text-sm text-gray-600 flex items-center">
+                <span className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2"></span>
+                Custom dashboard and KPI monitoring
+              </li>
+              <li className="text-sm text-gray-600 flex items-center">
+                <span className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2"></span>
+                AI-powered sales coaching
+              </li>
+            </ul>
+          </div>
+          <div className="bg-white p-6 rounded-lg shadow-md">
+            <div className="text-3xl mb-4">🔄</div>
+            <h3 className="text-xl font-semibold text-gray-900 mb-3">Workflow Automation</h3>
+            <p className="text-gray-600 mb-4">Streamline repetitive tasks and processes</p>
+            <ul className="space-y-2">
+              <li className="text-sm text-gray-600 flex items-center">
+                <span className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2"></span>
+                Automated data entry and updates
+              </li>
+              <li className="text-sm text-gray-600 flex items-center">
+                <span className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2"></span>
+                Smart document generation
+              </li>
+              <li className="text-sm text-gray-600 flex items-center">
+                <span className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2"></span>
+                Integration with existing tools
+              </li>
+              <li className="text-sm text-gray-600 flex items-center">
+                <span className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2"></span>
+                Custom workflow creation
+              </li>
+            </ul>
+          </div>
+          <div className="bg-white p-6 rounded-lg shadow-md">
+            <div className="text-3xl mb-4">📱</div>
+            <h3 className="text-xl font-semibold text-gray-900 mb-3">Mobile-First Design</h3>
+            <p className="text-gray-600 mb-4">Access your CRM anywhere, anytime</p>
+            <ul className="space-y-2">
+              <li className="text-sm text-gray-600 flex items-center">
+                <span className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2"></span>
+                Native mobile applications
+              </li>
+              <li className="text-sm text-gray-600 flex items-center">
+                <span className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2"></span>
+                Offline data synchronization
+              </li>
+              <li className="text-sm text-gray-600 flex items-center">
+                <span className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2"></span>
+                Push notifications and alerts
+              </li>
+              <li className="text-sm text-gray-600 flex items-center">
+                <span className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2"></span>
+                Voice-to-text data entry
+              </li>
+            </ul>
+          </div>
         </div>
       </section>
 
@@ -123,48 +195,109 @@ export default function AIPoweredCRMPage() {
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          <PricingTier
-            name="Starter"
-            price="$99"
-            period="month"
-            description="Perfect for small teams getting started with AI CRM"
-            features={[
-              "Up to 1,000 contacts",
-              "Basic AI lead scoring",
-              "Email automation",
-              "Standard support",
-              "Mobile app access"
-            ]}
-          />
-          <PricingTier
-            name="Professional"
-            price="$299"
-            period="month"
-            description="Ideal for growing businesses with advanced needs"
-            features={[
-              "Up to 10,000 contacts",
-              "Advanced AI analytics",
-              "Custom workflows",
-              "Priority support",
-              "API access",
-              "Advanced reporting"
-            ]}
-            popular={true}
-          />
-          <PricingTier
-            name="Enterprise"
-            price="$999"
-            period="month"
-            description="Complete solution for large organizations"
-            features={[
-              "Unlimited contacts",
-              "Full AI suite",
-              "Custom integrations",
-              "Dedicated support",
-              "White-label options",
-              "Advanced security"
-            ]}
-          />
+          <div className="bg-white p-8 rounded-lg shadow-md border border-gray-200">
+            <h3 className="text-2xl font-bold text-gray-900 mb-2">Starter</h3>
+            <div className="text-3xl font-bold text-blue-600 mb-2">$99<span className="text-lg text-gray-500">/month</span></div>
+            <p className="text-gray-600 mb-6">Perfect for small teams getting started with AI CRM</p>
+            <ul className="space-y-3 mb-8">
+              <li className="flex items-center text-gray-600">
+                <span className="w-5 h-5 bg-green-100 text-green-600 rounded-full flex items-center justify-center text-sm mr-3">✓</span>
+                Up to 1,000 contacts
+              </li>
+              <li className="flex items-center text-gray-600">
+                <span className="w-5 h-5 bg-green-100 text-green-600 rounded-full flex items-center justify-center text-sm mr-3">✓</span>
+                Basic AI lead scoring
+              </li>
+              <li className="flex items-center text-gray-600">
+                <span className="w-5 h-5 bg-green-100 text-green-600 rounded-full flex items-center justify-center text-sm mr-3">✓</span>
+                Email automation
+              </li>
+              <li className="flex items-center text-gray-600">
+                <span className="w-5 h-5 bg-green-100 text-green-600 rounded-full flex items-center justify-center text-sm mr-3">✓</span>
+                Standard support
+              </li>
+              <li className="flex items-center text-gray-600">
+                <span className="w-5 h-5 bg-green-100 text-green-600 rounded-full flex items-center justify-center text-sm mr-3">✓</span>
+                Mobile app access
+              </li>
+            </ul>
+            <Link href="/contact" className="block w-full text-center bg-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
+              Get Started
+            </Link>
+          </div>
+          
+          <div className="bg-white p-8 rounded-lg shadow-lg border-2 border-blue-500 relative">
+            <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-blue-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
+              Most Popular
+            </div>
+            <h3 className="text-2xl font-bold text-gray-900 mb-2">Professional</h3>
+            <div className="text-3xl font-bold text-blue-600 mb-2">$299<span className="text-lg text-gray-500">/month</span></div>
+            <p className="text-gray-600 mb-6">Ideal for growing businesses with advanced needs</p>
+            <ul className="space-y-3 mb-8">
+              <li className="flex items-center text-gray-600">
+                <span className="w-5 h-5 bg-green-100 text-green-600 rounded-full flex items-center justify-center text-sm mr-3">✓</span>
+                Up to 10,000 contacts
+              </li>
+              <li className="flex items-center text-gray-600">
+                <span className="w-5 h-5 bg-green-100 text-green-600 rounded-full flex items-center justify-center text-sm mr-3">✓</span>
+                Advanced AI analytics
+              </li>
+              <li className="flex items-center text-gray-600">
+                <span className="w-5 h-5 bg-green-100 text-green-600 rounded-full flex items-center justify-center text-sm mr-3">✓</span>
+                Custom workflows
+              </li>
+              <li className="flex items-center text-gray-600">
+                <span className="w-5 h-5 bg-green-100 text-green-600 rounded-full flex items-center justify-center text-sm mr-3">✓</span>
+                Priority support
+              </li>
+              <li className="flex items-center text-gray-600">
+                <span className="w-5 h-5 bg-green-100 text-green-600 rounded-full flex items-center justify-center text-sm mr-3">✓</span>
+                API access
+              </li>
+              <li className="flex items-center text-gray-600">
+                <span className="w-5 h-5 bg-green-100 text-green-600 rounded-full flex items-center justify-center text-sm mr-3">✓</span>
+                Advanced reporting
+              </li>
+            </ul>
+            <Link href="/contact" className="block w-full text-center bg-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
+              Get Started
+            </Link>
+          </div>
+          
+          <div className="bg-white p-8 rounded-lg shadow-md border border-gray-200">
+            <h3 className="text-2xl font-bold text-gray-900 mb-2">Enterprise</h3>
+            <div className="text-3xl font-bold text-blue-600 mb-2">$999<span className="text-lg text-gray-500">/month</span></div>
+            <p className="text-gray-600 mb-6">Complete solution for large organizations</p>
+            <ul className="space-y-3 mb-8">
+              <li className="flex items-center text-gray-600">
+                <span className="w-5 h-5 bg-green-100 text-green-600 rounded-full flex items-center justify-center text-sm mr-3">✓</span>
+                Unlimited contacts
+              </li>
+              <li className="flex items-center text-gray-600">
+                <span className="w-5 h-5 bg-green-100 text-green-600 rounded-full flex items-center justify-center text-sm mr-3">✓</span>
+                Full AI suite
+              </li>
+              <li className="flex items-center text-gray-600">
+                <span className="w-5 h-5 bg-green-100 text-green-600 rounded-full flex items-center justify-center text-sm mr-3">✓</span>
+                Custom integrations
+              </li>
+              <li className="flex items-center text-gray-600">
+                <span className="w-5 h-5 bg-green-100 text-green-600 rounded-full flex items-center justify-center text-sm mr-3">✓</span>
+                Dedicated support
+              </li>
+              <li className="flex items-center text-gray-600">
+                <span className="w-5 h-5 bg-green-100 text-green-600 rounded-full flex items-center justify-center text-sm mr-3">✓</span>
+                White-label options
+              </li>
+              <li className="flex items-center text-gray-600">
+                <span className="w-5 h-5 bg-green-100 text-green-600 rounded-full flex items-center justify-center text-sm mr-3">✓</span>
+                Advanced security
+              </li>
+            </ul>
+            <Link href="/contact" className="block w-full text-center bg-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
+              Get Started
+            </Link>
+          </div>
         </div>
       </section>
 
@@ -177,24 +310,33 @@ export default function AIPoweredCRMPage() {
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <TestimonialCard
-            quote="The AI lead scoring has increased our conversion rates by 40%. It's like having a sales expert working 24/7."
-            author="Sarah Johnson"
-            role="Sales Director"
-            company="TechCorp Solutions"
-          />
-          <TestimonialCard
-            quote="The predictive analytics helped us identify high-value prospects we would have missed. ROI increased by 300%."
-            author="Michael Chen"
-            role="VP of Sales"
-            company="GrowthTech Inc"
-          />
-          <TestimonialCard
-            quote="Automation features saved us 20 hours per week. Our team can now focus on building relationships instead of data entry."
-            author="Emily Rodriguez"
-            role="Sales Manager"
-            company="InnovateLabs"
-          />
+          <div className="bg-white p-6 rounded-lg shadow-md">
+            <p className="text-gray-600 mb-4 italic">
+              "The AI lead scoring has increased our conversion rates by 40%. It's like having a sales expert working 24/7."
+            </p>
+            <div>
+              <p className="font-semibold text-gray-900">Sarah Johnson</p>
+              <p className="text-sm text-gray-500">Sales Director, TechCorp Solutions</p>
+            </div>
+          </div>
+          <div className="bg-white p-6 rounded-lg shadow-md">
+            <p className="text-gray-600 mb-4 italic">
+              "The predictive analytics helped us identify high-value prospects we would have missed. ROI increased by 300%."
+            </p>
+            <div>
+              <p className="font-semibold text-gray-900">Michael Chen</p>
+              <p className="text-sm text-gray-500">VP of Sales, GrowthTech Inc</p>
+            </div>
+          </div>
+          <div className="bg-white p-6 rounded-lg shadow-md">
+            <p className="text-gray-600 mb-4 italic">
+              "Automation features saved us 20 hours per week. Our team can now focus on building relationships instead of data entry."
+            </p>
+            <div>
+              <p className="font-semibold text-gray-900">Emily Rodriguez</p>
+              <p className="text-sm text-gray-500">Sales Manager, InnovateLabs</p>
+            </div>
+          </div>
         </div>
       </section>
 

@@ -1,26 +1,12 @@
 import js from '@eslint/js';
 import typescriptEslint from '@typescript-eslint/eslint-plugin';
 import typescriptParser from '@typescript-eslint/parser';
-<<<<<<< HEAD
-import react from 'eslint-plugin-react';
-import reactHooks from 'eslint-plugin-react-hooks';
-import nextPlugin from '@next/eslint-plugin-next';
-import globals from 'globals';
-
-const compat = new FlatCompat({
-  baseDirectory: import.meta.dirname,
-  recommendedConfig: js.configs.recommended,
-  allConfig: js.configs.all,
-});
-=======
 import reactPlugin from 'eslint-plugin-react';
 import reactHooksPlugin from 'eslint-plugin-react-hooks';
 import globals from 'globals';
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 export default [
   {
-<<<<<<< HEAD
     ignores: [
       'node_modules/**',
       'dist/**',
@@ -87,20 +73,18 @@ export default [
       'structural-*.js',
       'system-*.js',
       'ultimate-*.js',
-      '*.js',
       'src_backup_temp/**',
       'temp-backup/**',
       'utils/**',
       'zion-ai-assistant/**',
       'zion-os.disabled/**',
-      'tools/**'
+      'tools/**',
+      'netlify/**',
+      'src/**'
     ],
   },
   {
-    files: ['src/**/*.{js,jsx,ts,tsx}', 'app/**/*.{js,jsx,ts,tsx}'],
-=======
-    files: ['**/*.{js,jsx,ts,tsx}'],
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-b54f
+    files: ['app/**/*.{js,jsx,ts,tsx}'],
     languageOptions: {
       parser: typescriptParser,
       parserOptions: {
@@ -113,7 +97,6 @@ export default [
       globals: {
         ...globals.browser,
         ...globals.node,
-<<<<<<< HEAD
         jest: 'readonly',
         describe: 'readonly',
         it: 'readonly',
@@ -123,37 +106,6 @@ export default [
         afterEach: 'readonly',
         beforeAll: 'readonly',
         afterAll: 'readonly',
-      },
-      parser: typescriptParser,
-      parserOptions: {
-        ecmaVersion: 'latest',
-        sourceType: 'module',
-        ecmaFeatures: {
-          jsx: true,
-        },
-      },
-    },
-    plugins: {
-      '@typescript-eslint': typescript,
-      react,
-      'react-hooks': reactHooks,
-      '@next/next': nextPlugin,
-    },
-    rules: {
-      ...typescript.configs.recommended.rules,
-      ...react.configs.recommended.rules,
-      ...reactHooks.configs.recommended.rules,
-      'react/prop-types': 'off',
-      'react/react-in-jsx-scope': 'off',
-      'react/display-name': 'off',
-      '@typescript-eslint/no-explicit-any': 'warn',
-      '@typescript-eslint/ban-ts-comment': 'off',
-      '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_' }],
-      'no-unused-vars': 'off',
-      'no-console': ['warn', { allow: ['warn', 'error'] }],
-      'prefer-const': 'error',
-      'no-debugger': 'warn',
-=======
         module: 'readonly',
         require: 'readonly',
         exports: 'readonly'
@@ -166,7 +118,6 @@ export default [
     },
     rules: {
       ...js.configs.recommended.rules,
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-b54f
       'react-hooks/rules-of-hooks': 'error',
       'react-hooks/exhaustive-deps': 'warn',
       '@typescript-eslint/no-unused-vars': [
@@ -186,7 +137,6 @@ export default [
     }
   },
   {
-<<<<<<< HEAD
     files: ['**/*.js'],
     languageOptions: {
       globals: {
@@ -204,23 +154,5 @@ export default [
     rules: {
       'no-console': 'off',
     },
-  },
-=======
-    ignores: [
-      'node_modules/',
-      '.next/',
-      'out/',
-      'build/',
-      'dist/',
-      'coverage/',
-      '*.config.js',
-      '*.config.ts',
-      'scripts/',
-      'automation/',
-      'netlify/',
-      'src/',
-      'apps/'
-    ]
   }
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-b54f
 ];

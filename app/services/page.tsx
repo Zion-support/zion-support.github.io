@@ -5,12 +5,12 @@ import {
   CpuChipIcon, 
   GlobeAltIcon, 
   ShieldCheckIcon,
-  ChartBarIcon,
+  // ChartBarIcon,
   UserGroupIcon,
   ArrowRightIcon,
   CheckCircleIcon,
-  ClockIcon,
-  CurrencyDollarIcon
+  // ClockIcon,
+  // CurrencyDollarIcon
 } from '@heroicons/react/24/outline';
 
 export const metadata = {
